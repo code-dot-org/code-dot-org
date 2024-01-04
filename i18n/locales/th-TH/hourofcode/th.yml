@@ -766,6 +766,9 @@ th:
     และการเป็นผู้ประกอบการได้รับสัมผัสจากวิทยาการคอมพิวเตอร์แต่มีเพียง 5% ของหญิงสาววัยมัธยมศึกษาที่เรียนวิทยาการคอมพิวเตอร์เอกอัครราชทูตสามารถช่วยลดช่องว่างทางเพศนี้โดยส่งเสริมให้เพื่อนร่วมงานเข้าเรียนวิทยาการคอมพิวเตอร์
   cs_ambassador_application_date: เปิดรับสมัครจนถึงวันที่ 8 พฤศจิกายน 2023
   cs_ambassador_application_subhead: ทำงานร่วมกับครูเพื่อส่งใบสมัครของคุณวันนี้
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: คำถาม?กรุณาติดต่อ [youngwomen@code.org] (%{email_url})
   cs_ambassador_do_heading: เอกอัครราชทูต CS ทำอะไร
   cs_ambassador_do_desc: เอกอัครราชทูต CS สนับสนุนให้หญิงสาวสำรวจเรื่องนี้ และยกระดับซึ่งกันและกันและกันเพื่อยกระดับตำแหน่งในวิทยาการคอมพิวเตอร์แอมบาสเดอร์

@@ -28,10 +28,10 @@ export default class LessonStatusDialog extends Component {
         <p>{i18n.pluggedLessonsNote()}</p>
         <DialogFooter rightAlign>
           <Button
-            __useDeprecatedTag
             text={i18n.closeAndSave()}
             onClick={this.props.handleConfirm}
             color={Button.ButtonColor.brandSecondaryDefault}
+            style={styles.button}
           />
         </DialogFooter>
       </BaseDialog>
@@ -45,5 +45,8 @@ const styles = {
     paddingRight: 20,
     paddingBottom: 20,
     ...fontConstants['main-font-regular'],
+  },
+  button: {
+    margin: 0,
   },
 };

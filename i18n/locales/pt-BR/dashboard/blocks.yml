@@ -3,11 +3,13 @@ pt:
   data:
     blocks:
       AmysBlocks_goldilocks:
-        text: if {CONDITION}{SPRITE} {STATEMENT}
+        text: |-
+          if {CONDITION}{SPRITE}
+          {STATEMENT}
         options:
           CONDITION:
             '"too much"': em excesso
-            '"just right"': exato
+            '"just right"': na medida certa
             '"too little"': muito pouco
       AmysBlocks_playerBehaviors:
         text: "{BEHAVIOR}"
@@ -1634,6 +1636,12 @@ pt:
         text: "{SPRITE} diga {SPEECH}"
       gamelab_spriteSayTime:
         text: "{SPRITE}dizer{TEXT1}por{NUM}segundos"
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE} pense {THOUGHT}"
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE} pense {THOUGHT}"
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE} pense {THOUGHT}"
       gamelab_startAvoiding:
         text: "{SPRITE} começa a evitar {TARGET}"
       gamelab_startFollowing:
@@ -1738,7 +1746,9 @@ pt:
       KatiesBlocks_glideTo:
         text: "{SPRITE} deslizar para {LOCATION}"
       KatiesBlocks_goldilocks:
-        text: if {CONDITION}{SPRITE} {STATEMENT}
+        text: |-
+          if {CONDITION}{SPRITE}
+          {STATEMENT}
         options:
           CONDITION:
             '"solid"': sólido
@@ -2561,7 +2571,7 @@ pt:
             right: à direita ↻
             left: à esquerda ↺
       ecosystems_catchMe:
-        text: capture {THIS}
+        text: pegue {THIS}
       ecosystems_eat:
         text: coma {THIS}
       ecosystems_goldilocks:
@@ -2569,7 +2579,7 @@ pt:
         options:
           CONDITION:
             '"too much"': em excesso
-            '"just right"': exato
+            '"just right"': na medida certa
             '"too little"': muito pouco
       ecosystems_int10:
         text: "{VALUE}"
@@ -2586,11 +2596,11 @@ pt:
             '9': '9'
             '10': '10'
       ecosystems_makeNewSpriteBetween:
-        text: 'criar {N} novo {GROUP} entre o local x: {X} y: {Y}'
+        text: 'crie {N} novo {GROUP} entre o local x: {X} y: {Y}'
       ecosystems_makeNumSpritesAtLocation:
-        text: criar {NUM} novas {ANIMATION_NAME} fadas em {LOCATION_GENERATOR}
+        text: crie {NUM} novas {ANIMATION_NAME} sprites em {LOCATION_GENERATOR}
       ecosystems_makeNumSpritesWithinRange:
-        text: criar {NUM} novas {ANIMATION_NAME} fadas em {RANGE}
+        text: crie {NUM} novas {ANIMATION_NAME} sprites em {RANGE}
         options:
           RANGE:
             "{x1:0, x2:400, y1:200, y2:400}": Superior

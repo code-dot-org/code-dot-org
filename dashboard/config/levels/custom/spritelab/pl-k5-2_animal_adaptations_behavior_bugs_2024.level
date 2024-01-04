@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2023-12-14T15:49:37.000Z",
   "level_num": "custom",
@@ -77,9 +78,10 @@
     "standalone_app_name": "spritelab",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-12-14T15:49:37.786+00:00\",\"changed\":[\"cloned from \\\"csc_animal_adaptations_bugs2\\\"\"],\"cloned_from\":\"csc_animal_adaptations_bugs2\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-12-14T15:49:37.786+00:00\",\"changed\":[\"cloned from \\\"csc_animal_adaptations_bugs2\\\"\"],\"cloned_from\":\"csc_animal_adaptations_bugs2\"},{\"changed_at\":\"2024-01-02 16:51:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>
