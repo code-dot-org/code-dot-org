@@ -29,7 +29,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         under_13: current_user.under_13?,
         over_21: current_user.over_21?,
         sort_by_family_name: current_user.sort_by_family_name?,
-        show_progress_table_v2: current_user.get_show_progress_table_v2
+        show_progress_table_v2: current_user.show_progress_table_v2
       }
     else
       render json: {
