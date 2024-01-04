@@ -32,11 +32,8 @@ function StudentSelector({
   };
 
   if (students.length === 0) {
-    console.log('NO STUDENTS');
     return null;
   }
-
-  console.log(styleName);
 
   return (
     <select
