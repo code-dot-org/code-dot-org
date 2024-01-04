@@ -47,7 +47,9 @@ class HttpCache
   # Language header and cookie are needed to separately cache language-specific pages.
   LANGUAGE_HEADER = %w(Accept-Language).freeze
   COUNTRY_HEADER = %w(CloudFront-Viewer-Country).freeze
-  ALLOWLISTED_HEADERS = LANGUAGE_HEADER + COUNTRY_HEADER
+  # Header which lets a client request a response format.
+  ACCEPT_HEADER = %w(Accept).freeze
+  ALLOWLISTED_HEADERS = LANGUAGE_HEADER + COUNTRY_HEADER + ACCEPT_HEADER
 
   DEFAULT_COOKIES = [
     # Language drop-down selection.
