@@ -91,12 +91,12 @@
   <blocks>
     <start_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
-        <block type="Dancelab_whenSetup" id="LXzbE_lO4Lwn.`wXpDe2" deletable="false" movable="false" x="20" y="20">
+        <block type="Dancelab_whenSetup" id="setup" deletable="false" movable="false" x="20" y="20">
           <statement name="DO">
-            <block type="Dancelab_ai" id="*6NOt^DsApsRC-pPZKBQ" movable="false">
+            <block type="Dancelab_ai" id="dance_ai" movable="false">
               <field name="VALUE">{"inputs":["cold-face","water-wave","sparkles"],"backgroundEffect":"sparkles","backgroundColor":"cool","foregroundEffect":"bubbles"}</field>
               <next>
-                <block type="Dancelab_makeAnonymousDanceSprite" id="COe?r_-Xd(P{j+)_)$@9" movable="false">
+                <block type="Dancelab_makeAnonymousDanceSprite" id="make_sprite" movable="false">
                   <field name="COSTUME" config="&quot;ALIEN&quot;,&quot;BEAR&quot;,&quot;CAT&quot;,&quot;FROG&quot;,&quot;MOOSE&quot;,&quot;SLOTH&quot;">"FROG"</field>
                   <field name="LOCATION">{x: 200, y: 200}</field>
                   <next>
