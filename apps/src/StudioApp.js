@@ -242,6 +242,11 @@ class StudioApp extends EventEmitter {
      * Stores the code at run. It's undefined if the code is not running.
      */
     this.executingCode = undefined;
+
+    /*
+     * Tracks any highlighted lines.
+     */
+    this.highlightedLines = [];
   }
 }
 /**
@@ -1604,6 +1609,38 @@ StudioApp.prototype.clearHighlighting = function () {
 };
 
 /**
+ * Highlights the given line in the active editor.
+ */
+StudioApp.prototype.highlightLine = function (
+  lineNumber,
+  highlightClass = 'ace_step'
+) {
+  var session = this.editor.aceEditor.getSession();
+  let marker = session.addMarker(
+    new (window.ace.require('ace/range').Range)(
+      lineNumber - 1,
+      0,
+      lineNumber - 1,
+      session.getLine(lineNumber - 1).length
+    ),
+    highlightClass,
+    'text'
+  );
+  this.highlightedLines.push(marker);
+};
+
+/**
+ * Clears any lines highlighted by highlightLine.
+ */
+StudioApp.prototype.clearHighlightedLines = function () {
+  var session = this.editor.aceEditor.getSession();
+  this.highlightedLines.forEach(lineNumber => {
+    session.removeMarker(lineNumber);
+  });
+  this.highlightedLines = [];
+};
+
+/**
  * Display feedback based on test results.  The test results must be
  * explicitly provided.
  * @param {FeedbackOptions} options
@@ -2931,6 +2968,24 @@ StudioApp.prototype.onDropletToggle = function (autoFocus) {
     }
     this.dropletTooltipManager.registerDropletTextModeHandlers(this.editor);
   }
+};
+
+/**
+ * Add a line of feedback to the editor.
+ */
+StudioApp.prototype.annotateLine = function (
+  message,
+  lineNumber,
+  logLevel = 'INFO'
+) {
+  annotationList.addRuntimeAnnotation(logLevel, lineNumber, message);
+};
+
+/**
+ * Removes annotations of a particular type.
+ */
+StudioApp.prototype.clearAnnotations = function (logLevel = 'INFO') {
+  annotationList.filterOutRuntimeAnnotations(logLevel);
 };
 
 /**

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import classnames from 'classnames';
 import style from './rubrics.module.scss';
+import {singleton as studioApp} from '../../StudioApp';
 import {
   learningGoalShape,
   reportingDataShape,
@@ -74,7 +75,48 @@ export default function LearningGoal({
         learningGoal: learningGoal.learningGoal,
       });
     }
+    // TODO: XXX: here, we will clear annotations and write out any supplied to us
     setIsOpen(!isOpen);
+    if (!isOpen) {
+      if (aiEvalInfo && aiEvalInfo.observations) {
+        studioApp().clearAnnotations();
+        studioApp().clearHighlightedLines();
+
+        // TODO: parsing will likely happen in the backend or in aiproxy
+        for (const match of aiEvalInfo.observations.matchAll(
+          'Line (\\d+)(?:\\s*-\\s*(\\d+))?:(.+?)\\s*(?=Line|$)'
+        )) {
+          let lineNumber = match[1];
+          const context = match[3].trim();
+
+          const message = context.substring(
+            0,
+            context.indexOf('`') || context.length
+          );
+
+          // Find code snippet by looking at the student code
+          const code = studioApp().getCode();
+
+          console.log('start', lineNumber, message);
+          const references = context.substring(message.length);
+          for (const submatch of references.matchAll(/`([^`]+)`/g)) {
+            let snippet = submatch[1];
+            let index = code.indexOf(snippet);
+            if (index >= 0) {
+              lineNumber =
+                (code.substring(0, index).match(/\n/g) || []).length + 1;
+              console.log('end (found)', lineNumber);
+              break;
+            }
+            console.log('end', lineNumber);
+          }
+
+          // Annotate that line
+          studioApp().annotateLine(message, lineNumber);
+          studioApp().highlightLine(lineNumber);
+        }
+      }
+    }
   };
 
   const handleFeedbackChange = event => {
