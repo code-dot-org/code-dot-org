@@ -8,6 +8,20 @@ import {
   getConfigRef,
 } from '@cdo/apps/storage/firebaseUtils';
 
+// TODO: unfirebase - this file uses low-level firebase calls in many places
+// such as .once(), .set(), etc. We'll probably want to re-use a lot of these
+// tests for projectDB, but we'll need to either mock out the firebase calls
+// or re-write the tests to use a higher-level interface (that we'll implement
+// separately for projectDB and Firebase.)
+// 
+// MockFirebase.js might be an interesting list of some of the Firebase API calls
+// that are actually being used in FirebaseStorageTest.js.
+// - once()
+// - set()
+// - update()
+// - transaction()
+// - (there are others)
+
 describe('FirebaseStorage', () => {
   let FirebaseStorage;
 
