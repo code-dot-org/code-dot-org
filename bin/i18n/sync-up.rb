@@ -9,6 +9,11 @@
 require_relative 'metrics'
 require_relative 'i18n_script_utils'
 
+# The sync-up uses crowdin-cli to upload source strings to Crowdin projects. Crowdin-cli takes a config file and
+# an identity file as arguments. Within the config file, the base_path, the path to the source strings to be uploaded,
+# can be specified from the environment variables. We set I18N_SOURCE_DIR as an environment variable so it can be
+# globally changed for all Crowdin projects.
+ENV['I18N_SOURCE_DIR'] = CDO.dir(I18N_SOURCE_DIR)
 def sync_up
   I18nScriptUtils.with_synchronous_stdout do
     puts "Sync up starting"

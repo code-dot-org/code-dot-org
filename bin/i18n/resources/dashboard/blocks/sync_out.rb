@@ -1,10 +1,8 @@
 #!/usr/bin/env ruby
 
-require 'fileutils'
-require 'json'
-
 require_relative '../../../i18n_script_utils'
 require_relative '../../../redact_restore_utils'
+require_relative '../../../utils/sync_out_base'
 require_relative '../../../utils/malformed_i18n_reporter'
 require_relative '../blocks'
 
@@ -12,51 +10,20 @@ module I18n
   module Resources
     module Dashboard
       module Blocks
-        class SyncOut
-          def self.perform
-            new.execute
-          end
+        class SyncOut < I18n::Utils::SyncOutBase
+          def process(language)
+            crowdin_file_path = I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME, FILE_NAME)
+            return unless File.file?(crowdin_file_path)
 
-          def execute
-            progress_bar.start
-
-            I18nScriptUtils.process_in_threads(pegasus_languages) do |pegasus_lang|
-              crowdin_locale_dir = I18nScriptUtils.locale_dir(pegasus_lang[:crowdin_name_s])
-              crowdin_file_path = File.join(crowdin_locale_dir, DIR_NAME, FILE_NAME)
-              next unless File.file?(crowdin_file_path)
-
-              locale = pegasus_lang[:locale_s]
-              unless locale == 'en-US'
-                restore(locale, crowdin_file_path)
-                distribute_localization(locale, crowdin_file_path)
-              end
-
-              I18nScriptUtils.move_file(crowdin_file_path, I18nScriptUtils.locale_dir(locale, DIR_NAME, FILE_NAME))
-            ensure
-              I18nScriptUtils.remove_empty_dir(crowdin_locale_dir)
-
-              mutex.synchronize {progress_bar.increment}
+            unless I18nScriptUtils.source_lang?(language)
+              restore(language[:locale_s], crowdin_file_path)
+              distribute_localization(language[:locale_s], crowdin_file_path)
             end
 
-            progress_bar.finish
+            I18nScriptUtils.move_file(crowdin_file_path, I18nScriptUtils.locale_dir(language[:locale_s], DIR_NAME, FILE_NAME))
           end
 
           private
-
-          def pegasus_languages
-            @pegasus_languages ||= PegasusLanguages.get_crowdin_name_and_locale
-          end
-
-          def progress_bar
-            @progress_bar ||= I18nScriptUtils.create_progress_bar(
-              title: 'Dashboard/blocks sync-out',
-              total: pegasus_languages.size
-            )
-          end
-
-          def mutex
-            @mutex ||= Thread::Mutex.new
-          end
 
           def restore(locale, crowdin_file_path)
             return unless File.exist?(I18N_BACKUP_FILE_PATH)
@@ -76,7 +43,7 @@ module I18n
           end
 
           def distribute_localization(locale, crowdin_file_path)
-            target_i18n_file_path = CDO.dir('dashboard/config/locales', "blocks.#{locale}.yml")
+            target_i18n_file_path = CDO.dir("dashboard/config/locales/blocks.#{locale}.yml")
             I18nScriptUtils.sanitize_file_and_write(crowdin_file_path, target_i18n_file_path)
           end
         end

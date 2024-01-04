@@ -1,19 +1,11 @@
 import * as GoogleBlockly from 'blockly/core';
 import msg from '@cdo/locale';
-import experiments from '@cdo/apps/util/experiments';
 import {nameComparator} from '@cdo/apps/util/sort';
 import BlockSvgFrame from '../../addons/blockSvgFrame';
-import {createAndCenterDefinitionBlock} from './proceduresBlocks';
 import {convertXmlToJson} from '../../addons/cdoSerializationHelpers';
 import {behaviorDefMutator} from './mutators/behaviorDefMutator';
 import {behaviorGetMutator} from './mutators/behaviorGetMutator';
-
-// In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
-// we would need to send that property from the backend and save it in lab2Redux.
-const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
-const modalFunctionEditorExperimentEnabled = experiments.isEnabled(
-  experiments.MODAL_FUNCTION_EDITOR
-);
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 
 /**
  * A dictionary of our custom procedure block definitions, used across labs.
@@ -24,7 +16,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
   {
     // Block for defining a behavior (a type of procedure) with no return value.
     // When using the modal function editor, the name field is an uneditable label.
-    type: 'behavior_definition',
+    type: BLOCK_TYPES.behaviorDefinition,
     message0: '%1 %2 %3 %4 %5',
     message1: '%1',
     args0: [
@@ -33,10 +25,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
         text: ' ',
       },
       {
-        type:
-          useModalFunctionEditor && modalFunctionEditorExperimentEnabled
-            ? 'field_label'
-            : 'field_input',
+        type: 'field_input',
         name: 'NAME',
         text: '',
         spellcheck: false,
@@ -44,7 +33,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       {
         type: 'field_label',
         name: 'THIS_SPRITE',
-        text: `with: ${msg.thisSprite()}`,
+        text: msg.withThisSprite(),
       },
       {
         type: 'field_label',
@@ -72,14 +61,17 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_def_onchange_mixin',
       'procedure_def_validator_helper',
       'procedure_defnoreturn_get_caller_block_mixin',
-      'procedure_defnoreturn_set_comment_helper',
       'procedure_def_set_no_return_helper',
       'behaviors_block_frame',
+      'procedure_def_mini_toolbox',
+      'modal_procedures_no_destroy',
+      'behaviors_name_validator',
+      'updated_behavior_picker_blocks',
     ],
     mutator: 'behavior_def_mutator',
   },
   {
-    type: 'gamelab_behavior_get',
+    type: BLOCK_TYPES.behaviorGet,
     message0: '%1 %2',
     args0: [
       {type: 'field_label', name: 'NAME', text: '%{BKY_UNNAMED_KEY}'},
@@ -99,11 +91,12 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_caller_context_menu_mixin',
       'procedure_caller_onchange_mixin',
       'procedure_callernoreturn_get_def_block_mixin',
+      'modal_procedures_no_destroy',
     ],
     mutator: 'behavior_get_mutator',
   },
   {
-    type: 'sprite_parameter_get',
+    type: BLOCK_TYPES.spriteParameterGet,
     message0: '%1',
     args0: [
       {
@@ -121,6 +114,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
   },
 ]);
 
+// Mutators and Extensions
 GoogleBlockly.Extensions.registerMutator(
   'behavior_def_mutator',
   behaviorDefMutator
@@ -129,20 +123,53 @@ GoogleBlockly.Extensions.registerMutator(
 // This extension adds an SVG frame around behavior definition blocks.
 // Not used when the modal function editor is enabled.
 GoogleBlockly.Extensions.register('behaviors_block_frame', function () {
-  if (!useModalFunctionEditor && !this.workspace.noFunctionBlockFrame) {
+  if (!Blockly.useModalFunctionEditor && !this.workspace.noFunctionBlockFrame) {
+    // Used to create and render an SVG frame instance.
+    const getColor = () => {
+      return Blockly.cdoUtils.getBlockColor(this);
+    };
     this.functionalSvg_ = new BlockSvgFrame(
       this,
       msg.behaviorEditorHeader(),
-      'blocklyFunctionalFrame'
+      'blocklyFunctionalFrame',
+      getColor
     );
 
     this.setOnChange(function () {
       if (!this.isInFlyout) {
-        this.functionalSvg_.render(this.svgGroup_, this.RTL);
+        this.functionalSvg_.render();
       }
     });
   }
 });
+
+// This extension is used to update the block's behaviorId when a user-created behavior is renamed.
+// TODO: Add logic to update the dropdown options on behaviorPicker blocks too.
+GoogleBlockly.Extensions.register('behaviors_name_validator', function () {
+  const nameField = this.getField('NAME');
+  nameField.setValidator(function (newValue) {
+    // The default validator provided by mainline Blockly. Strips whitespace.
+    const rename = Blockly.Procedures.rename.bind(this);
+    const legalName = rename(newValue);
+    if (
+      legalName &&
+      this.sourceBlock_.userCreated &&
+      this.sourceBlock_.behaviorId !== legalName
+    ) {
+      this.sourceBlock_.behaviorId = legalName;
+    }
+    return legalName;
+  });
+});
+
+GoogleBlockly.Extensions.register(
+  'updated_behavior_picker_blocks',
+  function () {
+    this.workspace.addChangeListener(event => {
+      onBehaviorDefChange(event, this);
+    });
+  }
+);
 
 GoogleBlockly.Extensions.registerMutator(
   'behavior_get_mutator',
@@ -160,35 +187,38 @@ GoogleBlockly.Extensions.registerMutator(
 export function flyoutCategory(workspace, functionEditorOpen = false) {
   const blockList = [];
 
-  const newBehaviorButton = {
-    kind: 'button',
-    text: msg.createBlocklyBehavior(),
-    callbackKey: 'createNewBehavior',
-  };
   const behaviorDefinitionBlock = {
     kind: 'block',
-    type: 'behavior_definition',
+    type: BLOCK_TYPES.behaviorDefinition,
     fields: {
       NAME: Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,
     },
   };
 
-  // TODO: Replace this with a call to open the behavior editor with a new block
-  const createNewBehavior = () =>
-    createAndCenterDefinitionBlock(behaviorDefinitionBlock);
-
   // If the modal function editor is enabled, we render a button to open the editor
-  // Otherwise, we render a "blank" behavior definition block
+  // Behaviors are not editable without the modal editor open
   if (functionEditorOpen) {
-    // No-op -- cannot create new behaviors while the modal editor is open
-  } else if (useModalFunctionEditor) {
-    workspace.registerButtonCallback('createNewBehavior', createNewBehavior);
+    // No-op - cannot create new behaviors while the modal editor is open
+  } else if (Blockly.useModalFunctionEditor) {
+    const newBehaviorButton = getNewBehaviorButtonWithCallback(
+      workspace,
+      behaviorDefinitionBlock
+    );
     blockList.push(newBehaviorButton);
-  } else {
-    blockList.push(behaviorDefinitionBlock);
   }
 
-  blockList.push(...getCustomCategoryBlocksForFlyout('Behavior'));
+  // Blockly supports XML or JSON, but not a combination of both.
+  // We convert to JSON here because the behavior_get blocks are JSON.
+  const levelToolboxBlocks = Blockly.cdoUtils.getLevelToolboxBlocks('Behavior');
+  if (!levelToolboxBlocks) {
+    return;
+  }
+  const blocksConvertedJson = convertXmlToJson(
+    levelToolboxBlocks.documentElement
+  );
+  const blocksJson =
+    Blockly.cdoUtils.getSimplifiedStateForFlyout(blocksConvertedJson);
+  blockList.push(...blocksJson);
 
   // Workspaces to populate behaviors flyout category from
   const workspaces = [
@@ -200,22 +230,24 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   workspaces.forEach(workspace => {
     const behaviorBlocks = workspace
       .getTopBlocks()
-      .filter(topBlock => topBlock.type === 'behavior_definition');
+      .filter(topBlock => topBlock.type === BLOCK_TYPES.behaviorDefinition);
     behaviorBlocks.forEach(block =>
       allBehaviors.push({
         name: block.getFieldValue('NAME'),
         id: block.id,
+        behaviorId: block.behaviorId,
       })
     );
   });
 
-  allBehaviors.sort(nameComparator).forEach(({name, id}) => {
+  allBehaviors.sort(nameComparator).forEach(({name, id, behaviorId}) => {
     blockList.push({
       kind: 'block',
-      type: 'gamelab_behavior_get',
+      type: BLOCK_TYPES.behaviorGet,
       extraState: {
         name,
         id,
+        behaviorId,
       },
       fields: {
         NAME: name,
@@ -226,50 +258,56 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   return blockList;
 }
 
-function getCustomCategoryBlocksForFlyout(category) {
-  const parser = new DOMParser();
-  // TODO: Update this to use JSON once https://codedotorg.atlassian.net/browse/CT-8 is merged
-  const xmlDoc = parser.parseFromString(Blockly.toolboxBlocks, 'text/xml');
+const getNewBehaviorButtonWithCallback = (
+  workspace,
+  behaviorDefinitionBlock
+) => {
+  const callbackKey = 'newBehaviorCallback';
+  workspace.registerButtonCallback(callbackKey, () => {
+    Blockly.functionEditor.newProcedureCallback(BLOCK_TYPES.behaviorDefinition);
+  });
 
-  const categoryNodes = xmlDoc.getElementsByTagName('category');
-  for (const categoryNode of categoryNodes) {
-    const categoryCustom = categoryNode.getAttribute('custom');
+  return {
+    kind: 'button',
+    text: msg.createBlocklyBehavior(),
+    callbackKey,
+  };
+};
 
-    if (categoryCustom === category) {
-      const xmlRootElement = xmlDoc.createElement('xml'); // Create a new <xml> root element
-
-      const blockNodes = categoryNode.getElementsByTagName('block');
-      for (const blockNode of blockNodes) {
-        if (blockNode.parentElement === categoryNode) {
-          xmlRootElement.appendChild(blockNode.cloneNode(true)); // Append cloned block nodes
-        }
-      }
-
-      const jsonBlocks = convertXmlToJson(xmlRootElement);
-      const flyoutBlocks = jsonBlocks.blocks.blocks.map(
-        simplifyBlockStateForFlyout
-      );
-
-      // Returns an array of simplified JSON blocks for flyout, or an empty array
-      // if the desired category is not found
-      return flyoutBlocks;
-    }
+// Added as a change listener. If a behavior name changes, we need to update any
+// behavior picker blocks that have the old name currently selected.
+function onBehaviorDefChange(event, block) {
+  if (
+    event.type === Blockly.Events.CHANGE &&
+    block.id === event.blockId &&
+    // Excludes changes to the description field.
+    event.name === 'NAME'
+  ) {
+    const {oldValue, newValue} = event;
+    updateBehaviorPickerBlocks(oldValue, newValue);
   }
-  return [];
 }
 
-// Used to simplify block state for inclusion in the Behaviors category flyout
-function simplifyBlockStateForFlyout(block) {
-  // Clone the original block object to avoid modifying it directly
-  const modifiedBlock = {...block};
-
-  // Remove id, x, and y properties
-  delete modifiedBlock.id;
-  delete modifiedBlock.x;
-  delete modifiedBlock.y;
-
-  // Add kind property with value 'block'
-  modifiedBlock.kind = 'block';
-
-  return modifiedBlock;
+function updateBehaviorPickerBlocks(oldValue, newValue) {
+  const behaviorPickerBlocks = findAllBehaviorPickerBlocks();
+  if (behaviorPickerBlocks.length) {
+    const blocksToUpdate = behaviorPickerBlocks.filter(
+      block => block.getFieldValue('BEHAVIOR') === oldValue
+    );
+    blocksToUpdate.forEach(block => {
+      block.setFieldValue(newValue, 'BEHAVIOR');
+    });
+  }
 }
+
+const findAllBehaviorPickerBlocks = () => {
+  const blocks = [];
+  Blockly.Workspace.getAll().forEach(workspace =>
+    blocks.push(
+      ...workspace
+        .getAllBlocks()
+        .filter(block => block.type === 'gamelab_behaviorPicker')
+    )
+  );
+  return blocks;
+};

@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2023-03-03T19:39:48.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
   "properties": {
     "encrypted": "false",
     "skin": "applab",
@@ -228,7 +233,7 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "hide_view_data_button": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
@@ -240,19 +245,12 @@
     },
     "project_template_level_name": "U6_L03_Lists Practice_Choice_3-Template",
     "thumbnail_url": "https://images.code.org/79a7835074a24182227e47ed54f1834a-EM_titleCard.png",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "display_name": "EmojiMaker, Part 2",
-    "bubble_choice_description": "Spice Level: 🌶🌶🌶\r\n\r\nDeclare and initialize all necessary lists, and use them to display features on the blank emoji."
+    "bubble_choice_description": "Spice Level: 🌶🌶🌶\r\n\r\nDeclare and initialize all necessary lists, and use them to display features on the blank emoji.",
+    "preload_asset_list": null,
+    "encrypted_examples": "9qcaNvIZyPiP68IhOFsDgcF8QpiTPhGuZvQuTIxCYlbonPVIbyqt4WeylFvW\nleDoy/3m/0hZGMx0/o4noHg9qg==\n"
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2023-03-03T19:39:48.000Z",
-  "level_num": "custom",
-  "user_id": 18603,
-  "audit_log": "[{\"changed_at\":\"2023-03-03T19:39:47.991+00:00\",\"changed\":[\"cloned from \\\"U6_L03_Lists Practice_Choice_3-1\\\"\"],\"cloned_from\":\"U6_L03_Lists Practice_Choice_3-1\"},{\"changed_at\":\"2023-03-03 19:40:00 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-03 20:23:53 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-03 20:24:58 +0000\",\"changed\":[\"validation_enabled\",\"code_functions\",\"embed\",\"start_html\",\"start_blocks\",\"data_tables\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-03 21:17:50 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-03 22:44:11 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-06 16:14:53 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-06 22:35:20 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-09 17:02:59 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-10 16:19:05 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-10 16:20:57 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-16 15:36:21 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-23 15:48:26 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-23 15:52:09 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-03T19:39:47.991+00:00\",\"changed\":[\"cloned from \\\"U6_L03_Lists Practice_Choice_3-1\\\"\"],\"cloned_from\":\"U6_L03_Lists Practice_Choice_3-1\"},{\"changed_at\":\"2023-03-03 19:40:00 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-03 20:23:53 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-03 20:24:58 +0000\",\"changed\":[\"validation_enabled\",\"code_functions\",\"embed\",\"start_html\",\"start_blocks\",\"data_tables\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-03 21:17:50 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-03 22:44:11 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-06 16:14:53 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-06 22:35:20 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-09 17:02:59 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-10 16:19:05 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-10 16:20:57 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-16 15:36:21 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-23 15:48:26 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-23 15:52:09 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-11 17:50:05 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-13 22:26:19 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

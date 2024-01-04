@@ -44,25 +44,26 @@
 |Iraq|ABCode|Batool Hussain|ABcode.global@gmail.com|
 |Israel|Wix|Yossi Hayut|yossih@wix.com<br>http://www.wix.com|
 |Italy|Programma il Futuro|Enrico Nardelli|didattica@programmailfuturo.it<br>https://programmailfuturo.it|
-|Jamaica|Seprod Foundation|Lisa D'Oyen|ldoyen@seprod.com<br>www.seprodfoundation.org|
+|Jamaica|Seprod Foundation|Lisa D'Oyen|ldoyen@seprod.com<br>https://seprodfoundation.org/|
 |Japan|特定非営利活動法人みんなのコード (Code for Everyone)|利根川 裕太 (Yuta Tonegawa)|info@code.or.jp|
 |Kenya|Uzima Aid|Gideon Ochieng'|gideon.ochieng@uzimaid.org<br>http://www.uzimaid.org/|
 |Kosovo|SHPIK|Bekim Kasumi|bekim.kasumi@shpik.org<br>www.shpik.org|
 |Latin America|Eidos Global|Marina Puente Pistarini|marina@eidosglobal.org<br>https://www.eidosglobal.org/|
 |Malaysia|Chumbaka|Nigel Sim|nigel@chumbaka.asia<br>www.chumbaka.asia|
+|Malaysia|Fondation Rolf Schnyder|Scott and Andrea Wong|scott.andrea@fondationrolfschnyder.org<br>www.fondationrolfschnyder.org|
 |Malaysia|Malaysia Digital Economy Corporation (MDEC)|Sofia Akmal Abu Bakar|sofia@mdec.com.my<br>https://mdec.my/|
 |Malaysia|Telebort|Chong Wei|mytelebort@gmail.com<br>https://www.telebort.com/|
 |Maldives|Women in Tech Maldives|Aishath Adnan|info@womenintechmv.org<br>https://www.womenintechmv.org/|
-|Malta|eSkills Malta Foundation|Carmel Cachia|Carmel.b.cachia@gov.mt<br>www.eskills.org.mt|
+|Malta|eSkills Malta Foundation|Carmel Cachia|Carmel.b.cachia@gov.mt<br>https://eskills.org.mt/|
 |Mexico|Colegio Nikola Tesla|Larisa Hinojosa|http://nikolatesla.edu.mx|
 |México|Cuantrix - Fundación Televisa|Ilse Alvarez|ilse.alvarez@fundaciontelevisa.org<br>www.cuantrix.mx|
 |Mongolia|Codercub|Zolbayar Magsar|info@computerscience.mn<br>http://www.computerscience.mn/|
 |Myanmar|Thate Pan Hub|Min Aung Thu|strategic@thatepanhub.org<br>https://thatepanhub.org/|
 |Nepal|Adhyayan School|Sandeep Sharma|sandeep.sharma@adhyayan.edu.np<br>http://adhyayan.edu.np|
-|Netherlands, Serbia|codethatidea|Snezana Perovic|info@codethatidea<br>www.codethatidea.com|
+|Netherlands, Serbia|codethatidea|Snezana Perovic|info@codethatidea.com<br>www.codethatidea.com|
 |New Zealand (Aotearoa)|OMGTech!|Education Team @ OMGTech!|schools@omgtech.co.nz<br>https://omgtech.co.nz|
 |New Zealand|Ara Institute of Canterbury|Amitrajit Sarkar|sarkara@cpit.ac.nz<br>http://www.ara.ac.nz|
-|Nigeria|Odyssey Educational Foundation|Stella Uzochukwu-Denis|ifywayne@gmail.com<br>www.odysseyedufoundation.org|
+|Nigeria|Odyssey Educational Foundation|Stella UzochukwuDenis|ifywayne@gmail.com<br>www.odysseyedufoundation.org|
 |Nigeria|TechEduHub|Chioma Omolaye|chiomaomolaye@gmail.com<br>https://instagram.com/tech_eduhub?igshid=YmMyMTA2M2Y=|
 |Nigeria|The Zariah Elizabeth Foundation|Akindayo Akindolani|dayo@tzefoundation.org<br>www.tzefoundation.org|
 |Pakistan|DIGIT|Majid Hussain|majid.hussain@digit.com.pk<br>https://digit.com.pk/|
@@ -76,6 +77,7 @@
 |Rwanda|Children’s Creativity Lab|Ildephonse Mungwarakarama|ildephonse@creativity.rw<br>http://creativity.rw|
 |Singapore|Infocomm Media Development Authority of Singapore||https://www.imda.gov.sg|
 |Slovakia|Accenture|Zuzana Tankova|ucme.informatiku.inak@gmail.com<br>http://ds.blf.sk|
+|Slovakia|Informatika 2.0||servus@informatika20.sk<br>www.informatika20.sk|
 |South Africa|Code for Change|Sibusiso Khoza|sibusiso@codejika.com<br>https://codeforchange.org.za/|
 |South Africa|ITC CLUB Mpumalanga|Nomusa Keninda|http://mpumalangaictclub.blogspot.com|
 |South Korea|Enuma|Eugine Chung|info@enuma.com<br>https://enuma.com/|

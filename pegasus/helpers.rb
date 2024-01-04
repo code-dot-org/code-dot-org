@@ -7,7 +7,7 @@ require 'cdo/cookie_helpers'
 require 'cdo/language_dir'
 require_relative './helpers/analytics_constants'
 
-def avatar_image(name, width = 320, square_photo = false)
+def avatar_image(name, width = 320, square_photo: false)
   basename = name.downcase.gsub(/\W/, '_').squeeze('_')
   path = resolve_image("images/avatars/#{basename}")
   return nil unless path

@@ -359,6 +359,48 @@ describe I18nScriptUtils do
     end
   end
 
+  describe '.write_json_file' do
+    let(:write_json_file) {I18nScriptUtils.write_json_file(file_path, data)}
+
+    let(:file_path) {'/expected/file.json'}
+    let(:data) {{key: {key2: 'val'}}}
+
+    it 'writes pretty json content to the file' do
+      expected_file_content = <<~JSON.strip
+        {
+          "key": {
+            "key2": "val"
+          }
+        }
+      JSON
+
+      write_json_file
+
+      assert File.exist?(file_path)
+      assert_equal expected_file_content, File.read(file_path)
+    end
+  end
+
+  describe '.write_yaml_file' do
+    let(:write_yaml_file) {I18nScriptUtils.write_yaml_file(file_path, data)}
+
+    let(:file_path) {'/expected/file.yaml'}
+    let(:data) {{key: {'key2' => 'val'}}}
+
+    it 'writes pretty json content to the file' do
+      expected_file_content = <<~YAML
+        ---
+        :key:
+          key2: val
+      YAML
+
+      write_yaml_file
+
+      assert File.exist?(file_path)
+      assert_equal expected_file_content, File.read(file_path)
+    end
+  end
+
   describe '.copy_file' do
     let(:copy_file) {I18nScriptUtils.copy_file(file_path, dest_path)}
 

@@ -123,11 +123,9 @@ class Foorm::Submission < ApplicationRecord
   def formatted_answers_with_facilitator_number(number)
     return {} unless workshop_metadata.facilitator_specific?
 
-    Hash[
-      formatted_answers.map do |question_id, answer_text|
-        [question_id + "_#{number}", answer_text]
-      end
-    ]
+    formatted_answers.map do |question_id, answer_text|
+      [question_id + "_#{number}", answer_text]
+    end.to_h
   end
 
   # Store the JSON parsable "{}" if we attempt to store a blank submission,

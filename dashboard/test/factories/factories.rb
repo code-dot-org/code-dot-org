@@ -64,10 +64,11 @@ FactoryBot.define do
       min_user_id {0}
       max_user_id {0}
       overflow_max_user_id {0}
-      script {nil}
+      script
     end
     factory :single_section_experiment, class: 'SingleSectionExperiment' do
       section
+      script
     end
     factory :single_user_experiment, class: 'SingleUserExperiment' do
     end
@@ -157,10 +158,10 @@ FactoryBot.define do
           authorized_teacher.save
         end
       end
-      factory :ai_chat_access do
-        after(:create) do |ai_chat_access|
-          ai_chat_access.permission = UserPermission::AI_CHAT_ACCESS
-          ai_chat_access.save
+      factory :ai_tutor_access do
+        after(:create) do |ai_tutor_access|
+          ai_tutor_access.permission = UserPermission::AI_TUTOR_ACCESS
+          ai_tutor_access.save
         end
       end
       factory :facilitator do
@@ -343,6 +344,26 @@ FactoryBot.define do
         end
       end
 
+      factory :student_with_ai_tutor_access do
+        after(:create) do |user|
+          teacher = create :teacher
+          create :single_user_experiment, min_user_id: teacher.id, name: 'ai-tutor'
+          section = create :section, ai_tutor_enabled: true, user: teacher
+          create :follower, student_user: user, section: section
+          user.reload
+        end
+      end
+
+      factory :student_without_ai_tutor_access do
+        after(:create) do |user|
+          teacher = create :teacher
+          create :single_user_experiment, min_user_id: teacher.id, name: 'ai-tutor'
+          section = create :section, ai_tutor_enabled: false, user: teacher
+          create :follower, student_user: user, section: section
+          user.reload
+        end
+      end
+
       trait :migrated_imported_from_google_classroom do
         google_sso_provider
         without_email
@@ -420,6 +441,15 @@ FactoryBot.define do
         user.encrypted_password = nil
         user.password = nil
         user.save validate: false
+      end
+    end
+
+    trait :with_lti_auth do
+      after(:create) do |user|
+        user.authentication_options.destroy_all
+        lti_auth = create(:lti_authentication_option, user: user)
+        user.authentication_options << lti_auth
+        user.save!
       end
     end
 
@@ -568,6 +598,12 @@ FactoryBot.define do
     factory :facebook_authentication_option do
       credential_type {AuthenticationOption::FACEBOOK}
     end
+
+    factory :lti_authentication_option do
+      sequence(:email) {|n| "lti_user#{n}@lms.com"}
+      credential_type {AuthenticationOption::LTI_V1}
+      authentication_id {"#{SecureRandom.alphanumeric}|#{SecureRandom.alphanumeric}|#{SecureRandom.alphanumeric}"}
+    end
   end
 
   factory :districts_users do
@@ -594,6 +630,12 @@ FactoryBot.define do
       login_type {'email'}
       grades {['pl']}
     end
+  end
+
+  factory :section_instructor do
+    instructor {create(:teacher)}
+    section {create(:section)}
+    status {:active}
   end
 
   factory :game do
@@ -1085,6 +1127,12 @@ FactoryBot.define do
         create :activity_section, lesson_activity: activity
       end
     end
+
+    trait :with_lesson_group do
+      after(:create) do |lesson|
+        create(:lesson_group, script: lesson.script, lessons: [lesson]) unless lesson.lesson_group
+      end
+    end
   end
 
   factory :resource do
@@ -1469,14 +1517,6 @@ FactoryBot.define do
       grade_07_offered {true}
       grade_08_offered {true}
     end
-
-    # Schools eligible for circuit playground discount codes
-    # are schools where over 50% of students are eligible
-    # for free and reduced meals.
-    trait :is_maker_high_needs_school do
-      frl_eligible_total {51}
-      students_total {100}
-    end
   end
 
   # Default school to public school. More specific factories below
@@ -1504,12 +1544,6 @@ FactoryBot.define do
     trait :is_k8_school do
       after(:create) do |school|
         build :school_stats_by_year, :is_k8_school, school: school
-      end
-    end
-
-    trait :is_maker_high_needs_school do
-      after(:create) do |school|
-        create :school_stats_by_year, :is_maker_high_needs_school, school: school
       end
     end
   end
@@ -1597,16 +1631,6 @@ FactoryBot.define do
     storage_app_id {1}
     association :level
     storage_id {storage_user.try(:id) || 2}
-  end
-
-  factory :circuit_playground_discount_application do
-    user {create :teacher}
-  end
-
-  factory :circuit_playground_discount_code do
-    sequence(:code) {|n| "FAKE#{n}_asdf123"}
-    full_discount {true}
-    expiration {Time.now + 30.days}
   end
 
   factory :seeded_s3_object do
@@ -1734,8 +1758,8 @@ FactoryBot.define do
   end
 
   factory :lti_integration do
-    issuer {"issuer"}
-    client_id {"client_id"}
+    issuer {SecureRandom.alphanumeric}
+    client_id {SecureRandom.alphanumeric}
     platform_name {"platform_name"}
     auth_redirect_url {"http://test.org/auth"}
     jwks_url {"jwks_url"}
@@ -1751,6 +1775,21 @@ FactoryBot.define do
   factory :lti_deployment do
     deployment_id {"deployment"}
     lti_integration {create :lti_integration}
+  end
+
+  factory :lti_course do
+    lti_integration {create :lti_integration}
+    lti_deployment {create :lti_deployment, lti_integration: lti_integration}
+    context_id {SecureRandom.uuid}
+    course_id {SecureRandom.uuid}
+    nrps_url {"http://test.org/api/names_and_roles"}
+    resource_link_id {"resource_link_id"}
+  end
+
+  factory :lti_section do
+    lti_course {create :lti_course}
+    section {create :section}
+    lms_section_id {SecureRandom.uuid}
   end
 
   factory :parental_permission_request do
@@ -1829,10 +1868,6 @@ FactoryBot.define do
     teacher_description {"Description for teacher"}
   end
 
-  factory :learning_goal_evaluation do
-    association :learning_goal
-  end
-
   factory :learning_goal_teacher_evaluation do
     association :learning_goal
     association :teacher, factory: :teacher
@@ -1840,9 +1875,41 @@ FactoryBot.define do
     understanding {0}
   end
 
+  factory :rubric_ai_evaluation do
+    transient do
+      student {create :student}
+    end
+
+    user {student}
+    project_id {789}
+    association :requester, factory: :teacher
+    association :rubric
+    status {1}
+    project_version {"1"}
+  end
+
   factory :learning_goal_ai_evaluation do
     association :learning_goal
-    association :user, factory: :student
+    association :rubric_ai_evaluation
     understanding {0}
+    ai_confidence {1}
+  end
+
+  factory :learning_goal_ai_evaluation_feedback do
+    association :learning_goal_ai_evaluation
+    teacher_id {0}
+    ai_feedback_approval {false}
+    false_positive {false}
+    false_negative {false}
+    vague {false}
+    feedback_other {true}
+    other_content {'other'}
+  end
+
+  factory :potential_teacher do
+    association :script
+    name {"foosbars"}
+    email {"foobar@example.com"}
+    receives_marketing {true}
   end
 end

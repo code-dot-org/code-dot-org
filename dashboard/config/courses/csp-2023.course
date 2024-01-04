@@ -47,6 +47,17 @@
       }
     },
     {
+      "name": "All Vocabulary",
+      "url": "/courses/csp-2023/vocab",
+      "key": "all_vocabulary_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_1"
+      }
+    },
+    {
       "name": "Change Log",
       "url": "https://docs.google.com/document/d/1o7UePZl4KIXImkHkgY0AKMU2SWyF9EW0IUw16TD5U7Q/edit?usp=sharing",
       "key": "change_log",
@@ -56,6 +67,26 @@
       },
       "seeding_key": {
         "resource.key": "change_log"
+      }
+    },
+    {
+      "name": "Course Vocabulary",
+      "url": "https://docs.google.com/document/d/142LD4u8_K84e20kjQwoz1Ez8LQEcYGKZAL_cujAhrmI/edit?usp=sharing",
+      "key": "course_vocabulary",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "course_vocabulary"
+      }
+    },
+    {
+      "name": "Create PT Written Response Practice Opportunities",
+      "url": "https://docs.google.com/document/d/1MElyqUf08j_M69PDmeGianVGqWT3RyXhFEFHgxlU5RQ/edit?usp=sharing",
+      "key": "create_pt_callouts",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "create_pt_callouts"
       }
     },
     {

@@ -11,6 +11,11 @@
  */
 
 import {ObservableParameterModel} from '@blockly/block-shareable-procedures';
+import {FALSEY_DEFAULT, readBooleanAttribute} from '@cdo/apps/blockly/utils';
+import {
+  getBlockDescription,
+  setBlockDescription,
+} from './functionMutatorHelpers';
 
 /**
  * A type guard which checks if the given block is a procedure block.
@@ -77,19 +82,25 @@ export const procedureDefMutator = {
         this.description = node.textContent;
       }
     }
+
+    this.userCreated = readBooleanAttribute(
+      xmlElement,
+      'userCreated',
+      FALSEY_DEFAULT
+    );
     this.setStatements_(xmlElement.getAttribute('statements') !== 'false');
   },
 
   /**
-   * Returns the state of this block as a JSON serializable object.
-   * @returns The state of this block, eg the parameters and statements.
+   * Returns a JSON serializable value which represents the extra state of the block.
+   * @returns The state of this block, e.g. the parameters and statements.
    */
   saveExtraState: function () {
     const state = Object.create(null);
-    if (this.description) {
-      state['description'] = this.description;
-    }
+    state['description'] = getBlockDescription(this);
     state['procedureId'] = this.getProcedureModel().getId();
+    state['initialDeleteConfig'] = this.isDeletable();
+    state['userCreated'] = this.userCreated;
 
     const params = this.getProcedureModel().getParameters();
     if (!params.length && this.hasStatements_) return state;
@@ -112,9 +123,8 @@ export const procedureDefMutator = {
   },
 
   /**
-   * Applies the given state to this block.
-   * @param state The state to apply to this block, eg the parameters and
-   *     statements.
+   * Accepts a JSON serializable state value and applies it to the block.
+   * @param state The state to apply to this block (see saveExtraState above).
    */
   loadExtraState: function (state) {
     const map = this.workspace.getProcedureMap();
@@ -141,11 +151,11 @@ export const procedureDefMutator = {
       }
     }
 
-    if (state['description']) {
-      this.description = state['description'];
-    }
+    setBlockDescription(this, state);
     this.doProcedureUpdate();
+    this.setDeletable(state['initialDeleteConfig'] === false ? false : true);
     this.setStatements_(state['hasStatements'] === false ? false : true);
+    this.userCreated = state['userCreated'];
   },
 
   /**

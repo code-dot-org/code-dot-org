@@ -91,6 +91,7 @@ const Template = args => (
     teacherHasEnabledAi={false}
     studentLevelInfo={defaultStudentLevelInfo}
     currentLevelName={rubricLevelName}
+    open
     {...args}
   />
 );

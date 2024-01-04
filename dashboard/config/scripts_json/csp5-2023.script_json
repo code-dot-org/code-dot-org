@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "38889d1b-67f5-40a9-a0a8-99b238aada75",
+          "notice": "Free Teacher Resources from Amazon Future Engineer",
+          "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
+          "link": "https://code.org/afe",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Get free resources"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -18,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-06 18:11:38 UTC",
+    "serialized_at": "2023-12-15 22:59:34 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1973,7 +1985,7 @@
       "key": "392c2b18-efa2-45d0-818b-0ca0a13b18b8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Have students discuss their reactions to the quotes pulled out from Rumman Chowdry, a software engineering director for Twitter’s machine learning ethics, transparency, and accountability team. \n* Do you think Twitter’s response was appropriate?\n* What are the risks and potential harms of systems, such as social media platforms like Twitter, becoming too dependent on machine learning?\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Have students discuss their reactions to the quotes pulled out from Rumman Chowdhry, a software engineering director for Twitter’s machine learning ethics, transparency, and accountability team. \n* Do you think Twitter’s response was appropriate?\n* What are the risks and potential harms of systems, such as social media platforms like Twitter, becoming too dependent on machine learning?\n"
       },
       "seeding_key": {
         "activity_section.key": "392c2b18-efa2-45d0-818b-0ca0a13b18b8",
@@ -1984,7 +1996,7 @@
       "key": "a97c58df-e05d-45d3-bbbf-0992350a15f6",
       "position": 2,
       "properties": {
-        "description": "The story of Twitter and its photo cropping algorithm shows how something that’s built with one intention, in this case to better highlight photos, can lead to unintended effects, in this case, bias of white faces over black faces, which can also have harmful impacts on society or culture.  And, this case provides an example of a software company that has taken actionable steps to address algorithmic bias by establishing this team (machine learning ethics, transparency, and accountability team) lead by Rumman Chowdry.\n\n",
+        "description": "The story of Twitter and its photo cropping algorithm shows how something that’s built with one intention, in this case to better highlight photos, can lead to unintended effects, in this case, bias of white faces over black faces, which can also have harmful impacts on society or culture.  And, this case provides an example of a software company that has taken actionable steps to address algorithmic bias by establishing this team (machine learning ethics, transparency, and accountability team) lead by Rumman Chowdhry.\n\n",
         "remarks": true
       },
       "seeding_key": {
@@ -3271,6 +3283,17 @@
       }
     },
     {
+      "name": "All Vocabulary",
+      "url": "/s/csp5-2023/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
       "name": "Assessment Day - Data",
       "url": "https://docs.google.com/presentation/d/18tJ6kC-TCmAxEJTN3n4TTiFsKBltoKv7bI3AbNe4WPA/edit?usp=sharing",
       "key": "assessment_day_-_data",
@@ -3931,6 +3954,12 @@
     },
     {
       "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "csp5-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "course_vocabulary",
         "script.name": "csp5-2023"
       }
@@ -4013,7 +4042,7 @@
     {
       "key": "data_bias",
       "word": "Data Bias",
-      "definition": "the practice of obtaining input or information from a large number of people via the Internet",
+      "definition": "data that does not accurately reflect the full population or phenomenon being studied",
       "properties": {
       },
       "seeding_key": {
@@ -4098,6 +4127,18 @@
       "seeding_key": {
         "lesson.key": "Learning from Data",
         "vocabulary.key": "metadata"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Machine Learning",
+        "vocabulary.key": "data_bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Machine Learning",
+        "vocabulary.key": "information"
       }
     }
   ],

@@ -1,0 +1,30 @@
+name 'virtual-pl-csa-summer-day3_async1jigsaw2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson Investigation 
+
+##### Let's dive deeper into some lessons from Unit 2. 
+
+##### You will use the lesson investigation resource on **pages 44-46** of your [Activity Packet](https://docs.google.com/document/d/13Ioyv4xcUUunhZ9034eNvm9QNpRYQYnyha1UtS5eixA/edit?usp=sharing) to complete this activity. Complete only one of the four lesson investigation documents
+
+## Lessons Investigation Jigsaw
+
+*  ###### U2L4 - The this keyword
+*  ###### U2L5 - Constructors and inheritance
+*  ###### U2L6 - Variables
+
+## Do this:
+
+* ##### Spend 25 minutes exploring the lesson plan then lesson for your assigned lesson.
+* ##### Spend 20 minutes deconstructing the lesson using the lesson investigation resource.
+* ##### Be prepared to share after lunch.  
+
+### **Suggested time:** 50 minutes
+
+
+
+<div style="clear:both"/>
+
+MARKDOWN

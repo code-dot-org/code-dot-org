@@ -54,16 +54,21 @@ export default class ArtistVisualizationColumn extends React.Component {
             {
               ' ' /* Explicitly insert whitespace so that this behaves like our ejs file*/
             }
+            {
+              // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+              // Verify or update this alt-text as necessary
+            }
             <img
               id="spinner"
               style={styles.invisible}
               src="/blockly/media/turtle/loading.gif"
               height="15"
               width="15"
+              alt=""
             />{' '}
             {this.props.showFinishButton && (
               <button type="button" id="finishButton" className="share">
-                <img src="/blockly/media/1x1.gif" />
+                <img src="/blockly/media/1x1.gif" alt="" />
                 {msg.finish()}
               </button>
             )}

@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  LocalClassActionBlock,
   AdministratorResourcesActionBlock,
   TwoColumnActionBlock,
 } from './TwoColumnActionBlock';
@@ -12,14 +11,6 @@ export default {
   component: TwoColumnActionBlock,
 };
 
-const LocalClassActionBlockTemplate = args => {
-  return (
-    <Provider store={reduxStore()}>
-      <LocalClassActionBlock showHeading={true} />
-    </Provider>
-  );
-};
-
 const AdministratorResourcesActionBlockTemplate = args => {
   return (
     <Provider store={reduxStore()}>
@@ -27,10 +18,6 @@ const AdministratorResourcesActionBlockTemplate = args => {
     </Provider>
   );
 };
-
-export const LocalClassActionBlockExamples = LocalClassActionBlockTemplate.bind(
-  {}
-);
 
 export const AdministratorResourcesActionBlockExamples =
   AdministratorResourcesActionBlockTemplate.bind({});

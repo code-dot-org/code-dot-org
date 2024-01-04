@@ -80,6 +80,25 @@ export default function LearningGoalItem({
           learningGoalData={exisitingLearningGoalData}
           updateLearningGoal={updateLearningGoal}
         />
+        <label
+          style={{...styles.labelAndInput, ...styles.textboxLabelAndInput}}
+        >
+          Tips
+          <textarea
+            value={exisitingLearningGoalData.tips || ''}
+            onChange={event =>
+              updateLearningGoal(
+                exisitingLearningGoalData.id,
+                'tips',
+                event.target.value
+              )
+            }
+            style={{width: '100%', height: 100}}
+          />
+        </label>
+        <label style={styles.labelAndInput}>
+          Unique Key: {exisitingLearningGoalData.key}
+        </label>
         <Button
           text="Delete key concept"
           color={Button.ButtonColor.red}
@@ -168,5 +187,11 @@ const styles = {
     justifyContent: 'flex-start',
     flexWrap: 'wrap',
     flex: '1 1',
+  },
+  textboxLabelAndInput: {
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    marginLeft: 0,
+    marginRight: 25,
   },
 };

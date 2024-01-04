@@ -20,7 +20,7 @@ uk-UA:
   algebra_name: Інформатика в алгебрі
   alice_beyond_gradelevel: Середня школа +
   alice_beyond_longdescription: Використовуючи інноваційне середовище програмування
-    для створення 3D-анімацій, проект Alice пропонує інструменти та навчальні матеріали
+    для створення 3D-анімацій, проєкт Alice пропонує інструменти та навчальні матеріали
     для навчання обчислювального мислення, навичок розв'язання задач та програмування
     для учнів різних класів та рівнів.
   alice_beyond_platformtext: Windows або Mac (потрібна установка)
@@ -41,7 +41,7 @@ uk-UA:
   appinventor_beyond_longdescription: Розважальні, швидкі відео-уроки поетапного створення
     трьох простих додатків телефону або планшета на Android. Призначені як для новачків,
     так досвідчених учнів, ці уроки Години коду допоможуть розпочати програмування
-    власних проектів. І уявіть собі, можна поділитися своїми творіннями з друзями!
+    власних проєктів. І уявіть собі, можна поділитися своїми творіннями з друзями!
     Ці навчальні діяльності підходять як для індивідуальної, так і групової роботи
     з вчителем.
   appinventor_beyond_name: Година коду від AppInventor
@@ -51,7 +51,7 @@ uk-UA:
   appinventor_longdescription: Розважальні, швидкі відео-уроки поетапного створення
     трьох простих додатків телефону або планшета на Android. Призначені як для новачків,
     так досвідчених учнів, ці уроки Години коду допоможуть розпочати програмування
-    власних проектів. І уявіть собі, можна поділитися своїми творіннями з друзями!
+    власних проєктів. І уявіть собі, можна поділитися своїми творіннями з друзями!
     Ці навчальні діяльності підходять як для індивідуальної, так і групової роботи
     з вчителем.
   appinventor_name: Година коду від AppInventor
@@ -60,11 +60,11 @@ uk-UA:
   applab_gradelevel: Вік 13+
   applab_name: Програмна Лабораторія
   applab_shortdescription_congrats: App Lab - це середовище програмування для створення
-    простих аплікацій. Спроектуйте додаток, запрограмуйте його блоками чи JavaScript,
+    простих аплікацій. Спроєктуйте додаток, запрограмуйте його блоками чи JavaScript,
     а тоді поділіться ним за кілька секунд
   applab_tile_start_tutorial: Початок
   applab_tile_subtitle: Створіть власну аплікацію на JavaScript використовуючи блокове
-    програмування. Або вдоскональте свої навики з текстовим програмуванням. (Лише
+    програмування. Або вдоскональте свої вміння з текстовим програмуванням. (Лише
     англійською)
   applab_tile_teacher_guide: Переглянути рекомендації для вчителя
   applab_tile_title: Вступ до App Lab (Вік13+)
@@ -107,7 +107,7 @@ uk-UA:
   blockly_shortdescription: Завантажте архів ZIP для навчання оффлайн
   boxisland_gradelevel: Початкова школа
   boxisland_longdescription: Відправляйтесь у подорож на острів Бокс і допоможуть
-    Хіро зібрати усі годинники, розсипані у пустелі! У цьому підручнику можна вивчити
+    Хіро зібрати всі годинники, розсипані у пустелі! У цьому підручнику можна вивчити
     основи алгоритмів, послідовного виконання, цикли та умови!
   boxisland_name: Острів Бокс
   boxisland_platformtext: Android, iOS
@@ -154,7 +154,7 @@ uk-UA:
   carousel_heading_university: Курси університетів онлайн
   carousel_heading_unplugged: Немає пристроїв або Інтернету? Спробуйте безмашинні
     вправи
-  carousel_heading_webpages: Навчіться створювати веб-сторінки
+  carousel_heading_webpages: Навчіться створювати вебсторінки
   cded_sign_up: Реєстрація
   cded_try_it: Спробувати
   certificate_sponsor_message: "%{sponsor_name} зробив щедрий подарунок, щоб спонсорувати
@@ -223,7 +223,7 @@ uk-UA:
   codecademy_beyond_longdescription: Codecademy - це інтерактивне, кероване учнем,
     навчання, котре охоплює основи інформатики через вивчення JavaScript десятками
     мільйонів учнів по всьому світу. Ми підготували цілісне заняття Години коду з
-    тестами та слайдами, в кінці якого учень створить завершений проект.
+    тестами та слайдами, в кінці якого учень створить завершений проєкт.
   codecademy_beyond_name: Codecademy
   codecademy_beyond_platformtext: Сучасні веб-браузери. програми iOS, Android
   codecademy_beyond_shortdescription: Вивчайте основи програмування JavaScript у веб-браузері
@@ -231,7 +231,7 @@ uk-UA:
   codecademy_longdescription: Codecademy - це інтерактивне, кероване учнем, навчання,
     котре охоплює основи інформатики через вивчення JavaScript десятками мільйонів
     учнів по всьому світу. Ми підготували цілісне заняття Години коду з тестами та
-    слайдами, в кінці якого учень створить завершений проект.
+    слайдами, в кінці якого учень створить завершений проєкт.
   codecademy_name: Codecademy
   codecademy_platformtext: Сучасні веб-браузери. програми iOS, Android
   codecademy_shortdescription: Вивчайте основи програмування JavaScript у веб-браузері
@@ -444,19 +444,19 @@ uk-UA:
   coursec-2019_name: Курс С (2019)
   coursec-2020_gradelevel: Вік 6-10
   coursec-2020_name: Курс С (2020)
-  coursec-2020_shortdescription_congrats: Створюємо програми з послідовністями, циклами
+  coursec-2020_shortdescription_congrats: Створюємо програми з послідовностями, циклами
     та подіями. Перекладемо свої ініціали двійковим кодом, дослідимо різні методи
     вирішення проблем та дізнаємось, як реагувати на кібер-залякування. В кінці курсу
     створимо свою власну гру або історію, якою зможемо поділитися!
   coursec-2021_gradelevel: Вік 6-10
   coursec-2021_name: Курс С (2021)
-  coursec-2021_shortdescription_congrats: Створюємо програми з послідовністями, циклами
+  coursec-2021_shortdescription_congrats: Створюємо програми з послідовностями, циклами
     та подіями. Перекладемо свої ініціали двійковим кодом, дослідимо різні методи
     вирішення проблем та дізнаємось, як реагувати на кібер-залякування. В кінці курсу
     створимо свою власну гру або історію, якою зможемо поділитися!
   coursec-2022_gradelevel: Вік 6-10
   coursec-2022_name: Курс С (2022)
-  coursec-2022_shortdescription_congrats: Створюємо програми з послідовністями, циклами
+  coursec-2022_shortdescription_congrats: Створюємо програми з послідовностями, циклами
     та подіями. Перекладемо свої ініціали двійковим кодом, дослідимо різні методи
     вирішення проблем та дізнаємось, як реагувати на кібер-залякування. В кінці курсу
     створимо свою власну гру або історію, якою зможемо поділитися!
@@ -524,7 +524,7 @@ uk-UA:
   csd3_name: 'Блок 3: Анімація та ігри'
   csedweek_banner_hoc: 'Наближається <a href="http://hourofcode.com" style="color:
     white; text-decoration:underline; font-weight:bold">Година коду</a>Закликаємо
-    усіх вчителів та організаторів<a href="http://hourofcode.com" style="color: white;
+    всіх вчителів та організаторів<a href="http://hourofcode.com" style="color: white;
     text-decoration:underline; font-weight:bold">спланувати свою Годину коду</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Ви вчитель інформатики? Перегляньте інші ресурси з предмету</a>'
@@ -589,7 +589,7 @@ uk-UA:
   dashboard_course_csina_desc: Code.org у співпраці з Bootstrap розробили навчальні
     програми вивчення алгебраїчних і геометричних понять через програмування.
   dashboard_course_csins: Інформатика в науці
-  dashboard_course_csins_desc: Code.org у співпраці з проектом GUTS розробили програму
+  dashboard_course_csins_desc: Code.org у співпраці з проєктом GUTS розробили програму
     вступу до понять інформатики у контексті моделювання та симуляції.
   dashboard_course_csp: AP® принципи інформатики
   dashboard_course_csp_desc: Code.org розробив докладний, цікавий та доступний курс
@@ -604,7 +604,7 @@ uk-UA:
   dashboard_coursed: 'Курс D: '
   dashboard_coursee: 'Курс E: '
   dashboard_coursef: 'Курс F: '
-  dashboard_curriculum: Навчальний план
+  dashboard_curriculum: Програма
   dashboard_curriculum_csd: 'Дослідження інформатики CS Discoveries: '
   dashboard_curriculum_csina: 'Інформатика в алгебрі:'
   dashboard_curriculum_csins: 'Інформатика в науці:'
@@ -648,7 +648,7 @@ uk-UA:
     Кожен курс складається з близько 20 уроків, які можна реалізувати як єдиний розділ
     чи семестровий курс. У них можуть брати участь навіть дошкільнята. Для того, щоб
     полегшити старт, ми пропонуємо безкоштовні високоякісні курси професійного розвитку
-    по усіх США. <a href="/professional-development-workshops">Знайдіть такі неподалік!</a>
+    по всіх США. <a href="/professional-development-workshops">Знайдіть такі неподалік!</a>
   dashboard_landing_available_courses: Перелік курсів, які на даний момент доступні
     для Вас і Ваших учнів.
   dashboard_landing_available_title: Доступні курси
@@ -659,7 +659,7 @@ uk-UA:
   dashboard_landing_loading: Завантаження...
   dashboard_landing_more_tutorials: Хочите побачити більше уроків?
   dashboard_landing_more_tutorials_desc: Є й інші навчальні посібники <a href="/learn/beyond">
-    від наших партнерів.</a> Навчіться програмувати з роботами, робити веб-сторінки,
+    від наших партнерів.</a> Навчіться програмувати з роботами, робити вебсторінки,
     створювати власні програмки або вивчати інші мови, як C++, Ruby або Python!
   dashboard_landing_new_beta: Новинка! Спробуйте наші бета-курси для учнів 1-5 класу.
   dashboard_landing_new_k5courses: Новинка! Спробуйте наші нові курси для учнів до
@@ -793,8 +793,7 @@ uk-UA:
     учня."
   dashboard_sections_sign_in_main: http://code.org і клацніть "Увійти"
   dashboard_sections_sign_in_question: Де точка входу учнів?
-  dashboard_sections_sign_in_unique: Унікальна веб-сторінка на вкладці "Керування
-    учнями"
+  dashboard_sections_sign_in_unique: Унікальна вебсторінка на вкладці "Керування учнями"
   dashboard_sections_switch_section: 'Перемикач груп:'
   dashboard_sections_table_code: Код групи
   dashboard_sections_table_course: Курс
@@ -976,7 +975,7 @@ uk-UA:
   header_about_team: Вся команда
   header_about_us: Про нас
   header_course_catalog: Каталог курсів
-  header_courses: курси
+  header_courses: Курси
   header_documentation: Документація
   header_educate_beyond: Поза Code.org
   header_educate_community: Інтернет-спільнота
@@ -991,6 +990,7 @@ uk-UA:
   header_help_support: 'Допомога та підтримка '
   header_help_us: Допомога нам
   header_home: Головна
+  header_incubator: Інкубатор
   header_learn: Вчитися
   header_legal: Конфіденційність та юридична інформація
   header_legal_privacy: Політика конфіденційності
@@ -1004,7 +1004,7 @@ uk-UA:
   header_screen_reader_help: Допомога
   header_sections: Секції
   header_stats: Статистика
-  header_teach: Вчити
+  header_teach: Навчати
   header_teacher_community: Спільнота вчителів
   header_tutorials: Навчальні матеріали
   hello: Привіт, світ!
@@ -1070,10 +1070,10 @@ uk-UA:
   hoc2018_dance_keep_on_dancing_box_title: Продовжуємо танцювати
   hoc2018_dance_keep_on_dancing_button: Розпочати 2 частину
   hoc2018_dance_keep_on_dancing_description: Рухайся далі однієї години з розширеними
-    проектними ідеями.
+    проєктними ідеями.
   hoc2018_dance_keep_on_dancing_specs: Мова| Формат| Вік 13+
-  hoc2018_dance_measure: Крок
-  hoc2018_dance_measure_colon: 'Крок:'
+  hoc2018_dance_measure: Такт
+  hoc2018_dance_measure_colon: 'Такт:'
   hoc2018_dance_party_box_description: Закодуй танцювальну вечірку і поділися з друзями!
   hoc2018_dance_party_box_title: Танцювальна вечірка
   hoc2018_dance_party_button: Початок
@@ -1098,7 +1098,7 @@ uk-UA:
     всі серії (5 хв)
   hoc2018_mc_adventurer_description: Скористайся кодом, щоб запросити Алекс чи Стіва
     на пригоду.
-  hoc2018_mc_adventurer_title: Майнкрафт - Пригоди
+  hoc2018_mc_adventurer_title: 'Майнкрафт: Пригоди'
   hoc2018_mc_aquatic_description: Майнкрафт повернувся до Години коду з новеньким
     підручником! Подорожуйте Майнкрафтом з кодом.
   hoc2018_mc_aquatic_title: 'Minecraft: Підводна подорож'
@@ -1213,6 +1213,9 @@ uk-UA:
   hoc_overview_dance_title: Танцювальна вечірка
   hoc_overview_hello_world_2022_alt_text: Анімовані персонажі астронавтів і тварин
     плавають навколо ілюстрації землі
+  hoc_overview_hello_world_2022_subtitle: Виберіть одну із шести цікавих тем (включаючи
+    космос та футбол!), щоб кодувати інтерактивних персонажів у світі, який ви створите
+    самі.
   hoc_overview_more_resources: Щоб отримати додаткові ресурси для навчання з класом
     дистанційно, див. наш посібник з розміщення [віртуального Hour of Code](https://hourofcode.com/us/how-to/virtual).
     Що стосується учнів, які мають технологічні обмеження або проблеми з підключенням,
@@ -1265,8 +1268,8 @@ uk-UA:
     деякі зміни в нашу політику конфіденційності, починаючи з 25 травня.
   homepage_diversity_pledge: Приєднатись до петиції про різноманіття
   homepage_donors_donate: Підтримати
-  homepage_donors_seall: Подивитися усіх
-  homepage_gallery_header: Більше %{project_count} мільйонів проектів створено на
+  homepage_donors_seall: Подивитися всіх
+  homepage_gallery_header: Більше %{project_count} мільйонів проєктів створено на
     Code.org
   homepage_header_donors: Code.org дякує своїм помічникам
   homepage_hero_hoc_is_coming: Наближається Година коду
@@ -1386,6 +1389,7 @@ uk-UA:
   hourofcode_shortcode: Код
   hourofcode_shortdescription: Вчіться програмувати з Марком Цукенбергом та Злими
     птахами!
+  how_ai_works: Як працює ШІ
   how_to_teach_hoc: Як викладати "Годину коду"
   i_agree: Погоджуюся
   i_am_a: 'Я - '
@@ -1558,7 +1562,7 @@ uk-UA:
     віку.
   lightbot_name: Світлячок
   lightbot_platformtext: ВСІ браузери та iOS, Android або ігрова консоль
-  lightbot_shortdescription: Запрограмуйте Світлячка, щоб розв'язати завдання з процедурами
+  lightbot_shortdescription: Запрограмуйте Світлячка, щоб виконати завдання з процедурами
     та циклами!
   lightbotintl_gradelevel: Всі вікові групи
   lightbotintl_longdescription: Вивчайте базову логіку програмування, починаючи з
@@ -1582,7 +1586,7 @@ uk-UA:
   make_app: Створити програму
   makeschool_beyond_gradelevel: Старша школа
   makeschool_beyond_longdescription: Вже знаєте трохи ObjectiveC? Тоді навчіться створювати
-    гру для iPhone за одну годину! Ми покажемо, як можна спроектувати, запрограмувати,
+    гру для iPhone за одну годину! Ми покажемо, як можна спроєктувати, запрограмувати,
     протестувати та пограти у гру в своєму браузері, а потім поділитись нею з друзями
     на Facebook! Попередній досвід розробки для iPhone не потрібен. Потрібне розуміння
     змінних, методів та об'єктів.
@@ -1606,7 +1610,7 @@ uk-UA:
   mc_shortdescription: Використайте блоки коду, щоб допомогти Стіву чи Алекс в їхніх
     пригодах у світі Майнкрафт.
   mc_specs: Багато мов | Сучасні браузери та планшети| Вік 6-106
-  minecraft_adventurer: Майнкрафт - Пригоди
+  minecraft_adventurer: 'Майнкрафт: Пригоди'
   minecraft_adventurer_button: Початок
   minecraft_adventurer_description: Скористайся кодом, щоб запросити Алекс чи Стіва
     на пригоду.
@@ -1614,6 +1618,8 @@ uk-UA:
   minecraft_agent_button: Початок
   minecraft_agent_description: Майнкрафт повернувся до Години коду з новеньким підручником!
     Подорожуйте Майнкрафтом з кодом.
+  minecraft_continue_learning: 'Інформатика для всіх: виходьте за рамки Години коду
+    з Microsoft Store'
   minecraft_designer: Майнкрафт - Розробник
   minecraft_designer_button: Початок
   minecraft_designer_description: Запрограмуй тварин та інших істот Майнкрафт у власній
@@ -1653,10 +1659,10 @@ uk-UA:
   mozilla_beyond_gradelevel: Вік 12 +
   mozilla_beyond_longdescription: Thimble робить створення та розміщення веб-сторінок
     дивовижно простим. Пишіть та редагуйте HTML та CSS прямо у браузері, й одразу
-    переглядайте результат роботи. Розмістити завершений проект в Інтернеті та розіслати
+    переглядайте результат роботи. Розмістити завершений проєкт в Інтернеті та розіслати
     його друзям можна за одне клацання мишею. Ідеально для початківців та фахівців.
   mozilla_beyond_platformtext: Сучасні веб-браузери
-  mozilla_beyond_shortdescription: Створюйте та публікуйте веб-сторінки
+  mozilla_beyond_shortdescription: Створюйте та публікуйте вебсторінки
   n_have_learned_an_hoc: "<h1>Спробуйте</h1><h2>Годину коду з</h2><h3># інших</h3>"
   n_participants: "# учасників"
   name: Ім’я
@@ -1691,7 +1697,7 @@ uk-UA:
   participant_select: "-Виберіть-"
   participant_student: Учень
   participants: учасники
-  personalize_certificate: Персоналізувати ваш сертифікат
+  personalize_certificate: Персоналізувати сертифікат
   petition_age: Вік
   petition_join_others: 'Приєднатися до # інших'
   petition_join_others_num: Приєднуйтесь до %{num} інших
@@ -1726,6 +1732,7 @@ uk-UA:
   print_batch_certificates: Роздрукуйте комплект сертифікатів
   print_certificates: Друкувати сертифікати
   print_ice_art: Надрукувати свої крижані узори
+  print_one_here_certificates: Надрукуйте один тут.
   privacy_doc_explanation: 'Клацніть тут, щоб отримати наші документи про конфіденційність,
     якими можна поділитися або роздрукувати для учнів. '
   privacy_practices_children: Переглянути політику конфіденційності для дітей
@@ -1735,15 +1742,15 @@ uk-UA:
     у візуальному мистецтві, та візуальній грамотності у технологіях. Початково створена
     для розробки програмних макетів та викладання основ програмування у графічному
     аспекті, Processing перетворилась на інструмент розробки для фахівців. На нинішній
-    день десятки тисяч учнів, студентів, художників, дизайнерів, дослідників та любителів
-    використовують Processing для навчання, створення прототипів та готових проектів.
+    день десятки тисяч учнів, учнів, художників, дизайнерів, дослідників та любителів
+    використовують Processing для навчання, створення прототипів та готових проєктів.
   processing_beyond_name: Програмуйте на Processing
   processing_beyond_platformtext: Сучасні веб-браузери
   processing_beyond_shortdescription: Вивчення мови Processing
   processing_gradelevel: Старша школа
   processing_longdescription: Вступ до програмування в контексті візуального мистецтва
     за допомогою мови програмування Processing. Короткі відео-уроки знайомлять з простими
-    вправами з проектування інтерактивної програми малювання
+    вправами з проєктування інтерактивної програми малювання
   processing_name: Код малювання
   processing_platformtext: Сучасні веб-браузери
   processing_shortdescription: Годинний підручник програмування на мові Processing
@@ -1916,7 +1923,7 @@ uk-UA:
   studiobar_flappy_title: Код Пурха
   studiobar_frozen_body: Створіть зимову казку з Анною та Ельзою
   studiobar_frozen_title: Година коду
-  studiobar_hoc_body: Вчимося програмувати зі Злими Птахами
+  studiobar_hoc_body: Вчимося програмувати зі Злими Пташками
   studiobar_hoc_title: Година Коду
   studiobar_shop_body: Ламайте стереотипи. Гордо носіть наш логотип.
   studiobar_shop_title: Магазин
@@ -1991,7 +1998,7 @@ uk-UA:
   third_party_appinv_btn_forum: Форум App Inventor 2
   third_party_appinv_btn_site: Відвідайте App Inventor 2
   third_party_appinv_desc: MIT App Inventor -це інструмент блокового програмування,
-    який дозволяє усім, навіть новачкам, розпочати програмування та створити повнофункціональні
+    який дозволяє всім, навіть новачкам, розпочати програмування та створити повнофункціональні
     аплікації для пристроїв Android. Початківці можуть створити і запустити першу
     програму в App Inventor за годину, чи й менше, а складніші програми потребують
     значно менше часу, аніж традиційні текстові мови.
@@ -2012,7 +2019,7 @@ uk-UA:
   third_party_cost_free_10: Спробувати безкоштовно, $9.99/місяць
   third_party_cost_free_2: Спробувати безкоштовно, $2/учень
   third_party_cost_free_399: Спробувати безкоштовно, $399/клас
-  third_party_curriculum: Навчальний план
+  third_party_curriculum: Програма
   third_party_desc_10to12_kto3: Приблизно 10-12 уроків, орієнтованих на 3 клас
   third_party_desc_10to12_kto5: Приблизно 10-12 уроків, орієнтованих на 5 клас
   third_party_desc_10to15_3to12: Між 10 та 15 уроків, орієнтованих на 3-12 класи
@@ -2034,7 +2041,7 @@ uk-UA:
   third_party_khan_btn_forum: Форум інформатики Академії Хана
   third_party_khan_btn_learn: Вивчайте інформатику з Академією Хана
   third_party_khan_desc: Дізнатесь, як програмно створювати малюнки, анімації та ігри
-    за допомогою JavaScript та ProcessingJS, або навчіться створювати веб-сторінки
+    за допомогою JavaScript та ProcessingJS, або навчіться створювати вебсторінки
     з HTML та CSS. Можна поділитись усім створеним, дослідити творіння інших та вчитися
     один в одного!
   third_party_lightbot_btn_curriculum: Завантажити навчальну програму Lightbot
@@ -2103,6 +2110,7 @@ uk-UA:
 
     ## Години коду
     ###  %{num}  вже спробували #Try an
+  try_it_yourself: Спробуй самостійно!
   try_now: Спробувати зараз
   twentyhours_heading: Спробуйте наш курс вступу до інформатики
   twentyhours_text: Завершили свою першу Годину Коду? Дізнайтеся більше про основні
@@ -2172,15 +2180,15 @@ uk-UA:
   user_header_label: Привіт %{username}
   user_header_logout: Вийти
   user_header_minecraft: Майнкрафт
-  user_header_my_projects: Мої проекти
+  user_header_my_projects: Мої проєкти
   user_header_playlab: Ігрова студія
   user_header_settings: Мій профіль
   user_header_signin: Увійти
   user_header_spritelab: Спрайт Лабораторія
   user_header_team: Команда
-  user_header_view_all: Переглянути всі проекти...
-  user_header_view_my_projects: Переглянути мої проекти
-  user_header_view_project_gallery: Переглянути галерею проекту
+  user_header_view_all: Переглянути всі проєкти...
+  user_header_view_my_projects: Переглянути мої проєкти
+  user_header_view_project_gallery: Переглянути галерею проєкту
   video_1min: 1 хв
   video_2min: 2 хв
   video_3min: 3 хв
@@ -2278,24 +2286,10 @@ uk-UA:
   volunteer_engineer_submission_intro_background: Година коду - це глобальний рух
     годинного вступу до програмування, що охоплює десятки мільйонів учнів у більш,
     як 180 країнах. Залучайтесь до тижня інформатики 7-13 грудня.
-  volunteer_engineer_submission_intro_guide: Дізнайтеся більше про нашу <a href="%{volunteer_guide}">волонтерську
-    програму тут</a>.
   volunteer_engineer_submission_intro_guide_markdown: 'Дізнайтеся більше про нашу
     [програму волонтерів тут] (%{volunteer_guide}). '
-  volunteer_engineer_submission_intro_links: Не шукаєте волонтера? <a href="%{learn_more}">Дізнайтесь
-    більше</a> про організацію власного заходу Години коду і пошук місцевих волонтерів
-    на нашій <a href="%{volunteer_local}">карті волонтерів</a>.
   volunteer_engineer_submission_intro_links_markdown: 'Ви - вчитель і шукаєте волонтерів?
     Знайдіть місцевого волонтера на нашій [карті волонтерів](%{volunteer_local}). '
-  volunteer_engineer_submission_intro_recruit: 'Ці вчителі хочуть, щоб хтось, <span
-    style="font-family: ''Gotham 7r'', sans-serif;">захоплений інформатичною освітою</span>
-    допоміг їм у класі, або <span style="font-family: ''Gotham 7r'', sans-serif;">надихнув</span>
-    їхніх учнів, розповідаючи про широкі можливості інформатики (можна через відео-чат).
-    Якщо Ви не шукаєте волонтера, <a href="%{url}">дізнайтесь більше</a> про організацію
-    власного заходу Години коду.'
-  volunteer_engineer_submission_intro_signup: Вкажіть наступну інформацію, якщо ви
-    студент галузі комп'ютерних наук чи професійний програміст. Поля, позначені <span
-    class="form-required-field">*</span> є обов'язковими для заповнення.
   volunteer_engineer_submission_intro_signup_markdown: 'Будь ласка, вкажіть наступну
     інформацію, якщо ви студент галузі комп''ютерних наук чи професійний програміст.  Вам
     має бути щонайменше 18 років, щоб зареєструватися добровольцем. Зверніть увагу,
@@ -2303,7 +2297,7 @@ uk-UA:
     переглядає [карту волонтерів](/добровольців/місцевих). Поля, позначені символом
     _ * _, є обов’язковими для заповнення. '
   volunteer_engineer_submission_location_flexibility_curriculum: Бажаю зробити свій
-    внесок до відкритих навчальних проектів
+    внесок до відкритих навчальних проєктів
   volunteer_engineer_submission_location_flexibility_onsite: На території школи
   volunteer_engineer_submission_location_flexibility_remote: Віддалене навчання (вчителі
     або учні)
@@ -2338,8 +2332,8 @@ uk-UA:
   w3schools_beyond_name: Вивчіть HTML
   w3schools_beyond_platformtext: Сучасні веб-браузери
   w3schools_beyond_shortdescription: Навчіться створювати веб-сайти
-  want_a_blank_certificate_template: Вам потрібен пустий шаблон сертифіката, щоб виписувати
-    його на ім'я студента?
+  want_a_blank_certificate_template: Вам потрібен пустий шаблон сертифіката, щоб виписати
+    його на ім'я учня?
   watch_inspirational_videos: Перед початком роботи перегляньте ці відео для натхнення
   what_gender: Якої ви статі?
   who_has_done_hoc: 'Хто пройшов Годину коду #HourOfCode? @codeorg'

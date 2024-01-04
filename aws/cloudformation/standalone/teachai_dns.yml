@@ -16,34 +16,24 @@ Resources:
     Properties:
       HostedZoneId: !Ref HostedZone
       RecordSets:
-        - Name: teachai.org.
+        - Name: teachai.org
           Type: A
-          TTL: '300'
-          ResourceRecords:
-            - '141.193.213.10'
-            - '141.193.213.11'
-        # - Name: teachai.org
-        #   Type: A
-        #   AliasTarget:
-        #     DNSName: 'd1zp22d0hxajlk.cloudfront.net'
-        #     HostedZoneId: 'Z2FDTNDATAQYW2'
+          AliasTarget:
+            DNSName: !GetAtt [RedirectDistribution, DomainName]
+            HostedZoneId: Z2FDTNDATAQYW2 # static ID for CloudFront aliases
         - Name: www.teachai.org.
-          Type: A
+          Type: CNAME
           TTL: '300'
           ResourceRecords:
-            - '141.193.213.10'
-            - '141.193.213.11'
-        # - Name: www.teachai.org.
-        #   Type: CNAME
-        #   TTL: '300'
-        #   ResourceRecords:
-        #     - 'd1zp22d0hxajlk.cloudfront.net'
+            - 'd1zp22d0hxajlk.cloudfront.net'
         - Name: teachai.org.
           Type: TXT
           TTL: '3600'
           ResourceRecords:
             - '"google-site-verification=TqkM4Ab7lI1uZRCVMbkTdtVkiQ27k0wPu9bX3wtv_eE"'
             - '"v=spf1 include:_spf.google.com ~all"'
+            # Pardot Validation Key
+            - '"sending_domain153401=d8c010e79ba21dca4956d500d0d2550f1e0dfd643806fad48b8d231110096c3a"'
         - Name: 44644295.teachai.org
           Type: CNAME
           TTL: '300'
@@ -83,3 +73,100 @@ Resources:
           TTL: '300'
           ResourceRecords:
             - '_a6304c18677c27c3d4654147a1dcc1d1.dsmfrbdtqy.acm-validations.aws.'
+        # Pardot DomainKey
+        - Name: 200608._domainkey.teachai.org
+          Type: TXT
+          TTL: '3600'
+          ResourceRecords:
+            - !Join
+              - ''
+              - - '"k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDGoQCNwAQdJBy"'
+                - '"23MrShs1EuHqK/dtDC33QrTqgWd9CJmtM3CK2ZiTYugkhcxnkEtGbzg+IJqc"'
+                - '"DRNkZHyoRezTf6QbinBB2dbyANEuwKI5DVRBFowQOj9zvM3IvxAEboMlb0sz"'
+                - '"UjAoML94HOkKuGuCkdZ1gbVEi3GcVwrIQphal1QIDAQAB;"'
+
+  RedirectDistribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Enabled: true
+        Comment: Redirects via CloudFront functions
+        PriceClass: PriceClass_All
+        Aliases:
+          - teachai.org
+        Origins:
+          # An origin is required, but will never receive traffic
+          - Id: PrimaryOrigin
+            DomainName: example.com
+            CustomOriginConfig:
+              OriginProtocolPolicy: match-viewer
+        DefaultCacheBehavior:
+          TargetOriginId: PrimaryOrigin
+          CachePolicyId: !Ref RedirectCachePolicy
+          FunctionAssociations:
+            - EventType: viewer-request
+              FunctionARN: !Ref RedirectCloudfrontFunction
+          ViewerProtocolPolicy: allow-all
+          # Use shared Realtime Log config
+          RealtimeLogConfigArn: !ImportValue AccessLogs-Config
+        ViewerCertificate:
+          AcmCertificateArn: !Ref RedirectedDomainCertificate
+          SslSupportMethod: sni-only
+
+  RedirectedDomainCertificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: teachai.org
+      ValidationMethod: DNS
+      DomainValidationOptions:
+        - DomainName: teachai.org
+          HostedZoneId: !Ref HostedZone
+
+  RedirectCachePolicy:
+    Type: AWS::CloudFront::CachePolicy
+    Properties:
+      CachePolicyConfig:
+        Name: !Sub "${AWS::StackName}-redirect-policy"
+        MinTTL: 3600
+        MaxTTL: 31536000
+        DefaultTTL: 86400
+        ParametersInCacheKeyAndForwardedToOrigin:
+          EnableAcceptEncodingGzip: false
+          CookiesConfig: 
+            CookieBehavior: none
+          HeadersConfig: 
+            HeaderBehavior: whitelist
+            Headers:
+              - Origin
+          QueryStringsConfig: 
+            QueryStringBehavior: all
+
+  RedirectCloudfrontFunction:
+    Type: AWS::CloudFront::Function
+    Properties: 
+      Name: !Sub "${AWS::StackName}-www-redirect"
+      FunctionConfig: 
+        Comment: Redirects to a new URL
+        Runtime: cloudfront-js-1.0
+      AutoPublish: true
+      FunctionCode: |
+        function handler(event) {
+          var request = event.request;
+          var newUrl = 'www.teachai.org';
+
+          // Check if the host is already 'www.teachai.org'
+          if (request.headers.host && request.headers.host.value === newUrl) {
+            return request;  // Return original request
+          }
+
+          // Append path
+          newUrl += request.uri;
+
+          return {
+            statusCode: 301,
+            statusDescription: '301 Redirect to www domain',
+            headers: {
+              "location": { "value": `https://${newUrl}` }
+            }
+          };
+        };

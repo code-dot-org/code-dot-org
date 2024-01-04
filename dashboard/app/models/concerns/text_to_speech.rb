@@ -60,19 +60,25 @@ module TextToSpeech
     TextToSpeech.voices.key?(locale)
   end
 
-  def self.localized_voice
+  def self.localized_voice(locale: I18n.locale)
     # Use localized voice if we have a setting for the current locale;
     # default to English otherwise.
-    loc = TextToSpeech.locale_supported?(I18n.locale) ? I18n.locale : :'en-US'
+    loc = TextToSpeech.locale_supported?(locale) ? locale.to_sym : :'en-US'
     TextToSpeech.voices[loc]
   end
 
-  def self.tts_upload_to_s3(text, filename, context = nil)
+  def self.tts_path(text, name, locale: I18n.locale)
+    content_hash = Digest::MD5.hexdigest(text)
+    loc_voice = TextToSpeech.localized_voice(locale: locale)
+    "#{loc_voice[:VOICE]}/#{loc_voice[:SPEED]}/#{loc_voice[:SHAPE]}/#{content_hash}/#{name}.mp3"
+  end
+
+  def self.tts_upload_to_s3(text, filename, context = nil, locale: I18n.locale)
     return if text.blank?
     return if CDO.acapela_login.blank? || CDO.acapela_storage_app.blank? || CDO.acapela_storage_password.blank?
     return if AWS::S3.cached_exists_in_bucket?(TTS_BUCKET, filename)
 
-    loc_voice = TextToSpeech.localized_voice
+    loc_voice = TextToSpeech.localized_voice(locale: locale)
     url = Acapela.text_to_audio_url(text, loc_voice[:VOICE], loc_voice[:SPEED], loc_voice[:SHAPE], context)
     return if url.nil?
     uri = URI.parse(url)
@@ -97,9 +103,9 @@ module TextToSpeech
     TTSSafeRenderer.render(text)
   end
 
-  def tts_upload_to_s3(text, context = nil)
-    filename = tts_path(text)
-    TextToSpeech.tts_upload_to_s3(text, filename, context)
+  def tts_upload_to_s3(text, metric_context = nil, locale: I18n.locale)
+    filename = tts_path(text, locale: locale)
+    TextToSpeech.tts_upload_to_s3(text, filename, metric_context, locale: locale)
   end
 
   # Returns the URL where the TTS audio file can be downloaded for the given text and locale
@@ -109,13 +115,11 @@ module TextToSpeech
   # the params are blank or if TTS is not supported for the given locale.
   def tts_url(text, locale = I18n.locale)
     return nil unless TextToSpeech.locale_supported?(locale) && text.present?
-    "https://tts.code.org/#{tts_path(text)}"
+    "https://tts.code.org/#{tts_path(text, locale: locale)}"
   end
 
-  def tts_path(text)
-    content_hash = Digest::MD5.hexdigest(text)
-    loc_voice = TextToSpeech.localized_voice
-    "#{loc_voice[:VOICE]}/#{loc_voice[:SPEED]}/#{loc_voice[:SHAPE]}/#{content_hash}/#{name}.mp3"
+  def tts_path(text, locale: I18n.locale)
+    TextToSpeech.tts_path(text, name, locale: locale)
   end
 
   def tts_should_update(property, update_all = false)
@@ -123,33 +127,35 @@ module TextToSpeech
     (changed || update_all) && Policies::LevelFiles.write_to_file?(self) && published
   end
 
-  def tts_short_instructions_text
-    if I18n.locale == I18n.default_locale
-      # We still have to try localized instructions here for the
-      # levels.js-defined levels
-      tts_short_instructions_override || TextToSpeech.sanitize(short_instructions || try(:localized_short_instructions)) || ""
-    else
-      TextToSpeech.sanitize(try(:localized_short_instructions) || "")
+  def tts_short_instructions_text(locale: I18n.locale)
+    I18n.with_locale(locale) do
+      localized_short_instructions = try(:localized_short_instructions) || ''
+      return TextToSpeech.sanitize(localized_short_instructions) unless I18n.locale == I18n.default_locale
+
+      # We still have to try localized instructions here for the levels.js-defined levels
+      tts_short_instructions_override || TextToSpeech.sanitize(short_instructions || localized_short_instructions) || ''
     end
   end
 
-  def tts_should_update_short_instructions?(update_all = false)
+  def tts_should_update_short_instructions?(update_all: false)
     relevant_property = tts_short_instructions_override ? 'tts_short_instructions_override' : 'short_instructions'
     return tts_should_update(relevant_property, update_all)
   end
 
-  def tts_long_instructions_text
+  def tts_long_instructions_text(locale: I18n.locale)
     # Instructions content priority:
     #
     # 1. manual override if it exists (English only)
     # 2. contained level content if it exists
     # 3. instructions content
-    if tts_long_instructions_override && I18n.locale == I18n.default_locale
-      tts_long_instructions_override
-    elsif contained_level_text = tts_for_contained_level
-      TextToSpeech.sanitize(contained_level_text)
-    else
-      TextToSpeech.sanitize(try(:localized_long_instructions) || long_instructions || "")
+    I18n.with_locale(locale) do
+      if tts_long_instructions_override && I18n.locale == I18n.default_locale
+        tts_long_instructions_override
+      elsif contained_level_text = tts_for_contained_level
+        TextToSpeech.sanitize(contained_level_text)
+      else
+        TextToSpeech.sanitize(try(:localized_long_instructions) || long_instructions || "")
+      end
     end
   end
 
@@ -184,7 +190,7 @@ module TextToSpeech
     end
   end
 
-  def tts_should_update_long_instructions?(update_all = false)
+  def tts_should_update_long_instructions?(update_all: false)
     # Long instruction audio should be updated if the relevant long
     # instructions property on the level itself was updated, or if the levels
     # contained by this level were updated (since we treat contained level
@@ -199,11 +205,11 @@ module TextToSpeech
     end
   end
 
-  def tts_update(update_all = false)
+  def tts_update(update_all: false)
     context = 'update_level'
-    tts_upload_to_s3(tts_short_instructions_text, context) if tts_should_update_short_instructions?(update_all)
+    tts_upload_to_s3(tts_short_instructions_text, context) if tts_should_update_short_instructions?(update_all: update_all)
 
-    tts_upload_to_s3(tts_long_instructions_text, context) if tts_should_update_long_instructions?(update_all)
+    tts_upload_to_s3(tts_long_instructions_text, context) if tts_should_update_long_instructions?(update_all: update_all)
 
     if authored_hints && (tts_should_update('authored_hints', update_all))
       hints = JSON.parse(authored_hints)

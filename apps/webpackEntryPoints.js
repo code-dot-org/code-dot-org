@@ -81,6 +81,7 @@ const CODE_STUDIO_ENTRIES = {
   'levels/_summary': './src/sites/studio/pages/levels/_summary.js',
   'levels/_teacher_markdown': './src/sites/studio/pages/levels/_teacher_markdown.js',
   'levels/_teacher_panel': './src/sites/studio/pages/levels/_teacher_panel.js',
+  'levels/_ai_tutor_panel': './src/sites/studio/pages/levels/_ai_tutor_panel.js',
   'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
   'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
   'levels/show': './src/sites/studio/pages/levels/show.js',
@@ -170,11 +171,10 @@ const PEGASUS_ENTRIES = {
   // code.org
   'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
   'code.org/public/educate/curriculum/courses': './src/sites/code.org/pages/public/educate/curriculum/courses.js',
-  'code.org/public/student/middle-high': './src/sites/code.org/pages/public/student/middle-high.js',
   'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
   'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
   'code.org/public/yourschool/thankyou': './src/sites/code.org/pages/public/yourschool/thankyou.js',
-  'code.org/public/administrators': './src/sites/code.org/pages/public/administrators.js',
+  'code.org/public/districts': './src/sites/code.org/pages/public/districts.js',
   'code.org/views/regional_partner_search': './src/sites/code.org/pages/views/regional_partner_search.js',
   'code.org/views/share_privacy': './src/sites/code.org/pages/views/share_privacy.js',
   'code.org/views/theme_common_head_after': './src/sites/code.org/pages/views/theme_common_head_after.js',
@@ -186,7 +186,7 @@ const PEGASUS_ENTRIES = {
   'code.org/views/analytics_event_log_helper': './src/sites/code.org/pages/views/analytics_event_log_helper.js',
 
   // hourofcode.com
-  'hourofcode.com/public/index': './src/sites/hourofcode.com/pages/public/index.js',
+  'hourofcode.com/public/events/index': './src/sites/hourofcode.com/pages/public/events/index.js',
   'hourofcode.com/views/theme_common_head_after': './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
   'hourofcode.com/views/hoc_events_map': './src/sites/hourofcode.com/pages/views/hoc_events_map.js',
   'hourofcode.com/views/theme_google_analytics': './src/sites/hourofcode.com/pages/views/theme_google_analytics.js',

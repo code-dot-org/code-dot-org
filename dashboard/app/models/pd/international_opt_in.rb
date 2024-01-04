@@ -81,7 +81,7 @@ class Pd::InternationalOptIn < ApplicationRecord
 
   def self.options
     entry_keys = {
-      schoolCountry: %w(australia barbados belize brazil canada chile colombia dominican_republic india indonesia israel jamaica kenya kosovo malaysia maldives mexico mongolia new_zealand paraguay philippines portugal puerto_rico slovakia south_korea spain thailand trinidad_and_tobago uzbekistan vietnam),
+      schoolCountry: %w(australia barbados belize brazil canada chile colombia dominican_republic india indonesia israel italy jamaica kenya kosovo malaysia maldives mexico mongolia new_zealand paraguay philippines portugal puerto_rico slovakia south_korea spain thailand trinidad_and_tobago uzbekistan vietnam),
       workshopCourse: %w(csf_af csf_express csd csp csa other not_applicable),
       emailOptIn: %w(opt_in_yes opt_in_no),
       legalOptIn: %w(opt_in_yes opt_in_no)
@@ -92,7 +92,7 @@ class Pd::InternationalOptIn < ApplicationRecord
     #
     # See the definition of the "Answer" object in
     # apps/src/code-studio/pd/form_components/utils.js
-    entries = Hash[entry_keys.map do |key, values|
+    entries = entry_keys.map do |key, values|
       [key, values.map do |value|
         # Capitalize country values to be consistent with other country strings in our database
         answer = key.to_s == 'schoolCountry' ? value.titleize : value
@@ -101,7 +101,7 @@ class Pd::InternationalOptIn < ApplicationRecord
           answerValue: answer
         }
       end]
-    end]
+    end.to_h
 
     entries[:workshopOrganizer] = INTERNATIONAL_OPT_IN_PARTNERS
 

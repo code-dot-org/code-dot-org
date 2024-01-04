@@ -10,6 +10,11 @@
  */
 
 import {ObservableParameterModel} from '@blockly/block-shareable-procedures';
+import {FALSEY_DEFAULT, readBooleanAttribute} from '@cdo/apps/blockly/utils';
+import {
+  getBlockDescription,
+  setBlockDescription,
+} from './functionMutatorHelpers';
 
 /**
  * A type guard which checks if the given block is a procedure block.
@@ -57,7 +62,24 @@ export const behaviorDefMutator = {
    * @this {Blockly.Block}
    */
   domToMutation: function (xmlElement) {
-    this.behaviorId = xmlElement.nextElementSibling.getAttribute('id');
+    // We do not copy parameters because behavior parameters are a special case.
+    // We manually create the "this sprite" parameter for each behavior,
+    // (and don't want to treat it as a Blockly parameter).
+    // We also know all behaviors have the same single parameter,
+    // so we don't need to copy the parameter over.
+    for (let i = 0; i < xmlElement.childNodes.length; i++) {
+      const node = xmlElement.childNodes[i];
+      const nodeName = node.nodeName.toLowerCase();
+      if (nodeName === 'description') {
+        this.description = node.textContent;
+      }
+    }
+    this.behaviorId = xmlElement.getAttribute('behaviorId');
+    this.userCreated = readBooleanAttribute(
+      xmlElement,
+      'userCreated',
+      FALSEY_DEFAULT
+    );
   },
 
   /**
@@ -68,6 +90,8 @@ export const behaviorDefMutator = {
     const state = Object.create(null);
     state['procedureId'] = this.getProcedureModel().getId();
     state['behaviorId'] = this.behaviorId;
+    state['userCreated'] = this.userCreated;
+    state['description'] = getBlockDescription(this);
 
     const params = this.getProcedureModel().getParameters();
     if (!params.length && this.hasStatements_) return state;
@@ -96,6 +120,7 @@ export const behaviorDefMutator = {
    */
   loadExtraState: function (state) {
     this.behaviorId = state['behaviorId'];
+    this.userCreated = state['userCreated'];
     const map = this.workspace.getProcedureMap();
     const procedureId = state['procedureId'];
     if (
@@ -120,6 +145,7 @@ export const behaviorDefMutator = {
       }
     }
 
+    setBlockDescription(this, state);
     this.doProcedureUpdate();
     this.setStatements_(state['hasStatements'] === false ? false : true);
   },

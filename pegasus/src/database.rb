@@ -28,9 +28,14 @@ class Tutorials
         "#{db_column_name}___#{column_alias}".to_sym
       end
     end
-    @contents = CDO.cache.fetch("Tutorials/#{@table}/contents", force: no_cache) do
-      DB[@table].select(*@column_aliases).all
+
+    json_contents = CDO.cache.fetch("Tutorials/#{@table}/contents", force: no_cache) do
+      DB[@table].select(*@column_aliases).all.to_json
     end.deep_dup
+
+    @contents = JSON.parse(json_contents, object_class: DB[@table]).each do |tutorial|
+      tutorial.values.symbolize_keys!
+    end
   end
 
   # Returns an array of the tutorials.  Includes launch_url for each.
@@ -48,25 +53,11 @@ class Tutorials
     "http://#{api_domain}/api/hour/begin_learn/#{code}"
   end
 
-  def find_with_tag(tag)
+  def find_with_grade_level(gradelevel)
     results = {}
     @contents.each do |i|
-      tags = CSV.parse_line(i[:tags].to_s)
-      next unless tags.include?(tag)
-      results[i[:code]] = i
-    end
-    results
-  end
-
-  def find_with_tag_and_language(tag, language)
-    results = {}
-    @contents.each do |i|
-      tags = CSV.parse_line(i[:tags].to_s)
-      next unless tags.include?(tag)
-
-      languages = CSV.parse_line(i[:languages_supported].to_s)
-      next unless languages.nil_or_empty? || languages.include?(language) || languages.include?(language[0, 2])
-
+      tag = CSV.parse_line(i[:gradeleveltag].to_s)
+      next unless tag.include?(gradelevel)
       results[i[:code]] = i
     end
     results

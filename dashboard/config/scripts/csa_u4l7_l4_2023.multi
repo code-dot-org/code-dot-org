@@ -1,11 +1,12 @@
 name 'CSA U4L7-L4_2023'
 title 'Check for Understanding'
 
-wrong '`"x is positive but y is not"`'
+wrong '`"Syntax Error"`'
 wrong '`"x is not positive"`'
 wrong '`"y is not positive"`'
-wrong '`"x and y are positive"`'
-right 'None of the above.'
+wrong '`"x is positive but y is not"`'
+right '`"x and y are positive"`'
+
 
 markdown <<MARKDOWN
 Consider the following code segment.

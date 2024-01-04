@@ -955,6 +955,11 @@ export function isProductionEnvironment() {
  * Fetch cookies signed by cloudfront which grant access to restricted content.
  * @returns {Promise<Response>}
  */
-export function fetchSignedCookies() {
-  return fetch('/dashboardapi/sign_cookies', {credentials: 'same-origin'});
+export function fetchSignedCookies(buster = false) {
+  return fetch(
+    `/dashboardapi/sign_cookies${buster ? `?bust=${Date.now()}` : ''}`,
+    {
+      credentials: 'same-origin',
+    }
+  );
 }

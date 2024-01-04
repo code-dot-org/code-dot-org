@@ -396,7 +396,9 @@ sq-AL:
   coursec-2021_name: Kursi C (2021)
   coursec-2022_gradelevel: Moshat 6-10
   coursec-2022_name: Kursi C (2022)
+  coursec-draft_name: Kursi C
   coursec_gradelevel: Moshat 6-10
+  coursec_name: Kursi C
   coursed-2017_gradelevel: Klasat 8+
   coursed-2018_gradelevel: Klasat 8+
   coursed-2019_gradelevel: Klasat 8+
@@ -574,7 +576,7 @@ sq-AL:
   dashboard_navigation_all_sections: Llogaritë dhe Ecuria e Studentit
   dashboard_navigation_home_page: Faqja kryesore e mësuesit
   dashboard_navigation_lesson_plans_resources: Planet Mësimore dhe Burimet
-  dashboard_navigation_manage_students: Menaxho Studentët
+  dashboard_navigation_manage_students: Menaxho nxënësit
   dashboard_navigation_section: 'Seksioni: %{section_name}'
   dashboard_navigation_section_community: Ndihma dhe Komuniteti
   dashboard_navigation_section_lesson_plans: Planet Mësimore dhe Burimet
@@ -825,6 +827,7 @@ sq-AL:
   header_incubator: Inkubatori
   header_learn: Mëso
   header_legal: Privatësia & Ligjore
+  header_legal_cookie_notice: Njoftim për Cookie
   header_legal_privacy: Rregullat e Privatësisë
   header_legal_tos: Kushtet e shërbimit
   header_my_dashboard: Paneli im
@@ -834,7 +837,7 @@ sq-AL:
   header_report_bug: Raporto një problem
   header_sections: Seksionet
   header_stats: statistikat
-  header_teach: Mësoj
+  header_teach: Mësoni
   header_tutorials: Tutoriale
   hello: Pershendetje Botë
   help_recruit: Na ndihmo te rekrutojmë më shumë kodues!
@@ -1710,7 +1713,7 @@ sq-AL:
   user_header_my_projects: Projektet e mia
   user_header_playlab: Play Lab
   user_header_settings: Llogaria ime
-  user_header_signin: Futu
+  user_header_signin: Kyçu
   user_header_spritelab: Sprite Lab
   user_header_team: Skuadra
   user_header_view_all: Shiko të gjitha projektet...
@@ -1725,6 +1728,7 @@ sq-AL:
   video_title_russell_okung: Ora e Kodit me Rusell Okung
   videos_more: Më shumë <a href='%{inspiring_videos_playlist}'>video inspiruese</a>duke
     shfaqur modele dhe të famshëm
+  view_all_sections: Shiko të gjitha sesionet
   view_course: Shiko kursin
   view_english_site: Shiko faqen në gjuhën angleze
   view_unit: Shiko njësinë
@@ -1778,11 +1782,6 @@ sq-AL:
     nga ana e mësuesve lokal.
   volunteer_engineer_submission_header_private: Informata u mbajt private dhe nuk
     shpërndahet
-  volunteer_engineer_submission_intro_links: Keni nevojë të gjeni vullnetarë? Gjej
-    një vullnetar vendor në hartën tonë<a href="%{volunteer_local}">të vullnetarëve</a>.
-  volunteer_engineer_submission_intro_signup: Ju lutemi shkruani të dhënat e mëposhtme
-    në qoftë se jeni student i shkencës kompjuterike ose profesionist i software.
-    Fushat e shënuara me një<span class="form-required-field">*</span>janë të domosdoshme.
   volunteer_engineer_submission_location_flexibility_curriculum: Të gatshëm për të
     ndihmuar në kontributin e kurrikulës së projekteve open-source
   volunteer_engineer_submission_location_flexibility_onsite: Merr pjesë te një shkollë

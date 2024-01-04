@@ -1,5 +1,4 @@
-@import 'color.scss';
-@import 'font.scss';
+@import 'color', 'font';
 
 // Note: Keep these constants in sync with Button.jsx.
 $button-height-default: 34px;
@@ -23,9 +22,9 @@ a:visited,
 :global(.header) a:visited {
   /* stylelint-enable selector-pseudo-class-no-unknown */
   &.main {
+    @include main-font-regular;
     display: inline-block;
     font-size: 12px;
-    font-family: 'Gotham 4r', sans-serif;
     border: 1px solid $border_gray;
     border-radius: 3px;
     text-decoration: none;
@@ -263,7 +262,8 @@ a:visited,
     &.default {
       padding-left: 16px;
       padding-right: 16px;
-      font-family: $gotham-bold;
+
+      @include main-font-semi-bold;
     }
 
     &:active {
@@ -312,10 +312,10 @@ a:visited,
   }
 
   &.textButton {
+    @include main-font-semi-bold;
     color: $teal;
     border-width: 0;
     background-color: unset;
-    font-family: 'Gotham 5r', sans-serif;
     box-shadow: none;
     padding: 0;
     margin: 0;

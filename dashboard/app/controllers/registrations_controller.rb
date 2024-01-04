@@ -470,6 +470,7 @@ class RegistrationsController < Devise::RegistrationsController
       :provider,
       :us_state,
       :country_code,
+      :ai_rubrics_disabled,
       school_info_attributes: [
         :country,
         :school_type,
@@ -481,9 +482,9 @@ class RegistrationsController < Devise::RegistrationsController
         :school_id,
         :school_other,
         :school_name,
-        :full_address
+        :full_address,
       ],
-      races: []
+      races: [],
     )
   end
 

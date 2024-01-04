@@ -1790,18 +1790,6 @@ si-LK:
     හදුන්වාදීම සඳහා පැයක් හදුන්වාදීපු, රටවල් 180කට වඩා මිලියන ගනනාවක් සම්බන්දවුනු
     එක්තරා ගෝලීය ව්‍යාපරයක්.දෙසැම්බර් 7 සිට13 දක්වා ඇති පරිඝණක විද්‍යාව අධ්‍යණය සතියේ
     අප හා එක්වන්න.
-  volunteer_engineer_submission_intro_links: ඔබ ස්වේච්ඡාවෙන් ඉදිරිපත් වන අය සොයන ගුරුවරයෙක්ද?
-    ඔබ ආසන්නයේ ස්වෙච්ඡාවෙන් ඉදිරිපත් වෙන්නන් <a href="%{volunteer_local}">ස්වේච්ඡා
-    සිතියම්</a>.
-  volunteer_engineer_submission_intro_recruit: 'ගුරුවරුන් සමග  කවුරුන්හෝ සම්බන්දවනවානම්
-    කැමත්තක් දක්වාවි.<span style="font-family: ''Gotham 7r'', sans-serif;">පරිඝණක
-    විද්‍යාව පිළිබඳව අධ්‍යනයට මහත් කැමත්ත</span>පන්තිකාමරය තුලදී උපකාර කල හැකි කවුරුන්
-    හෝ උපකාර කිරීමට හැකි<span style="font-family: ''Gotham 7r'', sans-serif;">ආස්වාදයක්</span>පරිඝණක
-    විද්‍යාව පිලිබඳව ඇති පුළුල් හැකියාවන්  කතා කරන ඔවුන්ගේ ශිෂ්‍යයයින්(වීඩියො චැට්  මගින්
-    හෝ සම්බන්දවීමෙන්). '
-  volunteer_engineer_submission_intro_signup: ඔබ පරිගණක විද්‍යාව හදාරණ ශිෂ්‍යයෙක්
-    හෝ මෘදුකාංග ක්ෂේත්‍රයේ වෘත්තිකයෙක් නම්, කරුණාකර පහත තොරතුරු සඳහන් කරන්න. <span
-    class="form-required-field">*</span> ලකුණු ඇති තොරතුරු සැපයීම අනිවාර්ය වේ.
   volunteer_engineer_submission_location_flexibility_curriculum: විවෘත කේත පාඩම් මාලා
     ව්‍යාපෘති සඳහා දායකත්වය ලබා දීම
   volunteer_engineer_submission_location_flexibility_onsite: පාසලකදී වෙබ් අඩවියට පිවිසීම

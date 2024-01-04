@@ -9,6 +9,7 @@ import {getDatasetInfo} from './dataUtils';
 import experiments from '../../util/experiments';
 import moment from 'moment/moment';
 import TableDescription from './TableDescription';
+import fontConstants from '@cdo/apps/fontConstants';
 
 class LibraryTable extends React.Component {
   static propTypes = {
@@ -106,19 +107,19 @@ class LibraryTable extends React.Component {
 
 const styles = {
   tableName: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
     cursor: 'pointer',
     color: color.dark_charcoal,
   },
   tableDescription: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: color.dark_charcoal,
     wordBreak: 'break-word',
   },
   preview: {
     backgroundColor: color.background_gray,
     borderColor: color.lighter_gray,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     fontSize: '14px',
     padding: '1px 7px 2px',
     height: '30px',
@@ -129,7 +130,7 @@ const styles = {
   import: {
     backgroundColor: color.orange,
     border: 'none',
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: '14px',
     color: color.white,
     padding: '1px 7px 2px',
@@ -142,7 +143,7 @@ const styles = {
     paddingLeft: '16px',
   },
   lastUpdated: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     fontSize: '12px',
     color: color.light_gray,
     display: 'inline-block',

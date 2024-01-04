@@ -24,7 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "قرمز";
 Blockly.Msg.COLOUR_RGB_TITLE = "رنگ آمیزی با";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "یک رنگ با ترکیب مقدار مشخص شده از قرمز، سبز،و آبی ایجاد کنید. همه مقادیر باید بین 0 و 100 باشند.";
-Blockly.Msg.CONFIRM_CREATE_VARIABLE = "ایجاد کردن";
+Blockly.Msg.CONFIRM_CREATE_VARIABLE = "ایجاد کنید";
 Blockly.Msg.CONFIRM_DELETE_FUNCTION_MESSAGE = "هشدار! آیا واقعا می‌خواهید ۱% را پاک کنید؟";
 Blockly.Msg.CONFIRM_RENAME_VARIABLE = "تغییر نام";
 Blockly.Msg.CONTRACT_EDITOR_HEADER = "دستورالعمل طراحی";
@@ -49,7 +49,7 @@ Blockly.Msg.CONTROLS_IF_HELPURL = "http://code.google.com/p/blockly/wiki/If_Then
 Blockly.Msg.CONTROLS_IF_IF_TOOLTIP = "اضافه، حذف یا ترتیب مجدد قسمت‌ها برای تنظیم مجدد این بلوک شرطی.";
 Blockly.Msg.CONTROLS_IF_MSG_ELSE = "وگرنه";
 Blockly.Msg.CONTROLS_IF_MSG_ELSEIF = "غیرِ این اگر";
-Blockly.Msg.CONTROLS_IF_MSG_IF = "\"if\"";
+Blockly.Msg.CONTROLS_IF_MSG_IF = "اگر";
 Blockly.Msg.CONTROLS_IF_TOOLTIP_1 = "اگر یک مقدار صحیح است، سپس چند عبارت را انجام بده.";
 Blockly.Msg.CONTROLS_IF_TOOLTIP_2 = "اگر یک مقدار صحیح است، بلوک اول عبارات را انجام بده. در غیر این صورت، بلوک دوم عبارات را انجام بده.";
 Blockly.Msg.CONTROLS_IF_TOOLTIP_3 = "اگر مقدار اول صحیح است، بلوک اول عبارات را انجام بده. در غیر این صورت، اگر مقدار دوم صحیح است، بلوک دوم عبارات را انجام بده.";
@@ -68,7 +68,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "تا زمانی که یک مق�
 Blockly.Msg.DEFINE_FUNCTION_DEFINE = "تعریف کنید";
 Blockly.Msg.DEFINE_FUNCTION_FOR_EXAMPLE = "تابع زیر را تعریف کنید و دوباره تلاش کنید.";
 Blockly.Msg.DEFINE_HEADER_DEFINITION = "تعریف";
-Blockly.Msg.DELETE = "پاک کردن";
+Blockly.Msg.DELETE = "پاک کنید";
 Blockly.Msg.DELETE_BLOCK = "حذف بلوک";
 Blockly.Msg.DELETE_PARAMETER = "حذف پارامتر...";
 Blockly.Msg.DELETE_PARAMETER_TITLE = "با این کار همه رخدادهای پارامتر  '%1' حذف خواهد شد. مطمئنی؟";
@@ -90,10 +90,10 @@ Blockly.Msg.FUNCTIONAL_NAME_LABEL = "نام";
 Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP = "یک روش کاربردی را تعریف کن";
 Blockly.Msg.FUNCTIONAL_RANGE_LABEL = "محدوده";
 Blockly.Msg.FUNCTIONAL_TYPE_LABEL = "نوع را انتخاب کن...";
-Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE = "یک متغیر ایجاد کن";
+Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE = "یک متغیر ایجاد کنید";
 Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER = "متغیر";
 Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE = "نوع";
-Blockly.Msg.FUNCTION_CREATE = "یک تابع ایجاد کن";
+Blockly.Msg.FUNCTION_CREATE = "یک تابع ایجاد کنید";
 Blockly.Msg.FUNCTION_DESCRIPTION_LABEL = "چه کاری قرار است تابع تو انجام دهد؟";
 Blockly.Msg.FUNCTION_EDIT = "ویرایش";
 Blockly.Msg.FUNCTION_HEADER = "تابع";
@@ -170,10 +170,10 @@ Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_SET_FROM_START = "مورد را در موق�
 Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_SET_LAST = "آخرین مورد را در یک فهرست قرار میدهد.";
 Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_SET_RANDOM = "یک مورد تصادفی را در یک فهرست قرار میدهد.";
 Blockly.Msg.LISTS_TOOLTIP = "اگر فهرست خالی باشد، مقدار بولین true را بر می‌گرداند.";
-Blockly.Msg.LOGIC_BOOLEAN_FALSE = "غلط";
+Blockly.Msg.LOGIC_BOOLEAN_FALSE = "نادرست";
 Blockly.Msg.LOGIC_BOOLEAN_HELPURL = "http://code.google.com/p/blockly/wiki/True_False";
 Blockly.Msg.LOGIC_BOOLEAN_TOOLTIP = "یکی از مقادیر true یا false را برمی گرداند.";
-Blockly.Msg.LOGIC_BOOLEAN_TRUE = "صحیح";
+Blockly.Msg.LOGIC_BOOLEAN_TRUE = "درست";
 Blockly.Msg.LOGIC_COMPARE_HELPURL = "http://fa.wikipedia.org/wiki/%D9%86%D8%A7%D8%A8%D8%B1%D8%A7%D8%A8%D8%B1%DB%8C";
 Blockly.Msg.LOGIC_COMPARE_TOOLTIP_EQ = "اگر مقادیر هر دو ورودی با هم برابر باشند true را برمیگرداند.";
 Blockly.Msg.LOGIC_COMPARE_TOOLTIP_GT = "اگر ورودی اول از ورودی دوم بزرگتر باشد مقدار true را برمیگرداند.";
@@ -298,7 +298,7 @@ Blockly.Msg.PROCEDURES_DEFRETURN_RETURN = "بازگشت";
 Blockly.Msg.PROCEDURES_DEFRETURN_TITLE = "به";
 Blockly.Msg.PROCEDURES_DEFRETURN_TOOLTIP = "تابعی با یک خروجی می‌سازد.";
 Blockly.Msg.PROCEDURES_DEF_DUPLICATE_WARNING = "اخطار: این تابع پارامترهای تکراری دارد.";
-Blockly.Msg.PROCEDURES_HIGHLIGHT_DEF = "تعریف تابع را انتخاب کنید";
+Blockly.Msg.PROCEDURES_HIGHLIGHT_DEF = "تعریف تابع را هایلایت کنید";
 Blockly.Msg.PROCEDURES_IFRETURN_TOOLTIP = "اگر یک مقدار صحیح است، مقدار دوم را برگردان.";
 Blockly.Msg.PROCEDURES_IFRETURN_WARNING = "اخطار: این بلوک فقط در تعریف توابع میتواند بکار رود.";
 Blockly.Msg.PROCEDURES_MUTATORARG_TITLE = "نام ورودی:";
@@ -366,7 +366,7 @@ Blockly.Msg.TEXT_TEXT_TOOLTIP = "یک حرف، کلمه یا خطی از متن.
 Blockly.Msg.TEXT_TRIM_HELPURL = "https://code.google.com/p/blockly/wiki/Text#Trimming_%28removing%29_spaces";
 Blockly.Msg.TEXT_TRIM_OPERATOR_BOTH = "تراشیدن فاصله‌ها از هر دو طرف";
 Blockly.Msg.TEXT_TRIM_OPERATOR_LEFT = "تراشیدن فاصله‌ها از طرف چپ";
-Blockly.Msg.TEXT_TRIM_OPERATOR_RIGHT = "حذف فاصله‌های طرف چپ";
+Blockly.Msg.TEXT_TRIM_OPERATOR_RIGHT = "حذف کردن فاصله‌ها از سمت راست";
 Blockly.Msg.TEXT_TRIM_TOOLTIP = "یک کپی از متن که فاصله های هر دو طرف آن حذف شده را برمیگرداند.";
 Blockly.Msg.UNUSED_CODE = "کد استفاده نشده";
 Blockly.Msg.VARIABLE = "متغیر";

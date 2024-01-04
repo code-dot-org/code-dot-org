@@ -19,7 +19,7 @@ SPRITELAB_MANIFEST_PATH = "animation-manifests/manifests/"
 class Hash
   # Like Enumerable::map but returns a Hash instead of an Array
   def hmap(&block)
-    Hash[map {|k, v| yield k, v}]
+    map {|k, v| yield k, v}.to_h
   end
 
   # Drop a key from the hash, returning the hash (destructive)

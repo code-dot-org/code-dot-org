@@ -413,9 +413,7 @@ Sounds.prototype.restartPausedSounds = function () {
  */
 Sounds.prototype.stopAllAudio = function () {
   for (let soundId in this.soundsById) {
-    if (this.soundsById[soundId].isPlaying()) {
-      this.soundsById[soundId].stop();
-    }
+    this.soundsById[soundId].stop();
   }
 
   _.over(this.onStopAllAudioCallbacks_)();
