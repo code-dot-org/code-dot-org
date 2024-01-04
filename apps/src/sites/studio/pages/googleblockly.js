@@ -13,8 +13,8 @@ import {blocklyLocaleMap} from '@cdo/apps/blockly/constants';
 // https://github.com/google/blockly/blob/master/msg/json/README.md
 const localeFromCookies = cookies.get('language_') || 'en-US';
 const blocklyLocale = blocklyLocaleMap[localeFromCookies] || 'en';
-const messages = require(`blockly/msg/${blocklyLocale}`);
 
-GoogleBlockly.setLocale(messages);
-
-window.Blockly = initializeGoogleBlocklyWrapper(GoogleBlockly);
+import(`blockly/msg/${blocklyLocale}`).then(messages => {
+  GoogleBlockly.setLocale(messages.default);
+  window.Blockly = initializeGoogleBlocklyWrapper(GoogleBlockly);
+});
