@@ -4,7 +4,11 @@ markdown <<MARKDOWN
 # Introducing Block-Based Programming 
 
 ## What is Block-Based Programming? 
-Block-based programming is like building with digital blocks! Instead of typing out complicated code, early learners can use a **friendly and visual** approach. It's a bit like creating a digital puzzle or playing with building blocks, but instead of stacking physical pieces, you stack digital 'blocks' to make things happen on a computer.
+<IMG SRC="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXJvd25rcnZqa2Q1aGVqeGFqMTB6aGdlNGkwNmtyc2ZsZHUyNWd3byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fyaVEgUF9g8xYLRNau/giphy.gif">.
+
+
+
+**Block-based programming** is like building with digital blocks! Instead of typing out complicated code, early learners can use a **friendly and visual** approach. It's a bit like creating a digital puzzle or playing with building blocks, but instead of stacking physical pieces, you stack digital 'blocks' to make things happen on a computer.
 
 With block-based programming, you don't need to worry about writing exact words or symbols. Instead, you **drag and drop** colorful blocks that represent different commands. 
 
@@ -13,7 +17,7 @@ For example, if you want a character to move, you grab a 'move' block and snap i
 ## Why Use Block-Based Programming?
 This approach makes learning about computers and coding super fun and less intimidating. It's like playing a game, but you're also learning how to tell the computer to play along. Block-based programming is a fantastic tool for early learners because it turns coding into a **creative and interactive** experience using simple **drag-and-drop** methods! 
 
-Let’s get started. 
+##Let’s get started. 
 
 
 MARKDOWN
