@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-12-15 22:59:34 UTC",
+    "serialized_at": "2024-01-04 23:45:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1169,7 +1169,7 @@
       "key": "61525a5a-7640-4c2e-8f85-dd462685540d",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What if I only wanted to look at a subset of my data? How could I do this? For example: I only want to investigate dogs with long lifespans.*\n\nDiscussion Goal: We are building towards the idea of filtering data. Students filtered programmatically in previous units, but don't yet know how to use the Data Visualizer tool to accomplish the same goal. \n\nIn the discussion, students may suggest deleting unwanted rows or creating new tables. Challenge students by asking what they would do if they wanted to look at several different subsets in the same data? Is it reasonable to create a new table for each subset?\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What if I only wanted to look at a subset of my data? How could I do this? For example: I only want to investigate dogs with long lifespans.*\n\nDiscussion Goal: We are building towards the idea of filtering data.\n\nIn the discussion, students may suggest deleting unwanted rows or creating new tables. Challenge students by asking what they would do if they wanted to look at several different subsets in the same data? Is it reasonable to create a new table for each subset?\n"
       },
       "seeding_key": {
         "activity_section.key": "61525a5a-7640-4c2e-8f85-dd462685540d",
@@ -1180,7 +1180,7 @@
       "key": "ac7202f8-75ec-4711-9de6-84489e73c0ca",
       "position": 8,
       "properties": {
-        "description": "&fa-desktop; The best way to look at a subset of data is to use a filter. In Unit 5, we filtered data programmatically using traversals in order to gain insight into knowledge from that data. \n\nSoftware programs with built-in tools (like the Data Visualizer) can also be used to filter data. These tools help us find specific information in the data and look for patterns.",
+        "description": "The best way to look at a subset of data is to use a filter. Software programs with built-in tools (like the Data Visualizer) can also be used to filter data. These tools help us find specific information in the data and look for patterns.",
         "name": "Filtering Data",
         "remarks": true
       },
