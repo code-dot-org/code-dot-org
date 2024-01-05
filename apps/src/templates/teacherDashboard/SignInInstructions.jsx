@@ -88,6 +88,12 @@ export default class SignInInstructions extends React.Component {
             />
           </div>
         )}
+        {loginType === SectionLoginType.lti_v1 && (
+          <div>
+            <h2 style={styles.heading}>{i18n.signingInLtiLoginHeader()}</h2>
+            <SafeMarkdown markdown={i18n.signingInLtiLoginBody()} />
+          </div>
+        )}
       </div>
     );
   }
