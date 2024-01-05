@@ -13,28 +13,6 @@ describe I18n::Resources::Apps::ExternalSources::SyncUp do
     assert_equal I18n::Utils::SyncUpBase, described_class.superclass
   end
 
-  describe '#crowdin_project' do
-    let(:crowdin_project) {described_instance.send(:crowdin_project)}
-
-    let(:is_testing) {false}
-
-    before do
-      described_instance.stubs(:testing?).returns(is_testing)
-    end
-
-    it 'returns Crowdin project from config' do
-      assert_equal 'codeorg', crowdin_project
-    end
-
-    context 'when testing' do
-      let(:is_testing) {true}
-
-      it 'returns test Crowdin project from mapping' do
-        assert_equal 'codeorg-testing', crowdin_project
-      end
-    end
-  end
-
   describe '#source_files' do
     let(:source_files) {described_instance.send(:source_files)}
 
