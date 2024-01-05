@@ -9,7 +9,6 @@ import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
 import FieldGroup from '../../code-studio/pd/form_components/FieldGroup';
 import SingleCheckbox from '../../code-studio/pd/form_components/SingleCheckbox';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox';
 import color from '@cdo/apps/util/color';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import i18n from '@cdo/locale';
@@ -303,11 +302,12 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
               {i18n.afeWhatGradeBands()}
               <div
                 className="dropdown show"
+                style={styles.fullWidth}
                 id={'gradeBands'}
                 onKeyDown={this.onKeyDown}
               >
                 <button
-                  style={styles.gradeBandButton}
+                  style={{...styles.fullWidth, ...styles.gradeBandButton}}
                   className="btn btn-secondary dropdown-toggle"
                   id="dropdownMenuButton"
                   type="button"
@@ -315,14 +315,17 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
                   aria-haspopup={true}
                   aria-label="gradeband dropdown"
                 >
-                  {this.state.gradeBands.includes('true') && (
+                  {this.state.gradeBands.includes(true) && (
                     <FontAwesome
+                      style={styles.alignCenter}
                       id={'check-icon'}
                       icon="check-circle"
                       title={'grades'}
                     />
                   )}
-                  {i18n.afeGradeBands()}
+                  <div style={{...styles.alignCenter, ...styles.buttonLabel}}>
+                    {i18n.afeGradeBands()}
+                  </div>
                   <FontAwesome
                     style={styles.icon}
                     id={'chevron-down-icon'}
@@ -340,13 +343,13 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
                         style={styles.singleItem}
                         key={band}
                       >
-                        <Checkbox
-                          style={styles.check}
-                          checked={this.state.gradeBands[index]}
-                          onChange={this.handleMultiSelectGradeBands}
+                        <SingleCheckbox
                           name={band}
-                          value={band}
                           label={band}
+                          onChange={() =>
+                            this.handleMultiSelectGradeBands(index)
+                          }
+                          value={this.state.gradeBands[index]}
                         />
                       </li>
                     ))}
@@ -439,6 +442,7 @@ const styles = {
   },
   gradeBandButton: {
     border: `1px solid ${color.lighter_gray}`,
+    display: 'flex',
     backgroundColor: 'white',
     height: INPUT_HEIGHT,
     fontWeight: 300,
@@ -446,10 +450,21 @@ const styles = {
     margin: 0,
     color: color.neutral_dark,
   },
+  buttonLabel: {
+    fontWeight: 400,
+    fontSize: 14,
+    fontFamily: 'Metropolis, sans-serif',
+    marginLeft: 10,
+  },
+  alignCenter: {
+    alignSelf: 'center',
+  },
   icon: {
     color: color.neutral_dark,
     fontSize: 'smaller',
-    marginLeft: 10,
+    position: 'absolute',
+    right: 5,
+    top: 10,
     fontWeight: 100,
   },
   listItems: {
@@ -468,5 +483,8 @@ const styles = {
   },
   check: {
     position: 'relative',
+  },
+  fullWidth: {
+    width: '100%',
   },
 };
