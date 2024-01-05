@@ -24,8 +24,8 @@ export interface DropdownMenuProps {
 }
 
 // TODO:
+// * update segmented buttons documentation
 // * add tests
-// * add styles
 // * add documentation
 
 /**
@@ -53,20 +53,22 @@ const DropdownMenu: React.FunctionComponent<DropdownMenuProps> = ({
   size = 'm',
 }) => {
   return (
-    <label>
+    <label
+      className={classNames(
+        moduleStyles.dropdownContainer,
+        moduleStyles[`dropdownContainer-${size}`],
+        moduleStyles[`dropdownContainer-${color}`],
+        className
+      )}
+    >
       <span className={moduleStyles.dropdownLabelText}>Dropdown label</span>
 
-      <div className={moduleStyles.dropdownContainer}>
+      <div className={moduleStyles.dropdownArrowDiv}>
         <select
           name={name}
           onChange={onChange}
           id={id}
-          className={classNames(
-            moduleStyles.dropdown,
-            moduleStyles[`dropdown-${color}`],
-            moduleStyles[`dropdown-${size}`],
-            className
-          )}
+          className={moduleStyles.dropdown}
           disabled={disabled}
         >
           <option value="">Some default text</option>
