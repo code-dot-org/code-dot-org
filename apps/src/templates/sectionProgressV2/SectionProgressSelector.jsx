@@ -14,16 +14,12 @@ function SectionProgressSelector({
 }) {
   const onShowProgressTableV2Change = useCallback(
     e => {
+      e.preventDefault();
       const shouldShowV2 = !showProgressTableV2;
-      new UserPreferences().setSortByFamilyName(shouldShowV2);
+      new UserPreferences().setShowProgressTableV2(shouldShowV2);
       setShowProgressTableV2(shouldShowV2);
     },
     [showProgressTableV2, setShowProgressTableV2]
-  );
-  const toggleV1OrV2Button = () => (
-    <div>
-      <Button onClick={onShowProgressTableV2Change}>Toggle V1/V2</Button>
-    </div>
   );
 
   // If progress table is disabled, only show the v1 table.
@@ -31,38 +27,22 @@ function SectionProgressSelector({
     return <SectionProgress />;
   }
 
+  const toggleV1OrV2Button = () => (
+    <div>
+      <Button onClick={onShowProgressTableV2Change}>Toggle V1/V2</Button>
+    </div>
+  );
+
   // If the user has not selected manually the v1 or v2 table, show the DCDO defined default.
-  if (showProgressTableV2 === undefined) {
-    if (!DCDO.get('progress-table-v2-default-v2', false)) {
-      return (
-        <div>
-          {toggleV1OrV2Button()}
-          <SectionProgress />
-        </div>
-      );
-    }
-
-    return (
-      <div>
-        {toggleV1OrV2Button()}
-        <SectionProgressV2 />
-      </div>
-    );
-  }
-
   // If a user has selected manually, show that version.
-  if (showProgressTableV2) {
-    return (
-      <div>
-        {toggleV1OrV2Button()}
-        <SectionProgressV2 />
-      </div>
-    );
-  }
+  const isPreferenceSet = showProgressTableV2 !== undefined;
+  const displayV2 = isPreferenceSet
+    ? showProgressTableV2
+    : DCDO.get('progress-table-v2-default-v2', false);
   return (
     <div>
       {toggleV1OrV2Button()}
-      <SectionProgress />
+      {displayV2 ? <SectionProgressV2 /> : <SectionProgress />}
     </div>
   );
 }
