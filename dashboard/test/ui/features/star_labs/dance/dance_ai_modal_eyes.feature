@@ -25,7 +25,7 @@ Feature: Dance Party AI Modal Eyes
     And I see no difference for "selecting new emojis"
 
     # In RTL language
-    Then I am on "http://localhost-studio.code.org:3000/s/allthethings/lessons/37/levels/4?lang=ar-SA"
+    Then I am on "http://localhost-studio.code.org:3000/s/allthethings/lessons/37/levels/4/lang/ar-sa"
     And I wait for the page to fully load
     # Toggle to code in RTL
     And I click block field "[data-id='setup'] > [data-id='dance_ai'] > .blocklyEditableText"
