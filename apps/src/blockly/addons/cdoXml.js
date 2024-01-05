@@ -285,8 +285,6 @@ function addMissingBehaviorId(blockElement) {
     setIdFromTextContent(getFieldOrTitle(blockElement, 'VAR'));
   } else if (blockType === BLOCK_TYPES.behaviorDefinition) {
     setIdFromTextContent(getFieldOrTitle(blockElement, 'NAME'));
-  } else {
-    return;
   }
 }
 
