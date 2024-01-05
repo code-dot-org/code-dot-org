@@ -40,8 +40,11 @@ class DCDOBase < DynamicConfigBase
       'ai-pl-launch-banners': DCDO.get('ai-pl-launch-banners', false),
       cpa_experience: DCDO.get('cpa_experience', false),
       gender: DCDO.get('gender', false),
-      'show-coteacher-ui': DCDO.get('show-coteacher-ui', true),
-      'amplitude-event-sample-rates': DCDO.get('amplitude-event-sample-rates', {})
+      'amplitude-event-sample-rates': DCDO.get('amplitude-event-sample-rates', {}),
+      # Whether to allow the user to toggle between the v1 and v2 progress tables.
+      'progress-table-v2-enabled': DCDO.get('progress-table-v2-enabled', false),
+      # Whether to show the v1 or v2 progress table by default.
+      'progress-table-v2-default-v2': DCDO.get('progress-table-v2-default-v2', false),
     }
   end
 end
