@@ -38,7 +38,8 @@ class OmniAuthSection < Section
   def self.from_omniauth(code:, type:, owner_id:, students:, section_name: I18n.t('sections.default_name', default: 'Untitled Section'))
     oauth_section = with_deleted.where(code: code).first_or_create
 
-    oauth_section.name = section_name || I18n.t('sections.default_name', default: 'Untitled Section')
+    course_name_limit = OmniAuthSection.column_for_attribute(:name).limit
+    oauth_section.name = section_name.length > course_name_limit ? section_name.truncate(course_name_limit) : section_name
 
     # Add the user as an owner if the section does not exist. Otherwise add as a coteacher to existing section.
     if oauth_section.user_id.nil? || oauth_section.deleted?
@@ -62,7 +63,6 @@ class OmniAuthSection < Section
 
     oauth_section.set_exact_student_list(oauth_students)
 
-    oauth_section.name = section_name
     oauth_section.save! if oauth_section.changed?
 
     oauth_section
