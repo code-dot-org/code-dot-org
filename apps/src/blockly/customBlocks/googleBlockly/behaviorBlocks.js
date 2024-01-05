@@ -143,7 +143,7 @@ GoogleBlockly.Extensions.register('behaviors_block_frame', function () {
   }
 });
 
-// This extension is used to update the block's behaviorId when a user-created behavior is renamed.
+// This extension is used to update the block's behaviorId when a behavior is renamed in start mode.
 // TODO: Add logic to update the dropdown options on behaviorPicker blocks too.
 GoogleBlockly.Extensions.register('behaviors_name_validator', function () {
   const nameField = this.getField('NAME');
@@ -153,7 +153,7 @@ GoogleBlockly.Extensions.register('behaviors_name_validator', function () {
     const legalName = rename(newValue);
     if (
       legalName &&
-      this.sourceBlock_.userCreated &&
+      Blockly.isStartMode &&
       this.sourceBlock_.behaviorId !== legalName
     ) {
       this.sourceBlock_.behaviorId = legalName;

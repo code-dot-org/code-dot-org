@@ -21,6 +21,7 @@ import WorkspaceSvgFrame from './workspaceSvgFrame';
 import {BLOCK_TYPES} from '../constants';
 import {frameSizes} from './cdoConstants';
 import CdoTrashcan from './cdoTrashcan';
+import {getAlphanumericId} from '@cdo/apps/utils';
 
 // This class creates the modal function editor, which is used by Sprite Lab and Artist.
 export default class FunctionEditor {
@@ -224,7 +225,7 @@ export default class FunctionEditor {
         if (this.isStartMode) {
           this.block.behaviorId = name;
         } else {
-          //newDefinitionBlock.extraState.behaviorId =
+          newDefinitionBlock.extraState.behaviorId = getAlphanumericId();
         }
       }
 

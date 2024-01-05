@@ -963,3 +963,16 @@ export function fetchSignedCookies(buster = false) {
     }
   );
 }
+
+export function getAlphanumericId() {
+  const validCharacters =
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_';
+  const idLength = 16;
+  const id = [];
+  for (let i = 0; i < idLength; i++) {
+    id.push(
+      validCharacters.charAt(Math.floor(Math.random() * validCharacters.length))
+    );
+  }
+  return id.join('');
+}
