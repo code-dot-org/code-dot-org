@@ -293,7 +293,6 @@ function onBehaviorDefChange(event, block) {
 function updateBehaviorCallBlocks(oldValue, newValue) {
   const behaviorCallBlocks = findAllBlocksOfType(BLOCK_TYPES.behaviorGet);
   if (behaviorCallBlocks.length) {
-    console.log({behaviorCallBlocks, oldValue, newValue});
     const blocksToUpdate = behaviorCallBlocks.filter(
       block => block.behaviorId === oldValue
     );

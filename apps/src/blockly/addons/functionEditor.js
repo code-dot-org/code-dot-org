@@ -26,14 +26,12 @@ import {getAlphanumericId} from '@cdo/apps/utils';
 // This class creates the modal function editor, which is used by Sprite Lab and Artist.
 export default class FunctionEditor {
   constructor(
-    isStartMode,
     opt_msgOverrides,
     opt_definitionBlockType,
     opt_parameterBlockTypes,
     opt_disableParamEditing,
     opt_paramTypes
   ) {
-    this.isStartMode = isStartMode || false;
     // TODO: Are these options from the fork still relevant?
     this.msgOverrides_ = opt_msgOverrides || {};
     if (opt_definitionBlockType) {
@@ -214,7 +212,7 @@ export default class FunctionEditor {
         type,
         extraState: {
           procedureId: newProcedure.getId(),
-          userCreated: !this.isStartMode, // Start mode procedures are not user created.
+          userCreated: !Blockly.isStartMode, // Start mode procedures are not user created.
         },
         fields: {
           NAME: name,
@@ -228,8 +226,8 @@ export default class FunctionEditor {
         // allows us to support levelbuilder validation code. Levelbuilders can just
         // use the name of the behavior and know that it will be the generated
         // function name.
-        if (this.isStartMode) {
-          this.block.behaviorId = name;
+        if (Blockly.isStartMode) {
+          newDefinitionBlock.extraState.behaviorId = name;
         } else {
           // Otherwise, this is a user created behavior, and we can give it a random
           // id.
@@ -248,7 +246,7 @@ export default class FunctionEditor {
     // and not things that are being previewed from a read-only workspace.
     // We allow deleting non-user created behaviors in start mode.
     const hideDeleteButton =
-      this.isReadOnly || (!this.isStartMode && !this.block.userCreated);
+      this.isReadOnly || (!Blockly.isStartMode && !this.block.userCreated);
     const modalEditorDeleteButton = document.getElementById(
       MODAL_EDITOR_DELETE_ID
     );
