@@ -46,7 +46,7 @@ DefaultDropdown.args = {
     {value: 'option-1', label: 'Option 1'},
     {value: 'option-2', label: 'Option 2'},
   ],
-  onChange: args => console.log(args),
+  onChange: args => console.log(args, args.target.value),
   size: 'm',
 };
 

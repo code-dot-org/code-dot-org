@@ -12,13 +12,13 @@
     align-self: stretch;
     width: auto;
     background-color: unset;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-
     border-radius: 0.25rem;
     border: 1px solid;
     color: $light_black;
+
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
 
     &:focus-visible {
       outline: 2px solid $light_primary_500;
@@ -30,6 +30,7 @@
   // custom dropdown arrow styles
   .dropdownArrowDiv {
     position: relative;
+
     &:after {
       content: "\f078";
       font-family: "Font Awesome 6 Pro", sans-serif;
@@ -42,6 +43,10 @@
 
 // Dropdown colors
 .dropdownContainer-black {
+  .dropdownLabelText {
+    color: $light_black;
+  }
+
   .dropdown {
     color: $light_black;
     border-color: $light_black;
@@ -52,7 +57,7 @@
   }
 
   &:has(.dropdown:hover) {
-    .dropdown {
+    .dropdown:not(:disabled) {
       color: $light_black;
       background-color: $light_gray_100;
     }
@@ -75,6 +80,10 @@
 }
 
 .dropdownContainer-white {
+  .dropdownLabelText {
+    color: $light_white;
+  }
+
   .dropdown {
     color: $light_white;
     border-color: $light_white;
