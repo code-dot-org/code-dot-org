@@ -15,10 +15,8 @@ async function loadPyodideAndPackages() {
 const pyodideReadyPromise = loadPyodideAndPackages();
 
 self.onmessage = async event => {
-  console.log('checking if pyodide is loaded...');
   // make sure loading is done
   await pyodideReadyPromise;
-  console.log('pyodide is ready');
   const {id, python, ...context} = event.data;
   // The worker copies the context in its own "memory" (an object mapping name to values)
   for (const key of Object.keys(context)) {
@@ -26,10 +24,8 @@ self.onmessage = async event => {
   }
   // Now is the easy part, the one that is similar to working in the main thread:
   try {
-    console.log('running python');
     await self.pyodide.loadPackagesFromImports(python);
     let results = await self.pyodide.runPythonAsync(python);
-    console.log('ran python');
     self.postMessage({type: 'run_complete', results, id});
   } catch (error) {
     self.postMessage({type: 'error', error: error.message, id});

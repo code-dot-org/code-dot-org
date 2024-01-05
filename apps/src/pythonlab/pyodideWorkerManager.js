@@ -1,7 +1,6 @@
 import {getStore} from '@cdo/apps/redux';
 import {appendOutput} from './pythonlabRedux';
 
-console.log('creating web worker');
 // This syntax doesn't work with typescript, so this file is in js.
 const pyodideWorker = new Worker(
   new URL('./pyodideWebWorker.js', import.meta.url)
@@ -27,6 +26,7 @@ const asyncRun = (() => {
     id = (id + 1) % Number.MAX_SAFE_INTEGER;
     return new Promise(onSuccess => {
       callbacks[id] = onSuccess;
+      // Add code to flush stdout to the user's script.
       script = 'import sys\nimport os\n' + script;
       script += '\nsys.stdout.flush()';
       script += '\nos.fsync(sys.stdout.fileno())\n';
