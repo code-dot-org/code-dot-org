@@ -283,6 +283,10 @@ When /^I wait until element "([^"]*)" is visible within element "([^"]*)"$/ do |
   wait_until {@browser.execute_script("return $(#{selector.dump}, $(#{parent_selector.dump}).contents()).is(':visible')")}
 end
 
+Then /^I wait until element "([^"]*)" is (not )?open$/ do |selector, negation|
+  wait_until {element_open?(selector) == negation.nil?}
+end
+
 When /^I wait until jQuery Ajax requests are finished$/ do
   wait_short_until {@browser.execute_script("return $.active == 0")}
 end
