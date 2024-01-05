@@ -214,7 +214,7 @@ export default class FunctionEditor {
         type,
         extraState: {
           procedureId: newProcedure.getId(),
-          userCreated: !this.isStartMode,
+          userCreated: !this.isStartMode, // Start mode procedures are not user created.
         },
         fields: {
           NAME: name,
@@ -222,9 +222,17 @@ export default class FunctionEditor {
       };
 
       if (procedureType === BLOCK_TYPES.behaviorDefinition) {
+        // In start mode, the behavior id is the same as the name (and if the
+        // behavior is renamed, we update the behavior id to match the name).
+        // Since the behavior id is the function name in generated code, this
+        // allows us to support levelbuilder validation code. Levelbuilders can just
+        // use the name of the behavior and know that it will be the generated
+        // function name.
         if (this.isStartMode) {
           this.block.behaviorId = name;
         } else {
+          // Otherwise, this is a user created behavior, and we can give it a random
+          // id.
           newDefinitionBlock.extraState.behaviorId = getAlphanumericId();
         }
       }
@@ -238,7 +246,9 @@ export default class FunctionEditor {
 
     // We only want to be able to delete things that are user-created (functions and behaviors)
     // and not things that are being previewed from a read-only workspace.
-    const hideDeleteButton = this.isReadOnly || !this.block.userCreated;
+    // We allow deleting non-user created behaviors in start mode.
+    const hideDeleteButton =
+      this.isReadOnly || (!this.isStartMode && !this.block.userCreated);
     const modalEditorDeleteButton = document.getElementById(
       MODAL_EDITOR_DELETE_ID
     );

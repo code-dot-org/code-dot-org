@@ -66,7 +66,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_def_mini_toolbox',
       'modal_procedures_no_destroy',
       'behaviors_name_validator',
-      'updated_behavior_picker_blocks',
+      'on_behavior_def_change',
     ],
     mutator: 'behavior_def_mutator',
   },
@@ -162,14 +162,11 @@ GoogleBlockly.Extensions.register('behaviors_name_validator', function () {
   });
 });
 
-GoogleBlockly.Extensions.register(
-  'updated_behavior_picker_blocks',
-  function () {
-    this.workspace.addChangeListener(event => {
-      onBehaviorDefChange(event, this);
-    });
-  }
-);
+GoogleBlockly.Extensions.register('on_behavior_def_change', function () {
+  this.workspace.addChangeListener(event => {
+    onBehaviorDefChange(event, this);
+  });
+});
 
 GoogleBlockly.Extensions.registerMutator(
   'behavior_get_mutator',
@@ -285,11 +282,29 @@ function onBehaviorDefChange(event, block) {
   ) {
     const {oldValue, newValue} = event;
     updateBehaviorPickerBlocks(oldValue, newValue);
+    if (Blockly.isStartMode) {
+      // In start mode, we need up update behavior call blocks to change their behaviorIds.
+      // In normal mode the behavior ids are static.
+      updateBehaviorCallBlocks(oldValue, newValue);
+    }
+  }
+}
+
+function updateBehaviorCallBlocks(oldValue, newValue) {
+  const behaviorCallBlocks = findAllBlocksOfType(BLOCK_TYPES.behaviorGet);
+  if (behaviorCallBlocks.length) {
+    console.log({behaviorCallBlocks, oldValue, newValue});
+    const blocksToUpdate = behaviorCallBlocks.filter(
+      block => block.behaviorId === oldValue
+    );
+    blocksToUpdate.forEach(block => {
+      block.behaviorId = newValue;
+    });
   }
 }
 
 function updateBehaviorPickerBlocks(oldValue, newValue) {
-  const behaviorPickerBlocks = findAllBehaviorPickerBlocks();
+  const behaviorPickerBlocks = findAllBlocksOfType('gamelab_behaviorPicker');
   if (behaviorPickerBlocks.length) {
     const blocksToUpdate = behaviorPickerBlocks.filter(
       block => block.getFieldValue('BEHAVIOR') === oldValue
@@ -300,13 +315,11 @@ function updateBehaviorPickerBlocks(oldValue, newValue) {
   }
 }
 
-const findAllBehaviorPickerBlocks = () => {
+const findAllBlocksOfType = type => {
   const blocks = [];
   Blockly.Workspace.getAll().forEach(workspace =>
     blocks.push(
-      ...workspace
-        .getAllBlocks()
-        .filter(block => block.type === 'gamelab_behaviorPicker')
+      ...workspace.getAllBlocks().filter(block => block.type === type)
     )
   );
   return blocks;
