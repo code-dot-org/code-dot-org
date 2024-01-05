@@ -5,8 +5,12 @@ import {DCDO} from '@cdo/apps/dcdo';
 import SectionProgress from '../sectionProgress/SectionProgress';
 import Button from '@cdo/apps/applab/designElements/button';
 import {setShowProgressTableV2} from '@cdo/apps/templates/currentUserRedux';
+import SectionProgressV2 from './SectionProgressV2';
 
-function SectionProgressV2({showProgressTableV2, setShowProgressTableV2}) {
+function SectionProgressSelector({
+  showProgressTableV2,
+  setShowProgressTableV2,
+}) {
   const toggleV1OrV2Button = React.useCallback(
     () => (
       <div>
@@ -62,7 +66,7 @@ function SectionProgressV2({showProgressTableV2, setShowProgressTableV2}) {
   );
 }
 
-SectionProgressV2.propTypes = {
+SectionProgressSelector.propTypes = {
   showProgressTableV2: PropTypes.bool,
   setShowProgressTableV2: PropTypes.func.isRequired,
 };
@@ -73,4 +77,4 @@ export default connect(
     setShowProgressTableV2: showProgressTableV2 =>
       dispatch(setShowProgressTableV2(showProgressTableV2)),
   })
-)(SectionProgressV2);
+)(SectionProgressSelector);
