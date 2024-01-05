@@ -277,7 +277,7 @@ GEM
       sass (~> 3.2)
     brakeman (4.5.0)
     builder (3.2.4)
-    cancancan (3.2.2)
+    cancancan (3.5.0)
     case_transform (0.2)
       activesupport
     cgi (0.3.6)
@@ -964,7 +964,7 @@ DEPENDENCIES
   bootsnap (>= 1.14.0)
   bootstrap-sass (~> 2.3.2.2)
   brakeman
-  cancancan (~> 3.2.0)
+  cancancan (~> 3.5.0)
   cgi (~> 0.3.6)
   chronic (~> 0.10.2)
   cld

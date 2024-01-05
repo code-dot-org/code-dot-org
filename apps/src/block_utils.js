@@ -1123,6 +1123,12 @@ exports.createJsWrapperBlockCreator = function (
           );
         }
       },
+      // The following generic mutator functions are only used by Google Blockly
+      // and are intentionally undefined for CDO Blockly.
+      mutationToDom: Blockly.customBlocks.mutationToDom,
+      domToMutation: Blockly.customBlocks.domToMutation,
+      saveExtraState: Blockly.customBlocks.saveExtraState,
+      loadExtraState: Blockly.customBlocks.loadExtraState,
     };
 
     generator[blockName] = function () {

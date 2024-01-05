@@ -14203,7 +14203,7 @@ en:
           title: Creativity with Code
           description_audience: ''
           description_short: ''
-          description: "**You will:**\n\n* Identify and explain fundamental CS concepts, including Sprites, evenets and behaviors. \n\n* Demonstrate the application of event-based programming.\n\n* Create a program using sprites, events, and behaviors.\n\n**Suggested time:** 60 minutes\n"
+          description: "**You will:**\n\n* Identify and explain fundamental CS concepts, including Sprites, events and behaviors. \n\n* Demonstrate the application of event-based programming.\n\n* Create a program using sprites, events, and behaviors.\n\n**Suggested time:** 60 minutes\n"
           student_description: "**You will:**\n\n* Identify and explain fundamental CS concepts, including Sprites, evenets and behaviors. \n\n* Demonstrate the application of event-based programming.\n\n* Create a program using sprites, events, and behaviors.\n\n**Suggested time:** 60 minutes\n\n"
         self-paced-pl-k5-2024-1:
           lessons:
@@ -14219,6 +14219,8 @@ en:
               name: Putting It All Together
             lesson-6:
               name: Next Steps
+            lesson-7:
+              name: Block-Based Coding
           lesson_groups: {}
           name: self-paced-pl-k5-2024-1
           title: Introduction to Computer Science
