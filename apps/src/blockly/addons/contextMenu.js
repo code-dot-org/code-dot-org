@@ -268,7 +268,6 @@ export function registerHelp() {
       return 'hidden';
     },
     callback(scope) {
-      // scope.block.showHelp();
       const block = scope.block;
       const url =
         typeof block.helpUrl === 'function' ? block.helpUrl() : block.helpUrl;
