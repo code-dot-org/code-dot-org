@@ -1,69 +1,95 @@
 @import "color";
 @import "@cdo/apps/componentLibrary/common/styles/mixins";
 
-// Link common styles
-.link {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  text-decoration: underline;
+// Dropdown common styles
+.dropdownContainer {
+  position: relative;
 
+  &:after {
+    content: "\f078";
+    font-family: "Font Awesome 6 Pro", sans-serif;
+    //font-size: 11px;
+    //color:#aaa;
+    right: 8px;
+    top: 4px;
+    padding: 0 0 2px;
+    position: absolute;
+    pointer-events: none;
+  }
+}
+
+.dropdown {
+  display: inline-flex;
+  align-items: center;
+  align-self: stretch;
+  width: auto;
+  background-color: unset;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  border-radius: 0.25rem;
+  border: 1px solid;
+  color: $light_black;
 
   &:focus-visible {
     outline: 2px solid $light_primary_500;
     border-radius: 0.25rem;
-    outline-offset: 0;
+    outline-offset: 2px;
   }
 
-  &:active:not([aria-disabled="true"]) {
-    text-decoration: none;
-  }
 
-  &-primary {
-    color: $light_secondary_500;
-
-    &:hover, :active, :visited {
-      color: $light_secondary_700;
-    }
-
-    &:focus-visible {
-      color: $light_secondary_500;
-    }
-  }
-
-  &-secondary {
+  &-black {
     color: $light_black;
+    border-color: $light_black;
 
-    &:hover, :active, :visited {
-      color: $light_gray_800;
+    &:hover {
+      color: $light_black;
+      background-color: $light_gray_100;
     }
 
-    &:focus-visible {
-      color: $light_black;
+    &:disabled {
+      color: $light_gray_200;
+      border-color: $light_gray_200;
     }
   }
 
+  &-white {
+    color: $light_white;
 
-  &[aria-disabled="true"] {
-    cursor: not-allowed;
-    color: $light_gray_300;
+    &:hover, :active, :visited {
+      color: $light_white;
+      background-color: $light_gray_900;
+    }
+
+    &:disabled {
+      color: $light_gray_900;
+      border-color: $light_gray_900;
+    }
   }
 }
 
 // Sizes
-.link-l {
-  @include link-body-one;
+.dropdown-l {
+  @include button-one-text;
+  height: 3rem;
+  padding: 0.625rem 1rem;
 }
 
-.link-m {
-  @include link-body-two;
+.dropdown-m {
+  @include button-two-text;
+  height: 2.5rem;
+  padding: 0.5rem 1rem;
 }
 
-.link-s {
-  @include link-body-three;
+.dropdown-s {
+  @include button-three-text;
+  height: 2rem;
+  padding: 0.3125rem 1rem;
 }
 
-.link-xs {
-  @include link-body-four;
+.dropdown-xs {
+  @include button-four-text;
+  height: 1.5rem;
+  padding: 0.125rem 0.5rem;
 }

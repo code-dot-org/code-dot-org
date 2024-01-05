@@ -23,6 +23,11 @@ export interface DropdownMenuProps {
   size: ComponentSizeXSToL;
 }
 
+// TODO:
+// * add tests
+// * add styles
+// * add documentation
+
 /**
  * ### Production-ready Checklist:
  * * (?) implementation of component approved by design team;
@@ -44,22 +49,33 @@ const DropdownMenu: React.FunctionComponent<DropdownMenuProps> = ({
   id,
   className,
   disabled = false,
-  color = 'white',
+  color = 'black',
   size = 'm',
 }) => {
   return (
-    <select
-      name={name}
-      onChange={onChange}
-      id={id}
-      className={className}
-      disabled={disabled}
-    >
-      <option value="">Some default text</option>
-      {items.map(({value, label}) => (
-        <option value={value}>{label}</option>
-      ))}
-    </select>
+    <label>
+      <span className={moduleStyles.dropdownLabelText}>Dropdown label</span>
+
+      <div className={moduleStyles.dropdownContainer}>
+        <select
+          name={name}
+          onChange={onChange}
+          id={id}
+          className={classNames(
+            moduleStyles.dropdown,
+            moduleStyles[`dropdown-${color}`],
+            moduleStyles[`dropdown-${size}`],
+            className
+          )}
+          disabled={disabled}
+        >
+          <option value="">Some default text</option>
+          {items.map(({value, label}) => (
+            <option value={value}>{label}</option>
+          ))}
+        </select>
+      </div>
+    </label>
   );
 };
 

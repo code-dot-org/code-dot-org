@@ -26,9 +26,15 @@ const MultipleTemplate: Story<{
     </p>
     <p>Multiple Dropdown:</p>
     <div style={{display: 'flex', gap: '20px'}}>
-      {args.components?.map(componentArg => (
-        <DropdownMenu key={`${componentArg.name}`} {...componentArg} />
-      ))}
+      {args.components?.map(componentArg =>
+        componentArg.color === 'white' ? (
+          <div style={{background: 'black', padding: 10}}>
+            <DropdownMenu key={`${componentArg.name}`} {...componentArg} />
+          </div>
+        ) : (
+          <DropdownMenu key={`${componentArg.name}`} {...componentArg} />
+        )
+      )}
     </div>
   </>
 );
