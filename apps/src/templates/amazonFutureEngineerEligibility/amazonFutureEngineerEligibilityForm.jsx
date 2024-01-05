@@ -277,7 +277,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             </div>
           </div>
           <div style={styles.inputBoxes}>
-            <div style={styles.dropdownAndLabel}>
+            <div style={styles.dropdownContainer}>
               <label
                 style={styles.descriptiveText}
                 htmlFor="professionalRoleSelect"
@@ -344,6 +344,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
                         key={band}
                       >
                         <SingleCheckbox
+                          style={styles.check}
                           name={band}
                           label={band}
                           onChange={() =>
@@ -413,21 +414,18 @@ const styles = {
     marginTop: 10,
     marginBottom: 10,
   },
-  dropdownAndLabel: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    marginBottom: 15,
-  },
   dropdown: {
     border: `1px solid ${color.lighter_gray}`,
     borderRadius: 4,
     height: INPUT_HEIGHT,
     flexGrow: 1,
+    width: '100%',
   },
   dropdownContainer: {
     display: 'flex',
     flexWrap: 'wrap',
-    marginBottom: 14,
+    marginBottom: 15,
+    width: '50%',
   },
   descriptiveText: {
     display: 'block',
@@ -483,6 +481,7 @@ const styles = {
   },
   check: {
     position: 'relative',
+    margin: '0 0 0 10px',
   },
   fullWidth: {
     width: '100%',
