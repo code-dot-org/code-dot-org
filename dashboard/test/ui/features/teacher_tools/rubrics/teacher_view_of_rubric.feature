@@ -49,7 +49,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
 
   @eyes
   @skip
-  Scenario: Teacher views Rubric and Settings tabs, without accordion experiment
+  Scenario: Teacher views Rubric and Settings tabs, without carousel experiment
     Given I create a teacher-associated student named "Aiden"
     And I sign in as "Teacher_Aiden" and go home
     And I wait until element "#homepage-container" is visible
@@ -61,7 +61,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
     And I click selector ".teacher-panel td:eq(1)" to load a new page
     And I wait for the page to fully load
 
-    When I open my eyes to test "teaching assistant rubric without accordion experiment"
+    When I open my eyes to test "teaching assistant rubric without carousel experiment"
     Then I see no difference for "floating action button icon"
 
     When I click selector "#ui-floatingActionButton"
