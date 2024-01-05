@@ -720,7 +720,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     if (options.useModalFunctionEditor) {
       // If the modal function editor is enabled for this level,
       // initialize the modal function editor.
-      blocklyWrapper.functionEditor = new FunctionEditor();
+      blocklyWrapper.functionEditor = new FunctionEditor(
+        blocklyWrapper.isStartMode
+      );
       blocklyWrapper.functionEditor.init(options);
     }
 

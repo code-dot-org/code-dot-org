@@ -25,12 +25,14 @@ import CdoTrashcan from './cdoTrashcan';
 // This class creates the modal function editor, which is used by Sprite Lab and Artist.
 export default class FunctionEditor {
   constructor(
+    isStartMode,
     opt_msgOverrides,
     opt_definitionBlockType,
     opt_parameterBlockTypes,
     opt_disableParamEditing,
     opt_paramTypes
   ) {
+    this.isStartMode = isStartMode || false;
     // TODO: Are these options from the fork still relevant?
     this.msgOverrides_ = opt_msgOverrides || {};
     if (opt_definitionBlockType) {
@@ -204,18 +206,27 @@ export default class FunctionEditor {
       Blockly.Events.enable();
     } else {
       type = procedureType;
+      const name = newProcedure.getName();
       // Otherwise, we need to create a new block from scratch.
       const newDefinitionBlock = {
         kind: 'block',
         type,
         extraState: {
           procedureId: newProcedure.getId(),
-          userCreated: true,
+          userCreated: !this.isStartMode,
         },
         fields: {
-          NAME: newProcedure.getName(),
+          NAME: name,
         },
       };
+
+      if (procedureType === BLOCK_TYPES.behaviorDefinition) {
+        if (this.isStartMode) {
+          this.block.behaviorId = name;
+        } else {
+          //newDefinitionBlock.extraState.behaviorId =
+        }
+      }
 
       this.block = Blockly.serialization.blocks.append(
         this.addEditorWorkspaceBlockConfig(newDefinitionBlock),
