@@ -37,6 +37,34 @@ TTSSafeScrubber.tags = ['xml']
 module TextToSpeech
   extend ActiveSupport::Concern
 
+  VOICES = {
+    'en-US': {
+      VOICE: 'sharon22k',
+      SPEED: 180,
+      SHAPE: 100
+    },
+    'es-ES': {
+      VOICE: 'ines22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+    'es-MX': {
+      VOICE: 'rosa22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+    'it-IT': {
+      VOICE: 'vittorio22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+    'pt-BR': {
+      VOICE: 'marcia22k',
+      SPEED: 180,
+      SHAPE: 100,
+    }
+  }.freeze
+
   # TODO: this concern actually depends on the SerializedProperties
   # concern ... I'm not sure how best to deal with that.
 
@@ -49,22 +77,15 @@ module TextToSpeech
     )
   end
 
-  # A dictionary containing metadata about voices available for use.
-  def self.voices
-    # These are stored in SharedConstants so they are available to the front-end
-    # components that playback the audio.
-    SharedConstants::VOICES
-  end
-
   def self.locale_supported?(locale)
-    TextToSpeech.voices.key?(locale)
+    VOICES.key?(locale.to_sym)
   end
 
   def self.localized_voice(locale: I18n.locale)
     # Use localized voice if we have a setting for the current locale;
     # default to English otherwise.
     loc = TextToSpeech.locale_supported?(locale) ? locale.to_sym : :'en-US'
-    TextToSpeech.voices[loc]
+    VOICES[loc]
   end
 
   def self.tts_path(text, name, locale: I18n.locale)
