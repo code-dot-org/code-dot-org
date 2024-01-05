@@ -14,10 +14,11 @@ Feature: Dance Party AI Modal Eyes
     And I press "toggle-code-button"
     And I wait for 1 second
     And I see no difference for "toggle to code"
-    # Selecting new emojis
     And I press "toggle-effect-button"
+    # Starting over in AI modal
     And I press "start-over-button"
     And I wait for 0.5 seconds
+    # Selecting new emojis
     And I press "[aria-label=💎]" using jQuery
     And I press "[aria-label=🌊]" using jQuery
     And I press "[aria-label=🚀]" using jQuery
@@ -33,11 +34,12 @@ Feature: Dance Party AI Modal Eyes
     And I press "toggle-code-button"
     And I wait for 1 second
     And I see no difference for "toggle to code in RTL"
-    # Selecting new emojis in RTL
     And I press "toggle-effect-button"
+    # Starting over in AI modal in RTL
     And I press "start-over-button"
     And I wait for 1 second
     And I see no difference for "starting over in Dance AI modal in RTL"
+    # Selecting new emojis in RTL
     And I press "[aria-label=💎]" using jQuery
     And I press "[aria-label=🌊]" using jQuery
     And I press "[aria-label=🚀]" using jQuery
