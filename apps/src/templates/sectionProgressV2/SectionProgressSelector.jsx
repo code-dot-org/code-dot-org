@@ -1,26 +1,31 @@
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import React from 'react';
-import {DCDO} from '@cdo/apps/dcdo';
+import React, {useCallback} from 'react';
+import DCDO from '@cdo/apps/dcdo';
 import SectionProgress from '../sectionProgress/SectionProgress';
-import Button from '@cdo/apps/applab/designElements/button';
+import Button from '@cdo/apps/templates/Button';
 import {setShowProgressTableV2} from '@cdo/apps/templates/currentUserRedux';
 import SectionProgressV2 from './SectionProgressV2';
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 
 function SectionProgressSelector({
   showProgressTableV2,
   setShowProgressTableV2,
 }) {
-  const toggleV1OrV2Button = React.useCallback(
-    () => (
-      <div>
-        <Button onClick={() => setShowProgressTableV2(!showProgressTableV2)}>
-          Toggle
-        </Button>
-      </div>
-    ),
+  console.log('lfm1');
 
+  const onShowProgressTableV2Change = useCallback(
+    e => {
+      const shouldShowV2 = !showProgressTableV2;
+      new UserPreferences().setSortByFamilyName(shouldShowV2);
+      setShowProgressTableV2(shouldShowV2);
+    },
     [showProgressTableV2, setShowProgressTableV2]
+  );
+  const toggleV1OrV2Button = () => (
+    <div>
+      <Button onClick={onShowProgressTableV2Change}>Toggle V1/V2</Button>
+    </div>
   );
 
   // If progress table is disabled, only show the v1 table.
@@ -29,6 +34,8 @@ function SectionProgressSelector({
     return <SectionProgress />;
   }
   console.log('progress-table-v2-enabled is true');
+
+  console.log('lfm2', showProgressTableV2);
 
   // If the user has not selected manually the v1 or v2 table, show the DCDO defined default.
   if (showProgressTableV2 === undefined) {
