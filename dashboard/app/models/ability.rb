@@ -54,7 +54,6 @@ class Ability
       Pd::Application::ApplicationBase,
       Pd::Application::TeacherApplication,
       Pd::InternationalOptIn,
-      :maker_discount,
       :edit_manifest,
       :update_manifest,
       :foorm_editor,
@@ -215,7 +214,6 @@ class Ability
         can [:read, :find], :regional_partner_workshops
         can [:new, :create, :show, :update], TEACHER_APPLICATION_CLASS, user_id: user.id
         can :create, Pd::InternationalOptIn, user_id: user.id
-        can :manage, :maker_discount
         can :update_last_confirmation_date, UserSchoolInfo, user_id: user.id
         can [:score_lessons_for_section, :get_teacher_scores_for_script], TeacherScore, user_id: user.id
         can :manage, LearningGoalTeacherEvaluation, teacher_id: user.id

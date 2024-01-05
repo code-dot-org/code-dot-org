@@ -288,6 +288,7 @@ export default function LearningGoals({
           )}
         </div>
         <button
+          id="uitest-next-goal"
           type="button"
           className={style.learningGoalButton}
           onClick={() => onCarouselPress(1)}

@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "coursec-maker",
-    "serialized_at": "2023-12-14 18:16:48 UTC",
+    "serialized_at": "2024-01-04 22:34:44 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -103,10 +103,10 @@
       "name": "Meet your micro:bit",
       "absolute_position": 3,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
-        "overview": "[micro:bit Physical Computing Fundamentals](https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf)"
+        "overview": "This lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=7\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 7-17</a>\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -116,13 +116,13 @@
     },
     {
       "key": "lesson-4",
-      "name": "Emotion badge",
+      "name": "Emotion badge with micro:bit",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
-        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals pp. 22-24](https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=22)"
+        "overview": "This lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=22\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 22-24</a>"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -175,9 +175,10 @@
       "name": "Meet your micro:bit",
       "absolute_position": 7,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 7,
       "properties": {
+        "overview": "This lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=7\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 7-17</a>"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -187,13 +188,13 @@
     },
     {
       "key": "lesson-6",
-      "name": "Calming LEDs",
+      "name": "Calming LEDs with micro:bit",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 8,
       "properties": {
-        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals pp. 25-27](https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=25)"
+        "overview": "This lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=25\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 25-27</a>\n\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -245,9 +246,10 @@
       "name": "Meet your micro:bit",
       "absolute_position": 11,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 11,
       "properties": {
+        "overview": "This lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=7\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 7-17</a>"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -257,13 +259,13 @@
     },
     {
       "key": "lesson-2",
-      "name": "Counter",
+      "name": "Counter with micro:bit",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 12,
       "properties": {
-        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals pp. 28-30](https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=28)"
+        "overview": "This lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=28\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 28-30</a>"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -690,6 +692,18 @@
       }
     },
     {
+      "key": "8a686e12-9e31-41bb-bb8f-e85550f621ab",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8a686e12-9e31-41bb-bb8f-e85550f621ab",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursec-maker-2024"
+      }
+    },
+    {
       "key": "fab02723-90c1-401f-9e66-d2e80e2d7212",
       "position": 1,
       "properties": {
@@ -1034,6 +1048,7 @@
       "key": "39e055c1-b58e-40d9-af70-8cd830b3aaa0",
       "position": 1,
       "properties": {
+        "progression_name": "Meet your micro:bit"
       },
       "seeding_key": {
         "activity_section.key": "39e055c1-b58e-40d9-af70-8cd830b3aaa0",
@@ -1044,6 +1059,7 @@
       "key": "f90547b7-ad2d-4bec-9a8c-82e93e725eb6",
       "position": 1,
       "properties": {
+        "progression_name": "Emotion Badge"
       },
       "seeding_key": {
         "activity_section.key": "f90547b7-ad2d-4bec-9a8c-82e93e725eb6",
@@ -1325,10 +1341,21 @@
       "key": "57ca6de4-7aa1-4198-b7fc-cf9296610b4d",
       "position": 1,
       "properties": {
-        "description": "Video level: https://mbit.io/csf-1-lesson-guide\n\nProject level: https://mbit.io/csf-1-project"
+        "description": "Video level: https://mbit.io/csf-1-lesson-guide\n\nProject level: https://mbit.io/csf-1-project",
+        "progression_name": "Meet your micro:bit"
       },
       "seeding_key": {
         "activity_section.key": "57ca6de4-7aa1-4198-b7fc-cf9296610b4d",
+        "lesson_activity.key": "6589350e-4722-4ebc-8208-0b84007bce66"
+      }
+    },
+    {
+      "key": "e56e0a0f-1a40-4dc8-a5d6-c42a922e1dc7",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e56e0a0f-1a40-4dc8-a5d6-c42a922e1dc7",
         "lesson_activity.key": "6589350e-4722-4ebc-8208-0b84007bce66"
       }
     },
@@ -1689,6 +1716,17 @@
       }
     },
     {
+      "key": "004eb3c8-79e2-4ba8-83b1-5f8e817fdfb3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Meet your micro:bit"
+      },
+      "seeding_key": {
+        "activity_section.key": "004eb3c8-79e2-4ba8-83b1-5f8e817fdfb3",
+        "lesson_activity.key": "8a686e12-9e31-41bb-bb8f-e85550f621ab"
+      }
+    },
+    {
       "key": "2a45eed6-43d6-445c-acf6-e465970ed3a8",
       "position": 1,
       "properties": {
@@ -2009,7 +2047,8 @@
       "properties": {
         "level_keys": [
           "course_c_maker_meet_your_microbit"
-        ]
+        ],
+        "progression": "Meet your micro:bit"
       },
       "bonus": false,
       "seeding_key": {
@@ -2033,7 +2072,8 @@
       "properties": {
         "level_keys": [
           "course_c_maker_emotion_badge"
-        ]
+        ],
+        "progression": "Emotion Badge"
       },
       "bonus": false,
       "seeding_key": {
@@ -2431,6 +2471,34 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_meet_your_microbit_2"
+        ],
+        "progression": "Meet your micro:bit"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_c_maker_meet_your_microbit_2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursec-maker-2024",
+        "activity_section.key": "57ca6de4-7aa1-4198-b7fc-cf9296610b4d"
+      },
+      "level_keys": [
+        "course_c_maker_meet_your_microbit_2"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "course_c_maker_calming_leds"
+        ],
         "progression": "Calming LEDs"
       },
       "bonus": false,
@@ -2448,7 +2516,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2473,7 +2541,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2498,7 +2566,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2523,7 +2591,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2548,7 +2616,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -2573,7 +2641,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -2598,7 +2666,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -2623,7 +2691,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -2648,7 +2716,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -2673,7 +2741,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -2698,7 +2766,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 10,
       "activity_section_position": 4,
       "assessment": false,
@@ -2723,7 +2791,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 11,
       "activity_section_position": 5,
       "assessment": false,
@@ -2748,11 +2816,39 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_meet_your_microbit_3"
+        ],
+        "progression": "Meet your micro:bit"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_c_maker_meet_your_microbit_3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursec-maker-2024",
+        "activity_section.key": "004eb3c8-79e2-4ba8-83b1-5f8e817fdfb3"
+      },
+      "level_keys": [
+        "course_c_maker_meet_your_microbit_3"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "course_c_maker_counter"
+        ],
         "progression": "Counter"
       },
       "bonus": false,
@@ -3121,6 +3217,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "course_c_maker_meet_your_microbit_2",
+        "script_level.level_keys": [
+          "course_c_maker_meet_your_microbit_2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursec-maker-2024",
+        "activity_section.key": "57ca6de4-7aa1-4198-b7fc-cf9296610b4d"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "course_c_maker_calming_leds",
         "script_level.level_keys": [
           "course_c_maker_calming_leds"
@@ -3273,6 +3381,18 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "coursec-maker-2024",
         "activity_section.key": "6f20dc82-6227-4ca1-87ec-e46b4615a6d4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course_c_maker_meet_your_microbit_3",
+        "script_level.level_keys": [
+          "course_c_maker_meet_your_microbit_3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursec-maker-2024",
+        "activity_section.key": "004eb3c8-79e2-4ba8-83b1-5f8e817fdfb3"
       }
     },
     {

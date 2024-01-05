@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "coursef-maker",
-    "serialized_at": "2023-12-14 18:38:39 UTC",
+    "serialized_at": "2024-01-04 22:36:09 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -122,9 +122,10 @@
       "name": "Meet your micro:bit",
       "absolute_position": 4,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
+        "overview": "This lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-F-Nov2023.pdf#page=7\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 7-17</a>"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -134,13 +135,13 @@
     },
     {
       "key": "lesson-5",
-      "name": "Step counter",
+      "name": "Step counter with micro:bit",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
-        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals pp. 22-24](https://code.org/maker/assets/CSF-Booklet-Course-F-Nov2023.pdf#page=22)"
+        "overview": "This lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-F-Nov2023.pdf#page=22\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 22-24</a>\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -212,9 +213,10 @@
       "name": "Meet your micro:bit",
       "absolute_position": 9,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 9,
       "properties": {
+        "overview": "This lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-F-Nov2023.pdf#page=7\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 7-17</a>"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -224,13 +226,13 @@
     },
     {
       "key": "lesson-6",
-      "name": "Micro:bit pet",
+      "name": "Micro:bit pet with micro:bit",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 10,
       "properties": {
-        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals pp. 25-28](https://code.org/maker/assets/CSF-Booklet-Course-F-Nov2023.pdf#page=25)"
+        "overview": "This lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-F-Nov2023.pdf#page=25\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 25-28</a>"
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -281,9 +283,10 @@
       "name": "Meet your micro:bit",
       "absolute_position": 13,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 13,
       "properties": {
+        "overview": "This lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-F-Nov2023.pdf#page=7\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 7-17</a>"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -293,13 +296,13 @@
     },
     {
       "key": "lesson-7",
-      "name": "Max-min thermometer",
+      "name": "Max-min thermometer with micro:bit",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 14,
       "properties": {
-        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals pp. 29-31](https://code.org/maker/assets/CSF-Booklet-Course-F-Nov2023.pdf#page=29)"
+        "overview": "This lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-F-Nov2023.pdf#page=29\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 29-31</a>"
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -502,6 +505,18 @@
       }
     },
     {
+      "key": "faf020ad-391d-429f-a308-155ad94f3b4b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "faf020ad-391d-429f-a308-155ad94f3b4b",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursef-maker-2024"
+      }
+    },
+    {
       "key": "7cdb379a-a8a9-460c-bb6d-fb382f96134a",
       "position": 1,
       "properties": {
@@ -679,6 +694,18 @@
       }
     },
     {
+      "key": "9a56ed13-ec4c-4ded-a4bf-831f0b39f171",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9a56ed13-ec4c-4ded-a4bf-831f0b39f171",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-maker-2024"
+      }
+    },
+    {
       "key": "0f4b3acd-1b30-4ba2-b119-6f6cc27b3466",
       "position": 1,
       "properties": {
@@ -775,6 +802,18 @@
       }
     },
     {
+      "key": "d5cc60b4-ec94-4e02-8a4c-edb2217372f6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d5cc60b4-ec94-4e02-8a4c-edb2217372f6",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursef-maker-2024"
+      }
+    },
+    {
       "key": "7695ce57-eead-4ebf-81a4-73ed13252640",
       "position": 1,
       "properties": {
@@ -858,7 +897,8 @@
       "key": "97bd8f96-4f0b-4637-b686-40c1af49360c",
       "position": 5,
       "properties": {
-        "description": "####Dance Party\n\n- Start playing some music.\n\t- Check out this [Spotify Playlist (all ages)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw). We are using radio-safe versions of all songs.\n- Use the controller buttons to have class change dance moves while the music plays."
+        "description": "####Dance Party\n\n- Start playing some music.\n\t- Check out this [Spotify Playlist (all ages)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw). We are using radio-safe versions of all songs.\n- Use the controller buttons to have class change dance moves while the music plays.",
+        "progression_name": "Dance Party: Unplugged"
       },
       "seeding_key": {
         "activity_section.key": "97bd8f96-4f0b-4637-b686-40c1af49360c",
@@ -1422,6 +1462,17 @@
       }
     },
     {
+      "key": "0663ffd4-e252-49f0-8e9e-3c1f12b0bf7d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Meet your micro:bit"
+      },
+      "seeding_key": {
+        "activity_section.key": "0663ffd4-e252-49f0-8e9e-3c1f12b0bf7d",
+        "lesson_activity.key": "faf020ad-391d-429f-a308-155ad94f3b4b"
+      }
+    },
+    {
       "key": "661496ae-104e-474c-be7d-1c6c131ceb4c",
       "position": 1,
       "properties": {
@@ -1951,6 +2002,17 @@
       }
     },
     {
+      "key": "154ea9f0-cfe8-4b1f-ae0e-f2a9b33ce8b0",
+      "position": 1,
+      "properties": {
+        "progression_name": "Meet your micro:bit"
+      },
+      "seeding_key": {
+        "activity_section.key": "154ea9f0-cfe8-4b1f-ae0e-f2a9b33ce8b0",
+        "lesson_activity.key": "9a56ed13-ec4c-4ded-a4bf-831f0b39f171"
+      }
+    },
+    {
       "key": "477b5291-07f0-49f6-b392-01f29cef8eb4",
       "position": 1,
       "properties": {
@@ -2189,6 +2251,17 @@
       }
     },
     {
+      "key": "58d11f71-1dc9-41d0-b1f5-b282646373d2",
+      "position": 1,
+      "properties": {
+        "progression_name": "Meet your micro:bit"
+      },
+      "seeding_key": {
+        "activity_section.key": "58d11f71-1dc9-41d0-b1f5-b282646373d2",
+        "lesson_activity.key": "d5cc60b4-ec94-4e02-8a4c-edb2217372f6"
+      }
+    },
+    {
       "key": "ce666ba1-3d82-44b9-ba81-a612d9136800",
       "position": 1,
       "properties": {
@@ -2203,6 +2276,31 @@
   "script_levels": [
     {
       "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "course_f_maker_dance_party_unplugged"
+        ],
+        "progression": "Dance Party: Unplugged"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_f_maker_dance_party_unplugged"
+        ],
+        "lesson.key": "Dance Party: Unplugged",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursef-maker-2024",
+        "activity_section.key": "97bd8f96-4f0b-4637-b686-40c1af49360c"
+      },
+      "level_keys": [
+        "course_f_maker_dance_party_unplugged"
+      ]
+    },
+    {
+      "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2226,7 +2324,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 3,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2250,7 +2348,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2274,7 +2372,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -2298,7 +2396,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -2322,7 +2420,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -2346,7 +2444,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -2370,7 +2468,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -2394,7 +2492,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -2418,7 +2516,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -2442,7 +2540,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2467,7 +2565,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2492,7 +2590,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2517,7 +2615,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -2542,7 +2640,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -2567,7 +2665,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -2592,7 +2690,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -2617,7 +2715,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -2642,7 +2740,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -2667,7 +2765,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 10,
       "activity_section_position": 4,
       "assessment": false,
@@ -2692,7 +2790,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 11,
       "activity_section_position": 5,
       "assessment": false,
@@ -2717,11 +2815,39 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_meet_your_microbit"
+        ],
+        "progression": "Meet your micro:bit"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_f_maker_meet_your_microbit"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursef-maker-2024",
+        "activity_section.key": "0663ffd4-e252-49f0-8e9e-3c1f12b0bf7d"
+      },
+      "level_keys": [
+        "course_f_maker_meet_your_microbit"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "course_f_maker_step_counter"
+        ],
         "progression": "Step Counter"
       },
       "bonus": false,
@@ -2739,7 +2865,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2764,7 +2890,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2789,7 +2915,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2814,7 +2940,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2839,7 +2965,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 29,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -2864,7 +2990,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 30,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -2889,7 +3015,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 31,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -2914,7 +3040,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 32,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -2939,7 +3065,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 33,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -2964,7 +3090,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 34,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -2989,7 +3115,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 35,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -3014,7 +3140,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 36,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -3040,7 +3166,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 37,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -3065,7 +3191,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 38,
       "position": 13,
       "activity_section_position": 2,
       "assessment": false,
@@ -3090,7 +3216,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 39,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -3115,7 +3241,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 40,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
@@ -3140,7 +3266,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -3165,7 +3291,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 42,
       "position": 17,
       "activity_section_position": 2,
       "assessment": false,
@@ -3190,7 +3316,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3215,7 +3341,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3240,7 +3366,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 45,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3265,7 +3391,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 46,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3290,7 +3416,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 47,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -3315,7 +3441,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 48,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -3340,7 +3466,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 49,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -3365,7 +3491,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 50,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -3390,7 +3516,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 51,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -3415,11 +3541,39 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_meet_your_microbit_2"
+        ],
+        "progression": "Meet your micro:bit"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_f_maker_meet_your_microbit_2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-maker-2024",
+        "activity_section.key": "154ea9f0-cfe8-4b1f-ae0e-f2a9b33ce8b0"
+      },
+      "level_keys": [
+        "course_f_maker_meet_your_microbit_2"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "course_f_maker_microbit_pet"
+        ],
         "progression": "Micro:bit Pet"
       },
       "bonus": false,
@@ -3437,7 +3591,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3462,7 +3616,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 55,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3487,7 +3641,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 56,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3512,7 +3666,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 57,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -3537,7 +3691,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 58,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -3562,7 +3716,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 59,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -3587,7 +3741,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 60,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -3612,7 +3766,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 61,
       "position": 8,
       "activity_section_position": 6,
       "assessment": false,
@@ -3637,7 +3791,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 62,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -3662,7 +3816,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3687,7 +3841,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 64,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3712,7 +3866,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 65,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3737,7 +3891,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 66,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -3762,7 +3916,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 67,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -3787,7 +3941,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 68,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -3812,7 +3966,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 69,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -3837,7 +3991,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 70,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
@@ -3862,11 +4016,39 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_meet_your_microbit_3"
+        ],
+        "progression": "Meet your micro:bit"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_f_maker_meet_your_microbit_3"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursef-maker-2024",
+        "activity_section.key": "58d11f71-1dc9-41d0-b1f5-b282646373d2"
+      },
+      "level_keys": [
+        "course_f_maker_meet_your_microbit_3"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "course_f_maker_max_min_thermometer"
+        ],
         "progression": "Max-min Thermometer"
       },
       "bonus": false,
@@ -3885,6 +4067,18 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "course_f_maker_dance_party_unplugged",
+        "script_level.level_keys": [
+          "course_f_maker_dance_party_unplugged"
+        ],
+        "lesson.key": "Dance Party: Unplugged",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursef-maker-2024",
+        "activity_section.key": "97bd8f96-4f0b-4637-b686-40c1af49360c"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "Dance_2019_01_maker",
@@ -4135,6 +4329,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursef-maker-2024",
         "activity_section.key": "b2e38266-410b-4391-8868-cda9ee1d0818"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course_f_maker_meet_your_microbit",
+        "script_level.level_keys": [
+          "course_f_maker_meet_your_microbit"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursef-maker-2024",
+        "activity_section.key": "0663ffd4-e252-49f0-8e9e-3c1f12b0bf7d"
       }
     },
     {
@@ -4475,6 +4681,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "course_f_maker_meet_your_microbit_2",
+        "script_level.level_keys": [
+          "course_f_maker_meet_your_microbit_2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-maker-2024",
+        "activity_section.key": "154ea9f0-cfe8-4b1f-ae0e-f2a9b33ce8b0"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "course_f_maker_microbit_pet",
         "script_level.level_keys": [
           "course_f_maker_microbit_pet"
@@ -4687,6 +4905,18 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "coursef-maker-2024",
         "activity_section.key": "0396e916-a71e-437d-9aa6-b2178b7a4d05"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course_f_maker_meet_your_microbit_3",
+        "script_level.level_keys": [
+          "course_f_maker_meet_your_microbit_3"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursef-maker-2024",
+        "activity_section.key": "58d11f71-1dc9-41d0-b1f5-b282646373d2"
       }
     },
     {
