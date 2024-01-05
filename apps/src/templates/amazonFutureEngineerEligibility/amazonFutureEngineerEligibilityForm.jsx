@@ -9,13 +9,16 @@ import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
 import FieldGroup from '../../code-studio/pd/form_components/FieldGroup';
 import SingleCheckbox from '../../code-studio/pd/form_components/SingleCheckbox';
-import CheckboxDropdown from '@cdo/apps/templates/CheckboxDropdown';
-import style from '../../../style/code-studio/afe_form.module.scss';
+import Checkbox from '@cdo/apps/componentLibrary/checkbox';
 import color from '@cdo/apps/util/color';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import i18n from '@cdo/locale';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import classnames from 'classnames';
 
 const VALIDATION_STATE_ERROR = 'error';
+
+const INPUT_HEIGHT = 34;
 
 const AMAZON_PRIVACY_POLICY_URL =
   'https://www.amazon.com/gp/help/customer/display.html?ie=UTF8&nodeId=468496';
@@ -96,10 +99,6 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
     let gradeBands = [...this.state.gradeBands];
     gradeBands[index] = !gradeBands[index];
     this.setState({gradeBands});
-  };
-
-  handleUpdateAllGradeBands = isSelected => {
-    this.setState({gradeBands: [isSelected, isSelected, isSelected]});
   };
 
   resetSchool = () =>
@@ -201,6 +200,13 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
     return missingRequiredFields;
   }
 
+  // Collapse dropdown if 'Escape' is pressed
+  onKeyDown(e) {
+    if (e.keyCode === 27) {
+      e.currentTarget.classList.remove('open');
+    }
+  }
+
   render() {
     return (
       <div>
@@ -293,19 +299,59 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
                 ))}
               </select>
             </div>
-            <div className={style.dropdownContainer}>
+            <div style={styles.dropdownContainer}>
               {i18n.afeWhatGradeBands()}
-              <div className={style.dropdownRows}>
-                <CheckboxDropdown
-                  key={'gradeBand'}
-                  name={'gradeBand'}
-                  label={i18n.afeGradeBands()}
-                  allOptions={CSTA_GRADE_BANDS}
-                  checkedOptions={this.state.gradeBands}
-                  onChange={e => this.handleMultiSelectGradeBands(e)}
-                  handleSelectAll={() => this.handleUpdateAllGradeBands(true)}
-                  handleClearAll={() => this.handleUpdateAllGradeBands(false)}
-                />
+              <div
+                className="dropdown show"
+                id={'gradeBands'}
+                onKeyDown={this.onKeyDown}
+              >
+                <button
+                  style={styles.gradeBandButton}
+                  className="btn btn-secondary dropdown-toggle"
+                  id="dropdownMenuButton"
+                  type="button"
+                  data-toggle="dropdown"
+                  aria-haspopup={true}
+                  aria-label="gradeband dropdown"
+                >
+                  {this.state.gradeBands.includes('true') && (
+                    <FontAwesome
+                      id={'check-icon'}
+                      icon="check-circle"
+                      title={'grades'}
+                    />
+                  )}
+                  {i18n.afeGradeBands()}
+                  <FontAwesome
+                    style={styles.icon}
+                    id={'chevron-down-icon'}
+                    icon={'chevron-down'}
+                  />
+                </button>
+                <div
+                  className={classnames('dropdown-menu')}
+                  aria-labelledby="dropdownMenuButton"
+                >
+                  <ul style={styles.listItems}>
+                    {CSTA_GRADE_BANDS.map((band, index) => (
+                      <li
+                        className="dropdown-item"
+                        style={styles.singleItem}
+                        key={band}
+                      >
+                        <Checkbox
+                          style={styles.check}
+                          checked={this.state.gradeBands[index]}
+                          onChange={this.handleMultiSelectGradeBands}
+                          name={band}
+                          value={band}
+                          label={band}
+                        />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -368,13 +414,17 @@ const styles = {
     display: 'flex',
     flexWrap: 'wrap',
     marginBottom: 15,
-    width: '50%',
   },
   dropdown: {
     border: `1px solid ${color.lighter_gray}`,
     borderRadius: 4,
-    height: 34,
+    height: INPUT_HEIGHT,
     flexGrow: 1,
+  },
+  dropdownContainer: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    marginBottom: 14,
   },
   descriptiveText: {
     display: 'block',
@@ -386,5 +436,37 @@ const styles = {
   },
   fillSpace: {
     flexGrow: 1,
+  },
+  gradeBandButton: {
+    border: `1px solid ${color.lighter_gray}`,
+    backgroundColor: 'white',
+    height: INPUT_HEIGHT,
+    fontWeight: 300,
+    padding: 5,
+    margin: 0,
+    color: color.neutral_dark,
+  },
+  icon: {
+    color: color.neutral_dark,
+    fontSize: 'smaller',
+    marginLeft: 10,
+    fontWeight: 100,
+  },
+  listItems: {
+    margin: 0,
+    listStyleType: 'none',
+    padding: 0,
+    textWrap: 'nowrap',
+    overflow: 'auto',
+  },
+  singleItem: {
+    display: 'flex',
+    padding: 5,
+    alignItems: 'start',
+    gap: 12,
+    margin: 0,
+  },
+  check: {
+    position: 'relative',
   },
 };
