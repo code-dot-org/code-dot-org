@@ -195,14 +195,14 @@ a:is(:link, :visited) {
   color: var(--brand_secondary_default);
   text-decoration: underline;
   transition: color ease-in-out .2s;
+}
 
-  &:is(:hover, :active) {
-    color: var(--brand_secondary_dark);
-  }
+a:is(:hover, :active) {
+  color: var(--brand_secondary_dark);
+}
 
-  &:link:has(*) {
-    text-decoration: none;
-  }
+a:link:has(*) {
+  text-decoration: none;
 }
 
 /* Button styles */
