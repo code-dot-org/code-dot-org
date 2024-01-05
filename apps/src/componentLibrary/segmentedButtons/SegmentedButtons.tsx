@@ -20,7 +20,7 @@ export interface SegmentedButtonsProps {
   selectedButtonValue: string;
   /** Segmented Buttons onChange handler */
   onChange: (value: string) => void;
-  /** Custom className */
+  /** Custom className (for example if you want to set max width of the button and/or truncate overflowed text)*/
   className?: string;
 }
 
