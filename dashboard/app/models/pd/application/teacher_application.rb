@@ -321,8 +321,16 @@ module Pd::Application
       workshops.first
     end
 
+    def enrollment
+      Pd::Enrollment.find_by(user: user, workshop: pd_workshop_id)
+    end
+
+    def enrolled?
+      enrollment.present?
+    end
+
     def friendly_registered_workshop
-      Pd::Enrollment.find_by(user: user, workshop: pd_workshop_id) ? 'Yes' : 'No'
+      enrolled? ? 'Yes' : 'No'
     end
 
     def self.prefetch_associated_models(applications)

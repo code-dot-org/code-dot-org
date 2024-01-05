@@ -59,12 +59,6 @@ Dashboard::Application.routes.draw do
 
     get 'maker/home', to: 'maker#home'
     get 'maker/setup', to: 'maker#setup'
-    get 'maker/discountcode', to: 'maker#discountcode'
-    post 'maker/apply', to: 'maker#apply'
-    post 'maker/schoolchoice', to: 'maker#schoolchoice'
-    post 'maker/complete', to: 'maker#complete'
-    get 'maker/application_status', to: 'maker#application_status'
-    post 'maker/override', to: 'maker#override'
     get 'maker/google_oauth_login_code', to: 'maker#login_code'
     get 'maker/display_google_oauth_code', to: 'maker#display_code'
     get 'maker/google_oauth_confirm_login', to: 'maker#confirm_login'
@@ -1094,14 +1088,6 @@ Dashboard::Application.routes.draw do
     delete '/v3/channels/:channel_id/abuse', to: 'report_abuse#reset_abuse'
     post '/v3/channels/:channel_id/abuse/delete', to: 'report_abuse#reset_abuse'
     patch '/v3/(:endpoint)/:encrypted_channel_id', constraints: {endpoint: /(animations|assets|sources|files|libraries)/}, to: 'report_abuse#update_file_abuse'
-
-    # offline-service-worker*.js needs to be loaded the the root level of the
-    # domain('studio.code.org/').
-    # Matches on ".js" or ".map" in order to serve source-map files for the service worker javascript.
-    get '/s/express-2021/lessons/1/:file', action: :offline_service_worker, controller: :offline, constraints: {file: /offline-service-worker.*\.(js|map)/}
-    # Adds the experiment cookie in the User's browser which allows them to experience offline features
-    get '/offline/join_pilot', action: :set_offline_cookie, controller: :offline
-    get '/offline-files.json', action: :offline_files, controller: :offline
 
     post '/browser_events/put_logs', to: 'browser_events#put_logs'
     post '/browser_events/put_metric_data', to: 'browser_events#put_metric_data'
