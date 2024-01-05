@@ -21,7 +21,7 @@ Feature: Dance Party AI Modal Eyes
     And I press "[aria-label=💎]" using jQuery
     And I press "[aria-label=🌊]" using jQuery
     And I press "[aria-label=🚀]" using jQuery
-    And I wait for 0.5 seconds
+    And I wait for 1 second
     And I see no difference for "selecting new emojis"
 
     # In RTL language
@@ -36,11 +36,11 @@ Feature: Dance Party AI Modal Eyes
     # Selecting new emojis in RTL
     And I press "toggle-effect-button"
     And I press "start-over-button"
-    And I wait for 0.5 seconds
+    And I wait for 1 second
     And I see no difference for "starting over in Dance AI modal in RTL"
     And I press "[aria-label=💎]" using jQuery
     And I press "[aria-label=🌊]" using jQuery
     And I press "[aria-label=🚀]" using jQuery
-    And I wait for 0.5 seconds
+    And I wait for 1 second
     And I see no difference for "selecting new emojis in RTL"
     And I close my eyes
