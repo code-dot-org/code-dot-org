@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-04 01:09:25 UTC",
+    "serialized_at": "2024-01-04 17:30:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7745,6 +7745,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd_U2L12 Exploration-div_flex"
+        ],
         "progression": "Div & Flex Exploration"
       },
       "bonus": false,
@@ -7767,6 +7770,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L12 Div Flex SB_1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7789,6 +7795,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L12 Div Flex SB_2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7811,6 +7820,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L12 Div Flex SB_3"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7833,6 +7845,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L12 Div Flex SB_4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7855,6 +7870,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L12 Div Flex SB_5"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7877,6 +7895,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L12 Div Flex SB_6"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7899,6 +7920,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L12 Div Flex SB_7"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7921,6 +7945,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L12 Div Flex SB_8"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7943,6 +7970,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L12 Div Flex SB_9"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7965,6 +7995,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L12 Div Flex SB_10"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,

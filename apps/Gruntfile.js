@@ -4,13 +4,11 @@ var path = require('path');
 var fs = require('fs');
 var _ = require('lodash');
 var sass = require('sass');
-
 var envConstants = require('./envConstants');
 var checkEntryPoints = require('./script/checkEntryPoints');
 
 const {ALL_APPS, appsEntriesFor} = require('./webpackEntryPoints');
 const {createWebpackConfig} = require('./webpack.config');
-const offlineWebpackConfig = require('./webpackOffline.config');
 const {VALID_KARMA_CLI_FLAGS} = require('./karma.conf');
 
 // Review every couple of years to see if an increase improves test performance
@@ -407,8 +405,6 @@ module.exports = function (grunt) {
       piskelDevMode,
     }),
 
-    buildOffline: offlineWebpackConfig,
-
     uglify: createWebpackConfig({
       appsEntries,
       minify: true,
@@ -631,14 +627,10 @@ module.exports = function (grunt) {
     // exist in our repo. Skip minification in development environment.
     envConstants.DEV ? 'noop' : 'uglify:lib',
     envConstants.DEV ? 'webpack:build' : 'webpack:uglify',
-    'webpack:buildOffline',
     'notify:js-build',
     'postbuild',
     envConstants.DEV ? 'noop' : 'newer:copy:unhash',
   ]);
-
-  // Builds the Service Worker used for the Code.org offline experience.
-  grunt.registerTask('buildOffline', ['webpack:buildOffline']);
 
   grunt.registerTask('rebuild', ['clean', 'build']);
 
