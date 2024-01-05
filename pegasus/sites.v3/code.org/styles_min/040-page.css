@@ -188,26 +188,21 @@ em {
   font-style: italic;
 }
 
-a,
-a:link {
+/* Text link styles */
+a:is(:link, :visited) {
   font-family: var(--main-font);
   font-weight: var(--semi-bold-font-weight);
   color: var(--brand_secondary_default);
   text-decoration: underline;
   transition: color ease-in-out .2s;
-}
 
-a:visited {
-  color: var(--brand_secondary_default);
-}
+  &:is(:hover, :active) {
+    color: var(--brand_secondary_dark);
+  }
 
-a:hover,
-a:active {
-  color: var(--brand_secondary_dark);
-}
-
-a:link:has(*) {
-  text-decoration: none;
+  &:link:has(*) {
+    text-decoration: none;
+  }
 }
 
 /* Button styles */
