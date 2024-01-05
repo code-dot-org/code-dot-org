@@ -10,7 +10,7 @@ import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/
 import FieldGroup from '../../code-studio/pd/form_components/FieldGroup';
 import SingleCheckbox from '../../code-studio/pd/form_components/SingleCheckbox';
 import CheckboxDropdown from '@cdo/apps/templates/CheckboxDropdown';
-import style from '../../../style/code-studio/curriculum_catalog_filters.module.scss';
+import style from '../../../style/code-studio/afe_form.module.scss';
 import color from '@cdo/apps/util/color';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import i18n from '@cdo/locale';
@@ -293,9 +293,9 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
                 ))}
               </select>
             </div>
-            <div>
+            <div className={style.dropdownContainer}>
               {i18n.afeWhatGradeBands()}
-              <div className={style.catalogDropdownFilters}>
+              <div className={style.dropdownRows}>
                 <CheckboxDropdown
                   key={'gradeBand'}
                   name={'gradeBand'}
@@ -356,9 +356,6 @@ const styles = {
   sectionBreak: {
     borderColor: color.teal,
   },
-  consentIndent: {
-    marginLeft: '25px',
-  },
   button: {
     backgroundColor: color.orange,
     color: color.white,
@@ -376,18 +373,12 @@ const styles = {
   dropdown: {
     border: `1px solid ${color.lighter_gray}`,
     borderRadius: 4,
-    height: '68%',
-    width: '98%',
+    height: 34,
+    flexGrow: 1,
   },
   descriptiveText: {
     display: 'block',
     margin: 0,
-  },
-  checkboxItem: {
-    margin: 5,
-  },
-  checkboxLabel: {
-    paddingLeft: 5,
   },
   inputBoxes: {
     display: 'flex',

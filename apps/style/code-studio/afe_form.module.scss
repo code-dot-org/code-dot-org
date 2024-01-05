@@ -1,0 +1,21 @@
+.dropdownContainer {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 2;
+  width: 50%;
+}
+
+.dropdownRows {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: baseline;
+  gap: 16px;
+  max-width: 60em;
+  margin: 0 auto;
+
+  button {
+    margin: 0;
+  }
+}
