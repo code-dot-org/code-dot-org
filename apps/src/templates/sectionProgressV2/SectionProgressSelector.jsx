@@ -12,8 +12,6 @@ function SectionProgressSelector({
   showProgressTableV2,
   setShowProgressTableV2,
 }) {
-  console.log('lfm1');
-
   const onShowProgressTableV2Change = useCallback(
     e => {
       const shouldShowV2 = !showProgressTableV2;
@@ -30,12 +28,8 @@ function SectionProgressSelector({
 
   // If progress table is disabled, only show the v1 table.
   if (!DCDO.get('progress-table-v2-enabled', false)) {
-    console.log('progress-table-v2-enabled is false');
     return <SectionProgress />;
   }
-  console.log('progress-table-v2-enabled is true');
-
-  console.log('lfm2', showProgressTableV2);
 
   // If the user has not selected manually the v1 or v2 table, show the DCDO defined default.
   if (showProgressTableV2 === undefined) {
