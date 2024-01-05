@@ -256,7 +256,7 @@ module LevelsHelper
         lesson_position: @script_level.lesson.absolute_position,
         level_position: @script_level.position,
         next_level_url: @script_level.next_level_or_redirect_path_for_user(current_user, @lesson),
-        current_level_url: @script_level.path,
+        current_script_level_url: @script_level.path,
       )
     end
 

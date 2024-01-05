@@ -72,7 +72,7 @@ var ALLOWED_KEYS = new Set([
   'documentationUrl',
   'appType',
   'nextLevelUrl',
-  'currentLevelUrl',
+  'currentScriptLevelUrl',
   'isProjectTemplateLevel',
   'showProjectTemplateWorkspaceIcon',
   'serverLevelId',
