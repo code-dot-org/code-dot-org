@@ -1,6 +1,6 @@
 import {BLOCK_TYPES, PROCEDURE_DEFINITION_TYPES} from '../constants';
 import {partitionBlocksByType} from './cdoUtils';
-import {FALSEY_DEFAULT, readBooleanAttribute} from '../utils';
+import {FALSEY_DEFAULT, TRUTHY_DEFAULT, readBooleanAttribute} from '../utils';
 
 // The user created attribute needs to be read from XML start blocks as 'usercreated'.
 // Once this has been done, all subsequent steps in the serialization use userCreated.
@@ -205,6 +205,34 @@ export function addMutationToProcedureDefBlocks(blockElement) {
 }
 
 /**
+ * Adds a mutation element to a block if it should be invisible.
+ * These blocks will be loaded onto the hidden workspace for procedure definitions.
+ *
+ * @param {Element} blockElement - The XML element for a single block.
+ */
+export function addMutationToInvisibleBlocks(blockElement) {
+  if (PROCEDURE_DEFINITION_TYPES.includes(blockElement.getAttribute('type'))) {
+    return;
+  }
+
+  const invisible = !readBooleanAttribute(
+    blockElement,
+    'uservisible',
+    TRUTHY_DEFAULT
+  );
+
+  if (!invisible) {
+    return;
+  }
+  const mutationElement =
+    blockElement.querySelector('mutation') ||
+    blockElement.ownerDocument.createElement('mutation');
+  // Place mutator before fields, values, and other nested blocks.
+  blockElement.insertBefore(mutationElement, blockElement.firstChild);
+  mutationElement.setAttribute('invisible', invisible);
+}
+
+/**
  * In the event that a legacy project has functions without names, add a name
  * to the definition block's NAME field.
  * @param {Element} blockElement - The XML element for a single block.
@@ -306,6 +334,7 @@ function processIndividualBlock(block) {
   // Convert unsupported can_disconnect_from_parent attributes.
   makeLockedBlockImmovable(block);
   addMutationToTextJoinBlock(block);
+  addMutationToInvisibleBlocks(block);
 }
 
 /**
