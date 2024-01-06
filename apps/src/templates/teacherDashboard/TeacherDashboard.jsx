@@ -6,6 +6,7 @@ import TeacherDashboardNavigation, {
 } from './TeacherDashboardNavigation';
 import TeacherDashboardHeader from './TeacherDashboardHeader';
 import StatsTableWithData from './StatsTableWithData';
+import SectionProgress from '@cdo/apps/templates/sectionProgress/SectionProgress';
 import ManageStudents from '@cdo/apps/templates/manageStudents/ManageStudents';
 import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionProjectsListWithData';
 import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
@@ -19,7 +20,6 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
-import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
 
 function TeacherDashboard({
   studioUrlPrefix,
@@ -142,7 +142,7 @@ function TeacherDashboard({
         )}
         <Route
           path={TeacherDashboardPath.progress}
-          component={props => <SectionProgressSelector />}
+          component={props => <SectionProgress />}
         />
         <Route
           path={TeacherDashboardPath.textResponses}
