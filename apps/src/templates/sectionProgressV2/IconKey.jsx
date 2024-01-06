@@ -8,8 +8,9 @@ import Button from '@cdo/apps/templates/Button';
 //   Heading3,
 // } from '@cdo/apps/componentLibrary/typography';
 import color from '@cdo/apps/util/color';
-// import LevelTypesBox from './LevelTypesBox';
+import LevelTypesBox from './LevelTypesBox';
 import TeacherActionsBox from './TeacherActionsBox';
+import AssignmentCompletionStatesBox from './AssignmentCompletionStatesBox';
 
 export default function IconKey({
   sectionId,
@@ -20,7 +21,16 @@ export default function IconKey({
 
   const caret = isOpenA => (isOpenA ? 'caret-down' : 'caret-right');
 
-  // const sectionContent = () => <LevelTypesBox />;
+  const sectionContent = () => (
+    <div>
+      <LevelTypesBox />
+      <TeacherActionsBox isViewingLevelProgress={true} />
+      <AssignmentCompletionStatesBox
+        isViewingLevelProgress={true}
+        hasValidatedLevels={true}
+      />
+    </div>
+  );
 
   const clickListener = () => setIsOpen(!isOpen);
 
@@ -35,7 +45,7 @@ export default function IconKey({
       >
         {i18n.iconKey()}
       </Button>
-      <div>{isOpen && <TeacherActionsBox isViewingLevelProgress={true} />}</div>
+      <div>{isOpen && sectionContent()}</div>
     </div>
   );
 }
