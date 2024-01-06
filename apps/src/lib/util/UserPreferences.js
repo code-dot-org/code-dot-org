@@ -50,16 +50,6 @@ export default class UserPreferences extends Record({userId: 'me'}) {
   }
 
   /**
-   * Save the preference to show v1 or v2 progress table.
-   * @param {boolean} showProgressTableV2: True if showing progress table v2, false otherwise.
-   */
-  setShowProgressTableV2(showProgressTableV2) {
-    return $.post(`/api/v1/users/show_progress_table_v2`, {
-      show_progress_table_v2: showProgressTableV2,
-    });
-  }
-
-  /**
    * Save the background music user preference
    * @param {boolean} muteMusic: True if background music muted
    */
