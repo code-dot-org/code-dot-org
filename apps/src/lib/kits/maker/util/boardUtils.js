@@ -1,6 +1,7 @@
 import {
   ADAFRUIT_VID,
   CIRCUIT_PLAYGROUND_EXPRESS_PID,
+  CIRCUIT_PLAYGROUND_EXPRESS_PID_2,
   CIRCUIT_PLAYGROUND_PID,
   MICROBIT_PID,
   MICROBIT_VID,
@@ -32,9 +33,11 @@ export function detectBoardTypeFromPort(port) {
       boardType = BOARD_TYPE.CLASSIC;
     } else if (
       (vendorId === ADAFRUIT_VID &&
-        productId === CIRCUIT_PLAYGROUND_EXPRESS_PID) ||
+        (productId === CIRCUIT_PLAYGROUND_EXPRESS_PID ||
+          productId === CIRCUIT_PLAYGROUND_EXPRESS_PID_2)) ||
       (parsedVendorId === ADAFRUIT_VID &&
-        parsedProductId === CIRCUIT_PLAYGROUND_EXPRESS_PID)
+        (parsedProductId === CIRCUIT_PLAYGROUND_EXPRESS_PID ||
+          parsedProductId === CIRCUIT_PLAYGROUND_EXPRESS_PID_2))
     ) {
       boardType = BOARD_TYPE.EXPRESS;
     } else if (
@@ -73,6 +76,7 @@ export const SERIAL_BAUD = 57600;
 export const WEB_SERIAL_FILTERS = [
   {usbVendorId: ADAFRUIT_VID, usbProductId: CIRCUIT_PLAYGROUND_PID},
   {usbVendorId: ADAFRUIT_VID, usbProductId: CIRCUIT_PLAYGROUND_EXPRESS_PID},
+  {usbVendorId: ADAFRUIT_VID, usbProductId: CIRCUIT_PLAYGROUND_EXPRESS_PID_2},
   {usbVendorId: MICROBIT_VID, usbProductId: MICROBIT_PID},
 ];
 

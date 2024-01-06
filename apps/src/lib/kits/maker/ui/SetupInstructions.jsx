@@ -47,6 +47,7 @@ class ConnectionInstructions extends React.Component {
             navigator.serial
               .requestPort({filters: WEB_SERIAL_FILTERS})
               .then(port => {
+                // console.log('get info', port.getInfo());
                 this.setState({webSerialPort: port});
               });
           }}
@@ -77,7 +78,11 @@ class ConnectionInstructions extends React.Component {
         <ol>
           <li>{applabI18n.makerSetupWebSerialConnectToComputer()}</li>
           <li>{applabI18n.makerSetupWebSerialConnectToBoardButton()}</li>
-          <li>{applabI18n.makerSetupWebSerialWindowConnect()}</li>
+          <li>
+            <SafeMarkdown
+              markdown={applabI18n.makerSetupWebSerialWindowConnect()}
+            />
+          </li>
           <li>{applabI18n.makerSetupWebSerialSuccessfulConnection()}</li>
         </ol>
         <SafeMarkdown

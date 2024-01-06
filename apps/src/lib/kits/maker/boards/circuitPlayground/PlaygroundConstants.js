@@ -1,3 +1,5 @@
+import {DOWNLOAD_PREFIX} from '@cdo/apps/lib/kits/maker/util/makerConstants';
+
 export const N_COLOR_LEDS = 10;
 export const EXTERNAL_PINS = [0, 1, 2, 3, 6, 9, 10, 12];
 export const TOUCH_PINS = [0, 2, 3, 6, 9, 10, 12];
@@ -176,3 +178,5 @@ export const SONG_CONCLUSION = [
 // See playground-io/lib/index.js
 export const CP_COMMAND = 0x40;
 export const CP_ACCEL_STREAM_ON = 0x3a;
+
+export const CIRCUIT_PLAYGROUND_EXPRESS_FIRMATA_URL = `${DOWNLOAD_PREFIX}circuit-playground-express-firmata-ver2018-2-19.UF2`;
