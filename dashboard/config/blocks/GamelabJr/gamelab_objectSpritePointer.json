@@ -3,6 +3,7 @@
   "config": {
     "simpleValue": true,
     "name": "objectSpritePointer",
+    "docFunc": "gamelab_whenTouching",
     "blockText": "{SPRITE}",
     "args": [
       {

@@ -458,6 +458,7 @@
   "dropletBlock_write_param0_description": "The text or HTML you want appended to the bottom of your application",
   "finalLevel": "Congratulations! You have solved the final puzzle.",
   "foundDevices": "Did not find a usable device on a serial port.\n\nFound devices: {deviceList}",
+  "iconForTheme": "Icon representative of {selectedTheme} theme",
   "legacy": "(Legacy)",
   "makeMyOwnApp": "Make my own app",
   "makerCheckPluggedIn": "Make sure your board is plugged in.",

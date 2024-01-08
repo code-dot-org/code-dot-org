@@ -5,8 +5,27 @@ import sinon from 'sinon';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import RubricContent from '@cdo/apps/templates/rubrics/RubricContent';
 import experiments from '@cdo/apps/util/experiments';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {Provider} from 'react-redux';
 
 describe('RubricContent', () => {
+  let store;
+  beforeEach(() => {
+    stubRedux();
+    registerReducers({teacherSections});
+    store = getStore();
+  });
+
+  afterEach(() => {
+    restoreRedux();
+  });
+
   const defaultRubric = {
     learningGoals: [
       {
@@ -320,15 +339,17 @@ describe('RubricContent', () => {
   it('displays new LearningGoals prop when ai-rubrics-redesign experiment is enabled', () => {
     experiments.setEnabled('ai-rubrics-redesign', true);
     const wrapper = mount(
-      <RubricContent
-        {...defaultProps}
-        studentLevelInfo={{
-          name: 'Grace Hopper',
-          timeSpent: 305,
-          lastAttempt: '1980-07-31T00:00:00.000Z',
-          attempts: 6,
-        }}
-      />
+      <Provider store={store}>
+        <RubricContent
+          {...defaultProps}
+          studentLevelInfo={{
+            name: 'Grace Hopper',
+            timeSpent: 305,
+            lastAttempt: '1980-07-31T00:00:00.000Z',
+            attempts: 6,
+          }}
+        />
+      </Provider>
     );
     expect(wrapper.find('LearningGoals').length).to.equal(1);
     experiments.setEnabled('ai-rubrics-redesign', false);
@@ -346,11 +367,13 @@ describe('RubricContent', () => {
       attempts: 6,
     };
     const wrapper = mount(
-      <RubricContent
-        {...defaultProps}
-        studentLevelInfo={studentLevelInfo}
-        aiEvaluations={aiEvaluations}
-      />
+      <Provider store={store}>
+        <RubricContent
+          {...defaultProps}
+          studentLevelInfo={studentLevelInfo}
+          aiEvaluations={aiEvaluations}
+        />
+      </Provider>
     );
     expect(wrapper.find('LearningGoals').prop('studentLevelInfo')).to.equal(
       studentLevelInfo
@@ -361,6 +384,26 @@ describe('RubricContent', () => {
     expect(wrapper.find('LearningGoals').prop('aiEvaluations')).to.equal(
       aiEvaluations
     );
+    experiments.setEnabled('ai-rubrics-redesign', false);
+  });
+
+  it('displays new Student and Section selectors when ai-rubrics-redesign experiment is enabled', () => {
+    experiments.setEnabled('ai-rubrics-redesign', true);
+    const wrapper = mount(
+      <Provider store={store}>
+        <RubricContent
+          {...defaultProps}
+          studentLevelInfo={{
+            name: 'Grace Hopper',
+            timeSpent: 305,
+            lastAttempt: '1980-07-31T00:00:00.000Z',
+            attempts: 6,
+          }}
+        />
+      </Provider>
+    );
+    expect(wrapper.find('SectionSelector').length).to.equal(1);
+    expect(wrapper.find('StudentSelector').length).to.equal(1);
     experiments.setEnabled('ai-rubrics-redesign', false);
   });
 });
