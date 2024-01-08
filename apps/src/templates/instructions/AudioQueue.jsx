@@ -1,37 +1,45 @@
-import React, {createContext, useContext, useState} from 'react';
+import React, {
+  createContext,
+  useState,
+  useEffect,
+  useRef,
+  useCallback,
+} from 'react';
 import PropTypes from 'prop-types';
-const AudioQueueContext = createContext();
+
+export const AudioQueueContext = createContext();
 
 export const AudioQueue = ({children}) => {
   const [audioQueue, setAudioQueue] = useState([]);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const isPlaying = useRef(false);
 
-  const playNextAudio = () => {
+  const playNextAudio = useCallback(() => {
     if (audioQueue.length > 0) {
       const inlineAudio = audioQueue.shift();
       inlineAudio.playAudio().then(() => {
-        setIsPlaying(true);
+        isPlaying.current = true;
       });
-
-      inlineAudio.addEventListener('ended', () => {
-        setIsPlaying(false);
-        playNextAudio();
-      });
-    } else {
-      setIsPlaying(false);
     }
-  };
+    isPlaying.current = false;
+  }, [audioQueue]);
 
   const addToQueue = inlineAudio => {
     setAudioQueue(prevQueue => [...prevQueue, inlineAudio]);
-
-    if (!isPlaying) {
-      playNextAudio();
-    }
   };
 
+  const clearQueue = () => {
+    setAudioQueue([]);
+    isPlaying.current = false;
+  };
+
+  useEffect(() => {
+    if (!isPlaying.current) {
+      playNextAudio();
+    }
+  }, [audioQueue, playNextAudio]);
+
   return (
-    <AudioQueueContext.Provider value={{addToQueue}}>
+    <AudioQueueContext.Provider value={{addToQueue, playNextAudio, clearQueue}}>
       {children}
     </AudioQueueContext.Provider>
   );
@@ -39,8 +47,4 @@ export const AudioQueue = ({children}) => {
 
 AudioQueue.propTypes = {
   children: PropTypes.node.isRequired,
-};
-
-export const useAudioQueue = () => {
-  return useContext(AudioQueueContext);
 };
