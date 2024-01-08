@@ -66,7 +66,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_def_mini_toolbox',
       'modal_procedures_no_destroy',
       'behaviors_name_validator',
-      'updated_behavior_picker_blocks',
+      'on_behavior_def_change',
     ],
     mutator: 'behavior_def_mutator',
   },
@@ -143,8 +143,7 @@ GoogleBlockly.Extensions.register('behaviors_block_frame', function () {
   }
 });
 
-// This extension is used to update the block's behaviorId when a user-created behavior is renamed.
-// TODO: Add logic to update the dropdown options on behaviorPicker blocks too.
+// This extension is used to update the block's behaviorId when a behavior is renamed in start mode.
 GoogleBlockly.Extensions.register('behaviors_name_validator', function () {
   const nameField = this.getField('NAME');
   nameField.setValidator(function (newValue) {
@@ -153,7 +152,7 @@ GoogleBlockly.Extensions.register('behaviors_name_validator', function () {
     const legalName = rename(newValue);
     if (
       legalName &&
-      this.sourceBlock_.userCreated &&
+      Blockly.isStartMode &&
       this.sourceBlock_.behaviorId !== legalName
     ) {
       this.sourceBlock_.behaviorId = legalName;
@@ -162,14 +161,11 @@ GoogleBlockly.Extensions.register('behaviors_name_validator', function () {
   });
 });
 
-GoogleBlockly.Extensions.register(
-  'updated_behavior_picker_blocks',
-  function () {
-    this.workspace.addChangeListener(event => {
-      onBehaviorDefChange(event, this);
-    });
-  }
-);
+GoogleBlockly.Extensions.register('on_behavior_def_change', function () {
+  this.workspace.addChangeListener(event => {
+    onBehaviorDefChange(event, this);
+  });
+});
 
 GoogleBlockly.Extensions.registerMutator(
   'behavior_get_mutator',
@@ -285,11 +281,28 @@ function onBehaviorDefChange(event, block) {
   ) {
     const {oldValue, newValue} = event;
     updateBehaviorPickerBlocks(oldValue, newValue);
+    if (Blockly.isStartMode) {
+      // In start mode, we need up update behavior call blocks to change their behaviorIds.
+      // In normal mode the behavior ids are assigned at creation and are static.
+      updateBehaviorCallBlocks(oldValue, newValue);
+    }
+  }
+}
+
+function updateBehaviorCallBlocks(oldValue, newValue) {
+  const behaviorCallBlocks = findAllBlocksOfType(BLOCK_TYPES.behaviorGet);
+  if (behaviorCallBlocks.length) {
+    const blocksToUpdate = behaviorCallBlocks.filter(
+      block => block.behaviorId === oldValue
+    );
+    blocksToUpdate.forEach(block => {
+      block.behaviorId = newValue;
+    });
   }
 }
 
 function updateBehaviorPickerBlocks(oldValue, newValue) {
-  const behaviorPickerBlocks = findAllBehaviorPickerBlocks();
+  const behaviorPickerBlocks = findAllBlocksOfType('gamelab_behaviorPicker');
   if (behaviorPickerBlocks.length) {
     const blocksToUpdate = behaviorPickerBlocks.filter(
       block => block.getFieldValue('BEHAVIOR') === oldValue
@@ -300,13 +313,11 @@ function updateBehaviorPickerBlocks(oldValue, newValue) {
   }
 }
 
-const findAllBehaviorPickerBlocks = () => {
+const findAllBlocksOfType = type => {
   const blocks = [];
   Blockly.Workspace.getAll().forEach(workspace =>
     blocks.push(
-      ...workspace
-        .getAllBlocks()
-        .filter(block => block.type === 'gamelab_behaviorPicker')
+      ...workspace.getAllBlocks().filter(block => block.type === type)
     )
   );
   return blocks;
