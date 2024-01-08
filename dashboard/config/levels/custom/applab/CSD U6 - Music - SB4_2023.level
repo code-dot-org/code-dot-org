@@ -9,10 +9,10 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# playNotes\r\n\r\nThis app uses the [`buzzer.playNotes()`(#f78183)](/docs/applab/buzzer.playNotes/) block to play a sequence of notes in a row like a song. It uses an **array** to tell which notes to play. A few important things to notice are:\r\n- The array uses `null` to represent a \"rest\" in the music, which is a short pause\r\n- The number at the very end is the **tempo** - it determines how long each note lasts.\r\n  - _higher_ numbers mean the notes play _faster_, so the song has a _fast tempo_\r\n  - _lower_ numbers mean the notes play _slower_, so the song has a _slow tempo_\r\n\r\n## Do This\r\n\r\n1) Run the app to see how it works\r\n2) Reset the app and change the temp so the song plays twice as fast\r\n\t- Note: if we want the song to play _faster_, does that mean we want a _bigger number_ or _smaller number_?",
+    "long_instructions": "# playNotes\r\n\r\nThis app uses the [`buzzer.playNotes()`(#f78183)](/docs/applab/buzzer.playNotes/) block to play a sequence of notes in a row like a song. It uses an **array** to tell which notes to play. A few important things to notice are:\r\n- The array uses `null` to represent a \"rest\" in the music, which is a short pause\r\n- The number at the very end is the **tempo** - it determines how long each note lasts.\r\n  - _higher_ numbers mean the notes play _faster_, so the song has a _fast tempo_\r\n  - _lower_ numbers mean the notes play _slower_, so the song has a _slow tempo_\r\n\r\n## Do This\r\n\r\n1) Run the app to see how it works\r\n2) Reset the app and change the tempo so the song plays twice as fast\r\n\t- Note: if we want the song to play _faster_, does that mean we want a _bigger number_ or _smaller number_?",
     "instructions_important": "false",
     "submittable": "false",
-    "start_blocks": "//Change the code below to update the temp so the song plays twice as fast\r\nbuzzer.playNotes([\"B4\", null, \"B4\", null, \"G#4\", \"F#4\", \"E4\", null, \"E4\"], 120);\r\n",
+    "start_blocks": "//Change the code below to update the tempo so the song plays twice as fast\r\nbuzzer.playNotes([\"B4\", null, \"B4\", null, \"G#4\", \"F#4\", \"E4\", null, \"E4\"], 120);\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -70,7 +70,7 @@
     "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:17:43.236+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - SB4_2222\\\"\"],\"cloned_from\":\"CSD U6 - Music - SB4_2222\"},{\"changed_at\":\"2023-08-16 19:33:50 +0000\",\"changed\":[\"makerlab_enabled\",\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-09-08 23:30:43 +0000\",\"changed\":[\"show_debug_watch\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18414,\"changed_by_email\":\"thomas.wang@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:17:43.236+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - SB4_2222\\\"\"],\"cloned_from\":\"CSD U6 - Music - SB4_2222\"},{\"changed_at\":\"2023-08-16 19:33:50 +0000\",\"changed\":[\"makerlab_enabled\",\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-09-08 23:30:43 +0000\",\"changed\":[\"show_debug_watch\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18414,\"changed_by_email\":\"thomas.wang@code.org\"},{\"changed_at\":\"2023-12-14 17:47:40 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

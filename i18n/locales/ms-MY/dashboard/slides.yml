@@ -2057,3 +2057,10 @@ ms:
       10:
         image: 'notes/hoc_hello_world_2021_freeplay_10.jpg'
         text: "Jadi apa yang anda akan buat? Anda boleh bercerita tentang diri anda... atau mengada-adakan dengan watak istimewa anda sendiri. Mungkin anda juga akan menggunakan kemahiran sains komputer baharu anda untuk projek sekolah seterusnya! Panjangkan imaginasi anda dan selamat bergembira!"
+    hoc-dance-ai-warmup:
+      2:
+        text: "Hai! Nama saya Miral Kotb dan saya seorang penari, pembangun perisian dan pencipta iLuminate."
+      3:
+        text: "Sains komputer berkaitan dengan kreativiti dalam pelbagai cara. Tidak dapat diukur. Maksud saya, sebaik sahaja anda mempunyai keupayaan untuk menulis perisian, anda boleh meletakkan idea ke dalam apa sahaja. Saya melakukannya dengan pakaian ringan. Terdapat begitu banyak yang boleh anda lakukan setelah anda mempunyai alat untuk menulis perisian, dan kemungkinannya benar-benar tidak berkesudahan."
+      5:
+        text: "Anda akan menggunakan blok kod untuk memilih penari yang berbeza, menukar gerakan tarian mereka, membuat mereka bertindak balas terhadap muzik dan menjadikan mereka interaktif."

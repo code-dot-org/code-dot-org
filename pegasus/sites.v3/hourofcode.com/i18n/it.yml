@@ -922,6 +922,9 @@ it:
   cs_ambassador_application_date: Le iscrizioni sono aperte fino all'8 novembre 2023
   cs_ambassador_application_subhead: Collabora con un insegnante per presentare la
     tua candidatura oggi
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Domande? Si prega di contattare [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: Cosa fanno gli ambasciatori CS?

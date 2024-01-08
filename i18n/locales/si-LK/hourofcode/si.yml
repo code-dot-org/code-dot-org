@@ -884,6 +884,9 @@ si:
   cs_ambassador_application_date: අයදුම්පත් 2023 නොවැම්බර් 8 දක්වා විවෘතව ඇත
   cs_ambassador_application_subhead: ඔබේ අයදුම්පත අද ඉදිරිපත් කිරීමට ගුරුවරයෙකු සමඟ
     වැඩ කරන්න
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: ප්රශ්න? කරුණාකර අමතන්න [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: සීඑස් තානාපතිවරුන් කරන්නේ කුමක්ද?

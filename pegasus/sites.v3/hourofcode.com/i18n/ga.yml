@@ -921,6 +921,9 @@ ga:
   cs_ambassador_application_date: Osclaítear iarratais go dtí an 8 Samhain, 2023
   cs_ambassador_application_subhead: Oibrigh le múinteoir chun d'iarratas a chur isteach
     inniu
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Ceisteanna? Téigh i dteagmháil le [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: Cad a dhéanann Ambasadóirí CS?

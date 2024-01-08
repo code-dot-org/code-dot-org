@@ -1,15 +1,26 @@
 <Weblab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 58,
   "created_at": "2016-10-13T16:40:09.000Z",
   "level_num": "custom",
   "user_id": 2,
   "properties": {
-    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n    <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\n  </head>\\n  <body>\\n    \\n  </body>\\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"style.css\",\r\n      \"data\": \"body {\\n  background: white;\\n}\\np {\\n  color: black;\\n}\\nh1 {\\n  font-weight: bold;\\n}\"\r\n    }\r\n  ]\r\n}\r\n",
-    "is_project_level": "true"
+    "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n    <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\n  </head>\\n  <body>\\n    \\n    <!-- Add a div container with a class attribute around the 3 paragraph tags -->\\n\\n      <p>1</p>\\n      <p>2</p>\\n      <p>3</p>\\n    \\n    \\n  </body>\\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"style.css\",\r\n      \"data\": \"/* We styled the paragraphs to look like boxes so that you can learn what each Flex property does */\\np{\\n  background: #ffb447;\\n  width: 200px;\\n  height:200px;\\n  border-style: solid;\\n  text-align: center;\\n  font-size: 36px;\\n}\\n.container {\\n  /* We gave the div container a background color so you can see how the items are positioned within it */\\n  background: #b691d6;\\n  \\n  /* We first create a flex layout context */\\n\\n\\n  /* Then we define the flow direction \\n  and if we allow the items to wrap */\\n\\n\\n}\"\r\n    }\r\n  ]\r\n}\r\n            ",
+    "is_project_level": "true",
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "long_instructions": "# Display, Direction and Wrap\r\n\r\nThe first three steps we typically follow when applying Flex properties is to establish the layout, define the flow direction and if items should wrap, and define how the items should be distributed. Let's try out the first two steps and establish flex layout and define the direction and wrap.\r\n\r\n# Do This\r\n\r\n1. Add a `div` container around the paragraph tags.\r\n2. Add the class name `.container` to the `div` tag.\r\n3. Add the following Flex properties to the container:\r\n   - Establish flex layout with `display: flex;`\r\n   - Define the flow direction with `flex-direction: column;` and if items should wrap with `flex-wrap: wrap;`",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "validation_enabled": "false"
   },
-  "published": true,
   "notes": "",
-  "level_concept_difficulty": {}
+  "audit_log": "[{\"changed_at\":\"2024-01-04 00:56:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-04 00:57:44 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Weblab>

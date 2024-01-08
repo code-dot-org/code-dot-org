@@ -1,9 +1,9 @@
 class RubricsController < ApplicationController
   include Rails.application.routes.url_helpers
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :ai_evaluation_status_for_user, :run_ai_evaluations_for_user]
-  load_resource only: [:get_teacher_evaluations, :ai_evaluation_status_for_user, :run_ai_evaluations_for_user]
-  load_and_authorize_resource except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :ai_evaluation_status_for_user, :run_ai_evaluations_for_user]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all]
+  load_resource only: [:get_teacher_evaluations, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all]
+  load_and_authorize_resource except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all]
 
   # GET /rubrics/:rubric_id/edit
   def edit
@@ -137,6 +137,47 @@ class RubricsController < ApplicationController
     return head :ok
   end
 
+  def run_ai_evaluations_for_all
+    section_id = params.transform_keys(&:underscore).require(:section_id)
+
+    # Find the rubric (must have something to evaluate)
+    return head :bad_request unless @rubric
+
+    script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
+
+    is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level.script, experiment_name: 'ai-rubrics')
+    return head :forbidden unless is_ai_experiment_enabled
+
+    is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
+    return head :bad_request unless is_level_ai_enabled
+
+    user_ids = Section.find_by(id: section_id).followers.pluck(:student_user_id)
+    user_ids.each do |user_id|
+      @user = User.find(user_id)
+      next unless @user&.student_of?(current_user)
+
+      attempted = attempted_at
+      last_eval_time = nil # any evaluation- pending, success, or failure
+
+      rubric_ai_evaluation = RubricAiEvaluation.where(
+        rubric_id: @rubric.id,
+        user_id: user_id
+      ).order(updated_at: :desc).first
+
+      if rubric_ai_evaluation&.status
+        last_eval_time = rubric_ai_evaluation.created_at
+      end
+
+      next unless attempted && (!last_eval_time || last_eval_time < attempted)
+      EvaluateRubricJob.perform_later(
+        user_id: @user.id,
+        requester_id: current_user.id,
+        script_level_id: script_level.id,
+      )
+    end
+    return head :ok
+  end
+
   def ai_evaluation_status_for_user
     user_id = params.transform_keys(&:underscore).require(:user_id)
     @user = User.find_by(id: user_id)
@@ -170,6 +211,49 @@ class RubricsController < ApplicationController
     }
   end
 
+  def ai_evaluation_status_for_all
+    section_id = params.transform_keys(&:underscore).require(:section_id)
+
+    script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
+
+    is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level&.script, experiment_name: 'ai-rubrics')
+    return head :forbidden unless is_ai_experiment_enabled
+
+    is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
+    return head :bad_request unless is_level_ai_enabled
+    attempted_count = 0
+    attempted_unevaluated_count = 0
+    last_attempt_evaluated_count = 0
+
+    user_ids = Section.find_by(id: section_id).followers.pluck(:student_user_id)
+    user_ids.each do |user_id|
+      @user = User.find(user_id)
+      next unless @user&.student_of?(current_user)
+      attempted = attempted_at
+      evaluated = ai_evaluated_at # only finished, successful evaluations
+      rubric_ai_evaluation = RubricAiEvaluation.where(
+        rubric_id: @rubric.id,
+        user_id: user_id
+      ).order(updated_at: :desc).first
+
+      last_eval_time = nil # any evaluation- pending, success, or failure
+      if rubric_ai_evaluation&.status
+        last_eval_time = rubric_ai_evaluation.created_at
+      end
+
+      attempted_unevaluated_count += 1 if !!attempted && (!last_eval_time || (!!last_eval_time && last_eval_time < attempted))
+      attempted_count += 1 if !!attempted
+      last_attempt_evaluated_count += 1 if !!attempted && !!evaluated && evaluated >= attempted
+    end
+    render json: {
+      notAttemptedCount: user_ids.length - attempted_count,
+      attemptedCount: attempted_count,
+      attemptedUnevaluatedCount: attempted_unevaluated_count,
+      lastAttemptEvaluatedCount: last_attempt_evaluated_count,
+      csrfToken: form_authenticity_token
+    }
+  end
+
   private
 
   def rubric_params
@@ -197,10 +281,13 @@ class RubricsController < ApplicationController
   end
 
   def attempted_at
-    script = @rubric.lesson.script
-    level = @rubric.level
-    user_level = UserLevel.find_by(user: @user, level: level, script: script)
-    user_level&.updated_at
+    script_level = @rubric.get_script_level
+    channel_id = get_channel_id(@user, script_level)
+    return nil unless channel_id
+    # fetch the user's code from S3
+    source_data = SourceBucket.new.get(channel_id, "main.json")
+    return nil unless source_data[:status] == 'FOUND'
+    source_data[:last_modified]
   end
 
   def ai_evaluated_at
@@ -209,5 +296,20 @@ class RubricsController < ApplicationController
       order(updated_at: :desc).
       first&.
       created_at
+  end
+
+  # get the channel id of the project which stores the user's code on this script level.
+  private def get_channel_id(user, script_level)
+    # get the user's storage id from the database
+    user_storage_id = storage_id_for_user_id(user.id)
+
+    # get the channel id for this user's level (or project template level) from the database
+    channel_token = ChannelToken.find_channel_token(
+      script_level.level,
+      user_storage_id,
+      script_level.script_id
+    )
+    return nil unless channel_token
+    channel_token.channel
   end
 end

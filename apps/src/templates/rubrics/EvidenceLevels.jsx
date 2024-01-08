@@ -12,6 +12,7 @@ export default function EvidenceLevels({
   radioButtonCallback,
   submittedEvaluation,
   isStudent,
+  isAutosaving,
 }) {
   const sortedEvidenceLevels = () => {
     const newArray = [...evidenceLevels];
@@ -32,6 +33,7 @@ export default function EvidenceLevels({
         understanding={understanding}
         radioButtonCallback={radioButtonCallback}
         canProvideFeedback={canProvideFeedback}
+        isAutosaving={isAutosaving}
       />
     );
   }
@@ -45,4 +47,5 @@ EvidenceLevels.propTypes = {
   radioButtonCallback: PropTypes.func,
   submittedEvaluation: submittedEvaluationShape,
   isStudent: PropTypes.bool,
+  isAutosaving: PropTypes.bool,
 };

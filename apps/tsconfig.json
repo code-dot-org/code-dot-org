@@ -10,10 +10,10 @@
   "compilerOptions": {
     "jsx": "react",
     "target": "es5",
-    "lib": ["ES2019", "DOM"],
-    "module": "es6",
+    "lib": ["ES2022", "DOM"],
+    "module": "node16",
     "rootDir": "./",
-    "moduleResolution": "node",
+    "moduleResolution": "node16",
     "outDir": "build",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,

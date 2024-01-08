@@ -26,6 +26,7 @@ export default function RubricContainer({
   reportingData,
   open,
   closeRubric,
+  sectionId,
 }) {
   const onLevelForEvaluation = currentLevelName === rubric.level.name;
   const canProvideFeedback = !!studentLevelInfo && onLevelForEvaluation;
@@ -113,10 +114,12 @@ export default function RubricContainer({
         <RubricSettings
           canProvideFeedback={canProvideFeedback}
           teacherHasEnabledAi={teacherHasEnabledAi}
-          rubricId={rubric.id}
           studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
           visible={selectedTab === TAB_NAMES.SETTINGS}
           refreshAiEvaluations={fetchAiEvaluations}
+          rubric={rubric}
+          studentName={studentLevelInfo && studentLevelInfo.name}
+          sectionId={sectionId}
         />
       )}
     </div>
@@ -131,15 +134,21 @@ RubricContainer.propTypes = {
   currentLevelName: PropTypes.string,
   closeRubric: PropTypes.func,
   open: PropTypes.bool,
+  sectionId: PropTypes.number,
 };
 
 const HeaderTab = ({text, isSelected, onClick}) => {
   return (
     <button
-      className={classnames(style.rubricHeaderTab, style.buttonStyle, {
-        [style.selectedTab]: isSelected,
-        [style.unselectedTab]: !isSelected,
-      })}
+      className={classnames(
+        'uitest-rubric-header-tab',
+        style.rubricHeaderTab,
+        style.buttonStyle,
+        {
+          [style.selectedTab]: isSelected,
+          [style.unselectedTab]: !isSelected,
+        }
+      )}
       onClick={onClick}
       type="button"
     >

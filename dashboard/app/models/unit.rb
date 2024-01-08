@@ -199,6 +199,8 @@ class Unit < ApplicationRecord
 
   UNIT_DIRECTORY = "#{Rails.root}/config/scripts".freeze
 
+  TEACHER_FEEDBACK_INITIATIVES = %w(CSF CSC CSD CSP CSA).freeze
+
   def prevent_course_version_change?
     resources.any? ||
       student_resources.any? ||
@@ -1901,8 +1903,14 @@ class Unit < ApplicationRecord
       version_year: version_year,
       name: launched? ? localized_title : localized_title + " *",
       position: unit_group_units&.first&.position,
-      description: localized_description ? Services::MarkdownPreprocessor.process(localized_description) : nil
+      description: localized_description ? Services::MarkdownPreprocessor.process(localized_description) : nil,
+      is_feedback_enabled: teacher_feedback_enabled?
     }
+  end
+
+  private def teacher_feedback_enabled?
+    initiative = get_course_version&.course_offering&.marketing_initiative
+    TEACHER_FEEDBACK_INITIATIVES.include? initiative
   end
 
   def summarize_for_assignment_dropdown

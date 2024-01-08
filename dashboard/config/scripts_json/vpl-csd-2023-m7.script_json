@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-16 21:04:20 UTC",
+    "serialized_at": "2024-01-02 18:51:47 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -465,6 +465,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U7L2_3_2023"
+        ],
         "progression": "Previously On... (~40 mins)"
       },
       "bonus": false,
@@ -512,6 +515,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U7L3_2_2023"
+        ],
         "progression": "Previously On... (~40 mins)"
       },
       "bonus": false,
@@ -534,6 +540,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U7L3_3_2023"
+        ],
         "progression": "Previously On... (~40 mins)"
       },
       "bonus": false,

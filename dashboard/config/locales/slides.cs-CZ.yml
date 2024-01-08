@@ -2179,6 +2179,18 @@ cs:
         text: Když stisknete „Spustit“, sprajt řekne text, který jste zadali. Je čas
           pustit se do programování v Laboratoři sprajtů. Schválně, kam vás představivost
           zavede!
+    hoc-dance-ai-warmup:
+      2:
+        text: Ahoj! Jmenuji se Miral Kotb a jsem tanečnice, vývojářka softwaru a tvůrkyně
+          iLuminate.
+      3:
+        text: Počítačová věda má mnoha průsečíků s tvůrčí činností. Ani by se spočítat
+          nedaly. Když se naučíte psát software, můžete realizovat svoje nápady v
+          jakékoli oblasti. V mém případě jsou to světelné obleky. S nástroji na psaní
+          softwaru můžete dokázat opravdu hodně věcí, možnosti jsou prakticky nekonečné.
+      5:
+        text: Pomocí bloků kódu si zvolíte různé tanečníky, budete měnit jejich taneční
+          pohyby, necháte je reagovat na hudbu a naprogramujete jejich vzájemné interakce.
     hoc_dance_congrats:
       1:
         text: 'Hodina kódu | Taneční večírek: Party začíná!'

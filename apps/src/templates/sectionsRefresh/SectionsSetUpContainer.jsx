@@ -17,7 +17,6 @@ import {
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {showVideoDialog} from '@cdo/apps/code-studio/videos';
-import DCDO from '@cdo/apps/dcdo';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
 import {getCoteacherMetricInfoFromSection} from './coteacherSettings/CoteacherUtils';
 import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
@@ -376,7 +375,7 @@ export default function SectionsSetUpContainer({
           moduleStyles.withBorderTop
         )}
       >
-        {DCDO.get('show-coteacher-ui', true) && renderCoteacherSection()}
+        {renderCoteacherSection()}
         {renderAdvancedSettings()}
       </div>
       <div

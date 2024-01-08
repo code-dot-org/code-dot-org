@@ -3,6 +3,7 @@ import {useSelector} from 'react-redux';
 import {DanceState} from '../danceRedux';
 import ProgramExecutor from '../lab2/ProgramExecutor';
 import moduleStyles from './ai-visualization-preview.module.scss';
+import danceMetricsReporter from '../danceMetricsReporter';
 
 interface AiVisualizationPreviewProps {
   id: string;
@@ -28,7 +29,8 @@ const AiVisualizationPreview: React.FunctionComponent<
       id,
       () => undefined, // no-op on puzzle complete
       true, // treat this as a readonly workspace
-      false // no replay log
+      false, // no replay log
+      danceMetricsReporter
     );
   }, [id]);
 
@@ -62,15 +64,13 @@ const AiVisualizationPreview: React.FunctionComponent<
   useEffect(() => () => executorRef.current?.destroy(), []);
 
   return (
-    <div>
-      <div
-        id={id}
-        style={{width: size, height: size}}
-        className={moduleStyles.previewVisualization}
-        ref={containerRef}
-      />
-    </div>
+    <div
+      id={id}
+      style={{width: size, height: size}}
+      className={moduleStyles.previewVisualization}
+      ref={containerRef}
+    />
   );
 };
 
-export default AiVisualizationPreview;
+export default React.memo(AiVisualizationPreview);
