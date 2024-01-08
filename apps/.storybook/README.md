@@ -2,7 +2,7 @@
 
 We use [Storybook](https://storybook.js.org/) to generate a UI component style guide that you can use to discover what components are available to reuse as you build new features. You can also use the style guide to more easily develop new components without having to run all of code.org.
 
-To view the style guide, run:
+To view the style guide, run
 
 ```bash
 yarn storybook
