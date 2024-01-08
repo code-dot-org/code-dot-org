@@ -14,15 +14,15 @@ import os
 module_path = ".."
 sys.path.append(os.path.abspath(module_path))
 
-# KNOWN ISSUE: Their version of utils was a custom library file unique to their bedrock tutorial located here: https://github.com/aws-samples/amazon-bedrock-workshop/blob/109ed616fd14c9eb26eda9bef96eb78c490d5ef6/utils/bedrock.py
-# While it WAS working before, it doesn't work now and the code contains within the utils folder will need to be migrated out to get this working locally
+# aws_utils contains a custom library file unique to their bedrock tutorial located here: https://github.com/aws-samples/amazon-bedrock-workshop/blob/109ed616fd14c9eb26eda9bef96eb78c490d5ef6/utils/bedrock.py
+# See readme.md for more detailed access information and further amazon documentation links
 from aws_utils import bedrock
 
 # ---- ⚠️ Un-comment and edit the below lines as needed for your AWS setup ⚠️ ----
 
-# os.environ["AWS_DEFAULT_REGION"] = "<REGION_NAME>"  # E.g. "us-east-1"
-# os.environ["AWS_PROFILE"] = "<YOUR_PROFILE>"
-# os.environ["BEDROCK_ASSUME_ROLE"] = "<YOUR_ROLE_ARN>"  # E.g. "arn:aws:..."
+# os.environ["AWS_DEFAULT_REGION"] = "us-east-1"  # E.g. "us-east-1"
+# os.environ["AWS_PROFILE"] = "codeorg-dev"
+# os.environ["BEDROCK_ASSUME_ROLE"] = "arn:aws:iam::165336972514:user/Tyrone"  # E.g. "arn:aws:..."
 
 bedrock_runtime = bedrock.get_bedrock_client(
     assumed_role=os.environ.get("BEDROCK_ASSUME_ROLE", None),
@@ -96,18 +96,17 @@ def load_embeddings_cache(path):
             pickle.dump(embedding_cache, embedding_cache_file)    
     return embedding_cache
 
-# This function retrieves an embedding for a string from the cache if present, and otherwise requests
-# the embedding via the Open AI API
+# This function retrieves an embedding for a string from the cache if present, otherwise requests for the embedding through an available model
+# As of 01/08/2024, the model being used is AWS's Titan v1 within their Bedrock framework; adjust function body as needed to replace with other models as necessary
 def retrieve_embedding(string: str,
     cache_path: str,
     embedding_cache,
     model: str = EMBEDDING_MODEL,
 ) -> list:
-    # If the string is not already in the embedding cache, request embedding via
-    # get_embedding and store in cache. Otherwise, retrieve from cache.
+    # If the string is not already in the embedding cache, request embedding and store in cache. Otherwise, retrieve from cache.
     if (string, model) not in embedding_cache.keys():
         body = json.dumps({"inputText": string})
-        modelId = "amazon.titan-embed-text-v1"  # (Change this to try different embedding models)
+        modelId = model 
         accept = "application/json"
         contentType = "application/json"
 
@@ -136,12 +135,10 @@ def retrieve_embedding(string: str,
             pickle.dump(embedding_cache, embedding_cache_file)
     return embedding_cache[(string, model)]
 
-# This function calculates the similarity score between an input enmbedding and a list of output embeddings.
+# This function calculates the similarity score between an input embedding and a list of output embeddings.
 def calculate_similarity_score(input_embeddings, output_embeddings, emojis):
-    # distance_from_embeddings returns a list of distances between the input embedding and each output embedding
-    # https://github.com/openai/openai-python/blob/284c1799070c723c6a553337134148a7ab088dd8/openai/embeddings_utils.py#L139
-    # Thus, similarities is an array of arrays of distances, with each subarray representing the distances between
-    # from an input embedding to each output embedding.    
+    # Creates matrix of cosine distances (similarities) where each subarray represents the distance between an input and each possible output
+    # e.g. [[input1:output1, input1:output2...], [input2:output1, output2:output2...]...]
     vectors = []
     indexes = []
     for input_vector in input_embeddings:
@@ -158,9 +155,10 @@ def calculate_similarity_score(input_embeddings, output_embeddings, emojis):
     # We use the emoji_ids and not the emoji modelDescriptiveNames as index for use by client
     similarities.index = emojis.values()
     
-    # Native cosine distance calculation outputs a value between 0 -> 1 where smaller values = greater similarity
+    # Conversion from cosine distance to cosine similarity for ease of summation later in pipeline.
+    # Math explanation: Cosine distance outputs a value between 0 -> 1 where smaller values = greater similarity
     # We can redefine this into cosine similarity with a simple (x-1)*-1 due to their mathematical relationship
-    # Cosine similarity is preferable as we can easily sum them together to take a max value later
+    # Since we take the SUM(MAX(similarity)) value when determining which options to present the user, cosine similarity is preferable
     similarities = similarities.apply(lambda x: round((x-1)*-1, 3), axis = 0)
 
     # Conversion to required JSON lookup format
