@@ -89,6 +89,12 @@ class Blockly < Level
   # DCDO key for turning this feature on or off.
   BLOCKLY_I18N_IN_TEXT_DCDO_KEY = 'blockly_i18n_in_text'.freeze
 
+  def summarize_for_lab2_properties(script)
+    level_properties = super
+    level_properties[:sharedBlocks] = localized_blockly_level_options(script)["sharedBlocks"]
+    level_properties
+  end
+
   def self.field_or_title(xml_doc)
     num_fields = xml_doc.xpath('//field').count
     num_titles = xml_doc.xpath('//title').count
@@ -666,26 +672,23 @@ class Blockly < Level
     block_xml.xpath("//block[@type=\"gamelab_behavior_get\"]").each do |behavior|
       behavior_name = behavior.at_xpath("./#{tag}[@name=\"VAR\"]")
       next unless behavior_name
-      localized_name = I18n.t(
-        behavior_name.content,
-        scope: [:data, :behavior_names, name],
-        default: nil,
-        smart: true
-      )
-      behavior_name.content = localized_name if localized_name
-    end
-    block_xml.xpath("//block[@type=\"behavior_definition\"]").each do |behavior|
-      behavior_name = behavior.at_xpath("./#{tag}[@name=\"NAME\"]")
-      next unless behavior_name
-      localized_name = I18n.t(
-        behavior_name.content,
-        scope: [:data, :behavior_names, name],
-        default: nil,
-        smart: true
-      )
+      localized_name =
+        I18n.t(
+          behavior_name.content,
+          scope: [:data, :shared_functions],
+          default: nil,
+          smart: true
+        ) ||
+        I18n.t(
+          behavior_name.content,
+          scope: [:data, :behavior_names, name],
+          default: nil,
+          smart: true
+        )
       behavior_name.content = localized_name if localized_name
     end
 
+    # localize_behaviors handles localizing behavior definitions.
     localize_behaviors(block_xml)
     block_xml
   end
@@ -911,7 +914,19 @@ class Blockly < Level
       end
 
       behavior.xpath(".//#{tag}[@name=\"NAME\"]").each do |name_element|
-        localized_name = I18n.t(name_element.content, scope: [:data, :shared_functions], default: nil, smart: true)
+        localized_name =
+          I18n.t(
+            name_element.content,
+            scope: [:data, :shared_functions],
+            default: nil,
+            smart: true
+          ) ||
+          I18n.t(
+            name_element.content,
+            scope: [:data, :behavior_names, name],
+            default: nil,
+            smart: true
+          )
         name_element.content = localized_name if localized_name
 
         mutation.xpath('.//description').each do |description|
