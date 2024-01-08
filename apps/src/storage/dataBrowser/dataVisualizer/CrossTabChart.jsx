@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {CROSS_TAB_CHART_AREA} from './constants';
-import * as color from '../../../util/color';
-import fontConstants from '@cdo/apps/fontConstants';
+// import * as color from '../../../util/color';
+// import fontConstants from '@cdo/apps/fontConstants';
+
+import VirtualTable from './VirtualTable';
 
 export default function CrossTabChart(props) {
   if (!props.records || !props.selectedColumn1 || !props.selectedColumn2) {
@@ -35,66 +37,26 @@ export default function CrossTabChart(props) {
   //    adding up to 99% of the table width (which is more than available space)
   //    so after setting the first column width, the remaining columns
   //    shrink to fit evenly.
-  const columnWidth = 99 / (columns.length - 1) + '%';
+  // const columnWidth = 99 / (columns.length - 1) + '%';
 
-  const {min, max} = numericValues.reduce(
-    (values, currentVal) => {
-      return {
-        min: Math.min(currentVal, values.min),
-        max: Math.max(currentVal, values.max),
-      };
-    },
-    {min: Number.POSITIVE_INFINITY, max: Number.NEGATIVE_INFINITY}
-  );
+  // const {min, max} = numericValues.reduce(
+  //   (values, currentVal) => {
+  //     return {
+  //       min: Math.min(currentVal, values.min),
+  //       max: Math.max(currentVal, values.max),
+  //     };
+  //   },
+  //   {min: Number.POSITIVE_INFINITY, max: Number.NEGATIVE_INFINITY}
+  // );
 
   return (
     <div id={CROSS_TAB_CHART_AREA} style={wrapperStyle}>
-      <h1 style={chartTitleStyle}>{props.chartTitle}</h1>
-      <table style={tableStyle}>
-        <tbody>
-          <tr>
-            <td>&nbsp;</td>
-            <td
-              style={{...topCellStyle, ...axisTitleStyle}}
-              colSpan={columns.length - 1}
-            >
-              {props.selectedColumn2}
-            </td>
-          </tr>
-          <tr>
-            {columns.map((column, i) => (
-              <td
-                key={column}
-                style={
-                  i === 0 ? {...leftCellStyle, ...axisTitleStyle} : topCellStyle
-                }
-              >
-                {column}
-              </td>
-            ))}
-          </tr>
-          {chartData.map(record => (
-            <tr key={record[props.selectedColumn1]}>
-              {columns.map((column, j) => {
-                const value = record[column];
-                const cellStyle =
-                  j === 0
-                    ? {...leftCellStyle}
-                    : {
-                        ...innerCellStyle,
-                        width: columnWidth,
-                        backgroundColor: getColorForValue(value, min, max),
-                      };
-                return (
-                  <td key={column} style={cellStyle}>
-                    {value}
-                  </td>
-                );
-              })}
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <VirtualTable
+        columns={columns}
+        chartData={chartData}
+        selectedColumn1={props.selectedColumn1}
+        selectedColumn2={props.selectedColumn2}
+      />
     </div>
   );
 }
@@ -162,36 +124,36 @@ export function getColorForValue(value, min, max) {
 const wrapperStyle = {
   width: '100%',
 };
-const chartTitleStyle = {
-  ...fontConstants['main-font-bold'],
-  fontSize: 16,
-  lineHeight: '16px',
-  color: 'black',
-};
-const tableStyle = {
-  width: '100%',
-};
-const cellStyle = {
-  height: '2em',
-  border: '1px solid black',
-  textAlign: 'center',
-};
-const topCellStyle = {
-  ...cellStyle,
-  backgroundColor: color.lightest_gray,
-  color: 'black',
-};
-const leftCellStyle = {
-  ...cellStyle,
-  backgroundColor: color.dark_charcoal,
-  color: 'white',
-  padding: '0 1em',
-  whiteSpace: 'nowrap',
-};
-const innerCellStyle = {
-  ...cellStyle,
-  overflow: 'hidden',
-};
-const axisTitleStyle = {
-  ...fontConstants['main-font-semi-bold'],
-};
+// const chartTitleStyle = {
+//   ...fontConstants['main-font-bold'],
+//   fontSize: 16,
+//   lineHeight: '16px',
+//   color: 'black',
+// };
+// const tableStyle = {
+//   width: '100%',
+// };
+// const cellStyle = {
+//   height: '2em',
+//   border: '1px solid black',
+//   textAlign: 'center',
+// };
+// const topCellStyle = {
+//   ...cellStyle,
+//   backgroundColor: color.lightest_gray,
+//   color: 'black',
+// };
+// const leftCellStyle = {
+//   ...cellStyle,
+//   backgroundColor: color.dark_charcoal,
+//   color: 'white',
+//   padding: '0 1em',
+//   whiteSpace: 'nowrap',
+// };
+// const innerCellStyle = {
+//   ...cellStyle,
+//   overflow: 'hidden',
+// };
+// const axisTitleStyle = {
+//   ...fontConstants['main-font-semi-bold'],
+// };
