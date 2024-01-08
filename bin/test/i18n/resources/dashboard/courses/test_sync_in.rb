@@ -18,6 +18,10 @@ describe I18n::Resources::Dashboard::Courses::SyncIn do
   end
 
   describe '.perform' do
+    before do
+      I18n::Metrics.stubs(:report_runtime).yields(nil)
+    end
+
     it 'preparse and then redacts the i18n source files' do
       execution_sequence = sequence('execution')
 

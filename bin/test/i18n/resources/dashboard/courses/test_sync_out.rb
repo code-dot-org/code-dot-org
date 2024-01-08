@@ -47,6 +47,7 @@ describe I18n::Resources::Dashboard::Courses::SyncOut do
     end
 
     before do
+      I18n::Metrics.stubs(:report_runtime).yields(nil)
       I18nScriptUtils.stubs(:source_lang?).with(language).returns(false)
 
       described_class.any_instance.stubs(:restore_localization)

@@ -18,6 +18,8 @@ describe I18n::Resources::Dashboard::CourseOfferings::SyncIn do
     end
 
     before do
+      I18n::Metrics.stubs(:report_runtime).yields(nil)
+
       CourseOffering.destroy_all
     end
 
