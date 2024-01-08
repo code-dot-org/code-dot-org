@@ -3454,6 +3454,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
       isK1: config.level.isK1,
       appType: config.app,
       nextLevelUrl: config.nextLevelUrl,
+      currentScriptLevelUrl: config.currentScriptLevelUrl,
       isProjectTemplateLevel:
         !!config.level.projectTemplateLevelName && !config.level.isK1,
       showProjectTemplateWorkspaceIcon:
