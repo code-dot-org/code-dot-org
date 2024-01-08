@@ -513,7 +513,7 @@
   "makerSetupVerifyComponents": "Oh no! Something unexpected went wrong while verifying the board components.",
   "makerSetupWebSerialConnectToComputer": "Connect the board to your computer.",
   "makerSetupWebSerialConnectToBoardButton": "Press the “Connect to Board” button below.",
-  "makerSetupWebSerialWindowConnect": "A window should pop up with a row that includes \"Circuit Playground\", \"CPlay Express\", or \"micro:bit\". Select that row, then click \"Connect\".<br>If you are connecting a Circuit Playground Express, enter bootloader mode by pressing the reset button. More information about bootloader mode [here](https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd)",
+  "makerSetupWebSerialWindowConnect": "A window should pop up with a row that includes \"Circuit Playground\" or \"micro:bit\". Select that row, then click \"Connect\".<br>If you are connecting a Circuit Playground Express, and 'No compatible devices found.' appears in the window, please install the required Firmata firmware - instructions [here](https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd)",
   "makerSetupWebSerialSuccessfulConnection": "You should see several green checkmarks below. When full connected, the Circuit Playground will display a sequence of green lights and emit a series of beeps, and the micro:bit will show a short animation.",
   "makerSetupWebSerialSupportArticle": "If you have any issues, please refer to our [WebSerial Support Article](https://support.code.org/hc/en-us/articles/9953258694669).",
   "makerSetupWindows7Drivers": "(Windows 7) Install the [Adafruit Windows drivers](https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/using-with-arduino-ide#install-drivers-windows-only).",

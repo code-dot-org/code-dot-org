@@ -16,7 +16,6 @@ export const CIRCUIT_PLAYGROUND_PID = 0x8011;
 
 /** @const {string} The Circuit Playground Express product id */
 export const CIRCUIT_PLAYGROUND_EXPRESS_PID = 0x8018;
-export const CIRCUIT_PLAYGROUND_EXPRESS_PID_2 = 0x0018;
 
 /** @const {string} The micro:bit vendor id as reported by micro:bit boards */
 export const MICROBIT_VID = 0x0d28;

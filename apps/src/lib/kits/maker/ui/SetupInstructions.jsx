@@ -47,7 +47,6 @@ class ConnectionInstructions extends React.Component {
             navigator.serial
               .requestPort({filters: WEB_SERIAL_FILTERS})
               .then(port => {
-                // console.log('get info', port.getInfo());
                 this.setState({webSerialPort: port});
               });
           }}
