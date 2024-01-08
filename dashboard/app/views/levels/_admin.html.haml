@@ -8,6 +8,9 @@
       %li= link_to "see callouts (#{@level.available_callouts(@script_level).count})", show_callouts: '1'
       - if @level.is_a? Gamelab
         %li= link_to 'view animation JSON', '', onclick: 'window.viewExportableAnimationList(); return false'
+      -# take away the option to edit the level if we are on a projects page, as opposed to a level or script level page,
+      -# because curriculum writers usually don't need to make these kinds of edits and accidental edits to the underlying
+      -# STANDALONE_PROJECTS levels can be very disruptive. see routes.rb to see why channel_id is set only on projects pages.
       - if Rails.application.config.levelbuilder_mode  && !params[:channel_id]
         - if can? :edit, @level
           %li
