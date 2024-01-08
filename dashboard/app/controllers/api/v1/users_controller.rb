@@ -3,7 +3,7 @@ require 'cdo/firehose'
 class Api::V1::UsersController < Api::V1::JSONApiController
   before_action :load_user
   skip_before_action :verify_authenticity_token
-  skip_before_action :load_user, only: [:current, :netsim_signed_in, :post_sort_by_family_name]
+  skip_before_action :load_user, only: [:current, :get_current_permissions, :netsim_signed_in, :post_sort_by_family_name]
   skip_before_action :clear_sign_up_session_vars, only: [:current]
 
   def load_user
@@ -117,6 +117,20 @@ class Api::V1::UsersController < Api::V1::JSONApiController
   # GET /api/v1/users/<user_id>/tos_version
   def get_tos_version
     render json: @user.terms_of_service_version.nil? ? -1 : @user.terms_of_service_version.inspect
+  end
+
+  # GET /api/v1/users/current/permissions
+  def get_current_permissions
+    prevent_caching
+    if current_user
+      render json: {
+        permissions: current_user.permissions.map(&:permission)
+      }
+    else
+      render json: {
+        permissions: []
+      }
+    end
   end
 
   # POST /api/v1/users/<user_id>/using_text_mode

@@ -11,6 +11,11 @@ import {useDispatch, useSelector} from 'react-redux';
 import {PythonlabState, resetOutput, setCode} from './pythonlabRedux';
 import Button from '../templates/Button';
 import {runPythonCode} from './pyodideRunner';
+import {useFetch} from '@cdo/apps/util/useFetch';
+
+interface PermissionResponse {
+  permissions: string[];
+}
 
 const PythonEditor: React.FunctionComponent = () => {
   const editorRef = useRef<HTMLDivElement>(null);
@@ -20,6 +25,7 @@ const PythonEditor: React.FunctionComponent = () => {
   const codeOutput = useSelector(
     (state: {pythonlab: PythonlabState}) => state.pythonlab.output
   );
+  const {loading, data} = useFetch('/api/v1/users/current/permissions');
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -49,7 +55,13 @@ const PythonEditor: React.FunctionComponent = () => {
   }, [dispatch, editorRef]);
 
   const handleRun = () => {
-    runPythonCode(code);
+    const parsedData = data ? (data as PermissionResponse) : {permissions: []};
+    // For now, restrict running python code to levelbuilders.
+    if (parsedData.permissions.includes('levelbuilder')) {
+      runPythonCode(code);
+    } else {
+      alert('You do not have permission to run python code.');
+    }
   };
 
   const clearOutput = () => {
@@ -66,7 +78,12 @@ const PythonEditor: React.FunctionComponent = () => {
         <div ref={editorRef} className={classNames('codemirror-container')} />
       </PanelContainer>
       <div>
-        <Button type={'button'} text="Run" onClick={handleRun} />
+        <Button
+          type={'button'}
+          text="Run"
+          onClick={handleRun}
+          disabled={loading}
+        />
         <Button type={'button'} text="Clear output" onClick={clearOutput} />
       </div>
       <div>
