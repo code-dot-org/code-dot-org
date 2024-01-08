@@ -298,7 +298,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       'model' => 'gpt-4-0613',
       'remove-comments' => '1',
       'num-responses' => '3',
-      'num-passing-levels' => '2',
+      'num-passing-labels' => '2',
       'temperature' => '0.2'
     }.to_json
     bucket = {
@@ -341,7 +341,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       "model" => "gpt-4-0613",
       "remove-comments" => "1",
       "num-responses" => "3",
-      "num-passing-levels" => "2",
+      "num-passing-labels" => "2",
       "temperature" => "0.2",
       "code" => code,
       "prompt" => 'fake-system-prompt',
