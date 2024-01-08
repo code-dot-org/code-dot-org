@@ -378,8 +378,8 @@ h2.studentName {
   justify-content: space-between;
   align-self: stretch;
   border-radius: 4px;
-  border: 1px solid $neutral_dark40;
-  background: $neutral_white;
+  border: 1px solid #D4D5D7;
+  background: #F7F8FA;
 }
 
 .learningGoalButton {
@@ -435,6 +435,13 @@ h2.studentName {
 .progressRingText {
   text-anchor: middle;
   font-size: smaller;
+}
+
+.learningGoalsTips {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #D4D5D7;
+  background: $neutral_white;
 }
 // End of rubrics redesign
 

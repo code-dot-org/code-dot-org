@@ -205,17 +205,20 @@ export default function RubricContent({
         )}
       </div>
       {experiments.isEnabled('ai-rubrics-redesign') ? (
-        <LearningGoals
-          learningGoals={rubric.learningGoals}
-          teacherHasEnabledAi={teacherHasEnabledAi}
-          canProvideFeedback={canProvideFeedback}
-          reportingData={reportingData}
-          studentLevelInfo={studentLevelInfo}
-          isStudent={false}
-          feedbackAdded={feedbackAdded}
-          setFeedbackAdded={setFeedbackAdded}
-          aiEvaluations={aiEvaluations}
-        />
+        <div>
+          <Heading5>{i18n.rubric()}</Heading5>
+          <LearningGoals
+            learningGoals={rubric.learningGoals}
+            teacherHasEnabledAi={teacherHasEnabledAi}
+            canProvideFeedback={canProvideFeedback}
+            reportingData={reportingData}
+            studentLevelInfo={studentLevelInfo}
+            isStudent={false}
+            feedbackAdded={feedbackAdded}
+            setFeedbackAdded={setFeedbackAdded}
+            aiEvaluations={aiEvaluations}
+          />
+        </div>
       ) : (
         <div className={style.learningGoalContainer}>
           {rubric.learningGoals.map(lg => (

@@ -341,7 +341,7 @@ export default function LearningGoals({
           {learningGoals[currentLearningGoal].tips && !isStudent && (
             <div>
               <Heading6>{i18n.tipsForEvaluation()}</Heading6>
-              <div className={style.learningGoalTips}>
+              <div className={style.learningGoalsTips}>
                 <SafeMarkdown
                   markdown={learningGoals[currentLearningGoal].tips}
                 />
