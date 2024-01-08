@@ -8,13 +8,14 @@
   "properties": {
     "validation_enabled": "true",
     "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
     "encrypted_examples": [
 
     ],
-    "mini_rubric": "false",
-    "submittable": "false",
-    "hide_share_and_remix": "false"
+    "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n    <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\n  </head>\\n  <body>\\n    \\n\\n    \\n  </body>\\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"\",\r\n      \"data\": \"\"\r\n    }\r\n  ]\r\n}\r\n            "
   },
-  "audit_log": "[{\"changed_at\":\"2024-01-04 17:38:36 +0000\",\"changed\":[\"published\",\"validation_enabled\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-01-04 17:38:36 +0000\",\"changed\":[\"published\",\"validation_enabled\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-01-05 18:02:02 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>
