@@ -12,7 +12,7 @@ import i18n from '@cdo/locale';
  * Resulting form will then display those components paginated and in order,
  * with a submit button on the last page.
  *
- * @see the pageComponents of TeacherApplication for example usage.
+ * @see TeacherApplication component for example usage.
  */
 export default class FormController extends React.Component {
   constructor(props) {
