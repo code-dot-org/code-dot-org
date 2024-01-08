@@ -43,6 +43,7 @@ class ReportAbuseController < ApplicationController
       name = current_user&.name
       email = current_user&.email
       age = current_user&.age
+      username = current_user&.username
       abuse_url = CDO.studio_url(params[:abuse_url], CDO.default_scheme)
 
       # submit abuse reports from
@@ -51,7 +52,7 @@ class ReportAbuseController < ApplicationController
       if email.nil? || email == ''
         email = UNKNOWN_ACCOUNT_ZENDESK_REPORT_EMAIL
       end
-      send_abuse_report(name, email, age, abuse_url)
+      send_abuse_report(name, email, age, abuse_url, username)
       update_abuse_score
 
       return head :ok
@@ -66,7 +67,8 @@ class ReportAbuseController < ApplicationController
         return
       end
 
-      send_abuse_report(params[:name], params[:email], params[:age], params[:abuse_url])
+      username = current_user&.username
+      send_abuse_report(params[:name], params[:email], params[:age], params[:abuse_url], username)
       update_abuse_score
     end
     redirect_to "https://support.code.org"
@@ -170,7 +172,7 @@ class ReportAbuseController < ApplicationController
     abuse_score
   end
 
-  private def send_abuse_report(name, email, age, abuse_url)
+  private def send_abuse_report(name, email, age, abuse_url, username)
     unless Rails.env.development? || Rails.env.test?
       subject = FeaturedProject.featured_channel_id?(params[:channel_id]) ?
         'Featured Project: Abuse Reported' :
@@ -188,6 +190,7 @@ class ReportAbuseController < ApplicationController
             comment: {
               body: [
                 "URL: #{abuse_url}",
+                "username: #{username}",
                 "abuse type: #{params[:abuse_type]}",
                 "user detail:",
                 params[:abuse_detail]
