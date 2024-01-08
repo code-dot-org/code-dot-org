@@ -1,8 +1,29 @@
+@import "color.scss";
+
+
 .progressTableV2 {
   width: 100%;
+  font-size: 16px;
 }
 
 .table {
   display: flex;
   flex-direction: row;
+}
+
+.gridBox {
+  height: 48px;
+  border: 1px solid $light_gray_200;
+  border-bottom: 0;
+
+  &Student {
+    width: 195px;
+    padding-left: 12px;
+    line-height: 48px;
+  }
+}
+
+.grid {
+  border-bottom: 1px solid $light_gray_200;
+  margin-right: 12px;
 }
