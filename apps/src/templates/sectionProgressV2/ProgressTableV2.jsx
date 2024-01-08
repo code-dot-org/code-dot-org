@@ -3,12 +3,19 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import StudentColumn from './StudentColumn';
+import ProgressTableHeader from './ProgressTableHeader';
+import ProgressDataV2 from './ProgressDataV2';
+import styles from './progress-table-v2.module.scss';
 
 function ProgressTableV2({students}) {
   return (
-    <div>
+    <div className={styles.progressTableV2}>
       <div>Progress Table V2</div>
-      <StudentColumn sortedStudents={students} />
+      <ProgressTableHeader />
+      <div className={styles.table}>
+        <StudentColumn sortedStudents={students} />
+        <ProgressDataV2 sortedStudents={students} />
+      </div>
     </div>
   );
 }
