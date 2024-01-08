@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-04 20:14:02 UTC",
+    "serialized_at": "2024-01-05 19:44:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -453,6 +453,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2-behaviors -intro_2024_K5block"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -474,6 +477,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Begin_2023_K5CSConcepts_TextPage"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -495,6 +501,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp12022_2023_K5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -516,6 +525,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp3a2022_2023_K5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -537,6 +549,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp3b2022_2023_K5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -558,6 +573,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L4 Multiple Choice packets2022_2023K5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -699,14 +717,11 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L1 CFU how use internet_2023_K5CSConcepts1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U2L1 CFU how use internet_2023_K5CSConcepts1"
+          "U2L4 Multiple Choice packets2022_2023K5Sequence"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -714,7 +729,7 @@
         "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
       },
       "level_keys": [
-        "U2L1 CFU how use internet_2023_K5CSConcepts1"
+        "U2L4 Multiple Choice packets2022_2023K5Sequence"
       ]
     },
     {
@@ -935,6 +950,27 @@
     },
     {
       "chapter": 27,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L2 CSP CFU IP Addresses2022_2023K5"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-1",
+        "activity_section.key": "eab6aafc-3179-4c38-87c7-a12c34858bc4"
+      },
+      "level_keys": [
+        "U2L2 CSP CFU IP Addresses2022_2023K5"
+      ]
+    },
+    {
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -958,7 +994,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -982,7 +1018,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1006,7 +1042,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -1030,7 +1066,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -1054,7 +1090,28 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L4 CSP CFU terms2022_2023K5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-1",
+        "activity_section.key": "e819821d-6658-4469-827b-61d9f035b43b"
+      },
+      "level_keys": [
+        "U2L4 CSP CFU terms2022_2023K5"
+      ]
+    },
+    {
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1078,7 +1135,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1102,7 +1159,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1126,7 +1183,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -1150,7 +1207,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 38,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -1174,7 +1231,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 39,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -1198,7 +1255,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 40,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -1222,7 +1279,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1246,7 +1303,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 42,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1465,9 +1522,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "U2L1 CFU how use internet_2023_K5CSConcepts1",
+        "level.key": "U2L4 Multiple Choice packets2022_2023K5Sequence",
         "script_level.level_keys": [
-          "U2L1 CFU how use internet_2023_K5CSConcepts1"
+          "U2L4 Multiple Choice packets2022_2023K5Sequence"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -1585,6 +1642,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "U2L2 CSP CFU IP Addresses2022_2023K5",
+        "script_level.level_keys": [
+          "U2L2 CSP CFU IP Addresses2022_2023K5"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-1",
+        "activity_section.key": "eab6aafc-3179-4c38-87c7-a12c34858bc4"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "pl-k5-2-behaviors -intro_2024_K5Intro_conditionals",
         "script_level.level_keys": [
           "pl-k5-2-behaviors -intro_2024_K5Intro_conditionals"
@@ -1636,6 +1705,18 @@
         "level.key": "courseD_bee_conditionals2_2023_K5CSConcepts",
         "script_level.level_keys": [
           "courseD_bee_conditionals2_2023_K5CSConcepts"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-1",
+        "activity_section.key": "e819821d-6658-4469-827b-61d9f035b43b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L4 CSP CFU terms2022_2023K5",
+        "script_level.level_keys": [
+          "U2L4 CSP CFU terms2022_2023K5"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
