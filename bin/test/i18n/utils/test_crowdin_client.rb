@@ -3,12 +3,13 @@ require_relative '../../../i18n/utils/crowdin_client'
 
 describe I18n::Utils::CrowdinClient do
   let(:described_class) {I18n::Utils::CrowdinClient}
-  let(:described_instance) {described_class.new(project)}
+  let(:described_instance) {described_class.new(project: project, base_path: base_path)}
 
   let(:project) {'expected_crowdin_project'}
   let(:project_id) {'expected_crowdin_project_id'}
   let(:project_ids) {{project => project_id}}
 
+  let(:base_path) {'/expected_base_path/'}
   let(:api_token) {'expected_crowdin_api_token'}
   let(:client) {stub(:client)}
 
@@ -21,6 +22,8 @@ describe I18n::Utils::CrowdinClient do
   end
 
   before do
+    FileUtils.mkdir_p(base_path)
+
     FileUtils.mkdir_p File.dirname(described_class::CREDENTIALS_PATH)
     File.write described_class::CREDENTIALS_PATH, YAML.dump({'api_token' => api_token})
 
@@ -44,6 +47,17 @@ describe I18n::Utils::CrowdinClient do
       it 'raises "project is invalid" error' do
         actual_error = assert_raises(ArgumentError) {described_instance}
         assert_equal 'project is invalid', actual_error.message
+      end
+    end
+
+    context 'when `base_path` does not exist' do
+      before do
+        FileUtils.rm_r(base_path)
+      end
+
+      it 'raises "base_path is invalid" error' do
+        actual_error = assert_raises(ArgumentError) {described_instance}
+        assert_equal 'base_path is invalid', actual_error.message
       end
     end
   end
@@ -235,7 +249,10 @@ describe I18n::Utils::CrowdinClient do
     it 'returns Crowdin storage data of uploaded source file' do
       added_crowdin_storage_data = 'added_crowdin_storage_data'
 
-      described_instance.expects(:request).with(:add_storage, file_path).returns({'data' => added_crowdin_storage_data})
+      described_instance.
+        expects(:request).
+        with(:add_storage, File.join(base_path, file_path)).
+        returns({'data' => added_crowdin_storage_data})
 
       assert_equal added_crowdin_storage_data, add_storage
     end
@@ -321,21 +338,38 @@ describe I18n::Utils::CrowdinClient do
     end
   end
 
-  describe '#crowdin_source_path' do
-    let(:crowdin_source_path) {described_instance.send(:crowdin_source_path, cdo_source_path)}
+  describe '#upload_source_file' do
+    let(:upload_source_file) {described_instance.upload_source_files(source_files)}
 
-    let(:cdo_path) {CDO.dir}
-    let(:i18n_source_path) {'/i18n/locales/source'}
+    let(:source_file_path) {'expected_source_file_path'}
+    let(:source_files) {[source_file_path]}
+
+    it 'returns uploaded source file data' do
+      expected_source_file_data = 'uploaded_source_file_data'
+
+      described_instance.expects(:upload_source_file).with(source_file_path).returns(expected_source_file_data)
+
+      source_files_data = upload_source_file do |uploaded_source_file_data|
+        _(uploaded_source_file_data).must_equal expected_source_file_data
+      end
+
+      _(source_files_data).must_equal [expected_source_file_data]
+    end
+  end
+
+  describe '#crowdin_source_path' do
+    let(:crowdin_source_path) {described_instance.send(:crowdin_source_path, source_path)}
+
     let(:relative_source_path) {'/relative/source/path'}
 
-    let(:cdo_source_path) {File.join(cdo_path, i18n_source_path, relative_source_path, '/')}
+    let(:source_path) {File.join(base_path, relative_source_path, '/')}
 
     it 'returns Crowdin source path of CDO source path' do
       assert_equal relative_source_path, crowdin_source_path
     end
 
     context 'when `cdo_source_path` does not contain relative source path' do
-      let(:cdo_source_path) {'/'}
+      let(:source_path) {'/'}
 
       it 'returns empty string' do
         assert_equal '', crowdin_source_path

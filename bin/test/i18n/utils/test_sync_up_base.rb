@@ -32,6 +32,26 @@ describe I18n::Utils::SyncUpBase do
       end
     end
 
+    describe '#base_path' do
+      let(:base_path) {config.base_path}
+
+      it 'returns i18n source dir path' do
+        _(base_path).must_equal CDO.dir('i18n/locales/source')
+      end
+
+      context 'when new value is set' do
+        let(:described_class) do
+          Class.new(I18n::Utils::SyncUpBase) do
+            config.base_path = 'new_base_path'
+          end
+        end
+
+        it 'returns new value' do
+          _(base_path).must_equal 'new_base_path'
+        end
+      end
+    end
+
     describe '#source_paths' do
       let(:source_paths) {config.source_paths}
 
@@ -154,21 +174,17 @@ describe I18n::Utils::SyncUpBase do
 
     let(:config) {stub(crowdin_project: 'expected_crowdin_project')}
 
-    let(:expected_crowdin_client) {stub}
-    let(:expected_source_file_path) {'expected_source_file_path'}
+    let(:crowdin_client) {stub}
+    let(:source_files) {['expected_source_file_path']}
 
     before do
       described_class.stubs(:config).returns(config)
-      described_instance.stubs(:crowdin_client).returns(expected_crowdin_client)
-      described_instance.stubs(:source_files).returns([expected_source_file_path])
+      described_instance.stubs(:crowdin_client).returns(crowdin_client)
+      described_instance.stubs(:source_files).returns(source_files)
     end
 
-    it 'uploads source file' do
-      execution_sequence = sequence('execution')
-
-      described_instance.expects(:crowdin_client).in_sequence(execution_sequence).returns(expected_crowdin_client)
-      expected_crowdin_client.expects(:upload_source_file).with(expected_source_file_path).in_sequence(execution_sequence)
-
+    it 'uploads source files' do
+      crowdin_client.expects(:upload_source_files).with(source_files).once
       perform
     end
   end
@@ -237,17 +253,24 @@ describe I18n::Utils::SyncUpBase do
     let(:crowdin_client) {described_instance.send(:crowdin_client)}
 
     let(:expected_crowdin_project) {'expected_crowdin_project'}
+    let(:expected_base_path) {'expected_base_path'}
+
+    let(:config) {stub(base_path: expected_base_path)}
 
     before do
+      described_instance.stubs(:config).returns(config)
       described_instance.stubs(:crowdin_project).returns(expected_crowdin_project)
     end
 
     it 'returns I18n Crowdin client until instance' do
       expected_i18n_utils_crowdin_client_instance = 'expected_i18n_utils_crowdin_client_instance'
 
-      I18n::Utils::CrowdinClient.expects(:new).with(expected_crowdin_project).returns(expected_i18n_utils_crowdin_client_instance)
+      I18n::Utils::CrowdinClient.
+        expects(:new).
+        with(project: expected_crowdin_project, base_path: expected_base_path).
+        returns(expected_i18n_utils_crowdin_client_instance)
 
-      assert_equal expected_i18n_utils_crowdin_client_instance, crowdin_client
+      _(crowdin_client).must_equal expected_i18n_utils_crowdin_client_instance
     end
   end
 
@@ -258,8 +281,9 @@ describe I18n::Utils::SyncUpBase do
 
     let(:config) do
       stub(
-        source_paths: [File.join(i18n_source_dir_path, '**/*.json')],
-        ignore_paths: [File.join(i18n_source_dir_path, '**/ignored_*.json')],
+        base_path: i18n_source_dir_path,
+        source_paths: ['**/*.json'],
+        ignore_paths: ['**/ignored_*.json'],
       )
     end
 

@@ -9,7 +9,9 @@ module I18n
 
       CREDENTIALS_PATH = CDO.dir('bin/i18n/crowdin_credentials.yml').freeze
       PROJECT_IDS = CDO.crowdin_project_ids.freeze
+
       MAX_ITEMS_COUNT = Crowdin::Web::FetchAllExtensions::MAX_ITEMS_COUNT_PER_REQUEST.freeze
+      MAX_CONCURRENT_REQUESTS = 20 # https://developer.crowdin.com/api/v2/#section/Introduction/Rate-Limits
       REQUEST_RETRY_ATTEMPTS = 2 # Number of retries for a failed request
       REQUEST_RETRY_DELAY = 2 # Number of seconds to wait before retrying a failed request
       RETRIABLE_ERRORS = [
@@ -19,10 +21,14 @@ module I18n
         '503 Service Unavailable',
       ].freeze # Request errors to retry
 
-      def initialize(project)
+      # @param project [String] the Crowdin project name, one of the keys of PROJECT_IDS
+      # @param base_path [String] the i18n source directory path
+      def initialize(project:, base_path:)
         raise ArgumentError, 'project is invalid' unless PROJECT_IDS[project]
+        raise ArgumentError, 'base_path is invalid' unless File.exist?(base_path)
 
         @project = project
+        @base_path = base_path
 
         @client = ::Crowdin::Client.new do |config|
           config.api_token = YAML.load_file(CREDENTIALS_PATH)['api_token']
@@ -107,7 +113,7 @@ module I18n
       # @param file_path [String] the i18n file path
       # @return [Hash] the Crowdin storage data
       def add_storage(file_path)
-        request(:add_storage, file_path)['data']
+        request(:add_storage, File.expand_path(file_path, base_path))['data']
       end
 
       # Uploads the given i18n source file to Crowdin project
@@ -144,12 +150,31 @@ module I18n
         request(:delete_storage, crowdin_storage_id) if crowdin_storage_id
       end
 
+      # Uploads the given i18n source files to Crowdin project
+      #
+      # @param source_files [Array<String>] the i18n source file paths
+      # @yield [Hash] the uploaded Crowdin source file data
+      # @return [Array<Hash>] the Crowdin source files data
+      def upload_source_files(source_files)
+        source_files_data = []
+
+        mutex = Thread::Mutex.new
+        I18nScriptUtils.process_in_threads(source_files, in_threads: MAX_CONCURRENT_REQUESTS) do |source_file_path|
+          source_file_data = upload_source_file(source_file_path)
+
+          mutex.synchronize {yield source_file_data} if block_given?
+          mutex.synchronize {source_files_data << source_file_data}
+        end
+
+        source_files_data
+      end
+
       private
 
-      attr_reader :project, :client
+      attr_reader :project, :base_path, :client
 
       def crowdin_source_path(source_path)
-        path = source_path.delete_prefix(CDO.dir).split(I18N_SOURCE_DIR).last || ''
+        path = source_path.delete_prefix(base_path)
 
         path = File.join(File::SEPARATOR, path)
         path = path.delete_suffix(File::SEPARATOR)
