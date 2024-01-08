@@ -52,7 +52,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       },
     ],
     style: 'behavior_blocks',
-    helpUrl: '%{BKY_PROCEDURES_DEFNORETURN_HELPURL}',
+    helpUrl: '/docs/spritelab/codestudio_defining-behaviors',
     tooltip: '%{BKY_PROCEDURES_DEFNORETURN_TOOLTIP}',
     extensions: [
       'procedure_def_get_def_mixin',
@@ -82,7 +82,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     ],
     output: 'Behavior',
     style: 'behavior_blocks',
-    helpUrl: '%{BKY_PROCEDURES_CALLNORETURN_HELPURL}',
+    helpUrl: '/docs/spritelab/spritelab_adding-and-removing-behaviors',
     extensions: [
       'procedures_edit_button',
       'procedure_caller_get_def_mixin',
@@ -108,7 +108,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     ],
     output: 'Sprite',
     style: 'sprite_blocks',
-    helpUrl: '%{BKY_VARIABLES_GET_HELPURL}',
+    helpUrl: '/docs/spritelab/codestudio_defining-behaviors',
     tooltip: '%{BKY_VARIABLES_GET_TOOLTIP}',
     extensions: ['contextMenu_variableSetterGetter'],
   },
