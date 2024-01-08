@@ -8,6 +8,7 @@
     ],
     "style": "event_blocks",
     "func": "clickedOn",
+    "docFunc": "gamelab_spriteClicked",
     "blockText": "when {SPRITE} clicked",
     "callbackParams": [
       "extraArgs"
