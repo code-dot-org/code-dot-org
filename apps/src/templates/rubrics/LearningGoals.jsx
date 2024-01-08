@@ -15,7 +15,6 @@ import {
   BodyThreeText,
   BodyFourText,
   ExtraStrongText,
-  StrongText,
   Heading6,
 } from '@cdo/apps/componentLibrary/typography';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -25,6 +24,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import AiAssessment from './AiAssessment';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
+import ProgressRing from './ProgressRing';
 
 const INVALID_UNDERSTANDING = -1;
 
@@ -233,18 +233,32 @@ export default function LearningGoals({
   return (
     <div className={style.learningGoalsContainer}>
       <div className={style.learningGoalsHeader}>
-        <button
-          type="button"
-          className={style.learningGoalButton}
-          onClick={() => onCarouselPress(-1)}
-        >
-          <FontAwesome icon="angle-left" />
-        </button>
         <div className={style.learningGoalsHeaderLeftSide}>
-          {/*TODO: [DES-321] Label-two styles here*/}
-          <StrongText>
-            {learningGoals[currentLearningGoal].learningGoal}
-          </StrongText>
+          <button
+            type="button"
+            className={style.learningGoalButton}
+            onClick={() => onCarouselPress(-1)}
+          >
+            <FontAwesome icon="angle-left" />
+          </button>
+          <ProgressRing
+            learningGoals={learningGoals}
+            currentLearningGoal={currentLearningGoal}
+            radius={30}
+            stroke={4}
+          />
+          <div className={style.learningGoalHeaderText}>
+            <Heading6>
+              {learningGoals[currentLearningGoal].learningGoal}
+            </Heading6>
+            <BodyThreeText>
+              {i18n.next()}:{' '}
+              {
+                learningGoals[(currentLearningGoal + 1) % learningGoals.length]
+                  .learningGoal
+              }
+            </BodyThreeText>
+          </div>
         </div>
         <div className={style.learningGoalsHeaderRightSide}>
           {aiEnabled && displayUnderstanding === INVALID_UNDERSTANDING && (
@@ -286,14 +300,14 @@ export default function LearningGoals({
               )}
             </div>
           )}
+          <button
+            type="button"
+            className={style.learningGoalButton}
+            onClick={() => onCarouselPress(1)}
+          >
+            <FontAwesome icon="angle-right" />
+          </button>
         </div>
-        <button
-          type="button"
-          className={style.learningGoalButton}
-          onClick={() => onCarouselPress(1)}
-        >
-          <FontAwesome icon="angle-right" />
-        </button>
       </div>
 
       {/*TODO: Pass through data to child component*/}

@@ -1730,6 +1730,7 @@
   "numLinesOfCodeWritten": "You just wrote {numLines, plural, one {1 line} other {# lines}} of code!",
   "objectives": "Objectives",
   "objectivesSubheading": "Students will be able to:",
+  "of": "of",
   "offline": "Offline",
   "ok": "OK",
   "okay": "Okay",

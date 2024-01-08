@@ -270,9 +270,9 @@ button.rubricHeaderTab {
       height: 16px;
       width: 16px;
       // Icon for closed details
-      content: "\f107";
+      content: '\f107';
     }
-    
+
     &:hover {
       background: none;
       cursor: pointer;
@@ -286,7 +286,7 @@ button.rubricHeaderTab {
 
   // When the details are open, change the icon
   &[open] .learningGoalHeader::after {
-    content: "\f106";
+    content: '\f106';
   }
 }
 
@@ -390,8 +390,8 @@ h2.studentName {
 .learningGoalsHeader {
   display: flex;
   flex-direction: row;
-  height: 40px;
-  padding: 0 1rem 0 2rem;
+  height: 60px;
+  padding: 0.5rem 1rem 0 1rem;
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
@@ -402,8 +402,9 @@ h2.studentName {
 .learningGoalsHeaderLeftSide {
   @include main-font-semi-bold;
   display: flex;
+  justify-content: flex-start;
   align-items: left;
-  //gap: 16px;
+  gap: 16px;
   font-size: 14px;
 }
 
@@ -411,13 +412,29 @@ h2.studentName {
   display: flex;
   justify-content: flex-end;
   align-items: right;
-  //gap: 16px;
+  gap: 16px;
   font-weight: 325;
-  line-height: 154%;
 
   p {
     margin-bottom: 0;
   }
+}
+
+.learningGoalHeaderText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.progressRing {
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.progressRingText {
+  text-anchor: middle;
+  font-size: smaller;
 }
 // End of rubrics redesign
 
@@ -436,7 +453,7 @@ h2.studentName {
 .evidenceLevelInnerDiv {
   padding: 1em;
   border-left: 1px solid #a9acaf;
-  width: 100%
+  width: 100%;
 }
 
 .evidenceLevelSet {
@@ -602,7 +619,7 @@ i.infoAlertIcon {
 }
 
 .aiFeedbackRow {
-  display:flex;
+  display: flex;
   flex-direction: row;
   gap: 15px;
   padding-top: 10px;
@@ -651,7 +668,7 @@ i.infoAlertIcon {
 .aiFeedbackRadio {
   opacity: 0;
   position: absolute;
-  height: 0
+  height: 0;
 }
 
 .aiFeedbackOther {
@@ -685,9 +702,9 @@ i.infoAlertIcon {
 }
 
 .selectors {
-  display:flex;
+  display: flex;
   flex-direction: row;
-  justify-content: center;   
+  justify-content: center;
   align-items: flex-start;
   align-self: stretch;
   gap: 15px;
