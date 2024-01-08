@@ -1,0 +1,93 @@
+@import 'breakpoints.scss';
+
+// Skinny banner
+.curriculum-banner-skinny {
+  box-sizing: content-box;
+  height: 130px;
+  background: url("/images/banners/banner-bg-school-supplies-dark-black.png") center repeat;
+  background-size: cover;
+  margin: 0 5px 16px;
+
+  @media screen and (max-width: $width-lg) {
+    padding: 0 1.5em;
+  }
+
+  @media screen and (max-width: $width-sm) {
+    padding: 2em;
+    height: unset;
+  }
+
+  a:hover,
+  a:active,
+  a:visited,
+  a:link {
+    text-decoration: none;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1020px;
+    margin: 0 auto;
+    gap: 1.5em 1em;
+
+    @media screen and (max-width: $width-sm) {
+      justify-content: center;
+    }
+  }
+
+  img {
+    width: 105px;
+  }
+
+  .text-wrapper {
+    text-align: center;
+    width: 60%;
+
+    @media screen and (max-width: $width-sm) {
+      width: 98%;
+    }
+
+    h1 {
+      font-size: 1.75em;
+      font-family: var(--barlowSemiCondensed-semibold);
+      line-height: 1.2;
+      color: var(--neutral_white);
+      margin: 0 auto 6px;
+
+      @media screen and (max-width: $width-md) {
+        font-size: 1.5em;
+      }
+
+      @media screen and (max-width: $width-sm) {
+        font-size: 1.75em;
+      }
+    }
+
+    p {
+      font-family: var(--main-font);
+      font-weight: var(--regular-font-weight);
+      font-size: 1.15em;
+      line-height: 1.3;
+      margin-bottom: 0;
+      color: var(--neutral_white);
+
+      @media screen and (max-width: $width-md) {
+        font-size: 1em;
+      }
+    }
+  }
+
+  button {
+    background: var(--neutral_white);
+    border-color: var(--neutral_white);
+    color: var(--neutral_dark);
+    font-family: var(--main-font);
+    font-weight: var(--semi-bold-font-weight);
+    height: unset;
+    padding: 0.625em 1.5em;
+    margin: 0;
+  }
+}
