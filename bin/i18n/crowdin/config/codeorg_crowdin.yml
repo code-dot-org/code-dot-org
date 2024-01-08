@@ -33,8 +33,13 @@ files: [
   # animations content is handled by the `I18n::Resources::Apps::Animations::SyncUp` class
   # blockly-core content is handled by the `I18n::Resources::Apps::ExternalSources::SyncUp` class
   # blockly-mooc content is handled by the `I18n::Resources::Apps::Labs::SyncUp` class
+  # course_content content is handled by the `I18n::Resources::Dashboard::CourseContent::SyncUp` class
+  # curriculum_content content is handled by the `I18n::Resources::Dashboard::CurriculumContent::SyncUp` class
+  # dashboard content is handled by the `I18n::Resources::Dashboard::*::SyncUp` classes
+  # docs content is handled by the `I18n::Resources::Dashboard::Docs::SyncUp` class
   # external-sources content is handled by the `I18n::Resources::Apps::ExternalSources::SyncUp` class
   # hourofcode content is handled by the hourofcode-specific sync
+  # standards content is handled by the `I18n::Resources::Dashboard::Standards::SyncUp` class
   "ignore" : [
     "/animations/**",
     "/blockly-core/**",
