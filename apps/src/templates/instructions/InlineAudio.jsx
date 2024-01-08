@@ -8,6 +8,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import moduleStyles from './inline-audio.module.scss';
 import classNames from 'classnames';
 import {Voices} from '@cdo/apps/util/sharedVoices';
+import {AudioQueueContext} from './AudioQueue';
 
 const TTS_URL = 'https://tts.code.org';
 
@@ -73,7 +74,8 @@ class InlineAudio extends React.Component {
         ? document.getElementById(autoplayTriggerElementId)
         : document;
 
-      this.playAudio();
+      const {addToQueue} = this.context;
+      addToQueue(this);
     }
   }
 
@@ -122,6 +124,8 @@ class InlineAudio extends React.Component {
         playing: false,
         autoplayed: this.props.ttsAutoplayEnabled,
       });
+      const {playNextAudio} = this.context;
+      playNextAudio();
     });
 
     audio.addEventListener('error', e => {
@@ -222,6 +226,8 @@ class InlineAudio extends React.Component {
   pauseAudio() {
     this.getAudioElement().pause();
     this.setState({playing: false});
+    const {clearQueue} = this.context;
+    clearQueue();
   }
 
   render() {
@@ -290,6 +296,7 @@ class InlineAudio extends React.Component {
 InlineAudio.defaultProps = {
   ttsAutoplayEnabled: false,
 };
+InlineAudio.contextType = AudioQueueContext;
 
 export const StatelessInlineAudio = Radium(InlineAudio);
 export default connect(function propsFromStore(state) {
