@@ -167,7 +167,7 @@ export function addMutationToBehaviorDefBlocks(blockElement) {
 
   // In CDO Blockly, behavior ids were stored on the field. Google Blockly
   // expects this kind of extra state in a mutator.
-  const nameField = getNameField(blockElement);
+  const nameField = getFieldOrTitle(blockElement, 'NAME');
   const idAttribute = nameField && nameField.getAttribute('id');
   if (idAttribute) {
     // Create new mutation attribute based on original block attribute.
@@ -242,7 +242,7 @@ export function addNameToBlockFunctionDefinitionBlock(blockElement) {
   if (blockType !== BLOCK_TYPES.procedureDefinition) {
     return;
   }
-  const fieldElement = getNameField(blockElement);
+  const fieldElement = getFieldOrTitle(blockElement, 'NAME');
   if (!fieldElement) {
     return;
   }
@@ -274,6 +274,32 @@ export function addNameToBlockFunctionCallBlock(blockElement) {
 }
 
 /**
+ * If a field should was serialized before we had behavior ids, manually add
+ * one based on the behavior name found in the field.
+ *
+ * @param {Element} blockElement - The XML element for a single block.
+ */
+function addMissingBehaviorId(blockElement) {
+  const blockType = blockElement.getAttribute('type');
+  if (blockType === BLOCK_TYPES.behaviorGet) {
+    setIdFromTextContent(getFieldOrTitle(blockElement, 'VAR'));
+  } else if (blockType === BLOCK_TYPES.behaviorDefinition) {
+    setIdFromTextContent(getFieldOrTitle(blockElement, 'NAME'));
+  }
+}
+
+/**
+ * If a field should was serialized before we had behavior ids, manually add
+ * one based on the behavior name found in the field.
+ *
+ * @param {Element} element - The XML element (title or field) for a block.
+ */
+function setIdFromTextContent(element) {
+  if (!element.getAttribute('id')) {
+    element.setAttribute('id', element.textContent);
+  }
+}
+/**
  * Adds a mutation element to a block if it's a text join block with an input count.
  * CDO Blockly uses an unsupported method for serializing input count state
  * where an arbitrary block attribute could be used to manage extra state.
@@ -302,12 +328,12 @@ export function addMutationToTextJoinBlock(blockElement) {
   mutationElement.setAttribute('items', inputCount);
 }
 
-function getNameField(blockElement) {
+function getFieldOrTitle(blockElement, name) {
   // Title is the legacy name for field, we support getting name from
   // either field or title.
   return (
-    blockElement.querySelector('field[name="NAME"]') ||
-    blockElement.querySelector('title[name="NAME"]')
+    blockElement.querySelector(`field[name="${name}"]`) ||
+    blockElement.querySelector(`title[name="${name}"]`)
   );
 }
 
@@ -331,6 +357,7 @@ function processBlockAndChildren(block) {
  */
 function processIndividualBlock(block) {
   addNameToBlockFunctionCallBlock(block);
+  addMissingBehaviorId(block);
   // Convert unsupported can_disconnect_from_parent attributes.
   makeLockedBlockImmovable(block);
   addMutationToTextJoinBlock(block);
