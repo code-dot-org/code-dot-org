@@ -2264,10 +2264,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/dance-party@npm:1.1.1":
-  version: 1.1.1
-  resolution: "@code-dot-org/dance-party@npm:1.1.1"
-  checksum: 4aec7af969d2fd59ae8544d138687455de400e8ac50cfd1ceabb01da940cfcfbbf85eafd12ab4cac1638a45fa94db807277f265c3845cb9f57c6e0ced1c81455
+"@code-dot-org/dance-party@npm:2.0.0":
+  version: 2.0.0
+  resolution: "@code-dot-org/dance-party@npm:2.0.0"
+  checksum: 95b6f2f771e53517beee69d09881d0b37724daac4e9209f1be4b70e8b700d2090e7275ad754a42052f674c9ce05f59ff97fa6bae1044e8d7206bbefd7131ce87
   languageName: node
   linkType: hard
 
@@ -7782,7 +7782,7 @@ __metadata:
     "@code-dot-org/artist": 0.2.1
     "@code-dot-org/blockly": 4.0.14
     "@code-dot-org/craft": 0.2.2
-    "@code-dot-org/dance-party": 1.1.1
+    "@code-dot-org/dance-party": 2.0.0
     "@code-dot-org/johnny-five": 2.1.0-cdo.3
     "@code-dot-org/js-interpreter": 1.3.13
     "@code-dot-org/js-numbers": 0.1.0-cdo.0
