@@ -649,5 +649,5 @@ module SharedConstants
   # Current song manifest file name for Dance Party. Note that different manifests
   # can be tested using query params (?manifest=...), but once this value is updated
   # the default manifest will change for all users.
-  DANCE_SONG_MANIFEST = 'songManifest2023_v4.json'
+  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2023_v4.json'
 end

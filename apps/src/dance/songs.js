@@ -1,6 +1,6 @@
 import Sounds from '../Sounds';
 import {ageDialogSelectedOver13, songFilterOn} from '../templates/AgeDialog';
-import {DanceSongManifest} from '../util/sharedConstants';
+import {DanceSongManifestFilename} from '../util/sharedConstants';
 import {fetchSignedCookies} from '../utils';
 
 const DEPRECATED_SONGS = [
@@ -31,7 +31,7 @@ const DEPRECATED_SONGS = [
 export async function getSongManifest(useRestrictedSongs, manifestFilename) {
   if (!manifestFilename || manifestFilename.length === 0) {
     manifestFilename = useRestrictedSongs
-      ? DanceSongManifest
+      ? DanceSongManifestFilename
       : 'testManifest.json';
   }
 
