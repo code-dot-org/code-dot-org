@@ -155,6 +155,10 @@ hr {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
+
+  &.centered {
+    justify-content: center;
+  }
 }
 
 // Basic hero banner

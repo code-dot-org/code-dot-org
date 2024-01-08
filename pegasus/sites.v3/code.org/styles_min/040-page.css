@@ -188,8 +188,8 @@ em {
   font-style: italic;
 }
 
-a,
-a:link {
+/* Text link styles */
+a:is(:link, :visited) {
   font-family: var(--main-font);
   font-weight: var(--semi-bold-font-weight);
   color: var(--brand_secondary_default);
@@ -197,12 +197,7 @@ a:link {
   transition: color ease-in-out .2s;
 }
 
-a:visited {
-  color: var(--brand_secondary_default);
-}
-
-a:hover,
-a:active {
+a:is(:hover, :active) {
   color: var(--brand_secondary_dark);
 }
 
