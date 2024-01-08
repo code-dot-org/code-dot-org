@@ -12,6 +12,8 @@ import utils from './utils';
  * standardizing onChange handlers. Intended to be used by an instance of
  * FormController, within which each FormComponent will act as a single page of
  * the form.
+ *
+ * @see TeacherApplication component for example usage.
  */
 export default class FormComponent extends React.Component {
   static propTypes = {
