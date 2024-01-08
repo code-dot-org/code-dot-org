@@ -373,13 +373,6 @@ class SetupChecklist extends Component {
         firmataURLExpress: EXPRESS_FIRMATA_URL,
         firmataURLClassic: CLASSIC_FIRMATA_URL,
       });
-    } else {
-      // Board Type is Other/Unknown
-      firmataMarkdown = applabI18n.makerSetupInstallFirmataOther({
-        firmataURLExpress: EXPRESS_FIRMATA_URL,
-        firmataURLClassic: CLASSIC_FIRMATA_URL,
-        firmataURLMB: MICROBIT_FIRMATA_URL,
-      });
     }
     return (
       <div style={styles.suggestionHeader}>
