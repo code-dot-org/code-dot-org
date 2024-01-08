@@ -145,6 +145,7 @@ class User < ApplicationRecord
     family_name
     ai_rubrics_disabled
     sort_by_family_name
+    show_progress_table_v2
   )
 
   attr_accessor(

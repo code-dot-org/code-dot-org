@@ -961,6 +961,7 @@ exports.createJsWrapperBlockCreator = function (
       extraArgs,
       callbackParams,
       miniToolboxBlocks,
+      docFunc,
     },
     helperCode,
     pool
@@ -1064,7 +1065,7 @@ exports.createJsWrapperBlockCreator = function (
     }
 
     blockly.Blocks[blockName] = {
-      helpUrl: '',
+      helpUrl: getHelpUrl(docFunc), // optional param
       init: function () {
         // Styles should be used over hard-coded colors in Google Blockly blocks
         if (style && this.setStyle) {
@@ -1123,6 +1124,12 @@ exports.createJsWrapperBlockCreator = function (
           );
         }
       },
+      // The following generic mutator functions are only used by Google Blockly
+      // and are intentionally undefined for CDO Blockly.
+      mutationToDom: Blockly.customBlocks.mutationToDom,
+      domToMutation: Blockly.customBlocks.domToMutation,
+      saveExtraState: Blockly.customBlocks.saveExtraState,
+      loadExtraState: Blockly.customBlocks.loadExtraState,
     };
 
     generator[blockName] = function () {
@@ -1274,4 +1281,12 @@ const sanitizeOptions = function (dropdownOptions) {
   return dropdownOptions.map(option =>
     option.length === 1 ? [option[0], option[0]] : option
   );
+};
+
+const getHelpUrl = function (docFunc) {
+  if (!docFunc) {
+    return '';
+  }
+  // Documentation is only available for Sprite Lab.
+  return `/docs/spritelab/${docFunc}`;
 };

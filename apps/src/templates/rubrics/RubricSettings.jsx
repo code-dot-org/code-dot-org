@@ -6,10 +6,14 @@ import i18n from '@cdo/locale';
 import {
   BodyTwoText,
   Heading2,
+  Heading5,
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
+import {rubricShape} from './rubricShapes';
 import Button from '@cdo/apps/templates/Button';
 import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
+import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
+import experiments from '@cdo/apps/util/experiments';
 
 const STATUS = {
   // we are waiting for initial status from the server
@@ -63,13 +67,15 @@ const fetchAiEvaluationStatusAll = (rubricId, sectionId) => {
 
 export default function RubricSettings({
   canProvideFeedback,
-  rubricId,
   studentUserId,
   visible,
   refreshAiEvaluations,
+  rubric,
   studentName,
   sectionId,
 }) {
+  const rubricId = rubric.id;
+  const {lesson} = rubric;
   const [csrfToken, setCsrfToken] = useState('');
   const [status, setStatus] = useState(STATUS.INITIAL_LOAD);
   const polling = useMemo(
@@ -286,7 +292,22 @@ export default function RubricSettings({
         [style.settingsHidden]: !visible,
       })}
     >
-      <Heading2>{i18n.settings()}</Heading2>
+      {!experiments.isEnabled('ai-rubrics-redesign') && (
+        <Heading2>{i18n.settings()}</Heading2>
+      )}
+      {experiments.isEnabled('ai-rubrics-redesign') && (
+        <div className={style.studentInfoGroup}>
+          <Heading5>
+            {i18n.lessonNumbered({
+              lessonNumber: lesson.position,
+              lessonName: lesson.name,
+            })}
+          </Heading5>
+          <div className={style.selectors}>
+            <SectionSelector reloadOnChange={true} requireSelection={false} />
+          </div>
+        </div>
+      )}
       {canProvideFeedback && (
         <div className={style.aiAssessmentOptions}>
           <div>
@@ -339,10 +360,10 @@ RubricSettings.propTypes = {
   canProvideFeedback: PropTypes.bool,
   teacherHasEnabledAi: PropTypes.bool,
   updateTeacherAiSetting: PropTypes.func,
-  rubricId: PropTypes.number,
   studentUserId: PropTypes.number,
   visible: PropTypes.bool,
   refreshAiEvaluations: PropTypes.func,
+  rubric: rubricShape.isRequired,
   studentName: PropTypes.string,
   sectionId: PropTypes.number,
 };

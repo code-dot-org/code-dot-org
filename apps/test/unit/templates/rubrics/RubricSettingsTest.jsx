@@ -7,14 +7,37 @@ import i18n from '@cdo/locale';
 import * as utils from '@cdo/apps/code-studio/utils';
 import RubricSettings from '@cdo/apps/templates/rubrics/RubricSettings';
 import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
+import experiments from '@cdo/apps/util/experiments';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {Provider} from 'react-redux';
 
 describe('RubricSettings', () => {
+  const defaultRubric = {
+    learningGoals: [],
+    lesson: {
+      position: 3,
+      name: 'Data Structures',
+    },
+    level: {
+      name: 'test_level',
+      position: 7,
+    },
+    id: 1,
+  };
+
   it('shows a a button for running analysis if canProvideFeedback is true', () => {
     const wrapper = shallow(
       <RubricSettings
         canProvideFeedback={true}
         teacherHasEnabledAi={true}
         visible
+        rubric={defaultRubric}
       />
     );
     expect(wrapper.find('Button')).to.have.lengthOf(2);
@@ -22,15 +45,20 @@ describe('RubricSettings', () => {
 
   describe('fetch ai status', () => {
     let fetchStub;
+    let store;
 
     beforeEach(() => {
       fetchStub = sinon.stub(window, 'fetch');
       sinon.stub(utils, 'queryParams').withArgs('section_id').returns('1');
+      stubRedux();
+      registerReducers({teacherSections});
+      store = getStore();
     });
 
     afterEach(() => {
       fetchStub.restore();
       utils.queryParams.restore();
+      restoreRedux();
     });
 
     it('shows status text when student has not attempted level', async () => {
@@ -45,14 +73,16 @@ describe('RubricSettings', () => {
           Promise.resolve(new Response(JSON.stringify(returnedAllJson)))
         );
       const wrapper = mount(
-        <RubricSettings
-          canProvideFeedback={true}
-          teacherHasEnabledAi={true}
-          visible
-          rubricId={1}
-          studentUserId={10}
-          sectionId={2}
-        />
+        <Provider store={store}>
+          <RubricSettings
+            canProvideFeedback={true}
+            teacherHasEnabledAi={true}
+            visible
+            studentUserId={10}
+            rubric={defaultRubric}
+            sectionId={2}
+          />
+        </Provider>
       );
       await act(async () => {
         await Promise.resolve();
@@ -81,14 +111,16 @@ describe('RubricSettings', () => {
           Promise.resolve(new Response(JSON.stringify(returnedAllJson)))
         );
       const wrapper = mount(
-        <RubricSettings
-          canProvideFeedback={true}
-          teacherHasEnabledAi={true}
-          rubricId={1}
-          studentUserId={10}
-          visible
-          sectionId={2}
-        />
+        <Provider store={store}>
+          <RubricSettings
+            canProvideFeedback={true}
+            teacherHasEnabledAi={true}
+            visible
+            studentUserId={10}
+            rubric={defaultRubric}
+            sectionId={2}
+          />
+        </Provider>
       );
       await act(async () => {
         await Promise.resolve();
@@ -118,14 +150,16 @@ describe('RubricSettings', () => {
         );
 
       const wrapper = mount(
-        <RubricSettings
-          canProvideFeedback={true}
-          teacherHasEnabledAi={true}
-          rubricId={1}
-          studentUserId={10}
-          visible
-          sectionId={2}
-        />
+        <Provider store={store}>
+          <RubricSettings
+            canProvideFeedback={true}
+            teacherHasEnabledAi={true}
+            visible
+            studentUserId={10}
+            rubric={defaultRubric}
+            sectionId={2}
+          />
+        </Provider>
       );
       await act(async () => {
         await Promise.resolve();
@@ -226,15 +260,17 @@ describe('RubricSettings', () => {
 
       const refreshAiEvaluationsSpy = sinon.spy();
       const wrapper = mount(
-        <RubricSettings
-          canProvideFeedback={true}
-          teacherHasEnabledAi={true}
-          rubricId={1}
-          studentUserId={10}
-          refreshAiEvaluations={refreshAiEvaluationsSpy}
-          visible
-          sectionId={2}
-        />
+        <Provider store={store}>
+          <RubricSettings
+            canProvideFeedback={true}
+            teacherHasEnabledAi={true}
+            studentUserId={10}
+            refreshAiEvaluations={refreshAiEvaluationsSpy}
+            visible
+            rubric={defaultRubric}
+            sectionId={2}
+          />
+        </Provider>
       );
 
       await act(async () => {
@@ -310,14 +346,16 @@ describe('RubricSettings', () => {
           Promise.resolve(new Response(JSON.stringify(returnedJsonAll)))
         );
       const wrapper = mount(
-        <RubricSettings
-          canProvideFeedback={true}
-          teacherHasEnabledAi={true}
-          rubricId={1}
-          studentUserId={10}
-          visible
-          sectionId={2}
-        />
+        <Provider store={store}>
+          <RubricSettings
+            canProvideFeedback={true}
+            teacherHasEnabledAi={true}
+            studentUserId={10}
+            visible
+            rubric={defaultRubric}
+            sectionId={2}
+          />
+        </Provider>
       );
       await act(async () => {
         await Promise.resolve();
@@ -351,14 +389,16 @@ describe('RubricSettings', () => {
           Promise.resolve(new Response(JSON.stringify(returnedJsonAll)))
         );
       const wrapper = mount(
-        <RubricSettings
-          canProvideFeedback={true}
-          teacherHasEnabledAi={true}
-          rubricId={1}
-          studentUserId={10}
-          visible
-          sectionId={2}
-        />
+        <Provider store={store}>
+          <RubricSettings
+            canProvideFeedback={true}
+            teacherHasEnabledAi={true}
+            studentUserId={10}
+            visible
+            rubric={defaultRubric}
+            sectionId={2}
+          />
+        </Provider>
       );
       await act(async () => {
         await Promise.resolve();
@@ -392,14 +432,16 @@ describe('RubricSettings', () => {
           Promise.resolve(new Response(JSON.stringify(returnedJsonAll)))
         );
       const wrapper = mount(
-        <RubricSettings
-          canProvideFeedback={true}
-          teacherHasEnabledAi={true}
-          rubricId={1}
-          studentUserId={10}
-          visible
-          sectionId={2}
-        />
+        <Provider store={store}>
+          <RubricSettings
+            canProvideFeedback={true}
+            teacherHasEnabledAi={true}
+            studentUserId={10}
+            visible
+            rubric={defaultRubric}
+            sectionId={2}
+          />
+        </Provider>
       );
       await act(async () => {
         await Promise.resolve();
@@ -413,6 +455,28 @@ describe('RubricSettings', () => {
         i18n.aiEvaluationStatus_profanity_error()
       );
       expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
+    });
+
+    it('displays new Section selector when ai-rubrics-redesign experiment is enabled', () => {
+      experiments.setEnabled('ai-rubrics-redesign', true);
+      const returnedJson = {attempted: false};
+      fetchStub.returns(
+        Promise.resolve(new Response(JSON.stringify(returnedJson)))
+      );
+      const wrapper = mount(
+        <Provider store={store}>
+          <RubricSettings
+            canProvideFeedback={true}
+            teacherHasEnabledAi={true}
+            studentUserId={10}
+            visible
+            rubric={defaultRubric}
+            sectionId={2}
+          />
+        </Provider>
+      );
+      expect(wrapper.find('SectionSelector').length).to.equal(1);
+      experiments.setEnabled('ai-rubrics-redesign', false);
     });
   });
 });

@@ -117,7 +117,7 @@ module Services
     def self.get_pdfless_lessons(script)
       script.lessons.select(&:has_lesson_plan).select do |lesson|
         !lesson_plan_pdf_exists_for?(lesson) ||
-          (script.include_student_lesson_plans && !lesson_plan_pdf_exists_for?(lesson, true))
+          (script.include_student_lesson_plans && !lesson_plan_pdf_exists_for?(lesson, student_facing: true))
       end
     end
 
@@ -160,7 +160,7 @@ module Services
           get_pdfless_lessons(script).each do |lesson|
             puts "Generating missing Lesson PDFs for #{lesson.key} (from #{script.name})"
             generate_lesson_pdf(lesson, dir)
-            generate_lesson_pdf(lesson, dir, true)
+            generate_lesson_pdf(lesson, dir, student_facing: true)
             any_pdf_generated = true
           end
 
