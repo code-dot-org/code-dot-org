@@ -38,6 +38,12 @@ To aid in ensuring point #3 occurs, many of the inputs and possible outputs have
 A simple flow diagram of how data/parameters move through the script would be:
 (constants.py + ai-inputs.json) -> HoC2023AiGenerateWeights.py -> Hoc2023AiHelperFunctions.py -> [LLM of Choice] -> HoC2023AiGenerateWeights.py -> Final Map Output
 
+## AWS Titan Setup and Quirks
+
+To be blunt, setting up AWS is challenging and the guidance/code samples change frequently. It is highly suggested to check their documentation at https://docs.aws.amazon.com/bedrock/latest/userguide/model-access.html, https://github.com/aws-samples/amazon-bedrock-workshop, and https://github.com/aws-samples/amazon-bedrock-workshop/blob/main/00_Intro/bedrock_boto3_setup.ipynb and do your best to follow along.
+
+Additionally, make sure to reach out to the Infrastructure team for best practices related to IAM permissions and role creation you will need to get Bedrock model access. Previously, we opted to utilize the recommended SageMaker service and role to streamline permissions issues but better options (for both cost and organization) might have since been determined.
+
 ## Output Evaluation
 
 There isn't a strict numeric threshold for quality that the model must meet compared outside of ensuring that the final results meet the required format for DanceAI to reference later. However, we established the following desired characteristics for the distribution of model outputs as of 01/08/2024:
