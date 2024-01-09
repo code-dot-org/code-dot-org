@@ -276,7 +276,30 @@ export function getUserTheme(themeOption) {
  */
 export function getCode(workspace, getSourceAsJson) {
   if (!getSourceAsJson) {
-    return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
+    // Start by getting the XML for all blocks on the workspace.
+    const workspaceXML = Blockly.Xml.blockSpaceToDom(workspace);
+
+    // Also serialize blocks on the hidden workspace for procedure definitions.
+    let hiddenWsXml = Blockly.utils.xml.textToDom('<xml></xml>');
+    if (
+      Blockly.getHiddenDefinitionWorkspace &&
+      // Ignore the hidden workspace if we are serializing a different workspace,
+      // such as an embedded workspace. (This is very unlikely.)
+      Blockly.getMainWorkspace().id === workspace.id
+    ) {
+      hiddenWsXml = Blockly.Xml.blockSpaceToDom(
+        Blockly.getHiddenDefinitionWorkspace()
+      );
+    }
+
+    // Merge the hidden workspace XML into the primary XML
+    hiddenWsXml.childNodes.forEach(node => {
+      const clonedNode = node.cloneNode(true);
+      workspaceXML.appendChild(clonedNode);
+    });
+
+    // Convert the merged document back to an XML string
+    return Blockly.utils.xml.domToText(workspaceXML);
   }
 
   const mainWorkspaceSerialization =
