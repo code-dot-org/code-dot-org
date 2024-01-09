@@ -115,7 +115,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
 
     let consentCSTA = {};
     if (this.state.csta) {
-      consentCSTA = {consentCSTA: this.state.consentCSTA};
+      consentCSTA = {consentCSTA: true};
     }
 
     let roleCSTA = {};
@@ -187,10 +187,6 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
 
   getMissingRequiredFields() {
     const requiredFields = ['email', 'firstName', 'lastName', 'consentAFE'];
-
-    if (this.state.csta) {
-      requiredFields.push('consentCSTA');
-    }
 
     const missingRequiredFields = requiredFields.filter(f => {
       return !this.state[f];
