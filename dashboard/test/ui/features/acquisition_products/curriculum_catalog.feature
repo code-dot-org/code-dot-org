@@ -59,7 +59,7 @@ Feature: Curriculum Catalog Page
     Given I create a student named "Student Sam"
     Given I am on "http://studio.code.org/catalog"
     And I wait until element "h4:contains(AI for Oceans)" is visible
-    And I wait until element "button:contains(Assign)" is not visible    
+    And I wait until element "button:contains(Assign)" is not visible
 
   Scenario: Signed-in teacher without sections is prompted to created sections when clicking Assign
     Given I create a teacher named "Teacher Tom"
