@@ -205,7 +205,8 @@ export default function RubricContent({
         )}
       </div>
       {experiments.isEnabled('ai-rubrics-redesign') ? (
-        <div>
+        // TODO: remove tempContainer div when experiment is ready to roll out
+        <div className={style.tempContainer}>
           <Heading5>{i18n.rubric()}</Heading5>
           <LearningGoals
             learningGoals={rubric.learningGoals}

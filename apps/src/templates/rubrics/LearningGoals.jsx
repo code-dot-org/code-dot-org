@@ -247,7 +247,7 @@ export default function LearningGoals({
             radius={30}
             stroke={4}
           />
-          <div className={style.learningGoalHeaderText}>
+          <div className={style.learningGoalsHeaderText}>
             <Heading6>
               {learningGoals[currentLearningGoal].learningGoal}
             </Heading6>
@@ -339,14 +339,17 @@ export default function LearningGoals({
             isAutosaving={autosaveStatus === STATUS.IN_PROGRESS}
           />
           {learningGoals[currentLearningGoal].tips && !isStudent && (
-            <div>
-              <Heading6>{i18n.tipsForEvaluation()}</Heading6>
+            <details>
+              <summary>
+                <strong>{i18n.tipsForEvaluation()}</strong>
+              </summary>
+
               <div className={style.learningGoalsTips}>
                 <SafeMarkdown
                   markdown={learningGoals[currentLearningGoal].tips}
                 />
               </div>
-            </div>
+            </details>
           )}
           {!!studentLevelInfo && renderAutoSaveTextbox()}
         </div>
