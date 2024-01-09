@@ -17,9 +17,9 @@ p {
 // Use these classes to change a section's background color
 section.bg-neutral-light { background-color: var(--neutral_light); }
 section.bg-neutral-dark { background-color: var(--neutral_dark); }
-section.bg-secondary { background-color: $brand_secondary_light; }
+section.bg-secondary { background-color: var(--brand_secondary_light); }
 section.bg-primary-light {
-  background-color: rgba($brand_primary_light, .5);
+  background-color: rgba(171, 223, 229, 0.5);
 
   p {
     @include strong;
@@ -137,7 +137,7 @@ div.divider {
 // Add a thick box shadow to an element
 // See code.org/teach for an example
 .box-shadow-primary {
-  box-shadow: 8px 8px 0 $brand_primary_light;
+  box-shadow: 8px 8px 0 var(--brand_primary_light);
 }
 
 // Lines (<hr>)
@@ -444,7 +444,7 @@ ol.steps-list {
         right: -8px;
         bottom: -8px;
         left: -8px;
-        border: 6px solid $brand_primary_light;
+        border: 6px solid var(--brand_primary_light);
         border-radius: 100%;
       }
     }
@@ -871,7 +871,7 @@ form {
     }
 
     a{
-      background: $brand_primary_light;
+      background: var(--brand_primary_light);
 
       &.selected {
         background: var(--brand_primary_default);
