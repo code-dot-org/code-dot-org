@@ -1,7 +1,7 @@
 import sinon from 'sinon';
 import {
   getCode,
-  moveHiddenProcedures,
+  moveHiddenBlocks,
   partitionBlocksByType,
 } from '@cdo/apps/blockly/addons/cdoUtils';
 import * as cdoSerializationHelpers from '@cdo/apps/blockly/addons/cdoSerializationHelpers';
@@ -88,8 +88,8 @@ describe('CdoUtils', () => {
       expect(result).to.deep.equal(blockElements);
     });
   });
-  describe('moveHiddenProcedures', () => {
-    it('should not move any blocks if none have the appropriate procedure type', () => {
+  describe('moveHiddenBlocks', () => {
+    it('should not move any blocks if none have the appropriate procedure type and none are invisible', () => {
       const source = {
         blocks: {
           blocks: [{type: 'when_run', id: 1}],
@@ -98,7 +98,7 @@ describe('CdoUtils', () => {
       };
 
       const typesToHide = ['procedures_defnoreturn'];
-      const result = moveHiddenProcedures(source, typesToHide);
+      const result = moveHiddenBlocks(source, typesToHide);
       expect(result).to.deep.equal({
         mainSource: {
           blocks: {
@@ -110,7 +110,7 @@ describe('CdoUtils', () => {
       });
     });
 
-    it('should move all blocks if they all match', () => {
+    it('should move all blocks if they all match a procedure type', () => {
       const source = {
         blocks: {
           blocks: [
@@ -125,7 +125,7 @@ describe('CdoUtils', () => {
       };
 
       const typesToHide = ['procedures_defnoreturn'];
-      const result = moveHiddenProcedures(source, typesToHide);
+      const result = moveHiddenBlocks(source, typesToHide);
       expect(result).to.deep.equal({
         mainSource: {blocks: {blocks: []}, procedures: [{id: 'a'}]},
         hiddenDefinitionSource: {
@@ -149,8 +149,13 @@ describe('CdoUtils', () => {
           blocks: [
             {type: 'when_run', id: 1},
             {
-              type: 'procedures_defnoreturn',
+              type: 'gamelab_everyInterval',
               id: 2,
+              extraState: {invisible: true},
+            },
+            {
+              type: 'procedures_defnoreturn',
+              id: 3,
               extraState: {procedureId: 'a'},
             },
           ],
@@ -159,7 +164,7 @@ describe('CdoUtils', () => {
       };
 
       const typesToHide = ['procedures_defnoreturn'];
-      const result = moveHiddenProcedures(source, typesToHide);
+      const result = moveHiddenBlocks(source, typesToHide);
       expect(result).to.deep.equal({
         mainSource: {
           blocks: {blocks: [{type: 'when_run', id: 1}]},
@@ -169,8 +174,13 @@ describe('CdoUtils', () => {
           blocks: {
             blocks: [
               {
-                type: 'procedures_defnoreturn',
+                type: 'gamelab_everyInterval',
                 id: 2,
+                extraState: {invisible: true},
+              },
+              {
+                type: 'procedures_defnoreturn',
+                id: 3,
                 extraState: {procedureId: 'a'},
               },
             ],
@@ -194,7 +204,7 @@ describe('CdoUtils', () => {
         procedures: [{id: 'a'}],
       };
       const procedureTypesToHide = ['procedures_defnoreturn'];
-      const result = moveHiddenProcedures(source, procedureTypesToHide);
+      const result = moveHiddenBlocks(source, procedureTypesToHide);
       expect(result).to.deep.equal({
         mainSource: {blocks: {blocks: []}, procedures: [{id: 'a'}]},
         hiddenDefinitionSource: {
@@ -235,7 +245,7 @@ describe('CdoUtils', () => {
         'procedures_defnoreturn',
         'behavior_definition',
       ];
-      const result = moveHiddenProcedures(source, procedureTypesToHide);
+      const result = moveHiddenBlocks(source, procedureTypesToHide);
       expect(result).to.deep.equal({
         mainSource: {
           blocks: {blocks: [{type: 'when_run', id: 1}]},
