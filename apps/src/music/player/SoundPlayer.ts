@@ -11,6 +11,10 @@ type ActiveSoundSource = {
   id: number;
 };
 
+/**
+ * Handles sound playback of {@link AudioBuffer}s using the Web Audio API
+ * (wrapped by {@link AudioSystem}).
+ */
 class SoundPlayer {
   private readonly audioSystem: AudioSystem;
   private readonly tagGroups: {

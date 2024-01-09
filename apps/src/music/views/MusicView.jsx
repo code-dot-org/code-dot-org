@@ -454,7 +454,7 @@ class UnconnectedMusicView extends React.Component {
     });
 
     this.player.preloadSounds(
-      [this.sequencer.getPlaybackEvents(), ...allTriggerEvents],
+      [...this.sequencer.getPlaybackEvents(), ...allTriggerEvents],
       (loadTimeMs, soundsLoaded) => {
         // Report load time metrics if any sounds were loaded.
         if (soundsLoaded > 0) {
