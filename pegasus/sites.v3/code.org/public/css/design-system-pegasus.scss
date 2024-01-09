@@ -31,7 +31,7 @@ section.bg-primary-light {
 
   a { color: var(--neutral_dark) !important;
     &:hover { color: var(--brand_secondary_dark) !important; }
-    &.link-button { color: $neutral_white !important; }
+    &.link-button { color: var(--neutral_white) !important; }
   }
 }
 
@@ -424,7 +424,7 @@ ol.steps-list {
     width: 100%;
 
     & > span {
-      background: $neutral_white;
+      background: var(--neutral_white);
       display: block;
       width: 2em;
       height: 2em;
@@ -1027,7 +1027,7 @@ section.quote {
 
   p {
     font-size: 1.25rem;
-    color: $neutral_white;
+    color: var(--neutral_white);
     font-family: $barlowSemiCondensed-medium;
 
     &.quote-text {
@@ -1116,7 +1116,7 @@ section.quote {
 
     button.tab {
       color: var(--neutral_dark);
-      background: $neutral_white;
+      background: var(--neutral_white);
       border: 1px solid var(--neutral_dark20);
       border-bottom: 0;
       border-radius: 6px 6px 0 0;
@@ -1136,7 +1136,7 @@ section.quote {
       &.active,
       &.active:focus:not(:focus-visible) {
         background-color: var(--brand_primary_default);
-        color: $neutral_white;
+        color: var(--neutral_white);
         border-color: var(--brand_primary_default);
       }
 
