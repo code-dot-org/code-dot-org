@@ -22,7 +22,7 @@ def sync_up
 
     I18n::Resources::Apps.sync_up
 
-    CROWDIN_PROJECTS.each do |name, options|
+    I18nScriptUtils.crowdin_projects.each do |name, options|
       puts "Uploading source strings to #{name} project"
       command = "crowdin upload sources --config #{options[:config_file]} --identity #{options[:identity_file]}"
       Open3.popen2(command) do |_stdin, stdout, status_thread|

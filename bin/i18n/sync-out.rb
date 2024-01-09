@@ -31,7 +31,7 @@ module I18n
       I18n::Resources::Apps.sync_out
       I18n::Resources::Dashboard.sync_out
       I18n::Resources::Pegasus.sync_out
-      clean_up_sync_out(CROWDIN_PROJECTS)
+      clean_up_sync_out(I18nScriptUtils.crowdin_projects)
       I18n::Metrics.report_status(true, 'sync-out', 'Sync out completed successfully')
       puts "Sync out completed successfully"
     rescue => exception

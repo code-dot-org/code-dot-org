@@ -1,12 +1,14 @@
 require File.expand_path('../../../dashboard/config/environment', __FILE__)
 require File.expand_path('../../../pegasus/helpers/pegasus_languages', __FILE__)
 
+require 'cdo/aws/ec2'
 require 'cdo/honeybadger'
 require 'cgi'
 require 'fileutils'
 require 'psych'
 require 'ruby-progressbar'
 require 'parallel'
+require 'optparse'
 
 I18N_LOCALES_DIR = 'i18n/locales'.freeze
 I18N_SOURCE_DIR = File.join(I18N_LOCALES_DIR, 'source').freeze
@@ -71,6 +73,17 @@ class I18nScriptUtils
   PARALLEL_PROCESSES = Parallel.processor_count.freeze
   SOURCE_LOCALE = 'en-US'.freeze
   TTS_LOCALES = (::TextToSpeech::VOICES.keys - %i[en-US]).freeze
+
+  # Checks if the script is running in testing mode
+  def self.testing?
+    # If it's not running an an AWS EC2 instance, it must be a local environment.
+    # And we want to run scripts in testing mode by default on local environment.
+    AWS::EC2.instance_id.nil?
+  end
+
+  def self.crowdin_projects
+    testing? ? CROWDIN_TEST_PROJECTS : CROWDIN_PROJECTS
+  end
 
   # Because we log many of the i18n operations to slack, we often want to
   # explicitly force stdout to operate synchronously, rather than buffering
@@ -302,7 +315,7 @@ class I18nScriptUtils
   #  "/dashboard/base.yml", "/blockly-mooc/maze.json",
   #  "/course_content/2018/coursea-2018.json", etc.
   def self.file_changed?(locale, file)
-    @change_data ||= CROWDIN_PROJECTS.map do |_project_identifier, project_options|
+    @change_data ||= crowdin_projects.map do |_project_identifier, project_options|
       # TODO: investigate the condition as a potential cause of sync fails
       unless File.exist?(project_options[:files_to_sync_out_json])
         raise <<~ERR

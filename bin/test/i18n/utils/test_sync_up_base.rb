@@ -156,7 +156,7 @@ describe I18n::Utils::SyncUpBase do
     before do
       CDO.stubs(:crowdin_project_test_mapping).returns({'expected-crowdin-project' => 'expected-crowdin-project-test'})
 
-      described_instance.stubs(:testing?).returns(is_testing)
+      I18nScriptUtils.stubs(:testing?).returns(is_testing)
     end
 
     it 'returns Crowdin project from config' do
