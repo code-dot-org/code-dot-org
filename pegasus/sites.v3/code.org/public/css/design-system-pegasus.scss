@@ -183,7 +183,7 @@ ul {
     margin: 0.5rem 0;
 
     &:before {
-      color: $neutral-dark;
+      color: var(--neutral_dark);
     }
 
     p {
@@ -1023,7 +1023,7 @@ form {
 section.quote {
   background: url("/images/banners/banner-bg-lines-neutral-dark.png") center repeat;
   background-size: 12rem;
-  background-color: $neutral-dark;
+  background-color: var(--neutral_dark);
 
   p {
     font-size: 1.25rem;
