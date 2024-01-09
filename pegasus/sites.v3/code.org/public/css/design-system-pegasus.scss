@@ -16,7 +16,7 @@ p {
 
 // Use these classes to change a section's background color
 section.bg-neutral-light { background-color: var(--neutral_light); }
-section.bg-neutral-dark { background-color: $neutral_dark; }
+section.bg-neutral-dark { background-color: var(--neutral_dark); }
 section.bg-secondary { background-color: $brand_secondary_light; }
 section.bg-primary-light {
   background-color: rgba($brand_primary_light, .5);
@@ -29,7 +29,7 @@ section.bg-primary-light {
     }
   }
 
-  a { color: $neutral_dark !important;
+  a { color: var(--neutral_dark) !important;
     &:hover { color: $brand_secondary_dark !important; }
     &.link-button { color: $neutral_white !important; }
   }
@@ -118,7 +118,7 @@ div.divider {
 
   hr {
     border: 0;
-    border-top: 1px solid $neutral_dark60;
+    border-top: 1px solid var(--neutral_dark60);
     margin: 0;
     width: 100%;
   }
@@ -131,7 +131,7 @@ div.divider {
 
 // Add border to an element
 .has-border {
-  border: 1px solid $neutral_dark10;
+  border: 1px solid var(--neutral_dark10);
 }
 
 // Add a thick box shadow to an element
@@ -142,11 +142,11 @@ div.divider {
 
 // Lines (<hr>)
 hr {
-  border-top: 1px solid $neutral_dark20;
+  border-top: 1px solid var(--neutral_dark20);
   margin: 3rem 0;
 
   &.dark {
-    border-top: 1px solid $neutral_dark60;
+    border-top: 1px solid var(--neutral_dark60);
   }
 }
 
@@ -463,7 +463,7 @@ ol.steps-list {
 // FAQs
 details {
   padding: 1.5rem 1rem 1rem;
-  border-bottom: 1px solid $neutral_dark80;
+  border-bottom: 1px solid var(--neutral_dark80);
   transition: background ease-in-out .2s;
 
   &:hover {
@@ -574,7 +574,7 @@ form {
 // Action blocks shared styles
 .action-block {
   background: var(--neutral_light);
-  border: 1px solid $neutral_dark20;
+  border: 1px solid var(--neutral_dark20);
   border-radius: $border-radius;
   display: flex;
   align-content: baseline;
@@ -1115,9 +1115,9 @@ section.quote {
     gap: 0.25rem;
 
     button.tab {
-      color: $neutral_dark;
+      color: var(--neutral_dark);
       background: $neutral_white;
-      border: 1px solid $neutral_dark20;
+      border: 1px solid var(--neutral_dark20);
       border-bottom: 0;
       border-radius: 6px 6px 0 0;
       padding: 0.75rem 0.25rem 0.7rem;
@@ -1129,7 +1129,7 @@ section.quote {
       flex: 1;
 
       &:hover {
-        background-color: $neutral_dark10;
+        background-color: var(--neutral_dark10);
       }
 
       // Selected tab's styles
@@ -1143,8 +1143,8 @@ section.quote {
       &:focus {
         outline: unset;
         border-color: var(--brand_primary_default);
-        background-color: $neutral_dark10;
-        color: $neutral_dark;
+        background-color: var(--neutral_dark10);
+        color: var(--neutral_dark);
       }
 
       // Use this class to hide a tab
@@ -1211,7 +1211,7 @@ section.quote {
 // See code.org/educate/csp and code.org/teach for examples
 .at-a-glance {
   background: $neutral-white;
-  border: 1px solid $neutral_dark10;
+  border: 1px solid var(--neutral_dark10);
   border-radius: $border-radius;
   padding: 1.5rem;
   display: grid;
@@ -1257,7 +1257,7 @@ section.quote {
 .subscribe-form {
   background: url("/images/banners/banner-bg-lines-neutral-dark.png") center repeat;
   background-size: 22%;
-  background-color: $neutral_dark;
+  background-color: var(--neutral_dark);
   border-radius: $border-radius;
   padding: 2rem;
 
