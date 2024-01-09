@@ -5,7 +5,7 @@ $border-radius: 4px;
 
 // Mixins
 @mixin focus-outline {
-  outline: $brand_primary_default solid 2px;
+  outline: var(--brand_primary_default) solid 2px;
   outline-offset: 2px;
 }
 
@@ -15,7 +15,7 @@ p {
 }
 
 // Use these classes to change a section's background color
-section.bg-neutral-light { background-color: $neutral_light; }
+section.bg-neutral-light { background-color: var(--neutral_light); }
 section.bg-neutral-dark { background-color: $neutral_dark; }
 section.bg-secondary { background-color: $brand_secondary_light; }
 section.bg-primary-light {
@@ -467,7 +467,7 @@ details {
   transition: background ease-in-out .2s;
 
   &:hover {
-    background: $neutral_light;
+    background: var(--neutral_light);
   }
 
   summary {
@@ -573,7 +573,7 @@ form {
 
 // Action blocks shared styles
 .action-block {
-  background: $neutral_light;
+  background: var(--neutral_light);
   border: 1px solid $neutral_dark20;
   border-radius: $border-radius;
   display: flex;
@@ -607,7 +607,7 @@ form {
 
     &.overline {
       @include overline-two;
-      color: $brand_primary_default;
+      color: var(--brand_primary_default);
       width: 100%;
     }
   }
@@ -874,7 +874,7 @@ form {
       background: $brand_primary_light;
 
       &.selected {
-        background: $brand_primary_default;
+        background: var(--brand_primary_default);
       }
 
       &:focus {
@@ -943,7 +943,7 @@ form {
 
         &:before, &:after {
           font: var(--fa-font-solid);
-          color: $brand_primary_default;
+          color: var(--brand_primary_default);
         }
 
         &::before {
@@ -1039,7 +1039,7 @@ section.quote {
 
       &:before, &:after {
         font: var(--fa-font-solid);
-        color: $brand_primary_default;
+        color: var(--brand_primary_default);
       }
 
       &::before {
@@ -1109,7 +1109,7 @@ section.quote {
   min-height: 408px;
 
   nav {
-    border-bottom: 6px solid $brand_primary_default;
+    border-bottom: 6px solid var(--brand_primary_default);
     margin: 0 0 3rem;
     align-items: end;
     gap: 0.25rem;
@@ -1135,14 +1135,14 @@ section.quote {
       // Selected tab's styles
       &.active,
       &.active:focus:not(:focus-visible) {
-        background-color: $brand_primary_default;
+        background-color: var(--brand_primary_default);
         color: $neutral_white;
-        border-color: $brand_primary_default;
+        border-color: var(--brand_primary_default);
       }
 
       &:focus {
         outline: unset;
-        border-color: $brand_primary_default;
+        border-color: var(--brand_primary_default);
         background-color: $neutral_dark10;
         color: $neutral_dark;
       }
@@ -1283,7 +1283,7 @@ section.quote {
   }
 
   figure {
-    background: $neutral_light;
+    background: var(--neutral_light);
     border-radius: $border-radius;
     padding: 1rem 0 0;
 
@@ -1300,7 +1300,7 @@ section.quote {
 .action-wrapper {
   background: url("/images/banners/banner-bg-lines-neutral-light.png") center repeat;
   background-size: 10rem;
-  background-color: $brand_primary_default;
+  background-color: var(--brand_primary_default);
   border-radius: $border-radius;
   padding: 2rem;
 }
