@@ -12,39 +12,19 @@ markdown <<MARKDOWN
 
 #### By adding the ‘Sprite begins’ block, when we press run, the Sprite will slowly get bigger. 
 
-<details>
 
-<summary><strong>Place holder for gif of growing block</strong></summary>
 
-<img src="https://images.code.org/883c1280e1ac491fdf09a80c27a32826-image-1681492214527.gif" alt= "moving playspace and workspace window size" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
-</details>
 
-<div style="clear:both"/>
+<img src="https://images.code.org/301312a1274970571422c02bfb1b2cf7-image-1704382377533.gif" alt= "moving playspace and workspace window size" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
-<hr style="clear:both">
 
-## Let’s see what is behind the scenes of this coding block.
-
-#### When you click on edit, you can see that this behavior block has a continuous loop that changes the size of the sprite by 1. 
-
-<details>
-
-<summary><strong>Place holder for gif of growing block</strong></summary>
-
-<img src="https://images.code.org/399c6a5f4b4cddd06e5ebaa1e162d8ce-image-1681492569784.gif" alt=" hint image and words displayed" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
-
-</details>
 
 <div style="clear:both"/>
 
 <hr style="clear:both">
 
-#### As you can see, the behavior blocks help simplify complex code to help us easily animate our programs. 
 
 
-<div style="clear:both"/>
 
-
-## Let's explore behavior blocks on the next level.  
 MARKDOWN

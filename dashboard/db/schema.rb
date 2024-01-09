@@ -209,32 +209,6 @@ ActiveRecord::Schema.define(version: 2024_01_04_215831) do
     t.index ["storage_id"], name: "index_channel_tokens_on_storage_id"
   end
 
-  create_table "circuit_playground_discount_applications", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "unit_6_intention"
-    t.boolean "full_discount"
-    t.boolean "admin_set_status", default: false, null: false
-    t.string "signature"
-    t.datetime "signed_at"
-    t.integer "circuit_playground_discount_code_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "school_id"
-    t.index ["circuit_playground_discount_code_id"], name: "index_circuit_playground_applications_on_code_id"
-    t.index ["school_id"], name: "index_circuit_playground_discount_applications_on_school_id"
-    t.index ["user_id"], name: "index_circuit_playground_discount_applications_on_user_id", unique: true
-  end
-
-  create_table "circuit_playground_discount_codes", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
-    t.string "code", null: false
-    t.boolean "full_discount", null: false
-    t.datetime "expiration", null: false
-    t.datetime "claimed_at"
-    t.datetime "voided_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "code_review_comments", charset: "utf8mb4", collation: "utf8mb4_unicode_520_ci", force: :cascade do |t|
     t.integer "code_review_id", null: false
     t.integer "commenter_id"
@@ -2329,7 +2303,6 @@ ActiveRecord::Schema.define(version: 2024_01_04_215831) do
 
   add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "census_summaries", "schools"
-  add_foreign_key "circuit_playground_discount_applications", "schools"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "learning_goal_ai_evaluations", "learning_goals"
   add_foreign_key "learning_goal_ai_evaluations", "rubric_ai_evaluations"
