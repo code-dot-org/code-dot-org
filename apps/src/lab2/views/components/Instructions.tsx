@@ -1,4 +1,4 @@
-import React, {memo, useCallback, useContext, useState} from 'react';
+import React, {useCallback, useContext, useState} from 'react';
 import classNames from 'classnames';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import moduleStyles from './instructions.module.scss';
@@ -230,4 +230,4 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   );
 };
 
-export default memo(Instructions);
+export default Instructions;

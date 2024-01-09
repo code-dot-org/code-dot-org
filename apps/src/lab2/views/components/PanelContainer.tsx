@@ -1,4 +1,4 @@
-import React, {memo, useContext} from 'react';
+import React, {useContext} from 'react';
 import classNames from 'classnames';
 import moduleStyles from './panelContainer.module.scss';
 import {ThemeContext} from '../ThemeWrapper';
@@ -85,4 +85,4 @@ const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
   );
 };
 
-export default memo(PanelContainer);
+export default PanelContainer;
