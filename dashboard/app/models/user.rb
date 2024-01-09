@@ -145,6 +145,7 @@ class User < ApplicationRecord
     family_name
     ai_rubrics_disabled
     sort_by_family_name
+    show_progress_table_v2
   )
 
   attr_accessor(
@@ -251,8 +252,6 @@ class User < ApplicationRecord
   has_many :user_school_infos
   after_save :update_and_add_users_school_infos, if: :saved_change_to_school_info_id?
   validate :complete_school_info, if: :school_info_id_changed?, unless: proc {|u| u.purged_at.present?}
-
-  has_one :circuit_playground_discount_application
 
   has_many :pd_applications,
     class_name: 'Pd::Application::ApplicationBase',
@@ -525,7 +524,7 @@ class User < ApplicationRecord
   validates :name, length: {within: 1..70}, allow_blank: true
   validates :name, no_utf8mb4: true
 
-  defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.sponsored?}
+  defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.sponsored? || Policies::Lti.lti?(user)}
 
   validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
@@ -1491,15 +1490,17 @@ class User < ApplicationRecord
 
   # Teachers
   def can_enable_ai_tutor?
+    !DCDO.get('ai-tutor-disabled', false) && (
     permission?(UserPermission::AI_TUTOR_ACCESS) ||
-      SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
+      SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME))
   end
 
   # Students
   def has_ai_tutor_access?
+    !DCDO.get('ai-tutor-disabled', false) && (
     permission?(UserPermission::AI_TUTOR_ACCESS) ||
       (get_active_experiment_names_by_teachers.include?(AI_TUTOR_EXPERIMENT_NAME) &&
-      sections_as_student.any?(&:ai_tutor_enabled))
+      sections_as_student.any?(&:ai_tutor_enabled)))
   end
 
   def student_of_verified_instructor?

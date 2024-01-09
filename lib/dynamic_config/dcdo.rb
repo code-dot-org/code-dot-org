@@ -31,17 +31,15 @@ class DCDOBase < DynamicConfigBase
       'frontend-i18n-tracking': DCDO.get('frontend-i18n-tracking', false),
       clearerSignUpUserType: DCDO.get('clearerSignUpUserType', false),
       'pl-teacher-application-off-season': DCDO.get('pl_teacher_application', false),
-      'csa-homepage-banner-2022': DCDO.get('csa-homepage-banner-2022', false),
-      'csa-skinny-banner': DCDO.get('csa-skinny-banner', false),
-      'csta-form-extension': DCDO.get('csta-form-extension', false),
       'pl-launch-hero-banner': DCDO.get('pl-launch-hero-banner', false),
-      'curriculum-launch-hero-banner': DCDO.get('curriculum-launch-hero-banner', false),
-      'curriculum-launch-skinny-banner': DCDO.get('curriculum-launch-skinny-banner', false),
-      'ai-pl-launch-banners': DCDO.get('ai-pl-launch-banners', false),
+      'csta-form-extension': DCDO.get('csta-form-extension', false),
       cpa_experience: DCDO.get('cpa_experience', false),
       gender: DCDO.get('gender', false),
-      'show-coteacher-ui': DCDO.get('show-coteacher-ui', true),
-      'amplitude-event-sample-rates': DCDO.get('amplitude-event-sample-rates', {})
+      'amplitude-event-sample-rates': DCDO.get('amplitude-event-sample-rates', {}),
+      # Whether to allow the user to toggle between the v1 and v2 progress tables.
+      'progress-table-v2-enabled': DCDO.get('progress-table-v2-enabled', false),
+      # Whether to show the v1 or v2 progress table by default.
+      'progress-table-v2-default-v2': DCDO.get('progress-table-v2-default-v2', false),
     }
   end
 end

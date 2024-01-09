@@ -14,15 +14,17 @@ import {SourcesStore} from './SourcesStore';
 import {ChannelsStore} from './ChannelsStore';
 import {Channel, Project, ProjectSources} from '../types';
 import {currentLocation} from '@cdo/apps/utils';
-import Lab2MetricsReporter from '../Lab2MetricsReporter';
+import LabMetricsReporter from '../Lab2MetricsReporter';
 import {ValidationError} from '../responseValidators';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
+import Lab2Registry from '../Lab2Registry';
 const {reload} = require('@cdo/apps/utils');
 
 export default class ProjectManager {
   private readonly channelId: string;
   private readonly sourcesStore: SourcesStore;
   private readonly channelsStore: ChannelsStore;
+  private readonly metricsReporter: LabMetricsReporter;
   private nextSaveTime: number | null = null;
   private readonly saveInterval: number = 30 * 1000; // 30 seconds
   private saveInProgress = false;
@@ -53,7 +55,8 @@ export default class ProjectManager {
     sourcesStore: SourcesStore,
     channelsStore: ChannelsStore,
     channelId: string,
-    reduceChannelUpdates: boolean
+    reduceChannelUpdates: boolean,
+    metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
   ) {
     this.channelId = channelId;
     this.sourcesStore = sourcesStore;
@@ -61,6 +64,7 @@ export default class ProjectManager {
     this.reduceChannelUpdates = reduceChannelUpdates;
     this.initialSaveComplete = false;
     this.forceReloading = false;
+    this.metricsReporter = metricsReporter;
   }
 
   getChannelId(): string {
@@ -82,7 +86,7 @@ export default class ProjectManager {
       // we will default to empty sources. Source can return not found if the project
       // is new. If neither of these cases, throw the error.
       if (error instanceof ValidationError) {
-        Lab2MetricsReporter.logWarning(
+        this.metricsReporter.logWarning(
           `Error validating sources (${error.message}). Defaulting to empty sources.`
         );
       } else if (
@@ -338,11 +342,11 @@ export default class ProjectManager {
       // We set forceReloading to true so the client can skip
       // showing the user a dialog before reload.
       this.forceReloading = true;
-      Lab2MetricsReporter.logWarning('Conflict on save, reloading page');
+      this.metricsReporter.logWarning('Conflict on save, reloading page');
       reload();
     } else {
       // Otherwise, we log the error.
-      Lab2MetricsReporter.logError(errorMessage, error);
+      this.metricsReporter.logError(errorMessage, error);
     }
   }
 
@@ -431,7 +435,7 @@ export default class ProjectManager {
 
   private logAndThrowError(errorMessage: string) {
     const error = new Error(errorMessage);
-    Lab2MetricsReporter.logError(errorMessage, error);
+    this.metricsReporter.logError(errorMessage, error);
     throw error;
   }
 

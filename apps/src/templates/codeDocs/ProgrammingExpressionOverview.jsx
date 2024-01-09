@@ -71,11 +71,16 @@ export default function ProgrammingExpressionOverview({
           title={programmingExpression.blockName}
           role="heading"
           aria-level="1"
+          style={{paddingBottom: 12}}
         />
       );
     }
     if (programmingExpression.imageUrl) {
-      return <img src={programmingExpression.imageUrl} style={styles.image} />;
+      return (
+        // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+        // Verify or update this alt-text as necessary
+        <img src={programmingExpression.imageUrl} style={styles.image} alt="" />
+      );
     }
     return <h1>{programmingExpression.name}</h1>;
   };

@@ -10,17 +10,13 @@ import {
 import {
   PageLabels,
   SectionHeaders,
-  TextFields,
   Year,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
 import {FormContext} from '../../form_components_func/FormComponent';
 import {LabeledCheckBoxes} from '../../form_components_func/labeled/LabeledCheckBoxes';
-import {
-  LabeledRadioButtons,
-  LabeledRadioButtonsWithAdditionalTextFields,
-} from '../../form_components_func/labeled/LabeledRadioButtons';
+import {LabeledRadioButtons} from '../../form_components_func/labeled/LabeledRadioButtons';
 
 const ImplementationPlan = props => {
   const {data} = props;
@@ -72,13 +68,6 @@ const ImplementationPlan = props => {
               .replace('{{CS program}}', programInfo.name)
               .replace('{{min hours}}', programInfo.minCourseHours)}
           />
-
-          <LabeledRadioButtonsWithAdditionalTextFields
-            name="replaceExisting"
-            textFieldMap={{
-              [TextFields.iDontKnowExplain]: 'other',
-            }}
-          />
         </>
       );
     } else if (!!data.willTeach) {
@@ -122,8 +111,11 @@ const uniqueRequiredFields = {
 ImplementationPlan.getDynamicallyRequiredFields = data => {
   const requiredFields = ['willTeach'];
 
-  if (data.program && data.willTeach === 'Yes') {
-    requiredFields.push(...uniqueRequiredFields[data.program]);
+  if (data.willTeach === 'Yes') {
+    requiredFields.push('enoughCourseHours');
+    if (data.program) {
+      requiredFields.push(...uniqueRequiredFields[data.program]);
+    }
   }
 
   return requiredFields;

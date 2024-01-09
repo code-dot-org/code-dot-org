@@ -17,10 +17,16 @@ class EvaluateRubricJob < ApplicationJob
       'CSD U3 Interactive Card Final_2023' => 'CSD-2022-U3-L17',
       'CSD U3 Sprites scene challenge_2023' => 'New-U3-2022-L10',
       'CSD web project animated review_2023' => 'New-U3-2022-L13',
-      'CSD games sidescroll review_2023' => 'New-U3-2022-L20'
+      'CSD games sidescroll review_2023' => 'New-U3-2022-L20',
     },
     'allthethings' => {
       'CSD U3 Sprites scene challenge_allthethings' => 'allthethings-lesson-48',
+    },
+    'interactive-games-animations-2023' => {
+      'CSD U3 Interactive Card Final_2023' => 'CSD-2022-U3-L17',
+      'CSD U3 Sprites scene challenge_2023' => 'New-U3-2022-L10',
+      'CSD web project animated review_2023' => 'New-U3-2022-L13',
+      'CSD games sidescroll review_2023' => 'New-U3-2022-L20',
     }
   }
 
@@ -379,10 +385,11 @@ class EvaluateRubricJob < ApplicationJob
       rubric.learning_goals.each do |lg|
         next unless ai_mapping.key?(lg.learning_goal)
         ai_evaluation = ai_mapping[lg.learning_goal]
+        label = ai_evaluation.key?('Grade') ? ai_evaluation['Grade'] : ai_evaluation['Label']
         LearningGoalAiEvaluation.create!(
           learning_goal_id: lg.id,
           rubric_ai_evaluation_id: rubric_ai_evaluation.id,
-          understanding: understanding_s_to_i(ai_evaluation['Grade']),
+          understanding: understanding_s_to_i(label),
           ai_confidence: ai_evaluation['Confidence'],
         )
       end

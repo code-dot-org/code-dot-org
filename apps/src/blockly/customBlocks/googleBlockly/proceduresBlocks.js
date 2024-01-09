@@ -47,7 +47,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       },
     ],
     style: 'procedure_blocks',
-    helpUrl: '%{BKY_PROCEDURES_DEFNORETURN_HELPURL}',
+    helpUrl: '/docs/spritelab/codestudio_definingFunction',
     tooltip: '%{BKY_PROCEDURES_DEFNORETURN_TOOLTIP}',
     extensions: [
       'procedure_def_get_def_mixin',
@@ -78,9 +78,10 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     nextStatement: null,
     previousStatement: null,
     style: 'procedure_blocks',
-    helpUrl: '%{BKY_PROCEDURES_CALLNORETURN_HELPURL}',
+    helpUrl: '/docs/spritelab/codestudio_callingFunction',
     extensions: [
       'procedures_edit_button',
+      'procedure_caller_serialize_name',
       'procedure_caller_get_def_mixin',
       'procedure_caller_var_mixin',
       'procedure_caller_update_shape_mixin',
@@ -112,17 +113,29 @@ GoogleBlockly.Extensions.register('procedures_edit_button', function () {
     Blockly.useModalFunctionEditor &&
     this.inputList.length &&
     !this.workspace.isFlyout &&
-    this.workspace.toolbox_ &&
-    this.workspace.id !== Blockly.functionEditor.getWorkspaceId()
+    this.workspace.id !== Blockly.functionEditor.getWorkspaceId() &&
+    toolboxConfigurationSupportsEditButton(this)
   ) {
     const button = new Blockly.FieldButton({
       value: msg.edit(),
       onClick: editButtonHandler,
       colorOverrides: {button: 'blue', text: 'white'},
+      allowReadOnlyClick: true, // We support showing the editor even if viewing in read only mode.
     });
+    button.EDITABLE = false;
+    button.SERIALIZABLE = false;
     this.inputList[this.inputList.length - 1].appendField(button, 'EDIT');
   }
 });
+
+// This extension make the NAME fields of caller/getter blocks serializable.
+GoogleBlockly.Extensions.register(
+  'procedure_caller_serialize_name',
+  function () {
+    const labelField = this.getField('NAME');
+    labelField.SERIALIZABLE = true;
+  }
+);
 
 // This extension renders function and behavior definitions as mini toolboxes
 // The only toolbox blocks are a comment (for functions) or a comment + "this sprite" block (for behaviors)
@@ -231,6 +244,9 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
     fields: {
       NAME: Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,
     },
+    extraState: {
+      userCreated: true,
+    },
   };
 
   if (functionEditorOpen) {
@@ -300,4 +316,32 @@ const getNewFunctionButtonWithCallback = (
     text: msg.createBlocklyFunction(),
     callbackKey,
   };
+};
+
+/**
+ * We always show the edit button for function callers, but
+ * conditionally show it for behavior callers and pickers.
+ * For behavior callers and pickers we only show the edit button
+ * if there is a categorized toolbox or no toolbox.
+ * The reason for this is renaming behaviors without the behavior
+ * category (which can be repopulated after renaming) causes
+ * confusing behavior.
+ * @param {Block} block Block to check
+ * @returns boolean
+ */
+export const toolboxConfigurationSupportsEditButton = block => {
+  if (block.type === BLOCK_TYPES.procedureCall) {
+    return true;
+  } else {
+    // block is a behavior caller or picker.
+    const hasCategorizedToolbox = !!block.workspace.toolbox_;
+    const hasUncategorizedToolbox = !!block.workspace.flyout;
+    // We show the edit button for levels with a categorized toolbox or no toolbox.
+    // We do not show it for uncategorized toolboxes because renaming behaviors
+    // without the behavior category causes confusing behavior.
+    return (
+      hasCategorizedToolbox ||
+      (!hasCategorizedToolbox && !hasUncategorizedToolbox)
+    );
+  }
 };

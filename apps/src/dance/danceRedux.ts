@@ -6,7 +6,7 @@ import {
   ThunkDispatch,
 } from '@reduxjs/toolkit';
 import {SongData, SongMetadata} from './types';
-import {AiOutput} from './ai/types';
+import {DanceAiModalOutputType} from './ai/types';
 import {queryParams} from '../code-studio/utils';
 import {fetchSignedCookies} from '../utils';
 import {
@@ -24,7 +24,7 @@ export interface DanceState {
   songData: SongData;
   runIsStarting: boolean;
   currentAiModalBlockId: string | undefined;
-  aiOutput?: AiOutput;
+  aiOutput?: DanceAiModalOutputType;
   aiModalOpenedFromFlyout: boolean;
   // Fields below are used only by Lab2 Dance
   isRunning: boolean;
@@ -36,7 +36,7 @@ const initialState: DanceState = {
   songData: {},
   runIsStarting: false,
   currentAiModalBlockId: undefined,
-  aiOutput: AiOutput.AI_BLOCK,
+  aiOutput: DanceAiModalOutputType.AI_BLOCK,
   aiModalOpenedFromFlyout: false,
   isRunning: false,
   currentSongMetadata: undefined,
@@ -183,7 +183,7 @@ const danceSlice = createSlice({
     setCurrentSongMetadata: (state, action: PayloadAction<SongMetadata>) => {
       state.currentSongMetadata = action.payload;
     },
-    setAiOutput: (state, action: PayloadAction<AiOutput>) => {
+    setAiOutput: (state, action: PayloadAction<DanceAiModalOutputType>) => {
       state.aiOutput = action.payload;
     },
     openAiModal: (

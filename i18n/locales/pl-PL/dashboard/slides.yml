@@ -2118,3 +2118,10 @@ pl:
       10:
         image: 'notes/hoc_hello_world_2021_freeplay_10.jpg'
         text: "Co więc stworzysz? Możesz opowiedzieć historię o sobie... lub wymyślić własne specjalne postacie. Może nawet wykorzystasz swoje nowe umiejętności informatyczne do następnego szkolnego projektu! Uwolnij swoją wyobraźnię i baw się dobrze!"
+    hoc-dance-ai-warmup:
+      2:
+        text: "Cześć! Nazywam się Miral Kotb i jestem tancerzem, programistą i twórcą iLuminate."
+      3:
+        text: "Informatyka jest związana z kreatywnością na wiele sposobów. Naprawdę niezmierzone. Mam na myśli, że kiedy już będziesz umieć programować, możesz wprowadzać pomysły do czegokolwiek. Robię to z niewielkim wyposażeniem. Gdy masz odpowiednie narzędzia do pisania oprogramowania, możesz wiele zrobić, a możliwości są naprawdę nieograniczone."
+      5:
+        text: "Będziesz używać bloków kodu, aby wybierać różnych tancerzy, zmieniać ich ruchy taneczne, zmuszać ich do reagowania na muzykę i uczynić ich interaktywnymi."

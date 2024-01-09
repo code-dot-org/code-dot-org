@@ -172,20 +172,15 @@ module UsersHelper
   #     }
   #   }
   def script_progress_for_users(users, unit)
-    user_levels = User.user_levels_by_user_by_level(users, unit)
-    teacher_feedbacks = teacher_feedbacks_by_student_by_level(users, unit)
-    paired_user_levels_by_user = PairedUserLevel.pairs_by_user(users)
-    progress_by_user = users.inject({}) do |progress, user|
-      progress[user.id] = merge_user_progress_by_level(
-        script: unit,
-        user: user,
-        user_levels_by_level: user_levels[user.id],
-        teacher_feedback_by_level: teacher_feedbacks[user.id],
-        paired_user_levels: paired_user_levels_by_user[user.id],
-        include_timestamp: true
-      )
-      progress
-    end
+    progress_by_user = multi_merge_user_progress_by_level(
+      script: unit,
+      users: users,
+      user_levels_by_level: User.user_levels_by_user_by_level(users, unit),
+      teacher_feedback_by_level: teacher_feedbacks_by_student_by_level(users, unit),
+      paired_user_levels: PairedUserLevel.pairs_by_user(users),
+      include_timestamp: true
+    )
+
     timestamp_by_user = progress_by_user.transform_values do |user|
       user.values.filter_map {|level| level[:last_progress_at]}.max
     end
@@ -272,51 +267,77 @@ module UsersHelper
     paired_user_levels:,
     include_timestamp: false
   )
-    progress = {}
+    progress = multi_merge_user_progress_by_level(
+      script: script,
+      users: [user],
+      user_levels_by_level: {user.id => user_levels_by_level},
+      teacher_feedback_by_level: {user.id => teacher_feedback_by_level},
+      paired_user_levels: {user.id => paired_user_levels},
+      include_timestamp: include_timestamp
+    )
+
+    progress[user.id]
+  end
+
+  private def multi_merge_user_progress_by_level(
+    script:,
+    users:,
+    user_levels_by_level:,
+    teacher_feedback_by_level:,
+    paired_user_levels:,
+    include_timestamp: false
+  )
+    progress = users.map {|user| [user.id, {}]}.to_h
     script.script_levels.each do |sl|
       sl.level_ids.each do |level_id|
         level = Level.cache_find(level_id)
-        level_for_progress = level.get_level_for_progress(user, script)
-        ul = user_levels_by_level.try(:[], level_for_progress.id)
+        users.each do |user|
+          level_for_progress = level.get_level_for_progress(user, script)
 
-        feedback = teacher_feedback_by_level.try(:[], level_for_progress.id)
-        level_progress = get_level_progress(
-          user.id, ul, feedback&.review_state, sl, paired_user_levels, include_timestamp
-        )
-
-        if level.is_a?(BubbleChoice) # we have a parent level
-          bubble_choice_progress = get_bubble_choice_progress(
-            level, user, user_levels_by_level, teacher_feedback_by_level, sl, paired_user_levels, include_timestamp
+          level_progress = get_level_progress(
+            user_id: user.id,
+            user_level: user_levels_by_level[user.id].try(:[], level_for_progress.id),
+            feedback_review_state:
+              teacher_feedback_by_level[user.id].try(:[], level_for_progress.id)&.review_state,
+            script_level: sl,
+            paired_user_levels: paired_user_levels[user.id],
+            include_timestamp: include_timestamp
           )
-          if bubble_choice_progress.present?
-            progress.merge!(bubble_choice_progress.compact)
 
-            sum_time_spent = bubble_choice_progress.values.reduce(0) do |sum, sublevel_progress|
-              sublevel_progress[:time_spent] ? sum + sublevel_progress[:time_spent] : sum
-            end
+          if level.is_a?(BubbleChoice) # we have a parent level
+            bubble_choice_progress = get_bubble_choice_progress(
+              level, user, user_levels_by_level[user.id], teacher_feedback_by_level[user.id], sl, paired_user_levels[user.id], include_timestamp
+            )
+            if bubble_choice_progress.present?
+              progress[user.id].merge!(bubble_choice_progress.compact)
 
-            # The existence of level_progress needs to be checked due to a race condition where the user makes sublevel
-            # progress between when user_levels_by_level is fetched and when level_for_progress is fetched. In this
-            # case, user_levels_by_level may not include the user level for the new level_for_progress, resulting in nil
-            # level_progress. This may manifest for the user as a bubble choice bubble looking as though it hasn't been tried
-            # even though there is progress on a sublevel and should be resolved by a page refresh.
-            if level_progress && sum_time_spent > 0
-              level_progress[:time_spent] = sum_time_spent
+              sum_time_spent = bubble_choice_progress.values.reduce(0) do |sum, sublevel_progress|
+                sublevel_progress[:time_spent] ? sum + sublevel_progress[:time_spent] : sum
+              end
+
+              # The existence of level_progress needs to be checked due to a race condition where the user makes sublevel
+              # progress between when user_levels_by_level is fetched and when level_for_progress is fetched. In this
+              # case, user_levels_by_level may not include the user level for the new level_for_progress, resulting in nil
+              # level_progress. This may manifest for the user as a bubble choice bubble looking as though it hasn't been tried
+              # even though there is progress on a sublevel and should be resolved by a page refresh.
+              if level_progress && sum_time_spent > 0
+                level_progress[:time_spent] = sum_time_spent
+              end
             end
           end
+
+          next unless level_progress
+
+          # if status is nil or not_tried, we don't need to get pages completed
+          status = level_progress[:status]
+          unless status.nil? || status == LEVEL_STATUS.not_tried
+            # if the level has multiple pages, we add an additional
+            # array of booleans indicating which pages have been completed.
+            level_progress[:pages_completed] = get_pages_completed(user, sl)
+          end
+
+          progress[user.id][level_id] = level_progress.compact
         end
-
-        next unless level_progress
-
-        # if status is nil or not_tried, we don't need to get pages completed
-        status = level_progress[:status]
-        unless status.nil? || status == LEVEL_STATUS.not_tried
-          # if the level has multiple pages, we add an additional
-          # array of booleans indicating which pages have been completed.
-          level_progress[:pages_completed] = get_pages_completed(user, sl)
-        end
-
-        progress[level_id] = level_progress.compact
       end
     end
     progress
@@ -324,12 +345,12 @@ module UsersHelper
 
   # Summarizes a user's progress on a particular level
   private def get_level_progress(
-    user_id,
-    user_level,
-    feedback_review_state,
-    script_level,
-    paired_user_levels,
-    include_timestamp
+    user_id:,
+    user_level:,
+    feedback_review_state:,
+    script_level:,
+    paired_user_levels:,
+    include_timestamp:
   )
     # if we don't have a user level, that means the user doesn't have any
     # progress on this level, so the client interprets a nil value as not_tried.
@@ -374,10 +395,15 @@ module UsersHelper
 
     # get progress for sublevels to save in levels hash
     level.sublevels.each do |sublevel|
-      level_for_progress = BubbleChoice.level_for_progress_for_sublevel(sublevel)
-      ul = user_levels_by_level.try(:[], level_for_progress.id)
-      feedback = teacher_feedback_by_level.try(:[], sublevel.id)
-      sublevel_progress = get_level_progress(user.id, ul, feedback&.review_state, script_level, paired_user_levels, include_timestamp)
+      level_for_progress = sublevel.get_level_for_progress
+      sublevel_progress = get_level_progress(
+        user_id: user.id,
+        user_level: user_levels_by_level.try(:[], level_for_progress.id),
+        feedback_review_state: teacher_feedback_by_level.try(:[], sublevel.id)&.review_state,
+        script_level: script_level,
+        paired_user_levels: paired_user_levels,
+        include_timestamp: include_timestamp
+      )
       next unless sublevel_progress
 
       progress[sublevel.id] = sublevel_progress

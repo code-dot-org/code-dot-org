@@ -2,6 +2,8 @@ require_relative '../../shared/middleware/helpers/storage_id'
 require 'cdo/aws/s3'
 require 'cdo/db'
 
+# rubocop:disable CustomCops/PegasusDbUsage
+# rubocop:disable CustomCops/DashboardDbUsage
 class DeleteAccountsHelper
   class SafetyConstraintViolation < RuntimeError; end
 
@@ -197,7 +199,6 @@ class DeleteAccountsHelper
 
     unless pd_enrollment_ids.empty?
       Pd::PreWorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
-      Pd::WorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
       Pd::TeacherconSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
       Pd::Enrollment.with_deleted.where(id: pd_enrollment_ids).each(&:clear_data)
     end
@@ -285,16 +286,6 @@ class DeleteAccountsHelper
     @log.puts "Removing EmailPreference"
     record_count = EmailPreference.where(email: email).delete_all
     @log.puts "Removed #{record_count} EmailPreference" if record_count > 0
-  end
-
-  # Removes signature and school_id from applications for this user
-  # @param [User] user
-  def anonymize_circuit_playground_discount_application(user)
-    @log.puts "Anonymizing CircuitPlaygroundDiscountApplication"
-    if user.circuit_playground_discount_application
-      user.circuit_playground_discount_application.anonymize
-      @log.puts "Anonymized 1 CircuitPlaygroundDiscountApplication"
-    end
   end
 
   def purge_teacher_feedbacks(user_id)
@@ -433,7 +424,6 @@ class DeleteAccountsHelper
     clean_and_destroy_code_reviews(user.id)
     remove_census_submissions(user_email) if user_email&.present?
     remove_email_preferences(user_email) if user_email&.present?
-    anonymize_circuit_playground_discount_application(user)
     clean_level_source_backed_progress(user.id)
     clean_pegasus_forms_for_user(user)
     delete_project_backed_progress(user)
@@ -505,3 +495,5 @@ class DeleteAccountsHelper
       )
   end
 end
+# rubocop:enable CustomCops/PegasusDbUsage
+# rubocop:enable CustomCops/DashboardDbUsage
