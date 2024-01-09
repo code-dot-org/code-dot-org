@@ -74,7 +74,6 @@ export default class MusicPlayer {
   /**
    * Pre-load sounds for playback
    */
-  // TODO: Metrics?
   preloadSounds(
     events: PlaybackEvent[],
     onLoadFinished?: LoadFinishedCallback
