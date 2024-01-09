@@ -116,6 +116,7 @@ class UnconnectedMusicView extends React.Component {
     const key = AppConfig.getValue('key');
 
     this.player = new MusicPlayer(bpm, key && Key[key.toUpperCase()]);
+    Globals.setPlayer(this.player);
     this.analyticsReporter = new AnalyticsReporter();
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
@@ -255,7 +256,6 @@ class UnconnectedMusicView extends React.Component {
   }
 
   // Load the library and initialize the music player, if not already loaded.
-  // Currently, we only load one library per progression.
   loadAndInitializePlayer = async libraryName => {
     if (this.state.currentLibraryName === libraryName) {
       // Already loaded this library, no need to load again.
@@ -281,9 +281,6 @@ class UnconnectedMusicView extends React.Component {
     } else {
       this.sequencer = new MusicPlayerStubSequencer();
     }
-
-    Globals.setLibrary(this.library);
-    Globals.setPlayer(this.player);
 
     this.player.updateConfiguration(
       this.library.getBPM(),
