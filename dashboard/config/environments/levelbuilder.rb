@@ -3,7 +3,7 @@ require Rails.root.join('config/environments/staging')
 
 Dashboard::Application.configure do
   # Show full error reports
-  config.consider_all_requests_local = true
+  config.consider_all_requests_local = false
 
   # Act like levelbuilder mode by default.
   config.levelbuilder_mode = CDO.with_default(true).levelbuilder_mode
