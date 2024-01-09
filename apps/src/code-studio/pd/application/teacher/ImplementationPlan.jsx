@@ -103,16 +103,19 @@ ImplementationPlan.associatedFields = [
 ];
 
 const uniqueRequiredFields = {
-  [PROGRAM_CSD]: ['csdWhichGrades', 'enoughCourseHours'],
-  [PROGRAM_CSP]: ['cspWhichGrades', 'cspHowOffer', 'enoughCourseHours'],
-  [PROGRAM_CSA]: ['csaWhichGrades', 'csaHowOffer', 'enoughCourseHours'],
+  [PROGRAM_CSD]: ['csdWhichGrades'],
+  [PROGRAM_CSP]: ['cspWhichGrades', 'cspHowOffer'],
+  [PROGRAM_CSA]: ['csaWhichGrades', 'csaHowOffer'],
 };
 
 ImplementationPlan.getDynamicallyRequiredFields = data => {
   const requiredFields = ['willTeach'];
 
-  if (data.program && data.willTeach === 'Yes') {
-    requiredFields.push(...uniqueRequiredFields[data.program]);
+  if (data.willTeach === 'Yes') {
+    requiredFields.push('enoughCourseHours');
+    if (data.program) {
+      requiredFields.push(...uniqueRequiredFields[data.program]);
+    }
   }
 
   return requiredFields;
