@@ -76,7 +76,7 @@ function prepareSourcesForWorkspaces(source) {
   if (Blockly.useModalFunctionEditor) {
     procedureTypesToHide.push(BLOCK_TYPES.procedureDefinition);
   }
-  const {mainSource, hiddenDefinitionSource} = moveHiddenProcedures(
+  const {mainSource, hiddenDefinitionSource} = moveHiddenBlocks(
     parsedSource,
     procedureTypesToHide
   );
@@ -106,17 +106,18 @@ function parseSource(source) {
 }
 
 /**
- * Move hidden procedures from the source to a hidden definition object.
+ * Move hidden blocks (e.g. procedures) from the source to a hidden definition object.
  * These will be used to initialize the main and hidden definitions workspaces, respectively.
- * Procedures are hidden if they have a type in the procedureTypesToHide array.
+ * Blocks are hidden if they have a type in the procedureTypesToHide array, or if they
+ * are explicitly marked as invisible in the project source.
  * In addition, copy the procedure model from the source
- * object to the hidden definition object when moving a procedure.
+ * object to the hidden definition object when moving a procedure block.
  * @param {Object} source Project source object, parsed from JSON.
  * @param {Array<string>} procedureTypesToHide procedure types to move to procedures object.
  * @returns void
  * exported for unit testing
  */
-export function moveHiddenProcedures(source = {}, procedureTypesToHide = []) {
+export function moveHiddenBlocks(source = {}, procedureTypesToHide = []) {
   if (procedureTypesToHide.length === 0 || !hasBlocks(source)) {
     return {mainSource: {}, hiddenDefinitionSource: {}};
   }
@@ -131,16 +132,16 @@ export function moveHiddenProcedures(source = {}, procedureTypesToHide = []) {
   hiddenDefinitionSource.procedures = [];
 
   source.blocks.blocks.forEach(block => {
-    const destination = procedureTypesToHide.includes(block.type)
-      ? hiddenDefinitionSource
-      : mainSource;
+    const {invisible, procedureId} = block.extraState || {};
+    const hideBlock = procedureTypesToHide.includes(block.type) || invisible;
+    const destination = hideBlock ? hiddenDefinitionSource : mainSource;
     destination.blocks.blocks.push(block);
 
     // Also copy the procedure model for blocks to that need to be hidden
     // Equality check works because hiddenDefinitionSource and mainSource are different object references
-    if (destination === hiddenDefinitionSource) {
+    if (destination === hiddenDefinitionSource && procedureId) {
       const procedureModel = source.procedures.find(
-        procedure => procedure.id === block.extraState?.procedureId
+        procedure => procedure.id === procedureId
       );
       if (procedureModel) {
         hiddenDefinitionSource.procedures.push(procedureModel);

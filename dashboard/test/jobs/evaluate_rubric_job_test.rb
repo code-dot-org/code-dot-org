@@ -13,7 +13,8 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     @rubric = create :rubric, level: @script_level.level, lesson: @script_level.lesson
     create :learning_goal, rubric: @rubric, learning_goal: 'learning-goal-1'
     create :learning_goal, rubric: @rubric, learning_goal: 'learning-goal-2'
-    assert_equal 2, @rubric.learning_goals.count
+    create :learning_goal, rubric: @rubric, learning_goal: 'learning-goal-3'
+    assert_equal 3, @rubric.learning_goals.count
 
     # Don't actually talk to S3 when running SourceBucket.new
     AWS::S3.stubs :create_client
@@ -291,12 +292,13 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     fake_confidence_levels = {
       'learning-goal-1': "MEDIUM",
       'learning-goal-2': "MEDIUM",
+      'learning-goal-3': "MEDIUM",
     }.to_json
     fake_params = {
       'model' => 'gpt-4-0613',
       'remove-comments' => '1',
       'num-responses' => '3',
-      'num-passing-grades' => '2',
+      'num-passing-labels' => '2',
       'temperature' => '0.2'
     }.to_json
     bucket = {
@@ -339,7 +341,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       "model" => "gpt-4-0613",
       "remove-comments" => "1",
       "num-responses" => "3",
-      "num-passing-grades" => "2",
+      "num-passing-labels" => "2",
       "temperature" => "0.2",
       "code" => code,
       "prompt" => 'fake-system-prompt',
@@ -355,6 +357,10 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       {
         'Key Concept' => 'learning-goal-2',
         'Grade' => 'Extensive Evidence'
+      },
+      {
+        'Key Concept' => 'learning-goal-3',
+        'Label' => 'Extensive Evidence'
       }
     ]
     ai_proxy_origin = 'http://fake-ai-proxy-origin'
