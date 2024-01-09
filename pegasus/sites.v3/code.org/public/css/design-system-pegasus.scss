@@ -963,7 +963,7 @@ form {
     }
 
     span {
-      color: $brand_accent_default;
+      color: var(--brand_accent_default);
       margin: 0 2px;
     }
   }
@@ -1059,7 +1059,7 @@ section.quote {
   }
 
   span {
-    color: $brand_accent_default;
+    color: var(--brand_accent_default);
     margin: 0 2px;
   }
 }
