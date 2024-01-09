@@ -40,7 +40,7 @@ class ReportAbuseController < ApplicationController
         return head :forbidden
       end
 
-      name = current_user&.name
+      name = current_user&.name || ''
       email = current_user&.email
       age = current_user&.age
       username = current_user&.username
