@@ -44,7 +44,7 @@ import {
 } from '@cdo/apps/lab2/lab2Redux';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
-import {baseAssetUrl, BlockMode, DEFAULT_LIBRARY} from '../constants';
+import {baseAssetUrl, BlockMode, DEFAULT_LIBRARY, Triggers} from '../constants';
 import musicI18n from '../locale';
 import UpdateTimer from './UpdateTimer';
 import ValidatorProvider from '@cdo/apps/lab2/progress/ValidatorProvider';
@@ -435,6 +435,14 @@ class UnconnectedMusicView extends React.Component {
     this.props.clearPlaybackEvents();
     this.props.clearOrderedFunctions();
 
+    // Sequence out all possible trigger events to preload sounds if necessary.
+    const allTriggerEvents = [];
+    Triggers.forEach(trigger => {
+      this.sequencer.clear();
+      this.musicBlocklyWorkspace.executeTrigger(trigger.id, 0);
+      allTriggerEvents.push(...this.sequencer.getPlaybackEvents());
+    });
+
     this.sequencer.clear();
     this.musicBlocklyWorkspace.executeCompiledSong(this.playingTriggers);
     this.props.addPlaybackEvents({
@@ -446,7 +454,7 @@ class UnconnectedMusicView extends React.Component {
     });
 
     this.player.preloadSounds(
-      this.sequencer.getPlaybackEvents(),
+      [this.sequencer.getPlaybackEvents(), ...allTriggerEvents],
       (loadTimeMs, soundsLoaded) => {
         // Report load time metrics if any sounds were loaded.
         if (soundsLoaded > 0) {

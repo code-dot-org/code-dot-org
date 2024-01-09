@@ -59,11 +59,12 @@ export default class MusicPlayer {
    * Load a sound into the sound system using the given buffer. Currently only
    * used to upload custom sounds (hidden/demo-only feature).
    *
+   * TODO: re-enable
+   *
    * @param id
    * @param buffer
    */
   loadSoundFromBuffer(id: number, buffer: ArrayBuffer) {
-    // TODO: re-enable
     // soundApi.LoadSoundFromBuffer(id, buffer);
   }
 
