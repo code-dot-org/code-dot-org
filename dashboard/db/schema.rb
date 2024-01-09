@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_12_16_015256) do
+ActiveRecord::Schema.define(version: 2024_01_04_215831) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1329,15 +1329,6 @@ ActiveRecord::Schema.define(version: 2023_12_16_015256) do
     t.index ["pd_session_id"], name: "index_pd_workshop_survey_foorm_submissions_on_pd_session_id"
     t.index ["pd_workshop_id"], name: "index_pd_workshop_survey_foorm_submissions_on_pd_workshop_id"
     t.index ["user_id"], name: "index_pd_workshop_survey_foorm_submissions_on_user_id"
-  end
-
-  create_table "pd_workshop_surveys", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
-    t.integer "pd_enrollment_id", null: false
-    t.text "form_data", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "type"
-    t.index ["pd_enrollment_id"], name: "index_pd_workshop_surveys_on_pd_enrollment_id", unique: true
   end
 
   create_table "pd_workshops", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
