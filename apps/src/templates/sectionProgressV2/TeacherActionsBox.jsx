@@ -11,15 +11,15 @@ export default function TeacherActionsBox({isViewingLevelProgress}) {
         <div className="icons-2">
           <div className="legend-column-2">
             <div className="legend-item-2">
-              <LegendItem iconId="star" labelText="Needs feedback" />
+              <LegendItem needsFeedback={true} labelText="Needs feedback" />
             </div>
             <div className="legend-item-2">
-              <LegendItem iconId="star" labelText="Viewed" />
+              <LegendItem progressBoxColor="gray" labelText="Viewed" />
             </div>
           </div>
           <div className="legend-column-2">
             <div className="legend-item-2">
-              <LegendItem iconId="star" labelText="Feedback given" />
+              <LegendItem feedbackGiven={true} labelText="Feedback given" />
             </div>
             <div className="legend-item-2">
               <LegendItem
