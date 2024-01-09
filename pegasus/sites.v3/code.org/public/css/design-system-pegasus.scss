@@ -852,7 +852,7 @@ form {
   }
 
   p {
-    font-family: $barlowSemiCondensed-medium, sans-serif;
+    font-family: var(--barlowSemiCondensed-medium), sans-serif;
   }
 
   .pagination {
@@ -1032,7 +1032,7 @@ section.quote {
   p {
     font-size: 1.25rem;
     color: var(--neutral_white);
-    font-family: $barlowSemiCondensed-medium;
+    font-family: var(--barlowSemiCondensed-medium);
 
     &.quote-text {
       font-size: 1.35rem;
