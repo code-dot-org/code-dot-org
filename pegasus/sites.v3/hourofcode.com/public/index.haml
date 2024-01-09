@@ -8,8 +8,6 @@ social:
 :ruby
   @header["title"] = hoc_s(:front_title, locals: {campaign_date: campaign_date('full-year')})
 
-  hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
-
 %link{href: "/css/generated/front-page.css", rel: "stylesheet", type: "text/css"}
 %link{href: "/css/generated/hoc-banner.css", rel: "stylesheet", type: "text/css"}
 %link{href: "/css/generated/highlights-homepage.css", rel: "stylesheet", id: "highlight-styles"}
@@ -69,10 +67,11 @@ social:
           = view :hoc_events_counter
       = view :map
       .text-wrapper.centered
-        %p.body-two{style: "margin-bottom: 2rem;"}
+        %p.body-two.no-margin-bottom
           =hoc_s(:hoc_homepage_registration_desc)
-        %a.link-button{href: resolve_url("/events")}
-          =hoc_s(:call_to_action_register_your_hoc)
+        - if hoc_mode != "false"
+          %a.link-button{href: resolve_url("/events"), style: "margin-top: 2rem"}
+            =hoc_s(:call_to_action_register_your_hoc)
 
   -# HoC Live Spanish banner
   - if @language == 'es' || @language == 'la'
