@@ -67,8 +67,13 @@ class ReportAbuseController < ApplicationController
         return
       end
 
-      username = current_user&.username
-      send_abuse_report(params[:name], params[:email], params[:age], params[:abuse_url], username)
+      send_abuse_report(
+        current_user&.name || '',
+        params[:email],
+        params[:age],
+        params[:abuse_url],
+        current_user&.username
+      )
       update_abuse_score
     end
     redirect_to "https://support.code.org"
@@ -76,7 +81,6 @@ class ReportAbuseController < ApplicationController
 
   def report_abuse_form
     @react_props = {
-      name: current_user&.name,
       email: current_user&.email,
       age: current_user&.age,
       requireCaptcha: require_captcha?,
