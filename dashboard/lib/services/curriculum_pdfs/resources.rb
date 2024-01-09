@@ -173,7 +173,7 @@ module Services
         def fetch_url_to_path(url, path)
           service = Drive::DriveService.new
           service.authorization = Google::Auth::ServiceAccountCredentials.make_creds(
-            json_key_io: StringIO.new(CDO.gdrive_export_secret || ""),
+            json_key_io: StringIO.new(CDO.gdrive_export_secret.to_json || ""),
             scope: Google::Apis::DriveV3::AUTH_DRIVE,
           )
           if url.start_with?("https://docs.google.com/document/d/")
