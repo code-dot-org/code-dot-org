@@ -276,9 +276,6 @@ describe('FormController', () => {
     });
 
     it('Shows apps closed message if', async () => {
-      //const server = sinon.fakeServer.create();
-      //server.respondWith(serverResponse(200, {}));
-
       sinon.stub(window, 'fetch').returns(
         Promise.resolve({
           ok: true,

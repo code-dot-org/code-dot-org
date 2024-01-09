@@ -95,7 +95,6 @@ const FormController = props => {
     ...getInitialStored(sessionStorageKey, 'data'),
     ...getInitialData(),
   }));
-  console.log(data);
   const [regionalPartner] = useRegionalPartner(data);
   const [submitting, setSubmitting] = useState(false);
   const [saving, setSaving] = useState(false);
@@ -129,9 +128,7 @@ const FormController = props => {
   // when updating regional partner, determine if we should show
   // the application closed message
   useEffect(() => {
-    console.log('regionalPartner', regionalPartner);
     if (regionalPartner?.are_apps_closed) {
-      console.log('applications are closed!');
       setShowApplicationClosedMessage(true);
       scrollToTop();
       return;
