@@ -11,8 +11,16 @@ class RubricsControllerTest < ActionController::TestCase
 
     @teacher = create :teacher
     @student = create :student
-    create :follower, student_user: @student, user: @teacher
+    @follower = create :follower, student_user: @student, user: @teacher
     @rubric = create :rubric, lesson: @lesson, level: @level
+
+    @followers = []
+    @students = []
+
+    5.times do
+      @students << create(:student)
+      @followers << create(:follower, section: @follower.section, student_user: @students[-1], user: @teacher)
+    end
 
     @fake_ip = '127.0.0.1'
     @storage_id = create_storage_id_for_user(@student.id)
@@ -268,6 +276,314 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal 0, json_response.length
   end
 
+  test "returns forbidden when getting aggregate status if ai experiment isn't enabled" do
+    sign_in @teacher
+
+    Experiment.expects(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(false)
+
+    get :ai_evaluation_status_for_all, params: {
+      id: @rubric.id,
+      sectionId: @follower.section.id,
+    }
+
+    assert_response :forbidden
+  end
+
+  test "returns bad request when getting aggregate status if ai isn't enabled for script level" do
+    sign_in @teacher
+
+    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
+    EvaluateRubricJob.expects(:ai_enabled?).with(@script_level).returns(false)
+
+    get :ai_evaluation_status_for_all, params: {
+      id: @rubric.id,
+      sectionId: @follower.section.id,
+    }
+
+    assert_response :bad_request
+  end
+
+  test "returns ok and not attempted count when getting aggregate status if no work is attempted" do
+    student = create :student
+    follower = create :follower, student_user: student, user: @teacher
+    followers = []
+    students = []
+    5.times do
+      students << create(:student)
+      followers << create(:follower, section: follower.section, student_user: students[-1], user: @teacher)
+    end
+    sign_in @teacher
+
+    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
+    EvaluateRubricJob.stubs(:ai_enabled?).with(@script_level).returns(true)
+
+    get :ai_evaluation_status_for_all, params: {
+      id: @rubric.id,
+      sectionId: follower.section.id,
+    }
+
+    assert_response :success
+    assert_equal 6, json_response['notAttemptedCount']
+    assert_equal 0, json_response['attemptedCount']
+    assert_equal 0, json_response['attemptedUnevaluatedCount']
+    assert_equal 0, json_response['lastAttemptEvaluatedCount']
+    assert json_response['csrfToken']
+  end
+
+  test "returns ok and attempted count when getting aggregate status if work is attempted" do
+    sign_in @teacher
+
+    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
+    EvaluateRubricJob.stubs(:ai_enabled?).with(@script_level).returns(true)
+
+    get :ai_evaluation_status_for_all, params: {
+      id: @rubric.id,
+      sectionId: @follower.section.id,
+    }
+
+    assert_response :success
+    assert_equal 5, json_response['notAttemptedCount']
+    assert_equal 1, json_response['attemptedCount']
+    assert_equal 1, json_response['attemptedUnevaluatedCount']
+    assert_equal 0, json_response['lastAttemptEvaluatedCount']
+    assert json_response['csrfToken']
+  end
+
+  test "returns ok and mixed attempted/evaluated count when getting aggregate status" do
+    student = create :student
+    follower = create :follower, student_user: student, user: @teacher
+    followers = []
+    students = []
+
+    new_storage_id = create_storage_id_for_user(student.id)
+    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, new_storage_id, @script_level.script_id)
+    new_channel_id = channel_token.channel
+    stub_project_source_data(new_channel_id)
+
+    5.times do
+      students << create(:student)
+      followers << create(:follower, section: follower.section, student_user: students[-1], user: @teacher)
+    end
+
+    Timecop.freeze do
+      students.each do |s|
+        # create a new attempt for each student
+        new_storage_id = create_storage_id_for_user(s.id)
+        channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, new_storage_id, @script_level.script_id)
+        new_channel_id = channel_token.channel
+        stub_project_source_data(new_channel_id)
+      end
+      Timecop.travel 1.minute
+      students.each do |s|
+        # create an AI evaluation for each student
+        learning_goal = create :learning_goal, rubric: @rubric
+        rubric_ai_evaluation = create(
+          :rubric_ai_evaluation,
+          rubric: @rubric,
+          user: s,
+          requester: @teacher,
+          status: 2 # successful
+        )
+        create(
+          :learning_goal_ai_evaluation,
+          rubric_ai_evaluation: rubric_ai_evaluation,
+          user: s,
+          learning_goal: learning_goal,
+          requester: @teacher
+        )
+      end
+    end
+    sign_in @teacher
+
+    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
+    EvaluateRubricJob.stubs(:ai_enabled?).with(@script_level).returns(true)
+
+    get :ai_evaluation_status_for_all, params: {
+      id: @rubric.id,
+      sectionId: follower.section.id,
+    }
+
+    assert_response :success
+    assert_equal 0, json_response['notAttemptedCount']
+    assert_equal 6, json_response['attemptedCount']
+    assert_equal 1, json_response['attemptedUnevaluatedCount']
+    assert_equal 5, json_response['lastAttemptEvaluatedCount']
+    assert json_response['csrfToken']
+  end
+
+  test "returns forbidden when running ai evals for all if experiment isn't enabled" do
+    sign_in @teacher
+
+    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(false)
+
+    get :run_ai_evaluations_for_all, params: {
+      id: @rubric.id,
+      sectionId: @follower.section.id,
+    }
+
+    assert_response :forbidden
+  end
+
+  test "returns bad request when running ai evals for all if ai isn't enabled" do
+    sign_in @teacher
+
+    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
+    EvaluateRubricJob.expects(:ai_enabled?).with(@script_level).returns(false)
+
+    get :run_ai_evaluations_for_all, params: {
+      id: @rubric.id,
+      sectionId: @follower.section.id,
+    }
+
+    assert_response :bad_request
+  end
+
+  test "returns ok but no evaluation jobs are queued if no work is attempted" do
+    student = create :student
+    follower = create :follower, student_user: student, user: @teacher
+    followers = []
+    students = []
+    5.times do
+      students << create(:student)
+      followers << create(:follower, section: follower.section, student_user: students[-1], user: @teacher)
+    end
+
+    sign_in @teacher
+
+    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
+    EvaluateRubricJob.stubs(:ai_enabled?).with(@script_level).returns(true)
+    EvaluateRubricJob.expects(:perform_later).never
+
+    get :run_ai_evaluations_for_all, params: {
+      id: @rubric.id,
+      sectionId: follower.section.id,
+    }
+
+    assert_response :success
+  end
+
+  test "returns ok and queues 1 eval job when only 1 student has work that is unevaluated when getting aggregate status" do
+    student = create :student
+    follower = create :follower, student_user: student, user: @teacher
+    followers = []
+    students = []
+    5.times do
+      students << create(:student)
+      followers << create(:follower, section: follower.section, student_user: students[-1], user: @teacher)
+    end
+
+    #create attempt for first student
+    new_storage_id = create_storage_id_for_user(student.id)
+    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, new_storage_id, @script_level.script_id)
+    new_channel_id = channel_token.channel
+    stub_project_source_data(new_channel_id)
+
+    Timecop.freeze do
+      students.each do |s|
+        # create a new attempt for each student
+        new_storage_id = create_storage_id_for_user(s.id)
+        channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, new_storage_id, @script_level.script_id)
+        new_channel_id = channel_token.channel
+        stub_project_source_data(new_channel_id)
+      end
+      Timecop.travel 1.minute
+      students.each do |s|
+        # create an AI evaluation for each student
+        learning_goal = create :learning_goal, rubric: @rubric
+        rubric_ai_evaluation = create(
+          :rubric_ai_evaluation,
+          rubric: @rubric,
+          user: s,
+          requester: @teacher,
+          status: 2 # successful
+        )
+        create(
+          :learning_goal_ai_evaluation,
+          rubric_ai_evaluation: rubric_ai_evaluation,
+          user: s,
+          learning_goal: learning_goal,
+          requester: @teacher
+        )
+      end
+    end
+    sign_in @teacher
+
+    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
+    EvaluateRubricJob.stubs(:ai_enabled?).with(@script_level).returns(true)
+    EvaluateRubricJob.expects(:perform_later).once
+
+    get :run_ai_evaluations_for_all, params: {
+      id: @rubric.id,
+      sectionId: @follower.section.id,
+    }
+
+    assert_response :success
+  end
+
+  test "returns ok and queues 5 jobs when running ai eval for all" do
+    student = create :student
+    follower = create :follower, student_user: student, user: @teacher
+    followers = []
+    students = []
+    5.times do
+      students << create(:student)
+      followers << create(:follower, section: follower.section, student_user: students[-1], user: @teacher)
+    end
+
+    Timecop.freeze do
+      students.each do |s|
+        # create an AI evaluation for each student
+        learning_goal = create :learning_goal, rubric: @rubric
+        rubric_ai_evaluation = create(
+          :rubric_ai_evaluation,
+          rubric: @rubric,
+          user: s,
+          requester: @teacher,
+          status: 2 # successful
+        )
+        create(
+          :learning_goal_ai_evaluation,
+          rubric_ai_evaluation: rubric_ai_evaluation,
+          user: s,
+          learning_goal: learning_goal,
+          requester: @teacher
+        )
+      end
+      Timecop.travel 1.minute
+      students.each do |s|
+        # create a new attempt for each student
+        new_storage_id = create_storage_id_for_user(s.id)
+        channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, new_storage_id, @script_level.script_id)
+        new_channel_id = channel_token.channel
+        stub_project_source_data(new_channel_id)
+      end
+    end
+    sign_in @teacher
+
+    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
+    EvaluateRubricJob.stubs(:ai_enabled?).with(@script_level).returns(true)
+
+    get :ai_evaluation_status_for_all, params: {
+      id: @rubric.id,
+      sectionId: follower.section.id,
+    }
+
+    assert_response :success
+    assert_equal 1, json_response['notAttemptedCount']
+    assert_equal 5, json_response['attemptedCount']
+    assert_equal 5, json_response['attemptedUnevaluatedCount']
+    assert_equal 0, json_response['lastAttemptEvaluatedCount']
+    assert json_response['csrfToken']
+
+    EvaluateRubricJob.expects(:perform_later).times(5)
+    get :run_ai_evaluations_for_all, params: {
+      id: @rubric.id,
+      sectionId: follower.section.id,
+    }
+
+    assert_response :success
+  end
+
   test "gets teacher evaluations for current user" do
     student = create :student
     sign_in student
@@ -306,7 +622,6 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test "run ai evaluations for user calls EvaluateRubricJob" do
-    create :user_level, user: @student, script: @script_level.script, level: @level
     sign_in @teacher
 
     Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
@@ -329,8 +644,44 @@ class RubricsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test 'run ai evaluations for user succeeds if user attempted but did not submit project' do
+    sign_in @teacher
+
+    new_student = create :student
+    create :follower, student_user: new_student, user: @teacher
+    new_storage_id = create_storage_id_for_user(new_student.id)
+
+    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, new_storage_id, @script_level.script_id)
+    new_channel_id = channel_token.channel
+
+    stub_project_source_data(new_channel_id)
+
+    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
+    EvaluateRubricJob.stubs(:ai_enabled?).returns(true)
+    EvaluateRubricJob.expects(:perform_later).with(user_id: new_student.id, requester_id: @teacher.id, script_level_id: @script_level.id).once
+
+    post :ai_evaluation_status_for_user, params: {
+      id: @rubric.id,
+      userId: new_student.id,
+    }
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert response['attempted']
+    refute response['lastAttemptEvaluated']
+
+    post :run_ai_evaluations_for_user, params: {
+      id: @rubric.id,
+      userId: new_student.id,
+    }
+    assert_response :success
+  end
+
   test "run ai evaluations returns bad request if level not attempted" do
     sign_in @teacher
+
+    new_student = create :student
+    create :follower, student_user: new_student, user: @teacher
+    create_storage_id_for_user(new_student.id)
 
     Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
     EvaluateRubricJob.stubs(:ai_enabled?).returns(true)
@@ -338,7 +689,7 @@ class RubricsControllerTest < ActionController::TestCase
 
     post :ai_evaluation_status_for_user, params: {
       id: @rubric.id,
-      userId: @student.id,
+      userId: new_student.id,
     }
     assert_response :success
     response = JSON.parse(@response.body)
@@ -347,7 +698,7 @@ class RubricsControllerTest < ActionController::TestCase
 
     post :run_ai_evaluations_for_user, params: {
       id: @rubric.id,
-      userId: @student.id,
+      userId: new_student.id,
     }
     assert_response :bad_request
   end
@@ -483,7 +834,8 @@ class RubricsControllerTest < ActionController::TestCase
     fake_source_data = {
       status: 'FOUND',
       body: StringIO.new(fake_main_json),
-      version_id: version_id
+      version_id: version_id,
+      last_modified: DateTime.now
     }
     SourceBucket.any_instance.stubs(:get).with(channel_id, "main.json").returns(fake_source_data)
   end

@@ -1,5 +1,9 @@
 <GamelabJr>
   <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2022-03-31T17:43:40.000Z",
+  "level_num": "custom",
+  "user_id": 9,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -58,7 +62,7 @@
     "start_animations": "\r\n{\r\n  \"orderedKeys\": [\r\n    \"9c787f77-5ab0-4fb2-9040-d73c53a9352c\",\r\n    \"4b99aebc-c7f6-417f-9a13-6961d6a01dad\",\r\n    \"e17050ec-5621-4558-a96f-d120102a522c\",\r\n    \"2e6a4574-fa42-4939-843c-86be70fa5aa7\",\r\n    \"4a3313b5-ccda-494e-a513-120ffe0bfa89\",\r\n    \"4a9587e1-1516-4cf0-a3cc-4ba0a6974948\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"9c787f77-5ab0-4fb2-9040-d73c53a9352c\": {\r\n      \"name\": \"meadow\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fmedia%3Fu%3Dhttps%253A%252F%252Flevelbuilder-studio.code.org%252Fapi%252Fv1%252Fanimation-library%252Flevel_animations%252FCB1PYdRlycVjbBIg9tk9rpAeiKAp3bEN%252Fmeadow.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"CB1PYdRlycVjbBIg9tk9rpAeiKAp3bEN\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"4b99aebc-c7f6-417f-9a13-6961d6a01dad\": {\r\n      \"name\": \"desert\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fmedia%3Fu%3Dhttps%253A%252F%252Flevelbuilder-studio.code.org%252Fapi%252Fv1%252Fanimation-library%252Flevel_animations%252FYh15jDhuuZz8tUVr8WPGgk30OPrIpaJN%252Fdesert.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"Yh15jDhuuZz8tUVr8WPGgk30OPrIpaJN\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"e17050ec-5621-4558-a96f-d120102a522c\": {\r\n      \"name\": \"background_landscape_28\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fmedia%3Fu%3Dhttps%253A%252F%252Flevelbuilder-studio.code.org%252Fapi%252Fv1%252Fanimation-library%252Fspritelab%252FLZXyNpSiLGKtdWSk1goqIUcASiThpg3E%252Fcategory_backgrounds%252Fbackground_landscape_28.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"LZXyNpSiLGKtdWSk1goqIUcASiThpg3E\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"2e6a4574-fa42-4939-843c-86be70fa5aa7\": {\r\n      \"name\": \"rabbit-1\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fmedia%3Fu%3Dhttps%253A%252F%252Flevelbuilder-studio.code.org%252Fapi%252Fv1%252Fanimation-library%252Flevel_animations%252F1XYApA5QwtK9jbb5DTYD_O175Kx_dO5F%252Frabbit-1.png\",\r\n      \"frameSize\": {\r\n        \"x\": 189,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"1XYApA5QwtK9jbb5DTYD_O175Kx_dO5F\",\r\n      \"categories\": [\r\n        \"\"\r\n      ]\r\n    },\r\n    \"4a3313b5-ccda-494e-a513-120ffe0bfa89\": {\r\n      \"name\": \"rabbit-sandy\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fmedia%3Fu%3Dhttps%253A%252F%252Flevelbuilder-studio.code.org%252Fapi%252Fv1%252Fanimation-library%252Flevel_animations%252FdhSmU6UM1GXSVeM8KTglPacniPc676g_%252Frabbit-sandy.png\",\r\n      \"frameSize\": {\r\n        \"x\": 189,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"dhSmU6UM1GXSVeM8KTglPacniPc676g_\",\r\n      \"categories\": [\r\n        \"\"\r\n      ]\r\n    },\r\n    \"4a9587e1-1516-4cf0-a3cc-4ba0a6974948\": {\r\n      \"name\": \"rabbit-snowy\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fmedia%3Fu%3Dhttps%253A%252F%252Flevelbuilder-studio.code.org%252Fapi%252Fv1%252Fanimation-library%252Flevel_animations%252FiDsTje0Jdf7hnUdcRRXRgh7yyQLBfapg%252Frabbit-snowy.png\",\r\n      \"frameSize\": {\r\n        \"x\": 189,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"iDsTje0Jdf7hnUdcRRXRgh7yyQLBfapg\",\r\n      \"categories\": [\r\n        \"\"\r\n      ]\r\n    }\r\n  }\r\n}",
     "validation_enabled": "true",
     "mini_toolbox": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"hello_world_say\",\r\n  \"callout_text\": \"Use this block to make sprites speak.\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"3\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left top\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"hello_world_make_sprite\",\r\n  \"callout_text\": \"Use this block to create a sprite.\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"1\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": -120,\r\n     \"y\": 10\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"hello_world_say\",\"callout_text\":\"Use this block to make sprites speak.\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"3\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left top\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"localization_key\":\"hello_world_make_sprite\",\"callout_text\":\"Use this block to create a sprite.\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"1\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":-120,\"y\":10}}}},{\"element_id\":\".blocklyFlyout [data-id=\\\"3\\\"]\",\"localization_key\":\"hello_world_say\",\"callout_text\":\"Use this block to make sprites speak.\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left top\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"},{\"element_id\":\".blocklyFlyout [data-id=\\\"1\\\"]\",\"localization_key\":\"hello_world_make_sprite\",\"callout_text\":\"Use this block to create a sprite.\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":-120,\"y\":10}}},\"on\":\"\"}]",
     "validation_code": "//Requires zHelloWorldValidation and zValidationHelperFunctions\r\nlevel1();",
     "hide_pause_button": "true",
     "hint_prompt_attempts_threshold": "1",
@@ -70,11 +74,7 @@
     "encrypted_examples": "Wao2CB+999XcuWgtwhzMiapqj3NBqk4XREhbUIAzevPrHpFjG9wRcTMxBkel\nFfs7cEhGmbjXv7PwAEqUNGguYQ==\n",
     "preload_asset_list": null
   },
-  "game_id": 64,
   "published": true,
-  "created_at": "2022-03-31T17:43:40.000Z",
-  "level_num": "custom",
-  "user_id": 9,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-31T17:43:40.643+00:00\",\"changed\":[\"cloned from \\\"coursee_helloworld_say\\\"\"],\"cloned_from\":\"coursee_helloworld_say\"},{\"changed_at\":\"2022-08-08 23:04:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-08-08 23:05:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
@@ -88,7 +88,7 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="gamelab_makeNewSpriteAnon">
+        <block type="gamelab_makeNewSpriteAnon" id="1">
           <title name="ANIMATION_NAME">"face_pizza_1"</title>
           <value name="LOCATION">
             <block type="gamelab_location_picker" can_disconnect_from_parent="false">
@@ -96,7 +96,7 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_spriteSay">
+        <block type="gamelab_spriteSay" id="3">
           <title name="SPEECH">Hello, world!</title>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">

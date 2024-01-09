@@ -16,11 +16,15 @@ import {
   studentLevelInfoShape,
 } from './rubricShapes';
 import LearningGoal from './LearningGoal';
+import LearningGoals from './LearningGoals';
 import Button from '@cdo/apps/templates/Button';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import classnames from 'classnames';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import experiments from '@cdo/apps/util/experiments';
+import StudentSelector from './StudentSelector';
+import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 
 const formatTimeSpent = timeSpent => {
   const minutes = Math.floor(timeSpent / 60);
@@ -137,18 +141,31 @@ export default function RubricContent({
       })}
     >
       {infoText && <InfoAlert text={infoText} />}
-      <div>
-        {!!studentLevelInfo && (
-          <Heading2 className={style.studentName}>
-            {studentLevelInfo.name}
-          </Heading2>
-        )}
+      <div className={style.studentInfoGroup}>
+        {!experiments.isEnabled('ai-rubrics-redesign') &&
+          !!studentLevelInfo && (
+            <Heading2 className={style.studentName}>
+              {studentLevelInfo.name}
+            </Heading2>
+          )}
         <Heading5>
           {i18n.lessonNumbered({
             lessonNumber: lesson.position,
             lessonName: lesson.name,
           })}
         </Heading5>
+        {experiments.isEnabled('ai-rubrics-redesign') && (
+          <div className={style.selectors}>
+            <SectionSelector reloadOnChange={true} requireSelection={false} />
+            <StudentSelector
+              styleName={style.studentSelector}
+              selectedUserId={
+                studentLevelInfo ? studentLevelInfo.user_id : null
+              }
+              reloadOnChange={true}
+            />
+          </div>
+        )}
         {!!studentLevelInfo && (
           <div className={style.studentInfo}>
             <div className={style.levelAndStudentDetails}>
@@ -187,24 +204,39 @@ export default function RubricContent({
           </div>
         )}
       </div>
-      <div className={style.learningGoalContainer}>
-        {rubric.learningGoals.map(lg => (
-          <LearningGoal
-            key={lg.key}
-            learningGoal={lg}
-            teacherHasEnabledAi={teacherHasEnabledAi}
-            canProvideFeedback={canProvideFeedback}
-            reportingData={reportingData}
-            studentLevelInfo={studentLevelInfo}
-            aiUnderstanding={getAiUnderstanding(lg.id)}
-            aiConfidence={getAiConfidence(lg.id)}
-            isStudent={false}
-            feedbackAdded={feedbackAdded}
-            setFeedbackAdded={setFeedbackAdded}
-            aiEvalInfo={getAiInfo(lg.id)}
-          />
-        ))}
-      </div>
+      {experiments.isEnabled('ai-rubrics-redesign') ? (
+        <LearningGoals
+          learningGoals={rubric.learningGoals}
+          teacherHasEnabledAi={teacherHasEnabledAi}
+          canProvideFeedback={canProvideFeedback}
+          reportingData={reportingData}
+          studentLevelInfo={studentLevelInfo}
+          isStudent={false}
+          feedbackAdded={feedbackAdded}
+          setFeedbackAdded={setFeedbackAdded}
+          aiEvaluations={aiEvaluations}
+        />
+      ) : (
+        <div className={style.learningGoalContainer}>
+          {rubric.learningGoals.map(lg => (
+            <LearningGoal
+              key={lg.key}
+              learningGoal={lg}
+              teacherHasEnabledAi={teacherHasEnabledAi}
+              canProvideFeedback={canProvideFeedback}
+              reportingData={reportingData}
+              studentLevelInfo={studentLevelInfo}
+              aiUnderstanding={getAiUnderstanding(lg.id)}
+              aiConfidence={getAiConfidence(lg.id)}
+              isStudent={false}
+              feedbackAdded={feedbackAdded}
+              setFeedbackAdded={setFeedbackAdded}
+              aiEvalInfo={getAiInfo(lg.id)}
+            />
+          ))}
+        </div>
+      )}
+
       {canProvideFeedback && (
         <div className={style.rubricContainerFooter}>
           <div className={style.submitToStudentButtonAndError}>

@@ -328,7 +328,7 @@ const customInputTypes = {
       block.superSetTitleValue = block.setTitleValue;
       block.setTitleValue = function (newValue, name) {
         if (name === inputConfig.name && block.blockSpace.isFlyout) {
-          newValue = Blockly.Variables.generateUniqueName(newValue);
+          newValue = Blockly.Variables.generateUniqueName(newValue, block);
         }
         block.superSetTitleValue(newValue, name);
       };
@@ -469,7 +469,7 @@ export default {
         var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
         // Must be marked EDITABLE so that cloned blocks share the same var name
         fieldLabel.EDITABLE = true;
-        this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+        this.setHelpUrl('/docs/spritelab/codestudio_spriteName');
         this.appendDummyInput()
           .appendField(Blockly.Msg.VARIABLES_GET_TITLE)
           .appendField(

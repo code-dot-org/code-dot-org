@@ -1,6 +1,6 @@
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-//import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-//import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import React from 'react';
 import PropTypes from 'prop-types';
 import {FormGroup, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
@@ -92,8 +92,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
       study: 'amazon-future-engineer-eligibility',
       event: 'submit_school_info',
     });
-    // TODO: Reenable Amplitude https://codedotorg.atlassian.net/browse/ACQ-1209
-    // analyticsReporter.sendEvent(EVENTS.AFE_SUBMIT_SCHOOL_INFO);
+    analyticsReporter.sendEvent(EVENTS.AFE_SUBMIT_SCHOOL_INFO);
 
     if (this.state.formData.schoolId === '-1') {
       this.handleEligibility(false);
@@ -171,8 +170,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
         },
         {callback: () => (window.location = pegasus('/afe/start-codeorg'))}
       );
-      // TODO: Reenable Amplitude https://codedotorg.atlassian.net/browse/ACQ-1209
-      // analyticsReporter.sendEvent(EVENTS.AFE_INELIGIBLE);
+      analyticsReporter.sendEvent(EVENTS.AFE_INELIGIBLE);
     }
   }
 
@@ -186,14 +184,13 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
   };
 
   submitToAFE = () => {
-    // TODO: Reenable Amplitude https://codedotorg.atlassian.net/browse/ACQ-1209
-    /*if (this.props.signedIn && !this.props.isStudentAccount) {
+    if (this.props.signedIn && !this.props.isStudentAccount) {
       analyticsReporter.sendEvent(EVENTS.AFE_SUBMIT, {
         formEmail: this.state.formData.email,
         formSchoolId: this.state.formData.schoolId,
         formData: JSON.stringify(this.state.formData),
       });
-    }*/
+    }
     return fetch('/dashboardapi/v1/amazon_future_engineer_submit', {
       method: 'POST',
       headers: {
@@ -310,6 +307,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
             email={formData.email}
             schoolId={formData.schoolId}
             updateFormData={this.updateAndStoreFormData}
+            isSignedIn={formData.signedIn}
           />
         )}
         {formData.schoolEligible &&

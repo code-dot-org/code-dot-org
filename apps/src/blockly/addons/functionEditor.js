@@ -21,6 +21,7 @@ import WorkspaceSvgFrame from './workspaceSvgFrame';
 import {BLOCK_TYPES} from '../constants';
 import {frameSizes} from './cdoConstants';
 import CdoTrashcan from './cdoTrashcan';
+import {getAlphanumericId} from '@cdo/apps/utils';
 
 // This class creates the modal function editor, which is used by Sprite Lab and Artist.
 export default class FunctionEditor {
@@ -39,6 +40,7 @@ export default class FunctionEditor {
     this.parameterBlockTypes = opt_parameterBlockTypes || {};
     this.disableParamEditing = opt_disableParamEditing || false;
     this.paramTypes = opt_paramTypes || [];
+    this.isReadOnly = false;
   }
 
   init(options) {
@@ -50,6 +52,7 @@ export default class FunctionEditor {
     }
 
     this.dom = modalEditor;
+    this.isReadOnly = options.readOnly;
 
     // Customize auto-populated Functions toolbox category.
     this.editorWorkspace = Blockly.blockly_.inject(modalEditor, {
@@ -87,10 +90,12 @@ export default class FunctionEditor {
       .getElementById(MODAL_EDITOR_CLOSE_ID)
       .addEventListener('click', () => this.hide());
 
-    // Delete handler
-    document
-      .getElementById(MODAL_EDITOR_DELETE_ID)
-      .addEventListener('click', this.onDeletePressed.bind(this));
+    // Handler for delete button. We only enable the delete button for writeable workspaces.
+    if (!this.isReadOnly) {
+      document
+        .getElementById(MODAL_EDITOR_DELETE_ID)
+        .addEventListener('click', this.onDeletePressed.bind(this));
+    }
 
     // Editor workspace toolbox procedure category callback
     // we have to pass the main ws so that the correct procedures are populated
@@ -135,11 +140,23 @@ export default class FunctionEditor {
     return this.editorWorkspace.id;
   }
 
+  getWorkspace() {
+    return this.editorWorkspace;
+  }
+
   // TODO
   renameParameter(oldName, newName) {}
 
   // TODO
   refreshParamsEverywhere() {}
+
+  autoOpenFunction(functionName) {
+    const existingProcedureBlock = Blockly.Procedures.getDefinition(
+      functionName,
+      Blockly.getHiddenDefinitionWorkspace()
+    );
+    this.showForFunctionHelper(existingProcedureBlock);
+  }
 
   /**
    * Show the given procedure in the function editor. Either load from
@@ -149,21 +166,35 @@ export default class FunctionEditor {
    * procedure does not already exist.
    */
   showForFunction(procedure, procedureType) {
-    this.clearEditorWorkspace();
-
-    this.dom.style.display = 'block';
-    Blockly.common.svgResize(this.editorWorkspace);
-
     const existingProcedureBlock = Blockly.Procedures.getDefinition(
       procedure.getName(),
       Blockly.getHiddenDefinitionWorkspace()
     );
+    this.showForFunctionHelper(
+      existingProcedureBlock,
+      procedure,
+      procedureType
+    );
+  }
 
+  showForFunctionHelper(existingProcedureBlock, newProcedure, procedureType) {
+    if (!existingProcedureBlock && !newProcedure) {
+      // We can't show the function editor if we don't have an existing or new procedure
+      return;
+    }
+
+    this.clearEditorWorkspace();
+    this.dom.style.display = 'block';
+    Blockly.common.svgResize(this.editorWorkspace);
+
+    let type;
     if (existingProcedureBlock) {
+      type = existingProcedureBlock.type;
       // If we already have stored data about the procedure, use that.
       const existingData = Blockly.serialization.blocks.save(
         existingProcedureBlock
       );
+
       // Disable events here so we don't copy an existing block into the hidden definition
       // workspace.
       Blockly.Events.disable();
@@ -171,42 +202,57 @@ export default class FunctionEditor {
         this.addEditorWorkspaceBlockConfig(existingData),
         this.editorWorkspace
       );
-
       Blockly.Events.enable();
     } else {
+      type = procedureType;
+      const name = newProcedure.getName();
       // Otherwise, we need to create a new block from scratch.
       const newDefinitionBlock = {
         kind: 'block',
-        type: procedureType,
+        type,
         extraState: {
-          procedureId: procedure.getId(),
-          userCreated: true,
+          procedureId: newProcedure.getId(),
+          userCreated: !Blockly.isStartMode, // Start mode procedures are not user created.
         },
         fields: {
-          NAME: procedure.getName(),
+          NAME: name,
         },
-        deletable: false,
       };
+
+      if (procedureType === BLOCK_TYPES.behaviorDefinition) {
+        // In start mode, the behavior id is the same as the name (and if the
+        // behavior is renamed, we update the behavior id to match the name).
+        // Since the behavior id is the function name in generated code, this
+        // allows us to support levelbuilder validation code. Levelbuilders can just
+        // use the name of the behavior and know that it will be the generated
+        // function name.
+        if (Blockly.isStartMode) {
+          newDefinitionBlock.extraState.behaviorId = name;
+        } else {
+          // Otherwise, this is a user created behavior, and we can give it a random
+          // id.
+          newDefinitionBlock.extraState.behaviorId = getAlphanumericId();
+        }
+      }
 
       this.block = Blockly.serialization.blocks.append(
         this.addEditorWorkspaceBlockConfig(newDefinitionBlock),
         this.editorWorkspace
       );
     }
+    this.block.setDeletable(false);
 
-    // We hide the delete button unless it is a function or user-created behavior.
-    const shouldShowDeleteButton =
-      this.block.type === BLOCK_TYPES.procedureDefinition ||
-      this.block.userCreated;
+    // We only want to be able to delete things that are user-created (functions and behaviors)
+    // and not things that are being previewed from a read-only workspace.
+    // We allow deleting non-user created behaviors in start mode.
+    const hideDeleteButton =
+      this.isReadOnly || (!Blockly.isStartMode && !this.block.userCreated);
     const modalEditorDeleteButton = document.getElementById(
       MODAL_EDITOR_DELETE_ID
     );
-    modalEditorDeleteButton.style.visibility = shouldShowDeleteButton
-      ? 'visible'
-      : 'hidden';
-
-    const type = procedureType || existingProcedureBlock.type;
-    const isBehavior = type === BLOCK_TYPES.behaviorDefinition;
+    modalEditorDeleteButton.style.visibility = hideDeleteButton
+      ? 'hidden'
+      : 'visible';
 
     // Used to create and render an SVG frame instance.
     const getDefinitionBlockColor = () => {
@@ -215,7 +261,9 @@ export default class FunctionEditor {
 
     this.editorWorkspace.svgFrame_ = new WorkspaceSvgFrame(
       this.editorWorkspace,
-      isBehavior ? msg.behaviorEditorHeader() : msg.function(),
+      type === BLOCK_TYPES.behaviorDefinition
+        ? msg.behaviorEditorHeader()
+        : msg.function(),
       'blocklyWorkspaceSvgFrame',
       getDefinitionBlockColor
     );

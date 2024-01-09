@@ -51,9 +51,11 @@ module Poste
   # Returns whether there is a dashboard student account associated with the
   # specified hashed_email.
   def self.dashboard_student?(hashed_email)
+    # rubocop:disable CustomCops/DashboardDbUsage
     dashboard_user = DASHBOARD_DB[:users].
       where(hashed_email: hashed_email).
       first
+    # rubocop:enable CustomCops/DashboardDbUsage
     return !dashboard_user.nil? && dashboard_user[:user_type] == 'student'
   end
 
