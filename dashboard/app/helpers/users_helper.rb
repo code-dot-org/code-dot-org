@@ -332,7 +332,7 @@ module UsersHelper
               level_progress[:pages_completed] = get_pages_completed(user, sl)
             end
 
-            progress[user.id][level_id] = level_progress
+            progress[user.id][level_id] = level_progress.compact
           end
         end
       end
@@ -393,19 +393,14 @@ module UsersHelper
     sublevels_for_progress_ids = sublevels.map do |sublevel|
       (sublevel.contained_levels.first || sublevel).id
     end
-    teacher_feedbacks = teacher_feedback_by_level.slice(*sublevel_ids)
 
-    # This is meant to mimic the logic of BubbleChoice.get_sublevel_for_progress,
-    # but without doing additional queries since we've already fetched
-    # all the relevant data.
-    keep_working_level_id = teacher_feedbacks.values.find do |feedback|
-      feedback.review_state == TeacherFeedback::REVIEW_STATES.keepWorking
-    end&.level_id
-
-    user_levels = user_levels_by_level.slice(*sublevels_for_progress_ids)
-    max_progress_level_id = user_levels.values.max_by(&:best_result)&.level_id
-
-    cloned_level_id = keep_working_level_id || max_progress_level_id
+    # The progress we return for the parent level is cloned from a particular
+    # sublevel (as determined by get_sublevel_for_progress), with the sum
+    # of sublevel work times inserted.
+    cloned_level_id = level.get_sublevel_for_progress_optimized(
+      teacher_feedbacks: teacher_feedback_by_level.slice(*sublevel_ids).values,
+      user_levels: user_levels_by_level.slice(*sublevels_for_progress_ids).values
+    )
 
     progress = {}
     time_sum = 0
@@ -422,6 +417,8 @@ module UsersHelper
         include_timestamp: include_timestamp
       )
       next unless sublevel_progress
+
+      sublevel_progress.compact!
 
       if sublevel.id == cloned_level_id || level_for_progress.id == cloned_level_id
         progress[level.id] = sublevel_progress.clone
