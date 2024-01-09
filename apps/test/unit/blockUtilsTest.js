@@ -126,7 +126,7 @@ describe('block utils', () => {
           <category name="Start">
             <block type="when_run"/>
           </category>
-          <category name="Sprites" custom="Sprite">
+          <category name="Sprites">
             <block type="gamelab_moveUp"/>
             <block type="gamelab_moveDown"/>
           </category>
@@ -147,7 +147,7 @@ describe('block utils', () => {
             <block type="do_cool_stuff" />
             <block type="even_cooler_stuff" />
           </category>
-          <category name="Sprites" custom="Sprite">
+          <category name="Sprites">
             <block type="gamelab_moveUp"/>
             <block type="gamelab_moveDown"/>
             <block type="gamelab_moveLeft"/>
