@@ -9,7 +9,9 @@ const FAMILY_NAME = 'familyName';
 const DISPLAY_NAME = 'displayName';
 
 function SortByNameDropdown({
-  sortByStyles,
+  labelClassName,
+  selectClassName,
+  labelStyles,
   selectStyles,
   sectionId,
   unitName,
@@ -29,11 +31,14 @@ function SortByNameDropdown({
   const selectedValue = isSortedByFamilyName ? FAMILY_NAME : DISPLAY_NAME;
   return (
     <div>
-      <div style={sortByStyles}>{i18n.sortBy()}</div>
+      <div style={labelStyles} className={labelClassName}>
+        {i18n.sortBy()}
+      </div>
       <select
         name="familyNameSort"
         aria-label={i18n.sortBy()}
         style={selectStyles}
+        className={selectClassName}
         value={selectedValue}
         onChange={onSortByFamilyNameChange}
       >
@@ -45,7 +50,9 @@ function SortByNameDropdown({
 }
 
 SortByNameDropdown.propTypes = {
-  sortByStyles: PropTypes.object,
+  labelClassName: PropTypes.string,
+  selectClassName: PropTypes.string,
+  labelStyles: PropTypes.object,
   selectStyles: PropTypes.object,
   sectionId: PropTypes.number,
   unitName: PropTypes.string,

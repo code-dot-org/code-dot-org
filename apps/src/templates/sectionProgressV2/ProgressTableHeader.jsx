@@ -12,6 +12,8 @@ export default function ProgressTableHeader({unitName, sectionId}) {
       <div className={styles.sortDropdown}>
         <Heading6 className={styles.studentHeading}>Students</Heading6>
         <SortByNameDropdown
+          labelClassName={styles.sortDropdownLabel}
+          selectClassName={styles.sortDropdownSelect}
           sectionId={sectionId}
           unitName={unitName}
           source={SECTION_PROGRESS_V2}

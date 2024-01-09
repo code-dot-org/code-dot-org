@@ -1,3 +1,5 @@
+@import "color.scss";
+
 .header {
   height: 98px;
   margin-top: 40px;
@@ -8,6 +10,22 @@
   max-width: 195px;
   height: 100%;
   margin-right: 12px;
+  font-size: 14px;
+
+  &Label {
+    width: 100%;
+  }
+
+  &Select {
+    width: 195px;
+    height: 32px;
+    line-height: 30px;
+    border: 1px solid $light_black;
+    color: $light_black;
+    font-weight: 600;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
 }
 
 .studentHeading {

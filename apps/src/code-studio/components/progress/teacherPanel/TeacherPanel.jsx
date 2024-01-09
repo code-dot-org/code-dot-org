@@ -247,7 +247,7 @@ class TeacherPanel extends React.Component {
             </div>
           )}
           <SortByNameDropdown
-            sortByStyles={styles.sortBy}
+            labelStyles={styles.sortBy}
             selectStyles={styles.select}
             sectionId={sectionId}
             unitName={unitName}
