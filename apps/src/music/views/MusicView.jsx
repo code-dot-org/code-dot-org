@@ -448,17 +448,19 @@ class UnconnectedMusicView extends React.Component {
     this.player.preloadSounds(
       this.sequencer.getPlaybackEvents(),
       (loadTimeMs, soundsLoaded) => {
-        // Report load time metrics
-        Lab2Registry.getInstance()
-          .getMetricsReporter()
-          .reportLoadTime('PreloadSoundLoadTime', loadTimeMs, [
-            {
-              name: 'LoadType',
-              value: this.state.hasLoadedInitialSounds
-                ? 'Subsequent'
-                : 'Initial',
-            },
-          ]);
+        // Report load time metrics if any sounds were loaded.
+        if (soundsLoaded > 0) {
+          Lab2Registry.getInstance()
+            .getMetricsReporter()
+            .reportLoadTime('PreloadSoundLoadTime', loadTimeMs, [
+              {
+                name: 'LoadType',
+                value: this.state.hasLoadedInitialSounds
+                  ? 'Subsequent'
+                  : 'Initial',
+              },
+            ]);
+        }
 
         if (!this.state.hasLoadedInitialSounds) {
           Lab2Registry.getInstance().getMetricsReporter().logInfo({
