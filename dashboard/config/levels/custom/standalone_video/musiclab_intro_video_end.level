@@ -1,7 +1,8 @@
 <StandaloneVideo>
   <config><![CDATA[{
+  "published": true,
   "game_id": 54,
-  "created_at": "2024-01-05T21:34:24.000Z",
+  "created_at": "2024-01-09T03:30:49.000Z",
   "level_num": "custom",
   "user_id": 1196,
   "properties": {
@@ -15,7 +16,8 @@
     "video_full_width": true,
     "uses_lab2": true
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-01-05T21:34:24.718+00:00\",\"changed\":[\"cloned from \\\"pl-k5-2_uploadSpriteVideo_2024\\\"\"],\"cloned_from\":\"pl-k5-2_uploadSpriteVideo_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-01-09T03:30:49.939+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_video_start\\\"\"],\"cloned_from\":\"musiclab_intro_video_start\"},{\"changed_at\":\"2024-01-09 03:31:03 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>
