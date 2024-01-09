@@ -278,15 +278,19 @@ ul {
         font-size: 1.25em;
 
         &:before {
-          color: $brand_secondary_default;
+          color: var(--brand_secondary_default);
           transition: color ease-in-out .2s;
         }
       }
 
       a {
         @include heading-xs;
-        color: $brand_secondary_default;
+        color: var(--brand_secondary_default);
         margin-bottom: 0;
+
+        &:hover {
+          color: var(--brand_secondary_dark);
+        }
       }
 
       &:hover {
