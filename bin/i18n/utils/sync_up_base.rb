@@ -55,7 +55,7 @@ module I18n
       end
 
       def crowdin_project
-        # uses test Crowdin projects that mirroring regular set of projects for testing purposes
+        # When testing, use a set of test Crowdin projects that mirrors our regular set of projects.
         @crowdin_project ||= testing? ? CDO.crowdin_project_test_mapping[config.crowdin_project] : config.crowdin_project
       end
 
