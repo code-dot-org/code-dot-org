@@ -24,7 +24,7 @@ Feature: Hamburger dropdown
     And I wait until element "a:contains(Stats)" is visible
     And I wait until element "a:contains(Help Us)" is visible
     And I wait until element "div:contains(About)" is visible
-    And I wait until element "a:contains(Privacy & Legal)" is visible
+    And I wait until element "div:contains(Privacy & Legal)" is visible
 
   Scenario: Student viewing hamburger dropdown and help button dropdown in English on desktop
     Given I create a student named "Sally Student" and go home
@@ -62,6 +62,31 @@ Feature: Hamburger dropdown
     And I see "#report-bug"
     And I see "#support"
     And I see "#teacher-community"
+
+  Scenario: Teacher viewing hamburger dropdown (with expanded options) in English on desktop
+    Given I create a teacher named "Tessa Teacher" and go home
+    Then I wait to see "#hamburger-icon"
+    And I click selector "#hamburger-icon"
+    Then I wait to see "#hamburger-contents"
+    And I wait until element "a:contains(Learn)" is visible
+    And I wait until element "div:contains(Teach)" is visible
+    And I click selector "div:contains(Teach)"
+    And I wait until element "a:contains(Educator Overview)" is visible
+    And I wait until element "a:contains(Elementary School)" is visible
+    And I wait until element "a:contains(Middle School)" is visible
+    And I wait until element "a:contains(High School)" is visible
+    And I wait until element "a:contains(Hour of Code)" is visible
+    And I wait until element "a:contains(Partner with Us)" is visible
+    And I wait until element "a:contains(Beyond Code.org)" is visible
+    And I wait until element "a:contains(Inspire a Student)" is visible
+    And I wait until element "a:contains(Online Community)" is visible
+    And I wait until element "a:contains(Technical Requirements)" is visible
+    And I wait until element "a:contains(Tools and Videos)" is visible
+    And I click selector "div:contains(Teach)"
+    And I wait until element "a:contains(Stats)" is visible
+    And I wait until element "a:contains(Help Us)" is visible
+    And I wait until element "div:contains(About)" is visible
+    And I wait until element "div:contains(Privacy & Legal)" is visible
 
   Scenario: Applab-specific help links
     Given I create a teacher named "Tessa Teacher"
