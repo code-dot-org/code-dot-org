@@ -47,7 +47,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       },
     ],
     style: 'procedure_blocks',
-    helpUrl: '%{BKY_PROCEDURES_DEFNORETURN_HELPURL}',
+    helpUrl: '/docs/spritelab/codestudio_definingFunction',
     tooltip: '%{BKY_PROCEDURES_DEFNORETURN_TOOLTIP}',
     extensions: [
       'procedure_def_get_def_mixin',
@@ -78,7 +78,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     nextStatement: null,
     previousStatement: null,
     style: 'procedure_blocks',
-    helpUrl: '%{BKY_PROCEDURES_CALLNORETURN_HELPURL}',
+    helpUrl: '/docs/spritelab/codestudio_callingFunction',
     extensions: [
       'procedures_edit_button',
       'procedure_caller_get_def_mixin',

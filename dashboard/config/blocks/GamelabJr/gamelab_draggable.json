@@ -3,6 +3,7 @@
   "config": {
     "func": "draggable",
     "blockText": "being draggable",
+    "docFunc": "spritelab_adding-and-removing-behaviors",
     "returnType": "Behavior",
     "color": [
       136,
