@@ -10,14 +10,6 @@
     "level_data": {
       "library": "will",
       "startSources": {
-        "variables": [
-          {
-            "name": "currentTime"
-          },
-          {
-            "name": "i"
-          }
-        ],
         "blocks": {
           "languageVersion": 0,
           "blocks": [
@@ -41,18 +33,22 @@
       },
       "toolbox": {
         "blocks": {
-          "Play": ["play_sound_at_current_location_simple2"]
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
         },
         "type": "flyout"
       },
       "text": "#### Play live!\n\nDid you know you can do a live performance?\n\nAttach a **play** block to the **trigger** block.\n\nPress **Run** and press **1** to trigger the sound.",
       "validations": [
+
       ]
     },
     "hide_share_and_remix": "false",
     "instructions_important": "false",
     "preload_asset_list": null
-  }
+  },
+  "audit_log": "[{\"changed_at\":\"2024-01-02T19:13:20.086+00:00\",\"changed\":[\"cloned from \\\"musiclab_freeplay_play_together\\\"\"],\"cloned_from\":\"musiclab_freeplay_play_together\"},{\"changed_at\":\"2024-01-02 19:13:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2024-01-09 03:42:26 +0000\",\"changed\":[\"name\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-09 11:08:09 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-09 11:10:04 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

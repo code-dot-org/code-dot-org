@@ -26,7 +26,8 @@
     },
     "instructions_important": "false",
     "preload_asset_list": null
-  }
+  },
+  "audit_log": "[{\"changed_at\":\"2024-01-09T03:44:34.158+00:00\",\"changed\":[\"cloned from \\\"musiclab_freeplay\\\"\"],\"cloned_from\":\"musiclab_freeplay\"},{\"changed_at\":\"2024-01-09 03:44:41 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-09 11:16:54 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

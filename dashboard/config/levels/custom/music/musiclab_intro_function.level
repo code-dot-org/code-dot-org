@@ -10,27 +10,16 @@
     "level_data": {
       "library": "will",
       "startSources": {
-        "variables": [
-          {
-            "name": "currentTime"
-          },
-          {
-            "name": "i"
-          }
-        ],
         "blocks": {
           "languageVersion": 0,
           "blocks": [
             {
               "type": "when_run_simple2",
-
               "x": 30,
               "y": 30
-
             },
             {
               "type": "procedures_defnoreturn",
-
               "x": 230,
               "y": 30,
               "extraState": {
@@ -45,7 +34,6 @@
                 "STACK": {
                   "block": {
                     "type": "play_sound_at_current_location_simple2",
-
                     "fields": {
                       "sound": "bass/bass_synth_glow_up"
                     }
@@ -66,7 +54,9 @@
       "text": "#### Functions\n\nYou can organize your music using functions.\n\nClick **Functions**, then drag **bass** to **when run**, to play the content of the bass function.",
       "toolbox": {
         "blocks": {
-          "Functions": []
+          "Functions": [
+
+          ]
         }
       },
       "validations": [
@@ -86,7 +76,8 @@
     "hide_share_and_remix": "false",
     "instructions_important": "false",
     "preload_asset_list": null
-  }
+  },
+  "audit_log": "[{\"changed_at\":\"2024-01-09T03:49:19.079+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_play_sound\\\"\"],\"cloned_from\":\"musiclab_intro_play_sound\"},{\"changed_at\":\"2024-01-09 03:49:28 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-09 11:06:36 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
