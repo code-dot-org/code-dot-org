@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Programming with Events
 
-##### Now that you have set up your program with the background and sprites, in this lesson, you will learn how to make your program interactive with events using event-based programming.
+##### Now that you have set up your program with the background and sprites, you will learn how to make your program interactive.
 
 <img src="https://images.code.org/777a7b74cb2c3607d956c0c672d04f6f-image-1679964913802.png" alt="Image of a cartoon octopus holding a microphone and wearing a hat singing" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
