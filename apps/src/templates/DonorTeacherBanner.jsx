@@ -39,7 +39,7 @@ export default class DonorTeacherBanner extends Component {
       analyticsReporter.sendEvent(EVENTS.AFE_HOMEPAGE_BANNER_SUBMIT);
 
       // redirect to form on amazon-future-engineer page
-      window.location.assign(pegasus('/amazon-future-engineer#sign-up-today'));
+      window.location.assign(pegasus('/amazon-future-engineer#eligibility'));
     }
 
     this.setState({submitted: true});
@@ -150,7 +150,7 @@ export default class DonorTeacherBanner extends Component {
           notice={i18n.yourResponseSubmitted()}
           details={i18n.thankYouForResponse()}
           detailsLinkText={i18n.clickHere()}
-          detailsLink={pegasus('/amazon-future-engineer#sign-up-today')}
+          detailsLink={pegasus('/amazon-future-engineer#eligibility')}
           detailsLinkNewWindow={true}
           dismissible={true}
         />
