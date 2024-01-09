@@ -2758,7 +2758,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
   // they will end up deletable by the student unless the XML is manually
   // updated. Removing usercreated="true" ensures functions and behaviors
   // are not deletable by the student using the modal editor.
-  if (stringIsXml(startBlocks) && this.skin.id === 'gamelab') {
+  if (stringIsXml(startBlocks)) {
     startBlocks = stripUserCreated(startBlocks);
   }
   // TODO: When we start using json in levelbuilder, we will need to pull this from the level config.
