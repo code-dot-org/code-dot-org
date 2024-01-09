@@ -12,6 +12,8 @@ const UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 const {WebpackManifestPlugin} = require('webpack-manifest-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const CircularDependencyPlugin = require('circular-dependency-plugin');
+const circles = require('./circles.json');
 
 const envConstants = require('./envConstants');
 
@@ -65,6 +67,13 @@ const nodeModulesToTranspile = [
 // As of Webpack 5, Node APIs are no longer automatically polyfilled.
 // resolve.fallback resolves the API to its NPM package, and the plugin
 // makes the API available as a global.
+
+// map our circular dependency JSON to a set.
+const circleSet = new Set(circles);
+
+// as we see our known circles, we're gonna remove them from our list. That way,
+// we can report at the end if any circles have been cleaned up.
+let seenCircles = new Set();
 const nodePolyfillConfig = {
   plugins: [
     new webpack.ProvidePlugin({
@@ -74,6 +83,43 @@ const nodePolyfillConfig = {
       path: 'path-browserify',
       process: 'process/browser',
       timers: 'timers-browserify',
+    }),
+    new CircularDependencyPlugin({
+      // exclude detection of files based on a RegExp
+      exclude: /node_modules|build/,
+      // add errors to webpack instead of warnings
+      failOnError: true,
+      // allow import cycles that include an asyncronous import,
+      // e.g. via import(/* webpackMode: "weak" */ './file.js')
+      allowAsyncCycles: false,
+      // set the current working directory for displaying module paths
+      cwd: process.cwd(),
+      onStart: () => {
+        seenCircles.clear();
+        seenCircles = new Set(Array.from(circleSet));
+      },
+      onDetected: ({module: webpackModuleRecord, paths, compilation}) => {
+        const pathString = paths.join(' -> ');
+        if (!circleSet.has(pathString)) {
+          compilation.errors.push(
+            new Error(
+              `Circular Dependency Checker : New Circular Dependency found : ${pathString}`
+            )
+          );
+        }
+        seenCircles.delete(pathString);
+      },
+      onEnd: ({compilation}) => {
+        if (seenCircles.size > 0) {
+          compilation.errors.push(
+            new Error(
+              `Circular Dependency Checker : Resolved circles can be removed from circles.json : ${Array.from(
+                seenCircles
+              ).join(',')}`
+            )
+          );
+        }
+      },
     }),
   ],
   resolve: {
