@@ -84,7 +84,7 @@ describe('ProgrammingExpressionsEditor', () => {
       .first();
     removeProgrammingExpressionButton.simulate('mouseDown');
     const removeDialog = wrapper.find('Dialog');
-    const deleteButton = removeDialog.find('button').at(1);
+    const deleteButton = removeDialog.find('button').at(2);
     deleteButton.simulate('click');
     expect(removeProgrammingExpression).to.have.been.calledOnce;
   });
@@ -103,7 +103,7 @@ describe('ProgrammingExpressionsEditor', () => {
       .first();
     removeProgrammingExpressionButton.simulate('mouseDown');
     const removeDialog = wrapper.find('Dialog');
-    const cancelButton = removeDialog.find('button').at(0);
+    const cancelButton = removeDialog.find('button').at(1);
     cancelButton.simulate('click');
     expect(removeProgrammingExpression).not.to.have.been.called;
   });

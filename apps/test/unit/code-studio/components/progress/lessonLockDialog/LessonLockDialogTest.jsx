@@ -100,7 +100,7 @@ describe('LessonLockDialog with stubbed section selector', () => {
       expect(row.props().lockStatus).to.equal(LockStatus.Locked);
     });
 
-    const allowEditingButton = wrapper.find('button').at(0);
+    const allowEditingButton = wrapper.find('button').at(1);
     expect(allowEditingButton.text() === 'Allow editing');
     allowEditingButton.simulate('click');
     wrapper.update();
@@ -131,7 +131,7 @@ describe('LessonLockDialog with stubbed section selector', () => {
       expect(row.props().lockStatus).to.equal(LockStatus.Editable);
     });
 
-    const lockLessonButton = wrapper.find('button').at(1);
+    const lockLessonButton = wrapper.find('button').at(2);
     expect(lockLessonButton.text() === 'Lock lesson');
     lockLessonButton.simulate('click');
     wrapper.update();
@@ -162,7 +162,7 @@ describe('LessonLockDialog with stubbed section selector', () => {
       expect(row.props().lockStatus).to.equal(LockStatus.Editable);
     });
 
-    const showAnswersButton = wrapper.find('button').at(2);
+    const showAnswersButton = wrapper.find('button').at(3);
     expect(showAnswersButton.text() === 'Show answers');
     showAnswersButton.simulate('click');
     wrapper.update();
@@ -185,7 +185,7 @@ describe('LessonLockDialog with stubbed section selector', () => {
         </Provider>
       );
 
-      const viewSectionButton = wrapper.find('button').at(4);
+      const viewSectionButton = wrapper.find('button').at(5);
       expect(viewSectionButton.text() === 'View section');
       viewSectionButton.simulate('click');
       wrapper.update();
@@ -221,12 +221,12 @@ describe('LessonLockDialog with stubbed section selector', () => {
       </Provider>
     );
 
-    const lockLessonButton = wrapper.find('button').at(1);
+    const lockLessonButton = wrapper.find('button').at(2);
     expect(lockLessonButton.text() === 'Lock lesson');
     lockLessonButton.simulate('click');
     wrapper.update();
 
-    const saveButton = wrapper.find('button').at(6);
+    const saveButton = wrapper.find('button').at(7);
     expect(saveButton.text() === 'Save');
     saveButton.simulate('click');
     wrapper.update();
@@ -267,12 +267,12 @@ describe('LessonLockDialog with stubbed section selector', () => {
       </Provider>
     );
 
-    const lockLessonButton = wrapper.find('button').at(1);
+    const lockLessonButton = wrapper.find('button').at(2);
     expect(lockLessonButton.text() === 'Lock lesson');
     lockLessonButton.simulate('click');
     wrapper.update();
 
-    const saveButton = wrapper.find('button').at(6);
+    const saveButton = wrapper.find('button').at(7);
     expect(saveButton.text() === 'Save');
     saveButton.simulate('click');
     wrapper.update();
@@ -318,12 +318,12 @@ describe('LessonLockDialog with stubbed section selector', () => {
       </Provider>
     );
 
-    const lockLessonButton = wrapper.find('button').at(1);
+    const lockLessonButton = wrapper.find('button').at(2);
     expect(lockLessonButton.text() === 'Lock lesson');
     lockLessonButton.simulate('click');
     wrapper.update();
 
-    const saveButton = wrapper.find('button').at(6);
+    const saveButton = wrapper.find('button').at(7);
     expect(saveButton.text() === 'Save');
     saveButton.simulate('click');
     wrapper.update();

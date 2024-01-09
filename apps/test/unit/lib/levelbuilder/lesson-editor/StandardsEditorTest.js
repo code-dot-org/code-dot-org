@@ -47,7 +47,7 @@ describe('StandardsEditor', () => {
       .first();
     removeStandardButton.simulate('mouseDown');
     const removeDialog = wrapper.find('Dialog');
-    const deleteButton = removeDialog.find('button').at(1);
+    const deleteButton = removeDialog.find('button').at(2);
     deleteButton.simulate('click');
     expect(removeStandard).to.have.been.calledOnce;
   });
@@ -62,7 +62,7 @@ describe('StandardsEditor', () => {
       .first();
     removeStandardButton.simulate('mouseDown');
     const removeDialog = wrapper.find('Dialog');
-    const cancelButton = removeDialog.find('button').at(0);
+    const cancelButton = removeDialog.find('button').at(1);
     cancelButton.simulate('click');
     expect(removeStandard).not.to.have.been.called;
   });
