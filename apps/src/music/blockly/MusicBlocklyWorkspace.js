@@ -350,7 +350,10 @@ export default class MusicBlocklyWorkspace {
       return;
     }
     this.workspace.clearUndo();
-    Blockly.serialization.workspaces.load(code, this.workspace);
+
+    const codeCopy = JSON.parse(JSON.stringify(code));
+
+    Blockly.serialization.workspaces.load(codeCopy, this.workspace);
   }
 
   callUserGeneratedCode(fn, args = []) {

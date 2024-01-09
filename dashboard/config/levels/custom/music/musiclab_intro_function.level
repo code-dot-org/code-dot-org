@@ -1,0 +1,92 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-01-09T03:49:19.000Z",
+  "level_num": "custom",
+  "user_id": 976,
+  "properties": {
+    "encrypted": "false",
+    "level_data": {
+      "library": "will",
+      "startSources": {
+        "variables": [
+          {
+            "name": "currentTime"
+          },
+          {
+            "name": "i"
+          }
+        ],
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+
+              "x": 30,
+              "y": 30
+
+            },
+            {
+              "type": "procedures_defnoreturn",
+
+              "x": 230,
+              "y": 30,
+              "extraState": {
+                "procedureId": "bass-procedure-id",
+                "initialDeleteConfig": true,
+                "userCreated": true
+              },
+              "fields": {
+                "NAME": "bass"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sound_at_current_location_simple2",
+
+                    "fields": {
+                      "sound": "bass/bass_synth_glow_up"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "procedures": [
+          {
+            "id": "bass-procedure-id",
+            "name": "bass",
+            "returnTypes": null
+          }
+        ]
+      },
+      "text": "#### Functions\n\nYou can organize your music using functions.\n\nClick **Functions**, then drag **bass** to **when run**, to play the content of the bass function.",
+      "toolbox": {
+        "blocks": {
+          "Functions": []
+        }
+      },
+      "validations": [
+        {
+          "conditions": [
+            {
+              "name": "played_sounds_together",
+              "value": 1
+            }
+          ],
+          "message": "Now you can choose from a wide variety of sounds!",
+          "next": true,
+          "key": "musiclab_standalone_92ad6ada-e70d-4781-a949-a4b4221d3967"
+        }
+      ]
+    },
+    "hide_share_and_remix": "false",
+    "instructions_important": "false",
+    "preload_asset_list": null
+  }
+}]]></config>
+  <blocks/>
+</Music>

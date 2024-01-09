@@ -1,0 +1,32 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-01-09T03:44:34.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "encrypted": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30
+            }
+          ]
+        }
+      },
+      "text": "You're ready to create!  Be sure to explore the blocks and the sounds.  There is a lot to explore and use to make an amazing track."
+    },
+    "instructions_important": "false",
+    "preload_asset_list": null
+  }
+}]]></config>
+  <blocks/>
+</Music>
