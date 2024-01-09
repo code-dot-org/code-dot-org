@@ -30,7 +30,7 @@ section.bg-primary-light {
   }
 
   a { color: var(--neutral_dark) !important;
-    &:hover { color: $brand_secondary_dark !important; }
+    &:hover { color: var(--brand_secondary_dark) !important; }
     &.link-button { color: $neutral_white !important; }
   }
 }
@@ -292,7 +292,7 @@ ul {
       &:hover {
 
         i:before {
-          color: $brand_secondary_dark;
+          color: var(--brand_secondary_dark);
         }
       }
     }
