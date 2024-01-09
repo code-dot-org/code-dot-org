@@ -47,14 +47,16 @@ export default function LearningGoals({
     ERROR: 3,
   });
   const [autosaveStatus, setAutosaveStatus] = useState(STATUS.NOT_STARTED);
-  const [learningGoalEval, setLearningGoalEval] = useState(null);
   const [displayFeedback, setDisplayFeedback] = useState('');
   const [displayUnderstanding, setDisplayUnderstanding] = useState(
     INVALID_UNDERSTANDING
   );
   const [currentLearningGoal, setCurrentLearningGoal] = useState(0);
-  const teacherFeedback = useRef('');
-  const understandingLevel = useRef(INVALID_UNDERSTANDING);
+  const learningGoalEvalIds = useRef(Array(learningGoals.length).fill(null));
+  const teacherFeedbacks = useRef(Array(learningGoals.length).fill(''));
+  const understandingLevels = useRef(
+    Array(learningGoals.length).fill(INVALID_UNDERSTANDING)
+  );
 
   const aiEnabled =
     learningGoals[currentLearningGoal].aiEnabled && teacherHasEnabledAi;
@@ -69,8 +71,8 @@ export default function LearningGoals({
       if (autosaveTimer.current) {
         clearTimeout(autosaveTimer.current);
       }
-      teacherFeedback.current = event.target.value;
-      setDisplayFeedback(teacherFeedback.current);
+      teacherFeedbacks.current[currentLearningGoal] = event.target.value;
+      setDisplayFeedback(teacherFeedbacks.current[currentLearningGoal]);
       autosaveTimer.current = setTimeout(() => {
         autosave();
       }, saveAfter);
@@ -95,11 +97,11 @@ export default function LearningGoals({
     const bodyData = JSON.stringify({
       studentId: studentLevelInfo.user_id,
       learningGoalId: learningGoals[currentLearningGoal].id,
-      feedback: teacherFeedback.current,
-      understanding: understandingLevel.current,
+      feedback: teacherFeedbacks.current[currentLearningGoal],
+      understanding: understandingLevels.current[currentLearningGoal],
     });
     HttpClient.put(
-      `${base_teacher_evaluation_endpoint}/${learningGoalEval.id}`,
+      `${base_teacher_evaluation_endpoint}/${learningGoalEvalIds.current[currentLearningGoal]}`,
       bodyData,
       true,
       {
@@ -120,32 +122,34 @@ export default function LearningGoals({
   };
 
   useEffect(() => {
-    if (studentLevelInfo && learningGoals[currentLearningGoal].id) {
-      const body = JSON.stringify({
-        userId: studentLevelInfo.user_id,
-        learningGoalId: learningGoals[currentLearningGoal].id,
+    if (studentLevelInfo && learningGoals) {
+      learningGoals.forEach((learningGoal, index) => {
+        const body = JSON.stringify({
+          userId: studentLevelInfo.user_id,
+          learningGoalId: learningGoal.id,
+        });
+        HttpClient.post(
+          `${base_teacher_evaluation_endpoint}/get_or_create_evaluation`,
+          body,
+          true,
+          {
+            'Content-Type': 'application/json',
+          }
+        )
+          .then(response => response.json())
+          .then(json => {
+            learningGoalEvalIds.current[index] = json.id;
+            if (json.feedback) {
+              teacherFeedbacks.current[index] = json.feedback;
+            }
+            if (json.understanding >= 0 && json.understanding !== null) {
+              understandingLevels.current[index] = json.understanding;
+            }
+          })
+          .catch(error => console.error(error));
       });
-      HttpClient.post(
-        `${base_teacher_evaluation_endpoint}/get_or_create_evaluation`,
-        body,
-        true,
-        {
-          'Content-Type': 'application/json',
-        }
-      )
-        .then(response => response.json())
-        .then(json => {
-          setLearningGoalEval(json);
-          if (json.feedback) {
-            teacherFeedback.current = json.feedback;
-            setDisplayFeedback(teacherFeedback.current);
-          }
-          if (json.understanding >= 0 && json.understanding !== null) {
-            setDisplayUnderstanding(json.understanding);
-            understandingLevel.current = json.understanding;
-          }
-        })
-        .catch(error => console.error(error));
+      setDisplayFeedback(teacherFeedbacks.current[currentLearningGoal]);
+      setDisplayUnderstanding(understandingLevels.current[currentLearningGoal]);
     }
   }, [studentLevelInfo, learningGoals, currentLearningGoal]);
 
@@ -156,10 +160,11 @@ export default function LearningGoals({
       learningGoalId: learningGoals[currentLearningGoal].id,
       learningGoal: learningGoals[currentLearningGoal].learningGoal,
       newlySelectedEvidenceLevel: radioButtonData,
-      previouslySelectedEvidenceLevel: understandingLevel.current,
+      previouslySelectedEvidenceLevel:
+        understandingLevels.current[currentLearningGoal],
     });
     setDisplayUnderstanding(radioButtonData);
-    understandingLevel.current = radioButtonData;
+    understandingLevels.current[currentLearningGoal] = radioButtonData;
     autosave();
   };
 
@@ -244,6 +249,7 @@ export default function LearningGoals({
           <ProgressRing
             learningGoals={learningGoals}
             currentLearningGoal={currentLearningGoal}
+            understandingLevels={understandingLevels.current}
             radius={30}
             stroke={4}
           />

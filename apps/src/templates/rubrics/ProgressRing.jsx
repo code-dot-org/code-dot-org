@@ -7,14 +7,20 @@ import {learningGoalShape} from './rubricShapes';
 export default function ProgressRing({
   learningGoals,
   currentLearningGoal,
+  understandingLevels,
   radius,
   stroke,
 }) {
   const normalizedRadius = radius - stroke * 2;
   const circumference = normalizedRadius * 2 * Math.PI;
-  const strokeDashoffset =
+  const assessedLearningGoals = understandingLevels.filter(u => u >= 0).length;
+  const currentLearningGoalOffset =
     circumference -
     ((currentLearningGoal + 1) / learningGoals.length) * circumference;
+  const assessedLearningGoalOffset =
+    circumference -
+    (assessedLearningGoals / learningGoals.length) * circumference;
+
   return (
     <svg height={radius * 2} width={radius * 2}>
       <circle
@@ -32,7 +38,18 @@ export default function ProgressRing({
         fill="transparent"
         strokeWidth={stroke}
         strokeDasharray={circumference + ' '}
-        style={{strokeDashoffset}}
+        style={{strokeDashoffset: currentLearningGoalOffset}}
+        r={normalizedRadius}
+        cx={radius}
+        cy={radius}
+      />
+      <circle
+        className={style.progressRing}
+        stroke="#0093A4"
+        fill="transparent"
+        strokeWidth={stroke}
+        strokeDasharray={circumference + ' '}
+        style={{strokeDashoffset: assessedLearningGoalOffset}}
         r={normalizedRadius}
         cx={radius}
         cy={radius}
@@ -47,6 +64,7 @@ export default function ProgressRing({
 ProgressRing.propTypes = {
   learningGoals: PropTypes.arrayOf(learningGoalShape),
   currentLearningGoal: PropTypes.number,
+  understandingLevels: PropTypes.arrayOf(PropTypes.number),
   radius: PropTypes.number,
   stroke: PropTypes.number,
 };
