@@ -69,6 +69,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
     email: PropTypes.string,
     schoolId: PropTypes.string,
     updateFormData: PropTypes.func,
+    isSignedIn: PropTypes.bool,
   };
 
   constructor(props) {
@@ -145,9 +146,9 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
     });
     analyticsReporter.sendEvent(EVENTS.AFE_CONTINUE, {
       submitData: JSON.stringify(submitData),
+      isSignedIn: this.props.isSignedIn,
     });
 
-    this.props.updateFormData(submitData);
     this.props.updateFormData(submitData);
   };
 
