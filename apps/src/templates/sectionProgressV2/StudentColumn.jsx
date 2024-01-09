@@ -20,11 +20,8 @@ export default function StudentColumn({sortedStudents}) {
   };
 
   return (
-    <div>
-      <div>Student Column</div>
-      <div className={styles.grid}>
-        {sortedStudents.map((student, ind) => studentColumnBox(student, ind))}
-      </div>
+    <div className={styles.grid}>
+      {sortedStudents.map((student, ind) => studentColumnBox(student, ind))}
     </div>
   );
 }
