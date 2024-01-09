@@ -45,7 +45,6 @@
         }
       ]
     },
-    "hide_share_and_remix": "false",
     "instructions_important": "false",
     "long_instructions": "#Add Some Sounds\r\n\r\nLet's add a new play block to make the beat longer!\r\n\r\n##Do This:\r\nClick the Sounds toolbox and drag out the play block under the existing play block in the workspace. Then press Play to take a listen.\r\n\r\nAs you add blocks, you should notice that new bars appear in the timeline to show you where your new sounds will play.\r\n",
     "preload_asset_list": null
