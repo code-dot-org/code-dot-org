@@ -49,40 +49,6 @@ module Api::V1::Pd
       end
     end
 
-    # GET /api/v1/pd/workshops/:id/local_workshop_survey_report
-    def local_workshop_survey_report
-      unless @workshop.local_summer?
-        raise 'Only call this route for local workshop survey reports'
-      end
-
-      facilitator_name = facilitator_name_filter
-      survey_report = Hash.new
-
-      survey_report[:this_workshop] = summarize_workshop_surveys(workshops: [@workshop], facilitator_name_filter: facilitator_name)
-
-      survey_report[:all_my_local_workshops] = summarize_workshop_surveys(
-        workshops: Pd::Workshop.where(
-          subject: @workshop.subject,
-          course: @workshop.course
-        ).managed_by(current_user).in_state(Pd::Workshop::STATE_ENDED),
-        facilitator_breakdown: false,
-        facilitator_name_filter: facilitator_name,
-        include_free_response: false
-      )
-
-      aggregate_for_all_workshops = JSON.parse(AWS::S3.download_from_bucket('pd-workshop-surveys', "aggregate-workshop-scores-production"))
-      survey_report[:all_workshops_for_course] = aggregate_for_all_workshops['CSP Local Summer Workshops']
-
-      survey_report[:facilitator_breakdown] = facilitator_name.nil?
-      survey_report[:facilitator_names] = @workshop.facilitators.pluck(:name) if facilitator_name.nil?
-
-      respond_to do |format|
-        format.json do
-          render json: survey_report
-        end
-      end
-    end
-
     # GET /api/v1/pd/workshops/:id/generic_survey_report
     def generic_survey_report
       # 2 separate routes for CSF deep dive (201) workshop and summer/academic year workshop.

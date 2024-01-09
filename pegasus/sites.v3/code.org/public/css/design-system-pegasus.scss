@@ -94,6 +94,7 @@ i.fa-fw {
   &.wrap { flex-wrap: wrap; }
   &.wrap-reverse { flex-wrap: wrap-reverse; }
   &.gap-1 { gap: 1rem }
+  &.gap-1-5 { gap: 1.5rem }
   &.gap-2 { gap: 2rem }
 }
 
@@ -153,7 +154,11 @@ hr {
 .button-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
+
+  &.centered {
+    justify-content: center;
+  }
 }
 
 // Basic hero banner
@@ -547,7 +552,7 @@ form {
 .action-block__wrapper {
   margin-top: 2rem;
   display: grid;
-  grid-gap: 1.25rem;
+  grid-gap: 1.5rem;
 
   @media screen and (min-width: $width-sm) {
     grid-template-columns: repeat(2, 1fr);
@@ -1059,7 +1064,7 @@ section.quote {
 // - see example: code.org/blockchain
 .video-series {
   display: grid;
-  grid-gap: 1.25rem;
+  grid-gap: 1.5rem;
   margin-top: 2rem;
 
   @media screen and (min-width: $width-sm) {
@@ -1072,6 +1077,10 @@ section.quote {
     padding: 0 !important;
     margin: 0 !important;
     width: 100%;
+  }
+
+  .video_caption_link {
+    margin-bottom: 0;
   }
 }
 

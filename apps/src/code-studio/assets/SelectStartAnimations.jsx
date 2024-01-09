@@ -8,6 +8,7 @@ import {createUuid} from '@cdo/apps/utils';
 import color from '@cdo/apps/util/color';
 import PropTypes from 'prop-types';
 import {PICKER_TYPE} from '@cdo/apps/p5lab/AnimationPicker/AnimationPicker';
+import moduleStyles from './select-start-animations.module.scss';
 
 const THUMBNAIL_SIZE = 50;
 const THUMBNAIL_BORDER_WIDTH = 1;
@@ -72,26 +73,34 @@ export default class SelectStartAnimations extends React.Component {
 
   displaySelectedSprites = () => {
     const {propsByKey, orderedKeys} = this.state;
-    if (orderedKeys.length === 0) {
-      return (
+    const subHeaderText =
+      orderedKeys.length === 0
+        ? 'Selected animations will be displayed here.'
+        : 'Click a selected animation to unselect it.';
+
+    return (
+      <>
         <p>
-          <i>Selected animations will be displayed here.</i>
+          <i>{subHeaderText}</i>
         </p>
-      );
-    } else {
-      return orderedKeys.map(key => {
-        return (
-          <img
-            key={key}
-            src={propsByKey[key].sourceUrl}
-            alt={propsByKey[key].name}
-            style={styles.thumbnail}
-            role="button"
-            onClick={() => this.removeAnimationFromList(key)}
-          />
-        );
-      });
-    }
+        {orderedKeys.map(key => {
+          return (
+            <button
+              type="button"
+              onClick={() => this.removeAnimationFromList(key)}
+              className={moduleStyles.selectedAnimation}
+            >
+              <img
+                key={key}
+                src={propsByKey[key].sourceUrl}
+                alt={propsByKey[key].name}
+                style={styles.thumbnail}
+              />
+            </button>
+          );
+        })}
+      </>
+    );
   };
 
   displayAnimationPickerBody = libraryManifest => {
