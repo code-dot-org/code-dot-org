@@ -23,6 +23,8 @@ import classnames from 'classnames';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import experiments from '@cdo/apps/util/experiments';
+import StudentSelector from './StudentSelector';
+import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 
 const formatTimeSpent = timeSpent => {
   const minutes = Math.floor(timeSpent / 60);
@@ -139,18 +141,31 @@ export default function RubricContent({
       })}
     >
       {infoText && <InfoAlert text={infoText} />}
-      <div>
-        {!!studentLevelInfo && (
-          <Heading2 className={style.studentName}>
-            {studentLevelInfo.name}
-          </Heading2>
-        )}
+      <div className={style.studentInfoGroup}>
+        {!experiments.isEnabled('ai-rubrics-redesign') &&
+          !!studentLevelInfo && (
+            <Heading2 className={style.studentName}>
+              {studentLevelInfo.name}
+            </Heading2>
+          )}
         <Heading5>
           {i18n.lessonNumbered({
             lessonNumber: lesson.position,
             lessonName: lesson.name,
           })}
         </Heading5>
+        {experiments.isEnabled('ai-rubrics-redesign') && (
+          <div className={style.selectors}>
+            <SectionSelector reloadOnChange={true} requireSelection={false} />
+            <StudentSelector
+              styleName={style.studentSelector}
+              selectedUserId={
+                studentLevelInfo ? studentLevelInfo.user_id : null
+              }
+              reloadOnChange={true}
+            />
+          </div>
+        )}
         {!!studentLevelInfo && (
           <div className={style.studentInfo}>
             <div className={style.levelAndStudentDetails}>
