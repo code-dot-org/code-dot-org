@@ -1,8 +1,11 @@
 import FormController from '@cdo/apps/code-studio/pd/form_components_func/FormController';
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {isolateComponent} from 'isolate-react';
+import {mount} from 'enzyme';
+import {PROGRAM_CSD} from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplicationConstants';
 import $ from 'jquery';
 
 let DummyPage1 = () => {
@@ -270,6 +273,50 @@ describe('FormController', () => {
       expect(form.findAll('Spinner')).to.have.length(0);
 
       server.restore();
+    });
+
+    it('Shows apps closed message if', async () => {
+      //const server = sinon.fakeServer.create();
+      //server.respondWith(serverResponse(200, {}));
+
+      sinon.stub(window, 'fetch').returns(
+        Promise.resolve({
+          ok: true,
+          json: () => {
+            return {id: 1, pl_programs_offered: ['CSD'], are_apps_closed: true};
+          },
+        })
+      );
+
+      const initialData = {
+        school: 'New School',
+        program: PROGRAM_CSD,
+      };
+      const clock = sinon.useFakeTimers();
+      await act(async () => {
+        form = await mount(
+          <FormController
+            {...defaultProps}
+            getInitialData={() => initialData}
+          />
+        );
+      });
+      await clock.runAllAsync();
+      await act(async () => {
+        //setTimeout(() => {}, 3000);
+        await Promise.resolve();
+        await Promise.resolve();
+      });
+      form.update();
+
+      // maybe wait 500 seconds to force a rerender
+      // set timeout
+
+      const alerts = form.find('Alert');
+      expect(alerts).to.have.length(1);
+      expect(alerts.text()).to.contain(
+        'Applications are closed for this region'
+      );
     });
 
     it('Shows error message if user tries to save an application that already exists', () => {
