@@ -188,8 +188,8 @@ em {
   font-style: italic;
 }
 
-a,
-a:link {
+/* Text link styles */
+a:is(:link, :visited) {
   font-family: var(--main-font);
   font-weight: var(--semi-bold-font-weight);
   color: var(--brand_secondary_default);
@@ -197,12 +197,7 @@ a:link {
   transition: color ease-in-out .2s;
 }
 
-a:visited {
-  color: var(--brand_secondary_default);
-}
-
-a:hover,
-a:active {
+a:is(:hover, :active) {
   color: var(--brand_secondary_dark);
 }
 
@@ -336,22 +331,13 @@ input[type=submit] {
 a.has-external-link::after {
   font: var(--fa-font-solid);
   content: "\f08e";
-  margin: 0 2px 0 4px;
-}
-
-html[dir="rtl"] .has-external-link a::after,
-html[dir="rtl"] a.has-external-link::after {
-  margin: 0 4px 0 2px;
+  font-size: 0.875em;
+  margin-inline: 4px 2px;
 }
 
 .has-external-link a.link-button::after,
 a.link-button.has-external-link::after {
-  margin: 0 0 0 4px;
-}
-
-html[dir="rtl"] .has-external-link a.link-button::after,
-html[dir="rtl"] a.link-button.has-external-link::after {
-  margin: 0 4px 0 0;
+  margin-inline: 4px 0;
 }
 
 li > ul {
@@ -401,6 +387,40 @@ td {
   border-color: rgb(141, 138, 138);
   border-style: solid;
   padding: 15px;
+}
+
+/* Styles for the "OR" divider line between paragraphs
+  - see code.org/afe for an example */
+.or-divider-line {
+  position: relative;
+  text-align: center;
+  margin: 0.75rem 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--neutral_dark20);
+    z-index: 0;
+  }
+
+  & > p {
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    margin: 0 4px 0;
+    padding: 5px 5px 4px;
+    background: var(--neutral_white);
+    border: 1px solid var(--neutral_dark20);
+    border-radius: 50%;
+    outline: 4px solid var(--neutral_white);
+    z-index: 1;
+  }
 }
 
 /* for homepage 2.0.. */

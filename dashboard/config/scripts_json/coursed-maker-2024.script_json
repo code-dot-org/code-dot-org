@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "coursed-maker",
-    "serialized_at": "2023-12-14 18:26:01 UTC",
+    "serialized_at": "2024-01-04 22:35:19 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -100,29 +100,30 @@
       }
     },
     {
-      "key": "lesson-3",
+      "key": "Meet your micro:bit",
       "name": "Meet your micro:bit",
       "absolute_position": 3,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
+        "overview": "This lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-D-Nov2023.pdf#page=7\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 7-17</a>"
       },
       "seeding_key": {
-        "lesson.key": "lesson-3",
+        "lesson.key": "Meet your micro:bit",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursed-maker-2024"
       }
     },
     {
       "key": "lesson-4",
-      "name": "Saving sea turtles",
+      "name": "Saving sea turtles with micro:bit",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
-        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals pp. 22-24](https://code.org/maker/assets/CSF-Booklet-Course-D-Nov2023.pdf#page=22)"
+        "overview": "This lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-D-Nov2023.pdf#page=22\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 22-24</a>"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -172,9 +173,10 @@
       "name": "Meet your micro:bit",
       "absolute_position": 7,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 7,
       "properties": {
+        "overview": "This lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-D-Nov2023.pdf#page=7\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 7-17</a>"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -184,13 +186,13 @@
     },
     {
       "key": "lesson-6",
-      "name": "Rock, paper, scissors",
+      "name": "Rock, paper, scissors with micro:bit",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 8,
       "properties": {
-        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals pp. 25-27](https://code.org/maker/assets/CSF-Booklet-Course-D-Nov2023.pdf#page=25)"
+        "overview": "This lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-D-Nov2023.pdf#page=25\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 25-27</a>"
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -222,9 +224,10 @@
       "name": "Meet your micro:bit",
       "absolute_position": 10,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 10,
       "properties": {
+        "overview": "This lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-D-Nov2023.pdf#page=7\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 7-17</a>"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -234,13 +237,13 @@
     },
     {
       "key": "lesson-2",
-      "name": "Activity picker",
+      "name": "Activity picker with micro:bit",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 11,
       "properties": {
-        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals pp. 28-30](https://code.org/maker/assets/CSF-Booklet-Course-D-Nov2023.pdf#page=28)"
+        "overview": "This lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-D-Nov2023.pdf#page=28\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 28-30</a>"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -369,6 +372,18 @@
       "seeding_key": {
         "lesson_activity.key": "9b88c0cc-78a3-433a-975a-2b7951e8b0bd",
         "lesson.key": "If/Else with Bee",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursed-maker-2024"
+      }
+    },
+    {
+      "key": "1ebc0e58-a9b4-4291-a48f-65c2e195853b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1ebc0e58-a9b4-4291-a48f-65c2e195853b",
+        "lesson.key": "Meet your micro:bit",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursed-maker-2024"
       }
@@ -504,6 +519,18 @@
       "seeding_key": {
         "lesson_activity.key": "b5554b61-cab8-4fe3-af59-500691025f31",
         "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursed-maker-2024"
+      }
+    },
+    {
+      "key": "54ecec85-226e-45a9-916a-91da577d52bd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "54ecec85-226e-45a9-916a-91da577d52bd",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "coursed-maker-2024"
       }
@@ -910,6 +937,17 @@
       "seeding_key": {
         "activity_section.key": "b60b222d-c7ca-4649-ab32-3c41895c2dac",
         "lesson_activity.key": "9b88c0cc-78a3-433a-975a-2b7951e8b0bd"
+      }
+    },
+    {
+      "key": "2a3ac8f7-e8e9-44b9-ad76-533bb5cdd124",
+      "position": 1,
+      "properties": {
+        "progression_name": "Meet your micro:bit"
+      },
+      "seeding_key": {
+        "activity_section.key": "2a3ac8f7-e8e9-44b9-ad76-533bb5cdd124",
+        "lesson_activity.key": "1ebc0e58-a9b4-4291-a48f-65c2e195853b"
       }
     },
     {
@@ -1447,6 +1485,17 @@
       }
     },
     {
+      "key": "00cae4e4-846d-4f1b-8d37-38062f6ec194",
+      "position": 1,
+      "properties": {
+        "progression_name": "Meet your micro:bit"
+      },
+      "seeding_key": {
+        "activity_section.key": "00cae4e4-846d-4f1b-8d37-38062f6ec194",
+        "lesson_activity.key": "54ecec85-226e-45a9-916a-91da577d52bd"
+      }
+    },
+    {
       "key": "33c79d74-b1cf-416e-9911-42a58a5a8f4b",
       "position": 1,
       "properties": {
@@ -1604,6 +1653,7 @@
       "key": "8be45bea-7b66-49b4-9adf-541054d9aeae",
       "position": 1,
       "properties": {
+        "progression_name": "Meet your micro:bit"
       },
       "seeding_key": {
         "activity_section.key": "8be45bea-7b66-49b4-9adf-541054d9aeae",
@@ -2080,6 +2130,34 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_meet_your_microbit_coursed"
+        ],
+        "progression": "Meet your micro:bit"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_c_maker_meet_your_microbit_coursed"
+        ],
+        "lesson.key": "Meet your micro:bit",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursed-maker-2024",
+        "activity_section.key": "2a3ac8f7-e8e9-44b9-ad76-533bb5cdd124"
+      },
+      "level_keys": [
+        "course_c_maker_meet_your_microbit_coursed"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "course_d_maker_saving_sea_turtles"
+        ],
         "progression": "Saving Sea Turtles"
       },
       "bonus": false,
@@ -2097,7 +2175,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2122,7 +2200,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2147,7 +2225,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -2172,7 +2250,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -2197,7 +2275,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -2222,7 +2300,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -2247,7 +2325,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -2272,7 +2350,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -2297,7 +2375,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -2322,7 +2400,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 10,
       "activity_section_position": 4,
       "assessment": false,
@@ -2347,7 +2425,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 11,
       "activity_section_position": 5,
       "assessment": false,
@@ -2372,7 +2450,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 12,
       "activity_section_position": 6,
       "assessment": false,
@@ -2397,7 +2475,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -2422,7 +2500,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -2447,7 +2525,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2472,7 +2550,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2497,7 +2575,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2522,7 +2600,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -2547,7 +2625,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 5,
       "activity_section_position": 3,
       "assessment": true,
@@ -2572,7 +2650,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -2597,7 +2675,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -2622,7 +2700,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -2647,7 +2725,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -2672,7 +2750,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 10,
       "activity_section_position": 5,
       "assessment": true,
@@ -2697,7 +2775,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -2722,11 +2800,39 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_meet_your_microbit_coursed-2"
+        ],
+        "progression": "Meet your micro:bit"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_c_maker_meet_your_microbit_coursed-2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursed-maker-2024",
+        "activity_section.key": "00cae4e4-846d-4f1b-8d37-38062f6ec194"
+      },
+      "level_keys": [
+        "course_c_maker_meet_your_microbit_coursed-2"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "course_d_maker_rock_paper_scissors"
+        ],
         "progression": "Rock, Paper, Scissors"
       },
       "bonus": false,
@@ -2744,7 +2850,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2769,7 +2875,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2794,7 +2900,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 50,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2819,7 +2925,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 51,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -2844,7 +2950,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -2869,7 +2975,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 53,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -2894,7 +3000,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 54,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -2919,7 +3025,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 55,
       "position": 8,
       "activity_section_position": 6,
       "assessment": false,
@@ -2944,7 +3050,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 56,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -2969,11 +3075,39 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_meet_your_microbit_coursed-3"
+        ],
+        "progression": "Meet your micro:bit"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_c_maker_meet_your_microbit_coursed-3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursed-maker-2024",
+        "activity_section.key": "8be45bea-7b66-49b4-9adf-541054d9aeae"
+      },
+      "level_keys": [
+        "course_c_maker_meet_your_microbit_coursed-3"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "course_d_maker_activity_picker"
+        ],
         "progression": "Activity Picker"
       },
       "bonus": false,
@@ -3206,6 +3340,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursed-maker-2024",
         "activity_section.key": "86e50617-f157-453b-8a2f-db16284ef146"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course_c_maker_meet_your_microbit_coursed",
+        "script_level.level_keys": [
+          "course_c_maker_meet_your_microbit_coursed"
+        ],
+        "lesson.key": "Meet your micro:bit",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursed-maker-2024",
+        "activity_section.key": "2a3ac8f7-e8e9-44b9-ad76-533bb5cdd124"
       }
     },
     {
@@ -3522,6 +3668,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "course_c_maker_meet_your_microbit_coursed-2",
+        "script_level.level_keys": [
+          "course_c_maker_meet_your_microbit_coursed-2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursed-maker-2024",
+        "activity_section.key": "00cae4e4-846d-4f1b-8d37-38062f6ec194"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "course_d_maker_rock_paper_scissors",
         "script_level.level_keys": [
           "course_d_maker_rock_paper_scissors"
@@ -3638,6 +3796,18 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "coursed-maker-2024",
         "activity_section.key": "499cf2d4-7c44-4461-943f-7e624d2a58c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course_c_maker_meet_your_microbit_coursed-3",
+        "script_level.level_keys": [
+          "course_c_maker_meet_your_microbit_coursed-3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursed-maker-2024",
+        "activity_section.key": "8be45bea-7b66-49b4-9adf-541054d9aeae"
       }
     },
     {

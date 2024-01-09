@@ -1,0 +1,18 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2024-01-04T22:38:35.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "video_key": "upload_sprites_backgrounds",
+    "instructions_important": "false",
+    "long_instructions": "Now you can upload your own sprites and backgrounds. Watch this video to learn how!",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-01-04T22:38:35.351+00:00\",\"changed\":[\"cloned from \\\"student_sprite_management\\\"\"],\"cloned_from\":\"student_sprite_management\"}]"
+}]]></config>
+</StandaloneVideo>

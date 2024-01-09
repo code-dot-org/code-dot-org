@@ -8,7 +8,6 @@
     ],
     "inline": false,
     "func": "drawLine",
-    "docFunc": "gamelab_moveToward",
     "blockText": "draw line {COLOR}  {LOC1}  {LOC2}",
     "args": [
       {
