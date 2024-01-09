@@ -365,10 +365,20 @@ class SetupChecklist extends Component {
       firmataMarkdown = applabI18n.makerSetupInstallFirmataMB({
         firmataURL: MICROBIT_FIRMATA_URL,
       });
-    } else {
+    } else if (
+      this.state.boardTypeDetected === BOARD_TYPE.EXPRESS ||
+      this.state.boardTypeDetected === BOARD_TYPE.CLASSIC
+    ) {
       firmataMarkdown = applabI18n.makerSetupInstallFirmataCP({
         firmataURLExpress: EXPRESS_FIRMATA_URL,
         firmataURLClassic: CLASSIC_FIRMATA_URL,
+      });
+    } else {
+      // Board Type is Other/Unknown
+      firmataMarkdown = applabI18n.makerSetupInstallFirmataOther({
+        firmataURLExpress: EXPRESS_FIRMATA_URL,
+        firmataURLClassic: CLASSIC_FIRMATA_URL,
+        firmataURLMB: MICROBIT_FIRMATA_URL,
       });
     }
     return (

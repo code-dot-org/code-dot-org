@@ -188,8 +188,8 @@ em {
   font-style: italic;
 }
 
-/* Text link styles */
-a:is(:link, :visited) {
+a,
+a:link {
   font-family: var(--main-font);
   font-weight: var(--semi-bold-font-weight);
   color: var(--brand_secondary_default);
@@ -197,7 +197,12 @@ a:is(:link, :visited) {
   transition: color ease-in-out .2s;
 }
 
-a:is(:hover, :active) {
+a:visited {
+  color: var(--brand_secondary_default);
+}
+
+a:hover,
+a:active {
   color: var(--brand_secondary_dark);
 }
 
@@ -331,13 +336,22 @@ input[type=submit] {
 a.has-external-link::after {
   font: var(--fa-font-solid);
   content: "\f08e";
-  font-size: 0.875em;
-  margin-inline: 4px 2px;
+  margin: 0 2px 0 4px;
+}
+
+html[dir="rtl"] .has-external-link a::after,
+html[dir="rtl"] a.has-external-link::after {
+  margin: 0 4px 0 2px;
 }
 
 .has-external-link a.link-button::after,
 a.link-button.has-external-link::after {
-  margin-inline: 4px 0;
+  margin: 0 0 0 4px;
+}
+
+html[dir="rtl"] .has-external-link a.link-button::after,
+html[dir="rtl"] a.link-button.has-external-link::after {
+  margin: 0 4px 0 0;
 }
 
 li > ul {

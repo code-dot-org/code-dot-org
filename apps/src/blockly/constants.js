@@ -70,11 +70,6 @@ export function stringIsXml(str) {
   }
 }
 
-// Removes the usercreated attribute from stringified block XML if it is set to true.
-export function stripUserCreated(xmlString) {
-  return xmlString.replaceAll('usercreated="true"', '');
-}
-
 export const BLOCK_TYPES = {
   behaviorDefinition: 'behavior_definition',
   danceWhenSetup: 'Dancelab_whenSetup',

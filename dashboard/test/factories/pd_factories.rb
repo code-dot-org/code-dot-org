@@ -170,6 +170,144 @@ FactoryBot.define do
     end
   end
 
+  factory :pd_workshop_survey, class: 'Pd::WorkshopSurvey' do
+    transient do
+      form_data_hash {build :pd_workshop_survey_hash}
+    end
+    association :pd_enrollment, factory: :pd_enrollment, strategy: :create
+    form_data {form_data_hash.to_json}
+  end
+
+  factory :pd_workshop_survey_hash, class: 'Hash' do
+    initialize_with do
+      {
+        willTeach: "Yes",
+        reasonForAttending: [
+          "Personal interest"
+        ],
+        howHeard: [
+          "Email from Code.org"
+        ],
+        receivedClearCommunication: "Strongly Agree",
+        schoolHasTech: "Yes",
+        venueFeedback: "feedback about venue",
+        howMuchLearned: "A tremendous amount",
+        howMotivating: "Extremely motivating",
+        howMuchParticipated: "A tremendous amount",
+        howOftenTalkAboutIdeasOutside: "Almost always",
+        howOftenLostTrackOfTime: "Almost always",
+        howExcitedBefore: "Extremely excited",
+        overallHowInterested: "Extremely interested",
+        morePreparedThanBefore: "Strongly Agree",
+        knowWhereToGoForHelp: "Strongly Agree",
+        suitableForMyExperience: "Strongly Agree",
+        wouldRecommend: "Strongly Agree",
+        bestPdEver: "Strongly Agree",
+        partOfCommunity: "Strongly Agree",
+        thingsYouLiked: "liked most",
+        thingsYouWouldChange: "would change",
+        anythingElse: "like to tell",
+        willingToTalk: "No",
+        gender: "Male",
+        race: [
+          "White"
+        ],
+        age: "21 - 25",
+        yearsTaught: "2",
+        gradesTaught: [
+          "pre-K"
+        ],
+        gradesPlanningToTeach: [
+          "pre-K"
+        ],
+        subjectsTaught: [
+          "English/Language Arts"
+        ]
+      }.stringify_keys
+    end
+  end
+
+  factory :pd_local_summer_workshop_survey, class: 'Pd::LocalSummerWorkshopSurvey' do
+    association :pd_enrollment, factory: :pd_enrollment, strategy: :create
+
+    transient do
+      randomized_survey_answers {false}
+    end
+
+    after(:build) do |survey, evaluator|
+      if survey.form_data.nil?
+        enrollment = survey.pd_enrollment
+        workshop = enrollment.workshop
+
+        survey_hash = build :pd_local_summer_workshop_survey_hash
+
+        if evaluator.randomized_survey_answers
+          survey_hash.each do |k, _|
+            survey_hash[k] =
+              if Pd::LocalSummerWorkshopSurvey.options.key? k.underscore.to_sym
+                Pd::LocalSummerWorkshopSurvey.options[k.underscore.to_sym].sample
+              else
+                SecureRandom.hex[0..8]
+              end
+          end
+        end
+
+        Pd::LocalSummerWorkshopSurvey.facilitator_required_fields.each do |field|
+          survey_hash[field] = {}
+        end
+
+        survey_hash['whoFacilitated'] = workshop.facilitators.map(&:name)
+
+        workshop.facilitators.each do |facilitator|
+          Pd::LocalSummerWorkshopSurvey.facilitator_required_fields.each do |field|
+            if Pd::LocalSummerWorkshopSurvey.options.key? field
+              answers = Pd::LocalSummerWorkshopSurvey.options[field]
+              survey_hash[field][facilitator.name] = evaluator.randomized_survey_answers ? answers.sample : answers.last
+            else
+              survey_hash[field][facilitator.name] = evaluator.randomized_survey_answers ? SecureRandom.hex[0..8] : 'Free Response'
+            end
+          end
+        end
+
+        survey.update_form_data_hash(survey_hash)
+      end
+    end
+  end
+
+  factory :pd_local_summer_workshop_survey_hash, class: 'Hash' do
+    initialize_with do
+      {
+        receivedClearCommunication: "Strongly Agree",
+        venueFeedback: "venue feedback",
+        howMuchLearned: "A tremendous amount",
+        howMotivating: "Extremely motivating",
+        howMuchParticipated: "A tremendous amount",
+        howOftenTalkAboutIdeasOutside: "Almost always",
+        howOftenLostTrackOfTime: "Almost always",
+        howExcitedBefore: "Extremely excited",
+        overallHowInterested: "Extremely interested",
+        morePreparedThanBefore: "Strongly Agree",
+        knowWhereToGoForHelp: "Strongly Agree",
+        suitableForMyExperience: "Strongly Agree",
+        wouldRecommend: "Strongly Agree",
+        anticipateContinuing: "Strongly Agree",
+        confidentCanTeach: "Strongly Agree",
+        believeAllStudents: "Strongly Agree",
+        bestPdEver: "Strongly Agree",
+        partOfCommunity: "Strongly Agree",
+        thingsYouLiked: "liked most",
+        thingsYouWouldChange: "would change",
+        givePermissionToQuote: "Yes, I give Code.org permission to quote me and use my name.",
+        race: "White",
+        highestEducation: "High school diploma",
+        degreeField: "Education",
+        yearsTaughtStem: "1",
+        yearsTaughtCs: "2",
+        haveRequiredLicenses: "Yes",
+      }.stringify_keys
+    end
+  end
+
   factory :pd_facilitator_teachercon_attendance, class: 'Pd::FacilitatorTeacherconAttendance' do
     association :user, factory: :facilitator, strategy: :create
     tc1_arrive {Date.new(2017, 8, 23)}

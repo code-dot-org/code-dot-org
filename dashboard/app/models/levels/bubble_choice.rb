@@ -177,11 +177,6 @@ class BubbleChoice < DSLDefined
     summary
   end
 
-  # Overrides original method declared in Level class.
-  def get_level_for_progress(student, script)
-    get_sublevel_for_progress(student, script) || self
-  end
-
   # Determine which sublevel's status to display in our progress bubble.
   # If there is a sublevel marked with feedback "keep working", display that one. Otherwise display the
   # progress for sublevel that has the best result

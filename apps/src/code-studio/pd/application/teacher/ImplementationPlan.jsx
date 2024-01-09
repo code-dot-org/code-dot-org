@@ -111,11 +111,8 @@ const uniqueRequiredFields = {
 ImplementationPlan.getDynamicallyRequiredFields = data => {
   const requiredFields = ['willTeach'];
 
-  if (data.willTeach === 'Yes') {
-    requiredFields.push('enoughCourseHours');
-    if (data.program) {
-      requiredFields.push(...uniqueRequiredFields[data.program]);
-    }
+  if (data.program && data.willTeach === 'Yes') {
+    requiredFields.push(...uniqueRequiredFields[data.program]);
   }
 
   return requiredFields;

@@ -582,13 +582,8 @@ Resources:
           # recreating the whole stack. We have been gradually rolling out
           # updates on a per-environment basis, with the goal of eventually
           # upgrading everything to 256.
-          #
-          # TODO: with the addition of levelbuilder, we expect all our
-          # environments to now be standardized around 256; we should verify,
-          # then simplify this logic.
           default_volume_size = 64
           volume_size_overrides = {
-            levelbuilder: 256,
             production: 256,
             staging: 256,
             test: 256

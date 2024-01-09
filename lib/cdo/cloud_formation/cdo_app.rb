@@ -27,8 +27,10 @@ module Cdo::CloudFormation
     # Hard-coded constants and default values.
     CHEF_BIN = '/usr/local/bin/chef-cdo-app'
     CHEF_KEY = rack_env?(:adhoc) ? 'adhoc/chef' : 'chef'
-    # Use AMI for Ubuntu 20 (ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-20230517)
-    IMAGE_ID = ENV['IMAGE_ID'] || 'ami-0261755bbcb8c4a84'
+    # Temporarily introduce per-environment differences, so we can gradually roll out this update.
+    # Use Ubuntu 20 (ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-20230517) for adhocs and our main build pipeline: staging, test, and production
+    # Use Ubuntu 18 (ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20190722.1) everywhere else (ie, levelbuilder and gateway)
+    IMAGE_ID = ENV['IMAGE_ID'] || (rack_env?(:staging, :test, :production, :adhoc) ? 'ami-0261755bbcb8c4a84' : 'ami-07d0cf3af28718ef8')
     INSTANCE_TYPE = rack_env?(:production) ? 'm5.12xlarge' : 't2.2xlarge'
     ORIGIN = "https://github.com/code-dot-org/code-dot-org.git"
     CHEF_VERSION = '17.6.18'

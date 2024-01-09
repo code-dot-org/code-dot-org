@@ -17,7 +17,7 @@ class TestAiProxyController < ApplicationController
     response_data = key_concepts.map do |key_concept|
       {
         'Key Concept' => key_concept,
-        'Label' => 'Convincing Evidence'
+        'Grade' => 'Convincing Evidence'
       }
     end
     render json: {data: response_data}

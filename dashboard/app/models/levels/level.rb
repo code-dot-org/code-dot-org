@@ -747,10 +747,17 @@ class Level < ApplicationRecord
     }
   end
 
-  def get_level_for_progress(student = nil, script = nil)
-    # https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/app/views/levels/_contained_levels.html.haml#L1
-    # We only display our first contained level, display progress for that level.
-    contained_levels.first || self
+  def get_level_for_progress(student, script)
+    if is_a?(BubbleChoice)
+      sublevel_for_progress = try(:get_sublevel_for_progress, student, script)
+      return sublevel_for_progress || self
+    elsif contained_levels.any?
+      # https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/app/views/levels/_contained_levels.html.haml#L1
+      # We only display our first contained level, display progress for that level.
+      return contained_levels.first
+    else
+      return self
+    end
   end
 
   def summarize_for_lesson_show(can_view_teacher_markdown)

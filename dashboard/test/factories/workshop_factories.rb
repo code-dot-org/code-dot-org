@@ -107,6 +107,8 @@ FactoryBot.define do
         enrollment = create :pd_enrollment, workshop: workshop
         if workshop.teachercon?
           create :pd_teachercon_survey, pd_enrollment: enrollment, randomized_survey_answers: evaluator.randomized_survey_answers
+        elsif workshop.local_summer?
+          create :pd_local_summer_workshop_survey, pd_enrollment: enrollment, randomized_survey_answers: evaluator.randomized_survey_answers
         else
           raise 'Num_completed_surveys trait unsupported for this workshop type'
         end

@@ -1191,6 +1191,22 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.pd_workshop_surveys
+  # Associated via enrollment
+  #
+
+  test "clears form_data from pd_workshop_surveys" do
+    enrollment = create :pd_enrollment, :from_user
+    survey = create :pd_workshop_survey, pd_enrollment: enrollment
+    refute_equal '{}', survey.form_data
+
+    purge_user survey.pd_enrollment.user
+
+    survey.reload
+    assert_equal '{}', survey.form_data
+  end
+
+  #
   # Table dashboard.peer_reviews
   # Could delete submitter or viewer
   #

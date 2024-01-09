@@ -119,6 +119,13 @@ describe('WorkshopManagement', () => {
       expect(surveyUrl).to.eql('/daily_survey_results/123');
     });
 
+    it('uses local summer results for local summer in 2017', () => {
+      const surveyUrl = getSurveyUrlForProps({
+        subject: WorkshopTypes.local_summer,
+      });
+      expect(surveyUrl).to.eql('/local_summer_workshop_survey_results/123');
+    });
+
     it('uses organizer results for organizers', () => {
       const organizerPermission = new Permission([Organizer]);
       const surveyUrl = getSurveyUrlForProps({permission: organizerPermission});
@@ -316,6 +323,29 @@ describe('WorkshopManagement', () => {
 
     it('Has a view workshop button', () => {
       verifyViewWorkshopButton();
+    });
+  });
+
+  describe('For a local summer workshop in 2017 or earlier', () => {
+    it('Renders the correct survey results URL', () => {
+      mockRouter
+        .expects('createHref')
+        .withExactArgs('viewUrl')
+        .returns('viewHref');
+      mockRouter
+        .expects('createHref')
+        .withExactArgs('/local_summer_workshop_survey_results/123')
+        .returns('surveyResultsHref');
+
+      workshopManagement = shallow(
+        <WorkshopManagement
+          {...defaultProps}
+          showSurveyUrl={true}
+          subject="5-day Summer"
+          date="2017-06-04T09:00:00.000Z"
+        />,
+        {context}
+      );
     });
   });
 

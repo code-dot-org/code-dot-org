@@ -77,11 +77,7 @@ class ConnectionInstructions extends React.Component {
         <ol>
           <li>{applabI18n.makerSetupWebSerialConnectToComputer()}</li>
           <li>{applabI18n.makerSetupWebSerialConnectToBoardButton()}</li>
-          <li>
-            <SafeMarkdown
-              markdown={applabI18n.makerSetupWebSerialWindowConnect()}
-            />
-          </li>
+          <li>{applabI18n.makerSetupWebSerialWindowConnect()}</li>
           <li>{applabI18n.makerSetupWebSerialSuccessfulConnection()}</li>
         </ol>
         <SafeMarkdown
