@@ -45,6 +45,9 @@ class SoundCache {
     const {onLoadFinished, updateLoadProgress} = callbacks;
     const startTime = Date.now();
 
+    // Filter out sounds that are already loaded
+    paths = paths.filter(path => !this.audioBuffers[path]);
+
     for (let i = 0; i < paths.length; i++) {
       try {
         const sound = await this.loadSound(paths[i]);

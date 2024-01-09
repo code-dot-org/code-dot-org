@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {memo} from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import moduleStyles from './timeline.module.scss';
 import {useDispatch, useSelector} from 'react-redux';
@@ -87,4 +87,4 @@ TimelineElement.propTypes = {
   skipContext: PropTypes.object,
 };
 
-export default memo(TimelineElement);
+export default TimelineElement;
