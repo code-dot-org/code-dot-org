@@ -6,7 +6,6 @@
     border-radius: 4px;
     display: inline-flex;
     flex-direction: column;
-    min-width: 200px;
     position: relative;
   }
 
@@ -34,6 +33,7 @@
   .legend .legend-column-2 {
     display: flex;
     justify-content: space-between;
+    flex-grow: 1;
   }
   
   .legend .icons {
@@ -43,17 +43,21 @@
     gap: 40px;
     padding: 16px;
     position: relative;
+    height: 70px;
   }
 
   .legend .icons-2 {
     padding: 16px;
     position: relative;
+    flex-grow: 1;
+    height: 70px;
   }
 
   .legend .legend-item {
     align-items: center;
     display: inline-flex;
     flex: 0 0 auto;
+    padding: 7px;
     gap: 8px;
     position: relative;
   }
@@ -67,10 +71,24 @@
     width: 49%;
 
   }
+
+  .legend .label-text {
+    margin-bottom: 0;
+  }
   
   .legend .v-icon {
-    display: flex !important;
-    width: 16px !important;
+    width: 20px !important;
+    height: 20px !important;
+    font-size: 16px;
+
+    &:before {
+      left: 13%;
+      position: relative;
+    }
+  }
+
+  .fa.fa-rotate-left {
+    padding-top: 5px;
   }
   
 

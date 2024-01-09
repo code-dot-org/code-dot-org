@@ -13,7 +13,7 @@ export default function AssignmentCompletionStatesBox({
       <div className="icons-2">
         <div className="legend-column-2">
           <div className="legend-item-2">
-            <LegendItem iconId="star" labelText="Not started" />
+            <LegendItem progressBoxColor="white" labelText="Not started" />
           </div>
           <div className="legend-item-2">
             <LegendItem iconId="dash" labelText="No online work" />
@@ -21,16 +21,24 @@ export default function AssignmentCompletionStatesBox({
         </div>
         <div className="legend-column-2">
           <div className="legend-item-2">
-            <LegendItem iconId="circle-small" labelText="In progress" />
+            <LegendItem iconId="circle-o" labelText="In progress" />
           </div>
           <div className="legend-item-2">
-            <LegendItem iconId="rotate-left" labelText="Submitted" />
+            <LegendItem
+              iconId="circle"
+              iconColor="green"
+              labelText="Submitted"
+            />
           </div>
         </div>
         {isViewingLevelProgress && hasValidatedLevels && (
           <div className="legend-column-2">
             <div className="legend-item-2">
-              <LegendItem iconId="circle-check" labelText="VALIDATED" />
+              <LegendItem
+                iconId="circle-check"
+                labelText="Validated"
+                iconColor="green"
+              />
             </div>
           </div>
         )}

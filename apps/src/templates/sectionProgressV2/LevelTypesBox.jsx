@@ -16,7 +16,7 @@ export default function LevelTypesBox() {
               <LegendItem iconId="star" labelText="Assessment level" />
             </div>
             <div>
-              <LegendItem iconId="sitemap" labelText="Choice level" />
+              <LegendItem iconId="split" labelText="Choice level" />
             </div>
           </div>
         </div>

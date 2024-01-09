@@ -14,11 +14,25 @@ export default class ProgressBox extends Component {
     style: PropTypes.object,
     lessonIsAllAssessment: PropTypes.bool,
     lessonNumber: PropTypes.number,
+    viewed: PropTypes.bool,
   };
 
   render() {
-    const {started, incomplete, imperfect, perfect, lessonIsAllAssessment} =
-      this.props;
+    const {
+      started,
+      incomplete,
+      imperfect,
+      perfect,
+      lessonIsAllAssessment,
+      viewed,
+    } = this.props;
+
+    const viewedStyle = {
+      ...styles.filler,
+      backgroundColor: color.neutral_dark20,
+      height: PROGRESS_BOX_SIZE,
+      width: PROGRESS_BOX_SIZE,
+    };
 
     const boxWithBorderStyle = {
       ...styles.box,
@@ -60,17 +74,24 @@ export default class ProgressBox extends Component {
       ...styles.lessonNumber,
       color: perfect ? color.white : color.charcoal,
     };
+
     return (
       <div style={boxWithBorderStyle}>
         {this.props.lessonNumber && (
           <div style={lessonNumberStyle}>{this.props.lessonNumber}</div>
         )}
-        <div style={incompleteLevels} />
-        <div style={imperfectLevels} />
-        <div
-          className={'uitest-perfect-bar'}
-          style={lessonIsAllAssessment ? assessmentLevels : perfectLevels}
-        />
+        {viewed ? (
+          <div style={viewedStyle} />
+        ) : (
+          <div>
+            <div style={incompleteLevels} />
+            <div style={imperfectLevels} />
+            <div
+              className={'uitest-perfect-bar'}
+              style={lessonIsAllAssessment ? assessmentLevels : perfectLevels}
+            />
+          </div>
+        )}
       </div>
     );
   }
