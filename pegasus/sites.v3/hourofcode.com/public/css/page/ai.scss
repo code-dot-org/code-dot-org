@@ -47,14 +47,9 @@ section.activities {
 
   .flex-container {
     margin: 3rem auto;
-    justify-content: space-between;
-    align-items: center;
+    place-content: center;
     flex-wrap: wrap;
     gap: 1rem;
-
-    @media screen and (max-width: $width-md) {
-      justify-content: center;
-    }
 
     img {
       max-width: 175px;

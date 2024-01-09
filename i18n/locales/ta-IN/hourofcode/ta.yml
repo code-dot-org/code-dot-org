@@ -928,6 +928,9 @@ ta:
   cs_ambassador_application_date: விண்ணப்பங்கள் நவம்பர் 8, 2023 வரை திறக்கப்படுகின்றன
   cs_ambassador_application_subhead: உங்கள் விண்ணப்பத்தை இன்று சமர்ப்பிக்க ஆசிரியருடன்
     இணைந்து
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: கேள்விகள்? தயவுசெய்து தொடர்பு கொள்ளவும் [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: சிஎஸ் தூதர்கள் என்ன செய்கிறார்கள்?

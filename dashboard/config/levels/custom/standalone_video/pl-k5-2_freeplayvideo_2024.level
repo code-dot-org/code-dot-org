@@ -1,0 +1,18 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2023-12-14T15:56:44.000Z",
+  "level_num": "custom",
+  "user_id": 16899,
+  "properties": {
+    "encrypted": "false",
+    "video_key": "hello_world_congrats",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2023"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2023-12-14T15:56:44.294+00:00\",\"changed\":[\"cloned from \\\"coursee_helloworld_freeplayvideo_2023\\\"\"],\"cloned_from\":\"coursee_helloworld_freeplayvideo_2023\"}]"
+}]]></config>
+</StandaloneVideo>

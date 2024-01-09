@@ -906,6 +906,9 @@ mt:
     2023
   cs_ambassador_application_subhead: Taħdem ma 'għalliem biex tissottometti l-applikazzjoni
     tiegħek illum
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Mistoqsijiet? Jekk jogħġbok ikkuntattja lil
     [youngwomen@code.org] (%{email_url})
   cs_ambassador_do_heading: X'jagħmlu l-Ambaxxaturi CS?
