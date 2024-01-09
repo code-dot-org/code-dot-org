@@ -3,11 +3,9 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lesson 5 Activity: User Interfaces - User Testing
+# Lesson 5 Activity, Continued: User Interfaces - User Testing
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px; margin-bottom:20px;">
-
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">For this activity, students use this paper prototype to test out an app. One person will be the <strong>user</strong>, who will try to use the paper prototype. Another person will be the <strong>computer</strong>, who is in charge of changing the screens and reacting to what the user does. Our goal is to collect feedback so we can make recommendations and improve it.
+##### For this activity, students use this paper prototype to test out an app. One person will be the <strong>user</strong>, who will try to use the paper prototype. Another person will be the <strong>computer</strong>, who is in charge of changing the screens and reacting to what the user does. Our goal is to collect feedback so we can make recommendations and improve it.
 </p></div>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
@@ -29,8 +27,12 @@ markdown <<MARKDOWN
 	* ##### If the Navigation Diagram shows a line connected to the element that was clicked, find the screen at the other end of the line and place it in front of the user.
 	* ##### If the Navigation Diagram doesn't show a line connected to the element that was clicked, do nothing.
 5. ##### When the User completes a task (or decides it is impossible in the current prototype), they fill out the "What I Tried" and "My Reaction" columns and the computer resets the app back to the home screen.
+<br><br>
 
-<img src="https://images.code.org/76c9129ad6d3ca7ba034b9e82fc65b82-image-1648826626022.23.31 AM.png" alt="Screenshot of an app prototype" style="padding-left: 90px; height: 250px; clear: both; margin: 0 20px 20px 0;">
+| Task                           	| What I Tried                                                                     	| My Reaction                                                                                                             	|
+|--------------------------------	|----------------------------------------------------------------------------------	|-------------------------------------------------------------------------------------------------------------------------	|
+| View Suzette's information     	| Clicked on each of the faces until I found one that changed to Suzette's screen. 	| It wasn't really clear who was who on the home screen. It would be nice if it showed each kid's name below their below. 	|
+| Get help on how to use the app 	|                                                                                  	|                                                                                                                         	|
 
 </p></div>
 </details>

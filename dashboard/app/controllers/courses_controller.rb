@@ -163,7 +163,11 @@ class CoursesController < ApplicationController
     # When the url of a course family is requested, redirect to a specific course version.
     if UnitGroup.family_names.include?(params[:course_name])
       unit_group = UnitGroup.latest_stable_version(params[:course_name])
-      redirect_to action: params[:action], course_name: unit_group.name if unit_group
+      if unit_group
+        redirect_path = url_for(action: params[:action], course_name: unit_group.name)
+        redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
+        redirect_to "#{redirect_path}#{redirect_query_string}"
+      end
     end
 
     unit_group
