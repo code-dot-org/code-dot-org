@@ -79,6 +79,7 @@ export const procedureDefMutator = {
           i
         );
       } else if (nodeName === 'description') {
+        // CDO Blockly projects stored descriptions in a separate tag within the mutation.
         this.description = node.textContent;
       }
     }
@@ -89,6 +90,10 @@ export const procedureDefMutator = {
       FALSEY_DEFAULT
     );
     this.setStatements_(xmlElement.getAttribute('statements') !== 'false');
+    if (!this.description) {
+      // Google Blockly projects store descriptions in a separate field.
+      setBlockDescription(this, this.getFieldValue('DESCRIPTION'));
+    }
   },
 
   /**
@@ -151,7 +156,7 @@ export const procedureDefMutator = {
       }
     }
 
-    setBlockDescription(this, state);
+    setBlockDescription(this, state['description']);
     this.doProcedureUpdate();
     this.setDeletable(state['initialDeleteConfig'] === false ? false : true);
     this.setStatements_(state['hasStatements'] === false ? false : true);

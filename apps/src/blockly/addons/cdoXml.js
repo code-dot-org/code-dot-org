@@ -282,7 +282,12 @@ export function addNameToBlockFunctionCallBlock(blockElement) {
 function addMissingBehaviorId(blockElement) {
   const blockType = blockElement.getAttribute('type');
   if (blockType === BLOCK_TYPES.behaviorGet) {
-    setIdFromTextContent(getFieldOrTitle(blockElement, 'VAR'));
+    const behaviorNameField =
+      // CDO Blockly projects used a VAR field to store the behavior name.
+      getFieldOrTitle(blockElement, 'VAR') ||
+      // Google Blockly projects use a NAME field to store the behavior name.
+      getFieldOrTitle(blockElement, 'NAME');
+    setIdFromTextContent(behaviorNameField);
   } else if (blockType === BLOCK_TYPES.behaviorDefinition) {
     setIdFromTextContent(getFieldOrTitle(blockElement, 'NAME'));
   }
@@ -295,6 +300,9 @@ function addMissingBehaviorId(blockElement) {
  * @param {Element} element - The XML element (title or field) for a block.
  */
 function setIdFromTextContent(element) {
+  if (!element) {
+    return;
+  }
   if (!element.getAttribute('id')) {
     element.setAttribute('id', element.textContent);
   }

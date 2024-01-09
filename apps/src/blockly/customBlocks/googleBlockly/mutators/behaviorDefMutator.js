@@ -49,6 +49,7 @@ export const behaviorDefMutator = {
       container.appendChild(parameter);
     }
 
+    container.setAttribute('behaviorId', this.behaviorId);
     // Save whether the statement input is visible.
     if (!this.hasStatements_) {
       container.setAttribute('statements', 'false');
@@ -71,6 +72,7 @@ export const behaviorDefMutator = {
       const node = xmlElement.childNodes[i];
       const nodeName = node.nodeName.toLowerCase();
       if (nodeName === 'description') {
+        // CDO Blockly projects stored descriptions in a separate tag within the mutation.
         this.description = node.textContent;
       }
     }
@@ -80,6 +82,10 @@ export const behaviorDefMutator = {
       'userCreated',
       FALSEY_DEFAULT
     );
+    if (!this.description) {
+      // Google Blockly projects store descriptions in a separate field.
+      setBlockDescription(this, this.getFieldValue('DESCRIPTION'));
+    }
   },
 
   /**
@@ -145,7 +151,7 @@ export const behaviorDefMutator = {
       }
     }
 
-    setBlockDescription(this, state);
+    setBlockDescription(this, state['description']);
     this.doProcedureUpdate();
     this.setStatements_(state['hasStatements'] === false ? false : true);
   },

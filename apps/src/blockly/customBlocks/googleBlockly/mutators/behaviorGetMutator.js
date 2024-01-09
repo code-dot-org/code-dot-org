@@ -17,6 +17,7 @@ export const behaviorGetMutator = {
   mutationToDom: function () {
     const container = GoogleBlockly.utils.xml.createElement('mutation');
     container.setAttribute('behaviorId', this.behaviorId);
+    container.setAttribute('name', this.getFieldValue('NAME'));
     return container;
   },
 
