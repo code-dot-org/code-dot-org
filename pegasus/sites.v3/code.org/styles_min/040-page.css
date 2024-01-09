@@ -331,22 +331,13 @@ input[type=submit] {
 a.has-external-link::after {
   font: var(--fa-font-solid);
   content: "\f08e";
-  margin: 0 2px 0 4px;
-}
-
-html[dir="rtl"] .has-external-link a::after,
-html[dir="rtl"] a.has-external-link::after {
-  margin: 0 4px 0 2px;
+  font-size: 0.875em;
+  margin-inline: 4px 2px;
 }
 
 .has-external-link a.link-button::after,
 a.link-button.has-external-link::after {
-  margin: 0 0 0 4px;
-}
-
-html[dir="rtl"] .has-external-link a.link-button::after,
-html[dir="rtl"] a.link-button.has-external-link::after {
-  margin: 0 4px 0 0;
+  margin-inline: 4px 0;
 }
 
 li > ul {
