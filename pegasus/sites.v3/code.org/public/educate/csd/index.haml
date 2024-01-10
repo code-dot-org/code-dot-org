@@ -51,7 +51,10 @@ theme: responsive_full_width
 
 %section#pick-a-course.bg-neutral-light
   .wrapper
-    %h2=hoc_s(:csd_page_pick_a_course_heading)
+    - if request.language == "en"
+      %h2=hoc_s(:csd_page_pick_a_course_heading, markdown: :inline)
+    - else
+      %h2=hoc_s(:csd_page_pick_a_course_heading_non_en, markdown: :inline, locals: {cs_discoveries: "CS Discoveries&reg;"})
     %p=hoc_s(:csd_page_pick_a_course_desc)
     %hr
     %div.centered
