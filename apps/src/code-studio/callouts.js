@@ -2,9 +2,8 @@ import $ from 'jquery';
 import 'qtip2';
 var clientState = require('./clientState');
 
-const calloutsHiddenByScrolling = {};
-const calloutsHiddenByContainerVisibility = {};
-const hiddenCallouts = {};
+let hiddenCallouts = {};
+let allCallouts = [];
 
 /**
  * @fileoverview handles creation and updating of dashboard tooltips, aka callouts.
@@ -31,6 +30,8 @@ const hiddenCallouts = {};
  * @param {CalloutDefinition[]} callouts
  */
 export default function createCallouts(callouts) {
+  allCallouts = [];
+  hiddenCallouts = {};
   if (!callouts || callouts.length === 0) {
     return;
   }
@@ -98,8 +99,6 @@ export default function createCallouts(callouts) {
 }
 
 export function addCallouts(callouts) {
-  console.log('in addCallouts');
-  console.log({callouts});
   $.fn.qtip.zindex = 500;
 
   var showCalloutsMode = document.URL.indexOf('show_callouts=1') !== -1;
@@ -204,6 +203,7 @@ export function addCallouts(callouts) {
             ) {
               // create callout(s)
               $(config.codeStudio.selector).qtip(config);
+              allCallouts.push(config.codeStudio.selector);
               showHideCalloutsOnInit(config.codeStudio.selector, container);
             }
             callout.seen = true;
@@ -213,6 +213,7 @@ export function addCallouts(callouts) {
     } else if (!callout.seen) {
       // create callout(s)
       $(selector).qtip(config);
+      allCallouts.push(selector);
       showHideCalloutsOnInit(selector, container);
     }
   });
@@ -235,6 +236,7 @@ function showHideCalloutsOnInit(selector, container) {
       api.show();
     } else {
       console.log(`keeping ${api.id} hidden`);
+      api.hide();
       hiddenCallouts[api.id] = true;
     }
   });
@@ -265,10 +267,7 @@ var showHideDropletGutterCallouts =
  * to view.
  * @function
  */
-function showOrHideCalloutsByTargetVisibility(
-  containerSelector,
-  isInitialLoad
-) {
+function showOrHideCalloutsByTargetVisibility(containerSelector) {
   // Close around this object, which we use to remember which callouts
   // were hidden by scrolling and should be shown again when they scroll
   // back in.
@@ -276,65 +275,50 @@ function showOrHideCalloutsByTargetVisibility(
    * Remember callouts hidden due to overlap, keyed by qtip id
    * @type {Object.<string, boolean>}
    */
-  // var calloutsHiddenByScrolling = {};
-  // var calloutsHiddenByContainerVisibility = {};
   return function () {
     var container = $(containerSelector);
-    $('.cdo-qtips').each(function () {
-      var api = $(this).qtip('api');
-      var target = $(api.elements.target);
+    allCallouts.forEach(function (selector) {
+      $(selector).each(function () {
+        var api = $(this).qtip('api');
+        console.log(`checking ${api.id}`);
+        var target = $(api.elements.target);
 
-      if ($(document).has(target).length === 0) {
-        api.destroy(true);
-        return;
-      }
-
-      var isTargetInContainer = container.has(target).length > 0;
-      if (!isTargetInContainer) {
-        return;
-      }
-
-      if (container.is(':visible')) {
-        if (calloutsHiddenByContainerVisibility[api.id]) {
-          api.show();
-          delete calloutsHiddenByContainerVisibility[api.id];
+        if ($(document).has(target).length === 0) {
+          //api.destroy(true);
+          return;
         }
-      } else {
-        api.hide();
-        console.log(`hiding ${api.id}`);
-        calloutsHiddenByContainerVisibility[api.id] = true;
-      }
 
-      if (target && elementIsInContainer(target, container)) {
-        if (calloutsHiddenByScrolling[api.id]) {
-          api.show();
-          delete calloutsHiddenByScrolling[api.id];
+        var isTargetInContainer = container.has(target).length > 0;
+        if (!isTargetInContainer) {
+          return;
         }
-      } else {
-        if ($(this).is(':visible')) {
+        const shouldBeVisible = calloutShouldBeVisible(container, api);
+        if (shouldBeVisible && hiddenCallouts[api.id]) {
+          console.log(`${api.id} should be visible and is currently hidden`);
+          api.show();
+          delete hiddenCallouts[api.id];
+        } else if (!shouldBeVisible && !hiddenCallouts[api.id]) {
+          console.log(
+            `${api.id} should be not visible and is currently visible`
+          );
           api.hide();
-          console.log(`hiding ${api.id}`);
-          calloutsHiddenByScrolling[api.id] = true;
+          hiddenCallouts[api.id] = true;
         }
-      }
+      });
     });
   };
 }
 
 function calloutShouldBeVisible(container, qtipApi) {
   var target = $(qtipApi.elements.target);
-
-  if ($(document).has(target).length === 0) {
-    qtipApi.destroy(true);
-    return;
-  }
-
   var isTargetInContainer = container.has(target).length > 0;
   if (!isTargetInContainer) {
-    return;
+    // Case of a callout outside of the workspace, which we always show.
+    return true;
   }
   const isContainerVisible = container.is(':visible');
   const elementIsContained = target && elementIsInContainer(target, container);
+  console.log({id: qtipApi.id, isContainerVisible, elementIsContained});
   return isContainerVisible && elementIsContained;
 }
 
