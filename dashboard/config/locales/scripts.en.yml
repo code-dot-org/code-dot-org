@@ -14260,3 +14260,12 @@ en:
 
 
             **Suggested time:** 60 minutes
+        music-intro-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: music-intro-2024
+          title: Music Intro
+          description_audience: ''
+          description_short: An introduction to Music Lab.
+          description: ''
+          student_description: ''
