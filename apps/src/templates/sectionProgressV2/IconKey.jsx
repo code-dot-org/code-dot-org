@@ -24,8 +24,8 @@ export default function IconKey({isViewingLevelProgress, hasLevelValidation}) {
       <LevelTypesBox />
       <TeacherActionsBox isViewingLevelProgress={true} />
       <AssignmentCompletionStatesBox
-        isViewingLevelProgress={true}
-        hasValidatedLevels={false}
+        isViewingLevelProgress={isViewingLevelProgress}
+        hasValidatedLevels={hasLevelValidation}
       />
     </div>
   );

@@ -6,7 +6,7 @@ export default function SectionProgressV2() {
   return (
     <div>
       <Heading1>Progress</Heading1>
-      <IconKey isViewingLevelProgress={true} hasLevelValidation={true} />
+      <IconKey isViewingLevelProgress={true} hasLevelValidation={false} />
     </div>
   );
 }
