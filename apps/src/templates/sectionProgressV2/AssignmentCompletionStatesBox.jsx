@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import i18n from '@cdo/locale';
 import LegendItem from './LegendItem';
 import './section-progress-refresh.scss';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
+import {NOT_STARTED} from './IconKey';
+import color from '@cdo/apps/util/color';
 
 export default function AssignmentCompletionStatesBox({
   isViewingLevelProgress,
@@ -13,21 +16,27 @@ export default function AssignmentCompletionStatesBox({
       <div className="icons-2">
         <div className="legend-column-2">
           <div className="legend-item-2">
-            <LegendItem progressBoxColor="white" labelText="Not started" />
+            <LegendItem
+              stateDescription={NOT_STARTED}
+              labelText={i18n.notStarted()}
+            />
           </div>
           <div className="legend-item-2">
-            <LegendItem iconId="dash" labelText="No online work" />
+            <LegendItem fontAwesomeId="dash" labelText={i18n.noOnlineWork()} />
           </div>
         </div>
         <div className="legend-column-2">
           <div className="legend-item-2">
-            <LegendItem iconId="circle-o" labelText="In progress" />
+            <LegendItem
+              fontAwesomeId="circle-o"
+              labelText={i18n.inProgress()}
+            />
           </div>
           <div className="legend-item-2">
             <LegendItem
-              iconId="circle"
-              iconColor="green"
-              labelText="Submitted"
+              fontAwesomeId="circle"
+              fontAwesomeColor={color.product_affirmative_default}
+              labelText={i18n.submitted()}
             />
           </div>
         </div>
@@ -35,9 +44,9 @@ export default function AssignmentCompletionStatesBox({
           <div className="legend-column-2">
             <div className="legend-item-2">
               <LegendItem
-                iconId="circle-check"
-                labelText="Validated"
-                iconColor="green"
+                labelText={i18n.validated()}
+                fontAwesomeId="circle-check"
+                fontAwesomeColor={color.product_affirmative_default}
               />
             </div>
           </div>
@@ -49,7 +58,7 @@ export default function AssignmentCompletionStatesBox({
   return (
     <div className="legend">
       <div className="headerContainer">
-        <StrongText>Assignment Completion States</StrongText>
+        <StrongText>{i18n.assignmentCompletionStates()}</StrongText>
       </div>
       <div>{legendIcons()}</div>
     </div>
