@@ -13,7 +13,7 @@ const {WebpackManifestPlugin} = require('webpack-manifest-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
-const circles = require('./circles.json');
+const circles = require('./circular_dependencies.json');
 
 const envConstants = require('./envConstants');
 
