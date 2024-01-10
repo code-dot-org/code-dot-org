@@ -16,7 +16,7 @@ Feature: App Lab Data Tab
     Then I click selector ".uitest-dataset-preview-btn:first-of-type" once I see it
     And I wait until element ".modal h1" is visible
     Then I save the table name from element ".modal h1"
-    Then I click selector ".modal button:first-of-type" once I see it
+    Then I click selector ".modal button:nth-of-type(1)" once I see it
     Then I wait until element "#dataTablesBody table tr:eq(2) td:eq(0)" contains the saved table name
 
   Scenario: Data Tables Tab
