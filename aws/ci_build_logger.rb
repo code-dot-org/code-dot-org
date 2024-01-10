@@ -9,7 +9,11 @@ class CiBuildLogger
   end
 
   def log_build_end(status, log, metadata)
-    upload_log_and_get_link(generate_log_key, log, metadata)
+    log_url = upload_log_to_s3(generate_log_key, body, metadata)
+    permalink = AWS::S3.get_console_link_from_presigned(log_url)
+    " <a href='#{log_url}'>☁ Log on S3</a> (<a href='#{permalink}'>permalink</a>)"
+  rescue StandardError => exception
+    ChatClient.log "Uploading log to S3 failed: #{exception}"
   end
 
   def upload_log_and_get_link(key, body, metadata)
