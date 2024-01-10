@@ -92,7 +92,9 @@ option.
     "full_name": "$Person.name.full",
     "given_name": "$Person.name.given",
     "family_name": "$Person.name.family",
-    "display_name": "$Person.name.display"
+    "display_name": "$Person.name.display",
+    "section_ids": "$Canvas.course.sectionIds",
+    "section_names": "$com.instructure.User.sectionNames"
   }
 }
 ```
