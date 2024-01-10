@@ -5,6 +5,11 @@
 .dropdownContainer {
   position: relative;
   display: inline-block;
+  margin: 0;
+
+  .dropdownLabel {
+    display: block;
+  }
 
   .dropdown {
     display: inline-flex;
@@ -43,7 +48,7 @@
 
 // Dropdown colors
 .dropdownContainer-black {
-  .dropdownLabelText {
+  .dropdownLabel {
     color: $light_black;
   }
 
@@ -80,7 +85,7 @@
 }
 
 .dropdownContainer-white {
-  .dropdownLabelText {
+  .dropdownLabel {
     color: $light_white;
   }
 
@@ -106,6 +111,11 @@
 
 // Sizes
 .dropdownContainer-l {
+  .dropdownLabel {
+    @include label-one;
+    margin-bottom: 0.37rem;
+  }
+
   .dropdown {
     @include button-one-text;
     height: 3rem;
@@ -124,6 +134,11 @@
 }
 
 .dropdownContainer-m {
+  .dropdownLabel {
+    @include label-two;
+    margin-bottom: 0.37rem;
+  }
+
   .dropdown {
     @include button-two-text;
     height: 2.5rem;
@@ -142,6 +157,11 @@
 }
 
 .dropdownContainer-s {
+  .dropdownLabel {
+    @include label-three;
+    margin-bottom: 0.37rem;
+  }
+
   .dropdown {
     @include button-three-text;
     height: 2rem;
@@ -160,6 +180,11 @@
 }
 
 .dropdownContainer-xs {
+  .dropdownLabel {
+    @include label-four;
+    margin-bottom: 0.37rem;
+  }
+
   .dropdown {
     @include button-four-text;
     height: 1.5rem;

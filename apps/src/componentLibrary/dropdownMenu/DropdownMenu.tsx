@@ -7,8 +7,14 @@ import moduleStyles from './dropdownMenu.module.scss';
 export interface DropdownMenuProps {
   /** Dropdown  Menu items list */
   items: {value: string; label: string}[];
+  /** Dropdown selected value */
+  selectedValue?: string;
   /** Dropdown onChange handler */
-  onChange: (args: any) => void;
+  onChange: (args: React.ChangeEvent<HTMLSelectElement>) => void;
+  /** Dropdown label text */
+  labelText: string;
+  /** Is dropdown label visible or added via aria-label attribute */
+  isLabelVisible?: boolean;
   /** Dropdown name */
   name: string;
   /** Dropdown id */
@@ -43,10 +49,13 @@ export interface DropdownMenuProps {
  */
 const DropdownMenu: React.FunctionComponent<DropdownMenuProps> = ({
   items,
+  selectedValue,
   onChange,
   name,
   id,
   className,
+  labelText,
+  isLabelVisible = true,
   disabled = false,
   color = 'black',
   size = 'm',
@@ -60,20 +69,20 @@ const DropdownMenu: React.FunctionComponent<DropdownMenuProps> = ({
         className
       )}
     >
-      {/*TODO: update next line*/}
-      <span className={moduleStyles.dropdownLabelText}>Dropdown label</span>
+      {isLabelVisible && (
+        <span className={moduleStyles.dropdownLabel}>{labelText}</span>
+      )}
 
       <div className={moduleStyles.dropdownArrowDiv}>
         <select
           name={name}
+          aria-label={isLabelVisible ? undefined : labelText}
           onChange={onChange}
-          value={'option-2'}
+          value={selectedValue}
           id={id}
           className={moduleStyles.dropdown}
           disabled={disabled}
         >
-          {/*TODO: update next line*/}
-          <option value="">Some default text</option>
           {items.map(({value, label}) => (
             <option value={value} key={value}>
               {label}
