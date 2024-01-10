@@ -53,8 +53,12 @@ const ChooseYourProgram = props => {
             <a href={CSP_URL} target="_blank" rel="noopener noreferrer">
               CS Principles
             </a>
-            , and <a href={CSA_URL}>CSA</a> landing pages. For additional
-            questions regarding the program or application, please{' '}
+            , and{' '}
+            <a href={CSA_URL} target="_blank" rel="noopener noreferrer">
+              Computer Science A
+            </a>{' '}
+            landing pages. For additional questions regarding the program or
+            application, please{' '}
             <RegionalPartnerMiniContactPopupLink
               sourcePageId="teacher-application-first-page"
               notes="Please tell me more about the professional learning program for grades 6-12!"

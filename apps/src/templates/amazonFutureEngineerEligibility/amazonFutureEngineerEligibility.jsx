@@ -307,6 +307,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
             email={formData.email}
             schoolId={formData.schoolId}
             updateFormData={this.updateAndStoreFormData}
+            isSignedIn={formData.signedIn}
           />
         )}
         {formData.schoolEligible &&
