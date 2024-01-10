@@ -41,7 +41,19 @@
       },
       "text": "#### Play live!\n\nDid you know you can do a live performance?\n\nAttach a **play** block to the **trigger** block.\n\nPress **Run** and press **1** to trigger the sound.",
       "validations": [
-
+        {
+          "conditions": [
+            {
+              "name": "played_sounds_together",
+              "value": 1
+            }
+          ],
+          "message": "Nice work!",
+          "next": true
+        },
+        {
+          "message": "Please play a sound using the trigger."
+        }
       ]
     },
     "instructions_important": "false",
