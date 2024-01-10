@@ -5109,6 +5109,10 @@ ka:
               display_name: ცვლადები
           description_audience: 'ასაკი: 9-13'
           description_short: ვისწავლოთ ყველა ცნება კომპიუტერული მეცნიერების საფუძვლები და შექმნათ თქვენი საკუთარი ხელოვნება, ამბავი ან თამაში.
+        musiclab:
+          lessons:
+            lesson-3:
+              name: თავისუფალი თამაში
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -5311,3 +5315,20 @@ ka:
               display_name: შესავალი აპლიკაციების ლაბორატორიაში
         csd-post-survey-2024:
           title: კურსის შემდგომი გამოკითხვა
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: მოვლენები
+            lesson-4:
+              name: ქცევა
+            lesson-5:
+              name: მომდევნო ნაბიჯები
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: ციკლები
+            lesson-4:
+              name: პირობითი ბრძანებები
+            lesson-6:
+              name: მომდევნო ნაბიჯები
+          title: ინფორმატიკის შესავალი
