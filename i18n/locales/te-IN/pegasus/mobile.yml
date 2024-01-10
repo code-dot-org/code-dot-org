@@ -178,7 +178,7 @@
   header_teacher_community: "ఉపాధ్యాయ సమాజం"
   header_help_support: 'సహాయం మరియు మద్దతు '
   header_report_bug: "ఒక సమస్యను రిపోర్టు చేయండి"
-  header_legal_privacy: "గోప్యతా పాలసీ"
+  header_legal_privacy: "ప్రైవసీ పాలసీ"
   header_legal_tos: "సర్వీసు నిబంధనలు"
   header_tutorials: "ట్యుటోరియల్స్"
   header_documentation: "డాక్యుమెంటేషన్"
@@ -233,7 +233,7 @@
   hoc2022_mc_mee_timecraft_description: "Minecraft లోని ఈ ఉచిత కోడింగ్ పాఠంలో భవిష్యత్తును కాపాడటానికి సకాలములో తిరిగి ప్రయాణించండి: విద్యా ప్రచురణ."
   footer_powered_by_aws: "అమెజాన్ వెబ్ సర్వీసెస్ మరియు “AWS చేత ఆధారితం” లోగో అమెజాన్. కామ్, ఇంక్ లేదా యునైటెడ్ స్టేట్స్ మరియు/లేదా ఇతర దేశాలలో దాని అనుబంధ సంస్థల ట్రేడ్మార్క్లు."
   codebytes_skinny_banner_english_only: "ఇంగ్లీష్-మాత్రమే"
-  footer_privacy_policy: "గోప్యతా పాలసీ"
+  footer_privacy_policy: "ప్రైవసీ పాలసీ"
   footer_about: "పరియచం"
   footer_partners: "భాగస్వాములు"
   footer_support: "మద్దతు"
