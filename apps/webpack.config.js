@@ -71,8 +71,8 @@ const nodeModulesToTranspile = [
 // map our circular dependency JSON to a set.
 const circleSet = new Set(circles);
 
-// as we see our known circles, we're gonna remove them from our list. That way,
-// we can report at the end if any circles have been cleaned up.
+// as we see our known circular dependencies, we're gonna remove them from our list. That way,
+// we can report at the end if any circular dependencies have been cleaned up.
 let seenCircles = new Set();
 const nodePolyfillConfig = {
   plugins: [
@@ -85,21 +85,21 @@ const nodePolyfillConfig = {
       timers: 'timers-browserify',
     }),
     new CircularDependencyPlugin({
-      // exclude detection of files based on a RegExp
+      // ignore everything in a build directory or mode_modules
       exclude: /node_modules|build/,
-      // add errors to webpack instead of warnings
       failOnError: true,
-      // allow import cycles that include an asyncronous import,
-      // e.g. via import(/* webpackMode: "weak" */ './file.js')
       allowAsyncCycles: false,
-      // set the current working directory for displaying module paths
       cwd: process.cwd(),
+      // when we start, we re-initialize our list of previously seen circles to whatever
+      // we loaded from circular_depencies.json. If that file changes and you need to update, restart
+      // webpack
       onStart: () => {
         seenCircles.clear();
         seenCircles = new Set(Array.from(circleSet));
       },
       onDetected: ({module: webpackModuleRecord, paths, compilation}) => {
         const pathString = paths.join(' -> ');
+        // if the path is not a known existing one, then note as an error
         if (!circleSet.has(pathString)) {
           compilation.errors.push(
             new Error(
@@ -107,13 +107,16 @@ const nodePolyfillConfig = {
             )
           );
         }
+        // and since we've seen that path, we can delete it from our set of seen values
         seenCircles.delete(pathString);
       },
+      // finally, at the end, if we still have any circles that we previously knew about but did not see
+      // this time, note it as a warning.
       onEnd: ({compilation}) => {
         if (seenCircles.size > 0) {
-          compilation.errors.push(
+          compilation.warnings.push(
             new Error(
-              `Circular Dependency Checker : Resolved circles can be removed from circles.json : ${Array.from(
+              `Circular Dependency Checker : Resolved circular dependencies can be removed from circles.json : ${Array.from(
                 seenCircles
               ).join(',')}`
             )
