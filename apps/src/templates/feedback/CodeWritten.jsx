@@ -19,7 +19,7 @@ class CodeWritten extends React.Component {
         className="lines-of-code-message"
         style={useChallengeStyles ? styles.challengeLineCounts : null}
       >
-        {numLinesWritten.value > 0
+        {numLinesWritten > 0
           ? msg.numLinesOfCodeWritten({numLines: numLinesWritten})
           : null}
       </p>
