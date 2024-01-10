@@ -24,14 +24,13 @@ function ProgressTableV2({
 
   return (
     <div className={styles.progressTableV2}>
-      <div>Progress Table V2</div>
-      <ProgressTableHeader
+      <StudentColumn
+        sortedStudents={sortedStudents}
         unitName={unitData?.title}
         sectionId={sectionId}
-        lessons={unitData?.lessons}
       />
       <div className={styles.table}>
-        <StudentColumn sortedStudents={sortedStudents} />
+        <ProgressTableHeader lessons={unitData?.lessons} />
         <ProgressDataV2 sortedStudents={sortedStudents} />
       </div>
     </div>

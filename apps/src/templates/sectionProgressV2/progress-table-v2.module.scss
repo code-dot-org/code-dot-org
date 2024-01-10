@@ -4,11 +4,14 @@
   width: 100%;
   font-size: 16px;
   margin-bottom: 76px;
+  display: flex;
+  flex-direction: row;
 }
 
 .table {
-  display: flex;
-  flex-direction: row;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .gridBox {
@@ -18,7 +21,6 @@
   line-height: 47px;
 
   &Student {
-    width: 181px;
     padding-left: 12px;
   }
 
@@ -32,5 +34,34 @@
 .grid {
   border-bottom: 1px solid $light_gray_200;
   border-right: 1px solid $light_gray_200;
+}
+
+.header {
+  height: 120px;
+
+  &Columns {
+    display: flex;
+    flex-direction: row;
+    border-right: 1px solid $light_gray_200;
+    border-bottom: 1px solid $light_gray_200;
+    font-size: 14px;
+    height: 48px;
+    width:fit-content;
+  }
+}
+
+.sortDropdown {
+  height: 120px;
+  margin-bottom: 22px;
+}
+
+
+.studentColumn {
+  width: 195px;
+  min-width: 195px;
   margin-right: 12px;
+
+  &Heading {
+    margin-bottom: 12px;
+  }
 }
