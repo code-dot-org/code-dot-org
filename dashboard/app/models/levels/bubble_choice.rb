@@ -199,9 +199,9 @@ class BubbleChoice < DSLDefined
       feedback.review_state == TeacherFeedback::REVIEW_STATES.keepWorking
     end&.level_id
 
-    max_progress_level_id = user_levels.max_by(&:best_result)&.level_id
+    return keep_working_level_id if keep_working_level_id
 
-    keep_working_level_id || max_progress_level_id
+    user_levels.max_by(&:best_result)&.level_id
   end
 
   # Returns an array of BubbleChoice parent levels for any given sublevel name.
