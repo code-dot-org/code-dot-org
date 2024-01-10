@@ -303,7 +303,6 @@ export function getCode(workspace, getSourceAsJson) {
       workspaceXML.appendChild(clonedNode);
     });
 
-    console.log(workspaceXML);
     // Convert the merged document back to an XML string
     return Blockly.utils.xml.domToText(workspaceXML);
   }
