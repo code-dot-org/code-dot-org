@@ -351,6 +351,7 @@ export default class MusicBlocklyWorkspace {
     }
     this.workspace.clearUndo();
 
+    // Ensure that we have an extensible object for Blockly.
     const codeCopy = JSON.parse(JSON.stringify(code));
 
     Blockly.serialization.workspaces.load(codeCopy, this.workspace);

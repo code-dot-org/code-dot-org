@@ -35,7 +35,19 @@
       },
       "text": "#### Repeat\n\nSave effort and use code to repeat a sound.\n\nUse the **repeat** block to play the same thing a few times.",
       "validations": [
-
+        {
+          "conditions": [
+            {
+              "name": "played_sounds_together",
+              "value": 1
+            }
+          ],
+          "message": "Nice work!",
+          "next": true
+        },
+        {
+          "message": "Please play a sound repeatedly."
+        }
       ]
     },
     "instructions_important": "false",

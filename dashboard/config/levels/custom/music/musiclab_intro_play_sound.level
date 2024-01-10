@@ -39,9 +39,11 @@
               "value": 1
             }
           ],
-          "message": "Now you can choose from a wide variety of sounds!",
-          "next": true,
-          "key": "musiclab_standalone_92ad6ada-e70d-4781-a949-a4b4221d3967"
+          "message": "Nice work!",
+          "next": true
+        },
+        {
+          "message": "Please play a sound."
         }
       ]
     },
