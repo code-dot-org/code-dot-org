@@ -26,10 +26,11 @@ export enum Role {
 
 export enum Status {
   ERROR = 'error',
-  OK = 'ok',
-  UNKNOWN = 'unknown',
   PROFANITY = 'profanity',
   PERSONAL = 'personal',
+  INAPPROPRIATE = 'inappropriate',
+  OK = 'ok',
+  UNKNOWN = 'unknown',
   EMAIL = 'email',
   ADDRESS = 'address',
   PHONE = 'phone',
