@@ -16,11 +16,9 @@ export const AudioQueue = ({children}) => {
   const playNextAudio = useCallback(() => {
     if (audioQueue.length > 0) {
       const inlineAudio = audioQueue.shift();
-      inlineAudio.playAudio().then(() => {
-        isPlaying.current = true;
-      });
+      isPlaying.current = true;
+      inlineAudio.playAudio();
     }
-    isPlaying.current = false;
   }, [audioQueue]);
 
   const addToQueue = inlineAudio => {
@@ -39,7 +37,9 @@ export const AudioQueue = ({children}) => {
   }, [audioQueue, playNextAudio]);
 
   return (
-    <AudioQueueContext.Provider value={{addToQueue, playNextAudio, clearQueue}}>
+    <AudioQueueContext.Provider
+      value={{addToQueue, playNextAudio, clearQueue, isPlaying}}
+    >
       {children}
     </AudioQueueContext.Provider>
   );
