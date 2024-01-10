@@ -2,6 +2,10 @@ import $ from 'jquery';
 import 'qtip2';
 var clientState = require('./clientState');
 
+const calloutsHiddenByScrolling = {};
+const calloutsHiddenByContainerVisibility = {};
+const hiddenCallouts = {};
+
 /**
  * @fileoverview handles creation and updating of dashboard tooltips, aka callouts.
  *
@@ -94,14 +98,19 @@ export default function createCallouts(callouts) {
 }
 
 export function addCallouts(callouts) {
+  console.log('in addCallouts');
+  console.log({callouts});
   $.fn.qtip.zindex = 500;
 
   var showCalloutsMode = document.URL.indexOf('show_callouts=1') !== -1;
   callouts.forEach(function (callout) {
     var selector = callout.element_id; // jquery selector.
+    console.log(`setting up callout ${selector}`);
     if ($(selector).length === 0 && !callout.on) {
+      console.log(`could not find selector ${selector}`);
       return;
     }
+    const container = $('#codeWorkspace');
 
     var defaultConfig = {
       codeStudio: {},
@@ -183,7 +192,9 @@ export function addCallouts(callouts) {
         }
         // 'show' after async delay so that DOM changes that may have taken
         // place inside the 'prepareforcallout' event can complete first
+        console.log('in callout.on');
         setTimeout(function () {
+          console.log('in callout.on setTimeout');
           if ($(config.codeStudio.selector).length > 0) {
             if (
               action === 'hashchange' ||
@@ -191,14 +202,18 @@ export function addCallouts(callouts) {
               !callout.seen ||
               config.codeStudio.canReappear
             ) {
-              $(config.codeStudio.selector).qtip(config).qtip('show');
+              // create callout(s)
+              $(config.codeStudio.selector).qtip(config);
+              showHideCalloutsOnInit(config.codeStudio.selector, container);
             }
             callout.seen = true;
           }
         }, 0);
       });
     } else if (!callout.seen) {
-      $(selector).qtip(config).qtip('show');
+      // create callout(s)
+      $(selector).qtip(config);
+      showHideCalloutsOnInit(selector, container);
     }
   });
   // Ensure any callouts pointing to hidden elements are hidden.
@@ -208,6 +223,21 @@ export function addCallouts(callouts) {
 export function handleWorkspaceResizeOrScroll() {
   snapCalloutsToTargets();
   showHideWorkspaceCallouts();
+}
+
+function showHideCalloutsOnInit(selector, container) {
+  console.log({selector: $(selector)});
+  $(selector).each(function () {
+    console.log($(this));
+    const api = $(this).qtip('api');
+    if (calloutShouldBeVisible(container, api)) {
+      console.log(`showing ${api.id}`);
+      api.show();
+    } else {
+      console.log(`keeping ${api.id} hidden`);
+      hiddenCallouts[api.id] = true;
+    }
+  });
 }
 
 /**
@@ -235,7 +265,10 @@ var showHideDropletGutterCallouts =
  * to view.
  * @function
  */
-function showOrHideCalloutsByTargetVisibility(containerSelector) {
+function showOrHideCalloutsByTargetVisibility(
+  containerSelector,
+  isInitialLoad
+) {
   // Close around this object, which we use to remember which callouts
   // were hidden by scrolling and should be shown again when they scroll
   // back in.
@@ -243,8 +276,8 @@ function showOrHideCalloutsByTargetVisibility(containerSelector) {
    * Remember callouts hidden due to overlap, keyed by qtip id
    * @type {Object.<string, boolean>}
    */
-  var calloutsHiddenByScrolling = {};
-  var calloutsHiddenByContainerVisibility = {};
+  // var calloutsHiddenByScrolling = {};
+  // var calloutsHiddenByContainerVisibility = {};
   return function () {
     var container = $(containerSelector);
     $('.cdo-qtips').each(function () {
@@ -268,6 +301,7 @@ function showOrHideCalloutsByTargetVisibility(containerSelector) {
         }
       } else {
         api.hide();
+        console.log(`hiding ${api.id}`);
         calloutsHiddenByContainerVisibility[api.id] = true;
       }
 
@@ -279,11 +313,29 @@ function showOrHideCalloutsByTargetVisibility(containerSelector) {
       } else {
         if ($(this).is(':visible')) {
           api.hide();
+          console.log(`hiding ${api.id}`);
           calloutsHiddenByScrolling[api.id] = true;
         }
       }
     });
   };
+}
+
+function calloutShouldBeVisible(container, qtipApi) {
+  var target = $(qtipApi.elements.target);
+
+  if ($(document).has(target).length === 0) {
+    qtipApi.destroy(true);
+    return;
+  }
+
+  var isTargetInContainer = container.has(target).length > 0;
+  if (!isTargetInContainer) {
+    return;
+  }
+  const isContainerVisible = container.is(':visible');
+  const elementIsContained = target && elementIsInContainer(target, container);
+  return isContainerVisible && elementIsContained;
 }
 
 function reverseCallout(position) {
