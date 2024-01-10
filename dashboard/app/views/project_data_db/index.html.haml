@@ -1,0 +1,8 @@
+%strong{:class => "code", :id => "message"} Hello,  #{@project.project_type}
+%form{:action => "data_db/setKeyValue", :method => "post"}
+  %input{:type => "input"}
+  %input{:type => "submit"}
+
+= form_tag "data_db/setKeyValue", :method => :post, :remote => false do
+  = text_field_tag "accountName", ""
+  = submit_tag "Submit"

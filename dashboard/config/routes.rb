@@ -233,6 +233,11 @@ Dashboard::Application.routes.draw do
     resources :projects, path: '/projects/', only: [:index] do
       collection do
         ProjectsController::STANDALONE_PROJECTS.each do |key, _|
+          if key == 'applab' or key == 'gamelab'
+            get "/#{key}/:channel_id/data_db", to: 'project_data_db#index'
+            post "/#{key}/:channel_id/data_db/setKeyValue", to: 'project_data_db#setKeyValue'
+          end
+
           get "/#{key}", to: 'projects#load', key: key.to_s, as: "#{key}_project"
           get "/#{key}/new", to: 'projects#create_new', key: key.to_s, as: "#{key}_project_create_new"
 
@@ -826,6 +831,8 @@ Dashboard::Application.routes.draw do
       concerns :section_api_routes
       concerns :assessments_routes
     end
+
+    get 'project_data_db', to: 'project_data_db#index'
 
     # Wildcard routes for API controller: select all public instance methods in the controller,
     # and all template names in `app/views/api/*`.
