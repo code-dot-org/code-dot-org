@@ -2544,6 +2544,10 @@
             lessonGroup-4:
               display_name: Variabler
           description_short: Lær alle konsepter i Datavitenskap fundamenter og lag din egen kunst, historier og spill.
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Fritt spill
         test-nv-coursea-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2639,3 +2643,20 @@
           lesson_groups:
             lessonGroup-3:
               display_name: 'Kapittel 2: Bygge fysiske prototyper'
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Hendelser
+            lesson-4:
+              name: Oppførsler
+            lesson-5:
+              name: De Neste Trinnene
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Løkker
+            lesson-4:
+              name: Betingelser
+            lesson-6:
+              name: De Neste Trinnene
+          title: Introduksjon til informatikk
