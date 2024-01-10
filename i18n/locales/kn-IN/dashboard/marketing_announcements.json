@@ -1,104 +1,9 @@
 {
   "banners": {
-    "csleadersprize": {
-      "title": "",
-      "body": "",
-      "buttonText": "ಹೆಚ್ಚಿನ ಮಾಹಿತಿ"
-    },
-    "csjourneys-22": {
-      "title": "",
-      "body": "",
-      "buttonText": "ಹೆಚ್ಚಿನ ಮಾಹಿತಿ"
-    },
-    "hoc-more": {
-      "title": "",
-      "body": "ಎಲ್ಲ ವಯಸ್ಸುಗಳು ಮತ್ತು ಅನುಭವ ಮಟ್ಟಗಳಿಗೆ 500 ಕ್ಕೂ ಹೆಚ್ಚು ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಚಟುವಟಿಕೆಗಳನ್ನು ಅವರ್ ಆಪ್‌ ಕೋಡ್ ವೆಬ್‌ಸೈಟ್ ಹೊಂದಿದ್ದು, ಇದನ್ನು Code.org ಮತ್ತು ಪಾರ್ಟ್ನರ್‌ಗಳು ಡೆವಲಪ್‌ ಮಾಡಿದ್ದಾರೆ.",
-      "buttonText": ""
-    },
     "superhero": {
       "title": "",
       "body": "",
       "buttonText": "ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ"
-    },
-    "csjourneys": {
-      "title": "",
-      "body": "",
-      "buttonText": "ಹೆಚ್ಚಿನ ಮಾಹಿತಿ"
-    },
-    "class-schedule-survey": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "back-to-school-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "ಹೆಚ್ಚಿನ ಮಾಹಿತಿ"
-    },
-    "teacher-apps-open-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "teacher-apps-closing-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "teacher-apps-nominate-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "ಶಿಕ್ಷಕರನ್ನು ನಾಮನಿರ್ದೇಶನ ಮಾಡಿ"
-    },
-    "teacher-apps-stillon-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "home-learning-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "ಪ್ರಾಜೆಕ್ಟಿನ ಉಪಾಯಗಳನ್ನು ವೀಕ್ಷಿಸಿ"
-    },
-    "soonhoc-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "codebytes-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "ಹೆಚ್ಚಿನ ಮಾಹಿತಿ"
-    },
-    "ai-2020": {
-      "title": "ಆರ್ಟಿಫಿಶಿಯಲ್ ಇಂಟಲಿಜೆನ್ಸ್ ಮತ್ತು ಮಶಿನ್ ಲರ್ನಿಂಗ್ ಎಕ್ಸ್‌ಪ್ಲೋರ್ ಮಾಡಿ",
-      "body": "",
-      "buttonText": "ಹೆಚ್ಚಿನ ಮಾಹಿತಿ"
-    },
-    "congrats-certificate-share": {
-      "title": "",
-      "body": "",
-      "buttonText": "ಪ್ರಾರಂಭಿಸಿ"
-    },
-    "coldplay": {
-      "title": "",
-      "body": "",
-      "buttonText": "ಇದನ್ನು ಪ್ರಯತ್ನಿಸಿ"
-    },
-    "ai-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "ಹೆಚ್ಚಿನ ಮಾಹಿತಿ"
-    },
-    "ai-pl-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "ಹೆಚ್ಚಿನ ಮಾಹಿತಿ"
-    },
-    "state-of-cs-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
     },
     "hoc-2023": {
       "title": "ಅವರ್ ಆಫ್ ಕೋಡ್: AI ಜೊತೆಗೆ ಸೃಜನಶೀಲತೆ",
@@ -106,6 +11,11 @@
       "buttonText": "ಹೆಚ್ಚಿನ ಮಾಹಿತಿ"
     },
     "hoc-2023-dance-ai": {
+      "title": "",
+      "body": "",
+      "buttonText": "ಹೆಚ್ಚಿನ ಮಾಹಿತಿ"
+    },
+    "co-teacher": {
       "title": "",
       "body": "",
       "buttonText": "ಹೆಚ್ಚಿನ ಮಾಹಿತಿ"
