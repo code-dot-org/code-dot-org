@@ -26,11 +26,16 @@ export enum Role {
 
 export enum Status {
   ERROR = 'error',
-  INAPPROPRIATE = 'inappropriate',
   OK = 'ok',
-  PERSONAL = 'personal',
   UNKNOWN = 'unknown',
+  PROFANITY = 'profanity',
+  PERSONAL = 'personal',
+  EMAIL = 'email',
+  ADDRESS = 'address',
+  PHONE = 'phone',
 }
+
+export const PII = [Status.EMAIL, Status.ADDRESS, Status.PHONE];
 
 export interface AichatLevelProperties extends LevelProperties {
   systemPrompt: string;

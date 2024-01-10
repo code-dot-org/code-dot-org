@@ -12,7 +12,8 @@ class OpenaiChatController < ApplicationController
     locale = params[:locale] || "en"
     messages = params[:messages].collect {|msg| msg[:content]}.join(' ')
     filter_result = ShareFiltering.find_failure(messages, locale) if messages
-    return render(status: :bad_request, json: {type: filter_result.type, content: filter_result.content}) if filter_result
+    # If the content is inappropriate, we skip sending to OpenAI and instead hardcode a warning response on the front-end.
+    return render(status: :ok, json: {status: filter_result.type, flagged_content: filter_result.content}) if filter_result
 
     if has_level_id_param?
       level_id = params[:levelId]
