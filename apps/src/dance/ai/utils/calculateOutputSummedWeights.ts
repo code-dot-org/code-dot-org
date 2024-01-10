@@ -20,8 +20,8 @@ export function calculateOutputSummedWeights(
   });
   // sumWeights is the sum of the weights for set of three emojis for each output type
   const sumWeights: number[] = selectedEmojiAssociations.reduce(
-    (firstList, secondList) =>
-      firstList.map((value, index) => value + secondList[index])
+    (accumulator, weights) =>
+      accumulator.map((value, index) => value + weights[index])
   );
   return sumWeights;
 }
