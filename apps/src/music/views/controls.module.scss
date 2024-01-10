@@ -24,7 +24,7 @@
   margin-bottom: 10px;
 }
 
-.controlButton {
+%controlButton {
   text-align: center;
   display: flex;
   width: 100%;
@@ -37,35 +37,51 @@
   margin: 2px;
   padding: 5px 10px;
 
+  .text,
+  .icon {
+    transition: opacity 0.1s ease-in;
+  }
+
   &:active {
     border: initial !important;
   }
 
-  &Run {
-    flex: 2;
-    background-color: #fca401;
-    color: $neutral_light;
-    margin: 0;
-
-    .text {
-      padding-left: 10px;
-    }
-  }
-
-  &Skip {
-    flex: 0.5;
-    background-color: $neutral_dark20;
-    color: $neutral_dark;
-
-    &Disabled {
+  &.disabled {
+    .text,
+    .icon {
       opacity: 50%;
-      cursor: default;
+    }
 
-      &:hover {
-        box-shadow: none;
-      }
+    cursor: default;
+
+    &:hover {
+      box-shadow: none;
     }
   }
+}
+
+.runButton {
+  @extend %controlButton;
+  flex: 2;
+  background-color: #fca401;
+  color: $neutral_light;
+  margin: 0;
+
+  .text {
+    padding-left: 10px;
+  }
+
+  .text,
+  .icon {
+    transition-delay: 0.2s; // Transition after a delay to avoid flickering
+  }
+}
+
+.skipButton {
+  @extend %controlButton;
+  flex: 0.5;
+  background-color: $neutral_dark20;
+  color: $neutral_dark;
 }
 
 .loadingProgress {
@@ -76,10 +92,22 @@
   margin-top: 15px;
   border-radius: 4px;
   overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.1s ease-in 0.2s; // Transition after a delay to avoid flickering
 
   .loadingProgressFill {
+    transition: width 0.2s ease-in;
     height: 5px;
     background-color: $neutral_dark60;
     position: absolute;
+
+    &Zero {
+      transition: none;
+    }
+  }
+
+  &Hide {
+    transition: opacity 0.5s ease-in;
+    opacity: 0;
   }
 }
