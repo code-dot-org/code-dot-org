@@ -22,7 +22,7 @@ import logToCloud from '@cdo/apps/logToCloud';
 
 const NUM_STUDENTS_PER_PAGE = 20;
 
-export function loadScriptProgress(scriptId, sectionId) {
+export function loadUnitProgress(scriptId, sectionId) {
   const state = getStore().getState().sectionProgress;
   const sectionData = getStore().getState().teacherSections.sections[sectionId];
   const students = getStore().getState().teacherSections.selectedStudents;
@@ -77,6 +77,7 @@ export function loadScriptProgress(scriptId, sectionId) {
 
   const numPages = Math.ceil(students.length / NUM_STUDENTS_PER_PAGE);
 
+  // Get and process level progress
   const requests = _.range(1, numPages + 1).map(currentPage => {
     const url = `/dashboardapi/section_level_progress/${sectionData.id}?script_id=${scriptId}&page=${currentPage}&per=${NUM_STUDENTS_PER_PAGE}`;
     return fetch(url, {credentials: 'include'})
@@ -149,6 +150,8 @@ function postProcessDataByScript(scriptData, includeBonusLevels) {
   };
 }
 
+// Filters out bonus levels unless includeBonusLevels is true
+// Also processes levels
 function postProcessLessonData(lesson, includeBonusLevels) {
   const levels = includeBonusLevels
     ? lesson.levels

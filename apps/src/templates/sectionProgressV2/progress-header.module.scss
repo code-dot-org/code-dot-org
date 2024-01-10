@@ -1,15 +1,30 @@
+@import "color.scss";
+
 .header {
-  height: 98px;
+  height: 120px;
   margin-top: 40px;
-  margin-bottom: 22px;
+  display: flex;
+  flex-direction: row;
 }
 
 .sortDropdown {
   max-width: 195px;
   height: 100%;
   margin-right: 12px;
+  margin-bottom: 22px;
 }
 
 .studentHeading {
   margin-bottom: 12px;
+}
+
+.columnHeaders {
+  display: flex;
+  flex-direction: row;
+  border-right: 1px solid $light_gray_200;
+  border-bottom: 1px solid $light_gray_200;
+  font-size: 14px;
+  height: 48px;
+  overflow-x: auto;
+  overflow-y: hidden;
 }

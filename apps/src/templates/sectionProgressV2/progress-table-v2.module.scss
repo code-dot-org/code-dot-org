@@ -1,6 +1,5 @@
 @import "color.scss";
 
-
 .progressTableV2 {
   width: 100%;
   font-size: 16px;
@@ -13,18 +12,25 @@
 }
 
 .gridBox {
-  height: 48px;
-  border: 1px solid $light_gray_200;
-  border-bottom: 0;
+  height: 47px;
+  border-top: 1px solid $light_gray_200;
+  border-left: 1px solid $light_gray_200;
+  line-height: 47px;
 
   &Student {
     width: 181px;
     padding-left: 12px;
-    line-height: 48px;
+  }
+
+  &LessonHeader {
+    width: 80px;
+    min-width: 80px;
+    text-align: center;
   }
 }
 
 .grid {
   border-bottom: 1px solid $light_gray_200;
+  border-right: 1px solid $light_gray_200;
   margin-right: 12px;
 }

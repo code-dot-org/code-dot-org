@@ -8,12 +8,13 @@ import ProgressDataV2 from './ProgressDataV2';
 import styles from './progress-table-v2.module.scss';
 import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
+import {scriptDataPropType} from '../sectionProgress/sectionProgressConstants';
 
 function ProgressTableV2({
   isSortedByFamilyName,
   sectionId,
   students,
-  unitName,
+  unitData,
 }) {
   const sortedStudents = React.useMemo(() => {
     return isSortedByFamilyName
@@ -24,7 +25,11 @@ function ProgressTableV2({
   return (
     <div className={styles.progressTableV2}>
       <div>Progress Table V2</div>
-      <ProgressTableHeader unitName={unitName} sectionId={sectionId} />
+      <ProgressTableHeader
+        unitName={unitData?.title}
+        sectionId={sectionId}
+        lessons={unitData?.lessons}
+      />
       <div className={styles.table}>
         <StudentColumn sortedStudents={sortedStudents} />
         <ProgressDataV2 sortedStudents={sortedStudents} />
@@ -37,7 +42,7 @@ ProgressTableV2.propTypes = {
   isSortedByFamilyName: PropTypes.bool,
   sectionId: PropTypes.number,
   students: PropTypes.arrayOf(studentShape),
-  unitName: PropTypes.string,
+  unitData: scriptDataPropType.isRequired,
 };
 
 export default connect(
@@ -45,7 +50,7 @@ export default connect(
     isSortedByFamilyName: state.currentUser.isSortedByFamilyName,
     sectionId: state.teacherSections.selectedSectionId,
     students: state.teacherSections.selectedStudents,
-    unitName: getCurrentUnitData(state)?.title,
+    unitData: getCurrentUnitData(state),
   }),
   dispatch => ({})
 )(ProgressTableV2);
