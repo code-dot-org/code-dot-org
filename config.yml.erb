@@ -363,6 +363,9 @@ skip_seed_all:
 # false reduces memory usage, but significantly slows down dev server startup.
 cache_assets_in_memory:
 
+# Magic key to set the local_request_override_token to, to see debugging on levelbuilder
+local_request_override_token: !Secret
+
 # Encryption key required for decoding certain protected level sources.
 # Contributors should ask a Code.org engineer for this if needed.
 properties_encryption_key: !Secret

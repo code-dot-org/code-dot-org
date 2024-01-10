@@ -12,6 +12,11 @@ class ApplicationController < ActionController::Base
 
   include Services::DatabaseConnections::ControllerFilter
 
+  # Apply custom error handling based on configuration
+  if Rails.application.config.consider_all_requests_local && Rails.application.config.local_requests_conditional
+    rescue_from StandardError, with: :conditional_error_handling
+  end
+
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
@@ -360,5 +365,16 @@ class ApplicationController < ActionController::Base
 
   private def pairing_still_enabled
     session[:pairing_section_id] && Section.find(session[:pairing_section_id]).pairing_allowed
+  end
+
+  def conditional_error_handling(exception)
+    # Check for specific cookie value
+    token = CDO.with_default('invalid').local_request_override_token
+    if token != 'invalid' && cookies[:local_request_override_token] == token
+      raise exception  # Reraise the exception to trigger default error handling
+    else
+      # Render a generic 500 error response
+      render(plain: "", status: :internal_server_error) and return
+    end
   end
 end
