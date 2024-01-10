@@ -76,6 +76,26 @@ export default function LegendItem({
       </g>
     </svg>
   );
+  const notStartedBox = (
+    <ProgressBox
+      started={false}
+      incomplete={20}
+      imperfect={0}
+      perfect={0}
+      lessonIsAllAssessment={false}
+    />
+  );
+
+  const viewedBox = (
+    <ProgressBox
+      started={false}
+      incomplete={20}
+      imperfect={0}
+      perfect={0}
+      lessonIsAllAssessment={false}
+      viewed={true}
+    />
+  );
   return (
     <div className="legend-item">
       {fontAwesomeId && (
@@ -86,26 +106,8 @@ export default function LegendItem({
           className="font-awesome-icon"
         />
       )}
-      {stateDescription === NOT_STARTED && (
-        <ProgressBox
-          started={false}
-          incomplete={20}
-          imperfect={0}
-          perfect={0}
-          lessonIsAllAssessment={false}
-        />
-      )}
-      {/* Consider pulling the ProgressButtons out top to make it more readable */}
-      {stateDescription === VIEWED && (
-        <ProgressBox
-          started={false}
-          incomplete={20}
-          imperfect={0}
-          perfect={0}
-          lessonIsAllAssessment={false}
-          viewed={true}
-        />
-      )}
+      {stateDescription === NOT_STARTED && notStartedBox}
+      {stateDescription === VIEWED && viewedBox}
       {stateDescription === NEEDS_FEEDBACK && needsFeedbackTriangle}
       {stateDescription === FEEDBACK_GIVEN && feedbackGivenTriangle}
       <BodyThreeText className="label-text">{labelText}</BodyThreeText>
