@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_12_05_204616) do
+ActiveRecord::Schema.define(version: 2024_01_04_215831) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -207,32 +207,6 @@ ActiveRecord::Schema.define(version: 2023_12_05_204616) do
     t.index ["storage_app_id"], name: "index_channel_tokens_on_storage_app_id"
     t.index ["storage_id", "level_id", "script_id", "deleted_at"], name: "index_channel_tokens_unique", unique: true
     t.index ["storage_id"], name: "index_channel_tokens_on_storage_id"
-  end
-
-  create_table "circuit_playground_discount_applications", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "unit_6_intention"
-    t.boolean "full_discount"
-    t.boolean "admin_set_status", default: false, null: false
-    t.string "signature"
-    t.datetime "signed_at"
-    t.integer "circuit_playground_discount_code_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "school_id"
-    t.index ["circuit_playground_discount_code_id"], name: "index_circuit_playground_applications_on_code_id"
-    t.index ["school_id"], name: "index_circuit_playground_discount_applications_on_school_id"
-    t.index ["user_id"], name: "index_circuit_playground_discount_applications_on_user_id", unique: true
-  end
-
-  create_table "circuit_playground_discount_codes", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
-    t.string "code", null: false
-    t.boolean "full_discount", null: false
-    t.datetime "expiration", null: false
-    t.datetime "claimed_at"
-    t.datetime "voided_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "code_review_comments", charset: "utf8mb4", collation: "utf8mb4_unicode_520_ci", force: :cascade do |t|
@@ -1357,15 +1331,6 @@ ActiveRecord::Schema.define(version: 2023_12_05_204616) do
     t.index ["user_id"], name: "index_pd_workshop_survey_foorm_submissions_on_user_id"
   end
 
-  create_table "pd_workshop_surveys", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
-    t.integer "pd_enrollment_id", null: false
-    t.text "form_data", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "type"
-    t.index ["pd_enrollment_id"], name: "index_pd_workshop_surveys_on_pd_enrollment_id", unique: true
-  end
-
   create_table "pd_workshops", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "organizer_id", null: false
     t.string "location_name"
@@ -2338,7 +2303,6 @@ ActiveRecord::Schema.define(version: 2023_12_05_204616) do
 
   add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "census_summaries", "schools"
-  add_foreign_key "circuit_playground_discount_applications", "schools"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "learning_goal_ai_evaluations", "learning_goals"
   add_foreign_key "learning_goal_ai_evaluations", "rubric_ai_evaluations"

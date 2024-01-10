@@ -124,7 +124,7 @@ export default class AnimationPickerBody extends React.Component {
   };
 
   onCategoryChange = event => {
-    const categoryQuery = getCategory(event.target);
+    const categoryQuery = getCategory(event.currentTarget);
     const currentPage = 0;
     let {results, pageCount} = this.searchAssetsWrapper(currentPage, {
       categoryQuery,

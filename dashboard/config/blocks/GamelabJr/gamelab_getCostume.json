@@ -2,7 +2,6 @@
   "category": "Sprites",
   "config": {
     "func": "getCostume",
-    "docFunc": "gamelab_getCostume",
     "blockText": "sprites with costume of {SPRITE}",
     "returnType": "Sprite",
     "color": [
