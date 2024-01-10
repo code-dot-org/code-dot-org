@@ -1345,6 +1345,17 @@ mi:
               display_name: Ngā Takunetanga
             csf_loops:
               display_name: Ngā Koromeke
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Ngā Koromeke
+            lesson-4:
+              name: Ngā Here
+          title: Whakatakinga ki te Pūtaiao Rorohiko
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Ngā Takunetanga
         soccer:
           name: poiwhana
         spelling-bee:
