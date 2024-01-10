@@ -83,7 +83,7 @@ export default function LegendItem({
           id={'uitest-' + fontAwesomeId}
           icon={fontAwesomeId}
           style={{color: iconColorStyle}}
-          className="v-icon"
+          className="font-awesome-icon"
         />
       )}
       {stateDescription === NOT_STARTED && (

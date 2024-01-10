@@ -11,6 +11,7 @@ export default function AssignmentCompletionStatesBox({
   isViewingLevelProgress,
   hasValidatedLevels,
 }) {
+  // TO-DO (TEACH-800): Fix spacing on validated levels once width on page is set
   const legendIcons = () => {
     return (
       <div className="icons-2">
