@@ -1,12 +1,11 @@
 .legend {
     align-items: flex-start;
-    background-color: var(--lightwhite);
     border: 1px solid;
     border-color: var(--lightgray-200);
     border-radius: 4px;
     display: inline-flex;
     flex-direction: column;
-    position: relative;
+    flex: 1 1 auto;
   }
 
   .legend .headerContainer {
@@ -15,41 +14,19 @@
     border-bottom: 1px solid;
     box-sizing: border-box;
   }
-  
-  .legend .header {
-    padding: 8px 16px;
-    border-bottom: 1px solid;
-    width: 100%;
-  }
-  
-  .legend .div {
-    color: var(--lightgray-900);
-    margin-top: -1px;
-    position: relative;
-    white-space: nowrap;
-    width: fit-content;
-  }
 
   .legend .legend-column-2 {
     display: flex;
     justify-content: space-between;
-    flex-grow: 1;
   }
   
   .legend .icons {
-    align-items: flex-start;
-    display: flex;
-    flex: 0 0 auto;
-    gap: 40px;
     padding: 16px;
-    position: relative;
     height: 70px;
   }
 
   .legend .icons-2 {
     padding: 16px;
-    position: relative;
-    flex-grow: 1;
     height: 70px;
   }
 
@@ -59,26 +36,21 @@
     flex: 0 0 auto;
     padding: 7px;
     gap: 8px;
-    position: relative;
   }
 
   .legend .legend-item-2 {
     align-items: center;
     display: inline-flex;
-    flex: 0 0 auto;
-    gap: 8px;
-    position: relative;
     width: 49%;
-
   }
 
   .legend .label-text {
     margin-bottom: 0;
   }
   
-  .legend .v-icon {
-    width: 20px !important;
-    height: 20px !important;
+  .legend .font-awesome-icon {
+    width: 20px;
+    height: 20px;
     font-size: 16px;
 
     &:before {
@@ -87,9 +59,7 @@
     }
   }
 
-  .fa.fa-rotate-left {
+  .legend .fa.fa-rotate-left {
     padding-top: 5px;
   }
-  
-
   
