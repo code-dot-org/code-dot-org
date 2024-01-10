@@ -124,7 +124,8 @@ class InlineAudio extends React.Component {
         playing: false,
         autoplayed: this.props.ttsAutoplayEnabled,
       });
-      const {playNextAudio} = this.context;
+      const {playNextAudio, isPlaying} = this.context;
+      isPlaying.current = false;
       playNextAudio();
     });
 
