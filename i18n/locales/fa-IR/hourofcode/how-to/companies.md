@@ -19,7 +19,7 @@ title: راهنمای کار با Hour of Code برای شرکتها
 - [ارتباط با یک مدرسه محلی](#connect-with-a-school)
 - [تشویق کارمندان به داوطلب شدن به شرکت در کلاس](#encourage-employees)
 - [میزبانی رویداد Hour of Code خودتون](#host-hour-of-code)
-- [Promote the Hour of Code](#promote-hour-of-code)
+- [ساعت کدنویسی را تبلیغ کنید](#promote-hour-of-code)
 - [راه‌های بیشتر برای پشتیبانی Hour of Code](#support-hour-of-code)
 
 * * *
@@ -127,7 +127,7 @@ title: راهنمای کار با Hour of Code برای شرکتها
 
 <a id="promote-hour-of-code"></a>
 
-## Promote the Hour of Code
+## ساعت کدنویسی را تبلیغ کنید
 
 یکی از بهترین راه‌های کمک کردن تبلیغ دهان به دهان Hour of Code هست.
 

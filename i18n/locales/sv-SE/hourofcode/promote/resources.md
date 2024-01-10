@@ -18,7 +18,7 @@ title: Resurser
 
 ## Sätt upp dessa affischer på din skola
 
-Ett nytt affischset är tillgängligt med Malala, Stephen Curry, Shakira med flera! I år så kommer varje uppsättning med 6 affischer och 126 "I did the Hour of Code"-klistermärken. För att skriva ut på egen hand, klicka bara på en bild nedan för att se och spara en utskriftsbar version.
+Print your own posters! Simply click an image below to view and save a printable version.
 
 {{ promote_new_posters }}
 

@@ -18,7 +18,7 @@ title: ប្រភពមេរៀន
 
 ## Hang these posters in your school
 
-A new poster set is available featuring Malala, Stephen Curry, Shakira and more! This year, each set will also come with 6 posters and 126 "I did the Hour of Code" stickers. To print on your own, simply click an image below to view and save a printable version.
+Print your own posters! Simply click an image below to view and save a printable version.
 
 {{ promote_new_posters }}
 
