@@ -321,8 +321,16 @@ module Pd::Application
       workshops.first
     end
 
+    def enrollment
+      Pd::Enrollment.find_by(user: user, workshop: pd_workshop_id)
+    end
+
+    def enrolled?
+      enrollment.present?
+    end
+
     def friendly_registered_workshop
-      Pd::Enrollment.find_by(user: user, workshop: pd_workshop_id) ? 'Yes' : 'No'
+      enrolled? ? 'Yes' : 'No'
     end
 
     def self.prefetch_associated_models(applications)
@@ -674,7 +682,6 @@ module Pd::Application
         previous_yearlong_cdo_pd
 
         program
-        enough_course_hours
 
         gender_identity
         race
@@ -701,6 +708,7 @@ module Pd::Application
 
         # If the applicant will teach the course, we require extra information
         if hash[:will_teach] == 'Yes'
+          required << :enough_course_hours
           if hash[:program] == PROGRAMS[:csd]
             required << :csd_which_grades
           elsif hash[:program] == PROGRAMS[:csp]

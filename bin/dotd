@@ -257,8 +257,7 @@ def dotd_menu(dotd_name)
         end
       end
       menu.choice(:DTS) do
-        unless GitHub.compare(base: 'staging', head: 'levelbuilder').
-            any? {|message| message.include?('levelbuilder content changes')}
+        if GitHub.compare(base: 'staging', head: 'levelbuilder').empty?
           warn_and_confirm 'No content commit available to merge from levelbuilder to staging'
           next
         end
@@ -306,7 +305,7 @@ def dotd_menu(dotd_name)
       end
       menu.choice(:DTP) {do_dtp(dotd_name)}
       menu.choice(:L) do
-        if run_on 'levelbuilder-staging', "levelbuilder/bin/content-push --name=\"#{dotd_name}\""
+        if run_on 'levelbuilder', "levelbuilder/bin/content-push --name=\"#{dotd_name}\""
           @logger.info 'commits content on levelbuilder'
         else
           @logger.info 'error attempting to commit content on levelbuilder'
@@ -479,7 +478,7 @@ end
 # properly set up for all standard Dev of the Day operations.
 def perform_self_check
   puts "Checking access to internal servers"
-  %w(staging test levelbuilder-staging production-console).each do |environment|
+  %w(staging test levelbuilder production-console).each do |environment|
     run_on(environment, "echo 'successfully connected to #{environment}'")
   end
 
