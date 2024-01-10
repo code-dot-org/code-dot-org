@@ -10669,6 +10669,10 @@ es-MX:
             de la unidad de ML/AI para el CSD. Para futuras preguntas sobre esto,
             pregunte a Dan Schneider.
           title: Unidad de ML/AI - CSD
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Juego libre
         netsim:
           description: Aprende cómo funciona Internet.
           description_short: Aprende cómo funciona Internet.
@@ -11995,6 +11999,33 @@ es-MX:
           name: autodidáctico-pl-csp8-2021
         self-paced-pl-csp9-2021:
           name: autodidáctico-pl-csp9-2021
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Lección 1
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Lección 1
+            lesson-3:
+              name: Bucles
+            lesson-4:
+              name: Condicionales
+            lesson-5:
+              name: Poniéndolo todo junto
+            lesson-6:
+              name: Próximos pasos
+          title: Introducción a Ciencias de la Computación
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Lección 1
+            lesson-3:
+              name: Eventos
+            lesson-4:
+              name: Comportamientos
+            lesson-5:
+              name: Próximos pasos
         self-paced-pl-microbit2:
           description: "**Usted:**\n\n-   Obtendrá una introducción a la creación
             de aplicaciones para dispositivos.\n-   Configurará su micro:bit. \n-
