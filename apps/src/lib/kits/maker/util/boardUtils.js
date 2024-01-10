@@ -1,10 +1,12 @@
 import {
-  ADAFRUIT_VID,
-  CIRCUIT_PLAYGROUND_EXPRESS_PID,
-  CIRCUIT_PLAYGROUND_PID,
-  MICROBIT_PID,
-  MICROBIT_VID,
-} from '../portScanning';
+  MICROBIT_VENDOR_ID,
+  MICROBIT_PRODUCT_ID,
+} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
+import {
+  ADAFRUIT_VENDOR_ID,
+  CIRCUIT_PLAYGROUND_CLASSIC_PRODUCT_ID,
+  CIRCUIT_PLAYGROUND_EXPRESS_PRODUCT_ID,
+} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 import {isChromeOS, getChromeVersion} from '../util/browserChecks';
 import {MIN_CHROME_VERSION} from '@cdo/apps/lib/kits/maker/util/makerConstants';
@@ -25,21 +27,23 @@ export function detectBoardTypeFromPort(port) {
     const parsedVendorId = vendorId ? parseInt(vendorId, 16) : null;
     const parsedProductId = productId ? parseInt(productId, 16) : null;
     if (
-      (vendorId === ADAFRUIT_VID && productId === CIRCUIT_PLAYGROUND_PID) ||
-      (parsedVendorId === ADAFRUIT_VID &&
-        parsedProductId === CIRCUIT_PLAYGROUND_PID)
+      (vendorId === ADAFRUIT_VENDOR_ID &&
+        productId === CIRCUIT_PLAYGROUND_CLASSIC_PRODUCT_ID) ||
+      (parsedVendorId === ADAFRUIT_VENDOR_ID &&
+        parsedProductId === CIRCUIT_PLAYGROUND_CLASSIC_PRODUCT_ID)
     ) {
       boardType = BOARD_TYPE.CLASSIC;
     } else if (
-      (vendorId === ADAFRUIT_VID &&
-        productId === CIRCUIT_PLAYGROUND_EXPRESS_PID) ||
-      (parsedVendorId === ADAFRUIT_VID &&
-        parsedProductId === CIRCUIT_PLAYGROUND_EXPRESS_PID)
+      (vendorId === ADAFRUIT_VENDOR_ID &&
+        productId === CIRCUIT_PLAYGROUND_EXPRESS_PRODUCT_ID) ||
+      (parsedVendorId === ADAFRUIT_VENDOR_ID &&
+        parsedProductId === CIRCUIT_PLAYGROUND_EXPRESS_PRODUCT_ID)
     ) {
       boardType = BOARD_TYPE.EXPRESS;
     } else if (
-      (vendorId === MICROBIT_VID && productId === MICROBIT_PID) ||
-      (parsedVendorId === MICROBIT_VID && parsedProductId === MICROBIT_PID)
+      (vendorId === MICROBIT_VENDOR_ID && productId === MICROBIT_PRODUCT_ID) ||
+      (parsedVendorId === MICROBIT_VENDOR_ID &&
+        parsedProductId === MICROBIT_PRODUCT_ID)
     ) {
       boardType = BOARD_TYPE.MICROBIT;
     }
@@ -71,9 +75,15 @@ export const SERIAL_BAUD = 57600;
 
 // Filter available ports to the boards we support
 export const WEB_SERIAL_FILTERS = [
-  {usbVendorId: ADAFRUIT_VID, usbProductId: CIRCUIT_PLAYGROUND_PID},
-  {usbVendorId: ADAFRUIT_VID, usbProductId: CIRCUIT_PLAYGROUND_EXPRESS_PID},
-  {usbVendorId: MICROBIT_VID, usbProductId: MICROBIT_PID},
+  {
+    usbVendorId: ADAFRUIT_VENDOR_ID,
+    usbProductId: CIRCUIT_PLAYGROUND_CLASSIC_PRODUCT_ID,
+  },
+  {
+    usbVendorId: ADAFRUIT_VENDOR_ID,
+    usbProductId: CIRCUIT_PLAYGROUND_EXPRESS_PRODUCT_ID,
+  },
+  {usbVendorId: MICROBIT_VENDOR_ID, usbProductId: MICROBIT_PRODUCT_ID},
 ];
 
 export const delayPromise = t => new Promise(resolve => setTimeout(resolve, t));
