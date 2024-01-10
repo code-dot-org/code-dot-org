@@ -546,6 +546,18 @@ form {
       width: 100%;
     }
   }
+
+  .form-group {
+    margin: 0;
+
+    input[type="text"], select {
+      margin: 0;
+    }
+  }
+
+  select#professionalRoleSelect {
+    margin: 0;
+  }
 }
 
 // Action blocks wrappers
