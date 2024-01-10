@@ -57,15 +57,15 @@ describe('LearningGoals', () => {
     const wrapper = shallow(
       <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
     );
-    expect(wrapper.find('StrongText').props().children).to.equal(
+    expect(wrapper.find('Heading6').props().children).to.equal(
       learningGoals[0].learningGoal
     );
     wrapper.find('button').first().simulate('click');
-    expect(wrapper.find('StrongText').props().children).to.equal(
+    expect(wrapper.find('Heading6').props().children).to.equal(
       learningGoals[1].learningGoal
     );
     wrapper.find('button').at(1).simulate('click');
-    expect(wrapper.find('StrongText').props().children).to.equal(
+    expect(wrapper.find('Heading6').props().children).to.equal(
       learningGoals[0].learningGoal
     );
   });
@@ -111,7 +111,7 @@ describe('LearningGoals', () => {
         isStudent={false}
       />
     );
-    expect(wrapper.find('Heading6')).to.have.lengthOf(1);
+    expect(wrapper.find('details')).to.have.lengthOf(1);
     expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(1);
     expect(wrapper.find('SafeMarkdown').props().markdown).to.equal('Tips');
   });
@@ -120,15 +120,14 @@ describe('LearningGoals', () => {
     const wrapper = shallow(
       <LearningGoals learningGoals={learningGoals} isStudent={true} />
     );
-    expect(wrapper.find('Heading6')).to.have.lengthOf(0);
-    expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(0);
+    expect(wrapper.find('details')).to.have.lengthOf(0);
   });
 
   it('shows AI token when AI is enabled', () => {
     const wrapper = shallow(
       <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
     );
-    expect(wrapper.find('StrongText').props().children).to.equal(
+    expect(wrapper.find('Heading6').props().children).to.equal(
       learningGoals[0].learningGoal
     );
     expect(wrapper.find('AiToken')).to.have.lengthOf(1);
@@ -139,7 +138,7 @@ describe('LearningGoals', () => {
       <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
     );
     wrapper.find('button').first().simulate('click');
-    expect(wrapper.find('StrongText').props().children).to.equal(
+    expect(wrapper.find('Heading6').props().children).to.equal(
       learningGoals[1].learningGoal
     );
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
@@ -152,7 +151,7 @@ describe('LearningGoals', () => {
         teacherHasEnabledAi={false}
       />
     );
-    expect(wrapper.find('StrongText').props().children).to.equal(
+    expect(wrapper.find('Heading6').props().children).to.equal(
       learningGoals[0].learningGoal
     );
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
@@ -213,7 +212,7 @@ describe('LearningGoals', () => {
     );
     wrapper.update();
     wrapper.find('button').at(1).simulate('click');
-    expect(wrapper.find('BodyThreeText').first().text()).to.include('Evaluate');
+    expect(wrapper.find('BodyThreeText').at(1).text()).to.include('Evaluate');
     wrapper.unmount();
   });
 
@@ -226,7 +225,7 @@ describe('LearningGoals', () => {
       />
     );
     wrapper.update();
-    expect(wrapper.find('BodyThreeText').first().text()).to.include('Approve');
+    expect(wrapper.find('BodyThreeText').at(1).text()).to.include('Approve');
     wrapper.unmount();
   });
 
@@ -266,7 +265,7 @@ describe('LearningGoals', () => {
         }}
       />
     );
-    expect(wrapper.find('BodyThreeText').props().children).to.equal(
+    expect(wrapper.find('BodyThreeText').at(1).props().children).to.equal(
       'Limited Evidence'
     );
   });
@@ -281,7 +280,7 @@ describe('LearningGoals', () => {
         }}
       />
     );
-    expect(wrapper.find('BodyThreeText').props().children).to.equal(
+    expect(wrapper.find('BodyThreeText').at(1).props().children).to.equal(
       'No Evidence'
     );
   });

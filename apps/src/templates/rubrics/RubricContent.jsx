@@ -133,6 +133,7 @@ export default function RubricContent({
   } else if (!studentLevelInfo) {
     infoText = i18n.selectAStudentToEvaluateAlert();
   }
+
   return (
     <div
       className={classnames(style.rubricContent, {
