@@ -4,7 +4,6 @@ import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSections
 import styles from './progress-table-v2.module.scss';
 import classNames from 'classnames';
 import SortByNameDropdown from '../SortByNameDropdown';
-import {Heading6} from '@cdo/apps/componentLibrary/typography';
 
 const SECTION_PROGRESS_V2 = 'SectionProgressV2';
 
@@ -26,7 +25,6 @@ export default function StudentColumn({sortedStudents, unitName, sectionId}) {
   return (
     <div className={styles.studentColumn}>
       <div className={styles.sortDropdown}>
-        <Heading6 className={styles.studentColumnHeading}>Students</Heading6>
         <SortByNameDropdown
           sectionId={sectionId}
           unitName={unitName}

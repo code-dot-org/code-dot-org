@@ -36,8 +36,37 @@
   border-right: 1px solid $light_gray_200;
 }
 
+.title {
+  height: 32px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: row;
+
+  &Students {
+    height: 100%;
+    width: 195px;
+    min-width: 195px;
+    margin-right: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  &UnitSelector {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+
 .header {
-  height: 120px;
+  height: 76px;
+
+  &UnitSelector {
+    height: 32px;
+    margin-bottom: 12px;
+  }
 
   &Columns {
     display: flex;
@@ -51,8 +80,8 @@
 }
 
 .sortDropdown {
-  height: 120px;
-  margin-bottom: 22px;
+  height: 76px;
+  overflow-x: hidden;
 }
 
 
@@ -60,8 +89,4 @@
   width: 195px;
   min-width: 195px;
   margin-right: 12px;
-
-  &Heading {
-    margin-bottom: 12px;
-  }
 }
