@@ -3346,6 +3346,10 @@ hu:
           student_description: Programozz állatokat és egyéb Minecraft lényeket a
             saját Minecraft verziódban.
           title: Minecraft Kódolás órája tervező
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Ingyenes Játék
         netsim:
           title: Internet szimulátor
         nevada-standards-aligned-fifth-grade-2023:
@@ -3536,6 +3540,19 @@ hu:
           description: '2.  Fázis: Online összetett nyári tanulmány'
           description_short: '2.  Fázis: Online összetett nyári tanulmány'
           student_description: '2.  Fázis: Online összetett nyári tanulmány'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Ciklusok
+            lesson-4:
+              name: Feltételek
+          title: Bevezetés a számítógép tudományába
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Események
+            lesson-4:
+              name: Viselkedések
         soccer:
           description: Focimeccs készítése
           description_short: Focimeccs készítése

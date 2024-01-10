@@ -375,3 +375,5 @@ hu:
       timeforcs_demo_conditionals:
         title: Feltételek
         desc: 'Hogy a diákok megtanulják a feltételes nyilatkozatok mibenlétét kártyajátékot játszanak és szabályokat hoznak létre, mint például: "Ha húzok egy piros lapot, én kapok egy pontot", és "Ha fekete lapot húzok, te kapsz egy pontot."'
+      Unplugged- Melissa Sandbox:
+        title: Offline
