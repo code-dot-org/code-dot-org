@@ -39,29 +39,6 @@ require 'dynamic_config/dcdo'
 require 'aws-sdk-cloudwatch'
 
 STARTED = 'build-started'.freeze
-S3_LOGS_BUCKET = 'cdo-build-logs'.freeze
-S3_LOGS_PREFIX = CDO.name.freeze
-
-# Upload the given log to the logs s3 bucket.
-# @param [String] key where uploaded log should be located
-# @param [String] body of log to upload
-# @param [Hash] metadata to be attached to uploaded log
-# @return [String] Hyperlink to uploaded log, or empty string
-def upload_log_and_get_link(key, body, metadata)
-  log_url = AWS::S3::LogUploader.
-    new(S3_LOGS_BUCKET, S3_LOGS_PREFIX).
-    upload_log(
-      key,
-      body,
-      {metadata: metadata}
-    )
-  permalink = AWS::S3.get_console_link_from_presigned(log_url)
-  " <a href='#{log_url}'>☁ Log on S3</a> (<a href='#{permalink}'>permalink</a>)"
-rescue Exception => exception
-  ChatClient.log "Uploading log to S3 failed: #{exception}"
-  return ''
-end
-
 def main
   start_time = Time.now
   # Run the build command and exit if it didn't do anything.
@@ -86,19 +63,12 @@ def main
     time_message = " 🕐 #{formatted_duration}"
 
     # Upload build log to S3
-    log_link = upload_log_and_get_link(
-      start_time.strftime('%Y%m%dT%H%M%S%z'),
-      <<~LOG,
-        #{log}
-        #{status}
-        #{projects} #{status == 0 ? 'built' : 'failed'} in #{formatted_duration}
-      LOG
-      {
-        commit: commit_hash,
-        duration: duration.to_s,
-        success: (status == 0).to_s
-      }
-    )
+    metadata = {
+      commit: commit_hash,
+      duration: duration.to_s,
+      success: (status == 0).to_s
+    }
+    log_link = build_logger.log_build_end(status, log, metadata)
 
     # Notify the ChatClient channels about what happened.
     if status == 0
