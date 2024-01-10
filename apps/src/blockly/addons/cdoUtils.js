@@ -279,18 +279,23 @@ export function getCode(workspace, getSourceAsJson) {
     // Start by getting the XML for all blocks on the workspace.
     const workspaceXML = Blockly.Xml.blockSpaceToDom(workspace);
 
-    // Also serialize blocks on the hidden workspace for procedure definitions.
-    let hiddenWsXml = Blockly.utils.xml.textToDom('<xml></xml>');
     if (
-      Blockly.getHiddenDefinitionWorkspace &&
+      !Blockly.getHiddenDefinitionWorkspace ||
       // Ignore the hidden workspace if we are serializing a different workspace,
       // such as an embedded workspace. (This is very unlikely.)
-      Blockly.getMainWorkspace().id === workspace.id
+      Blockly.getMainWorkspace().id !== workspace.id ||
+      // Ignore hidden workspace if we are editing toolbox blocks
+      window.appOptions.level.edit_blocks === 'toolbox_blocks'
     ) {
-      hiddenWsXml = Blockly.Xml.blockSpaceToDom(
-        Blockly.getHiddenDefinitionWorkspace()
-      );
+      // No need to serialize hidden workspace; early return.
+      // Convert the merged document back to an XML string
+      return Blockly.utils.xml.domToText(workspaceXML);
     }
+
+    // Also serialize blocks on the hidden workspace for procedure definitions.
+    const hiddenWsXml = Blockly.Xml.blockSpaceToDom(
+      Blockly.getHiddenDefinitionWorkspace()
+    );
 
     // Merge the hidden workspace XML into the primary XML
     hiddenWsXml.childNodes.forEach(node => {
@@ -298,6 +303,7 @@ export function getCode(workspace, getSourceAsJson) {
       workspaceXML.appendChild(clonedNode);
     });
 
+    console.log(workspaceXML);
     // Convert the merged document back to an XML string
     return Blockly.utils.xml.domToText(workspaceXML);
   }
