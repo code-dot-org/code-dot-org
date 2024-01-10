@@ -147,6 +147,7 @@ class HttpCache
       'callouts_seen',
       'rack.session',
       'remember_user_token',
+      'local_request_override_token',
       '__profilin', # Used by rack-mini-profiler
       session_key,
       storage_id,
