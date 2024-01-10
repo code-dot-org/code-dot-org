@@ -2,25 +2,22 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
-// import {
-//   BodyTwoText,
-//   Heading1,
-//   Heading3,
-// } from '@cdo/apps/componentLibrary/typography';
 import color from '@cdo/apps/util/color';
 import LevelTypesBox from './LevelTypesBox';
 import TeacherActionsBox from './TeacherActionsBox';
 import AssignmentCompletionStatesBox from './AssignmentCompletionStatesBox';
 
-export default function IconKey({
-  sectionId,
-  isViewingLevelProgress,
-  hasLevelValidation,
-}) {
+export const NOT_STARTED = 'Not started';
+export const VIEWED = 'Viewed';
+export const NEEDS_FEEDBACK = 'Needs feedback';
+export const FEEDBACK_GIVEN = 'Feedback given';
+
+export default function IconKey({isViewingLevelProgress, hasLevelValidation}) {
   const [isOpen, setIsOpen] = useState(false);
 
   const caret = isOpenA => (isOpenA ? 'caret-down' : 'caret-right');
 
+  // TO-DO: Make content responsive to view on page
   const sectionContent = () => (
     <div>
       <LevelTypesBox />
@@ -37,7 +34,7 @@ export default function IconKey({
   return (
     <div>
       <Button
-        id={sectionId}
+        id="icon-key"
         style={styles.label}
         styleAsText
         icon={caret(isOpen)}
@@ -51,7 +48,6 @@ export default function IconKey({
 }
 
 IconKey.propTypes = {
-  sectionId: PropTypes.number.isRequired,
   isViewingLevelProgress: PropTypes.bool,
   hasLevelValidation: PropTypes.bool,
 };

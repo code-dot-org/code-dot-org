@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import i18n from '@cdo/locale';
 import LegendItem from './LegendItem';
 import './section-progress-refresh.scss';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
+import {VIEWED, NEEDS_FEEDBACK, FEEDBACK_GIVEN} from './IconKey';
 
 export default function TeacherActionsBox({isViewingLevelProgress}) {
   const legendIcons = () => {
@@ -11,20 +13,26 @@ export default function TeacherActionsBox({isViewingLevelProgress}) {
         <div className="icons-2">
           <div className="legend-column-2">
             <div className="legend-item-2">
-              <LegendItem needsFeedback={true} labelText="Needs feedback" />
+              <LegendItem
+                stateDescription={NEEDS_FEEDBACK}
+                labelText={i18n.needsFeedback()}
+              />
             </div>
             <div className="legend-item-2">
-              <LegendItem progressBoxColor="gray" labelText="Viewed" />
+              <LegendItem stateDescription={VIEWED} labelText={i18n.viewed()} />
             </div>
           </div>
           <div className="legend-column-2">
             <div className="legend-item-2">
-              <LegendItem feedbackGiven={true} labelText="Feedback given" />
+              <LegendItem
+                stateDescription={FEEDBACK_GIVEN}
+                labelText={i18n.feedbackGiven()}
+              />
             </div>
             <div className="legend-item-2">
               <LegendItem
-                iconId="rotate-left"
-                labelText="Marked as 'keep working'"
+                fontAwesomeId="rotate-left"
+                labelText={i18n.markedAsKeepWorking()}
               />
             </div>
           </div>
@@ -35,7 +43,10 @@ export default function TeacherActionsBox({isViewingLevelProgress}) {
         <div className="icons">
           <div>
             <div>
-              <LegendItem iconId="star" labelText="Needs feedback" />
+              <LegendItem
+                stateDescription={NEEDS_FEEDBACK}
+                labelText={i18n.needsFeedback()}
+              />
             </div>
           </div>
         </div>
@@ -46,7 +57,7 @@ export default function TeacherActionsBox({isViewingLevelProgress}) {
   return (
     <div className="legend">
       <div className="headerContainer">
-        <StrongText>Teacher Actions</StrongText>
+        <StrongText>{i18n.teacherActions()}</StrongText>
       </div>
       <div>{legendIcons()}</div>
     </div>
