@@ -1,4 +1,5 @@
 %strong{:class => "code", :id => "message"} Hello,  #{@project.project_type}
+
 %h2 KeyValuePair
 
 %h3 set_key_value
@@ -20,3 +21,17 @@
     %tr
       %td= kvp.key
       %td= kvp.value
+
+
+%h2 Record
+
+%table
+  %tr
+    %td table_name
+    %td record_id
+    %td json
+  - @records.each do |record|
+    %tr
+      %td= record.table_name
+      %td= record.record_id
+      %td= record.json.to_json

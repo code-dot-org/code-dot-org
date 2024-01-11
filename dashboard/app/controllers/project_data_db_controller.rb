@@ -3,6 +3,7 @@ class ProjectDataDbController < ApplicationController
   def index
     @project = Project.find_by_channel_id(params[:channel_id])
     @key_value_pairs = KeyValuePair.where(channel_id: params[:channel_id])
+    @records = Record.where(channel_id: params[:channel_id])
     puts "####################################################"
   end
 
