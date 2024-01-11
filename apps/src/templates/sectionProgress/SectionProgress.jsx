@@ -14,7 +14,7 @@ import {
   setLessonOfInterest,
   setCurrentView,
 } from './sectionProgressRedux';
-import {loadScriptProgress} from './sectionProgressLoader';
+import {loadUnitProgress} from './sectionProgressLoader';
 import {ViewType, scriptDataPropType} from './sectionProgressConstants';
 import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import firehoseClient from '../../lib/util/firehose';
@@ -58,7 +58,7 @@ class SectionProgress extends Component {
   }
 
   componentDidMount() {
-    loadScriptProgress(this.props.scriptId, this.props.sectionId);
+    loadUnitProgress(this.props.scriptId, this.props.sectionId);
   }
 
   componentDidUpdate() {
@@ -76,7 +76,7 @@ class SectionProgress extends Component {
 
   onChangeScript = scriptId => {
     this.props.setScriptId(scriptId);
-    loadScriptProgress(scriptId, this.props.sectionId);
+    loadUnitProgress(scriptId, this.props.sectionId);
 
     this.recordEvent('change_script', {
       old_script_id: this.props.scriptId,

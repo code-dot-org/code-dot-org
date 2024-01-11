@@ -24,7 +24,7 @@ import StandardsReportCurrentCourseInfo from './StandardsReportCurrentCourseInfo
 import StandardsReportHeader from './StandardsReportHeader';
 import color from '@cdo/apps/util/color';
 import _ from 'lodash';
-import {loadScriptProgress} from '../sectionProgressLoader';
+import {loadUnitProgress} from '../sectionProgressLoader';
 import PrintReportButton from './PrintReportButton';
 import {cstaStandardsURL} from './standardsConstants';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -55,7 +55,7 @@ class StandardsReport extends Component {
     const scriptIdFromTD =
       window.opener.teacherDashboardStoreInformation.scriptId;
     this.props.setScriptId(scriptIdFromTD);
-    loadScriptProgress(scriptIdFromTD, this.props.sectionId);
+    loadUnitProgress(scriptIdFromTD, this.props.sectionId);
   }
 
   getLinkToOverview() {
