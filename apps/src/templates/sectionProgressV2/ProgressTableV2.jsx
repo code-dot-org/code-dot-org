@@ -10,7 +10,7 @@ import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
 import {scriptDataPropType} from '../sectionProgress/sectionProgressConstants';
 
-function ProgressTableV2({
+export function ProgressTableV2({
   isSortedByFamilyName,
   sectionId,
   students,
@@ -36,6 +36,8 @@ function ProgressTableV2({
     </div>
   );
 }
+
+export const UnconnectedProgressTableV2 = ProgressTableV2;
 
 ProgressTableV2.propTypes = {
   isSortedByFamilyName: PropTypes.bool,
