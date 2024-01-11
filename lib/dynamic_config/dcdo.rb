@@ -40,6 +40,8 @@ class DCDOBase < DynamicConfigBase
       'progress-table-v2-enabled': DCDO.get('progress-table-v2-enabled', false),
       # Whether to show the v1 or v2 progress table by default.
       'progress-table-v2-default-v2': DCDO.get('progress-table-v2-default-v2', false),
+      # Whether the scholarship dropdown is locked on the application dashboard.
+      'scholarship-dropdown-locked': DCDO.get('scholarship-dropdown-locked', true),
     }
   end
 end
