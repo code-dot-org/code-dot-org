@@ -13,7 +13,7 @@ const {WebpackManifestPlugin} = require('webpack-manifest-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
-const circles = require('./circular_dependencies.json');
+const circularDependencies = require('./circular_dependencies.json');
 
 const envConstants = require('./envConstants');
 
@@ -69,7 +69,7 @@ const nodeModulesToTranspile = [
 // makes the API available as a global.
 
 // map our circular dependency JSON to a set.
-const circleSet = new Set(circles);
+const circularDependenciesSet = new Set(circularDependencies);
 
 // as we see our known circular dependencies, we're gonna remove them from our list. That way,
 // we can report at the end if any circular dependencies have been cleaned up.
@@ -95,12 +95,12 @@ const nodePolyfillConfig = {
       // webpack
       onStart: () => {
         seenCircles.clear();
-        seenCircles = new Set(Array.from(circleSet));
+        seenCircles = new Set(Array.from(circularDependenciesSet));
       },
       onDetected: ({module: webpackModuleRecord, paths, compilation}) => {
         const pathString = paths.join(' -> ');
         // if the path is not a known existing one, then note as an error
-        if (!circleSet.has(pathString)) {
+        if (!circularDependenciesSet.has(pathString)) {
           compilation.errors.push(
             new Error(
               `Circular Dependency Checker : New Circular Dependency found : ${pathString}`
