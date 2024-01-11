@@ -53,6 +53,14 @@ class ProjectDataDbController < ApplicationController
   end
 
   def update_record
+    record = Record.find_by(channel_id: params[:channel_id], table_name: params[:table_name], record_id: params[:record_id])
+    if record
+      record.json = JSON.parse params[:json]
+      record.save!
+      render json: record
+    else
+      render json: null
+    end
   end
 
   def delete_record
