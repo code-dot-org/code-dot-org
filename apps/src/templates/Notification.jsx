@@ -28,6 +28,7 @@ const Notification = ({
   buttons,
   buttonsStyles,
   buttonText,
+  buttonColor,
   children,
   details,
   detailsLink,
@@ -176,7 +177,7 @@ const Notification = ({
               <Button
                 __useDeprecatedTag
                 href={buttonLink}
-                color={Button.ButtonColor.gray}
+                color={buttonColor || Button.ButtonColor.gray}
                 text={buttonText}
                 style={styles.button}
                 target={newWindow ? '_blank' : null}
@@ -187,13 +188,11 @@ const Notification = ({
             {buttons &&
               buttons.map((button, index) => (
                 <Button
-                  __useDeprecatedTag
                   key={index}
                   href={button.link}
                   color={button.color || Button.ButtonColor.gray}
                   text={button.text}
                   style={{...styles.button, ...button.style}}
-                  target={button.newWindow ? '_blank' : null}
                   onClick={button.onClick}
                   className={button.className}
                 />
@@ -221,6 +220,7 @@ Notification.propTypes = {
   detailsLinkNewWindow: PropTypes.bool,
   buttonText: PropTypes.string,
   buttonLink: PropTypes.string,
+  buttonColor: PropTypes.string,
   dismissible: PropTypes.bool.isRequired,
   iconStyles: PropTypes.object,
   onDismiss: PropTypes.func,
@@ -243,7 +243,6 @@ Notification.propTypes = {
     PropTypes.shape({
       text: PropTypes.string,
       link: PropTypes.string,
-      newWindow: PropTypes.bool,
       onClick: PropTypes.func,
       className: PropTypes.string,
       color: PropTypes.oneOf(Object.keys(Button.ButtonColor)),

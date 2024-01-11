@@ -1,0 +1,29 @@
+name 'self-paced-pl-k5-2-intro_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Creativity + Code
+
+##### **Welcome to the exciting world of coding, where creativity knows no bounds!**
+
+##### This professional learning module invites you to discover the possibilities of coding for creativity. With a focus on simple basics, we'll guide you through the process of crafting engaging animations that can later be enhanced into stories and interactive games. 
+
+##### Prepare to embark on a journey where coding becomes a powerful tool to enhance learning experiences and foster the imaginative spirit of your students.
+
+<img src="https://images.code.org/205cc0e8da353930786208309788529d-image-1679953465855.png" alt="Image of a cartoon octopus holding a microphone and wearing a hat" style="border-radius:40px; float: right; padding-right: 75px; height: 275px; clear: both; margin: 0 0px 0px 0;">
+
+
+## In this module, you will:
+
+* ##### Identify and explain fundamental CS concepts, including sprites, events and behaviors. 
+* ##### Demonstrate the application of event-based programming.
+* ##### Create a program using sprites, events, and behaviors.
+
+### **Suggested time:** 60 minutes
+
+
+## Let's get started!
+
+<div style="clear:both"/>
+MARKDOWN

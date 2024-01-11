@@ -4,6 +4,8 @@ import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import AiAssessmentBox from './AiAssessmentBox';
+import AiAssessmentFeedback from './AiAssessmentFeedback';
+import {aiEvaluationShape} from './rubricShapes';
 const icon = require('@cdo/static/ai-bot.png');
 
 export default function AiAssessment({
@@ -11,9 +13,10 @@ export default function AiAssessment({
   studentName,
   aiUnderstandingLevel,
   aiConfidence,
+  aiEvalInfo,
 }) {
   return (
-    <div>
+    <div className="uitest-ai-assessment">
       <Heading6>{i18n.aiAssessment()}</Heading6>
       <div className={style.aiAssessmentBlock}>
         <img alt={i18n.aiBot()} src={icon} className={style.aiBotImg} />
@@ -24,6 +27,9 @@ export default function AiAssessment({
           aiConfidence={aiConfidence}
         />
       </div>
+      <div>
+        <AiAssessmentFeedback aiEvalInfo={aiEvalInfo} />
+      </div>
     </div>
   );
 }
@@ -33,4 +39,5 @@ AiAssessment.propTypes = {
   studentName: PropTypes.string,
   aiUnderstandingLevel: PropTypes.number,
   aiConfidence: PropTypes.number,
+  aiEvalInfo: aiEvaluationShape,
 };

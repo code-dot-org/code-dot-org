@@ -1977,70 +1977,7 @@
       "Course E: Frozen Project_examples_2023": {
         "display_name": "Snowflake Flowers",
         "short_instructions": "You are about to start your final project. Before you begin, spend some time looking at the example projects.",
-        "long_instructions": "You are about to start your final project. Before you begin, spend some time looking at the example projects.",
-        "function_definitions": {
-          "small flower": {
-            "name": "small flower"
-          },
-          "LOGIC FLOWERS2": {
-            "name": "LOGIC FLOWERS2"
-          },
-          "LOGIC FLOWER": {
-            "name": "LOGIC FLOWER"
-          },
-          "LOGIC FLOWERS": {
-            "name": "LOGIC FLOWERS"
-          },
-          "draw a star": {
-            "name": "draw a star",
-            "description": "draw a star with given points and sides of given length",
-            "parameters": {
-              "points": "points",
-              "length": "length"
-            }
-          },
-          "draw a circle": {
-            "name": "draw a circle",
-            "description": "draw a circle of given radius",
-            "parameters": {
-              "radius": "radius"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "draw a pinwheel",
-            "parameters": {
-              "sides": "sides",
-              "length": "length",
-              "repeat": "repeat"
-            }
-          },
-          "draw a triangle": {
-            "name": "draw a triangle",
-            "parameters": {
-              "length": "length"
-            }
-          },
-          "draw a shape": {
-            "name": "draw a shape",
-            "parameters": {
-              "sides": "sides",
-              "length": "length"
-            }
-          },
-          "draw a house": {
-            "name": "draw a house",
-            "parameters": {
-              "length": "length"
-            }
-          },
-          "draw a square": {
-            "name": "draw a square",
-            "parameters": {
-              "length": "length",
-              "sides": "sides"
-            }
-          }
-        }
+        "long_instructions": "You are about to start your final project. Before you begin, spend some time looking at the example projects."
       }
     }
   },

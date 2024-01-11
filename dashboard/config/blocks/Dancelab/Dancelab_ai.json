@@ -3,7 +3,7 @@
   "config": {
     "func": "ai",
     "inline": true,
-    "blockText": "{IMAGE}generate {VALUE} stage",
+    "blockText": "{IMAGE}generate {VALUE} effect",
     "style": "ai_blocks",
     "args": [
       {
@@ -11,7 +11,7 @@
         "dummy": true,
         "inline": true,
         "customOptions": {
-          "assetUrl": "media/ai-bot-border.png",
+          "assetUrl": "media/ai-bot-mini.svg",
           "width": 24,
           "height": 24
         }

@@ -13,6 +13,7 @@ const SET_HAS_SEEN_STANDARDS_REPORT =
 const SET_INITIAL_DATA = 'currentUser/SET_INITIAL_DATA';
 const SET_MUTE_MUSIC = 'currentUser/SET_MUTE_MUSIC';
 const SET_SORT_BY_FAMILY_NAME = 'currentUser/SET_SORT_BY_FAMILY_NAME';
+const SET_SHOW_PROGRESS_TABLE_V2 = 'currentUser/SET_SHOW_PROGRESS_TABLE_V2';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 
@@ -64,6 +65,10 @@ export const setSortByFamilyName = (
   sectionId,
   unitName,
   source,
+});
+export const setShowProgressTableV2 = showProgressTableV2 => ({
+  type: SET_SHOW_PROGRESS_TABLE_V2,
+  showProgressTableV2,
 });
 
 const initialState = {
@@ -145,9 +150,23 @@ export default function currentUser(state = initialState, action) {
       isSortedByFamilyName: action.isSortedByFamilyName,
     };
   }
+  if (action.type === SET_SHOW_PROGRESS_TABLE_V2) {
+    return {
+      ...state,
+      showProgressTableV2: action.showProgressTableV2,
+    };
+  }
   if (action.type === SET_INITIAL_DATA) {
-    const {id, username, user_type, mute_music, under_13, over_21} =
-      action.serverUser;
+    const {
+      id,
+      username,
+      user_type,
+      mute_music,
+      under_13,
+      over_21,
+      sort_by_family_name,
+      show_progress_table_v2,
+    } = action.serverUser;
     analyticsReport.setUserProperties(
       id,
       user_type,
@@ -161,6 +180,8 @@ export default function currentUser(state = initialState, action) {
       isBackgroundMusicMuted: mute_music,
       under13: under_13,
       over21: over_21,
+      isSortedByFamilyName: sort_by_family_name,
+      showProgressTableV2: show_progress_table_v2,
     };
   }
 

@@ -205,5 +205,7 @@ module Dashboard
 
     # Use custom routes for error codes
     config.exceptions_app = routes
+
+    config.active_job.queue_adapter = :delayed_job
   end
 end

@@ -153,17 +153,6 @@
   gap: 0.5rem;
 }
 
-.learningGoalContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  align-self: stretch;
-
-  border-radius: 4px;
-  border: 1px solid $neutral_dark40;
-  background: $neutral_white;
-}
-
 .rubricHeader {
   border-radius: 4px 4px 0 0;
   background: $neutral_dark;
@@ -242,24 +231,63 @@ button.rubricHeaderTab {
   }
 }
 
+.learningGoalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-self: stretch;
+  border-radius: 4px;
+  border: 1px solid $neutral_dark40;
+  background: $neutral_white;
+}
+
 .learningGoalRow {
   display: flex;
   align-self: stretch;
   border-bottom: 1px solid $neutral_dark40;
   min-height: 40px;
-  summary:hover {
-    background: none;
-  }
-}
 
-.learningGoalHeader {
-  display: flex;
-  height: 40px;
-  padding: 0 16px;
-  justify-content: space-between;
-  align-items: center;
-  align-self: stretch;
-  line-height: 154%;
+  // Directly target the <summary> child with the class
+  .learningGoalHeader {
+    display: flex;
+    height: 40px;
+    padding: 0 1rem 0 2rem;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    line-height: 154%;
+    position: relative;
+
+    // Common styles for the FontAwesome icons, regardless of state
+    &::after {
+      font: var(--fa-font-solid);
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-35%);
+      padding-right: 10px;
+      height: 16px;
+      width: 16px;
+      // Icon for closed details
+      content: "\f107";
+    }
+    
+    &:hover {
+      background: none;
+      cursor: pointer;
+    }
+
+    // Hide the default disclosure arrow for summary elements in Safari
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  // When the details are open, change the icon
+  &[open] .learningGoalHeader::after {
+    content: "\f106";
+  }
 }
 
 .learningGoalHeaderLeftSide {
@@ -267,17 +295,8 @@ button.rubricHeaderTab {
   display: flex;
   align-items: center;
   gap: 16px;
-
-  // TODO: [DES-321] remove span styles
-  span {
-    font-size: 14px;
-    font-weight: 350;
-  }
-
-  .arrowIcon {
-    font-weight: 900;
-    font-size: 16px;
-  }
+  font-size: 14px;
+  padding-left: 10px;
 }
 
 .learningGoalHeaderRightSide {
@@ -350,6 +369,57 @@ h2.studentName {
     line-height: 1.54;
   }
 }
+
+// Start of rubrics redesign
+.learningGoalsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-self: stretch;
+  border-radius: 4px;
+  border: 1px solid $neutral_dark40;
+  background: $neutral_white;
+}
+
+.learningGoalButton {
+  background: none;
+  border: none;
+}
+
+.learningGoalsHeader {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  padding: 0 1rem 0 2rem;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  line-height: 154%;
+  position: relative;
+}
+
+.learningGoalsHeaderLeftSide {
+  @include main-font-semi-bold;
+  display: flex;
+  align-items: left;
+  //gap: 16px;
+  font-size: 14px;
+}
+
+.learningGoalsHeaderRightSide {
+  display: flex;
+  justify-content: flex-end;
+  align-items: right;
+  //gap: 16px;
+  font-weight: 325;
+  line-height: 154%;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+// End of rubrics redesign
 
 .evidenceLevelSetHorizontal {
   display: flex;
@@ -433,6 +503,10 @@ p.errorMessage {
   font-size: 18px;
   vertical-align: middle;
   color: gray;
+}
+
+.infoTipText {
+  max-width: 500px;
 }
 
 .openedAiAssessment {
@@ -525,4 +599,107 @@ i.infoAlertIcon {
   font-style: normal;
   font-weight: 900;
   line-height: 125%;
+}
+
+.aiFeedbackRow {
+  display:flex;
+  flex-direction: row;
+  gap: 15px;
+  padding-top: 10px;
+}
+
+.aiFeedbackThumbsUpChecked {
+  display: flex;
+  padding: 4px;
+  font-size: 16px;
+  vertical-align: middle;
+  color: $product_affirmative_default;
+}
+
+.aiFeedbackThumbsUp {
+  display: flex;
+  padding: 4px;
+  font-size: 16px;
+  vertical-align: middle;
+
+  &:hover {
+    background-color: $light_affirmative_100;
+    color: $product_affirmative_default;
+  }
+}
+
+.aiFeedbackThumbsDownChecked {
+  display: flex;
+  padding: 4px;
+  font-size: 16px;
+  vertical-align: middle;
+  color: $product_negative_default;
+}
+
+.aiFeedbackThumbsDown {
+  display: flex;
+  padding: 4px;
+  font-size: 16px;
+  vertical-align: middle;
+
+  &:hover {
+    background-color: $product_negative_light;
+    color: $product_negative_default;
+  }
+}
+
+.aiFeedbackRadio {
+  opacity: 0;
+  position: absolute;
+  height: 0
+}
+
+.aiFeedbackOther {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  gap: 5px;
+}
+
+.aiFeedbackTextbox {
+  height: 60px;
+  width: 100%;
+  overflow: scroll;
+  box-sizing: border-box;
+}
+
+.submitFeedbackRow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.submitFeedbackButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.aiFeedbackReceived {
+  margin-left: auto;
+}
+
+.selectors {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;   
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 15px;
+  padding: 10px;
+}
+
+.studentInfoGroup {
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+}
+
+.studentSelector {
+  width: 180px;
 }

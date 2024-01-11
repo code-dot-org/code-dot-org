@@ -7,10 +7,11 @@ import SamplePlayer, {SampleEvent} from './SamplePlayer';
 import {generateNotesFromChord, ChordNote} from '../utils/Chords';
 import {getTranposedNote, Key} from '../utils/Notes';
 import {Effects} from './interfaces/Effects';
-import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {LoadFinishedCallback} from '../types';
 
 // Using require() to import JS in TS files
-const soundApi = require('./sound');
 const constants = require('../constants');
 
 // Default to 4/4 time, 120 BPM, C Major
@@ -23,54 +24,71 @@ const DEFAULT_KEY = Key.C;
  * uses a {@link SamplePlayer} to play sounds.
  */
 export default class MusicPlayer {
-  private bpm: number;
-  private key: Key;
-  private samplePlayer: SamplePlayer;
-  private library: MusicLibrary | null;
+  private readonly metricsReporter: LabMetricsReporter;
+  private readonly samplePlayer: SamplePlayer;
 
-  constructor(bpm: number = DEFAULT_BPM, key: Key = DEFAULT_KEY) {
-    this.bpm = this.validateBpm(bpm);
-    this.key = this.validateKey(key);
-    this.samplePlayer = new SamplePlayer();
-    this.library = null;
+  private bpm: number = DEFAULT_BPM;
+  private key: Key = DEFAULT_KEY;
+
+  constructor(
+    bpm: number = DEFAULT_BPM,
+    key: Key = DEFAULT_KEY,
+    samplePlayer: SamplePlayer = new SamplePlayer(),
+    metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
+  ) {
+    this.samplePlayer = samplePlayer;
+    this.metricsReporter = metricsReporter;
+    this.updateConfiguration(bpm, key);
   }
 
-  /**
-   * Initializes the MusicPlayer and {@link SamplePlayer} with the music library.
-   * Playback cannot start until the player is initialized.
-   */
-  initialize(
-    library: MusicLibrary,
-    updateLoadProgress: (value: number) => void
-  ) {
-    this.library = library;
-
-    // Set key and BPM from library if present
-    const libraryBpm = library.getBPM();
-    if (libraryBpm) {
-      this.bpm = this.validateBpm(libraryBpm);
+  updateConfiguration(bpm?: number, key?: Key) {
+    if (bpm) {
+      this.bpm = this.validateBpm(bpm);
+      this.samplePlayer.setBpm(this.bpm);
     }
-    const libraryKey = library.getKey();
-    if (libraryKey) {
-      this.key = this.validateKey(libraryKey);
+    if (key) {
+      this.key = this.validateKey(key);
     }
+  }
 
-    this.samplePlayer.initialize(library, this.bpm, updateLoadProgress);
+  setUpdateLoadProgress(updateLoadProgress: (value: number) => void) {
+    this.samplePlayer.setUpdateLoadProgress(updateLoadProgress);
   }
 
   /**
    * Load a sound into the sound system using the given buffer. Currently only
    * used to upload custom sounds (hidden/demo-only feature).
    *
+   * TODO: re-enable
+   *
    * @param id
    * @param buffer
    */
   loadSoundFromBuffer(id: number, buffer: ArrayBuffer) {
-    soundApi.LoadSoundFromBuffer(id, buffer);
+    // soundApi.LoadSoundFromBuffer(id, buffer);
   }
 
   getBPM(): number {
     return this.bpm;
+  }
+
+  /**
+   * Pre-load sounds for playback
+   */
+  preloadSounds(
+    events: PlaybackEvent[],
+    onLoadFinished?: LoadFinishedCallback
+  ) {
+    const sampleIds = Array.from(
+      new Set(
+        events
+          .map(event => this.convertEventToSamples(event))
+          .flat()
+          .map(sampleEvent => sampleEvent.sampleId)
+      )
+    );
+
+    this.samplePlayer.loadSounds(sampleIds, onLoadFinished);
   }
 
   /**
@@ -197,8 +215,9 @@ export default class MusicPlayer {
   }
 
   private convertEventToSamples(event: PlaybackEvent): SampleEvent[] {
-    if (this.library === null) {
-      Lab2MetricsReporter.logWarning('Music Player not initialized');
+    const library = MusicLibrary.getInstance();
+    if (!library) {
+      this.metricsReporter.logWarning('Library not set. Cannot play sounds.');
       return [];
     }
 
@@ -208,9 +227,9 @@ export default class MusicPlayer {
 
     if (event.type === 'sound') {
       const soundEvent = event as SoundEvent;
-      const soundData = this.library.getSoundForId(soundEvent.id);
+      const soundData = library.getSoundForId(soundEvent.id);
       if (!soundData) {
-        Lab2MetricsReporter.logWarning('No sound for ID: ' + soundEvent.id);
+        this.metricsReporter.logWarning('No sound for ID: ' + soundEvent.id);
         return [];
       }
 
@@ -234,7 +253,7 @@ export default class MusicPlayer {
     } else if (event.type === 'pattern') {
       const patternEvent = event as PatternEvent;
 
-      const results = [];
+      const results: SampleEvent[] = [];
 
       const kit = patternEvent.value.kit;
 
@@ -292,21 +311,21 @@ export default class MusicPlayer {
   }
 
   private getSampleForNote(note: number, instrument: string): string | null {
-    if (this.library === null) {
+    const library = MusicLibrary.getInstance();
+    if (!library) {
       return null;
     }
 
-    const folder: SoundFolder | null =
-      this.library.getFolderForPath(instrument);
+    const folder: SoundFolder | null = library.getFolderForPath(instrument);
 
     if (folder === null) {
-      Lab2MetricsReporter.logWarning(`No instrument ${instrument}`);
+      this.metricsReporter.logWarning(`No instrument ${instrument}`);
       return null;
     }
 
     const sound = folder.sounds.find(sound => sound.note === note) || null;
     if (sound === null) {
-      Lab2MetricsReporter.logWarning(
+      this.metricsReporter.logWarning(
         `No sound for note value ${note} on instrument ${instrument}`
       );
       return null;

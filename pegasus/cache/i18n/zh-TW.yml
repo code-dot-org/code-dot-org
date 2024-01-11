@@ -857,6 +857,7 @@ zh-TW:
   header_incubator: 孵化器
   header_learn: 學習
   header_legal: 法律與隱私權
+  header_legal_cookie_notice: Cookie通知
   header_legal_privacy: 隱私政策
   header_legal_tos: 服務條款
   header_my_dashboard: 我的控制台
@@ -1919,16 +1920,9 @@ zh-TW:
   volunteer_engineer_submission_header_shared: 在志工地圖上分享給老師的資訊
   volunteer_engineer_submission_intro_background: 一小時玩程式（Hour of Code）是一個介紹計算機科學的全球性活動，在超過
     180 個國家，有數以千萬計的學生響應。歡迎你在計算機科學教育週（CsedWeek，12/7-12/13）一同參與活動。
-  volunteer_engineer_submission_intro_guide: 進一步了解我們的<a href="%{volunteer_guide}">志工專案</a>。
   volunteer_engineer_submission_intro_guide_markdown: 進一步了解我們的<a href="%{volunteer_guide}">志工專案</a>。
-  volunteer_engineer_submission_intro_links: 需要些志工嗎？在我們的<a href="%{volunteer_local}">志工地圖</a>上尋找本地有哪些志願者。
   volunteer_engineer_submission_intro_links_markdown: 你是需要些志工的教師嗎？在我們的[志工地圖](%{volunteer_local})上尋找在地有哪些志願者。
-  volunteer_engineer_submission_intro_recruit: '這些老師希望有<span style="font-family: ''Gotham
-    7r'', sans-serif;">熱衷於計算機科學教育的人士</span>能夠在課堂上提供幫助，或是藉由談論計算機科學的可能性有多大（不一定要面對面，或許也能透過視訊）來<span
-    style="font-family: ''Gotham 7r'', sans-serif;">啟發</span>學生的人。'
   volunteer_engineer_submission_intro_recruit_markdown: 老師都希望有**熱衷於電腦科學教育**的人士能夠在課堂上提供幫助，或是有人談論電腦科學的可能性有多大（不一定要面對面，或許也能以視訊通話），從而**啟發**學生。
-  volunteer_engineer_submission_intro_signup: 如果你是學習計算機科學的學生，或是軟體專業人士，請填寫下列資訊。必須年滿
-    18 歲才能申請為志工，所有填寫的訊息都會在<a href="/volunteer/local">志工地圖</a>上公開顯示。<span class="form-required-field">*</span>為必填。
   volunteer_engineer_submission_intro_signup_markdown: 如果你是學習電腦科學的學生，或是軟體專業人士，請填寫下列資訊。必須年滿
     18 歲才能申請為志工。在本節填寫的所有訊息都會在[志工地圖](/volunteer/local)上公開顯示。_*_為必填。
   volunteer_engineer_submission_location_flexibility_curriculum: 貢獻開源的課程專案

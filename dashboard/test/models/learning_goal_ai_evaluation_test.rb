@@ -15,10 +15,16 @@ class LearningGoalAiEvaluationTest < ActiveSupport::TestCase
   end
 
   test 'summarize_debug' do
-    eval = create(
-      :learning_goal_ai_evaluation,
+    rubric_ai_evaluation = create(
+      :rubric_ai_evaluation,
+      rubric: @rubric,
       user: @student,
       requester: @student,
+    )
+
+    eval = create(
+      :learning_goal_ai_evaluation,
+      rubric_ai_evaluation: rubric_ai_evaluation,
       learning_goal: @learning_goal,
       understanding: SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.CONVINCING,
       ai_confidence: LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS[:MEDIUM],

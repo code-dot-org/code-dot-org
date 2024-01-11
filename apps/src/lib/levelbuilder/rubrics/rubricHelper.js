@@ -110,7 +110,7 @@ function removeNewIds(keyConceptList) {
 function resetPositionsOfLearningGoals(keyConceptList) {
   let position = 1;
   keyConceptList.forEach(keyConcept => {
-    if (keyConceptList._delete) {
+    if (keyConcept._destroy) {
       keyConcept.position = -1;
     } else {
       keyConcept.position = position;

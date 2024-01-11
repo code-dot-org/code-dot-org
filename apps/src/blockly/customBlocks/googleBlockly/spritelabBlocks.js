@@ -6,6 +6,12 @@ import {updatePointerBlockImage} from '@cdo/apps/blockly/addons/cdoSpritePointer
 import CdoFieldFlyout from '@cdo/apps/blockly/addons/cdoFieldFlyout';
 import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
 import {blocks as behaviorBlocks} from './behaviorBlocks';
+import {BLOCK_TYPES, NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
+import {FALSEY_DEFAULT, readBooleanAttribute} from '@cdo/apps/blockly/utils';
+import {
+  editButtonHandler,
+  toolboxConfigurationSupportsEditButton,
+} from './proceduresBlocks';
 
 const INPUTS = {
   FLYOUT: 'flyout_input',
@@ -171,7 +177,7 @@ export const blocks = {
         // Assume default icon if no XML attribute present
         !xmlElement.hasAttribute('useDefaultIcon') ||
         // Coerce string to Boolean
-        xmlElement.getAttribute('useDefaultIcon') === 'true';
+        readBooleanAttribute(xmlElement, 'useDefaultIcon', FALSEY_DEFAULT);
       flyoutToggleButton.setIcon(useDefaultIcon);
     };
   },
@@ -221,7 +227,7 @@ export const blocks = {
     generator.behavior_definition = function (block) {
       // Define a procedure with a return value.
       const funcName = generator.nameDB_.getName(
-        block.getFieldValue('NAME'),
+        block.behaviorId,
         Blockly.Names.NameType.PROCEDURE
       );
 
@@ -290,13 +296,84 @@ export const blocks = {
       return null;
     };
     generator.gamelab_behavior_get = function () {
-      const name = generator.nameDB_.getName(
-        this.getFieldValue('NAME'),
-        'PROCEDURE'
-      );
+      const name = generator.nameDB_.getName(this.behaviorId, 'PROCEDURE');
       return [`new Behavior(${name}, [])`, generator.ORDER_ATOMIC];
     };
     generator.sprite_parameter_get = generator.variables_get;
+  },
+
+  // All logic for behavior picker custom input type
+  addBehaviorPickerEditButton(
+    block,
+    inputConfig,
+    currentInputRow,
+    dropdownField
+  ) {
+    const behaviorsFound =
+      dropdownField.getOptions().length > 1 ||
+      dropdownField.getOptions()[0][1] !== NO_OPTIONS_MESSAGE;
+
+    // Behavior editing is only permitted using the modal function editor.
+    if (
+      behaviorsFound &&
+      Blockly.useModalFunctionEditor &&
+      // TODO: Support editing behaviors from within a modal editor workspace.
+      block.workspace.id === Blockly.getMainWorkspace().id &&
+      toolboxConfigurationSupportsEditButton(block)
+    ) {
+      const editButton = new Blockly.FieldButton({
+        value: msg.edit(),
+        onClick: editButtonHandler,
+        colorOverrides: {button: 'blue', text: 'white'},
+        allowReadOnlyClick: true, // We support showing the editor even if viewing in read only mode.
+      });
+      block.inputList[block.inputList.length - 1].appendField(
+        editButton,
+        'EDIT'
+      );
+      // getProcedureModel is defined on procedure blocks as part of
+      // @blockly/block-shareable-procedures
+      // For this block, we will get the procedure based on selected
+      // dropdown field option.
+      block.getProcedureModel = function () {
+        const fieldValue = block.getFieldValue(inputConfig.name);
+        const procedureMap = block.workspace.getProcedureMap();
+        let procedure = undefined;
+        for (const value of procedureMap.values()) {
+          if (value.name === fieldValue) {
+            procedure = value;
+            break;
+          }
+        }
+        return procedure;
+      };
+    }
+  },
+  // Get a list of behavior options for a dropdown field, based on
+  // blocks found on the main workspace.
+  getAllBehaviorOptions() {
+    const noBehaviorLabel = msg.behaviorsNotFound();
+    const noBehaviorOption = [noBehaviorLabel, NO_OPTIONS_MESSAGE];
+    // Behavior definition blocks are always moved to the hidden workspace.
+    const definitionWorkspace = Blockly.getHiddenDefinitionWorkspace();
+    if (!definitionWorkspace) {
+      return [noBehaviorOption];
+    }
+    const behaviorBlocks = definitionWorkspace
+      .getTopBlocks()
+      .filter(block => block.type === BLOCK_TYPES.behaviorDefinition);
+    // Menu options are an array, each option containing a human-readable part,
+    // and a language-neutral string. Both are the same in this case.
+    const behaviorOptions = behaviorBlocks.map(block => [
+      block.getProcedureModel().name,
+      block.behaviorId,
+    ]);
+    behaviorOptions.sort();
+    // Add a "No behaviors found" option, if needed
+    if (behaviorOptions.length === 0) {
+      behaviorOptions.push(noBehaviorOption);
+    }
+    return behaviorOptions;
   },
 };
 

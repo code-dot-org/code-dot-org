@@ -242,4 +242,4 @@ Feature: Using the teacher dashboard
     And I enter the section code into "input.ui-test-join-section"
     And I click selector "button.ui-test-join-section"
     Then I wait until element ".announcement-notification" is visible
-    And element ".announcement-notification" contains text matching "You are already the owner of section"
+    And element ".announcement-notification" contains text matching "You are already an instructor for section"

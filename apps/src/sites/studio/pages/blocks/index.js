@@ -4,7 +4,7 @@ import jsonic from 'jsonic';
 import {parseElement} from '@cdo/apps/xml';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
 import {customInputTypes as spriteLabInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
-import {customInputTypes as danceInputTypes} from '@cdo/apps/dance/blocks';
+import {customInputTypes as danceInputTypes} from '@cdo/apps/dance/blockly/blocks';
 import {
   valueTypeTabShapeMap,
   exampleSprites,
@@ -36,14 +36,10 @@ function renderBlock(element) {
   });
   const blockName = Object.values(blocksInstalled)[0][0];
   const blocksDom = parseElement(`<block type='${blockName}' />`);
-  const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(
-    element,
-    blocksDom,
-    {
-      noScrolling: true,
-      inline: false,
-    }
-  );
+  const blockSpace = Blockly.createEmbeddedWorkspace(element, blocksDom, {
+    noScrolling: true,
+    inline: false,
+  });
   shrinkBlockSpaceContainer(blockSpace, true);
 }
 

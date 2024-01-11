@@ -1,5 +1,6 @@
 <Dancelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 63,
   "created_at": "2023-10-20T22:25:59.000Z",
   "level_num": "custom",
@@ -64,12 +65,14 @@
       "upButton",
       "downButton"
     ],
-    "validation_code": "//after 1 measure, make sure there is a sprite. if not, fail immediately\r\nif (nativeAPI.getTime(\"measures\") > 1) {\r\n  if (sprites.length === 0) {\r\n    nativeAPI.fail(\"danceFeedbackNeedNewDancer\");\r\n  }\r\n}\r\n\r\n//go through all sprites\r\nsprites.forEach(function(sprite, index) {\r\n  var currentAnimation=sprite.getAnimationLabel();\r\n  var previousAnimation=World.validationState[index];\r\n  if (currentAnimation!=previousAnimation) {\r\n    if (previousAnimation == 'anim0') {\r\n      //pass, but not right away\r\n      World.validationState.shouldPass = true;\r\n    }\r\n  }\r\n  //store previous animation\r\n  World.validationState[index] = currentAnimation;\r\n});\r\n\r\n\r\nif (nativeAPI.getTime(\"measures\") > 3){\r\n  if(World.validationState.shouldPass){\r\n    nativeAPI.pass();\r\n  }\r\n  else if (World.keysPressed.size > 0){\r\n    nativeAPI.fail(\"danceFeedbackPressedKey\");\r\n  } else {\r\n    nativeAPI.fail(\"danceFeedbackDidntPress\");\r\n  }\r\n}",
-    "short_instructions": "Attach <code style=\"color:white; background-color:#7435b2\">sprites do dance move</code> to the <code style=\"color:white; background-color:#00bc3e\">when up pressed</code> event. "
+    "validation_code": "//after 1 measure, make sure there is a sprite. if not, fail immediately\r\nif (nativeAPI.getTime(\"measures\") > 1) {\r\n  if (sprites.length === 0) {\r\n    nativeAPI.fail(\"danceFeedbackNeedNewDancer\");\r\n  }\r\n}\r\n\r\n//go through all sprites\r\nsprites.forEach(function(sprite, index) {\r\n  var currentAnimation=sprite.getAnimationLabel();\r\n  var previousAnimation=World.validationState[index];\r\n  if (currentAnimation!=previousAnimation) {\r\n    if (previousAnimation == 'anim0') {\r\n      //pass, but not right away\r\n      World.validationState.shouldPass = true;\r\n    }\r\n  }\r\n  //store previous animation\r\n  World.validationState[index] = currentAnimation;\r\n});\r\n\r\n\r\nif (nativeAPI.getTime(\"measures\") > 5){\r\n  if(World.validationState.shouldPass){\r\n    nativeAPI.pass();\r\n  }\r\n  else if (World.keysPressed.size > 0){\r\n    nativeAPI.fail(\"danceFeedbackPressedKey\");\r\n  } else {\r\n    nativeAPI.fail(\"danceFeedbackDidntPress\");\r\n  }\r\n}",
+    "short_instructions": "Attach <code style=\"color:white; background-color:#7435b2\">sprites do dance move</code> to the <code style=\"color:white; background-color:#00bc3e\">when up pressed</code> event. ",
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-10-20T22:25:59.784+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_key_press_events_1\\\"\"],\"cloned_from\":\"draft_ai_dance_party_key_press_events_1\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-10-20T22:25:59.784+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_key_press_events_1\\\"\"],\"cloned_from\":\"draft_ai_dance_party_key_press_events_1\"},{\"changed_at\":\"2023-10-25 20:25:50 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-26 18:59:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-26 19:00:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-26 19:01:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -84,7 +87,7 @@
             </block>
           </statement>
         </block>
-        <block type="Dancelab_whenKey" id="*R3Us3z5;rM#sBE?1zjX" deletable="false" x="19" y="221">
+        <block type="Dancelab_whenKey" id="*R3Us3z5;rM#sBE?1zjX" deletable="false" movable="false" x="16" y="125">
           <field name="KEY">"up"</field>
         </block>
       </xml>

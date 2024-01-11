@@ -54,7 +54,7 @@ theme: responsive_full_width
     %div.centered
       %h3.heading-md
         =hoc_s(:csf_page_pick_a_course_heading_02)
-      %div.flex-container.justify-center.wrap{style: "gap: 1rem"}
+      .button-wrapper.centered
         %a.link-button{href: "#csf-teacher-led"}
           =hoc_s(:curriculum_name_csf_teacher_led)
         %a.link-button{href: "#csf-self-paced"}
@@ -82,7 +82,8 @@ theme: responsive_full_width
   .wrapper
     %h2=hoc_s(:heading_no_devices)
     .action-block.action-block--two-col
-      %img.col-50{src: "/images/new-main.jpg", alt: ""}
+      .media-wrapper.col-50
+        %img{src: "/images/new-main.jpg", alt: ""}
       .text-wrapper.col-50
         %h3=hoc_s(:no_devices_section_subhead)
         %p=hoc_s(:no_devices_section_desc)
@@ -111,6 +112,6 @@ theme: responsive_full_width
 
 %section#csf-newsletter-signup{style: "padding-top: 2rem"}
   .wrapper
-    = view :curriculum_subscribe_form, subscribe_form_section_desc: hoc_s(:subscribe_form_section_desc_csf), form_src: "http://go.pardot.com/l/153401/2018-10-02/lzp5jd"
+    = view :subscribe_form, subscribe_form_section_title: hoc_s(:subscribe_form_section_title), subscribe_form_section_desc: hoc_s(:subscribe_form_section_desc_csf), form_height: "375px", form_src: "http://go.pardot.com/l/153401/2018-10-02/lzp5jd"
 
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::CSF_CURRICULUM_PAGE_VISITED_EVENT

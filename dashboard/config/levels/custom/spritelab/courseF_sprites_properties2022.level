@@ -64,14 +64,13 @@
     "display_name": "Sprite Properties",
     "bubble_choice_description": "Learn to change the size of sprites.",
     "thumbnail_url": "https://images.code.org/874fbbe0fdd2bddc594a232c13f44f97-image-1610481176809.png",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"sprites_category2\",\r\n  \"callout_text\": \"Look for a new block here.\",\r\n  \"element_id\": \"[id=':2.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"sprites_category2\",\"callout_text\":\"Look for a new block here.\",\"element_id\":\"[id=':2.label']\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\"[id='blockly-1.label']\",\"localization_key\":\"sprites_category2\",\"callout_text\":\"Look for a new block here.\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "encrypted_examples": "ZGoRJz4Cr9Q2NZxjI5wyJ3CHbhv53/aMvYTHYY8dJv8nX+CuYYrGNYbffPmg\n1vss4PysrgQ1N/jdCP3hZkaq2Q==\n",
     "hide_pause_button": "false",
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Use the new block in the Sprites category to change the size of the second sprite.",
     "instructions_icon": "strawberry",
-    "preload_asset_list": null,
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

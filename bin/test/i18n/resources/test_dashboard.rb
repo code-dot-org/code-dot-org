@@ -47,6 +47,7 @@ describe I18n::Resources::Dashboard do
       I18n::Resources::Dashboard::Slides.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::Standards.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::UnpluggedContent.expects(:sync_out).in_sequence(execution_sequence)
+      I18n::Resources::Dashboard::TextToSpeech.expects(:sync_out).in_sequence(execution_sequence)
 
       I18n::Resources::Dashboard.sync_out
     end

@@ -58,23 +58,15 @@ export default function AiAssessmentBox({
                 <FontAwesome icon="info-circle" className={style.infoTipIcon} />
               </span>
               <ReactTooltip id="info-tip" effect="solid">
-                PLACEHOLDER TEXT FOR INFO TIP
+                <div className={style.infoTipText}>
+                  {i18n.aiConfidenceTooltip()}
+                </div>
               </ReactTooltip>
             </div>
           )}
         </div>
       )}
-      {!isAiAssessed && (
-        <div>
-          <EmText>{i18n.aiCannotAssess()}</EmText>
-          <span data-tip data-for="info-tip">
-            <FontAwesome icon="info-circle" className={style.infoTipIcon} />
-          </span>
-          <ReactTooltip id="info-tip" effect="solid">
-            PLACEHOLDER TEXT FOR INFO TIP
-          </ReactTooltip>
-        </div>
-      )}
+      {!isAiAssessed && <EmText>{i18n.aiCannotAssess()}</EmText>}
     </div>
   );
 }

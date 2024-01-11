@@ -6,12 +6,12 @@
     "properties": {
       "is_course": true,
       "is_migrated": true,
-      "pilot_experiment": "AI Dance Party October Pilot - Group A",
+      "pilot_experiment": "draft-hoc-dp-2-a",
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "draft-hoc-dp-2-a",
-    "serialized_at": "2023-10-20 22:48:54 UTC",
+    "serialized_at": "2023-10-25 21:51:03 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -42,6 +42,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "overview": "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.",
+        "preparation": "###One Week Before Your Hour of Code\n- Review the Hour of Code Educator Guide and Best Practices from Successful Educators in order to begin to plan your Hour of Code event.\n- Register your Hour of Code event if you’d like to get classroom support, discounted posters, or participate in the robotics give-away (US only).\n- Review and complete the online tutorial yourself: Dance Party\n- Be sure to test it first before asking your students to complete it. Check your technology and decide if you need to troubleshoot anything in advance of your Hour of Code.\n- Review the supplementary lesson plan, \"Dance Party: Unplugged\" to determine whether or not you'd like to lead this lesson in advance of your Hour of Code.\n\n###One Day Before Your Hour of Code\n- Each student who completes the activity should receive a certificate. Print one for everyone in advance to make this easier at the end of your Hour of Code.\n- (optional) Encourage students to bring in headphones to use during the activity.",
+        "purpose": "This lesson introduces the core CS concepts of coding and event programming (using blocks)."
       },
       "seeding_key": {
         "lesson.key": "Hour of Code (October Pilot)",
@@ -241,6 +244,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_video_intro_a"
+        ],
         "progression": "Intro Video"
       },
       "bonus": false,
@@ -263,6 +269,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_drag_dancer_a"
+        ],
         "progression": "Code a Dancer and Moves"
       },
       "bonus": false,
@@ -285,6 +294,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_key_press_events_1_a"
+        ],
         "progression": "Key Press Events 1"
       },
       "bonus": false,
@@ -307,6 +319,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_drag_ai_cosmic_a"
+        ],
         "progression": "Generate with AI for Happy Song"
       },
       "bonus": false,
@@ -329,6 +344,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_drag_ai_sad_a"
+        ],
         "progression": "Generate with AI for Sad Song"
       },
       "bonus": false,
@@ -351,6 +369,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_Drag_ai_happy_debug_a"
+        ],
         "progression": "Generate with AI for a Song then edit code"
       },
       "bonus": false,
@@ -373,6 +394,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_key_press_events_2_a"
+        ],
         "progression": "On measure Events"
       },
       "bonus": false,
@@ -395,6 +419,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_free_play_a"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -523,16 +550,81 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "code",
+      "word": "Code",
+      "definition": "(v) to write code, or to write instructions for a computer.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event ",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Hour of Code (October Pilot)",
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hour of Code (October Pilot)",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hour of Code (October Pilot)",
+        "vocabulary.key": "program"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "7e8e05c2-bbe7-44c0-b4a8-39b25e5d9dbe",
+      "properties": {
+        "description": "Create dance animations with code"
+      },
+      "seeding_key": {
+        "lesson.key": "Hour of Code (October Pilot)",
+        "objective.key": "7e8e05c2-bbe7-44c0-b4a8-39b25e5d9dbe"
+      }
+    },
+    {
+      "key": "bb959d0c-fd7e-4dca-804b-83c8387c15f4",
+      "properties": {
+        "description": "Develop programs that respond to timed events"
+      },
+      "seeding_key": {
+        "lesson.key": "Hour of Code (October Pilot)",
+        "objective.key": "bb959d0c-fd7e-4dca-804b-83c8387c15f4"
+      }
+    }
   ],
   "lessons_standards": [
 

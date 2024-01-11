@@ -46,6 +46,7 @@ export default class SocialShare extends Component {
             <button
               type="button"
               style={{background: color.facebook_blue, ...styles.shareButton}}
+              onClick={e => e.preventDefault()}
             >
               <i className="fa fa-facebook" />
             </button>
@@ -61,16 +62,14 @@ export default class SocialShare extends Component {
             <button
               type="button"
               style={{background: color.twitter_blue, ...styles.shareButton}}
+              onClick={e => e.preventDefault()}
             >
               <i className="fa fa-twitter" />
             </button>
           </a>
         )}
         <a href={this.props.print} className="social-print-link">
-          <button
-            type="button"
-            style={{background: color.charcoal, ...styles.shareButton}}
-          >
+          <button type="button" style={styles.printButton}>
             <i className="fa fa-print" />
             {' ' + i18n.print()}
           </button>
@@ -84,5 +83,11 @@ const styles = {
   shareButton: {
     color: color.white,
     minWidth: 40,
+  },
+  printButton: {
+    backgroundColor: 'transparent',
+    borderColor: color.black,
+    borderWidth: '1px',
+    padding: '10px 20px',
   },
 };

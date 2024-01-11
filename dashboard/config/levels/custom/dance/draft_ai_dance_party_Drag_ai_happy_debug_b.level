@@ -19,7 +19,7 @@
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
-    "never_autoplay_video": "true",
+    "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "disable_procedure_autopopulate": "false",
@@ -54,9 +54,9 @@
     "name_suffix": "_b",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Click the AI generate block then click “Edit Code” to use the code that AI chose.\\n\\n\\n\",\"hint_id\":\"hint2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fbd08134314666c1b2770a5f2c05689b/draft_ai_dance_party_Drag_ai_happy_debug.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"Choose new effects from any of the dropdown menus in the new code. \",\"hint_id\":\"hint2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fe27ac67b4092503f7aafad71a070be9/draft_ai_dance_party_Drag_ai_happy_debug.mp3\"}]",
     "default_song": "butter_bts",
-    "long_instructions": "*AI Bot generates a stage using code. Now you can edit the code AI created!*\r\n\r\n- Click on the AI generate stage block, then click “Edit Code” to change the block into code that you can use to fine tune the stage and effects.\r\n",
+    "long_instructions": "*Now you can use the effects blocks AI created!*\r\n\r\n- Click on the `AI generate effects` block in setup.\r\n- Then click “Edit Code” button to change the block into code you can edit and change!\r\n",
     "short_instructions": "Drag out the <img style=\" width:25%\" src=\"https://images.code.org/623a12f1ea619c923b03f31faf77720d-image-1695236519873.01.28 PM.png\" /> block and connect it inside the <xml><block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Dancelab_whenSetup\" id=\"LXzbE_lO4Lwn.`wXpDe2\"></block></xml>\r\n block.",
-    "video_key": "hoc_dance_warmup_2019",
+    "video_key": "ai_dance_editblocks_draft",
     "encrypted": "false",
     "mini_rubric": "false",
     "validation_enabled": "false",
@@ -65,9 +65,6 @@
       "Dancelab"
     ],
     "validation_code": "// After 2 measures, check if AI block was converted to background and foreground effect blocks. If not, fail immediately.\r\nif (nativeAPI.getTime(\"measures\") > 2) {\r\n  if (nativeAPI.getUserBlockTypes().indexOf('Dancelab_setBackgroundEffectWithPaletteAI') === -1) {\r\n    console.log(nativeAPI.getUserBlockTypes());\r\n    console.log('Failed because you did not convert AI block to the generated blocks');\r\n    nativeAPI.fail(\"aiDanceFeedbackAiEditBlocks\");\r\n  }\r\n  var initialBackgroundEffect = 'sparkles';\r\n  var initialBackgroundPalette = 'cool';\r\n  var initialForegroundEffect = 'bubbles';\r\n  if (World.bg_effect === initialBackgroundEffect && World.fg_effect === initialForegroundEffect && nativeAPI.getCurrentPalette() === initialBackgroundPalette) {\r\n    console.log('Failed because you did not change the parameters of any of the generated blocks');\r\n    nativeAPI.fail(\"aiDanceFeedbackTinkerAiBlock\");\r\n  }\r\n}\r\n\r\nif (nativeAPI.getTime(\"measures\") > 5) {\r\n  nativeAPI.pass();\r\n}\r\n",
-    "encrypted_examples": [
-
-    ],
     "song_selection": [
       "notearslefttocry_arianagrande",
       "breakmysoul_beyonce",
@@ -85,10 +82,13 @@
       "highhopes_panicatthedisco",
       "cheapthrills_sia",
       "iliketomoveit_william"
+    ],
+    "encrypted_examples": [
+
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-10-20T22:27:47.587+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_Drag_ai_happy_debug\\\"\"],\"cloned_from\":\"draft_ai_dance_party_Drag_ai_happy_debug\"},{\"changed_at\":\"2023-10-20 23:33:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-21 01:22:56 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-23 01:06:41 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-23 01:07:55 +0000\",\"changed\":[\"start_blocks\",\"default_song\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-10-20T22:27:47.587+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_Drag_ai_happy_debug\\\"\"],\"cloned_from\":\"draft_ai_dance_party_Drag_ai_happy_debug\"},{\"changed_at\":\"2023-10-20 23:33:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-21 01:22:56 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-23 01:06:41 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-23 01:07:55 +0000\",\"changed\":[\"start_blocks\",\"default_song\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-23 13:51:26 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-23 14:07:20 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-23 15:32:16 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-23 18:58:03 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-23 22:56:36 +0000\",\"changed\":[\"start_blocks\",\"never_autoplay_video\",\"video_key\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-25 18:35:13 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

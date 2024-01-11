@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-20 17:06:58 UTC",
+    "serialized_at": "2023-12-13 18:52:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -152,8 +152,8 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "**Purpose:**\nThis transition prepares participants for a set of asynchronous activities, providing them with information about the assignment, their role, and the support available to them.\n\n**Objectives:**\n\n* Participants are prepared to complete asynchronous activities on their own.\n\n**Suggested time:** 55 minutes",
-        "student_overview": "**You will:**\n\n* Be prepared to complete asynchronous activities on your own.\n"
+        "overview": "**Purpose:**\nIn this asynchronous module, you will continue exploring your identity and bias. You will also spend time working through Unit 3, Lesson 7 to prepare for tomorrow's TLOs.\n\n**Objectives:**\n\n* Participants apply their knowledge of identity and bias.\n* Participants learn about the debugging process.\n* Participants use the tools within App Lab to support debugging.\n\n**Suggested time:** 55 minutes",
+        "student_overview": "**You will:**\n\n* Applying your knowledge of identity and bias.\n* Learn about the debugging process.\n* Use the tools within App Lab to support debugging.\n"
       },
       "seeding_key": {
         "lesson.key": "Asynchronous Part 1",
@@ -223,8 +223,8 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "**Purpose:**\nThis transition prepares participants for a set of asynchronous activities, providing them with information about the assignment, their role, and the support available to them.\n\n**Objectives:**\n\n* Participants are prepared to complete asynchronous activities on their own.\n\n**Suggested time:** 55 minutes",
-        "student_overview": "**You will:**\n\n* Be prepared to complete asynchronous activities on your own.\n"
+        "overview": "**Purpose:**\nParticipants will think about differentiating for computer science while considering what they've seen in Unit 3 so far.\n\n**Objectives:**\n\n* Participants will identify actions they might take as a teacher for CS Principles to influence, reduce, or eliminate barriers to recruiting students.\n* Participants will consider differentiation strategies.\n* Participants will wrap-up Unit 3.\n\n**Suggested time:** 55 minutes",
+        "student_overview": "**You will:**\n\n* Identify actions you might take as a teacher for CS Principles to influence, reduce, or eliminate barriers to recruiting students.\n* Consider differentiation strategies.\n* Wrap-up Unit 3.\n\n"
       },
       "seeding_key": {
         "lesson.key": "Asynchronous Part 2",
@@ -2101,6 +2101,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_3_video"
+        ],
         "progression": "Previously On...U3L7"
       },
       "bonus": false,
@@ -2473,6 +2476,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_6_video"
+        ],
         "progression": "Unit 3 Connections And Conclusions"
       },
       "bonus": false,
