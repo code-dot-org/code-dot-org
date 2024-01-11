@@ -6,12 +6,12 @@
 = form_tag "set_key_value", :method => :post, :remote => false do
   = text_field_tag "key", "", placeholder: "key"
   = text_field_tag "value", "", placeholder: "\"value\""
-  = submit_tag "Set"
+  = submit_tag "set_key_value"
 
 %h3 get_key_value
 = form_tag "get_key_value", :method => :get, :remote => false do
   = text_field_tag "key", "", placeholder: "key"
-  = submit_tag "Get"
+  = submit_tag "get_key_value"
 
 %table
   %tr
@@ -29,7 +29,12 @@
 = form_tag "delete_record", :method => :delete, :remote => false do
   = text_field_tag "table_name", "", placeholder: "table_name"
   = text_field_tag "record_id", "", placeholder: "record_id"
-  = submit_tag "Delete"
+  = submit_tag "delete_record"
+
+%h3 read_records
+= form_tag "read_records", :method => :get, :remote => false do
+  = text_field_tag "table_name", "", placeholder: "table_name"
+  = submit_tag "read_records"
 
 %table
   %tr
