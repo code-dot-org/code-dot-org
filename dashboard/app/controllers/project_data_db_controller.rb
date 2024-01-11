@@ -48,5 +48,6 @@ class ProjectDataDbController < ApplicationController
   end
 
   def delete_record
+    Record.where(channel_id: params[:channel_id], table_name: params[:table_name], record_id: params[:record_id]).delete_all
   end
 end

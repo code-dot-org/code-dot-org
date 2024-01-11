@@ -238,6 +238,7 @@ Dashboard::Application.routes.draw do
             get "/#{key}/:channel_id/data_db", to: 'project_data_db#index'
             post "/#{key}/:channel_id/data_db/set_key_value", to: 'project_data_db#set_key_value'
             get "/#{key}/:channel_id/data_db/get_key_value", to: 'project_data_db#get_key_value'
+            delete "/#{key}/:channel_id/data_db/delete_record", to: 'project_data_db#delete_record'
             # post "/#{key}/:channel_id/data_db/:action", controller: 'project_data_db'
           end
 
