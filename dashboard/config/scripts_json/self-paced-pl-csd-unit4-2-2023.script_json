@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-05 22:28:01 UTC",
+    "serialized_at": "2024-01-10 19:07:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -207,8 +207,19 @@
       }
     },
     {
-      "key": "5d131407-c7c6-4850-8fea-7b8a3e12220b",
+      "key": "0b9b9304-828d-49cf-aabe-7c89f23c5277",
       "position": 2,
+      "properties": {
+        "progression_name": "What is a Paper Prototype?"
+      },
+      "seeding_key": {
+        "activity_section.key": "0b9b9304-828d-49cf-aabe-7c89f23c5277",
+        "lesson_activity.key": "d8265b51-015a-4f59-ad54-30df855cb88f"
+      }
+    },
+    {
+      "key": "5d131407-c7c6-4850-8fea-7b8a3e12220b",
+      "position": 3,
       "properties": {
         "progression_name": "Use a Paper Prototype to Test an App"
       },
@@ -219,7 +230,7 @@
     },
     {
       "key": "79214d97-92ca-4ec2-889f-7bb65ba7fc30",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Explore opportunities to create paper prototypes"
       },
@@ -230,7 +241,7 @@
     },
     {
       "key": "cca115e8-5b70-4131-a0a7-d5aa8a69b91d",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Preparing to make a digital prototype"
       },
@@ -538,10 +549,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-pilot-S22-CI-mod4-PrototypeExamples_self-paced-4"
-        ],
-        "progression": "Use a Paper Prototype to Test an App"
+        "progression": "What is a Paper Prototype?"
       },
       "bonus": false,
       "seeding_key": {
@@ -551,7 +559,7 @@
         "lesson.key": "Use a paper prototype",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit4-2-2023",
-        "activity_section.key": "5d131407-c7c6-4850-8fea-7b8a3e12220b"
+        "activity_section.key": "0b9b9304-828d-49cf-aabe-7c89f23c5277"
       },
       "level_keys": [
         "VPL-CSD-pilot-S22-CI-mod4-PrototypeExamples_self-paced-4"
@@ -563,7 +571,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Use a Paper Prototype to Test an App"
+        "progression": "What is a Paper Prototype?"
       },
       "bonus": false,
       "seeding_key": {
@@ -573,7 +581,7 @@
         "lesson.key": "Use a paper prototype",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit4-2-2023",
-        "activity_section.key": "5d131407-c7c6-4850-8fea-7b8a3e12220b"
+        "activity_section.key": "0b9b9304-828d-49cf-aabe-7c89f23c5277"
       },
       "level_keys": [
         "VPL-CSD-PILOT-CSDPL_mod4-prototype-C4U_self-paced-unit4"
@@ -582,7 +590,7 @@
     {
       "chapter": 12,
       "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -607,7 +615,7 @@
     {
       "chapter": 13,
       "position": 5,
-      "activity_section_position": 4,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -632,7 +640,7 @@
     {
       "chapter": 14,
       "position": 6,
-      "activity_section_position": 5,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -657,7 +665,7 @@
     {
       "chapter": 15,
       "position": 7,
-      "activity_section_position": 6,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1398,7 +1406,7 @@
         "lesson.key": "Use a paper prototype",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit4-2-2023",
-        "activity_section.key": "5d131407-c7c6-4850-8fea-7b8a3e12220b"
+        "activity_section.key": "0b9b9304-828d-49cf-aabe-7c89f23c5277"
       }
     },
     {
@@ -1410,7 +1418,7 @@
         "lesson.key": "Use a paper prototype",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit4-2-2023",
-        "activity_section.key": "5d131407-c7c6-4850-8fea-7b8a3e12220b"
+        "activity_section.key": "0b9b9304-828d-49cf-aabe-7c89f23c5277"
       }
     },
     {

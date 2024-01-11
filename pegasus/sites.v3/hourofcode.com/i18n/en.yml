@@ -86,6 +86,9 @@
   social_hoc2019_dance: 'Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, and 34 more!'
   social_hoc_anybody: 'Hour of Code: Anybody can Learn'
 
+  hoc_interest_form_header: "Get notified when Hour of Code registration opens!"
+  hoc_interest_form_desc: "Be the first to know about this year's Hour of Code, including new activities and when registrations for Hour of Code events begin."
+
   oceans_landing_title: 'AI for Oceans'
   oceans_landing_description: 'Learn about machine learning and ethical use of AI.'
   cs_for_good_hashtag: '#CSforGood'
@@ -1331,7 +1334,8 @@
   csd_page_curriculum_glance_professional_learning: "Facilitator-led Workshops, Self-paced Modules"
   csd_page_curriculum_glance_professional_languages: "English"
   csd_page_curriculum_glance_professional_accessibility_features: "Text-to-speech, Closed captioning, Immersive reader"
-  csd_page_pick_a_course_heading: "Picking the right CS Discoveries course for your classroom"
+  csd_page_pick_a_course_heading: "Picking the right CS Discoveries&reg; course for your classroom"
+  csd_page_pick_a_course_heading_non_en: "Picking the right %{cs_discoveries} (CS Discoveries) course for your classroom"
   csd_page_pick_a_course_desc: "With the diverse set of options offered for CS Discoveries, there is a course for all different needs."
   csd_page_pick_a_course_heading_02: "How do you want to pick the content?"
   csd_page_courses_year_desc: "Through 7 units students explore a wide variety of topics."

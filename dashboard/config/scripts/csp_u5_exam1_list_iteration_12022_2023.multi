@@ -12,7 +12,7 @@ right ‘![](https://images.code.org/1feccfb76c4c7d66de6bc212b9bc7b94-image-1579
 
 
 markdown <<MARKDOWN
-`ageList` and `gradeList` contain information about students in a classroom. A programmer has already written the following code with that information.
+`ages` and `names` contain information about students in a classroom. A programmer has already written the following code with that information.
 
 ```
 var ages = [16,17,18, 17];
