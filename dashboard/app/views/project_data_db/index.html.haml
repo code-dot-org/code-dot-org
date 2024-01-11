@@ -1,10 +1,16 @@
 %strong{:class => "code", :id => "message"} Hello,  #{@project.project_type}
 %h2 KeyValuePair
 
-= form_tag "data_db/set_key_value", :method => :post, :remote => false do
-  = text_field_tag "key", ""
-  = text_field_tag "value", ""
-  = submit_tag "Create"
+%h3 set_key_value
+= form_tag "set_key_value", :method => :post, :remote => false do
+  = text_field_tag "key", "", placeholder: "key"
+  = text_field_tag "value", "", placeholder: "\"value\""
+  = submit_tag "Set"
+
+%h3 get_key_value
+= form_tag "get_key_value", :method => :get, :remote => false do
+  = text_field_tag "key", "", placeholder: "key"
+  = submit_tag "Get"
 
 %table
   %tr
