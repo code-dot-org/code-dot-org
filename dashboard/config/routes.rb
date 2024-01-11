@@ -241,6 +241,7 @@ Dashboard::Application.routes.draw do
             delete "/#{key}/:channel_id/data_db/delete_record", to: 'project_data_db#delete_record'
             get "/#{key}/:channel_id/data_db/read_records", to: 'project_data_db#read_records'
             put "/#{key}/:channel_id/data_db/update_record", to: 'project_data_db#update_record'
+            post "/#{key}/:channel_id/data_db/create_record", to: 'project_data_db#create_record'
             # post "/#{key}/:channel_id/data_db/:action", controller: 'project_data_db'
           end
 
