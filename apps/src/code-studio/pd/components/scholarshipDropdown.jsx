@@ -4,7 +4,7 @@ import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-
 import DCDO from '@cdo/apps/dcdo';
 import Select from 'react-select';
 
-// update this to lock scholarships so that scholarship status can't be updated via the UI.
+// if locked, the scholarship status can't be updated unless the user is a workshop admin.
 const locked = DCDO.get('scholarship-dropdown-locked', true);
 
 const ScholarshipDropdown = ({
