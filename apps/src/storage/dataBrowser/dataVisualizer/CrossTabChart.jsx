@@ -52,13 +52,28 @@ export default function CrossTabChart(props) {
   );
 
   if (columns.length > MAX_CROSSTAB_COLUMNS) {
-    return <div>Cannot render chart - too many columns</div>;
+    return (
+      <div>
+        We're unable to render your chart because the Y value contains too much
+        data.
+      </div>
+    );
   }
   if (chartData.length > MAX_CROSSTAB_ROWS) {
-    return <div>Cannot render chart - too many rows</div>;
+    return (
+      <div>
+        We're unable to render your chart because the X value contains too much
+        data.
+      </div>
+    );
   }
   if (columns.length * chartData.length > MAX_CROSSTAB_CELLS) {
-    return <div>Cannot render chart - too many cells</div>;
+    return (
+      <div>
+        We're unable to render your chart because the X and Y values contains
+        too much data.
+      </div>
+    );
   }
   return (
     <div id={CROSS_TAB_CHART_AREA} style={wrapperStyle}>
