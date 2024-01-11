@@ -25,6 +25,12 @@
 
 %h2 Record
 
+%h3 create_record
+= form_tag "create_record", :method => :post, :remote => false do
+  = text_field_tag "table_name", "", placeholder: "table_name"
+  = text_field_tag "json", "", placeholder: "json"
+  = submit_tag "create_record"
+
 %h3 read_records
 = form_tag "read_records", :method => :get, :remote => false do
   = text_field_tag "table_name", "", placeholder: "table_name"

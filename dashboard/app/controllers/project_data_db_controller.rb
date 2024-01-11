@@ -43,6 +43,50 @@ class ProjectDataDbController < ApplicationController
   end
 
   def create_record
+    # FIXME: the current approach does a number of round-trips,
+    # but our original was a single SQL block with no round-trips
+    # So even though our current code sort-of looks similar, it may
+    # be significantly slower, requiring multiple trips to the DB.
+    # Can we rewrite it to be a single-trip, as it was designed for?
+
+    # Here's the SQL block we have to replicate:
+    #
+    # BEGIN;
+    #   SELECT MIN(record_id) FROM unfirebase.records WHERE channel_id='shared' AND table_name='words' LIMIT 1 FOR UPDATE;
+    #   SELECT @id := IFNULL(MAX(record_id),0)+1 FROM unfirebase.records WHERE channel_id='shared' AND table_name='words';
+
+    #   INSERT INTO unfirebase.records VALUES ('shared', 'words', @id, '{}');
+    # COMMIT;
+
+    record = nil
+
+    # BEGIN;
+    Record.transaction do
+      channel_id = Record.connection.quote(params[:channel_id])
+      table_name = Record.connection.quote(params[:table_name])
+      json = JSON.parse params[:json]
+
+      #   SELECT MIN(record_id) FROM unfirebase.records WHERE channel_id='shared' AND table_name='words' LIMIT 1 FOR UPDATE;
+      #
+      # FIXME: According to: https://api.rubyonrails.org/classes/ActiveRecord/Locking/Pessimistic.html
+      # we may be able to use Rails to generate the FOR UPDATE clause using a .lock!() method call
+      locking_query = "SELECT MIN(record_id) FROM #{Record.table_name} WHERE channel_id=#{channel_id} AND table_name=#{table_name} LIMIT 1 FOR UPDATE"
+      puts "locking_query: #{locking_query}"
+      Record.connection.execute(locking_query)
+
+      #   SELECT @id := IFNULL(MAX(record_id),0)+1 FROM unfirebase.records WHERE channel_id='shared' AND table_name='words';
+      #
+      # FIXME: can we do this without a manual SQL connection.execute() call?
+      record_id = Record.connection.select_value("SELECT IFNULL(MAX(record_id),0)+1 FROM #{Record.table_name} WHERE channel_id=#{channel_id} AND table_name=#{table_name}")
+
+      puts "record_id: #{record_id}"
+
+      #   INSERT INTO unfirebase.records VALUES ('shared', 'words', @id, '{}');
+      record = Record.create(channel_id: params[:channel_id], table_name: params[:table_name], record_id: record_id, json: json)
+    end
+    # COMMIT;
+
+    render json: record
   end
 
   def read_records
