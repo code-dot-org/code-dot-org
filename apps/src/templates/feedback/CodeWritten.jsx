@@ -19,7 +19,9 @@ class CodeWritten extends React.Component {
         className="lines-of-code-message"
         style={useChallengeStyles ? styles.challengeLineCounts : null}
       >
-        {msg.numLinesOfCodeWritten({numLines: numLinesWritten})}
+        {numLinesWritten > 0
+          ? msg.numLinesOfCodeWritten({numLines: numLinesWritten})
+          : null}
       </p>
     );
 
@@ -29,7 +31,6 @@ class CodeWritten extends React.Component {
         style={useChallengeStyles ? styles.details : null}
       >
         <summary
-          role="button"
           style={{
             ...styles.summary,
             ...(useChallengeStyles ? styles.challengeSummary : {}),

@@ -1,0 +1,18 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2023-12-14T21:58:11.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "video_key": "csd_app_lab_design_mode",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_self-paced-4"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2023-12-14T21:58:11.408+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Design Mode Video_2023\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Design Mode Video_2023\"}]"
+}]]></config>
+</StandaloneVideo>

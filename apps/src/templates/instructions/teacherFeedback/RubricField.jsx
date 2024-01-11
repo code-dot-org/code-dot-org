@@ -67,9 +67,8 @@ class RubricField extends Component {
             id={`rubric-details-${this.props.rubricLevel}`}
             style={styles.detailsArea}
             open={this.state.detailsOpen}
-            onClick={this.updateToggle}
           >
-            <summary style={styles.rubricHeader}>
+            <summary style={styles.rubricHeader} onClick={this.updateToggle}>
               {rubricPerformanceHeaders[this.props.rubricLevel]}
             </summary>
             <p style={styles.rubricDetails}>{this.props.rubricValue}</p>

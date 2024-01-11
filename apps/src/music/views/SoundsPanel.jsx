@@ -34,7 +34,9 @@ const FolderPanelRow = ({
   return (
     <div className={classNames('sounds-panel-folder-row', styles.folderRow)}>
       <div className={styles.folderRowLeft}>
-        {imageSrc && <img src={imageSrc} className={styles.folderImage} />}
+        {imageSrc && (
+          <img src={imageSrc} className={styles.folderImage} alt="" />
+        )}
       </div>
       <div className={styles.folderRowMiddle}>
         <div className={styles.folderRowMiddleName}>{folder.name}</div>
@@ -94,7 +96,7 @@ const SoundsPanelRow = ({
       onClick={() => onSelect(folder.path + '/' + sound.src)}
     >
       <div className={styles.soundRowLeft}>
-        <img src={typeIconPath} className={styles.typeIcon} />
+        <img src={typeIconPath} className={styles.typeIcon} alt="" />
       </div>
       <div className={styles.soundRowMiddle}>{sound.name}</div>
       <div className={styles.soundRowRight}>

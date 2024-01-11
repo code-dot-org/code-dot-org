@@ -40,23 +40,14 @@ video_player: false
 
     = view :forum_banner
 
-    %h2.tablet-feature See what’s happening in your state
-    %h3.centered
-      Click the map below for state-specific data on the computer science landscape
-    -state ||= nil
-    = view :interactive_map, use_url: false, advocacy_variation: true
+    -# Hiding the map since the data is 3 years old
+    -# %h2.tablet-feature See what’s happening in your state
+    -# %h3.centered
+    -#   Click the map below for state-specific data on the computer science landscape
+    -# -state ||= nil
+    -# = view :interactive_map, use_url: false, advocacy_variation: true
 
-    .clear{style: "clear:both"}
-
-    .teach-ai-container
-      %img{src: "/images/teach-ai-logo.svg", alt: ""}
-      .teach-ai-text{style: "text-align: center"}
-        %p.heading-sm{style: "color: white;"}
-          =hoc_s(:teach_ai_title)
-        %p{style: "color: white; margin-bottom: 0"}
-          =hoc_s(:teach_ai_description)
-      %a.link-button.has-external-link{style: "flex: 0 0 auto;", href: "https://teachai.org/toolkit", target: "_blank", rel: "noopener noreferrer"}
-        =hoc_s(:teach_ai_button_label)
+    -# .clear{style: "clear:both"}
 
     %h2
       Drive the change in your state
@@ -71,6 +62,16 @@ video_player: false
             = view :homepage_quarterslot_links, entry: block, desktop_column_width: 50, layout_class: 'quarterslot-links-large'
 
     .clear
+
+    .teach-ai-container{style: "margin-top: 3rem"}
+      %img{src: "/images/teach-ai-logo.svg", alt: ""}
+      .teach-ai-text{style: "text-align: center"}
+        %p.heading-sm{style: "color: white;"}
+          =hoc_s(:teach_ai_title)
+        %p{style: "color: white; margin-bottom: 0"}
+          =hoc_s(:teach_ai_description)
+      %a.link-button.has-external-link{style: "flex: 0 0 auto;", href: "https://teachai.org/toolkit", target: "_blank", rel: "noopener noreferrer"}
+        =hoc_s(:teach_ai_button_label)
 
     .coalition
       %h2 Our Coalition

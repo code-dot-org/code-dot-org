@@ -24,6 +24,7 @@
   "dataCardLastUpdated": "Última atualização",
   "dataCardPotentialMisuses": "Potenciais usos indevidos ",
   "dataCardPotentialUses": "Usos potenciais",
+  "dataCardRemovedRows": "{rowCount} {rowCount, plural, one {row} other {rows}} removido porque {rowCount, plural, one {it} other {they}} continha células vazias.",
   "dataCardRowCount": "Linhas de dados",
   "dataCardSource": "Origem",
   "dataCardWarningLargeDataset": "Aviso: conjuntos de dados com mais de {rowCount} linhas desestimularão a experiência do usuário.",
@@ -1493,7 +1494,8 @@
           "description": "Faixas de peso para o paciente.",
           "id": "peso"
         }
-      }
+      },
+      "name": "Prioridade Médica"
     },
     "movies": {
       "card": {
@@ -3331,9 +3333,11 @@
   "modelCardDatasetDetails": "Sobre os dados",
   "modelCardDatasetDetailsSize": "Tamanho do conjunto de dados",
   "modelCardDatasetDetailsSizeCount": "{rowCount} linhas",
+  "modelCardFeatures": "Recursos",
   "modelCardFeaturesAndLabel": "Características e Etiqueta",
   "modelCardIntendedUse": "Uso pretendido",
   "modelCardLabel": "Rótulo",
+  "modelCardLimitations": "Limitações e Avisos",
   "modelCardPossibleValues": "Valores Possíveis",
   "modelCardPossibleValuesMaximum": "max",
   "modelCardPossibleValuesMinimum": "min",
@@ -3345,6 +3349,7 @@
   "potentialMisusesDescriptionEnough": "Você coletou dados suficientes para ter certeza da precisão do modelo?",
   "potentialMisusesDescriptionRepresent": "Os dados representam todos os usuários e cenários possíveis?",
   "potentialMisusesDescriptionSituations": "Existem situações em que esse modelo definitivamente não deveria ser usado?",
+  "potentialMisusesLabel": "Limitações e Avisos",
   "potentialMisusesPlaceholder": "Escreva uma breve descrição.",
   "potentialUsesDescription": "Descreva o problema que você acha que esse modelo poderia ajudar a resolver ou um aplicativo em potencial que alguém poderia criar com esse modelo.",
   "potentialUsesLabel": "Uso pretendido",
@@ -3359,6 +3364,7 @@
   "resultsHeader": "Resultado",
   "resultsPreviousResults": "Resultados anteriores",
   "resultsTableActualValueHeader": "Real",
+  "resultsTableFeatureHeader": "Recursos",
   "resultsTablePredictedValueHeader": "Predição de IA",
   "resultsTablePredictionRange": "As predições são +/- {percentage}% do intervalo",
   "saveModelColumnCountLabel": "Descrições das colunas",
@@ -3375,6 +3381,7 @@
   "selectDatasetUploadFileButton": "Carregar {fileType}",
   "selectLabelButton": "Selecione o rótulo",
   "trainModelButtonText": "Trem",
+  "trainModelHeading": "Treinamento",
   "tryAgain": "Tente novamente",
   "uniqueOptionsWarningMessage": "Colunas categóricas com mais do que {valueCount} valores únicos não podem ser selecionadas como rótulo ou recurso.",
   "uniqueOptionsWarningNotice": "Nota"

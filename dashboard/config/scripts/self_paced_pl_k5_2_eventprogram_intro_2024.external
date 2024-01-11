@@ -8,23 +8,22 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/4a84d3fe7921bb66fbf838d2a02cbe00-image-1702409135129.png" alt="Image Sprite Lab characters" width="250px" style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
 
-#### We will begin our journey in Sprite Lab. **Sprite Lab** is a block-based programming environment that allows students to create simple animations and games with objects and characters.
+##### We will begin our journey in Sprite Lab. **Sprite Lab** is a block-based programming environment that allows students to create simple animations and games with objects and characters.
 
-<br>
 
-#### Sprite Lab uses  a type of coding called **event-based programming**. Instead of just following a strict sequence of instructions, the flow of an **event-based program** is determined by events such as user actions, like clicking a button. 
 
-<br>
+##### Sprite Lab uses  a type of coding called **event-based programming**. Instead of just following a strict sequence of instructions, the flow of an **event-based program** is determined by events such as user actions, like clicking a button. 
 
-#### *This approach is used in interactive applications such as video games.* 
 
-<br>
 
-#### **In this module, you will learn how to build an interactive program while learning basic computer science concepts.**
+##### *This approach is commonly found in interactive applications like video games.* 
 
-<br>
 
-#### But first, let’s introduce you to Sprite Lab. 
+##### **In this module, you will learn how to build an interactive program while learning basic computer science concepts.**
+
+
+
+## But first, let’s introduce you to Sprite Lab. 
 
 
 MARKDOWN

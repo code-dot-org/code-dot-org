@@ -12,6 +12,7 @@ const UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 const {WebpackManifestPlugin} = require('webpack-manifest-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const {PyodidePlugin} = require('@pyodide/webpack-plugin');
 
 const envConstants = require('./envConstants');
 
@@ -612,6 +613,7 @@ function createWebpackConfig({
       ...(watch && watchNotify
         ? [new WebpackNotifierPlugin({alwaysNotify: true})]
         : []),
+      new PyodidePlugin(),
     ],
   };
 

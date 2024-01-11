@@ -900,6 +900,9 @@ id:
   cs_ambassador_application_date: Aplikasi dibuka hingga 8 November 2023
   cs_ambassador_application_subhead: Bekerja dengan guru untuk mengirimkan aplikasi
     Anda hari ini
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Pertanyaan? Silakan hubungi [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: Apa yang dilakukan Duta CS?

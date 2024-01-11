@@ -47,4 +47,70 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I click selector "strong:contains(Code Quality)" once I see it
   And I wait until element "textarea:contains(Nice work Lillian!)" is visible
 
+  @eyes
+  @skip
+  Scenario: Teacher views Rubric and Settings tabs, without carousel experiment
+    Given I create a teacher-associated student named "Aiden"
+    And I sign in as "Teacher_Aiden" and go home
+    And I wait until element "#homepage-container" is visible
+    And element "#sign_in_or_user" contains text "Teacher_Aiden"
+    And I add the current user to the "ai-rubrics" single user experiment
+    And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
+    And I wait for the page to fully load
+    And element ".teacher-panel td:eq(1)" contains text "Aiden"
+    And I click selector ".teacher-panel td:eq(1)" to load a new page
+    And I wait for the page to fully load
 
+    When I open my eyes to test "teaching assistant rubric without carousel experiment"
+    Then I see no difference for "floating action button icon"
+
+    When I click selector "#ui-floatingActionButton"
+    And I wait until element ".uitest-rubric-header-tab:contains('Settings')" is visible
+    And I wait until element "summary:contains(Code Quality)" is visible
+    And element "details:contains(Code Quality)" is not open
+    Then I see no difference for "rubric tab with learning goals collapsed"
+
+    When I click selector "summary:contains(Code Quality)"
+    And I wait until element "details:contains(Code Quality)" is open
+    Then I see no difference for "rubric tab with learning goal expanded"
+
+    When I click selector ".uitest-rubric-header-tab:contains('Settings')"
+    And I wait until element ".uitest-rubric-settings" is visible
+    And element ".uitest-run-ai-assessment" is disabled
+    And element ".uitest-eval-status-text" is visible
+    Then I see no difference for "rubric settings tab"
+
+    Then I close my eyes
+
+  @eyes
+  Scenario: Teacher views Rubric and Settings tabs
+    Given I create a teacher-associated student named "Aiden"
+    And I sign in as "Teacher_Aiden" and go home
+    And I wait until element "#homepage-container" is visible
+    And element "#sign_in_or_user" contains text "Teacher_Aiden"
+    And I add the current user to the "ai-rubrics" single user experiment
+    And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2?enableExperiments=ai-rubrics-redesign"
+    And I wait for the page to fully load
+    And element ".teacher-panel td:eq(1)" contains text "Aiden"
+    And I click selector ".teacher-panel td:eq(1)" to load a new page
+    And I wait for the page to fully load
+
+    When I open my eyes to test "teaching assistant rubric"
+    Then I see no difference for "floating action button icon"
+
+    When I click selector "#ui-floatingActionButton"
+    And I wait until element ".uitest-rubric-header-tab:contains('Settings')" is visible
+    And I wait until element "strong:contains(Code Quality)" is visible
+    Then I see no difference for "rubric tab, Code Quality learning goal"
+
+    When I click selector "#uitest-next-goal"
+    And I wait until element "strong:contains(Sprites)" is visible
+    Then I see no difference for "rubric tab, Sprites learning goal"
+
+    When I click selector ".uitest-rubric-header-tab:contains('Settings')"
+    And I wait until element ".uitest-rubric-settings" is visible
+    And element ".uitest-run-ai-assessment" is disabled
+    And element ".uitest-eval-status-text" is visible
+    Then I see no difference for "rubric settings tab"
+
+    Then I close my eyes

@@ -2,6 +2,7 @@ require 'policies/lti'
 require 'queries/lti'
 require 'user'
 require 'authentication_option'
+require 'sections/section'
 
 class Services::Lti
   def self.initialize_lti_user(id_token)
@@ -64,6 +65,7 @@ class Services::Lti
   def self.parse_nrps_response(nrps_response)
     sections = {}
     members = nrps_response[:members]
+    context_title = nrps_response.dig(:context, :title)
     members.each do |member|
       next if member[:status] == 'Inactive' || member[:roles].exclude?(Policies::Lti::CONTEXT_LEARNER_ROLE)
       # TODO: handle multiple messages. Shouldn't be needed until we support Deep Linking.
@@ -81,7 +83,7 @@ class Services::Lti
           sections[section_id][:members] << member
         else
           sections[section_id] = {
-            name: member_section_names[index],
+            name: "#{context_title}: #{member_section_names[index]}",
             members: [member],
           }
         end
@@ -91,7 +93,9 @@ class Services::Lti
   end
 
   # Takes an LTI section and NRPS members array and syncs a single section.
+  # @return {boolean} whether any changes were made
   def self.sync_section_roster(lti_integration, lti_section, nrps_members)
+    had_changes = false
     client_id = lti_integration.client_id
     issuer = lti_integration.issuer
     current_students = nrps_members.map do |nrps_member|
@@ -105,40 +109,58 @@ class Services::Lti
         issuer: issuer,
         nrps_member: nrps_member
       )
+      had_changes ||= (student.new_record? || student.changed?)
       student.save!
-      lti_section.section.add_student(student)
+      add_student_result = lti_section.section.add_student(student)
+      had_changes ||= add_student_result == Section::ADD_STUDENT_SUCCESS
       student
     end
 
     # Prune students who have been removed from the section in the LMS
     lti_section.followers.each do |follower|
-      current_students.find_index {|s| s.id == follower.student_user_id} || follower.destroy
+      unless current_students.find_index {|s| s.id == follower.student_user_id}
+        follower.destroy
+        had_changes = true
+      end
     end
+    had_changes
   end
 
   # Syncs a course and all its sections from an NRPS response.
   def self.sync_course_roster(lti_integration:, lti_course:, nrps_sections:, section_owner_id:)
+    had_changes = false
     lti_sections = LtiSection.where(lti_course_id: lti_course.id)
 
     # Prune sections that have been deleted in the LMS
     lti_sections.each do |lti_section|
-      lti_section.destroy unless nrps_sections.key?(lti_section.lms_section_id)
+      unless nrps_sections.key?(lti_section.lms_section_id)
+        lti_section.destroy unless nrps_sections.key?(lti_section.lms_section_id)
+        had_changes = true
+      end
     end
 
     nrps_sections.keys.each do |lms_section_id|
+      section_name = nrps_sections[lms_section_id][:name]
       # Check if lti_sections already contains a section with this lms_section_id
       lti_section = lti_sections.find_by(lms_section_id: lms_section_id)
       if lti_section.nil?
         section = Section.new(
           {
             user_id: section_owner_id,
-            name: nrps_sections[lms_section_id][:name],
+            name: section_name,
             login_type: Section::LOGIN_TYPE_LTI_V1,
           }
         )
         lti_section = LtiSection.create(lti_course_id: lti_course.id, lms_section_id: lms_section_id, section: section)
+        had_changes = true
       end
-      sync_section_roster(lti_integration, lti_section, nrps_sections[lms_section_id][:members])
+      unless lti_section.section.name == section_name
+        lti_section.section.update(name: section_name)
+        had_changes = true
+      end
+      sync_section_roster_result = sync_section_roster(lti_integration, lti_section, nrps_sections[lms_section_id][:members])
+      had_changes ||= sync_section_roster_result
     end
+    had_changes
   end
 end

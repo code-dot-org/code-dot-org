@@ -79,12 +79,19 @@ $hover-opacity: 0.5;
   flex: 1;
   margin-right: 10px;
   border-width: 3px;
+  cursor: pointer;
 
   &.greenTrigger {
-    cursor: pointer;
     border-color: #00bc3e;
     background-color: #00bc3e;
     color: white;
+  }
+
+  &.disabled {
+    cursor: default;
+    opacity: 75%;
+    background-color: $neutral_dark40;
+    border-color: $neutral_dark40;
   }
 
   &.purple {

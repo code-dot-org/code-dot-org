@@ -25,7 +25,11 @@ nav: resources_nav
 
 %h1=hoc_s(:hoc_events_heading)
 
-= view :events_signup, hoc_mode: hoc_mode
+- if hoc_mode == "false"
+  .clear-styles
+    = view :off_season_interest_form
+- else
+  = view :events_signup, hoc_mode: hoc_mode
 
 %hr{style: "margin-top: 4rem"}
 

@@ -73,6 +73,7 @@ export default class AnimationPickerListItem extends React.Component {
           )}
           type="button"
           aria-label={label}
+          data-category={category}
         >
           <div>
             {animationProps && (
@@ -98,11 +99,11 @@ export default class AnimationPickerListItem extends React.Component {
                 {label}
               </span>
             )}
-            {category && iconImageSrc && (
+            {iconImageSrc && (
               <img
-                data-category={category}
                 className={style.categoryImage}
                 src={iconImageSrc}
+                alt={''}
               />
             )}
           </div>

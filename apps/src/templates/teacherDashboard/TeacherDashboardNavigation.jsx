@@ -123,7 +123,7 @@ export default class TeacherDashboardNavigation extends Component {
     const links = this.props.links || teacherDashboardLinks;
     const containerStyles = this.state.shouldScroll
       ? {...styles.container, ...styles.scrollableContainer}
-      : styles.container;
+      : {...styles.container, ...styles.centerContainer};
     const chevronStyles = userAgentParser.isSafari()
       ? {...styles.chevron, ...styles.safariSticky}
       : styles.chevron;
@@ -176,6 +176,9 @@ const styles = {
     marginBottom: 10,
     overflow: 'hidden',
     position: 'relative',
+  },
+  centerContainer: {
+    justifyContent: 'center',
   },
   scrollableContainer: {
     overflowX: 'scroll',
