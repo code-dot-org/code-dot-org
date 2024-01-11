@@ -8,6 +8,12 @@ class OpenaiChatController < ApplicationController
       return render(status: :bad_request, json: {})
     end
 
+    # Check for PII / Profanity
+    locale = params[:locale] || "en"
+    messages = params[:messages].collect {|msg| msg[:content]}.join(' ')
+    filter_result = ShareFiltering.find_failure(messages, locale) if messages
+    return render(status: :bad_request, json: {type: filter_result.type, content: filter_result.content}) if filter_result
+
     if has_level_id_param?
       level_id = params[:levelId]
       test_file_contents = get_validated_level_test_file_contents(level_id)
