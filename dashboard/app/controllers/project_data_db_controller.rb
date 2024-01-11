@@ -1,4 +1,8 @@
 class ProjectDataDbController < ApplicationController
+  # FIXME: implement validate_channel_id, see below
+  before_action :validate_channel_id
+  before_action :authenticate_user!
+
   # GET /datasets
   def index
     @project = Project.find_by_channel_id(params[:channel_id])
@@ -65,5 +69,11 @@ class ProjectDataDbController < ApplicationController
 
   def delete_record
     Record.where(channel_id: params[:channel_id], table_name: params[:table_name], record_id: params[:record_id]).delete_all
+  end
+
+  private
+
+  def validate_channel_id
+    # FIXME: make sure that the channel_id refers to an applab or weblab project
   end
 end
