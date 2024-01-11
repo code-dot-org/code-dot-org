@@ -1,30 +1,27 @@
 class ProjectDataDbController < ApplicationController
-
   # GET /datasets
   def index
     @project = Project.find_by_channel_id(params[:channel_id])
+    @key_value_pairs = KeyValuePair.where(channel_id: params[:channel_id])
     puts "####################################################"
   end
 
-  def getKeyValue
+  def get_key_value
   end
 
-  def setKeyValue
-    #puts "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!setkeyvalue"
-
-    render html: '<div>setKeyValue returned</div>'.html_safe
+  def set_key_value
+    KeyValuePair.create(channel_id: params[:channel_id], key: params[:key], value: params[:value])
   end
 
-  def createRecord
+  def create_record
   end
 
-  def readRecords
+  def read_records
   end
 
-  def updateRecord
+  def update_record
   end
 
-  def deleteRecord
+  def delete_record
   end
-  
 end
