@@ -267,6 +267,7 @@
     "@lezer/highlight": "^1.2.0",
     "@microsoft/immersive-reader-sdk": "^1.1.0",
     "@reduxjs/toolkit": "^1.9.3",
+    "@superpoweredsdk/web": "^2.6.6",
     "@types/chai": "^4.3.5",
     "@types/mocha": "^10.0.1",
     "@types/react": "^18.0.28",

@@ -69,7 +69,7 @@ const initialState: MusicState = {
   playbackEvents: [],
   orderedFunctions: [],
   lastMeasure: 0,
-  soundLoadingProgress: 0,
+  soundLoadingProgress: 1,
   startingPlayheadPosition: 1,
   undoStatus: {
     canUndo: false,

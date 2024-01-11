@@ -54,6 +54,7 @@ import {isEqual} from 'lodash';
 import HeaderButtons from './HeaderButtons';
 import MusicLibrary from '../player/MusicLibrary';
 import {setUpBlocklyForMusicLab} from '../blockly/setup';
+import SuperpoweredPlayer from '../player/Superpowered/SuperpoweredPlayer';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -147,6 +148,51 @@ class UnconnectedMusicView extends React.Component {
     if (props.inIncubator) {
       setUpBlocklyForMusicLab();
     }
+
+    this.superpowered = new SuperpoweredPlayer();
+    window.SetupPlayer = async () => {
+      await this.superpowered.setup();
+      await this.superpowered.setupTrack(
+        'https://curriculum.code.org/media/musiclab/all-by-type/beats/groovy_beat.mp3'
+      );
+      await this.superpowered.setupTrack(
+        'https://curriculum.code.org/media/musiclab/all-by-type/beats/sub_beat.mp3'
+      );
+      await this.superpowered.setupTrack(
+        'https://curriculum.code.org/media/musiclab/all-by-type/bass/funky_bass.mp3'
+      );
+      //this.superpowered.play();
+    };
+
+    window.Play = () => {
+      this.superpowered.start();
+      this.superpowered.scheduleTrack(
+        'https://curriculum.code.org/media/musiclab/all-by-type/beats/groovy_beat.mp3',
+        0,
+        0.75,
+        0
+      );
+      this.superpowered.scheduleTrack(
+        'https://curriculum.code.org/media/musiclab/all-by-type/beats/sub_beat.mp3',
+        4000,
+        0.75,
+        0
+      );
+      this.superpowered.scheduleTrack(
+        'https://curriculum.code.org/media/musiclab/all-by-type/bass/funky_bass.mp3',
+        4000,
+        1,
+        -300
+      );
+    };
+
+    window.StopSuperpowered = () => {
+      this.superpowered.stop();
+    };
+
+    window.ChangeParam = (id, value) => {
+      this.superpowered.changeParam(id, value);
+    };
   }
 
   componentDidMount() {

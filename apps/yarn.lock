@@ -5005,6 +5005,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@superpoweredsdk/web@npm:^2.6.6":
+  version: 2.6.6
+  resolution: "@superpoweredsdk/web@npm:2.6.6"
+  checksum: 9928b4be6b13ab5aa66ae7b1da719153b36af592903b5ae55290b0ee32bb086fc9615668e103699a49ae3535ae8e1ccca8e0d98bd579fa273eca67350d5b86b3
+  languageName: node
+  linkType: hard
+
 "@swc/helpers@npm:^0.4.14":
   version: 0.4.14
   resolution: "@swc/helpers@npm:0.4.14"
@@ -8006,6 +8013,7 @@ __metadata:
     "@storybook/builder-webpack5": ^6.5.16
     "@storybook/manager-webpack5": ^6.5.16
     "@storybook/react": ^6.5.16
+    "@superpoweredsdk/web": ^2.6.6
     "@testing-library/react": ^12.1.5
     "@testing-library/user-event": ^14.4.3
     "@types/chai": ^4.3.5
