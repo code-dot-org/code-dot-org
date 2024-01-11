@@ -1,5 +1,4 @@
 require File.expand_path('../../../dashboard/config/environment', __FILE__)
-require 'cdo/aws/ec2'
 require 'cdo/aws/metrics'
 require 'aws-sdk-ec2'
 require 'net/http'
@@ -57,7 +56,11 @@ module I18n
     # returns the EC2 instance ID if we are running the sync from an EC2,
     # and 'local_machine' otherwise
     def self.machine_id
-      @machine_id ||= AWS::EC2.instance_id || 'local_machine'
+      @machine_id ||= begin
+        Net::HTTP.get(URI.parse(CDO.ec2_instance_id_endpoint))
+      rescue
+        'local_machine'
+      end
     end
 
     # logging metrics into cloudwatch under i18n name space

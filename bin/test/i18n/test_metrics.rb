@@ -4,28 +4,29 @@ require_relative '../../i18n/metrics'
 describe I18n::Metrics do
   let(:described_class) {I18n::Metrics}
 
+  let(:cdo_ec2_instance_id_endpoint) {'expected_cdo_ec2_instance_id_endpoint'}
+  let(:cdo_ec2_instance_id_endpoint_uri) {URI(cdo_ec2_instance_id_endpoint)}
+
   before do
     described_class.remove_instance_variable(:@machine_id) if described_class.instance_variable_get(:@machine_id)
+    CDO.stubs(:ec2_instance_id_endpoint).returns(cdo_ec2_instance_id_endpoint)
+    Net::HTTP.stubs(:get).with(cdo_ec2_instance_id_endpoint_uri)
     Cdo::Metrics.client = Aws::CloudWatch::Client.new(stub_responses: true)
   end
 
   describe '.machine_id' do
-    let(:machine_id) {described_class.machine_id}
+    it 'returns the machine id from the EC2 instance_id endpoint'  do
+      expected_machine_id = 'expected_machine_id'
 
-    let(:aws_ec2_instance_id) {'expected_aws_ec2_instance_id'}
+      Net::HTTP.expects(:get).with(cdo_ec2_instance_id_endpoint_uri).returns(expected_machine_id)
 
-    before do
-      AWS::EC2.expects(:instance_id).returns(aws_ec2_instance_id)
+      assert_equal expected_machine_id, described_class.machine_id
     end
 
-    it 'returns current AWS EC2 instance_id'  do
-      assert_equal aws_ec2_instance_id, described_class.machine_id
-    end
-
-    context 'when server is not an AWS EC2 instance' do
-      let(:aws_ec2_instance_id) {nil}
-
+    context 'when an error occurred on getting machine_id from the EC2 instance_id endpoint' do
       it 'returns "local_machine"' do
+        Net::HTTP.stubs(:get).with(cdo_ec2_instance_id_endpoint_uri).raises('expected_error')
+
         assert_equal 'local_machine', described_class.machine_id
       end
     end
@@ -57,7 +58,7 @@ describe I18n::Metrics do
 
     before do
       CDO.stubs(:rack_env).returns(cdo_rack_env)
-      described_class.stubs(:machine_id).returns(machine_id)
+      Net::HTTP.stubs(:get).with(cdo_ec2_instance_id_endpoint_uri).returns(machine_id)
     end
 
     it 'logs metric' do

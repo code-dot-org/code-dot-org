@@ -2,6 +2,10 @@ require_relative '../test_helper'
 require_relative '../../i18n/i18n_script_utils'
 
 class I18nScriptUtilsTest < Minitest::Test
+  def test_crowdin_projects
+    assert_equal %i[codeorg codeorg-markdown hour-of-code codeorg-restricted], CROWDIN_PROJECTS.keys
+  end
+
   def test_to_crowdin_yaml
     assert_equal "---\n:en:\n  test: \"#example\"\n  'yes': 'y'\n", I18nScriptUtils.to_crowdin_yaml({en: {'test' => '#example', 'yes' => 'y'}})
   end
@@ -57,110 +61,88 @@ class I18nScriptUtilsTest < Minitest::Test
 end
 
 describe I18nScriptUtils do
-  let(:described_class) {I18nScriptUtils}
-
-  around do |test|
-    FakeFS.with_fresh {test.call}
-  end
-
-  describe '.crowdin_projects' do
-    let(:crowdin_projects) {described_class.crowdin_projects}
-
-    let(:crowdin_prod_projects) {'expected_crowdin_prod_projects'}
-    let(:crowdin_test_projects) {'expected_crowdin_test_projects'}
-
-    let(:is_testing) {false}
-
-    around do |test|
-      described_class.stub_const(:CROWDIN_PROJECTS, crowdin_prod_projects) {test.call}
-    end
-
-    around do |test|
-      described_class.stub_const(:CROWDIN_TEST_PROJECTS, crowdin_test_projects) {test.call}
-    end
-
-    before do
-      described_class.stubs(:testing?).returns(is_testing)
-    end
-
-    it 'returns production crowdin projects' do
-      _(crowdin_projects).must_equal crowdin_prod_projects
-    end
-
-    context 'when testing' do
-      let(:is_testing) {true}
-
-      it 'returns testing crowdin projects' do
-        _(crowdin_projects).must_equal crowdin_test_projects
-      end
-    end
+  def around
+    FakeFS.with_fresh {yield}
   end
 
   describe '.file_changed?' do
-    let(:expected_files_to_sync_out_json) {'expected/files_to_sync_out.json'}
-
     before do
-      described_class.stubs(:crowdin_projects).returns({expected_project: {files_to_sync_out_json: expected_files_to_sync_out_json}})
       I18nScriptUtils.remove_instance_variable(:@change_data) if I18nScriptUtils.instance_variable_get(:@change_data)
     end
 
     context 'when expected file is found by i18_locale' do
       it 'returns true' do
-        exec_seq = sequence('execution')
+        expected_files_to_sync_out_json = 'expected/files_to_sync_out.json'
 
-        expected_locale = 'expected_i18_locale'
-        expected_file_path = '/expected/file.json'
+        I18nScriptUtils.stub_const(:CROWDIN_PROJECTS, {expected_project: {files_to_sync_out_json: expected_files_to_sync_out_json}}) do
+          exec_seq = sequence('execution')
 
-        File.expects(:exist?).with(expected_files_to_sync_out_json).in_sequence(exec_seq).returns(true)
-        JSON.expects(:load_file).with(expected_files_to_sync_out_json).in_sequence(exec_seq).returns({expected_locale => {expected_file_path => 'true'}})
-        PegasusLanguages.expects(:get_code_by_locale).with(expected_locale).in_sequence(exec_seq).returns('unexpected_crowdin_locale')
+          expected_locale = 'expected_i18_locale'
+          expected_file_path = '/expected/file.json'
 
-        assert I18nScriptUtils.file_changed?(expected_locale, expected_file_path)
+          File.expects(:exist?).with(expected_files_to_sync_out_json).in_sequence(exec_seq).returns(true)
+          JSON.expects(:load_file).with(expected_files_to_sync_out_json).in_sequence(exec_seq).returns({expected_locale => {expected_file_path => 'true'}})
+          PegasusLanguages.expects(:get_code_by_locale).with(expected_locale).in_sequence(exec_seq).returns('unexpected_crowdin_locale')
+
+          assert I18nScriptUtils.file_changed?(expected_locale, expected_file_path)
+        end
       end
     end
 
     context 'when expected file is found by crowdin_locale' do
       it 'returns true' do
-        exec_seq = sequence('execution')
+        expected_files_to_sync_out_json = 'expected/files_to_sync_out.json'
 
-        expected_locale = 'expected_i18_locale'
-        expected_crowdin_locale = 'expected_crowdin_locale'
-        expected_file_path = '/expected/file.json'
+        I18nScriptUtils.stub_const(:CROWDIN_PROJECTS, {expected_project: {files_to_sync_out_json: expected_files_to_sync_out_json}}) do
+          exec_seq = sequence('execution')
 
-        File.expects(:exist?).with(expected_files_to_sync_out_json).in_sequence(exec_seq).returns(true)
-        JSON.expects(:load_file).with(expected_files_to_sync_out_json).in_sequence(exec_seq).returns({expected_crowdin_locale => {expected_file_path => 'true'}})
-        PegasusLanguages.expects(:get_code_by_locale).with(expected_locale).in_sequence(exec_seq).returns(expected_crowdin_locale)
+          expected_locale = 'expected_i18_locale'
+          expected_crowdin_locale = 'expected_crowdin_locale'
+          expected_file_path = '/expected/file.json'
 
-        assert I18nScriptUtils.file_changed?(expected_locale, expected_file_path)
+          File.expects(:exist?).with(expected_files_to_sync_out_json).in_sequence(exec_seq).returns(true)
+          JSON.expects(:load_file).with(expected_files_to_sync_out_json).in_sequence(exec_seq).returns({expected_crowdin_locale => {expected_file_path => 'true'}})
+          PegasusLanguages.expects(:get_code_by_locale).with(expected_locale).in_sequence(exec_seq).returns(expected_crowdin_locale)
+
+          assert I18nScriptUtils.file_changed?(expected_locale, expected_file_path)
+        end
       end
     end
 
     context 'when expected file is not found' do
       it 'returns false' do
-        exec_seq = sequence('execution')
+        expected_files_to_sync_out_json = 'expected/files_to_sync_out.json'
 
-        expected_locale = 'expected_i18_locale'
-        expected_file_path = '/expected/file.json'
+        I18nScriptUtils.stub_const(:CROWDIN_PROJECTS, {expected_project: {files_to_sync_out_json: expected_files_to_sync_out_json}}) do
+          exec_seq = sequence('execution')
 
-        File.expects(:exist?).with(expected_files_to_sync_out_json).in_sequence(exec_seq).returns(true)
-        JSON.expects(:load_file).with(expected_files_to_sync_out_json).in_sequence(exec_seq).returns({expected_locale => {'unexpected_file_path' => 'true'}})
-        PegasusLanguages.expects(:get_code_by_locale).with(expected_locale).in_sequence(exec_seq).returns('unexpected_crowdin_locale')
+          expected_locale = 'expected_i18_locale'
+          expected_file_path = '/expected/file.json'
 
-        refute I18nScriptUtils.file_changed?(expected_locale, expected_file_path)
+          File.expects(:exist?).with(expected_files_to_sync_out_json).in_sequence(exec_seq).returns(true)
+          JSON.expects(:load_file).with(expected_files_to_sync_out_json).in_sequence(exec_seq).returns({expected_locale => {'unexpected_file_path' => 'true'}})
+          PegasusLanguages.expects(:get_code_by_locale).with(expected_locale).in_sequence(exec_seq).returns('unexpected_crowdin_locale')
+
+          refute I18nScriptUtils.file_changed?(expected_locale, expected_file_path)
+        end
       end
     end
 
     context 'when project :files_to_sync_out_json_file does not exist' do
       it 'raises error' do
-        expected_locale = 'expected_i18_locale'
-        expected_file_path = '/expected/file.json'
+        expected_files_to_sync_out_json = 'expected/files_to_sync_out.json'
 
-        File.expects(:exist?).with(expected_files_to_sync_out_json).once.returns(false)
-        JSON.expects(:load_file).with(expected_files_to_sync_out_json).never
-        PegasusLanguages.expects(:get_code_by_locale).with(expected_locale).never
+        I18nScriptUtils.stub_const(:CROWDIN_PROJECTS, {expected_project: {files_to_sync_out_json: expected_files_to_sync_out_json}}) do
+          expected_locale = 'expected_i18_locale'
+          expected_file_path = '/expected/file.json'
 
-        actual_error = assert_raises(RuntimeError) {I18nScriptUtils.file_changed?(expected_locale, expected_file_path)}
-        assert_match /File not found #{expected_files_to_sync_out_json}/, actual_error.message
+          File.expects(:exist?).with(expected_files_to_sync_out_json).once.returns(false)
+          JSON.expects(:load_file).with(expected_files_to_sync_out_json).never
+          PegasusLanguages.expects(:get_code_by_locale).with(expected_locale).never
+
+          actual_error = assert_raises(RuntimeError) {I18nScriptUtils.file_changed?(expected_locale, expected_file_path)}
+          assert_match /File not found #{expected_files_to_sync_out_json}/, actual_error.message
+        end
       end
     end
   end

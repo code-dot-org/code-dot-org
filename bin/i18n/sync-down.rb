@@ -20,7 +20,7 @@ def sync_down
     logger = Logger.new(STDOUT)
     logger.level = Logger::INFO
 
-    I18nScriptUtils.crowdin_projects.each do |name, options|
+    CROWDIN_PROJECTS.each do |name, options|
       puts "Downloading translations from #{name} project"
       api_token = YAML.load_file(options[:identity_file])["api_token"]
       project_identifier = YAML.load_file(options[:config_file])["project_id"]

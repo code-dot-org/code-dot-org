@@ -50,14 +50,13 @@ module I18n
         self.class.config
       end
 
+      def testing?
+        CDO.rack_env?(:development)
+      end
+
       def crowdin_project
-        @crowdin_project ||=
-          if I18nScriptUtils.testing?
-            # When testing, use a set of test Crowdin projects that mirrors our regular set of projects.
-            CDO.crowdin_project_test_mapping[config.crowdin_project]
-          else
-            config.crowdin_project
-          end
+        # When testing, use a set of test Crowdin projects that mirrors our regular set of projects.
+        @crowdin_project ||= testing? ? CDO.crowdin_project_test_mapping[config.crowdin_project] : config.crowdin_project
       end
 
       def crowdin_client
@@ -80,7 +79,7 @@ module I18n
 
       def progress_bar
         @progress_bar ||= I18nScriptUtils.create_progress_bar(
-          title: "#{self.class.name}[#{crowdin_project}]",
+          title: self.class.name,
           total: source_files.size,
           format: PROGRESS_BAR_FORMAT,
         )

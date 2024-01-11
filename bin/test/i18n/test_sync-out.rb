@@ -8,16 +8,17 @@ describe I18n::SyncOut do
 
   describe '.perform' do
     it 'sync-out I18n resources' do
-      execution_sequence = sequence('execution')
+      I18n::SyncOut.stub_const(:CROWDIN_PROJECTS, 'expected_CROWDIN_PROJECTS') do
+        execution_sequence = sequence('execution')
 
-      I18n::Resources::Apps.expects(:sync_out).in_sequence(execution_sequence)
-      I18n::Resources::Dashboard.expects(:sync_out).in_sequence(execution_sequence)
-      I18n::Resources::Pegasus.expects(:sync_out).in_sequence(execution_sequence)
-      I18nScriptUtils.expects(:crowdin_projects).returns('expected_crowdin_projects')
-      I18n::SyncOut.expects(:clean_up_sync_out).with('expected_crowdin_projects').in_sequence(execution_sequence)
-      I18n::Metrics.expects(:report_status).with(true, 'sync-out', 'Sync out completed successfully').in_sequence(execution_sequence)
+        I18n::Resources::Apps.expects(:sync_out).in_sequence(execution_sequence)
+        I18n::Resources::Dashboard.expects(:sync_out).in_sequence(execution_sequence)
+        I18n::Resources::Pegasus.expects(:sync_out).in_sequence(execution_sequence)
+        I18n::SyncOut.expects(:clean_up_sync_out).with('expected_CROWDIN_PROJECTS').in_sequence(execution_sequence)
+        I18n::Metrics.expects(:report_status).with(true, 'sync-out', 'Sync out completed successfully').in_sequence(execution_sequence)
 
-      I18n::SyncOut.perform
+        I18n::SyncOut.perform
+      end
     end
 
     context 'when an error is raised' do
