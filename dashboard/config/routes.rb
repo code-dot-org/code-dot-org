@@ -230,12 +230,14 @@ Dashboard::Application.routes.draw do
     put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
     put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
 
+    SUPPORTS_DATA_DB = ['applab', 'gamelab'].freeze
     resources :projects, path: '/projects/', only: [:index] do
       collection do
         ProjectsController::STANDALONE_PROJECTS.each do |key, _|
-          if key == 'applab' or key == 'gamelab'
+          if SUPPORTS_DATA_DB.include? key
             get "/#{key}/:channel_id/data_db", to: 'project_data_db#index'
             post "/#{key}/:channel_id/data_db/set_key_value", to: 'project_data_db#set_key_value'
+            get "/#{key}/:channel_id/data_db/get_key_value", to: 'project_data_db#get_key_value'
             # post "/#{key}/:channel_id/data_db/:action", controller: 'project_data_db'
           end
 
