@@ -153,6 +153,10 @@ export default function LearningGoals({
     }
   }, [studentLevelInfo, learningGoals, currentLearningGoal]);
 
+  useEffect(() =>
+    document.addEventListener('keydown', handleKeyDown, {once: true})
+  );
+
   // Callback to retrieve understanding data from EvidenceLevels
   const radioButtonCallback = radioButtonData => {
     analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_EVIDENCE_LEVEL_SELECTED, {
@@ -232,6 +236,14 @@ export default function LearningGoals({
         learningGoalKey: learningGoals[currentIndex].key,
         learningGoal: learningGoals[currentIndex].learningGoal,
       });
+    }
+  };
+
+  const handleKeyDown = event => {
+    if (event.key === 'ArrowLeft') {
+      onCarouselPress(-1);
+    } else if (event.key === 'ArrowRight') {
+      onCarouselPress(1);
     }
   };
 
