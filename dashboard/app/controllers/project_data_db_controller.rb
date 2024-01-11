@@ -10,7 +10,8 @@ class ProjectDataDbController < ApplicationController
   end
 
   def set_key_value
-    KeyValuePair.create(channel_id: params[:channel_id], key: params[:key], value: params[:value])
+    kvp = KeyValuePair.create(channel_id: params[:channel_id], key: params[:key], value: params[:value])
+    render :json => kvp.as_json
   end
 
   def create_record

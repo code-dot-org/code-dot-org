@@ -235,7 +235,8 @@ Dashboard::Application.routes.draw do
         ProjectsController::STANDALONE_PROJECTS.each do |key, _|
           if key == 'applab' or key == 'gamelab'
             get "/#{key}/:channel_id/data_db", to: 'project_data_db#index'
-            post "/#{key}/:channel_id/data_db/setKeyValue", to: 'project_data_db#setKeyValue'
+            post "/#{key}/:channel_id/data_db/set_key_value", to: 'project_data_db#set_key_value'
+            # post "/#{key}/:channel_id/data_db/:action", controller: 'project_data_db'
           end
 
           get "/#{key}", to: 'projects#load', key: key.to_s, as: "#{key}_project"
