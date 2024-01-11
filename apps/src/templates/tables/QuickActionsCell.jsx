@@ -109,6 +109,8 @@ export default class QuickActionsCell extends Component {
       <span ref={span => (this.icon = span)}>
         <a
           onClick={this.state.canOpen ? this.open : undefined}
+          // Dummy hash to href to make it a no-op
+          // adding href to make the icon tab navigable and clickable
           href="#dummy-hash"
         >
           <FontAwesome
