@@ -119,5 +119,12 @@ class ProjectDataDbController < ApplicationController
 
   def validate_channel_id
     # FIXME: make sure that the channel_id refers to an applab or weblab project
+
+    # This may be of interest:
+    # begin
+    #   _, project_id = storage_decrypt_channel_id(params[:channel_id]) if params[:channel_id]
+    # rescue ArgumentError, OpenSSL::Cipher::CipherError
+    #   # continue as normal, as we only use this value for stats.
+    # end
   end
 end
