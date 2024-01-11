@@ -110,10 +110,13 @@ describe I18n::Utils::SyncUpBase do
   describe '#perform' do
     let(:perform) {described_instance.send(:perform)}
 
+    let(:config) {stub(crowdin_project: 'expected_crowdin_project')}
+
     let(:expected_crowdin_client) {stub}
     let(:expected_source_file_path) {'expected_source_file_path'}
 
     before do
+      described_instance.stubs(:config).returns(config)
       described_instance.stubs(:crowdin_client).returns(expected_crowdin_client)
       described_instance.stubs(:source_files).returns([expected_source_file_path])
     end
@@ -145,29 +148,28 @@ describe I18n::Utils::SyncUpBase do
   describe '#crowdin_project' do
     let(:crowdin_project) {described_instance.send(:crowdin_project)}
 
-    let(:described_class) do
-      Class.new(I18n::Utils::SyncUpBase) do
-        config.crowdin_project = 'expected-crowdin-project'
-      end
-    end
+    let(:crowdin_prod_project) {'expected_crowdin_prod_project'}
+    let(:crowdin_test_project) {'expected_crowdin_test_project'}
+
+    let(:config) {stub(crowdin_project: crowdin_prod_project)}
 
     let(:is_testing) {false}
 
     before do
-      CDO.stubs(:crowdin_project_test_mapping).returns({'expected-crowdin-project' => 'expected-crowdin-project-test'})
-
+      CDO.stubs(:crowdin_project_test_mapping).returns({crowdin_prod_project => crowdin_test_project})
+      described_instance.stubs(:config).returns(config)
       I18nScriptUtils.stubs(:testing?).returns(is_testing)
     end
 
     it 'returns Crowdin project from config' do
-      assert_equal 'expected-crowdin-project', crowdin_project
+      assert_equal crowdin_prod_project, crowdin_project
     end
 
     context 'when testing' do
       let(:is_testing) {true}
 
       it 'returns test Crowdin project from mapping' do
-        assert_equal 'expected-crowdin-project-test', crowdin_project
+        assert_equal crowdin_test_project, crowdin_project
       end
     end
   end
@@ -193,19 +195,22 @@ describe I18n::Utils::SyncUpBase do
   describe '#source_files' do
     let(:source_files) {described_instance.send(:source_files)}
 
-    let(:described_class) do
-      Class.new(I18n::Utils::SyncUpBase) do
-        config.source_paths << '/i18n/locales/sources/**/*.json'
-        config.ignore_paths << '/i18n/locales/sources/**/ignored_i18n_source_file.json'
-      end
+    let(:i18n_source_dir_path) {'/i18n/locales/sources/resource/'}
+
+    let(:config) do
+      stub(
+        source_paths: [File.join(i18n_source_dir_path, '**/*.json')],
+        ignore_paths: [File.join(i18n_source_dir_path, '**/ignored_*.json')],
+      )
     end
 
-    let(:i18n_source_dir_path) {'/i18n/locales/sources/resource/'}
     let(:expected_i18n_source_file_path) {File.join(i18n_source_dir_path, 'expected_i18n_source_file.json')}
     let(:ignored_i18n_source_file_path) {File.join(i18n_source_dir_path, 'ignored_i18n_source_file.json')}
     let(:unexpected_i18n_source_file_path) {File.join(i18n_source_dir_path, 'unexpected_i18n_source_file.yaml')}
 
     before do
+      described_instance.stubs(:config).returns(config)
+
       FileUtils.mkdir_p(i18n_source_dir_path)
       FileUtils.touch(expected_i18n_source_file_path)
       FileUtils.touch(ignored_i18n_source_file_path)
