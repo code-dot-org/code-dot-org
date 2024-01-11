@@ -85,6 +85,10 @@ eu:
           lesson_groups:
             required:
               display_name: Bista orokorra
+        angelina-playground:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Ausazkoa
         artist:
           description: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
           description_short: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
@@ -1259,7 +1263,22 @@ eu:
           lesson_groups:
             csf_sprites:
               display_name: Pertsonaiak
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Sarrera
+          lessons:
+            lesson-7:
+              name: Sarrera
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Sarrera
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
+              name: Sarrera
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
               name: Sarrera

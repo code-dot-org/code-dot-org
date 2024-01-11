@@ -30,6 +30,9 @@ km:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
         angelina-playground:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: ចៃដន្យ
           lessons:
             lesson-5:
               name: ការវាយតម្លៃ
@@ -1372,6 +1375,17 @@ km:
           lesson_groups:
             csf_sprites:
               display_name: Sprites
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: ការណែនាំ
+          lessons:
+            lesson-7:
+              name: ការណែនាំ
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: ការណែនាំ
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -1390,3 +1404,7 @@ km:
           lessons:
             lesson-13:
               name: សរុបសេចក្តី
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: ការណែនាំ

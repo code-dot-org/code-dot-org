@@ -2715,3 +2715,26 @@ el:
           lessons:
             lesson-1:
               name: Ο Κώδικας Δεοντολογίας Τεχνητής Νοημοσύνης μας
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Εισαγωγή
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Εισαγωγή
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Εισαγωγή
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Εισαγωγή
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Εισαγωγή στο App Lab

@@ -1,127 +1,127 @@
 ---
-title: Hour of Code How-To Guide for Companies
+title: Kooditunni juhend ettevõtetele
 ---
 
 {{ signup_button }}
 
-# How your company can engage with the Hour of Code
+# Kuidas teie ettevõte saab kooditunniga suhelda
 
 ### Loe lähemalt, kuidas sina ja su töötajad saavad lapsi innustada arvutiteadusi proovima!
 
 * * *
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Arvutuslik mõtlemine aitab arendada probleemide lahendamise oskusi, loogikat ja loovust. Ja tehnoloogia muudab kõiki tööstusharusid planeedil. Tänapäeva õpilased peaksid õppima tehnoloogiat looma, mitte ainult seda kasutama. Varakult alustades on neil alus edu saavutamiseks igal 21. sajandi karjääriteel.
 
-During the Hour of Code campaign, your company can help raise awareness of the computer science movement. Whether you volunteer as an individual or plan an event for your company, all of your efforts can make a huge impact on the way young women and students from marginalized racial and ethnic groups view computer science and their own potential.
+Kooditunni kampaania ajal saab teie ettevõte aidata tõsta teadlikkust arvutiteaduse liikumisest. Ükskõik, kas olete üksikisikuna vabatahtlik või kavandate oma ettevõttele üritust, kõik teie jõupingutused võivad avaldada tohutut mõju sellele, kuidas marginaliseeritud rassiliste ja etniliste rühmade noored naised ja õpilased arvutiteadust ja oma potentsiaali näevad.
 
-Check out the steps below to get started, and see our [guide for corporate partners](/files/hoc-corporate-toolkit.pdf) for more on how to get your company excited about the Hour of Code.
+Alustamiseks vaadake allolevaid samme, ja vaadake meie äripartner</a> ite juhendit, et saada lisateavet selle kohta, kuidas oma ettevõtet ko oditunnist vaimustada.</p> 
 
-- [Connect with a local school](#connect-with-a-school)
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
-- [Host your own Hour of Code event](#host-hour-of-code)
+- [Võtke ühendust kohaliku kooliga](#connect-with-a-school)
+- [Julgustage töötajaid klassiruumis vabatahtlikult tegutsema](#encourage-employees)
+- [Korraldage oma kooditunni üritust](#host-hour-of-code)
 - [Promote the Hour of Code](#promote-hour-of-code)
-- [More ways to support the Hour of Code](#support-hour-of-code)
+- [Rohkem võimalusi kooditunni toetamiseks](#support-hour-of-code)
 
 * * *
 
 <a id="connect-with-a-school"></a>
 
-## Connect with a local school
+## Võtke ühendust kohaliku kooliga
 
-It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+Alati on kõige parem alustada kohapeal, koolidega, millega teil või teie töötajatel on tugev side, näiteks alma mater, lastekool või kohalik organisatsioon või kool, mis on keskendunud arvutiteaduses ajalooliselt alaesindatud elanikkonna teenindamisele.
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+Sealt võite külastada kooli veebisaiti, et leida sobivaid kontakte, kellega ühendust võtta, näiteks direktor, asedirektor, tehnoloogia- või arvutiteaduse juhendajad või isegi kooli PTSA. Ürituse kaaskorraldamiseks võiksite teha koostööd ka selliste organisatsioonidega nagu Ameerika poiste & tüdrukute klubid, YMCA filiaal ja palju muud.
 
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+Kui te ei saa kooliga ühendust võtta, võtke meiega [ühendust](https://support.code.org/hc/en-us/requests/new) ja võimalusel ühendame teid ühe meie kohaliku partneriga.
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## Julgustage töötajaid klassiruumis vabatahtlikult tegutsema
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
+Üks kõige rahuldustpakkuvamaid viise kooditunnil osalemiseks on vabatahtlik tegutsemine kohalikus klassiruumis, kas isiklikult või virtuaalselt. Mis kõige parem, vabatahtlikuks saamiseks ei pea te olema insener. Saate ikkagi pakkuda õpilastele sisukat kogemust, jagades oma karjäärikogemust ja seda, kuidas CS või tehnoloogia on teie rolli mõjutanud.
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>Registreeruge vabatahtlikuks</button>]({{ urls/volunteer }})
 
-Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+Kui vabatahtlik registreerub, õpetaja saab oma profiili meie [vabatahtlike kaardil üle vaadata](https://code.org/volunteer/local) - nii et profiilid tuleks esitada võimalikult täielikud. Kui olete nende klassiruumi hästi sobiv, võtab õpetaja teiega platvormi kaudu ühendust (me ei jaga kunagi teie e-posti aadressi õpetajaga). Seejärel saate üksikasju otse õpetajaga kooskõlastada selle kohta, [kuidas oma klassiruumis kõige paremini vabatahtlikuks saada](https://hourofcode.com/us/how-to/volunteers).
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+Lisateavet vabatahtliku tegevuse ja näidissõnumite kohta, et teie ettevõte kooditunnist vaimustada, vaadake meie ju [hendit äripartneritele]({{ localized_files/hoc_corporate_toolkit }}).
 
 * * *
 
-<h4><font color="00adbc"><i>"Mulle meeldis üliväga see, kui põnevil lapsed olid. One amazing thing was the teachers noticed some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others - giving them a place to feel confident.”</i></font></h4>
+<h4><font color="00adbc"><i>"Mulle meeldis üliväga see, kui põnevil lapsed olid. Üks hämmastav asi oli see, et õpetajad märkasid, et mõned õpilased, kellel akadeemiliselt nii hästi ei läinud, olid silmapaistvad arendajana mõtlemises ja teisi aitamisel - andes neile koha enesekindlalt tunda.</i></font></h4>
 
--Hour of Code volunteer
+-Tund of Code vabatahtlik
 
 * * *
 
 <a id="host-hour-of-code"></a>
 
-## Host your own Hour of Code event
+## Korraldage oma kooditunni üritust
 
-If you want to go the extra mile, your company can also host an Hour of Code event. There is no specific formula for hosting an event so we encourage you to be creative! Given that our staff size is small (but mighty!), Code.org does not have a team dedicated to coordinating Hour of Code events. However, here are some tips to get started.
+Kui soovite täiendavat miili teha, teie ettevõte võib korraldada ka kooditunni ürituse. Ürituse korraldamiseks pole konkreetset valemit, seega soovitame teil olla loominguline! Arvestades, et meie töötajate suurus on väike (kuid võimas!) , Code.org-l ei ole meeskonda, mis on pühendunud Kooditunni ürituste koordineerimisele. Siiski on siin mõned näpunäited alustamiseks.
 
 ### 1. Vaata seda "Kuidas KoodiTundi läbi viia" videot <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
-### 2. Determine a date, format, and location for your event
+### 2. Sündmuse kuupäeva, vormingu ja asukoha määramine
 
-We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual) or in-person, at the company office or held in the community, and for students of all ages! You can also take a look at what other [corporate partners](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) and [donors](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) have done in the past for some inspiring ideas.
+Oleme näinud üritusi, mis on [virtuaalsed](https://hourofcode.com/us/how-to/virtual) või isiklikult, ettevõtte kontoris või kogukonnas, ja igas vanuses õpilastele! Samuti saate vaadata, mida teised [äripartnerid](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) ja [annetajad](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) on varem teinud mõne inspireeriva idee saamiseks.
 
 <br />
 
-#### Sample Agenda:
+#### Näidispäevakava:
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? Kes või mis sind inspireerib? Millest sai alguse sinu huvi arvutiteaduse vastu? Kas sul on mentor? Küsi õpilastelt küsimusi ning jäta aega küsimusteks-vastusteks. | |30-60 minutes | Code! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
+|Aeg | Päevakorrapunkt | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutit | Näita [inspireerivat videot | |5-10 minutit](https://hourofcode.com/us/promote/resources#videos)| Tutvustage ennast ja õppige õpilaste kohta rohkem teada: kus te töötate, mida teete ja mida sa oma töös kõige rohkem armastad? Kes või mis sind inspireerib? Millest sai alguse sinu huvi arvutiteaduse vastu? Kas sul on mentor? Küsi õpilastelt küsimusi ning jäta aega küsimusteks-vastusteks. | |30-60 minutit | Kood! Kui teie üritus toimub isiklik, on aeg vastata küsimustele ja juhendada õpilasi läbi raskete mõistatuste. Püüdke mitte anda neile lahendust otseselt, selle asemel proovige neile küsimusi esitada, et nad saaksid ise vastata, mis valesti läks, ja julgustage õpilasi üksteiselt küsima, kui neil on küsimusi. Kui olete vabatahtlik virtuaalselt, tehke õpetajaga koostööd selle nimel, milline võiks olla parim lähenemisviis. Võib olla mõistlikum seansi lõpus naasta, et näha, milliseid edusamme õpilased on teinud. | | |1-3 minutit | Tänan kõiki ja jagage inspireerivaid lahkuminekuid. Jagage välja ükskõik milline oma ettevõtte pakk ([kleeb](#celebrate) ised on ägedad)! | <br />
 
-#### Other ideas to add to your event
+#### Muud ideed, mida oma üritusele lisada
 
-- Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people.
-- If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
+- Selgitage, kuidas tehnoloogia mõjutab meie elu, näidetega, millest hoolivad igasuguse taustaga õpilased - rääkige tehnoloogiast, mis päästab elusid, aitab inimesi, ühendab inimesi.
+- Kui olete tehnikaettevõte, demomeerige lõbusaid ja uuenduslikke tooteid, mille kallal teie ettevõte töötab. Kui te pole tehnoloogiaettevõte, arutage, kuidas teie ettevõte kasutab tehnoloogiat probleemide lahendamiseks ja eesmärkide saavutamiseks.
 - Kutsuge oma ettevõtte tarkvaraarendaid rääkima, miks nad otsustasid arvutiteaduse õppimise kasuks ning milliste projektide kallal nad hetkel töötavad.
 
-### 3. Plan your technology needs
+### 3. Planeerige oma tehnoloogiavajadusi
 
 [![](/images/fit-600/Marketing/Excel-Charter-SchoolHoC-2015-stills-9.jpg)]({{ urls/learn }})
 
-#### Devices:
+#### Seadmed:
 
-KoodiTund parimaks läbiviimiseks on vajalikud internetiühendusega arvutid. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For unplugged activities, simply filter the Classroom Technology section to show options for “No computers or devices”.
+KoodiTund parimaks läbiviimiseks on vajalikud internetiühendusega arvutid. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! Vooluvõrgust lahti ühendatud tegevuste jaoks filtreerige lihtsalt jaotis Classroom Technology, et kuvada valikuid „Arvutid ega seadmed puuduvad”.
 
-- **Test activities** on computers or devices. Make sure they work properly on browsers with sound and video.
-- **Don't have enough devices?** Use pair programming. Kui õpilased töötavad paaris, siis saavad nad teineteist abistada ning ei vajavad vähem õpetaja abi. Lisaks õpetab see, et arvutiteadus on sotsiaalne ning koostööd soodustav eriala.
-- **Provide headphones** for your participants or ask them to bring their own if they’ll be trying tutorials that work best with sounds.
-- **Have low bandwidth**? Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- **Katsetegevused** arvutites või seadmetes. Veenduge, et need töötavad heli ja videoga brauserites korralikult.
+- **Kas teil pole piisavalt seadmeid?** Kasutage paariprogrammeerimist. Kui õpilased töötavad paaris, siis saavad nad teineteist abistada ning ei vajavad vähem õpetaja abi. Lisaks õpetab see, et arvutiteadus on sotsiaalne ning koostööd soodustav eriala.
+- **Pakkuge oma osalej** atele kõrvaklappe või paluge neil oma kaasa võtta, kui nad proovivad helidega kõige paremini sobivaid õpetusi.
+- **Kas teil on madal ribalai**us? Plaanige näidata videoid ürituse esiküljel, nii et iga osaleja ei laadi alla oma videoid. Või proovige ühendamata ja võrguühenduseta tegevusi.
 
-#### Virtual Events:
+#### Virtuaalsed sündmused:
 
-If your event is going to be virtual, you’ll want to decide on your conference platform (and test it) prior to your event. This may impact the number of students you feel comfortable engaging, so it’s best to determine this prior to inviting a classroom or promoting your event. For ideas on how to run a remote Hour of Code, read our [tips for a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+Kui teie sündmus saab olema virtuaalne, soovite enne üritust otsustada oma konverentsiplatvormi üle (ja seda testida). See võib mõjutada õpilaste arvu, kelle kaasamisel tunnete end mugavalt, nii et kõige parem on see enne klassiruumi kutsumist või ürituse reklaamimist kindlaks teha. Ideede saamiseks kaugkooditunni käivitamise kohta lugege meie [näpunäiteid virtuaalse kooditunni ürituse jaoks](https://hourofcode.com/us/how-to/virtual).
 
-### 4. Choose an activity
+### 4. Valige tegevus
 
-We provide a variety of fun, student-guided tutorials for all age groups and experience levels. It’s popular for students to try self-led tutorials, though you may want to begin the event with an [inspirational video](https://hourofcode.com/us/promote/resources#videos) for everyone to view together.
+Pakume mitmesuguseid lõbusaid, õpilaste juhendatud õpetusi kõikidele vanuserühmadele ja kogemustasemele. Õpilaste jaoks on populaarne proovida ise juhitavaid õpetusi, kuigi võiksite üritust alustada [inspireeriva videoga, mida kõik](https://hourofcode.com/us/promote/resources#videos) saavad koos vaadata.
 
-<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+<a href="https://hourofcode.com/us/learn">Uurige tegevusi</a> ja otsustage enne tähtaega, kas soovite valida kõigile oma külalistele ühe õpetuse või laske igal lapsel valida oma. **Kõik KoodiTund õpetused ** vajavad korraldajatelt minimaalselt ettevalmistust ning on juhenditega, mis aitavad lastel neid läbida vastavalt nende oma oskustele ja õpikiirusele.
 
 [![](/images/tutorials.png)]({{ urls/learn }})
 
-Once you have a solid roadmap for your event, you can then start inviting students, a school, or the larger community. We recommend starting with a local school you have a relationship with or [browsing our map](https://hourofcode.com/us/map) of Hour of Code events.
+Kui teil on oma ürituse jaoks kindel tegevuskava, võite hakata kutsuma õpilasi, kooli või suuremat kogukonda. Soovitame alustada kohalikust koolist, kellega teil on suhe, või [sirvida meie koodi](https://hourofcode.com/us/map) tunni sündmuste kaarti.
 
 <a id="celebrate"></a>
 
-### 5. Celebrate
+### 5. Tähistage
 
 [![](/images/fit-600/Marketing/2018_HoC-391.jpg)]({{ urls/learn }})
 
-After students or guests have completed their Hour of Code, it’s time to celebrate their success. Here are some ideas for making your event even more fun:
+Pärast seda, kui õpilased või külalised on oma kooditunni lõpetanud, on aeg nende edu tähistada. Siin on mõned ideed oma ürituse veelgi lõbusamaks muutmiseks:
 
 - [Print certificates]({{ urls/certificates }}) for participants and students.
-- [Print "I did an Hour of Code! stickers"]({{ promote/resources_stickers }}) or find other prizes and swag on the [Code.org Amazon Store](https://code.org/shop).
-- Share photos and videos of your Hour of Code event on social media. Use [#HourOfCode](https://twitter.com/hashtag/hourofcode) and [@codeorg](https://twitter.com/codeorg) so we can highlight your success, too!
+- [Prindi „Ma tegin tunni koodi! kleebised”]({{ promote/resources_stickers }}) või leidke muid auhindu ja lugu [Code.org Amazoni poest.](https://code.org/shop)
+- Share photos and videos of your Hour of Code event on social media. Kasut [age #HourOfCode](https://twitter.com/hashtag/hourofcode) ja [@codeorg,](https://twitter.com/codeorg) et saaksime esile tõsta ka teie edu!
 
 * * *
 
@@ -129,56 +129,57 @@ After students or guests have completed their Hour of Code, it’s time to celeb
 
 ## Promote the Hour of Code
 
-One of the best ways to help is to spread the word and promote the Hour of Code.
+Üks parimaid viise abistamiseks on sõna levitamine ja kooditunni reklaamimine.
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
-### 1. Register Your Event
+### 1. Registreeri oma sündmus
 
-Kui [registreerite oma kooditunnise sündmuse](/#join), saate kasulikku e-posti suhtlust uudiste ja näpunäidetega eduka kooditunni majutamiseks. It’s also how you can let local schools or parents know that you’re hosting an event near them.
+Kui [registreerute oma kooditunni üritusele](/events), saate kasulikku e-posti teatist koos uudiste ja näpunäidetega eduka kooditunni korraldamiseks. Samuti saate kohalikele koolidele või vanematele teada anda, et korraldate nende lähedal üritust.
 
-### 2. Post on Social Media
+### 2. Postitage sotsiaalmeedias
 
-Help raise awareness of the computer science movement with this sample content to post on social media and share with your employees.
+Aidake tõsta teadlikkust arvutiteaduse liikumisest selle näidissisuga, mida sotsiaalmeediasse postitada ja oma töötajatega jagada.
 
-#### Hour of Code general announcement
+#### Kooditunni üldine teadaanne
 
-- Computer science is changing our world. Help students be part of this change starting with one #HourOfCode. https://hourofcode.com/
-- Don’t just use technology—learn how to build it. Help someone start with an #HourOfCode. https://hourofcode.com/
+- Arvutiteadus muudab meie maailma. Aidake õpilastel osaleda selles muudatuses, alustades ühest #HourOfCode. https://hourofcode.com/
+- Ärge kasutage ainult tehnoloogiat - õppige, kuidas seda üles ehitada. Aidake kellelgi alustada #HourOfCode -iga. https://hourofcode.com/
 
-#### Stats
+#### Statistika
 
-- Did you know only 53% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/
-- In the U.S., only 26% of software professionals are women. Introduce more young women to computer science with #HourOfCode https://hourofcode.com/
-- 67% of computing jobs in the U.S. are not in the tech sector. Help put computer science in the standard curriculum with #HourOfCode https://hourofcode.com/
+- Kas teadsite, et ainult 53% USA koolidest õpetab arvutiteadust? Andke igale õpilasele võimalus õppida ühte #HourOfCode https://hourofcode.com/
+- USA-s on ainult 26% tarkvaraspetsialistidest naised. Tutvustage arvutiteadust rohkem noori naisi #HourOfCode abil https://hourofcode.com/
+- 67% Ameerika Ühendriikide arvutitöökohtadest ei ole tehnoloogiasektoris. Aidake arvutiteaduse tavaõppekavasse lisada #HourOfCode https://hourofcode.com/
 
-#### Create your own
+#### Looge oma
 
-- One #HourOfCode can lead to [fill in your story]. https://hourofcode.com/
-- I’m supporting #HourOfCode because [fill in your thoughts]. Join us https://hourofcode.com
+- Üks #HourOfCode võib viia [täitke oma lugu]. https://hourofcode.com/
+- Toetan #HourOfCode, sest [täitke oma mõtted]. Liituge meiega https://hourofcode.com
 
-#### Engineer-specific
+#### Insenerispetsiifiline
 
-- If your very first line of code changed your life, help students near you write their first #HourOfCode https://code.org/volunteer
-- If you learned to code—what’s your story? Inspire a student near you through their first #HourOfCode https://code.org/volunteer
+- Kui teie esimene koodirida muutis teie elu, aidake teie lähedal asuvatel õpilastel kirjutada oma esimene #HourOfCode https://code.org/volunteer
+- Kui õppisite kodeerima - mis on teie lugu? Inspireerige oma läheduses olevat õpilast oma esimese #HourOfCode kaudu https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">Leidke rohkem</a> plakateid, videoid, kleebiseid ja muid võimalusi oma sündmuse reklaamimiseks oma kogukonnas.
 
 * * *
 
 <a id="support-hour-of-code"></a>
 
-## More ways to support the Hour of Code
+## Rohkem võimalusi kooditunni toetamiseks
 
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 
-- Spread awareness by wearing [Code.org swag](https://store.code.org/) (all proceeds go to supporting more students gain access to computer science education).
-- Choose to benefit Code.org when you shop on [AmazonSmile](https://code.org/donate/amazonsmile).
-- Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word.
-- Have some fun with co-workers in a [giving campaign](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
-- [Sign this petition](https://code.org/promote) to make sure that every student has the opportunity to learn computer science.
-- [Donate](https://code.org/donate) to Code.org so that we can keep our educational resources free and accessible to all.
-
-For more suggestions on how to support Code.org and the Hour of Code, visit [Code.org/Help](https://code.org/help)
-
-{{ signup_button }}
+- Levitage teadlikkust kand [es Code.org swagi](https://store.code.org/) (kogu tulu läheb rohkemate õpilaste arvutiteaduse haridusele juurdepääsu toetamisele).
+- [Amazon](https://code.org/donate/amazonsmile)Smile'ist ostes saate Code.org kasu saada.
+- Paluge oma tegevjuhil saata kogu ettevõtet hõlmav e-kiri, rõhutades arvutiteaduse tähtsust ja julgustades töötajaid sõna levitama.
+- Lõbutsege koos töökaaslastega kingituskam</a>pa anias.</li> 
+    
+    - [Allkirjastage see peti](https://code.org/promote) tsioon, et veenduda, et igal õpilasel on võimalus arvutiteadust õppida.
+    - [Annet](https://code.org/donate) age Code.org saidile, et saaksime hoida oma haridusressursse tasuta ja kõigile kättesaadavaks.</ul> 
+    
+    Lisateavet Code.org-i ja kooditunni toetamise kohta leiate veebisaidilt Code.org/help [](https://code.org/help)
+    
+    {{ signup_button }}

@@ -5,7 +5,7 @@ title: Að halda Klukkustund kóðunar - Fyrirtæki
 {{ signup_button }}
 
 # How to bring the Hour of Code to your company
-### Find out how you and your employees can inspire students to try computer science!
+### Finndu út hvernig þú og starfsmenn þínir geta hvatt nemendur til að prófa tölvunarfræði!
 
 ***
 
@@ -57,9 +57,9 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 **Sýna hvetjandi myndband:**
 
 - Myndbandið frá upphafi Code.org, með Bill Gates, Mark Zuckerberg og körfuboltastjörnunni Chris Bosh (það er til [1 mínútu](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 mínutna](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 mínutna](https://www.youtube.com/watch?v=dU1xS07N-FA) útgáfa).
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- H [our of Code vídeó um allan heim](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [Obama kallaði alla nemendur til að læra tölvunarfræði](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Finndu fleiri innblástur myndbönd [hér](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Ideas to introduce your Hour of Code activity to students:**
 
@@ -67,7 +67,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 - If you are a tech company, demo fun, innovative products your company is working on.
 - If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Sjá ráð til að fá stelpur áhuga á tölvunarfræði [hér]({{ urls/girls }}).
 
 ## 6. Code!
 **Direct participants to the activity**

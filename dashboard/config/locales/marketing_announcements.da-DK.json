@@ -1,0 +1,61 @@
+{
+  "da-DK": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Lær mere"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Lær mere"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Lær mere"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Lær mere"
+          },
+          "codebytes-2020": {
+            "buttonText": "Lær mere"
+          },
+          "coldplay": {
+            "buttonText": "Prøv det"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Start"
+          },
+          "csjourneys": {
+            "buttonText": "Lær mere"
+          },
+          "csjourneys-22": {
+            "buttonText": "Lær mere"
+          },
+          "csleadersprize": {
+            "buttonText": "Lær mere"
+          },
+          "hoc-2023": {
+            "buttonText": "Lær mere"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Lær mere"
+          },
+          "hoc-more": {
+            "body": "Webstedet En Times Kodning har over 100 databehandlingsaktiviteter for alle aldre og erfaringsniveauer, udviklet af Code.org og partnere."
+          },
+          "superhero": {
+            "buttonText": "Lær mere"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Slut dig til os"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Slut dig til os"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Slut dig til os"
+          }
+        }
+      }
+    }
+  }
+}

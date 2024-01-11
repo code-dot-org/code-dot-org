@@ -856,6 +856,7 @@ ja-JP:
   header_incubator: インキュベーター
   header_learn: 学ぶ
   header_legal: プライバシーと法的事項
+  header_legal_cookie_notice: クッキーについての通知
   header_legal_privacy: プライバシー ポリシー
   header_legal_tos: 利用規約
   header_my_dashboard: マイ ダッシュボード
@@ -1956,23 +1957,12 @@ ja-JP:
   volunteer_engineer_submission_header_shared: ボランティア マップ上で教師と共有される情報
   volunteer_engineer_submission_intro_background: Hour of Code は1時間のコンピューター・サイエンス入門の世界的な運動です。180以上の国で数千万人の生徒に提供されています。12
     月 7-13 日のコンピューター・サイエンス学習週間に参加しましょう。
-  volunteer_engineer_submission_intro_guide: 私たちの <a href="%{volunteer_guide}"> ボランティア
-    プログラム</a> について詳しく見る。
   volunteer_engineer_submission_intro_guide_markdown: ボランティアプログラムの詳細を [こちら] (%{volunteer_guide})
     からご覧ください。
-  volunteer_engineer_submission_intro_links: あなたはボランティアをお探しの先生ですか？<a href="%{volunteer_local}">ボランティア
-    マップ</a> で地域のボランティアを探してください。
   volunteer_engineer_submission_intro_links_markdown: あなたはボランティアをお探しの先生ですか？ [ボランティアマップ]
     (%{volunteer_local}) で地元のボランティアを見つけてください。
-  volunteer_engineer_submission_intro_recruit: '教師は、クラスルームを助けてくれる <span style="font-family:
-    ''Gotham 7r'', sans-serif;"> コンピューターサイエンス教育に情熱的な</span> 誰かを求めています。または、コンピューターサイエンスの持つ可能性の幅広さについて生徒を
-    <span style="font-family: ''Gotham 7r'', sans-serif;"> 励ます</span> ことができる人を求めています。
-    (これはビデオ チャットで行うことができます)'
   volunteer_engineer_submission_intro_recruit_markdown: 先生は、**コンピューター サイエンス教育**に情熱を傾け、教室でサポートしてくれる人や、コンピューター
     サイエンスがもたらす幅広い可能性について話すことで (これはビデオチャットを通じて行うことができます) 生徒に**インスピレーション**を与えられる人を求めています。
-  volunteer_engineer_submission_intro_signup: コンピューター サイエンスの生徒やソフトウェアのプロフェッショナルの方は、次の情報を入力してください。ボランティアとして登録をするためには18歳以上である必要があります。入力された情報はすべて<a
-    href="/volunteer/local">ボランティアマップ</a>にて公開されますのでご注意ください。 <span class="form-required-field">*</span>
-    がついている欄は入力が必須です。
   volunteer_engineer_submission_intro_signup_markdown: コンピューター サイエンスの学習者またはソフトウェアの専門家の方は、次の情報を入力してください。ボランティアとして登録するには、18歳以上である必要があります。このセクションで入力するすべてのフィールドは、[ボランティアマップ]
     (/ volunteer/local) を見ている人なら誰でも見ることができることに注意してください。 _ * _が付いているフィールドは必須です。
   volunteer_engineer_submission_location_flexibility_curriculum: オープンソース カリキュラム プロジェクトに貢献したい

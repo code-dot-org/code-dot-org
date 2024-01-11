@@ -2287,6 +2287,22 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "可逆圧縮",
           "definition": "圧縮されたデータから元のデータを完全に再構築できるようにするデータ圧縮アルゴリズム。 テキスト圧縮にもっとも一般的に使用されます（zip圧縮など）。"
+        },
+        "code/dance-ai/2023": {
+          "word": "コード",
+          "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
+        },
+        "event/dance-ai/2023": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "program/dance-ai/2023": {
+          "word": "プログラム",
+          "definition": "機械が実行できるようにコード化されたアルゴリズム。"
+        },
+        "artificial_intelligence_a_i_/dance-ai/2023": {
+          "word": "人工知能（A.I.）",
+          "definition": "データを取り込み、そのデータからパターンを学習し、学習したことに基づいて意思決定を行うコンピューター・プログラム。"
         }
       }
     }

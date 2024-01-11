@@ -19,7 +19,7 @@ title: ऑवर ऑफ़ कोड कैसे करें मार्गद�
 - [अपने ऑवर ऑफ़ कोड को मजबूती से कैसे शुरू करें](#how-to-start)
 - [कोडिंग प्राप्त करें](#code)
 - [अपने छात्र की सफलता की ख़ुशी मनाएं](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [शिक्षकों के लिए ऑवर ऑफ़ कोड के अन्य संसाधन](#other-resources)
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-जब आप [अपने ऑवर ऑफ़ कोड ईवेंट पर साइन अप करते हैं](/#join), तो आपको एक सफल ऑवर ऑफ़ कोड की मेजबानी के लिए समाचार और सुझावों के साथ उपयोगी ईमेल संचार प्राप्त होंगे। It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+जब आप [अपने ऑवर ऑफ कोड इवेंट में साइन अप करते हैं](/events), तो आपको एक सफल ऑवर ऑफ कोड की मेज़बानी करने के लिए समाचारों और सुझावों वाला उपयोगी ईमेल संचार प्राप्त होगा। It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -139,7 +139,7 @@ Direct students to the activity
     
     [/col-33]
     
-    - [Print certificates]({{ urls/certificates }}) for your students.
+    - [अपने छात्रों]({{ urls/certificates }}) के लिए प्रमाणपत्र प्रिंट करें।
     - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
     - सोशल मीडिया पर अवर ओफ कोड कार्यक्रम के फ़ोटो और वीडियो साझा करें । #HourOfCode और @codeorg का उपयोग करें तो अपनी सफलता को उजागर कर सकते हैं!
     

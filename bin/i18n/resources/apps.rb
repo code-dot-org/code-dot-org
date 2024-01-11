@@ -13,6 +13,9 @@ module I18n
         Animations.sync_out
         ExternalSources.sync_out
         Labs.sync_out
+
+        # Should be called when Labs have been synced-out
+        TextToSpeech.sync_out
       end
     end
   end

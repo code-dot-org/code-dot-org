@@ -41,6 +41,7 @@ Feature: Self Paced PL Instructor in Training
     And I sign in as "Universal Instructor"
     And I get universal instructor access
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/2"
+    And I dismiss the hoc guide dialog
     And I wait for the page to fully load
 
     Then I press the first ".uitest-teacherOnlyTab" element
@@ -53,6 +54,7 @@ Feature: Self Paced PL Instructor in Training
     Given I create an authorized teacher-associated student named "Manuel"
     And I sign in as "Teacher_Manuel"
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/2"
+    And I dismiss the hoc guide dialog
     And I wait for the page to fully load
 
     Then I press the first ".uitest-teacherOnlyTab" element

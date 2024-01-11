@@ -230,15 +230,15 @@ module I18n
             file_subpath = crowdin_file_path.partition(DIR_NAME).last
 
             original_file_path = File.join(I18N_BACKUP_DIR_PATH, file_subpath)
-
             RedactRestoreUtils.restore(original_file_path, crowdin_file_path, crowdin_file_path, REDACT_RESTORE_PLUGINS)
+            I18nScriptUtils.parse_file(crowdin_file_path) || {}
           end
 
           def types_i18n_data_of(language)
             types_i18n_data = {}
 
             crowdin_file_paths = Dir.glob(File.join(crowdin_locale_dir_of(language), '**/*.json'))
-            progress_bar.total += crowdin_file_paths.size
+            mutex.synchronize {progress_bar.total += crowdin_file_paths.size}
 
             # First we gather together all our script objects into a single hash
             crowdin_file_paths.each do |crowdin_file_path|
@@ -247,7 +247,7 @@ module I18n
 
               types_i18n_data[type] = type_i18n_data if type_i18n_data.present?
             ensure
-              progress_bar.increment
+              mutex.synchronize {progress_bar.increment}
             end
 
             # Then we recursively flatten all of our hashes of objects, to group them by type rather than by script
@@ -258,7 +258,7 @@ module I18n
             types_i18n_data = restore_reference_guide_i18n_keys(types_i18n_data)
             types_i18n_data = fix_resource_urls(types_i18n_data)
 
-            types_i18n_data
+            types_i18n_data.deep_stringify_keys
           end
 
           def distribute_localization(language)
@@ -268,6 +268,12 @@ module I18n
             # Finally, write each resulting collection of strings out to a rails i18n config file.
             types_i18n_data.each do |type, type_i18n_data|
               target_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, "#{type}.#{language[:locale_s]}.json")
+
+              if File.exist?(target_i18n_file_path)
+                existing_type_i18n_data = JSON.load_file(target_i18n_file_path).dig(language[:locale_s], 'data', type)
+                type_i18n_data = existing_type_i18n_data.deep_merge(type_i18n_data)
+              end
+
               i18n_data = I18nScriptUtils.to_dashboard_i18n_data(language[:locale_s], type, type_i18n_data)
 
               I18nScriptUtils.write_json_file(target_i18n_file_path, i18n_data)

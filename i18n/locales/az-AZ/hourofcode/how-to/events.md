@@ -45,7 +45,7 @@ Share pictures of your event on Facebook and Twitter and use the hashtag **#Hour
 
 **Location:** School assembly hall (e.g. theater, gym, cafeteria)
 
-## Run of Show
+## Tədbirin gedişatı
 
 | Vaxt          | Hərəkət                                                                                                                               |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------- |

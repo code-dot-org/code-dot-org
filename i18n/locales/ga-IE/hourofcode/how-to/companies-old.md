@@ -5,7 +5,7 @@ title: Conas Uair an Chóid a óstáil - Cuideachtaí
 {{ signup_button }}
 
 # How to bring the Hour of Code to your company
-### Find out how you and your employees can inspire students to try computer science!
+### Faigh amach conas is féidir leat féin agus d'fhostaithe mic léinn a spreagadh chun ríomheolaíocht a bhaint as!
 
 ***
 
@@ -60,9 +60,9 @@ Ciceáil as do Uair de Chód trí rannpháirtithe a spreagadh agus plé a dhéan
 
  1 nóiméad </ a >, [ 5 nóiméad ](https://www.youtube.com/watch?v=nKIu9yen5nc), agus [ 9 nóiméad ](https://www.youtube.com/watch?v = dU1xS07N-FA) leaganacha).  .</li> 
   
-  - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
+  - Físeán [Uair an Chód ar fud an domhain](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [ Uachtarán Obama ag iarraidh ar gach mac léinn ríomhaireachta a fhoghlaim ](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).</ul> 
+- Faigh níos mó físeáin inspioráideacha an [seo](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).</ul> 
 
 **Ideas to introduce your Hour of Code activity to students:**
 
@@ -70,7 +70,7 @@ Ciceáil as do Uair de Chód trí rannpháirtithe a spreagadh agus plé a dhéan
 - If you are a tech company, demo fun, innovative products your company is working on.
 - If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Féach leideanna chun suim a fháil ar chailíní san eolaíocht ríomhai [reachta]({{ urls/girls }})anseo
 
 
 

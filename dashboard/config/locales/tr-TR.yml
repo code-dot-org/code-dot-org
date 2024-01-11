@@ -4,6 +4,7 @@ tr:
     attributes:
       user:
         age: Yaş
+        ai_settings_header: Yapay Zeka Ayarları
         current_password: Geçerli Şifre
         edit_header: Hesap Bilgilerini Düzenle
         email: e-posta

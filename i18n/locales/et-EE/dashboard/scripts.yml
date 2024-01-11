@@ -2064,3 +2064,22 @@ et:
               display_name: Tingimuslaused
             lessonGroup-5:
               display_name: Muutujad
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Sissejuhatus
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Sissejuhatus
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Sissejuhatus
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Sissejuhatus
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Uuring

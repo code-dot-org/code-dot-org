@@ -12,7 +12,7 @@ title: Guida pratica all'Ora del Codice per i volontari
 
 Il pensiero computazionale aiuta a coltivare capacità di risoluzione dei problemi, logica e creatività. La tecnologia sta trasformando ogni azienda del pianeta. Gli studenti oggi dovrebbero imparare a creare tecnologia, non solo a usarla.
 
-L'ora del codice è un'ora di lezione introduttiva all'informatica progettata per demistificare il "codice", mostrare che chiunque può apprenderne le basi e ampliare la partecipazione nel campo dell'informatica. Puoi contribuire ad aumentare la consapevolezza del movimento dell'informatica e fare volontariato per invogliare più studenti a provare l'informatica, in particolare le giovani donne e gli studenti provenienti da gruppi etnici e razziali storicamente emarginati.
+L'ora del codice è un'ora di lezione introduttiva all'informatica progettata per fare chiarezza sul "codice", mostrare che chiunque può apprenderne le basi e ampliare la partecipazione nel campo dell'informatica. Puoi contribuire ad aumentare la consapevolezza del movimento dell'informatica e fare volontariato per invogliare più studenti a provare l'informatica, in particolare le giovani donne e gli studenti provenienti da gruppi etnici e razziali storicamente emarginati.
 
 - [Chi può fare volontariato?](#who-can-volunteer)
 - [Perché fare volontariato?](#why-volunteer)
@@ -133,7 +133,7 @@ Collabora con la scuola o l'insegnante per discutere di ciò che ha più senso. 
 - Spiega in che modo la tecnologia può incidere sulle nostre vite, con esempi che possano interessare sia ai ragazzi che alle ragazze - parla ad esempio di come la tecnologia salva vite umane, aiuta le persone, le mette in contatto.
 - - Se la tua non è un'azienda tecnologica, puoi spiegare in che modo la tua società utilizza la tecnologia per risolvere dei problemi o per raggiungere degli obiettivi.
 - Invita esperti della tua azienda a parlare del perchè hanno deciso di studiare informatica e dei progetti su cui stanno lavorando.
-- Se hai un gruppo di personale che faciliterà il tuo evento o farà volontariato con una scuola locale, valuta la possibilità di ordinare [magliette personalizzate](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) per il tuo gruppo.
+- Se hai un gruppo di dipendenti che faciliterà il tuo evento o farà volontariato con una scuola locale, prendi in considerazione l'idea di ordinare magliette [](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) personalizzate per il tuo gruppo.
 
 ### 3. Pianifica le tue necessità tecnologiche
 
@@ -172,7 +172,7 @@ Dopo che gli studenti o gli ospiti hanno completato l'Ora del Codice, è il mome
 
 - [Condividi i certificati]({{ urls/certificates }}) per partecipanti e studenti.
 - [Stampa gli adesivi "Ho fatto un'Ora di Codice!""]({{ promote/resources_stickers }}) o trova altri premi e gadget sul [negozio Amazon di Code.org](https://code.org/shop).
-- Condividi le foto e i video del tuo evento dell'Ora del Codice sui social network. Usa #OradelCodice, #HourOfCode, @codeorg e @programmafuturo così anche noi possiamo condividere il tuo successo!
+- Condividi le foto e i video del tuo evento dell'Ora del Codice sui social network. Usa #HourOfCode, @codeorg, #OradelCodice e @programmafuturo così anche noi possiamo condividere il tuo successo!
 
 * * *
 
@@ -186,7 +186,7 @@ Uno dei modi migliori per supportarci è spargere la voce e promuovere l'Ora del
 
 ### 1. Registra il tuo evento
 
-Registrando [la tua "Ora del Codice"](/#join), riceverai comunicazioni utilissime tramite email contenenti notizie e suggerimenti per programmare con successo questa attività. In questo modo puoi anche far sapere alle scuole o ai genitori locali che stai ospitando un evento vicino a loro.
+Quando ti [iscrivi al tuo evento L'Ora del Codice](/events), riceverai utili comunicazioni via e-mail con notizie e suggerimenti per organizzare un'Ora del Codice di successo. In questo modo puoi anche far sapere alle scuole o ai genitori locali che stai ospitando un evento vicino a loro.
 
 ### 2. Posta sui Social Media
 

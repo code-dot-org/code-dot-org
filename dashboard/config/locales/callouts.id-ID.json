@@ -2963,6 +2963,25 @@
           "New Artist Project_callout2": "Tekan \"Run\" untuk menyimpan dan menjalankan program Anda",
           "sign_in_to_save_project": "Anda Ingin mengakses proyek nanti? Masuk untuk menyimpan proyek ini ke akun anda!"
         },
+        "dance_ai_code_at_measure": {
+          "ai_dance_callout_02_b": "⬆️ Gunakan blok ini."
+        },
+        "dance_ai_code_key_press": {
+          "ai_dance_callout_02_b": "⬆️ Gunakan blok ini.",
+          "dance_callout_02": "Tambahkan lakukan gerakan tari."
+        },
+        "dance_ai_customize_effect": {
+          "ai_dance_callout_draft_level_6": "Klik di sini."
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "ai_dance_callout_draft_level_02": "⬆️ Mulai di sini."
+        },
+        "dance_ai_generate_effect": {
+          "ai_dance_callout_draft_level_03": "⬆️ Gunakan blok ini. "
+        },
+        "dance_ai_generate_effect_again": {
+          "dance_callout_01": "⬆️ Gunakan blok ini."
+        },
         "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "Gunakan blok ini untuk membuat sprite.",
           "hello_world_say": "Gunakan blok ini untuk membuat sprite berbicara."

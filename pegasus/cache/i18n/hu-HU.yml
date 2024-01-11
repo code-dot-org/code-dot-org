@@ -1177,6 +1177,7 @@ hu-HU:
   header_home: Főmenü
   header_learn: Tanulj
   header_legal: Adatvédelem és jogi
+  header_legal_cookie_notice: Sütikre vonatkozó figyelmeztetés
   header_legal_privacy: Adatvédelmi Elvek
   header_legal_tos: Feltételek
   header_my_dashboard: Vezérlőpult
@@ -2650,27 +2651,15 @@ hu-HU:
     amely abban segít, hogy kipróbáld egy órán keresztül a programozást, amely már
     diákok millióihoz jutott el már a világ több, mint 180 országban. Kérlek vegyél
     részt rajta a Számítástechnikai Oktatási Hét keretein belül december 7-13. között.
-  volunteer_engineer_submission_intro_guide: Tudjon meg többet <a href="%{volunteer_guide}">önkéntes
-    programunkról itt</a>.
   volunteer_engineer_submission_intro_guide_markdown: Tudjon meg többet [önkéntes
     programunkról itt] (%{volunteer_guide}).
-  volunteer_engineer_submission_intro_links: Önkéntest keresel? Nézd meg a közeledben
-    lévő önkénteseket az <a href="%{volunteer_local}">önkéntes térképen</a>.
   volunteer_engineer_submission_intro_links_markdown: Ön egy tanár, aki önkénteseket
     keres? Keressen egy helyi önkéntest az [önkéntes térkép] (%{volunteer_local}).
-  volunteer_engineer_submission_intro_recruit: 'A tanárok szeretnék, hogy valaki <span
-    style="font-family: ''Gotham 7r'', sans-serif;">szenvedélyes számítástechnika
-    oktatás</span> , aki segíthet az osztályteremben, vagy valaki, aki <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspirálja</span> a diákok beszél a számítástechnika
-    lehetőségeinek szélességéről (ami videocsevegésen keresztül történhet).'
   volunteer_engineer_submission_intro_recruit_markdown: A tanárok szeretnék valakit,
     aki szenvedélyes számítástechnika oktatásával** aki segíthet az osztályteremben,
     vagy valaki, aki képes **inspirálni a diákjaikat azzal, hogy a számítástechnikával
     kapcsolatos lehetőségek széles skálájáról beszélnek (ami videocsevegésen keresztül
     történhet).
-  volunteer_engineer_submission_intro_signup: Kérjük add meg a következő információkat,
-    ha szoftverfejlesztő-hallgató vagy -szakember vagy. A <span class="form-required-field">*</span>-al
-    jelölt mezők kitöltése kötelező.
   volunteer_engineer_submission_intro_signup_markdown: Kérjük, adja meg az alábbi
     adatokat, ha Ön számítástechnika hallgató vagy szoftver szakember. Legalább 18
     évesnek kell lennie ahhoz, hogy önkéntesként jelentkezzen. Ne feledje, hogy az

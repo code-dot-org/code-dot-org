@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-20 16:46:52 UTC",
+    "serialized_at": "2023-10-23 15:26:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -149,8 +149,8 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "**Purpose:**\nPreviously spend time considering how identity and unconscious bias impact their classroom and teaching practice. Participants reflect on the role unconscious bias has played on their work and relationships with others.\n\n**Objectives:**\n\n* Participants can describe how their identity, experiences, and beliefs shape how they see their role as a computer science teacher.\n* Participants are introduced to unconscious bias.\n\n**Suggested time:** 60 minutes",
-        "student_overview": "**You will:**\n\n* Describe how their identity, experiences, and beliefs shape how they see their role as a computer science teacher.\n* Be introduced to unconscious bias.\n"
+        "overview": "**Purpose:**\nPreviously spend time considering how identity and unconscious bias impact their classroom and teaching practice. Participants reflect on the role unconscious bias has played on their work and relationships with others.\n\n**Objectives:**\n\n* Participants can describe how their identity, experiences, and beliefs shape how they see their role as a computer science teacher.\n* Participants are introduced to unconscious bias.\n* Participants will explore the 2-day project and a multiple choice assessment at the end of Unit 1.\n\n**Suggested time:** 60 minutes",
+        "student_overview": "**You will:**\n\n* Describe how your identity, experiences, and beliefs shape how they see their role as a computer science teacher.\n* Be introduced to unconscious bias.\n* Explore the 2-day project and a multiple choice assessment at the end of Unit 1.\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -219,8 +219,8 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "**Purpose:**\nThis transition prepares participants for a set of asynchronous activities, providing them with information about the assignment, their role, and the support available to them.\n\n**Objectives:**\n\n* Participants are prepared to complete asynchronous activities on their own.\n\n**Suggested time:** 47 minutes",
-        "student_overview": "**You will:**\n\n* Be prepared to complete asynchronous activities on your own.\n"
+        "overview": "**Purpose:**\nDuring this asynchronous session, you will wrap up Unit 2 and begin to engage with Unit 3.\n\n**Objectives:**\n\n* Participants get an overview of what they didn’t cover in Unit 2.\n* Participants dive into Big Idea 4, Computer Systems and Networks.\n* Participants are introduced to Unit 3.\n\n**Suggested time:** 47 minutes",
+        "student_overview": "**You will:**\n\n* Get an overview of what you didn’t cover in Unit 2.\n* Dive into Big Idea 4, Computer Systems and Networks.\n* Be introduced to Unit 3.\n"
       },
       "seeding_key": {
         "lesson.key": "Asynchronous Part 1",
@@ -1345,6 +1345,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext3_1_video"
+        ],
         "progression": "Unconscious Bias"
       },
       "bonus": false,
@@ -1542,6 +1545,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext3_3_video"
+        ],
         "progression": "Unit 2 Connections and Conclusions"
       },
       "bonus": false,
@@ -1614,6 +1620,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext3_4_video"
+        ],
         "progression": "Previously, On...Unit 3"
       },
       "bonus": false,

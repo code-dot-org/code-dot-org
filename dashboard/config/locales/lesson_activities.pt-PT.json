@@ -11355,7 +11355,7 @@
           "name": "Aquecimento"
         },
         "ca6b9610-b612-418d-87bf-bc1776fbd110": {
-          "name": "Atividade (30 a 45 minutos)"
+          "name": "Actividade"
         },
         "a5fa2c8b-163e-4cc1-a54b-0ad5d98bb92f": {
           "name": "Resumo"
@@ -12661,6 +12661,15 @@
         },
         "c728edf8-b7ed-465b-99f4-78f27e751d2b": {
           "name": "Níveis"
+        },
+        "99f155a9-1d50-44df-a647-c8dbaddea32c": {
+          "name": "Iniciando"
+        },
+        "d12dc50d-c901-43db-a188-eb1b273239c3": {
+          "name": "Aquecimento"
+        },
+        "02b4486f-d09d-4031-8235-0cf728733456": {
+          "name": "Resumo"
         }
       }
     }

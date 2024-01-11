@@ -40,6 +40,7 @@ fr:
       Assessment: Évaluation
       Attribution: Attribution
       Back and Forth: Va et vient
+      Balance an Ecosystem: Équilibrer un écosystème
       Basic Conditionals: Conditions de base
       Bass, Mid, and Treble: Basse, médium et aigu
       Be a Super Digital Citizen: Sois un Super Citoyen Numérique
@@ -87,6 +88,7 @@ fr:
       Change: Changer
       Changing Screens: Changer d’écran
       Changing Sensor Scale: Modifier l’échelle des capteurs
+      Check For Understanding: " Vérifier la compréhension"
       Check for Understanding: Vérifier la compréhension
       Checking for a Winner: Recherche d'un gagnant
       Choose Your Own Adventure: Choisissez votre propre aventure
@@ -152,6 +154,8 @@ fr:
         '
       Drawing: Dessiner
       Drawing Shapes: Dessiner des formes
+      Ecosystems Simulation: Simulation d'écosystèmes
+      Ecosystems Video: 'Vidéo : Les écosystèmes'
       Editing Images: Modifier les images
       Emotion Machine Example: Exemple de machine d’émotion
       End of Course Projects: Projets de fin de cours
@@ -174,12 +178,14 @@ fr:
       'Exploration: Sample Project': 'Exploration : Exemple de projet'
       Explore HTML: Explorer le HTML
       Extra: Supplémentaire
+      Final Dance Party Project: Projet final de la soirée dansante
       Finish a Screen: Terminer l'écran
       Finish the Prototype: Terminer le prototype
       Finishing Functions: Terminer les fonctions
       Finishing Touches: Terminer les touches
       Follow the Algorithm - Unplugged Activity: Suis l'Agorithme – Activité déconnectée
       Follow the Mouse: Suivre la souris
+      Food Chain Setup: Configuration de la chaîne alimentaire
       For Loop Fun - Unplugged Activity: "« Pour » s'amuser en boucle - Activité déconnectée"
       For Loops: Les Boucles « Pour »
       For Loops and Color LEDs: Les Boucles « Pour » et LEDs colorées
@@ -206,11 +212,13 @@ fr:
       Hyperlinks: Liens hypertexte
       If Statements: Instructions « si »
       If-Else Statements: Instructions « si-alors »
+      If... then... Conditional Statements: Si... alors...  Expressions conditionnelles
       Images in HTML: Les Images dans le HTML
       Importing Screens: Importation d’écrans
       Improve Your Game: Améliore ton jeu
       Inspiration!: Inspiration !
       Interactive Card: Carte interactive
+      Intro Video: Vidéo d'introduction
       Intro to Design Mode: Introduction au mode création
       Intro to For Loops: Intro au Boucles « Pour »
       Introducing Sprite Lab: Introduction au Labo des Sprites
@@ -218,6 +226,7 @@ fr:
       Introduction to Arrays: Introduction aux Tableaux
       Introduction to Game Lab: Introduction au labo de jeux
       Keeping Data Secret: Garder les Données Secrètes
+      Key Press & At Measure Events: Appui sur les touches et événements de mesure
       Keyboard Input: Entrée Au Clavier
       Layout Properties: Propriétés de la mise en page
       Learning from Simulations: Apprendre à l'aide de simulations
@@ -228,6 +237,7 @@ fr:
       Linking Screens: Relier les Écrans
       Lists: Listes
       Lists in HTML: Listes en HTML
+      Make Dancer & Dance Move: Créer un danseur et un mouvement de danse
       Make a Prediction: Faites une prévision
       Make it Your Own: Fais-le tien
       Making Music: Créer de la Musique
@@ -346,9 +356,13 @@ fr:
       Sensor Experiment: Expérience des capteurs
       Shapes and Parameters: Formes et paramètres
       Share Out: Partager
+      Share Your Simulation: Partager sa simulation
       Skill Building: Développement des Compétences
       Skill-Building: Développement des Compétences
       Social Sleuth: Limier social
+      Solution 1 - Fishing Zone: Solution 1 - Zone de pêche
+      Solution 2 - Fishing Season: Solution 2 - Saison de pêche
+      Solution 3 - Fishing Limits: Solution 3 - Limites de pêche
       Songwriting - Functions Unplugged Activity: Écrire des chansons - Activité déconnectée
         « Fonctions »
       Speed it Up, Slow it Down: Accélère et ralentis
@@ -368,6 +382,7 @@ fr:
       The Animation Tab: L’onglet Animation
       The Big Event - Unplugged Activity: Le Grand Événement - Activité déconnectée
       The Draw Loop: La Boucle Dessiner
+      The Food Chain: La chaîne alimentaire
       The Harvester: L'Agricultrice
       The Internet - Unplugged Activity: L'Internet - Activité déconnectée
       The Power of Words - Unplugged Activity: Le Pouvoir des Mots - Activité déconnectée
@@ -509,6 +524,7 @@ fr:
         Fermière"
       'Video: Wrap-up': 'Vidéo : Conclusion '
       Warm Up: Séance d’échauffement
+      WeTube Video Recommendations (Beta): Recommandations de vidéos WeTube (Bêta)
       Website Project: Projet de site Web
       Welcome to Monster Town: Bienvenue à Monstreville
       Where'd They Go?: Is sont passés où ?

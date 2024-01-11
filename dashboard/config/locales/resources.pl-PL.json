@@ -7510,7 +7510,7 @@
           "type": "Zasoby"
         },
         "ecosystems/csc-ecosystems/2023": {
-          "name": "Moduł ekosystemy",
+          "name": "Symulacja ekosystemu morskiego",
           "url": "https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview",
           "type": "Slajdy"
         },
@@ -7628,7 +7628,7 @@
           "type": "Zasoby"
         },
         "star_quilts/csc-starquilts/2023": {
-          "name": "csc-starquilts",
+          "name": "Kodowanie kołdry z geometrycznymi gwiazdami",
           "url": "https://docs.google.com/presentation/d/10F-FnjuE2fM9g1MEmBm5MXJAvhKWCNjX5tAeH9YbggM/template/preview",
           "type": "Slajdy"
         },
@@ -7716,7 +7716,7 @@
           "type": "Wideo"
         },
         "time_capsule/csc-timecapsule/2023": {
-          "name": "csc-timecapsule",
+          "name": "Kodowanie kapsuły czasu",
           "url": "https://docs.google.com/presentation/d/1jgZ_PS7uDb2KuvUNPNpW_PqSxsvfVKap4f8RscZPwVY/template/preview",
           "type": "Slajdy"
         },
@@ -11931,6 +11931,10 @@
           "name": "Film: Kompresja tekstu z Aloe Blacc",
           "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "Wideo"
+        },
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "url": "https://docs.google.com/document/d/1tRTtnwBfqYn1-UWoS6Ca2e-mzQN2F0mSzsnzCn8IXrk/edit?usp=sharing",
+          "type": "Zasoby"
         }
       }
     }

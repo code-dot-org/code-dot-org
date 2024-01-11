@@ -14596,6 +14596,36 @@
         "csc_timecapsule_textstyle_2023": {
           "hint1": "Farklı renkler ve efektler arasından seçim yapmak için açılır menüyü kullanın.\n\n![](<https://images.code.org/b3cd57bafe3e5eb487d61ef846a4715c-image-1660769880438.57.55 PM.png>)"
         },
+        "dance_ai_code_at_measure": {
+          "hint1": "Çalışma alanınızdaki \"2 ölçüde\" olayına bir \"A.I efekt oluştur\" bloğunu şu şekilde bağlayın:\n\n[blockly block][0]",
+          "hint2": "Yeni bir efekt oluşturmak için [blockly block][0] bloğuna tıklayın."
+        },
+        "dance_ai_code_key_press": {
+          "hint1": "💡 **Hâlâ takılıp kaldınız mı?** Nasıl çalıştıklarını öğrenmek için olaylar videosunu tekrar izleyin.",
+          "hint2": "💡 İşte kodunuzun nasıl görünebileceğine dair bir örnek.  <xml>\n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n\n  <block type=\"Dancelab_whenKey\" id=\"*R3Us3z5;rM#sBE?1zjX\" deletable=\"false\" x=\"19\" y=\"221\">\n    <field name=\"KEY\">\"yukarı\"</field>\n    <next>\n      <block type=\"Dancelab_doMoveEachLR\" id=\"*hCDocpHXqlku@f[[rK=\">\n        <field name=\"GROUP\">\"AYI\"</field>\n        <field name=\"MOVE\">HAREKETLER.Dab</field>\n        <field name=\"DIR\">-1</field>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "dance_ai_customize_effect": {
+          "Hint1": "💡 üzerindeki emojilere tıklayarak efekti özelleştirin <xml> <block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Dancelab_ai\" id=\"*6NOt^DsApsRC-pPZKBQ\">\n   <field name=\"VALUE\">{\"inputs\":\n[\"havalı\",\"soğuk\",\"dalgalı\"],\"backgroundEffect\":\"sparkles\",\"backgroundColor\":\"cool\",\"foregroundEffect\":\"bubbles\"}</field>\n\n</block> </xml> Çalışma alanında bloğu.",
+          "Hint2": "💡 **Hâlâ takılıp kaldınız mı?** Efekti nasıl özelleştirebileceğinizi görmek için videoyu izleyin.",
+          "HintEdit": "💡 Yapay zekanın yazdığı kodu kullanmak istiyorsanız, kodu gösterecek şekilde geçiş yapın ve ardından \"Kodu Kullan\"a tıklayın. Bloklar, çalışma alanınızdaki \"A.I efekt oluştur\" bloğunun yerini alacak."
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "HInt2": "Dansçı her iki blokta da aynı olmalıdır ve dizi (sıra) önemlidir.",
+          "validation": "💡 İlk dansçınızı oluşturmak için bu blokları <code style=\"color:white;background-color:#FFBD46\">kurulum</code> ekleyin:\n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n       <block type = \"Dancelab_makeAnonymousDanceSprite\" id = \"1\">\n         <field name=\"COSTUME\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"KEDİ\"</field>\n         <field name=\"LOCATION\">{x: 200, y: 200</field>\n         <next>\n           <block type = \"Dancelab_changeMoveEachLR\" id = \"|y+CWEBlleENO5MU(?yL\">\n             <field name=\"GROUP\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"KEDİ\"</field>\n             <field name=\"MOVE\">\"sonraki\"</field>\n             <field name=\"DIR\">-1</field>\n           </block>\n         </next>\n       </block>\n     </statement>\n\n</xml>\n​"
+        },
+        "dance_ai_generate_effect": {
+          "Hint2": "💡 [blocklyblock][0]'u <code style=\"color:white;background-color:#FFBD46\">kurulum</code>'a bağlayın. Daha sonra başlamak için üzerine tıklayın.",
+          "Hint3": "💡 Efekti yeniden oluşturmak veya emojileri değiştirmek istiyorsanız, tekrar 'A.I efekt oluştur' bloğuna tıklayabilirsiniz."
+        },
+        "dance_ai_generate_effect_again": {
+          "Hint1": "💡Şarkıyı dinleyin ve müziğin havasını düşünün.",
+          "Hint2": "💡 [blocklyblock][0]'u <code style=\"color:white;background-color:#FFBD46\">kurulum</code>'a bağlayın. Daha sonra başlamak için üzerine tıklayın.",
+          "Hint3": "💡 Efekti yeniden oluşturmak veya emojileri değiştirmek istiyorsanız, tekrar 'A.I efekt oluştur' bloğuna tıklayabilirsiniz."
+        },
+        "dance_ai_try_key_press": {
+          "hint1": "💡 Dans devam etmediği sürece, dansçılarınız işaretlerinize yanıt vermeyecektir.",
+          "hint2": "💡 <code style=\"color:white;background-color:#FFBD46\">Çalıştır</code>'a bastıktan sonra, <code style=\"color:white; background-color:#FFBD46\">◀</code> <code style=\"color:white; background-color:#FFBD46\">▶</code> sağ veya sol ok tuşuna basarak, dansçılarınıza işaret verin."
+        },
         "ecosystems_helloworld_say_2023": {
           "add_sprite": "Bir 'yeni sprite' bloğunu tıklayıp sürükleyin ve 'çalıştırıldığında' altında bağlayın. \n\n<xml><block type=\"when_run\" deletable=\"false\"><next><block type=\"gamelab_makeNewSpriteAnon\"><field name=\"ANIMATION_NAME\">\"bunny1_ready\"</field><value name=\"LOCATION\"><block type=\"gamelab_location_picker\" can_disconnect_from_parent=\"false\"><field name=\"LOCATION\">{\"x\":200,\"y\":200}</field></block></value></block></next></block></xml>",
           "change_location": "Bir hareketli nesnenin konumunu değiştirmek için konum bloğundaki pine tıklayın, ardından gitmesini istediğiniz yere tıklayın.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"

@@ -6,13 +6,15 @@ Feature: Using the New Unit Page
     And I am on "http://studio.code.org/s/new"
     And I wait until element ".isCourseSelector" is visible
 
-    When I select the "Single Unit" option in dropdown with class "isCourseSelector"
+    When I select the "Standalone unit" option in dropdown with class "isCourseSelector"
     And I wait until element ".familyNameSelector" is visible
     And element ".familyNameInput" is visible
     And I enter a temp unit name
     And I wait until element ".isVersionedSelector" is visible
     And I select the "No" option in dropdown with class "isVersionedSelector"
     And the unit slug input contains the temp script name
+    And I click "button[type='button']"
+    And I wait until element ".submitDialog" is visible
     And I click "button[type='submit']" to load a new page
 
     Then I wait for the temp unit edit page to load

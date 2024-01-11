@@ -2736,6 +2736,26 @@
         "csc_animal_adaptations_predict_gamelab": {
           "behaviors_edit": "이 행동의 작동방식을 보려면 여기를 클릭하세요."
         },
+        "dance_ai_code_at_measure": {
+          "ai_dance_callout_02_b": "⬆️ 이 블록을 사용하세요.",
+          "dance_callout_02": "여기에 AI 생성 효과 블록을 추가하세요. "
+        },
+        "dance_ai_code_key_press": {
+          "ai_dance_callout_02_b": "⬆️ 이 블록을 사용하세요.",
+          "dance_callout_02": "춤 동작을 추가하세요."
+        },
+        "dance_ai_customize_effect": {
+          "ai_dance_callout_draft_level_6": "여기를 클릭하세요."
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "ai_dance_callout_draft_level_02": "⬆️ 여기서 시작하세요."
+        },
+        "dance_ai_generate_effect": {
+          "ai_dance_callout_draft_level_03": "⬆️ 이 블록을 사용하세요. "
+        },
+        "dance_ai_generate_effect_again": {
+          "dance_callout_01": "⬆️ 이 블록을 사용하세요."
+        },
         "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "이 블록을 사용하여 스프라이트를 만드세요.",
           "hello_world_say": "이 블록을 사용하여 스프라이트가 말하게 만드세요."

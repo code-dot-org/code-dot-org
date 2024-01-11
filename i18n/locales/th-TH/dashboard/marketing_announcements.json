@@ -1,0 +1,114 @@
+{
+  "banners": {
+    "csleadersprize": {
+      "title": "",
+      "body": "",
+      "buttonText": "สิ่งที่น่าเรียนรู้ยังมีอีก"
+    },
+    "csjourneys-22": {
+      "title": "",
+      "body": "",
+      "buttonText": "สิ่งที่น่าเรียนรู้ยังมีอีก"
+    },
+    "hoc-more": {
+      "title": "",
+      "body": "เว็บไซต์ Hour of Code (ชั่วโมงเขียนโค้ด) รวบรวมกิจกรรมที่เกี่ยวกับวิทยาการคอมพิวเตอร์มากกว่า 100 กิจกรรมสำหรับผู้เรียนทุกวัยและทุกระดับประสบการณ์ ซึ่งเป็นการพัฒนาร่วมกันระหว่าง Code.org และพันธมิตร",
+      "buttonText": ""
+    },
+    "superhero": {
+      "title": "",
+      "body": "",
+      "buttonText": "เรียนรู้เพิ่มเติม"
+    },
+    "csjourneys": {
+      "title": "",
+      "body": "",
+      "buttonText": "สิ่งที่น่าเรียนรู้ยังมีอีก"
+    },
+    "class-schedule-survey": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "back-to-school-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "สิ่งที่น่าเรียนรู้ยังมีอีก"
+    },
+    "teacher-apps-open-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "ร่วมกับเรา"
+    },
+    "teacher-apps-closing-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "ร่วมกับเรา"
+    },
+    "teacher-apps-nominate-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "เสนอชื่อผู้สอน"
+    },
+    "teacher-apps-stillon-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "ร่วมกับเรา"
+    },
+    "home-learning-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "ดูไอเดียของโปรเจกต์"
+    },
+    "soonhoc-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "codebytes-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "สิ่งที่น่าเรียนรู้ยังมีอีก"
+    },
+    "ai-2020": {
+      "title": "ศึกษาเรื่องปัญญาประดิษฐ์และการเรียนรู้ของระบบ",
+      "body": "",
+      "buttonText": "สิ่งที่น่าเรียนรู้ยังมีอีก"
+    },
+    "congrats-certificate-share": {
+      "title": "",
+      "body": "",
+      "buttonText": "เริ่มต้น"
+    },
+    "coldplay": {
+      "title": "",
+      "body": "",
+      "buttonText": "ลอง"
+    },
+    "ai-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "สิ่งที่น่าเรียนรู้ยังมีอีก"
+    },
+    "ai-pl-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "สิ่งที่น่าเรียนรู้ยังมีอีก"
+    },
+    "state-of-cs-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "hoc-2023": {
+      "title": "Hour of Code: ความคิดสร้างสรรค์ด้วย AI",
+      "body": "เข้าร่วมกับผู้คนหลายล้านทั่วโลกใน hour of coding โดยมีหรือไม่มี AI และเรียนรู้วิธีการทำงานของ AI ซึ่งทุกคนสามารถทำได้ทุกที่โดยไม่จำเป็นต้องมีประสบการณ์",
+      "buttonText": "สิ่งที่น่าเรียนรู้ยังมีอีก"
+    },
+    "hoc-2023-dance-ai": {
+      "title": "",
+      "body": "เรียนรู้เกี่ยวกับแนวคิดปัญญาประดิษฐ์ (AI) เพื่อสร้างงานเต้นรำเสมือนจริงของคุณเองโดยมีการแสดงของศิลปินชั้นนำในปัจจุบัน และมีเพลงมากมายให้เลือก เข้าถึงนักเรียนทุกคนได้ไม่ว่ารสนิยมทางดนตรีของพวกเขาจะเป็นอย่างไร ถึงเวลาที่จะวางสิ่งของของคุณแล้ว!",
+      "buttonText": "สิ่งที่น่าเรียนรู้ยังมีอีก"
+    }
+  }
+}

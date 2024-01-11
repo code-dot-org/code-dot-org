@@ -972,57 +972,89 @@ pl-PL:
       CSD U1 MC Q1_2023:
         answers:
         - correct: true
+          text: Ekran dotykowy
         - correct: true
+          text: Mikrofon
+        - text: Głośnik
+        - text: Monitor
         - {}
-        - {}
-        - {}
+        markdown: Które z następujących mogą być wejściem dla komputera? *(Zaznacz
+          wszystkie pasujące)*
+        teacher_markdown: |-
+          **Zawartość: Rozdział 1 Lekcja 5**
+          Wejście przekazuje dane od użytkownika lub urządzenia do komputera. Ekrany dotykowe i mikrofony przekazują informacje. Głośniki i latarki nie są wejściami, ponieważ są wyjściami, które *dają* informacje.
       CSD U1 MC Q2_2023:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Po policzeniu liczby kliknięć ekran się aktualizuje.
+        - text: Jeśli nie zgadniesz, otrzymasz wiadomość.
+        - text: Jeśli zgadniesz prawidłową liczbę, zagra muzyka.
+        - text: Jeśli twój najlepszy wynik jest lepszy niż poprzedni najlepszy wynik,
+            jest on aktualizowany na ekranie.
         - correct: true
         questions:
-        - {}
+        - text: Które z następujących można opisać jako przetwarzanie, a które jako
+            wynik przetwarzania?
+        teacher_markdown: |-
+          **Zawartość: Rozdział 1 Lekcja 5**
+          Wyjście to informacja, którą komputery dają użytkownikom. Są to wszystkie przykłady informacji dane użytkownikowi po przetworzeniu, myślenie komputera.
       CSD U1 MC Q3_2023:
         answers:
-        - {}
-        - {}
+        - text: Aplikacje
+        - text: Zdjęcia
         - text: Muzyka
         - text: Miejsce
         - correct: true
         questions:
-        - {}
+        - text: Jakie rodzaje informacji może przechowywać komputer?
+        teacher_markdown: |
+          **Zawartość: Rozdział 1 Lekcja 7**
+
+          Wszystkie te elementy mogą być przechowywane w komputerze.
       CSD U1 MC Q4_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Obliczanie i mierzenie wzrostu poziomu morza
+        - text: Szukanie miasta o największym zanieczyszczeniu powietrza
+        - text: Porównanie ilości gazów cieplarnianych emitowanych przez poszczególne
+            kraje
         - correct: true
+          text: Podejmij działania w celu odwrócenia zmian klimatu
         - correct: true
+          text: Przyjęcie przepisów mających na celu ograniczenie paliw kopalnych
         questions:
-        - {}
+        - text: Których problemów *nie można* rozwiązać za pomocą obliczeń? (Wybierz
+            wszystkie pasujące)
+        teacher_markdown: |
+          **Zawartość: Rozdział 1 Lekcja 4**
+
+          Używanie tylko komputerów nie może rozwiązać problemu zmian klimatu, ani komputery nie mogą uchwalić przepisów.
       CSD U1 Match Q5_2023:
         answers:
         - text: Wejście
         - text: Pamięć
         - text: Przetwarzanie
+        content1: Opracowujesz aplikację, która ostrzega Cię, gdy jakość powietrza
+          w Twoim mieście jest słaba. Dopasuj następujące elementy do wejścia, przetwarzania
+          i przechowywania
         questions:
-        - {}
-        - {}
-        - {}
+        - text: Zmierz dzisiejszą jakość powietrza
+        - text: Zachowaj dane dotyczące jakości powietrza na każdy dzień
+        - text: Porównaj dzisiejszą jakość powietrza z jakością powietrza z ostatnich
+            dni
+        teacher_markdown: "**Zawartość: Rozdział 1 Lekcja 5, 6, 7**"
       CSD U1 Match Q6_2023:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Zdecyduj, jakie atrakcje będą na imprezie, jakie jedzenie i kogo zaprosić
+        - text: Przedyskutuj, co poszło dobrze, a co można poprawić
+        - text: Zorganizuj imprezę dla mieszkańców z okolicy
+        - text: Zdecyduj o celu imprezy
+        content1: Pięciu studentów planuje imprezę. Dopasuj to, co trzeba zrobić z
+          etapem procesu rozwiązywania problemów
         questions:
         - text: Przygotuj
         - text: Przemyśl
         - text: Spróbuj
         - text: Zdefiniuj
+        teacher_markdown: "**Zawartość: Rozdział 1 Lekcja 2**"
       CSD U1 Test:
         title: "\nTest po projekcie: Komputery i rozwiązywanie problemów "
       CSD U1 Test PSP match:
@@ -1531,6 +1563,19 @@ pl-PL:
           4. Amazon.com - sklep internetowy z ogromną gamą produktów
           4. Yahoo.com - wyszukiwarka stron internetowych, serwer poczty e-mail, źródło wiadomości
           5. Wikipedia.org - darmowa encyklopedia z hasłami generowanymi przez użytkowników
+      CSD U2 Top Websites_2018_2019_pilot_2023:
+        markdown: |-
+          # Strony do rozwiązywania problemów
+
+          Oto parę stron, które stworzyliśmy w celu rozwiązania problemu. Wybierz dwie z nich i użyj ich, aby uzupełnić przewodnik po zajęciach.
+
+          [<img src="https://images.code.org/752da9829923228ba71fd32499c2a5bf-image-1566856199999.png" style="float: left; margin: 10px">](https://codeprojects.org/3zq0Xy-f0olOr1uy1wzTzdFqvq4bGQx0zi_PrWM5p8Y)
+
+          [<img src="https://images.code.org/3dbd54718965bf83f0695422d5600b0c-image-1566240318585.png" style="float: left; margin: 10px">](https://codeprojects.org/0YXSEeSdj7HHu8NqZndJKlRz7dO1Vxj8o70HhBSfTHU/)
+
+          [<img src="https://images.code.org/37b9660399cb69d5c0bbc2603e2c43da-image-1566240321606.png" style="float: left; margin: 10px">](https://codeprojects.org/projects/weblab/CT6A0qcmIifTaBQUHrZmXHdD0ob7YJtwLtnRG0brSi4)
+
+          [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">](https://codeprojects.org/5FQC3-_R1-LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
       CSD U2 expand project:
         content1: opis tutaj
         teacher_markdown: Instrukcje rozbudowy stron internetowych uczniów można wyświetlić
@@ -1546,6 +1591,8 @@ pl-PL:
         teacher_markdown: Instrukcje rozbudowy stron internetowych uczniów można wyświetlić
           na tablicy, abyś mógł przejrzeć je z cała klasą. Kliknij, aby pokazać uczniom
           przykładowe strony internetowe.
+      CSD U2 hyperlinks practice_2023:
+        display_name: Używanie hiperłączy
       CSD U2 image debug match:
         answers:
         - {}
@@ -3368,6 +3415,17 @@ pl-PL:
         title: 'Test po projekcie: Tworzenie stron internetowych '
       CSD Web Development Post-Project Test_pilot_2023:
         title: 'Test po projekcie: Tworzenie stron internetowych '
+      CSD Web Sample Pages_2023:
+        markdown: |
+          # Przykładowe osobiste strony internetowe
+
+          <div style="float: left; text-align:center; width:33%"><strong>Szablon A</strong><br />(Kliknij obraz, aby wyświetlić szablon)<br /><a href="https://codeprojects.org/projects/weblab/kkb1upGQja7Hy4NAa72uQxwu87jDa_DO1aiav2Qhzk8" target="_new"><img style="border-radius:10px; margin: 10px; width: 100%;" src="https://images.code.org/301502f3280461ed7b9f16bf5ed11bb8-image-1677189841902.png" alt="Template A page"></a></div>
+          <div style="float: left; text-align:center; width:33%"><strong>Szablon B</strong><br />(Kliknij obraz, aby wyświetlić szablon)<br /><a href="https://codeprojects.org/projects/weblab/hQCSn2We5tss6ZiOPTGJYq6PXHkwOIAztnd3ArJbezc" target="_new"><img style="border-radius:10px; margin: 10px; width: 100%;" src="https://images.code.org/e9839b33b809a72773d9190f5378e295-image-1677194056589.png" alt="Template B page"></a></div>
+          <div style="float: left; text-align:center; width:34%"><strong>Szablon C</strong><br />(Kliknij obraz, aby wyświetlić szablon)<br /><a href="https://codeprojects.org/projects/weblab/Z3m2fWClc10iTgxiLnOfTqZHApYrFXgx8YqgCwAvXvs" target="_new"><img style="border-radius:10px; margin: 10px; width: 100%;" src="https://images.code.org/c030607ab7c9eacdffc613aff3992381-image-1677194170313.png" alt="Template C page"></a></div>
+          <hr style="clear: both" />
+          <div style="float: left; text-align:center; width:33%"><strong>Szablon D</strong><br />(kliknij obraz, aby wyświetlić szablon)<br /><a href="https://codeprojects.org/projects/weblab/asJPWlR18HPsC30w8nGM7Zm1jPurD_wNyEKstYWjh_Q" target="_new"><img style="border-radius:10px; margin: 10px; width: 100%;" src="https://images.code.org/e53aaca3962f75b7279cb8f39b2b8237-image-1677194195497.png" alt="Template D page"></a></div>
+          <div style="float: left; text-align:center; width:33%"><strong>Szablon E</strong><br />(Kliknij obraz, aby wyświetlić szablon)<br /><a href="https://codeprojects.org/projects/weblab/I888qmIAVN8JACK6jHeRtIz17b77g5-XcvkkxF8ztZ8" target="_new"><img style="border-radius:10px; margin: 10px; width: 100%;" src="https://images.code.org/68afb5ea16d9e61545c68254570ce39e-image-1677194239625.png" alt="Template E page"></a></div>
+          <hr style="clear: both" />
       CSD games cake challenge choice_2021:
         display_name: Wyzwania
       CSD games cake challenge choice_2022:
@@ -10246,16 +10304,15 @@ pl-PL:
           okładki  <a href=\"https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview\"
           target=\"_blank\"> książki.\n\n</div>\n"
       csc_codingwithpoetry_markdown_lesson_4:
-        markdown: "# #Share Twoja aplikacja\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
-          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\nwiersza**Teraz,
-          gdy zakodowałeś swój wiersz, nadszedł czas, aby go udostępnić! **\n\nGdy
-          oglądasz projekt swoich kolegów z klasy, pomyśl o „blasku”, „wzroście” i
-          „pytaniu”, które możesz napisać dla swojego partnera:\n\n- „Blask” to coś,
-          co zrobili dobrze\n- „Rosnąć” to coś, co mogą zmienić lub ulepszyć\n- „Pytanie”
-          to coś, o czym chcesz wiedzieć więcej\n</div>\n\n**Gotowy, aby zacząć? **
-          Użyj <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
-          target=\"_blank\">tego zasobu</a> , aby podzielić się opiniami ze swoim
-          partnerem.\n\n"
+        markdown: "# #Udostępnij swoją aplikację z wierszem\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\n**Teraz,
+          gdy zakodowałeś swój wiersz, nadszedł czas, aby go udostępnić! **\n\nOglądając
+          projekty swoich kolegów z klasy, pomyśl o „blasku”, „rozwoju” i „pytaniu”,
+          które możesz napisać do nich:\n\n- „Blask” to coś, co zrobili dobrze\n-
+          „Rozwój” to coś, co mogą zmienić lub ulepszyć\n- „Pytanie” to coś, o czym
+          chcesz wiedzieć więcej\n</div>\n\n**Gotowy, aby zacząć? ** Wykorzystaj <a
+          href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
+          target=\"_blank\">ten zasób</a>, aby podzielić się opiniami ze swoimi partnerami.\n\n"
       csc_ecosystemes_foodchain_info:
         markdown: "\n##**Wszystkie ekosystemy mają _delikatnie zbilansowany_ łańcuch
           pokarmowy** ## #The łańcuch\npokarmowy ekosystemu morskiego: >## #1.\n\n\n\n<img
@@ -10470,14 +10527,15 @@ pl-PL:
           <a href=\"https://docs.google.com/document/d/1-aPA3uJIKJAuQ_2Gtck1Ma79eCFY88ZC8YzegQIckG4/template/preview\"
           target=\"_blank\">tego zasobu</a>.\n\n</div>\n"
       csc_timecapsule_markdown_lesson_2_poetry:
-        markdown: "# #Plan Twój wiersz\n\n<div>\n<img style=\" float: left; width:25%;
+        markdown: "# #Zaplanuj swój wiersz\n\n<div>\n<img style=\" float: left; width:25%;
           padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
           />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>Czas
-          zaplanować własny wiersz.</strong>\n</h4>\n\n>Powinieneś uwzględnić:\n>
-          - Coś, co kochasz robić.\n> - Ktoś ważny dla ciebie.\n> - Niektóre z twoich
-          ulubionych rzeczy. \n\n**Gotowy do rozpoczęcia planowania? ** Użyj <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
-          target=\"_blank\">tego zasobu</a>.\n\n**Szukasz tematu? ** Użyj <a href=\"https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview\"
-          target=\"_blank\">tego zasobu</a>.\n\n</div>\n"
+          na zaplanowanie własnego wiersza.</strong>\n</h4>\n\n>Powinieneś uwzględnić:\n>
+          - Coś, co kochasz robić.\n> - Kogoś ważnego dla ciebie.\n> - Niektóre ze
+          swoich ulubionych rzeczy. \n\n**Gotowi do rozpoczęcia planowania?** Wykorzystaj
+          <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
+          target=\"_blank\">ten zasób</a>.\n\n**Szukasz tematu?**Wykorzystaj <a href=\"https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview\"
+          target=\"_blank\">ten zasób</a>."
       csc_timecapsule_markdown_lesson_4:
         markdown: "# #Share Twoja kapsuła czasu\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
           PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\n**Teraz,
@@ -11186,7 +11244,7 @@ pl-PL:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Chcę wziąć udział w większej ilości zajęć z informatyki w przyszłości
       csd-post-survey-unit1-preamble:
         content1: opis tutaj
       csd-post-survey-unit2-preamble:
@@ -11216,6 +11274,8 @@ pl-PL:
         title: 'Ankieta uczniowska przed kursem CS Discoveries '
       csd-pre-survey-levelgroup_21_22_2022:
         title: 'Ankieta uczniowska przed kursem CS Discoveries '
+      csd-pre-survey-levelgroup_21_22_2023:
+        title: Ankieta dla uczniów przed odbyciem kursu
       csd-pulse-check-survey-1-q1 U1Ch2:
         answers:
         - correct: true
@@ -16298,17 +16358,29 @@ pl-PL:
       intro-pulse-survey-q2_csd1_2023:
         answers:
         - correct: true
+          text: To pierwsza nauka o rozwiązywaniu problemów za pomocą technologii
         - correct: true
+          text: 'Robiłem mniejsze zajęcia dotyczące rozwiązywania problemów za pomocą
+            technologii (na przykład: godzina kodu), ale to moje pierwsze dłuższe
+            zajęcia'
         - correct: true
+          text: Uczęszczałem już na zajęcia lub robiłem dłuższe samouczki online dotyczące
+            rozwiązywania problemów za pomocą technologii
         questions:
-        - {}
+        - text: Jakie dotychczasowe doświadczenia miałeś z rozwiązywaniem problemów
+            za pomocą technologii?
       intro-pulse-survey-q2_csd2_2023:
         answers:
         - correct: true
+          text: To pierwsza moja nauka o tworzeniu stron internetowych
         - correct: true
+          text: 'Wykonałem mniejsze działania w zakresie tworzenia stron internetowych
+            (na przykład: godzina kodu), ale to moja pierwsza dłuższa klasa'
         - correct: true
+          text: Uczęszczałem już na zajęcia lub robiłem dłuższe samouczki online na
+            temat tworzenia stron internetowych
         questions:
-        - {}
+        - text: Jakie dotychczasowe doświadczenia miałeś z tworzeniem stron internetowych?
       intro-pulse-survey-q2_csd3_2023:
         answers:
         - correct: true
@@ -16347,7 +16419,7 @@ pl-PL:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Mam możliwość nauki informatyki
       intro-pulse-survey-q3_csd2_2023:
         answers:
         - correct: true
@@ -16358,7 +16430,7 @@ pl-PL:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Mam możliwość nauki informatyki
       intro-pulse-survey-q3_csd3_2023:
         answers:
         - correct: true
@@ -16369,7 +16441,7 @@ pl-PL:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Mam możliwość nauki informatyki
       intro-pulse-survey-q3_csd4_2023:
         answers:
         - correct: true
@@ -16380,7 +16452,7 @@ pl-PL:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Mam możliwość nauki informatyki
       intro-pulse-survey-q3_csd5_2023:
         answers:
         - correct: true
@@ -16391,7 +16463,7 @@ pl-PL:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Mam możliwość nauki informatyki
       intro-pulse-survey-q3_csd6_2023:
         answers:
         - correct: true
@@ -16402,7 +16474,7 @@ pl-PL:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Mam możliwość nauki informatyki
       intro-pulse-survey-q4_csd1_2023:
         answers:
         - correct: true
@@ -16413,7 +16485,7 @@ pl-PL:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Chcę wziąć udział w większej ilości zajęć z informatyki w przyszłości
       intro-pulse-survey-q4_csd2_2023:
         answers:
         - correct: true
@@ -16424,7 +16496,7 @@ pl-PL:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Chcę wziąć udział w większej ilości zajęć z informatyki w przyszłości
       intro-pulse-survey-q4_csd3_2023:
         answers:
         - correct: true
@@ -16435,7 +16507,7 @@ pl-PL:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Chcę wziąć udział w większej ilości zajęć z informatyki w przyszłości
       intro-pulse-survey-q4_csd4_2023:
         answers:
         - correct: true
@@ -16446,7 +16518,7 @@ pl-PL:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Chcę wziąć udział w większej ilości zajęć z informatyki w przyszłości
       intro-pulse-survey-q4_csd5_2023:
         answers:
         - correct: true
@@ -16457,7 +16529,7 @@ pl-PL:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Chcę wziąć udział w większej ilości zajęć z informatyki w przyszłości
       intro-pulse-survey-q4_csd6_2023:
         answers:
         - correct: true
@@ -16468,7 +16540,7 @@ pl-PL:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Chcę wziąć udział w większej ilości zajęć z informatyki w przyszłości
       intro-pulse-survey-q5_csd1_2023:
         answers:
         - correct: true
@@ -16535,6 +16607,10 @@ pl-PL:
         - correct: true
         questions:
         - {}
+      intro-pulse-survey_csd1_2023:
+        title: Szybka ankieta o rozwiązywaniu problemów i obliczaniu!
+      intro-pulse-survey_csd2_2023:
+        title: Szybka ankieta dotycząca tworzenia stron internetowych!
       made-choices-about-assignments:
         answers:
         - correct: true

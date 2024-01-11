@@ -8,7 +8,7 @@ title: Час на кода Как да Ръководство
 
 ### Присъединете се към движението и запознайте учениците си с компютърните науки с тези стъпки.
 
-Students today should learn how to create technology, not just use it.
+Учениците днес трябва да се научат как да създават технологии, а не просто да я използват.
 
 Опитвайки Hour of Code е прост и забавен начин да се запознаят студентите с компютърните науки, може би за първи път! Намерете дейност, която отговаря на вашата настройка, независимо дали е в клас или след училище, лично или виртуално. Разгледайте нашето ръководство за [участие, ако все още имате въпроси]({{ localized_files/participation_guide }}) след проверка на стъпките по-долу:
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-Когато се [регистрирате за събитието Hour of Code](/#join), ще получите полезни имейл съобщения с новини и съвети за провеждане на успешен Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Когато се регистри [рате за вашето събитие „Час на кода“](/events), ще получавате полезни имейл съобщения с новини и съвети за провеждане на успешен Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -136,7 +136,7 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Отпечатайте сертификат]({{ urls/certificates }}) и за вашите ученици.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - Споделете снимки и видео на събитието си в социалните медии. Използвайте #HourOfCode и @codeorg,, така ще можем да научим за Вашия успех!
 

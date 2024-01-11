@@ -51,6 +51,7 @@ tr:
       Assessment: Değerlendirme
       Attribution: İlişkilendirme
       Back and Forth: Geri ve ileri
+      Balance an Ecosystem: Bir Ekosistemi Dengele
       Basic Conditionals: Temel Koşullar
       Bass, Mid, and Treble: Bas, Orta ve Tiz
       Be a Super Digital Citizen: Süper Bir Dijital Vatandaş Olun
@@ -91,6 +92,7 @@ tr:
       'Challenge: Updating Variables': 'Meydan Okuma: Değişkenleri Kaydetmek'
       Challenges: Mücadeleler
       Change: Değiştir
+      Check For Understanding: Konuyu Ne Kadar İyi Anladığınızı Test Edin
       Check Your Work: Çalışmanızı Kontrol Edin
       Check for Understanding: Anlamak için Kontrol Edin
       Check-In Survey: Kontrol Anketi
@@ -159,6 +161,8 @@ tr:
       Drawing: Çizim
       Drawing Shapes: Şekil Çizmek
       Driver Alert System: Sürücü Uyarı Sistemi
+      Ecosystems Simulation: Ekosistem Simülasyonu
+      Ecosystems Video: Ekosistemler Videosu
       Editing Images: Resimleri Düzenleme
       End of Course Projects: Kurs Projelerinin Sonu
       End-Of-Unit Survey: Ünite-Sonu Anketi
@@ -194,6 +198,7 @@ tr:
       Extra Challenge: Ekstra Zorluk
       'Extra Challenge: Sound Board': 'Ekstra Zorluk: Ses Kartı'
       Field Collector App: Field Collector Uygulaması
+      Final Dance Party Project: Final Dans Partisi Projesi
       Final Room Escape App: Nihai Odadan Kaçış Uygulaması
       Find the Wizard: Sihirbazı Bul
       Finish a Screen: Bir Ekranı Bitir
@@ -204,6 +209,7 @@ tr:
       Follow the Algorithm - Unplugged Activity: Algoritmayı İzle - Bağlantısız Aktivite
       Follow the Mouse: Fareyi Takip Edin
       Fonts and Style: Yazı Tipleri ve Stil
+      Food Chain Setup: Besin Zinciri Kurulumu
       FoodFight: Yemek Savaşı
       For Loop Fun - Unplugged Activity: For Döngüsü Eğlencesi - Bağlantısız Aktivite
       For Loops: For (İçin) Döngüleri
@@ -233,6 +239,7 @@ tr:
       Hyperlinks: Köprü
       Ice Age Loops: Buz Devri Döngüleri
       If Statements: Eğer (If) Durumları
+      If... then... Conditional Statements: If... then... Koşullu İfadeleri
       Images and Sounds: Görüntüler ve Sesler
       Images in HTML: HTML'de Görseller
       Import Your Model: Modelinizi İçe Aktarın
@@ -247,6 +254,7 @@ tr:
       InspirationalArtwork: İlham Verici Eser
       Interactive Art: İnteraktif Sanat
       Interactive Card: İnteraktif Kart
+      Intro Video: Giriş Videosu
       Intro to Flyer Game: Flyer Oyununa Giriş
       Intro to For Loops: Döngüler İçin Giriş
       Intro to Side Scrollers: Yan Kaydırıcılara Giriş
@@ -261,6 +269,7 @@ tr:
       Iteration and Parameters: Tekrarlama ve Parametreler
       Keep On Dancing!: Dans Etmeye Devam!
       Keeping Data Secret: Verileri Gizli Tutmak
+      Key Press & At Measure Events: Tuşa Basma ve Ölçüm Olayları
       Keyboard Input: Klavye girişi
       Kim's Survey: Kim'in Anketi
       Kim's Survey Data: Kim'in Anket Verileri
@@ -280,6 +289,7 @@ tr:
       Looking for Patterns: Desen Arama
       Looping: Döngüleme
       Loops with the Artist: Sanatçı ile Döngüler
+      Make Dancer & Dance Move: Dansçı ve Dans Hareketi Yap
       Make Your Sprites: Hareketli Nesnelerinizi Yapın
       Make a Prediction: Bir Tahminde Bulun
       Make an Interactive Card: Etkileşimli bir Kart Yapın
@@ -428,6 +438,7 @@ tr:
       Share Out: Paylaş
       Share Your App: Uygulamanızı Paylaşın
       Share Your Pages: Sayfalarınızı Paylaşın
+      Share Your Simulation: Simülasyonunu Paylaş
       Share Your Stylesheets: Stil Sayfalarınızı Paylaşın
       Shoe Recommendation Survey: Ayakkabı Öneri Anketi
       Shoe Recommender: Ayakkabı Önerici
@@ -438,6 +449,8 @@ tr:
       Sliders: Kaydırıcılar
       Smart Bike - Blinkers: Akıllı Bisiklet - Flaşörler
       Social Sleuth: Sosyal Dedektif
+      Solution 2 - Fishing Season: Çözüm 2 - Balıkçılık Sezonu
+      Solution 3 - Fishing Limits: Çözüm 3 - Balıkçılık Sınırları
       Songwriting - Functions Unplugged Activity: Şarkı Yazma - Bağlantısız Fonksiyonlar Aktivitesi
       Speed it Up, Slow it Down: Hızlandır, Yavaşlat
       Sprite Lab Example Project: Hareketli Nesne Laboratuvarı Örnek Proje
@@ -462,6 +475,7 @@ tr:
       The Buzzer: ' Buzzer'
       The Collector: Toplayıcı
       The Draw Loop: Döngü çiz
+      The Food Chain: Besin Zinciri
       The Harvester: Hasatçı
       The Internet - Unplugged Activity: İnternet - Bağlantısız Aktivite
       The Power of Words - Unplugged Activity: Sözcüklerin Gücü - Bağlantısız Aktivite
@@ -476,6 +490,7 @@ tr:
       Unplugged Activity: Bilgisayarsız Etkinlik
       Updating Your Prototype: Prototipinizi Güncelleme
       Upload Your Images: Resimlerinizi Yükleyin
+      Use AI: Yapay zekayı kullanın
       User Interface: Kullanıcı Arayüzü
       Using Getters and Setters: Alıcıları ve Ayarlayıcıları Kullanma
       Using HTML Tags: HTML Etiketlerini Kullanma

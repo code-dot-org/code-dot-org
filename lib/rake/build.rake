@@ -29,7 +29,7 @@ namespace :build do
       RakeUtils.system "npm run #{npm_target}"
       File.write(commit_hash, calculate_apps_commit_hash)
 
-      if rack_env?(:staging) && DCDO.get('deploy_storybook', false)
+      if rack_env?(:staging) && DCDO.get('deploy_storybook', true)
         ChatClient.log 'Deploying <b>storybook</b>...'
         RakeUtils.system 'npm run storybook:deploy'
       end
@@ -111,7 +111,18 @@ namespace :build do
         # The sequencing described here is the best for mitigating any issues
         # that may arise when that best practice is not followed.
         ChatClient.log 'Restarting <b>dashboard</b> Active Job worker(s).'
-        RakeUtils.system 'bin/delayed_job', 'restart'
+        if rack_env?(:production)
+          # WARNING: the number of workers in production is safe to increase,
+          # but is not safe to lower without additional steps. specifically, if
+          # you lower the number of jobs from 10 to 8 (for example), you'll need
+          # to manually kill workers 8 and 9 (zero-based). otherwise, those
+          # workers will continue to run jobs using older code indefinitely.
+          RakeUtils.system 'bin/delayed_job', '-n', '10', 'restart'
+        elsif !rack_env?(:development)
+          # development environment does not use delayed_job by default.
+          # all other non-production daemons should run one worker.
+          RakeUtils.system 'bin/delayed_job', 'restart'
+        end
 
         # Commit dsls.en.yml changes on staging
         dsls_file = dashboard_dir('config/locales/dsls.en.yml')

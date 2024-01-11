@@ -52,6 +52,7 @@ ja:
         age: '年齢'
         gender: '性別'
         edit_header: 'アカウント詳細を編集する'
+        ai_settings_header: 'AI設定'
         finish_sign_up_header: 'アカウントの作成を完了します'
         finish_sign_up_header_error: '次の間違い（エラー）を正しく直してください。'
         finish_sign_up_subheader: '<strong>%{email}</strong>のCode.orgアカウント作成を完了するには、次の情報を入力してください。'
@@ -1307,4 +1308,3 @@ ja:
     binary: "２しんすう"
     hexadecimal: "16 進数"
     pixel_format_header: "ピクセルフォーマット"
-

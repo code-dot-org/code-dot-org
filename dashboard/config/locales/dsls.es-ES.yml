@@ -1888,94 +1888,152 @@ es-ES:
         answers:
         - text: Tu fecha de nacimiento
         - text: Tu dirección
-        - {}
+        - text: Tu número de teléfono
         - text: Tu nombre
         - correct: true
           text: Todo lo anterior
         questions:
-        - {}
+        - text: "¿Cuál de las opciones siguientes es un ejemplo de tu huella digital?"
+        teacher_markdown: "**Contenido: Unidad 2 Lección 5**\n"
       CSD U2 MC Q11_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Publicado anónimamente
+        - text: Las imágenes son de alta calidad
+        - text: Muchos anuncios
         - correct: true
+          text: Se citan las fuentes
         questions:
-        - {}
+        - text: "¿Cuál de los siguientes elementos es más probable que aumente la
+            fiabilidad de un sitio web?"
+        teacher_markdown: "**Contenido: Unidad 2 Lección 16**"
       CSD U2 MC Q1_2023:
         answers:
         - text: HTML
         - correct: true
           text: CSS
-        - {}
+        - text: Etiqueta
         - text: Cabecera
-        - {}
+        - text: Elemento
         questions:
-        - {}
+        - text: ¿Qué palabra define mejor "un lenguaje utilizado para describir el
+            estilo de los elementos HTML"?
+        teacher_markdown: "**Contenido: Unidad 2 Lección 6**\n"
       CSD U2 MC Q2_2023:
         answers:
         - correct: true
-        - {}
-        - {}
+          text: Cambia el color de fondo
+        - text: Añade una imagen
+        - text: Añade un enlace
         - correct: true
-        - {}
+          text: Cambia el tamaño de fuente
+        - text: Añade texto
         questions:
-        - {}
+        - text: "¿Cuáles de estas tareas son las más apropiadas para CSS? (Selecciona
+            todas las que procedan)"
+        teacher_markdown: |
+          **Contenido: Unidad 2 Lecciones 6, 11, 17**
+
+          CSS se utiliza para dar estilo a una página web. Cambiar el color de fondo y el tamaño de la fuente son cambios de estilo.
+          HTML se utiliza para añadir contenido, como imágenes, enlaces y texto.
       CSD U2 MC Q3_2023:
         answers:
         - correct: true
-        - {}
+          text: "![](https://images.code.org/c6bc7e8a8cf8f1657d0a1f64db16166c-Q3A.png)"
+        - text: "![](https://images.code.org/452f76834bf0e2f515609b91e2cc93ab-Q3B.png)"
         - correct: true
-        - {}
-        - {}
+          text: "![](https://images.code.org/fc4436f26aab128b600627593df6fabe-Q3C.png)"
+        - text: "![](https://images.code.org/6d583761b5ad33fead10f5a20fa1dfb8-Q3D.png)"
+        - text: "![](https://images.code.org/47f793758bfc9dfdb7acdbb2cd463bec-Q3E.png)"
         questions:
-        - {}
+        - text: "¿Qué es lo más probable que encuentres en un archivo CSS? (Selecciona
+            todo lo que corresponda)"
+        teacher_markdown: |
+          **Contenido: Unidad 2 Lecciones 6, 11, 17**
+
+          En los archivos CSS, las reglas se encuentran dentro de llaves `{}` y cada regla consta de un nombre de propiedad y un valor, separados por dos puntos `:`. Las etiquetas HTML utilizan `<>`.
       CSD U2 MC Q4_2023:
         answers:
-        - {}
+        - text: "![](https://images.code.org/d49981e345a88ce58647add3ba6807bc-Q4A.png)"
         - correct: true
-        - {}
-        - {}
-        - {}
+          text: "![](https://images.code.org/540bb99c455f60eef6b53dbc2a331800-Q4B.png)"
+        - text: "![](https://images.code.org/190cfc23694120427d44f5906d8010f6-Q4C.png)"
+        - text: "![](https://images.code.org/74ea8b1198ccf40d8db98e24bec9d736-Q4D.png)"
+        - text: "![](https://images.code.org/ff1b9a3fb0056055aee686115100e6f4-Q4E.png)"
+        markdown: |
+          Teniendo en cuenta el siguiente sitio web, ¿qué añadirías al archivo CSS para que las imágenes de nubes y arco iris tengan una altura de 50 px?
+
+
+          ![](https://images.code.org/38a38bae67a6e5649ea73a2764789caa-Q4Q.png)
         questions:
         - {}
+        teacher_markdown: |
+          **Contenido: Unidad 2 Lección 17**
+
+          La imagen de las nubes y la imagen del arco iris tienen la clase weather. Para escribir un conjunto de reglas de estilo para esa clase, el selector del conjunto de reglas tiene un `.` antes del nombre de la clase.
       CSD U2 MC Q6_2023:
         answers:
         - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+          text: "![](https://images.code.org/dc571a891739ecd66b791a79e791c800-Q5A.png)"
+        - text: "![](https://images.code.org/a0a6bbb84c540cf54a56a18d3c3d7350-Q5B.png)"
+        - text: "![](https://images.code.org/f2e692ea730b4355824599dd81b9c182-Q5C.png)"
+        - text: "![](https://images.code.org/e2ef2fed28f1e1cb61ac4b7a79fa516d-Q5D.png)"
+        - text: "![](https://images.code.org/c2506628884c40faee24f4b963d5b9aa-Q5E.png)"
+        markdown: '<img src="https://images.code.org/9998bbd054bfd8f796732c6a9b5910dc-Q5Q.png">
+
+          '
         questions:
-        - {}
+        - text: Teniendo en cuenta esta página web, predice el HTML.
+        teacher_markdown: |
+          **Contenido: Unidad 2 Lección 3**
+
+          Las cabeceras son los títulos de sección de diferentes tamaños que aparecen en una página web. Hay cabeceras de diferentes tamaños, marcadas por el número que aparece junto a la h en la etiqueta de cabecera. Van de `<h1>` a `<h6>`.
         title: Pregunta 1
       CSD U2 MC Q7_2023:
         answers:
-        - {}
-        - {}
+        - text: No debería existir el atributo `alt`
+        - text: "`img` debería ser `image`."
         - correct: true
-        - {}
-        - {}
+          text: Añade una comilla inicial al nombre del archivo `rainbow.jpg`.
+        - text: Añade una etiqueta de cierre `</img>`.
+        - text: No es necesario ningún cambio
         questions:
-        - {}
+        - text: Depura la siguiente etiqueta de imagen `<img src=arcoiris.jpg" alt="un
+            arcoiris">`
+        teacher_markdown: "**Contenido: Unidad 2 Lección 9**\n"
       CSD U2 MC Q8_2023:
         answers:
-        - {}
-        - {}
+        - text: "![](https://images.code.org/ac762e4fe3140059502bb732b090ad6f-Q7A.png)"
+        - text: "![](https://images.code.org/0fa7bd96dbfa60be99c5dd71ed9951dd-Q7B.png)"
         - correct: true
-        - {}
-        - {}
+          text: "![](https://images.code.org/19afd172367c596ac262dfa63fec531f-Q7C.png)"
+        - text: "![](https://images.code.org/31dc21ab905ced882b83096b77e8c905-Q7D.png)"
+        - text: "![](https://images.code.org/eb3daf7e55fc47da35adce7e68bdfa07-Q7E.png)"
+        markdown: |
+          | Página web      | HTML |
+          | ----------- | ----------- |
+          | <img src="https://images.code.org/09e13c1790fd937ec1aa2d1e54c438b2-CSDunit2csswebpage.png" style="height: 200px">      | <img src="https://images.code.org/97c4c191ff04d6cb949998db4a1e1540-CSDunit2csshtml.png" style="height: 200px">       |
         questions:
-        - {}
+        - text: Partiendo de esta página web y su HTML, predice el CSS.
+        teacher_markdown: |
+          **Contenido: Unidad 2 Lección 6, 11**
+
+          El tamaño de `<h1>` es menor que el de `<p>`. Teniendo en cuenta que `<h1>` es normalmente más grande que `<p>`, esto debe significar que hay reglas en el CSS que cambian el tamaño de fuente de una o ambas etiquetas. Además, `<p>` es de color azul.
       CSD U2 Match Q1_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: especifica el color del texto
+        - text: especifica el tamaño de una fuente
+        - text: coloca un elemento en el lado izquierdo o derecho de la pantalla y
+            permite que el texto y otros elementos lo envuelvan
+        content1: Empareja CSS con sus definiciones
         questions:
         - text: color
-        - {}
-        - {}
+        - text: tamaño de fuente
+        - text: flotante
+        teacher_markdown: |+
+          **Contenido: Unidad 2 Lección 6, 11, 17**
+
+
+
       CSD U2 PSP Programming:
         markdown: |
           # El proceso de resolución de problemas de programación
@@ -2591,15 +2649,15 @@ es-ES:
           [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">](https://codeprojects.org/5FQC3-_R1-LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
       CSD U2 Top Websites_2018_2019_pilot_2023:
         markdown: |
-          # Sitios Web para la Resolución de Problemas
+          # Sitios web para resolver problemas
 
-          Aquí tienes algunas páginas web creadas para resolver problemas.  Elige dos sitios y utilízalos para completar la guía de actividades.
+          Aquí tienes algunas páginas web creadas para resolver un problema.  Elige dos sitios y utilízalos para completar la guía de actividad.
 
           [<img src="https://images.code.org/752da9829923228ba71fd32499c2a5bf-image-1566856199999.png" style="float: left; margin: 10px">](https://codeprojects.org/3zq0Xy-f0olOr1uy1wzTzdFqvq4bGQx0zi_PrWM5p8Y)
 
           [<img src="https://images.code.org/3dbd54718965bf83f0695422d5600b0c-image-1566240318585.png" style="float: left; margin: 10px">](https://codeprojects.org/0YXSEeSdj7HHu8NqZndJKlRz7dO1Vxj8o70HhBSfTHU/)
 
-          [<img src="https://images.code.org/37b9660399cb69d5c0bbc2603e2c43da-image-1566240321606.png" style="float: left; margin: 10px">](https://codeprojects.org/kMDTPWRtSww05TgT-ZnhnNjpStohzsZGRmBxRTtV6cA/)
+          [<img src="https://images.code.org/37b9660399cb69d5c0bbc2603e2c43da-image-1566240321606.png" style="float: left; margin: 10px">](https://codeprojects.org/projects/weblab/CT6A0qcmIifTaBQUHrZmXHdD0ob7YJtwLtnRG0brSi4)
 
           [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">](https://codeprojects.org/5FQC3-_R1-LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
       CSD U2 expand project:
@@ -2682,6 +2740,7 @@ es-ES:
           clic para mostrar a los alumnos las páginas web de muestra.
       CSD U2 hyperlinks practice_2023:
         description: Practica tus nuevas habilidades aquí.
+        display_name: Usando hipervínculos
       CSD U2 image debug match:
         answers:
         - text: <img src="https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34
@@ -3718,6 +3777,9 @@ es-ES:
         description: Consulta tu guía de actividad para recomendar una de estas plantillas
           a cada cliente en función de sus necesidades.
         display_name: Plantillas de Animación y Diseño de Juegos
+      CSD U3 L7 review_2023:
+        description: Repasa los distintos tipos de bloques de figuras que hemos visto
+          hasta ahora. ¿Cuáles puedes utilizar para crear la cara de tu robot?
       CSD U3 Lesson Overview 1:
         markdown: |-
           # Visión general
@@ -3960,37 +4022,59 @@ es-ES:
       CSD U3 MC Q10_2023:
         answers:
         - correct: true
+          text: "![](https://images.code.org/e4ff593bc5e40a2d06fbd2951d856abf-Q7a.png)"
         - correct: true
-        - {}
-        - {}
+          text: "![](https://images.code.org/f59580338cd356b19a777f4f82445f6e-Q7b.png)"
+        - text: "![](https://images.code.org/3078be2fb61a7cf602aca3c4cea94ec7-Q7c.png)"
+        - text: "![](https://images.code.org/4695aeb79a351056af610ab2b34551f1-Q7d.png)"
         questions:
-        - {}
+        - text: "¿Cuál de los siguientes programas dibuja correctamente un rectángulo
+            en una posición `x` aleatoria? (Selecciona dos)"
+        teacher_markdown: "**Contenido: Unidad 3 Lección 6**\n"
       CSD U3 MC Q11_2023:
         answers:
-        - {}
+        - text: "![](https://images.code.org/37a23b8e8d04dffa42a74222fea74515-Q8a.png)"
         - correct: true
-        - {}
-        - {}
+          text: "![](https://images.code.org/acc18aa176e905cd1f03eb36d933ea39-Q8b.png)"
+        - text: "![](https://images.code.org/7106ba30085775c3b7dce2d49561127c-Q8c.png)"
+        - text: "![](https://images.code.org/e55f49f640d7b9f9adfecd5eb09ce431-Q8d.png)"
+        markdown: |
+          ¿Qué programa dibujará la imagen de abajo?
+          <br><br>
+          ![](https://images.code.org/766e6f93a1cc4a1fc41b16a3edd1abfc-Q8Q.png)
         questions:
         - {}
+        teacher_markdown: |
+          **Contenido: Unidad 3 Lección 2**
+
+          Como la elipse verde está encima del rectángulo rojo, primero hay que dibujar el rectángulo rojo y luego la elipse verde.
       CSD U3 MC Q12_2023:
         answers:
-        - {}
-        - {}
+        - text: "`orangeFish.moveLeft();`"
+        - text: '`orangeFish.move = "left";`'
         - correct: true
-        - {}
-        - {}
+          text: "`orangeFish.x = orangeFish.x - 2;`"
+        - text: "`orangeFish.x = orangeFish.x + 2;`"
+        - text: Sin cambios, el programa ya anima a los peces a moverse a la izquierda
+        markdown: |
+          Necesitas actualizar el código de abajo para animar al pez a moverse del lado derecho de la pantalla al lado izquierdo de la pantalla. En el bucle de dibujo, ¿qué línea de código necesitas añadir antes de `drawSprites()`?
+          <br><br>
+          ![](https://images.code.org/decc7b1884765200536a1081c4efa011-CSDunit3smoothmotion.png)
         questions:
         - {}
+        teacher_markdown: "**Contenido: Unidad 3 Lección 12**\n"
       CSD U3 MC Q13_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "`monkey.displace(rabbit);`"
+        - text: "`​​​​​elephant.collide(hippo);`"
+        - text: "`giraffe.bounce(parrot);`"
         - correct: true
-        - {}
+          text: "`rock.velocityY = rock.velocityY + 0.2;`"
+        - text: "`snake.bounceOff(pig);`"
         questions:
-        - {}
+        - text: Tu amigo ha añadido código para simular la gravedad. ¿Qué nueva línea
+            de código es más probable que veas en su programa?
+        teacher_markdown: "**Contenido: Unidad 3 Lección 22, 23**\n"
       CSD U3 MC Q14_2023:
         answers:
         - text: '0'
@@ -3999,97 +4083,195 @@ es-ES:
         - correct: true
           text: '6'
         - text: '100'
+        markdown: |
+          Observa el siguiente programa. ¿Cuál es el valor de `score` al final de este programa?
+          <br><br>
+          ![](https://images.code.org/b5b627075db961b5cd56afe9447153d4-CSDunit3variable.png)
         questions:
         - {}
+        teacher_markdown: |
+          **Contenido: Unidad 3 Lección 5, 6**
+
+          Después de la línea de código `puntuación = puntuación + 1`, `puntuación` tiene el valor `1`. Como la condición `salud > 90` es verdadera, se ejecuta la línea de código `puntuación = puntuación + 5`. puntuación` tiene ahora un valor de `6`.
       CSD U3 MC Q1_2023:
         answers:
-        - {}
+        - text: "`a`"
         - correct: true
-        - {}
-        - {}
-        - {}
+          text: "`volumen`"
+        - text: "`más alto`"
+        - text: "`100`"
+        - text: "`silencio`"
         questions:
-        - {}
+        - text: Quieres crear una variable para almacenar el volumen de la música
+            que suena en tu móvil. ¿Cuál de los siguientes sería el mejor nombre para
+            la variable?
+        teacher_markdown: |
+          **Contenido: Unidad 3 Lección 5**
+
+          El nombre más significativo es `volumen`. `más alto` y `silencio` son posibles valores para el volumen de la música, pero no son buenos nombres de variable.
       CSD U3 MC Q2_2023:
         answers:
-        - {}
+        - text: Mueve `background("blue");` al final del programa
         - correct: true
-        - {}
-        - {}
-        - {}
+          text: Mueve `drawSprites();` al final del programa
+        - text: Renombra la variable `sprite` a `crab`.
+        - text: Elimina la línea de código `background("blue");`
+        - text: Sin cambios, el programa ya funciona
+        markdown: |
+          El siguiente programa trata de dibujar un cangrejo con fondo azul. ¿Qué cambio hay que hacer para que funcione correctamente?
+          <br><br>
+          ![](https://images.code.org/34bb691c1fd9a278f739d4a6c8385e22-CSDunit3sprite.png)
         questions:
         - {}
+        teacher_markdown: |
+          **Contenido: Unidad 3 Lección 7**
+
+          `drawSprites()` debe ser llamada después de que todos los sprites hayan sido creados.
       CSD U3 MC Q4_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "`drawRect;` debería estar al final del programa"
+        - text: '`fill("blue");` debe moverse fuera de la función y después de `drawRect;`.'
+        - text: '`fill("blue");` debe moverse fuera de la función y antes de `drawRect;`.'
         - correct: true
-        - {}
+          text: "`drawRect;` debería ser `drawRect();`."
+        - text: "`rect(0, 300, 200, 50);` debería ser `rect(0, 300);`"
+        markdown: |
+          El programa de abajo trata de dibujar un rectángulo azul pero no funciona como es debido. ¿Qué cambio hay que hacer para que se dibuje el rectángulo azul?
+          <br><br>
+          ![](https://images.code.org/ff53ff4ce4f5e8d5a151ddca8a6ba9ea-CSDunit3function.png)
         questions:
         - {}
+        teacher_markdown: |
+          **Contenido: Unidad 3 Lección 24**
+
+          Siempre que quieras utilizar una función tienes que llamarla por su nombre. Para ello, escribe el nombre de la función seguido de un paréntesis.
         title: Pregunta 1
       CSD U3 MC Q5_2023:
         answers:
-        - {}
-        - {}
+        - text: "![](https://images.code.org/4c1d34a18bbc96741a3524588f685716-Q4a.png)"
+        - text: "![](https://images.code.org/f8d6d5d2f909e6f0d7a6a7be17fc7ded-Q4b.png)"
         - correct: true
-        - {}
-        - {}
+          text: "![](https://images.code.org/2c922712645ffa2bba2e568a881a0e0f-Q4c.png)"
+        - text: "![](https://images.code.org/91d95231884f016ddb39505da590c7d1-Q4d.png)"
+        - text: "![](https://images.code.org/75ebaac84bc91d138d704db0b256e972-Q4e.png)"
+        markdown: |
+          Teniendo en cuenta las siguientes funciones, escribe un programa que dibuje la escena de la derecha.
+          <br><br>
+
+          | Funciones      | Escena |
+          | ----------- | ----------- |
+          | <img src="https://images.code.org/2c614e5926ee3fff343ae24f766d6374-CSDunit3usefunctioncode.png" style="height: 300px">      | <img src="https://images.code.org/132715046162dc2a0a43e09f733c35c8-CSDunit3usefunction.png" style="height: 300px">       |
         questions:
         - {}
+        teacher_markdown: |
+          **Contenido: Unidad 3 Lección 24**
+
+          Como el fondo es amarillo, se debe llamar a `drawBackground()`. Como el rectángulo rojo está encima de la elipse verde, se llama a `drawTwo()` después de `drawOne()`.
       CSD U3 MC Q6_2023:
         answers:
-        - {}
-        - {}
+        - text: Llama a `.moveRight()`
+        - text: Añade una línea de código para cambiar `rect.x = 100;`
         - correct: true
-        - {}
+          text: Actualiza el primer argumento de `rect()` a `100`.
+        - text: 'No es necesario ningún cambio: el rectángulo se anima para moverse
+            a la derecha'
+        markdown: |+
+          El programa de abajo dibuja la escena a la derecha, pero tú quieres que el rectángulo esté más a la derecha. ¿Cómo puedes cambiar el código para conseguirlo?
+          <br><br>
+
+          | Programa      | Escena |
+          | ----------- | ----------- |
+          | <img src="https://images.code.org/41a7d5893dada7d524bff6a3a8aa5fc9-Q5code.png" style="width:250px;">       |   <img src="https://images.code.org/14300f79bf6319236ee8f6962b8fda5b-q5Scene.png" style="height: 200px">    |
+
         questions:
         - {}
+        teacher_markdown: |
+          **Contenido: Unidad 3 Lección 4**
+
+          El primer parámetro de `rect()` es la posición `x`. Aumentando la posición `x` a `100`, el rectángulo estará más a la derecha.
       CSD U3 MC Q8_2023:
         answers:
-        - {}
+        - text: Cuando se pulsa el botón derecho del ratón, el sprite se mueve hacia
+            la derecha. Cuando se pulsa el botón izquierdo del ratón, gira.
         - correct: true
-        - {}
-        - {}
-        - {}
+          text: Cuando se pulsa el botón izquierdo del ratón, el sprite gira. Cuando
+            se pulsa el botón derecho del ratón, se mueve hacia la derecha.
+        - text: Cuando se pulsan el botón izquierdo del ratón y la tecla de flecha
+            derecha, el sprite gira y se desplaza hacia la derecha.
+        - text: Cuando se pulsa el botón izquierdo del ratón, el sprite gira. Si se
+            pulsa la flecha derecha, se mueve hacia la derecha. Si se pulsa la flecha
+            izquierda, se desplaza hacia la izquierda.
+        - text: Cuando se pulsa el botón izquierdo del ratón, el sprite gira. Si se
+            pulsa la flecha derecha, se mueve hacia la derecha. Si se pulsa la flecha
+            izquierda, se mueve hacia la izquierda. Si se pulsa la flecha hacia arriba,
+            se mueve hacia arriba. Si se pulsa la flecha hacia abajo, se mueve hacia
+            abajo.
+        markdown: |
+          Describe lo que ocurrirá en el siguiente programa.
+          <br><br>
+          ![](https://images.code.org/ffa87a30850917e891ef424bc415e896-CSDunit3input.png)
         questions:
         - {}
+        teacher_markdown: "**Contenido: Unidad 3 Lección 15, 16**\n"
       CSD U3 Match Q1_2023:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Configura la escala del sprite de las patatas fritas a 0,6.
+        - text: Cambia la posición `x` del sprite de las patatas fritas a 100.
+        - text: Cambia la posición `y` del sprite de las patatas fritas a 50.
+        - text: Gira el sprite de las patatas fritas.
+        content1: Empareja cada línea de código con su explicación.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "`fries.scale = 0.6;`"
+        - text: "`fries.x = 100;`"
+        - text: "`fries.y = 50;`"
+        - text: "`fries.rotation = 45;`"
+        teacher_markdown: |+
+          **Contenido: Unidad 3 Lección 8**
+
+
+
+
       CSD U3 Match Q2_2023:
         answers:
         - text: x
         - text: y
         - text: ancho
         - text: altura
+        markdown: "Empareja cada parámetro del bloque `rect()` con su propósito: `rect(parámetro1,
+          parámetro2, parámetro3, parámetro4);` \n<br>*Pista: el siguiente programa
+          dibuja la escena de la derecha.*\n<br><br>\n\n| Programa     | Escena |\n|
+          ----------- | ----------- |\n|   <img src=\"https://images.code.org/2ebb00b797f6554cc0eba4ffe9b1d6fe-CSDunit3parameterscode.png\"
+          style=\"height: 200px\">    | <img src=\"https://images.code.org/5b2afa9ecd953b4716fc7dfafe61ef26-Q13scene.png\"
+          style=\"height: 200px\">     |\n"
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: parámetro1
+        - text: parámetro2
+        - text: parámetro3
+        - text: parámetro4
+        teacher_markdown: |+
+          **Contenido: Unidad 3 Lección 4**
+
+
       CSD U3 Match Q3_2023:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "¿Es la  `x` del sprite panda mayor que la `x` del sprite rinoceronte?"
+        - text: "¿La velocidad `x` del sprite panda es mayor que 0?"
+        - text: "¿La escala del sprite rinoceronte es mayor que 1?"
+        - text: "¿La altura del sprite panda es igual a la del sprite rinoceronte?"
+        - text: "¿La altura del sprite panda es igual a su anchura?"
+        content1: Relaciona cada expresión booleana con su descripción.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "`panda.x > rhino.x`"
+        - text: "`panda.velocityX > 0`"
+        - text: "`rhino.scale > 1`"
+        - text: "`panda.height == rhino.height`"
+        - text: "`panda.height == panda.width`"
+        teacher_markdown: |+
+          **Contenido: Unidad 3 Lección 14**
+
+
+
+
       CSD U3 Movement Challenges:
         markdown: |
           # Desafíos
@@ -4867,64 +5049,111 @@ es-ES:
           Después de terminar tu proyecto, querrás reflexionar sobre si tu juego ha resultado como habías planeado, y sobre las formas en que podrías mejorar tu proceso para la próxima vez.
       CSD U4 MC Q1_2023:
         answers:
-        - {}
+        - text: Las personas que escriben el código de la aplicación
         - correct: true
-        - {}
+          text: Personas con asma u otras enfermedades respiratorias
+        - text: Los investigadores que realizan las entrevistas a los usuarios
         - correct: true
+          text: Personas que pasan mucho tiempo al aire libre en la ciudad
         questions:
-        - {}
+        - text: Estás desarrollando una aplicación que te avisará cuando la calidad
+            del aire en tu ciudad sea mala. ¿Quiénes serían probablemente los usuarios
+            de la aplicación? (*Selecciona dos*)
+        teacher_markdown: |
+          **Contenido: Unidad 4 Lección 3**
+
+          Los usuarios objetivo son los que más probablemente utilizarán la aplicación, no necesariamente las personas que la crean.
       CSD U4 MC Q2_2023:
         answers:
-        - {}
+        - text: '"Me gusta ver el fútbol".'
         - correct: true
-        - {}
+          text: '"Cuido mascotas para mis familiares".'
+        - text: '"El tiempo ha sido muy bueno últimamente".'
         - correct: true
+          text: '"Hay un parque para perros cerca que es muy popular".'
         questions:
-        - {}
+        - text: Durante el diseño de un collar inteligente que rastreará a las mascotas,
+            decidiste entrevistar a un usuario. ¿Cuál de las siguientes respuestas
+            de la entrevista es más útil para crear un perfil del usuario? (*Selecciona
+            dos*)
+        teacher_markdown: |+
+          **Contenido: Unidad 4 Lección 2, 3**
+
+          Estas afirmaciones son las más relevantes para el diseño de un collar inteligente para mascotas.
+
       CSD U4 MC Q3_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Instalar más contenedores públicos de basura y reciclaje
+        - text: Crear una aplicación de seguimiento de la basura para centrar los
+            esfuerzos
+        - text: Organizar actos de limpieza comunitaria
         - correct: true
+          text: Ignorar el problema
         questions:
-        - {}
+        - text: 'Durante una entrevista, un usuario mencionó una necesidad: "Nuestra
+            ciudad es muy bonita, pero últimamente hemos tenido algunos problemas
+            con la basura y los desperdicios en nuestra comunidad". ¿Cuál de las siguientes
+            opciones NO es una estrategia para satisfacer las necesidades del usuario?'
+        teacher_markdown: "**Contenido: Unidad 4 Lección 7**\n"
       CSD U4 MC Q4_2023:
         answers:
         - text: Botón
         - correct: true
+          text: Entrada de texto
         - text: Desplegable
-        - {}
+        - text: Botón de radio
         - text: Casilla de verificación
         questions:
-        - {}
+        - text: En tu aplicación, quieres añadir un elemento de entrada que permita
+            a los usuarios escribir su comida favorita. ¿Qué elemento de entrada sería
+            el mejor?
+        teacher_markdown: "**Contenido: Unidad 4 Lección 11**\n"
       CSD U4 MC Q5_2023:
         answers:
-        - {}
+        - text: Nombre de usuario
         - correct: true
-        - {}
+          text: Pasar a la pantalla siguiente
+        - text: Ajustar el brillo de los colores en la aplicación
         - correct: true
-        - {}
+          text: Confirmar ajustes
+        - text: Seleccionar entre varias opciones
         questions:
-        - {}
+        - text: "¿En cuál de estas situaciones el mejor elemento de entrada sería
+            un botón? (*Selecciona dos*)"
+        teacher_markdown: "**Contenido: Unidad 4 Lección 11**\n"
         title: Pregunta 1
       CSD U4 MC Q8_2023:
         answers:
-        - {}
+        - text: Los usuarios no\t quieren leer las instrucciones
         - correct: true
-        - {}
+          text: Los usuarios tienen problemas para iniciar sesión en la aplicación
+        - text: A los usuarios no les gustan los colores de la aplicación
         - correct: true
+          text: Cuando los usuarios tocan la pantalla para hacer una selección, las
+            entradas están muy cerca y seleccionan una opción involuntariamente.
         questions:
-        - {}
+        - text: "¿Qué problemas tendrían mayor prioridad para los usuarios debido
+            a su impacto en el uso de la aplicación? (*Selecciona dos*)"
+        teacher_markdown: "**Contenido: Unidad 4 Lección 19**"
       CSD U4 MC Q9_2023:
         answers:
         - correct: true
-        - {}
-        - {}
+          text: Varios idiomas
+        - text: Dónde reciclar las botellas
+        - text: Seguimiento del consumo de agua
         - correct: true
+          text: Información sobre botellas desechables y rellenables
         - text: Enviar comentarios
+        markdown: |
+          Teniendo en cuenta la interfaz de usuario y el diseño de esta aplicación, ¿qué necesidades del usuario se resuelven? (*Selecciona dos*)
+          <br>
+
+          <img src="https://images.code.org/34b61b92549607656407b2f62687fb08-CSDunit4design.png" style="width:300px; border: 2px solid #d8d9d9; margin: 0px 1px 0px 1px;">
+          <img src="https://images.code.org/5fe722da5284d45844bf49f48691f5c9-CSDunit4design2.png" style="width:300px; border: 2px solid #d8d9d9;  margin: 0px 1px 0px 1px;">
+          <img src="https://images.code.org/1f64c66ed779f0d2fe051d4aba124a5b-CSDunit4design3.png" style="width:300px; border: 2px solid #d8d9d9; margin: 0px 1px 0px 1px;">
         questions:
         - {}
+        teacher_markdown: "**Contenido: Unidad 4 Lección 2**\n"
       CSD U4 test feature match:
         answers:
         - text: '"Siempre me olvido las gafas de leer".'
@@ -5463,82 +5692,180 @@ es-ES:
         teacher_markdown: "* Interpretación de datos - Ejemplo ([PDF] (https://docs.google.com/document/d/1WFjiEP9-V2v9IIjsqn0MI-o-Xyn19pg_6apNL-a1gGw/export?format=pdf))"
       CSD U5 MC Q1_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "¿Cuántas personas asisten actualmente?"
+        - text: "¿Cuánto cuesta asistir?"
+        - text: "¿A qué hora empiezan y terminan los partidos?"
         - correct: true
-        - {}
+          text: "¿Cuánto cuesta la electricidad por partido?"
+        - text: "¿Qué otros acontecimientos se celebran al mismo tiempo?"
         questions:
-        - {}
+        - text: Tu colegio está intentando aumentar la asistencia a los partidos deportivos.
+            ¿Qué datos tienen MENOS probabilidades de ayudar a resolver el problema?
+        teacher_markdown: |
+          **Contenido: Unidad 5 Lección 9, 10, 11**
+
+          Saber cuánto cuesta la electricidad no ayuda a aumentar la asistencia a los partidos deportivos.
       CSD U5 MC Q2_2023:
         answers:
-        - {}
+        - text: '"Cualquier juego deportivo"'
         - correct: true
+          text: '"¡Gracias por preguntar!"'
         - correct: true
-        - {}
-        - {}
+          text: '"Cualquier cosa con mis amigos"'
+        - text: '"Me encanta escuchar a la banda"'
+        - text: '"¡No puedo esperar a la graduación!"'
+        markdown: "Quieres averiguar qué es lo que más entusiasma a tus compañeros
+          de clase este año, así que creas una encuesta. Las opciones son: \n* Bailes\n*
+          Partidos de voleibol\n* Partidos de baloncesto\n* Conciertos de la banda\n*
+          Conciertos de orquesta\n* La obra de teatro anual\n* Graduación.\n\nCuando
+          miras los resultados de la encuesta, observas que algunas respuestas no
+          se ajustan a las opciones. ¿Cuál de las siguientes respuestas debería ser
+          *eliminada* al limpiar los datos? (*Selecciona dos*) \n\n(*No selecciones
+          respuestas que deban limpiarse para que encajen en una de las categorías*)\n"
         questions:
         - {}
+        teacher_markdown: |+
+          **Contenido: Unidad 5 Lección 9, 10, 11**
+
+          "¡Gracias por preguntar!" y "Cualquier cosa con mis amigos" no encajan en ninguna categoría. Las demás pueden actualizarse para que encajen en una categoría.
+
       CSD U5 MC Q3_2023:
         answers:
-        - {}
+        - text: Verdadero
         - correct: true
+          text: Falso
+        markdown: |
+          Teniendo en cuenta la siguiente tabulación cruzada de mascotas y actividades favoritas, ¿es verdadera o falsa esta afirmación? "Si me gusta la música, lo más probable es que me gusten los pájaros".
+          <br>
+
+          | | Perro | Gato | Pájaro | Serpiente |
+          | ----------- | :-----------: | :-----------: | :-----------: | :-----------: |
+          | Camping | II |  | I | I |
+          | Arte |  | IIIII |  |  |
+          | Vídeo Juegos | III | I |  | I |
+          | Música | IIIIII | II | I | I |
+
+          <br>
         questions:
         - {}
+        teacher_markdown: |
+          **Contenido: Unidad 5 Lección 11, 12**
+
+          Si a alguien le gusta la música, lo más probable es que le gusten los perros.
       CSD U5 MC Q4_2023:
         answers:
-        - {}
-        - {}
+        - text: Si tu comida favorita es el helado, añade 1 punto al Parque Nacional.
+            No añadas puntos a ningún otro sitio.
+        - text: Si tu comida favorita es la pizza, añade 1 punto a Playa. No añadas
+            puntos a ningún otro sitio.
         - correct: true
-        - {}
-        - {}
+          text: Si tu comida favorita es la ensalada, añade 1 punto a Gran Ciudad
+            y 2 puntos a Parque Nacional.
+        - text: Si tu comida favorita son los bocadillos, añade 2 puntos a Playa y
+            1 punto a Parque Nacional.
+        - text: Selecciona al azar un lugar de vacaciones
+        markdown: |
+          A partir de esta tabulación cruzada, ¿cuál de las siguientes reglas tiene más sentido en un algoritmo para recomendar un lugar de vacaciones? (_Se recomendará el lugar con más puntos_)
+          <br>
+
+          | | Playa | Parque de atracciones | Gran ciudad | Parque Nacional |
+          | ----------- | :-----------: | :-----------: | :-----------: | :-----------: |
+          | Helado | IIIII | II | I | - |
+          | Pizza | I | II | II | I |
+          | Ensalada | - | - | I | IIIII |
+          | Sandwiches | II | - | - | III |
+
+          <br>
         questions:
         - {}
+        teacher_markdown: "**Contenido: Unidad 5 Lección 13**"
       CSD U5 MC Q5_2023:
         answers:
         - text: Codificar
         - text: Decodificar
         - {}
         - correct: true
+          text: Sistema binario
         - {}
         questions:
-        - {}
+        - text: ¿Qué palabra se define mejor como "una forma de representar información
+            utilizando sólo dos opciones"?
+        teacher_markdown: "**Contenido: Unidad 5 Lección 3**\n"
       CSD U5 MC Q6_2023:
         answers:
-        - {}
+        - text: HOLA
         - correct: true
-        - {}
-        - {}
-        - {}
+          text: SÍ
+        - text: CSROCKS
+        - text: 'NO'
+        - text: TAL VEZ
+        markdown: |
+          Utilizando este sistema ASCII, ¿qué representa el mensaje?
+          <br>
+
+          | Sistema ASCII      | Mensaje |
+          | ----------- | ----------- |
+          | <img src="https://images.code.org/74aa8a0e290811d71543e45d7b609267-CSDunit5ASCII.png" style="width:600px; border: 2px solid grey;">      | <img src="https://images.code.org/8d596117931879a4aabc576334c10dc2-CSDunit5ASCII2.png" style="width:200px; border: 2px solid grey; margin-left:25px; margin-bottom:300px; padding:15px;"> |
         questions:
         - {}
+        teacher_markdown: "**Contenido: Unidad 5 Lección 3**\n"
       CSD U5 MC Q7_2023:
         answers:
-        - {}
+        - text: "![](https://images.code.org/439f4dc20e44948acc43937c180b7580-CSDunit4binary1.png)"
         - correct: true
-        - {}
-        - {}
-        - {}
+          text: "![](https://images.code.org/c133b716bb0f546dc8cb4915985f2b3d-CSDunit4binary2.png)"
+        - text: "![](https://images.code.org/c38d67eeb5a6b7a9cdbae53cd0e1e020-CSDunit4binary3.png)"
+        - text: "![](https://images.code.org/aab167335ff3aacea1d556db00c17e35-CSDunit4binary4.png)"
+        - text: "![](https://images.code.org/ed5c957b4ef00363785df623501cbf5f-CSDunit4binary5.png)"
         questions:
-        - {}
+        - text: "¿Cómo representarías 15 usando binario? *Recuerda que los cuadrados
+            grises cubren lo que no quieres incluir en tu total.*"
+        teacher_markdown: |
+          **Contenido: Unidad 5 Lección 5**
+
+          Como las cuatro casillas de la derecha están descubiertas, esta representación es igual a 8 + 4 + 2 + 1 = 15.
       CSD U5 MC Q8_2023:
         answers:
-        - {}
+        - text: "![](https://images.code.org/fc3a7a6aebb48f9c70386b6bef7d3ae6-CSDunit5encrypt1.png)"
         - correct: true
-        - {}
-        - {}
-        - {}
+          text: "![](https://images.code.org/12080331f37201dc43ce9c0a2dad2d62-CSDunit5encrypt2.png)"
+        - text: "![](https://images.code.org/cdd1a30727d05a3080aad2f3a201514d-CSDunit5encrypt3.png)"
+        - text: "![](https://images.code.org/7e90e00aa2e6463e3816c17a32c84559-CSDunit5encrypt4.png)"
+        - text: "![](https://images.code.org/9307ed300516704d92a23c70b448b226-CSDunit5encrypt5.png)"
+        markdown: "Recuerda cómo ciframos y desciframos los datos de la tercera fila
+          en registros como el que se muestra a continuación. Al aplicar ese método,
+          ¿cuál es la historia clínica descifrada del registro cifrado de abajo?\n\n*Si
+          los dos cuadros de arriba son del mismo color, será negro. De lo contrario,
+          déjalo blanco.*\n\n![](https://images.code.org/c40a5a98ae8f6dd1e9768a6e642ad9b0-CSDunit5encrypt.png)
+          \n"
         questions:
         - {}
+        teacher_markdown: "**Contenido: Unidad 5 Lección 7**\n"
       CSD U5 MC Q9_2023:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "![](https://images.code.org/2d46b88c90f35f75c49e887a0a7309b0-CSDunit5crosstabulation1.png)"
+        - text: "![](https://images.code.org/94e1a9d9de9c93d758e05874ba1fb5a9-CSDunit5crosstabulation2.png)"
+        - text: "![](https://images.code.org/4014578484daa8c951e79931312c19d2-CSDunit5crosstabulation3.png)"
+        - text: "![](https://images.code.org/6b8a380dc1ac422850644332cbf3641e-CSDunit5crosstabulation4.png)"
         - correct: true
+          text: "![](https://images.code.org/1fee7e7fec46b1712371e2ed6d6c2dac-CSDunit5crosstabulation5.png)"
+        markdown: |
+          Algunas personas han respondido a una encuesta sobre su estación favorita y sobre si son personas de mañana o de noche. Los resultados se incluyen en el siguiente gráfico. ¿Cuál de las siguientes opciones representa una tabulación cruzada de los datos (*excluyendo los nombres de los encuestados*)?
+          <br>
+
+          |<div style="width:70px;">Nombres</div> |<div style="width:90px;"> Estación</div> |<div style="width:100px;"> Hora del día</div> |
+          | :-----------: | :-----------: | :-----------: |
+          | Aiden | Primavera | Noche |
+          | Amara | Primavera | Noche |
+          | Jai | Verano | Noche |
+          | Mei | Verano | Noche |
+          | Omar | Invierno | Mañana |
+          | Sora | Verano | Noche |
+          | Fatima | Primavera | Mañana |
+          | Kai | Invierno | Mañana |
         questions:
         - {}
+        teacher_markdown: "**Contenido: Unidad 5 Lección 11**"
       CSD U5 crosstab warmup:
         content1: descripción aquí
         markdown: |
@@ -6276,11 +6603,15 @@ es-ES:
         answers:
         - {}
         - correct: true
-        - {}
+          text: LEDs
+        - text: Sensor de temperatura
         - correct: true
+          text: Zumbador
         - {}
         questions:
-        - {}
+        - text: "¿Cuáles de las siguientes son salidas de un Circuit Playground? (*Seleccione
+            dos*)"
+        teacher_markdown: "**Contenido: Unidad 6 Lección 2**\n"
       CSD U6 MC Q1_6b2023:
         answers:
         - correct: true
@@ -6297,7 +6628,7 @@ es-ES:
         - text: Temperatura
         - correct: true
           text: Acelerómetro
-        - {}
+        - text: Sonido
         questions:
         - {}
       CSD U6 MC Q2_6b2023:
@@ -6312,10 +6643,16 @@ es-ES:
         - {}
       CSD U6 MC Q3_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Escucha el zumbador durante 100 milisegundos
+        - text: Añade el texto "C4" a la nota del zumbador 100 veces
+        - text: Actualiza la variable del zumbador a "C4"
         - correct: true
+          text: El zumbador hace sonar la nota C4 durante 100 milisegundos
+        markdown: |
+          Describe el código siguiente
+          <br>
+
+          ![](https://images.code.org/a4c16d2eeb8743f758e3614a06754541-CSDunit6output.png)
         questions:
         - {}
       CSD U6 MC Q3_6b2023:
@@ -6328,13 +6665,20 @@ es-ES:
         - {}
       CSD U6 MC Q4_2023:
         answers:
-        - {}
-        - {}
+        - text: "![](https://images.code.org/ad5fa988341363b1ed7e85392f54ac0c-Q4a.png)"
+        - text: "![](https://images.code.org/367cf8510a57d0b321f11fd8ca887969-Q4b.png)"
         - correct: true
-        - {}
-        - {}
+          text: "![](https://images.code.org/a4811733bc2ffe9c584b0833bed81bbd-Q4c.png)"
+        - text: "![](https://images.code.org/abbf176556e87a9ef5a03fa8cbff2138-Q4d.png)"
+        - text: "![](https://images.code.org/a54739ebf95e83d6765d03b4c4545616-Q4e.png)"
         questions:
-        - {}
+        - text: Estás diseñando un programa para responder al botón izquierdo en el
+            Circuit Playground. ¿Qué línea de código es más probable que veas en tu
+            programa?
+        teacher_markdown: |
+          **Contenido: Unidad 6 Lección 4**
+
+          Como el programa debe responder al Circuit Playground, usa `onBoardEvent`. El botón izquierdo es `buttonL`.
       CSD U6 MC Q4_6b2023:
         answers:
         - {}
@@ -6351,6 +6695,11 @@ es-ES:
         - correct: true
         - {}
         - {}
+        markdown: |
+          ¿Cuál de las siguientes opciones describe mejor el código?
+          <br>
+
+          ![](https://images.code.org/7fbc2477b10b1faade290a318cc0657d-CSDunit6eventhandlers.png)
         questions:
         - {}
       CSD U6 MC Q5_6b2023:
@@ -6370,7 +6719,8 @@ es-ES:
         - correct: true
         - {}
         questions:
-        - {}
+        - text: "¿En qué situaciones es más probable que utilices `getProperty`? (*Selecciona
+            dos*)"
       CSD U6 MC Q6_6b2023:
         answers:
         - {}
@@ -29568,25 +29918,44 @@ es-ES:
       intro-pulse-survey-q2_csd4_2023:
         answers:
         - correct: true
+          text: Esto es lo primero que estoy aprendiendo sobre el Proceso de Diseño
+            y el Pensamiento de Diseño
         - correct: true
+          text: 'He hecho actividades más pequeñas de Proceso de Diseño y Pensamiento
+            de Diseño (por ejemplo: una hora de código), pero esta es mi primera clase
+            más larga.'
         - correct: true
+          text: Ya he recibido clases o he realizado tutoriales en línea más largos
+            sobre el Proceso de Diseño y el Pensamiento de Diseño.
         questions:
-        - {}
+        - text: "¿Qué experiencias previas has tenido con el Proceso de Diseño y el
+            Pensamiento de Diseño?"
       intro-pulse-survey-q2_csd5_2023:
         answers:
         - correct: true
+          text: Es la primera vez que aprendo a Utilizar y Representar Datos
         - correct: true
+          text: 'He realizado actividades más pequeñas de Uso y Representación de
+            Datos (por ejemplo: una hora de código), pero esta es mi primera clase
+            más larga'
         - correct: true
+          text: Ya he asistido a clases o he realizado tutoriales en línea más largos
+            sobre Uso y Representación de Datos
         questions:
-        - {}
+        - text: "¿Qué experiencias previas has tenido con el Uso y Representación
+            de Datos?"
       intro-pulse-survey-q2_csd6_2023:
         answers:
         - correct: true
-          text: Esta es la primera vez que aprendo a crear aplicaciones con dispositivos
+          text: Esta es la primera vez que aprendo a crear Aplicaciones con Dispositivos
         - correct: true
+          text: 'He realizado actividades más pequeñas Creando Aplicaciones con Dispositivos
+            (por ejemplo: una hora de código), pero esta es mi primera clase más larga'
         - correct: true
+          text: He asistido ya a clases o he realizado tutoriales en línea más largos
+            sobre Creación de Aplicaciones con Dispositivos
         questions:
-        - {}
+        - text: "¿Qué experiencias previas has tenido creando Aplicaciones con Dispositivos?"
       intro-pulse-survey-q3_csd1_2023:
         answers:
         - correct: true
@@ -29917,8 +30286,12 @@ es-ES:
         title: "¡Encuesta rápida de Desarrollo Web!"
       intro-pulse-survey_csd3_2023:
         title: Animaciones Interactivas y Juegos ¡Encuesta Rápida!
+      intro-pulse-survey_csd4_2023:
+        title: El Proceso de Diseño ¡Encuesta Rápida!
+      intro-pulse-survey_csd5_2023:
+        title: Datos y Sociedad ¡Encuesta rápida!
       intro-pulse-survey_csd6_2023:
-        title: "¡Encuesta rápida sobre creación de aplicaciones con dispositivos!"
+        title: Creación de Aplicaciones con Dispositivos ¡Encuesta Rápida!
       made-choices-about-assignments:
         answers:
         - correct: true
@@ -30125,7 +30498,7 @@ es-ES:
         markdown: |
           ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
 
-          ## [Pulsa aquí](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) para realizar la Encuesta de Recomendación de Calzado
+          <h2> <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform" target="_blank">Pulsa aquí</a> para realizar la Encuesta de Recomendación de Calzado</h2>
       ml-plan survey-copy form:
         markdown: |
           # Copia un Formulario de Google

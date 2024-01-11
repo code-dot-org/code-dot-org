@@ -93,7 +93,7 @@ class BubbleChoice < DSLDefined
 
       if script_level
         previous_level_url = script_level.previous_level ? build_script_level_url(script_level.previous_level) : nil
-        redirect_url = script_level.next_level_or_redirect_path_for_user(user, nil, true)
+        redirect_url = script_level.next_level_or_redirect_path_for_user(user, bubble_choice_parent: true)
 
         summary.merge!(
           {
@@ -177,6 +177,11 @@ class BubbleChoice < DSLDefined
     summary
   end
 
+  # Overrides original method declared in Level class.
+  def get_level_for_progress(student, script)
+    get_sublevel_for_progress(student, script) || self
+  end
+
   # Determine which sublevel's status to display in our progress bubble.
   # If there is a sublevel marked with feedback "keep working", display that one. Otherwise display the
   # progress for sublevel that has the best result
@@ -185,6 +190,18 @@ class BubbleChoice < DSLDefined
     return keep_working_level if keep_working_level.present?
 
     return best_result_sublevel(student, script)
+  end
+
+  # Use pre-loaded feedback and progress data to get the sublevel ID using the
+  # same criteria as in get_sublevel_for_progress
+  def get_sublevel_for_progress_optimized(teacher_feedbacks:, user_levels:)
+    keep_working_level_id = teacher_feedbacks.find do |feedback|
+      feedback.review_state == TeacherFeedback::REVIEW_STATES.keepWorking
+    end&.level_id
+
+    return keep_working_level_id if keep_working_level_id
+
+    user_levels.max_by(&:best_result)&.level_id
   end
 
   # Returns an array of BubbleChoice parent levels for any given sublevel name.

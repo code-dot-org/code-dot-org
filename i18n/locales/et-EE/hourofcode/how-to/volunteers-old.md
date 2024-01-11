@@ -9,7 +9,7 @@ title: Juhend KoodiTund vabatahtlikele
 
 ***
 
-## Why volunteer?
+## Miks tulla vabatahtlikuks?
 Check out some testimony from past volunteers:
 
 - “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
@@ -40,7 +40,7 @@ Do you believe that learning computer science can open doors of opportunity for 
 ## Recruit your co-workers to volunteer
 Tell your friends and co-workers about the Hour of Code. Thousands of teachers are  looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer). Ask your employer to get involved. [Send this email]({{ promote/sample_emails }}) to your manager or the CEO to get everyone on board.
 
-## How to prepare
+## Ettevalmistus
 - [Pick out a video]({{ promote/videos }}) to show to help focus the class and get them excited to do an Hour of Code.
 - Check out the [Hour of Code Volunteer Toolkit](/files/hoc-volunteer-toolkit.pdf) which includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
 - If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial]({{ urls/learn }}).
@@ -71,19 +71,19 @@ When you're hosting an Hour of Code event, follow the sample agenda below to hel
 - And, check back in a month: Is the teacher interested in offering a computer science course? Share [resources and professional learning opportunities to help them do this](https://code.org/yourschool).
 
 ## How you get selected as a technical volunteer of guest speaker
-- Teachers will be searching for volunteers on our [volunteer map](https://code.org/volunteer/local).
-- Try to make your profile as complete as possible to increase the chance that a teacher will select you.
+- Õpetajad otsivad vabatahtlikke meie [ vabatahtlike kaardilt](https://code.org/volunteer/local).
+- Katsu lisada võimalikult palju infot oma profiili juurde.
 - A teacher will contact you through this form (your email address will never be shared with the teacher). *If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.*
 
 ## Volunteering during the Hour of Code FAQ
 
 ### I haven't been contacted by a teacher yet. How can I still volunteer?
-Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+Proovi ühendust võtta kohalike koolidega ning helista õpetajale/direktorile/sekretärile ning uuri, kuidas saaksid aidata.
 
-### How long do classroom visits last for?
+### Kui kaua klassikülastus kestab?
 An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
 
-### What age group is the Hour of Code activity appropriate for?
+### Mis vanusegrupile KoodiTund sobib?
 Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
 
 

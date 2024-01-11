@@ -8,7 +8,7 @@ title: Vodič za upute za sat koda
 
 ### Pridružite se pokretu i upoznite svoje učenike s računalnim znanostima ovim koracima.
 
-Students today should learn how to create technology, not just use it.
+Učenici danas trebaju naučiti kako stvarati tehnologiju, a ne samo da je koriste.
 
 Isprobavanje sata kodiranja jednostavan je i zabavan način upoznavanja studenata sa informatikom, možda po prvi put! Pronađite aktivnost koja odgovara vašoj postavci, bilo u razredu ili poslije škole, osobno ili virtualno. Pogledajte naš vodič za [sudjelovanje ako i dalje imate pitanja]({{ localized_files/participation_guide }}) nakon što provjerite korake u nastavku:
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-Kada se [prijavite na svoj događaj Sat koda](/#join), dobit ćete korisnu komunikaciju putem e-pošte s vijestima i savjetima za hosting uspješnog sata kodiranja. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Kada se prijav [ite na događaj Hour of Code](/events), dobit ćete korisne komunikacije putem e-pošte s vijestima i savjetima za održavanje uspješnog sata koda. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -136,9 +136,9 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Ispišite potvrde]({{ urls/certificates }}) za svoje studente.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Podijelite fotografije i video zapise svog događaja Hour of Code na društvenim mrežama. Koristite #HourOfCode i @codeorg kako bismo mogli istaknuti i vaš uspjeh!
 
 * * *
 
@@ -147,7 +147,7 @@ What if a student finishes early?
 ## Ostala sredstva Časa Kodiranja za vaspitače:
 
 - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Pregledajte č [esta pitanja o satu koda](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ### Šta dolazi poslije Časa Kodiranja?
 

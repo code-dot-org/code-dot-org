@@ -1317,7 +1317,24 @@ sq:
             të çojë në një produkt të përfunduar. Njësia përfundon me një sfidë të
             projektimit për të përdorur Circuit Playground si bazë për një risi të
             dizajnit tuaj.
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitulli 1: Hyrjet dhe daljet'
+          student_description: Kjo njësi eksploron rolin e platformave hardware në
+            informatikë dhe se si sensorë të ndryshëm mund të sigurojnë hyrje dhe
+            dalje më efektive sesa tastiera tradicionale, miu dhe monitori. Duke përdorur
+            App Lab dhe Adafruit's Circuit Playground, ju do të zhvilloni programe
+            që përdorin të njëjtat hyrje dhe dalje harduerike që shihni në pajisjet
+            inteligjente, duke parë se si një prototip i thjeshtë i përafërt mund
+            të çojë në një produkt të përfunduar. Njësia përfundon me një sfidë të
+            projektimit për të përdorur Circuit Playground si bazë për një risi të
+            dizajnit tuaj.
         csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputet dhe Outputet
+        csd6b-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: Inputet dhe Outputet
@@ -1332,6 +1349,16 @@ sq:
             mësimit të makinave për të zgjidhur një problem të rëndësishëm personalisht.
           title: IA dhe Makinat e mësimit ('22-'23)
         csd7-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Hyrje në App Lab
+          student_description: Kjo njësi është një hyrje praktike për zhvillimin e
+            një modeli të mësimit të makinave me të dhëna tabelare. Ju do të eksploroni
+            se si kompjuterët mësojnë nga të dhënat për të marrë vendime, më pas do
+            të zhvilloni projektet tuaja të mësimit të makinave rreth të dhënave të
+            botës reale. Njësia arrin kulmin me dizajnimin e aplikacionit tuaj të
+            mësimit të makinave për të zgjidhur një problem të rëndësishëm personalisht.
+        csd7-2024:
           lesson_groups:
             lessonGroup-4:
               display_name: Hyrje në App Lab
@@ -2594,7 +2621,17 @@ sq:
           lesson_groups:
             content:
               display_name: Përmbajtja
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Hyrje
+          lessons:
+            lesson-7:
+              name: Hyrje
         virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Hyrje
           title: Dita 3
         virtual-pl-csa-summer-day4:
           title: Dita 4
@@ -2623,6 +2660,10 @@ sq:
             lesson-3:
               name: Vlerësim
           title: Dita 5
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Hyrje
         virtual-pl-csp-summer-day3:
           title: Dita 3
         virtual-pl-csp-summer-day4:

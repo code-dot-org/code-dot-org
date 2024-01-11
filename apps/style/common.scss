@@ -87,14 +87,11 @@ em strong {
   clear: both;
 }
 
-html[dir="rtl"] #visualizationColumn {
-  right: 0;
-}
-
 #visualizationColumn {
   position: relative;
   top: 0;
-  left: 0;
+  left: auto;
+  right: auto;
   overflow: visible;
 }
 
@@ -1834,28 +1831,4 @@ div.WireframeButtons_active {
 #manageAssetsModal {
   width: 800px;
   margin-left: -400px;
-}
-
-// Modal Function Editor Styles. These are needed in order to make it so the blocks
-// show over the name and description inputs, but the name and description inputs
-// are still usable.
-
-.modalFunctionEditorContainer svg {
-  position: absolute;
-  top: 50;
-  left: 0;
-  // We use important here to override the background set by the theme.
-  // The modal function editor background must be transparent.
-  background: transparent !important;
-  pointer-events: none;
-}
-
-.modalFunctionEditorContainer svg .blocklyBlockCanvas,
-.modalFunctionEditorContainer .blocklyScrollbarVertical,
-.blocklyToolboxDiv {
-  pointer-events: visiblePainted;
-}
-
-.modalFunctionEditorContainer .injectionDiv {
-  pointer-events: none;
 }

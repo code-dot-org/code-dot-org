@@ -359,8 +359,8 @@ fa:
         CSF_collector_repeat_loops: حلقه‌های تکرار جمع‌آوری‌کننده
         CSF_collector_text_blocks: 'مبانی CS: جمع‌آوری‌کننده'
         CSF_create_functions: ساختن توابع
-        CSF_debugging_k1_blocks: رفع اشکال
-        CSF_debugging_text_blocks: رفع اشکال
+        CSF_debugging_k1_blocks: رفع باگ
+        CSF_debugging_text_blocks: رفع باگ
         CSF_EF_cs_matters: موضوعات مربوط به علوم کامپیوتر
         CSF_maze_intro_k1_blocks: مقدمه استودیو کد
         CSF_maze_intro_text_blocks: مقدمه استودیو کد
@@ -533,7 +533,7 @@ fa:
         CSF_SpriteLab_Intro_v2: آشنایی با لابراتوار اسپرایت
         CSF_Spritelab_MakeSprite_v2: چگونه یک اسپرایت درست کنیم
         CSF_SpriteLab_SpritesInAction_v2: اسپرایت‌ها در عمل
-        csd_debugging: رفع اشکال
+        csd_debugging: رفع باگ
         csd_applab_designmode_short: حالت طراحی App Lab
         csp-pd-welcome: به خانواده خوش آمدید!
         CSF-Teaching-Problem-Solving: آموزش حل مسئله CSF 
@@ -618,7 +618,7 @@ fa:
         csd_u6_circuit_playground: محاسبات فیزیکی
         CSA-PL-for-loops: حلقه‌های For در جاوا
         CSA-PL-variables: ایجاد متغیرها در جاوا
-        PL_CS_Journeys_Overview: سفرهای cs
+        PL_CS_Journeys_Overview: سفرهای علوم کامپیوتر
         CSA-PL-intro-to-java-lab: مبانی آزمایشگاه جاوا
         CSA-PL-first-program: نوشتن برنامه در جاوا
         CSD_u6_variables_part1: 'CSD: متغیرها'
@@ -696,6 +696,9 @@ fa:
         csd_sprite_properties: ویژگی‌های اسپرایت
         csc-starquilts-intro: کدنویسی لحاف ستاره‌ هندسی
         csc-ecosystems-intro: شبیه‌سازی اکوسیستم دریایی
+        how-ai-works-llms-full: چت‌بات‌ها و مدل‌های زبانی بزرگ چگونه کار می‌کنند
+        how-ai-works-creativity-full: آیا هوش مصنوعی دارای خلاقیت و تخیل است؟
+        csd_ml_how_ai_works: هوش مصنوعی چگونه کار می‌کند
     callout:
       text:
         drag_blocks: یک بلوک «حرکت» را بکش و آن را زیر بلوک دیگری بچسبان

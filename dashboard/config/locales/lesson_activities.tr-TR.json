@@ -11454,7 +11454,7 @@
           "name": "Isınmak"
         },
         "ca6b9610-b612-418d-87bf-bc1776fbd110": {
-          "name": "Etkinlik (30-45 dakika)"
+          "name": "Etkinlik"
         },
         "a5fa2c8b-163e-4cc1-a54b-0ad5d98bb92f": {
           "name": "Özet"
@@ -11817,7 +11817,7 @@
           "name": "Özet"
         },
         "9ed44af4-506a-4faf-94b6-fd4e7b8bcd8c": {
-          "name": "(İsteğe bağlı) Uzatma Etkinliği"
+          "name": "(İsteğe bağlı) İlave Aktivite"
         },
         "5cd25d57-e922-4ed0-893d-516bcae6c4d2": {
           "name": "Isınmak"
@@ -11829,7 +11829,7 @@
           "name": "Özet"
         },
         "8e09a958-4202-48e1-bd2e-7d0afa3a0c6d": {
-          "name": "(İsteğe bağlı) GAN Etkinliği"
+          "name": "(İsteğe bağlı) GAN(Çekişmeli Üretici Ağ) Aktivitesi"
         },
         "f9582c25-a034-4e8d-b042-69dba2874ab3": {
           "name": "Isınmak"
@@ -11862,7 +11862,7 @@
           "name": "Sinir Ağları Nasıl Çalışır?"
         },
         "7ce479b3-0fe8-4697-8f6f-9ae87a524b37": {
-          "name": "Bilgisayarla Görme Nasıl Çalışır"
+          "name": "Bilgisayar Görüşü Nasıl Çalışır"
         },
         "fbfdf89d-c6bb-464e-9a2a-246c34f33b55": {
           "name": "Yapay Zekanın Yaratıcılığı ve Hayal Gücü Var mı"
@@ -12832,6 +12832,18 @@
         },
         "c728edf8-b7ed-465b-99f4-78f27e751d2b": {
           "name": "Seviyeler"
+        },
+        "99f155a9-1d50-44df-a647-c8dbaddea32c": {
+          "name": "Başlarken"
+        },
+        "d12dc50d-c901-43db-a188-eb1b273239c3": {
+          "name": "Isınmak"
+        },
+        "02b4486f-d09d-4031-8235-0cf728733456": {
+          "name": "Özet"
+        },
+        "62475558-6554-4337-b3fb-9fb6ba9a886c": {
+          "name": "Aktivite Sonrası"
         }
       }
     }

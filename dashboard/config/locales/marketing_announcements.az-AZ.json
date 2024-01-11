@@ -1,0 +1,68 @@
+{
+  "az-AZ": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Daha ətraflı",
+            "title": "Süni İntellekt və Maşın Öyrənməsini araşdırın"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Daha ətraflı"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Daha ətraflı"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Daha ətraflı"
+          },
+          "codebytes-2020": {
+            "buttonText": "Daha ətraflı"
+          },
+          "coldplay": {
+            "buttonText": "Sınaqdan keçirin"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Başlayın"
+          },
+          "csjourneys": {
+            "buttonText": "Daha ətraflı"
+          },
+          "csjourneys-22": {
+            "buttonText": "Daha ətraflı"
+          },
+          "csleadersprize": {
+            "buttonText": "Daha ətraflı"
+          },
+          "hoc-2023": {
+            "buttonText": "Daha ətraflı"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Daha ətraflı"
+          },
+          "hoc-more": {
+            "body": "Hour of Code vebsaytında Code.org və tərəfdaşlar tərəfindən hazırlanmış bütün yaş və təcrübə səviyyələri üçün 500-dən çox kompüter elmi fəaliyyətləri var."
+          },
+          "home-learning-2020": {
+            "buttonText": "Layihə ideyalarına baxın"
+          },
+          "superhero": {
+            "buttonText": "Daha çox"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Bizə qoşulun"
+          },
+          "teacher-apps-nominate-2020": {
+            "buttonText": "Müəllimi Namizəd Göstərmək"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Bizə qoşulun"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Bizə qoşulun"
+          }
+        }
+      }
+    }
+  }
+}

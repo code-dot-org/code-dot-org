@@ -136,7 +136,7 @@ Yardım etmenin en iyi yollarından biri, Hour of Code'u duyurmak ve tanıtmakt�
 
 ### 1. Etkinliğinizi Kaydettirin
 
-[Hour of Code etkinliğinizi kaydettirdiğinizde](/#join), başarılı bir Kodlama Saati düzenlemek için haberler ve ipuçları içeren yararlı e-postalar alacaksınız. Aynı zamanda, bölgenizdeki okullara veya velilere, onların yakınında bir etkinlik düzenlediğinizi de bu şekilde bildirirsiniz.
+[Hour of Code etkinliğinize kaydolduğunuzda](/events) başarılı bir Hour of Code'a ev sahipliği yapmak için haberler ve ipuçları içeren yararlı e-postalar alacaksınız. Aynı zamanda, bölgenizdeki okullara veya velilere, onların yakınında bir etkinlik düzenlediğinizi de bu şekilde bildirirsiniz.
 
 ### 2. Sosyal Medyada paylaşın
 

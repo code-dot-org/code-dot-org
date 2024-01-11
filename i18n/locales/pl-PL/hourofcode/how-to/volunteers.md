@@ -12,7 +12,7 @@ title: Godzina Kodowania - przewodnik dla wolonatriuszy
 
 Myślenie komputacyjne pomaga rozwijać umiejętności rozwiązywania problemów, logiczne myślenie i kreatywność. A technologia zmienia każdą branżę na świecie. Uczniowie dzisiaj powinni poznać, jak tworzyć technologię, a nie tylko ją stosować.
 
-Godzina Kodowania jest jednogodzinnym wstępem do informatyki, stworzony by odczarować "kod" i pokazać, że każdy może opanować podstawy i poszerzać zakres udziału w dziedzinie informatyki. Możesz pomóc w zwiększaniu świadomości promocji informatyki i zgłosić się jako ochotnik, aby zainspirować więcej uczniów do wypróbowania informatyki, w szczególności młodych kobiet i mężczyzn wywodzących się z marginalizowanych w ujęciu historycznym grup rasowych i etnicznych.
+Godzina Kodowania jest jednogodzinnym wstępem do informatyki, stworzonym by odczarować "kod" i pokazać, że każdy może opanować podstawy i poszerzać zakres udziału w dziedzinie informatyki. Możesz pomóc w zwiększaniu świadomości promocji informatyki i zgłosić się jako ochotnik, aby zainspirować więcej uczniów do wypróbowania informatyki, w szczególności młodych kobiet i mężczyzn wywodzących się z marginalizowanych w ujęciu historycznym grup rasowych i etnicznych.
 
 - [Kto może zostać wolontariuszem?](#who-can-volunteer)
 - [Dlaczego wolontariat?](#why-volunteer)
@@ -134,7 +134,7 @@ Współpracuj ze szkołą lub nauczycielem, aby omówić najbardziej sensowne ro
 - Wyjaśnij, w jaki sposób technologia wpływa na nasze życie, podając przykłady znaczące dla uczniów wywodzących się ze wszystkich środowisk - opowiedz o technologii, które ratuje życie, pomaga ludziom, łączy ludzi.
 - Jeśli jesteście firmą technologiczną, pokaż fajne, innowacyjne produkty, nad którymi pracuje Twoja firma. Jeśli nie jesteście firmą technologiczną, omówcie sposoby, Wasza firma korzysta z technologii do rozwiązywania problemów i realizacji celów.
 - Zaproście programistów z Waszej firmy, by opowiedzieli, dlaczego postanowili studiować informatykę i o projektach, nad którymi pracują.
-- Jeśli posiadasz jakąś grupę personelu, która będzie prowadziła Twoje wydarzenie lub zgłosi się na ochotnika do miejscowej szkoły, rozważ zamówienie [koszulek t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) dla swojej grupy.
+- Jeśli masz grupę pracowników, którzy będą wspierać Twoje wydarzenie lub będą pracować jako wolontariusze w lokalnej szkole,, rozważ zamówienie [odpowiednich koszulek](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) dla swojej grupy.
 
 ### 3. Zaplanuj swoje potrzeby technologiczne
 
@@ -187,7 +187,7 @@ Jednym z najlepszych sposobów, by nas wesprzeć, jest rozpowszechnienie informa
 
 ### 1. Zarejestruj swoje wydarzenie.
 
-Gdy [ zarejestrujesz swoją Godzinę Kodowania](/#join), otrzymasz mail z pomocnymi wiadomościami i wskazówkami na temat organizacji udanej Godziny Kodowania. W ten sposób możesz również powiadomić swoje miejscowe szkoły lub rodziców, że będziesz gospodarzem wydarzenia w ich okolicy.
+Kiedy [zarejestrujesz się na wydarzenie Godziny Kodowania](/events), otrzymasz pomocne wiadomości e-mail z wiadomościami i wskazówkami dotyczącymi udanej Godziny Kodowania. W ten sposób możesz również powiadomić swoje miejscowe szkoły lub rodziców, że będziesz gospodarzem wydarzenia w ich okolicy.
 
 ### 2. Publikuj w mediach społecznościowych
 

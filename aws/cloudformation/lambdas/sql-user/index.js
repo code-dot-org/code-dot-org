@@ -58,16 +58,25 @@ exports.handler = async (event, context) => {
           password: dbCredentialSQLUser.password,
           privileges: props.Privileges,
         });
-        console.log(results.createUser); // Results from the CREATE USER query.
-        console.log(results.updateUser); // Results from the UPDATE USER query.
-        console.log(results.grantResults); // Array of results from each GRANT operation.
+        console.log(
+          "CREATE USER SQL Statement Execution Results:\n",
+          results.createUser
+        );
+        console.log(
+          "UPDATE USER SQL Statement Execution Results:\n",
+          results.updateUser
+        );
+        console.log(
+          "GRANT USER SQL Statement Execution Results:\n",
+          results.grantResults
+        );
         break;
       case "Delete":
         results = await deleteSQLUser(connection, {
           name: dbCredentialSQLUser.username,
           clientHost: clientHost,
         });
-        console.log(results);
+        console.log("DELETE USER SQL Statement Execution Results:\n", results);
         break;
       default:
         throw new Error("Unsupported Resource Event type.");
@@ -139,5 +148,15 @@ const createOrUpdateSQLUser = async (
 
 const deleteSQLUser = async (connection, { name, clientHost }) => {
   const dropUser = `DROP USER IF EXISTS '${name}'@'${clientHost}';`;
-  return await queryPromise(connection, dropUser);
+  return await queryPromise(connection, dropUser).catch((error) => {
+    if (error.code === "ENOTFOUND") {
+      const databaseDeletedAlreadyMessage = `
+        Cannot connect to database to delete SQL user because the server name lookup failed. Assuming the database was
+        already deleted by CloudFormation, so there's no need to delete the user. ${error}
+       `;
+      console.log(databaseDeletedAlreadyMessage);
+    } else {
+      throw error;
+    }
+  });
 };

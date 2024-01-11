@@ -1464,7 +1464,8 @@
           "definition": "una acción que hace que algo suceda."
         },
         "artificial_intelligence/ai-ethics/2023": {
-          "word": "Inteligencia Artificial"
+          "word": "Inteligencia Artificial",
+          "definition": "Una tecnología que imita la inteligencia humana y realiza tareas como comprender el lenguaje, reconocer patrones y tomar decisiones."
         },
         "adaptation/csc-adaptations/2023": {
           "word": "Adaptación",
@@ -2533,7 +2534,7 @@
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
         "code/flappy/unversioned": {
-          "word": "Programar",
+          "word": "código",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "debugging/flappy/unversioned": {
@@ -2752,6 +2753,22 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Compresión sin Pérdidas",
           "definition": "un algoritmo de compresión de datos que permite reconstruir perfectamente los datos originales a partir de los datos comprimidos.  Se utiliza sobre todo para la compresión de texto (por ejemplo, la compresión .zip)"
+        },
+        "code/dance-ai/2023": {
+          "word": "Código",
+          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
+        },
+        "event/dance-ai/2023": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
+        },
+        "program/dance-ai/2023": {
+          "word": "Programa",
+          "definition": " una lista de instrucciones que le dice a la computadora qué hacer, como un conjunto de pasos para jugar un juego o hacer una tarea en la computadora. "
+        },
+        "artificial_intelligence_a_i_/dance-ai/2023": {
+          "word": "Inteligencia Artificial (I.A.) ",
+          "definition": " un programa de computadora que se entrena a base de datos, aprende a reconocer los patrones en los datos, y toma decisiones en base a la información con la cual se entrenó. "
         }
       }
     }

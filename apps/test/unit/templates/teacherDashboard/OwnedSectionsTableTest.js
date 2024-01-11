@@ -436,7 +436,7 @@ describe('OwnedSectionsTable', () => {
       const link = courseLinkCol.find(Button).prop('href');
       const text = courseLinkCol.find(Button).prop('text');
       assert.equal(button, '<Button />');
-      assert.equal(link, '/courses');
+      assert.equal(link, '/catalog');
       assert.equal(text, 'Find a course');
     });
 

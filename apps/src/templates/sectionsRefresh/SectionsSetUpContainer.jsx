@@ -17,10 +17,9 @@ import {
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {showVideoDialog} from '@cdo/apps/code-studio/videos';
-import ReactTooltip from 'react-tooltip';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import DCDO from '@cdo/apps/dcdo';
-import color from '@cdo/apps/util/color';
+import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
+import {getCoteacherMetricInfoFromSection} from './coteacherSettings/CoteacherUtils';
+import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
 
 const FORM_ID = 'sections-set-up-container';
 const SECTIONS_API = '/api/v1/sections';
@@ -51,6 +50,7 @@ const useSections = section => {
             restrictSection: false,
             ttsAutoplayEnabled: false,
             lessonExtras: true,
+            aiTutorEnabled: false,
             course: {hasTextToSpeech: false, hasLessonExtras: false},
           },
         ]
@@ -76,11 +76,13 @@ const useSections = section => {
 export default function SectionsSetUpContainer({
   isUsersFirstSection,
   sectionToBeEdited,
+  canEnableAITutor,
 }) {
   const [sections, updateSection] = useSections(sectionToBeEdited);
   const [isCoteacherOpen, setIsCoteacherOpen] = useState(false);
   const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
   const [isSaveInProgress, setIsSaveInProgress] = useState(false);
+  const [coteachersToAdd, setCoteachersToAdd] = useState([]);
 
   const isNewSection = !sectionToBeEdited;
   const initialSectionRef = useRef(sectionToBeEdited);
@@ -156,7 +158,7 @@ export default function SectionsSetUpContainer({
     }
   };
 
-  const saveSection = (section, createAnotherSection) => {
+  const saveSection = (section, createAnotherSection, coteachersToAdd) => {
     const shouldShowCelebrationDialogOnRedirect = !!isUsersFirstSection;
     // Determine data sources and save method based on new vs edit section
     const dataUrl = isNewSection
@@ -198,7 +200,9 @@ export default function SectionsSetUpContainer({
       pairing_allowed: section.pairingAllowed,
       tts_autoplay_enabled: section.ttsAutoplayEnabled,
       sharing_disabled: section.sharingDisabled,
+      ai_tutor_enabled: section.aiTutorEnabled,
       grades: computedGrades,
+      instructor_emails: coteachersToAdd,
       ...section,
     };
 
@@ -215,6 +219,12 @@ export default function SectionsSetUpContainer({
       })
       .then(data => {
         recordSectionSetupEvent(section);
+        coteachersToAdd.forEach(() => {
+          analyticsReporter.sendEvent(
+            EVENTS.COTEACHER_INVITE_SENT,
+            getCoteacherMetricInfoFromSection(section)
+          );
+        });
         // Redirect to the sections list.
         let redirectUrl = window.location.origin + '/home';
         if (createAnotherSection) {
@@ -269,6 +279,12 @@ export default function SectionsSetUpContainer({
   };
 
   const renderAdvancedSettings = () => {
+    // TODO: this will probably eventually be a setting on the course similar to hasTextToSpeech
+    // currently we're working towards piloting in Javalab in CSA only.
+    const aiTutorAvailable =
+      canEnableAITutor &&
+      sections[0].course.displayName === 'Computer Science A';
+
     return renderExpandableSection(
       'uitest-expandable-settings',
       () => i18n.advancedSettings(),
@@ -278,6 +294,7 @@ export default function SectionsSetUpContainer({
           section={sections[0]}
           hasLessonExtras={sections[0].course.hasLessonExtras}
           hasTextToSpeech={sections[0].course.hasTextToSpeech}
+          aiTutorAvailable={aiTutorAvailable}
           label={i18n.pairProgramming()}
         />
       ),
@@ -287,26 +304,29 @@ export default function SectionsSetUpContainer({
   };
 
   const renderCoteacherSection = () => {
-    const tooltip = (
-      <span>
-        <span data-tip data-for="tooltip" style={styles.tooltipSpan}>
-          <FontAwesome icon="info-circle" style={styles.tooltipIcon} />
-        </span>
-        <ReactTooltip id="tooltip" effect="solid">
-          <p>{i18n.coteacherAddTooltip()}</p>
-        </ReactTooltip>
-      </span>
-    );
-
     return renderExpandableSection(
       'uitest-expandable-coteacher',
       () => (
         <div>
           {i18n.coteacherAdd()}
-          {tooltip}
+          <InfoHelpTip
+            id={'coteacher-toggle-info'}
+            content={i18n.coteacherAddTooltip()}
+          />
         </div>
       ),
-      () => <div>{i18n.coteacherAddInfo()}</div>,
+      () => (
+        <CoteacherSettings
+          sectionId={sections[0].id}
+          sectionInstructors={sections[0].sectionInstructors}
+          primaryTeacher={sections[0].primaryInstructor}
+          setCoteachersToAdd={setCoteachersToAdd}
+          coteachersToAdd={coteachersToAdd}
+          sectionMetricInformation={getCoteacherMetricInfoFromSection(
+            sections[0]
+          )}
+        />
+      ),
       isCoteacherOpen,
       toggleIsCoteacherOpen
     );
@@ -355,7 +375,7 @@ export default function SectionsSetUpContainer({
           moduleStyles.withBorderTop
         )}
       >
-        {DCDO.get('show-coteacher-ui', false) && renderCoteacherSection()}
+        {renderCoteacherSection()}
         {renderAdvancedSettings()}
       </div>
       <div
@@ -372,7 +392,7 @@ export default function SectionsSetUpContainer({
             color={Button.ButtonColor.neutralDark}
             onClick={e => {
               e.preventDefault();
-              saveSection(sections[0], true);
+              saveSection(sections[0], true, coteachersToAdd);
             }}
           />
         )}
@@ -391,7 +411,7 @@ export default function SectionsSetUpContainer({
           onClick={e => {
             e.preventDefault();
             setIsSaveInProgress(true);
-            saveSection(sections[0], false);
+            saveSection(sections[0], false, coteachersToAdd);
           }}
         />
       </div>
@@ -399,16 +419,8 @@ export default function SectionsSetUpContainer({
   );
 }
 
-const styles = {
-  tooltipSpan: {
-    cursor: 'pointer',
-    marginLeft: '12px',
-    verticalAlign: 'text-bottom',
-  },
-  tooltipIcon: {color: color.neutral_dark60, fontSize: '16px'},
-};
-
 SectionsSetUpContainer.propTypes = {
   isUsersFirstSection: PropTypes.bool,
   sectionToBeEdited: PropTypes.object,
+  canEnableAITutor: PropTypes.bool,
 };

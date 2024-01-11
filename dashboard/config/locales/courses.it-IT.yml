@@ -119,7 +119,7 @@ it:
             l'uso dell'informatica come strumento per la creatività, la comunicazione,
             il problem-solving e il divertimento.
         csp-2017:
-          assignment_family_title: Principi di informatica
+          assignment_family_title: Princìpi di informatica
           description_short: Impara i princìpi fondamentali dell'informatica.
           description_student: Nell'autunno 2016, il College Board ha lanciato il
             nuovo corso AP®, AP Computer Science Principles. Il corso introduce gli
@@ -137,10 +137,10 @@ it:
             creare leader nei campi informatici ed attrarre ed ingaggiare le fasce
             di popolazione tradizionalmente sotto rappresentate nell'uso di strumenti
             informatici di base e nel cogliere opportunità multidisciplinari.
-          title: Principi di informatica ('17-'18)
+          title: Princìpi di informatica ('17-'18)
           version_title: "'17-'18"
         csp-2018:
-          assignment_family_title: Principi di informatica
+          assignment_family_title: Princìpi di informatica
           description_short: Impara i princìpi fondamentali dell'informatica.
           description_student: Nell'autunno 2016, il College Board ha lanciato il
             nuovo corso AP®, AP Computer Science Principles. Il corso introduce gli
@@ -158,7 +158,7 @@ it:
             creare leader nei campi informatici ed attrarre ed ingaggiare le fasce
             di popolazione tradizionalmente sotto rappresentate nell'uso di strumenti
             informatici di base e nel cogliere opportunità multidisciplinari.
-          title: Principi di informatica ('18-'19)
+          title: Princìpi di informatica ('18-'19)
           version_title: "'18-'19"
         csp-2019:
           description_short: Impara i princìpi fondamentali dell'informatica.
@@ -178,7 +178,7 @@ it:
             creare leader nei campi informatici ed attrarre ed ingaggiare le fasce
             di popolazione tradizionalmente sotto rappresentate nell'uso di strumenti
             informatici di base e nel cogliere opportunità multidisciplinari.
-          title: Principi di informatica ('19-'20)
+          title: Princìpi di informatica ('19-'20)
           version_title: "'19-'20"
         csp-2020:
           description_short: Impara i princìpi fondamentali dell'informatica.
@@ -194,6 +194,8 @@ it:
           title: CSA Moduli Per Iniziare
         self-paced-pl-csa-2023:
           title: CSA Moduli Per Iniziare
+        self-paced-pl-csd-unit2-2023:
+          title: Insegnamento dello Sviluppo Web
         self-paced-pl-csp-2021:
           title: Insegnare i Principi Informatici
         self-paced-pl-csp-2022:
@@ -233,6 +235,8 @@ it:
         name: Guida al piano di studi
       csd_curriculum_guide/csd/2022:
         name: Guida al piano di studi
+      csd_guide_to_curriculum_videos/csd/2023:
+        url: https://docs.google.com/document/d/167tFcyJ1QsTsbgoFC_3DlkvYGXPPPsYmfIn64q-Ht8o/view
       csd_guide_to_debugging/csd/2021:
         name: Guida al debugging
       csd_guide_to_debugging/csd/2022:
@@ -262,13 +266,13 @@ it:
       csd_programming_levels_guide/csd/2022:
         name: Guida agli esercizi di programmazione
       curriculum/csd/2017:
-        name: Curriculum
+        name: Corso
       curriculum/csd/2018:
-        name: Curriculum
+        name: Corso
       curriculum/csd/2019:
-        name: Curriculum
+        name: Corso
       curriculum/csd/2020:
-        name: Curriculum
+        name: Corso
       teacher_forum/csd/2019:
         name: Forum dell'insegnante
       teacher_forum/csd/2020:

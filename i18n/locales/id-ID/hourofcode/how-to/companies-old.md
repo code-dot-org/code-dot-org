@@ -67,7 +67,7 @@ Mulai Hour of Code Anda dengan menginspirasi peserta dan diskusi bagaimana ilmu 
 - Jika Anda adalah sebuah perusahaan teknologi, demonstrasikan secara menyenangkan dan inovatif produk-produk yang sedang perusahaan Anda kerjakan.
 - Jika Anda tidak perusahaan teknologi, bahas cara-cara yang perusahaan Anda menggunakan teknologi untuk memecahkan masalah dan mencapai tujuan.
 - Undang software engineer dari perusahaan Anda untuk berbicara mengenai alasan mereka memutuskan untuk belajar ilmu komputer dan proyek-proyek yang sedang mereka kerjakan.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Lihat tips untuk membuat anak perempuan tertarik pada ilmu komputer [di sini]({{ urls/girls }}).
 
 ## 6. Pemrograman!
 **Arahkan peserta langsung ke aktivitas**

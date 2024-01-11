@@ -1,5 +1,10 @@
 {
+  "danceAiModalBack": "Назад",
+  "danceAiModalClose": "Затвори",
+  "danceAiModalCodeButton": "Kod",
+  "danceAiModalExplanationButton": "Сазнајте више",
   "danceFeedbackDidntPress": "Притисни стрелицу десно док плес траје.",
+  "danceFeedbackKeepCoding": "Наставите да програмирате! Нешто није баш у реду.",
   "danceFeedbackKeyEvent": "Додај код у блок <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"горе\"</title></block></xml> и притисни стрелицу горе док траје плес.",
   "danceFeedbackNeedBackup": "Креирај групу плесача помоћу блока <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> ",
   "danceFeedbackNeedDifferentDance": "Употреби другог плесача.",

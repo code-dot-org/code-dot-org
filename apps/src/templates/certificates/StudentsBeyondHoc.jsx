@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
 import VerticalImageResourceCardRow from '../VerticalImageResourceCardRow';
-import {LocalClassActionBlock} from '../studioHomepages/TwoColumnActionBlock';
 import {tutorialTypes} from '../tutorialTypes.js';
 import {cardSets} from './congratsBeyondHocActivityCards';
 import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
@@ -159,7 +158,6 @@ class StudentsBeyondHoc extends Component {
           />
         )}
         <div style={styles.spacer} />
-        <LocalClassActionBlock showHeading={false} />
       </div>
     );
   }

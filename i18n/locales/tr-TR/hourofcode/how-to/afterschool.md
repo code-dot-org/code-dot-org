@@ -73,7 +73,7 @@ Hour of Code etkinliğinize katılımcılara ilham vererek ve bilgisayarın haya
 
 - Öğrencileriniz için [Sertifika basın]({{ urls/certificates }}).
 - Öğrencileriniz için ["I did an Hour of Code!"]({{ promote/resources_stickers }}) çıkartmalarından bastırın.
-- Katılımcılar için [özel tişörtler sipariş edin](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
+- [Katılımcılar](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) için özel tişörtler sipariş edin.
 - Hour of Code etkinliğinize ait fotoğrafları ve videoları sosyal medyada paylaşın. Paylaşımlarınızda #HourOfCode ve @codeorg etiketlerini kullanın böylece başarılarınızı biz de vurgularız!
 
 ## Eğitimciler için diğer Hour of Code kaynakları

@@ -880,12 +880,13 @@ ar:
         csa_wrapper_classes_part_2: 'CSA: فصول التغليف الجزء 2'
         csa_writing_a_method: 'CSA: كتابة طريقة'
         csc-ecosystems-intro: مقدمة النظم البيئية
-        csc-event-short-intro: مقدمة قصيرة للأحداث
+        csc-event-short-intro: مقدمة قصيرة للأحداث البرمجية
         csc-poem-art-intro: فيديو مقدمة
         csc-poem-art-outro: فيديو آخر
         csc-sprite-lab-pixel-editor: ارسم العفريت الخاص بك
         csc-starquilts-intro: 'CSC: ستار كويلتس'
         csc_animal_adaptations_intro: مقدمة التكيفات الحيوانية
+        csc_bookcovers_intro: برمجة أغلفة الكتب
         csc_fm_pilot: آلات الوظائف (التجريبية)
         csc_fm_pilot_v2: 'مقدمة آلات الوظائف '
         csc_timecapsule_intro: مقدمة كبسولة الوقت
@@ -920,6 +921,7 @@ ar:
         csd_gamelab_velocity: السرعة
         csd_how_teamwork_works: كيف يعمل العمل الجماعي
         csd_ml_ethics_ai: 'الأخلاق والذكاء الاصطناعي '
+        csd_ml_how_ai_works: كيف يعمل الذكاء الاصطناعي
         csd_ml_import_model: استيراد نموذج AI
         csd_ml_intro_ai_lab_july2021: مقدمة لمختبر الذكاء الاصطناعي
         csd_ml_intro_to_ai_lab: مقدمة لمختبر الذكاء الاصطناعي
@@ -1013,6 +1015,7 @@ ar:
         hint_videos_d_11_9_last: 'فيديوهات توضيحية: D.11.9 الأخير
 
           '
+        hoc-dance-ai-warmup: 'إصدار حفلة الرقص بالذكاء الاصطناعي: الإحماء'
         hoc_dance_congrats: حفلة رقص - وقت رائع!
         hoc_dance_congrats_2019: حفلة الرقص 2019- الحفلة قيد التشغيل!
         hoc_dance_events: الحفلة الراقصة - الأحداث

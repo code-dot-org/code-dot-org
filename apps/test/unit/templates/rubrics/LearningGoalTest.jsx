@@ -40,6 +40,12 @@ describe('LearningGoal', () => {
         aiConfidence={50}
         aiUnderstanding={3}
         studentLevelInfo={studentLevelInfo}
+        aiEvalInfo={{
+          id: 2,
+          learning_goal_id: 2,
+          understanding: 2,
+          ai_confidence: 2,
+        }}
       />
     );
     expect(wrapper.find('AiAssessment')).to.have.lengthOf(1);
@@ -68,7 +74,7 @@ describe('LearningGoal', () => {
     expect(wrapper.find('AiAssessment')).to.have.lengthOf(0);
   });
 
-  it('renders tips', () => {
+  it('renders tips for teachers', () => {
     const wrapper = shallow(
       <LearningGoal
         learningGoal={{
@@ -78,11 +84,28 @@ describe('LearningGoal', () => {
           tips: 'Tips',
         }}
         teacherHasEnabledAi
+        isStudent={false}
       />
     );
     expect(wrapper.find('Heading6')).to.have.lengthOf(1);
     expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(1);
     expect(wrapper.find('SafeMarkdown').props().markdown).to.equal('Tips');
+  });
+
+  it('does not render tips for students', () => {
+    const wrapper = shallow(
+      <LearningGoal
+        learningGoal={{
+          learningGoal: 'Testing',
+          aiEnabled: true,
+          evidenceLevels: [],
+          tips: 'Tips',
+        }}
+        isStudent={true}
+      />
+    );
+    expect(wrapper.find('Heading6')).to.have.lengthOf(0);
+    expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(0);
   });
 
   it('shows AI token when AI is enabled', () => {
@@ -96,7 +119,7 @@ describe('LearningGoal', () => {
         teacherHasEnabledAi
       />
     );
-    expect(wrapper.text()).to.include('Testing');
+    expect(wrapper.find('StrongText').props().children).to.equal('Testing');
     expect(wrapper.find('AiToken')).to.have.lengthOf(1);
   });
 
@@ -111,7 +134,7 @@ describe('LearningGoal', () => {
         teacherHasEnabledAi
       />
     );
-    expect(wrapper.text()).to.include('Testing');
+    expect(wrapper.find('StrongText').props().children).to.equal('Testing');
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
   });
 
@@ -126,7 +149,7 @@ describe('LearningGoal', () => {
         teacherHasEnabledAi={false}
       />
     );
-    expect(wrapper.text()).to.include('Testing');
+    expect(wrapper.find('StrongText').props().children).to.equal('Testing');
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
   });
 
@@ -144,17 +167,6 @@ describe('LearningGoal', () => {
       />
     );
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
-  });
-
-  it('shows down arrow when closed and up arrow when open', () => {
-    const wrapper = shallow(
-      <LearningGoal
-        learningGoal={{learningGoal: 'Testing', evidenceLevels: []}}
-      />
-    );
-    expect(wrapper.find('FontAwesome').props().icon).to.equal('angle-down');
-    wrapper.find('summary').simulate('click');
-    expect(wrapper.find('FontAwesome').props().icon).to.equal('angle-up');
   });
 
   it('sends event when closed and opened', () => {
@@ -238,7 +250,7 @@ describe('LearningGoal', () => {
     );
     expect(wrapper.find('textarea').props().value).to.equal('test feedback');
     expect(wrapper.find('textarea').props().disabled).to.equal(true);
-    expect(wrapper.find('FontAwesome').at(1).props().icon).to.equal('message');
+    expect(wrapper.find('FontAwesome').at(0).props().icon).to.equal('message');
   });
 
   it('shows editable textbox for feedback when the teacher can provide feedback', () => {
@@ -270,6 +282,24 @@ describe('LearningGoal', () => {
     );
     expect(wrapper.find('BodyThreeText').props().children).to.equal(
       'Limited Evidence'
+    );
+  });
+
+  it('shows No Evidence understanding in header if submittedEvaluation contains understand', () => {
+    const wrapper = shallow(
+      <LearningGoal
+        learningGoal={{
+          learningGoal: 'Testing',
+          evidenceLevels: [],
+        }}
+        submittedEvaluation={{
+          feedback: 'test feedback',
+          understanding: RubricUnderstandingLevels.NONE,
+        }}
+      />
+    );
+    expect(wrapper.find('BodyThreeText').props().children).to.equal(
+      'No Evidence'
     );
   });
 

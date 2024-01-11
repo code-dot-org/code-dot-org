@@ -22,6 +22,8 @@ de:
             '0.75': klein
             '1.00': mittel
             '2.00': groß
+      Dancelab_ai:
+        text: "{IMAGE}Erzeuge {VALUE} -Effekt"
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -71,6 +73,12 @@ de:
             '"measures"': Takte
             '"seconds"': Sekunden
         text: nach {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': Takte
+            '"seconds"': Sekunden
+        text: bei {TIMESTAMP} {UNIT}
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -97,6 +105,31 @@ de:
             '"SLOTH"': Faultiere
             '"UNICORN"': Einhörner
             sprites: Alle
+          MOVE:
+            '"next"': "(nächste/r)"
+            '"prev"': "(vorherig/er)"
+            '"rand"': "(zufällig)"
+            MOVES.ClapHigh: Oben klatschen
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Intensivieren
+            MOVES.Drop: Fallen lassen
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Kick: Stern
+            MOVES.Rest: Keiner
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: Dies oder Das
+            MOVES.Thriller: Zombie
+        text: "{GROUP} tun {MOVE} {DIR} für immer"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          DIR:
+            "-1": "←"
+            '1': "→"
+          GROUP:
+            '"CAT"': alle Katzen
+            '"SLOTH"': Faultiere
           MOVE:
             '"next"': "(nächste/r)"
             '"prev"': "(vorherig/er)"
@@ -365,6 +398,7 @@ de:
             '"column"': Spalte
             '"diamond"': Diamant
             '"grid"': Raster
+            '"infinity"': unendliche Linie
             '"inner"': Quadrat im Inneren
             '"left"': linke Spalte
             '"plus"': plus
@@ -467,6 +501,7 @@ de:
             '"column"': Spalte
             '"diamond"': Diamant
             '"grid"': Raster
+            '"infinity"': unendliche Linie
             '"inner"': Quadrat im Inneren
             '"left"': linke Spalte
             '"plus"': plus
@@ -584,6 +619,60 @@ de:
             '"tropical"': Tropisch
             '"vintage"': Vintage
             '"warm"': Rots
+        text: "hintergrundeffekt einstellen \n{PALETTE} {EFFECT}"
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"blooming_petals"': Blühende Blütenblätter
+            '"circles"': Tunnel
+            '"color_cycle"': Farben
+            '"diamonds"': Rauten
+            '"disco"': Quadrate
+            '"disco_ball"': Disco-Kugel
+            '"fireworks"': Feuerwerk
+            '"flowers"': Blumen
+            '"frosted_grid"': Gefrorenes Gitter
+            '"galaxy"': Leerzeichen
+            '"growing_stars"': Wachsende Sterne
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Laser-Tanzfläche
+            '"music_wave"': Wellen
+            '"none"': Keiner
+            '"quads"': Winkel
+            '"rainbow"': Regenbogen
+            '"rand"': "(zufällig)"
+            '"ripples"': Wellen
+            '"ripples_random"': Zufällige Wellen
+            '"snowflakes"': Schnee
+            '"sparkles"': Funkeln
+            '"spiral"': Spirale
+            '"splatter"': Farbspritzer
+            '"squiggles"': Schnörkel
+            '"starburst"': Starburst
+            '"stars"': Sterne
+            '"swirl"': Hypno
+            '"text"': Song-Titel
+          PALETTE:
+            '"autumn"': Herbst
+            '"cool"': Blaus
+            '"default"': Hell
+            '"electronic"': Elektronisch
+            '"grayscale"': Graustufen
+            '"iceCream"': Eiscreme
+            '"neon"': Neon
+            '"rainbow"': Regenbogen
+            '"rave"': Schwarzweiß
+            '"roses"': Rosen
+            '"sky"': Himmel
+            '"spring"': Frühling
+            '"summer"': Sommer
+            '"sunrise"': Sonnenaufgang
+            '"sunset"': Sonnenuntergang
+            '"tropical"': Tropisch
+            '"twinkling"': Funkelnd
+            '"vintage"': Vintage
+            '"warm"': Rots
+            '"winter"': Winter
         text: "hintergrundeffekt einstellen \n{PALETTE} {EFFECT}"
       Dancelab_setDanceSpeed:
         options:
@@ -986,6 +1075,12 @@ de:
         text: Setup
       Dancelab_whenSetup2:
         text: Setup
+      Dancelab_whenSetupSong:
+        options:
+          SONG:
+            '"hammer"': MC Hammer - U Can't Touch This
+            '"macklemore90"': Macklemore - Can't Hold Us
+            '"peas"': The Black Eyed Peas - I Got a Feeling
       DansBlocks_getMicroscope:
         options:
           INPUT1:
@@ -1017,6 +1112,12 @@ de:
         text: "{SPRITE} sagt {TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} gleite zu {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': Gas
+            '"liquid"': flüssig
+            '"solid"': Solid
       KatiesBlocks_tumbling:
         text: hingefallen
       Mikelab_addBehaviorSimple:

@@ -1,0 +1,64 @@
+{
+  "bg-BG": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Научете повече"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Научете повече"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Научете повече"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Научете повече"
+          },
+          "codebytes-2020": {
+            "buttonText": "Научете повече"
+          },
+          "coldplay": {
+            "buttonText": "Опитайте го"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Старт"
+          },
+          "csjourneys": {
+            "buttonText": "Научете повече"
+          },
+          "csjourneys-22": {
+            "buttonText": "Научете повече"
+          },
+          "csleadersprize": {
+            "buttonText": "Научете повече"
+          },
+          "hoc-2023": {
+            "buttonText": "Научете повече"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Научете повече"
+          },
+          "home-learning-2020": {
+            "buttonText": "Виж Идеи за Проекти"
+          },
+          "superhero": {
+            "buttonText": "Научете повече"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Присъединете се към нас"
+          },
+          "teacher-apps-nominate-2020": {
+            "buttonText": "Номинрайте Учител"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Присъединете се към нас"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Присъединете се към нас"
+          }
+        }
+      }
+    }
+  }
+}

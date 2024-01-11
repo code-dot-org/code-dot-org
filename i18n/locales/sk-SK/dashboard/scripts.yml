@@ -921,7 +921,7 @@ sk:
             cspSurvey:
               display_name: Dotazník
         spritelab:
-          description_audience: Kurz E/F študenti
+          description_audience: Kurz E/F žiaci
         csd1-dlp-18:
           lesson_groups:
             required:
@@ -1044,7 +1044,7 @@ sk:
             content:
               display_name: Obsah
         spritelab-simple:
-          description_audience: Kurz E/F študenti
+          description_audience: Kurz E/F žiaci
         frozen-2018:
           title: Nový Frozen Skript
         frozen-2018-test:
@@ -4295,6 +4295,10 @@ sk:
           description_short: Nauč sa všetky koncepty z kurzu Základy informatiky a vytvor vlastné umelecké dielo, príbeh alebo hru.
         how-ai-works-2023:
           title: Ako funguje umelá inteligencia
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Úvod
         virtual-pl-csp-summer-day3:
           title: Deň 3
         virtual-pl-csp-summer-day4:
@@ -4302,6 +4306,128 @@ sk:
         virtual-pl-csp-summer-day5:
           title: Deň 5
         virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Úvod
           title: Deň 3
         virtual-pl-csa-summer-day4:
           title: Deň 4
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Úvod
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Úvod
+        self-paced-pl-csd-unit1-2-2023:
+          title: 'Modul 1: Príprava na výučbu riešenia problémov a výpočtovej techniky'
+          description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Riešenie problémov a výpočtová technika Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy riešenia problémov a výpočtovej techniky.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 30 minút
+          student_description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Riešenie problémov a výpočtová technika Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy riešenia problémov a výpočtovej techniky.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 30 minút
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Modul 2: Príprava na výučbu vývoja webových stránok'
+        self-paced-pl-csd-unit3-2-2023:
+          title: Príprava na výučbu interaktívnych animácií a hier
+          description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Interaktívne animácie a hry Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy interaktívnych animácií a hier.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   zapojíte sa do Game Lab.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 120 minút
+          student_description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Interaktívne animácie a hry Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy interaktívnych animácií a hier.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   zapojíte sa do Game Lab.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 120 minút
+        self-paced-pl-csd-unit4-2-2023:
+          title: 'Modul 4: Príprava na výučbu procesu dizajnu'
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Modul 5: Príprava na výučbu údajov a spoločnosti'
+        web-dev-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Tvorba webových stránok'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Viacstránkové weby'
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Dotazník
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Postup riešenia problémov'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Počítače a riešenie problémov'
+          student_description: Tematický celok „Riešenie problémov a výpočtová technika“ je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš, ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa svojho výberu.
+        csd2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Tvorba webových stránok'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Viacstránkové weby'
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Obrázky a animácie'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Tvorba hier'
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Užívateľsky orientovaný dizajn'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Prototypovanie aplikácií'
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Prezentácia informácií'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Riešenie problémov s dátami'
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+          title: Kapitola 6A - (Možnosť A) Aplikácie a hardvér - Circuit Playground ('23-'24)
+        csd6b-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Vstupy a výstupy
+          title: Kapitola 6B - (Možnosť B) Aplikácie a hardvér (micro:bit)
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Úvod do App Labu
+            lessonGroup-2:
+              display_name: Kapitola 1
+            lessonGroup-3:
+              display_name: Kapitola 2
+          title: Umelá inteligencia a strojové učenie
+        csd-post-survey-2024:
+          title: Hodnotenie kurzu

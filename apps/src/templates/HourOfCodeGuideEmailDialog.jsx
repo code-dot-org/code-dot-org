@@ -1,57 +1,151 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+import cookies from 'js-cookie';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import Button from '@cdo/apps/templates/Button';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import {Heading1, Heading3} from '@cdo/apps/componentLibrary/typography';
-import experiments from '@cdo/apps/util/experiments';
-import style from './accessible-dialogue.module.scss';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {Heading2, Heading3} from '@cdo/apps/componentLibrary/typography';
+import style from './hoc-guide-dialogue.module.scss';
+import {isEmail} from '@cdo/apps/util/formatValidation';
 
-function HourOfCodeGuideEmailDialog(signedIn) {
+function HourOfCodeGuideEmailDialog({isSignedIn, unitId}) {
   const [isOpen, setIsOpen] = useState(true);
+  const [isMarketingChecked, setIsMarketingChecked] = useState(false);
+  const [isSendInProgress, setIsSendInProgress] = useState(false);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+
+  useEffect(() => {
+    // Send an Amplitude event each time the guide is shown
+    analyticsReporter.sendEvent(EVENTS.HOC_GUIDE_DIALOG_SHOWN);
+  }, []);
 
   const onClose = () => {
+    cookies.set('HourOfCodeGuideEmailDialogSeen', 'true', {
+      expires: 90,
+      path: '/',
+    });
     setIsOpen(false);
   };
 
-  const bodyText = () =>
-    signedIn === true ? i18n.weHaveEverything() : i18n.signUpToReceiveGuide();
+  const reportAndNotifyOfEmailSend = () => {
+    analyticsReporter.sendEvent(EVENTS.GUIDE_SENT_EVENT, {
+      isSignedIn: isSignedIn,
+    });
+    alert(i18n.emailRequestSubmitted());
+  };
 
-  const emailGuideButtonText = () =>
-    signedIn === true ? i18n.emailMeAGuide() : i18n.getGuideContinue();
+  const validateAndSave = () => {
+    // Only validate inputs for signed out users
+    if (!isSignedIn && !isEmail(email)) {
+      alert(i18n.censusInvalidEmail());
+      return;
+    }
+    if (!isSignedIn && !name) {
+      alert(i18n.censusRequired());
+      return;
+    }
+    setIsSendInProgress(true);
+    const potential_teacher_data = {
+      name: name,
+      email: email,
+      receives_marketing: isMarketingChecked,
+      script_id: unitId,
+    };
+    fetch('/potential_teachers', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(potential_teacher_data),
+    })
+      .then(() => {
+        reportAndNotifyOfEmailSend();
+        onClose();
+      })
+      .catch(err => {
+        setIsSendInProgress(false);
+        alert(i18n.unexpectedError());
+        console.error(err);
+      });
+  };
 
-  const continueWithoutEmailButtonText = () =>
-    signedIn === true ? i18n.continueToActivity() : i18n.continueWithoutGuide();
+  const bodyText = isSignedIn
+    ? i18n.weHaveEverything()
+    : i18n.signUpToReceiveGuide();
+
+  const emailGuideButtonText = isSignedIn
+    ? i18n.emailMeAGuide()
+    : i18n.getGuideContinue();
+
+  const continueWithoutEmailButtonText = isSignedIn
+    ? i18n.continueToActivity()
+    : i18n.continueWithoutGuide();
 
   return (
     <div>
-      {isOpen && experiments.isEnabled(experiments.HOC_TUTORIAL_DIALOG) && (
-        <AccessibleDialog onClose={onClose}>
+      {isOpen && (
+        <AccessibleDialog styles={style} onClose={onClose}>
           <div tabIndex="0">
-            <Heading1>{i18n.welcomeToDanceParty()}</Heading1>
+            <Heading2>{i18n.welcomeToDanceParty()}</Heading2>
           </div>
           <div className={style.middle}>
             <Heading3>{i18n.learnHowToHost()}</Heading3>
-            {bodyText()}
+            {bodyText}
+            {!isSignedIn && (
+              <div>
+                <label className={style.typographyLabel}>
+                  {i18n.yourNameCaps() + '*'}
+                  <input
+                    required
+                    type="text"
+                    id="uitest-hoc-guide-name"
+                    className={style.classNameTextField}
+                    value={name}
+                    onChange={e => setName(e.target.value)}
+                  />
+                </label>
+                <label className={style.typographyLabel}>
+                  {i18n.yourEmailCaps() + '*'}
+                  <input
+                    required
+                    type="text"
+                    id="uitest-hoc-guide-email"
+                    className={style.classNameTextField}
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}
+                  />
+                </label>
+                <label className={style.label}>
+                  <input
+                    checked={isMarketingChecked}
+                    className={style.box}
+                    type="checkbox"
+                    id="uitest-receive-updates-checkbox"
+                    onChange={() => {
+                      setIsMarketingChecked(!isMarketingChecked);
+                    }}
+                  />
+                  {i18n.receiveFutureUpdates()}
+                </label>
+              </div>
+            )}
           </div>
           <div className={style.buttonsBottom}>
             <Button
               id="uitest-no-email-guide"
-              text={continueWithoutEmailButtonText()}
-              onClick={() => {
-                onClose();
-              }}
+              text={continueWithoutEmailButtonText}
+              onClick={onClose}
               color={Button.ButtonColor.white}
             />
             <Button
               id="uitest-email-guide"
-              text={emailGuideButtonText()}
-              onClick={() => {
-                onClose();
-              }}
+              text={isSendInProgress ? i18n.inProgress() : emailGuideButtonText}
+              onClick={validateAndSave}
               color={Button.ButtonColor.brandSecondaryDefault}
+              disabled={isSendInProgress}
             />
           </div>
         </AccessibleDialog>
@@ -61,12 +155,10 @@ function HourOfCodeGuideEmailDialog(signedIn) {
 }
 
 HourOfCodeGuideEmailDialog.propTypes = {
-  // Provided by redux
-  signedIn: PropTypes.bool,
+  isSignedIn: PropTypes.bool.isRequired,
+  unitId: PropTypes.number.isRequired,
 };
 
 export const UnconnectedHourOfCodeGuideEmailDialog = HourOfCodeGuideEmailDialog;
 
-export default connect(state => ({
-  signedIn: state.currentUser.signInState === SignInState.SignedIn,
-}))(HourOfCodeGuideEmailDialog);
+export default HourOfCodeGuideEmailDialog;

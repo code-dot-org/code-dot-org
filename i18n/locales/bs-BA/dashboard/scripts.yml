@@ -1178,6 +1178,8 @@ bs:
           lessons:
             lesson-5:
               name: Procjene
+            lesson-6:
+              name: Lekcija 1
         pre-express-2023:
           lesson_groups:
             csf_loops:
@@ -1350,3 +1352,23 @@ bs:
               display_name: Uvjeti
             lessonGroup-5:
               display_name: Varijable
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Uvod
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Uvod
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Uvod
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Uvod
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Poglavlje 2: Rješavanje problema podataka'
+          description_short: Naučite kako ljudi koriste računala za rješavanje problema podataka.

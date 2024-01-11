@@ -4973,7 +4973,8 @@
         "e606d7d3-d552-4db3-91b7-c26f98da237c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Aplikacja: Twórca historyjek"
         },
         "f1388388-8631-479b-bca9-ffe97206edf8": {
           "tips": [
@@ -9002,7 +9003,8 @@
           "tips": [
             null,
             null
-          ]
+          ],
+          "progression_name": "AI Lab i dane Isaaca"
         },
         "57e61086-a30b-47d8-ad65-af83a970d437": {
           "name": "Dziennik"
@@ -14278,7 +14280,8 @@
         "52a024ed-055f-4d25-a4f8-52e0a48bff85": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Aplikacja: Twórca historyjek"
         },
         "ed108dd1-16c6-4e7f-9bb5-8d38bd7c86fe": {
           "tips": [
@@ -14885,7 +14888,8 @@
         "64552bfc-d25b-4850-921a-2bc32d6d450d": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Dodaj zawartość i strukturę do swojej strony"
         },
         "6fe582a0-4693-4d62-9b6c-2f9f4a753e8e": {
           "progression_name": "Dodaj styl do swojej strony"
@@ -15275,7 +15279,8 @@
         "3a14abd4-7d6f-4742-be18-b32c2faaf3b4": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Dodaj zawartość i HTML"
         },
         "408d2c85-37a0-4ca3-81a7-16bf8d70415b": {
           "progression_name": "Dodaj Styl"
@@ -18782,7 +18787,8 @@
           "tips": [
             null,
             null
-          ]
+          ],
+          "progression_name": "AI Lab i dane Isaaca"
         },
         "facdc92c-bb56-496c-9a0d-7f483f0d4c52": {
           "name": "Dziennik"
@@ -23494,7 +23500,8 @@
         "500131a4-a22b-4a63-bc0a-d5d4a19c7169": {
           "tips": [
             null
-          ]
+          ],
+          "name": "Wprowadzenie do sztucznej inteligencji"
         },
         "a45155ff-19af-43ac-bf11-6ca4001816f4": {
           "tips": [
@@ -25322,7 +25329,8 @@
         "da48979a-dd8b-4b86-8807-fec8df453f84": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Aplikacja: Twórca historyjek"
         },
         "1a4ca5a7-53ea-4ff7-b3ee-7258968cd135": {
           "tips": [
@@ -25898,7 +25906,8 @@
         "7aa3a1a8-3fe5-4e82-ad83-0bc7aff94325": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Dodaj zawartość i strukturę do swojej strony"
         },
         "43ee1323-2464-4081-a740-cdf6397fc3e4": {
           "progression_name": "Dodaj styl do swojej strony"
@@ -26248,7 +26257,8 @@
         "4860ef5b-aedc-4828-ae25-0d22347b4ae3": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Dodaj zawartość i HTML"
         },
         "d331a5e4-050f-40fb-a895-45db32b5ac22": {
           "tips": [
@@ -30161,7 +30171,8 @@
           "tips": [
             null,
             null
-          ]
+          ],
+          "progression_name": "AI Lab i dane Isaaca"
         },
         "7a6bc17e-4ad8-4aa4-9d09-e8ff23be6a5e": {
           "name": "Dziennik"
@@ -34860,11 +34871,11 @@
           "description": "Użyj tych ćwiczeń, aby urozmaicić naukę uczniów. Można je wykorzystać do zajęć pozalekcyjnych albo w ramach urozmaicenia innego rodzaju.\n\n**Zajrzyj pod maskę**\n\nGdy udostępniasz link do swojej historii, udostępniasz również cały kod, który się za nim kryje. To jest świetny sposób nauki uczniów wzajemnie od siebie. \n\n-   Zamieść linki do kompletnych historii online.\n    -   Spraw, by historia stała się również Twoją historią, którą udostępnisz!\n-   Gdy uczniowie ładują link, niech klikną przycisk \"Jak to działa\", aby zobaczyć kod kryjący się za tą historią.\n-   Omów, jako grupa, różne sposoby, w jakie Twoi koledzy z klasy kodują swoje historie.\n-   Co Cię zaskoczyło?\n    -   Co chciałbyś wypróbować?\n-   Wybierz historię kogoś innego i kliknij \"Remiksuj\", aby na niej budować (Nie martw się, oryginalna historia będzie bezpieczna)."
         },
         "1e654402-405b-49ad-94a8-ac99524b7b63": {
-          "description": "\\*\\*Pierwsze kroki z Code.org: \\*\\* Rozważ obejrzenie naszej serii[0] filmów [Pierwsze kroki z Code.org], aby zapoznać się z planami lekcji, skonfigurować sekcję w klasie i inne ważne funkcje platformy Code.org. Każdy film zawiera również artykuł pomocy technicznej, jeśli wolisz przeczytać lub wydrukować instrukcje - [kliknij tutaj, aby dowiedzieć się więcej](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n\\*\\*Skonfiguruj sekcję klasy: \\*\\* Możesz użyć sekcji zajęć w Code.org, aby zarządzać swoimi uczniami, przeglądać ich postępy i przypisywać konkretny program nauczania - [kliknij tutaj, aby dowiedzieć się więcej].[2]\n\nJeśli korzystasz z systemu zarządzania nauką, mogą być dodatkowe kroki, aby zsynchronizować swoje zajęcia z Code.org:\n\n-   [Kliknij tutaj], aby[3] uzyskać kroki, aby skonfigurować zajęcia z Google Classroom\n-   [Kliknij tutaj], aby[4] uzyskać kroki, aby skonfigurować zajęcia z Clever\n\n\\*\\*Zostań zweryfikowanym nauczycielem: \\*\\* Plany lekcji i poziomy mają dodatkowe zasoby i klucze odpowiedzi dla Zweryfikowanych Nauczycieli, który jest szybkim procesem, który weryfikuje Twoje stanowisko w instytucji edukacyjnej. [Kliknij tutaj, aby wypełnić formularz](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) i powinieneś mieć dostęp do zweryfikowanych zasobów dla nauczycieli w ciągu ~ 1 dnia roboczego.\n\n\\*\\*Wsparcie dla nauczycieli: \\*\\* Możesz dowiedzieć się więcej o wprowadzaniu lekcji AI do swojej klasy dzięki naszej [serii AI 101 for Teachers].[6]AI 101 for Teachers to bezpłatna, podstawowa seria nauczania online dla każdego nauczyciela i pedagoga zainteresowanego przełomowym światem sztucznej inteligencji (AI) i jej potencjałem transformacyjnym w edukacji."
+          "description": "**Pierwsze kroki z Code.org:** Rozważ obejrzenie naszej serii[0] filmów [Pierwsze kroki z Code.org], aby dowiedzieć się, jak poruszać się po planach lekcji, skonfigurować sekcję klasy i inne ważne funkcje platformy Code.org. Każdy film zawiera również artykuł pomocniczy, jeśli wolisz przeczytać lub wydrukować instrukcje - [kliknij tutaj, aby dowiedzieć się więcej](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Skonfiguruj sekcję klasy:** Możesz użyć sekcji klasy w Code.org, aby zarządzać uczniami, przeglądać ich postępy i przypisywać określony program nauczania - [kliknij tutaj, aby dowiedzieć się więcej].[2]\n\nJeśli korzystasz z systemu zarządzania nauką, mogą pojawić się dodatkowe kroki, aby zsynchronizować zajęcia z Code.org:\n\n-   [Kliknij tutaj](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync), aby uzyskać kroki w konfiguracji zajęć w Google Classroom\n-   [Kliknij tutaj](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync), aby uzyskać kroki w konfiguracji zajęć z Clever\n\n**Zostań zweryfikowanym nauczycielem:** Plany lekcji i poziomy mają dodatkowe zasoby i klucze odpowiedzi dla zweryfikowanych nauczycieli, co jest szybkim procesem weryfikującym Twoją pozycję w instytucji edukacyjnej. [Kliknij tutaj, aby wypełnić formularz](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) i powinieneś mieć dostęp do zweryfikowanych zasobów nauczycieli w ciągu ~1 dnia roboczego.\n\n**Wsparcie dla nauczycieli:** Możesz dowiedzieć się więcej o wprowadzaniu lekcji sztucznej inteligencji do swojej klasy poprzez naszą [serię AI 101 dla nauczycieli](https://code.org/ai/pl/101). AI 101 for Teachers to darmowa, podstawowa seria profesjonalnego doskonalenia online dla każdego nauczyciela i nauczyciela zainteresowanego przełomowym światem sztucznej inteligencji (AI) i jej potencjałem transformacyjnym w edukacji."
         },
         "c08c1de3-0bdf-4f2c-b993-6429e305319a": {
           "name": "Dziennik",
-          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> \\*\\*Monit: \\*\\* \\_Jaki jest przykład sztucznej inteligencji (lub sztucznej inteligencji) w życiu osobistym lub który widziałeś w filmie lub książce? \\_",
+          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** _Jaki jest przykład sztucznej inteligencji (AI) w życiu osobistym lub który widziałeś wna filmie lub spotkałeś w książce?_",
           "tips": [
             "\\*\\* Co to jest AI? \\*\\* Na podstawowym poziomie sztuczna inteligencja ma miejsce, gdy program komputerowy naśladuje inteligencję człowieka. Może się to wydawać rozwiązaniem problemu, angażowaniem się w rozmowy, okazywaniem emocji i wieloma innymi formami. Uczniowie mogą skłaniać się ku przykładom sztucznej inteligencji, której forma naśladuje również człowieka, takich jak interaktywne roboty lub Siri lub rozmawiając z ChatGPT, ale także podkreślać przykłady, które są szersze i bardziej osadzone w często używanych narzędziach, takich jak algorytmy mediów społecznościowych lub algorytmy rekomendacji strumieniowych.\n\nWkrótce po tym monitie uczniowie obejrzą film, który dodatkowo definiuje sztuczną inteligencję i cel tej jednostki, Uczenie maszynowe."
           ]
@@ -34965,7 +34976,7 @@
         },
         "a7c37a28-46be-4a1a-b767-99482e8cf353": {
           "name": "Przygotowanie do nauczania lekcji Code.org",
-          "description": "\\*\\*Pierwsze kroki z Code.org: \\*\\* Rozważ obejrzenie naszej serii[0] filmów [Pierwsze kroki z Code.org], aby zapoznać się z planami lekcji, skonfigurować sekcję w klasie i inne ważne funkcje platformy Code.org. Każdy film zawiera również artykuł pomocy technicznej, jeśli wolisz przeczytać lub wydrukować instrukcje - [kliknij tutaj, aby dowiedzieć się więcej](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n\\*\\*Skonfiguruj sekcję klasy: \\*\\* Możesz użyć sekcji zajęć w Code.org, aby zarządzać swoimi uczniami, przeglądać ich postępy i przypisywać konkretny program nauczania - [kliknij tutaj, aby dowiedzieć się więcej].[2]\n\nJeśli korzystasz z systemu zarządzania nauką, mogą być dodatkowe kroki, aby zsynchronizować swoje zajęcia z Code.org:\n\n-   [Kliknij tutaj], aby[3] uzyskać kroki, aby skonfigurować zajęcia z Google Classroom\n-   [Kliknij tutaj], aby[4] uzyskać kroki, aby skonfigurować zajęcia z Clever\n\n\\*\\*Zostań zweryfikowanym nauczycielem: \\*\\* Plany lekcji i poziomy mają dodatkowe zasoby i klucze odpowiedzi dla Zweryfikowanych Nauczycieli, który jest szybkim procesem, który weryfikuje Twoje stanowisko w instytucji edukacyjnej. [Kliknij tutaj, aby wypełnić formularz](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) i powinieneś mieć dostęp do zweryfikowanych zasobów dla nauczycieli w ciągu ~ 1 dnia roboczego.\n\n\\*\\*Wsparcie dla nauczycieli: \\*\\* Możesz dowiedzieć się więcej o wprowadzaniu lekcji AI do swojej klasy dzięki naszej [serii AI 101 for Teachers].[6]AI 101 for Teachers to bezpłatna, podstawowa seria nauczania online dla każdego nauczyciela i pedagoga zainteresowanego przełomowym światem sztucznej inteligencji (AI) i jej potencjałem transformacyjnym w edukacji."
+          "description": "**Pierwsze kroki z Code.org:** Rozważ obejrzenie naszej serii[0] filmów [Pierwsze kroki z Code.org], aby dowiedzieć się, jak poruszać się po planach lekcji, skonfigurować sekcję klasy i inne ważne funkcje platformy Code.org. Każdy film zawiera również artykuł pomocniczy, jeśli wolisz przeczytać lub wydrukować instrukcje - [kliknij tutaj, aby dowiedzieć się więcej](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Skonfiguruj sekcję klasy:** Możesz użyć sekcji klasy w Code.org, aby zarządzać uczniami, przeglądać ich postępy i przypisywać określony program nauczania - [kliknij tutaj, aby dowiedzieć się więcej].[2]\n\nJeśli korzystasz z systemu zarządzania nauką, mogą pojawić się dodatkowe kroki, aby zsynchronizować zajęcia z Code.org:\n\n-   [Kliknij tutaj](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync), aby uzyskać kroki w konfiguracji zajęć w Google Classroom\n-   [Kliknij tutaj](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync), aby uzyskać kroki w konfiguracji zajęć z Clever\n\n**Zostań zweryfikowanym nauczycielem:** Plany lekcji i poziomy mają dodatkowe zasoby i klucze odpowiedzi dla zweryfikowanych nauczycieli, co jest szybkim procesem weryfikującym Twoją pozycję w instytucji edukacyjnej. [Kliknij tutaj, aby wypełnić formularz](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) i powinieneś mieć dostęp do zweryfikowanych zasobów nauczycieli w ciągu ~1 dnia roboczego.\n\n**Wsparcie dla nauczycieli:** Możesz dowiedzieć się więcej o wprowadzaniu lekcji sztucznej inteligencji do swojej klasy poprzez naszą [serię AI 101 dla nauczycieli](https://code.org/ai/pl/101). AI 101 for Teachers to darmowa, podstawowa seria profesjonalnego doskonalenia online dla każdego nauczyciela i nauczyciela zainteresowanego przełomowym światem sztucznej inteligencji (AI) i jej potencjałem transformacyjnym w edukacji."
         },
         "50d849e2-460c-447c-b9d0-be4d24640b35": {
           "name": "Złudzenia optyczne",
@@ -35106,7 +35117,7 @@
           "description": "Jeśli chcesz jeszcze głębiej zagłębić się w sztuczną inteligencję i uczenie maszynowe, rozważ zapoznanie się z naszą 5-tygodniową jednostką na temat sztucznej inteligencji i uczenia maszynowego. [Kliknij tutaj, aby wyświetlić jednostkę i dowiedzieć się więcej](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "5a1c68ad-e858-4aa4-8a9d-b9edaef7dfde": {
-          "description": "\\*\\*Pierwsze kroki z Code.org: \\*\\* Rozważ obejrzenie naszej serii[0] filmów [Pierwsze kroki z Code.org], aby zapoznać się z planami lekcji, skonfigurować sekcję w klasie i inne ważne funkcje platformy Code.org. Każdy film zawiera również artykuł pomocy technicznej, jeśli wolisz przeczytać lub wydrukować instrukcje - [kliknij tutaj, aby dowiedzieć się więcej](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n\\*\\*Skonfiguruj sekcję klasy: \\*\\* Możesz użyć sekcji zajęć w Code.org, aby zarządzać swoimi uczniami, przeglądać ich postępy i przypisywać konkretny program nauczania - [kliknij tutaj, aby dowiedzieć się więcej].[2]\n\nJeśli korzystasz z systemu zarządzania nauką, mogą być dodatkowe kroki, aby zsynchronizować swoje zajęcia z Code.org:\n\n-   [Kliknij tutaj], aby[3] uzyskać kroki, aby skonfigurować zajęcia z Google Classroom\n-   [Kliknij tutaj], aby[4] uzyskać kroki, aby skonfigurować zajęcia z Clever\n\n\\*\\*Zostań zweryfikowanym nauczycielem: \\*\\* Plany lekcji i poziomy mają dodatkowe zasoby i klucze odpowiedzi dla Zweryfikowanych Nauczycieli, który jest szybkim procesem, który weryfikuje Twoje stanowisko w instytucji edukacyjnej. [Kliknij tutaj, aby wypełnić formularz](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) i powinieneś mieć dostęp do zweryfikowanych zasobów dla nauczycieli w ciągu ~ 1 dnia roboczego.\n\n\\*\\*Wsparcie dla nauczycieli: \\*\\* Możesz dowiedzieć się więcej o wprowadzaniu lekcji AI do swojej klasy dzięki naszej [serii AI 101 for Teachers].[6]AI 101 for Teachers to bezpłatna, podstawowa seria nauczania online dla każdego nauczyciela i pedagoga zainteresowanego przełomowym światem sztucznej inteligencji (AI) i jej potencjałem transformacyjnym w edukacji."
+          "description": "**Pierwsze kroki z Code.org:** Rozważ obejrzenie naszej serii[0] filmów [Pierwsze kroki z Code.org], aby dowiedzieć się, jak poruszać się po planach lekcji, skonfigurować sekcję klasy i inne ważne funkcje platformy Code.org. Każdy film zawiera również artykuł pomocniczy, jeśli wolisz przeczytać lub wydrukować instrukcje - [kliknij tutaj, aby dowiedzieć się więcej](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Skonfiguruj sekcję klasy:** Możesz użyć sekcji klasy w Code.org, aby zarządzać uczniami, przeglądać ich postępy i przypisywać określony program nauczania - [kliknij tutaj, aby dowiedzieć się więcej].[2]\n\nJeśli korzystasz z systemu zarządzania nauką, mogą pojawić się dodatkowe kroki, aby zsynchronizować zajęcia z Code.org:\n\n-   [Kliknij tutaj](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync), aby uzyskać kroki w konfiguracji zajęć w Google Classroom\n-   [Kliknij tutaj](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync), aby uzyskać kroki w konfiguracji zajęć z Clever\n\n**Zostań zweryfikowanym nauczycielem:** Plany lekcji i poziomy mają dodatkowe zasoby i klucze odpowiedzi dla zweryfikowanych nauczycieli, co jest szybkim procesem weryfikującym Twoją pozycję w instytucji edukacyjnej. [Kliknij tutaj, aby wypełnić formularz](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) i powinieneś mieć dostęp do zweryfikowanych zasobów nauczycieli w ciągu ~1 dnia roboczego.\n\n**Wsparcie dla nauczycieli:** Możesz dowiedzieć się więcej o wprowadzaniu lekcji sztucznej inteligencji do swojej klasy poprzez naszą [serię AI 101 dla nauczycieli](https://code.org/ai/pl/101). AI 101 for Teachers to darmowa, podstawowa seria profesjonalnego doskonalenia online dla każdego nauczyciela i nauczyciela zainteresowanego przełomowym światem sztucznej inteligencji (AI) i jej potencjałem transformacyjnym w edukacji."
         },
         "5ff88b50-4b33-42fc-9293-1805080b86b3": {
           "name": "Zalecenia",
@@ -35245,7 +35256,7 @@
           "description": "Jeśli chcesz jeszcze głębiej zagłębić się w sztuczną inteligencję i uczenie maszynowe, rozważ zapoznanie się z naszą 5-tygodniową jednostką na temat sztucznej inteligencji i uczenia maszynowego. [Kliknij tutaj, aby wyświetlić jednostkę i dowiedzieć się więcej](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "2913480b-0273-4c5a-95c8-23b002a842a0": {
-          "description": "\\*\\*Pierwsze kroki z Code.org: \\*\\* Rozważ obejrzenie naszej serii[0] filmów [Pierwsze kroki z Code.org], aby zapoznać się z planami lekcji, skonfigurować sekcję w klasie i inne ważne funkcje platformy Code.org. Każdy film zawiera również artykuł pomocy technicznej, jeśli wolisz przeczytać lub wydrukować instrukcje - [kliknij tutaj, aby dowiedzieć się więcej](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n\\*\\*Skonfiguruj sekcję klasy: \\*\\* Możesz użyć sekcji zajęć w Code.org, aby zarządzać swoimi uczniami, przeglądać ich postępy i przypisywać konkretny program nauczania - [kliknij tutaj, aby dowiedzieć się więcej].[2]\n\nJeśli korzystasz z systemu zarządzania nauką, mogą być dodatkowe kroki, aby zsynchronizować swoje zajęcia z Code.org:\n\n-   [Kliknij tutaj], aby[3] uzyskać kroki, aby skonfigurować zajęcia z Google Classroom\n-   [Kliknij tutaj], aby[4] uzyskać kroki, aby skonfigurować zajęcia z Clever\n\n\\*\\*Zostań zweryfikowanym nauczycielem: \\*\\* Plany lekcji i poziomy mają dodatkowe zasoby i klucze odpowiedzi dla Zweryfikowanych Nauczycieli, który jest szybkim procesem, który weryfikuje Twoje stanowisko w instytucji edukacyjnej. [Kliknij tutaj, aby wypełnić formularz](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) i powinieneś mieć dostęp do zweryfikowanych zasobów dla nauczycieli w ciągu ~ 1 dnia roboczego.\n\n\\*\\*Wsparcie dla nauczycieli: \\*\\* Możesz dowiedzieć się więcej o wprowadzaniu lekcji AI do swojej klasy dzięki naszej [serii AI 101 for Teachers].[6]AI 101 for Teachers to bezpłatna, podstawowa seria nauczania online dla każdego nauczyciela i pedagoga zainteresowanego przełomowym światem sztucznej inteligencji (AI) i jej potencjałem transformacyjnym w edukacji."
+          "description": "**Pierwsze kroki z Code.org:** Rozważ obejrzenie naszej serii[0] filmów [Pierwsze kroki z Code.org], aby dowiedzieć się, jak poruszać się po planach lekcji, skonfigurować sekcję klasy i inne ważne funkcje platformy Code.org. Każdy film zawiera również artykuł pomocniczy, jeśli wolisz przeczytać lub wydrukować instrukcje - [kliknij tutaj, aby dowiedzieć się więcej](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Skonfiguruj sekcję klasy:** Możesz użyć sekcji klasy w Code.org, aby zarządzać uczniami, przeglądać ich postępy i przypisywać określony program nauczania - [kliknij tutaj, aby dowiedzieć się więcej].[2]\n\nJeśli korzystasz z systemu zarządzania nauką, mogą pojawić się dodatkowe kroki, aby zsynchronizować zajęcia z Code.org:\n\n-   [Kliknij tutaj](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync), aby uzyskać kroki w konfiguracji zajęć w Google Classroom\n-   [Kliknij tutaj](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync), aby uzyskać kroki w konfiguracji zajęć z Clever\n\n**Zostań zweryfikowanym nauczycielem:** Plany lekcji i poziomy mają dodatkowe zasoby i klucze odpowiedzi dla zweryfikowanych nauczycieli, co jest szybkim procesem weryfikującym Twoją pozycję w instytucji edukacyjnej. [Kliknij tutaj, aby wypełnić formularz](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) i powinieneś mieć dostęp do zweryfikowanych zasobów nauczycieli w ciągu ~1 dnia roboczego.\n\n**Wsparcie dla nauczycieli:** Możesz dowiedzieć się więcej o wprowadzaniu lekcji sztucznej inteligencji do swojej klasy poprzez naszą [serię AI 101 dla nauczycieli](https://code.org/ai/pl/101). AI 101 for Teachers to darmowa, podstawowa seria profesjonalnego doskonalenia online dla każdego nauczyciela i nauczyciela zainteresowanego przełomowym światem sztucznej inteligencji (AI) i jej potencjałem transformacyjnym w edukacji."
         },
         "45605ee0-ef53-4106-9c49-f5841ce346fe": {
           "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> \\*\\*Prompt: \\*\\* Uzupełnij następujące zdania jednym słowem:\n\n-   Dziękuję\\\\ \\_\\\\ \\_\\\\ \\_.\n-   Proszę kupić mi\\\\ \\_\\\\ \\_\\\\ \\_.\n-   Gry wideo są\\\\ \\_\\\\ \\_\\\\ \\_.\n-   Lubię bawić się na zewnątrz na wiosnę, ponieważ jest\\\\ \\_\\\\ \\_\\\\ \\_."
@@ -35398,7 +35409,7 @@
           ]
         },
         "cb38f0db-8aa1-4d5f-81bf-5d3b19f52fdf": {
-          "description": "\\*\\*Pierwsze kroki z Code.org: \\*\\* Rozważ obejrzenie naszej serii[0] filmów [Pierwsze kroki z Code.org], aby zapoznać się z planami lekcji, skonfigurować sekcję w klasie i inne ważne funkcje platformy Code.org. Każdy film zawiera również artykuł pomocy technicznej, jeśli wolisz przeczytać lub wydrukować instrukcje - [kliknij tutaj, aby dowiedzieć się więcej](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n\\*\\*Skonfiguruj sekcję klasy: \\*\\* Możesz użyć sekcji zajęć w Code.org, aby zarządzać swoimi uczniami, przeglądać ich postępy i przypisywać konkretny program nauczania - [kliknij tutaj, aby dowiedzieć się więcej].[2]\n\nJeśli korzystasz z systemu zarządzania nauką, mogą być dodatkowe kroki, aby zsynchronizować swoje zajęcia z Code.org:\n\n-   [Kliknij tutaj], aby[3] uzyskać kroki, aby skonfigurować zajęcia z Google Classroom\n-   [Kliknij tutaj], aby[4] uzyskać kroki, aby skonfigurować zajęcia z Clever\n\n\\*\\*Zostań zweryfikowanym nauczycielem: \\*\\* Plany lekcji i poziomy mają dodatkowe zasoby i klucze odpowiedzi dla Zweryfikowanych Nauczycieli, który jest szybkim procesem, który weryfikuje Twoje stanowisko w instytucji edukacyjnej. [Kliknij tutaj, aby wypełnić formularz](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) i powinieneś mieć dostęp do zweryfikowanych zasobów dla nauczycieli w ciągu ~ 1 dnia roboczego.\n\n\\*\\*Wsparcie dla nauczycieli: \\*\\* Możesz dowiedzieć się więcej o wprowadzaniu lekcji AI do swojej klasy dzięki naszej [serii AI 101 for Teachers].[6]AI 101 for Teachers to bezpłatna, podstawowa seria nauczania online dla każdego nauczyciela i pedagoga zainteresowanego przełomowym światem sztucznej inteligencji (AI) i jej potencjałem transformacyjnym w edukacji."
+          "description": "**Pierwsze kroki z Code.org:** Rozważ obejrzenie naszej serii[0] filmów [Pierwsze kroki z Code.org], aby dowiedzieć się, jak poruszać się po planach lekcji, skonfigurować sekcję klasy i inne ważne funkcje platformy Code.org. Każdy film zawiera również artykuł pomocniczy, jeśli wolisz przeczytać lub wydrukować instrukcje - [kliknij tutaj, aby dowiedzieć się więcej](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Skonfiguruj sekcję klasy:** Możesz użyć sekcji klasy w Code.org, aby zarządzać uczniami, przeglądać ich postępy i przypisywać określony program nauczania - [kliknij tutaj, aby dowiedzieć się więcej].[2]\n\nJeśli korzystasz z systemu zarządzania nauką, mogą pojawić się dodatkowe kroki, aby zsynchronizować zajęcia z Code.org:\n\n-   [Kliknij tutaj](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync), aby uzyskać kroki w konfiguracji zajęć w Google Classroom\n-   [Kliknij tutaj](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync), aby uzyskać kroki w konfiguracji zajęć z Clever\n\n**Zostań zweryfikowanym nauczycielem:** Plany lekcji i poziomy mają dodatkowe zasoby i klucze odpowiedzi dla zweryfikowanych nauczycieli, co jest szybkim procesem weryfikującym Twoją pozycję w instytucji edukacyjnej. [Kliknij tutaj, aby wypełnić formularz](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) i powinieneś mieć dostęp do zweryfikowanych zasobów nauczycieli w ciągu ~1 dnia roboczego.\n\n**Wsparcie dla nauczycieli:** Możesz dowiedzieć się więcej o wprowadzaniu lekcji sztucznej inteligencji do swojej klasy poprzez naszą [serię AI 101 dla nauczycieli](https://code.org/ai/pl/101). AI 101 for Teachers to darmowa, podstawowa seria profesjonalnego doskonalenia online dla każdego nauczyciela i nauczyciela zainteresowanego przełomowym światem sztucznej inteligencji (AI) i jej potencjałem transformacyjnym w edukacji."
         },
         "859813e4-1007-4147-800e-1f1f961473b3": {
           "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> \\*\\*Monit: \\*\\* \n\n1.  Zwróć się do partnera\n2.  Odliczaj od 5, a licząc 1, obaj wołają imię zwierzęcia\n3.  Przez 1 minutę każdy narysuj mieszankę tych 2 zwierząt\n4.  Porównaj swoje zdjęcia - jakie szczegóły są podobne, a jakie są różne?\n5.  Udostępnij swoje zdjęcia innemu partnerstwu - czy mogą odgadnąć, jaki był monit?",
@@ -35513,7 +35524,7 @@
           "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> \\*\\*Cel dyskusji: \\*\\* Uczniowie zachowywali się jak dyskryminator, gdy odgadli, czy wygenerowane hasło komputera jest zgodne z regułą, czy nie. Początkowo nie wiedzieli, ale poprawili się, gdy otrzymali więcej danych."
         },
         "d5c8ccb5-68e1-4044-932a-ac938f81d804": {
-          "description": "\\*\\*Pierwsze kroki z Code.org: \\*\\* Rozważ obejrzenie naszej serii[0] filmów [Pierwsze kroki z Code.org], aby zapoznać się z planami lekcji, skonfigurować sekcję w klasie i inne ważne funkcje platformy Code.org. Każdy film zawiera również artykuł pomocy technicznej, jeśli wolisz przeczytać lub wydrukować instrukcje - [kliknij tutaj, aby dowiedzieć się więcej](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n\\*\\*Skonfiguruj sekcję klasy: \\*\\* Możesz użyć sekcji zajęć w Code.org, aby zarządzać swoimi uczniami, przeglądać ich postępy i przypisywać konkretny program nauczania - [kliknij tutaj, aby dowiedzieć się więcej].[2]\n\nJeśli korzystasz z systemu zarządzania nauką, mogą być dodatkowe kroki, aby zsynchronizować swoje zajęcia z Code.org:\n\n-   [Kliknij tutaj], aby[3] uzyskać kroki, aby skonfigurować zajęcia z Google Classroom\n-   [Kliknij tutaj], aby[4] uzyskać kroki, aby skonfigurować zajęcia z Clever\n\n\\*\\*Zostań zweryfikowanym nauczycielem: \\*\\* Plany lekcji i poziomy mają dodatkowe zasoby i klucze odpowiedzi dla Zweryfikowanych Nauczycieli, który jest szybkim procesem, który weryfikuje Twoje stanowisko w instytucji edukacyjnej. [Kliknij tutaj, aby wypełnić formularz](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) i powinieneś mieć dostęp do zweryfikowanych zasobów dla nauczycieli w ciągu ~ 1 dnia roboczego.\n\n\\*\\*Wsparcie dla nauczycieli: \\*\\* Możesz dowiedzieć się więcej o wprowadzaniu lekcji AI do swojej klasy dzięki naszej [serii AI 101 for Teachers].[6]AI 101 for Teachers to bezpłatna, podstawowa seria nauczania online dla każdego nauczyciela i pedagoga zainteresowanego przełomowym światem sztucznej inteligencji (AI) i jej potencjałem transformacyjnym w edukacji."
+          "description": "**Pierwsze kroki z Code.org:** Rozważ obejrzenie naszej serii[0] filmów [Pierwsze kroki z Code.org], aby dowiedzieć się, jak poruszać się po planach lekcji, skonfigurować sekcję klasy i inne ważne funkcje platformy Code.org. Każdy film zawiera również artykuł pomocniczy, jeśli wolisz przeczytać lub wydrukować instrukcje - [kliknij tutaj, aby dowiedzieć się więcej](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Skonfiguruj sekcję klasy:** Możesz użyć sekcji klasy w Code.org, aby zarządzać uczniami, przeglądać ich postępy i przypisywać określony program nauczania - [kliknij tutaj, aby dowiedzieć się więcej].[2]\n\nJeśli korzystasz z systemu zarządzania nauką, mogą pojawić się dodatkowe kroki, aby zsynchronizować zajęcia z Code.org:\n\n-   [Kliknij tutaj](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync), aby uzyskać kroki w konfiguracji zajęć w Google Classroom\n-   [Kliknij tutaj](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync), aby uzyskać kroki w konfiguracji zajęć z Clever\n\n**Zostań zweryfikowanym nauczycielem:** Plany lekcji i poziomy mają dodatkowe zasoby i klucze odpowiedzi dla zweryfikowanych nauczycieli, co jest szybkim procesem weryfikującym Twoją pozycję w instytucji edukacyjnej. [Kliknij tutaj, aby wypełnić formularz](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) i powinieneś mieć dostęp do zweryfikowanych zasobów nauczycieli w ciągu ~1 dnia roboczego.\n\n**Wsparcie dla nauczycieli:** Możesz dowiedzieć się więcej o wprowadzaniu lekcji sztucznej inteligencji do swojej klasy poprzez naszą [serię AI 101 dla nauczycieli](https://code.org/ai/pl/101). AI 101 for Teachers to darmowa, podstawowa seria profesjonalnego doskonalenia online dla każdego nauczyciela i nauczyciela zainteresowanego przełomowym światem sztucznej inteligencji (AI) i jej potencjałem transformacyjnym w edukacji."
         },
         "549df2b1-2625-4e38-af13-93b0594a64fb": {
           "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> \\*\\*Dyskutuj: \\*\\* \\_Pomyśl o czasie, kiedy udostępniłeś zdjęcie znajomym lub w mediach społecznościowych. Czy kiedykolwiek musiałeś przyciąć udostępnione zdjęcie? Co wyciąłeś i dlaczego? \\_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> \\*\\*Cel dyskusji: \\*\\* Użyj tej dyskusji, aby pokazać, że użytkownicy zwykle mają powód do udostępniania zdjęć, a koncentracja zależy od tego powodu. Uczniowie najprawdopodobniej przedstawią szeroki zakres przykładów, które można wykorzystać do podkreślenia, że nie ma jednego rozmiaru dla wszystkich podejścia do udostępniania zdjęć i przycinania ich. "
@@ -35595,10 +35606,10 @@
           "description": "Jeśli chcesz jeszcze głębiej zagłębić się w sztuczną inteligencję i uczenie maszynowe, rozważ zapoznanie się z naszą 5-tygodniową jednostką na temat sztucznej inteligencji i uczenia maszynowego. [Kliknij tutaj, aby wyświetlić jednostkę i dowiedzieć się więcej](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "17bd5635-8ba9-4318-96e4-d1e3bedf918b": {
-          "description": "\\*\\*Pierwsze kroki z Code.org: \\*\\* Rozważ obejrzenie naszej serii[0] filmów [Pierwsze kroki z Code.org], aby zapoznać się z planami lekcji, skonfigurować sekcję w klasie i inne ważne funkcje platformy Code.org. Każdy film zawiera również artykuł pomocy technicznej, jeśli wolisz przeczytać lub wydrukować instrukcje - [kliknij tutaj, aby dowiedzieć się więcej](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n\\*\\*Skonfiguruj sekcję klasy: \\*\\* Możesz użyć sekcji zajęć w Code.org, aby zarządzać swoimi uczniami, przeglądać ich postępy i przypisywać konkretny program nauczania - [kliknij tutaj, aby dowiedzieć się więcej].[2]\n\nJeśli korzystasz z systemu zarządzania nauką, mogą być dodatkowe kroki, aby zsynchronizować swoje zajęcia z Code.org:\n\n-   [Kliknij tutaj], aby[3] uzyskać kroki, aby skonfigurować zajęcia z Google Classroom\n-   [Kliknij tutaj], aby[4] uzyskać kroki, aby skonfigurować zajęcia z Clever\n\n\\*\\*Zostań zweryfikowanym nauczycielem: \\*\\* Plany lekcji i poziomy mają dodatkowe zasoby i klucze odpowiedzi dla Zweryfikowanych Nauczycieli, który jest szybkim procesem, który weryfikuje Twoje stanowisko w instytucji edukacyjnej. [Kliknij tutaj, aby wypełnić formularz](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) i powinieneś mieć dostęp do zweryfikowanych zasobów dla nauczycieli w ciągu ~ 1 dnia roboczego.\n\n\\*\\*Wsparcie dla nauczycieli: \\*\\* Możesz dowiedzieć się więcej o wprowadzaniu lekcji AI do swojej klasy dzięki naszej [serii AI 101 for Teachers].[6]AI 101 for Teachers to bezpłatna, podstawowa seria nauczania online dla każdego nauczyciela i pedagoga zainteresowanego przełomowym światem sztucznej inteligencji (AI) i jej potencjałem transformacyjnym w edukacji."
+          "description": "**Pierwsze kroki z Code.org:** Rozważ obejrzenie naszej serii[0] filmów [Pierwsze kroki z Code.org], aby dowiedzieć się, jak poruszać się po planach lekcji, skonfigurować sekcję klasy i inne ważne funkcje platformy Code.org. Każdy film zawiera również artykuł pomocniczy, jeśli wolisz przeczytać lub wydrukować instrukcje - [kliknij tutaj, aby dowiedzieć się więcej](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Skonfiguruj sekcję klasy:** Możesz użyć sekcji klasy w Code.org, aby zarządzać uczniami, przeglądać ich postępy i przypisywać określony program nauczania - [kliknij tutaj, aby dowiedzieć się więcej].[2]\n\nJeśli korzystasz z systemu zarządzania nauką, mogą pojawić się dodatkowe kroki, aby zsynchronizować zajęcia z Code.org:\n\n-   [Kliknij tutaj](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync), aby uzyskać kroki w konfiguracji zajęć w Google Classroom\n-   [Kliknij tutaj](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync), aby uzyskać kroki w konfiguracji zajęć z Clever\n\n**Zostań zweryfikowanym nauczycielem:** Plany lekcji i poziomy mają dodatkowe zasoby i klucze odpowiedzi dla zweryfikowanych nauczycieli, co jest szybkim procesem weryfikującym Twoją pozycję w instytucji edukacyjnej. [Kliknij tutaj, aby wypełnić formularz](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) i powinieneś mieć dostęp do zweryfikowanych zasobów nauczycieli w ciągu ~1 dnia roboczego.\n\n**Wsparcie dla nauczycieli:** Możesz dowiedzieć się więcej o wprowadzaniu lekcji sztucznej inteligencji do swojej klasy poprzez naszą [serię AI 101 dla nauczycieli](https://code.org/ai/pl/101). AI 101 for Teachers to darmowa, podstawowa seria profesjonalnego doskonalenia online dla każdego nauczyciela i nauczyciela zainteresowanego przełomowym światem sztucznej inteligencji (AI) i jej potencjałem transformacyjnym w edukacji."
         },
         "75b90ab5-9e92-4a28-ad51-4e89e824651e": {
-          "name": "Wymagania wstępne Umiejętności",
+          "name": "Wstępnie wymagane umiejętności",
           "description": "Ta lekcja nie ma na celu zapoznania uczniów z rzetelnymi praktykami badawczymi ani sprawdzaniem wiarygodnych źródeł. Uczniowie powinni przyjść na tę lekcję z wcześniejszą wiedzą i umiejętnościami, aby móc:\n\n-   rozpoznawać wiarygodne źródła w Internecie\n-   podsumowywać informacje ze źródeł cyfrowych na poparcie argumentu\n-   poruszać się po zasobach internetowych i odpowiednio cytować źródła"
         },
         "baa4a80d-7b25-46a4-b655-5ca5c2c89a90": {
@@ -37334,6 +37345,298 @@
         },
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Zakończenie"
+        },
+        "29f459d2-a640-4618-9829-6d5adb95cef9": {
+          "progression_name": "Aplikacja: Ulepszona aplikacja dla zwierząt"
+        },
+        "658bb176-e81a-441b-9846-7f06edb26bcb": {
+          "progression_name": "Aplikacja: Czy to Twoje urodziny?"
+        },
+        "3136eec5-7ffe-4b31-9cdd-7e988769c3d1": {
+          "progression_name": "Aplikacja: Parki Narodowe"
+        },
+        "59635fc9-85ee-4beb-8e84-3db4d473f7d5": {
+          "progression_name": "Aplikacja: Ile krajów"
+        },
+        "7870b41a-67d4-4e4c-bac2-51df283c64a2": {
+          "progression_name": "Aplikacja: Moje słynne urodziny"
+        },
+        "fe0df0f8-e6fb-42c2-82a5-7542d4a4fcde": {
+          "progression_name": "Aplikacja: Notatnik znaczków"
+        },
+        "1bf0d6db-f0d5-4473-b861-ca00d265f8a9": {
+          "progression_name": "Aplikacja: Najszybszy palec"
+        },
+        "09785de0-de7c-40a7-afac-9a255151a45d": {
+          "progression_name": "Aplikacja: Zgadnij liczbę"
+        },
+        "23734edc-d8f1-43ea-b0bc-63a9f745c6bb": {
+          "progression_name": "Aplikacja: Gdzie powinienem mieszkać?"
+        },
+        "2000a800-9ea1-4dbd-bb6c-7af93735477d": {
+          "progression_name": "Aplikacja: Outfit Picker"
+        },
+        "33b8468e-5c6c-4acb-b377-dd721dc0904a": {
+          "progression_name": "Aplikacja: Wyszukiwarka znajomych"
+        },
+        "028c50a4-a63b-44aa-a686-55512682ee15": {
+          "progression_name": "Aplikacja: Wybierz film dla dzieci"
+        },
+        "db6b9679-26c9-45e7-9f82-03b3a92d3abf": {
+          "progression_name": "Wyzwanie: Listy"
+        },
+        "f52e5e03-5b2f-4caf-8c69-868f7c2acdbc": {
+          "progression_name": "Wyzwanie: Kolory RGB"
+        },
+        "81ab793a-d696-4167-a9db-9258e5f476b4": {
+          "progression_name": "Dodaj zawartość i strukturę do swojej strony"
+        },
+        "30c8efa1-9c2a-434b-8e72-474a8f38d93e": {
+          "progression_name": "Dodaj zawartość i HTML"
+        },
+        "08bedf45-b2d1-4147-8479-22a9c5f20d51": {
+          "progression_name": "Dodaj ruch"
+        },
+        "b4133437-14b2-4221-8202-c411f147e13c": {
+          "progression_name": "Widżet liczb binarnych"
+        },
+        "5b070069-8e80-48a8-8a84-435906d67aef": {
+          "progression_name": "8-bitowy widżet liczb binarnych"
+        },
+        "1223d000-8832-4645-b9ec-3a7563068eb1": {
+          "progression_name": "AI Lab i dane Kima"
+        },
+        "920cf048-b5d3-4033-8705-25e47ba99238": {
+          "progression_name": "Alternatywne zbiory danych"
+        },
+        "b335d97a-de6e-4811-9880-83afcc0f6c36": {
+          "progression_name": "Aplikacja: Ulepszona aplikacja dla zwierząt"
+        },
+        "7e98a10f-cf10-42fa-aa50-2fe5f52eb606": {
+          "progression_name": "Aplikacja: Czy to Twoje urodziny?"
+        },
+        "1c949e6e-20aa-4799-8eba-39d904bc433b": {
+          "progression_name": "Aplikacja: Parki Narodowe"
+        },
+        "7dd6fa02-5826-4473-b57a-6ed6cf47f6f8": {
+          "progression_name": "Aplikacja: Ile krajów"
+        },
+        "260e39c6-bbec-4951-a85d-be5257e787df": {
+          "progression_name": "Aplikacja: Moje słynne urodziny"
+        },
+        "dd956117-4160-4bac-93f1-2fc1ca0737d3": {
+          "progression_name": "Aplikacja: Notatnik znaczków"
+        },
+        "fd51d043-b16c-41a2-8c01-550b31c8100b": {
+          "progression_name": "Aplikacja: Najszybszy palec"
+        },
+        "5a010975-342e-485a-8be9-6e534ed26b49": {
+          "progression_name": "Aplikacja: Zgadnij liczbę"
+        },
+        "9e7b45ea-2521-47bc-a453-0c522fe52ec3": {
+          "progression_name": "Aplikacja: Gdzie powinienem mieszkać?"
+        },
+        "286386cc-e586-4d44-bf85-60c800773505": {
+          "progression_name": "Aplikacja: Outfit Picker"
+        },
+        "e6e2ba98-c7fc-428e-9a47-f22073547f0c": {
+          "progression_name": "Aplikacja: Wyszukiwarka znajomych"
+        },
+        "6b3b1859-20d3-4a4f-b929-8336e5c63082": {
+          "progression_name": "Aplikacja: Wybierz film dla dzieci"
+        },
+        "f692bf65-f128-4b88-8078-412b8f55c38d": {
+          "progression_name": "Wyzwanie: Listy"
+        },
+        "22a6da59-048b-4d00-83fb-b86c5d5555fd": {
+          "progression_name": "Wyzwanie: Kolory RGB"
+        },
+        "1a0e8cf1-caac-45a4-be73-d16e4557231c": {
+          "progression_name": "Dodaj ruch"
+        },
+        "4454a825-3e39-4e79-bc6a-012f5029fe21": {
+          "progression_name": "Widżet liczb binarnych"
+        },
+        "8a0f0675-afba-4c25-9de4-b4f8e0eda208": {
+          "progression_name": "8-bitowy widżet liczb binarnych"
+        },
+        "e826b464-2d59-45e0-bed3-02cb13fe7729": {
+          "progression_name": "AI Lab i dane Kima"
+        },
+        "9fbfbd48-7e75-4b54-8dae-d4aa36823cf3": {
+          "progression_name": "Alternatywne zbiory danych"
+        },
+        "8fe0e43f-ea04-4937-b6ba-5bbbb91189af": {
+          "progression_name": "Aplikacja: Ulepszona aplikacja dla zwierząt"
+        },
+        "f02b8562-d5a3-4aa5-a57e-7174d37c3cf5": {
+          "progression_name": "Aplikacja: Czy to Twoje urodziny?"
+        },
+        "db792031-5ec8-4dc8-b3e7-f07cefd645b9": {
+          "progression_name": "Aplikacja: Parki Narodowe"
+        },
+        "8f2f4d6d-c2b4-4483-af0e-59a50dabfdb6": {
+          "progression_name": "Aplikacja: Ile krajów"
+        },
+        "961a001a-b4c3-4038-a5ff-160fe33da60e": {
+          "progression_name": "Aplikacja: Moje słynne urodziny"
+        },
+        "3b140950-5ddf-421b-9acc-6fcc2983a429": {
+          "progression_name": "Aplikacja: Notatnik znaczków"
+        },
+        "b80b646d-9233-4e2e-a531-93d84591fb98": {
+          "progression_name": "Aplikacja: Najszybszy palec"
+        },
+        "feee2403-a8f0-402e-a9f8-957514f214a6": {
+          "progression_name": "Aplikacja: Zgadnij liczbę"
+        },
+        "7d2c7965-0151-4492-be5d-84cacd68005a": {
+          "progression_name": "Aplikacja: Gdzie powinienem mieszkać?"
+        },
+        "45881d31-b805-4b57-8ada-41046c9643bd": {
+          "progression_name": "Aplikacja: Outfit Picker"
+        },
+        "cb0df31d-ec5d-42bd-be39-b1b09bcff75d": {
+          "progression_name": "Aplikacja: Wyszukiwarka znajomych"
+        },
+        "e5804c4b-55a2-4df2-ad40-ab99d97b2d7c": {
+          "progression_name": "Aplikacja: Wybierz film dla dzieci"
+        },
+        "fbf994dd-d94d-4ce3-8ef4-b93078c88c50": {
+          "progression_name": "Wyzwanie: Listy"
+        },
+        "be676d46-8a2a-41ba-873b-860534463ee9": {
+          "progression_name": "Dodaj ruch"
+        },
+        "fc0bc207-e0be-4ef9-a039-e0a8f00fab3d": {
+          "progression_name": "Widżet liczb binarnych"
+        },
+        "b4985025-6849-40c6-8efb-3ff0c0cf6929": {
+          "progression_name": "8-bitowy widżet liczb binarnych"
+        },
+        "7aba2286-6505-47db-b2e4-a50d21d18b48": {
+          "progression_name": "AI Lab i dane Kima"
+        },
+        "2e5a5de3-a67e-44c3-a3a2-9425919aad55": {
+          "progression_name": "Alternatywne zbiory danych"
+        },
+        "b6f5ed76-d406-4126-bc05-997d00cf8233": {
+          "description": "| Film                                                                                                                                                                                                                                                           | Nauczyciel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |\n| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| _Wstrzymaj wideo w 1:10, gdy jest napisane „A nawet twórz kompletne sekwencje filmu, używając zaledwie kilku słów instrukcji”._![](<https://images.code.org/02f1611a48d68c83a24d0e30f8793837-Screenshot 2023-06-05 170329.png>)                                | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Jakie są przykłady tego, co może wygenerować sztuczna inteligencja?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Cel dyskusji:** Poszukaj szybkiej odpowiedzi, aby sprawdzić, czy rozumiesz dotychczasowy film.</p><p >Uczniowie mogą wymienić przykłady z filmu, takie jak budowanie sekwencji wideo, ale każde miejsce, w którym ludzie podpowiadają sztucznej inteligencji, a ona coś tworzy, będzie działać. Jako klasa zastanówcie się nad wymyśleniem 1–2 przykładów, które nie zostały jeszcze wymienione w filmie.</p>              |\n| _Zatrzymaj wideo w 2:11, gdzie jest napisane: „W tym momencie generatywna sztuczna inteligencja nauczyła się generować realistycznie wyglądające obrazy”._<br>![](<https://images.code.org/64cacb59d2d1f46aa46de311c02607d4-Screenshot 2023-06-05 170943.png>) | <p><strong><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** </strong> W jaki sposób generatywne sieci kontradyktoryjne utworzyły realistyczne obrazy?\\< br><br><strong><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Cel dyskusji:** </strong> To jest szybkie sprawdzenie zrozumienia. Uczniowie powinni wiedzieć, że generatywna sieć kontradyktoryjna składa się z dwóch sieci — jednej, która generuje obrazy, i drugiej, która określa, czy uważa, że obraz jest prawdziwy, czy wygenerowany. Ostatecznie generator jest w stanie oszukać dyskryminator i obraz wydaje się realny.<br><br>         |\n| _Wstrzymaj wideo w 2:53, gdy jest napisane „...obraz traci wszystkie szczegóły i staje się czystym szumem.”_![](<https://images.code.org/a41cbaa32fe7bf02b41b5309fcef2568-Screenshot 2023-06-05 175605.png>)</p>                                               | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Co dzieje się w każdej wersji obrazu?<br><br><i class =\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Cel dyskusji:** To krótka pauza, która pozwala uczniom na syntezę tego, co widzą. Uczniowie powinni pamiętać, że szczegóły na obrazach stają się nieco niewyraźne, ale nadal można je zobaczyć. W końcu ludzkie oko w ogóle nie widzi szczegółów.</p>                                                                                                                                                                                                   |\n| _Wstrzymaj wideo w 3:45, gdy pojawi się komunikat „lub zmień istniejące obrazy”._<br>![](<https://images.code.org/8bd8ee70bb8a8d6f530531153423d960-Screenshot 2023-06-05 180020.png>)                                                                          | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** W jaki sposób proces ldyfuzji uczy komputery tworzenia nowych obrazów z określonymi szczegółami?<br>\\< br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Cel dyskusji:** To jest szybkie sprawdzenie zrozumienia. Uczniowie powinni wiedzieć, że modele dyfuzyjne uczą się poprzez powolne dodawanie szumu, a następnie powolne odejmowanie szumu z obrazów, aż generator będzie wiedział, jak znaleźć szczegóły w szumie.</p>                                                                                                                       |\n| _Wstrzymaj wideo w 4:36, gdy jest napisane: „...więc pytania prawne nie są tutaj proste.”_![](<https://images.code.org/9b232f9f5240c8437f851f83d11ab96b-Screenshot 2023-06-05 180333.png>)                                                                     | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Przedyskutuj:** Osobista opinia: kto Twoim zdaniem powinien „posiadać” obrazy tworzone przez sztuczną inteligencję? <br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Cel dyskusji:** Nie ma jednej odpowiedzi na to pytanie; Chodzi o to, aby uczniowie naprawdę zastanowili się nad konsekwencjami generowania obrazów w sztucznej inteligencji. W zależności od Twoich preferencji i czasu zajęć może to być zaangażowana dyskusja, która zajmie kilka minut. Dodatkowe pomysły na ułatwienie tej dyskusji można znaleźć we wskazówce dla nauczyciela. |\n\n\\| _Kontynuuj oglądanie filmu, aż się skończy_ ![](https://images.code.org/73a09be0fbbae1200fa174efcb3b842f-screenshot1.png)"
+        },
+        "3125ec73-4d68-45a9-a6f8-b2921c55d4a3": {
+          "name": "Filtrowanie muzyki",
+          "description": "Ten samouczek zawiera piosenki popularnych artystów. Aby uzyskać podgląd listy utworów w tym samouczku, sprawdź tę playlistę Spotify (w każdym wieku). Używamy radiowo bezpiecznych wersji wszystkich piosenek i dla uczniów poniżej 13 roku życia."
+        },
+        "524efe4b-796a-48eb-b1c6-f4e138699443": {
+          "name": "Ogólne wsparcie",
+          "description": "Jako nauczyciel, Twoją rolą jest przede wszystkim wspieranie uczniów podczas przechodzenia przez samouczek. Oto kilka wskazówek, które powinny pomóc uczniom niezależnie od poziomu, nad którym pracują.\n\n-   **Współpraca z sąsiadami:** Zachęcaj uczniów, aby kontaktowali się z sąsiadem, gdy utkną. Ponieważ ten samouczek zawiera filmy, a uczniowie mogą nosić słuchawki, łatwo mog się izolować. Pomóż przełamać te bariery, aktywnie łącząc uczniów w pary, jeśli wydaje się, że potrzebują pomocy. W zależności od wieku i umiejętności uczniów, możesz rozważyć formalne podzielenie klasy na pary, aby ukończyli samouczek programując w parach.\n-   **Przeczytaj instrukcje:** Instrukcje zawierają kroki, aby ukończyć poziom.\n-   **Utknąłeś? Poszukaj wskazówek:** Każdy poziom zawiera podpowiedź z dalszymi szczegółami, jak przejść poziom. Jeśli uczniowie próbują przejść poziom tak szybko, jak to możliwe, może się okazać, że muszą poczekać pewien czas, aż cały kod się zostanie zagrany, zanim przejdą dalej. \n    \\-\\*\\*Idź do przodu i wracaj:\\*\\* Czasami uczniowie czerpią więcej korzyści z powrotu do trudnego poziomu. Wszystkie poziomy są od siebie niezależne, choć czasami opierają się na wcześniej wprowadzonych pomysłach.\n-   **Nie spiesz się i eksperymentuj.** Istnieją wyraźne instrukcje i wskazówki, które pomogą uczniom przejść każdy poziom. Poza przechodzeniem, uczniowie powinni także mieć swobodę wypróbowywania własnych pomysłów, eksperymentując z różnymi tancerzami, ruchami tanecznymi, efektami i piosenkami."
+        },
+        "b9bacf54-bd37-42b8-85fc-bc9d07a50537": {
+          "tips": [
+            "Aby zbudować podstawową wiedzę na temat sztucznej inteligencji i/lub poszerzyć naukę, zapoznaj się z filmami, lekcjami i możliwościami doskonalenia zawodowego na naszej stronie [Kreatywność z A.I.](https://hourofcode.com/ca). \n\nJeśli masz czas i chcesz przygotować swoich uczniów do aktywności bez komputera, rozważ zorganizowanie [Potańcówka:  bez komputera](https://studio.code.org/s/dance-unplugged/lessons/1) przed swoim wydarzeniem Godziny Kodowania. Ta krótka lekcja wprowadza uczniów w ideę zdarzeń wywołujących różne ruchy taneczne."
+          ]
+        },
+        "58bdb8b5-159d-4b7a-aae7-d250213c1379": {
+          "progression_name": "Film wprowadzający",
+          "name": "Wprowadzenie do Potańcówki",
+          "description": "W tym filmie uczniowie zobaczą przykład kreatywnego kodowania w prawdziwym świecie, aby zainspirować ich do kodowania własnej interaktywnej potańcówki. Ten film wyjaśnia również różne elementy platformy kodowania, takie jak panel instrukcji, obszar roboczy, przybornik (zestaw narzędzi) i przestrzeń odtwarzania. "
+        },
+        "b8daa26e-57e7-4bc5-8a6e-1e541a407c8e": {
+          "tips": [
+            "Osadzone filmy będą nakładać się na poziom, gdy użytkownik otworzy poziom po raz pierwszy. Uczniowie mogą go zamknąć, gdy skończą oglądać. Jeśli chcieliby ponownie obejrzeć film, będzie on dostępny pod przyciskiem Uruchom."
+          ]
+        },
+        "7c95f7a1-478d-45fc-ba2d-5807bd2b828f": {
+          "name": "Zdać sprawozdanie",
+          "description": "Opieraj się na ich pozytywnych doświadczeniach z kodowaniem. \n\n**Omów:** \n\n\\_Jeśli to ich kodowanie po raz pierwszy, zapytaj: \\_\n\n-   Co podobało Ci się na dzisiejszych zajęciach? \n    lub \n-   „Jak wykorzystałeś dzisiaj kreatywność i informatykę?\n\n_Jeśli Twoi uczniowie kodowali wcześniej, zapytaj:_\n\n-   Co nowego dzisiaj zakodowałeś, czego wcześniej nie kodowałeś?\n\nNastępnie **odnieś się do procesu korzystania z A.I.**, towarzyszącego im w kodowaniu:\n\n-   Czy uważasz, że lepiej jest tworzyć rzeczy samodzielnie, czy też fajniej jest pracować razem z komputerem lub robotem? Dlaczego?\n-   Jakie są fajne sposoby wykorzystania A.I. w szkołach, aby pomóc uczniom być bardziej kreatywnym?\n-   Czy możesz wymyślić zabawną opowieść lub rysunek, które chciałbyś, aby komputer pomógł Ci stworzyć? Jak może ci pomóc?"
+        },
+        "c624ab39-fa08-4b83-b1e9-bf97fb42667f": {
+          "name": "Świętuj",
+          "description": "Wyjaśnij, że dziś spędzacie godzinę na kodowaniu, ponieważ ten tydzień to Tydzień Edukacji Informatycznej i miliony uczniów na całym świecie również uczyły informatyki w ramach Godziny Kodowania w tym tygodniu. Pogratuluj uczniom uczestnictwa w tym ogólnoświatowym ruchu.\n\nDaj każdemu uczniowi [certificate](http://code.org/certificates) z jej/jego imieniem i nazwiskiem.."
+        },
+        "07a73ab9-8996-453a-a87f-63628f2387db": {
+          "name": "Następne Kroki",
+          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć ich do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są plany na dalsze zajęcia w Twojej klasie."
+        },
+        "fb665f5b-457e-484e-924a-7aa4f2e097be": {
+          "name": "Rozpowszechniaj",
+          "description": "Godzina Kodowania jest o kreatywności i nie możemy się doczekać, aby zobaczyć, co tworzysz! Udostępniaj wytwory uczniów, zdjęcia i filmy w mediach społecznościowych! Nauczyciele, nagrajcie swoją klasę, kodującą taniec lub tańcząc ten taniec.\n\nPamiętaj, aby dołączyć #HourOfCode i oznaczyć nas na Facebooku, Twitterze i Instagramie. Punkty bonusowe za oznaczanie artysty, którego muzyki używali Twoi uczniowie. Code.org ponownie udostępni nasze ulubione posty milionom obserwujących.\n\n\\_Oczywiście, upewnij się, że szanujesz politykę swojej szkoły w mediach społecznościowych. \\_"
+        },
+        "596336ba-e584-4453-a2cd-2268dc3c59bc": {
+          "description": "Dzisiaj zrobimy coś naprawdę kreatywnego z kodem! „Kod” to zestaw wskazówek, które komputer może zrozumieć. Zanim zaczniemy, jakie są Twoje sposoby bycia kreatywnym lub wyrażać siebie?"
+        },
+        "84a173a8-19dd-407d-88cb-6747bdc1122d": {
+          "description": "\\_Zachęcaj uczniów do dzielenia się sposobami wyrażania kreatywności w sztuce, tańcu, muzyce i pisaniu. \\_"
+        },
+        "66891774-46dc-4488-a30b-5d231e4145ff": {
+          "description": "Podobnie jak wybór kolorów farby lub słów, które piszesz, są sposoby wyrażania kreatywności. Wybór kodu, który piszesz i jak ludzie z nim wchodzą w interakcje, może być również okazją do wyrażenia swojej kreatywności!\nPodczas tego kreatywnego kodowania zapoznasz się z nowym, pomocnym narzędziem: sztuczną inteligencją, znaną również jako A.I.! A.I. to program komputerowy, który działa jak ludzki mózg. Bot A.I. w tej aktywności może Ci pomóc, dokonując bardzo szybkiego wyboru efektów specjalnych. "
+        },
+        "b98db6e3-3139-4e85-bd62-60603e22af96": {
+          "description": "**Dyskutuj:** Jak myślisz, jak komputery i roboty mogą pomóc nam być bardziej kreatywnym?\n\n**Cel dyskusji:** Uczniowie powinni zacząć myśleć o sposobach, w jakich sztuczna inteligencja może być pomocna w procesie twórczym. Niektóre pomysły mogą obejmować: \n\n-   **Generowanie pomysłów:** Sztuczna inteligencja może pomóc wymyślić nowe i ekscytujące pomysły na opowieści, rysunki i inne kreatywne projekty, gdy czujesz, że utknąłeś. \n-   **Inspiracja artystyczna:** Sztuczna inteligencja może sugerować kolory, style i motywy dla Twojej grafiki, dając Ci inspirację do następnego arcydzieła.\n-   **Współpraca:** Sztuczna inteligencja może być kreatywnym partnerem, pomagając w burzy mózgów i współpracy z innymi przy projektach."
+        },
+        "e6f1d97d-4c0c-42e1-8bde-dc89400d0baf": {
+          "name": "Zatańczmy",
+          "description": "Ten poziom wymaga od uczniów utworzenia nowego tancerza za pomocą jednego bloku kodu i nakłonienia tego tancerza do wykonania ruchu tanecznego za pomocą drugiego bloku kodu. Zachęcaj uczniów do korzystania z menu rozwijanego do odkrywania różnych tancerzy, ruchów tanecznych i piosenek.  ",
+          "progression_name": "Utwórz tancerza i Taneczny ruch"
+        },
+        "e150925b-003d-4acd-a87c-5aca4d8b1a89": {
+          "name": "Użyj A.I. do generowania efektów specjalnych",
+          "description": "Na tych trzech poziomach uczniowie są wprowadzani do nowego bloku A.I. Dostępne są dwa filmy, które towarzyszą tym poziomom. Zachęcaj uczniów do ponownego oglądania tych filmów, jeśli czują, że utknęli. Aby przejść te poziomy, uczniowie zachęcają A.I. do wygenerowania kodu dla kolorowych efektów, które pasują do ich potańcówki. Zachęć uczniów do wybrania trzech emotikonów opisujących nastrój, który chcą przekazać na ich potańcówkę."
+        },
+        "3ae03e0b-0a31-42b7-bee8-98aa457a9542": {
+          "name": "Koduj zdarzenia, aby dodać interakcję",
+          "description": "Teraz uczniowie są zapoznawani ze zdarzeniami. To najtrudniejsza koncepcja kodowania w tym samouczku. Zdarzenia są wyjątkowe. Nie łączą się z blokiem konfiguracyjnym, ale zamiast tego same są mini programami. Pomyśl o zdarzeniu jako  słuchającym uchu, które wykona dowolny kod znajdujący się pod nim, gdy zostanie uruchomione. Pierwszym zdarzeniem używanym przez uczniów są zdarzenia „gdy naciśnięto strzałkę”, które pozwolą uczniom wyzwalać nowe fragmenty kodu poprzez naciskanie klawiszy na klawiaturze. Drugim zdarzeniem jest zdarzenie „po taktach”, które działa bardziej jak timer na zegarze. Gdy piosenka zostanie odegrana przez określoną liczbę taktów, nowy kod zostanie uruchomiony. \n\nZachęć uczniów do ponownego obejrzenia filmów o zdarzeniach towarzyszących dwóm z tych poziomów. ",
+          "progression_name": "Naciśnięcie klawisza i W zdarzeniach taktu"
+        },
+        "7f2f14df-e85e-4dea-bf5a-5d9537baca14": {
+          "name": "Bądź kreatywny! ",
+          "description": "Ten ostatni poziom ma być przestrzenią do swobodnej gry i eksploracji. Zachęcaj uczniów do kreatywności i ćwiczenia nowych umiejętności kodowania, aby stworzyć własną potańcówkę!  ",
+          "progression_name": "Projekt finałowej Potańcówki"
+        },
+        "c03cf1cb-2946-48c9-aede-76ccf4b787a9": {
+          "tips": [
+            "**Okazja do rozwoju zawodowego**\n\nCzy chcesz kontynuować zabawę, ale nie wiesz, jak? Rozważ zaangażowanie się w nasz samodzielny profesjonalny moduł rozwoju zawodowego, [Przygotowanie do nauczania interaktywnych animacji i gier]![0] Ta jednostka uczy uczniów budowania ekscytujących kreacji z użyciem duszków. Ten moduł zapewni Ci wszystkie niezbędne narzędzia, umiejętności i wiedzę."
+          ]
+        },
+        "3c17e9fd-b06b-478e-bb56-5734d9344b68": {
+          "tips": [
+            "**Okazja do rozwoju zawodowego**\n\nCzy chcesz kontynuować zabawę, ale nie wiesz, jak? Rozważ zaangażowanie się w nasz samodzielny profesjonalny moduł rozwoju zawodowego, [Przygotowanie do nauczania interaktywnych animacji i gier]![0] Ta jednostka uczy uczniów budowania ekscytujących kreacji z użyciem duszków. Ten moduł zapewni Ci wszystkie niezbędne narzędzia, umiejętności i wiedzę."
+          ]
+        },
+        "913cf29b-f688-4c8b-9834-96c9b75274f5": {
+          "tips": [
+            "**Okazja do rozwoju zawodowego**\n\nCzy chcesz kontynuować zabawę, ale nie wiesz, jak? Rozważ zaangażowanie się w nasz samodzielny profesjonalny moduł rozwoju zawodowego, [Przygotowanie do nauczania interaktywnych animacji i gier]![0] Ta jednostka uczy uczniów budowania ekscytujących kreacji z użyciem duszków. Ten moduł zapewni Ci wszystkie niezbędne narzędzia, umiejętności i wiedzę."
+          ]
+        },
+        "f39d7745-dd63-424d-baa1-de4e4fd0f0c0": {
+          "tips": [
+            "**Okazja do rozwoju zawodowego**\n\nCzy chcesz kontynuować zabawę, ale nie wiesz, jak? Rozważ zaangażowanie się w nasz samodzielny profesjonalny moduł rozwoju zawodowego, [Przygotowanie do nauczania interaktywnych animacji i gier]![0] Ta jednostka uczy uczniów budowania ekscytujących kreacji z użyciem duszków. Ten moduł zapewni Ci wszystkie niezbędne narzędzia, umiejętności i wiedzę."
+          ]
+        },
+        "a7f20e25-3940-4615-b90f-8664e1661b3a": {
+          "tips": [
+            "**Okazja do rozwoju zawodowego**\n\nCzy chcesz kontynuować zabawę, ale nie wiesz, jak? Rozważ zaangażowanie się w nasz samodzielny profesjonalny moduł rozwoju zawodowego, [Przygotowanie do nauczania interaktywnych animacji i gier]![0] Ta jednostka uczy uczniów budowania ekscytujących kreacji z użyciem duszków. Ten moduł zapewni Ci wszystkie niezbędne narzędzia, umiejętności i wiedzę."
+          ]
+        },
+        "2a1748fb-e49f-4ae0-be55-0c603dbe3335": {
+          "tips": [
+            "**Okazja do rozwoju zawodowego**\n\nCzy chcesz kontynuować zabawę, ale nie wiesz, jak? Rozważ zaangażowanie się w nasz samodzielny profesjonalny moduł rozwoju zawodowego, [Przygotowanie do nauczania interaktywnych animacji i gier]![0] Ta jednostka uczy uczniów budowania ekscytujących kreacji z użyciem duszków. Ten moduł zapewni Ci wszystkie niezbędne narzędzia, umiejętności i wiedzę."
+          ]
+        },
+        "e72dd2c9-59cc-4063-9dcc-d270e7fed0fe": {
+          "tips": [
+            "**Okazja do rozwoju zawodowego**\n\nCzy chcesz kontynuować zabawę, ale nie wiesz, jak? Rozważ zaangażowanie się w nasz samodzielny profesjonalny moduł rozwoju zawodowego, [Przygotowanie do nauczania interaktywnych animacji i gier]![0] Ta jednostka uczy uczniów budowania ekscytujących kreacji z użyciem duszków. Ten moduł zapewni Ci wszystkie niezbędne narzędzia, umiejętności i wiedzę."
+          ]
+        },
+        "5ff66bb0-517f-486e-b70f-cad0319c23df": {
+          "tips": [
+            "**Okazja do rozwoju zawodowego** \n\nCzy jesteś zainteresowany nauczeniem swoich uczniów więcej o sztucznej inteligencji? Rozważ zaangażowanie się w nasz samodzielny profesjonalny moduł rozwoju zawodowego, [Przygotowanie do nauczania sztucznej inteligencji i uczenia maszynowego]![0] Ten moduł zapewni Ci wszystkie narzędzia, umiejętności i wiedzę potrzebną do realizaji naszej jednostki AI i uczenie maszynowe."
+          ]
+        },
+        "31d4feb6-1e0c-4342-988b-6730a0d0155e": {
+          "tips": [
+            "**Okazja do rozwoju zawodowego**\n\nCzy chcesz kontynuować zabawę, ale nie wiesz, jak? Rozważ zaangażowanie się w nasz samodzielny profesjonalny moduł rozwoju zawodowego, [Przygotowanie do nauczania interaktywnych animacji i gier]![0] Ta jednostka uczy uczniów budowania ekscytujących kreacji z użyciem duszków. Ten moduł zapewni Ci wszystkie niezbędne narzędzia, umiejętności i wiedzę."
+          ]
         }
       }
     }

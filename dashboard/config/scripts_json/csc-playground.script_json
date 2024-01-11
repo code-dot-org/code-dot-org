@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "playground",
-    "serialized_at": "2023-09-22 19:26:45 UTC",
+    "serialized_at": "2023-10-26 21:46:04 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1501,6 +1501,48 @@
     },
     {
       "chapter": 42,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_phys_experimentEvent_test"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c4b317dd-2f3c-444c-88ed-b1e3c7f12f25"
+      },
+      "level_keys": [
+        "csc_particles_phys_experimentEvent_test"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_phys_experimentEvent_test_2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c4b317dd-2f3c-444c-88ed-b1e3c7f12f25"
+      },
+      "level_keys": [
+        "csc_particles_phys_experimentEvent_test_2"
+      ]
+    },
+    {
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1524,7 +1566,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1548,7 +1590,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1572,11 +1614,14 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "kjf_test_landmarks_2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1593,7 +1638,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1617,7 +1662,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1641,7 +1686,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 50,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2151,6 +2196,30 @@
         "level.key": "csc_particles_chem_observe2a",
         "script_level.level_keys": [
           "csc_particles_chem_observe2a"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c4b317dd-2f3c-444c-88ed-b1e3c7f12f25"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_phys_experimentEvent_test",
+        "script_level.level_keys": [
+          "csc_particles_phys_experimentEvent_test"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c4b317dd-2f3c-444c-88ed-b1e3c7f12f25"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_phys_experimentEvent_test_2",
+        "script_level.level_keys": [
+          "csc_particles_phys_experimentEvent_test_2"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",

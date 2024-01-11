@@ -4,8 +4,8 @@ it:
     course:
       name:
         csp-2017:
-          assignment_family_title: Principi di informatica
-          title: Principi di informatica ('17-'18)
+          assignment_family_title: Princìpi di informatica
+          title: Princìpi di informatica ('17-'18)
           version_title: "'17-'18"
           description_student: Nell'autunno 2016, il College Board ha lanciato il nuovo corso AP®, AP Computer Science Principles. Il corso introduce gli studenti ai concetti fondamentali di informatica e li sfida ad esplorare come l'informatica e la tecnologia possano avere impatto sul mondo. Il Programma AP ha progettato i Principi di Informatica AP con lo scopo di creare leader nei campi informatici ed attrarre ed ingaggiare le fasce di popolazione tradizionalmente sotto rappresentate nell'uso di strumenti informatici di base e nel cogliere opportunità multidisciplinari.
           description_teacher: Nell'autunno 2016, il College Board ha lanciato il nuovo corso AP®, AP Computer Science Principles. Il corso introduce gli studenti ai concetti fondamentali di informatica e li sfida ad esplorare come l'informatica e la tecnologia possano avere impatto sul mondo. Il Programma AP ha progettato i Principi di Informatica AP con lo scopo di creare leader nei campi informatici ed attrarre ed ingaggiare le fasce di popolazione tradizionalmente sotto rappresentate nell'uso di strumenti informatici di base e nel cogliere opportunità multidisciplinari.
@@ -30,14 +30,14 @@ it:
           description_student: Alla scoperta dell'informatica (CSD - Computer Science Discoveries) è un corso di introduzione all'informatica che conduce gli studenti alla realizzazione di autentici artefatti digitali e che introduce l'uso dell'informatica come strumento per la creatività, la comunicazione, il problem-solving e il divertimento.
           description_teacher: Alla scoperta dell'informatica (CSD - Computer Science Discoveries) è un corso di introduzione all'informatica che conduce gli studenti alla realizzazione di autentici artefatti digitali e che introduce l'uso dell'informatica come strumento per la creatività, la comunicazione, il problem-solving e il divertimento.
         csp-2018:
-          assignment_family_title: Principi di informatica
-          title: Principi di informatica ('18-'19)
+          assignment_family_title: Princìpi di informatica
+          title: Princìpi di informatica ('18-'19)
           version_title: "'18-'19"
           description_short: Impara i princìpi fondamentali dell'informatica.
           description_student: Nell'autunno 2016, il College Board ha lanciato il nuovo corso AP®, AP Computer Science Principles. Il corso introduce gli studenti ai concetti fondamentali di informatica e li sfida ad esplorare come l'informatica e la tecnologia possano avere impatto sul mondo. Il Programma AP ha progettato i Principi di Informatica AP con lo scopo di creare leader nei campi informatici ed attrarre ed ingaggiare le fasce di popolazione tradizionalmente sotto rappresentate nell'uso di strumenti informatici di base e nel cogliere opportunità multidisciplinari.
           description_teacher: Nell'autunno 2016, il College Board ha lanciato il nuovo corso AP®, AP Computer Science Principles. Il corso introduce gli studenti ai concetti fondamentali di informatica e li sfida ad esplorare come l'informatica e la tecnologia possano avere impatto sul mondo. Il Programma AP ha progettato i Principi di Informatica AP con lo scopo di creare leader nei campi informatici ed attrarre ed ingaggiare le fasce di popolazione tradizionalmente sotto rappresentate nell'uso di strumenti informatici di base e nel cogliere opportunità multidisciplinari.
         csp-2019:
-          title: Principi di informatica ('19-'20)
+          title: Princìpi di informatica ('19-'20)
           version_title: "'19-'20"
           description_short: Impara i princìpi fondamentali dell'informatica.
           description_student: Nell'autunno 2016, il College Board ha lanciato il nuovo corso AP®, AP Computer Science Principles. Il corso introduce gli studenti ai concetti fondamentali di informatica e li sfida ad esplorare come l'informatica e la tecnologia possano avere impatto sul mondo. Il Programma AP ha progettato i Principi di Informatica AP con lo scopo di creare leader nei campi informatici ed attrarre ed ingaggiare le fasce di popolazione tradizionalmente sotto rappresentate nell'uso di strumenti informatici di base e nel cogliere opportunità multidisciplinari.
@@ -120,21 +120,23 @@ it:
           title: Investigazione Curriculare di CS Discoveries
         self-paced-pl-csp-2023:
           title: Insegnare i Principi Informatici
+        self-paced-pl-csd-unit2-2023:
+          title: Insegnamento dello Sviluppo Web
     resources:
       curriculum/csd/2017:
-        name: Curriculum
+        name: Corso
       teacher_forum_6/csd/2017:
         name: Forum dell'insegnante
       curriculum/csd/2018:
-        name: Curriculum
+        name: Corso
       teacher_forum_6/csd/2018:
         name: Forum dell'insegnante
       curriculum/csd/2019:
-        name: Curriculum
+        name: Corso
       teacher_forum/csd/2019:
         name: Forum dell'insegnante
       curriculum/csd/2020:
-        name: Curriculum
+        name: Corso
       teacher_forum/csd/2020:
         name: Forum dell'insegnante
       all_code/csd/2021:
@@ -185,6 +187,8 @@ it:
         name: Tutti gli standard
       all_vocabulary_2/csd/2023:
         name: Tutte le voci di glossario
+      csd_guide_to_curriculum_videos/csd/2023:
+        url: https://docs.google.com/document/d/167tFcyJ1QsTsbgoFC_3DlkvYGXPPPsYmfIn64q-Ht8o/view
       csd_guide_to_differentiation_1/csd/2023:
         name: Guida alla differenziazione
       csd_guide_to_using_resources_1/csd/2023:

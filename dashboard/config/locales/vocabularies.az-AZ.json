@@ -1110,7 +1110,8 @@
           "definition": "Heyvanların və bitkilərin ətraf mühitlə necə qarşılıqlı əlaqəsini araşdıran bir alim."
         },
         "energy/csc-ecosystems/2023": {
-          "definition": "Qida şəbəkələrindəki orqanizmlər arasında istehsalçılardan istehlakçılara ötürülür. Enerji orqanizmlər tərəfindən mürəkkəb tapşırıqları yerinə yetirmək üçün istifadə olunur."
+          "definition": "Qida şəbəkələrindəki orqanizmlər arasında istehsalçılardan istehlakçılara ötürülür. Enerji orqanizmlər tərəfindən mürəkkəb tapşırıqları yerinə yetirmək üçün istifadə olunur.",
+          "word": "Enerji"
         },
         "food_chain/csc-ecosystems/2023": {
           "word": "Qida zənciri ",
@@ -2020,6 +2021,20 @@
         "program/starwarsblocks/unversioned": {
           "word": "Proqram",
           "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
+        },
+        "poetry_circle/poetry/2023": {
+          "word": "Şeir dairəsi"
+        },
+        "code/dance-ai/2023": {
+          "word": "Kod",
+          "definition": "kod yazmaq və ya kompüter üçün təlimatlar yazmaq."
+        },
+        "event/dance-ai/2023": {
+          "word": "Hadisə",
+          "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
+        },
+        "program/dance-ai/2023": {
+          "word": "Proqram"
         }
       }
     }

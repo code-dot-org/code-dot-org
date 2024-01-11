@@ -72,7 +72,7 @@ Berätta om din plan för Hour of Code för andra lärare som kan vara intresser
 
 ### Nå ut till volontärer genom att registrera ditt event
 
-När du [registrerar ditt Hour of Code-evenemang](/#join)får du användbar e-postkommunikation med nyheter och tips för att vara värd för en framgångsrik Hour of Code. Det är också ett sätt att informera lokala volontärer om att din skola deltar. Volontärer är en jättebra resurs och kan komma och berätta för din klass om datavetenskap, eller hjälpa eleverna med Hour of Code-aktiviteter. 
+När du [registrerar dig för ditt Hour of Code-evenemang](/events)får du användbar e-postkommunikation med nyheter och tips för att vara värd för en framgångsrik Hour of Code. Det är också ett sätt att informera lokala volontärer om att din skola deltar. Volontärer är en jättebra resurs och kan komma och berätta för din klass om datavetenskap, eller hjälpa eleverna med Hour of Code-aktiviteter. 
 
 ### Engagera dina elever
 
@@ -136,7 +136,7 @@ Vad gör jag om en elev blir färdig tidigt?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Skriv ut certifikat]({{ urls/certificates }}) för dina studenter.
 - [Skiv ut "Jag gjorde en Hour of Code!"]({{ urls/promote_stickers }})-stickers för dina elever.
 - Dela foton och videoklipp från ditt Hour of Code på sociala medier. Använd #HourOfCode och @codeorg så vi kan se vad du gjort!
 

@@ -3006,3 +3006,50 @@ nn:
             lessonGroup-5:
               display_name: Variablar
           description_short: Lær alle konspta i grunnleggande informatikk og skap din eigen kunst, historie eller spel.
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introduksjon
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introduksjon
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Introduksjon
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introduksjon
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Undersøking
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Problemløsingsprosessen'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Datamaskiner og problemløsing'
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Bilder og animasjonar'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Bygge spel'
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Bruke sentrert design'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Prototyping av app'
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Representere informasjon'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Problemløsing med data'
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Bygge fysiske prototypar'
+        csd-post-survey-2024:
+          title: Undersøking etter kurs

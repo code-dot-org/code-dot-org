@@ -1311,6 +1311,10 @@ el:
           lesson_groups:
             lessonGroup-5:
               display_name: Έρευνα
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
         csd1-dlp:
           lesson_groups:
             content:
@@ -1533,6 +1537,10 @@ el:
             lessonGroup-4:
               display_name: Έρευνα
         csd7-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Εισαγωγή στο App Lab
+        csd7-2024:
           lesson_groups:
             lessonGroup-4:
               display_name: Εισαγωγή στο App Lab
@@ -3211,6 +3219,17 @@ el:
           lesson_groups:
             content:
               display_name: Περιεχόμενο
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Εισαγωγή
+          lessons:
+            lesson-7:
+              name: Εισαγωγή
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Εισαγωγή
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -3219,6 +3238,10 @@ el:
           lessons:
             lesson-3:
               name: Αξιολόγηση
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Εισαγωγή
         virustest:
           description_short: Χρησιμοποιήστε το Εργαστήρι Χαρακτήρων για να δημιουργήσετε
             μια προσομοίωση από μία έξαρση ιού.

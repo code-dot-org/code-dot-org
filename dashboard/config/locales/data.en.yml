@@ -813,6 +813,16 @@ en:
         PL_CSP_SummerAsync_U3L1Computers: Previously, On...Unit 3
         PL_CSP_SummerAsync_Unit2Internet: Previously, On...Unit 2
         PL_CSP_SummerAsync_U2ConnectionsConclusions: 'Unit 3: Conclusions and Connections'
+        ai_dance_meetat_draft: AI Dance Meet AI Draft
+        ai_dance_editblocks_draft: AI Dance Party Edit Blocks Draft
+        csd_ml_how_ai_works: How AI Works
+        hoc-dance-ai-warmup: 'Dance Party AI Edition: Warm Up'
+        dance_ai_events_intro: Dance Party AI Edition Intro to Events
+        dance_ai_intro_to_ai: Dance Party AI Edition Intro to AI
+        dance_ai_how_ai_works: Dance Party AI Edition How AI Works
+        dance_ai_event_at_measure: Dance Party AI Edition - At Measure Event
+        dance_ai_events_measure_noST: Dance Party AI Edition - Events At Measure no sub
+        dance_ai_intro_to_ai_v3: 'Dance Party AI Edition - An Intro to AI '
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

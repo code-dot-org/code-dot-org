@@ -1347,6 +1347,17 @@
         "program/starwarsblocks/unversioned": {
           "word": "Program",
           "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
+        },
+        "code/dance-ai/2023": {
+          "word": "Kod",
+          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
+        },
+        "event/dance-ai/2023": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
+        },
+        "program/dance-ai/2023": {
+          "word": "Program"
         }
       }
     }

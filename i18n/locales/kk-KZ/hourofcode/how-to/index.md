@@ -8,7 +8,7 @@ title: Кодты қалай жасауға болатын нұсқаулық с
 
 ### Қозғалысқа қосылыңыз және осы қадамдармен оқушыларыңызды информатикамен таныстырыңыз.
 
-Students today should learn how to create technology, not just use it.
+Оқушылар бүгінгі таңда технологияны жай ғана қолданып қана қоймай, қалай жасау керектігін үйренуі керек.
 
 Бір сағаттық кодты қолданып көру - бұл студенттерді информатикамен таныстырудың қарапайым және қызықты тәсілі, мүмкін бірінші рет! Сыныпта немесе мектептен кейін, жеке немесе виртуалды болсын, сіздің параметріңізге сәйкес келетін әрекетті табыңыз. Төмендегі қадамдарды</a> тексергеннен кейін сұрақтарыңыз болса, біздің қатысу нұсқаулығын қараңыз:</p> 
 
@@ -19,7 +19,7 @@ Students today should learn how to create technology, not just use it.
 - [Код сағатын қалай күшті бастауға болады](#how-to-start)
 - [Кодтауды алыңыз](#code)
 - [Студенттеріңіздің жетістіктерін атап өтіңіз](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [Тәрбиешілерге арналған код сағатының басқа ресурстары](#other-resources)
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-“Код сағаты” іс-шарасына [тіркелген кезде](/#join), сіз пайдалы электрондық пошта хабарламаларын аласыз, олар жаңалықтар мен Код сағатын сәтті өткізуге арналған кеңестер аласыз. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+“Код [сағаты” іс-шарасына тіркелгенде](/events), сізге сәтті код сағаты өткізуге арналған жаңалықтар мен кеңестер бар пайдалы электрондық пошта байланыстары аласыз. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -139,7 +139,7 @@ Direct students to the activity
     
     [/col-33]
     
-    - [Print certificates]({{ urls/certificates }}) for your students.
+    - [Студенттеріңізге сертификат]({{ urls/certificates }}) тарды басып шығарыңыз.
     - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
     - Әлеуметтік жүйелерге "Кодтау Сағатынан" жиналған суреттер мен видеоларды салып, біз де сіздің табысыңызды жариялауымыз үшін #HourOfCode хэштэгін, және де @codeorg аккаунтын белгілеңіз!
     

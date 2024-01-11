@@ -13,7 +13,6 @@
  *
  * Vendor assets
  *= require add2home
- *= require gotham-font
  *= require jquery.qtip.min
  *
  * Application assets
@@ -484,6 +483,7 @@ img.video_thumbnail {
 
 .main {
   padding: 10px;
+
   a:link, a:visited, a:hover, a:active {
     @include main-font-bold;
     color: $brand_secondary_default;
@@ -494,6 +494,17 @@ img.video_thumbnail {
     color: $brand_secondary_dark;
     text-decoration: underline;
   }
+
+  a:link, a:visited, a:active {
+    &:has(.visual-block) {
+      text-decoration: unset;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
   a.fa:link, a.fa:visited, a.fa:hover, a.fa:active {
     font-family: FontAwesome;
   }
@@ -2148,7 +2159,7 @@ a.download-video {
       flex-grow: 1;
     }
 
-    #teacher-name-label, #student-name-label {
+    #teacher-name-label, #student-name-label, #teacher-email-label {
       display: flex;
       flex-basis: 100%;
     }
@@ -3919,9 +3930,8 @@ html[dir=rtl] {
   background-color: $neutral_white !important;
   float: right;
   border: 2px solid $neutral_dark;
-  margin-top: 1px !important;
-  margin-right: 2px;
-  height: 16px;
+  box-sizing: border-box;
+  height: 32px;
   padding: 6px !important;
 
   html[dir=rtl] & {
@@ -4059,4 +4069,3 @@ a {
 }
 
 @import "NpsSurveyBlock";
-@import "DanceAiModal";

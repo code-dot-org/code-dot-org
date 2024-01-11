@@ -1,264 +1,264 @@
 ---
-title: Hour of Code How-To Guide for Volunteers
+title: Hour of Code -opas vapaaehtoisille
 ---
 
-# How to volunteer with a school or classroom
+# Kuinka tehdä vapaaehtoistyötä koulussa tai luokkahuoneessa
 
-### Thousands of teachers are looking for volunteers to inspire their students. Make a difference today!
+### Tuhannet opettajat etsivät vapaaehtoisia inspiroimaan oppilaitaan. Tee ero tänään!
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>Ilmoittaudu vapaaehtoiseksi</button>]({{ urls/volunteer }})
 
 * * *
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it.
+Laskennallinen ajattelu auttaa vaalimaan ongelmanratkaisutaitoja, logiikkaa ja luovuutta. Ja teknologia muuttaa kaikkia teollisuudenaloja planeetalla. Nykypäivän opiskelijoiden tulisi oppia luomaan tekniikkaa, ei vain käyttämään sitä.
 
-The Hour of Code is a one-hour introduction to computer science designed to demystify “code,” show that anybody can learn the basics, and to broaden participation in the field of computer science. You can help raise awareness of the computer science movement and volunteer to inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups.
+Hour of Code on tunnin mittainen johdanto tietojenkäsittelytieteeseen, jonka tarkoituksena on demystifioida ”koodia”, osoittaa, että kuka tahansa voi oppia perusasiat, ja laajentaa osallistumista tietojenkäsittelytieteen alaan. Voit auttaa lisäämään tietoisuutta tietojenkäsittelytieteen liikkeestä ja inspiroimaan vapaaehtoisesti lisää opiskelijoita kokeilemaan tietojenkäsittelytiedettä, erityisesti nuoria naisia ja opiskelijoita historiallisesti syrjäytyneistä rodullisista ja etnisistä ryhmistä.
 
-- [Who can volunteer?](#who-can-volunteer)
-- [Why volunteer?](#why-volunteer)
-- [How do volunteers get selected?](#selection)
-- [What if I want to volunteer with a specific school?](#choose-a-school)
-- [How to prepare](#how-to-prepare)
-- [When you're hosting an event](#hosting-an-event)
-- [Spread the word about the Hour of Code](#promote-hour-of-code)
-- [More ways to support the Hour of Code](#support-hour-of-code)
-- [Volunteer FAQ](#faq)
+- [Kuka voi tehdä vapaaehtoistyötä?](#who-can-volunteer)
+- [Miksi vapaaehtoistyötä?](#why-volunteer)
+- [Miten vapaaehtoiset valitaan?](#selection)
+- [Entä jos haluan tehdä vapaaehtoistyötä tietyssä koulussa?](#choose-a-school)
+- [Miten valmistautua](#how-to-prepare)
+- [Kun isännöit tapahtumaa](#hosting-an-event)
+- [Levitä sanaa Hour of Code -tapahtumasta](#promote-hour-of-code)
+- [Lisää tapoja tukea Hour of Code](#support-hour-of-code)
+- [Vapaaehtoisten UKK](#faq)
 
-Whether you volunteer virtually, in-person, or with your company, your efforts can make a huge impact on the way students view computer science and their own potential. Take a look at our [volunteer toolkit if you still have questions]({{ localized_files/hoc_volunteer_toolkit }}).
+Olitpa vapaaehtoinen virtuaalisesti, henkilökohtaisesti tai yrityksesi kanssa, ponnisteluillasi voi olla valtava vaikutus tapaan, jolla opiskelijat näkevät tietojenkäsittelytieteen ja oman potentiaalinsa. Tutustu [vapaaehtoisten työkalupakkeihimme, jos sinulla on vielä kysyttävää]({{ localized_files/hoc_volunteer_toolkit }}).
 
 * * *
 
 <a id="who-can-volunteer"></a>
 
-## Who can volunteer?
+## Kuka voi tehdä vapaaehtoistyötä?
 
-Anyone passionate about computer science education and increasing diversity in tech can be a volunteer! We’d love to see volunteers of all backgrounds participate. The Hour of Code features a large variety of activities for all ages and skill levels, so you don’t need to be a programming expert to volunteer!
+Jokainen, joka on intohimoinen tietojenkäsittelytieteen koulutukseen ja tekniikan monimuotoisuuden lisäämiseen, voi olla vapaaehtoinen! Haluaisimme nähdä kaikentaustaisia vapaaehtoisia osallistumaan. Hour of Code sisältää laajan valikoiman aktiviteetteja kaiken ikäisille ja taitotasoille, joten sinun ei tarvitse olla ohjelmointiasiantuntija vapaaehtoistyöhön!
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. [Sign up today](https://code.org/volunteer) to inspire students to keep learning computer science.
+Voit olla vieraileva puhuja luokkahuoneessa tai auttaa opettajaa suorittamaan toimintaa. [Rekisteröidy tänään inspiroid](https://code.org/volunteer) aksesi opiskelijoita jatkamaan tietojenkäsittelytieteen oppimista.
 
 * * *
 
 <a id="why-volunteer"></a>
 
-## Why volunteer?
+## Miksi vapaaehtoistyötä?
 
-Computer science is the defining field of the 21st century, yet most schools still don’t teach it. One Hour of Code may be the most access to computer science that these students receive in a given year. By volunteering, you can make it even easier for teachers to bring CS into their classroom.
+Tietojenkäsittelytiede on 2000-luvun määrittelevä ala, mutta useimmat koulut eivät edelleenkään opeta sitä. Yksi tunti koodia voi olla eniten pääsyä tietojenkäsittelytieteeseen, jonka nämä opiskelijat saavat tiettynä vuonna. Vapaaehtoistyöllä voit helpottaa opettajien tietotekniikan tuomista luokkahuoneeseensa entisestään.
 
 [![](/images/fit-600/Marketing/HoC-2015-ACE-HS--42.jpg)]({{ urls/learn }})
 
-Check out some testimonials from past volunteers:
+Katso joitain aiempien vapaaehtoisten suosituksia:
 
-- “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
-- “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
-- “I LOVED seeing how excited the kids were. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others - giving them a place to feel confident.”
+- ” Parasta kokemuksestani oli, että koko luokka oli naisia ja värillisiä ihmisiä. Se lupaa hyvää teollisuutemme tulevaisuudelle, että meillä on mahdollisuus tavoittaa ja innostaa näitä lapsia.”
+- ” Nautin erityisesti siitä, että sain rohkaista nuoria tyttöjä tekniikan parissa. Tuntui kuin olisin auttanut seuraavaa sukupolvea kotiseudullani.
+- ” Rakastin nähdä, kuinka innoissaan lapset olivat. Yksi hämmästyttävä asia oli, että opettajat huomasivat, että jotkut oppilaista, jotka eivät pärjänneet akateemisesti yhtä hyvin, olivat erinomaisia ajattelemaan kehittäjän tavoin ja auttamaan muita - antamalla heille paikan tuntea itsensä luottavaiseksi.”
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>Ilmoittaudu vapaaehtoiseksi</button>]({{ urls/volunteer }})
 
 * * *
 
 <a id="selection"></a>
 
-## How do volunteers get selected?
+## Miten vapaaehtoiset valitaan?
 
-Teachers can search for volunteers on our [volunteer map](http://code.org/volunteer/local). If you’re located near their classroom, teachers will review your profile on the map, so try to complete as much as possible to increase the chance that a teacher will contact you.
+Opettajat voivat etsiä vapaaehtoisia [vapaaehtoiskartastamme](http://code.org/volunteer/local). Jos olet lähellä heidän luokkahuoneitaan, opettajat tarkistavat profiilisi kartalla, joten yritä täyttää mahdollisimman paljon lisätäksesi mahdollisuutta, että opettaja ottaa sinuun yhteyttä.
 
 [![](/images/fit-600/Marketing/2018_HoC-489-resized.jpg)]({{ urls/learn }})
 
-When selected, a teacher will contact you through the volunteer platform (we will never share your email address with the teacher). Work with them to determine how you can best contribute to their event, and if you’ll be visiting in-person or volunteering virtually.
+Kun olet valinnut, opettaja ottaa sinuun yhteyttä vapaaehtoisalustan kautta (emme koskaan jaa sähköpostiosoitettasi opettajan kanssa). Työskentele heidän kanssaan selvittääksesi, kuinka voit parhaiten osallistua heidän tapahtumaansa, ja jos vierailet henkilökohtaisesti tai teet vapaaehtoistyötä virtuaalisesti.
 
-If you are receiving too many requests from teachers, you can always update your preferences or unsubscribe by clicking the link provided at the bottom of any email request from a teacher.
+Jos saat liikaa pyyntöjä opettajilta, voit aina päivittää asetuksesi tai peruuttaa tilauksen napsauttamalla opettajan sähköpostipyynnön alaosassa olevaa linkkiä.
 
 * * *
 
 <a id="choose-a-school"></a>
 
-## What if I want to volunteer with a specific school?
+## Entä jos haluan tehdä vapaaehtoistyötä tietyssä koulussa?
 
-You don’t have to use our volunteer map in order to volunteer! In fact, we recommend reaching out to teachers and administrators directly if there’s a classroom you’d like to volunteer with.
+Sinun ei tarvitse käyttää vapaaehtoistyökarttaamme tehdäksesi vapaaehtoistyötä! Itse asiassa, suosittelemme ottamaan yhteyttä suoraan opettajiin ja järjestelmänvalvojiin, jos sinulla on luokkahuone, jossa haluat tehdä vapaaehtoistyötä.
 
-To get started: - If you’re a parent or guardian, send [this email](https://hourofcode.com/us/promote/resources#help-schools) to your child’s teacher offering to help them run an Hour of Code. - If you have another school in mind, visit their website to find appropriate contacts to reach out to such as a principal or vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations such as the Boys & Girls Clubs of America, Junior Achievement, a YMCA branch, and more to co-host an event. - If you’re unable to find a school that is hosting an Hour of Code, you can volunteer to help run your own event with your company. Check out our [How-To Guide for Companies](https://hourofcode.com/us/how-to/companies) to learn more and get inspired.
+Aloittaminen: - Jos olet vanhempi tai huoltaja, lähetä [tämä sähköposti lap](https://hourofcode.com/us/promote/resources#help-schools) sesi opettajalle ja tarjoa apua Hour of Code -ohjelman suorittamisessa. - Jos sinulla on mielessä toinen koulu, käy heidän verkkosivuillaan löytääksesi sopivia kontakteja, joihin voit ottaa yhteyttä, kuten rehtori tai vararehtori, tekniikka- tai tietojenkäsittelytieteen opettajat tai jopa koulun PTSA. Voit myös tehdä yhteistyötä järjestöjen, kuten Boys & Girls Clubs of America, Junior Achievement, YMCA-haaran ja muiden kanssa tapahtuman järjestämiseksi. - Jos et löydä koulua, joka isännöi Hour of Code -tapahtumaa, voit vapaaehtoisesti auttaa järjestämään oman tapahtumasi yrityksesi kanssa. Tutustu yritysten ohjeop [paaseemme op](https://hourofcode.com/us/how-to/companies) piaksesi lisää ja saadaksesi inspiraatiota.
 
 * * *
 
 <a id="how-to-prepare"></a>
 
-## How to prepare
+## Miten valmistautua
 
-Whether you’re attending an Hour of Code event remotely or in-person, you’ll have a much smoother experience if you make these preparations beforehand.
+Olitpa osallistumassa Hour of Code -tapahtumaan etänä tai henkilökohtaisesti, sinulla on paljon sujuvampi kokemus, jos teet nämä valmistelut etukäteen.
 
 [![](/images/fit-600/Marketing/4Q9A5575.jpg)]({{ urls/learn }})
 
-### Meet with the Organizer
+### Tapaa järjestäjä
 
-If you’re volunteering with a classroom, discuss these logistics with the teacher ahead of time:
+Jos teet vapaaehtoistyötä luokkahuoneessa, keskustele näistä logistiikoista opettajan kanssa etukäteen:
 
-- Your role at the event. If you work in tech, you might be asked to share your personal experiences or story: How did you get involved in a career in tech? Why is computer science important to you? What are some things you do as part of your job and how does that relate to technology?
-- If you’ll be volunteering in-person, make sure you both understand local and school health and safety guidelines. Depending on their procedures you may need to arrive a little early.
-- If you’ll be volunteering virtually or in-person as this can determine what times you need to be present and in what capacity.
-- If you’re volunteering virtually, work with the teacher to determine the best video conferencing platform to use and try conducting a test run of the event together.
-- If the teacher has predetermined Hour of Code activities for the event, be aware so that you can [explore them](https://hourofcode.com/us/learn) ahead of time.
+- Roolisi tapahtumassa. Jos työskentelet tekniikan alalla, sinua saatetaan pyytää jakamaan henkilökohtaiset kokemuksesi tai tarinasi: Kuinka pääsit mukaan tekniikan uraan? Miksi tietojenkäsittelytiede on sinulle tärkeää? Mitä asioita teet osana työtäsi ja miten se liittyy tekniikkaan?
+- Jos teet vapaaehtoistyötä henkilökohtaisesti, varmista, että ymmärrät molemmat paikalliset ja koulujen terveys- ja turvallisuusohjeet. Menettelyistä riippuen saatat joutua saapumaan hieman aikaisin.
+- Jos teet vapaaehtoistyötä virtuaalisesti tai henkilökohtaisesti, tämä voi määrittää, mihin aikaan sinun on oltava läsnä ja missä ominaisuudessa.
+- Jos teet vapaaehtoistyötä virtuaalisesti, selvitä opettajan kanssa paras käytettävä videoneuvottelualusta ja yritä suorittaa tapahtuman koeajo yhdessä.
+- Jos opettaja on ennalta määrännyt Hour of Code -aktiviteetit tapahtumaa varten, ole tietoinen, jotta voit [tutkia niitä](https://hourofcode.com/us/learn) etukäteen.
 
-### Think about your participants
+### Ajattele osallistujiasi
 
-- Consider the students you will be speaking to and what might resonate with them. As a volunteer, you can help them to realize that computing is everywhere and they too can become computer scientists. Consider their ages, backgrounds, and gender identities and come prepared with topics that may appeal to their interests. Here is additional guidance on how to inspire [young women](http://code.org/girls) to participate.
-- Get the students excited! Work with the teacher to pick out an [inspirational video](https://hourofcode.com/us/promote/resources#videos) that can help focus the class and get them excited to do an Hour of Code.
-- If you are a virtual volunteer, consider making a few slides as part of your presentation to help keep students engaged.
+- Mieti opiskelijoita, joiden kanssa puhut, ja mikä saattaa resonoida heidän kanssaan. Vapaaehtoisena voit auttaa heitä ymmärtämään, että tietojenkäsittely on kaikkialla ja heistäkin voi tulla tietojenkäsittelytieteilijöitä. Harkitse heidän ikäänsä, taustojaan ja sukupuoli-identiteettiään ja valmistaudu aiheisiin, jotka voivat houkutella heidän etujaan. Tässä on lisäohjeita siitä, kuinka innostaa [nuoria naisia osallistu](http://code.org/girls) maan.
+- Innostua oppilaat! Valitse yhdessä opettajan kanssa [inspiroiva video,](https://hourofcode.com/us/promote/resources#videos) joka voi auttaa keskittymään luokkaan ja saamaan heidät innostumaan Hour of Code -ohjelman tekemisestä.
+- Jos olet virtuaalinen vapaaehtoinen, harkitse muutaman dian tekemistä osana esitystäsi, jotta opiskelijat pysyvät sitoutuneina.
 
-Need more resources? [Check out these other tips](https://code.org/files/CSTT_Volunteers.pdf).
+Tarvitsetko lisää resursseja? [Katso nämä muut vinkit](https://code.org/files/CSTT_Volunteers.pdf).
 
 * * *
 
 <a id="hosting-an-event"></a>
 
-## When you're hosting an event
+## Kun isännöit tapahtumaa
 
-If you are the host of an event with a classroom, use the sample agenda to guide you. Confirm the agreed schedule for the day and discuss any talking points with the teacher beforehand. If you are physically visiting the class, make sure you sign in with the school and greet the teacher the day-of your event.
+Jos olet tapahtuman isäntä, jossa on luokkahuone, käytä esimerkkiesityslistaa opastamaan sinua. Vahvista päivän sovittu aikataulu ja keskustele etukäteen opettajan kanssa mahdollisista keskustelupisteistä. Jos vierailet fyysisesti luokassa, varmista, että kirjaudut sisään kouluun ja tervehdit opettajaa tapahtumapäivänäsi.
 
-If you’re considering hosting the Hour of Code at home or in the community, we recommend taking a look at some of our in-depth How-To Guides for [parents](https://hourofcode.com/us/how-to/parents) and [organizations or companies](https://hourofcode.com/us/how-to/companies).
+Jos harkitset Hour of Code -tapahtuman järjestämistä kotona tai yhteisössä, suosittelemme tutustumaan joihinkin perusteellisiin ohjeisiin [vanhemmille](https://hourofcode.com/us/how-to/parents) ja [organisaatioille tai yrityksille](https://hourofcode.com/us/how-to/companies).
 
-### 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+### 1. Katso tämä ohjevideo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
-### 2. Determine a date, format, and location for your event
+### 2. Määritä tapahtuman päivämäärä, muoto ja sijainti
 
-Work with the school or teacher to discuss what makes the most sense. We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual) or in-person, at the company office or held in the community, and for students of all ages! You can also take a look at what other [corporate partners](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) and [donors](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) have done in the past for some inspiring ideas.
+Keskustele koulun tai opettajan kanssa keskustellaksesi siitä, mikä on järkevintä. Olemme nähneet tapahtumia, jotka ovat [virtuaalisia](https://hourofcode.com/us/how-to/virtual) tai henkilökohtaisia, yrityksen toimistossa tai yhteisössä, ja kaikenikäisille opiskelijoille! Voit myös katsoa, mitä muut [yrityskumppanit](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) ja [lahjoittajat](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) ovat tehneet aiemmin inspiroivien ideoiden saamiseksi.
 
 <br />
 
-#### Sample Agenda:
+#### Esimerkkiesityslista:
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? What or who inspired you? How did you get interested in computer science? Did you have a mentor? Ask the students questions and leave time for Q&A. | |30-60 minutes | Code! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
+|Aika | Esityslistan kohta | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minuuttia | Näytä [inspiroiva video | |5-10 minuuttia](https://hourofcode.com/us/promote/resources#videos)| Esittele itsesi ja opi lisää opiskelijoista: Missä työskentelet, mitä teet ja mitä pidät työssäsi eniten? Mikä tai kuka inspiroi sinua? Miten kiinnostuit tietojenkäsittelytieteestä? Oliko sinulla mentoria? Kysy opiskelijoilta kysymyksiä ja jätä aikaa Q&A: lle. | |30-60 minuuttia | Koodi! Jos tapahtumasi on henkilökohtainen, tämä on aika vastata kysymyksiin ja ohjata opiskelijoita vaikeiden pulmien läpi. Yritä olla antamatta heille ratkaisua suoraan, vaan yritä kysyä heiltä kysymyksiä, jotta he voivat vastata itselleen, mikä meni pieleen, ja rohkaise oppilaita kysymään toisiltaan, jos heillä on kysyttävää. Jos teet vapaaehtoistyötä virtuaalisesti, työskentele opettajan kanssa siitä, mikä voisi olla paras lähestymistapa. Voi olla järkevämpää palata istunnon lopussa katsomaan, mitä edistystä opiskelijat ovat saavuttaneet. | | |1-3 minuuttia | Kiitos kaikille ja jaa inspiroivia erosanoja. Jaa mikä tahansa yrityksesi swag ([tarrat](#celebrate) ovat mahtavia)! | | <br />
 
-#### Other ideas to add to your event
+#### Muita ideoita, joita voit lisätä tapahtumaan
 
-- Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people.
-- If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
+- Selitä tapoja, joilla tekniikka vaikuttaa elämäämme, esimerkkeillä, joista kaikenlaiset opiskelijat välittävät - puhu tekniikasta, joka pelastaa ihmishenkiä, auttaa ihmisiä ja yhdistää ihmisiä.
+- Jos olet teknologiayritys, esittelee hauskoja, innovatiivisia tuotteita, joiden parissa yrityksesi työskentelee. Jos et ole teknologiayritys, keskustele tavoista, joilla yrityksesi käyttää tekniikkaa ongelmien ratkaisemiseen ja tavoitteiden saavuttamiseen.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your group.
+- Jos sinulla on ryhmä henkilökuntaa, joka helpottaa tapahtumaasi tai tekee vapaaehtoistyötä paikallisen koulun kanssa, harkitse [räätälöityjen t-paitojen tilaam](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) ista ryhmällesi.
 
-### 3. Plan your technology needs
+### 3. Suunnittele teknologiatarpeesi
 
 [![](/images/fit-600/Marketing/Excel-Charter-SchoolHoC-2015-stills-9.jpg)]({{ urls/learn }})
 
-#### Devices:
+#### Laitteet:
 
-The best Hour of Code experience includes Internet-connected computers. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For unplugged activities, simply filter the Classroom Technology section to show options for “No computers or devices”.
+The best Hour of Code experience includes Internet-connected computers. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! Jos haluat kytkeä pois kytketyistä toiminnoista, voit suodattaa Luokkahuoneen tekniikka -osion, niin näet vaihtoehdot Ei tietokoneita tai laitteita.
 
-- **Test activities** on computers or devices. Make sure they work properly on browsers with sound and video.
-- **Don't have enough devices?** Use pair programming. When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
-- **Provide headphones** for your participants or ask them to bring their own if they’ll be trying tutorials that work best with sounds.
-- **Have low bandwidth**? Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- **Testaa toiminnot** tietokoneilla tai laitteilla. Varmista, että ne toimivat oikein selaimissa, joissa on ääni ja video.
+- **Eikö sinulla ole tarpeeksi laitteita?** Käytä pariohjelmointia. When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
+- **Tarjoa osallistu** jille kuulokkeet tai pyydä heitä tuomaan omat, jos he kokeilevat äänien kanssa parhaiten sopivia opetusohjelmia.
+- **Onko sinulla alhainen kaistanleveys**? Suunnittele videoiden näyttäminen tapahtuman etuosassa, joten jokainen osallistuja ei lataa omia videoitaan. Tai kokeile irrotettuja/offline-toimintoja.
 
-#### Virtual Events:
+#### Virtuaalitapahtumat:
 
-If your event is going to be virtual, you’ll want to decide on your conference platform (and test it) prior to your event. This may impact the number of students you feel comfortable engaging, so it’s best to determine this prior to inviting a classroom or promoting your event. For ideas on how to run a remote Hour of Code, read our [tips for a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+Jos tapahtumasi tulee olemaan virtuaalinen, sinun kannattaa päättää konferenssialustastasi (ja testata se) ennen tapahtumaasi. Tämä voi vaikuttaa niiden opiskelijoiden määrään, joihin tunnet mukavan osallistua, joten on parasta selvittää tämä ennen luokkahuoneen kutsumistä tai tapahtuman mainostamista. Jos haluat ideoita Hour of Code -etäohjelman suorittamiseen, lue [vinkkejä virtuaaliseen Hour of Code -tapahtumaan](https://hourofcode.com/us/how-to/virtual).
 
-### 4. Choose an activity
+### 4. Valitse aktiviteetti
 
-We provide a variety of fun, student-guided tutorials for all age groups and experience levels. It’s popular for students to try self-led tutorials, though you may want to begin the event with an [inspirational video](https://hourofcode.com/us/promote/resources#videos) for everyone to view together.
+Tarjoamme erilaisia hauskoja, opiskelijoiden ohjaamia opetusohjelmia kaikille ikäryhmille ja kokemustasoille. Opiskelijoiden on suosittua kokeilla itseohjattuja opetusohjelmia, vaikka saatat haluta aloittaa tapahtuman [inspiroivalla vide](https://hourofcode.com/us/promote/resources#videos) olla, jota kaikki voivat katsella yhdessä.
 
-<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+<a href="https://hourofcode.com/us/learn">Tutustu aktivite</a> etteihin ja päätä etukäteen, haluatko valita yhden opetusohjelman kaikille vieraille, vai anna jokaisen lapsen valita omansa. **Kaikki Hour of Code -aktivite** etit vaativat vain vähän valmistautumisaikaa ja ovat itseohjautuvia, joten osallistujat voivat työskennellä omassa tahdissaan ja taitotasollaan.
 
 [![](/images/tutorials.png)]({{ urls/learn }})
 
-Once you have a solid roadmap for your event, you can then start inviting students, a school, or the larger community. We recommend starting with a local school you have a relationship with or [browsing our map](https://hourofcode.com/us/map) of Hour of Code events.
+Kun sinulla on vankka etenemissuunnitelma tapahtumaasi varten, voit alkaa kutsua oppilaita, koulua tai suurempaa yhteisöä. Suosittelemme aloittamaan paikallisesta koulusta, johon sinulla on suhde, tai [selaamaan Hour](https://hourofcode.com/us/map) of Code -tapahtumien karttaamme.
 
 <a id="celebrate"></a>
 
-### 5. Celebrate
+### 5. Juhli
 
 [![](/images/fit-600/Marketing/2018_HoC-391.jpg)]({{ urls/learn }})
 
-After students or guests have completed their Hour of Code, it’s time to celebrate their success. Here are some ideas for making your event even more fun:
+Kun opiskelijat tai vieraat ovat suorittaneet Hour of Code -ohjelman, on aika juhlia heidän menestystään. Tässä on joitain ideoita tapahtuman tekemiseksi vieläkin hauskemmaksi:
 
-- [Share certificates]({{ urls/certificates }}) for participants and students.
-- [Print "I did an Hour of Code! stickers"]({{ promote/resources_stickers }}) or find other prizes and swag on the [Code.org Amazon Store](https://code.org/shop).
+- [Jaa todistukset osallistu]({{ urls/certificates }}) jille ja opiskelijoille.
+- [Tulosta ”Tein tunnin koodin! tarroja”]({{ promote/resources_stickers }}) tai etsi muita palkintoja ja swageja [Code.org Amazon Storesta.](https://code.org/shop)
 - Jaa kuvia ja videoita sinun koodaustunnistasi sosiaalisessa mediassa. Kaytä #HourOfCode ja @codeorg jotta voimme korostaa sinun onnistumista, myös!
 
 * * *
 
 <a id="promote-hour-of-code"></a>
 
-## Spread the word about the Hour of Code
+## Levitä sanaa Hour of Code -tapahtumasta
 
-One of the best ways to help is to spread the word and promote the Hour of Code.
+Yksi parhaista tavoista auttaa on levittää sanaa ja edistää koodin tuntia.
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
-### 1. Register Your Event
+### 1. Rekisteröi tapahtumasi
 
-Kun [rekisteröidyt Hour of Code -tapahtumaan](/#join), saat hyödyllistä sähköpostiviestintää, jossa on uutisia ja vinkkejä onnistuneen Hour of Code -tapahtuman järjestämiseen. It’s also how you can let local schools or parents know that you’re hosting an event near them.
+Kun [rekisteröidyt Hour of Code -tapahtumaan](/events), saat hyödyllisiä sähköpostiviestejä, joissa on uutisia ja vinkkejä onnistuneen Hour of Code -tapahtuman järjestämiseen. Näin voit myös kertoa paikallisille kouluille tai vanhemmille, että järjestät tapahtuman heidän lähellä.
 
-### 2. Post on Social Media
+### 2. Lähetä sosiaalisessa mediassa
 
-Help raise awareness of the computer science movement with this sample content to post on social media and share with your employees.
+Auta lisäämään tietojenkäsittelytieteen liikettä tällä esimerkkisisällöllä, jonka voit julkaista sosiaalisessa mediassa ja jakaa työntekijöidesi kanssa.
 
-#### Hour of Code general announcement
+#### Hour of Code -yleisilmoitus
 
-- Computer science is changing our world. Help students be part of this change starting with one #HourOfCode. https://hourofcode.com/
-- Don’t just use technology—learn how to build it. Help someone start with an #HourOfCode. https://hourofcode.com/
+- Tietojenkäsittelytiede muuttaa maailmaa. Auta oppilaita olemaan osa tätä muutosta alkaen yhdestä #HourOfCode: sta. https://hourofcode.com/
+- Älä käytä vain tekniikkaa - opi rakentamaan sitä. Auta jotakuta aloittamaan #HourOfCode: lla. https://hourofcode.com/
 
-#### Stats
+#### Tilastot
 
-- Did you know only 53% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/
-- In the U.S., only 26% of software professionals are women. Introduce more young women to computer science with #HourOfCode https://hourofcode.com/
-- 67% of computing jobs in the U.S. are not in the tech sector. Help put computer science in the standard curriculum with #HourOfCode https://hourofcode.com/
+- Tiesitkö, että vain 53 prosenttia Yhdysvaltain kouluista opettaa tietojenkäsittelytieteitä? Anna jokaiselle opiskelijalle mahdollisuus oppia yksi #HourOfCode https://hourofcode.com/
+- Yhdysvalloissa vain 26 prosenttia ohjelmistoalan ammattilaisista on naisia. Esittele lisää nuoria naisia tietojenkäsittelytieteeseen #HourOfCode https://hourofcode.com/
+- 67% laskentatyöpaikoista Yhdysvalloissa ei ole teknologia-alalla. Auta asettamaan tietojenkäsittelytiede vakio-opetussuunnitelmaan #HourOfCode https://hourofcode.com/
 
-#### Create your own
+#### Luo oma
 
-- One #HourOfCode can lead to [fill in your story]. https://hourofcode.com/
-- I’m supporting #HourOfCode because [fill in your thoughts]. Join us https://hourofcode.com
+- Yksi #HourOfCode voi johtaa [täytä tarinasi]. https://hourofcode.com/
+- Tuen #HourOfCode, koska [täytä ajatuksesi]. Liity meihin https://hourofcode.com
 
-#### Engineer-specific
+#### Insinöörikohtainen
 
-- If your very first line of code changed your life, help students near you write their first #HourOfCode https://code.org/volunteer
-- If you learned to code—what’s your story? Inspire a student near you through their first #HourOfCode https://code.org/volunteer
+- Jos ensimmäinen koodirivi muutti elämääsi, auta lähelläsi olevia opiskelijoita kirjoittamaan ensimmäinen #HourOfCode https://code.org/volunteer
+- Jos opit koodaamaan - mikä on tarinasi? Inspiroi lähelläsi olevaa opiskelijaa heidän ensimmäisen #HourOfCode -tapahtumansa kautta https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Learn more</a> about posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">Lue lisää juliste</a> ista, videoista, tarroista ja muista tavoista mainostaa tapahtumaa yhteisöllesi.
 
 * * *
 
 <a id="support-hour-of-code"></a>
 
-## More ways to support the Hour of Code
+## Lisää tapoja tukea Hour of Code
 
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 
-- Spread awareness by wearing [Code.org swag](https://store.code.org/) (all proceeds go to supporting more students gain access to computer science education).
-- Choose to benefit Code.org when you shop on [AmazonSmile](https://code.org/donate/amazonsmile).
-- Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word.
-- Have some fun with co-workers in a [giving campaign](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
-- [Sign this petition](https://code.org/promote) to make sure that every student has the opportunity to learn computer science.
-- [Donate](https://code.org/donate) to Code.org so that we can keep our educational resources free and accessible to all.
+- Levitä tietoisuutta käyttämällä [Code.org-swagia](https://store.code.org/) (kaikki tuotot menevät tukemaan useampia opiskelijoita pääsemään tietojenkäsittelytieteen koulutukseen).
+- Hyödynnä Code.org, kun teet ostoksia [Amazon](https://code.org/donate/amazonsmile)Smilessa.
+- Pyydä toimitusjohtajaasi lähettämään koko yrityksen laajuinen sähköposti, jossa korostetaan tietojenkäsittelytieteen merkitystä ja kannustetaan työntekijöitä levittämään sanaa.
+- Pidä hauskaa työtovereiden kanssa lahjoituskampanj [](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2)assa.
+- [Allekirjoita tämä vetoomus](https://code.org/promote) varmistaaksesi, että jokaisella opiskelijalla on mahdollisuus oppia tietojenkäsittelytiedettä.
+- [Lah](https://code.org/donate) joita Code.org-sivustolle, jotta voimme pitää koulutusresurssimme ilmaisina ja kaikkien saatavilla.
 
-For more suggestions on how to support Code.org and the Hour of Code, visit [Code.org/Help](https://code.org/help)
+Lisätietoja Code.orgin ja Hour of Code -ohjelman tukemisesta on osoitteessa code.org/help [](https://code.org/help)
 
 * * *
 
 <a id="faq"></a>
 
-## Volunteering FAQ
+## Vapaaehtoistyön UKK
 
-### I haven't been contacted by a teacher yet. How can I still volunteer?
+### Opettaja ei ole vielä ottanut minuun yhteyttä. Miten voin edelleen tehdä vapaaehtoistyötä?
 
-Try searching for local schools and call the principal/teacher/front office and ask how you can help.  
-
-
-### How long do classroom visits last for?
-
-An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.   
+Yritä etsiä paikallisia kouluja ja soita rehtorille/opettajalle/vastaanotolle ja kysy, miten voit auttaa.  
 
 
-### What age group is the Hour of Code activity appropriate for?
+### Kuinka kauan luokkahuonevierailut kestävät?
 
-Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12) from all backgrounds. Everyone - even adults - can have fun playing!   
-
-
-### How do I get selected as a technical volunteer or guest speaker?
-
-Teachers will be searching for volunteers on our [volunteer map](https://code.org/volunteer/local). Try to make your profile as complete as possible to increase the chance that a teacher will select you. If you have a preference on how you’d like to volunteer, such as being a guest speaker or as technical support, please indicate that in the description of your profile.   
+Henkilökohtainen luokkahuonevierailu kestää yleensä 60-90 minuuttia, kun taas virtuaalinen luokkahuonevierailu kestää yleensä 20-30 minuuttia.   
 
 
-When selected, a teacher will contact you through the volunteer platform (your email address will never be shared with the teacher). If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.   
+### Mille ikäryhmälle Hour of Code -aktiviteetti sopii?
+
+Code.org ja yhteistyökumppanimme suunnittelevat kaikki Hour of Code -aktiviteetit houkuttelemaan kaikkien luokkatasojen (K-12) opiskelijoita kaikista taustoista. Kaikki - jopa aikuiset - voivat pitää hauskaa pelaamalla!   
 
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+### Miten minut valitaan tekniseksi vapaaehtoiseksi tai vierailevaksi puhujaksi?
+
+Opettajat etsivät vapaaehtoisia vapaaehtois [kartastamme](https://code.org/volunteer/local). Yritä tehdä profiilistasi mahdollisimman täydellinen lisätäksesi mahdollisuutta, että opettaja valitsee sinut. Jos sinulla on mieltymys siitä, miten haluat toimia vapaaehtoisena, kuten olla vieraileva puhuja tai tekninen tuki, ilmoita se profiilisi kuvauksessa.   
+
+
+Kun olet valinnut, opettaja ottaa sinuun yhteyttä vapaaehtoisalustan kautta (sähköpostiosoitettasi ei koskaan jaeta opettajan kanssa). Jos saat liikaa pyyntöjä opettajilta, voit aina päivittää asetuksesi napsauttamalla linkkiä muokataksesi tietojasi tai peruuttaaksesi tilauksen, joka on opettajan lähettämän sähköpostin alaosassa.   
+
+
+[<button>Ilmoittaudu vapaaehtoiseksi</button>]({{ urls/volunteer }})

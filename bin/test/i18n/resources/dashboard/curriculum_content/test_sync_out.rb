@@ -86,31 +86,65 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncOut do
     let(:distribute_localization) {described_instance.send(:distribute_localization, language)}
 
     let(:type) {'expected_type'}
-    let(:type_i18n_data) {'expected_type_i18n_data'}
+    let(:type_i18n_data) {{'uuid' => 'new_i18n_data'}}
     let(:types_i18n_data) {{type => type_i18n_data}}
 
     let(:target_i18n_file_path) {CDO.dir('dashboard/config/locales', "#{type}.#{i18n_locale}.json")}
-    let(:i18n_data) {'expected_dashboard_i18n_data'}
-
-    let(:expect_localization_file_creation) do
-      I18nScriptUtils.expects(:write_json_file).with(target_i18n_file_path, i18n_data)
-    end
 
     before do
       described_instance.stubs(:types_i18n_data_of).with(language).returns(types_i18n_data)
-      I18nScriptUtils.stubs(:to_dashboard_i18n_data).with(i18n_locale, type, type_i18n_data).returns(i18n_data)
     end
 
     it 'distributes localization of the language' do
-      expect_localization_file_creation.once
+      expected_i18n_data = {i18n_locale => {'data' => {type => type_i18n_data}}}
+
+      I18nScriptUtils.expects(:write_json_file).with(target_i18n_file_path, expected_i18n_data).once
+
       distribute_localization
     end
 
+    context 'when the target i18n file already exists' do
+      let(:target_i18n_file_data) do
+        {
+          i18n_locale => {
+            'data' => {
+              type => {
+                'untranslated_uuid' => 'untranslated_data',
+                'uuid' => 'origin_i18n_data'
+              }
+            }
+          }
+        }
+      end
+
+      before do
+        FileUtils.mkdir_p File.dirname(target_i18n_file_path)
+        File.write target_i18n_file_path, JSON.dump(target_i18n_file_data)
+      end
+
+      it 'adds new i18n data to existing i18n data' do
+        expected_i18n_data = {
+          i18n_locale => {
+            'data' => {
+              type => {
+                'untranslated_uuid' => 'untranslated_data',
+                **type_i18n_data,
+              }
+            }
+          }
+        }
+
+        I18nScriptUtils.expects(:write_json_file).with(target_i18n_file_path, expected_i18n_data).once
+
+        distribute_localization
+      end
+    end
+
     context 'when the types i18n data is blank' do
-      let(:types_i18n_data) {nil}
+      let(:types_i18n_data) {{}}
 
       it 'does not distribute localization of the language' do
-        expect_localization_file_creation.never
+        I18nScriptUtils.expects(:write_json_file).with(target_i18n_file_path, anything).never
         distribute_localization
       end
     end
@@ -123,8 +157,7 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncOut do
     let(:flatten_types_i18n_data) {'flatten_types_i18n_data'}
     let(:restored_lesson_keys_i18n_data) {'restored_lesson_keys_i18n_data'}
     let(:restored_reference_guide_keys_i18n_data) {'restored_reference_guide_keys_i18n_data'}
-    let(:fixed_resource_urls_i18n_data) {'restore_resource_keys_i18n_data'}
-    let(:expected_types_i18n_data) {fixed_resource_urls_i18n_data}
+    let(:fixed_resource_urls_i18n_data) {{fixed_resource_urls: {i18n_key: 'i18n_data'}}}
 
     before do
       FileUtils.mkdir_p File.dirname(crowdin_file_path)
@@ -140,7 +173,7 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncOut do
       described_instance.expects(:restore_reference_guide_i18n_keys).with(restored_lesson_keys_i18n_data).in_sequence(execution_sequence).returns(restored_reference_guide_keys_i18n_data)
       described_instance.expects(:fix_resource_urls).with(restored_reference_guide_keys_i18n_data).in_sequence(execution_sequence).returns(fixed_resource_urls_i18n_data)
 
-      assert_equal expected_types_i18n_data, types_i18n_data
+      assert_equal({'fixed_resource_urls' => {'i18n_key' => 'i18n_data'}}, types_i18n_data)
     end
   end
 
@@ -154,7 +187,8 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncOut do
 
       RedactRestoreUtils.expects(:restore).with(
         original_file_path, crowdin_file_path, crowdin_file_path, %w[resourceLink vocabularyDefinition]
-      ).once.returns(expected_i18n_data)
+      ).once
+      I18nScriptUtils.expects(:parse_file).with(crowdin_file_path).once.returns(expected_i18n_data)
 
       assert_equal expected_i18n_data, restore_file_content
     end

@@ -4688,6 +4688,9 @@ ka:
           lessons:
             lesson-5:
               name: ტესტები
+          lesson_groups:
+            lessonGroup-4:
+              display_name: შემთხვევითი
         csp-playground:
           title: CSP სათამაშო მოედანი
         devices-2022:
@@ -5238,3 +5241,73 @@ ka:
           description_short: ვისწავლოთ ყველა ცნება კომპიუტერული მეცნიერების საფუძვლები და შექმნათ თქვენი საკუთარი ხელოვნება, ამბავი ან თამაში.
         how-ai-works-2023:
           title: როგორ მუშაობს AI
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: შესავალი
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: შესავალი
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: შესავალი
+          lesson_groups:
+            lessonGroup-7:
+              display_name: შესავალი
+        web-dev-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: ვებგვერდების შექმნა'
+            lessonGroup-3:
+              display_name: 'თავი 2: მრავალგვერდიანი ვებსაიტები'
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: გამოკითხვა
+            lessonGroup-2:
+              display_name: 'თავი 1: პრობლემის გადაჭრის პროცესი'
+            lessonGroup-3:
+              display_name: 'თავი 2: კომპიუტერები და პრობლემების გადაჭრა'
+          student_description: პრობლემის გადაჭრა და გამოთვლა არის უაღრესად ინტერაქტიული და თანამშრომლობითი შესავალი კომპიუტერული მეცნიერების სფეროში, რომელიც ჩამოყალიბებულია პრობლემების გადაჭრის უფრო ფართო ძიებაში. თქვენ ივარჯიშებთ პრობლემის გადაჭრის პროცესის გამოყენებით თავსატეხების, გამოწვევებისა და რეალური სამყაროს სცენარების სერიის გადასაჭრელად. შემდეგი, თქვენ შეისწავლით თუ როგორ შეიტანენ კომპიუტერები ინფორმაციას, გამოაქვთ, ინახავენ და ამუშავებენ ინფორმაციას, რათა დაეხმარონ ადამიანებს პრობლემების გადაჭრაში. განყოფილება მთავრდება პროექტით, რომელშიც თქვენ შეიმუშავებთ პროგრამას, რომელიც დაგეხმარებათ თქვენი არჩევანის პრობლემის მოგვარებაში.
+        csd2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: ვებგვერდების შექმნა'
+            lessonGroup-3:
+              display_name: 'თავი 2: მრავალგვერდიანი ვებსაიტები'
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: სურათები და ანიმაციები'
+            lessonGroup-3:
+              display_name: 'თავი 2: თამაშების შექმნა'
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: მომხმარებელზე ორიენტირებული დიზაინი'
+            lessonGroup-3:
+              display_name: 'თავი 2: აპლიკაციის პროტოტიპირება'
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: ინფორმაციის წარმოდგენა'
+            lessonGroup-3:
+              display_name: 'თავი 2: მონაცემებთან დაკავშირებული პრობლემების გადაწყვეტა'
+          description_short: გაიგეთ, თუ როგორ იყენებენ ადამიანები კომპიუტერებს მონაცემებთან დაკავშირებული პრობლემების გადასაჭრელად.
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'თავი 2: აპარატული შეყვანა'
+          description_short: შეისწავლეთ პროგრამირება ფიზიკური მოწყობილობების საშუალებით.
+        csd6b-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: შესაყვანი და გამოსაყვანი ინფორმაცია
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: შესავალი აპლიკაციების ლაბორატორიაში
+        csd-post-survey-2024:
+          title: კურსის შემდგომი გამოკითხვა

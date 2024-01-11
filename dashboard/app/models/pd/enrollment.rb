@@ -96,7 +96,7 @@ class Pd::Enrollment < ApplicationRecord
   end
 
   def self.for_user(user)
-    where('email = ? OR user_id = ?', user.email, user.id)
+    where('email = ? OR user_id = ?', user.email_for_enrollments, user.id)
   end
 
   # Name split (https://github.com/code-dot-org/code-dot-org/pull/11679) was deployed on 2016-11-09
@@ -140,14 +140,6 @@ class Pd::Enrollment < ApplicationRecord
     user_id
   end
 
-  def survey_class
-    if workshop.local_summer?
-      Pd::LocalSummerWorkshopSurvey
-    else
-      Pd::WorkshopSurvey
-    end
-  end
-
   # Filters a list of workshops user is enrolled in with (in)complete surveys (dependent on select_completed).
   # @param enrollments [Enumerable<Pd::Enrollment>] list of enrollments to filter.
   # @param select_completed [Boolean] if true, return only enrollments with completed surveys,
@@ -182,7 +174,7 @@ class Pd::Enrollment < ApplicationRecord
   end
 
   def resolve_user
-    user || User.find_by_email_or_hashed_email(email)
+    user || User.find_by_email_or_hashed_email(email) || User.find_by(id: application&.user_id)
   end
 
   # Pre-workshop survey URL (if any)

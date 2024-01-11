@@ -2,6 +2,15 @@
 hi:
   data:
     blocks:
+      AmysBlocks_goldilocks:
+        text: |2-
+           यदि {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': बहुत अधिक
+            '"just right"': बस ठीक
+            '"too little"': बहुत कम
       AmysBlocks_setPromptWithChoices:
         text: उपयोगकर्ता को {QUESTION} वेरिएबल {VAR} के लिए विकल्पों {A}{B}{C} के साथ सुझाव दें
       AmysBlocks_spriteSayVar:
@@ -22,6 +31,8 @@ hi:
             '0.75': छोटा
             '1.00': मध्यम
             '2.00': बड़ा
+      Dancelab_ai:
+        text: "{IMAGE} {VALUE} प्रभाव पैदा करें"
       Dancelab_alternateMoves:
         text: "{GROUP} प्रत्येक {N} संगीत प्रविधियों के बाद \n{MOVE1} और {MOVE2} को बदलता है"
         options:
@@ -69,6 +80,11 @@ hi:
           UNIT:
             '"measures"': संगीत प्रविधियां
             '"seconds"': सेकंड
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': संगीत प्रविधियां
+            '"seconds"': सेकंड
       Dancelab_changeColorBy:
         text: "{COLOR} {METHOD} को {AMOUNT} में बदलें"
         options:
@@ -108,6 +124,27 @@ hi:
             MOVES.Kick: स्टार
             MOVES.ThisOrThat: यह या वह
             MOVES.Rest: कोई नहीं
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} हमेशा {MOVE} {DIR} करता है"
+        options:
+          GROUP:
+            '"CAT"': सभी बिल्लियां
+            '"SLOTH"': निष्क्रियता
+          MOVE:
+            MOVES.Roll: बॉडी रोल
+            MOVES.ClapHigh: ज़ोर से ताली बजाएं
+            MOVES.Dab: हाथ फेरें
+            MOVES.DoubleJam: डबल डाउन
+            MOVES.Drop: ड्रॉप
+            MOVES.Floss: फ्लॉस
+            MOVES.Fresh: ताजा
+            MOVES.Clown: गंगनम
+            MOVES.Kick: स्टार
+            MOVES.ThisOrThat: यह या वह
+            MOVES.Rest: कोई नहीं
+            '"next"': "(अगला)"
+            '"prev"': "(पिछला)"
+            '"rand"': "(बेतरतीब)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} हमेशा {MOVE} {DIR} करता है"
         options:
@@ -562,6 +599,61 @@ hi:
             '"tropical"': उष्णकटिबंधी
             '"vintage"': विंटेज
             '"warm"': गरम
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: पृष्ठभूमि प्रभाव सेट करें {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': कोई नहीं
+            '"rand"': "(बेतरतीब)"
+            '"quads"': कोण
+            '"blooming_petals"': खिलती पंखुड़ियाँ
+            '"circles"': चक्र
+            '"color_cycle"': रंग
+            '"diamonds"': हीरा
+            '"disco_ball"': डिस्को बॉल
+            '"fireworks"': पटाखे
+            '"flowers"': फूल
+            '"frosted_grid"': फ्रॉस्टेड ग्रिड
+            '"growing_stars"': उभरते तारे
+            '"swirl"': हिप्नो
+            '"kaleidoscope"': कैलाइडोस्कोप
+            '"lasers"': लेजर डांस फ्लोर
+            '"splatter"': पेंट का छिड़काव
+            '"rainbow"': इंद्रधनुष
+            '"ripples_random"': बेतरतीब लहरें
+            '"ripples"': लहरें
+            '"snowflakes"': हिमपात
+            '"text"': गाने के नाम
+            '"galaxy"': खाली स्थान
+            '"sparkles"': फुलझड़ियां
+            '"spiral"': घुमावदार
+            '"disco"': चोकोण
+            '"squiggles"': टेढ़ी-मेढ़ी रेखाएं
+            '"starburst"': स्टारबर्स्ट
+            '"stars"': स्टार
+            '"music_wave"': तरंगें
+          PALETTE:
+            '"autumn"': पतझड़
+            '"rave"': काला व सफेद
+            '"cool"': शांत!
+            '"electronic"': इलेक्ट्रोनिक
+            '"grayscale"': धूसर
+            '"iceCream"': आईस क्रीम
+            '"default"': प्रकाश
+            '"neon"': निऑन
+            '"ocean"': समुद्र
+            '"rainbow"': इंद्रधनुष
+            '"roses"': गुलाब के फूल
+            '"sky"': आसमान
+            '"spring"': बसंत
+            '"summer"': ग्रीष्म ऋतु
+            '"sunrise"': सूर्योदय
+            '"sunset"': सूर्यास्त
+            '"tropical"': उष्णकटिबंधी
+            '"twinkling"': टिमटिमाहट
+            '"vintage"': विंटेज
+            '"warm"': गरम
+            '"winter"': शीतऋतु
       Dancelab_setDanceSpeed:
         text: "{SPRITE} की डांस स्पीड {SPEED} पर सेट करें"
         options:
@@ -1639,6 +1731,15 @@ hi:
         text: "{SPRITE} का y निर्देशांक"
       KatiesBlocks_glideTo:
         text: "{SPRITE} चुपके से {LOCATION} पर जाता है"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           यदि {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': ठोस
+            '"liquid"': द्रव
+            '"gas"': गैस
       KatiesBlocks_tumbling:
         text: कलाबाजियां खाना
       Mikelab_addBehaviorSimple:
@@ -2517,6 +2618,19 @@ hi:
           DIR:
             right: दाएं ↻
             left: बाएं ↺
+      ecosystems_catchMe:
+        text: पकड़ें {THIS}
+      ecosystems_eat:
+        text: खाएं {THIS}
+      ecosystems_goldilocks:
+        text: |2-
+           यदि {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': बहुत अधिक
+            '"just right"': बस ठीक
+            '"too little"': बहुत कम
       ecosystems_int10:
         options:
           VALUE:
@@ -2530,6 +2644,24 @@ hi:
             '8': '8'
             '9': '9'
             '10': '10'
+      ecosystems_makeNewSpriteBetween:
+        text: 'स्थान x: {X} y: {Y} के बीच नया {GROUP} बनाएं {N}'
+      ecosystems_makeNumSpritesAtLocation:
+        text: "{LOCATION_GENERATOR} पर नया {ANIMATION_NAME} बनाएं {NUM}"
+      ecosystems_makeNumSpritesWithinRange:
+        text: "{RANGE} पर नया {ANIMATION_NAME} बनाएं {NUM}"
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": शीर्ष
+            "{x1:0, x2:400, y1:150, y2:250}": मध्य
+            "{x1:0, x2:400, y1:0, y2:200}": नीचे
+      ecosystems_randomLocationWithinRange:
+        text: x न्यूनतम{X1}x अधिकतम{X2}y न्यूनतम{Y1}y अधिकतम{Y2}
+      ecosystems_randomLocationWithinSelectedRange:
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": शीर्ष
+            "{x1:0, x2:400, y1:0, y2:200}": नीचे
       storylab_printText:
         text: प्रिंट करें {TEXT}
       storylab_setForegroundEffect2:

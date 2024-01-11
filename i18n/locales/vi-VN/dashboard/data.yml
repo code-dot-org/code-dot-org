@@ -711,6 +711,8 @@ vi:
         poetry-programming: Thơ & Lập trình
         code-break: Giờ giải lao lập trình
         blockchain-introd: 'Cách Blockchain hoạt động: Giới thiệu'
+        ai-ethis: Đạo đức & AI
+        csd_ml_how_ai_works: Cách thức hoạt động của AI
     callout:
       text:
         drag_blocks: Kéo một khối "di chuyển" và gán nó bên dưới khối khác

@@ -8,7 +8,7 @@ title: Klukkustund af kóða Hvernig-til Guide
 
 ### Taktu þátt í hreyfingunni og kynntu nemendum þínum tölvunarfræði með þessum skrefum.
 
-Students today should learn how to create technology, not just use it.
+Nemendur í dag ættu að læra að búa til tækni, ekki bara nota hana.
 
 Að prófa klukkutíma kóða er einföld og skemmtileg leið til að kynna nemendum tölvunarfræði, kannski í fyrsta skipti! Finndu virkni sem passar við stillinguna þína, hvort sem það er í bekknum eða eftir skóla, í eigin persónu eða sýndar. Skoðaðu [þátttökuhandbókina okkar ef þú hefur enn spurningar]({{ localized_files/participation_guide }}) eftir að hafa skoðað skrefin hér að neðan:
 
@@ -19,7 +19,7 @@ Að prófa klukkutíma kóða er einföld og skemmtileg leið til að kynna neme
 - [Hvernig á að byrja Hour of Code sterkt](#how-to-start)
 - [Fá erfðaskrá](#code)
 - [Fagnaðu árangri nemenda þinna](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [Önnur Hour of Code auðlindir fyrir kennara](#other-resources)
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-Þegar þú [skráir þig í Hour of Code viðburðinn](/#join)þinn færðu gagnleg tölvupóstsamskipti með fréttum og ábendingum um að hýsa vel heppnaða Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Þegar þú [skráir þig á Hour of Code viðbur](/events)ðinn þinn færðu gagnleg tölvupóstsamskipti með fréttum og ráðum til að hýsa vel heppnaða Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -136,7 +136,7 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Prentaðu skír]({{ urls/certificates }}) teini fyrir nemendur þína.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - Deildu myndum og myndböndum af þinni Klukkustund kóðunar á samfélagsmiðlum. Notaðu #HourOfCode og @codeorg svo að við getum líka dregið athygli að góðu gengi ykkar!
 
@@ -147,7 +147,7 @@ What if a student finishes early?
 ## Aðrar "Klukkutími af forritun" bjargir fyrir kennara:
 
 - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Farið yfir al [gengar spurningar um Hour of Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ### What comes after the Hour of Code?
 

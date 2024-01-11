@@ -1606,3 +1606,18 @@ si:
               display_name: කන්ඩිෂනලස්
             lessonGroup-5:
               display_name: විචල්‍යන්
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: හැදින්වීම
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: හැදින්වීම
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: හැදින්වීම
+          lesson_groups:
+            lessonGroup-7:
+              display_name: හැදින්වීම

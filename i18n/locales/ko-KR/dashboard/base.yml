@@ -52,6 +52,7 @@ ko:
         age: '나이'
         gender: '성별'
         edit_header: '계정 정보 수정'
+        ai_settings_header: 'AI 설정'
         finish_sign_up_header: '계정 만들기를 마칩니다.'
         finish_sign_up_header_error: '다음 오류를 수정해주세요:'
         finish_sign_up_subheader: '<strong>%{email}</strong>을 위해 Code.org 계정을 만들려면 밑에 있는 빈 곳에 정보를 입력 하세요.'
@@ -204,6 +205,8 @@ ko:
     parent_account_email_progress_permission: "귀 자녀의 진도와 프로젝트 및 과정과 컴퓨터 과학에 대한 업데이트를 종종 이메일로 알려드려도 되겠습니까? [(당사 개인정보 보호정책 참조)](%{privacy_policy_url})"
     parent_account_email_label: "학부모/보호자 이메일"
     us_state: '주'
+    us_state_dropdown_options:
+      other: "이 목록에 없는 곳에 살고 있습니다"
   school_info:
     title: '학교 정보(선택사항)'
     school_country: '학교 국가'
@@ -272,6 +275,7 @@ ko:
   parent_mailer:
     student_associated_subject: 'Code.org 로그인 정보'
     parent_email_added_subject: 'Code.org에 오신 것을 환영합니다!'
+    parent_permission_request_subject: "아이가 Code.org에 접속하기 위해선 보호자의 동의가 필요합니다."
   teacher_mailer:
     new_teacher_subject: 'Code.org에 오신 것을 환영합니다!'
     delete_teacher_subject: 'Code.org 알림: 계정이 삭제되었습니다'
@@ -1003,7 +1007,7 @@ ko:
     windows: '윈도우즈 (64비트)'
     mac: '맥 OS X'
   locked_stage: '이 단계가 현재 잠겨있기 때문에 이 단계의 해당 컨텐츠가 보이지 않습니다. 교사는 작업이 필요하거나 학생의 답을 검토해야 할 때 잠금을 해제할 수 있습니다.'
-  hidden_stage: "여러분의 선생님은 여러분이 여기에 있는 걸 예상하지 못했습니다. 선생님에게 어느 레슨을 들어야 하는지 교사에게 물어보세요."
+  hidden_stage: "이 수업을 수강하는 것을 담당교사는 모릅니다. 어떤 수업을 수강해야 하는지 담당교사에게 문의하세요"
   hidden_script: "여러분의 선생님은 여러분이 여기에 있는 걸 예상하지 못했습니다. 선생님에게 어느 단원을 들어야 하는지 물어 보세요."
   no_course_access_student: "이 과정에 들어 올 수 없습니다. 선생님에게 어느 과정을 들어야 하는지 물어 보세요."
   no_course_access_teacher: "이 과정에 들어 올 수 없습니다. 이 과정에 들어 올 수 있다고 믿으면, support@code.org에 편지를 써서 이 상황을 해결할 수 있게 해주세요. "
@@ -1179,4 +1183,3 @@ ko:
   reset_predict_progress_button: "답 삭제"
   pixelation:
     binary: "2진"
-

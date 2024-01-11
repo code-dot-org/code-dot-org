@@ -4,6 +4,8 @@ pt:
     attributes:
       user:
         age: Idade
+        ai_rubrics_disabled: Desativar o Recurso IA Rubric
+        ai_settings_header: Configurações da I.A.
         current_password: Senha atual
         edit_header: Editar Detalhes da Conta
         email: E-mail
@@ -157,6 +159,10 @@ pt:
       concorda com o armazenamento de cookies em seu computador ou dispositivo.
     more_information: Consulte a Política de Privacidade do Code.org.
   copy: Copiar
+  course_deprecated:
+    button: Visualize o novo currículo
+    title: Atenção! Esse currículo não está mais disponível, mas a Code.org tem opções
+      mais recentes disponíveis para você.
   course_offering:
     headers:
       collections: Coleções
@@ -173,6 +179,7 @@ pt:
       sports: Esportes
       summer_workshops_612: 6-12 workshops de verão
       teacher_led: Liderado por professores
+      unsupported: Incompatível
       virtual_academic_year_workshops_612: Workshops virtuais de 6 a 12 anos acadêmicos
       workshops_k5: Workshops K-5
       year_long: Durante todo o ano
@@ -290,7 +297,7 @@ pt:
       Os Bandidos &copy; %{current_year} DreamWorks Animation LLC. Todos os direitos
       reservados.
     built_on_code_studio: Criado no Code Studio
-    built_on_github: Desenvolvido no GitHub da Microsoft
+    built_on_github: Construído no GitHub da Microsoft
     code_from_html: A Code.org usa o p5.play, que tem a licensa <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
       GNU LGPL 2.1</a>.
     cookie_notice: Aviso sobre Cookies
@@ -400,6 +407,46 @@ pt:
     starwars_javascript_name: 'Star Wars: Construa uma galáxia com a programação (JavaScript)'
     title: Downloads da Hora do Código
     windows: Windows (64 bits)
+  hoc_tutorial_email_content:
+    create_classroom_section: "**Crie uma seção de sala de aula** (Também é opcional…,
+      mas muito útil!): Criar uma seção para a sua sala de aula permite que você acompanhe
+      o progresso de seus alunos, visualize seus trabalhos e até registre um feedback!
+      [Configure sua seção aqui] (%{section_setup_url}). E para todos os nossos novatos,
+      aqui está um [guia prático] (%{guide_url}) muito útil a vocês!"
+    dear_teacher: Caro %{teacher_name},
+    explore_course: Explore nosso tesouro de cursos gratuitos
+    founder: Fundador, Code.org
+    hip_hip_hooray: "**Hip, Hip, Hooray!**: Quando chegarmos ao final, vamos celebrar
+      esses jovens e brilhantes programadores. Certificados, adesivos e até mesmo
+      uma salva de palmas — tudo conta. Encontre nossos [certificados imprimíveis
+      aqui] (%{url})."
+    intro_step_by_step_guide: 'Estamos muito animador por você estar realizando um
+      evento da Hora do Código usando as atividades e tutoriais gratuitos da Code.org!
+      Temos a honra de ter educadores como você apresentando aos alunos o incrível
+      mundo da programação. Aqui está um guia com um passo a passo para garantir um
+      evento bem-sucedido da Hora do Código:'
+    learn_about_ai: Aprenda sobre Inteligência Artificial (IA)
+    let_fun_begin: "**Que a diversão comece!**: Guiado pelo plano de aula, comece
+      sua jornada no mundo da codificação. Lembre-se: você não precisa ter todas as
+      respostas! Seu entusiasmo e a curiosidade compartilhada com seus alunos ajudarão
+      todos a aprenderem juntos."
+    more_adventures_await: "**Mais aventuras aguardam**: Você viu algum novo programador
+      ávido por mais? Apresente-os a mais currículos na área da Ciência da Computação
+      no Code.org!"
+    pick_perfect_activity: "**Escolha a Atividade Perfeita**: [Selecione o melhor
+      tutorial da Hora do Código] (%{url}) para o seu evento. Explore as opções e
+      atribua o tutorial escolhido à sua seção, para que seus alunos saibam exatamente
+      por onde começar."
+    plan_like_pro: "**Planeje como um profissional: muitos de nossos tutoriais vêm
+      com um [plano de aula] (%{lesson_plan_url}). É como uma receita secreta para
+      o sucesso! Confira seu plano de aula antes do grande evento."
+    sign_up_step: "**Inscreva-se** (Opcional…, mas incrível!): Crie uma conta gratuita
+      na Code.org para obter acesso um painel pessoal que vai lhe auxiliar a gerenciar
+      a Hora do Código da sua sala de aula! [Inscreva-se aqui] (%{url})."
+    thank_you: OBRIGADO por defender o ensino da Ciência da Computação. Nossa equipe
+      deseja a você e a seus alunos uma Hora do Código inesquecível!
+    your_friends: Seus Amigos na Code.org
+  hoc_tutorial_email_subject: Arrase na Hora do Código com os tutoriais da Code.org!
   home:
     20hour_overview: Este curso de 20 horas apresenta o núcleo da computação e conceitos
       de programação. O curso é projetado para uso em salas de aula para o Ensino
@@ -505,6 +552,8 @@ pt:
     unsubmit-title: Cancelar o envio de sua avaliação
     wrong_body: Obrigado por enviar respostas.
     wrong_title: Obrigado
+  level_summary:
+    correct_answer: Resposta Correta
   locked_stage: O conteúdo desta fase não pode ser visto, pois ela está bloqueada
     no momento. Seu professor pode desbloquear esta fase quando chegar a hora de trabalhar
     com ela ou quando for revisar suas respostas.
@@ -522,6 +571,7 @@ pt:
       error_wrong_provider: Provedor incorreto. Confirme se você está fazendo login
         com o Google.
       login_with_google: Login no aplicativo Maker com o Google
+    setup_page_title: Configuração do Maker
   match:
     correct_body: Essa é a resposta correta.
     correct_title: Correto
@@ -599,6 +649,7 @@ pt:
       legal_tos: Termos de Serviço
       my_dashboard: Meu painel de Controle
       professional_learning: Aprendizado Profissional
+      project_beats_documentation: Documentação do Project Beats
       project_gallery: Projetos
       report_abuse: Reportar abuso
       report_bug: Reportar um erro
@@ -632,7 +683,6 @@ pt:
       bounce: Pingue-pongue
       calc: Calc
       classroom: Página inicial do professor
-      create: Criar
       dance: Festa dançante
       district_dashboard: Painel do distrito
       driver: Conectado
@@ -659,7 +709,7 @@ pt:
       playlab: Laboratório
       playlab_k1: Laboratório de Jogos (Pré-leitor)
       poetry: Poesia
-      poetry_hoc: Arte poética
+      poetry_hoc: Arte Poética
       scratch: Scratch
       settings: Configurações da conta
       signin: Entrar
@@ -714,6 +764,12 @@ pt:
       manter atualizado em relação ao progresso e aos projetos do(a) seu(sua) filho(a)!"
   parent_mailer:
     parent_email_added_subject: Bem-vindo ao Code.org!
+    parent_permission_confirmation_subject: Obrigado por aprovar o acesso de seu filho
+      ao Code.org!
+    parent_permission_reminder_subject: 'Lembrete: É necessário o consentimento dos
+      pais ou responsáveis para o acesso de seu filho ao Code.org'
+    parent_permission_request_subject: É necessário o consentimento dos pais ou responsáveis
+      para o acesso de seu filho ao Code.org
     student_associated_subject: Informações de login para Code.org
   password:
     change_form:
@@ -775,17 +831,37 @@ pt:
         sphero: Sphero
         wonder: Oficina de Maravilhas
       school_country:
+        australia: Austrália
         barbados: Barbados
         belize: Belize
+        brazil: Brasil
         canada: Canadá
         chile: Chile
         colombia: Colômbia
+        dominican_republic: República Dominicana
+        india: Índia
+        indonesia: Indonésia
         israel: Israel
+        italy: Itália
+        jamaica: Jamaica
+        kenya: Quênia
+        kosovo: Kosovo
         malaysia: Malásia
+        maldives: República das Maldivas
         mexico: México
+        mongolia: Mongólia
+        new_zealand: Nova Zelândia
         paraguay: Paraguai
+        philippines: Filipinas
+        portugal: Portugal
+        puerto_rico: Porto Rico
+        slovakia: Eslováquia
+        south_korea: República de Corea
+        spain: Espanha
         thailand: Tailândia
+        trinidad_and_tobago: Trinidad e Tobago
         uzbekistan: Uzbequistão
+        vietnam: Vietnã
       subjects:
         art: Arte
         cs: Ciência da Computação
@@ -1192,6 +1268,8 @@ pt:
     teacher_educator_guide: Consultar o guia do professor
     title: Cadastre-se na Code.org
     us_state: Estado
+    us_state_dropdown_options:
+      other: Eu moro num lugar não listado aqui
     user_type: Você é um aluno ou professor?
     user_type_button: Atualizar Tipo de Conta
     user_type_label: Tipo de conta
@@ -1468,7 +1546,7 @@ pt:
     poem-art:
       body: Expresse-se! Use código para criar poemas animados.
       image_alt: Uma lula hipster se apresentando em um palco.
-      title: Arte poética
+      title: Arte Poética
     pre-express:
       image_alt: Um cachorro e um unicórnio em frente a uma árvore feita de peças
         de quebra-cabeça.

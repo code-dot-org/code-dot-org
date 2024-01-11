@@ -1,21 +1,52 @@
 {
   "pages": {
     "homepage": [
-      "hoc2022-actual-hoc",
-      "pl-launch-superhero",
-      "curriculum-launch-2023",
-      "ai-pl-launch-2023"
+      "hoc2023-soon-hoc",
+      "hoc2023-actual-hoc",
+      "pl-launch-superhero"
     ]
   },
 
   "banners": {
-    "hoc2022-actual-hoc": {
+    "hoc2023-soon-hoc": {
+      "hoc_modes": ["soon-hoc"],
+      "class": "hoc-banner homepage",
+      "desktopImage": "/images/hoc2023-codeorg-hero-banner.png",
+      "mobileImage": "/images/hoc2023-codeorg-hero-banner-mobile.png",
+      "leftImage": "/images/hoc2023-codeorg-hero-banner-left.svg",
+      "rightImage": "/images/hoc2023-codeorg-hero-banner-right.svg",
+      "actions": [
+        {
+          "type": "text",
+          "text": "homepage_hero_hoc_is_coming"
+        },
+        {
+          "type": "heading",
+          "text": "curriculum_name_dance_party_ai_edition"
+        },
+        {
+          "type": "heading-two",
+          "text": "codeorg_homepage_hoc2023_body"
+        },
+        {
+          "type": "cta_button_solid_yellow",
+          "text": "hoc2022_cta_primary",
+          "url": "/dance"
+        },
+        {
+          "type": "cta_button_solid_white",
+          "text": "hoc2022_cta_secondary",
+          "url": "https://hourofcode.com/learn"
+        }
+      ]
+    },
+    "hoc2023-actual-hoc": {
       "hoc_modes": ["actual-hoc"],
       "class": "hoc-banner homepage",
-      "desktopImage": "/images/hoc2022-codeorg-hero-banner-02.png",
-      "mobileImage": "/images/hoc2022-codeorg-hero-banner-mobile-02.png",
-      "leftImage": "/images/hoc2022-codeorg-hero-banner-02-left.svg",
-      "rightImage": "/images/hoc2022-codeorg-hero-banner-02-right.svg",
+      "desktopImage": "/images/hoc2023-codeorg-hero-banner.png",
+      "mobileImage": "/images/hoc2023-codeorg-hero-banner-mobile.png",
+      "leftImage": "/images/hoc2023-codeorg-hero-banner-left.svg",
+      "rightImage": "/images/hoc2023-codeorg-hero-banner-right.svg",
       "actions": [
         {
           "type": "text",
@@ -23,21 +54,21 @@
         },
         {
           "type": "heading",
-          "text": "hoc2022_banner_title"
+          "text": "curriculum_name_dance_party_ai_edition"
         },
         {
           "type": "heading-two",
-          "text": "hoc2022_banner_description"
+          "text": "codeorg_homepage_hoc2023_body"
         },
         {
           "type": "cta_button_solid_yellow",
           "text": "hoc2022_cta_primary",
-          "url": "/hourofcode2022"
+          "url": "/dance"
         },
         {
-          "type": "cta_button_hollow_white",
+          "type": "cta_button_solid_white",
           "text": "hoc2022_cta_secondary",
-          "url": "/hourofcode/overview"
+          "url": "https://hourofcode.com/learn"
         }
       ]
     },
@@ -67,45 +98,6 @@
           "type": "cta_button_solid_yellow",
           "text": "front_join_us_learn_more",
           "url": "/educate/professional-learning/middle-high"
-        }
-      ]
-    },
-    "curriculum-launch-2023": {
-      "dcdo": "curriculum-launch-hero-banner",
-      "class": "curriculum-banner-hero homepage",
-      "desktopImage": "/images/banners/banner-bg-school-supplies-dark-black.png",
-      "actions": [
-        {
-          "type": "flex-container",
-          "text_h1": "curriculum_launch_2023_title",
-          "text_desc": "curriculum_launch_2023_desc",
-          "studio_button_link": "/catalog",
-          "button_text": "call_to_action_explore_curriculum_catalog",
-          "img_src": "/images/banners/banner-curriculum-catalog-illustration-black.png"
-        }
-      ]
-    },
-    "ai-pl-launch-2023": {
-      "dcdo": "ai-pl-launch-banners",
-      "class": "ai-pl-banner-hero homepage",
-      "desktopImage": "/images/banners/banner-bg-ai-pl-purple.png",
-      "actions": [
-        {
-          "type": "ai-pl-launch-2023",
-          "text_h1": "ai_pl_101_hero_heading",
-          "text_desc": "ai_pl_101_hero_desc",
-          "text_desc_02": "ai_pl_101_hero_presented",
-          "logo_list_01": "/images/ai/pl/101/code--w.png",
-          "logo_list_02": "/images/ai/pl/101/ets--w.png",
-          "logo_list_03": "/images/ai/pl/101/iste--w.png",
-          "logo_list_04": "/images/ai/pl/101/khan--w.png",
-          "logo_list_01_alt": "company_code_dot_org",
-          "logo_list_02_alt": "company_ets",
-          "logo_list_03_alt": "company_iste",
-          "logo_list_04_alt": "company_khanacademy",
-          "button_link": "/ai/pl/101",
-          "button_text": "front_join_us_learn_more",
-          "img_src": "/images/ai/pl/101/hero--2-m.png"
         }
       ]
     }

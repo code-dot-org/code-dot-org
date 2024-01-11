@@ -2294,6 +2294,22 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Lossless Compression",
           "definition": "algoritma kompresi data yang memungkinkan data asli dipulihkan seperti semula secara sempurna dari data yang dikompresi. Paling umum digunakan untuk kompresi teks (yaitu, kompresi zip)"
+        },
+        "code/dance-ai/2023": {
+          "word": "kode",
+          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
+        },
+        "event/dance-ai/2023": {
+          "word": "Event",
+          "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
+        },
+        "program/dance-ai/2023": {
+          "word": "Program",
+          "definition": " Sebuah algoritma yang telah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+        },
+        "artificial_intelligence_a_i_/dance-ai/2023": {
+          "word": "Artificial Intelligence (A.I.) ",
+          "definition": "Sebuah program komputer yang mengambil data, mempelajari pola dari data tersebut, lalu membuat keputusan berdasarkan apa yang telah dipelajarinya."
         }
       }
     }

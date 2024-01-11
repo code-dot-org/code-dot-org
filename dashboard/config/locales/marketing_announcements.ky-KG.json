@@ -1,0 +1,58 @@
+{
+  "ky-KG": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Дагы кара"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Дагы кара"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Дагы кара"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Дагы кара"
+          },
+          "codebytes-2020": {
+            "buttonText": "Дагы кара"
+          },
+          "coldplay": {
+            "buttonText": "Көргүлө"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Башта"
+          },
+          "csjourneys": {
+            "buttonText": "Дагы кара"
+          },
+          "csjourneys-22": {
+            "buttonText": "Дагы кара"
+          },
+          "csleadersprize": {
+            "buttonText": "Дагы кара"
+          },
+          "hoc-2023": {
+            "buttonText": "Дагы кара"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Дагы кара"
+          },
+          "superhero": {
+            "buttonText": "Дагы кара"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Бизге кошулгула"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Бизге кошулгула"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Бизге кошулгула"
+          }
+        }
+      }
+    }
+  }
+}

@@ -14,50 +14,63 @@ I18N_ORIGINAL_DIR = File.join(I18N_LOCALES_DIR, 'original').freeze
 
 CROWDIN_PROJECTS = {
   codeorg: {
-    config_file:            CDO.dir('bin/i18n/codeorg_crowdin.yml'),
+    config_file:            CDO.dir('bin/i18n/crowdin/config/codeorg_crowdin.yml'),
     identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
-    etags_json:             CDO.dir('bin/i18n/crowdin/codeorg_etags.json'),
+    etags_json:             CDO.dir('bin/i18n/crowdin/etags/codeorg_etags.json'),
     files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg_files_to_sync_out.json')
   },
   'codeorg-markdown': {
-    config_file:            CDO.dir('bin/i18n/codeorg_markdown_crowdin.yml'),
+    config_file:            CDO.dir('bin/i18n/crowdin/config/codeorg_markdown_crowdin.yml'),
     identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
-    etags_json:             CDO.dir('bin/i18n/crowdin/codeorg-markdown_etags.json'),
+    etags_json:             CDO.dir('bin/i18n/crowdin/etags/codeorg-markdown_etags.json'),
     files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg-markdown_files_to_sync_out.json')
   },
   'hour-of-code': {
-    config_file:            CDO.dir('bin/i18n/hourofcode_crowdin.yml'),
+    config_file:            CDO.dir('bin/i18n/crowdin/config/hourofcode_crowdin.yml'),
     identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
-    etags_json:             CDO.dir('bin/i18n/crowdin/hour-of-code_etags.json'),
+    etags_json:             CDO.dir('bin/i18n/crowdin/etags/hour-of-code_etags.json'),
     files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/hour-of-code_files_to_sync_out.json')
   },
   'codeorg-restricted': {
-    config_file:            CDO.dir('bin/i18n/codeorg_restricted_crowdin.yml'),
+    config_file:            CDO.dir('bin/i18n/crowdin/config/codeorg_restricted_crowdin.yml'),
     identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
-    etags_json:             CDO.dir('bin/i18n/crowdin/codeorg-restricted_etags.json'),
+    etags_json:             CDO.dir('bin/i18n/crowdin/etags/codeorg-restricted_etags.json'),
     files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg-restricted_files_to_sync_out.json')
   },
 }.freeze
 
 CROWDIN_TEST_PROJECTS = {
   'codeorg-testing': {
-    config_file: File.join(File.dirname(__FILE__), "codeorg-testing_crowdin.yml"),
-    identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
-    etags_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-testing_etags.json"),
-    files_to_sync_out_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-testing_files_to_sync_out.json")
+    config_file:            CDO.dir('bin/i18n/crowdin/config/codeorg-testing_crowdin.yml'),
+    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
+    etags_json:             CDO.dir('bin/i18n/crowdin/etags/codeorg-testing_etags.json'),
+    files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg-testing_files_to_sync_out.json')
   },
   'codeorg-markdown-testing': {
-    config_file: File.join(File.dirname(__FILE__), "codeorg-testing_markdown_crowdin.yml"),
-    identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
-    etags_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-testing_markdown_etags.json"),
-    files_to_sync_out_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-testing_markdown_files_to_sync_out.json")
-  }
-}
+    config_file:            CDO.dir('bin/i18n/crowdin/config/codeorg-markdown-testing_crowdin.yml'),
+    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
+    etags_json:             CDO.dir('bin/i18n/crowdin/etags/codeorg-markdown-testing_etags.json'),
+    files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg-testing_markdown_files_to_sync_out.json')
+  },
+  'hour-of-code-test': {
+    config_file:            CDO.dir('bin/i18n/crowdin/config/hourofcode-testing_crowdin.yml'),
+    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
+    etags_json:             CDO.dir('bin/i18n/crowdin/etags/hour-of-code-testing_etags.json'),
+    files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/hour-of-code-test_files_to_sync_out.json')
+  },
+  'codeorg-restricted-test': {
+    config_file:            CDO.dir('bin/i18n/crowdin/config/codeorg-restricted-testing_crowdin.yml'),
+    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
+    etags_json:             CDO.dir('bin/i18n/crowdin/etags/codeorg-restricted-testing_etags.json'),
+    files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg-restricted-test_files_to_sync_out.json')
+  },
+}.freeze
 
 class I18nScriptUtils
   PROGRESS_BAR_FORMAT = '%t: |%B| %p% %a'.freeze
   PARALLEL_PROCESSES = Parallel.processor_count / 2
   SOURCE_LOCALE = 'en-US'.freeze
+  TTS_LOCALES = (::TextToSpeech::VOICES.keys - %i[en-US]).freeze
 
   # Because we log many of the i18n operations to slack, we often want to
   # explicitly force stdout to operate synchronously, rather than buffering
@@ -313,7 +326,7 @@ class I18nScriptUtils
   # @param locale [String] the BCP 47 (IETF language tag) format (e.g., 'en-US')
   # @return [String] the BCP 47 (IETF language tag) JS format (e.g., 'en_us')
   def self.to_js_locale(locale)
-    locale.tr('-', '_').downcase
+    locale.to_s.tr('-', '_').downcase
   end
 
   # Wraps hash in correct format to be loaded by our i18n backend.
