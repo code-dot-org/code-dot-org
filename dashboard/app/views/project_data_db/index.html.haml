@@ -25,6 +25,12 @@
 
 %h2 Record
 
+%h3 delete_record
+= form_tag "delete_record", :method => :delete, :remote => false do
+  = text_field_tag "table_name", "", placeholder: "table_name"
+  = text_field_tag "record_id", "", placeholder: "record_id"
+  = submit_tag "Delete"
+
 %table
   %tr
     %td table_name
