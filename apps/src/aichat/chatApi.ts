@@ -71,7 +71,7 @@ export async function getChatCompletionMessage(
       assistantResponse:
         "I can't respond because your message is inappropriate. Please don't use profanity.",
     };
-  } else if (PII.includes(response.status)) {
+  } else if (response && response.status && PII.includes(response.status)) {
     return {
       status: Status.PERSONAL,
       id: userMessageId,
