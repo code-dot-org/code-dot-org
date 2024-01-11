@@ -40,7 +40,7 @@ function ProgressTableV2({
 ProgressTableV2.propTypes = {
   isSortedByFamilyName: PropTypes.bool,
   sectionId: PropTypes.number,
-  students: PropTypes.arrayOf(studentShape),
+  students: PropTypes.arrayOf(studentShape).isRequired,
   unitData: scriptDataPropType.isRequired,
 };
 
