@@ -22,7 +22,7 @@ from aws_utils import bedrock
 
 # os.environ["AWS_DEFAULT_REGION"] = "us-east-1"  # E.g. "us-east-1"
 # os.environ["AWS_PROFILE"] = "codeorg-dev"
-# os.environ["BEDROCK_ASSUME_ROLE"] = "arn:aws:iam::165336972514:user/Tyrone"  # E.g. "arn:aws:..."
+# os.environ["BEDROCK_ASSUME_ROLE"] = "arn:aws:iam::99999999999:user/JoeyWheeler"  # E.g. "arn:aws:..."
 
 bedrock_runtime = bedrock.get_bedrock_client(
     assumed_role=os.environ.get("BEDROCK_ASSUME_ROLE", None),
@@ -96,7 +96,7 @@ def load_embeddings_cache(path):
             pickle.dump(embedding_cache, embedding_cache_file)    
     return embedding_cache
 
-# This function retrieves an embedding for a string from the cache if present, otherwise requests for the embedding through an available model
+# This function retrieves an embedding for a string from the cache if present, otherwise requests for the embedding through an available model (variable stored in constants.py)
 # As of 01/08/2024, the model being used is AWS's Titan v1 within their Bedrock framework; adjust function body as needed to replace with other models as necessary
 def retrieve_embedding(string: str,
     cache_path: str,
