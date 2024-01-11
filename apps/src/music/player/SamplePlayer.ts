@@ -150,6 +150,8 @@ export default class SamplePlayer {
       return;
     }
 
+    this.soundCache.start();
+
     for (const sampleEvent of sampleEvents) {
       const currentAudioTime = this.soundPlayer.getCurrentAudioTime();
       const eventStart = this.startPlayingAudioTime + sampleEvent.offsetSeconds;
@@ -168,35 +170,41 @@ export default class SamplePlayer {
       const delayCompensation = sampleEvent.triggered ? 0.1 : 0.05;
 
       if (eventStart >= currentAudioTime - delayCompensation) {
-        const buffer = this.soundCache.getSound(sampleEvent.sampleId);
-        if (!buffer) {
-          this.metricsReporter.logWarning(
-            'Could not load sound which should have been in cache: ' +
-              sampleEvent.sampleId
-          );
-          continue;
-        }
-        const uniqueId = this.soundPlayer.playSound(
-          buffer,
-          MAIN_AUDIO_GROUP,
-          eventStart,
-          undefined,
-          false,
-          sampleEvent.effects,
-          sampleEvent.lengthSeconds
+        this.soundCache.scheduleTrack(
+          sampleEvent.sampleId,
+          sampleEvent.offsetSeconds * 1000
         );
 
-        if (uniqueId !== undefined) {
-          this.playingSamples.push({
-            eventStart,
-            uniqueId,
-          });
-        }
+        // const buffer = this.soundCache.getSound(sampleEvent.sampleId);
+        // if (!buffer) {
+        //   this.metricsReporter.logWarning(
+        //     'Could not load sound which should have been in cache: ' +
+        //       sampleEvent.sampleId
+        //   );
+        //   continue;
+        // }
+        // const uniqueId = this.soundPlayer.playSound(
+        //   buffer,
+        //   MAIN_AUDIO_GROUP,
+        //   eventStart,
+        //   undefined,
+        //   false,
+        //   sampleEvent.effects,
+        //   sampleEvent.lengthSeconds
+        // );
+
+        // if (uniqueId !== undefined) {
+        //   this.playingSamples.push({
+        //     eventStart,
+        //     uniqueId,
+        //   });
+        // }
       }
     }
   }
 
   stopPlayback() {
+    this.soundCache.stop();
     this.soundPlayer.stopSound(MAIN_AUDIO_GROUP);
     this.soundPlayer.stopSound(PREVIEW_GROUP);
     this.playingSamples = [];

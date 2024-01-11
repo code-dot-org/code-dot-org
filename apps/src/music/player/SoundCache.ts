@@ -4,23 +4,28 @@ import MusicLibrary from './MusicLibrary';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {LoadFinishedCallback} from '../types';
+import SuperpoweredPlayer from './Superpowered/SuperpoweredPlayer';
 
 const restrictedSoundUrlPath = '/restricted/musiclab/';
 
 class SoundCache {
   private readonly audioContext: AudioContext;
   private readonly metricsReporter: LabMetricsReporter;
+  private readonly superpoweredPlayer: SuperpoweredPlayer;
   private audioBuffers: {[id: string]: AudioBuffer};
   private hasLoadedSignedCookies: boolean;
 
   constructor(
     audioContext: AudioContext = new AudioContext(),
-    metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
+    metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter(),
+    superpoweredPlayer: SuperpoweredPlayer = new SuperpoweredPlayer()
   ) {
     this.audioContext = audioContext;
     this.metricsReporter = metricsReporter;
+    this.superpoweredPlayer = superpoweredPlayer;
     this.audioBuffers = {};
     this.hasLoadedSignedCookies = false;
+    this.superpoweredPlayer.setup();
   }
 
   /**
@@ -108,7 +113,32 @@ class SoundCache {
       'SoundCache.SingleSoundLoadTime',
       Date.now() - startTime
     );
+
+    this.superpoweredPlayer.setupTrack(path, url);
+
     return audioBuffer;
+  }
+
+  start() {
+    this.superpoweredPlayer.start();
+  }
+
+  stop() {
+    this.superpoweredPlayer.stop();
+  }
+
+  scheduleTrack(
+    path: string,
+    when: number,
+    playbackRate?: number,
+    pitchShift?: number
+  ) {
+    this.superpoweredPlayer.scheduleTrack(
+      path,
+      when,
+      playbackRate || (window as any).globalPlaybackRate,
+      pitchShift || (window as any).globalPitchShift
+    );
   }
 
   clear(): void {
