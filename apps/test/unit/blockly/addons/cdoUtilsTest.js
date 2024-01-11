@@ -5,6 +5,7 @@ import {
   partitionBlocksByType,
 } from '@cdo/apps/blockly/addons/cdoUtils';
 import * as cdoSerializationHelpers from '@cdo/apps/blockly/addons/cdoSerializationHelpers';
+import * as cdoXml from '@cdo/apps/blockly/addons/cdoXml';
 import {PROCEDURE_DEFINITION_TYPES} from '@cdo/apps/blockly/constants';
 import {expect} from '../../../util/reconfiguredChai';
 
@@ -285,80 +286,39 @@ describe('CdoUtils', () => {
 
     it('should call Blockly.Xml methods when getSourceAsJson is false', () => {
       const workspaceStub = {};
-      const blockSpaceToDomStub = sandbox
-        .stub(Blockly.Xml, 'blockSpaceToDom')
-        .returns('dom');
       const domToTextStub = sandbox
         .stub(Blockly.Xml, 'domToText')
         .returns('xml_text');
+      const getProjectXmlStub = sandbox
+        .stub(cdoXml, 'getProjectXml')
+        .returns('dom');
 
       const result = getCode(workspaceStub, false);
-      expect(blockSpaceToDomStub).to.have.been.calledWith(workspaceStub);
+
+      expect(getProjectXmlStub).to.have.been.calledWith(workspaceStub);
       expect(domToTextStub).to.have.been.calledWith('dom');
       expect(result).to.equal('xml_text');
     });
 
-    it('should call getCombinedSerialization and stringify result when getSourceAsJson is true', () => {
+    it('should call getProjectSerialization when getSourceAsJson is true', () => {
       const workspaceStub = {};
-      const hiddenWorkspaceStub = {};
-      const singleSerializationStub = {blocks: {blocks: []}, procedures: []};
-      const combinedSerializationStub = {blocks: {blocks: []}, procedures: []};
+      const serializationStub = {blocks: {blocks: []}, procedures: []};
 
       Blockly.serialization = {
         workspaces: {save: () => {}},
       };
-      const saveStub = sandbox
-        .stub(Blockly.serialization.workspaces, 'save')
-        .returns(singleSerializationStub);
 
-      const getHiddenDefinitionWorkspaceStub = sandbox
-        .stub(Blockly, 'getHiddenDefinitionWorkspace')
-        .returns(hiddenWorkspaceStub);
-      const getCombinedSerializationStub = sandbox
-        .stub(cdoSerializationHelpers, 'getCombinedSerialization')
-        .returns(combinedSerializationStub);
+      const getProjectSerializationStub = sandbox
+        .stub(cdoSerializationHelpers, 'getProjectSerialization')
+        .returns(serializationStub);
 
       const result = getCode(workspaceStub, true);
 
-      expect(saveStub).to.have.been.calledTwice;
-      expect(getHiddenDefinitionWorkspaceStub).to.have.been.calledOnce;
-      expect(getCombinedSerializationStub).to.have.been.calledOnce;
-      expect(getCombinedSerializationStub.getCall(0).args).to.deep.equal([
-        singleSerializationStub,
-        singleSerializationStub,
-      ]);
-      expect(result).to.equal(JSON.stringify(combinedSerializationStub));
-    });
+      expect(getProjectSerializationStub).to.have.been.calledWith(
+        workspaceStub
+      );
 
-    it('should call getCombinedSerialization and with a null second argument if the hidden workspace does not exist', () => {
-      const workspaceStub = {};
-      const singleSerializationStub = {blocks: {blocks: []}, procedures: []};
-      const combinedSerializationStub = {blocks: {blocks: []}, procedures: []};
-
-      Blockly.serialization = {
-        workspaces: {save: () => {}},
-      };
-      const saveStub = sandbox
-        .stub(Blockly.serialization.workspaces, 'save')
-        .returns(singleSerializationStub);
-
-      const getHiddenDefinitionWorkspaceStub = sandbox
-        .stub(Blockly, 'getHiddenDefinitionWorkspace')
-        .returns(undefined);
-      const getCombinedSerializationStub = sandbox
-        .stub(cdoSerializationHelpers, 'getCombinedSerialization')
-        .returns(combinedSerializationStub);
-
-      const result = getCode(workspaceStub, true);
-
-      expect(saveStub).to.have.been.calledOnce;
-      expect(getHiddenDefinitionWorkspaceStub).to.have.been.calledOnce;
-      expect(getCombinedSerializationStub).to.have.been.calledOnce;
-      expect(getCombinedSerializationStub.getCall(0).args).to.deep.equal([
-        singleSerializationStub,
-        null,
-      ]);
-      expect(result).to.equal(JSON.stringify(combinedSerializationStub));
+      expect(result).to.equal(JSON.stringify(serializationStub));
     });
   });
 });
