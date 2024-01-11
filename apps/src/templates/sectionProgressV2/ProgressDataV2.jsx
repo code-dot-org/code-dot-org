@@ -7,22 +7,27 @@ import styles from './progress-table-v2.module.scss';
 import LessonDataCell from './LessonDataCell';
 
 function ProgressDataV2({sortedStudents, lessons, lessonProgressByStudent}) {
+  const getLessonColumn = React.useCallback(
+    lesson => (
+      <div className={styles.dataColumn} key={lesson.id}>
+        {sortedStudents.map(student => (
+          <LessonDataCell
+            studentId={student.id}
+            lesson={lesson}
+            studentLessonProgress={
+              lessonProgressByStudent[student.id][lesson.id]
+            }
+            key={student.id + '.' + lesson.id}
+          />
+        ))}
+      </div>
+    ),
+    [lessonProgressByStudent, sortedStudents]
+  );
+
   return (
     <div className={styles.dataTable}>
-      {lessons.map(lesson => (
-        <div className={styles.dataColumn} key={lesson.id}>
-          {sortedStudents.map(student => (
-            <LessonDataCell
-              studentId={student.id}
-              lesson={lesson}
-              studentLessonProgress={
-                lessonProgressByStudent[student.id][lesson.id]
-              }
-              key={student.id + '.' + lesson.id}
-            />
-          ))}
-        </div>
-      ))}
+      {lessons.map(lesson => getLessonColumn(lesson))}
     </div>
   );
 }
