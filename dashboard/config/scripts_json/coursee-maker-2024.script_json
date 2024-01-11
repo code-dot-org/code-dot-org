@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "coursee-maker",
-    "serialized_at": "2024-01-02 21:28:00 UTC",
+    "serialized_at": "2024-01-04 22:35:46 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -125,7 +125,7 @@
       "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
-        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals, pp. 7-17](https://code.org/maker/assets/CSF-Booklet-Course-E-Nov2023.pdf#page=7)"
+        "overview": "This lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-E-Nov2023.pdf#page=7\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 7-17</a>"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -135,13 +135,13 @@
     },
     {
       "key": "lesson-5",
-      "name": "Sensory toy",
+      "name": "Sensory toy with micro:bit",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
-        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals pp. 22-24](https://code.org/maker/assets/CSF-Booklet-Course-E-Nov2023.pdf#page=22)"
+        "overview": "This lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-E-Nov2023.pdf#page=22\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 22-24</a>"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -198,7 +198,7 @@
       "has_lesson_plan": false,
       "relative_position": 8,
       "properties": {
-        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals, pp. 7-17](https://code.org/maker/assets/CSF-Booklet-Course-E-Nov2023.pdf#page=7)"
+        "overview": "This lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-E-Nov2023.pdf#page=7\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 7-17</a>"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -208,13 +208,13 @@
     },
     {
       "key": "lesson-6",
-      "name": "Simple door alarm",
+      "name": "Simple door alarm with micro:bit",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 9,
       "properties": {
-        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals pp. 25-27](https://code.org/maker/assets/CSF-Booklet-Course-E-Nov2023.pdf#page=25)"
+        "overview": "This lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-E-Nov2023.pdf#page=25\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 25-27</a>"
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -291,7 +291,7 @@
       "has_lesson_plan": false,
       "relative_position": 13,
       "properties": {
-        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals, pp. 7-17](https://code.org/maker/assets/CSF-Booklet-Course-E-Nov2023.pdf#page=7)"
+        "overview": "This lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-E-Nov2023.pdf#page=7\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 7-17</a>"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -301,13 +301,13 @@
     },
     {
       "key": "lesson-7",
-      "name": "Tilt alarm",
+      "name": "Tilt alarm with micro:bit",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 14,
       "properties": {
-        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals pp. 28-30](https://code.org/maker/assets/CSF-Booklet-Course-E-Nov2023.pdf#page=28)"
+        "overview": "This lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-E-Nov2023.pdf#page=28\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 28-30</a>"
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -2297,6 +2297,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_e_maker_dance_party_unplugged"
+        ],
         "progression": "Dance Party: Unplugged"
       },
       "bonus": false,
@@ -2584,6 +2587,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_e_maker_meet_your_microbit"
+        ],
         "progression": "Meet your micro:bit"
       },
       "bonus": false,
@@ -3082,6 +3088,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_e_maker_meet_your_microbit_2"
+        ],
         "progression": "Meet your micro:bit"
       },
       "bonus": false,
@@ -3854,6 +3863,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_e_maker_meet_your_microbit_3"
+        ],
         "progression": "Meet your micro:bit"
       },
       "bonus": false,

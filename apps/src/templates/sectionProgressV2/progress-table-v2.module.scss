@@ -1,0 +1,30 @@
+@import "color.scss";
+
+
+.progressTableV2 {
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 76px;
+}
+
+.table {
+  display: flex;
+  flex-direction: row;
+}
+
+.gridBox {
+  height: 48px;
+  border: 1px solid $light_gray_200;
+  border-bottom: 0;
+
+  &Student {
+    width: 181px;
+    padding-left: 12px;
+    line-height: 48px;
+  }
+}
+
+.grid {
+  border-bottom: 1px solid $light_gray_200;
+  margin-right: 12px;
+}
