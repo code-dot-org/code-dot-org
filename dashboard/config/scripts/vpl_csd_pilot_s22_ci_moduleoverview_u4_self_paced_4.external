@@ -5,11 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # Teaching The Design Process
 
-#### Welcome! This professional learning module is designed help you prepare to teach Code.org's Design Process unit. 
+##### Welcome! This professional learning module is designed help you prepare to teach Code.org's Design Process unit. 
 
 <img src="https://images.code.org/0ea68f03c8da7b7458b1300c2239c810-image-1704393608744.png" alt="An image of the Problem Solving Process with Empathy. The image shows four circles containing the words Define, Prepare, Try, and Reflect around the center word Empathy." style="border-radius:0px; float: right; height: 250px; clear: both; margin: 20px 20px 20px 0;">
 
-## In this module, you will:
+### In this module, you will:
 
 * ##### Get an introduction to The Design Unit.
 * ##### Practice key concepts included in the unit.
@@ -22,7 +22,7 @@ markdown <<MARKDOWN
 
 <a class="btn btn-large btn-primary" href="https://studio.code.org/form/csd_selfpaced_pl_presurvey" target="blank" rel="noopener noreferrer">Take the pre-survey</a>
 
-### **Suggested time:** 90 minutes
+##### **Suggested time:** 90 minutes
 
 ## Let's get started!
 
