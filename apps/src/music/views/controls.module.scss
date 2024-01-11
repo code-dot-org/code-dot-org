@@ -24,7 +24,7 @@
   margin-bottom: 10px;
 }
 
-%controlButton {
+%control-button {
   text-align: center;
   display: flex;
   width: 100%;
@@ -61,7 +61,7 @@
 }
 
 .runButton {
-  @extend %controlButton;
+  @extend %control-button;
   flex: 2;
   background-color: #fca401;
   color: $neutral_light;
@@ -78,7 +78,7 @@
 }
 
 .skipButton {
-  @extend %controlButton;
+  @extend %control-button;
   flex: 0.5;
   background-color: $neutral_dark20;
   color: $neutral_dark;
