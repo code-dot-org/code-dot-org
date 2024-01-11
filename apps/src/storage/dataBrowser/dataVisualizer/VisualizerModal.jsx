@@ -17,6 +17,8 @@ import Snapshot from './Snapshot';
 import placeholderImage from './placeholder.png';
 import fontConstants from '@cdo/apps/fontConstants';
 
+import {MAX_CROSSTAB_CELLS, MAX_CROSSTAB_COLUMNS} from './CrossTabChart';
+
 export const OperatorType = {
   EQUAL: 0,
   LESS_THAN: 1,
@@ -196,9 +198,39 @@ class VisualizerModal extends React.Component {
     return options.join(', ');
   }
 
+  countCells = memoize((records, tableColumns, chartType) => {
+    if (chartType !== ChartType.CROSS_TAB) {
+      return undefined;
+    } else {
+      return records.reduce((bucket, record) => {
+        tableColumns.forEach(column => {
+          bucket[column] ||= new Set();
+          bucket[column].add(record[column]);
+        });
+        return bucket;
+      }, new Set());
+    }
+  });
+
+  filterTableColumnsByCount = memoize(
+    (tableColumns, countedCells, selectedColumn1) => {
+      if (!countedCells) {
+        return tableColumns;
+      } else {
+        const xCount = selectedColumn1 ? countedCells[selectedColumn1].size : 0;
+        return tableColumns.filter(
+          column =>
+            countedCells[column].size < MAX_CROSSTAB_COLUMNS &&
+            xCount * countedCells[column].size < MAX_CROSSTAB_CELLS
+        );
+      }
+    }
+  );
+
   render() {
     const parsedRecords = this.parseRecords(this.props.tableRecords);
     let filteredRecords = parsedRecords;
+
     if (this.state.filterColumn !== '' && this.state.filterValue !== '') {
       filteredRecords = this.filterRecords(
         parsedRecords,
@@ -210,6 +242,12 @@ class VisualizerModal extends React.Component {
     const numericColumns = this.findNumericColumns(
       parsedRecords,
       this.props.tableColumns
+    );
+
+    const countedCells = this.countCells(
+      filteredRecords,
+      this.props.tableColumns,
+      this.state.chartType
     );
 
     let disabledOptions = [];
@@ -227,6 +265,7 @@ class VisualizerModal extends React.Component {
     const isFilterColumnNumeric = numericColumns.includes(
       this.state.filterColumn
     );
+
     return (
       <span
         style={
@@ -314,7 +353,10 @@ class VisualizerModal extends React.Component {
                     ? msg.dataVisualizerXValues()
                     : msg.dataVisualizerValues()
                 }
-                options={this.props.tableColumns}
+                options={this.filterTableColumnsByCount(
+                  this.props.tableColumns,
+                  countedCells
+                )}
                 disabledOptions={disabledOptions}
                 value={this.state.selectedColumn1}
                 onChange={event =>
@@ -325,7 +367,11 @@ class VisualizerModal extends React.Component {
               {isMultiColumnChart && (
                 <DropdownField
                   displayName={msg.dataVisualizerYValues()}
-                  options={this.props.tableColumns}
+                  options={this.filterTableColumnsByCount(
+                    this.props.tableColumns,
+                    countedCells,
+                    this.state.selectedColumn1
+                  )}
                   disabledOptions={disabledOptions}
                   value={this.state.selectedColumn2}
                   onChange={event =>

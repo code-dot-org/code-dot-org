@@ -4,6 +4,10 @@ import {CROSS_TAB_CHART_AREA} from './constants';
 import * as color from '../../../util/color';
 import fontConstants from '@cdo/apps/fontConstants';
 
+export const MAX_CROSSTAB_COLUMNS = 150;
+export const MAX_CROSSTAB_ROWS = 10000;
+export const MAX_CROSSTAB_CELLS = 10000;
+
 export default function CrossTabChart(props) {
   if (!props.records || !props.selectedColumn1 || !props.selectedColumn2) {
     return null;
@@ -47,6 +51,15 @@ export default function CrossTabChart(props) {
     {min: Number.POSITIVE_INFINITY, max: Number.NEGATIVE_INFINITY}
   );
 
+  if (columns.length > MAX_CROSSTAB_COLUMNS) {
+    return <div>Cannot render chart - too many columns</div>;
+  }
+  if (chartData.length > MAX_CROSSTAB_ROWS) {
+    return <div>Cannot render chart - too many rows</div>;
+  }
+  if (columns.length * chartData.length > MAX_CROSSTAB_CELLS) {
+    return <div>Cannot render chart - too many cells</div>;
+  }
   return (
     <div id={CROSS_TAB_CHART_AREA} style={wrapperStyle}>
       <h1 style={chartTitleStyle}>{props.chartTitle}</h1>
