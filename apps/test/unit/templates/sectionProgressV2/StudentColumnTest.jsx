@@ -43,7 +43,6 @@ describe('StudentColumn', () => {
         sortedStudents={[studentA, studentB]}
       />
     );
-    console.log(wrapper.debug());
     expect(wrapper.find(`.${styles.gridBox}`)).to.have.length(2);
   });
 
