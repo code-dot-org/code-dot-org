@@ -94,8 +94,8 @@ export default class QuickActionsCell extends Component {
 
     const styleByType =
       type === QuickActionsCellType.header
-        ? styles.actionIcon['header']
-        : styles.actionIcon['body'];
+        ? styles.actionButton['header']
+        : styles.actionButton['body'];
 
     const hoverStyle = this.state.open ? styles.hoverFocus['body'] : null;
 
