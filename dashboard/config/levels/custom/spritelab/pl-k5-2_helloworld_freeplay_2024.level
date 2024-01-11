@@ -61,11 +61,11 @@
     "video_key": "hello_world_congrats",
     "skip_autosave": true,
     "encrypted_examples": "WNbw/L2bHm21vqyYxd/S1ez3SBbhJEgMIxWCBziMWNsoCGQMTIy11pR5tnZv\nhJqfTadSL4wpavw5BnQd4zA6tw==\n",
-    "preload_asset_list": null,
-    "standalone_app_name": "spritelab"
+    "standalone_app_name": "spritelab",
+    "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-12-14T15:57:25.752+00:00\",\"changed\":[\"cloned from \\\"coursee_helloworld_freeplay_2023\\\"\"],\"cloned_from\":\"coursee_helloworld_freeplay_2023\"},{\"changed_at\":\"2024-01-02 19:37:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-12-14T15:57:25.752+00:00\",\"changed\":[\"cloned from \\\"coursee_helloworld_freeplay_2023\\\"\"],\"cloned_from\":\"coursee_helloworld_freeplay_2023\"},{\"changed_at\":\"2024-01-02 19:37:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-01-10 16:35:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
