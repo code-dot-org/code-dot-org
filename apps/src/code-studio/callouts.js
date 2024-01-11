@@ -107,7 +107,6 @@ export function addCallouts(callouts) {
     if ($(selector).length === 0 && !callout.on) {
       return;
     }
-    const container = $('#codeWorkspace');
 
     var defaultConfig = {
       codeStudio: {},
@@ -173,6 +172,12 @@ export function addCallouts(callouts) {
     ) {
       config.style.classes += ' flip-x-close';
     }
+
+    // If the callout is in #codeWorkspace and is not currently visible,
+    // we don't want to show it on page load. This is because Google Blockly
+    // labs can have a hidden (on start) function editor workspace that we don't
+    // want to show callouts for.
+    const container = $('#codeWorkspace');
 
     if (callout.on) {
       $(window).on(callout.on, function (e, action) {
@@ -264,6 +269,9 @@ function showOrHideCalloutsByTargetVisibility(containerSelector) {
     var container = $(containerSelector);
     const invalidCallouts = [];
     allCallouts.forEach(function (selector) {
+      // Callout selector could reference multiple locations (for example, in Sprite Lab
+      // the toolbox is duplicated between the main workspace and the function editor workspace).
+      // Iterate over all matching elements and show/hide the callout for each.
       $(selector).each(function () {
         var api = $(this).qtip('api');
         if (!api) {
@@ -302,7 +310,7 @@ function calloutShouldBeVisible(container, qtipApi) {
   var target = $(qtipApi.elements.target);
   var isTargetInContainer = container.has(target).length > 0;
   if (!isTargetInContainer) {
-    // Case of a callout outside of the workspace, which we always show.
+    // Case of a callout outside of the container (usually the code editor), which we always show.
     return true;
   }
   const isContainerVisible = container.is(':visible');
