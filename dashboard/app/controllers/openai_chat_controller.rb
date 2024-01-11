@@ -10,9 +10,11 @@ class OpenaiChatController < ApplicationController
 
     # Check for PII / Profanity
     locale = params[:locale] || "en"
-    messages = params[:messages].collect {|msg| msg[:content]}.join(' ')
-    filter_result = ShareFiltering.find_failure(messages, locale) if messages
-    return render(status: :bad_request, json: {type: filter_result.type, content: filter_result.content}) if filter_result
+    # Just look at the most recent message from the student.
+    message = params[:messages].last[:content]
+    filter_result = ShareFiltering.find_failure(message, locale) if message
+    # If the content is inappropriate, we skip sending to OpenAI and instead hardcode a warning response on the front-end.
+    return render(status: :ok, json: {status: filter_result.type, flagged_content: filter_result.content}) if filter_result
 
     if has_level_id_param?
       level_id = params[:levelId]
