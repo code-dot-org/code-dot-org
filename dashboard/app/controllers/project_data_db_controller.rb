@@ -62,22 +62,19 @@ class ProjectDataDbController < ApplicationController
 
     # BEGIN;
     Record.transaction do
-      channel_id = Record.connection.quote(params[:channel_id])
-      table_name = Record.connection.quote(params[:table_name])
+      channel_id_quoted = Record.connection.quote(params[:channel_id])
+      table_name_quoted = Record.connection.quote(params[:table_name])
       json = JSON.parse params[:json]
 
       #   SELECT MIN(record_id) FROM unfirebase.records WHERE channel_id='shared' AND table_name='words' LIMIT 1 FOR UPDATE;
-      #
-      # FIXME: According to: https://api.rubyonrails.org/classes/ActiveRecord/Locking/Pessimistic.html
-      # we may be able to use Rails to generate the FOR UPDATE clause using a .lock!() method call
-      locking_query = "SELECT MIN(record_id) FROM #{Record.table_name} WHERE channel_id=#{channel_id} AND table_name=#{table_name} LIMIT 1 FOR UPDATE"
-      puts "locking_query: #{locking_query}"
-      Record.connection.execute(locking_query)
+      # Equivalent to:
+      # Record.connection.execute("SELECT MIN(record_id) FROM #{Record.table_name} WHERE channel_id=#{channel_id_quoted} AND table_name=#{table_name_quoted} LIMIT 1 FOR UPDATE")
+      Record.where(channel_id: params[:channel_id], table_name: params[:table_name]).lock.minimum(:record_id)
 
       #   SELECT @id := IFNULL(MAX(record_id),0)+1 FROM unfirebase.records WHERE channel_id='shared' AND table_name='words';
       #
       # FIXME: can we do this without a manual SQL connection.execute() call?
-      record_id = Record.connection.select_value("SELECT IFNULL(MAX(record_id),0)+1 FROM #{Record.table_name} WHERE channel_id=#{channel_id} AND table_name=#{table_name}")
+      record_id = Record.connection.select_value("SELECT IFNULL(MAX(record_id),0)+1 FROM #{Record.table_name} WHERE channel_id=#{channel_id_quoted} AND table_name=#{table_name_quoted}")
 
       puts "record_id: #{record_id}"
 
