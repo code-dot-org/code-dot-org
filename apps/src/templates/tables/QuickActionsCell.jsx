@@ -94,8 +94,8 @@ export default class QuickActionsCell extends Component {
 
     const styleByType =
       type === QuickActionsCellType.header
-        ? styles.actionButton['header']
-        : styles.actionButton['body'];
+        ? styles.actionIcon['header']
+        : styles.actionIcon['body'];
 
     const hoverStyle = this.state.open ? styles.hoverFocus['body'] : null;
 
@@ -107,12 +107,16 @@ export default class QuickActionsCell extends Component {
 
     return (
       <span ref={span => (this.icon = span)}>
-        <FontAwesome
-          icon={icons[type]}
-          style={iconStyle}
+        <a
           onClick={this.state.canOpen ? this.open : undefined}
-          className="ui-test-section-dropdown ui-projects-table-dropdown"
-        />
+          href="#dummy-hash"
+        >
+          <FontAwesome
+            icon={icons[type]}
+            style={iconStyle}
+            className="ui-test-section-dropdown ui-projects-table-dropdown"
+          />
+        </a>
         <PopUpMenu
           targetPoint={targetPoint}
           isOpen={this.state.open}
