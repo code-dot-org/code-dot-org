@@ -8,7 +8,7 @@ const outputWeightsMapping = {
     'smiling-face-with-hearts': [0.2, 0.3],
     'party-popper': [0.1, 0.6],
   },
-  output: [],
+  output: ['quads', 'blooming_petals'],
 };
 
 describe('outputWeightsMapping', () => {
@@ -18,7 +18,9 @@ describe('outputWeightsMapping', () => {
       outputWeightsMapping
     );
 
-    expect(summedWeights[0]).to.be.closeTo(0.5, 0.00001);
-    expect(summedWeights[1]).to.be.closeTo(1.2, 0.00001);
+    expect(summedWeights[0][1]).to.equal('quads');
+    expect(summedWeights[1][1]).to.equal('blooming_petals');
+    expect(summedWeights[0][0]).to.be.closeTo(0.5, 0.00001);
+    expect(summedWeights[1][0]).to.be.closeTo(1.2, 0.00001);
   });
 });

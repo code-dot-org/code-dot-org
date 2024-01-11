@@ -33,7 +33,10 @@ const weightMappings = {
 describe('chooseEffects', () => {
   it('chooses good effects', () => {
     sinon.stub(Math, 'random').returns(0);
-    const summedWeightStub = sinon.stub().returns([0.5, 1.2]);
+    const summedWeightStub = sinon.stub().returns([
+      [0.5, 'quads'],
+      [1.2, 'blooming_petals'],
+    ]);
 
     // might not need to pass weightMappings
     const chosenEffects = chooseEffects(
@@ -45,8 +48,8 @@ describe('chooseEffects', () => {
 
     const expected = {
       backgroundEffect: 'blooming_petals',
-      foregroundEffect: 'hearts_colorful',
-      backgroundColor: 'rave',
+      foregroundEffect: 'blooming_petals',
+      backgroundColor: 'blooming_petals',
     };
     expect(chosenEffects.backgroundEffect).to.equal(expected.backgroundEffect);
     expect(chosenEffects.foregroundEffect).to.equal(expected.foregroundEffect);
@@ -56,7 +59,10 @@ describe('chooseEffects', () => {
 
   it('chooses bad effects', () => {
     sinon.stub(Math, 'random').returns(0);
-    const summedWeightStub = sinon.stub().returns([0.5, 1.2]);
+    const summedWeightStub = sinon.stub().returns([
+      [0.5, 'quads'],
+      [1.2, 'blooming_petals'],
+    ]);
 
     // might not need to pass weightMappings
     const chosenEffects = chooseEffects(
@@ -68,8 +74,8 @@ describe('chooseEffects', () => {
 
     const expected = {
       backgroundEffect: 'quads',
-      foregroundEffect: 'bubbles',
-      backgroundColor: 'autumn',
+      foregroundEffect: 'quads',
+      backgroundColor: 'quads',
     };
     expect(chosenEffects.backgroundEffect).to.equal(expected.backgroundEffect);
     expect(chosenEffects.foregroundEffect).to.equal(expected.foregroundEffect);

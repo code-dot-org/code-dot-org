@@ -12,7 +12,7 @@ import {CachedWeightsMapping} from '../types';
 export function calculateOutputSummedWeights(
   emojis: string[],
   outputWeightsMapping: CachedWeightsMapping
-): number[] {
+): [number, string][] {
   // selectedEmojiAssociations is an array of 3 subarrays. Each subarray contains
   // the weights ranging from [0, 1] for the selected emojis for a particular output type)
   const selectedEmojiAssociations: number[][] = emojis.map(emojiName => {
@@ -23,5 +23,10 @@ export function calculateOutputSummedWeights(
     (accumulator, weights) =>
       accumulator.map((value, index) => value + weights[index])
   );
-  return sumWeights;
+
+  const outputNames = outputWeightsMapping['output'];
+  return sumWeights.map((summedWeight, index) => [
+    summedWeight,
+    outputNames[index],
+  ]);
 }

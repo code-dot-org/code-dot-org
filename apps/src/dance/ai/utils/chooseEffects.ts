@@ -7,7 +7,6 @@ import {
 } from '../types';
 
 import {calculateOutputSummedWeights} from './calculateOutputSummedWeights';
-import {getSortedOptions} from './getSortedOptions';
 
 const NUM_RANDOM_TOP_OPTIONS = 1;
 const NUM_RANDOM_BOTTOM_OPTIONS = 1;
@@ -30,7 +29,7 @@ const NUM_RANDOM_BOTTOM_OPTIONS = 1;
 type CalculateOutputSummedWeights = (
   emojis: string[],
   weightMapping: CachedWeightsMapping
-) => number[];
+) => [number, string][];
 
 export function chooseEffects(
   selectedEmojis: string[],
@@ -48,7 +47,9 @@ export function chooseEffects(
     // Get final output summed weights based on set of three selected emoji inputs
     const weightVector = calculateOutputSummedWeights2(selectedEmojis, mapping);
     // Sort and slice top or bottom scoring options, mapped to their output identifiers (e.g. [[0.25, 'squiggles'], ...])
-    const allSortedOptions = getSortedOptions(weightVector, mapping);
+    const allSortedOptions: [number, string][] = weightVector.sort(
+      (item1, item2) => item2[0] - item1[0]
+    );
     const topOrBottomOptions =
       quality === EffectsQuality.GOOD
         ? allSortedOptions.slice(0, NUM_RANDOM_TOP_OPTIONS)
