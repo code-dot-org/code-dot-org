@@ -1,0 +1,16 @@
+:css
+  .gallery {
+    max-width: 970px;
+    margin: 0px auto 80px;
+  }
+
+.gallery
+  %h1 Internal Music Gallery
+  Recently-saved music projects
+  %br/
+  %br/
+  .entries
+    - @channel_ids.each do |channel_id|
+      .entry
+        %a{href: "/projects/music/#{channel_id}"}
+          = channel_id

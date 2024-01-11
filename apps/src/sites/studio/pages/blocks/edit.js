@@ -2,10 +2,9 @@ import $ from 'jquery';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import jsonic from 'jsonic';
-import {parseElement} from '@cdo/apps/xml';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
 import {customInputTypes as spritelabCustomInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
-import {customInputTypes as dancelabCustomInputTypes} from '@cdo/apps/dance/blocks';
+import {customInputTypes as dancelabCustomInputTypes} from '@cdo/apps/dance/blockly/blocks';
 import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/spritelab/constants';
 import animationList, {
   setInitialAnimationList,
@@ -165,9 +164,9 @@ function updateBlockPreview() {
     ],
     customInputTypes,
   });
-  const blocksDom = parseElement(`<block type="${blockName}" />`);
+  const block = `<block type="${blockName}" />`;
   Blockly.mainBlockSpace.clear();
-  Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, blocksDom);
+  Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, block);
   Blockly.addChangeListener(Blockly.mainBlockSpace, onBlockSpaceChange);
 }
 

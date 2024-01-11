@@ -8,6 +8,7 @@ import {DATE_FORMAT} from '../workshop_dashboard/workshopConstants';
 import {Row, Col, ControlLabel, FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {snakeCase} from 'lodash';
 
 export default class InternationalOptIn extends FormController {
   static propTypes = {
@@ -71,7 +72,7 @@ class InternationalOptInComponent extends FormComponent {
    * @returns {boolean}
    */
   isColombiaSelected() {
-    return this.props.data?.schoolCountry?.toLowerCase() === 'colombia';
+    return getCountryKey(this.props.data?.schoolCountry) === 'colombia';
   }
 
   /**
@@ -82,7 +83,7 @@ class InternationalOptInComponent extends FormComponent {
    * @returns {boolean}
    */
   isChileSelected() {
-    return this.props.data?.schoolCountry?.toLowerCase() === 'chile';
+    return getCountryKey(this.props.data?.schoolCountry) === 'chile';
   }
 
   /**
@@ -93,7 +94,7 @@ class InternationalOptInComponent extends FormComponent {
    * @returns {boolean}
    */
   isUzbekistanSelected() {
-    return this.props.data?.schoolCountry?.toLowerCase() === 'uzbekistan';
+    return getCountryKey(this.props.data?.schoolCountry) === 'uzbekistan';
   }
 
   /**
@@ -396,7 +397,7 @@ class InternationalOptInComponent extends FormComponent {
 
   renderSchoolFieldGroups() {
     let schoolDataFieldGroup;
-    const selectedCountry = this.props.data?.schoolCountry?.toLowerCase();
+    const selectedCountry = this.props.data?.schoolCountry;
     if (this.isColombiaSelected()) {
       schoolDataFieldGroup = this.renderColombianSchoolDataFieldGroup();
     } else if (this.isChileSelected()) {
@@ -451,11 +452,11 @@ class InternationalOptInComponent extends FormComponent {
   renderWorkshopFieldGroups() {
     // If no country has been selected, display the inputs disabled with a
     // placeholder text asking the user to select their country first.
-    const selectedCountry = this.props.data?.schoolCountry?.toLowerCase();
+    const selectedCountry = this.props.data?.schoolCountry;
     const placeholder = selectedCountry ? undefined : i18n.selectCountryFirst();
 
     const organizers = this.props.options.workshopOrganizer[
-      selectedCountry
+      getCountryKey(selectedCountry)
     ] || [i18n.organizerNotListed()];
     const selectOrganizer = this.buildSelectFieldGroup({
       name: 'workshopOrganizer',
@@ -575,6 +576,10 @@ function dateStringToMoment(dateString) {
     return date;
   }
   return null;
+}
+
+function getCountryKey(countryName) {
+  return snakeCase(countryName);
 }
 
 InternationalOptInComponent.associatedFields = [

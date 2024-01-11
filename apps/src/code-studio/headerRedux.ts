@@ -62,6 +62,9 @@ const headerSlice = createSlice({
         return {payload: {getChanges, overrideHeaderText, overrideOnSaveUrl}};
       },
     },
+    clearHeader(state) {
+      state.currentHeader = undefined;
+    },
   },
 });
 
@@ -70,6 +73,7 @@ export const {
   showMinimalProjectHeader,
   showProjectBackedHeader,
   showLevelBuilderSaveButton,
+  clearHeader,
 } = headerSlice.actions;
 
 export default headerSlice.reducer;

@@ -1,4 +1,9 @@
 require "base64"
+require "queries/lti"
+require "services/lti"
+require "policies/lti"
+require "concerns/partial_registration"
+require "clients/lti_advantage_client"
 
 class LtiV1Controller < ApplicationController
   # Don't require an authenticity token because LTI Platforms POST to this
@@ -78,10 +83,36 @@ class LtiV1Controller < ApplicationController
     jwt_verifier = JwtVerifier.new(decoded_jwt, integration)
 
     if jwt_verifier.verify_jwt
+      message_type = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/message_type']
+      return wrong_resource_type unless message_type == 'LtiResourceLinkRequest'
+
+      user = Queries::Lti.get_user(decoded_jwt)
       target_link_uri = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri']
-      redirect_to target_link_uri
+
+      launch_context = decoded_jwt[Policies::Lti::LTI_CONTEXT_CLAIM]
+      nrps_url = decoded_jwt[Policies::Lti::LTI_NRPS_CLAIM][:context_memberships_url]
+      resource_link_id = decoded_jwt[Policies::Lti::LTI_RESOURCE_LINK_CLAIM][:id]
+      deployment_id = decoded_jwt[Policies::Lti::LTI_DEPLOYMENT_ID_CLAIM]
+      deployment = Queries::Lti.get_deployment(integration.id, deployment_id)
+      redirect_params = {
+        lti_integration_id: integration.id,
+        deployment_id: deployment.id,
+        context_id: launch_context[:id],
+        rlid: resource_link_id,
+        nrps_url: nrps_url,
+      }
+
+      if user
+        sign_in user
+        redirect_to "#{target_link_uri}?#{redirect_params.to_query}"
+      else
+        user = Services::Lti.initialize_lti_user(decoded_jwt)
+        PartialRegistration.persist_attributes(session, user)
+        session[:user_return_to] = "#{target_link_uri}?#{redirect_params.to_query}"
+        redirect_to new_user_registration_url
+      end
     else
-      return unauthorized_status
+      unauthorized_status
     end
   end
 
@@ -92,12 +123,107 @@ class LtiV1Controller < ApplicationController
     JSON::JWT.decode(id_token, jwk_set)
   end
 
+  def render_sync_course_error(message, status)
+    @lti_section_sync_result = {error: message}
+    return respond_to do |format|
+      format.html do
+        render lti_v1_sync_course_path, status: status
+      end
+      format.json {render json: @lti_section_sync_result, status: :bad_request}
+    end
+  end
+
+  # GET /lti/v1/sync_course
+  # Syncs an LMS course from an LTI launch or from the teacher dashboard sync button.
+  # It can respond to either HTML or JSON content requests.
+  def sync_course
+    return unauthorized_status unless current_user
+    unless current_user.teacher?
+      return redirect_to home_path
+    end
+    params.require([:lti_integration_id, :deployment_id, :context_id, :rlid, :nrps_url]) if params[:section_code].blank?
+
+    lti_course, lti_integration, deployment_id, context_id, resource_link_id, nrps_url = nil
+    if params[:section_code].present?
+      # Section code present, meaning this is a sync from the teacher dashboard.
+      # Populate vars from the section associated with the input code.
+      lti_course = Queries::Lti.get_lti_course_from_section_code(params[:section_code])
+      unless lti_course
+        return render_sync_course_error("We couldn't find the given section.", :bad_request)
+      end
+      lti_integration = lti_course.lti_integration
+      deployment_id = lti_course.lti_deployment_id
+      context_id = lti_course.context_id
+      resource_link_id = lti_course.resource_link_id
+      nrps_url = lti_course.nrps_url
+    else
+      # Section code isn't present, meaning this is a sync from an LTI launch.
+      # Populate vars from the request params.
+      lti_integration = LtiIntegration.find(params[:lti_integration_id])
+      deployment_id = params[:deployment_id]
+      context_id = params[:context_id]
+      resource_link_id = params[:rlid]
+      nrps_url = params[:nrps_url]
+    end
+    unless lti_integration
+      return render_sync_course_error("LTI Integration not found", :bad_request)
+    end
+
+    result = {
+      all: {},
+      changed: {}
+    }
+
+    had_changes = false
+    ActiveRecord::Base.transaction do
+      lti_course ||= Queries::Lti.find_or_create_lti_course(
+        lti_integration_id: lti_integration.id,
+        context_id: context_id,
+        deployment_id: deployment_id,
+        nrps_url: nrps_url,
+        resource_link_id: resource_link_id
+      )
+
+      lti_advantage_client = LtiAdvantageClient.new(lti_integration.client_id, lti_integration.issuer)
+      nrps_response = lti_advantage_client.get_context_membership(nrps_url, resource_link_id)
+      nrps_sections = Services::Lti.parse_nrps_response(nrps_response)
+
+      sync_course_roster_results = Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: nrps_sections, section_owner_id: current_user.id)
+      had_changes ||= sync_course_roster_results
+
+      # Report which sections were updated
+      nrps_sections.each do |section_id, section|
+        result[:all][section_id] = {
+          name: section[:name],
+          size: section[:members].size,
+        }
+      end
+    end
+
+    @lti_section_sync_result = result
+
+    respond_to do |format|
+      format.html do
+        if had_changes || params[:force]
+          render lti_v1_sync_course_path
+        else
+          redirect_to home_path
+        end
+      end
+      format.json {render json: result}
+    end
+  end
+
   private
 
   NAMESPACE = "lti_v1_controller".freeze
 
   def unauthorized_status
     render(status: :unauthorized, json: {error: 'Unauthorized'})
+  end
+
+  def wrong_resource_type
+    render(status: :not_acceptable, json: {error: 'Only LtiResourceLink is supported right now'})
   end
 
   def create_state_and_nonce

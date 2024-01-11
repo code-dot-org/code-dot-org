@@ -13,10 +13,6 @@ theme: responsive_full_width
 - icon_circle_xmark = "fa-solid fa-circle-xmark"
 - icon_flag = "fa-solid fa-flag-checkered"
 
-%section.skinny-banner.no-padding-bottom
-  .wrapper
-    = view :maker_skinny_banner
-
 %section.intro
   .wrapper
     %h1 The Circuit Playground
@@ -39,6 +35,8 @@ theme: responsive_full_width
         %img{src: "/images/maker/circuitplayground-no-bg.gif", alt: ""}
     .clear
 
+= view :maker_skinny_banner
+
 %section.bg-neutral-light.device-setup
   .wrapper
     %h2 Device setup requirements
@@ -60,7 +58,7 @@ theme: responsive_full_width
           %i{class: "#{icon_circle_xmark}", style: "color: #E5311A"}
         .text-wrapper.no-margin-bottom
           %h3 The Circuit Playground Bluefruit
-    %p.body-two Wondering which version you have? <a href="https://learn.adafruit.com/category/circuit-playground" target="_blank" rel="noopener noreferrer">Check out Adafruit's guide</a>.
+    %p.body-three Wondering which version you have? <a class="has-external-link" href="https://learn.adafruit.com/category/circuit-playground" target="_blank" rel="noopener noreferrer">Check out Adafruit's guide</a>.
 
 %section.bg-primary-light
   .wrapper
@@ -79,15 +77,15 @@ theme: responsive_full_width
           %p Contains Circuit Playground boards and accessories necessary for using Code.org's curriculum with a class of 30 students.
           %p All educators receive a 10% discount when they apply the code <strong>ADAEDU</strong> at checkout. <em>Note:</em> The ADAEDU code only applies to orders of $250 or greater.
         .content-footer
-          %a.link-button{href: "https://www.adafruit.com/product/3399", target: "_blank", rel: "noopener noreferrer"} Get the classroom kit
+          %a.link-button.has-external-link{href: "https://www.adafruit.com/product/3399", target: "_blank", rel: "noopener noreferrer"} Get the classroom kit
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
           %h3 Circuit Playground Individual Kit
           %img{src: "/images/maker/maker-cp-individual.png", alt: "", style: "width: 100%"}
           %p For smaller classrooms, we recommend investing in a set of Circuit Playground Individual Kits. The individual kit is designed for a single student or pair of students.
         .content-footer
-          %a.link-button{href: "https://www.adafruit.com/product/3795", target: "_blank", rel: "noopener noreferrer"} Get the individual kit
-    %p.body-two.no-margin-bottom{style: "margin-top: 1em"} Out of stock? Try looking at other approved <a href="https://www.adafruit.com/distributors#North_America" target="_blank" rel="noopener noreferrer">Adafruit distributors</a>.
+          %a.link-button.has-external-link{href: "https://www.adafruit.com/product/3795", target: "_blank", rel: "noopener noreferrer"} Get the individual kit
+    %p.body-three.no-margin-bottom{style: "margin-top: 1em"} Out of stock? Try looking at other approved <a class="has-external-link"  href="https://www.adafruit.com/distributors#North_America" target="_blank" rel="noopener noreferrer">Adafruit distributors</a>.
 
 = view :section_divider_line
 

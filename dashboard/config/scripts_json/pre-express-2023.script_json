@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2023-06-28 15:14:00 UTC",
+    "serialized_at": "2023-08-22 19:00:53 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -7138,6 +7138,19 @@
       }
     },
     {
+      "name": "CSF Pre-reader Express Course Slides",
+      "url": "https://docs.google.com/presentation/d/1L1YJDVSUet42tTJaTvsEF1AujZ8n3YTZM6lOY6am07g/template/preview",
+      "key": "csf_pre-reader_express_course_slides",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1L1YJDVSUet42tTJaTvsEF1AujZ8n3YTZM6lOY6am07g/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_pre-reader_express_course_slides"
+      }
+    },
+    {
       "name": "Debugging Guide",
       "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview",
       "key": "debugging_guide",
@@ -7226,6 +7239,12 @@
     {
       "seeding_key": {
         "lesson.key": "A Royal Battle with Events",
+        "resource.key": "csf_pre-reader_express_course_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "A Royal Battle with Events",
         "resource.key": "feeling_faces"
       }
     },
@@ -7233,6 +7252,12 @@
       "seeding_key": {
         "lesson.key": "A Royal Battle with Events",
         "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing Gardens with Loops",
+        "resource.key": "csf_pre-reader_express_course_slides"
       }
     },
     {
@@ -7251,6 +7276,12 @@
       "seeding_key": {
         "lesson.key": "Learn to Drag and Drop",
         "resource.key": "20_20_20_rule"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "resource.key": "csf_pre-reader_express_course_slides"
       }
     },
     {
@@ -7280,13 +7311,31 @@
     {
       "seeding_key": {
         "lesson.key": "Loops with Laurel",
+        "resource.key": "csf_pre-reader_express_course_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Laurel",
         "resource.key": "feeling_faces"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops with Scrat",
+        "resource.key": "csf_pre-reader_express_course_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Scrat",
         "resource.key": "feeling_faces"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "resource.key": "csf_pre-reader_express_course_slides"
       }
     },
     {
@@ -7304,7 +7353,19 @@
     {
       "seeding_key": {
         "lesson.key": "On the Move with Events",
+        "resource.key": "csf_pre-reader_express_course_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "On the Move with Events",
         "resource.key": "feeling_faces"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "resource.key": "csf_pre-reader_express_course_slides"
       }
     },
     {
@@ -7322,7 +7383,19 @@
     {
       "seeding_key": {
         "lesson.key": "Programming with Harvester",
+        "resource.key": "csf_pre-reader_express_course_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Harvester",
         "resource.key": "feeling_faces"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "resource.key": "csf_pre-reader_express_course_slides"
       }
     },
     {
@@ -7341,6 +7414,12 @@
       "seeding_key": {
         "lesson.key": "Sequencing with Scrat",
         "resource.key": "20_20_20_rule"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "resource.key": "csf_pre-reader_express_course_slides"
       }
     },
     {
@@ -8207,6 +8286,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

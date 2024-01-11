@@ -123,7 +123,7 @@ def clean_email_content(folder_name)
   # Replace "[A-Z]{10}" string in each file by "enrollment_code".
   # Save result to cleaned_folder to file with the same name.
   shell_command = "find #{folder_name} -type f -name '*.html' -exec sh -c 'base=$(basename {});\
-  sed -E \"s/[A-Z]\{10\}/enrollment_code/\" {} > \"#{cleaned_folder}/$base\"' \\;"
+  sed -E \"s/[A-Z]{10}/enrollment_code/\" {} > \"#{cleaned_folder}/$base\"' \\;"
 
   puts "Cleaning email content in folder #{folder_name} -> #{cleaned_folder}"
   puts "Executing: #{shell_command}"

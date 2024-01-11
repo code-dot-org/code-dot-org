@@ -9,7 +9,7 @@ const clickSpy = sinon.spy();
 
 const defaultProps = {
   text: 'Click me',
-  color: Button.ButtonColor.orange,
+  color: Button.ButtonColor.brandSecondaryDefault,
   children: [<a href="foo">href</a>, <a onClick={clickSpy}>onclick</a>],
 };
 

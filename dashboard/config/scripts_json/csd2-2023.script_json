@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "e3458a81-c04c-4053-be7f-7e24689e0143",
+          "notice": "Free Teacher Resources from Amazon Future Engineer",
+          "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
+          "link": "https://code.org/afe",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Get free resources"
+        }
+      ],
       "curriculum_umbrella": "CSD",
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -17,7 +29,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-24 16:58:02 UTC",
+    "serialized_at": "2023-12-12 03:16:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1473,7 +1485,7 @@
       "key": "77916118-5dbb-4594-9875-2039a4f9e2f4",
       "position": 4,
       "properties": {
-        "description": "**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson. \n\nAs students share, distribute a copy of the [r _warm_up_word_search/csd/2023] to each student, face down. Make sure students don't start the word search ahead of time.\n"
+        "description": "**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson. \n\nAs students share, distribute a copy of the [r _warm_up_word_search_1/csd/2023] to each student, face down. Make sure students don't start the word search ahead of time.\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "77916118-5dbb-4594-9875-2039a4f9e2f4",
@@ -2319,7 +2331,7 @@
       "key": "45de1f5a-e699-4d78-9c45-49a6bf212ea8",
       "position": 3,
       "properties": {
-        "description": "**Circulate**: Give students time to explore the headings and discuss the questions on the level with their partner. \n\n**Prompt**: When would you use each of these headings? For example, which heading would you use for a web page title ... when might you use the H6 heading?\n\n**Discussion Goal**: Students should notice the H6 is the largest heading tag and should therefore be used for web page titles. The remaining heading tags are used for sub-titles and section/subsection titles. \n\n**Code Studio**: Have students continue to the next level in Code Studio",
+        "description": "**Circulate**: Give students time to explore the headings and discuss the questions on the level with their partner. \n\n**Prompt**: When would you use each of these headings? For example, which heading would you use for a web page title ... when might you use the H6 heading?\n\n**Discussion Goal**: Students should notice the H1 is the largest heading tag and should therefore be used for web page titles. The remaining heading tags are used for sub-titles and section/subsection titles. \n\n**Code Studio**: Have students continue to the next level in Code Studio",
         "progression_name": "Explore"
       },
       "seeding_key": {
@@ -3565,7 +3577,7 @@
       "key": "fdb39561-f138-4421-8954-cb21d54a99e9",
       "position": 8,
       "properties": {
-        "description": "**Image Hunt**\n\nThe last portion of the guide prompts students to find images of their choosing and identify the licenses under which they were published.\n\nBecause we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:\n\n- [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)\n- [Google Image Advanced Search](https://www.google.com/advanced_image_search)\n- [Flickr Creative Commons](https://www.flickr.com/creativecommons/)\n- [Wordpress Openverse](https://wordpress.org/openverse/) (formerly Creative Commons Search)\n\nAdditionally, [this guide from the Harvard Law School Library](https://guides.library.harvard.edu/c.php?g=310751&p=2072816) has a variety of search engines that could be used for creative commons images. This may be overwhelming for students, but it could be a good resource for specific situations or to find additional search engines that are available at your school.\n\nAs with any site with crowdsourced content, search engine results will change from day to day, and some of those results may be inappropriate for the classroom. You may want to check these sites shortly before displaying them to the class, and decide what is best for your classroom.\n\n**Share:** Allow students to share the images and licenses that they have found, whether the images could be included on a student web site, and if so, what rules the student would need to follow to use the image."
+        "description": "**Image Hunt**\n\nThe last portion of the guide prompts students to find images of their choosing and identify the licenses under which they were published.\n\nBecause we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:\n\n- [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)\n- [Google Image Advanced Search](https://www.google.com/advanced_image_search)\n- [Flickr Creative Commons](https://www.flickr.com/creativecommons/)\n- [Wordpress Openverse](https://wordpress.org/openverse/) (formerly Creative Commons Search)\n\nAdditionally, [this guide from the Harvard Law School Library](https://guides.library.harvard.edu/law/pd-cc) has a variety of search engines that could be used for creative commons images. This may be overwhelming for students, but it could be a good resource for specific situations or to find additional search engines that are available at your school.\n\nAs with any site with crowdsourced content, search engine results will change from day to day, and some of those results may be inappropriate for the classroom. You may want to check these sites shortly before displaying them to the class, and decide what is best for your classroom.\n\n**Share:** Allow students to share the images and licenses that they have found, whether the images could be included on a student web site, and if so, what rules the student would need to follow to use the image."
       },
       "seeding_key": {
         "activity_section.key": "fdb39561-f138-4421-8954-cb21d54a99e9",
@@ -3599,7 +3611,7 @@
       "key": "ad7fc03e-a022-4a6a-907e-d8ca286da27d",
       "position": 3,
       "properties": {
-        "description": "**Journal:** Think about some of the photos, drawings, and written work that you have created in the past, or even the web site that you will create in this class. Without a clear license, all of those things are covered under the fully restrictive copyright. Which Creative Commons license would you rather use (if any) and why?",
+        "description": "**Journal:** Think about some of the photos, drawings, and written work that you have created in the past, or even the web site that you will create in this class. Without a clear license, all of those things are covered under the fully restrictive copyright. Which Creative Commons license would you rather use (if any) and why?\n\n* Check out the [Creative Commons license chooser](https://creativecommons.org/choose/)",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -3616,7 +3628,6 @@
       "key": "45ddb5d2-6542-46ab-a787-dd0d0299bf7e",
       "position": 4,
       "properties": {
-        "description": "* Check out the [Creative Commons license chooser](https://creativecommons.org/choose/)"
       },
       "seeding_key": {
         "activity_section.key": "45ddb5d2-6542-46ab-a787-dd0d0299bf7e",
@@ -4341,7 +4352,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Planning Checkpoint:** Check over student plans before allowing them to continue on the rest of the levels.\n\n**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels/csd/2023] as a resource to quickly find where new codes were introduced in earlier challenge levels."
+            "markdown": "**Planning Checkpoint:** Check over student plans before allowing them to continue on the rest of the levels.\n\n**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [Extra Code in Challenge Levels](https://docs.google.com/document/d/1tRTtnwBfqYn1-UWoS6Ca2e-mzQN2F0mSzsnzCn8IXrk/edit?usp=sharing) as a resource to quickly find where new codes were introduced in earlier challenge levels."
           }
         ]
       },
@@ -9300,15 +9311,15 @@
     },
     {
       "name": "(Warm Up) Word Search",
-      "url": "https://docs.google.com/document/d/14hKTZSrP7tnghpJhTLYJNEPeb1CinUaa0KtzRPADji4/edit",
-      "key": "_warm_up_word_search",
+      "url": "https://docs.google.com/document/d/1Mk9elfN5zVH2LLaY6Z5-c-97wt1k9qDCyMfxRBlB8qM/edit",
+      "key": "_warm_up_word_search_1",
       "properties": {
         "audience": "Student",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "_warm_up_word_search"
+        "resource.key": "_warm_up_word_search_1"
       }
     },
     {
@@ -9588,18 +9599,6 @@
       },
       "seeding_key": {
         "resource.key": "exploring_web_pages_2"
-      }
-    },
-    {
-      "name": "Extra Code in Challenge Levels",
-      "url": "https://docs.google.com/document/d/1Zx8e-b_GJFNxsuXx10tIdh3EPSGoqPwpxGh2Hz70B2w/view",
-      "key": "extra_code_in_challenge_levels",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "extra_code_in_challenge_levels"
       }
     },
     {
@@ -10465,8 +10464,8 @@
       }
     },
     {
-      "name": "Animation and Game Design Template ",
-      "url": "https://docs.google.com/presentation/d/1O1oWeMbIOetBbgmuwyXlUDmlr6L9ygQi0wLG89w_uq0/edit?usp=share_link",
+      "name": "Web Design Template ",
+      "url": "https://docs.google.com/presentation/d/1L7BgZu3XJVajibAfhK4c9o2R1_-nMC0ND_R3mXgN2wg/edit?usp=sharing",
       "key": "web_design_template",
       "properties": {
         "audience": "Student",
@@ -10475,6 +10474,18 @@
       },
       "seeding_key": {
         "resource.key": "web_design_template"
+      }
+    },
+    {
+      "name": "Web Development - Extra Code in Challenge Levels",
+      "url": "https://docs.google.com/document/d/1tRTtnwBfqYn1-UWoS6Ca2e-mzQN2F0mSzsnzCn8IXrk/edit?usp=sharing",
+      "key": "web_development_-_extra_code_in_challenge_levels",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "web_development_-_extra_code_in_challenge_levels"
       }
     },
     {
@@ -10700,7 +10711,7 @@
     {
       "seeding_key": {
         "lesson.key": "Exploring Web Pages",
-        "resource.key": "_warm_up_word_search"
+        "resource.key": "_warm_up_word_search_1"
       }
     },
     {
@@ -11024,12 +11035,6 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Personal Web Page",
-        "resource.key": "extra_code_in_challenge_levels"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Personal Web Page",
         "resource.key": "peer_review_-_personal_website"
       }
     },
@@ -11089,8 +11094,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Website for a Purpose",
-        "resource.key": "extra_code_in_challenge_levels"
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "web_development_-_extra_code_in_challenge_levels"
       }
     },
     {
@@ -12666,6 +12671,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

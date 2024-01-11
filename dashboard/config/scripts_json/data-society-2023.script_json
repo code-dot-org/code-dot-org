@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "data-society",
-    "serialized_at": "2023-05-17 16:33:13 UTC",
+    "serialized_at": "2023-07-17 23:34:40 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -6345,8 +6345,8 @@
       }
     },
     {
-      "name": "Secret Messages 2021",
-      "url": "https://docs.google.com/document/d/1McCQtY7xWPnKvemkAf0bLxxxyJVJzQomWv4wcjInjXc/view",
+      "name": "Secret Messages",
+      "url": "https://docs.google.com/document/d/1j1IKIzIf3R3sck0hgW740SGbQmWTFdNKMrwPK0dBqSA/edit?usp=sharing",
       "key": "secret_messages_2021",
       "properties": {
         "audience": "Student",

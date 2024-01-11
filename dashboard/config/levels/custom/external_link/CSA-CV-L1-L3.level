@@ -1,0 +1,16 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 55,
+  "created_at": "2023-08-17T01:13:26.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "link_title": "COCO - Common Objects in Context Dataset",
+    "url": "https://cocodataset.org/#home",
+    "long_instructions": "# COCO - Common Objects in Context Dataset\r\n\r\nLook around on the COCO website, focusing specifically on the **Explore** section under the **Dataset** menu."
+  },
+  "audit_log": "[{\"changed_at\":\"2023-08-17T01:13:26.786+00:00\",\"changed\":[\"cloned from \\\"CSA-CV-L1-L2\\\"\"],\"cloned_from\":\"CSA-CV-L1-L2\"},{\"changed_at\":\"2023-08-17 01:14:31 +0000\",\"changed\":[\"link_title\",\"url\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</ExternalLink>

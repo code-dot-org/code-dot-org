@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Pd::WorkshopDashboardControllerTest < ::ActionController::TestCase
+class Pd::WorkshopDashboardControllerTest < ActionController::TestCase
   test_user_gets_response_for(
     :index,
     name: 'workshop admins can access the dashboard and get correct permission value',

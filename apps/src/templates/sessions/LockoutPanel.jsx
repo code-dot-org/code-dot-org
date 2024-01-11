@@ -8,6 +8,7 @@ import cookies from 'js-cookie';
 import * as color from '../../util/color';
 import headerImage from './images/lockout_penguin.png';
 import headerThanksImage from './images/dancing_penguin.png';
+import {hashString} from '../../utils';
 
 /**
  * This panel represents the page that is displayed to accounts that are being
@@ -16,14 +17,26 @@ import headerThanksImage from './images/dancing_penguin.png';
  * pending request for) parental permission.
  */
 export default function LockoutPanel(props) {
+  // Determine if we think the given email matches the child email
+  const isEmailDisallowed = email => {
+    return props.disallowedEmail === hashString(email);
+  };
+
+  // Determine if the email is allowed
+  const validateEmail = email => {
+    return isEmail(email) && !isEmailDisallowed(email);
+  };
+
   // Set the disabled state of the submit button based on the validity of the
   // email in the field.
-  const [disabled, setDisabled] = useState(() => !isEmail(props.pendingEmail));
+  const [disabled, setDisabled] = useState(
+    () => !validateEmail(props.pendingEmail)
+  );
 
   // When the email field is updated, also update the disability state of the
   // submit button.
   const onEmailUpdate = event => {
-    setDisabled(!isEmail(event.target.value));
+    setDisabled(!validateEmail(event.target.value));
   };
 
   // This will set the email to the current pending email and fire off the
@@ -220,6 +233,7 @@ LockoutPanel.propTypes = {
   deleteDate: PropTypes.instanceOf(Date).isRequired,
   pendingEmail: PropTypes.string,
   requestDate: PropTypes.instanceOf(Date),
+  disallowedEmail: PropTypes.string.isRequired,
 };
 
 const styles = {

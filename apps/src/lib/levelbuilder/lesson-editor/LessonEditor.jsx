@@ -11,6 +11,7 @@ import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import RelatedLessons from './RelatedLessons';
+import color from '@cdo/apps/util/color';
 import {
   relatedLessonShape,
   activityShape,
@@ -35,6 +36,7 @@ class LessonEditor extends Component {
     initialObjectives: PropTypes.arrayOf(PropTypes.object).isRequired,
     initialLessonData: PropTypes.object,
     unitInfo: PropTypes.object,
+    rubricId: PropTypes.number,
 
     // from redux
     activities: PropTypes.arrayOf(activityShape).isRequired,
@@ -133,6 +135,14 @@ class LessonEditor extends Component {
       });
   };
 
+  hasRubric = () => {
+    return !!this.props.rubricId;
+  };
+
+  getLessonId = () => {
+    return this.props.initialLessonData.id;
+  };
+
   handleUpdateAnnouncements = newAnnouncements => {
     this.setState({announcements: newAnnouncements});
   };
@@ -156,8 +166,13 @@ class LessonEditor extends Component {
       preparation,
       announcements,
     } = this.state;
-    const {relatedLessons, standards, opportunityStandards, unitInfo} =
-      this.props;
+    const {
+      relatedLessons,
+      standards,
+      opportunityStandards,
+      unitInfo,
+      rubricId,
+    } = this.props;
     const frameworks = this.props.initialLessonData.frameworks;
 
     const allowMajorCurriculumChanges = unitInfo.allowMajorCurriculumChanges;
@@ -456,6 +471,26 @@ class LessonEditor extends Component {
             allowMajorCurriculumChanges={allowMajorCurriculumChanges}
           />
         </CollapsibleEditorSection>
+        {!this.hasRubric() && (
+          <a
+            className="btn add-rubric"
+            style={styles.addRubric}
+            href={'/rubrics/new?lessonId=' + this.getLessonId()}
+          >
+            <i style={styles.buttonText} className="fa fa-plus-circle" />
+            Add Rubric
+          </a>
+        )}
+        {this.hasRubric() && (
+          <a
+            className="btn add-rubric"
+            style={styles.addRubric}
+            href={'/rubrics/' + rubricId + '/edit'}
+          >
+            <i style={styles.buttonText} className="fa fa-plus-circle" />
+            Edit Rubric
+          </a>
+        )}
 
         <SaveBar
           handleSave={this.handleSave}
@@ -497,6 +532,17 @@ const styles = {
     fontSize: 20,
     fontStyle: 'italic',
     padding: 10,
+  },
+  addRubric: {
+    fontSize: 14,
+    color: 'white',
+    background: color.cyan,
+    border: `1px solid ${color.cyan}`,
+    boxShadow: 'none',
+    margin: `5px 20px 0px`,
+  },
+  buttonText: {
+    marginRight: 7,
   },
 };
 

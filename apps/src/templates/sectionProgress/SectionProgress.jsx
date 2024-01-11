@@ -14,7 +14,7 @@ import {
   setLessonOfInterest,
   setCurrentView,
 } from './sectionProgressRedux';
-import {loadScriptProgress} from './sectionProgressLoader';
+import {loadUnitProgress} from './sectionProgressLoader';
 import {ViewType, scriptDataPropType} from './sectionProgressConstants';
 import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import firehoseClient from '../../lib/util/firehose';
@@ -22,6 +22,10 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import ProgressViewHeader from './ProgressViewHeader';
 import logToCloud from '@cdo/apps/logToCloud';
+import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
+import styleConstants from './progressTables/progress-table-constants.module.scss';
+
+const SECTION_PROGRESS = 'SectionProgress';
 
 /**
  * Given a particular section, this component owns figuring out which script to
@@ -54,7 +58,7 @@ class SectionProgress extends Component {
   }
 
   componentDidMount() {
-    loadScriptProgress(this.props.scriptId, this.props.sectionId);
+    loadUnitProgress(this.props.scriptId, this.props.sectionId);
   }
 
   componentDidUpdate() {
@@ -72,7 +76,7 @@ class SectionProgress extends Component {
 
   onChangeScript = scriptId => {
     this.props.setScriptId(scriptId);
-    loadScriptProgress(scriptId, this.props.sectionId);
+    loadUnitProgress(scriptId, this.props.sectionId);
 
     this.recordEvent('change_script', {
       old_script_id: this.props.scriptId,
@@ -131,14 +135,19 @@ class SectionProgress extends Component {
       currentView,
       scriptId,
       scriptData,
+      sectionId,
       showStandardsIntroDialog,
     } = this.props;
     const levelDataInitialized = this.levelDataInitialized();
     const lessons = scriptData ? scriptData.lessons : [];
     const scriptWithStandardsSelected =
       levelDataInitialized && scriptData.hasStandards;
+    const showProgressTable =
+      levelDataInitialized &&
+      (currentView === ViewType.SUMMARY || currentView === ViewType.DETAIL);
     const standardsStyle =
       currentView === ViewType.STANDARDS ? styles.show : styles.hide;
+
     return (
       <div>
         <div style={styles.topRowContainer}>
@@ -164,8 +173,17 @@ class SectionProgress extends Component {
             <LessonSelector lessons={lessons} onChange={this.onChangeLevel} />
           )}
         </div>
-
-        {levelDataInitialized && <ProgressViewHeader />}
+        <div style={styles.topRowContainer}>
+          {showProgressTable && (
+            <SortByNameDropdown
+              selectStyles={styles.sortOrderSelect}
+              sectionId={sectionId}
+              unitName={scriptData?.title}
+              source={SECTION_PROGRESS}
+            />
+          )}
+          {levelDataInitialized && <ProgressViewHeader />}
+        </div>
 
         <div style={{clear: 'both'}}>
           {!levelDataInitialized && (
@@ -175,11 +193,7 @@ class SectionProgress extends Component {
               className="fa-pulse fa-3x"
             />
           )}
-          {levelDataInitialized &&
-            (currentView === ViewType.SUMMARY ||
-              currentView === ViewType.DETAIL) && (
-              <ProgressTableView currentView={currentView} />
-            )}
+          {showProgressTable && <ProgressTableView currentView={currentView} />}
           {levelDataInitialized && currentView === ViewType.STANDARDS && (
             <div id="uitest-standards-view" style={standardsStyle}>
               <StandardsView
@@ -192,6 +206,8 @@ class SectionProgress extends Component {
     );
   }
 }
+
+const sortOrderMargin = 22;
 
 const styles = {
   heading: {
@@ -222,6 +238,10 @@ const styles = {
   studentTooltip: {
     display: 'flex',
     textAlign: 'center',
+  },
+  sortOrderSelect: {
+    marginRight: sortOrderMargin,
+    width: parseInt(styleConstants.STUDENT_LIST_WIDTH) - sortOrderMargin,
   },
 };
 

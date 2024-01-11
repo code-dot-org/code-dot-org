@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "announcements": [
+        {
+          "key": "b26da358-97d1-4078-b70a-8f7780c199d4",
+          "notice": "Free Teacher Resources from Amazon Future Engineer",
+          "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
+          "link": "code.org/afe",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Get free resources"
+        }
+      ],
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
@@ -20,7 +32,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2023-06-28 15:15:50 UTC",
+    "serialized_at": "2023-11-20 21:01:05 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3707,7 +3719,7 @@
       "key": "ec43a320-7581-4c0d-b1f8-03f555c407c5",
       "position": 1,
       "properties": {
-        "description": "To build on the skills you learned in CS Fundamentals Course E, click [here](https://code.org/maker/csf-microbit) to check out Extension Lessons with the micro:bit. These [4 micro:bit lessons](https://code.org/maker/assets/CSF-Booklet-Course-E-v5.pdf) cover the following topics: Meet your micro:bit, Events, Impacts of computing, Designing for\nAccessibility, Loops, Conditionals: (if...then), and Functions.\n",
+        "description": "To build on the skills you learned in CS Fundamentals Course E, [click here to check out Extension Lessons with the micro:bit](https://code.org/maker/csf-microbit). These 4 micro:bit lessons cover the following topics: Meet your micro:bit, Events, Impacts of computing, Designing for\nAccessibility, Loops, Conditionals: (if...then), and Functions.\n",
         "name": "Extension Lessons with the micro:bit"
       },
       "seeding_key": {
@@ -3998,14 +4010,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "coursee_helloworld_introtosprites_2023"
+          "CourseE_video_introSpriteLab_2023"
         ],
         "progression": "Video: Hello World: Welcome to Sprite Lab"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "coursee_helloworld_introtosprites_2023"
+          "CourseE_video_introSpriteLab_2023"
         ],
         "lesson.key": "Hello World",
         "lesson_group.key": "csf_sprites",
@@ -4013,7 +4025,7 @@
         "activity_section.key": "78d3474c-3d24-4a0d-bd7a-13e545346178"
       },
       "level_keys": [
-        "coursee_helloworld_introtosprites_2023"
+        "CourseE_video_introSpriteLab_2023"
       ]
     },
     {
@@ -7304,9 +7316,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "coursee_helloworld_introtosprites_2023",
+        "level.key": "CourseE_video_introSpriteLab_2023",
         "script_level.level_keys": [
-          "coursee_helloworld_introtosprites_2023"
+          "CourseE_video_introSpriteLab_2023"
         ],
         "lesson.key": "Hello World",
         "lesson_group.key": "csf_sprites",
@@ -8843,7 +8855,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/coursee-2022/resources",
+      "url": "/s/coursee-2023/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -8854,7 +8866,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/coursee-2022/standards",
+      "url": "/s/coursee-2023/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -8865,7 +8877,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/coursee-2022/vocab",
+      "url": "/s/coursee-2023/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -8944,6 +8956,18 @@
       },
       "seeding_key": {
         "resource.key": "csf_-_course_e_-_slides_2022-2023"
+      }
+    },
+    {
+      "name": "CSF Course Syllabus",
+      "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link",
+      "key": "csf_course_syllabus",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csf_course_syllabus"
       }
     },
     {
@@ -9205,6 +9229,16 @@
       }
     },
     {
+      "name": "Teaching and Learning Strategies",
+      "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview",
+      "key": "teaching_and_learning_strategies",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "teaching_and_learning_strategies"
+      }
+    },
+    {
       "name": "Turns & Angles",
       "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
       "key": "turns_angles",
@@ -9251,6 +9285,18 @@
       },
       "seeding_key": {
         "resource.key": "unplugged_blocks_courses_c-f_"
+      }
+    },
+    {
+      "name": "Values and Philosophy",
+      "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview\t",
+      "key": "values_and_philosophy",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "values_and_philosophy"
       }
     }
   ],
@@ -9547,6 +9593,12 @@
     },
     {
       "seeding_key": {
+        "resource.key": "csf_course_syllabus",
+        "script.name": "coursee-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "debugging_guide",
         "script.name": "coursee-2023"
       }
@@ -9578,6 +9630,18 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "coursee-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teaching_and_learning_strategies",
+        "script.name": "coursee-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "values_and_philosophy",
         "script.name": "coursee-2023"
       }
     }
@@ -10563,5 +10627,14 @@
         "opportunity_standard.shortcode": "4.MD.5.b"
       }
     }
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
   ]
 }

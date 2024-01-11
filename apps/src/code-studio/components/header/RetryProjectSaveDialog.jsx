@@ -41,7 +41,7 @@ export class UnconnectedRetryProjectSaveDialog extends Component {
           <Button
             text={i18n.retryProjectSaveDialogButton()}
             onClick={this.handleClick}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             className="no-mc"
             isPending={isSavePending}
             pendingText={i18n.retryProjectSavePending()}

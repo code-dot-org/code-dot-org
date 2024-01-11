@@ -379,13 +379,13 @@ class UserProficiency < ApplicationRecord
     end
     # The loops meta-concept.
     if get_level_count(ConceptDifficulties::REPEAT_LOOPS, difficulty) >= 3 ||
-       get_level_count(ConceptDifficulties::REPEAT_UNTIL_WHILE, difficulty) >= 3 ||
-       get_level_count(ConceptDifficulties::FOR_LOOPS, difficulty) >= 3
+        get_level_count(ConceptDifficulties::REPEAT_UNTIL_WHILE, difficulty) >= 3 ||
+        get_level_count(ConceptDifficulties::FOR_LOOPS, difficulty) >= 3
       concept_proficiency_count += 1
     end
     # The functions meta-concept.
     if get_level_count(ConceptDifficulties::FUNCTIONS, difficulty) >= 3 ||
-       get_level_count(ConceptDifficulties::FUNCTIONS_WITH_PARAMS, difficulty) >= 3
+        get_level_count(ConceptDifficulties::FUNCTIONS_WITH_PARAMS, difficulty) >= 3
       concept_proficiency_count += 1
     end
 

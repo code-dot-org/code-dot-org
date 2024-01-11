@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-06-21 00:11:48 UTC",
+    "serialized_at": "2023-10-17 15:58:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -96,7 +96,7 @@
           {
             "notice": "AI/ML Professional Development",
             "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
-            "link": "https://studio.code.org/s/self-paced-pl-csd5-2023",
+            "link": "https://studio.code.org/courses/self-paced-pl-aiml-2023",
             "type": "information",
             "visibility": "Teacher-only"
           }
@@ -4377,7 +4377,7 @@
         "tips": [
           {
             "type": "contentCorner",
-            "markdown": "**Real-World Connection:** These example model cards are exaggerated for pedagogical purposes, but similar phenomena can bee seen in this article: [Hundreds of AI tools have been built to catch covid. None of them helped](https://www.technologyreview.com/2021/07/30/1030329/machine-learning-ai-failed-covid-hospital-diagnosis-pandemic). A few relevant quotes from the article are:\n\n- \"Many unwittingly used a data set that contained chest scans of children who did not have covid as their examples of what non-covid cases looked like. But as a result, the AIs learned to identify kids, not covid.\"\n- \"In yet other cases, some AIs were found to be picking up on the text font that certain hospitals used to label the scans. As a result, fonts from hospitals with more serious caseloads became predictors of covid risk.\"\n\nAs an extension of this lesson, you may choose to share this article with students. However, the article is not intended for a middle-school audience, so additional scaffolds and supports may be necessary to support student understanding and connecting back to today's lesson."
+            "markdown": "**Real-World Connection:** These example model cards are exaggerated for pedagogical purposes, but similar phenomena can be seen in this article: [Hundreds of AI tools have been built to catch covid. None of them helped](https://www.technologyreview.com/2021/07/30/1030329/machine-learning-ai-failed-covid-hospital-diagnosis-pandemic). A few relevant quotes from the article are:\n\n- \"Many unwittingly used a data set that contained chest scans of children who did not have covid as their examples of what non-covid cases looked like. But as a result, the AIs learned to identify kids, not covid.\"\n- \"In yet other cases, some AIs were found to be picking up on the text font that certain hospitals used to label the scans. As a result, fonts from hospitals with more serious caseloads became predictors of covid risk.\"\n\nAs an extension of this lesson, you may choose to share this article with students. However, the article is not intended for a middle-school audience, so additional scaffolds and supports may be necessary to support student understanding and connecting back to today's lesson."
           }
         ]
       },
@@ -12324,7 +12324,7 @@
     },
     {
       "name": "Shoe Survey",
-      "url": "https://docs.google.com/forms/d/1PWlwQuyTn_7f4lQUXkujQRZQrDPXFQllw7y7IGd02VM/view",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSc7rkOHqoMHb2GLBW5tuTjVFPY7xblkCLnzCpGyF6UaX2mKpQ/viewform?usp=sharing",
       "key": "shoe_survey",
       "properties": {
         "audience": "Teacher",
@@ -14431,6 +14431,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

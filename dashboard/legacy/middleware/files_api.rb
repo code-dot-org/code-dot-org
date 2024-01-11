@@ -417,7 +417,7 @@ class FilesApi < Sinatra::Base
       begin
         share_failure = ShareFiltering.find_failure(body, request.locale)
       rescue StandardError => exception
-        return file_too_large(endpoint) if exception.class == WebPurify::TextTooLongError
+        return file_too_large(endpoint) if exception.instance_of?(WebPurify::TextTooLongError)
         details = exception.message.empty? ? nil : exception.message
         return json_bad_request(details)
       end
@@ -652,7 +652,14 @@ class FilesApi < Sinatra::Base
 
     filename.downcase! if endpoint == 'files'
     begin
-      get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename, with_comments: request.GET['with_comments']).to_json
+      versions = get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename, with_comments: request.GET['with_comments'])
+      return versions.to_json if owns_channel?(encrypted_channel_id)
+
+      owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+      owner_user_id = user_id_for_storage_id(owner_storage_id)
+      return versions.to_json if teaches_student?(owner_user_id)
+
+      return versions.select {|version| version[:isLatest]}.to_json
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       bad_request
     end
@@ -995,7 +1002,7 @@ class FilesApi < Sinatra::Base
     s3_prefix = "#{METADATA_PATH}/#{filename}"
     file = get_file('files', encrypted_channel_id, s3_prefix)
 
-    if THUMBNAIL_FILENAME == filename
+    if filename == THUMBNAIL_FILENAME
       project = Projects.new(get_storage_id)
       project_type = project.project_type_from_channel_id(encrypted_channel_id)
       if moderate_type?(project_type) && moderate_channel?(encrypted_channel_id)

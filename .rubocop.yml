@@ -8,6 +8,11 @@ require:
   - rubocop-rails
   - rubocop-rails-accessibility
   - './tools/customLinters/rubocop_only_allowed_characters.rb'
+  - './tools/customLinters/rubocop_prefer_mocha_stubs_to_minitest_stub.rb'
+  - './tools/customLinters/rubocop_pegasus_db_usage.rb'
+  - './tools/customLinters/rubocop_dashboard_db_usage.rb'
+  - './tools/customLinters/rubocop_pegasus_requires.rb'
+  - './tools/customLinters/rubocop_dashboard_requires.rb'
 
 AllCops:
   SuggestExtensions: false
@@ -43,6 +48,12 @@ Layout/FirstParameterIndentation:
 Layout/MultilineMethodCallBraceLayout:
   EnforcedStyle: new_line
 
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
 Layout/ParameterAlignment:
   EnforcedStyle: with_fixed_indentation
 
@@ -55,6 +66,19 @@ Layout/SpaceInsideHashLiteralBraces:
 
 Naming/RescuedExceptionsVariableName:
   PreferredName: exception
+
+# This Cop by default uses a custom Include directive which in our
+# project would also include pegasus
+# see https://github.com/rubocop/rubocop-rails/blob/d81af275bba3d06e30156596c2c057cf68f8272b/config/default.yml#L213C11-L213C11
+Rails/AssertNot:
+  Include:
+    - dashboard/**/test/**/*
+
+Rails/Date:
+  EnforcedStyle: strict
+
+Rails/RefuteMethods:
+  EnforcedStyle: refute
 
 Style/AccessModifierDeclarations:
   EnforcedStyle: inline
@@ -88,22 +112,28 @@ Metrics/AbcSize:
 Metrics/BlockNesting:
   Enabled: false
 
+Layout/ClosingParenthesisIndentation:
+  Enabled: false
+
+Layout/ExtraSpacing:
+  Enabled: false
+
 Layout/LineLength:
   Enabled: false
 
 Metrics/ModuleLength:
   Enabled: false
 
+# ActiveRecord does not implement a `detect` method and `find` has its own
+# meaning. Correcting ActiveRecord methods with this cop should be considered
+# unsafe, so out of an abundance of caution disable this everywhere.
+Performance/Detect:
+  Enabled: false
+
 Style/AsciiComments:
   Enabled: false
 
 Style/BarePercentLiterals:
-  Enabled: false
-
-Layout/ClosingParenthesisIndentation:
-  Enabled: false
-
-Layout/ExtraSpacing:
   Enabled: false
 
 Style/IdenticalConditionalBranches:

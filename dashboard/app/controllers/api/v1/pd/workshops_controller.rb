@@ -1,4 +1,4 @@
-class Api::V1::Pd::WorkshopsController < ::ApplicationController
+class Api::V1::Pd::WorkshopsController < ApplicationController
   include Pd::WorkshopFilters
   include Api::CsvDownload
   include Pd::Application::RegionalPartnerTeacherconMapping
@@ -318,6 +318,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       :suppress_email,
       :third_party_provider,
       {sessions_attributes: [:id, :start, :end, :_destroy]},
+      :module,
     ]
 
     allowed_params.delete :regional_partner_id unless can_update_regional_partner

@@ -1,0 +1,11 @@
+name 'CSA-SE-CV-SC1L3-06'
+
+question 'AI code-generating tools enhanced my understanding of programming concepts in today\'s lesson.'
+
+right 'Strongly Agree'
+right 'Agree'
+right 'Neutral'
+right 'Disagree'
+right 'Strongly Disagree'
+
+allow_multiple_attempts true

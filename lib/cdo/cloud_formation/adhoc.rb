@@ -11,8 +11,8 @@ module Cdo::CloudFormation
         stack.options[:start_inactive_instance] = true
         create_or_update
       else
-        log.info "Instance #{instance.id} in Stack #{stack_name} can't be started because it is not" \
-            " currently stopped.  Current state - #{instance.state.name}"
+        log.info "Instance #{instance.id} in Stack #{stack_name} can't be started because it is not " \
+            "currently stopped.  Current state - #{instance.state.name}"
       end
       cfn_stack.outputs.each do |output|
         log.info "#{output.output_key}: #{output.output_value}"
@@ -22,7 +22,7 @@ module Cdo::CloudFormation
     def stop
       log.info "Finding EC2 Instance for CloudFormation Stack #{stack_name} ..."
       if !instance.exists?
-        log.info "Instance #{instance_id} does not exist or has been terminated."\
+        log.info "Instance #{instance_id} does not exist or has been terminated." \
               "Delete this unrecoverable CloudFormation stack: rake adhoc:delete STACK_NAME=#{stack_name}"
       elsif instance.state.name == 'stopped'
         log.info "Instance #{instance.id} is already Stopped."

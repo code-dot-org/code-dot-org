@@ -209,7 +209,7 @@ export class FindProgrammingExpressionDialog extends Component {
           <Button
             text={'Close and Add'}
             onClick={this.handleConfirm}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
           />
         </DialogFooter>
       </LessonEditorDialog>

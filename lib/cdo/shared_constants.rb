@@ -47,6 +47,7 @@ module SharedConstants
       email: 'email',
       google_classroom: 'google_classroom',
       clever: 'clever',
+      lti_v1: 'lti_v1',
     }
   )
 
@@ -597,4 +598,56 @@ module SharedConstants
     # An unhandleable error that results in a program crash.
     FATAL: 4
   }.freeze
+
+  RUBRIC_UNDERSTANDING_LEVELS = OpenStruct.new(
+    {
+      EXTENSIVE: 3,
+      CONVINCING: 2,
+      LIMITED: 1,
+      NONE: 0,
+    }
+  ).freeze
+
+  # These reflect the 'status' of an AI rubric evaluation
+  RUBRIC_AI_EVALUATION_STATUS = {
+    # Queued as a job
+    QUEUED: 0,
+    # Job is running
+    RUNNING: 1,
+    # Succeeded
+    SUCCESS: 2,
+    # General failure (along with anything larger)
+    FAILURE: 1000,
+    # PII Failure
+    PII_VIOLATION: 1001,
+    # Profanity Failure
+    PROFANITY_VIOLATION: 1002,
+  }.freeze
+
+  EMAIL_LINKS = OpenStruct.new(
+    {
+      PRIVACY_POLICY_URL: "https://code.org/privacy",
+      TOS_URL: "https://code.org/tos",
+      STUDENT_PRIVACY_PLEDGE_URL: "https://studentprivacypledge.org/signatories/",
+      COMMON_SENSE_MEDIA_URL: "https://privacy.commonsense.org/evaluation/code.org",
+      CDO_SUPPORT_MAILTO: "mailto:support@code.org"
+    }
+  ).freeze
+
+  CHILD_ACCOUNT_COMPLIANCE_STATES = OpenStruct.new(
+    {
+      LOCKED_OUT: 'l',
+      REQUEST_SENT: 's',
+      PERMISSION_GRANTED: 'g'
+    }
+  ).freeze
+
+  CENSUS_CONSTANTS = OpenStruct.new(
+    {CURRENT_CENSUS_SCHOOL_YEAR: 2023}
+  )
+
+  # Current song manifest file name for Dance Party. Note that different manifests
+  # can be tested using query params (?manifest=...), but once this value is updated
+  # the default manifest will change for all users.
+  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2024_v1.json'
 end

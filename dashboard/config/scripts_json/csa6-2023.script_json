@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-06-23 16:41:26 UTC",
+    "serialized_at": "2023-08-22 18:00:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -75,6 +75,18 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa6-2023"
       }
+    },
+    {
+      "key": "lessonGroup-6",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "Sandboxes"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa6-2023"
+      }
     }
   ],
   "lessons": [
@@ -86,6 +98,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How can I identify the requirements and things I need to know to complete a project?**\n\nStudents are introduced to the Natural Language Processing Project and evaluate requirements and examples to identify questions and key features. Before beginning work on the project, students expand their understanding of program structure and comments by identifying best practices and exploring the use of Javadocs to generate program documentation.",
         "preparation": "* **(Optional)** Print copies of the U6L1 Guided Notes (one for each student)\n* Preview the *Software Engineering: Natural Language Processing* video\n* Print copies of the Project Characteristics handout (one for each pair of students)\n* Print copies of the Unit 6 Guide\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-1-project-planning/37922) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I identify the requirements and things I need to know to complete a project?**\n\nNatural language processing is used in many programs and apps that we use every day. In this unit, we will explore some of the techniques and algorithms used in our apps and smart devices to develop our own program that uses natural language processing. You explore strategies for writing and structuring code so other software engineers can easily understand and use a Java tool to create program documentation."
@@ -104,6 +117,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can I analyze parts of a `String` object?**\n\nIn this lesson, students revisit the `String` class and learn how to use the `substring()` method. They discover that `String` objects are immutable and are not modified when calling methods in the `String` class. Students also explore how the `substring()` method can be combined with other methods in the `String` class to find the location of a specific character or substring within a `String` and compare substrings for equality. They then practice using the `substring()` method to retrieve a substring of a `String` object and to find and replace specific characters.",
         "preparation": "* **(Optional)** Print copies of the U6L2 Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-2-substrings/37923) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I analyze parts of a `String` object?**\n\nIn this lesson, you revisit the `String` class and learn how to use the `substring()` method. You discover that `String` objects are immutable and are not modified when calling methods in the `String` class. You also explore how the `substring()` method can be combined with other methods in the `String` class to find the location of a specific character or substring within a `String` and compare substrings for equality. You then practice using the `substring()` method to retrieve a substring of a `String` object and to find and replace specific characters."
@@ -122,6 +136,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.8\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**Why would I want to represent primitive values as objects?**\n\nIn this lesson, students explore the `Integer` and `Double` classes and learn how these are used to represent `int` and `double` values as objects. They realize that using these classes allows them to use methods to work with `int` and `double` values, such as to convert a `String` to an `int` or `double` value. Students also discover the minimum and maximum values for integers and how exceeding these limits causes overflow or underflow errors then practice using methods in the `Integer` and `Double` classes.",
         "preparation": "* **(Optional)** Print copies of the U6L3 Guided Notes (one for each student)\n* Preview the *Wrapper Classes - Part 1* and *Wrapper Classes - Part 2* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-3-integer-and-double-objects/37924) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**Why would I want to represent primitive values as objects?**\n\nIn this lesson, you explore the `Integer` and `Double` classes and learn how these are used to represent `int` and `double` values as objects. You realize that using these classes allows you to use methods to work with `int` and `double` values, such as to convert a `String` to an `int` or `double` value. You also discover the minimum and maximum values for integers and how exceeding these limits causes overflow or underflow errors then practice using methods in the `Integer` and `Double` classes."
@@ -140,6 +155,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 7.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**Why would I use an `ArrayList` instead of an array?**\n\nStudents have learned to use one-dimensional (1D) and two-dimensional (2D) arrays to store multiple values of the same type. In this lesson, students explore the `ArrayList` class and learn how to declare and initialize an `ArrayList` and add elements. Students identify scenarios where an `ArrayList` is more suitable and differentiate between a dynamic data structure and a static data structure. Students then practice creating an `ArrayList` and adding values to the list.",
         "preparation": "* **(Optional)** Print copies of the U6L4 Guided Notes (one for each student)\n* Preview *The ArrayList Class* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-4-arraylists/37925) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**Why would I use an `ArrayList` instead of an array?**\n\nWhen working with arrays and lists, we sometimes encounter problems where the number of elements is unknown or the size of the list constantly changes. In this lesson, you explore the `ArrayList` class and learn how to declare and initialize an `ArrayList` and add elements. You identify scenarios where an `ArrayList` is more suitable and differentiate between a dynamic data structure and a static data structure. You then practice creating an `ArrayList` and adding values to the list."
@@ -158,6 +174,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 7.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How am I able to work with the data stored in an `ArrayList`?**\n\nStudents continue to explore the `ArrayList` class and learn to work with the `get()` and `set()` methods to retrieve and modify elements. They discover that they can traverse an `ArrayList` similarly to traversing a 1D array and can apply the same standard algorithms to an `ArrayList`. Students then practice using methods in the `ArrayList` class to retrieve and modify elements and traversing an `ArrayList` to find and manipulate elements.",
         "preparation": "* **(Optional)** Print copies of the U6L5 Guided Notes (one for each student)\n* Preview the *Working with ArrayList Data* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-5-manipulating-elements/37926) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How am I able to work with the data stored in an `ArrayList`?**\n\nIn this lesson, you continue to explore the `ArrayList` class and learn to work with the `get()` and `set()` methods to retrieve and modify elements. You discover that you can traverse an `ArrayList` similarly to traversing a 1D array and can apply the same standard algorithms to an `ArrayList`. You then practice using methods in the `ArrayList` class to retrieve and modify elements and traversing an `ArrayList` to find and manipulate elements."
@@ -176,6 +193,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How can I determine if a list of `String` objects are in alphabetical order?**\n\nStudents have previously learned how to use several of the methods in the String class. In this lesson, students explore the `compareTo()` method and discover how this method can be used to check if a list of `String` objects is in alphabetical order. They then practice using the `compareTo()` method to evaluate `String` objects and using the methods in the `String` class to implement algorithms.",
         "preparation": "* **(Optional)** Print copies of the U6L6 Guided Notes (one for each student)\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up OR use [**this web-based version**](https://csabingo.up.railway.app/) to show the terms and definitions\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-6-comparing-strings/37927) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I determine if a list of `String` objects are in alphabetical order?**\n\nYou have previously learned how to use several of the methods in the `String` class. In this lesson, you explore the `compareTo()` method and discover how this method can be used to check if a list of `String` objects is in alphabetical order. You then practice using the `compareTo()` method to evaluate `String` objects and using the methods in the `String` class to implement algorithms."
@@ -194,6 +212,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 7.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**Why would I use generic types?**\n\nStudents have previously learned that an `ArrayList` can only store objects, such as `Integer` or `String`. In this lesson, they learn about generic types. Students realize that using the angle brackets when creating an `ArrayList` ensures that an `ArrayList` stores a specific type of object, while leaving out the angle brackets may result in multiple types of objects getting stored in the `ArrayList`. They then practice creating and using an `ArrayList` of objects and implementing algorithms to find information and perform calculations.",
         "preparation": "* **(Optional)** Print copies of the U6L7 Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-7-lists-of-objects/37928) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**Why would I use generic types?**\n\nYou have previously learned that an `ArrayList` can only store objects, such as `Integer` or `String`. In this lesson, you learn about generic types. You realize that using the angle brackets when creating an `ArrayList` ensures that an `ArrayList` stores a specific type of object, while leaving out the angle brackets may result in multiple types of objects getting stored in the `ArrayList`. You then practice creating and using an `ArrayList` of objects and implementing algorithms to find information and perform calculations."
@@ -212,6 +231,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.3\n* Topic Questions 7.2\n* Topic Questions 7.3\n* Topic Questions 7.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How is removing data from an `ArrayList` different from removing data from an array?**\n\nStudents have learned how to add, retrieve, and modify elements in an `ArrayList`. In this lesson, students explore the functionality of the `remove()` method in the `ArrayList` class and identify potential errors when attempting to remove items while traversing the list. Then they practice debugging programs that result in a `ConcurrentModificationException` and using the `remove()` method to remove elements from an `ArrayList`.",
         "preparation": "* **(Optional)** Print copies of the U6L8 Guided Notes (one for each student)\n* Preview the *Removing Data from an ArrayList* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-8-removing-elements/37929) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How is removing data from an `ArrayList` different from removing data from an array?**\n\nYou have learned how to add, retrieve, and modify elements in an `ArrayList`. In this `ArrayList`, you explore the functionality of the `remove()` method in the `ArrayList` class and identify potential errors when attempting to remove items while traversing the list. You then practice debugging programs that result in a `ConcurrentModificationException` and using the `remove()` method to remove elements from an `ArrayList`."
@@ -230,6 +250,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How can I use what I know about object-oriented programming and `ArrayList`s to plan and implement algorithms?**\n\nStudents use the knowledge and skills they have developed in this unit to implement algorithms to search or modify elements in an `ArrayList`. They explore basic natural language processing techniques, then work with a partner to plan and implement algorithms to work with `String` and `ArrayList` objects. Students participate in a code review to obtain feedback and iterate on the development of their programs.",
         "preparation": "* **(Optional)** Print copies of the U6L9 Guided Notes (one for each student)\n* Print copies of the Writing Algorithms with ArrayLists handout (one for each pair of students)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-9-arraylist-and-string-algorithms/37930) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I use what I know about object-oriented programming and `ArrayList`s to plan and implement algorithms?**\n\nYou use the knowledge and skills you have developed in this unit to implement algorithms to search or modify elements in an `ArrayList`. You explore basic natural language processing techniques, then work with a partner to plan and implement algorithms to work with `String` and `ArrayList` objects. You participate in a code review to obtain feedback and iterate on the development of your programs."
@@ -327,6 +348,51 @@
       "seeding_key": {
         "lesson.key": "lesson-13",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "lesson-15",
+      "name": "Sandbox: Console",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "lesson-16",
+      "name": "Sandbox: The Neighborhood",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "lesson-17",
+      "name": "Sandbox: The Theater",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "csa6-2023"
       }
     }
@@ -887,6 +953,42 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa6-2023"
       }
+    },
+    {
+      "key": "fb13cafd-af51-415d-9aab-91e3ebfd1d81",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fb13cafd-af51-415d-9aab-91e3ebfd1d81",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "7bd31345-bc4e-49d4-b9fd-27bed89500c9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7bd31345-bc4e-49d4-b9fd-27bed89500c9",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "db22d94a-e5b1-4697-bc2e-f1032aea669c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "db22d94a-e5b1-4697-bc2e-f1032aea669c",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa6-2023"
+      }
     }
   ],
   "activity_sections": [
@@ -1175,18 +1277,6 @@
       }
     },
     {
-      "key": "809b3915-e0cd-4230-98fc-2f7aaae6d4ac",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "809b3915-e0cd-4230-98fc-2f7aaae6d4ac",
-        "lesson_activity.key": "5dbcfbb6-4357-407b-aa98-f4b8ac22cfe6"
-      }
-    },
-    {
       "key": "240cb054-478f-4fd7-af6a-0198bf5a1039",
       "position": 1,
       "properties": {
@@ -1383,18 +1473,6 @@
       },
       "seeding_key": {
         "activity_section.key": "f39a5ccb-3b26-469a-8924-b4f19e965939",
-        "lesson_activity.key": "b46729db-9766-4aa9-8082-48eb8e9ba51b"
-      }
-    },
-    {
-      "key": "df2f6279-56b9-4f98-a843-6d98f2da4f1e",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "df2f6279-56b9-4f98-a843-6d98f2da4f1e",
         "lesson_activity.key": "b46729db-9766-4aa9-8082-48eb8e9ba51b"
       }
     },
@@ -1732,18 +1810,6 @@
       }
     },
     {
-      "key": "37f17472-dfbf-463e-b083-1c13efc85c44",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.8\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "37f17472-dfbf-463e-b083-1c13efc85c44",
-        "lesson_activity.key": "402f6775-bcc5-40d5-a783-7bba8c66c09f"
-      }
-    },
-    {
       "key": "211b7f78-b940-4fe8-9147-6acb554573b3",
       "position": 1,
       "properties": {
@@ -2038,18 +2104,6 @@
       }
     },
     {
-      "key": "23dad312-7c67-44dc-9844-287409c1a8b4",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 7.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "23dad312-7c67-44dc-9844-287409c1a8b4",
-        "lesson_activity.key": "9d207a9e-c5a8-45a0-9f89-b9c1eb9a144c"
-      }
-    },
-    {
       "key": "be7c890f-83db-4dae-841b-f2019347d1fa",
       "position": 1,
       "properties": {
@@ -2327,18 +2381,6 @@
       }
     },
     {
-      "key": "718012b2-e135-4c41-80c3-f51fc4330695",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 7.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "718012b2-e135-4c41-80c3-f51fc4330695",
-        "lesson_activity.key": "fd41b204-bd9a-48ef-893b-e306ce68c9e4"
-      }
-    },
-    {
       "key": "10f020a2-1282-4532-b2fd-a52a77d57703",
       "position": 1,
       "properties": {
@@ -2535,18 +2577,6 @@
       },
       "seeding_key": {
         "activity_section.key": "48bbe515-222d-4e88-b1e2-3c1b82990bac",
-        "lesson_activity.key": "30f18b5b-a683-4ebd-8d6d-f92b32940850"
-      }
-    },
-    {
-      "key": "c05bb48e-e2c0-420b-a93e-41f8d06accb5",
-      "position": 5,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "c05bb48e-e2c0-420b-a93e-41f8d06accb5",
         "lesson_activity.key": "30f18b5b-a683-4ebd-8d6d-f92b32940850"
       }
     },
@@ -2780,18 +2810,6 @@
       }
     },
     {
-      "key": "c4e26dcf-c14d-499d-b027-985bf46629b4",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 7.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "c4e26dcf-c14d-499d-b027-985bf46629b4",
-        "lesson_activity.key": "b0c50cee-4ac8-40d9-9758-5dc9555050e7"
-      }
-    },
-    {
       "key": "1e6f551b-ae63-49f7-ae46-c65a81ae247a",
       "position": 1,
       "properties": {
@@ -3016,18 +3034,6 @@
       },
       "seeding_key": {
         "activity_section.key": "c646bdc0-d7be-4095-8e9f-674596c89eaf",
-        "lesson_activity.key": "3fe0a3fa-c563-4431-a116-022a96463764"
-      }
-    },
-    {
-      "key": "cdda3543-ad54-4c7d-adcb-a3e93442cbb0",
-      "position": 4,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.3\n* Topic Questions 7.2\n* Topic Questions 7.3\n* Topic Questions 7.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "cdda3543-ad54-4c7d-adcb-a3e93442cbb0",
         "lesson_activity.key": "3fe0a3fa-c563-4431-a116-022a96463764"
       }
     },
@@ -3334,18 +3340,6 @@
       },
       "seeding_key": {
         "activity_section.key": "e3b6c9d4-9260-4a79-b81b-2c7b1fb26641",
-        "lesson_activity.key": "472a263b-4ba2-4a43-9c08-e8e1328b7f88"
-      }
-    },
-    {
-      "key": "08297511-d091-43df-9ff0-6b5b18638b87",
-      "position": 7,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "08297511-d091-43df-9ff0-6b5b18638b87",
         "lesson_activity.key": "472a263b-4ba2-4a43-9c08-e8e1328b7f88"
       }
     },
@@ -4194,6 +4188,48 @@
       "seeding_key": {
         "activity_section.key": "bb2493c2-8286-4f5f-b819-4777e1101ad9",
         "lesson_activity.key": "7effcb82-e330-49d5-b402-7bc41031e511"
+      }
+    },
+    {
+      "key": "4754e0c3-6f16-4d60-8205-8a4ebf9d3094",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4754e0c3-6f16-4d60-8205-8a4ebf9d3094",
+        "lesson_activity.key": "fb13cafd-af51-415d-9aab-91e3ebfd1d81"
+      }
+    },
+    {
+      "key": "abc06816-30b2-4da5-aee5-79cafbc8b55a",
+      "position": 1,
+      "properties": {
+        "progression_name": "With Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "abc06816-30b2-4da5-aee5-79cafbc8b55a",
+        "lesson_activity.key": "7bd31345-bc4e-49d4-b9fd-27bed89500c9"
+      }
+    },
+    {
+      "key": "c6440078-5a75-4ab4-a762-51a6afb76f64",
+      "position": 2,
+      "properties": {
+        "progression_name": "No Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "c6440078-5a75-4ab4-a762-51a6afb76f64",
+        "lesson_activity.key": "7bd31345-bc4e-49d4-b9fd-27bed89500c9"
+      }
+    },
+    {
+      "key": "4474a485-2a40-49f3-a224-f9404880af6b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4474a485-2a40-49f3-a224-f9404880af6b",
+        "lesson_activity.key": "db22d94a-e5b1-4697-bc2e-f1032aea669c"
       }
     }
   ],
@@ -5972,6 +6008,104 @@
       "level_keys": [
         "CSA U6 Natural Language Processing Project 1-Day_2023"
       ]
+    },
+    {
+      "chapter": 72,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Console Sandbox"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa6-2023",
+        "activity_section.key": "4754e0c3-6f16-4d60-8205-8a4ebf9d3094"
+      },
+      "level_keys": [
+        "CSA 2023 Console Sandbox"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
+        "progression": "With Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa6-2023",
+        "activity_section.key": "abc06816-30b2-4da5-aee5-79cafbc8b55a"
+      },
+      "level_keys": [
+        "CSA 2023 Neighborhood Sandbox"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
+        "progression": "No Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa6-2023",
+        "activity_section.key": "c6440078-5a75-4ab4-a762-51a6afb76f64"
+      },
+      "level_keys": [
+        "CSA 2023 Neighborhood - No Bucket Sandbox"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Theater Sandbox"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Theater Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa6-2023",
+        "activity_section.key": "4474a485-2a40-49f3-a224-f9404880af6b"
+      },
+      "level_keys": [
+        "CSA 2023 Theater Sandbox"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -6825,6 +6959,54 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa6-2023",
         "activity_section.key": "ade8b948-4d36-4da3-ac36-715d3431b413"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Console Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Console Sandbox"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa6-2023",
+        "activity_section.key": "4754e0c3-6f16-4d60-8205-8a4ebf9d3094"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Neighborhood Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa6-2023",
+        "activity_section.key": "abc06816-30b2-4da5-aee5-79cafbc8b55a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Neighborhood - No Bucket Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa6-2023",
+        "activity_section.key": "c6440078-5a75-4ab4-a762-51a6afb76f64"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Theater Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Theater Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa6-2023",
+        "activity_section.key": "4474a485-2a40-49f3-a224-f9404880af6b"
       }
     }
   ],
@@ -9357,6 +9539,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

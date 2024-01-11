@@ -2,6 +2,16 @@ import {ResponseValidator} from '@cdo/apps/util/HttpClient';
 import {Key} from '../utils/Notes';
 
 export default class MusicLibrary {
+  private static instance: MusicLibrary;
+
+  static getInstance(): MusicLibrary | undefined {
+    return this.instance;
+  }
+
+  static setCurrent(library: MusicLibrary) {
+    this.instance = library;
+  }
+
   name: string;
   groups: FolderGroup[];
   private allowedSounds: Sounds | null;
@@ -23,6 +33,19 @@ export default class MusicLibrary {
     if (firstGroup.key) {
       this.key = Key[firstGroup.key.toUpperCase() as keyof typeof Key];
     }
+  }
+
+  getDefaultSound(): string | undefined {
+    const firstGroup: FolderGroup = this.groups[0];
+
+    // Return the specified default sound if there is one.
+    if (firstGroup?.defaultSound) {
+      return firstGroup?.defaultSound;
+    }
+
+    // The fallback is the first non-instrument/kit folder's first sound.
+    const firstFolder = firstGroup?.folders.find(group => !group.type);
+    return `${firstFolder?.path}/${firstFolder?.sounds[0].src}`;
   }
 
   getSoundForId(id: string): SoundData | null {
@@ -133,6 +156,7 @@ export interface SoundData {
   note?: number;
   restricted?: boolean;
   sequence?: SampleSequence;
+  preview?: boolean;
 }
 
 export interface SoundFolder {
@@ -150,6 +174,7 @@ interface FolderGroup {
   path: string;
   bpm?: number;
   key?: string;
+  defaultSound?: string;
   folders: SoundFolder[];
 }
 

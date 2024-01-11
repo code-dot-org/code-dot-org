@@ -1,0 +1,90 @@
+@import "color.scss";
+
+.progressTableV2 {
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 76px;
+  display: flex;
+  flex-direction: row;
+}
+
+.table {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.gridBox {
+  height: 47px;
+  border-top: 1px solid $light_gray_200;
+  border-left: 1px solid $light_gray_200;
+  line-height: 47px;
+
+  &Student {
+    padding-left: 12px;
+  }
+
+  &LessonHeader {
+    min-width: 80px;
+    text-align: center;
+  }
+}
+
+.grid {
+  border-bottom: 1px solid $light_gray_200;
+  border-right: 1px solid $light_gray_200;
+}
+
+.title {
+  height: 32px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: row;
+
+  &Students {
+    height: 100%;
+    min-width: 195px;
+    margin-right: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  &UnitSelector {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+
+.header {
+  height: 76px;
+
+  &UnitSelector {
+    height: 32px;
+    margin-bottom: 12px;
+  }
+
+  &Columns {
+    display: flex;
+    flex-direction: row;
+    border-right: 1px solid $light_gray_200;
+    border-bottom: 1px solid $light_gray_200;
+    font-size: 14px;
+    height: 48px;
+    width:fit-content;
+  }
+}
+
+.sortDropdown {
+  height: 76px;
+  overflow-x: hidden;
+}
+
+
+.studentColumn {
+  width: 195px;
+  min-width: 195px;
+  margin-right: 12px;
+}

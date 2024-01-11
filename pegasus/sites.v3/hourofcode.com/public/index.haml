@@ -4,10 +4,9 @@ social:
   twitter:site: "@codeorg"
   twitter:url: https://hourofcode.com
 ---
+
 :ruby
   @header["title"] = hoc_s(:front_title, locals: {campaign_date: campaign_date('full-year')})
-
-  hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
 
 %link{href: "/css/generated/front-page.css", rel: "stylesheet", type: "text/css"}
 %link{href: "/css/generated/hoc-banner.css", rel: "stylesheet", type: "text/css"}
@@ -32,104 +31,88 @@ social:
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
-%script{type: "text/javascript", src: webpack_asset_path('js/hourofcode.com/public/index.js')}
-
 
 #top
   #fullwidth
     = view :header
     %section.banner.homepage
       .wrapper
-        - if ["pre-hoc", "soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode)
-          %h1=hoc_s(:hoc2022_header)
-          %h2=hoc_s(:hourofcode_homepage_hoc2018_header_line1)
-          .ctabuttongroup
-            #tryittext.ctatext
-              = view :hoc_action_buttons, hoc_mode: hoc_mode
-        - else
-          %h1=hoc_s(:hoc2022_header)
-          %h2=hoc_s(:hourofcode_homepage_hoc2018_header_line1)
-          .ctabuttongroup
-            #tryittext.ctatext
-              = view :hoc_action_buttons, hoc_mode: hoc_mode
+        %p.hoc-label
+          =hoc_s(:hour_of_code)
+        %h1=hoc_s(:hoc2023_header)
+        %p.hero-desc
+          =hoc_s(:hoc2023_hero_desc_homepage)
+        = view :hoc2023_hero_banner_ctas
 
 %main
-  -# HoC Live Spanish banner
-  - if @language == 'es' || @language == 'la'
-    #hoclivebanner
-      .banner-box
-        .banner-image-box
-          %img.banner-image{src: '/images/hora-del-codigo-en-vivo.png', alt: hoc_s(:hoc_live)}
-        .banner-message-box
-          %h2.banner-title
-            = hoc_s(:hoc_live_learn_title)
-          %p.banner-message
-            = hoc_s(:hoc_live_learn_message)
-          %a#signuplivebutton.ctabuttonatag{href: 'https://code.org/envivo'}
-            %button.ctabutton-white
-              = hoc_s(:hoc_live_learn_more)
-
-  -# Description
-  %section.hoc-description
-    .wrapper
-      %h2.number-served=hoc_s(:front_join_us_n_students_served).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
-      %p=hoc_s(:front_intro_default_2)
-      %p=view :hoc_events_counter
-
-  -# Map
-  %section.map
-    .wrapper
-      - unless @country == 'ma' # Hide map for Morocco because of sensitive border disputes misrepresented in map
-        #maparea.full-width
-          -# Show a picture of the map unless it is currently the week of HOC.
-          -if hoc_mode != "actual-hoc"
-            = view :hoc_events_map
-            .footnote!=hoc_s(:map_warning_markdown, markdown: :inline, locals: {events_url: resolve_url('/events')})
-          -else
-            %a{href: resolve_url('/map')}
-              %img{src: '/images/fit-2276/map.jpg', style: 'width: 100%;'}
-            .footnote!=hoc_s(:map_warning_markdown, markdown: :inline, locals: {events_url: resolve_url('/events')})
-
-  -# Join us
-  %section#join.join-us
-    .wrapper
-      %h2=hoc_s(:hoc_live_join_us)
-      %h3=hoc_s(:hoc_homepage_join_the_movement_description)
-      = view :home_signup, hoc_mode: hoc_mode
-
   -# What is HoC?
-  -# This section remains evergreen, and the video no longer moves next to the signup form during different hoc_modes.
-  %section.what-is-hoc
+  %section.what-is-hoc.centered
     .wrapper
       %h2=hoc_s(:front_what_is_hoc)
-      %h3=hoc_s(:hoc_homepage_what_is_hoc_subhead)
-      =view :index_video
-      %p=hoc_s(:hoc_homepage_what_is_hoc_description)
-      %a{href: resolve_url('/learn')}
-        %button=hoc_s(:cta_try_an_activity)
-      %p=hoc_s(:hoc_homepage_what_is_hoc_cta_how_to_guide, markdown: :inline, locals: {howto_guide_url: resolve_url('/how-to')})
+      %p.body-two
+        =hoc_s(:hoc2023_what_is_hoc_desc)
+      = view :index_video
+
+  -# Map
+  %section.map.bg-neutral-light
+    .wrapper
+      .text-wrapper.centered
+        %h2.no-margin-bottom{style: "font-size: 2.5rem;"}
+          =format_integer_with_commas(fetch_hoc_metrics['started']).to_s
+        %h3.heading-xl{style: "margin-top: 0.25rem"}
+          =hoc_s(:hours_of_code_served)
+        %p.body-one.no-margin-bottom
+          =hoc_s(:front_intro_default_2)
+        %p.body-one
+          = view :hoc_events_counter
+      = view :map
+      .text-wrapper.centered
+        %p.body-two.no-margin-bottom
+          =hoc_s(:hoc_homepage_registration_desc)
+        - if hoc_mode != "false"
+          %a.link-button{href: resolve_url("/events"), style: "margin-top: 2rem"}
+            =hoc_s(:call_to_action_register_your_hoc)
+
+  -# Off season interest form
+  -# This is only shown when hoc_mode is false
+  - if hoc_mode == "false"
+    %section.no-padding-bottom
+      .wrapper
+        = view :off_season_interest_form
+
+  -# HoC Live Spanish banner
+  - if @language == 'es' || @language == 'la'
+    %section.spanish-banner.no-padding-bottom
+      .wrapper
+        .action-block.action-block--two-col
+          %img{src: '/images/hora-del-codigo-en-vivo.png', alt: hoc_s(:hoc_live)}
+          .content-wrapper
+            %h2.heading-lg
+              = hoc_s(:hoc_live_learn_title)
+            %p
+              = hoc_s(:hoc_live_learn_message)
+            %a.link-button{href: 'https://code.org/envivo'}
+              = hoc_s(:hoc_live_learn_more)
+        %hr
 
   -# Highlights
-  %section.highlights
+  %section.highlights.centered
     .wrapper
       %h2=hoc_s(:highlights_header)
-      =view :home_highlights
+      = view :home_highlights
 
   -# Stats
-  %section.stats
-    .wrapper
-      =view :home_stats
+  %section.stats.bg-neutral-light
+    .wrapper.centered
+      = view :home_stats
+      .button-wrapper
+        %a.link-button{href: resolve_url('/how-to')}
+          =hoc_s(:call_to_action_host_hoc)
+        %a.link-button.secondary{href: resolve_url('/learn')}
+          =hoc_s(:call_to_action_try_activities)
 
-  -# Host an hour
-  %section.host-an-hour
-    .wrapper
-      =view :signup_button
-      %p=hoc_s(:hoc_homepage_organized_by, markdown: :inline, locals: {codeorg_url: resolve_url('https://code.org')})
-      %a{href: 'https://code.org'}
-        %img{src: '/images/code-dot-org-logo-40x40.svg'}
-
-  = view 'popup_window.js'
-
+  -# Organized by Code.org
+  = view :organized_by_cdo
 
 :javascript
 

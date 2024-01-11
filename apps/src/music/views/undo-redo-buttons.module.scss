@@ -1,0 +1,26 @@
+@import 'color.scss';
+@import '../../mixins.scss';
+
+.container {
+  display: flex;
+}
+
+.button {
+  @include remove-button-styles;
+  background-color: $neutral_dark;
+  color: $neutral_light;
+  display: flex;
+  height: 24px;
+  width: 24px;
+  font-size: 13px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  margin: 2px;
+  transition: opacity 0.2s ease;
+
+  &Disabled {
+    opacity: 50%;
+    cursor: default;
+  }
+}

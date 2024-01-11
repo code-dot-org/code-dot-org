@@ -21,8 +21,8 @@ User.with_deleted.
   find_each do |user|
   normalized_email = user.email.strip.downcase
   next if user.email == normalized_email
-  puts "DIFF: user.id: #{user.id}:, "\
-    "user.email: #{user.email}, "\
+  puts "DIFF: user.id: #{user.id}:, " \
+    "user.email: #{user.email}, " \
     "user.email.downcase: #{normalized_email}"
 
   unless all
@@ -53,9 +53,9 @@ User.with_deleted.
   correct_hashed_email = User.hash_email(user.email)
   next if user.hashed_email == correct_hashed_email
 
-  puts "DIFF: user.id: #{user.id}, "\
-    "user.email: #{user.email}, "\
-    "user.hashed_email: #{user.hashed_email}, "\
+  puts "DIFF: user.id: #{user.id}, " \
+    "user.email: #{user.email}, " \
+    "user.hashed_email: #{user.hashed_email}, " \
     "correct_hashed_email: #{correct_hashed_email}"
 
   unless all

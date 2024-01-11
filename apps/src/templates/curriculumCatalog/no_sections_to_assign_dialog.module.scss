@@ -1,7 +1,8 @@
 @import "color.scss";
+@import "breakpoints";
 
 .dialogContainer {
-  height: 18rem;
+  min-height: 18rem;
   display: flex;
   flex-flow: column;
 
@@ -16,12 +17,45 @@
 }
 
 .lowerContainer {
-  margin-top: auto;
+  // screen sizes larger than mobile
+  @media screen and (min-width: $width-sm) {
+    margin-top: auto;
+  }
+
+  // mobile screen sizes
+  @media screen and (max-width: $width-sm) {
+    margin-top: 1em;
+
+    hr {
+      display: none;
+    }
+  }
 }
 
 .buttonContainer {
   display: flex;
-  justify-content: space-between;
+  gap: 1em;
+
+  // screen sizes larger than mobile
+  @media screen and (min-width: $width-sm) {
+    justify-content: space-between;
+  }
+
+  // mobile screen sizes
+  @media screen and (max-width: $width-sm) {
+    margin-top: 1em;
+    justify-content: center;
+    flex-direction: column-reverse;
+
+    button,
+    a,
+    a:link,
+    a:visited {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
 
   button,
   a,

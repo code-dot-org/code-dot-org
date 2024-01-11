@@ -17,6 +17,9 @@ import {
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {showVideoDialog} from '@cdo/apps/code-studio/videos';
+import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
+import {getCoteacherMetricInfoFromSection} from './coteacherSettings/CoteacherUtils';
+import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
 
 const FORM_ID = 'sections-set-up-container';
 const SECTIONS_API = '/api/v1/sections';
@@ -47,6 +50,7 @@ const useSections = section => {
             restrictSection: false,
             ttsAutoplayEnabled: false,
             lessonExtras: true,
+            aiTutorEnabled: false,
             course: {hasTextToSpeech: false, hasLessonExtras: false},
           },
         ]
@@ -72,15 +76,27 @@ const useSections = section => {
 export default function SectionsSetUpContainer({
   isUsersFirstSection,
   sectionToBeEdited,
+  canEnableAITutor,
 }) {
   const [sections, updateSection] = useSections(sectionToBeEdited);
+  const [isCoteacherOpen, setIsCoteacherOpen] = useState(false);
   const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
   const [isSaveInProgress, setIsSaveInProgress] = useState(false);
+  const [coteachersToAdd, setCoteachersToAdd] = useState([]);
 
   const isNewSection = !sectionToBeEdited;
   const initialSectionRef = useRef(sectionToBeEdited);
 
-  const caret = advancedSettingsOpen ? 'caret-down' : 'caret-right';
+  const caret = isOpen => (isOpen ? 'caret-down' : 'caret-right');
+
+  const toggleIsCoteacherOpen = useCallback(
+    e => {
+      e.preventDefault();
+
+      setIsCoteacherOpen(!isCoteacherOpen);
+    },
+    [isCoteacherOpen]
+  );
 
   const toggleAdvancedSettingsOpen = useCallback(
     e => {
@@ -142,7 +158,7 @@ export default function SectionsSetUpContainer({
     }
   };
 
-  const saveSection = (section, createAnotherSection) => {
+  const saveSection = (section, createAnotherSection, coteachersToAdd) => {
     const shouldShowCelebrationDialogOnRedirect = !!isUsersFirstSection;
     // Determine data sources and save method based on new vs edit section
     const dataUrl = isNewSection
@@ -171,7 +187,7 @@ export default function SectionsSetUpContainer({
       : null;
 
     const computedGrades =
-      participantType === 'teacher' ? ['pl'] : section.grade;
+      participantType === 'student' ? section.grade : ['pl'];
 
     const section_data = {
       login_type: loginType,
@@ -184,7 +200,9 @@ export default function SectionsSetUpContainer({
       pairing_allowed: section.pairingAllowed,
       tts_autoplay_enabled: section.ttsAutoplayEnabled,
       sharing_disabled: section.sharingDisabled,
+      ai_tutor_enabled: section.aiTutorEnabled,
       grades: computedGrades,
+      instructor_emails: coteachersToAdd,
       ...section,
     };
 
@@ -201,6 +219,12 @@ export default function SectionsSetUpContainer({
       })
       .then(data => {
         recordSectionSetupEvent(section);
+        coteachersToAdd.forEach(() => {
+          analyticsReporter.sendEvent(
+            EVENTS.COTEACHER_INVITE_SENT,
+            getCoteacherMetricInfoFromSection(section)
+          );
+        });
         // Redirect to the sections list.
         let redirectUrl = window.location.origin + '/home';
         if (createAnotherSection) {
@@ -228,6 +252,83 @@ export default function SectionsSetUpContainer({
         src: 'https://www.youtube-nocookie.com/embed/4Wugxc80fNU/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=yPWQfa4CHbw&wmode=transparent',
       },
       true
+    );
+  };
+
+  const renderExpandableSection = (
+    sectionId,
+    sectionTitle,
+    sectionContent,
+    isOpen,
+    toggleIsOpen
+  ) => {
+    return (
+      <div className={moduleStyles.withBorderBottom}>
+        <Button
+          id={sectionId}
+          className={moduleStyles.advancedSettingsButton}
+          styleAsText
+          icon={caret(isOpen)}
+          onClick={toggleIsOpen}
+        >
+          <Heading3>{sectionTitle()}</Heading3>
+        </Button>
+        <div>{isOpen && sectionContent()}</div>
+      </div>
+    );
+  };
+
+  const renderAdvancedSettings = () => {
+    // TODO: this will probably eventually be a setting on the course similar to hasTextToSpeech
+    // currently we're working towards piloting in Javalab in CSA only.
+    const aiTutorAvailable =
+      canEnableAITutor &&
+      sections[0].course.displayName === 'Computer Science A';
+
+    return renderExpandableSection(
+      'uitest-expandable-settings',
+      () => i18n.advancedSettings(),
+      () => (
+        <AdvancedSettingToggles
+          updateSection={(key, val) => updateSection(0, key, val)}
+          section={sections[0]}
+          hasLessonExtras={sections[0].course.hasLessonExtras}
+          hasTextToSpeech={sections[0].course.hasTextToSpeech}
+          aiTutorAvailable={aiTutorAvailable}
+          label={i18n.pairProgramming()}
+        />
+      ),
+      advancedSettingsOpen,
+      toggleAdvancedSettingsOpen
+    );
+  };
+
+  const renderCoteacherSection = () => {
+    return renderExpandableSection(
+      'uitest-expandable-coteacher',
+      () => (
+        <div>
+          {i18n.coteacherAdd()}
+          <InfoHelpTip
+            id={'coteacher-toggle-info'}
+            content={i18n.coteacherAddTooltip()}
+          />
+        </div>
+      ),
+      () => (
+        <CoteacherSettings
+          sectionId={sections[0].id}
+          sectionInstructors={sections[0].sectionInstructors}
+          primaryTeacher={sections[0].primaryInstructor}
+          setCoteachersToAdd={setCoteachersToAdd}
+          coteachersToAdd={coteachersToAdd}
+          sectionMetricInformation={getCoteacherMetricInfoFromSection(
+            sections[0]
+          )}
+        />
+      ),
+      isCoteacherOpen,
+      toggleIsCoteacherOpen
     );
   };
 
@@ -271,29 +372,11 @@ export default function SectionsSetUpContainer({
       <div
         className={classnames(
           moduleStyles.containerWithMarginTop,
-          moduleStyles.withBorderTopAndBottom
+          moduleStyles.withBorderTop
         )}
       >
-        <Button
-          id="uitest-advanced-settings"
-          className={moduleStyles.advancedSettingsButton}
-          styleAsText
-          icon={caret}
-          onClick={toggleAdvancedSettingsOpen}
-        >
-          <Heading3>{i18n.advancedSettings()}</Heading3>
-        </Button>
-        <div>
-          {advancedSettingsOpen && (
-            <AdvancedSettingToggles
-              updateSection={(key, val) => updateSection(0, key, val)}
-              section={sections[0]}
-              hasLessonExtras={sections[0].course.hasLessonExtras}
-              hasTextToSpeech={sections[0].course.hasTextToSpeech}
-              label={i18n.pairProgramming()}
-            />
-          )}
-        </div>
+        {renderCoteacherSection()}
+        {renderAdvancedSettings()}
       </div>
       <div
         className={classnames(
@@ -309,7 +392,7 @@ export default function SectionsSetUpContainer({
             color={Button.ButtonColor.neutralDark}
             onClick={e => {
               e.preventDefault();
-              saveSection(sections[0], true);
+              saveSection(sections[0], true, coteachersToAdd);
             }}
           />
         )}
@@ -328,7 +411,7 @@ export default function SectionsSetUpContainer({
           onClick={e => {
             e.preventDefault();
             setIsSaveInProgress(true);
-            saveSection(sections[0], false);
+            saveSection(sections[0], false, coteachersToAdd);
           }}
         />
       </div>
@@ -339,4 +422,5 @@ export default function SectionsSetUpContainer({
 SectionsSetUpContainer.propTypes = {
   isUsersFirstSection: PropTypes.bool,
   sectionToBeEdited: PropTypes.object,
+  canEnableAITutor: PropTypes.bool,
 };

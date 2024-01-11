@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCase
+class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
   def prepare_scenario
     @csf_workshop = create :workshop, :ended, num_sessions: 3, course: Pd::Workshop::COURSE_CSF, ended_at: Time.zone.today - 1.day
     @csd_workshop = create :workshop, :ended, num_sessions: 3, course: Pd::Workshop::COURSE_CSD, ended_at: Time.zone.today - 2.days
@@ -196,7 +196,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     load_pl_landing @teacher
 
     response = assigns(:landing_page_data)
-    assert_equal ['CSP Support', 'ECS Support', 'Bills Fandom 101'], response[:summarized_plc_enrollments].map {|enrollment| enrollment[:courseName]}
+    assert_equal(['CSP Support', 'ECS Support', 'Bills Fandom 101'], response[:summarized_plc_enrollments].map {|enrollment| enrollment[:courseName]})
   end
 
   def go_to_workshop(workshop, teacher)

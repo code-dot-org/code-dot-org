@@ -38,10 +38,7 @@
   border-bottom: 1px solid $neutral_light;
 
   .text-wrapper {
-
-    @media screen and (max-width: $width-md) {
-      width: 60%;
-    }
+    width: 65%;
 
     @media screen and (max-width: $width-sm) {
       width: 100%;

@@ -1,4 +1,4 @@
-class ParentMailer < ActionMailer::Base
+class ParentMailer < ApplicationMailer
   default from: 'Hadi Partovi <hadi_partovi@code.org>'
   default reply_to: 'Code.org <support@code.org>'
 

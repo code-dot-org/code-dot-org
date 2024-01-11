@@ -4,6 +4,7 @@ require 'dynamic_config/gatekeeper'
 require 'dynamic_config/page_mode'
 require 'cdo/shared_constants'
 require 'cpa'
+require 'policies/child_account'
 
 class ApplicationController < ActionController::Base
   include LocaleHelper
@@ -55,7 +56,7 @@ class ApplicationController < ActionController::Base
     # if params['dbg'] is 'off'.
     def configure_web_console
       if params[:dbg]
-        cookies[:dbg] = (params[:dbg] != 'off') ? 'on' : nil
+        cookies[:dbg] = (params[:dbg] == 'off') ? nil : 'on'
       end
       @use_web_console = cookies[:dbg]
     end
@@ -159,6 +160,11 @@ class ApplicationController < ActionController::Base
     :us_state,
     :country_code,
     {school_info_attributes: SCHOOL_INFO_ATTRIBUTES},
+    {
+      authentication_options_attributes: [
+        :email,
+      ],
+    },
   ]
 
   PERMITTED_USER_FIELDS.concat(UI_TEST_ATTRIBUTES) if rack_env?(:test, :development)
@@ -345,9 +351,11 @@ class ApplicationController < ActionController::Base
       lockout_path,
       # The locked out student needs access to the policy consent API's
       policy_compliance_child_account_consent_path,
+      # The age interstitial when the age isn't known will block the lockout page
+      users_set_age_path,
     ].include?(request.path)
 
-    redirect_to lockout_path unless current_user.child_account_policy_compliant?
+    redirect_to lockout_path unless Policies::ChildAccount.compliant?(current_user) || Policies::ChildAccount.user_predates_policy?(current_user)
   end
 
   private def pairing_still_enabled

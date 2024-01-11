@@ -32,7 +32,7 @@ module Crowdin
     # @options options [String, nil] :locale_subdir name of directory within
     #  locale-specific directory to which files should be downloaded
     # @options options [Logger, nil] :logger
-    def initialize(project, options={})
+    def initialize(project, options = {})
       @project = project
       @etags_json = options.fetch(:etags_json, "/tmp/#{project.id}_etags.json")
       @files_to_download_json = options.fetch(:files_to_download_json, "/tmp/#{project.id}_files_to_download.json")
@@ -118,7 +118,7 @@ module Crowdin
   end
 
   class AWSError < StandardError
-    def initialize(msg="AWS Error")
+    def initialize(msg = "AWS Error")
       super
     end
   end

@@ -173,12 +173,12 @@ class ChannelsApi < Sinatra::Base
 
     # Channels for project-backed levels are created without a project_type. The
     # type is then determined by client-side logic when the project is updated.
-    project_type = value.delete('projectType')
+    project_type = value["projectType"]
 
     begin
       value = Projects.new(get_storage_id).update(id, value, request.ip, locale: request.locale, project_type: project_type)
     rescue ArgumentError, OpenSSL::Cipher::CipherError, ProfanityPrivacyError, Projects::ValidationError => exception
-      if exception.class == ProfanityPrivacyError
+      if exception.instance_of?(ProfanityPrivacyError)
         dont_cache
         status 422
         content_type :json
@@ -207,12 +207,16 @@ class ChannelsApi < Sinatra::Base
   post %r{/v3/channels/([^/]+)/publish/([^/]+)} do |channel_id, project_type|
     not_authorized unless owns_channel?(channel_id)
     bad_request unless ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-    forbidden if sharing_disabled? && CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-    forbidden if Projects.in_restricted_share_mode(channel_id, project_type)
+    forbidden('Sharing disabled for user account') if sharing_disabled? && CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
+    forbidden('Project in restricted share mode') if Projects.in_restricted_share_mode(channel_id, project_type)
 
-    # Once we have back-filled the project_type column for all channels,
-    # it will no longer be necessary to specify the project type here.
-    Projects.new(get_storage_id).publish(channel_id, project_type, current_user).to_json
+    begin
+      # Once we have back-filled the project_type column for all channels,
+      # it will no longer be necessary to specify the project type here.
+      Projects.new(get_storage_id).publish(channel_id, project_type, current_user).to_json
+    rescue Projects::PublishError => exception
+      forbidden(exception.message)
+    end
   end
 
   #

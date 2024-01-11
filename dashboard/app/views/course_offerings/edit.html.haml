@@ -1,3 +1,3 @@
-%script{src: webpack_asset_path('js/course_offerings/edit.js'), data: {course_offering_editor: @course_offering.summarize_for_edit.to_json}}
+%script{src: webpack_asset_path('js/course_offerings/edit.js'), data: {courseOfferingEditor: @course_offering.summarize_for_edit.to_json, selfPacedPlCourseOfferings: @self_paced_pl_course_offerings.to_json, professionalLearningProgramPaths: @professional_learning_program_paths.to_json, videos: @videos.to_json}}
 
 #course_offering_editor

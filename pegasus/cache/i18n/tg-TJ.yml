@@ -1,355 +1,355 @@
 ---
 tg-TJ:
-  hour_of_code: Соати рамз
-  hello: Салом ҷаҳон
-  upgrade_ie_link: Маълумоти бештар
-  csedweek_dates: 8-14-уми декабри соли 2014
-  n_have_learned_an_hoc: "<h1>Шумо метавонед</h1><h2>Соати рамзи гузаронидашударо</h2><h3>#
-    дида бароед</h3>"
+  accelerated_gradelevel: 'Синну сол: 10-18'
+  alice_beyond_gradelevel: Мактаби миёна +
+  all_ages: 'Синну сол: Ҳама'
+  allcancode_gradelevel: 'Синну сол: 5-10'
   anybody_can_learn: Ҳар кас метавонад рамзро омӯзад.
-  learn_now: Ҳозир омӯзед
-  name: Ном
-  email: Почтаи электронӣ
-  zipcode: Рамзи ZIP ё кишвар
-  submit: Пешниҳод кардан
-  og_title: Ҳар як фарзанд бояд имконият дошта бошад
-  hoc2014_students: Хонандагон
-  hoc2014_try: Дида бароед
-  hoc2014_teachers: Муаллимон
-  hoc2014_everyone: Ҳар кас
-  hoc2014_whatishoc: Соати рамз чист?
-  csedweek_map_signup: Худро барои чорабинӣ ба қайд гиред
-  csedweek_map_search_placeholder: Чорабиниҳои Соати рамзро ҷустуҷӯ кунед
-  csedweek_map_search_search: Ҷустуҷӯ
-  csedweek_map_legend_event: Чорабинии Соати рамз
-  csedweek_map_legend_cs_tech_jam: Чорабинии махсус
+  appinventor_beyond_gradelevel: Мактаби миёна +
+  appinventor_gradelevel: Мактаби миёна +
+  arduino_beyond_gradelevel: Донишкада +
+  are_you_teacher: Шумо муаллим ҳастед?
+  artist_gradelevel: 'Синну сол: 8-108'
+  beginner: Навкор
+  beyond_an_hour: Баъд аз Соати рамз
+  bitsbox_gradelevel: Ибтидоӣ
+  bitsbox_platformtext: Браузерҳои веби ҳозиразамон
+  blockly_gradelevel: 'Синну сол: Ҳама'
+  boxisland_gradelevel: Ибтидоӣ
+  boys: Бачагон
+  california_button: Маълумоти бештар
+  cargobot_beyond_gradelevel: 'Синну сол: 8+'
   cded_sign_up: Худро ба қайд гиред
   cded_try_it: Дида бароед
-  try_now: Маълумоти бештар
-  california_button: Маълумоти бештар
-  view_english_site: Намоиш додан дар забони англисӣ
-  all_ages: 'Синну сол: Ҳама'
-  beginner: Навкор
-  n_participants: "# иштирокчӣ"
-  go: Гузаштан
-  thank_you_: Ташаккур!
-  third_party_gradelevel_kto8: Синфҳои K-8
-  third_party_gradelevel_kto2: Синфҳои K-2
-  third_party_gradelevel_2to8: Синфҳои 2-8
-  third_party_gradelevel_4to12: Синфҳои 4-12
-  third_party_gradelevel_5to12: Синфҳои 5-12
-  third_party_gradelevel_6plus: Синфҳои 6+
-  third_party_organization: Созмондиҳӣ
-  country: Кишвар
   city: Шаҳр
-  gender: Ҷинс
-  boys: Бачагон
-  girls: Духтарон
-  share_on_twitter: Дар Twitter мубодила кунед
-  beyond_an_hour: Баъд аз Соати рамз
-  i_agree: Ман розӣ ҳастам
-  participant_student: Донишҷӯ
-  participant_parent: Волид
-  participant_educator: Устод
-  print_all: Ҳамаро чоп кардан
-  girl: Духтар
-  studiobar_hoc_title: Соати рамз
-  studiobar_frozen_title: Соати рамз
-  studiobar_shop_title: Дукон
-  homepage_slot_text_hoc: Соати рамз
-  homepage_slot_text_course4: Дарси 4
-  homepage_slot_text_shop: Дукон
-  homepage_action_text_hoc: Соати рамз барои ҳар як донишҷӯ.
-  homepage_action_text_join_us: Ба мо ҳамроҳ шавед
-  homepage_action_text_sign_up: Худро ба қайд гиред
-  homepage_action_text_try_it: Дида бароед
-  homepage_action_text_volunteers: Валонтёрон бо дониши техникӣ лозиманд
-  homepage_action_text_codevideo: Видеоро тамошо кунед
-  homepage_action_text_teachervideo: Видеоро тамошо кунед
-  homepage_action_text_watchvideo: Видеоро тамошо кунед
-  homepage_action_text_learn: Омӯзишро оғоз намоед
-  homepage_signpetition_dropdown_text: Ман розӣ ҳастам
-  homepage_banner_text_link: Маълумоти бештар
-  homepage_banner_privacy_link: Маълумоти бештар
-  homepage_banner_20k_teachers_link: Маълумоти бештар
-  homepage_banner_40k_teachers_link: Маълумоти бештар
-  homepage_slot_text_title_hoc: Соати рамз
-  homepage_slot_text_title_students: Хонандагон
-  homepage_slot_text_link_middle: Миёна
-  homepage_slot_text_link_high: Донишкада
-  homepage_below_hero_announcement_link_text: Маълумоти бештар
-  contact_form_topic_other: Дигар
+  class_submission_in_school_exploring_computer_science: Омӯзиши илми компютерӣ
+  class_submission_level_elementary: Ибтидоӣ
+  class_submission_level_high_school: Донишкада
+  class_submission_level_middle_school: Миёна
+  class_submission_online: Онлайн
+  codea_beyond_gradelevel: Донишкада +
+  codeavengers_beyond_gradelevel: Мактаби миёна +
+  codeavengers_beyond_platformtext: Браузерҳои веби ҳозиразамон
+  codeavengers_gradelevel: Мактаби миёна +
+  codeavengers_platformtext: Браузерҳои веби ҳозиразамон
+  codecademy_beyond_gradelevel: Донишкада
+  codecademy_beyond_platformtext: Браузерҳои веби ҳозиразамон. Барномаҳои iOS, Android
+  codecademy_gradelevel: Донишкада
+  codecademy_platformtext: Браузерҳои веби ҳозиразамон. Барномаҳои iOS, Android
+  codecombat_beyond_gradelevel: Мактаби миёна +
+  codecombat_gradelevel: Мактаби миёна +
+  codehs_beyond_gradelevel: Донишкада
+  codehs_gradelevel: Донишкада
+  codeintl_gradelevel: 'Синну сол: 4-104'
+  codemonkey_gradelevel: Мактаби миёна +
+  codemonkey_platformtext: Браузерҳои веби ҳозиразамон
+  codeorg_beyond_gradelevel: 'Синну сол: 4-104'
+  codeorg_gradelevel: 'Синну сол: 4-104'
+  codespark_gradelevel: Ибтидоӣ
+  codespark_platformtext: iOS, Android (ё браузери веб)
+  codesters_gradelevel: 'Синну сол: 12-14'
+  codesters_platformtext: Браузерҳои веби ҳозиразамон
+  condcards_gradelevel: 'Синну сол: 8-12'
   contact_form_label_email: Суроғаи почтаи электронии шумо
   contact_form_label_message: Паём
   contact_form_label_submit: Фиристодани паём
-  class_submission_in_school_exploring_computer_science: Омӯзиши илми компютерӣ
-  class_submission_online: Онлайн
-  class_submission_level_elementary: Ибтидоӣ
-  class_submission_level_middle_school: Миёна
-  class_submission_level_high_school: Донишкада
-  mc_gradelevel: 'Синну сол: 6-106'
-  sports_watch_video: Видеоро тамошо кунед
-  are_you_teacher: Шумо муаллим ҳастед?
-  volunteer_engineer_submission_field_name: Ном
-  volunteer_engineer_submission_field_name_placeholder: Номи пурра
-  volunteer_engineer_submission_field_location: Ҷойгиршавӣ
-  volunteer_engineer_submission_field_email: Суроғаи почтаи электронӣ
-  volunteer_engineer_submission_field_email_placeholder: Суроғаи почтаи электронӣ
-  volunteer_engineer_submission_submit: Пешниҳод кардан
-  volunteer_engineer_submission_commitment_three_hrs_per_week: 3 соат дар як ҳафта
-  volunteer_engineer_submission_commitment_five_hrs_per_week: 5 соат дар як ҳафта
-  volunteer_engineer_submission_commitment_more: БЕШТАР
-  volunteer_engineer_submission_distance_8: 5 км
-  volunteer_engineer_submission_distance_16: 10 км
-  volunteer_engineer_submission_distance_24: 15 км
-  volunteer_engineer_submission_distance_32: 20 км
-  volunteer_engineer_submission_num_volunteers_5: 5 волонтёр
-  volunteer_engineer_submission_num_volunteers_10: 10 волонтёр
-  volunteer_engineer_submission_num_volunteers_25: 25 волонтёр
-  volunteer_engineer_submission_num_volunteers_50: 50 волонтёр
-  dashboard_announce_learn_more_button: Маълумоти бештар
-  dashboard_course_ecs: Омӯзиши илми компютерӣ
-  dashboard_action_delete: Нест мекунед
+  contact_form_topic_other: Дигар
+  country: Кишвар
+  course1_gradelevel: 'Синну сол: 4-6'
+  course1_name: Дарси 1
+  course2_gradelevel: 'Синну сол: 6-18'
+  course2_name: Дарси 2
+  course3_gradelevel: 'Синну сол: 8-18'
+  course3_name: Дарси 3
+  course4_gradelevel: 'Синну сол: 10-18'
+  course4_name: Дарси 4
+  coursea-2017_gradelevel: 'Синну сол: 4-7'
+  coursea-2018_gradelevel: 'Синну сол: 4-7'
+  coursea-2019_gradelevel: 'Синну сол: 4-7'
+  coursea-2020_gradelevel: 'Синну сол: 4-7'
+  coursea-2021_gradelevel: 'Синну сол: 4-7'
+  coursea-2022_gradelevel: 'Синну сол: 4-7'
+  coursea_gradelevel: 'Синну сол: 4-7'
+  courseb-2017_gradelevel: 'Синну сол: 5-8'
+  courseb-2018_gradelevel: 'Синну сол: 5-8'
+  courseb-2019_gradelevel: 'Синну сол: 5-8'
+  courseb-2020_gradelevel: 'Синну сол: 5-8'
+  courseb-2021_gradelevel: 'Синну сол: 5-8'
+  courseb-2022_gradelevel: 'Синну сол: 5-8'
+  courseb_gradelevel: 'Синну сол: 5-8'
+  coursec-2017_gradelevel: 'Синну сол: 6-10'
+  coursec-2018_gradelevel: 'Синну сол: 6-10'
+  coursec-2019_gradelevel: 'Синну сол: 6-10'
+  coursec-2020_gradelevel: 'Синну сол: 6-10'
+  coursec-2021_gradelevel: 'Синну сол: 6-10'
+  coursec-2022_gradelevel: 'Синну сол: 6-10'
+  coursec_gradelevel: 'Синну сол: 6-10'
+  coursed-2017_gradelevel: 'Синну сол: 7-11'
+  coursed-2018_gradelevel: 'Синну сол: 7-11'
+  coursed-2019_gradelevel: 'Синну сол: 7-11'
+  coursed-2020_gradelevel: 'Синну сол: 7-11'
+  coursed-2021_gradelevel: 'Синну сол: 7-11'
+  coursed-2022_gradelevel: 'Синну сол: 7-11'
+  coursed_gradelevel: 'Синну сол: 7-11'
+  coursee-2017_gradelevel: 'Синну сол: 8-12'
+  coursee-2018_gradelevel: 'Синну сол: 8-12'
+  coursee-2019_gradelevel: 'Синну сол: 8-12'
+  coursee-2020_gradelevel: 'Синну сол: 8-12'
+  coursee-2021_gradelevel: 'Синну сол: 8-12'
+  coursee-2022_gradelevel: 'Синну сол: 8-12'
+  coursee_gradelevel: 'Синну сол: 8-12'
+  coursef-2017_gradelevel: 'Синну сол: 9-13'
+  coursef-2018_gradelevel: 'Синну сол: 9-13'
+  coursef-2019_gradelevel: 'Синну сол: 9-13'
+  coursef-2020_gradelevel: 'Синну сол: 9-13'
+  coursef-2021_gradelevel: 'Синну сол: 9-13'
+  coursef-2022_gradelevel: 'Синну сол: 9-13'
+  coursef_gradelevel: 'Синну сол: 9-13'
+  coursera_beyond_gradelevel: Донишгоҳ
+  coursera_beyond_platformtext: Браузерҳои ҳозиразамон
+  csedweek_dates: 8-14-уми декабри соли 2014
+  csedweek_map_legend_cs_tech_jam: Чорабинии махсус
+  csedweek_map_legend_event: Чорабинии Соати рамз
+  csedweek_map_search_placeholder: Чорабиниҳои Соати рамзро ҷустуҷӯ кунед
+  csedweek_map_search_search: Ҷустуҷӯ
+  csedweek_map_signup: Худро барои чорабинӣ ба қайд гиред
+  csfirst_gradelevel: 'Синну сол: 9-14'
+  csfirst_platformtext: Браузерҳои веби ҳозиразамон
   dashboard_action_confirm: Нест мекунед?
-  dashboard_surveys_answers: Тадқиқҳо
-  dashboard_percent: Фоиз
-  dashboard_filter_all: Ҳама
-  dashboard_navigation_section_community: Дастгирӣ
-  dashboard_navigation_view_progress: Пешрафт
-  dashboard_navigation_view_stats: Омор
-  dashboard_progress_in_progress: иҷро мешавад
-  dashboard_progress_not_completed: иҷро нашуд
-  dashboard_sections_table_students: Хонандагон
-  dashboard_sections_close: Пӯшидан
-  dashboard_students_name: Ном
-  dashboard_students_progress: Пешрафт
-  dashboard_students_male: Мард
-  dashboard_students_female: Зан
-  dashboard_students_url: Суроғаи URL
+  dashboard_action_delete: Нест мекунед
+  dashboard_announce_learn_more_button: Маълумоти бештар
+  dashboard_correctness_incorrect: Нодуруст
   dashboard_course1: 'Дарси 1:'
   dashboard_course2: 'Дарси 2:'
   dashboard_course3: 'Дарси 3:'
   dashboard_course4: 'Дарси 4:'
-  dashboard_glossary: Вожанома
+  dashboard_course_ecs: Омӯзиши илми компютерӣ
   dashboard_curriculum_ecs: 'Омӯзиши илми компютерӣ:'
-  dashboard_grade_other: Дигар
-  dashboard_login_word: Калима
-  dashboard_login_none: Почтаи электронӣ
-  dashboard_stage: Давра
-  dashboard_puzzle: Муаммо
-  dashboard_correctness_incorrect: Нодуруст
-  dashboard_submission_submitted: Пешниҳод карда шудааст
-  dashboard_submission_in_progress: Иҷро мешавад
-  dashboard_teacher: Муаллим
-  dashboard_student: Донишҷӯ
   dashboard_faq: Саволҳои роиҷ
-  host_an_hour: Ташкилкунандаи Соати рамз шавед
-  learn_more: Маълумоти бештар
-  learn_sign_up_button: Худро ба қайд гиред
-  how_to_teach_hoc: Тарзи гузаронидани дарси як Соати рамз
-  previous: Қаблӣ
-  next: Навбатӣ
-  khan_name: Муаррифӣ ба JavaScript
-  khanes_name: Муаррифӣ ба JavaScript
-  khanpt_name: Муаррифӣ ба JavaScript
-  khanhe_name: Муаррифӣ ба JavaScript
-  khanfr_name: Муаррифӣ ба JavaScript
-  khanpl_name: Муаррифӣ ба JavaScript
-  course1_name: Дарси 1
-  course2_name: Дарси 2
-  course3_name: Дарси 3
-  course4_name: Дарси 4
-  codeorg_gradelevel: 'Синну сол: 4-104'
-  codeintl_gradelevel: 'Синну сол: 4-104'
-  khan_gradelevel: Мактаби миёна +
-  khanes_gradelevel: Мактаби миёна +
-  khanpt_gradelevel: Мактаби миёна +
-  khanhe_gradelevel: Мактаби миёна +
-  khanfr_gradelevel: Мактаби миёна +
-  khanpl_gradelevel: Мактаби миёна +
-  tynker_gradelevel: 'Синну сол: 5-13'
-  scratch_gradelevel: 'Синну сол: 8+'
-  lightbot_gradelevel: 'Синну сол: Ҳама'
-  thinkersmith_gradelevel: 'Синну сол: Ҳама'
-  condcards_gradelevel: 'Синну сол: 8-12'
-  lightbotintl_gradelevel: 'Синну сол: Ҳама'
-  codehs_gradelevel: Донишкада
-  codecademy_gradelevel: Донишкада
-  codecombat_gradelevel: Мактаби миёна +
-  codemonkey_gradelevel: Мактаби миёна +
-  codeavengers_gradelevel: Мактаби миёна +
-  processing_gradelevel: Донишкада
-  robomind_gradelevel: 'Синну сол: 8-13'
-  groklearning_gradelevel: Мактаби миёна +
-  quorum_gradelevel: Мактаби миёна +
-  codespark_gradelevel: Ибтидоӣ
-  kodable_gradelevel: Ибтидоӣ
-  tynkerapp_gradelevel: 'Синну сол: 5-13'
-  robomindnl_gradelevel: 'Синну сол: 8-13'
-  flappy_gradelevel: 'Синну сол: 6-106'
-  bitsbox_gradelevel: Ибтидоӣ
-  makeschool_gradelevel: Донишкада
-  touchdevelop_gradelevel: Донишкада
-  appinventor_gradelevel: Мактаби миёна +
-  blockly_gradelevel: 'Синну сол: Ҳама'
-  thinkersmith2_gradelevel: 'Синну сол: 8+'
-  kodableunplugged_gradelevel: 'Синну сол: 8-13'
-  projguts_gradelevel: 'Синну сол: 10-13'
-  hourofcode_gradelevel: 'Синну сол: 6-106'
-  frozen_gradelevel: 'Синну сол: 8-108'
-  starwars_gradelevel: 'Синну сол: 6-106'
-  playlab_gradelevel: 'Синну сол: 6-14'
-  infinity_gradelevel: 'Синну сол: 6-14'
-  artist_gradelevel: 'Синну сол: 8-108'
-  monstercoding_gradelevel: 'Синну сол: 5-13'
-  allcancode_gradelevel: 'Синну сол: 5-10'
-  csfirst_gradelevel: 'Синну сол: 9-14'
-  boxisland_gradelevel: Ибтидоӣ
-  codesters_gradelevel: 'Синну сол: 12-14'
-  texasinstruments_gradelevel: 'Синну сол: 13-16'
-  teacherled_gradelevel: 'Синну сол: 5+'
-  course1_gradelevel: 'Синну сол: 4-6'
-  course2_gradelevel: 'Синну сол: 6-18'
-  course3_gradelevel: 'Синну сол: 8-18'
-  course4_gradelevel: 'Синну сол: 10-18'
-  coursea_gradelevel: 'Синну сол: 4-7'
-  courseb_gradelevel: 'Синну сол: 5-8'
-  coursec_gradelevel: 'Синну сол: 6-10'
-  coursed_gradelevel: 'Синну сол: 7-11'
-  coursee_gradelevel: 'Синну сол: 8-12'
-  coursef_gradelevel: 'Синну сол: 9-13'
-  coursea-2017_gradelevel: 'Синну сол: 4-7'
-  courseb-2017_gradelevel: 'Синну сол: 5-8'
-  coursec-2017_gradelevel: 'Синну сол: 6-10'
-  coursed-2017_gradelevel: 'Синну сол: 7-11'
-  coursee-2017_gradelevel: 'Синну сол: 8-12'
-  coursef-2017_gradelevel: 'Синну сол: 9-13'
-  coursea-2018_gradelevel: 'Синну сол: 4-7'
-  courseb-2018_gradelevel: 'Синну сол: 5-8'
-  coursec-2018_gradelevel: 'Синну сол: 6-10'
-  coursed-2018_gradelevel: 'Синну сол: 7-11'
-  coursee-2018_gradelevel: 'Синну сол: 8-12'
-  coursef-2018_gradelevel: 'Синну сол: 9-13'
-  coursea-2019_gradelevel: 'Синну сол: 4-7'
-  courseb-2019_gradelevel: 'Синну сол: 5-8'
-  coursec-2019_gradelevel: 'Синну сол: 6-10'
-  coursed-2019_gradelevel: 'Синну сол: 7-11'
-  coursee-2019_gradelevel: 'Синну сол: 8-12'
-  coursef-2019_gradelevel: 'Синну сол: 9-13'
-  coursea-2020_gradelevel: 'Синну сол: 4-7'
-  courseb-2020_gradelevel: 'Синну сол: 5-8'
-  coursec-2020_gradelevel: 'Синну сол: 6-10'
-  coursed-2020_gradelevel: 'Синну сол: 7-11'
-  coursee-2020_gradelevel: 'Синну сол: 8-12'
-  coursef-2020_gradelevel: 'Синну сол: 9-13'
-  coursea-2021_gradelevel: 'Синну сол: 4-7'
-  courseb-2021_gradelevel: 'Синну сол: 5-8'
-  coursec-2021_gradelevel: 'Синну сол: 6-10'
-  coursed-2021_gradelevel: 'Синну сол: 7-11'
-  coursee-2021_gradelevel: 'Синну сол: 8-12'
-  coursef-2021_gradelevel: 'Синну сол: 9-13'
-  coursea-2022_gradelevel: 'Синну сол: 4-7'
-  courseb-2022_gradelevel: 'Синну сол: 5-8'
-  coursec-2022_gradelevel: 'Синну сол: 6-10'
-  coursed-2022_gradelevel: 'Синну сол: 7-11'
-  coursee-2022_gradelevel: 'Синну сол: 8-12'
-  coursef-2022_gradelevel: 'Синну сол: 9-13'
-  accelerated_gradelevel: 'Синну сол: 10-18'
-  khan_platformtext: Браузерҳои веби ҳозиразамон
-  khanes_platformtext: Браузерҳои веби ҳозиразамон
-  khanpt_platformtext: Браузерҳои веби ҳозиразамон
-  khanhe_platformtext: Браузерҳои веби ҳозиразамон
-  khanfr_platformtext: Браузерҳои веби ҳозиразамон
-  khanpl_platformtext: Браузерҳои веби ҳозиразамон
-  tynker_platformtext: Браузерҳои веби ҳозиразамон
-  lightbotintl_platformtext: iOS, Android (ё браузери веб)
-  codecademy_platformtext: Браузерҳои веби ҳозиразамон. Барномаҳои iOS, Android
-  codemonkey_platformtext: Браузерҳои веби ҳозиразамон
-  codeavengers_platformtext: Браузерҳои веби ҳозиразамон
-  processing_platformtext: Браузерҳои веби ҳозиразамон
-  robomind_platformtext: Браузерҳои веби ҳозиразамон, Веби мобилӣ
-  groklearning_platformtext: Браузерҳои веби ҳозиразамон
-  codespark_platformtext: iOS, Android (ё браузери веб)
-  robomindnl_platformtext: Браузерҳои веби ҳозиразамон, Веби мобилӣ
-  bitsbox_platformtext: Браузерҳои веби ҳозиразамон
-  makeschool_platformtext: Браузерҳои веби ҳозиразамон
-  touchdevelop_platformtext: Браузерҳои ҳозиразамон, смартфонҳо, ҳамаи дастгоҳҳо
-  csfirst_platformtext: Браузерҳои веби ҳозиразамон
-  codesters_platformtext: Браузерҳои веби ҳозиразамон
-  starwars_shortdescription: Барномарезии дройдро омӯзед ва бозии "Ҷанги ситораҳо
-    дар галактикаи дур"-ро эҷод намоед.
-  starwars_longdescription: Барномарезии дройдро омӯзед ва бозии "Ҷанги ситораҳо дар
-    галактикаи дур"-ро эҷод намоед.
-  codeorg_beyond_gradelevel: 'Синну сол: 4-104'
-  khan_beyond_gradelevel: Мактаби миёна +
-  tynker_beyond_gradelevel: 'Синну сол: 5-13'
-  scratch_beyond_gradelevel: 'Синну сол: 8+'
-  lightbot_beyond_gradelevel: 'Синну сол: Ҳама'
-  codecademy_beyond_gradelevel: Донишкада
-  kodable_beyond_gradelevel: Ибтидоӣ
-  scratchjr_beyond_gradelevel: Ибтидоӣ
-  hopscotch_beyond_gradelevel: Мактаби миёна +
-  pocketcode_beyond_gradelevel: Мактаби миёна +
-  groklearning_beyond_gradelevel: Мактаби миёна +
-  hacketyhack_beyond_gradelevel: Донишкада
-  robomind_beyond_gradelevel: 'Синну сол: 8-13'
-  makeschool_beyond_gradelevel: Донишкада
-  appinventor_beyond_gradelevel: Мактаби миёна +
-  touchdevelop_beyond_gradelevel: Донишкада
-  codehs_beyond_gradelevel: Донишкада
-  udemy_beyond_gradelevel: Донишкада +
-  lynda_beyond_gradelevel: Донишкада +
+  dashboard_filter_all: Ҳама
+  dashboard_glossary: Вожанома
+  dashboard_grade_other: Дигар
+  dashboard_login_none: Почтаи электронӣ
+  dashboard_login_word: Калима
+  dashboard_navigation_section_community: Дастгирӣ
+  dashboard_navigation_view_progress: Пешрафт
+  dashboard_navigation_view_stats: Омор
+  dashboard_percent: Фоиз
+  dashboard_progress_in_progress: иҷро мешавад
+  dashboard_progress_not_completed: иҷро нашуд
+  dashboard_puzzle: Муаммо
+  dashboard_sections_close: Пӯшидан
+  dashboard_sections_table_students: Хонандагон
+  dashboard_stage: Давра
+  dashboard_student: Донишҷӯ
+  dashboard_students_female: Зан
+  dashboard_students_male: Мард
+  dashboard_students_name: Ном
+  dashboard_students_progress: Пешрафт
+  dashboard_students_url: Суроғаи URL
+  dashboard_submission_in_progress: Иҷро мешавад
+  dashboard_submission_submitted: Пешниҳод карда шудааст
+  dashboard_surveys_answers: Тадқиқҳо
+  dashboard_teacher: Муаллим
   edx_beyond_gradelevel: Донишгоҳ
-  coursera_beyond_gradelevel: Донишгоҳ
-  udacity_beyond_gradelevel: Донишгоҳ
-  teachingtree_beyond_gradelevel: Донишгоҳ
-  kodu_beyond_gradelevel: 'Синну сол: 8+'
-  cargobot_beyond_gradelevel: 'Синну сол: 8+'
-  kidsruby_beyond_gradelevel: 'Синну сол: 12+'
-  w3schools_beyond_gradelevel: 'Синну сол: 12+'
-  codeavengers_beyond_gradelevel: Мактаби миёна +
-  mozilla_beyond_gradelevel: 'Синну сол: 12+'
-  codecombat_beyond_gradelevel: Мактаби миёна +
-  codea_beyond_gradelevel: Донишкада +
-  lego_beyond_gradelevel: Мактаби миёна +
-  finch_beyond_gradelevel: 'Синну сол: 8+'
-  arduino_beyond_gradelevel: Донишкада +
-  processing_beyond_gradelevel: Донишкада
-  alice_beyond_gradelevel: Мактаби миёна +
-  sphero_beyond_gradelevel: 'Синну сол: 8+'
-  khan_beyond_platformtext: Браузерҳои веби ҳозиразамон
-  lightbot_beyond_platformtext: iOS, Android (ё браузери веб)
-  codecademy_beyond_platformtext: Браузерҳои веби ҳозиразамон. Барномаҳои iOS, Android
-  groklearning_beyond_platformtext: Браузерҳои веби ҳозиразамон
-  hacketyhack_beyond_platformtext: Насб дар мизи корӣ
-  robomind_beyond_platformtext: Браузерҳои веби ҳозиразамон, Веби мобилӣ
-  makeschool_beyond_platformtext: Браузерҳои веби ҳозиразамон
-  touchdevelop_beyond_platformtext: Браузерҳои ҳозиразамон, смартфонҳо, ҳамаи дастгоҳҳо
-  udemy_beyond_platformtext: Дар асоси веб
   edx_beyond_platformtext: Браузерҳои ҳозиразамон
-  coursera_beyond_platformtext: Браузерҳои ҳозиразамон
-  udacity_beyond_platformtext: Браузерҳои ҳозиразамон
-  teachingtree_beyond_platformtext: Дар асоси веб
-  kidsruby_beyond_platformtext: Насб дар мизи корӣ
-  w3schools_beyond_platformtext: Браузерҳои веби ҳозиразамон
-  codeavengers_beyond_platformtext: Браузерҳои веби ҳозиразамон
-  mozilla_beyond_platformtext: Браузерҳои веби ҳозиразамон
-  lego_beyond_platformtext: Харидани робот
+  email: Почтаи электронӣ
+  finch_beyond_gradelevel: 'Синну сол: 8+'
   finch_beyond_platformtext: Харидани робот
-  processing_beyond_platformtext: Браузерҳои веби ҳозиразамон
-  sphero_beyond_platformtext: Харидани робот
+  flappy_gradelevel: 'Синну сол: 6-106'
+  footer_support: Дастгирӣ
+  frozen_gradelevel: 'Синну сол: 8-108'
+  gender: Ҷинс
+  girl: Духтар
+  girls: Духтарон
+  go: Гузаштан
+  groklearning_beyond_gradelevel: Мактаби миёна +
+  groklearning_beyond_platformtext: Браузерҳои веби ҳозиразамон
+  groklearning_gradelevel: Мактаби миёна +
+  groklearning_platformtext: Браузерҳои веби ҳозиразамон
+  hacketyhack_beyond_gradelevel: Донишкада
+  hacketyhack_beyond_platformtext: Насб дар мизи корӣ
   header_courses: Дарсҳо
-  header_project_gallery: Лоиҳаҳо
   header_educate_hoc: Соати рамз
+  header_project_gallery: Лоиҳаҳо
   header_stats: Омор
-  user_header_label: Салом %{username}
-  user_header_settings: Ҳисоби ман
-  user_header_logout: Хориҷ шудан
-  user_header_signin: Ворид шудан
-  user_header_create: 'Сохтан '
+  hello: Салом ҷаҳон
+  hoc2014_everyone: Ҳар кас
+  hoc2014_students: Хонандагон
+  hoc2014_teachers: Муаллимон
+  hoc2014_try: Дида бароед
+  hoc2014_whatishoc: Соати рамз чист?
   hoc2018_creativity_create: Сохтан
+  hoc2018_dance_amazon_about_future_engineer_button: Маълумоти бештар
   hoc2018_mc_homepage_join_us: Ба мо ҳамроҳ шавед
   hoc2018_mc_homepage_try_it: Дида бароед
-  hoc2018_dance_amazon_about_future_engineer_button: Маълумоти бештар
-  footer_support: Дастгирӣ
   hoc2022_landing_page_create_title: Сохтан
+  homepage_action_text_codevideo: Видеоро тамошо кунед
+  homepage_action_text_hoc: Соати рамз барои ҳар як донишҷӯ.
+  homepage_action_text_join_us: Ба мо ҳамроҳ шавед
+  homepage_action_text_learn: Омӯзишро оғоз намоед
+  homepage_action_text_sign_up: Худро ба қайд гиред
+  homepage_action_text_teachervideo: Видеоро тамошо кунед
+  homepage_action_text_try_it: Дида бароед
+  homepage_action_text_volunteers: Валонтёрон бо дониши техникӣ лозиманд
+  homepage_action_text_watchvideo: Видеоро тамошо кунед
+  homepage_banner_20k_teachers_link: Маълумоти бештар
+  homepage_banner_40k_teachers_link: Маълумоти бештар
+  homepage_banner_privacy_link: Маълумоти бештар
+  homepage_banner_text_link: Маълумоти бештар
+  homepage_below_hero_announcement_link_text: Маълумоти бештар
+  homepage_signpetition_dropdown_text: Ман розӣ ҳастам
+  homepage_slot_text_course4: Дарси 4
+  homepage_slot_text_hoc: Соати рамз
+  homepage_slot_text_link_high: Донишкада
+  homepage_slot_text_link_middle: Миёна
+  homepage_slot_text_shop: Дукон
+  homepage_slot_text_title_hoc: Соати рамз
+  homepage_slot_text_title_students: Хонандагон
+  hopscotch_beyond_gradelevel: Мактаби миёна +
+  host_an_hour: Ташкилкунандаи Соати рамз шавед
+  hour_of_code: Соати рамз
+  hourofcode_gradelevel: 'Синну сол: 6-106'
+  how_to_teach_hoc: Тарзи гузаронидани дарси як Соати рамз
+  i_agree: Ман розӣ ҳастам
+  infinity_gradelevel: 'Синну сол: 6-14'
+  khan_beyond_gradelevel: Мактаби миёна +
+  khan_beyond_platformtext: Браузерҳои веби ҳозиразамон
+  khan_gradelevel: Мактаби миёна +
+  khan_name: Муаррифӣ ба JavaScript
+  khan_platformtext: Браузерҳои веби ҳозиразамон
+  khanes_gradelevel: Мактаби миёна +
+  khanes_name: Муаррифӣ ба JavaScript
+  khanes_platformtext: Браузерҳои веби ҳозиразамон
+  khanfr_gradelevel: Мактаби миёна +
+  khanfr_name: Муаррифӣ ба JavaScript
+  khanfr_platformtext: Браузерҳои веби ҳозиразамон
+  khanhe_gradelevel: Мактаби миёна +
+  khanhe_name: Муаррифӣ ба JavaScript
+  khanhe_platformtext: Браузерҳои веби ҳозиразамон
+  khanpl_gradelevel: Мактаби миёна +
+  khanpl_name: Муаррифӣ ба JavaScript
+  khanpl_platformtext: Браузерҳои веби ҳозиразамон
+  khanpt_gradelevel: Мактаби миёна +
+  khanpt_name: Муаррифӣ ба JavaScript
+  khanpt_platformtext: Браузерҳои веби ҳозиразамон
+  kidsruby_beyond_gradelevel: 'Синну сол: 12+'
+  kidsruby_beyond_platformtext: Насб дар мизи корӣ
+  kodable_beyond_gradelevel: Ибтидоӣ
+  kodable_gradelevel: Ибтидоӣ
+  kodableunplugged_gradelevel: 'Синну сол: 8-13'
+  kodu_beyond_gradelevel: 'Синну сол: 8+'
+  learn_more: Маълумоти бештар
+  learn_now: Ҳозир омӯзед
+  learn_sign_up_button: Худро ба қайд гиред
+  lego_beyond_gradelevel: Мактаби миёна +
+  lego_beyond_platformtext: Харидани робот
+  lightbot_beyond_gradelevel: 'Синну сол: Ҳама'
+  lightbot_beyond_platformtext: iOS, Android (ё браузери веб)
+  lightbot_gradelevel: 'Синну сол: Ҳама'
+  lightbotintl_gradelevel: 'Синну сол: Ҳама'
+  lightbotintl_platformtext: iOS, Android (ё браузери веб)
+  lynda_beyond_gradelevel: Донишкада +
+  makeschool_beyond_gradelevel: Донишкада
+  makeschool_beyond_platformtext: Браузерҳои веби ҳозиразамон
+  makeschool_gradelevel: Донишкада
+  makeschool_platformtext: Браузерҳои веби ҳозиразамон
+  mc_gradelevel: 'Синну сол: 6-106'
+  monstercoding_gradelevel: 'Синну сол: 5-13'
+  mozilla_beyond_gradelevel: 'Синну сол: 12+'
+  mozilla_beyond_platformtext: Браузерҳои веби ҳозиразамон
+  n_have_learned_an_hoc: "<h1>Шумо метавонед</h1><h2>Соати рамзи гузаронидашударо</h2><h3>#
+    дида бароед</h3>"
+  n_participants: "# иштирокчӣ"
+  name: Ном
+  next: Навбатӣ
+  og_title: Ҳар як фарзанд бояд имконият дошта бошад
+  participant_educator: Устод
+  participant_parent: Волид
+  participant_student: Донишҷӯ
+  playlab_gradelevel: 'Синну сол: 6-14'
+  pocketcode_beyond_gradelevel: Мактаби миёна +
+  previous: Қаблӣ
+  print_all: Ҳамаро чоп кардан
+  processing_beyond_gradelevel: Донишкада
+  processing_beyond_platformtext: Браузерҳои веби ҳозиразамон
+  processing_gradelevel: Донишкада
+  processing_platformtext: Браузерҳои веби ҳозиразамон
+  projguts_gradelevel: 'Синну сол: 10-13'
+  quorum_gradelevel: Мактаби миёна +
+  robomind_beyond_gradelevel: 'Синну сол: 8-13'
+  robomind_beyond_platformtext: Браузерҳои веби ҳозиразамон, Веби мобилӣ
+  robomind_gradelevel: 'Синну сол: 8-13'
+  robomind_platformtext: Браузерҳои веби ҳозиразамон, Веби мобилӣ
+  robomindnl_gradelevel: 'Синну сол: 8-13'
+  robomindnl_platformtext: Браузерҳои веби ҳозиразамон, Веби мобилӣ
+  scratch_beyond_gradelevel: 'Синну сол: 8+'
+  scratch_gradelevel: 'Синну сол: 8+'
+  scratchjr_beyond_gradelevel: Ибтидоӣ
+  share_on_twitter: Дар Twitter мубодила кунед
+  sphero_beyond_gradelevel: 'Синну сол: 8+'
+  sphero_beyond_platformtext: Харидани робот
+  sports_watch_video: Видеоро тамошо кунед
+  starwars_gradelevel: 'Синну сол: 6-106'
+  starwars_longdescription: Барномарезии дройдро омӯзед ва бозии "Ҷанги ситораҳо дар
+    галактикаи дур"-ро эҷод намоед.
+  starwars_shortdescription: Барномарезии дройдро омӯзед ва бозии "Ҷанги ситораҳо
+    дар галактикаи дур"-ро эҷод намоед.
+  studiobar_frozen_title: Соати рамз
+  studiobar_hoc_title: Соати рамз
+  studiobar_shop_title: Дукон
+  submit: Пешниҳод кардан
+  teacherled_gradelevel: 'Синну сол: 5+'
+  teachingtree_beyond_gradelevel: Донишгоҳ
+  teachingtree_beyond_platformtext: Дар асоси веб
+  texasinstruments_gradelevel: 'Синну сол: 13-16'
+  thank_you_: Ташаккур!
+  thinkersmith2_gradelevel: 'Синну сол: 8+'
+  thinkersmith_gradelevel: 'Синну сол: Ҳама'
+  third_party_gradelevel_2to8: Синфҳои 2-8
+  third_party_gradelevel_4to12: Синфҳои 4-12
+  third_party_gradelevel_5to12: Синфҳои 5-12
+  third_party_gradelevel_6plus: Синфҳои 6+
+  third_party_gradelevel_kto2: Синфҳои K-2
+  third_party_gradelevel_kto8: Синфҳои K-8
+  third_party_organization: Созмондиҳӣ
+  touchdevelop_beyond_gradelevel: Донишкада
+  touchdevelop_beyond_platformtext: Браузерҳои ҳозиразамон, смартфонҳо, ҳамаи дастгоҳҳо
+  touchdevelop_gradelevel: Донишкада
+  touchdevelop_platformtext: Браузерҳои ҳозиразамон, смартфонҳо, ҳамаи дастгоҳҳо
+  try_now: Маълумоти бештар
+  tynker_beyond_gradelevel: 'Синну сол: 5-13'
+  tynker_gradelevel: 'Синну сол: 5-13'
+  tynker_platformtext: Браузерҳои веби ҳозиразамон
+  tynkerapp_gradelevel: 'Синну сол: 5-13'
+  udacity_beyond_gradelevel: Донишгоҳ
+  udacity_beyond_platformtext: Браузерҳои ҳозиразамон
+  udemy_beyond_gradelevel: Донишкада +
+  udemy_beyond_platformtext: Дар асоси веб
+  upgrade_ie_link: Маълумоти бештар
+  user_header_create: 'Сохтан '
+  user_header_label: Салом %{username}
+  user_header_logout: Хориҷ шудан
+  user_header_settings: Ҳисоби ман
+  user_header_signin: Ворид шудан
+  view_english_site: Намоиш додан дар забони англисӣ
+  volunteer_engineer_submission_commitment_five_hrs_per_week: 5 соат дар як ҳафта
+  volunteer_engineer_submission_commitment_more: БЕШТАР
+  volunteer_engineer_submission_commitment_three_hrs_per_week: 3 соат дар як ҳафта
+  volunteer_engineer_submission_distance_16: 10 км
+  volunteer_engineer_submission_distance_24: 15 км
+  volunteer_engineer_submission_distance_32: 20 км
+  volunteer_engineer_submission_distance_8: 5 км
+  volunteer_engineer_submission_field_email: Суроғаи почтаи электронӣ
+  volunteer_engineer_submission_field_email_placeholder: Суроғаи почтаи электронӣ
+  volunteer_engineer_submission_field_location: Ҷойгиршавӣ
+  volunteer_engineer_submission_field_name: Ном
+  volunteer_engineer_submission_field_name_placeholder: Номи пурра
+  volunteer_engineer_submission_num_volunteers_10: 10 волонтёр
+  volunteer_engineer_submission_num_volunteers_25: 25 волонтёр
+  volunteer_engineer_submission_num_volunteers_5: 5 волонтёр
+  volunteer_engineer_submission_num_volunteers_50: 50 волонтёр
+  volunteer_engineer_submission_submit: Пешниҳод кардан
+  w3schools_beyond_gradelevel: 'Синну сол: 12+'
+  w3schools_beyond_platformtext: Браузерҳои веби ҳозиразамон
+  zipcode: Рамзи ZIP ё кишвар

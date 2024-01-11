@@ -15,7 +15,7 @@ theme: responsive_full_width
   .wrapper.flex-container.align-items-center
     .text-wrapper
       %h1{style: "color: white"}=hoc_s(:self_paced_pl_hero_heading)
-      %p{style: "color: white"}=hoc_s(:self_paced_pl_hero_desc)
+      %p.body-one{style: "color: white"}=hoc_s(:self_paced_pl_hero_desc)
     %img{src: "../shared/images/banners/self-paced-pl-hero.png", alt: ""}
 
 %section
@@ -80,7 +80,7 @@ theme: responsive_full_width
             %strong=hoc_s(:module_label_prerequisites)
             =hoc_s(:module_prerequisites_none)
         .content-footer
-          %a.link-button{href: CDO.studio_url("/s/k5-onlinepd"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_csf)}}
+          %a.link-button{href: CDO.studio_url("/s/k5-onlinepd-2023"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_csf)}}
             =hoc_s(:call_to_action_start_pl)
           %a.link-button.secondary{href: "/csf", aria:{label: hoc_s(:aria_label_call_to_action_curriculum_csf)}}
             =hoc_s(:call_to_action_explore_curriculum)
@@ -198,13 +198,51 @@ theme: responsive_full_width
             =hoc_s(:call_to_action_start_pl)
           %a.link-button.secondary{href: CDO.studio_url("/courses/csp-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_csp)}}
             =hoc_s(:call_to_action_explore_curriculum)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:module_grade_6_10_teachers)
+          %h3=hoc_s(:module_label_teaching_problem_solving)
+          %img{src: "/images/problem-solving-course-banner.png", alt: ""}
+          %p
+            %strong=hoc_s(:module_label_curriculum)
+            =hoc_s(:curriculum_name_problem_solving)
+          %p
+            %strong=hoc_s(:module_label_duration)
+            =hoc_s(:module_duration_2_hrs)
+          %p
+            %strong=hoc_s(:module_label_prerequisites)
+            =hoc_s(:module_prerequisites_none)
+        .content-footer
+          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-csd-unit1-2023"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_problem_solving)}}
+            =hoc_s(:call_to_action_start_pl)
+          %a.link-button.secondary{href: CDO.studio_url("/s/problem-solving-computing"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_problem_solving)}}
+            =hoc_s(:call_to_action_explore_curriculum)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:module_grade_6_10_teachers)
+          %h3=hoc_s(:curriculum_name_teaching_animation)
+          %img{src: "/images/csd-unit-interactive-animations-games.png", alt: ""}
+          %p
+            %strong=hoc_s(:module_label_curriculum)
+            =hoc_s(:module_label_teaching_animations)
+          %p
+            %strong=hoc_s(:module_label_duration)
+            =hoc_s(:module_duration_3_hrs_20_minutes)
+          %p
+            %strong=hoc_s(:module_label_prerequisites)
+            =hoc_s(:module_prerequisites_none)
+        .content-footer
+          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-csd-unit3-2023"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_interactive_animations_games)}}
+            =hoc_s(:call_to_action_start_pl)
+          %a.link-button.secondary{href: CDO.studio_url("/s/interactive-games-animations"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_interactive_animations_games)}}
+            =hoc_s(:call_to_action_explore_curriculum)
 
 %section.bg-neutral-light
   .wrapper
     %div.col-50{style: "margin-bottom: 1rem;"}
       %h2=hoc_s(:self_paced_pl_facilitator_heading)
       %h3.heading-sm=hoc_s(:self_paced_pl_facilitator_subheading)
-      %p.body-two
+      %p.body-three
         =hoc_s(:self_paced_pl_facilitator_desc)
       %a.link-button{href: "/professional-learning"}=hoc_s(:self_paced_pl_facilitator_call_to_action)
     %div.col-45{style: "float:right; margin-top: 0.5em"}
@@ -231,7 +269,7 @@ theme: responsive_full_width
           %img{src: "/images/csta-action-block-tile.png", alt: "", style: "width: 100%"}
           %p=hoc_s(:self_paced_pl_resources_desc_02)
         .content-footer
-          %a.link-button{href: "https://www.csteachers.org/page/individual-membership", target: "_blank", rel: "noopener noreferrer"}
+          %a.link-button.has-external-link{href: "https://www.csteachers.org/page/individual-membership", target: "_blank", rel: "noopener noreferrer"}
             =hoc_s(:call_to_action_join_csta)
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper

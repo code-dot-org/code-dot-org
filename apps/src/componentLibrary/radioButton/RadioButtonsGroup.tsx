@@ -6,15 +6,19 @@ import RadioButton, {RadioButtonProps} from './RadioButton';
 // checked value will be calculated in RadioButtonsGroup component.
 type GroupedRadioButtonProps = Omit<RadioButtonProps, 'onChange' | 'checked'>;
 
-interface RadioButtonsGroupProps {
-  // Array of props for radio button to render
+export interface RadioButtonsGroupProps {
+  /** Array of props for radio button to render */
   radioButtons: GroupedRadioButtonProps[];
-  // Custom/additional onChange handler
+  /** Custom/additional onChange handler */
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  // Default selected value
+  /** Default selected value */
   defaultValue?: string;
 }
 
+/**
+ * Design System: Radio Button Group Component. (Created only as a shortcut for creating a group of Radio Buttons
+ * Can be used to render a group of Radio Buttons or as a part of bigger/more complex components (e.g. Radio Button Group).
+ */
 const RadioButtonsGroup: React.FC<RadioButtonsGroupProps> = ({
   radioButtons,
   defaultValue = '',

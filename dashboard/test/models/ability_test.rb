@@ -933,6 +933,21 @@ class AbilityTest < ActiveSupport::TestCase
     refute Ability.new(program_manager).can? :destroy, incomplete_application
   end
 
+  test 'users with AI_TUTOR_ACCESS permission can access Open AI chat completion endpoint' do
+    ai_tutor_access_user = create :ai_tutor_access
+    assert Ability.new(ai_tutor_access_user).can? :chat_completion, :openai_chat
+  end
+
+  test 'users with ai tutor access through section enablement can access Open AI chat completion endpoint' do
+    student = create :student_with_ai_tutor_access
+    assert Ability.new(student).can? :chat_completion, :openai_chat
+  end
+
+  test 'user without ai tutor access cannot access Open AI chat completion endpoint' do
+    student = create :student_without_ai_tutor_access
+    refute Ability.new(student).can? :chat_completion, :openai_chat
+  end
+
   private
 
   def put_students_in_section_and_code_review_group(students, section)

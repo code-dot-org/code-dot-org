@@ -5,20 +5,18 @@ import MusicLibrary, {
   LibraryJson,
   LibraryValidator,
 } from '../player/MusicLibrary';
-
+import {baseAssetUrl, DEFAULT_LIBRARY} from '../constants';
 const AppConfig = require('../appConfig').default;
-
-export const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
 /**
  * Loads a sound library JSON file.
  *
- * @param libraryName specific library to load (optional). If a library is specified by
+ * @param libraryName specific library to load. If a library is specified by
  * URL param, that will take precedence.
  * @returns the Music Library
  */
 export const loadLibrary = async (
-  libraryName?: string
+  libraryName: string
 ): Promise<MusicLibrary> => {
   if (AppConfig.getValue('local-library') === 'true') {
     const localLibraryFilename = 'music-library';
@@ -30,12 +28,13 @@ export const loadLibrary = async (
   } else {
     // URL param takes precendence over provided library name.
     const libraryParameter = AppConfig.getValue('library') || libraryName;
-    const libraryFilename = libraryParameter
-      ? `music-library-${libraryParameter}`
-      : 'music-library';
+    const libraryFilename =
+      libraryParameter !== DEFAULT_LIBRARY
+        ? `music-library-${libraryParameter}`
+        : 'music-library';
 
     const libraryJsonResponse = await HttpClient.fetchJson<LibraryJson>(
-      baseUrl + libraryFilename + '.json',
+      baseAssetUrl + libraryFilename + '.json',
       {},
       LibraryValidator
     );

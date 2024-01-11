@@ -1,83 +1,343 @@
-/* for homepage 2.0.. */
-#homepage .clear {
-  clear: both;
-}
-/* ..end homepage 2.0 */
+/*
+  Variables are duplicated from shared/css/color.scss
+  and shared/css/font.scss
 
-h1 {
-  color: #7665a0;
-  font-size: 32px;
-  font-family: 'Gotham 7r', sans-serif;
-  margin-top: 50px;
-  margin-bottom: 30px;
-  line-height: 1.2em;
-}
+  See shared/css/typography.scss for more info on how
+  typography styles are used.
+*/
 
-h2 {
-  color: #00adbc;
-  font-size: 22px;
-  font-family: 'Gotham 5r', sans-serif;
-  margin-top:45px;
-  margin-bottom:25px;
-  line-height: 1.2em;
-}
-
-h3 {
-  color: #5b6770;
-  font-size: 18px;
-  font-family: 'Gotham 4r', sans-serif;
-  margin-top:25px;
-  margin-bottom:12px;
-  line-height: 1.2em;
-}
-
-h4 {
-  color: #5b6770;
-  font-size: 14px;
-  font-family: 'Gotham 5r', sans-serif;
-  line-height: 1.2em;
-}
-
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-weight: normal;
-}
-
-a {
-  font-family: 'Gotham 7r', sans-serif;
+:root {
+  /* Colors */
+  --brand_primary_light: #ABDFE5;
+  --brand_primary_default: #009EB0;
+  --brand_primary_dark: #008291;
+  --brand_secondary_light: #E0D1EC;
+  --brand_secondary_default: #8C52BA;
+  --brand_secondary_dark: #6F488E;
+  --brand_accent_default: #ED6060;
+  --neutral_white: #FFFFFF;
+  --neutral_light: #F7F8FA;
+  --neutral_dark10: #EAEBEB;
+  --neutral_dark20: #D4D5D7;
+  --neutral_dark30: #BFC1C3;
+  --neutral_dark40: #A9ACAF;
+  --neutral_dark50: #94979B;
+  --neutral_dark60: #7F8286;
+  --neutral_dark70: #6A6E73;
+  --neutral_dark80: #54595E;
+  --neutral_dark90: #3F444B;
+  --neutral_dark: #292F36;
+  --orange: #ffa400; /* legacy color */
+  /* Typography */
+  --barlowSemiCondensed-semibold: 'Barlow Semi Condensed Semibold', sans-serif;
+  --barlowSemiCondensed-medium: 'Barlow Semi Condensed Medium', sans-serif;
+  --main-font: 'Metropolis', sans-serif;
+  --thin-font-weight: 100;
+  --extra-light-font-weight: 200;
+  --light-font-weight: 300;
+  --regular-font-weight: 400;
+  --medium-font-weight: 500;
+  --semi-bold-font-weight: 600;
+  --bold-font-weight: 700;
+  --extra-bold-font-weight: 800;
+  --black-font-weight: 900;
 }
 
-a:link {
-  color: #7665a0;
-  text-decoration: none;
-}
-
-a:visited {
-  color: #7665a0;
-  text-decoration: none;
-}
-
-a:hover, a:active {
-  text-decoration: underline;
-  color: #5b6770;
-}
-
-strong {
-  font-family: 'Gotham 7r', sans-serif;
-  font-weight: normal;
-}
-
-em {
-  font-family: 'Gotham 4i', sans-serif;
-  font-style: normal;
+html {
+  height: 100%;
+  font-size: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Gotham 4r', sans-serif;
+  background-color: var(--neutral_white);
+  height: 100%;
+  font-family: var(--main-font);
+  font-weight: var(--regular-font-weight);
+  font-style: normal;
   font-size: 14px;
-  line-height: 22px;
-  font-weight: normal;
-  color: dimgray;
+  color: var(--neutral_dark);
   margin: 0;
+}
+
+h1,
+.heading-xxl {
+  font-family: var(--barlowSemiCondensed-semibold);
+  font-size: 3rem;
+  line-height: 1.16;
+  margin: 1em 0 0.5em 0;
+}
+
+h2,
+.heading-xl {
+  font-family: var(--barlowSemiCondensed-semibold);
+  font-size: 2.125rem;
+  line-height: 1.24;
+  margin: 1em 0 0.5em 0;
+}
+
+h3,
+.heading-lg {
+  font-family: var(--barlowSemiCondensed-semibold);
+  font-size: 1.75rem;
+  line-height: 1.28;
+  margin-bottom: 0.5em;
+}
+
+h4,
+.heading-md {
+  font-family: var(--barlowSemiCondensed-medium);
+  font-size: 1.5rem;
+  line-height: 1.32;
+  margin-bottom: 0.5em;
+}
+
+h5,
+.heading-sm {
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
+  font-size: 1.25rem;
+  line-height: 1.40;
+  margin-bottom: 0.5em;
+}
+
+h6,
+.heading-xs {
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
+  font-size: 1rem;
+  line-height: 1.48;
+  margin-bottom: 0.5em;
+}
+
+p {
+  line-height: 1.48;
+  margin-bottom: 1em;
+}
+
+.body-one {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin-bottom: 1em;
+}
+
+.body-two {
+  font-size: 1rem;
+  line-height: 1.48;
+  margin-bottom: 1em;
+}
+
+.body-three {
+  font-size: 0.875rem;
+  line-height: 1.54;
+  margin-bottom: 1em;
+}
+
+.body-four {
+  font-size: 0.75rem;
+  line-height: 1.64;
+  margin-bottom: 1em;
+}
+
+figcaption,
+.video_caption_link {
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
+  font-size: 0.875rem;
+  margin: 0.5em 0 1em;
+  line-height: 1.4;
+}
+
+.overline-one {
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--brand_primary_default);
+}
+
+.overline-two {
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+  font-size: 0.75rem;
+  line-height: 1.64;
+  color: var(--brand_primary_default);
+}
+
+.overline-three {
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+  font-size: 0.625rem;
+  line-height: 1.76;
+  color: var(--brand_primary_default);
+}
+
+strong {
+  font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);
+}
+
+em {
+  font-family: var(--main-font);
+  font-style: italic;
+}
+
+/* Text link styles */
+a:is(:link, :visited) {
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
+  color: var(--brand_secondary_default);
+  text-decoration: underline;
+  transition: color ease-in-out .2s;
+}
+
+a:is(:hover, :active) {
+  color: var(--brand_secondary_dark);
+}
+
+a:link:has(*) {
+  text-decoration: none;
+}
+
+/* Button styles */
+/* For call to action links that look like buttons
+  use the .link-button class on an <a> tag instead
+  of a <button> element */
+a.link-button,
+button,
+.btn,
+input[type=submit] {
+  display: inline-block;
+  color: var(--neutral_white);
+  background: var(--brand_secondary_default);
+  border: 2px solid var(--brand_secondary_default);
+  border-radius: 4px;
+  padding: .75rem 1rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
+  line-height: 1;
+  text-decoration: none;
+  text-align: center;
+  transition: all ease-in-out .2s;
+
+  /* Hover styles */
+  &:hover {
+    background: var(--brand_secondary_dark);
+    border-color: var(--brand_secondary_dark);
+    color: var(--neutral_white);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Focus styles */
+  &:focus {
+    outline: var(--brand_primary_default) solid 2px;
+    outline-offset: 2px;
+
+    &:not(:focus-visible) {
+      outline: none;
+    }
+  }
+
+  /* Secondary button styles */
+  &.secondary {
+    background: none;
+    border-color: var(--neutral_dark);
+    color: var(--neutral_dark);
+
+    &:hover {
+      background: var(--neutral_dark10);
+    }
+  }
+
+  /* White button styles */
+  &.white {
+    background: var(--neutral_white);
+    border-color: var(--neutral_white);
+    color: var(--neutral_dark);
+
+    &:hover {
+      background: var(--neutral_dark10);
+      border-color: var(--neutral_dark10);
+    }
+  }
+
+  /* Icon button styles */
+  &.has-icon {
+    .flex-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+  }
+
+  /* Disabled button styles */
+  &:disabled,
+  &.disabled {
+    cursor: default;
+    background: var(--neutral_dark20);
+    border: 2px solid var(--neutral_dark20);
+    color: var(--neutral_dark70);
+  }
+
+  /* Big button styles
+    - this can be used in combination
+    with the other classes */
+  &.big {
+    font-size: 1.25rem;
+    padding-inline: 1.25rem;
+  }
+
+  /* Small button styles
+    - this can be used in combination
+    with the other classes */
+  &.small {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  /* Increases line height on mobile
+    if button text goes to 2+ lines */
+  @media (max-width: 640px) {
+    line-height: 1.2;
+  }
+}
+
+/* Modals */
+.modal-header {
+  & button.close {
+    min-width: unset;
+    margin-top: 2px;
+
+    &:hover {
+      background: none;
+      border: none;
+    }
+  }
+}
+
+/* Adds an icon to external links
+  - apply this class to container elements or directly onto
+  an "a" tag when a link opens in a new tab or window */
+.has-external-link a::after,
+a.has-external-link::after {
+  font: var(--fa-font-solid);
+  content: "\f08e";
+  font-size: 0.875em;
+  margin-inline: 4px 2px;
+}
+
+.has-external-link a.link-button::after,
+a.link-button.has-external-link::after {
+  margin-inline: 4px 0;
 }
 
 li > ul {
@@ -98,7 +358,7 @@ ul li {
 
 ul li:before {
   content: "• ";
-  color: rgb(0, 161, 230);
+  color: var(--neutral_dark);
 }
 
 .invisiblelist li:before {
@@ -110,16 +370,16 @@ img {
 }
 
 th {
-  background-color: rgb(0, 178, 192);
-  color: white;
+  background-color: var(--brand_primary_default);
+  color: var(--neutral_white);
   padding: 15px;
-  border-color: white;
+  border-color: var(--neutral_white);
   border-width: 1px;
   border-style: solid;
 
-  border-top-color: rgb(0, 178, 192);
-  border-left-color: rgb(0, 178, 192);
-  border-right-color: rgb(0, 178, 192);
+  border-top-color: var(--brand_primary_default);
+  border-left-color: var(--brand_primary_default);
+  border-right-color: var(--brand_primary_default);
 }
 
 td {
@@ -129,6 +389,46 @@ td {
   padding: 15px;
 }
 
+/* Styles for the "OR" divider line between paragraphs
+  - see code.org/afe for an example */
+.or-divider-line {
+  position: relative;
+  text-align: center;
+  margin: 0.75rem 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--neutral_dark20);
+    z-index: 0;
+  }
+
+  & > p {
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    margin: 0 4px 0;
+    padding: 5px 5px 4px;
+    background: var(--neutral_white);
+    border: 1px solid var(--neutral_dark20);
+    border-radius: 50%;
+    outline: 4px solid var(--neutral_white);
+    z-index: 1;
+  }
+}
+
+/* for homepage 2.0.. */
+#homepage .clear {
+  clear: both;
+}
+/* ..end homepage 2.0 */
+
 .narrow_hr {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -136,7 +436,7 @@ td {
   border: 0;
   border-top-width: 1px;
   border-top-style: solid;
-  border-top-color: #00adbc;
+  border-top-color: var(--neutral_dark20);
 }
 
 .grey_input {
@@ -152,106 +452,53 @@ td {
 }
 
 #petition_form a {
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--main-font);
 }
 
 #petition_form a:link, #petition_form a:visited {
   color: #dcdcdc;
   text-decoration: none;
 }
+
 #petition_form a:hover, #petition_form a:active {
   color: #fff;
   text-decoration: underline;
 }
 
 .listed_supporter{
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);
   font-weight: normal;
-  color: #7665a0;
 }
 
 .greybox {
-  background-color: rgb(88, 103, 113); color: white; padding: 20px; text-align: center; overflow:hidden;
+  background-color: var(--neutral_dark80);
+  color: var(--neutral_white);
+  padding: 20px;
+  text-align: center;
+  overflow:hidden;
 }
 
 #about_nav {
-  margin: 50px 0 0 0;
+  margin: 3.5rem 0 0 0;
 }
 
 .about_list_item_selected {
-  color: #ff8a00;
-  font-family: 'Gotham 7r', sans-serif;
+  color: var(--brand_secondary_default);
+  font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);
 }
 
 a.about_list_item {
-  color: #999c9f;
-  font-family: 'Gotham 5r', sans-serif;
+  color: var(--neutral_dark60);
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
+  text-decoration: none;
 }
 
-
-.button-color-share {
-  background-color: rgb(126, 92, 162);
-  border-color: rgb(126, 92, 162);
+a.about_list_item:hover {
+  color: var(--brand_secondary_default);
 }
-
-button {
-  -webkit-appearance: none;
-  -webkit-user-select: none;
-  -webkit-writing-mode: horizontal-tb;
-  align-items: flex-start;
-  background-color: rgb(255, 164, 0) ;
-  border-color: rgb(255, 164, 0) ;
-  background-image: none;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-image-outset: 0px;
-  border-image-repeat: stretch;
-  border-image-slice: 100%;
-  border-image-source: none;
-  border-image-width: 1;
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-right-style: solid;
-  border-right-width: 1px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  box-sizing: border-box;
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-  display: inline-block;
-  font-family: 'Gotham 4r', sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  height: 34px;
-  letter-spacing: normal;
-  line-height: 20px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 0px;
-  padding-bottom: 6px;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  text-align: center;
-  text-indent: 0px;
-  text-shadow: none;
-  text-transform: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  word-spacing: 0px;
-  writing-mode: lr-tb;
-}
-
-.btn-white:hover{
-  background-color:#E6E6F3;
-  border-color:#adadad;
-}
-
 
 .dropdown {
   border-color: rgb(204, 204, 204);
@@ -265,10 +512,10 @@ button {
   border-left-color: #b9bf15;
 }
 .carousel-wrapper .pagination a {
-  background: #7765a1;
+  background: var(--brand_primary_light);
 }
 .carousel-wrapper .pagination a.selected {
-  background: #ffa401;
+  background: var(--brand_primary_default);
 }
 
 @media screen and (max-width: 450px) {
@@ -294,11 +541,7 @@ button {
 }
 
 label {
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   font-weight: normal;
-}
-
-
-.video_caption_link {
-  font-family: 'Gotham 4r', sans-serif;
 }

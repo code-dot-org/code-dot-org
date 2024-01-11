@@ -54,6 +54,8 @@ en:
             '1.00': medium
             '2.00': large
             '3.00': extra large
+      Dancelab_ai:
+        text: "{IMAGE}generate {VALUE} effect"
       Dancelab_alternateMoves:
         text: "{GROUP} alternate every {N} measures \nbetween {MOVE1} and {MOVE2}"
         options:
@@ -103,6 +105,12 @@ en:
           UNIT:
             '"measures"': measures
             '"seconds"': seconds
+      Dancelab_atTimestampNotAfter:
+        text: at {TIMESTAMP} {UNIT}
+        options:
+          UNIT:
+            '"measures"': measures
+            '"seconds"': seconds
       Dancelab_changeColorBy:
         text: change {COLOR} {METHOD} by {AMOUNT}
         options:
@@ -143,6 +151,31 @@ en:
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Zombie
             MOVES.Rest: None
+          DIR:
+            "-1": "←"
+            '1': "→"
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} do {MOVE} {DIR} forever"
+        options:
+          GROUP:
+            '"CAT"': cats
+            '"SLOTH"': sloths
+          MOVE:
+            MOVES.Roll: Body Roll
+            MOVES.ClapHigh: Clap High
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Star
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
+            MOVES.Rest: None
+            '"next"': "(Next)"
+            '"prev"': "(Previous)"
+            '"rand"': "(Random)"
           DIR:
             "-1": "←"
             '1': "→"
@@ -648,6 +681,65 @@ en:
             '"tropical"': Tropical
             '"vintage"': Vintage
             '"warm"': Warm
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          set background effect
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': None
+            '"rand"': "(Random)"
+            '"quads"': Angles
+            '"blooming_petals"': Blooming Petals
+            '"circles"': Circles
+            '"clouds"': Clouds
+            '"color_cycle"': Colors
+            '"diamonds"': Diamonds
+            '"disco_ball"': Disco Ball
+            '"fireworks"': Fireworks
+            '"flowers"': Flowers
+            '"frosted_grid"': Frosted Grid
+            '"growing_stars"': Growing Stars
+            '"higher_power"': Higher Power
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoscope
+            '"lasers"': Laser Dance Floor
+            '"splatter"': Paint Splatter
+            '"rainbow"': Rainbow
+            '"ripples_random"': Random Ripples
+            '"ripples"': Ripples
+            '"snowflakes"': Snow
+            '"text"': Song Names
+            '"galaxy"': Space
+            '"sparkles"': Sparkles
+            '"spiral"': Spiral
+            '"disco"': Squares
+            '"squiggles"': Squiggles
+            '"starburst"': Starburst
+            '"stars"': Stars
+            '"music_wave"': Waves
+          PALETTE:
+            '"autumn"': Autumn
+            '"rave"': Black and White
+            '"cool"': Cool
+            '"electronic"': Electronic
+            '"grayscale"': Grayscale
+            '"iceCream"': Ice Cream
+            '"default"': Light
+            '"neon"': Neon
+            '"ocean"': Ocean
+            '"rainbow"': Rainbow
+            '"roses"': Roses
+            '"sky"': Sky
+            '"spring"': Spring
+            '"summer"': Summer
+            '"sunrise"': Sunrise
+            '"sunset"': Sunset
+            '"tropical"': Tropical
+            '"twinkling"': Twinkling
+            '"vintage"': Vintage
+            '"warm"': Warm
+            '"winter"': Winter
       Dancelab_setDanceSpeed:
         text: set {SPRITE} dance speed to {SPEED}
         options:
@@ -1058,6 +1150,8 @@ en:
             '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_borderGPT:
+        text: Generate Border {DESCRIPTION}
       DansBlocks_getMicroscope:
         text: Microscope has {INPUT1}
         options:
@@ -1066,7 +1160,7 @@ en:
             '3': baking soda
             '5': both
       DansBlocks_setForegroundEffect2:
-        text: do {EFFECT} effect
+        text: "[Don't Use] do {EFFECT} effect"
         options:
           EFFECT:
             '"bubbles"': bubbles
@@ -1782,6 +1876,15 @@ en:
         text: y coordinate of {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} glide to {LOCATION}"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           if {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': solid
+            '"liquid"': liquid
+            '"gas"': gas
       KatiesBlocks_makeNumSpritesNear:
         text: make {NUM} new {ANIMATION_NAME} sprites near {LOCATION}
       KatiesBlocks_spriteBirdSay:
@@ -1952,7 +2055,7 @@ en:
       Mikelab_groupWhileClicked:
         text: 'while clicking on {COSTUME}
 
-'
+          '
       Mikelab_groupWhileTouchingAny:
         text: |-
           while{COSTUME} is touching {COSTUME2}
@@ -2037,7 +2140,7 @@ en:
       Mikelab_repeatUntilComplete:
         text: 'repeat forever
 
-'
+          '
       Mikelab_sendBad:
         text: move object left
       Mikelab_sendGood:
@@ -2164,7 +2267,7 @@ en:
       Mikelab_whileClicked:
         text: 'while clicking on{SPRITE}
 
-'
+          '
       Mikelab_whileKeyPressed:
         text: while {KEY} stays pressed
         options:

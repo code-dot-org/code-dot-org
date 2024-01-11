@@ -175,7 +175,7 @@ class ContactRollupsProcessed < ApplicationRecord
         end
 
         if !output[sources].key?('last_data_updated_at') ||
-          data_updated_at > output[sources]['last_data_updated_at']
+            data_updated_at > output[sources]['last_data_updated_at']
           output[sources]['last_data_updated_at'] = data_updated_at
         end
       end
@@ -222,9 +222,9 @@ class ContactRollupsProcessed < ApplicationRecord
     # Contact is a teacher if they appears in any of the following tables
     roles.add 'Teacher' if
       contact_data.dig('dashboard.users', 'user_id') ||
-      contact_data.key?('dashboard.pd_enrollments') ||
-      contact_data.key?('dashboard.pd_attendances') ||
-      contact_data.key?('dashboard.followers')
+        contact_data.key?('dashboard.pd_enrollments') ||
+        contact_data.key?('dashboard.pd_attendances') ||
+        contact_data.key?('dashboard.followers')
 
     unless roles.include? 'Teacher'
       # Contact is a teacher if they submit a census survey as a teacher
@@ -251,7 +251,7 @@ class ContactRollupsProcessed < ApplicationRecord
 
     roles.add 'Form Submitter' if
       contact_data.key?('pegasus.forms') ||
-      contact_data.key?('dashboard.census_submissions')
+        contact_data.key?('dashboard.census_submissions')
 
     roles.add 'Parent' if contact_data.dig('dashboard.users', 'is_parent')
 
@@ -308,7 +308,7 @@ class ContactRollupsProcessed < ApplicationRecord
     # US state in schools table is in abbreviation, must convert it back to state name.
     school_state = extract_field_latest_value contact_data, 'dashboard.schools', 'state'
     if school_state
-      state_name = get_us_state_from_abbr(school_state, true) || school_state
+      state_name = get_us_state_from_abbr(school_state, include_dc: true) || school_state
       return {state: state_name}
     end
 

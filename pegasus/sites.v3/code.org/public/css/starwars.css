@@ -1,10 +1,14 @@
-.sw-header2 {
-  padding: 10px;
-}
-
 .header-banner {
   border-radius: 5px;
   width: 100%
+}
+
+h2.specific-tutorial-heading {
+  margin-top: 0;
+}
+
+.tutorial-promo-container .specific-tutorial {
+  top: 40px;
 }
 
 @media screen and (min-width: 0px) and (max-width: 970px) {

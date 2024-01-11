@@ -1,41 +1,6 @@
 require 'honeybadger/ruby'
 
 module Pd::WorkshopSurveyResultsHelper
-  LOCAL_WORKSHOP_MULTIPLE_CHOICE_FIELDS_IN_SUMMARY = [
-    :how_much_learned,
-    :how_motivating,
-    :how_clearly_presented,
-    :how_interesting,
-    :how_often_given_feedback,
-    :how_comfortable_asking_questions,
-    :how_often_taught_new_things,
-    :help_quality,
-    :how_much_participated,
-    :how_often_talk_about_ideas_outside,
-    :how_often_lost_track_of_time,
-    :how_excited_before,
-    :overall_how_interested,
-    :more_prepared_than_before,
-    :know_where_to_go_for_help,
-    :suitable_for_my_experience,
-    :would_recommend,
-    :part_of_community,
-    :confident_can_teach,
-    :anticipate_continuing,
-    :received_clear_communication,
-    :believe_all_students
-  ]
-
-  FREE_RESPONSE_FIELDS_IN_SUMMARY = [
-    :venue_feedback,
-    :things_you_liked,
-    :things_you_would_change,
-    :things_facilitator_did_well,
-    :things_facilitator_could_improve,
-    :who_facilitated
-  ]
-
-  LOCAL_WORKSHOP_FIELDS_IN_SUMMARY = (LOCAL_WORKSHOP_MULTIPLE_CHOICE_FIELDS_IN_SUMMARY + FREE_RESPONSE_FIELDS_IN_SUMMARY).freeze
   TEACHERCON_MULTIPLE_CHOICE_FIELDS = (Pd::TeacherconSurvey.public_required_fields & Pd::TeacherconSurvey.options.keys).freeze
   TEACHERCON_FIELDS_IN_SUMMARY = (Pd::TeacherconSurvey.public_fields).freeze
 
@@ -55,12 +20,11 @@ module Pd::WorkshopSurveyResultsHelper
   # @param facilitator_breakdown Whether to have a facilitator breakdown
   # @returns Hash representing an average of all the respones, or array of free text responses
   def summarize_workshop_surveys(workshops:, facilitator_name_filter: nil, facilitator_breakdown: true, include_free_response: true)
-    # Works on arrays where everything is either a teachercon survey or workshop survey
-    # (but not both)
+    # Works on arrays where everything is a teachercon survey
     surveys = workshops.flat_map(&:survey_responses)
 
-    raise 'Currently just summarizes Local Summer and Teachercon surveys' unless
-      surveys.all?(Pd::TeacherconSurvey) || surveys.all?(Pd::LocalSummerWorkshopSurvey)
+    raise 'Currently just summarizes Teachercon surveys' unless
+      surveys.all?(Pd::TeacherconSurvey)
 
     return Hash.new if surveys.empty?
 
@@ -71,12 +35,7 @@ module Pd::WorkshopSurveyResultsHelper
     sum_hash = Hash.new(0)
     responses_per_facilitator = Hash.new(0)
 
-    fields_to_summarize =
-      if surveys.first.is_a? Pd::LocalSummerWorkshopSurvey
-        include_free_response ? LOCAL_WORKSHOP_FIELDS_IN_SUMMARY : LOCAL_WORKSHOP_MULTIPLE_CHOICE_FIELDS_IN_SUMMARY
-      else
-        include_free_response ? TEACHERCON_FIELDS_IN_SUMMARY : TEACHERCON_MULTIPLE_CHOICE_FIELDS
-      end
+    fields_to_summarize = include_free_response ? TEACHERCON_FIELDS_IN_SUMMARY : TEACHERCON_MULTIPLE_CHOICE_FIELDS
 
     # Ugly branchy way to compute the summarization for the user
     surveys.each do |response|
