@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
 import {learningGoalShape} from './rubricShapes';
+import color from '@cdo/apps/util/color';
 
 export default function ProgressRing({
   learningGoals,
@@ -25,7 +26,7 @@ export default function ProgressRing({
     <svg height={radius * 2} width={radius * 2}>
       <circle
         className={style.progressRing}
-        stroke="#D4D5D7"
+        stroke={color.light_gray_200}
         fill="transparent"
         strokeWidth={stroke}
         r={normalizedRadius}
@@ -34,7 +35,7 @@ export default function ProgressRing({
       />
       <circle
         className={style.progressRing}
-        stroke="#A9ACAF"
+        stroke={color.neutral_dark40}
         fill="transparent"
         strokeWidth={stroke}
         strokeDasharray={circumference + ' '}
@@ -45,7 +46,7 @@ export default function ProgressRing({
       />
       <circle
         className={style.progressRing}
-        stroke="#0093A4"
+        stroke={color.light_primary_500}
         fill="transparent"
         strokeWidth={stroke}
         strokeDasharray={circumference + ' '}

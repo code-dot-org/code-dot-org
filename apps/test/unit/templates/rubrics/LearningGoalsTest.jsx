@@ -311,25 +311,4 @@ describe('LearningGoals', () => {
     );
     expect(wrapper.find('ProgressRing')).to.have.lengthOf(1);
   });
-
-  // it('changes learning goal when left and right arrow keys are pressed', () => {
-
-  //   const wrapper = mount(
-  //     <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
-  //   );
-  //   wrapper.update();
-  //   expect(wrapper.find('Heading6').first().props().children).to.equal(
-  //     learningGoals[0].learningGoal
-  //   );
-  //   wrapper.simulate('keyDown', {key: 'ArrowLeft'});
-  //   wrapper.update();
-  //   expect(wrapper.find('Heading6').first().props().children).to.equal(
-  //     learningGoals[1].learningGoal
-  //   );
-  //   wrapper.simulate('keyDown', {key: 'ArrowRight'});
-  //   wrapper.update();
-  //   expect(wrapper.find('Heading6').first().props().children).to.equal(
-  //     learningGoals[0].learningGoal
-  //   );
-  // });
 });

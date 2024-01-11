@@ -661,22 +661,6 @@ i.infoAlertIcon {
   flex-direction: column;
   width: 100%;
 }
-.rubricContentV2 {
-  display: flex;
-  border-radius: 0 0 4px 4px;
-  border-right: 2px solid $neutral_dark;
-  border-left: 2px solid $neutral_dark;
-  border-bottom: 2px solid $neutral_dark;
-  background: $neutral_white;
-  box-shadow: 4px 4px 6px 0 rgba(0 0 0 / 0.25);
-
-  height: 408px;
-
-  overflow-x: hidden;
-  overflow-y: auto;
-
-  padding: 16px;
-}
 
 .learningGoalsContainer {
   display: flex;
@@ -685,8 +669,8 @@ i.infoAlertIcon {
   justify-content: space-between;
   align-self: stretch;
   border-radius: 4px;
-  border: 1px solid #D4D5D7;
-  background: #F7F8FA;
+  border: 1px solid $neutral_dark20;
+  background: $neutral_light;
   width: 100%;
   min-width: 100%;
 }
