@@ -82,20 +82,21 @@ class CreateStandardsReportStep2 extends Component {
           }
           onChange={this.commentChanged}
           style={styles.textArea}
+          aria-label={i18n.createStandardsReportStep2()}
         />
         <DialogFooter>
           <Button
-            __useDeprecatedTag
             text={i18n.back()}
             onClick={this.props.onBack}
             color={Button.ButtonColor.gray}
+            style={styles.backButton}
           />
           <Button
-            __useDeprecatedTag
             text={i18n.createReport()}
             onClick={this.props.handleConfirm}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             className="uitest-standards-generate-report-finish"
+            style={styles.createButton}
           />
         </DialogFooter>
       </div>
@@ -115,6 +116,13 @@ const styles = {
   },
   optionalText: {
     paddingLeft: 10,
+  },
+  createButton: {
+    margin: 0,
+  },
+  backButton: {
+    margin: 0,
+    boxShadow: 'inset 0 2px 0 0 rgb(255 255 255 / 40%)',
   },
 };
 

@@ -1,0 +1,10 @@
+{
+  "hu-HU": {
+    "data": {
+      "failure_message_override": {
+        "Course 4 Playlab For Loops 4b": "Emlékezz rá, hogy mindkét karakternek ugyanannyi lépésből kell elérnie a zászlóit!",
+        "Course 4 Playlab For Loops 5b": "Emlékezz rá, hogy mindkét karakternek ugyanazon a helyen kell megállnia."
+      }
+    }
+  }
+}

@@ -2,74 +2,74 @@
 km:
   data:
     unplugged:
+      BigEvent:
+        title: ព្រឹត្តិការណ៍ធំ
+      BigEvent_2018:
+        title: ព្រឹត្តិការណ៍ធំ
+      BigEvent_2019:
+        title: ព្រឹត្តិការណ៍ធំ
+      ComputationalThinking:
+        title: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
+      Conditionals:
+        title: លក្ខខណ្ឌ
+      Conditionals_2018:
+        title: លក្ខខណ្ឌ
+      Conditionals_2019:
+        title: លក្ខខណ្ឌ
+      DigitalFootprint:
+        title: Your Digital Footprint
+      DigitalFootprint_2018:
+        title: Your Digital Footprint
+      DigitalFootprint_2019:
+        title: Your Digital Footprint
+      PlantASeed:
+        title: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
+      PlantASeed_2018:
+        title: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
+      PlantASeed_2019:
+        title: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
       Unplug1:
-        title: សេចក្ដី​ណែនាំ​អំពី​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
         desc: មេរៀន​នេះ​នឹង​ណែនាំ​អំពី​គោល​គំនិត​នៃ វិទ្យាសាស្ត្រ​កុំព្យូទ័រ ហើយ​និង​ពន្យល់​ថា​តើ​អ្នក​ជំនាញ​ក្នុង​ផ្នែក​នេះ​មាន​អ្វី​ធ្វើ​ខ្លះ។
           វា​ក៏​នឹង​ផ្ដល់​ឱកាស​ដល់​សិស្ស​ធ្វើ​ការ​សន្មត​ទៅ​លើ​តួនាទី​របស់​អ្នក​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ​ដែរ។
           នៅ​ចុង​បញ្ចប់​នៃ​សកម្មភាព សិស្ស​ម្នាក់ៗ​នឹង​ទទួល​បាន​មេរៀន​រំឭក​នៅ​ផ្ទះ​ចំពោះ​អ្វី​ដែល​ពួកគេ​បាន​រៀន។
           អ្នក​អាច​រំលង​ការ​បង្រៀន​ក្មេង​តូចៗ​អំពី​ពាក្យ​ពិបាកៗ​ដែល​មាន​នៅ​ក្នុង​មេរៀន
           ជំនួស​ដោយ​ការ​បង្ហាញ​ពួកគេ​ជាមួយ​ភាព​សប្បាយ​រីករាយ​ដែល​ផ្ដល់​នូវ​ផលិតភាព​និង​លទ្ធផល​ដ៏​ល្អ​ប្រសើរ។
+        title: សេចក្ដី​ណែនាំ​អំពី​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
+      Unplug10:
+        title: អ៊ីនធឺណិត
       Unplug2:
         title: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
       Unplug5:
         title: អនុ​គមន៍
-      Unplug10:
-        title: អ៊ីនធឺណិត
-      PlantASeed:
-        title: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
-      Conditionals:
-        title: លក្ខខណ្ឌ
-      BigEvent:
+      courseABC_unplugged_bigEvent:
         title: ព្រឹត្តិការណ៍ធំ
-      DigitalFootprint:
-        title: Your Digital Footprint
-      ComputationalThinking:
-        title: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
+      courseAB_unplugged_plantASeed:
+        title: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
       courseB_unplugged_MRF:
         title: Unplugged Activity
+      courseB_unplugged_MRF_2018:
+        title: មិត្តរ៉ូបូតរបស់ខ្ញុំ
+      courseB_unplugged_MRF_2019:
+        title: មិត្តរ៉ូបូតរបស់ខ្ញុំ
+      courseB_unplugged_digitalFootprint:
+        title: Your Digital Footprint
       courseB_unplugged_loopyMRF:
         title: Unplugged Activity
       courseC_Unplugged_ScreenOutTheMean:
         title: Unplugged Activity
-      courseD_unplugged_digitalCitizenship:
-        title: Unplugged Activity
-      courseF_unplugged_powerOfWords:
-        title: Unplugged Activity
-      courseAB_unplugged_plantASeed:
-        title: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
-      courseABC_unplugged_bigEvent:
-        title: ព្រឹត្តិការណ៍ធំ
-      courseB_unplugged_digitalFootprint:
-        title: Your Digital Footprint
-      courseD_unplugged_conditionalsCards:
-        title: ការប្រើលក្ខខណ្ឌជាមួយកាត
-      courseB_unplugged_MRF_2018:
-        title: មិត្តរ៉ូបូតរបស់ខ្ញុំ
-      PlantASeed_2018:
-        title: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
-      BigEvent_2018:
-        title: ព្រឹត្តិការណ៍ធំ
-      courseD_unplugged_digitalCitizenship_2018:
-        title: Unplugged Activity
       courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Unplugged Activity
-      Conditionals_2018:
-        title: លក្ខខណ្ឌ
-      DigitalFootprint_2018:
-        title: Your Digital Footprint
-      courseB_unplugged_MRF_2019:
-        title: មិត្តរ៉ូបូតរបស់ខ្ញុំ
-      Conditionals_2019:
-        title: លក្ខខណ្ឌ
-      courseD_unplugged_digitalCitizenship_2019:
         title: Unplugged Activity
       courseC_Unplugged_ScreenOutTheMean_2019:
         title: Unplugged Activity
-      BigEvent_2019:
-        title: ព្រឹត្តិការណ៍ធំ
-      PlantASeed_2019:
-        title: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
-      DigitalFootprint_2019:
-        title: Your Digital Footprint
+      courseD_unplugged_conditionalsCards:
+        title: ការប្រើលក្ខខណ្ឌជាមួយកាត
+      courseD_unplugged_digitalCitizenship:
+        title: Unplugged Activity
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Unplugged Activity
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Unplugged Activity
+      courseF_unplugged_powerOfWords:
+        title: Unplugged Activity
       timeforcs_demo_conditionals:
         title: លក្ខខណ្ឌ

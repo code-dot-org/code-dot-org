@@ -1,9 +1,9 @@
 {
   "absolute": "ค่าสัมบูรณ์",
+  "agentDiamondPathCongrats": "ยินดีด้วย คุณได้เจอเส้นทางที่มีเพชร! คุณได้เก็บเพชร {count, plural, one {1 เม็ด} other {# เม็ด}} ไปแล้ว!",
   "agentGenericFailureMessage": "เขียนโค้ดต่อไป! จำไว้ว่าคุณสามารถใช้เอเจนท์เพื่อช่วยคุณได้",
   "agentTooFewBlocksFailureMessage": "ลองใส่บล็อกทีละบล็อกเพื่อให้ผู้เล่นไปอยู่ในตำแหน่งที่ถูกต้อง",
   "at": "ที่",
-  "agentDiamondPathCongrats": "ยินดีด้วย คุณได้เจอเส้นทางที่มีเพชร! คุณได้เก็บเพชร {count, plural, one {1 เม็ด} other {# เม็ด}} ไปแล้ว!",
   "blockActionAdd": "เพิ่ม",
   "blockActionAttack": "โจมตี",
   "blockActionClone": "ลอกเลียนแบบบล็อก",

@@ -1,5 +1,5 @@
 ---
-title: How-to guide for parents
+title: Эцэг эхчүүдэд хэрхэн чиглүүлэх вэ
 ---
 
 # How to do an Hour of Code with your child

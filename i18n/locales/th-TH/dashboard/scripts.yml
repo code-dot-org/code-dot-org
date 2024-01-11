@@ -122,7 +122,7 @@ th:
           description_short: ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ
           student_description: ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ
         mc:
-          title: ชั่วโมงแห่งการเขียนโค้ดกับไมน์คราฟท์
+          title: การผจญภัยในไมน์คราฟท์
           description: ใช้บล็อคของโค้ดเพื่อพาสตีฟหรือแอเล็กซ์สู่การผจญภัยในโลกของไมน์คราฟท์
           description_short: สำรวจโลก Minecraft ผ่านโค้ด
           student_description: ใช้บล็อคของโค้ดเพื่อพาสตีฟหรือแอเล็กซ์สู่การผจญภัยในโลกของไมน์คราฟท์
@@ -2411,6 +2411,10 @@ th:
           title: 'สวัสดีชาวโลก: จักรวาล'
         hello-world-soccer-2022:
           title: 'สวัสดีชาวโลก: ฟุตบอล'
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: แบบสำรวจ
         csd3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2626,12 +2630,24 @@ th:
               display_name: ตอนที่ 2
             lessonGroup-5:
               display_name: แบบสำรวจ
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'บทที่ 1: ภาพและการเคลื่อนไหว'
             lessonGroup-3:
               display_name: 'บทที่ 2: การสร้างเกม'
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: แบบสำรวจ
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
         focus-on-data3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2640,12 +2656,24 @@ th:
               display_name: ตอนที่ 1
             lessonGroup-4:
               display_name: ตอนที่ 2
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'บทที่ 1: ภาพและการเคลื่อนไหว'
             lessonGroup-3:
               display_name: 'บทที่ 2: การสร้างเกม'
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
         focus-on-impact-in-society4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2793,3 +2821,162 @@ th:
           lessons:
             lesson-4:
               name: ข้อมูล
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: พลเมืองดิจิทัล
+            lessonGroup-3:
+              display_name: การจัดลำดับ
+            lessonGroup-4:
+              display_name: ลูป
+            lessonGroup-5:
+              display_name: ผลกระทบจากการใช้คอมพิวเตอร์
+          description_audience: 'อายุ: 4-7 ปี'
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: ข้อมูล
+          lesson_groups:
+            lessonGroup-2:
+              display_name: พลเมืองดิจิทัล
+            lessonGroup-3:
+              display_name: การจัดลำดับ
+            lessonGroup-4:
+              display_name: ลูป
+            lessonGroup-5:
+              display_name: ผลกระทบจากการใช้คอมพิวเตอร์
+            lessonGroup-6:
+              display_name: ข้อมูล
+          description_audience: 'อายุ: 4-7 ปี'
+          description_short: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: ข้อมูล
+          lesson_groups:
+            lessonGroup-2:
+              display_name: พลเมืองดิจิทัล
+            lessonGroup-3:
+              display_name: การจัดลำดับ
+            lessonGroup-4:
+              display_name: ลูป
+            lessonGroup-5:
+              display_name: ผลกระทบจากการใช้คอมพิวเตอร์
+            lessonGroup-6:
+              display_name: เหตุการณ์
+            lessonGroup-7:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
+            lessonGroup-8:
+              display_name: ข้อมูล
+          description_audience: 'อายุ: 5-8 ปี'
+          description_short: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้ จะมีความคล้ายคลึงกับหลักสูตร A แต่จะมีการเพิ่มเติมแนวคิดที่ลงลึกยิ่งขึ้น
+        nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: ระบบคอมพิวเตอร์
+          lesson_groups:
+            lessonGroup-2:
+              display_name: พลเมืองดิจิทัล
+            lessonGroup-3:
+              display_name: การจัดลำดับ
+            lessonGroup-4:
+              display_name: ลูป
+            lessonGroup-5:
+              display_name: เหตุการณ์
+            lessonGroup-6:
+              display_name: ข้อมูล
+            lessonGroup-8:
+              display_name: ระบบคอมพิวเตอร์
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: พลเมืองดิจิทัล
+            lessonGroup-3:
+              display_name: การจัดลำดับ
+            lessonGroup-4:
+              display_name: ผลกระทบจากการใช้คอมพิวเตอร์
+            lessonGroup-6:
+              display_name: ลูป
+            lessonGroup-7:
+              display_name: ข้อมูล
+            lessonGroup-8:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
+          description_audience: 'อายุ: 7-11 ปี'
+          description_short: เรียนรู้คำสั่งแบบมีเงื่อนไข ก่อนคิดงานศิลปะ เกม และแม้แต่ปาร์ตี้เต้นรำของคุณเอง
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: ลูปซ้อนลูป
+            lessonGroup-4:
+              display_name: ฟังก์ชัน
+            lessonGroup-6:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
+          description_audience: 'อายุ: 8-12 ปี'
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description_audience: 'อายุ: 9-13 ปี'
+          description_short: ศึกษาแนวคิดทั้งหมดที่เกี่ยวกับวิทยาการคอมพิวเตอร์พื้นฐาน ก่อนลงมือคิดงานศิลปะ เรื่องราวหรือเกมของคุณเอง
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: เงื่อนไข
+            lessonGroup-5:
+              display_name: ตัวแปร
+            lessonGroup-6:
+              display_name: ผลกระทบจากการใช้คอมพิวเตอร์
+            lessonGroup-7:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
+          description_audience: 'อายุ: 9-13 ปี'
+          description_short: ศึกษาแนวคิดทั้งหมดที่เกี่ยวกับวิทยาการคอมพิวเตอร์พื้นฐาน ก่อนลงมือคิดงานศิลปะ เรื่องราวหรือเกมของคุณเอง
+        how-ai-works-2023:
+          title: AI ทำงานอย่างไร
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: จรรยาบรรณ AI ของเรา
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: บทเกริ่นนำ
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: บทเกริ่นนำ
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: บทเกริ่นนำ
+          lesson_groups:
+            lessonGroup-7:
+              display_name: บทเกริ่นนำ
+        self-paced-pl-csd-unit1-2-2023:
+          title: 'รูปแบบที่ 1: การเตรียมพร้อมในการสอนการแก้ไขปัญหาและการคำนวณ'
+          description: "บทเรียนการเรียนรู้ระดับอาชีพนี้ได้รับการออกแบบมาเพื่อช่วยสร้างความพร้อมให้กับคุณเพื่อใช้ในการสอนบทเรียนการแก้ไขปัญหาและการคำนวณเบื้องต้นใน Code.org \n\n**ในบทเรียนการเรียนรู้ระดับอาชีพนี้ คุณจะได้:**\n\n-   เรียนรู้การแก้ปัญหาและการคำนวณเบื้องต้น\n-   ฝึกฝนด้านรูปแบบคีย์ที่มีในบทเรียน\n-   เรียนจนจบโปรเจกต์\n\n**เวลาที่แนะนำ:** 30 นาที"
+          student_description: "บทเรียนการเรียนรู้ระดับอาชีพนี้ได้รับการออกแบบมาเพื่อช่วยสร้างความพร้อมให้กับคุณเพื่อใช้ในการสอนบทเรียนการแก้ไขปัญหาและการคำนวณเบื้องต้นใน Code.org \n\n**ในบทเรียนการเรียนรู้ระดับอาชีพนี้ คุณจะได้:**\n\n-   เรียนรู้การแก้ปัญหาและการคำนวณเบื้องต้น\n-   ฝึกฝนด้านรูปแบบคีย์ที่มีในบทเรียน\n-   เรียนจนจบโปรเจกต์\n\n**เวลาที่แนะนำ:** 30 นาที"
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'รูปแบบที่ 2: การเตรียมพร้อมในการสอนพัฒนาเว็บ'
+        self-paced-pl-csd-unit3-2-2023:
+          title: การเตรียมพร้อมในการสอนการตอบโต้ในอะนิเมชันและเกม
+          description: "บทเรียนการเรียนรู้ระดับอาชีพนี้ได้รับการออกแบบมาเพื่อช่วยสร้างความพร้อมให้กับคุณเพื่อใช้ในการสอนบทเรียนการโต้ตอบเบื้องต้นในอะนิเมชันและเกมใน Code.org \n\n**ในบทเรียนการเรียนรู้ระดับอาชีพนี้ คุณจะได้:**\n\n-   เรียนรู้การโต้ตอบเบื้องต้นในอะนิเมชันและเกม\n-   ฝึกฝนด้านรูปแบบคีย์ที่มีในบทเรียน\n-   เข้าร่วมทำงานใน Game Lab\n-   เรียนจนจบโปรเจกต์\n\n**เวลาที่แนะนำ:** 120 นาที"
+          student_description: "บทเรียนการเรียนรู้ระดับอาชีพนี้ได้รับการออกแบบมาเพื่อช่วยสร้างความพร้อมให้กับคุณเพื่อใช้ในการสอนบทเรียนการโต้ตอบเบื้องต้นในอะนิเมชันและเกมใน Code.org \n\n**ในบทเรียนการเรียนรู้ระดับอาชีพนี้ คุณจะได้:**\n\n-   เรียนรู้การโต้ตอบเบื้องต้นในอะนิเมชันและเกม\n-   ฝึกฝนด้านรูปแบบคีย์ที่มีในบทเรียน\n-   เข้าร่วมทำงานใน Game Lab\n-   เรียนจนจบโปรเจกต์\n\n**เวลาที่แนะนำ:** 120 นาที"
+        self-paced-pl-csd-unit4-2-2023:
+          title: " รูปแบบที่ 4: การเตรียมพร้อมในการสอนกระบวนการออกแบบ"
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'รูปแบบที่ 5: การเตรียมพร้อมในการสอนด้านข้อมูลและสังคม'
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: แบบสำรวจ
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'บทที่ 1: ภาพและการเคลื่อนไหว'
+            lessonGroup-3:
+              display_name: 'บทที่ 2: การสร้างเกม'
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แอปแลปเบื้องต้น
+            lessonGroup-2:
+              display_name: ตอนที่ 1
+            lessonGroup-3:
+              display_name: ตอนที่ 2

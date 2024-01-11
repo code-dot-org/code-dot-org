@@ -15,7 +15,6 @@ de:
             '0.75': klein
             '1.00': mittel
             '2.00': groß
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -23,7 +22,8 @@ de:
             '0.75': klein
             '1.00': mittel
             '2.00': groß
-            '3.00': extra large
+      Dancelab_ai:
+        text: "{IMAGE}Erzeuge {VALUE} -Effekt"
       Dancelab_alternateMoves:
         text: "{GROUP} wechselt jeden {N} Takt \nzwischen {MOVE1} und {MOVE2}"
         options:
@@ -73,6 +73,12 @@ de:
           UNIT:
             '"measures"': Takte
             '"seconds"': Sekunden
+      Dancelab_atTimestampNotAfter:
+        text: bei {TIMESTAMP} {UNIT}
+        options:
+          UNIT:
+            '"measures"': Takte
+            '"seconds"': Sekunden
       Dancelab_changeColorBy:
         text: ändern {COLOR} {METHOD} um {AMOUNT}
         options:
@@ -113,6 +119,31 @@ de:
             MOVES.ThisOrThat: Dies oder Das
             MOVES.Thriller: Zombie
             MOVES.Rest: Keiner
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} tun {MOVE} {DIR} für immer"
+        options:
+          GROUP:
+            '"CAT"': alle Katzen
+            '"SLOTH"': Faultiere
+          MOVE:
+            MOVES.Roll: Body Roll
+            MOVES.ClapHigh: Oben klatschen
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Intensivieren
+            MOVES.Drop: Fallen lassen
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Stern
+            MOVES.ThisOrThat: Dies oder Das
+            MOVES.Thriller: Zombie
+            MOVES.Rest: Keiner
+            '"next"': "(nächste/r)"
+            '"prev"': "(vorherig/er)"
+            '"rand"': "(zufällig)"
           DIR:
             '1': "→"
             "-1": "←"
@@ -390,6 +421,7 @@ de:
             '"x"': kreuz und quer
             '"plus"': plus
             '"spiral"': Spirale
+            '"infinity"': unendliche Linie
             '"random"': zufällig
       Dancelab_makeAnonymousDanceSprite:
         text: erstelle neues {COSTUME} in {LOCATION}
@@ -472,26 +504,6 @@ de:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': alle Aliens
             '"BEAR"': Bären
@@ -520,6 +532,7 @@ de:
             '"x"': kreuz und quer
             '"plus"': plus
             '"spiral"': Spirale
+            '"infinity"': unendliche Linie
             '"random"': zufällig
       Dancelab_mixColors:
         text: Mische {COLOR1} und {COLOR2}
@@ -607,6 +620,60 @@ de:
             '"tropical"': Tropisch
             '"vintage"': Vintage
             '"warm"': Rots
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: "hintergrundeffekt einstellen \n{PALETTE} {EFFECT}"
+        options:
+          EFFECT:
+            '"none"': Keiner
+            '"rand"': "(zufällig)"
+            '"quads"': Winkel
+            '"blooming_petals"': Blühende Blütenblätter
+            '"circles"': Tunnel
+            '"color_cycle"': Farben
+            '"diamonds"': Rauten
+            '"disco_ball"': Disco-Kugel
+            '"fireworks"': Feuerwerk
+            '"flowers"': Blumen
+            '"frosted_grid"': Gefrorenes Gitter
+            '"growing_stars"': Wachsende Sterne
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Laser-Tanzfläche
+            '"splatter"': Farbspritzer
+            '"rainbow"': Regenbogen
+            '"ripples_random"': Zufällige Wellen
+            '"ripples"': Wellen
+            '"snowflakes"': Schnee
+            '"text"': Song-Titel
+            '"galaxy"': Leerzeichen
+            '"sparkles"': Funkeln
+            '"spiral"': Spirale
+            '"disco"': Quadrate
+            '"squiggles"': Schnörkel
+            '"starburst"': Starburst
+            '"stars"': Sterne
+            '"music_wave"': Wellen
+          PALETTE:
+            '"autumn"': Herbst
+            '"rave"': Schwarzweiß
+            '"cool"': Blaus
+            '"electronic"': Elektronisch
+            '"grayscale"': Graustufen
+            '"iceCream"': Eiscreme
+            '"default"': Hell
+            '"neon"': Neon
+            '"rainbow"': Regenbogen
+            '"roses"': Rosen
+            '"sky"': Himmel
+            '"spring"': Frühling
+            '"summer"': Sommer
+            '"sunrise"': Sonnenaufgang
+            '"sunset"': Sonnenuntergang
+            '"tropical"': Tropisch
+            '"twinkling"': Funkelnd
+            '"vintage"': Vintage
+            '"warm"': Rots
+            '"winter"': Winter
       Dancelab_setDanceSpeed:
         text: verändern Sie die {SPRITE} Tanzgeschwindigkeit zu {SPEED}
         options:
@@ -1008,13 +1075,17 @@ de:
         text: Setup
       Dancelab_whenSetup2:
         text: Setup
+      Dancelab_whenSetupSong:
+        options:
+          SONG:
+            '"macklemore90"': Macklemore - Can't Hold Us
+            '"hammer"': MC Hammer - U Can't Touch This
+            '"peas"': The Black Eyed Peas - I Got a Feeling
       DansBlocks_getMicroscope:
         text: Mikroskop hat {INPUT1}
         options:
           INPUT1:
             '1': Zitronensaft
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         text: führe {EFFECT} aus
         options:
@@ -1031,8 +1102,6 @@ de:
         options:
           INPUT1:
             '1': Zitronensaft
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: Kommuniziere {VAR1} mit {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
@@ -1528,11 +1597,9 @@ de:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': langsam
             '5': Normal
             '7': schnell
-            '9': extra fast
       gamelab_setTint:
         text: ändere die Farbe von {THIS} nach {COLOR}
       gamelab_setupScoreboard:
@@ -1688,6 +1755,12 @@ de:
         text: y Koordinate von {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} gleite zu {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': Solid
+            '"liquid"': flüssig
+            '"gas"': Gas
       KatiesBlocks_tumbling:
         text: hingefallen
       Mikelab_addBehaviorSimple:
@@ -2051,14 +2124,10 @@ de:
         options:
           INPUT1:
             '1': Zitronensaft
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': Zitronensaft
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -2566,7 +2635,6 @@ de:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '2': '2'
             '3': '3'

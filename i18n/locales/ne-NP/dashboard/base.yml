@@ -39,8 +39,10 @@ ne:
         age: 'उमेर'
         gender: 'लिङ्ग'
         edit_header: 'खाता जानकारी सम्पादन गर्नुहोस्'
+        finish_sign_up_header_error: 'Please correct the following errors:'
         error:
           future: can't be in the future
+        user_type: 'Account Type'
   beta: "बिटा"
   hello: "के छ विश्व"
   welcome_back: "Welcome back, %{name}"

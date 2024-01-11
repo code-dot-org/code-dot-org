@@ -100,7 +100,7 @@
   "removeStack": "odstranit sadu{shovelfuls} hromádek",
   "repeatCarefullyError": "Chceš-li to vyřešit, zamysli se nad dvěma posuny a jedním otočením v bloku \"opakuj\". Je v pořádku mít na konci jeden posun navíc.",
   "repeatUntil": "opakuj dokud nenastane",
-  "repeatUntilBlocked": "pokud je cesta vpřed",
+  "repeatUntilBlocked": "dokud je cesta vpřed",
   "repeatUntilFinish": "opakuj do konce",
   "soil": "půda",
   "sprout": "klíček",

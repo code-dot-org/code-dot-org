@@ -52,7 +52,9 @@ it:
         age: 'Età'
         gender: 'Sesso'
         edit_header: 'Modifica i dettagli dell''account'
+        ai_settings_header: 'Impostazioni IA'
         finish_sign_up_header: 'Completa la creazione del tuo account'
+        finish_sign_up_header_error: 'Per favore correggi i seguenti errori:'
         finish_sign_up_subheader: 'Compila i seguenti dati per terminare la creazione del tuo account Code.org per <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Compila i seguenti dati per terminare la creazione del tuo account Code.org per **%{email}**.'
         finish_sign_up_subheader_provider: 'Compila i seguenti dati per terminare la creazione del tuo account Code.org con <strong>%{provider}</strong> per <strong>%{email}</strong>.'
@@ -60,6 +62,7 @@ it:
         reset_password_token: "Il link per la reimpostazione della password che hai usato"
         error:
           future: non può essere in futuro
+        user_type: 'Tipo di account'
         us_state: 'Stato'
   beta: "versione provvisoria"
   hello: "Ciao mondo"
@@ -202,6 +205,8 @@ it:
     parent_account_email_progress_permission: "Possiamo inviarti aggiornamenti occasionali sui progressi e sui progetti di tuo figlio e aggiornamenti sui corsi e sull'informatica?[(Vedi la nostra politica sulla privacy)](%{privacy_policy_url})"
     parent_account_email_label: "E-mail del genitore/tutore"
     us_state: 'Stato'
+    us_state_dropdown_options:
+      other: "Vivo in un posto non elencato qui"
   school_info:
     title: 'Informazioni sulla scuola (opzionale)'
     school_country: 'Paese della Scuola'
@@ -270,6 +275,9 @@ it:
   parent_mailer:
     student_associated_subject: 'Informazioni di accesso per Code.org'
     parent_email_added_subject: 'Benvenuto su Code.org!'
+    parent_permission_request_subject: "È richiesto il consenso dei genitori per permettere ai propri figli l'accesso a Code.org"
+    parent_permission_reminder_subject: "Ricorda, è richiesto il consenso dei genitori per permettere ai propri figli l'accesso a Code.org"
+    parent_permission_confirmation_subject: "Grazie per aver approvato l'accesso a Code.org ai tuoi figli!"
   teacher_mailer:
     new_teacher_subject: 'Benvenuto su Code.org!'
     delete_teacher_subject: 'Notifica di Code.org: il tuo account è stato eliminato'
@@ -338,7 +346,7 @@ it:
       finished_hoc: "Ho finito!"
       sign_in_to_save: 'Accedi per salvare i progressi fatti'
       my_dashboard: "Controllo"
-      course_catalog: "Corsi"
+      course_catalog: "Catalogo Corsi"
       project_gallery: "Progetti"
       sections: "Classi"
       help_support: "Help and support"
@@ -355,10 +363,11 @@ it:
       sprite_lab_documentation: "Documentazione Sviluppo App"
       sprite_lab_tutorials: "Esercitazioni Sviluppo App"
       web_lab_documentation: "Documentazione Sviluppo Web"
+      project_beats_documentation: "Documentazione Project Beats"
       educate_overview: "Panoramica dei corsi"
-      educate_elementary: "Scuola elementare"
-      educate_middle: "Scuola media"
-      educate_high: "Scuola superiore"
+      educate_elementary: "Scuola primaria"
+      educate_middle: "Scuola secondaria di primo grado"
+      educate_high: "Scuola secondaria di secondo grado"
       educate_hoc: "L'Ora del Codice"
       educate_partner: "Collabora con noi"
       educate_beyond: "Dopo Code.org"
@@ -1131,17 +1140,33 @@ it:
         not_listed: 'Termine preferito non in elenco'
         none: 'Preferisco non rispondere'
       school_country:
+        australia: 'Australia'
         barbados: 'Barbados'
         belize: 'Belize'
+        brazil: 'Brasile'
         canada: 'Canada'
         chile: 'Cile'
         colombia: 'Colombia'
+        dominican_republic: 'Repubblica Dominicana'
+        india: 'India'
+        indonesia: 'Indonesia'
         israel: 'Israele'
+        jamaica: 'Giamaica'
+        kenya: 'Kenya'
         malaysia: 'Malesia'
+        maldives: 'Maldive'
         mexico: 'Messico'
+        mongolia: 'Mongolia'
+        new_zealand: 'Nuova Zelanda'
         paraguay: 'Paraguay'
+        portugal: 'Portogallo'
+        slovakia: 'Slovacchia'
+        south_korea: 'Sud Corea'
+        spain: 'Spagna'
         thailand: 'Tailandia'
+        trinidad_and_tobago: 'Trinidad e Tobago'
         uzbekistan: 'Uzbekistan'
+        vietnam: 'Vietnam'
       ages:
         ages_under_6: 'Fino a 6 anni'
         ages_7_8: '7 -8 anni'
@@ -1188,7 +1213,7 @@ it:
         csf_af: 'Fondamenti di Informatica (Corsi A-F)'
         csf_express: 'Fondamenti di Informatica (Corsi rapidi)'
         csd: 'Alla scoperta dell''informatica'
-        csp: 'Principi di informatica'
+        csp: 'Princìpi di informatica'
         other: 'Altro'
         not_applicable: "Non applicabile"
       email_opt_in:
@@ -1219,8 +1244,8 @@ it:
       hello_world: 'Ciao mondo'
       popular_media: 'Media popolari'
       sports: 'Sport'
-      express: 'Esprimi'
-      csf: 'Corsi base'
+      express: 'Corsi rapidi'
+      csf: 'Fondamenti di informatica'
       csc: 'Informatica interdisciplinare'
       year_long: 'Per tutto l''anno'
       csa_labs: 'Laboratori CSA'

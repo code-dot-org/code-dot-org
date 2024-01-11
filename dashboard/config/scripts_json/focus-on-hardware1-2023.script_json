@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-06-21 18:22:59 UTC",
+    "serialized_at": "2023-10-27 19:27:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -28,9 +28,21 @@
   },
   "lesson_groups": [
     {
-      "key": "lessonGroup-2",
+      "key": "lessonGroup-5",
       "user_facing": true,
       "position": 1,
+      "properties": {
+        "display_name": "Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "focus-on-hardware1-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 2,
       "properties": {
         "display_name": "Chapter 1: The Problem Solving Process"
       },
@@ -42,7 +54,7 @@
     {
       "key": "lessonGroup-3",
       "user_facing": true,
-      "position": 2,
+      "position": 3,
       "properties": {
         "display_name": "Chapter 2: Computers and Problem Solving"
       },
@@ -54,7 +66,7 @@
     {
       "key": "lessonGroup-4",
       "user_facing": true,
-      "position": 3,
+      "position": 4,
       "properties": {
         "display_name": "Alternative Lessons"
       },
@@ -66,9 +78,24 @@
   ],
   "lessons": [
     {
+      "key": "Student Pre-Course Survey",
+      "name": "Student Pre-Course Survey",
+      "absolute_position": 1,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Student Pre-Course Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "focus-on-hardware1-2023"
+      }
+    },
+    {
       "key": "Intro to Problem Solving",
       "name": "Intro to Problem Solving",
-      "absolute_position": 1,
+      "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
@@ -87,7 +114,7 @@
     {
       "key": "The Problem Solving Process",
       "name": "The Problem Solving Process",
-      "absolute_position": 2,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
@@ -106,7 +133,7 @@
     {
       "key": "Exploring Problem Solving",
       "name": "Exploring Problem Solving",
-      "absolute_position": 3,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
@@ -125,7 +152,7 @@
     {
       "key": "What is a Computer?",
       "name": "What is a Computer?",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
@@ -144,7 +171,7 @@
     {
       "key": "Input and Output",
       "name": "Input and Output",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
@@ -163,7 +190,7 @@
     {
       "key": "Processing",
       "name": "Processing",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
@@ -182,7 +209,7 @@
     {
       "key": "Storage",
       "name": "Storage",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
@@ -201,7 +228,7 @@
     {
       "key": "Project - Propose an App",
       "name": "Project - Propose an App",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
@@ -231,10 +258,10 @@
     {
       "key": "Post-Project Test",
       "name": "Post-Project Test",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": true,
       "has_lesson_plan": false,
-      "relative_position": 1,
+      "relative_position": 2,
       "properties": {
       },
       "seeding_key": {
@@ -246,7 +273,7 @@
     {
       "key": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
       "name": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
-      "absolute_position": 10,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
@@ -265,7 +292,7 @@
     {
       "key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
       "name": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
-      "absolute_position": 11,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 10,
@@ -284,7 +311,7 @@
     {
       "key": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
       "name": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
-      "absolute_position": 12,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 11,
@@ -303,7 +330,7 @@
     {
       "key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
       "name": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
-      "absolute_position": 13,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 12,
@@ -323,7 +350,7 @@
     {
       "key": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
       "name": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
-      "absolute_position": 14,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 13,
@@ -341,6 +368,19 @@
     }
   ],
   "lesson_activities": [
+    {
+      "key": "de6e91c3-a773-4e57-ac85-279a60e1cb9e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "de6e91c3-a773-4e57-ac85-279a60e1cb9e",
+        "lesson.key": "Student Pre-Course Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "focus-on-hardware1-2023"
+      }
+    },
     {
       "key": "ba0c5727-8e2d-4bd4-9b25-fbcc86d138f0",
       "position": 1,
@@ -1058,6 +1098,16 @@
     }
   ],
   "activity_sections": [
+    {
+      "key": "11530af3-f01e-479c-8984-cd8a87d7d0e8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "11530af3-f01e-479c-8984-cd8a87d7d0e8",
+        "lesson_activity.key": "de6e91c3-a773-4e57-ac85-279a60e1cb9e"
+      }
+    },
     {
       "key": "23a3547e-ce07-4800-a870-be09b2d6bf48",
       "position": 1,
@@ -2203,7 +2253,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "Ensure that students are identifying appropriate inputs and outputs.  Student answers may vary slightly, but they should be similar to those in the exemplar provided in the \"Teachers Only\" box of the first level in Code Studio.\n"
+            "markdown": "Ensure that students are identifying appropriate inputs and outputs.  Student answers may vary slightly, but they should be similar to those in the exemplar provided in the \"For the teachers\" resources section of the lesson plan.\n"
           }
         ]
       },
@@ -4484,6 +4534,30 @@
       "assessment": true,
       "properties": {
         "level_keys": [
+          "csd-pre-survey-levelgroup_21_22_2023"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-pre-survey-levelgroup_21_22_2023"
+        ],
+        "lesson.key": "Student Pre-Course Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "focus-on-hardware1-2023",
+        "activity_section.key": "11530af3-f01e-479c-8984-cd8a87d7d0e8"
+      },
+      "level_keys": [
+        "csd-pre-survey-levelgroup_21_22_2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
           "intro-pulse-survey_csd1_2023"
         ],
         "progression": "Check-In Survey"
@@ -4503,7 +4577,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4528,7 +4602,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4553,7 +4627,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4578,7 +4652,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4603,7 +4677,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4628,7 +4702,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4653,7 +4727,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4678,7 +4752,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4703,7 +4777,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4728,7 +4802,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4753,7 +4827,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4778,7 +4852,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4803,7 +4877,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4828,7 +4902,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4853,7 +4927,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4878,7 +4952,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4903,6 +4977,18 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csd-pre-survey-levelgroup_21_22_2023",
+        "script_level.level_keys": [
+          "csd-pre-survey-levelgroup_21_22_2023"
+        ],
+        "lesson.key": "Student Pre-Course Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "focus-on-hardware1-2023",
+        "activity_section.key": "11530af3-f01e-479c-8984-cd8a87d7d0e8"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "intro-pulse-survey_csd1_2023",
@@ -6955,6 +7041,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

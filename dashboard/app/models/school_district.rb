@@ -175,7 +175,7 @@ class SchoolDistrict < ApplicationRecord
   # @param ignore_attributes [Array] List of attributes included in a given import that should not be used to determine whether a record is being "updated" or "unchanged". Allows us to more clearly identify which schools have real changes to existing data.
   # @param parse_row [Block] A block to parse a row of new data -- see School.seed_from_s3 for examples.
   def self.seed_s3_object(bucket, filepath, import_options, is_dry_run: false, ignore_attributes: [], &parse_row)
-    AWS::S3.seed_from_file(bucket, filepath, is_dry_run) do |filename|
+    AWS::S3.seed_from_file(bucket, filepath, dry_run: is_dry_run) do |filename|
       merge_from_csv(
         filename,
         import_options,
@@ -225,15 +225,15 @@ class SchoolDistrict < ApplicationRecord
       raise "This was a dry run. No rows were modified or added. Set dry_run: false to modify db" if is_dry_run
     ensure
       future_tense_dry_run = is_dry_run ? ' to be' : ''
-      summary_message = "School District seeding: done processing #{filename}.\n"\
-        "#{new_districts.length} new districts#{future_tense_dry_run} added.\n"\
-        "#{updated_districts} districts#{future_tense_dry_run} updated.\n"\
+      summary_message = "School District seeding: done processing #{filename}.\n" \
+        "#{new_districts.length} new districts#{future_tense_dry_run} added.\n" \
+        "#{updated_districts} districts#{future_tense_dry_run} updated.\n" \
         "#{unchanged_districts} districts#{future_tense_dry_run} unchanged (district considered changed if only update was adding new columns included in this import).\n"
 
       # More detailed logging in dry run mode
       if !new_districts.empty? && is_dry_run
         summary_message <<
-          "Districts#{future_tense_dry_run} added:\n"\
+          "Districts#{future_tense_dry_run} added:\n" \
           "#{new_districts.map {|district| district[:name]}.join("\n")}\n"
       end
 

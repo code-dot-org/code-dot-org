@@ -65,11 +65,13 @@ sk:
       Cake Defender: Obranca koláča
       Challenge: Výzva
       Challenge Levels: Úrovne výzvy
+      'Challenge: Draw an Image': 'Výzva: Nakreslite obrázok'
       'Challenge: Lists': 'Výzva: Zoznamy'
       'Challenge: RGB Colors': 'Výzva: Farby RGB'
       Challenges: Náročnejšie úlohy
       Change: Zmeň
       Check Your Work: Skontroluj svoju prácu
+      Check for Understanding: Kontrola porozumenia
       Check-In Survey: Kontrolný dotazník
       Checking for a Winner: Určuje sa víťaz
       'Choice Levels: Customize Your App': 'Voliteľné úrovne: Prispôsob si aplikáciu'
@@ -193,6 +195,7 @@ sk:
       Input with If-Else: Vstup s "if/else" (ak/potom)
       Inspiration!: Inšpirácia!
       Interactive Card: Interaktívna pohľadnica
+      Intro Video: Úvod Video
       Intro to Design Mode: Úvod do dizajnového módu
       Intro to Flyer Game: Úvod do Lietacej hry
       Intro to For Loops: Predstavenie cyklov "for"
@@ -200,6 +203,7 @@ sk:
       Intro to Sprites: Predstavenie "sprite" objektov
       Intro to Variables: Predstavenie premenných
       Introducing Sprite Lab: Predstavenie Sprite Labu
+      Introduction: Úvod
       Introduction to Arrays: Úvod do zoskupení
       Introduction to Game Lab: Úvod do Game Labu
       Introduction to Variables: Predstavenie premenných
@@ -349,6 +353,7 @@ sk:
       Setting Properties: Nastavenie vlastností
       Shapes and Parameters: Tvary a parametre
       Shapes and the Draw Loop: Tvary  a vykresľovací cyklus
+      Share Out: Zdieľanie s triedou
       Share Your App: Zdieľaj svoju appku
       Share Your Pages: Zdieľaj svoje stránky
       Share Your Stylesheets: Zdieľaj svoje súbory štýlov
@@ -393,6 +398,7 @@ sk:
       Train an AI to Clean the Ocean: Vycvičte umelú inteligenciu na čistenie oceánov
       UI Element Properties: Vlastnosti častí užívateľského rozhrania
       Ultimate Shoe Recommender: Najlepšie odporúčanie topánok
+      Unplugged Activity: Aktivita bez počítača
       Upload Your Images: Nahraj svoje obrázky
       User Interface: Užívateľské prostredie
       Using Getters and Setters: Používanie GET/SET príkazov (vráť/nastav hodnotu)

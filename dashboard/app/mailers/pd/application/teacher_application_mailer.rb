@@ -1,6 +1,7 @@
 module Pd::Application
-  class TeacherApplicationMailer < ActionMailer::Base
-    CODE_ORG_DEFAULT_NOTIFICATION_EMAIL = 'Becky Kenemuth <teacher@code.org>'
+  class TeacherApplicationMailer < ApplicationMailer
+    # This should be kept consistent with the signature in _partner_signature.html.haml
+    CODE_ORG_DEFAULT_NOTIFICATION_EMAIL = 'Nikki Navta <teacher@code.org>'
     default from: 'Code.org <noreply@code.org>'
     default bcc: MailerConstants::PLC_EMAIL_LOG
 
@@ -11,11 +12,11 @@ module Pd::Application
         mail(
           to: @application.formatted_applicant_email,
           reply_to: @application.formatted_partner_contact_email,
-          subject: "We've received your application for #{@application.regional_partner.name}'s Professional Learning Program!"
+          subject: "#{@application.regional_partner.name} has received your application for Code.org's Professional Learning Program",
         )
       else
         mail(
-          from: 'Code.org <teacher@code.org>',
+          from: CODE_ORG_DEFAULT_NOTIFICATION_EMAIL,
           to: @application.formatted_applicant_email,
           subject: "We've received your application for Code.org's Professional Learning Program!"
         )
@@ -33,7 +34,7 @@ module Pd::Application
         )
       else
         mail(
-          from: 'Code.org <teacher@code.org>',
+          from: CODE_ORG_DEFAULT_NOTIFICATION_EMAIL,
           to: @application.formatted_applicant_email,
           subject: "REMINDER - Action Needed: Your application needs Administrator/School Leader approval"
         )
@@ -51,7 +52,7 @@ module Pd::Application
         )
       else
         mail(
-          from: 'Code.org <teacher@code.org>',
+          from: CODE_ORG_DEFAULT_NOTIFICATION_EMAIL,
           to: @application.formatted_applicant_email,
           subject: "Important: Your Application Requires Administrator/School Leader Approval"
         )
@@ -64,8 +65,8 @@ module Pd::Application
       mail(
         to: @application.formatted_principal_email,
         reply_to: @application.formatted_partner_contact_email,
-        subject: "Action Needed: #{@application.applicant_full_name} has applied to" \
-            " #{@application.effective_regional_partner_name}'s Professional Learning Program!"
+        subject: "Action Needed: #{@application.applicant_full_name} has applied to " \
+            "#{@application.effective_regional_partner_name}'s Professional Learning Program!"
       )
     end
 

@@ -64,6 +64,29 @@ it:
       unlocked: Il tuo account è stato sbloccato con successo. Per favore effettua
         l'accesso per continuare.
   errors:
+    invitations:
+      edit:
+        header: Imposta la tua password
+        submit_button: Imposta la mia password
+      invitation_removed: Il tuo invito è stato rimosso.
+      invitation_token_invalid: Il token di invito fornito non è valido!
+      new:
+        header: Invia invito
+        submit_button: Invia un invito
+      no_invitations_remaining: Nessun invito restante
+      send_instructions: Un invito per posta elettronica è stata inviato a %{email}.
+      updated: La tua password è stata impostata correttamente. Hai quindi accesso
+        alle risorse.
+    mailer:
+      invitation_instructions:
+        accept: Accetta l'invito
+        hello: Ciao %{email}
+        ignore: Se non vuoi accettare l'invito, sei pregato di ignorare questo messaggio.<br
+          />Il tuo account non verrà creato fino a quando non clicchi sul link qua
+          sopra e imposti la tua password.
+        someone_invited_you: 'Qualcuno ti ha invitato su %{url}: puoi accettare l''invito
+          attraverso il link sotto indicato.'
+        subject: Istruzioni di invito
     messages:
       already_confirmed: è stato già confermato, per favore prova ad accedere
       confirmation_period_expired: deve essere confermata entro %{period}, si prega
@@ -71,26 +94,3 @@ it:
       expired: è scaduta, si prega di richiederne una nuova
       not_found: non trovato
       not_locked: non è stato bloccato
-    invitations:
-      send_instructions: Un invito per posta elettronica è stata inviato a %{email}.
-      invitation_token_invalid: Il token di invito fornito non è valido!
-      updated: La tua password è stata impostata correttamente. Hai quindi accesso
-        alle risorse.
-      no_invitations_remaining: Nessun invito restante
-      invitation_removed: Il tuo invito è stato rimosso.
-      new:
-        header: Invia invito
-        submit_button: Invia un invito
-      edit:
-        header: Imposta la tua password
-        submit_button: Imposta la mia password
-    mailer:
-      invitation_instructions:
-        subject: Istruzioni di invito
-        hello: Ciao %{email}
-        someone_invited_you: 'Qualcuno ti ha invitato su %{url}: puoi accettare l''invito
-          attraverso il link sotto indicato.'
-        accept: Accetta l'invito
-        ignore: Se non vuoi accettare l'invito, sei pregato di ignorare questo messaggio.<br
-          />Il tuo account non verrà creato fino a quando non clicchi sul link qua
-          sopra e imposti la tua password.

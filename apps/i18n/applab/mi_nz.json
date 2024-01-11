@@ -7,13 +7,13 @@
   "catProcedures": "Ngā Taumahi",
   "catText": "Kuputuhi",
   "catVariables": "Ngā Taurangi",
-  "designWorkspaceHeader": "Papamahi: ",
   "designElementEvent_input": "Tāuru",
   "designElementProperty_fitImage_none": "kore",
   "designElementProperty_text": "kuputuhi",
   "designElementProperty_textAlignment_left": "mauī",
   "designElementProperty_textAlignment_right": "matau",
   "designElementProperty_zOrder": "hōhonu",
+  "designWorkspaceHeader": "Papamahi: ",
   "dropletBlock_drawImage_param1": "x",
   "dropletBlock_drawImage_param3": "whānui",
   "dropletBlock_drawImage_param4": "teitei",
@@ -27,7 +27,7 @@
   "nextLevel": "Hūrō! Kua oti i a koe tēnei panga.",
   "no": "Kāore",
   "numBlocksNeeded": "E āhei ana tēnei panga te whakaoti me ngā paraka e %1.",
-  "repeatForever": "tōaitia mō ake ake",
   "repeatDo": "mahia",
+  "repeatForever": "tōaitia mō ake ake",
   "yes": "Āe"
 }

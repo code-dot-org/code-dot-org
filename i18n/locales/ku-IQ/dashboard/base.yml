@@ -47,12 +47,14 @@ ku:
         gender: 'ڕەگەز'
         edit_header: 'دەستکاریکردنی وردەکارییەکانی هەژمار'
         finish_sign_up_header: 'كرداری درووستكردنی هەژمارەكەت تەواوبكە'
+        finish_sign_up_header_error: 'تکایە ئەم هەڵانەی خوارەوە ڕاست بکەوە:'
         finish_sign_up_subheader: 'ئەم زانیاریانەی خوارەوە پڕبكەوە بۆ درووستكردنی هەژماری (Code.org) بۆ <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'ئەم زانیاریانەی خوارەوە پڕبكەوە بۆ درووستكردنی هەژماری (Code.org) بۆ **%{email}**.'
         finish_sign_up_subheader_provider: 'ئەم زانیاریانەی خوارەوە پڕبكەوە بۆ درووستكردنی هەژماری (Code.org) بە <strong>%{provider}</strong> بۆ <strong>%{email}</strong>.'
         finish_sign_up_subheader_provider_markdown: 'ئەم زانیاریانەی خوارەوە پڕبكەوە بۆ درووستكردنی هەژماری (Code.org) بە **%{provider}** بۆ **%{email}**.'
         error:
           future: ناکرێت لە داهاتوو بێت
+        user_type: 'جۆری هەژمار'
         us_state: 'پارێزگا'
   beta: "تاقیکاری"
   hello: "سڵاو جیهان"

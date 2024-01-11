@@ -71,6 +71,7 @@ sq:
           description: Një dorë puzzle-ash për të demonstruar mjedisin dhe gjuhën e programimit të përdorur në Code.org CS në Algjebër
           description_short: Një dorë puzzle-ash për të demonstruar mjedisin dhe gjuhën e programimit të përdorur në Code.org CS në Algjebër
           student_description: Një dorë puzzle-ash për të demonstruar mjedisin dhe gjuhën e programimit të përdorur në Code.org CS në Algjebër
+        K5PD: {}
         netsim:
           title: Imitues Interneti
         pixelation:
@@ -79,8 +80,8 @@ sq:
           description_short: Krijo imazhe me bite dhe bajte.
           student_description: Krijo imazhe me bite dhe bajte.
         20-hour:
-          title: Hyrje e pershpejtuar ne kurset e shkencave kompjuterike
-          description: Ky kurs që zgjat 20 orë, na njeh me bazën e shkencës kompjuterike dhe konceptet e programimit. Kursi është dizenjuar të përdoret nga klasat e nivelit K-8, por është argetuese të mësohet nga të gjitha moshat.
+          title: Hyrje në kurset e shkencave kompjuterike
+          description: Ky kurs që zgjat 20 orë, na njeh me bazën e shkencës kompjuterike dhe konceptet e programimit. Kursi është dizenjuar të përdoret nga klasat e nivelit K-8, por është argëtuese të mësohet nga të gjitha moshat.
           description_short: Ky kurs 20 oresh mbulon te gjithe berthamen e shkencave kompjuterike dhe konceptet e programimit ne kurset 2-4.
           description_audience: Moshat 10-18
           student_description: Ky kurs që zgjat 20 orë, na njeh me bazën e shkencës kompjuterike dhe konceptet e programimit. Kursi është dizenjuar të përdoret nga klasat e nivelit K-8, por është argetuese të mësohet nga të gjitha moshat.
@@ -105,7 +106,7 @@ sq:
           description_short: Provoni tutorialet tona Jigsaw.
           student_description: Provoni tutorialet tona Jigsaw.
         step:
-          title: Një hap
+          title: Hapi
           description: Pasoje tutorialin
           description_short: Pasoje tutorialin
           student_description: Pasoje tutorialin
@@ -114,22 +115,51 @@ sq:
           description: Provoni elementet baze te shkencave kompjuterike me personazhe nga Angry Birds dhe Plants vs. Zombies!
           description_short: Provo bazat e shkencës kompjuterike me shumë karaktere zbavitëse!
           student_description: Provoni elementet baze te shkencave kompjuterike me personazhe nga Angry Birds dhe Plants vs. Zombies!
+        CodeStudioPuzzleChallenge: {}
+        Tutorial Video - Code Studio Puzzle Challenge: {}
+        cspunit1: {}
+        algebraPD: {}
+        algPDmiami: {}
+        text-compression: {}
+        CSPPD: {}
+        CSPLessonSamples: {}
+        ECSPD: {}
+        sciencePD: {}
+        rbo-reference: {}
+        cspunit3: {}
+        algebraPD3: {}
+        algebraPD-NexTech: {}
+        algebraPD-iZone: {}
+        sciencePD-NexTech: {}
+        sciencePD-iZone: {}
+        Testing: {}
+        cspunit2: {}
         algebraPD2a:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
+        allthethings:
+          lessons:
+            lesson-49:
+              name: Muzikë
         algebraPD2b:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
+        cspfacilitator: {}
+        K5-OnlinePD: {}
         ECSPD2:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
+        algebraPD2: {}
         sciencePD2b:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
+        equity-pd: {}
+        science-PD2: {}
+        Equity-OnlinePD: {}
         sciencePD2b-iZone:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
@@ -142,12 +172,25 @@ sq:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
+        odometer: {}
         asUnplugged:
           description_audience: Moshat 6-13
         afterschool1:
           description_audience: Moshat 7-13
+        vigenere: {}
+        algebraPD3a: {}
+        sciencePD3_pre1: {}
+        frequency_analysis: {}
+        ECSPD3-Unit2: {}
+        ECSPD3-Unit3: {}
+        ECSPD3-Unit4: {}
+        ECSPD3-Unit5: {}
+        ECSPD3-Unit6: {}
         cspunit4draft:
           description_short: të dhëna
+        ScienceP3OLPT2: {}
+        algebraPD3b: {}
+        CSPPD3-Unit2: {}
         Special Fun:
           description_audience: Moshat 10-18
         SpecialSeries:
@@ -157,12 +200,14 @@ sq:
           description: Krijo një histori ose një lojë me laboratorin e Epokës së Akullnajave!
           description_short: Krijo një histori ose një lojë me laboratorin e Epokës së Akullnajave!
           student_description: Krijo një histori ose një lojë me laboratorin e Epokës së Akullnajave!
+        cspunit3temp: {}
         gumball:
           title: Laboratori i Lojës Gumball
           description: Krijo një histori ose një lojë me laboratorin e Gumball!
           description_short: Krijo një histori ose një lojë me laboratorin e Gumball!
           student_description: Krijo një histori ose një lojë me laboratorin e Gumball!
         starwars:
+          title: 'Lufta e yjeve: Ndërtimi i një Galaxy me kod (JavaScript)'
           description: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars në një galaksi shumë, shumë larg.
           description_short: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars në një galaksi shumë, shumë larg.
           student_description: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars në një galaksi shumë, shumë larg.
@@ -171,10 +216,17 @@ sq:
           description_short: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars në një galaksi shumë, shumë larg.
           student_description: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars në një galaksi shumë, shumë larg.
         mc:
-          title: Ora e Kodimit Minecraft
+          title: Aventurieri Minecraft
           description: Përdor blloqe të kodimit t'i dërgosh Steve ose Alex në një aventurë nëpër këtë botë Minecraft.
           description_short: Eksploro  një botë Minecraft nëpërmjet kodit.
           student_description: Përdor blloqe të kodimit t'i dërgosh Steve ose Alex në një aventurë nëpër këtë botë Minecraft.
+        oceans:
+          title: IA për oqeanet
+        ScienceP3OLPT3: {}
+        cspunit5: {}
+        cspunit4: {}
+        cspunit6draft: {}
+        cspunit6: {}
         AlgebraA:
           description: Mëso Programimin Funksional nëpërmjet Algjebrës
           description_short: Mëso Programimin Funksional nëpërmjet Algjebrës
@@ -183,8 +235,23 @@ sq:
           description: Mëso Programimin Funksional nëpërmjet Algjebrës
           description_short: Mëso Programimin Funksional nëpërmjet Algjebrës
           student_description: Mëso Programimin Funksional nëpërmjet Algjebrës
+        algebraPD1: {}
+        algebraPD3c: {}
+        csp1-2017: {}
+        csp2-2017: {}
+        csp3-2017: {}
+        csp4-2017: {}
+        csp5-2017: {}
+        csp6: {}
+        CSDU3-Draft: {}
+        2016_sciencePD_phase1: {}
+        TEMP CSD Unit 3: {}
         CSF_Secret_Sample:
           description_audience: Moshat 8-18
+        ECSPD1: {}
+        algebraFacilitator: {}
+        sciencePD1: {}
+        cspoptional: {}
         cspunit1-support:
           lesson_groups:
             required:
@@ -201,6 +268,13 @@ sq:
               display_name: Përmbajtja
             practice:
               display_name: Praktikat mësimore
+        cspunit1-support-test: {}
+        csp-facilitators: {}
+        cspassessment: {}
+        cspexam1-mWU7ilDYM9: {}
+        cspexam2-AKwgAh1ac5: {}
+        CSDU4-Draft: {}
+        CSDU2-Draft: {}
         CSDU5-Draft:
           description_short: të dhëna
         CSF_Secret_Sample_Story:
@@ -217,6 +291,7 @@ sq:
               display_name: Përmbajtja
             practice:
               display_name: Praktikat mësimore
+        kinderTest: {}
         gradeKinder:
           description_audience: Moshat 5-18
         grade4:
@@ -228,6 +303,12 @@ sq:
         grade5:
           title: Klasat 5
           description_audience: Moshat 10-110
+        ecs-unit1: {}
+        ecs-unit2: {}
+        ecs-unit3: {}
+        ecs-unit4: {}
+        ecs-unit5: {}
+        ecs-unit6: {}
         grade3:
           title: Klasat 3
           description_audience: Moshat 5-18
@@ -239,8 +320,14 @@ sq:
               display_name: Përmbajtja
             practice:
               display_name: Praktikat mësimore
+        csd3-2017: {}
         grade2:
           description_audience: Moshat 5-18
+        transferring-over: {}
+        k5concepts: {}
+        algebrapdnext: {}
+        csp-pre-survey: {}
+        csd1-2017: {}
         csp-online-test:
           lesson_groups:
             required:
@@ -263,6 +350,9 @@ sq:
           description: Realizo një lojë basketbolli
           student_description: Realizo një lojë basketbolli
           name: basketboll
+        hoc-encryption:
+          title: 'Ora e kodimit: Kriptimi i thjeshtë'
+        csd2-2017: {}
         csp2-support:
           lesson_groups:
             required:
@@ -271,19 +361,35 @@ sq:
               display_name: Përmbajtja
             practice:
               display_name: Praktikat mësimore
+        csd4-2017: {}
         minecraft:
           title: Dizenjo Minecraft-in e Orës së Kodimit
           description_short: Kafshët e programit dhe krijesa të tjera Minecraft në versionin tuaj të Minecraft.
           description: Kafshët e programit dhe krijesa të tjera Minecraft në versionin tuaj të Minecraft.
           student_description: Kafshët e programit dhe krijesa të tjera Minecraft në versionin tuaj të Minecraft.
+        flappy-impact-study: {}
+        coursea-draft:
+          title: 'Bazat e CS: Kursi A'
+        courseb-draft:
+          title: 'Bazat e CS: Kursi B'
+        coursec-draft:
+          title: 'Bazat e CS: Kursi C'
+        coursed-draft:
+          title: 'Bazat e CS: Kursi D'
         coursee-draft:
+          title: 'Bazat e CS: Kursi E'
           lesson_groups:
             content:
               display_name: Përmbajtja
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         coursef-draft:
+          title: 'Bazat e CS: Kursi F'
           lesson_groups:
             content:
               display_name: Përmbajtja
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         classic-hoc-impact-study:
           description_short: Provo bazat e shkencës kompjuterike me shumë karaktere zbavitëse!
         hoc-impact-study:
@@ -294,6 +400,9 @@ sq:
           description: Përziej dhe përshtat sportet
           student_description: Përziej dhe përshtat sportet
           name: sportet
+        2016_sciencePD-phase2b: {}
+        2016_sciencePD_phase2b: {}
+        sciencepd3-2016: {}
         csp3-support:
           lesson_groups:
             required:
@@ -302,6 +411,7 @@ sq:
               display_name: Përmbajtja
             practice:
               display_name: Praktikat mësimore
+        csdgraveyard: {}
         csp4-support:
           lesson_groups:
             required:
@@ -310,10 +420,16 @@ sq:
               display_name: Përmbajtja
             practice:
               display_name: Praktikat mësimore
+        sciencepd4: {}
+        csp-ca-a: {}
+        science-pd-ol-pt-5: {}
         csf2harvey:
           lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
             content:
               display_name: Përmbajtja
+        sciencepd5: {}
         csp5-support:
           lesson_groups:
             required:
@@ -322,10 +438,56 @@ sq:
               display_name: Përmbajtja
             practice:
               display_name: Praktikat mësimore
+        csp6-support: {}
         csppostap-2017:
           lesson_groups:
             content:
               display_name: Përmbajtja
+        unit6-csd-draft: {}
+        csd6-draft: {}
+        csd5-draft: {}
+        applab-1hour: {}
+        applab-2hour: {}
+        coursed-ramp:
+          title: 'Bazat e CS: Kursi D'
+        coursee-ramp: {}
+        csd6-2017: {}
+        csd3-draft: {}
+        csd5-2017: {}
+        csd3-old: {}
+        csd1-old: {}
+        csd2-draft: {}
+        csd1-draft: {}
+        csd3-chapters: {}
+        coursef-ramp: {}
+        csppostsurvey-staging: {}
+        fmscsd3preview: {}
+        public-key-cryptography: {}
+        csd2-old: {}
+        artist-and-bb8: {}
+        coursea-2017:
+          title: Kursi A
+          assignment_family_title: Kursi A
+          description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+        courseb-2017:
+          description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+        coursec-2017:
+          title: Kursi C
+          assignment_family_title: Kursi C
+        coursee-2017:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        coursef-2017:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        csp-explore-task: {}
+        csp-create-task: {}
+        csp-ap-tech-setup: {}
+        csp-ap: {}
         cspnovice:
           lesson_groups:
             required:
@@ -399,15 +561,118 @@ sq:
             content:
               display_name: Përmbajtja
         express-2017:
+          description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
           lesson_groups:
             content:
               display_name: Përmbajtja
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+        pre-express-2017:
+          description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+        subgoal-labels-opt-in: {}
+        csp-pre-survey-test-2017: {}
+        csp3-research-mxghyt: {}
+        csd4-draft: {}
+        craft17: {}
+        applab-intro:
+          title: Hyrje në App Lab
+        e-f-ramp:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        new-d: {}
+        csp3-a: {}
         new-express:
           lesson_groups:
             content:
               display_name: Përmbajtja
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        new-stages-sept-2017: {}
+        new-e:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        new-f:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        csd5-old: {}
+        subgoals-assessment-staging: {}
+        hocali: {}
+        colehoc2017: {}
+        craft17-kiki: {}
+        csd4-old: {}
+        csp3-staging: {}
+        pwc: {}
+        allthesurveys: {}
+        k1hoc2017: {}
         hero:
           name: hero
+        applab-intro-staging: {}
+        csp-explore-2017: {}
+        csp-create-2017: {}
+        csp3-reovery: {}
+        csp3-recovery: {}
+        aws-demo: {}
+        halloween: {}
+        valentine: {}
+        colehoc17: {}
+        course-e-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        course-f-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        csd6-old: {}
+        unembeddedlevels: {}
+        unembedded: {}
+        csd3-1819draft: {}
+        textbook: {}
+        glj-behavior-test: {}
+        csd3-2018: {}
+        csd2-2018: {}
+        coursea-2018:
+          title: Kursi A (2018)
+          assignment_family_title: Kursi A
+          description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+        express-2018:
+          description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+        courseb-2018:
+          title: Kursi B (2018)
+          description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+        jr-test: {}
+        petgame: {}
+        csp-exam: {}
+        coursec-2018:
+          assignment_family_title: Kursi C
+        csd6-2018: {}
+        coursee-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        coursef-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        csp1-2018: {}
+        csd1-2018: {}
+        csd4-2018: {}
+        csd5-2018: {}
+        csp2-2018: {}
+        csp3-2018: {}
+        csp-explore-2018: {}
+        csp-create-2018: {}
+        csp4-2018: {}
+        csp5-2018: {}
+        csppostap-2018: {}
         csd1-dlp-18:
           lesson_groups:
             required:
@@ -510,17 +775,32 @@ sq:
               display_name: Përmbledhja
             content:
               display_name: Përmbajtja
+        pre-express-2018:
+          description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+        spritelab-validated: {}
+        2018hoc-ab: {}
+        deepdive-debugging: {}
         fit-test:
           lesson_groups:
             required:
               display_name: Përmbledhja
             content:
               display_name: Përmbajtja
+        spritelab-ee: {}
+        craft18: {}
+        frozen-2018: {}
+        frozen-2018-test: {}
         dance:
+          title: Festa e vallëzimit (2018)
           name: valle
+        frozen-2018-test-b: {}
         aquatic:
           title: 'Minecraft: Udhëtimi ujor'
           name: ujor
+        sconyers: {}
+        dance--draft: {}
+        dance-draft: {}
         cspplayground:
           lesson_groups:
             csp_variables:
@@ -529,6 +809,10 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
+        dance-extras:
+          title: Vazhdoni të kërceni (2018)
         coursef-2019:
           lesson_groups:
             csf_variables:
@@ -539,32 +823,47 @@ sq:
               display_name: Për Ciklet
             csf_internet:
               display_name: Internet
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        dance-low: {}
         coursed-2019:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_events:
               display_name: Ngjarje
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_conditionals:
               display_name: Kushtet
             csf_binary:
               display_name: Binare
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         coursee-2019:
           lesson_groups:
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
             csf_nested_loops:
               display_name: Përsëritjet e Mbivendosura
             csf_functions:
               display_name: funksione
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         express-2019:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_conditionals:
               display_name: Kushtet
             csf_functions:
@@ -573,46 +872,76 @@ sq:
               display_name: variabla
             csf_for_loops:
               display_name: Për Ciklet
+            csf_sprites:
+              display_name: Sprites
+        csd1-2019: {}
         andrea-test:
           lesson_groups:
             required:
               display_name: Përmbledhja
             content:
               display_name: Përmbajtja
+        dance-extras-gallery:
+          title: Vazhdoni të kërceni
         coursec-2019:
           lesson_groups:
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_binary:
               display_name: Binare
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
             csf_data:
               display_name: të dhëna
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        gamelab:
+          title: Game Lab
         coursea-2019:
+          title: Kursi A (2019)
+          description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
           lesson_groups:
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
         courseb-2019:
+          title: Kursi B (2019)
+          description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
           lesson_groups:
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
         pre-express-2019:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
+        removed19: {}
+        dani-test-script: {}
+        csd2-2019: {}
+        csd3-2019: {}
+        csd4-2019: {}
+        csd5-2019: {}
+        csd6-2019: {}
         csp4-pilot:
           lesson_groups:
             csp_variables:
@@ -621,12 +950,28 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
             required:
               display_name: Përmbledhja
+        csp1-2019: {}
+        csp2-2019: {}
+        csp3-2019: {}
+        csp4-2019: {}
+        csp5-2019: {}
+        csp-explore-2019: {}
+        csp-create-2019: {}
+        csppostap-2019: {}
         csp1-pilot:
           lesson_groups:
             required:
               display_name: Përmbledhja
+        csd-tests: {}
+        csd-videos: {}
+        time4csdemo:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprites
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -635,6 +980,8 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
         csp2-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -643,6 +990,9 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
+        csp3-pilot-staging: {}
         csp4-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -651,12 +1001,16 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
         csp5-pilot-staging:
           lesson_groups:
             csp_lists:
               display_name: Listat
             csp_loops:
-              display_name: cikle
+              display_name: Cikle
+            csp_project:
+              display_name: Projekt
         csp6-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -665,6 +1019,9 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
+        csp7-pilot-staging: {}
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -673,6 +1030,8 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
         csp9-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -681,6 +1040,8 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
         csp10-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -689,12 +1050,18 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
+        pluralsight: {}
+        express-2018-vn: {}
         csp5-pilot:
           lesson_groups:
             csp_lists:
               display_name: Listat
             csp_loops:
-              display_name: cikle
+              display_name: Cikle
+            csp_project:
+              display_name: Projekt
             required:
               display_name: Përmbledhja
         fit2019-novice:
@@ -703,12 +1070,19 @@ sq:
               display_name: Përmbledhja
             content:
               display_name: Përmbajtja
+        csd-test-saving-state: {}
         fit2019-apprentice:
           lesson_groups:
             required:
               display_name: Përmbledhja
             content:
               display_name: Përmbajtja
+        csd-sample-online: {}
+        csd1-pilot: {}
+        csd2-pilot: {}
+        csd3-pilot: {}
+        csd-bugs: {}
+        maddie-test: {}
         csp3-pilot:
           lesson_groups:
             content:
@@ -717,8 +1091,10 @@ sq:
               display_name: Përmbledhja
         csl-vn:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
         dlp19-csd-mod-fit:
@@ -733,6 +1109,7 @@ sq:
               display_name: Përmbledhja
             content:
               display_name: Përmbajtja
+        pl-csd-bugs: {}
         dlp19-csd-mod-w1:
           lesson_groups:
             required:
@@ -781,22 +1158,32 @@ sq:
               display_name: Përmbledhja
             content:
               display_name: Përmbajtja
+        csd-pilot: {}
+        csd4-pilot: {}
         csp2-pilot:
           lesson_groups:
             content:
               display_name: Përmbajtja
             required:
               display_name: Përmbledhja
+        denny-science: {}
+        peru-2019: {}
         csp6-pilot:
           lesson_groups:
             content:
               display_name: Përmbajtja
             required:
               display_name: Përmbledhja
+        denny-science-8: {}
+        dance-2019:
+          title: Festë vallëzimi
         k5-onlinepd-2019:
           lesson_groups:
             k5_next_steps:
               display_name: Hapat e ardhshme
+        dance-extras-2019:
+          title: Vazhdoni të kërceni
+        csp10-pilot: {}
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -805,40 +1192,55 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
+        time4cs-original-unit-1: {}
         time4cs-control-unit-2:
           lesson_groups:
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
             csf_conditionals:
               display_name: Kushtet
             csf_nested_loops:
               display_name: Përsëritjet e Mbivendosura
             csf_functions:
               display_name: funksione
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        time4cs-experiment-unit-2: {}
         time4cs-control-unit-1:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_conditionals:
               display_name: Kushtet
             csf_events:
               display_name: Ngjarje
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
         time4cs-experiment-unit-1:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_conditionals:
               display_name: Kushtet
             csf_events:
               display_name: Ngjarje
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
         csp7-pilot:
           lesson_groups:
             required:
               display_name: Përmbledhja
+        csp8-pilot: {}
         csp4-2020:
           lesson_groups:
             csp_variables:
@@ -847,74 +1249,114 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
         csp5-2020:
           lesson_groups:
             csp_lists:
               display_name: Listat
             csp_loops:
-              display_name: cikle
+              display_name: Cikle
+            csp_project:
+              display_name: Projekt
+        csp7-2020: {}
+        csd2-projects-temp: {}
+        csp9-pilot: {}
+        csd2-2020: {}
+        csd1-2020: {}
+        csd4-2020: {}
+        csd5-2020: {}
+        csd6-2020: {}
+        csd3-2020: {}
         coursea-2020:
+          title: Kursi A (2020)
+          description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
           lesson_groups:
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
         courseb-2020:
+          description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
           lesson_groups:
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
         coursec-2020:
           lesson_groups:
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_binary:
               display_name: Binare
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
             csf_data:
               display_name: të dhëna
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         coursed-2020:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_events:
               display_name: Ngjarje
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_conditionals:
               display_name: Kushtet
             csf_binary:
               display_name: Binare
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         coursee-2020:
           lesson_groups:
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
             csf_nested_loops:
               display_name: Përsëritjet e Mbivendosura
             csf_functions:
               display_name: funksione
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         coursef-2020:
           lesson_groups:
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
             csf_variables:
               display_name: variabla
             csf_data:
               display_name: të dhëna
             csf_for_loops:
               display_name: Për Ciklet
+            csf_sprites:
+              display_name: Sprites
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         express-2020:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_conditionals:
               display_name: Kushtet
             csf_functions:
@@ -923,20 +1365,46 @@ sq:
               display_name: variabla
             csf_for_loops:
               display_name: Për Ciklet
+            csf_sprites:
+              display_name: Sprites
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         pre-express-2020:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
+        csp1-2020: {}
+        csp2-2020: {}
+        csp3-2020: {}
+        csp6-2020: {}
+        csp8-2020: {}
+        csp9-2020: {}
+        csp10-2020: {}
+        csp-march-virtual: {}
+        csp3-virtual: {}
+        jess-test-script: {}
+        csd2-virtual: {}
+        csp5-virtual: {}
         virtual-holding-place:
           lesson_groups:
             content:
               display_name: Përmbajtja
+        code-break: {}
+        code-break-staging: {}
+        code-break-younger-staging: {}
+        code-break-younger: {}
+        no-lg: {}
+        csp5-virtual-part2: {}
         k5-onlinepd-2020:
           lesson_groups:
             k5_next_steps_1:
               display_name: Hapat e ardhshme
+        dani-test-2020: {}
+        dani-june-2020-test: {}
         csd3-virtual:
           lesson_groups:
             csd3_1:
@@ -961,14 +1429,34 @@ sq:
           lesson_groups:
             lg_1:
               display_name: Përmbajtja
+        kaitie-test-script: {}
+        vpl-csd-2020: {}
+        vpl-csp-2020: {}
+        curriculum-sandbox-levels: {}
+        virustest: {}
+        ml-playground: {}
+        outbreak: {}
+        apps-for-good: {}
         2021drafting:
           lesson_groups:
             introduction:
-              display_name: Hyrja
+              display_name: Hyrje
             lessonGroup-3:
               display_name: variabla
             debugging:
-              display_name: Rregullimi
+              display_name: Debugging
+        csd1-2021:
+          title: Zgjidhja e problemeve dhe Informatika ('21-'22)
+        csd2-2021:
+          title: Zhvillim Web-i ('21-'22)
+        csd3-2021: {}
+        csd4-2021: {}
+        csd5-2021: {}
+        csd6-2021:
+          title: Informatikë fizike ('21-'22)
+        csp1-2021: {}
+        csp2-2021: {}
+        csp3-2021: {}
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -977,112 +1465,176 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
         csp5-2021:
           lesson_groups:
             csp_lists:
               display_name: Listat
             csp_loops:
-              display_name: cikle
+              display_name: Cikle
+            csp_project:
+              display_name: Projekt
         csp6-2021:
           lesson_groups:
             csp_unit6_2020:
               display_name: Algoritmet
+        csp7-2021: {}
+        csp8-2021: {}
+        csp9-2021: {}
+        csp10-2021: {}
         coursea-2021:
+          title: Kursi A (2021)
+          description: 'Kursi A ofron një kurrikulë të shkencave kompjuterike për lexuesit fillestarë, përfshirë fëmijët e kopshtit. Nxënësit do të mësojnë të programojnë duke përdorur komanda si loops dhe evente. Mësimet e paraqitura në këtë lëndë gjithashtu u mësojnë nxënësve të bashkëpunojnë në mënyrë domethënëse me të tjerët, të hetojnë teknika të ndryshme të zgjidhjes së problemeve, të vazhdojnë përballë detyrave sfiduese dhe të mësojnë rreth sigurisë në internet. '
           lesson_groups:
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Loops
             csf_events:
-              display_name: Ngjarje
+              display_name: Eventet
+            lessonGroup-5:
+              display_name: Përfundimi i projektit të kursit
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
         courseb-2021:
+          title: Kursi B (2021)
+          description: Ne e zhvilluam Kursin B duke menduar nxënësit në klasën e parë. Ndërsa konceptet në Kursin B janë paralele me ato të Kursit A, nxënësit mësojnë aktivitete të shkëputura më të sofistikuara dhe punojnë përmes një larmie më të madhe enigmash. Studentët do të mësojnë bazat e programimit, teknikat e bashkëpunimit, investigimin dhe shkathtësitë e të menduarit kritik, këmbënguljen përballë vështirësive dhe sigurinë në internet. Në fund të këtij kursi, nxënësit krijojnë lojra në mjedisin e programimit Play Lab.
           lesson_groups:
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
+            lessonGroup-6:
+              display_name: Përfundimi i projektit të kursit
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
         coursec-2021:
+          title: Kursi C (2021)
+          description: Kemi zhvilluar kursin C për nxënësit në klasën e dytë. Nxënësit do të krijojnë programe me sekuencë, loops dhe evente. Ata do të hetojnë teknikat e zgjidhjes së problemeve dhe do të zhvillojnë strategji për ndërtimin e komuniteteve pozitive si online ashtu edhe offline. Deri në fund të kursit, nxënësit do të krijojnë lojëra interaktive që mund t'i ndajnë me të tjerët.
+          description_short: Mësoni bazat e shkencave kompjuterike dhe krijoni artin, historitë dhe lojërat tuaja.
           lesson_groups:
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_binary:
               display_name: Binare
             csf_loops:
-              display_name: cikle
+              display_name: Loops
             csf_events:
-              display_name: Ngjarje
+              display_name: Events
             csf_data:
-              display_name: të dhëna
+              display_name: Të dhënat
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         coursed-2021:
+          title: Kursi D (2021)
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_events:
               display_name: Ngjarje
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_conditionals:
               display_name: Kushtet
             csf_binary:
               display_name: Binare
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
             lessonGroup-6:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
         coursee-2021:
           lesson_groups:
             ramp_up:
               display_name: Përsëritjet e Mbivendosura
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
             csf_nested_loops:
               display_name: Kushtet
             csf_functions:
               display_name: funksione
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         coursef-2021:
+          title: Kursi F (2021)
           lesson_groups:
+            ramp_up:
+              display_name: Sprites
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
             csf_variables:
               display_name: Për Ciklet
+            csf_data:
+              display_name: Të dhënat dhe simulimet
             csf_for_loops:
               display_name: Për Ciklet
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
             lessonGroup-8:
               display_name: variabla
             lessonGroup-9:
               display_name: Largo
             lessonGroup-7:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
         express-2021:
+          title: Kursi Express (2021)
+          description: Mësoni shkenca kompjuterike duke provuar mësimet më poshtë me ritmin tuaj! Mësoni të krijoni programe kompjuterike, të zhvilloni aftësi për zgjidhjen e problemeve dhe të punoni përmes sfidave argëtuese! Bëni lojëra dhe projekte krijuese për t'i ndarë me miqtë, familjen dhe mësimdhënësit.
           lesson_groups:
+            csf_warmup:
+              display_name: Parapërgatitje
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Loops
             csf_conditionals:
               display_name: Kushtet
             csf_functions:
-              display_name: funksione
+              display_name: Funksionet
             csf_variables:
-              display_name: variabla
+              display_name: Variablat
             csf_for_loops:
-              display_name: Për Ciklet
+              display_name: Për Loops
+            csf_sprites:
+              display_name: Sprites
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
             lessonGroup-9:
-              display_name: Ngjarje
+              display_name: Eventet
         pre-express-2021:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
         csf-2021-pilot:
           lesson_groups:
             ramp_up:
-              display_name: Hyrja
+              display_name: Hyrje
             lessonGroup-3:
               display_name: variabla
+            Sprites:
+              display_name: Sprites
             variables:
               display_name: variabla
+        csd4-preview-2021: {}
+        csd5-preview-2021: {}
+        testtess: {}
         contagion-pilot:
           description_audience: Klasat 5
+        contagion-guided-practice: {}
+        ai-unit-pilot: {}
         csa1-pilot:
           lesson_groups:
             lessonGroup-2:
@@ -1115,12 +1667,13 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        csa9-pilot: {}
         k5-onlinepd-2021:
           lesson_groups:
             k5_getting_started_1:
-              display_name: Hyrja
+              display_name: Hyrje
             Introduction:
-              display_name: Hyrja
+              display_name: Hyrje
         haikubot-pilot:
           lesson_groups:
             Lesson 3:
@@ -1129,6 +1682,42 @@ sq:
               display_name: Lekcioni 4
             Lesson 5:
               display_name: Lekcioni 5
+        allthemigratedthings: {}
+        fancygeometry-pilot: {}
+        ai-classroom-test: {}
+        poembot-springforum21: {}
+        pl-playground: {}
+        outbreakmodule: {}
+        aiml-2021: {}
+        csd7-2021:
+          title: IA dhe Mësimi i Makinerisë
+        kodea-pd-2021: {}
+        vpl-csd-2021: {}
+        vpl-csp-2021: {}
+        self-paced-pl-csd1-2021: {}
+        self-paced-pl-csd2-2021: {}
+        self-paced-pl-csd3-2021: {}
+        self-paced-pl-csd4-2021: {}
+        self-paced-pl-csd5-2021: {}
+        self-paced-pl-csd6-2021: {}
+        self-paced-pl-csd7-2021: {}
+        self-paced-pl-csd8-2021: {}
+        self-paced-pl-csp1-2021: {}
+        self-paced-pl-csp2-2021: {}
+        self-paced-pl-csp3-2021: {}
+        self-paced-pl-csp4-2021: {}
+        self-paced-pl-csp5-2021: {}
+        self-paced-pl-csp6-2021: {}
+        self-paced-pl-csp7-2021: {}
+        self-paced-pl-csp8-2021: {}
+        self-paced-pl-csp9-2021: {}
+        self-paced-pl-csp10-2021: {}
+        self-paced-pl-csp11-2021: {}
+        poster: {}
+        poster-draft: {}
+        poembot: {}
+        outbreak-module:
+          title: Shpërthimi
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1139,6 +1728,8 @@ sq:
               display_name: Përmbajtja
         csa-videos:
           lesson_groups:
+            lessonGroup-3:
+              display_name: Burimet
             lessonGroup-2:
               display_name: Kapitulli 1
             lessonGroup-4:
@@ -1153,16 +1744,40 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        ai-lab: {}
+        poster-experiment: {}
+        tesspltest: {}
+        tesspl2: {}
+        sb-pt-cont: {}
+        sb-pt-exp: {}
+        dc-standalone: {}
+        sb-chardev-v1: {}
         dlp21-csp-mod4:
           lesson_groups:
             lessonGroup-2:
               display_name: Faza 1
             lessonGroup-3:
               display_name: Faza 2
+        dlp21-csp-mod1: {}
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
               description: test
+        dlp21-csd-mod1: {}
+        dlp21-csd-mod2: {}
+        dlp21-csd-mod3: {}
+        dlp21-csd-mod4: {}
+        dlp21-csp-mod2: {}
+        dlp21-csp-mod3: {}
+        dlp21-overview: {}
+        dlp21-csd-overview: {}
+        dlp21-csp-overview: {}
+        csa-u6-dev:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Projekt
+        hello-world-draft: {}
+        csa-self-paced-pl: {}
         csa1-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
@@ -1183,6 +1798,18 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        poetry-hoc: {}
+        csdu6-playground: {}
+        hello-world-food: {}
+        csa-u7-dev:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Projekt
+        tesstest921: {}
+        hello-world-animals: {}
+        hello-world-emoji: {}
+        hello-world-retro: {}
+        hello-world-batman: {}
         csa4-exemplars:
           lesson_groups:
             lesson group:
@@ -1193,16 +1820,50 @@ sq:
               display_name: Përmbajtja
             lessonGroup-2:
               display_name: Përmbajtja
+        csc-things: {}
+        poetry-hoc2: {}
+        poetry-hoc3: {}
+        spritelab-effects-challenge: {}
+        csa-u8-dev: {}
+        poem-art:
+          title: Arti i poezisë
+        poetry: {}
         spelling-bee:
           title: Bleta Gërmëzuese
+        outbreak-csc:
+          title: Shpërthimi
+        explore-data-1: {}
+        counting-csc:
+          title: Numërimi me Laurelën
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        csa-examples-21: {}
+        csd-post-survey-2021: {}
+        csa-pl-test: {}
+        csa-pl-module-1-test: {}
+        csa-pl-module-2-test: {}
+        csa-pl-module-3-test: {}
         csa6-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        poem-art-2021:
+          title: Arti i poezisë
+        poetry-2021:
+          title: Kodimi me poezi
+        hello-world-food-2021: {}
+        hello-world-emoji-2021: {}
+        hello-world-animals-2021: {}
+        hello-world-retro-2021: {}
+        spelling-bee-2021:
+          title: Gërmëzimi me bletë
+        explore-data-1-2021:
+          title: Vizualizimi i të dhënave
+        counting-csc-2021:
+          title: Numërimi me Laurelën
+        hello-world-gabrielle-validation: {}
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1217,12 +1878,18 @@ sq:
               display_name: Përmbajtja
         csf-2022-pilot:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
             lessonGroup-3:
               display_name: variabla
+            lessonGroup-4:
+              display_name: Përfundimi i projektit të kursit
+        csd6-pilot-2022: {}
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        alltheselfpacedplthings: {}
         csa7-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
@@ -1231,20 +1898,32 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        csa9-pilot-facilitator: {}
         coursea-2022:
           lesson_groups:
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Loops
             csf_events:
-              display_name: Ngjarje
+              display_name: Eventet
+            lessonGroup-5:
+              display_name: Përfundimi i projektit të kursit
+          title: Kursi A (2022)
+          description: 'Kursi A ofron një kurrikulë të shkencave kompjuterike për lexuesit fillestarë, përfshirë fëmijët e kopshtit. Nxënësit do të mësojnë të programojnë duke përdorur komanda si loops dhe evente. Mësimet e paraqitura në këtë lëndë gjithashtu u mësojnë nxënësve të bashkëpunojnë në mënyrë domethënëse me të tjerët, të hetojnë teknika të ndryshme të zgjidhjes së problemeve, të vazhdojnë përballë detyrave sfiduese dhe të mësojnë rreth sigurisë në internet. '
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
         express-2022:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
+            csf_sprites:
+              display_name: Sprites
             lessonGroup-9:
               display_name: Ngjarje
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_conditionals:
               display_name: Kushtet
             csf_functions:
@@ -1253,6 +1932,12 @@ sq:
               display_name: variabla
             csf_for_loops:
               display_name: Për Ciklet
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+          title: Kursi Express (2022)
+        csp1-2022: {}
+        csp2-2022: {}
+        csp3-2022: {}
         csp4-2022:
           lesson_groups:
             csp_variables:
@@ -1261,64 +1946,108 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
         csp5-2022:
           lesson_groups:
             csp_lists:
               display_name: Listat
             csp_loops:
-              display_name: cikle
+              display_name: Cikle
+            csp_project:
+              display_name: Projekt
         courseb-2022:
           lesson_groups:
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësi Digjitale
+            csf_sequencing:
+              display_name: Renditje
             csf_loops:
-              display_name: cikle
+              display_name: Loops
             csf_events:
               display_name: Ngjarje
+            lessonGroup-6:
+              display_name: Përfundimi i projektit të kursit
+          title: Kursi B (2022)
+          description: Ne e zhvilluam Kursin B duke menduar nxënësit në klasën e parë. Ndërsa konceptet në Kursin B janë paralele me ato të Kursit A, nxënësit mësojnë aktivitete të shkëputura më të sofistikuara dhe punojnë përmes një larmie më të madhe enigmash. Nxënësit do të mësojnë bazat e programimit, teknikat e bashkëpunimit, investigimin dhe shkathtësitë e të menduarit kritik, këmbënguljen përballë vështirësive dhe sigurinë në internet. Në fund të këtij kursi, nxënësit krijojnë lojra në mjedisin e programimit Play Lab.
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
         coursec-2022:
           lesson_groups:
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
             csf_data:
               display_name: të dhëna
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+          title: Kursi C (2022)
+          description: Kemi zhvilluar kursin C për nxënësit në klasën e dytë. Nxënësit do të krijojnë programe me sekuencë, loops dhe evente. Ata do të hetojnë teknikat e zgjidhjes së problemeve dhe do të zhvillojnë strategji për ndërtimin e komuniteteve pozitive si online ashtu edhe offline. Deri në fund të kursit, nxënësit do të krijojnë lojëra interaktive që mund t'i ndajnë me të tjerët.
+        csp6-2022: {}
+        csp7-2022: {}
+        csp8-2022: {}
+        csp9-2022: {}
+        csp10-2022: {}
         coursed-2022:
           lesson_groups:
             lessonGroup-6:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_events:
               display_name: Ngjarje
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_conditionals:
               display_name: Kushtet
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+          title: Kursi D (2022)
         coursee-2022:
           lesson_groups:
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
             ramp_up:
               display_name: Përsëritjet e Mbivendosura
             csf_functions:
               display_name: funksione
             csf_nested_loops:
               display_name: Kushtet
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+          title: Kursi E (2022)
         coursef-2022:
           lesson_groups:
+            ramp_up:
+              display_name: Sprites
             lessonGroup-7:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
             lessonGroup-8:
               display_name: variabla
+            csf_data:
+              display_name: Të dhënat dhe simulimet
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+          title: Kursi F (2022)
+          description: Ne krijuam Kursin F për nxënësit e klasës së pestë. Kursi fillon duke parë se si përdoruesit bëjnë zgjedhje në aplikacionet që përdorin. Më pas nxënësit mësojnë të bëjnë një sërë aplikacionesh Sprite Lab që ofrojnë gjithashtu zgjedhje për përdoruesit. Në mësimet e mëvonshme të kursit, nxënësit do të mësojnë rreth variablave në një sërë kontekstesh. Nxënësve u jepet autonomi më e madhe dhe më shumë zgjedhje gjatë gjithë këtij kursi. Deri në fund të kursit, nxënësit do të kenë krijuar projekte interaktive për t'i ndarë me shokët dhe familjen e tyre.
+          student_description: Mësoni të kodoni me sprites dhe variabla dhe diskutoni ndikimet shoqërore të informatikës dhe internetit. Deri në fund të këtij kursi, hartoni dhe krijoni një projekt që mund ta ndani me shokët dhe familjen.
+        csp-post-survey-2021: {}
         csa1-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
         pre-express-2022:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
         csa2-2022:
@@ -1329,6 +2058,8 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        tessplayground: {}
+        cs4all-invasive-species: {}
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -1337,10 +2068,15 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        tess-test-csa: {}
         csa1-2022-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        pltess: {}
+        self-paced-pl-csa1-2022: {}
+        self-paced-pl-csa2-2022: {}
+        self-paced-pl-csa3-2022: {}
         csa7-pilot-extra:
           lesson_groups:
             lessonGroup-2:
@@ -1349,12 +2085,22 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        csa-backpack-2022: {}
+        csd6-projects: {}
         coursef-2022-pilot:
           lesson_groups:
             lessonGroup-7:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
+            ramp_up:
+              display_name: Sprites
             lessonGroup-8:
               display_name: variabla
+            csf_data:
+              display_name: Të dhënat dhe simulimet
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+          title: Kursi F (2022)
+          student_description: Mësoni të kodoni me sprites dhe variabla dhe diskutoni ndikimet shoqërore të informatikës dhe internetit. Deri në fund të këtij kursi, hartoni dhe krijoni një projekt që mund ta ndani me shokët dhe familjen.
         csa6-2022:
           lesson_groups:
             lessonGroup-2:
@@ -1367,10 +2113,89 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        ui-test-csa-family-script: {}
+        csa-preview: {}
+        vpl-csd1-summer-pilot-2022: {}
+        vpl-csd2-summer-pilot-2022: {}
+        vpl-csd3-summer-pilot-2022: {}
+        vpl-csd4-summer-pilot-2022: {}
+        vpl-csd5-summer-pilot-2022: {}
         csa2-2022-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        vpl-csd1-ci-pilot-2022: {}
+        vpl-csd2-ci-pilot-2022: {}
+        vpl-csd3-ci-pilot-2022: {}
+        vpl-csd4-ci-pilot-2022: {}
+        vpl-csd5-ci-pilot-2022: {}
+        vpl-csd6-ci-pilot-2022: {}
+        vpl-csd7-ci-pilot-2022: {}
+        hello-world-csc: {}
+        csd-playground: {}
+        csc-pilot-2022-ecosystems: {}
+        csc-pilot-2022-timecapsule: {}
+        csc-pilot-2022-starquilts: {}
+        csc-pilot-2022-fables: {}
+        csd1-2022:
+          title: Zgjidhja e problemeve dhe Informatika ('22-'23)
+          description: "Zgjidhja e problemeve dhe llogaritja është një hyrje shumë ndërvepruese dhe bashkëpunuese në fushën e shkencës kompjuterike, e përshtatur në kuadër të kërkimit më të gjerë të zgjidhjes së problemeve. Ju do të praktikoni përdorimin e një procesi të zgjidhjes së problemeve për të adresuar një sërë enigmash, sfidash dhe skenarësh të botës reale. Më pas, do të mësoni se si kompjuterët futin, nxjerrin, ruajnë dhe përpunojnë informacione për t'i ndihmuar njerëzit të zgjidhin problemet. Njësia përfundon me një projekt në të cilin ju hartoni një aplikacion që ndihmon në zgjidhjen e një problemi që keni zgjedhur.\n\n\\*\\*Udhëzues zbatimi për zgjidhjen e problemeve dhe llogaritjen \\*\\*\n\n-   Kapitulli i parë i kësaj njësie duhet të plotësohet përpara çdo njësie tjetër në CS Discoveries\n-   Në këtë njësi jepen mësime alternative për disa mësime, në varësi të kontekstit të klasës suaj\n-   Mund të shikoni [Udhëzuesin e Kurrikulës](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) dhe [Udhëzuesin e Zbatimit](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) për më shumë informacion rreth kësaj njësie "
+        csd2-2022:
+          title: Zhvillim Web-i ('22-'23)
+          description: "Në Zhvillimin e Web-it, nxënësit janë të autorizuar të krijojnë dhe ndajnë përmbajtje në webfaqet e tyre. Ata fillojnë duke menduar për rolin e web-it dhe se si mund të përdoret si një mjet për shprehje krijuese. Ndërsa nxënësit zhvillojnë faqet e tyre dhe fillojnë ta shohin veten si programues, ata inkurajohen të mendojnë në mënyrë kritike për ndikimin e shkëmbimit të informacionit në internet dhe se si të jenë konsumatorë më kritikë të përmbajtjes. Ata gjithashtu njihen me zgjidhjen e problemeve pasi lidhet me programimin ndërsa mësojnë aftësi të vlefshme si korrigjimi, përdorimi i burimeve dhe puna në grup. Në përfundim të njësisë, nxënësit do të kenë krijuar një faqe interneti personale që mund ta publikojnë dhe ndajnë.\n\n**Udhëzues Zbatimi për Zhvillimin e Web-it**\n\n-   Përfundoni tre mësimet e para të njësisë Zgjidhja e Problemeve dhe Llogaritja përpara se të filloni\n-   Udhëzimet për mbështetjen e nxënësve në nivelet e programimit dhe dallimin e detyrave janë të disponueshme në [Udhëzuesin e niveleve të programimit](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) dhe [Udhëzuesin e diferencimit](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)\n-   Mund të shikoni [Udhëzuesin e Kurrikulës](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) dhe [Udhëzuesin e Zbatimit](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) për më shumë informacion rreth kësaj njësie\n\n## Përfunduat mësimdhënien e kësaj njësie?\n\nPërgjigjuni kësaj [\\*\\*ankete të shkurtër\\*\\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2) për t'i bërë të ditur ekipit të kurrikulës Code.org se si shkoi njësia."
+        csd3-2022:
+          title: Lojra dhe Animacione Interaktive ('22-'23)
+          description: "Në njësinë Animacione dhe Lojëra Interaktive, nxënësit krijojnë imazhe programore, animacione, art ndërveprues dhe lojëra. Duke filluar nga format më të thjeshta, primitive dhe duke ndërtuar lojëra më të sofistikuara të bazuara në sprite, nxënësit njihen me konceptet e programimit dhe procesin e projektimit që përdorin çdo ditë shkencëtarët kompjuterikë. Më pas ata mësojnë se si këto konstruksione më të thjeshta mund të kombinohen për të krijuar programe më komplekse. Në projektin përfundimtar, nxënësit zhvillojnë një program të personalizuar ndërveprues.\n\n**Udhëzimet e zbatimit për animacionet dhe lojërat interaktive**\n\n-   Përfundoni tre mësimet e para të njësisë Zgjidhja e Problemeve dhe Informatika përpara se të filloni\n-   Udhëzimet për mbështetjen e nxënësve në nivelet e programimit dhe dallimin e detyrave janë të disponueshme në [Udhëzuesin e niveleve të programimit](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) dhe [Udhëzuesin e diferencimit](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)\n-   Mund të shikoni [Udhëzuesin e Kurrikulës](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) dhe [Udhëzuesin e Zbatimit](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) për më shumë informacion rreth kësaj njësie\n\n## Përfundoi mësimdhënien e kësaj njësie?\n\nPërgjigjuni [\\*\\*anketë të shkurtër\\*\\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=3) për t'i bërë të ditur ekipit të kurrikulës Code.org se si shkoi njësia."
+        csd4-2022:
+          title: Procesi i Dizajnit ('22-'23)
+        csd5-2022: {}
+        csd7-2022:
+          title: IA dhe Makinat e mësimit ('22-'23)
+          student_description: Kjo njësi është një hyrje praktike për zhvillimin e një modeli të mësimit të makinave me të dhëna tabelare. Ju do të eksploroni se si kompjuterët mësojnë nga të dhënat për të marrë vendime, më pas do të zhvilloni projektet tuaja të mësimit të makinave rreth të dhënave të botës reale. Njësia arrin kulmin me dizajnimin e aplikacionit tuaj të mësimit të makinave për të zgjidhur një problem të rëndësishëm personalisht.
+        csd6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitulli 1: Hyrjet dhe daljet'
+          title: Informatikë fizike ('22-'23)
+          student_description: Kjo njësi eksploron rolin e platformave hardware në informatikë dhe se si sensorë të ndryshëm mund të sigurojnë hyrje dhe dalje më efektive sesa tastiera tradicionale, miu dhe monitori. Duke përdorur App Lab dhe Adafruit's Circuit Playground, ju do të zhvilloni programe që përdorin të njëjtat hyrje dhe dalje harduerike që shihni në pajisjet inteligjente, duke parë se si një prototip i thjeshtë i përafërt mund të çojë në një produkt të përfunduar. Njësia përfundon me një sfidë të projektimit për të përdorur Circuit Playground si bazë për një risi të dizajnit tuaj.
+        csd-post-survey-2022: {}
+        testtess2: {}
+        csp-post-survey-2022: {}
+        aiml-2022: {}
+        vpl-csd-2022: {}
+        vpl-csp-2022: {}
+        self-paced-pl-csd1-2022: {}
+        self-paced-pl-csd2-2022: {}
+        self-paced-pl-csd3-2022: {}
+        self-paced-pl-csd4-2022: {}
+        self-paced-pl-csp1-2022: {}
+        self-paced-pl-csp2-2022: {}
+        self-paced-pl-csp3-2022: {}
+        self-paced-pl-csp4-2022: {}
+        csa9-2022: {}
+        csa-pl-standalone-code-2022: {}
+        csc-ecosystems: {}
+        dlp-csd-overview-2022: {}
+        dlp-csd-mod1-2022: {}
+        dlp-csd-mod2-2022: {}
+        dlp-csd-mod3-2022: {}
+        dlp-csd-mod4-2022: {}
+        dlp-csp-mod1-2022: {}
+        dlp-csp-mod2-2022: {}
+        dlp-csp-mod3-2022: {}
+        dlp-csp-mod4-2022: {}
+        dlp-csp-overview-2022: {}
+        csc-ecosystems-2022: {}
+        csc-starquilts-2022: {}
+        csc-fables-2022: {}
+        csc-timecapsule-2022: {}
+        vpl-csd1-ayw-pilot-2022: {}
+        alltheblocklythings: {}
+        self-paced-pl-csd5-2022: {}
+        vpl-csa-2022: {}
+        csa-labs-2022: {}
+        csa-draft-pl: {}
+        vpl-csd2-ayw-pilot-2022: {}
         soccer:
           name: futboll
         csa1-validation-pilot-2022:
@@ -1405,10 +2230,11 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        csa9-validation-pilot-2022: {}
         csa1-2023:
           lessons:
             lesson-6:
-              name: cikle
+              name: Cikle
           lesson_groups:
             lessonGroup-3:
               display_name: Përmbajtja
@@ -1439,6 +2265,9 @@ sq:
             lessonGroup-2:
               display_name: Përmbajtja
         csa7-2023:
+          lessons:
+            lesson-6:
+              name: Pronë intelektuale
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
@@ -1446,14 +2275,50 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        vpl-csd3-ayw-pilot-2022: {}
+        vpl-csd4-ayw-pilot-2022: {}
+        csa-magpie-lab: {}
+        emma: {}
+        csa-consumer-review-lab: {}
+        csa-data-lab: {}
+        hello-world-space-2022: {}
         hello-world-soccer-2022:
           title: 'Përshëndetje Botërore: futboll'
+        csd1-2023: {}
+        csd2-2023: {}
+        csd4-2023: {}
+        csd5-2023: {}
+        csd3-2023: {}
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitulli 1: Hyrjet dhe daljet'
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Hyrje në App Lab
+          student_description: Kjo njësi është një hyrje praktike për zhvillimin e një modeli të mësimit të makinave me të dhëna tabelare. Ju do të eksploroni se si kompjuterët mësojnë nga të dhënat për të marrë vendime, më pas do të zhvilloni projektet tuaja të mësimit të makinave rreth të dhënave të botës reale. Njësia arrin kulmin me dizajnimin e aplikacionit tuaj të mësimit të makinave për të zgjidhur një problem të rëndësishëm personalisht.
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitulli 1: Hyrjet dhe daljet'
+          student_description: Kjo njësi eksploron rolin e platformave hardware në informatikë dhe se si sensorë të ndryshëm mund të sigurojnë hyrje dhe dalje më efektive sesa tastiera tradicionale, miu dhe monitori. Duke përdorur App Lab dhe Adafruit's Circuit Playground, ju do të zhvilloni programe që përdorin të njëjtat hyrje dhe dalje harduerike që shihni në pajisjet inteligjente, duke parë se si një prototip i thjeshtë i përafërt mund të çojë në një produkt të përfunduar. Njësia përfundon me një sfidë të projektimit për të përdorur Circuit Playground si bazë për një risi të dizajnit tuaj.
         csc-bookcover:
           lessons:
             lesson-1:
               name: Okładka
           name: csc-bookcover
           title: Okładka CSC
+        csc-landmarks-pilot: {}
+        csc-playground: {}
+        self-paced-pl-physical-computing1: {}
+        self-paced-pl-physical-computing2: {}
+        emmas-playground: {}
+        amys-playground: {}
+        csc-function-machines-pilot: {}
+        csp1-2023: {}
+        csp2-2023: {}
+        csp3-2023: {}
         csp4-2023:
           lesson_groups:
             csp_variables:
@@ -1462,34 +2327,97 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
         csp5-2023:
           lesson_groups:
             csp_lists:
               display_name: të dhëna
             csp_loops:
-              display_name: cikle
+              display_name: Cikle
+            csp_project:
+              display_name: Projekt
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
               display_name: Listat
             lessonGroup-3:
-              display_name: cikle
+              display_name: Cikle
+            lessonGroup-5:
+              display_name: Projekt
+        csp7-2023: {}
+        csp8-2023: {}
+        csp9-2023: {}
+        csp10-2023: {}
+        csp-post-survey-2023: {}
+        self-paced-pl-csa1-2023: {}
+        self-paced-pl-csa2-2023: {}
+        self-paced-pl-csa3-2023: {}
+        csa-examples-22: {}
+        amy-playground: {}
         angelina-playground:
           lessons:
             lesson-5:
               name: Vlerësimet
+        csc-pilot-fa2022-timecapsule: {}
+        csc-pilot-fa2022-ecosystem: {}
+        csp-playground: {}
+        csc-pilot-fa2022-particles: {}
+        devices-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitulli 1: Hyrjet dhe daljet'
+          student_description: Kjo njësi eksploron rolin e platformave hardware në informatikë dhe se si sensorë të ndryshëm mund të sigurojnë hyrje dhe dalje më efektive sesa tastiera tradicionale, miu dhe monitori. Duke përdorur App Lab dhe Adafruit's Circuit Playground, ju do të zhvilloni programe që përdorin të njëjtat hyrje dhe dalje harduerike që shihni në pajisjet inteligjente, duke parë se si një prototip i thjeshtë i përafërt mund të çojë në një produkt të përfunduar. Njësia përfundon me një sfidë të projektimit për të përdorur Circuit Playground si bazë për një risi të dizajnit tuaj.
+        allthevalidation: {}
+        vpl-csd5-ayw-pilot-2022: {}
+        vpl-csd6-ayw-pilot-2022: {}
+        self-paced-pl-csa4-2023: {}
+        katies-playground: {}
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputet dhe Outputet
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hyrje në App Lab
+            lessonGroup-3:
+              display_name: Inputet dhe Outputet
+        csc-timecapsule-2023: {}
+        vpl-csd7-ayw-pilot-2022: {}
+        vpl-csd8-ayw-pilot-2022: {}
+        csc-mappinglandmarks-2023: {}
+        blockchain-2023: {}
+        self-paced-pl-csc-2023: {}
+        csc-ecosystems-2023: {}
+        csc-adaptations-2023: {}
+        drafting: {}
+        tess-testing-problem-solving-2023: {}
+        testing-focus-on-creativity1: {}
+        testing-focus-on-creativity2: {}
+        poetry-2023: {}
+        poemmaker-2023: {}
+        dlp-core-2023: {}
+        csc-particles-2023: {}
+        csc-bookcovers-2023: {}
         pre-express-2023:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
         express-2023:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
+            csf_sprites:
+              display_name: Sprites
             lessonGroup-9:
               display_name: Ngjarje
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_conditionals:
               display_name: Kushtet
             csf_functions:
@@ -1498,89 +2426,492 @@ sq:
               display_name: variabla
             csf_for_loops:
               display_name: Për Ciklet
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         coursea-2023:
           lesson_groups:
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
+            lessonGroup-5:
+              display_name: Përfundimi i projektit të kursit
+          description: 'Kursi A ofron një kurrikulë të shkencave kompjuterike për lexuesit fillestarë, përfshirë fëmijët e kopshtit. Nxënësit do të mësojnë të programojnë duke përdorur komanda si loops dhe evente. Mësimet e paraqitura në këtë lëndë gjithashtu u mësojnë nxënësve të bashkëpunojnë në mënyrë domethënëse me të tjerët, të hetojnë teknika të ndryshme të zgjidhjes së problemeve, të vazhdojnë përballë detyrave sfiduese dhe të mësojnë rreth sigurisë në internet. '
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
         courseb-2023:
           lesson_groups:
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
+            lessonGroup-6:
+              display_name: Përfundimi i projektit të kursit
+          description: Ne e zhvilluam Kursin B duke menduar nxënësit në klasën e parë. Ndërsa konceptet në Kursin B janë paralele me ato të Kursit A, nxënësit mësojnë aktivitete të shkëputura më të sofistikuara dhe punojnë përmes një larmie më të madhe enigmash. Studentët do të mësojnë bazat e programimit, teknikat e bashkëpunimit, investigimin dhe shkathtësitë e të menduarit kritik, këmbënguljen përballë vështirësive dhe sigurinë në internet. Në fund të këtij kursi, nxënësit krijojnë lojra në mjedisin e programimit Play Lab.
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
         coursec-2023:
           lesson_groups:
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
             csf_data:
               display_name: të dhëna
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+          description: Kemi zhvilluar kursin C për nxënësit në klasën e dytë. Nxënësit do të krijojnë programe me sekuencë, loops dhe evente. Ata do të hetojnë teknikat e zgjidhjes së problemeve dhe do të zhvillojnë strategji për ndërtimin e komuniteteve pozitive si online ashtu edhe offline. Deri në fund të kursit, nxënësit do të krijojnë lojëra interaktive që mund t'i ndajnë me të tjerët.
         coursed-2023:
           lesson_groups:
             lessonGroup-6:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_events:
               display_name: Ngjarje
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_conditionals:
               display_name: Kushtet
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         coursee-2023:
           lesson_groups:
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
+            csf_sprites:
+              display_name: Sprites
             ramp_up:
               display_name: Përsëritjet e Mbivendosura
             csf_functions:
               display_name: funksione
             csf_nested_loops:
               display_name: Kushtet
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        problem-solving-computing-2023: {}
+        web-development-2023: {}
+        interactive-games-animations-2023: {}
+        design-process-2023: {}
+        data-society-2023: {}
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hyrje në App Lab
+        focus-on-creativity1-2023: {}
+        focus-on-creativity2-2023: {}
+        focus-on-creativity3-2023: {}
+        csc-starquilts-2023: {}
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitulli 1: Hyrjet dhe daljet'
+          student_description: Kjo njësi eksploron rolin e platformave hardware në informatikë dhe se si sensorë të ndryshëm mund të sigurojnë hyrje dhe dalje më efektive sesa tastiera tradicionale, miu dhe monitori. Duke përdorur App Lab dhe Adafruit's Circuit Playground, ju do të zhvilloni programe që përdorin të njëjtat hyrje dhe dalje harduerike që shihni në pajisjet inteligjente, duke parë se si një prototip i thjeshtë i përafërt mund të çojë në një produkt të përfunduar. Njësia përfundon me një sfidë të projektimit për të përdorur Circuit Playground si bazë për një risi të dizajnit tuaj.
+        focus-on-hardware1-2023: {}
+        focus-on-hardware2-2023: {}
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitulli 1: Hyrjet dhe daljet'
+          student_description: Kjo njësi eksploron rolin e platformave hardware në informatikë dhe se si sensorë të ndryshëm mund të sigurojnë hyrje dhe dalje më efektive sesa tastiera tradicionale, miu dhe monitori. Duke përdorur App Lab dhe Adafruit's Circuit Playground, ju do të zhvilloni programe që përdorin të njëjtat hyrje dhe dalje harduerike që shihni në pajisjet inteligjente, duke parë se si një prototip i thjeshtë i përafërt mund të çojë në një produkt të përfunduar. Njësia përfundon me një sfidë të projektimit për të përdorur Circuit Playground si bazë për një risi të dizajnit tuaj.
+        focus-on-data1-2023: {}
+        focus-on-data2: {}
+        focus-on-data2-2023: {}
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hyrje në App Lab
+          student_description: Kjo njësi është një hyrje praktike për zhvillimin e një modeli të mësimit të makinave me të dhëna tabelare. Ju do të eksploroni se si kompjuterët mësojnë nga të dhënat për të marrë vendime, më pas do të zhvilloni projektet tuaja të mësimit të makinave rreth të dhënave të botës reale. Njësia arrin kulmin me dizajnimin e aplikacionit tuaj të mësimit të makinave për të zgjidhur një problem të rëndësishëm personalisht.
+        focus-on-design-with-purpose1-2023: {}
+        self-paced-pl-k5-getting-started: {}
+        focus-on-design-with-purpose2-2023: {}
+        focus-on-design-with-purpose3-2023: {}
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitulli 1: Hyrjet dhe daljet'
+          student_description: Kjo njësi eksploron rolin e platformave hardware në informatikë dhe se si sensorë të ndryshëm mund të sigurojnë hyrje dhe dalje më efektive sesa tastiera tradicionale, miu dhe monitori. Duke përdorur App Lab dhe Adafruit's Circuit Playground, ju do të zhvilloni programe që përdorin të njëjtat hyrje dhe dalje harduerike që shihni në pajisjet inteligjente, duke parë se si një prototip i thjeshtë i përafërt mund të çojë në një produkt të përfunduar. Njësia përfundon me një sfidë të projektimit për të përdorur Circuit Playground si bazë për një risi të dizajnit tuaj.
+        self-paced-k5-pl-getting-started: {}
+        focus-on-coding1-2023: {}
+        focus-on-coding2-2023: {}
+        focus-on-coding3-2023: {}
+        focus-on-coding4a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitulli 1: Hyrjet dhe daljet'
+          student_description: Kjo njësi eksploron rolin e platformave hardware në informatikë dhe se si sensorë të ndryshëm mund të sigurojnë hyrje dhe dalje më efektive sesa tastiera tradicionale, miu dhe monitori. Duke përdorur App Lab dhe Adafruit's Circuit Playground, ju do të zhvilloni programe që përdorin të njëjtat hyrje dhe dalje harduerike që shihni në pajisjet inteligjente, duke parë se si një prototip i thjeshtë i përafërt mund të çojë në një produkt të përfunduar. Njësia përfundon me një sfidë të projektimit për të përdorur Circuit Playground si bazë për një risi të dizajnit tuaj.
+        focus-on-impact-in-society1-2023: {}
+        focus-on-impact-in-society2-2023: {}
+        focus-on-impact-in-society3-2023: {}
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Hyrje në App Lab
+          student_description: Kjo njësi është një hyrje praktike për zhvillimin e një modeli të mësimit të makinave me të dhëna tabelare. Ju do të eksploroni se si kompjuterët mësojnë nga të dhënat për të marrë vendime, më pas do të zhvilloni projektet tuaja të mësimit të makinave rreth të dhënave të botës reale. Njësia arrin kulmin me dizajnimin e aplikacionit tuaj të mësimit të makinave për të zgjidhur një problem të rëndësishëm personalisht.
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitulli 1: Hyrjet dhe daljet'
+          student_description: Kjo njësi eksploron rolin e platformave hardware në informatikë dhe se si sensorë të ndryshëm mund të sigurojnë hyrje dhe dalje më efektive sesa tastiera tradicionale, miu dhe monitori. Duke përdorur App Lab dhe Adafruit's Circuit Playground, ju do të zhvilloni programe që përdorin të njëjtat hyrje dhe dalje harduerike që shihni në pajisjet inteligjente, duke parë se si një prototip i thjeshtë i përafërt mund të çojë në një produkt të përfunduar. Njësia përfundon me një sfidë të projektimit për të përdorur Circuit Playground si bazë për një risi të dizajnit tuaj.
+        csa9-2023: {}
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputet dhe Outputet
+        vpl-csd-ci-1: {}
+        vpl-csd-ci-2: {}
+        vpl-csd-ci-3: {}
+        vpl-csd-ci-4: {}
+        vpl-csd-ci-5: {}
+        vpl-csd-ci-6: {}
+        vpl-csd-ci-7: {}
+        devices-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitulli 1: Hyrjet dhe daljet'
+          student_description: Kjo njësi eksploron rolin e platformave hardware në informatikë dhe se si sensorë të ndryshëm mund të sigurojnë hyrje dhe dalje më efektive sesa tastiera tradicionale, miu dhe monitori. Duke përdorur App Lab dhe Adafruit's Circuit Playground, ju do të zhvilloni programe që përdorin të njëjtat hyrje dhe dalje harduerike që shihni në pajisjet inteligjente, duke parë se si një prototip i thjeshtë i përafërt mund të çojë në një produkt të përfunduar. Njësia përfundon me një sfidë të projektimit për të përdorur Circuit Playground si bazë për një risi të dizajnit tuaj.
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputet dhe Outputet
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputet dhe Outputet
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputet dhe Outputet
+        ai-temp: {}
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputet dhe Outputet
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputet dhe Outputet
+        vpl-csd-ci-6b: {}
+        self-paced-pl-physical-computing1-2023: {}
+        self-paced-pl-physical-computing2-2023: {}
+        self-paced-pl-csd1-2023: {}
+        self-paced-pl-csd2-2023: {}
+        self-paced-pl-csd3-2023: {}
+        self-paced-pl-csd4-2023: {}
+        self-paced-pl-csd5-2023: {}
         pl-csd-summer-day1:
           lessons:
             lesson-3:
-              name: Hyrja
+              name: Hyrje
         pl-csd-summer-day2:
           lessons:
             lesson-10:
-              name: Mbyll
+              name: Përmbledhje
+        pl-csd-summer-day3:
+          lessons:
+            lesson-10:
+              name: 'Përmbledhje '
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dita 3
+          title: Dita 3
         pl-csd-summer-day4:
           lessons:
             lesson-12:
-              name: Mbyll
+              name: Përmbledhje
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dita 4
+          title: Dita 4
+        pl-csd-summer-day5: {}
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
-              name: Hyrja
+              name: Hyrje
             lesson-12:
-              name: Mbyll
+              name: Përmbledhje
         virtual-pl-csd-summer-day2:
           lessons:
             lesson-10:
-              name: Mbyll
+              name: Përmbledhje
         virtual-pl-csd-summer-day3:
           lessons:
             lesson-12:
-              name: Mbyll
+              name: Përmbledhje
+          title: Dita 3
         virtual-pl-csd-summer-day4:
           lessons:
             lesson-13:
-              name: Mbyll
+              name: Përmbledhje
+          title: Dita 4
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Vlerësim
+          title: Dita 5
+        self-paced-pl-microbit1: {}
+        self-paced-pl-microbit2: {}
+        seesaw-adaptations: {}
+        csp-bingo-2023: {}
+        csd-post-survey-2023: {}
+        focus-on-data-post-survey-2023: {}
+        focus-on-impact-in-society-post-survey-2023: {}
+        focus-on-coding-post-survey-2023: {}
+        focus-on-design-with-purpose-post-survey-2023: {}
+        focus-on-hardware-post-survey-2023: {}
+        focus-on-creativity-post-survey-2023: {}
         coursef-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
+            lessonGroup-3:
+              display_name: Sprites
             lessonGroup-4:
               display_name: variabla
+            lessonGroup-5:
+              display_name: Të dhënat dhe simulimet
+            lessonGroup-6:
+              display_name: Përfundimi i projektit të kursit
+          description: Ne krijuam Kursin F për nxënësit e klasës së pestë. Kursi fillon duke parë se si përdoruesit bëjnë zgjedhje në aplikacionet që përdorin. Më pas nxënësit mësojnë të bëjnë një sërë aplikacionesh Sprite Lab që ofrojnë gjithashtu zgjedhje për përdoruesit. Në mësimet e mëvonshme të kursit, nxënësit do të mësojnë rreth variablave në një sërë kontekstesh. Nxënësve u jepet autonomi më e madhe dhe më shumë zgjedhje gjatë gjithë këtij kursi. Deri në fund të kursit, nxënësit do të kenë krijuar projekte interaktive për t'i ndarë me shokët dhe familjen e tyre.
+          student_description: Mësoni të kodoni me sprites dhe variabla dhe diskutoni ndikimet shoqërore të informatikës dhe internetit. Deri në fund të këtij kursi, hartoni dhe krijoni një projekt që mund ta ndani me shokët dhe familjen.
+        ey-ecosystems: {}
+        self-paced-pl-csp1-2023: {}
+        self-paced-pl-csp2-2023: {}
+        self-paced-pl-csp3-2023: {}
+        self-paced-pl-csp4-2023: {}
+        musiclab: {}
+        csa-software-engineering: {}
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasat
+        hoc-amazon-poc: {}
+        musiclab-2023: {}
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasat
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasat
         csa-frq-practice-2022:
           lessons:
             lesson-4:
               name: të dhëna
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasat
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasat
+        csa-frq-practice-pre2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasat
+        self-paced-pl-aiml1: {}
+        self-paced-pl-aiml2: {}
+        musiclab-pilot: {}
+        tesspltest23: {}
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Shtetësia digjitale
+            lessonGroup-3:
+              display_name: Sekuencimi
+            lessonGroup-4:
+              display_name: Cikle
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: të dhëna
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Shtetësia digjitale
+            lessonGroup-3:
+              display_name: Sekuencimi
+            lessonGroup-4:
+              display_name: Cikle
+            lessonGroup-6:
+              display_name: të dhëna
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: të dhëna
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Shtetësia digjitale
+            lessonGroup-3:
+              display_name: Sekuencimi
+            lessonGroup-4:
+              display_name: Cikle
+            lessonGroup-6:
+              display_name: Ngjarje
+            lessonGroup-7:
+              display_name: Përfundimi i projektit të kursit
+            lessonGroup-8:
+              display_name: të dhëna
+          description: Ne e zhvilluam Kursin B duke menduar nxënësit në klasën e parë. Ndërsa konceptet në Kursin B janë paralele me ato të Kursit A, nxënësit mësojnë aktivitete të shkëputura më të sofistikuara dhe punojnë përmes një larmie më të madhe enigmash. Studentët do të mësojnë bazat e programimit, teknikat e bashkëpunimit, investigimin dhe shkathtësitë e të menduarit kritik, këmbënguljen përballë vështirësive dhe sigurinë në internet. Në fund të këtij kursi, nxënësit krijojnë lojra në mjedisin e programimit Play Lab.
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Shtetësia digjitale
+            lessonGroup-3:
+              display_name: Sekuencimi
+            lessonGroup-4:
+              display_name: Cikle
+            lessonGroup-5:
+              display_name: Ngjarje
+            lessonGroup-6:
+              display_name: të dhëna
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Shtetësia digjitale
+            lessonGroup-3:
+              display_name: Sekuencimi
+            lessonGroup-6:
+              display_name: Cikle
+            lessonGroup-7:
+              display_name: të dhëna
+            lessonGroup-8:
+              display_name: Përfundimi i projektit të kursit
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Përsëritjet e Mbivendosura
+            lessonGroup-4:
+              display_name: funksione
+            lessonGroup-5:
+              display_name: Të dhënat dhe simulimet
+            lessonGroup-6:
+              display_name: Përfundimi i projektit të kursit
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+          description: Ne krijuam Kursin F për nxënësit e klasës së pestë. Kursi fillon duke parë se si përdoruesit bëjnë zgjedhje në aplikacionet që përdorin. Më pas nxënësit mësojnë të bëjnë një sërë aplikacionesh Sprite Lab që ofrojnë gjithashtu zgjedhje për përdoruesit. Në mësimet e mëvonshme të kursit, nxënësit do të mësojnë rreth variablave në një sërë kontekstesh. Nxënësve u jepet autonomi më e madhe dhe më shumë zgjedhje gjatë gjithë këtij kursi. Deri në fund të kursit, nxënësit do të kenë krijuar projekte interaktive për t'i ndarë me shokët dhe familjen e tyre.
+          student_description: Mësoni të kodoni me sprites dhe variabla dhe diskutoni ndikimet shoqërore të informatikës dhe internetit. Deri në fund të këtij kursi, hartoni dhe krijoni një projekt që mund ta ndani me shokët dhe familjen.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+            lessonGroup-3:
+              display_name: Kushtet
+            lessonGroup-4:
+              display_name: Të dhënat dhe simulimet
+            lessonGroup-5:
+              display_name: variabla
+            lessonGroup-7:
+              display_name: Përfundimi i projektit të kursit
+        vpl-csp-2023-m1: {}
+        vpl-csp-2023-m2: {}
+        vpl-csp-2023-m3: {}
+        vpl-csp-2023-m4: {}
+        vpl-csp-2023-m5: {}
+        vpl-csp-2023-m6: {}
+        vpl-csp-2023-m7: {}
+        vpl-csp-2023-m8: {}
+        vpl-csa-2023-m1: {}
+        how-ai-works-2023: {}
+        vpl-csa-2023-m2: {}
+        vpl-csa-2023-m3: {}
+        vpl-csa-2023-m4: {}
+        vpl-csa-2023-m5: {}
+        vpl-csa-2023-m6: {}
+        vpl-csa-2023-m7: {}
+        vpl-csa-2023-m8: {}
+        pl-csd-2023-m1: {}
+        vpl-csd-2023-m1: {}
+        vpl-csd-2023-m2: {}
+        vpl-csd-2023-m3: {}
+        vpl-csd-2023-m4: {}
+        vpl-csd-2023-m5: {}
+        vpl-csd-2023-m6: {}
+        vpl-csd-2023-m7: {}
+        vpl-csd-2023-m8: {}
+        ai-ethics-2023: {}
+        draft-hoc-dp: {}
+        genai-temp: {}
+        virtual-pl-csp-summer-day1-2024: {}
+        virtual-pl-csa-summer-2024-day1: {}
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Hyrje
+        virtual-pl-csp-summer-day3:
+          title: Dita 3
+        virtual-pl-csp-summer-day4:
+          title: Dita 4
+        virtual-pl-csp-summer-day5:
+          title: Dita 5
+        virtual-pl-csa-summer-day2: {}
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Hyrje
+          title: Dita 3
+        virtual-pl-csa-summer-day4:
+          title: Dita 4
+        virtual-pl-csa-summer-day5: {}
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Hyrje
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Hyrje
+        virtual-pl-csp-summer-day1: {}
+        csa-postap-se-and-computer-vision-2023: {}
+        draft-hoc-dp-2: {}
+        self-paced-pl-problem-solving-and-computing-1-2023: {}
+        self-paced-pl-problem-solving-and-computing-2-2023: {}
+        draft-hoc-dp-2-a: {}
+        draft-hoc-dp-2-: {}
+        draft-hoc-dp-2-b: {}
+        hoc-dp-oct-beta: {}
+        hoc-dp-oct-beta-b: {}
+        self-paced-pl-csd-unit1-1-2023: {}
+        self-paced-pl-csd-unit1-2-2023: {}
+        dance-ai-2023: {}
+        self-paced-pl-csd-unit2-1-2023: {}
+        self-paced-pl-csd-unit2-2-2023: {}
+        self-paced-pl-csd-unit3-1-2023: {}
+        self-paced-pl-csd-unit3-2-2023: {}
+        self-paced-pl-csd-unit4-1-2023: {}
+        self-paced-pl-csd-unit4-2-2023: {}
+        self-paced-pl-csd-unit5-1-2023: {}
+        self-paced-pl-csd-unit5-2-2023: {}
+        ai-tutor-test: {}
+        web-dev-2024: {}
+        csd1-2024: {}
+        csd2-2024: {}
+        csd3-2024: {}
+        csd4-2024: {}
+        csd5-2024: {}
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitulli 1: Hyrjet dhe daljet'
+          student_description: Kjo njësi eksploron rolin e platformave hardware në informatikë dhe se si sensorë të ndryshëm mund të sigurojnë hyrje dhe dalje më efektive sesa tastiera tradicionale, miu dhe monitori. Duke përdorur App Lab dhe Adafruit's Circuit Playground, ju do të zhvilloni programe që përdorin të njëjtat hyrje dhe dalje harduerike që shihni në pajisjet inteligjente, duke parë se si një prototip i thjeshtë i përafërt mund të çojë në një produkt të përfunduar. Njësia përfundon me një sfidë të projektimit për të përdorur Circuit Playground si bazë për një risi të dizajnit tuaj.
+        csd6b-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputet dhe Outputet
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Hyrje në App Lab
+          student_description: Kjo njësi është një hyrje praktike për zhvillimin e një modeli të mësimit të makinave me të dhëna tabelare. Ju do të eksploroni se si kompjuterët mësojnë nga të dhënat për të marrë vendime, më pas do të zhvilloni projektet tuaja të mësimit të makinave rreth të dhënave të botës reale. Njësia arrin kulmin me dizajnimin e aplikacionit tuaj të mësimit të makinave për të zgjidhur një problem të rëndësishëm personalisht.
+        csd-post-survey-2024: {}

@@ -2,8 +2,314 @@
 vi:
   data:
     unplugged:
+      BigEvent:
+        desc: Các bạn học sinh sẽ được giới thiệu về khái niệm lập trình "sự kiện",
+          đó là những hoạt động máy tính liên tục theo dõi. Giáo viên sẽ bấm nút trên
+          tờ giấy điều khiển từ xa và học sinh sẽ phản ứng tùy thuộc vào nút được
+          nhấn.
+        title: Sự kiện lớn
+      BigEvent_2018:
+        desc: Các bạn học sinh sẽ được giới thiệu về khái niệm lập trình "sự kiện",
+          đó là những hoạt động máy tính liên tục theo dõi. Giáo viên sẽ bấm nút trên
+          tờ giấy điều khiển từ xa và học sinh sẽ phản ứng tùy thuộc vào nút được
+          nhấn.
+        title: Sự kiện lớn
+      BigEvent_2019:
+        desc: Các bạn học sinh sẽ được giới thiệu về khái niệm lập trình "sự kiện",
+          đó là những hoạt động máy tính liên tục theo dõi. Giáo viên sẽ bấm nút trên
+          tờ giấy điều khiển từ xa và học sinh sẽ phản ứng tùy thuộc vào nút được
+          nhấn.
+        title: Sự kiện lớn
+      BinaryBracelets:
+        desc: Học sinh tạo ra vòng tay như là một đại diện nhị phân của chữ cái đầu
+          của tên của họ. Học sinh tìm hiểu rằng dữ liệu có thể được đại diện và lưu
+          trữ theo nhiều hơn một cách.
+        title: Vòng đeo tay nhị phân
+      BinaryBracelets_2018:
+        desc: Học sinh tạo ra vòng tay như là một đại diện nhị phân của chữ cái đầu
+          của tên của họ. Học sinh tìm hiểu rằng dữ liệu có thể được đại diện và lưu
+          trữ theo nhiều hơn một cách.
+        title: Vòng đeo tay nhị phân
+      BinaryBracelets_2019:
+        desc: Học sinh tạo ra vòng tay như là một đại diện nhị phân của chữ cái đầu
+          của tên của họ. Học sinh tìm hiểu rằng dữ liệu có thể được đại diện và lưu
+          trữ theo nhiều hơn một cách.
+        title: Vòng đeo tay nhị phân
+      BinaryImages:
+        desc: Mặc dù nhiều người nghĩ rằng số nhị phân như số 0 hoặc số 1 có thực,
+          các khóa học trước đó giảng dạy sinh viên rằng thông tin có thể được biểu
+          diễn trong một loạt các số nhị phân.  Bài học này đưa ra khái niệm tiến
+          xa hơn như cách minh họa làm thế nào một máy tính có thể lưu trữ các thông
+          tin phức tạp hơn (chẳng hạn như hình ảnh và màu sắc) trong hệ nhị phân.
+        title: Hình ảnh Nhị phân
+      BinaryImages_2018:
+        desc: Mặc dù nhiều người nghĩ rằng số nhị phân như số 0 hoặc số 1 có thực,
+          các khóa học trước đó giảng dạy sinh viên rằng thông tin có thể được biểu
+          diễn trong một loạt các số nhị phân.  Bài học này đưa ra khái niệm tiến
+          xa hơn như cách minh họa làm thế nào một máy tính có thể lưu trữ các thông
+          tin phức tạp hơn (chẳng hạn như hình ảnh và màu sắc) trong hệ nhị phân.
+        title: Hình ảnh Nhị phân
+      BinaryImages_2019:
+        desc: Mặc dù nhiều người nghĩ rằng số nhị phân như số 0 hoặc số 1 có thực,
+          các khóa học trước đó giảng dạy sinh viên rằng thông tin có thể được biểu
+          diễn trong một loạt các số nhị phân.  Bài học này đưa ra khái niệm tiến
+          xa hơn như cách minh họa làm thế nào một máy tính có thể lưu trữ các thông
+          tin phức tạp hơn (chẳng hạn như hình ảnh và màu sắc) trong hệ nhị phân.
+        title: Hình ảnh Nhị phân
+      Booleans:
+        desc: Phép toán luận là các loại dữ liệu thứ tư và cuối cùng bạn sẽ học về
+          trong khóa học này. Trong hoạt động này, bạn sẽ tìm hiểu về phép toán luận
+          là gì, và làm thế nào chúng có thể giúp chúng ta viết các chức năng tư duy
+          logic
+        title: Phép toán luận và Logic
+      BuildingAFoundation:
+        desc: Học sinh xây dựng một cấu trúc chỉ sử dụng những nguồn đã được cung
+          cấp. Các cấu trúc phải hoàn thành một nhiệm vụ (đạt được mức độ cao nhất
+          định hoặc chịu được một trọng lượng nhất định), khi mọi thứ trở nên phức
+          tạp học sinh sẽ thảo luận về những ý tưởng liên tục.
+        title: Xây dựng nền tảng
+      BuildingAFoundation_2019:
+        desc: 'bản dịch thiếu: en-US.data.unplugged.BuildingAFoundation_2018.desc'
+        title: 'bản dịch thiếu: en-US.data.unplugged.BuildingAFoundation_2018.title'
+      CollisionDetection:
+        desc: Xác định các đối tượng trên màn hình cảm ứng là một khía cạnh quan trọng
+          của hầu hết các trò chơi. Trong bài học này, chúng ta sẽ xem cách định lý
+          Pythagore và công thức Khoảng cách được sử dụng để đo khoảng cách giữa hai
+          điểm trên mặt phẳng, và tính xem khi nào hai điểm đó (hoặc các nhân vật
+          điện tử) chạm vào nhau.
+        title: Phát hiện sự va chạm và định lý Pythagore
+      ComputationalThinking:
+        desc: Học sinh sử dụng các bước suy nghĩ tính toán (phân tích, tạo mô hình,
+          trừu tượng, thuật toán) để tìm ra cách để chơi một trò chơi không có sự
+          hướng dẫn.
+        title: suy nghĩ máy móc
+      Conditionals:
+        desc: Để tìm hiểu về câu điều kiện, học sinh nên chơi trò đánh bài và tạo
+          ra những luật như "Nếu tôi rút ra một thẻ đỏ, tôi sẽ được 1 điểm" và "Nếu
+          Tôi rút được một thẻ đen, bạn sẽ được một điểm."
+        title: Điều kiện
+      ConditionalsPiecewiseFunctions:
+        desc: Các thông số chúng ta vượt qua để chức năng gây ra kết quả đầu ra thay
+          đổi dựa trên một mô hình rất cứng nhắc. Giả sử chúng ta muốn các tham số
+          với một số giá trị để tạo ra kết quả đầu ra bằng cách sử dụng một mô hình
+          nhưng các giá trị khác lại sử dụng một mô hình khác. Đó là các điều kiện
+          cần thiết...
+        title: Hàm điều kiện và Hàm biến đổi quy luật theo khoảng
+      Conditionals_2018:
+        desc: Để tìm hiểu về câu điều kiện, học sinh nên chơi trò đánh bài và tạo
+          ra những luật như "Nếu tôi rút ra một thẻ đỏ, tôi sẽ được 1 điểm" và "Nếu
+          Tôi rút được một thẻ đen, bạn sẽ được một điểm."
+        title: Điều kiện
+      Conditionals_2019:
+        desc: Để tìm hiểu về câu điều kiện, học sinh nên chơi trò đánh bài và tạo
+          ra những luật như "Nếu tôi rút ra một thẻ đỏ, tôi sẽ được 1 điểm" và "Nếu
+          Tôi rút được một thẻ đen, bạn sẽ được một điểm."
+        title: Điều kiện
+      Contracts:
+        desc: Giao ước cung cấp cho chúng tôi một cách để hiểu và thảo luận về chức
+          năng. Trong bài học này, chúng tôi sẽ xem xét làm thế nào để giáo ước có
+          ý nghĩa trong ngôn ngữ lập trình mới và chức năng (quy trình)
+        title: Giao ước, Miền và Khoảng
+      Crowdsourcing:
+        desc: Học sinh sử dụng đa nguồn, kỹ thuật giải quyết vấn đề phổ biến trong
+          khoa học máy tính, để hoàn thành một nhiệm vụ với nhau như một lớp học hiệu
+          quả hơn hơn cố làm nó một mình.
+        title: Đa nguồn
+      Crowdsourcing_2019:
+        desc: 'bản dịch thiếu: en-US.data.unplugged.Crowdsourcing_2018.desc'
+        title: 'bản dịch thiếu: en-US.data.unplugged.Crowdsourcing_2018.title'
+      DesignRecipe:
+        desc: Trong giai đoạn cuối, sinh viên đã viết một số chức năng rất đơn giản
+          - nhưng chức năng phức tạp hơn yêu cầu một cách tiếp cận thêm chu đáo. Các
+          công thức thiết kế là một cách tiếp cận có cấu trúc để viết các chức năng
+          bao gồm viết trường hợp kiểm tra để đảm bảo rằng các chức năng hoạt động
+          như mong đợi cuối cùng.
+        title: Công thức thiết kế
+      DiceRace:
+        desc: Bài học này chỉ ra cách chúng tôi sử dụng thuật toán trong cuộc sống
+          hàng ngày. Là một phần trong đó, học sinh sẽ nhận biết và viết các thuật
+          toán cho một trò chơi xúc xắc.
+        title: 'Thuật toán trong thực tế: Chơi xúc sắc'
+      DigitalCitizenship:
+        desc: Sinh viên khám phá sự khác biệt giữa thông tin cá nhân và thông tin
+          riêng tư, để phân biệt những gì là an toàn và không an toàn khi chia sẻ
+          trực tuyến.
+        title: Công dân số
+      DigitalFootprint:
+        desc: Giáo viên giới thiệu cho sinh viên việc đưa thông tin cá  nhân lên mạng
+          sẽ tạo ra dấu chân hoặc "vệt dài" có hậu quả.
+        title: Dấu chân kỹ thuật số
+      DigitalFootprint_2018:
+        desc: Giáo viên giới thiệu cho sinh viên việc đưa thông tin cá  nhân lên mạng
+          sẽ tạo ra dấu chân hoặc "vệt dài" có hậu quả.
+        title: Dấu chân kỹ thuật số
+      DigitalFootprint_2019:
+        desc: Giáo viên giới thiệu cho sinh viên việc đưa thông tin cá  nhân lên mạng
+          sẽ tạo ra dấu chân hoặc "vệt dài" có hậu quả.
+        title: Dấu chân kỹ thuật số
+      EnvelopeVariables:
+        desc: Biến số kể đến rất nhiều đặc quyền trong khoa học máy tính.  Bài học
+          này sẽ giúp giải thích biến là gì và làm thế nào chúng ta có thể sử dụng
+          chúng trong nhiều cách khác nhau. Sử dụng hoạt động này trước (hoặc kết
+          hợp với) bài học về trừu tượng để thực sự hiểu ý tưởng.
+        title: Các biến phong bì
+      EnvelopeVariables_2019:
+        desc: 'bản dịch thiếu: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+        title: 'bản dịch thiếu: en-US.data.unplugged.EnvelopeVariables_2018.title'
+      ForLoopFun:
+        desc: Chúng ta biết rằng vòng lặp cho phép chúng ta làm đi làm lại sự việc,
+          nhưng bây giờ chúng ta sẽ tìm hiểu cách sử dụng vòng lặp với cấu trúc phụ
+          được xây dựng ngay bên trong.
+        title: Cho vòng lặp vui vẻ
+      ForLoopFun_2019:
+        desc: 'bản dịch thiếu: en-US.data.unplugged.ForLoopFun_2018.desc'
+        title: 'bản dịch thiếu: en-US.data.unplugged.ForLoopFun_2018.title'
+      FunctionalSuncatchers:
+        desc: Học sinh tạo ra một thuật toán với biến số và chức năng (các phần của
+          mã hóa mà bạn dùng đi dùng lại) để tạo ra các suncatcher bằng cách sử dụng
+          chuỗi và hạt.
+        title: Chức năng của tấm hứng ánh nắng
+      GettingLoopy:
+        desc: Bài này giới thiệu về khái niệm lập trình vòng lặp (các hướng dẫn lặp
+          lại) qua hoạt động nhảy. Học sinh sẽ tìm hiểu về biên đạo múa cơ bản sau
+          đó sẽ được hướng dẫn để lặp lại.
+        title: Tạo vòng lặp
+      GettingLoopy_2018:
+        desc: Bài này giới thiệu về khái niệm lập trình vòng lặp (các hướng dẫn lặp
+          lại) qua hoạt động nhảy. Học sinh sẽ tìm hiểu về biên đạo múa cơ bản sau
+          đó sẽ được hướng dẫn để lặp lại.
+        title: Tạo vòng lặp
+      GettingLoopy_2019:
+        desc: Bài này giới thiệu về khái niệm lập trình vòng lặp (các hướng dẫn lặp
+          lại) qua hoạt động nhảy. Học sinh sẽ tìm hiểu về biên đạo múa cơ bản sau
+          đó sẽ được hướng dẫn để lặp lại.
+        title: Tạo vòng lặp
+      GoingPlacesSafely:
+        desc: Internet là một nơi có uy lực rất lớn, nhưng đồng thời cũng là một nơi
+          nguy hiểm. Giáo viên nên hướng dẫn các em làm sao để được an toàn khi lướt
+          web.
+        title: Đến nơi an toàn
+      GoingPlacesSafely_2018:
+        desc: Internet là một nơi có uy lực rất lớn, nhưng đồng thời cũng là một nơi
+          nguy hiểm. Giáo viên nên hướng dẫn các em làm sao để được an toàn khi lướt
+          web.
+        title: Đến nơi an toàn
+      GoingPlacesSafely_2019:
+        desc: Internet là một nơi có uy lực rất lớn, nhưng đồng thời cũng là một nơi
+          nguy hiểm. Giáo viên nên hướng dẫn các em làm sao để được an toàn khi lướt
+          web.
+        title: Đến nơi an toàn
+      GraphPaperProgramming:
+        desc: Học sinh viết một thuật toán (một tập hợp các hướng dẫn) bằng cách sử
+          dụng tập hợp các lệnh đã được định nghĩa sẵn để chỉ dẫn các bạn cùng lớp
+          tái hiện một bản vẽ.
+        title: lập trình đồ thị trên giấy
+      GraphPaperProgramming_2018:
+        desc: Học sinh viết một thuật toán (một tập hợp các hướng dẫn) bằng cách sử
+          dụng tập hợp các lệnh đã được định nghĩa sẵn để chỉ dẫn các bạn cùng lớp
+          tái hiện một bản vẽ.
+        title: lập trình đồ thị trên giấy
+      GraphPaperProgramming_2019:
+        desc: Học sinh viết một thuật toán (một tập hợp các hướng dẫn) bằng cách sử
+          dụng tập hợp các lệnh đã được định nghĩa sẵn để chỉ dẫn các bạn cùng lớp
+          tái hiện một bản vẽ.
+        title: lập trình đồ thị trên giấy
+      GraphingData_2019:
+        desc: Trong bài học này, học sinh sẽ thu thập dữ liệu từ một dự án Play Lab
+          hoặc tình huống thực tiễn và sử dụng dữ liệu đó để dự đoán.
+        title: Dữ liệu ảnh
+      Internet:
+        desc: Sinh viên gửi thư đại diện tới các phương pháp truyền thông bằng các
+          bưu thiếp .
+        title: internet
+      Internet_2019:
+        desc: 'bản dịch thiếu: en-US.data.unplugged.Internet_2018.desc'
+        title: 'bản dịch thiếu: en-US.data.unplugged.Internet_2018.title'
+      MadGlibs:
+        desc: Sự trừu tượng là một trong những kỹ năng quan trọng nhất của một nhà
+          khoa học máy tính.  Hoạt động này cho phép học sinh phân tích các câu chuyện
+          theo nhiều hướng để có thể trừu tượng hóa. Những câu chuyện trừu tượng sẽ
+          thành mẫu chuyện mới vui vẻ và điên khùng.
+        title: Sự say mê dịu dàng
+      MoveIt:
+        desc: Học sinh tạo ra những thuật toán cơ bản (một chuỗi hướng dẫn) để di
+          chuyển nhân vật qua mê cung bằng cách sử dụng từng lệnh.
+        title: Di chuyển liên tục
+      MoveItMoveIt_2018:
+        title: Di chuyển nó, di chuyển nó
+      MoveItMoveIt_2019:
+        title: Di chuyển nó, di chuyển nó
+      PaperPlanes:
+        desc: Bài học này chỉ ra cách chúng ta sử dụng các thuật toán trong cuộc sống
+          hàng ngày, như cách gấp máy bay giấy. Đồng thời tập trung vào hình ảnh lớn
+          của khoa học máy tính và cách các thuật toán đóng một phần quan trọng.
+        title: 'Thuật toán trong đời sống: Máy bay giấy'
+      PaperPlanes_2018:
+        desc: Bài học này chỉ ra cách chúng ta sử dụng các thuật toán trong cuộc sống
+          hàng ngày, như cách gấp máy bay giấy. Đồng thời tập trung vào hình ảnh lớn
+          của khoa học máy tính và cách các thuật toán đóng một phần quan trọng.
+        title: 'Thuật toán trong đời sống: Máy bay giấy'
+      PaperPlanes_2019:
+        desc: Bài học này chỉ ra cách chúng ta sử dụng các thuật toán trong cuộc sống
+          hàng ngày, như cách gấp máy bay giấy. Đồng thời tập trung vào hình ảnh lớn
+          của khoa học máy tính và cách các thuật toán đóng một phần quan trọng.
+        title: 'Thuật toán trong đời sống: Máy bay giấy'
+      PlantASeed:
+        desc: Bài học này nêu lên cách chúng ta sử dụng thuật toán trong cuộc sống
+          hàng ngày, lấy ví dụ là hoạt động gieo hạt. Nó cũng tập trung vào bức tranh
+          lớn của khoa học máy tính và làm thế nào để các thuật toán đóng một vai
+          trò thiết yếu.
+        title: 'Thuật toán đời sống: Trồng một hạt giống'
+      PlantASeed_2018:
+        desc: Bài học này nêu lên cách chúng ta sử dụng thuật toán trong cuộc sống
+          hàng ngày, lấy ví dụ là hoạt động gieo hạt. Nó cũng tập trung vào bức tranh
+          lớn của khoa học máy tính và làm thế nào để các thuật toán đóng một vai
+          trò thiết yếu.
+        title: 'Thuật toán đời sống: Trồng một hạt giống'
+      PlantASeed_2019:
+        desc: Bài học này nêu lên cách chúng ta sử dụng thuật toán trong cuộc sống
+          hàng ngày, lấy ví dụ là hoạt động gieo hạt. Nó cũng tập trung vào bức tranh
+          lớn của khoa học máy tính và làm thế nào để các thuật toán đóng một vai
+          trò thiết yếu.
+        title: 'Thuật toán đời sống: Trồng một hạt giống'
+      RelayProgramming:
+        desc: Học sinh tham gia chạy tiếp sức, nơi các em sẽ lao qua sân để viết một
+          thuật toán dựa trên hình ảnh "Lập Trình Giấy Vẽ Sơ Đồ". Các em chỉ có thể
+          viết  từng hướng dẫn một và nếu có lỗi sai ở đâu đó, các em phải xóa hết
+          đi và quay lại từ đầu từ điểm đó.
+        title: Chương trình chuyển tiếp
+      RelayProgramming_2018:
+        desc: Hoạt động này sẽ bắt đầu bằng bài học ngắn sửa lỗi và sự kiên nhẫn,
+          sau đó sẽ nhanh chóng chuyển sang phần bài tập tính giờ, trong đó học sinh
+          chia thành các đội và cùng nhau viết một chương trình tại một thời điểm.
+        title: Chương trình chuyển tiếp
+      RelayProgramming_2018_2019:
+        desc: Hoạt động này sẽ bắt đầu bằng bài học ngắn sửa lỗi và sự kiên nhẫn,
+          sau đó sẽ nhanh chóng chuyển sang phần bài tập tính giờ, trong đó học sinh
+          chia thành các đội và cùng nhau viết một chương trình tại một thời điểm.
+        title: Chương trình chuyển tiếp
+      SongwritingParameters:
+        desc: Học sinh sử dụng các khái niệm về đoạn điệp khúc trong một bài hát để
+          tìm hiểu về gửi tham số (tham số có thể tùy chỉnh mà không cần phải viết
+          lại toàn bộ biến chức năng).
+        title: Sáng tác với tham số
+      SongwritingParameters_2019:
+        desc: 'bản dịch thiếu: en-US.data.unplugged.SongwritingParameters_2018.desc'
+        title: 'bản dịch thiếu: en-US.data.unplugged.SongwritingParameters_2018.title'
+      SongwritingWithParameters:
+        desc: 'Một trong các cấu trúc tuyệt vời nhất trong thế giới khoa học máy tính
+          là chức năng.  Chức năng (đôi khi được gọi là quy trình) là các chương trình
+          nhỏ mà bạn có thể sử dụng lặp đi lặp lại bên trong của chương trình lớn
+          hơn. Bài học này sẽ giúp trực giác của sinh viên hiểu tại sao kết hợp các
+          khối mã hóa thành các chức năng là rất hữu ích trong thực tế.  '
+        title: Sáng tác nhạc với tham số
+      TangramAlgorithms:
+        desc: Bài học này cho chúng ta thấy một điều quan trọng về thuật toán. Nếu
+          bạn giữ một thuật toán đơn giản có rất nhiều cách để sử dụng nó. Nếu bạn
+          muốn chắc chắn rằng tất cả mọi người có cùng kết quả, thuật toán của bạn
+          cần viết rất chi tiết.
+        title: Thuật toán Tangram
       Unplug1:
-        title: Giới thiệu về khoa học máy tính
         desc: Bài học này sẽ giới thiệu cho các bạn khái niệm về Khoa Học Máy Tính
           và giải thích công việc của nhà khoa học máy tính là gì. Đó là một cơ hội
           cho học sinh-sinh viên xem xét về vai trò của một nhà khoa học máy tính.
@@ -11,8 +317,18 @@ vi:
           Bạn có thể bỏ qua dạy trẻ những từ mới liên quan đến bài sau, nhưng diễn
           đạt chúng theo cách sinh động và thú vị sẽ có hiệu quả hơn là việc chờ những
           cơ hội phía trước.
+        title: Giới thiệu về khoa học máy tính
+      Unplug10:
+        desc: Trong bài học này, các em sẽ tưởng tượng lướt web, đồng thời tìm hiểu
+          về địa chỉ web, IP và DNS.
+        title: Internet
+      Unplug11:
+        desc: Bước tổng hợp cuối cùng trong loạt 20 giờ đầu tiên sẽ giúp lớp học tái
+          hiện lại những khoảnh khắc yêu thích của họ, hướng dẫn các em rằng bước
+          tiếp theo các em có thể tự mình thực hiện nếu các em học sinh thực sự có
+          hứng thú với khoa học máy tính.
+        title: Tổng hợp
       Unplug2:
-        title: suy nghĩ máy móc
         desc: Chỉ cần giấy và bút, học sinh sẽ được học 4 bước giải quyết vấn đề sử
           dụng kĩ thuật vi tính. Sau lời giới thiệu ngắn gọn, học sinh sẽ được chia
           ra thành nhiều nhóm, các em sẽ phải tạo ra những hướng dẫn cho những học
@@ -23,22 +339,22 @@ vi:
           để tạo ra một con quái vật nào đó. Các đội sẽ chuyển đổi thuật toán với
           một nhóm khác và tạo ra một con quái vật dựa trên những gì thuật toán hướng
           dẫn. Đây có phải là bản vẽ mà ban đầu đội đã dự định?
+        title: suy nghĩ máy móc
       Unplug3:
-        title: lập trình đồ thị trên giấy
         desc: Bằng cách lập trình vẽ những bức tranh, học sinh có thể hiểu thực sự
           lập trình là gì. Lớp học bắt đầu bằng việc các em hướng dẫn nhau cách tô
           màu những ô vuông trên bản vẽ, nỗ lực để vẽ lại một hình ảnh sẵn có. Nếu
           có thời gian, bài học có thể kết thúc với những hình ảnh mà các em đã tự
           vẽ ra.
+        title: lập trình đồ thị trên giấy
       Unplug4:
-        title: các bước lập trình
         desc: Bài này bao gồm những thuật toán. Sử dụng hình ảnh tangram và giấy vẽ
           sơ đồ, bài tập đầu tiên sẽ chỉ ra mức độ quan trọng của việc tạo ra mỗi
           hướng dẫn sao cho rõ ràng nhất có thể. Sau đó, lớp sẽ khám phá ra nhiều
           cách để gấp tờ giấy thành hình chữ nhật, chú ý một vài cách có thể cần nhiều
           hoặc ít nếp gấp hơn những cái khác.
+        title: các bước lập trình
       Unplug5:
-        title: Các hàm
         desc: Trong bài học này, học sinh sẽ làm một cái vợt mặt trời (suncatcher)
           từ những sợi dây, hạt và một thứ xinh xắn đặc biệt. Các em sẽ làm theo một
           loạt những bước lặp đi lặp lại, sau đó được yêu cầu xác định một số kĩ năng
@@ -49,591 +365,275 @@ vi:
           sẽ cần phải tóm tắt ra chi tiết những tài liệu cụ thể của họ và tạo ra những
           thuật ngữ mơ hồ cho nguồn cung cấp của một cá nhân. Sử dụng những điểm chung
           này là một sự giới thiệu biến số tuyệt vời.
+        title: Các hàm
       Unplug6:
-        title: Điều kiện
         desc: Đây là trò chơi trong lớp. Sau khi giới thiệu ý tưởng về các điều kiện,
           câu lệnh if, và vòng lặp, cả lớp có thể luyện tập cùng nhau sử dụng một
           chương trình viết trước, một cỗ bài, và vẽ vận may.
+        title: Điều kiện
       Unplug7:
-        title: Viết nhạc
         desc: Đọc lời bài hát là một việc làm theo cảm tính hết sức mạo hiểm. Chúng
           tôi sẽ thực hiện một hành động mà nó đã là kiến thức phổ biến và thay đổi
           thành một nền giáo dục vững chắc đang được xác định và đang hoạt động. Một
           khi các em quen thuộc với quá trình xác định/cuộc gọi, chúng tôi sẽ thêm
           khả năng phụ cùng với những tham số trong những cuộc gọi chức năng đó.
+        title: Viết nhạc
       Unplug8:
-        title: Trừu tượng
         desc: Hoạt động này kết hợp với những thói quen hàng ngày của các bạn học
           sinh và phong cách tư duy trò chơi Mad-Lib sẽ giúp lớp của bạn học hiệu
           quả hơn những khái niệm trừu tượng.
+        title: Trừu tượng
       Unplug9:
-        title: Chương trình chuyển tiếp
         desc: Bài học này sẽ thực hiện một ý tưởng từ một hoạt động trước đó (4. Lập
           trình giấy vẽ sơ đồ) và sử dụng những kĩ năng đó để nhấn mạnh sự quan trọng
           của việc hoàn thành những chương trình hoạt động theo thứ tự và thường xuyên
           kiểm tra lỗi của chương trình.
-      Unplug10:
-        title: Internet
-        desc: Trong bài học này, các em sẽ tưởng tượng lướt web, đồng thời tìm hiểu
-          về địa chỉ web, IP và DNS.
-      Unplug11:
-        title: Tổng hợp
-        desc: Bước tổng hợp cuối cùng trong loạt 20 giờ đầu tiên sẽ giúp lớp học tái
-          hiện lại những khoảnh khắc yêu thích của họ, hướng dẫn các em rằng bước
-          tiếp theo các em có thể tự mình thực hiện nếu các em học sinh thực sự có
-          hứng thú với khoa học máy tính.
-      UnplugHappyMaps:
-        title: Bản đồ thú vị
-        desc: Học sinh tạo ra những thuật toán cơ bản (một chuỗi hướng dẫn) để di
-          chuyển nhân vật qua mê cung bằng cách sử dụng từng lệnh.
-      MoveIt:
-        title: Di chuyển liên tục
-        desc: Học sinh tạo ra những thuật toán cơ bản (một chuỗi hướng dẫn) để di
-          chuyển nhân vật qua mê cung bằng cách sử dụng từng lệnh.
-      PlantASeed:
-        title: 'Thuật toán đời sống: Trồng một hạt giống'
-        desc: Bài học này nêu lên cách chúng ta sử dụng thuật toán trong cuộc sống
-          hàng ngày, lấy ví dụ là hoạt động gieo hạt. Nó cũng tập trung vào bức tranh
-          lớn của khoa học máy tính và làm thế nào để các thuật toán đóng một vai
-          trò thiết yếu.
-      BuildingAFoundation:
-        title: Xây dựng nền tảng
-        desc: Học sinh xây dựng một cấu trúc chỉ sử dụng những nguồn đã được cung
-          cấp. Các cấu trúc phải hoàn thành một nhiệm vụ (đạt được mức độ cao nhất
-          định hoặc chịu được một trọng lượng nhất định), khi mọi thứ trở nên phức
-          tạp học sinh sẽ thảo luận về những ý tưởng liên tục.
-      GettingLoopy:
-        title: Tạo vòng lặp
-        desc: Bài này giới thiệu về khái niệm lập trình vòng lặp (các hướng dẫn lặp
-          lại) qua hoạt động nhảy. Học sinh sẽ tìm hiểu về biên đạo múa cơ bản sau
-          đó sẽ được hướng dẫn để lặp lại.
-      RelayProgramming:
         title: Chương trình chuyển tiếp
-        desc: Học sinh tham gia chạy tiếp sức, nơi các em sẽ lao qua sân để viết một
-          thuật toán dựa trên hình ảnh "Lập Trình Giấy Vẽ Sơ Đồ". Các em chỉ có thể
-          viết  từng hướng dẫn một và nếu có lỗi sai ở đâu đó, các em phải xóa hết
-          đi và quay lại từ đầu từ điểm đó.
-      Conditionals:
-        title: Điều kiện
-        desc: Để tìm hiểu về câu điều kiện, học sinh nên chơi trò đánh bài và tạo
-          ra những luật như "Nếu tôi rút ra một thẻ đỏ, tôi sẽ được 1 điểm" và "Nếu
-          Tôi rút được một thẻ đen, bạn sẽ được một điểm."
-      BigEvent:
-        title: Sự kiện lớn
-        desc: Các bạn học sinh sẽ được giới thiệu về khái niệm lập trình "sự kiện",
-          đó là những hoạt động máy tính liên tục theo dõi. Giáo viên sẽ bấm nút trên
-          tờ giấy điều khiển từ xa và học sinh sẽ phản ứng tùy thuộc vào nút được
-          nhấn.
-      GoingPlacesSafely:
-        title: Đến nơi an toàn
-        desc: Internet là một nơi có uy lực rất lớn, nhưng đồng thời cũng là một nơi
-          nguy hiểm. Giáo viên nên hướng dẫn các em làm sao để được an toàn khi lướt
-          web.
-      GraphPaperProgramming:
-        title: lập trình đồ thị trên giấy
-        desc: Học sinh viết một thuật toán (một tập hợp các hướng dẫn) bằng cách sử
-          dụng tập hợp các lệnh đã được định nghĩa sẵn để chỉ dẫn các bạn cùng lớp
-          tái hiện một bản vẽ.
-      PaperPlanes:
-        title: 'Thuật toán trong đời sống: Máy bay giấy'
-        desc: Bài học này chỉ ra cách chúng ta sử dụng các thuật toán trong cuộc sống
-          hàng ngày, như cách gấp máy bay giấy. Đồng thời tập trung vào hình ảnh lớn
-          của khoa học máy tính và cách các thuật toán đóng một phần quan trọng.
-      BinaryBracelets:
-        title: Vòng đeo tay nhị phân
-        desc: Học sinh tạo ra vòng tay như là một đại diện nhị phân của chữ cái đầu
-          của tên của họ. Học sinh tìm hiểu rằng dữ liệu có thể được đại diện và lưu
-          trữ theo nhiều hơn một cách.
-      DigitalFootprint:
-        title: Dấu chân kỹ thuật số
-        desc: Giáo viên giới thiệu cho sinh viên việc đưa thông tin cá  nhân lên mạng
-          sẽ tạo ra dấu chân hoặc "vệt dài" có hậu quả.
-      ComputationalThinking:
-        title: suy nghĩ máy móc
-        desc: Học sinh sử dụng các bước suy nghĩ tính toán (phân tích, tạo mô hình,
-          trừu tượng, thuật toán) để tìm ra cách để chơi một trò chơi không có sự
-          hướng dẫn.
-      FunctionalSuncatchers:
-        title: Chức năng của tấm hứng ánh nắng
-        desc: Học sinh tạo ra một thuật toán với biến số và chức năng (các phần của
-          mã hóa mà bạn dùng đi dùng lại) để tạo ra các suncatcher bằng cách sử dụng
-          chuỗi và hạt.
-      SongwritingParameters:
-        title: Sáng tác với tham số
-        desc: Học sinh sử dụng các khái niệm về đoạn điệp khúc trong một bài hát để
-          tìm hiểu về gửi tham số (tham số có thể tùy chỉnh mà không cần phải viết
-          lại toàn bộ biến chức năng).
-      DiceRace:
-        title: 'Thuật toán trong thực tế: Chơi xúc sắc'
-        desc: Bài học này chỉ ra cách chúng tôi sử dụng thuật toán trong cuộc sống
-          hàng ngày. Là một phần trong đó, học sinh sẽ nhận biết và viết các thuật
-          toán cho một trò chơi xúc xắc.
-      Internet:
-        title: internet
-        desc: Sinh viên gửi thư đại diện tới các phương pháp truyền thông bằng các
-          bưu thiếp .
-      Crowdsourcing:
-        title: Đa nguồn
-        desc: Học sinh sử dụng đa nguồn, kỹ thuật giải quyết vấn đề phổ biến trong
-          khoa học máy tính, để hoàn thành một nhiệm vụ với nhau như một lớp học hiệu
-          quả hơn hơn cố làm nó một mình.
-      DigitalCitizenship:
-        title: Công dân số
-        desc: Sinh viên khám phá sự khác biệt giữa thông tin cá nhân và thông tin
-          riêng tư, để phân biệt những gì là an toàn và không an toàn khi chia sẻ
-          trực tuyến.
-      TangramAlgorithms:
-        title: Thuật toán Tangram
-        desc: Bài học này cho chúng ta thấy một điều quan trọng về thuật toán. Nếu
-          bạn giữ một thuật toán đơn giản có rất nhiều cách để sử dụng nó. Nếu bạn
-          muốn chắc chắn rằng tất cả mọi người có cùng kết quả, thuật toán của bạn
-          cần viết rất chi tiết.
-      EnvelopeVariables:
-        title: Các biến phong bì
-        desc: Biến số kể đến rất nhiều đặc quyền trong khoa học máy tính.  Bài học
-          này sẽ giúp giải thích biến là gì và làm thế nào chúng ta có thể sử dụng
-          chúng trong nhiều cách khác nhau. Sử dụng hoạt động này trước (hoặc kết
-          hợp với) bài học về trừu tượng để thực sự hiểu ý tưởng.
-      MadGlibs:
-        title: Sự say mê dịu dàng
-        desc: Sự trừu tượng là một trong những kỹ năng quan trọng nhất của một nhà
-          khoa học máy tính.  Hoạt động này cho phép học sinh phân tích các câu chuyện
-          theo nhiều hướng để có thể trừu tượng hóa. Những câu chuyện trừu tượng sẽ
-          thành mẫu chuyện mới vui vẻ và điên khùng.
-      ForLoopFun:
-        title: Cho vòng lặp vui vẻ
-        desc: Chúng ta biết rằng vòng lặp cho phép chúng ta làm đi làm lại sự việc,
-          nhưng bây giờ chúng ta sẽ tìm hiểu cách sử dụng vòng lặp với cấu trúc phụ
-          được xây dựng ngay bên trong.
-      SongwritingWithParameters:
-        title: Sáng tác nhạc với tham số
-        desc: 'Một trong các cấu trúc tuyệt vời nhất trong thế giới khoa học máy tính
-          là chức năng.  Chức năng (đôi khi được gọi là quy trình) là các chương trình
-          nhỏ mà bạn có thể sử dụng lặp đi lặp lại bên trong của chương trình lớn
-          hơn. Bài học này sẽ giúp trực giác của sinh viên hiểu tại sao kết hợp các
-          khối mã hóa thành các chức năng là rất hữu ích trong thực tế.  '
-      BinaryImages:
-        title: Hình ảnh Nhị phân
-        desc: Mặc dù nhiều người nghĩ rằng số nhị phân như số 0 hoặc số 1 có thực,
-          các khóa học trước đó giảng dạy sinh viên rằng thông tin có thể được biểu
-          diễn trong một loạt các số nhị phân.  Bài học này đưa ra khái niệm tiến
-          xa hơn như cách minh họa làm thế nào một máy tính có thể lưu trữ các thông
-          tin phức tạp hơn (chẳng hạn như hình ảnh và màu sắc) trong hệ nhị phân.
+      UnplugHappyMaps:
+        desc: Học sinh tạo ra những thuật toán cơ bản (một chuỗi hướng dẫn) để di
+          chuyển nhân vật qua mê cung bằng cách sử dụng từng lệnh.
+        title: Bản đồ thú vị
+      UnplugHappyMaps_2018:
+        desc: Học sinh tạo ra những thuật toán cơ bản (một chuỗi hướng dẫn) để di
+          chuyển nhân vật qua mê cung bằng cách sử dụng từng lệnh.
+        title: Bản đồ thú vị
+      UnplugHappyMaps_2019:
+        desc: Học sinh tạo ra những thuật toán cơ bản (một chuỗi hướng dẫn) để di
+          chuyển nhân vật qua mê cung bằng cách sử dụng từng lệnh.
+        title: Bản đồ thú vị
       VideoGamesCoordinatePlanes:
-        title: Trò chơi điện tử và mặt phẳng tọa độ
         desc: Phát hiện cách mà các trò chơi video bạn yêu thích thực sự được điều
           khiển bởi số học! Thăm dò cách thể hiện số học và mặt phẳng tọa độ có thể
           giúp chúng ta hiểu cách trò chơi điện tử làm việc và sau đó bắt đầu lập
           kế hoạch tạo ra trò chơi của bạn.
-      Contracts:
-        title: Giao ước, Miền và Khoảng
-        desc: Giao ước cung cấp cho chúng tôi một cách để hiểu và thảo luận về chức
-          năng. Trong bài học này, chúng tôi sẽ xem xét làm thế nào để giáo ước có
-          ý nghĩa trong ngôn ngữ lập trình mới và chức năng (quy trình)
-      DesignRecipe:
-        title: Công thức thiết kế
-        desc: Trong giai đoạn cuối, sinh viên đã viết một số chức năng rất đơn giản
-          - nhưng chức năng phức tạp hơn yêu cầu một cách tiếp cận thêm chu đáo. Các
-          công thức thiết kế là một cách tiếp cận có cấu trúc để viết các chức năng
-          bao gồm viết trường hợp kiểm tra để đảm bảo rằng các chức năng hoạt động
-          như mong đợi cuối cùng.
-      Booleans:
-        title: Phép toán luận và Logic
-        desc: Phép toán luận là các loại dữ liệu thứ tư và cuối cùng bạn sẽ học về
-          trong khóa học này. Trong hoạt động này, bạn sẽ tìm hiểu về phép toán luận
-          là gì, và làm thế nào chúng có thể giúp chúng ta viết các chức năng tư duy
-          logic
-      ConditionalsPiecewiseFunctions:
-        title: Hàm điều kiện và Hàm biến đổi quy luật theo khoảng
-        desc: Các thông số chúng ta vượt qua để chức năng gây ra kết quả đầu ra thay
-          đổi dựa trên một mô hình rất cứng nhắc. Giả sử chúng ta muốn các tham số
-          với một số giá trị để tạo ra kết quả đầu ra bằng cách sử dụng một mô hình
-          nhưng các giá trị khác lại sử dụng một mô hình khác. Đó là các điều kiện
-          cần thiết...
-      CollisionDetection:
-        title: Phát hiện sự va chạm và định lý Pythagore
-        desc: Xác định các đối tượng trên màn hình cảm ứng là một khía cạnh quan trọng
-          của hầu hết các trò chơi. Trong bài học này, chúng ta sẽ xem cách định lý
-          Pythagore và công thức Khoảng cách được sử dụng để đo khoảng cách giữa hai
-          điểm trên mặt phẳng, và tính xem khi nào hai điểm đó (hoặc các nhân vật
-          điện tử) chạm vào nhau.
-      courseA_unplugged_loops:
-        title: Vòng lặp không dùng thiết bị điện tử
-        desc: Trong bài học này, bạn sẽ học về vòng lặp!
-      courseB_unplugged_MRF:
-        title: Hoạt động không dùng máy
-        desc: Trong bài học này, bạn sẽ 'lập trình' bạn bè của bạn!
-      courseB_unplugged_loopyMRF:
-        title: Hoạt động không dùng máy
-        desc: Giống như trong "Người bạn robot của tôi", bạn sẽ "lập trình" bạn bè
-          của bạn, nhưng lần này là với vòng lặp!
-      courseC_Unplugged_ScreenOutTheMean:
-        title: Hoạt động không dùng máy
-        desc: Hôm nay bạn sẽ tìm hiểu về những gì phải làm nếu một người nào đó được
-          ám chỉ là đang online.
-      courseD_unplugged_digitalCitizenship:
-        title: Hoạt động không dùng máy
-        desc: Hôm nay bạn sẽ tìm hiểu một công dân số là thế nào.
-      courseE_unplugged_privateInformation:
-        title: 'Giáo dục ý thức phổ biến: Thông tin riêng tư và cá nhân '
-        desc: Hôm nay bạn sẽ tìm hiểu sự khác biệt giữa thông tin riêng tư và cá nhân!
-      courseF_unplugged_powerOfWords:
-        title: Hoạt động không dùng máy
-        desc: Hôm nay bạn sẽ tìm hiểu về những gì phải làm nếu một người nào đó được
-          ám chỉ là đang online.
-      deeper learning description:
-        desc: 'bản dịch thiếu: en-US.data.unplugged.desc'
-      courseAB_unplugged_plantASeed:
-        title: 'Thuật toán đời sống: Trồng một hạt giống'
-        desc: Bài học này nêu lên cách chúng ta sử dụng thuật toán trong cuộc sống
-          hàng ngày, lấy ví dụ là hoạt động gieo hạt. Nó cũng tập trung vào bức tranh
-          lớn của khoa học máy tính và làm thế nào để các thuật toán đóng một vai
-          trò thiết yếu.
-      courseA_unplugged_happyMaps:
-        title: Bản đồ thú vị
-        desc: Học sinh tạo ra những thuật toán cơ bản (một chuỗi hướng dẫn) để di
-          chuyển nhân vật qua mê cung bằng cách sử dụng từng lệnh.
-      courseA_unplugged_goingPlacesSafely:
-        title: Đến nơi an toàn
-        desc: Internet là một nơi có uy lực rất lớn, nhưng đồng thời cũng là một nơi
-          nguy hiểm. Giáo viên nên hướng dẫn các em làm sao để được an toàn khi lướt
-          web.
+        title: Trò chơi điện tử và mặt phẳng tọa độ
       courseABC_unplugged_bigEvent:
-        title: Sự kiện lớn
         desc: Các bạn học sinh sẽ được giới thiệu về khái niệm lập trình "sự kiện",
           đó là những hoạt động máy tính liên tục theo dõi. Giáo viên sẽ bấm nút trên
           tờ giấy điều khiển từ xa và học sinh sẽ phản ứng tùy thuộc vào nút được
           nhấn.
+        title: Sự kiện lớn
+      courseAB_unplugged_plantASeed:
+        desc: Bài học này nêu lên cách chúng ta sử dụng thuật toán trong cuộc sống
+          hàng ngày, lấy ví dụ là hoạt động gieo hạt. Nó cũng tập trung vào bức tranh
+          lớn của khoa học máy tính và làm thế nào để các thuật toán đóng một vai
+          trò thiết yếu.
+        title: 'Thuật toán đời sống: Trồng một hạt giống'
+      courseA_unplugged_goingPlacesSafely:
+        desc: Internet là một nơi có uy lực rất lớn, nhưng đồng thời cũng là một nơi
+          nguy hiểm. Giáo viên nên hướng dẫn các em làm sao để được an toàn khi lướt
+          web.
+        title: Đến nơi an toàn
+      courseA_unplugged_happyMaps:
+        desc: Học sinh tạo ra những thuật toán cơ bản (một chuỗi hướng dẫn) để di
+          chuyển nhân vật qua mê cung bằng cách sử dụng từng lệnh.
+        title: Bản đồ thú vị
+      courseA_unplugged_loops:
+        desc: Trong bài học này, bạn sẽ học về vòng lặp!
+        title: Vòng lặp không dùng thiết bị điện tử
+      courseA_unplugged_loops_2018:
+        desc: Trong bài học này, bạn sẽ học về vòng lặp!
+        title: Vòng lặp không dùng thiết bị điện tử
+      courseA_unplugged_loops_2019:
+        desc: Trong bài học này, bạn sẽ học về vòng lặp!
+        title: Vòng lặp không dùng thiết bị điện tử
+      courseB_unplugged_CnC_2018:
+        desc: Là nguồn cảm hứng cho bài học Nguyên tắc cơ bản của khoa học máy tính
+          của đội ngũ Bản quyền và Sáng tạo, bài học này ra đời nhằm giúp học sinh
+          hiểu quy trình sáng tạo của hoạt động chia sẻ và truyền cảm hứng. Bên cạnh
+          đó là khuyến khích thể hiện sự sáng tạo và nhu cầu đối xử công bằng với
+          tác phẩm sáng tạo.
+        title: Sáng tạo và vui chơi công bằng thật tuyệt vời
+      courseB_unplugged_CnC_2019:
+        desc: Là nguồn cảm hứng cho bài học Nguyên tắc cơ bản của khoa học máy tính
+          của đội ngũ Bản quyền và Sáng tạo, bài học này ra đời nhằm giúp học sinh
+          hiểu quy trình sáng tạo của hoạt động chia sẻ và truyền cảm hứng. Bên cạnh
+          đó là khuyến khích thể hiện sự sáng tạo và nhu cầu đối xử công bằng với
+          tác phẩm sáng tạo.
+        title: Sáng tạo và vui chơi công bằng thật tuyệt vời
+      courseB_unplugged_MRF:
+        desc: Trong bài học này, bạn sẽ 'lập trình' bạn bè của bạn!
+        title: Hoạt động không dùng máy
+      courseB_unplugged_MRF_2018:
+        desc: Học cách lập trình bằng việc viết mã cho bạn bè!
+        title: Bạn bè robot của tôi
+      courseB_unplugged_MRF_2019:
+        desc: Học cách lập trình bằng việc viết mã cho bạn bè!
+        title: Bạn bè robot của tôi
       courseB_unplugged_digitalFootprint:
-        title: Dấu chân kỹ thuật số
         desc: Giáo viên giới thiệu cho sinh viên việc đưa thông tin cá  nhân lên mạng
           sẽ tạo ra dấu chân hoặc "vệt dài" có hậu quả.
+        title: Dấu chân kỹ thuật số
+      courseB_unplugged_loopyMRF:
+        desc: Giống như trong "Người bạn robot của tôi", bạn sẽ "lập trình" bạn bè
+          của bạn, nhưng lần này là với vòng lặp!
+        title: Hoạt động không dùng máy
+      courseB_unplugged_loopyMRF_2019:
+        title: Những người bạn robot Loopy của tôi
+      courseB_unplugged_passwords_2019:
+        desc: Khám phá lý do mọi người dùng mật khẩu, tìm hiểu lợi ích khi dùng mật
+          khẩu và khám phá các chiến lược tạo và duy trì mật khẩu bảo mật.
+        title: Mật khẩu mạnh
+      courseC_Unplugged_ScreenOutTheMean:
+        desc: Hôm nay bạn sẽ tìm hiểu về những gì phải làm nếu một người nào đó được
+          ám chỉ là đang online.
+        title: Hoạt động không dùng máy
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        desc: Hôm nay bạn sẽ tìm hiểu về những gì phải làm nếu một người nào đó được
+          ám chỉ là đang online.
+        title: Hoạt động không dùng máy
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        desc: Hôm nay bạn sẽ tìm hiểu về những gì phải làm nếu một người nào đó được
+          ám chỉ là đang online.
+        title: Hoạt động không dùng máy
+      courseC_unplugged_binaryBracelets:
+        desc: Học sinh tạo ra vòng tay như là một đại diện nhị phân của chữ cái đầu
+          của tên của họ. Học sinh tìm hiểu rằng dữ liệu có thể được đại diện và lưu
+          trữ theo nhiều hơn một cách.
+        title: Vòng đeo tay nhị phân
       courseC_unplugged_buildingAFoundation:
-        title: Xây dựng nền tảng
         desc: Học sinh xây dựng một cấu trúc chỉ sử dụng những nguồn đã được cung
           cấp. Các cấu trúc phải hoàn thành một nhiệm vụ (đạt được mức độ cao nhất
           định hoặc chịu được một trọng lượng nhất định), khi mọi thứ trở nên phức
           tạp học sinh sẽ thảo luận về những ý tưởng liên tục.
-      courseC_unplugged_paperPlanes:
-        title: 'Thuật toán trong đời sống: Máy bay giấy'
-        desc: Bài học này chỉ ra cách chúng ta sử dụng các thuật toán trong cuộc sống
-          hàng ngày, như cách gấp máy bay giấy. Đồng thời tập trung vào hình ảnh lớn
-          của khoa học máy tính và cách các thuật toán đóng một phần quan trọng.
+        title: Xây dựng nền tảng
       courseC_unplugged_gettingLoopy:
-        title: Tạo vòng lặp
         desc: Bài này giới thiệu về khái niệm lập trình vòng lặp (các hướng dẫn lặp
           lại) qua hoạt động nhảy. Học sinh sẽ tìm hiểu về biên đạo múa cơ bản sau
           đó sẽ được hướng dẫn để lặp lại.
-      courseC_unplugged_binaryBracelets:
-        title: Vòng đeo tay nhị phân
-        desc: Học sinh tạo ra vòng tay như là một đại diện nhị phân của chữ cái đầu
-          của tên của họ. Học sinh tìm hiểu rằng dữ liệu có thể được đại diện và lưu
-          trữ theo nhiều hơn một cách.
-      courseD_unplugged_graphPaperProgramming:
-        title: lập trình đồ thị trên giấy
-        desc: Học sinh viết một thuật toán (một tập hợp các hướng dẫn) bằng cách sử
-          dụng tập hợp các lệnh đã được định nghĩa sẵn để chỉ dẫn các bạn cùng lớp
-          tái hiện một bản vẽ.
-      courseD_unplugged_relayProgramming:
-        title: Chương trình chuyển tiếp
-        desc: Học sinh tham gia chạy tiếp sức, nơi các em sẽ lao qua sân để viết một
-          thuật toán dựa trên hình ảnh "Lập Trình Giấy Vẽ Sơ Đồ". Các em chỉ có thể
-          viết  từng hướng dẫn một và nếu có lỗi sai ở đâu đó, các em phải xóa hết
-          đi và quay lại từ đầu từ điểm đó.
-      courseD_unplugged_conditionalsCards:
-        title: Lệnh điều kiện với lá bài
-        desc: Để tìm hiểu về câu điều kiện, học sinh nên chơi trò đánh bài và tạo
-          ra những luật như "Nếu tôi rút ra một thẻ đỏ, tôi sẽ được 1 điểm" và "Nếu
-          Tôi rút được một thẻ đen, bạn sẽ được một điểm."
+        title: Tạo vòng lặp
+      courseC_unplugged_paperPlanes:
+        desc: Bài học này chỉ ra cách chúng ta sử dụng các thuật toán trong cuộc sống
+          hàng ngày, như cách gấp máy bay giấy. Đồng thời tập trung vào hình ảnh lớn
+          của khoa học máy tính và cách các thuật toán đóng một phần quan trọng.
+        title: 'Thuật toán trong đời sống: Máy bay giấy'
       courseD_unplugged_binaryImages:
-        title: Hình ảnh Nhị phân
         desc: Mặc dù nhiều người nghĩ rằng số nhị phân như số 0 hoặc số 1 có thực,
           các khóa học trước đó giảng dạy sinh viên rằng thông tin có thể được biểu
           diễn trong một loạt các số nhị phân.  Bài học này đưa ra khái niệm tiến
           xa hơn như cách minh họa làm thế nào một máy tính có thể lưu trữ các thông
           tin phức tạp hơn (chẳng hạn như hình ảnh và màu sắc) trong hệ nhị phân.
-      courseE_unplugged_diceRace:
-        title: 'Thuật toán trong đời thực: Chơi xúc sắc'
-        desc: Bài học này chỉ ra cách chúng tôi sử dụng thuật toán trong cuộc sống
-          hàng ngày. Là một phần trong đó, học sinh sẽ nhận biết và viết các thuật
-          toán cho một trò chơi xúc xắc.
-      courseE_unplugged_songwritingParameters:
-        title: Sáng tác với tham số
-        desc: Học sinh sử dụng các khái niệm về đoạn điệp khúc trong một bài hát để
-          tìm hiểu về gửi tham số (tham số có thể tùy chỉnh mà không cần phải viết
-          lại toàn bộ biến chức năng).
-      courseE_unplugged_internet:
-        title: internet
-        desc: Sinh viên gửi thư đại diện tới các phương pháp truyền thông bằng các
-          bưu thiếp .
+        title: Hình ảnh Nhị phân
+      courseD_unplugged_conditionalsCards:
+        desc: Để tìm hiểu về câu điều kiện, học sinh nên chơi trò đánh bài và tạo
+          ra những luật như "Nếu tôi rút ra một thẻ đỏ, tôi sẽ được 1 điểm" và "Nếu
+          Tôi rút được một thẻ đen, bạn sẽ được một điểm."
+        title: Lệnh điều kiện với lá bài
+      courseD_unplugged_digitalCitizenship:
+        desc: Hôm nay bạn sẽ tìm hiểu một công dân số là thế nào.
+        title: Hoạt động không dùng máy
+      courseD_unplugged_digitalCitizenship_2018:
+        desc: Hôm nay bạn sẽ tìm hiểu một công dân số là thế nào.
+        title: Hoạt động không dùng máy
+      courseD_unplugged_digitalCitizenship_2019:
+        desc: Hôm nay bạn sẽ tìm hiểu một công dân số là thế nào.
+        title: Hoạt động không dùng máy
+      courseD_unplugged_graphPaperProgramming:
+        desc: Học sinh viết một thuật toán (một tập hợp các hướng dẫn) bằng cách sử
+          dụng tập hợp các lệnh đã được định nghĩa sẵn để chỉ dẫn các bạn cùng lớp
+          tái hiện một bản vẽ.
+        title: lập trình đồ thị trên giấy
+      courseD_unplugged_relayProgramming:
+        desc: Học sinh tham gia chạy tiếp sức, nơi các em sẽ lao qua sân để viết một
+          thuật toán dựa trên hình ảnh "Lập Trình Giấy Vẽ Sơ Đồ". Các em chỉ có thể
+          viết  từng hướng dẫn một và nếu có lỗi sai ở đâu đó, các em phải xóa hết
+          đi và quay lại từ đầu từ điểm đó.
+        title: Chương trình chuyển tiếp
+      courseE_simon_says_2019:
+        desc: "Hãy chơi game và suy nghĩ về những lệnh cần thiết để cho kết quả phù
+          hợp.\r\n\r\n![hình ảnh kiểm tra](https://code.org/images/logo.png)"
+        title: Simon nói
+      courseE_unplugged_CnC_2018:
+        desc: Là nguồn cảm hứng cho bài học Nguyên tắc cơ bản của khoa học máy tính
+          của đội ngũ Bản quyền và Sáng tạo, bài học này ra đời nhằm giúp học sinh
+          hiểu những khó khăn và lợi ích của việc tôn trọng quyền sở hữu và bản quyền,
+          đặc biệt trong môi trường số. Học sinh cần được khuyến khích tôn trọng quyền
+          của nghệ sĩ như một phần quan trọng trong việc trở thành công dân số có
+          đạo đức.
+        title: Chia sẻ nội dung số
+      courseE_unplugged_CnC_2019:
+        desc: Là nguồn cảm hứng cho bài học Nguyên tắc cơ bản của khoa học máy tính
+          của đội ngũ Bản quyền và Sáng tạo, bài học này ra đời nhằm giúp học sinh
+          hiểu những khó khăn và lợi ích của việc tôn trọng quyền sở hữu và bản quyền,
+          đặc biệt trong môi trường số. Học sinh cần được khuyến khích tôn trọng quyền
+          của nghệ sĩ như một phần quan trọng trong việc trở thành công dân số có
+          đạo đức.
+        title: Chia sẻ nội dung số
+      courseE_unplugged_accessAbility_2019:
+        desc: Tìm hiểu về trợ năng và giá trị đồng cảm bằng cách brainstorm (động
+          não) và thiết kế các giải pháp trợ năng cho các ứng dụng giả định.
+        title: Khả năng truy cập
       courseE_unplugged_crowdsourcing:
-        title: Đa nguồn
         desc: Học sinh sử dụng đa nguồn, kỹ thuật giải quyết vấn đề phổ biến trong
           khoa học máy tính, để hoàn thành một nhiệm vụ với nhau như một lớp học hiệu
           quả hơn hơn cố làm nó một mình.
+        title: Đa nguồn
+      courseE_unplugged_diceRace:
+        desc: Bài học này chỉ ra cách chúng tôi sử dụng thuật toán trong cuộc sống
+          hàng ngày. Là một phần trong đó, học sinh sẽ nhận biết và viết các thuật
+          toán cho một trò chơi xúc xắc.
+        title: 'Thuật toán trong đời thực: Chơi xúc sắc'
+      courseE_unplugged_internet:
+        desc: Sinh viên gửi thư đại diện tới các phương pháp truyền thông bằng các
+          bưu thiếp .
+        title: internet
+      courseE_unplugged_privateInformation:
+        desc: Hôm nay bạn sẽ tìm hiểu sự khác biệt giữa thông tin riêng tư và cá nhân!
+        title: 'Giáo dục ý thức phổ biến: Thông tin riêng tư và cá nhân '
+      courseE_unplugged_privateInformation_2019:
+        desc: Bài học do Common Sense Education phát triển này nói về sự khác biệt
+          giữa thông tin có thể chia sẻ trực tuyến và thông tin không nên chia sẻ
+          trực tuyến.
+        title: Thông tin cá nhân và riêng tư
       courseE_unplugged_songwriting:
-        title: Sáng tác với tham số
         desc: Học sinh sử dụng các khái niệm về đoạn điệp khúc trong một bài hát để
           tìm hiểu về gửi tham số (tham số có thể tùy chỉnh mà không cần phải viết
           lại toàn bộ biến chức năng).
-      courseF_unplugged_tangrams:
-        title: Thuật toán Tangram
-        desc: Bài học này cho chúng ta thấy một điều quan trọng về thuật toán. Nếu
-          bạn giữ một thuật toán đơn giản có rất nhiều cách để sử dụng nó. Nếu bạn
-          muốn chắc chắn rằng tất cả mọi người có cùng kết quả, thuật toán của bạn
-          cần viết rất chi tiết.
+        title: Sáng tác với tham số
+      courseE_unplugged_songwritingParameters:
+        desc: Học sinh sử dụng các khái niệm về đoạn điệp khúc trong một bài hát để
+          tìm hiểu về gửi tham số (tham số có thể tùy chỉnh mà không cần phải viết
+          lại toàn bộ biến chức năng).
+        title: Sáng tác với tham số
       courseF_unplugged_envelopeVariables:
-        title: Các biến phong bì
         desc: Biến số kể đến rất nhiều đặc quyền trong khoa học máy tính.  Bài học
           này sẽ giúp giải thích biến là gì và làm thế nào chúng ta có thể sử dụng
           chúng trong nhiều cách khác nhau. Sử dụng hoạt động này trước (hoặc kết
           hợp với) bài học về trừu tượng để thực sự hiểu ý tưởng.
+        title: Các biến phong bì
       courseF_unplugged_forLoopFun:
-        title: Cho vòng lặp vui vẻ
         desc: Chúng ta biết rằng vòng lặp cho phép chúng ta làm đi làm lại sự việc,
           nhưng bây giờ chúng ta sẽ tìm hiểu cách sử dụng vòng lặp với cấu trúc phụ
           được xây dựng ngay bên trong.
+        title: Cho vòng lặp vui vẻ
+      courseF_unplugged_powerOfWords:
+        desc: Hôm nay bạn sẽ tìm hiểu về những gì phải làm nếu một người nào đó được
+          ám chỉ là đang online.
+        title: Hoạt động không dùng máy
+      courseF_unplugged_powerOfWords_2019:
+        desc: 'bản dịch thiếu: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+        title: 'bản dịch thiếu: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
       courseF_unplugged_songwritingParameters:
-        title: Sáng tác nhạc với tham số
         desc: 'Một trong các cấu trúc tuyệt vời nhất trong thế giới khoa học máy tính
           là chức năng.  Chức năng (đôi khi được gọi là quy trình) là các chương trình
           nhỏ mà bạn có thể sử dụng lặp đi lặp lại bên trong của chương trình lớn
           hơn. Bài học này sẽ giúp trực giác của sinh viên hiểu tại sao kết hợp các
           khối mã hóa thành các chức năng là rất hữu ích trong thực tế.  '
-      courseB_unplugged_MRF_2018:
-        title: Bạn bè robot của tôi
-        desc: Học cách lập trình bằng việc viết mã cho bạn bè!
-      PlantASeed_2018:
-        title: 'Thuật toán đời sống: Trồng một hạt giống'
-        desc: Bài học này nêu lên cách chúng ta sử dụng thuật toán trong cuộc sống
-          hàng ngày, lấy ví dụ là hoạt động gieo hạt. Nó cũng tập trung vào bức tranh
-          lớn của khoa học máy tính và làm thế nào để các thuật toán đóng một vai
-          trò thiết yếu.
-      UnplugHappyMaps_2018:
-        title: Bản đồ thú vị
-        desc: Học sinh tạo ra những thuật toán cơ bản (một chuỗi hướng dẫn) để di
-          chuyển nhân vật qua mê cung bằng cách sử dụng từng lệnh.
-      GoingPlacesSafely_2018:
-        title: Đến nơi an toàn
-        desc: Internet là một nơi có uy lực rất lớn, nhưng đồng thời cũng là một nơi
-          nguy hiểm. Giáo viên nên hướng dẫn các em làm sao để được an toàn khi lướt
-          web.
-      courseA_unplugged_loops_2018:
-        title: Vòng lặp không dùng thiết bị điện tử
-        desc: Trong bài học này, bạn sẽ học về vòng lặp!
-      BigEvent_2018:
-        title: Sự kiện lớn
-        desc: Các bạn học sinh sẽ được giới thiệu về khái niệm lập trình "sự kiện",
-          đó là những hoạt động máy tính liên tục theo dõi. Giáo viên sẽ bấm nút trên
-          tờ giấy điều khiển từ xa và học sinh sẽ phản ứng tùy thuộc vào nút được
-          nhấn.
-      GraphPaperProgramming_2018:
-        title: lập trình đồ thị trên giấy
-        desc: Học sinh viết một thuật toán (một tập hợp các hướng dẫn) bằng cách sử
-          dụng tập hợp các lệnh đã được định nghĩa sẵn để chỉ dẫn các bạn cùng lớp
-          tái hiện một bản vẽ.
-      courseD_unplugged_digitalCitizenship_2018:
-        title: Hoạt động không dùng máy
-        desc: Hôm nay bạn sẽ tìm hiểu một công dân số là thế nào.
-      courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Hoạt động không dùng máy
-        desc: Hôm nay bạn sẽ tìm hiểu về những gì phải làm nếu một người nào đó được
-          ám chỉ là đang online.
-      Conditionals_2018:
-        title: Điều kiện
+        title: Sáng tác nhạc với tham số
+      courseF_unplugged_tangrams:
+        desc: Bài học này cho chúng ta thấy một điều quan trọng về thuật toán. Nếu
+          bạn giữ một thuật toán đơn giản có rất nhiều cách để sử dụng nó. Nếu bạn
+          muốn chắc chắn rằng tất cả mọi người có cùng kết quả, thuật toán của bạn
+          cần viết rất chi tiết.
+        title: Thuật toán Tangram
+      deeper learning description:
+        desc: 'bản dịch thiếu: en-US.data.unplugged.desc'
+      timeforcs_demo_conditionals:
         desc: Để tìm hiểu về câu điều kiện, học sinh nên chơi trò đánh bài và tạo
           ra những luật như "Nếu tôi rút ra một thẻ đỏ, tôi sẽ được 1 điểm" và "Nếu
           Tôi rút được một thẻ đen, bạn sẽ được một điểm."
-      DigitalFootprint_2018:
-        title: Dấu chân kỹ thuật số
-        desc: Giáo viên giới thiệu cho sinh viên việc đưa thông tin cá  nhân lên mạng
-          sẽ tạo ra dấu chân hoặc "vệt dài" có hậu quả.
-      BinaryImages_2018:
-        title: Hình ảnh Nhị phân
-        desc: Mặc dù nhiều người nghĩ rằng số nhị phân như số 0 hoặc số 1 có thực,
-          các khóa học trước đó giảng dạy sinh viên rằng thông tin có thể được biểu
-          diễn trong một loạt các số nhị phân.  Bài học này đưa ra khái niệm tiến
-          xa hơn như cách minh họa làm thế nào một máy tính có thể lưu trữ các thông
-          tin phức tạp hơn (chẳng hạn như hình ảnh và màu sắc) trong hệ nhị phân.
-      PaperPlanes_2018:
-        title: 'Thuật toán trong đời sống: Máy bay giấy'
-        desc: Bài học này chỉ ra cách chúng ta sử dụng các thuật toán trong cuộc sống
-          hàng ngày, như cách gấp máy bay giấy. Đồng thời tập trung vào hình ảnh lớn
-          của khoa học máy tính và cách các thuật toán đóng một phần quan trọng.
-      GettingLoopy_2018:
-        title: Tạo vòng lặp
-        desc: Bài này giới thiệu về khái niệm lập trình vòng lặp (các hướng dẫn lặp
-          lại) qua hoạt động nhảy. Học sinh sẽ tìm hiểu về biên đạo múa cơ bản sau
-          đó sẽ được hướng dẫn để lặp lại.
-      BinaryBracelets_2018:
-        title: Vòng đeo tay nhị phân
-        desc: Học sinh tạo ra vòng tay như là một đại diện nhị phân của chữ cái đầu
-          của tên của họ. Học sinh tìm hiểu rằng dữ liệu có thể được đại diện và lưu
-          trữ theo nhiều hơn một cách.
-      MoveItMoveIt_2018:
-        title: Di chuyển nó, di chuyển nó
-      courseB_unplugged_CnC_2018:
-        title: Sáng tạo và vui chơi công bằng thật tuyệt vời
-        desc: Là nguồn cảm hứng cho bài học Nguyên tắc cơ bản của khoa học máy tính
-          của đội ngũ Bản quyền và Sáng tạo, bài học này ra đời nhằm giúp học sinh
-          hiểu quy trình sáng tạo của hoạt động chia sẻ và truyền cảm hứng. Bên cạnh
-          đó là khuyến khích thể hiện sự sáng tạo và nhu cầu đối xử công bằng với
-          tác phẩm sáng tạo.
-      courseE_unplugged_CnC_2018:
-        title: Chia sẻ nội dung số
-        desc: Là nguồn cảm hứng cho bài học Nguyên tắc cơ bản của khoa học máy tính
-          của đội ngũ Bản quyền và Sáng tạo, bài học này ra đời nhằm giúp học sinh
-          hiểu những khó khăn và lợi ích của việc tôn trọng quyền sở hữu và bản quyền,
-          đặc biệt trong môi trường số. Học sinh cần được khuyến khích tôn trọng quyền
-          của nghệ sĩ như một phần quan trọng trong việc trở thành công dân số có
-          đạo đức.
-      RelayProgramming_2018:
-        title: Chương trình chuyển tiếp
-        desc: Hoạt động này sẽ bắt đầu bằng bài học ngắn sửa lỗi và sự kiên nhẫn,
-          sau đó sẽ nhanh chóng chuyển sang phần bài tập tính giờ, trong đó học sinh
-          chia thành các đội và cùng nhau viết một chương trình tại một thời điểm.
-      courseB_unplugged_MRF_2019:
-        title: Bạn bè robot của tôi
-        desc: Học cách lập trình bằng việc viết mã cho bạn bè!
-      BuildingAFoundation_2019:
-        title: 'bản dịch thiếu: en-US.data.unplugged.BuildingAFoundation_2018.title'
-        desc: 'bản dịch thiếu: en-US.data.unplugged.BuildingAFoundation_2018.desc'
-      courseB_unplugged_loopyMRF_2019:
-        title: Những người bạn robot Loopy của tôi
-      Conditionals_2019:
         title: Điều kiện
-        desc: Để tìm hiểu về câu điều kiện, học sinh nên chơi trò đánh bài và tạo
-          ra những luật như "Nếu tôi rút ra một thẻ đỏ, tôi sẽ được 1 điểm" và "Nếu
-          Tôi rút được một thẻ đen, bạn sẽ được một điểm."
-      courseF_unplugged_powerOfWords_2019:
-        title: 'bản dịch thiếu: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
-        desc: 'bản dịch thiếu: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
-      EnvelopeVariables_2019:
-        title: 'bản dịch thiếu: en-US.data.unplugged.EnvelopeVariables_2018.title'
-        desc: 'bản dịch thiếu: en-US.data.unplugged.EnvelopeVariables_2018.desc'
-      ForLoopFun_2019:
-        title: 'bản dịch thiếu: en-US.data.unplugged.ForLoopFun_2018.title'
-        desc: 'bản dịch thiếu: en-US.data.unplugged.ForLoopFun_2018.desc'
-      GraphPaperProgramming_2019:
-        title: lập trình đồ thị trên giấy
-        desc: Học sinh viết một thuật toán (một tập hợp các hướng dẫn) bằng cách sử
-          dụng tập hợp các lệnh đã được định nghĩa sẵn để chỉ dẫn các bạn cùng lớp
-          tái hiện một bản vẽ.
-      RelayProgramming_2018_2019:
-        title: Chương trình chuyển tiếp
-        desc: Hoạt động này sẽ bắt đầu bằng bài học ngắn sửa lỗi và sự kiên nhẫn,
-          sau đó sẽ nhanh chóng chuyển sang phần bài tập tính giờ, trong đó học sinh
-          chia thành các đội và cùng nhau viết một chương trình tại một thời điểm.
-      courseD_unplugged_digitalCitizenship_2019:
-        title: Hoạt động không dùng máy
-        desc: Hôm nay bạn sẽ tìm hiểu một công dân số là thế nào.
-      BinaryImages_2019:
-        title: Hình ảnh Nhị phân
-        desc: Mặc dù nhiều người nghĩ rằng số nhị phân như số 0 hoặc số 1 có thực,
-          các khóa học trước đó giảng dạy sinh viên rằng thông tin có thể được biểu
-          diễn trong một loạt các số nhị phân.  Bài học này đưa ra khái niệm tiến
-          xa hơn như cách minh họa làm thế nào một máy tính có thể lưu trữ các thông
-          tin phức tạp hơn (chẳng hạn như hình ảnh và màu sắc) trong hệ nhị phân.
-      courseE_unplugged_privateInformation_2019:
-        title: Thông tin cá nhân và riêng tư
-        desc: Bài học do Common Sense Education phát triển này nói về sự khác biệt
-          giữa thông tin có thể chia sẻ trực tuyến và thông tin không nên chia sẻ
-          trực tuyến.
-      SongwritingParameters_2019:
-        title: 'bản dịch thiếu: en-US.data.unplugged.SongwritingParameters_2018.title'
-        desc: 'bản dịch thiếu: en-US.data.unplugged.SongwritingParameters_2018.desc'
-      courseE_unplugged_CnC_2019:
-        title: Chia sẻ nội dung số
-        desc: Là nguồn cảm hứng cho bài học Nguyên tắc cơ bản của khoa học máy tính
-          của đội ngũ Bản quyền và Sáng tạo, bài học này ra đời nhằm giúp học sinh
-          hiểu những khó khăn và lợi ích của việc tôn trọng quyền sở hữu và bản quyền,
-          đặc biệt trong môi trường số. Học sinh cần được khuyến khích tôn trọng quyền
-          của nghệ sĩ như một phần quan trọng trong việc trở thành công dân số có
-          đạo đức.
-      Internet_2019:
-        title: 'bản dịch thiếu: en-US.data.unplugged.Internet_2018.title'
-        desc: 'bản dịch thiếu: en-US.data.unplugged.Internet_2018.desc'
-      Crowdsourcing_2019:
-        title: 'bản dịch thiếu: en-US.data.unplugged.Crowdsourcing_2018.title'
-        desc: 'bản dịch thiếu: en-US.data.unplugged.Crowdsourcing_2018.desc'
-      GettingLoopy_2019:
-        title: Tạo vòng lặp
-        desc: Bài này giới thiệu về khái niệm lập trình vòng lặp (các hướng dẫn lặp
-          lại) qua hoạt động nhảy. Học sinh sẽ tìm hiểu về biên đạo múa cơ bản sau
-          đó sẽ được hướng dẫn để lặp lại.
-      courseC_Unplugged_ScreenOutTheMean_2019:
-        title: Hoạt động không dùng máy
-        desc: Hôm nay bạn sẽ tìm hiểu về những gì phải làm nếu một người nào đó được
-          ám chỉ là đang online.
-      BigEvent_2019:
-        title: Sự kiện lớn
-        desc: Các bạn học sinh sẽ được giới thiệu về khái niệm lập trình "sự kiện",
-          đó là những hoạt động máy tính liên tục theo dõi. Giáo viên sẽ bấm nút trên
-          tờ giấy điều khiển từ xa và học sinh sẽ phản ứng tùy thuộc vào nút được
-          nhấn.
-      BinaryBracelets_2019:
-        title: Vòng đeo tay nhị phân
-        desc: Học sinh tạo ra vòng tay như là một đại diện nhị phân của chữ cái đầu
-          của tên của họ. Học sinh tìm hiểu rằng dữ liệu có thể được đại diện và lưu
-          trữ theo nhiều hơn một cách.
-      PaperPlanes_2019:
-        title: 'Thuật toán trong đời sống: Máy bay giấy'
-        desc: Bài học này chỉ ra cách chúng ta sử dụng các thuật toán trong cuộc sống
-          hàng ngày, như cách gấp máy bay giấy. Đồng thời tập trung vào hình ảnh lớn
-          của khoa học máy tính và cách các thuật toán đóng một phần quan trọng.
-      PlantASeed_2019:
-        title: 'Thuật toán đời sống: Trồng một hạt giống'
-        desc: Bài học này nêu lên cách chúng ta sử dụng thuật toán trong cuộc sống
-          hàng ngày, lấy ví dụ là hoạt động gieo hạt. Nó cũng tập trung vào bức tranh
-          lớn của khoa học máy tính và làm thế nào để các thuật toán đóng một vai
-          trò thiết yếu.
-      UnplugHappyMaps_2019:
-        title: Bản đồ thú vị
-        desc: Học sinh tạo ra những thuật toán cơ bản (một chuỗi hướng dẫn) để di
-          chuyển nhân vật qua mê cung bằng cách sử dụng từng lệnh.
-      GoingPlacesSafely_2019:
-        title: Đến nơi an toàn
-        desc: Internet là một nơi có uy lực rất lớn, nhưng đồng thời cũng là một nơi
-          nguy hiểm. Giáo viên nên hướng dẫn các em làm sao để được an toàn khi lướt
-          web.
-      courseA_unplugged_loops_2019:
-        title: Vòng lặp không dùng thiết bị điện tử
-        desc: Trong bài học này, bạn sẽ học về vòng lặp!
-      MoveItMoveIt_2019:
-        title: Di chuyển nó, di chuyển nó
-      DigitalFootprint_2019:
-        title: Dấu chân kỹ thuật số
-        desc: Giáo viên giới thiệu cho sinh viên việc đưa thông tin cá  nhân lên mạng
-          sẽ tạo ra dấu chân hoặc "vệt dài" có hậu quả.
-      courseB_unplugged_CnC_2019:
-        title: Sáng tạo và vui chơi công bằng thật tuyệt vời
-        desc: Là nguồn cảm hứng cho bài học Nguyên tắc cơ bản của khoa học máy tính
-          của đội ngũ Bản quyền và Sáng tạo, bài học này ra đời nhằm giúp học sinh
-          hiểu quy trình sáng tạo của hoạt động chia sẻ và truyền cảm hứng. Bên cạnh
-          đó là khuyến khích thể hiện sự sáng tạo và nhu cầu đối xử công bằng với
-          tác phẩm sáng tạo.
-      GraphingData_2019:
-        title: Dữ liệu ảnh
-        desc: Trong bài học này, học sinh sẽ thu thập dữ liệu từ một dự án Play Lab
-          hoặc tình huống thực tiễn và sử dụng dữ liệu đó để dự đoán.
-      courseE_unplugged_accessAbility_2019:
-        title: Khả năng truy cập
-        desc: Tìm hiểu về trợ năng và giá trị đồng cảm bằng cách brainstorm (động
-          não) và thiết kế các giải pháp trợ năng cho các ứng dụng giả định.
-      courseE_simon_says_2019:
-        title: Simon nói
-        desc: "Hãy chơi game và suy nghĩ về những lệnh cần thiết để cho kết quả phù
-          hợp.\r\n\r\n![hình ảnh kiểm tra](https://code.org/images/logo.png)"
-      courseB_unplugged_passwords_2019:
-        title: Mật khẩu mạnh
-        desc: Khám phá lý do mọi người dùng mật khẩu, tìm hiểu lợi ích khi dùng mật
-          khẩu và khám phá các chiến lược tạo và duy trì mật khẩu bảo mật.
       timeforcs_demo_crowdsourcing:
-        title: Đa nguồn
         desc: '_Josh lưu ý: trái với bài học đầu tiên, tôi biên soạn bài học này dưới
           dạng bài học không sử dụng thiết bị điện tử điển hình._'
-      timeforcs_demo_conditionals:
-        title: Điều kiện
-        desc: Để tìm hiểu về câu điều kiện, học sinh nên chơi trò đánh bài và tạo
-          ra những luật như "Nếu tôi rút ra một thẻ đỏ, tôi sẽ được 1 điểm" và "Nếu
-          Tôi rút được một thẻ đen, bạn sẽ được một điểm."
+        title: Đa nguồn

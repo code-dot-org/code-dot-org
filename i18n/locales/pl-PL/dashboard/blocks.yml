@@ -54,6 +54,8 @@ pl:
             '1.00': średni
             '2.00': duży
             '3.00': bardzo duży
+      Dancelab_ai:
+        text: "{IMAGE}generuj {VALUE} efekt"
       Dancelab_alternateMoves:
         text: "{GROUP} zmienia się co {N} takty \nmiędzy {MOVE1} i {MOVE2}"
         options:
@@ -103,6 +105,12 @@ pl:
           UNIT:
             '"measures"': takty
             '"seconds"': sekundy
+      Dancelab_atTimestampNotAfter:
+        text: w {TIMESTAMP} {UNIT}
+        options:
+          UNIT:
+            '"measures"': takty
+            '"seconds"': sekundy
       Dancelab_changeColorBy:
         text: zmień {COLOR} {METHOD} o {AMOUNT}
         options:
@@ -145,7 +153,30 @@ pl:
             MOVES.Rest: Żaden
           DIR:
             '1': "→"
-            "-1": "←"
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} wykonuje {MOVE} {DIR} bez końca"
+        options:
+          GROUP:
+            '"CAT"': koty
+            '"SLOTH"': leniuchy
+          MOVE:
+            MOVES.Roll: Body Roll
+            MOVES.ClapHigh: Clap high
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Star
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
+            MOVES.Rest: Żaden
+            '"next"': "(Następny)"
+            '"prev"': "(Poprzedni)"
+            '"rand"': "(Losowy)"
+          DIR:
+            '1': "→"
       Dancelab_changeMoveLR:
         text: "{SPRITE} rób {MOVE} {DIR} bez końca"
         options:
@@ -167,7 +198,6 @@ pl:
             MOVES.Rest: Żaden
           DIR:
             '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: zamień {SPRITE} {PROPERTY} przez {VAL}
         options:
@@ -642,6 +672,62 @@ pl:
             '"tropical"': Tropikalne
             '"vintage"': Starocie
             '"warm"': Ciepły
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: ustaw efekt tła {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Żaden
+            '"rand"': "(Losowy)"
+            '"quads"': Kąty
+            '"blooming_petals"': Kwitnące płatki
+            '"circles"': Kółka
+            '"color_cycle"': Kolory
+            '"diamonds"': Diamenty
+            '"disco_ball"': Kula dyskotekowa
+            '"fireworks"': Fajerwerki
+            '"flowers"': Kwiaty
+            '"frosted_grid"': Matowa siatka
+            '"growing_stars"': Powiększające się gwiazdy
+            '"higher_power"': Higher Power
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kalejdoskop
+            '"lasers"': Laserowy parkiet
+            '"splatter"': Rozpryski farby
+            '"rainbow"': Tęcza
+            '"ripples_random"': Losowe fale
+            '"ripples"': Fale
+            '"snowflakes"': Śnieg
+            '"text"': Tytuły piosenek
+            '"galaxy"': Przestrzeń
+            '"sparkles"': Migotanie
+            '"spiral"': Spirala
+            '"disco"': Kwadraty
+            '"squiggles"': Pokręcone linie
+            '"starburst"': Rozprysk
+            '"stars"': Gwiazdy
+            '"music_wave"': Fale
+          PALETTE:
+            '"autumn"': Jesień
+            '"rave"': Czarno-białe
+            '"cool"': Chłodny
+            '"electronic"': Elektroniczny
+            '"grayscale"': Skala szarości
+            '"iceCream"': Lody
+            '"default"': Jasne
+            '"neon"': Neon
+            '"ocean"': Ocean
+            '"rainbow"': Tęcza
+            '"roses"': Róże
+            '"sky"': Niebo
+            '"spring"': Wiosna
+            '"summer"': Lato
+            '"sunrise"': Wschód słońca
+            '"sunset"': Zachód słońca
+            '"tropical"': Tropikalne
+            '"twinkling"': Migotanie
+            '"vintage"': Starocie
+            '"warm"': Ciepły
+            '"winter"': Zima
       Dancelab_setDanceSpeed:
         text: ustaw prędkość tańca {SPRITE} na {SPEED}
         options:
@@ -1050,6 +1136,8 @@ pl:
             '"macklemore90"': Macklemore - Nie może nas zatrzymać
             '"hammer"': MC Hammer - Nie możesz tego dotknąć
             '"peas"': The Black Eyed Peas - Mam przeczucie
+      DansBlocks_borderGPT:
+        text: Generuj obramowanie {DESCRIPTION}
       DansBlocks_getMicroscope:
         text: Mikroskop ma {INPUT1}
         options:
@@ -1625,7 +1713,7 @@ pl:
           narysuj tablicę wyników
           {SPRITE1COSTUME}wynik{VAR1}{SPRITE2COSTUME}wynik{VAR2}cel{SPRITE3COSTUME}
       gamelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME} z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4] z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       gamelab_showTitleScreen:
         text: pokaż ekran tytułowy {BREAK} tytuł {TITLE} podtytuł {SUBTITLE}
       gamelab_spriteClicked:
@@ -1772,6 +1860,15 @@ pl:
         text: współrzędna y {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} skocz do {LOCATION}"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           jeśli {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': trwały
+            '"liquid"': ciecz
+            '"gas"': gaz
       KatiesBlocks_makeNumSpritesNear:
         text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
       KatiesBlocks_spriteBirdSay:
@@ -2042,7 +2139,7 @@ pl:
           populacja:{SPRITE2N}
           {TOGGLE}wirus
       Mikelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME} z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4] z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -2720,7 +2817,6 @@ pl:
         text: "{VALUE}"
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '2': '2'
             '3': '3'

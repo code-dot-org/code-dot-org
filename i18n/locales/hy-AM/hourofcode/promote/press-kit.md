@@ -1,5 +1,5 @@
 ---
-title: Press Kit
+title: Մամլո Kit
 ---
 
 {{ signup_button }}

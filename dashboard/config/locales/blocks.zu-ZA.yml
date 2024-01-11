@@ -46,26 +46,6 @@ zu:
         options:
           PROPERTY:
             '"height"': ubude
-      gamelab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': nini
-      gamelab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': nini
-      gamelab_playSoundOptions:
-        options:
-          SOUND:
-            "'sound://category_digital/jump_7.mp3'": gxuma
-      gamelab_setSizes:
-        options:
-          PROPERTY:
-            '"height"': ubude
-      gamelab_spriteClicked:
-        options:
-          CONDITION:
-            '"when"': nini
       Mikelab_whenYesNoClicked:
         options:
           KEY:
@@ -90,3 +70,23 @@ zu:
             "'sand'": isihlabathi
       craft_moveForward:
         text: qubekela phambili
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': nini
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': nini
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_digital/jump_7.mp3'": gxuma
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"height"': ubude
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': nini

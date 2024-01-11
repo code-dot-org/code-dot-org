@@ -73,7 +73,7 @@ Computational thinking helps nurture problem-solving skills, logic, and creativi
 
 - [បោះពុម្ពវិញ្ញាបនបត្រ]({{ urls/certificates }}) អោយសិស្សរបស់អ្នក។ 
 - [បោះពុម្ភស្ទីកឃ័រ "ខ្ញុំបានធ្វើ Hour of Code!"]({{ promote/resources_stickers }}) អោយសិស្សរបស់អ្នក។ 
-- [បញ្ជាទិញអាវយឺត](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) សំរាប់អ្នកចូលរួម។ 
+- [Order custom t-shirts](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) for participants.
 - ចែករំលែករូបថតនិងវីដេអូនៃកម្មវិធី Hour of Code របស់អ្នកនៅលើប្រព័ន្ធផ្សព្វផ្សាយសង្គម។ ប្រើ #HourOfCode និង @codeorg ដើម្បីអោយយើងអាចបង្ហាញភាពជោគជ័យរបស់អ្នកផងដែរ!
 
 ## ធនធាន Hour of Code សម្រាប់អ្នកអប់រំ

@@ -9,19 +9,13 @@ he:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': זמן בינוני
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': זמן בינוני
-            '2.00': large
-            '3.00': extra large
+      Dancelab_ai:
+        text: "{IMAGE} צור {VALUE} אפקט"
       Dancelab_alternateMoves:
         text: "{GROUP} מחליפים כל {N} תיבות \nבין {MOVE1} ל{MOVE2}"
         options:
@@ -71,6 +65,11 @@ he:
           UNIT:
             '"measures"': תיבות
             '"seconds"': שניות
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': תיבות
+            '"seconds"': שניות
       Dancelab_changeColorBy:
         text: שנה {COLOR} {METHOD} ב {AMOUNT}
         options:
@@ -111,6 +110,28 @@ he:
             MOVES.ThisOrThat: כך וכך
             MOVES.Thriller: זומבי
             MOVES.Rest: כלום
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} עושים {MOVE} {DIR} לנצח"
+        options:
+          GROUP:
+            '"CAT"': חתולים
+            '"SLOTH"': עצלנים
+          MOVE:
+            MOVES.Roll: בָּאדִי רוֹל / גלגול גוף
+            MOVES.ClapHigh: קלאפ היי
+            MOVES.Dab: דֶאבּ
+            MOVES.DoubleJam: דָאבֵּל דָאוּן
+            MOVES.Drop: דְרוֹפּ
+            MOVES.Floss: פְלוֹס
+            MOVES.Fresh: פְרֶשׁ
+            MOVES.Clown: גאנגם
+            MOVES.Kick: כוכב
+            MOVES.ThisOrThat: כך וכך
+            MOVES.Thriller: זומבי
+            MOVES.Rest: כלום
+            '"next"': "(הבא)"
+            '"prev"': "(קודם)"
+            '"rand"': "(אקראי)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} עושה {MOVE} {DIR} לנצח"
         options:
@@ -455,26 +476,6 @@ he:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': חייזרים
             '"BEAR"': דובים
@@ -591,6 +592,61 @@ he:
             '"tropical"': טרופי
             '"vintage"': וינטאג'
             '"warm"': חמים
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: קבע אפקט רקע {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': כלום
+            '"rand"': "(אקראי)"
+            '"quads"': מלאכים
+            '"blooming_petals"': עלי כותרת פורחים
+            '"circles"': מעגלים
+            '"color_cycle"': צבעים
+            '"diamonds"': יהלומים
+            '"disco_ball"': כדור דיסקו
+            '"fireworks"': זיקוקים
+            '"flowers"': פרחים
+            '"frosted_grid"': רשת עמומה
+            '"growing_stars"': כוכבים גדלים
+            '"swirl"': הִיפְּנוֹ
+            '"kaleidoscope"': קליידוסקופ
+            '"lasers"': רחבת ריקודים מלייזר
+            '"splatter"': שפריץ צבע
+            '"rainbow"': קשת
+            '"ripples_random"': אדוות אקראיות
+            '"ripples"': אדוות
+            '"snowflakes"': שלג
+            '"text"': כותרת שיר
+            '"galaxy"': חלל
+            '"sparkles"': נצנוצים
+            '"spiral"': ספירלה
+            '"disco"': ריבועים
+            '"squiggles"': קווים מתפתלים
+            '"starburst"': כוכבים
+            '"stars"': כוכבים
+            '"music_wave"': גלים
+          PALETTE:
+            '"autumn"': סתיו
+            '"rave"': שחור לבן
+            '"cool"': מגניב
+            '"electronic"': אלקטרוני
+            '"grayscale"': גוני אפור
+            '"iceCream"': גלידה
+            '"default"': אוֹר
+            '"neon"': נאון
+            '"ocean"': אוקיינוס
+            '"rainbow"': קשת
+            '"roses"': ורדים
+            '"sky"': שמיים
+            '"spring"': אביב
+            '"summer"': קיץ
+            '"sunrise"': זריחה
+            '"sunset"': שקיעה
+            '"tropical"': טרופי
+            '"twinkling"': הבהוב
+            '"vintage"': וינטאג'
+            '"warm"': חמים
+            '"winter"': חורף
       Dancelab_setDanceSpeed:
         text: קבע את מהירות הריקוד של {SPRITE} ל {SPEED}
         options:
@@ -997,8 +1053,6 @@ he:
         options:
           INPUT1:
             '1': מיץ לימון
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         text: בצע אפקט {EFFECT}
         options:
@@ -1015,8 +1069,6 @@ he:
         options:
           INPUT1:
             '1': מיץ לימון
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: תקשרו {VAR1} עם{SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
@@ -1271,9 +1323,7 @@ he:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': זמן בינוני
-            '100': large
       gamelab_mirrorSprite:
         text: "{SPRITE} פונה ל{DIRECTION}"
         options:
@@ -1424,10 +1474,7 @@ he:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': זמן בינוני
-            '100': large
       gamelab_setProp:
         text: קבע {PROPERTY} של {SPRITE} ל {VAL}
         options:
@@ -1444,10 +1491,7 @@ he:
           PROPERTY:
             '"scale"': גודל
           SIZE:
-            '25': extra small
-            '50': small
             '75': זמן בינוני
-            '100': large
       gamelab_setSizes:
         text: קבע  {PROPERTY} של  {SPRITE}  ל {N}%
         options:
@@ -1458,11 +1502,9 @@ he:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': איטי
             '5': רגיל
             '7': מהיר
-            '9': extra fast
       gamelab_setTint:
         text: שנה צבע של {THIS} ל-{COLOR}
       gamelab_setupSim:
@@ -1557,6 +1599,12 @@ he:
         text: x קואורדינטות של {SPRITE}
       gamelab_yLocationOf:
         text: y קואורדינטות של {SPRITE}
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': מוצק
+            '"liquid"': נוזל
+            '"gas"': גז
       Mikelab_addBehaviorSimple:
         text: דמות {SPRITE} מתחילה {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -1853,14 +1901,10 @@ he:
         options:
           INPUT1:
             '1': מיץ לימון
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': מיץ לימון
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -2073,7 +2117,6 @@ he:
         text: כאשר מופיעה שורה {N}
         options:
           'N':
-            '0': "???"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -2131,16 +2174,10 @@ he:
         options:
           PORTION:
             '1': כולם
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': כולם
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} אמור {SPEECH}"
       adaptations_adaptationBehaviors:
@@ -2297,7 +2334,6 @@ he:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '2': '2'
             '3': '3'

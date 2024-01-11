@@ -58,6 +58,28 @@ bs:
         e-mail sa uputama kako ga otključati.
       unlocked: Vaš račun je uspješno otključan. Molimo prijavite se ponovo.
   errors:
+    invitations:
+      edit:
+        header: Postavi šifru
+        submit_button: Postavi lozinku
+      invitation_removed: Vaša pozivnica je uklonjena.
+      invitation_token_invalid: Znak sa pozivnice nije valjan!
+      new:
+        header: Pošalji pozivnicu
+        submit_button: Pošalji pozivnicu
+      no_invitations_remaining: Nema više preostalih pozivnica
+      send_instructions: E-mail pozivnica je poslana na %{email}.
+      updated: Vaša šifra je uspješno postavljena. Sada ste prijavljeni.
+    mailer:
+      invitation_instructions:
+        accept: Prihvati pozivnicu
+        hello: Pozdrav %{email}
+        ignore: Ako ne želite prihvatiti pozivnicu, molimo ignorišite ovaj e-mail.<br
+          />Vaš račun neće biti kreiran sve dok ne kliknete na link gore i postavite
+          svoju šifru.
+        someone_invited_you: Neko vas je pozvao na %{url}, možete prihvatiti pozivnicu
+          putem linka ispod.
+        subject: Upute pozivnice
     messages:
       already_confirmed: je već potvrđen, molimo probajte se prijaviti
       confirmation_period_expired: mora biti potvrđeno unutar %{period}, molimo zatražite
@@ -65,25 +87,3 @@ bs:
       expired: je istekao, molimo zatražite novi
       not_found: nije pronađeno
       not_locked: nije zaključan
-    invitations:
-      send_instructions: E-mail pozivnica je poslana na %{email}.
-      invitation_token_invalid: Znak sa pozivnice nije valjan!
-      updated: Vaša šifra je uspješno postavljena. Sada ste prijavljeni.
-      no_invitations_remaining: Nema više preostalih pozivnica
-      invitation_removed: Vaša pozivnica je uklonjena.
-      new:
-        header: Pošalji pozivnicu
-        submit_button: Pošalji pozivnicu
-      edit:
-        header: Postavi šifru
-        submit_button: Postavi lozinku
-    mailer:
-      invitation_instructions:
-        subject: Upute pozivnice
-        hello: Pozdrav %{email}
-        someone_invited_you: Neko vas je pozvao na %{url}, možete prihvatiti pozivnicu
-          putem linka ispod.
-        accept: Prihvati pozivnicu
-        ignore: Ako ne želite prihvatiti pozivnicu, molimo ignorišite ovaj e-mail.<br
-          />Vaš račun neće biti kreiran sve dok ne kliknete na link gore i postavite
-          svoju šifru.

@@ -20,3 +20,7 @@ haw:
   errors:
     messages:
       not_saved: 'E hoʻopololei i kēia mau hemahema:'
+  activerecord:
+    attributes:
+      user:
+        finish_sign_up_header_error: 'E hoʻopololei i kēia mau hemahema:'

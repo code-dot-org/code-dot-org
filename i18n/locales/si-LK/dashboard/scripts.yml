@@ -121,6 +121,7 @@ si:
           description_short: ගම්බෝල් ක්‍රීඩා පරීක්ෂණාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම් එකක් හදන්න!
           student_description: ගම්බෝල් ක්‍රීඩා පරීක්ෂණාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම් එකක් හදන්න!
         starwars:
+          title: 'Star Wars: කේත හරහා මන්දාකිනිය ගොඩනගන්න (JavaScript)'
           description: ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත එපිට මන්දාකිණියක ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න.
           description_short: ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත එපිට මන්දාකිණියක ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න.
           student_description: ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත එපිට මන්දාකිණියක ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න.
@@ -129,7 +130,7 @@ si:
           description_short: ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත එපිට මන්දාකිණියක ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න.
           student_description: ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත එපිට මන්දාකිණියක ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න.
         mc:
-          title: Minecraft Hour of Code
+          title: Minecraft Adventurer
           description: කේත කොටස් භාවිතා කරමින්, ස්ටීව් හෝ ඇලෙක්ස් ව මෙම Minecraft ලෝකය හරහා වික්‍රමාන්විත ගමන් මගක රැගෙන යන්න.
           description_short: Minecraft ලෝකය කේතය මගින් ගවේශණය කරන්න
           student_description: කේත කොටස් භාවිතා කරමින්, ස්ටීව් හෝ ඇලෙක්ස් ව මෙම Minecraft ලෝකය හරහා වික්‍රමාන්විත ගමන් මගක රැගෙන යන්න.
@@ -222,6 +223,8 @@ si:
               display_name: අන්තර්ගතය
             practice:
               display_name: ඉගැන්වීමේ පිළිවෙත්
+        minecraft:
+          title: Minecraft Designer
         coursee-draft:
           lesson_groups:
             content:
@@ -1543,3 +1546,78 @@ si:
           lessons:
             lesson-4:
               name: දත්ත
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ඩිජිටල් පුරවැසිකම
+            lessonGroup-4:
+              display_name: ලූපයන්
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: දත්ත
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ඩිජිටල් පුරවැසිකම
+            lessonGroup-4:
+              display_name: ලූපයන්
+            lessonGroup-6:
+              display_name: දත්ත
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: දත්ත
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ඩිජිටල් පුරවැසිකම
+            lessonGroup-4:
+              display_name: ලූපයන්
+            lessonGroup-6:
+              display_name: වැඩසටහන්
+            lessonGroup-8:
+              display_name: දත්ත
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ඩිජිටල් පුරවැසිකම
+            lessonGroup-4:
+              display_name: ලූපයන්
+            lessonGroup-5:
+              display_name: වැඩසටහන්
+            lessonGroup-6:
+              display_name: දත්ත
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ඩිජිටල් පුරවැසිකම
+            lessonGroup-6:
+              display_name: ලූපයන්
+            lessonGroup-7:
+              display_name: දත්ත
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: නැවත නැවත සිදුවන ලුප
+            lessonGroup-4:
+              display_name: ශ්‍රිතයන්
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: කන්ඩිෂනලස්
+            lessonGroup-5:
+              display_name: විචල්‍යන්
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: හැදින්වීම
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: හැදින්වීම
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: හැදින්වීම
+          lesson_groups:
+            lessonGroup-7:
+              display_name: හැදින්වීම

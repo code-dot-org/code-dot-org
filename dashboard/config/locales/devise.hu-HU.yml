@@ -58,6 +58,28 @@ hu:
         egy e-mailt arról hogyan tudod kinyitni.
       unlocked: A fiókod sikeresen  kinyitottad. Jelentkezz be a folytatáshoz.
   errors:
+    invitations:
+      edit:
+        header: Állítsd be a jelszavad
+        submit_button: Jelszavam beállítása
+      invitation_removed: A meghívód törölve lett.
+      invitation_token_invalid: A megadott token nem érvényes!
+      new:
+        header: Meghívó küldése
+        submit_button: Meghívó küldése
+      no_invitations_remaining: Nincs fel nem használt meghívód
+      send_instructions: 'A meghívót elküldtük az alábbi email címre: %{email}.'
+      updated: A jelszavadat sikeresen beállítottad. Most már be vagy jelentkezve.
+    mailer:
+      invitation_instructions:
+        accept: Meghívó elfogadása
+        hello: Üdv %{email}
+        ignore: Ha nem akarod elfogadni a meghívást, kérlek hagyd figyelmen kívül
+          ezt az emailt. <br /> A fiókod addig nem készül el, amíg nem kattintasz
+          a linkre és nem állítod be a jelszavadat.
+        someone_invited_you: "%{url} meghívásod érkezett, elfogadhatod az alábbi linkre
+          kattintva."
+        subject: Meghívási instrukciók
     messages:
       already_confirmed: már megerősítették , próbálj bejelentkezni
       confirmation_period_expired: meg kell erősíteni a %{period}-on belül , kérj
@@ -65,25 +87,3 @@ hu:
       expired: már lejárt, kérjük kérjen egy újat
       not_found: nem található
       not_locked: nem volt zárolva
-    invitations:
-      send_instructions: 'A meghívót elküldtük az alábbi email címre: %{email}.'
-      invitation_token_invalid: A megadott token nem érvényes!
-      updated: A jelszavadat sikeresen beállítottad. Most már be vagy jelentkezve.
-      no_invitations_remaining: Nincs fel nem használt meghívód
-      invitation_removed: A meghívód törölve lett.
-      new:
-        header: Meghívó küldése
-        submit_button: Meghívó küldése
-      edit:
-        header: Állítsd be a jelszavad
-        submit_button: Jelszavam beállítása
-    mailer:
-      invitation_instructions:
-        subject: Meghívási instrukciók
-        hello: Üdv %{email}
-        someone_invited_you: "%{url} meghívásod érkezett, elfogadhatod az alábbi linkre
-          kattintva."
-        accept: Meghívó elfogadása
-        ignore: Ha nem akarod elfogadni a meghívást, kérlek hagyd figyelmen kívül
-          ezt az emailt. <br /> A fiókod addig nem készül el, amíg nem kattintasz
-          a linkre és nem állítod be a jelszavadat.

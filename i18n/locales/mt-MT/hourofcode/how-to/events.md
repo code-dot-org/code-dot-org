@@ -1,5 +1,5 @@
 ---
-title: Hour of Code Event How-To
+title: Siegħa ta 'Avveniment Kodiċi Kif-To
 ---
 
 {{ signup_button }}

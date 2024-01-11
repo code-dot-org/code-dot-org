@@ -135,8 +135,7 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     programming_expression = create :programming_expression, key: 'test-expression', programming_environment: @programming_environment
 
-    File.expects(:exist?).returns(true).once
-    File.expects(:delete).once
+    FileUtils.expects(:rm_f).once
 
     delete :destroy, params: {
       id: programming_expression.id
@@ -150,8 +149,7 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     programming_expression = create :programming_expression, key: 'test-expression', programming_environment: @programming_environment
 
-    File.expects(:exist?).returns(true).once
-    File.expects(:delete).throws(StandardError).once
+    FileUtils.expects(:rm_f).throws(StandardError).once
 
     delete :destroy, params: {
       id: programming_expression.id

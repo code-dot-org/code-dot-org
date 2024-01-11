@@ -64,6 +64,8 @@ export class WorkshopFilter extends React.Component {
         organizer_id: PropTypes.string,
         teacher_email: PropTypes.string,
         only_attended: PropTypes.string,
+        virtual: PropTypes.bool,
+        facilitator_id: PropTypes.number,
       }),
     }),
     showRegionalPartnerDropdown: PropTypes.bool,
@@ -270,10 +272,7 @@ export class WorkshopFilter extends React.Component {
       state: urlParams.state,
       course: urlParams.course,
       subject: urlParams.subject,
-      // TODO: Add prop types for these fields
-      // eslint-disable-next-line react/prop-types
       virtual: urlParams.virtual,
-      // eslint-disable-next-line react/prop-types
       facilitator_id: urlParams.facilitator_id,
       organizer_id: urlParams.organizer_id,
       teacher_email: urlParams.teacher_email,

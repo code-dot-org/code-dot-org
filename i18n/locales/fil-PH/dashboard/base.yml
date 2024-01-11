@@ -53,6 +53,7 @@ fil:
         gender: 'Kasarian'
         edit_header: 'Palitan ang Account Details'
         finish_sign_up_header: 'Tapusin ang paglikha ng iyong account'
+        finish_sign_up_header_error: 'Pakiwasto ang mga sumusunod na mga error:'
         finish_sign_up_subheader: 'Punan ang sumusunod na impormasyon upang matapos ang paglikha ng isang Code.org account para kay <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Punan ang sumusunod na impormasyon upang matapos ang paglikha ng isang Code.org account para kay **%{email}**.'
         finish_sign_up_subheader_provider: 'Punan ang sumusunod na impormasyon upang matapos ang paglikha ng isang Code.org account na may <strong>%{provider}</strong> para kay <strong>%{email}</strong>.'
@@ -60,6 +61,7 @@ fil:
         reset_password_token: "Ang sinunod mong link ng pag-reset ng password"
         error:
           future: hindi maaari sa hinaharap
+        user_type: 'Uri ng Account'
         us_state: 'Estado'
   beta: "beta"
   hello: "Mabuhay!"
@@ -342,7 +344,7 @@ fil:
       finished_hoc: "Tapos na ako!"
       sign_in_to_save: 'Mag-sign in para i-save ang progreso'
       my_dashboard: "Aking Dashboard"
-      course_catalog: "Catalog ng Kurso"
+      course_catalog: "Katalogo ng Kurso"
       project_gallery: "Mga Proyekto"
       sections: "Mga Seksyon"
       help_support: "Tulong at Suporta"

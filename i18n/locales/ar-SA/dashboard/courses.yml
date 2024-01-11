@@ -67,22 +67,32 @@ ar:
           description_short: تعلَّم المفاهيم الأساسية لعلم الحاسوب.
         csd-2023:
           title: مقدمات علم الحاسوب
+        vpl-csa-2023:
+          title: التعلم المهني الافتراضي CSA
+        self-paced-pl-csd-unit1-2023:
+          title: تعليم حل المشكلات والحوسبة
+        self-paced-pl-csd-unit2-2023:
+          title: تدريس تطوير المواقع الإلكترونية
+        self-paced-pl-csd-unit5-2023:
+          title: بيانات التدريس والمجتمع
     resources:
-      curriculum/csd/2020:
-        name: المناهج
-      teacher_forum/csd/2020:
-        name: منتدى المعلم
       curriculum/csd/2017:
         name: المناهج
       teacher_forum_6/csd/2017:
+        name: منتدى المعلم
+      curriculum/csd/2018:
+        name: المناهج
+      teacher_forum_6/csd/2018:
         name: منتدى المعلم
       curriculum/csd/2019:
         name: المناهج
       teacher_forum/csd/2019:
         name: منتدى المعلم
+      curriculum/csd/2020:
+        name: المناهج
+      teacher_forum/csd/2020:
+        name: منتدى المعلم
       getting_started_with_csd/csd/2021:
         name: البدء في العمل مع CSD
-      curriculum/csd/2018:
-        name: المناهج
-      teacher_forum_6/csd/2018:
-        name: منتدى المعلم
+      csd_guide_to_curriculum_videos/csd/2023:
+        url: Pseudoloc-<https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view

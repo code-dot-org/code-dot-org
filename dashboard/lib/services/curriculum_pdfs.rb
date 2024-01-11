@@ -117,7 +117,38 @@ module Services
     def self.get_pdfless_lessons(script)
       script.lessons.select(&:has_lesson_plan).select do |lesson|
         !lesson_plan_pdf_exists_for?(lesson) ||
-          (script.include_student_lesson_plans && !lesson_plan_pdf_exists_for?(lesson, true))
+          (script.include_student_lesson_plans && !lesson_plan_pdf_exists_for?(lesson, student_facing: true))
+      end
+    end
+
+    def self.regenerate_pdfs(scripts)
+      scripts.each do |script|
+        Dir.mktmpdir("pdf_generation") do |dir|
+          any_pdf_generated = false
+
+          script.lessons.select(&:has_lesson_plan).each do |lesson|
+            puts "Regenerating Lesson PDFs for #{lesson.key} (from #{script.name})"
+            generate_lesson_pdf(lesson, dir)
+            any_pdf_generated = true
+          end
+
+          if should_generate_overview_pdf?(script)
+            puts "Regenerating Unit Overview PDF for #{script.name}"
+            generate_script_overview_pdf(script, dir)
+            any_pdf_generated = true
+          end
+
+          if should_generate_resource_pdf?(script)
+            puts "Regenerating Unit Resources PDF for #{script.name}"
+            generate_script_resources_pdf(script, dir)
+            any_pdf_generated = true
+          end
+
+          if any_pdf_generated
+            puts "Uploading generated PDFs to S3"
+            upload_generated_pdfs_to_s3(dir)
+          end
+        end
       end
     end
 
@@ -129,7 +160,7 @@ module Services
           get_pdfless_lessons(script).each do |lesson|
             puts "Generating missing Lesson PDFs for #{lesson.key} (from #{script.name})"
             generate_lesson_pdf(lesson, dir)
-            generate_lesson_pdf(lesson, dir, true)
+            generate_lesson_pdf(lesson, dir, student_facing: true)
             any_pdf_generated = true
           end
 

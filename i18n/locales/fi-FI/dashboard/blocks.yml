@@ -7,19 +7,11 @@ fi:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': keskipitkä
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': keskipitkä
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} vaihtele jokaisen {N} tahdin \nvälillä {MOVE1} ja {MOVE2}"
         options:
@@ -67,6 +59,11 @@ fi:
           UNIT:
             '"measures"': tahdit
             '"seconds"': sekuntia
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': tahdit
+            '"seconds"': sekuntia
       Dancelab_changeColorBy:
         text: muuta {COLOR} {METHOD} {AMOUNT}
         options:
@@ -106,6 +103,27 @@ fi:
             MOVES.Kick: Tähti
             MOVES.ThisOrThat: Sitä tai tätä
             MOVES.Rest: Ei mitään
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} tee liikettä {MOVE} {DIR} ikuisesti"
+        options:
+          GROUP:
+            '"CAT"': kaikki kissat
+            '"SLOTH"': laiskiaiset
+          MOVE:
+            MOVES.Roll: Korin kallistus
+            MOVES.ClapHigh: Taputa korkealle
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Panoksen tuplaus
+            MOVES.Drop: Pudota
+            MOVES.Floss: Flossaa
+            MOVES.Fresh: Fressaa
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Tähti
+            MOVES.ThisOrThat: Sitä tai tätä
+            MOVES.Rest: Ei mitään
+            '"next"': "(Seuraava)"
+            '"prev"': "(Edellinen)"
+            '"rand"': "(Satunnainen)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} tee liikettä {MOVE} {DIR} ikuisesti"
         options:
@@ -442,26 +460,6 @@ fi:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': kaikki alienit
             '"BEAR"': karhut
@@ -574,6 +572,49 @@ fi:
             '"iceCream"': Jäätelö
             '"default"': Vaalea
             '"neon"': Neon
+            '"tropical"': Trooppinen
+            '"vintage"': Vanhanaikainen
+            '"warm"': Sydämellinen
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          "määritä taustatehoste
+          {PALETTE} {EFFECT}"
+        options:
+          EFFECT:
+            '"none"': Ei mitään
+            '"rand"': "(Satunnainen)"
+            '"quads"': Kulmat
+            '"circles"': Ympyrät
+            '"color_cycle"': Värit
+            '"diamonds"': Timantit
+            '"disco_ball"': Diskopallo
+            '"fireworks"': Ilotulitus
+            '"flowers"': Kukat
+            '"growing_stars"': Kasvavat tähdet
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskooppi
+            '"lasers"': Laser-tanssilattia
+            '"splatter"': Maaliroiskeet
+            '"rainbow"': Sateenkaari
+            '"ripples_random"': Satunnainen aaltoilu
+            '"ripples"': Aaltoilu
+            '"snowflakes"': Lumi
+            '"text"': Kappaleen nimet
+            '"galaxy"': Avaruus
+            '"sparkles"': Kimallus
+            '"spiral"': Kierre
+            '"disco"': Neliöt
+            '"starburst"': Tähtisäteet
+            '"stars"': Äänet
+            '"music_wave"': Aallot
+          PALETTE:
+            '"rave"': Mustavalkoinen
+            '"cool"': Kylmä
+            '"electronic"': Sähköinen
+            '"iceCream"': Jäätelö
+            '"default"': Vaalea
+            '"neon"': Neon
+            '"rainbow"': Sateenkaari
             '"tropical"': Trooppinen
             '"vintage"': Vanhanaikainen
             '"warm"': Sydämellinen
@@ -1192,9 +1233,7 @@ fi:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': keskipitkä
-            '100': large
       gamelab_mirrorSprite:
         text: "{SPRITE} kasvot {DIRECTION}"
         options:
@@ -1293,10 +1332,7 @@ fi:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': keskipitkä
-            '100': large
       gamelab_setProp:
         text: aseta {SPRITE} {PROPERTY} arvoksi {VAL}
         options:
@@ -1313,10 +1349,7 @@ fi:
           PROPERTY:
             '"scale"': koko
           SIZE:
-            '25': extra small
-            '50': small
             '75': keskipitkä
-            '100': large
       gamelab_setSizes:
         text: aseta {SPRITE} {PROPERTY} – {N}%
         options:
@@ -1327,11 +1360,9 @@ fi:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': hidas
             '5': normaali
             '7': nopea
-            '9': extra fast
       gamelab_setTint:
         text: vaihtaa väriä {THIS} {COLOR}
       gamelab_setupSim:
@@ -1747,7 +1778,6 @@ fi:
       Poetry_whenLineShows:
         options:
           'N':
-            '0': "???"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -1805,16 +1835,10 @@ fi:
         options:
           PORTION:
             '1': kaikki
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': kaikki
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       binary_drawBin:
         text: piirtää binääri {BIN}
       binary_drawBinScreen:
@@ -1959,7 +1983,6 @@ fi:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '2': '2'
             '3': '3'

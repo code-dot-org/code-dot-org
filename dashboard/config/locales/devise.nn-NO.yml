@@ -58,6 +58,28 @@ nn:
         motta ein e-post med instruksjonar om korleis du låser opp kontoen din.
       unlocked: Kontoen din har blitt låst opp. Ver snill å logge på for å fortsette.
   errors:
+    invitations:
+      edit:
+        header: Velg passord
+        submit_button: Velg passord
+      invitation_removed: Invitasjonen din vart fjerna.
+      invitation_token_invalid: Invitasjonstokenet gitt er ikkje gyldig!
+      new:
+        header: Send invitasjon
+        submit_button: Send ein invitasjon
+      no_invitations_remaining: Ingen invitasjonar att
+      send_instructions: Ein invitasjon er blitt send på e-post til %{email}.
+      updated: Passordet er satt. Du er nå logga inn.
+    mailer:
+      invitation_instructions:
+        accept: Godta invitasjon
+        hello: Hei %{email}
+        ignore: Om du ikkje vil godta invitasjonen, kan du sjå vekk frå denne e-posten.<br
+          />Kontoen din vil ikkje bli oppretta før du har trykt på lenkja over og
+          valt eit passord.
+        someone_invited_you: Nokon har invitert deg til %{url}. Du kan godta det ved
+          å trykke på lenkja nedanfor.
+        subject: Invitasjonsinstruksjonar
     messages:
       already_confirmed: var alt stadfesta. Vennligst prøv å logge på
       confirmation_period_expired: må vere stadfesta innan %{period}, vennligst spør
@@ -65,25 +87,3 @@ nn:
       expired: har gått ut på dato. Ver snill og søk om ein ny
       not_found: ikkje funne
       not_locked: var ikkje låst
-    invitations:
-      send_instructions: Ein invitasjon er blitt send på e-post til %{email}.
-      invitation_token_invalid: Invitasjonstokenet gitt er ikkje gyldig!
-      updated: Passordet er satt. Du er nå logga inn.
-      no_invitations_remaining: Ingen invitasjonar att
-      invitation_removed: Invitasjonen din vart fjerna.
-      new:
-        header: Send invitasjon
-        submit_button: Send ein invitasjon
-      edit:
-        header: Velg passord
-        submit_button: Velg passord
-    mailer:
-      invitation_instructions:
-        subject: Invitasjonsinstruksjonar
-        hello: Hei %{email}
-        someone_invited_you: Nokon har invitert deg til %{url}. Du kan godta det ved
-          å trykke på lenkja nedanfor.
-        accept: Godta invitasjon
-        ignore: Om du ikkje vil godta invitasjonen, kan du sjå vekk frå denne e-posten.<br
-          />Kontoen din vil ikkje bli oppretta før du har trykt på lenkja over og
-          valt eit passord.

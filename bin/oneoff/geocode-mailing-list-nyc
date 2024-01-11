@@ -8,6 +8,7 @@ FORMS = PEGASUS_DB[:forms]
 
 def main
   #['nyc-admins', 'nyc-parents', 'nyc-teachers'].each do |group|
+  nyc_cities = ['bronx', 'brooklyn', 'manhattan', 'queens', 'new york']
   ['nyc-teachers'].each do |group|
     CSV.foreach("#{group}.csv", headers: true) do |row|
       if row['city'].to_s.empty?
@@ -29,7 +30,7 @@ def main
         end
       end
 
-      next unless ['bronx', 'brooklyn', 'manhattan', 'queens', 'new york'].include?(row['city'].to_s.downcase)
+      next unless nyc_cities.include?(row['city'].to_s.downcase)
 
       puts CSV.generate_line([row['email'], row['name'], row['city'], row['state'], row['country']])
     end

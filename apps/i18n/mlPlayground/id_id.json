@@ -1,56 +1,17 @@
 {
-  "navigateForward": "Lanjutkan",
-  "navigateBack": "Kembali",
-  "tryAgain": "Coba Lagi",
-  "navigateDone": "Selesai",
-  "saveProgress": "Simpan",
-  "correctAnswer": "Benar",
-  "incorrectAnswer": "Salah",
-  "modelCardPossibleValuesMinimum": "min",
-  "modelCardPossibleValuesMaximum": "max",
-  "columnInspectorDescription": "Deskripsi",
-  "columnDetailsMinimumValue": "min",
   "columnDetailsMaximumValue": "max",
+  "columnDetailsMinimumValue": "min",
+  "columnInspectorDescription": "Deskripsi",
+  "correctAnswer": "Benar",
   "dataCardLastUpdated": "Terakhir pembaruan",
-  "predictButton": "Prediksikan",
-  "uniqueOptionsWarningNotice": "Catatan",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "umur"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "cuaca"
+        "Height": {
+          "id": "Tinggi"
         },
-        "day": {
-          "id": "hari"
-        },
-        "shoe": {
-          "id": "shoe"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "onion": {
-          "id": "bawang"
-        },
-        "avocado": {
-          "id": "Avocad"
-        },
-        "corn": {
-          "id": "jagung"
-        },
-        "beans": {
-          "id": "kacang-kacangan"
-        },
-        "lime": {
-          "id": "jeruk nipis"
+        "Length": {
+          "id": "Panjang"
         }
       }
     },
@@ -58,97 +19,6 @@
       "fields": {
         "Month": {
           "id": "Bulan"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "mushrooms": {
-          "id": "jamur"
-        },
-        "lobster": {
-          "id": "lobster"
-        },
-        "bacon": {
-          "id": "Daging babi asap"
-        },
-        "cheese": {
-          "id": "Keju"
-        },
-        "meat": {
-          "id": "daging"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "warna"
-        },
-        "music": {
-          "id": "musik"
-        },
-        "food": {
-          "id": "makanan"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "umur"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Category": {
-          "id": "Kategori"
-        },
-        "Description": {
-          "id": "Deskripsi"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "strawberry": {
-          "id": "stroberi"
-        },
-        "lime": {
-          "id": "jeruk nipis"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "sisi"
-        },
-        "size": {
-          "id": "ukuran"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "tomato": {
-          "id": "tomat"
-        },
-        "avocado": {
-          "id": "Avocad"
-        },
-        "chicken": {
-          "id": "ayam"
-        },
-        "fruit": {
-          "id": "buah"
-        },
-        "beans": {
-          "id": "kacang-kacangan"
-        },
-        "cheese": {
-          "id": "Keju"
         }
       }
     },
@@ -162,36 +32,41 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "school": {
-          "id": "sekolah"
-        },
-        "age": {
-          "id": "umur"
-        },
-        "health": {
-          "id": "kesehatan"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "ayam"
-        },
-        "lamb": {
-          "id": "anak domba"
-        },
-        "onion": {
-          "id": "bawang"
-        },
-        "cheese": {
-          "id": "Keju"
+        "banana": {
+          "id": "pisang"
         }
       }
     },
     "census_part": {
+      "fields": {
+        "age": {
+          "id": "umur"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "warna"
+        },
+        "food": {
+          "id": "makanan"
+        },
+        "music": {
+          "id": "musik"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Umur"
+        }
+      }
+    },
+    "insurance_cost": {
       "fields": {
         "age": {
           "id": "umur"
@@ -208,63 +83,65 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Negara"
+        },
+        "Dance": {
+          "id": "Menari"
+        },
+        "Music": {
+          "id": "Musik"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "umur"
+        }
+      }
+    },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "Skor"
-        },
         "Country": {
           "id": "Negara"
         },
         "Name": {
           "id": "Nama"
         },
+        "Score": {
+          "id": "Skor"
+        },
         "Star": {
           "id": "Bintang"
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "Artis"
+        "cheese": {
+          "id": "Keju"
+        },
+        "chicken": {
+          "id": "ayam"
+        },
+        "lamb": {
+          "id": "anak domba"
+        },
+        "onion": {
+          "id": "bawang"
         }
       }
     },
-    "safari_toy": {
+    "nutrition": {
       "fields": {
-        "people": {
-          "id": "orang"
+        "Category": {
+          "id": "Kategori"
         },
-        "rhino": {
-          "id": "badak"
-        },
-        "elephant": {
-          "id": "Gajah"
-        },
-        "alligator": {
-          "id": "aligator"
-        },
-        "trees": {
-          "id": "pohon"
-        }
-      },
-      "name": "Safari"
-    },
-    "abalone": {
-      "fields": {
-        "Length": {
-          "id": "Panjang"
-        },
-        "Height": {
-          "id": "Tinggi"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "Air"
+        "Description": {
+          "id": "Deskripsi"
         }
       }
     },
@@ -273,59 +150,101 @@
         "avocado": {
           "id": "Avocad"
         },
-        "onion": {
-          "id": "bawang"
-        },
         "ginger": {
           "id": "jahe"
+        },
+        "onion": {
+          "id": "bawang"
         }
       }
     },
-    "student_survey": {
+    "poutine_toy": {
       "fields": {
-        "Music": {
-          "id": "Musik"
+        "bacon": {
+          "id": "Daging babi asap"
         },
-        "Dance": {
-          "id": "Menari"
+        "cheese": {
+          "id": "Keju"
         },
-        "Country": {
-          "id": "Negara"
+        "lobster": {
+          "id": "lobster"
         },
-        "Internet": {
-          "id": "Internet"
+        "meat": {
+          "id": "daging"
         },
-        "Writing": {
-          "id": "Menulis"
-        },
-        "Achievements": {
-          "id": "Pencapaian"
-        },
-        "Age": {
-          "id": "Umur",
-          "description": "Umur"
-        },
-        "Height": {
-          "id": "Tinggi",
-          "description": "Tinggi"
-        },
-        "Gender": {
-          "id": "Jenis kelamin",
-          "description": "Jenis kelamin"
+        "mushrooms": {
+          "id": "jamur"
         }
       }
     },
-    "boba_toy": {
+    "raspado_toy": {
       "fields": {
-        "banana": {
-          "id": "pisang"
+        "lime": {
+          "id": "jeruk nipis"
+        },
+        "strawberry": {
+          "id": "stroberi"
         }
       }
     },
-    "heart": {
+    "safari_toy": {
       "fields": {
-        "Age": {
-          "id": "Umur"
+        "alligator": {
+          "id": "aligator"
+        },
+        "elephant": {
+          "id": "Gajah"
+        },
+        "people": {
+          "id": "orang"
+        },
+        "rhino": {
+          "id": "badak"
+        },
+        "trees": {
+          "id": "pohon"
+        }
+      },
+      "name": "Safari"
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "Avocad"
+        },
+        "beans": {
+          "id": "kacang-kacangan"
+        },
+        "cheese": {
+          "id": "Keju"
+        },
+        "chicken": {
+          "id": "ayam"
+        },
+        "fruit": {
+          "id": "buah"
+        },
+        "tomato": {
+          "id": "tomat"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "Avocad"
+        },
+        "beans": {
+          "id": "kacang-kacangan"
+        },
+        "corn": {
+          "id": "jagung"
+        },
+        "lime": {
+          "id": "jeruk nipis"
+        },
+        "onion": {
+          "id": "bawang"
         }
       }
     },
@@ -339,18 +258,99 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
-        "Music": {
-          "id": "Musik"
+        "sides": {
+          "id": "sisi"
+        },
+        "size": {
+          "id": "ukuran"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "hari"
+        },
+        "shoe": {
+          "id": "shoe"
+        },
+        "weather": {
+          "id": "cuaca"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Artis"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "umur"
+        },
+        "health": {
+          "id": "kesehatan"
+        },
+        "school": {
+          "id": "sekolah"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Pencapaian"
+        },
+        "Age": {
+          "description": "Umur",
+          "id": "Umur"
+        },
+        "Country": {
+          "id": "Negara"
         },
         "Dance": {
           "id": "Menari"
         },
-        "Country": {
-          "id": "Negara"
+        "Gender": {
+          "description": "Jenis kelamin",
+          "id": "Jenis kelamin"
+        },
+        "Height": {
+          "description": "Tinggi",
+          "id": "Tinggi"
+        },
+        "Internet": {
+          "id": "Internet"
+        },
+        "Music": {
+          "id": "Musik"
+        },
+        "Writing": {
+          "id": "Menulis"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "Air"
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "Salah",
+  "modelCardPossibleValuesMaximum": "max",
+  "modelCardPossibleValuesMinimum": "min",
+  "navigateBack": "Kembali",
+  "navigateDone": "Selesai",
+  "navigateForward": "Lanjutkan",
+  "predictButton": "Prediksikan",
+  "saveProgress": "Simpan",
+  "tryAgain": "Coba Lagi",
+  "uniqueOptionsWarningNotice": "Catatan"
 }

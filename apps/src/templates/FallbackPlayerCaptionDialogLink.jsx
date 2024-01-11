@@ -5,6 +5,7 @@ import i18n from '@cdo/locale';
 import BaseDialog from './BaseDialog';
 import DialogFooter from './teacherDashboard/DialogFooter';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export default class FallbackPlayerCaptionDialogLink extends React.Component {
   static propTypes = {
@@ -69,7 +70,7 @@ class FallbackPlayerCaptionDialog extends Component {
             className="ui-test-fallback-player-caption-dialog-close"
             text={i18n.fallbackVideoClosedCaptioningDialogClose()}
             onClick={this.props.handleClose}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
           />
         </DialogFooter>
       </BaseDialog>
@@ -86,7 +87,7 @@ const styles = {
     paddingRight: 20,
     paddingBottom: 20,
     textAlign: 'left',
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
   },
   dialogLinkContainer: {
     marginTop: 20,

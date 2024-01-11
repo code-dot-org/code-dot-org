@@ -1,14 +1,14 @@
 {
-  "blockly_blockPlaySoundTooltip": "play sound",
   "blockly_blockPlaySoundAtMeasureTooltip": "play sound",
+  "blockly_blockPlaySoundTooltip": "play sound",
   "blockly_blockRepeatTooltip": "repeat",
   "blockly_blockWhenRun": "when run",
   "blockly_blockWhenRunTooltip": "when run",
   "blockly_toolboxCategoryLogic": "Logic",
   "blockly_toolboxCategoryMath": "Mathematics",
   "blockly_toolboxCategoryVariables": "Variables",
-  "share": "Share",
-  "startOver": "Start Over",
+  "continue": "Continue",
   "panelHeaderWorkspace": "Workspace: ",
-  "continue": "Continue"
+  "share": "Share",
+  "startOver": "Start Over"
 }

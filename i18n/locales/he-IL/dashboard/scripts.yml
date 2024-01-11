@@ -1982,6 +1982,8 @@ he:
           title: 'שלום, עולם: רטרו'
         hello-world-batman: {}
         csa4-exemplars: {}
+        dance-unplugged:
+          title: מסיבת ריקודים ללא מחשב
         csc-things: {}
         poetry-hoc2: {}
         poetry-hoc3:
@@ -2287,6 +2289,7 @@ he:
         self-paced-pl-csp4-2022: {}
         csa9-2022: {}
         csa-pl-standalone-code-2022: {}
+        csc-ecosystems: {}
         dlp-csd-overview-2022: {}
         dlp-csd-mod1-2022: {}
         dlp-csd-mod2-2022: {}
@@ -2374,6 +2377,8 @@ he:
               display_name: 'פרק 1: הדרך לפתרון תהליך'
             lessonGroup-3:
               display_name: 'פרק 2: מחשבים ופתרון בעיות'
+            lessonGroup-5:
+              display_name: סקר
         csd2-2023: {}
         csd4-2023:
           lesson_groups:
@@ -2620,6 +2625,8 @@ he:
           lesson_groups:
             lessonGroup-2:
               display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-4:
+              display_name: סקר
         focus-on-creativity2-2023: {}
         focus-on-creativity3-2023:
           lesson_groups:
@@ -2638,6 +2645,8 @@ he:
               display_name: 'פרק 1: הדרך לפתרון תהליך'
             lessonGroup-3:
               display_name: 'פרק 2: מחשבים ופתרון בעיות'
+            lessonGroup-5:
+              display_name: סקר
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2652,6 +2661,8 @@ he:
           lesson_groups:
             lessonGroup-2:
               display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-4:
+              display_name: סקר
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -2667,6 +2678,8 @@ he:
           lesson_groups:
             lessonGroup-2:
               display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-4:
+              display_name: סקר
         self-paced-pl-k5-getting-started: {}
         focus-on-design-with-purpose2-2023: {}
         focus-on-design-with-purpose3-2023:
@@ -2684,6 +2697,8 @@ he:
           lesson_groups:
             lessonGroup-2:
               display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-4:
+              display_name: סקר
         focus-on-coding2-2023: {}
         focus-on-coding3-2023:
           lesson_groups:
@@ -2699,6 +2714,8 @@ he:
           lesson_groups:
             lessonGroup-2:
               display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-4:
+              display_name: סקר
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2813,3 +2830,186 @@ he:
         csa-frq-practice-pre2019: {}
         self-paced-pl-aiml1: {}
         self-paced-pl-aiml2: {}
+        musiclab-pilot: {}
+        tesspltest23: {}
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: חזרות
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: נתונים
+          lesson_groups:
+            lessonGroup-4:
+              display_name: חזרות
+            lessonGroup-6:
+              display_name: נתונים
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: נתונים
+          lesson_groups:
+            lessonGroup-4:
+              display_name: חזרות
+            lessonGroup-6:
+              display_name: אירועים
+            lessonGroup-7:
+              display_name: פרויקט סיום קורס
+            lessonGroup-8:
+              display_name: נתונים
+        nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: מערכות מחשוב
+          lesson_groups:
+            lessonGroup-4:
+              display_name: חזרות
+            lessonGroup-5:
+              display_name: אירועים
+            lessonGroup-6:
+              display_name: נתונים
+            lessonGroup-8:
+              display_name: מערכות מחשוב
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: חזרות
+            lessonGroup-7:
+              display_name: נתונים
+            lessonGroup-8:
+              display_name: פרויקט סיום קורס
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: פונקציות
+            lessonGroup-6:
+              display_name: פרויקט סיום קורס
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: דמויות
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: דמויות
+            lessonGroup-3:
+              display_name: תנאים
+            lessonGroup-5:
+              display_name: משתנים
+            lessonGroup-7:
+              display_name: פרויקט סיום קורס
+        vpl-csp-2023-m1: {}
+        vpl-csp-2023-m2: {}
+        vpl-csp-2023-m3: {}
+        vpl-csp-2023-m4: {}
+        vpl-csp-2023-m5: {}
+        vpl-csp-2023-m6: {}
+        vpl-csp-2023-m7: {}
+        vpl-csp-2023-m8: {}
+        vpl-csa-2023-m1: {}
+        how-ai-works-2023: {}
+        vpl-csa-2023-m2: {}
+        vpl-csa-2023-m3: {}
+        vpl-csa-2023-m4: {}
+        vpl-csa-2023-m5: {}
+        vpl-csa-2023-m6: {}
+        vpl-csa-2023-m7: {}
+        vpl-csa-2023-m8: {}
+        pl-csd-2023-m1: {}
+        vpl-csd-2023-m1: {}
+        vpl-csd-2023-m2: {}
+        vpl-csd-2023-m3: {}
+        vpl-csd-2023-m4: {}
+        vpl-csd-2023-m5: {}
+        vpl-csd-2023-m6: {}
+        vpl-csd-2023-m7: {}
+        vpl-csd-2023-m8: {}
+        ai-ethics-2023: {}
+        draft-hoc-dp: {}
+        genai-temp: {}
+        virtual-pl-csp-summer-day1-2024: {}
+        virtual-pl-csa-summer-2024-day1: {}
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: מבוא
+        virtual-pl-csp-summer-day3: {}
+        virtual-pl-csp-summer-day4: {}
+        virtual-pl-csp-summer-day5: {}
+        virtual-pl-csa-summer-day2: {}
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: מבוא
+        virtual-pl-csa-summer-day4: {}
+        virtual-pl-csa-summer-day5: {}
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: מבוא
+          lesson_groups:
+            lessonGroup-7:
+              display_name: מבוא
+        virtual-pl-csp-summer-day1: {}
+        csa-postap-se-and-computer-vision-2023: {}
+        draft-hoc-dp-2: {}
+        self-paced-pl-problem-solving-and-computing-1-2023: {}
+        self-paced-pl-problem-solving-and-computing-2-2023: {}
+        draft-hoc-dp-2-a: {}
+        draft-hoc-dp-2-: {}
+        draft-hoc-dp-2-b: {}
+        hoc-dp-oct-beta: {}
+        hoc-dp-oct-beta-b: {}
+        self-paced-pl-csd-unit1-1-2023: {}
+        self-paced-pl-csd-unit1-2-2023: {}
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 'מסיבת ריקודים: מהדורת AI'
+          title: 'מסיבת ריקודים: מהדורת AI'
+        self-paced-pl-csd-unit2-1-2023: {}
+        self-paced-pl-csd-unit2-2-2023: {}
+        self-paced-pl-csd-unit3-1-2023: {}
+        self-paced-pl-csd-unit3-2-2023: {}
+        self-paced-pl-csd-unit4-1-2023: {}
+        self-paced-pl-csd-unit4-2-2023: {}
+        self-paced-pl-csd-unit5-1-2023: {}
+        self-paced-pl-csd-unit5-2-2023: {}
+        ai-tutor-test: {}
+        web-dev-2024: {}
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: סקר
+            lessonGroup-2:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-3:
+              display_name: 'פרק 2: מחשבים ופתרון בעיות'
+        csd2-2024: {}
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: תמונות ואנימציות'
+            lessonGroup-3:
+              display_name: 'פרק 2: יצירת משחקים'
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            lessonGroup-3:
+              display_name: 'פרק 2: תכנון אפליקציה'
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: ייצוג מידע'
+            lessonGroup-3:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        csd6b-2024: {}
+        csd7-2024: {}
+        csd-post-survey-2024:
+          title: סקר שלאחר הקורס

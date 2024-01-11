@@ -719,6 +719,9 @@ uz:
         csa_sorting_algorithms: 'CSA: Saralash algoritmlari'
         star_quilts_intro_to_artist: 'Yulduzli ko''rpa-ko''rpa: rassomga kirish'
         upload_sprites_backgrounds: Maxsus spritlar va fonlarni yuklash
+        what-is-creativity: Ijodkorlik nima?
+        code-break: Dasturlash tanaffusini qiling
+        csd_ml_how_ai_works: SI (AI) qanday ishlaydi
     callout:
       text:
         drag_blocks: '"move" blokini olib boshqa blok pastiga biriktiring.'

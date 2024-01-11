@@ -17,7 +17,7 @@ FactoryBot.define do
     transient do
       num_sessions {1}
       num_facilitators {0}
-      sessions_from {Date.current + 9.hours} # Start time of the first session, then one per day after that.
+      sessions_from {Time.zone.today + 9.hours} # Start time of the first session, then one per day after that.
       each_session_hours {6}
       num_enrollments {0}
       enrolled_and_attending_users {0}
@@ -107,8 +107,6 @@ FactoryBot.define do
         enrollment = create :pd_enrollment, workshop: workshop
         if workshop.teachercon?
           create :pd_teachercon_survey, pd_enrollment: enrollment, randomized_survey_answers: evaluator.randomized_survey_answers
-        elsif workshop.local_summer?
-          create :pd_local_summer_workshop_survey, pd_enrollment: enrollment, randomized_survey_answers: evaluator.randomized_survey_answers
         else
           raise 'Num_completed_surveys trait unsupported for this workshop type'
         end

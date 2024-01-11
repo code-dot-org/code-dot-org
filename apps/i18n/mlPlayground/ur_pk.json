@@ -1,57 +1,17 @@
 {
-  "navigateForward": "جاری رکھیے",
-  "navigateBack": "واپس",
-  "tryAgain": "دوبارہ کوشش کریں",
-  "navigateDone": "اختتام",
-  "saveProgress": "محفوظ کریں",
-  "correctAnswer": "درست",
-  "potentialMisusesLabel": "حدود اور انتباہ",
-  "modelCardLimitations": "حدود اور انتباہ",
-  "modelCardPossibleValuesMinimum": "کم سے کم",
-  "modelCardPossibleValuesMaximum": "زیادہ سے زیادہ",
-  "columnInspectorDescription": "تفصیل",
-  "columnDetailsMinimumValue": "کم سے کم",
   "columnDetailsMaximumValue": "زیادہ سے زیادہ",
+  "columnDetailsMinimumValue": "کم سے کم",
+  "columnInspectorDescription": "تفصیل",
+  "correctAnswer": "درست",
   "dataCardLastUpdated": "آخری تازہ کاری",
-  "uniqueOptionsWarningNotice": "نوٹ",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "عمر"
-        }
-      },
-      "name": "طبی ترجیح"
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "موسم"
+        "Height": {
+          "id": "لمبائی"
         },
-        "day": {
-          "id": "دن"
-        },
-        "shoe": {
-          "id": "جوتا"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "onion": {
-          "id": "پیاز"
-        },
-        "avocado": {
-          "id": "آووکادو"
-        },
-        "corn": {
-          "id": "مکئی"
-        },
-        "beans": {
-          "id": "پھلیاں"
-        },
-        "lime": {
-          "id": "لیموں"
+        "Length": {
+          "id": "لمبائی"
         }
       }
     },
@@ -59,94 +19,6 @@
       "fields": {
         "Month": {
           "id": "مہینہ"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "mushrooms": {
-          "id": "مشرومیں"
-        },
-        "lobster": {
-          "id": "جھینگا کیکڑا"
-        },
-        "bacon": {
-          "id": "سور کی پٹھ کا گوشت"
-        },
-        "cheese": {
-          "id": "پنیر"
-        },
-        "meat": {
-          "id": "گوشت"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "رنگ"
-        },
-        "music": {
-          "id": "موسیقی"
-        },
-        "food": {
-          "id": "خوراک"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "عمر"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Category": {
-          "id": "زمرہ"
-        },
-        "Description": {
-          "id": "تفصیل"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "strawberry": {
-          "id": "سٹرابری"
-        },
-        "lime": {
-          "id": "لیموں"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "سائز"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "tomato": {
-          "id": "ٹماٹر"
-        },
-        "avocado": {
-          "id": "آووکادو"
-        },
-        "chicken": {
-          "id": "چکن"
-        },
-        "fruit": {
-          "id": "پھل"
-        },
-        "beans": {
-          "id": "پھلیاں"
-        },
-        "cheese": {
-          "id": "پنیر"
         }
       }
     },
@@ -160,36 +32,41 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "school": {
-          "id": "سکول"
-        },
-        "age": {
-          "id": "عمر"
-        },
-        "health": {
-          "id": "صحت"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "چکن"
-        },
-        "lamb": {
-          "id": "بھیڑ کا بچہ"
-        },
-        "onion": {
-          "id": "پیاز"
-        },
-        "cheese": {
-          "id": "پنیر"
+        "banana": {
+          "id": "کیلا"
         }
       }
     },
     "census_part": {
+      "fields": {
+        "age": {
+          "id": "عمر"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "رنگ"
+        },
+        "food": {
+          "id": "خوراک"
+        },
+        "music": {
+          "id": "موسیقی"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "عمر"
+        }
+      }
+    },
+    "insurance_cost": {
       "fields": {
         "age": {
           "id": "عمر"
@@ -206,63 +83,63 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Mulk"
+        },
+        "Music": {
+          "id": "میوزک"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "عمر"
+        }
+      },
+      "name": "طبی ترجیح"
+    },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "سکور"
-        },
         "Country": {
           "id": "Mulk"
         },
         "Name": {
           "id": "نام"
         },
+        "Score": {
+          "id": "سکور"
+        },
         "Star": {
           "id": "ستارہ"
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "آرٹسٹ"
+        "cheese": {
+          "id": "پنیر"
+        },
+        "chicken": {
+          "id": "چکن"
+        },
+        "lamb": {
+          "id": "بھیڑ کا بچہ"
+        },
+        "onion": {
+          "id": "پیاز"
         }
       }
     },
-    "safari_toy": {
+    "nutrition": {
       "fields": {
-        "people": {
-          "id": "لوگ"
+        "Category": {
+          "id": "زمرہ"
         },
-        "rhino": {
-          "id": "گینڈا"
-        },
-        "elephant": {
-          "id": "ہاتھی"
-        },
-        "alligator": {
-          "id": "مگرمچھ"
-        },
-        "trees": {
-          "id": "درختیں"
-        }
-      },
-      "name": "سفاری"
-    },
-    "abalone": {
-      "fields": {
-        "Length": {
-          "id": "لمبائی"
-        },
-        "Height": {
-          "id": "لمبائی"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "آبی"
+        "Description": {
+          "id": "تفصیل"
         }
       }
     },
@@ -271,56 +148,101 @@
         "avocado": {
           "id": "آووکادو"
         },
-        "onion": {
-          "id": "پیاز"
-        },
         "ginger": {
           "id": "ادرک"
+        },
+        "onion": {
+          "id": "پیاز"
         }
       }
     },
-    "student_survey": {
+    "poutine_toy": {
       "fields": {
-        "Music": {
-          "id": "میوزک"
+        "bacon": {
+          "id": "سور کی پٹھ کا گوشت"
         },
-        "Country": {
-          "id": "Mulk"
+        "cheese": {
+          "id": "پنیر"
         },
-        "Internet": {
-          "id": "انٹرنیٹ"
+        "lobster": {
+          "id": "جھینگا کیکڑا"
         },
-        "Writing": {
-          "id": "لکھنا"
+        "meat": {
+          "id": "گوشت"
         },
-        "Achievements": {
-          "id": "کامیابیوں"
-        },
-        "Age": {
-          "id": "عمر",
-          "description": "عمر"
-        },
-        "Height": {
-          "id": "لمبائی",
-          "description": "لمبائی"
-        },
-        "Gender": {
-          "id": "Jinss",
-          "description": "Jinss"
+        "mushrooms": {
+          "id": "مشرومیں"
         }
       }
     },
-    "boba_toy": {
+    "raspado_toy": {
       "fields": {
-        "banana": {
-          "id": "کیلا"
+        "lime": {
+          "id": "لیموں"
+        },
+        "strawberry": {
+          "id": "سٹرابری"
         }
       }
     },
-    "heart": {
+    "safari_toy": {
       "fields": {
-        "Age": {
-          "id": "عمر"
+        "alligator": {
+          "id": "مگرمچھ"
+        },
+        "elephant": {
+          "id": "ہاتھی"
+        },
+        "people": {
+          "id": "لوگ"
+        },
+        "rhino": {
+          "id": "گینڈا"
+        },
+        "trees": {
+          "id": "درختیں"
+        }
+      },
+      "name": "سفاری"
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "آووکادو"
+        },
+        "beans": {
+          "id": "پھلیاں"
+        },
+        "cheese": {
+          "id": "پنیر"
+        },
+        "chicken": {
+          "id": "چکن"
+        },
+        "fruit": {
+          "id": "پھل"
+        },
+        "tomato": {
+          "id": "ٹماٹر"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "آووکادو"
+        },
+        "beans": {
+          "id": "پھلیاں"
+        },
+        "corn": {
+          "id": "مکئی"
+        },
+        "lime": {
+          "id": "لیموں"
+        },
+        "onion": {
+          "id": "پیاز"
         }
       }
     },
@@ -331,15 +253,93 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
-        "Music": {
-          "id": "میوزک"
+        "size": {
+          "id": "سائز"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "دن"
+        },
+        "shoe": {
+          "id": "جوتا"
+        },
+        "weather": {
+          "id": "موسم"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "آرٹسٹ"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "عمر"
+        },
+        "health": {
+          "id": "صحت"
+        },
+        "school": {
+          "id": "سکول"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "کامیابیوں"
+        },
+        "Age": {
+          "description": "عمر",
+          "id": "عمر"
         },
         "Country": {
           "id": "Mulk"
+        },
+        "Gender": {
+          "description": "Jinss",
+          "id": "Jinss"
+        },
+        "Height": {
+          "description": "لمبائی",
+          "id": "لمبائی"
+        },
+        "Internet": {
+          "id": "انٹرنیٹ"
+        },
+        "Music": {
+          "id": "میوزک"
+        },
+        "Writing": {
+          "id": "لکھنا"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "آبی"
         }
       }
     }
-  }
+  },
+  "modelCardLimitations": "حدود اور انتباہ",
+  "modelCardPossibleValuesMaximum": "زیادہ سے زیادہ",
+  "modelCardPossibleValuesMinimum": "کم سے کم",
+  "navigateBack": "واپس",
+  "navigateDone": "اختتام",
+  "navigateForward": "جاری رکھیے",
+  "potentialMisusesLabel": "حدود اور انتباہ",
+  "saveProgress": "محفوظ کریں",
+  "tryAgain": "دوبارہ کوشش کریں",
+  "uniqueOptionsWarningNotice": "نوٹ"
 }

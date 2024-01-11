@@ -19,10 +19,10 @@
 ar:
   errors:
     messages:
-      not_saved: 'الرجاء تصحيح الأخطاء التالية:'
-      too_young: 'هذا المحتوى له قيود عمرية ولا يتوفر للطلاب الأصغر سنًا.'
-      teacher_must_accept_terms: 'هذا المحتوى له قيود عمرية، وغير متاح للطلاب الأصغر سنًا. لذا؛ اطلب من مدرسك قبول شروط الخدمة المحدثة لمنحك حق الوصول إلى هذا المحتوى. ويمكن لمعلمك القيام بذلك عن طريق تسجيل الدخول إلى Code Studio والنقر فوق زر "مراجعة الشروط المحدثة" بالقرب من الجزء العلوي من صفحة Code Studio الرئيسية.'
-      pair_programmer: 'أنت حاليًا تقوم ببرمجة ثنائية مع طالب لا يستطيع الوصول إلى هذا المحتوى. للوصول إلى هذا المحتوى، أوقِف البرمجة الثنائية، وحاول مرة أخرى.'
+      not_saved: 'يرجى تصحيح الأخطاء التالية:'
+      too_young: 'هذا المحتوى يخضع لقيود سن وغير متاح للطلاب الأصغر سناً'
+      teacher_must_accept_terms: 'يخضع هذا المحتوى لقيود عمرية ولا يتوفر للطلاب الأصغر سنًا. اطلب من معلمك قبول شروط الخدمة المحدثة لمنحك الوصول إلى هذا المحتوى. يمكن لمعلمك القيام بذلك عن طريق تسجيل الدخول إلى Code Studio والنقر على زر «مراجعة المصطلحات المحدثة» بالقرب من الجزء العلوي من الصفحة الرئيسية لـ Code Studio.'
+      pair_programmer: 'أنت حاليًا تقوم ببرمجة مع صديق مع طالب لا يستطيع الوصول إلى هذا المحتوى. للوصول إلى هذا المحتوى، أوقِف البرمجة مع صديق، وحاول مرة أخرى.'
   activerecord:
     errors:
       models:
@@ -32,7 +32,7 @@ ar:
               invalid: "غير صالح. لاحظ أنه لا يمكن استخدام كل رابط إلا مرة واحدة لإعادة تعيين كلمة المرور الخاصة بك، ولن يعمل سوى أحدث رابط تم إرساله."
       messages:
         blank: "مطلوب"
-        blank_plural: "مطلوب"
+        blank_plural: "مطلوبة"
         invalid: "غير صالح"
         invalid_plural: "غير صالحة"
     attributes:
@@ -40,7 +40,7 @@ ar:
         name: 'اسم العرض'
         name_example: 'اسم العرض (مثال:المبرمج الرائع أو "چين س.")'
         email: 'البريد الإلكتروني'
-        parent_email: 'بريد الوالد/الوصي'
+        parent_email: 'البريد الإلكتروني للوالد/الوصي'
         personal_email: "البريد الإلكتروني الشخصي <a href=\"%{url}\">(انقر هنا إذا لم يكن لديك بريد إلكتروني)</a>"
         personal_email_markdown: "البريد الإلكتروني الشخصي [(انقر هنا إذا لم يكن لديك عنوان بريد إلكتروني)](%{url})"
         username: 'اسم المستخدم'
@@ -50,24 +50,28 @@ ar:
         current_password: 'كلمة المرور الحالية'
         locale: 'اللغة'
         age: 'العمر'
-        gender: 'الجنس'
+        gender: 'نوع الجنس '
         edit_header: 'تعديل تفاصيل الحساب'
-        finish_sign_up_header: 'إكمال إنشاء حسابك'
-        finish_sign_up_subheader: 'املأ المعلومات التالية لإكمال إنشاء حساب على Code.org لـ <strong>%{email}</strong>.'
-        finish_sign_up_subheader_markdown: 'املأ المعلومات التالية لإكمال إنشاء حساب على Code.org لـ **%{email}**.'
-        finish_sign_up_subheader_provider: 'املأ المعلومات التالية لإكمال إنشاء حساب على Code.org مع <strong>%{provider}</strong> لـ <strong>%{email}</strong>.'
+        ai_settings_header: 'إعدادات الذكاء الاصطناعي'
+        finish_sign_up_header: 'قم بإنهاء إنشاء حسابك'
+        finish_sign_up_header_error: 'يرجى تصحيح الأخطاء التالية:'
+        finish_sign_up_subheader: 'املأ المعلومات التالية لإنهاء إنشاء حساب Code.org لـ <strong>%{email}</strong>.'
+        finish_sign_up_subheader_markdown: 'املأ المعلومات التالية لإنهاء إنشاء حساب Code.org لـ **%{email}**.'
+        finish_sign_up_subheader_provider: 'املأ المعلومات التالية لإنهاء إنشاء حساب Code.org مع <strong>%{provider}</strong> لـ <strong>%{email}</strong>.'
         finish_sign_up_subheader_provider_markdown: 'املأ المعلومات التالية لإكمال إنشاء حساب على Code.org مع **%{provider}** لـ **%{email}**.'
         reset_password_token: "رابط إعادة تعيين كلمة المرور الذي اتبعته"
         error:
           future: لا يمكن أن يكون في المستقبل
-        us_state: 'الولاية'
+        user_type: 'نوع الحساب'
+        us_state: 'حالة'
+        ai_rubrics_disabled: 'تعطيل ميزة تقييم الذكاء الاصطناعي'
   beta: "تجريبي"
   hello: "مرحباً بالعالم"
   welcome_back: "أهلاً بكم من جديد، %{name}"
   your_professional_learning_plan: "خطة التعلم المهنية الخاصة بك"
   see_your_learning_plan: "انظر إلى خطة التعلم الخاصة بك"
-  submit: تسجيل
-  unsubmit: عدم تقديم
+  submit: إرسال
+  unsubmit: إلغاء الإرسال
   previous_page: الصفحة السابقة
   next_page: الصفحة التالية
   next_level: المستوى التالي
@@ -202,6 +206,8 @@ ar:
     parent_account_email_progress_permission: "هل يمكننا إرسال تحديثات إليك عبر البريد الإلكتروني حول تقدم طفلك ومشاريعه وتحديثات حول الدورة التدريبية وعلم الحاسوب؟ [(راجع سياسة الخصوصية لدينا)] %{privacy_policy_url}"
     parent_account_email_label: "البريد الإلكتروني للوالد / الوصي"
     us_state: 'الولاية'
+    us_state_dropdown_options:
+      other: "أنا أعيش في مكان غير مدرج هنا"
   school_info:
     title: 'معلومات المدرسة (اختيارية)'
     school_country: 'بلد المدرسة'
@@ -271,6 +277,8 @@ ar:
   parent_mailer:
     student_associated_subject: 'معلومات الدخول على Code.org'
     parent_email_added_subject: 'مرحبا بكم في Code.org!'
+    parent_permission_request_subject: "موافقة الوالدين مطلوبة لوصول طفلك إلى Code.org"
+    parent_permission_reminder_subject: "تذكير، موافقة الوالدين مطلوبة لوصول طفلك إلى Code.org"
   teacher_mailer:
     new_teacher_subject: 'مرحبا بكم في Code.org!'
     delete_teacher_subject: 'إشعار من Code.org: لقد تم إلغاء حسابك'
@@ -473,7 +481,7 @@ ar:
       example_with_number: 'مثال الحل %{solution_number}'
       submitted_on: 'تم تقديمه في:'
       last_updated: 'آخر تحديث:'
-      unsubmit: 'عدم تقديم'
+      unsubmit: 'إلغاء الإرسال'
       worked_with: 'بالعمل مع'
       update_lock_settings: 'تحديث إعداد القفل هنا.'
       clear_response: 'استجابة واضحة'
@@ -516,7 +524,7 @@ ar:
     update_email: "تحديث"
     for_parents_and_guardians: "للآباء وأولياء الأمور"
     link_a_parent_email: "اربط عنوان البريد الإلكتروني للوالد / ولي الأمر بهذا الحساب للبقاء على اطلاع دائم بتقدم طفلك ومشاريعه. ستتمكن أيضًا من استخدام عنوان البريد الإلكتروني هذا لاسترداد كلمة المرور."
-    parent_guardian_email_label: "بريد الوالد/الوصي"
+    parent_guardian_email_label: "البريد الإلكتروني للوالد/الوصي"
     remove_parent_email_label: "حذف"
     none: "لا شيء"
     only_one_parent_email_supported_warning: "ملاحظة: نحن فقط قادرون على دعم عنوان بريد إلكتروني واحد من الوالدين / ولي الأمر لكل حساب تابع للطالب في الوقت الحالي."

@@ -401,6 +401,7 @@ describe('manageStudentsRedux', () => {
         5: {
           id: 1,
           name: 'StudentName5',
+          familyName: 'FamName5',
           username: 'student5',
           userType: 'student',
           age: 14,
@@ -556,11 +557,28 @@ describe('manageStudentsRedux', () => {
         name: 'New name',
       });
 
+      const editStudentFamilyNameAction = editStudent(1, {
+        familyName: 'New fam name',
+      });
+      const stateWithFamilyName = manageStudents(
+        stateWithName,
+        editStudentFamilyNameAction
+      );
+      assert.deepEqual(stateWithFamilyName.editingData[1], {
+        ...sectionLoginData[1],
+        name: 'New name',
+        familyName: 'New fam name',
+      });
+
       const editStudentAgeAction = editStudent(1, {age: 13});
-      const stateWithAge = manageStudents(stateWithName, editStudentAgeAction);
+      const stateWithAge = manageStudents(
+        stateWithFamilyName,
+        editStudentAgeAction
+      );
       assert.deepEqual(stateWithAge.editingData[1], {
         ...sectionLoginData[1],
         name: 'New name',
+        familyName: 'New fam name',
         age: 13,
       });
 
@@ -572,6 +590,7 @@ describe('manageStudentsRedux', () => {
       assert.deepEqual(stateWithGender.editingData[1], {
         ...sectionLoginData[1],
         name: 'New name',
+        familyName: 'New fam name',
         age: 13,
         gender: 'm',
       });
@@ -586,6 +605,7 @@ describe('manageStudentsRedux', () => {
       assert.deepEqual(stateWithShareSetting.editingData[1], {
         ...sectionLoginData[1],
         name: 'New name',
+        familyName: 'New fam name',
         age: 13,
         gender: 'm',
         sharingDisabled: true,
@@ -657,14 +677,26 @@ describe('manageStudentsRedux', () => {
         },
       };
       const action = addMultipleRows({
-        '-1': {id: -1, name: 'student -1', isEditing: true},
-        '-2': {id: -2, name: 'student -2', isEditing: true},
+        '-1': {id: -1, name: 'student -1', familyName: '', isEditing: true},
+        '-2': {id: -2, name: 'student -2', familyName: '', isEditing: true},
+        '-3': {
+          id: -3,
+          name: 'student -3',
+          familyName: 'family -3',
+          isEditing: true,
+        },
       });
       const nextState = manageStudents(startingState, action);
 
       const expectedData = {
-        '-1': {id: -1, name: 'student -1', isEditing: true},
-        '-2': {id: -2, name: 'student -2', isEditing: true},
+        '-1': {id: -1, name: 'student -1', familyName: '', isEditing: true},
+        '-2': {id: -2, name: 'student -2', familyName: '', isEditing: true},
+        '-3': {
+          id: -3,
+          name: 'student -3',
+          familyName: 'family -3',
+          isEditing: true,
+        },
         4: {id: 4, name: 'original student', isEditing: true},
       };
       assert.deepEqual(nextState.studentData, expectedData);
@@ -721,6 +753,7 @@ describe('manageStudentsRedux', () => {
       const studentDataToAdd = {
         id: 111,
         name: 'new student',
+        familyName: 'fam name',
         age: 17,
         gender: 'f',
         secretPicturePath: '/wizard.jpg',
@@ -777,6 +810,7 @@ describe('manageStudentsRedux', () => {
         111: {
           id: 111,
           name: 'new student a',
+          familyName: 'fam a',
           age: 17,
           gender: 'f',
           secretPicturePath: '/wizard.jpg',

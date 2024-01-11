@@ -64,6 +64,8 @@ sk:
           name: nekonečno
         netsim:
           title: Simulátor Internetu
+        pixelation:
+          title: Pixelácia
         20-hour:
           title: Zrýchlený Úvod do Informatiky (zastaralý)
           description: Tento 20-hodinový kurz pokrýva základné koncepty informatiky a programovania obsiahnuté v kurzoch 2-4. Kurz je určený pre žiakov vo veku 10 - 18 rokov, ale určite pobaví študentov všetkých vekových kategórií!
@@ -143,15 +145,17 @@ sk:
           description_short: Vytvor príbeh alebo hru s Gumball Play Labom!
           student_description: Vytvor príbeh alebo hru s Gumball Play Labom!
         starwars:
+          title: 'Hviezdne vojny: Budovanie galaxie pomocou kódu (JavaScript)'
           description: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars v ďalekej galaxii.
           description_short: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars v ďalekej galaxii.
           student_description: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars v ďalekej galaxii.
         starwarsblocks:
+          title: 'Star Wars: Budovanie galaxie pomocou kódu (Blockly)'
           description: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars v ďalekej galaxii.
           description_short: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars v ďalekej galaxii.
           student_description: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars v ďalekej galaxii.
         mc:
-          title: Minecraft Hodina Kódu
+          title: 'Minecraft: Dobrodruh'
           description: Použi bloky kódov, aby si vzal Steva alebo Alex na dobrodružstvo po svete Minecraftu.
           description_short: Preskúmaj Minecraft svet prostredníctvom kódu.
           student_description: Použi bloky kódov, aby si vzal Steva alebo Alex na dobrodružstvo po svete Minecraftu.
@@ -227,6 +231,8 @@ sk:
           student_description: úvod k internetovému simulátoru a diskusia o tom ako pomocou neho učíme o fungovaní internetu
         CSDU1-Draft:
           description_short: Riešenie problémov
+        CSDU2-Draft:
+          description_short: Vývoj webových stránok
         CSDU5-Draft:
           description_short: Dáta
         CSF_Secret_Sample_Story:
@@ -343,6 +349,8 @@ sk:
           description_short: Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú verziu hry Minecraft.
           description: Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú verziu hry Minecraft.
           student_description: Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú verziu hry Minecraft.
+        flappy-impact-study:
+          title: Flappy kód s prieskumom
         coursea-draft:
           title: 'Základy informatiky: Kurz A'
         courseb-draft:
@@ -456,6 +464,8 @@ sk:
           lesson_groups:
             cspSurvey:
               display_name: Dotazník
+        csd2-old:
+          description_short: Vývoj webových stránok
         coursea-2017:
           title: Kurz A
           assignment_family_title: Kurz A
@@ -911,7 +921,7 @@ sk:
             cspSurvey:
               display_name: Dotazník
         spritelab:
-          description_audience: Kurz E/F študenti
+          description_audience: Kurz E/F žiaci
         csd1-dlp-18:
           lesson_groups:
             required:
@@ -1034,7 +1044,7 @@ sk:
             content:
               display_name: Obsah
         spritelab-simple:
-          description_audience: Kurz E/F študenti
+          description_audience: Kurz E/F žiaci
         frozen-2018:
           title: Nový Frozen Skript
         frozen-2018-test:
@@ -2692,6 +2702,8 @@ sk:
           description_audience: Ročníky 6-9
         poem-art-2021:
           title: Básnické umenie
+        poetry-2021:
+          title: Programovanie s poéziou
         hello-world-food-2021:
           title: 'Ahoj svet: Jedlo'
         hello-world-emoji-2021:
@@ -3262,6 +3274,10 @@ sk:
             lessonGroup-3:
               display_name: Kapitola 2 – Navrhujeme aplikáciu strojového učenia
           title: Umelá inteligencia a strojové učenie
+        csc-ecosystems:
+          name: csc-ecosystems
+        csc-ecosystems-2022:
+          name: csc-ecosystems-2022
         vpl-csd1-ayw-pilot-2022:
           lessons:
             lesson-6:
@@ -3389,6 +3405,8 @@ sk:
               display_name: 'Kapitola 1: Postup riešenia problémov'
             lessonGroup-3:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
+            lessonGroup-5:
+              display_name: Dotazník
           student_description: Tematický celok „Riešenie problémov a výpočtová technika“ je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš, ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa svojho výberu.
         csd2-2023:
           lesson_groups:
@@ -3534,6 +3552,11 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Vyučujeme CS Connections
+        csc-ecosystems-2023:
+          lessons:
+            lesson-3:
+              name: Naprogramuj si vlastný ekosystém
+          title: Simulácia morského ekosystému (2023)
         tess-testing-problem-solving-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3552,6 +3575,7 @@ sk:
               display_name: 'Kapitola 1: Tvorba webových stránok'
             lessonGroup-4:
               display_name: 'Kapitola 2: Viacstránkové weby'
+          title: Vývoj webových stránok
         pre-express-2023:
           lesson_groups:
             csf_sequencing:
@@ -3721,6 +3745,8 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitola 1: Postup riešenia problémov'
+            lessonGroup-4:
+              display_name: Dotazník
           student_description: Tematický celok „Riešenie problémov a výpočtová technika“ je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš, ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa svojho výberu.
         focus-on-creativity2-2023:
           lesson_groups:
@@ -3745,6 +3771,8 @@ sk:
               display_name: 'Kapitola 1: Postup riešenia problémov'
             lessonGroup-3:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
+            lessonGroup-5:
+              display_name: Dotazník
           student_description: Tematický celok „Riešenie problémov a výpočtová technika“ je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš, ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa svojho výberu.
         focus-on-hardware2-2023:
           lesson_groups:
@@ -3761,6 +3789,8 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitola 1: Postup riešenia problémov'
+            lessonGroup-4:
+              display_name: Dotazník
           student_description: Tematický celok „Riešenie problémov a výpočtová technika“ je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš, ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa svojho výberu.
         focus-on-data2:
           lesson_groups:
@@ -3785,6 +3815,8 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitola 1: Postup riešenia problémov'
+            lessonGroup-4:
+              display_name: Dotazník
           student_description: Tematický celok „Riešenie problémov a výpočtová technika“ je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš, ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa svojho výberu.
         focus-on-design-with-purpose2-2023:
           lesson_groups:
@@ -3807,6 +3839,8 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitola 1: Postup riešenia problémov'
+            lessonGroup-4:
+              display_name: Dotazník
           student_description: Tematický celok „Riešenie problémov a výpočtová technika“ je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš, ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa svojho výberu.
         focus-on-coding2-2023:
           lesson_groups:
@@ -3829,6 +3863,8 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitola 1: Postup riešenia problémov'
+            lessonGroup-4:
+              display_name: Dotazník
           student_description: Tematický celok „Riešenie problémov a výpočtová technika“ je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš, ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa svojho výberu.
         focus-on-impact-in-society2-2023:
           lesson_groups:
@@ -4146,3 +4182,252 @@ sk:
           lesson_groups:
             lessonGroup-3:
               display_name: Triedy
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitálne občianstvo
+            lessonGroup-3:
+              display_name: Postupnosť
+            lessonGroup-4:
+              display_name: Cykly
+            lessonGroup-5:
+              display_name: Vplyv Informatiky
+          description_audience: 'Vek: 4-7'
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Dáta
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitálne občianstvo
+            lessonGroup-3:
+              display_name: Postupnosť
+            lessonGroup-4:
+              display_name: Cykly
+            lessonGroup-5:
+              display_name: Vplyv Informatiky
+            lessonGroup-6:
+              display_name: Dáta
+          description_audience: 'Vek: 4-7'
+          description_short: Predstavenie informatiky pre predškolákov.
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Dáta
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitálne občianstvo
+            lessonGroup-3:
+              display_name: Postupnosť
+            lessonGroup-4:
+              display_name: Cykly
+            lessonGroup-5:
+              display_name: Vplyv Informatiky
+            lessonGroup-6:
+              display_name: Udalosti
+            lessonGroup-7:
+              display_name: Záverečný projekt
+            lessonGroup-8:
+              display_name: Dáta
+          description_audience: Vek 5-8
+          description_short: Úvod do informatiky pre žiakov, ktorí len začínajú čítať. Podobný Kurzu A, ale jednotlivé koncepty precvičí viac dohĺbky.
+        nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Výpočtové systémy
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitálne občianstvo
+            lessonGroup-3:
+              display_name: Postupnosť
+            lessonGroup-4:
+              display_name: Cykly
+            lessonGroup-5:
+              display_name: Udalosti
+            lessonGroup-6:
+              display_name: Dáta
+            lessonGroup-8:
+              display_name: Výpočtové systémy
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitálne občianstvo
+            lessonGroup-3:
+              display_name: Postupnosť
+            lessonGroup-4:
+              display_name: Vplyv Informatiky
+            lessonGroup-6:
+              display_name: Cykly
+            lessonGroup-7:
+              display_name: Dáta
+            lessonGroup-8:
+              display_name: Záverečný projekt
+          description_audience: Vek 7-11
+          description_short: Nauč sa používať podmienky. Vytvor vlastný obraz, príbeh, hru, či tanečnú party.
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Vnorené cykly
+            lessonGroup-4:
+              display_name: Funkcie
+            lessonGroup-6:
+              display_name: Záverečný projekt
+          description_audience: Vek 8-12
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprajty
+          description_audience: Vek 9-13
+          description_short: Nauč sa všetky koncepty z kurzu Základy informatiky a vytvor vlastné umelecké dielo, príbeh alebo hru.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprajty
+            lessonGroup-3:
+              display_name: Podmienené príkazy
+            lessonGroup-5:
+              display_name: Premenné
+            lessonGroup-6:
+              display_name: Vplyv Informatiky
+            lessonGroup-7:
+              display_name: Záverečný projekt
+          description_audience: Vek 9-13
+          description_short: Nauč sa všetky koncepty z kurzu Základy informatiky a vytvor vlastné umelecké dielo, príbeh alebo hru.
+        how-ai-works-2023:
+          title: Ako funguje umelá inteligencia
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Úvod
+        virtual-pl-csp-summer-day3:
+          title: Deň 3
+        virtual-pl-csp-summer-day4:
+          title: Deň 4
+        virtual-pl-csp-summer-day5:
+          title: Deň 5
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Úvod
+          title: Deň 3
+        virtual-pl-csa-summer-day4:
+          title: Deň 4
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Úvod
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Úvod
+        self-paced-pl-csd-unit1-2-2023:
+          title: 'Modul 1: Príprava na výučbu riešenia problémov a výpočtovej techniky'
+          description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Riešenie problémov a výpočtová technika Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy riešenia problémov a výpočtovej techniky.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 30 minút
+          student_description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Riešenie problémov a výpočtová technika Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy riešenia problémov a výpočtovej techniky.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 30 minút
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Modul 2: Príprava na výučbu vývoja webových stránok'
+        self-paced-pl-csd-unit3-2-2023:
+          title: Príprava na výučbu interaktívnych animácií a hier
+          description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Interaktívne animácie a hry Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy interaktívnych animácií a hier.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   zapojíte sa do Game Lab.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 120 minút
+          student_description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Interaktívne animácie a hry Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy interaktívnych animácií a hier.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   zapojíte sa do Game Lab.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 120 minút
+        self-paced-pl-csd-unit4-2-2023:
+          title: 'Modul 4: Príprava na výučbu procesu dizajnu'
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Modul 5: Príprava na výučbu údajov a spoločnosti'
+        web-dev-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Tvorba webových stránok'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Viacstránkové weby'
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Dotazník
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Postup riešenia problémov'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Počítače a riešenie problémov'
+          student_description: Tematický celok „Riešenie problémov a výpočtová technika“ je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš, ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa svojho výberu.
+        csd2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Tvorba webových stránok'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Viacstránkové weby'
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Obrázky a animácie'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Tvorba hier'
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Užívateľsky orientovaný dizajn'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Prototypovanie aplikácií'
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Prezentácia informácií'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Riešenie problémov s dátami'
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+          title: Kapitola 6A - (Možnosť A) Aplikácie a hardvér - Circuit Playground ('23-'24)
+        csd6b-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Vstupy a výstupy
+          title: Kapitola 6B - (Možnosť B) Aplikácie a hardvér (micro:bit)
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Úvod do App Labu
+            lessonGroup-2:
+              display_name: Kapitola 1
+            lessonGroup-3:
+              display_name: Kapitola 2
+          title: Umelá inteligencia a strojové učenie
+        csd-post-survey-2024:
+          title: Hodnotenie kurzu

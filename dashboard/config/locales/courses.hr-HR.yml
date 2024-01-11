@@ -2,11 +2,11 @@
 hr:
   data:
     resources:
-      curriculum/csd/2020:
-        name: Nastavni plan
       curriculum/csd/2017:
+        name: Nastavni plan
+      curriculum/csd/2018:
         name: Nastavni plan
       curriculum/csd/2019:
         name: Nastavni plan
-      curriculum/csd/2018:
+      curriculum/csd/2020:
         name: Nastavni plan

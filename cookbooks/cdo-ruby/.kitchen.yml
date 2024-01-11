@@ -11,7 +11,6 @@ platforms:
   - name: ubuntu-20.04
     run_list:
       - recipe[apt]
-      - recipe[sudo-user]
 suites:
   - name: default
     run_list:

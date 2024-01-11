@@ -200,7 +200,7 @@ class TextToSpeechTest < ActiveSupport::TestCase
       published: true
     level.save
 
-    level.stubs(:write_to_file?).returns(true)
+    Policies::LevelFiles.stubs(:write_to_file?).returns(true)
 
     refute level.tts_should_update_long_instructions?
     level.long_instructions = "test long instructions updated"
@@ -217,7 +217,7 @@ class TextToSpeechTest < ActiveSupport::TestCase
     outer_level = create :level, name: 'level 1', type: 'Blockly', published: true
     outer_level.update(contained_level_names: [contained_level_one.name])
 
-    outer_level.stubs(:write_to_file?).returns(true)
+    Policies::LevelFiles.stubs(:write_to_file?).returns(true)
 
     refute outer_level.tts_should_update_long_instructions?
     outer_level.contained_level_names = [contained_level_two.name]

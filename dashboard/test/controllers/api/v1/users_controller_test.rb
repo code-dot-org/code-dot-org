@@ -24,7 +24,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
 
   test 'a post request to using_text_mode updates using_text_mode' do
     sign_in(@user)
-    assert !@user.using_text_mode
+    refute @user.using_text_mode
     post :post_using_text_mode, params: {user_id: 'me', using_text_mode: 'true'}
     assert_response :success
     response = JSON.parse(@response.body)
@@ -57,7 +57,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
 
   test 'a post request to mute_music updates mute_music' do
     sign_in(@user)
-    assert !@user.mute_music
+    refute @user.mute_music
     post :post_mute_music, params: {user_id: 'me', mute_music: 'true'}
     assert_response :success
     response = JSON.parse(@response.body)
@@ -71,6 +71,20 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_equal false, response["mute_music"]
     @user.reload
     assert_equal false, !!@user.mute_music
+  end
+
+  test 'a post request to show_progress_table_v2 updates show_progress_table_v2' do
+    sign_in(@user)
+    assert_nil @user.show_progress_table_v2
+    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: true}
+    assert_response :success
+    @user.reload
+    assert @user.show_progress_table_v2
+
+    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: false}
+    assert_response :success
+    @user.reload
+    refute @user.show_progress_table_v2
   end
 
   test 'a get request to display_theme returns display_theme attribute of user object' do
@@ -90,7 +104,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
 
   test 'a post request to display_theme updates display_theme' do
     sign_in(@user)
-    assert !@user.display_theme
+    refute @user.display_theme
     post :update_display_theme, params: {user_id: 'me', display_theme: 'dark'}
     assert_response :success
     response = JSON.parse(@response.body)

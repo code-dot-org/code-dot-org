@@ -52,6 +52,7 @@ fi:
         gender: 'Sukupuoli'
         edit_header: 'Muokkaa tiliä'
         finish_sign_up_header: 'Viimeistele tilin luominen'
+        finish_sign_up_header_error: 'Ole hyvä ja korjaa seuraavat virheet:'
         finish_sign_up_subheader: 'Täytä seuraavat tiedot viimeistelläksesi Code.org tilin <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Täytä seuraavat tiedot viimeistelläksesi Code.org tili **%{email}**.'
         finish_sign_up_subheader_provider: 'Täytä seuraavat tiedot viimeistelläksesi Code.org -tilin luomisen palvelun <strong>%{provider}</strong> tunnuksella <strong>%{email}</strong>.'
@@ -59,6 +60,7 @@ fi:
         reset_password_token: "Valitsemasi salasanan asetuslinkki"
         error:
           future: ei voi olla tulevaisuudessa
+        user_type: 'Tilin laji'
         us_state: 'Osavaltio'
   beta: "beta"
   hello: "Hei maailma"

@@ -17,7 +17,6 @@ zh-TW:
             '0.75': 小
             '1.00': 中
             '2.00': 大
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -25,7 +24,8 @@ zh-TW:
             '0.75': 小
             '1.00': 中
             '2.00': 大
-            '3.00': extra large
+      Dancelab_ai:
+        text: "{IMAGE}生成{VALUE}效果"
       Dancelab_alternateMoves:
         text: |-
           群組 {GROUP} 每 {N} 小節交替
@@ -77,6 +77,11 @@ zh-TW:
           UNIT:
             '"measures"': 小節
             '"seconds"': 秒
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': 小節
+            '"seconds"': 秒
       Dancelab_changeColorBy:
         text: "{COLOR} {METHOD} 改變 {AMOUNT}"
         options:
@@ -117,6 +122,31 @@ zh-TW:
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Zombie
             MOVES.Rest: 無
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveEachLR_slothcat:
+        text: 群組 {GROUP} 重複執行 {MOVE} {DIR} 無限次
+        options:
+          GROUP:
+            '"CAT"': 全部小貓
+            '"SLOTH"': 樹懶
+          MOVE:
+            MOVES.Roll: Body Roll
+            MOVES.ClapHigh: Clap High
+            MOVES.Dab: DAB
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Star
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
+            MOVES.Rest: 無
+            '"next"': 下一個
+            '"prev"': 上一個
+            '"rand"': 隨機
           DIR:
             '1': "→"
             "-1": "←"
@@ -471,26 +501,6 @@ zh-TW:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': 全部外星人
             '"BEAR"': 全部熊仔
@@ -610,6 +620,64 @@ zh-TW:
             '"tropical"': 熱帶
             '"vintage"': 復古
             '"warm"': 紅色
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          "設置背景效果
+          {PALETTE} {EFFECT}"
+        options:
+          EFFECT:
+            '"none"': 無
+            '"rand"': 隨機
+            '"quads"': 角
+            '"blooming_petals"': 盛開的花瓣
+            '"circles"': 隧道
+            '"color_cycle"': 色塊
+            '"diamonds"': 菱形
+            '"disco_ball"': 迪斯科球
+            '"fireworks"': 煙火
+            '"flowers"': 花朵
+            '"frosted_grid"': 磨砂網格
+            '"growing_stars"': 星星
+            '"higher_power"': Higher Power
+            '"swirl"': 催眠
+            '"kaleidoscope"': 萬花筒
+            '"lasers"': 鐳射舞池
+            '"splatter"': 飛濺油漆
+            '"rainbow"': 彩虹
+            '"ripples_random"': 隨機漣漪
+            '"ripples"': 漣漪
+            '"snowflakes"': 雪球
+            '"text"': 歌曲標題
+            '"galaxy"': 太空
+            '"sparkles"': 火花
+            '"spiral"': 螺旋
+            '"disco"': 正方形
+            '"squiggles"': 蜿曲線段
+            '"starburst"': 星爆
+            '"stars"': 星星
+            '"music_wave"': 音浪
+          PALETTE:
+            '"autumn"': 秋天
+            '"rave"': 黑白
+            '"cool"': 藍調
+            '"electronic"': 電子
+            '"grayscale"': 灰度
+            '"iceCream"': 冰淇淋
+            '"default"': 光亮
+            '"neon"': 霓虹
+            '"ocean"': 海洋
+            '"rainbow"': 彩虹
+            '"roses"': 玫瑰
+            '"sky"': 天空
+            '"spring"': 春天
+            '"summer"': 夏天
+            '"sunrise"': 日出
+            '"sunset"': 日落
+            '"tropical"': 熱帶
+            '"twinkling"': 閃爍
+            '"vintage"': 復古
+            '"warm"': 紅色
+            '"winter"': 冬天
       Dancelab_setDanceSpeed:
         text: 角色 {SPRITE} 跳舞速度設為 {SPEED}
         options:
@@ -1016,8 +1084,6 @@ zh-TW:
         options:
           INPUT1:
             '1': 檸檬汁
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         text: 製作{EFFECT}效果
         options:
@@ -1034,8 +1100,6 @@ zh-TW:
         options:
           INPUT1:
             '1': 檸檬汁
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: 讓{VAR1}與{SPRITE1COSTUME}交流
       FunctionBlocks_makeManipulative2:
@@ -1538,11 +1602,9 @@ zh-TW:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': 慢
             '5': 普通
             '7': 快
-            '9': extra fast
       gamelab_setTint:
         text: 角色 {THIS} 顏色設為 {COLOR}
       gamelab_setupScoreboard:
@@ -1700,6 +1762,12 @@ zh-TW:
         text: y 座標 {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE}滑動到{LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': 固體
+            '"liquid"': 液體
+            '"gas"': 氣體
       KatiesBlocks_tumbling:
         text: 翻滾
       Mikelab_addBehaviorSimple:
@@ -2083,14 +2151,10 @@ zh-TW:
         options:
           INPUT1:
             '1': 檸檬汁
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': 檸檬汁
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         text: "{BEHAVIOR}"
         options:
@@ -2373,16 +2437,10 @@ zh-TW:
         options:
           PORTION:
             '1': 全部
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': 全部
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE}說{SPEECH}"
       adaptations_adaptationBehaviors:
@@ -2513,7 +2571,7 @@ zh-TW:
             '"kelp"': 海帶
             '"polishedGranite"': 平滑花崗岩
       craft_placePrismarine:
-        text: 放置監獄
+        text: 放置海磷石
       craft_placeTorch:
         text: 放置火把
       craft_repeatUntilConduit:
@@ -2544,7 +2602,6 @@ zh-TW:
         text: "{VALUE}"
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '2': '2'
             '3': '3'

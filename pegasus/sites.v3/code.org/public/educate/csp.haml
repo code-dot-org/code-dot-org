@@ -3,7 +3,7 @@ title: Computer Science Principles
 theme: responsive_full_width
 ---
 
-%link{href: '/css/generated/design-system-pegasus.css', rel: 'stylesheet'}
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/csp-styles.css", rel: "stylesheet"}
 
 %section.hero-banner-basic.overlay
@@ -13,7 +13,7 @@ theme: responsive_full_width
         =hoc_s(:curriculum_name_csp)
       %p{style: "color: white"}
         =hoc_s(:csp_page_top_desc)
-      %a.link-button{href: CDO.studio_url("/courses/csp-2023?viewAs=Instructor")}
+      %a.link-button.white{href: CDO.studio_url("/courses/csp-2023?viewAs=Instructor")}
         =hoc_s(:call_to_action_explore_course)
     %figure
       %img{src: "/images/banners/banner-csp-phone-icon.png", alt: ""}
@@ -55,7 +55,7 @@ theme: responsive_full_width
 
 %section.bg-neutral-light
   .wrapper
-    = view :resources_tabs
+    = view :"tabs_section/resources/resources_tabs"
 
 %section
   .wrapper
@@ -71,5 +71,9 @@ theme: responsive_full_width
 %section
   .wrapper
     = view :support_and_questions_section
+
+%section#csp-newsletter-signup{style: "padding-top: 2rem"}
+  .wrapper
+    = view :subscribe_form, subscribe_form_section_title: hoc_s(:subscribe_form_section_title), subscribe_form_section_desc: hoc_s(:subscribe_form_section_desc_csp), form_height: "375px", form_src: "http://go.pardot.com/l/153401/2017-08-24/jjjm14"
 
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::CSP_CURRICULUM_PAGE_VISITED_EVENT

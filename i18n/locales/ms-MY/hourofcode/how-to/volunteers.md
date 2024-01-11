@@ -133,7 +133,7 @@ Bekerja dengan sekolah atau guru untuk membincangkan perkara yang paling rasiona
 - Terangkan cara teknologi memberikan kesan kepada kehidupan kita, bersama contoh yang akan diberikan perhatian oleh pelajar daripada pelbagai latar belakang - bercakap tentang teknologi yang menyelamatkan nyawa, membantu dan menghubungkan ramai individu.
 - Jika anda ialah syarikat teknologi, demo yang menyeronokkan dan produk berinovatif menjadi matlamat syarikat anda untuk diiusahakan. Jika anda bukan syarikat teknologi, bincangkan cara syarikat anda menggunakan teknologi untuk menyelesaikan masalah dan mencapai matlamat.
 - Sila jemput jurutera perisian dari syarikat anda untuk bercakap tentang sebab mereka memutuskan untuk mengambil pengajian sains komputer dan projek yang sedang diusahakan oleh mereka.
-- Jika anda mempunyai sekumpulan kakitangan yang akan memudahkan acara anda atau menjadi sukarelawan dengan sekolah setempat, pertimbangkan untuk membuat tempahan [kemeja-t tersuai](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) untuk kumpulan anda.
+- Sekiranya anda mempunyai sekumpulan kakitangan yang akan memudahkan acara anda atau menjadi sukarelawan dengan sekolah tempatan, pertimbangkan untuk memesan [t-shirt tersu](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) ai untuk kumpulan anda.
 
 ### 3. Rancangkan keperluan teknologi anda
 
@@ -186,7 +186,7 @@ Satu cara paling baik untuk membantu ialah menyebarkan berita dan mempromosikan 
 
 ### 1. Daftarkan Acara Anda
 
-Apabila anda [mendaftar acara Hour of Code anda](/#join), anda akan menerima komunikasi e-mel yang berguna dengan berita dan petua untuk menganjurkan Hour of Code yang berjaya. Ini juga merupakan cara anda boleh memberitahu sekolah tempatan atau ibu bapa bahawa anda menganjurkan acara berdekatan mereka.
+Apabila anda [mendaftar acara Hour of Code anda](/events), anda akan menerima komunikasi e-mel yang berguna dengan berita dan petua untuk menganjurkan Hour of Code yang berjaya. Ini juga merupakan cara anda boleh memberitahu sekolah tempatan atau ibu bapa bahawa anda menganjurkan acara berdekatan mereka.
 
 ### 2. Siarkan di dalam Media Sosial
 

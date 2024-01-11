@@ -37,6 +37,7 @@
   "blockly_fieldRestOneMeasure": "1 masë",
   "blockly_fieldRestMeasures": "{num} masa",
   "blockly_functionNamePlaceholder": "funksioni im ",
+  "blockly_toolboxCategoryEffects": "Efektet",
   "blockly_toolboxCategoryEvents": "Ngjarje",
   "blockly_toolboxCategoryFunctions": "funksione",
   "blockly_toolboxCategoryLogic": "Logjikë",
@@ -52,7 +53,7 @@
   "share": "Shpërndaje",
   "shareComingSoon": "Ndarja është në ndërtim e sipër. Kontrolloni përsëri së shpejti.",
   "startOver": "Fillo nga fillimi ",
-  "panelHeaderInstructions": "Udhëzimet",
-  "panelHeaderWorkspace": "Vendi i punës: ",
+  "panelHeaderInstructions": "Udhëzime",
+  "panelHeaderWorkspace": "Hapësira e punës",
   "continue": "Vazhdo "
 }

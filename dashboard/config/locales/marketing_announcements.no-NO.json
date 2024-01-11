@@ -1,0 +1,61 @@
+{
+  "no-NO": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Lær mer"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Lær mer"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Lær mer"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Lær mer"
+          },
+          "codebytes-2020": {
+            "buttonText": "Lær mer"
+          },
+          "coldplay": {
+            "buttonText": "Prøv"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Start"
+          },
+          "csjourneys": {
+            "buttonText": "Lær mer"
+          },
+          "csjourneys-22": {
+            "buttonText": "Lær mer"
+          },
+          "csleadersprize": {
+            "buttonText": "Lær mer"
+          },
+          "hoc-2023": {
+            "buttonText": "Lær mer"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Lær mer"
+          },
+          "hoc-more": {
+            "body": "Kodetime-nettstedet har over 100 dataaktiviteter for alle aldre og erfaringsnivåer, utviklet av Code.org og partnere."
+          },
+          "superhero": {
+            "buttonText": "Lær mer"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Bli med oss"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Bli med oss"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Bli med oss"
+          }
+        }
+      }
+    }
+  }
+}

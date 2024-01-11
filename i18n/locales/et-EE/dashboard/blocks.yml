@@ -5,19 +5,11 @@ et:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': keskmine
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': keskmine
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -63,6 +55,11 @@ et:
           UNIT:
             '"measures"': ühikud
             '"seconds"': sekundit
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': ühikud
+            '"seconds"': sekundit
       Dancelab_changeColorBy:
         text: muuda {COLOR} {METHOD} {AMOUNT}
         options:
@@ -101,6 +98,26 @@ et:
             MOVES.Kick: Täht
             MOVES.ThisOrThat: Seda või teist
             MOVES.Rest: Mitte ükski
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} {MOVE} {DIR} tee igavesti"
+        options:
+          GROUP:
+            '"CAT"': kõik kassid
+          MOVE:
+            MOVES.Roll: Rulli
+            MOVES.ClapHigh: Kõrge plaks
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Topelt jam
+            MOVES.Drop: Kükita
+            MOVES.Floss: Floss
+            MOVES.Fresh: Uus
+            MOVES.Clown: Kloun
+            MOVES.Kick: Täht
+            MOVES.ThisOrThat: Seda või teist
+            MOVES.Rest: Mitte ükski
+            '"next"': "(Järgmine)"
+            '"prev"': "(Eelmine)"
+            '"rand"': "(Juhuslik)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} tee {MOVE} {DIR} igavesti"
         options:
@@ -452,6 +469,24 @@ et:
             '"text"': Laulu pealkiri
             '"spiral"': Spiraal
             '"disco"': Ruudud
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          määra taustaefekt
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Mitte ükski
+            '"rand"': "(Juhuslik)"
+            '"color_cycle"': Värvid
+            '"diamonds"': Teemantid
+            '"swirl"': Hypno
+            '"rainbow"': Vikerkaar
+            '"snowflakes"': Lumi
+            '"text"': Laulu pealkiri
+            '"spiral"': Spiraal
+            '"disco"': Ruudud
+          PALETTE:
+            '"rainbow"': Vikerkaar
       Dancelab_setDanceSpeed:
         text: sea {SPRITE} tantsu kiirus {SPEED}
         options:
@@ -905,9 +940,7 @@ et:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': keskmine
-            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -956,10 +989,7 @@ et:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': keskmine
-            '100': large
       gamelab_setProp:
         text: muuda {SPRITE} {PROPERTY} {VAL}
         options:
@@ -976,10 +1006,7 @@ et:
           PROPERTY:
             '"scale"': suurus
           SIZE:
-            '25': extra small
-            '50': small
             '75': keskmine
-            '100': large
       gamelab_setSizes:
         text: muuda {SPRITE} {PROPERTY} {N}%
         options:
@@ -990,11 +1017,9 @@ et:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': aeglane
             '5': tavaline
             '7': kiire
-            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -1275,16 +1300,10 @@ et:
         options:
           PORTION:
             '1': kõik
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': kõik
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       binary_move:
         options:
           DIR:

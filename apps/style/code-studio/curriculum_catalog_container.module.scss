@@ -1,57 +1,17 @@
-@use "color.scss";
+@use 'color.scss';
 
-.catalogFiltersContainer {
-  display: flex;
-  align-items: baseline;
-  gap: 16px;
-  max-width: 60em;
-  margin: 1em auto;
-
-  button {
-    margin: 0;
-  }
-}
-
-.catalogLanguageFilterRow {
-  display: flex;
-  justify-content: space-between;
-  max-width: 60em;
-  margin: 1em auto;
-
-  p {
-    margin: 1em 0;
-  }
-
-  i {
-    margin: auto 0.25em;
-    font-size: 1.75em;
-  }
-
-  span {
-    font-size: 16px;
-  }
-}
-
-.catalogLanguageFilterRowNumAvailable {
-  display: flex;
-  flex: start;
-}
-
-button.catalogClearFiltersButton {
-  font-size: 16px;
-  margin-left: auto;
-}
+$container-width: 309px;
 
 .catalogContentContainer {
   max-width: 60em;
-  margin: 1em auto;
+  margin: 0 auto 1em auto;
 }
 
 .catalogContentCards {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, $container-width);
   justify-content: center;
-  gap: 1em;
+  grid-gap: 1em;
 }
 
 .catalogContentNoResults {
@@ -81,14 +41,12 @@ button.catalogClearFiltersButton {
 .assignSuccessMessageContainer {
   display: flex;
   min-width: 250px;
-  margin-left: -125px;
   background-color: color.$bootstrap_success_background;
   text-align: center;
   border-radius: 5px;
   border-color: color.$bootstrap_success_border;
   position: fixed;
-  z-index: 1;
-  left: 50%;
+  z-index: 4;
   top: 70px;
 
   button {
@@ -104,4 +62,9 @@ button.catalogClearFiltersButton {
 .assignSuccessMessage {
   margin: 16px;
   color: color.$bootstrap_success_text;
+}
+
+.assignSuccessMessageCenter {
+  display: flex;
+  justify-content: center;
 }

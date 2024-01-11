@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-To for Districts
+title: د ولسوالیو لپاره څنګه د کوډ ساعت
 ---
 
 {{ signup_button }}

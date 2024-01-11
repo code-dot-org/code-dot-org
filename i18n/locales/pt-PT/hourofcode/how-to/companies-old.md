@@ -1,11 +1,11 @@
 ---
-title: How to host an Hour of Code - Companies
+title: Como organizar uma Hora do Código - Empresas
 ---
 
 {{ signup_button }}
 
 # Como integrar a Hora de Código na sua empresa
-### Find out how you and your employees can inspire students to try computer science!
+### Descubra como você e seus funcionários podem inspirar os alunos a experimentar a ciência da computação!
 
 ***
 
@@ -57,9 +57,9 @@ Comece seu evento da Hora de Código inspirando os participantes e discutindo o 
 **Show an inspirational video:**
 
 - O vídeo original de lançamento do Code.org, com a participação de Bill Gates, Mark Zuckerberg e o astro da NBA, Chris Bosh (há versões de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA)).
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
+- Vídeo mundial da [Hora do Código](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [O presidente Obama apela a que todos os alunos aprendam ciência computacional](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Encontre mais vídeos inspiradores [aqui.](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)
 
 **Ideias para apresentar a sua atividade da Hora de Código a estudantes:**
 
@@ -67,7 +67,7 @@ Comece seu evento da Hora de Código inspirando os participantes e discutindo o 
 - Se trabalha numa empresa de tecnologia, demonstre produtos divertidos e inovadores que a sua empresa esteja a desenvolver.
 - Se não trabalha numa empresa de tecnologia, aborde as formas como a sua empresa usa a tecnologia para resolver problemas e atingir objetivos.
 - Convide engenheiros de software da sua empresa para falar sobre o que os levou a escolher o estudo da ciência computacional e sobre os projetos em que estejam a trabalhar.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Veja dicas para fazer com que as meninas se interessem pela ciência da computação [aqui]({{ urls/girls }}).
 
 ## 6. Code!
 **Direcione os participantes para a atividade**

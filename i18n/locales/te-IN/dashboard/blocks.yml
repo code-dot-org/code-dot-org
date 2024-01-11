@@ -48,6 +48,11 @@ te:
           UNIT:
             '"measures"': మెజర్స్
             '"seconds"': సెకండ్లు
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': మెజర్స్
+            '"seconds"': సెకండ్లు
       Dancelab_changeColorBy:
         text: మార్చు {COLOR} {METHOD} by {AMOUNT}
         options:
@@ -85,6 +90,26 @@ te:
             MOVES.Kick: స్టార్
             MOVES.ThisOrThat: ఇది లేక అది
             MOVES.Rest: ఏదీ కాదు
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} చేయండి {MOVE} {DIR} ఎప్పటికీ"
+        options:
+          GROUP:
+            '"CAT"': క్యాట్
+          MOVE:
+            MOVES.Roll: బాడీ రోల్
+            MOVES.ClapHigh: క్లాప్ హై
+            MOVES.Dab: డాబ్
+            MOVES.DoubleJam: డబుల్ డౌన్
+            MOVES.Drop: డ్రాప్
+            MOVES.Floss: ఫ్లాస్
+            MOVES.Fresh: ఫ్రెష్
+            MOVES.Clown: గాంగ్నమ్
+            MOVES.Kick: స్టార్
+            MOVES.ThisOrThat: ఇది లేక అది
+            MOVES.Rest: ఏదీ కాదు
+            '"next"': "(తరువాత)"
+            '"prev"': "(ముందటి)"
+            '"rand"': "(రాండమ్)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} చేయండి {MOVE} {DIR} ఎప్పటికీ"
         options:
@@ -385,26 +410,6 @@ te:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': ఏలియన్
             '"BEAR"': బేర్
@@ -502,11 +507,43 @@ te:
             '"tropical"': ట్రాపికల్
             '"vintage"': వింటేజ్
             '"warm"': వామ్
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: "బ్యాక్‌గ్రౌండ్ ఎఫెక్ట్ \n{PALETTE} {EFFECT} సెట్ చేయండి"
+        options:
+          EFFECT:
+            '"none"': ఏదీ కాదు
+            '"rand"': "(రాండమ్)"
+            '"circles"': సర్కిల్స్
+            '"color_cycle"': రంగులు
+            '"diamonds"': డైమండ్స్
+            '"disco_ball"': డిస్కో బాల్
+            '"fireworks"': ఫైర్‌వర్క్స్
+            '"swirl"': హిప్నో
+            '"lasers"': లేజర్ డాన్స్ ఫ్లోర్
+            '"splatter"': పెయింట్ స్ప్లాట్టర్
+            '"rainbow"': రెయిన్‌బో
+            '"snowflakes"': స్నో
+            '"text"': పాట పేర్లు
+            '"galaxy"': స్పేస్
+            '"sparkles"': స్పార్కల్స్
+            '"spiral"': స్పైరల్
+            '"disco"': స్క్వైర్స్
+            '"stars"': స్టార్స్
+          PALETTE:
+            '"rave"': బ్లాక్ అండ్ వైట్
+            '"cool"': కూల్
+            '"electronic"': ఎలక్ట్రానిక్
+            '"iceCream"': ఐస్ క్రీమ్
+            '"default"': లైట్
+            '"neon"': నియోన్
+            '"rainbow"': రెయిన్‌బో
+            '"tropical"': ట్రాపికల్
+            '"vintage"': వింటేజ్
+            '"warm"': వామ్
       Dancelab_setDanceSpeed:
         text: సెట్ చేయండి {SPRITE} డాన్స్ స్పీడ్ {SPEED} కు
         options:
           SPEED:
-            '1': normal
             '2': ఫాస్ట్
             '4': వెరీ ఫాస్ట్
             '0.5': స్లో
@@ -527,7 +564,6 @@ te:
             '"SHARK"': షార్క్
             '"UNICORN"': యూనికార్న్
           SPEED:
-            '1': normal
             '2': ఫాస్ట్
             '4': వెరీ ఫాస్ట్
             '0.5': స్లో
@@ -862,8 +898,6 @@ te:
         options:
           INPUT1:
             '1': నిమ్మ రసం
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -874,8 +908,6 @@ te:
         options:
           INPUT1:
             '1': నిమ్మ రసం
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: "[SPRITE1COSTUME] తో [VAR1] కమ్యూనికేట్ చేయండి"
       FunctionBlocks_makeManipulative2:
@@ -1134,11 +1166,8 @@ te:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': స్లో
-            '5': normal
             '7': ఫాస్ట్
-            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -1175,6 +1204,12 @@ te:
             '"w"': w
             '"s"': s
             '"d"': d
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': ఘనపదార్థం
+            '"liquid"': ద్రవము
+            '"gas"': వాయువు
       Mikelab_addTrainingData:
         options:
           NAME:
@@ -1340,14 +1375,10 @@ te:
         options:
           INPUT1:
             '1': నిమ్మ రసం
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': నిమ్మ రసం
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -1466,7 +1497,6 @@ te:
       Poetry_whenLineShows:
         options:
           'N':
-            '0': "???"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -1520,7 +1550,6 @@ te:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '2': '2'
             '3': '3'

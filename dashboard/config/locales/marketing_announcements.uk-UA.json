@@ -1,0 +1,73 @@
+{
+  "uk-UA": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Дізнайтеся більше",
+            "title": "Дослідимо штучний інтелект та машинне навчання"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Дізнайтеся більше"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Дізнайтеся більше"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Дізнайтеся більше"
+          },
+          "codebytes-2020": {
+            "buttonText": "Дізнайтеся більше"
+          },
+          "coldplay": {
+            "buttonText": "Спробувати"
+          },
+          "congrats-certificate-share": {
+            "body": "Навчитись може кожен!",
+            "buttonText": "Початок",
+            "title": "Спробуйте Годину коду"
+          },
+          "csjourneys": {
+            "buttonText": "Дізнайтеся більше"
+          },
+          "csjourneys-22": {
+            "buttonText": "Дізнайтеся більше"
+          },
+          "csleadersprize": {
+            "buttonText": "Дізнайтеся більше"
+          },
+          "hoc-2023": {
+            "body": "Приєднуйтесь до мільйонів людей по всьому світу, щоб організувати Годину коду, з ШІ або без нього, і дізнатися, як працює ШІ. Це може зробити будь-хто і будь-де. Досвід не потрібен.",
+            "buttonText": "Дізнайтеся більше",
+            "title": "Година коду: творчість та ШІ"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Дізнайтеся більше",
+            "title": "Танцювальна вечірка: версія ШІ"
+          },
+          "hoc-more": {
+            "body": "Сайт Години коду має більше 500 інформатичних діяльностей для будь-якого віку та рівня досвіду, розроблених Code.org та партнерами."
+          },
+          "home-learning-2020": {
+            "buttonText": "Переглянути ідеї проєктів"
+          },
+          "superhero": {
+            "buttonText": "Дізнатися більше"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Приєднуйтесь"
+          },
+          "teacher-apps-nominate-2020": {
+            "buttonText": "Визначити вчителя"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Приєднуйтесь"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Приєднуйтесь"
+          }
+        }
+      }
+    }
+  }
+}

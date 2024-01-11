@@ -544,13 +544,9 @@
   volunteer_engineer_submission_subtitle_generic: '100,000 guru akan menganjurkan Hour of Code di dalam bilik darjah mereka tahun ini, 7-13 Dis 2015. Mereka mahukan bantuan anda!'
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} guru memerlukan sukarelawan.<br>%{num_volunteers} sukarelawan telah mendaftar. Sertai mereka."
   volunteer_engineer_submission_intro_background: "The Hour of Code ialah pergerakan global untuk mencuba pengenalan selama satu jam kepada sains komputer, menjangkau berpuluh juta pelajar di 180+ negara. Sila libatkan diri semasa Minggu Pendidikan Sains Komputer, 7-13 Disember."
-  volunteer_engineer_submission_intro_recruit: 'Guru ingin mempunyai seseorang <span style="font-family: ''Gotham 7r'', sans-serif;">ghairah tentang pendidikan sains komputer</span> yang boleh membantu di dalam bilik darjah, atau untuk seseorang yang boleh <span style ="font-family: ''Gotham 7r'', sans-serif;">inspirasi</span> pelajar mereka dengan bercakap tentang keluasan kemungkinan dengan sains komputer (yang boleh dilakukan melalui sembang video).'
   volunteer_engineer_submission_intro_recruit_markdown: "Guru ingin mempunyai seseorang **bersemangat tentang pendidikan sains komputer** yang boleh membantu di dalam bilik darjah, atau seseorang yang boleh **memberi inspirasi** kepada pelajar mereka dengan bercakap tentang luasnya kemungkinan dengan sains komputer (yang boleh dilakukan melalui sembang video)."
-  volunteer_engineer_submission_intro_guide: "Ketahui lebih lanjut tentang <a href=\"%{volunteer_guide}\">program sukarelawan di sini</a>."
   volunteer_engineer_submission_intro_guide_markdown: "Ketahui lebih lanjut tentang [program sukarela di sini](%{volunteer_guide})."
-  volunteer_engineer_submission_intro_signup: "Sila masukkan maklumat berikut jika anda seorang pelajar sains komputer atau profesional perisian. Anda mesti berumur sekurang-kurangnya 18 tahun untuk mendaftar sebagai sukarelawan. Harap maklum bahawa semua medan yang anda isi dalam bahagian ini akan tersedia secara terbuka kepada sesiapa sahaja yang melihat <a href=\"/volunteer/local\">peta sukarela</a>. Medan yang ditandakan dengan <span class=\"form-required-field\">*</span> diperlukan."
   volunteer_engineer_submission_intro_signup_markdown: "Sila masukkan maklumat berikut jika anda seorang pelajar sains komputer atau profesional perisian. Anda mesti berumur sekurang-kurangnya 18 tahun untuk mendaftar sebagai sukarelawan. Ambil perhatian bahawa semua medan yang anda isi dalam bahagian ini akan tersedia secara terbuka kepada sesiapa sahaja yang melihat [peta sukarelawan](/sukarelawan/local). Medan bertanda _*_ diperlukan."
-  volunteer_engineer_submission_intro_links: "Adakah anda seorang guru yang sedang mencari sukarelawan? Cari sukarelawan tempatan pada <a href=\"%{volunteer_local}\">peta sukarelawan</a> kami."
   volunteer_engineer_submission_intro_links_markdown: "Adakah anda seorang guru yang sedang mencari sukarelawan? Cari sukarelawan tempatan pada [peta sukarelawan](%{volunteer_local} kami)."
   volunteer_engineer_submission_update_information: "Kemas kini maklumat anda"
   volunteer_engineer_submission_header_shared: "Maklumat yang dikongsi dengan guru pada peta sukarela"
@@ -1516,12 +1512,14 @@
   header_stats: "Statistik"
   header_help_us: "Bantu Kami"
   header_about: "Tentang"
+  header_incubator: "Inkubator"
   header_teacher_community: "Komuniti Guru"
   header_help_support: 'Bantuan dan sokongan '
   header_report_bug: "Laporkan masalah"
   header_report_abuse: "Lapor Salah Guna"
   header_legal: "Privasi & Undang-undang"
   header_legal_privacy: "Dasar Privasi"
+  header_legal_cookie_notice: "Notis Kuki"
   header_legal_tos: "Terma Perkhidmatan"
   header_tutorials: "Tutorial"
   header_screen_reader_hamburger: "Menu"
@@ -1630,7 +1628,7 @@
   hoc2018_mc_download_adventurer: "Muat turun versi Pengembara Minecraft luar talian."
   hoc2018_mc_educators: "Untuk Warga Pendidik"
   hoc2018_mc_educators_box1_title: "Kod dengan Minecraft"
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Edisi Pendidikan menyediakan kurikulum sejajar standard, latihan dan pengekodan dalam Minecraft.'
+  hoc2018_mc_educators_box1_desc: "Minecraft: Edisi Pendidikan menyediakan kurikulum sejajar standard, latihan dan pengekodan dalam Minecraft."
   hoc2018_mc_educators_box1_button: "Mulakan"
   hoc2018_mc_educators_box2_title: "Muat turun Panduan Fasilitator"
   hoc2018_mc_educators_box2_desc: "Kit alatan ini akan membantu anda menganjurkan Hour of Code dan melibatkan pelajar anda dalam sains komputer."
@@ -1738,7 +1736,7 @@
   hoc2018_mc_with_microsoft: "Bekerjasama dengan"
   hoc2018_mc_thank_microsoft: "  Kami mengucapkan terima kasih kepada Microsoft kerana menyokong wawasan dan misi kami untuk memastikan setiap kanak-kanak mempunyai peluang mempelajari sains komputer dan kemahiran untuk berjaya pada abad ke-21.  "
   hoc2019_mc_mee_title: "Minecraft AI for Good"
-  hoc2019_mc_mee_description1: 'Tutorial Jam Kod Minecraft baharu kini boleh didapati di dalam Minecraft: Edisi Pendidikan untuk Windows, Mac dan iPad. Pelajari asas pengekodan dan terokai AI bersama pelajar anda!'
+  hoc2019_mc_mee_description1: "Tutorial Jam Kod Minecraft baharu kini boleh didapati di dalam Minecraft: Edisi Pendidikan untuk Windows, Mac dan iPad. Pelajari asas pengekodan dan terokai AI bersama pelajar anda!"
   hoc2019_mc_mee_description2: "Akses sumber percuma termasuk rancangan pelajaran, video, kurikulum sains komputer dan latihan guru."
   hoc2019_mc_more_coding_resources: "Lebih Banyak Sumber Pengekodan"
   hoc2019_dance_previous_versions: "Mencari versi Majlis Tari-Menari yang Terdahulu?  \nKlik di sini untuk memulakan [Part 1](%{dance_2018_link}) dan [Part 2](%{dance_extras_2018_link}) dari 2018."
@@ -1751,18 +1749,18 @@
   page_not_available_description: "Harap maaf, halaman yang anda minta tidak lagi tersedia di alamat ini. Jika anda masih memerlukan akses, sila e-mel [support@code.org](%{support_email_link})."
   page_not_available_button: "Kembali ke halaman utama"
   hoc2020_mc_available_code_org: "Tersedia di Dalam Code.org"
-  hoc2020_mc_available_mee: 'Tersedia di dalam Minecraft: Edisi Pendidikan'
+  hoc2020_mc_available_mee: "Tersedia di dalam Minecraft: Edisi Pendidikan"
   hoc2020_mc_mee_title: "Minecraft Tale of Two Villages"
-  hoc2020_mc_mee_description: 'Tutorial Jam Kod Minecraft baharu kini boleh didapati di dalam Minecraft: Edisi Pendidikan untuk Windows, Mac, Chromebook dan iPad. Pelajari asas pengekodan dan terokai kepelbagaian dan perangkuman bersama pelajar anda! Akses sumber percuma termasuk rancangan pelajaran, video, kurikulum sains komputer, pelajaran kesaksamaan dan latihan para guru.'
+  hoc2020_mc_mee_description: "Tutorial Jam Kod Minecraft baharu kini boleh didapati di dalam Minecraft: Edisi Pendidikan untuk Windows, Mac, Chromebook dan iPad. Pelajari asas pengekodan dan terokai kepelbagaian dan perangkuman bersama pelajar anda! Akses sumber percuma termasuk rancangan pelajaran, video, kurikulum sains komputer, pelajaran kesaksamaan dan latihan para guru."
   hoc2021_mc_mee_title: "Minecraft TimeCraft"
-  hoc2021_mc_mee_description: 'Mengembara kembali ke masa lalu dan belajar mengekod! Tutorial Jam Kod Minecraft baharu kini tersedia dalam Minecraft: Edisi Pendidikan untuk Windows, Mac, Chromebook dan iPad. Mulakan dengan sumber pendidik, latihan dan video percuma.'
+  hoc2021_mc_mee_description: "Mengembara kembali ke masa lalu dan belajar mengekod! Tutorial Jam Kod Minecraft baharu kini tersedia dalam Minecraft: Edisi Pendidikan untuk Windows, Mac, Chromebook dan iPad. Mulakan dengan sumber pendidik, latihan dan video percuma."
   hoc2021_mc_mee_villages_title: "Kisah Dua Kampung"
-  hoc2021_mc_mee_villages_description: 'Pelajari asas pengekodan dan terokai kepelbagaian dan perangkuman dengan pelajar anda dalam Minecraft: Edisi Pendidikan.'
+  hoc2021_mc_mee_villages_description: "Pelajari asas pengekodan dan terokai kepelbagaian dan perangkuman dengan pelajar anda dalam Minecraft: Edisi Pendidikan."
   hoc2021_mc_mee_ai_title: "AI untuk Kebaikan"
-  hoc2021_mc_mee_ai_description: 'Terokai AI dengan pelajar anda dan belajar mengekod dalam Minecraft: Edisi Pendidikan.'
+  hoc2021_mc_mee_ai_description: "Terokai AI dengan pelajar anda dan belajar mengekod dalam Minecraft: Edisi Pendidikan."
   hoc2022_mc_mee_title: "Hartanah Melepas Minecraft"
   hoc2022_mc_mee_description: 'Lepaskan diri dari rumah misteri menjelang subuh dan dapat satu juta zamrud! Tutorial Minecraft Hour of Code yang baru kini boleh didapati di Minecraft: Edisi Pendidikan untuk Windows, Mac, Chromebook, Ipad dan Mobile. Mulakan dengan sumber pendidik, latihan, dan video percuma. '
-  hoc2022_mc_mee_timecraft_description: 'Perjalanan kembali ke masa untuk menyelamatkan masa depan dalam pelajaran pengekodan percuma ini di Minecraft: Edisi Pendidikan.'
+  hoc2022_mc_mee_timecraft_description: "Perjalanan kembali ke masa untuk menyelamatkan masa depan dalam pelajaran pengekodan percuma ini di Minecraft: Edisi Pendidikan."
   footer_powered_by_aws: "Perkhidmatan Web Amazon dan logo \"Powered by AWS\" ialah tanda dagangan Amazon.com, Inc. atau ahli gabungannya di Amerika Syarikat dan/atau negara lain."
   footer_built_on_github: "Dibina pada GitHub daripada Microsoft"
   codebytes_skinny_banner_title: "Sertai kami 7-11 Disember untuk pelajaran mini langsung CodeBytes kami!"
@@ -1811,7 +1809,7 @@
   ai_zooniverse: "Zooniverse - Syot Kilat Zebra Gunung"
   ai_zooniverse_description: "Bantu melindungi Zebra Gunung Tanjung yang terancam dengan mengenal pasti haiwan berbeza di dalam imej."
   ai_audience: "Hadirin"
-  ai_minecraft_description: 'Akses sumber percuma termasuk rancangan pelajaran, video, kurikulum sains komputer dan latihan para guru. (Memerlukan Minecraft: Edisi Pendidikan)'
+  ai_minecraft_description: "Akses sumber percuma termasuk rancangan pelajaran, video, kurikulum sains komputer dan latihan para guru. (Memerlukan Minecraft: Edisi Pendidikan)"
   ai_k_12_audience: "K-12 (Pembacaan diperlukan)"
   ai_microsoft_workshop: "Bengkel maya secara percuma daripada Microsoft"
   ai_microsoft_workshop_description: "Cetuskan rasa ingin tahu dengan bengkel STEM dan pengekodan percuma"

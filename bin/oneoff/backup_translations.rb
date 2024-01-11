@@ -24,8 +24,9 @@ puts 'Moving content'
 file_count = 0
 script = 'poem-art'
 
+non_locale_i18n_directories = ['i18n/locales/original', 'i18n/locales/source', 'i18n/locales/en-US']
 Dir.glob("i18n/locales/**").each do |directory|
-  next if ['i18n/locales/original', 'i18n/locales/source', 'i18n/locales/en-US'].include? directory
+  next if non_locale_i18n_directories.include? directory
   file = File.join(directory, "/course_content/other/#{script}.json")
   locale = directory.delete_prefix('i18n/locales/')
 

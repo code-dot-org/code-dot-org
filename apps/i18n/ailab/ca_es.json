@@ -1,15 +1,15 @@
 {
-  "selectDataset": "Selecciona el conjunt de dades que vols fer servir.",
-  "uploadedDataset": "Acabes de pujar un conjunt de dades.",
-  "selectedDataset": "Acabes de seleccionar un conjunt de dades",
-  "dataDisplayLabel": "Tria una columna per fer una predicció.",
   "dataDisplayFeatures": "Tria una o més columnes com a entrades de dades que ajudin a fer la predicció.",
-  "selectedFeatureNumerical": "Acabes de seleccionar una característica numèrica.",
-  "selectedFeatureCategorical": "Acabes de seleccionar una característica de categoria.",
-  "trainModel": "S'està entrenant el teu model.",
+  "dataDisplayLabel": "Tria una columna per fer una predicció.",
   "generateResults": "S'està posant a prova el teu model.",
+  "modelSummary": "Has entrenat i desat el teu model amb èxit. Revisa els detalls del model i fes clic a Acabar per fer servir el teu model entrenat al Laboratori d'Aplicacions.",
   "results": "Revisa els resultats.",
   "resultsDetails": "S'estan mostrant els detalls dels resultats.",
   "saveModel": "Desa el model entrenat per fer-lo servir al Laboratori d'Aplicacions.",
-  "modelSummary": "Has entrenat i desat el teu model amb èxit. Revisa els detalls del model i fes clic a Acabar per fer servir el teu model entrenat al Laboratori d'Aplicacions."
+  "selectDataset": "Selecciona el conjunt de dades que vols fer servir.",
+  "selectedDataset": "Acabes de seleccionar un conjunt de dades",
+  "selectedFeatureCategorical": "Acabes de seleccionar una característica de categoria.",
+  "selectedFeatureNumerical": "Acabes de seleccionar una característica numèrica.",
+  "trainModel": "S'està entrenant el teu model.",
+  "uploadedDataset": "Acabes de pujar un conjunt de dades."
 }

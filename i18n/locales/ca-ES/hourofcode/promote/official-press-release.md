@@ -1,5 +1,5 @@
 ---
-title: Hour of Code Press Release for Elected Officials
+title: Nota de premsa de l'Hora del Codi per als càrrecs electes
 ---
 
 {{ signup_button }}

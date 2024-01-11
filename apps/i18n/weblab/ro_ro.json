@@ -1,7 +1,7 @@
 {
   "addCSSButton": "Adauga CSS",
-  "addImageButton": "Adăugare imagine",
   "addHTMLButton": "Adauga HTML",
+  "addImageButton": "Adăugare imagine",
   "closeFullscreenPreview": "Închide previzualizare fullscreen",
   "currentProjectCapacity": "{currentMegabytes}MB de {totalMegabytes}MB folosit",
   "disallowedHtml": "Fișierul \"{filename}\" conține elemente HTML care nu sunt permise: `{disallowedTags}`. Acestea vor fi eliminate atunci când acest dialog este închis.",
@@ -14,8 +14,8 @@
   "reset": "Resetați laboratorul web",
   "resetComplete": "Resetarea laboratorului web este finalizată",
   "resetFailure": "Resetarea laboratorului Web a eșuat: {message}.",
-  "toggleInspectorOn": "Inspector: Oprit",
   "toggleInspectorOff": "Inspector: Pe",
+  "toggleInspectorOn": "Inspector: Oprit",
   "troubleshootingSupport": "Vă rugăm să consultați articolul nostru de asistență [\"Depanarea problemelor Web Lab\"]({url}) pentru mai multe informații.",
   "uploadError": "Eroare de încărcare"
 }

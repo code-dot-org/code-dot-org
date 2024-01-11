@@ -1,38 +1,30 @@
 {
-  "navigateForward": "চালিয়ে যান",
-  "navigateBack": "পেছনে",
-  "tryAgain": "আবার চেষ্টা করুন",
-  "navigateDone": "শেষ",
-  "saveProgress": "সংরক্ষন করন",
-  "correctAnswer": "সঠিক",
-  "incorrectAnswer": "ভুল",
-  "modelCardPossibleValuesMinimum": "নূন্যতম",
-  "modelCardPossibleValuesMaximum": "সর্বোচ্চ",
-  "columnInspectorDescription": "বর্ণনা",
-  "columnDetailsMinimumValue": "নূন্যতম",
   "columnDetailsMaximumValue": "সর্বোচ্চ",
+  "columnDetailsMinimumValue": "নূন্যতম",
+  "columnInspectorDescription": "বর্ণনা",
+  "correctAnswer": "সঠিক",
   "datasets": {
-    "medical_priority": {
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "বয়স"
+        },
+        "Gender": {
+          "id": "লিঙ্গ"
+        }
+      }
+    },
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "কলা"
+        }
+      }
+    },
+    "census_part": {
       "fields": {
         "age": {
           "id": "বয়স"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "দিন"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "onion": {
-          "id": "পেঁয়াজ"
-        },
-        "lime": {
-          "id": "লেবু"
         }
       }
     },
@@ -46,66 +38,14 @@
         }
       }
     },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "বয়স"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Description": {
-          "id": "বর্ণনা"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "lime": {
-          "id": "লেবু"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "আকার"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "fruit": {
-          "id": "ফল"
-        }
-      }
-    },
-    "billionaires": {
+    "heart": {
       "fields": {
         "Age": {
           "id": "বয়স"
-        },
-        "Gender": {
-          "id": "লিঙ্গ"
         }
       }
     },
-    "student_alcohol_consumption": {
-      "fields": {
-        "age": {
-          "id": "বয়স"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "onion": {
-          "id": "পেঁয়াজ"
-        }
-      }
-    },
-    "census_part": {
+    "insurance_cost": {
       "fields": {
         "age": {
           "id": "বয়স"
@@ -119,6 +59,20 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "দেশ"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "বয়স"
+        }
+      }
+    },
     "movies": {
       "fields": {
         "Country": {
@@ -129,10 +83,17 @@
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "শিল্পী"
+        "onion": {
+          "id": "পেঁয়াজ"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Description": {
+          "id": "বর্ণনা"
         }
       }
     },
@@ -143,35 +104,27 @@
         }
       }
     },
-    "student_survey": {
+    "raspado_toy": {
       "fields": {
-        "Country": {
-          "id": "দেশ"
-        },
-        "Internet": {
-          "id": "ইন্টারনেট"
-        },
-        "Age": {
-          "id": "বয়স",
-          "description": "বয়স"
-        },
-        "Gender": {
-          "id": "লিঙ্গ",
-          "description": "লিঙ্গ"
+        "lime": {
+          "id": "লেবু"
         }
       }
     },
-    "boba_toy": {
+    "salad_toy": {
       "fields": {
-        "banana": {
-          "id": "কলা"
+        "fruit": {
+          "id": "ফল"
         }
       }
     },
-    "heart": {
+    "salsa_toy": {
       "fields": {
-        "Age": {
-          "id": "বয়স"
+        "lime": {
+          "id": "লেবু"
+        },
+        "onion": {
+          "id": "পেঁয়াজ"
         }
       }
     },
@@ -182,12 +135,59 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
+        "size": {
+          "id": "আকার"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "দিন"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "শিল্পী"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "বয়স"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Age": {
+          "description": "বয়স",
+          "id": "বয়স"
+        },
         "Country": {
           "id": "দেশ"
+        },
+        "Gender": {
+          "description": "লিঙ্গ",
+          "id": "লিঙ্গ"
+        },
+        "Internet": {
+          "id": "ইন্টারনেট"
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "ভুল",
+  "modelCardPossibleValuesMaximum": "সর্বোচ্চ",
+  "modelCardPossibleValuesMinimum": "নূন্যতম",
+  "navigateBack": "পেছনে",
+  "navigateDone": "শেষ",
+  "navigateForward": "চালিয়ে যান",
+  "saveProgress": "সংরক্ষন করন",
+  "tryAgain": "আবার চেষ্টা করুন"
 }

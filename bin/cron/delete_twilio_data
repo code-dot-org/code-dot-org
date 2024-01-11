@@ -19,6 +19,7 @@ def main
   # every five minutes. We further backtrack a minute for rounding error.
   date_to_delete = Time.now - ((60 + 5 + 1) * 60)
 
+  in_process_statuses = %w(accepted queued sending sent SENT receiving)
   @client.messages.list(
     date_sent: date_to_delete.strftime('%F'),
     page_size: 1000
@@ -28,7 +29,7 @@ def main
     # another execution of this script.
     # Per customer ticket #712102, it is also an error to delete a message
     # in state sent, despite not seeing public documentation of this.
-    if %w(accepted queued sending sent SENT receiving).include? message.status
+    if in_process_statuses.include? message.status
       next
     end
 

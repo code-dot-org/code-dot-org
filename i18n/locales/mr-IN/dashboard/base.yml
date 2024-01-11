@@ -53,6 +53,7 @@ mr:
         gender: 'लिंग '
         edit_header: 'खात्याचा तपशील संपादित करा'
         finish_sign_up_header: 'तुमचे खाते तयार करणे पूर्ण करा'
+        finish_sign_up_header_error: 'कृपया खालील त्रुटी सुधारा:'
         finish_sign_up_subheader: '<strong>%{email}</strong> साठी Code.org खाते तयार करणे पूर्ण करण्यासाठी खालील माहिती भरा.'
         finish_sign_up_subheader_markdown: '**%{email}** साठी Code.org खाते तयार करणे पूर्ण करण्यासाठी खालील माहिती भरा.'
         finish_sign_up_subheader_provider: '<strong>%{email}</strong> साठी <strong>%{provider}</strong> सह Code.org खाते तयार करणे पूर्ण करण्यासाठी खालील माहिती भरा.'
@@ -60,6 +61,7 @@ mr:
         reset_password_token: "तुम्ही फॉलो केलेली पासवर्ड लिंक रीसेट करा"
         error:
           future: भविष्यात होऊ शकत नाही
+        user_type: 'खात्याचा प्रकार'
         us_state: 'राज्य '
   beta: "बीटा"
   hello: "हॅलो वर्ल्ड"

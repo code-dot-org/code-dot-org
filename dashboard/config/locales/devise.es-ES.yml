@@ -61,6 +61,28 @@ es:
         con instrucciones sobre cómo desbloquearla en pocos minutos.
       unlocked: Tu cuenta se ha desbloqueado correctamente. Inicia sesión para continuar.
   errors:
+    invitations:
+      edit:
+        header: Establece tu contraseña
+        submit_button: Establecer mi contraseña
+      invitation_removed: Tu invitación se ha eliminado.
+      invitation_token_invalid: "¡El token de invitación proporcionado no es válido!"
+      new:
+        header: Enviar invitación
+        submit_button: Enviar una invitación
+      no_invitations_remaining: No hay invitaciones restantes
+      send_instructions: Se ha enviado un correo electrónico de invitación a %{email}.
+      updated: La contraseña se estableció correctamente. Ahora estas registrado.
+    mailer:
+      invitation_instructions:
+        accept: Aceptar invitación
+        hello: Hola %{email}
+        ignore: Si no quieres aceptar la invitación, ignora este correo electrónico.<br
+          />Tu cuenta no se creará hasta que accedas al enlace anterior y configures
+          tu contraseña.
+        someone_invited_you: Te han invitado a %{url}; lo puedes aceptar mediante
+          el enlace que se encuentra a continuación.
+        subject: Instrucciones de la invitación
     messages:
       already_confirmed: ya estaba confirmada, intenta iniciar sesión
       confirmation_period_expired: tiene que ser confirmada en un plazo de %{period},
@@ -68,25 +90,3 @@ es:
       expired: ha caducado, solicita una nueva
       not_found: no encontrado
       not_locked: No estaba bloqueada
-    invitations:
-      send_instructions: Se ha enviado un correo electrónico de invitación a %{email}.
-      invitation_token_invalid: "¡El token de invitación proporcionado no es válido!"
-      updated: La contraseña se estableció correctamente. Ahora estas registrado.
-      no_invitations_remaining: No hay invitaciones restantes
-      invitation_removed: Tu invitación se ha eliminado.
-      new:
-        header: Enviar invitación
-        submit_button: Enviar una invitación
-      edit:
-        header: Establece tu contraseña
-        submit_button: Establecer mi contraseña
-    mailer:
-      invitation_instructions:
-        subject: Instrucciones de la invitación
-        hello: Hola %{email}
-        someone_invited_you: Te han invitado a %{url}; lo puedes aceptar mediante
-          el enlace que se encuentra a continuación.
-        accept: Aceptar invitación
-        ignore: Si no quieres aceptar la invitación, ignora este correo electrónico.<br
-          />Tu cuenta no se creará hasta que accedas al enlace anterior y configures
-          tu contraseña.

@@ -5,19 +5,11 @@ mi:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': wawaenga
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': wawaenga
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         text: |-
           {GROUP} tinihiaia wāhanga e {N}
@@ -67,6 +59,11 @@ mi:
           UNIT:
             '"measures"': wāhanga
             '"seconds"': ngā hēkona
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': wāhanga
+            '"seconds"': ngā hēkona
       Dancelab_changeColorBy:
         text: tinihia {COLOR} {METHOD} kia {AMOUNT}
         options:
@@ -106,6 +103,27 @@ mi:
             MOVES.Kick: Te Whetū
             MOVES.ThisOrThat: Tēnei Tēnā
             MOVES.Rest: Kore
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} māhia {MOVE} {DIR} mo ake tonu atu"
+        options:
+          GROUP:
+            '"CAT"': ngā ngeru
+            '"SLOTH"': kararehe māngere
+          MOVE:
+            MOVES.Roll: Ngaru Tinana
+            MOVES.ClapHigh: Paki ki runga
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Rua Rua
+            MOVES.Drop: Taka Iho
+            MOVES.Floss: Floss
+            MOVES.Fresh: Hou
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Te Whetū
+            MOVES.ThisOrThat: Tēnei Tēnā
+            MOVES.Rest: Kore
+            '"next"': "(Kōkiri)"
+            '"prev"': "(tōmua)"
+            '"rand"': "(Poka noa)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} māhia {MOVE} {DIR} mo ake tonu atu"
         options:
@@ -438,26 +456,6 @@ mi:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': ngā kaituarangi
             '"BEAR"': ngā pea
@@ -572,6 +570,50 @@ mi:
             '"iceCream"': Aihikirīmi
             '"default"': Rama
             '"neon"': Haukura
+            '"tropical"': Pārūrū
+            '"vintage"': Tawhito
+            '"warm"': Mahana
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          whakarite i te papamuri
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Kore
+            '"rand"': "(Poka noa)"
+            '"quads"': Ngā Anahera
+            '"circles"': Porowhita
+            '"color_cycle"': Tae
+            '"diamonds"': Taimona
+            '"disco_ball"': Pōro Whakaata
+            '"fireworks"': Pahū ahi
+            '"flowers"': Putiputi
+            '"growing_stars"': Ngā Whetū Tipu
+            '"swirl"': Whakamoe
+            '"kaleidoscope"': Takawhīwhiwhi
+            '"lasers"': Papakani Taiaho
+            '"splatter"': Peita Peita
+            '"rainbow"': Āniwaniwa
+            '"ripples_random"': Ngā Pungarungaru Matapōkere
+            '"ripples"': Ngā Pungarungaru
+            '"snowflakes"': Hukapapa
+            '"text"': Ingoa Waiata
+            '"galaxy"': Tuarangi
+            '"sparkles"': Wherokiroki
+            '"spiral"': Koropikopiko
+            '"disco"': Tapawha
+            '"squiggles"': Ngā Koropikopiko
+            '"starburst"': Pāpahu Whetū
+            '"stars"': Ngā Whetū
+            '"music_wave"': Ngaru
+          PALETTE:
+            '"rave"': Pango me te Mā
+            '"cool"': Kōangi
+            '"electronic"': Tāhiko
+            '"iceCream"': Aihikirīmi
+            '"default"': Rama
+            '"neon"': Haukura
+            '"rainbow"': Āniwaniwa
             '"tropical"': Pārūrū
             '"vintage"': Tawhito
             '"warm"': Mahana
@@ -1153,9 +1195,7 @@ mi:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': wawaenga
-            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -1199,10 +1239,7 @@ mi:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': wawaenga
-            '100': large
       gamelab_setProp:
         text: whakarite te {SPRITE} {PROPERTY} ki te {VAL}
         options:
@@ -1217,10 +1254,7 @@ mi:
           PROPERTY:
             '"scale"': te rahi
           SIZE:
-            '25': extra small
-            '50': small
             '75': wawaenga
-            '100': large
       gamelab_setSizes:
         text: whakarite te {SPRITE} {PROPERTY} ki te {N}%
         options:
@@ -1231,11 +1265,9 @@ mi:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': pōturi
             '5': noa
             '7': tere
-            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -1492,7 +1524,6 @@ mi:
       Poetry_whenLineShows:
         options:
           'N':
-            '0': "???"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -1530,16 +1561,10 @@ mi:
         options:
           PORTION:
             '1': katoa
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': katoa
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       binary_move:
         options:
           DIR:
@@ -1652,7 +1677,6 @@ mi:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '2': '2'
             '3': '3'

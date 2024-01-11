@@ -1,70 +1,53 @@
 {
-  "navigateForward": "Faaauau",
-  "tryAgain": "Toe taumafai",
-  "navigateDone": "Uma",
-  "saveProgress": "Teu",
-  "modelCardPossibleValuesMinimum": "min",
-  "modelCardPossibleValuesMaximum": "max",
-  "columnInspectorDescription": "Faamatalaga",
-  "columnDetailsMinimumValue": "min",
   "columnDetailsMaximumValue": "max",
+  "columnDetailsMinimumValue": "min",
+  "columnInspectorDescription": "Faamatalaga",
   "dataCardLastUpdated": "suiga mulimuli",
   "datasets": {
-    "shoe_survey_toy": {
+    "abalone": {
       "fields": {
-        "weather": {
-          "id": "tau"
-        },
-        "shoe": {
-          "id": "seevae"
+        "Length": {
+          "id": "umi"
         }
       }
     },
-    "salsa_toy": {
+    "boba_toy": {
       "fields": {
-        "onion": {
-          "id": "aniani"
-        },
-        "avocado": {
-          "id": "avoka "
-        },
-        "corn": {
-          "id": "saga"
-        },
-        "beans": {
-          "id": "pi"
-        },
-        "lime": {
-          "id": "meamata"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "mushrooms": {
-          "id": "pautaliga"
-        },
-        "lobster": {
-          "id": "ula"
-        },
-        "bacon": {
-          "id": "bacon "
-        },
-        "cheese": {
-          "id": "sisi"
-        },
-        "meat": {
-          "id": "aano a manu fasi"
+        "banana": {
+          "id": "fa'i"
         }
       }
     },
     "club_random_toy": {
       "fields": {
-        "music": {
-          "id": "musika"
-        },
         "food": {
           "id": "meaai"
+        },
+        "music": {
+          "id": "musika"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Score": {
+          "id": "Ai"
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "cheese": {
+          "id": "sisi"
+        },
+        "chicken": {
+          "id": "moa"
+        },
+        "lamb": {
+          "id": "mamoe"
+        },
+        "onion": {
+          "id": "aniani"
         }
       }
     },
@@ -78,13 +61,112 @@
         }
       }
     },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avoka "
+        },
+        "ginger": {
+          "id": "fiu"
+        },
+        "onion": {
+          "id": "aniani"
+        }
+      }
+    },
+    "poutine_toy": {
+      "fields": {
+        "bacon": {
+          "id": "bacon "
+        },
+        "cheese": {
+          "id": "sisi"
+        },
+        "lobster": {
+          "id": "ula"
+        },
+        "meat": {
+          "id": "aano a manu fasi"
+        },
+        "mushrooms": {
+          "id": "pautaliga"
+        }
+      }
+    },
     "raspado_toy": {
       "fields": {
+        "lime": {
+          "id": "meamata"
+        },
         "strawberry": {
           "id": "strawberry"
+        }
+      }
+    },
+    "safari_toy": {
+      "fields": {
+        "alligator": {
+          "id": "korokalaila"
+        },
+        "elephant": {
+          "id": "elefane"
+        },
+        "people": {
+          "id": "tagata"
+        },
+        "rhino": {
+          "id": "manu isupatumaa"
+        },
+        "trees": {
+          "id": "laau"
+        }
+      }
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avoka "
+        },
+        "beans": {
+          "id": "pi"
+        },
+        "cheese": {
+          "id": "sisi"
+        },
+        "chicken": {
+          "id": "moa"
+        },
+        "fruit": {
+          "id": "fualaau aina"
+        },
+        "tomato": {
+          "id": "tamato"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avoka "
+        },
+        "beans": {
+          "id": "pi"
+        },
+        "corn": {
+          "id": "saga"
         },
         "lime": {
           "id": "meamata"
+        },
+        "onion": {
+          "id": "aniani"
+        }
+      }
+    },
+    "shapes_v1_toy": {
+      "fields": {
+        "size": {
+          "id": "lapoa"
         }
       }
     },
@@ -95,97 +177,23 @@
         }
       }
     },
-    "salad_toy": {
+    "shoe_survey_toy": {
       "fields": {
-        "tomato": {
-          "id": "tamato"
+        "shoe": {
+          "id": "seevae"
         },
-        "avocado": {
-          "id": "avoka "
-        },
-        "chicken": {
-          "id": "moa"
-        },
-        "fruit": {
-          "id": "fualaau aina"
-        },
-        "beans": {
-          "id": "pi"
-        },
-        "cheese": {
-          "id": "sisi"
+        "weather": {
+          "id": "tau"
         }
       }
     },
     "student_alcohol_consumption": {
       "fields": {
-        "school": {
-          "id": "aoga"
-        },
         "health": {
           "id": "ola maloloina"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "moa"
         },
-        "lamb": {
-          "id": "mamoe"
-        },
-        "onion": {
-          "id": "aniani"
-        },
-        "cheese": {
-          "id": "sisi"
-        }
-      }
-    },
-    "movies": {
-      "fields": {
-        "Score": {
-          "id": "Ai"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "people": {
-          "id": "tagata"
-        },
-        "rhino": {
-          "id": "manu isupatumaa"
-        },
-        "elephant": {
-          "id": "elefane"
-        },
-        "alligator": {
-          "id": "korokalaila"
-        },
-        "trees": {
-          "id": "laau"
-        }
-      }
-    },
-    "abalone": {
-      "fields": {
-        "Length": {
-          "id": "umi"
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avoka "
-        },
-        "onion": {
-          "id": "aniani"
-        },
-        "ginger": {
-          "id": "fiu"
+        "school": {
+          "id": "aoga"
         }
       }
     },
@@ -195,20 +203,12 @@
           "id": "O Tulaga Manuia"
         }
       }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "fa'i"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "size": {
-          "id": "lapoa"
-        }
-      }
     }
-  }
+  },
+  "modelCardPossibleValuesMaximum": "max",
+  "modelCardPossibleValuesMinimum": "min",
+  "navigateDone": "Uma",
+  "navigateForward": "Faaauau",
+  "saveProgress": "Teu",
+  "tryAgain": "Toe taumafai"
 }

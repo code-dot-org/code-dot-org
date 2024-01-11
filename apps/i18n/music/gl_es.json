@@ -7,9 +7,9 @@
   "blockly_toolboxCategoryLogic": "Lóxica",
   "blockly_toolboxCategoryMath": "Matemáticas",
   "blockly_toolboxCategoryVariables": "Variables",
-  "share": "Compartir",
-  "startOver": "Empezar de novo",
+  "continue": "Continuar",
   "panelHeaderInstructions": "Instrucións",
   "panelHeaderWorkspace": "Espazo de traballo: ",
-  "continue": "Continuar"
+  "share": "Compartir",
+  "startOver": "Empezar de novo"
 }

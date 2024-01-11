@@ -7,9 +7,9 @@
   "blockly_toolboxCategoryLogic": "տրամաբանություն",
   "blockly_toolboxCategoryMath": "Մաթեմատիկա",
   "blockly_toolboxCategoryVariables": "փոփոխականների",
-  "share": "Տարածել",
-  "startOver": "Վերսկսել",
+  "continue": "Շարունակել",
   "panelHeaderInstructions": "Հրահանգներ",
   "panelHeaderWorkspace": "խաղային տարածք",
-  "continue": "Շարունակել"
+  "share": "Տարածել",
+  "startOver": "Վերսկսել"
 }

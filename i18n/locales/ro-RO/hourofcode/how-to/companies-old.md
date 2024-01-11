@@ -9,42 +9,42 @@ title: Cum sa organizezi Hour of Code pentru companii
 
 ***
 
-## Ia legătura cu școli din zona ta și devino voluntar al Orei de cod
-Code.org oferă angajaților din organizație posibilitarea de a pune la dispoziție, ca voluntari, școlilor din comunitate ce organizează Ora de cod, cunoștințele lor în domeniu devenind o sursă de inspirație pentru tineri
+## Ia legătura cu școli din zona ta și devino voluntar al Hour of Code
+Code.org oferă angajaților dumneavoastră oportunitatea de a  [participa]({{ urls/volunteer }})  ca voluntari în școlile locale care organizează Hour of Code. Aici, ei pot împărtăși experiența lor din domeniul IT și pot inspira studenții să se intereseze de domeniul tehnologiei.
 
 [<button>Devino voluntar!</button>]({{ urls/volunteer }})
 <br>
 <br>
 
-Pentru mai multe informații despre cum pot deveni angajații tăi voluntari ai Orei de cod citește: Ghid pentru parteneri din companii
+Pentru mai multe informații despre cum pot deveni angajații tăi voluntari Hour of Code citește: [Ghid pentru parteneri din companii]({{ localized_files/hoc_corporate_toolkit }}).
 
-## Alte modalități prin care companiile pot susține Ora de cod
+## Alte modalități prin care companiile pot susține Hour of Code
 
-- Spune-i administratorului sa trimită un mail în care să prezinte importanța studiului tehnologiei informației și să încurajeze angajații să distribuie informația
-- Organizați o Ora de cod, în timpul pauzei, cu angajații vostri
-- Găzduiți, la sediul companiei, O oră de net pentru o clasă sau un ONG partener Pentru detalii și idei vezi ghidul de mai jos
+- Îndeamnă-ți CEO-ul să  [trimită un email la nivel de companie]({{ promote/sample_emails }}) subliniind importanța tehnologiei și încurajând angajații să distribuie informația.
+- Organizați Hour of Code, împreună cu colegii, pentru a experimenta [activități]({{ urls/learn }}).
+- Găzduiți un eveniment Hour of Code pentru o clasă locală de elevi sau pentru partenerii organizațiilor non-profit, la sediul companiei. Pentru detalii și idei vezi ghidul de mai jos.
 
 
-# Cum să organizezi O ora de cod cu elevii
+# Cum să organizezi un eveniment Hour of Code cu elevii
 
 ## 1. Promovează evenimentul Hour of Code
-- Promovează Ora ta de cod și încurajeaza-i si pe alții
-- Încurajează IT-iștii companiei tale să ajute o scoală cu organizarea unei Ore de cod și astfel sa-i inspire pe elevi să studieze Tehnologia informatiei Ei se pot înscrie pentru a fi puși în legătură cu o clasă
+- Promovează [Hour of Code]({{ urls/promote }}) și încurajează-i si pe alții
+- Încurajează specialiștii în IT din compania ta să ofere ajutor unei școli locale pentru organizarea unei Ora de Cod și, astfel, să inspire elevii să studieze tehnologia computerelor și programarea. Ei se pot [înscrie]({{ urls/volunteer_engineer }}) pentru a fi conectați cu o clasă.
 
 ## 2. Urmărește acest clip video instructiv <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 3. Alege o activitate
-Avem o mare varietate de activități amuzante, pentru participanți de toate vârstele, create de diverși parteneri Încearcă-le acum!
+Oferim o varietate de [activități distractive de o oră]({{ urls/learn }}) pentru participanți de toate vârstele, create de diferiți parteneri. [Încearcă-le acum!]({{ urls/learn }})
 
-Toate activitățile din cadrul Orei de cod necesită un timp foarte scurt de pregătire inițială și sunt însoțite de un ghide ce le permite participanților să lucreze în ritmul lor din diverse locații
+**Toate activitățile Hour of Code** necesită un timp minim de pregătire și sunt concepute pentru a fi parcurse independent, permițând participanților să lucreze în ritmul și la nivelul propriu de competență.
 
 [<img src="/images/fit-700/tutorials.png" />]({{ urls/learn }})
 
-## 4. Stabilește-ți nevoile tehnologice, calculatoarele sunt opționale
+## 4. Planifică necesarul de echipamente - calculatoarele sunt opționale
 
-Cea mai buna experienta Hour of Code include calculatoare care au conexiune la Internet. Nu ai nevoie de un calculator pentru fiecare participant ba chiar poți să desfășori O oră de cod fără calculator
+Cea mai buna experienta Hour of Code include calculatoare care au conexiune la Internet. Însă **nu ai** nevoie de un computer pentru fiecare participant, chiar poți să organizezi Hour of Code fără niciun calculator.
 
-Pregătirea! Urmează acești pași înainte de a începe evenimentul:
+**Planifică!** Urmează acești pași înainte de a începe evenimentul:
 
 - Testează activitățile pe calculatoare sau alte dispozitive Asigură-te că merg bine în browser-e cu sunet și video
 - Oferă participanților căști sau spune-le să aducă daca activitatea aleasă necesită sunet
@@ -57,8 +57,8 @@ Puteti spori succesul evenimentului vostru Hour of Code inspirandu-i pe particip
 **Arată-le un filmulet inspirational:**
 
 - Filmul de prezentare al Code.org, îi are ca protagoniști pe Bill Gates, Mark Zuckerberg și starul NBA Chris Bosh (sunt versiuni de 1, 5 și 9 minute)
-- [Videoclipul Ora de Cod la nivel mondial](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [ Preşedintele Obama invita pe toţi elevii să înveţe ştiinţa calculatoarelor](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- [Videoclipul Hour of Code la nivel mondial](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [ Preşedintele Obama îndeamnă toţi elevii să-și dezvolte competențele în domeniul tehnologiei](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Găsiţi mai multe videoclipuri inspiraționale [aici](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Idei de introducere a Orei de cod elevilor:**
@@ -67,7 +67,7 @@ Puteti spori succesul evenimentului vostru Hour of Code inspirandu-i pe particip
 - Dacă ești o companie producătoare de tehnologii, prezintă-le produsele
 - Dacă nu ești o companie producătoare de tehnologii, prezintă felul în care compania ta folosește tehnologia în rezolvarea problemelor și atingerea scopurilor.
 - Invită IT-iști din compania ta să vorbească despre motivul alegerii carierei lor și despre proiectele la care lucrează.
-- Consultă [această pagină]({{ urls/girls }}) pentru sfaturi cu privire la modul în care le poți convinge pe fete să fie interesate de știința calculatoarelor.
+- Consultă [această pagină]({{ urls/girls }}) pentru sfaturi cu privire la modul în care le poți motiva și convinge pe fete să fie interesate de programare.
 
 ## 6. Programează!
 **Directionati participanţii catre activitate**

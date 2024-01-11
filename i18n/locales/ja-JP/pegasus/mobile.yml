@@ -531,13 +531,9 @@
   volunteer_engineer_submission_subtitle_generic: '100,000 の教師が教室で、今年は、2015 年 12 月 7-13 日に Hour of Code 実施する予定です。彼らはあなたの助けをもとめています! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} 人の教師が、ボランティアを求めています。<br>%{num_volunteers} 人がボランティア登録をしています。あなたも参加してください。"
   volunteer_engineer_submission_intro_background: "Hour of Code は1時間のコンピューター・サイエンス入門の世界的な運動です。180以上の国で数千万人の生徒に提供されています。12 月 7-13 日のコンピューター・サイエンス学習週間に参加しましょう。"
-  volunteer_engineer_submission_intro_recruit: '教師は、クラスルームを助けてくれる <span style="font-family: ''Gotham 7r'', sans-serif;"> コンピューターサイエンス教育に情熱的な</span> 誰かを求めています。または、コンピューターサイエンスの持つ可能性の幅広さについて生徒を <span style="font-family: ''Gotham 7r'', sans-serif;"> 励ます</span> ことができる人を求めています。 (これはビデオ チャットで行うことができます)'
   volunteer_engineer_submission_intro_recruit_markdown: "先生は、**コンピューター サイエンス教育**に情熱を傾け、教室でサポートしてくれる人や、コンピューター サイエンスがもたらす幅広い可能性について話すことで (これはビデオチャットを通じて行うことができます) 生徒に**インスピレーション**を与えられる人を求めています。"
-  volunteer_engineer_submission_intro_guide: "私たちの <a href=\"%{volunteer_guide}\"> ボランティア プログラム</a> について詳しく見る。"
   volunteer_engineer_submission_intro_guide_markdown: "ボランティアプログラムの詳細を [こちら] (%{volunteer_guide}) からご覧ください。"
-  volunteer_engineer_submission_intro_signup: "コンピューター サイエンスの生徒やソフトウェアのプロフェッショナルの方は、次の情報を入力してください。ボランティアとして登録をするためには18歳以上である必要があります。入力された情報はすべて<a href=\"/volunteer/local\">ボランティアマップ</a>にて公開されますのでご注意ください。 <span class=\"form-required-field\">*</span> がついている欄は入力が必須です。"
   volunteer_engineer_submission_intro_signup_markdown: "コンピューター サイエンスの学習者またはソフトウェアの専門家の方は、次の情報を入力してください。ボランティアとして登録するには、18歳以上である必要があります。このセクションで入力するすべてのフィールドは、[ボランティアマップ] (/ volunteer/local) を見ている人なら誰でも見ることができることに注意してください。 _ * _が付いているフィールドは必須です。"
-  volunteer_engineer_submission_intro_links: "あなたはボランティアをお探しの先生ですか？<a href=\"%{volunteer_local}\">ボランティア マップ</a> で地域のボランティアを探してください。"
   volunteer_engineer_submission_intro_links_markdown: "あなたはボランティアをお探しの先生ですか？ [ボランティアマップ] (%{volunteer_local}) で地元のボランティアを見つけてください。"
   volunteer_engineer_submission_update_information: "あなたの情報を更新する"
   volunteer_engineer_submission_header_shared: "ボランティア マップ上で教師と共有される情報"
@@ -1520,12 +1516,14 @@
   header_stats: "統計"
   header_help_us: "手を貸して下さい"
   header_about: "概要"
+  header_incubator: "インキュベーター"
   header_teacher_community: "先生のコミュニティ"
   header_help_support: 'ヘルプとサポート '
   header_report_bug: "バグを報告"
   header_report_abuse: "不正行為を報告"
   header_legal: "プライバシーと法的事項"
   header_legal_privacy: "プライバシー ポリシー"
+  header_legal_cookie_notice: "クッキーについての通知"
   header_legal_tos: "利用規約"
   header_tutorials: "チュートリアル"
   header_screen_reader_hamburger: "メニュー"
@@ -1634,7 +1632,7 @@
   hoc2018_mc_download_adventurer: "Minecraftアドベンチャーのオフライン版をダウンロード。"
   hoc2018_mc_educators: "教育者の方向け"
   hoc2018_mc_educators_box1_title: "マインクラフトで学ぶプログラミング"
-  hoc2018_mc_educators_box1_desc: 'マインクラフト: エデュケーション エディションは、マインクラフトの基準に沿ったカリキュラム、トレーニング、コーディングを提供します。'
+  hoc2018_mc_educators_box1_desc: "マインクラフト: エデュケーション エディションは、マインクラフトの基準に沿ったカリキュラム、トレーニング、コーディングを提供します。"
   hoc2018_mc_educators_box1_button: "開始しましょう"
   hoc2018_mc_educators_box2_title: "ファシリテーターガイドをダウンロード"
   hoc2018_mc_educators_box2_desc: "このツールキットは、Hour of Codeをホストし、コンピューター サイエンスに生徒を参加させるのに役立ちます。"
@@ -1742,7 +1740,7 @@
   hoc2018_mc_with_microsoft: "協力者:"
   hoc2018_mc_thank_microsoft: "21世紀で成功するためにすべての子供たちにコンピューター サイエンスとスキルを学ぶ機会を確実に与えるという私たちのビジョンと使命をサポートしてくれたMicrosoftに感謝します。"
   hoc2019_mc_mee_title: "マインクラフト AI for Good"
-  hoc2019_mc_mee_description1: '新しいマインクラフトのHour of CodeチュートリアルがWindows、Mac、iPad向けのマインクラフト: エデュケーション エディションでご利用いただけるようになりました。プログラミングの基本を学び、生徒と一緒にAIを探索してください！'
+  hoc2019_mc_mee_description1: "新しいマインクラフトのHour of CodeチュートリアルがWindows、Mac、iPad向けのマインクラフト: エデュケーション エディションでご利用いただけるようになりました。プログラミングの基本を学び、生徒と一緒にAIを探索してください！"
   hoc2019_mc_mee_description2: "レッスンプラン、ビデオ、コンピューター サイエンスのカリキュラム、先生用のトレーニングなどの無料のリソースにアクセスしてください。"
   hoc2019_mc_more_coding_resources: "その他のプログラミングリソース"
   hoc2019_dance_previous_versions: "ダンスパーティーの以前のバージョンをお探しですか？ここをクリックして、昨年の [パート1] (%{dance_2018_link}) と [パート2] (%{dance_extras_2018_link}) を開始してください。"
@@ -1755,18 +1753,18 @@
   page_not_available_description: "申し訳ございません。リクエストされたページはこのアドレスではご利用いただけません。それでもアクセスが必要な場合は、[support@code.org] (%{support_email_link}) にメールしてください。"
   page_not_available_button: "ホームへ戻る"
   hoc2020_mc_available_code_org: "Code.orgで入手可能"
-  hoc2020_mc_available_mee: 'Minecraft: 教育版で利用可能'
+  hoc2020_mc_available_mee: "Minecraft: 教育版で利用可能"
   hoc2020_mc_mee_title: "マインクラフト・テイル・オブ・ツー・ビレッジ"
-  hoc2020_mc_mee_description: '新しい Minecraft のコード時間チュートリアルが Minecraft: Windows、Mac、Chromebook、および iPad 用の教育版で利用可能になりました。コーディングの基本を学び、生徒と一緒に多様性とインクルージョンを探りましょう！授業計画、ビデオ、コンピュータサイエンスのカリキュラム、エクイティレッスン、教師トレーニングなどの無料リソースにアクセスできます。'
+  hoc2020_mc_mee_description: "新しい Minecraft のコード時間チュートリアルが Minecraft: Windows、Mac、Chromebook、および iPad 用の教育版で利用可能になりました。コーディングの基本を学び、生徒と一緒に多様性とインクルージョンを探りましょう！授業計画、ビデオ、コンピュータサイエンスのカリキュラム、エクイティレッスン、教師トレーニングなどの無料リソースにアクセスできます。"
   hoc2021_mc_mee_title: "マインクラフト タイムクラフト"
-  hoc2021_mc_mee_description: '時間をさかのぼってプログラミングを学びましょう。新しいチュートリアル「マインクラフト Hour of Code」がWindows、Mac、Chromebook、iPad向け教育版マインクラフトでご利用いただけるようになりました。無料の教育者向けリソース、トレーニング、動画を是非ご利用ください。'
+  hoc2021_mc_mee_description: "時間をさかのぼってプログラミングを学びましょう。新しいチュートリアル「マインクラフト Hour of Code」がWindows、Mac、Chromebook、iPad向け教育版マインクラフトでご利用いただけるようになりました。無料の教育者向けリソース、トレーニング、動画を是非ご利用ください。"
   hoc2021_mc_mee_villages_title: "2つの村の物語"
-  hoc2021_mc_mee_villages_description: '教育版マインクラフトで、プログラミングの基本を学び、生徒と一緒に多様性とインクルージョンについて詳しく見てみましょう。'
+  hoc2021_mc_mee_villages_description: "教育版マインクラフトで、プログラミングの基本を学び、生徒と一緒に多様性とインクルージョンについて詳しく見てみましょう。"
   hoc2021_mc_mee_ai_title: "AI For Good（AI の社会貢献）"
-  hoc2021_mc_mee_ai_description: '生徒と一緒にAIを探り、教育版マインクラフトでプログラミングする方法を学びましょう。'
+  hoc2021_mc_mee_ai_description: "生徒と一緒にAIを探り、教育版マインクラフトでプログラミングする方法を学びましょう。"
   hoc2022_mc_mee_title: "Minecraftエスケープエステート"
   hoc2022_mc_mee_description: "夜明けまでに謎の屋敷を脱出し、100万エメラルドを手に入れよう！新しいMinecraft Hour of CodeチュートリアルがMinecraftで利用できるようになりました： \nWindows、Mac、Chromebook、Ipad、およびMobile向けの教育エディション。無料の教育リソース、トレーニング、およびビデオをご利用ください。"
-  hoc2022_mc_mee_timecraft_description: 'Minecraftでのこの無料コーディングレッスンである教育編では、未来を救うためにタイムスリップしてください。'
+  hoc2022_mc_mee_timecraft_description: "Minecraftでのこの無料コーディングレッスンである教育編では、未来を救うためにタイムスリップしてください。"
   footer_powered_by_aws: "Powered by Amazon Web Services"
   footer_built_on_github: "マイクロソフトの GitHub 上に構築"
   codebytes_skinny_banner_title: "12月7日～11日のCodeBytesライブミニレッスンにご参加ください！"
@@ -1815,7 +1813,7 @@
   ai_zooniverse: "Zooniverse-スナップショットマウンテンゼブラ"
   ai_zooniverse_description: "画像でさまざまな動物を識別して、絶滅危惧種のケープマウンテンゼブラを保護しましょう。"
   ai_audience: "オーディエンス"
-  ai_minecraft_description: '授業計画、ビデオ、コンピュータサイエンスのカリキュラム、教師向けトレーニングなど、無料のリソースにアクセスできます。(マインクラフト:教育版が必要)'
+  ai_minecraft_description: "授業計画、ビデオ、コンピュータサイエンスのカリキュラム、教師向けトレーニングなど、無料のリソースにアクセスできます。(マインクラフト:教育版が必要)"
   ai_k_12_audience: "K-12 (必読)"
   ai_microsoft_workshop: "マイクロソフトの無料バーチャルワークショップ"
   ai_microsoft_workshop_description: "無料のSTEMとコーディングワークショップで好奇心を掻き立てる。"

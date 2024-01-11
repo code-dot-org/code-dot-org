@@ -2,131 +2,59 @@
   "zh-CN": {
     "data": {
       "standard_categories": {
-        "AP": {
-          "description": "算法与编程"
-        },
-        "CS": {
-          "description": "计算系统"
-        },
-        "DA": {
-          "description": "数据和分析"
-        },
-        "NI": {
-          "description": "网络与互联网"
-        },
-        "DAT-1": {
-          "description": "计算机表示数据的方式与为用户解释和显示数据的方式不同。程序被用来将数据转换成人们更容易理解的表示形式。"
-        },
-        "IOC-2": {
-          "description": "使用计算机创新可能会危及你的个人安全和身份信息。"
-        },
-        "DAT-1.D": {
-          "description": "比较数据压缩算法，以确定在特定背景中哪种算法最佳。"
-        },
-        "IOC-2.B": {
-          "description": "解释计算资源如何被保护和如何被滥用。"
-        },
-        "CD": {
-          "description": "计算机与通信设备"
-        },
-        "CI": {
-          "description": "社区、全球与伦理影响"
-        },
-        "CL": {
-          "description": "协作"
-        },
-        "CPP": {
-          "description": "计算实践与程序设计"
-        },
-        "CT": {
-          "description": "计算式思维技巧"
-        },
-        "L": {
-          "description": "语言"
-        },
-        "RI": {
-          "description": "阅读信息类文本"
-        },
-        "RL": {
-          "description": "阅读文献"
-        },
-        "SL": {
-          "description": "口语和听力"
-        },
-        "W": {
-          "description": "写作"
-        },
-        "ETS": {
-          "description": "科学工程"
-        },
-        "ETS1": {
-          "description": "工程设计"
-        },
-        "C": {
-          "description": "隧道"
-        },
-        "F": {
-          "description": "函数"
-        },
-        "G": {
-          "description": "几何"
-        },
-        "MD": {
-          "description": "利用概率做决定"
-        },
-        "MP": {
-          "description": "数学实践"
-        },
-        "NBT": {
-          "description": "数字和十进制运算"
-        },
-        "OA": {
-          "description": "运算和代数思维"
-        },
         "1": {
           "description": "学生们展示创造性思维、构建知识，并使用技术开发创新性产品和工艺。"
         },
         "2": {
           "description": "学生们使用数字媒体与环境进行交流与协作，包括远程交流与写作，以支持个人学习和帮助他人学习。"
         },
+        "3": {
+          "description": "学生应用数字工具来收集、评估和使用信息。"
+        },
+        "3-A-i": {
+          "description": "学习的本质-人类与机器"
+        },
+        "3-A-ii": {
+          "description": "学习的本质-在数据中寻找模式"
+        },
+        "3-A-iii": {
+          "description": "学习的本质-训练模型"
+        },
+        "3-A-iv": {
+          "description": "学习的本质——构造与使用推理器"
+        },
+        "3-A-v": {
+          "description": "学习的本质-调整内部表现"
+        },
+        "3-A-vi": {
+          "description": "学习的本质-从经验中学习"
+        },
+        "3-B-i": {
+          "description": "神经网络-神经网络的结构"
+        },
+        "3-B-ii": {
+          "description": "神经网络-体重调整"
+        },
+        "3-C-i": {
+          "description": "数据集-要素集"
+        },
+        "3-C-ii": {
+          "description": "数据集-大型数据集"
+        },
+        "3-C-iii": {
+          "description": "数据集-偏见"
+        },
         "4": {
           "description": "学生们运用批判性思维能力来计划和研究、管理项目、解决问题，并利用适当的数字工具和资源做出明智的决定。"
+        },
+        "5": {
+          "description": "学生了解与技术有关的人类、文化和社会问题，并实践法律和道德行为。"
         },
         "6": {
           "description": "学生展现出对技术概念、系统和运行的良好理解。 "
         },
-        "IC": {
-          "description": "做出推论并证明结论的合理性"
-        },
         "AAP-1": {
           "description": "为了找到普遍问题的具体解决方案，程序员以多种方式表示和组织数据。"
-        },
-        "AAP-2": {
-          "description": "在程序中对语句进行排序和组合的方式决定了计算结果。程序采用迭代和选择结构来表示重复，并做出处理不同输入值的决策。"
-        },
-        "AAP-3": {
-          "description": "程序员将问题分解为更小、更易于管理的部分。通过创建过程和利用参数，程序员可以概括可以重复使用的流程。程序允许程序员利用已经测试过的现有代码，从而使程序员能够更快、更自信地编写程序。"
-        },
-        "AAP-4": {
-          "description": "存在计算机无法解决的问题，即使计算机可以解决问题，也可能无法在合理的时间内解决问题。"
-        },
-        "CRD-1": {
-          "description": "通过协作整合多种视角可以改善正在开发的计算创新。"
-        },
-        "CRD-2": {
-          "description": "开发人员使用以用户为中心的迭代设计流程进行创建和创新，该流程包含实施/反馈周期，为实验和冒险留出了充足的空间。"
-        },
-        "CSN-1": {
-          "description": "计算机系统和网络促进了数据的传输。"
-        },
-        "CSN-2": {
-          "description": "并行和分布式计算利用多台计算机更快地解决复杂问题或处理大型数据集。"
-        },
-        "DAT-2": {
-          "description": "程序可以用来处理数据，这允许用户发现信息并创造新知识。"
-        },
-        "IOC-1": {
-          "description": "虽然程序通常是为实现特定目的而设计的，但它们可能会产生意想不到的后果"
         },
         "AAP-1.A": {
           "description": "用变量表示一个值。"
@@ -139,6 +67,9 @@
         },
         "AAP-1.D": {
           "description": "对于数据抽象： \na. 使用列表进行数据抽象以存储多个元素。\nb. 解释使用数据抽象如何管理程序代码的复杂性。"
+        },
+        "AAP-2": {
+          "description": "在程序中对语句进行排序和组合的方式决定了计算结果。程序采用迭代和选择结构来表示重复，并做出处理不同输入值的决策。"
         },
         "AAP-2.A": {
           "description": "表达一种在不使用编程语言的情况下使用排序的算法。"
@@ -188,6 +119,9 @@
         "AAP-2.P": {
           "description": "对于二进制搜索算法：\na. 确定在数据集中查找值所需的迭代次数。 \nb. 解释完成二进制搜索所需的要求。"
         },
+        "AAP-3": {
+          "description": "程序员将问题分解为更小、更易于管理的部分。通过创建过程和利用参数，程序员可以概括可以重复使用的流程。程序允许程序员利用已经测试过的现有代码，从而使程序员能够更快、更自信地编写程序。"
+        },
         "AAP-3.A": {
           "description": "对于过程调用：\na。向调用过程写入语句。\nb. 确定过程调用的结果或效果。"
         },
@@ -206,323 +140,65 @@
         "AAP-3.F": {
           "description": "用于模拟：\na. 解释如何使用计算机来表示现实世界的现象或结果。 \nb. 将模拟的使用与现实环境进行比较。"
         },
+        "AAP-4": {
+          "description": "存在计算机无法解决的问题，即使计算机可以解决问题，也可能无法在合理的时间内解决问题。"
+        },
         "AAP-4.A": {
           "description": "用于确定算法的效率：\na. 解释在合理时间内运行的算法和不在合理时间内运行的算法之间的区别。 \nb. 找出可能更适合采用启发式解决方案的情况。"
         },
         "AAP-4.B": {
           "description": "解释计算机科学中存在无法决定的问题。"
         },
-        "CRD-1.A": {
-          "description": "解释如何通过协作改善计算创新。"
+        "AP": {
+          "description": "算法与编程"
         },
-        "CRD-1.B": {
-          "description": "解释一群人是如何开发计算创新的。"
+        "APR": {
+          "description": "使用多项式和有理表达式进行算术"
         },
-        "CRD-1.C": {
-          "description": "在协作过程中展示有效的人际交往能力。"
+        "BF": {
+          "description": "建筑函数"
         },
-        "CRD-2.A": {
-          "description": "描述计算创新的目的。"
+        "BI-1": {
+          "description": "计算机使用传感器感知世界"
         },
-        "CRD-2.B": {
-          "description": "解释程序或代码段是如何工作的。"
+        "BI-2": {
+          "description": "特工保留世界的代表性并用它们进行推理"
         },
-        "CRD-2.C": {
-          "description": "识别程序的输入。"
+        "BI-3": {
+          "description": "计算机可以从数据中学习"
         },
-        "CRD-2.D": {
-          "description": "识别程序产生的输出。"
+        "BI-4": {
+          "description": "智能代理需要多种知识才能与人类自然互动"
         },
-        "CRD-2.E": {
-          "description": "使用开发过程开发程序。"
+        "BI-5": {
+          "description": "人工智能可以对社会产生正面和负面影响"
         },
-        "CRD-2.F": {
-          "description": "设计程序及其用户界面。"
+        "C": {
+          "description": "隧道"
         },
-        "CRD-2.G": {
-          "description": "通过编写文档来描述代码段或程序的用途。"
+        "CC": {
+          "description": "计数与基数"
         },
-        "CRD-2.H": {
-          "description": "确认从其他来源使用的代码段。"
+        "CD": {
+          "description": "计算机与通信设备"
         },
-        "CRD-2.I": {
-          "description": "对于算法或程序中的错误： \na. 找出错误。 \nb. 更正错误。"
+        "CED": {
+          "description": "创建方程"
         },
-        "CRD-2.J": {
-          "description": "确定可用于检查算法或程序正确性的输入和相应的预期输出或行为。"
+        "CI": {
+          "description": "社区、全球与伦理影响"
         },
-        "CSN-1.A": {
-          "description": "解释计算设备如何在网络中协同工作。"
+        "CL": {
+          "description": "协作"
         },
-        "CSN-1.B": {
-          "description": "解释互联网是如何运作的。"
+        "CN": {
+          "description": "复数系统"
         },
-        "CSN-1.C": {
-          "description": "解释数据是如何通过数据包通过互联网发送的。"
-        },
-        "CSN-1.D": {
-          "description": "描述互联网和万维网之间的区别。"
-        },
-        "CSN-2.A": {
-          "description": "比较使用顺序、并行和分布式计算的问题解决方案。"
-        },
-        "CSN-2.B": {
-          "description": "确定顺序和并行解的效率。"
-        },
-        "CSN-2.C": {
-          "description": "描述并行和分布式计算的好处和挑战。"
-        },
-        "DAT-1.A": {
-          "description": "解释如何使用位表示数据。"
-        },
-        "DAT-1.B": {
-          "description": "解释使用位表示数据的后果。"
-        },
-        "DAT-1.C": {
-          "description": "对于二进制数：\na。计算正整数（以 10 为基数）的二进制（基数 2）等效值，反之亦然。 \nb. 对二进制数进行比较和排序。"
-        },
-        "DAT-2.A": {
-          "description": "描述可以从数据中提取哪些信息。"
-        },
-        "DAT-2.B": {
-          "description": "描述可以从元数据中提取哪些信息。"
-        },
-        "DAT-2.C": {
-          "description": "确定与处理数据相关的挑战。"
-        },
-        "DAT-2.D": {
-          "description": "使用程序从数据中提取信息。"
-        },
-        "DAT-2.E": {
-          "description": "解释如何使用程序从数据中获得见解和知识。"
-        },
-        "IOC-1.A": {
-          "description": "解释计算系统的伦理和社会影响"
-        },
-        "IOC-1.B": {
-          "description": "解释在计算机系统上收集和存储个人数据对隐私的风险。"
-        },
-        "IOC-1.C": {
-          "description": "描述造成数字鸿沟的问题。"
-        },
-        "IOC-1.D": {
-          "description": "解释计算创新中如何存在偏见。"
-        },
-        "IOC-1.E": {
-          "description": "解释人们如何大规模参与问题解决过程。"
-        },
-        "IOC-1.F": {
-          "description": "解释计算的使用如何引发法律和道德问题。"
-        },
-        "IOC-2.A": {
-          "description": "描述在计算机系统上收集和存储个人数据对隐私的风险。"
-        },
-        "IOC-2.C": {
-          "description": "解释如何获得对计算资源的未经授权的访问权限。"
-        },
-        "D1": {
-          "description": "提出问题和规划查询"
-        },
-        "D3.Sources": {
-          "description": "收集和评估来源"
-        },
-        "D3.Claims": {
-          "description": "提出索赔和使用证据"
-        },
-        "D4.Conclusions": {
-          "description": "沟通和批评结论"
-        },
-        "D4.Action": {
-          "description": "采取明智的行动"
-        },
-        "D2.Civ": {
-          "description": "Civics"
-        },
-        "D2.Eco": {
-          "description": "经济学"
-        },
-        "RF": {
-          "description": "阅读基础技能"
-        },
-        "RH": {
-          "description": "阅读历史/社会研究"
-        },
-        "RST": {
-          "description": "阅读科学/技术"
-        },
-        "WHST": {
-          "description": "写作 HS/S/T"
-        },
-        "ESS": {
-          "description": "地球与太空科学"
-        },
-        "LS": {
-          "description": "生命科学"
-        },
-        "PS": {
-          "description": "物理科学"
-        },
-        "ESS1": {
-          "description": "地球在宇宙中的位置"
-        },
-        "ESS2": {
-          "description": "地球的系统"
-        },
-        "ESS3": {
-          "description": "地球与人类活动"
-        },
-        "LS1": {
-          "description": "从分子到生物：结构和过程"
-        },
-        "LS2": {
-          "description": "生态系统：相互作用、能量和动力学"
-        },
-        "LS3": {
-          "description": "遗传：性状的遗传和变异"
-        },
-        "LS4": {
-          "description": "生物进化：统一与多样性"
-        },
-        "PS1": {
-          "description": "物质及其相互作用"
-        },
-        "PS2": {
-          "description": "运动与稳定性：力和相互作用"
-        },
-        "PS3": {
-          "description": "能源"
-        },
-        "PS4": {
-          "description": "Waves及其在信息传输技术中的应用"
-        },
-        "MOD-1": {
-          "description": "有些对象或概念的表现频率如此之高，以至于程序员可以利用已经测试过的现有代码，从而使他们能够更快、更有信心地编写解决方案"
-        },
-        "MOD-2": {
-          "description": "程序员使用代码来表示物理物体或非物理概念，无论是真实的还是想象的，方法是基于对象或概念的属性和/或行为定义一个类"
-        },
-        "MOD-3": {
-          "description": "当多个类包含常见属性和行为时，程序员会创建一个包含构成层次结构的共享属性和行为的新类。在层次结构的最高层所做的修改适用于子类。"
-        },
-        "VAR-1": {
-          "description": "为了找到可泛化问题的具体解决方案，程序员在代码中加入变量，以便相同的算法使用不同的输入值运行"
-        },
-        "VAR-2": {
-          "description": "为了管理大量数据或数据中的复杂关系，程序员编写了将数据分组为单个数据结构的代码，而无需为每个值创建单独的变量。"
+        "CO": {
+          "description": "一致性"
         },
         "CON-1": {
           "description": "在表达式中对变量和运算符进行排序和组合的方式决定了计算结果。"
-        },
-        "CON-2": {
-          "description": "程序员将迭代和选择纳入代码，以此为计算机提供处理许多可能的输入值中的每一个的指令"
-        },
-        "MOD-1.A": {
-          "description": "调用 System 类方法生成输出到控制台。"
-        },
-        "MOD-1.B": {
-          "description": "解释类和对象之间的关系。"
-        },
-        "MOD-1.C": {
-          "description": "使用其签名识别正在调用的正确构造函数。"
-        },
-        "MOD-1.D": {
-          "description": "用于创建对象：a. 通过调用不带参数的构造函数来创建对象。b. 通过调用带参数的构造函数来创建对象。"
-        },
-        "MOD-1.E": {
-          "description": "调用不带参数的非静态 void 方法。"
-        },
-        "MOD-1.F": {
-          "description": "使用参数调用非静态 void 方法"
-        },
-        "MOD-1.G": {
-          "description": "调用带或不带参数的非静态非空方法"
-        },
-        "MOD-1.H": {
-          "description": "调用静态方法。"
-        },
-        "MOD-2.A": {
-          "description": "为类、数据、构造函数和方法指定访问和可见性限制。"
-        },
-        "MOD-2.B": {
-          "description": "为要通过类的构造函数初始化的属性定义实例变量。"
-        },
-        "MOD-2.C": {
-          "description": "通过注释描述程序代码的功能和用途。"
-        },
-        "MOD-2.D": {
-          "description": "通过不在类中写入参数的非 void 方法定义对象的行为。"
-        },
-        "MOD-2.E": {
-          "description": "通过 void 方法定义对象的行为，无论是否在类中写入参数。"
-        },
-        "MOD-2.F": {
-          "description": "使用写在类中的参数通过非 void 方法定义对象的行为。"
-        },
-        "MOD-2.G": {
-          "description": "通过静态方法定义一个类的行为。"
-        },
-        "MOD-2.H": {
-          "description": "定义属于该类的静态变量。"
-        },
-        "MOD-3.A": {
-          "description": "指定实例变量的私有可见性以封装对象的属性。"
-        },
-        "MOD-3.B": {
-          "description": "创建从子类到超类的继承关系。"
-        },
-        "MOD-3.C": {
-          "description": "定义超类的引用变量，将其分配给同一层次结构中子类的对象。"
-        },
-        "MOD-3.D": {
-          "description": "在继承关系中调用方法。"
-        },
-        "MOD-3.E": {
-          "description": "通过继承调用 Object 类方法。"
-        },
-        "VAR-1.A": {
-          "description": "创建字符串文字"
-        },
-        "VAR-1.B": {
-          "description": "为特定规范确定最合适的数据类型类别"
-        },
-        "VAR-1.C": {
-          "description": "声明正确类型的变量以表示原始数据"
-        },
-        "VAR-1.D": {
-          "description": "定义正确类型的变量以表示参考数据。"
-        },
-        "VAR-1.E": {
-          "description": "对于字符串类：a. 创建字符串对象。b. 调用字符串方法。"
-        },
-        "VAR-1.F": {
-          "description": "对于包装类：a. 创建整数对象。b. 调用整数方法。c. 创建 Double 对象。d. 调用 Double 方法。"
-        },
-        "VAR-1.G": {
-          "description": "解释在程序代码中可以在哪里使用变量。"
-        },
-        "VAR-1.H": {
-          "description": "评估使用关键字 this 的对象引用表达式。"
-        },
-        "VAR-2.A": {
-          "description": "使用一维 (1D) 数组对象表示相关原始数据或对象参考数据的集合。"
-        },
-        "VAR-2.B": {
-          "description": "遍历一维数组中的元素。"
-        },
-        "VAR-2.C": {
-          "description": "使用增强的 for 循环遍历一维数组对象中的元素。"
-        },
-        "VAR-2.D": {
-          "description": "使用 ArrayList 对象表示相关对象参考数据的集合。"
-        },
-        "VAR-2.E": {
-          "description": "对于 ArrayList 对象：• 使用 for 或 while 循环遍历。• 使用增强的 for 循环遍历。"
-        },
-        "VAR-2.F": {
-          "description": "使用二维 (2D) 数组对象表示相关原始数据或对象参考数据的集合。"
-        },
-        "VAR-2.G": {
-          "description": "对于 2D 数组对象：• 使用嵌套循环遍历。• 使用嵌套增强型循环遍历。"
         },
         "CON-1.A": {
           "description": "评估程序代码中的算术表达式"
@@ -547,6 +223,9 @@
         },
         "CON-1.H": {
           "description": "在程序代码中使用布尔表达式比较对象引用。"
+        },
+        "CON-2": {
+          "description": "程序员将迭代和选择纳入代码，以此为计算机提供处理许多可能的输入值中的每一个的指令"
         },
         "CON-2.A": {
           "description": "使用条件语句表示分支逻辑进程。"
@@ -599,29 +278,173 @@
         "CON-2.Q": {
           "description": "应用递归算法对数组或 ArrayList 对象的元素进行排序。"
         },
-        "APR": {
-          "description": "使用多项式和有理表达式进行算术"
-        },
-        "BF": {
-          "description": "建筑函数"
-        },
-        "CC": {
-          "description": "计数与基数"
-        },
-        "CED": {
-          "description": "创建方程"
-        },
-        "CN": {
-          "description": "复数系统"
-        },
-        "CO": {
-          "description": "一致性"
-        },
         "CP": {
           "description": "条件概率和概率规则"
         },
+        "CPP": {
+          "description": "计算实践与程序设计"
+        },
+        "CRD-1": {
+          "description": "通过协作整合多种视角可以改善正在开发的计算创新。"
+        },
+        "CRD-1.A": {
+          "description": "解释如何通过协作改善计算创新。"
+        },
+        "CRD-1.B": {
+          "description": "解释一群人是如何开发计算创新的。"
+        },
+        "CRD-1.C": {
+          "description": "在协作过程中展示有效的人际交往能力。"
+        },
+        "CRD-2": {
+          "description": "开发人员使用以用户为中心的迭代设计流程进行创建和创新，该流程包含实施/反馈周期，为实验和冒险留出了充足的空间。"
+        },
+        "CRD-2.A": {
+          "description": "描述计算创新的目的。"
+        },
+        "CRD-2.B": {
+          "description": "解释程序或代码段是如何工作的。"
+        },
+        "CRD-2.C": {
+          "description": "识别程序的输入。"
+        },
+        "CRD-2.D": {
+          "description": "识别程序产生的输出。"
+        },
+        "CRD-2.E": {
+          "description": "使用开发过程开发程序。"
+        },
+        "CRD-2.F": {
+          "description": "设计程序及其用户界面。"
+        },
+        "CRD-2.G": {
+          "description": "通过编写文档来描述代码段或程序的用途。"
+        },
+        "CRD-2.H": {
+          "description": "确认从其他来源使用的代码段。"
+        },
+        "CRD-2.I": {
+          "description": "对于算法或程序中的错误： \na. 找出错误。 \nb. 更正错误。"
+        },
+        "CRD-2.J": {
+          "description": "确定可用于检查算法或程序正确性的输入和相应的预期输出或行为。"
+        },
+        "CS": {
+          "description": "计算系统"
+        },
+        "CSN-1": {
+          "description": "计算机系统和网络促进了数据的传输。"
+        },
+        "CSN-1.A": {
+          "description": "解释计算设备如何在网络中协同工作。"
+        },
+        "CSN-1.B": {
+          "description": "解释互联网是如何运作的。"
+        },
+        "CSN-1.C": {
+          "description": "解释数据是如何通过数据包通过互联网发送的。"
+        },
+        "CSN-1.D": {
+          "description": "描述互联网和万维网之间的区别。"
+        },
+        "CSN-2": {
+          "description": "并行和分布式计算利用多台计算机更快地解决复杂问题或处理大型数据集。"
+        },
+        "CSN-2.A": {
+          "description": "比较使用顺序、并行和分布式计算的问题解决方案。"
+        },
+        "CSN-2.B": {
+          "description": "确定顺序和并行解的效率。"
+        },
+        "CSN-2.C": {
+          "description": "描述并行和分布式计算的好处和挑战。"
+        },
+        "CT": {
+          "description": "计算式思维技巧"
+        },
+        "D1": {
+          "description": "提出问题和规划查询"
+        },
+        "D2.Civ": {
+          "description": "Civics"
+        },
+        "D2.Eco": {
+          "description": "经济学"
+        },
+        "D3.Claims": {
+          "description": "提出索赔和使用证据"
+        },
+        "D3.Sources": {
+          "description": "收集和评估来源"
+        },
+        "D4.Action": {
+          "description": "采取明智的行动"
+        },
+        "D4.Conclusions": {
+          "description": "沟通和批评结论"
+        },
+        "DA": {
+          "description": "数据和分析"
+        },
+        "DAT-1": {
+          "description": "计算机表示数据的方式与为用户解释和显示数据的方式不同。程序被用来将数据转换成人们更容易理解的表示形式。"
+        },
+        "DAT-1.A": {
+          "description": "解释如何使用位表示数据。"
+        },
+        "DAT-1.B": {
+          "description": "解释使用位表示数据的后果。"
+        },
+        "DAT-1.C": {
+          "description": "对于二进制数：\na。计算正整数（以 10 为基数）的二进制（基数 2）等效值，反之亦然。 \nb. 对二进制数进行比较和排序。"
+        },
+        "DAT-1.D": {
+          "description": "比较数据压缩算法，以确定在特定背景中哪种算法最佳。"
+        },
+        "DAT-2": {
+          "description": "程序可以用来处理数据，这允许用户发现信息并创造新知识。"
+        },
+        "DAT-2.A": {
+          "description": "描述可以从数据中提取哪些信息。"
+        },
+        "DAT-2.B": {
+          "description": "描述可以从元数据中提取哪些信息。"
+        },
+        "DAT-2.C": {
+          "description": "确定与处理数据相关的挑战。"
+        },
+        "DAT-2.D": {
+          "description": "使用程序从数据中提取信息。"
+        },
+        "DAT-2.E": {
+          "description": "解释如何使用程序从数据中获得见解和知识。"
+        },
         "EE": {
           "description": "表达式和方程"
+        },
+        "ESS": {
+          "description": "地球与太空科学"
+        },
+        "ESS1": {
+          "description": "地球在宇宙中的位置"
+        },
+        "ESS2": {
+          "description": "地球的系统"
+        },
+        "ESS3": {
+          "description": "地球与人类活动"
+        },
+        "ETS": {
+          "description": "科学工程"
+        },
+        "ETS1": {
+          "description": "工程设计"
+        },
+        "F": {
+          "description": "函数"
+        },
+        "G": {
+          "description": "几何"
         },
         "GMD": {
           "description": "几何测量和尺寸"
@@ -629,23 +452,179 @@
         "GPE": {
           "description": "用方程表示几何特性"
         },
+        "IC": {
+          "description": "计算的影响"
+        },
         "ID": {
           "description": "解释分类和定量数据"
         },
         "IF": {
           "description": "解释函数"
         },
+        "IOC-1": {
+          "description": "虽然计算创新通常是为实现特定目的而设计的，但它们可能会产生意想不到的后果。"
+        },
+        "IOC-1.A": {
+          "description": "解释计算创新的影响如何既有益又有害。"
+        },
+        "IOC-1.B": {
+          "description": "解释计算创新如何产生超出其预期目的的影响。"
+        },
+        "IOC-1.C": {
+          "description": "描述造成数字鸿沟的问题。"
+        },
+        "IOC-1.D": {
+          "description": "解释计算创新中如何存在偏见。"
+        },
+        "IOC-1.E": {
+          "description": "解释人们如何大规模参与问题解决过程。"
+        },
+        "IOC-1.F": {
+          "description": "解释计算的使用如何引发法律和道德问题。"
+        },
+        "IOC-2": {
+          "description": "使用计算机创新可能会危及你的个人安全和身份信息。"
+        },
+        "IOC-2.A": {
+          "description": "描述在计算机系统上收集和存储个人数据对隐私的风险。"
+        },
+        "IOC-2.B": {
+          "description": "解释计算资源如何被保护和如何被滥用。"
+        },
+        "IOC-2.C": {
+          "description": "解释如何获得对计算资源的未经授权的访问权限。"
+        },
+        "L": {
+          "description": "语言"
+        },
         "LE": {
           "description": "线性、二次和指数模型 ★"
+        },
+        "LS": {
+          "description": "生命科学"
+        },
+        "LS1": {
+          "description": "从分子到生物：结构和过程"
+        },
+        "LS2": {
+          "description": "生态系统：相互作用、能量和动力学"
+        },
+        "LS3": {
+          "description": "遗传：性状的遗传和变异"
+        },
+        "LS4": {
+          "description": "生物进化：统一与多样性"
+        },
+        "MD": {
+          "description": "利用概率做决定"
         },
         "MG": {
           "description": "使用几何建模"
         },
+        "MOD-1": {
+          "description": "有些对象或概念的表现频率如此之高，以至于程序员可以利用已经测试过的现有代码，从而使他们能够更快、更有信心地编写解决方案"
+        },
+        "MOD-1.A": {
+          "description": "调用 System 类方法生成输出到控制台。"
+        },
+        "MOD-1.B": {
+          "description": "解释类和对象之间的关系。"
+        },
+        "MOD-1.C": {
+          "description": "使用其签名识别正在调用的正确构造函数。"
+        },
+        "MOD-1.D": {
+          "description": "用于创建对象：a. 通过调用不带参数的构造函数来创建对象。b. 通过调用带参数的构造函数来创建对象。"
+        },
+        "MOD-1.E": {
+          "description": "调用不带参数的非静态 void 方法。"
+        },
+        "MOD-1.F": {
+          "description": "使用参数调用非静态 void 方法"
+        },
+        "MOD-1.G": {
+          "description": "调用带或不带参数的非静态非空方法"
+        },
+        "MOD-1.H": {
+          "description": "调用静态方法。"
+        },
+        "MOD-2": {
+          "description": "程序员使用代码来表示物理物体或非物理概念，无论是真实的还是想象的，方法是基于对象或概念的属性和/或行为定义一个类"
+        },
+        "MOD-2.A": {
+          "description": "为类、数据、构造函数和方法指定访问和可见性限制。"
+        },
+        "MOD-2.B": {
+          "description": "为要通过类的构造函数初始化的属性定义实例变量。"
+        },
+        "MOD-2.C": {
+          "description": "通过注释描述程序代码的功能和用途。"
+        },
+        "MOD-2.D": {
+          "description": "通过不在类中写入参数的非 void 方法定义对象的行为。"
+        },
+        "MOD-2.E": {
+          "description": "通过 void 方法定义对象的行为，无论是否在类中写入参数。"
+        },
+        "MOD-2.F": {
+          "description": "使用写在类中的参数通过非 void 方法定义对象的行为。"
+        },
+        "MOD-2.G": {
+          "description": "通过静态方法定义一个类的行为。"
+        },
+        "MOD-2.H": {
+          "description": "定义属于该类的静态变量。"
+        },
+        "MOD-3": {
+          "description": "当多个类包含常见属性和行为时，程序员会创建一个包含构成层次结构的共享属性和行为的新类。在层次结构的最高层所做的修改适用于子类。"
+        },
+        "MOD-3.A": {
+          "description": "指定实例变量的私有可见性以封装对象的属性。"
+        },
+        "MOD-3.B": {
+          "description": "创建从子类到超类的继承关系。"
+        },
+        "MOD-3.C": {
+          "description": "定义超类的引用变量，将其分配给同一层次结构中子类的对象。"
+        },
+        "MOD-3.D": {
+          "description": "在继承关系中调用方法。"
+        },
+        "MOD-3.E": {
+          "description": "通过继承调用 Object 类方法。"
+        },
+        "MP": {
+          "description": "数学实践"
+        },
+        "NBT": {
+          "description": "数字和十进制运算"
+        },
         "NF": {
           "description": "数字和运算 — 分数"
         },
+        "NI": {
+          "description": "网络与互联网"
+        },
         "NS": {
           "description": "数字系统"
+        },
+        "OA": {
+          "description": "运算和代数思维"
+        },
+        "PS": {
+          "description": "物理科学"
+        },
+        "PS1": {
+          "description": "物质及其相互作用"
+        },
+        "PS2": {
+          "description": "运动与稳定性：力和相互作用"
+        },
+        "PS3": {
+          "description": "能源"
+        },
+        "PS4": {
+          "description": "Waves及其在信息传输技术中的应用"
         },
         "Q": {
           "description": "数量"
@@ -653,11 +632,29 @@
         "REI": {
           "description": "用方程和不等式进行推理"
         },
+        "RF": {
+          "description": "阅读基础技能"
+        },
+        "RH": {
+          "description": "阅读历史/社会研究"
+        },
+        "RI": {
+          "description": "阅读信息类文本"
+        },
+        "RL": {
+          "description": "阅读文献"
+        },
         "RN": {
           "description": "实数系统"
         },
         "RP": {
           "description": "比率和比例关系"
+        },
+        "RST": {
+          "description": "阅读科学/技术"
+        },
+        "SL": {
+          "description": "口语和听力"
         },
         "SP": {
           "description": "统计与概率"
@@ -671,62 +668,65 @@
         "TF": {
           "description": "三角函数"
         },
+        "VAR-1": {
+          "description": "为了找到可泛化问题的具体解决方案，程序员在代码中加入变量，以便相同的算法使用不同的输入值运行"
+        },
+        "VAR-1.A": {
+          "description": "创建字符串文字"
+        },
+        "VAR-1.B": {
+          "description": "为特定规范确定最合适的数据类型类别"
+        },
+        "VAR-1.C": {
+          "description": "声明正确类型的变量以表示原始数据"
+        },
+        "VAR-1.D": {
+          "description": "定义正确类型的变量以表示参考数据。"
+        },
+        "VAR-1.E": {
+          "description": "对于字符串类：a. 创建字符串对象。b. 调用字符串方法。"
+        },
+        "VAR-1.F": {
+          "description": "对于包装类：a. 创建整数对象。b. 调用整数方法。c. 创建 Double 对象。d. 调用 Double 方法。"
+        },
+        "VAR-1.G": {
+          "description": "解释在程序代码中可以在哪里使用变量。"
+        },
+        "VAR-1.H": {
+          "description": "评估使用关键字 this 的对象引用表达式。"
+        },
+        "VAR-2": {
+          "description": "为了管理大量数据或数据中的复杂关系，程序员编写了将数据分组为单个数据结构的代码，而无需为每个值创建单独的变量。"
+        },
+        "VAR-2.A": {
+          "description": "使用一维 (1D) 数组对象表示相关原始数据或对象参考数据的集合。"
+        },
+        "VAR-2.B": {
+          "description": "遍历一维数组中的元素。"
+        },
+        "VAR-2.C": {
+          "description": "使用增强的 for 循环遍历一维数组对象中的元素。"
+        },
+        "VAR-2.D": {
+          "description": "使用 ArrayList 对象表示相关对象参考数据的集合。"
+        },
+        "VAR-2.E": {
+          "description": "对于 ArrayList 对象：• 使用 for 或 while 循环遍历。• 使用增强的 for 循环遍历。"
+        },
+        "VAR-2.F": {
+          "description": "使用二维 (2D) 数组对象表示相关原始数据或对象参考数据的集合。"
+        },
+        "VAR-2.G": {
+          "description": "对于 2D 数组对象：• 使用嵌套循环遍历。• 使用嵌套增强型循环遍历。"
+        },
         "VM": {
           "description": "向量和矩阵量"
         },
-        "BI-1": {
-          "description": "计算机使用传感器感知世界"
+        "W": {
+          "description": "写作"
         },
-        "BI-2": {
-          "description": "特工保留世界的代表性并用它们进行推理"
-        },
-        "BI-3": {
-          "description": "计算机可以从数据中学习"
-        },
-        "BI-4": {
-          "description": "智能代理需要多种知识才能与人类自然互动"
-        },
-        "BI-5": {
-          "description": "人工智能可以对社会产生正面和负面影响"
-        },
-        "3-A-i": {
-          "description": "学习的本质-人类与机器"
-        },
-        "3-A-ii": {
-          "description": "学习的本质-在数据中寻找模式"
-        },
-        "3-A-iii": {
-          "description": "学习的本质-训练模型"
-        },
-        "3-A-iv": {
-          "description": "学习的本质——构造与使用推理器"
-        },
-        "3-A-v": {
-          "description": "学习的本质-调整内部表现"
-        },
-        "3-A-vi": {
-          "description": "学习的本质-从经验中学习"
-        },
-        "3-B-i": {
-          "description": "神经网络-神经网络的结构"
-        },
-        "3-B-ii": {
-          "description": "神经网络-体重调整"
-        },
-        "3-C-i": {
-          "description": "数据集-要素集"
-        },
-        "3-C-ii": {
-          "description": "数据集-大型数据集"
-        },
-        "3-C-iii": {
-          "description": "数据集-偏见"
-        },
-        "3": {
-          "description": "学生应用数字工具来收集、评估和使用信息。"
-        },
-        "5": {
-          "description": "学生了解与技术有关的人类、文化和社会问题，并实践法律和道德行为。"
+        "WHST": {
+          "description": "写作 HS/S/T"
         }
       }
     }

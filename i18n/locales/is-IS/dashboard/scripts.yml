@@ -258,6 +258,7 @@ is:
           description_short: Búðu til sögu eða leik með Gumball Leikjasmiðju!
           student_description: Búðu til sögu eða leik með Gumball Leikjasmiðju!
         starwars:
+          title: 'Star Wars: Gerð Vetrarbrautar með Kóða - JavaScript'
           description: Lærðu að forrita vélmenni og búðu til þinn eigin Star Wars leik í órafjarlægri vetrarbraut.
           description_short: Lærðu að forrita vélmenni og búðu til þinn eigin Star Wars leik í órafjarlægri vetrarbraut.
           student_description: Lærðu að forrita vélmenni og búðu til þinn eigin Star Wars leik í órafjarlægri vetrarbraut.
@@ -266,7 +267,7 @@ is:
           description_short: Lærðu að forrita vélmenni og búðu til þinn eigin Star Wars leik í órafjarlægri vetrarbraut.
           student_description: Lærðu að forrita vélmenni og búðu til þinn eigin Star Wars leik í órafjarlægri vetrarbraut.
         mc:
-          title: Klukkustund kóðunar með Minecraft
+          title: Minecraft Könnuður
           description: Notaðu kubba með kóða til að fara með Steve eða Alex í ævintýraferð um þennan Minecraft heim.
           description_short: Kannaðu Minecraft heim með kóða
           student_description: Notaðu kubba með kóða til að fara með Steve eða Alex í ævintýraferð um þennan Minecraft heim.
@@ -2512,6 +2513,8 @@ is:
               display_name: Innihald
             lessonGroup-2:
               display_name: Innihald
+        dance-unplugged:
+          title: Danspartý án tölvu
         spelling-bee:
           title: Stafsetning
         csa5-exemplars:
@@ -2966,6 +2969,8 @@ is:
               display_name: 'Kafli 1: Lausn vandamála sem ferli'
             lessonGroup-3:
               display_name: 'Kafli 2: Tölvur og lausn vandamála'
+            lessonGroup-5:
+              display_name: Könnun
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3069,6 +3074,8 @@ is:
           lessons:
             lesson-5:
               name: Mat
+            lesson-6:
+              name: Kennslustund 1
         devices-2022:
           lesson_groups:
             lessonGroup-4:
@@ -3234,6 +3241,8 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kafli 1: Lausn vandamála sem ferli'
+            lessonGroup-4:
+              display_name: Könnun
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3250,6 +3259,8 @@ is:
               display_name: 'Kafli 1: Lausn vandamála sem ferli'
             lessonGroup-3:
               display_name: 'Kafli 2: Tölvur og lausn vandamála'
+            lessonGroup-5:
+              display_name: Könnun
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3265,6 +3276,8 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kafli 1: Lausn vandamála sem ferli'
+            lessonGroup-4:
+              display_name: Könnun
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -3281,6 +3294,8 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kafli 1: Lausn vandamála sem ferli'
+            lessonGroup-4:
+              display_name: Könnun
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3295,6 +3310,8 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kafli 1: Lausn vandamála sem ferli'
+            lessonGroup-4:
+              display_name: Könnun
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3309,6 +3326,8 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kafli 1: Lausn vandamála sem ferli'
+            lessonGroup-4:
+              display_name: Könnun
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3423,3 +3442,149 @@ is:
           lesson_groups:
             lessonGroup-3:
               display_name: Klasar
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Stafrænn borgari
+            lessonGroup-3:
+              display_name: Skipanaröð
+            lessonGroup-4:
+              display_name: Lykkjur
+          description_audience: 'Aldur: 4-7'
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Gögn
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Stafrænn borgari
+            lessonGroup-3:
+              display_name: Skipanaröð
+            lessonGroup-4:
+              display_name: Lykkjur
+            lessonGroup-6:
+              display_name: Gögn
+          description_audience: 'Aldur: 4-7'
+          description_short: Kynning á tölvunarfræði fyrir byrjendur í lestri.
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Gögn
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Stafrænn borgari
+            lessonGroup-3:
+              display_name: Skipanaröð
+            lessonGroup-4:
+              display_name: Lykkjur
+            lessonGroup-6:
+              display_name: Atvik
+            lessonGroup-7:
+              display_name: Lokaverkefni námskeiðs
+            lessonGroup-8:
+              display_name: Gögn
+          description_audience: 'Aldur: 5 - 8'
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Stafrænn borgari
+            lessonGroup-3:
+              display_name: Skipanaröð
+            lessonGroup-4:
+              display_name: Lykkjur
+            lessonGroup-5:
+              display_name: Atvik
+            lessonGroup-6:
+              display_name: Gögn
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Stafrænn borgari
+            lessonGroup-3:
+              display_name: Skipanaröð
+            lessonGroup-6:
+              display_name: Lykkjur
+            lessonGroup-7:
+              display_name: Gögn
+            lessonGroup-8:
+              display_name: Lokaverkefni námskeiðs
+          description_audience: 'Aldur: 7-11'
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Innri lykkjur
+            lessonGroup-4:
+              display_name: Föll
+            lessonGroup-6:
+              display_name: Lokaverkefni námskeiðs
+          description_audience: 'Aldur: 8 - 12'
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kvikar
+          description_audience: 'Aldur: 9-13'
+          description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kvikar
+            lessonGroup-3:
+              display_name: Skilyrði
+            lessonGroup-5:
+              display_name: Breytur
+            lessonGroup-7:
+              display_name: Lokaverkefni námskeiðs
+          description_audience: 'Aldur: 9-13'
+          description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Kynning
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Kynning
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Kynning
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Kynning
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Könnun
+            lessonGroup-2:
+              display_name: 'Kafli 1: Lausn vandamála sem ferli'
+            lessonGroup-3:
+              display_name: 'Kafli 2: Tölvur og lausn vandamála'
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kafli 1: Myndir og Hreyfing'
+            lessonGroup-3:
+              display_name: 'Kafli 2: Gerð leikja'
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kafli 1: Notendamiðuð hönnun'
+            lessonGroup-3:
+              display_name: 'Kafli 2: Frumgerðir appa'
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kafli 1: Kóðun upplýsinga'
+            lessonGroup-3:
+              display_name: 'Kafli 2: Lausn vandamála með gögn'
+          description_short: Lærðu um hvernig fólk notar tölvur til að leysa vandamál með gögn.
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kafli 2: Smíði frumgerða vélbúnaðar'
+        csd6b-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inntök og Úttök
+        csd-post-survey-2024:
+          title: Könnun eftir námskeið

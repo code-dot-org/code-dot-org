@@ -1,5 +1,5 @@
 ---
-title: Press Kit
+title: Spaudos rinkinys
 ---
 
 {{ signup_button }}

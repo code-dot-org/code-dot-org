@@ -4,13 +4,14 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSC",
       "is_course": true,
       "is_migrated": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "csc-ecosystems",
-    "serialized_at": "2022-05-19 19:51:11 UTC",
+    "serialized_at": "2023-08-30 18:53:21 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -21,13 +22,13 @@
   },
   "lesson_groups": [
     {
-      "key": "new-lesson-group",
+      "key": "",
       "user_facing": false,
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems"
       }
     }
@@ -48,7 +49,7 @@
       },
       "seeding_key": {
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems"
       }
     }
@@ -64,7 +65,7 @@
       "seeding_key": {
         "lesson_activity.key": "7304a79a-326a-471c-a85b-5d09c41eee52",
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems"
       }
     },
@@ -78,7 +79,7 @@
       "seeding_key": {
         "lesson_activity.key": "a3fea8a5-ab9c-412f-84b0-df8e968c5d86",
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems"
       }
     },
@@ -92,7 +93,7 @@
       "seeding_key": {
         "lesson_activity.key": "d22d4d6a-5452-4c84-bcb0-ecc894af492a",
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems"
       }
     }
@@ -293,7 +294,7 @@
           "coursee_helloworld_introtosprites_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "39c8b8fc-03ac-49c4-81a6-70c33366b320"
       },
@@ -318,7 +319,7 @@
           "coursee_helloworld_eventsvideo_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "a7b91044-9e49-4e95-94ea-73dd945818ef"
       },
@@ -332,6 +333,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_costumes_hello-world"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -340,7 +344,7 @@
           "helloworld_food_costumes_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "43c9f128-5ab2-4f3a-8355-a3e25f7176fd"
       },
@@ -365,7 +369,7 @@
           "helloworld_food_multi_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "43c9f128-5ab2-4f3a-8355-a3e25f7176fd"
       },
@@ -390,7 +394,7 @@
           "helloworld_food_click_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "43c9f128-5ab2-4f3a-8355-a3e25f7176fd"
       },
@@ -404,6 +408,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_events_hello-world"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -412,7 +419,7 @@
           "coursee_helloworld_events_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "43c9f128-5ab2-4f3a-8355-a3e25f7176fd"
       },
@@ -426,6 +433,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_events_clicker_remove"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -434,7 +444,7 @@
           "helloworld_events_clicker_remove"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "c58d979c-55c6-4b88-98ea-863d8948a98c"
       },
@@ -448,6 +458,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_predict_conditionals"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -456,7 +469,7 @@
           "helloworld_predict_conditionals"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "c58d979c-55c6-4b88-98ea-863d8948a98c"
       },
@@ -470,6 +483,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_events_when_sprite_touches_remove"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -478,7 +494,7 @@
           "helloworld_events_when_sprite_touches_remove"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "c58d979c-55c6-4b88-98ea-863d8948a98c"
       },
@@ -492,6 +508,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_events_when_sprite_touches_stop"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -500,7 +519,7 @@
           "helloworld_events_when_sprite_touches_stop"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "c58d979c-55c6-4b88-98ea-863d8948a98c"
       },
@@ -525,7 +544,7 @@
           "coursee_helloworld_freeplay_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "94c40f34-f2e0-4e9c-b33f-dc0d8d7ac8a9"
       },
@@ -539,6 +558,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_location_hello-world"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -546,7 +568,7 @@
           "helloworld_food_location_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "2a1be395-2152-4bfa-b810-00d9e5f68833"
       },
@@ -560,6 +582,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_say_hello-world"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -567,7 +592,7 @@
           "coursee_helloworld_say_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "2a1be395-2152-4bfa-b810-00d9e5f68833"
       },
@@ -591,7 +616,7 @@
           "helloworld_food_backgrounds_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "2a1be395-2152-4bfa-b810-00d9e5f68833"
       },
@@ -615,7 +640,7 @@
           "helloworld_food_sizes_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "2a1be395-2152-4bfa-b810-00d9e5f68833"
       },
@@ -639,7 +664,7 @@
           "helloworld_food_behaviors_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "2a1be395-2152-4bfa-b810-00d9e5f68833"
       },
@@ -663,7 +688,7 @@
           "gray_csc_helloworld_choice_group_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "2a1be395-2152-4bfa-b810-00d9e5f68833"
       },
@@ -687,7 +712,7 @@
           "helloworld_food_sounds_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "2a1be395-2152-4bfa-b810-00d9e5f68833"
       },
@@ -701,6 +726,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_freeplayvideo_hello-world"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -708,7 +736,7 @@
           "coursee_helloworld_freeplayvideo_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "2a1be395-2152-4bfa-b810-00d9e5f68833"
       },
@@ -725,7 +753,7 @@
           "coursee_helloworld_introtosprites_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "39c8b8fc-03ac-49c4-81a6-70c33366b320"
       }
@@ -737,7 +765,7 @@
           "coursee_helloworld_eventsvideo_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "a7b91044-9e49-4e95-94ea-73dd945818ef"
       }
@@ -749,7 +777,7 @@
           "helloworld_food_costumes_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "43c9f128-5ab2-4f3a-8355-a3e25f7176fd"
       }
@@ -761,7 +789,7 @@
           "helloworld_food_multi_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "43c9f128-5ab2-4f3a-8355-a3e25f7176fd"
       }
@@ -773,7 +801,7 @@
           "helloworld_food_click_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "43c9f128-5ab2-4f3a-8355-a3e25f7176fd"
       }
@@ -785,7 +813,7 @@
           "coursee_helloworld_events_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "43c9f128-5ab2-4f3a-8355-a3e25f7176fd"
       }
@@ -797,7 +825,7 @@
           "helloworld_events_clicker_remove"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "c58d979c-55c6-4b88-98ea-863d8948a98c"
       }
@@ -809,7 +837,7 @@
           "helloworld_predict_conditionals"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "c58d979c-55c6-4b88-98ea-863d8948a98c"
       }
@@ -821,7 +849,7 @@
           "helloworld_events_when_sprite_touches_remove"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "c58d979c-55c6-4b88-98ea-863d8948a98c"
       }
@@ -833,7 +861,7 @@
           "helloworld_events_when_sprite_touches_stop"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "c58d979c-55c6-4b88-98ea-863d8948a98c"
       }
@@ -845,7 +873,7 @@
           "coursee_helloworld_freeplay_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "94c40f34-f2e0-4e9c-b33f-dc0d8d7ac8a9"
       }
@@ -857,7 +885,7 @@
           "helloworld_food_location_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "2a1be395-2152-4bfa-b810-00d9e5f68833"
       }
@@ -869,7 +897,7 @@
           "coursee_helloworld_say_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "2a1be395-2152-4bfa-b810-00d9e5f68833"
       }
@@ -881,7 +909,7 @@
           "helloworld_food_backgrounds_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "2a1be395-2152-4bfa-b810-00d9e5f68833"
       }
@@ -893,7 +921,7 @@
           "helloworld_food_sizes_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "2a1be395-2152-4bfa-b810-00d9e5f68833"
       }
@@ -905,7 +933,7 @@
           "helloworld_food_behaviors_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "2a1be395-2152-4bfa-b810-00d9e5f68833"
       }
@@ -917,7 +945,7 @@
           "gray_csc_helloworld_choice_group_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "2a1be395-2152-4bfa-b810-00d9e5f68833"
       }
@@ -929,7 +957,7 @@
           "helloworld_food_sounds_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "2a1be395-2152-4bfa-b810-00d9e5f68833"
       }
@@ -941,7 +969,7 @@
           "coursee_helloworld_freeplayvideo_hello-world"
         ],
         "lesson.key": "Hello World CSC",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "csc-ecosystems",
         "activity_section.key": "2a1be395-2152-4bfa-b810-00d9e5f68833"
       }
@@ -1038,6 +1066,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

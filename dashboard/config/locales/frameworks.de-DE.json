@@ -2,35 +2,35 @@
   "de-DE": {
     "data": {
       "frameworks": {
-        "csta": {
-          "name": "CSTA K-12 Informatikstandards (2017)"
-        },
-        "csp2021": {
-          "name": "Grundsätze der Informatik - Konzeptioneller Rahmen"
-        },
-        "csta2011": {
-          "name": "CSTA K-12 Informatikstandards (2011)"
-        },
-        "ccela": {
-          "name": "Standards für Pflichtfächer in den englischsprachigen Geisteswissenschaften"
-        },
-        "ngss": {
-          "name": "Wissenschaftsstandards der nächste Generation"
-        },
-        "ccmath": {
-          "name": "Standards für mathematische Pflichtfächer"
-        },
-        "iste": {
-          "name": "ISTE Standards für Studenten"
+        "ai4k12-2021": {
+          "name": "AI4K12 Nationale Richtlinien 2021"
         },
         "c3ss": {
           "name": "C3 Standards für Sozialkunde"
         },
+        "ccela": {
+          "name": "Standards für Pflichtfächer in den englischsprachigen Geisteswissenschaften"
+        },
+        "ccmath": {
+          "name": "Standards für mathematische Pflichtfächer"
+        },
         "csa": {
           "name": "Konzeptioneller Rahmen für CSA"
         },
-        "ai4k12-2021": {
-          "name": "AI4K12 Nationale Richtlinien 2021"
+        "csp2021": {
+          "name": "Grundsätze der Informatik - Konzeptioneller Rahmen"
+        },
+        "csta": {
+          "name": "CSTA K-12 Informatikstandards (2017)"
+        },
+        "csta2011": {
+          "name": "CSTA K-12 Informatikstandards (2011)"
+        },
+        "iste": {
+          "name": "ISTE Standards für Studenten"
+        },
+        "ngss": {
+          "name": "Wissenschaftsstandards der nächste Generation"
         }
       }
     }

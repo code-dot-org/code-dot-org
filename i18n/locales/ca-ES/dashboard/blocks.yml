@@ -101,6 +101,11 @@ ca:
           UNIT:
             '"measures"': mesures
             '"seconds"': segons
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': mesures
+            '"seconds"': segons
       Dancelab_changeColorBy:
         text: canvi {COLOR} {METHOD} per {AMOUNT}
         options:
@@ -140,6 +145,27 @@ ca:
             MOVES.Kick: Estrella
             MOVES.ThisOrThat: Aquest o aquell
             MOVES.Rest: Cap
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} fer {MOVE} {DIR} per sempre"
+        options:
+          GROUP:
+            '"CAT"': tots els gats
+            '"SLOTH"': peresosos
+          MOVE:
+            MOVES.Roll: Rodar per terra
+            MOVES.ClapHigh: aplaudir ben fort
+            MOVES.Dab: Dansa d'amagar el cap
+            MOVES.DoubleJam: Baixada doble
+            MOVES.Drop: Deixar anar
+            MOVES.Floss: Provocació
+            MOVES.Fresh: Fresc
+            MOVES.Clown: Pallasso
+            MOVES.Kick: Estrella
+            MOVES.ThisOrThat: Aquest o aquell
+            MOVES.Rest: Cap
+            '"next"': "(Següent)"
+            '"prev"': "(Anterior)"
+            '"rand"': "(Aleatori)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} fer {MOVE} {DIR} per sempre"
         options:
@@ -484,26 +510,6 @@ ca:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': tots els extraterrestres
             '"BEAR"': óssos
@@ -617,6 +623,49 @@ ca:
             '"iceCream"': Gelat
             '"default"': Llum
             '"neon"': Neó
+            '"tropical"': Tropical
+            '"vintage"': Vintage
+            '"warm"': Vermells
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: definir l'efecte de fons {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Cap
+            '"rand"': "(Aleatori)"
+            '"quads"': Angles
+            '"circles"': Túnel
+            '"color_cycle"': Colors
+            '"diamonds"': Diamants
+            '"disco_ball"': Bola de discoteca
+            '"fireworks"': Focs artificials
+            '"flowers"': Flors
+            '"growing_stars"': Estrelles creixents
+            '"swirl"': Hipnosi
+            '"kaleidoscope"': Calidoscopi
+            '"lasers"': Zona de ball amb làser
+            '"splatter"': Esquitxades de pintura
+            '"rainbow"': Arc de Sant Martí
+            '"ripples_random"': Ones aleatòries
+            '"ripples"': Ones
+            '"snowflakes"': Neu
+            '"text"': Títol de la cançó
+            '"galaxy"': Espai
+            '"sparkles"': Guspires
+            '"spiral"': Espiral
+            '"disco"': Requadres
+            '"squiggles"': Guixots
+            '"starburst"': esclat d'estrelles
+            '"stars"': Estrelles
+            '"music_wave"': Onades
+          PALETTE:
+            '"rave"': Blanc i negre
+            '"cool"': Blues
+            '"electronic"': Electrònic
+            '"iceCream"': Gelat
+            '"default"': Llum
+            '"neon"': Neó
+            '"ocean"': Oceà
+            '"rainbow"': Arc de Sant Martí
             '"tropical"': Tropical
             '"vintage"': Vintage
             '"warm"': Vermells
@@ -1744,6 +1793,15 @@ ca:
         text: coordenada y de {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} patina cap a {LOCATION}"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': sòlid
+            '"liquid"': líquid
+            '"gas"': gas
       KatiesBlocks_spriteBirdSay:
         text: "{SPRITE} diu {SPEECH}"
         options:
@@ -2690,7 +2748,6 @@ ca:
         text: "{VALUE}"
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '2': '2'
             '3': '3'

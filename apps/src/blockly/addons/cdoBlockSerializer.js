@@ -1,4 +1,6 @@
 import GoogleBlockly from 'blockly/core';
+import {BLOCK_TYPES, PROCEDURE_DEFINITION_TYPES} from '../constants';
+import {partitionBlocksByType} from './cdoUtils';
 
 const unknownBlockState = {type: 'unknown', enabled: false};
 
@@ -13,10 +15,25 @@ export default class CdoBlockSerializer extends GoogleBlockly.serialization
    * @param {Blockly.Workspace} workspace - The workspace to deserialize into.
    */
   load(stateToLoad, workspace) {
-    const blockStates = stateToLoad['blocks'];
+    // Procedure definitions should be loaded ahead of call blocks, so that the
+    // procedures map is updated correctly.
+    const blockStates = partitionBlocksByType(
+      stateToLoad['blocks'],
+      PROCEDURE_DEFINITION_TYPES,
+      false
+    );
 
     for (const blockState of blockStates) {
       try {
+        if (PROCEDURE_DEFINITION_TYPES.includes(blockState.type)) {
+          // Procedure definitions should not be movable on the modal workspace.
+          blockState.movable = !Blockly.useModalFunctionEditor;
+          // Ensure that procedure definitions are editable.
+          blockState.editable = true;
+        } else if (blockState.type === BLOCK_TYPES.whenRun) {
+          // Ensures that when run blocks cannot be deleted.
+          blockState.deletable = false;
+        }
         GoogleBlockly.serialization.blocks.append(blockState, workspace, {
           recordUndo: Blockly.Events.getRecordUndo(),
         });

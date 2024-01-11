@@ -56,6 +56,28 @@ eu:
         duzu minutu gutxi barru zure kontua desblokeatzeko argibideekin.
       unlocked: Zure kontua ondo desblokeatu da. Mesedez, sartu jarraitzeko.
   errors:
+    invitations:
+      edit:
+        header: Ezarri zure pasahitza
+        submit_button: Ezarri nire pasahitza
+      invitation_removed: Zure gonbidapena ezabatua izan da.
+      invitation_token_invalid: Emandako gonbidapen ikurra ez da baliagarria!
+      new:
+        header: Bidali gonbidapena
+        submit_button: Bidali gonbidapen bat
+      no_invitations_remaining: Ez dago gonbidapenik
+      send_instructions: Gonbidapen emaila bidali zaio %{email}-ri.
+      updated: Zure pasahitza ondo ezarri da. Orain barruan zaude.
+    mailer:
+      invitation_instructions:
+        accept: Gonbidapena onartu
+        hello: Kaixo %{email}
+        ignore: Ez baduzu gonbidapena onartu nahi, mesedez, utzi alde batera mezu
+          hau.<br /> Zure kontua ez da sortuko zuk lotura atzitu eta pasahitza finkatzen
+          duzun arte.
+        someone_invited_you: Norbaitek zu gonbidatu zaitu %{url} gunera; beheko lotura
+          erabiliz onar dezakezu gonbidapena.
+        subject: Gonbidapenaren jarraibideak
     messages:
       already_confirmed: dagoeneko baieztatuta zegoen, mesedez saiatu sartzen
       confirmation_period_expired: "%{period}ean baieztapena behar du, mesedez eskatu
@@ -63,25 +85,3 @@ eu:
       expired: iraungi da; mesedez, eskatu berri bat
       not_found: ez da aurkitu
       not_locked: ez zegoen blokeatuta
-    invitations:
-      send_instructions: Gonbidapen emaila bidali zaio %{email}-ri.
-      invitation_token_invalid: Emandako gonbidapen ikurra ez da baliagarria!
-      updated: Zure pasahitza ondo ezarri da. Orain barruan zaude.
-      no_invitations_remaining: Ez dago gonbidapenik
-      invitation_removed: Zure gonbidapena ezabatua izan da.
-      new:
-        header: Bidali gonbidapena
-        submit_button: Bidali gonbidapen bat
-      edit:
-        header: Ezarri zure pasahitza
-        submit_button: Ezarri nire pasahitza
-    mailer:
-      invitation_instructions:
-        subject: Gonbidapenaren jarraibideak
-        hello: Kaixo %{email}
-        someone_invited_you: Norbaitek zu gonbidatu zaitu %{url} gunera; beheko lotura
-          erabiliz onar dezakezu gonbidapena.
-        accept: Gonbidapena onartu
-        ignore: Ez baduzu gonbidapena onartu nahi, mesedez, utzi alde batera mezu
-          hau.<br /> Zure kontua ez da sortuko zuk lotura atzitu eta pasahitza finkatzen
-          duzun arte.

@@ -66,10 +66,6 @@ Dashboard::Application.configure do
   # skip precompiling of all assets on the first request for any asset.
   config.assets.check_precompiled_asset = false
 
-  # Whether or not to skip script preloading. Setting this to true
-  # significantly speeds up server startup time
-  config.skip_script_preload = true
-
   # Set to :debug to see everything in the log.
   config.log_level = :debug
 
@@ -81,4 +77,10 @@ Dashboard::Application.configure do
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
 
   config.experiment_cache_time_seconds = 0
+
+  # Override the default delayed_job queue adapter so that jobs will run even if
+  # the developer is not running a delayed_job worker. To use the delayed_job
+  # queue adapter in development, comment out this line and make sure you have
+  # run `bin/delayed_job start` or rake build.
+  config.active_job.queue_adapter = :async
 end

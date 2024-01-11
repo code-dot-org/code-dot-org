@@ -15,7 +15,6 @@ ta:
             '0.75': சிறிய
             '1.00': ஊடகம்
             '2.00': பெரிய
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -23,7 +22,6 @@ ta:
             '0.75': சிறிய
             '1.00': ஊடகம்
             '2.00': பெரிய
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -69,6 +67,11 @@ ta:
           UNIT:
             '"measures"': அளவீடுகள்
             '"seconds"': விநாடிகள்
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': அளவீடுகள்
+            '"seconds"': விநாடிகள்
       Dancelab_changeColorBy:
         text: மாற்றுக {COLOR} {METHOD} இதனால் {AMOUNT}
         options:
@@ -107,6 +110,26 @@ ta:
             MOVES.Kick: ஸ்டார்
             MOVES.ThisOrThat: இது அல்லது அது
             MOVES.Rest: எதுவுமில்லை
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} செய்க {MOVE} {DIR} எப்போதும்"
+        options:
+          GROUP:
+            '"CAT"': பூனைகள்
+          MOVE:
+            MOVES.Roll: பாடி ரோல்
+            MOVES.ClapHigh: உயரே கைதட்டுக
+            MOVES.Dab: டாப்
+            MOVES.DoubleJam: டபுள் டவுன்
+            MOVES.Drop: ட்ராப்
+            MOVES.Floss: ஃப்ளாஸ்
+            MOVES.Fresh: ஃப்ரெஷ்
+            MOVES.Clown: கங்கனம்
+            MOVES.Kick: ஸ்டார்
+            MOVES.ThisOrThat: இது அல்லது அது
+            MOVES.Rest: எதுவுமில்லை
+            '"next"': "(அடுத்த)"
+            '"prev"': "(முந்தைய)"
+            '"rand"': "(ரான்டம்)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} செய்க {MOVE} {DIR} எப்போதும்"
         options:
@@ -438,26 +461,6 @@ ta:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': ஏலியன்கள்
             '"BEAR"': கரடிகள்
@@ -569,6 +572,50 @@ ta:
             '"iceCream"': ஐஸ்க்ரீம்
             '"default"': லைட்
             '"neon"': நியான்
+            '"tropical"': டிராபிகல்
+            '"vintage"': வின்டேஜ்
+            '"warm"': வ
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          பின்னணி எஃபெக்டடை அமைக்கவும்
+           {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': எதுவுமில்லை
+            '"rand"': "(ரான்டம்)"
+            '"quads"': கோணங்கள்
+            '"circles"': வட்டங்கள்
+            '"color_cycle"': வண்ணங்கள்
+            '"diamonds"': டயமன்ட்ஸ்
+            '"disco_ball"': டிஸ்கோ பால்
+            '"fireworks"': ஃபயர்ஒர்க்ஸ்
+            '"flowers"': மலர்கள்
+            '"growing_stars"': வளரும் நட்சத்திரங்கள்
+            '"swirl"': ஹிப்னோ
+            '"kaleidoscope"': கெலைடோஸ்கோப்
+            '"lasers"': லேசர் டான்ஸ் தளம்
+            '"splatter"': பெயின்ட் ஸ்பலாட்டர்
+            '"rainbow"': வானவில்
+            '"ripples_random"': தொடர்பற்ற சிற்றலைகள்
+            '"ripples"': சிற்றலைகள்
+            '"snowflakes"': பனி
+            '"text"': பாடல் பெயர்கள்
+            '"galaxy"': ஸ்பேஸ்
+            '"sparkles"': ஜொலிப்புகள்
+            '"spiral"': ஸ்பைரல்
+            '"disco"': சதுரங்கள்
+            '"squiggles"': சிறு வளை கோடுகள்
+            '"stars"': நட்சத்திரங்கள்
+            '"music_wave"': அலைகள்
+          PALETTE:
+            '"rave"': கருப்பு வெள்ளை
+            '"cool"': கூல்
+            '"electronic"': எலக்ட்ரானிக்
+            '"iceCream"': ஐஸ்க்ரீம்
+            '"default"': லைட்
+            '"neon"': நியான்
+            '"ocean"': கடல்
+            '"rainbow"': வானவில்
             '"tropical"': டிராபிகல்
             '"vintage"': வின்டேஜ்
             '"warm"': வ
@@ -948,8 +995,6 @@ ta:
         options:
           INPUT1:
             '1': எலுமிச்சை சாறு
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         text: விளைவு {EFFECT}செய்ய
         options:
@@ -965,8 +1010,6 @@ ta:
         options:
           INPUT1:
             '1': எலுமிச்சை சாறு
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: "{SPRITE1COSTUME} உடன் {VAR1} தொடர்பு கொள்ளவும்"
       FunctionBlocks_makeManipulative2:
@@ -1456,11 +1499,9 @@ ta:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': வேகக் குறைவு
             '5': வழக்கமான
             '7': வேகமாக
-            '9': extra fast
       gamelab_setTint:
         text: இந்த {THIS} இன் நிறத்தை {COLOR} ஆக மாற்றவும்
       gamelab_setupScoreboard:
@@ -1618,6 +1659,12 @@ ta:
         text: y ஒருங்கிணைப்பு {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} சறுக்கி {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': திடமான
+            '"liquid"': திரவம்
+            '"gas"': கேஸ்
       KatiesBlocks_tumbling:
         text: உருளும்
       Mikelab_addBehaviorSimple:
@@ -1907,14 +1954,10 @@ ta:
         options:
           INPUT1:
             '1': எலுமிச்சை சாறு
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': எலுமிச்சை சாறு
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -2135,7 +2178,6 @@ ta:
         text: வரி {N} காண்பிக்கும் போது
         options:
           'N':
-            '0': "???"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -2178,16 +2220,10 @@ ta:
         options:
           PORTION:
             '1': எல்லாம்
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': எல்லாம்
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} சொல் {SPEECH}"
       adaptations_adaptationBehaviors:
@@ -2275,7 +2311,6 @@ ta:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '2': '2'
             '3': '3'

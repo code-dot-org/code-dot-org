@@ -1,9 +1,9 @@
 {
   "absolute": "绝对",
+  "agentDiamondPathCongrats": "恭喜你找到钻石之路了！您到目前为止已经收集了{count, plural, one {1} other {#}}颗钻石 ! ",
   "agentGenericFailureMessage": "继续编码！记得使用吉祥物来帮忙。",
   "agentTooFewBlocksFailureMessage": "尝试每次只添加一个方块，来让吉祥物抵达正确的地点。",
   "at": "在",
-  "agentDiamondPathCongrats": "恭喜你找到钻石之路了！您到目前为止已经收集了{count, plural, one {1} other {#}}颗钻石 ! ",
   "blockActionAdd": "添加",
   "blockActionAttack": "攻击",
   "blockActionClone": "复制模块",

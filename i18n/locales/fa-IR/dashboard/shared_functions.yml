@@ -1,7 +1,7 @@
 fa:
   data:
     shared_functions:
-      driving with arrow keys: رانندگی با کلیدهای پیکان
+      driving with arrow keys: رانندگی با کلیدهای جهت‌دار
       fluttering: بال زدن
       growing: رشد کردن
       jittering: با عصبانیت رفتار کردن
@@ -13,10 +13,11 @@ fa:
       moving south and looping: حرکت به سمت جنوب و درست کردن حلقه‏
       moving west: حرکت به سمت غرب
       moving west and looping: حرکت به سمت غرب و درست کردن حلقه‏
-      moving with arrow keys: حرکت با کلیدهای پیکان
-      patrolling: گشت‌زنی
-      shrinking: منقبض شدن
-      spinning left: چرخش به چپ
-      spinning right: چرخش به راست
+      moving with arrow keys: حرکت با کلیدهای جهت‌دار
+      patrolling: گشت‌ زدن
+      shrinking: کوچک شدن
+      spinning left: چرخش به سمت چپ
+      spinning right: چرخش به سمت راست
+      swimming left and right: شنا کردن به چپ و راست
       wandering: گردش کردن
       wobbling: تلوتلو خوردن

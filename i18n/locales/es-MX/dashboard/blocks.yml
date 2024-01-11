@@ -4,6 +4,15 @@ es-MX:
     blocks:
       AmysBlocks_addTarget:
         text: "{TARGET} {OPT} {SPRITE} "
+      AmysBlocks_goldilocks:
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': demasiado
+            '"just right"': suficiente
+            '"too little"': muy poco
       AmysBlocks_playerBehaviors:
         text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
@@ -30,6 +39,8 @@ es-MX:
             '1.00': mediano
             '2.00': grande
             '3.00': extra grande
+      Dancelab_ai:
+        text: "{IMAGE} genera efecto {VALUE} "
       Dancelab_alternateMoves:
         text: "{GROUP} alternar cada {N} compases \nentre {MOVE1} y {MOVE2}"
         options:
@@ -77,6 +88,11 @@ es-MX:
           UNIT:
             '"measures"': compases
             '"seconds"': segundos
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': compases
+            '"seconds"': segundos
       Dancelab_changeColorBy:
         text: cambiar {COLOR} {METHOD} por {AMOUNT}
         options:
@@ -116,6 +132,27 @@ es-MX:
             MOVES.Kick: Estrella
             MOVES.ThisOrThat: Esto o aquello
             MOVES.Rest: Ninguna
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} hacer {MOVE} {DIR} para siempre"
+        options:
+          GROUP:
+            '"CAT"': gatos
+            '"SLOTH"': perezosos
+          MOVE:
+            MOVES.Roll: Vuelta completa
+            MOVES.ClapHigh: Palmas hacia arriba
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Doble abajo
+            MOVES.Drop: Caída
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresco
+            MOVES.Clown: Payaso
+            MOVES.Kick: Estrella
+            MOVES.ThisOrThat: Esto o aquello
+            MOVES.Rest: Ninguna
+            '"next"': "(Siguiente)"
+            '"prev"': "(Anterior)"
+            '"rand"': "(Al azar)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} hacer {MOVE} {DIR} para siempre"
         options:
@@ -140,7 +177,7 @@ es-MX:
         options:
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -164,7 +201,7 @@ es-MX:
             '"UNICORN"': unicornios
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -263,7 +300,7 @@ es-MX:
         options:
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -347,7 +384,7 @@ es-MX:
             "{x: 300, y: 300}": abajo a la derecha
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": al azar
       Dancelab_layoutSprites:
-        text: diseño {GROUP} como un {FORMAT}
+        text: organizar {GROUP} como {FORMAT}
         options:
           GROUP:
             sprites: todo
@@ -597,6 +634,62 @@ es-MX:
             '"tropical"': Tropical
             '"vintage"': Vintage
             '"warm"': Rojos
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: "establecer efecto de fondo \n{PALETTE} {EFFECT}"
+        options:
+          EFFECT:
+            '"none"': Ninguna
+            '"rand"': "(Al azar)"
+            '"quads"': Ángulos
+            '"blooming_petals"': Florecimiento
+            '"circles"': Túnel
+            '"clouds"': Nubes
+            '"color_cycle"': Colores
+            '"diamonds"': Diamantes
+            '"disco_ball"': Bola de discoteca
+            '"fireworks"': Fuegos artificiales
+            '"flowers"': Flores
+            '"frosted_grid"': Marco de hielo
+            '"growing_stars"': Estrellas crecientes
+            '"swirl"': Hipnótico
+            '"kaleidoscope"': Caleidoscopio
+            '"lasers"': Pista de baile láser
+            '"splatter"': Salpicaduras de pintura
+            '"rainbow"': Arcoíris
+            '"ripples_random"': Ondas aleatorias
+            '"ripples"': Ondas
+            '"snowflakes"': Nieve
+            '"text"': Título de la canción
+            '"galaxy"': Espacio
+            '"sparkles"': Brillos
+            '"spiral"': Espiral
+            '"disco"': Cuadrados
+            '"squiggles"': Garabatos
+            '"starburst"': Explosión de estrellas
+            '"stars"': Estrellas
+            '"music_wave"': Olas
+          PALETTE:
+            '"autumn"': Otoño
+            '"rave"': Blanco y negro
+            '"cool"': Azules
+            '"electronic"': Música electrónica
+            '"grayscale"': Escala de grises
+            '"iceCream"': Helado
+            '"default"': Luz
+            '"neon"': Neón
+            '"ocean"': Océano
+            '"rainbow"': Arcoíris
+            '"roses"': Rosas
+            '"sky"': Cielo
+            '"spring"': Primavera
+            '"summer"': Verano
+            '"sunrise"': Amanecer
+            '"sunset"': Puesta de sol
+            '"tropical"': Tropical
+            '"twinkling"': Centelleo
+            '"vintage"': Vintage
+            '"warm"': Rojos
+            '"winter"': Invierno
       Dancelab_setDanceSpeed:
         text: cambiar velocidad de baile de {SPRITE} a {SPEED}
         options:
@@ -675,7 +768,7 @@ es-MX:
         options:
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -699,7 +792,7 @@ es-MX:
             '"UNICORN"': unicornios
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -710,7 +803,7 @@ es-MX:
         options:
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -735,7 +828,7 @@ es-MX:
             '"UNICORN"': unicornios
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -810,7 +903,7 @@ es-MX:
         options:
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -839,7 +932,7 @@ es-MX:
             '"UNICORN"': unicornios
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -854,7 +947,7 @@ es-MX:
         options:
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -884,7 +977,7 @@ es-MX:
             '"UNICORN"': unicornios
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -1256,7 +1349,7 @@ es-MX:
       gamelab_layoutGrid:
         text: diseño de sprites como una cuadrícula
       gamelab_layoutSprites:
-        text: diseño {GROUP} como un {FORMAT}
+        text: organizar {GROUP} como {FORMAT}
         options:
           FORMAT:
             '"border"': orilla
@@ -1369,15 +1462,15 @@ es-MX:
             "'sound://category_nature/summer_night_loop.mp3'": noche de verano
             "'sound://category_background/ocean_waves.mp3'": olas
             "'sound://category_nature/south_carolina_beach_ripple.mp3'": olas en la playa
-            "'sound://category_pop/bubble_pop_cluster_1.mp3'": Burbuja
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": burbuja
             "'sound://category_animals/bear.mp3'": oso
             "'sound://category_animals/cat.mp3'": gato
             "'sound://category_animals/cow.mp3'": vaca
             "'sound://category_animals/pig.mp3'": cerdo
             "'sound://category_animals/sheep.mp3'": oveja
-            "'sound://category_animals/goat.mp3'": Cabra
+            "'sound://category_animals/goat.mp3'": cabra
             "'sound://category_animals/chicken.mp3'": gallina
-            "'sound://category_animals/rooster.mp3'": rejilla
+            "'sound://category_animals/rooster.mp3'": gallo
             "'sound://category_animals/elephant.mp3'": elefante
             "'sound://category_animals/dolphin.mp3'": delfín
             "'sound://category_nature/thunderstorm_1.mp3'": tormenta de truenos
@@ -1399,7 +1492,7 @@ es-MX:
         text: reproducirSonido {SOUND}
         options:
           SOUND:
-            "'sound://category_sports/Airhorn_SFX.mp3'": corneta de aire
+            "'sound://category_sports/Airhorn_SFX.mp3'": bocina
             "'sound://category_sports/Crowd_Applause_SFX.mp3'": aplauso
             "'sound://category_sports/Crowd_Chant_SFX.mp3'": cántico
             "'sound://category_sports/Crowd_Cheer_SFX.mp3'": animar
@@ -1537,7 +1630,7 @@ es-MX:
         options:
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
       gamelab_setSpeed_dropdown:
         text: ajustar {SPRITE} a velocidad {SIZE}
@@ -1705,6 +1798,15 @@ es-MX:
         text: coordenada y de {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} vuela a {LOCATION}"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': sólido
+            '"liquid"': Líquido
+            '"gas"': gaseoso
       KatiesBlocks_tumbling:
         text: rodando
       Mikelab_addBehaviorSimple:
@@ -1745,6 +1847,8 @@ es-MX:
             "{x: 100, y: 300}": abajo a la izquierda
             "{x: 300, y: 300}": abajo a la derecha
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatorio
+      Mikelab_destroy:
+        text: eliminar {SPRITE}
       Mikelab_getNext:
         text: obtener siguiente objeto
       Mikelab_getProp:
@@ -2171,7 +2275,7 @@ es-MX:
             '"sound://category_background/inside_plane.mp3"': Zumbido
             '"sound://category_loops/red_flag_loop1.mp3"': Misión
             '"sound://category_nature/summer_night_loop.mp3"': Noche
-            '"sound://category_background/ocean_waves.mp3"': océano
+            '"sound://category_background/ocean_waves.mp3"': mar
             '"sound://category_background/rain_thunderstorm_calm.mp3"': Lluvioso
             '"sound://category_background/rainforest_ambient_sound.mp3"': Bosque lluvioso
             '"sound://category_background/repitition.mp3"': Montar
@@ -2380,7 +2484,7 @@ es-MX:
       Vector_setColor:
         text: establecer color para {COLOR}
       Vector_setSize:
-        text: establecer ancho {WIDTH} altura {HEIGHT}
+        text: definir ancho {WIDTH} altura {HEIGHT}
       Vector_teleportTo:
         text: establecer posición {POSITION}
       Vector_vectorNorth:
@@ -2631,11 +2735,23 @@ es-MX:
           DIR:
             right: derecha ↻
             left: izquierda ↺
+      ecosystems_catchMe:
+        text: atrapar {THIS}
+      ecosystems_eat:
+        text: comer {THIS}
+      ecosystems_goldilocks:
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': demasiado
+            '"just right"': suficiente
+            '"too little"': muy poco
       ecosystems_int10:
         text: "{VALUE}"
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '2': '2'
             '3': '3'
@@ -2646,6 +2762,25 @@ es-MX:
             '8': '8'
             '9': '9'
             '10': '10'
+      ecosystems_makeNewSpriteBetween:
+        text: hacer {N} nuevo {GROUP} en ubicación x:{X} y:{Y}
+      ecosystems_makeNumSpritesAtLocation:
+        text: crear {NUM} nuevos {ANIMATION_NAME} sprites en {LOCATION_GENERATOR}
+      ecosystems_makeNumSpritesWithinRange:
+        text: crear {NUM} nuevos {ANIMATION_NAME} sprites en {RANGE}
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Parte superior
+            "{x1:0, x2:400, y1:150, y2:250}": Centro
+            "{x1:0, x2:400, y1:0, y2:200}": Parte inferior
+      ecosystems_randomLocationWithinRange:
+        text: x min{X1}x max{X2}y min{Y1}y max{Y2}
+      ecosystems_randomLocationWithinSelectedRange:
+        text: "{RANGE}"
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Parte superior
+            "{x1:0, x2:400, y1:0, y2:200}": Parte inferior
       storylab_clearHeadings:
         text: eliminar títulos
       storylab_printText:

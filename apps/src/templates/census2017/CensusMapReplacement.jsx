@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import $ from 'jquery';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import i18n from '@cdo/locale';
 
 class CensusMapInfoWindow extends Component {
   static propTypes = {
@@ -26,7 +27,7 @@ class CensusMapInfoWindow extends Component {
         break;
       case 'NO':
         censusMessage =
-          'We believe this school offers limited or no Computer Science opportunities.';
+          'We believe this school offers no Computer Science opportunities.';
         color = 'blue';
         break;
       case 'HISTORICAL_YES':
@@ -36,13 +37,8 @@ class CensusMapInfoWindow extends Component {
         break;
       case 'HISTORICAL_NO':
         censusMessage =
-          'We believe this school historically offered limited or no Computer Science opportunities.';
+          'We believe this school historically offered no Computer Science opportunities.';
         color = 'blue';
-        break;
-      case 'MAYBE':
-      case 'HISTORICAL_MAYBE':
-        censusMessage = 'We have conflicting data for this school.';
-        color = 'yellow';
         break;
       default:
         censusMessage = 'We need data for this school.';
@@ -98,15 +94,6 @@ class CensusMapInfoWindow extends Component {
               </div>
             </a>
           </div>
-          <div className="button-link-div">
-            <a href="/yourschool/letter" target="_blank">
-              <div className="button">
-                <div className="button-text">
-                  Send the survey to a teacher at this school
-                </div>
-              </div>
-            </a>
-          </div>
         </div>
       </div>
     );
@@ -117,6 +104,7 @@ export default class CensusMapReplacement extends Component {
   static propTypes = {
     onTakeSurveyClick: PropTypes.func.isRequired,
     school: PropTypes.object,
+    tileset: PropTypes.string.isRequired,
   };
 
   map = undefined;
@@ -205,15 +193,15 @@ export default class CensusMapReplacement extends Component {
     var _this = this;
 
     this.map.on('load', function () {
-      _this.map.addSource('censustiles', {
+      _this.map.addSource(_this.props.tileset, {
         type: 'vector',
-        url: 'mapbox://codeorg.censustiles',
+        url: `mapbox://codeorg.${_this.props.tileset}`,
       });
 
       _this.map.addLayer({
         id: 'census-schools',
         type: 'circle',
-        source: 'censustiles',
+        source: _this.props.tileset,
         'source-layer': 'census',
         layout: {
           visibility: 'visible',
@@ -225,23 +213,22 @@ export default class CensusMapReplacement extends Component {
             ['get', 'teaches_cs'],
             ['NO', 'HISTORICAL_NO'],
             '#989CF8',
-            ['MAYBE', 'HISTORICAL_MAYBE'],
-            '#FFFDA6',
             'white',
           ],
           'circle-stroke-width': 1,
           'circle-stroke-color': '#000000',
         },
         filter: [
-          'any',
+          'all',
           ['!=', 'teaches_cs', 'YES'],
           ['!=', 'teaches_cs', 'HISTORICAL_YES'],
+          ['!=', 'teaches_cs', 'EXCLUDED'],
         ],
       });
       _this.map.addLayer({
         id: 'census-schools-teaching-cs',
         type: 'symbol',
-        source: 'censustiles',
+        source: _this.props.tileset,
         'source-layer': 'census',
         layout: {
           'icon-image': 'marker-15-green',
@@ -330,7 +317,7 @@ export default class CensusMapReplacement extends Component {
           return;
         }
         flying = false;
-        const features = _this.map.querySourceFeatures('censustiles', {
+        const features = _this.map.querySourceFeatures(_this.props.tileset, {
           sourceLayer: 'census',
           filter: ['all', ['==', 'school_id', school.nces_id]],
         });
@@ -391,9 +378,7 @@ export default class CensusMapReplacement extends Component {
             <div className="color legend-offers-cs" />
             <div className="caption">Offers computer science</div>
             <div className="color legend-limited-cs" />
-            <div className="caption">Limited or no CS opportunities</div>
-            <div className="color legend-inconclusive-cs" />
-            <div className="caption">Inconclusive data</div>
+            <div className="caption">No CS opportunities</div>
             <div className="color legend-no-data-cs" />
             <div className="caption">No Data</div>
           </div>
@@ -403,9 +388,7 @@ export default class CensusMapReplacement extends Component {
           <div className="color legend-offers-cs" />
           <div className="caption">Offers computer science</div>
           <div className="color legend-limited-cs" />
-          <div className="caption">Limited or no CS opportunities</div>
-          <div className="color legend-inconclusive-cs" />
-          <div className="caption">Inconclusive data</div>
+          <div className="caption">No CS opportunities</div>
           <div className="color legend-no-data-cs" />
           <div className="caption">No Data</div>
         </div>
@@ -417,7 +400,10 @@ export default class CensusMapReplacement extends Component {
           </div>
           <div id="right">
             <span id="footer-text">In partnership with</span>
-            <img src="/images/fit-100/avatars/computer_science_teachers_association.png" />
+            <img
+              src="/images/fit-100/avatars/computer_science_teachers_association.png"
+              alt={i18n.CSTALogo()}
+            />
           </div>
         </div>
         <br />

@@ -16,7 +16,7 @@ def check_pidfile(pidfile, tries)
     rescue Errno::ESRCH # Invalid pid
       File.delete(pidfile)
       exists = false
-    rescue ::Exception   # for example on EPERM (process exists but does not belong to us)
+    rescue Exception   # for example on EPERM (process exists but does not belong to us)
       exists = true
       raise
     end
@@ -33,7 +33,7 @@ end
 def there_can_be_only_one(pidfile)
   check_pidfile(pidfile, TIMES_TO_TRY)
   File.open(pidfile, "w") {|f| f.puts $$}
-  at_exit {File.unlink(pidfile) if File.exist?(pidfile)}
+  at_exit {FileUtils.rm_f(pidfile)}
 end
 
 there_can_be_only_one("#{File.basename(__FILE__)}.pid") unless ENV['PEGASUS_RAKE_RECURSIVE'].to_s.casecmp?('true')

@@ -1,7 +1,7 @@
 require_relative '../test_helper'
 require 'cdo/i18n_backend'
 
-class TestI18nSmartTranslateBackend < ::I18n::Backend::Simple
+class TestI18nSmartTranslateBackend < I18n::Backend::Simple
   include Cdo::I18n::SmartTranslate
 end
 
@@ -110,7 +110,7 @@ class I18nSmartTranslateTest < Minitest::Test
   end
 end
 
-class TestI18nMarkdownTranslateBackend < ::I18n::Backend::Simple
+class TestI18nMarkdownTranslateBackend < I18n::Backend::Simple
   include Cdo::I18n::MarkdownTranslate
 end
 
@@ -123,7 +123,7 @@ class I18nMarkdownTranslateTest < Minitest::Test
   end
 end
 
-class TestI18nSafeInterpolationBackend < ::I18n::Backend::Simple
+class TestI18nSafeInterpolationBackend < I18n::Backend::Simple
   include Cdo::I18n::SafeInterpolation
 end
 

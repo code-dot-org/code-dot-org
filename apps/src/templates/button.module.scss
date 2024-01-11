@@ -1,5 +1,4 @@
-@import "color.scss";
-@import "font.scss";
+@import 'color', 'font';
 
 // Note: Keep these constants in sync with Button.jsx.
 $button-height-default: 34px;
@@ -23,9 +22,9 @@ a:visited,
 :global(.header) a:visited {
   /* stylelint-enable selector-pseudo-class-no-unknown */
   &.main {
+    @include main-font-regular;
     display: inline-block;
     font-size: 12px;
-    font-family: "Gotham 4r", sans-serif;
     border: 1px solid $border_gray;
     border-radius: 3px;
     text-decoration: none;
@@ -214,7 +213,7 @@ a:visited,
     background-color: $brand_secondary_default;
     border-color: $brand_secondary_default;
     border-radius: 4px;
-    border-width: 2px;
+    border-width: 1px;
     line-height: 30px;
 
     &:hover {
@@ -224,7 +223,7 @@ a:visited,
       background-color: $brand_secondary_dark;
     }
 
-    &:focus {
+    &:focus-visible {
       @include focus-outline;
     }
 
@@ -238,7 +237,7 @@ a:visited,
   &.neutralDark {
     color: $neutral_dark;
     background-color: $neutral_white;
-    border: 2px solid $neutral_dark;
+    border: 1px solid $neutral_dark;
     border-radius: 4px;
     line-height: 30px;
 
@@ -246,7 +245,7 @@ a:visited,
       background-color: $neutral_dark10;
     }
 
-    &:focus {
+    &:focus-visible {
       @include focus-outline;
     }
 
@@ -263,7 +262,12 @@ a:visited,
     &.default {
       padding-left: 16px;
       padding-right: 16px;
-      font-family: $gotham-bold;
+
+      @include main-font-semi-bold;
+    }
+
+    &:active {
+      border-width: 2px;
     }
   }
 
@@ -304,14 +308,14 @@ a:visited,
   }
 
   &.phase1Updated {
-    line-height: 30px;
+    line-height: 32px;
   }
 
   &.textButton {
+    @include main-font-semi-bold;
     color: $teal;
     border-width: 0;
     background-color: unset;
-    font-family: "Gotham 5r", sans-serif;
     box-shadow: none;
     padding: 0;
     margin: 0;
@@ -330,7 +334,7 @@ a:visited,
       color: $brand_secondary_dark;
     }
 
-    &:focus {
+    &:focus-visible {
       @include focus-outline;
       outline-offset: unset;
     }

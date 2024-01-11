@@ -12,23 +12,23 @@ title: 公职人员的操作指南
 
 </br>
 
-## Are you hosting an elected official at your Hour of Code?
+## 您会在您的编程一小时活动中包括一位官员么？
 
 [请查看我们的工具组](/files/elected-official.pdf)，这里提供了所有您需要的信息，让参与者获得更好的体验，帮助你成功主办编程一小时活动！
 
 ![](/images/fit-800/hoc_govs.png)
 
-From left to right: *Governors from Arkansas, North Carolina, and Arizona participating in an Hour of Code.*
+从左至右：*来自阿肯色州、北卡罗来纳州和亚利桑那州的州长参加 “编程一小时” 活动。*
 
 ## 让每个学校都参加，每个学生都来学习！
 
 ### 1. 请阅读我们的单页报告
 
-See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
+查看[为什么计算机教育如此重要]({{ localized_files/hoc_one_pager }})，以及您可以怎样通过支持编程一小时来帮助这个活动。
 
 ### 2. 招募本地学校和社区作为合作机构
 
-Use [this email]({{ promote/sample_emails }}) or [this blurb]({{ promote/stats_url }}) as a starting point, and take a look at this [how-to]({{ urls/how_to_guide }}) for schools and districts.
+查看为学校准备的[指南]({{ urls/how_to_guide }})，并撰写[电子邮件]({{ promote/sample_emails }})或[简介]({{ promote/stats_url }})。
 
 ### 如何举办编程一小时活动
 

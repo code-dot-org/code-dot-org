@@ -43,7 +43,7 @@ class I18nSync
       # download and distribute translations from the previous sync
       return_to_staging_branch
       sync_down if should_i "sync down"
-      sync_out(true) if should_i "sync out"
+      sync_out if should_i "sync out"
       CreateI18nPullRequests.down_and_out if @options[:with_pull_request] && should_i("create the down & out PR")
 
       # force switch to the staging branch to collect and upload the most relevant English content
@@ -67,7 +67,7 @@ class I18nSync
         sync_down
       when 'out'
         puts "Distributing translations from i18n/locales out into codebase"
-        sync_out(true)
+        sync_out
         if @options[:with_pull_request] && should_i("create the down & out PR")
           CreateI18nPullRequests.down_and_out
         end
@@ -81,6 +81,10 @@ class I18nSync
 
   def sync_in
     I18n::SyncIn.perform
+  end
+
+  def sync_out
+    I18n::SyncOut.perform
   end
 
   def parse_options(args)

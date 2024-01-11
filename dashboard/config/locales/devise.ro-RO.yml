@@ -61,6 +61,28 @@ ro:
       unlocked: Contul tău a fost deblocat cu succes. Te rugăm să te loghezi pentru
         a continua.
   errors:
+    invitations:
+      edit:
+        header: Setează parola ta
+        submit_button: Setează parola mea
+      invitation_removed: Invitația ta a fost eliminată.
+      invitation_token_invalid: Codul Token de invitație furnizat nu este valid!
+      new:
+        header: Trimite invitație
+        submit_button: Trimite o invitație
+      no_invitations_remaining: Nici o invitație disponibilă
+      send_instructions: O invitație prin e-mail a fost trimisă la %{email}.
+      updated: Parola ta a fost setată cu succes. Acum ești logat.
+    mailer:
+      invitation_instructions:
+        accept: Acceptă invitația
+        hello: Salutare %{email}
+        ignore: Dacă nu dorești să accepți invitația, te rugăm să ignori acest email.<br
+          />Contul tău nu va fi creat până când accesezi link-ul de mai sus și îți
+          setezi parola.
+        someone_invited_you: Cineva te-a invitat să %{url}, poți accepta accesând
+          link-ul de mai jos.
+        subject: Instrucţiuni de invitaţie
     messages:
       already_confirmed: a fost confirmat deja, te rugăm să încerci să te loghezi
       confirmation_period_expired: trebuie să fie confirmat în %{period}, te rugăm
@@ -68,25 +90,3 @@ ro:
       expired: a expirat, te rugăm să soliciți unul nou
       not_found: nu a fost găsit
       not_locked: nu a fost blocat
-    invitations:
-      send_instructions: O invitație prin e-mail a fost trimisă la %{email}.
-      invitation_token_invalid: Codul Token de invitație furnizat nu este valid!
-      updated: Parola ta a fost setată cu succes. Acum ești logat.
-      no_invitations_remaining: Nici o invitație disponibilă
-      invitation_removed: Invitația ta a fost eliminată.
-      new:
-        header: Trimite invitație
-        submit_button: Trimite o invitație
-      edit:
-        header: Setează parola ta
-        submit_button: Setează parola mea
-    mailer:
-      invitation_instructions:
-        subject: Instrucţiuni de invitaţie
-        hello: Salutare %{email}
-        someone_invited_you: Cineva te-a invitat să %{url}, poți accepta accesând
-          link-ul de mai jos.
-        accept: Acceptă invitația
-        ignore: Dacă nu dorești să accepți invitația, te rugăm să ignori acest email.<br
-          />Contul tău nu va fi creat până când accesezi link-ul de mai sus și îți
-          setezi parola.

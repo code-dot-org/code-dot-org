@@ -52,7 +52,9 @@ vi:
         age: 'Tuổi'
         gender: 'Giới tính'
         edit_header: 'Chỉnh sửa thông tin tài khoản'
+        ai_settings_header: 'Cài đặt AI'
         finish_sign_up_header: 'Hoàn thành tạo tài khoản'
+        finish_sign_up_header_error: 'Hãy sửa các lỗi sau đây:'
         finish_sign_up_subheader: 'Điền thông tin sau để hoàn thành tạo tài khoản Code.org cho <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Điền thông tin sau để hoàn thành tạo tài khoản Code.org cho **%{email}**.'
         finish_sign_up_subheader_provider: 'Điền thông tin sau để hoàn thành tạo tài khoản Code.org với <strong>%{provider}</strong> cho <strong>%{email}</strong>.'
@@ -60,6 +62,7 @@ vi:
         reset_password_token: "Liên kết đặt lại mật khẩu bạn đã theo dõi"
         error:
           future: không thể trong tương lai
+        user_type: 'Kiểu tài khoản'
         us_state: 'Quốc gia'
   beta: "phiên bản thử nghiệm"
   hello: "Xin chào thế giới"
@@ -202,6 +205,8 @@ vi:
     parent_account_email_progress_permission: "Liệu chúng tôi có thể gửi thư điện tử chứa những cập nhật thường xuyên về tiến trình và các bài tập cũng như cập nhật về khóa học và khoa học máy tính của trẻ cho bạn không? [(Xem Chính sách riêng tư của chúng tôi)](%{privacy_policy_url})"
     parent_account_email_label: "Email của phụ huynh hoặc người giám hộ"
     us_state: 'Quốc gia'
+    us_state_dropdown_options:
+      other: "Tôi sống ở một nơi không được liệt kê ở đây"
   school_info:
     title: 'Thông tin trường học (không bắt buộc)'
     school_country: 'Quốc gia'
@@ -270,6 +275,8 @@ vi:
   parent_mailer:
     student_associated_subject: 'Thông tin đăng nhập vào Code.org'
     parent_email_added_subject: 'Chào mừng tới Code.org!'
+    parent_permission_reminder_subject: "Nhắc nhở, cần có sự đồng ý của cha mẹ để con bạn truy cập Code.org"
+    parent_permission_confirmation_subject: "Cảm ơn bạn đã chấp thuận quyền truy cập của con bạn vào Code.org!"
   teacher_mailer:
     new_teacher_subject: 'Chào mừng tới Code.org!'
     delete_teacher_subject: 'Code.org thông báo: tài khoản của bạn đã bị xóa'
@@ -866,6 +873,8 @@ vi:
     submit-incomplete-body: "Bạn bỏ lại một số câu hỏi chưa hoàn chỉnh.  Bạn không thể chỉnh sửa đánh giá của bạn sau khi gửi nó.  Bạn có chắc không?"
     submit-complete-title: "Gửi đánh giá của bạn"
     submit-complete-body: "Bạn không thể chỉnh sửa đánh giá của bạn sau khi gửi nó.  Bạn có chắc không?"
+  level_summary:
+    correct_answer: "Câu trả lời đúng"
   match:
     wrong_title: "Cách giải chưa chính xác"
     wrong_body: "Cách giải bạn đã nhập chưa chính xác. Xin vui lòng thử lại!"
@@ -1127,17 +1136,37 @@ vi:
         not_listed: 'Điều khoản ưu tiên không được liệt kê'
         none: 'Tùy chọn không muốn trả lời'
       school_country:
+        australia: 'Úc'
         barbados: 'Barbados'
         belize: 'Belize'
+        brazil: 'Braxin'
         canada: 'Canada'
         chile: 'Chile'
         colombia: 'Colombia'
+        dominican_republic: 'Cộng hòa Dominica'
+        india: 'Ấn Độ'
+        indonesia: 'Indonesia'
         israel: 'Israel'
+        italy: 'Ý'
+        jamaica: 'Jamaica'
+        kenya: 'Kenya'
+        kosovo: 'Kosovo'
         malaysia: 'Malaysia'
+        maldives: 'Maldives'
         mexico: 'Mexico'
+        mongolia: 'Mông Cổ'
+        new_zealand: 'New Zealand'
         paraguay: 'Paraguay'
+        philippines: 'Philippines'
+        portugal: 'Bồ Đào Nha'
+        puerto_rico: 'Puerto Rico'
+        slovakia: 'Slovakia'
+        south_korea: 'Hàn Quốc'
+        spain: 'Tây Ban Nha'
         thailand: 'Thái Lan'
+        trinidad_and_tobago: 'Trinidad và Tobago'
         uzbekistan: 'Uzbekistan'
+        vietnam: 'Việt Nam'
       ages:
         ages_under_6: '< 6 tuổi'
         ages_7_8: '7-8 tuổi'
@@ -1226,6 +1255,7 @@ vi:
       workshops_k5: 'Hội thảo K-5'
       summer_workshops_612: '6-12 Hội thảo Mùa hè'
       virtual_academic_year_workshops_612: 'Hội thảo năm học ảo 6—12'
+      unsupported: 'Không được hỗ trợ'
   cookie_banner:
     message: 'Bằng cách tiếp tục duyệt trang web của chúng tôi hoặc nhấp vào “Tôi đồng ý”, bạn đồng ý với hoạt động lưu trữ cookie trên máy tính hoặc thiết bị của mình.'
     more_information: "Xem Chính sách quyền riêng tư của Code.org."
@@ -1281,3 +1311,5 @@ vi:
     binary: "Nhị phân"
     hexadecimal: "Hệ thập lục phân"
     pixel_format_header: "Định dạng điểm ảnh"
+  course_deprecated:
+    button: "Xem chương trình giảng dạy mới"

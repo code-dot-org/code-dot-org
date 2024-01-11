@@ -1,6 +1,6 @@
 {
-  "blockly_blockPlaySoundTooltip": "taina le musika",
   "blockly_blockPlaySoundAtMeasureTooltip": "taina le musika",
+  "blockly_blockPlaySoundTooltip": "taina le musika",
   "blockly_blockRepeatTooltip": "toe fai",
   "blockly_blockRestTooltip": "malolo",
   "blockly_blockWhenRun": "a faatamoe",
@@ -9,10 +9,10 @@
   "blockly_toolboxCategoryLogic": "Tulaga tatau",
   "blockly_toolboxCategoryMath": "numera",
   "blockly_toolboxCategoryVariables": "Fuainumera lasi ",
+  "continue": "Faaauau",
   "feedback": "Manatu faaalia",
-  "share": "faailoa",
-  "startOver": "Toe Amata",
   "panelHeaderInstructions": "Faatonuga",
   "panelHeaderWorkspace": "Avanoa e galulue ai",
-  "continue": "Faaauau"
+  "share": "faailoa",
+  "startOver": "Toe Amata"
 }

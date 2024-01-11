@@ -145,17 +145,19 @@ class ActivitiesEditor extends Component {
             allowMajorCurriculumChanges={allowMajorCurriculumChanges}
           />
         ))}
-        {this.props.hasLessonPlan && (
-          <button
-            onMouseDown={this.handleAddActivity}
-            className="btn add-activity"
-            style={styles.addActivity}
-            type="button"
-          >
-            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-            Activity
-          </button>
-        )}
+        <div>
+          {this.props.hasLessonPlan && (
+            <button
+              onMouseDown={this.handleAddActivity}
+              className="btn add-activity"
+              style={styles.addActivity}
+              type="button"
+            >
+              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+              Activity
+            </button>
+          )}
+        </div>
         <input
           type="hidden"
           name="activities"

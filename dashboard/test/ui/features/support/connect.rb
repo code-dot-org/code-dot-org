@@ -6,7 +6,8 @@ require 'active_support/core_ext/object/blank'
 require_relative '../../utils/selenium_browser'
 require 'retryable'
 
-$browser_config = JSON.parse(File.read("browsers.json")).detect {|b| b['name'] == ENV['BROWSER_CONFIG']} || {}
+UI_TEST_DIR = File.expand_path('../..', __dir__)
+$browser_config = JSON.parse(File.read(File.join(UI_TEST_DIR, "browsers.json"))).detect {|b| b['name'] == ENV['BROWSER_CONFIG']} || {}
 
 MAX_CONNECT_RETRIES = 3
 
@@ -59,7 +60,7 @@ def get_browser(test_run_name)
   browser = nil
   if ENV['TEST_LOCAL'] == 'true'
     headless = ENV['TEST_LOCAL_HEADLESS'] == 'true'
-    browser = SeleniumBrowser.local(headless, ENV['BROWSER_CONFIG'])
+    browser = SeleniumBrowser.local(browser: ENV['BROWSER_CONFIG'], headless: headless)
   else
     browser = Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
       saucelabs_browser(test_run_name)

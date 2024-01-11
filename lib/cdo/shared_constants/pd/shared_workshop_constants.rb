@@ -54,7 +54,8 @@ module Pd
       SUBJECT_ADMIN_COUNSELOR_SLP_CALL1: SUBJECT_ADMIN_COUNSELOR_SLP_CALL1 = 'SLP Quarterly Call 1'.freeze,
       SUBJECT_ADMIN_COUNSELOR_SLP_CALL2: SUBJECT_ADMIN_COUNSELOR_SLP_CALL2 = 'SLP Quarterly Call 2'.freeze,
       SUBJECT_ADMIN_COUNSELOR_SLP_CALL3: SUBJECT_ADMIN_COUNSELOR_SLP_CALL3 = 'SLP Quarterly Call 3'.freeze,
-      SUBJECT_ADMIN_COUNSELOR_SLP_CALL4: SUBJECT_ADMIN_COUNSELOR_SLP_CALL4 = 'SLP Quarterly Call 4'.freeze
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL4: SUBJECT_ADMIN_COUNSELOR_SLP_CALL4 = 'SLP Quarterly Call 4'.freeze,
+      SUBJECT_CUSTOM_WORKSHOP: SUBJECT_CUSTOM_WORKSHOP = 'Custom Workshop'.freeze
     }
 
     SUBJECTS = {
@@ -111,6 +112,7 @@ module Pd
         SUBJECT_CSD_WORKSHOP_3_4 = SUBJECT_WORKSHOP_3_4,
         SUBJECT_CSD_TEACHER_CON = SUBJECT_TEACHER_CON,
         SUBJECT_CSD_FIT = SUBJECT_FIT,
+        SUBJECT_CSD_CUSTOM_WORKSHOP = SUBJECT_CUSTOM_WORKSHOP
       ],
       COURSE_CSF => [
         SUBJECT_CSF_101,
@@ -130,6 +132,14 @@ module Pd
 
     VIRTUAL_ONLY_SUBJECTS = [
       SUBJECT_VIRTUAL_KICKOFF
+    ].freeze
+
+    CSD_CUSTOM_WORKSHOP_MODULES = [
+      CIRCUIT_PLAYGROUND = 'Teaching Creating Apps with Devices (Circuit Playground)'.freeze,
+      MICRO_BIT = 'Teaching Creating Apps with Devices (micro:bit)'.freeze,
+      ARTIFICIAL_INTELLIGENCE_AND_MACHINE_LEARNING = 'Teaching Artificial Intelligence and Machine Learning'.freeze,
+      PROBLEM_SOLVING_AND_COMPUTING = 'Teaching Problem Solving and Computing'.freeze,
+      INTERACTIVE_ANIMATIONS_AND_GAMES = 'Teaching Interactive Animations and Games'.freeze,
     ].freeze
 
     NOT_FUNDED_SUBJECTS = [

@@ -1,8 +1,8 @@
 ---
-title: Hour of Code and CSEdWeek Advisory Committee
+title: 一小時玩程式及 CSEDWeek 諮詢委員會
 ---
 
-# Hour of Code and CSEdWeek Advisory Committee
+# 一小時玩程式及 CSEDWeek 諮詢委員會
 
 {{ advisory-committee/about_headshots }}
 

@@ -1,6 +1,6 @@
 {
   "key": "dance-unplugged",
-  "display_name": "Hour of Code - Dance Party - Unplugged",
+  "display_name": "Dance Party Unplugged",
   "category": "hoc",
   "is_featured": false,
   "assignable": true,
@@ -12,9 +12,10 @@
   "cs_topic": "programming",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"incompatible\",\"chromebook\":\"incompatible\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"ideal\"}",
-  "description": null,
-  "self_paced_professional_learning": null,
+  "description": "Get your groove on—offline! Learn how to jazz up your program with events. Events can control actions and even make multiple things act in sync.",
   "professional_learning_program": null,
   "video": null,
-  "published_date": null
+  "published_date": "2019-12-01 05:00:00 UTC",
+  "self_paced_pl_course_offering_id": null,
+  "self_paced_pl_course_offering_key": null
 }

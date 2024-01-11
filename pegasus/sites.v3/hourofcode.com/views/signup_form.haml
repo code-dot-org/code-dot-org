@@ -9,6 +9,11 @@
 #signupform
   %h2#signup-header= hoc_s(:signup_header, locals: {campaign_date: campaign_date("full")})
   %h2#census-header{style: "display: none;"}= hoc_s(:census_header)
+  %p.body-two
+    =hoc_s(:hoc_homepage_join_the_celebration_description, markdown: :inline, locals:{campaign_date: campaign_date("full")})
+  %a{href: "#maparea", style: "margin-bottom: 1rem"}
+    =hoc_s(:hoc_events_jump_to_map)
+  %hr{style: "margin: 2rem 0"}
   #error_message
   %form{:id=>"hoc-signup-form", role: "form", onsubmit: "event.preventDefault();"}
     .main-form
@@ -117,7 +122,7 @@
         %div
           %select#email-preference.form-control{name: "email_preference_opt_in_s", type: "select"}
             %option{value: nil, selected: true}
-            -['yes', 'no'].each do |email_preference|
+            -['yes_elementary', 'yes_middle', 'yes_high', 'yes_general', 'no'].each do |email_preference|
               %option{value: email_preference}= hoc_s('signup_email_preference_' + email_preference)
         #email-preference-error.error-message{style: "display:none;"}
           = hoc_s(:signup_email_preference_error)

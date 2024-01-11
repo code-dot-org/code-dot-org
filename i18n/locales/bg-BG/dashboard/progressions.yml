@@ -153,11 +153,13 @@ bg:
       Import a Model: Вкарайте Модел
       Importing Your Model: Вкарване на Вашия Модел
       Improved Shoe Recommender: Подобрен Препоръчител на Обувки
+      Intro Video: Въвеждащо Видео
       Intro to For Loops: Въведение в For Цикли
       Intro to Side Scrollers: Въведение в Side Scrollers
       Intro to Sprites: Въведение в Спрайтове
       Intro to Variables: Въведение в Променливи
       Introducing Sprite Lab: Въведение в Sprite Lab
+      Introduction: Въведение
       Introduction to Arrays: Въведение в Масиви
       Iteration and Parameters: Итерации и Параметри
       Keep On Dancing!: Продължавай да танцуваш!
@@ -205,6 +207,7 @@ bg:
       'Mini-project: Jorge the Dog': 'Мини-проект: Хорхе Кучето'
       'Mini-project: Sticker Art': 'Мини-проект: Стикер Изкуство'
       'Mini-project: Sticker Design': 'Мини-проект: Стикер Дизайн'
+      Modifying and Creating Arrays: Променяне и Създаване на Масиви
       More Parameters: Повече Параметри
       Motorcycle: Мотоциклет
       Multiframe Animations: Анимации с Много Кадри
@@ -271,6 +274,7 @@ bg:
       Sensors to Colors: Сензори до Цветове
       Set Up Sprites: Приготвяне на Спрайтове
       Setting Properties: Задаване на Свойства
+      Share Out: Споделете Навън
       Share Your App: Споделете Приложението Си
       Share Your Pages: Споделете Вашите Страници
       Shoe Recommender: Препоръчител на Обувки
@@ -291,16 +295,19 @@ bg:
       The Animation Tab: Раздел "Анимация"
       The Harvester: Събирачът
       Train a Model in AI Lab: Обучаване на Модел в AI Lab
+      Unplugged Activity: Ънплъгд дейност
       Using the Repeat Block: Използване на Блокчето Повтаряй
       Variables: Променливи
       Velocity: Скорост
       Video: Видео
       'Video: Code Your Own Flappy Game': 'Видео: Програмирай Своя Flappy Игра'
       'Video: Ice Age Loops': 'Видео: Ледена Епоха Цикли'
+      'Video: If/Else Statements': 'Видео: Условия Ако/Иначе'
       'Video: Introducing Sprite Lab': 'Видео: Представяне на Sprite Lab'
       'Video: Introduction to Play Lab': 'Видео: Въведение в Play Lab'
       'Video: Loops in Artist': 'Видео: Цикли в Художник'
       'Video: Maze Intro - Programming with Blocks ': 'Видео: Въведение в Лабиринт - Програмиране с Блокове '
+      'Video: Problem Solving Process': 'Видео: Процеса на Решаване на Проблеми'
       'Video: The Artist in Code Studio': 'Видео: Художника в Code Studio'
       'Video: The Collector': 'Видео: Събирача'
       'Video: Using the Repeat Block': 'Видео: Използвайки Блока Повтаряй'

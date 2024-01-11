@@ -1,4 +1,4 @@
-@import "color.scss";
+@import 'color', 'font';
 @import "bootstrap-sass/assets/stylesheets/bootstrap/mixins/buttons";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/variables";
 @import "mixins";
@@ -51,8 +51,8 @@
   }
 
   a:not(.btn) {
+    @include main-font-bold;
     color: $purple;
-    font-family: "Gotham 7r", sans-serif;
     &:hover {
       color: $purple;
     }
@@ -164,9 +164,8 @@ form .form-required-field {
   }
 
   #regional-partner-mini-contact-popup-link-container {
+    @include main-font-bold;
     display: inline-block;
-    font-family: "Gotham 7r", sans-serif;
-    font-weight: normal;
     color: #0094ca;
     cursor: pointer;
   }
@@ -210,10 +209,9 @@ form .form-required-field {
 //Keep styling consistent when we use react-bootstrap
 //components in TeacherApplication
 .control-label {
+  @include main-font-regular;
   font-size: 13px;
   line-height: 18px;
-  font-weight: bold;
-  font-family: "Gotham 4r", sans-serif;
 }
 
 #application-container .form-group {

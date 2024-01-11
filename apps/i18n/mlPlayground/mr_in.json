@@ -1,48 +1,17 @@
 {
-  "navigateForward": "सुरू ठेवा",
-  "navigateBack": "मागे",
-  "tryAgain": "पुन्हा प्रयत्न करा",
-  "navigateDone": "पूर्ण करा",
-  "saveProgress": "सेव्ह करा",
-  "correctAnswer": "बरोबर",
-  "incorrectAnswer": "चूक",
-  "modelCardPossibleValuesMinimum": "किमान",
-  "modelCardPossibleValuesMaximum": "कमाल",
-  "columnInspectorDescription": "वर्णन",
-  "columnDetailsMinimumValue": "किमान",
   "columnDetailsMaximumValue": "कमाल",
+  "columnDetailsMinimumValue": "किमान",
+  "columnInspectorDescription": "वर्णन",
+  "correctAnswer": "बरोबर",
   "dataCardLastUpdated": "शेवटचे अपडेट केले",
-  "predictButton": "अंदाज ",
   "datasets": {
-    "shoe_survey_toy": {
+    "abalone": {
       "fields": {
-        "weather": {
-          "id": "हवामान"
+        "Height": {
+          "id": "ऊंची"
         },
-        "day": {
-          "id": "दिवस"
-        },
-        "shoe": {
-          "id": "बूट"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "onion": {
-          "id": " कांदा"
-        },
-        "avocado": {
-          "id": "अव्होकॅडो"
-        },
-        "corn": {
-          "id": "मका"
-        },
-        "beans": {
-          "id": "बीन्स"
-        },
-        "lime": {
-          "id": "लिंबू"
+        "Length": {
+          "id": "लांबी"
         }
       }
     },
@@ -50,87 +19,6 @@
       "fields": {
         "Month": {
           "id": "महिना "
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "mushrooms": {
-          "id": "अळंब्या"
-        },
-        "lobster": {
-          "id": "कोळंबी"
-        },
-        "bacon": {
-          "id": "डुकराचे मांस"
-        },
-        "cheese": {
-          "id": "चीज"
-        },
-        "meat": {
-          "id": "मांस"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "music": {
-          "id": "संगीत"
-        },
-        "food": {
-          "id": "जेवण "
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Category": {
-          "id": "वर्ग"
-        },
-        "Description": {
-          "id": "वर्णन"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "strawberry": {
-          "id": "स्ट्रॉबेरी"
-        },
-        "lime": {
-          "id": "लिंबू"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "बाजू"
-        },
-        "size": {
-          "id": "आकार"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "tomato": {
-          "id": "टमाटर"
-        },
-        "avocado": {
-          "id": "अव्होकॅडो"
-        },
-        "chicken": {
-          "id": "कोंबडीचे पिल्लू"
-        },
-        "fruit": {
-          "id": "फळ "
-        },
-        "beans": {
-          "id": "बीन्स"
-        },
-        "cheese": {
-          "id": "चीज"
         }
       }
     },
@@ -144,29 +32,27 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "school": {
-          "id": "शाळा"
-        },
-        "health": {
-          "id": "आरोग्य"
+        "banana": {
+          "id": "केळे"
         }
       }
     },
-    "naan_toy": {
+    "club_random_toy": {
       "fields": {
-        "chicken": {
-          "id": "कोंबडीचे पिल्लू"
+        "food": {
+          "id": "जेवण "
         },
-        "lamb": {
-          "id": "कोकरू"
-        },
-        "onion": {
-          "id": " कांदा"
-        },
-        "cheese": {
-          "id": "चीज"
+        "music": {
+          "id": "संगीत"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "वय"
         }
       }
     },
@@ -180,62 +66,58 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "देश"
+        },
+        "Dance": {
+          "id": "डान्स"
+        },
+        "Music": {
+          "id": "संगीत"
+        }
+      }
+    },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "गुण"
-        },
         "Country": {
           "id": "देश"
         },
         "Name": {
           "id": "नाव"
         },
+        "Score": {
+          "id": "गुण"
+        },
         "Star": {
           "id": "स्टार"
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "आर्टीस्ट"
+        "cheese": {
+          "id": "चीज"
+        },
+        "chicken": {
+          "id": "कोंबडीचे पिल्लू"
+        },
+        "lamb": {
+          "id": "कोकरू"
+        },
+        "onion": {
+          "id": " कांदा"
         }
       }
     },
-    "safari_toy": {
+    "nutrition": {
       "fields": {
-        "people": {
-          "id": "लोक"
+        "Category": {
+          "id": "वर्ग"
         },
-        "rhino": {
-          "id": "गेंडा"
-        },
-        "elephant": {
-          "id": "हत्ती "
-        },
-        "alligator": {
-          "id": "एलीगेटर / मगर"
-        },
-        "trees": {
-          "id": "झाडे"
-        }
-      }
-    },
-    "abalone": {
-      "fields": {
-        "Length": {
-          "id": "लांबी"
-        },
-        "Height": {
-          "id": "ऊंची"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "पाण्याखालचे जग"
+        "Description": {
+          "id": "वर्णन"
         }
       }
     },
@@ -244,59 +126,100 @@
         "avocado": {
           "id": "अव्होकॅडो"
         },
-        "onion": {
-          "id": " कांदा"
-        },
         "ginger": {
           "id": "आले"
+        },
+        "onion": {
+          "id": " कांदा"
         }
       }
     },
-    "student_survey": {
+    "poutine_toy": {
       "fields": {
-        "Music": {
-          "id": "संगीत"
+        "bacon": {
+          "id": "डुकराचे मांस"
         },
-        "Dance": {
-          "id": "डान्स"
+        "cheese": {
+          "id": "चीज"
         },
-        "Country": {
-          "id": "देश"
+        "lobster": {
+          "id": "कोळंबी"
         },
-        "Internet": {
-          "id": "इंटरनेट"
+        "meat": {
+          "id": "मांस"
         },
-        "Writing": {
-          "id": "लेखन"
-        },
-        "Achievements": {
-          "id": "कामगिरी"
-        },
-        "Age": {
-          "id": "वय",
-          "description": "वय"
-        },
-        "Height": {
-          "id": "ऊंची",
-          "description": "ऊंची"
-        },
-        "Gender": {
-          "id": "लिंग ",
-          "description": "लिंग "
+        "mushrooms": {
+          "id": "अळंब्या"
         }
       }
     },
-    "boba_toy": {
+    "raspado_toy": {
       "fields": {
-        "banana": {
-          "id": "केळे"
+        "lime": {
+          "id": "लिंबू"
+        },
+        "strawberry": {
+          "id": "स्ट्रॉबेरी"
         }
       }
     },
-    "heart": {
+    "safari_toy": {
       "fields": {
-        "Age": {
-          "id": "वय"
+        "alligator": {
+          "id": "एलीगेटर / मगर"
+        },
+        "elephant": {
+          "id": "हत्ती "
+        },
+        "people": {
+          "id": "लोक"
+        },
+        "rhino": {
+          "id": "गेंडा"
+        },
+        "trees": {
+          "id": "झाडे"
+        }
+      }
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "अव्होकॅडो"
+        },
+        "beans": {
+          "id": "बीन्स"
+        },
+        "cheese": {
+          "id": "चीज"
+        },
+        "chicken": {
+          "id": "कोंबडीचे पिल्लू"
+        },
+        "fruit": {
+          "id": "फळ "
+        },
+        "tomato": {
+          "id": "टमाटर"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "अव्होकॅडो"
+        },
+        "beans": {
+          "id": "बीन्स"
+        },
+        "corn": {
+          "id": "मका"
+        },
+        "lime": {
+          "id": "लिंबू"
+        },
+        "onion": {
+          "id": " कांदा"
         }
       }
     },
@@ -310,18 +233,95 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
-        "Music": {
-          "id": "संगीत"
+        "sides": {
+          "id": "बाजू"
+        },
+        "size": {
+          "id": "आकार"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "दिवस"
+        },
+        "shoe": {
+          "id": "बूट"
+        },
+        "weather": {
+          "id": "हवामान"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "आर्टीस्ट"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "health": {
+          "id": "आरोग्य"
+        },
+        "school": {
+          "id": "शाळा"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "कामगिरी"
+        },
+        "Age": {
+          "description": "वय",
+          "id": "वय"
+        },
+        "Country": {
+          "id": "देश"
         },
         "Dance": {
           "id": "डान्स"
         },
-        "Country": {
-          "id": "देश"
+        "Gender": {
+          "description": "लिंग ",
+          "id": "लिंग "
+        },
+        "Height": {
+          "description": "ऊंची",
+          "id": "ऊंची"
+        },
+        "Internet": {
+          "id": "इंटरनेट"
+        },
+        "Music": {
+          "id": "संगीत"
+        },
+        "Writing": {
+          "id": "लेखन"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "पाण्याखालचे जग"
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "चूक",
+  "modelCardPossibleValuesMaximum": "कमाल",
+  "modelCardPossibleValuesMinimum": "किमान",
+  "navigateBack": "मागे",
+  "navigateDone": "पूर्ण करा",
+  "navigateForward": "सुरू ठेवा",
+  "predictButton": "अंदाज ",
+  "saveProgress": "सेव्ह करा",
+  "tryAgain": "पुन्हा प्रयत्न करा"
 }

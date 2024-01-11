@@ -19,10 +19,10 @@
 #  school_subject                   :string(255)
 #  device_compatibility             :string(255)
 #  description                      :string(255)
-#  self_paced_professional_learning :string(255)
 #  professional_learning_program    :string(255)
 #  video                            :string(255)
 #  published_date                   :datetime
+#  self_paced_pl_course_offering_id :integer
 #
 # Indexes
 #
@@ -33,10 +33,11 @@ class CourseOffering < ApplicationRecord
   include Curriculum::SharedCourseConstants
 
   has_many :course_versions, -> {where(content_root_type: ['UnitGroup', 'Unit'])}
+  belongs_to :self_paced_pl_course_offering, class_name: 'CourseOffering', optional: true
 
   validates :category, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES, message: "must be one of the course offering categories. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES}. Got: \"%{value}\"."}
-  validates :curriculum_type, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values, message: "must be one of the course offering curriculum types. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values}. Got: \"%{value}\"."}
-  validates :marketing_initiative, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values, message: "must be one of the course offering marketing initiatives. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values}. Got: \"%{value}\"."}
+  validates :curriculum_type, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values, message: "must be one of the course offering curriculum types. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values}. Got: \"%{value}\"."}, allow_nil: true
+  validates :marketing_initiative, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values, message: "must be one of the course offering marketing initiatives. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values}. Got: \"%{value}\"."}, allow_nil: true
   validate :grade_levels_format
 
   KEY_CHAR_RE = /[a-z0-9\-]/
@@ -48,6 +49,11 @@ class CourseOffering < ApplicationRecord
   ELEMENTARY_SCHOOL_GRADES = %w[K 1 2 3 4 5].freeze
   MIDDLE_SCHOOL_GRADES = %w[6 7 8].freeze
   HIGH_SCHOOL_GRADES = %w[9 10 11 12].freeze
+  PROFESSIONAL_LEARNING_PROGRAM_PATHS = {
+    'K5 Workshops': 'https://code.org/professional-development-workshops',
+    '6-12 Workshops': 'https://code.org/apply',
+  }
+  validates :professional_learning_program, acceptance: {accept: PROFESSIONAL_LEARNING_PROGRAM_PATHS.values, message: "must be one of the professional learning program path. Expected one of: #{PROFESSIONAL_LEARNING_PROGRAM_PATHS.values}. Got:  \"%{value}\"."}, allow_nil: true
 
   DURATION_LABEL_TO_MINUTES_CAP = {
     lesson: 90,
@@ -58,6 +64,14 @@ class CourseOffering < ApplicationRecord
     school_year: 525600,
   }
 
+  ACCEPTABLE_RESOURCE_TYPES = [
+    'Answer Key',
+    'Activity Guide',
+    'Slides',
+    'Exemplar',
+    'Slide Deck',
+    'Rubric'
+  ]
   # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
   # potential content root, i.e. a Unit or UnitGroup.
   #
@@ -194,6 +208,16 @@ class CourseOffering < ApplicationRecord
     assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
+  def self.professional_learning_and_self_paced_course_offerings
+    all_course_offerings.select {|co| co.get_participant_audience == 'teacher' && co.instruction_type == 'self_paced'}.map do |co|
+      {
+        id: co.id,
+        key: co.key,
+        display_name: co.display_name,
+      }
+    end
+  end
+
   def self.single_unit_course_offerings_containing_units_info(unit_ids)
     single_unit_course_offerings_containing_units(unit_ids).map {|co| co.summarize_for_unit_selector(unit_ids)}
   end
@@ -279,18 +303,19 @@ class CourseOffering < ApplicationRecord
       school_subject: school_subject,
       device_compatibility: device_compatibility,
       description: description,
-      self_paced_professional_learning: self_paced_professional_learning,
       professional_learning_program: professional_learning_program,
       video: video,
       published_date: published_date,
+      self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
     }
   end
 
   def summarize_for_catalog(locale_code = 'en-us')
     {
       key: key,
-      display_name: display_name,
+      display_name: localized_display_name,
       display_name_with_latest_year: display_name_with_latest_year(locale_code),
+      marketing_initiative: marketing_initiative,
       grade_levels: grade_levels,
       duration: duration,
       image: image,
@@ -303,7 +328,13 @@ class CourseOffering < ApplicationRecord
       course_offering_id: id,
       script_id: script_id,
       is_standalone_unit: standalone_unit?,
-      is_translated: translated?(locale_code)
+      is_translated: translated?(locale_code),
+      description: description,
+      professional_learning_program: professional_learning_program,
+      video: video,
+      published_date: published_date,
+      self_paced_pl_course_offering_path: self_paced_pl_course_offering&.path_to_latest_published_version(locale_code),
+      available_resources: get_available_resources(locale_code)
     }
   end
 
@@ -323,10 +354,11 @@ class CourseOffering < ApplicationRecord
       school_subject: school_subject,
       device_compatibility: device_compatibility,
       description: description,
-      self_paced_professional_learning: self_paced_professional_learning,
       professional_learning_program: professional_learning_program,
       video: video,
       published_date: published_date,
+      self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
+      self_paced_pl_course_offering_key: self_paced_pl_course_offering&.key,
     }
   end
 
@@ -337,7 +369,7 @@ class CourseOffering < ApplicationRecord
     File.write(file_path, JSON.pretty_generate(object_to_serialize) + "\n")
   end
 
-  def self.seed_all(glob="config/course_offerings/*.json")
+  def self.seed_all(glob = "config/course_offerings/*.json")
     removed_records = all.pluck(:key)
     Dir.glob(Rails.root.join(glob)).each do |path|
       removed_records -= [CourseOffering.seed_record(path)]
@@ -355,6 +387,14 @@ class CourseOffering < ApplicationRecord
   # seed_all
   def self.seed_record(file_path)
     properties = properties_from_file(File.read(file_path))
+    key = properties[:self_paced_pl_course_offering_key]
+    new_self_paced_pl_course_offering = CourseOffering.find_by_key(key)
+    if new_self_paced_pl_course_offering.nil? && !key.nil?
+      warn "self_paced_pl_course_offering_key: #{key} not found. Please seed again to fix."
+    else
+      properties[:self_paced_pl_course_offering_id] = new_self_paced_pl_course_offering&.id
+    end
+    properties.delete(:self_paced_pl_course_offering_key)
     course_offering = CourseOffering.find_or_initialize_by(key: properties[:key])
     course_offering.update! properties
     course_offering.key
@@ -382,6 +422,10 @@ class CourseOffering < ApplicationRecord
 
   def get_participant_audience
     course_versions&.first&.content_root&.participant_audience
+  end
+
+  def instruction_type
+    course_versions&.first&.content_root&.instruction_type
   end
 
   def grade_levels_list
@@ -432,5 +476,32 @@ class CourseOffering < ApplicationRecord
     end
 
     true
+  end
+
+  def get_available_resources(locale_code = 'en-us')
+    latest_version = latest_published_version(locale_code)
+    units = latest_version&.units
+    lessons = units&.first&.lessons
+
+    return nil unless lessons
+    expanded_card_resources = {}
+
+    lessons.each do |lesson|
+      break if expanded_card_resources.size >= 5
+      if lesson.has_lesson_plan
+        expanded_card_resources["Lesson Plan"] ||= lesson.lesson_plan_html_url
+      end
+      lesson.resources&.each do |resource|
+        properties = resource.properties
+        next unless properties&.key?('type')
+        type = properties['type']
+        type = "Slide Deck" if type == "Slides"
+        type = "Answer Key" if type == "Exemplar"
+        if ACCEPTABLE_RESOURCE_TYPES.include?(type) && !expanded_card_resources.key?(type)
+          expanded_card_resources[type] ||= resource["url"]
+        end
+      end
+    end
+    expanded_card_resources
   end
 end

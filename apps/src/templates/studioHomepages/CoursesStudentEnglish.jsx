@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {LocalClassActionBlock} from './TwoColumnActionBlock';
 import {CourseBlocksHoc} from './CourseBlocks';
 import CourseBlocksWrapper from '@cdo/apps/templates/studioHomepages/CourseBlocksWrapper';
 import {StudentGradeBandCards} from '@cdo/apps/util/courseBlockCardsConstants';
@@ -23,8 +22,6 @@ class CoursesStudentEnglish extends Component {
         />
 
         <CourseBlocksHoc />
-
-        <LocalClassActionBlock showHeading={true} />
       </div>
     );
   }

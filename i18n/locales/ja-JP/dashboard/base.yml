@@ -52,7 +52,9 @@ ja:
         age: '年齢'
         gender: '性別'
         edit_header: 'アカウント詳細を編集する'
+        ai_settings_header: 'AI設定'
         finish_sign_up_header: 'アカウントの作成を完了します'
+        finish_sign_up_header_error: '次の間違い（エラー）を正しく直してください。'
         finish_sign_up_subheader: '<strong>%{email}</strong>のCode.orgアカウント作成を完了するには、次の情報を入力してください。'
         finish_sign_up_subheader_markdown: '**%{email}**のCode.orgアカウント作成を完了するには、次の情報を入力してください。'
         finish_sign_up_subheader_provider: '<strong>%{email}</strong>の<strong>%{provider}</strong>でCode.orgアカウント作成を完了するには、次の情報を入力してください。'
@@ -60,6 +62,7 @@ ja:
         reset_password_token: "あなたがフォローしたパスワードのリセットリンク"
         error:
           future: 現在までの日付にする
+        user_type: 'アカウントの種類'
         us_state: '都道府県'
   beta: "ベータ版"
   hello: "Hello world"
@@ -109,7 +112,7 @@ ja:
   prize: '受賞'
   more_info: 'もっと見る'
   auth:
-    continue_with: '%{provider} で続きます'
+    continue_with: '%{provider} を使用してサインインする'
     sign_in_with: '%{provider} を使用してサインインする'
     signed_in: 'サインイン！'
     signed_out_markdown: '### [Code.org](%{url})からサインアウトしました。'

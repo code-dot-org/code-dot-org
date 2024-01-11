@@ -15,8 +15,8 @@
     },
     "new_name": null,
     "family_name": "csd3-virtual",
-    "serialized_at": "2023-05-17 14:09:54 UTC",
-    "published_state": "preview",
+    "serialized_at": "2023-09-05 19:55:38 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -7420,6 +7420,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

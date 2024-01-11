@@ -4,9 +4,9 @@ title: Cum sa organizezi Hour of Code pentru cartiere
 
 {{ signup_button }}
 
-# Cum să implici întregul district școlar
+# Cum să implici întreaga comunitate școlară
 
-### Fiecare școală din districtul tău poate lua parte la un eveniment de învățare de amploare.
+### Fiecare unitate școlară din comunitate poate lua parte la cel mai amplu eveniment de învățare din istorie.
 
 * * *
 
@@ -18,7 +18,7 @@ Distribuie [acest e-mail]({{ promote/sample_emails }}) și [ghidul de utilizare 
 
 ### 2. Furnizează un model de plan logistic pentru școli
 
-Distribuie școlilor acest [model de plan logistic]({{ hoc_logistics_plan }}), pentru a furniza idei legate de organizarea unui eveniment la care să participe întreaga școală. Poți să faci acest lucru la fiecare oră de matematică, în timpul orelor de curs sau, prin rotație, în cursul săptămânii în laboratorul de știința calculatoarelor.
+Distribuie școlilor acest [model de plan logistic]({{ hoc_logistics_plan }}), pentru a furniza idei legate de organizarea unui eveniment la care să participe întreaga școală. Poți să faci acest lucru la fiecare oră de matematică, în timpul orelor de curs sau, prin rotație, în cursul săptămânii în laboratorul de informatică.
 
 ### 3. Distribuie pe rețelele de socializare
 
@@ -28,7 +28,7 @@ Postează pe [Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%
 
 Anunță vizitatorii despre participarea ta și despre evenimentele Hour of Code. Adaugă un link către [Hour of Code]({{ urls/home }}).
 
-### 5. Găzduiește un eveniment Hour of Code în districtul tău
+### 5. Găzduiește un eveniment Hour of Code în comunitatea ta
 
 Consultă [ghidul]({{ urls/how_to_events }}) nostru instructiv cu privire la organizarea evenimentelor pentru un exemplu de desfășurare, un kit mass media și alte resurse.
 
@@ -37,6 +37,6 @@ Consultă [ghidul]({{ urls/how_to_events }}) nostru instructiv cu privire la org
 Hour of Code este doar primul pas într-o călătorie pentru a afla mai multe despre modul în care tehnologia funcționează şi cum se creează aplicațiile software. Pentru a continua această călătorie:
 
 - Încurajează elevii să continue să [învețe online]({{ urls/learn_beyond }}).
-- [Learn more](https://code.org/administrators) about implementing a computer science pathway in your district.
+- Află mai multe</a> despre implementarea unui traseu de informatică în comunitatea școlară.
 
 {{ signup_button }}

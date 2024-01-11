@@ -178,6 +178,7 @@ sv:
           description_short: Skapa en berättelse eller gör ett spel med Gumball Play Lab!
           student_description: Skapa en berättelse eller gör ett spel med Gumball Play Lab!
         starwars:
+          title: 'Star Wars: Bygg en galax med kod i JavaScript'
           description: Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.
           description_short: Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.
           student_description: Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.
@@ -186,7 +187,6 @@ sv:
           description_short: Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.
           student_description: Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.
         mc:
-          title: Minecraft Hour of Code
           description: Använd block av kod för att ta Steve eller Alex på ett äventyr genom denna Minecraft-värld.
           description_short: Utforska en Minecraft-värld genom kod
           student_description: Använd block av kod för att ta Steve eller Alex på ett äventyr genom denna Minecraft-värld.
@@ -1601,6 +1601,8 @@ sv:
               display_name: Innehåll
             lessonGroup-2:
               display_name: Innehåll
+        dance-unplugged:
+          title: Dansparty akustiskt
         poetry:
           name: poesi
         spelling-bee:
@@ -1975,6 +1977,8 @@ sv:
           lessons:
             lesson-5:
               name: Bedömningar
+            lesson-6:
+              name: Lektion 1
         tess-testing-problem-solving-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2194,3 +2198,163 @@ sv:
           lesson_groups:
             lessonGroup-3:
               display_name: Klasser
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt medborgarskap
+            lessonGroup-4:
+              display_name: loopar
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Data
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt medborgarskap
+            lessonGroup-4:
+              display_name: loopar
+            lessonGroup-6:
+              display_name: Data
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Data
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt medborgarskap
+            lessonGroup-4:
+              display_name: loopar
+            lessonGroup-6:
+              display_name: Händelser
+            lessonGroup-8:
+              display_name: Data
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt medborgarskap
+            lessonGroup-4:
+              display_name: loopar
+            lessonGroup-5:
+              display_name: Händelser
+            lessonGroup-6:
+              display_name: Data
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt medborgarskap
+            lessonGroup-6:
+              display_name: loopar
+            lessonGroup-7:
+              display_name: Data
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kapslade slingor(loopar)
+            lessonGroup-4:
+              display_name: funktioner
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Villkor
+            lessonGroup-5:
+              display_name: variabler
+        vpl-csp-2023-m1:
+          title: Modul 1
+        vpl-csp-2023-m2:
+          title: Modul 2
+        vpl-csp-2023-m3:
+          title: Modul 3
+        vpl-csp-2023-m4:
+          title: Modul 4
+        vpl-csp-2023-m5:
+          title: Modul 5
+        vpl-csp-2023-m6:
+          title: Modul 6
+        vpl-csp-2023-m7:
+          title: Modul 7
+        vpl-csp-2023-m8:
+          title: Modul 8
+        vpl-csa-2023-m1:
+          title: Modul 1
+        how-ai-works-2023:
+          title: Hur AI fungerar
+        vpl-csa-2023-m2:
+          title: Modul 2
+        vpl-csa-2023-m3:
+          title: Modul 3
+        vpl-csa-2023-m4:
+          title: Modul 4
+        vpl-csa-2023-m5:
+          title: Modul 5
+        vpl-csa-2023-m6:
+          title: Modul 6
+        vpl-csa-2023-m7:
+          title: Modul 7
+        vpl-csa-2023-m8:
+          title: Modul 8
+        vpl-csd-2023-m1:
+          title: Modul 1
+        vpl-csd-2023-m2:
+          title: Modul 2
+        vpl-csd-2023-m3:
+          title: Modul 3
+        vpl-csd-2023-m4:
+          title: Modul 4
+        vpl-csd-2023-m5:
+          title: Modul 5
+        vpl-csd-2023-m6:
+          title: Modul 6
+        vpl-csd-2023-m7:
+          title: Modul 7
+        vpl-csd-2023-m8:
+          title: Modul 8
+        virtual-pl-csa-summer-2024-day1:
+          title: Dag 1
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introduktion
+          title: Dag 2
+        virtual-pl-csp-summer-day3:
+          title: Dag 3
+        virtual-pl-csp-summer-day4:
+          title: Dag 4
+        virtual-pl-csp-summer-day5:
+          title: Dag 5
+        virtual-pl-csa-summer-day2:
+          title: Dag 2
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introduktion
+          title: Dag 3
+        virtual-pl-csa-summer-day4:
+          title: Dag 4
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Introduktion
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introduktion
+          title: Dag 1
+        virtual-pl-csp-summer-day1:
+          title: Dag 1
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Datorer och Problemlösning'
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Bygga Spel'
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-3:
+              display_name: Kapitel 2

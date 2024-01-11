@@ -1,5 +1,3 @@
-// TODO: Fix prop types for this file
-/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
@@ -120,6 +118,9 @@ const programmingClassShape = PropTypes.shape({
   content: PropTypes.string,
   syntax: PropTypes.string,
   tips: PropTypes.string,
+  examples: PropTypes.arrayOf(PropTypes.object),
+  fields: PropTypes.arrayOf(PropTypes.object),
+  methods: PropTypes.arrayOf(PropTypes.object),
 });
 
 ProgrammingClassOverview.propTypes = {

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::Pd::SessionAttendanceSerializerTest < ::ActionController::TestCase
+class Api::V1::Pd::SessionAttendanceSerializerTest < ActionController::TestCase
   setup do
     @workshop = create :workshop, num_sessions: 1
     @workshop.start!

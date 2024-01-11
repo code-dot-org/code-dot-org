@@ -1,7 +1,7 @@
 {
   "addCSSButton": "添加 CSS",
-  "addImageButton": "添加圖片",
   "addHTMLButton": "添加 HTML",
+  "addImageButton": "添加圖片",
   "closeFullscreenPreview": "關閉全螢幕預覽",
   "currentProjectCapacity": "已使用 {currentMegabytes}MB 的 {totalMegabytes}MB",
   "disallowedHtml": "檔案 \"{filename}\" 包含不允許的 HTML 元素：`{disallowedTags}`。當此對話框關閉時，它們將被刪除。",
@@ -14,8 +14,8 @@
   "reset": "重設網頁實驗室",
   "resetComplete": "網路實驗室重設完成",
   "resetFailure": "無法重設網頁實驗室： {message}。",
-  "toggleInspectorOn": "檢查器：關閉",
   "toggleInspectorOff": "檢查員：開啟",
+  "toggleInspectorOn": "檢查器：關閉",
   "troubleshootingSupport": "如需詳細資訊，請參閱我們的支援文章 [「網路實驗室問題疑難排解」]({url}) 。",
   "uploadError": "上傳錯誤"
 }

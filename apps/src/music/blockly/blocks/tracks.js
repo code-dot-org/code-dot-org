@@ -1,16 +1,14 @@
 import {BlockTypes} from '../blockTypes';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
-  DYNAMIC_TRIGGER_EXTENSION,
   EXTRA_SOUND_INPUT_PREFIX,
   FIELD_REST_DURATION_NAME,
   PLAY_MULTI_MUTATOR,
   PRIMARY_SOUND_INPUT_NAME,
   SOUND_VALUE_TYPE,
   TRACK_NAME_FIELD,
-  TRIGGER_FIELD,
 } from '../constants';
-import {fieldRestDurationDefinition} from '../fields';
+import {fieldRestDurationDefinition, fieldTriggerDefinition} from '../fields';
 import musicI18n from '../../locale';
 
 const getCurrentTrackId = ctx => {
@@ -106,17 +104,14 @@ export const newTrackOnTrigger = {
         name: TRACK_NAME_FIELD,
         text: 'my track',
       },
-      {
-        type: 'input_dummy',
-        name: TRIGGER_FIELD,
-      },
+      fieldTriggerDefinition,
     ],
     inputsInline: true,
     nextStatement: null,
     style: 'event_blocks',
     tooltip: musicI18n.blockly_blockNewTrackOnTriggerTooltip(),
     helpUrl: '',
-    extensions: [DEFAULT_TRACK_NAME_EXTENSION, DYNAMIC_TRIGGER_EXTENSION],
+    extensions: [DEFAULT_TRACK_NAME_EXTENSION],
   },
   generator: ctx => {
     return `Sequencer.createTrack("${

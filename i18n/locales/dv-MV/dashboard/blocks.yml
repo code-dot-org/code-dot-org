@@ -42,6 +42,10 @@ dv:
         options:
           UNIT:
             '"measures"': މެޝަރސް
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': މެޝަރސް
       Dancelab_changeColorBy:
         text: "{AMOUNT} އަދަދަށް {COLOR} {METHOD} ބަދަލުކުރޭ"
         options:
@@ -74,6 +78,25 @@ dv:
             MOVES.Clown: ގަންގަމް
             MOVES.Kick: ސްޓަރ - ތަރި
             MOVES.ThisOrThat: މީތި ނޫނީ އޭތި
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} ހަދާ {MOVE} {DIR} އަބަދަށް"
+        options:
+          GROUP:
+            '"SLOTH"': ސްލޮތު
+          MOVE:
+            MOVES.Roll: ހަށިގަނޑު އަނބުރާލުން
+            MOVES.ClapHigh: މަތިން އަތްތިލަބަޑި ޖެހުން
+            MOVES.Dab: ޑެބް ކުރުން
+            MOVES.DoubleJam: ޑަބަލް ޑައުން
+            MOVES.Drop: ޑްރޮޕް
+            MOVES.Floss: ފްލޮސް
+            MOVES.Fresh: ފްރެޝް
+            MOVES.Clown: ގަންގަމް
+            MOVES.Kick: ސްޓަރ - ތަރި
+            MOVES.ThisOrThat: މީތި ނޫނީ އޭތި
+            '"next"': "(ނެކްސްޓް - ކުރިއަށް)"
+            '"prev"': "(ޕްރީވިއަސް - ފަހަތަށް)"
+            '"rand"': "(ރެންޑަމް - ވަކި ދިމާލެއް ނެތް)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} ހަދާ {MOVE} {DIR} އަބަދަށް"
         options:
@@ -334,26 +357,6 @@ dv:
             '18': 18 (އަށާރަ)
             '19': 19 (ނަވާރަ)
             '20': 20 (ވިހި)
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"BEAR"': ބެއަރ (ސާރިދޯޅު)
             '"DUCK"': ޑަކްސް (އަސްދޫނި)
@@ -456,11 +459,51 @@ dv:
             '"tropical"': ޓްރޮޕިކަލް
             '"vintage"': ވިންޓޭޖް
             '"warm"': ވޯރމް
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: "{PALETTE} {EFFECT} އަށް ބެކްގްރައުންޑް އެފެކްޓް ސެޓް ކުރަން"
+        options:
+          EFFECT:
+            '"rand"': "(ރެންޑަމް - ވަކި ދިމާލެއް ނެތް)"
+            '"quads"': އެންޖެލްސް
+            '"circles"': ސަރކަލް (ވަށްބުރު)
+            '"color_cycle"': ކުލަ
+            '"diamonds"': ޑަޔަމަންޑް
+            '"disco_ball"': ޑިސްކޯ ބޯޅަ
+            '"fireworks"': ފަޔަރވޯކް (ހަވާ)
+            '"flowers"': ފްލާވަރ - މައު
+            '"growing_stars"': ބޮޑުވަމުންދާ ތަރި
+            '"swirl"': ހިޕްނޯ
+            '"kaleidoscope"': ކެލައިޑެސްކޯޕް
+            '"lasers"': ލޭޒަރ ޑާންސް ފްލޯ
+            '"splatter"': ޕެއިންޓް ސްޕްލެޓަރ
+            '"rainbow"': ރެއިންބޯ (ވިއްސާރަދުނި)
+            '"ripples_random"': ރެންޑަމް ރިޕްލްސް
+            '"ripples"': ރިޕްލްސް
+            '"snowflakes"': ސްނޯ
+            '"text"': ލަވައިގެ ނަން
+            '"galaxy"': ސްޕޭސް
+            '"sparkles"': ސްޕާކްލްސް
+            '"spiral"': ސްޕައިރަލް
+            '"disco"': ސްކޮޔަރ (ހަތަރެސްކަން)
+            '"squiggles"': ސްކުއިގްލްސް
+            '"starburst"': ސްޓަރ ބަރސްޓް
+            '"stars"': ސްޓަރ - ތަރި
+            '"music_wave"': ވޭވްސް
+          PALETTE:
+            '"rave"': ކަޅާއި ހުދު
+            '"cool"': ކޫލް
+            '"electronic"': އެލެކްޓްރޯނިކް
+            '"iceCream"': އައިސްކްރީމް
+            '"default"': ލައިޓް - އަލި
+            '"neon"': ނިއޯން
+            '"rainbow"': ރެއިންބޯ (ވިއްސާރަދުނި)
+            '"tropical"': ޓްރޮޕިކަލް
+            '"vintage"': ވިންޓޭޖް
+            '"warm"': ވޯރމް
       Dancelab_setDanceSpeed:
         text: "{SPRITE} ނަށާ ބާރުމިން {SPEED} އަށް ސެޓްކުރޭ"
         options:
           SPEED:
-            '1': normal
             '2': އަވަސް
             '4': ވަރަށް އަވަސް
             '0.5': ލަސް
@@ -477,7 +520,6 @@ dv:
             '"SLOTH"': ސްލޮތު
             '"UNICORN"': ޔުނިކޯން
           SPEED:
-            '1': normal
             '2': އަވަސް
             '4': ވަރަށް އަވަސް
             '0.5': ލަސް
@@ -800,7 +842,6 @@ dv:
       gamelab_int10:
         options:
           VALUE:
-            '1': '1'
             '2': 2 (ދޭއް)
             '3': 3 (ތިނެއް)
             '4': 4 (ހަތަރެއް)
@@ -897,11 +938,8 @@ dv:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': ލަސް
-            '5': normal
             '7': އަވަސް
-            '9': extra fast
       gamelab_whenKey:
         text: "{KEY} އަށް ފިތުމުން"
         options:
@@ -1021,8 +1059,6 @@ dv:
       Poetry_whenLineShows:
         options:
           'N':
-            '0': "???"
-            '1': '1'
             '2': 2 (ދޭއް)
             '3': 3 (ތިނެއް)
             '4': 4 (ހަތަރެއް)
@@ -1054,7 +1090,6 @@ dv:
         options:
           VALUE:
             '0': 0 (ސުމެއް)
-            '1': '1'
             '2': 2 (ދޭއް)
             '3': 3 (ތިނެއް)
             '4': 4 (ހަތަރެއް)
