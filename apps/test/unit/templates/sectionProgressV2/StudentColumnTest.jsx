@@ -17,11 +17,6 @@ const studentB = {
   id: 2,
 };
 
-const oneNameStudent = {
-  name: 'Moriarty',
-  id: 3,
-};
-
 describe('StudentColumn', () => {
   it('shows SortByNameDropdown', () => {
     const wrapper = shallow(
@@ -70,7 +65,12 @@ describe('StudentColumn', () => {
       <StudentColumn
         sectionId={1}
         unitName="test unit"
-        sortedStudents={[oneNameStudent]}
+        sortedStudents={[
+          {
+            name: 'Moriarty',
+            id: 3,
+          },
+        ]}
       />
     );
     expect(wrapper.find(`.${styles.gridBox}`).text()).to.equal('Moriarty');
