@@ -114,13 +114,15 @@ Optionally, you can manually enter the configuration details. Here are the value
 selector. NOTE: Code.org currently only supports `LtiResourceLinkRequest`. Do not
 select any placements that utilize an `LtiDeepLinkRequest`.
 1. Additional Settings - Custom Fields:
-   ```
-   email=$Person.email.primary
-   full_name=$Person.name.full
-   given_name=$Person.name.given
-   family_name=$Person.name.family
-   display_name=$Person.name.display
-   ```
+    ```
+    email=$Person.email.primary
+    full_name=$Person.name.full
+    given_name=$Person.name.given
+    family_name=$Person.name.family
+    display_name=$Person.name.display
+    section_ids=$Canvas.course.sectionIds
+    section_names=$com.instructure.User.sectionNames
+    ```
 1. Click `Save`
 
 ### Step 3: Copy your Client ID
