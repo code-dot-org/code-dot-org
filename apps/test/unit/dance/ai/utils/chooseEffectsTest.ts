@@ -4,32 +4,6 @@ import sinon from 'sinon';
 import {chooseEffects} from '@cdo/apps/dance/ai/utils/chooseEffects';
 import {EffectsQuality, FieldKey} from '@cdo/apps/dance/ai/types';
 
-const weightMappings = {
-  backgroundEffect: {
-    emojiAssociations: {
-      cyclone: [0, 1],
-      'smiling-face-with-hearts': [0, 1],
-      'party-popper': [0, 1],
-    },
-    output: ['quads', 'blooming_petals'],
-  },
-  foregroundEffect: {
-    emojiAssociations: {
-      cyclone: [0, 1],
-      'smiling-face-with-hearts': [0, 1],
-      'party-popper': [0, 1],
-    },
-    output: ['bubbles', 'hearts_colorful'],
-  },
-  backgroundColor: {
-    emojiAssociations: {
-      cyclone: [0, 1],
-      'smiling-face-with-hearts': [0, 1],
-      'party-popper': [0, 1],
-    },
-    output: ['autumn', 'rave'],
-  },
-};
 describe('chooseEffects', () => {
   it('chooses good effects', () => {
     sinon.stub(Math, 'random').returns(0);
@@ -42,7 +16,6 @@ describe('chooseEffects', () => {
     const chosenEffects = chooseEffects(
       ['cyclone', 'smiling-face-with-hearts', 'party-popper'],
       EffectsQuality.GOOD,
-      weightMappings,
       summedWeightStub
     );
 
@@ -68,7 +41,6 @@ describe('chooseEffects', () => {
     const chosenEffects = chooseEffects(
       ['cyclone', 'smiling-face-with-hearts', 'party-popper'],
       EffectsQuality.BAD,
-      weightMappings,
       summedWeightStub
     );
 
