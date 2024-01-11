@@ -62,24 +62,25 @@ class ProjectDataDbController < ApplicationController
 
     # BEGIN;
     Record.transaction do
-      channel_id_quoted = Record.connection.quote(params[:channel_id])
-      table_name_quoted = Record.connection.quote(params[:table_name])
+      # channel_id_quoted = Record.connection.quote(params[:channel_id])
+      # table_name_quoted = Record.connection.quote(params[:table_name])
       json = JSON.parse params[:json]
 
-      #   SELECT MIN(record_id) FROM unfirebase.records WHERE channel_id='shared' AND table_name='words' LIMIT 1 FOR UPDATE;
-      # Equivalent to:
+      # SELECT MIN(record_id) FROM unfirebase.records WHERE channel_id='shared' AND table_name='words' LIMIT 1 FOR UPDATE;
+      # =>
       # Record.connection.execute("SELECT MIN(record_id) FROM #{Record.table_name} WHERE channel_id=#{channel_id_quoted} AND table_name=#{table_name_quoted} LIMIT 1 FOR UPDATE")
+      # =>
       Record.where(channel_id: params[:channel_id], table_name: params[:table_name]).lock.minimum(:record_id)
 
-      #   SELECT @id := IFNULL(MAX(record_id),0)+1 FROM unfirebase.records WHERE channel_id='shared' AND table_name='words';
-      #
-      # FIXME: can we do this without a manual SQL connection.execute() call?
-      record_id = Record.connection.select_value("SELECT IFNULL(MAX(record_id),0)+1 FROM #{Record.table_name} WHERE channel_id=#{channel_id_quoted} AND table_name=#{table_name_quoted}")
-
-      puts "record_id: #{record_id}"
+      # SELECT @id := IFNULL(MAX(record_id),0)+1 FROM unfirebase.records WHERE channel_id='shared' AND table_name='words';
+      # =>
+      # next_record_id = Record.connection.select_value("SELECT IFNULL(MAX(record_id),0)+1 FROM #{Record.table_name} WHERE channel_id=#{channel_id_quoted} AND table_name=#{table_name_quoted}")
+      # =>
+      max_record_id = Record.where(channel_id: params[:channel_id], table_name: params[:table_name]).maximum(:record_id)
+      next_record_id = (max_record_id || 0) + 1
 
       #   INSERT INTO unfirebase.records VALUES ('shared', 'words', @id, '{}');
-      record = Record.create(channel_id: params[:channel_id], table_name: params[:table_name], record_id: record_id, json: json)
+      record = Record.create(channel_id: params[:channel_id], table_name: params[:table_name], record_id: next_record_id, json: json)
     end
     # COMMIT;
 
