@@ -7,7 +7,7 @@
   "user_id": 324,
   "properties": {
     "instructions_important": "false",
-    "hide_share_and_remix": "true",
+    "hide_share_and_remix": "false",
     "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n  </head>\\n  <body>\\n    \\n    Page title\\n    <h1>Why Comment Out Code?</h1>\\n    \\n    Introduction\\n    <p>You might be wondering, why would I wnat to make the browser ignore parts of my code? There are a few reasons:</p>\\n    \\n    Bulleted list of why to use comments\\n    <ul>\\n      <li>Debugging: If something isn't working as expected, you can comment out sections of code to isolate the problem.</li>\\n      <br>\\n      <li>Collaboration: When working with others, comments can provide explanations or important notes for your teammates.</li>\\n      <br>\\n      <li>Future Reference: You may need to revisit your code later. Comments help remind you why certain decisions were made.</li>\\n    </ul>\\n    \\n    Final statement\\n    <p>Comments are like leaving breadcrumbs for yourself (or others) to follow, to understand the thought process behind the code.</p>\\n\\n   \\n  </body>\\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"style.css\",\r\n      \"data\": \"\"\r\n    }\r\n  ]\r\n}\r\n            ",
     "encrypted_examples": "4GYDWnw74rlT4/7W9VmcvG8Bb6csaXPgUFFmFT+AxA8sFRohH9Cg8UqwgYbB\npWvlY7E8PySHd1OJOJ+4O+V2AQ==\n",
     "submittable": "false",
@@ -27,6 +27,6 @@
     "validation_enabled": "false"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-12-19T17:44:11.430+00:00\",\"changed\":[\"cloned from \\\"CSD Web Dev choice level ol 1_2024\\\"\"],\"cloned_from\":\"CSD Web Dev choice level ol 1_2024\"},{\"changed_at\":\"2023-12-19 17:53:04 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-12-19 18:03:10 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-12-19 18:18:48 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-12-19T17:44:11.430+00:00\",\"changed\":[\"cloned from \\\"CSD Web Dev choice level ol 1_2024\\\"\"],\"cloned_from\":\"CSD Web Dev choice level ol 1_2024\"},{\"changed_at\":\"2023-12-19 17:53:04 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-12-19 18:03:10 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-12-19 18:18:48 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-10 18:16:44 +0000\",\"changed\":[\"hide_share_and_remix\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>
