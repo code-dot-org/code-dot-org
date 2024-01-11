@@ -1,6 +1,11 @@
 import {BLOCK_TYPES, PROCEDURE_DEFINITION_TYPES} from '../constants';
 import {partitionBlocksByType} from './cdoUtils';
-import {FALSEY_DEFAULT, TRUTHY_DEFAULT, readBooleanAttribute} from '../utils';
+import {
+  FALSEY_DEFAULT,
+  TRUTHY_DEFAULT,
+  readBooleanAttribute,
+  shouldSkipHiddenWorkspace,
+} from '../utils';
 
 // The user created attribute needs to be read from XML start blocks as 'usercreated'.
 // Once this has been done, all subsequent steps in the serialization use userCreated.
@@ -87,6 +92,34 @@ export default function initializeBlocklyXml(blocklyWrapper) {
   blocklyWrapper.Xml.blockSpaceToDom = blocklyWrapper.Xml.workspaceToDom;
 
   blocklyWrapper.Xml.createBlockOrderMap = createBlockOrderMap;
+}
+/**
+ * Gets the XML representation for a project, including its workspace and, if applicable, the hidden definition workspace.
+ *
+ * @param {Blockly.Workspace} workspace - The workspace from which to obtain the project XML.
+ * @returns {string} The XML representation of the project.
+ *
+ */
+export function getProjectXml(workspace) {
+  // Start by getting the XML for all blocks on the workspace.
+  const workspaceXml = Blockly.Xml.blockSpaceToDom(workspace);
+
+  if (shouldSkipHiddenWorkspace(workspace)) {
+    return workspaceXml;
+  }
+
+  // Also serialize blocks on the hidden workspace for procedure definitions.
+  const hiddenWsXml = Blockly.Xml.blockSpaceToDom(
+    Blockly.getHiddenDefinitionWorkspace()
+  );
+
+  // Merge the hidden workspace XML into the primary XML
+  hiddenWsXml.childNodes.forEach(node => {
+    const clonedNode = node.cloneNode(true);
+    workspaceXml.appendChild(clonedNode);
+  });
+
+  return workspaceXml;
 }
 
 /**

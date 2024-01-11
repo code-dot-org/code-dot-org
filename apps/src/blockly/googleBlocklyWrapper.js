@@ -659,6 +659,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       container.style.height = `calc(100% - ${styleConstants['workspace-headers-height']}px)`;
     }
     blocklyWrapper.isStartMode = !!opt_options.editBlocks;
+    blocklyWrapper.isToolboxMode = opt_options.editBlocks === 'toolbox_blocks';
     blocklyWrapper.toolboxBlocks = options.toolbox;
     const workspace = blocklyWrapper.blockly_.inject(container, options);
 

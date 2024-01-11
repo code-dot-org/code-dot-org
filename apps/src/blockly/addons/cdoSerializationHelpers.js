@@ -2,6 +2,7 @@ import _ from 'lodash';
 import {WORKSPACE_PADDING, SETUP_TYPES} from '../constants';
 import {partitionBlocksByType} from './cdoUtils';
 import {frameSizes} from './cdoConstants';
+import {shouldSkipHiddenWorkspace} from '../utils';
 
 const {BLOCK_HEADER_HEIGHT, MARGIN_BOTTOM, MARGIN_SIDE, MARGIN_TOP} =
   frameSizes;
@@ -284,37 +285,67 @@ function reorderBlocks(blocks, blockOrderMap) {
 }
 
 /**
- * Combines the serialization of the main and hidden workspaces (when hidden workspace is present)
- * so that both are saved to the project source when calling getCode.
- * @param {json} mainWorkspaceSerialization - Contains block and procedure information for the main workspace.
- * @param {json} hiddenWorkspaceSerialization - Contains block and procedure information for the hidden
- * (i.e. modal function editor) workspace.
- * @returns {json} A combined serialization, using the mainWorkspaceSerialization as the base, that includes all
+ * Gets the JSON serialization for a project, including its workspace and, if applicable, the hidden definition workspace.
+ *
+ * @param {Blockly.Workspace} workspace - The workspace to serialize
+ * @returns {Object} The combined JSON serialization of the workspace and the hidden definition workspace.
+ */
+export function getProjectSerialization(workspace) {
+  const workspaceSerialization =
+    Blockly.serialization.workspaces.save(workspace);
+
+  if (shouldSkipHiddenWorkspace(workspace)) {
+    return workspaceSerialization;
+  }
+  const hiddenDefinitionWorkspace = Blockly.getHiddenDefinitionWorkspace();
+  const hiddenWorkspaceSerialization = hiddenDefinitionWorkspace
+    ? Blockly.serialization.workspaces.save(hiddenDefinitionWorkspace)
+    : null;
+
+  // Blocks rendered in the hidden workspace get extra properties that need to be
+  // removed so they don't apply if the block moves to the main workspace on subsequent loads
+  if (hasBlocks(hiddenWorkspaceSerialization)) {
+    resetEditorWorkspaceBlockConfig(hiddenWorkspaceSerialization.blocks.blocks);
+  }
+
+  const combinedSerialization = getCombinedSerialization(
+    workspaceSerialization,
+    hiddenWorkspaceSerialization
+  );
+  return combinedSerialization;
+}
+
+/**
+ * Combines the serialization of two workspaces so that both can be saved to a project source when calling getCode.
+ * @param {json} primaryWorkspaceSerialization - Contains block and procedure information for the first workspace.
+ * @param {json} secondaryWorkspaceSerialization - Contains block and procedure information for the second
+ * (e.g. hidden procedure definitions) workspace.
+ * @returns {json} A combined serialization, using the primaryWorkspaceSerialization as the base, that includes all
  * blocks and procedures from each workspace with unique ids. (Note: The elements on each workspace are not
  * necessarily mutually exclusive.)
  */
 export function getCombinedSerialization(
-  mainWorkspaceSerialization,
-  hiddenWorkspaceSerialization
+  primaryWorkspaceSerialization,
+  secondaryWorkspaceSerialization
 ) {
   if (
-    !hasBlocks(hiddenWorkspaceSerialization) ||
-    !hasBlocks(mainWorkspaceSerialization)
+    !hasBlocks(secondaryWorkspaceSerialization) ||
+    !hasBlocks(primaryWorkspaceSerialization)
   ) {
     // Default case is to return mainWorkspaceSerialization because it's not possible
     // to have a hiddenWorkspaceSerialization but no mainWorkspaceSerialization
-    return mainWorkspaceSerialization;
+    return primaryWorkspaceSerialization;
   }
 
-  const combinedSerialization = _.cloneDeep(mainWorkspaceSerialization);
+  const combinedSerialization = _.cloneDeep(primaryWorkspaceSerialization);
   combinedSerialization.blocks.blocks = _.unionBy(
-    mainWorkspaceSerialization.blocks.blocks,
-    hiddenWorkspaceSerialization.blocks.blocks,
+    primaryWorkspaceSerialization.blocks.blocks,
+    secondaryWorkspaceSerialization.blocks.blocks,
     'id'
   );
   combinedSerialization.procedures = _.unionBy(
-    mainWorkspaceSerialization.procedures,
-    hiddenWorkspaceSerialization.procedures,
+    primaryWorkspaceSerialization.procedures,
+    secondaryWorkspaceSerialization.procedures,
     'id'
   );
   return combinedSerialization;
