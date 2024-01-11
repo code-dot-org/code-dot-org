@@ -336,6 +336,14 @@ class I18nScriptUtils
     {locale => {'data' => {type => i18n_data}}}
   end
 
+  # Removes dots ( . ) from a given string.
+  # We frequently use strigns with dots as keys in our i18n data,
+  # as the come from course and curriculum content.
+  # The I18n gem uses dots to denote hierarchy in keys, so we need to remove them.
+  def self.to_i18n_key(string)
+    string.gsub(I18n.default_separator, '')
+  end
+
   def self.sort_and_sanitize(hash)
     hash.sort_by {|key, _| key}.each_with_object({}) do |(key, value), result|
       case value

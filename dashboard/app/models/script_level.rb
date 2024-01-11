@@ -334,7 +334,10 @@ class ScriptLevel < ApplicationRecord
 
       if progression
         summary[:progression] = progression
-        localized_progression_name = I18n.t("data.progressions.#{progression}", default: progression)
+        localized_progression_name = I18n.t(
+          "data.progressions.#{progression.gsub(I18n.default_separator, '')}",
+          default: progression
+        )
         summary[:progression_display_name] = localized_progression_name
       end
 

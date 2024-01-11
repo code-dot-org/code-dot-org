@@ -306,7 +306,8 @@ module I18n
 
                 url = I18nScriptUtils.get_level_url_key(script, level)
                 script_strings[url] = get_i18n_strings(level)
-                progression_strings[script_level.progression] = script_level.progression if script_level.progression
+                progression_key = I18nScriptUtils.to_i18n_key(script_level.progression) if script_level.progression
+                progression_strings[progression_key] = script_level.progression if script_level.progression
 
                 # extract block category strings; although these are defined for each
                 # level, the expectation here is that there is a massive amount of
