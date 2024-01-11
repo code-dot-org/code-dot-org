@@ -6,13 +6,11 @@ markdown <<MARKDOWN
 <img src="https://images.code.org/5b9e6d9e0450554f00956f6347a37f90-image-1704404653488.png" alt="Image of the block code of an event handler" width="350px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
 
-##### An <b>event </b> is something that happens, such as a button being clicked, a key being pressed, or a sensor detecting motion.
+##### <b>Events </b> are actions that cause something to happen. In code, events allow user interaction, like the arrow button being clicked to cause a sprite to move. 
 
-##### In <b>event-based</b> programming, these events trigger specific actions or responses in the program. Events make our code interactive.
+##### An <b>event block</b> is a block that, when triggered, causes a specific chunk of code to run. In Sprite Lab, these blocks are green. You will notice event blocks are *not connected* to the main section of your code. 
 
-##### <b>Event blocks </b> are blocks of code that are associated with specific events. They define what should happen when a particular event occurs. These blocks are usually structured as event handlers and are *not connected* to the main section of your code. 
 
-##### An <b>event handler </b>is a piece of code that is executed in response to a specific event.
 
 ## Let's practice using events!
 MARKDOWN

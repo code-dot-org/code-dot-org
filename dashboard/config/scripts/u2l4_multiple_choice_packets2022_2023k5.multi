@@ -1,7 +1,7 @@
 name 'U2L4 Multiple Choice packets2022_2023K5'
-title 'Multiple Choice: Using Blocks'
+title 'Check for Understanding: Using Blocks'
 description ''
-question 'Which code will run?'
+question 'Which code sequence will execute all four blocks in order?'
 height'200'
 
 wrong '![](https://images.code.org/dfc7109546af0df9d69749cc10558cee-image-1704408741789.23.52 PM.png)' 

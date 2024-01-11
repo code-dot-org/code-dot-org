@@ -27,6 +27,8 @@
           %br/
           = sanitize(t('footer.art_from_html_old', current_year: Time.now.year), tags: %w(a br), attributes: %w(href))
           %br/
+          = sanitize(t('footer.trademark', current_year: Time.now.year, cs_discoveries: "CS Discoveries&reg;"), tags: %w(a br), attributes: %w(href))
+          %br/
           = sanitize(t('footer.built_on_github'), tags: %w(a br), attributes: %w(href))
         %div.powered-by-aws
           %a{:href=>"https://aws.amazon.com/what-is-cloud-computing"}

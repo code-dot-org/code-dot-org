@@ -189,6 +189,8 @@ en:
           description_audience: ''
           lesson_groups: {}
           student_description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
+          lessons: {}
+          name: Hour of Code
         CodeStudioPuzzleChallenge:
           title: Code Studio Puzzle Challenge
           description: Try out these fun coding puzzles. Do your best!
@@ -9839,6 +9841,8 @@ en:
               name: NEW- Function Machines - Lesson 4
             lesson-6:
               name: Ecosystems Test
+            lesson-7:
+              name: Matching Levels
           lesson_groups: {}
           name: emmas-playground
           title: ''
@@ -14067,8 +14071,8 @@ en:
           name: coursec-maker-2024
           title: Course C - Maker with micro:bit
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit.
+          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. \n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning](LINK). \n\nThis self-paced course covers the following topics: \n- How to use the Code.org curriculum \n- How to setup a classroom on Code.org \n- How to use micro:bits \n- How to use the “Meet your micro:bit” project\n- How to setup a classroom on micro:bit\n- How to assess student learning \n"
           student_description: ''
         coursef-maker-2024:
           lessons:

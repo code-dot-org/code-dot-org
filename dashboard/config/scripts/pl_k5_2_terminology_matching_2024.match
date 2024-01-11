@@ -1,5 +1,5 @@
 name 'pl-k5-2-terminology_matching_2024'
-title 'Terminology Matching'
+title 'Check for Understanding: Behaviors'
 
 height '75'
 
@@ -16,8 +16,9 @@ answer 'Behaviors'
 
 
 markdown <<MARKDOWN
-
+Drag the correct answer to the middle column to match the vocabulary with the definition. 
 MARKDOWN
+
 teacher_markdown <<MARKDOWN
 
 

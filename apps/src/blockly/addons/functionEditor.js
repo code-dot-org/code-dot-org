@@ -21,6 +21,7 @@ import WorkspaceSvgFrame from './workspaceSvgFrame';
 import {BLOCK_TYPES} from '../constants';
 import {frameSizes} from './cdoConstants';
 import CdoTrashcan from './cdoTrashcan';
+import {getAlphanumericId} from '@cdo/apps/utils';
 
 // This class creates the modal function editor, which is used by Sprite Lab and Artist.
 export default class FunctionEditor {
@@ -204,18 +205,35 @@ export default class FunctionEditor {
       Blockly.Events.enable();
     } else {
       type = procedureType;
+      const name = newProcedure.getName();
       // Otherwise, we need to create a new block from scratch.
       const newDefinitionBlock = {
         kind: 'block',
         type,
         extraState: {
           procedureId: newProcedure.getId(),
-          userCreated: true,
+          userCreated: !Blockly.isStartMode, // Start mode procedures are not user created.
         },
         fields: {
-          NAME: newProcedure.getName(),
+          NAME: name,
         },
       };
+
+      if (procedureType === BLOCK_TYPES.behaviorDefinition) {
+        // In start mode, the behavior id is the same as the name (and if the
+        // behavior is renamed, we update the behavior id to match the name).
+        // Since the behavior id is the function name in generated code, this
+        // allows us to support levelbuilder validation code. Levelbuilders can just
+        // use the name of the behavior and know that it will be the generated
+        // function name.
+        if (Blockly.isStartMode) {
+          newDefinitionBlock.extraState.behaviorId = name;
+        } else {
+          // Otherwise, this is a user created behavior, and we can give it a random
+          // id.
+          newDefinitionBlock.extraState.behaviorId = getAlphanumericId();
+        }
+      }
 
       this.block = Blockly.serialization.blocks.append(
         this.addEditorWorkspaceBlockConfig(newDefinitionBlock),
@@ -226,7 +244,9 @@ export default class FunctionEditor {
 
     // We only want to be able to delete things that are user-created (functions and behaviors)
     // and not things that are being previewed from a read-only workspace.
-    const hideDeleteButton = this.isReadOnly || !this.block.userCreated;
+    // We allow deleting non-user created behaviors in start mode.
+    const hideDeleteButton =
+      this.isReadOnly || (!Blockly.isStartMode && !this.block.userCreated);
     const modalEditorDeleteButton = document.getElementById(
       MODAL_EDITOR_DELETE_ID
     );
