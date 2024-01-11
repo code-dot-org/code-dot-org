@@ -1,8 +1,16 @@
 %strong{:class => "code", :id => "message"} Hello,  #{@project.project_type}
-%form{:action => "data_db/setKeyValue", :method => "post"}
-  %input{:type => "input"}
-  %input{:type => "submit"}
+%h2 KeyValuePair
 
-= form_tag "data_db/setKeyValue", :method => :post, :remote => false do
-  = text_field_tag "accountName", ""
-  = submit_tag "Submit"
+= form_tag "data_db/set_key_value", :method => :post, :remote => false do
+  = text_field_tag "key", ""
+  = text_field_tag "value", ""
+  = submit_tag "Create"
+
+%table
+  %tr
+    %td key
+    %td value
+  - @key_value_pairs.each do |kvp|
+    %tr
+      %td= kvp.key
+      %td= kvp.value
