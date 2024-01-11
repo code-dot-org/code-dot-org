@@ -31,7 +31,10 @@ function ProgressTableV2({
       />
       <div className={styles.table}>
         <ProgressTableHeader lessons={unitData?.lessons} />
-        <ProgressDataV2 sortedStudents={sortedStudents} />
+        <ProgressDataV2
+          sortedStudents={sortedStudents}
+          lessons={unitData?.lessons}
+        />
       </div>
     </div>
   );
@@ -44,12 +47,9 @@ ProgressTableV2.propTypes = {
   unitData: scriptDataPropType.isRequired,
 };
 
-export default connect(
-  state => ({
-    isSortedByFamilyName: state.currentUser.isSortedByFamilyName,
-    sectionId: state.teacherSections.selectedSectionId,
-    students: state.teacherSections.selectedStudents,
-    unitData: getCurrentUnitData(state),
-  }),
-  dispatch => ({})
-)(ProgressTableV2);
+export default connect(state => ({
+  isSortedByFamilyName: state.currentUser.isSortedByFamilyName,
+  sectionId: state.teacherSections.selectedSectionId,
+  students: state.teacherSections.selectedStudents,
+  unitData: getCurrentUnitData(state),
+}))(ProgressTableV2);
