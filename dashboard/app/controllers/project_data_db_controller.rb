@@ -42,6 +42,14 @@ class ProjectDataDbController < ApplicationController
   end
 
   def read_records
+    records = Record.where(channel_id: params[:channel_id], table_name: params[:table_name])
+
+    # FIXME: what should we return to indicate that table_name doesn't exist?
+    #
+    # This condition is detected, currently trying to do readRecords('tabledoesntexist', {}) results in:
+    # ERROR: Line: 1: You tried to read records from a table called "nope" but that table doesn't exist in this app
+
+    render json: records
   end
 
   def update_record
