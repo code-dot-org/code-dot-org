@@ -15,19 +15,37 @@
 }
 
 .gridBox {
-  height: 47px;
   border-top: 1px solid $light_gray_200;
   border-left: 1px solid $light_gray_200;
-  line-height: 47px;
 
   &Student {
+    height: 47px;
+    line-height: 47px;
     padding-left: 12px;
   }
 
+  &Lesson {
+    text-align: center;
+    min-width: 80px;
+    max-width: 80px;  
+    height: 47px;
+    line-height: 47px;
+  }
+
   &LessonHeader {
+    height: 42px;
+    line-height: 42px;
     min-width: 80px;
     max-width: 80px;
     text-align: center;
+  }
+
+  &LevelHeader {
+    min-width: 52px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    border-top: 0;
   }
 }
 
@@ -70,11 +88,26 @@
   &Columns {
     display: flex;
     flex-direction: row;
+    font-size: 14px;
+    width:fit-content;
+  }
+
+  &Lesson {
     border-right: 1px solid $light_gray_200;
     border-bottom: 1px solid $light_gray_200;
-    font-size: 14px;
-    height: 48px;
-    width:fit-content;
+  }
+
+  &Expanded {
+    border-right: 1px solid $light_gray_200;
+    min-width: 80px;
+    margin-left: 12px;
+    margin-right: 12px;
+
+    &SecondRow {
+      display: flex;
+      flex-direction: row;
+      width: fit-content;
+    }
   }
 }
 
