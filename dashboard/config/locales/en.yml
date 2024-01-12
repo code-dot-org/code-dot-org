@@ -1402,3 +1402,9 @@ en:
     thank_you: "THANK YOU for championing computer science education. Our team wishes you and your students an unforgettable Hour of Code!"
     founder: "Founder, Code.org"
     your_friends: "Your Friends at Code.org"
+  lti:
+    error:
+      missing_params: "Missing required param(s): client_id, lms, email"
+      integration_exists: "Lti Integration already exists for this Client ID"
+      wrong_resource_type: "Only LtiResourceLink is supported right now"
+    create_integration_success: "Succesfully created your LTI integration"

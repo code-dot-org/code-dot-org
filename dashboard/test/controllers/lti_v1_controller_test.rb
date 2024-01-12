@@ -502,35 +502,41 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   test 'integration - given valid inputs, creates a new integration if one does not exist' do
     client_id = "1234canvas"
     lms = "canvas_cloud"
+    email = "fake@email.com"
 
-    post '/lti/v1/create_integration', params: {client_id: client_id, lms: lms}
+    post '/lti/v1/integrations', params: {client_id: client_id, lms: lms, email: email}
     assert_response :ok
 
     client_id = "5678schoology"
     lms = "schoology"
 
-    post '/lti/v1/create_integration', params: {client_id: client_id, lms: lms}
+    post '/lti/v1/integrations', params: {client_id: client_id, lms: lms, email: email}
     assert_response :ok
   end
 
   test 'integration - given missing inputs, does not create a new integration' do
     client_id = "1234canvas"
     lms = "canvas_cloud"
+    email = "fake@email.com"
 
-    post '/lti/v1/create_integration', params: {lms: lms}
+    post '/lti/v1/integrations', params: {lms: lms, email: email}
     assert_response :bad_request
 
-    post '/lti/v1/create_integration', params: {client_id: client_id, lms: ''}
+    post '/lti/v1/integrations', params: {client_id: client_id, lms: '', email: email}
+    assert_response :bad_request
+
+    post '/lti/v1/integrations', params: {client_id: client_id}
     assert_response :bad_request
   end
 
   test 'integration - if existing integration, does not create a new one' do
     client_id = "1234canvas"
     lms = "canvas_cloud"
+    email = "fake@email.com"
 
-    post '/lti/v1/create_integration', params: {client_id: client_id, lms: lms}
+    post '/lti/v1/integrations', params: {client_id: client_id, lms: lms, email: email}
     assert_response :ok
-    post '/lti/v1/create_integration', params: {client_id: client_id, lms: lms}
+    post '/lti/v1/integrations', params: {client_id: client_id, lms: lms, email: email}
     assert_response :conflict
   end
 end

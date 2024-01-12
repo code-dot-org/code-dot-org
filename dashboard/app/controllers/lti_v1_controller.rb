@@ -214,21 +214,20 @@ class LtiV1Controller < ApplicationController
     end
   end
 
-  # POST /lti/v1/create_integration
+  # POST /lti/v1/integrations
   # Creates a new LtiIntegration
-
   def create_integration
-    # does this method fire the email upon succesful creation?
+    begin
+      params.require([:client_id, :lms, :email])
+    rescue
+      render status: :bad_request, json: {error: I18n.t('lti.error.missing_params')}
+      return
+    end
 
     # TODO Nick: These param names sholud be vetted
     client_id = params[:client_id]
-    admin_email = params[:email]
     platform_name = params[:lms]
-
-    if platform_name.blank?
-      render status: :bad_request, json: {error: 'Must supply valid "lms" name'}
-      return
-    end
+    admin_email = params[:email]
 
     platform_urls = Policies::Lti::LMS_PLATFORMS[platform_name.to_sym]
     issuer = platform_urls[:issuer]
@@ -249,12 +248,12 @@ class LtiV1Controller < ApplicationController
           access_token_url: access_token_url,
           admin_email: admin_email
         )
-        render status: :ok, json: {body: 'Succesfully created your LTI integration'}
+        render status: :ok, json: {body: I18n.t('lti.create_integration_success')}
       rescue ActiveRecord::ActiveRecordError => exception
         render status: :bad_request, json: {error: exception.message}
       end
     else
-      render status: :conflict, json: {error: 'Lti Integration already exists for this Client ID'}
+      render status: :conflict, json: {error: I18n.t('lti.error.integration_exists')}
     end
   end
 
@@ -267,7 +266,7 @@ class LtiV1Controller < ApplicationController
   end
 
   def wrong_resource_type
-    render(status: :not_acceptable, json: {error: 'Only LtiResourceLink is supported right now'})
+    render(status: :not_acceptable, json: {error: I18n.t('lti.error.wrong_resource_type')})
   end
 
   def create_state_and_nonce
