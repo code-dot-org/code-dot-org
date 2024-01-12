@@ -12,10 +12,8 @@ class ProjectDataDbController < ApplicationController
   end
 
   def get_key_value
-    render json: KeyValuePair.find(channel_id: params[:channel_id], key: params[:key])
-  rescue
-    # If the key doesn't exist, return value: null
-    render json: {channel_id: params[:channel_id], key: params[:key], value: nil}
+    kvp = KeyValuePair.find_by(channel_id: params[:channel_id], key: params[:key])
+    render json: kvp ? kvp.value.to_json : nil
   end
 
   def set_key_value
