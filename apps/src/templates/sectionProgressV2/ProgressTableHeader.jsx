@@ -24,14 +24,28 @@ export default function ProgressTableHeader({
 }) {
   const getExpandedLessonColumnHeader = React.useCallback(
     lesson => {
+      console.log(lesson);
       return (
-        <div
-          className={classNames(styles.gridBox, styles.gridBoxLessonHeader)}
-          onClick={() => removeExpandedLesson(lesson.id)}
-          key={lesson.id}
-        >
-          <FontAwesome icon="caret-down" />
-          {lesson.relative_position} expanded
+        <div key={lesson.id} className={styles.headerExpanded}>
+          <div
+            className={classNames(styles.gridBox, styles.gridBoxLessonHeader)}
+            onClick={() => removeExpandedLesson(lesson.id)}
+          >
+            <FontAwesome icon="caret-down" />
+            {lesson.relative_position}
+          </div>
+          <div className={styles.headerExpandedSecondRow}>
+            {lesson.levels.map(level => (
+              <div
+                className={classNames(
+                  styles.gridBox,
+                  styles.gridBoxLevelHeader
+                )}
+              >
+                {lesson.relative_position + '.' + level.bubbleText}
+              </div>
+            ))}
+          </div>
         </div>
       );
     },
