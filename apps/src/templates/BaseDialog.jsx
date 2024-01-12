@@ -136,16 +136,6 @@ export default class BaseDialog extends React.Component {
         width: this.props.fixedWidth || BASE_DIALOG_WIDTH,
         marginLeft: -this.props.fixedWidth / 2 || -350,
       };
-      xCloseStyle = {
-        position: 'absolute',
-        top: 0,
-        right: 0,
-        padding: 0,
-        color: '#ddd',
-        cursor: 'pointer',
-        fontSize: 24,
-        border: 'none',
-      };
     } else if (this.props.noModalStyles) {
       modalClassNames = '';
       modalBodyClassNames = '';
@@ -158,6 +148,16 @@ export default class BaseDialog extends React.Component {
         marginLeft: 0,
       }),
       ...this.props.style,
+    };
+    xCloseStyle = {
+      position: 'absolute',
+      top: 0,
+      right: 0,
+      padding: 0,
+      color: '#ddd',
+      cursor: 'pointer',
+      fontSize: 24,
+      border: 'none',
     };
 
     modalBodyClassNames = [modalBodyClassNames, this.props.bodyClassName]
