@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-08 19:51:17 UTC",
+    "serialized_at": "2024-01-11 18:42:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -113,6 +113,7 @@
       "key": "51c6ea45-57e7-4818-9b80-e42ee0b6137b",
       "position": 1,
       "properties": {
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "51c6ea45-57e7-4818-9b80-e42ee0b6137b",
@@ -125,6 +126,7 @@
       "key": "ddec5359-dcf3-41fd-8962-f8930d88018e",
       "position": 1,
       "properties": {
+        "duration": 15
       },
       "seeding_key": {
         "lesson_activity.key": "ddec5359-dcf3-41fd-8962-f8930d88018e",
@@ -137,6 +139,7 @@
       "key": "54842971-48a3-4e25-a3fb-80b953c89550",
       "position": 1,
       "properties": {
+        "duration": 15
       },
       "seeding_key": {
         "lesson_activity.key": "54842971-48a3-4e25-a3fb-80b953c89550",
@@ -149,6 +152,7 @@
       "key": "3868b052-3481-4402-9a95-c1a09f1ec35d",
       "position": 1,
       "properties": {
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "3868b052-3481-4402-9a95-c1a09f1ec35d",
@@ -161,6 +165,7 @@
       "key": "7a5e0481-9a06-4a4b-93c7-68f659728a1f",
       "position": 1,
       "properties": {
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "7a5e0481-9a06-4a4b-93c7-68f659728a1f",
@@ -545,6 +550,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_k5_2_checkUnderstandingSprites_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -782,6 +790,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2_checkUnderstanding_events_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
