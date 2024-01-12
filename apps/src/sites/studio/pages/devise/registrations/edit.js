@@ -138,6 +138,22 @@ $(document).ready(() => {
     );
   }
 
+  const revokeAdminMountPoint = document.getElementById('revoke-admin');
+  console.log(revokeAdminMountPoint);
+  if (revokeAdminMountPoint) {
+    ReactDOM.render(
+      // <RevokeAdmin
+      //   isPasswordRequired={isPasswordRequired}
+      //   isTeacher={userType === 'teacher'}
+      //   dependedUponForLogin={dependedUponForLogin}
+      //   dependentStudents={dependentStudents}
+      //   hasStudents={studentCount > 0}
+      // />
+      <div>Hello</div>,
+      revokeAdminMountPoint
+    );
+  }
+
   initializeCreatePersonalAccountControls();
 });
 

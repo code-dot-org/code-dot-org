@@ -211,14 +211,16 @@
     .farSide
       %span#change-user-type-status
       %button.btn#change-user-type-button{disabled: true}= t('signup_form.user_type_button')
-
-- if current_user.can_delete_own_account?
-  -# Mount point for React DeleteAccount component.
-  %div#delete-account
+- unless current_user.admin?
+  - if current_user.can_delete_own_account?
+    -# Mount point for React DeleteAccount component.
+    %div#delete-account
+  - else
+    %hr.danger.account-page-section-break
+    %h2.danger= t('user.delete')
+    %p= t('user.delete_text_teacher_managed_note')
 - else
-  %hr.danger.account-page-section-break
-  %h2.danger= t('user.delete')
-  %p= t('user.delete_text_teacher_managed_note')
+  %div#revoke-admin
 
 -# Hidden form used to asynchronously submit an email change to Rails with the
 -# appropriate authenticity tokens.  See ChangeEmailModal.jsx for more details.
