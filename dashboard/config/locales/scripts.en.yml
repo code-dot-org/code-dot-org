@@ -14202,13 +14202,19 @@ en:
               name: Behaviors
             lesson-5:
               name: Next Steps
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Getting Started
+            lessonGroup-3:
+              display_name: Creative Computer Science Concepts
+            lessonGroup-4:
+              display_name: Taking Next Steps
           name: self-paced-pl-k5-2024-2
           title: Creativity with Code
           description_audience: ''
           description_short: ''
           description: "**You will:**\n\n* Identify and explain fundamental CS concepts, including Sprites, events and behaviors. \n* Demonstrate the application of event-based programming.\n* Create a program using sprites, events, and behaviors.\n\n**Suggested time:** 60 minutes\n"
-          student_description: "**You will:**\n\n* Identify and explain fundamental CS concepts, including Sprites, evenets and behaviors. \n\n* Demonstrate the application of event-based programming.\n\n* Create a program using sprites, events, and behaviors.\n\n**Suggested time:** 60 minutes\n\n"
+          student_description: "**You will:**\n\n* Identify and explain fundamental CS concepts, including Sprites, evenets and behaviors. \n* Demonstrate the application of event-based programming.\n* Create a program using sprites, events, and behaviors.\n\n**Suggested time:** 60 minutes\n\n"
         self-paced-pl-k5-2024-1:
           lessons:
             lesson-1:
