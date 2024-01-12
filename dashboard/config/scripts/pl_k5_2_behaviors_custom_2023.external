@@ -3,56 +3,28 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Introducing student features
+# Behavior Blocks
 
-#### Features are embedded in each level to help your students succeed. Check out how some of these features work by clicking on the arrows below: 
+#### Behavior blocks animate our sprites. These are special blocks that allow our sprite to complete specific actions. The behavior blocks make it easier for beginning coders to use more complex actions. 
+ 
 
-## Adjusting windows
+## Let’s take a look at this *growing* behavior.
 
-#### Students can click and drag the three dots of the workspace or play space to adjust the size of each.
+#### By adding the ‘Sprite begins’ block, when we press run, the Sprite will slowly get bigger. 
 
-<details>
 
-<summary><strong>Demo of adjusting windows</strong></summary>
 
-<img src="https://images.code.org/883c1280e1ac491fdf09a80c27a32826-image-1681492214527.gif" alt= "moving playspace and workspace window size" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
-</details>
 
-<div style="clear:both"/>
+<img src="https://images.code.org/301312a1274970571422c02bfb1b2cf7-image-1704382377533.gif" alt= "moving playspace and workspace window size" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
-<hr style="clear:both">
+<img src="https://images.code.org/72569b194a488784e90945a2f87e6b48-image-1705006395844.gif" alt= "moving playspace and workspace window size" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
-## Instruction hints
 
-#### Students can click on the light bulb to get hints throughout a level.
-
-<details>
-
-<summary><strong>Demo of instruction hints</strong></summary>
-
-<img src="https://images.code.org/399c6a5f4b4cddd06e5ebaa1e162d8ce-image-1681492569784.gif" alt=" hint image and words displayed" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
-
-</details>
 
 <div style="clear:both"/>
 
 <hr style="clear:both">
 
-## Video hints
-
-#### Students can watch videos provided in some levels to review the CS concept they are practicing.
-
-<details>
-
-<summary><strong>Demo of video hints</strong></summary>
-
-<img src="https://images.code.org/5b55685520d1d8bbdd06575ceac69529-image-1682378944264.gif" alt=" video starting from the lesson level" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
-
-</details>
-
-<div style="clear:both"/>
-
-
-## Let's keep learning! 
+![]()
 MARKDOWN

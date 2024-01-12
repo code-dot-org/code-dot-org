@@ -2,7 +2,9 @@ module OpenaiChatHelper
   OPEN_AI_URL = "https://api.openai.com/v1/chat/completions"
   OPENAI_CHAT_COMPLETION_API_KEY = CDO.openai_chat_completion_api_key
   TEMPERATURE = 0
-  GPT_MODEL = 'gpt-3.5-turbo'
+  # We should always specify a version for the LLM so the results don't unexpectedly change.
+  # reference: https://platform.openai.com/docs/models/gpt-3-5
+  GPT_MODEL = 'gpt-3.5-turbo-1106'
 
   def self.request_chat_completion(messages)
     # Set up the API endpoint URL and request headers

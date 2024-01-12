@@ -189,6 +189,8 @@ en:
           description_audience: ''
           lesson_groups: {}
           student_description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
+          lessons: {}
+          name: Hour of Code
         CodeStudioPuzzleChallenge:
           title: Code Studio Puzzle Challenge
           description: Try out these fun coding puzzles. Do your best!
@@ -9839,6 +9841,8 @@ en:
               name: NEW- Function Machines - Lesson 4
             lesson-6:
               name: Ecosystems Test
+            lesson-7:
+              name: Matching Levels
           lesson_groups: {}
           name: emmas-playground
           title: ''
@@ -12390,6 +12394,8 @@ en:
               name: Remix Projects
             lesson-2:
               name: SNAP - Rosa Linn
+            lesson-3:
+              name: Free Play
           lesson_groups: {}
           name: musiclab
           title: Music Lab Test Lessons
@@ -13765,8 +13771,8 @@ en:
           title: Getting Started with Code.org
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
+          student_description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
         self-paced-pl-csd-unit4-2-2023:
           lessons: {}
           lesson_groups: {}
@@ -13774,8 +13780,28 @@ en:
           title: Preparing to Teach The Design Process
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            This professional learning module is designed to help you prepare to teach Code.org's Design Process unit.
+
+            **In this professional learning module, you will:**
+
+            * Get an introduction to The Design Process.
+            * Practice key concepts included in the unit.
+            * Engage with App Lab.
+            * Explore end-of-chapter projects.
+
+            **Suggested time:** 100 minutes
+          student_description: |-
+            This professional learning module is designed to help you prepare to teach Code.org's Design Process unit.
+
+            **In this professional learning module, you will:**
+
+            * Get an introduction to The Design Process.
+            * Practice key concepts included in the unit.
+            * Engage with App Lab.
+            * Explore end-of-chapter projects.
+
+            **Suggested time:** 100 minutes
         self-paced-pl-csd-unit5-1-2023:
           lessons: {}
           lesson_groups: {}
@@ -14045,8 +14071,8 @@ en:
           name: coursec-maker-2024
           title: Course C - Maker with micro:bit
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit.
+          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. \n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning](LINK). \n\nThis self-paced course covers the following topics: \n- How to use the Code.org curriculum \n- How to setup a classroom on Code.org \n- How to use micro:bits \n- How to use the “Meet your micro:bit” project\n- How to setup a classroom on micro:bit\n- How to assess student learning \n"
           student_description: ''
         coursef-maker-2024:
           lessons:
@@ -14181,7 +14207,7 @@ en:
           title: Creativity with Code
           description_audience: ''
           description_short: ''
-          description: "**You will:**\n\n* Identify and explain fundamental CS concepts, including Sprites, evenets and behaviors. \n\n* Demonstrate the application of event-based programming.\n\n* Create a program using sprites, events, and behaviors.\n\n**Suggested time:** 60 minutes\n"
+          description: "**You will:**\n\n* Identify and explain fundamental CS concepts, including Sprites, events and behaviors. \n* Demonstrate the application of event-based programming.\n* Create a program using sprites, events, and behaviors.\n\n**Suggested time:** 60 minutes\n"
           student_description: "**You will:**\n\n* Identify and explain fundamental CS concepts, including Sprites, evenets and behaviors. \n\n* Demonstrate the application of event-based programming.\n\n* Create a program using sprites, events, and behaviors.\n\n**Suggested time:** 60 minutes\n\n"
         self-paced-pl-k5-2024-1:
           lessons:
@@ -14197,10 +14223,48 @@ en:
               name: Putting It All Together
             lesson-6:
               name: Next Steps
-          lesson_groups: {}
+            lesson-7:
+              name: Block-Based Coding
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Getting Started
+            lessonGroup-3:
+              display_name: Foundational Computer Science Concepts
+            lessonGroup-4:
+              display_name: Taking Next Steps
           name: self-paced-pl-k5-2024-1
           title: Introduction to Computer Science
-          description_audience: ''
+          description_audience: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science concepts! '
           description_short: ''
-          description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
-          student_description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
+          description: |
+            **You will:**
+
+            * Identify and explain fundamental CS concepts.
+            * Demonstrate the application of algorithms, sequences, loops, and conditionals.
+            * Create programs to solve puzzles using algorithms, sequences, loops, and conditionals
+
+
+
+
+            **Suggested time:** 60 minutes
+          student_description: |
+            **You will:**
+
+            * Identify and explain fundamental CS concepts.
+            * Demonstrate the application of algorithms, sequences, loops, and conditionals.
+            * Create programs to solve puzzles using algorithms, sequences, loops, and conditionals
+
+
+
+
+            **Suggested time:** 60 minutes
+            **You will:**
+
+            * Identify and explain fundamental CS concepts.
+            * Demonstrate the application of algorithms, sequences, loops, and conditionals.
+            * Create programs to solve puzzles using algorithms, sequences, loops, and conditionals
+
+
+
+
+            **Suggested time:** 60 minutes

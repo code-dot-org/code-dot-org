@@ -13,6 +13,7 @@ $container-width: 960px;
   align-items: center;
   column-gap: 20px;
   text-align: center;
+
   button,
   a,
   a:link,
@@ -20,7 +21,12 @@ $container-width: 960px;
     margin: 0;
     height: 40px;
     font-size: 1em;
-    line-height: 36.5px;
+  }
+
+  a,
+  a:link,
+  a:visited {
+    line-height: 38px;
   }
 }
 
@@ -145,6 +151,7 @@ $container-width: 960px;
 
 .linksContainer {
   width: 200px;
+
   hr {
     margin: 8px 0;
   }

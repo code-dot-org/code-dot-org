@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2023-12-14T15:57:25.000Z",
   "level_num": "custom",
@@ -40,7 +41,7 @@
     "parent_level_id": 28361,
     "short_instructions": "It's time to create whatever you want!",
     "mini_rubric": "false",
-    "long_instructions": "*It's time to start creating whatever you want! When you are done, share your project and say \"Hello!\" to the people in your world!*\r\n<div style=\"float:right;padding:20px\">\r\n<img src=\"https://studio.code.org/api/v1/animation-library/spritelab/cbCRwipEkaXhe.AzOSYwavvMApEYUkCa/category_food/face_pizza.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/up6b2tgqAjH6fxO6bKFn7O0CrgtxSkFz/category_animals/cuteanimals_bear.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/hKXwNDtCaVI4G0Ow.udOCdsMRnK77A48/category_emoji/emoji_19.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/O1HNS9DSfUZLw6lzWIkyCTLChPoDOJhz/category_retro/retrocreature_18.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\">\r\n</div>\r\n\r\n- Add more sprite *costumes* to your project by clicking the *costumes* tab.\r\n- Add *code* to the workspace to make sprites appear.\r\n- Try adding more features to your project to make it even better.\r\n- Press the *Share* button above to send your project to some friends!\r\n\r\nFor some extra fun, check out the brand new `create effect` block in the **Sprites** category!\r\n\r\n<xml>\r\n  <block type=\"gamelab_makeBurst\">\r\n    <title name=\"ANIMATION_NAME\">\"face_burger_1\"</title>\r\n    <value name=\"NUM\">\r\n      <block type=\"math_number\">\r\n        <title name=\"NUM\">10</title>\r\n      </block>\r\n    </value>\r\n  </block>\r\n</xml>\r\n",
+    "long_instructions": "<div style=\"background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\r\n\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 14px; \"> Congratulations! You have learned the basics of <b>event-based programming</b> and now it's time to start creating!    \r\n</p>\r\n</div>\r\n\r\n<br>\r\n\r\n*Use this level to practice creating with code.*\r\n<div style=\"float:right;padding:20px\">\r\n<img src=\"https://studio.code.org/api/v1/animation-library/spritelab/cbCRwipEkaXhe.AzOSYwavvMApEYUkCa/category_food/face_pizza.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/up6b2tgqAjH6fxO6bKFn7O0CrgtxSkFz/category_animals/cuteanimals_bear.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/hKXwNDtCaVI4G0Ow.udOCdsMRnK77A48/category_emoji/emoji_19.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/O1HNS9DSfUZLw6lzWIkyCTLChPoDOJhz/category_retro/retrocreature_18.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\">\r\n</div>\r\n\r\n- Add more sprite *costumes* to your project by clicking the *costumes* tab.\r\n- Add *code* to the workspace to make sprites appear.\r\n- Try adding more features to your project to make it even better.\r\n- Press the *Share* button above to send your project to some friends!\r\n\r\nFor some extra fun, check out the brand new `create effect` block in the **Sprites** category!\r\n\r\n<xml>\r\n  <block type=\"gamelab_makeBurst\">\r\n    <title name=\"ANIMATION_NAME\">\"face_burger_1\"</title>\r\n    <value name=\"NUM\">\r\n      <block type=\"math_number\">\r\n        <title name=\"NUM\">10</title>\r\n      </block>\r\n    </value>\r\n  </block>\r\n</xml>\r\n",
     "encrypted": "false",
     "soft_buttons": [
       "leftButton",
@@ -60,11 +61,13 @@
     "video_key": "hello_world_congrats",
     "skip_autosave": true,
     "encrypted_examples": "WNbw/L2bHm21vqyYxd/S1ez3SBbhJEgMIxWCBziMWNsoCGQMTIy11pR5tnZv\nhJqfTadSL4wpavw5BnQd4zA6tw==\n",
+    "standalone_app_name": "spritelab",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-12-14T15:57:25.752+00:00\",\"changed\":[\"cloned from \\\"coursee_helloworld_freeplay_2023\\\"\"],\"cloned_from\":\"coursee_helloworld_freeplay_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-12-14T15:57:25.752+00:00\",\"changed\":[\"cloned from \\\"coursee_helloworld_freeplay_2023\\\"\"],\"cloned_from\":\"coursee_helloworld_freeplay_2023\"},{\"changed_at\":\"2024-01-02 19:37:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-01-10 16:35:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>
