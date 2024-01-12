@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-21 00:09:21 UTC",
+    "serialized_at": "2024-01-11 17:00:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -107,6 +107,7 @@
       "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
+        "overview": "**You will:**\n\n* Explore end-of-chapter projects.\n* Make a plan for implementing the unit with your students.\n\n**Suggested time:** 10 minutes"
       },
       "seeding_key": {
         "lesson.key": "Unit wrap up",
@@ -120,6 +121,7 @@
       "key": "6a069051-70d1-4a3b-9184-ae756880b380",
       "position": 1,
       "properties": {
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "6a069051-70d1-4a3b-9184-ae756880b380",
@@ -132,6 +134,7 @@
       "key": "8c228bfd-cfe2-46fe-a5c2-e07491e5be11",
       "position": 1,
       "properties": {
+        "duration": 40
       },
       "seeding_key": {
         "lesson_activity.key": "8c228bfd-cfe2-46fe-a5c2-e07491e5be11",
@@ -144,6 +147,7 @@
       "key": "78b90de2-4df0-4e70-864f-589d495fafbc",
       "position": 1,
       "properties": {
+        "duration": 40
       },
       "seeding_key": {
         "lesson_activity.key": "78b90de2-4df0-4e70-864f-589d495fafbc",
@@ -156,6 +160,7 @@
       "key": "4b8ac70c-8b06-44d9-9345-e430eb2c4ebe",
       "position": 1,
       "properties": {
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "4b8ac70c-8b06-44d9-9345-e430eb2c4ebe",
@@ -168,6 +173,7 @@
       "key": "7f4bbd68-c37c-46c2-a13d-533a7994da55",
       "position": 1,
       "properties": {
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "7f4bbd68-c37c-46c2-a13d-533a7994da55",
@@ -550,6 +556,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-Project Overview_U3L2_self-paced-unit3"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -1022,6 +1031,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD_Lesson2WrapUp_U3_self-paced-unit3"
+        ],
         "progression": "Section Wrap Up"
       },
       "bonus": false,
@@ -1494,6 +1506,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD_Lesson3WrapUp_U3_self-paced-unit3"
+        ],
         "progression": "Section Wrap Up"
       },
       "bonus": false,
@@ -1891,6 +1906,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD_Lesson4WrapUp_U3_self-paced-unit3"
+        ],
         "progression": "Section Wrap Up"
       },
       "bonus": false,
@@ -2013,6 +2031,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-Unit3_WrapUp"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
