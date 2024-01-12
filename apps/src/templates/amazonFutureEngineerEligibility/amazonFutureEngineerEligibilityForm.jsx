@@ -401,7 +401,7 @@ const styles = {
     textAlign: 'right',
   },
   sectionBreak: {
-    borderColor: color.teal,
+    borderColor: 'var(--neutral_dark20)',
     margin: '1rem 0',
   },
   button: {
