@@ -14655,12 +14655,12 @@
           "validation": "💡 Agrega estos bloques bajo el bloque <code style=\"color:white; background-color:#FFBD46\">establecer</code> para crear tu primer bailarín: \n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n      <block type=\"Dancelab_makeAnonymousDanceSprite\" id=\"1\">\n        <field name=\"COSTUME\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">“GATO”</field>\n        <field name=\"LOCATION\">{x: 200, y: 200}</field>\n        <next>\n          <block type=\"Dancelab_changeMoveEachLR\" id=\"|y+CWEBlleENO5MU(?yL\">\n            <field name=\"GROUP\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">“GATO”</field>\n            <field name=\"MOVE\">“siguiente”</field>\n            <field name=\"DIR\">-1</field>\n          </block>\n        </next>\n      </block>\n    </statement>\n\n</xml>"
         },
         "dance_ai_generate_effect": {
-          "Hint2": "💡 Conecta este bloque [blockly block][0] al bloque <code style=\"color:white; background-color:#FFBD46\">establecer</code>. Luego dale clic para comenzar.",
+          "Hint2": "💡 Conecta el [blockly block][0] en <code style=\"color:white; background-color:#FFBD46\">configuración</code>. Después, pulsa sobre él para empezar.",
           "Hint3": "💡 Si quieres regenerar el efecto o cambiar los emojis, hazle clic al bloque `I.A. genera efecto` una vez más. "
         },
         "dance_ai_generate_effect_again": {
           "Hint1": "💡 Escucha la canción y ponte a pensar sobre sobre las emociones que evoca esta música. ",
-          "Hint2": "💡 Conecta este bloque [blockly block][0] al bloque <code style=\"color:white; background-color:#FFBD46\">establecer</code>. Luego dale clic para comenzar.",
+          "Hint2": "💡 Conecta el [blockly block][0] en <code style=\"color:white; background-color:#FFBD46\">configuración</code>. Después, pulsa sobre él para empezar.",
           "Hint3": "💡 Si quieres regenerar el efecto o cambiar los emojis, hazle clic al bloque `A.I. genera efecto` una vez más."
         },
         "dance_ai_try_key_press": {

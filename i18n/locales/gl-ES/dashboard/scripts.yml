@@ -1059,6 +1059,10 @@ gl:
               display_name: Cidadanía dixital
             lessonGroup-4:
               display_name: Variables
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Xogo libre
         test-nv-coursea-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1120,3 +1124,16 @@ gl:
           lesson_groups:
             lessonGroup-7:
               display_name: Introdución
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Eventos
+            lesson-4:
+              name: Comportamentos
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Bucles
+            lesson-4:
+              name: Condicionais
+          title: Introdución á informática

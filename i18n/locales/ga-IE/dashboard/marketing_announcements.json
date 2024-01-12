@@ -1,104 +1,9 @@
 {
   "banners": {
-    "csleadersprize": {
-      "title": "",
-      "body": "",
-      "buttonText": "Tuilleadh eolais"
-    },
-    "csjourneys-22": {
-      "title": "",
-      "body": "",
-      "buttonText": "Tuilleadh eolais"
-    },
-    "hoc-more": {
-      "title": "",
-      "body": "Tá níos mó ná 500 gníomhaíochtaí ríomheolaíochta ar shuíomh na hUaire Códála, do dhaoine ag gach leibhéal agus gach aois, forbartha ag Code.org agus ár gcomhpháirtithe.",
-      "buttonText": ""
-    },
     "superhero": {
       "title": "",
       "body": "",
       "buttonText": "Tuilleadh Eolais"
-    },
-    "csjourneys": {
-      "title": "",
-      "body": "",
-      "buttonText": "Tuilleadh eolais"
-    },
-    "class-schedule-survey": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "back-to-school-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Tuilleadh eolais"
-    },
-    "teacher-apps-open-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Bí linn"
-    },
-    "teacher-apps-closing-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Bí linn"
-    },
-    "teacher-apps-nominate-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "teacher-apps-stillon-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Bí linn"
-    },
-    "home-learning-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "soonhoc-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "codebytes-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Tuilleadh eolais"
-    },
-    "ai-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Tuilleadh eolais"
-    },
-    "congrats-certificate-share": {
-      "title": "",
-      "body": "",
-      "buttonText": "Tosaigh"
-    },
-    "coldplay": {
-      "title": "",
-      "body": "",
-      "buttonText": "Bain triail as"
-    },
-    "ai-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "Tuilleadh eolais"
-    },
-    "ai-pl-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "Tuilleadh eolais"
-    },
-    "state-of-cs-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
     },
     "hoc-2023": {
       "title": "",
@@ -106,6 +11,11 @@
       "buttonText": "Tuilleadh eolais"
     },
     "hoc-2023-dance-ai": {
+      "title": "",
+      "body": "",
+      "buttonText": "Tuilleadh eolais"
+    },
+    "co-teacher": {
       "title": "",
       "body": "",
       "buttonText": "Tuilleadh eolais"

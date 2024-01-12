@@ -1,104 +1,9 @@
 {
   "banners": {
-    "csleadersprize": {
-      "title": "Dodaj nowy kurs informatyki, wygraj $10,000!",
-      "body": "W tym Tygodniu Edukacji Informatycznej jedna szkoła podstawowa i średnia w każdym stanie USA i w dystrykcie Columbia otrzyma nagrodę CS Leaders Prize w wysokości 10 000 USD, jako wsparcie w rozszerzeniu dostępu do edukacji informatycznej dla swoich uczniów.",
-      "buttonText": "Dowiedz się więcej"
-    },
-    "csjourneys-22": {
-      "title": "CS Journeys powracają wraz z NOWYMI karierami z filmami dotyczcymi informatyki",
-      "body": "Oglądaj wyjątkowych specjalistów technologicznych w pracy, a także dołącz do wirtualnych wycieczek terenowych misji NASA Artemis i nie tylko.",
-      "buttonText": "Dowiedz się więcej"
-    },
-    "hoc-more": {
-      "title": "Ucz się dalej!",
-      "body": "Strona Godziny Kodowania zawiera ponad 500 aktywności informatycznych opracowanych przez Code.org i naszych partnerów dla osób w każdym wieku i na każdym poziomie.",
-      "buttonText": "Zobacz aktywności"
-    },
     "superhero": {
       "title": "Pomóż swoim uczniom stać się superbohaterami!",
       "body": "Dołącz do naszego wysoce wspierającego programu rozwoju zawodowego dla nauczycieli.",
       "buttonText": "Dowiedz się więcej"
-    },
-    "csjourneys": {
-      "title": "Poznaj szeroki świat informatyki",
-      "body": "Ożywiaj informatykę dzięki nowemu programowi inspiracji zawodowej i eksploracji Code.org! Zapisz się na angażujące na żywo doświadczenia w klasie, takie jak wirtualne wycieczki terenowe i czaty klasowe, lub pozwól uczniom eksplorować za pomocą krótkich filmów i innych zasobów.",
-      "buttonText": "Dowiedz się więcej"
-    },
-    "class-schedule-survey": {
-      "title": "Ankieta harmonogramu zajęć jesienią 2021",
-      "body": "Poświęć chwilę na wypełnienie tej 5-pytaniowej ankiety. Odpowiedzi, które udzielisz, pomogą nam określić, kiedy oferować programowanie, takie jak wirtualne wycieczki terenowe i rozmowy z profesjonalistami w semestrze jesiennym.",
-      "buttonText": "Weź udział w ankiecie"
-    },
-    "back-to-school-2021": {
-      "title": "Powrót do aktualizacji szkoły",
-      "body": " Sprawdź najnowsze aktualizacje programu nauczania i narzędzi Code.org (w tym nowy moduł AI /ML!), a także, dowiedz się, jak korzystać z Code.org w swojej klasie dzięki naszej nowej serii filmów Pierwsze kroki.",
-      "buttonText": "Dowiedz się więcej"
-    },
-    "teacher-apps-open-2021": {
-      "title": "Zapisz się na profesjonalną doskonalenie",
-      "body": "98% uczestniczących nauczycieli poleca nasz angażujący, bardzo wspierający program. Dołącz do naszych praktycznych warsztatów z innymi nauczycielami z Twojej okolicy. Stypendia i rabaty są dostępne w większości obszarów.",
-      "buttonText": "Dołącz do nas"
-    },
-    "teacher-apps-closing-2021": {
-      "title": "Nie przegap tego. Aplikuj już dziś!",
-      "body": "98% uczestniczących nauczycieli poleca nasz angażujący, bardzo wspierający program. Dołącz do naszych praktycznych warsztatów z innymi nauczycielami z Twojej okolicy. Stypendia i rabaty są dostępne w większości obszarów.",
-      "buttonText": "Dołącz do nas"
-    },
-    "teacher-apps-nominate-2020": {
-      "title": "Znasz wspaniałego nauczyciela?",
-      "body": "Daj im znać, jak są niesamowici, nominacjąc ich do stypendium profesjonalnego doskonalenia dziś!",
-      "buttonText": "Nominuj nauczyciela"
-    },
-    "teacher-apps-stillon-2020": {
-      "title": "Doskonalenie zawodowe wciąż trwa!",
-      "body": "Warsztaty są teraz wirtualne w większości stanów! 98% nauczycieli poleca nasze angażujące profesjonalne programy edukacyjne do nauczania informatyki. Dołącz do naszych praktycznych warsztatów z innymi nauczycielami z Twojej okolicy. Liczba miejsc jest ograniczona, więc zgłoś się już dziś!",
-      "buttonText": "Dołącz do nas"
-    },
-    "home-learning-2020": {
-      "title": "Pomysły na projekty do nauki w domu",
-      "body": "Rodzice i nauczyciele — zapoznajcie się z naszą stroną Pomysły na projekty startowe w Game Lab, App Lab i Web Lab. Znajdzie tam opisy projektów, wskazówki i projekty demonstracyjne, które uczniowie mogą remiksować, aby tworzyć własne! ",
-      "buttonText": "Zobacz pomysły na projekty"
-    },
-    "soonhoc-2020": {
-      "title": "Nadchodzi Godzina Kodowania",
-      "body": "Zapisz swoją klasę, aby wypróbować jedno z ponad 115 nowych aktywności w Godzinie Kodowania (7-13 grudnia). W tym roku będziemy badać, w jaki sposób możemy wykorzystać informatykę i technologie, takie jak sztuczna inteligencja, aby pomóc w budowaniu społeczeństwa, w którym chcemy żyć. Zarejestruj się już dziś!",
-      "buttonText": "Dołącz do nas"
-    },
-    "codebytes-2020": {
-      "title": "CodeBytes: Interaktywne mini-lekcje na żywo podczas CSEDWeek!",
-      "body": "Planujesz Godzinę Kodowania z wirtualną klasą? Dołącz do nas na CodeBytes, serię 20-minutowych lekcji, które będą transmitowane na żywo w dniach 7-11 grudnia. Odcinki są przeznaczone dla wszystkich klas i uczniów z różnym dostępem do technologii.",
-      "buttonText": "Dowiedz się więcej"
-    },
-    "ai-2020": {
-      "title": "Poznaj sztuczną inteligencję i uczenie maszynowe",
-      "body": "Dołącz do nas, aby w zupełnie nowej serii filmów dowiedzieć się, jak sztuczna inteligencja wpływa na cały nasz świat, jak trenować sztuczną inteligencję dla oceanów w ponad 25 językach i posłuchać podczas panelu ekspertów transmitowanego na żywo we wtorek 8 grudnia na temat Etyki AI.",
-      "buttonText": "Dowiedz się więcej"
-    },
-    "congrats-certificate-share": {
-      "title": "Wypróbuj Godzinę Kodowania",
-      "body": "Każdy może się nauczyć!",
-      "buttonText": "Rozpocznij"
-    },
-    "coldplay": {
-      "title": "Koduj i tańcz z Coldplay",
-      "body": "Użyj Potańcówki, aby stworzyć coś niesamowitego! Udostępnij online, a Coldplay może zwrócić uwagę na Twój projekt w mediach społecznościowych. Możesz nawet zobaczyć zespół na żywo! Zobaczmy, co stworzysz!",
-      "buttonText": "Wypróbuj"
-    },
-    "ai-launch-2023": {
-      "title": "Edukacja AI dla świata",
-      "body": "Zobacz, jak planujemy wprowadzić sztuczną inteligencję do edukacji uczniów na całym świecie.",
-      "buttonText": "Dowiedz się więcej"
-    },
-    "ai-pl-launch-2023": {
-      "title": "AI 101 dla nauczycieli",
-      "body": "Odkryj przełomowy świat sztucznej inteligencji (AI) i jej potencjał transformacyjny w edukacji dzięki naszej kompleksowej serii nauczania online dla nauczycieli.",
-      "buttonText": "Dowiedz się więcej"
-    },
-    "state-of-cs-2023": {
-      "title": "2023 Stan edukacji informatycznej",
-      "body": "Sprawdź najnowsze dane dotyczące krajowej i stanowej polityki w zakresie edukacji informatycznej, w tym trendy polityczne, mapy, podsumowania stanów i dane dotyczące wdrażania.",
-      "buttonText": "Przeczytaj raport"
     },
     "hoc-2023": {
       "title": "Godzina Kodowania: Kreatywność dzięki sztucznej inteligencji",
@@ -108,6 +13,11 @@
     "hoc-2023-dance-ai": {
       "title": "Potańcówka: edycja AI",
       "body": "",
+      "buttonText": "Dowiedz się więcej"
+    },
+    "co-teacher": {
+      "title": "Nowy! Dodaj współnauczycieli do swoich sekcji",
+      "body": "Usprawnij zarządzanie klasą, dodając współnauczycieli ze strony „Edytuj szczegóły sekcji”.",
       "buttonText": "Dowiedz się więcej"
     }
   }

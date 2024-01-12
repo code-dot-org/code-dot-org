@@ -25,5 +25,5 @@ export default function ProgressTableHeader({lessons}) {
 }
 
 ProgressTableHeader.propTypes = {
-  lessons: PropTypes.array,
+  lessons: PropTypes.array.isRequired,
 };

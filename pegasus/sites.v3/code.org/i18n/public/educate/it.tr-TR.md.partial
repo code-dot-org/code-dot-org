@@ -70,16 +70,17 @@ theme: responsive
 
 Tüm Code.org içeriklerinde en iyi deneyimi yaşamak için, aşağıdaki sitelere izin verildiğinden ve engellenmediğinden emin olmak için okulunuzun veya bölgenizin BT departmanına danışmanızı öneririz.
 
-| Öncelik                                                            | URL                                                                                                        |
-| ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| **Gerekli**                                                        | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **İsteğe Bağlı**                                                   | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **YouTube'daki videoları kullanmak için (Gelişmiş Gizlilik Modu)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **Code.org'daki videoları kullanmak için**                         | `https://videos.code.org`                                                                                  |
-| **İnternet simülatörü kullanmak için**                             | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **Web Laboratuvarı kullanmak için**                                | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **Google Classroom Paylaş Butonunu kullanmak için**                | `https://apis.google.com`                                                                                  |
-| **App Lab veri kümelerini kullanmak için**                         | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| Öncelik                                                                                                                | URL                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Gerekli**                                                                                                            | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **CAPTCHA sistemlerinin kullanımınızı otomatik dolandırıcılık (“bot”) etkinliğinden ayırt edebilmesini sağlamak için** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **İsteğe Bağlı**                                                                                                       | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **YouTube'daki videoları kullanmak için (Gelişmiş Gizlilik Modu)**                                                     | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Code.org'daki videoları kullanmak için**                                                                             | `https://videos.code.org`                                                                                  |
+| **İnternet simülatörü kullanmak için**                                                                                 | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **Web Laboratuvarı kullanmak için**                                                                                    | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Google Classroom Paylaş Butonunu kullanmak için**                                                                    | `https://apis.google.com`                                                                                  |
+| **App Lab veri kümelerini kullanmak için**                                                                             | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
 ## Mobil ve Tablet Destek detayları
 
@@ -104,7 +105,7 @@ Code.org'un online kurslarına başlamadan önce, hazır olduğunuzdan emin olma
 
 
 <!--
-The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
 .md.erb without breaking i18n sync, this file should include that partial instead.
 -->
 <figure style="width:100%; height: 100%; margin: 0 auto;">

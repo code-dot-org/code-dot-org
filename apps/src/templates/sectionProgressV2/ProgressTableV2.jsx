@@ -10,7 +10,7 @@ import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
 import {scriptDataPropType} from '../sectionProgress/sectionProgressConstants';
 
-function ProgressTableV2({
+export function ProgressTableV2({
   isSortedByFamilyName,
   sectionId,
   students,
@@ -31,25 +31,27 @@ function ProgressTableV2({
       />
       <div className={styles.table}>
         <ProgressTableHeader lessons={unitData?.lessons} />
-        <ProgressDataV2 sortedStudents={sortedStudents} />
+        <ProgressDataV2
+          sortedStudents={sortedStudents}
+          lessons={unitData?.lessons}
+        />
       </div>
     </div>
   );
 }
 
+export const UnconnectedProgressTableV2 = ProgressTableV2;
+
 ProgressTableV2.propTypes = {
   isSortedByFamilyName: PropTypes.bool,
   sectionId: PropTypes.number,
-  students: PropTypes.arrayOf(studentShape),
+  students: PropTypes.arrayOf(studentShape).isRequired,
   unitData: scriptDataPropType.isRequired,
 };
 
-export default connect(
-  state => ({
-    isSortedByFamilyName: state.currentUser.isSortedByFamilyName,
-    sectionId: state.teacherSections.selectedSectionId,
-    students: state.teacherSections.selectedStudents,
-    unitData: getCurrentUnitData(state),
-  }),
-  dispatch => ({})
-)(ProgressTableV2);
+export default connect(state => ({
+  isSortedByFamilyName: state.currentUser.isSortedByFamilyName,
+  sectionId: state.teacherSections.selectedSectionId,
+  students: state.teacherSections.selectedStudents,
+  unitData: getCurrentUnitData(state),
+}))(ProgressTableV2);

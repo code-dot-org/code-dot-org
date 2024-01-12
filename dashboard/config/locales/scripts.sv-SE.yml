@@ -2061,6 +2061,10 @@ sv:
           student_description: Programmera djur och andra Minecraft varelser i din
             egen version av Minecraft.
           title: Minecraft Hour of Code Designer
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Fri lek
         netsim:
           title: Internet Simulator
         nevada-standards-aligned-fifth-grade-2023:
@@ -2223,6 +2227,31 @@ sv:
           lesson_groups:
             lessonGroup-2:
               display_name: Välkommen
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Lektion 1
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Lektion 1
+            lesson-3:
+              name: loopar
+            lesson-4:
+              name: Villkor
+            lesson-6:
+              name: Nästa steg
+          title: Introduktion till Datavetenskap
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Lektion 1
+            lesson-3:
+              name: Händelser
+            lesson-4:
+              name: Beteenden
+            lesson-5:
+              name: Nästa steg
         soccer:
           name: fotboll
         spelling-bee:

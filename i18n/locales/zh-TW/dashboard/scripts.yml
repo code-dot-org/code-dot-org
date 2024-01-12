@@ -8066,6 +8066,10 @@ zh-TW:
             \-了解與更廣泛的 CS 社區聯繫的機會。
 
             \*\* 建議時間 \*\*：70 分鐘
+        musiclab:
+          lessons:
+            lesson-3:
+              name: 自由發揮
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -8559,3 +8563,30 @@ zh-TW:
         csd-post-survey-2024:
           title: 課後調查
           description: 本單元包含課後問卷調查。學生完成本課程的最終單元後，可以分配此單元。
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: 第一課
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: 第一課
+            lesson-3:
+              name: 事件
+            lesson-4:
+              name: 行為
+            lesson-5:
+              name: 下一步
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: 第一課
+            lesson-3:
+              name: 迴圈
+            lesson-4:
+              name: 條件判斷（Conditionals）
+            lesson-5:
+              name: 把它放在一起
+            lesson-6:
+              name: 下一步
+          title: 計算機科學介紹
