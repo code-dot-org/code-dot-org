@@ -1,17 +1,18 @@
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {chooseEffects} from '@cdo/apps/dance/ai/utils/chooseEffects';
+import * as calculateOutputSummedWeights from '@cdo/apps/dance/ai/utils/calculateOutputSummedWeights';
 import {EffectsQuality} from '@cdo/apps/dance/ai/types';
 
 describe('chooseEffects', () => {
-  let summedWeightStub;
-
   beforeEach(() => {
     sinon.stub(Math, 'random').returns(0);
-    summedWeightStub = sinon.stub().returns([
-      [0.1, 'quads (bad fit)'],
-      [2.9, 'blooming_petals (good fit)'],
-    ]);
+    sinon
+      .stub(calculateOutputSummedWeights, 'calculateOutputSummedWeights')
+      .returns([
+        [0.1, 'quads (bad fit)'],
+        [2.9, 'blooming_petals (good fit)'],
+      ]);
   });
 
   afterEach(() => {
@@ -22,7 +23,6 @@ describe('chooseEffects', () => {
     const chosenEffects = chooseEffects(
       ['cyclone', 'smiling-face-with-hearts', 'party-popper'],
       EffectsQuality.GOOD,
-      summedWeightStub,
       1
     );
 
@@ -41,7 +41,6 @@ describe('chooseEffects', () => {
     const chosenEffects = chooseEffects(
       ['cyclone', 'smiling-face-with-hearts', 'party-popper'],
       EffectsQuality.BAD,
-      summedWeightStub,
       1
     );
 
