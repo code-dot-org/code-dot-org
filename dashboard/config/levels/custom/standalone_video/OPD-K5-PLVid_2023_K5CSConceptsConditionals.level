@@ -1,5 +1,6 @@
 <StandaloneVideo>
   <config><![CDATA[{
+  "published": true,
   "game_id": 54,
   "created_at": "2024-01-12T20:50:27.000Z",
   "level_num": "custom",
@@ -12,10 +13,11 @@
     "parent_level_id": 28494,
     "name_suffix": "_2023",
     "encrypted": "false",
-    "long_instructions": "## Loops \r\n\r\n####In the previous level, you may have noticed the repeat block. The repeat block allows us to repeat the same lines of code a set number of times. In computer science, this is a **control structure called a loop**. \r\n\r\n##What are loops?\r\n\r\n####**Loops** are like repeating a set of instructions. Imagine stirring a pot of soup continuously until it's just right. In algorithms, loops let the computer do something **over and over again until a certain condition is met**. It's like saying, 'Keep doing this until I say stop.' You will practice using loops to build algorithms in the next levels.\r\n\r\n##To learn more about loops, watch the video below.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
+    "long_instructions": "## Conditionals \r\n####The previous level contained an \"if\" block. This block allowed the bee to collect nectar **IF** there was a flower. Otherwise, the code continued. This type of control structure is called a conditional. \r\n\r\n##Defining Conditionals\r\n####**Conditionals** are like decision-making points in an algorithm. It's like choosing what to do based on a question. For example, **If** it's raining, **then**, take an umbrella; **if** it's not, **then**, leave it behind. Conditionals help the computer make choices, like '**if** this is true, **then**, do that; otherwise, do something else. You will practice using conditionals with \"if\" blocks. \r\n\r\n##Watch the video below to learn more about conditionals.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-01-12T20:50:27.811+00:00\",\"changed\":[\"cloned from \\\"OPD-K5-PLVid_2023_K5CSConceptsLoops\\\"\"],\"cloned_from\":\"OPD-K5-PLVid_2023_K5CSConceptsLoops\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-01-12T20:50:27.811+00:00\",\"changed\":[\"cloned from \\\"OPD-K5-PLVid_2023_K5CSConceptsLoops\\\"\"],\"cloned_from\":\"OPD-K5-PLVid_2023_K5CSConceptsLoops\"},{\"changed_at\":\"2024-01-12 20:53:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>

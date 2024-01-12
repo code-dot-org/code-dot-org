@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-12 20:43:25 UTC",
+    "serialized_at": "2024-01-12 20:51:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1053,15 +1053,12 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "OPD-K5 Begin_2023_K5CSConcepts2_6"
-        ],
         "progression": "Coding with Conditionals"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 Begin_2023_K5CSConcepts2_6"
+          "OPD-K5-PLVid_2023_K5CSConceptsConditionals"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-3",
@@ -1069,38 +1066,13 @@
         "activity_section.key": "e819821d-6658-4469-827b-61d9f035b43b"
       },
       "level_keys": [
-        "OPD-K5 Begin_2023_K5CSConcepts2_6"
+        "OPD-K5-PLVid_2023_K5CSConceptsConditionals"
       ]
     },
     {
       "chapter": 29,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-PLVid_2023_K5CSConceptsConditonals"
-        ],
-        "progression": "Coding with Conditionals"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-PLVid_2023_K5CSConceptsConditonals"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "self-paced-pl-k5-2024-1",
-        "activity_section.key": "e819821d-6658-4469-827b-61d9f035b43b"
-      },
-      "level_keys": [
-        "OPD-K5-PLVid_2023_K5CSConceptsConditonals"
-      ]
-    },
-    {
-      "chapter": 30,
-      "position": 5,
-      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1123,9 +1095,9 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 6,
-      "activity_section_position": 6,
+      "chapter": 30,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1148,9 +1120,9 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 7,
-      "activity_section_position": 7,
+      "chapter": 31,
+      "position": 6,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1173,7 +1145,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1198,7 +1170,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1223,7 +1195,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1248,7 +1220,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -1273,7 +1245,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -1298,7 +1270,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -1323,7 +1295,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -1348,7 +1320,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -1373,7 +1345,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1398,7 +1370,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1750,21 +1722,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 Begin_2023_K5CSConcepts2_6",
+        "level.key": "OPD-K5-PLVid_2023_K5CSConceptsConditionals",
         "script_level.level_keys": [
-          "OPD-K5 Begin_2023_K5CSConcepts2_6"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "self-paced-pl-k5-2024-1",
-        "activity_section.key": "e819821d-6658-4469-827b-61d9f035b43b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-PLVid_2023_K5CSConceptsConditonals",
-        "script_level.level_keys": [
-          "OPD-K5-PLVid_2023_K5CSConceptsConditonals"
+          "OPD-K5-PLVid_2023_K5CSConceptsConditionals"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-3",
