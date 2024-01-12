@@ -218,15 +218,17 @@ class LtiV1Controller < ApplicationController
   # Creates a new LtiIntegration
 
   def create_integration
-    # grab params
-    # check to see if integration exists (LtiIntegration.find_by(client_id: ..., issuer: lms_type))
-    # create integration if it doesn't exist
     # does this method fire the email upon succesful creation?
 
     # TODO Nick: These param names sholud be vetted
     client_id = params[:client_id]
     admin_email = params[:email]
     platform_name = params[:lms]
+
+    if platform_name.blank?
+      render status: :bad_request, json: {error: 'Must supply valid "lms" name'}
+      return
+    end
 
     platform_urls = Policies::Lti::LMS_PLATFORMS[platform_name.to_sym]
     issuer = platform_urls[:issuer]
@@ -236,20 +238,23 @@ class LtiV1Controller < ApplicationController
 
     existing_integration = Queries::Lti.get_lti_integration(issuer, client_id)
 
-    #TODO Nick: decide on what status code to return for both cases
     if existing_integration.nil?
-      Services::Lti.create_lti_integration(
-        client_id: client_id,
-        issuer: issuer,
-        platform_name: platform_name,
-        auth_redirect_url: auth_redirect_url,
-        jwks_url: jwks_url,
-        access_token_url: access_token_url,
-        admin_email: admin_email
-      )
-      render(status: :ok, json: {body: 'Succesfully created your LTI integration'})
+      begin
+        Services::Lti.create_lti_integration(
+          client_id: client_id,
+          issuer: issuer,
+          platform_name: platform_name,
+          auth_redirect_url: auth_redirect_url,
+          jwks_url: jwks_url,
+          access_token_url: access_token_url,
+          admin_email: admin_email
+        )
+        render status: :ok, json: {body: 'Succesfully created your LTI integration'}
+      rescue ActiveRecord::ActiveRecordError => exception
+        render status: :bad_request, json: {error: exception.message}
+      end
     else
-      render(status: :conflict, json: {error: 'Lti Integration already exists for this client id'}) unless existing_integration
+      render status: :conflict, json: {error: 'Lti Integration already exists for this Client ID'}
     end
   end
 

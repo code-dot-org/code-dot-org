@@ -42,7 +42,7 @@ class Services::Lti
     access_token_url:,
     admin_email:
     )
-    LtiIntegration.create(
+    LtiIntegration.create!(
       client_id: client_id,
       issuer: issuer,
       platform_name: platform_name,
