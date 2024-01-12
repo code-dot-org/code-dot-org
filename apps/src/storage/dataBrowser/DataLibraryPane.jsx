@@ -36,7 +36,8 @@ class DataLibraryPane extends React.Component {
 
   importTable = datasetInfo => {
     if (datasetInfo.current) {
-      FirebaseStorage.addCurrentTableToProject( // TODO: unfirebase
+      FirebaseStorage.addCurrentTableToProject(
+        // TODO: unfirebase
         datasetInfo.name,
         () => {},
         this.onError

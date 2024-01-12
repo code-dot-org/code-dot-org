@@ -422,7 +422,8 @@ Applab.init = function (config) {
     }));
   }
   Applab.channelId = config.channel;
-  Applab.storage = initFirebaseStorage({ // TODO: unfirebase
+  Applab.storage = initFirebaseStorage({
+    // TODO: unfirebase
     channelId: config.channel,
     firebaseName: config.firebaseName,
     firebaseAuthToken: config.firebaseAuthToken,
@@ -561,7 +562,8 @@ Applab.init = function (config) {
     project.sourceHandler.setInitialLibrariesList(startLibraries);
     designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
-    Applab.storage.clearAllData( // TODO: unfirebase
+    Applab.storage.clearAllData(
+      // TODO: unfirebase
       () => console.log('success'),
       err => console.log(err)
     );
@@ -810,7 +812,8 @@ async function initDataTab(levelOptions) {
     Applab.storage.populateTable(levelOptions.dataTables).catch(outputError); // TODO: unfirebase
   }
   if (levelOptions.dataProperties) {
-    Applab.storage.populateKeyValue( // TODO: unfirebase
+    Applab.storage.populateKeyValue(
+      // TODO: unfirebase
       levelOptions.dataProperties,
       () => {},
       outputError
@@ -826,13 +829,15 @@ async function initDataTab(levelOptions) {
           // We don't know what this table is, we should just skip it.
           console.warn(`unknown table ${table}`);
         } else if (datasetInfo.current) {
-          Applab.storage.addCurrentTableToProject( // TODO: unfirebase
+          Applab.storage.addCurrentTableToProject(
+            // TODO: unfirebase
             table,
             () => console.log('success'),
             outputError
           );
         } else {
-          Applab.storage.copyStaticTable( // TODO: unfirebase
+          Applab.storage.copyStaticTable(
+            // TODO: unfirebase
             table,
             () => console.log('success'),
             outputError
@@ -898,13 +903,15 @@ function setupReduxSubscribers(store) {
   // Initialize redux's list of tables from firebase, and keep it up to date as
   // new tables are added and removed.
   let subscribeToTable = function (tableRef, tableType) {
-    tableRef.on('child_added', snapshot => { // TODO: unfirebase
+    tableRef.on('child_added', snapshot => {
+      // TODO: unfirebase
       let tableName =
         typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
       tableName = unescapeFirebaseKey(tableName); // TODO: unfirebase
       store.dispatch(addTableName(tableName, tableType));
     });
-    tableRef.on('child_removed', snapshot => { // TODO: unfirebase
+    tableRef.on('child_removed', snapshot => {
+      // TODO: unfirebase
       let tableName =
         typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
       tableName = unescapeFirebaseKey(tableName); // TODO: unfirebase
@@ -913,7 +920,8 @@ function setupReduxSubscribers(store) {
   };
 
   if (store.getState().pageConstants.hasDataMode) {
-    subscribeToTable( // TODO: unfirebase
+    subscribeToTable(
+      // TODO: unfirebase
       getPathRef(getProjectDatabase(), 'counters/tables'), // TODO: unfirebase
       tableType.PROJECT
     );
@@ -1350,11 +1358,14 @@ function onInterfaceModeChange(mode) {
   requestAnimationFrame(() => showHideWorkspaceCallouts());
 }
 
-function onDataPreview(tableName) {// TODO: unfirebase
-  onColumnsChange(getSharedDatabase(), tableName, columnNames => { // TODO: unfirebase  
+function onDataPreview(tableName) {
+  // TODO: unfirebase
+  onColumnsChange(getSharedDatabase(), tableName, columnNames => {
+    // TODO: unfirebase
     getStore().dispatch(updateTableColumns(tableName, columnNames));
   });
-  getPathRef(getSharedDatabase(), `storage/tables/${tableName}/records`).once( // TODO: unfirebase
+  getPathRef(getSharedDatabase(), `storage/tables/${tableName}/records`).once(
+    // TODO: unfirebase
     'value',
     snapshot => {
       getStore().dispatch(updateTableRecords(tableName, snapshot.val()));
@@ -1395,8 +1406,9 @@ function onDataViewChange(view, oldTableName, newTableName) {
           if (Array.isArray(keyValueData)) {
             keyValueData = Object.assign({}, keyValueData);
           }
-          keyValueData = _.mapKeys(keyValueData, (_, key) =>
-            unescapeFirebaseKey(key) // TODO: unfirebase
+          keyValueData = _.mapKeys(
+            keyValueData,
+            (_, key) => unescapeFirebaseKey(key) // TODO: unfirebase
           );
           getStore().dispatch(updateKeyValueData(keyValueData));
         }
@@ -1406,17 +1418,20 @@ function onDataViewChange(view, oldTableName, newTableName) {
       let newTableType = getStore().getState().data.tableListMap[newTableName];
       let storageRef;
       if (newTableType === tableType.SHARED) {
-        storageRef = getPathRef( // TODO: unfirebase
+        storageRef = getPathRef(
+          // TODO: unfirebase
           sharedStorageRef,
           `tables/${newTableName}/records`
         );
       } else {
-        storageRef = getPathRef( // TODO: unfirebase
+        storageRef = getPathRef(
+          // TODO: unfirebase
           projectStorageRef,
           `tables/${newTableName}/records`
         );
       }
-      onColumnsChange( // TODO: unfirebase
+      onColumnsChange(
+        // TODO: unfirebase
         newTableType === tableType.PROJECT
           ? getProjectDatabase() // TODO: unfirebase
           : getSharedDatabase(), // TODO: unfirebase

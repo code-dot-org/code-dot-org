@@ -254,7 +254,8 @@ export default class P5Lab {
     config.usesAssets = true;
 
     this.studioApp_.labUserId = config.labUserId;
-    this.studioApp_.storage = initFirebaseStorage({ // TODO: unfirebase
+    this.studioApp_.storage = initFirebaseStorage({
+      // TODO: unfirebase
       channelId: config.channel,
       firebaseName: config.firebaseName,
       firebaseAuthToken: config.firebaseAuthToken,
