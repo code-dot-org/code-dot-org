@@ -10,7 +10,7 @@ describe('StandardsReport', () => {
   let DEFAULT_PROPS;
 
   beforeEach(() => {
-    sinon.stub(progressLoader, 'loadScriptProgress');
+    sinon.stub(progressLoader, 'loadUnitProgress');
     DEFAULT_PROPS = {
       scriptId: 2,
       teacherName: 'Awesome Teacher',
@@ -40,7 +40,7 @@ describe('StandardsReport', () => {
 
   afterEach(() => {
     restoreOnWindow('opener');
-    progressLoader.loadScriptProgress.restore();
+    progressLoader.loadUnitProgress.restore();
   });
 
   it('report shows print buttons', () => {

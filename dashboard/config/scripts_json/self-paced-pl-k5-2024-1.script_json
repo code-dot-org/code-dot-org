@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-08 20:15:44 UTC",
+    "serialized_at": "2024-01-11 23:07:08 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -20,13 +20,38 @@
   },
   "lesson_groups": [
     {
-      "key": "",
-      "user_facing": false,
+      "key": "lessonGroup-2",
+      "user_facing": true,
       "position": 1,
       "properties": {
+        "display_name": "Getting Started"
       },
       "seeding_key": {
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-k5-2024-1"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Foundational Computer Science Concepts"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-k5-2024-1"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Taking Next Steps"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "self-paced-pl-k5-2024-1"
       }
     }
@@ -40,10 +65,12 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
+        "overview": "**You will:**\n\n* Dive into the world of Computer Science (CS) by uncovering what CS is, and seeing the ways it's used in everyday life. \n\n**Suggested time:** 4 minutes",
+        "student_overview": "**You will:**\n\n* Dive into the world of Computer Science (CS) by uncovering what CS is, and seeing the ways it's used in everyday life. \n\n**Suggested time:** 5 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-k5-2024-1"
       }
     },
@@ -55,10 +82,12 @@
       "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
+        "overview": "**You will:**\n\n* Learn about block based programming.\n* Practice connecting, taking apart, and trashing blocks.\n* Use blocks from the toolbox.\n\n\n**Suggested time:** 5 minutes",
+        "student_overview": "**You will:**\n\n* Learn about block based programming.\n* Practice connecting, taking apart, and trashing blocks.\n* Use blocks from the toolbox.\n\n\n**Suggested time:** 5 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-k5-2024-1"
       }
     },
@@ -70,10 +99,11 @@
       "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
+        "overview": "**You will:**\n\n* Practice coding using blocks.\n* Create a program using algorithms and sequencing.\n\n\n**Suggested time:** 15 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1"
       }
     },
@@ -85,10 +115,11 @@
       "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
+        "overview": "**You will:**\n\n* Learn about how loops simplify code and enhance efficiency.\n* Practice using loop blocks.\n* Create programs using loops.\n\n**Suggested time:** 10 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1"
       }
     },
@@ -100,10 +131,11 @@
       "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
+        "overview": "**You will:**\n\n* Learn about how conditionals allow computers to make decisions.\n* Practice using conditional blocks.\n* Create programs using conditionals.\n\n**Suggested time:** 10 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1"
       }
     },
@@ -115,10 +147,11 @@
       "has_lesson_plan": false,
       "relative_position": 6,
       "properties": {
+        "overview": "**You will:**\n\n* Check your understanding of computer science vocabulary.\n* Create programs using algorithms, sequences, loops and conditionals.\n* Reflect on your problem solving processes.\n\n\n**Suggested time:** 15 minutes\n\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1"
       }
     },
@@ -130,10 +163,11 @@
       "has_lesson_plan": false,
       "relative_position": 7,
       "properties": {
+        "overview": "**You will:**\n\n* Learn how to get connected, find help and community, and find your next steps. \n\n**Suggested time:** 1 minute\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "self-paced-pl-k5-2024-1"
       }
     }
@@ -143,11 +177,12 @@
       "key": "946288d6-15db-406d-92e5-a963fdd95826",
       "position": 1,
       "properties": {
+        "duration": 4
       },
       "seeding_key": {
         "lesson_activity.key": "946288d6-15db-406d-92e5-a963fdd95826",
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-k5-2024-1"
       }
     },
@@ -155,11 +190,12 @@
       "key": "f39b079e-8c06-4ff2-9f84-e3c3161fb9b0",
       "position": 1,
       "properties": {
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "f39b079e-8c06-4ff2-9f84-e3c3161fb9b0",
         "lesson.key": "lesson-7",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-k5-2024-1"
       }
     },
@@ -167,11 +203,12 @@
       "key": "6dd65c2d-de48-4de3-a548-571729f360c8",
       "position": 1,
       "properties": {
+        "duration": 15
       },
       "seeding_key": {
         "lesson_activity.key": "6dd65c2d-de48-4de3-a548-571729f360c8",
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1"
       }
     },
@@ -179,11 +216,12 @@
       "key": "76cfad4a-66fc-4504-8271-7dde39ed1b27",
       "position": 1,
       "properties": {
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "76cfad4a-66fc-4504-8271-7dde39ed1b27",
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1"
       }
     },
@@ -191,11 +229,12 @@
       "key": "01c38293-4f72-4e6e-a4de-ebc977fc8d00",
       "position": 1,
       "properties": {
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "01c38293-4f72-4e6e-a4de-ebc977fc8d00",
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1"
       }
     },
@@ -203,11 +242,12 @@
       "key": "7ddff680-dff5-4e78-9c57-81231aec995f",
       "position": 1,
       "properties": {
+        "duration": 15
       },
       "seeding_key": {
         "lesson_activity.key": "7ddff680-dff5-4e78-9c57-81231aec995f",
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1"
       }
     },
@@ -215,11 +255,12 @@
       "key": "ac2707c8-6d05-4e04-8dab-e63de2303cdf",
       "position": 1,
       "properties": {
+        "duration": 1
       },
       "seeding_key": {
         "lesson_activity.key": "ac2707c8-6d05-4e04-8dab-e63de2303cdf",
         "lesson.key": "lesson-6",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "self-paced-pl-k5-2024-1"
       }
     }
@@ -229,6 +270,7 @@
       "key": "b9f2f0e9-8438-491a-9d23-5531ea8c1e32",
       "position": 1,
       "properties": {
+        "progression_name": "Welcome and Introduction"
       },
       "seeding_key": {
         "activity_section.key": "b9f2f0e9-8438-491a-9d23-5531ea8c1e32",
@@ -249,6 +291,7 @@
       "key": "a87e41a5-2cc3-44b9-afb0-1a2911e6b6a1",
       "position": 1,
       "properties": {
+        "progression_name": "Practicing Block-Based Coding"
       },
       "seeding_key": {
         "activity_section.key": "a87e41a5-2cc3-44b9-afb0-1a2911e6b6a1",
@@ -269,6 +312,7 @@
       "key": "50d08900-45e8-409e-ae4d-109cd790581c",
       "position": 1,
       "properties": {
+        "progression_name": "Coding with Algorithms and Sequences"
       },
       "seeding_key": {
         "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c",
@@ -289,6 +333,7 @@
       "key": "eab6aafc-3179-4c38-87c7-a12c34858bc4",
       "position": 1,
       "properties": {
+        "progression_name": "Coding with Loops"
       },
       "seeding_key": {
         "activity_section.key": "eab6aafc-3179-4c38-87c7-a12c34858bc4",
@@ -299,6 +344,7 @@
       "key": "e819821d-6658-4469-827b-61d9f035b43b",
       "position": 1,
       "properties": {
+        "progression_name": "Coding with Conditionals"
       },
       "seeding_key": {
         "activity_section.key": "e819821d-6658-4469-827b-61d9f035b43b",
@@ -309,6 +355,7 @@
       "key": "10d782a2-c481-4248-af54-d9e5588fc8cc",
       "position": 1,
       "properties": {
+        "progression_name": "Practicing CS Skills "
       },
       "seeding_key": {
         "activity_section.key": "10d782a2-c481-4248-af54-d9e5588fc8cc",
@@ -319,6 +366,7 @@
       "key": "ee91d7a2-4fa3-4aeb-b5b7-8403bef171d2",
       "position": 1,
       "properties": {
+        "progression_name": "Continuing your CS Journey"
       },
       "seeding_key": {
         "activity_section.key": "ee91d7a2-4fa3-4aeb-b5b7-8403bef171d2",
@@ -335,7 +383,8 @@
       "properties": {
         "level_keys": [
           "self-paced-pl-k5-2-intro_2024_Melissa"
-        ]
+        ],
+        "progression": "Welcome and Introduction"
       },
       "bonus": false,
       "seeding_key": {
@@ -343,7 +392,7 @@
           "self-paced-pl-k5-2-intro_2024_Melissa"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "b9f2f0e9-8438-491a-9d23-5531ea8c1e32"
       },
@@ -359,7 +408,8 @@
       "properties": {
         "level_keys": [
           "OPD-K5 About_copy_2023_K5CSConcepts"
-        ]
+        ],
+        "progression": "Welcome and Introduction"
       },
       "bonus": false,
       "seeding_key": {
@@ -367,7 +417,7 @@
           "OPD-K5 About_copy_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "b9f2f0e9-8438-491a-9d23-5531ea8c1e32"
       },
@@ -383,7 +433,8 @@
       "properties": {
         "level_keys": [
           "OPD-K5-PLVid_2023_K5CSConcepts"
-        ]
+        ],
+        "progression": "Welcome and Introduction"
       },
       "bonus": false,
       "seeding_key": {
@@ -391,7 +442,7 @@
           "OPD-K5-PLVid_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "b9f2f0e9-8438-491a-9d23-5531ea8c1e32"
       },
@@ -407,7 +458,8 @@
       "properties": {
         "level_keys": [
           "U2L1 CFU how use internet_2023_K5CSConcepts"
-        ]
+        ],
+        "progression": "Welcome and Introduction"
       },
       "bonus": false,
       "seeding_key": {
@@ -415,7 +467,7 @@
           "U2L1 CFU how use internet_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "b9f2f0e9-8438-491a-9d23-5531ea8c1e32"
       },
@@ -431,7 +483,8 @@
       "properties": {
         "level_keys": [
           "OPD-K5 Begin_2023_K5CSConcepts"
-        ]
+        ],
+        "progression": "Welcome and Introduction"
       },
       "bonus": false,
       "seeding_key": {
@@ -439,7 +492,7 @@
           "OPD-K5 Begin_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "b9f2f0e9-8438-491a-9d23-5531ea8c1e32"
       },
@@ -455,7 +508,8 @@
       "properties": {
         "level_keys": [
           "pl-k5-2-behaviors -intro_2024_K5block"
-        ]
+        ],
+        "progression": "Practicing Block-Based Coding"
       },
       "bonus": false,
       "seeding_key": {
@@ -463,7 +517,7 @@
           "pl-k5-2-behaviors -intro_2024_K5block"
         ],
         "lesson.key": "lesson-7",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "a87e41a5-2cc3-44b9-afb0-1a2911e6b6a1"
       },
@@ -479,7 +533,8 @@
       "properties": {
         "level_keys": [
           "OPD-K5 Begin_2023_K5CSConcepts_TextPage"
-        ]
+        ],
+        "progression": "Practicing Block-Based Coding"
       },
       "bonus": false,
       "seeding_key": {
@@ -487,7 +542,7 @@
           "OPD-K5 Begin_2023_K5CSConcepts_TextPage"
         ],
         "lesson.key": "lesson-7",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "a87e41a5-2cc3-44b9-afb0-1a2911e6b6a1"
       },
@@ -503,7 +558,8 @@
       "properties": {
         "level_keys": [
           "courseB_Scrat_ramp12022_2023_K5"
-        ]
+        ],
+        "progression": "Practicing Block-Based Coding"
       },
       "bonus": false,
       "seeding_key": {
@@ -511,7 +567,7 @@
           "courseB_Scrat_ramp12022_2023_K5"
         ],
         "lesson.key": "lesson-7",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "a87e41a5-2cc3-44b9-afb0-1a2911e6b6a1"
       },
@@ -527,7 +583,8 @@
       "properties": {
         "level_keys": [
           "courseB_Scrat_ramp3a2022_2023_K5"
-        ]
+        ],
+        "progression": "Practicing Block-Based Coding"
       },
       "bonus": false,
       "seeding_key": {
@@ -535,7 +592,7 @@
           "courseB_Scrat_ramp3a2022_2023_K5"
         ],
         "lesson.key": "lesson-7",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "a87e41a5-2cc3-44b9-afb0-1a2911e6b6a1"
       },
@@ -551,7 +608,8 @@
       "properties": {
         "level_keys": [
           "courseB_Scrat_ramp3b2022_2023_K5"
-        ]
+        ],
+        "progression": "Practicing Block-Based Coding"
       },
       "bonus": false,
       "seeding_key": {
@@ -559,7 +617,7 @@
           "courseB_Scrat_ramp3b2022_2023_K5"
         ],
         "lesson.key": "lesson-7",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "a87e41a5-2cc3-44b9-afb0-1a2911e6b6a1"
       },
@@ -575,7 +633,8 @@
       "properties": {
         "level_keys": [
           "U2L4 Multiple Choice packets2022_2023K5"
-        ]
+        ],
+        "progression": "Practicing Block-Based Coding"
       },
       "bonus": false,
       "seeding_key": {
@@ -583,7 +642,7 @@
           "U2L4 Multiple Choice packets2022_2023K5"
         ],
         "lesson.key": "lesson-7",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "a87e41a5-2cc3-44b9-afb0-1a2911e6b6a1"
       },
@@ -599,7 +658,8 @@
       "properties": {
         "level_keys": [
           "pl-k5-2-behaviors -intro_2024_K5Intro"
-        ]
+        ],
+        "progression": "Coding with Algorithms and Sequences"
       },
       "bonus": false,
       "seeding_key": {
@@ -607,7 +667,7 @@
           "pl-k5-2-behaviors -intro_2024_K5Intro"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
       },
@@ -623,7 +683,8 @@
       "properties": {
         "level_keys": [
           "courseC_collector_prog1_2023_k5CSconcepts"
-        ]
+        ],
+        "progression": "Coding with Algorithms and Sequences"
       },
       "bonus": false,
       "seeding_key": {
@@ -631,7 +692,7 @@
           "courseC_collector_prog1_2023_k5CSconcepts"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
       },
@@ -647,7 +708,8 @@
       "properties": {
         "level_keys": [
           "courseC_collector_prog2_2023_K5CSConcepts"
-        ]
+        ],
+        "progression": "Coding with Algorithms and Sequences"
       },
       "bonus": false,
       "seeding_key": {
@@ -655,7 +717,7 @@
           "courseC_collector_prog2_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
       },
@@ -671,7 +733,8 @@
       "properties": {
         "level_keys": [
           "OPD-K5 Begin_2023_K5CSConcepts1"
-        ]
+        ],
+        "progression": "Coding with Algorithms and Sequences"
       },
       "bonus": false,
       "seeding_key": {
@@ -679,7 +742,7 @@
           "OPD-K5 Begin_2023_K5CSConcepts1"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
       },
@@ -695,7 +758,8 @@
       "properties": {
         "level_keys": [
           "courseC_collector_prog3_2023_K5CSConcepts"
-        ]
+        ],
+        "progression": "Coding with Algorithms and Sequences"
       },
       "bonus": false,
       "seeding_key": {
@@ -703,7 +767,7 @@
           "courseC_collector_prog3_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
       },
@@ -719,7 +783,8 @@
       "properties": {
         "level_keys": [
           "U2L4 Multiple Choice packets2022_2023K5Sequence"
-        ]
+        ],
+        "progression": "Coding with Algorithms and Sequences"
       },
       "bonus": false,
       "seeding_key": {
@@ -727,7 +792,7 @@
           "U2L4 Multiple Choice packets2022_2023K5Sequence"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
       },
@@ -743,7 +808,8 @@
       "properties": {
         "level_keys": [
           "OPD-K5 Begin_2023_K5CSConcepts2"
-        ]
+        ],
+        "progression": "Coding with Algorithms and Sequences"
       },
       "bonus": false,
       "seeding_key": {
@@ -751,7 +817,7 @@
           "OPD-K5 Begin_2023_K5CSConcepts2"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
       },
@@ -767,7 +833,8 @@
       "properties": {
         "level_keys": [
           "courseC_collector_prog4_2023_K5CSConcepts"
-        ]
+        ],
+        "progression": "Coding with Algorithms and Sequences"
       },
       "bonus": false,
       "seeding_key": {
@@ -775,7 +842,7 @@
           "courseC_collector_prog4_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
       },
@@ -791,7 +858,8 @@
       "properties": {
         "level_keys": [
           "CSC-SelfPaced-debugging2_2023_K5CSConcepts"
-        ]
+        ],
+        "progression": "Coding with Algorithms and Sequences"
       },
       "bonus": false,
       "seeding_key": {
@@ -799,7 +867,7 @@
           "CSC-SelfPaced-debugging2_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
       },
@@ -813,9 +881,32 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "progression": "Coding with Algorithms and Sequences"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-PLVid_2023_K5CSConceptsVideo"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-k5-2024-1",
+        "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
+      },
+      "level_keys": [
+        "OPD-K5-PLVid_2023_K5CSConceptsVideo"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "courseC_collector_prog5_2023_K5CSConcepts"
-        ]
+        ],
+        "progression": "Coding with Algorithms and Sequences"
       },
       "bonus": false,
       "seeding_key": {
@@ -823,7 +914,7 @@
           "courseC_collector_prog5_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
       },
@@ -832,14 +923,15 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "pl-k5-2-behaviors -intro_2024_K5Intro_LOOPS"
-        ]
+        ],
+        "progression": "Coding with Loops"
       },
       "bonus": false,
       "seeding_key": {
@@ -847,7 +939,7 @@
           "pl-k5-2-behaviors -intro_2024_K5Intro_LOOPS"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "eab6aafc-3179-4c38-87c7-a12c34858bc4"
       },
@@ -856,14 +948,15 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "courseD_farmer_while2_2023_K5CSConcepts"
-        ]
+        ],
+        "progression": "Coding with Loops"
       },
       "bonus": false,
       "seeding_key": {
@@ -871,7 +964,7 @@
           "courseD_farmer_while2_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "eab6aafc-3179-4c38-87c7-a12c34858bc4"
       },
@@ -880,14 +973,15 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "OPD-K5 Begin_2023_K5CSConcepts2_5"
-        ]
+        ],
+        "progression": "Coding with Loops"
       },
       "bonus": false,
       "seeding_key": {
@@ -895,7 +989,7 @@
           "OPD-K5 Begin_2023_K5CSConcepts2_5"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "eab6aafc-3179-4c38-87c7-a12c34858bc4"
       },
@@ -904,14 +998,15 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "courseD_farmer_while3_2023_K5CSConcepts"
-        ]
+        ],
+        "progression": "Coding with Loops"
       },
       "bonus": false,
       "seeding_key": {
@@ -919,7 +1014,7 @@
           "courseD_farmer_while3_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "eab6aafc-3179-4c38-87c7-a12c34858bc4"
       },
@@ -928,14 +1023,15 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "courseD_farmer_while1_2023_K5CSConcepts"
-        ]
+        ],
+        "progression": "Coding with Loops"
       },
       "bonus": false,
       "seeding_key": {
@@ -943,7 +1039,7 @@
           "courseD_farmer_while1_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "eab6aafc-3179-4c38-87c7-a12c34858bc4"
       },
@@ -952,14 +1048,15 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U2L2 CSP CFU IP Addresses2022_2023K5"
-        ]
+        ],
+        "progression": "Coding with Loops"
       },
       "bonus": false,
       "seeding_key": {
@@ -967,7 +1064,7 @@
           "U2L2 CSP CFU IP Addresses2022_2023K5"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "eab6aafc-3179-4c38-87c7-a12c34858bc4"
       },
@@ -976,14 +1073,15 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "pl-k5-2-behaviors -intro_2024_K5Intro_conditionals"
-        ]
+        ],
+        "progression": "Coding with Conditionals"
       },
       "bonus": false,
       "seeding_key": {
@@ -991,7 +1089,7 @@
           "pl-k5-2-behaviors -intro_2024_K5Intro_conditionals"
         ],
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "e819821d-6658-4469-827b-61d9f035b43b"
       },
@@ -1000,14 +1098,15 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "courseD_bee_conditionals1_predict1_2023_K5CSConcepts"
-        ]
+        ],
+        "progression": "Coding with Conditionals"
       },
       "bonus": false,
       "seeding_key": {
@@ -1015,7 +1114,7 @@
           "courseD_bee_conditionals1_predict1_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "e819821d-6658-4469-827b-61d9f035b43b"
       },
@@ -1024,14 +1123,15 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "OPD-K5 Begin_2023_K5CSConcepts2_6"
-        ]
+        ],
+        "progression": "Coding with Conditionals"
       },
       "bonus": false,
       "seeding_key": {
@@ -1039,7 +1139,7 @@
           "OPD-K5 Begin_2023_K5CSConcepts2_6"
         ],
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "e819821d-6658-4469-827b-61d9f035b43b"
       },
@@ -1048,14 +1148,37 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Coding with Conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-PLVid_2023_K5CSConceptsConditonals"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-k5-2024-1",
+        "activity_section.key": "e819821d-6658-4469-827b-61d9f035b43b"
+      },
+      "level_keys": [
+        "OPD-K5-PLVid_2023_K5CSConceptsConditonals"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "courseD_bee_conditionals4_2023_K5CSConcepts"
-        ]
+        ],
+        "progression": "Coding with Conditionals"
       },
       "bonus": false,
       "seeding_key": {
@@ -1063,7 +1186,7 @@
           "courseD_bee_conditionals4_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "e819821d-6658-4469-827b-61d9f035b43b"
       },
@@ -1072,14 +1195,15 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 5,
-      "activity_section_position": 5,
+      "chapter": 34,
+      "position": 6,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "courseD_bee_conditionals2_2023_K5CSConcepts"
-        ]
+        ],
+        "progression": "Coding with Conditionals"
       },
       "bonus": false,
       "seeding_key": {
@@ -1087,7 +1211,7 @@
           "courseD_bee_conditionals2_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "e819821d-6658-4469-827b-61d9f035b43b"
       },
@@ -1096,11 +1220,15 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 6,
-      "activity_section_position": 6,
+      "chapter": 35,
+      "position": 7,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L2 CSP CFU IP Addresses2022_2023K5123"
+        ],
+        "progression": "Coding with Conditionals"
       },
       "bonus": false,
       "seeding_key": {
@@ -1108,7 +1236,7 @@
           "U2L2 CSP CFU IP Addresses2022_2023K5123"
         ],
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "e819821d-6658-4469-827b-61d9f035b43b"
       },
@@ -1117,14 +1245,15 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "pl-k5-2-behaviors -intro_2024_K5Intro_putting it all togetherr"
-        ]
+        ],
+        "progression": "Practicing CS Skills "
       },
       "bonus": false,
       "seeding_key": {
@@ -1132,7 +1261,7 @@
           "pl-k5-2-behaviors -intro_2024_K5Intro_putting it all togetherr"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "10d782a2-c481-4248-af54-d9e5588fc8cc"
       },
@@ -1141,14 +1270,15 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "OPD-K5 Begin_2023_K5Concepts1"
-        ]
+        ],
+        "progression": "Practicing CS Skills "
       },
       "bonus": false,
       "seeding_key": {
@@ -1156,7 +1286,7 @@
           "OPD-K5 Begin_2023_K5Concepts1"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "10d782a2-c481-4248-af54-d9e5588fc8cc"
       },
@@ -1165,14 +1295,15 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U2L4 CSP CFU terms2022_2023_K5Concepts"
-        ]
+        ],
+        "progression": "Practicing CS Skills "
       },
       "bonus": false,
       "seeding_key": {
@@ -1180,7 +1311,7 @@
           "U2L4 CSP CFU terms2022_2023_K5Concepts"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "10d782a2-c481-4248-af54-d9e5588fc8cc"
       },
@@ -1189,14 +1320,15 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 39,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "courseD_bee_conditionals3_2023_K5CSConcepts"
-        ]
+        ],
+        "progression": "Practicing CS Skills "
       },
       "bonus": false,
       "seeding_key": {
@@ -1204,7 +1336,7 @@
           "courseD_bee_conditionals3_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "10d782a2-c481-4248-af54-d9e5588fc8cc"
       },
@@ -1213,14 +1345,15 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 40,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "OPD-K5 Begin_2023_K5CSConcepts9"
-        ]
+        ],
+        "progression": "Practicing CS Skills "
       },
       "bonus": false,
       "seeding_key": {
@@ -1228,7 +1361,7 @@
           "OPD-K5 Begin_2023_K5CSConcepts9"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "10d782a2-c481-4248-af54-d9e5588fc8cc"
       },
@@ -1237,14 +1370,15 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U2L1 CFU how use internet_2023_K5CSConcepts2"
-        ]
+        ],
+        "progression": "Practicing CS Skills "
       },
       "bonus": false,
       "seeding_key": {
@@ -1252,7 +1386,7 @@
           "U2L1 CFU how use internet_2023_K5CSConcepts2"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "10d782a2-c481-4248-af54-d9e5588fc8cc"
       },
@@ -1261,14 +1395,15 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 42,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "courseD_bee_conditionals6_2023_K5CSConcepts"
-        ]
+        ],
+        "progression": "Practicing CS Skills "
       },
       "bonus": false,
       "seeding_key": {
@@ -1276,7 +1411,7 @@
           "courseD_bee_conditionals6_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "10d782a2-c481-4248-af54-d9e5588fc8cc"
       },
@@ -1285,11 +1420,15 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 43,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L4 CSP CFU terms2022_2023K5"
+        ],
+        "progression": "Practicing CS Skills "
       },
       "bonus": false,
       "seeding_key": {
@@ -1297,7 +1436,7 @@
           "U2L4 CSP CFU terms2022_2023K5"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "10d782a2-c481-4248-af54-d9e5588fc8cc"
       },
@@ -1306,14 +1445,15 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "OPD-K5 Assessment_copy_2023_K5CSConcepts"
-        ]
+        ],
+        "progression": "Continuing your CS Journey"
       },
       "bonus": false,
       "seeding_key": {
@@ -1321,7 +1461,7 @@
           "OPD-K5 Assessment_copy_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-6",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "ee91d7a2-4fa3-4aeb-b5b7-8403bef171d2"
       },
@@ -1330,14 +1470,15 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "pl-k5-2-nextSteps_2024"
-        ]
+        ],
+        "progression": "Continuing your CS Journey"
       },
       "bonus": false,
       "seeding_key": {
@@ -1345,7 +1486,7 @@
           "pl-k5-2-nextSteps_2024"
         ],
         "lesson.key": "lesson-6",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "ee91d7a2-4fa3-4aeb-b5b7-8403bef171d2"
       },
@@ -1362,7 +1503,7 @@
           "self-paced-pl-k5-2-intro_2024_Melissa"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "b9f2f0e9-8438-491a-9d23-5531ea8c1e32"
       }
@@ -1374,7 +1515,7 @@
           "OPD-K5 About_copy_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "b9f2f0e9-8438-491a-9d23-5531ea8c1e32"
       }
@@ -1386,7 +1527,7 @@
           "OPD-K5-PLVid_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "b9f2f0e9-8438-491a-9d23-5531ea8c1e32"
       }
@@ -1398,7 +1539,7 @@
           "U2L1 CFU how use internet_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "b9f2f0e9-8438-491a-9d23-5531ea8c1e32"
       }
@@ -1410,7 +1551,7 @@
           "OPD-K5 Begin_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "b9f2f0e9-8438-491a-9d23-5531ea8c1e32"
       }
@@ -1422,7 +1563,7 @@
           "pl-k5-2-behaviors -intro_2024_K5block"
         ],
         "lesson.key": "lesson-7",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "a87e41a5-2cc3-44b9-afb0-1a2911e6b6a1"
       }
@@ -1434,7 +1575,7 @@
           "OPD-K5 Begin_2023_K5CSConcepts_TextPage"
         ],
         "lesson.key": "lesson-7",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "a87e41a5-2cc3-44b9-afb0-1a2911e6b6a1"
       }
@@ -1446,7 +1587,7 @@
           "courseB_Scrat_ramp12022_2023_K5"
         ],
         "lesson.key": "lesson-7",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "a87e41a5-2cc3-44b9-afb0-1a2911e6b6a1"
       }
@@ -1458,7 +1599,7 @@
           "courseB_Scrat_ramp3a2022_2023_K5"
         ],
         "lesson.key": "lesson-7",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "a87e41a5-2cc3-44b9-afb0-1a2911e6b6a1"
       }
@@ -1470,7 +1611,7 @@
           "courseB_Scrat_ramp3b2022_2023_K5"
         ],
         "lesson.key": "lesson-7",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "a87e41a5-2cc3-44b9-afb0-1a2911e6b6a1"
       }
@@ -1482,7 +1623,7 @@
           "U2L4 Multiple Choice packets2022_2023K5"
         ],
         "lesson.key": "lesson-7",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "a87e41a5-2cc3-44b9-afb0-1a2911e6b6a1"
       }
@@ -1494,7 +1635,7 @@
           "pl-k5-2-behaviors -intro_2024_K5Intro"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
       }
@@ -1506,7 +1647,7 @@
           "courseC_collector_prog1_2023_k5CSconcepts"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
       }
@@ -1518,7 +1659,7 @@
           "courseC_collector_prog2_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
       }
@@ -1530,7 +1671,7 @@
           "OPD-K5 Begin_2023_K5CSConcepts1"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
       }
@@ -1542,7 +1683,7 @@
           "courseC_collector_prog3_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
       }
@@ -1554,7 +1695,7 @@
           "U2L4 Multiple Choice packets2022_2023K5Sequence"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
       }
@@ -1566,7 +1707,7 @@
           "OPD-K5 Begin_2023_K5CSConcepts2"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
       }
@@ -1578,7 +1719,7 @@
           "courseC_collector_prog4_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
       }
@@ -1590,7 +1731,19 @@
           "CSC-SelfPaced-debugging2_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-k5-2024-1",
+        "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-PLVid_2023_K5CSConceptsVideo",
+        "script_level.level_keys": [
+          "OPD-K5-PLVid_2023_K5CSConceptsVideo"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
       }
@@ -1602,7 +1755,7 @@
           "courseC_collector_prog5_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
       }
@@ -1614,7 +1767,7 @@
           "pl-k5-2-behaviors -intro_2024_K5Intro_LOOPS"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "eab6aafc-3179-4c38-87c7-a12c34858bc4"
       }
@@ -1626,7 +1779,7 @@
           "courseD_farmer_while2_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "eab6aafc-3179-4c38-87c7-a12c34858bc4"
       }
@@ -1638,7 +1791,7 @@
           "OPD-K5 Begin_2023_K5CSConcepts2_5"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "eab6aafc-3179-4c38-87c7-a12c34858bc4"
       }
@@ -1650,7 +1803,7 @@
           "courseD_farmer_while3_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "eab6aafc-3179-4c38-87c7-a12c34858bc4"
       }
@@ -1662,7 +1815,7 @@
           "courseD_farmer_while1_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "eab6aafc-3179-4c38-87c7-a12c34858bc4"
       }
@@ -1674,7 +1827,7 @@
           "U2L2 CSP CFU IP Addresses2022_2023K5"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "eab6aafc-3179-4c38-87c7-a12c34858bc4"
       }
@@ -1686,7 +1839,7 @@
           "pl-k5-2-behaviors -intro_2024_K5Intro_conditionals"
         ],
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "e819821d-6658-4469-827b-61d9f035b43b"
       }
@@ -1698,7 +1851,7 @@
           "courseD_bee_conditionals1_predict1_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "e819821d-6658-4469-827b-61d9f035b43b"
       }
@@ -1710,7 +1863,19 @@
           "OPD-K5 Begin_2023_K5CSConcepts2_6"
         ],
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "self-paced-pl-k5-2024-1",
+        "activity_section.key": "e819821d-6658-4469-827b-61d9f035b43b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-PLVid_2023_K5CSConceptsConditonals",
+        "script_level.level_keys": [
+          "OPD-K5-PLVid_2023_K5CSConceptsConditonals"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "e819821d-6658-4469-827b-61d9f035b43b"
       }
@@ -1722,7 +1887,7 @@
           "courseD_bee_conditionals4_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "e819821d-6658-4469-827b-61d9f035b43b"
       }
@@ -1734,7 +1899,7 @@
           "courseD_bee_conditionals2_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "e819821d-6658-4469-827b-61d9f035b43b"
       }
@@ -1746,7 +1911,7 @@
           "U2L2 CSP CFU IP Addresses2022_2023K5123"
         ],
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "e819821d-6658-4469-827b-61d9f035b43b"
       }
@@ -1758,7 +1923,7 @@
           "pl-k5-2-behaviors -intro_2024_K5Intro_putting it all togetherr"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "10d782a2-c481-4248-af54-d9e5588fc8cc"
       }
@@ -1770,7 +1935,7 @@
           "OPD-K5 Begin_2023_K5Concepts1"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "10d782a2-c481-4248-af54-d9e5588fc8cc"
       }
@@ -1782,7 +1947,7 @@
           "U2L4 CSP CFU terms2022_2023_K5Concepts"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "10d782a2-c481-4248-af54-d9e5588fc8cc"
       }
@@ -1794,7 +1959,7 @@
           "courseD_bee_conditionals3_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "10d782a2-c481-4248-af54-d9e5588fc8cc"
       }
@@ -1806,7 +1971,7 @@
           "OPD-K5 Begin_2023_K5CSConcepts9"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "10d782a2-c481-4248-af54-d9e5588fc8cc"
       }
@@ -1818,7 +1983,7 @@
           "U2L1 CFU how use internet_2023_K5CSConcepts2"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "10d782a2-c481-4248-af54-d9e5588fc8cc"
       }
@@ -1830,7 +1995,7 @@
           "courseD_bee_conditionals6_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "10d782a2-c481-4248-af54-d9e5588fc8cc"
       }
@@ -1842,7 +2007,7 @@
           "U2L4 CSP CFU terms2022_2023K5"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "10d782a2-c481-4248-af54-d9e5588fc8cc"
       }
@@ -1854,7 +2019,7 @@
           "OPD-K5 Assessment_copy_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-6",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "ee91d7a2-4fa3-4aeb-b5b7-8403bef171d2"
       }
@@ -1866,7 +2031,7 @@
           "pl-k5-2-nextSteps_2024"
         ],
         "lesson.key": "lesson-6",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "ee91d7a2-4fa3-4aeb-b5b7-8403bef171d2"
       }
