@@ -70,16 +70,17 @@ theme: responsive
 
 Для обеспечения правильной работы всего контента Code.org мы рекомендуем обратиться в Ит-отдел вашей школы или района и убедиться, что перечисленные ниже сайте не запрещены и разблокированы.
 
-| Приоритет                                                                                | URL                                                                                                        |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **Обязательно**                                                                          | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **Опционально**                                                                          | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **Для просмотра видео, размещенных на YouTube (в режиме улучшенной конфиденциальности)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **Для просмотра видео, размещенных на Code.org**                                         | `https://videos.code.org`                                                                                  |
-| **Для использования интернет-симулятора**                                                | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **Для использования Web Lab**                                                            | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **Для использования кнопки Google Classroom Share**                                      | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**                                                              | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| Приоритет                                                                                                      | URL                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Обязательно**                                                                                                | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **Чтобы системы CAPTCHA могли отличить ваше использование от автоматических мошеннических действий («ботов»)** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **Опционально**                                                                                                | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **Для просмотра видео, размещенных на YouTube (в режиме улучшенной конфиденциальности)**                       | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Для просмотра видео, размещенных на Code.org**                                                               | `https://videos.code.org`                                                                                  |
+| **Для использования интернет-симулятора**                                                                      | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **Для использования Web Lab**                                                                                  | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Для использования кнопки Google Classroom Share**                                                            | `https://apis.google.com`                                                                                  |
+| **Для использования наборов данных App Lab**                                                                   | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Информация о поддержке мобильных устройств и планшетов
 
@@ -104,7 +105,7 @@ All other content, such as K-5 courses (Computer Science Fundamentals) and Hour 
 
 
 <!--
-The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
 .md.erb without breaking i18n sync, this file should include that partial instead.
 -->
 <figure style="width:100%; height: 100%; margin: 0 auto;">

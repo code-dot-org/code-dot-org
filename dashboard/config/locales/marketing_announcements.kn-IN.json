@@ -3,35 +3,7 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "ai-2020": {
-            "buttonText": "ಹೆಚ್ಚಿನ ಮಾಹಿತಿ",
-            "title": "ಆರ್ಟಿಫಿಶಿಯಲ್ ಇಂಟಲಿಜೆನ್ಸ್ ಮತ್ತು ಮಶಿನ್ ಲರ್ನಿಂಗ್ ಎಕ್ಸ್‌ಪ್ಲೋರ್ ಮಾಡಿ"
-          },
-          "ai-launch-2023": {
-            "buttonText": "ಹೆಚ್ಚಿನ ಮಾಹಿತಿ"
-          },
-          "ai-pl-launch-2023": {
-            "buttonText": "ಹೆಚ್ಚಿನ ಮಾಹಿತಿ"
-          },
-          "back-to-school-2021": {
-            "buttonText": "ಹೆಚ್ಚಿನ ಮಾಹಿತಿ"
-          },
-          "codebytes-2020": {
-            "buttonText": "ಹೆಚ್ಚಿನ ಮಾಹಿತಿ"
-          },
-          "coldplay": {
-            "buttonText": "ಇದನ್ನು ಪ್ರಯತ್ನಿಸಿ"
-          },
-          "congrats-certificate-share": {
-            "buttonText": "ಪ್ರಾರಂಭಿಸಿ"
-          },
-          "csjourneys": {
-            "buttonText": "ಹೆಚ್ಚಿನ ಮಾಹಿತಿ"
-          },
-          "csjourneys-22": {
-            "buttonText": "ಹೆಚ್ಚಿನ ಮಾಹಿತಿ"
-          },
-          "csleadersprize": {
+          "co-teacher": {
             "buttonText": "ಹೆಚ್ಚಿನ ಮಾಹಿತಿ"
           },
           "hoc-2023": {
@@ -42,17 +14,8 @@
           "hoc-2023-dance-ai": {
             "buttonText": "ಹೆಚ್ಚಿನ ಮಾಹಿತಿ"
           },
-          "hoc-more": {
-            "body": "ಎಲ್ಲ ವಯಸ್ಸುಗಳು ಮತ್ತು ಅನುಭವ ಮಟ್ಟಗಳಿಗೆ 500 ಕ್ಕೂ ಹೆಚ್ಚು ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಚಟುವಟಿಕೆಗಳನ್ನು ಅವರ್ ಆಪ್‌ ಕೋಡ್ ವೆಬ್‌ಸೈಟ್ ಹೊಂದಿದ್ದು, ಇದನ್ನು Code.org ಮತ್ತು ಪಾರ್ಟ್ನರ್‌ಗಳು ಡೆವಲಪ್‌ ಮಾಡಿದ್ದಾರೆ."
-          },
-          "home-learning-2020": {
-            "buttonText": "ಪ್ರಾಜೆಕ್ಟಿನ ಉಪಾಯಗಳನ್ನು ವೀಕ್ಷಿಸಿ"
-          },
           "superhero": {
             "buttonText": "ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ"
-          },
-          "teacher-apps-nominate-2020": {
-            "buttonText": "ಶಿಕ್ಷಕರನ್ನು ನಾಮನಿರ್ದೇಶನ ಮಾಡಿ"
           }
         }
       }

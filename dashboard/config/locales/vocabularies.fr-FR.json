@@ -1985,27 +1985,27 @@
         },
         "algorithm/how-ai-works/2023": {
           "word": "Algorithme",
-          "definition": "une série d'étapes pour résoudre un problème ou prendre une décision"
+          "definition": "série d'étapes permettant de résoudre un problème ou de prendre une décision"
         },
         "network/how-ai-works/2023": {
           "word": "Réseau",
-          "definition": "Une collection d'objets connectés entre eux. Le fait de suivre ces connexions peut représenter les étapes d'un algorithme, comme un organigramme."
+          "definition": "Un regroupement d'éléments connectés entre eux. Le fait de suivre ces connexions peut correspondre aux étapes d'un algorithme, comme dans un organigramme."
         },
         "large_language_model_llm_/how-ai-works/2023": {
-          "word": "Modèle linguistique étendu (LLM)",
-          "definition": "une forme d'IA à usage général qui repose sur un très, très vaste ensemble de connaissances"
+          "word": "Grand modèle de langage (LLM)",
+          "definition": "Forme d'IA polyvalente qui repose sur un très, très vaste corpus de connaissances."
         },
         "diffusion_ai/how-ai-works/2023": {
           "word": "IA de diffusion",
-          "definition": "convertir une image en bruit et entraîner une IA à inverser le processus"
+          "definition": "convertir une image en bruit et former une IA à inverser le processus"
         },
         "gan_generative_adversarial_network_/how-ai-works/2023": {
-          "word": "GAN (réseau antagoniste génératif)",
-          "definition": "une façon d'utiliser deux modèles d'IA concurrents pour générer quelque chose"
+          "word": "RAG (Réseau Antagoniste Génératif)",
+          "definition": "consiste en l'utilisation de deux modèles d'IA en concurrence pour générer quelque chose"
         },
         "artificial_intelligence/how-ai-works/2023": {
           "word": "Intelligence artificielle",
-          "definition": "la capacité des machines à apprendre et à résoudre des problèmes."
+          "definition": "la faculté des machines à apprendre et à résoudre des problèmes."
         },
         "code/aquatic/unversioned": {
           "word": "Coder",

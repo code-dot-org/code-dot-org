@@ -9189,6 +9189,10 @@ tr:
             oyun alanı. Bununla ilgili ortaya çıkabilecek soruları Dan Schneider'a
             sor.
           title: ML/AI Ünitesi - CSD
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Ücretsiz Oyna
         netsim:
           description: İnternetin nasıl çalıştığını öğren.
           description_short: İnternetin nasıl çalıştığını öğren.
@@ -10106,6 +10110,31 @@ tr:
           name: kendi-temposunda-pl-csp8-2021
         self-paced-pl-csp9-2021:
           name: kendi-temposunda-pl-csp9-2021
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Ders 1
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Ders 1
+            lesson-3:
+              name: Döngüler
+            lesson-4:
+              name: Koşullar
+            lesson-6:
+              name: Sonraki Adımlar
+          title: Bilgisayar Bilimine Giriş
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Ders 1
+            lesson-3:
+              name: Olaylar
+            lesson-4:
+              name: Davranışlar
+            lesson-5:
+              name: Sonraki Adımlar
         soccer:
           description: Bir futbol oyunu yapın
           description_short: Bir futbol oyunu yapın

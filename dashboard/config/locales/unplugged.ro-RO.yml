@@ -238,6 +238,9 @@ ro:
       Internet_2019:
         desc: 'traducere lipsă: en-us.data.unplugged.internet_2018.desc'
         title: 'traducere lipsă: en-us.data.unplugged.internet_2018.title'
+      'Introducing block-based programing ':
+        desc: "[șir gol]"
+        title: "[șir gol]"
       MadGlibs:
         desc: Abstractizarea este una dintre cele mai importante aptitudini pentru
           ca un programator să înţeleagă.  Această activitate îi va pune pe elevii
@@ -441,6 +444,8 @@ ro:
         desc: Elevii creează algoritmi simpli (seturi de instrucțiuni) pentru a deplasa
           un personaj printr-un labirint folosind o singură comandă.
         title: Hărţi Fericite
+      Unplugged- Melissa Sandbox:
+        title: Unuplugged (fără calculator)
       VideoGamesCoordinatePlanes:
         desc: Descoperă cum jocurile video la care îți place sa te joci sunt de fapt
           dirijate de algebră! Explorează cum expresiile algebrice și planul de coordonate

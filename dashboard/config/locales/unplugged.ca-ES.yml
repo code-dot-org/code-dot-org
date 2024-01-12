@@ -402,6 +402,8 @@ ca:
         desc: Els alumnes creen algorismes senzills (conjunts d'instruccions) per
           moure un personatge a través d'un laberint utilitzant tant sols una ordre.
         title: Mapes Feliços
+      Unplugged- Melissa Sandbox:
+        title: Sense connexió
       VideoGamesCoordinatePlanes:
         desc: Descobrim que els videojocs que més ens agraden estan regits per l'àlgebra!
           Explorem com les expressions algebraiques i el pla cartesià ens auden a

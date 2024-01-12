@@ -1296,6 +1296,10 @@ bs:
           description_short: Istražite svijet Minecraft-a putem koda
           student_description: Koristi blokove koda da bi poveo Steve ili Alex u avanturu
             kroz Minecraft svijet
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Slobodno Igranje
         netsim:
           title: Internet Simulator
         nevada-standards-aligned-fifth-grade-2023:
@@ -1389,6 +1393,29 @@ bs:
               display_name: Događaji
             csf_loops:
               display_name: Petlje
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Lekcija 1
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Lekcija 1
+            lesson-3:
+              name: Petlje
+            lesson-4:
+              name: Uvjeti
+            lesson-6:
+              name: Slijedeći Koraci
+          title: Uvod u računarstvo
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Lekcija 1
+            lesson-3:
+              name: Događaji
+            lesson-5:
+              name: Slijedeći Koraci
         soccer:
           name: nogomet
         spelling-bee:

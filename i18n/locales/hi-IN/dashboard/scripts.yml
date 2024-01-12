@@ -4594,6 +4594,10 @@ hi:
           description_short: कंप्यूटर विज्ञान के बुनियादी बातों में सभी अवधारणाओं को जानें और अपनी खुद की कला, कहानी या खेल बनाएं।
         self-paced-pl-csp2-2023:
           title: 'मॉड्यूल 2: Code.org को नेविगेट करना'
+        musiclab:
+          lessons:
+            lesson-3:
+              name: फ्री प्ले
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -4929,3 +4933,20 @@ hi:
               display_name: अध्याय 2
         csd-post-survey-2024:
           title: पाठ्यक्रम के बाद का सर्वेक्षण
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: घटनाएँ
+            lesson-4:
+              name: व्यवहार
+            lesson-5:
+              name: अगले चरण
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: फंदे
+            lesson-4:
+              name: कंडीशनल्स
+            lesson-6:
+              name: अगले चरण
+          title: कंप्यूटर विज्ञान का परिचय

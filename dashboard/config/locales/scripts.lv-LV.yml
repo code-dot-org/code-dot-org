@@ -1098,6 +1098,17 @@ lv:
               display_name: Pasākumi
             csf_loops:
               display_name: Cikli
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Cikli
+            lesson-4:
+              name: Sazarojumi
+          title: Ievads datorzinātnēs
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Pasākumi
         soccer:
           name: futbols
         spelling-bee:

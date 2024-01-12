@@ -1130,6 +1130,10 @@ da:
           student_description: Programmer dyr og andre Minecraft-væsner i din egen
             udgave af Minecraft.
           title: Minecraft Designer
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Fri leg
         netsim:
           title: Internet Simulator
         nevada-standards-aligned-fifth-grade-2023:
@@ -1245,6 +1249,19 @@ da:
           description: 'Fase 2 Online: Blandet Sommerkursus'
           description_short: 'Fase 2 Online: Blandet Sommerkursus'
           student_description: 'Fase 2 Online: Blandet Sommerkursus'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Løkker
+            lesson-4:
+              name: Betingelser
+          title: Introduktion til programmering
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Hændelser
+            lesson-4:
+              name: Opførsel
         soccer:
           name: fodbold
         spelling-bee:

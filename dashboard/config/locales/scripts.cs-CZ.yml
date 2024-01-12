@@ -9712,6 +9712,10 @@ cs:
           student_description: Brainstorm/ Hřiště pro vývoj jednotek ML/AI pro CSD.
             Pro budoucí otázky týkající se toho, zeptejte se Dana Schneidera.
           title: Jednotka ML/AI - CSD
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Volná hra
         netsim:
           description: Zjistěte, jak funguje internet.
           description_short: Zjistěte, jak funguje internet.
@@ -10958,6 +10962,33 @@ cs:
           name: samoobslužné-pl-csp8-2021
         self-paced-pl-csp9-2021:
           name: self-tempaed-pl-csp9-2021
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Lekce 1
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Lekce 1
+            lesson-3:
+              name: Cykly
+            lesson-4:
+              name: Podmínky
+            lesson-5:
+              name: Dát to všechno dohromady
+            lesson-6:
+              name: Další kroky
+          title: Úvod do informatiky
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Lekce 1
+            lesson-3:
+              name: Události
+            lesson-4:
+              name: Chování
+            lesson-5:
+              name: Další kroky
         self-paced-pl-k5-getting-started:
           name: self-paced-pl-k5-getting-started
           title: 'Začínáme s Code.org (K-5) '
