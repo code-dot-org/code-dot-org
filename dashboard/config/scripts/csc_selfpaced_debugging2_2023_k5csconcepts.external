@@ -7,7 +7,8 @@ markdown <<MARKDOWN
 ## What is debugging?
 
 
-#####In computer science, when we talk about **debugging**, we mean finding and fixing problems in computer programs. It's like being a detective for computers. We look at the code, and we figure out what's going wrong so we can make the program work just the way we want it to. Bugs, or **problems in our code**, are common and expected. Don't feel bad if your code doesn't work correctly the first time. Coding and degugging help build **persistence**. Persistence works best when you try things many different ways, many different times. 
+####**Debugging** in computer science is about finding and fixing bugs, or errors, in code, much like being a computer detective. It's normal for code to have bugs on the first try, so don't worry. Remember, coding and debugging teach **persistence**, which means trying different solutions until you get it right.
+
 ##Vocabulary
 <img style=" float: left; width:10%;" src="https://images.code.org/3168407cff8a2336f81a99ef14c40fe6-image-1699468057611.png" alt = "icon of a bug from the ecosystems module" />
 
