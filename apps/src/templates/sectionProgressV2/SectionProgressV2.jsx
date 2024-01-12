@@ -20,7 +20,6 @@ function SectionProgressV2({
   }, [unitData, isLoadingProgress, isRefreshingProgress]);
 
   React.useEffect(() => {
-    console.log('lfm', unitData, isLoadingProgress, isRefreshingProgress);
     if (!unitData && !isLoadingProgress && !isRefreshingProgress) {
       loadUnitProgress(scriptId, sectionId);
     }
