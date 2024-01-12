@@ -214,6 +214,45 @@ class LtiV1Controller < ApplicationController
     end
   end
 
+  # POST /lti/v1/create_integration
+  # Creates a new LtiIntegration
+
+  def create_integration
+    # grab params
+    # check to see if integration exists (LtiIntegration.find_by(client_id: ..., issuer: lms_type))
+    # create integration if it doesn't exist
+    # does this method fire the email upon succesful creation?
+
+    # TODO Nick: These param names sholud be vetted
+    client_id = params[:client_id]
+    admin_email = params[:email]
+    platform_name = params[:lms]
+
+    platform_urls = Policies::Lti::LMS_PLATFORMS[platform_name.to_sym]
+    issuer = platform_urls[:issuer]
+    auth_redirect_url = platform_urls[:auth_redirect_url]
+    jwks_url = platform_urls[:jwks_url]
+    access_token_url = platform_urls[:access_token_url]
+
+    existing_integration = Queries::Lti.get_lti_integration(issuer, client_id)
+
+    #TODO Nick: decide on what status code to return for both cases
+    if existing_integration.nil?
+      Services::Lti.create_lti_integration(
+        client_id: client_id,
+        issuer: issuer,
+        platform_name: platform_name,
+        auth_redirect_url: auth_redirect_url,
+        jwks_url: jwks_url,
+        access_token_url: access_token_url,
+        admin_email: admin_email
+      )
+      render(status: :ok, json: {body: 'Succesfully created your LTI integration'})
+    else
+      render(status: :conflict, json: {error: 'Lti Integration already exists for this client id'}) unless existing_integration
+    end
+  end
+
   private
 
   NAMESPACE = "lti_v1_controller".freeze
