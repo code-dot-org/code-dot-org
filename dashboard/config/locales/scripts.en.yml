@@ -14562,3 +14562,9 @@ en:
             '
           description_short: Design and analyze algorithms to understand how they work and why some are considered better than others.
           description_audience: ''
+        csp-post-survey-2024:
+          title: CS Principles Post-Course Survey
+          description: This unit contains the CS Principles Post-Course Survey.
+          student_description: This unit contains a survey about the CS Principles Course. Your teacher will tell you when it's time to take this survey.
+          description_short: ''
+          description_audience: ''
