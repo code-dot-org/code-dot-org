@@ -22,8 +22,8 @@ type CalculateSummedWeights = (
  * the score for each returned value.
  * @param {array} selectedEmojis: the list of three emojis the user selected
  * @param {EffectsQuality} quality: whether we want good or bad scoring effects
- * @param {CalculateSummedWeights} calculateSummedWeights: function to calculate weights (used for testing)
- * @param {number} numOptions: explicitly specify number of results to randomly choose from (used for testing)
+ * @param {CalculateSummedWeights} calculateSummedWeights: function to calculate weights (used only for testing)
+ * @param {number} numOptions: explicitly specify number of results to randomly choose from (used only for testing)
  * @returns {GeneratedEffect} an object containing the effects that were chosen, for example:
  * {
  *   "backgroundEffect": "sparkles",
@@ -35,7 +35,7 @@ export function chooseEffects(
   selectedEmojis: string[],
   quality: EffectsQuality,
   calculateSummedWeights: CalculateSummedWeights = calculateOutputSummedWeights,
-  numOptions: number | undefined = undefined
+  numOptions?: number
 ): GeneratedEffect {
   const chosenEffects: GeneratedEffect = {
     [FieldKey.BACKGROUND_EFFECT]: '',
@@ -45,7 +45,8 @@ export function chooseEffects(
   for (const field of Object.values(FieldKey)) {
     const mapping = cachedWeightsMappings[field];
     // Get final output summed weights mapped to their output identifiers (e.g. [[0.25, 'squiggles'], ...])
-    // based on set of three selected emoji inputs
+    // based on set of three selected emoji inputs for a particular field
+    // (background effect, background color, or foreground effect).
     const weightVector = calculateSummedWeights(selectedEmojis, mapping);
 
     // Sort and select slice of top or bottom scoring options,

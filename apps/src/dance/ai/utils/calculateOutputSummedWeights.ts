@@ -7,7 +7,8 @@ import {CachedWeightsMapping} from '../types';
  * @param {*} outputWeightsMapping, precalculated association weights for a possible type of output
  *    (e.g. background effect, foreground effect or palette)
  * @returns 2d array of values between [0, 3] with an associated output "option"
- *    (e.g. [1.2, "circles"] for BackgroundEffects).
+ *    (e.g. [1.2, "circles"] for BackgroundEffects). The values represent
+ *    the correlation between the 3 emojis (summed weights) and each output "option".
  *    Higher values = stronger correlation.
  */
 export function calculateOutputSummedWeights(
