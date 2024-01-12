@@ -14536,3 +14536,16 @@ en:
           student_description: In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit participate in a "school of the future" conference in which you and a team make a proposal for how best to improve school life with computing innovations.
           description_short: 'Research and debate current events at the intersection of data, public policy, law, ethics, and societal impact. '
           description_audience: ''
+        csp9-2024:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Unit 9: Create PT'
+            lessonGroup-3:
+              display_name: Mock Exam
+            lessonGroup-2:
+              display_name: Post-Course Survey
+          title: Create PT Prep ('23-'24)
+          description: In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.
+          student_description: In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.
+          description_short: Practice and complete the Create Performance Task (PT).
+          description_audience: ''
