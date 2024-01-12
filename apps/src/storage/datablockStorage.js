@@ -28,7 +28,20 @@ DatablockStorage.getKeyValue = function (key, onSuccess, onError) {
 
 DatablockStorage.setKeyValue = function (key, value, onSuccess, onError) {
   console.log("Using the overridden DatablockStorage method");
-  return FirebaseStorage.setKeyValue(key, value, onSuccess, onError);
+
+  fetch("../data_db/set_key_value", {
+    method: "POST",
+    body: JSON.stringify({
+      key,
+      value: JSON.stringify(value),
+    }),
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-TOKEN': getAuthToken(),
+      'X-Requested-With': 'XMLHttpRequest',
+    },
+    credentials: 'same-origin',
+  }).then(onSuccess, onError);
 }
 
 export function initDatablockStorage(config) {
