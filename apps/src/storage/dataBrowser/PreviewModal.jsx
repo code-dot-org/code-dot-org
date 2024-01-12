@@ -40,7 +40,11 @@ class PreviewModal extends React.Component {
         <div style={{overflow: 'scroll', maxHeight: '70%'}}>
           <DataTable readOnly rowsPerPage={100} />
         </div>
-        <button type="button" onClick={() => this.importTable(datasetInfo)}>
+        <button
+          id="importTableBtn"
+          type="button"
+          onClick={() => this.importTable(datasetInfo)}
+        >
           {msg.import()}
         </button>
       </BaseDialog>
