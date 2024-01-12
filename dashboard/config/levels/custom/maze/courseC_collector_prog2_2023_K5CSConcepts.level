@@ -1,6 +1,5 @@
 <Karel>
   <config><![CDATA[{
-  "published": true,
   "game_id": 25,
   "created_at": "2023-12-12T22:56:48.000Z",
   "level_num": "custom",
@@ -45,8 +44,9 @@
     "show_type_hints": "false",
     "preload_asset_list": null
   },
+  "published": true,
   "notes": "Not enough blocks in workspace puzzle",
-  "audit_log": "[{\"changed_at\":\"2023-12-12T22:56:48.145+00:00\",\"changed\":[\"cloned from \\\"courseC_collector_prog2_2023\\\"\"],\"cloned_from\":\"courseC_collector_prog2_2023\"},{\"changed_at\":\"2023-12-12 22:58:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2023-12-12 23:08:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2023-12-13 18:29:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"tts_long_instructions_override\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2023-12-14 22:23:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-12-12T22:56:48.145+00:00\",\"changed\":[\"cloned from \\\"courseC_collector_prog2_2023\\\"\"],\"cloned_from\":\"courseC_collector_prog2_2023\"},{\"changed_at\":\"2023-12-12 22:58:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2023-12-12 23:08:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2023-12-13 18:29:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"tts_long_instructions_override\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2023-12-14 22:23:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-11 22:58:45 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -59,16 +59,13 @@
     <toolbox_blocks>
       <xml>
         <block type="maze_move">
-          <title name="DIR">moveForward</title>
+          <field name="DIR">moveForward</field>
         </block>
         <block type="maze_turn">
-          <title name="DIR">turnRight</title>
+          <field name="DIR">turnRight</field>
         </block>
         <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-        </block>
-        <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-10">???</title>
+          <field name="DIR">turnLeft</field>
         </block>
         <block type="collector_collect"/>
       </xml>
