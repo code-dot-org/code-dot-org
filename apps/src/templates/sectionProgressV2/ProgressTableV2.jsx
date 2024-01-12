@@ -16,6 +16,13 @@ export function ProgressTableV2({
   students,
   unitData,
 }) {
+  const [expandedLessonIds, setExpandedLessons] = React.useState([]);
+
+  const addExpandedLesson = lessonId =>
+    setExpandedLessons([...expandedLessonIds, lessonId]);
+  const removeExpandedLesson = lessonId =>
+    setExpandedLessons(expandedLessonIds.filter(id => id !== lessonId));
+
   const sortedStudents = React.useMemo(() => {
     return isSortedByFamilyName
       ? students.sort(stringKeyComparator(['familyName', 'name']))
@@ -30,7 +37,12 @@ export function ProgressTableV2({
         sectionId={sectionId}
       />
       <div className={styles.table}>
-        <ProgressTableHeader lessons={unitData?.lessons} />
+        <ProgressTableHeader
+          lessons={unitData?.lessons}
+          expandedLessonIds={expandedLessonIds}
+          addExpandedLesson={addExpandedLesson}
+          removeExpandedLesson={removeExpandedLesson}
+        />
         <ProgressDataV2
           sortedStudents={sortedStudents}
           lessons={unitData?.lessons}
