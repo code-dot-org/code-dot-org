@@ -28,6 +28,8 @@ describe('chooseEffects', () => {
       EffectsQuality.GOOD
     );
 
+    // With Math.random stubbed to return 0.99 and NUM_RANDOM_TOP_OPTIONS set to 3,
+    // we select the third highest scoring effect.
     expect(chosenEffects.backgroundEffect).to.equal('quads (3rd)');
     expect(chosenEffects.foregroundEffect).to.equal('quads (3rd)');
     expect(chosenEffects.backgroundColor).to.equal('quads (3rd)');
@@ -39,6 +41,8 @@ describe('chooseEffects', () => {
       EffectsQuality.BAD
     );
 
+    // With Math.random stubbed to return 0.99 and NUM_RANDOM_BOTTOM_OPTIONS set to 20,
+    // we select the lowest scoring effect among the effects available (less than 20 in this case).
     expect(chosenEffects.backgroundEffect).to.equal('clouds (5th)');
     expect(chosenEffects.foregroundEffect).to.equal('clouds (5th)');
     expect(chosenEffects.backgroundColor).to.equal('clouds (5th)');
