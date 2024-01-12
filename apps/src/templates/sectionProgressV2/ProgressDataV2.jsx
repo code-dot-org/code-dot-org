@@ -40,6 +40,8 @@ ProgressDataV2.propTypes = {
   lessons: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
+export const UnconnectedProgressDataV2 = ProgressDataV2;
+
 export default connect(state => ({
   lessonProgressByStudent:
     state.sectionProgress.studentLessonProgressByUnit[
