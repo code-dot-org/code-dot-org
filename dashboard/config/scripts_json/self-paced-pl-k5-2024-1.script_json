@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-12 20:19:14 UTC",
+    "serialized_at": "2024-01-12 20:43:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -906,15 +906,12 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "OPD-K5 Begin_2023_K5CSConcepts2_5"
-        ],
         "progression": "Coding with Loops"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 Begin_2023_K5CSConcepts2_5"
+          "OPD-K5-PLVid_2023_K5CSConceptsLoops"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-3",
@@ -922,7 +919,7 @@
         "activity_section.key": "eab6aafc-3179-4c38-87c7-a12c34858bc4"
       },
       "level_keys": [
-        "OPD-K5 Begin_2023_K5CSConcepts2_5"
+        "OPD-K5-PLVid_2023_K5CSConceptsLoops"
       ]
     },
     {
@@ -1681,9 +1678,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 Begin_2023_K5CSConcepts2_5",
+        "level.key": "OPD-K5-PLVid_2023_K5CSConceptsLoops",
         "script_level.level_keys": [
-          "OPD-K5 Begin_2023_K5CSConcepts2_5"
+          "OPD-K5-PLVid_2023_K5CSConceptsLoops"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-3",
