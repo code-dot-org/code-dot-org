@@ -1863,7 +1863,8 @@ applabCommands.getColumn = function (opts) {
   apiValidateType(opts, 'getColumn', 'table', opts.table, 'string');
   apiValidateType(opts, 'getColumn', 'column', opts.column, 'string');
 
-  Applab.storage.readRecords( // TODO: unfirebase
+  Applab.storage.readRecords(
+    // TODO: unfirebase
     opts.table,
     {},
     handleGetColumn.bind(this, opts),
