@@ -41,7 +41,7 @@ class PreviewModal extends React.Component {
           <DataTable readOnly rowsPerPage={100} />
         </div>
         <button
-          id="importTableBtn"
+          id="ui-test-import-table-btn"
           type="button"
           onClick={() => this.importTable(datasetInfo)}
         >
