@@ -299,7 +299,7 @@ export const blocks = {
       const name = generator.nameDB_.getName(this.behaviorId, 'PROCEDURE');
       return [`new Behavior(${name}, [])`, generator.ORDER_ATOMIC];
     };
-    generator.sprite_parameter_get = generator.variables_get;
+    generator.forBlock.sprite_parameter_get = generator.forBlock.variables_get;
   },
 
   // All logic for behavior picker custom input type
