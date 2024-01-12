@@ -17,12 +17,12 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
       [customConnectionBlockTypes.BEHAVIOR]: this.ROUND_INPUT_OUTPUT,
       [customConnectionBlockTypes.LOCATION]: this.RECT_INPUT_OUTPUT,
     };
-    // `connection.check_` returns a list of accepted value types for the connection
+    // `connection.check` returns a list of accepted value types for the connection
     // or null if all types are compatible.
     // For connections that are customized (sprite, behavior, location), there is
     // one value type that is accepted so we assign connectorType to the first
     // element in the list.
-    const connectorType = connection.check_ ? connection.check_[0] : null;
+    const connectorType = connection.check ? connection.check[0] : null;
     switch (connection.type) {
       case GoogleBlockly.ConnectionType.INPUT_VALUE:
       case GoogleBlockly.ConnectionType.OUTPUT_VALUE:
