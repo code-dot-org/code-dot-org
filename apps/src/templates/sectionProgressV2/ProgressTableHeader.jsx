@@ -2,18 +2,63 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './progress-table-v2.module.scss';
 import classNames from 'classnames';
+import {lessonHasLevels} from '../progress/progressHelpers';
+import FontAwesome from '../FontAwesome';
 
-export default function ProgressTableHeader({lessons}) {
-  const getLessonColumnHeader = lesson => {
-    return (
-      <div
-        className={classNames(styles.gridBox, styles.gridBoxLessonHeader)}
-        key={lesson.id}
-      >
-        {lesson.relative_position}
-      </div>
-    );
-  };
+const getUninteractiveLessonColumnHeader = lesson => {
+  return (
+    <div
+      className={classNames(styles.gridBox, styles.gridBoxLessonHeader)}
+      key={lesson.id}
+    >
+      {lesson.relative_position}
+    </div>
+  );
+};
+
+export default function ProgressTableHeader({
+  lessons,
+  expandedLessonIds,
+  addExpandedLesson,
+  removeExpandedLesson,
+}) {
+  const getExpandedLessonColumnHeader = React.useCallback(
+    lesson => {
+      return (
+        <div
+          className={classNames(styles.gridBox, styles.gridBoxLessonHeader)}
+          onClick={() => removeExpandedLesson(lesson.id)}
+          key={lesson.id}
+        >
+          <FontAwesome icon="caret-down" />
+          {lesson.relative_position} expanded
+        </div>
+      );
+    },
+    [removeExpandedLesson]
+  );
+
+  const getLessonColumnHeader = React.useCallback(
+    lesson => {
+      if (!lessonHasLevels(lesson)) {
+        return getUninteractiveLessonColumnHeader(lesson);
+      }
+      if (expandedLessonIds.includes(lesson.id)) {
+        return getExpandedLessonColumnHeader(lesson);
+      }
+      return (
+        <div
+          className={classNames(styles.gridBox, styles.gridBoxLessonHeader)}
+          onClick={() => addExpandedLesson(lesson.id)}
+          key={lesson.id}
+        >
+          <FontAwesome icon="caret-right" />
+          {lesson.relative_position}
+        </div>
+      );
+    },
+    [expandedLessonIds, addExpandedLesson, getExpandedLessonColumnHeader]
+  );
 
   return (
     <div className={styles.header}>
@@ -26,4 +71,7 @@ export default function ProgressTableHeader({lessons}) {
 
 ProgressTableHeader.propTypes = {
   lessons: PropTypes.array.isRequired,
+  expandedLessonIds: PropTypes.array.isRequired,
+  addExpandedLesson: PropTypes.func.isRequired,
+  removeExpandedLesson: PropTypes.func.isRequired,
 };
