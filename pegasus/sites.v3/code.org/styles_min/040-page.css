@@ -41,6 +41,12 @@
   --bold-font-weight: 700;
   --extra-bold-font-weight: 800;
   --black-font-weight: 900;
+  /* Swiper carousel styles */
+  --swiper-pagination-color: var(--brand_primary_default);
+  --swiper-pagination-bullet-size: 1rem;
+  --swiper-pagination-bullet-inactive-color: var(--brand_primary_light);
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 0.5rem;
 }
 
 html {
