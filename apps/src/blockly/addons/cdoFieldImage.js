@@ -21,9 +21,9 @@ export default class CdoFieldImage extends GoogleBlockly.FieldImage {
       // the new width and height.
       // TODO: This will need to be updated when upgrading to the 10.0 version of blockly.
       // In that version imageElement_ is renamed to imageElement.
-      if (this.imageElement_) {
-        this.imageElement_.setAttribute('width', this.size_.width);
-        this.imageElement_.setAttribute('height', this.size_.height);
+      if (this.imageElement) {
+        this.imageElement.setAttribute('width', this.size_.width);
+        this.imageElement.setAttribute('height', this.size_.height);
       }
       this.newWidth = null;
       this.newHeight = null;
