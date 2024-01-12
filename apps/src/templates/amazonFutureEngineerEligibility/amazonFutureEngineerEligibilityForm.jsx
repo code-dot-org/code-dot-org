@@ -295,8 +295,8 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
                 ))}
               </select>
             </div>
-            <div style={styles.dropdownContainer}>
-              {i18n.afeWhatGradeBands()}
+            <div style={styles.halfWidth}>
+              <label>{i18n.afeWhatGradeBands()}</label>
               <div
                 className="dropdown show"
                 style={styles.fullWidth}
@@ -356,8 +356,8 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
               </div>
             </div>
           </div>
-          <div>{i18n.afeSupport()}</div>
           <hr style={styles.sectionBreak} />
+          <label>{i18n.afeSupport()}</label>
           <SingleCheckbox
             name="inspirationKit"
             label={i18n.afeInspirationKit()}
@@ -402,6 +402,7 @@ const styles = {
   },
   sectionBreak: {
     borderColor: color.teal,
+    margin: '1rem 0',
   },
   button: {
     backgroundColor: color.orange,
@@ -426,7 +427,6 @@ const styles = {
   },
   descriptiveText: {
     display: 'block',
-    margin: 0,
   },
   inputBoxes: {
     display: 'flex',
@@ -446,9 +446,6 @@ const styles = {
     color: color.neutral_dark,
   },
   buttonLabel: {
-    fontWeight: 400,
-    fontSize: 14,
-    fontFamily: 'Metropolis, sans-serif',
     marginLeft: 10,
   },
   alignCenter: {
@@ -482,5 +479,8 @@ const styles = {
   },
   fullWidth: {
     width: '100%',
+  },
+  halfWidth: {
+    width: '50%',
   },
 };

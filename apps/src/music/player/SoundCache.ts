@@ -48,6 +48,11 @@ class SoundCache {
     // Filter out sounds that are already loaded
     paths = paths.filter(path => !this.audioBuffers[path]);
 
+    // Reset loading progress if we have sounds to load
+    if (updateLoadProgress && paths.length > 0) {
+      updateLoadProgress(0);
+    }
+
     for (let i = 0; i < paths.length; i++) {
       try {
         const sound = await this.loadSound(paths[i]);
