@@ -2,8 +2,8 @@ import {cachedWeightsMappings} from '../constants';
 import {FieldKey, GeneratedEffect, EffectsQuality} from '../types';
 import {calculateOutputSummedWeights} from './calculateOutputSummedWeights';
 
-const DEFAULT_NUM_RANDOM_TOP_OPTIONS = 3;
-const DEFAULT_NUM_RANDOM_BOTTOM_OPTIONS = 20;
+const NUM_RANDOM_TOP_OPTIONS = 3;
+const NUM_RANDOM_BOTTOM_OPTIONS = 20;
 
 /**
  * Chooses a random background effect, background color, and foreground effect associated
@@ -42,8 +42,8 @@ export function chooseEffects(
     );
     const topOrBottomOptions =
       quality === EffectsQuality.GOOD
-        ? allSortedOptions.slice(0, DEFAULT_NUM_RANDOM_TOP_OPTIONS)
-        : allSortedOptions.slice(-DEFAULT_NUM_RANDOM_BOTTOM_OPTIONS);
+        ? allSortedOptions.slice(0, NUM_RANDOM_TOP_OPTIONS)
+        : allSortedOptions.slice(-NUM_RANDOM_BOTTOM_OPTIONS);
     const selectedOutputOption =
       topOrBottomOptions[Math.floor(Math.random() * topOrBottomOptions.length)];
     chosenEffects[field] = selectedOutputOption[1];
