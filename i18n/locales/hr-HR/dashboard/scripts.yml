@@ -1145,6 +1145,10 @@ hr:
               display_name: Likovi
             lessonGroup-4:
               display_name: Varijable
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Slobodna igra
         test-nv-coursea-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1212,3 +1216,16 @@ hr:
           lesson_groups:
             lessonGroup-7:
               display_name: Uvod
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Događaji
+            lesson-4:
+              name: Ponašanja
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Petlje
+            lesson-4:
+              name: Uvjeti
+          title: Uvod u Informatiku

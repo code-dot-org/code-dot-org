@@ -352,6 +352,11 @@ en-GB:
           lesson_groups:
             csf_loops:
               display_name: Loops
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Loops
+          title: Introduction to Computer Science
         step:
           title: Step
         test-nv-coursea-2023:

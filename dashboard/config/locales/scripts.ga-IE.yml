@@ -2971,6 +2971,10 @@ ga:
           student_description: Códáil ainmhithe agus créatúir eile i do leagan féin
             de Minecraft.
           title: Uair Chódála Minecraft - Dearthóir
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Saorimirt
         netsim:
           title: Ionsamhlóir an Idirlín
         nevada-standards-aligned-fifth-grade-2023:
@@ -3150,6 +3154,19 @@ ga:
           description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           description_short: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           student_description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Lúba
+            lesson-4:
+              name: Coinníollacha
+          title: Buntús na Ríomheolaíochta
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Teagmhais
+            lesson-4:
+              name: Iompar
         soccer:
           name: sacar
         spelling-bee:

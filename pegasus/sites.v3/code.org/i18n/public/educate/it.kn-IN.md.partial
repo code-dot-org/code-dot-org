@@ -70,16 +70,17 @@ theme: responsive
 
 ಎಲ್ಲಾ Code.org ವಿಷಯದೊಂದಿಗೆ ಉತ್ತಮ ಅನುಭವಕ್ಕಾಗಿ, ಕೆಳಗಿನ ಸೈಟ್‌ಗಳನ್ನು ಅನುಮತಿಸಲಾಗಿದೆ ಮತ್ತು ನಿರ್ಬಂಧಿಸಲಾಗಿಲ್ಲ ಎಂದು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ನಿಮ್ಮ ಶಾಲೆ ಅಥವಾ ಜಿಲ್ಲೆಯ ಐಟಿ ಇಲಾಖೆಯೊಂದಿಗೆ ಸಮಾಲೋಚಿಸಲು ನಾವು ಶಿಫಾರಸು ಮಾಡುತ್ತೇವೆ.
 
-| ಆದ್ಯತೆ                                                            | URL                                                                                                        |
-| ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **ಅಗತ್ಯವಿದೆ**                                                     | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **ಆಯ್ಕೆಗಳು**                                                      | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **YouTube ಹೋಸ್ಟ್ ಮಾಡಿದ ವೀಡಿಯೊಗಳನ್ನು ಬಳಸಲು (ವರ್ಧಿತ ಗೌಪ್ಯತೆ ಮೋಡ್)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **Code.org ಹೋಸ್ಟ್ ಮಾಡಿದ ವೀಡಿಯೊಗಳನ್ನು ಬಳಸಲು**                      | `https://videos.code.org`                                                                                  |
-| **ಇಂಟರ್ನೆಟ್ ಸಿಮ್ಯುಲೇಟರ್ ಅನ್ನು ಬಳಸಲು**                             | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **ವೆಬ್ ಲ್ಯಾಬ್ ಬಳಸಲು**                                             | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **Google ಕ್ಲಾಸ್‌ರೂಮ್ ಹಂಚಿಕೆ ಬಟನ್ ಬಳಸಲು**                          | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**                                       | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| ಆದ್ಯತೆ                                                                                                               | URL                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **ಅಗತ್ಯವಿದೆ**                                                                                                        | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **ಕ್ಯಾಪ್ಚಾ ವ್ಯವಸ್ಥೆಗಳು ಸ್ವಯಂಚಾಲಿತ ಮೋಸದ (“ಬೋಟ್”) ಚಟುವಟಿಕೆಯಿಂದ ನಿಮ್ಮ ಬಳಕೆಯನ್ನು ಪ್ರತ್ಯೇಕಿಸಬಹುದು ಎಂದು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **ಆಯ್ಕೆಗಳು**                                                                                                         | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **YouTube ಹೋಸ್ಟ್ ಮಾಡಿದ ವೀಡಿಯೊಗಳನ್ನು ಬಳಸಲು (ವರ್ಧಿತ ಗೌಪ್ಯತೆ ಮೋಡ್)**                                                    | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Code.org ಹೋಸ್ಟ್ ಮಾಡಿದ ವೀಡಿಯೊಗಳನ್ನು ಬಳಸಲು**                                                                         | `https://videos.code.org`                                                                                  |
+| **ಇಂಟರ್ನೆಟ್ ಸಿಮ್ಯುಲೇಟರ್ ಅನ್ನು ಬಳಸಲು**                                                                                | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **ವೆಬ್ ಲ್ಯಾಬ್ ಬಳಸಲು**                                                                                                | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Google ಕ್ಲಾಸ್‌ರೂಮ್ ಹಂಚಿಕೆ ಬಟನ್ ಬಳಸಲು**                                                                             | `https://apis.google.com`                                                                                  |
+| **ಆಪ್ ಲ್ಯಾಬ್ ಡೇಟಾಸೆಟ್ಗಳನ್ನು ಬಳಸಲು**                                                                                  | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## ಮೊಬೈಲ್ ಮತ್ತು ಟ್ಯಾಬ್ಲೆಟ್ ಬೆಂಬಲ ವಿವರಗಳು
 
@@ -104,7 +105,7 @@ Code.org ಮತ್ತು ನಮ್ಮ [ಆನ್‌ಲೈನ್ ಕಲಿಕೆ 
 
 
 <!--
-The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
 .md.erb without breaking i18n sync, this file should include that partial instead.
 -->
 <figure style="width:100%; height: 100%; margin: 0 auto;">

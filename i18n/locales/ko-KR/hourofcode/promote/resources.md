@@ -18,7 +18,7 @@ title: 각종 자료
 
 ## 이 포스터를 학교에 걸어주세요.
 
-Malala, Stephen Curry, Shakira 등의 사진이 들어 있는 새 포스터가 나왔습니다! 올 해 각 세트는 6장의 포스터와 126장의 ""아워오브코드를 해냈어요" 스티커와 함께 제공됩니다. 직접 프린트하려면, 아래 이미지를 클릭하여 인쇄 가능한 버전을 보고 저장하세요.
+Print your own posters! Simply click an image below to view and save a printable version.
 
 {{ promote_new_posters }}
 

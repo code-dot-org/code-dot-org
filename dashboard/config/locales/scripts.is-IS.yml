@@ -3385,6 +3385,10 @@ is:
           student_description: Forritaðu dýr og aðrar Minecraft verur í þinni eigin
             útgáfu af Minecraft.
           title: Klukkustund kóðunar - Minecraft Hönnuður
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Frjáls æfing
         netsim:
           title: Internet hermir
         nevada-standards-aligned-fifth-grade-2023:
@@ -3625,6 +3629,31 @@ is:
           description: '2.  áfangi á neti: Blandað sumarnám'
           description_short: '2.  áfangi á neti: Blandað sumarnám'
           student_description: '2.  áfangi á neti: Blandað sumarnám'
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Kennslustund 1
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Kennslustund 1
+            lesson-3:
+              name: Lykkjur
+            lesson-4:
+              name: Skilyrði
+            lesson-6:
+              name: Næstu skref
+          title: Kynning á tölvunarfræði
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Kennslustund 1
+            lesson-3:
+              name: Atvik
+            lesson-4:
+              name: Hegðun
+            lesson-5:
+              name: Næstu skref
         soccer:
           name: fótbolti
         spelling-bee:

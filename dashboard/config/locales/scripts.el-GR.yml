@@ -2558,6 +2558,10 @@ el:
           student_description: Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft στην
             δικιά σου έκδοση του Minecraft.
           title: Σχεδιαστής Minecraft
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Ελεύθερο παιχνίδι
         netsim:
           title: Προσομοιωτής Διαδικτύου
         nevada-standards-aligned-fifth-grade-2023:
@@ -3094,6 +3098,19 @@ el:
           title: 'Ενότητα 2: Πλοήγηση στο Code.org'
         self-paced-pl-csp2-2023:
           title: 'Ενότητα 2: Πλοήγηση στο Code.org'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Βρόχοι
+            lesson-4:
+              name: Συνθήκες
+          title: Εισαγωγή στην Επιστήμη των Υπολογιστών
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Συμβάντα
+            lesson-4:
+              name: Συμπεριφορές
         soccer:
           description: Δημιουργήστε ένα παιχνίδι ποδοσφαίρου
           description_short: Δημιουργήστε ένα παιχνίδι ποδοσφαίρου

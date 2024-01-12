@@ -6,9 +6,9 @@ title: تماس با همکاران بین المللی
 
 # تماس با همکاران بین المللی
 
-Code.org works with many organizations around the world to make the Hour of Code a truly international movement. You, too, can play a leading role to get more people in your country involved! If you're in one of the countries below, reach out to the listed partner and get connected with your local Hour of Code.
+Code.org با بسیاری از سازمان ها در سراسر جهان همکاری می کند تا ساعت کد را به یک جنبش واقعی بین المللی تبدیل کند. شما نیز می توانید نقش اصلی را برای درگیر کردن افراد بیشتری در کشور خود ایفا کنید! اگر در یکی از کشورهای زیر هستید، با شرکای لیست شده تماس بگیرید و با ساعت کد محلی خود ارتباط برقرار کنید.
 
-*Don't see your country listed here?* [See how to become our international partner!](https://code.org/international/apply) <br /> <br />
+*کشور خود را در لیست نمی‌بینید؟* [نگاه کنید چگونه شریک بین‌المللی ما شوید!](https://code.org/international/apply) <br /> <br />
 
 {{ international_partners_table }}
 

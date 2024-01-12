@@ -5525,7 +5525,10 @@ de:
           title: 'Modul 2: Navigieren in Code.org'
         self-paced-pl-csp3-2023: {}
         self-paced-pl-csp4-2023: {}
-        musiclab: {}
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Freies Spiel
         csa-software-engineering: {}
         csa-frq-practice:
           lesson_groups:
@@ -5847,3 +5850,26 @@ de:
               display_name: Kapitel 2
         csd-post-survey-2024:
           title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        melissasandbox-2024-1: {}
+        coursec-maker-2024: {}
+        coursef-maker-2024: {}
+        coursee-maker-2024: {}
+        coursed-maker-2024: {}
+        self-paced-pl-k5-2024: {}
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Ereignisse
+            lesson-4:
+              name: Verhaltensweisen
+            lesson-5:
+              name: Nächste Schritte
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Schleifen
+            lesson-4:
+              name: Bedingungen
+            lesson-6:
+              name: Nächste Schritte
+          title: Einführung in die Informatik

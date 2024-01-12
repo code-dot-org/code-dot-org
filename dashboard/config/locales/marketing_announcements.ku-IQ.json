@@ -3,34 +3,7 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "ai-2020": {
-            "buttonText": "زیاتر فێرببە"
-          },
-          "ai-launch-2023": {
-            "buttonText": "زیاتر فێرببە"
-          },
-          "ai-pl-launch-2023": {
-            "buttonText": "زیاتر فێرببە"
-          },
-          "back-to-school-2021": {
-            "buttonText": "زیاتر فێرببە"
-          },
-          "codebytes-2020": {
-            "buttonText": "زیاتر فێرببە"
-          },
-          "coldplay": {
-            "buttonText": "تاقیبکەوە"
-          },
-          "congrats-certificate-share": {
-            "buttonText": "دەستپێبکە"
-          },
-          "csjourneys": {
-            "buttonText": "زیاتر فێرببە"
-          },
-          "csjourneys-22": {
-            "buttonText": "زیاتر فێرببە"
-          },
-          "csleadersprize": {
+          "co-teacher": {
             "buttonText": "زیاتر فێرببە"
           },
           "hoc-2023": {

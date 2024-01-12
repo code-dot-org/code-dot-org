@@ -296,3 +296,5 @@ fi:
       timeforcs_demo_conditionals:
         title: Ehtolausekkeet
         desc: Ehtolausekkeiden oppimiseksi opiskeliat pelaavat korttipeliä ja luovat sääntöjä kuten "Jos saan punaisen kortin, saan pisteen" ja "Jos saan mustan kortin, sinä saat pisteen."
+      Unplugged- Melissa Sandbox:
+        title: Tietokoneeton tekeminen

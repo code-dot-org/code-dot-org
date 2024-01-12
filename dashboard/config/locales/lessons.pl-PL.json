@@ -7488,6 +7488,9 @@
           "overview": "W tym ćwiczeniu uczniowie w każdym wieku otrzymują wstępne doświadczenie z kodowaniem i sztuczną inteligencją w bezpiecznym i kreatywnym środowisku. Ta lekcja została zaprojektowana dla uczniów w każdym wieku, ale wymaga czytania. Ta aktywność wymaga od uczniów odtwarzania dźwięku, ponieważ samouczek został stworzony, aby reagować na muzykę.",
           "preparation": "### Jak zaplanować swoj Godzinę Kodowania\n\nZnajdź zasoby potrzebne do zaplanowania, realizacji i świętowania Godziny Kodowania w swojej szkole! [here](https://hourofcode.com/us/how-to)",
           "purpose": "Sprawienie, by kodowanie było ekscytującym i przyjemnym doświadczeniem, jest niezbędne do rozwijania zainteresowania informatyką. Ta lekcja jest pełna chwil radości, w których uczniowie używają kodu do choreografii spektaklu tanecznego koloru i ruchu przeciągając i upuszczając proste bloki kodujące. Uczniowie zostaną zapoznani z Botem A.I., którym pokierują, aby pomógł im znaleźć idealne efekty pasujące do nastroju ich tańca.  "
+        },
+        "allthethings/lesson-53": {
+          "name": "Laboratorium Pythona"
         }
       }
     }

@@ -29,6 +29,21 @@
         "AppLab Intro 7 - thisOrThatAddButton_mb2022": {
           "AppLabHoCFinal11": "أنت في طور التصميم الآن"
         },
+        "CSD U6 - Combine Inputs - PracD_2023": {
+          "CSD U6L9.7 - if-statement": "أضف عبارتك الشرطية \"إذا\" هنا"
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "CSD U6L9.7 - if-statement": "أضف عبارتك الشرطية \"إذا\" هنا"
+        },
+        "CSD U6 - If Variables - A_2023": {
+          "U6L6.4 - If": "أضف عبارتك الشرطية \"إذا\" هنا"
+        },
+        "CSD U6 - If Variables - A_2222": {
+          "U6L6.4 - If": "أضف عبارتك الشرطية \"إذا\" هنا"
+        },
+        "CSD U6 - If Variables - A_mb2022": {
+          "U6L6.4 - If": "أضف عبارتك الشرطية \"إذا\" هنا"
+        },
         "Course 4 Artist 4": {
           "repeat_full_circle": "أدخل عدد المرات التي يجب أن يتحرك الزومبي ليقوم بدائرة كاملة"
         },
@@ -2851,6 +2866,114 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "قطعة برمجية جديدة!"
+        },
+        "ml-customize apps-choice3": {
+          "CSD_AI_L10_predict": "أضف عبارتك الشرطية \"إذا\" هنا"
+        },
+        "ml-customize apps-choice3_2022": {
+          "CSD_AI_L10_predict": "أضف عبارتك الشرطية \"إذا\" هنا"
+        },
+        "ml-customize apps-choice3_2023": {
+          "CSD_AI_L10_predict": "أضف عبارتك الشرطية \"إذا\" هنا"
+        },
+        "ml-customize apps-choice5": {
+          "CSD_AI_L11_top": "ضع المربع البرمجي فوق هذا الخط"
+        },
+        "ml-customize apps-choice5_2022": {
+          "CSD_AI_L11_top": "ضع المربع البرمجي فوق هذا الخط"
+        },
+        "ml-customize apps-choice5_2023": {
+          "CSD_AI_L11_top": "ضع المربع البرمجي فوق هذا الخط"
+        },
+        "ml-intro app lab-book recommender 5C-2021": {
+          "CSD_AI_L7_event": "أضف مربع تشغيل الصوت PlaySound هنا"
+        },
+        "ml-intro app lab-book recommender 5C_2022": {
+          "CSD_AI_L7_event": "أضف مربع تشغيل الصوت PlaySound هنا"
+        },
+        "ml-intro app lab-book recommender 5C_2023": {
+          "CSD_AI_L7_event": "أضف مربع تشغيل الصوت PlaySound هنا"
+        },
+        "ml-intro app lab-book recommender 5E-2021": {
+          "CSD_AI_L7_top": "ضع المربع البرمجي فوق هذا الخط"
+        },
+        "ml-intro app lab-book recommender 5E_2022": {
+          "CSD_AI_L7_top": "ضع المربع البرمجي فوق هذا الخط"
+        },
+        "ml-intro app lab-book recommender 5E_2023": {
+          "CSD_AI_L7_top": "ضع المربع البرمجي فوق هذا الخط"
+        },
+        "ml-models in applab-screens-1-2021": {
+          "CSD_AI_L10_ifstatement": "أضف عبارتك الشرطية \"إذا\" هنا"
+        },
+        "ml-models in applab-screens-1_2022": {
+          "CSD_AI_L10_ifstatement": "أضف عبارتك الشرطية \"إذا\" هنا"
+        },
+        "ml-models in applab-screens-1_2023": {
+          "CSD_AI_L10_ifstatement": "أضف عبارتك الشرطية \"إذا\" هنا"
+        },
+        "ml-models in applab-screens-3-2021": {
+          "CSD_AI_L7_ifstatement": "أضف عبارتك الشرطية \"إذا\" هنا"
+        },
+        "ml-models in applab-screens-3_2022": {
+          "CSD_AI_L7_ifstatement": "أضف عبارتك الشرطية \"إذا\" هنا"
+        },
+        "ml-models in applab-screens-3_2023": {
+          "CSD_AI_L7_ifstatement": "أضف عبارتك الشرطية \"إذا\" هنا"
+        },
+        "ml-use model card-choice3": {
+          "CSD_AI_L10_predict": "أضف عبارتك الشرطية \"إذا\" هنا"
+        },
+        "ml-use model card-choice3_2022": {
+          "CSD_AI_L10_predict": "أضف عبارتك الشرطية \"إذا\" هنا"
+        },
+        "ml-use model card-choice3_2023": {
+          "CSD_AI_L10_predict": "أضف عبارتك الشرطية \"إذا\" هنا"
+        },
+        "ml-use model card-choice5": {
+          "CSD_AI_L11_top": "ضع المربع البرمجي فوق هذا الخط"
+        },
+        "ml-use model card-choice5_2022": {
+          "CSD_AI_L11_top": "ضع المربع البرمجي فوق هذا الخط"
+        },
+        "ml-use model card-choice5_2023": {
+          "CSD_AI_L11_top": "ضع المربع البرمجي فوق هذا الخط"
+        },
+        "ml-use model card-example3C-2021": {
+          "CSD_AI_L11_temp": "هذه هي ميزة درجة الحرارة"
+        },
+        "ml-use model card-example3C_2022": {
+          "CSD_AI_L11_temp": "هذه هي ميزة درجة الحرارة"
+        },
+        "ml-use model card-example3C_2023": {
+          "CSD_AI_L11_temp": "هذه هي ميزة درجة الحرارة"
+        },
+        "ml-use model card-example3D-2021": {
+          "CSD_AI_L11_time": "هذه هي ميزة وقت اليوم"
+        },
+        "ml-use model card-example3D_2022": {
+          "CSD_AI_L11_time": "هذه هي ميزة وقت اليوم"
+        },
+        "ml-use model card-example3D_2023": {
+          "CSD_AI_L11_time": "هذه هي ميزة وقت اليوم"
+        },
+        "ml-use model card-example3_EditB-2021": {
+          "CSD_AI_L11_cars": "هذه هي ميزة عدد السيارات"
+        },
+        "ml-use model card-example3_EditB_2022": {
+          "CSD_AI_L11_cars": "هذه هي ميزة عدد السيارات"
+        },
+        "ml-use model card-example3_EditB_2023": {
+          "CSD_AI_L11_cars": "هذه هي ميزة عدد السيارات"
+        },
+        "ml-use model card-example3_EditC-2021": {
+          "CSD_AI_L11_weather": "هذه هي ميزة الطقس"
+        },
+        "ml-use model card-example3_EditC_2022": {
+          "CSD_AI_L11_weather": "هذه هي ميزة الطقس"
+        },
+        "ml-use model card-example3_EditC_2023": {
+          "CSD_AI_L11_weather": "هذه هي ميزة الطقس"
         },
         "outbreak2": {
           "minitoolbox": "انقر هنا لتوسيع الكتلة.",

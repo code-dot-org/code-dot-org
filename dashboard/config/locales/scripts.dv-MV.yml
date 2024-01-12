@@ -139,6 +139,10 @@ dv:
           lesson_groups:
             csf_events:
               display_name: އިވެންޓުތައް
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: އިވެންޓުތައް
         time4cs-control-unit-1:
           lesson_groups:
             csf_events:

@@ -5207,6 +5207,10 @@ hi:
           student_description: Minecraft के आपके खुद के संस्करण में जानवरों और अन्य
             Minecraft प्राणियों को प्रोग्राम करें।
           title: Minecraft आवर ऑफ़ कोड डिज़ाइनर
+        musiclab:
+          lessons:
+            lesson-3:
+              name: फ्री प्ले
         netsim:
           title: इंटरनेट अनुकारक
         nevada-standards-aligned-fifth-grade-2023:
@@ -5957,6 +5961,23 @@ hi:
           title: 'मॉड्यूल 2: Code.org को नेविगेट करना'
         self-paced-pl-csp2-2023:
           title: 'मॉड्यूल 2: Code.org को नेविगेट करना'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: फंदे
+            lesson-4:
+              name: कंडीशनल्स
+            lesson-6:
+              name: अगले चरण
+          title: कंप्यूटर विज्ञान का परिचय
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: घटनाएँ
+            lesson-4:
+              name: व्यवहार
+            lesson-5:
+              name: अगले चरण
         soccer:
           description: अपना खुद का सॉकर गेम कोड करें
           description_short: अपना खुद का सॉकर गेम कोड करें

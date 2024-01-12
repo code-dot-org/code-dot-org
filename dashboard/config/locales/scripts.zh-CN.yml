@@ -7198,6 +7198,10 @@ zh-CN:
           name: ml-游乐场
           student_description: 头脑风暴/CSD ML/AI 单位开发的游乐区。如果将来对此有疑问，请询问丹·施耐德。
           title: 机器学习/人工智能股-CSD
+        musiclab:
+          lessons:
+            lesson-3:
+              name: 自由发挥
         netsim:
           description: 学习互联网是如何运行的
           description_short: 学习互联网是如何运行的
@@ -8120,6 +8124,33 @@ zh-CN:
           name: self-paced-pl-csp8-2021
         self-paced-pl-csp9-2021:
           name: self-paced-pl-csp9-2021
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: 第 1 课
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: 第 1 课
+            lesson-3:
+              name: 循环
+            lesson-4:
+              name: 条件语句
+            lesson-5:
+              name: 把它们放在一起
+            lesson-6:
+              name: 下一步
+          title: 计算机概论
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: 第 1 课
+            lesson-3:
+              name: 事件
+            lesson-4:
+              name: 行为
+            lesson-5:
+              name: 下一步
         self-paced-pl-k5-getting-started:
           name: self-paced-pl-k5-入门
           title: 'Code.org 入门 (K-5) '

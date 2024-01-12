@@ -4,6 +4,6 @@ title: مشارکت کل مدرسه
 
 {{ signup_button }}
 
-# Get your whole school to participate
+# تمام مدرسه تان را برای شرکت در آن همراه کنید.
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+اطلاعات مربوط به شرکت کل مدارس در ساعت کد در اینجا قرار خواهد گرفت.

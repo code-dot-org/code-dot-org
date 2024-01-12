@@ -93,7 +93,7 @@ pt:
     submit: 'Adicionar dica'
   appname: "Code.org"
   stage: "Fase"
-  stage_number: "Fase %{number}"
+  stage_number: "Lição %{number}"
   puzzle: "Desafio"
   trophies: "troféus"
   courses: 'percursos'
@@ -411,9 +411,9 @@ pt:
       team: 'Equipe'
       driver: 'Conectado'
       navigator: 'Parceiro'
-      create: ''
+      create: 'Criar'
       algebra_game: 'Álgebra'
-      applab: 'Laboratório de Aplicativo'
+      applab: 'App Lab'
       artist: 'Artista'
       artist_k1: 'Artista (Pré-leitor)'
       basketball: 'Basquete'
@@ -446,7 +446,7 @@ pt:
       starwarsblocks_hour: 'Star Wars (Blocos)'
       thebadguys: 'Os caras maus'
       loading: 'Carregando...'
-      weblab: 'Laboratório Web'
+      weblab: 'Web Lab'
       view_all: 'Veja todos os projetos...'
     popup:
       progress_for_user: "progresso de %{name}'s"
@@ -684,7 +684,7 @@ pt:
       unused: "Níveis não Utilizados"
   upsell:
     applab:
-      title: 'Laboratório de Aplicativo'
+      title: 'App Lab'
       body: "O App Lab é um ambiente de programação onde você pode criar aplicativos simples. Projete um aplicativo, programe com blocos ou JavaScript para fazê-lo funcionar, e então compartilhe seu aplicativo em apenas alguns segundos."
       body_short: "Projete um aplicativo, programe com blocos ou JavaScript para fazê-lo funcionar, e então compartilhe seu aplicativo em apenas alguns segundos."
       audience: 'A partir de 13 anos'
@@ -828,7 +828,7 @@ pt:
       audience: "Maiores de 14 anos"
       cta: "Saiba como"
     unplugged_conditionals:
-      title: "Condições"
+      title: "Condicionais"
       body: "Aprenda sobre algoritmos e declarações condicionais nesta atividade \"off-line\" usando um baralho de cartas."
     unplugged:
       title: "Aulas off-line"
@@ -1031,7 +1031,7 @@ pt:
     peer_feedback: 'Feedback de colegas'
     outdated: 'Este feedback foi adicionado para uma versão enviada anteriormente'
     review_count: 'Você deve completar %{review_count} avaliações para esta unidade'
-    peer_review: 'Revisão em grupo'
+    peer_review: 'Revisão por Pares'
   external_links:
     disclaimer: Aviso
     leaving_domain: Você está deixando este domínio para acessar um site que não é operado pela Code.org.

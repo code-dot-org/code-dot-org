@@ -1,104 +1,9 @@
 {
   "banners": {
-    "csleadersprize": {
-      "title": "",
-      "body": "",
-      "buttonText": "Zistiť viac"
-    },
-    "csjourneys-22": {
-      "title": "",
-      "body": "",
-      "buttonText": "Zistiť viac"
-    },
-    "hoc-more": {
-      "title": "",
-      "body": "Stránka Hour of Code má viac ako 100 aktivít pre všetky vekové kategórie a úroveň zručností vyvinuté Code.org, alebo našimi partnermi.",
-      "buttonText": ""
-    },
     "superhero": {
       "title": "",
       "body": "",
       "buttonText": "Ďalšie informácie"
-    },
-    "csjourneys": {
-      "title": "",
-      "body": "",
-      "buttonText": "Zistiť viac"
-    },
-    "class-schedule-survey": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "back-to-school-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Zistiť viac"
-    },
-    "teacher-apps-open-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Pridaj sa k nám"
-    },
-    "teacher-apps-closing-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Pridaj sa k nám"
-    },
-    "teacher-apps-nominate-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Nominuj učiteľa"
-    },
-    "teacher-apps-stillon-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Pridaj sa k nám"
-    },
-    "home-learning-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Zobraziť nápady na projekty"
-    },
-    "soonhoc-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "codebytes-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Zistiť viac"
-    },
-    "ai-2020": {
-      "title": "Preskúmajte umelú inteligenciu a strojové učenie",
-      "body": "",
-      "buttonText": "Zistiť viac"
-    },
-    "congrats-certificate-share": {
-      "title": "",
-      "body": "",
-      "buttonText": "Spustiť"
-    },
-    "coldplay": {
-      "title": "",
-      "body": "",
-      "buttonText": "Skús to"
-    },
-    "ai-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "Zistiť viac"
-    },
-    "ai-pl-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "Zistiť viac"
-    },
-    "state-of-cs-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
     },
     "hoc-2023": {
       "title": "Hodina kódu: Kreativita pomocou AI",
@@ -106,6 +11,11 @@
       "buttonText": "Zistiť viac"
     },
     "hoc-2023-dance-ai": {
+      "title": "",
+      "body": "",
+      "buttonText": "Zistiť viac"
+    },
+    "co-teacher": {
       "title": "",
       "body": "",
       "buttonText": "Zistiť viac"

@@ -1,12 +1,12 @@
 {
   "addFeatureButton": "Adicionar recurso",
-  "aiBotAltText": "Bot I.A.",
-  "aiBotBeamAltText": "Feixe de scanner do bot I.A.",
-  "aiBotBodyAltText": "Corpo do bot I.A.",
-  "aiBotHeadAltText": "Cabeça do bot I.A.",
+  "aiBotAltText": "IA Bot",
+  "aiBotBeamAltText": "Feixe de scanner do IA bot",
+  "aiBotBodyAltText": "Corpo do IA Bot",
+  "aiBotHeadAltText": "Cabeça do IA Bot",
   "animationDescriptionsHeader": "Descrição da animação",
-  "animationDescriptionsTesting": "O bot IA verifica as linhas de entrada de dados não rotulados do conjunto de dados teste. À medida que cada linha se move sob o feixe do bot de IA, a IA faz uma predição adicionando um valor à coluna rótulo.",
-  "animationDescriptionsTraining": "As linhas rotuladas do conjunto de dados de treinamento entram na cabeça aberta do bot I.A.",
+  "animationDescriptionsTesting": "O IA bot verifica as linhas de entrada de dados não rotulados do conjunto de dados teste. À medida que cada linha se move sob o feixe do IA bot, a IA faz uma predição adicionando um valor à coluna rótulo.",
+  "animationDescriptionsTraining": "As linhas rotuladas do conjunto de dados de treinamento entram na cabeça aberta do IA bot.",
   "columnDetailsInformation": "Informações da coluna",
   "columnDetailsMaximumValue": "max",
   "columnDetailsMinimumValue": "min",
@@ -550,7 +550,7 @@
           "id": "ler versus TV"
         }
       },
-      "name": "Pesquisa do Isaac's Club"
+      "name": "Pesquisa de Clube do Isaac"
     },
     "club_sparse_toy": {
       "card": {
@@ -1408,11 +1408,11 @@
       "fields": {
         "Ageing": {
           "description": "Tenho medo de envelhecer",
-          "id": "Envelhecer"
+          "id": "Envelhecimento"
         },
         "Dangerous dogs": {
-          "description": "Tenho medo de cães ferozes",
-          "id": "Cães ferozes"
+          "description": "Tenho medo de cães perigosos",
+          "id": "Cães perigosos"
         },
         "Darkness": {
           "description": "Eu tenho medo da escuridão",
@@ -1578,11 +1578,11 @@
       },
       "fields": {
         "cheese": {
-          "description": "O naan tem queijo?",
+          "description": "O pão indiano tem queijo?",
           "id": "queijo"
         },
         "cherries": {
-          "description": "O naan tem cereja?",
+          "description": "O pão indiano tem cereja?",
           "id": "cerejas"
         },
         "chicken": {
@@ -1590,7 +1590,7 @@
           "id": "galinha"
         },
         "garlic": {
-          "description": "O naan tem alho?",
+          "description": "O pão indiano tem alho?",
           "id": "alho"
         },
         "lamb": {
@@ -1598,7 +1598,7 @@
           "id": "cordeiro"
         },
         "nuts": {
-          "description": "O naan tem nozes?",
+          "description": "O pão indiano tem nozes?",
           "id": "nozes"
         },
         "onion": {
@@ -1606,15 +1606,15 @@
           "id": "cebola"
         },
         "potatoes": {
-          "description": "O naan tem batata?",
+          "description": "O pão indiano tem batata?",
           "id": "batatas"
         },
         "preference": {
-          "description": "Você gosta ou não gosta do naan?",
+          "description": "Você gosta ou não gosta de pão indiano?",
           "id": "preferência"
         },
         "shaved coconut": {
-          "description": "O naan tem coco raspado?",
+          "description": "O pão indiano tem coco raspado?",
           "id": "coco raspado"
         }
       },
@@ -2311,7 +2311,7 @@
         },
         "absences": {
           "description": "Número de faltas escolares.",
-          "id": "ausências"
+          "id": "Faltas\n"
         },
         "activities": {
           "description": "Atividades extracurriculares.",
@@ -2462,7 +2462,7 @@
         },
         "Ageing": {
           "description": "Tenho medo de envelhecer",
-          "id": "Envelhecer"
+          "id": "Envelhecimento"
         },
         "Alcohol": {
           "description": "Hábitos à bebida",
@@ -2565,8 +2565,8 @@
           "id": "Dança"
         },
         "Dangerous dogs": {
-          "description": "Tenho medo de cães ferozes",
-          "id": "Cães ferozes"
+          "description": "Tenho medo de cães perigosos",
+          "id": "Cães perigosos"
         },
         "Darkness": {
           "description": "Eu tenho medo da escuridão",
@@ -3081,7 +3081,7 @@
     "thanksgiving": {
       "card": {
         "context": {
-          "potentialMisuses": "Tente adivinhar de que região alguém é apenas com base nos alimentos que eles comem no Dia de Ação de Graças.",
+          "potentialMisuses": "Tentando adivinhar de que região alguém é apenas com base nos alimentos que eles comem no Dia de Ação de Graças.",
           "potentialUses": "Faça uma predição de se alguém terá uma comida específica para o Dia de Ação de Graças, com base na região do país de origem."
         },
         "description": "Uma pesquisa da FiveThrityEight, perguntando às pessoas nos Estados Unidos quais alimentos elas comem no jantar de Ação de Graças."
@@ -3188,7 +3188,7 @@
           "id": "Prato principal"
         },
         "Main dish cooking method": {
-          "description": "Como o prato principal foi feito, por exemplo, assado, torrado, frito.",
+          "description": "Como o prato principal foi cozido, por exemplo, assado, torrado, frito.",
           "id": "Método de cozimento do prato principal"
         },
         "Mashed potatoes": {
@@ -3220,8 +3220,8 @@
           "id": "Abóbora"
         },
         "Stuffing base": {
-          "description": "Se o mexido foi servido, qual era seu ingrediente principal, ou nenhum, se o mexido não foi servido.",
-          "id": "Base de mexido"
+          "description": "Se o recheio foi servido, qual era seu ingrediente principal, ou nenhum se nenhum recheio foi servido.",
+          "id": "Base do recheio"
         },
         "Sweet potato pie": {
           "description": "Se a torta de batata-doce foi servida ou não como sobremesa.",
@@ -3354,7 +3354,7 @@
   "potentialUsesDescription": "Descreva o problema que você acha que esse modelo poderia ajudar a resolver ou um aplicativo em potencial que alguém poderia criar com esse modelo.",
   "potentialUsesLabel": "Uso pretendido",
   "potentialUsesPlaceholder": "Escreva uma breve descrição.",
-  "predictAIBotPredicts": "A I.A. prediz",
+  "predictAIBotPredicts": "IA prediz",
   "predictButton": "Previsão",
   "predictHeader": "Experimente!",
   "predictPlaceholder": "mínimo {minimum}, máximo {maximum}",

@@ -6577,6 +6577,10 @@ uk:
           student_description: Запрограмуй тварин та інших істот Майнкрафт у власній
             версії цієї гри.
           title: Година коду від Майнкрафт - Розробник
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Вільна гра
         netsim:
           description: Дізнатися про те, як працює Інтернет
           description_short: Дізнатися про те, як працює Інтернет
@@ -6974,6 +6978,23 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Ласкаво просимо
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Цикли
+            lesson-4:
+              name: Умови
+            lesson-6:
+              name: Наступні Кроки
+          title: Вступ до інформатики
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Події
+            lesson-4:
+              name: Поведінка
+            lesson-5:
+              name: Наступні Кроки
         soccer:
           description: Створіть футбольну гру
           description_short: Створіть футбольну гру
