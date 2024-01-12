@@ -5,8 +5,8 @@ module CiBuildMetrics
   # @param [String] commit_hash
   # @param [Symbol] status - :start, :success, :failed
   def write_build_status(environment, commit_hash, status)
-    event = "#{environment}_#{status}"
     if environment == :staging
+      event = "#{environment}_#{status}"
       Metrics.write_metric(event, commit_hash, Metrics::AUTOMATIC)
     end
   end
