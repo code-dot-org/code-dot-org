@@ -12,7 +12,6 @@ const DEFAULT_NUM_RANDOM_BOTTOM_OPTIONS = 20;
  * the score for each returned value.
  * @param {array} selectedEmojis: the list of three emojis the user selected
  * @param {EffectsQuality} quality: whether we want good or bad scoring effects
- * @param {number} numOptions: explicitly specify number of results to randomly choose from (used only for testing)
  * @returns {GeneratedEffect} an object containing the effects that were chosen, for example:
  * {
  *   "backgroundEffect": "sparkles",
@@ -22,8 +21,7 @@ const DEFAULT_NUM_RANDOM_BOTTOM_OPTIONS = 20;
  */
 export function chooseEffects(
   selectedEmojis: string[],
-  quality: EffectsQuality,
-  numOptions?: number
+  quality: EffectsQuality
 ): GeneratedEffect {
   const chosenEffects: GeneratedEffect = {
     [FieldKey.BACKGROUND_EFFECT]: '',
@@ -44,13 +42,8 @@ export function chooseEffects(
     );
     const topOrBottomOptions =
       quality === EffectsQuality.GOOD
-        ? allSortedOptions.slice(
-            0,
-            numOptions || DEFAULT_NUM_RANDOM_TOP_OPTIONS
-          )
-        : allSortedOptions.slice(
-            -1 * (numOptions || DEFAULT_NUM_RANDOM_BOTTOM_OPTIONS)
-          );
+        ? allSortedOptions.slice(0, DEFAULT_NUM_RANDOM_TOP_OPTIONS)
+        : allSortedOptions.slice(-DEFAULT_NUM_RANDOM_BOTTOM_OPTIONS);
     const selectedOutputOption =
       topOrBottomOptions[Math.floor(Math.random() * topOrBottomOptions.length)];
     chosenEffects[field] = selectedOutputOption[1];
