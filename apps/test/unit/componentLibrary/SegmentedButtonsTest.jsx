@@ -31,7 +31,7 @@ describe('Design System - Segmented Buttons', () => {
     expect(valuesMap.label || 'label').to.equal('label');
   });
 
-  it('SemgentedButtons - changes selected button on click', async () => {
+  it('SegmentedButtons - changes selected button on click', async () => {
     const user = userEvent.setup();
     const spyOnChange = sinon.spy();
     const onChange = value => {
@@ -99,6 +99,8 @@ describe('Design System - Segmented Buttons', () => {
   it("SegmentedButtons - renders disabled button, doesn't change on click", async () => {
     const user = userEvent.setup();
     const spyOnChange = sinon.spy();
+    // set segmentedButton default value
+    onSegmentedButtonsChange('label', 'label');
     const onChange = value => {
       onSegmentedButtonsChange('label', value);
       spyOnChange(value);
@@ -121,7 +123,7 @@ describe('Design System - Segmented Buttons', () => {
 
     expect(segmentedButton1).to.exist;
     expect(segmentedButton2).to.exist;
-    expect(valuesMap.label || 'label').to.equal('label');
+    expect(valuesMap.label).to.equal('label');
 
     await user.click(segmentedButton2);
 
@@ -140,7 +142,7 @@ describe('Design System - Segmented Buttons', () => {
     segmentedButton1 = screen.getByText('Label');
 
     expect(spyOnChange).to.not.have.been.called;
-    expect(valuesMap.label || 'label').to.equal('label');
+    expect(valuesMap.label).to.equal('label');
 
     await user.click(segmentedButton1);
 

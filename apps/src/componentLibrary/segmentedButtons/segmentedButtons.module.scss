@@ -87,7 +87,7 @@
   // Pressed styles
   &:active {
     background-color: $light_primary_700;
-    // Important here is needed to rewrite line 3320, app/assets/stylesheets/application.scss */
+    // Important here is needed to rewrite line 3328, app/assets/stylesheets/application.scss */
     border-color: $light_primary_500 !important;
     color: $light_white;
   }
