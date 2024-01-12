@@ -8,6 +8,7 @@
   - else
     = link_to @application.regional_partner.name, CDO.code_org_url('educate/professional-learning/contact-regional-partner', CDO.default_scheme)
 - else
+  -# Keep this signature consistent with the default notification email in teacher_application_mailer.rb
   Nikki Navta
   %br
   = mail_to 'teacher@code.org'

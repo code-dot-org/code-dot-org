@@ -46,6 +46,5 @@ function monitorButtonPresses () {
     textAlign(RIGHT, CENTER);
     text("E", compassX + midpoint, compassY);
   }
-  drawSprites();
 }
 other.push(monitorButtonPresses);
