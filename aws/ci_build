@@ -106,7 +106,7 @@ def main
       message = "<b>#{projects}</b> built." + time_message + log_link
       ChatClient.log message, color: 'green'
 
-      CiBuildCommon.write_build_status rack_env, commit_hash_short, :success
+      CiBuildMetrics.write_build_status rack_env, commit_hash_short, :success
 
       if CDO.test_system?
         ChatClient.log "<@#{DevelopersTopic.dotd}> DTT finished", color: 'purple'
@@ -141,7 +141,7 @@ def main
       ChatClient.message 'server operations', message, color: 'red', notify: 1
       ChatClient.message 'server operations', commit_url, color: 'gray', message_format: 'text'
 
-      CiBuildCommon.write_build_status rack_env, commit_hash_short, :failed
+      CiBuildMetrics.write_build_status rack_env, commit_hash_short, :failed
 
       if CDO.test_system?
         DevelopersTopic.set_dtt 'no (robo-DTT failed)'
