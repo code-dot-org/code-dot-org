@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-12 21:28:48 UTC",
+    "serialized_at": "2024-01-12 22:22:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -56,8 +56,8 @@
       "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
-        "overview": "**You will:**\n\n* Use a paper prototype to test the design of an app.\n* Explore where and how students will use paper prototypes throughout The Design Process unit. \n\n**Suggested time:** 25 minutes",
-        "student_overview": "**You will:**\n\n* Use a paper prototype to test the design of an app.\n* Explore where and how students will use paper prototypes throughout The Design Process unit. \n\n**Suggested time:** 25 minutes"
+        "overview": "**You will:**\n\n* Use a paper prototype to test the design of an app.\n* Explore where and how students will use paper prototypes throughout The Design Process unit. \n* Review the first end-of-chapter project for Chapter 1.\n\n**Suggested time:** 35 minutes",
+        "student_overview": "**You will:**\n\n* Use a paper prototype to test the design of an app.\n* Explore where and how students will use paper prototypes throughout The Design Process unit. \n* Review the first end-of-chapter project for Chapter 1.\n\n**Suggested time:** 35 minutes"
       },
       "seeding_key": {
         "lesson.key": "Use a paper prototype",
@@ -73,8 +73,8 @@
       "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
-        "overview": "**You will:**\n\n* Use design mode in App Lab to create a digital prototype.\n*  Create events that detect and respond to user input.\n\n**Suggested time:** 40 minutes",
-        "student_overview": "**You will:**\n\n* Use design mode in App Lab to create a digital prototype.\n*  Create events that detect and respond to user input.\n\n**Suggested time:** 40 minutes"
+        "overview": "**You will:**\n\n* Use design mode in App Lab to create a digital prototype.\n*  Create events that detect and respond to user input.\n* Review the end-of-unit project for Chapter 2.\n\n**Suggested time:** XX minutes",
+        "student_overview": "**You will:**\n\n* Use design mode in App Lab to create a digital prototype.\n*  Create events that detect and respond to user input.\n* Review the end-of-unit project for Chapter 2.\n\n**Suggested time:** XX minutes"
       },
       "seeding_key": {
         "lesson.key": "Build a digital prototype in App Lab",
@@ -105,6 +105,7 @@
       "key": "2adde84e-a8b5-4825-8a4d-bf8a63ea0bce",
       "position": 1,
       "properties": {
+        "duration": 15
       },
       "seeding_key": {
         "lesson_activity.key": "2adde84e-a8b5-4825-8a4d-bf8a63ea0bce",
@@ -117,6 +118,7 @@
       "key": "d8265b51-015a-4f59-ad54-30df855cb88f",
       "position": 1,
       "properties": {
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "d8265b51-015a-4f59-ad54-30df855cb88f",
@@ -857,6 +859,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Preparing to Build a Digital Prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-U4SelfPaced_PaperPrototypePrep"
+        ],
+        "lesson.key": "Build a digital prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit4-2-2023",
+        "activity_section.key": "3e5fccaf-1d7e-4e23-a513-339f8ce291c0"
+      },
+      "level_keys": [
+        "VPL-CSD-U4SelfPaced_PaperPrototypePrep"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-csd-explore ui-2_self-paced-4"
         ],
@@ -877,9 +901,9 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 3,
-      "activity_section_position": 2,
+      "chapter": 24,
+      "position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -902,9 +926,9 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 4,
-      "activity_section_position": 3,
+      "chapter": 25,
+      "position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -927,9 +951,9 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 5,
-      "activity_section_position": 4,
+      "chapter": 26,
+      "position": 6,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -952,9 +976,9 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 6,
-      "activity_section_position": 5,
+      "chapter": 27,
+      "position": 7,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -977,9 +1001,9 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 7,
-      "activity_section_position": 6,
+      "chapter": 28,
+      "position": 8,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1002,8 +1026,8 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 8,
+      "chapter": 29,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1027,8 +1051,8 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 9,
+      "chapter": 30,
+      "position": 10,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1052,8 +1076,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 10,
+      "chapter": 31,
+      "position": 11,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1077,8 +1101,8 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 11,
+      "chapter": 32,
+      "position": 12,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -1102,8 +1126,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 12,
+      "chapter": 33,
+      "position": 13,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -1127,8 +1151,8 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 13,
+      "chapter": 34,
+      "position": 14,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -1152,8 +1176,8 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 14,
+      "chapter": 35,
+      "position": 15,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
@@ -1177,8 +1201,8 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 15,
+      "chapter": 36,
+      "position": 16,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1202,8 +1226,8 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 16,
+      "chapter": 37,
+      "position": 17,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1227,8 +1251,8 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 17,
+      "chapter": 38,
+      "position": 18,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1252,8 +1276,8 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 18,
+      "chapter": 39,
+      "position": 19,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -1277,8 +1301,8 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 19,
+      "chapter": 40,
+      "position": 20,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -1302,7 +1326,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1327,7 +1351,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1352,7 +1376,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -1377,7 +1401,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1653,6 +1677,18 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit4-2-2023",
         "activity_section.key": "b434ddb6-194c-4872-950c-ccd26d30f787"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-U4SelfPaced_PaperPrototypePrep",
+        "script_level.level_keys": [
+          "VPL-CSD-U4SelfPaced_PaperPrototypePrep"
+        ],
+        "lesson.key": "Build a digital prototype in App Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit4-2-2023",
+        "activity_section.key": "3e5fccaf-1d7e-4e23-a513-339f8ce291c0"
       }
     },
     {
