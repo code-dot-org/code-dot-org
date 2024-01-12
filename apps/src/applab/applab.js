@@ -17,7 +17,7 @@ import dom from '../dom';
 import * as utils from '../utils';
 import * as dropletConfig from './dropletConfig';
 import {getDatasetInfo} from '../storage/dataBrowser/dataUtils';
-import {initFirebaseStorage} from '../storage/firebaseStorage'; // TODO: unfirebase
+import {initDatablockStorage as initFirebaseStorage} from '../storage/datablockStorage'; // TODO: unfirebase
 import {getColumnsRef, onColumnsChange} from '../storage/firebaseMetadata'; // TODO: unfirebase
 import {
   getProjectDatabase, // TODO: unfirebase
