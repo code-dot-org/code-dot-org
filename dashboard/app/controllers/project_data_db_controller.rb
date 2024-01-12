@@ -142,5 +142,8 @@ class ProjectDataDbController < ApplicationController
     # rescue ArgumentError, OpenSSL::Cipher::CipherError
     #   # continue as normal, as we only use this value for stats.
     # end
+
+    # For performance, we should probably validate this once, and then set a cookie
+    # on the user session, similar to how authenticate_user works
   end
 end
