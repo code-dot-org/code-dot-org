@@ -208,7 +208,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       <div>
         <div style={styles.standardPadding}>
           <ValidationStep
-            stepStatus={Status.SUCCEEDED}
+            stepStatus={Status.SUCCEEDEDTEAL}
             stepName="You teach at an eligible school!"
           />
           {i18n.afeCompleteTheFormBelow()}
@@ -405,7 +405,6 @@ const styles = {
     margin: '1rem 0',
   },
   button: {
-    backgroundColor: color.orange,
     color: color.white,
   },
   standardPadding: {

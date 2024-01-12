@@ -7,6 +7,7 @@ export const Status = {
   WAITING: 'WAITING',
   ATTEMPTING: 'ATTEMPTING',
   SUCCEEDED: 'SUCCEEDED',
+  SUCCEEDEDTEAL: 'SUCCEEDED',
   FAILED: 'FAILED',
   CELEBRATING: 'CELEBRATING',
   UNKNOWN: 'UNKNOWN',
@@ -101,6 +102,8 @@ function styleFor(stepStatus) {
     case Status.ATTEMPTING:
     case Status.WAITING:
       return {color: color.light_gray};
+    case Status.SUCCEEDEDTEAL:
+      return {color: color.teal, fontWeight: 500};
     case Status.SUCCEEDED:
     case Status.CELEBRATING:
       return {color: color.realgreen};
@@ -136,6 +139,7 @@ function iconFor(stepStatus) {
         />
       );
     case Status.SUCCEEDED:
+    case Status.SUCCEEDEDTEAL:
       return (
         <FontAwesome icon="check-circle" className="fa-fw" style={iconStyle} />
       );
