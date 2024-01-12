@@ -1,5 +1,5 @@
 require 'cdo/rake_utils'
-
+require_relative 'ci_build_metrics'
 module CiBuilder
   require_relative '../lib/cdo/rake_utils'
   extend self
@@ -53,17 +53,6 @@ module CiBuilder
 
   def install_dependencies
     RakeUtils.bundle_install
-  end
-
-  # Log details of a build to metrics database.
-  # @param [Symbol] environment
-  # @param [String] commit_hash
-  # @param [Symbol] status - :start, :success, :failed
-  def write_build_status(environment, commit_hash, status)
-    event = "#{environment}_#{status}"
-    if environment == :staging
-      Metrics.write_metric(event, commit_hash, Metrics::AUTOMATIC)
-    end
   end
 
   def notify_honeybadger

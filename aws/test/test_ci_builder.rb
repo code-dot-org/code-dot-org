@@ -2,7 +2,7 @@ require_relative '../../shared/test/test_helper'
 require_relative '../ci_builder'
 require 'cdo/rake_utils'
 
-class CiBuilderTest < Minitest::Test
+class TestCiBuilder < Minitest::Test
   def test_update_repository_with_updates
     RakeUtils.stubs(:git_fetch)
     RakeUtils.stubs(:git_update_count).returns(5)
@@ -30,7 +30,8 @@ class CiBuilderTest < Minitest::Test
     RakeUtils.stubs(:rake_stream_output).with('ci').returns(0)
     CiBuilder.stubs(:validate_git_revision)
     FileUtils.stubs(:rm).with(CiBuilder::BUILD_STARTED)
-    assert_equal 0, CiBuilder.execute_ci_task
+    result = CiBuilder.send(:execute_ci_task)
+    assert_equal 0, result
   end
 
   def test_execute_ci_task_failure
