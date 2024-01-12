@@ -12,7 +12,7 @@ provisioner:
     node_name: test_cdo-apps
     environment: adhoc
 platforms:
-  - name: ubuntu-18.04
+  - name: ubuntu-20.04
     run_list:
       - recipe[apt]
 suites:
