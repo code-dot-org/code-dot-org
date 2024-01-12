@@ -14441,3 +14441,16 @@ en:
           student_description: "In this unit, you expand on the algorithms you have learned to explore common approaches to searching and sorting 1D and 2D arrays and `ArrayList`s. In the process, you analyze and compare the efficiencies of these algorithms using statement execution counts and further develop problem-solving skills to decompose complex problems. Throughout the unit, you apply your programming and software engineering skills to plan and develop a creative coding project using the console that incorporates object-oriented design, data structures, and algorithmic thinking. With the knowledge and skills acquired throughout the year, you consider the privacy and security of programs and users.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p>\n\n* Explain the functionality of standard searching and sorting algorithms\n\n* Analyze the efficiency of searching and sorting algorithms using execution counts\n\n* Implement algorithms involving multiple 1D or 2D arrays or `ArrayList`s\n    </div>\n</details>"
           description_short: ''
           description_audience: ''
+        csa9-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Review and Practice
+            lessonGroup-3:
+              display_name: Mock Exams
+            lessonGroup-4:
+              display_name: Sandboxes
+          title: AP Exam Review and Practice
+          description: This unit prepares students for the AP CSA Exam by reviewing key concepts, practicing multiple-choice and free response questions, and strengthening test-taking strategies. Students identify strengths and areas of improvement to create individualized study plans to focus their practice and self-assess their progress.
+          student_description: This unit prepares you for the AP CSA Exam by reviewing key concepts, practicing multiple-choice and free response questions, and strengthening test-taking strategies. You identify strengths and areas of improvement to create individualized study plans to focus you practice and self-assess your progress.
+          description_short: Students prepare for the AP CSA Exam by practicing strategies for the multiple-choice and free response questions.
+          description_audience: ''
