@@ -70,16 +70,17 @@ theme: responsive
 
 Để có trải nghiệm tốt nhất với tất cả nội dung Code.org, chúng tôi khuyên bạn nên tham khảo ý kiến của bộ phận IT trường học hoặc học khu để đảm bảo các trang web sau được phép truy cập và không bị chặn.
 
-| Quyền ưu tiên                                                 | URL                                                                                                        |
-| ------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **Bắt buộc**                                                  | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **Không bắt buộc**                                            | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **Sử dụng video đăng trên YouTube (Chế độ bảo mật nâng cao)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **Sử dụng video lưu trên Code.org**                           | `https://videos.code.org`                                                                                  |
-| **Sử dụng Trình mô phỏng Internet**                           | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **Sử dụng Web Lab**                                           | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **Sử dụng Nút Chia sẻ Lớp học của Google**                    | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**                                   | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| Quyền ưu tiên                                                                                                | URL                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
+| **Bắt buộc**                                                                                                 | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **Để đảm bảo hệ thống CAPTCHA có thể phân biệt việc sử dụng của bạn với hoạt động gian lận tự động (“bot”)** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **Không bắt buộc**                                                                                           | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **Sử dụng video đăng trên YouTube (Chế độ bảo mật nâng cao)**                                                | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Sử dụng video lưu trên Code.org**                                                                          | `https://videos.code.org`                                                                                  |
+| **Sử dụng Trình mô phỏng Internet**                                                                          | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **Sử dụng Web Lab**                                                                                          | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Sử dụng Nút Chia sẻ Lớp học của Google**                                                                   | `https://apis.google.com`                                                                                  |
+| **Cách sử dụng bộ dữ liệu App Lab**                                                                          | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Thông tin hỗ trợ thiết bị di động và máy tính bảng
 
@@ -104,7 +105,7 @@ Trước khi bắt đầu các khóa học trực tuyến của Code.org, hãy t
 
 
 <!--
-The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
 .md.erb without breaking i18n sync, this file should include that partial instead.
 -->
 <figure style="width:100%; height: 100%; margin: 0 auto;">
