@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-11 23:03:51 UTC",
+    "serialized_at": "2024-01-12 21:28:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -685,6 +685,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod4-paperProtocolTesting-video_self-paced-4"
+        ],
         "progression": "Use a Paper Prototype to Test an App"
       },
       "bonus": false,
@@ -732,6 +735,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-Unit4SelfPaced_Lesson-7"
+        ],
         "progression": "Chapter 1 Project - Paper Prototype"
       },
       "bonus": false,
@@ -754,6 +760,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-U4SelfPaced_Project Video"
+        ],
         "progression": "Chapter 1 Project - Paper Prototype"
       },
       "bonus": false,
@@ -773,10 +782,10 @@
     {
       "chapter": 19,
       "position": 11,
-      "activity_section_position": 3,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Chapter 1 Project - Paper Prototype"
+        "progression": "Section Wrap Up"
       },
       "bonus": false,
       "seeding_key": {
@@ -786,7 +795,7 @@
         "lesson.key": "Use a paper prototype",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit4-2-2023",
-        "activity_section.key": "7a89f6b2-a5b0-481b-af4d-4d0fb63c773b"
+        "activity_section.key": "c1359a6f-609a-4ce4-bb80-b6985fa2cf0b"
       },
       "level_keys": [
         "VPL-CSD-U4SelfPaced-Chapter1Matching"
@@ -795,9 +804,12 @@
     {
       "chapter": 20,
       "position": 12,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD_U4SelfPaced_Lesson2WrapUp"
+        ],
         "progression": "Section Wrap Up"
       },
       "bonus": false,
@@ -845,6 +857,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-csd-explore ui-2_self-paced-4"
+        ],
         "progression": "Preparing to Build a Digital Prototype"
       },
       "bonus": false,
@@ -867,6 +882,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-uiElements-c4u-matching_self-paced-4"
+        ],
         "progression": "Preparing to Build a Digital Prototype"
       },
       "bonus": false,
@@ -889,6 +907,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned-Namin_self-paced-4"
+        ],
         "progression": "Preparing to Build a Digital Prototype"
       },
       "bonus": false,
@@ -911,6 +932,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned-track_self-paced-4"
+        ],
         "progression": "Preparing to Build a Digital Prototype"
       },
       "bonus": false,
@@ -933,6 +957,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned-testi_self-paced-4"
+        ],
         "progression": "Preparing to Build a Digital Prototype"
       },
       "bonus": false,
@@ -955,6 +982,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned_self-paced-4"
+        ],
         "progression": "Preparing to Build a Digital Prototype"
       },
       "bonus": false,
@@ -1598,7 +1628,7 @@
         "lesson.key": "Use a paper prototype",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csd-unit4-2-2023",
-        "activity_section.key": "7a89f6b2-a5b0-481b-af4d-4d0fb63c773b"
+        "activity_section.key": "c1359a6f-609a-4ce4-bb80-b6985fa2cf0b"
       }
     },
     {
