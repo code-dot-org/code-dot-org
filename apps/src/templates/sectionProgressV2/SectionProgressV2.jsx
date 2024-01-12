@@ -53,13 +53,10 @@ SectionProgressV2.propTypes = {
   isRefreshingProgress: PropTypes.bool.isRequired,
 };
 
-export default connect(
-  state => ({
-    scriptId: state.unitSelection.scriptId,
-    sectionId: state.teacherSections.selectedSectionId,
-    scriptData: getCurrentUnitData(state),
-    isLoadingProgress: state.sectionProgress.isLoadingProgress,
-    isRefreshingProgress: state.sectionProgress.isRefreshingProgress,
-  }),
-  dispatch => ({})
-)(SectionProgressV2);
+export default connect(state => ({
+  scriptId: state.unitSelection.scriptId,
+  sectionId: state.teacherSections.selectedSectionId,
+  scriptData: getCurrentUnitData(state),
+  isLoadingProgress: state.sectionProgress.isLoadingProgress,
+  isRefreshingProgress: state.sectionProgress.isRefreshingProgress,
+}))(SectionProgressV2);
