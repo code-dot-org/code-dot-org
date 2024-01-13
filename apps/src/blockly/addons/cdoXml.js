@@ -1,5 +1,4 @@
 import {BLOCK_TYPES, PROCEDURE_DEFINITION_TYPES} from '../constants';
-import {partitionBlocksByType} from './cdoUtils';
 import {FALSEY_DEFAULT, TRUTHY_DEFAULT, readBooleanAttribute} from '../utils';
 
 // The user created attribute needs to be read from XML start blocks as 'usercreated'.
@@ -51,10 +50,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
    * @returns {Object[]} An array of objects containing the created blocks and their positions.
    */
   blocklyWrapper.Xml.domToBlockSpace = function (workspace, xml) {
-    const partitionedBlockElements = getPartitionedBlockElements(
-      xml,
-      PROCEDURE_DEFINITION_TYPES
-    );
+    const partitionedBlockElements = getBlockElements(xml);
     const blocks = [];
     // To position the blocks, we first render them all to the Block Space
     //  and parse any X or Y coordinates set in the XML. Then, we store
@@ -85,8 +81,6 @@ export default function initializeBlocklyXml(blocklyWrapper) {
   };
 
   blocklyWrapper.Xml.blockSpaceToDom = blocklyWrapper.Xml.workspaceToDom;
-
-  blocklyWrapper.Xml.createBlockOrderMap = createBlockOrderMap;
 }
 
 /**
@@ -381,33 +375,7 @@ function makeLockedBlockImmovable(block) {
 }
 
 /**
- * Creates a block order map for the given XML by partitioning the block
- * elements based on their types and mapping their partitioned positions to
- * their original positions in the XML. This is used to reset a list of
- * blocks into their original order before re-positioning blocks on the
- * rendered workspace.
- *
- * @param {Element} xml - The XML element containing block elements to create the order map.
- * @returns {Map} A map with partitioned block index as key and original index in the XML as value.
- */
-export function createBlockOrderMap(xml) {
-  // Convert XML to an array of block elements
-  const blockElements = Array.from(xml.childNodes).filter(
-    node => node.nodeName.toLowerCase() === 'block'
-  );
-  const partitionedBlockElements = getPartitionedBlockElements(
-    xml,
-    PROCEDURE_DEFINITION_TYPES
-  );
-  const blockOrderMap = new Map();
-  blockElements.forEach((element, index) => {
-    blockOrderMap.set(partitionedBlockElements.indexOf(element), index);
-  });
-  return blockOrderMap;
-}
-
-/**
- * Extracts block elements from the provided XML and returns them partitioned based on their types.
+ * Extracts block elements from the provided XML and returns them.
  * If no block elements are found in the XML, an empty array is returned.
  *
  * @param {Element} xml - The XML element containing block elements.
@@ -415,7 +383,7 @@ export function createBlockOrderMap(xml) {
  *    These types are moved to the front of the list while maintaining the order of non-prioritized types.
  * @returns {Element[]} An array of partitioned block elements or an empty array if no blocks are present.
  */
-export function getPartitionedBlockElements(xml, prioritizedBlockTypes) {
+export function getBlockElements(xml) {
   // Convert XML to an array of block elements
   const blockElements = Array.from(xml.querySelectorAll('xml > block'));
 
@@ -424,12 +392,5 @@ export function getPartitionedBlockElements(xml, prioritizedBlockTypes) {
     return [];
   }
 
-  // Procedure definitions should be loaded ahead of call
-  // blocks, so that the procedures map is updated correctly.
-  const partitionedBlockElements = partitionBlocksByType(
-    blockElements,
-    prioritizedBlockTypes,
-    true
-  );
-  return partitionedBlockElements;
+  return blockElements;
 }

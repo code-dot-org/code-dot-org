@@ -98,18 +98,16 @@ export function addPositionsToState(xmlBlocks, blockIdMap) {
 /**
  * Position blocks on a workspace (if they do not already have positions)
  * @param {Blockly.Workspace} workspace - the current Blockly workspace
- * @param {Map} [blockOrderMap] - specifies an original order of blocks from XML
  */
-export function positionBlocksOnWorkspace(workspace, blockOrderMap) {
+export function positionBlocksOnWorkspace(workspace) {
   if (!workspace.rendered) {
     return;
   }
 
   const topBlocks = workspace.getTopBlocks(SORT_BY_POSITION);
-  const orderedBlocks = reorderBlocks(topBlocks, blockOrderMap);
   // Handles a rare case when immovable setup/when run blocks are not at the top of the workspace
   const orderedBlocksSetupFirst = partitionBlocksByType(
-    orderedBlocks,
+    topBlocks,
     SETUP_TYPES,
     false
   );
@@ -262,26 +260,6 @@ export const resetEditorWorkspaceBlockConfig = (blocks = []) =>
     // before we save the block data to the project source
     block.deletable = block.extraState?.initialDeleteConfig;
   });
-
-/**
- * Reorders an array of blocks based on the given blockOrderMap.
- * If the blockOrderMap is invalid (null or size mismatch), returns the original array.
- *
- * @param {Array} blocks - The array of blocks to be reordered.
- * @param {Map} blockOrderMap - A map with block index as key and the desired order index as value.
- * @returns {Array} The reordered array of blocks or the original array if blockOrderMap is invalid.
- */
-function reorderBlocks(blocks, blockOrderMap) {
-  if (!blockOrderMap || blockOrderMap.size !== blocks.length) {
-    return blocks;
-  }
-  const orderedBlocks = new Array(blocks.length);
-  blocks.forEach((block, index) => {
-    orderedBlocks[blockOrderMap.get(index)] = block;
-  });
-
-  return orderedBlocks;
-}
 
 /**
  * Combines the serialization of the main and hidden workspaces (when hidden workspace is present)

@@ -34,14 +34,14 @@ export function loadBlocksToWorkspace(
   source,
   includeHiddenDefinitions = true
 ) {
-  const {mainSource, hiddenDefinitionSource, blockOrderMap} =
+  const {mainSource, hiddenDefinitionSource} =
     prepareSourcesForWorkspaces(source);
   // We intentionally load hidden definitions before other blocks on the main workspace.
   if (includeHiddenDefinitions) {
     loadHiddenDefinitionBlocksToWorkspace(hiddenDefinitionSource);
   }
   Blockly.serialization.workspaces.load(mainSource, workspace);
-  positionBlocksOnWorkspace(workspace, blockOrderMap);
+  positionBlocksOnWorkspace(workspace);
 }
 
 /**
@@ -66,12 +66,11 @@ function loadHiddenDefinitionBlocksToWorkspace(hiddenDefinitionSource) {
  * Split source into appropriate serialization objects for the main and the hidden workspaces for loading.
  * Which blocks are moved depends on whether the modal function editor is enabled.
  * @param {string} source - workspace serialization, either XML or JSON
- * @returns {mainSource: Object, hiddenDefinitionSource: Object, blockOrderMap: Object}
+ * @returns {mainSource: Object, hiddenDefinitionSource: Object}
  *  mainSource and hiddenDefinitionSource are Blockly serialization objects.
- *  blockOrderMap is only used when source is XML, and is a map of blocks to their positions on the workspace.
  */
 function prepareSourcesForWorkspaces(source) {
-  let {parsedSource, blockOrderMap} = parseSource(source);
+  let {parsedSource} = parseSource(source);
   const procedureTypesToHide = [BLOCK_TYPES.behaviorDefinition];
   if (Blockly.useModalFunctionEditor) {
     procedureTypesToHide.push(BLOCK_TYPES.procedureDefinition);
@@ -80,29 +79,27 @@ function prepareSourcesForWorkspaces(source) {
     parsedSource,
     procedureTypesToHide
   );
-  return {mainSource, hiddenDefinitionSource, blockOrderMap};
+  return {mainSource, hiddenDefinitionSource};
 }
 
 /**
  * Convert source to parsed json objects. If source was xml, convert to json before parsing.
  * Also create a block order map if source was xml, which will allow us to correctly place blocks on the workspace.
  * @param {string} source - workspace serialization, either XML or JSON
- * @returns {parsedSource: Object, blockOrderMap: Object}
+ * @returns {parsedSource: Object}
  */
 function parseSource(source) {
   let isXml = stringIsXml(source);
   let parsedSource;
-  let blockOrderMap;
 
   if (isXml) {
     const xml = parseXmlElement(source);
     parsedSource = convertXmlToJson(xml);
-    blockOrderMap = Blockly.Xml.createBlockOrderMap(xml);
   } else {
     parsedSource = JSON.parse(source);
   }
 
-  return {parsedSource, blockOrderMap};
+  return {parsedSource};
 }
 
 /**
