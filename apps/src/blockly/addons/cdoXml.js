@@ -50,13 +50,13 @@ export default function initializeBlocklyXml(blocklyWrapper) {
    * @returns {Object[]} An array of objects containing the created blocks and their positions.
    */
   blocklyWrapper.Xml.domToBlockSpace = function (workspace, xml) {
-    const partitionedBlockElements = getBlockElements(xml);
+    const blockElements = getBlockElements(xml);
     const blocks = [];
     // To position the blocks, we first render them all to the Block Space
     //  and parse any X or Y coordinates set in the XML. Then, we store
     //  the rendered blocks and the coordinates in an array so that we can
     //  position them.
-    partitionedBlockElements.forEach(xmlChild => {
+    blockElements.forEach(xmlChild => {
       // Recursively check blocks for XML attributes that need to be manipulated.
       processBlockAndChildren(xmlChild);
 
@@ -379,18 +379,9 @@ function makeLockedBlockImmovable(block) {
  * If no block elements are found in the XML, an empty array is returned.
  *
  * @param {Element} xml - The XML element containing block elements.
- * @param {string[]} prioritizedBlockTypes - An array of strings representing block types.
- *    These types are moved to the front of the list while maintaining the order of non-prioritized types.
- * @returns {Element[]} An array of partitioned block elements or an empty array if no blocks are present.
+ * @returns {Element[]} An array of block elements or an empty array if no blocks are present.
  */
 export function getBlockElements(xml) {
   // Convert XML to an array of block elements
-  const blockElements = Array.from(xml.querySelectorAll('xml > block'));
-
-  // Check if any block elements were found
-  if (blockElements.length === 0) {
-    return [];
-  }
-
-  return blockElements;
+  return Array.from(xml.querySelectorAll('xml > block'));
 }

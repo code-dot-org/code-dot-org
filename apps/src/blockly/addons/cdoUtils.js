@@ -351,7 +351,7 @@ export function registerCustomProcedureBlocks() {
  * @param {Element[]|Object[]} blocks - An array of block elements or JSON blocks to be partitioned.
  * @param {Object} [options] - An object containing partitioning options.
  * @param {string[]} [options.prioritizedBlockTypes] - An array of strings representing block types to move to the front.
- * @param {boolean} [options.isJson] - A flag indicating whether the blocks are JSON blocks (vs. block elements).
+ * @param {boolean} [options.isBlockElements] - A flag indicating whether the blocks are block elements (vs. JSON).
  * @returns {Element[]|Object[]} A new array of block elements or JSON blocks partitioned based on their types.
  */
 export function partitionBlocksByType(
