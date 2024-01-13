@@ -2816,6 +2816,10 @@ nn:
           student_description: Programmer dyr og andre Minecraft-vesen i din eigen
             versjon av Minecraft.
           title: Kodetimens Minecraft-designer
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Gjer kva du vil
         netsim:
           description: Lær om hvordan Internett fungerer.
           description_short: Lær om hvordan Internett fungerer.
@@ -2974,6 +2978,23 @@ nn:
           description: 'Fase 2 Online: Blanda sommarstudie'
           description_short: 'Fase 2 Online: Blanda sommarstudie'
           student_description: 'Fase 2 Online: Blanda sommarstudie'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Løkker
+            lesson-4:
+              name: Betingelser
+            lesson-6:
+              name: Neste steg
+          title: Introduksjon til informatikk
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Hendingar
+            lesson-4:
+              name: Atferd
+            lesson-5:
+              name: Neste steg
         soccer:
           name: fotball
         spelling-bee:

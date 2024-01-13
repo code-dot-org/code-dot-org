@@ -7729,6 +7729,10 @@ es-MX:
             -   Aprender sobre las oportunidades para conectar con la comunidad Informática en general.
 
             **Tiempo sugerido**: 70 minutos
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Juego libre
         csa-software-engineering:
           lessons:
             lesson-9:
@@ -8213,3 +8217,30 @@ es-MX:
         csd-post-survey-2024:
           title: Encuesta de final de curso
           description: Esta unidad contiene la encuesta fin de curso de Descubrimientos CS. Esta unidad puede ser asignada después de que los estudiantes completen su unidad final en Descubrimientos CS.
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Lección 1
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Lección 1
+            lesson-3:
+              name: Eventos
+            lesson-4:
+              name: Comportamientos
+            lesson-5:
+              name: Próximos pasos
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Lección 1
+            lesson-3:
+              name: Bucles
+            lesson-4:
+              name: Condicionales
+            lesson-5:
+              name: Poniéndolo todo junto
+            lesson-6:
+              name: Próximos pasos
+          title: Introducción a Ciencias de la Computación

@@ -8023,6 +8023,10 @@ zh-CN:
             \-了解与更广泛的 CS 社区建立联系的机会。
 
             **建议时间**：70 分钟
+        musiclab:
+          lessons:
+            lesson-3:
+              name: 自由发挥
         csa-software-engineering:
           lessons:
             lesson-9:
@@ -8508,3 +8512,30 @@ zh-CN:
         csd-post-survey-2024:
           title: 课后问卷
           description: 本单元包含课后调查。该单元可以在学生完成本课程的最后一个单元后分配。
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: 第 1 课
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: 第 1 课
+            lesson-3:
+              name: 事件
+            lesson-4:
+              name: 行为
+            lesson-5:
+              name: 下一步
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: 第 1 课
+            lesson-3:
+              name: 循环
+            lesson-4:
+              name: 条件语句
+            lesson-5:
+              name: 把它们放在一起
+            lesson-6:
+              name: 下一步
+          title: 计算机概论

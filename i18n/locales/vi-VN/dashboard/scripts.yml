@@ -3916,6 +3916,10 @@ vi:
           description_short: Tìm hiểu tất cả các khái niệm trong bài học Nguyên tắc cơ bản của khoa học máy tính và sáng tạo tác phẩm cũng như câu chuyện và game của riêng bạn.
         self-paced-pl-csp2-2023:
           title: 'Học phần 2: Điều hướng trên Code.org'
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Chơi tự do
         csa-frq-practice-2022:
           lessons:
             lesson-4:
@@ -4082,3 +4086,20 @@ vi:
               display_name: Chương 2
         csd-post-survey-2024:
           title: Khảo sát sau khoá học
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Các sự kiện
+            lesson-4:
+              name: Hành vi
+            lesson-5:
+              name: Bước tiếp theo
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Vòng lặp
+            lesson-4:
+              name: Điều kiện
+            lesson-6:
+              name: Bước tiếp theo
+          title: Giới thiệu về khoa học máy tính

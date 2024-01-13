@@ -2278,6 +2278,10 @@ ms:
           student_description: Program haiwan dan makhluk Minecraft lain dalam versi
             Minecraft anda sendiri.
           title: Pereka Minecraft
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Permainan Bebas
         netsim:
           title: Simulator Internet
         nevada-standards-aligned-fifth-grade-2023:
@@ -3044,6 +3048,19 @@ ms:
           title: 'Modul 2: Menavigasi Code.org'
         self-paced-pl-csp2-2023:
           title: 'Modul 2: Menavigasi Code.org'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Gelung
+            lesson-4:
+              name: Bersyarat
+          title: Pengenalan kepada Sains komputer
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Acara-acara
+            lesson-4:
+              name: Tingkah laku
         soccer:
           description: Buat permainan bola sepak
           description_short: Buat permainan bola sepak

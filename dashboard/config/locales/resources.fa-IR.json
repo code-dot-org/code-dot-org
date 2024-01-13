@@ -6108,7 +6108,7 @@
           "type": "منبع"
         },
         "resource_list_for_all_lessons/csc-starquilts/2023": {
-          "name": "لیست منابع برای تمام درس",
+          "name": "لیست منابع برای تمام درس‌ها",
           "url": "/s/csc-starquilts-2023/منابع",
           "type": "منبع"
         },
@@ -6196,7 +6196,7 @@
           "type": "منبع"
         },
         "poem_art_1_-_introduction/csc-timecapsule/2023": {
-          "name": "شعر هنر 1 - مقدمه ",
+          "name": "هنر شعر 1 - مقدمه ",
           "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
           "type": "ویدئو"
         },
@@ -6211,7 +6211,7 @@
           "type": "ویدئو"
         },
         "poem_art_4_-_celebration/csc-timecapsule/2023": {
-          "name": "شعر هنر 4 - جشن ",
+          "name": "هنر شعر 4 - جشن ",
           "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5",
           "type": "ویدئو"
         },
@@ -6275,20 +6275,20 @@
           "type": "منبع"
         },
         "all_standards/poetry/2023": {
-          "name": "استانداردها در کدنویسی با شعر ",
+          "name": "استانداردهای کدنویسی با شعر ",
           "url": "https://studio.code.org/s/poetry-2023/standards"
         },
         "coding_with_poetry_vocabulary/poetry/2023": {
-          "name": "واژگان در کدگذاری با شعر ",
+          "name": "واژگان کدگذاری با شعر ",
           "url": "https://studio.code.org/s/poetry-2023/vocab"
         },
         "cs_connections_landing_page/poetry/2023": {
-          "name": "اتصالات CS فرود صفحه",
+          "name": "صفحه فرود اتصالات سی‌اس",
           "url": "https://code.org/educate/csc",
           "type": "منبع"
         },
         "csc_extended_connections_book_list/poetry/2023": {
-          "name": "لیست کتاب اتصالات توسعه یافته CSC",
+          "name": "لیست کتاب اتصالات توسعه یافته سی‌اس‌سی",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "منبع"
         },
@@ -6298,7 +6298,7 @@
           "type": "منبع"
         },
         "resource_list_for_all_lessons/poetry/2023": {
-          "name": "لیست منابع برای تمام درس",
+          "name": "لیست منابع برای تمام درس‌ها",
           "url": "https://studio.code.org/s/poetry-2023/resources"
         },
         "coding_with_poetry_lesson_1/poetry/2023": {
@@ -6307,7 +6307,7 @@
           "type": "اسلایدها"
         },
         "poem_art_1_-_introduction/poetry/2023": {
-          "name": "شعر هنر 1 - مقدمه ",
+          "name": "هنر شعر 1 - مقدمه ",
           "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
           "type": "ویدئو"
         },
@@ -6322,7 +6322,7 @@
           "type": "ویدئو"
         },
         "poem_art_4_-_celebration/poetry/2023": {
-          "name": "شعر هنر 4 - جشن ",
+          "name": "هنر شعر 4 - جشن ",
           "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5",
           "type": "ویدئو"
         },
@@ -9387,7 +9387,7 @@
           "type": "ویدئو"
         },
         "how_ai_works_how_neural_networks_work/how-ai-works/2023": {
-          "name": "هوش مصنوعی چگونه کار می کند: شبکه های عصبی چگونه کار می کنند",
+          "name": "هوش مصنوعی چگونه کار می‌کند: شبکه‌های عصبی چگونه کار می‌کنند",
           "url": "https://youtu.be/JrXazCEACVo",
           "type": "ویدئو"
         },
@@ -9402,7 +9402,7 @@
           "type": "اسلایدها"
         },
         "wetube_content_creators/how-ai-works/2023": {
-          "name": "سازندگان محتوا WeTube",
+          "name": "سازندگان محتوای WeTube",
           "url": "https://docs.google.com/document/d/1z7ZO-9zKlmn3brqH7euWVMSOuzVTQOdWDgkGGukRkvc/edit?usp=sharing",
           "type": "منبع"
         },
@@ -9427,67 +9427,67 @@
           "type": "ویدئو"
         },
         "llm_vocab_and_video_guide_answer_key/how-ai-works/2023": {
-          "name": "[Key] Vocab و راهنمای ویدئو",
+          "name": "[کلید] واژگان و راهنمای ویدیو",
           "url": "https://docs.google.com/document/d/1kSVppQd3WBVwvejrJ4ffgCNJEkYbhDzQs88tbQ3rfD0/edit",
           "type": "کلید پاسخ"
         },
         "video_and_vocabulary_guide/how-ai-works/2023": {
-          "name": "راهنمای ویدئو و واژگان",
+          "name": "راهنمای ویدیو و واژگان",
           "url": "https://docs.google.com/document/d/1zPGOdJ1rcdF7e7CzGXHb4JaWYFMEPX9aeZf4DtbQhNI/edit#heading=h.l82l1gv9gtj4",
           "type": "راهنمای فعالیت"
         },
         "written_voice_simulator_activity_guide_exemplar/how-ai-works/2023": {
-          "name": "[Exemplar] راهنمای فعالیت شبیه ساز صوتی نوشته شده",
+          "name": "[نمونه] راهنمای فعالیت شبیه‌ساز صوتی نوشته شده",
           "url": "https://docs.google.com/document/d/1nZhObuoPc5781ygHgA8P_a0aHItrKkW4mqqJ73XP8Hw/",
           "type": "نمونه"
         },
         "written_voice_simulator_guide/how-ai-works/2023": {
-          "name": "راهنمای شبیه ساز صوتی نوشته شده",
+          "name": "راهنمای شبیه‌ساز صوتی نوشته شده",
           "url": "https://docs.google.com/document/d/1pebKlY2-pFCw-Zo_nI8cLXYT_eyfn3AKzkwvEmkjo2c/edit#heading=h.sa1769guz3cn",
           "type": "راهنمای فعالیت"
         },
         "written_voice_simulator_user_guide/how-ai-works/2023": {
-          "name": "راهنمای کاربر شبیه ساز صوتی نوشته شده",
+          "name": "راهنمای کاربر شبیه‌ساز صوتی نوشته شده",
           "url": "https://docs.google.com/presentation/d/1N3l7kEskuT5MFjarekKlJVoz3Gl-z53kjCuQ6bz94m4/edit",
           "type": "منبع"
         },
         "_optional_gan_game_activity_guide/how-ai-works/2023": {
-          "name": "(اختیاری) راهنمای فعالیت بازی GAN",
+          "name": "(اختیاری) راهنمای فعالیت بازی شبکه‌های زایای دشمن‌گونه",
           "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit",
           "type": "راهنمای فعالیت"
         },
         "generative_images/how-ai-works/2023": {
-          "name": "تصاویر زایشی",
+          "name": "تصاویر مولد",
           "url": "https://docs.google.com/presentation/d/1de7JbrVRXFg-eLUFCWUFTN5q7DAbpYzxU_oi6Ur37oM/template/preview",
           "type": "اسلایدها"
         },
         "generative_images_activity_guide/how-ai-works/2023": {
-          "name": "[Key] راهنمای فعالیت تصاویر تولیدی",
+          "name": "[کلید] راهنمای فعالیت تصاویر مولد",
           "url": "https://docs.google.com/document/d/1f9K9TA6gjNM5SYZB-yCovGA-agtWJdl-ATbUg9c4K_s/edit",
           "type": "کلید پاسخ"
         },
         "how_ai_works_creativity_and_imagination/how-ai-works/2023": {
-          "name": "هوش مصنوعی چگونه کار می کند: خلاقیت و تخیل",
+          "name": "هوش مصنوعی چگونه کار می‌کند: خلاقیت و قوه تخیل",
           "url": "https://www.youtube.com/watch?v=X994dDnmRmY",
           "type": "ویدئو"
         },
         "noisy_image_activity_exemplar/how-ai-works/2023": {
-          "name": "[Exemplar] فعالیت تصویر پر سر و صدا",
+          "name": "[نمونه] فعالیت تصویر دارای نویز",
           "url": "https://docs.google.com/document/d/1TkzwTBscbPo7fZl-21ggTqSECFdQ35dxoBrBSdX-0yw/",
           "type": "نمونه"
         },
         "noisy_image_widget_activity_guide/how-ai-works/2023": {
-          "name": "راهنمای فعالیت ویجت تصویر پر سر و صدا",
+          "name": "راهنمای فعالیت ویجت تصویر دارای نویز",
           "url": "https://docs.google.com/document/d/1rxB-NpxulH6SUyweHwGTxatqYAQc5Qt8ZQN9Dkgi6sE/",
           "type": "راهنمای فعالیت"
         },
         "user_guide_noise_image_widget/how-ai-works/2023": {
-          "name": "راهنمای کاربر: ویجت تصویر نویز",
+          "name": "راهنمای کاربر: ویجت تصویر دارای نویز",
           "url": "https://docs.google.com/presentation/d/1l3Ide0B-4k_IEhWYiCVz6OnyAL4fCmg-ROqogyqnVCo/view",
           "type": "منبع"
         },
         "video_and_vocabulary_guide_1/how-ai-works/2023": {
-          "name": "راهنمای ویدئو و واژگان",
+          "name": "راهنمای ویدیو و واژگان",
           "url": "https://docs.google.com/document/d/1GtTFgGzPcoyokR3KsJ43ZjvgJnwUCWdZXvtrXoa78rQ/edit?usp=sharing",
           "type": "راهنمای فعالیت"
         },
@@ -9525,7 +9525,7 @@
           "name": "بازتاب تحقیقاتی اخلاق هوش مصنوعی"
         },
         "how_ai_works_-_privacy_and_future_of_work/how-ai-works/2023": {
-          "name": "هوش مصنوعی چگونه کار می کند - حریم خصوصی و آینده کار",
+          "name": "هوش مصنوعی چگونه کار می‌کند - حریم خصوصی و آینده کار",
           "url": "https://youtu.be/zNxw5gJtHLc",
           "type": "ویدئو"
         },
@@ -9550,22 +9550,22 @@
           "type": "ویدئو"
         },
         "how_ai_works_ethics_ai_privacy_the_future_of_work/how-ai-works/2023": {
-          "name": "هوش مصنوعی چگونه کار می کند: اخلاق و هوش مصنوعی: حریم خصوصی و آینده کار",
+          "name": "هوش مصنوعی چگونه کار می‌کند: اخلاق و هوش مصنوعی: حریم خصوصی و آینده کار",
           "url": "https://youtu.be/zNxw5gJtHLc",
           "type": "ویدئو"
         },
         "how_ai_works_introduction/how-ai-works/2023": {
-          "name": "هوش مصنوعی چگونه کار می کند: مقدمه",
+          "name": "هوش مصنوعی چگونه کار می‌کند: مقدمه",
           "url": "https://youtu.be/Ok-xpKjKp2g",
           "type": "ویدئو"
         },
         "how_ai_works_training_data_and_bias/how-ai-works/2023": {
-          "name": "هوش مصنوعی چگونه کار می کند: داده های آموزشی و تعصب",
+          "name": "هوش مصنوعی چگونه کار می‌کند: داده‌های آموزشی و سوگیری",
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "ویدئو"
         },
         "how_ai_works_what_is_machine_learning_/how-ai-works/2023": {
-          "name": "هوش مصنوعی چگونه کار می کند: یادگیری ماشین چیست؟",
+          "name": "هوش مصنوعی چگونه کار می‌کند: یادگیری ماشین چیست؟",
           "url": "https://youtu.be/KHbwOetbmbs",
           "type": "ویدئو"
         },
@@ -9580,7 +9580,7 @@
           "type": "راهنمای فعالیت"
         },
         "_key_vocabulary_matching/how-ai-works/2023": {
-          "name": "[Key] تطبیق واژگان",
+          "name": "[کلید] تطبیق واژگان",
           "url": "https://drive.google.com/file/d/1cF8MsKO_lCLziA5FisbcQc2-529j1HXZ/view",
           "type": "کلید پاسخ"
         },
@@ -9609,7 +9609,7 @@
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
-          "name": "پلی لیست Spotify (تمام سنین)",
+          "name": "پلی‌لیست اسپاتیفای (تمام سنین)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "dance-party-playlist/dance-extras/unversioned": {
@@ -9626,7 +9626,7 @@
           "type": "ویدئو"
         },
         "hocencryption/hoc-encryption/unversioned": {
-          "name": "ویجت‌های رمزنگاری در Code Studio",
+          "name": "ابزاره‌های رمزنگاری در استودیو کد",
           "url": "https://studio.code.org/s/hoc-encryption"
         },
         "ai-ml/oceans/unversioned": {
@@ -9690,12 +9690,12 @@
           "type": "راهنمای فعالیت"
         },
         "textcompressioncodestudio/text-compression/unversioned": {
-          "name": "ویجت فشرده‌سازی متن در Code Studio",
+          "name": "ابزاره فشرده‌سازی متن در Code Studio (استودیو کد)",
           "url": "https://studio.code.org/s/text-compression/stage/1/puzzle/1",
-          "type": "ویجت"
+          "type": "ابزاره"
         },
         "video-text-compression/text-compression/unversioned": {
-          "name": "ویدیو: فشرده‌سازی متن با Aloe Blacc",
+          "name": "ویدئو: فشرده‌سازی متن با آلو بلک",
           "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "ویدئو"
         },

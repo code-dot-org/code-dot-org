@@ -258,6 +258,16 @@ pl:
     do kariery, który ma inspirować, edukować i szkolić dzieci i młodzież o niskich
     dochodach i innych znajdujących się w niekorzystnej sytuacji, aby kontynuować
     karierę w informatyce. [Dowiedz się więcej o naszym partnerstwie] (%{afe_url}).
+  donors_block_microsoft_infosys: Dziękujemy Microsoft i Infosys Foundation USA za
+    wspieranie naszej wizji i misji, aby zapewnić każdemu dziecku możliwość nauki
+    informatyki i umiejętności, aby odnieść sukces w XXI wieku.
+  microsoft_logo_alt: Logo Microsoft
+  infosys_logo_alt: Logo Infosys Foundation USA
+  amazon_logo_alt: Logo Amazon
+  google_logo_alt: Logo Google
+  coinbase_logo_alt: Logo Coinbase
+  ballmer_group_logo_alt: Logo grupy Ballmer
+  vista_equity_partners_logo_alt: Logo Partnerów Vista Equity
   grade_level: Poziom klasy
   grade_level_label_elementary: Szkoła podstawowa
   grade_level_label_middle: Gimnazjum
@@ -418,6 +428,7 @@ pl:
   call_to_action_open_positions: Wyświetl otwarte pozycje
   call_to_action_explore_roles: Przeglądaj otwarte role
   call_to_action_get_guide: Pobierz przewodnik
+  call_to_action_donate: Podaruj
   call_to_action_donate_to_cdo: Wesprzyj Code.org
   call_to_action_start_fundraiser: Rozpocznij zbiórkę pieniędzy
   call_to_action_view_donation_policy: Zobacz politykę darowizn
@@ -441,6 +452,7 @@ pl:
   call_to_action_learn_about_ai: Dowiedz się więcej o sztucznej inteligencji (AI)
   call_to_action_learn_more_about_ai: Dowiedz się więcej o sztucznej inteligencji
   call_to_action_get_started: Rozpocznij
+  call_to_action_view_our_supporters: Zobacz naszych zwolenników
   call_to_action_explore_self_paced_pl: Poznaj samodzielne doskonalenie zawodowe
   call_to_action_applications_get_notified: Otrzymuj powiadomienia o otwarciu aplikacji
   call_to_action_applications_notify_me: Powiadom mnie, kiedy będę mógł złożyć wniosek
@@ -451,6 +463,10 @@ pl:
   call_to_action_learn_more_program_region: Dowiedz się więcej o programie w Twoim
     regionie
   call_to_action_visit_support_center: Odwiedź nasze centrum wsparcia
+  call_to_action_download_video: Pobierz wideo
+  call_to_action_explore_learning_ages_5_11: Poznaj naukę dla uczniów w wieku 5-11
+    lat
+  call_to_action_explore_learning_ages_11_plus: Poznaj naukę dla uczniów w wieku 11+
   aria_label_call_to_action_hoc_how_to_educators: Zobacz poradnik dla nauczycieli
   aria_label_call_to_action_hoc_how_to_companies: Zobacz poradnik dla firm
   aria_label_call_to_action_hoc_how_to_districts: Zobacz poradnik dla dystryktów
@@ -585,6 +601,9 @@ pl:
   aria_label_call_to_action_register_student_workshop: Zarejestruj się na bezpłatne
     warsztaty uczniowskie
   aria_label_call_to_action_view_more_cs_resources: Zobacz więcej zasobów informatycznych
+  aria_label_call_to_action_farsi_donate: Przekaż darowiznę, aby wesprzeć kampanię
+    Code.org in Farsi
+  aria_label_call_to_action_farsi_learn_more: Dowiedz się więcej o Code.org w Farsi
   aria_label_call_to_action_pl_apply_csd: Aplikuj teraz na doskonalenie zawodowe w
     zakresie Odkryć Informatyki
   aria_label_call_to_action_pl_apply_csp: Aplikuj teraz na doskonalenie zawodowe w
@@ -595,6 +614,7 @@ pl:
   aria_label_call_to_action_learn_more_csp: Dowiedz się więcej o Zasadach Informatyki
   aria_label_call_to_action_learn_more_csa: Dowiedz się więcej o AP® Informatyka A
   video_title_professional_learning_program: Profesjonalny program nauczania Code.org
+  video_title_young_women_in_computer_science: Młode kobiety w informatyce
   curriculum_name_csf: Podstawy informatyki
   curriculum_name_csf_02: Wszelkie podstawy CS (kurs A-F)
   curriculum_name_csf_a_f: Podstawy CS A-F
@@ -774,6 +794,7 @@ pl:
   module_grade_3_12: W wieku 3-12
   module_grade_5_12: 5-12
   module_grade_6_12: 6-12
+  module_grade_6_12_plus: 6-12+
   module_grade_6_10: 6-10
   module_grade_7_12: 7-12
   module_grade_9_12: 9-12
@@ -865,6 +886,8 @@ pl:
   values_05: Działamy uczciwie i transparentnie
   values_06: Wierzymy, że szeroki wpływ wymaga myślenia na dużą skalę i działania
     holistycznego
+  heading_anyone_can_learn: Każdy może nauczyć się informatyki
+  heading_find_right_opportunity: Znajdź odpowiednią dla siebie okazję do nauki!
   heading_professional_learning: Profesjonalna nauka, która spełnia Twoje potrzeby
   heading_additional_resources: Dodatkowe zasoby
   heading_support_and_questions: Wsparcie i pytania
@@ -900,6 +923,20 @@ pl:
   heading_acceptance: Akceptacja
   heading_enroll: Zapisz się
   heading_have_questions: Masz pytania?
+  student_courses_top_desc: Zacznij kodować już dziś. Nasze kursy i zajęcia są bezpłatne!
+    To łatwiejsze i zabawniejsze niż myślisz.
+  student_courses_explore_desc: Odkrywaj świat informatyki dzięki angażującym filmom,
+    samouczkom z własnym tempem, zajęciom programistycznym i nie tylko dla wszystkich
+    grup wiekowych i poziomów kształcenia!
+  student_courses_k_5_desc: Zacznij od Godziny Kodowania, a następnie odkryj więcej
+    kodowania opartego na blokach w naszych kursach ekspresowych. Bądź kreatywny w
+    naszym zabawnym środowisku programistycznym Sprite Lab lub oglądaj fajne filmy,
+    aby dowiedzieć się więcej o kluczowych zagadnieniach. Jest tak wiele do odkrycia!
+  student_courses_6_12_desc: Wypróbuj Godzinę Kodowania lub zapoznaj się z naszymi
+    samodzielnymi kursami na temat tworzenia aplikacji, gier i animacji. Rób swoje
+    w naszych środowiskach programistycznych Web Lab, Game Lab i App Lab. Dodatkowo
+    dowiedz się więcej o sztucznej inteligencji, karierze w programowaniu, stypendiach
+    i nie tylko.
   cs_ambassador_subhead: Jeśli jesteś uczniem liceum, który pasjonuje się zachęcaniem
     większej liczby młodych kobiet do studiowania informatyki w Twojej szkole, wtedy
     Cię potrzebujemy!
@@ -2263,6 +2300,12 @@ pl:
   donate_page_fundraise_title: Zbiórka funduszy na Code.org
   donate_page_fundraise_desc: Pomóż zebrać pieniądze na Code.org! Każdy uczeń w każdej
     szkole powinien mieć możliwość uczenia się informatyki.
+  donate_page_campaigns_heading: Wspieraj naszą kampanię
+  donate_page_campaigns_farsi_desc: Talent jest powszechny, ale możliwości często
+    nie. Proponowana inicjatywa Code.org w Farsi (w języku perskim) ma na celu umożliwienie
+    ponad 110 milionom osób mówiących w Farsi z krajów takich jak Iran, Afganistan
+    i Tadżykistan globalnym diasporom dostępu do zasobów edukacyjnych dostępnych obecnie
+    w innych językach. Uczyńmy to rzeczywistością.
   donate_page_other_ways_title: Inne sposoby dawania
   donate_page_other_ways_desc: Poznaj różnorodne metody wniesienia wkładu i znajdź
     opcję, która najbardziej Ci odpowiada. Każdy gest, duży czy mały, napędza naszą
@@ -2270,6 +2313,11 @@ pl:
   donate_page_501c3: Code.org jest zarejestrowana jako publiczna organizacja non-profit
     501 (c) (3). Składki na Code.org podlegają odliczeniu od podatku w zakresie dozwolonym
     przez prawo. Numer identyfikacji podatkowej Code.org to 46-0858543.
+  donate_page_supporters_heading: Dołącz do czołowych liderów branży wspierających
+    Code.org
+  donate_page_supporters_desc: Znane nazwiska w całym kraju ufają i wspierają naszą
+    misję. Zobacz naszych szanowanych zwolenników i rozważ dodanie własnego zaangażowania
+    do transformacji Code.org.
   donate_page_donation_policy_title: Zrozumienie naszej polityki darowizn
   donate_page_donation_policy_desc: Dowiedz się, jak obsługujemy i lokujemy Twój wkład.
   donate_tabs_tab_label_daf_direct: DAF Direct
@@ -2330,6 +2378,10 @@ pl:
     Kodowania na żywo.
   hoc_live_join_us: Dołącz do nas
   hoc_live_learn_more: Dowiedz się więcej
+  hoc_live_map_and_events_message: Podczas szczytowego ruchu podczas Godziny Kodowania
+    używamy statycznej mapy, aby oszczędzać przepustowość i utrzymać naszą witrynę
+    w działaniu. Aby zobaczyć dynamiczną mapę wszystkich wydarzeń - [kliknij tutaj]
+    (%{map_url}) i pełną listę wydarzeń - [kliknij tutaj] (%{events_url}).
   hoc_overview_oceans_tutorial_header: AI dla oceanów
   hoc_overview_oceans_tutorial_desc: Dowiedz się o sztucznej inteligencji, uczeniu
     maszynowym, danych szkoleniowych i uprzedzeniach, wyjaśniając jednocześnie kwestie
@@ -3040,6 +3092,26 @@ pl:
   handouts_brochure: Przekaż tę broszurę nauczycielom i szkołom
   handouts_participationguide: Zaplanuj swoją Godzinę Kodowania za pomocą tego poradnika
     udziału
+  poster_aria_label_minecraft: 'Pobierz plakat przedstawiający Minecraft Education:
+    Generation AI'
+  poster_aria_label_dance_ai_01: 'Pobierz plakat przedstawiający Potańcówkę: AI Edycja
+    z postaciami żaby, łosia i kota'
+  poster_aria_label_dance_ai_02: 'Pobierz plakat przedstawiający Potańcówkę: AI Edycja
+    z postaciami robota, leniwca i rekina'
+  poster_aria_label_oceans_01: Pobierz plakat przedstawiający podwodną scenę AI dla
+    Oceanów z botem AI wybierającym rybę
+  poster_aria_label_oceans_02: Pobierz plakat przedstawiający jak AI for Oceans łowi
+    postacie z różnymi emocjami
+  poster_aria_label_steph: Pobierz plakat z gwiazdą NBA Steph Curry
+  poster_aria_label_malala: Pobierz plakat przedstawiający aktywistkę Malalę Yousafzai
+  poster_aria_label_hadi: Pobierz plakat przedstawiający założyciela Code.org, Hadi
+    Partovi
+  poster_aria_label_mary: Pobierz plakat z udziałem dyrektora generalnego General
+    Motors Mary Barra
+  poster_aria_label_satya: Pobierz plakat z przedstawiający dyrektora generalnego
+    Microsoft Satya Nadella
+  poster_aria_label_shakira: Pobierz plakat przedstawiający piosenkarkę i autorkę
+    tekstów Shakirę
   videos_title: Pokaż te filmy, aby zainspirować uczniów
   videos_what_most_schools_dont_teach: Czego nie uczy większość szkół (5 min.)
   videos_hoc_2014: Już jest Godzina Kodowania - każdy może się uczyć
@@ -16605,6 +16677,8 @@ pl:
   video_library_page_inspirational_video_title_14: To więcej niż gra (1 min)
   video_library_page_inspirational_video_title_15: Twórz za pomocą informatyki (1
     min)
+  video_library_page_inspirational_video_title_16: Młode kobiety w informatyce (2
+    min)
   video_library_page_not_hacked_video_title_1: 'Jak nie dać się zhakować: Wprowadzenie'
   video_library_page_not_hacked_video_title_2: 'Jak nie dać się zhakować: Hasła'
   video_library_page_not_hacked_video_title_3: 'Jak nie zostać zhakowanym: uwierzytelnianie
@@ -16904,6 +16978,27 @@ pl:
   elementary_page_computer_science_description_2: Nawiąż powiązania między informatyką
     (CS) a innymi przedmiotami, takimi jak matematyka, sztuki językowe, nauki ścisłe
     i nauki społeczne.
+  hoc_beyond_hero_description: Teraz, gdy ukończyłeś swoją Godzinę Kodowania, przejdź
+    na wyższy poziom! Wielu partnerów oferuje bezpłatne, angażujące opcje zarówno
+    dla nauczycieli, jak i uczniów - nie jest potrzebne wcześniejsze doświadczenie.
+  hoc_beyond_for_teachers_section_title: Dla nauczycieli
+  hoc_beyond_for_teachers_section_description: Zorganizowałeś wydarzenie Godziny Kodowania
+    w swojej klasie... Co teraz? Dołącz do ponad 2 milionów nauczycieli, którzy używają
+    Code.org do nauczania informatyki. Każdy może się nauczyć!
+  hoc_beyond_for_teachers_course_title_1: Nauczaj z pomocą kursów Code.org
+  hoc_beyond_for_teachers_course_title_2: Nauczaj kursów od innych dostawców
+  hoc_beyond_for_teachers_course_description_1: Code.org oferuje pełną ścieżkę kursu
+    dla K-12 i profesjonalne warsztaty edukacyjne dla nauczycieli, bezpłatnie.
+  hoc_beyond_for_teachers_course_description_2: Porównaj opcje różnych partnerów,
+    zorganizowane dla kolejnych klas.
+  hoc_beyond_for_teachers_course_link_1: Nauczaj z Code.org
+  hoc_beyond_for_teachers_course_link_2: Poznaj innych dostawców
+  hoc_beyond_carousel_title: Dla uczniów
+  hoc_beyond_carousel_description: Chcesz się uczyć po Godzinie Kodowania? Sprawdź
+    te zajęcia dla uczniów w każdym wieku i na każdym poziomie umiejętności.
+  hoc_beyond_submit_activity_form: Prześlij swoją aktywność [tutaj] (%{form_url}).
+  hoc_beyond_end_section_label: Godzina Kodowania jest organizowana przez [Code.org]
+    (%{home_page})
   language_code:
     ar: Arabski
     az: Azerski

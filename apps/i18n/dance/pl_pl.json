@@ -1,4 +1,5 @@
 {
+  "clickToRunDanceParty": "Kliknij, aby uruchomić Potańcówkę",
   "danceAiFeedbackAiBlockInWorkspaceWithNoParameters": "⚠️ Istnieje blok 'użyj A.I. do' bez wybranych emotikonów. Wybierz trzy emotikony dla A.I., aby wygenerować efekt",
   "danceAiFeedbackAiBlockNoParameters": "⚠️ Wybierz trzy emotikony dla A.I., aby wygenerować efekt.",
   "danceAiFeedbackAiBlockNoParametersOnEvent": "⚠️ Efekt nie zmienił się po 2 taktach. Wybierz trzy emotikony dla A.I., aby wygenerować efekt.",
@@ -59,6 +60,7 @@
   "danceFeedbackUseSetSize": "Aby zmniejszyć tego tancerza, użyj bloku 'ustaw wielkość kopia_tancerza2'.",
   "danceFeedbackUseSetTint": "Do zmiany zabarwienia tancerza użyj bloku 'ustaw odcień'.",
   "danceFeedbackUseStartMapping": "Spróbuj dodać do swojego programu blok <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml>.",
+  "dancePartyLoading": "Tancerz tańczy podczas ładowania Potańcówki.",
   "danceSongNoLongerSupported": "Code.org dodał nowe przeboje do Potańcówki, ale oryginalna piosenka wybrana w tym projekcie nie jest już obsługiwana przez Code.org.",
   "measure": "Takt:"
 }

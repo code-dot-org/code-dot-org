@@ -54,8 +54,8 @@ class OpenaiChatControllerTest < ActionController::TestCase
     sign_in(student)
     ShareFiltering.stubs(:find_failure).returns(ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'damn'))
     post :chat_completion, params: {messages: [{role: "user", content: "damn you, robot!"}], locale: "en"}
-    assert_equal json_response["type"], ShareFiltering::FailureType::PROFANITY
-    assert_equal json_response["content"], "damn"
+    assert_equal json_response["status"], ShareFiltering::FailureType::PROFANITY
+    assert_equal json_response["flagged_content"], "damn"
   end
 
   # Post request with a messages param containing PII returns a failure
@@ -64,8 +64,8 @@ class OpenaiChatControllerTest < ActionController::TestCase
     sign_in(student)
     ShareFiltering.stubs(:find_failure).returns(ShareFailure.new(ShareFiltering::FailureType::EMAIL, 'l.lovegood@hogwarts.edu'))
     post :chat_completion, params: {messages: [{role: "user", content: "my email is l.lovegood@hogwarts.edu"}], locale: "en"}
-    assert_equal json_response["type"], ShareFiltering::FailureType::EMAIL
-    assert_equal json_response["content"], "l.lovegood@hogwarts.edu"
+    assert_equal json_response["status"], ShareFiltering::FailureType::EMAIL
+    assert_equal json_response["flagged_content"], "l.lovegood@hogwarts.edu"
   end
 
   # Post request without a messages param returns a bad request

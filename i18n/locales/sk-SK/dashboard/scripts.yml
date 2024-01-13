@@ -4155,6 +4155,10 @@ sk:
               display_name: Záverečný projekt
           description_audience: Vek 9-13
           description_short: Nauč sa všetky koncepty z kurzu Základy informatiky a vytvor vlastné umelecké dielo, príbeh alebo hru.
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Voľná hra
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -4431,3 +4435,20 @@ sk:
           title: Umelá inteligencia a strojové učenie
         csd-post-survey-2024:
           title: Hodnotenie kurzu
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Udalosti
+            lesson-4:
+              name: Správanie
+            lesson-5:
+              name: Ďalšie kroky
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Cykly
+            lesson-4:
+              name: Podmienené príkazy
+            lesson-6:
+              name: Ďalšie kroky
+          title: Úvod do informatiky

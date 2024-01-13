@@ -2055,6 +2055,17 @@ kn:
           title: 'ಮಾಡ್ಯೂಲ್ 2: Code.org ಗೆ ನ್ಯಾವಿಗೇಟ್ ಮಾಡುವುದು'
         self-paced-pl-csp2-2023:
           title: 'ಮಾಡ್ಯೂಲ್ 2: Code.org ಗೆ ನ್ಯಾವಿಗೇಟ್ ಮಾಡುವುದು'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: ಲೂಪ್‌ಗಳು
+            lesson-4:
+              name: ಕಂಡೀಷನಲ್ಸ್‌
+          title: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಪರಿಚಯ
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: ಈವೆಂಟ್‌ಗಳು
         soccer:
           description: ಒಂದು ಸಾಕರ್ ಗೇಮ್ ಮಾಡಿ
           description_short: ಒಂದು ಸಾಕರ್ ಗೇಮ್ ಮಾಡಿ
