@@ -224,7 +224,6 @@ class LtiV1Controller < ApplicationController
       return
     end
 
-    # TODO Nick: These param names sholud be vetted
     client_id = params[:client_id]
     platform_name = params[:lms]
     admin_email = params[:email]
