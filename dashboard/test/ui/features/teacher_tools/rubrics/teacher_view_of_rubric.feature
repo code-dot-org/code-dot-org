@@ -23,7 +23,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I wait until element ".student-table" is visible
   And I click selector ".student-table tr:nth(1)" to load a new page
   And I click selector "#ui-floatingActionButton" once I see it
-  And I click selector "strong:contains(Code Quality)" once I see it
+  And I click selector "h6:contains(Code Quality)" once I see it
   And I wait until element "span:contains(Extensive Evidence)" is visible
   Then I click selector "span:contains(Extensive Evidence)"
   And I click selector "#ui-teacherFeedback" once I see it
@@ -36,7 +36,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   # Check that the teacher can see submitted feedback
   Then I reload the page
   And I click selector "#ui-floatingActionButton" once I see it
-  And I click selector "strong:contains(Code Quality)" once I see it
+  And I click selector "h6:contains(Code Quality)" once I see it
   And I wait until element "textarea:contains(Nice work Lillian!)" is visible
 
   # The teacher given feedback is recieved by the student
@@ -44,7 +44,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2?enableExperiments=ai-rubrics"
   And I click selector ".uitest-taRubricTab" once I see it
   And I wait until element "p:contains(Extensive Evidence)" is visible
-  And I click selector "strong:contains(Code Quality)" once I see it
+  And I click selector "h6:contains(Code Quality)" once I see it
   And I wait until element "textarea:contains(Nice work Lillian!)" is visible
 
   @eyes
@@ -100,11 +100,11 @@ Scenario: Teachers can give and send feedback on the rubric to students.
 
     When I click selector "#ui-floatingActionButton"
     And I wait until element ".uitest-rubric-header-tab:contains('Settings')" is visible
-    And I wait until element "strong:contains(Code Quality)" is visible
+    And I wait until element "h6:contains(Code Quality)" is visible
     Then I see no difference for "rubric tab, Code Quality learning goal"
 
     When I click selector "#uitest-next-goal"
-    And I wait until element "strong:contains(Sprites)" is visible
+    And I wait until element "h6:contains(Sprites)" is visible
     Then I see no difference for "rubric tab, Sprites learning goal"
 
     When I click selector ".uitest-rubric-header-tab:contains('Settings')"
