@@ -12,7 +12,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I wait to see "#submitButton"
   And I press "submitButton"
   And I wait to see "#confirm-button"
-  And I press "confirm-button"
+  And I press "confirm-button" to load a new page
   And I wait to see "#song_selector"
 
   # Teacher can see and submit feedback for a student
