@@ -97,7 +97,6 @@ export default function LearningGoal({
           // Find code snippet by looking at the student code
           const code = studioApp().getCode();
 
-          console.log('start', lineNumber, message);
           const references = context.substring(message.length);
           for (const submatch of references.matchAll(/`([^`]+)`/g)) {
             let snippet = submatch[1];
@@ -105,10 +104,8 @@ export default function LearningGoal({
             if (index >= 0) {
               lineNumber =
                 (code.substring(0, index).match(/\n/g) || []).length + 1;
-              console.log('end (found)', lineNumber);
               break;
             }
-            console.log('end', lineNumber);
           }
 
           // Annotate that line

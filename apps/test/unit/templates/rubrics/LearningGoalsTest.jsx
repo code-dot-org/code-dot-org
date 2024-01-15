@@ -6,8 +6,14 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 import LearningGoals from '@cdo/apps/templates/rubrics/LearningGoals';
+import {
+  singleton as studioApp,
+  stubStudioApp,
+  restoreStudioApp,
+} from '@cdo/apps/StudioApp';
 
 describe('LearningGoals', () => {
+  //let editor, originalMainBlockSpace;
   const studentLevelInfo = {name: 'Grace Hopper', timeSpent: 706};
 
   const learningGoals = [
@@ -39,8 +45,40 @@ describe('LearningGoals', () => {
       learning_goal_id: 2,
       understanding: 2,
       ai_confidence: 50,
+      observations:
+        'Line 3-5: The sprite is defined here. `var sprite = createSprite(100, 120)`',
     },
   ];
+
+  // Stub out our references to the studioApp singleton
+  beforeEach(stubStudioApp);
+  afterEach(restoreStudioApp);
+
+  // Stub out the calls to the editor
+  beforeEach(() => {
+    sinon.stub(studioApp(), 'annotateLine');
+    sinon.stub(studioApp(), 'highlightLine');
+    sinon.stub(studioApp(), 'clearAnnotations');
+    sinon.stub(studioApp(), 'clearHighlightedLines');
+  });
+
+  /*
+  // Necessary stubs for Blockly
+  beforeEach(() => {
+    originalMainBlockSpace = Blockly.blockly_.mainBlockSpace;
+    Blockly.blockly_.mainBlockSpace = {events: {dispatchEvent: () => {}}};
+  });
+  afterEach(() => Blockly.blockly_.mainBlockSpace = originalMainBlockSpace);*/
+
+  describe('findCodeRegion', () => {
+    beforeEach(() => {
+      shallow(
+        <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
+      );
+    });
+
+    it('returns null for both when the snippet is not found', () => {});
+  });
 
   it('renders EvidenceLevels', () => {
     const wrapper = shallow(
