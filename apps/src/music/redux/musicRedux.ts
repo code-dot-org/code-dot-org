@@ -55,6 +55,8 @@ export interface MusicState {
     canUndo: boolean;
     canRedo: boolean;
   };
+  /** A callout that's being displayed. */
+  calloutId?: string;
 }
 
 const initialState: MusicState = {
@@ -75,6 +77,7 @@ const initialState: MusicState = {
     canUndo: false,
     canRedo: false,
   },
+  calloutId: undefined,
 };
 
 const musicSlice = createSlice({
@@ -191,6 +194,9 @@ const musicSlice = createSlice({
     ) => {
       state.undoStatus = action.payload;
     },
+    setShowCallout: (state, action: PayloadAction<string>) => {
+      state.calloutId = action.payload;
+    },
   },
 });
 
@@ -253,4 +259,5 @@ export const {
   moveStartPlayheadPositionForward,
   moveStartPlayheadPositionBackward,
   setUndoStatus,
+  setShowCallout,
 } = musicSlice.actions;

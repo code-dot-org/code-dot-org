@@ -48,6 +48,49 @@ export const ExpandableImagesWrapper = connect(null, dispatch => ({
   },
 }))(UnconnectedExpandableImagesWrapper);
 
+export class ShowCalloutsWrapper extends React.Component {
+  static propTypes = {
+    showCallout: PropTypes.func.isRequired,
+    children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node,
+    ]).isRequired,
+  };
+
+  componentDidMount() {
+    this.postRenderHook();
+  }
+
+  componentDidUpdate(prevProps) {
+    // TODO: do we need to do any kind of cleanup here? Or otherwise do
+    // something more precise than calling the method again when we're
+    // responding to an update rather than an initial render?
+    this.postRenderHook();
+  }
+
+  postRenderHook() {
+    const thisNode = ReactDOM.findDOMNode(this);
+    this.renderShowCallouts(thisNode);
+  }
+
+  renderShowCallouts(node) {
+    const showCallouts = node.querySelectorAll('a[href]');
+    for (let i = 0; i < showCallouts.length; i++) {
+      const showCallout = showCallouts[i];
+      const id = showCallout.href.split('=').pop();
+      const textContent = showCallout.childNodes[0].textContent;
+      var newNode = document.createElement('span');
+      newNode.innerHTML = `<b style="cursor: pointer">${textContent}</b>`;
+      newNode.onclick = () => this.props.showCallout(id);
+      showCallout.replaceWith(newNode);
+    }
+  }
+
+  render() {
+    return this.props.children;
+  }
+}
+
 /**
  * A wrapper for our SafeMarkdown component which adds some extra
  * functionality.
@@ -63,6 +106,7 @@ export default class EnhancedSafeMarkdown extends React.Component {
     openExternalLinksInNewTab: PropTypes.bool,
     expandableImages: PropTypes.bool,
     className: PropTypes.string,
+    showCallout: PropTypes.func,
   };
 
   render() {
@@ -85,6 +129,14 @@ export default class EnhancedSafeMarkdown extends React.Component {
 
     if (this.props.expandableImages) {
       result = <ExpandableImagesWrapper>{result}</ExpandableImagesWrapper>;
+    }
+
+    if (this.props.showCallout) {
+      result = (
+        <ShowCalloutsWrapper showCallout={this.props.showCallout}>
+          {result}
+        </ShowCalloutsWrapper>
+      );
     }
 
     return result;

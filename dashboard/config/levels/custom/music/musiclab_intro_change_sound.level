@@ -35,7 +35,7 @@
           ]
         }
       },
-      "text": "####Choose a Sound\n\nThere are a ton of sounds you can choose from. Change up the beat!\n\nClick the name of the sound to select a new one, and then press Run.\n",
+      "text": "####Choose a Sound\n\nThere are tons of sounds you can choose from. Change up the beat!\n\nClick the name of the sound to select a new one, and then press Run.\n",
       "sounds": {
         "beats": [
           "drum_kit_disco",

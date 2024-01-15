@@ -22,7 +22,7 @@
           ]
         }
       },
-      "text": "#### Play a sound\n\nLet's play a new sound!\n\nDrag the **play** block and attach it to **when run**. Click the name of the sound if you want to select a new sound.\n\nThen press Run.\n",
+      "text": "Let's play a new sound!\n\nDrag the [play](#showcallout=play-sound-block) block and attach it to [when run](#showcallout=when-run-block). Click the name of the sound if you want to select a new sound.\n\nThen press [Run](#showcallout=run-button).\n\n",
       "toolbox": {
         "blocks": {
           "Play": [
