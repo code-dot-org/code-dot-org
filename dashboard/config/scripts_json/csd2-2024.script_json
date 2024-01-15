@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-10 19:48:11 UTC",
+    "serialized_at": "2024-01-12 21:21:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4380,7 +4380,7 @@
       "key": "176e19e9-979e-49d5-998e-92989b765160",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Have students include the Flexbox Reference handout in their notebooks if they haven’t done so already. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal Prompt**: In your own words, how do div tags and Flexbox help solve page design and layout issues?\n\n**Discussion Goal**: The goal of this quick reflection is to ensure students grasp the fundamental roles of div tags (structuring and grouping HTML content in a container) and Flexbox (styling and positioning elements within containers). Student responses may vary but might include design and layout issues like alignment, spacing, and organization. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Have students include the Flexbox Reference Cheat Sheet in their notebooks if they haven’t done so already. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal Prompt**: In your own words, how do div tags and Flexbox help solve page design and layout issues?\n\n**Discussion Goal**: The goal of this quick reflection is to ensure students grasp the fundamental roles of div tags (structuring and grouping HTML content in a container) and Flexbox (styling and positioning elements within containers). Student responses may vary but might include design and layout issues like alignment, spacing, and organization. \n"
       },
       "seeding_key": {
         "activity_section.key": "176e19e9-979e-49d5-998e-92989b765160",
@@ -7871,6 +7871,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L12 Div Flex SB_5"
+        ],
         "progression": "Practice Levels"
       },
       "bonus": false,
@@ -7893,6 +7896,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L12 Div Flex SB_6"
+        ],
         "progression": "Practice Levels"
       },
       "bonus": false,
@@ -7915,6 +7921,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L12 Div Flex SB_7"
+        ],
         "progression": "Practice Levels"
       },
       "bonus": false,
@@ -7937,6 +7946,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L12 Div Flex SB_8"
+        ],
         "progression": "Practice Levels"
       },
       "bonus": false,
@@ -7959,6 +7971,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L12 Div Flex SB_9"
+        ],
         "progression": "Practice Levels"
       },
       "bonus": false,
@@ -7981,6 +7996,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L12 Div Flex SB_10"
+        ],
         "progression": "Practice Levels"
       },
       "bonus": false,
