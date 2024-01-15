@@ -1,6 +1,6 @@
 import React, {useCallback, useContext, useState} from 'react';
 import classNames from 'classnames';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import moduleStyles from './instructions.module.scss';
 import {useSelector} from 'react-redux';
 import {navigateToNextLevel} from '@cdo/apps/code-studio/progressRedux';
@@ -29,6 +29,10 @@ interface InstructionsProps {
    * are currently unsupported. Defaults to right.
    */
   imagePopOutDirection?: 'right' | 'left';
+  /**
+   * A callback when the user clicks on something that might show a callout.
+   */
+  showCallout?: (id: string) => null;
 }
 
 /**
@@ -44,6 +48,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   baseUrl,
   layout,
   imagePopOutDirection,
+  showCallout,
 }) => {
   // Prefer using long instructions if available, otherwise fall back to level data text.
   const instructionsText = useSelector(
@@ -86,7 +91,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       showNextButton={showNextButton}
       onNextPanel={onNextPanel}
       theme={theme}
-      {...{baseUrl, layout, imagePopOutDirection}}
+      {...{baseUrl, layout, imagePopOutDirection, showCallout}}
     />
   );
 };
@@ -111,6 +116,10 @@ interface InstructionsPanelProps {
   imagePopOutDirection?: 'right' | 'left';
   /** Display theme. Defaults to dark. */
   theme?: 'dark' | 'light';
+  /**
+   * A callback when the user clicks on something that might show a callout.
+   */
+  showCallout?: (id: string) => null;
 }
 
 /**
@@ -126,6 +135,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   layout = 'vertical',
   imagePopOutDirection = 'right',
   theme = 'dark',
+  showCallout,
 }) => {
   const [showBigImage, setShowBigImage] = useState(false);
 
@@ -194,9 +204,10 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
             id="instructions-text"
             className={moduleStyles['text-' + theme]}
           >
-            <SafeMarkdown
+            <EnhancedSafeMarkdown
               markdown={text}
               className={moduleStyles.markdownText}
+              showCallout={showCallout}
             />
           </div>
         )}
@@ -207,9 +218,10 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               className={moduleStyles['message-' + theme]}
             >
               {message && (
-                <SafeMarkdown
+                <EnhancedSafeMarkdown
                   markdown={message}
                   className={moduleStyles.markdownText}
+                  showCallout={showCallout}
                 />
               )}
               {canShowNextButton && (

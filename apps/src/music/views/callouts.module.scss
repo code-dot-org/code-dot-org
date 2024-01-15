@@ -1,0 +1,21 @@
+@import "color.scss";
+
+// Fade out the calout.
+@keyframes fade-out {
+  0%, 50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.callout {
+  position: fixed;
+  color: yellow;
+  font-size: 24px;
+  z-index: 70;
+
+  opacity: 0;
+  animation: fade-out 2s;
+}
