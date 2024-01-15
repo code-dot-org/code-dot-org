@@ -15,22 +15,6 @@ import RubricSettings from './RubricSettings';
 import RubricTabButtons from './RubricTabButtons';
 import experiments from '@cdo/apps/util/experiments';
 
-// TODO: XXX: some throwaway line annotations
-const THROWAWAY_LINE_ANNOTATIONS = {
-  'Program Development - Program Sequence':
-    'Line 5: The sprite is defined here. `var frog = createSprite(175, 325);` Line 6: The sprite animation is set here. `frog.setAnimation("frog");` Line 7: Another sprite is defined here. `var mushroom = createSprite(450, 325);` Line 8: The sprite animation is set here. `mushroom.setAnimation("mushroom");` Line 9: The sprite velocity is set here. `mushroom.velocityX = -5;` Line 10: Another sprite is defined here. `var fly = createSprite(475, randomNumber(175, 325));` Line 11: The sprite animation is set here. `fly.setAnimation("fly");` Line 12: The sprite velocity is set here. `fly.velocityY = -7;` Line 16: The variables are defined here. `var score = 0;` `var health = 100;` Line 22: The background is set here. `background("skyblue");` Line 23: The ground is drawn here. `fill("green");` `rect(0, 360, 400, 40);` Line 38: The jumping conditionals are set here. `if (frog.y > 324) {` `if (keyDown("up")) {` `frog.velocityY = -5;` `} else {` `frog.velocityY = 0;` `}` `}` Line 49: The looping conditional is set here. `if (mushroom.x < -30) {` `mushroom.x = 430;` `}` Line 53: The sprites are drawn here. `drawSprites();` Line 57: The scoreboard is added here. `fill("black");` `textSize(20);` `text("Health:", 280, 30);` `text (health, 350, 30);` Line 62: The game over condition is set here. `if (health < 0) {` `background("black");` `fill("green");` `textSize(50);` `text("Game Over!" , 40, 200);` `}`',
-  'Modularity - Multiple Sprites':
-    'Line 5: The sprite is defined here. `var frog = createSprite(175, 325);` Line 6: The sprite animation is set here. `frog.setAnimation("frog");` Line 7: Another sprite is defined here. `var mushroom = createSprite(450, 325);` Line 8: The sprite animation is set here. `mushroom.setAnimation("mushroom");` Line 9: The sprite velocity is set here. `mushroom.velocityX = -5;` Line 10: Another sprite is defined here. `var fly = createSprite(475, randomNumber(175, 325));` Line 11: The sprite animation is set here. `fly.setAnimation("fly");` Line 12: The sprite velocity is set here. `fly.velocityY = -7;`',
-  'Algorithms and Control - Player Control Conditionals':
-    'Line 38: The jumping conditionals are set here. `if (frog.y > 324) {` `if (keyDown("up")) {` `frog.velocityY = -5;` `} else {` `frog.velocityY = 0;` `}` `}`',
-  'Algorithms and Control - Looping Conditionals':
-    'Line 49: The looping conditional is set here. `if (mushroom.x < -30) {` `mushroom.x = 430;` `}`',
-  'Algorithms and Control - Interaction Conditionals':
-    'No observations related to sprite interactions.',
-  Variables:
-    'Line 16: The variables are defined here. `var score = 0;` `var health = 100;` Line 57: The scoreboard is added here. `fill("black");` `textSize(20);` `text("Health:", 280, 30);` `text (health, 350, 30);`',
-};
-
 const TAB_NAMES = {
   RUBRIC: 'rubric',
   SETTINGS: 'settings',
@@ -70,17 +54,6 @@ export default function RubricContainer({
           return response.json();
         })
         .then(data => {
-          // TODO: XXX: add throwaway line annotations
-          data.forEach(learningGoalEvaluation => {
-            rubric.learningGoals.forEach(learningGoal => {
-              if (learningGoalEvaluation.learning_goal_id === learningGoal.id) {
-                if (THROWAWAY_LINE_ANNOTATIONS[learningGoal.learningGoal]) {
-                  learningGoalEvaluation.observations =
-                    THROWAWAY_LINE_ANNOTATIONS[learningGoal.learningGoal];
-                }
-              }
-            });
-          });
           setAiEvaluations(data);
         })
         .catch(error => {
@@ -90,7 +63,7 @@ export default function RubricContainer({
           );
         });
     }
-  }, [studentLevelInfo, teacherHasEnabledAi, rubric.id, rubric.learningGoals]);
+  }, [studentLevelInfo, teacherHasEnabledAi, rubric.id]);
 
   useEffect(() => {
     fetchAiEvaluations();
