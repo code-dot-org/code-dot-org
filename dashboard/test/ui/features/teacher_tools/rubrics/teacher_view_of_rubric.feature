@@ -13,7 +13,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I press "submitButton"
   And I wait to see "#confirm-button"
   And I press "confirm-button" to load a new page
-  And I wait to see "#song_selector"
+  And I wait until element ".header_text" contains text "Dance"
 
   # Teacher can see and submit feedback for a student
   Then I sign in as "Teacher_Lillian" and go home
