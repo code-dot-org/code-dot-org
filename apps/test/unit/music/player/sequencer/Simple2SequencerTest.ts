@@ -12,12 +12,15 @@ import {
   ChordEventValue,
   ChordEvent,
 } from '@cdo/apps/music/player/interfaces/ChordEvent';
+import {Key} from '@cdo/apps/music/utils/Notes';
 
 const testSound: SoundData = {
   name: 'name',
   src: 'id',
   length: 1,
   type: 'bass',
+  bpm: 120,
+  key: Key.C,
 };
 
 describe('Simple2Sequencer', () => {

@@ -1,6 +1,11 @@
 import SoundEffects from './soundEffects';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+//import * as Tone from 'tone';
+//import '../../../node_modules/tone/build/esm/index.js';
+// const Tone = require('tone');
+
+// import {PitchShifter} from 'soundtouchjs';
 
 const DEFAULT_DELAY_TIME = 60 / 120 / 2;
 
@@ -82,10 +87,48 @@ class AudioSystem {
     }
   }
 
-  PlaySoundByBuffer(audioBuffer, id, when, loop, effects, callback, duration) {
-    const source = audioContext.createBufferSource(); // creates a sound source
-    source.buffer = audioBuffer; // tell the source which sound to play
-    let currentNode = source;
+  PlaySoundByBuffer(
+    audioBuffer,
+    id,
+    when,
+    loop,
+    effects,
+    callback,
+    duration,
+    pitchShift,
+    playbackRate
+  ) {
+    // const tonePlayer = new Tone.Player({url: audioBuffer});
+    // console.log(tonePlayer);
+    // const source = new PitchShifter(audioContext, audioBuffer);
+    // source.tempo = playbackRate;
+    // console.log(source);
+
+    // let currentNode = source;
+
+    let source, currentNode;
+    if (window.noGrain) {
+      // eslint-disable-next-line no-undef
+      source = new Tone.Player({
+        url: audioBuffer,
+      });
+
+      const compensation = -12 * Math.log2(playbackRate);
+      // eslint-disable-next-line no-undef
+      const pitchShiftNode = new Tone.PitchShift(compensation + pitchShift);
+      source.connect(pitchShiftNode);
+      currentNode = pitchShiftNode;
+    } else {
+      // eslint-disable-next-line no-undef
+      source = new Tone.GrainPlayer({
+        url: audioBuffer,
+        grainSize: playbackRate * 0.1,
+      });
+      source.detune = pitchShift * 100;
+      currentNode = source;
+    }
+    source.playbackRate = playbackRate;
+    console.log(source);
 
     if (duration) {
       // If playing for a specific duration, apply a small fadeout to the sound
@@ -102,17 +145,18 @@ class AudioSystem {
     }
 
     if (effects) {
-      // Insert sound effects, which will connect to the output.
+      // Insert sound effects, which will connect to the o\utput.
       soundEffects.insertEffects(effects, currentNode);
     } else {
       // No sound effects, so we will connect directly to the output.
-      currentNode.connect(audioContext.destination);
+      // currentNode.connect(audioContext.destination);
+      currentNode.toDestination();
     }
     source.onended = callback.bind(this, id);
 
     source.loop = loop;
 
-    source.start(when, 0, duration); // play the source now
+    source.start(`+${when - audioContext.currentTime}`, 0, duration); // play the source now
 
     if (['suspended', 'interrupted'].includes(source.context.state)) {
       source.context.resume();
@@ -126,6 +170,7 @@ class AudioSystem {
     // across browsers.
     //if (source.context.state === 'running') {
     source.stop();
+    source.dispose();
     //}
   }
 }

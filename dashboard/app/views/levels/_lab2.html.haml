@@ -2,6 +2,7 @@
   #lab2-container{style: "height: 100%"}
 
 - content_for(:head) do
+  %script{src: 'http://unpkg.com/tone'}
   %script{src: webpack_asset_path("js/#{js_locale}/music_locale.js")}
   %script{src: webpack_asset_path("js/#{js_locale}/standaloneVideo_locale.js")}
   %script{src: webpack_asset_path("js/#{js_locale}/aichat_locale.js")}

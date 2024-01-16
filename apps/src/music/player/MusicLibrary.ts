@@ -157,6 +157,8 @@ export interface SoundData {
   restricted?: boolean;
   sequence?: SampleSequence;
   preview?: boolean;
+  bpm: number;
+  key: Key;
 }
 
 export interface SoundFolder {
