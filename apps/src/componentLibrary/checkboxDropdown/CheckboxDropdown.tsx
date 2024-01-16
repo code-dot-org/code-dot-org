@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import moduleStyles from './dropdownMenu.module.scss';
 
-export interface DropdownMenuProps {
+export interface CheckboxDropdownProps {
   /** Dropdown  Menu items list */
   items: {value: string; label: string}[];
   /** Dropdown selected value */
@@ -47,7 +47,7 @@ export interface DropdownMenuProps {
  * Used to render simple dropdowns with styled select (Dropdown button)]
  * and browser's native select options.
  */
-const DropdownMenu: React.FunctionComponent<DropdownMenuProps> = ({
+const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   items,
   selectedValue,
   onChange,
@@ -94,4 +94,4 @@ const DropdownMenu: React.FunctionComponent<DropdownMenuProps> = ({
   );
 };
 
-export default DropdownMenu;
+export default CheckboxDropdown;

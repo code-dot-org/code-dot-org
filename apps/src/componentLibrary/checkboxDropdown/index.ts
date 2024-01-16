@@ -1,2 +1,2 @@
-export type {DropdownMenuProps} from './DropdownMenu';
-export {default as default} from './DropdownMenu';
+export type {CheckboxDropdownProps} from './ChecbkoxDropdown';
+export {default as default} from './CheckboxDropdown';
