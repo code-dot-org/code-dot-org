@@ -45,3 +45,7 @@
   %p=hoc_s(:csp_page_faq_answer_07_02)
   %p=hoc_s(:csp_page_faq_answer_07_03)
   %p=hoc_s(:csp_page_faq_answer_07_04, markdown: :inline, locals: {curriculum_url: "/educate/curriculum/values", pl_url: "/educate/professional-learning/values"})
+%details
+  %summary=hoc_s(:csp_page_faq_question_08)
+  %p.has-external-link
+    =hoc_s(:csp_page_faq_answer_08, markdown: :inline, locals: {cmu_url: "https://academy.cs.cmu.edu/course-info"})
