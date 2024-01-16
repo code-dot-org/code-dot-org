@@ -95,6 +95,7 @@ is:
             Birds og Plants vs. Zombies!
           description_short: Prófaðu grunnatriði í tölvufræði með mörgum skemmtilegum
             fígúrum!
+          name: Klukkustund kóðunar
           student_description: Prófaðu undirstöðuatriði tölvunarfræði með leikverum
             úr Angry Birds og Plants vs. Zombies!
           title: Klukkustund kóðunar 2013
@@ -1054,6 +1055,14 @@ is:
           lessons:
             lesson-6:
               name: Lykkjur
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Könnun
+            lessonGroup-3:
+              display_name: Innihald
+            lessonGroup-5:
+              display_name: Annað kennsluefni
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1089,6 +1098,12 @@ is:
           lessons:
             lesson-4:
               name: Breytur
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-4:
+              display_name: Annað kennsluefni
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1118,6 +1133,12 @@ is:
           lessons:
             lesson-3:
               name: Frá lykkjur
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-4:
+              display_name: Annað kennsluefni
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1139,6 +1160,12 @@ is:
             lessonGroup-2:
               display_name: Innihald
         csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-4:
+              display_name: Annað kennsluefni
+        csa4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
@@ -1176,6 +1203,12 @@ is:
               display_name: Innihald
             lessonGroup-4:
               display_name: Annað kennsluefni
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-4:
+              display_name: Annað kennsluefni
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1202,6 +1235,12 @@ is:
               display_name: Innihald
             lessonGroup-4:
               display_name: Annað kennsluefni
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-4:
+              display_name: Annað kennsluefni
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1223,6 +1262,12 @@ is:
             lessonGroup-2:
               display_name: Innihald
         csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-5:
+              display_name: Annað kennsluefni
+        csa7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
@@ -1255,6 +1300,14 @@ is:
             lessonGroup-5:
               display_name: Könnun
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-4:
+              display_name: Könnun
+            lessonGroup-5:
+              display_name: Annað kennsluefni
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
@@ -2067,6 +2120,12 @@ is:
               display_name: Könnun
             csp_unit1_2020:
               display_name: Kafli 1 - Stafrænar upplýsingar
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Könnun
+            csp_unit1_2020:
+              display_name: Kafli 1 - Stafrænar upplýsingar
         csp1-dlp:
           lesson_groups:
             content:
@@ -2127,6 +2186,12 @@ is:
               display_name: 'Eining 10: Netöryggi og mikilvægi þess'
             lessonGroup-2:
               display_name: Könnun eftir námskeið
+        csp10-2024:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Eining 10: Netöryggi og mikilvægi þess'
+            lessonGroup-2:
+              display_name: Könnun eftir námskeið
         csp10-pilot-staging:
           lesson_groups:
             csp_conditionals:
@@ -2176,6 +2241,10 @@ is:
             csp_unit2_2020:
               display_name: 'Kafli 2: Internetið'
         csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Kafli 2: Internetið'
+        csp2-2024:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Kafli 2: Internetið'
@@ -2261,6 +2330,10 @@ is:
             csp_unit3_2020:
               display_name: 'Eining 3: Kynning á gerð appa'
         csp3-2023:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Eining 3: Kynning á gerð appa'
+        csp3-2024:
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Eining 3: Kynning á gerð appa'
@@ -2373,6 +2446,16 @@ is:
             csp_variables:
               display_name: Breytur
         csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Skilyrði
+            csp_functions:
+              display_name: Föll
+            csp_project:
+              display_name: Verkefni
+            csp_variables:
+              display_name: Breytur
+        csp4-2024:
           lesson_groups:
             csp_conditionals:
               display_name: Skilyrði
@@ -2506,6 +2589,12 @@ is:
               display_name: Yfirferðir
             lessonGroup-5:
               display_name: Könnun eftir námskeið
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Gögn
+            lessonGroup-5:
+              display_name: Könnun eftir námskeið
         csp5-dlp:
           lesson_groups:
             content:
@@ -2582,6 +2671,18 @@ is:
               display_name: Yfirferðir
             lessonGroup-5:
               display_name: Verkefni
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listar
+            lessonGroup-2:
+              display_name: Könnun eftir námskeið
+            lessonGroup-3:
+              display_name: Lykkjur
+            lessonGroup-4:
+              display_name: Yfirferðir
+            lessonGroup-5:
+              display_name: Verkefni
         csp6-pilot:
           lesson_groups:
             content:
@@ -2630,6 +2731,14 @@ is:
               display_name: Stikar og skilagildi
             lessonGroup-3:
               display_name: Könnun eftir námskeið
+        csp7-2024:
+          lesson_groups:
+            csp_libraries:
+              display_name: Söfn
+            csp_parameters_return_values:
+              display_name: Stikar og skilagildi
+            lessonGroup-3:
+              display_name: Könnun eftir námskeið
         csp7-pilot:
           lesson_groups:
             csp_libraries:
@@ -2653,6 +2762,10 @@ is:
             lessonGroup-3:
               display_name: Könnun eftir námskeið
         csp8-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Könnun eftir námskeið
+        csp8-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: Könnun eftir námskeið
@@ -2685,6 +2798,12 @@ is:
             lessonGroup-2:
               display_name: Könnun eftir námskeið
         csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Kafli 9: Gögn'
+            lessonGroup-2:
+              display_name: Könnun eftir námskeið
+        csp9-2024:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Kafli 9: Gögn'
@@ -3634,6 +3753,9 @@ is:
             lesson-1:
               name: Kennslustund 1
         self-paced-pl-k5-2024-1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Fyrstu skrefin
           lessons:
             lesson-1:
               name: Kennslustund 1
@@ -3645,6 +3767,9 @@ is:
               name: Næstu skref
           title: Kynning á tölvunarfræði
         self-paced-pl-k5-2024-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Fyrstu skrefin
           lessons:
             lesson-1:
               name: Kennslustund 1
