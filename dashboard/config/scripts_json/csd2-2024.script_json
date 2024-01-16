@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-08 18:27:10 UTC",
+    "serialized_at": "2024-01-12 21:21:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4351,6 +4351,7 @@
       "key": "4dd2b959-109f-485b-a725-4a003491692c",
       "position": 10,
       "properties": {
+        "progression_name": "Practice Levels",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -4379,7 +4380,7 @@
       "key": "176e19e9-979e-49d5-998e-92989b765160",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Have students include the Flexbox Reference handout in their notebooks if they haven’t done so already. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal Prompt**: In your own words, how do div tags and Flexbox help solve page design and layout issues?\n\n**Discussion Goal**: The goal of this quick reflection is to ensure students grasp the fundamental roles of div tags (structuring and grouping HTML content in a container) and Flexbox (styling and positioning elements within containers). Student responses may vary but might include design and layout issues like alignment, spacing, and organization. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Have students include the Flexbox Reference Cheat Sheet in their notebooks if they haven’t done so already. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal Prompt**: In your own words, how do div tags and Flexbox help solve page design and layout issues?\n\n**Discussion Goal**: The goal of this quick reflection is to ensure students grasp the fundamental roles of div tags (structuring and grouping HTML content in a container) and Flexbox (styling and positioning elements within containers). Student responses may vary but might include design and layout issues like alignment, spacing, and organization. \n"
       },
       "seeding_key": {
         "activity_section.key": "176e19e9-979e-49d5-998e-92989b765160",
@@ -7867,13 +7868,13 @@
     {
       "chapter": 70,
       "position": 6,
-      "activity_section_position": 5,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD U2L12 Div Flex SB_5"
         ],
-        "progression": "Skill Building"
+        "progression": "Practice Levels"
       },
       "bonus": false,
       "seeding_key": {
@@ -7883,7 +7884,7 @@
         "lesson.key": "Websites for Expression",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2024",
-        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+        "activity_section.key": "4dd2b959-109f-485b-a725-4a003491692c"
       },
       "level_keys": [
         "CSD U2L12 Div Flex SB_5"
@@ -7892,13 +7893,13 @@
     {
       "chapter": 71,
       "position": 7,
-      "activity_section_position": 6,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD U2L12 Div Flex SB_6"
         ],
-        "progression": "Skill Building"
+        "progression": "Practice Levels"
       },
       "bonus": false,
       "seeding_key": {
@@ -7908,7 +7909,7 @@
         "lesson.key": "Websites for Expression",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2024",
-        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+        "activity_section.key": "4dd2b959-109f-485b-a725-4a003491692c"
       },
       "level_keys": [
         "CSD U2L12 Div Flex SB_6"
@@ -7917,13 +7918,13 @@
     {
       "chapter": 72,
       "position": 8,
-      "activity_section_position": 7,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD U2L12 Div Flex SB_7"
         ],
-        "progression": "Skill Building"
+        "progression": "Practice Levels"
       },
       "bonus": false,
       "seeding_key": {
@@ -7933,7 +7934,7 @@
         "lesson.key": "Websites for Expression",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2024",
-        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+        "activity_section.key": "4dd2b959-109f-485b-a725-4a003491692c"
       },
       "level_keys": [
         "CSD U2L12 Div Flex SB_7"
@@ -7942,13 +7943,13 @@
     {
       "chapter": 73,
       "position": 9,
-      "activity_section_position": 8,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD U2L12 Div Flex SB_8"
         ],
-        "progression": "Skill Building"
+        "progression": "Practice Levels"
       },
       "bonus": false,
       "seeding_key": {
@@ -7958,7 +7959,7 @@
         "lesson.key": "Websites for Expression",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2024",
-        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+        "activity_section.key": "4dd2b959-109f-485b-a725-4a003491692c"
       },
       "level_keys": [
         "CSD U2L12 Div Flex SB_8"
@@ -7967,13 +7968,13 @@
     {
       "chapter": 74,
       "position": 10,
-      "activity_section_position": 9,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD U2L12 Div Flex SB_9"
         ],
-        "progression": "Skill Building"
+        "progression": "Practice Levels"
       },
       "bonus": false,
       "seeding_key": {
@@ -7983,7 +7984,7 @@
         "lesson.key": "Websites for Expression",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2024",
-        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+        "activity_section.key": "4dd2b959-109f-485b-a725-4a003491692c"
       },
       "level_keys": [
         "CSD U2L12 Div Flex SB_9"
@@ -7992,13 +7993,13 @@
     {
       "chapter": 75,
       "position": 11,
-      "activity_section_position": 10,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD U2L12 Div Flex SB_10"
         ],
-        "progression": "Skill Building"
+        "progression": "Practice Levels"
       },
       "bonus": false,
       "seeding_key": {
@@ -8008,7 +8009,7 @@
         "lesson.key": "Websites for Expression",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2024",
-        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+        "activity_section.key": "4dd2b959-109f-485b-a725-4a003491692c"
       },
       "level_keys": [
         "CSD U2L12 Div Flex SB_10"
@@ -9477,7 +9478,7 @@
         "lesson.key": "Websites for Expression",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2024",
-        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+        "activity_section.key": "4dd2b959-109f-485b-a725-4a003491692c"
       }
     },
     {
@@ -9489,7 +9490,7 @@
         "lesson.key": "Websites for Expression",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2024",
-        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+        "activity_section.key": "4dd2b959-109f-485b-a725-4a003491692c"
       }
     },
     {
@@ -9501,7 +9502,7 @@
         "lesson.key": "Websites for Expression",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2024",
-        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+        "activity_section.key": "4dd2b959-109f-485b-a725-4a003491692c"
       }
     },
     {
@@ -9513,7 +9514,7 @@
         "lesson.key": "Websites for Expression",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2024",
-        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+        "activity_section.key": "4dd2b959-109f-485b-a725-4a003491692c"
       }
     },
     {
@@ -9525,7 +9526,7 @@
         "lesson.key": "Websites for Expression",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2024",
-        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+        "activity_section.key": "4dd2b959-109f-485b-a725-4a003491692c"
       }
     },
     {
@@ -9537,7 +9538,7 @@
         "lesson.key": "Websites for Expression",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2024",
-        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+        "activity_section.key": "4dd2b959-109f-485b-a725-4a003491692c"
       }
     },
     {

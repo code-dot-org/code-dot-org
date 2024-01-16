@@ -1179,6 +1179,8 @@
         "allthethings-mini-rubric-gamelab": "Uruchom\nTen poziom ma powiązaną z nim mini rubrykę, w której nauczyciele powinni przekazywać uczniom informacje zwrotne. Zaloguj się, aby przetestować poziomy gamelab (zgodnie z projektem poziomy gamelab działają tylko po zalogowaniu. Zwykle zmuszamy ludzi do logowania, ale jest to możliwe tylko w przypadku całego skryptu i byłoby denerwujące w przypadku skryptu allthethings).",
         "allthethings-mini-rubric-weblab": "Ten poziom ma powiązaną z nim mini rubrykę, w której nauczyciele powinni przekazywać uczniom informacje zwrotne. Zaloguj się, aby przetestować poziomy weblab (zgodnie z projektem poziomy weblab działają tylko po zalogowaniu. Zwykle zmuszamy ludzi do logowania, ale jest to możliwe tylko w przypadku całego skryptu i byłoby denerwujące w przypadku skryptu allthethings).",
         "allthethings_fish_tank": "Poziom testu wszystkich rzeczy.",
+        "allthethings_spritelab_functions": "Jest to poziom allthethings używany do testowania edytora funkcji modalnych.",
+        "allthethings_spritelab_stress_test": "Jest to poziom Allthethings Sprite Lab, który wykorzystuje różne bloki",
         "behaviors 1": "Czy mógłbyś przewidzieć! Przestudiuj kod.\n\n-   Duszek się zakręci.\n-   Duszek się skurczy.\n-   Duszek się poruszy.\n-   Duszek zmieni kolory.",
         "behaviors 1_2020": "Czy mógłbyś przewidzieć! Przestudiuj kod.\n\n-   Duszek się zakręci.\n-   Duszek się skurczy.\n-   Duszek się poruszy.\n-   Duszek zmieni kolory.",
         "behaviors 2": "Leć rakietą do gwiazd!\n\n-   Zmień zachowania rakiety tak, aby leciała w górę na ekranie.",

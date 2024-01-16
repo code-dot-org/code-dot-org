@@ -18,7 +18,7 @@ title: Zdroje
 
 ## Vyveste na škole naše plagáty
 
-Pripravili sme nové plagáty so známymi osobnosťami ako Malala, Stephen Curry či Shakira. Tento rok v každom balíku nájdete 6 plagátov a 126 nálepiek s nápisom „I did the Hour of Code“ (Mám za sebou Hodinu kódu). Pokiaľ si ich chcete vytlačiť sami, kliknite na obrázok nižšie a uložte si ho.
+Print your own posters! Simply click an image below to view and save a printable version.
 
 {{ promote_new_posters }}
 

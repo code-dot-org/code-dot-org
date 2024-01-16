@@ -458,3 +458,11 @@ sm:
           lesson_groups:
             lessonGroup-5:
               display_name: Fuainumera lasi
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: events
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: taamiloga

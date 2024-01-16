@@ -2910,6 +2910,10 @@ hu:
             lessonGroup-6:
               display_name: Kurzus Projekt vége
           description_short: Ismerje meg a Computer Science Fundamentals összes koncepcióját, és hozzon létre saját művészetét, történetét vagy
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Ingyenes Játék
         csa-frq-practice-2022:
           lessons:
             lesson-4:
@@ -3030,3 +3034,16 @@ hu:
               display_name: 2.  fejezet
         csd-post-survey-2024:
           title: Tanfomlyam Utáni Felmérés
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Események
+            lesson-4:
+              name: Viselkedések
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Ciklusok
+            lesson-4:
+              name: Feltételek
+          title: Bevezetés a számítógép tudományába

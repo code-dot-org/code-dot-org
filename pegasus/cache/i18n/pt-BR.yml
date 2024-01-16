@@ -116,7 +116,7 @@ pt-BR:
   appinventor_shortdescription: Faça seu próprio aplicativo! (Apenas para Android)
   applab-intro_name: Introdução ao Laboratório de Aplicativo
   applab_gradelevel: A partir de 13 anos
-  applab_name: Laboratório de Aplicativo
+  applab_name: App Lab
   applab_shortdescription_congrats: O App Lab é um ambiente de programação onde você
     pode criar aplicativos simples. Projete um aplicativo, programe com blocos ou
     JavaScript para fazê-lo funcionar, e então compartilhe seu aplicativo em apenas
@@ -913,7 +913,7 @@ pt-BR:
   dashboard_navigation_view_progress: Progresso
   dashboard_navigation_view_stats: Estatísticas
   dashboard_navigation_view_text_responses: Respostas de texto
-  dashboard_overview: Visão geral
+  dashboard_overview: Visão Geral
   dashboard_percent: Porcentagem
   dashboard_pre-express: 'Curso Expresso de Pré-Leitor: '
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Clique

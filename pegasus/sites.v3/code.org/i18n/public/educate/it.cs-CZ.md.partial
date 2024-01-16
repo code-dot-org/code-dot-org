@@ -70,16 +70,17 @@ theme: responsive
 
 Pro co nejlepší prožitek s veškerým obsahem od Code.org Vám doporučujeme poradit se s Vaší školou nebo s IT oddělením školního okrsku, aby bylo zajištěno, že následující servery budou povoleny a nebudou blokovány.
 
-| Priorita                                                           | URL                                                                                                        |
-| ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| **Povinné**                                                        | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **Volitelné**                                                      | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **Používat videa umístěná na YouTube (režim zlepšeného soukromí)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **Používat videa umístěná na Code.org**                            | `https://videos.code.org`                                                                                  |
-| **Používat simulátor internetu**                                   | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **Používat Web Lab**                                               | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **Používat tlačítko sdílení Třídy Google**                         | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**                                        | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| Priorita                                                                                                 | URL                                                                                                        |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Povinné**                                                                                              | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **Zajistit, aby systémy CAPTCHA mohly odlišit vaše použití od automatizované podvodné činnosti („bot“)** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **Volitelné**                                                                                            | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **Používat videa umístěná na YouTube (režim zlepšeného soukromí)**                                       | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Používat videa umístěná na Code.org**                                                                  | `https://videos.code.org`                                                                                  |
+| **Používat simulátor internetu**                                                                         | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **Používat Web Lab**                                                                                     | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Používat tlačítko sdílení Třídy Google**                                                               | `https://apis.google.com`                                                                                  |
+| **Použití datových sad App Lab**                                                                         | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Údaje o podpoře mobilů a tabletů
 
@@ -104,7 +105,7 @@ Než zahájíte online kurzy na Code.org, vyzkoušejte si přehrávání níže 
 
 
 <!--
-The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
 .md.erb without breaking i18n sync, this file should include that partial instead.
 -->
 <figure style="width:100%; height: 100%; margin: 0 auto;">

@@ -4,7 +4,7 @@
     "self-paced-pl-k5-2024-1",
     "self-paced-pl-k5-2024-2"
   ],
-  "published_state": "in_development",
+  "published_state": "beta",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",

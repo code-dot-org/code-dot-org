@@ -1,104 +1,9 @@
 {
   "banners": {
-    "csleadersprize": {
-      "title": "",
-      "body": "",
-      "buttonText": "了解详情"
-    },
-    "csjourneys-22": {
-      "title": "",
-      "body": "",
-      "buttonText": "了解详情"
-    },
-    "hoc-more": {
-      "title": "",
-      "body": "编程一小时由 code. org 和合作伙伴联合开发，网站提供 500 多项计算机科学活动，适合所有年龄与经验水平。",
-      "buttonText": ""
-    },
     "superhero": {
       "title": "",
       "body": "",
       "buttonText": "学习更多内容"
-    },
-    "csjourneys": {
-      "title": "",
-      "body": "",
-      "buttonText": "了解详情"
-    },
-    "class-schedule-survey": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "back-to-school-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "了解详情"
-    },
-    "teacher-apps-open-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "加入我们"
-    },
-    "teacher-apps-closing-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "加入我们"
-    },
-    "teacher-apps-nominate-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "任命为老师"
-    },
-    "teacher-apps-stillon-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "加入我们"
-    },
-    "home-learning-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "查看项目创意"
-    },
-    "soonhoc-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "codebytes-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "了解详情"
-    },
-    "ai-2020": {
-      "title": "探索人工智能和机器学习",
-      "body": "",
-      "buttonText": "了解详情"
-    },
-    "congrats-certificate-share": {
-      "title": "",
-      "body": "",
-      "buttonText": "开始"
-    },
-    "coldplay": {
-      "title": "",
-      "body": "",
-      "buttonText": "试一试"
-    },
-    "ai-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "了解详情"
-    },
-    "ai-pl-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "了解详情"
-    },
-    "state-of-cs-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
     },
     "hoc-2023": {
       "title": "编程一小时：利用人工智能进行创意",
@@ -108,6 +13,11 @@
     "hoc-2023-dance-ai": {
       "title": "",
       "body": "了解人工智能（AI）概念，创建自己的虚拟舞会来展示当今的顶级艺术家。数十首歌曲可供选择，无论学生喜欢什么，都有合适的内容。是时候大放异彩了！",
+      "buttonText": "了解详情"
+    },
+    "co-teacher": {
+      "title": "",
+      "body": "",
       "buttonText": "了解详情"
     }
   }

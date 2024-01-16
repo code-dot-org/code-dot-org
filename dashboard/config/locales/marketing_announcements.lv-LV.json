@@ -3,34 +3,7 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "ai-2020": {
-            "buttonText": "Uzzini vairāk"
-          },
-          "ai-launch-2023": {
-            "buttonText": "Uzzini vairāk"
-          },
-          "ai-pl-launch-2023": {
-            "buttonText": "Uzzini vairāk"
-          },
-          "back-to-school-2021": {
-            "buttonText": "Uzzini vairāk"
-          },
-          "codebytes-2020": {
-            "buttonText": "Uzzini vairāk"
-          },
-          "coldplay": {
-            "buttonText": "Izmēģini"
-          },
-          "congrats-certificate-share": {
-            "buttonText": "Sākt"
-          },
-          "csjourneys": {
-            "buttonText": "Uzzini vairāk"
-          },
-          "csjourneys-22": {
-            "buttonText": "Uzzini vairāk"
-          },
-          "csleadersprize": {
+          "co-teacher": {
             "buttonText": "Uzzini vairāk"
           },
           "hoc-2023": {

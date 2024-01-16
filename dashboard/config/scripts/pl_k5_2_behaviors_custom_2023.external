@@ -13,10 +13,7 @@ markdown <<MARKDOWN
 #### By adding the ‘Sprite begins’ block, when we press run, the Sprite will slowly get bigger. 
 
 
-
-
-
-<img src="https://images.code.org/301312a1274970571422c02bfb1b2cf7-image-1704382377533.gif" alt= "moving playspace and workspace window size" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/72569b194a488784e90945a2f87e6b48-image-1705006395844.gif" alt= "moving playspace and workspace window size" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
 
 
@@ -24,7 +21,5 @@ markdown <<MARKDOWN
 
 <hr style="clear:both">
 
-
-
-
+![]()
 MARKDOWN

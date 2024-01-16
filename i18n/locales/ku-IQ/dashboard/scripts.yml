@@ -486,3 +486,14 @@ ku:
               display_name: مەرجیەکان
             lessonGroup-5:
               display_name: گۆڕاوەکان
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-4:
+              name: ڕەفتارەکان
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: گرێکان
+            lesson-4:
+              name: مەرجیەکان
+          title: پێشەكیەک بۆ زانستی کۆمپیوتەر

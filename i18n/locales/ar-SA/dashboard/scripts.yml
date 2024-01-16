@@ -8348,6 +8348,10 @@ ar:
             -   تعرف على فرص التواصل مع مجتمع علوم الكمبيوتر الأوسع.
 
             **الوقت المقترح**: 70 دقيقة
+        musiclab:
+          lessons:
+            lesson-3:
+              name: اللعب الحر
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -8885,3 +8889,30 @@ ar:
         csd-post-survey-2024:
           title: استبيان ما بعد الدورة التدريبية
           description: تحتوي هذه الوحدة على استبيان ما بعد الدورة. يمكن تعيين هذه الوحدة بعد أن يكمل الطلاب وحدتهم النهائية في هذا المقرر الدراسي.
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: الدرس 1
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: الدرس 1
+            lesson-3:
+              name: الأحداث
+            lesson-4:
+              name: السلوك
+            lesson-5:
+              name: الخطوات التالية
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: الدرس 1
+            lesson-3:
+              name: الحلقات
+            lesson-4:
+              name: الجمل الشرطية
+            lesson-5:
+              name: وضع كل ذلك معًا
+            lesson-6:
+              name: الخطوات التالية
+          title: مقدمة لعلوم الحاسب الآلي

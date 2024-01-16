@@ -18,7 +18,7 @@ title: Alat-alat Promosi
 
 ## Tempelkan poster-poster ini di sekolah Anda
 
-Set poster baru tersedia menghadirkan Malala, Stephen Curry, Shakira dan lainnya! Tahun ini, setiap set juga akan dilengkapi dengan 6 poster serta 126 stiker "Saya ikut Hour of Code". Untuk mencetaknya sendiri, cukup klik gambar di bawah ini untuk melihat dan menyimpan versi yang dapat dicetak.
+Print your own posters! Simply click an image below to view and save a printable version.
 
 {{ promote_new_posters }}
 

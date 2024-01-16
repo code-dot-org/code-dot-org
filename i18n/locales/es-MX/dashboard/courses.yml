@@ -296,6 +296,8 @@ es-MX:
         self-paced-pl-csd-unit5-2023:
           title: Enseñanza de Datos y Sociedad
           version_title: 23-24
+        self-paced-pl-k5-2024:
+          description_student: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito de Code.org dirigido a educadores que deseen empezar a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás preparado para empezar a enseñar la Unidad de Creación de AI y Aprendizaje Automatizado** de Code.org con tus alumnos.\n\n### Encuentra la formación que funciona para ti\n\n-   **Ve a tu propio ritmo:** Esta experiencia de aprendizaje autodidacta está diseñada para darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada lección.  Sin embargo, te animamos a **interactuar con el contenido a tu propio ritmo.**\n\n-   **Elige tu contenido:** El contenido está organizado en la progresión sugerida para los educadores nuevos tanto en Code.org como en la unidad de Creación de AI y Aprendizaje Automatizado. Si ya está familiarizado con la plataforma Code.org, puedes saltarte la Introducción a Code.org y pasar directamente a la Preparación para Enseñar a crear AI y Aprendizaje Automatizado."
     resources:
       curriculum/csd/2017:
         name: Plan de estudios

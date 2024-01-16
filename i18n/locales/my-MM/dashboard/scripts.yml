@@ -415,3 +415,11 @@ my:
           lesson_groups:
             lessonGroup-5:
               display_name: Variables
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: ဖြစ်စဥ်များ
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Loops

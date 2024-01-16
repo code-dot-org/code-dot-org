@@ -18,7 +18,7 @@ title: Recursos
 
 ## Pengeu aquests pòsters a l'escola
 
-Tenim una col·lecció nova de pòsters disponibles on apareixen Malala, Stephen Curry, Shakira i molts personatges més! Aquest any, cada col·lecció inclou 6 pòsters i 126 adhesius de "He fet l'Hora del Codi". Per imprimir-los vosaltres mateixos, només heu de fer clic a la imatge següent per veure i desar una versió imprimible.
+Print your own posters! Simply click an image below to view and save a printable version.
 
 {{ promote_new_posters }}
 
