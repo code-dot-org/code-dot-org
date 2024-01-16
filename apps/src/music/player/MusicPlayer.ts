@@ -248,6 +248,10 @@ export default class MusicPlayer {
           offsetSeconds: this.convertPlayheadPositionToSeconds(soundEvent.when),
           triggered: soundEvent.triggered,
           effects: soundEvent.effects,
+          playbackRate: this.bpm / (soundData.bpm || 120),
+          // Don't transpose beat samples
+          pitchShift:
+            soundData.type === 'beat' ? 0 : this.key - (soundData.key || Key.C),
         },
       ];
     } else if (event.type === 'pattern') {
@@ -258,13 +262,15 @@ export default class MusicPlayer {
       const kit = patternEvent.value.kit;
 
       for (const event of patternEvent.value.events) {
-        const resultEvent = {
+        const resultEvent: SampleEvent = {
           sampleId: `${kit}/${event.src}`,
           offsetSeconds: this.convertPlayheadPositionToSeconds(
             patternEvent.when + (event.tick - 1) / 16
           ),
           triggered: patternEvent.triggered,
           effects: patternEvent.effects,
+          playbackRate: 1,
+          pitchShift: 0,
         };
 
         results.push(resultEvent);
@@ -302,6 +308,8 @@ export default class MusicPlayer {
         results.push({
           sampleId,
           offsetSeconds: this.convertPlayheadPositionToSeconds(noteWhen),
+          playbackRate: 1,
+          pitchShift: 0,
           ...event,
         });
       }
@@ -355,6 +363,8 @@ export default class MusicPlayer {
           lengthSeconds,
           triggered,
           effects,
+          playbackRate: 1,
+          pitchShift: 0,
         });
       }
     });
@@ -371,7 +381,7 @@ export default class MusicPlayer {
     return bpm;
   }
 
-  private validateKey(key: number): Key {
+  private validateKey(key: Key): Key {
     if (Key[key] === undefined) {
       console.warn('Invalid key. Defaulting to C');
       return Key.C;

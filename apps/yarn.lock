@@ -1991,6 +1991,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.23.5, @babel/runtime@npm:^7.23.6":
+  version: 7.23.8
+  resolution: "@babel/runtime@npm:7.23.8"
+  dependencies:
+    regenerator-runtime: ^0.14.0
+  checksum: 0bd5543c26811153822a9f382fd39886f66825ff2a397a19008011376533747cd05c33a91f6248c0b8b0edf0448d7c167ebfba34786088f1b7eb11c65be7dfc3
+  languageName: node
+  linkType: hard
+
 "@babel/runtime@npm:^7.4.5":
   version: 7.8.3
   resolution: "@babel/runtime@npm:7.8.3"
@@ -7267,6 +7276,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"automation-events@npm:^6.0.13":
+  version: 6.0.13
+  resolution: "automation-events@npm:6.0.13"
+  dependencies:
+    "@babel/runtime": ^7.23.5
+    tslib: ^2.6.2
+  checksum: f5747f368acda9f01548bf901b50de5cce09dcaf061f314470d7cb12a80c381befcd84937d47c866a73fbae9298b0336f03f1a04cae755a3a4303a3516531fe5
+  languageName: node
+  linkType: hard
+
 "autoprefixer@npm:^9.8.6":
   version: 9.8.8
   resolution: "autoprefixer@npm:9.8.8"
@@ -8202,6 +8221,7 @@ __metadata:
     slate: ^0.81.0
     slate-react: ^0.81.0
     sortabular: ^1.6.0
+    soundtouchjs: ^0.1.30
     source-map-loader: ^4.0.1
     sprintf-js: ^1.0.3
     storybook-addon-rtl: ^0.5.0
@@ -8213,6 +8233,7 @@ __metadata:
     survey-react: ^1.9.28
     terser-webpack-plugin: ^5.3.6
     timers-browserify: ^2.0.12
+    tone: ^14.7.77
     ts-loader: ^9.4.2
     ts-sinon: ^2.0.2
     typescript: ^4.9.5
@@ -26419,6 +26440,13 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
+"soundtouchjs@npm:^0.1.30":
+  version: 0.1.30
+  resolution: "soundtouchjs@npm:0.1.30"
+  checksum: 971802cce200b546ac22eb4ba1c069d2170ca6e399e2d8f8d3e97a7539f551032d435dc93f543fb99be136292acb023d43190f1d27186b84542016c39901f723
+  languageName: node
+  linkType: hard
+
 "source-list-map@npm:^2.0.0":
   version: 2.0.0
   resolution: "source-list-map@npm:2.0.0"
@@ -26681,6 +26709,17 @@ es6-shim@latest:
   version: 1.3.4
   resolution: "stackframe@npm:1.3.4"
   checksum: bae1596873595c4610993fa84f86a3387d67586401c1816ea048c0196800c0646c4d2da98c2ee80557fd9eff05877efe33b91ba6cd052658ed96ddc85d19067d
+  languageName: node
+  linkType: hard
+
+"standardized-audio-context@npm:^25.3.29":
+  version: 25.3.61
+  resolution: "standardized-audio-context@npm:25.3.61"
+  dependencies:
+    "@babel/runtime": ^7.23.6
+    automation-events: ^6.0.13
+    tslib: ^2.6.2
+  checksum: 80a21d6ad3216e3acf54ffcab69d65d1cd0f52c89ef3bd9a5c4b65ecdf3e2f1220dde4e34fa89c0b7167d9d2815131535e3e7aed7fda85a501ecca43c7d73000
   languageName: node
   linkType: hard
 
@@ -27995,6 +28034,16 @@ temporal@latest:
   languageName: node
   linkType: hard
 
+"tone@npm:^14.7.77":
+  version: 14.8.49
+  resolution: "tone@npm:14.8.49"
+  dependencies:
+    standardized-audio-context: ^25.3.29
+    tslib: ^2.3.1
+  checksum: ffc0d81f77e9030b5c5074b690f415a72be415edcda5ef01768de1ed89a7176392759ae1aae1cd70c5540da5616754b9c17fdf2a25c1d85dcb0ff64d9cac99c6
+  languageName: node
+  linkType: hard
+
 "totalist@npm:^1.0.0":
   version: 1.1.0
   resolution: "totalist@npm:1.1.0"
@@ -28165,6 +28214,13 @@ temporal@latest:
   version: 2.5.0
   resolution: "tslib@npm:2.5.0"
   checksum: ae3ed5f9ce29932d049908ebfdf21b3a003a85653a9a140d614da6b767a93ef94f460e52c3d787f0e4f383546981713f165037dc2274df212ea9f8a4541004e1
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.6.2":
+  version: 2.6.2
+  resolution: "tslib@npm:2.6.2"
+  checksum: 329ea56123005922f39642318e3d1f0f8265d1e7fcb92c633e0809521da75eeaca28d2cf96d7248229deb40e5c19adf408259f4b9640afd20d13aecc1430f3ad
   languageName: node
   linkType: hard
 

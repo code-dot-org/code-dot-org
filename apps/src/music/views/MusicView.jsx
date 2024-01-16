@@ -54,6 +54,7 @@ import {isEqual} from 'lodash';
 import HeaderButtons from './HeaderButtons';
 import MusicLibrary from '../player/MusicLibrary';
 import {setUpBlocklyForMusicLab} from '../blockly/setup';
+// const Tone = require('tone');
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -147,6 +148,10 @@ class UnconnectedMusicView extends React.Component {
     if (props.inIncubator) {
       setUpBlocklyForMusicLab();
     }
+
+    window.updateConfiguration = (bpm, key) => {
+      this.player.updateConfiguration(bpm, key && Key[key.toUpperCase()]);
+    };
   }
 
   componentDidMount() {
@@ -514,6 +519,9 @@ class UnconnectedMusicView extends React.Component {
   };
 
   playSong = () => {
+    //const player = new Tone.Player({});
+    //console.log(player);
+
     this.player.stopSong();
     this.playingTriggers = [];
 
