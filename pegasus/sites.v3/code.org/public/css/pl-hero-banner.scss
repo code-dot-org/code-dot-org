@@ -1,4 +1,4 @@
-@import 'color.scss', 'font.scss', 'breakpoints.scss';
+@import 'color.scss', 'typography.scss', 'breakpoints.scss';
 
 .pl-banner-superhero.homepage {
   max-width: 1020px;
@@ -15,36 +15,19 @@
 
   h1, h2 {
     text-align: left;
-    color: $black;
     max-width: 490px;
 
     @media screen and (max-width: $width-sm) {
       text-align: center;
-    }
-  }
-
-  h1 {
-    font-size: 3em;
-    margin: 0;
-
-    @media screen and (max-width: $width-md) {
-      font-size: 2.25em;
-      width: 50%;
-    }
-
-    @media screen and (max-width: $width-sm) {
-      width: 100%;
-      font-size: 2em;
+      max-width: unset;
     }
   }
 
   h2 {
+    @include body-one;
     margin: 1em 0;
-    font-family: var(--main-font);
-    font-weight: var(--regular-font-weight);
 
     @media screen and (max-width: $width-md) {
-      font-size: 1.25em;
       width: 40%;
     }
 
@@ -109,9 +92,9 @@
     overflow: hidden;
   }
 
-  .herohocbutton-solid-yellow {
-    background-color: #44769f;
-    border-color: #44769f;
+  .link-button.big {
+    background-color: #44769f !important;
+    border-color: #44769f !important;
   }
 
   @media screen and (max-width: $width-md) {
