@@ -54,6 +54,7 @@ sr:
           description: Try the basics of computer science with characters from Angry
             Birds and Plants vs. Zombies!
           description_short: Try the basics of computer science with many fun characters!
+          name: Час кода
           student_description: Try the basics of computer science with characters
             from Angry Birds and Plants vs. Zombies!
           title: Час кода 2013
@@ -623,6 +624,14 @@ sr:
               display_name: Функције
             csp_variables:
               display_name: Променљиве
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Кондиционали
+            csp_functions:
+              display_name: Функције
+            csp_variables:
+              display_name: Променљиве
         csp4-dlp:
           lesson_groups:
             required:
@@ -714,6 +723,12 @@ sr:
             csp_unit6_2020:
               display_name: Алгоритми
         csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Листе
+            lessonGroup-3:
+              display_name: Петље
+        csp6-2024:
           lesson_groups:
             csp_unit6_2020:
               display_name: Листе
