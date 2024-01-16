@@ -6,11 +6,13 @@ markdown <<MARKDOWN
 # Customization features
 
 
-### Uploading your own images
+## Uploading your own images
 
-##### Students can upload images from their computers to customize their projects with their own sprites and backgrounds using the upload feature.  
+#### Students can upload images from their computers to customize their projects with their own sprites and backgrounds using the upload feature.  
 
-**A safety prompt and check box appear when using the upload feature.  This is reminds you and your students about online privacy to ensure students are aware they should not share any identifiable information, like their full name or address, in any of their photos.**
+#### A **safety prompt** and check box appear when using the upload feature.  This is reminds you and your students about online privacy to ensure students are aware they should not share any identifiable information, like their full name or address, in any of their photos.
+
+<br>
 
 <details>
 
@@ -22,6 +24,7 @@ markdown <<MARKDOWN
 
 <div style="clear:both"/>
 
+#### In the next level, you will practice using the upload feature.
 
 ## Let's keep learning! 
 MARKDOWN

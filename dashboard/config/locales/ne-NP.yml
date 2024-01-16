@@ -9,11 +9,13 @@ ne:
         email: इमेल
         error:
           future: can't be in the future
+        finish_sign_up_header_error: 'Please correct the following errors:'
         gender: लिङ्ग
         locale: भाषा
         name: देखाउने नाम
         password: पासवर्ड
         password_confirmation: पासवर्ड  निश्चितिकरण
+        user_type: Account Type
         username: प्रयोगकर्ता नाम
     errors:
       messages:

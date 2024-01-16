@@ -1,0 +1,22 @@
+{
+  "tg-TJ": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "co-teacher": {
+            "buttonText": "Маълумоти бештар"
+          },
+          "hoc-2023": {
+            "buttonText": "Маълумоти бештар"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Маълумоти бештар"
+          },
+          "superhero": {
+            "buttonText": "Маълумоти бештар"
+          }
+        }
+      }
+    }
+  }
+}

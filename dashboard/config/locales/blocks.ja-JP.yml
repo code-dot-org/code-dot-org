@@ -2,6 +2,15 @@
 ja:
   data:
     blocks:
+      AmysBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"just right"': ちょうどよい
+            '"too little"': 少なすぎる
+            '"too much"': 多すぎる
+        text: |2-
+           もし {CONDITION}{SPRITE}
+          {STATEMENT}
       AmysBlocks_playerBehaviors:
         text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
@@ -24,6 +33,8 @@ ja:
             '0.75': 小
             '1.00': 普通
             '2.00': 大
+      Dancelab_ai:
+        text: "{IMAGE}は{VALUE}エフェクトを生成"
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -73,6 +84,11 @@ ja:
             '"measures"': 小節
             '"seconds"': 秒
         text: "{TIMESTAMP} {UNIT} 後"
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': 小節
+            '"seconds"': 秒
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -96,6 +112,27 @@ ja:
             '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
             sprites: すべて
+          MOVE:
+            '"next"': "(次へ)"
+            '"prev"': "(前へ)"
+            '"rand"': "(ランダム)"
+            MOVES.ClapHigh: 手を高く上げてたたく
+            MOVES.Clown: カンナム
+            MOVES.Dab: ダブ
+            MOVES.DoubleJam: ダブルダウン
+            MOVES.Drop: ドロップ
+            MOVES.Floss: フロス
+            MOVES.Fresh: フレッシュ
+            MOVES.Kick: 星
+            MOVES.Rest: 設定なし
+            MOVES.Roll: ボディロール
+            MOVES.ThisOrThat: ディス・オア・ザット
+        text: "{GROUP} で実行 {MOVE} {DIR} ずっとくりかえす"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': すべてのネコ
+            '"SLOTH"': sloths
           MOVE:
             '"next"': "(次へ)"
             '"prev"': "(前へ)"
@@ -576,6 +613,63 @@ ja:
         text: |-
           "バックグラウンド効果を設定します
           {PALETTE} {EFFECT}"
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"blooming_petals"': 花咲く花びら
+            '"circles"': トンネル
+            '"color_cycle"': 色
+            '"diamonds"': ダイヤモンド
+            '"disco"': 正方形
+            '"disco_ball"': ミラーボール
+            '"fireworks"': 花火
+            '"flowers"': フラワー
+            '"frosted_grid"': つや消しグリッド
+            '"galaxy"': 宇宙
+            '"growing_stars"': 成長する星
+            '"kaleidoscope"': 万華鏡
+            '"lasers"': レーザーのダンスフロア
+            '"music_wave"': 波
+            '"none"': 設定なし
+            '"quads"': アングル
+            '"rainbow"': 虹
+            '"rand"': "(ランダム)"
+            '"ripples"': さざ波
+            '"ripples_random"': ランダムなさざ波
+            '"snowflakes"': 雪
+            '"sparkles"': きらめき
+            '"spiral"': スパイラル
+            '"splatter"': 塗料のしぶき
+            '"squiggles"': 波線
+            '"starburst"': スターバースト
+            '"stars"': 星
+            '"swirl"': ヒプノ
+            '"text"': 曲名
+          PALETTE:
+            '"autumn"': 秋
+            '"cool"': 青
+            '"default"': 光
+            '"electronic"': エレクトロニクス
+            '"grayscale"': グレースケール
+            '"iceCream"': アイスクリーム
+            '"neon"': ネオン
+            '"ocean"': 海
+            '"rainbow"': 虹
+            '"rave"': 白黒
+            '"roses"': バラ
+            '"sky"': 空
+            '"spring"': 春
+            '"summer"': 夏
+            '"sunrise"': 日の出
+            '"sunset"': 日没
+            '"tropical"': 熱帯
+            '"twinkling"': きらきら
+            '"vintage"': ヴィンテージ
+            '"warm"': 赤
+            '"winter"': 冬
+        text: |-
+          "バックグラウンド効果を設定します
+          {PALETTE} {EFFECT}"
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -1014,6 +1108,15 @@ ja:
         text: "{SPRITE} が {TEXT1} と言う"
       KatiesBlocks_glideTo:
         text: "{SPRITE} が {LOCATION} へと進む"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': ガス
+            '"liquid"': 液体
+            '"solid"': 単色
+        text: |2-
+           もし {CONDITION}{SPRITE}
+          {STATEMENT}
       KatiesBlocks_tumbling:
         text: ころがる
       Mikelab_addBehaviorSimple:
@@ -1901,6 +2004,19 @@ ja:
             left: 左↺
             right: 右↻
         text: "{DIR}を向く"
+      ecosystems_catchMe:
+        text: 捕まえる{THIS}
+      ecosystems_eat:
+        text: 食べる{THIS}
+      ecosystems_goldilocks:
+        options:
+          CONDITION:
+            '"just right"': ちょうどよい
+            '"too little"': 少なすぎる
+            '"too much"': 多すぎる
+        text: |2-
+           もし {CONDITION}{SPRITE}
+          {STATEMENT}
       ecosystems_int10:
         options:
           VALUE:
@@ -1915,6 +2031,24 @@ ja:
             '8': '8'
             '9': '9'
         text: "{VALUE}"
+      ecosystems_makeNewSpriteBetween:
+        text: '作成する {N} 新しい {GROUP} 以下の間に　位置x: {X} y: {Y}'
+      ecosystems_makeNumSpritesAtLocation:
+        text: 作成する {NUM} 新しい {ANIMATION_NAME} スプライト  {LOCATION_GENERATOR}で
+      ecosystems_makeNumSpritesWithinRange:
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:0, y2:200}": ボトム
+            "{x1:0, x2:400, y1:150, y2:250}": ミドル
+            "{x1:0, x2:400, y1:200, y2:400}": トップ
+        text: 作成する {NUM} 新しい {ANIMATION_NAME} スプライト  {RANGE}で
+      ecosystems_randomLocationWithinRange:
+        text: x 最小{X1}x 最大{X2}y 最小{Y1}y 最大{Y2}
+      ecosystems_randomLocationWithinSelectedRange:
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:0, y2:200}": ボトム
+            "{x1:0, x2:400, y1:200, y2:400}": トップ
       gamelab_addBehaviorSimple:
         text: スプライト {SPRITE} 開始 {BEHAVIOR}
       gamelab_addTarget:

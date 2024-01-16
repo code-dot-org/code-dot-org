@@ -1,0 +1,22 @@
+{
+  "is-IS": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "co-teacher": {
+            "buttonText": "Nánar"
+          },
+          "hoc-2023": {
+            "buttonText": "Nánar"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Nánar"
+          },
+          "superhero": {
+            "buttonText": "Nánar"
+          }
+        }
+      }
+    }
+  }
+}

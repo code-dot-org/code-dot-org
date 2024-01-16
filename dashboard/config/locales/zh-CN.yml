@@ -4,12 +4,15 @@ zh-CN:
     attributes:
       user:
         age: 年龄
+        ai_rubrics_disabled: 禁用人工智能规则功能
+        ai_settings_header: AI设置
         current_password: 当前密码
         edit_header: 编辑用户信息
         email: 电子邮件
         error:
           future: 不能选择将来的时间
         finish_sign_up_header: 完成创建帐户
+        finish_sign_up_header_error: 请更正以下错误：
         finish_sign_up_subheader: 填写以下信息为 <strong>%{email}</strong> 创建 Code.org 帐户。
         finish_sign_up_subheader_markdown: 填写以下信息为 **%{email}** 创建 Code.org 帐户。
         finish_sign_up_subheader_provider: 填写信息，来使用 <strong>%{provider}</strong> 的
@@ -27,6 +30,7 @@ zh-CN:
         personal_email_markdown: 个人电子邮箱地址 [（没有电子邮箱请点击这里）](%{url})
         reset_password_token: 重置密码链接
         us_state: 省/直辖市/自治区
+        user_type: 帐户类型
         username: 用户名
         verified_teacher: 经过验证的老师
     errors:
@@ -140,6 +144,7 @@ zh-CN:
       sports: 运动
       summer_workshops_612: 6-12 暑期工作坊
       teacher_led: 教师主导
+      unsupported: 不支持
       virtual_academic_year_workshops_612: 6—12 学年虚拟研讨会
       workshops_k5: K-5 研讨会
       year_long: 长达一年
@@ -408,6 +413,8 @@ zh-CN:
     unsubmit-title: 撤回您的评估。
     wrong_body: 感谢您提交答案。
     wrong_title: 谢谢你
+  level_summary:
+    correct_answer: 正确答案
   locked_stage: 这一阶段的内容不可见是因为这一阶段当前已锁定。在你需要工作或审查你的答案的时候，你的老师可以解锁这一阶段。
   maker:
     google_oauth:
@@ -419,6 +426,7 @@ zh-CN:
       error_token_expired: 验证已过期，请重新登录获取一个新的验证码。
       error_wrong_provider: 错误的提供方，请确认你使用的是Google登录
       login_with_google: 登录到 Google 的 Maker 应用
+    setup_page_title: 创客设置
   match:
     correct_body: 这是正确的答案。
     correct_title: 正确。
@@ -474,7 +482,7 @@ zh-CN:
       educate_partner: 与我们合作
       educate_requirements: 技术要求
       educate_tools: 工具和视频
-      finished_hoc: 我已经完成了我的Hour of Code项目。
+      finished_hoc: 完成了！
       game_lab_documentation: 游戏实验室文档
       game_lab_tutorials: 游戏实验室说明
       help_support: 帮助与支持
@@ -558,7 +566,7 @@ zh-CN:
       starwarsblocks_hour: 星球大战(块)
       stats: 代码工作室
       team: 团队
-      thebadguys: 坏人
+      thebadguys: 坏蛋联盟
       view_all: 查看所有项目……
       weblab: 网络实验室
   next_level: 下一级
@@ -587,6 +595,9 @@ zh-CN:
     text: "**您是否是一位家长或监护人？**将您的电子邮箱地址关联到此帐户，以了解孩子的进度和项目的最新信息！"
   parent_mailer:
     parent_email_added_subject: 欢迎来到 Code.org ！
+    parent_permission_confirmation_subject: 感谢批准您的孩子访问 Code.org！
+    parent_permission_reminder_subject: 提示：孩子需要父母的同意后，才能访问 Code.org 。
+    parent_permission_request_subject: 孩子需要父母的同意后，才能访问 Code.org 。
     student_associated_subject: Code.org 的登录信息
   password:
     change_form:
@@ -644,17 +655,35 @@ zh-CN:
         sphero: Sphero
         wonder: 工作坊
       school_country:
+        australia: 澳大利亚
         barbados: 巴巴多斯
         belize: 伯利兹
+        brazil: 巴西
         canada: 加拿大
         chile: 智利
         colombia: 哥伦比亚
+        india: 印度
+        indonesia: 印度尼西亚
         israel: 以色列
+        jamaica: 牙买加
+        kenya: 肯尼亚
+        kosovo: 科索沃
         malaysia: 马来西亚
+        maldives: 马尔代夫
         mexico: 墨西哥
+        mongolia: 蒙古
+        new_zealand: 新西兰
         paraguay: 巴拉圭
+        philippines: 菲律宾
+        portugal: 葡萄牙
+        puerto_rico: 波多黎各
+        slovakia: 斯洛伐克
+        south_korea: 韩国
+        spain: 西班牙
         thailand: 泰国
+        trinidad_and_tobago: 特立尼达和多巴哥
         uzbekistan: 乌兹别克斯坦
+        vietnam: 越南
       subjects:
         art: 艺术
         cs: 计算机科学
@@ -689,9 +718,9 @@ zh-CN:
       first_name_preferred: 首选名字
       gender: 性别
       last_name: 姓
-      legal_opt_in: 提交此表单即表示您同意允许 Code.org 与您的所在国家、所在学区和主持人的 Code.org 国际合作伙伴共享有关您如何使用
-        Code.org 和专业学习资源的信息。我们将分享您的联系信息， 您正在使用哪些课程/组件以及如何与这些合作伙伴聚合有关您的数据。这包括你的班级的学生数量、你的教室的人员数据以及您的学校和地区的名称。我们不会与我们的合作伙伴分享关于个别学生的任何信息：所有学生的信息将不会被识别和聚合。我们的国际合作伙伴和主持人在合同上有义务以和
-        Code.org 相同的保密级别对待这一信息。
+      legal_opt_in: 提交此表单，即表示您同意允许 Code.org 与您所在国家的国际合作伙伴，共享您如何使用 Code.org 以及专业学习资源的信息。我们将与这些合作伙伴共享您的联系信息（如姓名和电子邮件），
+        您的学校信息，正在使用哪些课程/组件以及课程的统计数据（如使用每个课程的学生数量）。我们不会与合作伙伴分享任何关于学生的个人信息：所有学生的个人信息会被混淆并聚合。我们的国际合作伙伴和主持人在合同上有义务以和
+        Code.org 相同的保密级别对待这些信息。
       resources: 您使用以下哪种计算机科学教育资源？
       robotics: 您使用以下哪种机器人设备？
       school: 学校
@@ -971,6 +1000,8 @@ zh-CN:
     teacher_educator_guide: 请参阅教师指南
     title: 注册 Code.org
     us_state: 省/直辖市/自治区
+    us_state_dropdown_options:
+      other: 我住的地方没有列出
     user_type: 你是学生还是老师？
     user_type_button: 更新帐户类型
     user_type_label: 帐户类型

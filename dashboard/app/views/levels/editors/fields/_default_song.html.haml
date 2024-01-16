@@ -1,6 +1,25 @@
+-# The logic here is a little tricky
+  songMap contains a mapping of song id -> [song id, song name] for ALL songs
+  selectedSongObjects is a list of [song id, song name] of either the selected songs OR all songs, if nothing is selected
+  selectedSongMap is the same mapping for the _selected_ songs. If no songs are selected, then it uses the full song list.
+  fallbackDefaultSong is used if the current default song is not in the list of selected songs.
+  It is defined as: If there are selected songs, then use the first one in the list. Otherwise, use the first song in the list
+  of all songs.
+- songMap = @level.class.hoc_songs.reduce({}) {|hash, song| hash[song[1]] = song; hash }
+- selectedSongObjects = @level.song_selection ? @level.song_selection.map {|s| songMap[s] }.compact : @level.class.hoc_songs
+- selectedSongMap = selectedSongObjects.reduce({}) {|hash, song| hash[song[1]] = song; hash }
+- fallbackDefaultSong = selectedSongObjects[0]
+
 %h1.control-legend{data: {toggle: "collapse", target: "#defaultSong"}}
   Default Song
 
 #defaultSong.in.collapse
+  %p Please note - If you are limiting songs in the Limit Song Selection input, the Default Song must be one of those songs.
+  If not, the first song in the list of selected songs will be used as the default song.
+  %p
   = f.label :default_song, 'Default Song'
-  = f.select :default_song, options_for_select(@level.class.hoc_songs, @level.default_song)
+  = f.select :default_song, options_for_select(@level.class.hoc_songs, selectedSongMap[@level.default_song] ? @level.default_song : fallbackDefaultSong)
+
+%p Previously chosen default song (may not match actual default if song selection was limited):
+
+= (songMap[@level.default_song]&.length && songMap[@level.default_song][0]) || "No song chosen"

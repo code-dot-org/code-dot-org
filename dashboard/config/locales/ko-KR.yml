@@ -4,12 +4,14 @@ ko:
     attributes:
       user:
         age: 나이
+        ai_settings_header: AI 설정
         current_password: 현재 비밀번호
         edit_header: 계정 정보 수정
         email: 이메일
         error:
           future: 오늘 이전 날짜만 가능합니다.
         finish_sign_up_header: 계정 만들기를 마칩니다.
+        finish_sign_up_header_error: '다음 오류를 수정해주세요:'
         finish_sign_up_subheader: "<strong>%{email}</strong>을 위해 Code.org 계정을 만들려면
           밑에 있는 빈 곳에 정보를 입력 하세요."
         finish_sign_up_subheader_markdown: "**%{email}**을 위해 Code.org 계정을 만들려면 밑에
@@ -29,6 +31,7 @@ ko:
         personal_email_markdown: 개인 이메일 주소 [(만약 이메일 주소가 없다면 여기를 클릭하십시오)](%{url})
         reset_password_token: 팔로우했던 재설정 비밀번호 링크
         us_state: 주
+        user_type: 계정 유형
         username: username
         verified_teacher: 인증된 교사
     errors:
@@ -282,7 +285,7 @@ ko:
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
   hello: Hello world
   hidden_script: 여러분의 선생님은 여러분이 여기에 있는 걸 예상하지 못했습니다. 선생님에게 어느 단원을 들어야 하는지 물어 보세요.
-  hidden_stage: 여러분의 선생님은 여러분이 여기에 있는 걸 예상하지 못했습니다. 선생님에게 어느 레슨을 들어야 하는지 교사에게 물어보세요.
+  hidden_stage: 이 수업을 수강하는 것을 담당교사는 모릅니다. 어떤 수업을 수강해야 하는지 담당교사에게 문의하세요
   hoc_download:
     capsule_desc: 온라인, 웹 기반 [%{app_name}](%{url})를 이용하세요.
     capsule_title: 인터넷을 사용할 수 있습니까?
@@ -618,6 +621,7 @@ ko:
       받으십시오!"
   parent_mailer:
     parent_email_added_subject: Code.org에 오신 것을 환영합니다!
+    parent_permission_request_subject: 아이가 Code.org에 접속하기 위해선 보호자의 동의가 필요합니다.
     student_associated_subject: Code.org 로그인 정보
   password:
     change_form:
@@ -1014,6 +1018,8 @@ ko:
     teacher_educator_guide: 교육자 가이드
     title: Code.org 가입
     us_state: 주
+    us_state_dropdown_options:
+      other: 이 목록에 없는 곳에 살고 있습니다
     user_type: 학생 또는 선생님이신가요?
     user_type_button: 계정 유형 업데이트
     user_type_label: 계정 유형

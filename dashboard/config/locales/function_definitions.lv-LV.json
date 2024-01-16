@@ -596,6 +596,49 @@
             }
           }
         },
+        "Course E: Frozen Project_examples_2023": {
+          "draw a circle": {
+            "name": "zīmēt apli"
+          },
+          "draw a house": {
+            "name": "zīmēt māju",
+            "parameters": {
+              "length": "garums"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "uzzīmēt vējdzirnavas",
+            "parameters": {
+              "length": "garums",
+              "repeat": "atkārtot"
+            }
+          },
+          "draw a shape": {
+            "name": "uzzīmēt formu",
+            "parameters": {
+              "length": "garums"
+            }
+          },
+          "draw a square": {
+            "name": "zīmēt kvadrātu",
+            "parameters": {
+              "length": "garums"
+            }
+          },
+          "draw a star": {
+            "name": "zīmet zvaigzni",
+            "parameters": {
+              "length": "garums",
+              "points": "punkti"
+            }
+          },
+          "draw a triangle": {
+            "name": "zīmēt trīsstūri",
+            "parameters": {
+              "length": "garums"
+            }
+          }
+        },
         "Course E: Play Lab Project": {
           "do something": {
             "name": "kaut ko"
@@ -773,6 +816,49 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "name": "zīmēt apli"
+          },
+          "draw a house": {
+            "name": "zīmēt māju",
+            "parameters": {
+              "length": "garums"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "uzzīmēt vējdzirnavas",
+            "parameters": {
+              "length": "garums",
+              "repeat": "atkārtot"
+            }
+          },
+          "draw a shape": {
+            "name": "uzzīmēt formu",
+            "parameters": {
+              "length": "garums"
+            }
+          },
+          "draw a square": {
+            "name": "zīmēt kvadrātu",
+            "parameters": {
+              "length": "garums"
+            }
+          },
+          "draw a star": {
+            "name": "zīmet zvaigzni",
+            "parameters": {
+              "length": "garums",
+              "points": "punkti"
+            }
+          },
+          "draw a triangle": {
+            "name": "zīmēt trīsstūri",
+            "parameters": {
+              "length": "garums"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "name": "zīmēt apli"
@@ -859,6 +945,49 @@
             }
           }
         },
+        "CourseD_EOC_artist_example2021_2023": {
+          "draw a circle": {
+            "name": "zīmēt apli"
+          },
+          "draw a house": {
+            "name": "zīmēt māju",
+            "parameters": {
+              "length": "garums"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "uzzīmēt vējdzirnavas",
+            "parameters": {
+              "length": "garums",
+              "repeat": "atkārtot"
+            }
+          },
+          "draw a shape": {
+            "name": "uzzīmēt formu",
+            "parameters": {
+              "length": "garums"
+            }
+          },
+          "draw a square": {
+            "name": "zīmēt kvadrātu",
+            "parameters": {
+              "length": "garums"
+            }
+          },
+          "draw a star": {
+            "name": "zīmet zvaigzni",
+            "parameters": {
+              "length": "garums",
+              "points": "punkti"
+            }
+          },
+          "draw a triangle": {
+            "name": "zīmēt trīsstūri",
+            "parameters": {
+              "length": "garums"
+            }
+          }
+        },
         "Find the Wizard": {
           "check guess": {
             "name": "pārbaudīt/minēt"
@@ -895,6 +1024,11 @@
           }
         },
         "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "būvēt tiltu"
+          }
+        },
+        "Function intro Ryan_2023": {
           "build bridge": {
             "name": "būvēt tiltu"
           }
@@ -1037,6 +1171,11 @@
             "name": "atbrīvot ceļu"
           }
         },
+        "MC_HOC_2017_07_Cole_2023": {
+          "clear path": {
+            "name": "atbrīvot ceļu"
+          }
+        },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
             "name": "labot garo ceļu"
@@ -1070,6 +1209,14 @@
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "labot garo ceļu"
+          },
+          "fix short path": {
+            "name": "labot īso ceļu"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2023": {
           "fix long path": {
             "name": "labot garo ceļu"
           },
@@ -1117,6 +1264,14 @@
             "name": "būvēt īsu tiltu"
           }
         },
+        "MC_HOC_2017_Ali_2023": {
+          "build long bridge": {
+            "name": "būvēt garu tiltu"
+          },
+          "build short bridge": {
+            "name": "būvēt īsu tiltu"
+          }
+        },
         "MC_HOC_2017_FP20x20": {
           "function 1": {
             "name": "funkcija 1"
@@ -1150,6 +1305,14 @@
           }
         },
         "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "funkcija 1"
+          },
+          "function 2": {
+            "name": "funkcija 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2023": {
           "function 1": {
             "name": "funkcija 1"
           },
@@ -1640,6 +1803,11 @@
             "name": "kaut ko"
           }
         },
+        "courseC_data wizard_2023": {
+          "do something": {
+            "name": "kaut ko"
+          }
+        },
         "courseD_artist_binary1": {
           "draw": {
             "name": "zīmēt",
@@ -2109,6 +2277,11 @@
             "name": "kaut ko"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "kaut ko"
+          }
+        },
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "zīmēt kvadrātu"
@@ -2135,6 +2308,11 @@
           }
         },
         "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "zīmēt kvadrātu"
+          }
+        },
+        "courseE_artist_functions2_2023": {
           "draw a square": {
             "name": "zīmēt kvadrātu"
           }
@@ -2170,6 +2348,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "zīmet zvaigzni"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "zīmet zvaigzni"
           }
@@ -2215,6 +2398,11 @@
           }
         },
         "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "zīmet zvaigzni"
+          }
+        },
+        "courseE_artist_functions5_2023": {
           "draw a star": {
             "name": "zīmet zvaigzni"
           }
@@ -2310,6 +2498,17 @@
             "name": "zīmēt kvadrātu"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "kaut ko"
+          },
+          "draw a line of squares": {
+            "name": "zīmēt kvadrātu rindu"
+          },
+          "draw square": {
+            "name": "zīmēt kvadrātu"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "kaut ko"
@@ -2343,6 +2542,14 @@
           }
         },
         "courseE_artist_functions8a_2021": {
+          "do something": {
+            "name": "kaut ko"
+          },
+          "draw a square": {
+            "name": "zīmēt kvadrātu"
+          }
+        },
+        "courseE_artist_functions8a_2023": {
           "do something": {
             "name": "kaut ko"
           },
@@ -2395,6 +2602,17 @@
           }
         },
         "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "kaut ko"
+          },
+          "draw a line of squares": {
+            "name": "zīmēt kvadrātu rindu"
+          },
+          "draw square": {
+            "name": "zīmēt kvadrātu"
+          }
+        },
+        "courseE_artist_functions8b_2023": {
           "do something": {
             "name": "kaut ko"
           },
@@ -2460,6 +2678,17 @@
             "name": "zīmēt kvadrātu"
           }
         },
+        "courseE_artist_functions8c_2023": {
+          "do something": {
+            "name": "kaut ko"
+          },
+          "draw a line of squares": {
+            "name": "zīmēt kvadrātu rindu"
+          },
+          "draw square": {
+            "name": "zīmēt kvadrātu"
+          }
+        },
         "courseE_artist_functions9": {
           "do something": {
             "name": "kaut ko"
@@ -2508,6 +2737,14 @@
             "name": "uzzīmēt trijstūri"
           }
         },
+        "courseE_artist_functions9_2023": {
+          "do something": {
+            "name": "kaut ko"
+          },
+          "draw triangle": {
+            "name": "uzzīmēt trijstūri"
+          }
+        },
         "courseE_artist_functionsProj2022": {
           "draw a line of squares": {
             "name": "zīmēt kvadrātu rindu"
@@ -2548,6 +2785,14 @@
             "name": "zīmēt kvadrātu"
           }
         },
+        "courseE_artist_functionsProj_2023": {
+          "draw a line of squares": {
+            "name": "zīmēt kvadrātu rindu"
+          },
+          "draw square": {
+            "name": "zīmēt kvadrātu"
+          }
+        },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "kaut ko"
@@ -2574,6 +2819,11 @@
           }
         },
         "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "kaut ko"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "do something": {
             "name": "kaut ko"
           }
@@ -2608,6 +2858,11 @@
             "name": "kaut ko"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "kaut ko"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "zīmēt kvadrātu"
@@ -2634,6 +2889,11 @@
           }
         },
         "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "zīmēt kvadrātu"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
           "draw a square": {
             "name": "zīmēt kvadrātu"
           }
@@ -2674,6 +2934,11 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "kaut ko"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "kaut ko"
           }
@@ -2769,6 +3034,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "spēles beigas"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "spēles beigas"
           }

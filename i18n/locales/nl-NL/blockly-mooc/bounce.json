@@ -148,7 +148,7 @@
   "whenUpTooltip": "Voer de acties hieronder uit als pijltje naar boven wordt ingedrukt.",
   "whenWallCollided": "wanneer de bal een muur raakt",
   "whenWallCollidedTooltip": "Voer de actie hieronder uit wanneer een bal botst met een muur.",
-  "whileMsg": "terwijl",
+  "whileMsg": "zolang",
   "whileTooltip": "Herhaal de acties totdat je de finish hebt bereikt.",
   "yes": "Ja"
 }

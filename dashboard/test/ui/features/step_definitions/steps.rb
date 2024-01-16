@@ -52,7 +52,7 @@ def page_load(wait = true, blank_tab: false)
     unless blank_tab
       wait_until do
         (url = @browser.current_url) != '' &&
-           url != 'about:blank' &&
+          url != 'about:blank' &&
           @browser.execute_script('return document.readyState;') == 'complete'
       end
     end
@@ -96,6 +96,20 @@ end
 Given /^I am on "([^"]*)"$/ do |url|
   check_window_for_js_errors('before navigation')
   navigate_to replace_hostname(url)
+end
+
+And /^I take note of the current loaded page$/ do
+  # Remember this page
+  @current_page_body = @browser.find_element(:css, 'body')
+end
+
+Then /^I wait until I am on a different page than I noted before$/ do
+  # When we've seen a page before, look for a different page
+  if @current_page_body
+    wait_until do
+      @current_page_body != @browser.find_element(:css, 'body')
+    end
+  end
 end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
@@ -267,6 +281,10 @@ end
 # Required for inspecting elements within an iframe
 When /^I wait until element "([^"]*)" is visible within element "([^"]*)"$/ do |selector, parent_selector|
   wait_until {@browser.execute_script("return $(#{selector.dump}, $(#{parent_selector.dump}).contents()).is(':visible')")}
+end
+
+Then /^I wait until element "([^"]*)" is (not )?open$/ do |selector, negation|
+  wait_until {element_open?(selector) == negation.nil?}
 end
 
 When /^I wait until jQuery Ajax requests are finished$/ do
@@ -791,9 +809,13 @@ Then /^element "([^"]*)" is (not )?displayed$/ do |selector, negation|
 end
 
 And(/^I select age (\d+) in the age dialog/) do |age|
+  dropdown_selection = age
+  if age == 21
+    dropdown_selection = "21+"
+  end
   steps <<~GHERKIN
     And element ".age-dialog" is visible
-    And I select the "#{age}" option in dropdown "uitest-age-selector"
+    And I select the "#{dropdown_selection}" option in dropdown "uitest-age-selector"
     And I click selector "#uitest-submit-age"
   GHERKIN
 end
@@ -873,6 +895,11 @@ end
 Then /^I wait for image "([^"]*)" to load$/ do |selector|
   wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
   wait.until {@browser.execute_script("return $('#{selector}').prop('complete');")}
+end
+
+Then /^I wait for the video thumbnails to load$/ do
+  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
+  wait.until {@browser.execute_script("return Array.from(document.querySelectorAll('img.thumbnail-image')).filter((img) => !img.complete).length == 0;")}
 end
 
 Then /^I see jquery selector (.*)$/ do |selector|
@@ -1035,6 +1062,13 @@ And /^I dismiss the teacher panel$/ do
   steps <<~GHERKIN
     And I click selector ".teacher-panel > .hide-handle > .fa-chevron-right"
     And I wait until I see selector ".teacher-panel > .show-handle > .fa-chevron-left"
+  GHERKIN
+end
+
+And /^I dismiss the hoc guide dialog$/ do
+  steps <<~GHERKIN
+    And I click selector "#uitest-no-email-guide" if I see it
+    And I wait until I don't see selector "#uitest-no-email-guide"
   GHERKIN
 end
 

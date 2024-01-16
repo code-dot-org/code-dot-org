@@ -1,3 +1,5 @@
+@import 'font';
+
 $light_background_colour: #a69bc1;
 $blue_background_colour: #59b9dc;
 $gold_background_colour: #ffdfa1;
@@ -23,7 +25,7 @@ $dark_blue_background_colour: #0d4172;
   margin-bottom: 30px;
 
   a {
-    font-family: "Gotham 4r", sans-serif;
+    @include main-font-regular;
     text-decoration: none;
   }
 

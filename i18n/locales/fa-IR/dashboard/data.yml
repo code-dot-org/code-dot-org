@@ -19,27 +19,27 @@ fa:
         Farmer2: کشاورز 2
         Unplug8: انتزاع
         Artist4: هنرمند 4
-        Unplug9: برنامه نویسی دست به دست
+        Unplug9: برنامه نویسی رله
         Farmer3: کشاورز 3
         Unplug10: اینترنت
         Artist5: هنرمند 5
-        Unplug11: خلاصه
+        Unplug11: جمع‌بندی
         MazeEC: مارپیچ
         Bounce: پریدن
         Flappy: پرنده شل و  ول
         Jigsaw: جورچین
         MazeStep: سبک مرحله ای هزارتو
         Wordsearch: جستجوی لغت
-        Webapp: آزمایشگاه نرم افزار
+        Webapp: لابراتوار اپ
         ArtistEC: هنرمند
         TextMatch: تطبیق متن
-        StudioEC: آزمایشگاه بازی
-        Applab: آزمایشگاه نرم افزار
+        StudioEC: لابراتوار بازی
+        Applab: لابراتوار اپ
         NetSim: شبیه ساز اینترنت
         Custom: هنرمند
-        CustomStudio: آزمایشگاه بازی
-        Gamelab: کارگاه بازی سازی
-        Spritelab: آزمایشگاه اسپرایت
+        CustomStudio: لابراتوار بازی
+        Gamelab: لابراتوار بازی
+        Spritelab: لابراتوار اسپرایت
     trophy:
       name:
         Bronze: برنز
@@ -258,10 +258,10 @@ fa:
         studio_ec_sandbox: بازی خودتان را بسازید. وقتی کارتان تمام شد، روی پایان کلیک کنید تا به دوستانتان اجازه دهید داستان شما را روی موبایلشان امتحان کنند.
     video:
       name:
-        maze_intro: معرفی پیچ و خم
+        maze_intro: معرفی ماز
         artist_intro: معرفی هنرمند
         farmer_intro: معرفی کشاورز
-        flappy_intro: مقدمه فلپی
+        flappy_intro: معرفی فلاپی
         loop_times: بلوک تکرار زمان
         loop_until: بلوک "Repeat Until"
         if: بلوک "if"
@@ -311,8 +311,8 @@ fa:
         C2_playlab_createstory: آزمایشگاه بازی - یک بازی بسازید
         C2_graph_paper: برنامه نویسی روی کاغذ شطرنجی 
         C2_conditionals_with_cards: مشروط
-        C2_binary_bracelets: دستبند دودویی
-        C2_relay_programming: برنامه نویسی دست به دست
+        C2_binary_bracelets: دستبندهای دودویی
+        C2_relay_programming: برنامه نویسی رله
         C2_paper_airplanes: هواپیماهای کاغذی
         C2_digital_footprint: ردپای دیجیتالی شما
         C2_digital_footprint_v2: ردپای دیجیتالی شما
@@ -359,8 +359,8 @@ fa:
         CSF_collector_repeat_loops: حلقه‌های تکرار جمع‌آوری‌کننده
         CSF_collector_text_blocks: 'مبانی CS: جمع‌آوری‌کننده'
         CSF_create_functions: ساختن توابع
-        CSF_debugging_k1_blocks: رفع اشکال
-        CSF_debugging_text_blocks: رفع اشکال
+        CSF_debugging_k1_blocks: رفع باگ
+        CSF_debugging_text_blocks: رفع باگ
         CSF_EF_cs_matters: موضوعات مربوط به علوم کامپیوتر
         CSF_maze_intro_k1_blocks: مقدمه استودیو کد
         CSF_maze_intro_text_blocks: مقدمه استودیو کد
@@ -370,14 +370,14 @@ fa:
         CSF_stevie_big_project: استیوی و پروژه بزرگ
         CSF_unspotted_bugs: باگ‌های دیده‌نشده
         CSF_zuck_loops_short: حلقه‌های تکرار
-        frozen_intro: معرفی ساعت کدزنی
-        frozen_loops: معرفی حلقه ها
+        frozen_intro: معرفی ساعت کدنویسی
+        frozen_loops: معرفی حلقه‌ها
         frozen_functions: معرفی تابع ها
         playlab_intro: معرفی آزمایشگاه بازی
         playlab_events: رویداد های آزمایشگاه بازی
         playlab_repeat_forever: حلق ی تکرار برای همیشه ی آزمایشگاه بازی
         tutorial_puzzle_challenge: چالش معمای آموزش
-        infinity_playlab_intro: آزمایشگاه بازی - معرفی
+        infinity_playlab_intro: لابراتوار بازی - معرفی
         infinity_playlab_events: آزمایشگته بازی - رویداد ها
         infinity_playlab_repeat_forever: آزمایشگاه بازی - حلقه ی تکرار برای همیشه
         csd_concept_how_computers_work: معرفی نحوه کار کامپیوترها
@@ -433,7 +433,7 @@ fa:
         starwars_blocks_intro: 'جنگ ستارگان: ساخت کهکشان با کد - مقدمه'
         starwars_blocks_events: 'جنگ ستارگان: ساخت کهکشان با کد - رویدادها'
         starwars_blocks_congrats: 'جنگ ستارگان: ساخت کهکشان با کد - تبریک'
-        mc_intro: ماینکرافت - مقدمه
+        mc_intro: ماین‌کرفت - مقدمه
         mc_repeat: ماین کرافت - تکرار
         mc_if_statements: ماین کرافت - جملات شرطی
         mc_congrats_share: ماین کرافت - تبریک
@@ -444,7 +444,7 @@ fa:
         iceage_intro: ساعت کدنویسی عصر یخبندان - مقدمه
         iceage_events: ساعت کدنویسی عصر یخبندان - رویدادها
         iceage_repeat: ساعت کدنویسی عصر یخبندان - گزاره‌های تکرار
-        mc_2016_intro: ساعت کدنویسی ماینکرافت - مقدمه
+        mc_2016_intro: ساعت کدنویسی ماین‌کرفت - مقدمه
         mc_2016_loops: ساعت کدنویسی ماینکرافت - حلقه‌ها
         mc_2016_events: ساعت کدنویسی ماینکرافت - رویدادها
         mc_2016_spawn: ساعت کدنویسی ماینکرافت - تکثیر
@@ -454,11 +454,11 @@ fa:
         applab_hoc_onevent: ساعت کدنویسی App Lab - ‏onEvent
         applab_hoc_designmode: ساعت کدنویسی App Lab - حالت طراحی
         applab_hoc_share: ساعت کدنویسی App Lab - به اشتراک گذاری
-        mc_2017_agent_intro: ساعت کدنویسی ماینکرافت - عامل
+        mc_2017_agent_intro: ساعت کدنویسی ماین‌کرفت - مامور
         mc_2017_repeat: ساعت کدنویسی ماینکرافت - حلقه‌های تکرار
         mc_2017_functions: ساعت کدنویسی ماینکرافت - توابع
         mc_2017_congratulations: ساعت کدنویسی ماینکرافت - تبریک
-        mc_2017_puzzle_1: ساعت کدنویسی ماینکرافت - عامل
+        mc_2017_puzzle_1: ساعت کدنویسی ماین‌کرفت - مامور
         mc_2017_puzzle_3: ساعت کدنویسی ماینکرافت - حلقه‌های تکرار
         mc_2017_puzzle_8: ساعت کدنویسی ماینکرافت - توابع
         mc_2017_puzzle_12: ساعت کدنویسی ماینکرافت - بازی آزاد
@@ -497,16 +497,16 @@ fa:
         csd_gamelab_booleans: عبارات بولی
         csd_gamelab_conditional_statements: گزاره‌های شرطی
         csd_gamelab_if_else: گزاره‌های If/Else
-        CSF_SpriteLabIntro_CDEF: این Sprite Lab است
+        CSF_SpriteLabIntro_CDEF: اينجا لابراتوار اسپرايت است
         CSF_Spritelab_MakeSprite_CDEF: نحوه ساخت اسپرایت در Sprite Lab
         CDEF_Video_SpritesInAction: اسپرایت‌ها در عمل
         CSF_SpriteLab_SpritesInAction_CDEF: اسپرایت‌ها در عمل
         CSF_StarWars_ProjectIntro: معرفی پروژه جنگ ستارگان
-        mc_2018_intro: 'ماینکرافت: معرفی Voyage Aquatic'
+        mc_2018_intro: 'ماین‌کرفت: معرفی سفر آبی'
         MC_2018_loops: 'ماینکرافت: Voyage Aquatic تکرار کن تا زمانی که'
         mc_2018_conditionals: 'ماینکرافت: شرطی‌های Voyage Aquatic'
         mc_2018_closing: 'ماینکرافت: تبریک Voyage Aquatic'
-        hoc_dance_warmup: مهمانی رقص - گرم کردن
+        hoc_dance_warmup: مهمانی رقص - آماده شوید
         hoc_dance_congrats: مهمانی رقص - برقص!
         c_and_c_great_to_create: عالی خواهد بود که بتوانیم چیزی خلق کنیم و جوانمردانه بازی کنیم
         c_and_c_digital_sharing: اشتراک گذاری دیجیتال
@@ -530,10 +530,10 @@ fa:
         csd_applab_loops: حلقه‌ها در ‏App Lab
         csd_problem_solving_process: فرایند حل مسئله
         CSF_Going_Places_Safely: محله برخط من
-        CSF_SpriteLab_Intro_v2: آشنایی با آزمایشگاه اسپرایت
-        CSF_Spritelab_MakeSprite_v2: نحوه ساخت اسپرایت
+        CSF_SpriteLab_Intro_v2: آشنایی با لابراتوار اسپرایت
+        CSF_Spritelab_MakeSprite_v2: چگونه یک اسپرایت درست کنیم
         CSF_SpriteLab_SpritesInAction_v2: اسپرایت‌ها در عمل
-        csd_debugging: رفع اشکال
+        csd_debugging: رفع باگ
         csd_applab_designmode_short: حالت طراحی App Lab
         csp-pd-welcome: به خانواده خوش آمدید!
         CSF-Teaching-Problem-Solving: آموزش حل مسئله CSF 
@@ -546,7 +546,7 @@ fa:
         oceans_training_data: داده‌های آموزشی
         oceans_societal_implications: پیامدهای اجتماعی
         hoc_dance_congrats_2019: مهمانی رقص - برقص!
-        hoc_dance_warmup_2019: مهمانی رقص - گرم کردن
+        hoc_dance_warmup_2019: مهمانی رقص - آماده شوید
         hoc_dance_measures_2019: مهمانی رقص - اقدامات
         csd_what_computers_do: کامپیوترها چه کاری انجام می‌دهند؟
         csf_my_online_neighborhood_2020: محله برخط من
@@ -599,7 +599,7 @@ fa:
         poetry_module_planningapp: برنامه‌ریزی برنامه تولید شعر - کدگذاری با شعر
         poetry_module_multichoiceprompts: درخواست‌های چندگزینه‌ای - کدگذاری با شعر
         poetry_module_conditionals: شرطی‌ها - کدگذاری با شعر
-        poemart_intro: مقدمه هنر شعر
+        poemart_intro: معرفی هنر شعر سرودن
         poemart_events: رویدادهای هنر شعر
         poemart_imagery: تصاویر هنر شعر
         poemart_celebration: جشن هنر شعر
@@ -618,7 +618,7 @@ fa:
         csd_u6_circuit_playground: محاسبات فیزیکی
         CSA-PL-for-loops: حلقه‌های For در جاوا
         CSA-PL-variables: ایجاد متغیرها در جاوا
-        PL_CS_Journeys_Overview: سفرهای cs
+        PL_CS_Journeys_Overview: سفرهای علوم کامپیوتر
         CSA-PL-intro-to-java-lab: مبانی آزمایشگاه جاوا
         CSA-PL-first-program: نوشتن برنامه در جاوا
         CSD_u6_variables_part1: 'CSD: متغیرها'
@@ -694,12 +694,15 @@ fa:
         csa_one_dimensional_arrays: 'CSA: آرایه‌های یک بعدی (1D)'
         csa_polymorphism: 'CSA: چند شکلی'
         csd_sprite_properties: ویژگی‌های اسپرایت
-        csc-starquilts-intro: کدنویسی لحاف ستاره‌ای هندسی
-        csc-ecosystems-intro: ماژول اکوسیستمها
+        csc-starquilts-intro: کدنویسی لحاف ستاره‌ هندسی
+        csc-ecosystems-intro: شبیه‌سازی اکوسیستم دریایی
+        how-ai-works-llms-full: چت‌بات‌ها و مدل‌های زبانی بزرگ چگونه کار می‌کنند
+        how-ai-works-creativity-full: آیا هوش مصنوعی دارای خلاقیت و تخیل است؟
+        csd_ml_how_ai_works: هوش مصنوعی چگونه کار می‌کند
     callout:
       text:
-        drag_blocks: یک بلوک "حرکت" را بکش و آن را زیر بلوک دیگری بچسبان
-        run: '"اجرا" را بزن تا برنامه‌ات اجرا بشه'
+        drag_blocks: یک بلوک «حرکت» را بکش و آن را زیر بلوک دیگری بچسبان
+        run: '«اجرا» را بزنید تا برنامه خود را امتحان کنید'
         watch_again: برای تماشای دوباره این ویدیو اینجا را کلیک کنید 
         gray_block_explanation: بلوک های خاکستری را نمی توان پاک کرد. با این وجود می توانید معما را حل کنید?
         show_code_explanation: اینجا را کلیک کن تا کد برنامه‌ای که می‌سازی را ببینی
@@ -767,7 +770,7 @@ fa:
         Infinity_move_directions_callout_arrow: برای هدایت کردن از این فلش ها استفاده کنید
         Infinity_move_collide_callout: پخش صدا هنگامی که این رویداد رخ می دهد.
         Infinity_repeat_callout: بلوک های حرکت را داخل اینجا قرار دهید
-        craft_run_button_callout: '"اجرا" را بزن تا برنامه‌ات اجرا بشه'
+        craft_run_button_callout: '«اجرا» را بزنید تا برنامه خود را امتحان کنید'
         craft_drag_block_callout: یک بلوک "moveForward();" را بکشانید و آن را زیر بلوک دیگر بچسبانید
         craft_callout_preplaced: چند بلوک در اینجا قرار داده‌ایم تا شروع کنید
         craft_inside_repeat: با قرار دادن بلوک‌ها در اینجا، حرکات را تکرار کنید

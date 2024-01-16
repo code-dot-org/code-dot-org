@@ -344,7 +344,9 @@ my:
             ကုတ်နံပါတ် blockများကို သုံးပါ
           student_description: ဤ Minecraft ကမ္ဘာကိုဖြတ်၍ Steve နှင့် Alexကို ခေါ်ကာ
             စွန့်စားခန်းသွားရန် ကုတ်နံပါတ် blockများကို သုံးပါ
-          title: Minecraft Hour of Code
+          title: Minecraft စွန့်စားခန်း
+        minecraft:
+          title: Minecraft ဒီဇိုင်းနာ
         nevada-standards-aligned-fifth-grade-2023:
           lesson_groups:
             lessonGroup-5:
@@ -399,6 +401,14 @@ my:
               display_name: ဖြစ်စဥ်များ
             csf_loops:
               display_name: Loops
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Loops
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: ဖြစ်စဥ်များ
         soccer:
           name: ဘောလုံး
         starwars:

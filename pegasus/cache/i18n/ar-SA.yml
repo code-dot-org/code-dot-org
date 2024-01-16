@@ -1100,6 +1100,7 @@ ar-SA:
   header_incubator: حاضنة
   header_learn: تعلّم
   header_legal: الخصوصية والقانونية
+  header_legal_cookie_notice: إشعار ملفات تعريف الارتباط
   header_legal_privacy: سياسة الخصوصية
   header_legal_tos: شروط الخدمة
   header_my_dashboard: لوحة التحكم
@@ -2443,28 +2444,14 @@ ar-SA:
   volunteer_engineer_submission_intro_background: فعالية "ساعة من البرمجة" هي حركة
     عالمية لتقديم ساعة من علم الحاسب، ستصل إلى عشرات الملاين من الطلبة في أكثر من
     180 دولة. من فضلك انضم إلينا خلال "أسبوع تعليم علم الحاسوب"، 07-13 ديسمبر.
-  volunteer_engineer_submission_intro_guide: تعلم المزيد حول <a href="%{volunteer_guide}">برنامجنا
-    التطوعي هنا</a>.
   volunteer_engineer_submission_intro_guide_markdown: تعلم المزيد عن [برنامجنا التطوعي
     هنا] (%{volunteer_guide}).
-  volunteer_engineer_submission_intro_links: هل أنت مدرس تبحث عن متطوعين؟ يمكنك العثور
-    على متطوعين في [volunteer map](%{volunteer_local}) التابع لنا.
   volunteer_engineer_submission_intro_links_markdown: هل أنت مدرس تبحث عن متطوعين؟
     يمكنك العثور على متطوعين في [volunteer map](%{volunteer_local}) التابع لنا.
-  volunteer_engineer_submission_intro_recruit: 'سيحب المعلمين الحصول على أشخاص <span
-    style="font-family: ''Gotham 7r'', sans-serif;"> شغوفين بتعليم علوم الحاسوب </span>
-    و يستطيعون المساعدة في الفصول او اشخاص يستطيعون <span style="font-family: ''Gotham
-    7r'', sans-serif;"> الهام </span> طلابهم عن طريق التحدث معهم عن الإمكانيات المهولة
-    المتاحة عن طريق علم الحاسوب ( و يكمن عمل هذا عن طريق محادثة مُصورة عبر الانترنت).
-    اذا كنت لا تريد ان تتطوع <a href="%{url}"> تعلم المزيد </a> عن تنظيم "Hour of
-    code" الخاص بك.'
   volunteer_engineer_submission_intro_recruit_markdown: سيسعد المدرسون بوجود شخص **ذو
     عاطفة قوية تجاه تعليم علم الحاسوب** الذي يمكنه أن يقدم المساعدة في غرفة الصف أو
     بوجود شخص يمكنه **إلهام** طلابهم بالحديث عن سعة احتمالات علم الحاسوب (الذي يمكن
     القيام به عن طريق درشة الفيديو).
-  volunteer_engineer_submission_intro_signup: الرجاء إدخال المعلومات التالية إذا كنت
-    طالب علم الحاسوب أو مختص في البرمجة. ادخال الحقول بـ  <span class="form-required-field">
-    *</span> مطلوبة.
   volunteer_engineer_submission_intro_signup_markdown: الرجاء إدخال المعلومات التالية
     إذا كنت طالب علوم الحاسوب أو محترف البرامج. يجب أن تكون 18 سنة من العمر على الأقل
     للتسجيل كمتطوّع. لاحظ أن جميع الحقول التي تقوم بتعبئتها في هذا القسم ستكون متوفرة

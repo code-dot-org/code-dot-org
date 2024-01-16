@@ -4,25 +4,28 @@ ar:
     attributes:
       user:
         age: العمر
+        ai_rubrics_disabled: تعطيل ميزة تقييم الذكاء الاصطناعي
+        ai_settings_header: إعدادات الذكاء الاصطناعي
         current_password: كلمة المرور الحالية
         edit_header: تعديل تفاصيل الحساب
         email: البريد الإلكتروني
         error:
           future: لا يمكن أن يكون في المستقبل
-        finish_sign_up_header: إكمال إنشاء حسابك
-        finish_sign_up_subheader: املأ المعلومات التالية لإكمال إنشاء حساب على Code.org
+        finish_sign_up_header: قم بإنهاء إنشاء حسابك
+        finish_sign_up_header_error: 'يرجى تصحيح الأخطاء التالية:'
+        finish_sign_up_subheader: املأ المعلومات التالية لإنهاء إنشاء حساب Code.org
           لـ <strong>%{email}</strong>.
-        finish_sign_up_subheader_markdown: املأ المعلومات التالية لإكمال إنشاء حساب
-          على Code.org لـ **%{email}**.
-        finish_sign_up_subheader_provider: املأ المعلومات التالية لإكمال إنشاء حساب
-          على Code.org مع <strong>%{provider}</strong> لـ <strong>%{email}</strong>.
+        finish_sign_up_subheader_markdown: املأ المعلومات التالية لإنهاء إنشاء حساب
+          Code.org لـ **%{email}**.
+        finish_sign_up_subheader_provider: املأ المعلومات التالية لإنهاء إنشاء حساب
+          Code.org مع <strong>%{provider}</strong> لـ <strong>%{email}</strong>.
         finish_sign_up_subheader_provider_markdown: املأ المعلومات التالية لإكمال
           إنشاء حساب على Code.org مع **%{provider}** لـ **%{email}**.
-        gender: الجنس
+        gender: 'نوع الجنس '
         locale: اللغة
         name: اسم العرض
         name_example: اسم العرض (مثال:المبرمج الرائع أو "چين س.")
-        parent_email: بريد الوالد/الوصي
+        parent_email: البريد الإلكتروني للوالد/الوصي
         password: كلمة المرور
         password_confirmation: تأكيد كلمة المرور
         personal_email: البريد الإلكتروني الشخصي <a href="%{url}">(انقر هنا إذا لم
@@ -30,13 +33,14 @@ ar:
         personal_email_markdown: البريد الإلكتروني الشخصي [(انقر هنا إذا لم يكن لديك
           عنوان بريد إلكتروني)](%{url})
         reset_password_token: رابط إعادة تعيين كلمة المرور الذي اتبعته
-        us_state: الولاية
+        us_state: حالة
+        user_type: نوع الحساب
         username: اسم المستخدم
         verified_teacher: مدرس تم التحقق منه
     errors:
       messages:
         blank: مطلوب
-        blank_plural: مطلوب
+        blank_plural: مطلوبة
         invalid: غير صالح
         invalid_plural: غير صالحة
       models:
@@ -218,15 +222,15 @@ ar:
   download_pdf: افتح خطة الدرس
   errors:
     messages:
-      not_saved: 'الرجاء تصحيح الأخطاء التالية:'
-      pair_programmer: أنت حاليًا تقوم ببرمجة ثنائية مع طالب لا يستطيع الوصول إلى
-        هذا المحتوى. للوصول إلى هذا المحتوى، أوقِف البرمجة الثنائية، وحاول مرة أخرى.
-      teacher_must_accept_terms: هذا المحتوى له قيود عمرية، وغير متاح للطلاب الأصغر
-        سنًا. لذا؛ اطلب من مدرسك قبول شروط الخدمة المحدثة لمنحك حق الوصول إلى هذا
-        المحتوى. ويمكن لمعلمك القيام بذلك عن طريق تسجيل الدخول إلى Code Studio والنقر
-        فوق زر "مراجعة الشروط المحدثة" بالقرب من الجزء العلوي من صفحة Code Studio
-        الرئيسية.
-      too_young: هذا المحتوى له قيود عمرية ولا يتوفر للطلاب الأصغر سنًا.
+      not_saved: 'يرجى تصحيح الأخطاء التالية:'
+      pair_programmer: أنت حاليًا تقوم ببرمجة مع صديق مع طالب لا يستطيع الوصول إلى
+        هذا المحتوى. للوصول إلى هذا المحتوى، أوقِف البرمجة مع صديق، وحاول مرة أخرى.
+      teacher_must_accept_terms: يخضع هذا المحتوى لقيود عمرية ولا يتوفر للطلاب الأصغر
+        سنًا. اطلب من معلمك قبول شروط الخدمة المحدثة لمنحك الوصول إلى هذا المحتوى.
+        يمكن لمعلمك القيام بذلك عن طريق تسجيل الدخول إلى Code Studio والنقر على زر
+        «مراجعة المصطلحات المحدثة» بالقرب من الجزء العلوي من الصفحة الرئيسية لـ Code
+        Studio.
+      too_young: هذا المحتوى يخضع لقيود سن وغير متاح للطلاب الأصغر سناً
   external_links:
     disclaimer: إخلاء مسؤولية
     disclaimer_text: ربما يتضمن هذا الموقع سياسات للخصوصية تختلف عن سياسات الخصوصية
@@ -688,6 +692,9 @@ ar:
       دائم بتقدم طفلك ومشاريعه!"
   parent_mailer:
     parent_email_added_subject: مرحبا بكم في Code.org!
+    parent_permission_reminder_subject: تذكير، موافقة الوالدين مطلوبة لوصول طفلك إلى
+      Code.org
+    parent_permission_request_subject: موافقة الوالدين مطلوبة لوصول طفلك إلى Code.org
     student_associated_subject: معلومات الدخول على Code.org
   password:
     change_form:
@@ -1171,6 +1178,8 @@ ar:
     teacher_educator_guide: راجع دليل المعلم
     title: سجل في Code.org
     us_state: الولاية
+    us_state_dropdown_options:
+      other: أنا أعيش في مكان غير مدرج هنا
     user_type: هل أنت طالب أو معلّم؟
     user_type_button: تحديث نوع الحساب
     user_type_label: نوع الحساب
@@ -1195,7 +1204,7 @@ ar:
     all_courses: جميع الدورات
     completed_courses: الدورات المكتملة
     courses_working_on: الدورات التدريبية التي تعمل عليها
-  submit: تسجيل
+  submit: إرسال
   teacher:
     answer: أجب
     confirm:
@@ -1212,7 +1221,7 @@ ar:
       student: طالب
       submitted_on: 'تم تقديمه في:'
       try_it_yourself: جربها بنفسك
-      unsubmit: عدم تقديم
+      unsubmit: إلغاء الإرسال
       update_lock_settings: تحديث إعداد القفل هنا.
       viewing_solution: عرض الحلول
       worked_with: بالعمل مع
@@ -1283,7 +1292,7 @@ ar:
   try_reloading: حاول اعادة تحميل الصفحة
   unit_prefix: وحدة %{n}
   unplugged_activity: نشاط غير موصول
-  unsubmit: عدم تقديم
+  unsubmit: إلغاء الإرسال
   upsell:
     20-hour:
       body: هذا الكورس 20 ساعة حول مقدمة عن علوم الكمبيوتر ومفاهيم البرمجة. تم تصميم
@@ -1525,7 +1534,7 @@ ar:
       بريد إلكتروني واحد من الوالدين / ولي الأمر لكل حساب تابع للطالب في الوقت الحالي.'
     parent_email_hint: "(يمكن استخدامه لاسترجاع كلمة المرور)"
     parent_email_label: البريد الإلكتروني لأحد الأبوين/ولي الأمر (اختياري)
-    parent_guardian_email_label: بريد الوالد/الوصي
+    parent_guardian_email_label: البريد الإلكتروني للوالد/الوصي
     remove_parent_email_label: حذف
     update: تحديث الحساب
     update_email: تحديث

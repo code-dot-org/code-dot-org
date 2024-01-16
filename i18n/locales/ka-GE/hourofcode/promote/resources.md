@@ -18,7 +18,7 @@ title: რესურსები
 
 ## გააკარით ეს პლაკატები თქვენს სკოლაში
 
-ახალი პოსტერები არის ხელმისაწვდომი — მალალა, სტეფან კარი, შაკირა და სხვები! წელს, ყველა კრებულში იქნება 6 პოსტერი და 126 სტიკერი წარწერით „I did the Hour of Code.“ პოსტერებისა და სტიკერების რაოდენობა შეზღუდულია; გირჩევთ ადრე [შეუკვეთოთ](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH). თვითონაც შეგიძლიათ დაბეჭდოთ; დააწკაპუნეთ სასურველ პოსტერს და შეინახეთ საბეჭდი ვერსია.
+Print your own posters! Simply click an image below to view and save a printable version.
 
 {{ promote_new_posters }}
 

@@ -1242,6 +1242,26 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal expected_announcements, summary[:announcements]
   end
 
+  test 'summarize_for_unit_selector determines whether feedback is enabled' do
+    course_version = create :course_version, :with_unit
+    course_offering = course_version.course_offering
+    course_offering.update!(marketing_initiative: 'CSD')
+    unit = course_version.content_root
+    summary = unit.summarize_for_unit_selector
+    assert summary[:is_feedback_enabled]
+
+    course_offering.update!(marketing_initiative: 'HOC')
+    unit.reload
+    summary = unit.summarize_for_unit_selector
+    refute summary[:is_feedback_enabled]
+
+    # no course version means no feedback
+    unit = create :script
+    refute unit.get_course_version
+    summary = unit.summarize_for_unit_selector
+    refute summary[:is_feedback_enabled]
+  end
+
   test 'should generate PLC objects for migrated unit' do
     i18n = {
       'en' => {
@@ -1663,9 +1683,9 @@ class UnitTest < ActiveSupport::TestCase
     Unit.stubs(:modern_elementary_courses).returns([course1_modern, course2_modern])
 
     assert Unit.modern_elementary_courses_available?("en-us")
-    assert_not Unit.modern_elementary_courses_available?("ch-ch")
-    assert_not Unit.modern_elementary_courses_available?("it-it")
-    assert_not Unit.modern_elementary_courses_available?("fr-fr")
+    refute Unit.modern_elementary_courses_available?("ch-ch")
+    refute Unit.modern_elementary_courses_available?("it-it")
+    refute Unit.modern_elementary_courses_available?("fr-fr")
   end
 
   test 'locale_english_name_map' do

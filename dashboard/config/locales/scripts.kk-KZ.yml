@@ -1389,7 +1389,7 @@ kk:
           description_short: Код арқылы Minecraft әлемінде саяхаттаңыз.
           student_description: Стив пен Алексек олардың Minecraft әлеміндегі саяхаттарына
             көмектесу үшін код блоктарын қолданыңыз.
-          title: Minecraft Кодтау Сағаты
+          title: Minecraft Adventurer
         minecraft:
           description: Бағдарламалау жануарлары мен басқа да Minecraft жаратылыстары
             сенің өз Minecraft ойынының нұсқасында.
@@ -1398,6 +1398,10 @@ kk:
           student_description: Бағдарламалау жануарлары мен басқа да Minecraft жаратылыстары
             сенің өз Minecraft ойынының нұсқасында.
           title: Minecraft кодтау сағатының дизайнеры
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Тегін Ойнау
         netsim:
           title: Ғаламтор Симуляторы
         nevada-standards-aligned-fifth-grade-2023:
@@ -1492,6 +1496,17 @@ kk:
           description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           student_description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Ілмек
+            lesson-4:
+              name: Шарттар
+          title: Информатика пәніне кіріспе
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Шаралар
         soccer:
           name: футбол
         spelling-bee:
@@ -1592,7 +1607,22 @@ kk:
           lesson_groups:
             content:
               display_name: Контент
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Кіріспе
+          lessons:
+            lesson-7:
+              name: Кіріспе
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Кіріспе
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
+              name: Кіріспе
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
               name: Кіріспе

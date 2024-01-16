@@ -103,7 +103,7 @@ module Cdo
     def site_host(domain)
       host = canonical_hostname(domain)
       if (rack_env?(:development) && !https_development) ||
-        (ENV['CI'] && host.include?('localhost'))
+          (ENV['CI'] && host.include?('localhost'))
         port = ['studio.code.org'].include?(domain) ? dashboard_port : pegasus_port
         host += ":#{port}"
       end
@@ -224,7 +224,7 @@ module Cdo
       return @@curriculum_languages
     end
 
-    def curriculum_url(locale, uri = '', autocomplete_partial_path = true)
+    def curriculum_url(locale, uri = '', autocomplete_partial_path: true)
       return unless uri
       uri = URI::DEFAULT_PARSER.escape(uri)
       uri = URI::DEFAULT_PARSER.parse(uri)
@@ -263,6 +263,15 @@ module Cdo
     # with RACK_ENV=test do not carry out actions on behalf of the managed test system.
     def test_system?
       rack_env?(:test) && pegasus_hostname == 'test.code.org'
+    end
+
+    # Identify whether we are executing within a web application server as most of our Ruby classes and modules
+    # can also be executed in Ruby shell scripts (cron jobs), ActiveJob consumers, or in interactive Ruby tools (irb).
+    # Some components may operate differently within a web application server, such as using a database proxy to
+    # connect to the database. We use the `puma` web application server in most environments, except development, where
+    # we use `thin`.
+    def running_web_application?
+      %w(puma thin).include?(File.basename($0))
     end
 
     def shared_image_url(path)

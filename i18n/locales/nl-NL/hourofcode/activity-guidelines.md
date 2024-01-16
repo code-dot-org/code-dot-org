@@ -10,7 +10,7 @@ title: Richtlijnen voor de tutorials
 
 # Richtlijnen voor het maken en indienen van tutorials en lessen voor Hour of Code™ en Computer Science Education Week
 
-Code.org biedt verschillende Hour of Code™ -activiteiten, lessen en video's op de websites van Code.org en Hour of Code. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org biedt verschillende Hour of Code™ -activiteiten, lessen en video's op de websites van Code.org en Hour of Code. De huidige lijst is te vinden op []({{ urls/learn }})hourofcode.com/learn.
 
 Wil je je eigen zelfgeleide tutorial, les onder leiding van een leraar of robotica/makeractiviteit indienen waarin een computerwetenschappelijk principe wordt uitgelegd? Sluit je aan bij deze wereldwijde beweging en help deelnemers over de hele wereld om aan de slag te gaan met een uur code of ga verder met activiteiten die meerdere lessen, dagen of weken duren.
 
@@ -84,7 +84,7 @@ Het doel van een Hour of Code is om beginners een toegankelijke eerste kennismak
 
 De activiteiten moeten een computerwetenschappelijk concept aanleren, zoals loops, conditionals, encryptie of hoe het internet werkt. Een activiteit kan ook leren over hoe informatica verband houdt met beroepen, gebeurtenissen of geschiedenis in de echte wereld. Bijvoorbeeld door UX-design aan te leren om apps te maken die betekenisvol zijn voor een publiek of doel. We raden activiteiten af die zich richten op de syntaxis van programmeren in plaats van op de concepten. We zullen bijvoorbeeld activiteiten die HTML aanleren opsommen, maar niet benadrukken. Op dezelfde manier raden we lessen in blokprogrammering af die gericht zijn op het instellen/wijzigen van configuratieopties in plaats van te leren hoe een algoritme of proces te modelleren.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activiteiten waarvoor een app moet worden geïnstalleerd, een desktop-app of een spelconsole moet worden gebruikt, zijn oké, maar niet ideaal. We zullen geen activiteiten vermelden waarvoor aanmelding of betaling vereist is. (Robotica-activiteiten kunnen de aanschaf van robotica vereisen.)
+*Technische vereisten:* Vanwege de grote verscheidenheid aan technologische instellingen op school en in de klas zijn de beste activiteiten webgebaseerd of smartphonevriendelijk, of activiteiten die anderszins losgekoppeld zijn, waarbij computerwetenschappelijke concepten worden bijgebracht zonder het gebruik van een computer (zie http://csunplugged.com/). [](http://csunplugged.com/) Activiteiten waarvoor een app moet worden geïnstalleerd, een desktop-app of een spelconsole moet worden gebruikt, zijn oké, maar niet ideaal. We zullen geen activiteiten vermelden waarvoor aanmelding of betaling vereist is. (Robotica-activiteiten kunnen de aanschaf van robotica vereisen.)
 
 *Indeling onder leiding van studenten (zelfgestuurd):* Het oorspronkelijke Hour of Code was voornamelijk gebaseerd op het succes van zelfgeleide tutorials of lessen, optioneel gefaciliteerd door de docent. Er zijn al een tal van bestaande opties, maar als u een nieuwe wilt creëeren, moet deze zo worden ontworpen dat het leuk blijft voor een student om er alleen aan te werken en dat het makkelijk is voor een leraar die zich minimaal heeft voorbereid en weinig af weet van programmering. Deze moeten aanwijzingen bieden voor de scholieren, in tegenstelling tot een open-einde urenlange uitdaging. In het ideale geval zijn de instructies en tutorials rechtstreeks geïntegreerd in het programmeringsplatform, om te voorkomen er geschakeld moet worden tussen tabs of windows van de tutorial en het programmeringsplatform.
 
@@ -145,7 +145,7 @@ Wat u nodig heeft:
     * Delen op sociale media dat zij het CodeUur voltooid hebben
     * Een certificaat ontvangen voor het voltooien van het CodeUur
     * Het bekijken van leaderboards waar te vinden is welke landen/steden de hoogste participatiegraad van CodeUur activiteiten hebben
-    * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
+    * Voor gebruikers die een uur aan je activiteit besteden en deze niet voltooien, voeg dan een knop bij je activiteit toe met de tekst „Ik ben klaar met mijn uur van code”, die ook teruglinkt naar [](https://code.org/api/hour/finish) code.org/api/hour/finish.
 * (Optioneel) We kunnen vervolgens een link naar een online enquête of formulier plaatsen waarin om een rapport van de volgende activiteitsstatistieken wordt gevraagd: 
     * Voor online activiteiten (met name smartphone/Tablet PC apps): 
         * Aantal gebruikers
@@ -228,7 +228,7 @@ Activiteiten hoeven geen AI te bevatten, maar we willen wel meer AI-gerelateerde
 
 **Verbind de activiteit aan een maatschappelijk relevante context.** Leerlingen zullen programmeren als een machtig middel ervaren als ze zien dat het problemen in de wereld kan helpen oplossen!
 
-**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
+**Zorg ervoor dat je tutorial kan worden gebruikt in een [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigma.** Dit is vooral handig voor het Hour of Code, omdat veel klaslokalen niet beschikken over 1:1 -hardware voor alle leerlingen.
 
 [**Terug naar de top**](#top)
 
@@ -262,7 +262,7 @@ Opmerking: dit is niet belangrijk voor installeerbare apps (iOS/Android apps of 
 
 Voorbeelden van trackingpixels voor Dance Party:
 
-IMG SRC = <http://code.org/api/hour/begin_dance.png>   
+IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
 
 [**Terug naar de top**](#top)

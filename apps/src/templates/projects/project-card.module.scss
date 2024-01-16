@@ -1,0 +1,76 @@
+@import "color.scss";
+@import "font.scss";
+
+.cautionButton {
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  padding: 6px;
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.cautionButton:hover {
+  background-color: $product_negative_light;
+  box-shadow: none;
+}
+
+.cautionIcon {
+  color: $neutral_dark60;
+  font-size: 1rem;
+}
+
+.cautionButton:hover .cautionIcon {
+  color: $product_negative_default;
+}
+
+.card {
+  border: 1px solid $border_gray;
+  border-radius: 2px;
+  width: 214px;
+  background-color: $neutral-light;
+}
+
+.lastEdit {
+  @include main-font-regular;
+  padding-left: 15px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  font-size: 0.6875rem;
+  color: $neutral-dark;
+}
+
+.ageRange {
+  @include main-font-regular;
+  padding-left: 10px;
+  padding-top: 5px;
+  font-size: 0.6875rem;
+  color: $neutral-dark;
+}
+
+.firstInitial {
+  @include main-font-regular;
+  padding-top: 5px;
+  font-size: 0.6875rem;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: $neutral-dark;
+}
+
+.image {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bold {
+  @include main-font-semi-bold;
+}
+
+.reported {
+  @include main-font-semi-bold;
+  margin: auto;
+  color: $product_negative_default;
+  font-size: 0.75rem;
+}

@@ -96,6 +96,10 @@ el:
         ai-ethics-2021:
           description_audience: Τάξεις Έκτης Δημοτικού ως Γ Λυκείου
           title: Ο Κώδικας Δεοντολογίας Τεχνητής Νοημοσύνης μας
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Ο Κώδικας Δεοντολογίας Τεχνητής Νοημοσύνης μας
         ai-temp:
           title: Πώς λειτουργεί η Τεχνητή Νοημοσύνη
         aiml-2021:
@@ -1307,6 +1311,10 @@ el:
           lesson_groups:
             lessonGroup-5:
               display_name: Έρευνα
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
         csd1-dlp:
           lesson_groups:
             content:
@@ -1529,6 +1537,10 @@ el:
             lessonGroup-4:
               display_name: Έρευνα
         csd7-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Εισαγωγή στο App Lab
+        csd7-2024:
           lesson_groups:
             lessonGroup-4:
               display_name: Εισαγωγή στο App Lab
@@ -2134,6 +2146,8 @@ el:
           student_description: Πηγαίνετε πέρα από την πρώτη ώρα με πολλές ιδέες για
             πρότζεκτ.
           title: Συνεχίστε να Χορεύετε
+        dance-unplugged:
+          title: Πάρτι Χορού χωρίς υπολογιστή
         dani-june-2020-test:
           lesson_groups:
             cspSurvey:
@@ -2527,7 +2541,7 @@ el:
           description_short: Εξερεύνησε έναν κόσμο του Minecraft μέσω κώδικα
           student_description: Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Steve
             ή την Alex σε μία περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft
-          title: Η Ώρα του Κώδικα με το Minecraft
+          title: Ζήστε μια περιπέτεια στο Minecraft
         microbit-2023:
           lesson_groups:
             lessonGroup-5:
@@ -2543,6 +2557,11 @@ el:
             δικιά σου έκδοση του Minecraft.
           student_description: Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft στην
             δικιά σου έκδοση του Minecraft.
+          title: Σχεδιαστής Minecraft
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Ελεύθερο παιχνίδι
         netsim:
           title: Προσομοιωτής Διαδικτύου
         nevada-standards-aligned-fifth-grade-2023:
@@ -3079,6 +3098,19 @@ el:
           title: 'Ενότητα 2: Πλοήγηση στο Code.org'
         self-paced-pl-csp2-2023:
           title: 'Ενότητα 2: Πλοήγηση στο Code.org'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Βρόχοι
+            lesson-4:
+              name: Συνθήκες
+          title: Εισαγωγή στην Επιστήμη των Υπολογιστών
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Συμβάντα
+            lesson-4:
+              name: Συμπεριφορές
         soccer:
           description: Δημιουργήστε ένα παιχνίδι ποδοσφαίρου
           description_short: Δημιουργήστε ένα παιχνίδι ποδοσφαίρου
@@ -3204,6 +3236,17 @@ el:
           lesson_groups:
             content:
               display_name: Περιεχόμενο
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Εισαγωγή
+          lessons:
+            lesson-7:
+              name: Εισαγωγή
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Εισαγωγή
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -3212,6 +3255,10 @@ el:
           lessons:
             lesson-3:
               name: Αξιολόγηση
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Εισαγωγή
         virustest:
           description_short: Χρησιμοποιήστε το Εργαστήρι Χαρακτήρων για να δημιουργήσετε
             μια προσομοίωση από μία έξαρση ιού.

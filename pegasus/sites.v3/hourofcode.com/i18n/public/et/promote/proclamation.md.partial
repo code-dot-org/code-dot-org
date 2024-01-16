@@ -6,55 +6,55 @@ nav: promote_nav
 
 {{ signup_button }}
 
-# Sample Computer Science Education Week resolution
+# Näide Computer Science Education Week resolutsioon
 
-### Below is language for a sample resolution supportive of Computer Science Education Week and its goals that can be used by state and local legislators.
+### Allpool on keel proovi resolutsioon toetav Computer Science Education Week ja selle eesmärke, mida saab kasutada riigi ja kohalike seadusandjate.
 
 * * *
 
-#### **RESOLUTION**  
+#### **RESOLUTSIOON**  
 
 
-#### Supporting the goals and ideals of "Computer Science Education Week"
+#### Arvutiteaduse haridusnädala eesmärkide ja ideaalide toetamine
 
-Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+arvutiteaduse hariduse nädal rõhutab arvutiteaduse olulist rolli meie ühiskonna ümberkujundamisel ning seda, kuidas infotehnoloogia võimaldab innovatsiooni ja loob majanduslikke võimalusi;
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+arvutustehnoloogia on kaasaegse kultuuri lahutamatu osa ja muudab seda, kuidas inimesed omavahel ja ümbritseva maailmaga suhtlevad;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+arvutiteadus muudab tööstust, loob uusi kaubandusvaldkondi, edendab innovatsiooni kõigis teadusvaldkondades ning tõstab tootlikkust väljakujunenud majandussektorites;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+arvutiteaduse valdkond on oluline teema, mis toetab meie majanduse infotehnoloogiasektorit, mis on märkimisväärne panustaja Ameerika Ühendriikide majandustoodangusse;
 
-Whereas the field of computer science is a foundational science for the digital age;
+tehisintellekti kirjaoskus viitab teadmistele, oskustele ja hoiakutele, mis on seotud tehisintellekti toimimisega, sealhulgas arvutiteaduse põhimõisteid ning kuidas kasutada tehisintellekti ohutult, vastutustundlikult ja eetiliselt;
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+arvutiteaduse valdkond, sealhulgas tehisintellekt, on tehnoloogiad, millel on õigus muuta peaaegu kõiki Ameerika Ühendriikide majandussektoreid põhjalikult;
 
-Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
+tehnoloogiline juhtpositsioon kõigis arvutiteaduse valdkondades, sealhulgas tehisintellekti valdkonnas, on majanduslik ja riiklik julgeoleku hädavajalik;
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+arvutiteaduse töökohtade väljavaated on eredad, kuna üle 500 000 avatud arvutustehnika positsiooni üle kogu riigi;
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+pakkudes üliõpilastele võimalust osaleda kvaliteetsetes infotehnilistes tegevustes, pakub neile valdkonna pakutavaid rikkalikke võimalusi ja annab kriitilise mõtlemise oskused, mis teenivad neid kogu elu jooksul;
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+kõik õpilased väärivad põhjalikku ettevalmistust arvutiteaduse hariduses, sealhulgas juurdepääsu kvalifitseeritud õpetajatele, tehnoloogiale ja eakohasele õppekavale, mida on vaja arvutiteaduse õppimiseks põhi- ja keskharidustasemel;
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+arvutiteaduslikul haridusel on probleeme lahendada, sealhulgas kõigi õpilaste juurdepääsu arvutiteaduse kursustele ning arvutiteaduse õpetajate kutsealase arengu tagamine;
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+arvutiteaduse haridusnädala jooksul koodeksitunnis osalemine võib aidata arvutiteaduse valdkonda demüstifitseerida ja julgustada rohkem õpilasi tegema arvutiteaduse täiendavaid uuringuid;
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+arvutiteaduse valdkonnas on olulised võrdõiguslikud tõkked, sealhulgas rassi, etnilise päritolu ja soo kandidaatide valdkonna kaasamine ja säilitamine kõigil tasanditel ja harudel;
 
-Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
+Grace Murray Hopper, üks esimesi emaseid arvutiteaduse valdkonnas, konstrueeris uusi programmeerimiskeeli ja teedrajavaid arvutisüsteemide standardeid, mis panid aluse arvutiteaduse paljudele edusammudele; ja
 
-Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
+Arvestades nädal {{ campaign_date/start_long }}, auks Grace Hopper sünnipäev, on määratud kui „Computer Science Education Week”: Nüüd, seega, olgu <br />
 
-(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
+Lahendatud, et (MAJA VÕI SENATI, RIIGI, MAAKONNA, LINNA VÕI KOOLI BOARD) --
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(1) toetab nimetus Computer Science Education Week ({{ campaign_date/full }});
 
-(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(2) julgustab koole, haridustöötajaid, lapsevanemaid ja poliitikakujundajaid osalema arvutiteaduse haridusnädalal, võimaldades õpilastel osaleda koodeksis;
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(3) julgustab koole, õpetajaid, teadlasi, ülikoole, ärijuhte ja poliitikakujundajaid määratlema mehhanismid, mis võimaldavad õpetajatel saavutada tipptasemel professionaalne areng, et pakkuda jätkusuutlikke õpikogemusi infotehnoloogia valdkonnas kõigil haridustasemetel ning julgustada õpilasi puutuma kokku arvutiteaduse kontseptsioonidega;
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(4) julgustab võimalusi, sealhulgas olemasolevate programmide kaudu, naisüliõpilastele ja üliõpilastele rassiliste ja etniliste rühmade alaesindatud arvutiteaduses.
 
 {{ signup_button }}

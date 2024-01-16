@@ -697,4 +697,56 @@ describe('WorkshopForm test', () => {
     const virtualFormController = wrapper.find('#virtual').first();
     assert(!virtualFormController.props().disabled);
   });
+
+  it('does not show module options when CSD and custom workshop subject are not selected', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+            today={getFakeToday(true)}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+    const courseField = wrapper.find('#course').first();
+    courseField.simulate('change', {
+      target: {name: 'course', value: 'CS Principles'},
+    });
+
+    const subjectField = wrapper.find('#subject').first();
+    subjectField.simulate('change', {
+      target: {name: 'subject', value: 'Workshop For Returning Teachers'},
+    });
+
+    const moduleOptions = wrapper.find('#module').first();
+
+    assert(!moduleOptions.exists());
+  });
+
+  it('shows module options when CSD and custom workshop subject are selected', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+            today={getFakeToday(true)}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+    const courseField = wrapper.find('#course').first();
+    courseField.simulate('change', {
+      target: {name: 'course', value: 'CS Discoveries'},
+    });
+    const subjectField = wrapper.find('#subject').first();
+    subjectField.simulate('change', {
+      target: {name: 'subject', value: 'Custom Workshop'},
+    });
+
+    const moduleOptions = wrapper.find('#module').first();
+    assert(moduleOptions.exists());
+  });
 });

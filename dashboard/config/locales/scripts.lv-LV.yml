@@ -1098,6 +1098,17 @@ lv:
               display_name: Pasākumi
             csf_loops:
               display_name: Cikli
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Cikli
+            lesson-4:
+              name: Sazarojumi
+          title: Ievads datorzinātnēs
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Pasākumi
         soccer:
           name: futbols
         spelling-bee:
@@ -1152,7 +1163,22 @@ lv:
           description: Atlasīti 4. kuras līmeņi lietošanas testēšanai.
           student_description: Atlasīti 4. kuras līmeņi lietošanas testēšanai.
           title: lietojamības testēšana
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Ievads
+          lessons:
+            lesson-7:
+              name: Ievads
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Ievads
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
+              name: Ievads
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
               name: Ievads

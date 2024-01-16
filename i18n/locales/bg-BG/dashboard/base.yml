@@ -53,6 +53,7 @@ bg:
         gender: 'Пол'
         edit_header: 'Редактиране на данните за акаунта'
         finish_sign_up_header: 'Завършете създаването на профила си'
+        finish_sign_up_header_error: 'Коригирайте следните грешки:'
         finish_sign_up_subheader: 'Попълнете следната информация, за да приключите създаването на Code.org акаунт за <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Попълнете следната информация, за да приключите създаването на Code.org акаунт за **%{email}**.'
         finish_sign_up_subheader_provider: 'Попълнете следната информация, за да приключите създаването на Code.org акаунт с <strong>%{provider}</strong> за <strong>%{email}</strong>.'
@@ -60,6 +61,7 @@ bg:
         reset_password_token: "Връзката за нулиране на праолата, който сте последвали"
         error:
           future: не може да бъде в бъдещето
+        user_type: 'Тип акаунт'
         us_state: 'Регион'
   beta: "бета"
   hello: "Здравей, свят"
@@ -1245,4 +1247,3 @@ bg:
     binary: "Двоичен код"
     hexadecimal: "Шестнадесетична"
     pixel_format_header: "Пикселен Формат"
-

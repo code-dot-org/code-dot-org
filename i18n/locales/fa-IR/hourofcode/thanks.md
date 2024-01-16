@@ -2,32 +2,32 @@
 title: تشکر برای ورود به میزبانی ساعت کدنويسی!
 ---
 
-# تشکر برای ورود به میزبانی ساعت کدنويسی!
+# برای ثبت نام در ساعت کد متشکریم!
 
-<br /> **The Hour of Code runs during {{ campaign_date/full }} and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
+<br /> رویداد شما اکنون ثبت شده است. با ارائه داوطلبانه برای برگزاری رویداد ساعت کد، شما امکان یادگیری علوم کامپیوتر را برای بیشتر دانش‌آموزان فراهم می‌کنید. در حالی که رویدادهای ساعت کد در سراسر جهان در طول هفته آموزش علوم کامپیوتر برگزار می شود، شما می توانید هر زمان که بخواهید یک رویداد یا رویداد ساعت کد را برگزار کنید! در اینجا چند مرحله برای شروع آورده شده است
 
-## 1. Spread the word in your school and community
+## 1. Plan your event
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+با کاوش در کتابخانه [فعالیت‌های ساعت کد](/learn) ما شروع کنید و این [راهنمای نحوه کار](/how-to) را برای راهنمایی های مفید در مورد چگونگی پیدا کردن یک فعالیت، الهام بخشیدن به دانش آموزان و تعیین نیازهای فناوری خود مرور کنید. سعی کنید [غواصی در دنیای هوش مصنوعی](/ai) را امتحان کنید - حوزه ای هیجان انگیز از فناوری که آینده ما را شکل می دهد. رویکردهای مختلفی برای هوش مصنوعی وجود دارد: دانش‌آموزان خود را برای یادگیری نحوه عملکرد هوش مصنوعی تقویت کنید و معلمان خود برای یادگیری با هوش مصنوعی 101 برای معلمان توانمند کنید.
 
-{{ social_media_hoc }} <br /> Encourage others to participate [with our sample emails.]({{ promote/sample_emails }}) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Invite a local politician or policy maker to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+## 2.مفهوم را گسترش دهید.
 
-Use these [posters, banners, stickers, videos and more]({{ promote/resources }}) for your own event.
+ما به کمک شما برای الهام بخشیدن به داوطلبان و سازمان دهندگان از سراسر جهان نیاز داریم. به دوستان خود درباره #HourOfCode خود بگویید و [از این منابع مفید](/resources) برای تبلیغ رویداد خود استفاده کنید. <br />
 
-## ۲. داوطلبی محلی پیدا کنید تا به شما در رویدادتان کمک کند
+همچنین می‌توانید با [ارسال ایمیل‌های نمونه ما](/promote/resources#sample-emails) به مدیر، یک گروه محلی یا حتی برخی از دوستانتان، به مشارکت افراد بیشتری از مدرسه و جامعه تان کمک کنید.
 
-[Search our volunteer map]({{ urls/volunteer_local }}) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+{{ social_media_hoc }}
 
-## 3. Plan your Hour of Code
+## ۳. داوطلبی محلی پیدا کنید تا به شما در رویدادتان کمک کند.
 
-Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide]({{ urls/how_to_guide }}).
+[نقشه داوطلبان ما را جستجو کنید](https://code.org/volunteer/local) تا داوطلبانی را که می‌توانند به کلاس شما سر بزنند یا از راه دور ویدیو چت کنند برای الهام بخشی به دانش‌آموزانتان در مورد گستردگی امکانات علوم کامپیوتر پیدا کنید.
 
-### 4. Stock up on swag
+## ۴. محصولات ساعت کد را بررسی کنید
 
-Order materials to help get students excited about your event by heading to the Code.org [Amazon store](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220). Order posters, Hour of Code kits, stickers, and more! But hurry, supplies are limited.
+محصولات Hour of Code یک راه عالی برای برانگیختن اشتیاق دانش‌آموزان نسبت به ساعت کد و پاداش دادن به آن‌ها برای تکمیل فعالیت‌هایشان هستند. اگر یک رویداد برای تمام مدرسه خود برگزار می‌کنید، در نظر بگیرید [برنامه ساعت کد خود را به اشتراک بگذارید](https://docs.google.com/forms/d/e/1FAIpQLSdD90kD2nkNZqTUMcAb2cQdOhUv99Q5XDQmkLDec25yZJHYhw/viewform) تا یک کیت ویژه با تی‌شرت، پوستر، استیکر لپ‌تاپ و موارد دیگر دریافت کنید. [در فروشگاه Code.org](https://store.code.org/) می‌توانید کیت‌های Hour of Code، استیکرهای جذاب، دکمه‌ها، تتوهای موقت و موارد دیگر را سفارش دهید. اما عجله کنید، تعداد محدود است.
 
-# Go beyond an Hour of Code
+## ۵. کودکان را به ادامه یادگیری تشویق کنید
 
-{{ go_beyond_hoc }}
+یک ساعت کد فقط شروع است! ما بارها و بارها شنیده‌ایم که دانش‌آموزان چقدر از ساعت کد لذت می‌برند و علاقه جدیدی به علوم کامپیوتر پیدا می‌کنند. آنها را به ادامه یادگیری تشویق کنید. فرقی نمی‌کند مدیر، معلم یا طرفدار باشید، ما یادگیری حرفه‌ای، برنامه درسی و طرح درس های رایگان و منابعی برای کمک به شما داریم. [کلاس های علوم کامپیوتر را به مدرسه خود بیاورید](https://code.org/teach) یا پیشنهادها خود را گسترش دهید.
 
-{{ popup_window.js }}
+بسیاری از سازمان‌هایی که فعالیت‌ها را در HourofCode.com ارائه می‌دهند، همچنین برنامه‌های درسی و آموزش حرفه‌ای را نیز در دسترس دارند. ما ارائه‌دهندگان برنامه‌های درسی را مشخص کرده‌ایم که می‌توانند به شما یا دانش‌آموزانتان کمک کنند [فراتر از یک ساعت](/beyond) بروید.

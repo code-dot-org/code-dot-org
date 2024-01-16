@@ -11,7 +11,7 @@ require 'csv'
 # requests and use this script:
 # https://docs.google.com/document/d/1-Gk66udFdzqvYyT6J-1d5HPSbkVCIQWzxMLyVKF3fuk/edit
 
-if ARGV.length.empty? || ARGV.length > 2
+if ARGV.empty? || ARGV.length > 2
   puts 'Usage: ./bin/oneoff/purge_accounts/purge_users ./bin/oneoff/purge_accounts/yyyy-mm-dd-users.csv [commit]'
   puts 'The CSV needs a column with "user_id" with User ids.'
   puts 'Will do a "dry run" until you specify "for-real" for the "commit" field.'

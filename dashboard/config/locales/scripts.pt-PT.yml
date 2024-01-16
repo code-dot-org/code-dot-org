@@ -273,9 +273,14 @@ pt:
             curso.... ainda me perguntando de onde vem a visão geral, o conteúdo....
           title: andrea-teste
         angelina-playground:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Aleatório
           lessons:
             lesson-5:
               name: Avaliações
+            lesson-6:
+              name: Lição 1
         applab-1hour:
           description: Essa oficina foi desenvolvida para oferecer aos alunos uma
             introdução básica ao laboratório de aplicativos em 1 hora. Os alunos devem
@@ -1760,6 +1765,8 @@ pt:
           title: Pesquisa pós-curso da CS Discoveries
         csd-post-survey-2023:
           title: Pesquisa Pós-Curso
+        csd-post-survey-2024:
+          title: Pesquisa Pós-Curso
         csd-sample-online:
           title: Amostra de atividades on-line para o CS Discoveries
         csd-test-saving-state:
@@ -1835,6 +1842,14 @@ pt:
             cspSurvey:
               display_name: Questionário
         csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+            lessonGroup-5:
+              display_name: Questionário
+        csd1-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
@@ -2227,6 +2242,18 @@ pt:
             baseados em sprites, usando os mesmos conceitos de programação e o processo
             de design que os cientistas da computação usam diariamente. No projeto
             final, você desenvolverá um programa interativo personalizado."
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Imagens e Amimações'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Construindo Jogos'
+          student_description: " Na Unidade 3, você aproveitará sua experiência de
+            codificação ao programar animações, arte interativa e jogos no Laboratório
+            de Jogos. A unidade começa com formas simples e cria jogos sofisticados
+            baseados em sprites, usando os mesmos conceitos de programação e o processo
+            de design que os cientistas da computação usam diariamente. No projeto
+            final, você desenvolverá um programa interativo personalizado."
         csd3-dlp:
           description: Esta é a Unidade 3 do Plano de Aprendizagem Mais Profunda para
             os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará
@@ -2466,6 +2493,20 @@ pt:
             soluções tanto no papel quanto no App Lab e testam soluções com usuários
             reais para obter feedback e avançar iteração.
         csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Desenho orientado ao usuário'
+            lessonGroup-3:
+              display_name: 'Capítulo 1: Prototipando o App'
+          student_description: A unidade 4 apresenta os impactos sociais mais amplos
+            da computação. Através de uma série de desafios de design, você aprenderá
+            a entender melhor as necessidades de outras pessoas enquanto desenvolve
+            uma solução para um problema. A segunda metade da unidade consiste em
+            um projeto de equipe iterativo, durante o qual as equipes têm a oportunidade
+            de identificar uma necessidade com a qual se preocupam, protótipos de
+            soluções tanto no papel quanto no App Lab e testam soluções com usuários
+            reais para obter feedback e avançar iteração.
+        csd4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: Desenho orientado ao usuário'
@@ -2723,6 +2764,23 @@ pt:
             como o processo de solução de problemas de dados pode ser aplicado a uma
             área de sua escolha.
         csd5-2023:
+          description_short: Aprenda como as pessoas usam computadores para resolver
+            problemas de dados.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Representando Informação'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Resolvendo problemas de dados'
+          student_description: A unidade 5 trata da importância dos dados na solução
+            de problemas e destaca como os computadores podem ajudar nesse processo.
+            O primeiro capítulo explora os diferentes sistemas usados ​​para representar
+            informações em um computador e os desafios e as vantagens e desvantagens
+            do uso deles. No segundo capítulo, você aprenderá como as coleções de
+            dados são usadas para resolver problemas e como os computadores ajudam
+            a automatizar as etapas desse processo. O capítulo conclui considerando
+            como o processo de solução de problemas de dados pode ser aplicado a uma
+            área de sua escolha.
+        csd5-2024:
           description_short: Aprenda como as pessoas usam computadores para resolver
             problemas de dados.
           lesson_groups:
@@ -3044,7 +3102,16 @@ pt:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Capítulo 2: Construindo protótipos físicos'
+        csd6a-2024:
+          description_short: Aprenda a programar com dispositivos físicos.
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Construindo protótipos físicos'
         csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas e saídas
+        csd6b-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: Entradas e saídas
@@ -3057,6 +3124,14 @@ pt:
             lessonGroup-4:
               display_name: Questionário
         csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1
+            lessonGroup-3:
+              display_name: Capítulo 2
+            lessonGroup-4:
+              display_name: Introdução Laboratório de Aplicativos
+        csd7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Capítulo 1
@@ -4770,6 +4845,8 @@ pt:
           description_short: Codifique sua própria festa de dança para compartilhar
             com seus amigos! (Esta versão é para conexões lentas)
           title: Festa de Dança (Baixa Largura de Banda)
+        dance-unplugged:
+          title: Festa de dança desconectada
         dani-june-2020-test:
           lesson_groups:
             csp5_1:
@@ -5616,7 +5693,7 @@ pt:
           description_short: Explore o mundo de Minecraft usando códigos.
           student_description: Use blocos de código para levar Steve ou Alex a uma
             aventura pelo mundo do Minecraft.
-          title: Hora do Código Minecraft
+          title: Aventureiro de Minecraft
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -5643,6 +5720,10 @@ pt:
           student_description: Constrói um jogo Minecraft. Cria as tuas próprias versões
             de galinhas, ovelhas, Creepers, mortos-vivos e muito mais.
           title: Designer Minecraft Hora do Código
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Atividade livre
         netsim:
           description: Aprenda como a Internet funciona
           description_short: Aprenda como a Internet funciona
@@ -6019,6 +6100,59 @@ pt:
           title: DP da ciência da computação na ciência
         sconyers:
           title: Parque da Tracey
+        self-paced-pl-csd-unit1-2-2023:
+          description: |-
+            Este módulo de aprendizagem profissional foi concebido para o(a) ajudar a preparar as suas aulas da unidade de Resolução de Problemas e Computação da Code.org.
+
+            **Neste módulo de aprendizagem profissional, irá:**
+
+            -   Ter uma apresentação à Resolução de Problemas e Computação.
+            -   Praticar conceitos-chave incluídos na unidade.
+            -   Explorar os projetos de fim de capítulo.
+
+            **Duração sugerida:** 30 minutos
+          student_description: |-
+            Este módulo de aprendizagem profissional foi concebido para o(a) ajudar a preparar as suas aulas da unidade de Resolução de Problemas e Computação da Code.org.
+
+            **Neste módulo de aprendizagem profissional, irá:**
+
+            -   Ter uma apresentação à Resolução de Problemas e Computação.
+            -   Praticar conceitos-chave incluídos na unidade.
+            -   Explorar os projetos de fim de capítulo.
+
+            **Duração sugerida:** 30 minutos
+          title: 'Módulo 1: Preparação para ensinar sobre Resolução de Problemas e
+            computação'
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Módulo 2: Preparação para ensinar Programação Web'
+        self-paced-pl-csd-unit3-2-2023:
+          description: |-
+            Este módulo de aprendizagem profissional foi concebido para o(a) ajudar a preparar as suas aulas da unidade de Animação e jogos interativos da Code.org.
+
+            **Neste módulo de aprendizagem profissional, irá:**
+
+            -   Ter uma apresentação sobre Animações e jogos interativos.
+            -   Praticar conceitos-chave incluidos na unidade.
+            -   Envolver-se no Lab de Jogos.
+            -   Explorar os projetos de fim de capítulo.
+
+            **Duração sugerida:** 120 minutos
+          student_description: |-
+            Este módulo de aprendizagem profissional foi concebido para o(a) ajudar a preparar as suas aulas da unidade de Animação e jogos interativos da Code.org.
+
+            **Neste módulo de aprendizagem profissional, irá:**
+
+            -   Ter uma apresentação sobre Animações e jogos interativos.
+            -   Praticar conceitos-chave incluidos na unidade.
+            -   Envolver-se no Lab de Jogos.
+            -   Explorar os projetos de fim de capítulo.
+
+            **Duração sugerida:** 120 minutos
+          title: Preparação para ensinar Animações interativas e jogos
+        self-paced-pl-csd-unit4-2-2023:
+          title: " Módulo 4: Preparação para ensinar o processo de design"
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Módulo 5: Preparação para ensinar Dados e Sociedade'
         self-paced-pl-csd1-2021:
           lesson_groups:
             lessonGroup-2:
@@ -6033,6 +6167,31 @@ pt:
               display_name: Bem-vindo
         self-paced-pl-csd5-2023:
           title: 'Módulo 7: Preparação para ensinar IA e Aprendizagem Mecânica'
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Lição 1
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Lição 1
+            lesson-3:
+              name: Ciclos
+            lesson-4:
+              name: Condicionais
+            lesson-6:
+              name: Próximas etapas
+          title: Introdução à Ciência Computacional
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Lição 1
+            lesson-3:
+              name: Eventos
+            lesson-4:
+              name: Comportamentos
+            lesson-5:
+              name: Próximas etapas
         soccer:
           name: futebol
         spelling-bee:
@@ -6277,6 +6436,25 @@ pt:
               display_name: Conteúdo
             csd3_2:
               display_name: 'Capítulo 2: Construindo Jogos'
+        virtual-pl-csa-summer-2024-day1:
+          title: Dia 1
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introdução
+          lessons:
+            lesson-7:
+              name: Introdução
+          title: Dia 1
+        virtual-pl-csa-summer-day2:
+          title: Dia 2
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introdução
+          title: Dia 3
+        virtual-pl-csa-summer-day4:
+          title: Dia 4
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -6303,6 +6481,17 @@ pt:
           lessons:
             lesson-3:
               name: Avaliação
+        virtual-pl-csp-summer-day1:
+          title: Dia 1
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introdução
+          title: Dia 2
+        virtual-pl-csp-summer-day3:
+          title: Dia 3
+        virtual-pl-csp-summer-day4:
+          title: Dia 4
         virustest:
           description_short: 'Use o Sprite Lab para criar uma simulação de epidemia
             de vírus. '

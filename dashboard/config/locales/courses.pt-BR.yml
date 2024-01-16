@@ -67,11 +67,31 @@ pt:
             O Curso Descobertas da Ciência da Computação (Descobertas da CC) é um curso introdutório à ciência da computação que capacita os alunos a criar artefatos autênticos e a interagir com a ciência da computação como meio de criatividade, comunicação, resolução de problemas e diversão.
 
             \*\*Interessado em ensinar Descobertas da CC? \*\* O desenvolvimento profissional está disponível para ajudá-lo a começar a ensinar Descobertas da CC. [Clique aqui](https://code.org/educate/professional-learning/middle-high) para saber mais sobre as oportunidades de aprendizado profissional em sua região ou [clique aqui](https://code.org/educate/professional-development-online) para saber mais sobre uma opção on-line personalizada.
+          description_teacher: |-
+            Descobertas da CC (DCC) é um curso introdutório à ciência da computação que capacita os alunos a criar artefatos autênticos e a interagir com a ciência da computação como meio de criatividade, comunicação, resolução de problemas e diversão.
+
+            \*\*Você sabia? \*\*
+
+            -   O desenvolvimento profissional está disponível para ajudar você a começar a ensinar Descobertas da CC. [Clique aqui] [0] para saber mais sobre oportunidades de aprendizado profissional em sua região ou [clique aqui] [1] para saber mais sobre uma opção online individualizada.
+
+            -   Este curso é modular e pode ser ministrado em diferentes configurações com base nas necessidades de cada sala de aula. Confira o _Guia de implementação do DCC_ no menu Recursos para professores abaixo para aprender sobre as diferentes opções
+
+            -   Você pode encontrar o _Guia de currículo_, *Guia de introdução \_, \_Guia de avaliação* e muitos outros recursos para ajudá-lo a implementar este currículo no menu Recursos para professores abaixo
         csd-2022:
           description_student: |-
             O Curso Descobertas da Ciência da Computação (Descobertas da CC) é um curso introdutório à ciência da computação que capacita os alunos a criar artefatos autênticos e a interagir com a ciência da computação como meio de criatividade, comunicação, resolução de problemas e diversão.
 
             \*\*Interessado em ensinar Descobertas da CC? \*\* O desenvolvimento profissional está disponível para ajudá-lo a começar a ensinar Descobertas da CC. [Clique aqui](https://code.org/educate/professional-learning/middle-high) para saber mais sobre as oportunidades de aprendizado profissional em sua região ou [clique aqui](https://code.org/educate/professional-development-online) para saber mais sobre uma opção on-line personalizada.
+          description_teacher: |-
+            Descobertas da CC (DCC) é um curso introdutório à ciência da computação que capacita os alunos a criar artefatos autênticos e a interagir com a ciência da computação como meio de criatividade, comunicação, resolução de problemas e diversão.
+
+            \*\*Você sabia? \*\*
+
+            -   O desenvolvimento profissional está disponível para ajudar você a começar a ensinar Descobertas da CC. [Clique aqui] [0] para saber mais sobre oportunidades de aprendizado profissional em sua região ou [clique aqui] [1] para saber mais sobre uma opção on-line individualizada.
+
+            -   Este curso tem uma implementação flexível e pode ser ministrado em diferentes configurações com base nas necessidades de cada sala de aula. Confira o [Guia de implementação do DCC] [2] para obter mais informações
+
+            -   Você pode acessar o [Guia do currículo] [3] e o [Guia de introdução] [4] para saber mais sobre o curso e começar.
         csd-2023:
           description_student: |-
             O Curso Descobertas da Ciência da Computação (Descobertas da CC) é um curso introdutório à ciência da computação que capacita os alunos a criar artefatos autênticos e a interagir com a ciência da computação como meio de criatividade, comunicação, resolução de problemas e diversão.
@@ -168,9 +188,68 @@ pt:
           title: Foco no Impacto na Sociedade (Descobertas da CC)
         mike-test:
           title: Fundamentos de Ciência da Computação
+        self-paced-pl-csd-unit2-2023:
+          title: Ensino de desenvolvimento via internet
     resources:
+      all_code/csd/2021:
+        name: Todo o Código
+      all_code_2/csd/2023:
+        name: Todo o Código
+      all_code_5/csd/2022:
+        name: Todo o Código
+      all_resources_1/csd/2021:
+        name: Todos os Recursos
+      all_resources_2/csd/2023:
+        name: Todos os Recursos
+      all_resources_7/csd/2022:
+        name: Todos os Recursos
+      all_standards_1/csd/2021:
+        name: Todos os Padrões
+      all_standards_2/csd/2023:
+        name: Todos os Padrões
+      all_standards_7/csd/2022:
+        name: Todos os Padrões
+      all_vocabulary_1/csd/2021:
+        name: Todo o Vocabulário
+      all_vocabulary_2/csd/2023:
+        name: Todo o Vocabulário
+      all_vocabulary_7/csd/2022:
+        name: Todo o Vocabulário
+      csd_curriculum_guide/csd/2021:
+        name: Guia Curricular do DCC
+      csd_curriculum_guide/csd/2022:
+        name: Guia Curricular do DCC
+      csd_guide_to_curriculum_videos/csd/2023:
+        url: https://docs.google.com/document/d/1SIpzFmX7RqxwkEy4AyFe19-8hoWAS0A0D6C8Yzr-BHM/edit
+      csd_guide_to_debugging/csd/2021:
+        name: Guia de Depuração do DCC
+      csd_guide_to_debugging/csd/2022:
+        name: Guia de Depuração do DCC
+      csd_guide_to_differentiation/csd/2021:
+        name: Guia de Diferenciação do DCC
+      csd_guide_to_differentiation/csd/2022:
+        name: Guia de Diferenciação do DCC
+      csd_guide_to_differentiation_1/csd/2023:
+        name: Guia de Diferenciação do DCC
+      csd_guide_to_using_resources/csd/2021:
+        name: Guia do DCC para Usar os Recursos
+      csd_guide_to_using_resources/csd/2022:
+        name: Guia do DCC para Usar os Recursos
+      csd_guide_to_using_resources_1/csd/2023:
+        name: Guia do DCC para Usar os Recursos
+      csd_implementation_guide/csd/2021:
+        name: Guia de Implementação do DCC
       csd_implementation_guide/csd/2022:
-        url: "<https://docs.google.com/document/d/1ybEuPafLkexT1MYjGmkdFCx3hO18iyg98e9ldLTUq3I/preview>"
+        name: Guia de Implementação do DCC
+        url: https://docs.google.com/document/d/1ybEuPafLkexT1MYjGmkdFCx3hO18iyg98e9ldLTUq3I/preview
+      csd_implementation_guide_1/csd/2023:
+        name: Guia de Implementação do DCC
+      csd_learning_frameworks/csd/2022:
+        name: Estruturas de Aprendizagem DCC
+      csd_learning_frameworks_1/csd/2023:
+        name: Estruturas de Aprendizagem DCC
+      csd_programming_levels_guide/csd/2022:
+        name: Guia de níveis de programação do DCC
       curriculum/csd/2017:
         name: Currículo
       curriculum/csd/2018:
@@ -182,10 +261,10 @@ pt:
       getting_started_with_csd/csd/2021:
         name: Para começar a usar com o CSD
       teacher_forum/csd/2019:
-        name: Fórum do professor
+        name: Fórum do Professor
       teacher_forum/csd/2020:
-        name: Fórum do professor
+        name: Fórum do Professor
       teacher_forum_6/csd/2017:
-        name: Fórum do professor
+        name: Fórum do Professor
       teacher_forum_6/csd/2018:
-        name: Fórum do professor
+        name: Fórum do Professor

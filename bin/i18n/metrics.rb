@@ -1,3 +1,5 @@
+require File.expand_path('../../../dashboard/config/environment', __FILE__)
+require 'cdo/aws/ec2'
 require 'cdo/aws/metrics'
 require 'aws-sdk-ec2'
 require 'net/http'
@@ -38,14 +40,24 @@ module I18n
       )
     end
 
+    # logging to CloudWatch the Completion Status of a sync process, either success or fail.
+    # @param status [Boolean] Whether a step has been successful or not.
+    # @param sync_step [String] Step of the sync where the method is used. Options: sync-in, sync-up, sync-down, sync-out.
+    # @option message [String] Exception message causing the process to fail.
+    # # @option sync_component [String] Specific sync component being logged.
+    def self.report_status(status, sync_step, message = 'None', sync_component = 'None')
+      status_value = status ? 1 : 0
+      log_metric(
+        :Status,
+        status_value,
+        [{name: 'SyncStep', value: sync_step}, {name: 'SyncComponent', value: sync_component}, {name: 'Message', value: message}]
+      )
+    end
+
     # returns the EC2 instance ID if we are running the sync from an EC2,
     # and 'local_machine' otherwise
     def self.machine_id
-      @machine_id ||= begin
-        Net::HTTP.get(URI.parse(CDO.ec2_instance_id_endpoint))
-      rescue
-        'local_machine'
-      end
+      @machine_id ||= AWS::EC2.instance_id || 'local_machine'
     end
 
     # logging metrics into cloudwatch under i18n name space

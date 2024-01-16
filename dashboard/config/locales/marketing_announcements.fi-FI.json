@@ -1,0 +1,22 @@
+{
+  "fi-FI": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "co-teacher": {
+            "buttonText": "Lue lisää"
+          },
+          "hoc-2023": {
+            "buttonText": "Lue lisää"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Lue lisää"
+          },
+          "superhero": {
+            "buttonText": "Lisätietoja"
+          }
+        }
+      }
+    }
+  }
+}

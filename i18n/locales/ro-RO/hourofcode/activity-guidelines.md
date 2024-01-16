@@ -10,7 +10,7 @@ title: Orientari si ghiduri pentru tutoriale
 
 # Ghid pentru crearea si timiterea tutorialelor si lectiilor pentru Ora de Programare si Saptamana Computer Science Education
 
-Code.org găzduiește o varietate de activități, lecții și videoclipuri Hour of Code™ pe site-urile web Code.org și Hour of Code. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org găzduiește o varietate de activități, lecții și videoclipuri Hour of Code™ pe site-urile web Code.org și Hour of Code. Lista curentă se află la []({{ urls/learn }})hourofcode.com/learn.
 
 Doriți să trimiteți propriul tutorial auto-ghidat, lecție condusă de profesori sau activitate de robotică/producător care explică un principiu de informatică? Alăturați-vă acestei mișcări globale și ajutați participanții din întreaga lume să înceapă cu o oră de cod sau să meargă mai departe cu mai multe lecții, activități de o zi sau de o săptămână.
 
@@ -41,11 +41,11 @@ Câteva sfaturi:
 
 ## Ce să depuneți
 
-**Self-guided puzzle or game ([example](https://code.org/dance))**
+**Puzzle sau joc auto-ghidat ([exemplu](https://code.org/dance))**
 
 Aceste activități sunt concepute pentru ca elevii să se autodirecționeze printr-un tutorial. Nu necesită multă instruire de la un profesor sau o muncă de pregătire a profesorului.
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Lecție facilitată de profesor ([exemplu](https://studio.code.org/s/course1/lessons/2/levels/1), [șablon](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
 Acum că sute de mii de educatori au încercat Ora de Cod, multe săli de clasă sunt pregătite pentru activități mai creative care predau elementele de bază ale informaticii. Pentru a ajuta profesorii mai avansați să găsească inspirație, colectăm și organizăm lecții și planuri de activitate „conduse de profesori” pentru veteranii Hour of Code.
 
@@ -84,7 +84,7 @@ Scopul unei Hour of Code este de a oferi începătorilor un prim gust accesibil 
 
 Activitățile ar trebui să predea un concept de informatică, cum ar fi bucle, condiționări, criptare sau modul în care funcționează Internetul. O activitate poate învăța, de asemenea, despre modul în care informatica se conectează la ocupațiile, evenimentele sau istoria lumii reale. De exemplu, predarea designului UX pentru a crea aplicații care sunt semnificative pentru un public sau o cauză. Descurajăm activitățile care se concentrează mai degrabă pe sintaxa programării decât pe concepte. De exemplu, vom enumera, dar nu evidențiem, activitățile care predau HTML. În mod similar, descurajăm lecțiile de programare bloc care se concentrează pe setarea/schimbarea opțiunilor de configurare, mai degrabă decât să învățăm cum să modelăm un algoritm sau un proces.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activitățile care necesită o instalare de aplicații, o aplicație desktop sau experiențe de consolă de jocuri sunt în regulă, dar nu sunt ideale. Nu vom enumera activitățile care necesită înscriere sau plată. (Activitățile de robotică pot necesita achiziționarea roboticii.)
+*Cerințe tehnice:* Datorită varietății largi de setări tehnologice școlare și de clasă, cele mai bune activități sunt bazate pe web sau smartphone-uri sau activități în stil deconectat, care predau concepte de informatică fără utilizarea unui computer (a se vedea http://csunplugged.com/). [](http://csunplugged.com/) Activitățile care necesită o instalare de aplicații, o aplicație desktop sau experiențe de consolă de jocuri sunt în regulă, dar nu sunt ideale. Nu vom enumera activitățile care necesită înscriere sau plată. (Activitățile de robotică pot necesita achiziționarea roboticii.)
 
 *Format condus de elev (autoghidat):* Originalul Hour of Code a fost construit în principal pe succesul tutorialelor sau lecțiilor autoghidate, facilitate opțional de către profesor. Exista o multime de optiuni existente, dar dacă doriţi să creaţi una noua, aceste activităţi trebuie să fie proiectate astfel încât să poata fi distractiv pentru un elev sa lucreze de unul singur, sau în sala de clasă cand profesorul are pregatire minima in Tehnologia computerelor si programare. Ei ar trebui sa le ofere elevilor indrumari, pe langa Ora de Programare propriu-zisa. În mod ideal, instrucţiunile şi tutorialele sunt integrate direct în platformă, pentru a evita întreruperea lor prin navigarea între tab-uri sau ferestre între tutorial şi platformă.
 
@@ -141,11 +141,11 @@ De ce aveţi nevoie:
     * Deconectat
 * Captură de ecran sau imagine de marketing a activității Hour of Code. Vă rugăm să trimiteți cel puțin o imagine cu dimensiunile 4:3. Ar trebui să fie de cel puțin 520px cu 390px. Această imagine nu ar trebui să aibă niciun text pe ea (în afară de sigla dvs.), pentru a o face mai accesibilă pentru vorbitorii de limbă engleză. Dacă nu este furnizată o imagine corespunzătoare, vom putea face propriile noastre screenshot-uri ale tutorialului sau putem alege să nu o listăm. Toate imaginile trebuie trimise ca link URL către un .jpg, .jpeg sau .png.
 * Pentru a urmări mai precis participarea, partenerii tutoriali terți trebuie să includă imagini de urmărire de 1 pixel pe prima pagină a tutorialelor lor Hour of Code. Consultați secțiunea [Tracking Pixel](#pixel) de mai jos pentru mai multe detalii.
-* Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
+* La finalizarea activității, utilizatorii ar trebui să fie direcționați către [code.org/api/hour/finish unde](https://code.org/api/hour/finish) vor putea: 
     * Share-uiasca pe rețelele sociale că au finalizat Hour of Code
     * Primească un certificat de participare/finalizare a Hour of Code
     * Vezi clasamentele cu țările/orașele cea mai mare rată de participare în activităţi Hour of Code
-    * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
+    * Pentru utilizatorii care petrec o oră în activitatea dvs. și nu o finalizează, vă rugăm să includeți un buton pe activitatea dvs. pe care scrie „Am terminat cu ora mea de programare”, care face legătura cu [](https://code.org/api/hour/finish) code.org/api/hour/finish.
 * (Opțional) Putem urmări cu un chestionar/link de formular online care solicită un raport al următoarelor valori de activitate: 
     * Pentru activităţile online (în special aplicații smartphone/tablete): 
         * Numărul de utilizatori
@@ -262,7 +262,7 @@ Notă: acest lucru nu este important să se facă pentru aplicațiile instalabil
 
 Exemplu de pixeli de urmărire pentru Dance Party:
 
-IMG SRC = <http://code.org/api/hour/begin_dance.png>   
+IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
 
 [**La începutul paginii**](#top)

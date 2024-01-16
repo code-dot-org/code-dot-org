@@ -1,0 +1,22 @@
+{
+  "ky-KG": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "co-teacher": {
+            "buttonText": "Дагы кара"
+          },
+          "hoc-2023": {
+            "buttonText": "Дагы кара"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Дагы кара"
+          },
+          "superhero": {
+            "buttonText": "Дагы кара"
+          }
+        }
+      }
+    }
+  }
+}

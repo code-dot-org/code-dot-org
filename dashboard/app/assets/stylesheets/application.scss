@@ -13,7 +13,6 @@
  *
  * Vendor assets
  *= require add2home
- *= require gotham-font
  *= require jquery.qtip.min
  *
  * Application assets
@@ -22,6 +21,7 @@
  *
  * Shared
  *= require barlow-semi-condensed-font
+ *= require metropolis-font
  *= require user-menu
  *= require buttons
  *= require course-blocks
@@ -34,10 +34,12 @@
 @import "mixins";
 @import "style-constants";
 
-$baseFontFamily: $gotham-regular;
-$headingsFontWeight: normal;
+// Bootstrap Variables
+$baseFontFamily: $main-font;
+$headingsFontWeight: $regular-font-weight;
 $btnPrimaryBackground: $orange;
 $btnPrimaryBackgroundHighlight: $orange;
+
 $selectUserTypeButtonBorderColor: #ccc;
 $selectUserTypeButtonBackgroundColor: #fff;
 $selectUserTypeButtonTextColor: #000;
@@ -76,16 +78,14 @@ body.music-black {
 }
 
 h1 {
-  font-family: $gotham-extra-bold;
-  font-weight: normal;
+  @include main-font-bold;
   font-size: 32px;
   color: $purple;
 }
 
 h2 {
   margin: 25px 0 10px 0;
-  font-family: $gotham-bold;
-  font-weight: normal;
+  @include main-font-semi-bold;
   font-size: 22px;
   line-height: 30px;
   color: $teal;
@@ -110,24 +110,22 @@ th {
   border: 1px solid $white;
   text-align: left;
   font-size: 120%;
-  font-family: $gotham-bold;
+  @include main-font-semi-bold;
   font-weight: normal;
   padding: 5px;
 }
 
 strong {
-  font-family: $gotham-extra-bold;
-  font-weight: normal;
+  @include main-font-bold;
 }
 
 em {
-  font-family: $gotham-italics;
-  font-style: normal;
+  @include main-font-regular-italic;
 }
 
 strong em,
 em strong {
-  font-family: $gotham-extra-bold-italics;
+  @include main-font-bold-italic;
 }
 
 a.video_link {
@@ -241,7 +239,7 @@ img.video_thumbnail {
     margin-top: 12px;
 
     .headerlink {
-      font-family: 'Gotham 4r', sans-serif;
+      @include main-font-regular;
       margin-left: 30px;
       font-size: 14px;
       line-height: 22px;
@@ -265,7 +263,7 @@ img.video_thumbnail {
     &.header_button_light {
       background-color: $teal;
     }
-    font-family: 'Gotham 4r', sans-serif;
+    @include main-font-regular;
     display: inline-block;
     color: $white;
     background-color: transparent;
@@ -485,9 +483,9 @@ img.video_thumbnail {
 
 .main {
   padding: 10px;
+
   a:link, a:visited, a:hover, a:active {
-    font-family: $gotham-extra-bold;
-    font-weight: normal;
+    @include main-font-bold;
     color: $brand_secondary_default;
     background-color: transparent;
     text-decoration: underline;
@@ -496,6 +494,17 @@ img.video_thumbnail {
     color: $brand_secondary_dark;
     text-decoration: underline;
   }
+
+  a:link, a:visited, a:active {
+    &:has(.visual-block) {
+      text-decoration: unset;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
   a.fa:link, a.fa:visited, a.fa:hover, a.fa:active {
     font-family: FontAwesome;
   }
@@ -529,8 +538,7 @@ html, body {
   background-color: $darkest_gray;
   color: $header_text;
   a:link, a:visited, a:hover, a:active {
-    font-family: $gotham-regular;
-    font-weight: normal;
+    @include main-font-regular;
     color: $white;
     background-color: transparent;
   }
@@ -549,8 +557,7 @@ html, body {
     }
   .fineprint {
     a:link, a:visited, a:hover, a:active {
-      font-family: $gotham-bold;
-      font-weight: normal;
+      @include main-font-semi-bold;
     }
   }
   .dim {
@@ -601,8 +608,7 @@ $small-footer-standard-width: 400px;
   color: $dimgray;
   font-size: 14px;
   a {
-    font-family: $gotham-bold;
-    font-weight: normal;
+    @include main-font-semi-bold;
     &:link {
       color: $charcoal;
       text-decoration: none;
@@ -734,6 +740,7 @@ $small-footer-standard-width: 400px;
 /* Override footer position on some pages, but not published project views */
 #page-small-footer .small-footer-base {
   position: fixed;
+  margin-top: 0;
 }
 
 
@@ -1380,8 +1387,7 @@ body.iframe_embed_app_and_code {
   color: $neutral_dark;
 
   .help_title {
-    font-family: $gotham-extra-bold;
-    font-weight: normal;
+    @include main-font-bold;
     font-size: 17.5px;
     display: inline-block;
   }
@@ -1450,7 +1456,7 @@ body.iframe_embed_app_and_code {
         border: 2px solid $brand_secondary_default;
         border-radius: 6px;
         color: $neutral_white;
-        font-family: $gotham-bold;
+        @include main-font-semi-bold;
         cursor: pointer !important;
 
         &:hover {
@@ -1565,8 +1571,7 @@ body.iframe_embed_app_and_code {
   font-size: 20px;
   line-height: 28px;
   color: $neutral_dark;
-  font-family: $gotham-bold;
-  font-weight: normal;
+  @include main-font-semi-bold;
   padding-right: 25px;
 }
 
@@ -1629,8 +1634,7 @@ a.download-video {
 
 .quiet_links {
   a:link {
-    font-family: $gotham-regular;
-    font-weight: normal;
+    @include main-font-regular;
   }
 }
 
@@ -1648,8 +1652,7 @@ a.download-video {
     font-size: 24.5px;
     padding: 5px 0;
     #puzzle {
-      font-family: $gotham-extra-bold;
-      font-weight: normal;
+      @include main-font-bold;
     }
     .btn {
       height: 32px;
@@ -1816,7 +1819,7 @@ a.download-video {
       font-size: 1em;
       max-width: 20%;
       line-height: 1.2;
-      font-family: $gotham-bold;
+      @include main-font-semi-bold;
     }
   }
 
@@ -1829,7 +1832,7 @@ a.download-video {
     color: $neutral_dark;
     font-size: 1em;
     line-height: 1.2;
-    font-family: $gotham-bold;
+    @include main-font-semi-bold;
   }
 
   #password_field, #new_user {
@@ -1845,7 +1848,7 @@ a.download-video {
     background-color: $brand_secondary_default;
     border: 2px solid $brand_secondary_default;
     color: $neutral_white;
-    font-family: $gotham-bold;
+    @include main-font-semi-bold;
     margin: 5px 0;
     width: $button-width;
 
@@ -1903,12 +1906,38 @@ a.download-video {
 }
 
 #signup, #school-info-modal {
+  $signup-info-background: #f7f7f7;
+  $signup-info-border-color: #e5e5e5;
+
   display: flex;
   flex-wrap: wrap;
 
   .header {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  #sign_up_errors {
+    background-color: $signup-info-background;
+    border: 1px solid $red;
+    flex-wrap: wrap;
+    width: 100%;
+    h4 {
+      margin: 0;
+    }
+  }
+
+  .padded-container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    .row {
+      flex-grow: 1;
+    }
+
+    .parent-email-field-input {
+      flex-grow: 1;
+    }
   }
 
   .oauth-links {
@@ -1991,21 +2020,18 @@ a.download-video {
   }
 
   .signup, .finish-signup {
-    $school-info-background: #f7f7f7;
-    $school-info-border-color: #e5e5e5;
-
     .section-container {
       padding: 10px;
       flex-grow: 1;
-      background-color: $school-info-background;
-      border: 1px solid $school-info-border-color;
+      background-color: $signup-info-background;
+      border: 1px solid $signup-info-border-color;
 
       h5 {
         font-weight: bold;
       }
 
       hr {
-        border: 1px solid $school-info-border-color;
+        border: 1px solid $signup-info-border-color;
       }
     }
 
@@ -2105,8 +2131,8 @@ a.download-video {
     }
 
     #parent-email-section {
-      background-color: $school-info-background;
-      border: 1px solid $school-info-border-color;
+      background-color: $signup-info-background;
+      border: 1px solid $signup-info-border-color;
       flex-wrap: wrap;
     }
 
@@ -2122,19 +2148,6 @@ a.download-video {
       width: 220px;
     }
 
-    .padded-container {
-      padding: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      .row {
-        flex-grow: 1;
-      }
-
-      .parent-email-field-input {
-        flex-grow: 1;
-      }
-    }
-
     .parent-email-section-header {
       margin-bottom: 0;
       flex-grow: 1;
@@ -2146,7 +2159,7 @@ a.download-video {
       flex-grow: 1;
     }
 
-    #teacher-name-label, #student-name-label {
+    #teacher-name-label, #student-name-label, #teacher-email-label {
       display: flex;
       flex-basis: 100%;
     }
@@ -2209,7 +2222,7 @@ a.download-video {
       margin: 5px 0;
       font-size: 18px;
       height: 40px;
-      font-family: $gotham-extra-bold;
+      @include main-font-bold;
     }
 
     #forgot-password {
@@ -2300,7 +2313,7 @@ a.download-video {
     }
 
     button {
-      font-family: $gotham-bold;
+      @include main-font-semi-bold;
       padding: 10px 20px;
       margin-right: 0;
       background-color: $brand_secondary_default;
@@ -2327,7 +2340,7 @@ a.download-video {
   }
 
   .oauth-sign-in {
-    font-family: $gotham-bold;
+    @include main-font-semi-bold;
     width: 100%;
     margin: 5px 0;
     color: $neutral_dark;
@@ -2462,8 +2475,7 @@ a.download-video {
       .giantmark {
         .text {
           opacity: 0.8;
-          font-family: $gotham-bold;
-          font-weight: normal;
+          @include main-font-semi-bold;
         }
       }
     }
@@ -2651,8 +2663,7 @@ a.download-video {
       padding: 5px;
       font-size: 18px;
       line-height: 18px;
-      font-family: $gotham-extra-bold;
-      font-weight: normal;
+      @include main-font-bold;
       color: $white;
       background: $cyan;
       margin: 0;
@@ -2792,8 +2803,7 @@ a.download-video {
   color: $white;
   font-size: 13px;
   padding-right: 10px;
-  font-family: $gotham-regular;
-  font-weight: normal;
+  @include main-font-regular;
   padding: 10px;
 }
 
@@ -3000,7 +3010,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
     }
   }
   .item-answer-letter {
-    font-family: $gotham-bold;
+    @include main-font-semi-bold;
   }
 }
 
@@ -3029,7 +3039,7 @@ $modal-no-icon-gap: 22px;
   }
 
   .congrats {
-    font-family: "Gotham 5r", sans-serif;
+    @include main-font-semi-bold;
     font-size: 21px;
     line-height: 27px;
   }
@@ -3076,8 +3086,7 @@ $modal-no-icon-gap: 22px;
     }
 
     .hint-header {
-      font-family: $gotham-extra-bold;
-      font-weight: normal;
+      @include main-font-bold;
     }
 
     .hint-image {
@@ -3105,8 +3114,7 @@ $modal-no-icon-gap: 22px;
 }
 
 .dialog-title {
-  font-family: $gotham-extra-bold;
-  font-weight: normal;
+  @include main-font-bold;
 }
 
 h5.dialog-title {
@@ -3196,7 +3204,7 @@ h5.dialog-title {
   }
 
   strong {
-    font-family: $gotham-bold;
+    @include main-font-semi-bold;
   }
 }
 
@@ -3579,7 +3587,7 @@ code {
       cursor: pointer;
       border: none;
       box-shadow: none;
-      font-family: $gotham-bold;
+      @include main-font-semi-bold;
       font-size: 100%;
       color: $brand_secondary_default;
       text-decoration: underline;
@@ -3654,15 +3662,15 @@ h2.danger {
   padding: 30px 10px 36px 10px;
 
   h1 {
+    @include main-font-semi-bold;
     color: $white;
     margin-bottom: 24px;
     margin-top: 0;
-    font-family: "Gotham 5r", sans-serif;
     font-size: 38px;
   }
 
   h3 {
-    font-family: "Gotham 5r", sans-serif;
+    @include main-font-semi-bold;
     font-size: 20px;
     line-height: normal;
   }
@@ -3704,7 +3712,9 @@ h2.danger {
 .foorm-adjust-header {
   background-color: $white;
   h3 {
-    font-family: "Gotham 5r", sans-serif !important;
+    @include main-font-semi-bold;
+    font-family: $main-font !important;
+    font-weight: $semi-bold-font-weight !important;
     font-size: 22px !important;
     line-height: 30px !important;
     color: $teal !important;
@@ -3712,7 +3722,9 @@ h2.danger {
 }
 
 .foorm-adjust-page-title {
-  font-family: "Gotham 5r", sans-serif !important;
+  @include main-font-semi-bold;
+  font-family: $main-font !important;
+  font-weight: $semi-bold-font-weight !important;
   font-size: 22px !important;
 }
 
@@ -3728,10 +3740,10 @@ h2.danger {
   table-layout: fixed;
 
   th {
+    @include main-font-regular;
     font-size: 12px;
     text-align: center;
-    font-family: 'Gotham 4r', sans-serif;
-    font-weight: normal !important;
+    font-weight: $regular-font-weight !important;
   }
 
   @media (min-width: 601px) {
@@ -3862,19 +3874,21 @@ h2.danger {
       }
 
       #link_your_email {
+        @include main-font-regular;
+        font-family: $main-font !important;
         background-color: $orange;
         border-color: $orange;
         border-image-source: none !important;
-        font-family: 'Gotham 4r', sans-serif !important;
         text-shadow: none !important;
         border-width: 1px !important;
       }
 
       #not_now {
+        @include main-font-regular;
+        font-family: $main-font !important;
         background-color: $light_purple;
         border-color: $light_purple;
         border-image-source: none !important;
-        font-family: 'Gotham 4r', sans-serif !important;
         text-shadow: none !important;
         border-width: 1px !important;
       }
@@ -3916,9 +3930,8 @@ html[dir=rtl] {
   background-color: $neutral_white !important;
   float: right;
   border: 2px solid $neutral_dark;
-  margin-top: 1px !important;
-  margin-right: 2px;
-  height: 16px;
+  box-sizing: border-box;
+  height: 32px;
   padding: 6px !important;
 
   html[dir=rtl] & {
@@ -3984,14 +3997,14 @@ html[dir=rtl] {
 
   .mapboxgl-ctrl-geocoder--suggestion {
     color: $default_text;
-    font-family: $gotham-regular, sans-serif;
+    @include main-font-regular;
   }
 }
 
 #reset-predict-progress-button {
   display: 'inline-block';
   font-size: 12;
-  font-family: $gotham-regular;
+  @include main-font-regular;
   border-width: '1px';
   border-style: 'solid';
   border-color: $border_gray;
@@ -4025,7 +4038,7 @@ a {
     &:link, &:visited, &:hover, &:active {
       text-decoration: none;
       border-radius: 4px;
-      font-family: $gotham-bold;
+      @include main-font-semi-bold;
       font-size: 1em !important;
       padding: 10px 20px;
       height: auto;

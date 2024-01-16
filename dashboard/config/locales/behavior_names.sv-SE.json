@@ -56,6 +56,15 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "CourseE_Project_SpriteLab_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "CourseE_Project_SpriteLab_cupcake_examples2022": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -80,6 +89,18 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "CourseE_Project_SpriteLab_cupcake_examples_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "CourseE_Project_SpriteLab_examples2022": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -93,6 +114,18 @@
           "shrinking": "krymper"
         },
         "CourseE_Project_SpriteLab_examples_2021": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "CourseE_Project_SpriteLab_examples_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -158,16 +191,25 @@
         "CourseF_outbreak1_-2022-2": {
           "recovering": "återhämtning"
         },
+        "CourseF_outbreak1_2023": {
+          "recovering": "återhämtning"
+        },
         "CourseF_outbreak2": {
           "recovering": "återhämtning"
         },
         "CourseF_outbreak2_-2022-2": {
           "recovering": "återhämtning"
         },
+        "CourseF_outbreak2_2023": {
+          "recovering": "återhämtning"
+        },
         "CourseF_outbreak3": {
           "recovering": "återhämtning"
         },
         "CourseF_outbreak3_-2022-2": {
+          "recovering": "återhämtning"
+        },
+        "CourseF_outbreak3_2023": {
           "recovering": "återhämtning"
         },
         "CourseF_outbreak4": {
@@ -192,16 +234,33 @@
           "recovering": "återhämtning",
           "shrinking": "krymper"
         },
+        "CourseF_outbreak4_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "recovering": "återhämtning",
+          "shrinking": "krymper"
+        },
         "CourseF_outbreak5": {
           "recovering": "återhämtning"
         },
         "CourseF_outbreak5_-2022-2": {
           "recovering": "återhämtning"
         },
+        "CourseF_outbreak5_2023": {
+          "recovering": "återhämtning"
+        },
         "CourseF_outbreak6": {
           "recovering": "återhämtning"
         },
         "CourseF_outbreak6_-2022-2": {
+          "recovering": "återhämtning"
+        },
+        "CourseF_outbreak6_2023": {
           "recovering": "återhämtning"
         },
         "CourseF_outbreak7": {
@@ -228,6 +287,18 @@
           "recovering": "återhämtning",
           "shrinking": "krymper"
         },
+        "CourseF_outbreak7_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving left and right": "flytta vänster och höger",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "recovering": "återhämtning",
+          "shrinking": "krymper"
+        },
         "CourseF_outbreak8": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -241,6 +312,18 @@
           "shrinking": "krymper"
         },
         "CourseF_outbreak8_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving left and right": "flytta vänster och höger",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "recovering": "återhämtning",
+          "shrinking": "krymper"
+        },
+        "CourseF_outbreak8_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving left and right": "flytta vänster och höger",
@@ -477,6 +560,15 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "Fish Tank 2-validated_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "Fish Tank 3-validated2022": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -505,6 +597,15 @@
           "shrinking": "krymper"
         },
         "Fish Tank 3-validated_2021": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "Fish Tank 3-validated_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving north": "flyttar norrut",
@@ -549,6 +650,15 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "Fish Tank 4-validated_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "Fish Tank 5-validated2022": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -585,6 +695,15 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "Fish Tank 5-validated_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "Fish Tank 6-validated2022": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -613,6 +732,15 @@
           "shrinking": "krymper"
         },
         "Fish Tank 6-validated_2021": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "Fish Tank 6-validated_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving north": "flyttar norrut",
@@ -708,6 +836,18 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "Virtual Pet 1_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "Virtual Pet 2": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -753,6 +893,15 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "Virtual Pet 2_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "Virtual Pet 3_-2022-2": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -781,6 +930,15 @@
           "shrinking": "krymper"
         },
         "Virtual Pet 3_2021": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "Virtual Pet 3_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving north": "flyttar norrut",
@@ -1069,6 +1227,15 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "courseE_aboutme_2_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "courseE_aboutme_3": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -1097,6 +1264,15 @@
           "shrinking": "krymper"
         },
         "courseE_aboutme_3_2021": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "courseE_aboutme_3_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving north": "flyttar norrut",
@@ -1141,6 +1317,15 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "courseE_aboutme_4_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "courseE_aboutme_5": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -1177,6 +1362,15 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "courseE_aboutme_5_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "courseF_apps_aquarium": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -1198,6 +1392,16 @@
           "shrinking": "krymper"
         },
         "courseF_apps_aquarium_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "courseF_apps_aquarium_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving north": "flyttar norrut",
@@ -1237,6 +1441,16 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "courseF_apps_card_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "courseF_apps_chatbot": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -1258,6 +1472,16 @@
           "shrinking": "krymper"
         },
         "courseF_apps_chatbot_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "courseF_apps_chatbot_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving north": "flyttar norrut",
@@ -1294,6 +1518,15 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "courseF_apps_collector_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "courseF_apps_madlib": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -1319,6 +1552,18 @@
           "shrinking": "krymper"
         },
         "courseF_apps_madlib_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "courseF_apps_madlib_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -1366,6 +1611,18 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "courseF_apps_pet_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "courseF_editable_card": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -1377,6 +1634,16 @@
           "shrinking": "krymper"
         },
         "courseF_editable_card_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "courseF_editable_card_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving north": "flyttar norrut",
@@ -1406,6 +1673,16 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "courseF_editable_chatbot_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "courseF_editable_madlib": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -1419,6 +1696,18 @@
           "shrinking": "krymper"
         },
         "courseF_editable_madlib_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "courseF_editable_madlib_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -1466,7 +1755,31 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "courseF_events_choice_conflict2_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving forward": "flyttar framåt",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "courseF_events_choice_conflict_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving forward": "flyttar framåt",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "courseF_events_choice_conflict_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -1502,6 +1815,18 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "courseF_events_choice_penguin_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving forward": "flyttar framåt",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "courseF_events_choice_pufferfish": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -1515,6 +1840,18 @@
           "shrinking": "krymper"
         },
         "courseF_events_choice_pufferfish_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving forward": "flyttar framåt",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "courseF_events_choice_pufferfish_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -1550,6 +1887,18 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "courseF_events_conflict_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving forward": "flyttar framåt",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "courseF_events_freeplay_air": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -1561,6 +1910,16 @@
           "shrinking": "krymper"
         },
         "courseF_events_freeplay_air_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "shrinking": "krymper"
+        },
+        "courseF_events_freeplay_air_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -1590,6 +1949,16 @@
           "moving west and looping": "flyttar västerut och loopar",
           "shrinking": "krymper"
         },
+        "courseF_events_freeplay_animals_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "shrinking": "krymper"
+        },
         "courseF_events_freeplay_aquatic": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -1601,6 +1970,16 @@
           "shrinking": "krymper"
         },
         "courseF_events_freeplay_aquatic_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "shrinking": "krymper"
+        },
+        "courseF_events_freeplay_aquatic_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -1630,6 +2009,16 @@
           "moving west and looping": "flyttar västerut och loopar",
           "shrinking": "krymper"
         },
+        "courseF_events_freeplay_blank_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "shrinking": "krymper"
+        },
         "courseF_events_freeplay_food": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -1641,6 +2030,16 @@
           "shrinking": "krymper"
         },
         "courseF_events_freeplay_food_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "shrinking": "krymper"
+        },
+        "courseF_events_freeplay_food_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -1670,6 +2069,16 @@
           "moving west and looping": "flyttar västerut och loopar",
           "shrinking": "krymper"
         },
+        "courseF_events_freeplay_space_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "shrinking": "krymper"
+        },
         "courseF_events_key": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -1683,6 +2092,18 @@
           "shrinking": "krymper"
         },
         "courseF_events_key_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving forward": "flyttar framåt",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "courseF_events_key_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -1720,6 +2141,19 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "courseF_events_practice_reorder_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving forward": "flyttar framåt",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "courseF_events_predict": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -1731,6 +2165,16 @@
           "shrinking": "krymper"
         },
         "courseF_events_predict_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "patrolling": "patrullerar",
+          "running east": "springer österut",
+          "shrinking": "krymper"
+        },
+        "courseF_events_predict_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving north": "flyttar norrut",
@@ -1764,6 +2208,18 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "courseF_events_review_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving forward": "flyttar framåt",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "courseF_events_ship": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -1777,6 +2233,18 @@
           "shrinking": "krymper"
         },
         "courseF_events_ship_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving forward": "flyttar framåt",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "courseF_events_ship_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -1836,6 +2304,18 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "courseF_events_time_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving forward": "flyttar framåt",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "courseF_label_predict": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -1856,6 +2336,16 @@
           "running east": "springer österut",
           "shrinking": "krymper"
         },
+        "courseF_label_predict_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "patrolling": "patrullerar",
+          "running east": "springer österut",
+          "shrinking": "krymper"
+        },
         "courseF_place_fruit": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -1867,6 +2357,16 @@
           "shrinking": "krymper"
         },
         "courseF_place_fruit_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "shrinking": "krymper"
+        },
+        "courseF_place_fruit_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -1901,6 +2401,14 @@
           "moving west": "flyttar väst",
           "shrinking": "krymper"
         },
+        "courseF_sprites_behaviors_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "shrinking": "krymper"
+        },
         "courseF_sprites_clouds": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -1912,6 +2420,16 @@
           "shrinking": "krymper"
         },
         "courseF_sprites_clouds_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "shrinking": "krymper"
+        },
+        "courseF_sprites_clouds_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -1941,6 +2459,16 @@
           "moving west and looping": "flyttar västerut och loopar",
           "shrinking": "krymper"
         },
+        "courseF_sprites_desert_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "shrinking": "krymper"
+        },
         "courseF_sprites_freeplay_air": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -1952,6 +2480,16 @@
           "shrinking": "krymper"
         },
         "courseF_sprites_freeplay_air_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "shrinking": "krymper"
+        },
+        "courseF_sprites_freeplay_air_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -1981,6 +2519,16 @@
           "moving west and looping": "flyttar västerut och loopar",
           "shrinking": "krymper"
         },
+        "courseF_sprites_freeplay_animals_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "shrinking": "krymper"
+        },
         "courseF_sprites_freeplay_aquatic": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -1992,6 +2540,16 @@
           "shrinking": "krymper"
         },
         "courseF_sprites_freeplay_aquatic_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "shrinking": "krymper"
+        },
+        "courseF_sprites_freeplay_aquatic_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -2021,6 +2579,16 @@
           "moving west and looping": "flyttar västerut och loopar",
           "shrinking": "krymper"
         },
+        "courseF_sprites_freeplay_blank_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "shrinking": "krymper"
+        },
         "courseF_sprites_freeplay_food": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -2032,6 +2600,16 @@
           "shrinking": "krymper"
         },
         "courseF_sprites_freeplay_food_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "shrinking": "krymper"
+        },
+        "courseF_sprites_freeplay_food_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -2061,6 +2639,16 @@
           "moving west and looping": "flyttar västerut och loopar",
           "shrinking": "krymper"
         },
+        "courseF_sprites_freeplay_space_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "shrinking": "krymper"
+        },
         "courseF_sprites_make": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -2072,6 +2660,16 @@
           "shrinking": "krymper"
         },
         "courseF_sprites_make_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "shrinking": "krymper"
+        },
+        "courseF_sprites_make_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -2101,6 +2699,16 @@
           "moving west and looping": "flyttar västerut och loopar",
           "shrinking": "krymper"
         },
+        "courseF_sprites_moreSprites_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "shrinking": "krymper"
+        },
         "courseF_sprites_positioning": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -2112,6 +2720,16 @@
           "shrinking": "krymper"
         },
         "courseF_sprites_positioning_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "shrinking": "krymper"
+        },
+        "courseF_sprites_positioning_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -2141,6 +2759,16 @@
           "running east": "springer österut",
           "shrinking": "krymper"
         },
+        "courseF_sprites_predict_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "patrolling": "patrullerar",
+          "running east": "springer österut",
+          "shrinking": "krymper"
+        },
         "courseF_sprites_properties": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -2152,6 +2780,16 @@
           "shrinking": "krymper"
         },
         "courseF_sprites_properties_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "shrinking": "krymper"
+        },
+        "courseF_sprites_properties_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -2181,6 +2819,16 @@
           "moving west and looping": "flyttar västerut och loopar",
           "shrinking": "krymper"
         },
+        "courseF_sprites_ship_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "shrinking": "krymper"
+        },
         "courseF_text_answer": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -2194,6 +2842,18 @@
           "shrinking": "krymper"
         },
         "courseF_text_answer_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving forward": "flyttar framåt",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "courseF_text_answer_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -2229,6 +2889,18 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "courseF_text_choice_color_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving forward": "flyttar framåt",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "courseF_text_choice_conversation": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -2242,6 +2914,18 @@
           "shrinking": "krymper"
         },
         "courseF_text_choice_conversation_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "courseF_text_choice_conversation_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -2277,6 +2961,18 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "courseF_text_choice_events_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "courseF_text_choice_freeplay": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -2290,6 +2986,18 @@
           "shrinking": "krymper"
         },
         "courseF_text_choice_freeplay_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "courseF_text_choice_freeplay_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -2325,6 +3033,18 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "courseF_text_choice_interview_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "courseF_text_choice_multiprompt": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -2338,6 +3058,18 @@
           "shrinking": "krymper"
         },
         "courseF_text_choice_multiprompt_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "courseF_text_choice_multiprompt_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -2373,6 +3105,18 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "courseF_text_choice_title_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving forward": "flyttar framåt",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "courseF_text_concat": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -2386,6 +3130,18 @@
           "shrinking": "krymper"
         },
         "courseF_text_concat_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving forward": "flyttar framåt",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "courseF_text_concat_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -2421,6 +3177,18 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "courseF_text_events_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving forward": "flyttar framåt",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "courseF_text_print": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -2434,6 +3202,18 @@
           "shrinking": "krymper"
         },
         "courseF_text_print_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving forward": "flyttar framåt",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "courseF_text_print_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -2469,6 +3249,18 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "courseF_text_prompts_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving forward": "flyttar framåt",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "courseF_text_review": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -2482,6 +3274,18 @@
           "shrinking": "krymper"
         },
         "courseF_text_review_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving forward": "flyttar framåt",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "courseF_text_review_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -2517,6 +3321,18 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "courseF_variables_card_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "courseF_variables_card_finish": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -2530,6 +3346,18 @@
           "shrinking": "krymper"
         },
         "courseF_variables_card_finish_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "courseF_variables_card_finish_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -2565,6 +3393,18 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "courseF_variables_chatbot_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "courseF_variables_chatbot_finish": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -2578,6 +3418,18 @@
           "shrinking": "krymper"
         },
         "courseF_variables_chatbot_finish_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "courseF_variables_chatbot_finish_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -2613,6 +3465,18 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "courseF_variables_madlib_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "courseF_variables_madlib_finish": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -2626,6 +3490,18 @@
           "shrinking": "krymper"
         },
         "courseF_variables_madlib_finish_-2022-2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "courseF_variables_madlib_finish_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -2657,6 +3533,16 @@
           "running east": "springer österut",
           "shrinking": "krymper"
         },
+        "courseF_variables_predict_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "patrolling": "patrullerar",
+          "running east": "springer österut",
+          "shrinking": "krymper"
+        },
         "coursee_helloworld_events": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -2666,6 +3552,174 @@
           "moving south": "flyttar söderut",
           "moving west": "flyttar väst",
           "moving west and looping": "flyttar västerut och loopar",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "coursee_helloworld_events_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving forward": "flyttar framåt",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "csc_animal_adaptaions_fishschool": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "csc_animal_adaptations_birds": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "csc_animal_adaptations_bugs": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "csc_animal_adaptations_butterfly": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "csc_animal_adaptations_choice2": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "csc_animal_adaptations_choice3": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "csc_animal_adaptations_fish": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "csc_animal_adaptations_groups": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "csc_animal_adaptations_migration": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "csc_animal_adaptations_speed": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "csc_ecosystems_giraffe_evo_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "csc_ecosystems_whale_explain_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "csc_ecosystems_whale_movement_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
@@ -2797,6 +3851,18 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "helloworld_food_backgrounds_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "helloworld_food_backgrounds_soccer-2022": {
           "growing": "växer",
           "moving east": "flyttar öst",
@@ -2833,7 +3899,29 @@
           "patrolling": "patrullerar",
           "shrinking": "krymper"
         },
+        "helloworld_food_behaviors_2023": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
         "helloworld_food_costumes": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "shrinking": "krymper"
+        },
+        "helloworld_food_costumes_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -2856,6 +3944,18 @@
           "shrinking": "krymper"
         },
         "helloworld_food_sounds": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "helloworld_food_sounds_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",
@@ -3031,6 +4131,18 @@
           "shrinking": "krymper"
         },
         "simcustom_2021": {
+          "growing": "växer",
+          "moving east": "flyttar öst",
+          "moving east and looping": "flyttar österut och loopar",
+          "moving north": "flyttar norrut",
+          "moving south": "flyttar söderut",
+          "moving west": "flyttar väst",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "patrolling": "patrullerar",
+          "shrinking": "krymper"
+        },
+        "simcustom_2023": {
           "growing": "växer",
           "moving east": "flyttar öst",
           "moving east and looping": "flyttar österut och loopar",

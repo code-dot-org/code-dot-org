@@ -11,7 +11,7 @@ layout: wide
 
 # Pokyny pro vytváření a odesílání výukových programů a lekcí pro Hour of Code™ a Týden výuky informatiky
 
-Code.org hostí různé aktivity, lekce a videa Hour of Code™ na webových stránkách Code.org a Hodina kódu. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org hostí různé aktivity, lekce a videa Hour of Code™ na webových stránkách Code.org a Hodina kódu. Aktuální seznam je na adrese []({{ urls/learn }})hourofcode.com/learn.
 
 Chcete odeslat svůj vlastní výukový program, lekci vedenou učiteli nebo aktivitu robotiky/výrobce, která vysvětluje princip informatiky? Zapojte se do tohoto globálního hnutí a pomozte účastníkům a účastnicím na celém světě začít s hodinou programování, případně zajít ještě dále s celodenními nebo celotýdenními aktivitami o více lekcích.
 
@@ -46,7 +46,7 @@ Několik tipů:
 
 Tyto aktivity jsou určeny pro studenty, aby se sami řídili prostřednictvím výukového programu. Nevyžadují mnoho instrukcí od přípravné práce učitele nebo učitele.
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Lekce usnadněná učitelem ([příklad](https://studio.code.org/s/course1/lessons/2/levels/1), [](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA)šablona)**
 
 Nyní, když stovky tisíc pedagogů vyzkoušely Hodinu kódu, je mnoho učeben připraveno na kreativnější činnosti, které učí základy informatiky. Abychom pomohli pokročilejším učitelům najít inspiraci, shromažďujeme a kurátorujeme lekce a plány aktivit „vedené učiteli“ pro veterány Hodiny kódu.
 
@@ -85,7 +85,7 @@ Cílem Hodiny kódu je poskytnout začátečníkům přístupnou první ochutná
 
 Činnosti by měly učit koncept informatiky, jako jsou smyčky, podmínky, šifrování nebo jak funguje internet. Aktivita může také učit o tom, jak se počítačová věda spojuje s povoláními, událostmi nebo historií v reálném světě. Například výuka designu UX k vytváření aplikací, které jsou smysluplné pro publikum nebo věc. Odrazujeme od činností, které se zaměřují spíše na syntaxi programování než na koncepty. Například uvedeme, ale ne zvýrazníme, aktivity, které učí HTML. Podobně odrazujeme od lekcí blokového programování, které se zaměřují spíše na nastavení/změnu možností konfigurace, než na učení, jak modelovat algoritmus nebo proces.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Činnosti, které vyžadují instalaci aplikace, desktopovou aplikaci nebo herní konzoli, jsou v pořádku, ale nejsou ideální. Nebudeme uvádět aktivity, které vyžadují registraci nebo platbu. (Robotické činnosti mohou vyžadovat nákup robotiky.)
+*Technické požadavky:* Vzhledem k široké škále nastavení školních a třídních technologií jsou nejlepšími aktivitami webové nebo chytré telefony nebo činnosti v jiném odpojeném stylu, které učí koncepty informatiky bez použití počítače (viz http://csunplugged.com/). [](http://csunplugged.com/) Činnosti, které vyžadují instalaci aplikace, desktopovou aplikaci nebo herní konzoli, jsou v pořádku, ale nejsou ideální. Nebudeme uvádět aktivity, které vyžadují registraci nebo platbu. (Robotické činnosti mohou vyžadovat nákup robotiky.)
 
 *Student-led (Self-Guided) Formát:* Původní Hodina kódu byla postavena převážně na úspěchu výukových programů nebo lekcí s vlastním vedením, volitelně usnadňovaných učitelem. Je zde mnoho již existujících možností, ale jestli chcete vytvořit nové, tyto aktivity by měli být navrženy tak, že mohou být zábavné pro studenty pracující sámi, nebo ve třídě, kde učitěl má minimální přípravu v informatice. Měli by spíše studenty nasměrovat, nežli je nutit do otevřené hodinové výzvy. Ideální je, aby instrukce a návody byly zabudované přímo do programovací platformy, aby se zabránilo přepínání karet nebo oken mezi výukovým programem a programovací platformou.
 
@@ -142,11 +142,11 @@ Co budete potřebovat:
     * Nepřipojený
 * Snímek obrazovky nebo marketingový obrázek aktivity Hodina kódu. Zašlete prosím alespoň jeden obrázek o rozměrech 4:3. Mělo by to být alespoň 520px x 390px. Tento obrázek by neměl obsahovat ŽÁDNÝ text (kromě vašeho loga), aby byl přístupnější pro neanglicky mluvící. Není-li odpovídající obrázek zadán, můžeme udělat náš vlastní snímek vašeho kurzu nebo se rozhodneme obrázek nezařadit. Všechny obrázky musí být odeslány jako odkaz URL na.jpg, .jpeg nebo .png.
 * Aby bylo možné přesněji sledovat účast, partneři výukových programů třetích stran musí na první stránku svých výukových programů Hodina kódu zahrnout sledovací obrázky o 1 pixelu. Další podrobnosti najdete v části [Tracking Pixel](#pixel) níže.
-* Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
+* Po dokončení vaší aktivity by uživatelé měli být přesměrováni na [code.org/api/hour/finish](https://code.org/api/hour/finish) , kde budou moci: 
     * Sdílet na sociálních sítích, že dokončili aktivitu Hodiny kódu
     * Získat certifikát o dokončení aktivity Hodiny kódu
     * Podívat se na žebříčky o tom, které země/města mají nejvyšší míru účasti v aktivitách Hodiny kódu
-    * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
+    * Pro uživatele, kteří tráví hodinu vaší aktivitou a nedokončí ji, přiložte prosím tlačítko k vaší aktivitě s nápisem „Jsem dokončen s hodinou kódu“, které odkazuje zpět na [](https://code.org/api/hour/finish) code.org/api/hour/finish.
 * (Volitelné) Můžeme navázat na odkaz na online průzkum/formulář s žádostí o zprávu o následujících metrikách aktivity: 
     * Pro online aktivity (zejména smartphonové/tabletové aplikace): 
         * Počet uživatelů
@@ -263,7 +263,7 @@ Poznámka: Toto není důležité udělat pro instalovatelné aplikace (iOS/Andr
 
 Příklad sledovacích pixelů pro Dance Party:
 
-IMG SRC = <http://code.org/api/hour/begin_dance.png>   
+IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
 
 [**Zpět nahoru**](#top)

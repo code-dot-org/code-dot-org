@@ -633,6 +633,8 @@ se:
               display_name: Iskkadeapmi
         csd-post-survey-2023:
           title: Maŋŋil Kurssa Iskkadeapmi
+        csd-post-survey-2024:
+          title: Maŋŋil Kurssa Iskkadeapmi
         csd1-2017:
           lesson_groups:
             csd1_1:
@@ -684,6 +686,14 @@ se:
             cspSurvey:
               display_name: Iskkadeapmi
         csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-3:
+              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+            lessonGroup-5:
+              display_name: Iskkadeapmi
+        csd1-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
@@ -841,6 +851,12 @@ se:
               display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
             lessonGroup-3:
               display_name: 'Kapihtal 2: Hukse Spealuid'
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
+            lessonGroup-3:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
         csd3-dlp:
           lesson_groups:
             content:
@@ -919,6 +935,12 @@ se:
             cspSurvey:
               display_name: Iskkadeapmi
         csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
+            lessonGroup-3:
+              display_name: 'Kapihtal 2: Prototyhpet App:a'
+        csd4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
@@ -1027,6 +1049,10 @@ se:
             content:
               display_name: Sisdoallu
         csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Input:at ja Output:at
+        csd6b-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: Input:at ja Output:at
@@ -1844,6 +1870,10 @@ se:
             du iežat Minecraft-veršuvnnas.
           student_description: Programmere elliid dahje eará Minecraft heakkalaččaid
             du iežat Minecraft-veršuvnnas.
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Friddja Speallan
         nevada-standards-aligned-fifth-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1923,6 +1953,18 @@ se:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
             lessonGroup-3:
               display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-6:
+              name: Boahttevaš Lávkkit
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Dáhpáhusaid
+            lesson-4:
+              name: Láhttemat
+            lesson-5:
+              name: Boahttevaš Lávkkit
         spelling-bee:
           title: Stávengilvu
         spritelab-effects-challenge:

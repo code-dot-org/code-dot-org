@@ -127,7 +127,7 @@ ne:
           description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           student_description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
         mc:
-          title: Minecraft Hour of Code
+          title: Minecraft Adventurer
           description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
           description_short: Explore a Minecraft world through code
           student_description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
@@ -1602,3 +1602,55 @@ ne:
               display_name: Conditionals
             lessonGroup-5:
               display_name: Variables
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introduction
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introduction
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Introduction
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introduction
+        self-paced-pl-csd-unit1-2-2023:
+          title: 'Module 1 : Préparation à l''enseignement de la résolution de problèmes et de l''informatique'
+          description: |-
+            Ce module d'apprentissage professionnel est conçu pour vous aider à vous préparer à enseigner l'unité Résolution de problèmes et informatique de Code.org.
+
+            **Dans ce module d'apprentissage professionnel, vous devrez :**.
+
+            -   Obtenir une introduction à la résolution de problèmes et à l'informatique.
+            -   Mettre en pratique les concepts clés inclus dans l'unité.
+            -   Explorer les projets de fin de chapitre.
+
+            \*\*Durée suggérée : 30 minutes.
+
+            Traduit avec www.DeepL.com/Translator (version gratuite)
+          student_description: |-
+            Ce module d'apprentissage professionnel est conçu pour vous aider à vous préparer à enseigner l'unité Résolution de problèmes et informatique de Code.org.
+
+            **Dans ce module d'apprentissage professionnel, vous devrez :**.
+
+            -   Obtenir une introduction à la résolution de problèmes et à l'informatique.
+            -   Mettre en pratique les concepts clés inclus dans l'unité.
+            -   Explorer les projets de fin de chapitre.
+
+            \*\*Durée suggérée : 30 minutes.
+
+            Traduit avec www.DeepL.com/Translator (version gratuite)
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: घटनाहरु
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Loops
+            lesson-4:
+              name: Conditionals
+          title: Introduction to Computer Science

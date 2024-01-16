@@ -1,0 +1,22 @@
+{
+  "nl-NL": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "co-teacher": {
+            "buttonText": "Leer meer"
+          },
+          "hoc-2023": {
+            "buttonText": "Leer meer"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Leer meer"
+          },
+          "superhero": {
+            "buttonText": "Leer meer"
+          }
+        }
+      }
+    }
+  }
+}

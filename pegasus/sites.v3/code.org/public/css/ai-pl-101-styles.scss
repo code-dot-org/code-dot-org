@@ -110,33 +110,26 @@
   }
 }
 
-.img {
-  &--max {
-    max-width: 100%;
-  }
-}
-
 .video-101 {
-
-  &__text {
-    margin-bottom: 2rem;
-  }
-
   .action-block {
     margin-bottom: 2rem;
     background: $neutral_white;
   }
-
-  &__image,
-  &__video {
-
-    @media (min-width: 971px) {
-      margin: 20px 0 20px 20px;
-      width: calc(50% - 20px);
-    }
-  }
 }
 
-.partnership-ai + #clearboth + .desktop-feature {
+#clearboth + .desktop-feature {
   display: none;
+}
+
+.additional-resources {
+
+  & > .content-wrapper:last-child {
+    h3 {
+      margin-top: -2rem;
+
+      @media screen and (max-width: $width-md) {
+        margin-top: 0;
+      }
+    }
+  }
 }

@@ -681,6 +681,11 @@
             "name": "我的函数"
           }
         },
+        "Course E: Artist Project_examples_2023": {
+          "my function": {
+            "name": "我的函数"
+          }
+        },
         "Course E: Frozen Project_examples2022": {
           "LOGIC FLOWER": {
             "name": "逻辑之花"
@@ -745,6 +750,69 @@
           }
         },
         "Course E: Frozen Project_examples_2021": {
+          "LOGIC FLOWER": {
+            "name": "逻辑之花"
+          },
+          "LOGIC FLOWERS": {
+            "name": "逻辑之花"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "逻辑之花2"
+          },
+          "draw a circle": {
+            "description": "用给予的半径画一个圆圈",
+            "name": "画一个圆圈",
+            "parameters": {
+              "radius": "半径"
+            }
+          },
+          "draw a house": {
+            "name": "画一个房子",
+            "parameters": {
+              "length": "长度"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "画一个风车",
+            "parameters": {
+              "length": "长度",
+              "repeat": "重复",
+              "sides": "边"
+            }
+          },
+          "draw a shape": {
+            "name": "画一个图形",
+            "parameters": {
+              "length": "长度",
+              "sides": "边"
+            }
+          },
+          "draw a square": {
+            "name": "画一个正方形",
+            "parameters": {
+              "length": "长度",
+              "sides": "边"
+            }
+          },
+          "draw a star": {
+            "description": "用所给予的点和指定长度的边画一个星星",
+            "name": "画一个星星",
+            "parameters": {
+              "length": "长度",
+              "points": "分数"
+            }
+          },
+          "draw a triangle": {
+            "name": "画一个三角形",
+            "parameters": {
+              "length": "长度"
+            }
+          },
+          "small flower": {
+            "name": "小花"
+          }
+        },
+        "Course E: Frozen Project_examples_2023": {
           "LOGIC FLOWER": {
             "name": "逻辑之花"
           },
@@ -1012,6 +1080,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "description": "用给予的半径画一个圆圈",
+            "name": "画一个圆圈",
+            "parameters": {
+              "radius": "半径"
+            }
+          },
+          "draw a house": {
+            "name": "画一个房子",
+            "parameters": {
+              "length": "长度"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "画一个风车",
+            "parameters": {
+              "length": "长度",
+              "repeat": "重复",
+              "sides": "边"
+            }
+          },
+          "draw a shape": {
+            "name": "画一个图形",
+            "parameters": {
+              "length": "长度",
+              "sides": "边"
+            }
+          },
+          "draw a square": {
+            "name": "画一个正方形",
+            "parameters": {
+              "length": "长度"
+            }
+          },
+          "draw a star": {
+            "description": "用所给予的点和指定长度的边画一个星星",
+            "name": "画一个星星",
+            "parameters": {
+              "length": "长度",
+              "points": "分数"
+            }
+          },
+          "draw a triangle": {
+            "name": "画一个三角形",
+            "parameters": {
+              "length": "长度"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "description": "用给予的半径画一个圆圈",
@@ -1112,6 +1230,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_example2021_2023": {
+          "draw a circle": {
+            "description": "用给予的半径画一个圆圈",
+            "name": "画一个圆圈",
+            "parameters": {
+              "radius": "半径"
+            }
+          },
+          "draw a house": {
+            "name": "画一个房子",
+            "parameters": {
+              "length": "长度"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "画一个风车",
+            "parameters": {
+              "length": "长度",
+              "repeat": "重复",
+              "sides": "边"
+            }
+          },
+          "draw a shape": {
+            "name": "画一个图形",
+            "parameters": {
+              "length": "长度",
+              "sides": "边"
+            }
+          },
+          "draw a square": {
+            "name": "画一个正方形",
+            "parameters": {
+              "length": "长度"
+            }
+          },
+          "draw a star": {
+            "description": "用所给予的点和指定长度的边画一个星星",
+            "name": "画一个星星",
+            "parameters": {
+              "length": "长度",
+              "points": "分数"
+            }
+          },
+          "draw a triangle": {
+            "name": "画一个三角形",
+            "parameters": {
+              "length": "长度"
+            }
+          }
+        },
         "CourseF_app_computer": {
           "reset game": {
             "name": "重置游戏"
@@ -1123,6 +1291,11 @@
           }
         },
         "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": "重置游戏"
+          }
+        },
+        "CourseF_app_computer_2023": {
           "reset game": {
             "name": "重置游戏"
           }
@@ -1169,6 +1342,11 @@
           }
         },
         "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "建一个桥"
+          }
+        },
+        "Function intro Ryan_2023": {
           "build bridge": {
             "name": "建一个桥"
           }
@@ -1339,6 +1517,11 @@
             "name": "清除路径"
           }
         },
+        "MC_HOC_2017_07_Cole_2023": {
+          "clear path": {
+            "name": "清除路径"
+          }
+        },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
             "name": "固定长路径"
@@ -1372,6 +1555,14 @@
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "固定长路径"
+          },
+          "fix short path": {
+            "name": "固定短路径"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2023": {
           "fix long path": {
             "name": "固定长路径"
           },
@@ -1419,6 +1610,14 @@
             "name": "造一个短桥"
           }
         },
+        "MC_HOC_2017_Ali_2023": {
+          "build long bridge": {
+            "name": "造一个长桥"
+          },
+          "build short bridge": {
+            "name": "造一个短桥"
+          }
+        },
         "MC_HOC_2017_FP20x20": {
           "function 1": {
             "name": "函数1"
@@ -1452,6 +1651,14 @@
           }
         },
         "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "函数1"
+          },
+          "function 2": {
+            "name": "函数2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2023": {
           "function 1": {
             "name": "函数1"
           },
@@ -2080,6 +2287,11 @@
             "name": "可能的解决方案"
           }
         },
+        "courseB_artist_loops_challenge2_2023": {
+          "potential solution": {
+            "name": "可能的解决方案"
+          }
+        },
         "courseC_artist_prog3": {
           "draw fire": {
             "name": "绘制火焰"
@@ -2176,6 +2388,11 @@
             "name": "助推器"
           }
         },
+        "courseC_artist_prog4_2023": {
+          "booster": {
+            "name": "助推器"
+          }
+        },
         "courseC_data wizard": {
           "do something": {
             "name": "做点什么"
@@ -2192,6 +2409,11 @@
           }
         },
         "courseC_data wizard_2021": {
+          "do something": {
+            "name": "做点什么"
+          }
+        },
+        "courseC_data wizard_2023": {
           "do something": {
             "name": "做点什么"
           }
@@ -2889,6 +3111,17 @@
             "name": "画一列六边形"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "做点什么"
+          },
+          "draw hexagon": {
+            "name": "画六边形"
+          },
+          "draw line of hexagons": {
+            "name": "画一列六边形"
+          }
+        },
         "courseE_artist_functions1_copy": {
           "draw ear stems": {
             "name": "画眼镜腿"
@@ -2947,6 +3180,14 @@
             "name": "画眼镜腿"
           }
         },
+        "courseE_artist_functions2_2023": {
+          "draw a square": {
+            "name": "画一个正方形"
+          },
+          "draw ear stems": {
+            "name": "画眼镜腿"
+          }
+        },
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "画一个正方形"
@@ -2984,6 +3225,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "画一个星星"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "画一个星星"
           }
@@ -3033,6 +3279,11 @@
             "name": "画一个星星"
           }
         },
+        "courseE_artist_functions5_2023": {
+          "draw a star": {
+            "name": "画一个星星"
+          }
+        },
         "courseE_artist_functions5_copy": {
           "draw a star": {
             "name": "画一个星星"
@@ -3078,6 +3329,11 @@
           }
         },
         "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "画一个窗口"
+          }
+        },
+        "courseE_artist_functions7_2023": {
           "draw a window": {
             "name": "画一个窗口"
           }
@@ -3163,6 +3419,20 @@
             "name": "叠起来的正方形"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "做点什么"
+          },
+          "draw a line of squares": {
+            "name": "画一条正方形线"
+          },
+          "draw square": {
+            "name": "画一个正方形"
+          },
+          "staggered squares": {
+            "name": "叠起来的正方形"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "做点什么"
@@ -3196,6 +3466,14 @@
           }
         },
         "courseE_artist_functions8a_2021": {
+          "do something": {
+            "name": "做点什么"
+          },
+          "draw a square": {
+            "name": "画一个正方形"
+          }
+        },
+        "courseE_artist_functions8a_2023": {
           "do something": {
             "name": "做点什么"
           },
@@ -3248,6 +3526,17 @@
           }
         },
         "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "做点什么"
+          },
+          "draw a line of squares": {
+            "name": "画一条正方形线"
+          },
+          "draw square": {
+            "name": "画一个正方形"
+          }
+        },
+        "courseE_artist_functions8b_2023": {
           "do something": {
             "name": "做点什么"
           },
@@ -3328,6 +3617,20 @@
             "name": "叠起来的正方形"
           }
         },
+        "courseE_artist_functions8c_2023": {
+          "do something": {
+            "name": "做点什么"
+          },
+          "draw a line of squares": {
+            "name": "画一条正方形线"
+          },
+          "draw square": {
+            "name": "画一个正方形"
+          },
+          "staggered squares": {
+            "name": "叠起来的正方形"
+          }
+        },
         "courseE_artist_functions9": {
           "do something": {
             "name": "做点什么"
@@ -3384,6 +3687,17 @@
           }
         },
         "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "做点什么"
+          },
+          "draw line of triangles": {
+            "name": "画一列三角形"
+          },
+          "draw triangle": {
+            "name": "绘制三角形"
+          }
+        },
+        "courseE_artist_functions9_2023": {
           "do something": {
             "name": "做点什么"
           },
@@ -3479,6 +3793,23 @@
             "name": "叠起来的正方形"
           }
         },
+        "courseE_artist_functionsProj_2023": {
+          "draw a line of squares": {
+            "name": "画一条正方形线"
+          },
+          "draw hexagon": {
+            "name": "画六边形"
+          },
+          "draw line of hexagons": {
+            "name": "画一列六边形"
+          },
+          "draw square": {
+            "name": "画一个正方形"
+          },
+          "staggered squares": {
+            "name": "叠起来的正方形"
+          }
+        },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "做点什么"
@@ -3520,6 +3851,14 @@
           }
         },
         "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "做点什么"
+          },
+          "my design": {
+            "name": "我的设计"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "do something": {
             "name": "做点什么"
           },
@@ -3575,6 +3914,14 @@
             "name": "我的设计"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "做点什么"
+          },
+          "my design": {
+            "name": "我的设计"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "画一个正方形"
@@ -3616,6 +3963,14 @@
           }
         },
         "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "画一个正方形"
+          },
+          "draw ear stems": {
+            "name": "画眼镜腿"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
           "draw a square": {
             "name": "画一个正方形"
           },
@@ -3695,6 +4050,17 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "做点什么"
+          },
+          "draw line of polygons": {
+            "name": "画一列多边形"
+          },
+          "draw polygon": {
+            "name": "画多边形"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "做点什么"
           },
@@ -3874,6 +4240,20 @@
             "name": "南瓜广场"
           }
         },
+        "courseE_farmer_functions10a1_2023": {
+          "check square for corn": {
+            "name": "搜查广场上的玉米"
+          },
+          "get all pumpkins": {
+            "name": "收获所有的南瓜"
+          },
+          "pick along path": {
+            "name": "沿路径选取"
+          },
+          "pumpkin square": {
+            "name": "南瓜广场"
+          }
+        },
         "courseE_farmer_functions10b": {
           "navigate": {
             "name": "导航"
@@ -3975,6 +4355,23 @@
             "name": "南瓜广场"
           }
         },
+        "courseE_farmer_functions11_predict_2023": {
+          "check square for corn": {
+            "name": "搜查广场上的玉米"
+          },
+          "get all pumpkins": {
+            "name": "收获所有的南瓜"
+          },
+          "get produce": {
+            "name": "获取产品"
+          },
+          "pick along path": {
+            "name": "沿路径选取"
+          },
+          "pumpkin square": {
+            "name": "南瓜广场"
+          }
+        },
         "courseE_farmer_functions132022": {
           "check for corn": {
             "name": "查看玉米"
@@ -4045,6 +4442,20 @@
             "name": "沿路径选取"
           }
         },
+        "courseE_farmer_functions13_2023": {
+          "check for corn": {
+            "name": "查看玉米"
+          },
+          "corn rectangle": {
+            "name": "玉米矩形"
+          },
+          "lettuce stairs": {
+            "name": "生菜梯子"
+          },
+          "pick along path": {
+            "name": "沿路径选取"
+          }
+        },
         "courseE_farmer_functions1a2022": {
           "check square for corn": {
             "name": "搜查广场上的玉米"
@@ -4070,6 +4481,11 @@
             "name": "搜查广场上的玉米"
           }
         },
+        "courseE_farmer_functions1a_2023": {
+          "check square for corn": {
+            "name": "搜查广场上的玉米"
+          }
+        },
         "courseE_farmer_functions2b2022": {
           "check square for corn": {
             "name": "搜查广场上的玉米"
@@ -4091,6 +4507,11 @@
           }
         },
         "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "搜查广场上的玉米"
+          }
+        },
+        "courseE_farmer_functions2b_2023": {
           "check square for corn": {
             "name": "搜查广场上的玉米"
           }
@@ -4133,6 +4554,14 @@
           }
         },
         "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "搜查广场上的玉米"
+          },
+          "get all pumpkins": {
+            "name": "收获所有的南瓜"
+          }
+        },
+        "courseE_farmer_functions2ba_2023": {
           "check square for corn": {
             "name": "搜查广场上的玉米"
           },
@@ -4200,6 +4629,17 @@
             "name": "沿路径选取"
           }
         },
+        "courseE_farmer_functions3c1_2023": {
+          "check square for corn": {
+            "name": "搜查广场上的玉米"
+          },
+          "get all pumpkins": {
+            "name": "收获所有的南瓜"
+          },
+          "pick along path": {
+            "name": "沿路径选取"
+          }
+        },
         "courseE_farmer_functions3c2022": {
           "check square for corn": {
             "name": "搜查广场上的玉米"
@@ -4233,6 +4673,14 @@
           }
         },
         "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "搜查广场上的玉米"
+          },
+          "get all pumpkins": {
+            "name": "收获所有的南瓜"
+          }
+        },
+        "courseE_farmer_functions3c_2023": {
           "check square for corn": {
             "name": "搜查广场上的玉米"
           },
@@ -4280,6 +4728,11 @@
             "name": "花园广场"
           }
         },
+        "courseE_farmer_functions7a1_2023": {
+          "garden square": {
+            "name": "花园广场"
+          }
+        },
         "courseE_farmer_functions8a12022": {
           "garden square": {
             "name": "花园广场"
@@ -4301,6 +4754,11 @@
           }
         },
         "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "花园广场"
+          }
+        },
+        "courseE_farmer_functions8a1_2023": {
           "garden square": {
             "name": "花园广场"
           }
@@ -4331,6 +4789,11 @@
           }
         },
         "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "花园广场"
+          }
+        },
+        "courseE_farmer_functions9a1_2023": {
           "garden square": {
             "name": "花园广场"
           }
@@ -4382,6 +4845,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "结束游戏"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "结束游戏"
           }
@@ -4656,6 +5124,11 @@
           }
         },
         "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "用计数器移动并获取花蜜"
+          }
+        },
+        "courseF_bee_for_challenge1_2023": {
           "move and get nectar with counter": {
             "name": "用计数器移动并获取花蜜"
           }

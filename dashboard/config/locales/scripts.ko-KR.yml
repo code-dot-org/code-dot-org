@@ -544,7 +544,7 @@ ko:
             csf_sequencing:
               display_name: 시퀸싱
             lessonGroup-6:
-              display_name: 과정말 프로젝트
+              display_name: 종합 프로젝트
           student_description: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할 수 있는 자신의
             게임 또는 스토리를 만드세요.
           title: 과정 B (2022)
@@ -681,7 +681,7 @@ ko:
             csf_sequencing:
               display_name: 시퀸싱
             end_of_course_project:
-              display_name: 과정말 프로젝트
+              display_name: 종합  프로젝트
           student_description: 시퀸스와 루프, 이벤트로 프로그램을 만드세요. 이니셜을 바이너리로 바꾸고 다른 문제해결기법을
             조사하며 사이버 폭력에 대응하는 방식을 배우세요. 이 과정의 끝부분에서 공유할 수 있는 게임 또는 스토리를 직접 만드세요.
           title: 과정 C (2022)
@@ -814,7 +814,7 @@ ko:
             csf_sequencing:
               display_name: 시퀸싱
             end_of_course_project:
-              display_name: 과정말 프로젝트
+              display_name: 종합 프로젝트
             lessonGroup-6:
               display_name: 디지털 시민의식
           title: 과정 D (2022)
@@ -967,11 +967,13 @@ ko:
             csf_sprites:
               display_name: 스프라이트
             end_of_course_project:
-              display_name: 과정말 프로젝트
+              display_name: 종합  프로젝트
             lessonGroup-7:
               display_name: 컴퓨팅의 영향
             ramp_up:
               display_name: 중첩 반복
+          student_description: 알고리즘, 이벤트, 반복, 선택, 함수로 코딩을 시작하세요! 이 강좌를 마치면 친구나 가족과
+            공유할 수 있는 게임이나 그림을 디자인하고 만들 수 있습니다.
           title: 과정 E (2022)
         coursee-2023:
           description: 4학년 학생들을 위해 코스 E를 만들었습니다.이 과정은 Sprite Lab 프로그래밍 도구에 대한 소개로
@@ -1133,7 +1135,7 @@ ko:
             csf_data:
               display_name: 데이터 및 시뮬레이션
             end_of_course_project:
-              display_name: 과정말 프로젝트
+              display_name: 종합 프로젝트
             lessonGroup-7:
               display_name: 디지털 시민의식
             lessonGroup-8:
@@ -1577,6 +1579,21 @@ ko:
               display_name: 컨텐츠
             lessonGroup-5:
               display_name: 설문조사
+        csc-ecosystems-2023:
+          description: |-
+            ## 모듈에 권장하는 예습
+
+            \*\*과학 자료: \*\* 학생들은 수업 1과 2에서 해양 생물 생태계를 연구합니다. 학생들이 해양생태계와 친숙해지도록 이 [해양 동물 동영상](https://www.youtube.com/watch?v=8adtdg0N2-g)(9:42)을 추천합니다.
+
+            수업 2에서는 지속 가능한 어업 방식 몇 가지를 코딩합니다. 배경지식을 쌓고 현실 세계와의 연관성을 심화할 자료들을 참고하세요: [남획의 이해](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing)(몬터레이 베이 아쿠아리움 자료) 또는 [Mw,kwa Talks to the Loon](https://books.google.com/books/about/Mw_kwa_Talks_to_the_Loon.html?id=ZtJfkFFPTzIC)(아동 도서).
+
+            \*\*컴퓨터 과학 자료: \*\* 본 모듈에서는 컴퓨터 과학을 처음 접하는 학생들에게는 어려울 수 있는 새로운 코딩 개념을 배웁니다. Code.org 스프라이트 랩에 익숙하지 않은 학생이라면 툴의 기본 기능을 익히기 위해 [스프라이트 랩과 함께하는 헤엄치는 물고기](https://studio.code.org/s/coursee-2022/lessons/3)(55분)를 미리 사용해 보기를 권합니다.
+
+            본 모듈에서는 조건문이라는 고급 컴퓨터 과학 개념도 사용합니다. 학생들은 단계적으로 이 개념을 학습하게 되지만, 조건문 입문 언플러그드 활동인 [조건문 카드](https://studio.code.org/s/coursed-2022/lessons/12)(50분)를 예습한다면 도움이 될 것입니다.
+          lessons:
+            lesson-3:
+              name: 나만의 에코시스템을 코딩하세요 (2023)
+          title: 해양 생태계 시뮬레이션 (2023)
         csc-function-machines-pilot:
           lessons:
             lesson-1:
@@ -1668,6 +1685,8 @@ ko:
           title: CS 발견 과정 후 설문 조사
         csd-post-survey-2023:
           title: 과정 후 설문조사
+        csd-post-survey-2024:
+          title: 과정 후 설문조사
         csd-sample-online:
           title: CS 발견을 위한 온라인 활동 샘플
         csd-test-saving-state:
@@ -1758,6 +1777,14 @@ ko:
             cspSurvey:
               display_name: 설문조사
         csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '챕터 1: 문제 해결 과정'
+            lessonGroup-3:
+              display_name: '챕터 2: 컴퓨터와 문제 해결'
+            lessonGroup-5:
+              display_name: 설문조사
+        csd1-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: '챕터 1: 문제 해결 과정'
@@ -1924,6 +1951,15 @@ ko:
             세상과 공유할지 결정한 후, HTML과 CSS를 사용해 페이지 구조와 스타일을 만드는 법을 배울 것입니다. 또한 리소스와 팀워크를
             사용해, 디버깅과 같은 가치 있는 프로그래밍 기술을 연습할 것입니다. "
         csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '챕터 1: 웹페이지 만들기'
+            lessonGroup-3:
+              display_name: '챕터 2: 멀티 페이지 웹페이지 '
+          student_description: " 단원 2에서는 자신의 웹페이지에 콘텐츠를 만들어 공유하는 방법을 배울 것입니다. 어떤 콘텐츠를
+            세상과 공유할지 결정한 후, HTML과 CSS를 사용해 페이지 구조와 스타일을 만드는 법을 배울 것입니다. 또한 리소스와 팀워크를
+            사용해, 디버깅과 같은 가치 있는 프로그래밍 기술을 연습할 것입니다. "
+        csd2-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: '챕터 1: 웹페이지 만들기'
@@ -2123,6 +2159,15 @@ ko:
             쌓을 것입니다. 단원은 간단한 모양으로 시작하여 여기에 컴퓨터 과학자들이 매일 사용하는 것과 동일한 프로그래밍 개념과 설계 프로세스를
             사용하여 더 정교한 스프라이트 기반 게임을 쌓아 올립니다. 마지막 프로젝트에서는 개인화된 인터랙티브 프로그램을 개발할 것입니다."
         csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '챕터 1: 이미지와 애니메이션'
+            lessonGroup-3:
+              display_name: '챕터 2: 게임 만들기'
+          student_description: " 단원 3에서는 게임 랩에서 애니메이션과 인터랙티브 아트, 게임을 프로그래밍하며 코딩 경험을
+            쌓을 것입니다. 단원은 간단한 모양으로 시작하여 여기에 컴퓨터 과학자들이 매일 사용하는 것과 동일한 프로그래밍 개념과 설계 프로세스를
+            사용하여 더 정교한 스프라이트 기반 게임을 쌓아 올립니다. 마지막 프로젝트에서는 개인화된 인터랙티브 프로그램을 개발할 것입니다."
+        csd3-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: '챕터 1: 이미지와 애니메이션'
@@ -2337,6 +2382,16 @@ ko:
             발전시키는 동안 다른 이의 필요를 더 잘 이해하는 방법을 배울 것입니다. 단원의 후반부는 반복되는 팀 프로젝트로 구성되며 이
             기간 동안 팀은 그들이 관심을 둬야 하는 필요를 식별하고 종이와 앱 랩 모두에 솔루션 프로토타입을 만들고 실제 사용자와 함께
             솔루션을 테스트하여 피드백을 얻고 더 반복을 추진할 기회를 갖습니다.
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '챕터 1: 사용자 중심 설계'
+            lessonGroup-3:
+              display_name: '챕터 2: 앱 프로토타입'
+          student_description: 단원 4는 컴퓨팅의 더 넓은 사회적 영향을 소개합니다. 일련의 설계 도전을 통해, 문제의 해결책을
+            발전시키는 동안 다른 이의 필요를 더 잘 이해하는 방법을 배울 것입니다. 단원의 후반부는 반복되는 팀 프로젝트로 구성되며 이
+            기간 동안 팀은 그들이 관심을 둬야 하는 필요를 식별하고 종이와 앱 랩 모두에 솔루션 프로토타입을 만들고 실제 사용자와 함께
+            솔루션을 테스트하여 피드백을 얻고 더 반복을 추진할 기회를 갖습니다.
         csd4-dlp:
           description: Code.org CS 발견 교육 중인 진행자를 위한 심화 학습 계획의 단원 4입니다. 여기서 Code.org
             CS 발견 커리큘럼의 단원 4를 충분히 숙지했음을 입증하기 위한 성찰 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서
@@ -2527,6 +2582,17 @@ ko:
             대가를 강조합니다. 두 번째 챕터는 문제를 풀기 위한 데이터 사용 방법과 컴퓨터가 이 프로세스의 각 단계를 자동화하는데 도움을
             주는 방식을 배우게 됩니다. 챕터는 데이터 문제해결 프로세스를 특정 영역에 응용하는 방식을 고려하는 것으로서 마칩니다.
         csd5-2023:
+          description_short: 데이터 문제를 풀기 위해 사람들이 컴퓨터를 사용하는 방식에 대해 배우세요.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '챕터1: 정보 표현하기'
+            lessonGroup-3:
+              display_name: '챕터 2: 데이터 문제 해결하기'
+          student_description: 단원 5는 문제해결 시 데이터의 중요성에 관한 단원이고 컴퓨터가 이 프로세스를 어떻게 도울
+            수 있는지를 강조합니다. 첫 번째 챕터는 컴퓨터에서 정보를 나타내는데 사용하는 여러 시스템과 그것을 사용함에 따라 제기되는 도전과
+            대가를 강조합니다. 두 번째 챕터는 문제를 풀기 위한 데이터 사용 방법과 컴퓨터가 이 프로세스의 각 단계를 자동화하는데 도움을
+            주는 방식을 배우게 됩니다. 챕터는 데이터 문제해결 프로세스를 특정 영역에 응용하는 방식을 고려하는 것으로서 마칩니다.
+        csd5-2024:
           description_short: 데이터 문제를 풀기 위해 사람들이 컴퓨터를 사용하는 방식에 대해 배우세요.
           lesson_groups:
             lessonGroup-2:
@@ -2783,7 +2849,16 @@ ko:
           lesson_groups:
             lessonGroup-3:
               display_name: '챕터 2: 물리적 프로토타입 만들기'
+        csd6a-2024:
+          description_short: 물리적 기기로 프로그램 하는 법 배우기
+          lesson_groups:
+            lessonGroup-3:
+              display_name: '챕터 2: 물리적 프로토타입 만들기'
         csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 인풋 및 아웃풋
+        csd6b-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: 인풋 및 아웃풋
@@ -2796,6 +2871,14 @@ ko:
             lessonGroup-4:
               display_name: 설문조사
         csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 챕터 1
+            lessonGroup-3:
+              display_name: 챕터 2
+            lessonGroup-4:
+              display_name: 앱 랩 소개
+        csd7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 챕터 1
@@ -4185,6 +4268,11 @@ ko:
             고메즈, 디즈니의 “엔칸토” 음악 등이 등장합니다!
           student_description: 나만의 댄스 파티의 코드를 만들고 친구와 공유하세요!
           title: 댄스 파티 (2019)
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: '댄스 파티: A.I. 에디션'
+          title: '댄스 파티: AI 에디션'
         dance-draft:
           title: 사용하지 마시오
         dance-extras:
@@ -4370,6 +4458,10 @@ ko:
               display_name: 1 단계
             lessonGroup-3:
               display_name: 2 단계
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: 아워오브코드 수업 계획 템플릿
         e-f-ramp:
           lesson_groups:
             csf_e_1:
@@ -4998,7 +5090,7 @@ ko:
           description: 이 마인크래프트 월드에서 코드 블록들을 사용해 스티브와 알렉스를 모험시켜주세요.
           description_short: 코드를 이용해 마인크래프트 월드를 탐험해보세요.
           student_description: 이 마인크래프트 월드에서 코드 블록들을 사용해 스티브와 알렉스를 모험시켜주세요.
-          title: 마인크래프트 Hour of Code
+          title: 마인크래프트 모험가
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -5029,6 +5121,10 @@ ko:
           name: ml-플레이그라운드
           student_description: 브레인스토밍 / CSD를 위한 ML/AI 단원 개발 플레이그라운드 영역. 이에 관한 향후 질문은
             Dan Schneider에게 문의하세요.
+        musiclab:
+          lessons:
+            lesson-3:
+              name: 자유 플레이
         netsim:
           title: 인터넷 시뮬레이터
         nevada-standards-aligned-fifth-grade-2023:
@@ -5415,6 +5511,32 @@ ko:
           student_description: '단계 2 온라인: 혼합된 여름 공부'
         sconyers:
           title: 트레이시의 플레이그라운드
+        self-paced-pl-csd-unit1-2-2023:
+          description: "이 전문 학습 모듈은 귀하가 Code.org의 문제해결 및 컴퓨팅 단원을 가르칠 준비를 하는 데 도움을
+            주도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다.**\n\n-   문제 해결 및
+            컴퓨팅에 대한 소개 학습.\n-   해당 단원에 포함된 핵심 개념 연습.\n-   챕터 마지막의 프로젝트 탐구.\n\n**권장
+            시간:** 30분"
+          student_description: "이 전문 학습 모듈은 귀하가 Code.org의 문제해결 및 컴퓨팅 단원을 가르칠 준비를 하는
+            데 도움을 주도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다.**\n\n-   문제
+            해결 및 컴퓨팅에 대한 소개 학습.\n-   해당 단원에 포함된 핵심 개념 연습.\n-   챕터 마지막의 프로젝트 탐구.\n\n**권장
+            시간:** 30분"
+          title: '모듈 1: 문제 해결과 컴퓨팅 교습 준비'
+        self-paced-pl-csd-unit2-2-2023:
+          title: '모듈 2: 웹 개발 교습 준비'
+        self-paced-pl-csd-unit3-2-2023:
+          description: "이 전문 학습 모듈은 Code.org의 인터랙티브 애니메이션과 게임 단원을 교습할 준비를 돕도록 고안되어
+            있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다:**\n\n-   인터랙티브 애니메이션 및 게임에
+            대한 도입 학습.\n-   단원에 포함된 핵심 개념 연습.\n-   게임 랩에 참여.\n-   챕터 마지막 프로젝트 탐구.\n\n**권장
+            시간:** 120분"
+          student_description: "이 전문 학습 모듈은 Code.org의 인터랙티브 애니메이션과 게임 단원을 교습할 준비를
+            돕도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다:**\n\n-   인터랙티브 애니메이션
+            및 게임에 대한 도입 학습.\n-   단원에 포함된 핵심 개념 연습.\n-   게임 랩에 참여.\n-   챕터 마지막 프로젝트
+            탐구.\n\n**권장 시간:** 120분"
+          title: 인터랙티브 애니메이션 및 게임 교습 준비
+        self-paced-pl-csd-unit4-2-2023:
+          title: " 모듈 4: 디자인 프로세스 교습 준비"
+        self-paced-pl-csd-unit5-2-2023:
+          title: '모듈 5: 데이터 및 사회 교습 준비'
         self-paced-pl-csd1-2021:
           lesson_groups:
             lessonGroup-2:
@@ -5429,6 +5551,23 @@ ko:
               display_name: 환영합니다
         self-paced-pl-csd5-2023:
           title: '모듈 7: AI와 머신 러닝 교습 준비'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: 반복
+            lesson-4:
+              name: 조건
+            lesson-6:
+              name: 다음 단계
+          title: 컴퓨터과학(정보과학) 소개
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: 이벤트
+            lesson-4:
+              name: 행동
+            lesson-5:
+              name: 다음 단계
         soccer:
           description: 축구 게임 만들기
           description_short: 축구 게임 만들기
@@ -5668,6 +5807,25 @@ ko:
               display_name: 컨텐츠
             csd3_2:
               display_name: '챕터 2: 게임 만들기'
+        virtual-pl-csa-summer-2024-day1:
+          title: 1 일차
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: 소개
+          lessons:
+            lesson-7:
+              name: 소개
+          title: 1 일차
+        virtual-pl-csa-summer-day2:
+          title: 2 일차
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: 소개
+          title: 3일차
+        virtual-pl-csa-summer-day4:
+          title: 4일차
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -5694,6 +5852,22 @@ ko:
           lessons:
             lesson-3:
               name: 평가
+          title: 5일차
+        virtual-pl-csp-summer-day1:
+          lessons:
+            lesson-5:
+              name: 비동기 액티비티 소개
+          title: 1 일차
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: 소개
+          title: 2 일차
+        virtual-pl-csp-summer-day3:
+          title: 3일차
+        virtual-pl-csp-summer-day4:
+          title: 4일차
+        virtual-pl-csp-summer-day5:
           title: 5일차
         virustest:
           description_short: '스프라이트 랩을 사용하여 바이러스 발생 시뮬레이션을 만드세요. '
@@ -5918,6 +6092,15 @@ ko:
           title: 모듈 7
         vpl-csp-2023-m8:
           title: 모듈 8
+        web-dev-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '챕터 1: 웹페이지 만들기'
+            lessonGroup-3:
+              display_name: '챕터 2: 멀티 페이지 웹페이지 '
+          student_description: " 단원 2에서는 자신의 웹페이지에 콘텐츠를 만들어 공유하는 방법을 배울 것입니다. 어떤 콘텐츠를
+            세상과 공유할지 결정한 후, HTML과 CSS를 사용해 페이지 구조와 스타일을 만드는 법을 배울 것입니다. 또한 리소스와 팀워크를
+            사용해, 디버깅과 같은 가치 있는 프로그래밍 기술을 연습할 것입니다. "
         web-development-2023:
           lesson_groups:
             lessonGroup-2:

@@ -1,5 +1,7 @@
 require 'cdo/firehose'
 require 'cdo/honeybadger'
+require 'cpa'
+require_relative '../../../shared/middleware/helpers/experiments'
 
 class RegistrationsController < Devise::RegistrationsController
   respond_to :json
@@ -337,6 +339,29 @@ class RegistrationsController < Devise::RegistrationsController
     render 'existing_account'
   end
 
+  #
+  # GET /users/edit
+  #
+  def edit
+    @permission_status = current_user.child_account_compliance_state
+    @personal_account_linking_enabled = true
+
+    # Backfill us_state for pre-CPA students
+    if current_user.student? && current_user.us_state.nil?
+      Services::ChildAccount.update_us_state_from_teacher!(current_user)
+    end
+
+    # Handle users who aren't locked out, but still need parent permission to link personal accounts.
+    if Policies::ChildAccount.user_predates_policy?(current_user)
+      permission_request = Queries::ChildAccount.latest_permission_request(current_user)
+      @pending_email = permission_request&.parent_email
+      @request_date = permission_request&.updated_at || Date.new
+      @personal_account_linking_enabled = false unless Policies::ChildAccount.compliant?(current_user)
+    end
+
+    @personal_account_linking_enabled = true unless experiment_value('cpa-partial-lockout', request)
+  end
+
   private def update_user_email
     return false if forbidden_change?(current_user, params)
 
@@ -445,6 +470,7 @@ class RegistrationsController < Devise::RegistrationsController
       :provider,
       :us_state,
       :country_code,
+      :ai_rubrics_disabled,
       school_info_attributes: [
         :country,
         :school_type,
@@ -456,9 +482,9 @@ class RegistrationsController < Devise::RegistrationsController
         :school_id,
         :school_other,
         :school_name,
-        :full_address
+        :full_address,
       ],
-      races: []
+      races: [],
     )
   end
 

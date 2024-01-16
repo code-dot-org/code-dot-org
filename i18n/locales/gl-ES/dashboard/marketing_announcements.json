@@ -1,0 +1,24 @@
+{
+  "banners": {
+    "superhero": {
+      "title": "",
+      "body": "",
+      "buttonText": "Aprende máis"
+    },
+    "hoc-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Aprender máis"
+    },
+    "hoc-2023-dance-ai": {
+      "title": "",
+      "body": "",
+      "buttonText": "Aprender máis"
+    },
+    "co-teacher": {
+      "title": "",
+      "body": "",
+      "buttonText": "Aprender máis"
+    }
+  }
+}

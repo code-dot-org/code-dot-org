@@ -1,37 +1,37 @@
 ---
-title: Hour of Code How-to Guide
+title: Час на кода Как да Ръководство
 ---
 
 {{ signup_button }}
 
 # How to plan your Hour of Code
 
-### Join the movement and introduce your students to computer science with these steps.
+### Присъединете се към движението и запознайте учениците си с компютърните науки с тези стъпки.
 
-Students today should learn how to create technology, not just use it.
+Учениците днес трябва да се научат как да създават технологии, а не просто да я използват.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time! Find an activity that fits your setting, whether in-class or after-school, in-person or virtual. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}) after checking out the steps below:
+Опитвайки Hour of Code е прост и забавен начин да се запознаят студентите с компютърните науки, може би за първи път! Намерете дейност, която отговаря на вашата настройка, независимо дали е в клас или след училище, лично или виртуално. Разгледайте нашето ръководство за [участие, ако все още имате въпроси]({{ localized_files/participation_guide }}) след проверка на стъпките по-долу:
 
-- [Watch the Hour of Code how-to video](#how-to-video)
-- [Explore activities and tutorials](#explore-activities)
-- [Create your plan for the day](#create-your-plan)
+- [Гледайте Hour of Code как да видеото](#how-to-video)
+- [Разгледайте дейности и уроци](#explore-activities)
+- [Създайте своя план за деня](#create-your-plan)
 - [Promote your Hour of Code](#promote-your-hour)
-- [How to start your Hour of Code strong](#how-to-start)
-- [Get coding](#code)
-- [Celebrate your students' success](#celebrate)
+- [Как да започнете своя Час на кода силно](#how-to-start)
+- [Вземи кодиране](#code)
+- [Празнувайте успеха на учениците си](#celebrate)
 - [Други ресурси за педагози](#other-resources)
 
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Гледайте Hour of Code как да видеото <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
 <a id="explore-activities"></a>
 
-## 2. Explore activities and tutorials
+## 2. Разгледайте дейности и уроци
 
 We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
 
@@ -43,7 +43,7 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 <a id="create-your-plan"></a>
 
-## 3. Create your plan for the day
+## 3. Създайте своя план за деня
 
 ### Think about your technology needs - computers are optional!
 
@@ -56,13 +56,13 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 ### Pick a day and time
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+Хората по света се присъединяват към празника Hour of Code по време на Седмицата на образованието на CS (5-11 декември), когато са освободени най-новите уроци и дейности. But you can do an Hour of Code any day of the year!
 
 * * *
 
 <a id="promote-your-hour"></a>
 
-## 4. Promote your Hour of Code
+## 4. Популяризирайте своя час на кода
 
 Now that you've planned your event, it's time to start promoting it!
 
@@ -72,11 +72,11 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Когато се регистри [рате за вашето събитие „Час на кода“](/events), ще получавате полезни имейл съобщения с новини и съвети за провеждане на успешен Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
-Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or print inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Или отпечатайте вдъхновяващи плакати за вашата класна стая! Students are more excited to participate in a subject when they see people who look like them encouraging it.
 
 {{ promote_new_posters }}
 
@@ -86,7 +86,7 @@ Learn more about posters, videos, stickers and other ways to [promote your event
 
 <a id="how-to-start"></a>
 
-## 5. How to start your Hour of Code strong
+## 5. Как да започнете своя Час на кода силно
 
 Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
 
@@ -97,21 +97,21 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
 - Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+Не е лошо ако Вие и Вашите ученици сте новаци в компютърните науки. Ето някои идеи, за да въведете дейността Hour of Code:
 
 - Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
 - В клас направете списък на нещата, които използват код в ежедневния живот.
-- See tips for getting young women interested in computer science [here]({{ urls/girls }}).
+- Вижте съвети за привличане на млади жени, които се интересуват от компютърни науки [тук]({{ urls/girls }}).
 
 * * *
 
 <a id="code"></a>
 
-## 6. Get coding!
+## 6. Вземи кодиране!
 
 Direct students to the activity
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- Напишете връзката на урока на бяла дъска. Намерете връзката, посочена в [информацията за избрания от вас урок]({{ urls/learn }}).
 
 When your students come across difficulties it's okay to respond:
 
@@ -128,7 +128,7 @@ What if a student finishes early?
 
 <a id="celebrate"></a>
 
-## 7. Celebrate your students' success
+## 7. Празнувайте успеха на учениците си
 
 [col-33]
 
@@ -136,7 +136,7 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Отпечатайте сертификат]({{ urls/certificates }}) и за вашите ученици.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - Споделете снимки и видео на събитието си в социалните медии. Използвайте #HourOfCode и @codeorg,, така ще можем да научим за Вашия успех!
 
@@ -151,6 +151,6 @@ What if a student finishes early?
 
 ### Какво идва след Hour of Code?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+Компютърните науки не трябва да завършват с Часа на кода! [Научете как](/beyond) да донесете CS във вашето училище и ученици.
 
 {{ signup_button }}

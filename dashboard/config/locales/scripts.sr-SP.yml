@@ -778,6 +778,8 @@ sr:
           description: Иди даље од првог часа са новим идејама за пројекте.
           student_description: Иди даље од првог часа са новим идејама за пројекте.
           title: Настави плес
+        dance-unplugged:
+          title: Плесна журка без интернета
         dlp19-csd-mod-fit:
           lesson_groups:
             required:
@@ -976,7 +978,6 @@ sr:
           description_short: Истражите Мајнкрафт свет кроз кôд
           student_description: Користите блокове кода да поведете Стива или Алекс
             у авантуру кроз овај Мајнкрафт свет.
-          title: Мајнкрафт час програмирања
         minecraft:
           description: Програмирај животиње и друга Minecraft створења у својој верзији
             Minecraft-а.
@@ -985,6 +986,10 @@ sr:
           student_description: Програмирај животиње и друга Minecraft створења у својој
             верзији Minecraft-а.
           title: Мајнкрафт дизајнер - час програмирања
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Free Play
         nevada-standards-aligned-fifth-grade-2023:
           lesson_groups:
             lessonGroup-3:
@@ -1066,6 +1071,19 @@ sr:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           student_description: 'Phase 2 Online: Blended Summer Study'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Петље
+            lesson-4:
+              name: Кондиционали
+          title: Увод у Компјутерске Науке
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Догађаји
+            lesson-4:
+              name: Понашање
         soccer:
           name: Фудбал
         spelling-bee:

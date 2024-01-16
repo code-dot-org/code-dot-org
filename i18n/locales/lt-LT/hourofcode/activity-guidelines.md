@@ -10,7 +10,7 @@ title: Veiklos gairės
 
 # “Hour of Code™” ir “Computer Science Education Week” vadovėlių ir pamokų kūrimo ir pateikimo gairės
 
-Code.org talpina įvairias “Hour of Code™” veiklas, pamokas ir vaizdo įrašus “Code.org” ir “Hour of Code” svetainėse. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org talpina įvairias “Hour of Code™” veiklas, pamokas ir vaizdo įrašus “Code.org” ir “Hour of Code” svetainėse. Dabartinis sąrašas yra []({{ urls/learn }})hourofcode.com/learn.
 
 Norite pateikti savo savarankišką vadovėlį, mokytojo vadovaujamą pamoką ar robotų/formuotojų veiklą, kuri paaiškina informatikos principą? Prisijunkite prie šio pasaulinio judėjimo ir padėkite dalyviams visame pasaulyje pradėti nuo valandos kodo arba eiti toliau su kelių pamokų, dienos ar savaitės trukmės veikla.
 
@@ -45,7 +45,7 @@ Keletas patarimų:
 
 Ši veikla yra skirta studentams savarankiškai nukreipti per pamoka. Jie nereikalauja daug instrukcijų iš mokytojo ar mokytojo prep darbą.
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Mokytojo palengvinta pamoka ([pavyzdys](https://studio.code.org/s/course1/lessons/2/levels/1), [šablonas](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
 Dabar, kai šimtai tūkstančių pedagogų išbandė Kodekso valandą, daugelis klasių yra pasirengę kūrybiškesnėms veikloms, mokančioms informatikos pagrindų. Norėdami padėti labiau pažengusiems mokytojams rasti įkvėpimo, mes renkame ir kuruojame “mokytojų vadovaujamas” pamokas ir veiklos planus “Hour of Code” veteranams.
 
@@ -84,11 +84,11 @@ Kodo valandos tikslas yra suteikti pradedantiesiems prieinamą pirmąjį informa
 
 Veikla turėtų išmokyti informatikos koncepcijos, tokios kaip kilpos, sąlygos, šifravimas ar kaip veikia internetas. Veikla taip pat gali išmokyti apie tai, kaip kompiuterių mokslas jungiasi su realaus pasaulio profesijomis, įvykiais ar istorija. Pavyzdžiui, mokyti UX dizainą kurti programas, kurios būtų prasmingos auditorijai ar priežasčiai. Mes atgrasome nuo veiklos, kuri orientuota į programavimo sintaksę, o ne sąvokas. Pavyzdžiui, mes išvardinsime, bet ne paryškinsime veiklą, kuri moko HTML. Panašiai mes atgrasome blokuoti programavimo pamokas, kuriose daugiausia dėmesio skiriama konfigūracijos parinkčių nustatymui/keitimui, o ne mokymuisi modeliuoti algoritmą ar procesą.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Veikla, kuriai reikia įdiegti programą, darbalaukio programą ar žaidimų konsolę, yra gerai, bet ne ideali. Mes neišvardinsime veiklos, kuriai reikia prisiregistruoti ar sumokėti. (Robotikos veiklai gali prireikti įsigyti robotikos.)
+*Techniniai reikalavimai:* Dėl daugybės mokyklų ir klasių technologijų sąrankų, geriausia veikla yra internetinė arba išmaniajam telefonui pritaikyta veikla, arba kitaip neprijungta stiliaus veikla, mokanti informatikos sąvokų nenaudojant kompiuterio (žr. http://csunplugged.com/). [](http://csunplugged.com/) Veikla, kuriai reikia įdiegti programą, darbalaukio programą ar žaidimų konsolę, yra gerai, bet ne ideali. Mes neišvardinsime veiklos, kuriai reikia prisiregistruoti ar sumokėti. (Robotikos veiklai gali prireikti įsigyti robotikos.)
 
 *Studentų vadovaujama (savarankiškai vadovaujama) Formatas:* Originali kodo valanda buvo daugiausia pagrįsta savarankiškų vadovėlių ar pamokų sėkme, kurią pasirinktinai padėjo mokytojas. Yra daugybė esamų variantų, tačiau jei norite sukurti naują, ši veikla turėtų būti sukurta taip, kad jie galėtų būti linksmi studentui, dirbančiam vienam, arba klasėje, kurios mokytojas turi minimalų prep arba CS foną. Jose turėtų būti numatytos kryptys studentams, o ne atviro valandos trukmės iššūkis. Idealiu atveju instrukcijos ir vadovėliai būtų integruoti tiesiai į programavimo platformą, kad būtų išvengta skirtukų ar langų perjungimo tarp mokymo ir programavimo platformos.
 
-To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
+Norėdami gauti įvairių tipų samouczków ir pamokų planus galite sukurti jausmą, apsilankykite [Hour of Code Activities puslapyje.](https://hourofcode.com/us/learn)
 
 [**Atgal į viršų**](#top)
 
@@ -141,11 +141,11 @@ Ką jums reikės:
     * Atjungtas
 * Kodo valandos veiklos ekrano kopija arba rinkodaros vaizdas. Prašome atsiųsti bent vieną vaizdą su 4:3 matmenimis. Tai turėtų būti bent 520pikselių iki 390 pikselių. Šiame paveikslėlyje neturėtų būti jokio teksto (išskyrus jūsų logotipą), kad jis būtų labiau prieinamas ne angliškai kalbėtojams. Jei nepateikiamas tinkamas vaizdas, mes galime padaryti savo ekrano kopiją iš jūsų mokymo programos ARBA galime pasirinkti jo neišvardyti. Visi vaizdai turi būti pateikti kaip URL nuoroda į .jpg, .jpeg arba .png.
 * Norėdami tiksliau stebėti dalyvavimą, trečiųjų šalių mokymo partneriai turi įtraukti 1 pikselių stebėjimo vaizdus į pirmąjį savo “Hour of Code” vadovėlių puslapį. Žr. [stebėjimo pikselių](#pixel) skyrių žemiau, jei norite gauti daugiau informacijos.
-* Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
+* Baigę savo veiklą, vartotojai turėtų būti nukreipti į [code.org/api/hour/finish](https://code.org/api/hour/finish) , kur jie galės: 
     * Dalintis socialinės žiniasklaidos, kad jie baigė Kodekso valandą
     * Gauti sertifikatą, kad jie baigė Kodekso valandą
     * Peržiūrėkite lyderių lenteles apie tai, kuriose šalyse/miestuose yra didžiausias dalyvavimo lygis “Hour of Code” veikloje
-    * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
+    * Vartotojams, kurie praleidžia valandą jūsų veiklai ir jos nevykdo, įtraukite savo veiklos mygtuką, kuriame parašyta “Aš baigiau savo kodo valandą”, kuris taip pat susieja į [](https://code.org/api/hour/finish) code.org/api/hour/finish.
 * (Neprivaloma) Mes galime atlikti tolesnius veiksmus naudodamiesi internetine apklausa/formos nuoroda, kurioje prašoma pateikti šios veiklos metrikos ataskaitą: 
     * Veiklai internete (ypač išmaniųjų telefonų/planšetinių kompiuterių programoms): 
         * Vartotojų skaičius
@@ -262,7 +262,7 @@ PASTABA: tai nėra svarbu daryti įdiegiamose programose (“iOS”/“Android�
 
 “Dance Party” pikselių stebėjimo pavyzdys:
 
-IMG SRC = <http://code.org/api/hour/begin_dance.png>   
+IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
 
 [**Atgal į viršų**](#top)

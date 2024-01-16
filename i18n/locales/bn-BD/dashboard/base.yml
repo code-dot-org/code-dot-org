@@ -20,6 +20,7 @@ bn:
   errors:
     messages:
       not_saved: 'অনুগ্রহ করে নিম্নের ত্রুটিগুলো সংশোধন করুন:'
+      too_young: 'এই বিষয়বস্তুতে বয়স সীমাবদ্ধতা রয়েছে এবং তরুণ শিক্ষার্থীদের জন্য উপলব্ধ নয়।'
   activerecord:
     errors:
       messages:
@@ -37,8 +38,10 @@ bn:
         age: 'বয়স'
         gender: 'লিঙ্গ'
         edit_header: 'একাউন্ট বিস্তারিত সম্পাদনা করুন'
+        finish_sign_up_header_error: 'অনুগ্রহ করে নিম্নের ত্রুটিগুলো সংশোধন করুন:'
         error:
           future: ভবিষ্যতের হতে পারবে না
+        user_type: 'অ্যাকাউন্ট-এর ধরন'
   beta: "বেটা"
   hello: "হ্যালো ওয়ার্ল্ড"
   welcome_back: "স্বাগতম %{name}"
@@ -426,4 +429,3 @@ bn:
   copy: 'অনুলিপি'
   pixelation:
     binary: "দ্বি-আঙ্কিক"
-

@@ -116,7 +116,7 @@ Ako ste domaćin događaja s učionicom, poslužite se oglednim dnevnim redom ka
 
 Ako razmišljate o održavanju Sata kodiranja kod kuće ili u zajednici, preporučujemo da pogledate neke od naših detaljnih vodiča s uputama za [roditelji](https://hourofcode.com/us/how -to/parents) i [organizacije ili tvrtke](https://hourofcode.com/us/how-to/companies).
 
-### 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+### 1. Pogledajte ovaj video s uputama <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Odredite datum, format i mjesto za svoj događaj
 
@@ -133,7 +133,7 @@ Radite sa školom ili učiteljem kako biste razgovarali o tome što ima najviše
 - Objasnite načine na koje tehnologija utječe na naše živote, s primjerima koji će zanimati učenike svih profila - razgovarajte o tehnologiji koja spašava živote, pomaže ljudima, povezuje ljude.
 - Ako ste tehnološka tvrtka, prikažite interesantne, inovativne proizvode na kojima vaša tvrtka radi. Ako niste tehnološka tvrtka, razgovarajte o načinima na koje vaša tvrtka koristi tehnologiju za rješavanje problema i postizanje ciljeva.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- Ako imate grupu osoblja koja će facilitirati vaš događaj ili volontirati u lokalnoj školi, razmislite o naručivanju [majice po narudžbi](http://blog.code.org/post/132608499493/hour-of-code-shirts-and -more) za vašu grupu.
+- Ako imate grupu osoblja koja će vam olakšati događaj ili volontirati u lokalnoj školi, razmislite o naručivanju [prilagođenih maj](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) ica za svoju grupu.
 
 ### 3. Planirajte svoje tehnološke potrebe
 
@@ -172,7 +172,7 @@ Nakon što učenici ili gosti završe svoj Sat kodiranja, vrijeme je da proslavi
 
 - [Dijelite certifikate]({{ urls/certificates }}) za sudionike i studente.
 - [Ispišite naljepnice "Radio sam Sat kodiranja!"]({{ promote/resources_stickers }}) ili pronađite druge nagrade i poklone na [Code.org Amazon Store](https://code.org/ shop).
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Podijelite fotografije i videozapise svog događaja Hour of Code na društvenim mrežama. Koristite #HourOfCode i @codeorg kako bismo mogli istaknuti i vaš uspjeh!
 
 * * *
 
@@ -186,7 +186,7 @@ Jedan od najboljih načina je širenje vijesti i promoviranje Sata kodiranja.
 
 ### 1. Prijavite svoj događaj
 
-Kada se [prijavite za događaj Sat kodiranja](/#join), primat ćete korisnu komunikaciju e-poštom s novostima i savjetima za uspješno organiziranje Sata kodiranja. To je i način na koji možete obavijestiti lokalne škole ili roditelje da ste domaćin događaja u njihovoj blizini.
+Kada se prijav [ite na događaj Hour of Code](/events), primit ćete korisne komunikacije putem e-pošte s vijestima i savjetima za održavanje uspješnog sata koda. To je i način na koji možete obavijestiti lokalne škole ili roditelje da ste domaćin događaja u njihovoj blizini.
 
 ### 2. Objavite na društvenim mrežama
 

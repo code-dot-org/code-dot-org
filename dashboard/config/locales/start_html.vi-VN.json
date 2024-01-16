@@ -12,12 +12,22 @@
           "Yes": "Đồng ý",
           "cute": "đáng yêu"
         },
+        "CSD U1 IO Pet Chooser 2_2023": {
+          "No": "Không",
+          "Yes": "Đồng ý",
+          "cute": "đáng yêu"
+        },
         "CSD U1 IO Pet Chooser_2021": {
           "No": "Không",
           "Yes": "Đồng ý",
           "cute": "đáng yêu"
         },
         "CSD U1 IO Pet Chooser_2022": {
+          "No": "Không",
+          "Yes": "Đồng ý",
+          "cute": "đáng yêu"
+        },
+        "CSD U1 IO Pet Chooser_2023": {
           "No": "Không",
           "Yes": "Đồng ý",
           "cute": "đáng yêu"
@@ -30,6 +40,13 @@
           "text": "văn bản"
         },
         "CSD U1 IO Story_2022": {
+          "City": "Thành phố",
+          "Color": "Màu sắc",
+          "Food": "Món ăn",
+          "Name": "Tên",
+          "text": "văn bản"
+        },
+        "CSD U1 IO Story_2023": {
           "City": "Thành phố",
           "Color": "Màu sắc",
           "Food": "Món ăn",
@@ -80,12 +97,39 @@
           "8": "8",
           "9": "9"
         },
+        "CSD U1 processing bday_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "CSD U1 processing fastest_2021": {
           "0": "0",
           "k": "k",
           "s": "s"
         },
         "CSD U1 processing fastest_2022": {
+          "0": "0",
+          "k": "k",
+          "s": "s"
+        },
+        "CSD U1 processing fastest_2023": {
           "0": "0",
           "k": "k",
           "s": "s"
@@ -138,6 +182,30 @@
           "?": "?",
           "text": "văn bản"
         },
+        "CSD U1 processing guess_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
+          "text": "văn bản"
+        },
         "CSD U1 processing live_2021": {
           "bear": "Gấu",
           "rat": "con chuột",
@@ -148,11 +216,22 @@
           "rat": "con chuột",
           "walking": "đi dạo"
         },
+        "CSD U1 processing live_2023": {
+          "cat": "con mèo",
+          "chicken": "con gà",
+          "dog": "con chó",
+          "horse": "con ngựa",
+          "walking": "đi dạo"
+        },
         "CSD U1 processing npark_2021": {
           "Correct!": "Chính xác!",
           "Sorry!": "Xin lỗi!"
         },
         "CSD U1 processing npark_2022": {
+          "Correct!": "Chính xác!",
+          "Sorry!": "Xin lỗi!"
+        },
+        "CSD U1 processing npark_2023": {
           "Correct!": "Chính xác!",
           "Sorry!": "Xin lỗi!"
         },
@@ -200,10 +279,35 @@
           "8": "8",
           "9": "9"
         },
+        "CSD U1 processing writers_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "CSD U1 storage friends_2021": {
           "Back": "Trở lại"
         },
         "CSD U1 storage friends_2022": {
+          "Back": "Trở lại"
+        },
+        "CSD U1 storage friends_2023": {
           "Back": "Trở lại"
         },
         "CSD U1 storage movies_2021": {
@@ -218,6 +322,12 @@
           "Yes": "Đồng ý",
           "text": "văn bản"
         },
+        "CSD U1 storage movies_2023": {
+          "No": "Không",
+          "Star Wars": "Chiến tranh giữa các vì sao",
+          "Yes": "Đồng ý",
+          "text": "văn bản"
+        },
         "CSD U1 storage outfit_2021": {
           "Clear": "Xóa",
           "black": "đen",
@@ -227,6 +337,14 @@
           "white": "trắng"
         },
         "CSD U1 storage outfit_2022": {
+          "Clear": "Xóa",
+          "black": "đen",
+          "green": "màu xanh lá",
+          "pink": "màu hồng",
+          "purple": "màu tím",
+          "white": "trắng"
+        },
+        "CSD U1 storage outfit_2023": {
           "Clear": "Xóa",
           "black": "đen",
           "green": "màu xanh lá",
@@ -269,38 +387,114 @@
           "4": "4",
           "5": "5"
         },
+        "CSD U6 - Accelerometer - PB_2023": {
+          "0": "0"
+        },
         "CSD U6 - Accelerometer - PB_2222": {
           "0": "0"
+        },
+        "CSD U6 - Accelerometer - PB_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PD_2023": {
+          "You did it!": "Bạn đã làm được!"
         },
         "CSD U6 - Accelerometer - PD_2222": {
           "You did it!": "Bạn đã làm được!"
         },
+        "CSD U6 - Accelerometer - PF_2023": {
+          "0": "0"
+        },
         "CSD U6 - Accelerometer - PF_2222": {
           "0": "0"
         },
+        "CSD U6 - Accelerometer - PF_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - SB2_mb2022": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Board Inputs - P_2023": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Board Inputs - PracC_mb2022": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Board Inputs - SB1_2023": {
+          "Success!": "Thành công!"
+        },
         "CSD U6 - Board Inputs - SB1_2222": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Board Inputs - SB1_mb2022": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Board Inputs - SB2_2023": {
           "Success!": "Thành công!"
         },
         "CSD U6 - Board Inputs - SB2_2222": {
           "Success!": "Thành công!"
         },
+        "CSD U6 - Board Inputs - SB2_mb2022": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Board Inputs - SB3_2023": {
+          "Success!": "Thành công!"
+        },
         "CSD U6 - Board Inputs - SB3_2222": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Age": "Tuổi",
+          "Name": "Tên"
+        },
+        "CSD U6 - Board Outputs - ChalC_mb2022": {
+          "No": "Không",
+          "Yes": "Đồng ý"
+        },
+        "CSD U6 - Board Outputs - P_2023": {
           "Success!": "Thành công!"
         },
         "CSD U6 - Board Outputs - P_2222": {
           "Success!": "Thành công!"
         },
+        "CSD U6 - Board Outputs - PracD_mb2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "CSD U6 - Board Outputs - SB1_2023": {
+          "Success!": "Thành công!"
+        },
         "CSD U6 - Board Outputs - SB1_2222": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Board Outputs - SB2_2023": {
           "Success!": "Thành công!"
         },
         "CSD U6 - Board Outputs - SB2_2222": {
           "Success!": "Thành công!"
         },
+        "CSD U6 - Board Outputs - SB4_2023": {
+          "Fish": "Cá"
+        },
         "CSD U6 - Board Outputs - SB4_2222": {
           "Fish": "Cá"
         },
+        "CSD U6 - Board Outputs - Setup_2023": {
+          "Success!": "Thành công!"
+        },
         "CSD U6 - Board Outputs - Setup_2222": {
           "Success!": "Thành công!"
+        },
+        "CSD U6 - Board Outputs - Setup_mb2022": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Color LEDs - ChalD_2023": {
+          "East": "Đông",
+          "North": "Bắc",
+          "South": "Nam",
+          "West": "Tây"
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
           "East": "Đông",
@@ -308,17 +502,37 @@
           "South": "Nam",
           "West": "Tây"
         },
+        "CSD U6 - Color LEDs - PracA_2023": {
+          "Success!": "Thành công!"
+        },
         "CSD U6 - Color LEDs - PracA_2222": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Color LEDs - SB2_2023": {
           "Success!": "Thành công!"
         },
         "CSD U6 - Color LEDs - SB2_2222": {
           "Success!": "Thành công!"
         },
+        "CSD U6 - Color LEDs - SB3_2023": {
+          "Success!": "Thành công!"
+        },
         "CSD U6 - Color LEDs - SB3_2222": {
           "Success!": "Thành công!"
         },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "Medium": "Trung bình"
+        },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "Trung bình"
+        },
+        "CSD U6 - Combine Inputs - A_2023": {
+          "green": "màu xanh lá",
+          "left": "trái",
+          "purple": "màu tím",
+          "red": "màu đỏ",
+          "right": "phải",
+          "yellow": "màu vàng"
         },
         "CSD U6 - Combine Inputs - A_2222": {
           "green": "màu xanh lá",
@@ -327,6 +541,10 @@
           "red": "màu đỏ",
           "right": "phải",
           "yellow": "màu vàng"
+        },
+        "CSD U6 - Combine Inputs - A_mb2022": {
+          "left": "trái",
+          "right": "phải"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
           "fast": "nhanh",
@@ -337,14 +555,38 @@
           "short": "ngắn",
           "slow": "chậm"
         },
+        "CSD U6 - Combine Inputs - CA_2023": {
+          "fast": "nhanh",
+          "high": "cao",
+          "long": "dài",
+          "low": "thấp",
+          "on": "trên",
+          "short": "ngắn",
+          "slow": "chậm"
+        },
+        "CSD U6 - Combine Inputs - ChalG_2023": {
+          "Blue": "Màu xanh da trời",
+          "Green": "Màu xanh lá",
+          "Red": "Màu đỏ"
+        },
         "CSD U6 - Combine Inputs - ChalG_2222": {
           "Blue": "Màu xanh da trời",
           "Green": "Màu xanh lá",
           "Red": "Màu đỏ"
         },
+        "CSD U6 - Combine Inputs - PracA_2023": {
+          "left": "trái",
+          "right": "phải"
+        },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "trái",
           "right": "phải"
+        },
+        "CSD U6 - Combine Inputs - PracC_2023": {
+          "blue": "màu xanh dương",
+          "green": "màu xanh lá",
+          "orange": "màu cam",
+          "yellow": "màu vàng"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
           "blue": "màu xanh dương",
@@ -352,12 +594,30 @@
           "orange": "màu cam",
           "yellow": "màu vàng"
         },
+        "CSD U6 - Combine Inputs - PracD_2023": {
+          "Test": "Kiểm tra",
+          "quiet": "Yên tĩnh"
+        },
         "CSD U6 - Combine Inputs - PracD_2222": {
           "Test": "Kiểm tra",
           "quiet": "Yên tĩnh"
         },
+        "CSD U6 - Combine Inputs - SB1_mb2022": {
+          "bottom row": "hàng dưới cùng",
+          "top row": "hàng trên cùng"
+        },
+        "CSD U6 - Combine Inputs - SB2_2023": {
+          "long": "dài",
+          "short": "ngắn"
+        },
         "CSD U6 - Combine Inputs - SB2_2222": {
           "long": "dài",
+          "short": "ngắn"
+        },
+        "CSD U6 - Combine Inputs - SB3_2023": {
+          "high": "cao",
+          "long": "dài",
+          "low": "thấp",
           "short": "ngắn"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
@@ -366,18 +626,53 @@
           "low": "thấp",
           "short": "ngắn"
         },
+        "CSD U6 - Combine Inputs - SB4_2023": {
+          "long": "dài",
+          "short": "ngắn"
+        },
         "CSD U6 - Combine Inputs - SB4_2222": {
           "long": "dài",
           "short": "ngắn"
+        },
+        "CSD U6 - Combine Inputs - SB4v2_mb2022": {
+          "Row": "Hàng"
+        },
+        "CSD U6 - Combine Inputs - SB5v2_mb2022": {
+          "Row": "Hàng"
+        },
+        "CSD U6 - Functions - P2C_2023": {
+          "Blue": "Màu xanh da trời",
+          "Red": "Màu đỏ"
         },
         "CSD U6 - Functions - P2C_2222": {
           "Blue": "Màu xanh da trời",
           "Red": "Màu đỏ"
         },
+        "CSD U6 - Functions - P2C_mb2022": {
+          "Blue": "Màu xanh da trời",
+          "Red": "Màu đỏ"
+        },
+        "CSD U6 - Functions - P_2023": {
+          "0": "0"
+        },
         "CSD U6 - Functions - P_2222": {
           "0": "0"
         },
+        "CSD U6 - Functions - P_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_2023": {
+          "0": "0"
+        },
         "CSD U6 - Functions - SB7_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_2023": {
+          "+": "+",
+          "-": "-",
           "0": "0"
         },
         "CSD U6 - If Variables - ChalD_2222": {
@@ -385,11 +680,37 @@
           "-": "-",
           "0": "0"
         },
+        "CSD U6 - If Variables - ChalD_mb2022": {
+          "+": "+",
+          "-": "-",
+          "0": "0"
+        },
+        "CSD U6 - If Variables - SB3_2023": {
+          "Name": "Tên"
+        },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "Tên"
         },
+        "CSD U6 - If Variables - SB3_mb2022": {
+          "Name": "Tên"
+        },
+        "CSD U6 - If Variables - SB4_2023": {
+          "0": "0"
+        },
         "CSD U6 - If Variables - SB4_2222": {
           "0": "0"
+        },
+        "CSD U6 - If Variables - SB4_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Music - ChalD_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "Đông",
+          "F": "F",
+          "G": "G"
         },
         "CSD U6 - Music - ChalD_2222": {
           "A": "A",
@@ -399,6 +720,16 @@
           "E": "Đông",
           "F": "F",
           "G": "G"
+        },
+        "CSD U6 - Music - Piano_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "Đông",
+          "F": "F",
+          "G": "G",
+          "Note:": "Lưu ý:"
         },
         "CSD U6 - Music - Piano_2222": {
           "A": "A",
@@ -410,7 +741,25 @@
           "G": "G",
           "Note:": "Lưu ý:"
         },
+        "CSD U6 - Music - SB1_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "Đông",
+          "F": "F",
+          "G": "G"
+        },
         "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "Đông",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB2.5_2023": {
           "A": "A",
           "B": "B",
           "C": "C",
@@ -428,6 +777,15 @@
           "F": "F",
           "G": "G"
         },
+        "CSD U6 - Music - SB3_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "Đông",
+          "F": "F",
+          "G": "G"
+        },
         "CSD U6 - Music - SB3_2222": {
           "A": "A",
           "B": "B",
@@ -437,69 +795,198 @@
           "F": "F",
           "G": "G"
         },
+        "CSD U6 - Music - SB4_2023": {
+          "Success!": "Thành công!"
+        },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "Thành công!"
+        },
+        "CSD U6 - Physical Input - A_2023": {
+          "1": "1",
+          "2": "2"
         },
         "CSD U6 - Physical Input - A_2222": {
           "1": "1",
           "2": "2"
         },
+        "CSD U6 - Physical Input - A_mb2022": {
+          "1": "1",
+          "2": "2"
+        },
+        "CSD U6 - Physical Input - ChalA_2023": {
+          "Success!": "Thành công!"
+        },
         "CSD U6 - Physical Input - ChalA_2222": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Physical Input - ChalA_mb2022": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Physical Input - ChalB_2023": {
           "Success!": "Thành công!"
         },
         "CSD U6 - Physical Input - ChalB_2222": {
           "Success!": "Thành công!"
         },
+        "CSD U6 - Physical Input - ChalB_mb2022": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Physical Input - ChalC_2023": {
+          "Success!": "Thành công!"
+        },
         "CSD U6 - Physical Input - ChalC_2222": {
           "Success!": "Thành công!"
+        },
+        "CSD U6 - Physical Input - ChalC_mb2022": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Physical Input - PA_2023": {
+          "0": "0",
+          "Score": "Điểm số"
         },
         "CSD U6 - Physical Input - PA_2222": {
           "0": "0",
           "Score": "Điểm số"
         },
+        "CSD U6 - Physical Input - PA_mb2022": {
+          "0": "0",
+          "Score": "Điểm số"
+        },
+        "CSD U6 - Physical Input - PC_2023": {
+          "Success!": "Thành công!"
+        },
         "CSD U6 - Physical Input - PC_2222": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Physical Input - PD_2023": {
           "Success!": "Thành công!"
         },
         "CSD U6 - Physical Input - PD_2222": {
           "Success!": "Thành công!"
         },
+        "CSD U6 - Physical Input - PD_mb2022": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Physical Input - SB1_2023": {
+          "Success!": "Thành công!"
+        },
         "CSD U6 - Physical Input - SB1_2222": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Physical Input - SB1_mb2022": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Physical Output - ChalA_2023": {
           "Success!": "Thành công!"
         },
         "CSD U6 - Physical Output - ChalA_2222": {
           "Success!": "Thành công!"
         },
+        "CSD U6 - Physical Output - ChalA_mb2022": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Physical Output - ChalB_2023": {
+          "Success!": "Thành công!"
+        },
         "CSD U6 - Physical Output - ChalB_2222": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Physical Output - ChalB_mb2022": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Physical Output - ChalC_2023": {
           "Success!": "Thành công!"
         },
         "CSD U6 - Physical Output - ChalC_2222": {
           "Success!": "Thành công!"
         },
+        "CSD U6 - Physical Output - ChalC_mb2022": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Physical Output - PB_2023": {
+          "Success!": "Thành công!"
+        },
         "CSD U6 - Physical Output - PB_2222": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Physical Output - PB_mb2022": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Physical Output - PC_2023": {
           "Success!": "Thành công!"
         },
         "CSD U6 - Physical Output - PC_2222": {
           "Success!": "Thành công!"
         },
+        "CSD U6 - Physical Output - PC_mb2022": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Physical Output - P_2023": {
+          "Success!": "Thành công!"
+        },
         "CSD U6 - Physical Output - P_2222": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Physical Output - P_mb2022": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Physical Output - SB1_2023": {
           "Success!": "Thành công!"
         },
         "CSD U6 - Physical Output - SB1_2222": {
           "Success!": "Thành công!"
         },
+        "CSD U6 - Physical Output - SB1_mb2022": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Physical Output - SB2.2_2023": {
+          "Success!": "Thành công!"
+        },
         "CSD U6 - Physical Output - SB2.2_2222": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Physical Output - SB2.2_mb2022": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Physical Output - SB2_2023": {
           "Success!": "Thành công!"
         },
         "CSD U6 - Physical Output - SB2_2222": {
           "Success!": "Thành công!"
         },
+        "CSD U6 - Physical Output - SB2_mb2022": {
+          "Success!": "Thành công!"
+        },
+        "CSD U6 - Screen Inputs - A_2023": {
+          "Name:": "Tên:"
+        },
         "CSD U6 - Screen Inputs - A_2222": {
           "Name:": "Tên:"
+        },
+        "CSD U6 - Screen Inputs - A_mb2022": {
+          "Name:": "Tên:"
+        },
+        "CSD U6 - Screen Inputs - ChalB_2023": {
+          "Blue": "Màu xanh da trời",
+          "Green": "Màu xanh lá",
+          "Red": "Màu đỏ"
         },
         "CSD U6 - Screen Inputs - ChalB_2222": {
           "Blue": "Màu xanh da trời",
           "Green": "Màu xanh lá",
           "Red": "Màu đỏ"
+        },
+        "CSD U6 - Screen Inputs - ChalB_mb2022": {
+          "Blue": "Màu xanh da trời",
+          "Green": "Màu xanh lá",
+          "Red": "Màu đỏ"
+        },
+        "CSD U6 - Screen Inputs - P_2023": {
+          "Blue": "Màu xanh da trời",
+          "Green": "Màu xanh lá",
+          "Name:": "Tên:",
+          "Red": "Màu đỏ",
+          "Save": "Lưu"
         },
         "CSD U6 - Screen Inputs - P_2222": {
           "Blue": "Màu xanh da trời",
@@ -508,13 +995,40 @@
           "Red": "Màu đỏ",
           "Save": "Lưu"
         },
+        "CSD U6 - Screen Inputs - P_mb2022": {
+          "Blue": "Màu xanh da trời",
+          "Green": "Màu xanh lá",
+          "Name:": "Tên:",
+          "Red": "Màu đỏ",
+          "Save": "Lưu"
+        },
+        "CSD U6 - Screen Inputs - PracD_2023": {
+          "0": "0"
+        },
         "CSD U6 - Screen Inputs - PracD_2222": {
           "0": "0"
+        },
+        "CSD U6 - Screen Inputs - PracD_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Screen Inputs - SB1_2023": {
+          "Welcome": "Chào mừng bạn"
         },
         "CSD U6 - Screen Inputs - SB1_2222": {
           "Welcome": "Chào mừng bạn"
         },
+        "CSD U6 - Screen Inputs - SB1_mb2022": {
+          "Welcome": "Chào mừng bạn"
+        },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
+          "black": "đen",
+          "white": "trắng"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2023": {
+          "black": "đen",
+          "white": "trắng"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_mb2022": {
           "black": "đen",
           "white": "trắng"
         },
@@ -522,11 +1036,37 @@
           "black": "đen",
           "white": "trắng"
         },
+        "CSD U6 - Screen Inputs - SB2.2_2023": {
+          "black": "đen",
+          "white": "trắng"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_mb2022": {
+          "black": "đen",
+          "white": "trắng"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2023": {
+          "?": "?"
+        },
         "CSD U6 - Screen Outputs - ChalB_2222": {
           "?": "?"
         },
+        "CSD U6 - Screen Outputs - ChalB_mb2022": {
+          "?": "?"
+        },
+        "CSD U6 - Screen Outputs - P_2023": {
+          "title": "tiêu đề"
+        },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "tiêu đề"
+        },
+        "CSD U6 - Screen Outputs - P_mb2022": {
+          "title": "tiêu đề"
+        },
+        "CSD U6 - Screen Outputs - PracA_2023": {
+          "Blue": "Màu xanh da trời",
+          "Green": "Màu xanh lá",
+          "Red": "Màu đỏ",
+          "White": "Màu trắng"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
           "Blue": "Màu xanh da trời",
@@ -534,41 +1074,111 @@
           "Red": "Màu đỏ",
           "White": "Màu trắng"
         },
+        "CSD U6 - Screen Outputs - PracA_mb2022": {
+          "Blue": "Màu xanh da trời",
+          "Green": "Màu xanh lá",
+          "Red": "Màu đỏ",
+          "White": "Màu trắng"
+        },
+        "CSD U6 - Screen Outputs - PracB_2023": {
+          "down": "xuống",
+          "left": "trái",
+          "right": "phải",
+          "up": "trên"
+        },
         "CSD U6 - Screen Outputs - PracB_2222": {
           "down": "xuống",
           "left": "trái",
           "right": "phải",
           "up": "trên"
         },
+        "CSD U6 - Screen Outputs - PracB_mb2022": {
+          "down": "xuống",
+          "left": "trái",
+          "right": "phải",
+          "up": "trên"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2023": {
+          "name": "tên"
+        },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "tên"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_mb2022": {
+          "name": "tên"
+        },
+        "CSD U6 - Sensors - A_2023": {
+          "0": "0"
         },
         "CSD U6 - Sensors - A_2222": {
           "0": "0"
         },
+        "CSD U6 - Sensors - A_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Sensors - PC_2023": {
+          "off": "tắt",
+          "on": "trên"
+        },
         "CSD U6 - Sensors - PC_2222": {
           "off": "tắt",
           "on": "trên"
+        },
+        "CSD U6 - Sensors - P_2023": {
+          "high": "cao",
+          "low": "thấp",
+          "text": "văn bản"
         },
         "CSD U6 - Sensors - P_2222": {
           "high": "cao",
           "low": "thấp",
           "text": "văn bản"
         },
+        "CSD U6 - Sensors - P_mb2022": {
+          "high": "cao",
+          "low": "thấp",
+          "text": "văn bản"
+        },
+        "CSD U6 - Sensors - SB1_2023": {
+          "value": "giá trị"
+        },
         "CSD U6 - Sensors - SB1_2222": {
+          "value": "giá trị"
+        },
+        "CSD U6 - Sensors - SB2_2023": {
+          "Update": "Cập nhật",
           "value": "giá trị"
         },
         "CSD U6 - Sensors - SB2_2222": {
           "Update": "Cập nhật",
           "value": "giá trị"
         },
+        "CSD U6 - Sensors - SB2_mb2022": {
+          "Update": "Cập nhật",
+          "value": "giá trị"
+        },
+        "CSD U6 - Sensors - SB3_2023": {
+          "value": "giá trị"
+        },
         "CSD U6 - Sensors - SB3_2222": {
+          "value": "giá trị"
+        },
+        "CSD U6 - Sensors - SB3_mb2022": {
+          "value": "giá trị"
+        },
+        "CSD U6 - Sensors - SB4.1_2023": {
           "value": "giá trị"
         },
         "CSD U6 - Sensors - SB4.1_2222": {
           "value": "giá trị"
         },
+        "CSD U6 - Sensors - SB4_2023": {
+          "value": "giá trị"
+        },
         "CSD U6 - Sensors - SB4_2222": {
+          "value": "giá trị"
+        },
+        "CSD U6 - Sensors - SB4_mb2022": {
           "value": "giá trị"
         },
         "CSD U6 Driver pt 2": {
@@ -1170,7 +1780,13 @@
         "CSDU6 Circuit Playground Test_2021": {
           "Success!": "Thành công!"
         },
+        "CSDU6 Circuit Playground Test_2023": {
+          "Success!": "Thành công!"
+        },
         "CSDU6 Circuit Playground Test_2222": {
+          "Success!": "Thành công!"
+        },
+        "CSDU6 Circuit Playground Test_mb2022": {
           "Success!": "Thành công!"
         },
         "CSDU6 circuit playground piano": {
@@ -1245,6 +1861,94 @@
           "F": "F",
           "G": "G"
         },
+        "GAN Guess Widget_ai23": {
+          "Click on the buttons below to build a guess for what follows the rule": "Nhấp vào các nút bên dưới để xây dựng dự đoán cho những gì tuân theo quy tắc",
+          "Computer's Guess FOLLOWS Rule": "Quy tắc GUESS FOLLOWS của máy tính",
+          "Computer's Guess does NOT follow the Rule": "Dự đoán của máy tính không tuân theo quy tắc",
+          "Computer's Guess:": "Dự đoán của máy tính:",
+          "Current Guess": "Đoán hiện tại",
+          "Previous Guesses": "Các dự đoán trước",
+          "Submit Guess": "Gửi Guess"
+        },
+        "LLM - Eliza_ai23": {
+          "Talk to Eliza by entering text in the prompt box. When you are finished, type quit in the prompt.": "Nói chuyện với Eliza bằng cách nhập văn bản vào hộp nhắc nhở. Khi bạn hoàn tất, gõ quit vào dấu nhắc."
+        },
+        "LLM - Written Voice Simulator_ai23": {
+          "BTS: \"Dynamite\"": "BT: “Thuốc nổ”",
+          "Back": "Trở lại",
+          "Change Voice": "Thay đổi giọng nói",
+          "Choose a voice to model": "Chọn giọng nói để mô hình",
+          "Choose the Save file you want to load from the dropdown below": "Chọn Lưu tệp bạn muốn tải từ danh sách thả xuống bên dưới",
+          "Copy / Paste or type the words you want to create a model based on below": "Sao chép/Dán hoặc nhập các từ bạn muốn tạo mô hình dựa trên bên dưới",
+          "Create my own!": "Tạo của riêng tôi!",
+          "Delete Text": "Xóa văn bản",
+          "Dr Seuss: Green Eggs and Ham": "Tiến sĩ Seuss: Trứng xanh và giăm bông",
+          "Generate!": "Tạo ra!",
+          "Give the voice a name": "Đặt tên cho giọng nói",
+          "Give your save file a name": "Đặt tên cho tệp lưu của bạn",
+          "Load Save": "Tải Lưu",
+          "Load this story": "Tải câu chuyện này",
+          "Maya Angelou: \"Caged Bird\"": "Maya Angelou: “Chim lồng”",
+          "Model This Voice!": "Mô hình giọng nói này!",
+          "Modeling Voice": "Mô hình hóa giọng nói",
+          "Pharell: \"Happy\"": "Pharell: “Hạnh phúc”",
+          "Sandra Cisneros: \"Abuelito Who\"": "Sandra Cisneros: “Abuelito Who”",
+          "Save Text": "Lưu văn bản",
+          "Save!": "Tiết kiệm!"
+        },
+        "Neural Networks - Perceptron - Beta_ai23": {
+          "Choose one of the content creators below to generate recommendations for you. Clicking their name will show more information about them.Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!See Recommendations! ➡️Your RecommendationsThese are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "Chọn một trong những người tạo nội dung bên dưới để tạo đề xuất cho bạn. Nhấp vào tên của họ sẽ hiển thị thêm thông tin về họ. Khi bạn đã chọn ai đó, hãy nhấp vào nút “Hiển thị đề xuất” để xem nguồn cấp dữ liệu video của bạn! Xem Khuyến nghị! ➡️ Đề xuất của bạnĐây là những video bạn đã được đề xuất dựa trên người bạn đã chọn trong màn hình cuối cùng.Chỉ có 3 video được hiển thị cùng một lúc - sử dụng các nút Cuộn để xem thêm. Sử dụng các nút bên trái để lọc theo các danh mục nhất định.Ví dụ! Ví dụ! Ví dụ! ⬆️ Cuộn lên ⬆️⬇️ Cuộn xuống ⬇️⬅️ Chọn người mới",
+          "Example!": "Ví dụ!",
+          "Let's Get Started! ➡️": "Hãy bắt đầu! ➡️",
+          "Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!": "Khi bạn đã chọn ai đó, hãy nhấp vào nút “Hiển thị đề xuất” để xem nguồn cấp dữ liệu video của bạn!",
+          "Only 3 videos are shown at a time - use the Scroll buttons to see more. ": "Chỉ có 3 video được hiển thị cùng một lúc - sử dụng các nút Cuộn để xem thêm. ",
+          "See Recommendations! ➡️": "Xem Khuyến nghị! ➡️",
+          "Select at least one person to use for recommendations to continue!": "Chọn ít nhất một người để sử dụng cho các đề xuất để tiếp tục!",
+          "Simply pick which content creators you want to follow and then see your video recommendations!": "Chỉ cần chọn người sáng tạo nội dung nào bạn muốn theo dõi và sau đó xem đề xuất video của bạn!",
+          "These are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "Đây là những video bạn đã được đề xuất dựa trên người bạn đã chọn trong màn hình cuối cùng. Chỉ có 3 video được hiển thị cùng một lúc - sử dụng các nút Cuộn để xem thêm. Sử dụng các nút bên trái để lọc theo các danh mục nhất định.Ví dụ! Ví dụ! Ví dụ! ⬆️ Cuộn lên ⬆️⬇️ Cuộn xuống ⬇️⬅️ Chọn người mới",
+          "Use the buttons on the left to filter by certain categories.": "Sử dụng các nút bên trái để lọc theo các danh mục nhất định.",
+          "We've gathered all your favorite personalities to make videos that match your interests AND to help curate your video feed.": "Chúng tôi đã tập hợp tất cả các nhân vật yêu thích của bạn để tạo video phù hợp với sở thích của bạn VÀ để giúp quản lý nguồn cấp dữ liệu video của bạn.",
+          "WeTube is a new media website for all your favorite content creators. We've gathered all your favorite personalities to make videos that match your interests AND to help curate your video feed.Simply pick which content creators you want to follow and then see your video recommendations!Let's Get Started! ➡️Select at least one person to use for recommendations to continue!Choose one of the content creators below to generate recommendations for you. Clicking their name will show more information about them.Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!See Recommendations! ➡️Your RecommendationsThese are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "WeTube là một trang web truyền thông mới dành cho tất cả những người sáng tạo nội dung yêu thích của bạn. Chúng tôi đã tập hợp tất cả các nhân vật yêu thích của bạn để tạo video phù hợp với sở thích của bạn VÀ để giúp quản lý nguồn cấp dữ liệu video của bạn. Chỉ cần chọn người sáng tạo nội dung bạn muốn theo dõi và sau đó xem đề xuất video của bạn! Hãy bắt đầu! ➡️ Chọn ít nhất một người để sử dụng cho các đề xuất để tiếp tục! Chọn một trong những người tạo nội dung bên dưới để tạo đề xuất cho bạn. Nhấp vào tên của họ sẽ hiển thị thêm thông tin về họ. Khi bạn đã chọn ai đó, hãy nhấp vào nút “Hiển thị đề xuất” để xem nguồn cấp dữ liệu video của bạn! Xem Khuyến nghị! ➡️ Đề xuất của bạnĐây là những video bạn đã được đề xuất dựa trên người bạn đã chọn trong màn hình cuối cùng.Chỉ có 3 video được hiển thị cùng một lúc - sử dụng các nút Cuộn để xem thêm. Sử dụng các nút bên trái để lọc theo các danh mục nhất định.Ví dụ! Ví dụ! Ví dụ! ⬆️ Cuộn lên ⬆️⬇️ Cuộn xuống ⬇️⬅️ Chọn người mới",
+          "Your Recommendations": "Đề xuất của bạn",
+          "⬅️ Select New Person": "⬅️ Chọn người mới",
+          "⬆️ Scroll Up ⬆️": "⬆️ Cuộn lên ⬆️",
+          "⬇️ Scroll Down ⬇️": "⬇️ Cuộn xuống ⬇️"
+        },
+        "Neural Networks - Perceptron - Full_ai23": {
+          "0 means their opinion isn't included in your recommendations at all": "0 có nghĩa là ý kiến của họ không được bao gồm trong đề xuất của bạn",
+          "10 means they have a huge influence on the recommendations you receive": "10 có nghĩa là họ có ảnh hưởng rất lớn đến các khuyến nghị bạn nhận được",
+          "Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "Chọn một trong những người tạo nội dung bên dưới, sau đó sử dụng thanh trượt để điều chỉnh mức độ bạn muốn họ ảnh hưởng đến đề xuất của bạn! 0 có nghĩa là ý kiến của họ không được bao gồm trong đề xuất của bạn ở tất cả10 có nghĩa là họ có ảnh hưởng rất lớn đến các đề xuất bạn nhận đượcTính năngXem Đề xuất! ➡️ Tính năngGiá trị Đề xuất của bạnĐây là những video bạn đã được đề xuất dựa trên cách bạn điều chỉnh trọng lượng trên màn hình cuối cùng. Chỉ có 3 video được hiển thị cùng một lúc - sử dụng các nút Cuộn để xem thêm. Sử dụng các nút bên trái để lọc theo VideosExample nhất định! Ví dụ! Ví dụ! ⬆️ Cuộn lên ⬆️⬇️ Cuộn xuống ⬇️⬅️ Chọn trọng lượng mới",
+          "Example!": "Ví dụ!",
+          "Let's Get Started! ➡️": "Hãy bắt đầu! ➡️",
+          "Only 3 videos are shown at a time - use the Scroll buttons to see more. ": "Chỉ có 3 video được hiển thị cùng một lúc - sử dụng các nút Cuộn để xem thêm. ",
+          "See Recommendations! ➡️": "Xem Khuyến nghị! ➡️",
+          "Select at least one person to use for recommendations to continue!": "Chọn ít nhất một người để sử dụng cho các đề xuất để tiếp tục!",
+          "Simply pick which content creators you want to follow to see your recommendations!": "Chỉ cần chọn những người sáng tạo nội dung bạn muốn theo dõi để xem các đề xuất của bạn!",
+          "These are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "Đây là những video bạn đã được đề xuất dựa trên cách bạn điều chỉnh trọng lượng trên màn hình cuối cùng. Chỉ có 3 video được hiển thị cùng một lúc - sử dụng các nút Cuộn để xem thêm. Sử dụng các nút bên trái để lọc theo VideosExample nhất định! Ví dụ! Ví dụ! ⬆️ Cuộn lên ⬆️⬇️ Cuộn xuống ⬇️⬅️ Chọn trọng lượng mới",
+          "Use the buttons on the left to filter by certain videos": "Sử dụng các nút bên trái để lọc theo một số video nhất định",
+          "We've gathered all your favorite personalities to make videos that match your interests.": "Chúng tôi đã tập hợp tất cả các tính cách yêu thích của bạn để tạo video phù hợp với sở thích của bạn.",
+          "WeTube Video Recommendations": "Đề xuất video WeTube",
+          "WeTube is a new media website for all your favorite content creators. We've gathered all your favorite personalities to make videos that match your interests.Simply pick which content creators you want to follow to see your recommendations!Let's Get Started! ➡️Select at least one person to use for recommendations to continue!Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "WeTube là một trang web truyền thông mới dành cho tất cả những người sáng tạo nội dung yêu thích của bạn. Chúng tôi đã tập hợp tất cả các nhân vật yêu thích của bạn để tạo video phù hợp với sở thích của bạn.Chỉ cần chọn người sáng tạo nội dung nào bạn muốn theo dõi để xem đề xuất của bạn! Hãy bắt đầu! ➡️ Chọn ít nhất một người để sử dụng cho các đề xuất để tiếp tục! Chọn một trong những người tạo nội dung bên dưới, sau đó sử dụng thanh trượt để điều chỉnh mức độ bạn muốn họ ảnh hưởng đến đề xuất của bạn! 0 có nghĩa là ý kiến của họ không được bao gồm trong đề xuất của bạn ở tất cả10 có nghĩa là họ có ảnh hưởng rất lớn đến các đề xuất bạn nhận đượcTính năngXem Đề xuất! ➡️ Tính năngGiá trị Đề xuất của bạnĐây là những video bạn đã được đề xuất dựa trên cách bạn điều chỉnh trọng lượng trên màn hình cuối cùng. Chỉ có 3 video được hiển thị cùng một lúc - sử dụng các nút Cuộn để xem thêm. Sử dụng các nút bên trái để lọc theo VideosExample nhất định! Ví dụ! Ví dụ! ⬆️ Cuộn lên ⬆️⬇️ Cuộn xuống ⬇️⬅️ Chọn trọng lượng mới",
+          "Your Recommendations": "Đề xuất của bạn",
+          "featureLabel": "Tính năngLabel",
+          "featureValue": "FeatureValue",
+          "⬅️ Select New Weights": "⬅️ Chọn trọng lượng mới",
+          "⬆️ Scroll Up ⬆️": "⬆️ Cuộn lên ⬆️",
+          "⬇️ Scroll Down ⬇️": "⬇️ Cuộn xuống ⬇️"
+        },
+        "Noisy Image Widget_ai23": {
+          "0%": "0%",
+          "Be patient! Noisy image loading!": "Hãy kiên nhẫn! Đang tải hình ảnh ồn ào!",
+          "Move the slider to add more or less generations of noise to the image": "Di chuyển thanh trượt để thêm nhiều hoặc ít thế hệ nhiễu vào hình ảnh",
+          "New Image": "Hình ảnh mới",
+          "Noise Generations:": "Các thế hệ tiếng ồn:",
+          "Noise Generations: ": "Các thế hệ tiếng ồn: "
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "Crop": "Cắt",
+          "Image Select": "Chọn hình ảnh",
+          "Reset": "Thiết lập lại"
+        },
         "allthethings design mode elements": {
           "text": "văn bản"
         },
@@ -1263,11 +1967,18 @@
         "csd u5 recommender sample_2022": {
           "Start": "Bắt đầu"
         },
+        "csd u5 recommender sample_2023": {
+          "Start": "Bắt đầu"
+        },
         "csd-apps for good-2": {
           "Home": "Trang chủ",
           "Next": "Tiếp"
         },
         "csd-apps for good-2_2022": {
+          "Home": "Trang chủ",
+          "Next": "Tiếp"
+        },
+        "csd-apps for good-2_2023": {
           "Home": "Trang chủ",
           "Next": "Tiếp"
         },
@@ -1283,11 +1994,21 @@
           "3": "3",
           "4": "4"
         },
+        "csd-apps for good-3_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4"
+        },
         "csd-explore ui-2": {
           "Home": "Trang chủ",
           "Next": "Tiếp"
         },
         "csd-explore ui-2_2022": {
+          "Home": "Trang chủ",
+          "Next": "Tiếp"
+        },
+        "csd-explore ui-2_2023": {
           "Home": "Trang chủ",
           "Next": "Tiếp"
         },
@@ -1335,11 +2056,37 @@
           "8": "8",
           "9": "9"
         },
+        "csd-explore ui-3_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "csd-explore ui-4": {
           "Correct!": "Chính xác!",
           "Sorry!": "Xin lỗi!"
         },
         "csd-explore ui-4_2022": {
+          "Correct!": "Chính xác!",
+          "Sorry!": "Xin lỗi!"
+        },
+        "csd-explore ui-4_2023": {
           "Correct!": "Chính xác!",
           "Sorry!": "Xin lỗi!"
         },
@@ -1387,10 +2134,35 @@
           "8": "8",
           "9": "9"
         },
+        "csd-explore ui-5_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "csd-explore ui-6": {
           "Next": "Tiếp"
         },
         "csd-explore ui-6_2022": {
+          "Next": "Tiếp"
+        },
+        "csd-explore ui-6_2023": {
           "Next": "Tiếp"
         },
         "ml-L2 supervised - green glass door-2021": {
@@ -1403,10 +2175,18 @@
           "Green Glass Door": "Cửa kính xanh lá",
           "Rejected": "Đã từ chối"
         },
+        "ml-L2 supervised - green glass door_2023": {
+          "Accepted": "Đã được chấp nhận",
+          "Green Glass Door": "Cửa kính xanh lá",
+          "Rejected": "Đã từ chối"
+        },
         "ml-L2 unsupervised - 1-2021": {
           "Next": "Tiếp"
         },
         "ml-L2 unsupervised - 1_2022": {
+          "Next": "Tiếp"
+        },
+        "ml-L2 unsupervised - 1_2023": {
           "Next": "Tiếp"
         },
         "ml-customize-raspado-2021": {
@@ -1421,6 +2201,12 @@
           "no": "không",
           "yes": "đồng ý"
         },
+        "ml-customize-raspado_2023": {
+          "Predict": "Dự đoán",
+          "Raspado Recommender": "Công cụ đề xuất đá bào",
+          "no": "không",
+          "yes": "đồng ý"
+        },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Tiếp tục",
           "Loading...": "Đang tải..."
@@ -1429,10 +2215,17 @@
           "Continue": "Tiếp tục",
           "Loading...": "Đang tải..."
         },
+        "ml-intro ai lab- fruit veggie widget_2023": {
+          "Continue": "Tiếp tục",
+          "Loading...": "Đang tải..."
+        },
         "ml-intro app lab-book recommender demo-2021": {
           "Predict": "Dự đoán"
         },
         "ml-intro app lab-book recommender demo_2022": {
+          "Predict": "Dự đoán"
+        },
+        "ml-intro app lab-book recommender demo_2023": {
           "Predict": "Dự đoán"
         },
         "ml-model card-medical app v2 2021-2": {
@@ -1449,10 +2242,20 @@
           "no": "không",
           "yes": "đồng ý"
         },
+        "ml-model card-medical app v2 2021-2_2023": {
+          "A": "A",
+          "W": "Tây",
+          "head": "đầu",
+          "no": "không",
+          "yes": "đồng ý"
+        },
         "ml-model cards-book recommender model card": {
           "Predict": "Dự đoán"
         },
         "ml-model cards-book recommender model card_2022": {
+          "Predict": "Dự đoán"
+        },
+        "ml-model cards-book recommender model card_2023": {
           "Predict": "Dự đoán"
         },
         "ml-models in applab-choice if quotes": {
@@ -1467,6 +2270,12 @@
           "3": "3",
           "Predict": "Dự đoán"
         },
+        "ml-models in applab-choice if quotes_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Dự đoán"
+        },
         "ml-models in applab-choice if wrong place": {
           "1": "1",
           "2": "2",
@@ -1474,6 +2283,12 @@
           "Predict": "Dự đoán"
         },
         "ml-models in applab-choice if wrong place_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Dự đoán"
+        },
+        "ml-models in applab-choice if wrong place_2023": {
           "1": "1",
           "2": "2",
           "3": "3",
@@ -1493,6 +2308,13 @@
           "Back": "Trở lại",
           "Predict": "Dự đoán"
         },
+        "ml-models in applab-choice intended warnings_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Back": "Trở lại",
+          "Predict": "Dự đoán"
+        },
         "ml-models in applab-choice predict typos": {
           "1": "1",
           "2": "2",
@@ -1500,6 +2322,12 @@
           "Predict": "Dự đoán"
         },
         "ml-models in applab-choice predict typos_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Dự đoán"
+        },
+        "ml-models in applab-choice predict typos_2023": {
           "1": "1",
           "2": "2",
           "3": "3",
@@ -1517,12 +2345,23 @@
           "Predict": "Dự đoán",
           "Yes": "Đồng ý"
         },
+        "ml-models in applab-zoo assessment_2023": {
+          "B": "B",
+          "No": "Không",
+          "Predict": "Dự đoán",
+          "Yes": "Đồng ý"
+        },
         "ml-models in applab-zoo model embed": {
           "No": "Không",
           "Predict": "Dự đoán",
           "Yes": "Đồng ý"
         },
         "ml-models in applab-zoo model embed_2022": {
+          "No": "Không",
+          "Predict": "Dự đoán",
+          "Yes": "Đồng ý"
+        },
+        "ml-models in applab-zoo model embed_2023": {
           "No": "Không",
           "Predict": "Dự đoán",
           "Yes": "Đồng ý"
@@ -1535,16 +2374,26 @@
           "Improved Shoe Recommender": "Công cụ đề xuất giày cải tiến",
           "Sports": "Thể thao"
         },
+        "ml-models-shoes decision tree_2023": {
+          "Improved Shoe Recommender": "Công cụ đề xuất giày cải tiến",
+          "Sports": "Thể thao"
+        },
         "ml-models-shoes points-2021": {
           "Ultimate Shoe Recommender": "Công cụ đề xuất giày cuối cùng"
         },
         "ml-models-shoes points_2022": {
           "Ultimate Shoe Recommender": "Công cụ đề xuất giày cuối cùng"
         },
+        "ml-models-shoes points_2023": {
+          "Ultimate Shoe Recommender": "Công cụ đề xuất giày cuối cùng"
+        },
         "ml-models-shoes random-2021": {
           "Shoe Recommender": "Công cụ đề xuất giày"
         },
         "ml-models-shoes random_2022": {
+          "Shoe Recommender": "Công cụ đề xuất giày"
+        },
+        "ml-models-shoes random_2023": {
           "Shoe Recommender": "Công cụ đề xuất giày"
         },
         "ml-use model card-example3A-2021": {
@@ -1557,6 +2406,15 @@
           "snow": "tuyết"
         },
         "ml-use model card-example3A_2022": {
+          "Driver Alert System": "Hệ thống cảnh báo tài xế",
+          "Predict": "Dự đoán",
+          "cloudy": "có mây",
+          "dusk": "Hoàng hôn",
+          "night": "đêm",
+          "rain": "mưa",
+          "snow": "tuyết"
+        },
+        "ml-use model card-example3A_2023": {
           "Driver Alert System": "Hệ thống cảnh báo tài xế",
           "Predict": "Dự đoán",
           "cloudy": "có mây",

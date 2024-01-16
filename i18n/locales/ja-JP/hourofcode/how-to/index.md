@@ -25,7 +25,7 @@ Hour of Codeを試してみることは、生徒にコンピュータサイエ�
 
 <a id="how-to-video"></a>
 
-## 1. Hour of Codeハウツーガイドのビデオを見る <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Hour of Codeハウツーガイドのビデオを見る <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-[Hour of Codeイベントに登録](/#join)すると、イベントを成功させるためのニュースやヒントをメールでお知らせします。 It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Hour of [Codeイベントに登録すると](/events)、Hour of Codeを成功に導くためのニュースやヒントが記載された役立つメールが届きます。 It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -136,7 +136,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- []({{ urls/certificates }}) 学生用の証明書を印刷してください。
 - 生徒へ配る[「Hour of Codeをやったよ！」]({{ urls/promote_stickers }})ステッカーを印刷します。
 - Hour of Codeのイベントの様子を撮影した写真やビデオをソーシャルメディア上で共有しましょう。 #HourOfCodeハッシュタグや@codeorg参照を使うと、我々があなたの取り組みをハイライトすることもできます！
 

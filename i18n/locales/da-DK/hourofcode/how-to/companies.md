@@ -1,127 +1,127 @@
 ---
-title: Hour of Code How-To Guide for Companies
+title: Vejledning til Hour of Code til virksomheder
 ---
 
 {{ tilmeld_knap }}
 
-# How your company can engage with the Hour of Code
+# Sådan kan din virksomhed engagere sig i Hour of Code
 
-### Find out how you and your employees can inspire students to try computer science!
+### Find ud af, hvordan du og dine medarbejdere kan inspirere studerende til at prøve datalogi!
 
 * * *
 
-Datalogisk tankegang styrker evnen til problemløsning samt de logiske og kreative evner. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Datalogisk tankegang styrker evnen til problemløsning samt de logiske og kreative evner. Og teknologi transformerer alle brancher på planeten. Eleverne i dag skal lære at skabe teknologi, ikke bare bruge den. Ved at starte tidligt vil de have et fundament for succes i enhver karrierevej i det 21. århundrede.
 
-During the Hour of Code campaign, your company can help raise awareness of the computer science movement. Whether you volunteer as an individual or plan an event for your company, all of your efforts can make a huge impact on the way young women and students from marginalized racial and ethnic groups view computer science and their own potential.
+Under Hour of Code-kampagnen kan din virksomhed hjælpe med at øge bevidstheden om computervidenskabsbevægelsen. Uanset om du melder dig frivilligt som individ eller planlægger en begivenhed for din virksomhed, kan al din indsats have en enorm indflydelse på den måde, unge kvinder og studerende fra marginaliserede race- og etniske grupper ser datalogi og deres eget potentiale på.
 
-Check out the steps below to get started, and see our [guide for corporate partners](/files/hoc-corporate-toolkit.pdf) for more on how to get your company excited about the Hour of Code.
+Tjek nedenstående trin for at komme i gang, og se vores [guide til virksomhedspartnere](/files/hoc-corporate-toolkit.pdf) for mere om, hvordan du får din virksomhed begejstret for Hour of Code.
 
-- [Connect with a local school](#connect-with-a-school)
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
-- [Host your own Hour of Code event](#host-hour-of-code)
+- [Forbind dig med en lokal skole](#connect-with-a-school)
+- [Opmuntre medarbejderne til at melde sig frivilligt i et klasseværelse](#encourage-employees)
+- [Vær vært for din egen Hour of Code-begivenhed](#host-hour-of-code)
 - [Gør reklame for Hour of Code](#promote-hour-of-code)
-- [More ways to support the Hour of Code](#support-hour-of-code)
+- [Der er flere måder at understøtte Hour of Code på](#support-hour-of-code)
 
 * * *
 
 <a id="connect-with-a-school"></a>
 
-## Connect with a local school
+## Forbind dig med en lokal skole
 
-It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+Det er altid bedst at starte lokalt, med skoler, som du eller dine medarbejdere har en stærk forbindelse til, som en alma mater, en børneskole eller en lokal organisation eller skole, der er fokuseret på at betjene en befolkning, der historisk har været underrepræsenteret inden for datalogi.
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+Derfra kan du besøge skolens websted for at finde passende kontakter at nå ud til, som en rektor, vicerektor, teknologi- eller dataloginstruktører eller endda skolens PTSA. Du kan også samarbejde med organisationer som Boys & Girls Clubs of America, en YMCA-filial, og mere for at være vært for en begivenhed.
 
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+Hvis du ikke er i stand til at oprette forbindelse til en skole, bedes du [kontakte os](https://support.code.org/hc/en-us/requests/new) , så forbinder vi dig med en af vores lokale partnere, hvis det er muligt.
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## Opmuntre medarbejderne til at melde sig frivilligt i et klasseværelse
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
+En af de mest tilfredsstillende måder at deltage i Hour of Code er at melde sig frivilligt i et lokalt klasseværelse, enten personligt eller virtuelt. Det bedste af alt er, at du ikke behøver at være ingeniør for at være frivillig. Du kan stadig give studerende en meningsfuld oplevelse ved at dele din egen karriereoplevelse, og hvordan CS eller teknologi har påvirket din rolle.
 
 [<button>Meld dig som frivillig</button>]({{ urls/volunteer }})
 
-Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+Når en frivillig tilmelder sig, kan en lærer gennemgå deres profil på vores [frivilligkort](https://code.org/volunteer/local) - så profiler skal indsendes så fuldstændige som muligt. Hvis du passer godt til deres klasseværelse, vil en lærer kontakte dig via platformen (vi deler aldrig din e-mail-adresse med læreren). Du kan derefter koordinere detaljer direkte med læreren om, [hvordan du bedst kan melde dig frivilligt i deres klasseværelse](https://hourofcode.com/us/how-to/volunteers).
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+For mere vejledning om frivilligt arbejde og eksempler på beskeder for at få din virksomhed begejstret for Hour of Code, tjek vores [guide til virksomhedspartnere]({{ localized_files/hoc_corporate_toolkit }}).
 
 * * *
 
-<h4><font color="00adbc"><i>“I LOVED seeing how excited the kids were. One amazing thing was the teachers noticed some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others - giving them a place to feel confident.”</i></font></h4>
+<h4><font color="00adbc"><i>„Jeg elskede at se, hvor begejstrede børnene var. En fantastisk ting var, at lærerne bemærkede, at nogle af de studerende, der ikke klarede sig så godt akademisk, udmærkede sig til at tænke som en udvikler og hjælpe andre - hvilket gav dem et sted at føle sig selvsikre.“</i></font></h4>
 
--Hour of Code volunteer
+-Frivillig Hour of Code
 
 * * *
 
 <a id="host-hour-of-code"></a>
 
-## Host your own Hour of Code event
+## Vær vært for din egen Hour of Code-begivenhed
 
-If you want to go the extra mile, your company can also host an Hour of Code event. There is no specific formula for hosting an event so we encourage you to be creative! Given that our staff size is small (but mighty!), Code.org does not have a team dedicated to coordinating Hour of Code events. However, here are some tips to get started.
+Hvis du vil gå den ekstra mil, kan din virksomhed også være vært for en Hour of Code-begivenhed. Der er ingen specifik formel for at være vært for en begivenhed, så vi opfordrer dig til at være kreativ! I betragtning af at vores medarbejderstørrelse er lille (men mægtig!) , Code.org har ikke et team dedikeret til at koordinere Hour of Code-begivenheder. Her er dog nogle tip til at komme i gang.
 
 ### 1) Se vejledningsvideoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
-### 2. Determine a date, format, and location for your event
+### 2. Bestem en dato, format og placering for din begivenhed
 
-We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual) or in-person, at the company office or held in the community, and for students of all ages! You can also take a look at what other [corporate partners](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) and [donors](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) have done in the past for some inspiring ideas.
+Vi har set begivenheder, der er [virtuelle](https://hourofcode.com/us/how-to/virtual) eller personlige, på firmaets kontor eller afholdt i samfundet, og for studerende i alle aldre! Du kan også se på, hvad andre [virksomhedspartnere](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) og [donorer](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) har gjort tidligere for nogle inspirerende ideer.
 
 <br />
 
-#### Sample Agenda:
+#### Eksempel på dagsorden:
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? What or who inspired you? How did you get interested in computer science? Did you have a mentor? Ask the students questions and leave time for Q&A. | |30-60 minutes | Code! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
+|Tid | Dagsordenspunkt | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutter | Vis en [inspirationsvideo | |5-10 minutter](https://hourofcode.com/us/promote/resources#videos)| Præsenter dig selv og lær mere om de studerende: Hvor arbejder du, hvad laver du, og hvad elsker du mest ved dit job? Hvem eller hvad inspirerede dig? Hvordan blev du interesseret i datalogi? Havde du en mentor? Stil eleverne spørgsmål og giv tid til Q&A. | |30-60 minutter | Kode! Hvis dit arrangement er personligt, er det tid til at besvare spørgsmål og guide eleverne gennem hårde gåder. Prøv ikke at give dem løsningen direkte, prøv i stedet at stille dem spørgsmål, så de kan svare sig selv, hvad der gik galt, og opfordre eleverne til at spørge hinanden, hvis de har spørgsmål. Hvis du arbejder frivilligt virtuelt, skal du arbejde sammen med læreren om, hvad den bedste tilgang kan være. Det kan give mere mening at vende tilbage i slutningen af sessionen for at se, hvilke fremskridt eleverne har gjort. | | |1-3 minutter | Tak alle og del inspirerende afskedsord. Del noget af din virksomheds swag ud ([klistermærker](#celebrate) er fantastiske)! | | <br />
 
-#### Other ideas to add to your event
+#### Andre ideer til at tilføje til din begivenhed
 
-- Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people.
-- If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
+- Forklar, hvordan teknologi påvirker vores liv, med eksempler, som studerende med alle baggrunde vil bekymre sig om - tal om teknologi, der redder liv, hjælper mennesker, forbinder mennesker.
+- Hvis du er en tech-virksomhed, kan du demonstrere sjove, innovative produkter, som din virksomhed arbejder på. Hvis du ikke er en teknologivirksomhed, skal du diskutere måder, din virksomhed bruger teknologi til at løse problemer og nå mål.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
 
-### 3. Plan your technology needs
+### 3. Planlæg dine teknologibehov
 
 [![](/images/fit-600/Marketing/Excel-Charter-SchoolHoC-2015-stills-9.jpg)]({{ urls/learn }})
 
-#### Devices:
+#### Enheder:
 
-The best Hour of Code experience includes Internet-connected computers. Du behøver ikke en computer for hvert barn, og du kan sagtens lave en Hour of Code uden en computer overhovedet. For unplugged activities, simply filter the Classroom Technology section to show options for “No computers or devices”.
+The best Hour of Code experience includes Internet-connected computers. Du behøver ikke en computer for hvert barn, og du kan sagtens lave en Hour of Code uden en computer overhovedet. For aktiviteter, der ikke er tilsluttet, skal du blot filtrere sektionen Classroom Technology for at vise valgmulighederne for „Ingen computere eller enheder“.
 
-- **Test activities** on computers or devices. Make sure they work properly on browsers with sound and video.
-- **Don't have enough devices?** Use pair programming. Når eleverne arbejder sammen, hjælper de hinanden og har mindre brug for hjælp fra læreren. De vil også opleve at programmering er en social aktivitet, hvor samarbejde er vigtigt.
-- **Provide headphones** for your participants or ask them to bring their own if they’ll be trying tutorials that work best with sounds.
-- **Have low bandwidth**? Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- **Test aktiviteter** på computere eller enheder. Sørg for, at de fungerer korrekt på browsere med lyd og video.
+- **Har du ikke nok enheder?** Brug parprogrammering. Når eleverne arbejder sammen, hjælper de hinanden og har mindre brug for hjælp fra læreren. De vil også opleve at programmering er en social aktivitet, hvor samarbejde er vigtigt.
+- **Giv dine deltagere hovedtelefoner** , eller bed dem om at medbringe deres egne, hvis de prøver tutorials, der fungerer bedst med lyde.
+- **Har lav båndbredde**? Planlæg at vise videoer foran begivenheden, så hver deltager ikke downloader deres egne videoer. Eller prøv de frakoblede/offline-aktiviteter.
 
-#### Virtual Events:
+#### Virtuelle begivenheder:
 
-If your event is going to be virtual, you’ll want to decide on your conference platform (and test it) prior to your event. This may impact the number of students you feel comfortable engaging, so it’s best to determine this prior to inviting a classroom or promoting your event. For ideas on how to run a remote Hour of Code, read our [tips for a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+Hvis din begivenhed skal være virtuel, skal du beslutte dig for din konferenceplatform (og teste den) inden dit arrangement. Dette kan påvirke antallet af studerende, du føler dig tryg ved at engagere, så det er bedst at bestemme dette, før du inviterer et klasseværelse eller promoverer din begivenhed. For ideer til, hvordan du kører en ekstern Hour of Code, læs vores [tip til en virtuel Hour of Code-begivenhed](https://hourofcode.com/us/how-to/virtual).
 
-### 4. Choose an activity
+### 4. Vælg en aktivitet
 
-We provide a variety of fun, student-guided tutorials for all age groups and experience levels. It’s popular for students to try self-led tutorials, though you may want to begin the event with an [inspirational video](https://hourofcode.com/us/promote/resources#videos) for everyone to view together.
+Vi tilbyder en række sjove, elevguidede tutorials til alle aldersgrupper og oplevelsesniveauer. Det er populært for studerende at prøve selvledede tutorials, selvom du måske ønsker at starte begivenheden med en [inspirerende video,](https://hourofcode.com/us/promote/resources#videos) som alle kan se sammen.
 
-<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+<a href="https://hourofcode.com/us/learn">Udforsk aktiviteterne,</a> og beslut på forhånd, om du vil vælge en enkelt tutorial til alle dine gæster, eller lad hvert barn vælge deres eget. **Alle Hour of Code-aktiviteter** kræver minimal forberedelsestid og er selvstyrede - så deltagerne kan arbejde i deres eget tempo og færdighedsniveau.
 
 [![](/images/tutorials.png)]({{ urls/learn }})
 
-Once you have a solid roadmap for your event, you can then start inviting students, a school, or the larger community. We recommend starting with a local school you have a relationship with or [browsing our map](https://hourofcode.com/us/map) of Hour of Code events.
+Når du har en solid køreplan for dit arrangement, kan du begynde at invitere studerende, en skole eller det større samfund. Vi anbefaler at starte med en lokal skole, du har et forhold til, eller [gennemse vores kort over](https://hourofcode.com/us/map) Hour of Code-begivenheder.
 
 <a id="celebrate"></a>
 
-### 5. Celebrate
+### 5. Fejre
 
 [![](/images/fit-600/Marketing/2018_HoC-391.jpg)]({{ urls/learn }})
 
-After students or guests have completed their Hour of Code, it’s time to celebrate their success. Here are some ideas for making your event even more fun:
+Når studerende eller gæster har afsluttet deres Hour of Code, er det tid til at fejre deres succes. Her er nogle ideer til at gøre dit arrangement endnu sjovere:
 
 - [Print certificates]({{ urls/certificates }}) for participants and students.
-- [Print "I did an Hour of Code! stickers"]({{ promote/resources_stickers }}) or find other prizes and swag on the [Code.org Amazon Store](https://code.org/shop).
-- Share photos and videos of your Hour of Code event on social media. Use [#HourOfCode](https://twitter.com/hashtag/hourofcode) and [@codeorg](https://twitter.com/codeorg) so we can highlight your success, too!
+- [Udskriv „Jeg lavede en Hour of Code! klistermærker“]({{ promote/resources_stickers }}) eller find andre præmier og swag på [Code.org Amazon Store.](https://code.org/shop)
+- Share photos and videos of your Hour of Code event on social media. Brug [#HourOfCode](https://twitter.com/hashtag/hourofcode) og [@codeorg,](https://twitter.com/codeorg) så vi også kan fremhæve din succes!
 
 * * *
 
@@ -129,56 +129,56 @@ After students or guests have completed their Hour of Code, it’s time to celeb
 
 ## Gør reklame for Hour of Code
 
-One of the best ways to help is to spread the word and promote the Hour of Code.
+En af de bedste måder at hjælpe på er at sprede ordet og fremme Hour of Code.
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
-### 1. Register Your Event
+### 1. Tilmeld din begivenhed
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local schools or parents know that you’re hosting an event near them.
+Når du [tilmelder dig din Hour of Code-begivenhed](/events), modtager du nyttige e-mail-meddelelser med nyheder og tip til at være vært for en vellykket Hour of Code. Det er også, hvordan du kan lade lokale skoler eller forældre vide, at du er vært for en begivenhed i nærheden af dem.
 
-### 2. Post on Social Media
+### 2. Indlæg på sociale medier
 
-Help raise awareness of the computer science movement with this sample content to post on social media and share with your employees.
+Hjælp med at øge bevidstheden om computervidenskabsbevægelsen med dette eksempelindhold, som du kan sende på sociale medier og dele med dine medarbejdere.
 
-#### Hour of Code general announcement
+#### Generel meddelelse om Hour of Code
 
-- Computer science is changing our world. Help students be part of this change starting with one #HourOfCode. https://hourofcode.com/
-- Don’t just use technology—learn how to build it. Help someone start with an #HourOfCode. https://hourofcode.com/
+- Datalogi ændrer vores verden. Hjælp eleverne med at være en del af denne ændring startende med en #HourOfCode. https://hourofcode.com/
+- Brug ikke bare teknologi - lær hvordan du bygger den. Hjælp nogen med at starte med en #HourOfCode. https://hourofcode.com/
 
-#### Stats
+#### Statistik
 
-- Did you know only 53% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/
-- In the U.S., only 26% of software professionals are women. Introduce more young women to computer science with #HourOfCode https://hourofcode.com/
-- 67% of computing jobs in the U.S. are not in the tech sector. Help put computer science in the standard curriculum with #HourOfCode https://hourofcode.com/
+- Vidste du, at kun 53% af amerikanske skoler underviser i datalogi? Giv hver elev chancen for at lære en #HourOfCode https://hourofcode.com/
+- I USA er kun 26% af softwareprofessionelle kvinder. Introducer flere unge kvinder til datalogi med #HourOfCode https://hourofcode.com/
+- 67% af computerjobbene i USA er ikke i teknologisektoren. Hjælp med at sætte datalogi i standardlæseplanen med #HourOfCode https://hourofcode.com/
 
-#### Create your own
+#### Opret din egen
 
-- One #HourOfCode can lead to [fill in your story]. https://hourofcode.com/
-- I’m supporting #HourOfCode because [fill in your thoughts]. Join us https://hourofcode.com
+- En #HourOfCode kan føre til [udfyld din historie]. https://hourofcode.com/
+- Jeg støtter #HourOfCode fordi [udfyld dine tanker]. Deltag i os https://hourofcode.com
 
-#### Engineer-specific
+#### Ingeniørspecifik
 
-- If your very first line of code changed your life, help students near you write their first #HourOfCode https://code.org/volunteer
-- If you learned to code—what’s your story? Inspire a student near you through their first #HourOfCode https://code.org/volunteer
+- Hvis din allerførste kodelinje ændrede dit liv, skal du hjælpe studerende i nærheden af dig med at skrive deres første #HourOfCode https://code.org/volunteer
+- Hvis du lærte at kode - hvad er din historie? Inspirer en studerende i nærheden af dig gennem deres første #HourOfCode https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">Find flere</a> plakater, videoer, klistermærker og andre måder at promovere din begivenhed til dit samfund.
 
 * * *
 
 <a id="support-hour-of-code"></a>
 
-## More ways to support the Hour of Code
+## Der er flere måder at understøtte Hour of Code på
 
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 
-- Spread awareness by wearing [Code.org swag](https://store.code.org/) (all proceeds go to supporting more students gain access to computer science education).
-- Choose to benefit Code.org when you shop on [AmazonSmile](https://code.org/donate/amazonsmile).
-- Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word.
-- Have some fun with co-workers in a [giving campaign](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
-- [Sign this petition](https://code.org/promote) to make sure that every student has the opportunity to learn computer science.
-- [Donate](https://code.org/donate) to Code.org so that we can keep our educational resources free and accessible to all.
+- Spred bevidstheden ved at bære [Code.org swag](https://store.code.org/) (alt provenu går til at støtte flere studerende med at få adgang til datalogisk uddannelse).
+- Vælg at drage fordel af Code.org, når du handler på [Amazon](https://code.org/donate/amazonsmile)Smile.
+- Bed din administrerende direktør om at sende en e-mail til hele virksomheden, der understreger vigtigheden af datalogi og opfordrer medarbejderne til at sprede ordet.
+- Hav det sjovt med kolleger i en gavekamp [agne](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
+- [Underskriv dette and](https://code.org/promote) ragende for at sikre, at enhver studerende har mulighed for at lære datalogi.
+- [Doner](https://code.org/donate) til Code.org, så vi kan holde vores uddannelsesressourcer gratis og tilgængelige for alle.
 
-For more suggestions on how to support Code.org and the Hour of Code, visit [Code.org/Help](https://code.org/help)
+For flere forslag til, hvordan du understøtter Code.org og Hour of Code, besøg [Code.org/help](https://code.org/help)
 
 {{ tilmeld_knap }}

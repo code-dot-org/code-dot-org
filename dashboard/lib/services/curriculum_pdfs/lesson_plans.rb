@@ -17,7 +17,7 @@ module Services
         # <Pathname:csp1-2021/20210216001309/teacher-lesson-plans/Welcome to CSP.pdf>
         # and this for student lesson plans
         # <Pathname:csp1-2021/20210216001309/student-lesson-plans/Welcome to CSP.pdf>
-        def get_lesson_plan_pathname(lesson, student_facing = false, versioned: true)
+        def get_lesson_plan_pathname(lesson, student_facing: false, versioned: true)
           return nil unless lesson&.script&.seeded_from
           version_number = versioned ? Time.parse(lesson.script.seeded_from).to_s(:number) : 'fallback'
           suffix = student_facing ? '-Student' : ''
@@ -29,26 +29,26 @@ module Services
         # Build the full user-facing url where a PDF can be found for the given lesson.
         #
         # Expect this to look something like this: "https://lesson-plans.code.org/csp1-2021/20210909014219/teacher-lesson-plans/Welcome+to+CSP.pdf"
-        def get_lesson_plan_url(lesson, student_facing=false)
-          versioned = lesson_plan_pdf_exists_for?(lesson, student_facing)
-          pathname = get_lesson_plan_pathname(lesson, student_facing, versioned: versioned)
+        def get_lesson_plan_url(lesson, student_facing: false)
+          versioned = lesson_plan_pdf_exists_for?(lesson, student_facing: student_facing)
+          pathname = get_lesson_plan_pathname(lesson, student_facing: student_facing, versioned: versioned)
           return nil if pathname.blank?
 
           File.join(get_base_url, pathname)
         end
 
         # Check S3 to see if we've already generated a PDF for the given lesson.
-        def lesson_plan_pdf_exists_for?(lesson, student_facing=false)
-          pathname = get_lesson_plan_pathname(lesson, student_facing).to_s
+        def lesson_plan_pdf_exists_for?(lesson, student_facing: false)
+          pathname = get_lesson_plan_pathname(lesson, student_facing: student_facing).to_s
           return pdf_exists_at?(pathname)
         end
 
         # Generate the PDF for the given lesson into the given directory. Can
         # provide either a teacher- or a student-facing version of the content.
-        def generate_lesson_pdf(lesson, directory="/tmp/", student_facing=false)
+        def generate_lesson_pdf(lesson, directory = "/tmp/", student_facing: false)
           url = student_facing ? Rails.application.routes.url_helpers.script_lesson_student_url(lesson.script, lesson) : Rails.application.routes.url_helpers.script_lesson_url(lesson.script, lesson)
-          pathname = get_lesson_plan_pathname(lesson, student_facing)
-          fallback_pathname = get_lesson_plan_pathname(lesson, student_facing, versioned: false)
+          pathname = get_lesson_plan_pathname(lesson, student_facing: student_facing)
+          fallback_pathname = get_lesson_plan_pathname(lesson, student_facing: student_facing, versioned: false)
 
           ChatClient.log "Generating #{pathname.to_s.inspect} from #{url.inspect}" if DEBUG
 

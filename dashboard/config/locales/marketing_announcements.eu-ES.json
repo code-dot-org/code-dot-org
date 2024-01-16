@@ -1,0 +1,22 @@
+{
+  "eu-ES": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "co-teacher": {
+            "buttonText": "Ikasi gehiago"
+          },
+          "hoc-2023": {
+            "buttonText": "Ikasi gehiago"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Ikasi gehiago"
+          },
+          "superhero": {
+            "buttonText": "Gehiago ikasi"
+          }
+        }
+      }
+    }
+  }
+}

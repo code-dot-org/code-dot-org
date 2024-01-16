@@ -15,6 +15,7 @@ export type ChatCompletionMessage = {
   role: Role;
   chatMessageText: string;
   status: Status;
+  timestamp?: string;
 };
 
 export enum Role {
@@ -24,11 +25,18 @@ export enum Role {
 }
 
 export enum Status {
-  OK = 'ok',
+  ERROR = 'error',
+  PROFANITY = 'profanity',
   PERSONAL = 'personal',
   INAPPROPRIATE = 'inappropriate',
+  OK = 'ok',
   UNKNOWN = 'unknown',
+  EMAIL = 'email',
+  ADDRESS = 'address',
+  PHONE = 'phone',
 }
+
+export const PII = [Status.EMAIL, Status.ADDRESS, Status.PHONE];
 
 export interface AichatLevelProperties extends LevelProperties {
   systemPrompt: string;

@@ -59,12 +59,6 @@ Dashboard::Application.routes.draw do
 
     get 'maker/home', to: 'maker#home'
     get 'maker/setup', to: 'maker#setup'
-    get 'maker/discountcode', to: 'maker#discountcode'
-    post 'maker/apply', to: 'maker#apply'
-    post 'maker/schoolchoice', to: 'maker#schoolchoice'
-    post 'maker/complete', to: 'maker#complete'
-    get 'maker/application_status', to: 'maker#application_status'
-    post 'maker/override', to: 'maker#override'
     get 'maker/google_oauth_login_code', to: 'maker#login_code'
     get 'maker/display_google_oauth_code', to: 'maker#display_code'
     get 'maker/google_oauth_confirm_login', to: 'maker#confirm_login'
@@ -201,6 +195,7 @@ Dashboard::Application.routes.draw do
       get '/lockout', to: 'sessions#lockout'
       get '/users/existing_account', to: 'registrations#existing_account'
       post '/users/auth/maker_google_oauth2', to: 'omniauth_callbacks#maker_google_oauth2'
+      get '/users/edit', to: 'registrations#edit'
     end
     devise_for :users, controllers: {
       omniauth_callbacks: 'omniauth_callbacks',
@@ -264,6 +259,7 @@ Dashboard::Application.routes.draw do
           get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
           get "/#{key}/:channel_id/export_create_channel", to: 'projects#export_create_channel', key: key.to_s, as: "#{key}_project_export_create_channel"
           get "/#{key}/:channel_id/export_config", to: 'projects#export_config', key: key.to_s, as: "#{key}_project_export_config"
+          get "/#{key}/:channel_id/can_publish_age_status", to: 'projects#can_publish_age_status'
         end
 
         get '/:tab_name', to: 'projects#index', constraints: {tab_name: /(public|libraries)/}
@@ -335,8 +331,6 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :rubrics, only: [:edit, :new]
-
     resources :course_offerings, only: [:edit, :update], param: 'key' do
       collection do
         get 'quick_assign_course_offerings'
@@ -359,6 +353,9 @@ Dashboard::Application.routes.draw do
 
       resources :reference_guides, param: 'key', path: 'guides'
     end
+
+    resources :potential_teachers, only: [:create]
+    get '/potential_teachers/:id', param: :id, to: 'potential_teachers#show'
 
     # CSP 20-21 lockable lessons with lesson plan redirects
     get '/s/csp1-2020/lockable/2(*all)', to: redirect(path: '/s/csp1-2020/lessons/14%{all}')
@@ -543,6 +540,8 @@ Dashboard::Application.routes.draw do
     get 'regional_partners/:id/remove_mapping/:id', controller: 'regional_partners', action: 'remove_mapping'
     post 'regional_partners/:id/replace_mappings',  controller: 'regional_partners', action: 'replace_mappings'
 
+    get 'regional-partner-search', to: 'regional_partners#regional_partner_search'
+
     # NPS dashboards
     get '/admin/nps/nps_form', to: 'admin_nps#nps_form', as: 'nps_form'
     post '/admin/nps/nps_update', to: 'admin_nps#nps_update', as: 'nps_update'
@@ -599,6 +598,7 @@ Dashboard::Application.routes.draw do
     # LTI API endpoints
     match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
     post '/lti/v1/authenticate', to: 'lti_v1#authenticate'
+    match '/lti/v1/sync_course', to: 'lti_v1#sync_course', via: [:get, :post]
 
     # OAuth endpoints
     get '/oauth/jwks', to: 'oauth_jwks#jwks'
@@ -609,6 +609,7 @@ Dashboard::Application.routes.draw do
 
     post '/report_abuse', to: 'report_abuse#report_abuse'
     get '/report_abuse', to: 'report_abuse#report_abuse_form'
+    post '/report_abuse_pop_up', to: 'report_abuse#report_abuse_pop_up'
 
     get '/too_young', to: 'too_young#index'
 
@@ -661,7 +662,6 @@ Dashboard::Application.routes.draw do
           delete 'attendance/:session_id/enrollment/:enrollment_id', action: 'destroy_by_enrollment', controller: 'workshop_attendance'
 
           get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
-          get :local_workshop_survey_report, action: :local_workshop_survey_report, controller: 'workshop_survey_report'
           get :generic_survey_report, action: :generic_survey_report, controller: 'workshop_survey_report'
           get :experiment_survey_report, action: :experiment_survey_report, controller: 'workshop_survey_report'
           get :teachercon_survey_report, action: :teachercon_survey_report, controller: 'workshop_survey_report'
@@ -869,6 +869,7 @@ Dashboard::Application.routes.draw do
             send(method, action, action: action)
           end
         end
+        post 'test/ai_proxy/assessment', to: 'test_ai_proxy#assessment'
       end
     end
 
@@ -879,11 +880,17 @@ Dashboard::Application.routes.draw do
         post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
         post 'users/:user_id/display_theme', to: 'users#update_display_theme'
         post 'users/:user_id/mute_music', to: 'users#post_mute_music'
+
+        post 'users/sort_by_family_name', to: 'users#post_sort_by_family_name'
+
+        post 'users/show_progress_table_v2', to: 'users#post_show_progress_table_v2'
+
         get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
         get 'users/:user_id/display_theme', to: 'users#get_display_theme'
         get 'users/:user_id/mute_music', to: 'users#get_mute_music'
         get 'users/:user_id/contact_details', to: 'users#get_contact_details'
         get 'users/current', to: 'users#current'
+        get 'users/current/permissions', to: 'users#get_current_permissions'
         get 'users/netsim_signed_in', to: 'users#netsim_signed_in'
         get 'users/:user_id/school_name', to: 'users#get_school_name'
         get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
@@ -920,6 +927,15 @@ Dashboard::Application.routes.draw do
         # Routes used by the peer reviews admin pages
         get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
         get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
+
+        get 'section_instructors/check', to: 'section_instructors#check'
+        resources :section_instructors, only: [:index, :create, :destroy] do
+          member do
+            put 'accept'
+            put 'decline'
+          end
+        end
+        get 'section_instructors/:section_id', to: 'section_instructors#show'
 
         resources :ml_models, only: [:show, :destroy] do
           collection do
@@ -1040,7 +1056,30 @@ Dashboard::Application.routes.draw do
 
     resources :code_review_comments, only: [:create, :update, :destroy]
 
-    resources :learning_goal_evaluations, only: [:create, :update]
+    resources :rubrics, only: [:create, :edit, :new, :update] do
+      member do
+        get 'get_ai_evaluations'
+        get 'get_teacher_evaluations'
+        get 'ai_evaluation_status_for_user'
+        get 'ai_evaluation_status_for_all'
+        post 'run_ai_evaluations_for_user'
+        post 'run_ai_evaluations_for_all'
+        post 'submit_evaluations'
+      end
+    end
+
+    resources :learning_goal_teacher_evaluations, only: [:create, :update] do
+      collection do
+        get :get_evaluation
+        post :get_or_create_evaluation
+      end
+    end
+
+    resources :learning_goal_ai_evaluation_feedbacks, only: [:create, :update] do
+      collection do
+        post :get_by_ai_evaluation_id
+      end
+    end
 
     get '/backpacks/channel', to: 'backpacks#get_channel'
 
@@ -1053,14 +1092,6 @@ Dashboard::Application.routes.draw do
     delete '/v3/channels/:channel_id/abuse', to: 'report_abuse#reset_abuse'
     post '/v3/channels/:channel_id/abuse/delete', to: 'report_abuse#reset_abuse'
     patch '/v3/(:endpoint)/:encrypted_channel_id', constraints: {endpoint: /(animations|assets|sources|files|libraries)/}, to: 'report_abuse#update_file_abuse'
-
-    # offline-service-worker*.js needs to be loaded the the root level of the
-    # domain('studio.code.org/').
-    # Matches on ".js" or ".map" in order to serve source-map files for the service worker javascript.
-    get '/s/express-2021/lessons/1/:file', action: :offline_service_worker, controller: :offline, constraints: {file: /offline-service-worker.*\.(js|map)/}
-    # Adds the experiment cookie in the User's browser which allows them to experience offline features
-    get '/offline/join_pilot', action: :set_offline_cookie, controller: :offline
-    get '/offline-files.json', action: :offline_files, controller: :offline
 
     post '/browser_events/put_logs', to: 'browser_events#put_logs'
     post '/browser_events/put_metric_data', to: 'browser_events#put_metric_data'

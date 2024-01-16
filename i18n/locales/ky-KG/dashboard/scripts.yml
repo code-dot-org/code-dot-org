@@ -62,7 +62,7 @@ ky:
         SpecialSeries:
           description_audience: 10-18 жаштагылар
         mc:
-          title: Minecraft код сааты
+          title: Minecraft тентек
         CSF_Secret_Sample:
           description_audience: 8-18 жаштагылар
         CSF_Secret_Sample_Story:
@@ -632,3 +632,14 @@ ky:
               display_name: Шартуулар
             lessonGroup-5:
               display_name: Өзгөрмөлөр
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Окуялар
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Циклдер
+            lesson-4:
+              name: Шартуулар
+          title: Компүтер илимине киришүү

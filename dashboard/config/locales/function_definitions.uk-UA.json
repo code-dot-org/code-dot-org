@@ -474,6 +474,11 @@
             "name": "моя функція"
           }
         },
+        "Course E: Artist Project_examples_2023": {
+          "my function": {
+            "name": "моя функція"
+          }
+        },
         "Course E: Frozen Project_examples2022": {
           "LOGIC FLOWER": {
             "name": "ЛОГІЧНА КВІТКА"
@@ -538,6 +543,69 @@
           }
         },
         "Course E: Frozen Project_examples_2021": {
+          "LOGIC FLOWER": {
+            "name": "ЛОГІЧНА КВІТКА"
+          },
+          "LOGIC FLOWERS": {
+            "name": "ЛОГІЧНІ КВІТИ"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "ЛОГІЧНІ КВІТИ"
+          },
+          "draw a circle": {
+            "description": "намалювати коло заданого радіуса",
+            "name": "намалювати коло",
+            "parameters": {
+              "radius": "радіус"
+            }
+          },
+          "draw a house": {
+            "name": "намалювати будинок",
+            "parameters": {
+              "length": "довжина"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "draw a pinwheel",
+            "parameters": {
+              "length": "довжина",
+              "repeat": "повторити",
+              "sides": "сторони"
+            }
+          },
+          "draw a shape": {
+            "name": "намалювати фігуру",
+            "parameters": {
+              "length": "довжина",
+              "sides": "сторони"
+            }
+          },
+          "draw a square": {
+            "name": "намалювати квадрат",
+            "parameters": {
+              "length": "довжина",
+              "sides": "сторони"
+            }
+          },
+          "draw a star": {
+            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини",
+            "name": "намалювати зірку",
+            "parameters": {
+              "length": "довжина",
+              "points": "балів"
+            }
+          },
+          "draw a triangle": {
+            "name": "намалювати трикутник",
+            "parameters": {
+              "length": "довжина"
+            }
+          },
+          "small flower": {
+            "name": "невелика квітка"
+          }
+        },
+        "Course E: Frozen Project_examples_2023": {
           "LOGIC FLOWER": {
             "name": "ЛОГІЧНА КВІТКА"
           },
@@ -805,6 +873,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "description": "намалювати коло заданого радіуса",
+            "name": "намалювати коло",
+            "parameters": {
+              "radius": "радіус"
+            }
+          },
+          "draw a house": {
+            "name": "намалювати будинок",
+            "parameters": {
+              "length": "довжина"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "draw a pinwheel",
+            "parameters": {
+              "length": "довжина",
+              "repeat": "повторити",
+              "sides": "сторони"
+            }
+          },
+          "draw a shape": {
+            "name": "намалювати фігуру",
+            "parameters": {
+              "length": "довжина",
+              "sides": "сторони"
+            }
+          },
+          "draw a square": {
+            "name": "намалювати квадрат",
+            "parameters": {
+              "length": "довжина"
+            }
+          },
+          "draw a star": {
+            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини",
+            "name": "намалювати зірку",
+            "parameters": {
+              "length": "довжина",
+              "points": "балів"
+            }
+          },
+          "draw a triangle": {
+            "name": "намалювати трикутник",
+            "parameters": {
+              "length": "довжина"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "description": "намалювати коло заданого радіуса",
@@ -905,6 +1023,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_example2021_2023": {
+          "draw a circle": {
+            "description": "намалювати коло заданого радіуса",
+            "name": "намалювати коло",
+            "parameters": {
+              "radius": "радіус"
+            }
+          },
+          "draw a house": {
+            "name": "намалювати будинок",
+            "parameters": {
+              "length": "довжина"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "draw a pinwheel",
+            "parameters": {
+              "length": "довжина",
+              "repeat": "повторити",
+              "sides": "сторони"
+            }
+          },
+          "draw a shape": {
+            "name": "намалювати фігуру",
+            "parameters": {
+              "length": "довжина",
+              "sides": "сторони"
+            }
+          },
+          "draw a square": {
+            "name": "намалювати квадрат",
+            "parameters": {
+              "length": "довжина"
+            }
+          },
+          "draw a star": {
+            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини",
+            "name": "намалювати зірку",
+            "parameters": {
+              "length": "довжина",
+              "points": "балів"
+            }
+          },
+          "draw a triangle": {
+            "name": "намалювати трикутник",
+            "parameters": {
+              "length": "довжина"
+            }
+          }
+        },
         "CourseF_app_computer": {
           "reset game": {
             "name": "скидання гри"
@@ -916,6 +1084,11 @@
           }
         },
         "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": "скидання гри"
+          }
+        },
+        "CourseF_app_computer_2023": {
           "reset game": {
             "name": "скидання гри"
           }
@@ -953,6 +1126,11 @@
           }
         },
         "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "побудувати міст"
+          }
+        },
+        "Function intro Ryan_2023": {
           "build bridge": {
             "name": "побудувати міст"
           }
@@ -1089,6 +1267,11 @@
             "name": "очистити шлях"
           }
         },
+        "MC_HOC_2017_07_Cole_2023": {
+          "clear path": {
+            "name": "очистити шлях"
+          }
+        },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
             "name": "виправити довгий шлях"
@@ -1122,6 +1305,14 @@
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "виправити довгий шлях"
+          },
+          "fix short path": {
+            "name": "виправити короткий шлях"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2023": {
           "fix long path": {
             "name": "виправити довгий шлях"
           },
@@ -1169,6 +1360,14 @@
             "name": "побудувати короткий міст"
           }
         },
+        "MC_HOC_2017_Ali_2023": {
+          "build long bridge": {
+            "name": "побудувати довгий міст"
+          },
+          "build short bridge": {
+            "name": "побудувати короткий міст"
+          }
+        },
         "MC_HOC_2017_FP20x20": {
           "function 1": {
             "name": "функція 1"
@@ -1202,6 +1401,14 @@
           }
         },
         "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "функція 1"
+          },
+          "function 2": {
+            "name": "функція 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2023": {
           "function 1": {
             "name": "функція 1"
           },
@@ -1750,6 +1957,11 @@
             "name": "можливе рішення"
           }
         },
+        "courseB_artist_loops_challenge2_2023": {
+          "potential solution": {
+            "name": "можливе рішення"
+          }
+        },
         "courseC_artist_prog3": {
           "draw flame": {
             "parameters": {
@@ -1817,6 +2029,11 @@
           }
         },
         "courseC_data wizard_2021": {
+          "do something": {
+            "name": "щось зробити"
+          }
+        },
+        "courseC_data wizard_2023": {
           "do something": {
             "name": "щось зробити"
           }
@@ -2211,6 +2428,11 @@
             "name": "намалювати лінію шестикутників"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "щось зробити"
+          }
+        },
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "намалювати квадрат"
@@ -2244,6 +2466,11 @@
             "name": "намалювати стебла колосків"
           }
         },
+        "courseE_artist_functions2_2023": {
+          "draw a square": {
+            "name": "намалювати квадрат"
+          }
+        },
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "намалювати квадрат"
@@ -2275,6 +2502,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "намалювати зірку"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "намалювати зірку"
           }
@@ -2320,6 +2552,11 @@
           }
         },
         "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "намалювати зірку"
+          }
+        },
+        "courseE_artist_functions5_2023": {
           "draw a star": {
             "name": "намалювати зірку"
           }
@@ -2423,6 +2660,17 @@
             "name": "квадрати, розташовані в шаховому порядку"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "щось зробити"
+          },
+          "draw a line of squares": {
+            "name": "намалювати лінію квадратів"
+          },
+          "draw square": {
+            "name": "намалювати квадрат"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "щось зробити"
@@ -2456,6 +2704,14 @@
           }
         },
         "courseE_artist_functions8a_2021": {
+          "do something": {
+            "name": "щось зробити"
+          },
+          "draw a square": {
+            "name": "намалювати квадрат"
+          }
+        },
+        "courseE_artist_functions8a_2023": {
           "do something": {
             "name": "щось зробити"
           },
@@ -2508,6 +2764,17 @@
           }
         },
         "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "щось зробити"
+          },
+          "draw a line of squares": {
+            "name": "намалювати лінію квадратів"
+          },
+          "draw square": {
+            "name": "намалювати квадрат"
+          }
+        },
+        "courseE_artist_functions8b_2023": {
           "do something": {
             "name": "щось зробити"
           },
@@ -2576,6 +2843,17 @@
             "name": "квадрати, розташовані в шаховому порядку"
           }
         },
+        "courseE_artist_functions8c_2023": {
+          "do something": {
+            "name": "щось зробити"
+          },
+          "draw a line of squares": {
+            "name": "намалювати лінію квадратів"
+          },
+          "draw square": {
+            "name": "намалювати квадрат"
+          }
+        },
         "courseE_artist_functions9": {
           "do something": {
             "name": "щось зробити"
@@ -2622,6 +2900,14 @@
           },
           "draw line of triangles": {
             "name": "намалювати лінію трикутників"
+          },
+          "draw triangle": {
+            "name": "намалювати трикутник"
+          }
+        },
+        "courseE_artist_functions9_2023": {
+          "do something": {
+            "name": "щось зробити"
           },
           "draw triangle": {
             "name": "намалювати трикутник"
@@ -2676,6 +2962,14 @@
             "name": "квадрати, розташовані в шаховому порядку"
           }
         },
+        "courseE_artist_functionsProj_2023": {
+          "draw a line of squares": {
+            "name": "намалювати лінію квадратів"
+          },
+          "draw square": {
+            "name": "намалювати квадрат"
+          }
+        },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "щось зробити"
@@ -2707,6 +3001,11 @@
           },
           "my design": {
             "name": "мій малюнок"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
+          "do something": {
+            "name": "щось зробити"
           }
         },
         "courseE_artist_functions_challenge2": {
@@ -2742,6 +3041,11 @@
             "name": "мій малюнок"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "щось зробити"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "намалювати квадрат"
@@ -2773,6 +3077,11 @@
           },
           "draw ear stems": {
             "name": "намалювати стебла колосків"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
+          "draw a square": {
+            "name": "намалювати квадрат"
           }
         },
         "courseE_artist_functions_predict1_copy": {
@@ -2819,6 +3128,11 @@
           },
           "draw polygon": {
             "name": "намалювати багатокутник"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
+          "do something": {
+            "name": "щось зробити"
           }
         },
         "courseE_bee_functions1": {
@@ -2953,6 +3267,17 @@
             "name": "ділянка гарбуза"
           }
         },
+        "courseE_farmer_functions10a1_2023": {
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
+          },
+          "get all pumpkins": {
+            "name": "зібрати всі гарбузи"
+          },
+          "pick along path": {
+            "name": "підібрати по шляху"
+          }
+        },
         "courseE_farmer_functions11_predict2022": {
           "check square for corn": {
             "name": "перевір, чи є кукурудза"
@@ -3014,6 +3339,17 @@
             "name": "квадрат гарбуза"
           }
         },
+        "courseE_farmer_functions11_predict_2023": {
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
+          },
+          "get all pumpkins": {
+            "name": "зібрати всі гарбузи"
+          },
+          "pick along path": {
+            "name": "підібрати по шляху"
+          }
+        },
         "courseE_farmer_functions132022": {
           "pick along path": {
             "name": "підібрати по шляху"
@@ -3048,6 +3384,11 @@
             "name": "підібрати по шляху"
           }
         },
+        "courseE_farmer_functions13_2023": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          }
+        },
         "courseE_farmer_functions1a2022": {
           "check square for corn": {
             "name": "перевір, чи є кукурудза"
@@ -3073,6 +3414,11 @@
             "name": "перевірити, чи є кукурудза"
           }
         },
+        "courseE_farmer_functions1a_2023": {
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
+          }
+        },
         "courseE_farmer_functions2b2022": {
           "check square for corn": {
             "name": "перевір, чи є кукурудза"
@@ -3096,6 +3442,11 @@
         "courseE_farmer_functions2b_2021": {
           "check square for corn": {
             "name": "перевір квадрат для кукурудзи"
+          }
+        },
+        "courseE_farmer_functions2b_2023": {
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
           }
         },
         "courseE_farmer_functions2ba2022": {
@@ -3133,6 +3484,14 @@
         "courseE_farmer_functions2ba_2021": {
           "check square for corn": {
             "name": "перевірити, чи є кукурудза"
+          },
+          "get all pumpkins": {
+            "name": "зібрати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions2ba_2023": {
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
           },
           "get all pumpkins": {
             "name": "зібрати всі гарбузи"
@@ -3193,6 +3552,17 @@
             "name": "підібрати по шляху"
           }
         },
+        "courseE_farmer_functions3c1_2023": {
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
+          },
+          "get all pumpkins": {
+            "name": "зібрати всі гарбузи"
+          },
+          "pick along path": {
+            "name": "підібрати по шляху"
+          }
+        },
         "courseE_farmer_functions3c2022": {
           "check square for corn": {
             "name": "перевір, чи є кукурудза"
@@ -3233,6 +3603,14 @@
             "name": "зібрати всі гарбузи"
           }
         },
+        "courseE_farmer_functions3c_2023": {
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
+          },
+          "get all pumpkins": {
+            "name": "зібрати всі гарбузи"
+          }
+        },
         "courseE_farmer_functions7a12022": {
           "garden square": {
             "name": "садова площа"
@@ -3254,6 +3632,11 @@
           }
         },
         "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "садова площа"
+          }
+        },
+        "courseE_farmer_functions7a1_2023": {
           "garden square": {
             "name": "садова площа"
           }
@@ -3283,6 +3666,11 @@
             "name": "садова площа"
           }
         },
+        "courseE_farmer_functions8a1_2023": {
+          "garden square": {
+            "name": "садова площа"
+          }
+        },
         "courseE_farmer_functions9a12022": {
           "garden square": {
             "name": "садова площа"
@@ -3304,6 +3692,11 @@
           }
         },
         "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "садова площа"
+          }
+        },
+        "courseE_farmer_functions9a1_2023": {
           "garden square": {
             "name": "садова площа"
           }
@@ -3350,6 +3743,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "завершити гру"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "завершити гру"
           }

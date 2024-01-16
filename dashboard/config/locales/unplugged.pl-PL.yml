@@ -217,6 +217,24 @@ pl:
       Internet_2019:
         desc: 'brak tłumaczenia: en-US.data.unplugged.Internet_2018.desc'
         title: 'brak tłumaczenia: en-US.data.unplugged.Internet_2018.title'
+      Introducing block-based programing:
+        desc: "Programowanie oparte na blokach jest jak budowanie za pomocą bloków
+          cyfrowych! Zamiast pisać skomplikowany kod, wcześniejsi uczniowie mogą korzystać
+          z przyjaznego i wizualnego podejścia. To trochę jak tworzenie cyfrowej łamigłówki
+          lub zabawa klockami, ale zamiast układać fizyczne elementy, układasz cyfrowe
+          „klocki”, aby wszystko działo się na komputerze.\r\n\r\nDzięki programowaniu
+          blokowemu nie musisz się martwić o pisanie dokładnych słów lub symboli.
+          Zamiast tego przeciągasz i upuszczasz kolorowe bloki reprezentujące różne
+          polecenia. \r\n\r\nNa przykład, jeśli chcesz, aby postać się poruszyła,
+          chwytasz blok „move” i umieszczasz go na odpowiednim miejsce. Chodzi o ułożenie
+          tych wizualnych bloków w sekwencję, jak budowanie wieży, aby stworzyć własne
+          cyfrowe przygody.\r\n\r\nTakie podejście sprawia, że nauka o komputerach
+          i kodowaniu jest super zabawna i mniej onieśmielająca. To jak granie w grę,
+          ale uczysz się też, jak nakazać komputerowi grać. Programowanie oparte na
+          blokach to fantastyczne narzędzie dla początkujących uczniów, ponieważ zamienia
+          kodowanie w kreatywne i interaktywne doświadczenie za pomocą prostych metod
+          przeciągania i upuszczania! \r\n\r\nZacznijmy. "
+        title: 'Wprowadzenie programowania opartego na blokach '
       MadGlibs:
         desc: Abstrakcja jest jednym z najważniejszych pojęć, jakie informatyk powinien
           rozumieć i umieć stosować. W tej aktywności uczniowie analizują historyjki,
@@ -424,6 +442,26 @@ pl:
         desc: Uczniowie tworzą proste algorytmy (zestawy instrukcji), by przeprowadzić
           postać przez labirynt posługując się pojedynczym poleceniem.
         title: Szczęśliwe Mapy (Happy Maps)
+      'Unplugged ':
+        desc: "\r\n75%\r\n10\r\nC11\r\n\r\nGratulacje! Właśnie napisałeś algorytm!
+          Algorytm jest kluczowym terminem używanym w informatyce. Algorytmy są jak
+          przepisy krok po kroku na rozwiązywania problemów. Jest to jasny zestaw
+          instrukcji, które mówią, co robić, podobnie jak postępując zgodnie z przepisem
+          na pieczenie ciastek. Tworzenie algorytmu jest jak podawanie wskazówek komputerowi,
+          aby dokładnie wiedział, jakie kroki podjąć.\r\n\r\nWłaśnie stworzyłeś algorytm
+          dla Laurel, aby dotrzeć do skarbu. \r\nStwórzmy inny algorytm.\r\n \r\n
+          \r\n \\t\r\n"
+        title: Definiowanie algorytmów
+      Unplugged- Melissa Sandbox:
+        desc: " \\t\r\nGratulacje! Właśnie napisałeś algorytm! Algorytm jest kluczowym
+          terminem używanym w informatyce. Algorytmy są jak przepisy krok po kroku
+          na rozwiązywania problemów. Jest to jasny zestaw instrukcji, które mówią,
+          co robić, podobnie jak postępując zgodnie z przepisem na pieczenie ciastek.
+          Tworzenie algorytmu jest jak podawanie wskazówek komputerowi, aby dokładnie
+          wiedział, jakie kroki podjąć.\r\n\r\nWłaśnie stworzyłeś algorytm dla Laurel,
+          aby dotrzeć do skarbu. \r\nStwórzmy inny algorytm.\r\nWłącz obsługę czytnika
+          ekranu\r\n \r\n"
+        title: Odłączony (unplugged)/Bez komputera
       VideoGamesCoordinatePlanes:
         desc: Odkryj, jak gry wideo, w które uwielbiasz grać, są tworzone z wykorzystaniem
           algebry! Poznaj, jak wyrażenia algebraiczne i płaszczyzna współrzędnych

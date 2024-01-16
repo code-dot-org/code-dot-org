@@ -10,6 +10,7 @@ uz:
         error:
           future: yaqin orada bo`la olmaydi
         finish_sign_up_header: Hisob qaydnomangizni yaratishni yakunlang
+        finish_sign_up_header_error: 'Iltimos, quyidagi xatolarni to‘g‘rilang:'
         finish_sign_up_subheader: "<strong>%{email} </strong> uchun Code.org hisob
           qaydnomasini yaratishni tugatish uchun quyidagi ma'lumotlarni to'ldiring."
         finish_sign_up_subheader_markdown: "**%{email}**  uchun Code.org hisob qaydnomasini
@@ -33,6 +34,7 @@ uz:
           manzilingiz bo‘lmasa, shu yerni bosing)](%{url}) '
         reset_password_token: Siz kirib o'tgan parolni qayta tiklash uchun havola
         us_state: Davlat
+        user_type: Hisob (Akkaunt) Turi
         username: Foydalanuvchi ismi
         verified_teacher: Tasdiqlangan o'qituvchi
     errors:

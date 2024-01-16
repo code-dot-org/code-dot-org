@@ -5,11 +5,46 @@ import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import EvidenceDescriptions from './EvidenceDescriptions';
 import Button from '../../../templates/Button';
 
-export default function LearningGoalItem({deleteItem}) {
-  const [aiEnabled, setAiEnabled] = useState(false);
+export default function LearningGoalItem({
+  deleteLearningGoal,
+  exisitingLearningGoalData,
+  updateLearningGoal,
+}) {
+  const [canEditLearningGoalName, setCanEditLearningGoalName] = useState(false);
 
   const handleCheckboxChange = () => {
-    setAiEnabled(!aiEnabled);
+    const newAiEnabledValue = !exisitingLearningGoalData.aiEnabled;
+    updateLearningGoal(
+      exisitingLearningGoalData.id,
+      'aiEnabled',
+      newAiEnabledValue
+    );
+  };
+
+  const handleKeyConceptChange = event => {
+    updateLearningGoal(
+      exisitingLearningGoalData.id,
+      'learningGoal',
+      event.target.value
+    );
+  };
+
+  const handleKeyConceptFocus = event => {
+    if (exisitingLearningGoalData.aiEnabled && !canEditLearningGoalName) {
+      if (
+        confirm(
+          'Please contact the teacher tools team before changing the name of any key concept that uses AI assessment.'
+        )
+      ) {
+        setCanEditLearningGoalName(true);
+      } else {
+        document.activeElement.blur();
+      }
+    }
+  };
+
+  const handleDelete = event => {
+    deleteLearningGoal(exisitingLearningGoalData.id);
   };
 
   return (
@@ -25,8 +60,11 @@ export default function LearningGoalItem({deleteItem}) {
               <label style={styles.labelAndInput}>
                 <span style={styles.label}>{`Key Concept:`}</span>
                 <input
+                  value={exisitingLearningGoalData.learningGoal}
                   style={{width: 600}}
                   className="uitest-rubric-key-concept-input"
+                  onChange={handleKeyConceptChange}
+                  onFocus={handleKeyConceptFocus}
                 />
               </label>
             </div>
@@ -34,7 +72,7 @@ export default function LearningGoalItem({deleteItem}) {
               Use AI to assess
               <input
                 type="checkbox"
-                checked={aiEnabled}
+                checked={exisitingLearningGoalData.aiEnabled}
                 onChange={handleCheckboxChange}
                 style={styles.checkbox}
               />
@@ -42,7 +80,9 @@ export default function LearningGoalItem({deleteItem}) {
               It is hidden from AT devices */}
               <span
                 style={
-                  aiEnabled ? styles.checkboxChecked : styles.checkboxBlank
+                  exisitingLearningGoalData.aiEnabled
+                    ? styles.checkboxChecked
+                    : styles.checkboxBlank
                 }
                 aria-hidden="true"
               >
@@ -53,11 +93,33 @@ export default function LearningGoalItem({deleteItem}) {
         </div>
       </div>
       <div style={styles.activityBody}>
-        <EvidenceDescriptions isAiEnabled={aiEnabled} />
+        <EvidenceDescriptions
+          learningGoalData={exisitingLearningGoalData}
+          updateLearningGoal={updateLearningGoal}
+        />
+        <label
+          style={{...styles.labelAndInput, ...styles.textboxLabelAndInput}}
+        >
+          Tips
+          <textarea
+            value={exisitingLearningGoalData.tips || ''}
+            onChange={event =>
+              updateLearningGoal(
+                exisitingLearningGoalData.id,
+                'tips',
+                event.target.value
+              )
+            }
+            style={{width: '100%', height: 100}}
+          />
+        </label>
+        <label style={styles.labelAndInput}>
+          Unique Key: {exisitingLearningGoalData.key}
+        </label>
         <Button
           text="Delete key concept"
           color={Button.ButtonColor.red}
-          onClick={() => deleteItem()}
+          onClick={handleDelete}
           icon="trash"
           iconClassName="fa-trash"
           className="ui-test-delete-concept-button"
@@ -68,7 +130,9 @@ export default function LearningGoalItem({deleteItem}) {
 }
 
 LearningGoalItem.propTypes = {
-  deleteItem: PropTypes.func,
+  deleteLearningGoal: PropTypes.func,
+  exisitingLearningGoalData: PropTypes.object,
+  updateLearningGoal: PropTypes.func,
 };
 
 const styles = {
@@ -140,5 +204,11 @@ const styles = {
     justifyContent: 'flex-start',
     flexWrap: 'wrap',
     flex: '1 1',
+  },
+  textboxLabelAndInput: {
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    marginLeft: 0,
+    marginRight: 25,
   },
 };

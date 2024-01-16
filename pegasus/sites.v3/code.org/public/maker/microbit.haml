@@ -12,10 +12,6 @@ theme: responsive_full_width
 - icon_circle_check = "fa-solid fa-circle-check"
 - icon_flag = "fa-solid fa-flag-checkered"
 
-%section.skinny-banner.no-padding-bottom
-  .wrapper
-    = view :maker_skinny_banner
-
 %section.intro
   .wrapper
     %h1 The BBC micro:bit
@@ -40,6 +36,8 @@ theme: responsive_full_width
             %p.no-margin-bottom Using App Lab students can quickly build apps that communicate with external hardware using our block-to-text app development environment.
     .clear
 
+= view :maker_skinny_banner
+
 %section.bg-neutral-light.device-setup
   .wrapper
     %h2 Device setup requirements
@@ -60,7 +58,7 @@ theme: responsive_full_width
     %figure.col-25{style: "float: right; text-align: center"}
       %img{src: "/images/maker/microbit.gif", alt: "", style: "margin: 0 auto 2em; max-width: 250px; width:100%"}
     .clear
-    %p.body-three Wondering which version you have? <a href="https://support.microbit.org/support/solutions/articles/19000119162-how-to-identify-the-version-number-of-your-micro-bit" target="_blank" rel="noopener noreferrer">Check out the micro:bit guide</a>.
+    %p.body-three Wondering which version you have? <a class="has-external-link" href="https://support.microbit.org/support/solutions/articles/19000119162-how-to-identify-the-version-number-of-your-micro-bit" target="_blank" rel="noopener noreferrer">Check out the micro:bit guide</a>.
 
 %section.bg-primary-light
   .wrapper
@@ -71,12 +69,21 @@ theme: responsive_full_width
 %section
   .wrapper
     %h2 Getting the micro:bit for your classroom
-    .action-block.action-block--two-col
-      %img{src: "/images/maker/microbit-front-back.png", alt: "", class: "col-50"}
-      .text-wrapper.col-50
-        %h3.heading-sm Buy the micro:bit
-        %p BBC micro:bit reseller companies sell the device all around the world.
-        %a{href: "https://microbit.org/buy/", class: "link-button", target: "_blank", rel: "noopener noreferrer"} Buy the micro:bit
+    .action-block__wrapper.action-block__wrapper--two-col
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3.heading-sm Buy the micro:bit
+          %img{src: "/images/maker/microbit-front-back.png", alt: ""}
+          %p BBC micro:bit devices are are available to purchase globally via our channel partners and resellers.
+        .content-footer
+          %a.link-button.has-external-link{href: "https://microbit.org/buy/", target: "_blank", rel: "noopener noreferrer"} Buy the micro:bit
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3.heading-sm Code.org micro:bit Educator's Kit
+          %img{src: "/images/fill-428x256/maker/microbit-unit-f.png", alt: ""}
+          %p Contains micro:bit boards and accessories necessary for using Code.org's curriculum. The kit contains individual devices for 15 students, or 30 students to share devices in pairs.
+        .content-footer
+          %a.link-button.has-external-link{href: "https://www.parallax.com/product/code-org-microbit-educators-kit/", target: "_blank", rel: "noopener noreferrer"} Buy the educator's kit
 
 = view :section_divider_line
 

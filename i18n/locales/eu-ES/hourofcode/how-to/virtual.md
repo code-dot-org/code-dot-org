@@ -62,7 +62,7 @@ Similar to how you started the event, come together afterwards to celebrate! Her
 - Allow students to share their completed projects with the rest of the class. If your conferencing platform allows, you can even encourage students to take a screenshot of their projects and set it as their virtual background!
 - Discuss learnings: What have they learned about computer science or technology? What did they do when they ran into a problem, how did they solve it?
 - <a href="https://studio.code.org/certificates/batch">Create and share certificates</a> for your participants
-- Share photos and videos of your virtual Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Share photos and videos of your virtual Hour of Code on social media. Erabili #HourOfCode eta @codeorg guk nabarmentzeko zure arrakasta, ere!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 

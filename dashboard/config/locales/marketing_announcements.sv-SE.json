@@ -1,0 +1,22 @@
+{
+  "sv-SE": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "co-teacher": {
+            "buttonText": "Lär dig mer"
+          },
+          "hoc-2023": {
+            "buttonText": "Lär dig mer"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Lär dig mer"
+          },
+          "superhero": {
+            "buttonText": "Lär dig mer"
+          }
+        }
+      }
+    }
+  }
+}

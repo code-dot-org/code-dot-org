@@ -92,7 +92,7 @@ class Level < ApplicationRecord
     teacher_markdown
     bubble_choice_description
     thumbnail_url
-    start_html
+    start_libraries
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -102,7 +102,7 @@ class Level < ApplicationRecord
 
   # https://github.com/rails/rails/issues/3508#issuecomment-29858772
   # Include type in serialization.
-  def serializable_hash(options=nil)
+  def serializable_hash(options = nil)
     super.merge 'type' => type
   end
 
@@ -206,7 +206,7 @@ class Level < ApplicationRecord
           i18n_key = "data.callouts.#{name}.#{callout_definition['localization_key']}"
           callout_text = (should_localize? &&
             I18n.t(i18n_key, default: nil)) ||
-            callout_definition['callout_text']
+              callout_definition['callout_text']
 
           Callout.new(
             element_id: callout_definition['element_id'],
@@ -333,6 +333,7 @@ class Level < ApplicationRecord
     'Pixelation', # widget
     'Poetry', # no ideal solution
     'PublicKeyCryptography', # widget
+    'Pythonlab', # no ideal solution
     'ScriptCompletion', # unknown
     'StandaloneVideo', # no user submitted content
     'TextCompression', # widget
@@ -359,15 +360,15 @@ class Level < ApplicationRecord
 
   def self.where_we_want_to_calculate_ideal_level_source
     where.not(type: TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
-    where(ideal_level_source_id: nil).
-    to_a.reject {|level| level.try(:free_play)}
+      where(ideal_level_source_id: nil).
+      to_a.reject {|level| level.try(:free_play)}
   end
 
   def calculate_ideal_level_source_id
     ideal_level_source =
       level_sources.
-      includes(:activities).
-      max_by {|level_source| level_source.activities.where("test_result >= #{Activity::FREE_PLAY_RESULT}").count}
+        includes(:activities).
+        max_by {|level_source| level_source.activities.where("test_result >= #{Activity::FREE_PLAY_RESULT}").count}
 
     update_attribute(:ideal_level_source_id, ideal_level_source.id) if ideal_level_source
   end
@@ -428,7 +429,7 @@ class Level < ApplicationRecord
     end
   end
 
-  def log_changes(user=nil)
+  def log_changes(user = nil)
     return unless changed?
 
     log = JSON.parse(audit_log || "[]")
@@ -692,7 +693,7 @@ class Level < ApplicationRecord
 
   def show_help_and_tips_in_level_editor?
     (uses_droplet? || is_a?(Blockly) || is_a?(Weblab) || is_a?(Ailab) || is_a?(Javalab)) &&
-    !(is_a?(NetSim) || is_a?(GamelabJr) || is_a?(Dancelab) || is_a?(BubbleChoice))
+      !(is_a?(NetSim) || is_a?(GamelabJr) || is_a?(Dancelab) || is_a?(BubbleChoice))
   end
 
   def localized_teacher_markdown
@@ -746,17 +747,10 @@ class Level < ApplicationRecord
     }
   end
 
-  def get_level_for_progress(student, script)
-    if is_a?(BubbleChoice)
-      sublevel_for_progress = try(:get_sublevel_for_progress, student, script)
-      return sublevel_for_progress || self
-    elsif contained_levels.any?
-      # https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/app/views/levels/_contained_levels.html.haml#L1
-      # We only display our first contained level, display progress for that level.
-      return contained_levels.first
-    else
-      return self
-    end
+  def get_level_for_progress(student = nil, script = nil)
+    # https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/app/views/levels/_contained_levels.html.haml#L1
+    # We only display our first contained level, display progress for that level.
+    contained_levels.first || self
   end
 
   def summarize_for_lesson_show(can_view_teacher_markdown)
@@ -785,12 +779,13 @@ class Level < ApplicationRecord
   # These properties are usually just the serialized properties for
   # the level, which usually include levelData.  If this level is a
   # StandaloneVideo then we put its properties into levelData.
-  def summarize_for_lab2_properties
+  def summarize_for_lab2_properties(script)
     video = specified_autoplay_video&.summarize(false)&.camelize_keys
     properties_camelized = properties.camelize_keys
     properties_camelized[:levelData] = video if video
     properties_camelized[:type] = type
     properties_camelized[:appName] = game&.app
+    properties_camelized[:useRestrictedSongs] = game.use_restricted_songs?
     properties_camelized
   end
 

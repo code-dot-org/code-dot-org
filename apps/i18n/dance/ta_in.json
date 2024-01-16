@@ -1,5 +1,11 @@
 {
+  "danceAiModalBack": "பின் செல்லவும்",
+  "danceAiModalClose": "மூடவும்",
+  "danceAiModalCodeButton": "நிரல்தொடர்",
+  "danceAiModalExplanationButton": "மேலும் அறியவும்",
+  "danceAiModalStartOverButton": "மீண்டும் ஆரம்பி",
   "danceFeedbackDidntPress": "உங்கள் நடனம் இயங்கும் போது அம்பு விசைகளை அழுத்தவும்.",
+  "danceFeedbackKeepCoding": "குறியீட்டுடன் இருங்கள்! ஏதோ இன்னும் சரியாகவில்லை.",
   "danceFeedbackKeyEvent": "உங்கள் நடனம் நடந்து கொண்டிருக்கையில், <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> உடன் சில குறியீட்டை இணைத்து விசையை அழுத்துவதை உறுதி செய்துகொள்ளவும்.",
   "danceFeedbackNeedBackup": "நீங்கள் <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\"> 10 <title name=\"COSTUME\"> \"யூனிகார்ன்\" </title> உடன் காப்பு நடனக் கலைஞர்களின் குழுவை உருவாக்க வேண்டும். </title><title name=\"LAYOUT\">\"வட்டம்\"</title> </block> </xml> தொகுதி.",
   "danceFeedbackNeedDifferentDance": "வேறு டான்சை நீங்கள் பயன்படுத்த வேண்டும்.",

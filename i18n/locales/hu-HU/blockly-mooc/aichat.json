@@ -1,3 +1,12 @@
 {
-  "continue": "Tovább"
+  "allMessagesSentAreRecorded": "Az AI Chat-nek küldött összes üzenetet rögzítik.",
+  "anythingPersonalCanNotBeSubmitted": "Az adatvédelem érdekében semmilyen személyes adatot (név, telefonszám, cím stb.) nem ajánlott megadni az AI chatben.",
+  "continue": "Tovább",
+  "inappropriateMessagesAreFlagged": "A nem megfelelő üzeneteket megjelöljük, és a tanárt értesítjük.",
+  "inappropriateUserMessage": "Ezt az üzenetet nem megfelelőnek jelölték.",
+  "tooPersonalUserMessage": "Ezt az üzenetet túl személyesnek jelölték.",
+  "userChatMessagePlaceholder": "Írj be egy üzenetet...",
+  "warningModalHeader": "Beszélgess felelősségteljesen!",
+  "warningModalOkButtonText": "Kezd el csevegni",
+  "whatIsPersonalInformation": "Mi tekinthető személyes adatnak?"
 }

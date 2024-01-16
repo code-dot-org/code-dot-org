@@ -342,6 +342,46 @@
             }
           }
         },
+        "Course E: Frozen Project_examples_2023": {
+          "draw a circle": {
+            "name": "Шеңбер салу"
+          },
+          "draw a house": {
+            "name": "үй салу",
+            "parameters": {
+              "length": "ұзындық"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "ұзындық",
+              "repeat": "қайтала"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "ұзындық"
+            }
+          },
+          "draw a square": {
+            "name": "төртбұрыш салу",
+            "parameters": {
+              "length": "ұзындық"
+            }
+          },
+          "draw a star": {
+            "name": "жұлдыз салу",
+            "parameters": {
+              "length": "ұзындық"
+            }
+          },
+          "draw a triangle": {
+            "name": "үшбұрыш салу",
+            "parameters": {
+              "length": "ұзындық"
+            }
+          }
+        },
         "Course E: Play Lab Project": {
           "do something": {
             "name": "Бірнәрсе істе"
@@ -507,6 +547,46 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "name": "Шеңбер салу"
+          },
+          "draw a house": {
+            "name": "үй салу",
+            "parameters": {
+              "length": "ұзындық"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "ұзындық",
+              "repeat": "қайтала"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "ұзындық"
+            }
+          },
+          "draw a square": {
+            "name": "төртбұрыш салу",
+            "parameters": {
+              "length": "ұзындық"
+            }
+          },
+          "draw a star": {
+            "name": "жұлдыз салу",
+            "parameters": {
+              "length": "ұзындық"
+            }
+          },
+          "draw a triangle": {
+            "name": "үшбұрыш салу",
+            "parameters": {
+              "length": "ұзындық"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "name": "Шеңбер салу"
@@ -548,6 +628,46 @@
           }
         },
         "CourseD_EOC_artist_example20212022": {
+          "draw a circle": {
+            "name": "Шеңбер салу"
+          },
+          "draw a house": {
+            "name": "үй салу",
+            "parameters": {
+              "length": "ұзындық"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "ұзындық",
+              "repeat": "қайтала"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "ұзындық"
+            }
+          },
+          "draw a square": {
+            "name": "төртбұрыш салу",
+            "parameters": {
+              "length": "ұзындық"
+            }
+          },
+          "draw a star": {
+            "name": "жұлдыз салу",
+            "parameters": {
+              "length": "ұзындық"
+            }
+          },
+          "draw a triangle": {
+            "name": "үшбұрыш салу",
+            "parameters": {
+              "length": "ұзындық"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021_2023": {
           "draw a circle": {
             "name": "Шеңбер салу"
           },
@@ -1048,6 +1168,11 @@
             "name": "Бірнәрсе істе"
           }
         },
+        "courseC_data wizard_2023": {
+          "do something": {
+            "name": "Бірнәрсе істе"
+          }
+        },
         "courseD_artist_binary1": {
           "draw": {
             "parameters": {
@@ -1426,6 +1551,11 @@
             "name": "Бірнәрсе істе"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "Бірнәрсе істе"
+          }
+        },
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "төртбұрыш салу"
@@ -1452,6 +1582,11 @@
           }
         },
         "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "төртбұрыш салу"
+          }
+        },
+        "courseE_artist_functions2_2023": {
           "draw a square": {
             "name": "төртбұрыш салу"
           }
@@ -1487,6 +1622,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "жұлдыз салу"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "жұлдыз салу"
           }
@@ -1532,6 +1672,11 @@
           }
         },
         "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "жұлдыз салу"
+          }
+        },
+        "courseE_artist_functions5_2023": {
           "draw a star": {
             "name": "жұлдыз салу"
           }
@@ -1591,6 +1736,11 @@
             "name": "Бірнәрсе істе"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "Бірнәрсе істе"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "Бірнәрсе істе"
@@ -1631,6 +1781,14 @@
             "name": "төртбұрыш салу"
           }
         },
+        "courseE_artist_functions8a_2023": {
+          "do something": {
+            "name": "Бірнәрсе істе"
+          },
+          "draw a square": {
+            "name": "төртбұрыш салу"
+          }
+        },
         "courseE_artist_functions8b2022": {
           "do something": {
             "name": "Бірнәрсе істе"
@@ -1656,6 +1814,11 @@
             "name": "Бірнәрсе істе"
           }
         },
+        "courseE_artist_functions8b_2023": {
+          "do something": {
+            "name": "Бірнәрсе істе"
+          }
+        },
         "courseE_artist_functions8c2022": {
           "do something": {
             "name": "Бірнәрсе істе"
@@ -1677,6 +1840,11 @@
           }
         },
         "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "Бірнәрсе істе"
+          }
+        },
+        "courseE_artist_functions8c_2023": {
           "do something": {
             "name": "Бірнәрсе істе"
           }
@@ -1711,6 +1879,11 @@
             "name": "Бірнәрсе істе"
           }
         },
+        "courseE_artist_functions9_2023": {
+          "do something": {
+            "name": "Бірнәрсе істе"
+          }
+        },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "Бірнәрсе істе"
@@ -1737,6 +1910,11 @@
           }
         },
         "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "Бірнәрсе істе"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "do something": {
             "name": "Бірнәрсе істе"
           }
@@ -1771,6 +1949,11 @@
             "name": "Бірнәрсе істе"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "Бірнәрсе істе"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "төртбұрыш салу"
@@ -1797,6 +1980,11 @@
           }
         },
         "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "төртбұрыш салу"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
           "draw a square": {
             "name": "төртбұрыш салу"
           }
@@ -1837,6 +2025,11 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "Бірнәрсе істе"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "Бірнәрсе істе"
           }
@@ -1902,6 +2095,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "ойын аяқталды"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "ойын аяқталды"
           }

@@ -222,6 +222,9 @@
                 }
               }
             },
+            "circuit": {
+              "name": "Circuito"
+            },
             "control": {
               "expressions": {
                 "clearTimeout": {
@@ -347,7 +350,7 @@
               "name": "Dados"
             },
             "functions": {
-              "name": "funções"
+              "name": "Funções"
             },
             "math": {
               "expressions": {
@@ -373,6 +376,17 @@
                 }
               },
               "name": "Matemática"
+            },
+            "micro_bit": {
+              "expressions": {
+                "ledScreen.on": {
+                  "examples": {
+                    "Four Corners": {
+                      "name": "Quatro Cantos"
+                    }
+                  }
+                }
+              }
             },
             "turtle": {
               "expressions": {
@@ -526,7 +540,7 @@
             }
           },
           "description": "O App Lab é um ambiente de programação onde você pode criar aplicativos simples. Projete um aplicativo, programe com blocos ou JavaScript para fazê-lo funcionar, e então compartilhe seu aplicativo em apenas alguns segundos.",
-          "name": "Laboratório de Aplicativo"
+          "name": "App Lab"
         },
         "gamelab": {
           "categories": {
@@ -568,7 +582,7 @@
               "name": "Desenho"
             },
             "functions": {
-              "name": "funções"
+              "name": "Funções"
             },
             "game_lab": {
               "expressions": {
@@ -775,10 +789,26 @@
         "weblab": {
           "categories": {
             "html_tags": {
+              "expressions": {
+                "style": {
+                  "examples": {
+                    "Style": {
+                      "name": "Estilo"
+                    }
+                  }
+                },
+                "title": {
+                  "examples": {
+                    "Title": {
+                      "name": "Título"
+                    }
+                  }
+                }
+              },
               "name": "Tags HTML"
             }
           },
-          "name": "Laboratório Web"
+          "name": "Web Lab"
         }
       }
     }

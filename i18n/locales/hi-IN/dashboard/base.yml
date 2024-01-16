@@ -52,7 +52,9 @@ hi:
         age: 'उम्र'
         gender: 'लिंग'
         edit_header: 'खाता विवरण संपादित करें'
+        ai_settings_header: 'ए.आई. सेटिंग्स'
         finish_sign_up_header: 'अपना खाता बनाना समाप्त करें'
+        finish_sign_up_header_error: 'कृपया निम्न गलतिया सुधारें:'
         finish_sign_up_subheader: '< div वर्ग के लिए एक Code.org खाता बनाना समाप्त करने के लिए निंन जानकारी भरें <strong>%{email}</strong>'
         finish_sign_up_subheader_markdown: '&lt; div वर्ग के लिए एक Code.org खाता बनाना समाप्त करने के लिए निंन जानकारी भरें **%{email}**'
         finish_sign_up_subheader_provider: '< div वर्ग के लिए एक Code.org खाता बनाना समाप्त करने के लिए निम्न जानकारी भरें <strong>%{provider}</strong>के लिये<strong>%{email}</strong>'
@@ -60,6 +62,7 @@ hi:
         reset_password_token: "आपके द्वारा अनुसरण किया गया रीसेट पासवर्ड लिंक"
         error:
           future: भविष्य में नहीं किया जा सकता
+        user_type: 'खाता प्रकार'
         us_state: 'राज्य'
   beta: "बीटा"
   hello: "हैलो वर्ल्ड"
@@ -1275,4 +1278,3 @@ hi:
     binary: "युग्मक"
     hexadecimal: "हेक्साडेसीमल"
     pixel_format_header: "पिक्सेल फ़ॉर्मेट"
-

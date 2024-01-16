@@ -306,7 +306,8 @@ roles = {
     GoogleIdsSSMParameter: 'DeveloperGoogleIDs',
     ManagedPolicyArns: [
       'arn:aws:iam::aws:policy/ReadOnlyAccess',
-      '!Ref DenySecretsPolicy'
+      '!Ref AthenaCloudwatchLogsQueryPolicy',
+      '!Ref DenySecretsPolicy',
     ]
   },
   EngineeringFullAccessRole: {
@@ -325,6 +326,15 @@ roles = {
       '!Ref ContributorSecretsPolicy',
     ]
   },
+  TempS3LessEngineerRole: {
+    RoleName: 'Temp_S3less_Engineer',
+    GoogleIdsSSMParameter: 'DeveloperGoogleIDs',
+    ManagedPolicyArns: [
+      'arn:aws:iam::aws:policy/PowerUserAccess',
+      'arn:aws:iam::aws:policy/IAMReadOnlyAccess',
+      '!Ref NoS3ForYouPolicy',
+    ]
+  },
   EngineeringMusicLabContributorRole: {
     RoleName: 'Engineering_MusicLabContributor',
     ManagedPolicyArns: [
@@ -339,6 +349,13 @@ roles = {
       '!Ref DataAnalystRedshiftPolicy',
       'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor',
       'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess',
+    ]
+  },
+  MarketingReadOnlyRole: {
+    RoleName: 'Marketing_ReadOnly',
+    ManagedPolicyArns: [
+      'arn:aws:iam::aws:policy/ReadOnlyAccess',
+      '!Ref AthenaCloudwatchLogsQueryPolicy',
     ]
   },
   BillingReadOnlyRole: {
@@ -389,6 +406,18 @@ roles.each do |name, config| %>
         - Key: sqlworkbench-team
           Value: codedotorg
 <%- end -%>
+
+  NoS3ForYouPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: NoS3ForYouPolicy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Deny
+            Action:
+              - s3:*
+            Resource: '*'
 
   DataAnalystPolicy:
     Type: AWS::IAM::ManagedPolicy
@@ -542,14 +571,15 @@ roles.each do |name, config| %>
               - arn:aws:s3:::cdo-v3-assets/assets_development/*
               - arn:aws:s3:::cdo-v3-animations/animations_development/*
               - arn:aws:s3:::cdo-v3-files/files_development/*
-          - Sid: AllowListingToAnimationLibraryBucket
+          - Sid: AllowListingToLibraryBuckets
             Effect: Allow
             Action:
               - s3:ListBucket
               - s3:ListBucketVersions
             Resource:
               - arn:aws:s3:::cdo-animation-library
-          - Sid: AllowReadOnlyToAnimationLibraryBucket
+              - arn:aws:s3:::cdo-sound-library
+          - Sid: AllowReadOnlyToLibraryBuckets
             Effect: Allow
             Action:
               - s3:GetObject
@@ -560,6 +590,7 @@ roles.each do |name, config| %>
               - s3:GetObjectVersionTagging
             Resource:
               - arn:aws:s3:::cdo-animation-library/*
+              - arn:aws:s3:::cdo-sound-library/*
 
   DenySecretsPolicy:
     Type: AWS::IAM::ManagedPolicy
@@ -595,6 +626,7 @@ roles.each do |name, config| %>
             Action: secretsmanager:GetSecretValue
             Resource:
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/properties_encryption_key-KUJqKF
+              - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/firebase_secret-ngO5yy
 
   MusicLabS3ReadWritePolicy:
     Type: AWS::IAM::ManagedPolicy
@@ -640,6 +672,27 @@ roles.each do |name, config| %>
       Type: StringList
       Value: initial,value
       Description: List of Google IDs of people being granted billing access.
+
+  AthenaCloudwatchLogsQueryPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: AthenaCloudwatchLogsQueryPolicy
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - athena:StartQueryExecution
+              - athena:GetQueryExecution
+            Resource: !Sub "arn:aws:athena:${AWS::Region}:${AWS::AccountId}:workgroup/primary"
+          - Effect: Allow
+            Action:
+              - s3:GetObject
+              - s3:PutObject
+              - s3:ListBucket
+            Resource: 
+              - !Sub "arn:aws:s3:::aws-athena-query-results-${AWS::AccountId}-${AWS::Region}/*"
+              - !Sub "arn:aws:s3:::aws-athena-query-results-${AWS::AccountId}-${AWS::Region}"
 
   # Used by FirehoseMicroservice Lambda function.
   # TODO move to Data stack

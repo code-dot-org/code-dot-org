@@ -1,0 +1,29 @@
+{
+  "pl-PL": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "co-teacher": {
+            "body": "Usprawnij zarządzanie klasą, dodając współnauczycieli ze strony „Edytuj szczegóły sekcji”.",
+            "buttonText": "Dowiedz się więcej",
+            "title": "Nowy! Dodaj współnauczycieli do swoich sekcji"
+          },
+          "hoc-2023": {
+            "body": "Dołącz do milionów ludzi na całym świecie organizując Godzinę Kodowania ze sztuczną inteligencją lub bez niej i ucząc się, jak działa sztuczna inteligencja. Każdy, gdziekolwiek może to zrobić. Nie potrzeba doświadczenia.",
+            "buttonText": "Dowiedz się więcej",
+            "title": "Godzina Kodowania: Kreatywność dzięki sztucznej inteligencji"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Dowiedz się więcej",
+            "title": "Potańcówka: edycja AI"
+          },
+          "superhero": {
+            "body": "Dołącz do naszego wysoce wspierającego programu rozwoju zawodowego dla nauczycieli.",
+            "buttonText": "Dowiedz się więcej",
+            "title": "Pomóż swoim uczniom stać się superbohaterami!"
+          }
+        }
+      }
+    }
+  }
+}

@@ -472,7 +472,7 @@ ca:
           description_short: Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.
           student_description: Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.
         mc:
-          title: Hora del Codi amb Minecraft
+          title: 'Minecraft: L''aventurer'
           description: Fes servir blocs de codi per portar al Steve o l'Alex a una aventura a través d'aquest món de Minecraft
           description_short: Explora el món de Minecraft a través del codi
           student_description: Fes servir blocs de codi per portar al Steve o l'Alex a una aventura a través d'aquest món de Minecraft
@@ -6744,6 +6744,11 @@ ca:
               name: CSS quadrícula
             lesson-5:
               name: Avaluacions
+            lesson-6:
+              name: Lliçó 1
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Aleatori
           name: angelina-parc infantil
           title: El lloc d'Angelina per fer coses
         csc-pilot-fa2022-timecapsule:
@@ -7891,6 +7896,10 @@ ca:
             -   Obteniu informació sobre les oportunitats per connectar-vos amb la comunitat CS més àmplia.
 
             \*\* Temps suggerit: 70 minuts
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Joc lliure
         csa-software-engineering:
           lessons:
             lesson-9:
@@ -8071,3 +8080,286 @@ ca:
           title: Mòdul 7
         vpl-csd-2023-m8:
           title: Mòdul 8
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: El nostre Codi Ètic d'IA
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introducció
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Part 1 síncrona
+            lessonGroup-3:
+              display_name: Asíncrona Part 1
+            lessonGroup-4:
+              display_name: Part 2 síncrona
+            lessonGroup-5:
+              display_name: Asíncrona Part 2
+        virtual-pl-csp-summer-day3:
+          lessons:
+            lesson-2:
+              name: Asíncrona Part 1
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Part 1 síncrona
+            lessonGroup-3:
+              display_name: Asíncrona Part 1
+            lessonGroup-4:
+              display_name: Part 2 síncrona
+            lessonGroup-5:
+              display_name: Asíncrona Part 2
+        virtual-pl-csp-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Part 1 síncrona
+            lessonGroup-3:
+              display_name: Asíncrona Part 1
+            lessonGroup-4:
+              display_name: Part 2 síncrona
+            lessonGroup-5:
+              display_name: Asíncrona Part 2
+        virtual-pl-csp-summer-day5:
+          lessons:
+            lesson-6:
+              name: Cerimònies de cloenda
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Part 1 síncrona
+            lessonGroup-3:
+              display_name: Asíncrona Part 1
+            lessonGroup-4:
+              display_name: Part 2 síncrona
+        virtual-pl-csa-summer-day2:
+          lessons:
+            lesson-2:
+              name: Asíncrona Part 1
+            lesson-3:
+              name: Part 2 síncrona
+            lesson-4:
+              name: Asíncrona Part 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Part 1 síncrona
+            lessonGroup-3:
+              display_name: Asíncrona Part 1
+            lessonGroup-4:
+              display_name: Part 2 síncrona
+            lessonGroup-5:
+              display_name: Asíncrona Part 2
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introducció
+            lesson-2:
+              name: Asíncrona Part 1
+            lesson-4:
+              name: Asíncrona Part 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Part 1 síncrona
+            lessonGroup-3:
+              display_name: Asíncrona Part 1
+            lessonGroup-4:
+              display_name: Part 2 síncrona
+            lessonGroup-5:
+              display_name: Asíncrona Part 2
+        virtual-pl-csa-summer-day4:
+          lessons:
+            lesson-2:
+              name: Asíncrona Part 1
+            lesson-4:
+              name: Asíncrona Part 2
+            lesson-5:
+              name: Taller Obridor
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Part 1 síncrona
+            lessonGroup-3:
+              display_name: Asíncrona Part 1
+            lessonGroup-4:
+              display_name: Part 2 síncrona
+            lessonGroup-5:
+              display_name: Asíncrona Part 2
+        virtual-pl-csa-summer-day5:
+          lessons:
+            lesson-1:
+              name: Taller Obridor
+            lesson-2:
+              name: Asíncrona Part 1
+            lesson-3:
+              name: Part 2 síncrona
+            lesson-4:
+              name: Asíncrona Part 2
+            lesson-13:
+              name: Cerimònies de cloenda
+            lesson-16:
+              name: Cerimònies de cloenda
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Part 1 síncrona
+            lessonGroup-4:
+              display_name: Part 2 síncrona
+            lessonGroup-5:
+              display_name: Asíncrona Part 2
+          title: 'Dia 5 '
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-2:
+              name: Asíncrona Part 1
+            lesson-3:
+              name: Part 2 síncrona
+            lesson-4:
+              name: Asíncrona Part 2
+            lesson-7:
+              name: Introducció
+            lesson-8:
+              name: Taller Obridor
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Part 1 síncrona
+            lessonGroup-3:
+              display_name: Asíncrona Part 1
+            lessonGroup-4:
+              display_name: Part 2 síncrona
+            lessonGroup-5:
+              display_name: Asíncrona Part 2
+            lessonGroup-7:
+              display_name: Introducció
+        virtual-pl-csp-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Part 1 síncrona
+            lessonGroup-3:
+              display_name: Part 2 síncrona
+            lessonGroup-4:
+              display_name: Asíncrona Part 1
+            lessonGroup-5:
+              display_name: Asíncrona Part 2
+        self-paced-pl-csd-unit1-2-2023:
+          title: Preparació per ensenyar la resolució de problemes i la informàtica
+          description: "Aquest mòdul d'aprenentatge professional està dissenyat per ajudar-vos a preparar-vos per ensenyar la unitat de resolució de problemes i informàtica de Code.org. \n\n\\*\\*En aquest mòdul d'aprenentatge professional, vostè farà: \\*\\*\n\n-   Obtenir una introducció a la resolució de problemes i la informàtica.\n-   Practicar conceptes clau inclosos en la unitat.\n-   Explorar projectes de final de capítol.\n\n\\*\\* Temps suggerit: \\*\\* 30 minuts"
+          student_description: "Aquest mòdul d'aprenentatge professional està dissenyat per ajudar-vos a preparar-vos per ensenyar la unitat de resolució de problemes i informàtica de Code.org. \n\n\\*\\*En aquest mòdul d'aprenentatge professional, vostè farà: \\*\\*\n\n-   Obtenir una introducció a la resolució de problemes i la informàtica.\n-   Practicar conceptes clau inclosos en la unitat.\n-   Explorar projectes de final de capítol.\n\n\\*\\* Temps suggerit: \\*\\* 30 minuts"
+        self-paced-pl-csd-unit2-2-2023:
+          title: Preparació per ensenyar desenvolupament web
+        self-paced-pl-csd-unit3-2-2023:
+          title: Preparació per ensenyar animacions i jocs interactius
+          description: "Aquest mòdul d'aprenentatge professional està dissenyat per ajudar-vos a preparar-vos per ensenyar la unitat d'Animacions i Jocs Interactius de Code.org. \n\n\\*\\*En aquest mòdul d'aprenentatge professional, vostè serà: \\*\\*\n\n-   Obtenir una introducció a les Animacions i Jocs Interactius.\n-   Practicar conceptes clau inclosos en la unitat.\n-   Participa amb Game Lab.\n-   Explorar projectes de final de capítol.\n\n\\*\\* Temps suggerit: \\*\\* 120 minuts"
+          student_description: "Aquest mòdul d'aprenentatge professional està dissenyat per ajudar-vos a preparar-vos per ensenyar la unitat d'Animacions i Jocs Interactius de Code.org. \n\n\\*\\*En aquest mòdul d'aprenentatge professional, vostè serà: \\*\\*\n\n-   Obtenir una introducció a les Animacions i Jocs Interactius.\n-   Practicar conceptes clau inclosos en la unitat.\n-   Participa amb Game Lab.\n-   Explorar projectes de final de capítol.\n\n\\*\\* Temps suggerit: \\*\\* 120 minuts"
+        self-paced-pl-csd-unit4-2-2023:
+          title: Preparació per ensenyar el procés de disseny
+        self-paced-pl-csd-unit5-2-2023:
+          title: Preparació per ensenyar dades i societat
+        web-dev-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítol 1: Creació de pàgines web'
+            lessonGroup-3:
+              display_name: 'Capítol 2: Llocs web de diverses pàgines'
+          title: Tema 2 - Desenvolupament web ('23-'24)
+          student_description: " En aquesta unitat, aprendràs a crear i compartir el contingut en les teves pròpies pàgines web. Després de decidir quin contingut voleu compartir amb el món, aprendreu a estructurar i dissenyar les vostres pàgines mitjançant HTML i CSS. També practicaràs habilitats de programació valuoses, com ara depuració, ús de recursos i treball en equip.  "
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Enquesta
+            lessonGroup-2:
+              display_name: 'Capítol 1: El procés de resolució de problemes'
+            lessonGroup-3:
+              display_name: 'Capítol 2: Ordinadors i resolució de problemes'
+            lessonGroup-4:
+              display_name: Lliçons alternatives
+          title: Tema 1 - Resolució de Problemes i Informàtica ('23-'24)
+          student_description: Problem Solving and Computing és una introducció altament interactiva i col·laborativa al camp de la informàtica, emmarcada dins de la recerca més àmplia de la resolució de problemes. Practicareu utilitzant un procés de resolució de problemes per abordar una sèrie de trencaclosques, reptes i escenaris del món real. A continuació, aprendreu com els ordinadors d'entrada, sortida, emmagatzemen i processen informació per ajudar els humans a resoldre problemes. La unitat conclou amb un projecte en el qual dissenyeu una aplicació que ajudi a resoldre un problema de la vostra elecció.
+        csd2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítol 1: Creació de pàgines web'
+            lessonGroup-3:
+              display_name: 'Capítol 2: Llocs web de diverses pàgines'
+          title: Tema 2 - Desenvolupament web ('23-'24)
+          student_description: " En aquesta unitat, aprendràs a crear i compartir el contingut en les teves pròpies pàgines web. Després de decidir quin contingut voleu compartir amb el món, aprendreu a estructurar i dissenyar les vostres pàgines mitjançant HTML i CSS. També practicaràs habilitats de programació valuoses, com ara depuració, ús de recursos i treball en equip.  "
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítol 1: Imatges i animacions'
+            lessonGroup-3:
+              display_name: 'Capítol 2: Jocs de construcció'
+          title: Tema 3 - Animacions i jocs interactius ('23-'24)
+          student_description: " En aquesta unitat, es basarà en la seva experiència de codificació a mesura que programa animacions, art interactiu, i jocs en Game Lab. La unitat comença amb formes simples i construeix fins a jocs més sofisticats basats en sprites, utilitzant els mateixos conceptes de programació i el procés de disseny que els informàtics utilitzen diàriament. En el projecte final, desenvolupareu un programa personalitzat i interactiu."
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítol 1: Disseny centrat en l''usuari'
+            lessonGroup-3:
+              display_name: 'Capítol 2: Prototipatge d''aplicacions'
+          title: Tema 4 - El procés de disseny ('23-'24)
+          student_description: Aquesta unitat introdueix els impactes socials més amplis de la informàtica. A través d'una sèrie de reptes de disseny, aprendràs a comprendre millor les necessitats dels altres mentre desenvolupes una solució a un problema. La segona meitat de la unitat consisteix en un projecte iteratiu en equip, durant el qual els equips tenen l'oportunitat d'identificar una necessitat que els importa, prototipar solucions tant en paper com en App Lab, i provar solucions amb usuaris reals per obtenir feedback i impulsar més iteracions.
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítol 1: Representar la informació'
+            lessonGroup-3:
+              display_name: 'Capítol 2: Resolució de problemes de dades'
+          title: Unitat 5 - Dades i societat ('23-'24)
+          student_description: Aquesta unitat tracta sobre la importància de les dades en la resolució de problemes i destaca com els ordinadors poden ajudar en aquest procés. El primer capítol explora diferents sistemes utilitzats per representar informació en un ordinador i els reptes i compensacions que planteja el seu ús. En el segon capítol aprendràs com s'utilitzen les col·leccions de dades per resoldre problemes i com els ordinadors ajuden a automatitzar els passos d'aquest procés. El capítol conclou considerant com es pot aplicar el procés de resolució de problemes de dades a una àrea de la vostra elecció.
+          description_short: Aprendre com les persones utilitzen els ordinadors per resoldre problemes de dades.
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Introducció a l'App Lab
+            lessonGroup-2:
+              display_name: 'Capítol 1: Entrades i sortides'
+            lessonGroup-3:
+              display_name: 'Capítol 2: Construcció de prototips físics'
+          title: Unitat 6A - (Opció A) Creació d'aplicacions amb dispositius - Circuit Playground ('23-'24)
+          student_description: Aquesta unitat explora el paper de les plataformes de maquinari en la informàtica i com els diferents sensors poden proporcionar una entrada i una sortida més eficaços que el teclat, el ratolí i el monitor tradicionals. Utilitzant App Lab i Circuit Playground d'Adafruit, desenvolupareu programes que utilitzin les mateixes entrades i sortides de maquinari que veieu en els dispositius intel·ligents, mirant com un simple prototip rugós pot conduir a un producte acabat. La unitat conclou amb un repte de disseny per utilitzar el Circuit Playground com a base per a una innovació del seu propi disseny.
+          description_short: Aprendre a programar amb dispositius físics.
+        csd6b-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introducció a l'App Lab
+            lessonGroup-4:
+              display_name: Construcció de prototips físics
+          title: Unitat 6B - (Opció B) Creació d'aplicacions amb dispositius (micro:bit)
+          student_description: Aquesta unitat explora el paper de les plataformes de maquinari en la informàtica i com els diferents sensors poden proporcionar una entrada i una sortida més eficaços que el teclat, el ratolí i el monitor tradicionals. Utilitzant App Lab i BBC micro:bit, desenvolupareu programes que utilitzin les mateixes entrades i sortides de maquinari que veieu als dispositius intel·ligents, mirant com un simple prototip rugós pot conduir a un producte acabat. La unitat conclou amb un repte de disseny per utilitzar el micro:bit com a base per a una innovació del seu propi disseny.
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Introducció a App Lab
+            lessonGroup-2:
+              display_name: 'Capítol 1: Comprensió de l''aprenentatge automàtic'
+            lessonGroup-3:
+              display_name: 'Capítol 2: Dissenyar una aplicació d''aprenentatge automàtic'
+          title: Tema 7 - AI i Aprenentatge Automàtic ('23-'24)
+          student_description: Aquesta unitat és una introducció pràctica al desenvolupament d'un model d'aprenentatge automàtic amb dades tabulars. Exploraràs com els ordinadors aprenen de les dades per prendre decisions i, a continuació, desenvoluparàs els teus propis projectes d'aprenentatge automàtic al voltant de dades del món real. La unitat culmina amb el disseny de la vostra pròpia aplicació d'aprenentatge automàtic per resoldre un problema rellevant personalment.
+        csd-post-survey-2024:
+          title: Enquesta post-curs
+          description: Aquesta unitat conté l'Enquesta post-curs. Aquesta unitat es pot assignar després de completar la seva unitat final en aquesta assignatura.
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Lliçó 1
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Lliçó 1
+            lesson-3:
+              name: Esdeveniments
+            lesson-4:
+              name: Comportaments
+            lesson-5:
+              name: Propers passos
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Lliçó 1
+            lesson-3:
+              name: Bucles
+            lesson-4:
+              name: Condicionals
+            lesson-5:
+              name: Posant-ho tot junt
+            lesson-6:
+              name: Propers passos
+          title: Introducció a la informàtica

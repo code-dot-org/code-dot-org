@@ -10,7 +10,7 @@ title: 活動のガイドライン
 
 # Hour of Code™ とコンピュータサイエンス教育週間のチュートリアルとレッスンの作成と提出に関するガイドライン
 
-Code.orgは、Code.orgとHour of CodeのウェブサイトでさまざまなHour of Code™ のアクティビティ、レッスン、ビデオをホストしています。 The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.orgは、Code.orgとHour of CodeのウェブサイトでさまざまなHour of Code™ のアクティビティ、レッスン、ビデオをホストしています。 現在のリストは [hourofcode.com/learn]({{ urls/learn }})にあります。
 
 コンピュータサイエンスの原理を説明するセルフガイドチュートリアル、教師主導のレッスン、またはロボット工学/メーカー向けのアクティビティを提出したいですか？ この世界的なムーブメントに参加して、世界中の参加者が1時間のコードから始めたり、複数レッスン、1日、または1週間にわたるアクティビティでさらに進めたりできるように支援してください。
 
@@ -18,7 +18,7 @@ Code.orgは、Code.orgとHour of CodeのウェブサイトでさまざまなHour
 
 いくつかのヒント:
 
-1. **複数のアクティビティを送信**: レベルや年齢、その他のカテゴリ別にアクティビティを作成した場合、それぞれの教師が自分の教室に合ったものを見つけられるように、アクティビティは個別にリストされます。 各チュートリアルまたはアクティビティを個別に送信してください。 Given the number of submissions we have seen in recent years, we will have time to review **up to 5 activities** per partner. その後、Hour of Codeが始まる前にできるだけ多くのレビューを行うように最善を尽くします。
+1. **複数のアクティビティを送信**: レベルや年齢、その他のカテゴリ別にアクティビティを作成した場合、それぞれの教師が自分の教室に合ったものを見つけられるように、アクティビティは個別にリストされます。 各チュートリアルまたはアクティビティを個別に送信してください。 近年の投稿数を考えると、 **** パートナー1人につき最大5つのアクティビティをレビューする時間があります。 その後、Hour of Codeが始まる前にできるだけ多くのレビューを行うように最善を尽くします。
 
 2. **初心者向けレッスンの枠を超えて**: 初めてコンピュータサイエンスを学ぶ教師や学生向けのレッスンに加えて、もう少し先に進みたいコンピュータサイエンスに精通した教室向けの学習体験をリストアップしています。 すでに基本に慣れているクラスのレッスンを提出して、私たちを助けてください。
 
@@ -53,7 +53,7 @@ Code.orgは、Code.orgとHour of CodeのウェブサイトでさまざまなHour
 
 教育者の中には、ガイド付きのパズルやゲームを体験するよりも、従来のレッスン形式に従ったHour of Codeのアクティビティを開催することを好む人もいます。
 
-You can start with this [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) for your lesson plan.
+[](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) 授業計画にはこのテンプレートから始めることができます。
 
 **他の科目/分野の教師のための活動**
 
@@ -84,7 +84,7 @@ Hour of Codeの目標は、初心者にコンピュータサイエンスやプ�
 
 アクティビティでは、ループ、条件、暗号化、インターネットの仕組みなどのコンピューターサイエンスの概念を教える必要があります。 アクティビティでは、コンピュータサイエンスが現実世界の職業、出来事、歴史とどのようにつながっているかを学ぶこともできます。 たとえば、ユーザーや目的にとって意味のあるアプリを作るためのUXデザインを教えることなどです。 概念よりもプログラミングの構文に焦点を当てた活動はお勧めしません。 たとえば、HTML を教えるアクティビティはリストアップしますが、強調はしません。 同様に、アルゴリズムやプロセスをモデル化する方法を学ぶよりも、構成オプションの設定/変更に焦点を当てたブロックプログラミングのレッスンはお勧めしません。
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). アプリのインストール、デスクトップアプリ、またはゲームコンソールでの操作を必要とするアクティビティは問題ありませんが、理想的ではありません。 登録や支払いが必要なアクティビティは掲載しません。 （ロボット工学の作業にはロボットの購入が必要な場合があります。）
+*技術的要件:* 学校や教室のテクノロジー設定は多種多様であるため、最適なアクティビティは、コンピューターを使用せずにコンピューターサイエンスの概念を教える、Webベースのアクティビティやスマートフォン向けのアクティビティ、またはコンピューターを使わずにコンピューターサイエンスの概念を教える、その他の制約のないスタイルのアクティビティです (http://csunplugged.com/ を参照)。 [](http://csunplugged.com/) アプリのインストール、デスクトップアプリ、またはゲームコンソールでの操作を必要とするアクティビティは問題ありませんが、理想的ではありません。 登録や支払いが必要なアクティビティは掲載しません。 （ロボット工学の作業にはロボットの購入が必要な場合があります。）
 
 *学生主導 (セルフガイド) フォーマット:* オリジナルのHour of Codeは、主にセルフガイド形式のチュートリアルやレッスンの成功に基づいて構築され、オプションで教師が進行役を務めることもできました。 既存のオプションはたくさんありますが、新しいものを作りたい場合は、これらのアクティビティは、一人で働く学生や、教師が準備やCSの経験がほとんどない教室で楽しくなるように設計する必要があります。 1時間の自由形式のチャレンジではなく、学生に指示を与えるべきです。 理想的には、指示やチュートリアルがプログラミングのプラットフォームに統合されて、チュートリアルとプログラミングの間でタブやウィンドウを切り替えずに済む形です。
 
@@ -141,11 +141,11 @@ Hour of Codeの目標は、初心者にコンピュータサイエンスやプ�
     * 電力のいらない形
 * Hour of Code アクティビティのスクリーンショットまたはマーケティング画像。 サイズが 4:3 の画像を少なくとも 1 つ送信してください。 少なくとも 520 x 390ピクセルでなければなりません。 英語を話さない人にとってわかりやすいように、この画像にはテキスト（ロゴ以外）を付けないでください。 適切な画像が提供されない場合、我々自身であなたのチュートリアルのスクリーンショットをとるか、またはリストに載せないことがあります。 すべての画像は、.jpg、.jpeg、または.png への URL リンクとして送信する必要があります。
 * 参加状況をより正確に追跡するために、サードパーティのチュートリアルパートナーは、Hour of Code チュートリアルの最初のページに 1 ピクセルのトラッキング画像を含める必要があります。 詳細については、以下の「 [トラッキングピクセル](#pixel) 」セクションを参照してください。
-* Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
+* アクティビティが終了すると、ユーザーは [code.org/api/hour/finish](https://code.org/api/hour/finish) に誘導され、そこで次のことができるようになります。 
     * Hour of Code を完了したことをソーシャルメディアで共有する
     * Hour of Code を完了した証明書を受け取る
     * Hour of Code 活動への参加率が最も高い国/都市についてのリーダーボードを見る
-    * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
+    * アクティビティに1時間を費やしても完了しなかったユーザーの場合は、アクティビティに「Hour of Codeを終了しました」というボタンを追加してください。このボタンは、 [](https://code.org/api/hour/finish) code.org/api/hour/finish にもリンクします。
 * (オプション) フォローアップとして、以下のアクティビティ指標のレポートを求めるオンラインアンケート/フォームのリンクを送信する場合があります。 
     * オンラインの活動（特にスマートフォン・タブレットのアプリ）について: 
         * ユーザー数
@@ -241,7 +241,7 @@ Hour of Codeの目標は、初心者にコンピュータサイエンスやプ�
 1. 「Hour of Code」は、Hour of Codeキャンペーンの文脈における非営利のCS教育活動に関連する場合にのみ使用し、他の目的では使用しないでください。
 2. 「Hour of Code」への言及は、それが自分のブランド名であるということではなく、むしろHour of Codeを草の根運動として言及するような方法で使うべきです。 その好例が「AcmeCorp.com の Hour of Code® に参加」です。 悪い例：「ACME社のHour of Codeを試してみてください」。
 3. ウェブサイトとアプリの説明の両方で、「Hour of Code」について言及する最も目立つ場所には、「®」の上付き文字を使用してください。
-4. Hour of Code、CSEDWeek、Code.orgのWebサイトへのリンクを含め、次の両方を開示する文言をページ (またはフッター) に含めてください。a. Hour of Code® と Hora del Código® はCode.orgの登録商標です。b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
+4. Hour of Code、CSEDWeek、Code.orgのWebサイトへのリンクを含め、次の両方を開示する文言をページ (またはフッター) に含めてください。a. Hour of Code® と Hora del Código® はCode.orgの登録商標です。b. 「『[Hour of Code](http://hourofcode.com/) ®』は、 [](http://code.org/) 何百万人もの学生に1時間のコンピュータサイエンスとコンピュータプログラミングを紹介するためのCode.orgによる全国的な取り組みです。」
 5. アプリ名に「Hour of Code」を使用しないでください。
 6. 「Hour of Code」を商用利用または目的（例えば、Hour of Codeアクティビティを有料の背後に配置すること、Hour of Codeアクティビティの一環として別の有料サービスを宣伝すること、Hour of Code商品の販売など）に関連して「Hour of Code」を使用しないでください。
 7. ログインやアカウント作成が必要なアクティビティには「Hour of Code」を使用しないでください。
@@ -262,7 +262,7 @@ Hour of Codeの目標は、初心者にコンピュータサイエンスやプ�
 
 ダンスパーティーのトラッキングピクセルの例:
 
-IMG SRC = <http://code.org/api/hour/begin_dance.png>   
+IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
 
 [**トップに戻る**](#top)

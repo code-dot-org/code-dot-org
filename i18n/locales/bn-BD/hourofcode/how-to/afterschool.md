@@ -1,46 +1,46 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: স্কুল-পরের জন্য আওয়ার অফ কোড হাই গাইড
 ---
 
 {{ signup_button }}
 
 # স্কুল ও পড়া শেষে কিভাবে এক ঘন্টায় কোডিং শিখানো যায়
 
-### Join the movement and introduce your students to computer science with these steps.
+### আন্দোলনে যোগ দিন এবং এই পদক্ষেপগুলির সাথে কম্পিউটার বিজ্ঞানের সাথে আপনার ছাত্রদের পরিচয় করিয়ে দিন।
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+গণনামূলক চিন্তাভাবনা সমস্যা সমাধানের দক্ষতা, যুক্তি এবং সৃজনশীলতা লালন করতে এবং প্রযুক্তি গ্রহের প্রতিটি শিল্পকে রূপান্তরিত করছে। আজকের শিক্ষার্থীদের কীভাবে প্রযুক্তি তৈরি করতে হয় তা শিখতে হবে, কেবল এটি ব্যবহার করা নয়। তাড়াতাড়ি শুরু করে, তাদের ২১ শতকের যে কোনও ক্যারিয়ার পথে সাফল্যের ভিত্তি থাকবে।
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+কম্পিউটার বিজ্ঞানের সাথে শিক্ষার্থীদের পরিচয় করিয়ে দেওয়ার একটি সহজ এবং মজাদার উপায়, সম্ভবত প্রথমবারের মতো। আপনি যদি সাহায্য করার জন্য অতিরিক্ত হাতের সেট চান তবে আপনি আপনার স্কুল-পরবর্তী ক্লাস বা ক্লাবে একটি আওয়ার অফ কোড চালাতে সহায়তা</a> করার জন্য একজন স্থা নীয় স্বেচ্ছাসেবক খুঁজে পেতে পারেন।</p> 
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### অ্যান আওয়ার অফ কোডও দূরবর্তীভাবে হোস্ট করা যেতে পারে! শুরু করতে, ভার্চুয়াল আওয়ার অফ কো [ড ইভেন্ট হোস্টিংয়ের জন্য আমাদের টিপস দেখুন](https://hourofcode.com/us/how-to/virtual)।
 
 * * *
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## ১। এই কীভাবে ভিডিওটি দেখুন <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ## 2. একটি টিউটোরিয়াল চয়ন করুন
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+আমরা বিভিন্ন অংশীদার দ্বারা তৈরি সমস্ত ব [য়সের অংশগ্রহণকারীদের জন্য বিভিন্ন মজা]({{ urls/learn }}) দার, ঘন্টার দীর্ঘ টিউটোরিয়াল সরবরাহ করি। [তাদের চেষ্টা করুন!]({{ urls/learn }})
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+** কোডের সমস্ত ঘন্টার টিউটোরিয়াল </ strong> আয়োজকদের জন্য ন্যূনতম প্রিপ-টাইম প্রয়োজন এবং স্ব-নির্দেশিত - বাচ্চাদের তাদের নিজস্ব গতি এবং দক্ষতার পর্যায়ে কাজ করার অনুমতি দেয়.</p> 
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+** স্কুলের পরে আপনার কোডের জন্য একটি পাঠ পরিকল্পনা প্রয়োজন? </ strong> এই [ টেমপ্লেট ](/files/AfterschoolEducatorLessonPlanOutline.docx) চেক করুন!</p> 
 
-## 3. Promote your Hour of Code
+## ৩। আপনার আওয়ার অফ কোড প্রচার করুন
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+এই সরঞ্জামগুলির সাহায [্যে আপনার আওয়ার অফ কোড প্র]({{ urls/promote }}) চার করুন এবং অন্যকে তাদের নিজস্ব ইভেন্টগুলি হোস্ট
 
-## 4. Plan your technology needs - computers are optional
+## ৪। আপনার প্রযুক্তির প্রয়োজনের পরিকল্পনা করুন - কম্পিউটারগুলি
 
-কোড অভিজ্ঞতা শ্রেষ্ঠ ঘন্টা ইন্টারনেট সংযুক্ত কম্পিউটার অন্তর্ভুক্ত. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+কোড অভিজ্ঞতা শ্রেষ্ঠ ঘন্টা ইন্টারনেট সংযুক্ত কম্পিউটার অন্তর্ভুক্ত. কিন্তু আপনি প্রতিটি শিশুর জন্য ** না </ strong> একটি কম্পিউটারের প্রয়োজন, এবং আপনি একটি কম্পিউটার ছাড়াও ঘরের কোডও করতে পারেন.</p> 
 
-শিক্ষার্থীদের কম্পিউটার বা ডিভাইসগুলিতে টিউটোরিয়াল পরীক্ষা করে নিশ্চিত করুন যে তারা শব্দ এবং ভিডিওর মাধ্যমে ব্রাউজারগুলিতে সঠিকভাবে কাজ করে. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+শিক্ষার্থীদের কম্পিউটার বা ডিভাইসগুলিতে টিউটোরিয়াল পরীক্ষা করে নিশ্চিত করুন যে তারা শব্দ এবং ভিডিওর মাধ্যমে ব্রাউজারগুলিতে সঠিকভাবে কাজ করে. ** কম ব্যান্ডউইথ আছে? </ strong> বর্গের সামনে ভিডিওগুলি প্রদর্শন করার পরিকল্পনা করুন, যাতে প্রতিটি শিক্ষার্থী তাদের নিজস্ব ভিডিওগুলি ডাউনলোড না করে. অথবা অপ্রচলিত / অফলাইন টিউটোরিয়ালগুলি চেষ্টা করুন.</p> 
 
 আপনার ক্লাসের জন্য হেডফোনগুলি প্রদান করুন, বা শিক্ষার্থীদেরকে তাদের নিজের কাছে নিয়ে আসার জন্য বলুন, যদি আপনার পছন্দসই টিপসটি শব্দটি দিয়ে সেরা কাজ করে.
 
-**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). যখন ছাত্ররা অংশীদার হয়, তারা একে অপরকে সাহায্য করে এবং শিক্ষকের উপর নির্ভর করে. তারা দেখতে পাবে যে কম্পিউটার বিজ্ঞান সামাজিক এবং সহযোগী.
+** যথেষ্ট ডিভাইস নেই? </ strong> [ জোড়া প্রোগ্রামিং ](https://www.youtube.com/watch?v=vgkahOzFH2Q) ব্যবহার করুন. যখন ছাত্ররা অংশীদার হয়, তারা একে অপরকে সাহায্য করে এবং শিক্ষকের উপর নির্ভর করে. তারা দেখতে পাবে যে কম্পিউটার বিজ্ঞান সামাজিক এবং সহযোগী.</p> 
 
 ## 5. একটি অনুপ্রেরণীয় ভিডিওর সাথে আপনার ঘন্টা কোড বন্ধ করুন
 
@@ -53,38 +53,38 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 - [ প্রেসিডেন্ট ওবামা কম্পিউটার বিজ্ঞান শিখতে সব ছাত্রকে ডাকছেন ](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - আরো অনুপ্রেরণামূলক ভিডিওগুলি [ এখানে ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) খুঁজুন.
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**আপনি যদি কম্পিউটার বিজ্ঞানের সমস্ত নতুন নন তবে এটি ঠিক আছে। আপনার ঘন্টার কোড কার্যকলাপ পরিচয় করিয়ে দিতে এখানে কিছু ধারণা আছে:**
 
 - উপায়গুলি প্রযুক্তির প্রভাব আমাদের জীবনকে বোঝায়, উদাহরণস্বরূপ ছেলে ও মেয়ে উভয়ই উদাহরণের সাথে বিবেচনা করবে (অ্যাপস এবং প্রযুক্তি সম্পর্কে কথা বলুন যা জীবন বাঁচাতে, লোকেদের সাহায্য করতে, মানুষকে সংযুক্ত করতে ইত্যাদি).
-- List things that use code in everyday life.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- দৈনন্দিন জীবনে কোড ব্যবহার করে এমন জিনিসগুলির তালিকা করুন।
+- কম্পিউটার বিজ্ঞানে মেয়েদের আগ্রহী করার টিপস দেখ [ুন এখানে]({{ urls/girls }})।
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+** আরো নির্দেশিকা প্রয়োজন? </ strong> এই [ টেমপ্লেট পাঠ পরিকল্পনা ](/files/AfterschoolEducatorLessonPlanOutline.docx) ডাউনলোড করুন.</p> 
 
-## 6. Code!
+## ৬। কোড!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**ক্রিয়াকলাপে সরাসরি অংশ** গ্রহণকারীরা - একটি হোয়াইটবোর্ডে টিউটোরিয়াল লি Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
+**কেউ যখন অসুবিধার মুখোমুখি হয় তখন সাড়া** দেওয়া ঠিক আছে: - “আমি জানি না। Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+**কেউ তাড়াতাড়ি শেষ করলে কী করবেন?** - [hourofcode.com/learn এ অংশগ্রহণকারীদের আরেকটি আওয়ার অফ কোড ক্রিয়াকলাপ চেষ্টা করতে উত্সাহিত করুন]({{ urls/learn }}) - অথবা, যারা তাড়াতাড়ি শেষ করেন তাদের সমস্যা হওয়া অন্যদের সাহায্য করতে বলুন।
 
-## 7. Celebrate
+## ৭। উদযাপন
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- [আপনার ছাত্রদের]({{ urls/certificates }}) জন্য সার্টিফিকেট মুদ্রণ করুন।
+- [মুদ্রণ করুন “আমি একটি আওয়ার অফ কোড করেছি!”]({{ promote/resources_stickers }}) আপনার শিক্ষার্থীদের জন্য স্টিকার।
+- [অংশগ্রহণকারীদের](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) জন্য কাস্টম টি-শার্ট
+- সামাজিক মিডিয়ায় আপনার আওয়ার অফ কোড ইভেন্টের ফটো এবং ভিডিও শেয়ার করুন। #HourOfCode এবং @codeorg ব্যবহার করুন যাতে আমরা আপনার সাফল্যও হাইলাইট করতে পারি!
 
 ## শিক্ষার জন্য কোডের অন্যান্য ঘন্টা সম্পদ
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
-- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- গত আওয়ার অ [ফ কোড আ](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) য়োজকদের সেরা অনুশীলনগুলি দেখুন।
+- আমাদের শিক্ষকের গাইড টু দ্ [য আওয়ার অফ কোড ওয়েবিনার রেকর্ডিংটি দেখুন।](https://youtu.be/EJeMeSW2-Mw)
+- অন্যান্য আয়োজক [দের কাছ থেকে পরামর্শ,](http://forum.code.org/c/plc/hour-of-code) অন্তর্দৃষ্টি এবং সহায়তা পেতে আওয়ার অফ কোড ফোরামে যান।
+- আওয়ার অফ কো [ড FAQ পর্যালোচনা](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)করুন।
 
 ## What comes after the Hour of Code?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
+প্রযুক্তি কীভাবে কাজ করে এবং কীভাবে সফ্টওয়্যার অ্যাপ্লিকেশন তৈরি করা যায় সে সম্পর্কে আরও জানার যাত্রার প্রথম পদক্ষেপ হল আওয়ার অফ কোড। শিক্ষার্থীদের তাদের যাত্রা চালিয়ে যেতে সহায়তা করুন এবং তাদের অনলাইনে [আরও শিখতে উত্সা](/beyond)হিত
 
 {{ signup_button }}

@@ -5,25 +5,39 @@ fa:
       Actions: اقدامات
       Advanced: پیشرفته
       Behaviors: عملکردها
+      'Behaviors ': رفتارها
+      Boolean: بولی
       Brushes: قلم‌ها
+      Category: دسته
       Color: رنگ
       Comment: دیدگاه
       Comments: نظرات
       Conditionals: شرطی ها
       Dancers: رقاص‌ها
       Default: پیش‎فرض
+      Effects: جلوه‌ها
       Events: رویدادها
       Functions: توابع
       'Functions ': 'توابع '
       Game/Score: بازی‌/امتیاز
       Games/Score: بازی‌ها/امتیاز
-      Groups: گروه ها
+      Groups: گروه‌ها
+      Input: ورودی
+      Location: مکان
       Locations: موقعیت‌های مکانی
       Logic: منطق
       Loops: حلقه‌ها
       Math: ریاضی
+      Number: عدد
       Numbers: اعداد
+      Picker: انتخابگر
+      Prebuilt: پیش‌ساخت
+      Properties: مشخصات
+      Shapes: شکل‌ها
+      Sprites: اسپرایت
+      String: رشته
       Text: متن
       Variables: متغیرها
       'Variables ': 'متغیرها '
+      'Variables  ': 'متغیرها  '
       World: دنیا

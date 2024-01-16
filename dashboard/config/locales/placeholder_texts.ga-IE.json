@@ -78,6 +78,10 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "cuir téacs anseo",
           "30fcc1693fa8402931d13ac3a5f396fd": "cuir teideal anseo"
         },
+        "courseC19_playLab_EOC1_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "cuir téacs anseo",
+          "30fcc1693fa8402931d13ac3a5f396fd": "cuir teideal anseo"
+        },
         "courseC19_playLab_EOC2": {
           "0ab65920c84bec05a22e09feea7fe4ea": "cuir téacs anseo",
           "30fcc1693fa8402931d13ac3a5f396fd": "cuir teideal anseo"
@@ -91,6 +95,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "cuir teideal anseo"
         },
         "courseC19_playLab_EOC2_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "cuir téacs anseo",
+          "30fcc1693fa8402931d13ac3a5f396fd": "cuir teideal anseo"
+        },
+        "courseC19_playLab_EOC2_2023": {
           "0ab65920c84bec05a22e09feea7fe4ea": "cuir téacs anseo",
           "30fcc1693fa8402931d13ac3a5f396fd": "cuir teideal anseo"
         },
@@ -110,6 +118,10 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "cuir téacs anseo",
           "30fcc1693fa8402931d13ac3a5f396fd": "cuir teideal anseo"
         },
+        "courseC19_playLab_EOC3_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "cuir téacs anseo",
+          "30fcc1693fa8402931d13ac3a5f396fd": "cuir teideal anseo"
+        },
         "courseC19_playLab_EOC4": {
           "0ab65920c84bec05a22e09feea7fe4ea": "cuir téacs anseo",
           "30fcc1693fa8402931d13ac3a5f396fd": "cuir teideal anseo"
@@ -123,6 +135,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "cuir teideal anseo"
         },
         "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "cuir téacs anseo",
+          "30fcc1693fa8402931d13ac3a5f396fd": "cuir teideal anseo"
+        },
+        "courseC19_playLab_EOC4_2023": {
           "0ab65920c84bec05a22e09feea7fe4ea": "cuir téacs anseo",
           "30fcc1693fa8402931d13ac3a5f396fd": "cuir teideal anseo"
         },
@@ -150,6 +166,10 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "cuir téacs anseo",
           "30fcc1693fa8402931d13ac3a5f396fd": "cuir teideal anseo"
         },
+        "courseC_PlayLab_eventsFP_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "cuir téacs anseo",
+          "30fcc1693fa8402931d13ac3a5f396fd": "cuir teideal anseo"
+        },
         "courseD_playLab_condFP": {
           "0ab65920c84bec05a22e09feea7fe4ea": "cuir téacs anseo",
           "30fcc1693fa8402931d13ac3a5f396fd": "cuir teideal anseo"
@@ -169,6 +189,9 @@
         "courseE_aboutme_3_2021": {
           "ed076287532e86365e841e92bfc50d8c": "Dia Dhuit a Dhomhain!"
         },
+        "courseE_aboutme_3_2023": {
+          "ed076287532e86365e841e92bfc50d8c": "Dia Dhuit a Dhomhain!"
+        },
         "courseE_aboutme_4": {
           "ed076287532e86365e841e92bfc50d8c": "Dia Dhuit a Dhomhain!"
         },
@@ -181,6 +204,9 @@
         "courseE_aboutme_4_2021": {
           "ed076287532e86365e841e92bfc50d8c": "Dia Dhuit a Dhomhain!"
         },
+        "courseE_aboutme_4_2023": {
+          "ed076287532e86365e841e92bfc50d8c": "Dia Dhuit a Dhomhain!"
+        },
         "courseE_aboutme_5": {
           "ed076287532e86365e841e92bfc50d8c": "Dia Dhuit a Dhomhain!"
         },
@@ -191,6 +217,9 @@
           "ed076287532e86365e841e92bfc50d8c": "Dia Dhuit a Dhomhain!"
         },
         "courseE_aboutme_5_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Dia Dhuit a Dhomhain!"
+        },
+        "courseE_aboutme_5_2023": {
           "ed076287532e86365e841e92bfc50d8c": "Dia Dhuit a Dhomhain!"
         },
         "courseE_playLab_scaffold1": {
@@ -218,6 +247,9 @@
         "courseF_apps_aquarium_-2022-2": {
           "83e4a96aed96436c621b9809e258b309": "iasc"
         },
+        "courseF_apps_aquarium_2023": {
+          "83e4a96aed96436c621b9809e258b309": "iasc"
+        },
         "courseF_apps_collector": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Is leatsa an bua!"
         },
@@ -225,6 +257,9 @@
           "e8a10c04d72b2f135dabe360c4bdd534": "Is leatsa an bua!"
         },
         "courseF_apps_collector_-2022-2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Is leatsa an bua!"
+        },
+        "courseF_apps_collector_2023": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Is leatsa an bua!"
         },
         "courseF_playlab_variables1a": {

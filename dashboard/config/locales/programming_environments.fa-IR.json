@@ -1,0 +1,1519 @@
+{
+  "fa-IR": {
+    "data": {
+      "programming_environments": {
+        "applab": {
+          "categories": {
+            "advanced": {
+              "expressions": {
+                "setStyle": {
+                  "palette_params": {
+                    "css": {
+                      "type": "رشته"
+                    },
+                    "id": {
+                      "type": "رشته"
+                    }
+                  }
+                }
+              },
+              "name": "پیشرفته"
+            },
+            "canvas": {
+              "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "شعاع دایره، بر حسب پیکسل."
+                    }
+                  }
+                },
+                "drawImage": {
+                  "palette_params": {
+                    "id": {
+                      "description": "موقعیت x برحسب پیکسل، مربوط به گوشه سمت چپ بالای تصویر که باید ترسیم شود."
+                    },
+                    "x": {
+                      "description": "موقعیت x برحسب پیکسل، مربوط به گوشه سمت چپ بالای تصویر که باید ترسیم شود."
+                    },
+                    "y": {
+                      "description": "موقعیت y برحسب پیکسل، مربوط به گوشه سمت چپ بالای تصویر که باید ترسیم شود."
+                    }
+                  }
+                },
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "شیء"
+                    },
+                    "x": {
+                      "description": "موقعیت x برحسب پیکسل‌ که از گوشه سمت چپ بالای تصویر شروع می‌شود."
+                    },
+                    "y": {
+                      "description": "موقعیت y برحسب پیکسل که از گوشه سمت چپ بالای تصویر شروع می‌شود."
+                    }
+                  },
+                  "short_description": "مقدار آلفا (میزان کدری) (از 0 تا 255) را برای رنگ پیکسلی که در موقعیت x و y مشخصی قرار دارد و داده‌های تصویر آن مشخص شده است، فراهم می‌کند."
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "شیء"
+                    },
+                    "x": {
+                      "description": "موقعیت x برحسب پیکسل‌ که از گوشه سمت چپ بالای تصویر شروع می‌شود."
+                    },
+                    "y": {
+                      "description": "موقعیت y برحسب پیکسل که از گوشه سمت چپ بالای تصویر شروع می‌شود."
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "شیء"
+                    },
+                    "x": {
+                      "description": "موقعیت x برحسب پیکسل‌ که از گوشه سمت چپ بالای تصویر شروع می‌شود."
+                    },
+                    "y": {
+                      "description": "موقعیت y برحسب پیکسل که از گوشه سمت چپ بالای تصویر شروع می‌شود."
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "height": {
+                      "description": "ارتفاع محدوده مستطیلی‌شکلی که داده‌های تصویر در آن ثبت می‌شود."
+                    },
+                    "width": {
+                      "description": "عرض محدوده مستطیلی‌شکلی که داده‌های تصویر در آن ثبت می‌شود."
+                    },
+                    "x": {
+                      "description": "موقعیت x بر حسب پیکسل که فرآیند ثبت در آن آغاز می‌شود."
+                    },
+                    "y": {
+                      "description": "موقعیت y بر حسب پیکسل که فرآیند ثبت در آن آغاز می‌شود."
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "شیء"
+                    },
+                    "x": {
+                      "description": "موقعیت x برحسب پیکسل‌ که از گوشه سمت چپ بالای تصویر شروع می‌شود."
+                    },
+                    "y": {
+                      "description": "موقعیت y برحسب پیکسل که از گوشه سمت چپ بالای تصویر شروع می‌شود."
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "شیء"
+                    },
+                    "x": {
+                      "description": "موقعیت x برحسب پیکسل که از گوشه سمت چپ بالای تصویر شروع می‌شود تا داده‌ها در آن موقعیت، روی بوم قرار گیرند."
+                    },
+                    "y": {
+                      "description": "موقعیت y برحسب پیکسل که از گوشه سمت چپ بالای تصویر شروع می‌شود تا داده‌ها در آن موقعیت، روی بوم قرار گیرند."
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "height": {
+                      "description": "ارتفاع مستطیل بر حسب پیکسل."
+                    },
+                    "width": {
+                      "description": "عرض مستطیل بر حسب پیکسل."
+                    },
+                    "x": {
+                      "description": "موقعیت x برحسب پیکسل که مکان گوشه سمت چپ بالای مستطیل را نشان می دهد."
+                    },
+                    "y": {
+                      "description": "موقعیت y برحسب پیکسل که مکان گوشه سمت چپ بالای مستطیل را نشان می دهد."
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "alphaValue": {
+                      "description": "مقدار آلفا (کدری) (از 0 تا 255) که باید بر حسب پیکسل تنظیم شود."
+                    },
+                    "imageData": {
+                      "type": "شیء"
+                    },
+                    "x": {
+                      "description": "موقعیت x برحسب پیکسل‌ که از گوشه سمت چپ بالای تصویر شروع می‌شود."
+                    },
+                    "y": {
+                      "description": "موقعیت y برحسب پیکسل که از گوشه سمت چپ بالای تصویر شروع می‌شود."
+                    }
+                  },
+                  "short_description": "مقدار آلفا (میزان کدری) (از 0 تا 255) را برای رنگ پیکسلی که در موقعیت x و y مشخصی قرار دارد و داده‌های تصویر آن مشخص شده است، تنظیم می‌کند."
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "blueValue": {
+                      "description": "مقدار رنگ آبی (از 0 تا 255) که باید بر حسب پیکسل تنظیم شود."
+                    },
+                    "imageData": {
+                      "type": "شیء"
+                    },
+                    "x": {
+                      "description": "موقعیت x برحسب پیکسل‌ که از گوشه سمت چپ بالای تصویر شروع می‌شود."
+                    },
+                    "y": {
+                      "description": "موقعیت y برحسب پیکسل که از گوشه سمت چپ بالای تصویر شروع می‌شود."
+                    }
+                  },
+                  "short_description": "مقدار رنگ آبی (از 0 تا 255) را برای رنگ پیکسلی که در موقعیت x و y مشخصی قرار دارد و داده‌های تصویر آن مشخص شده است، مطابق با ورودی blueValue تنظیم می‌کند."
+                },
+                "setFillColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "رشته"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "greenValue": {
+                      "description": "مقدار رنگ سبز (از 0 تا 255) که باید بر حسب پیکسل تنظیم شود."
+                    },
+                    "imageData": {
+                      "type": "شیء"
+                    },
+                    "x": {
+                      "description": "موقعیت x برحسب پیکسل‌ که از گوشه سمت چپ بالای تصویر شروع می‌شود."
+                    },
+                    "y": {
+                      "description": "موقعیت y برحسب پیکسل که از گوشه سمت چپ بالای تصویر شروع می‌شود."
+                    }
+                  },
+                  "short_description": "مقدار رنگ سبز (از 0 تا 255) را برای رنگ پیکسلی که در موقعیت x و y مشخصی قرار دارد و داده‌های تصویر آن مشخص شده است، مطابق با ورودی greenValue تنظیم می‌کند."
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "alpha": {
+                      "description": "اختیاری. مقدار کدری (از 0 تا 255) که باید بر حسب پیکسل تنظیم شود. مقدار پیش‌فرض 255 (کاملا کدر) است."
+                    },
+                    "blue": {
+                      "description": "مقدار رنگ آبی (از 0 تا 255) که باید بر حسب پیکسل تنظیم شود."
+                    },
+                    "green": {
+                      "description": "مقدار رنگ سبز (از 0 تا 255) که باید بر حسب پیکسل تنظیم شود."
+                    },
+                    "imageData": {
+                      "type": "شیء"
+                    },
+                    "red": {
+                      "description": "مقدار رنگ قرمز (از 0 تا 255) که باید بر حسب پیکسل تنظیم شود."
+                    },
+                    "x": {
+                      "description": "موقعیت x برحسب پیکسل‌ که از گوشه سمت چپ بالای تصویر شروع می‌شود."
+                    },
+                    "y": {
+                      "description": "موقعیت y برحسب پیکسل که از گوشه سمت چپ بالای تصویر شروع می‌شود."
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "شیء"
+                    },
+                    "redValue": {
+                      "description": "مقدار رنگ قرمز (از 0 تا 255) که باید بر حسب پیکسل تنظیم شود."
+                    },
+                    "x": {
+                      "description": "موقعیت x برحسب پیکسل‌ که از گوشه سمت چپ بالای تصویر شروع می‌شود."
+                    },
+                    "y": {
+                      "description": "موقعیت y برحسب پیکسل که از گوشه سمت چپ بالای تصویر شروع می‌شود."
+                    }
+                  },
+                  "short_description": "مقدار رنگ قرمز (از 0 تا 255) را برای رنگ پیکسلی که در موقعیت x و y مشخصی قرار دارد و داده‌های تصویر آن مشخص شده است، مطابق با ورودی redValue تنظیم می‌کند."
+                },
+                "setStrokeColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "رشته"
+                    }
+                  }
+                }
+              }
+            },
+            "circuit": {
+              "expressions": {
+                "buzzer.play": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "isPressed": {
+                  "return_value": "بولی"
+                },
+                "toggleSwitch.isOpen": {
+                  "return_value": "بولی"
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "مقدار به‌دست‌آمده از تابع setTimeOut برای لغو‌کردن."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "تعداد میلی‌ثانیه‌هایی که قبل از هر بار اجرای تابع سپری می‌شود."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "زمان انتظار بر حسب میلی‌ثانیه که قبل از اجرای تابع سپری می‌شود."
+                    }
+                  }
+                },
+                "stopTimedLoop": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "تابع"
+                    },
+                    "ms": {
+                      "type": "عدد"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "شیء"
+                    }
+                  }
+                },
+                "createRecordSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "رشته"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "شیء"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "شیء"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "شیء"
+                    },
+                    "tableName": {
+                      "description": "نام جدولی که رکوردها باید از آن بازیابی شود."
+                    }
+                  }
+                },
+                "getColumn": {
+                  "palette_params": {
+                    "column": {
+                      "type": "رشته"
+                    },
+                    "table": {
+                      "type": "رشته"
+                    }
+                  }
+                },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "نام کلیدی که باید بازیابی شود."
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "تابع"
+                    },
+                    "id": {
+                      "type": "رشته"
+                    },
+                    "name": {
+                      "type": "رشته"
+                    }
+                  }
+                },
+                "getUserId": {
+                  "short_description": "یک شناسه منحصربه‌فرد برای کاربر فعلی این اپلیکیشن فراهم می‌کند."
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "نام جدولی که این رویدادگردان بر آن اعمال می‌شود."
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "شیء"
+                    }
+                  }
+                },
+                "readRecordsSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "رشته"
+                    }
+                  }
+                },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "نام کلیدی که باید ذخیره شود."
+                    },
+                    "value": {
+                      "description": "داده‌هایی که باید ذخیره شوند."
+                    }
+                  },
+                  "short_description": "یک جفت کلید/مقدار را در ذخیره‌سازی داده‌های کلید/مقدار لابراتوار اپلیکیشن‌سازی ذخیره می‌کند و پس از پایان عملیات، تابع فراخوانی برگشتی را به کار می‌گیرد."
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "آدرس وب سرویسی که داده‌ها را بازیابی می‌کند."
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "شیء"
+                    }
+                  }
+                }
+              },
+              "name": "داده‌ها"
+            },
+            "functions": {
+              "name": "توابع"
+            },
+            "maker": {
+              "expressions": {
+                "pinMode": {
+                  "palette_params": {
+                    "mode": {
+                      "type": "رشته"
+                    },
+                    "pin": {
+                      "type": "عدد"
+                    }
+                  }
+                }
+              },
+              "name": "سازنده"
+            },
+            "math": {
+              "expressions": {
+                "mathPow": {
+                  "palette_params": {
+                    "x": {
+                      "type": "عدد"
+                    },
+                    "y": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "x": {
+                      "type": "عدد"
+                    },
+                    "y": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "حداکثر عدد برگردانده"
+                    },
+                    "min": {
+                      "description": "حداقل عدد برگردانده"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "حداکثر عدد برگردانده"
+                    },
+                    "min": {
+                      "description": "حداقل عدد برگردانده"
+                    }
+                  }
+                }
+              },
+              "name": "ریاضی"
+            },
+            "micro_bit": {
+              "expressions": {
+                "ledScreen.off": {
+                  "palette_params": {
+                    "x": {
+                      "type": "عدد"
+                    },
+                    "y": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "ledScreen.on": {
+                  "palette_params": {
+                    "x": {
+                      "type": "عدد"
+                    },
+                    "y": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "ledScreen.scrollNumber": {
+                  "palette_params": {
+                    "number": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "ledScreen.scrollString": {
+                  "palette_params": {
+                    "String": {
+                      "type": "رشته"
+                    }
+                  }
+                },
+                "ledScreen.toggle": {
+                  "palette_params": {
+                    "x": {
+                      "type": "عدد"
+                    },
+                    "y": {
+                      "type": "عدد"
+                    }
+                  }
+                }
+              }
+            },
+            "turtle": {
+              "expressions": {
+                "arcLeft": {
+                  "short_description": "لاکپشت را در مسیری قوس‌دار و پیوسته، به سمت چپ جلو می‌برد."
+                },
+                "getX": {
+                  "short_description": "مختصات x فعلی لاک‌پشت را بر حسب پیکسل به دست می‌آورد."
+                },
+                "getY": {
+                  "short_description": "مختصات y فعلی لاک‌پشت را بر حسب پیکسل به دست می‌آورد."
+                },
+                "hide": {
+                  "short_description": "لاک‌پشت را در مکان فعلی خود نامرئی می‌کند."
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "باید مشخص کنید که می‌خواهید لاک‌پشت چند پیکسل به سمت راست حرکت کند."
+                    },
+                    "y": {
+                      "description": "باید مشخص کنید که می‌خواهید لاک‌پشت چند پیکسل به سمت پایین حرکت کند."
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "short_description": "لاک‌پشت را به تعداد پیکسلی که معین شده است، از جهت فعلی به عقب حرکت می‌دهد."
+                },
+                "moveForward": {
+                  "short_description": "لاک‌پشت را به تعداد پیکسلی که معین شده است، از جهت فعلی به جلو حرکت می‌دهد."
+                },
+                "moveTo": {
+                  "short_description": "لاک‌پشت را به سمت موقعیت خاصی (x,y) روی صفحه حرکت می‌دهد."
+                },
+                "penColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "رشته"
+                    }
+                  },
+                  "short_description": "رنگ قلمی را که لاک‌پشت برای ترسیم خطوط و نقاط از آن استفاده می‌کند، تنظیم می‌کند."
+                },
+                "penDown": {
+                  "short_description": "قلم را پایین می‌گذارد تا لاک‌پشت در حین حرکت، پشت سر خود خط بکشد."
+                },
+                "penRGB": {
+                  "palette_params": {
+                    "r": {
+                      "type": "عدد"
+                    }
+                  },
+                  "short_description": "با استفاده از مقادیر RGBA، رنگ قلمی را که لاک‌پشت برای ترسیم خطوط و نقاط از آن استفاده می‌کند، تنظیم می‌کند."
+                },
+                "penUp": {
+                  "short_description": "قلم را برمی‌دارد تا لاک‌پشت هنگام حرکت، خطی ترسیم نکند."
+                },
+                "penWidth": {
+                  "short_description": "عرض خطی که لاک‌پشت هنگام حرکت پشت سرش ترسیم می‌کند را بر حسب پیکسل تنظیم می‌کند."
+                },
+                "show": {
+                  "short_description": "لاک‌پشت را در مکان فعلی خود قابل‌رویت می‌کند."
+                },
+                "speed": {
+                  "short_description": "سرعت اجرای اپلیکیشن را تنظیم می‌کند که شامل سرعت لاک‌پشت نیز می‌شود."
+                },
+                "turnLeft": {
+                  "short_description": "لاک‌پشت را با زاویه معین به سمت چپ می‌چرخاند. موقعیت لاک‌پشت ثابت می‌ماند."
+                },
+                "turnRight": {
+                  "short_description": "لاک‌پشت را با زاویه معین به سمت راست می‌چرخاند. موقعیت لاک‌پشت ثابت می‌ماند."
+                },
+                "turnTo": {
+                  "short_description": "جهت لاک‌پشت را به یک زاویه خاص تغییر می‌دهد. 0 بالا، 90 راست، 180 پایین و 270 چپ است."
+                }
+              }
+            },
+            "ui_controls": {
+              "expressions": {
+                "button": {
+                  "short_description": "دکمه‌ای روی صفحه ایجاد می‌کند که متن ارائه‌شده و ارجاع‌شده توسط شناسه موجود را در مکان پیش‌فرض (0,0) نشان می‌دهد."
+                },
+                "getProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "رشته"
+                    },
+                    "property": {
+                      "type": "رشته"
+                    }
+                  }
+                },
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "کوچک و بزرگ شدن"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "تابع"
+                    },
+                    "id": {
+                      "type": "رشته"
+                    },
+                    "type": {
+                      "type": "رشته"
+                    }
+                  }
+                },
+                "playSound": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "بولی"
+                    }
+                  },
+                  "short_description": "فایل صوتی MP3 از آدرس مشخص شده را پخش می‌کند."
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "gender": {
+                      "type": "رشته"
+                    },
+                    "language": {
+                      "type": "رشته"
+                    },
+                    "text": {
+                      "type": "رشته"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "a": {
+                      "type": "عدد"
+                    },
+                    "b": {
+                      "type": "عدد"
+                    },
+                    "g": {
+                      "type": "عدد"
+                    },
+                    "r": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "رشته"
+                    },
+                    "property": {
+                      "description": "ویژگی که باید تغییر داده شود.",
+                      "type": "رشته"
+                    }
+                  },
+                  "short_description": "مقدار یکی از ویژگی‌های عنصر مشخص‌شده را تغییر می‌دهد."
+                },
+                "setScreen": {
+                  "short_description": "صفحه را مطابق با screenId تعیین‌شده تنظیم می‌کند."
+                },
+                "showElement": {
+                  "short_description": "عنصر با شناسه معین را نشان می‌دهد."
+                },
+                "textLabel": {
+                  "short_description": "یک برچسب متنی روی صفحه ایجاد می‌کند که متن ارائه‌شده و ارجاع‌شده توسط شناسه معین را در مکان پیش‌فرض (0,0) نشان می‌دهد."
+                }
+              }
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "palette_params": {
+                    "key": {
+                      "type": "رشته"
+                    }
+                  },
+                  "return_value": "هیچکدام"
+                },
+                "declareAssign_list_123": {
+                  "short_description": "یک آرایه را معرفی کرده و آن را به یک متغیر اختصاص دهید"
+                },
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "انتخاب ماجراجویی خود"
+                    }
+                  }
+                },
+                "declareAssign_x": {
+                  "short_description": "یک مقدار اولیه را به یک متغیر اعلام و نسبت می‌دهد."
+                },
+                "declareNoAssign_x": {
+                  "short_description": "متغیری را با نام داده شده اعلام می‌کند."
+                },
+                "getValue": {
+                  "palette_params": {
+                    "key": {
+                      "type": "رشته"
+                    }
+                  }
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "رشته‌ای که باید جستجو شود."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "رشته‌ای که باید جستجو شود."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "طول رشته"
+                }
+              },
+              "name": "متغیرها"
+            }
+          },
+          "description": "لابراتوار اپ (App Lab) یک محیط برنامه‌نویسی است که می‌توانید در آن برنامه‌های ساده‌ای بسازید. اپ طراحی کنید و با کمک جاوااسکریپت یا بلوک‌ها آنرا کدنویسی کنید تا کار کنند. سپس می‌توانید اپ خود را ظرف چند ثانیه به اشتراک بگذارید.",
+          "name": "لابراتوار اپ"
+        },
+        "gamelab": {
+          "categories": {
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "تعداد میلی‌ثانیه‌هایی که قبل از هر بار اجرای تابع سپری می‌شود."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "زمان انتظار بر حسب میلی‌ثانیه که قبل از اجرای تابع سپری می‌شود."
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "expressions": {
+                "arc": {
+                  "palette_params": {
+                    "h": {
+                      "type": "عدد"
+                    },
+                    "start": {
+                      "type": "عدد"
+                    },
+                    "stop": {
+                      "type": "عدد"
+                    },
+                    "w": {
+                      "type": "عدد"
+                    },
+                    "x": {
+                      "type": "عدد"
+                    },
+                    "y": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "background": {
+                  "palette_params": {
+                    "color": {
+                      "type": "رشته"
+                    }
+                  }
+                },
+                "ellipse": {
+                  "palette_params": {
+                    "h": {
+                      "type": "عدد"
+                    },
+                    "w": {
+                      "type": "عدد"
+                    },
+                    "x": {
+                      "type": "عدد"
+                    },
+                    "y": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "fill": {
+                  "palette_params": {
+                    "color": {
+                      "type": "رشته"
+                    }
+                  }
+                },
+                "line": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "عدد"
+                    },
+                    "x2": {
+                      "type": "عدد"
+                    },
+                    "y1": {
+                      "type": "عدد"
+                    },
+                    "y2": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "point": {
+                  "palette_params": {
+                    "x": {
+                      "type": "عدد"
+                    },
+                    "y": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "h": {
+                      "type": "عدد"
+                    },
+                    "w": {
+                      "type": "عدد"
+                    },
+                    "x": {
+                      "type": "عدد"
+                    },
+                    "y": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "regularPolygon": {
+                  "palette_params": {
+                    "sides": {
+                      "type": "عدد"
+                    },
+                    "size": {
+                      "type": "عدد"
+                    },
+                    "x": {
+                      "type": "عدد"
+                    },
+                    "y": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "a": {
+                      "type": "عدد"
+                    },
+                    "b": {
+                      "type": "عدد"
+                    },
+                    "g": {
+                      "type": "عدد"
+                    },
+                    "r": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "ستاره"
+                    }
+                  },
+                  "palette_params": {
+                    "x1": {
+                      "type": "عدد"
+                    },
+                    "x2": {
+                      "type": "عدد"
+                    },
+                    "y1": {
+                      "type": "عدد"
+                    },
+                    "y2": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "stroke": {
+                  "palette_params": {
+                    "color": {
+                      "type": "رشته"
+                    }
+                  }
+                },
+                "strokeWeight": {
+                  "palette_params": {
+                    "size": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "text": {
+                  "palette_params": {
+                    "height": {
+                      "type": "عدد"
+                    },
+                    "str": {
+                      "type": "رشته"
+                    },
+                    "width": {
+                      "type": "عدد"
+                    },
+                    "x": {
+                      "type": "عدد"
+                    },
+                    "y": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "textAlign": {
+                  "palette_params": {
+                    "horiz": {
+                      "type": "رشته"
+                    },
+                    "vert": {
+                      "type": "رشته"
+                    }
+                  }
+                },
+                "textFont": {
+                  "palette_params": {
+                    "font": {
+                      "type": "رشته"
+                    }
+                  }
+                },
+                "textSize": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "عدد"
+                    }
+                  }
+                }
+              },
+              "name": "ترسیم"
+            },
+            "functions": {
+              "name": "توابع"
+            },
+            "game_lab": {
+              "expressions": {
+                "keyDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "رشته"
+                    }
+                  }
+                },
+                "keyWentDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "رشته"
+                    }
+                  }
+                },
+                "keyWentUp": {
+                  "palette_params": {
+                    "code": {
+                      "type": "رشته"
+                    }
+                  }
+                },
+                "mouseDown": {
+                  "palette_params": {
+                    "button": {
+                      "type": "رشته"
+                    }
+                  }
+                },
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "اسپرایت‌"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "اسپرایت‌"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "سیاه و سفید (افکت)"
+                    }
+                  },
+                  "palette_params": {
+                    "button": {
+                      "type": "رشته"
+                    }
+                  }
+                },
+                "mouseWentUp": {
+                  "palette_params": {
+                    "button": {
+                      "type": "رشته"
+                    }
+                  }
+                },
+                "playSound": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "بولی"
+                    },
+                    "url": {
+                      "type": "رشته"
+                    }
+                  },
+                  "short_description": "فایل صوتی MP3 از آدرس مشخص شده را پخش می‌کند."
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "gender": {
+                      "type": "رشته"
+                    },
+                    "language": {
+                      "type": "رشته"
+                    },
+                    "text": {
+                      "type": "رشته"
+                    }
+                  }
+                },
+                "showMobileControls": {
+                  "content": "کنترل‌های موبایل که در زیر فضای بازی قابل مشاهده‌اند را تغییر می‌دهد.",
+                  "palette_params": {
+                    "dpadFourWay": {
+                      "type": "بولی"
+                    },
+                    "dpadVisible": {
+                      "type": "بولی"
+                    },
+                    "mobileOnly": {
+                      "type": "بولی"
+                    },
+                    "spaceButtonVisible": {
+                      "type": "بولی"
+                    }
+                  },
+                  "short_description": "کنترل‌های موبایل که در زیر فضای بازی قابل مشاهده‌اند را تغییر می‌دهد."
+                },
+                "stopSound": {
+                  "palette_params": {
+                    "url": {
+                      "type": "رشته"
+                    }
+                  }
+                }
+              },
+              "name": "لابراتوار بازی"
+            },
+            "groups": {
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "اسپرایت‌"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "اسپرایت‌"
+                    }
+                  }
+                },
+                "get": {
+                  "palette_params": {
+                    "i": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "pointToEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "عدد"
+                    },
+                    "y": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "اسپرایت‌"
+                    }
+                  }
+                },
+                "setAnimationEach": {
+                  "palette_params": {
+                    "label": {
+                      "type": "رشته"
+                    }
+                  }
+                },
+                "setColliderEach": {
+                  "palette_params": {
+                    "height": {
+                      "type": "عدد"
+                    },
+                    "rotationOffset": {
+                      "type": "عدد"
+                    },
+                    "type": {
+                      "type": "رشته"
+                    },
+                    "width/radius": {
+                      "type": "عدد"
+                    },
+                    "yOffset": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "رنگ"
+                    }
+                  }
+                },
+                "setHeightEach": {
+                  "palette_params": {
+                    "height": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "setLifetimeEach": {
+                  "palette_params": {
+                    "lifetime": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "setMirrorXEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "setMirrorYEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "setRotateToDirectionEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "بولی"
+                    }
+                  }
+                },
+                "setRotationEach": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "setRotationSpeedEach": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "setScaleEach": {
+                  "palette_params": {
+                    "scale": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "setSpeedAndDirectionEach": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "عدد"
+                    },
+                    "speed": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "رنگ"
+                    }
+                  }
+                },
+                "setVelocityEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "عدد"
+                    },
+                    "y": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "setVelocityXEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "setVelocityYEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "setVisibleEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "بولی"
+                    }
+                  }
+                },
+                "setWidthEach": {
+                  "palette_params": {
+                    "width": {
+                      "type": "عدد"
+                    }
+                  }
+                }
+              },
+              "name": "گروه‌ها"
+            },
+            "math": {
+              "expressions": {
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "value1": {
+                      "type": "عدد"
+                    },
+                    "value2": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "حداکثر عدد برگردانده"
+                    },
+                    "min": {
+                      "description": "حداقل عدد برگردانده"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "حداکثر عدد برگردانده"
+                    },
+                    "min": {
+                      "description": "حداقل عدد برگردانده"
+                    }
+                  }
+                }
+              },
+              "name": "ریاضی"
+            },
+            "sprites": {
+              "expressions": {
+                "createSprite": {
+                  "palette_params": {
+                    "height": {
+                      "type": "عدد"
+                    },
+                    "width": {
+                      "type": "عدد"
+                    },
+                    "x": {
+                      "type": "عدد"
+                    },
+                    "y": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "مارپیچ (افکت)"
+                    }
+                  }
+                },
+                "mirrorX": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "mirrorY": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "pointTo": {
+                  "palette_params": {
+                    "x": {
+                      "type": "عدد"
+                    },
+                    "y": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "setAnimation": {
+                  "palette_params": {
+                    "label": {
+                      "type": "رشته"
+                    }
+                  }
+                },
+                "setCollider": {
+                  "palette_params": {
+                    "height": {
+                      "type": "عدد"
+                    },
+                    "rotationOffset": {
+                      "type": "عدد"
+                    },
+                    "type": {
+                      "type": "رشته"
+                    },
+                    "width/radius": {
+                      "type": "عدد"
+                    },
+                    "xOffset": {
+                      "type": "عدد"
+                    },
+                    "yOffset": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "setFrame": {
+                  "palette_params": {
+                    "frame": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "setSpeedAndDirection": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "عدد"
+                    },
+                    "speed": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "setVelocity": {
+                  "palette_params": {
+                    "x": {
+                      "type": "عدد"
+                    },
+                    "y": {
+                      "type": "عدد"
+                    }
+                  }
+                },
+                "sprite.height": {
+                  "return_value": "ارتفاع اسپرایت."
+                },
+                "sprite.width": {
+                  "return_value": "عرض اسپرایت."
+                }
+              },
+              "name": "اسپرایت"
+            },
+            "variables": {
+              "expressions": {
+                "assign_x": {
+                  "short_description": "یک مقدار به یکی از متغییرهای موجود بدهید. برای مثال x=0;"
+                },
+                "declareAssign_x": {
+                  "short_description": "یک مقدار اولیه را به یک متغیر اعلام و نسبت می‌دهد."
+                },
+                "declareNoAssign_x": {
+                  "short_description": "متغیری را با نام داده شده اعلام می‌کند."
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "رشته‌ای که باید جستجو شود."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "رشته‌ای که باید جستجو شود."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "طول رشته"
+                }
+              },
+              "name": "متغیرها"
+            }
+          },
+          "name": "لابراتوار بازی"
+        },
+        "weblab": {
+          "name": "لابراتوار شبکه"
+        }
+      }
+    }
+  }
+}

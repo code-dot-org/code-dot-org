@@ -85,6 +85,10 @@ eu:
           lesson_groups:
             required:
               display_name: Bista orokorra
+        angelina-playground:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Ausazkoa
         artist:
           description: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
           description_short: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
@@ -1075,7 +1079,10 @@ eu:
           description_short: Esploratu Minecraft mundu bat kodearen bitartez.
           student_description: Erabili kode blokeak Steve edo Alex eramateko abentura
             batera Minecraft mundu honetan.
-          title: Minecraft Kode Ordua
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Joku askea
         netsim:
           title: Internet simulagailua
         nevada-standards-aligned-fifth-grade-2023:
@@ -1185,6 +1192,19 @@ eu:
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
           description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
           student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Itzuliak
+            lesson-4:
+              name: Baldintzak
+          title: Konputazio zientzetarako sarrera
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Gertaerak
+            lesson-4:
+              name: Jokabideak
         soccer:
           name: futbola
         spelling-bee:
@@ -1260,7 +1280,22 @@ eu:
           lesson_groups:
             csf_sprites:
               display_name: Pertsonaiak
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Sarrera
+          lessons:
+            lesson-7:
+              name: Sarrera
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Sarrera
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
+              name: Sarrera
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
               name: Sarrera

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import {PrintLoginCardsButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import PrintLoginCards from '@cdo/apps/templates/manageStudents/PrintLoginCards';
@@ -71,6 +72,7 @@ class SectionLoginInfo extends React.Component {
         ) && (
           <OAuthLogins sectionId={section.id} loginType={section.loginType} />
         )}
+        {section.loginType === SectionLoginType.lti_v1 && <LtiLogins />}
       </div>
     );
   }
@@ -83,6 +85,18 @@ export default connect(state => ({
     state.teacherSections.sections[state.teacherSections.selectedSectionId],
   students: state.teacherSections.selectedStudents,
 }))(SectionLoginInfo);
+
+class LtiLogins extends React.Component {
+  render() {
+    return (
+      <div>
+        <h2 style={styles.heading}>{i18n.loginInfoLtiSetupHeader()}</h2>
+        <SafeMarkdown markdown={i18n.loginInfoLtiSetupBody()} />
+        <SignInInstructions loginType={SectionLoginType.lti_v1} />
+      </div>
+    );
+  }
+}
 
 class OAuthLogins extends React.Component {
   static propTypes = {
@@ -364,7 +378,7 @@ const styles = {
     padding: 10,
     margin: 8,
     float: 'left',
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: 'dimgray',
     pageBreakInside: 'avoid',
   },

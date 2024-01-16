@@ -31,11 +31,11 @@ module Api::V1::Pd
       response = JSON.parse(@response.body, symbolize_names: true)
 
       assert_equal 'CS Discoveries', response[:course_name]
-      assert_not_empty response[:questions]
-      assert_not_empty response[:this_workshop]
+      refute_empty response[:questions]
+      refute_empty response[:this_workshop]
       assert_equal 4, response[:this_workshop][:'Day 5'][:general][:response_count]
 
-      assert_not_empty response[:workshop_rollups]
+      refute_empty response[:workshop_rollups]
       general_rollup = response[:workshop_rollups][:general]
       assert_equal 5.5, general_rollup[:single_workshop][:averages][:teacher_engagement][:average]
     end
@@ -67,9 +67,9 @@ module Api::V1::Pd
       assert_equal 2, day_0_general_response['response_count']
       matrix_response = day_0_general_response['surveys/pd/summer_workshop_pre_survey_test.0']['teaching_cs_matrix']
 
-      assert_not_nil matrix_response['committed_to_teaching_cs']
-      assert_not_nil matrix_response['like_teaching_cs']
-      assert_not_nil matrix_response['skills_cs']
+      refute_nil matrix_response['committed_to_teaching_cs']
+      refute_nil matrix_response['like_teaching_cs']
+      refute_nil matrix_response['skills_cs']
     end
 
     test 'rollup does not fail if there are no rollup responses' do
@@ -81,7 +81,7 @@ module Api::V1::Pd
       assert_response :success
       response = JSON.parse(@response.body)
 
-      assert_not_empty response['workshop_rollups']['general']['single_workshop']
+      refute_empty response['workshop_rollups']['general']['single_workshop']
       assert_equal 0, response['workshop_rollups']['general']['single_workshop']['response_count']
       assert_nil response['workshop_rollups']['general']['averages']
     end
@@ -100,11 +100,11 @@ module Api::V1::Pd
       response = JSON.parse(@response.body).with_indifferent_access
 
       assert_equal 'CS Fundamentals', response[:course_name]
-      assert_not_empty response[:questions]
-      assert_not_empty response[:this_workshop]
+      refute_empty response[:questions]
+      refute_empty response[:this_workshop]
       assert_equal 5, response[:this_workshop]['Post Workshop'][:general][:response_count]
 
-      assert_not_empty response[:workshop_rollups]
+      refute_empty response[:workshop_rollups]
       general_rollup = response[:workshop_rollups][:general]
       facilitator_rollup = response[:workshop_rollups][:facilitator]
       assert_equal 4.6, general_rollup[:single_workshop][:averages][:teacher_engagement][:average]
@@ -131,11 +131,11 @@ module Api::V1::Pd
       response = JSON.parse(@response.body).with_indifferent_access
 
       assert_equal 'CS Fundamentals', response[:course_name]
-      assert_not_empty response[:questions]
-      assert_not_empty response[:this_workshop]
+      refute_empty response[:questions]
+      refute_empty response[:this_workshop]
       assert_equal 6, response[:this_workshop]['Post Workshop'][:general][:response_count]
 
-      assert_not_empty response[:workshop_rollups]
+      refute_empty response[:workshop_rollups]
 
       general_rollup = response[:workshop_rollups][:general]
       assert_equal 6, general_rollup[:overall_facilitator][facilitator_id.to_s.to_sym][:response_count]
@@ -239,7 +239,7 @@ module Api::V1::Pd
       overall_facilitator = response[:this_workshop]['Post Workshop'][:facilitator][:'surveys/pd/workshop_csf_intro_post_test.0']
       facilitator_effectiveness = overall_facilitator[:facilitator_effectiveness]
       # Verify see results for facilitator 1
-      assert_not_nil facilitator_effectiveness[facilitator_1_id][:on_track]
+      refute_nil facilitator_effectiveness[facilitator_1_id][:on_track]
       # Verify do not see results for facilitator 2
       assert_nil facilitator_effectiveness[facilitator_2_id]
 

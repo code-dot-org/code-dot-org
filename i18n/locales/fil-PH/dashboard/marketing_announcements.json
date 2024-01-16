@@ -1,0 +1,24 @@
+{
+  "banners": {
+    "superhero": {
+      "title": "",
+      "body": "",
+      "buttonText": "Dagdagan ang Kaalaman"
+    },
+    "hoc-2023": {
+      "title": "Hour of Code: Pagigigng Malikhain gamit ang AI",
+      "body": "Sumali sa milyun-milyong tao sa buong mundo sa pag-organisa ng isang oras ng pag-coding, na may AI o walang AI at matuto kung paano gumagana ang AI. Maaaring gawin ito ng sinuman, saanman. Hindi kailangan ng karanasan.",
+      "buttonText": "Matuto nang higit pa"
+    },
+    "hoc-2023-dance-ai": {
+      "title": "",
+      "body": "Alamin ang tungkol sa mga konsepto ng artificial intelligence (AI) upang lumikha ng sarili mong virtual dance party na nagpapakita ng mga nangungunang artist ngayon. Sa dose-dosenang kanta na mapagpipilian, abutin ang bawat mag-aaral anuman ang panlasa nila sa musika. Oras na upang ipagmalaki ang mga gawa mo!",
+      "buttonText": "Matuto nang higit pa"
+    },
+    "co-teacher": {
+      "title": "",
+      "body": "",
+      "buttonText": "Matuto nang higit pa"
+    }
+  }
+}

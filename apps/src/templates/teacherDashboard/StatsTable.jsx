@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import DCDO from '@cdo/apps/dcdo';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 import wrappedSortable from '../tables/wrapped_sortable';
@@ -64,11 +63,9 @@ class StatsTable extends Component {
   getColumns = sortable => {
     const columns = [this.nameColumn(sortable)];
 
-    if (!!DCDO.get('family-name-features', false)) {
-      if (this.props.participantType === 'student') {
-        // Only in non-PL sections.
-        columns.push(this.familyNameColumn(sortable));
-      }
+    // Only include family name in non-PL sections
+    if (this.props.participantType === 'student') {
+      columns.push(this.familyNameColumn(sortable));
     }
 
     columns.push(this.completedLevelsCountColumn(sortable));

@@ -1,0 +1,24 @@
+{
+  "banners": {
+    "superhero": {
+      "title": "Pomóż swoim uczniom stać się superbohaterami!",
+      "body": "Dołącz do naszego wysoce wspierającego programu rozwoju zawodowego dla nauczycieli.",
+      "buttonText": "Dowiedz się więcej"
+    },
+    "hoc-2023": {
+      "title": "Godzina Kodowania: Kreatywność dzięki sztucznej inteligencji",
+      "body": "Dołącz do milionów ludzi na całym świecie organizując Godzinę Kodowania ze sztuczną inteligencją lub bez niej i ucząc się, jak działa sztuczna inteligencja. Każdy, gdziekolwiek może to zrobić. Nie potrzeba doświadczenia.",
+      "buttonText": "Dowiedz się więcej"
+    },
+    "hoc-2023-dance-ai": {
+      "title": "Potańcówka: edycja AI",
+      "body": "",
+      "buttonText": "Dowiedz się więcej"
+    },
+    "co-teacher": {
+      "title": "Nowy! Dodaj współnauczycieli do swoich sekcji",
+      "body": "Usprawnij zarządzanie klasą, dodając współnauczycieli ze strony „Edytuj szczegóły sekcji”.",
+      "buttonText": "Dowiedz się więcej"
+    }
+  }
+}

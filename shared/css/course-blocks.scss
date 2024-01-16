@@ -5,8 +5,7 @@
 
 .twolineheader {
   h2 {
-    font-family: $gotham-regular;
-    font-weight: normal;
+    @include main-font-regular;
     color: $purple;
     font-size: 24px;
     margin-bottom: 0px;
@@ -17,8 +16,7 @@
     margin-top: 0px;
     line-height: 30px;
     font-size: 30px;
-    font-family: $gotham-bold;
-    font-weight: normal;
+    @include main-font-semi-bold;
   }
 }
 
@@ -129,7 +127,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    font-family: $gotham-bold;
+    @include main-font-semi-bold;
     display: block;
     font-size: 24px;
     line-height: 30px;
@@ -140,8 +138,7 @@
   .text {
     font-size: 14px;
     line-height: 17px;
-    font-family: $gotham-regular;
-    font-weight: normal;
+    @include main-font-regular;
     color: $neutral_dark;
   }
 
@@ -202,7 +199,7 @@
     overflow: hidden;
     font-size: 24px;
     line-height: 28px;
-    font-family: $gotham-bold;
+    @include main-font-semi-bold;
     float: none;
     width: 94%;
   }
@@ -211,8 +208,7 @@
     margin: 0 0 0 0;
     font-size: 14px;
     line-height: 17px;
-    font-family: $gotham-regular;
-    font-weight: normal;
+    @include main-font-regular;
     color: $charcoal;
   }
 
@@ -220,8 +216,7 @@
     margin: 12px 0 0 0;
     font-size: 13px;
     line-height: 17px;
-    font-family: $gotham-regular;
-    font-weight:normal;
+    @include main-font-regular;
     color:$charcoal;
   }
 }
@@ -255,7 +250,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 24px;
-    font-family: $gotham-bold;
+    @include main-font-semi-bold;
   }
 
   h4 {
@@ -265,7 +260,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 14px;
-    font-family: $gotham-bold;
+    @include main-font-semi-bold;
   }
 
   .smalltext {
@@ -273,8 +268,7 @@
     padding-right: 5px;
     font-size: 13px;
     line-height: 17px;
-    font-family: $gotham-regular;
-    font-weight:normal;
+    @include main-font-regular;
     color:$charcoal;
 
     html[dir=rtl] & {

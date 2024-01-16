@@ -47,7 +47,7 @@ module Pd::Application
 
     PROGRAMS = {
       csd: 'Computer Science Discoveries (appropriate for 6th - 10th grade)',
-      csp: 'Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)',
+      csp: 'Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or non-AP introductory course)',
       csa: 'Computer Science A (appropriate for 10th - 12th grade, and can be implemented as an AP or non-AP introductory Java programming course)'
     }.freeze
     PROGRAM_OPTIONS = PROGRAMS.values
@@ -123,6 +123,12 @@ module Pd::Application
     def self.next_year(year)
       current_year_index = APPLICATION_YEARS.index(year)
       current_year_index >= 0 ? APPLICATION_YEARS[current_year_index + 1] : nil
+    end
+
+    # The census lags by a year, so the census year is the first application year minus 1
+    # For example, for the 2023-2025 application year, we want to look at 2023 census data
+    def census_year
+      application_year.split('-').first.to_i - 1
     end
 
     # @override
@@ -315,8 +321,16 @@ module Pd::Application
       workshops.first
     end
 
+    def enrollment
+      Pd::Enrollment.find_by(user: user, workshop: pd_workshop_id)
+    end
+
+    def enrolled?
+      enrollment.present?
+    end
+
     def friendly_registered_workshop
-      Pd::Enrollment.find_by(user: user, workshop: pd_workshop_id) ? 'Yes' : 'No'
+      enrolled? ? 'Yes' : 'No'
     end
 
     def self.prefetch_associated_models(applications)
@@ -367,7 +381,7 @@ module Pd::Application
 
     def workshop_present_if_required_for_status
       if regional_partner&.applications_decision_emails == RegionalPartner::SENT_BY_SYSTEM &&
-        WORKSHOP_REQUIRED_STATUSES.include?(status) && !pd_workshop_id
+          WORKSHOP_REQUIRED_STATUSES.include?(status) && !pd_workshop_id
         errors.add :status, "#{status} requires workshop to be assigned"
       end
     end
@@ -551,8 +565,7 @@ module Pd::Application
 
         program: PROGRAM_OPTIONS,
 
-        csd_which_grades: (6..12).map(&:to_s) <<
-          "Not sure yet if my school plans to offer CS Discoveries in the #{year} school year",
+        csd_which_grades: (6..12).map(&:to_s),
 
         csd_course_hours_per_week: [
           '5 or more course hours per week',
@@ -566,8 +579,7 @@ module Pd::Application
 
         csd_terms_per_year: COMMON_OPTIONS[:terms_per_year],
 
-        csp_which_grades: (9..12).map(&:to_s) <<
-          "Not sure yet if my school plans to offer CS Principles in the #{year} school year",
+        csp_which_grades: (9..12).map(&:to_s),
 
         csp_course_hours_per_week: [
           'More than 5 course hours per week',
@@ -585,6 +597,13 @@ module Pd::Application
           'We will offer both introductory and AP-level courses'
         ],
 
+        will_teach: [
+          'Yes',
+          'No',
+          "No, but I plan to in the #{NEXT_APPLICATION_YEAR} school year",
+          "Not sure"
+        ],
+
         csp_ap_exam: [
           'Yes, all students will be expected to take the AP CS Principles exam',
           "Students will be encouraged to take the exam, but it won't be required",
@@ -595,8 +614,7 @@ module Pd::Application
 
         csa_phone_screen: [YES, NO],
 
-        csa_which_grades: (9..12).map(&:to_s) <<
-          "Not sure yet if my school plans to offer CSA in the #{year} school year",
+        csa_which_grades: (9..12).map(&:to_s),
 
         csa_how_offer: [
           'As a non-AP introductory Java programming course',
@@ -638,12 +656,6 @@ module Pd::Application
           "I don't have experience teaching any of these courses"
         ],
         completing_on_behalf_of_someone_else: [YES, NO],
-        replace_existing: [
-          YES,
-          "No, this course will be added to the schedule in addition to an existing computer science course",
-          "No, computer science is new to my school",
-          TEXT_FIELDS[:i_dont_know_explain]
-        ]
       }
     end
 
@@ -670,13 +682,13 @@ module Pd::Application
         previous_yearlong_cdo_pd
 
         program
-        enough_course_hours
-        replace_existing
 
         gender_identity
         race
 
         agree
+
+        will_teach
       )
     end
 
@@ -694,16 +706,20 @@ module Pd::Application
           end
         end
 
-        if hash[:program] == PROGRAMS[:csd]
-          required << :csd_which_grades
-        elsif hash[:program] == PROGRAMS[:csp]
-          required << :csp_which_grades
-          required << :csp_how_offer
-        elsif hash[:program] == PROGRAMS[:csa]
-          required << :csa_which_grades
-          required << :csa_how_offer
-          required << :csa_already_know
-          required << :csa_phone_screen
+        # If the applicant will teach the course, we require extra information
+        if hash[:will_teach] == 'Yes'
+          required << :enough_course_hours
+          if hash[:program] == PROGRAMS[:csd]
+            required << :csd_which_grades
+          elsif hash[:program] == PROGRAMS[:csp]
+            required << :csp_which_grades
+            required << :csp_how_offer
+          elsif hash[:program] == PROGRAMS[:csa]
+            required << :csa_which_grades
+            required << :csa_how_offer
+            required << :csa_already_know
+            required << :csa_phone_screen
+          end
         end
 
         if hash[:regional_partner_workshop_ids].presence
@@ -732,7 +748,6 @@ module Pd::Application
         [:able_to_attend_single, TEXT_FIELDS[:unable_to_attend], :able_to_attend_single_explain],
         [:able_to_attend_multiple, TEXT_FIELDS[:no_explain], :able_to_attend_multiple_explain],
         [:committed, TEXT_FIELDS[:no_explain], :committed_other],
-        [:replace_existing, TEXT_FIELDS[:i_dont_know_explain]],
         [:able_to_attend_multiple, TEXT_FIELDS[:not_sure_explain], :able_to_attend_multiple_not_sure_explain],
         [:able_to_attend_multiple, TEXT_FIELDS[:unable_to_attend], :able_to_attend_multiple_unable_to_attend],
         [:how_heard, TEXT_FIELDS[:other_with_text]]
@@ -996,19 +1011,19 @@ module Pd::Application
       case course
       when 'csd'
         meets_minimum_criteria_scores[:csd_which_grades] =
-          (responses[:csd_which_grades] & options[:csd_which_grades].first(5)).any? ? YES : NO
+          (responses[:will_teach] == options[:will_teach].first && options[:csd_which_grades].present?) ? YES : NO
         took_csd_course =
           responses[:previous_yearlong_cdo_pd].include?('CS Discoveries')
         meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csd_course ? NO : YES
       when 'csp'
         meets_minimum_criteria_scores[:csp_which_grades] =
-          (responses[:csp_which_grades] & options[:csp_which_grades].first(4)).any? ? YES : NO
+          (responses[:will_teach] == options[:will_teach].first && options[:csp_which_grades].present?) ? YES : NO
         took_csp_course =
           responses[:previous_yearlong_cdo_pd].include?('CS Principles')
         meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csp_course ? NO : YES
       when 'csa'
         meets_minimum_criteria_scores[:csa_which_grades] =
-          (responses[:csa_which_grades] & options[:csa_which_grades].first(4)).any? ? YES : NO
+          (responses[:will_teach] == options[:will_teach].first && options[:csa_which_grades].present?) ? YES : NO
         took_csa_course = responses[:previous_yearlong_cdo_pd].include?('Computer Science A (CSA)')
         meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csa_course ? NO : YES
       end
@@ -1022,15 +1037,6 @@ module Pd::Application
       if responses[:principal_approval]
         meets_minimum_criteria_scores[:principal_approval] =
           responses[:principal_approval] == principal_options[:do_you_approve].first ? YES : NO
-
-        meets_minimum_criteria_scores[:principal_schedule_confirmed] =
-          if responses[:principal_schedule_confirmed]&.in?(principal_options[:committed_to_master_schedule].slice(0..1))
-            YES
-          elsif responses[:principal_schedule_confirmed] == principal_options[:committed_to_master_schedule][2]
-            NO
-          else
-            nil
-          end
 
         school_stats = get_latest_school_stats(school_id)
 
@@ -1068,13 +1074,20 @@ module Pd::Application
           end
       end
 
+      # Check if a school is not teaching CS according to the access report
+      # If the school is not in the census_summaries table, treat that as not teaching
+      # This is a bit of a confusing double negative but I wanted to keep the YES/NO logic
+      # consistent with the criteria.
+      meets_scholarship_criteria_scores[:not_teaching_in_access_report] =
+        Census::CensusSummary.find_by(school_id: school_id, school_year: census_year)&.does_teach? ? NO : YES
+
       update(
         response_scores: response_scores_hash.deep_merge(
           {
             meets_minimum_criteria_scores: meets_minimum_criteria_scores,
             meets_scholarship_criteria_scores: meets_scholarship_criteria_scores,
           }
-        ) {|key, old, new| key == :replace_existing ? new : old}.to_json
+        ).to_json
       )
     end
 
@@ -1137,8 +1150,6 @@ module Pd::Application
       # Approval application created, now score corresponding teacher application
       principal_response = principal_approval.sanitized_form_data_hash
 
-      replace_course_string = principal_response.values_at(:replace_course, :replace_course_other).compact.join(": ").gsub('::', ':')
-
       principal_school = School.find_by(id: principal_response[:school])
       update_form_data_hash(
         {
@@ -1150,8 +1161,6 @@ module Pd::Application
           principal_school_type: principal_school.try(:school_type),
           principal_school_district: principal_school.try(:district).try(:name),
           principal_approval: principal_response.values_at(:do_you_approve, :do_you_approve_other).compact.join(" "),
-          principal_schedule_confirmed:
-            principal_response.values_at(:committed_to_master_schedule, :committed_to_master_schedule_other).compact.join(" "),
           principal_total_enrollment: principal_response[:total_student_enrollment],
           principal_free_lunch_percent:
             principal_response[:free_lunch_percent] ? format("%0.02f%%", principal_response[:free_lunch_percent]) : nil,
@@ -1168,11 +1177,7 @@ module Pd::Application
             principal_response[:pacific_islander] ? format("%0.02f%%", principal_response[:pacific_islander]) : nil,
           principal_white_percent: principal_response[:white] ? format("%0.02f%%", principal_response[:white]) : nil,
           principal_other_percent: principal_response[:other] ? format("%0.02f%%", principal_response[:other]) : nil,
-          principal_wont_replace_existing_course: replace_course_string,
           principal_send_ap_scores: principal_response[:send_ap_scores],
-          principal_pay_fee: principal_response[:pay_fee],
-          principal_contact_invoicing: principal_response[:contact_invoicing],
-          principal_contact_invoicing_detail: principal_response[:contact_invoicing_detail]
         }
       )
       save!

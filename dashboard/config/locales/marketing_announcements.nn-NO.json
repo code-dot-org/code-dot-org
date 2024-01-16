@@ -1,0 +1,22 @@
+{
+  "nn-NO": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "co-teacher": {
+            "buttonText": "Lær meir"
+          },
+          "hoc-2023": {
+            "buttonText": "Lær meir"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Lær meir"
+          },
+          "superhero": {
+            "buttonText": "Lær meir"
+          }
+        }
+      }
+    }
+  }
+}

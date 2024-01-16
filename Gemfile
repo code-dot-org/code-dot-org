@@ -81,7 +81,6 @@ gem 'rack-cache'
 
 group :development, :test do
   gem 'rerun'
-  gem 'shotgun'
   gem 'thin'
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
@@ -90,6 +89,7 @@ group :development, :test do
   gem 'benchmark-ips'
   gem 'better_errors', '>= 2.7.0'
   gem 'brakeman'
+  gem 'database_cleaner-active_record', '~> 2.1.0'
   gem 'haml-rails' # haml (instead of erb) generators
   gem 'ruby-prof'
   gem 'vcr', require: false
@@ -103,14 +103,17 @@ group :development, :test do
   # For UI testing.
   gem 'cucumber'
   gem 'eyes_selenium', '3.18.4'
+  gem 'fakefs', '~> 2.5.0', require: false
   gem 'minitest', '~> 5.15'
   gem 'minitest-around'
   gem 'minitest-reporters', '~> 1.2.0.beta3'
+  gem 'minitest-spec-context', '~> 0.0.3'
   gem 'minitest-stub-const', '~> 0.6'
   gem 'net-http-persistent'
   gem 'rinku'
-  gem 'rspec'
+  gem 'rspec', require: false
   gem 'selenium-webdriver', '~> 4.0'
+  gem 'simplecov', '~> 0.22.0', require: false
   gem 'spring', '~> 3.1.1'
   gem 'spring-commands-testunit'
   gem 'webdrivers', '~> 5.2'
@@ -154,7 +157,7 @@ gem 'phantomjs', '~> 1.9.7.1'
 gem 'gemoji'
 
 # Authentication and permissions.
-gem 'cancancan', '~> 3.2.0'
+gem 'cancancan', '~> 3.5.0'
 gem 'devise', '~> 4.7.0'
 gem 'devise_invitable', '~> 2.0.2'
 
@@ -207,7 +210,7 @@ gem 'execjs'
 # JavaScript runtime used by ExecJS.
 gem 'mini_racer', group: [:staging, :test, :production, :levelbuilder]
 
-gem 'jwt' # single signon for zendesk
+gem 'jwt', '~> 2.7.0'
 
 # SMS API for send-to-phone feature; 6.0 includes some breaking changes which
 # we'll need to prepare for:
@@ -240,7 +243,7 @@ gem 'aws-sdk-s3'
 gem 'aws-sdk-secretsmanager'
 
 # Lint tools
-group :development, :staging, :levelbuilder do
+group :development, :staging, :levelbuilder, :test do
   gem 'haml_lint', require: false
   gem 'rubocop', '~> 1.28', require: false
   gem 'rubocop-performance', require: false
@@ -347,3 +350,5 @@ gem 'pry', '~> 0.14.0'
 gem 'cld'
 
 gem 'crowdin-api', '~> 1.2.1'
+
+gem "delayed_job_active_record", "~> 4.1"

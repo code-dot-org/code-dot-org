@@ -25,7 +25,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 <a id="how-to-video"></a>
 
-## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! D
 
 ### Dieđit Eaktodáhtolaččaide dalle go Registeret iežat Dáhpáhusa
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. Dá lea maiddái vuohki movt sáhtát dieđihit báikkálaš eaktodáhtolaččaide ahte du skuvla oassálastá. Eaktodáhtolaččat sáhttet leat buorit resursat ja sii sáhttet boahtit du luohkkái hupmat dihtordiehtaga birra dahje dušše veahkehit du ohppiid Kodendiimmu doaimmaiguin.
+When you [sign up your Hour of Code event](/events), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. Dá lea maiddái vuohki movt sáhtát dieđihit báikkálaš eaktodáhtolaččaide ahte du skuvla oassálastá. Eaktodáhtolaččat sáhttet leat buorit resursat ja sii sáhttet boahtit du luohkkái hupmat dihtordiehtaga birra dahje dušše veahkehit du ohppiid Kodendiimmu doaimmaiguin.
 
 ### Movttidahte iežat Ohppiid
 

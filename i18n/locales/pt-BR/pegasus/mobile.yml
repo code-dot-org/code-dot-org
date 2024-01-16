@@ -548,13 +548,9 @@
   volunteer_engineer_submission_subtitle_generic: 'Um total de 100.000 professores vão sediar uma Hora do Código em suas salas de aula este ano, de 7 a 13 dezembro de 2015. Eles querem a sua ajuda! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} professores estão em busca de voluntários. <br>%{num_volunteers} voluntários se inscreveram. Junte-se a eles."
   volunteer_engineer_submission_intro_background: "A Hora do Código é um movimento global que oferece uma introdução de uma hora à ciência da computação e que atinge dezenas de milhões de estudantes em mais de 180 países. Participe você também durante a Semana da Educação em Ciência da Computação, de 7 a 13 de dezembro."
-  volunteer_engineer_submission_intro_recruit: 'Os professores adorariam ter alguém<span style="font-family: ''Gotham 7r'', sans-serif;">apaixonado pelo ensino da ciência da computação</span> que pudesse ajudá-los em suas aulas, ou alguém que pudesse<span style="font-family: ''Gotham 7r'', sans-serif;">inspirar</span> seus alunos falando sobre a gama de possibilidades da ciência da computação (o que pode ser feito por meio de de vídeo conferência).'
   volunteer_engineer_submission_intro_recruit_markdown: "Os professores adorariam ter alguém**apaixonado pelo ensino da ciência da computação** que pudesse ajudá-los em suas aulas, ou alguém que pudesse**inspirar** seus alunos falando sobre a gama de possibilidades da ciência da computação (o que pode ser feito por meio de de vídeo conferência)."
-  volunteer_engineer_submission_intro_guide: "Saiba mais sobre o nosso <a href=\"%{volunteer_guide}\">programa de voluntariado aqui</a>."
   volunteer_engineer_submission_intro_guide_markdown: "Saiba mais sobre o nosso [programa de voluntariado aqui](%{volunteer_guide})."
-  volunteer_engineer_submission_intro_signup: "Por favor, insira as seguintes informações se você é um estudante de ciência da computação ou profissional de software. Você deve ter pelo menos 18 anos de idade para se inscrever como voluntário. Observe que todos os campos que você preencher nesta seção estarão publicamente disponíveis para qualquer um olhando para o <a href=\"/volunteer/local\">mapa de voluntário</a>. Campos marcados com um <span class=\"form-required-field\">*</span> são obrigatórios."
   volunteer_engineer_submission_intro_signup_markdown: "Insira as seguintes informações se você for um estudante de ciência da computação ou profissional de software. Você deve ter pelo menos 18 anos de idade para se inscrever como voluntário. Observe que todos os campos que você preencher nesta seção estarão publicamente disponíveis para qualquer um olhando para o [mapa de voluntários](/volunteer/local). Campos marcados com um _*_ são obrigatórios."
-  volunteer_engineer_submission_intro_links: "É professor(a) e está procurando voluntários? Encontre um voluntário na sua região em nosso <a href=\"%{volunteer_local}\">mapa de voluntários</a>."
   volunteer_engineer_submission_intro_links_markdown: "É professor(a) e está procurando voluntários? Encontre um voluntário na sua região em nosso [mapa de voluntários](%{volunteer_local})."
   volunteer_engineer_submission_update_information: "Atualize suas informações"
   volunteer_engineer_submission_header_shared: "Informações compartilhadas com professores no mapa de voluntários"
@@ -794,7 +790,7 @@
   dashboard_tools: 'Ferramentas: '
   dashboard_curriculum: "Currículo"
   dashboard_curriculum_overview: "Visão geral do currículo do pré ao 5º ano"
-  dashboard_overview: "Visão geral"
+  dashboard_overview: "Visão Geral"
   dashboard_sequence: "Sequência"
   dashboard_framework: "Quadro"
   dashboard_standards: "Padrões"
@@ -1030,7 +1026,7 @@
   flappy-impact-study_name: Flappy Code com pesquisa
   hoc-encryption_name: Criptografia simples
   text-compression_name: Compressão de texto
-  applab_name: "Laboratório de Aplicativo"
+  applab_name: "App Lab"
   gamelab_name: "Laboratório de Jogos"
   basketball_name: "Fazer um jogo de basquete"
   sports_name: "Programe seus próprios jogos esportivos"
@@ -1546,6 +1542,7 @@
   header_report_abuse: "Reportar abuso"
   header_legal: "Termos & Privacidade"
   header_legal_privacy: "Política de Privacidade"
+  header_legal_cookie_notice: "Aviso sobre Cookies"
   header_legal_tos: "Termos de Serviço"
   header_tutorials: "Tutoriais"
   header_screen_reader_hamburger: "Menu"

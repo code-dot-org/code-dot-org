@@ -227,6 +227,24 @@
         "pre-express-2019/Spelling Bee": {
           "name": "Пчелица словарица"
         },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Петље"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Догађаји"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Кондиционали"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Функције"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Променљиве"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Бројачке петље"
+        },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Веселе мапе"
         },
@@ -347,8 +365,53 @@
         "coursef-2022/The Internet": {
           "name": "Интернет"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Час кода 2013"
+        "csd3-2023/Variables": {
+          "name": "Променљиве"
+        },
+        "csd3-2023/Text": {
+          "name": "текст"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Кондиционали"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Брзина"
+        },
+        "csd3-2023/Functions": {
+          "name": "Функције"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Функције"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Функције"
+        },
+        "coursea-2023/Happy Maps": {
+          "name": "Веселе мапе"
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Помери га, помери"
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Запетљанције"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "Велики догађај"
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Бинарне наруквице"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Графиконско - Папирно Програмирање"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Relay programming"
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Услови са картама"
+        },
+        "coursef-2023/The Internet": {
+          "name": "Интернет"
         },
         "artist/Artist": {
           "name": "Уметник"
@@ -373,12 +436,6 @@
         },
         "minecraft/Minecraft Hour of Code Designer": {
           "name": "Мајнкрафт дизајнер - час програмирања"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
         },
         "playlab/Play Lab": {
           "name": "Играоница"
@@ -697,6 +754,9 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Екстремни изазов - Comprehensive"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Час кода 2013"
         },
         "jigsaw/Jigsaw": {
           "name": "Слагалица"

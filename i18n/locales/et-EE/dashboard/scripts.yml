@@ -156,7 +156,7 @@ et:
           description_short: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges, kauges galaktikas.
           student_description: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges, kauges galaktikas.
         mc:
-          title: Minecrafti KoodiTund
+          title: Minecraft Seikleja
           description: Kasuta koodi plokke, et viia Steve või Alex seiklusele läbi selle Minecrafti maailma.
           description_short: Uuri Minecrafti maailma koodi kaudu.
           student_description: Kasuta koodi plokke, et viia Steve või Alex seiklusele läbi selle Minecrafti maailma.
@@ -1517,6 +1517,8 @@ et:
               display_name: Sisu
             lessonGroup-2:
               display_name: Sisu
+        dance-unplugged:
+          title: Unplugged Tantsuõhtu
         spelling-bee:
           title: Sõnamesilane
         csa5-exemplars:
@@ -1992,6 +1994,10 @@ et:
               display_name: Spraidid
             lessonGroup-4:
               display_name: Muutujad
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Tasuta mäng
         csa-frq-practice-2022:
           lessons:
             lesson-4:
@@ -2062,3 +2068,39 @@ et:
               display_name: Tingimuslaused
             lessonGroup-5:
               display_name: Muutujad
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Sissejuhatus
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Sissejuhatus
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Sissejuhatus
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Sissejuhatus
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Uuring
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Sündmused
+            lesson-4:
+              name: Käitumised
+            lesson-5:
+              name: Järgmised sammud
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Tsüklid
+            lesson-4:
+              name: Tingimuslaused
+            lesson-6:
+              name: Järgmised sammud
+          title: Sissejuhatus arvutiõpetusse

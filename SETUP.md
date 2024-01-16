@@ -3,11 +3,21 @@
 
 This document describes how to set up your workstation to develop for Code.org.
 
-You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in a VM). Setup for Windows is more complicated and relatively few developers use it. Make sure you follow the instructions for your platform in the subsections below.
+You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in a VM/WSL). Setup for Windows is more complicated and relatively few developers use it. Make sure you follow the instructions for your platform in the subsections below.
 
 ## Overview
 
+1. Clone the repo, which also may take a while.
+    - The simplest option is to clone via SSH with: `git clone git@github.com:code-dot-org/code-dot-org.git`
+    - The fastest option is to clone via HTTP with: `git clone https://github.com/code-dot-org/code-dot-org.git`. Although faster than SSH, this option requires you to reauthenticate every time you want to update. You will therefore probably want to switch to SSH after the initial clone with `git remote set-url origin git@github.com:code-dot-org/code-dot-org.git`
+
+1. `cd code-dot-org`
+
 1. Request and Configure AWS access (code.org staff) or configure local secrets (open source contributors). See [Configure AWS Access or Secrets](#configure-aws-access-or-secrets) below. This step is not required until rake is first run below, but staff may wish to submit the request first so its ready when rake is.
+    <details> 
+      <summary>Troubleshoot: wrong version of ruby</summary>
+      If you run into issues with your ruby version during this step, you may need to complete the OS-specific  prerequisites below before proceeding. 
+      </details>
 
 1. Install OS-specific prerequisites
    - See the appropriate section below: [macOS](#macos), [Ubuntu](#ubuntu-1804), [Windows](#windows)
@@ -16,12 +26,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
      ```sh
      ruby --version  # --> ruby 3.0.5
      node --version  # --> v18.16.0
-     yarn --version  # --> 1.22.5
      ```
-
-1. If using SSH (recommended): `git clone git@github.com:code-dot-org/code-dot-org.git` , if using HTTPS: `git clone https://github.com/code-dot-org/code-dot-org.git`
-
-1. `cd code-dot-org`
 
 1. `gem install bundler -v 2.3.22`
 
@@ -157,11 +162,11 @@ Setup steps for macOS:
     3. Reload your .zshrc to load **rbenv**: `source ~/.zshrc`
 
 1. Install **Ruby**
-    1. For non-M1 systems (including M1 systems using Rosetta), running `rbenv install` from the project root directory should be sufficient.
+    1. For non-M1 systems (including M1 systems using Rosetta), running `rbenv install --skip-existing` from the project root directory should be sufficient.
     2. For Apple Silicon, special configuration is required to set *libffi* options correctly. The following is a single line to execute.
 
       ```sh
-      optflags="-Wno-error=implicit-function-declaration" LDFLAGS="-L/opt/homebrew/opt/libffi/lib" CPPFLAGS="-I/opt/homebrew/opt/libffi/include" PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig" rbenv install
+      optflags="-Wno-error=implicit-function-declaration" LDFLAGS="-L/opt/homebrew/opt/libffi/lib" CPPFLAGS="-I/opt/homebrew/opt/libffi/include" PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig" rbenv install --skip-existing
       ```
 
 1. *(Optional)* Install **pdftk**, which is not available as a standard Homebrew formula. Skipping this will cause some PDF related tests to fail. See <https://leancrew.com/all-this/2017/01/pdftk/> and <https://github.com/turforlag/homebrew-cervezas/pull/1> for more information about pdftk on macOS.
@@ -181,7 +186,7 @@ Setup steps for macOS:
 
     3. Running `nvm alias default $(cat ./.nvmrc)` will set your default node version for future shells.
 
-1. Install **yarn** via `npm install -g yarn@1.22.19`
+1. Enable **corepack** to install **yarn**: `corepack enable`
 
 1. Install **OpenSSL**
     1. Run `brew install openssl`
@@ -189,10 +194,10 @@ Setup steps for macOS:
 
 1. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
 
-1. Return to the [Overview](#overview) to continue installation and clone the code-dot-org repo. Note that there are additional steps for Apple Silicon (M1) when it comes to `bundle install` and `bundle exec rake ...` commands, which are noted in their respective steps.
+1. Return to the [Overview](#overview) to continue installation and clone the code-dot-org repo. Note that there are additional steps for Apple Silicon (M1) / Intel Mac when it comes to `bundle install` and `bundle exec rake ...` commands, which are noted in their respective steps.
 
-### Ubuntu 18.04
-[Ubuntu 18.04 iso download][ubuntu-iso-url]
+### Ubuntu 20.04
+[Ubuntu 20.04 iso download][ubuntu-iso-url]
 
 Note: Virtual Machine Users should check the [Alternative note](#alternative-use-an-ubuntu-vm) below before starting
 
@@ -201,7 +206,7 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
     * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
 
     * Troubleshoot: `E: Package 'pdftk' has no installation candidate`. If you run into this error, remove `pdftk` from the previous command and run it again. Then try installing `pdftk` another way:
-        * Ubuntu 18.04: `sudo snap install pdftk`. 
+        * Ubuntu 20.04: `sudo snap install pdftk`. 
         * If you can't get `pdftk` installed, it is ok to skip installing this package, and keep in mind that the `PDFMergerTest` test may fail when you try to run the pegasus tests locally.
    
 1. *(If working from an EC2 instance)* `sudo apt-get install -y libreadline-dev libffi-dev`
@@ -215,7 +220,7 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
         ```
 1. Install Node and Nodejs
     1. Install the latest version of [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm)
-    1. `nvm install v18.16.0 && nvm alias default 18.16.0` Install nodejs v18.16.0
+    1. Running `nvm install` or `nvm use` within the project directory will install and use the version specified in [.nvmrc](.nvmrc)
     1. `node --version` Double check the version of node you are using. If it is wrong, then try restarting your terminal.
 1. Ensure rbenv and ruby-build are properly installed
     1. run `rbenv init` and follow the instructions.
@@ -228,13 +233,11 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
     1. **Note:** Ubuntu 22.04 ships with versions of `libssl` and `openssl` that are incompatible with `ruby-build`; see https://github.com/rbenv/ruby-build/discussions/1940 for context
         1. As a result, attempts to run `rbenv install` will fail. To resolve, compile a valid version of `openssl` locally and direct `rbenv` to configure ruby to use it as described here: https://github.com/rbenv/ruby-build/discussions/1940#discussioncomment-2663209
 1. Install Ruby with rbenv
-    1. Execute `rbenv install --skip-existing` from the root directory
+    1. Execute `rbenv install --skip-existing` from the root directory, which will install the version specified in ".ruby-version"
     1. If your PATH is missing `~/.rbenv/shims`, the next two commands might not work. Edit your .bashrc to include the following line:
        `export PATH="$HOME/.rbenv/bin:~/.rbenv/shims:$PATH"`, then run `source .bashrc` for the change to take effect (as seen in [this github issue](https://github.com/rbenv/rbenv/issues/877)).
     1. `rbenv rehash`
-1. Install yarn
-    1. `npm install -g yarn@1.22.5`.
-    1. `yarn --version` Double check the version of yarn is correct.
+1. Enable **corepack** to install **yarn**: `corepack enable`
 1. Make it so that you can run apps tests locally
     1. Add the following to `~/.bashrc` or your desired shell configuration file:
         1. `export CHROME_BIN=$(which chromium-browser)`
@@ -258,8 +261,8 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
     1. Restart your machine. WSL 2 will be the default if your Windows version is sufficiently updated.
     1. `wsl --set-default-version 2`
         1. You may need to [update the WSL 2 Linux kernel](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel)
-1. [Install Ubuntu 20.04](https://www.microsoft.com/store/productId/9NBLGGH4MSV6) (Windows Store link)
-    * If you want to follow the Ubuntu setup exactly, Ubuntu 18.04 is available from the [Microsoft docs](https://docs.microsoft.com/en-us/windows/wsl/install-manual).
+1. [Install Ubuntu 20.04](https://apps.microsoft.com/store/detail/ubuntu-20046-lts/9MTTCL66CPXJ) (Windows Store link)
+    * If you want to follow the Ubuntu setup exactly, Ubuntu 20.04 is available from the [Microsoft docs](https://docs.microsoft.com/en-us/windows/wsl/install-manual).
 1. Make sure virtualization is turned on your BIOS settings.
 1. From the command line, run `wsl`, or from the Start menu, find and launch 'Ubuntu'. When this runs for the first time, WSL will complete installation in the resulting terminal window.
 1. Make it so that you can run apps tests locally. You have two options here:
@@ -274,10 +277,11 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
     * Before updating the root password to empty in SQL (step 10), restart MySQL using `sudo /etc/init.d/mysql restart`
 1. Followed by the [overview instructions](#overview), _with the following observations_:
     * Before running `bundle exec rake install`, restart the mysql service: `sudo service mysql start`
+    * If localhost responds slowly and you have exhausted conventional options (e.g. turning off Firewall during testing), try moving the code-dot-org repo outside of the /mnt/ directory (e.g. ~) to improve responsiveness
 
 ### Alternative: Use an Ubuntu VM
 
-* Option A: Use [VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0) or [Virtual Box](http://download.virtualbox.org/virtualbox/5.1.24/VirtualBox-5.1.24-117012-Win.exe) and an [Ubuntu 18.04 iso image][ubuntu-iso-url]
+* Option A: Use [VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0) or [Virtual Box](http://download.virtualbox.org/virtualbox/5.1.24/VirtualBox-5.1.24-117012-Win.exe) and an [Ubuntu 20.04 iso image][ubuntu-iso-url]
   1. Maximum Disk Size should be set to at least 35.0 GB (the default is 20 GB and it is too small)
   2. Memory Settings for the VM should be 8 GB or higher (Right click the machine -> Settings -> "Memory for this virtual machine"  )
 * Option B: Use vagrant ([install](https://docs.vagrantup.com/v2/installation/)):
@@ -289,7 +293,7 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
 * Option C: Use an Amazon EC2 instance:
   1. Request AWS access from [accounts@code.org](mailto:accounts@code.org) if you haven't already done so.
   1. From the [EC2 Homepage](https://console.aws.amazon.com/ec2), click on "Launch Instance" and follow the wizard:
-     * **Step 1: Choose AMI**: Select Ubuntu Server 18.04 if you want to match our current server version; 20.04 or 22.04 both work fine as well but 22.04 does require extra setup steps explained later in the setup.
+     * **Step 1: Choose AMI**: Select Ubuntu Server 20.04
      * **Step 2: Choose instance type**: Choose at least 16 GiB memory (e.g. `t2.xlarge`)
      * **Step 3: Configure Instance**: 
        * Set IAM Instance Profile to `DeveloperEC2`
@@ -388,11 +392,27 @@ Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md) fo
 ---
 ### Bundle Install Tips
 
-#### Apple Silicon (M1) bundle install steps
+#### Apple Silicon (M1) or Intel Mac bundle install steps
 
-On Apple Silicon, additional steps are required to get `bundle install` to work.
+On Apple Silicon/Intel Mac, additional steps are required to get `bundle install` to work.
 
-In Gemfile.lock, replace the two occurrences of libv8 (8.4.255.0) with libv8-node (15.14.0.0). Also update mini_racer to 0.4.0 (from 0.3.1):
+If you're having issues with installing ```libv8``` and/or ```mini_racer``` gems - 
+make you sure you've already run ```bundle config --local without staging test production levelbuilder``` command
+and run it if you haven't.
+
+<details>
+<summary>If that didn't help - do following:</summary>
+
+Simply run (if you're having issues only with part of gems in the command - you can run it with just needed gems)
+```
+bundle update libv8 mini_racer
+```
+To fix issues in one line. It will update the Gemfile.lock file for you in the same way as described below.
+
+OR
+
+In Gemfile.lock, replace the two occurrences of libv8 (8.4.255.0) with libv8-node (15.14.0.0).
+Also update mini_racer to 0.4.0 (from 0.3.1):
 
 ```
 libv8-node (15.14.0.0)
@@ -400,6 +420,18 @@ libv8-node (15.14.0.0)
 mini_racer (0.4.0)
   libv8-node (~> 15.14.0.0)
 ```
+
+FINALLY
+
+To prevent Gemfile.lock changes from constantly appearing in your commits - run following commands:
+```
+git update-index --assume-unchanged Gemfile.lock
+git update-index --no-assume-unchanged Gemfile.lock
+git ls-files -v | grep '^[[:lower:]]'
+```
+</details>
+
+
 
 Then run the following commands to successfully complete a bundle install:
 
@@ -540,11 +572,11 @@ If you run into an error message about `Could not find MIME type database in the
 
 If bundle install fails with an error referencing `eventmachine`, try
 
-- `gem install eventmachine -v ‘[VERSION]’ -- --with-openssl-dir=$(brew --prefix libressl)`
+- `gem install eventmachine -v [VERSION] -- --with-openssl-dir=$(brew --prefix libressl)`
 
 Where [VERSION] is the current version of eventmachine in Gemfile.lock. For example:
 
-- `gem install eventmachine -v ‘1.2.7’ -- --with-openssl-dir=$(brew --prefix libressl)`
+- `gem install eventmachine -v 1.2.7 -- --with-openssl-dir=$(brew --prefix libressl)`
 
 #### Xcode Set Up
 
@@ -558,4 +590,4 @@ While it's possible to run the server locally without these, we've found the fol
 - Memory: minimum of 8GB RAM for `dashboard-server` and `yarn`
 - Storage: The repository takes up 20GB
 
-[ubuntu-iso-url]:  https://releases.ubuntu.com/18.04/ubuntu-18.04.6-desktop-amd64.iso
+[ubuntu-iso-url]: https://releases.ubuntu.com/focal/ubuntu-20.04.6-desktop-amd64.iso

@@ -948,6 +948,8 @@ nn:
               display_name: Undersøking
         csd-post-survey-2023:
           title: Undersøking etter kurs
+        csd-post-survey-2024:
+          title: Undersøking etter kurs
         csd1-2017:
           lesson_groups:
             csd1_1:
@@ -997,6 +999,14 @@ nn:
             cspSurvey:
               display_name: Undersøking
         csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Problemløsingsprosessen'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Datamaskiner og problemløsing'
+            lessonGroup-5:
+              display_name: Undersøking
+        csd1-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapittel 1: Problemløsingsprosessen'
@@ -1154,6 +1164,12 @@ nn:
               display_name: 'Kapittel 1: Bilder og animasjonar'
             lessonGroup-3:
               display_name: 'Kapittel 2: Bygge spel'
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Bilder og animasjonar'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Bygge spel'
         csd3-dlp:
           lesson_groups:
             content:
@@ -1237,6 +1253,12 @@ nn:
             cspSurvey:
               display_name: Undersøking
         csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Bruke sentrert design'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Prototyping av app'
+        csd4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapittel 1: Bruke sentrert design'
@@ -1331,6 +1353,12 @@ nn:
             cspSurvey:
               display_name: Undersøking
         csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Representere informasjon'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Problemløsing med data'
+        csd5-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapittel 1: Representere informasjon'
@@ -1443,6 +1471,10 @@ nn:
             csd6_2:
               display_name: 'Kapittel 2: Bygge fysiske prototypar'
         csd6a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Bygge fysiske prototypar'
+        csd6a-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Kapittel 2: Bygge fysiske prototypar'
@@ -2292,6 +2324,8 @@ nn:
           description: Gå vidare etter den første timen med større prosjektidear.
           student_description: Gå vidare etter den første timen med større prosjektidear.
           title: Dans vidare
+        dance-unplugged:
+          title: Dansefest utan datamaskin
         dani-june-2020-test:
           lesson_groups:
             csp5_1:
@@ -2765,7 +2799,7 @@ nn:
           description_short: Utforsk ei Minecraft-verd gjennom kode
           student_description: Bruk kodeblokker for å ta Steve eller Alex med på eit
             eventyr gjennom denne Minecraft-verda
-          title: Kodetimen med Minecraft
+          title: Minecraft-eventyrar
         microbit-2022:
           lesson_groups:
             lessonGroup-4:
@@ -2782,6 +2816,10 @@ nn:
           student_description: Programmer dyr og andre Minecraft-vesen i din eigen
             versjon av Minecraft.
           title: Kodetimens Minecraft-designer
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Gjer kva du vil
         netsim:
           description: Lær om hvordan Internett fungerer.
           description_short: Lær om hvordan Internett fungerer.
@@ -2940,6 +2978,23 @@ nn:
           description: 'Fase 2 Online: Blanda sommarstudie'
           description_short: 'Fase 2 Online: Blanda sommarstudie'
           student_description: 'Fase 2 Online: Blanda sommarstudie'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Løkker
+            lesson-4:
+              name: Betingelser
+            lesson-6:
+              name: Neste steg
+          title: Introduksjon til informatikk
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Hendingar
+            lesson-4:
+              name: Atferd
+            lesson-5:
+              name: Neste steg
         soccer:
           name: fotball
         spelling-bee:
@@ -3090,9 +3145,24 @@ nn:
               display_name: Innhald
             csd3_2:
               display_name: 'Kapittel 2: Bygge spel'
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introduksjon
+          lessons:
+            lesson-7:
+              name: Introduksjon
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introduksjon
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
+              name: Introduksjon
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
               name: Introduksjon
         web-development-2023:
           lesson_groups:

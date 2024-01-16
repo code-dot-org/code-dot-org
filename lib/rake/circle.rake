@@ -204,7 +204,7 @@ def start_sauce_connect
   tar_name = sc_download_url.split('/')[-1]
   dir_name = tar_name.chomp('.tar.gz')
 
-  RakeUtils.system_stream_output "wget #{sc_download_url}"
+  RakeUtils.system_stream_output "wget --quiet #{sc_download_url}"
   RakeUtils.system_stream_output "tar -xzf #{tar_name}"
   Dir.chdir(Dir.glob(dir_name)[0]) do
     # Run sauce connect a second time on failure, known periodic "Error bringing up tunnel VM." disconnection-after-connect issue, e.g. https://circleci.com/gh/code-dot-org/code-dot-org/20930

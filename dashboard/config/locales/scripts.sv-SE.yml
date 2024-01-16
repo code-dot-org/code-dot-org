@@ -161,6 +161,8 @@ sv:
           lessons:
             lesson-5:
               name: Bedömningar
+            lesson-6:
+              name: Lektion 1
         aquatic:
           description_short: Minecraft är tillbaka med en helt ny aktivitet för “Hour
             of Code”!
@@ -979,6 +981,12 @@ sv:
               display_name: 'Kapitel 1: Problemlösnings-processen'
             lessonGroup-3:
               display_name: 'Kapitel 2: Datorer och Problemlösning'
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Datorer och Problemlösning'
         csd1-dlp:
           lesson_groups:
             content:
@@ -1060,6 +1068,12 @@ sv:
             csd3_2:
               display_name: 'Kapitel 2: Bygga Spel'
         csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Bygga Spel'
+        csd3-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitel 1: Bilder och Animationer'
@@ -1154,6 +1168,12 @@ sv:
         csd7-2021:
           name: csd7-2021
         csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-3:
+              display_name: Kapitel 2
+        csd7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Kapitel 1
@@ -1673,6 +1693,8 @@ sv:
           student_description: Med ytterligare projektidéer kan du fortsätta efter
             den första timmen.
           title: Fortsätt att dansa
+        dance-unplugged:
+          title: Dansparty akustiskt
         dani-june-2020-test:
           lesson_groups:
             lesson group:
@@ -2031,7 +2053,6 @@ sv:
           description_short: Utforska en Minecraft-värld genom kod
           student_description: Använd block av kod för att ta Steve eller Alex på
             ett äventyr genom denna Minecraft-värld.
-          title: Minecraft Hour of Code
         minecraft:
           description: Programmera djur och andra Minecraft varelser i din egen version
             av Minecraft.
@@ -2040,6 +2061,10 @@ sv:
           student_description: Programmera djur och andra Minecraft varelser i din
             egen version av Minecraft.
           title: Minecraft Hour of Code Designer
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Fri lek
         netsim:
           title: Internet Simulator
         nevada-standards-aligned-fifth-grade-2023:
@@ -2202,6 +2227,31 @@ sv:
           lesson_groups:
             lessonGroup-2:
               display_name: Välkommen
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Lektion 1
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Lektion 1
+            lesson-3:
+              name: loopar
+            lesson-4:
+              name: Villkor
+            lesson-6:
+              name: Nästa steg
+          title: Introduktion till Datavetenskap
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Lektion 1
+            lesson-3:
+              name: Händelser
+            lesson-4:
+              name: Beteenden
+            lesson-5:
+              name: Nästa steg
         soccer:
           name: fotboll
         spelling-bee:
@@ -2324,6 +2374,25 @@ sv:
               display_name: Innehåll
             csd3_2:
               display_name: 'Kapitel 2: Bygga Spel'
+        virtual-pl-csa-summer-2024-day1:
+          title: Dag 1
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introduktion
+          lessons:
+            lesson-7:
+              name: Introduktion
+          title: Dag 1
+        virtual-pl-csa-summer-day2:
+          title: Dag 2
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introduktion
+          title: Dag 3
+        virtual-pl-csa-summer-day4:
+          title: Dag 4
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -2336,6 +2405,19 @@ sv:
         virtual-pl-csd-summer-day4:
           title: Dag 4
         virtual-pl-csd-summer-day5:
+          title: Dag 5
+        virtual-pl-csp-summer-day1:
+          title: Dag 1
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introduktion
+          title: Dag 2
+        virtual-pl-csp-summer-day3:
+          title: Dag 3
+        virtual-pl-csp-summer-day4:
+          title: Dag 4
+        virtual-pl-csp-summer-day5:
           title: Dag 5
         virustest:
           description_short: Använd Sprite Lab för att skapa en simulering av ett

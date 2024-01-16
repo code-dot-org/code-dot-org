@@ -1,0 +1,22 @@
+{
+  "bg-BG": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "co-teacher": {
+            "buttonText": "Научете повече"
+          },
+          "hoc-2023": {
+            "buttonText": "Научете повече"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Научете повече"
+          },
+          "superhero": {
+            "buttonText": "Научете повече"
+          }
+        }
+      }
+    }
+  }
+}

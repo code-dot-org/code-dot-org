@@ -1,0 +1,24 @@
+{
+  "hu-HU": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "co-teacher": {
+            "buttonText": "Tudj meg többet"
+          },
+          "hoc-2023": {
+            "body": "A világon milliók szerveznek Kódolás óráját mesterséges intelligenciával vagy anélkül, s tanulnak arról, hogy hogyan működik az AI. Csatlakozz hozzájuk! Bárhol és bárki megteheti. Nincs szükség tapasztalatra.",
+            "buttonText": "Tudj meg többet",
+            "title": "Kód órája: Kreativitás AI-vel"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Tudj meg többet"
+          },
+          "superhero": {
+            "buttonText": "Tudj meg többet"
+          }
+        }
+      }
+    }
+  }
+}

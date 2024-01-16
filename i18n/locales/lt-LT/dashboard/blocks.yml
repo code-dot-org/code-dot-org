@@ -22,10 +22,18 @@ lt:
         options:
           UNIT:
             '"seconds"': sekundes
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"seconds"': sekundes
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
             '"ALIEN"': ateiviai
+          MOVE:
+            MOVES.Rest: Nė vienas
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
           MOVE:
             MOVES.Rest: Nė vienas
       Dancelab_changeMoveLR:
@@ -136,6 +144,10 @@ lt:
           EFFECT:
             '"none"': Nė vienas
       Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': Nė vienas
+      Dancelab_setBackgroundEffectWithPaletteAI:
         options:
           EFFECT:
             '"none"': Nė vienas

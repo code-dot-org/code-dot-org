@@ -453,6 +453,11 @@
             "name": "моята функция"
           }
         },
+        "Course E: Artist Project_examples_2023": {
+          "my function": {
+            "name": "моята функция"
+          }
+        },
         "Course E: Frozen Project_examples2022": {
           "draw a circle": {
             "description": "нарисувайте кръг с даден радиус",
@@ -505,6 +510,57 @@
           }
         },
         "Course E: Frozen Project_examples_2021": {
+          "draw a circle": {
+            "description": "нарисувайте кръг с даден радиус",
+            "name": "чертае кръг",
+            "parameters": {
+              "radius": "радиус"
+            }
+          },
+          "draw a house": {
+            "name": "рисува къща",
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "нарисувайте въртележка",
+            "parameters": {
+              "length": "дължина",
+              "repeat": "повтори",
+              "sides": "страни"
+            }
+          },
+          "draw a shape": {
+            "name": "нарисувай форма",
+            "parameters": {
+              "length": "дължина",
+              "sides": "страни"
+            }
+          },
+          "draw a square": {
+            "name": "чертае квадрат",
+            "parameters": {
+              "length": "дължина",
+              "sides": "страни"
+            }
+          },
+          "draw a star": {
+            "description": "нарисувайте звезда с дадените точки и страни с зададена дължина",
+            "name": "рисува звезда",
+            "parameters": {
+              "length": "дължина",
+              "points": "точки"
+            }
+          },
+          "draw a triangle": {
+            "name": "чертае триъгълник",
+            "parameters": {
+              "length": "дължина"
+            }
+          }
+        },
+        "Course E: Frozen Project_examples_2023": {
           "draw a circle": {
             "description": "нарисувайте кръг с даден радиус",
             "name": "чертае кръг",
@@ -760,6 +816,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "description": "нарисувайте кръг с даден радиус",
+            "name": "чертае кръг",
+            "parameters": {
+              "radius": "радиус"
+            }
+          },
+          "draw a house": {
+            "name": "рисува къща",
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "нарисувайте въртележка",
+            "parameters": {
+              "length": "дължина",
+              "repeat": "повтори",
+              "sides": "страни"
+            }
+          },
+          "draw a shape": {
+            "name": "нарисувай форма",
+            "parameters": {
+              "length": "дължина",
+              "sides": "страни"
+            }
+          },
+          "draw a square": {
+            "name": "чертае квадрат",
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a star": {
+            "description": "нарисувайте звезда с дадените точки и страни с зададена дължина",
+            "name": "рисува звезда",
+            "parameters": {
+              "length": "дължина",
+              "points": "точки"
+            }
+          },
+          "draw a triangle": {
+            "name": "чертае триъгълник",
+            "parameters": {
+              "length": "дължина"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "description": "нарисувайте кръг с даден радиус",
@@ -860,6 +966,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_example2021_2023": {
+          "draw a circle": {
+            "description": "нарисувайте кръг с даден радиус",
+            "name": "чертае кръг",
+            "parameters": {
+              "radius": "радиус"
+            }
+          },
+          "draw a house": {
+            "name": "рисува къща",
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "нарисувайте въртележка",
+            "parameters": {
+              "length": "дължина",
+              "repeat": "повтори",
+              "sides": "страни"
+            }
+          },
+          "draw a shape": {
+            "name": "нарисувай форма",
+            "parameters": {
+              "length": "дължина",
+              "sides": "страни"
+            }
+          },
+          "draw a square": {
+            "name": "чертае квадрат",
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a star": {
+            "description": "нарисувайте звезда с дадените точки и страни с зададена дължина",
+            "name": "рисува звезда",
+            "parameters": {
+              "length": "дължина",
+              "points": "точки"
+            }
+          },
+          "draw a triangle": {
+            "name": "чертае триъгълник",
+            "parameters": {
+              "length": "дължина"
+            }
+          }
+        },
         "Find the Wizard": {
           "do something": {
             "name": "изпълнява нещо"
@@ -893,6 +1049,11 @@
           }
         },
         "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "построй мост"
+          }
+        },
+        "Function intro Ryan_2023": {
           "build bridge": {
             "name": "построй мост"
           }
@@ -997,6 +1158,11 @@
             "name": "изчисти път"
           }
         },
+        "MC_HOC_2017_07_Cole_2023": {
+          "clear path": {
+            "name": "изчисти път"
+          }
+        },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
             "name": "поправи дълга пътека"
@@ -1030,6 +1196,14 @@
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "поправи дълга пътека"
+          },
+          "fix short path": {
+            "name": "поправи къса пътека"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2023": {
           "fix long path": {
             "name": "поправи дълга пътека"
           },
@@ -1077,6 +1251,14 @@
             "name": "построй къс мост"
           }
         },
+        "MC_HOC_2017_Ali_2023": {
+          "build long bridge": {
+            "name": "построй дълъг мост"
+          },
+          "build short bridge": {
+            "name": "построй къс мост"
+          }
+        },
         "MC_HOC_2017_FP20x20": {
           "function 1": {
             "name": "функция 1"
@@ -1110,6 +1292,14 @@
           }
         },
         "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "функция 1"
+          },
+          "function 2": {
+            "name": "функция 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2023": {
           "function 1": {
             "name": "функция 1"
           },
@@ -1594,6 +1784,11 @@
             "name": "изпълнява нещо"
           }
         },
+        "courseC_data wizard_2023": {
+          "do something": {
+            "name": "изпълнява нещо"
+          }
+        },
         "courseD_artist_binary1": {
           "draw": {
             "parameters": {
@@ -1972,6 +2167,11 @@
             "name": "изпълнява нещо"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "изпълнява нещо"
+          }
+        },
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "чертае квадрат"
@@ -1998,6 +2198,11 @@
           }
         },
         "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "чертае квадрат"
+          }
+        },
+        "courseE_artist_functions2_2023": {
           "draw a square": {
             "name": "чертае квадрат"
           }
@@ -2033,6 +2238,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "рисува звезда"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "рисува звезда"
           }
@@ -2078,6 +2288,11 @@
           }
         },
         "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "рисува звезда"
+          }
+        },
+        "courseE_artist_functions5_2023": {
           "draw a star": {
             "name": "рисува звезда"
           }
@@ -2155,6 +2370,14 @@
             "name": "начертайте квадрат"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "изпълнява нещо"
+          },
+          "draw square": {
+            "name": "начертайте квадрат"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "изпълнява нещо"
@@ -2188,6 +2411,14 @@
           }
         },
         "courseE_artist_functions8a_2021": {
+          "do something": {
+            "name": "изпълнява нещо"
+          },
+          "draw a square": {
+            "name": "чертае квадрат"
+          }
+        },
+        "courseE_artist_functions8a_2023": {
           "do something": {
             "name": "изпълнява нещо"
           },
@@ -2235,6 +2466,14 @@
             "name": "начертайте квадрат"
           }
         },
+        "courseE_artist_functions8b_2023": {
+          "do something": {
+            "name": "изпълнява нещо"
+          },
+          "draw square": {
+            "name": "начертайте квадрат"
+          }
+        },
         "courseE_artist_functions8c2022": {
           "do something": {
             "name": "изпълнява нещо"
@@ -2268,6 +2507,14 @@
           }
         },
         "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "изпълнява нещо"
+          },
+          "draw square": {
+            "name": "начертайте квадрат"
+          }
+        },
+        "courseE_artist_functions8c_2023": {
           "do something": {
             "name": "изпълнява нещо"
           },
@@ -2323,6 +2570,14 @@
             "name": "начертайте триъгълник"
           }
         },
+        "courseE_artist_functions9_2023": {
+          "do something": {
+            "name": "изпълнява нещо"
+          },
+          "draw triangle": {
+            "name": "начертайте триъгълник"
+          }
+        },
         "courseE_artist_functionsProj2022": {
           "draw square": {
             "name": "начертайте квадрат"
@@ -2344,6 +2599,11 @@
           }
         },
         "courseE_artist_functionsProj_2021": {
+          "draw square": {
+            "name": "начертайте квадрат"
+          }
+        },
+        "courseE_artist_functionsProj_2023": {
           "draw square": {
             "name": "начертайте квадрат"
           }
@@ -2378,6 +2638,11 @@
             "name": "изпълнява нещо"
           }
         },
+        "courseE_artist_functions_challenge1_2023": {
+          "do something": {
+            "name": "изпълнява нещо"
+          }
+        },
         "courseE_artist_functions_challenge2": {
           "do something": {
             "name": "изпълнява нещо"
@@ -2408,6 +2673,11 @@
             "name": "изпълнява нещо"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "изпълнява нещо"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "чертае квадрат"
@@ -2434,6 +2704,11 @@
           }
         },
         "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "чертае квадрат"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
           "draw a square": {
             "name": "чертае квадрат"
           }
@@ -2474,6 +2749,11 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "изпълнява нещо"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "изпълнява нещо"
           }
@@ -2569,6 +2849,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "прекрати игра"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "прекрати игра"
           }

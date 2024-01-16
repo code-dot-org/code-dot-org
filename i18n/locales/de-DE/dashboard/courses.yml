@@ -84,11 +84,6 @@ de:
         tess-testing-focus-on-creativity-2023: {}
         csd-2023:
           title: Informatik Entdeckungen
-        focus-on-hardware-2023: {}
-        focus-on-data-2023: {}
-        focus-on-design-with-purpose-2023: {}
-        focus-on-coding-2023: {}
-        focus-on-impact-in-society-2023: {}
         vpl-csd-summer-ci-2023: {}
         self-paced-pl-physical-computing-2023: {}
         self-paced-pl-csd-2023: {}
@@ -100,6 +95,18 @@ de:
         vpl-csp-2023: {}
         vpl-csa-2023: {}
         vpl-csd-2023: {}
+        virtual-pl-csa-summer-2024: {}
+        virtual-pl-csp-summer-2024: {}
+        self-paced-pl-csd-unit1-2023: {}
+        self-paced-pl-csd-unit2-2023:
+          title: Webentwicklung unterrichten
+        self-paced-pl-csd-unit3-2023: {}
+        self-paced-pl-csd-unit4-2023: {}
+        self-paced-pl-csd-unit5-2023: {}
+        web-dev-2024: {}
+        csd-2024: {}
+        melissasandbox-2024: {}
+        self-paced-pl-k5-2024: {}
     resources:
       curriculum/csd/2017:
         name: Lehrplan

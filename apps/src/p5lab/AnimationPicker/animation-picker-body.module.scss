@@ -1,8 +1,8 @@
-@import "color.scss";
+@import 'color', 'font';
 
 .allAnimations {
+  @include main-font-bold;
   color: $purple;
-  font-family: "Gotham 7r", sans-serif;
   cursor: pointer;
 }
 

@@ -130,7 +130,7 @@ si:
           description_short: ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත එපිට මන්දාකිණියක ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න.
           student_description: ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත එපිට මන්දාකිණියක ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න.
         mc:
-          title: Minecraft Hour of Code
+          title: Minecraft Adventurer
           description: කේත කොටස් භාවිතා කරමින්, ස්ටීව් හෝ ඇලෙක්ස් ව මෙම Minecraft ලෝකය හරහා වික්‍රමාන්විත ගමන් මගක රැගෙන යන්න.
           description_short: Minecraft ලෝකය කේතය මගින් ගවේශණය කරන්න
           student_description: කේත කොටස් භාවිතා කරමින්, ස්ටීව් හෝ ඇලෙක්ස් ව මෙම Minecraft ලෝකය හරහා වික්‍රමාන්විත ගමන් මගක රැගෙන යන්න.
@@ -223,6 +223,8 @@ si:
               display_name: අන්තර්ගතය
             practice:
               display_name: ඉගැන්වීමේ පිළිවෙත්
+        minecraft:
+          title: Minecraft Designer
         coursee-draft:
           lesson_groups:
             content:
@@ -1540,6 +1542,10 @@ si:
               display_name: ඩිජිටල් පුරවැසිකම
             lessonGroup-4:
               display_name: විචල්‍යන්
+        musiclab:
+          lessons:
+            lesson-3:
+              name: නොමිලේ ක්‍රීඩා කිරීම
         csa-frq-practice-2022:
           lessons:
             lesson-4:
@@ -1604,3 +1610,33 @@ si:
               display_name: කන්ඩිෂනලස්
             lessonGroup-5:
               display_name: විචල්‍යන්
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: හැදින්වීම
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: හැදින්වීම
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: හැදින්වීම
+          lesson_groups:
+            lessonGroup-7:
+              display_name: හැදින්වීම
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: වැඩසටහන්
+            lesson-5:
+              name: ඉදිරි පියවර
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: ලූපයන්
+            lesson-4:
+              name: කන්ඩිෂනලස්
+            lesson-6:
+              name: ඉදිරි පියවර
+          title: පරිඝණක විද්‍යාව හැදින්වීම

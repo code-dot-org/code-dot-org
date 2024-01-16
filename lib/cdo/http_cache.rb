@@ -47,13 +47,13 @@ class HttpCache
   # Language header and cookie are needed to separately cache language-specific pages.
   LANGUAGE_HEADER = %w(Accept-Language).freeze
   COUNTRY_HEADER = %w(CloudFront-Viewer-Country).freeze
-  ALLOWLISTED_HEADERS = LANGUAGE_HEADER + COUNTRY_HEADER
+  # Header which lets a client request a response format.
+  ACCEPT_HEADER = %w(Accept).freeze
+  ALLOWLISTED_HEADERS = LANGUAGE_HEADER + COUNTRY_HEADER + ACCEPT_HEADER
 
   DEFAULT_COOKIES = [
     # Language drop-down selection.
     'language_',
-    # Offline experiment flag, to allow users into the pilot
-    'offline_pilot',
     # Experiment flag used to debug the onetrust cookie experience.
     'onetrust_cookie_scripts',
     # Feature flag for the Colorado Privacy Act (CPA)
@@ -65,8 +65,8 @@ class HttpCache
   # A list of script levels that should not be cached, even though they are
   # in a cacheable script
   UNCACHED_UNIT_LEVEL_PATHS = [
-    '/s/dance/lessons/1/levels/13',
     '/s/dance-2019/lessons/1/levels/10',
+    '/s/dance-ai-2023/lessons/1/levels/10',
     '/s/poem-art-2021/lessons/1/levels/9',
     '/s/poem-art-2021/lessons/1/levels/2', # prediction levels are not cacheable
     '/s/poem-art-2021/lessons/1/levels/5', # prediction levels are not cacheable
@@ -91,8 +91,8 @@ class HttpCache
     hero
     sports
     basketball
-    dance
     dance-2019
+    dance-ai-2023
     oceans
     poem-art-2021
     hello-world-food-2021
@@ -182,15 +182,15 @@ class HttpCache
               /v3/*
               /private*
             ) +
-            # TODO: Collapse these paths into /private to simplify Pegasus caching config.
-            %w(
-              /amazon-future-engineer*
-              /review-hociyskvuwa*
-              /manage-professional-development-workshops*
-              /professional-development-workshop-surveys*
-              /pd-program-registration*
-              /poste*
-            ),
+              # TODO: Collapse these paths into /private to simplify Pegasus caching config.
+              %w(
+                /amazon-future-engineer*
+                /review-hociyskvuwa*
+                /manage-professional-development-workshops*
+                /professional-development-workshop-surveys*
+                /pd-program-registration*
+                /poste*
+              ),
             headers: ALLOWLISTED_HEADERS,
             cookies: allowlisted_cookies
           },

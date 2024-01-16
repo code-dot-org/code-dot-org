@@ -1,0 +1,13 @@
+{
+  "en-GB": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "superhero": {
+            "buttonText": "Learn More"
+          }
+        }
+      }
+    }
+  }
+}

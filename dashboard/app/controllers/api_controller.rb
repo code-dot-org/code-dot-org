@@ -217,7 +217,7 @@ class ApiController < ApplicationController
       return
     end
 
-    data = current_user.sections.each_with_object({}) do |section, section_hash|
+    data = current_user.sections_instructed.each_with_object({}) do |section, section_hash|
       next if section.hidden
       script = load_script(section)
 
@@ -392,7 +392,7 @@ class ApiController < ApplicationController
   # Get /api/teacher_panel_section
   def teacher_panel_section
     prevent_caching
-    teacher_sections = current_user&.sections&.where(hidden: false)
+    teacher_sections = current_user&.sections_instructed&.where(hidden: false)
 
     if teacher_sections.blank?
       head :no_content
@@ -627,7 +627,7 @@ class ApiController < ApplicationController
     section
   end
 
-  private def load_script(section=nil)
+  private def load_script(section = nil)
     script_id = params[:script_id] if params[:script_id].present?
     script_id ||= section.default_script.try(:id)
     script = Unit.get_from_cache(script_id) if script_id

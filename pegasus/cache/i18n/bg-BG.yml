@@ -986,6 +986,7 @@ bg-BG:
   header_incubator: Инкубатор
   header_learn: Научете
   header_legal: Поверителност и Легално
+  header_legal_cookie_notice: Известие за Бисквитки
   header_legal_privacy: Защита на личните данни
   header_legal_tos: Термини
   header_my_dashboard: Моето табло
@@ -2158,19 +2159,6 @@ bg-BG:
     което предоставя един час въведение в компютърните науки. То достига до десетки
     милиони ученици в 180 + страни. Моля, включете се по време на CSEdWeek, декември
     7-13."
-  volunteer_engineer_submission_intro_links: Не сте доброволец? <a href="%{learn_more}">
-    Научете повече</a> за организиране на Ваш Hour of Code събитие и намерете местни
-    доброволци на нашата <a href="%{volunteer_local}"> доброволческа карта</a>.
-  volunteer_engineer_submission_intro_recruit: 'Тези учители ще се радват да има някой,
-    <span style="font-family: ''Gotham 7r'', sans-serif;"> технически спец,</span>
-    който може да помогне в класната стая, или някой, който може да <span style="font-family:
-    ''Gotham 7r'', sans-serif;"> вдъхнови</span> учениците с разговори за многобройните
-    възможности на компютърните науки (което може да бъде направено и чрез видео чат).
-    Ако не желаеш да бъдеш доброволец, <a href="%{url}"> научи повече</a> за възможността
-    сам да организираш Hour of Code събитие.'
-  volunteer_engineer_submission_intro_signup: Моля, въведете следната информация,
-    ако сте студент, учещ компютърни науки или професионален софтуерен инжинер. Полетата,
-    отбелязани със <span class="form-required-field"> *</span> са задължителни.
   volunteer_engineer_submission_location_flexibility_curriculum: Желае да допринесе
     за проекти с отворен код
   volunteer_engineer_submission_location_flexibility_onsite: посещение в сайта от

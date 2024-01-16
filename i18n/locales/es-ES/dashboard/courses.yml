@@ -232,14 +232,19 @@ es:
           version_title: 23-24
         focus-on-hardware-2023:
           title: Centrarse en el Hardware
+          version_title: 23-24
         focus-on-data-2023:
           title: Centrarse en los Datos
+          version_title: 23-24
         focus-on-design-with-purpose-2023:
           title: Centrarse en el Diseño con Finalidad
+          version_title: 23-24
         focus-on-coding-2023:
           title: Centrarse en la Codificación
+          version_title: 23-24
         focus-on-impact-in-society-2023:
           title: Centrarse en el Impacto Social
+          version_title: 23-24
         vpl-csd-summer-ci-2023:
           title: vpl-csd-verano-piloto-ci
           version_title: 23-24
@@ -267,8 +272,32 @@ es:
           title: autodidáctico-pl-csp-2021
           description_student: "## Bienvenido\n\n##### ¡Bienvenido a los módulos gratuitos en línea de Code.org dirigidos a educadores que deseen empezar a enseñar Principios de Informática! Después de completar estos módulos en línea, estarás listo para empezar a enseñar el curso Principios de Informática de Code.org con tus alumnos.\n\n### Encuentra el aprendizaje que funciona para ti\n\n##### **Ve a tu propio ritmo**: Estos módulos de autoaprendizaje están diseñados para ponerte al mando y darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada módulo y lección. No obstante, te animamos a que sigas el contenido a tu propio ritmo.\n\n### Elige tu contenido\n\n##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Principios de Informática. Sin embargo, puedes utilizar el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los educadores que empiecen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de empezar."
           description_teacher: "## Bienvenido\n\n##### ¡Bienvenido a los módulos gratuitos en línea de Code.org dirigidos a educadores que deseen empezar a enseñar Principios de Informática! Después de completar estos módulos en línea, estarás listo para empezar a enseñar el curso Principios de Informática de Code.org con tus alumnos.\n\n### Encuentra el aprendizaje que funciona para ti\n\n##### **Ve a tu propio ritmo**: Estos módulos de autoaprendizaje están diseñados para ponerte al mando y darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada módulo y lección. No obstante, te animamos a que sigas el contenido a tu propio ritmo.\n\n### Elige tu contenido\n\n##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Principios de Informática. Sin embargo, puedes utilizar el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los educadores que empiecen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de empezar."
+        self-paced-pl-aiml-2023:
+          title: 'Preparación para la Enseñanza de Inteligencia Artificial y Aprendizaje Automático '
+          description_student: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito de Code.org dirigido a educadores que deseen empezar a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás preparado para empezar a enseñar la Unidad de Creación de AI y Aprendizaje Automatizado** de Code.org con tus alumnos.\n\n### Encuentra la formación que funciona para ti\n\n-   **Ve a tu propio ritmo:** Esta experiencia de aprendizaje autodidacta está diseñada para darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada lección.  Sin embargo, te animamos a **interactuar con el contenido a tu propio ritmo.**\n\n-   **Elige tu contenido:** El contenido está organizado en la progresión sugerida para los educadores nuevos tanto en Code.org como en la unidad de Creación de AI y Aprendizaje Automatizado. Si ya está familiarizado con la plataforma Code.org, puedes saltarte la Introducción a Code.org y pasar directamente a la Preparación para Enseñar a crear AI y Aprendizaje Automatizado."
+          description_teacher: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito de Code.org dirigido a educadores que deseen empezar a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás preparado para empezar a enseñar la Unidad de Creación de AI y Aprendizaje Automatizado** de Code.org con tus alumnos.\n\n### Encuentra la formación que funciona para ti\n\n-   **Ve a tu propio ritmo:** Esta experiencia de aprendizaje autodidacta está diseñada para darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada lección.  Sin embargo, te animamos a **interactuar con el contenido a tu propio ritmo.**\n\n-   **Elige tu contenido:** El contenido está organizado en la progresión sugerida para los educadores nuevos tanto en Code.org como en la unidad de Creación de AI y Aprendizaje Automatizado. Si ya está familiarizado con la plataforma Code.org, puedes saltarte la Introducción a Code.org y pasar directamente a la Preparación para Enseñar a crear AI y Aprendizaje Automatizado."
+        vpl-csp-2023:
+          version_title: '2023'
         vpl-csa-2023:
           title: Aprendizaje Profesional Virtual de CSA
+          version_title: '2023'
+        vpl-csd-2023:
+          version_title: '2023'
+        self-paced-pl-csd-unit1-2023:
+          title: Enseñanza de la Resolución de Problemas y la Informática
+          version_title: 23-24
+        self-paced-pl-csd-unit2-2023:
+          title: Enseñando el Desarrollo Web
+          version_title: 23-24
+        self-paced-pl-csd-unit3-2023:
+          version_title: 23-24
+        self-paced-pl-csd-unit4-2023:
+          version_title: 23-24
+        self-paced-pl-csd-unit5-2023:
+          title: Enseñanza de Datos y Sociedad
+          version_title: 23-24
+        self-paced-pl-k5-2024:
+          description_student: "## Bienvenido\n\n¡Bienvenido al aprendizaje en línea gratuito de Code.org dirigido a educadores que deseen empezar a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás preparado para empezar a enseñar la Unidad de Creación de AI y Aprendizaje Automatizado** de Code.org con tus alumnos.\n\n### Encuentra la formación que funciona para ti\n\n-   **Ve a tu propio ritmo:** Esta experiencia de aprendizaje autodidacta está diseñada para darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada lección.  Sin embargo, te animamos a **interactuar con el contenido a tu propio ritmo.**\n\n-   **Elige tu contenido:** El contenido está organizado en la progresión sugerida para los educadores nuevos tanto en Code.org como en la unidad de Creación de AI y Aprendizaje Automatizado. Si ya está familiarizado con la plataforma Code.org, puedes saltarte la Introducción a Code.org y pasar directamente a la Preparación para Enseñar a crear AI y Aprendizaje Automatizado."
     resources:
       curriculum/csd/2017:
         name: Currículum

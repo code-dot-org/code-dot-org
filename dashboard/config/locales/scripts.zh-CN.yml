@@ -319,6 +319,10 @@ zh-CN:
           name: ai-ethics-2021
           student_description: '使用文章和视频进行研究，揭露您选择的人工智能 (AI) 领域的道德陷阱。 '
           title: 我们的 AI 道德守则
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: 我们的 AI 道德守则
         ai-lab:
           student_description: 使用这些关卡来探索 AI Lab 并在其他课程或活动中使用。您需要创建一个 Code.org 帐户并登录才能使用这些工具。
           title: 人工智能实验室
@@ -571,6 +575,9 @@ zh-CN:
           student_description: 关于我创建课程的更长描述...  仍在疑惑概述，内容来自何处......
           title: andrea-test
         angelina-playground:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 随机
           lessons:
             lesson-1:
               name: 物质状态
@@ -580,6 +587,8 @@ zh-CN:
               name: CSS 网格
             lesson-5:
               name: 评估
+            lesson-6:
+              name: 第 1 课
           name: 安吉丽娜游乐场
           title: 安吉丽娜的做事的地方
         applab-1hour:
@@ -2769,10 +2778,14 @@ zh-CN:
         csc-ecosystems-2022:
           name: csc-ecosystems-2022
         csc-ecosystems-2023:
+          description: "## 本模块的建议准备工作\n\n**科学：**学生将在第1课和第2课中模拟海洋生物生态系统。为了熟悉这个生态系统，我们推荐这个[海洋动物视频](https://www.youtube.com/watch?v=8adtdg0N2-g)（9分42秒）。
+            \n\n在第2课中，学生将编写几种可持续的捕鱼方法。以下是一些读物，旨在积累一些背景知识并加深与现实世界的联系：[了解过度捕捞](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing)（蒙特雷湾水族馆文章），或
+            [Mw,kwa Talks to the Loon](https://books.google.com/books/about/Mw_kwa_Talks_to_the_Loon.html?id=ZtJfkFFPTzIC)（儿童读物）。\n\n**计算机科学：**在本模块中，学生将学习新的编程概念，而这些概念对于刚接触计算机科学的学生来说可能存在困难。如果学生不熟悉Code.org的精灵图实验室，我们建议看看[使用精灵图实验室制作游泳的鱼](https://studio.code.org/s/coursee-2022/lessons/3)（55分钟）以了解该工具的基本内容。
+            \n\n该模块还使用被称为条件语句的高级计算机科学概念。学生以脚手架的方式学习这个概念，但是有些学生可能会受益于首先参与这个线下条件语句入门活动：[使用卡片的条件语句](https://studio.code.org/s/coursed-2022/lessons/12)（50分钟）。"
           lessons:
             lesson-3:
-              name: 编写自己的生态系统 (2023)
-          title: 模拟海洋生态系统
+              name: 编写自己的生态系统（2023）
+          title: 模拟海洋生态系统（2023）
         csc-fables-2022:
           name: csc-fables-2022
         csc-function-machines-pilot:
@@ -2923,6 +2936,9 @@ zh-CN:
           description: 本单元包含课后调查。该单元可以在学生完成本课程的最后一个单元后分配。
           name: csd-post-survey
           title: 课后问卷
+        csd-post-survey-2024:
+          description: 本单元包含课后调查。该单元可以在学生完成本课程的最后一个单元后分配。
+          title: 课后问卷
         csd-sample-online:
           title: 计算机科学发现的在线活动示例
         csd-test-saving-state:
@@ -3030,6 +3046,18 @@ zh-CN:
           student_description: 问题解决与计算是计算机科学领域的一篇高度互动和协作性的入门课程，其框架是更广泛地追求解决问题。你将练习使用问题解决过程来解决一系列难题、挑战和现实世界场景。接下来，您将学习计算机如何输入、输出、存储和处理信息以帮助人类解决问题。本单元以一个项目结束，在该项目中，你设计了一个帮助解决你选择的问题的应用程序。
           title: 问题解决与计算 ('22'23)
         csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章︰ 解决问题的流程
+            lessonGroup-3:
+              display_name: 第 2 章︰ 计算机和解决问题的能力
+            lessonGroup-4:
+              display_name: 另类课程
+            lessonGroup-5:
+              display_name: 调查
+          student_description: 问题解决与计算是计算机科学领域的一篇高度互动和协作性的入门课程，其框架是更广泛地追求解决问题。你将练习使用问题解决过程来解决一系列难题、挑战和现实世界场景。接下来，您将学习计算机如何输入、输出、存储和处理信息以帮助人类解决问题。本单元以一个项目结束，在该项目中，你设计了一个帮助解决你选择的问题的应用程序。
+          title: 单元 1-问题解决与计算 ('23'24)
+        csd1-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 第 1 章︰ 解决问题的流程
@@ -3201,6 +3229,15 @@ zh-CN:
             HTML 和 CSS 来构造和设置页面样式。您还将练习宝贵的编程技能，例如调试、使用资源和团队合作。  "
           title: 网络开发 ('22'23)
         csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第一单元：创造网页
+            lessonGroup-3:
+              display_name: 第二章：多界面网站
+          student_description: " 在本单元中，您将学习如何在自己的网页上创建和共享内容。在决定要与世界分享哪些内容后，你将学习如何使用
+            HTML 和 CSS 来构造和设置页面样式。您还将练习宝贵的编程技能，例如调试、使用资源和团队合作。  "
+          title: 第 2 单元-网络开发 ('23'24)
+        csd2-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 第一单元：创造网页
@@ -3394,6 +3431,14 @@ zh-CN:
               name: 迷你项目-机器人脸
           student_description: " 在单元3中，要利用你的代码技巧，在游戏实验室中给动画、交互艺术和游戏编程。像计算机科学家每天的工作一样，用同样的编程概念和设计流程。在本单元中，从简单的形状开始，然后构造出精巧的，基于精灵的游戏。在最后的项目中，会开发出一个个性化的交互程序。"
           title: 第 3 单元-互动动画和游戏 ('23'24)
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章︰图像和动画
+            lessonGroup-3:
+              display_name: 第 2 章︰ 创建游戏
+          student_description: " 在单元3中，要利用你的代码技巧，在游戏实验室中给动画、交互艺术和游戏编程。像计算机科学家每天的工作一样，用同样的编程概念和设计流程。在本单元中，从简单的形状开始，然后构造出精巧的，基于精灵的游戏。在最后的项目中，会开发出一个个性化的交互程序。"
+          title: 第 3 单元-互动动画和游戏 ('23'24)
         csd3-dlp:
           description: 这是为code.org计算机科学原理主持人准备的单元3的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。
           description_audience: 计算机科学发现主持人培训
@@ -3576,6 +3621,15 @@ zh-CN:
           student_description: 4单元介绍了计算的更广泛的社会影响。通过一系列的设计挑战, 您将了解如何在开发解决问题的方法时更好地理解他人的需求。该单元的后半部分由一个迭代团队项目组成,
             在这个项目中，团队有机会确定他们所关心的需求、在纸上和应用程序实验室中的原型解决方案, 并与真正的用户测试解决方案以获得反馈并进一步推动迭代.
           title: 第 4 单元-设计流程 ('23'24)
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章︰ 用户为中心的设计
+            lessonGroup-3:
+              display_name: 第 2 章︰ 应用程序原型
+          student_description: 4单元介绍了计算的更广泛的社会影响。通过一系列的设计挑战, 您将了解如何在开发解决问题的方法时更好地理解他人的需求。该单元的后半部分由一个迭代团队项目组成,
+            在这个项目中，团队有机会确定他们所关心的需求、在纸上和应用程序实验室中的原型解决方案, 并与真正的用户测试解决方案以获得反馈并进一步推动迭代.
+          title: 第 4 单元-设计流程 ('23'24)
         csd4-dlp:
           description: 这是为code.org计算机科学原理引导员准备的单元4的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。
           description_audience: 计算机科学发现主持人培训
@@ -3742,6 +3796,16 @@ zh-CN:
             您将了解如何使用数据集合来解决问题, 以及计算机如何帮助自动化此过程的步骤。本章最后考虑如何将数据问题解决过程应用到您选择的区域。
           title: 数据与社会 ('22'23)
         csd5-2023:
+          description_short: 了解人们如何使用电脑来解决数据问题。
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章︰ 表达信息
+            lessonGroup-3:
+              display_name: 第 2 章︰ 解决数据问题
+          student_description: 单元5是关于数据在解决问题中的重要性, 它同时强调了计算机在这个过程中的作用。第一章探讨了在计算机中用来表示信息的不同系统以及使用它们所带来的挑战和折衷。在第二章中,
+            您将了解如何使用数据集合来解决问题, 以及计算机如何帮助自动化此过程的步骤。本章最后考虑如何将数据问题解决过程应用到您选择的区域。
+          title: 第 5 单元-数据与社会 ('23'24)
+        csd5-2024:
           description_short: 了解人们如何使用电脑来解决数据问题。
           lesson_groups:
             lessonGroup-2:
@@ -3986,6 +4050,19 @@ zh-CN:
             App Lab 和 Adafruit 的 Circuit Playground，你将开发使用与智能设备相同的硬件输入和输出的程序，研究一个简单的粗略原型如何形成成品。本单元最后提出了一项设计挑战，即使用
             Circuit Playground 作为你自己设计创新的基础。
           title: 单元 6A-（选项 A）使用设备创建应用程序——Circuit Playground ('23'24)
+        csd6a-2024:
+          description_short: 学习使用物理设备编程。
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：输入和输出
+            lessonGroup-3:
+              display_name: 第 2 章︰ 创建物理原型
+            lessonGroup-4:
+              display_name: App Lab 简介
+          student_description: 本单元探讨了硬件平台在计算中的作用，以及不同的传感器如何提供比传统的键盘、鼠标和显示器更有效的输入和输出。使用
+            App Lab 和 Adafruit 的 Circuit Playground，你将开发使用与智能设备相同的硬件输入和输出的程序，研究一个简单的粗略原型如何形成成品。本单元最后提出了一项设计挑战，即使用
+            Circuit Playground 作为你自己设计创新的基础。
+          title: 单元 6A-（选项 A）使用设备创建应用程序——Circuit Playground ('23'24)
         csd6b-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3995,6 +4072,18 @@ zh-CN:
             lessonGroup-4:
               display_name: 构建物理原型
           name: csd6b-2023
+          student_description: '本单元探讨了硬件平台在计算中的作用，以及不同的传感器如何提供比传统的键盘、鼠标和显示器更有效的输入和输出。使用
+            App Lab 和 BBC micro: bit，你将开发使用与智能设备相同的硬件输入和输出的程序，研究一个简单的粗略原型如何形成成品。本单元最后提出了一项设计挑战，即使用
+            micro: bit 作为你自己设计创新的基础。'
+          title: '单元 6B-（选项 B）使用设备创建应用程序（micro: bit）'
+        csd6b-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: App Lab 简介
+            lessonGroup-3:
+              display_name: 输入和输出
+            lessonGroup-4:
+              display_name: 构建物理原型
           student_description: '本单元探讨了硬件平台在计算中的作用，以及不同的传感器如何提供比传统的键盘、鼠标和显示器更有效的输入和输出。使用
             App Lab 和 BBC micro: bit，你将开发使用与智能设备相同的硬件输入和输出的程序，研究一个简单的粗略原型如何形成成品。本单元最后提出了一项设计挑战，即使用
             micro: bit 作为你自己设计创新的基础。'
@@ -4029,6 +4118,16 @@ zh-CN:
           student_description: 本单元是使用表格数据开发机器学习模型的实践入门。你将探索计算机如何从数据中学习以做出决策，然后围绕现实世界的数据开发自己的机器学习项目。本单元最终设计了自己的机器学习应用程序，以解决与个人有关的问题。
           title: 人工智能和机器学习 ('22'23)
         csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章
+            lessonGroup-3:
+              display_name: 第2章
+            lessonGroup-4:
+              display_name: 应用程序实验室简介
+          student_description: 本单元是使用表格数据开发机器学习模型的实践入门。你将探索计算机如何从数据中学习以做出决策，然后围绕现实世界的数据开发自己的机器学习项目。本单元最终设计了自己的机器学习应用程序，以解决与个人有关的问题。
+          title: 第 7 单元-人工智能和机器学习 ('23'24)
+        csd7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 第1章
@@ -7053,7 +7152,7 @@ zh-CN:
           description: 使用代码方块，带史蒂夫或艾莉克斯在《我的世界》中，展开一场冒险。
           description_short: 用代码来探索《我的世界》。
           student_description: 使用代码方块，带史蒂夫或艾莉克斯在《我的世界》中，展开一场冒险。
-          title: 我的世界 编程一小时
+          title: "《我的世界》大冒险"
         microbit-2022:
           lesson_groups:
             lessonGroup-2:
@@ -7099,6 +7198,10 @@ zh-CN:
           name: ml-游乐场
           student_description: 头脑风暴/CSD ML/AI 单位开发的游乐区。如果将来对此有疑问，请询问丹·施耐德。
           title: 机器学习/人工智能股-CSD
+        musiclab:
+          lessons:
+            lesson-3:
+              name: 自由发挥
         netsim:
           description: 学习互联网是如何运行的
           description_short: 学习互联网是如何运行的
@@ -7697,6 +7800,26 @@ zh-CN:
             CS 连接模块的计划。\n\n练习课程中包含的关键概念。\n\n\\-预览功能和资源。\n\n考虑创造积极的 CS 学习体验的策略。\n\n**建议时间：**
             75 分钟"
           title: 仅向主持人讲授 CS 连接
+        self-paced-pl-csd-unit1-2-2023:
+          description: "这个专业学习模块旨在帮助你准备Code.org的问题解决和计算单元教学。 \n\n**在这个专业学习模块中，你将：**\n\n-
+            \  认识问题解决和计算。\n-   实践单元中包含的关键概念。\n-   探索章节结尾项目。\n\n**建议时间：** 30分钟"
+          student_description: "这个专业学习模块旨在帮助你准备Code.org的问题解决和计算单元教学。 \n\n**在这个专业学习模块中，你将：**\n\n-
+            \  认识问题解决和计算。\n-   实践单元中包含的关键概念。\n-   探索章节结尾项目。\n\n**建议时间：** 30分钟"
+          title: 模块1：准备问题解决和计算教学
+        self-paced-pl-csd-unit2-2-2023:
+          title: 模块2：准备Web开发教学
+        self-paced-pl-csd-unit3-2-2023:
+          description: "这个专业学习模块旨在帮助你准备Code.org的互动动画和游戏单元教学。 \n\n**在这个专业学习模块中，你将：**\n\n-
+            \  认识互动动画和游戏。\n-   实践单元中包含的关键概念。\n-   参与游戏实验室。\n-   探索章节结尾项目。\n\n**建议时间：**
+            120分钟"
+          student_description: "这个专业学习模块旨在帮助你准备Code.org的互动动画和游戏单元教学。 \n\n**在这个专业学习模块中，你将：**\n\n-
+            \  认识互动动画和游戏。\n-   实践单元中包含的关键概念。\n-   参与游戏实验室。\n-   探索章节结尾项目。\n\n**建议时间：**
+            120分钟"
+          title: 准备互动动画和游戏教学
+        self-paced-pl-csd-unit4-2-2023:
+          title: " 模块4：准备设计进程教学"
+        self-paced-pl-csd-unit5-2-2023:
+          title: 模块5：准备数据和社会教学
         self-paced-pl-csd1-2021:
           description: "本模块简要介绍了 Code.org 和本专业学习课程。 \n\n**你会：**\n\n\\-获取 Code.org
             和 CS Discovery 的简介。\n\\-学习如何参与这门专业学习课程。\n\n**建议时间：** 10 分钟"
@@ -8001,6 +8124,33 @@ zh-CN:
           name: self-paced-pl-csp8-2021
         self-paced-pl-csp9-2021:
           name: self-paced-pl-csp9-2021
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: 第 1 课
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: 第 1 课
+            lesson-3:
+              name: 循环
+            lesson-4:
+              name: 条件语句
+            lesson-5:
+              name: 把它们放在一起
+            lesson-6:
+              name: 下一步
+          title: 计算机概论
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: 第 1 课
+            lesson-3:
+              name: 事件
+            lesson-4:
+              name: 行为
+            lesson-5:
+              name: 下一步
         self-paced-pl-k5-getting-started:
           name: self-paced-pl-k5-入门
           title: 'Code.org 入门 (K-5) '
@@ -8276,6 +8426,108 @@ zh-CN:
               display_name: 内容
             csd3_2:
               display_name: 第 2 章︰ 创建游戏
+        virtual-pl-csa-summer-2024-day1:
+          title: 第一天
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 异步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
+            lessonGroup-7:
+              display_name: 介绍
+          lessons:
+            lesson-2:
+              name: 异步第 1 部分
+            lesson-3:
+              name: 同步第 2 部分
+            lesson-4:
+              name: 异步第 2 部分
+            lesson-7:
+              name: 介绍
+            lesson-8:
+              name: 研讨会开幕式
+          title: 第一天
+        virtual-pl-csa-summer-day2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 异步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
+          lessons:
+            lesson-2:
+              name: 异步第 1 部分
+            lesson-3:
+              name: 同步第 2 部分
+            lesson-4:
+              name: 异步第 2 部分
+          title: 第二天
+        virtual-pl-csa-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 异步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
+          lessons:
+            lesson-1:
+              name: 介绍
+            lesson-2:
+              name: 异步第 1 部分
+            lesson-4:
+              name: 异步第 2 部分
+          title: 第三天
+        virtual-pl-csa-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 异步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
+          lessons:
+            lesson-2:
+              name: 异步第 1 部分
+            lesson-4:
+              name: 异步第 2 部分
+            lesson-5:
+              name: 研讨会开幕式
+          title: 第四天
+        virtual-pl-csa-summer-day5:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
+          lessons:
+            lesson-1:
+              name: 研讨会开幕式
+            lesson-13:
+              name: 闭幕式
+            lesson-16:
+              name: 闭幕式
+            lesson-2:
+              name: 异步第 1 部分
+            lesson-3:
+              name: 同步第 2 部分
+            lesson-4:
+              name: 异步第 2 部分
+          title: '第 5 天 '
         virtual-pl-csd-summer-day1:
           lesson_groups:
             lessonGroup-2:
@@ -8377,6 +8629,67 @@ zh-CN:
               name: 预览学年研讨会
             lesson-9:
               name: 为新的一年做准备
+        virtual-pl-csp-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 同步第 2 部分
+            lessonGroup-4:
+              display_name: 异步第 1 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
+          title: 第一天
+        virtual-pl-csp-summer-day2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 异步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
+          lessons:
+            lesson-5:
+              name: 介绍
+          title: 第二天
+        virtual-pl-csp-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 异步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
+          lessons:
+            lesson-2:
+              name: 异步第 1 部分
+          title: 第三天
+        virtual-pl-csp-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 异步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
+          title: 第四天
+        virtual-pl-csp-summer-day5:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 异步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
+          lessons:
+            lesson-6:
+              name: 闭幕式
         virustest:
           description_short: '使用精灵图实验室创建一个病毒爆发模拟。 '
           lesson_groups:
@@ -8847,6 +9160,15 @@ zh-CN:
           title: 模块 7
         vpl-csp-2023-m8:
           title: 模块 8
+        web-dev-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第一单元：创造网页
+            lessonGroup-3:
+              display_name: 第二章：多界面网站
+          student_description: " 在本单元中，您将学习如何在自己的网页上创建和共享内容。在决定要与世界分享哪些内容后，你将学习如何使用
+            HTML 和 CSS 来构造和设置页面样式。您还将练习宝贵的编程技能，例如调试、使用资源和团队合作。  "
+          title: 第 2 单元-网络开发 ('23'24)
         web-development-2023:
           lesson_groups:
             lessonGroup-2:

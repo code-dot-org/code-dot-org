@@ -10,6 +10,9 @@ export default function AdvancedSettingToggles({
   section,
   hasLessonExtras,
   hasTextToSpeech,
+  // aiTutorAvailable refers to whether the selected assignment has AI Tutor available,
+  // i.e. have we trained AI to answer questions about that specific course or unit.
+  aiTutorAvailable,
 }) {
   const handlePairProgrammingToggle = e => {
     const updatedValue = !section.pairingAllowed;
@@ -29,6 +32,11 @@ export default function AdvancedSettingToggles({
   const handleTtsAutoplayEnabledToggle = e => {
     const updatedValue = !section.ttsAutoplayEnabled;
     updateSection('ttsAutoplayEnabled', updatedValue);
+  };
+
+  const handleAITutorEnabledToggle = e => {
+    const updatedValue = !section.aiTutorEnabled;
+    updateSection('aiTutorEnabled', updatedValue);
   };
 
   return (
@@ -87,6 +95,20 @@ export default function AdvancedSettingToggles({
           />
         </div>
       )}
+      {aiTutorAvailable && (
+        <div className={style.toolTipContainer}>
+          <ToggleSwitch
+            id={'uitest-ai-tutor-toggle'}
+            isToggledOn={section.aiTutorEnabled}
+            onToggle={e => handleAITutorEnabledToggle(e)}
+            label={i18n.enableAITutor()}
+          />
+          <InfoHelpTip
+            id={'ai-tutor-toggle-info'}
+            content={i18n.enableAITutorTooltip()}
+          />
+        </div>
+      )}
     </div>
   );
 }
@@ -96,4 +118,5 @@ AdvancedSettingToggles.propTypes = {
   updateSection: PropTypes.func.isRequired,
   hasLessonExtras: PropTypes.bool,
   hasTextToSpeech: PropTypes.bool,
+  aiTutorAvailable: PropTypes.bool,
 };

@@ -2,11 +2,17 @@
 uk:
   data:
     blocks:
+      AmysBlocks_goldilocks:
+        text: |-
+          якщо {CONDITION}{SPRITE}
+          {STATEMENT}
+      AmysBlocks_makeNumSprites:
+        text: створити {NUM} нових {ANIMATION_NAME} спрайтів {LOCATION}
       AmysBlocks_setPromptWithChoices:
         text: запитати користувача {QUESTION} для значення змінної {VAR} з варіантів
           {A}{B}{C}
       AmysBlocks_spriteSayVar:
-        text: "{SPRITE}скажи{TEXT1}"
+        text: "{SPRITE} говорить {TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: створити новий спрайт {ANIMATION_NAME} у {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -16,6 +22,7 @@ uk:
             '0.75': маленький
             '1.00': середньо
             '2.00': великий
+        text: встановити розмір усіх спрайтів у значення {SIZE}
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -23,16 +30,19 @@ uk:
             '0.75': маленький
             '1.00': середньо
             '2.00': великий
+        text: встановити для {SPRITE} розмір у значення {SIZE}
+      Dancelab_ai:
+        text: "{IMAGE}генерує ефект {VALUE}"
       Dancelab_alternateMoves:
         options:
           GROUP:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -72,6 +82,12 @@ uk:
             '"measures"': такти
             '"seconds"': секунди
         text: після {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': такти
+            '"seconds"': секунди
+        text: після {TIMESTAMP} {UNIT}
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -82,19 +98,41 @@ uk:
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
             '"SLOTH"': лінивці
             '"UNICORN"': єдинороги
             sprites: усі
+          MOVE:
+            '"next"': "(Наступний)"
+            '"prev"': "(Попередній)"
+            '"rand"': "(Випадковий)"
+            MOVES.ClapHigh: Плескання вгорі
+            MOVES.Clown: Гангнам
+            MOVES.Dab: Деб
+            MOVES.DoubleJam: Подвійний вниз
+            MOVES.Drop: Відпустити
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Фреш
+            MOVES.Kick: Зірка
+            MOVES.Rest: Немає
+            MOVES.Roll: Хвиля
+            MOVES.ThisOrThat: Це або те
+            MOVES.Thriller: Зомбі
+        text: "{GROUP} виконувати рух {MOVE} {DIR} постійно"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': коти
+            '"SLOTH"': лінивці
           MOVE:
             '"next"': "(Наступний)"
             '"prev"': "(Попередній)"
@@ -144,13 +182,13 @@ uk:
       Dancelab_changePropEachBy:
         options:
           GROUP:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -168,13 +206,13 @@ uk:
       Dancelab_doMoveEachLR:
         options:
           GROUP:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -272,7 +310,7 @@ uk:
           UNIT:
             '"measures"': такти
             '"seconds"': секунди
-        text: "{UNIT} минуло"
+        text: поточний час {UNIT}
       Dancelab_ifDanceIs:
         options:
           DANCE:
@@ -320,13 +358,13 @@ uk:
       Dancelab_jumpToEach:
         options:
           GROUP:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -364,13 +402,13 @@ uk:
             '"top"': верхня шеренга
             '"x"': хрестик
           GROUP:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -381,16 +419,16 @@ uk:
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
-            '"ALIEN"': інопланетянин
-            '"BEAR"': Ведмідь
+            '"ALIEN"': інопланетянина
+            '"BEAR"': ведмедя
             '"CAT"': кіт
-            '"DOG"': пес
+            '"DOG"': собаку
             '"DUCK"': качку
-            '"FROG"': Жаба
-            '"MOOSE"': лосі
-            '"PINEAPPLE"': Ананас
+            '"FROG"': жабу
+            '"MOOSE"': лось
+            '"PINEAPPLE"': ананас
             '"ROBOT"': робот
-            '"SHARK"': Акула
+            '"SHARK"': акула
             '"SLOTH"': лінивець
             '"UNICORN"': єдиноріг
           LOCATION:
@@ -414,11 +452,11 @@ uk:
             '"DOG"': собаку
             '"DUCK"': качку
             '"FROG"': жабу
-            '"MOOSE"': лося
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаса
             '"ROBOT"': робота
             '"SHARK"': акулу
-            '"SLOTH"': лінивець
+            '"SLOTH"': лінивця
             '"UNICORN"': єдинорога
           LOCATION:
             "{x: 100, y: 100}": верхній лівий кут
@@ -437,13 +475,13 @@ uk:
       Dancelab_makeNewDanceSpriteGroup:
         options:
           COSTUME:
-            '"ALIEN"': прибульців
+            '"ALIEN"': інопланетян
             '"BEAR"': ведмеді
             '"CAT"': котів
             '"DOG"': собак
             '"DUCK"': качки
             '"FROG"': жаб
-            '"MOOSE"': лосів
+            '"MOOSE"': лося
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботів
             '"SHARK"': акули
@@ -577,27 +615,72 @@ uk:
             '"vintage"': Вінтажний
             '"warm"': Теплий
         text: |-
-          "установити фоновий ефект
-          {PALETTE} {EFFECT}"
+          установити фоновий ефект
+          {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Коло
+            '"color_cycle"': Кольори
+            '"diamonds"': Ромби
+            '"disco"': Квадрати
+            '"disco_ball"': Дискокуля
+            '"fireworks"': Феєрверк
+            '"flowers"': Квіти
+            '"galaxy"': Відступ
+            '"growing_stars"': Зірки, які ростуть
+            '"higher_power"': Вища сила
+            '"kaleidoscope"': Калейдоскоп
+            '"lasers"': Лазерний танцпол
+            '"music_wave"': Хвилі
+            '"none"': Немає
+            '"quads"': Кути
+            '"rainbow"': Веселка
+            '"rand"': "(Випадковий)"
+            '"ripples"': Брижі
+            '"ripples_random"': Випадкові брижі
+            '"snowflakes"': Сніг
+            '"sparkles"': Блискітки
+            '"spiral"': спіраль
+            '"splatter"': Бульбашки
+            '"squiggles"': Звивання
+            '"starburst"': Вибухаюча зірка
+            '"stars"': Зірки
+            '"swirl"': Гіпноз
+            '"text"': Назва пісні
+          PALETTE:
+            '"cool"': Холодний
+            '"default"': Світлий
+            '"electronic"': Електронний
+            '"iceCream"': Морозиво
+            '"neon"': Неоновий
+            '"rainbow"': Веселка
+            '"rave"': Чорний та білий
+            '"tropical"': Тропічний
+            '"vintage"': Вінтажний
+            '"warm"': Теплий
+        text: |-
+          установити фоновий ефект
+          {PALETTE} {EFFECT}
       Dancelab_setDanceSpeed:
         options:
           SPEED:
             '0.25': дуже повільно
             '0.5': повільно
-            '1': нормальний
+            '1': нормально
             '2': швидко
             '4': дуже швидко
         text: змінити для {SPRITE} швидкість танцю на {SPEED}
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -607,7 +690,7 @@ uk:
           SPEED:
             '0.25': дуже повільно
             '0.5': повільно
-            '1': нормальний
+            '1': нормально
             '2': швидко
             '4': дуже швидко
         text: встановити для {GROUP} швидкість танцю в {SPEED}
@@ -621,7 +704,7 @@ uk:
             '"hearts_red"': Серця
             '"music_notes"': Музичні ноти
             '"none"': Немає
-            '"pineapples"': Ананаси
+            '"pineapples"': ананаси
             '"pizzas"': Піцци
             '"rain"': Дощ
             '"raining_tacos"': Тако
@@ -643,7 +726,7 @@ uk:
             '"music_notes"': Музичні ноти
             '"none"': Немає
             '"paint_drip"': Патьоки фарби
-            '"pineapples"': Ананаси
+            '"pineapples"': ананаси
             '"pizzas"': Піцци
             '"rain"': Дощ
             '"raining_tacos"': Тако
@@ -665,13 +748,13 @@ uk:
       Dancelab_setPropEach:
         options:
           GROUP:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -701,13 +784,13 @@ uk:
       Dancelab_setPropRandomEach:
         options:
           GROUP:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -728,13 +811,13 @@ uk:
       Dancelab_setTintEach:
         options:
           THIS:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -745,13 +828,13 @@ uk:
       Dancelab_setTintEachInline:
         options:
           THIS:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -770,13 +853,13 @@ uk:
       Dancelab_setVisibleEach:
         options:
           THIS:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -805,13 +888,13 @@ uk:
       Dancelab_startMappingEach:
         options:
           GROUP:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -850,13 +933,13 @@ uk:
       Dancelab_stopMappingEach:
         options:
           GROUP:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -993,6 +1076,7 @@ uk:
             '"hearts"': серця
             '"rain"': дощ
             '"starburst"': Вибухаюча зірка
+        text: "[Don't Use] виконувати ефект {EFFECT}"
       DansBlocks_setMicroscope:
         options:
           INPUT1:
@@ -1003,8 +1087,23 @@ uk:
         text: створити {NUM} нових {ANIMATION_NAME} спрайтів {BEHAVIOR}
       FunctionBlocks_representManipulative:
         text: представити {NUM} нових {ANIMATION_NAME} спрайтів [BEHAVIOR][2]
+      FunctionBlocks_representManipulative_test:
+        text: "[testing] представляти {NUM} нових {ANIMATION_NAME} спрайтів"
       FunctionBlocks_spriteSayVar:
-        text: "{SPRITE}скажи{TEXT1}"
+        text: "{SPRITE} говорить {TEXT1}"
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} ковзати до {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': газ
+            '"liquid"': рідкий
+            '"solid"': твердий
+        text: |-
+          якщо {CONDITION}{SPRITE}
+          {STATEMENT}
+      KatiesBlocks_spriteBirdSay:
+        text: "{SPRITE} говорить {SPEECH}"
       KatiesBlocks_tumbling:
         text: спотикатись
       Mikelab_addBehaviorSimple:
@@ -1072,7 +1171,7 @@ uk:
           SELECT:
             '"all"': усі
             '"this"': це
-        text: Змінити {PROPERTY} з {SELECT} {COSTUME} за {VAL}
+        text: змінити {PROPERTY} з {SELECT} {COSTUME} за {VAL}
       Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
@@ -1358,11 +1457,14 @@ uk:
             '"rainbow"': веселка
             '"stars"': зірки
             '"waves"': хвилі
+      Poetry_glideTo:
+        text: "{SPRITE} ковзати до {LOCATION}"
       Poetry_makeBurst:
         options:
           EFFECT:
             '"burst"': вибух
             '"rain"': дощ
+        text: створити ефект {EFFECT} з {NUM} спрайтами {ANIMATION_NAME}
       Poetry_makeNewSpriteAnon:
         text: створити новий спрайт {ANIMATION_NAME} у {LOCATION}
       Poetry_makeNumSprites:
@@ -1377,6 +1479,7 @@ uk:
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': повільно
             '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': арфи
             '"sound://category_nature/forest_woodland_ambience_2.mp3"': ліс
+            '"sound://category_nature/steady_campfire_loop.mp3"': багаття
             '"sound://category_nature/summer_night_loop.mp3"': ніч
       Poetry_playSound:
         options:
@@ -1518,12 +1621,22 @@ uk:
             '"row"': клас
       aalab_someGraduallyStartIntervention:
         options:
+          BEHAVIOR:
+            '"quarantining"': карантин при хворобі
           PORTION:
             '1': усі
       aalab_someStartIntervention:
         options:
+          BEHAVIOR:
+            '"quarantining"': карантин при хворобі
           PORTION:
             '1': усі
+      aalab_spriteSayChoices:
+        text: "{SPRITE} говорить {SPEECH}"
+      aalab_startIntervention:
+        options:
+          BEHAVIOR:
+            '"quarantining"': карантин при хворобі
       adaptations_adaptationBehaviors:
         options:
           BEHAVIOR:
@@ -1534,6 +1647,8 @@ uk:
             new Behavior(spinning_right, []): обертання праворуч
             new Behavior(wandering, []): бродіння
             new Behavior(wobbling, []): хитання
+      adaptations_spriteBirdSay:
+        text: "{SPRITE} говорить {SPEECH}"
       adaptations_toggleBehaviorSimple:
         options:
           TOGGLE:
@@ -1651,9 +1766,9 @@ uk:
             '"strippedOak"': очищений дуб
             '"yellowCoralBlock"': блок жовтого коралу
             '"yellowDeadCoralBlock"': блок темно-жовтого коралу
-        text: постав {blockType}
+        text: поставити {blockType}
       craft_placePrismarine:
-        text: постав призмарин
+        text: поставити призмарин
       craft_placeTorch:
         text: поставити факел
       craft_repeatUntilConduit:
@@ -1680,6 +1795,10 @@ uk:
             left: ліворуч ↺
             right: праворуч ↻
         text: повернути {DIR}
+      ecosystems_goldilocks:
+        text: |-
+          якщо {CONDITION}{SPRITE}
+          {STATEMENT}
       ecosystems_int10:
         options:
           VALUE:
@@ -1776,6 +1895,8 @@ uk:
         text: наступні цілі
       gamelab_getAllSprites:
         text: всі спрайти
+      gamelab_getCostume:
+        text: спрайти з костюмом {SPRITE}
       gamelab_getProp:
         options:
           PROPERTY:
@@ -1799,6 +1920,8 @@ uk:
             '"frames"': кадри
             '"seconds"': секунди
         text: час у {UNIT}
+      gamelab_glideTo:
+        text: "{SPRITE} ковзати до {LOCATION}"
       gamelab_hideTitleScreen:
         text: приховати заголовок екрана
       gamelab_ifVarEquals:
@@ -1933,6 +2056,7 @@ uk:
           EFFECT:
             '"burst"': вибух
             '"rain"': дощ
+        text: створити ефект {EFFECT} з {NUM} спрайтами {ANIMATION_NAME}
       gamelab_makeNewSpriteAnon:
         text: створити новий спрайт {ANIMATION_NAME} у {LOCATION}
       gamelab_makeNewSpriteGroup:
@@ -1962,6 +2086,7 @@ uk:
             '100': великий
             '30': маленький
             '50': середньо
+        text: створити {NUM} нових {SIZE} спрайтів {COSTUME}
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -1996,11 +2121,12 @@ uk:
         options:
           SOUND:
             "'sound://category_accent/puzzle_game_accent_a_01.mp3'": акцент
-            "'sound://category_animals/bear.mp3'": Ведмідь
+            "'sound://category_animals/bear.mp3'": ведмідь
             "'sound://category_animals/cat.mp3'": кіт
+            "'sound://category_animals/chick.mp3'": пташеня
             "'sound://category_animals/chicken.mp3'": курка
             "'sound://category_animals/cow.mp3'": корова
-            "'sound://category_animals/dog.mp3'": пес
+            "'sound://category_animals/dog.mp3'": собаку
             "'sound://category_animals/dolphin.mp3'": дельфін
             "'sound://category_animals/elephant.mp3'": слон
             "'sound://category_animals/goat.mp3'": коза
@@ -2053,7 +2179,7 @@ uk:
             '"North"': Північ
             '"South"': Південь
             '"West"': Захід
-        text: Точки {SPRITE} {DIRECTION}
+        text: повернути {SPRITE} на {DIRECTION}
       gamelab_printText:
         text: друкувати {TEXT}
       gamelab_randColor:
@@ -2147,7 +2273,7 @@ uk:
         options:
           SIZE:
             '3': повільно
-            '5': нормальний
+            '5': нормально
             '7': швидко
         text: встановити швидкість {SPRITE} у значення {SIZE}
       gamelab_setTint:
@@ -2169,6 +2295,12 @@ uk:
             '"when"': коли
             '"while"': поки
         text: "{CONDITION} {SPRITE} клацнули"
+      gamelab_spriteSay:
+        text: "{SPRITE} говорить {SPEECH}"
+      gamelab_spriteSayTime:
+        text: "{SPRITE}говорить{TEXT1}протягом{NUM}секунд"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}думає{TEXT1}протягом{NUM}секунд"
       gamelab_spriteThink_fables4:
         options:
           THOUGHT:
@@ -2198,6 +2330,8 @@ uk:
         text: повернути {SPRITE} {DIRECTION} на  {N} градусів
       gamelab_updateTitleWithColor:
         text: показати початковий екран {BREAK} заголовок {TITLE} колір {COLOR}
+      gamelab_whenAllPromptsAnswered:
+        text: коли відповіли на всі питання
       gamelab_whenDownArrow:
         text: при натисканні стрілки вниз
       gamelab_whenKey:
@@ -2252,6 +2386,14 @@ uk:
         text: |-
           якщо {NUM}% ймовірність
           {STATEMENT}
+      gamelab_withPercentChanceDropdown:
+        options:
+          NUM:
+            '10': дуже низька
+            '90': дуже висока
+        text: |2-
+           {NUM} ймовірність
+           {STATEMENT}
       gamelab_xLocationOf:
         text: x координата {SPRITE}
       gamelab_yLocationOf:

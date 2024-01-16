@@ -2,6 +2,15 @@
 hi:
   data:
     blocks:
+      AmysBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"just right"': बस ठीक
+            '"too little"': बहुत कम
+            '"too much"': बहुत अधिक
+        text: |2-
+           यदि {CONDITION}{SPRITE}
+          {STATEMENT}
       AmysBlocks_setPromptWithChoices:
         text: उपयोगकर्ता को {QUESTION} वेरिएबल {VAR} के लिए विकल्पों {A}{B}{C} के
           साथ सुझाव दें
@@ -23,6 +32,8 @@ hi:
             '0.75': छोटा
             '1.00': मध्यम
             '2.00': बड़ा
+      Dancelab_ai:
+        text: "{IMAGE} {VALUE} प्रभाव पैदा करें"
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -71,6 +82,11 @@ hi:
             '"measures"': संगीत प्रविधियां
             '"seconds"': सेकंड
         text: "{TIMESTAMP} {UNIT} के बाद"
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': संगीत प्रविधियां
+            '"seconds"': सेकंड
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -94,6 +110,27 @@ hi:
             '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
             sprites: सभी
+          MOVE:
+            '"next"': "(अगला)"
+            '"prev"': "(पिछला)"
+            '"rand"': "(बेतरतीब)"
+            MOVES.ClapHigh: ज़ोर से ताली बजाएं
+            MOVES.Clown: गंगनम
+            MOVES.Dab: हाथ फेरें
+            MOVES.DoubleJam: डबल डाउन
+            MOVES.Drop: ड्रॉप
+            MOVES.Floss: फ्लॉस
+            MOVES.Fresh: ताजा
+            MOVES.Kick: स्टार
+            MOVES.Rest: कोई नहीं
+            MOVES.Roll: बॉडी रोल
+            MOVES.ThisOrThat: यह या वह
+        text: "{GROUP} हमेशा {MOVE} {DIR} करता है"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': सभी बिल्लियां
+            '"SLOTH"': निष्क्रियता
           MOVE:
             '"next"': "(अगला)"
             '"prev"': "(पिछला)"
@@ -564,6 +601,61 @@ hi:
             '"vintage"': विंटेज
             '"warm"': गरम
         text: पृष्ठभूमि प्रभाव सेट करें {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"blooming_petals"': खिलती पंखुड़ियाँ
+            '"circles"': चक्र
+            '"color_cycle"': रंग
+            '"diamonds"': हीरा
+            '"disco"': चोकोण
+            '"disco_ball"': डिस्को बॉल
+            '"fireworks"': पटाखे
+            '"flowers"': फूल
+            '"frosted_grid"': फ्रॉस्टेड ग्रिड
+            '"galaxy"': खाली स्थान
+            '"growing_stars"': उभरते तारे
+            '"kaleidoscope"': कैलाइडोस्कोप
+            '"lasers"': लेजर डांस फ्लोर
+            '"music_wave"': तरंगें
+            '"none"': कोई नहीं
+            '"quads"': कोण
+            '"rainbow"': इंद्रधनुष
+            '"rand"': "(बेतरतीब)"
+            '"ripples"': लहरें
+            '"ripples_random"': बेतरतीब लहरें
+            '"snowflakes"': हिमपात
+            '"sparkles"': फुलझड़ियां
+            '"spiral"': घुमावदार
+            '"splatter"': पेंट का छिड़काव
+            '"squiggles"': टेढ़ी-मेढ़ी रेखाएं
+            '"starburst"': स्टारबर्स्ट
+            '"stars"': स्टार
+            '"swirl"': हिप्नो
+            '"text"': गाने के नाम
+          PALETTE:
+            '"autumn"': पतझड़
+            '"cool"': शांत!
+            '"default"': प्रकाश
+            '"electronic"': इलेक्ट्रोनिक
+            '"grayscale"': धूसर
+            '"iceCream"': आईस क्रीम
+            '"neon"': निऑन
+            '"ocean"': समुद्र
+            '"rainbow"': इंद्रधनुष
+            '"rave"': काला व सफेद
+            '"roses"': गुलाब के फूल
+            '"sky"': आसमान
+            '"spring"': बसंत
+            '"summer"': ग्रीष्म ऋतु
+            '"sunrise"': सूर्योदय
+            '"sunset"': सूर्यास्त
+            '"tropical"': उष्णकटिबंधी
+            '"twinkling"': टिमटिमाहट
+            '"vintage"': विंटेज
+            '"warm"': गरम
+            '"winter"': शीतऋतु
+        text: पृष्ठभूमि प्रभाव सेट करें {PALETTE} {EFFECT}
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -1000,6 +1092,15 @@ hi:
         text: "{SPRITE} {TEXT1} बोलता है"
       KatiesBlocks_glideTo:
         text: "{SPRITE} चुपके से {LOCATION} पर जाता है"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': गैस
+            '"liquid"': द्रव
+            '"solid"': ठोस
+        text: |2-
+           यदि {CONDITION}{SPRITE}
+          {STATEMENT}
       KatiesBlocks_tumbling:
         text: कलाबाजियां खाना
       Mikelab_addBehaviorSimple:
@@ -1911,6 +2012,19 @@ hi:
             left: बाएं ↺
             right: दाएं ↻
         text: DIR][0] में मुड़ें
+      ecosystems_catchMe:
+        text: पकड़ें {THIS}
+      ecosystems_eat:
+        text: खाएं {THIS}
+      ecosystems_goldilocks:
+        options:
+          CONDITION:
+            '"just right"': बस ठीक
+            '"too little"': बहुत कम
+            '"too much"': बहुत अधिक
+        text: |2-
+           यदि {CONDITION}{SPRITE}
+          {STATEMENT}
       ecosystems_int10:
         options:
           VALUE:
@@ -1924,6 +2038,24 @@ hi:
             '7': '7'
             '8': '8'
             '9': '9'
+      ecosystems_makeNewSpriteBetween:
+        text: 'स्थान x: {X} y: {Y} के बीच नया {GROUP} बनाएं {N}'
+      ecosystems_makeNumSpritesAtLocation:
+        text: "{LOCATION_GENERATOR} पर नया {ANIMATION_NAME} बनाएं {NUM}"
+      ecosystems_makeNumSpritesWithinRange:
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:0, y2:200}": नीचे
+            "{x1:0, x2:400, y1:150, y2:250}": मध्य
+            "{x1:0, x2:400, y1:200, y2:400}": शीर्ष
+        text: "{RANGE} पर नया {ANIMATION_NAME} बनाएं {NUM}"
+      ecosystems_randomLocationWithinRange:
+        text: x न्यूनतम{X1}x अधिकतम{X2}y न्यूनतम{Y1}y अधिकतम{Y2}
+      ecosystems_randomLocationWithinSelectedRange:
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:0, y2:200}": नीचे
+            "{x1:0, x2:400, y1:200, y2:400}": शीर्ष
       gamelab_addBehaviorSimple:
         text: स्प्राइट {SPRITE} {BEHAVIOR} शुरू होता है
       gamelab_addTarget:

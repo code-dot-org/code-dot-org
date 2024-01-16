@@ -3,7 +3,7 @@
 # Downloads all translations from Crowdin Code.org, Code.org-Markdown, and
 # Hourofcode projects to i18n/locales.
 # https://crowdin.com/project/codeorg
-
+require_relative 'metrics'
 require_relative 'i18n_script_utils'
 
 require 'cdo/crowdin/legacy_utils'
@@ -23,12 +23,12 @@ def sync_down
     CROWDIN_PROJECTS.each do |name, options|
       puts "Downloading translations from #{name} project"
       api_token = YAML.load_file(options[:identity_file])["api_token"]
-      project_identifier = YAML.load_file(options[:config_file])["project_identifier"]
+      project_identifier = YAML.load_file(options[:config_file])["project_id"]
       project = Crowdin::Project.new(project_identifier, api_token)
       options = {
         etags_json: options[:etags_json],
         files_to_sync_out_json: options[:files_to_sync_out_json],
-        locales_dir: File.join(I18N_SOURCE_DIR, '..'),
+        locales_dir: CDO.dir(I18N_LOCALES_DIR),
         logger: logger
       }
 
@@ -37,7 +37,7 @@ def sync_down
       case name.to_s
       when "codeorg-markdown-testing", "codeorg-markdown"
         options[:locale_subdir] = "codeorg-markdown"
-      when "hour-of-code"
+      when "hour-of-code-test", "hour-of-code"
         options[:locale_subdir] = "hourofcode"
       end
 
@@ -48,8 +48,10 @@ def sync_down
       puts "Files downloaded in #{elapsed}"
     end
 
+    I18n::Metrics.report_status(true, 'sync-down', 'Sync down completed successfully')
     puts "Sync down completed successfully"
   rescue => exception
+    I18n::Metrics.report_status(false, 'sync-down', "Sync down failed from the error: #{exception}")
     puts "Sync down failed from the error: #{exception}"
     raise exception
   end

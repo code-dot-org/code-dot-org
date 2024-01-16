@@ -7,14 +7,153 @@ sq:
           assignment_family_title: Ap® Parimet e Shkencave Kompjuterike
         csp-2018:
           assignment_family_title: Ap® Parimet e Shkencave Kompjuterike
+        time4cs-control: {}
+        time4cs-experiment: {}
+        csp-2020:
+          version_title: "'20-'21"
+        csd-2020:
+          version_title: "'20-'21"
+        csp-2021:
+          version_title: "'21-'22"
+        csd-2021:
+          version_title: "'21-'22"
+        csa-pilot: {}
+        mike-test: {}
+        self-paced-pl-csd-2021:
+          version_title: "'21 - '22"
+        self-paced-pl-csp-2021:
+          version_title: "'21-'22"
+        csa-pilot-facilitator: {}
+        csp-2022:
+          version_title: "'22-'23"
+        csa-2022:
+          title: Shkenca Kompjuterike A ('22-'23)
+          version_title: "'22-'23"
+        csa-pilot-extra: {}
+        vpl-csd-summer-pilot-2022: {}
+        csa-async-2022: {}
+        vpl-csd-summer-pilot-ci-2022:
+          version_title: "'21-'22"
+        self-paced-pl-csa-2022:
+          version_title: "'22-'23"
+        csd-2022:
+          version_title: "'22-'23"
+        self-paced-pl-csd-2022:
+          version_title: "'22-'23"
+        self-paced-pl-csp-2022:
+          version_title: "'22-'23"
+        vpl-csd-ayw-pilot-2022: {}
+        csa-validation-pilot-2022:
+          version_title: "'22-'23"
+        self-paced-pl-physical-computing-2022: {}
+        self-paced-pl-csa-2023:
+          version_title: '2023'
+        tess-testing-focus-on-creativity-2023: {}
+        focus-on-creativity-2023:
+          title: Fokusimi në Kreativitet (CSD)
+          version_title: "'23-24"
+        focus-on-hardware-2023:
+          title: Fokusimi në Hardware (CSD)
+        focus-on-data-2023:
+          title: Fokusimi në të dhëna (CSD)
+        focus-on-design-with-purpose-2023:
+          title: Fokusimi në Dizajn me Qëllim (CSD)
+        focus-on-coding-2023:
+          title: Fokusimi në Kodim (CSD)
+        focus-on-impact-in-society-2023:
+          title: Fokusimi në Ndikimin në Shoqëri (CSD)
+        vpl-csd-summer-ci-2023: {}
+        self-paced-pl-physical-computing-2023: {}
+        self-paced-pl-csd-2023: {}
+        self-paced-pl-microbit-2023: {}
+        pl-csd-summer-2023: {}
+        virtual-pl-csd-summer-2023: {}
+        self-paced-pl-csp-2023: {}
+        self-paced-pl-aiml-2023: {}
+        vpl-csp-2023:
+          version_title: '2023'
+        vpl-csa-2023:
+          version_title: '2023'
+        vpl-csd-2023:
+          version_title: '2023'
+        virtual-pl-csa-summer-2024: {}
+        virtual-pl-csp-summer-2024: {}
+        self-paced-pl-csd-unit1-2023: {}
+        self-paced-pl-csd-unit2-2023: {}
+        self-paced-pl-csd-unit3-2023: {}
+        self-paced-pl-csd-unit4-2023: {}
+        self-paced-pl-csd-unit5-2023: {}
+        web-dev-2024: {}
+        csd-2024: {}
+        melissasandbox-2024: {}
+        self-paced-pl-k5-2024: {}
     resources:
       curriculum/csd/2017:
         name: Plani mësimor
+      teacher_forum_6/csd/2017:
+        name: Forumi i mësimdhënësve
       curriculum/csd/2018:
         name: Plani mësimor
+      teacher_forum_6/csd/2018:
+        name: Forumi i mësimdhënësve
       curriculum/csd/2019:
         name: Plani mësimor
+      teacher_forum/csd/2019:
+        name: Forumi i mësimdhënësve
       curriculum/csd/2020:
         name: Plani mësimor
+      teacher_forum/csd/2020:
+        name: Forumi i mësimdhënësve
+      all_code/csd/2021:
+        name: Të gjitha kodet
+      all_resources_1/csd/2021:
+        name: Të gjitha burimet
+      all_standards_1/csd/2021:
+        name: Të gjitha standardet
+      all_vocabulary_1/csd/2021:
+        name: Fjalori
+      csd_curriculum_guide/csd/2021:
+        name: Udhëzues për kurrikulën CSD
+      csd_guide_to_debugging/csd/2021:
+        name: Udhëzues CSD për debugging
+      csd_guide_to_differentiation/csd/2021:
+        name: Udhëzues CSD për diferencimin
+      csd_guide_to_using_resources/csd/2021:
+        name: Udhëzues CSD për përdorimin e burimeve
+      csd_implementation_guide/csd/2021:
+        name: Udhëzues për zbatimin e CSD
+      all_code_5/csd/2022:
+        name: Të gjitha kodet
+      all_resources_7/csd/2022:
+        name: Të gjitha burimet
+      all_standards_7/csd/2022:
+        name: Të gjitha standardet
+      all_vocabulary_7/csd/2022:
+        name: Fjalori
+      csd_curriculum_guide/csd/2022:
+        name: Udhëzues për kurrikulën CSD
+      csd_guide_to_debugging/csd/2022:
+        name: Udhëzues CSD për debugging
+      csd_guide_to_differentiation/csd/2022:
+        name: Udhëzues CSD për diferencimin
+      csd_guide_to_using_resources/csd/2022:
+        name: Udhëzues CSD për përdorimin e burimeve
       csd_implementation_guide/csd/2022:
+        name: Udhëzues për zbatimin e CSD
         url: https://docs.google.com/document/d/1vLGKcHC46jE6zZozBTmExOKdKwl544s0tbCds1LSg1Q/preview
+      csd_programming_levels_guide/csd/2022:
+        name: Udhëzues për nivelet e programimit CSD
+      all_code_2/csd/2023:
+        name: Të gjitha kodet
+      all_resources_2/csd/2023:
+        name: Të gjitha burimet
+      all_standards_2/csd/2023:
+        name: Të gjitha standardet
+      all_vocabulary_2/csd/2023:
+        name: Fjalori
+      csd_guide_to_differentiation_1/csd/2023:
+        name: Udhëzues CSD për diferencimin
+      csd_guide_to_using_resources_1/csd/2023:
+        name: Udhëzues CSD për përdorimin e burimeve
+      csd_implementation_guide_1/csd/2023:
+        name: Udhëzues për zbatimin e CSD

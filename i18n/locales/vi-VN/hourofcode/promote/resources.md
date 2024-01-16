@@ -18,7 +18,7 @@ title: Nguồn tài liệu
 
 ## Treo poster này trong trường học
 
-Bộ poster mới có sự góp mặt của Malala, Stephen Curry, Shakira và nhiều người nổi tiếng khác! Năm nay, mỗi bộ sẽ bao gồm 6 poster và 126 sticker "Tôi đã tham gia Giờ lập trình". Số lượng có hạn nên [hãy đặt poster](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) sớm nhé. Nếu bạn muốn tự in, chỉ cần nhấp chuột vào ảnh bên dưới để xem và lưu lại phiên bản có thể in được.
+Print your own posters! Simply click an image below to view and save a printable version.
 
 {{ promote_new_posters }}
 

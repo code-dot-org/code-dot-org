@@ -18,6 +18,10 @@ si:
         options:
           UNIT:
             '"seconds"': තත්පර
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"seconds"': තත්පර
       Dancelab_changeMoveEachLR:
         options:
           GROUP:

@@ -59,6 +59,11 @@ mi:
           UNIT:
             '"measures"': wāhanga
             '"seconds"': ngā hēkona
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': wāhanga
+            '"seconds"': ngā hēkona
       Dancelab_changeColorBy:
         text: tinihia {COLOR} {METHOD} kia {AMOUNT}
         options:
@@ -98,6 +103,27 @@ mi:
             MOVES.Kick: Te Whetū
             MOVES.ThisOrThat: Tēnei Tēnā
             MOVES.Rest: Kore
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} māhia {MOVE} {DIR} mo ake tonu atu"
+        options:
+          GROUP:
+            '"CAT"': ngā ngeru
+            '"SLOTH"': kararehe māngere
+          MOVE:
+            MOVES.Roll: Ngaru Tinana
+            MOVES.ClapHigh: Paki ki runga
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Rua Rua
+            MOVES.Drop: Taka Iho
+            MOVES.Floss: Floss
+            MOVES.Fresh: Hou
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Te Whetū
+            MOVES.ThisOrThat: Tēnei Tēnā
+            MOVES.Rest: Kore
+            '"next"': "(Kōkiri)"
+            '"prev"': "(tōmua)"
+            '"rand"': "(Poka noa)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} māhia {MOVE} {DIR} mo ake tonu atu"
         options:
@@ -544,6 +570,50 @@ mi:
             '"iceCream"': Aihikirīmi
             '"default"': Rama
             '"neon"': Haukura
+            '"tropical"': Pārūrū
+            '"vintage"': Tawhito
+            '"warm"': Mahana
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          whakarite i te papamuri
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Kore
+            '"rand"': "(Poka noa)"
+            '"quads"': Ngā Anahera
+            '"circles"': Porowhita
+            '"color_cycle"': Tae
+            '"diamonds"': Taimona
+            '"disco_ball"': Pōro Whakaata
+            '"fireworks"': Pahū ahi
+            '"flowers"': Putiputi
+            '"growing_stars"': Ngā Whetū Tipu
+            '"swirl"': Whakamoe
+            '"kaleidoscope"': Takawhīwhiwhi
+            '"lasers"': Papakani Taiaho
+            '"splatter"': Peita Peita
+            '"rainbow"': Āniwaniwa
+            '"ripples_random"': Ngā Pungarungaru Matapōkere
+            '"ripples"': Ngā Pungarungaru
+            '"snowflakes"': Hukapapa
+            '"text"': Ingoa Waiata
+            '"galaxy"': Tuarangi
+            '"sparkles"': Wherokiroki
+            '"spiral"': Koropikopiko
+            '"disco"': Tapawha
+            '"squiggles"': Ngā Koropikopiko
+            '"starburst"': Pāpahu Whetū
+            '"stars"': Ngā Whetū
+            '"music_wave"': Ngaru
+          PALETTE:
+            '"rave"': Pango me te Mā
+            '"cool"': Kōangi
+            '"electronic"': Tāhiko
+            '"iceCream"': Aihikirīmi
+            '"default"': Rama
+            '"neon"': Haukura
+            '"rainbow"': Āniwaniwa
             '"tropical"': Pārūrū
             '"vintage"': Tawhito
             '"warm"': Mahana

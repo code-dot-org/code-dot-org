@@ -11,7 +11,7 @@ layout: wide
 
 # Directives pour la création et la soumission de didacticiels et de leçons pour Hour of Code™ et la Semaine de l'enseignement de l'informatique
 
-Code.org héberge une variété d'activités, de leçons et de vidéos Hour of Code™ sur les sites Web Code.org et Hour of Code. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org héberge une variété d'activités, de leçons et de vidéos Hour of Code™ sur les sites Web Code.org et Hour of Code. La liste actuelle se trouve sur []({{ urls/learn }})hourofcode.com/learn.
 
 Vous souhaitez proposer votre propre didacticiel autoguidé, une leçon dirigée par un enseignant ou une activité robotique/de création expliquant un principe informatique ? Rejoignez ce mouvement mondial et aidez les participants du monde entier à commencer par une heure de code ou à aller plus loin avec des activités comportant plusieurs leçons, d'une journée ou d'une semaine.
 
@@ -19,7 +19,7 @@ Vous souhaitez proposer votre propre didacticiel autoguidé, une leçon dirigée
 
 Quelques conseils :
 
-1. **Soumettez plusieurs activités** : Si vous avez créé des activités pour différents niveaux, différents âges ou d'autres catégories, nous listons vos activités séparément afin que chaque enseignant puisse trouver l'activité adaptée à sa classe. Soumettez chaque didacticiel ou activité individuellement. Given the number of submissions we have seen in recent years, we will have time to review **up to 5 activities** per partner. Ensuite, nous ferons de notre mieux pour en examiner le plus possible avant le début de Hour of Code.
+1. **Soumettez plusieurs activités** : Si vous avez créé des activités pour différents niveaux, différents âges ou d'autres catégories, nous listons vos activités séparément afin que chaque enseignant puisse trouver l'activité adaptée à sa classe. Soumettez chaque didacticiel ou activité individuellement. Compte tenu du nombre de soumissions que nous avons reçues ces dernières années, nous aurons le temps d'examiner **jusqu'à 5 activités** par partenaire. Ensuite, nous ferons de notre mieux pour en examiner le plus possible avant le début de Hour of Code.
 
 2. **Au-delà des leçons pour débutants** : Outre les leçons destinées aux enseignants et aux étudiants qui apprennent l'informatique pour la première fois, nous répertorions les expériences d'apprentissage destinées aux classes férues d'informatique qui souhaitent aller un peu plus loin ! Aidez-nous en soumettant des leçons pour des classes qui maîtrisent déjà les bases.
 
@@ -42,7 +42,7 @@ Quelques conseils :
 
 ## Ce qu'il faut soumettre
 
-**Self-guided puzzle or game ([example](https://code.org/dance))**
+**Puzzle ou jeu autoguidé ([exemple](https://code.org/dance))**
 
 Ces activités sont conçues pour permettre aux étudiants de s'auto-orienter dans le cadre d'un didacticiel. Ils ne nécessitent pas beaucoup d'instructions de la part d'un enseignant ou de travaux préparatoires.
 
@@ -85,7 +85,7 @@ L'objectif d'une heure de code est de donner aux débutants un premier aperçu a
 
 Les activités devraient enseigner un concept informatique tel que les boucles, les conditions, le chiffrement ou le fonctionnement d'Internet. Une activité peut également expliquer comment l'informatique est liée à des professions, à des événements ou à l'histoire du monde réel. Par exemple, enseigner l'UX design pour créer des applications qui ont du sens pour un public ou une cause. Nous déconseillons les activités qui mettent l'accent sur la syntaxe de la programmation plutôt que sur les concepts. Par exemple, nous allons lister, sans mettre en évidence, les activités qui enseignent le HTML. De même, nous déconseillons les cours de programmation par blocs qui mettent l'accent sur la configuration/la modification des options de configuration plutôt que sur l'apprentissage de la modélisation d'un algorithme ou d'un processus.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Les activités qui nécessitent l'installation d'une application, d'une application de bureau ou d'une expérience sur console de jeu sont acceptables mais pas idéales. Nous ne listerons pas les activités qui nécessitent une inscription ou un paiement. (Les activités de robotique peuvent nécessiter l'achat de robots.)
+*Exigences techniques :* En raison de la grande variété de configurations technologiques dans les écoles et les salles de classe, les meilleures activités sont les activités adaptées au Web ou aux téléphones intelligents, ou les activités de style déconnecté qui enseignent des concepts informatiques sans l'utilisation d'un ordinateur (voir http://csunplugged.com/). [](http://csunplugged.com/) Les activités qui nécessitent l'installation d'une application, d'une application de bureau ou d'une expérience sur console de jeu sont acceptables mais pas idéales. Nous ne listerons pas les activités qui nécessitent une inscription ou un paiement. (Les activités de robotique peuvent nécessiter l'achat de robots.)
 
 *Format (autoguidé) dirigé par les étudiants :* L'heure de code originale reposait principalement sur le succès de tutoriels ou de leçons autoguidés, éventuellement animés par l'enseignant. Il existe beaucoup d'options, si vous voulez en créer de nouvelles, ces activités doivent être conçues pour être amusante pour un étudiant travaillant seul, ou dans une salle de classe dont l'enseignant a un minimum de connaissances en informatique. Ils doivent donner des instructions pour les étudiants, par opposition à un défi d'une heure dont le challenge ne serait pas limité. Idéalement, les instructions et les tutoriels sont intégrées directement dans la plateforme de programmation, pour éviter de changer d'onglets ou de fenêtres entre le tutoriel et la plateforme de programmation.
 
@@ -146,7 +146,7 @@ Vous aurez besoin :
     * Partager le fait qu'ils ont terminé leur Heure de Code sur les médias sociaux
     * Recevoir un certificat pour avoir terminé leur Heures de Code
     * Voir le classement des villes et pays où le taux de participation à la campagne Une Heure de Code est le plus haut
-    * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
+    * Pour les utilisateurs qui consacrent une heure à votre activité et ne la terminent pas, veuillez inclure un bouton sur votre activité indiquant « J'ai terminé mon heure de code » qui renvoie également à [](https://code.org/api/hour/finish) code.org/api/hour/finish.
 * (Facultatif) Nous pouvons effectuer un suivi à l'aide d'un lien vers un sondage ou un formulaire en ligne demandant un rapport sur les indicateurs d'activité suivants : 
     * Pour les activités en ligne (en particulier les applications smartphone/tablette) : 
         * Nombre d’utilisateurs
@@ -263,7 +263,7 @@ NOTE : ce n'est pas important de le faire pour des applications installables (iO
 
 Exemple de pixels de suivi pour Dance Party :
 
-IMG SRC = <http://code.org/api/hour/begin_dance.png>   
+IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
 
 [**Retour en début de page**](#top)

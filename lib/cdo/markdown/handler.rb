@@ -6,7 +6,7 @@ module Cdo
     # A simple helper to capture the logic of registering a markdown handler with
     # ActionView
     class Handler
-      def initialize(renderer=Redcarpet::Render::HTML, options={})
+      def initialize(renderer = Redcarpet::Render::HTML, options = {})
         @parser = Redcarpet::Markdown.new(renderer, options)
       end
 

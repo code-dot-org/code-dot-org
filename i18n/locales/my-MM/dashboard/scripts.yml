@@ -17,11 +17,13 @@ my:
         starwars:
           title: 'Star Wars : ကုဒ် (JavaScript) ဖြင့် Galaxy တစ်ခုကို တည်ဆောက်ခြင်း'
         mc:
-          title: Minecraft Hour of Code
+          title: Minecraft စွန့်စားခန်း
           description: ဤ Minecraft ကမ္ဘာကိုဖြတ်၍ Steve နှင့် Alexကို ခေါ်ကာ စွန့်စားခန်းသွားရန် ကုတ်နံပါတ် blockများကို သုံးပါ
           student_description: ဤ Minecraft ကမ္ဘာကိုဖြတ်၍ Steve နှင့် Alexကို ခေါ်ကာ စွန့်စားခန်းသွားရန် ကုတ်နံပါတ် blockများကို သုံးပါ
         basketball:
           name: ဘတ်စကတ်ဘော
+        minecraft:
+          title: Minecraft ဒီဇိုင်းနာ
         hero:
           title: 'Minecraft: လူစွမ်းကောင်း၏ ခရီးစဉ်'
           description_short: Hour of Code အတွက် အစီအစဥ်သစ်နဲွ Minecraft ပြန်လည်​ရောက်ရှိလာပါပြီ!
@@ -413,3 +415,11 @@ my:
           lesson_groups:
             lessonGroup-5:
               display_name: Variables
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: ဖြစ်စဥ်များ
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Loops

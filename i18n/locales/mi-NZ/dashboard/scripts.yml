@@ -117,7 +117,7 @@ mi:
           description_short: Ako pēhea te whakahaere karetao, me te waihanga i tōhou ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
           student_description: Ako pēhea te whakahaere karetao, me te waihanga i tōhou ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
         mc:
-          title: Hour of Code Mahimaina
+          title: Kiri Māia Mahimaina
           description: Whakamahia ngā paraka tuhiwaehere hei kawe i a Steve, i a Alex rānei i tētahi mahi mātātoa mā tēnei ao Mahimaina
           description_short: Tūhura i te Minecraft ao i roto i te tohu pūmanawa
           student_description: Whakamahia ngā paraka tuhiwaehere hei kawe i a Steve, i a Alex rānei i tētahi mahi mātātoa mā tēnei ao Mahimaina
@@ -963,6 +963,8 @@ mi:
               display_name: Ihirangi
             lessonGroup-2:
               display_name: Ihirangi
+        dance-unplugged:
+          title: Te Pāti Kanikani Purukore
         spelling-bee:
           title: Ohu Takikupu
         csa5-exemplars:
@@ -1352,3 +1354,29 @@ mi:
               display_name: Ngā Here
             lessonGroup-5:
               display_name: Ngā Taurangi
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Kupu Whakataki
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Kupu Whakataki
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Kupu Whakataki
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Kupu Whakataki
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Ngā Takunetanga
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Ngā Koromeke
+            lesson-4:
+              name: Ngā Here
+          title: Whakatakinga ki te Pūtaiao Rorohiko

@@ -146,6 +146,8 @@ uz:
           lessons:
             lesson-5:
               name: Baholash
+            lesson-6:
+              name: 1-dars
         applab-1hour:
           description: Ushbu seminar o‘quvchilarga 1 soat ichida amaliy laboratoriya
             haqida asosiy ma'lumot berish uchun mo‘ljallangan. O‘quvchilar kompyuter
@@ -1614,6 +1616,8 @@ uz:
           title: CS Discoveries Post-Course Survey
         csd-post-survey-2023:
           title: Post-Course Survey
+        csd-post-survey-2024:
+          title: Post-Course Survey
         csd-videos:
           description: Kompyuter fanlari ixtirolari barcha videolari
           description_short: Kompyuter fanlari ixtirolari barcha videolari
@@ -1700,6 +1704,14 @@ uz:
               display_name: Survey
           title: Muammolarni yechish va hisoblash ('21-'22)
         csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Computers and Problem Solving'
+            lessonGroup-5:
+              display_name: Survey
+        csd1-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: The Problem Solving Process'
@@ -1906,6 +1918,12 @@ uz:
             holda sahifalaringizni qanday tuzish va stil berishni o‘rganasiz. Shuningdek,
             siz debug va izoh berish kabi qimmatli dasturiy ko‘nikmalar bilan ishlaysiz. '
         csd2-2023:
+          student_description: 'Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda
+            kontentni yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni
+            baham ko‘rishni xohlaganingizdan so‘ng, siz HTML va CSSdan foydalangan
+            holda sahifalaringizni qanday tuzish va stil berishni o‘rganasiz. Shuningdek,
+            siz debug va izoh berish kabi qimmatli dasturiy ko‘nikmalar bilan ishlaysiz. '
+        csd2-2024:
           student_description: 'Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda
             kontentni yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni
             baham ko‘rishni xohlaganingizdan so‘ng, siz HTML va CSSdan foydalangan
@@ -2172,6 +2190,18 @@ uz:
             animatsiyalar va o‘yinlarni yarating. Yakuniy loyihada siz shaxsiylashtirilgan,
             interaktiv dasturni ishlab chiqasiz.
         csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: Images and Animations'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Building Games'
+          student_description: Unit 3 bo'limida siz Game Labda animatsiyalar, interaktiv
+            san'at va o‘yinlarni dasturlashtirasiz. Oddiy shakllardan boshlang va
+            kompyuter olimlari har kuni foydalanadigan dizayn dasturlari bilan bir
+            xil dasturiy tushunchalardan foydalanib, spraytga asoslangan yanada murakkab
+            animatsiyalar va o‘yinlarni yarating. Yakuniy loyihada siz shaxsiylashtirilgan,
+            interaktiv dasturni ishlab chiqasiz.
+        csd3-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: Images and Animations'
@@ -2463,6 +2493,19 @@ uz:
             have the opportunity to identify a need that they care about, prototype
             solutions both on paper and in App Lab, and test solutions with real users
             to get feedback and drive further iteration.
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: User Centered Design'
+            lessonGroup-3:
+              display_name: 'Chapter 2: App Prototyping'
+          student_description: Unit 4 introduces the broader social impacts of computing.
+            Through a series of design challenges, you will learn how to better understand
+            the needs of others while developing a solution to a problem. The second
+            half of the unit consists of an iterative team project, during which teams
+            have the opportunity to identify a need that they care about, prototype
+            solutions both on paper and in App Lab, and test solutions with real users
+            to get feedback and drive further iteration.
         csd4-dlp:
           description: This is Unit 4 of the Deeper Learning Plan for Code.org CS
             Discoveries facilitators in training. Here you will find reflection prompts
@@ -2735,6 +2778,23 @@ uz:
             siz tanlagan sohaga qanday tatbiq etish mumkinligini ko‘rib chiqish bilan
             bob yakunlanadi.
         csd5-2023:
+          description_short: Learn how people use computers to solve data problems.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: Representing Information'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Solving Data Problems'
+          student_description: 5-bo‘lim ma'lumotlarning muammolarni hal qilishdagi
+            ahamiyati haqida va bu jarayonda kompyuterlarning qanday yordam berishini
+            ko‘rsatib beradi. Birinchi bobda kompyuterda ma'lumotlarni aks ettirish
+            uchun foydalaniladigan turli xil tizimlar va ulardan foydalanish natijasida
+            yuzaga keladigan qiyinchiliklar va almashinuvlar ko‘rib chiqilgan. Ikkinchi
+            bobda siz ma'lumotlar to‘plamlari muammolarni hal qilishda qanday foydalanilishini
+            va kompyuterlar ushbu jarayonning bosqichlarini avtomatlashtirishda qanday
+            yordam berishini bilib olasiz. Ma'lumotlar muammosini hal qilish jarayonini
+            siz tanlagan sohaga qanday tatbiq etish mumkinligini ko‘rib chiqish bilan
+            bob yakunlanadi.
+        csd5-2024:
           description_short: Learn how people use computers to solve data problems.
           lesson_groups:
             lessonGroup-2:
@@ -3083,7 +3143,16 @@ uz:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Chapter 2: Building Physical Prototypes'
+        csd6a-2024:
+          description_short: Learn to program with physical devices.
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Chapter 2: Building Physical Prototypes'
         csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputs and Outputs
+        csd6b-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: Inputs and Outputs
@@ -3096,6 +3165,10 @@ uz:
             lessonGroup-4:
               display_name: Survey
         csd7-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Intro to App Lab
+        csd7-2024:
           lesson_groups:
             lessonGroup-4:
               display_name: Intro to App Lab
@@ -5452,7 +5525,7 @@ uz:
           description_short: Minecraft dunyosini kod orqali o'rganing.
           student_description: Stiv va Aleks Maynkraft olamida sayohat qilishlari
             uchun kod bloklaridan foydalaning.
-          title: Maynkraft Dasturlash soati
+          title: Minecraft Sarguzashtchi
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -5484,6 +5557,10 @@ uz:
             maydonchasi. Kelgusi savollarni Dan Shnayderdan so‘rang.
           student_description: CSD uchun ML/AI birligini rivojlantirish uchun aqliy
             hujum/o‘yin maydonchasi. Kelgusi savollarni Dan Shnayderdan so‘rang.
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Bepul o'yin
         netsim:
           title: Internet simulyator
         nevada-standards-aligned-fifth-grade-2023:
@@ -5859,6 +5936,27 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Xush kelibsiz
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: 1-dars
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: 1-dars
+            lesson-3:
+              name: Sikllar
+            lesson-4:
+              name: Shartli bayonotlar
+          title: Informatikaga kirish
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: 1-dars
+            lesson-3:
+              name: Hodisalar
+            lesson-4:
+              name: Xatti-harakatlar
         soccer:
           description: Futbol o'yinini yasang
           description_short: Futbol o'yinini yasang
@@ -6057,6 +6155,25 @@ uz:
               display_name: Kontent
             csd3_2:
               display_name: 'Chapter 2: Building Games'
+        virtual-pl-csa-summer-2024-day1:
+          title: 1-kun
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Kirish
+          lessons:
+            lesson-7:
+              name: Kirish
+          title: 1-kun
+        virtual-pl-csa-summer-day2:
+          title: 2-kun
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Kirish
+          title: 3-kun
+        virtual-pl-csa-summer-day4:
+          title: 4-kun
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -6083,6 +6200,17 @@ uz:
           lessons:
             lesson-3:
               name: Baholash
+        virtual-pl-csp-summer-day1:
+          title: 1-kun
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Kirish
+          title: 2-kun
+        virtual-pl-csp-summer-day3:
+          title: 3-kun
+        virtual-pl-csp-summer-day4:
+          title: 4-kun
         vpl-csa-2023-m1:
           title: Modul 1
         vpl-csa-2023-m2:
@@ -6161,6 +6289,12 @@ uz:
           title: Modul 7
         vpl-csp-2023-m8:
           title: Modul 8
+        web-dev-2024:
+          student_description: 'Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda
+            kontentni yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni
+            baham ko‘rishni xohlaganingizdan so‘ng, siz HTML va CSSdan foydalangan
+            holda sahifalaringizni qanday tuzish va stil berishni o‘rganasiz. Shuningdek,
+            siz debug va izoh berish kabi qimmatli dasturiy ko‘nikmalar bilan ishlaysiz. '
         web-development-2023:
           lesson_groups:
             lessonGroup-4:
