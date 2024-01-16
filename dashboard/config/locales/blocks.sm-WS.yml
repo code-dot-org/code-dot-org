@@ -310,6 +310,11 @@ sm:
           EFFECT:
             '"hearts"': fatu
             '"rain"': timu
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': lanumoana
+            '"red"': lanu mumu
       Mikelab_changePropBy:
         options:
           PROPERTY:
