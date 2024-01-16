@@ -31,7 +31,7 @@ $width-md: 700px;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 1020px;
+    max-width: 960px;
     margin: 0 auto;
 
     @media screen and (max-width: $width-lg) {
@@ -65,6 +65,5 @@ $width-md: 700px;
         width: 100%;
       }
     }
-
   }
 }
