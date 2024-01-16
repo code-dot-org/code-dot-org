@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-import DropdownMenu, {DropdownMenuProps} from './index';
+import CheckboxDropdown, {CheckboxDropdownProps} from './index';
 import {Meta, Story} from '@storybook/react';
 
 export default {
   title: 'DesignSystem/Dropdown Menu Component',
-  component: DropdownMenu,
+  component: CheckboxDropdown,
 } as Meta;
 
 //
@@ -12,10 +12,10 @@ export default {
 //
 // This is needed to fix children type error (passing string instead of React.ReactNode type)
 // eslint-disable-next-line
-const SingleTemplate: Story<DropdownMenuProps> = args => {
+const SingleTemplate: Story<CheckboxDropdownProps> = args => {
   const [value, setValues] = useState('');
   return (
-    <DropdownMenu
+    <CheckboxDropdown
       {...args}
       selectedValue={value || args.selectedValue}
       onChange={e => {
@@ -27,7 +27,7 @@ const SingleTemplate: Story<DropdownMenuProps> = args => {
 };
 
 const MultipleTemplate: Story<{
-  components: DropdownMenuProps[];
+  components: CheckboxDropdownProps[];
 }> = args => {
   const [values, setValues] = useState({} as Record<string, string>);
 
@@ -42,7 +42,7 @@ const MultipleTemplate: Story<{
         {args.components?.map(componentArg =>
           componentArg.color === 'white' ? (
             <div style={{background: 'black', padding: 10}}>
-              <DropdownMenu
+              <CheckboxDropdown
                 key={`${componentArg.name}`}
                 {...componentArg}
                 selectedValue={
@@ -58,7 +58,7 @@ const MultipleTemplate: Story<{
               />
             </div>
           ) : (
-            <DropdownMenu
+            <CheckboxDropdown
               key={`${componentArg.name}`}
               {...componentArg}
               selectedValue={
