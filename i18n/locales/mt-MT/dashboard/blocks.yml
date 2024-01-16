@@ -32,6 +32,11 @@ mt:
         options:
           KEY:
             '"enter"': daħħal
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': Ikħal
+            '"red"': aħmar
       gamelab_randColor:
         text: kulur bl-addoċċ
       gamelab_randomColor:
