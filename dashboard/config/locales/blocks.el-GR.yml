@@ -1040,6 +1040,11 @@ el:
         options:
           INPUT1:
             '1': χυμός λεμονιού
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': μπλε
+            '"red"': κόκκινο
       FunctionBlocks_communicate:
         text: Επικοινωνία {VAR1} με {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
