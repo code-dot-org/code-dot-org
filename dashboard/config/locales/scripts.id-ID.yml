@@ -5803,6 +5803,10 @@ id:
           student_description: Program binatang dan makhluk Minecraft lainnya dalam
             Minecraft versi Anda sendiri.
           title: Desainer Hour of Code Minecraft
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Permainan Gratis
         netsim:
           title: Simulator Internet
         nevada-standards-aligned-fifth-grade-2023:
@@ -6655,6 +6659,31 @@ id:
           title: 'Modul 2: Menavigasi Code.org'
         self-paced-pl-csp2-2023:
           title: 'Modul 2: Menavigasi Code.org'
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Pelajaran 1
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Pelajaran 1
+            lesson-3:
+              name: Loop
+            lesson-4:
+              name: Kondisi
+            lesson-6:
+              name: Langkah berikutnya
+          title: Perkenalan ilmu komputer
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Pelajaran 1
+            lesson-3:
+              name: kegiatan
+            lesson-4:
+              name: Perilaku
+            lesson-5:
+              name: Langkah berikutnya
         soccer:
           description: Buat game sepak bola
           description_short: Buat game sepak bola

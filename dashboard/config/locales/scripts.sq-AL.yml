@@ -2261,6 +2261,10 @@ sq:
           student_description: Kafshët e programit dhe krijesa të tjera Minecraft
             në versionin tuaj të Minecraft.
           title: Dizenjo Minecraft-in e Orës së Kodimit
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Lojë e lirë
         netsim:
           title: Imitues Interneti
         nevada-standards-aligned-fifth-grade-2023:
@@ -2496,6 +2500,23 @@ sq:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Cikle
+            lesson-4:
+              name: Kushtet
+            lesson-6:
+              name: Hapat e ardhshme
+          title: Hyrje në Shkencë Kompjuterike
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Ngjarje
+            lesson-4:
+              name: Sjelljet
+            lesson-5:
+              name: Hapat e ardhshme
         soccer:
           name: futboll
         spelling-bee:

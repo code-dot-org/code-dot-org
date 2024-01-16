@@ -8881,6 +8881,8 @@ az:
           lessons:
             lesson-1:
               name: Remiks layihələri
+            lesson-3:
+              name: Azad Oyna
         musiclab-2023:
           description: Paylaşmaq və ya ifa etmək üçün mahnının öz versiyasını kodlayın!
           description_short: Paylaşmaq və ya ifa etmək üçün mahnının öz versiyasını
@@ -9593,6 +9595,31 @@ az:
           student_description: cüt
         self-paced-pl-csp5-2021:
           name: öz templi-pl-csp5-2021
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Dərs 1
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Dərs 1
+            lesson-3:
+              name: dövrlər
+            lesson-4:
+              name: Şərti ifadələr
+            lesson-6:
+              name: Növbəti addımlar
+          title: İnformatikaya giriş
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Dərs 1
+            lesson-3:
+              name: Tədbirlər
+            lesson-4:
+              name: Rəftar
+            lesson-5:
+              name: Növbəti addımlar
         self-paced-pl-physical-computing2:
           lessons:
             lesson-5:

@@ -1870,6 +1870,10 @@ se:
             du iežat Minecraft-veršuvnnas.
           student_description: Programmere elliid dahje eará Minecraft heakkalaččaid
             du iežat Minecraft-veršuvnnas.
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Friddja Speallan
         nevada-standards-aligned-fifth-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1949,6 +1953,18 @@ se:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
             lessonGroup-3:
               display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-6:
+              name: Boahttevaš Lávkkit
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Dáhpáhusaid
+            lesson-4:
+              name: Láhttemat
+            lesson-5:
+              name: Boahttevaš Lávkkit
         spelling-bee:
           title: Stávengilvu
         spritelab-effects-challenge:

@@ -8,12 +8,13 @@ import ProgressDataV2 from './ProgressDataV2';
 import styles from './progress-table-v2.module.scss';
 import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
+import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
 
-function ProgressTableV2({
+export function ProgressTableV2({
   isSortedByFamilyName,
   sectionId,
   students,
-  unitName,
+  unitData,
 }) {
   const sortedStudents = React.useMemo(() => {
     return isSortedByFamilyName
@@ -23,29 +24,34 @@ function ProgressTableV2({
 
   return (
     <div className={styles.progressTableV2}>
-      <div>Progress Table V2</div>
-      <ProgressTableHeader unitName={unitName} sectionId={sectionId} />
+      <StudentColumn
+        sortedStudents={sortedStudents}
+        unitName={unitData?.title}
+        sectionId={sectionId}
+      />
       <div className={styles.table}>
-        <StudentColumn sortedStudents={sortedStudents} />
-        <ProgressDataV2 sortedStudents={sortedStudents} />
+        <ProgressTableHeader lessons={unitData?.lessons} />
+        <ProgressDataV2
+          sortedStudents={sortedStudents}
+          lessons={unitData?.lessons}
+        />
       </div>
     </div>
   );
 }
 
+export const UnconnectedProgressTableV2 = ProgressTableV2;
+
 ProgressTableV2.propTypes = {
   isSortedByFamilyName: PropTypes.bool,
   sectionId: PropTypes.number,
-  students: PropTypes.arrayOf(studentShape),
-  unitName: PropTypes.string,
+  students: PropTypes.arrayOf(studentShape).isRequired,
+  unitData: unitDataPropType.isRequired,
 };
 
-export default connect(
-  state => ({
-    isSortedByFamilyName: state.currentUser.isSortedByFamilyName,
-    sectionId: state.teacherSections.selectedSectionId,
-    students: state.teacherSections.selectedStudents,
-    unitName: getCurrentUnitData(state)?.title,
-  }),
-  dispatch => ({})
-)(ProgressTableV2);
+export default connect(state => ({
+  isSortedByFamilyName: state.currentUser.isSortedByFamilyName,
+  sectionId: state.teacherSections.selectedSectionId,
+  students: state.teacherSections.selectedStudents,
+  unitData: getCurrentUnitData(state),
+}))(ProgressTableV2);

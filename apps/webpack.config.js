@@ -12,6 +12,10 @@ const UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 const {WebpackManifestPlugin} = require('webpack-manifest-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const {PyodidePlugin} = require('@pyodide/webpack-plugin');
+const CircularDependencyPlugin = require('circular-dependency-plugin');
+
+const circularDependencies = require('./circular_dependencies.json');
 
 const envConstants = require('./envConstants');
 
@@ -65,6 +69,13 @@ const nodeModulesToTranspile = [
 // As of Webpack 5, Node APIs are no longer automatically polyfilled.
 // resolve.fallback resolves the API to its NPM package, and the plugin
 // makes the API available as a global.
+
+// map our circular dependency JSON to a set.
+const circularDependenciesSet = new Set(circularDependencies);
+
+// as we see our known circular dependencies, we're gonna remove them from our list. That way,
+// we can report at the end if any circular dependencies have been cleaned up.
+let seenCircles = new Set();
 const nodePolyfillConfig = {
   plugins: [
     new webpack.ProvidePlugin({
@@ -74,6 +85,46 @@ const nodePolyfillConfig = {
       path: 'path-browserify',
       process: 'process/browser',
       timers: 'timers-browserify',
+    }),
+    new CircularDependencyPlugin({
+      // ignore everything in a build directory or mode_modules
+      exclude: /node_modules|build/,
+      failOnError: true,
+      allowAsyncCycles: false,
+      cwd: process.cwd(),
+      // when we start, we re-initialize our list of previously seen circles to whatever
+      // we loaded from circular_depencies.json. If that file changes and you need to update, restart
+      // webpack
+      onStart: () => {
+        seenCircles.clear();
+        seenCircles = new Set(Array.from(circularDependenciesSet));
+      },
+      onDetected: ({module: webpackModuleRecord, paths, compilation}) => {
+        const pathString = paths.join(' -> ');
+        // if the path is not a known existing one, then note as an error
+        if (!circularDependenciesSet.has(pathString)) {
+          compilation.errors.push(
+            new Error(
+              `Circular Dependency Checker : New Circular Dependency found : ${pathString}`
+            )
+          );
+        }
+        // and since we've seen that path, we can delete it from our set of seen values
+        seenCircles.delete(pathString);
+      },
+      // finally, at the end, if we still have any circles that we previously knew about but did not see
+      // this time, note it as a warning.
+      onEnd: ({compilation}) => {
+        if (seenCircles.size > 0) {
+          compilation.warnings.push(
+            new Error(
+              `Circular Dependency Checker : Resolved circular dependencies can be removed from circles.json : ${Array.from(
+                seenCircles
+              ).join(',')}`
+            )
+          );
+        }
+      },
     }),
   ],
   resolve: {
@@ -612,6 +663,7 @@ function createWebpackConfig({
       ...(watch && watchNotify
         ? [new WebpackNotifierPlugin({alwaysNotify: true})]
         : []),
+      new PyodidePlugin(),
     ],
   };
 

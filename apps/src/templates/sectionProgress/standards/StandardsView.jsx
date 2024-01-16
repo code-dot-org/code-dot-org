@@ -5,7 +5,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {connect} from 'react-redux';
 import {getCurrentUnitData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import {scriptDataPropType} from '../sectionProgressConstants';
+import {unitDataPropType} from '../sectionProgressConstants';
 import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
 import StandardsIntroDialog from './StandardsIntroDialog';
 import StandardsProgressTable from './StandardsProgressTable';
@@ -18,7 +18,7 @@ class StandardsView extends Component {
     //redux
     sectionId: PropTypes.number.isRequired,
     scriptFriendlyName: PropTypes.string.isRequired,
-    scriptData: scriptDataPropType,
+    scriptData: unitDataPropType,
   };
 
   getLinkToOverview() {

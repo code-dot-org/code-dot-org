@@ -4998,6 +4998,10 @@ ja:
           description_short: コンピューター サイエンス入門のすべての概念を学び、独自のアート、ストーリー、ゲームを作成しましょう。
         self-paced-pl-csp2-2023:
           title: モジュール2：Code. orgの操作方法
+        musiclab:
+          lessons:
+            lesson-3:
+              name: じゆうあそび
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -5311,3 +5315,20 @@ ja:
               display_name: 第二章
         csd-post-survey-2024:
           title: コース終了後アンケート
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: イベント
+            lesson-4:
+              name: 行動
+            lesson-5:
+              name: 次の手順
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: くりかえし
+            lesson-4:
+              name: 条件
+            lesson-6:
+              name: 次の手順
+          title: コンピューター・サイエンス入門

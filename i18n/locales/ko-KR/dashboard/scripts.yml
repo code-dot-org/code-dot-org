@@ -3887,9 +3887,10 @@ ko:
             lessonGroup-7:
               display_name: 컴퓨팅의 영향
             end_of_course_project:
-              display_name: 과정말 프로젝트
+              display_name: 종합  프로젝트
           title: 과정 E (2022)
           description: 4학년 학생들을 위해 코스 E를 만들었습니다.이 과정은 Sprite Lab 프로그래밍 도구에 대한 소개로 시작됩니다.학생들은 온라인 안전에 대해 배우게 될 내용을 강화하는 재미있고 인터랙티브한 프로젝트를 만드는 방법을 배우게 됩니다.이 수업을 마친 후 학생들은 더 복잡한 코딩에 참여하게 됩니다.학생들은 중첩 루프, 함수 및 조건문에 대해 배우게 됩니다.강좌를 마치면 학생들은 이러한 개념을 결합하여 어려운 퍼즐을 풀게 됩니다.이 과정은 학생들이 게임이나 그림을 만드는 개방형 프로젝트로 끝납니다.
+          student_description: 알고리즘, 이벤트, 반복, 선택, 함수로 코딩을 시작하세요! 이 강좌를 마치면 친구나 가족과 공유할 수 있는 게임이나 그림을 디자인하고 만들 수 있습니다.
           description_audience: '나이: 8-12'
         coursef-2022:
           lesson_groups:
@@ -4927,6 +4928,10 @@ ko:
           description_audience: '나이: 9-13'
           description_short: 컴퓨터 과학 기초에서의 모든 개념을 배우고 미술작품과 스토리 또는 게임을 만드세요.
           description: 5학년 학생들을 위해 코스 F를 만들었습니다.이 강좌는 사용자들이 사용하는 앱에서 어떤 선택을 하는지 살펴보는 것으로 시작됩니다.그런 다음 학생들은 사용자가 선택할 수 있는 다양한 Sprite Lab 앱을 만드는 방법을 배웁니다.이 과정의 후반부 수업에서 학생들은 다양한 상황에서의 변수에 대해 배우게 됩니다.학생들은 이 과정을 통해 더 큰 자율성과 더 많은 선택권을 갖게 됩니다.강좌를 마치면 학생들은 대화형 프로젝트를 만들어 친구 및 가족과 공유할 수 있습니다.
+        musiclab:
+          lessons:
+            lesson-3:
+              name: 자유 플레이
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -5247,3 +5252,20 @@ ko:
               display_name: 챕터 2
         csd-post-survey-2024:
           title: 과정 후 설문조사
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: 이벤트
+            lesson-4:
+              name: 행동
+            lesson-5:
+              name: 다음 단계
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: 반복
+            lesson-4:
+              name: 조건
+            lesson-6:
+              name: 다음 단계
+          title: 컴퓨터과학(정보과학) 소개

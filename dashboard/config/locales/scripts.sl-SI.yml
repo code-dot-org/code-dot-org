@@ -1405,6 +1405,19 @@ sl:
               display_name: Dogodki
             csf_loops:
               display_name: Zanke
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Zanke
+            lesson-4:
+              name: Pogoji
+          title: Uvod v računalništvo
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Dogodki
+            lesson-4:
+              name: Vedenje
         soccer:
           name: nogomet
         spelling-bee:

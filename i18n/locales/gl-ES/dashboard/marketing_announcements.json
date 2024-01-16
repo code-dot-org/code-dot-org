@@ -1,104 +1,9 @@
 {
   "banners": {
-    "csleadersprize": {
-      "title": "",
-      "body": "",
-      "buttonText": "Aprender máis"
-    },
-    "csjourneys-22": {
-      "title": "",
-      "body": "",
-      "buttonText": "Aprender máis"
-    },
-    "hoc-more": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
     "superhero": {
       "title": "",
       "body": "",
       "buttonText": "Aprende máis"
-    },
-    "csjourneys": {
-      "title": "",
-      "body": "",
-      "buttonText": "Aprender máis"
-    },
-    "class-schedule-survey": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "back-to-school-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Aprender máis"
-    },
-    "teacher-apps-open-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Participa"
-    },
-    "teacher-apps-closing-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Participa"
-    },
-    "teacher-apps-nominate-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "teacher-apps-stillon-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Participa"
-    },
-    "home-learning-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "soonhoc-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "codebytes-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Aprender máis"
-    },
-    "ai-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Aprender máis"
-    },
-    "congrats-certificate-share": {
-      "title": "",
-      "body": "",
-      "buttonText": "Comezar"
-    },
-    "coldplay": {
-      "title": "",
-      "body": "",
-      "buttonText": "Próbao"
-    },
-    "ai-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "Aprender máis"
-    },
-    "ai-pl-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "Aprender máis"
-    },
-    "state-of-cs-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
     },
     "hoc-2023": {
       "title": "",
@@ -106,6 +11,11 @@
       "buttonText": "Aprender máis"
     },
     "hoc-2023-dance-ai": {
+      "title": "",
+      "body": "",
+      "buttonText": "Aprender máis"
+    },
+    "co-teacher": {
       "title": "",
       "body": "",
       "buttonText": "Aprender máis"

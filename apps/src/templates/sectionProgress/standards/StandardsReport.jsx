@@ -5,7 +5,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {connect} from 'react-redux';
 import {getCurrentUnitData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import {scriptDataPropType} from '../sectionProgressConstants';
+import {unitDataPropType} from '../sectionProgressConstants';
 import {
   getSelectedScriptFriendlyName,
   getSelectedScriptDescription,
@@ -24,7 +24,7 @@ import StandardsReportCurrentCourseInfo from './StandardsReportCurrentCourseInfo
 import StandardsReportHeader from './StandardsReportHeader';
 import color from '@cdo/apps/util/color';
 import _ from 'lodash';
-import {loadScriptProgress} from '../sectionProgressLoader';
+import {loadUnitProgress} from '../sectionProgressLoader';
 import PrintReportButton from './PrintReportButton';
 import {cstaStandardsURL} from './standardsConstants';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -35,7 +35,7 @@ class StandardsReport extends Component {
     scriptId: PropTypes.number,
     sectionId: PropTypes.number.isRequired,
     scriptFriendlyName: PropTypes.string.isRequired,
-    scriptData: scriptDataPropType,
+    scriptData: unitDataPropType,
     teacherName: PropTypes.string,
     sectionName: PropTypes.string,
     teacherComment: PropTypes.string,
@@ -55,7 +55,7 @@ class StandardsReport extends Component {
     const scriptIdFromTD =
       window.opener.teacherDashboardStoreInformation.scriptId;
     this.props.setScriptId(scriptIdFromTD);
-    loadScriptProgress(scriptIdFromTD, this.props.sectionId);
+    loadUnitProgress(scriptIdFromTD, this.props.sectionId);
   }
 
   getLinkToOverview() {
