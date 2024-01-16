@@ -1,4 +1,4 @@
-require 'cdo/metrics_helper'
+require_relative '../lib/cdo/metrics_helper'
 module CiBuildMetrics
   # Log details of a build to metrics database.
   # @param [Symbol] environment
