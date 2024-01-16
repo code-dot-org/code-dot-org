@@ -242,20 +242,16 @@ class LtiV1Controller < ApplicationController
     existing_integration = Queries::Lti.get_lti_integration(issuer, client_id)
 
     if existing_integration.nil?
-      begin
-        Services::Lti.create_lti_integration(
-          client_id: client_id,
-          issuer: issuer,
-          platform_name: platform_name,
-          auth_redirect_url: auth_redirect_url,
-          jwks_url: jwks_url,
-          access_token_url: access_token_url,
-          admin_email: admin_email
-        )
-        render status: :ok, json: {body: I18n.t('lti.create_integration_success')}
-      rescue ActiveRecord::ActiveRecordError => exception
-        render status: :bad_request, json: {error: exception.message}
-      end
+      Services::Lti.create_lti_integration(
+        client_id: client_id,
+        issuer: issuer,
+        platform_name: platform_name,
+        auth_redirect_url: auth_redirect_url,
+        jwks_url: jwks_url,
+        access_token_url: access_token_url,
+        admin_email: admin_email
+      )
+      render status: :ok, json: {body: I18n.t('lti.create_integration_success')}
     else
       render status: :conflict, json: {error: I18n.t('lti.error.integration_exists')}
     end
