@@ -1,41 +1,7 @@
 import {expect} from '../../../util/reconfiguredChai';
-import {
-  getPartitionedBlockElements,
-  addMutationToMiniToolboxBlocks,
-} from '@cdo/apps/blockly/addons/cdoXml';
-import {PROCEDURE_DEFINITION_TYPES} from '@cdo/apps/blockly/constants';
+import {addMutationToMiniToolboxBlocks} from '@cdo/apps/blockly/addons/cdoXml';
 
 const parser = new DOMParser();
-
-describe('getPartitionedBlockElements', function () {
-  it('should return partitioned block elements based on their types', function () {
-    // Sample XML data
-    const xmlData = `
-        <xml>
-          <block type="blockType1"></block>
-          <block type="procedures_defnoreturn"></block>
-          <block type="blockType2"></block>
-        </xml>
-      `;
-    const xmlDoc = parser.parseFromString(xmlData, 'text/xml');
-
-    // Call the function
-    const partitionedBlockElements = getPartitionedBlockElements(
-      xmlDoc.documentElement,
-      PROCEDURE_DEFINITION_TYPES
-    );
-
-    // Expected partitioned block elements
-    const expectedPartitionedElements = [
-      xmlDoc.querySelector('block[type="procedures_defnoreturn"]'),
-      xmlDoc.querySelector('block[type="blockType1"]'),
-      xmlDoc.querySelector('block[type="blockType2"]'),
-    ];
-
-    // Compare the result with the expected partitioned elements
-    expect(partitionedBlockElements).to.deep.equal(expectedPartitionedElements);
-  });
-});
 
 describe('addMutationToMiniToolboxBlocks', function () {
   it('should add a mutation element with useDefaultIcon attribute to miniflyout block with "open" miniflyout', function () {
