@@ -254,6 +254,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.Input.prototype.appendTitle;
   blocklyWrapper.Block.prototype.getFieldValue =
     blocklyWrapper.Block.prototype.getTitleValue;
+  blocklyWrapper.Block.prototype.appendEndRowInput =
+    blocklyWrapper.Block.prototype.appendDummyInput;
 
   blocklyWrapper.cdoUtils = {
     loadBlocksToWorkspace(blockSpace, source) {
