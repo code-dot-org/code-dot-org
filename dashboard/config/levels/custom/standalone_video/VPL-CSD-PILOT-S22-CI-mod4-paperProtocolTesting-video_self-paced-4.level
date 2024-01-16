@@ -1,5 +1,6 @@
 <StandaloneVideo>
   <config><![CDATA[{
+  "published": true,
   "game_id": 54,
   "created_at": "2023-12-14T21:57:57.000Z",
   "level_num": "custom",
@@ -10,11 +11,10 @@
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "long_instructions": "## The following video is an example of an activity students will participate in Lesson 13: Prototype Testing. \r\n\r\n##### The primary purpose of developing paper prototypes is that they allow for quick testing and iteration before any code is written. Once students develop their paper prototypes, they will be given a clear format for testing their app design. \r\n\r\n",
+    "long_instructions": "# Prototype Testing\r\n\r\n##### The following video is an example of an activity students will participate in **Lesson 13: Prototype Testing**. We're skipping ahead to a future lesson because the process for **paper prototype user testing** in Lesson 5 and Lesson 13 is _the same_. \r\n\r\n##### While you're watching the video below, consider the question, _How will I set my students up for success in testing their own paper prototypes?_ \r\n\r\n",
     "name_suffix": "_self-paced-4"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2023-12-14T21:57:57.310+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-mod4-paperProtocolTesting-video_2023\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-mod4-paperProtocolTesting-video_2023\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-12-14T21:57:57.310+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-mod4-paperProtocolTesting-video_2023\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-mod4-paperProtocolTesting-video_2023\"},{\"changed_at\":\"2024-01-11 22:20:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
