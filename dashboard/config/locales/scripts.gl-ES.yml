@@ -55,6 +55,7 @@ gl:
             Birds e Plantas vs. Zombis!
           description_short: Proba os fundamentos da informa\*tica con moitos personaxes
             divertidos!
+          name: Hora de Código
           student_description: Proba os fundamentos da informa\*tica con personaxes
             de Angry Birds e Plantas vs. Zombis!
           title: Hora de Código 2013
@@ -663,6 +664,14 @@ gl:
               display_name: Funcións
             csp_variables:
               display_name: Variables
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+            csp_variables:
+              display_name: Variables
         csp4-dlp:
           lesson_groups:
             required:
@@ -754,6 +763,12 @@ gl:
             csp_unit6_2020:
               display_name: Algoritmos
         csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listas
+            lessonGroup-3:
+              display_name: Bucles
+        csp6-2024:
           lesson_groups:
             csp_unit6_2020:
               display_name: Listas
