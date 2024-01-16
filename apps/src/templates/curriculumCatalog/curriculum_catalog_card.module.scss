@@ -1,5 +1,6 @@
 @use 'sass:math';
 @import 'phase1-design-system';
+@import 'breakpoints';
 
 $border-radius: 4px;
 $container-width: 309px;
@@ -206,4 +207,34 @@ $container-width: 309px;
 
 .buttonFlex {
   flex: 1;
+}
+
+// !important tags needed here in order to override Button styling that makes the Learn More button appear at all times.
+.learnMoreButton {
+  display: none !important;
+  text-align: center;
+}
+
+@media screen and (max-width: $width-md) {
+  .arrowContainer {
+    display: none !important;
+  }
+
+  .centerExpandedCard {
+    display: none !important;
+  }
+
+  .learnMoreButton {
+    display: block !important;
+  }
+
+  .quickViewButton {
+    display: none !important;
+  }
+
+  .expandedCard {
+    .curriculumInfoContainer {
+      border-color: $neutral_dark20 !important;
+    }
+  }
 }

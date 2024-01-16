@@ -48,7 +48,6 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     ],
     style: 'procedure_blocks',
     helpUrl: '/docs/spritelab/codestudio_definingFunction',
-    tooltip: '%{BKY_PROCEDURES_DEFNORETURN_TOOLTIP}',
     extensions: [
       'procedure_def_get_def_mixin',
       'procedure_def_var_mixin',

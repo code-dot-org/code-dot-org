@@ -1180,6 +1180,15 @@ en:
             '5': both
       DansBlocks_testRectangle:
         text: 'make rectangle x: {X} y: {Y} w: {W} h: {H} color: {COLOR}'
+      DansBlocks_testShowVariable:
+        text: 'Display this number: {SOMENUMBER} at size {SOMESIZE} in {COLOR}'
+        options:
+          OPT:
+            '"large"': large
+            '"small"': small
+          COLOR:
+            '"blue"': blue
+            '"red"': red
       FunctionBlocks_addEightBlock:
         text: addEight
       FunctionBlocks_addFiveBlock:

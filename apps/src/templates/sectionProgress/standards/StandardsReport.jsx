@@ -5,7 +5,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {connect} from 'react-redux';
 import {getCurrentUnitData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import {scriptDataPropType} from '../sectionProgressConstants';
+import {unitDataPropType} from '../sectionProgressConstants';
 import {
   getSelectedScriptFriendlyName,
   getSelectedScriptDescription,
@@ -35,7 +35,7 @@ class StandardsReport extends Component {
     scriptId: PropTypes.number,
     sectionId: PropTypes.number.isRequired,
     scriptFriendlyName: PropTypes.string.isRequired,
-    scriptData: scriptDataPropType,
+    scriptData: unitDataPropType,
     teacherName: PropTypes.string,
     sectionName: PropTypes.string,
     teacherComment: PropTypes.string,
