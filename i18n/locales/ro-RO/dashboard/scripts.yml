@@ -112,6 +112,7 @@ ro:
         Hour of Code:
           title: Ora de Programare 2013
           description_short: Încercați elemente de bază în informatică cu multe personaje amuzante!
+          name: Oră de Programare
         CodeStudioPuzzleChallenge: {}
         Tutorial Video - Code Studio Puzzle Challenge: {}
         cspunit1:
@@ -4424,3 +4425,93 @@ ro:
             lesson-6:
               name: Pașii următori
           title: Introducere în Informatică
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
+            csp_unit1_2020:
+              display_name: "(vechi) Unitatea 1: Informaţii digitale"
+        csp2-2024:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(vechi) Unitatea 2: Internet"
+        csp3-2024: {}
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sondaj
+            lessonGroup-3:
+              display_name: Conţinut
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+            lessonGroup-4:
+              display_name: Sondaj
+        csa9-2024: {}
+        csa-postap-se-and-computer-vision-2024: {}
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabile
+            csp_conditionals:
+              display_name: Condiţionale
+            csp_functions:
+              display_name: Funcţii
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Date
+            lessonGroup-5:
+              display_name: Chestionar după curs
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Liste
+            lessonGroup-3:
+              display_name: Bucle
+            lessonGroup-2:
+              display_name: Chestionar după curs
+        csp7-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Chestionar după curs
+        csp8-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Chestionar după curs
+        csp9-2024:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(vechi) Unitatea 9: date"
+            lessonGroup-2:
+              display_name: Chestionar după curs
+        csp10-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chestionar după curs
+        csp-post-survey-2024: {}
