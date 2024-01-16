@@ -438,7 +438,6 @@
   "makerSetupGeneralTitle": "Willkommen Makers!",
   "makerSetupInstallFirmataCP": "Du solltest sicherstellen, dass die richtige Firmware Sketch installiert ist. Du kannst Firmata Sketch [für Circuit Playground Express-Boards mit dieser Anleitung]({firmataURLExpress}) und [für Circuit Playground Classic-Karten mit dieser Anleitung]({firmataURLClassic}) installieren.",
   "makerSetupInstallFirmataMB": "Du kannst dein micro:bit aktualisieren, indem Du unten auf die Schaltfläche „micro:bit aktualisieren“ klickst. Nachdem Du die Taste gedrückt hast, sollte ein Fenster mit einer Zeile erscheinen, die „micro:bit“ enthält. Wähle diese Zeile aus und klicke dann auf die Schaltfläche „Verbinden“.",
-  "makerSetupInstallFirmataOther": "Du solltest sicherstellen, dass die richtige Firmware Sketch installiert ist. Du kannst Firmata Sketch [für Circuit Playground Express-Boards mit dieser Anleitung]({firmataURLExpress}) und [für Circuit Playground Classic-Boards mit dieser Anleitung]({firmataURLClassic}) installieren. Du kannst Firmata Sketch [für micro:bit mit dieser Anleitung]({firmataURLMB}) installieren.",
   "makerSetupInstallSerialConnector": "Bitte installiere die [Code.org Serial Connector Chrome App]({webstoreURL}).",
   "makerSetupLinuxAddDialout": "Wenn du nicht zu 'Dialout' gehörst, solltest du dich dieser Gruppe hinzufügen:",
   "makerSetupLinuxAlternative": "Alternative Installer",

@@ -1361,6 +1361,7 @@
   "loginExportInstructions": "**Mengajar dari jarak jauh?** Unduh CSV informasi login siswa agar Anda dapat melakukan penggabungan email atau salin dan tempel nama pengguna dan kata sandi tiap siswa ke dalam email.",
   "loginExportLink": "Mengunduh CSV",
   "loginInfo": "Informasi Login",
+  "loginInfoLtiSetupHeader": "Atur kelas anda",
   "loginInfoResetSecretPicDesc": "Anda dapat mengatur ulang gambar sandi untuk siapapun dari siswa anda dengan menuju ke tab [Manage Students]({url}) untuk bagian, klik tombol \"Tampilkan gambar\" di bawah kolom \"Gambar sandi\", dan meng-klik tombol \"Atur ulang\".",
   "loginInfoResetSecretWordDesc": "Anda dapat mengatur ulang kata sandi untuk siapapun dari siswa anda dengan menuju ke tab [Manage Students]({url}) untuk bagian, klik tombol \"Tampilkan kata\" di bawah kolom \"Kata sandi\", dan meng-klik tombol \"Atur ulang\".",
   "loginInfoWordPicMoreBelow": "Murid dapat menemukan semua informasi ini, termasuk {wordOrPicture} rahasia mereka, di dalam kartu login di bawah ini.",
