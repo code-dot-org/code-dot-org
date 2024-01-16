@@ -29,10 +29,6 @@ export interface DropdownMenuProps {
   size: ComponentSizeXSToL;
 }
 
-// TODO:
-// * add tests
-// * add documentation
-
 /**
  * ### Production-ready Checklist:
  * * (?) implementation of component approved by design team;
@@ -41,10 +37,10 @@ export interface DropdownMenuProps {
  * * (see apps/test/unit/componentLibrary/DropdownMenuTest.jsx)
  * * (?) passes accessibility checks;
  *
- * ###  Status: ```Wip```
+ * ###  Status: ```Ready for dev```
  *
  * Design System: Dropdown Component.
- * Used to render simple dropdowns with styled select (Dropdown button)]
+ * Used to render simple dropdowns with styled select (Dropdown button)
  * and browser's native select options.
  */
 const DropdownMenu: React.FunctionComponent<DropdownMenuProps> = ({
