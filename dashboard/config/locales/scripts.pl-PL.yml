@@ -371,6 +371,8 @@ pl:
               name: Rubryki AI
             lesson-52:
               name: Dance Lab2
+            lesson-53:
+              name: Laboratorium Pythona
           name: wszystkie rzeczy
           student_description: Wszystkie typy poziomów dla testowania UI
           title: Wszystkie te Rzeczy!
@@ -1061,6 +1063,31 @@ pl:
           description_short: Poznaj podstawy informatyki i twórz własne artystyczne
             dzieła, opowiadania i gry.
           title: 'Podstawy CS: Kurs C'
+        coursec-maker-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Początkujący: Zdarzenia'
+            lessonGroup-3:
+              display_name: 'Pośredni: sekwencjonowanie i pętle'
+            lessonGroup-4:
+              display_name: 'Kontynuuj: dane i zmienne'
+          lessons:
+            lesson-1:
+              name: Poznaj swój micro:bit
+            lesson-2:
+              name: Licznik
+            lesson-3:
+              name: Poznaj swój micro:bit
+            lesson-4:
+              name: Odznaka emocji
+            lesson-5:
+              name: Poznaj swój micro:bit
+            lesson-6:
+              name: Uspokajające diody LED
+            lesson-7:
+              name: Potańcówka 2019 (trzeba sklonować)
+          name: coursec-maker-2024
+          title: Kurs C - Twórca z micro:bitem
         coursed-2017:
           assignment_family_title: Kurs D
           description: Ucz się nowych koncepcji kodowania, z uwzględnieniem algorytmów,
@@ -1205,6 +1232,29 @@ pl:
           description_short: Poznaj podstawy informatyki i twórz własne artystyczne
             dzieła, opowiadania i gry.
           title: 'Podstawy CS: Kurs D'
+        coursed-maker-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Początkujący: Warunki'
+            lessonGroup-3:
+              display_name: 'Średniozaawansowany: Zdarzenia i warunki '
+            lessonGroup-4:
+              display_name: 'Kontynuuj: Warunki i wejścia tekstowe '
+          lessons:
+            lesson-1:
+              name: Poznaj swój micro:bit
+            lesson-2:
+              name: Selektor aktywności
+            lesson-3:
+              name: Poznaj swój micro:bit
+            lesson-4:
+              name: Ratowanie żółwi morskich
+            lesson-5:
+              name: Poznaj swój micro:bit
+            lesson-6:
+              name: Kamień, papier, nożyce
+          name: coursed-maker-2024
+          title: Kurs D - Twórca z micro:bitem
         coursed-ramp:
           title: 'Podstawy CS: Kurs D'
         coursee-2017:
@@ -1383,6 +1433,31 @@ pl:
             extra_course_content:
               display_name: Dodatki do Kursu
           title: 'Podstawy CS: Kurs E'
+        coursee-maker-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Początkujący: Zdarzenia i projektowanie dostępności'
+            lessonGroup-3:
+              display_name: 'Pośredni: Warunki'
+            lessonGroup-4:
+              display_name: 'Kontynuuj: Funkcje'
+          lessons:
+            lesson-1:
+              name: Poznaj swój micro:bit
+            lesson-2:
+              name: Potańcówka 2019 (trzeba sklonować)
+            lesson-3:
+              name: Poznaj swój micro:bit
+            lesson-4:
+              name: Poznaj swój micro:bit
+            lesson-5:
+              name: Zabawka sensoryczna
+            lesson-6:
+              name: Prosty alarm drzwiowy
+            lesson-7:
+              name: Alarm pochylenia
+          name: coursee-maker-2024
+          title: Kurs E - Twórca z micro:bitem
         coursee-ramp:
           title: coursee-ramp
         coursef-2017:
@@ -1617,6 +1692,33 @@ pl:
             end_of_course_project:
               display_name: Koniec projektu kursu
           title: 'Podstawy CS: Kurs F'
+        coursef-maker-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Początkujący: Zdarzenia i zmienne'
+            lessonGroup-3:
+              display_name: 'Średnio zaawansowany: warunki, zdarzenia i dźwięki'
+            lessonGroup-4:
+              display_name: 'Stretch: zdarzenia, warunki i zmienne'
+          lessons:
+            lesson-1:
+              name: Poznaj swój micro:bit
+            lesson-2:
+              name: Poznaj swój micro:bit
+            lesson-3:
+              name: Potańcówka 2019 (trzeba sklonować)
+            lesson-4:
+              name: Poznaj swój micro:bit
+            lesson-5:
+              name: Licznik kroków
+            lesson-6:
+              name: Zwierzę micro:bit
+            lesson-7:
+              name: Termometr max-min
+            lesson-8:
+              name: Sztuka poezji 2021 (trzeba sklonować)
+          name: coursef-maker-2024
+          title: Kurs F - Twórca z micro:bitem
         craft17:
           title: Zajęcia techniczne 17 (craft17) Opracowywanie skryptu
         craft18:
@@ -2993,6 +3095,8 @@ pl:
               name: Plac zabaw AI
             lesson-13:
               name: Plac zabaw Gen AI Blocks
+            lesson-14:
+              name: Przetestuj lekcję z micro:bitem
             lesson-7:
               name: Wprowadzenie do Duszków
             lesson-9:
@@ -3439,6 +3543,7 @@ pl:
               display_name: 'Rozdział 1: Tworzenie stron internetowych'
             lessonGroup-3:
               display_name: 'Rozdział 2: Wielostronicowe witryny'
+          name: csd2-2024
           student_description: W Części 2 nauczysz się, jak tworzyć i udostępniać
             treści na Twoich własnych stronach internetowych. Po podjęciu decyzji
             jaką treść chcesz udostępniać światu nauczysz się, jak konstruować i stylizować
@@ -8121,6 +8226,11 @@ pl:
           student_description: Użyj bloków kodu, by zabrać Steva lub Alexa na przygodę
             w świecie gry Minecraft.
           title: Poszukiwacz przygód z Minecraftem
+        melissasandbox-2024-1:
+          lessons:
+            lesson-2:
+              name: 'Wprowadzenie do informatyki: przegląd'
+          name: melissasandbox-2024-1
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -8240,6 +8350,8 @@ pl:
               name: Remiksuj projekty
             lesson-2:
               name: SNAP - Rosa Linn
+            lesson-3:
+              name: Czas na zabawę
           name: musiclab
           title: Lekcje testowe w laboratorium muzycznym
         musiclab-2023:
@@ -9091,6 +9203,72 @@ pl:
           name: self-paced-pl-csp8-2021
         self-paced-pl-csp9-2021:
           name: self-paced-pl-csp9-2021
+        self-paced-pl-k5-2024:
+          description: |-
+            \*\*Czeka Cię: \*\*
+
+            -   Wprowadzenie do misji Code.org.
+            -   Poznasz, jak poruszać się po witrynie Code.org i narzędziach nauczyciela.
+            -   Konfiguracja sekcji w klasie.
+            -   Znalezienie i korzystanie z planów lekcji kursu i zasobów dla nauczycieli.
+            -   Poznasz, jak uzyskać dostęp do wsparcia podczas nauczania Code.org.
+
+            \*\*Sugerowany czas: \*\* 80 minut
+          lessons:
+            lesson-1:
+              name: Lekcja 1
+          name: self-paced-pl-k5-2024
+          student_description: |-
+            \*\*Czeka Cię: \*\*
+
+            -   Wprowadzenie do misji Code.org.
+            -   Poznasz, jak poruszać się po witrynie Code.org i narzędziach nauczyciela.
+            -   Konfiguracja sekcji w klasie.
+            -   Znalezienie i korzystanie z planów lekcji kursu i zasobów dla nauczycieli.
+            -   Poznasz, jak uzyskać dostęp do wsparcia podczas nauczania Code.org.
+
+            \*\*Sugerowany czas: \*\* 80 minut
+          title: 'Część I '
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Lekcja 1
+            lesson-2:
+              name: 'Algorytmy i sekwencjonowanie '
+            lesson-3:
+              name: Pętle
+            lesson-4:
+              name: Zdania z warunkami
+            lesson-5:
+              name: Zbierając to wszystko razem...
+            lesson-6:
+              name: Następne Kroki
+          name: self-paced-pl-k5-2024-1
+          title: Wprowadzenie do informatyki
+        self-paced-pl-k5-2024-2:
+          description: "\\*\\*Wykonaj: \\*\\*\n\n-   Zidentyfikuj i wyjaśnij podstawowe
+            pojęcia informatyczne, w tym duszki, zdarzenia i zachowania. \n\n-   Zademonstruj
+            zastosowanie programowania opartego na zdarzeniach.\n\n-   Utwórz program
+            za pomocą duszków, zdarzeń i zachowań.\n\n\\*\\*Sugerowany czas: \\*\\*
+            60 minut"
+          lessons:
+            lesson-1:
+              name: Lekcja 1
+            lesson-2:
+              name: Duszki i konfiguracja
+            lesson-3:
+              name: Zdarzenia
+            lesson-4:
+              name: Zachowanie
+            lesson-5:
+              name: Następne Kroki
+          name: self-paced-pl-k5-2024-2
+          student_description: "\\*\\*Wykonaj: \\*\\*\n\n-   Zidentyfikuj i wyjaśnij
+            podstawowe pojęcia informatyczne, w tym duszki, zdarzenia i zachowania.
+            \n\n-   Zademonstruj zastosowanie programowania opartego na zdarzeniach.\n\n-
+            \  Utwórz program za pomocą duszków, zdarzeń i zachowań.\n\n\\*\\*Sugerowany
+            czas: \\*\\* 60 minut"
+          title: Kreatywność z kodem
         self-paced-pl-k5-getting-started:
           name: self-paced-pl-k5-getting-started
           title: 'Pierwsze kroki z Code.org (K-5) '

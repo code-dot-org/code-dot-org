@@ -3,35 +3,7 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "ai-2020": {
-            "buttonText": "மேலும் அறியவும்",
-            "title": "செயற்கை நுண்ணறிவு மற்றும் இயந்திர கற்றல் ஆகியவற்றை ஆராயுங்கள்"
-          },
-          "ai-launch-2023": {
-            "buttonText": "மேலும் அறியவும்"
-          },
-          "ai-pl-launch-2023": {
-            "buttonText": "மேலும் அறியவும்"
-          },
-          "back-to-school-2021": {
-            "buttonText": "மேலும் அறியவும்"
-          },
-          "codebytes-2020": {
-            "buttonText": "மேலும் அறியவும்"
-          },
-          "coldplay": {
-            "buttonText": "இதை முயற்சிக்கவும்"
-          },
-          "congrats-certificate-share": {
-            "buttonText": "தொடங்குக"
-          },
-          "csjourneys": {
-            "buttonText": "மேலும் அறியவும்"
-          },
-          "csjourneys-22": {
-            "buttonText": "மேலும் அறியவும்"
-          },
-          "csleadersprize": {
+          "co-teacher": {
             "buttonText": "மேலும் அறியவும்"
           },
           "hoc-2023": {
@@ -42,26 +14,8 @@
           "hoc-2023-dance-ai": {
             "buttonText": "மேலும் அறியவும்"
           },
-          "hoc-more": {
-            "body": " Code.org மற்றும் கூட்டாளர்களால் உருவாக்கப்பட்ட அனைத்து வயது மற்றும் அனுபவ நிலைகளுக்காக 500 க்கும் மேற்பட்ட கணினி அறிவியல் செயல்பாடுகளை  Hour of Code வலைத்தளம் கொண்டுள்ளது."
-          },
-          "home-learning-2020": {
-            "buttonText": "திட்டப்பணி யோசனைகளைக் காண்க"
-          },
           "superhero": {
             "buttonText": "மேலும் அறிய"
-          },
-          "teacher-apps-closing-2021": {
-            "buttonText": "எங்களுடன் இணையுங்கள்"
-          },
-          "teacher-apps-nominate-2020": {
-            "buttonText": "ஒரு ஆசிரியரை நியமிக்கவும்."
-          },
-          "teacher-apps-open-2021": {
-            "buttonText": "எங்களுடன் இணையுங்கள்"
-          },
-          "teacher-apps-stillon-2020": {
-            "buttonText": "எங்களுடன் இணையுங்கள்"
           }
         }
       }

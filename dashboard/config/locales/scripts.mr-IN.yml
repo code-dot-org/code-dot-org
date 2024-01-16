@@ -1777,6 +1777,10 @@ mr:
           student_description: माईनक्राफ्टच्या स्वत:च्या आवृत्तीत प्राणी आणि इतर माईनक्राफ्ट
             प्राणी प्रोग्राम करा.
           title: माईनक्राफ्ट  आरेखक
+        musiclab:
+          lessons:
+            lesson-3:
+              name: फ्री प्ले
         nevada-standards-aligned-fifth-grade-2023:
           description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका
             आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
@@ -2240,6 +2244,16 @@ mr:
           title: 'मॉड्यूल 2: Code.org नेव्हिगेट करणे'
         self-paced-pl-csp2-2023:
           title: 'मॉड्यूल 2: Code.org नेव्हिगेट करणे'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: लूप्स
+            lesson-4:
+              name: कंडीशनल्स
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: ईव्हेंट्स
         soccer:
           description: सॉकर गेम बनवा
           description_short: सॉकर गेम बनवा

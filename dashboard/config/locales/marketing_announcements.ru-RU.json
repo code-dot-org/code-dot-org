@@ -3,35 +3,7 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "ai-2020": {
-            "buttonText": "Узнать больше",
-            "title": "Познакомьтесь с технологиями искусственного интеллекта и машинного обучения"
-          },
-          "ai-launch-2023": {
-            "buttonText": "Узнать больше"
-          },
-          "ai-pl-launch-2023": {
-            "buttonText": "Узнать больше"
-          },
-          "back-to-school-2021": {
-            "buttonText": "Узнать больше"
-          },
-          "codebytes-2020": {
-            "buttonText": "Узнать больше"
-          },
-          "coldplay": {
-            "buttonText": "Попробуйте это"
-          },
-          "congrats-certificate-share": {
-            "buttonText": "Начать"
-          },
-          "csjourneys": {
-            "buttonText": "Узнать больше"
-          },
-          "csjourneys-22": {
-            "buttonText": "Узнать больше"
-          },
-          "csleadersprize": {
+          "co-teacher": {
             "buttonText": "Узнать больше"
           },
           "hoc-2023": {
@@ -42,26 +14,8 @@
           "hoc-2023-dance-ai": {
             "buttonText": "Узнать больше"
           },
-          "hoc-more": {
-            "body": "На сайте Часа кода предлагаются более 500 занятий по компьютерным наукам, разработанных Code.org и партнерами и предназначенных для учащихся любого возраста и уровня подготовки."
-          },
-          "home-learning-2020": {
-            "buttonText": "Просмотр идей проектов"
-          },
           "superhero": {
             "buttonText": "Подробнее"
-          },
-          "teacher-apps-closing-2021": {
-            "buttonText": "Присоединяйтесь к нам"
-          },
-          "teacher-apps-nominate-2020": {
-            "buttonText": "Назначить учителя"
-          },
-          "teacher-apps-open-2021": {
-            "buttonText": "Присоединяйтесь к нам"
-          },
-          "teacher-apps-stillon-2020": {
-            "buttonText": "Присоединяйтесь к нам"
           }
         }
       }

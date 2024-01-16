@@ -3057,6 +3057,10 @@ ga:
             lessonGroup-4:
               display_name: Athróga
           description_short: Foghlaim na coincheapa go léir i mBuntús na Ríomheolaíochta agus cruthaigh ealaín, scéal, nó cluiche.
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Saorimirt
         test-nv-coursea-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3174,3 +3178,16 @@ ga:
               display_name: Buneolas ar an tSaotharlann Aipeanna
         csd-post-survey-2024:
           title: Suirbhé Iarchúrsa
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Teagmhais
+            lesson-4:
+              name: Iompar
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Lúba
+            lesson-4:
+              name: Coinníollacha
+          title: Buntús na Ríomheolaíochta

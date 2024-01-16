@@ -1,3 +1,6 @@
+@skip
+# This test is useful to reenable during hoc_mode 'soon-hoc' and 'actual-hoc'
+# During all other hoc_modes, this dialog is not shown
 Feature: HOC Guide Email Conversion Dialog
 
   @eyes

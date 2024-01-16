@@ -13,6 +13,7 @@ const Role = {
 const Status = {
   ERROR: 'error',
   INAPPROPRIATE: 'inappropriate',
+  PROFANITY: 'profanity',
   OK: 'ok',
   PERSONAL: 'personal',
   UNKNOWN: 'unknown',
@@ -36,7 +37,7 @@ const displayUserMessage = (status, chatMessageText) => {
         {chatMessageText}
       </div>
     );
-  } else if (status === Status.INAPPROPRIATE) {
+  } else if (status === Status.PROFANITY) {
     return (
       <div className={classNames(style.message, style.inappropriateMessage)}>
         {INAPPROPRIATE_MESSAGE}

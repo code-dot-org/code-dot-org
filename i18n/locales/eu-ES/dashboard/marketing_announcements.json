@@ -1,104 +1,9 @@
 {
   "banners": {
-    "csleadersprize": {
-      "title": "",
-      "body": "",
-      "buttonText": "Ikasi gehiago"
-    },
-    "csjourneys-22": {
-      "title": "",
-      "body": "",
-      "buttonText": "Ikasi gehiago"
-    },
-    "hoc-more": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
     "superhero": {
       "title": "",
       "body": "",
       "buttonText": "Gehiago ikasi"
-    },
-    "csjourneys": {
-      "title": "",
-      "body": "",
-      "buttonText": "Ikasi gehiago"
-    },
-    "class-schedule-survey": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "back-to-school-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Ikasi gehiago"
-    },
-    "teacher-apps-open-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Elkartu gurekin"
-    },
-    "teacher-apps-closing-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Elkartu gurekin"
-    },
-    "teacher-apps-nominate-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "teacher-apps-stillon-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Elkartu gurekin"
-    },
-    "home-learning-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "soonhoc-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "codebytes-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Ikasi gehiago"
-    },
-    "ai-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Ikasi gehiago"
-    },
-    "congrats-certificate-share": {
-      "title": "",
-      "body": "",
-      "buttonText": "Hasiera"
-    },
-    "coldplay": {
-      "title": "",
-      "body": "",
-      "buttonText": "Saiatu"
-    },
-    "ai-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "Ikasi gehiago"
-    },
-    "ai-pl-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "Ikasi gehiago"
-    },
-    "state-of-cs-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
     },
     "hoc-2023": {
       "title": "",
@@ -106,6 +11,11 @@
       "buttonText": "Ikasi gehiago"
     },
     "hoc-2023-dance-ai": {
+      "title": "",
+      "body": "",
+      "buttonText": "Ikasi gehiago"
+    },
+    "co-teacher": {
       "title": "",
       "body": "",
       "buttonText": "Ikasi gehiago"

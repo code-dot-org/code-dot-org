@@ -8048,6 +8048,10 @@ fr:
             -   Découvrez les opportunités d'entrer en contact avec l'ensemble de la communauté CS.
 
             **Durée suggérée** : 70 minutes
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Jeu libre
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -8231,6 +8235,7 @@ fr:
           title: Module 1
         how-ai-works-2023:
           title: Comment fonctionne l'IA
+          description: "Ces leçons viennent complémenter la série vidéo [Comment fonctionne l'IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Chaque leçon est associée à une vidéo particulière de la série, et approfondit les notions qu'on découvre dans celle-ci. Les leçons cherchent à créer de premières expériences enthousiasmantes pour les élèves, où les élèves s'impliquent dans une activitié ou une simulation puis réfléchissent à l'expérience, pour permettre de développer leur compréhension concernant l'IA et de développer leur empathie envers ceux qui sont impactés par celle-ci. Certaines leçons sont plus axées sur les technologies derrière l'IA, alors que d'autres s'articulent autour des impacts sociétaux de l'IA et des considérations éthiques qu'elle entraîne. \n\n**Soutien aux enseignants :** Vous pouvez en apprendre plus sur comment intégrer des cours sur l'IA dans votre classe à travers notre [série Les Bases de L'IA pour Enseignants](https://code.org/ai/pl/101). Les Bases de l'IA pour Enseignants est une série de formation professionnelle gratuite proposant des bases solides pour tout enseignant ou autre éducateur qui s'intéresse au monde révolutionnaire de l'intelligence artificielle (IA) et son potentiel transformateur dans le domaine de l'éducation. \n\n**Options d'implementation :** Cliquez sur l'une des options ci-dessous pour l'aggrandir et voir plus de détails. \n\n::: détails [<span style=\"font-size: 1em; font-weight: bold;\">« Je veux toutes les enseigner ! »</span>]\nLes leçons 1 à 7 peuvent être enseignées en séquence sur 7 jours, où chaque journée est axée sur une vidéo individuelle de la série de vidéos et approfondit les notions qui y sont introduites. Pour les classes optant pour cette option, il faudra masquer la Leçon 8, qui ne rentre pas dans cette séquence. [Cliquer ici pour en savoir plus sur comment masquer une leçon](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)\n:::\n\n::: détails [<span style=\"font-size: 1em; font-weight: bold;\">« Je veux enseigner une leçon spécifique ou l'intégrer à un autre cours »</span>]\nChaque leçon peut être autonome et s'enseigner indépendemment des autres. Cela est particulièrement utile si vous souhaitez intégrer une leçon à un autre sujet ou à un autre cours d'informatique, d'intelligence artificielle, ou d'éducation générale existant. Pour les classes optant pour cette option, il faudra masquer toutes les leçons sauf celle que vous souhaitez  enseigner. [Cliquer ici pour en savoir plus sur comment masquer une leçon](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)\n:::\n::: détails [<span style=\"font-size: 1em; font-weight: bold;\">« Je n'ai qu'un seul jour à disposition »</span>]\nLa leçon 8 est conçue pour ceux qui souhaitent faire découvrir l'IA à leurs élèves, mais n'ont qu'un seul jour de disponible pour ce faire. Cette leçon fournit un preneur de notes aux élèves pendant que la classe visionne toute la séquence vidéo. Pour les classes optant pour cette option, il faudra masquer toutes les leçons sauf la Leçon 8. [Cliquer ici pour en savoir plus sur comment masquer une leçon](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)\n:::\n<br />\n<br />"
         vpl-csa-2023-m2:
           title: Module 2
         vpl-csa-2023-m3:
@@ -8541,3 +8546,30 @@ fr:
         csd-post-survey-2024:
           title: Suivi d'après cours
           description: Cette unité contient l'enquête postérieure au cours. Cette unité peut être attribuée une fois que les étudiants ont terminé leur dernière unité de ce cours.
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Leçon 1
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Leçon 1
+            lesson-3:
+              name: Événements
+            lesson-4:
+              name: Comportements
+            lesson-5:
+              name: Prochaines étapes
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Leçon 1
+            lesson-3:
+              name: Boucles
+            lesson-4:
+              name: Instructions conditionnelles
+            lesson-5:
+              name: Mettre tout cela en place
+            lesson-6:
+              name: Prochaines étapes
+          title: Introduction à l'informatique

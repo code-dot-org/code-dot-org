@@ -3648,6 +3648,10 @@ mn:
               display_name: Хувьсагчууд
           description_audience: 9-13 насныхан
           description_short: Компьютерийн шинжлэх ухааны суурь ойлголтуудын талаархи бүх ойлголтыг мэдэж, өөрийн урлагийн бүтээл, түүх, тоглоом зохиогоорой.
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Чөлөөтэй тоглох
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -3901,3 +3905,20 @@ mn:
               display_name: Апп Лаб-н танилцуулга
         csd-post-survey-2024:
           title: Хичээлийн дараах судалгаа
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Үйл явдлууд
+            lesson-4:
+              name: Зан чанар
+            lesson-5:
+              name: Дараагийн Алхамууд
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Гогцоонууд
+            lesson-4:
+              name: Нөхцлүүд
+            lesson-6:
+              name: Дараагийн Алхамууд
+          title: Компьютерын шинжлэх ухааны танилцуулга

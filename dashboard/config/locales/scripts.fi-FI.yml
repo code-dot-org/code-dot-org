@@ -1896,6 +1896,10 @@ fi:
           student_description: Koodaa eläimiä ja muita Minecraft otuksia omalla Minecraft
             versiollasi.
           title: Koodaustunti Minecraft Suunnittelija
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Vapaata kokeilua
         netsim:
           title: Internet simulaattori
         nevada-standards-aligned-fifth-grade-2023:
@@ -2004,6 +2008,19 @@ fi:
           description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           description_short: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           student_description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Silmukat
+            lesson-4:
+              name: Ehtolausekkeet
+          title: Johdanto tietotekniikkaan
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Tapahtumat
+            lesson-4:
+              name: Käyttäytymiset
         soccer:
           name: Jalkapallo
         spelling-bee:

@@ -1118,6 +1118,10 @@ km:
           title: Minecraft Adventurer
         minecraft:
           title: Minecraft Designer
+        musiclab:
+          lessons:
+            lesson-3:
+              name: លេងដោយសេរី
         nevada-standards-aligned-fifth-grade-2023:
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ
             និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
@@ -1317,6 +1321,19 @@ km:
             រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន
             តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ
             ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: ប្រតិបត្តិដដែលៗ
+            lesson-4:
+              name: លក្ខខណ្ឌ
+          title: សេចក្ដី​ណែនាំ​អំពី​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: ព្រឹត្តិការណ៍
+            lesson-4:
+              name: ឥរិយាបទ
         soccer:
           name: បាល់ទាត់
         sports:

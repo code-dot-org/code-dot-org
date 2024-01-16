@@ -676,13 +676,14 @@ pt:
     user:
       algebra_game: Álgebra
       already_registered: Já se cadastrou?
-      applab: Laboratório de Aplicativo
+      applab: App Lab
       artist: Artista
       artist_k1: Artista (Pré-leitor)
       basketball: Basquete
       bounce: Pingue-pongue
       calc: Calc
       classroom: Página inicial do professor
+      create: Criar
       dance: Festa dançante
       district_dashboard: Painel do distrito
       driver: Conectado
@@ -723,7 +724,7 @@ pt:
       team: Equipe
       thebadguys: Os caras maus
       view_all: Veja todos os projetos...
-      weblab: Laboratório Web
+      weblab: Web Lab
   next_level: Próximo nível
   next_page: Próxima página
   next_resource: Próximo recurso
@@ -969,7 +970,7 @@ pt:
     instructor_feedback: Feedback do instrutor
     outdated: Este feedback foi adicionado para uma versão enviada anteriormente
     peer_feedback: Feedback de colegas
-    peer_review: Revisão em grupo
+    peer_review: Revisão por Pares
     rejected:
       description_markdown: "*Não**, esse envio **não atende** aos requisitos"
       name: Rejeitado
@@ -1289,7 +1290,7 @@ pt:
       para saber mais.
   slow_loading: Isso está demorando mais do que o normal...
   stage: Fase
-  stage_number: Fase %{number}
+  stage_number: Lição %{number}
   studio:
     all_courses: Todos os cursos
     completed_courses: Cursos concluídos
@@ -1406,7 +1407,7 @@ pt:
         funcionar, e então compartilhe seu aplicativo em apenas alguns segundos.
       cta: Saiba como
       image_alt: Um coelhinho roxo usando uma mochila movida a foguete.
-      title: Laboratório de Aplicativo
+      title: App Lab
     applab-intro:
       image_alt: Uma mão está tocando no centro da tela de um smartphone. Luzes e
         brilhos estão saindo da tela.
@@ -1586,7 +1587,7 @@ pt:
     unplugged_conditionals:
       body: Aprenda sobre algoritmos e declarações condicionais nesta atividade "off-line"
         usando um baralho de cartas.
-      title: Condições
+      title: Condicionais
     weblab:
       audience: A partir de 13 anos
       body: O Laboratório Web é um ambiente de programação onde você pode criar páginas

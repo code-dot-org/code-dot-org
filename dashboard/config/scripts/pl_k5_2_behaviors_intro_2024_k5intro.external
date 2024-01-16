@@ -5,16 +5,15 @@ description 'description here'
 markdown <<MARKDOWN
 # Algorithms and Sequencing
 
-##### So far you have learned what computer science is and how it is used in everyday life. In this lesson, you will learn how to code with algorithms and sequencing.
+#### So far you have learned what computer science is and how it is used in everyday life. In this lesson, you will learn how to code with algorithms and sequencing.
 
 <img src="https://images.code.org/205cc0e8da353930786208309788529d-image-1679953465855.png" alt="Image of a cartoon octopus holding a microphone and wearing a hat" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
 
 ## In this lesson, you will:
 
-* ##### Learn about block based programming.
-* ##### Practice coding using blocks.
-* ##### Create a program using algorithms and sequencing.
+* #### Practice coding using blocks.
+* #### Create a program using algorithms and sequencing.
 
 
 ### **Suggested time:** 15 minutes

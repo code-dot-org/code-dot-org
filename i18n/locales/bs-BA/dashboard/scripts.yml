@@ -1282,6 +1282,10 @@ bs:
               display_name: Digitalno Državljanstvo
             lessonGroup-4:
               display_name: Varijable
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Slobodno Igranje
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -1372,3 +1376,26 @@ bs:
             lessonGroup-3:
               display_name: 'Poglavlje 2: Rješavanje problema podataka'
           description_short: Naučite kako ljudi koriste računala za rješavanje problema podataka.
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Lekcija 1
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Lekcija 1
+            lesson-3:
+              name: Događaji
+            lesson-5:
+              name: Slijedeći Koraci
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Lekcija 1
+            lesson-3:
+              name: Petlje
+            lesson-4:
+              name: Uvjeti
+            lesson-6:
+              name: Slijedeći Koraci
+          title: Uvod u računarstvo
