@@ -29,6 +29,28 @@ export function ProgressTableV2({
       : students.sort(stringKeyComparator(['name', 'familyName']));
   }, [students, isSortedByFamilyName]);
 
+  const groupedLessonIds = React.useMemo(() => {
+    const lessons = unitData?.lessons;
+
+    let grouped = [];
+    let currentGroup = [];
+    for (const lesson of lessons) {
+      if (expandedLessonIds.includes(lesson.id)) {
+        if (currentGroup.length > 0) {
+          grouped = [...grouped, {ids: currentGroup, expanded: false}];
+          currentGroup = [];
+        }
+        grouped = [...grouped, {ids: [lesson.id], expanded: true}];
+      } else {
+        currentGroup.push(lesson.id);
+      }
+    }
+    if (currentGroup.length > 0) {
+      grouped = [...grouped, {ids: currentGroup, expanded: false}];
+    }
+    return grouped;
+  }, [unitData, expandedLessonIds]);
+
   return (
     <div className={styles.progressTableV2}>
       <StudentColumn
@@ -39,7 +61,7 @@ export function ProgressTableV2({
       <div className={styles.table}>
         <ProgressTableHeader
           lessons={unitData?.lessons}
-          expandedLessonIds={expandedLessonIds}
+          groupedLessonIds={groupedLessonIds}
           addExpandedLesson={addExpandedLesson}
           removeExpandedLesson={removeExpandedLesson}
         />

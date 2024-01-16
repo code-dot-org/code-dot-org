@@ -8,7 +8,7 @@ import FontAwesome from '../FontAwesome';
 const getUninteractiveLessonColumnHeader = lesson => {
   return (
     <div
-      className={classNames(styles.gridBox, styles.gridBoxLessonHeader)}
+      className={classNames(styles.gridBox, styles.headerLesson)}
       key={lesson.id}
     >
       {lesson.relative_position}
@@ -18,17 +18,16 @@ const getUninteractiveLessonColumnHeader = lesson => {
 
 export default function ProgressTableHeader({
   lessons,
-  expandedLessonIds,
+  groupedLessonIds,
   addExpandedLesson,
   removeExpandedLesson,
 }) {
   const getExpandedLessonColumnHeader = React.useCallback(
     lesson => {
-      console.log(lesson);
       return (
         <div key={lesson.id} className={styles.headerExpanded}>
           <div
-            className={classNames(styles.gridBox, styles.gridBoxLessonHeader)}
+            className={classNames(styles.gridBox, styles.headerLesson)}
             onClick={() => removeExpandedLesson(lesson.id)}
           >
             <FontAwesome icon="caret-down" />
@@ -52,17 +51,14 @@ export default function ProgressTableHeader({
     [removeExpandedLesson]
   );
 
-  const getLessonColumnHeader = React.useCallback(
+  const getUnexpectedLessonColumnHeader = React.useCallback(
     lesson => {
       if (!lessonHasLevels(lesson)) {
         return getUninteractiveLessonColumnHeader(lesson);
       }
-      if (expandedLessonIds.includes(lesson.id)) {
-        return getExpandedLessonColumnHeader(lesson);
-      }
       return (
         <div
-          className={classNames(styles.gridBox, styles.gridBoxLessonHeader)}
+          className={classNames(styles.gridBox, styles.headerLesson)}
           onClick={() => addExpandedLesson(lesson.id)}
           key={lesson.id}
         >
@@ -71,21 +67,46 @@ export default function ProgressTableHeader({
         </div>
       );
     },
-    [expandedLessonIds, addExpandedLesson, getExpandedLessonColumnHeader]
+    [addExpandedLesson]
+  );
+
+  const getLessonColumnHeader = React.useCallback(
+    grouplessonsId => {
+      if (grouplessonsId.expanded) {
+        const lesson = lessons.find(l => l.id === grouplessonsId.ids[0]);
+        return (
+          <div className={styles.headerGroup}>
+            {getExpandedLessonColumnHeader(lesson)}
+          </div>
+        );
+      }
+      const groupedLessons = grouplessonsId.ids.map(lessonId =>
+        lessons.find(l => l.id === lessonId)
+      );
+
+      return (
+        <div className={styles.headerGroup}>
+          {groupedLessons.map(lesson =>
+            getUnexpectedLessonColumnHeader(lesson)
+          )}
+        </div>
+      );
+    },
+    [lessons, getUnexpectedLessonColumnHeader, getExpandedLessonColumnHeader]
   );
 
   return (
     <div className={styles.header}>
-      <div className={styles.headerColumns}>
-        {lessons.map(lesson => getLessonColumnHeader(lesson))}
-      </div>
+      {groupedLessonIds.map(grouplessonsId =>
+        getLessonColumnHeader(grouplessonsId)
+      )}
     </div>
   );
 }
 
 ProgressTableHeader.propTypes = {
   lessons: PropTypes.array.isRequired,
-  expandedLessonIds: PropTypes.array.isRequired,
+  groupedLessonIds: PropTypes.arrayOf(PropTypes.object).isRequired,
   addExpandedLesson: PropTypes.func.isRequired,
   removeExpandedLesson: PropTypes.func.isRequired,
 };

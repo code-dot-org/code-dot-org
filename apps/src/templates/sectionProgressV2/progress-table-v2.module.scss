@@ -32,14 +32,6 @@
     line-height: 47px;
   }
 
-  &LessonHeader {
-    height: 42px;
-    line-height: 42px;
-    min-width: 80px;
-    max-width: 80px;
-    text-align: center;
-  }
-
   &LevelHeader {
     min-width: 52px;
     text-align: center;
@@ -79,29 +71,41 @@
 
 .header {
   height: 76px;
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  width:fit-content;
+
+  :last-child {
+    margin-right: 0;
+  }
+
+  &Group {
+    display: flex;
+    flex-direction: row;
+    margin-right: 12px;
+    border-right: 1px solid $light_gray_200;
+  }
 
   &UnitSelector {
     height: 32px;
     margin-bottom: 12px;
   }
 
-  &Columns {
-    display: flex;
-    flex-direction: row;
-    font-size: 14px;
-    width:fit-content;
-  }
-
   &Lesson {
-    border-right: 1px solid $light_gray_200;
+    height: 42px;
+    line-height: 42px;
+    min-width: 80px;
+    text-align: center;
     border-bottom: 1px solid $light_gray_200;
   }
 
   &Expanded {
-    border-right: 1px solid $light_gray_200;
     min-width: 80px;
-    margin-left: 12px;
-    margin-right: 12px;
+
+    // :last-child {
+    //   border-right: 1px solid $light_gray_200;
+    // }
 
     &SecondRow {
       display: flex;
