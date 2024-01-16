@@ -52,6 +52,8 @@ SectionProgressSelector.propTypes = {
   setShowProgressTableV2: PropTypes.func.isRequired,
 };
 
+export const UnconnectedSectionProgressSelector = SectionProgressSelector;
+
 export default connect(
   state => ({showProgressTableV2: state.currentUser.showProgressTableV2}),
   dispatch => ({
