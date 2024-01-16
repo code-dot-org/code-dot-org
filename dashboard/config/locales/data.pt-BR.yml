@@ -118,7 +118,7 @@ pt:
           desenham um triângulo aqui
     concept:
       description:
-        function: funções
+        function: Funções
         if: Bloco "se"
         if_else: Bloco "se" - "se não"
         loop_for: Bloco "contador"
@@ -129,7 +129,7 @@ pt:
         sequence: Sequência
     game:
       name:
-        Applab: Laboratório de Aplicativo
+        Applab: App Lab
         Artist: O Artista
         Artist2: O Artista 2
         Artist3: O Artista 3
@@ -160,11 +160,11 @@ pt:
         Unplug3: Programação em papel quadriculado
         Unplug4: Algoritmos
         Unplug5: Funções
-        Unplug6: Condições
+        Unplug6: Condicionais
         Unplug7: Escrevendo uma Canção
         Unplug8: Abstração
         Unplug9: Programação por revezamento
-        Webapp: Laboratório de Aplicativo
+        Webapp: App Lab
         Wordsearch: Caça Palavras
     level:
       instructions:
@@ -679,8 +679,8 @@ pt:
         C2_bee_loops: Laços da abelha
         C2_binary_bracelets: Pulseiras binárias
         C2_conditionals_with_cards: Condições
-        C2_digital_footprint: Seu rastro digital
-        C2_digital_footprint_v2: Seu rastro digital
+        C2_digital_footprint: Seu Rastro Digital
+        C2_digital_footprint_v2: Seu Rastro Digital
         C2_graph_paper: Programação em Papel Quadriculado
         C2_maze_intro: Introdução ao Labirinto
         C2_paper_airplanes: Aviões de papel
@@ -706,10 +706,10 @@ pt:
         C3_playlab_create_game: Laboratório - Crie um jogo
         C3_songwriting_with_parameters: Escrevendo uma canção com parâmetros
         C4_bee_conditional: Condicionais da abelha
-        C4_conditionals: Condições
-        C4_for_loops: Laços para
-        C4_for_loops_bee: Laços para
-        C4_for_loops_no_bee: Laços para
+        C4_conditionals: Condicionais
+        C4_for_loops: Loops For
+        C4_for_loops_bee: Loops For
+        C4_for_loops_no_bee: Loops For
         C4_function_create: Criando funções
         C4_function_edit: Editando funções
         C4_function_parameters: Funções com Parâmetros
@@ -718,7 +718,7 @@ pt:
         C4_math_artist: Programação do Artista com matemática
         C4_unplugged_algorithms: Algoritmos com tangrams
         C4_unplugged_binary: Binário
-        C4_unplugged_forloops: Laços para
+        C4_unplugged_forloops: Loops For
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_parameters: Composição de música com parâmetros
         C4_unplugged_variables: Variáveis em envelopes
@@ -784,7 +784,7 @@ pt:
         Gettting_Started_StudentExperience: A experiência do aluno
         MC_2018_loops: 'Minecraft: Viagem Aquática Repita Até'
         PL-Video-21: Bem-vindo ao aprendizado profissional da Code.org!
-        PL_CSD_CircuitPlayground_Overview: Visão geral do Circuit Play
+        PL_CSD_CircuitPlayground_Overview: Visão geral do Circuit Playground
         PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Visão geral da unidade
           Circuit Playground
         PL_CSD_CircuitPlayground_Setup: Configuração do Circuit Playground
@@ -997,15 +997,15 @@ pt:
         csd_ml_ethics_ai: 'Ética e IA '
         csd_ml_how_ai_works: Como funciona a IA
         csd_ml_import_model: Importando um modelo de IA
-        csd_ml_intro_ai_lab_july2021: 'Introdução ao I.A. Lab
+        csd_ml_intro_ai_lab_july2021: 'Introdução ao IA Lab
 
           '
-        csd_ml_intro_to_ai_lab: 'Introdução ao I.A. Lab
+        csd_ml_intro_to_ai_lab: 'Introdução ao IA Lab
 
           '
-        csd_ml_model_cards_july2021: Cartões Modelo no I.A. Lab
-        csd_ml_numerical_ai_lab: Dados Numéricos no I.A. Lab
-        csd_ml_training_testing_ai_lan: Treinamento e Testes no I.A. Lab
+        csd_ml_model_cards_july2021: Cartões Modelo no IA Lab
+        csd_ml_numerical_ai_lab: Dados Numéricos no IA Lab
+        csd_ml_training_testing_ai_lan: Treinamento e Testes no IA Lab
         csd_pair_programming: Programação em duplas
         csd_problem_solving_process: O Processo de Resolução de Problemas
         csd_sprite_properties: Propriedades do Sprite
@@ -1143,7 +1143,7 @@ pt:
         mc_if_statements: Minecraft - Instruções se
         mc_intro: Minecraft - Introdução
         mc_repeat: Minecraft - Repetição
-        oceans_machine_learning: Máquina de aprendizado
+        oceans_machine_learning: Aprendizado de Máquina
         oceans_societal_implications: 'Vídeo: Impactos na Sociedade'
         oceans_training_data: Dados de treinamento
         opd_closing: 'Ensinando Fundamentos da CC: Fechamento e Próximos passos'

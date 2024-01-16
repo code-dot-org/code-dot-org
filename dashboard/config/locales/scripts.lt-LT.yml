@@ -1528,6 +1528,29 @@ lt:
               display_name: Įvykiai
             csf_loops:
               display_name: Kartojimas
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: 1 pamoka
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: 1 pamoka
+            lesson-3:
+              name: Kartojimas
+            lesson-4:
+              name: Sąlyginiai sakiniai
+            lesson-6:
+              name: Kiti žingsniai
+          title: Informatikos įvadas
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: 1 pamoka
+            lesson-3:
+              name: Įvykiai
+            lesson-5:
+              name: Kiti žingsniai
         soccer:
           name: futbolas
         spelling-bee:

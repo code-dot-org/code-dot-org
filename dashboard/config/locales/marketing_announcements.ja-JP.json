@@ -3,35 +3,7 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "ai-2020": {
-            "buttonText": "もっと詳しく知る",
-            "title": "人工知能と機械学習を探索する"
-          },
-          "ai-launch-2023": {
-            "buttonText": "もっと詳しく知る"
-          },
-          "ai-pl-launch-2023": {
-            "buttonText": "もっと詳しく知る"
-          },
-          "back-to-school-2021": {
-            "buttonText": "もっと詳しく知る"
-          },
-          "codebytes-2020": {
-            "buttonText": "もっと詳しく知る"
-          },
-          "coldplay": {
-            "buttonText": "挑戦してみる"
-          },
-          "congrats-certificate-share": {
-            "buttonText": "はじめる"
-          },
-          "csjourneys": {
-            "buttonText": "もっと詳しく知る"
-          },
-          "csjourneys-22": {
-            "buttonText": "もっと詳しく知る"
-          },
-          "csleadersprize": {
+          "co-teacher": {
             "buttonText": "もっと詳しく知る"
           },
           "hoc-2023": {
@@ -44,26 +16,8 @@
             "buttonText": "もっと詳しく知る",
             "title": "ダンスパーティー：AI版"
           },
-          "hoc-more": {
-            "body": "Hour of Codeのウェブサイトは、年齢や経験レベルを問わずに利用できる、Code.org とパートナーが開発した 100 以上のコンピューター サイエンスのアクティビティを掲載しています。"
-          },
-          "home-learning-2020": {
-            "buttonText": "プロジェクトのアイデアを見る"
-          },
           "superhero": {
             "buttonText": "もっとくわしく見る"
-          },
-          "teacher-apps-closing-2021": {
-            "buttonText": "参加しませんか"
-          },
-          "teacher-apps-nominate-2020": {
-            "buttonText": "先生を指名する\n"
-          },
-          "teacher-apps-open-2021": {
-            "buttonText": "参加しませんか"
-          },
-          "teacher-apps-stillon-2020": {
-            "buttonText": "参加しませんか"
           }
         }
       }

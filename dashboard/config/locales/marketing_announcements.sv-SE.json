@@ -3,34 +3,7 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "ai-2020": {
-            "buttonText": "Lär dig mer"
-          },
-          "ai-launch-2023": {
-            "buttonText": "Lär dig mer"
-          },
-          "ai-pl-launch-2023": {
-            "buttonText": "Lär dig mer"
-          },
-          "back-to-school-2021": {
-            "buttonText": "Lär dig mer"
-          },
-          "codebytes-2020": {
-            "buttonText": "Lär dig mer"
-          },
-          "coldplay": {
-            "buttonText": "Prova"
-          },
-          "congrats-certificate-share": {
-            "buttonText": "Start"
-          },
-          "csjourneys": {
-            "buttonText": "Lär dig mer"
-          },
-          "csjourneys-22": {
-            "buttonText": "Lär dig mer"
-          },
-          "csleadersprize": {
+          "co-teacher": {
             "buttonText": "Lär dig mer"
           },
           "hoc-2023": {
@@ -39,23 +12,8 @@
           "hoc-2023-dance-ai": {
             "buttonText": "Lär dig mer"
           },
-          "hoc-more": {
-            "body": "Webbplatsen för Hour of Code har över 100 datarelaterade aktiviteter för alla åldrar och erfarenhetsnivåer och är utvecklad av Code.org och partner."
-          },
-          "home-learning-2020": {
-            "buttonText": "Se projektidéer"
-          },
           "superhero": {
             "buttonText": "Lär dig mer"
-          },
-          "teacher-apps-closing-2021": {
-            "buttonText": "Delta med oss"
-          },
-          "teacher-apps-open-2021": {
-            "buttonText": "Delta med oss"
-          },
-          "teacher-apps-stillon-2020": {
-            "buttonText": "Delta med oss"
           }
         }
       }

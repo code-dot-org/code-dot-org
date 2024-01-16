@@ -1035,6 +1035,10 @@ sr:
               display_name: Дигитално држављанство
             lessonGroup-4:
               display_name: Променљиве
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Free Play
         test-nv-coursea-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1079,3 +1083,16 @@ sr:
               display_name: Кондиционали
             lessonGroup-5:
               display_name: Променљиве
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Догађаји
+            lesson-4:
+              name: Понашање
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Петље
+            lesson-4:
+              name: Кондиционали
+          title: Увод у Компјутерске Науке

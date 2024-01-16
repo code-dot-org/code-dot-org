@@ -1570,6 +1570,10 @@ hy:
               display_name: Digital Citizenship
             lessonGroup-4:
               display_name: փոփոխականների
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Free Play
         test-nv-coursea-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1631,3 +1635,14 @@ hy:
           lesson_groups:
             lessonGroup-7:
               display_name: ներածություն
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Իրադարձություններ
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: loops
+            lesson-4:
+              name: conditionals
+          title: Ներածություն համակարգչային գիտության

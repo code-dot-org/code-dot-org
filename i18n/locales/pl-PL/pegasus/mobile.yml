@@ -1798,6 +1798,7 @@
   footer_store: "Skład"
   footer_support: "Wsparcie"
   footer_terms: "Warunki"
+  footer_trademark: '„&copy; Code.org, %{current_year}. Code.org&reg;, logo CODE, Godzina Kodowania&reg; i %{cs_discoveries} są znakami towarowymi Code.org.'
   ai_for_oceans: "AI dla oceanów"
   ai_for_oceans_lesson_plan: "plan lekcji"
   ai_for_oceans_tile_description: "Pomóż A.I. oczyść oceany, ucząc go wykrywania śmieci! Dowiedz się o danych treningowych i uprzedzeniach oraz o tym, jak sztuczna inteligencja może zajmować się problemami świata. Widok "
