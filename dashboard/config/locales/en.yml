@@ -1405,6 +1405,7 @@ en:
   lti:
     error:
       missing_params: "Missing required param(s): client_id, lms, email"
+      unsupported_lms_type: "Unsupported LMS platform type"
       integration_exists: "Lti Integration already exists for this Client ID"
       wrong_resource_type: "Only LtiResourceLink is supported right now"
     create_integration_success: "Succesfully created your LTI integration"

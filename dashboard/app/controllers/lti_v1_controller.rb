@@ -228,6 +228,11 @@ class LtiV1Controller < ApplicationController
     platform_name = params[:lms]
     admin_email = params[:email]
 
+    unless Policies::Lti::LMS_PLATFORMS.key?(platform_name.to_sym)
+      render status: :bad_request, json: {error: I18n.t('lti.error.unsupported_lms_type')}
+      return
+    end
+
     platform_urls = Policies::Lti::LMS_PLATFORMS[platform_name.to_sym]
     issuer = platform_urls[:issuer]
     auth_redirect_url = platform_urls[:auth_redirect_url]
