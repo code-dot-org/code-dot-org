@@ -14,7 +14,7 @@
           "type": "radiogroup",
           "name": "teacher_account",
           "title": "Are you logged in to your teacher account?",
-          "description": "If you are logged into your teacher account, the header bars are purple, if you are logged into your student account, the header bars are teal",
+          "description": "If you are logged into your teacher account you will see an option to create a section on your dashboard.",
           "choices": [
             {
               "value": true,
