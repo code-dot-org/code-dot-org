@@ -1,3 +1,5 @@
+require 'optparse'
+
 require_relative '../i18n_script_utils'
 require_relative '../metrics'
 require_relative '../utils/crowdin_client'
@@ -17,15 +19,45 @@ module I18n
         )
       end
 
-      def self.perform
+      def self.parse_options
+        options = Options.new
+
+        OptionParser.new do |opts|
+          opts.on('-t', '--testing', 'Run in testing mode') do
+            options[:testing] = true
+          end
+        end.parse!
+
+        options.to_h
+      end
+
+      # Sync-up an i18n resource.
+      #
+      # @param [Hash] options
+      # @option options [true, false] :testing Whether to run in testing mode
+      # @return [void]
+      def self.perform(options = parse_options)
+        sync_up = new(**options)
+
         i18n_resource_name = name[/^.*::(\w+::\w+)::SyncUp/, 1] || name
 
         I18n::Metrics.report_runtime(i18n_resource_name, 'sync-up') do
-          new.send(:perform)
+          sync_up.send(:perform)
         end
       end
 
       protected
+
+      Options = Struct.new :testing, keyword_init: true do
+        def initialize(testing: I18nScriptUtils::TESTING_BY_DEFAULT, **) super end
+      end
+
+      attr_reader :config, :options
+
+      def initialize(**options)
+        @config = self.class.config.freeze
+        @options = Options.new(**options).freeze
+      end
 
       def perform
         progress_bar.start
@@ -46,17 +78,14 @@ module I18n
       PROGRESS_BAR_FORMAT = '%t: |%W| %c/%C %a'.freeze
       PARALLEL_PROCESSES = 20 # https://developer.crowdin.com/api/v2/#section/Introduction/Rate-Limits
 
-      def config
-        self.class.config
-      end
-
-      def testing?
-        CDO.rack_env?(:development)
-      end
-
       def crowdin_project
-        # When testing, use a set of test Crowdin projects that mirrors our regular set of projects.
-        @crowdin_project ||= testing? ? CDO.crowdin_project_test_mapping[config.crowdin_project] : config.crowdin_project
+        @crowdin_project ||=
+          if options.testing
+            # When testing, use a set of test Crowdin projects that mirrors our regular set of projects.
+            CDO.crowdin_project_test_mapping[config.crowdin_project]
+          else
+            config.crowdin_project
+          end
       end
 
       def crowdin_client
@@ -79,7 +108,7 @@ module I18n
 
       def progress_bar
         @progress_bar ||= I18nScriptUtils.create_progress_bar(
-          title: self.class.name,
+          title: "#{self.class.name}[#{crowdin_project}]",
           total: source_files.size,
           format: PROGRESS_BAR_FORMAT,
         )

@@ -71,6 +71,7 @@ class I18nScriptUtils
   PARALLEL_PROCESSES = Parallel.processor_count.freeze
   SOURCE_LOCALE = 'en-US'.freeze
   TTS_LOCALES = (::TextToSpeech::VOICES.keys - %i[en-US]).freeze
+  TESTING_BY_DEFAULT = false
 
   # Because we log many of the i18n operations to slack, we often want to
   # explicitly force stdout to operate synchronously, rather than buffering
