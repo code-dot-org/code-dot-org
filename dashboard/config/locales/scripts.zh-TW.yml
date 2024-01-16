@@ -7233,6 +7233,10 @@ zh-TW:
           student_description: 為 CSD 開發，ML/AI 單元的腦力激盪/遊戲場區域。今後有關這方面的問題，請向 Dan Schneider
             詢問。
           title: ML/AI 單元 - CSD
+        musiclab:
+          lessons:
+            lesson-3:
+              name: 自由發揮
         netsim:
           description: 學習有關網際網路的工作原理。
           description_short: 學習有關網際網路的工作原理。
@@ -8203,6 +8207,33 @@ zh-TW:
           name: 自我步伐-自我步伐 -2021
         self-paced-pl-csp9-2021:
           name: 自我步伐-自我步伐 -2021
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: 第一課
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: 第一課
+            lesson-3:
+              name: 迴圈
+            lesson-4:
+              name: 條件判斷（Conditionals）
+            lesson-5:
+              name: 把它放在一起
+            lesson-6:
+              name: 下一步
+          title: 計算機科學介紹
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: 第一課
+            lesson-3:
+              name: 事件
+            lesson-4:
+              name: 行為
+            lesson-5:
+              name: 下一步
         self-paced-pl-k5-getting-started:
           name: 自我節奏 PL-K5 獲取啟動
           title: '開始使用 Code.org (K-5) '

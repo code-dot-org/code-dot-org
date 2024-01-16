@@ -9569,6 +9569,10 @@ ar:
           student_description: العصف الذهني/منطقة الملعب لتطوير وحدة ML/AI لـ CSD.
             للأسئلة المستقبلية حول هذا الموضوع، اسأل دان شنايدر.
           title: وحدة غسل الأموال/الذكاء الاصطناعي - CSD
+        musiclab:
+          lessons:
+            lesson-3:
+              name: اللعب الحر
         netsim:
           description: تعرف على كيفية عمل الإنترنت.
           description_short: تعرف على كيفية عمل الإنترنت.
@@ -10814,6 +10818,33 @@ ar:
           name: نظام التشغيل الذاتي pl-csp8-2021
         self-paced-pl-csp9-2021:
           name: نظام التشغيل الذاتي (pl-csp9-2021)
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: الدرس 1
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: الدرس 1
+            lesson-3:
+              name: الحلقات
+            lesson-4:
+              name: الجمل الشرطية
+            lesson-5:
+              name: وضع كل ذلك معًا
+            lesson-6:
+              name: الخطوات التالية
+          title: مقدمة لعلوم الحاسب الآلي
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: الدرس 1
+            lesson-3:
+              name: الأحداث
+            lesson-4:
+              name: السلوك
+            lesson-5:
+              name: الخطوات التالية
         self-paced-pl-k5-getting-started:
           name: بدء التشغيل الذاتي pl-k5
           title: 'الشروع في العمل مع Code.org (K-5) '

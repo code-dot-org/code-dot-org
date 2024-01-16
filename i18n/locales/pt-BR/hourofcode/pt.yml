@@ -236,7 +236,7 @@ pt:
   for_students_teacher_led_learning: 'Para estudantes: Aprendizagem com professores'
   for_students_teacher_led_lessons: 'Para estudantes: aulas ministradas por professores'
   professional_development: Desenvolvimento profissional
-  additional_educator_resources: Additional Educator Resources
+  additional_educator_resources: Recursos adicionais para educadores
   teach_computer_science: Lecione ciência da computação
   explore_our_curriculum: Explore o nosso currículo
   start_professional_learning: Inicie sua aprendizagem profissional
@@ -258,9 +258,19 @@ pt:
     infância à carreira para inspirar, educar e treinar crianças e jovens de baixa
     renda e outras pessoas desfavorecidas para seguir carreiras em ciência da computação.
     [Saiba mais sobre nossa parceria] (%{afe_url}).
+  donors_block_microsoft_infosys: We thank Microsoft and Infosys Foundation USA for
+    supporting our vision and mission to ensure every child has the opportunity to
+    learn computer science and the skills to succeed in the 21st century.
+  microsoft_logo_alt: Microsoft logo
+  infosys_logo_alt: Infosys Foundation USA logo
+  amazon_logo_alt: Amazon logo
+  google_logo_alt: Google logo
+  coinbase_logo_alt: Coinbase logo
+  ballmer_group_logo_alt: Ballmer Group logo
+  vista_equity_partners_logo_alt: Vista Equity Partners logo
   grade_level: Nível escolar
-  grade_level_label_elementary: Ensino Fundamental 1
-  grade_level_label_middle: Ensino Fundamental 2
+  grade_level_label_elementary: Ensino Fundamental I
+  grade_level_label_middle: Ensino Fundamental II
   grade_level_label_high: Ensino Médio
   curricula_title_elementary: Currículos do ensino fundamental
   curricula_desc_elementary: Explore os cursos e atividades divertidos e gratuitos
@@ -343,7 +353,7 @@ pt:
   call_to_action_explore_resources: Explore resources
   call_to_action_explore_tool: Ferramenta de exploração
   call_to_action_explore_unit: Explorar a unidade
-  call_to_action_explore_curriculum: Explorar o currículo
+  call_to_action_explore_curriculum: Explore o currículo
   call_to_action_explore_curricula: Explore os currículos
   call_to_action_explore_curriculum_options: Explore as opções de currículo
   call_to_action_explore_lessons: Explore as aulas
@@ -386,25 +396,25 @@ pt:
   call_to_action_contact_regional_partner: Entre em contato com seu parceiro regional
   call_to_action_join_csta: Junte-se ao CSTA
   call_to_action_support_farsi: Apoie Code.org em farsi
-  call_to_action_resources_lesson_plan: Explorar exemplos de planos de ensino
-  call_to_action_resources_videos: Explorar todos os vídeos
-  call_to_action_resources_slides: Explorar exemplo de apresentação de slides
-  call_to_action_resources_assessments: Explorar uma lição avaliativa
-  call_to_action_resources_tools: Experimentar as ferramentas de programação
+  call_to_action_resources_lesson_plan: Explore o exemplo de plano de ensino
+  call_to_action_resources_videos: Explore todos os vídeos
+  call_to_action_resources_slides: Explore o exemplo de apresentação de slides
+  call_to_action_resources_assessments: Explore uma lição avaliativa
+  call_to_action_resources_tools: Experimente as ferramentas de programação
   call_to_action_sign_up_free: Cadastre-se gratuitamente
-  call_to_action_explore_ai_resources: Explore recursos sobre I.A.
+  call_to_action_explore_ai_resources: Explore recursos de I.A.
   call_to_action_explore_ai_curricula: Explore os currículos de IA
-  call_to_action_explore_curriculum_catalog: Explorar o Catálogo de Currículos
-  call_to_action_see_full_curriculum_catalog: Ver o Catálogo de Currículos completo
+  call_to_action_explore_curriculum_catalog: Explore o Catálogo Curricular
+  call_to_action_see_full_curriculum_catalog: Veja o Catálogo de Currículos completo
   call_to_action_view_curriculum_catalog: Consulte o Catálogo de Currículos
-  call_to_action_find_self_paced_modules: Encontrar módulos individualizados
-  call_to_action_join_teacher_forums: Juntar-se ao fórum dos professores
+  call_to_action_find_self_paced_modules: Encontre módulos individualizados
+  call_to_action_join_teacher_forums: Participe de fóruns de professores
   call_to_action_explore_teacher_forums: Explore os fóruns de professores
   call_to_action_explore_teacher_forum: Explore o fórum de professores
-  call_to_action_explore_career_resources: Explorar recursos de carreira
+  call_to_action_explore_career_resources: Explore os recursos de carreira
   call_to_action_explore_stats_infographics: Explore as estatísticas e os infográficos
-  call_to_action_watch_videos: Assistir aos vídeos
-  call_to_action_download_posters: Baixar pôsteres
+  call_to_action_watch_videos: Assista a vídeos
+  call_to_action_download_posters: Baixe pôsteres
   call_to_action_contact_support: Entre em contato com o suporte da Code.org
   call_to_action_pick_units: Escolha unidades
   call_to_action_focus_on_topic: Concentre-se em um tópico
@@ -421,6 +431,7 @@ pt:
   call_to_action_open_positions: Exibir vagas abertas
   call_to_action_explore_roles: Explore as vagas abertas
   call_to_action_get_guide: Obtenha o guia
+  call_to_action_donate: Donate
   call_to_action_donate_to_cdo: Doe a Code.org
   call_to_action_start_fundraiser: Comece uma campanha de arrecadação de fundos
   call_to_action_view_donation_policy: Veja a política de doações
@@ -443,6 +454,7 @@ pt:
   call_to_action_learn_about_ai: Saiba mais sobre IA
   call_to_action_learn_more_about_ai: Saiba mais sobre I.A.
   call_to_action_get_started: Comece
+  call_to_action_view_our_supporters: View our supporters
   call_to_action_explore_self_paced_pl: Explore self-paced professional learning
   call_to_action_applications_get_notified: Get notified when applications open
   call_to_action_applications_notify_me: Notify me when I can apply
@@ -452,6 +464,9 @@ pt:
   call_to_action_for_intl_educators: For international educators
   call_to_action_learn_more_program_region: Learn more about the program in your region
   call_to_action_visit_support_center: Visit our support center
+  call_to_action_download_video: Download video
+  call_to_action_explore_learning_ages_5_11: Explore learning for ages 5-11
+  call_to_action_explore_learning_ages_11_plus: Explore learning for ages 11+
   aria_label_call_to_action_hoc_how_to_educators: Consulta ao guia de instruções para
     Educadores
   aria_label_call_to_action_hoc_how_to_companies: Consulta ao guia de instruções para
@@ -476,14 +491,14 @@ pt:
   aria_label_call_to_action_teaching_csf: Inicie o programa de aprendizagem profissional
     Teaching Computer Science Fundamentals
   aria_label_call_to_action_teaching_csd: Inicie o programa de aprendizagem profissional
-    Teaching Computer Science Discoveries
+    Conexões para o Ensino da Ciência da Computação
   aria_label_call_to_action_teaching_csp: Inicie o programa de aprendizagem profissional
     de Princípios de Ensino da Ciência da Computação
   aria_label_call_to_action_teaching_problem_solving: Comece lecionando com o programa
     de aprendizagem profissional de solução de problemas e computação profissional
   aria_label_call_to_action_teaching_interactive_animations_games: Start the Teaching
     Interactive Animations and Games professional learning program
-  aria_label_call_to_action_teaching_csc: Iniciar o programa de aprendizagem profissional
+  aria_label_call_to_action_teaching_csc: Inicie o programa de aprendizagem profissional
     Conexões para o Ensino da Ciência da Computação
   aria_label_call_to_action_teaching_ai: Inicie o programa de aprendizado profissional
     Teaching AI e Machine Learning
@@ -497,13 +512,13 @@ pt:
     Fundamentals Express
   aria_label_call_to_action_curriculum_csf_express_pre_reader: Explore o curso Pre-Reader
     Express de Fundamentos da Ciência da Computação
-  aria_label_call_to_action_curriculum_csd: Explore o currículo do Computer Science
-    Discoveries
+  aria_label_call_to_action_curriculum_csd: Explore o currículo de Descobertas da
+    Ciência da Computação
   aria_label_call_to_action_curriculum_csp: Explore o currículo dos Princípios da
     Ciência da Computação
   aria_label_call_to_action_curriculum_problem_solving: Explore o currículo de solução
     de problemas e computação
-  aria_label_call_to_action_curriculum_csc: Explorar o currículo de Conexões em Ciência
+  aria_label_call_to_action_curriculum_csc: Explore o currículo de Conexões em Ciência
     da Computação
   aria_label_call_to_action_curriculum_ai: Explore o currículo de IA e aprendizado
     de máquina
@@ -593,6 +608,9 @@ pt:
     workshop gratuito para estudantes
   aria_label_call_to_action_view_more_cs_resources: Ver mais recursos de ciência da
     computação
+  aria_label_call_to_action_farsi_donate: Donate to support the Code.org in Farsi
+    campaign
+  aria_label_call_to_action_farsi_learn_more: Learn more about Code.org in Farsi
   aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
     professional learning
   aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
@@ -605,9 +623,10 @@ pt:
     A
   video_title_professional_learning_program: Programa de aprendizagem profissional
     da Code.org
+  video_title_young_women_in_computer_science: Mulheres jovens em ciência da computação
   curriculum_name_csf: Fundamentos da Ciência da Computação
   curriculum_name_csf_02: Qualquer fundamento de CS (Curso A-F)
-  curriculum_name_csf_a_f: Fundamentos da CC A-F
+  curriculum_name_csf_a_f: Fundamentos de CC A-F
   curriculum_name_csf_express: Expresso
   curriculum_name_csf_express_pre_reader: Pré-Reader Express
   curriculum_name_csf_course_a: Curso A
@@ -623,7 +642,7 @@ pt:
   curriculum_name_csp: Princípios da ciência da computação
   curriculum_name_problem_solving: Solução de problemas e computação
   curriculum_name_teaching_animation: Teaching Interactive Animations and Games
-  curriculum_name_csc: Conexões em Ciência da Computação
+  curriculum_name_csc: Conexões da Ciência da Computação
   curriculum_name_csa: AP® Ciência da Computação A
   curriculum_name_csa_ai: Engenharia de software e visão computacional
   curriculum_name_csc_02: Qualquer Módulo de Conexões em CC
@@ -788,6 +807,7 @@ pt:
   module_grade_3_12: 3-12
   module_grade_5_12: 5-12
   module_grade_6_12: 6-12
+  module_grade_6_12_plus: 6-12+
   module_grade_6_10: 6-10
   module_grade_7_12: 7-12
   module_grade_9_12: 9-12
@@ -879,6 +899,8 @@ pt:
   values_05: Agimos com integridade e transparência
   values_06: Acreditamos que um impacto amplo exige pensar em grande escala e agir
     de forma holística.
+  heading_anyone_can_learn: Anyone can learn Computer Science
+  heading_find_right_opportunity: Find the right learning opportunity for you!
   heading_professional_learning: Aprendizado profissional que atenda às suas necessidades
   heading_additional_resources: Recursos adicionais
   heading_support_and_questions: Suporte e perguntas
@@ -913,6 +935,19 @@ pt:
   heading_acceptance: Acceptance
   heading_enroll: Enroll
   heading_have_questions: Have questions?
+  student_courses_top_desc: Start coding today. Our courses and activities are free!
+    It's easier—and more fun—than you think.
+  student_courses_explore_desc: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more for all ages and
+    experience levels!
+  student_courses_k_5_desc: Start with an Hour of Code, then discover more block-based
+    coding in our Express Courses. Get creative in our fun programming environment,
+    Sprite Lab, or watch cool videos to learn more about key topics. There's so much
+    to explore!
+  student_courses_6_12_desc: Try an Hour of Code, or check out our self-paced courses
+    on creating apps, games, and animations. Do your own thing in our Web Lab, Game
+    Lab, and App Lab programming environments. Plus, learn more about AI, careers
+    in programming, scholarships, and more.
   cs_ambassador_subhead: Se você é uma estudante do ensino médio apaixonada por incentivar
     mais moças a cursarem ciência da computação em sua escola, precisamos de você!
   cs_ambassador_desc: Todos os campos, incluindo medicina, entretenimento, esportes,
@@ -1701,11 +1736,11 @@ pt:
     seu financiamento, preparação e distribuição das traduções de farsi e, assim,
     permitirá que seu esforço de traduções de farsi prossiga em total conformidade
     com os requisitos de sanções econômicas dos EUA.
-  resources_tabs_heading: Recursos que vão auxiliá-lo a cada etapa do caminho
-  resources_tabs_desc: "[Cadastre-se na Code.org](%{sign_up_url}) para ter acesso
-    a materiais que vão ajudá-lo a lecionar ciência da computação com confiança. A
-    Code.org tem um amplo catálogo de recursos projetados para auxiliar o educador,
-    até mesmo aqueles que não possuem experiência no ensino de CC."
+  resources_tabs_heading: Recursos que auxiliam você a cada etapa do caminho
+  resources_tabs_desc: "[Inscreva-se em uma conta Code.org] (%{sign_up_url}) para
+    ter acesso a materiais que ajudarão você a ensinar ciência da computação com confiança.
+    A Code.org tem recursos abrangentes projetados para apoiar educadores, mesmo aqueles
+    sem experiência prévia em ensino de ciência da computação."
   resources_tabs_tab_label_lesson_plans: Planos de Aula
   resources_tabs_tab_label_videos: Vídeos
   resources_tabs_tab_label_slides: Slides
@@ -1713,35 +1748,35 @@ pt:
   resources_tabs_tab_label_tools: Ferramentas de Programação
   resources_tabs_lesson_plans_subhead: Tenha o passo a passo, os objetivos de aprendizagem
     e as estratégias de avaliação para lecionar com eficiência.
-  resources_tabs_lesson_plans_desc: Entre os recursos mais úteis destacam-se os conjutos
-    de apresentações, o guia de atividades, as rubricas e muito mais – todos dispostos
-    no mesmo lugar. Cada plano de ensino é acompanhado por dicas para implementação
-    em sala de aula, ideias sobre personalização de ensino e atividades de extensão,
-    para atender aos mais diversos tipos de alunos.
+  resources_tabs_lesson_plans_desc: Recursos úteis incluem apresentações de slides,
+    guias de atividades, rubricas e muito mais, tudo organizado em um só lugar. Cada
+    plano de ensino é acompanhado por dicas para implementação em sala de aula, ideias
+    de diferenciação e atividades de extensão para atender alunos de todas as habilidades.
   resources_tabs_videos_heading: Vídeos Instrutivos
   resources_tabs_videos_subhead: Assista a vídeos com um panorama geral de ciência
     da computação e conceitos de programação de fácil compreensão.
-  resources_tabs_videos_desc: As séries de vídeos do Code.org foram projetadas especificamente
-    para dar apoio em sala de aula e são envolventes e divertidas.
+  resources_tabs_videos_desc: As séries de vídeos da Code.org foram projetadas especificamente
+    para apoiar sua sala de aula e são envolventes e divertidas de assistir.
   resources_tabs_slides_heading: Apresentações de Slides
-  resources_tabs_slides_subhead: Nós oferecemos ao educador uma estrutura bem organizada,
-    visualmente envolvente e pedagógica para ótimas lições de ciência da computação.
-  resources_tabs_slides_desc: As apresentações de slides do Code.org contêm instruções,
-    exemplos e atividades interativas passo-a-passo, que se alinham aos objetivos
+  resources_tabs_slides_subhead: Oferecemos aos educadores uma estrutura organizada,
+    visualmente envolvente e pedagogicamente sólida para ministrar aulas de ciência
+    da computação.
+  resources_tabs_slides_desc: As apresentações de slides do Code.org contêm instruções
+    passo-a-passo, exemplos e atividades interativas que se alinham aos objetivos
     curriculares.
   resources_tabs_assessments_subhead: Nossos currículos incluem um sistema abrangente
     com recursos de formação e avaliação complementar.
   resources_tabs_assessments_desc: Entre eles, critérios de avaliação, roteiros, miniprojetos,
     projetos ao final dos capítulos, critérios de avaliação dos alunos, amostras de
-    projetos e testes pós-projeto – tudo formulado para da apoio aos professores na
-    avaliação do crescimento dos alunos, com comentários e avaliações da compreensão
+    projetos e testes pós-projeto – tudo formulado para dar apoio aos professores
+    na avaliação do crescimento dos alunos, com comentários e avaliações da compreensão
     dos alunos.
-  resources_tabs_tools_subhead: Os ambientes de desenvolvimento integrados do Code.org
-    (Integrated Development Environments – IDEs) atendem a alunos de todos os níveis.
-  resources_tabs_tools_desc: Nós oferecemos uma plataforma versátil e intuitiva que
-    permite uma variedade de paradigmas de programação. Isso permite ao alunos uma
-    transição sem transtornos entre a codificação baseada em blocos para as línguas
-    em formato de texto, e estimula a criatividade e a inovação.
+  resources_tabs_tools_subhead: Os ambientes de desenvolvimento integrados (Integrated
+    Development Environments – IDEs) da Code.org atendem a alunos de todos os níveis.
+  resources_tabs_tools_desc: Oferecemos uma plataforma versátil e fácil de usar que
+    suporta uma variedade de paradigmas de programação. Isso permite que os alunos
+    façam a transição perfeita da codificação baseada em blocos para linguagens baseadas
+    em texto, além de estimular a criatividade e a inovação.
   teach_page_top_heading: Lecione ciência da computação e fomente possibilidades
   teach_page_top_desc_01: Estimule seus alunos a explorarem seu potencial máximo com
     o currículo gratuito de Ciência da Computação (CC) da Code.org.
@@ -1752,21 +1787,21 @@ pt:
   teach_page_why_teach_cs_heading: Por que lecionar ciência da computação com a Code.org?
   teach_page_why_teach_cs_block_heading_01: Desenvolva as habilidades fundamentais
     em CC
-  teach_page_why_teach_cs_block_desc_01: Assim como a leitura, a redação e a matemática,
+  teach_page_why_teach_cs_block_desc_01: Assim como a leitura, a redação, ou a matemática,
     a ciência da computação é fundamental para tantos outros fins. A matéria abrange
-    a resolução de problemas e o raciocínio crítico, e proporciona aos alunos a participarem
+    a resolução de problemas e o pensamento crítico, e possibilita aos alunos  participarem
     ativamente de uma sociedade cada vez mais digital.
-  teach_page_why_teach_cs_block_heading_02: Aproveite materiais de ensino flexíveis
-  teach_page_why_teach_cs_block_desc_02: Plano de ensino aprofundado e opções de aprendizagem
-    profissional flexíveis asseguram que professores de diversas formações diferentes
-    possam lecionar ciência da computação.
-  teach_page_why_teach_cs_block_heading_03: 'Proporcione caminhos para todos os alunos '
+  teach_page_why_teach_cs_block_heading_02: Aproveite materiais de ensino abrangentes
+  teach_page_why_teach_cs_block_desc_02: Planos de ensino aprofundados e opções de
+    aprendizagem profissional flexíveis asseguram que professores de diversas formações
+    diferentes possam ensinar ciência da computação com sucesso.
+  teach_page_why_teach_cs_block_heading_03: 'Desbloqueie caminhos para todos os alunos '
   teach_page_why_teach_cs_block_desc_03: Os empregos na área da computação são os
     maiores, os mais promissores, e o mais bem remunerados dentre todos nos EUA.
   teach_page_why_teach_cs_block_heading_04: Compreenda um mundo transformado pela
     I.A.
-  teach_page_why_teach_cs_block_desc_04: Ensine aos alunos como a I.A. funciona e
-    como utilizá-la com segurança. Nossa Aprendizagem Profissional estimula a curiosidade
+  teach_page_why_teach_cs_block_desc_04: Ensine os alunos como a I.A. funciona e como
+    utilizá-la com segurança. Nossa Aprendizagem Profissional estimula a curiosidade
     e a confiança com esta tecnologia em constante evolução.
   teach_page_why_teach_cs_heading_02: Comece a ensinar ciência da computação com a
     Code.org hoje mesmo!
@@ -1780,38 +1815,34 @@ pt:
   teach_page_free_curriculum_desc: Queremos que você leve a Ciência da Computação
     para a sua escola sem se preocupar com o custo. É por isso que assumimos o compromisso
     de manter nosso currículo gratuito para sempre!
-  teach_page_free_curriculum_list_desc_01: Currículo gratuito, flexível e divertido,
-    disponível em mais de 67 idiomas.
-  teach_page_free_curriculum_list_desc_02: 'A Code.org oferece tudo, desde um currículo
-    anual a atividades de apenas uma unidade. E mais: atualizamos nossos currículos
-    anualmente para incentivar as melhores práticas e áreas de foco, bem como para
-    criar novas ofertas de ensino que atendam os temas de maior demanda na atualidade.'
-  teach_page_free_curriculum_list_desc_03: Cada currículo é estruturado seguindo pelo
-    menos um conjunto de padrões nacionais, incluindo a CSTA, as normas da Next Generation
-    Science e da Common Core.
+  teach_page_free_curriculum_list_desc_01: Currículo gratuito, flexível e divertido.
+  teach_page_free_curriculum_list_desc_02: Atualizado anualmente para apoiar as melhores
+    práticas
+  teach_page_free_curriculum_list_desc_03: Novos lançamentos para tópicos mais procurados.
   teach_page_free_curriculum_list_desc_04: Ofertas em mais de 67 idiomas
   teach_page_free_curriculum_list_desc_05: Mapeado para pelo menos um conjunto de
-    padrões nacionais (incluindo CSTA, NGSS e Common Core)
-  teach_page_free_curriculum_heading_02: 'Explore nosso currículo para conhecer os
-    diversos níveis de ensino oferecidos:'
-  teach_page_resources_heading: Recursos que vão auxiliá-lo a cada etapa do caminho
-  teach_page_resources_desc: Ao abrir uma conta no Code.org, você terá acesso a materiais
-    que vão ajudá-lo a lecionar ciência da computação com confiança. O Code.org tem
-    recursos extensos projetados para apoiar o educador, mesmo os que não tiverem
-    experiência anterior no ensino de CC. Clique nas guias para saber mais sobre os
-    recursos.
+    padrões nacionais (incluindo a CSTA, as normas da Next Generation Science e da
+    Common Core).
+  teach_page_free_curriculum_heading_02: 'Explore nossas ofertas curriculares para
+    diferentes níveis de ensino:'
+  teach_page_resources_heading: Recursos que auxiliam você a cada etapa do caminho
+  teach_page_resources_desc: Inscrever-se em uma conta Code.org dá acesso a materiais
+    que ajudarão você a ensinar ciência da computação com confiança. A Code.org tem
+    recursos abrangentes projetados para apoiar educadores, mesmo aqueles sem experiência
+    prévia em ensino de ciência da computação. Clique nas guias para saber mais sobre
+    os recursos.
   teach_page_curriculum_heading: Ofertas de currículos que os alunos adoram
   teach_page_curriculum_desc: São tantas ofertas incríveis para explorar! Aqui vai
     algumas das nossas ofertas mais recentes e populares.
-  teach_page_pl_offerings_english_header: Professional learning offerings that meet
-    your needs
+  teach_page_pl_offerings_english_header: Ofertas de aprendizado profissional que
+    atendem às suas necessidades
   teach_page_pl_offerings_intl_header: Explore as ofertas de aprendizagem profissional
   teach_page_pl_offerings_list_heading_self_paced: Módulos on-line individualizados
   teach_page_pl_offerings_list_desc_self_paced: Esses módulos permitem que você os
     conduza no seu próprio ritmo e tempo, permitindo-o concentrar-se nas áreas mais
     importantes, conforme as suas necessidades e o seu contexto de ensino.
-  teach_page_pl_offerings_list_heading_workshops_facilitator_led: Facilitator-led
-    Workshops
+  teach_page_pl_offerings_list_heading_workshops_facilitator_led: Workshops conduzidos
+    por facilitadores
   teach_page_pl_offerings_list_heading_workshops: Workshops
   teach_page_pl_offerings_list_desc_workshops_en: Com nossos Parceiros Regionais como
     anfitriões e nossos facilitadores de Code.org como guias, nossas oficinas por
@@ -1826,12 +1857,12 @@ pt:
     Junte-se a uma comunidade de educadores incríveis que estão levando a ciência
     da computação para as salas de aula em todo o mundo!
   teach_page_additional_materials_heading: Suporte e materiais adicionais
-  teach_page_additional_materials_desc: Além do currículo e da aprendizagem profissional,
-    temos muitos materiais de apoio em sala de aula.
+  teach_page_additional_materials_desc: Além do currículo e do aprendizado profissional,
+    temos muitos materiais para apoiar sua sala de aula.
   teach_page_additional_materials_list_heading_01: Educação Profissional
-  teach_page_additional_materials_list_desc_01: Recursos de fácil utilização, projetados
-    para ajudar você a iluminar as conexões no mundo real e oferecer aos alunos a
-    oportunidade de explorar vários planos de carreira.
+  teach_page_additional_materials_list_desc_01: Recursos fáceis de usar, projetados
+    para ajudar você a iluminar as conexões do mundo real e oferecer aos alunos oportunidades
+    de explorar diferentes planos de carreira.
   teach_page_additional_materials_list_heading_02: Videoteca
   teach_page_additional_materials_list_desc_02: Oferecemos uma biblioteca em constante
     atualização com vídeos educacionais para educadores de todo o mundo, seja on-line
@@ -1839,8 +1870,8 @@ pt:
     dos nossos currículos.
   teach_page_additional_materials_list_heading_03: Pôsteres para Salas de Aula
   teach_page_additional_materials_list_desc_03: Imprima esses pôsteres com diversos
-    exemplos inspiradores, para serem afixados na escola e inspirar os alunos a darem
-    uma chance à ciência da computação.
+    modelos para pendurar em sua escola e inspire seus alunos a experimentar a ciência
+    da computação.
   csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
     concepts of computer science and challenges them to explore how computing and
     technology can impact the world. Can be taught as an introductory class and as
@@ -2225,7 +2256,7 @@ pt:
     Animation
   csa_page_curriculum_glance_devices: Laptop, Chromebook
   csa_page_curriculum_glance_tools: Laboratório Java
-  csa_page_curriculum_glance_professional_learning: Facilitator-led Workshops
+  csa_page_curriculum_glance_professional_learning: Workshops conduzidos por facilitadores
   csa_page_curriculum_glance_languages: Português (Brasil)
   csa_page_curriculum_glance_accessibility_features: Text-to-speech, Closed captioning,
     Immersive reader
@@ -2289,6 +2320,12 @@ pt:
   donate_page_fundraise_title: Arrecadação de fundos para o Code.org
   donate_page_fundraise_desc: Ajude a arrecadar dinheiro para o Code.org! Todos os
     alunos em todas as escolas deveria ter a oportunidade de aprender ciência da computação.
+  donate_page_campaigns_heading: Support a campaign
+  donate_page_campaigns_farsi_desc: Talent is widespread, but opportunity often isn't.
+    The proposed Code.org in Farsi initiative aims to grant over 110 million Farsi
+    speakers from countries like Iran, Afghanistan, and Tajikistan to global diasporas,
+    access to educational resources currently available in other major languages.
+    Let's make it a reality.
   donate_page_other_ways_title: Outras formas de doação
   donate_page_other_ways_desc: Explore os diversos meios para contribuir e encontre
     a opção mais adequada para você. Cada gesto, grande ou pequeno, impulsiona a nossa
@@ -2297,6 +2334,10 @@ pt:
     sem fins lucrativos 501(c)(3). Contribuições para o Code.org são dedutíveis do
     imposto de renda até o limite permitido por lei. O número de identificação fiscal
     do Code.org é 46-0858543.
+  donate_page_supporters_heading: Join top industry leaders supporting Code.org
+  donate_page_supporters_desc: Prominent names nationwide trust and support our mission.
+    View our esteemed supporters and consider adding your own commitment to Code.org's
+    transformative cause.
   donate_page_donation_policy_title: Conheça nossa Política de Doações
   donate_page_donation_policy_desc: Saiba mais sobre como administramos e alocamos
     as contribuições.
@@ -2358,6 +2399,9 @@ pt:
     em casa por meio de nossos episódios ao vivo do Hour of Code.
   hoc_live_join_us: Junte-se a nós
   hoc_live_learn_more: Saiba mais
+  hoc_live_map_and_events_message: During peak Hour of Code traffic, we use a static
+    map to save bandwidth and keep our site running. To see a dynamic map of all events
+    [click here](%{map_url}), and to see the full event list [click here](%{events_url}).
   hoc_overview_oceans_tutorial_header: IA para oceanos
   hoc_overview_oceans_tutorial_desc: Aprenda sobre inteligência artificial (IA), aprendizado
     de máquina, dados de treinamento e preconceitos, enquanto explora questões éticas
@@ -3106,6 +3150,22 @@ pt:
   handouts_onepager: Divulgue o evento com este folheto de uma página
   handouts_brochure: Entregue este panfleto para professores e escolas
   handouts_participationguide: Planeje sua Hora do Código com esse guia de participação
+  poster_aria_label_minecraft: 'Download a poster featuring Minecraft Education: Generation
+    AI'
+  poster_aria_label_dance_ai_01: 'Download a poster featuring Dance Party: AI Edition
+    frog, moose, and cat characters'
+  poster_aria_label_dance_ai_02: 'Download a poster featuring Dance Party: AI Edition
+    robot, sloth, and shark characters'
+  poster_aria_label_oceans_01: Download a poster featuring AI for Oceans underwarer
+    scene with AI Bot selecting a fish
+  poster_aria_label_oceans_02: Download a poster featuring AI for Oceans fish characters
+    with different emotions
+  poster_aria_label_steph: Download a poster featuring NBA star Steph Curry
+  poster_aria_label_malala: Download a poster featuring activist Malala Yousafzai
+  poster_aria_label_hadi: Download a poster featuring Code.org founder Hadi Partovi
+  poster_aria_label_mary: Download a poster featuring General Motors CEO Mary Barra
+  poster_aria_label_satya: Download a poster featuring Microsoft CEO Satya Nadella
+  poster_aria_label_shakira: Download a poster featuring singer-songwriter Shakira
   videos_title: Mostre estes vídeos para inspirar os alunos
   videos_what_most_schools_dont_teach: O que a maioria das escolas não ensina (5 min)
   videos_hoc_2014: A Hora do Código é aqui - qualquer pessoa pode aprender
@@ -16690,6 +16750,8 @@ pt:
   video_library_page_inspirational_video_title_14: É mais do que um jogo (1 min)
   video_library_page_inspirational_video_title_15: Crie com a ciência da computação
     (1 min)
+  video_library_page_inspirational_video_title_16: Young Women in Computer Science
+    (2 min)
   video_library_page_not_hacked_video_title_1: 'Como não ser hackeado: Introdução'
   video_library_page_not_hacked_video_title_2: 'Como não ser hackeado: senhas'
   video_library_page_not_hacked_video_title_3: 'Como não ser invadido: autenticação
@@ -16990,13 +17052,33 @@ pt:
     por um professor! Se você gostaria de vê-los ensinados em sua escola, peça a um
     pai ou responsável que trabalhe com um professor para trazê-los para sua classe.
   elementary_page_computer_science_card_title_1: Fundamentos da Ciência da Computação
-  elementary_page_computer_science_card_title_2: Conexões em Ciência da Computação
+  elementary_page_computer_science_card_title_2: Conexões da Ciência da Computação
   elementary_page_computer_science_description_1: Currículo gratuito de um ano que
     apresenta aos alunos os conceitos fundamentais da ciência da computação e os desafia
     a explorar como a computação e a tecnologia podem impactar o mundo.
   elementary_page_computer_science_description_2: Faça conexões entre a ciência da
     computação (CS) e outras disciplinas, como matemática, artes da linguagem, ciências
     e estudos sociais.
+  hoc_beyond_hero_description: Now that you've completed your Hour of Code, take your
+    learning to the next level! Many partners offer free, engaging options for teachers
+    and students alike - no experience needed.
+  hoc_beyond_for_teachers_section_title: For Teachers
+  hoc_beyond_for_teachers_section_description: You've held an Hour of Code event in
+    your classroom... now what? Join the more than 2 million educators who use Code.org
+    to teach computer science. Anyone can learn!
+  hoc_beyond_for_teachers_course_title_1: Teach with Code.org’s Courses
+  hoc_beyond_for_teachers_course_title_2: Teach Courses from Other Providers
+  hoc_beyond_for_teachers_course_description_1: Code.org offers a full K-12 course
+    pathway and professional learning workshops for teachers, free of charge.
+  hoc_beyond_for_teachers_course_description_2: Compare options by different partners,
+    organized by grade band.
+  hoc_beyond_for_teachers_course_link_1: Teach with Code.org
+  hoc_beyond_for_teachers_course_link_2: Explore other providers
+  hoc_beyond_carousel_title: For Students
+  hoc_beyond_carousel_description: Want to keep learning after Hour of Code? Check
+    out these activities for learners of all ages and skill levels.
+  hoc_beyond_submit_activity_form: Submit your own activity [here](%{form_url}).
+  hoc_beyond_end_section_label: The Hour of Code is organized by [Code.org](%{home_page})
   language_code:
     ar: árabe
     az: azerbaijano

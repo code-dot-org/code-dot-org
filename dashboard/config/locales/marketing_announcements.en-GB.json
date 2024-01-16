@@ -3,9 +3,6 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "coldplay": {
-            "buttonText": "Try it"
-          },
           "superhero": {
             "buttonText": "Learn More"
           }

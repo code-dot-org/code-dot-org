@@ -4933,13 +4933,24 @@ ar-SA:
         - correct: true
         questions:
         - {}
+      aiml-ch1-pulse-survey_2021:
+        title: استبيان سريع عن الذكاء الاصطناعي وتعلّم الآلة!
+      aiml-ch1-pulse-survey_2022:
+        title: استبيان سريع عن الذكاء الاصطناعي وتعلّم الآلة!
+      aiml-ch1-pulse-survey_2023:
+        title: استبيان سريع عن الذكاء الاصطناعي وتعلّم الآلة!
       aiml-intro-pulse-survey-q1_2021:
         answers:
         - correct: true
+          text: هذه هي المرة الأولى التي أتعلم فيها عن علوم الحاسوب
         - correct: true
+          text: 'لقد قمت بأنشطة صغيرة في علوم الحاسوب (على سبيل المثال: ساعة من البرمجة)،
+            ولكن هذا هو أول صف دراسي أطول'
         - correct: true
+          text: لقد تلقيت بالفعل دروسًا أو قمت بعمل دروس تعليمية أطول عبر الإنترنت
+            حول علوم الحاسوب
         questions:
-        - {}
+        - text: ما هي التجارب السابقة التي مررت بها في علوم الكمبيوتر؟
       aiml-intro-pulse-survey-q1_2022:
         answers:
         - correct: true
@@ -4957,10 +4968,15 @@ ar-SA:
       aiml-intro-pulse-survey-q2_2021:
         answers:
         - correct: true
+          text: هذه هي المرة الأولى التي أتعلم فيها عن الذكاء الاصطناعي وتعلم الآلة
         - correct: true
+          text: 'لقد قمت بأنشطة أصغر في مجال الذكاء الاصطناعي (على سبيل المثال: ساعة
+            من البرمجة)، ولكن هذا هو أول صف دراسي أطول لي'
         - correct: true
+          text: لقد تلقيت بالفعل دروسًا أو قمت بعمل دروس تعليمية أطول عبر الإنترنت
+            حول الذكاء الاصطناعي وتعلم الآلة
         questions:
-        - {}
+        - text: ما هي التجارب السابقة التي مررت بها مع الذكاء الاصطناعي وتعلم الآلة؟
       aiml-intro-pulse-survey-q2_2022:
         answers:
         - correct: true
@@ -4978,11 +4994,17 @@ ar-SA:
       aiml-intro-pulse-survey-q3_2021:
         answers:
         - correct: true
+          text: أوافق بشدة
         - correct: true
+          text: أوافق
         - correct: true
+          text: أوافق قليلاً
         - correct: true
+          text: لا أحد
         - correct: true
+          text: أعارض قليلاً
         - correct: true
+          text: لا أوافق
         - correct: true
         questions:
         - {}
@@ -5049,9 +5071,11 @@ ar-SA:
         - correct: true
         - correct: true
         - correct: true
+          text: لا أوافق
         - correct: true
+          text: لا أوافق بشدة
         questions:
-        - {}
+        - text: أنا أحب علوم الكمبيوتر.
       aiml-intro-pulse-survey-q5_2022:
         answers:
         - correct: true
@@ -5074,6 +5098,14 @@ ar-SA:
         - correct: true
         questions:
         - {}
+      aiml-intro-pulse-survey_2021:
+        title: استبيان سريع عن الذكاء الاصطناعي وتعلّم الآلة!
+      aiml-intro-pulse-survey_2022:
+        title: استبيان سريع عن الذكاء الاصطناعي وتعلّم الآلة!
+      aiml-intro-pulse-survey_2023:
+        title: استبيان سريع عن الذكاء الاصطناعي وتعلّم الآلة!
+      aiml-pulse-check-survey-1-levelgroup Ch2_2021:
+        title: استبيان سريع لعلوم الحاسوب!
       aiml-pulse-check-survey-1-q1 Ch2_2021:
         answers:
         - correct: true
@@ -15629,6 +15661,224 @@ ar-SA:
         - correct: true
         questions:
         - {}
+      ml-customize apps-practice choice-2021:
+        display_name: تدرب على تخصيص تطبيقاتك
+      ml-customize apps-practice choice_2022:
+        display_name: تدرب على تخصيص تطبيقاتك
+      ml-customize apps-practice choice_2023:
+        display_name: تدرب على تخصيص تطبيقاتك
+      ml-good data-isaac data:
+        markdown: |
+          ![](https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
+
+          ## [انقر هنا] (https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy) لإنشاء نسخة من بيانات إسحاق
+      ml-good data-isaac data_2022:
+        markdown: |
+          ![](https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
+
+          ## [انقر هنا] (https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy) لإنشاء نسخة من بيانات إسحاق
+      ml-good data-isaac data_2023:
+        markdown: |
+          ![](https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
+
+          ## [انقر هنا] (https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy) لإنشاء نسخة من بيانات إسحاق
+      ml-good data-kim data:
+        markdown: |
+          ![](https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)
+
+          ## [انقر هنا] (https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy) لإنشاء نسخة من بيانات كيم
+      ml-good data-kim data_2022:
+        markdown: |
+          ![](https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)
+
+          ## [انقر هنا] (https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy) لإنشاء نسخة من بيانات كيم
+      ml-good data-kim data_2023:
+        markdown: |
+          ![](https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)
+
+          ## [انقر هنا] (https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy) لإنشاء نسخة من بيانات كيم
+      ml-good data-kim survey:
+        markdown: |
+          ![](https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
+
+          ## [انقر هنا] (https://docs.google.com/forms/d/e/1FAIpQLSftxAAvDCXCoPMfzOgYTVYIrVESYYhNfVP-I83eVu9CXFKr-g/viewform) لإجراء استبيان كيم
+      ml-good data-kim survey_2022:
+        markdown: |
+          ![](https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
+
+          ## [انقر هنا] (https://docs.google.com/forms/d/e/1FAIpQLSftxAAvDCXCoPMfzOgYTVYIrVESYYhNfVP-I83eVu9CXFKr-g/viewform) لإجراء استبيان كيم
+      ml-good data-kim survey_2023:
+        markdown: |
+          ![](https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
+
+          ## [انقر هنا] (https://docs.google.com/forms/d/e/1FAIpQLSftxAAvDCXCoPMfzOgYTVYIrVESYYhNfVP-I83eVu9CXFKr-g/viewform) لإجراء استبيان كيم
+      ml-intro app lab-book recommender 5-2021:
+        display_name: تخصيص تطبيقك
+      ml-model card-medical-1-2021:
+        markdown: |
+          # ER مقترح حلول غرفة الطوارئ V1
+
+          انقر على بطاقة النموذج للتكبير ومشاهدة نسخة أكبر
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-1_2022:
+        markdown: |
+          # ER مقترح حلول غرفة الطوارئ V1
+
+          انقر على بطاقة النموذج للتكبير ومشاهدة نسخة أكبر
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-1_2023:
+        markdown: |
+          # ER مقترح حلول غرفة الطوارئ V1
+
+          انقر على بطاقة النموذج للتكبير ومشاهدة نسخة أكبر
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-2-2021:
+        markdown: |
+          # أولوية الطوارئ للأضواء الشمالية
+
+          انقر على بطاقة النموذج للتكبير ومشاهدة نسخة أكبر
+
+          <a href="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" target="_blank">
+          <img src="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" target="_blank">
+          <img src="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" width="45%" style="float:right; margin: 2px"></a>
+
+          ![]()
+      ml-model card-medical-2_2022:
+        markdown: |
+          # أولوية الطوارئ للأضواء الشمالية
+
+          انقر على بطاقة النموذج للتكبير ومشاهدة نسخة أكبر
+
+          <a href="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" target="_blank">
+          <img src="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" target="_blank">
+          <img src="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" width="45%" style="float:right; margin: 2px"></a>
+
+          ![]()
+      ml-model card-medical-2_2023:
+        markdown: |
+          # أولوية الطوارئ للأضواء الشمالية
+
+          انقر على بطاقة النموذج للتكبير ومشاهدة نسخة أكبر
+
+          <a href="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" target="_blank">
+          <img src="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" target="_blank">
+          <img src="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" width="45%" style="float:right; margin: 2px"></a>
+
+          ![]()
+      ml-model card-medical-3-2021:
+        markdown: |
+          # التوصية الطبية بالذكاء الاصطناعي
+
+          انقر على بطاقة النموذج للتكبير ومشاهدة نسخة أكبر
+
+          <a href="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" target="_blank">
+          <img src="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" target="_blank">
+          <img src="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-3_2022:
+        markdown: |
+          # التوصية الطبية بالذكاء الاصطناعي
+
+          انقر على بطاقة النموذج للتكبير ومشاهدة نسخة أكبر
+
+          <a href="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" target="_blank">
+          <img src="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" target="_blank">
+          <img src="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-3_2023:
+        markdown: |
+          # التوصية الطبية بالذكاء الاصطناعي
+
+          انقر على بطاقة النموذج للتكبير ومشاهدة نسخة أكبر
+
+          <a href="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" target="_blank">
+          <img src="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" target="_blank">
+          <img src="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-models in applab-choice parent:
+        display_name: تدريب بطاقة النموذج
+      ml-models in applab-choice parent_2022:
+        display_name: تدريب بطاقة النموذج
+      ml-models in applab-choice parent_2023:
+        display_name: تدريب بطاقة النموذج
+      ml-models-shoe survey:
+        markdown: |-
+          ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
+
+          ## [انقر هنا]
+          (https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) لتعبئة استبيان مُقترح الأحذية
+      ml-models-shoe survey_2022:
+        markdown: |-
+          ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
+
+          ## [انقر هنا]
+          (https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) لتعبئة استبيان مُقترح الأحذية
+      ml-plan survey-copy form:
+        markdown: |
+          # انسخ نموذج جوجل Google
+
+          ## [انقر هنا](https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy) لإنشاء نسخة من نموذج الاستبيان الذي سنستخدمه اليوم
+      ml-plan survey-copy form_2022:
+        markdown: |
+          # انسخ نموذج جوجل Google
+
+          ## [انقر هنا](https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy) لإنشاء نسخة من نموذج الاستبيان الذي سنستخدمه اليوم
+      ml-plan survey-copy form_2023:
+        markdown: |
+          # انسخ نموذج جوجل Google
+
+          ## [انقر هنا](https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy) لإنشاء نسخة من نموذج الاستبيان الذي سنستخدمه اليوم
+      ml-use model card-pet model card-2021:
+        markdown: |-
+          # بطاقة نموذج مقترح الحيوانات الأليفة
+
+          **مع شريك:** كيف يمكنك معرفة الفرق بين الميزات التصنيفية والميزات الرقمية في بطاقة النموذج؟
+
+          <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-use model card-pet model card_2022:
+        markdown: |-
+          # بطاقة نموذج مقترح الحيوانات الأليفة
+
+          **مع شريك:** كيف يمكنك معرفة الفرق بين الميزات التصنيفية والميزات الرقمية في بطاقة النموذج؟
+
+          <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-use model card-pet model card_2023:
+        markdown: |-
+          # بطاقة نموذج مقترح الحيوانات الأليفة
+
+          **مع شريك:** كيف يمكنك معرفة الفرق بين الميزات التصنيفية والميزات الرقمية في بطاقة النموذج؟
+
+          <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-use models applab-practice choice-2021:
+        display_name: تدرب مع النماذج في مختبر التطبيقات App Lab
+      ml-use models applab-practice choice_2022:
+        display_name: تدرب مع النماذج في مختبر التطبيقات App Lab
+      ml-use models applab-practice choice_2023:
+        display_name: تدرب مع النماذج في مختبر التطبيقات App Lab
       naturally-better-at-cs:
         answers:
         - correct: true

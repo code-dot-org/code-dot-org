@@ -3507,6 +3507,10 @@ vi:
           student_description: Chương trình động vật và sinh vật Minecraft khác trong
             phiên bản Minecraft của riêng bạn.
           title: Nhà thiết kế Giờ lập trình Minecraft
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Chơi tự do
         netsim:
           title: bộ mô phỏng internet
         nevada-standards-aligned-fifth-grade-2023:
@@ -4318,6 +4322,23 @@ vi:
           title: 'Học phần 2: Điều hướng trên Code.org'
         self-paced-pl-csp2-2023:
           title: 'Học phần 2: Điều hướng trên Code.org'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Vòng lặp
+            lesson-4:
+              name: Điều kiện
+            lesson-6:
+              name: Bước tiếp theo
+          title: Giới thiệu về khoa học máy tính
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Các sự kiện
+            lesson-4:
+              name: Hành vi
+            lesson-5:
+              name: Bước tiếp theo
         soccer:
           description: Làm game bóng đá
           description_short: Làm game bóng đá

@@ -3,35 +3,7 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "ai-2020": {
-            "buttonText": "Μάθετε περισσότερα",
-            "title": "Εξερευνήστε την Τεχνητή Νοημοσύνη και την Μηχανική Μάθηση"
-          },
-          "ai-launch-2023": {
-            "buttonText": "Μάθετε περισσότερα"
-          },
-          "ai-pl-launch-2023": {
-            "buttonText": "Μάθετε περισσότερα"
-          },
-          "back-to-school-2021": {
-            "buttonText": "Μάθετε περισσότερα"
-          },
-          "codebytes-2020": {
-            "buttonText": "Μάθετε περισσότερα"
-          },
-          "coldplay": {
-            "buttonText": "Δοκιμάστε το"
-          },
-          "congrats-certificate-share": {
-            "buttonText": "Έναρξη"
-          },
-          "csjourneys": {
-            "buttonText": "Μάθετε περισσότερα"
-          },
-          "csjourneys-22": {
-            "buttonText": "Μάθετε περισσότερα"
-          },
-          "csleadersprize": {
+          "co-teacher": {
             "buttonText": "Μάθετε περισσότερα"
           },
           "hoc-2023": {
@@ -42,26 +14,8 @@
           "hoc-2023-dance-ai": {
             "buttonText": "Μάθετε περισσότερα"
           },
-          "hoc-more": {
-            "body": "Η ιστοσελίδα Ώρα του Κώδικα έχει πάνω από 100 δραστηριότητες της επιστήμης των υπολογιστών για όλες τις ηλικίες και τα επίπεδα εμπειρίας, και αναπτύχθηκε από το Code.org και συνεργάτες του."
-          },
-          "home-learning-2020": {
-            "buttonText": "Προβολή Ιδεών Εργασίας"
-          },
           "superhero": {
             "buttonText": "Μάθετε περισσότερα"
-          },
-          "teacher-apps-closing-2021": {
-            "buttonText": "Ελάτε μαζί μας"
-          },
-          "teacher-apps-nominate-2020": {
-            "buttonText": "Προτείνετε μια Δασκάλα"
-          },
-          "teacher-apps-open-2021": {
-            "buttonText": "Ελάτε μαζί μας"
-          },
-          "teacher-apps-stillon-2020": {
-            "buttonText": "Ελάτε μαζί μας"
           }
         }
       }

@@ -25,7 +25,6 @@ const alert = window.alert;
 export default class ReportAbuseForm extends React.Component {
   static propTypes = {
     abuseUrl: PropTypes.string.isRequired,
-    name: PropTypes.string,
     email: PropTypes.string,
     age: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     requireCaptcha: PropTypes.bool,
@@ -106,7 +105,6 @@ export default class ReportAbuseForm extends React.Component {
             name="channel_id"
             defaultValue={this.getChannelId()}
           />
-          <input type="hidden" name="name" defaultValue={this.props.name} />
           <div style={{display: this.props.email ? 'none' : 'block'}}>
             <label htmlFor="uitest-email">{msg.email()}</label>
             <input

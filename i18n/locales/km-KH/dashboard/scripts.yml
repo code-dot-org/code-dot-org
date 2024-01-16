@@ -1241,6 +1241,10 @@ km:
             lessonGroup-6:
               display_name: ចុងបញ្ចប់នៃគម្រោង
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
+        musiclab:
+          lessons:
+            lesson-3:
+              name: លេងដោយសេរី
         test-nv-coursea-2023:
           lesson_groups:
             lessonGroup-3:
@@ -1319,3 +1323,16 @@ km:
           lesson_groups:
             lessonGroup-7:
               display_name: ការណែនាំ
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: ព្រឹត្តិការណ៍
+            lesson-4:
+              name: ឥរិយាបទ
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: ប្រតិបត្តិដដែលៗ
+            lesson-4:
+              name: លក្ខខណ្ឌ
+          title: សេចក្ដី​ណែនាំ​អំពី​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ

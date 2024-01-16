@@ -5557,6 +5557,10 @@ uz:
             maydonchasi. Kelgusi savollarni Dan Shnayderdan so‘rang.
           student_description: CSD uchun ML/AI birligini rivojlantirish uchun aqliy
             hujum/o‘yin maydonchasi. Kelgusi savollarni Dan Shnayderdan so‘rang.
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Bepul o'yin
         netsim:
           title: Internet simulyator
         nevada-standards-aligned-fifth-grade-2023:
@@ -5932,6 +5936,27 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Xush kelibsiz
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: 1-dars
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: 1-dars
+            lesson-3:
+              name: Sikllar
+            lesson-4:
+              name: Shartli bayonotlar
+          title: Informatikaga kirish
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: 1-dars
+            lesson-3:
+              name: Hodisalar
+            lesson-4:
+              name: Xatti-harakatlar
         soccer:
           description: Futbol o'yinini yasang
           description_short: Futbol o'yinini yasang

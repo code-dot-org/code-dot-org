@@ -3,35 +3,7 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "ai-2020": {
-            "buttonText": "Ketahui lebih lanjut",
-            "title": "Terokai Kecerdasan Buatan dan Pembelajaran Mesin"
-          },
-          "ai-launch-2023": {
-            "buttonText": "Ketahui lebih lanjut"
-          },
-          "ai-pl-launch-2023": {
-            "buttonText": "Ketahui lebih lanjut"
-          },
-          "back-to-school-2021": {
-            "buttonText": "Ketahui lebih lanjut"
-          },
-          "codebytes-2020": {
-            "buttonText": "Ketahui lebih lanjut"
-          },
-          "coldplay": {
-            "buttonText": "Selamat mencuba"
-          },
-          "congrats-certificate-share": {
-            "buttonText": "Mula"
-          },
-          "csjourneys": {
-            "buttonText": "Ketahui lebih lanjut"
-          },
-          "csjourneys-22": {
-            "buttonText": "Ketahui lebih lanjut"
-          },
-          "csleadersprize": {
+          "co-teacher": {
             "buttonText": "Ketahui lebih lanjut"
           },
           "hoc-2023": {
@@ -42,26 +14,8 @@
           "hoc-2023-dance-ai": {
             "buttonText": "Ketahui lebih lanjut"
           },
-          "hoc-more": {
-            "body": "Laman web Jam Kod mempunyai lebih daripada 500 aktiviti sains komputer untuk semua peringkat umur dan pengalaman yang dibangunkan oleh Code.org dan rakan kongsi."
-          },
-          "home-learning-2020": {
-            "buttonText": "Lihat Idea Projek"
-          },
           "superhero": {
             "buttonText": "Ketahui lebih lanjut"
-          },
-          "teacher-apps-closing-2021": {
-            "buttonText": "Sertai kami"
-          },
-          "teacher-apps-nominate-2020": {
-            "buttonText": "Mencalonkan Guru"
-          },
-          "teacher-apps-open-2021": {
-            "buttonText": "Sertai kami"
-          },
-          "teacher-apps-stillon-2020": {
-            "buttonText": "Sertai kami"
           }
         }
       }

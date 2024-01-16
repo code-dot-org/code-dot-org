@@ -2815,7 +2815,10 @@ he:
         self-paced-pl-csp2-2023: {}
         self-paced-pl-csp3-2023: {}
         self-paced-pl-csp4-2023: {}
-        musiclab: {}
+        musiclab:
+          lessons:
+            lesson-3:
+              name: משחק חופשי
         csa-software-engineering: {}
         csa-frq-practice: {}
         hoc-amazon-poc: {}
@@ -3013,3 +3016,26 @@ he:
         csd7-2024: {}
         csd-post-survey-2024:
           title: סקר שלאחר הקורס
+        melissasandbox-2024-1: {}
+        coursec-maker-2024: {}
+        coursef-maker-2024: {}
+        coursee-maker-2024: {}
+        coursed-maker-2024: {}
+        self-paced-pl-k5-2024: {}
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: אירועים
+            lesson-4:
+              name: התנהגויות
+            lesson-5:
+              name: השלבים הבאים
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: חזרות
+            lesson-4:
+              name: תנאים
+            lesson-6:
+              name: השלבים הבאים
+          title: היכרות למדעי המחשב

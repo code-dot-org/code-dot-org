@@ -334,7 +334,12 @@ class ScriptLevel < ApplicationRecord
 
       if progression
         summary[:progression] = progression
-        localized_progression_name = I18n.t("data.progressions.#{progression}", default: progression)
+        localized_progression_name = I18n.t(
+          progression,
+          scope: %i[data progressions],
+          default: progression,
+          smart: true
+        )
         summary[:progression_display_name] = localized_progression_name
       end
 

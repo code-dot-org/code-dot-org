@@ -7046,6 +7046,10 @@ tr:
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
           description: Beşinci sınıftaki öğrenciler için Kurs F'yi oluşturduk. Kurs, kullanıcıların kullandıkları uygulamalarda nasıl seçim yaptıklarına bakarak başlar. Öğrenciler daha sonra kullanıcı için seçenekler de sunan çeşitli Sprite Lab uygulamaları yapmayı öğrenirler. Kursun sonraki derslerinde, öğrenciler çeşitli bağlamlardaki değişkenleri öğreneceklerdir. Öğrencilere bu kurs boyunca daha fazla özerklik ve daha fazla seçenek verilir. Kursun sonunda öğrenciler, arkadaşları ve aileleri ile paylaşmak üzere etkileşimli projeler oluşturmuş olacaklardır.
           student_description: Hareketli karakterler ve değişkenlerle kodlamayı öğrenin ve bilgisayar ve internetin toplumsal etkilerini tartışın. Bu kursun sonunda arkadaşlarınız ve ailenizle paylaşabileceğiniz bir proje tasarlayın ve oluşturun.
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Ücretsiz Oyna
         csa-software-engineering:
           lessons:
             lesson-9:
@@ -7555,3 +7559,28 @@ tr:
           student_description: Bu ünite, tablo verileriyle bir makine öğrenimi modeli geliştirmeye uygulamalı bir giriş niteliğindedir. Bilgisayarların karar vermek için verilerden nasıl öğrendiğini keşfedecek, ardından gerçek dünya verileri etrafında kendi makine öğrenimi projelerinizi geliştireceksiniz. Ünite, kişisel olarak ilgili bir sorunu çözmek için kendi makine öğrenimi uygulamanızı tasarlamakla sona erer.
         csd-post-survey-2024:
           title: Kurs-Sonrası Anketi
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Ders 1
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Ders 1
+            lesson-3:
+              name: Olaylar
+            lesson-4:
+              name: Davranışlar
+            lesson-5:
+              name: Sonraki Adımlar
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Ders 1
+            lesson-3:
+              name: Döngüler
+            lesson-4:
+              name: Koşullar
+            lesson-6:
+              name: Sonraki Adımlar
+          title: Bilgisayar Bilimine Giriş

@@ -3,10 +3,9 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lesson 5 Activity, Continued: User Interfaces - User Testing
+# Lesson 5: User Interfaces - User Testing Activity
 
-##### For this activity, students use this paper prototype to test out an app. One person will be the <strong>user</strong>, who will try to use the paper prototype. Another person will be the <strong>computer</strong>, who is in charge of changing the screens and reacting to what the user does. Our goal is to collect feedback so we can make recommendations and improve it.
-</p></div>
+##### The previous level showed you this rules for user testing. Let's take a look at what students should be getting out of this activity. Generally, the goal of user testing to **collect feedback so we can make recommendations and improve the app**.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 <summary style="font-size: 1.5em; font-weight: bold;">❓ How does the activity work?</summary>

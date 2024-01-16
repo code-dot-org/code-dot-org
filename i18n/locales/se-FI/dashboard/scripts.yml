@@ -1898,6 +1898,10 @@ se:
               display_name: Digitála Stáhtaborgárvuohta
             lessonGroup-3:
               display_name: Sprite:at
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Friddja Speallan
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -1980,3 +1984,15 @@ se:
               display_name: Input:at ja Output:at
         csd-post-survey-2024:
           title: Maŋŋil Kurssa Iskkadeapmi
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Dáhpáhusaid
+            lesson-4:
+              name: Láhttemat
+            lesson-5:
+              name: Boahttevaš Lávkkit
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-6:
+              name: Boahttevaš Lávkkit

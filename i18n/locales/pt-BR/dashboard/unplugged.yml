@@ -104,7 +104,7 @@ pt:
         title: Pulseiras binárias
         desc: Os alunos criam pulseiras como representações binárias da primeira letra de seus nomes. Os alunos aprendem que os dados podem ser representados e armazenados de mais de uma forma.
       DigitalFootprint:
-        title: Seu rastro digital
+        title: Seu Rastro Digital
         desc: Os professores informam aos alunos que colocar informações pessoais online cria um rastro digital, ou uma "trilha" que tem consequências.
       ComputationalThinking:
         title: Pensamento computacional
@@ -199,7 +199,7 @@ pt:
         title: O grande evento
         desc: Os alunos são introduzidos ao conceito de "eventos" em programação, que são ações que um computador monitora constantemente. O professor vai apertar os botões de forma remota, e os alunos vão reagir de acordo com o botão pressionado.
       courseB_unplugged_digitalFootprint:
-        title: Seu rastro digital
+        title: Seu Rastro Digital
         desc: Os professores informam aos alunos que colocar informações pessoais online cria um rastro digital, ou uma "trilha" que tem consequências.
       courseC_unplugged_buildingAFoundation:
         title: Criando uma base
@@ -280,10 +280,10 @@ pt:
         title: Atividade off-line
         desc: Hoje você irá aprender o que fazer se alguém estiver sendo mau online.
       Conditionals_2018:
-        title: Condições
+        title: Condicionais
         desc: Para aprender sobre estruturas condicionais, o aluno joga um jogo de cartas e cria regras como "se eu comprar uma carta vermelha, eu ganho um ponto", e "se eu comprar uma carta preta, você ganha um ponto".
       DigitalFootprint_2018:
-        title: Seu rastro digital
+        title: Seu Rastro Digital
         desc: Os professores informam aos alunos que colocar informações pessoais online cria um rastro digital, ou uma "trilha" que tem consequências.
       BinaryImages_2018:
         title: Imagens binárias
@@ -318,7 +318,7 @@ pt:
         title: Meus amigos robóticos loucos
         desc: 'tradução pendente: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.desc'
       Conditionals_2019:
-        title: Condições
+        title: Condicionais
         desc: Para aprender sobre estruturas condicionais, o aluno joga um jogo de cartas e cria regras como "se eu comprar uma carta vermelha, eu ganho um ponto", e "se eu comprar uma carta preta, você ganha um ponto".
       courseF_unplugged_powerOfWords_2019:
         title: 'tradução pendente: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
@@ -386,7 +386,7 @@ pt:
       MoveItMoveIt_2019:
         title: Criando caminhos
       DigitalFootprint_2019:
-        title: Seu rastro digital
+        title: Seu Rastro Digital
         desc: Os professores informam aos alunos que colocar informações pessoais online cria um rastro digital, ou uma "trilha" que tem consequências.
       courseB_unplugged_CnC_2019:
         title: É Ótimo Criar e Jogar Limpo
@@ -407,5 +407,7 @@ pt:
         title: Crowdsourcing
         desc: '_Nota do Josh: em contraste com a primeira lição, eu formatei essa aqui como uma lição desconectada._'
       timeforcs_demo_conditionals:
-        title: Condições
+        title: Condicionais
         desc: Para aprender sobre estruturas condicionais, o aluno joga um jogo de cartas e cria regras como "se eu comprar uma carta vermelha, eu ganho um ponto", e "se eu comprar uma carta preta, você ganha um ponto".
+      Unplugged- Melissa Sandbox:
+        title: Offline

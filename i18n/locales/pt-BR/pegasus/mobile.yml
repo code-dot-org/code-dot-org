@@ -790,7 +790,7 @@
   dashboard_tools: 'Ferramentas: '
   dashboard_curriculum: "Currículo"
   dashboard_curriculum_overview: "Visão geral do currículo do pré ao 5º ano"
-  dashboard_overview: "Visão geral"
+  dashboard_overview: "Visão Geral"
   dashboard_sequence: "Sequência"
   dashboard_framework: "Quadro"
   dashboard_standards: "Padrões"
@@ -1026,7 +1026,7 @@
   flappy-impact-study_name: Flappy Code com pesquisa
   hoc-encryption_name: Criptografia simples
   text-compression_name: Compressão de texto
-  applab_name: "Laboratório de Aplicativo"
+  applab_name: "App Lab"
   gamelab_name: "Laboratório de Jogos"
   basketball_name: "Fazer um jogo de basquete"
   sports_name: "Programe seus próprios jogos esportivos"

@@ -1,104 +1,9 @@
 {
   "banners": {
-    "csleadersprize": {
-      "title": "",
-      "body": "",
-      "buttonText": "Lisateave"
-    },
-    "csjourneys-22": {
-      "title": "",
-      "body": "",
-      "buttonText": "Lisateave"
-    },
-    "hoc-more": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
     "superhero": {
       "title": "",
       "body": "",
       "buttonText": "Lisateave"
-    },
-    "csjourneys": {
-      "title": "",
-      "body": "",
-      "buttonText": "Lisateave"
-    },
-    "class-schedule-survey": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "back-to-school-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Lisateave"
-    },
-    "teacher-apps-open-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Liitu meiega"
-    },
-    "teacher-apps-closing-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Liitu meiega"
-    },
-    "teacher-apps-nominate-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "teacher-apps-stillon-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Liitu meiega"
-    },
-    "home-learning-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "soonhoc-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "codebytes-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Lisateave"
-    },
-    "ai-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Lisateave"
-    },
-    "congrats-certificate-share": {
-      "title": "",
-      "body": "",
-      "buttonText": "Alusta"
-    },
-    "coldplay": {
-      "title": "",
-      "body": "",
-      "buttonText": "Proovi seda"
-    },
-    "ai-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "Lisateave"
-    },
-    "ai-pl-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "Lisateave"
-    },
-    "state-of-cs-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
     },
     "hoc-2023": {
       "title": "",
@@ -106,6 +11,11 @@
       "buttonText": "Lisateave"
     },
     "hoc-2023-dance-ai": {
+      "title": "",
+      "body": "",
+      "buttonText": "Lisateave"
+    },
+    "co-teacher": {
       "title": "",
       "body": "",
       "buttonText": "Lisateave"

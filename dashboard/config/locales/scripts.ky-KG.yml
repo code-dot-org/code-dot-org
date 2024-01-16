@@ -632,6 +632,17 @@ ky:
               display_name: Окуялар
             csf_loops:
               display_name: Циклдер
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Циклдер
+            lesson-4:
+              name: Шартуулар
+          title: Компүтер илимине киришүү
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Окуялар
         soccer:
           name: футбол
         spelling-bee:

@@ -12,7 +12,7 @@ Parameters:
   # ---------------------------------------------
   BaseDomainName:
     Type: String
-    Default: code.org
+    Default: <%=rack_env?(:adhoc) ? 'cdn-code.org' : "code.org" %>
     Description: Base domain name for primary learning platform and corporate web site.
   DashboardSubdomainName:
     Type: String
