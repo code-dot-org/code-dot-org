@@ -1024,6 +1024,11 @@ mi:
             '"hearts"': ngā manawa
             '"rain"': ua
             '"starburst"': Pāpahu Whetū
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': kahurangi
+            '"red"': whero
       gamelab_addBehaviorSimple:
         text: parehe {SPRITE} ka {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
