@@ -6,22 +6,30 @@ import {CachedWeightsMapping} from '../types';
  * @param {*} emojis, set of three emojis selected by user
  * @param {*} outputWeightsMapping, precalculated association weights for a possible type of output
  *    (e.g. background effect, foreground effect or palette)
- * @returns 1d array of values between [0, 3] with indexes that map to output "option" (e.g. "circles"
- *    for BackgroundEffects) Higher values = stronger correlation
+ * @returns 2d array of values between [0, 3] with an associated output "option"
+ *    (e.g. [1.2, "circles"] for BackgroundEffects). The values represent
+ *    the correlation between the 3 emojis (summed weights) and each output "option".
+ *    Higher values = stronger correlation.
  */
 export function calculateOutputSummedWeights(
   emojis: string[],
   outputWeightsMapping: CachedWeightsMapping
-): number[] {
+): [number, string][] {
   // selectedEmojiAssociations is an array of 3 subarrays. Each subarray contains
   // the weights ranging from [0, 1] for the selected emojis for a particular output type)
   const selectedEmojiAssociations: number[][] = emojis.map(emojiName => {
     return outputWeightsMapping['emojiAssociations'][emojiName];
   });
+
   // sumWeights is the sum of the weights for set of three emojis for each output type
   const sumWeights: number[] = selectedEmojiAssociations.reduce(
-    (firstList, secondList) =>
-      firstList.map((value, index) => value + secondList[index])
+    (accumulator, weights) =>
+      accumulator.map((value, index) => value + weights[index])
   );
-  return sumWeights;
+
+  const outputNames = outputWeightsMapping['output'];
+  return sumWeights.map((summedWeight, index) => [
+    summedWeight,
+    outputNames[index],
+  ]);
 }

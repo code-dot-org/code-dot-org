@@ -8,7 +8,7 @@ import ProgressDataV2 from './ProgressDataV2';
 import styles from './progress-table-v2.module.scss';
 import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
-import {scriptDataPropType} from '../sectionProgress/sectionProgressConstants';
+import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
 
 export function ProgressTableV2({
   isSortedByFamilyName,
@@ -46,7 +46,7 @@ ProgressTableV2.propTypes = {
   isSortedByFamilyName: PropTypes.bool,
   sectionId: PropTypes.number,
   students: PropTypes.arrayOf(studentShape).isRequired,
-  unitData: scriptDataPropType.isRequired,
+  unitData: unitDataPropType.isRequired,
 };
 
 export default connect(state => ({

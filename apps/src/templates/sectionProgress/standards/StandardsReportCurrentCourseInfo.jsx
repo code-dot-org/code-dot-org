@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {scriptDataPropType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
+import {unitDataPropType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import color from '@cdo/apps/util/color';
 import {cstaStandardsURL} from './standardsConstants';
 
@@ -10,7 +10,7 @@ export default class StandardsReportCurrentCourseInfo extends Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
     scriptFriendlyName: PropTypes.string.isRequired,
-    scriptData: scriptDataPropType,
+    scriptData: unitDataPropType,
     unitDescription: PropTypes.string.isRequired,
     numStudentsInSection: PropTypes.number,
     numLessonsCompleted: PropTypes.number,

@@ -5,7 +5,7 @@ import moment from 'moment';
 import i18n from '@cdo/locale';
 import {
   ViewType,
-  scriptDataPropType,
+  unitDataPropType,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import {
   studentLessonProgressType,
@@ -74,7 +74,7 @@ class ProgressTableView extends React.Component {
     // redux
     sectionId: PropTypes.number.isRequired,
     students: PropTypes.arrayOf(studentShape),
-    scriptData: scriptDataPropType.isRequired,
+    scriptData: unitDataPropType.isRequired,
     lessonProgressByStudent: PropTypes.objectOf(
       PropTypes.objectOf(studentLessonProgressType)
     ).isRequired,
