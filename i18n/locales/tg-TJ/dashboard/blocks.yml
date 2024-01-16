@@ -4,6 +4,11 @@ tg:
     blocks:
       Dancelab_randomColor:
         text: ранги тасодуфӣ
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': кабуд
+            '"red"': сурх
       gamelab_randColor:
         text: ранги тасодуфӣ
       gamelab_randomColor:
