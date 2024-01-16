@@ -26,6 +26,7 @@
 
   &LessonHeader {
     min-width: 80px;
+    max-width: 80px;
     text-align: center;
   }
 }
@@ -87,4 +88,19 @@
   width: 195px;
   min-width: 195px;
   margin-right: 12px;
+}
+
+.data {
+  &Table {
+    display: flex;
+    flex-direction: row;
+    border-right: 1px solid $light_gray_200;
+    width: fit-content;
+  }
+
+  &Column {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $light_gray_200;
+  }
 }
