@@ -81,6 +81,7 @@ id:
             Bird dan Plants vs. Zombies!
           description_short: Coba dasar-dasar ilmu komputer dengan banyak karakter
             yang menyenangkan!
+          name: Jam kode
           student_description: Cobalah dasar-dasar ilmu komputer dengan karakter dari
             Angry Bird dan Plants vs. Zombies!
           title: Koding satu jam 2013
@@ -1403,6 +1404,14 @@ id:
               name: Java Lab
             lesson-6:
               name: Loop
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Survei
+            lessonGroup-3:
+              display_name: Konten
+            lessonGroup-5:
+              display_name: Pelajaran Alternatif
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1443,6 +1452,12 @@ id:
           lessons:
             lesson-4:
               name: variabel
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Pelajaran Alternatif
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1479,6 +1494,12 @@ id:
               name: Array 1 Dimensi/ One-Dimensional (1D)
             lesson-3:
               name: For Loop
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Pelajaran Alternatif
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1513,6 +1534,12 @@ id:
           lessons:
             lesson-9:
               name: Acak
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Pelajaran Alternatif
         csa4-exemplars:
           lesson_groups:
             content:
@@ -1545,6 +1572,12 @@ id:
             lessonGroup-2:
               display_name: Konten
         csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Pelajaran Alternatif
+        csa5-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
@@ -1585,6 +1618,12 @@ id:
               display_name: Konten
             lessonGroup-4:
               display_name: Pelajaran Alternatif
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Pelajaran Alternatif
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1620,6 +1659,12 @@ id:
           lessons:
             lesson-6:
               name: Hak milik intelektual
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-5:
+              display_name: Pelajaran Alternatif
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1653,6 +1698,14 @@ id:
             lessonGroup-5:
               display_name: Survei
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Survei
+            lessonGroup-5:
+              display_name: Pelajaran Alternatif
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
@@ -3630,6 +3683,8 @@ id:
           title: Survei Pascakursus CS Principles
         csp-post-survey-2023:
           title: Survei Pascakursus CS Principles
+        csp-post-survey-2024:
+          title: Survei Pascakursus CS Principles
         csp1-2017:
           description: Unit ini mengeksplorasi tantangan dan pertanyaan teknis yang
             muncul dari kebutuhan untuk merepresentasikan informasi digital dalam
@@ -3723,6 +3778,12 @@ id:
               display_name: Survei
             csp_unit1_2020:
               display_name: "(Lama) Unit 1: Informasi Digital"
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Survei
+            csp_unit1_2020:
+              display_name: "(Lama) Unit 1: Informasi Digital"
         csp1-dlp:
           description: Ini adalah Unit 1 dari Deeper Learning Plan bagi fasilitator
             pelatihan CSP Code.org. Di sini Anda akan mendapati prompt dan panduan
@@ -3811,6 +3872,12 @@ id:
             lessonGroup-2:
               display_name: Survei Pasca Kursus
         csp10-2023:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: Unit 10 - Cybersecurity dan Dampak Global
+            lessonGroup-2:
+              display_name: Survei Pasca Kursus
+        csp10-2024:
           lesson_groups:
             csp_unit10_2020:
               display_name: Unit 10 - Cybersecurity dan Dampak Global
@@ -3932,6 +3999,10 @@ id:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Unit 2: Internet'
+        csp2-2024:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Unit 2: Internet'
         csp2-dlp:
           description: 'Ini adalah Unit 2 dari Deeper Learning Plan bagi fasilitator
             pelatihan CSP Code.org. Di sini Anda akan mendapati prompt dan panduan
@@ -4042,6 +4113,10 @@ id:
             csp_unit3_2020:
               display_name: 'Unit 3: Pengenalan Desain Aplikasi'
         csp3-2023:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Unit 3: Pengenalan Desain Aplikasi'
+        csp3-2024:
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Unit 3: Pengenalan Desain Aplikasi'
@@ -4236,6 +4311,16 @@ id:
             csp_variables:
               display_name: variabel
         csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Kondisi
+            csp_functions:
+              display_name: fungsi
+            csp_project:
+              display_name: Proyek
+            csp_variables:
+              display_name: variabel
+        csp4-2024:
           lesson_groups:
             csp_conditionals:
               display_name: Kondisi
@@ -4444,6 +4529,12 @@ id:
               display_name: Melintang
             lessonGroup-5:
               display_name: Survei Pasca Kursus
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Data
+            lessonGroup-5:
+              display_name: Survei Pasca Kursus
         csp5-dlp:
           description: 'Ini adalah Unit 5 dari Deeper Learning Plan bagi fasilitator
             pelatihan CSP Code.org. Di sini Anda akan mendapati prompt dan panduan
@@ -4588,6 +4679,18 @@ id:
               display_name: Melintang
             lessonGroup-5:
               display_name: Proyek
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: List
+            lessonGroup-2:
+              display_name: Survei Pasca Kursus
+            lessonGroup-3:
+              display_name: Loop
+            lessonGroup-4:
+              display_name: Melintang
+            lessonGroup-5:
+              display_name: Proyek
         csp6-pilot:
           lesson_groups:
             content:
@@ -4637,6 +4740,14 @@ id:
               display_name: Parameter dan Nilai Balik
             lessonGroup-3:
               display_name: Survei Pasca Kursus
+        csp7-2024:
+          lesson_groups:
+            csp_libraries:
+              display_name: Perpustakaan
+            csp_parameters_return_values:
+              display_name: Parameter dan Nilai Balik
+            lessonGroup-3:
+              display_name: Survei Pasca Kursus
         csp7-pilot:
           lesson_groups:
             csp_libraries:
@@ -4675,6 +4786,12 @@ id:
               display_name: Buat PT
             lessonGroup-3:
               display_name: Survei Pasca Kursus
+        csp8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Buat PT
+            lessonGroup-3:
+              display_name: Survei Pasca Kursus
         csp8-pilot:
           title: CSP Unit 8 Percontohan - Persiapan Create PT
         csp8-pilot-staging:
@@ -4708,6 +4825,12 @@ id:
             lessonGroup-2:
               display_name: Survei Pasca Kursus
         csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Unit 9: Data'
+            lessonGroup-2:
+              display_name: Survei Pasca Kursus
+        csp9-2024:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Unit 9: Data'
@@ -6664,6 +6787,9 @@ id:
             lesson-1:
               name: Pelajaran 1
         self-paced-pl-k5-2024-1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dapat Dimulai
           lessons:
             lesson-1:
               name: Pelajaran 1
@@ -6675,6 +6801,9 @@ id:
               name: Langkah berikutnya
           title: Perkenalan ilmu komputer
         self-paced-pl-k5-2024-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dapat Dimulai
           lessons:
             lesson-1:
               name: Pelajaran 1
