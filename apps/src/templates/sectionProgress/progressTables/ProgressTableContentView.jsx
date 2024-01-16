@@ -4,7 +4,7 @@ import * as Sticky from 'reactabular-sticky';
 import * as Virtualized from 'reactabular-virtualized';
 import PropTypes from 'prop-types';
 import {
-  scriptDataPropType,
+  unitDataPropType,
   studentTableRowType,
   scrollbarWidth,
 } from '../sectionProgressConstants';
@@ -28,7 +28,7 @@ export default class ProgressTableContentView extends React.Component {
   static propTypes = {
     rows: PropTypes.arrayOf(studentTableRowType).isRequired,
     onRow: PropTypes.func.isRequired,
-    scriptData: scriptDataPropType.isRequired,
+    scriptData: unitDataPropType.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
     onClickLesson: PropTypes.func.isRequired,
     columnWidths: PropTypes.arrayOf(PropTypes.number),
