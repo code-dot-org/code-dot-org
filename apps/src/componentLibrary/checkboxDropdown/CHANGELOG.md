@@ -2,6 +2,5 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.1.0](https://github.com/code-dot-org/code-dot-org/pull/55514)
-* created component's skeleton
+## [0.1.0](https://github.com/code-dot-org/code-dot-org/pull/55762)
 * Initial commit
