@@ -113,7 +113,6 @@ GoogleBlockly.Extensions.register('procedures_edit_button', function () {
     Blockly.useModalFunctionEditor &&
     this.inputList.length &&
     !this.workspace.isFlyout &&
-    this.workspace.id !== Blockly.functionEditor.getWorkspaceId() &&
     toolboxConfigurationSupportsEditButton(this)
   ) {
     const button = new Blockly.FieldButton({
@@ -234,30 +233,24 @@ GoogleBlockly.Extensions.registerMixin(
  * @param {WorkspaceSvg} workspace The workspace containing procedures.
  * @returns an array of block objects representing the flyout blocks
  */
-export function flyoutCategory(workspace, functionEditorOpen = false) {
+export function flyoutCategory(workspace) {
   const blockList = [];
 
-  // Note: Blockly.Msg was undefined when this code was extracted into global scope
-  const functionDefinitionBlock = {
-    kind: 'block',
-    type: BLOCK_TYPES.procedureDefinition,
-    fields: {
-      NAME: Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,
-    },
-    extraState: {
-      userCreated: true,
-    },
-  };
-
-  if (functionEditorOpen) {
-    // No-op - cannot create new functions while the modal editor is open
-  } else if (Blockly.useModalFunctionEditor) {
-    const newFunctionButton = getNewFunctionButtonWithCallback(
-      workspace,
-      functionDefinitionBlock
-    );
+  if (Blockly.useModalFunctionEditor) {
+    const newFunctionButton = getNewFunctionButtonWithCallback(workspace);
     blockList.push(newFunctionButton);
   } else {
+    // Note: Blockly.Msg was undefined when this code was extracted into global scope
+    const functionDefinitionBlock = {
+      kind: 'block',
+      type: BLOCK_TYPES.procedureDefinition,
+      fields: {
+        NAME: Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,
+      },
+      extraState: {
+        userCreated: true,
+      },
+    };
     blockList.push(functionDefinitionBlock);
   }
 
@@ -297,17 +290,16 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   return blockList;
 }
 
-const getNewFunctionButtonWithCallback = (
-  workspace,
-  functionDefinitionBlock
-) => {
+const getNewFunctionButtonWithCallback = workspace => {
   let callbackKey, callback;
 
   callbackKey = 'newProcedureCallback';
-  callback = () =>
+  callback = () => {
+    workspace.hideChaff();
     Blockly.functionEditor.newProcedureCallback(
       BLOCK_TYPES.procedureDefinition
     );
+  };
 
   workspace.registerButtonCallback(callbackKey, callback);
 
