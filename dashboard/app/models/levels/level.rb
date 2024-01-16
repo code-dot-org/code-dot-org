@@ -789,7 +789,20 @@ class Level < ApplicationRecord
   def summarize_for_lab2_properties(script)
     video = specified_autoplay_video&.summarize(false)&.camelize_keys
     properties_camelized = properties.camelize_keys
-    properties_camelized[:levelData] = video if video
+    #puts properties_camelized["levelData"]
+    puts '** properties["level_data"]'
+    puts properties["level_data"]
+    puts '** properties_camelized["levelData"]'
+    puts properties_camelized["levelData"]
+    if properties_camelized["levelData"]
+      puts "has level data"
+    else
+      puts "has no level data"
+    end
+    properties_camelized["levelData"] = {} unless properties_camelized["levelData"]
+    puts "** properties_camelized"
+    puts properties_camelized
+    properties_camelized["levelData"][:video] = video if video
     properties_camelized[:type] = type
     properties_camelized[:appName] = game&.app
     properties_camelized[:useRestrictedSongs] = game.use_restricted_songs?

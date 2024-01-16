@@ -7,8 +7,10 @@
   "user_id": 976,
   "properties": {
     "encrypted": "false",
+    "background": "music-black",
     "level_data": {
       "library": "will",
+      "background": "music-black",
       "startSources": {
         "blocks": {
           "languageVersion": 0,

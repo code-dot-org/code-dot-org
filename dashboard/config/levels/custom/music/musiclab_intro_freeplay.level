@@ -8,6 +8,7 @@
   "properties": {
     "encrypted": "false",
     "hide_share_and_remix": "false",
+    "background": "music-black",
     "level_data": {
       "startSources": {
         "blocks": {
