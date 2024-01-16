@@ -3,7 +3,7 @@ import CheckboxDropdown, {CheckboxDropdownProps} from './index';
 import {Meta, Story} from '@storybook/react';
 
 export default {
-  title: 'DesignSystem/Dropdown Menu Component',
+  title: 'DesignSystem/Checkbox Dropdown Component',
   component: CheckboxDropdown,
 } as Meta;
 

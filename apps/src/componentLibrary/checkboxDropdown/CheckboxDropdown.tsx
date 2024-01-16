@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
-import moduleStyles from './dropdownMenu.module.scss';
+import moduleStyles from './checkboxDropdown.module.scss';
 
 export interface CheckboxDropdownProps {
   /** Dropdown  Menu items list */
