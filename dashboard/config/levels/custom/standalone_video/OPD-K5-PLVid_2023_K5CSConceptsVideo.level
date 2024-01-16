@@ -13,10 +13,10 @@
     "parent_level_id": 28494,
     "name_suffix": "_2023",
     "encrypted": "false",
-    "long_instructions": "##### Watch the video below to learn more about debugging. "
+    "long_instructions": "#### Watch the video below to learn more about debugging. "
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-01-11T22:50:43.557+00:00\",\"changed\":[\"cloned from \\\"OPD-K5-PLVid_2023_K5CSConcepts\\\"\"],\"cloned_from\":\"OPD-K5-PLVid_2023_K5CSConcepts\"},{\"changed_at\":\"2024-01-11 22:55:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-11 23:04:46 +0000\",\"changed\":[\"video_key\",\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-11 23:05:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-01-11T22:50:43.557+00:00\",\"changed\":[\"cloned from \\\"OPD-K5-PLVid_2023_K5CSConcepts\\\"\"],\"cloned_from\":\"OPD-K5-PLVid_2023_K5CSConcepts\"},{\"changed_at\":\"2024-01-11 22:55:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-11 23:04:46 +0000\",\"changed\":[\"video_key\",\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-11 23:05:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-12 20:30:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

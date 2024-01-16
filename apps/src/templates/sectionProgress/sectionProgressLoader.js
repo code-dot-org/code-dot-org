@@ -124,7 +124,7 @@ export function loadUnitProgress(scriptId, sectionId) {
 }
 
 function postProcessDataByScript(scriptData, includeBonusLevels) {
-  // Filter to match scriptDataPropType
+  // Filter to match unitDataPropType
   const filteredScriptData = {
     id: scriptData.id,
     csf: !!scriptData.csf,
