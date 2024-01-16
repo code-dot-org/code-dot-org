@@ -36,7 +36,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
         text: '',
       },
       {
-        type: 'input_dummy',
+        type: 'input_end_row',
         name: 'TOP',
       },
     ],

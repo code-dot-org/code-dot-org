@@ -9,10 +9,13 @@ export function setBlockDescription(block, extraState) {
   const description = extraState['description'];
   if (Blockly.useModalFunctionEditor) {
     block
-      .appendDummyInput('DESCRIPTION_ROW')
+      .appendEndRowInput('DESCRIPTION_ROW')
       .appendField(`${msg.description()} `, 'DESCRIPTION_LABEL')
       .appendField(new Blockly.FieldTextInput(description), 'DESCRIPTION');
-    block.moveInputBefore('DESCRIPTION_ROW', 'STACK');
+    const inputToPrecede = block.getInput('flyout_input')
+      ? 'flyout_input'
+      : 'STACK';
+    block.moveInputBefore('DESCRIPTION_ROW', inputToPrecede);
   } else {
     block.description = description;
   }

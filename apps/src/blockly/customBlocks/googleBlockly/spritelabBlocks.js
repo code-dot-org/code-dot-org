@@ -29,9 +29,7 @@ export const blocks = {
       const flyoutKey = CdoFieldFlyout.getFlyoutId(block);
       const flyoutField = new Blockly.FieldFlyout(_, {
         flyoutKey: flyoutKey,
-        sizingBehavior: 'fitContent',
         name: 'FLYOUT',
-        isFlyoutVisible: true,
       });
 
       block.appendDummyInput(INPUTS.FLYOUT).appendField(flyoutField, flyoutKey);
@@ -55,7 +53,6 @@ export const blocks = {
       if (!block.getInput(INPUTS.FLYOUT)) {
         const flyoutField = createFlyoutField(block);
         flyoutField.showEditor();
-        flyoutField.render_();
       } else {
         block.removeInput(INPUTS.FLYOUT);
       }
@@ -111,11 +108,11 @@ export const blocks = {
     const lastInput = this.inputList[this.inputList.length - 1];
     // Force add a dummy input at the end of the block, if needed.
     if (
-      ![Blockly.inputTypes.DUMMY, Blockly.inputTypes.STATEMENT].includes(
+      ![Blockly.inputTypes.END_ROW, Blockly.inputTypes.STATEMENT].includes(
         lastInput.type
       )
     ) {
-      this.appendDummyInput();
+      this.appendEndRowInput();
     }
 
     if (this.workspace.rendered) {

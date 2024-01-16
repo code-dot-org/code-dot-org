@@ -2198,15 +2198,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@blockly/renderer-inline-row-separators@npm:^0.5.0":
-  version: 0.5.0
-  resolution: "@blockly/renderer-inline-row-separators@npm:0.5.0"
-  peerDependencies:
-    blockly: ^10.0.0
-  checksum: 86693dc65a5514c6c5d8f8307cdeb5da4538f41e994c6e85b49dbda9f6c41484aadca555559e458cb1076965ca99d9c13f0a1aa88ffed6dcb7fffaf2bdcc8554
-  languageName: node
-  linkType: hard
-
 "@blockly/theme-dark@npm:6.0.4":
   version: 6.0.4
   resolution: "@blockly/theme-dark@npm:6.0.4"
@@ -7968,7 +7959,6 @@ __metadata:
     "@blockly/keyboard-navigation": ~0.5.6
     "@blockly/plugin-cross-tab-copy-paste": ~5.0.4
     "@blockly/plugin-scroll-options": ~5.0.8
-    "@blockly/renderer-inline-row-separators": ^0.5.0
     "@blockly/theme-dark": 6.0.4
     "@blockly/theme-highcontrast": 5.0.4
     "@cdo/interpreted": "link:../dashboard/config/libraries"
@@ -8022,7 +8012,7 @@ __metadata:
     babel-plugin-add-module-exports: ^0.2.1
     babel-plugin-dynamic-import-node: ^2.3.0
     babel-plugin-syntax-async-functions: ^6.8.0
-    blockly: 10.3.0
+    blockly: 10.3.1-beta.1
     bootstrap-sass: ^3.3.6
     browser-process-hrtime: 0.1.2
     buffer: ^6.0.3
@@ -8236,12 +8226,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"blockly@npm:10.3.0":
-  version: 10.3.0
-  resolution: "blockly@npm:10.3.0"
+"blockly@npm:10.3.1-beta.1":
+  version: 10.3.1-beta.1
+  resolution: "blockly@npm:10.3.1-beta.1"
   dependencies:
     jsdom: 22.1.0
-  checksum: e75f5e38cd1fd9c14147a60ac117ac2d23af9ebe96a52e26883f7bc13e8298d72411b65e03e78d8d22d1402660d1c1598059af6fbcc4146079b2f77a32dcd245
+  checksum: 2cf42c7d2f6b2263b4f685506ea3788df1c9fcf8ab17eb5322c525f0a2b6b1f8ed222482f894b0ed456497275fe1b94c898378e9ecedd36df33cc95fda0a3c61
   languageName: node
   linkType: hard
 

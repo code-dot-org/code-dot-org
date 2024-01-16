@@ -167,7 +167,7 @@ exports.generateSimpleBlock = function (blockly, generator, options) {
     init: function () {
       // Note: has a fixed HSV.  Could make this customizable if need be
       Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-      var input = this.appendDummyInput();
+      var input = this.appendEndRowInput();
       if (title) {
         input.appendField(title);
       }
@@ -717,7 +717,7 @@ const STANDARD_INPUT_TYPES = {
   },
   [DUMMY_INPUT]: {
     addInputRow(blockly, block, inputConfig) {
-      return block.appendDummyInput();
+      return block.appendEndRowInput();
     },
     generateCode(block, inputConfig) {
       return null;
