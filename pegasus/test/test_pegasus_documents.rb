@@ -187,7 +187,9 @@ class PegasusTest < Minitest::Test
   # Runs `tidy` in a subprocess to validate HTML content.
   # @return [Array, nil] error messages, or `nil` if no errors.
   private def validate(body)
-    cmd = 'tidy -q -e'
+    # `--new-blocklevel-tags` ignores unknown tags, allowing us to use custom tags like `<swiper-container>`.
+    # `<swiper-container>` and `<swiper-slide>` are used by the `swiper` library.
+    cmd = 'tidy -q -e --new-blocklevel-tags swiper-container,swiper-slide'
     status, result = nil
     Open3.popen3(cmd) do |stdin, _stdout, stderr, wait_thread|
       stdin.puts body
