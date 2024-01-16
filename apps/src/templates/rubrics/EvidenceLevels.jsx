@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import {evidenceLevelShape, submittedEvaluationShape} from './rubricShapes';
 import EvidenceLevelsForStudents from './EvidenceLevelsForStudents';
 import EvidenceLevelsForTeachers from './EvidenceLevelsForTeachers';
+import EvidenceLevelsForTeachersV2 from './EvidenceLevelsForTeachersV2';
+import experiments from '@cdo/apps/util/experiments';
 
 export default function EvidenceLevels({
   evidenceLevels,
@@ -23,6 +25,17 @@ export default function EvidenceLevels({
       <EvidenceLevelsForStudents
         evidenceLevels={sortedEvidenceLevels()}
         submittedEvaluation={submittedEvaluation}
+      />
+    );
+  } else if (experiments.isEnabled('ai-rubrics-redesign')) {
+    return (
+      <EvidenceLevelsForTeachersV2
+        learningGoalKey={learningGoalKey}
+        evidenceLevels={sortedEvidenceLevels()}
+        understanding={understanding}
+        radioButtonCallback={radioButtonCallback}
+        canProvideFeedback={canProvideFeedback}
+        isAutosaving={isAutosaving}
       />
     );
   } else {
