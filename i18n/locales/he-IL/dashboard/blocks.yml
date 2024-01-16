@@ -1069,6 +1069,11 @@ he:
         options:
           INPUT1:
             '1': מיץ לימון
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': כחול
+            '"red"': אדום
       FunctionBlocks_communicate:
         text: תקשרו {VAR1} עם{SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
