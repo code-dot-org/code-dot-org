@@ -1084,6 +1084,14 @@ ko:
         options:
           INPUT1:
             '1': 레몬 주스
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': 파랑
+            '"red"': 빨강
+          OPT:
+            '"large"': 큰
+            '"small"': 작음
       FunctionBlocks_communicate:
         text: "{SPRITE1COSTUME}(으)로 {VAR1}와(과) 소통"
       FunctionBlocks_makeManipulative2:
