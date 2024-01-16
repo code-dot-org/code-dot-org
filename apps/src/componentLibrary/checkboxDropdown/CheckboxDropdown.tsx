@@ -29,10 +29,6 @@ export interface CheckboxDropdownProps {
   size: ComponentSizeXSToL;
 }
 
-// TODO:
-// * add tests
-// * add documentation
-
 /**
  * ### Production-ready Checklist:
  * * (?) implementation of component approved by design team;
@@ -43,9 +39,8 @@ export interface CheckboxDropdownProps {
  *
  * ###  Status: ```Wip```
  *
- * Design System: Dropdown Component.
- * Used to render simple dropdowns with styled select (Dropdown button)]
- * and browser's native select options.
+ * Design System: Checkbox Dropdown Component.
+ * Used to render checkbox (multiple choice) dropdowns.
  */
 const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   items,

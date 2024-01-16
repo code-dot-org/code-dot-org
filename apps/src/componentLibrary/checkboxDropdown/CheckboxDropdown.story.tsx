@@ -79,8 +79,8 @@ const MultipleTemplate: Story<{
   );
 };
 
-export const DefaultDropdown = SingleTemplate.bind({});
-DefaultDropdown.args = {
+export const DefaultCheckboxDropdown = SingleTemplate.bind({});
+DefaultCheckboxDropdown.args = {
   name: 'default-dropdown',
   items: [
     {value: 'option-1', label: 'Option 1'},
@@ -93,8 +93,8 @@ DefaultDropdown.args = {
   size: 'm',
 };
 
-export const DisabledDropdown = SingleTemplate.bind({});
-DisabledDropdown.args = {
+export const DisabledCheckboxDropdown = SingleTemplate.bind({});
+DisabledCheckboxDropdown.args = {
   name: 'default-dropdown',
   items: [
     {value: 'option-1', label: 'Option 1'},
@@ -107,8 +107,8 @@ DisabledDropdown.args = {
   size: 'm',
 };
 
-export const GroupOfDropdownColors = MultipleTemplate.bind({});
-GroupOfDropdownColors.args = {
+export const GroupOfCheckboxDropdownColors = MultipleTemplate.bind({});
+GroupOfCheckboxDropdownColors.args = {
   components: [
     {
       name: 'default-dropdown-white',
@@ -136,8 +136,8 @@ GroupOfDropdownColors.args = {
     },
   ],
 };
-export const GroupOfSizesOfDropdown = MultipleTemplate.bind({});
-GroupOfSizesOfDropdown.args = {
+export const GroupOfSizesOfCheckboxDropdown = MultipleTemplate.bind({});
+GroupOfSizesOfCheckboxDropdown.args = {
   components: [
     {
       name: 'default-dropdown-xs',
