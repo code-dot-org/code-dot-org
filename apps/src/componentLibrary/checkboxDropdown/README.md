@@ -1,13 +1,13 @@
-# `apps/src/componentLibrary/dropdownMenu`
+# `apps/src/componentLibrary/checkboxDropdown`
 
 ###  Status: ```Wip```
 
 ## Consuming This Component
 
-This package exports one styled React component: [DropdownMenu](DropdownMenu.tsx). You can import it like this:
+This package exports one styled React component: [CheckboxDropdown](CheckboxDropdown.tsx). You can import it like this:
 
 ```javascript
-import DropdownMenu from '@cdo/apps/componentLibrary/dropdownMenu';
+import CheckboxDropdown from '@cdo/apps/componentLibrary/checkboxDropdown';
 ```
 
 For guidelines on how to use these components and the features they offer, [visit Storybook](https://code-dot-org.github.io/dsco_) 
