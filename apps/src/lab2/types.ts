@@ -117,8 +117,15 @@ export interface ProjectLevelData {
 // The level data for a standalone_video level that doesn't require
 // reloads between levels.
 export interface VideoLevelData {
-  src: string;
-  download: string;
+  video: {
+    src: string;
+    download: string;
+  }
+  panels: [
+    {
+      text: string;
+    }
+  ]
 }
 
 // TODO: Add AichatLevelData.

@@ -15,7 +15,25 @@
     "background": "music-black",
     "video_full_width": true,
     "uses_lab2": true,
-    "background": "music-black"
+    "level_data": {
+      "panels": [
+        {
+          "layout": "image-right-and-text-left",
+          "image": "",
+          "text": "Nice work!  You just learned how to:\n\n- Play a sound\n\n- Play sounds together\n\n- Repeat sounds\n\n- Use functions\n\n- Trigger sounds\n\nBut would you believe there's even more?"
+        },
+        {
+          "layout": "image-left-and-text-right",
+          "image": "",
+          "text": "You'll see even more new things in the next level, including:\n\n- A beat-making block\n\n- Sounds effects like reverb and filters\n\n- A synthesizer block\n\n- A block for randomizing what gets played\n\n- And more!"
+        },
+        {
+          "layout": "image-top-and-text-bottom",
+          "image": "",
+          "text": "You're Good To Go!\n\nYou've learned the basics, and now you're ready to make your own mix!  Be sure to explore the toolbox and the sound library - there's lots more to explore and use to make an amazing track."
+        }
+      ]
+    }
   },
   "audit_log": "[{\"changed_at\":\"2024-01-09T03:30:49.939+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_video_start\\\"\"],\"cloned_from\":\"musiclab_intro_video_start\"},{\"changed_at\":\"2024-01-09 03:31:03 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-09 11:16:47 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {

@@ -14,8 +14,7 @@
     "skip_sound": true,
     "background": "music-black",
     "video_full_width": true,
-    "uses_lab2": true,
-    "background": "music-black"
+    "uses_lab2": true
   },
   "audit_log": "[{\"changed_at\":\"2024-01-05T21:34:24.718+00:00\",\"changed\":[\"cloned from \\\"pl-k5-2_uploadSpriteVideo_2024\\\"\"],\"cloned_from\":\"pl-k5-2_uploadSpriteVideo_2024\"},{\"changed_at\":\"2024-01-09 03:30:21 +0000\",\"changed\":[\"name\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
