@@ -33,8 +33,9 @@
 - if video && use_large_video_player
   .clear
   .video-container.external-video-container{{style: 'max-width: 970px; margin: auto'}}
-  .button-box{{style: 'width: 970px; margin: auto'}}
-    %a.btn.btn-large.btn-primary.next-lesson.submitButton.pull-right= t('continue')
+    .buttons.below-video-right{style: "float: right; max-width: 20%"}
+      = button_tag t('continue'), class: "btn btn-large btn-primary next-lesson submitButton"
+
     - if video.download
       %a.video-download.btn.btn-large.pull-left{href: video.download}
         = t('video.download')
