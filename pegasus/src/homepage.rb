@@ -286,7 +286,7 @@ class Homepage
           url: "/hourofcode"
         }
       ]
-    elsif ["post-hoc", "pre-hoc", "false"].include? hoc_mode
+    elsif ["post-hoc", "pre-hoc", "false", false].include? hoc_mode
       [
         {
           text: "homepage_action_text_learn",
