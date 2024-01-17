@@ -14,6 +14,13 @@
   overflow-y: hidden;
   display: flex;
   flex-direction: row;
+
+  :first-child {
+    margin-left: 0;
+  }
+  :last-child {
+    margin-right: 0;
+  }
 }
 
 .gridBox {
@@ -100,11 +107,19 @@
     min-width: 80px;
     text-align: center;
     border-bottom: 1px solid $light_gray_200;
-    margin-bottom: 32px;
   }
 
   &Expanded {
     min-width: 80px;
+
+    &Lesson {
+      height: 42px;
+      line-height: 42px;
+      min-width: 80px;
+      text-align: center;
+      border-bottom: 1px solid $light_gray_200;
+      border-right: 1px solid $light_gray_200;
+    }
 
     // :last-child {
     //   border-right: 1px solid $light_gray_200;
@@ -114,8 +129,14 @@
       display: flex;
       flex-direction: row;
       width: fit-content;
+      border-right: 1px solid $light_gray_200;
     }
   }
+}
+
+.expandedColumn {
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 .sortDropdown {
@@ -145,7 +166,20 @@
   }
 }
 
-.lessonGroupHeader {
+.lessonProgressColumns {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+
+  &Header {
+    border-right: 1px solid $light_gray_200;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 32px;
+  }
+
+  &Table {
+    border-right: 1px solid $light_gray_200;
+    display: flex;
+    flex-direction: row;
+  }
 }

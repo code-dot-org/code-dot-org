@@ -25,7 +25,6 @@ function LessonProgressDataColumn({
   lessonProgressByStudent,
   sortedStudents,
   addExpandedLesson,
-  removeExpandedLesson,
 }) {
   const getHeader = React.useCallback(
     lesson => {
@@ -64,13 +63,17 @@ function LessonProgressDataColumn({
   );
 
   return (
-    <div className={styles.lessonGroupHeader}>
-      {lessons.map(lesson => (
-        <div key={lesson.id}>
-          {getHeader(lesson)}
-          {getProgress(lesson)}
-        </div>
-      ))}
+    <div className={styles.lessonProgressColumns}>
+      <div className={styles.lessonProgressColumnsHeader}>
+        {lessons.map(lesson => (
+          <div key={lesson.id + 'h'}>{getHeader(lesson)}</div>
+        ))}
+      </div>
+      <div className={styles.lessonProgressColumnsTable}>
+        {lessons.map(lesson => (
+          <div key={lesson.id + 'p'}>{getProgress(lesson)}</div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -82,7 +85,6 @@ LessonProgressDataColumn.propTypes = {
   ).isRequired,
   lessons: PropTypes.arrayOf(PropTypes.object).isRequired,
   addExpandedLesson: PropTypes.func.isRequired,
-  removeExpandedLesson: PropTypes.func.isRequired,
 };
 
 export default connect(state => ({

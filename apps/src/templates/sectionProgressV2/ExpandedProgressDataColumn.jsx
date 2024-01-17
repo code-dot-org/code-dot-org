@@ -12,14 +12,13 @@ function ExpandedProgressDataColumn({
   lesson,
   lessonProgressByStudent,
   sortedStudents,
-  addExpandedLesson,
   removeExpandedLesson,
 }) {
   const header = React.useMemo(() => {
     return (
       <div className={styles.headerExpanded}>
         <div
-          className={classNames(styles.gridBox, styles.headerLesson)}
+          className={classNames(styles.gridBox, styles.headerExpandedLesson)}
           onClick={() => removeExpandedLesson(lesson.id)}
         >
           <FontAwesome icon="caret-down" />
@@ -58,7 +57,7 @@ function ExpandedProgressDataColumn({
   );
 
   return (
-    <div key={lesson.id}>
+    <div key={lesson.id} className={styles.expandedColumn}>
       {header}
       {progress}
     </div>
@@ -71,7 +70,6 @@ ExpandedProgressDataColumn.propTypes = {
     PropTypes.objectOf(studentLessonProgressType)
   ).isRequired,
   lesson: PropTypes.object.isRequired,
-  addExpandedLesson: PropTypes.func.isRequired,
   removeExpandedLesson: PropTypes.func.isRequired,
 };
 
