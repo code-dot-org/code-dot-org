@@ -6,4 +6,4 @@ services:
       dockerfile: Dockerfile
     volumes:
       - .:/usr/src/app
-    entrypoint: npm run test-watch
+    entrypoint: npm run test:watch

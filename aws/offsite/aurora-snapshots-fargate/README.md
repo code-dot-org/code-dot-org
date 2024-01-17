@@ -14,7 +14,7 @@ Developing and testing on your workstation.
 1. Install Node: `nvm install`
 2. Install packages: `npm install`
 3. Edit "restore-and-verify-backup.js" and any files in "test/"
-4. Run `npm run test` to kick off a test run, or `npm run test-watch` for "--watch" mode.
+4. Run `npm run test` to kick off a test run, or `npm run test:watch` for "--watch" mode.
 
 ## Deployment
 
