@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import StudentColumn from './StudentColumn';
-import ProgressTableHeader from './ProgressTableHeader';
-import ProgressDataV2 from './ProgressDataV2';
 import styles from './progress-table-v2.module.scss';
 import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
 import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
+import ExpandedProgressDataColumn from './ExpandedProgressDataColumn';
+import LessonsProgressDataColumn from './LessonsProgressDataColumn';
 
 export function ProgressTableV2({
   isSortedByFamilyName,
@@ -16,11 +16,81 @@ export function ProgressTableV2({
   students,
   unitData,
 }) {
+  const [expandedLessonIds, setExpandedLessons] = React.useState([]);
+
+  const addExpandedLesson = React.useMemo(
+    () => lessonId =>
+      setExpandedLessons([...expandedLessonIds, lessonId])[
+        (expandedLessonIds, setExpandedLessons)
+      ],
+    [expandedLessonIds, setExpandedLessons]
+  );
+  const removeExpandedLesson = React.useMemo(
+    () => lessonId =>
+      setExpandedLessons(
+        expandedLessonIds.filter(id => id !== lessonId),
+        [setExpandedLessons, expandedLessonIds]
+      ),
+    [expandedLessonIds, setExpandedLessons]
+  );
+
   const sortedStudents = React.useMemo(() => {
     return isSortedByFamilyName
       ? students.sort(stringKeyComparator(['familyName', 'name']))
       : students.sort(stringKeyComparator(['name', 'familyName']));
   }, [students, isSortedByFamilyName]);
+
+  const renderedColumns = React.useMemo(() => {
+    const lessons = unitData?.lessons;
+    if (lessons === undefined || lessons.length === 0) {
+      return [];
+    }
+
+    let currentGroup = [];
+    let columns = [];
+    for (const lesson of lessons) {
+      if (expandedLessonIds.includes(lesson.id)) {
+        if (currentGroup.length > 0) {
+          columns.push(
+            <LessonsProgressDataColumn
+              lessons={currentGroup}
+              sortedStudents={sortedStudents}
+              addExpandedLesson={addExpandedLesson}
+              key={columns.length}
+            />
+          );
+          currentGroup = [];
+        }
+        columns.push(
+          <ExpandedProgressDataColumn
+            lesson={lesson}
+            sortedStudents={sortedStudents}
+            removeExpandedLesson={removeExpandedLesson}
+            key={columns.length}
+          />
+        );
+      } else {
+        currentGroup.push(lesson);
+      }
+    }
+    if (currentGroup.length > 0) {
+      columns.push(
+        <LessonsProgressDataColumn
+          lessons={currentGroup}
+          sortedStudents={sortedStudents}
+          addExpandedLesson={addExpandedLesson}
+          key={columns.length}
+        />
+      );
+    }
+    return columns;
+  }, [
+    unitData,
+    expandedLessonIds,
+    addExpandedLesson,
+    removeExpandedLesson,
+    sortedStudents,
+  ]);
 
   return (
     <div className={styles.progressTableV2}>
@@ -29,12 +99,9 @@ export function ProgressTableV2({
         unitName={unitData?.title}
         sectionId={sectionId}
       />
+
       <div className={styles.table}>
-        <ProgressTableHeader lessons={unitData?.lessons} />
-        <ProgressDataV2
-          sortedStudents={sortedStudents}
-          lessons={unitData?.lessons}
-        />
+        <div className={styles.table}>{renderedColumns}</div>
       </div>
     </div>
   );

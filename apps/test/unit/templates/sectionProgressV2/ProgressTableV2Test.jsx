@@ -4,8 +4,6 @@ import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedProgressTableV2} from '@cdo/apps/templates/sectionProgressV2/ProgressTableV2.jsx';
 
 import StudentColumn from '@cdo/apps/templates/sectionProgressV2/StudentColumn.jsx';
-import ProgressTableHeader from '@cdo/apps/templates/sectionProgressV2/ProgressTableHeader.jsx';
-import ProgressDataV2 from '@cdo/apps/templates/sectionProgressV2/ProgressDataV2.jsx';
 
 import {
   fakeLessonWithLevels,
@@ -32,20 +30,10 @@ const setUp = overrideProps => {
 };
 
 describe('ProgressTableV2', () => {
-  it('shows header', () => {
-    const wrapper = setUp();
-
-    expect(wrapper.find(ProgressTableHeader)).to.have.length(1);
-    expect(wrapper.find(ProgressTableHeader).props().lessons).to.equal(LESSONS);
-  });
-
   it('sorts by display name by default', () => {
     const wrapper = setUp();
 
     expect(wrapper.find(StudentColumn).props().sortedStudents[0]).to.equal(
-      STUDENT_1
-    );
-    expect(wrapper.find(ProgressDataV2).props().sortedStudents[0]).to.equal(
       STUDENT_1
     );
   });
@@ -54,9 +42,6 @@ describe('ProgressTableV2', () => {
     const wrapper = setUp({isSortedByFamilyName: true});
 
     expect(wrapper.find(StudentColumn).props().sortedStudents[0]).to.equal(
-      STUDENT_2
-    );
-    expect(wrapper.find(ProgressDataV2).props().sortedStudents[0]).to.equal(
       STUDENT_2
     );
   });
