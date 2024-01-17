@@ -107,18 +107,19 @@ export default class QuickActionsCell extends Component {
 
     return (
       <span ref={span => (this.icon = span)}>
-        <a
+        <FontAwesome
+          icon={icons[type]}
+          style={iconStyle}
+          className="ui-test-section-dropdown ui-projects-table-dropdown"
           onClick={this.state.canOpen ? this.open : undefined}
-          // Dummy hash to href to make it a no-op
-          // adding href to make the icon tab navigable and clickable
-          href="#dummy-hash"
-        >
-          <FontAwesome
-            icon={icons[type]}
-            style={iconStyle}
-            className="ui-test-section-dropdown ui-projects-table-dropdown"
-          />
-        </a>
+          tabIndex="0"
+          onKeyDown={e => {
+            if ([' ', 'Enter', 'Spacebar'].includes(e.key)) {
+              e.preventDefault();
+              this.state.canOpen ? this.open() : undefined;
+            }
+          }}
+        />
         <PopUpMenu
           targetPoint={targetPoint}
           isOpen={this.state.open}
