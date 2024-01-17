@@ -4,7 +4,8 @@
   "description": "",
   "main": "restore-and-verify-backup.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "test-watch": "mocha --watch"
   },
   "author": "",
   "license": "apache-2.0",
