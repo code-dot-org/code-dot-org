@@ -229,6 +229,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   setup do
     # stub cache reads for each test
     LtiV1Controller.any_instance.stubs(:read_cache).returns({state: @state, nonce: @nonce})
+    Honeybadger.stubs(:notify)
   end
 
   def create_jwt(payload)
@@ -538,5 +539,21 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_response :ok
     post '/lti/v1/integrations', params: {client_id: client_id, lms: lms, email: email}
     assert_response :conflict
+  end
+
+  test 'attempting to sync a section with no LTI course should return a 400' do
+    user = create :teacher
+    sign_in user
+
+    get '/lti/v1/sync_course', params: {section_code: 'bad-section-code'}
+    assert_response :bad_request
+  end
+
+  test 'attempting to sync a section with a missing LTI integration should return a 400' do
+    user = create :teacher
+    sign_in user
+    bad_params = {lti_integration_id: 'foo', deployment_id: 'bar', context_id: 'baz', rlid: 'qux', nrps_url: 'quux'}
+    get '/lti/v1/sync_course', params: bad_params
+    assert_response :bad_request
   end
 end
