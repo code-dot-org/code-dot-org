@@ -61,6 +61,8 @@
   "addToProjects": "Add to Projects",
   "addedToProjects": "Added",
   "addingToProjects": "Adding...",
+  "adminAccountDeletionDialog_header": "Delete Admin Account",
+  "adminAccountDeletionDialog_body": "You are about delete an admin account. Are you sure you would like to continue?",
   "administrator": "Administrator",
   "administratorResourcesDescription": "View these resources to get started on expanding computer science opportunities.",
   "administratorResourcesHeading": "Expand computer science in your school or district",
