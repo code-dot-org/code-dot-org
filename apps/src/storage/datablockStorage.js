@@ -16,7 +16,7 @@ function urlFor(func_name) {
   // FIXME: this doesn't work for all URLs where this can be loaded from
   // e.g. http://localhost-studio.code.org:3000/projects/applab/Yp05MnSdVubn04tBoEZn_g/edit/
   // vs http://localhost-studio.code.org:3000/projects/applab/Yp05MnSdVubn04tBoEZn_g
-  return '../data_db/' + func_name;
+  return '../datablock_storage/' + func_name;
 }
 
 function _fetch(path, method, params) {
