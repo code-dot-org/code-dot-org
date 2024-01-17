@@ -4244,6 +4244,10 @@ ru:
           description_short: Изучи все понятия в Основах компьютерных наук и создай собственную картинку, игру или историю!
         self-paced-pl-csp2-2023:
           title: 'Модуль 2: Навигация по инструментам Code.org'
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Свободная игра
         csa-software-engineering:
           lessons:
             lesson-9:
@@ -4459,3 +4463,20 @@ ru:
               display_name: Глава 2
         csd-post-survey-2024:
           title: Опрос после окончания курса
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: События
+            lesson-4:
+              name: Режимы работы
+            lesson-5:
+              name: Следующие шаги
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Циклы
+            lesson-4:
+              name: Условные команды
+            lesson-6:
+              name: Следующие шаги
+          title: Введение в Информатику

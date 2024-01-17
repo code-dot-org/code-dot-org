@@ -11754,7 +11754,7 @@
           "name": "Conclusion"
         },
         "9ed44af4-506a-4faf-94b6-fd4e7b8bcd8c": {
-          "name": "(Facultatif) Activité d'extension"
+          "name": "(Facultatif) Activité pour aller plus loin"
         },
         "5cd25d57-e922-4ed0-893d-516bcae6c4d2": {
           "name": "Séance d’échauffement"
@@ -11766,7 +11766,7 @@
           "name": "Résumé et ouverture"
         },
         "8e09a958-4202-48e1-bd2e-7d0afa3a0c6d": {
-          "name": "Activité GAN (facultatif)"
+          "name": "(Facultatif) Activité RAG "
         },
         "f9582c25-a034-4e8d-b042-69dba2874ab3": {
           "name": "Séance d’échauffement"
@@ -11790,10 +11790,10 @@
           "name": "Comment fonctionne l'IA"
         },
         "265a85af-f85f-48e3-b17d-79dc9a229695": {
-          "name": "Qu'est-ce que le machine learning ?"
+          "name": "Qu'est-ce que l'Apprentissage Automatique ?"
         },
         "15ce8356-ae91-4918-9c0b-2c9e456efa4c": {
-          "name": "Données d'entraînement et biais"
+          "name": "Données de formation et biais"
         },
         "792cc1d7-8c32-478d-ab2f-49ef09d3e832": {
           "name": "Comment fonctionnent les réseaux neuronaux"
@@ -11805,10 +11805,10 @@
           "name": "Comment Marchent les Chatbots et les Grands Modèles de Langage"
         },
         "fbfdf89d-c6bb-464e-9a2a-246c34f33b55": {
-          "name": "L'IA a-t-elle de la créativité et de l'imagination"
+          "name": "L'IA est-elle dotée de créativité et d'imagination"
         },
         "23ca8a8d-ae20-47f7-bd51-0d69816ff174": {
-          "name": "Éthique et IA : confidentialité et avenir du travail"
+          "name": "Éthique et IA : Vie privée et avenir du travail"
         },
         "f4670c8c-98ec-47d0-b458-02a96f130b76": {
           "name": "Séance d’échauffement"

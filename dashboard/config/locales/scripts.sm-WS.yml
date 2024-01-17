@@ -432,6 +432,14 @@ sm:
               display_name: events
             csf_loops:
               display_name: taamiloga
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: taamiloga
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: events
         soccer:
           name: soka
         sports:

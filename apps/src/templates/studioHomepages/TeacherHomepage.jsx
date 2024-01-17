@@ -269,7 +269,7 @@ export const UnconnectedTeacherHomepage = ({
         )}
         {showAFEBanner && (
           <div>
-            <DonorTeacherBanner showPegasusLink={true} source="teacher_home" />
+            <DonorTeacherBanner source="teacher_home" />
             <div style={styles.clear} />
           </div>
         )}

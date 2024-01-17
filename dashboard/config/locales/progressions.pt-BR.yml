@@ -6,8 +6,8 @@ pt:
       "(Optional) Eliza Widget": "(Opcional) Widget Eliza"
       "(Optional) GAN Guess Widget": "(Opcional) Widget GAN Guess"
       8-Bit Binary Number Widget: Widget de Número Binário de 8 bits
-      AI Lab and Isaac's Data: I.A. Lab e os Dados do Isaac
-      AI Lab and Kim's Data: I.A. Lab e os Dados da Kim
+      AI Lab and Isaac's Data: IA Lab e os Dados do Isaac
+      AI Lab and Kim's Data: IA Lab e os Dados da Kim
       AI Machine Learning - Video: Aprendizado de Máquina com IA - Vídeo
       'AI for Oceans: Fish vs Not Fish': 'IA para Oceanos: Peixe Versus Não-Peixe'
       'AI for Oceans: Types of Fish': 'IA para Oceanos: Tipos de Peixes'
@@ -50,7 +50,7 @@ pt:
       'App: Story Creator': 'App: Criador de Histórias'
       'App: The Fastest Finger': 'Aplicativo: O Dedo Mais Rápido'
       'App: Where Should I Live?': 'Aplicativo: Onde eu Devo Morar?'
-      Arrays: Vetores
+      Arrays: Matrizes
       Artist Intro with JR Hildebrand: Introdução do Artista com JR Hildebrand
       Artist Intro with JR Hildebrande: Introdução do Artista com JR Hildebrande
       Artist Project: Projeto Artista
@@ -68,22 +68,22 @@ pt:
       Binary Number Widget: Widget de Números Binários
       Binary Numbers: Números binários
       Binary and Data: Binário e Dados
-      Board Events: Eventos de borda
+      Board Events: Eventos de Placa
       Board Input and Output: Entrada e Saída da Placa
       Book Recommender App: App de Recomendação de Livros
       Book Recommender Model Card: Cartão Modelo de Recomendação de Livros
       Boolean Comparison: Comparação Booleana
-      Booleans and Comparison Operators: Operadores de comparação e valores booleanos
-      Build a Platform Jumper: Crie um Jogo - Saltador Plataformas
+      Booleans and Comparison Operators: Operadores de Comparação e Valores Booleanos
+      Build a Platform Jumper: Crie um Platform Jumper
       Build a Screen: Crie uma tela
       Building a UI with Design Mode: Construindo uma Interface de Usuário com o Modo
         Design
-      Building an App: Construir um App
+      Building an App: Construindo um App
       'Bunny ': 'Coelho '
       Bunny Jumper: Coelho Saltador
       Button Circuits: Circuitos de Botão
       Buttons and Switch: Botões e Interruptor
-      CS Discoveries Post-Course Survey: Pesquisa Pós-Curso - Descobertas da CS
+      CS Discoveries Post-Course Survey: Pesquisa Pós-curso do Descobertas da CC
       CS Discoveries Post-course Survey: Pesquisa Pós-curso do CS Discoveries
       CSS Classes: Classes CSS
       CSS Text Properties: Propriedades CSS de Texto
@@ -109,7 +109,7 @@ pt:
       Check Your Work: Verifique Seu Trabalho
       Check for Understanding: Verifique o Entendimento
       Check-In Survey: Pesquisa de Verificação
-      Checking for a Winner: Verificando um Vencedor
+      Checking for a Winner: Procurando um Vencedor
       'Choice Levels: Customize Your App': 'Níveis de Escolha: Personalize Seu Aplicativo'
       Choose Your Own Adventure: Escolha sua Aventura
       Choosing Good IDs: Escolhendo bons IDs
@@ -174,11 +174,11 @@ pt:
       Design Your Game: Concepção do seu Jogo
       Design Your Prototype: Planeje seu protótipo
       Design a Screen for your App: Conceba uma Tela para seu App
-      Design an AI App - AI Lab: 'Crie um Aplicativo de I.A. - I.A. Lab
+      Design an AI App - AI Lab: 'Crie um Aplicativo de IA - IA Lab
 
         '
-      Design an AI App - App Lab: Projete um aplicativo de IA - Laboratório de IA
-      Designing Screens with Code: Criando telas com código
+      Design an AI App - App Lab: Crie um aplicativo de IA - App Lab
+      Designing Screens with Code: Criando Telas com Código
       Designing for Accessibility: Projetando para Acessibilidade
       Digital Sharing - Unplugged Activity: Compartilhamento Digital - Atividade offline
       Dogger Example: Exemplo do Cachorrinho
@@ -200,7 +200,7 @@ pt:
       Events and Linking Screens: Eventos e Telas de Links
       Events and Properties: Eventos e Propriedades
       Example: Exemplo
-      Example Animated Scene: Exemplo de Cena Animada
+      Example Animated Scene: Exemplo de Cena animada
       Example App Types: Exemplos de Tipos de App
       'Example App: Zoo Classification': 'Exemplo de Aplicativo: Classificação de
         Zoológicos'
@@ -221,6 +221,8 @@ pt:
       Exploring CS in Entertainment: Explorando Ciências da Computação no Entretenimento
       Exploring more CSS: Explorando mais CSS
       Extra: Extra
+      Extra Challenge: Desafio extra
+      'Extra Challenge: Sound Board': 'Desafio Extra: Placa de Som'
       Field Collector App: Aplicativo Field Collector
       Final Dance Party Project: Projeto final da festa dançante
       Final Personal Website: Website pessoal final
@@ -237,15 +239,15 @@ pt:
       Food Chain Setup: Configuração da Cadeia Alimentar
       FoodFight: GuerraDeComida
       For Loop Fun - Unplugged Activity: Diversão com loops for - Atividade offline
-      For Loops: Laços para
-      For Loops and Color LEDs: ' Laços "For" e LEDs Coloridos'
+      For Loops: Loops For
+      For Loops and Color LEDs: Loops For e LEDs Coloridos
       For Loops and Repeat Blocks: ' Laços "For" e Blocos de Repetição'
       Formatting HTML: Formatando HTML
       Free Play: Atividade livre
       'Free Play: Make a Scene': 'Diversão Livre: monte uma cena'
       'Free Play: Make an Interactive Scene': 'Diversão Livre: monte uma cena interativa'
       Fruit and Veggie Explorer: Explorador de Frutas e Vegetais
-      Functions: funções
+      Functions: Funções
       Functions Review: Revisão sobre Funções
       Functions with Parameters: Funções com Parâmetros
       Geometric Sun: Sol Geométrico
@@ -264,10 +266,10 @@ pt:
       How to Create a Simple Function: Como Criar uma Função Simples
       How to Make a Sprite: Como fazer um Sprite
       Human Device Interaction: Interação entre Dispositivos e Humanos
-      Hyperlinks: HiperLinks
+      Hyperlinks: Hiperlinks
       Ice Age Loops: Laços da Era do Gelo
       If Statements: Declarações If
-      If-Else Statements: Instruções Se/Senão
+      If-Else Statements: Declarações Se-Senão (If-Else)
       If... then... Conditional Statements: Se... então... Declarações condicionais
       Images and Sounds: Imagens e Sons
       Images in HTML: Imagens em HTML
@@ -289,7 +291,7 @@ pt:
       Intro to Design Mode: Introdução ao Modo Design
       Intro to Flyer Game: Introdução ao Jogo de Folhetos
       Intro to For Loops: Introdução para Laços "For"
-      Intro to Side Scrollers: Introdução as Rolagens Laterais
+      Intro to Side Scrollers: Introdução às Rolagens Laterais
       Intro to Sprites: Introdução a Sprites
       Intro to Variables: Introdução a Variáveis
       Introducing Sprite Lab: Introdução ao Sprite Lab
@@ -314,7 +316,7 @@ pt:
       Lesson Overview: Visão geral da aula
       Levels: Níveis
       Light Show: Show de Luzes
-      Linking Pages: Vinculando páginas
+      Linking Pages: Vinculando Páginas
       Linking Screens: Telas de vinculação
       Lists: Listas
       Lists in HTML: Listas em HTML
@@ -358,9 +360,9 @@ pt:
       More Buttons: Mais Botões
       More Input: Mais Entrada
       More Parameters: Mais Parâmetros
-      Motorcycle: Moto
+      Motorcycle: Motocicleta
       Movement with the Counter Pattern: Movimento com o Padrão de Contagem
-      Multi-Screen Apps: Aplicativos Multiplas Telas
+      Multi-Screen Apps: Aplicativos Multi-Telas
       Multiframe Animations: Animações Multiframe
       Musical Arrays: Arrays Musicais
       My Online Neighborhood: Minha Vizinhança Online
@@ -369,9 +371,9 @@ pt:
       New Shapes: Novas Formas
       Noisy Image Widget: Widget Imagem Ruidosa
       Orientation: Orientação
-      Overview: Visão geral
+      Overview: Visão Geral
       Pair Programming: Programação em duplas
-      Pet Recommender: Recomendador de Pets
+      Pet Recommender: Recomendador de animais de estimação
       Picturing Data: Estruturação de dados
       Pizza Party Data: Dados da Festa da Pizza
       Pizza Recommendations: Recomendações de Pizza
@@ -381,12 +383,12 @@ pt:
       Planning: Planejamento
       Platform Jumper - Background and Variables: Platform Jumper - Plano de fundo
         e variáveis
-      Platform Jumper - Items: Saltador de Plataformas - Itens
-      Platform Jumper - Platforms: Saltador de Plataformas - Plataformas
-      Platform Jumper - Player: Saltador de Plataformas - Jogador
-      Platform Jumper Review: Análise do Saltador de Plataformas
+      Platform Jumper - Items: Platform Jumper - Itens
+      Platform Jumper - Platforms: Platform Jumper - Plataformas
+      Platform Jumper - Player: Platform Jumper - Jogador
+      Platform Jumper Review: Análise do Platform Jumper
       Player Controls: Controles do Jogador
-      Playing Notes: Jogando Notas
+      Playing Notes: Tocando Notas
       Playing with Notes: Jogando com Notas
       Plotting Shapes in Game Lab: Plotando Formas no Jogo do Laboratório
       Polling Events: Eventos de votação
@@ -400,10 +402,10 @@ pt:
       Project - Background and Variables: Projeto - Histórico e Variáveis
       Project - Finishing Touches: Projeto - Toques Finais
       Project - Sprites and Interactions: Projeto - Sprites e Interações
-      Project Guide: Guia do projeto
+      Project Guide: Guia do Projeto
       Project Work: Projeto de trabalho
       Properties: Propriedades
-      Prototype an Innovation: Protótipo e Inovação
+      Prototype an Innovation: Prototipe uma Inovação
       Publishing Your Website: Publicando seu site
       Quarter Notes: Semínimas
       Quick Check: Verificação Rápida
@@ -413,7 +415,7 @@ pt:
       Raspado Recommender: 'Recomendador de Raspadinha
 
         '
-      Reading Sensors: Sensores de Leitura
+      Reading Sensors: Leitura dos Sensores
       Recognizing Expressions: Reconhecendo Expressões
       Recognizing Fish: Reconhecendo Peixes
       Recognizing Fish Features: Reconhecendo as Características dos Peixes
@@ -427,7 +429,7 @@ pt:
       Representing Images: Representando Imagens
       Responding to Board Events: Respondendo aos eventos da placa
       Responding to User Input: Respondendo a Entradas de Usuário
-      Review: Revisar
+      Review: Revise
       Review Your Animated Scene: Revise sua Cena animada
       Review Your App: Revise seu Aplicativo
       Review Your Game: Revise seu Jogo
@@ -443,24 +445,24 @@ pt:
       Safari App: Aplicativo Safari
       Safari Model: Modelo Safari
       Same Game: O Jogo Igual
-      Sample App: Aplicativo exemplo
+      Sample App: Aplicativo Exemplo
       Sample Apps for Good: Exemplos de Aplicativos do Bem
       Sample Game: Jogo de Exemplo
       Sample Games: Jogos de Exemplo
       Sample Personal Web Pages: Exemplos de Páginas Web Pessoais
       Sample Personal Websites: Exemplos de Sites Pessoais
-      Sample Platform Jumper Game: Exemplo de Jogo - Saltador de Plataformas
+      Sample Platform Jumper Game: Exemplo de Jogo Platform Jumper
       Sample Program: Programa de Exemplo
       Sample Programs: Programas de Exemplo
       Sample Web Page: Exemplo de site
-      Sample Website: Exemplo de site
+      Sample Website: Exemplo de Site
       Scoring & Scoreboard: Pontuação e Placar
       Screen Design: Design de Tela
       Sensor Events: Eventos de Sensor
       Sensor Experiment: Experimento com Sensor
       Sensors to Colors: Sensores para Cores
       Set Up Sprites: Configurar Sprites
-      Setting Properties: Propriedades de Configuração
+      Setting Properties: Definindo propriedades
       Setup: Configuração
       Shapes and Parameters: Formas e Parâmetros
       Shapes and the Draw Loop: Formas e o Laço de Desenho
@@ -478,12 +480,12 @@ pt:
       Skill Building: Desenvolvimento de Habilidades
       Sliders: Barras de Rolagem
       Smart Bike - Blinkers: Bicicleta Inteligente - Blinkers
-      Social Sleuth: Detetive social
+      Social Sleuth: Detetive Social
       Solution 1 - Fishing Zone: Solução 1 - Zona de Pesca
       Solution 2 - Fishing Season: Solução 2 - Temporada de Pesca
       Solution 3 - Fishing Limits: Solução 3 - Limites de Pesca
       Speed it Up, Slow it Down: Acelerar, retardar
-      Sprite Interactions: Interações com Sprite
+      Sprite Interactions: Interações com Sprites
       Sprite Interactions Review: Revisão de interações de Sprite
       Sprite Lab Example Project: Projeto de Exemplo do Laboratório de Sprite
       Sprite Lab Project: Projeto do Laboratório de Sprite
@@ -492,7 +494,7 @@ pt:
       Sprite Scenes: Cenas com Sprite
       Sprite Velocity: Velocidade de Sprite
       Sprites and the Draw Loop: Sprites e o Laço de Desenho
-      Star Chaser: Chaser Estrela
+      Star Chaser: Caçador de Estrelas
       Styling Text: Estilo de Texto
       Styling with Classes: Estilizando com Classes
       Styling your Website: Estilizando seu SIte
@@ -502,15 +504,15 @@ pt:
       The Animation Tab: A Guia de Animação
       The Artist in Code Studio: O Artista no Code Studio
       The Body Element: O elemento do corpo
-      The Buzzer: A Campainha
+      The Buzzer: O Buzzer
       The Collector: O Coletor
-      The Counter Pattern: O padrão Contador
-      The Draw Loop: O Desenho do Laço
+      The Counter Pattern: O Counter Pattern
+      The Draw Loop: O Draw Loop
       The Food Chain: A Cadeia Alimentar
       The Harvester: A Colheitadeira
       Top Websites: Principais Sites
       Tour of Design Mode: Introdução ao Modo Design
-      Train a Model in AI Lab: Treine um Modelo no I.A. Lab
+      Train a Model in AI Lab: Treine um Modelo no IA Lab
       Train an AI to Clean the Ocean: Treine uma IA para limpar o oceano
       UI Element Properties: Propriedades do Elemento de UI
       Ultimate Shoe Recommender: Recomendador de Calçados Definitivo
@@ -519,7 +521,7 @@ pt:
       Upload Your Images: Carregue suas imagens
       User Interface: Interface do Usuário
       Using Accelerometer Events: Usando eventos do acelerômetro
-      Using Arrays: Usando Vetores
+      Using Arrays: Usando Matrizes
       Using Getters and Setters: Usando Getters e Setters
       Using HTML Tags: Usando Tags HTML
       Using Random Numbers: Usando Números Aleatórios
@@ -529,44 +531,46 @@ pt:
       Using the Switch: Usando o Switch
       Variables: Variáveis
       Velocity: Velocidade
-      Velocity and the Counter Pattern: Velocidade e o Padrão Contador
+      Velocity and the Counter Pattern: Velocidade e o Counter Pattern
       Velocity and the Counter Pattern Review: Revisão de Velocidade e o Padrão Contador
       Video: Vídeo
       Video - Functions: Vídeo - Funções
-      Video - If Statements: Vídeo - Declarações If
+      Video - If Statements: Vídeo - Declarações Se (If)
       Video - Introduction to Arrays: 'Vídeo: Introdução a Vetores'
       Video - Parameters: Vídeo - Parâmetros
-      Video - The Counter Pattern: Vídeo - O Padrão de Contagem
+      Video - The Counter Pattern: Vídeo - O Counter Pattern
       Video - Variables: Vídeo - Variáveis
       'Video: "If/Else" Statements': 'Vídeo: Declarações Condicionais'
       'Video: Amazon and Data': 'Vídeo: Amazon e Dados'
-      'Video: Booleans': 'Vídeo: Boleanos'
+      'Video: Booleans': 'Vídeo: Booleanos'
       'Video: CS Matters': 'Vídeo: Importância da Ciência da Computação'
+      'Video: Circuits and Logic': 'Vídeo: Circuitos e Lógica'
       'Video: Conditional Statements': 'Vídeo: Declarações Condicionais'
       'Video: Conditionals': 'Vídeo: Condicionais'
       'Video: Debugging': 'Vídeo: Depuração'
-      'Video: Drawing in Game Lab - Part 1': 'Vídeo: Desenhando no Laboratório de
-        Jogos - Parte 1'
-      'Video: Drawing in Game Lab - Part 2': 'Vídeo: Desenhando no Laboratório de
-        Jogos - Parte 2'
+      'Video: Drawing in Game Lab - Part 1': 'Vídeo: Desenhando no Game Lab - Parte
+        1'
+      'Video: Drawing in Game Lab - Part 2': 'Vídeo: Desenhando no Game Lab - Parte
+        2'
       'Video: Events in App Lab': Eventos no App Lab
-      'Video: For Loops': 'Vídeo: Laços Para'
+      'Video: For Loops': 'Vídeo: Loops For'
       'Video: Functions': 'Vídeo: Funções'
       'Video: How Search Works': 'Vídeo: Como Funciona a Ferramenta de Busca'
       'Video: IOSP Model': 'Vídeo: Modelo IOSP'
-      'Video: If/Else Statements': 'Vídeo: Condicionais'
+      'Video: If/Else Statements': 'Vídeo: Declarações Se/Senão (If/Else)'
       'Video: Impact on Society': 'Vídeo: Impacto na Sociedade'
       'Video: Intro to CSS': 'Vídeo: Introdução a CSS'
       'Video: Intro to CSS - Part 1': 'Vídeo: Introdução ao CSS - Parte 1'
       'Video: Intro to CSS - Part 2': 'Vídeo: Introdução a CSS - Parte 2'
       'Video: Intro to CSS Part 2': 'Vídeo: Introdução a CSS Parte 2'
-      'Video: Intro to Design Mode': 'Vídeo: Introdução ao Modo Design'
+      'Video: Intro to Design Mode': 'Vídeo: Introdução ao Design Mode'
       'Video: Intro to Web Lab - Part 1': 'Vídeo: Introdução ao Web Lab - Parte 1'
       'Video: Intro to Web Lab - Part 2': 'Vídeo: Introdução ao Web Lab - Parte 2'
       'Video: Introduction to Arrays': 'Vídeo: Introdução a Matrizes'
       'Video: Introduction to Sprites': 'Vídeo: Introdução a Sprites'
       'Video: Introduction to Variables': 'Vídeo: Introdução às variáveis'
-      'Video: Introduction to the Draw Loop': 'Vídeo: Introdução ao Laço de Desenho'
+      'Video: Introduction to the Draw Loop': 'Vídeo: Introdução ao Desenho em Laço
+        (The Draw Loop)'
       'Video: Managing Disagreement': 'Vídeo: Gerenciando Conflitos'
       'Video: Netflix and Data': 'Vídeo: Netflix e Dados'
       'Video: Outbreak Simulator: Introduction': 'Video: Simulação de Vírus: Intro'

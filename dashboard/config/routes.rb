@@ -662,7 +662,6 @@ Dashboard::Application.routes.draw do
           delete 'attendance/:session_id/enrollment/:enrollment_id', action: 'destroy_by_enrollment', controller: 'workshop_attendance'
 
           get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
-          get :local_workshop_survey_report, action: :local_workshop_survey_report, controller: 'workshop_survey_report'
           get :generic_survey_report, action: :generic_survey_report, controller: 'workshop_survey_report'
           get :experiment_survey_report, action: :experiment_survey_report, controller: 'workshop_survey_report'
           get :teachercon_survey_report, action: :teachercon_survey_report, controller: 'workshop_survey_report'
@@ -891,6 +890,7 @@ Dashboard::Application.routes.draw do
         get 'users/:user_id/mute_music', to: 'users#get_mute_music'
         get 'users/:user_id/contact_details', to: 'users#get_contact_details'
         get 'users/current', to: 'users#current'
+        get 'users/current/permissions', to: 'users#get_current_permissions'
         get 'users/netsim_signed_in', to: 'users#netsim_signed_in'
         get 'users/:user_id/school_name', to: 'users#get_school_name'
         get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'

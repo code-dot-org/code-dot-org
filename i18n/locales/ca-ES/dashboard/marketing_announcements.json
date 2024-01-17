@@ -1,104 +1,9 @@
 {
   "banners": {
-    "csleadersprize": {
-      "title": "",
-      "body": "",
-      "buttonText": "Més informació"
-    },
-    "csjourneys-22": {
-      "title": "",
-      "body": "",
-      "buttonText": "Més informació"
-    },
-    "hoc-more": {
-      "title": "",
-      "body": "El lloc web d'Hora del Codi té més de 100 activitats de ciències de la computació per a totes les edats i nivells d'experiència, desenvolupats per Code.org i socis.",
-      "buttonText": ""
-    },
     "superhero": {
       "title": "",
       "body": "",
       "buttonText": "Més informació"
-    },
-    "csjourneys": {
-      "title": "",
-      "body": "",
-      "buttonText": "Més informació"
-    },
-    "class-schedule-survey": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "back-to-school-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Més informació"
-    },
-    "teacher-apps-open-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Uneix-te"
-    },
-    "teacher-apps-closing-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Uneix-te"
-    },
-    "teacher-apps-nominate-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Designar un professor"
-    },
-    "teacher-apps-stillon-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Uneix-te"
-    },
-    "home-learning-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Veure idees de projectes"
-    },
-    "soonhoc-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "codebytes-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Més informació"
-    },
-    "ai-2020": {
-      "title": "Endinseu-vos en la intel·ligència artificial i l'aprenentatge automàtic",
-      "body": "",
-      "buttonText": "Més informació"
-    },
-    "congrats-certificate-share": {
-      "title": "",
-      "body": "",
-      "buttonText": "Comença"
-    },
-    "coldplay": {
-      "title": "",
-      "body": "",
-      "buttonText": "Proveu-ho"
-    },
-    "ai-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "Més informació"
-    },
-    "ai-pl-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "Més informació"
-    },
-    "state-of-cs-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
     },
     "hoc-2023": {
       "title": "Hora del Codi: Creativitat amb IA",
@@ -106,6 +11,11 @@
       "buttonText": "Més informació"
     },
     "hoc-2023-dance-ai": {
+      "title": "",
+      "body": "",
+      "buttonText": "Més informació"
+    },
+    "co-teacher": {
       "title": "",
       "body": "",
       "buttonText": "Més informació"

@@ -1539,6 +1539,17 @@ ne:
             Traduit avec www.DeepL.com/Translator (version gratuite)
           title: 'Module 1 : Préparation à l''enseignement de la résolution de problèmes
             et de l''informatique'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Loops
+            lesson-4:
+              name: Conditionals
+          title: Introduction to Computer Science
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: घटनाहरु
         soccer:
           name: प्राप्तांक
         spelling-bee:

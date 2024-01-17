@@ -1,33 +1,33 @@
 ---
-title: Supporting special needs students for the Hour of Code
+title: حمایت از دانش‌آموزان با نیازهای ویژه برای ساعت کد
 ---
 
-# Supporting students with disabilities for the Hour of Code
+# حمایت از دانش‌آموزان با معلولیت برای ساعت کد
 
-Anyone can try an Hour of Code during Computer Science Education Week. Often, students with autism, ADHD or other learning differences find they love programming. Encourage all the students in your classroom to give it a try! In setting up the experience for your classroom, reward participation rather than completion. You can give everyone a [certificate]({{ supporting-special-needs-students/certificate }}) no matter how many puzzles or challenges they complete within the hour. [Pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) is another great way to teach collaboration and have students work together to solve problems.
+هر کسی می‌تواند در هفته آموزش علوم کامپیوتر یک ساعت کد زنی را امتحان کند. بسیاری از دانش‌آموزانی که اوتیسم، اختلال نقص توجه و بیش‌فعالی یا دیگر تفاوت‌های یادگیری دارند، عاشق برنامه‌نویسی می‌شوند. تمام دانش‌آموزان در کلاس خود را تشویق کنید که امتحان کنند! در تنظیم تجربه برای کلاس درس خود، به جای تکمیل، مشارکت را پاداش دهید. می‌توانید به همه یک [گواهی‌نامه]({{ supporting-special-needs-students/certificate }}) بدهید، بدون توجه به اینکه چند پازل یا چالش را در یک ساعت تکمیل کرده‌اند. برنامه‌نویسی دو نفره یک راه عالی دیگر برای آموزش همکاری است و دانش‌آموزان را برای حل مسائل با یکدیگر همکاری می‌کنند.</p> 
 
-## Fit a variety of needs with unplugged and online tutorials
+## نیازهای مختلف را با آموزش‌های آفلاین بازی وار و آنلاین برطرف کنید.
 
-In finding the right activity for everyone in your class, consider both online and “unplugged” options that do not require computers. Unplugged activities allow students to get hands on with computer science concepts. The [Big Event](https://studio.code.org/s/course1/lessons/15/levels/1) puts teachers in control over the actions of students, allowing for a great opportunity to tailor the content to the abilities of each student.
+در پیدا کردن فعالیت مناسب برای همه در کلاس خود، به گزینه‌های آنلاین و "آفلاین بازی وار" که نیازی به کامپیوتر ندارند، توجه کنید. فعالیت های آفلاین بازی وار به دانش آموزان اجازه می دهد تا با مفاهیم علوم کامپیوتر آشنا شوند. [رویداد بزرگ ](https://studio.code.org/s/course1/lessons/15/levels/1) معلمان را در کنترل اعمال دانش‌آموزان قرار می‌دهد و فرصتی عالی برای تنظیم محتوا با توانایی‌های هر دانش‌آموز فراهم می‌کند.
 
-For other students, the accommodations available on the computer may allow them to participate better than an unplugged choice. For example, students who are deaf or hard of hearing can participate fully in the online tutorials.
+برای سایر دانش‌آموزان، امکانات موجود در رایانه ممکن است به آنها اجازه دهد تا بهتر از یک انتخاب آفلاین بازی وار شرکت کنند. به عنوان مثال، دانش آموزان ناشنوا یا کم شنوا می توانند به طور کامل در آموزش های آنلاین شرکت کنند.
 
-The most inclusive choice may also depend on whether you have an accessible computer lab or laptops.
+فراگیرترین انتخاب ممکن است به این بستگی داشته باشد که آیا یک مرکز کامپیوتری یا لپ تاپ در دسترس دارید یا خیر.
 
-For example, do your students have reduced mobility or dexterity? If all your students have access to technology at your school, ask your students or tech teacher what accommodations your students typically use with the computers available.
+به عنوان مثال، آیا دانش آموزان شما تحرک کمتری دارند یا مهارت؟ اگر همه دانش‌آموزان شما در مدرسه شما به فناوری دسترسی دارند، از دانش‌آموزان یا معلم فناوری خود بپرسید که دانش‌آموزان معمولاً از چه امکاناتی با رایانه‌های موجود استفاده می‌کنند.
 
-## Sensory Impairments
+## اختلالات حسی
 
-### Students who are blind or low vision
+### دانش آموزان نابینا یا کم بینا 
 
-For students who use a screen reader, the [Quorum tutorial for beginners](https://quorumlanguage.com/hourofcode/astro1.html) or the [Quorum tutorial for comfortable students](https://quorumlanguage.com/hourofcode/part1.html) is a great place to start. Quorum started as an interpreted language designed to be accessible to screen reader users. Eventually, it became a general purpose programming language designed for any user. You can use these Hour of Code tutorials with your entire classroom. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum.
+برای دانش آموزانی که از صفحه خوان استفاده می کنند، آموزش [Quorum برای مبتدیان](https://quorumlanguage.com/hourofcode/astro1.html) یا آموزش [Quorum برای دانش آموزان راحت](https://quorumlanguage.com/hourofcode/part1.html) مکان خوبی برای شروع است. Quorum به عنوان یک زبان تفسیری شروع شد که برای دسترسی کاربران صفحه‌خوان طراحی شده بود. در نهایت، این زبان به یک زبان برنامه نویسی عمومی تبدیل شد که برای هر کاربری طراحی شده است. شما می توانید از این آموزش های ساعت کد برای کل کلاس تان استفاده کنید. و اگر می‌خواهید فراتر از یک ساعت کد بروید، تیم Quorum ابزارها و برنامه درسی بیشتری دارد.
 
-If your student uses other accommodations in technology classes, you may use those to help with Hour of Code as well. These can include larger monitors, software screen magnification, high contrast settings in their operating system, voice control and more.
+اگر دانش‌آموز شما از امکانات دیگر در کلاس‌های فناوری استفاده می‌کند، می‌توانید از آن‌ها برای کمک به Hour of Code نیز استفاده کنید. این موارد می تواند شامل نمایشگرهای بزرگتر، بزرگنمایی نرم‌افزار صفحه نمایش، تنظیمات کنتراست بالا در سیستم عامل آنها، کنترل صوتی و موارد دیگر باشد.
 
-### Students who are deaf or hard of hearing
+### دانش آموزانی که ناشنوا یا کم شنوا هستند
 
-The [Code.org tutorials](https://studio.code.org/) are all designed to be used with or without sound. All the videos have captions. Some students can also benefit from headphones set to a higher volume.
+[آموزش ها Code.org ](https://studio.code.org/)همگی برای استفاده با یا بدون صدا طراحی شده اند. همه ویدئوها دارای زیرنویس هستند. برخی از دانش آموزان همچنین می توانند از هدفون تنظیم شده با حجم بالاتر بهره‌مند شوند.
 
 ## بیشتر بدانید
 
-To learn more about computer science education and special needs students, we recommend this [online book]({{ supporting-special-needs-students/book }}).
+برای کسب اطلاعات بیشتر در مورد آموزش علوم کامپیوتر و دانش آموزان با نیازهای ویژه، این [کتاب آنلاین]({{ supporting-special-needs-students/book }}) را توصیه می کنیم.

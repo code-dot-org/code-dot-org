@@ -1489,6 +1489,10 @@ hy:
           title: Արկածներ Minecraft-ի հետ
         minecraft:
           title: Minecraft Ոճաբան
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Free Play
         netsim:
           title: Ինտերնետ Simulator
         nevada-standards-aligned-fifth-grade-2023:
@@ -1582,6 +1586,17 @@ hy:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           student_description: 'Phase 2 Online: Blended Summer Study'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: loops
+            lesson-4:
+              name: conditionals
+          title: Ներածություն համակարգչային գիտության
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Իրադարձություններ
         soccer:
           name: ֆուտբոլ
         spelling-bee:

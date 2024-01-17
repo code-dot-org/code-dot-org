@@ -1921,6 +1921,10 @@ fa:
           student_description: جانواران برنامه و دیگر موجودات ماینکرافت در نسخه‌ی
             ماینکرافت شما
           title: طراح ماین‌کرفت
+        musiclab:
+          lessons:
+            lesson-3:
+              name: بازی آزاد
         netsim:
           title: شبیه ساز اینترنت
         nevada-standards-aligned-fifth-grade-2023:
@@ -2216,6 +2220,23 @@ fa:
           student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
         self-paced-pl-csd5-2022:
           title: آموزش هوش مصنوعی و یادگیری ماشینی
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: حلقه‌ها
+            lesson-4:
+              name: شرطی ها
+            lesson-6:
+              name: مراحل بعدی
+          title: آشنایی با علوم کامپیوتر
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: رویدادها
+            lesson-4:
+              name: عملکردها
+            lesson-5:
+              name: مراحل بعدی
         soccer:
           description: یک بازی فوتبال بسازید
           description_short: یک بازی فوتبال بسازید

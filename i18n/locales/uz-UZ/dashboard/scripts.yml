@@ -4220,6 +4220,10 @@ uz:
               display_name: End of Course Project
           description_audience: 'Yosh: 9-13'
           description_short: Informatika asoslari kursidan barcha tushunchalarni o'rganing va o'z san'at asari, hikoya yoki o'yiningizni yarating.
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Bepul o'yin
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -4487,3 +4491,24 @@ uz:
               display_name: Intro to App Lab
         csd-post-survey-2024:
           title: Post-Course Survey
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: 1-dars
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: 1-dars
+            lesson-3:
+              name: Hodisalar
+            lesson-4:
+              name: Xatti-harakatlar
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: 1-dars
+            lesson-3:
+              name: Sikllar
+            lesson-4:
+              name: Shartli bayonotlar
+          title: Informatikaga kirish

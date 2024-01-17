@@ -462,6 +462,17 @@ ku:
           lesson_groups:
             csf_loops:
               display_name: گرێکان
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: گرێکان
+            lesson-4:
+              name: مەرجیەکان
+          title: پێشەكیەک بۆ زانستی کۆمپیوتەر
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-4:
+              name: ڕەفتارەکان
         soccer:
           name: یاری تۆپی پێ
         test-nv-coursea-2023:

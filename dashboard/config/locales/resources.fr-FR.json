@@ -9461,7 +9461,7 @@
           "type": "Diapositives"
         },
         "_example_computer_vision_network/how-ai-works/2023": {
-          "name": "[Example] Réseau de vision par ordinateur",
+          "name": "[Example] de réseau de vision par ordinateur",
           "url": "https://docs.google.com/presentation/d/1zJzbHDel0uQ62usH8g_qBp5KIFMN08tEps5lXSAb3Ag/edit?usp=sharing"
         },
         "computer_vision/how-ai-works/2023": {
@@ -9480,7 +9480,7 @@
           "type": "Vidéo"
         },
         "seven_segment_display_manipulative/how-ai-works/2023": {
-          "name": "Manipulateur d'affichage à sept segments",
+          "name": "Matériel de manipulation pour tableau d'affichage à sept segments",
           "url": "https://docs.google.com/document/d/17QzrodDqCjF2pjZvyo4coWYQbaZxuRwDrPEe20H-yBM/edit",
           "type": "Guide d'activité"
         },
@@ -9510,27 +9510,27 @@
           "type": "Ressource"
         },
         "eliza_activity_guide/how-ai-works/2023": {
-          "name": "(Facultatif) Guide d'activités Eliza",
+          "name": "(Facultatif) Guide d'activité Eliza",
           "url": "https://docs.google.com/document/d/1IIca15ohoVq2lTLNUAOqQMUT7YgsTLp8yIPfmEnLmXo/edit#heading=h.17wewdcvexo6",
           "type": "Guide d'activité"
         },
         "generative_llm/how-ai-works/2023": {
-          "name": "LLM génératif",
+          "name": "Grand modèle de langage génératif",
           "url": "https://docs.google.com/presentation/d/10d_TM6rucYyt8DAuPVoAZ9mgt9v-zzRWcM2A7geDIp0/template/preview",
           "type": "Diapositives"
         },
         "how_ai_works_chatbots_and_large_language_models_part_1_/how-ai-works/2023": {
-          "name": "Comment fonctionne l'IA : chatbots et grands modèles linguistiques (partie 1)",
+          "name": "Comment fonctionne l'IA : Chatbots et grands modèles de langage (1ère partie)",
           "url": "https://www.youtube.com/watch?v=kWougDgtE3E",
           "type": "Vidéo"
         },
         "how_ai_works_chatbots_and_large_language_models_part_2_/how-ai-works/2023": {
-          "name": "Comment fonctionne l'IA : chatbots et grands modèles linguistiques (partie 2)",
+          "name": "Comment fonctionne l'IA : Chatbots et grands modèles de langage (2ᵉ partie)",
           "url": "https://www.youtube.com/watch?v=7Jn9UrnMWK8",
           "type": "Vidéo"
         },
         "llm_vocab_and_video_guide_answer_key/how-ai-works/2023": {
-          "name": "[Key] Vocabulaire et guide vidéo",
+          "name": "[Corrigé] Vocabulaire et guide vidéo",
           "url": "https://docs.google.com/document/d/1kSVppQd3WBVwvejrJ4ffgCNJEkYbhDzQs88tbQ3rfD0/edit",
           "type": "Corrigé"
         },
@@ -9540,21 +9540,21 @@
           "type": "Guide d'activité"
         },
         "written_voice_simulator_activity_guide_exemplar/how-ai-works/2023": {
-          "name": "[Exemplar] Guide d'activité écrit sur le simulateur vocal",
+          "name": "Guide d'activité « Simulateur de voix écrite » [exemple]",
           "url": "https://docs.google.com/document/d/1nZhObuoPc5781ygHgA8P_a0aHItrKkW4mqqJ73XP8Hw/"
         },
         "written_voice_simulator_guide/how-ai-works/2023": {
-          "name": "Guide écrit du simulateur vocal",
+          "name": "Guide d'activité « Simulateur de voix écrite »",
           "url": "https://docs.google.com/document/d/1pebKlY2-pFCw-Zo_nI8cLXYT_eyfn3AKzkwvEmkjo2c/edit#heading=h.sa1769guz3cn",
           "type": "Guide d'activité"
         },
         "written_voice_simulator_user_guide/how-ai-works/2023": {
-          "name": "Guide de l'utilisateur du simulateur vocal écrit",
+          "name": "Guide utilisateur pour le simulateur de voix écrite",
           "url": "https://docs.google.com/presentation/d/1N3l7kEskuT5MFjarekKlJVoz3Gl-z53kjCuQ6bz94m4/edit",
           "type": "Ressource"
         },
         "_optional_gan_game_activity_guide/how-ai-works/2023": {
-          "name": "(Facultatif) Guide d'activités du jeu GAN",
+          "name": "(Facultatif) Guide d'activité pour le jeu RAG",
           "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit",
           "type": "Guide d'activité"
         },
@@ -9564,26 +9564,26 @@
           "type": "Diapositives"
         },
         "generative_images_activity_guide/how-ai-works/2023": {
-          "name": "[Key] Guide d'activités sur les images génératives",
+          "name": "[Grille de réponses] Guide d'activité sur les images génératives",
           "url": "https://docs.google.com/document/d/1f9K9TA6gjNM5SYZB-yCovGA-agtWJdl-ATbUg9c4K_s/edit",
           "type": "Corrigé"
         },
         "how_ai_works_creativity_and_imagination/how-ai-works/2023": {
-          "name": "Comment fonctionne l'IA : créativité et imagination",
+          "name": "Comment fonctionne l'IA : Créativité et imagination",
           "url": "https://www.youtube.com/watch?v=X994dDnmRmY",
           "type": "Vidéo"
         },
         "noisy_image_activity_exemplar/how-ai-works/2023": {
-          "name": "[Exemplar] Activité d'image bruyante",
+          "name": "[Exemple] Activité sur les images bruitées",
           "url": "https://docs.google.com/document/d/1TkzwTBscbPo7fZl-21ggTqSECFdQ35dxoBrBSdX-0yw/"
         },
         "noisy_image_widget_activity_guide/how-ai-works/2023": {
-          "name": "Guide d'activité du widget Noisy Image",
+          "name": "Guide d'activité pour le widget d'image bruitée",
           "url": "https://docs.google.com/document/d/1rxB-NpxulH6SUyweHwGTxatqYAQc5Qt8ZQN9Dkgi6sE/",
           "type": "Guide d'activité"
         },
         "user_guide_noise_image_widget/how-ai-works/2023": {
-          "name": "Guide de l'utilisateur : Widget Noise Image",
+          "name": "Guide utilisateur : Widget d'image bruitée",
           "url": "https://docs.google.com/presentation/d/1l3Ide0B-4k_IEhWYiCVz6OnyAL4fCmg-ROqogyqnVCo/view",
           "type": "Ressource"
         },
@@ -9603,7 +9603,7 @@
           "type": "Vidéo"
         },
         "sharing_learnings_about_our_image_cropping_algorithm_twitter_/how-ai-works/2023": {
-          "name": "Partage d'informations sur notre algorithme de recadrage d'images (Twitter)",
+          "name": "Partage de découvertes au sujet de notre algorithme de recadrage d'images (Twitter)",
           "url": "https://blog.twitter.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm",
           "type": "Ressource"
         },
@@ -9623,7 +9623,7 @@
           "url": "https://docs.google.com/document/d/1KKCTMHVmaUA6B8wBnzT-nHzYCQ6seJD8z-o22dYBkd8/edit?usp=sharing"
         },
         "how_ai_works_-_privacy_and_future_of_work/how-ai-works/2023": {
-          "name": "Comment fonctionne l'IA - Confidentialité et avenir du travail",
+          "name": "Comment fonctionne l'IA : Vie privée et avenir du travail",
           "url": "https://youtu.be/zNxw5gJtHLc",
           "type": "Vidéo"
         },
@@ -9641,27 +9641,27 @@
           "type": "Diapositives"
         },
         "how_ai_works_ethics_ai_equal_access_and_algorithmic_bias/how-ai-works/2023": {
-          "name": "Comment fonctionne l'IA : éthique et IA : égalité d'accès et biais algorithmique",
+          "name": "Comment fonctionne l'IA : Éthique et IA : Accès égal et biais algorithmique",
           "url": "https://youtu.be/tJQSyzBUAew",
           "type": "Vidéo"
         },
         "how_ai_works_ethics_ai_privacy_the_future_of_work/how-ai-works/2023": {
-          "name": "Comment fonctionne l'IA : éthique et IA : confidentialité et avenir du travail",
+          "name": "Comment fonctionne l'IA : Éthique et IA : Vie privée et avenir du travail",
           "url": "https://youtu.be/zNxw5gJtHLc",
           "type": "Vidéo"
         },
         "how_ai_works_introduction/how-ai-works/2023": {
-          "name": "Fonctionnement de l'IA : introduction",
+          "name": "Comment fonctionne l'IA : Introduction",
           "url": "https://youtu.be/Ok-xpKjKp2g",
           "type": "Vidéo"
         },
         "how_ai_works_training_data_and_bias/how-ai-works/2023": {
-          "name": "Comment fonctionne l'IA : données d'entraînement et biais",
+          "name": "Comment fonctionne l'IA : Données de formation et biais",
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Vidéo"
         },
         "how_ai_works_what_is_machine_learning_/how-ai-works/2023": {
-          "name": "Comment fonctionne l'IA : qu'est-ce que l'apprentissage automatique ?",
+          "name": "Comment fonctionne l'IA : Qu'est-ce que l'apprentissage automatique ?",
           "url": "https://youtu.be/KHbwOetbmbs",
           "type": "Vidéo"
         },
@@ -9671,12 +9671,12 @@
           "type": "Vidéo"
         },
         "vocabulary_matching/how-ai-works/2023": {
-          "name": "Correspondance de vocabulaire",
+          "name": "Associer le vocabulaire correspondant",
           "url": "https://docs.google.com/document/d/1Tbz8ULln11yU1hpD73OzgRUnujWjdpdOi8fKQsOAiIk/edit",
           "type": "Guide d'activité"
         },
         "_key_vocabulary_matching/how-ai-works/2023": {
-          "name": "[Key] Correspondance de vocabulaire",
+          "name": "[Grille de réponses] Associer le vocabulaire correspondant",
           "url": "https://drive.google.com/file/d/1cF8MsKO_lCLziA5FisbcQc2-529j1HXZ/view",
           "type": "Corrigé"
         },

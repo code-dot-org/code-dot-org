@@ -4464,6 +4464,10 @@ it:
               display_name: Progetto di fine corso
           description_audience: Da 9 a 13 anni
           description_short: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Tempo di giocare
         csa-software-engineering:
           lessons:
             lesson-7:
@@ -4786,3 +4790,28 @@ it:
           student_description: Questa unità è un'introduzione pratica allo sviluppo di un modello di apprendimento automatico ("machine learning") con dati tabulari. Esplorerai come i computer imparano dai dati per prendere decisioni, quindi svilupperai i tuoi progetti di apprendimento automatico basati su dati del mondo reale. L'unità si conclude con la progettazione della propria app di apprendimento automatico per risolvere un rilevante problema personale.
         csd-post-survey-2024:
           title: Sondaggio Post-corso
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Lezione 1
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Lezione 1
+            lesson-3:
+              name: Eventi
+            lesson-4:
+              name: Comportamenti
+            lesson-5:
+              name: Passi successivi
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Lezione 1
+            lesson-3:
+              name: Cicli
+            lesson-4:
+              name: Istruzioni condizionali
+            lesson-6:
+              name: Passi successivi
+          title: Cos'è l'informatica

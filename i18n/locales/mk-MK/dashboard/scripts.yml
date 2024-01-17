@@ -427,3 +427,11 @@ mk:
               display_name: Сприти
             lessonGroup-5:
               display_name: Променливи
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-4:
+              name: Однесувања
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Лупови

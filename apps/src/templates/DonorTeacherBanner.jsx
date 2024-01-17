@@ -13,7 +13,6 @@ import i18n from '@cdo/locale';
 
 export default class DonorTeacherBanner extends Component {
   static propTypes = {
-    showPegasusLink: PropTypes.bool,
     source: PropTypes.string.isRequired,
   };
 
@@ -40,7 +39,7 @@ export default class DonorTeacherBanner extends Component {
       analyticsReporter.sendEvent(EVENTS.AFE_HOMEPAGE_BANNER_SUBMIT);
 
       // redirect to form on amazon-future-engineer page
-      window.location.assign(pegasus('/amazon-future-engineer#sign-up-today'));
+      window.location.assign(pegasus('/amazon-future-engineer#eligibility'));
     }
 
     this.setState({submitted: true});
@@ -74,17 +73,12 @@ export default class DonorTeacherBanner extends Component {
       <div>
         <div style={styles.paragraph}>{i18n.afeBannerParagraph()}</div>
         <div style={styles.paragraph}>
-          {i18n.wouldYouLikeToParticipate()}
-          {!this.props.showPegasusLink && (
-            <span>{i18n.amazonFutureEngineerProgram()}</span>
-          )}
-          {this.props.showPegasusLink && (
-            <span>
-              <a href={pegasus('/amazon-future-engineer')}>
-                Amazon Future Engineer Program?
-              </a>
-            </span>
-          )}
+          {i18n.afeFreeResources()}
+          <span>
+            <a href={pegasus('/amazon-future-engineer')}>
+              {i18n.amazonFutureEngineer()}
+            </a>
+          </span>
         </div>
         <div>
           <div>
@@ -124,7 +118,7 @@ export default class DonorTeacherBanner extends Component {
     return (
       <div style={styles.main}>
         <div style={styles.message}>
-          <h2 style={styles.heading}>{i18n.freeResources()}</h2>
+          <h2 style={styles.heading}>{i18n.afeBannerCongrats()}</h2>
           {this.renderBannerContent()}
           <div style={styles.buttonArea}>
             <Button
@@ -134,15 +128,13 @@ export default class DonorTeacherBanner extends Component {
               text={i18n.submit()}
               disabled={this.state.participate === undefined}
             />
-            {this.props.showPegasusLink && (
-              <Button
-                __useDeprecatedTag
-                href={pegasus('/amazon-future-engineer')}
-                style={styles.secondaryButton}
-                color={Button.ButtonColor.white}
-                text={i18n.learnMore()}
-              />
-            )}
+            <Button
+              __useDeprecatedTag
+              href={pegasus('/amazon-future-engineer')}
+              style={styles.secondaryButton}
+              color={Button.ButtonColor.white}
+              text={i18n.learnMore()}
+            />
           </div>
         </div>
         <div style={styles.clear} />
@@ -158,7 +150,7 @@ export default class DonorTeacherBanner extends Component {
           notice={i18n.yourResponseSubmitted()}
           details={i18n.thankYouForResponse()}
           detailsLinkText={i18n.clickHere()}
-          detailsLink={pegasus('/amazon-future-engineer#sign-up-today')}
+          detailsLink={pegasus('/amazon-future-engineer#eligibility')}
           detailsLinkNewWindow={true}
           dismissible={true}
         />

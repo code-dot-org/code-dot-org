@@ -3,29 +3,7 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "ai-2020": {
-            "buttonText": "మరింతగా తెలుసుకోండి",
-            "title": "ఆర్టిఫిషియల్ ఇంటెలిజెన్స్ మరియు మెషిన్ లెర్నింగ్ను అన్వేషించండి"
-          },
-          "ai-launch-2023": {
-            "buttonText": "మరింతగా తెలుసుకోండి"
-          },
-          "ai-pl-launch-2023": {
-            "buttonText": "మరింతగా తెలుసుకోండి"
-          },
-          "back-to-school-2021": {
-            "buttonText": "మరింతగా తెలుసుకోండి"
-          },
-          "codebytes-2020": {
-            "buttonText": "మరింతగా తెలుసుకోండి"
-          },
-          "csjourneys": {
-            "buttonText": "మరింతగా తెలుసుకోండి"
-          },
-          "csjourneys-22": {
-            "buttonText": "మరింతగా తెలుసుకోండి"
-          },
-          "csleadersprize": {
+          "co-teacher": {
             "buttonText": "మరింతగా తెలుసుకోండి"
           },
           "hoc-2023": {
@@ -35,12 +13,6 @@
           },
           "hoc-2023-dance-ai": {
             "buttonText": "మరింతగా తెలుసుకోండి"
-          },
-          "home-learning-2020": {
-            "buttonText": "ప్రాజెక్టు ఐడియాలు చూడండి"
-          },
-          "teacher-apps-nominate-2020": {
-            "buttonText": "ఉపాధ్యాయుడిని నామినేట్ చేయండి"
           }
         }
       }

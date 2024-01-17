@@ -8,13 +8,24 @@ import {darkMode} from '../javalab/editorThemes';
 import {python} from '@codemirror/lang-python';
 import moduleStyles from './python-editor.module.scss';
 import {useDispatch, useSelector} from 'react-redux';
-import {PythonlabState, setCode} from './pythonlabRedux';
+import {PythonlabState, resetOutput, setCode} from './pythonlabRedux';
+import Button from '../templates/Button';
+import {runPythonCode} from './pyodideRunner';
+import {useFetch} from '@cdo/apps/util/useFetch';
+
+interface PermissionResponse {
+  permissions: string[];
+}
 
 const PythonEditor: React.FunctionComponent = () => {
   const editorRef = useRef<HTMLDivElement>(null);
   const code = useSelector(
     (state: {pythonlab: PythonlabState}) => state.pythonlab.code
   );
+  const codeOutput = useSelector(
+    (state: {pythonlab: PythonlabState}) => state.pythonlab.output
+  );
+  const {loading, data} = useFetch('/api/v1/users/current/permissions');
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -43,6 +54,20 @@ const PythonEditor: React.FunctionComponent = () => {
     });
   }, [dispatch, editorRef]);
 
+  const handleRun = () => {
+    const parsedData = data ? (data as PermissionResponse) : {permissions: []};
+    // For now, restrict running python code to levelbuilders.
+    if (parsedData.permissions.includes('levelbuilder')) {
+      runPythonCode(code);
+    } else {
+      alert('You do not have permission to run python code.');
+    }
+  };
+
+  const clearOutput = () => {
+    dispatch(resetOutput());
+  };
+
   return (
     <div className={moduleStyles.editorContainer}>
       <PanelContainer
@@ -52,7 +77,21 @@ const PythonEditor: React.FunctionComponent = () => {
       >
         <div ref={editorRef} className={classNames('codemirror-container')} />
       </PanelContainer>
-      <div>{code}</div>
+      <div>
+        <Button
+          type={'button'}
+          text="Run"
+          onClick={handleRun}
+          disabled={loading}
+        />
+        <Button type={'button'} text="Clear output" onClick={clearOutput} />
+      </div>
+      <div>
+        Output:
+        {codeOutput.map((outputLine, index) => {
+          return <div key={index}>{outputLine}</div>;
+        })}
+      </div>
     </div>
   );
 };

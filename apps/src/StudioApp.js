@@ -44,7 +44,11 @@ import {
   NOTIFICATION_ALERT_TYPE,
   START_BLOCKS,
 } from './constants';
-import {Renderers, stringIsXml} from '@cdo/apps/blockly/constants';
+import {
+  Renderers,
+  stringIsXml,
+  stripUserCreated,
+} from '@cdo/apps/blockly/constants';
 import {assets as assetsApi} from './clientApi';
 import {
   configCircuitPlayground,
@@ -2750,6 +2754,13 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     loadLastAttempt = false;
   }
   var startBlocks = config.level.startBlocks || '';
+  // When procedure definition blocks are set using the modal function editor,
+  // they will end up deletable by the student unless the XML is manually
+  // updated. Removing usercreated="true" ensures functions and behaviors
+  // are not deletable by the student using the modal editor.
+  if (stringIsXml(startBlocks)) {
+    startBlocks = stripUserCreated(startBlocks);
+  }
   // TODO: When we start using json in levelbuilder, we will need to pull this from the level config.
   if (loadLastAttempt && config.levelGameName !== 'Jigsaw') {
     startBlocks = config.level.lastAttempt || startBlocks;

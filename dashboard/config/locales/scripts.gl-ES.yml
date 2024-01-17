@@ -1028,6 +1028,10 @@ gl:
           description_short: Explora o mundo de Minecraft a través do código
           student_description: Usa bloques de código para acompañar a Steve ou a Alex
             nunha aventura polo mundo de Minecraft
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Xogo libre
         netsim:
           title: Simulador de internet
         nevada-standards-aligned-fifth-grade-2023:
@@ -1119,6 +1123,19 @@ gl:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
           student_description: 'Fase 2 - on-line: combinado de estudos de verán'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Bucles
+            lesson-4:
+              name: Condicionais
+          title: Introdución á informática
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Eventos
+            lesson-4:
+              name: Comportamentos
         soccer:
           name: fútbol
         spelling-bee:

@@ -15,7 +15,6 @@ import {
   BodyThreeText,
   BodyFourText,
   ExtraStrongText,
-  StrongText,
   Heading6,
 } from '@cdo/apps/componentLibrary/typography';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -25,6 +24,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import AiAssessment from './AiAssessment';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
+import ProgressRing from './ProgressRing';
 
 const INVALID_UNDERSTANDING = -1;
 
@@ -47,14 +47,16 @@ export default function LearningGoals({
     ERROR: 3,
   });
   const [autosaveStatus, setAutosaveStatus] = useState(STATUS.NOT_STARTED);
-  const [learningGoalEval, setLearningGoalEval] = useState(null);
   const [displayFeedback, setDisplayFeedback] = useState('');
   const [displayUnderstanding, setDisplayUnderstanding] = useState(
     INVALID_UNDERSTANDING
   );
   const [currentLearningGoal, setCurrentLearningGoal] = useState(0);
-  const teacherFeedback = useRef('');
-  const understandingLevel = useRef(INVALID_UNDERSTANDING);
+  const learningGoalEvalIds = useRef(Array(learningGoals.length).fill(null));
+  const teacherFeedbacks = useRef(Array(learningGoals.length).fill(''));
+  const understandingLevels = useRef(
+    Array(learningGoals.length).fill(INVALID_UNDERSTANDING)
+  );
 
   const aiEnabled =
     learningGoals[currentLearningGoal].aiEnabled && teacherHasEnabledAi;
@@ -69,8 +71,8 @@ export default function LearningGoals({
       if (autosaveTimer.current) {
         clearTimeout(autosaveTimer.current);
       }
-      teacherFeedback.current = event.target.value;
-      setDisplayFeedback(teacherFeedback.current);
+      teacherFeedbacks.current[currentLearningGoal] = event.target.value;
+      setDisplayFeedback(teacherFeedbacks.current[currentLearningGoal]);
       autosaveTimer.current = setTimeout(() => {
         autosave();
       }, saveAfter);
@@ -95,11 +97,11 @@ export default function LearningGoals({
     const bodyData = JSON.stringify({
       studentId: studentLevelInfo.user_id,
       learningGoalId: learningGoals[currentLearningGoal].id,
-      feedback: teacherFeedback.current,
-      understanding: understandingLevel.current,
+      feedback: teacherFeedbacks.current[currentLearningGoal],
+      understanding: understandingLevels.current[currentLearningGoal],
     });
     HttpClient.put(
-      `${base_teacher_evaluation_endpoint}/${learningGoalEval.id}`,
+      `${base_teacher_evaluation_endpoint}/${learningGoalEvalIds.current[currentLearningGoal]}`,
       bodyData,
       true,
       {
@@ -120,34 +122,40 @@ export default function LearningGoals({
   };
 
   useEffect(() => {
-    if (studentLevelInfo && learningGoals[currentLearningGoal].id) {
-      const body = JSON.stringify({
-        userId: studentLevelInfo.user_id,
-        learningGoalId: learningGoals[currentLearningGoal].id,
+    if (studentLevelInfo && learningGoals) {
+      learningGoals.forEach((learningGoal, index) => {
+        const body = JSON.stringify({
+          userId: studentLevelInfo.user_id,
+          learningGoalId: learningGoal.id,
+        });
+        HttpClient.post(
+          `${base_teacher_evaluation_endpoint}/get_or_create_evaluation`,
+          body,
+          true,
+          {
+            'Content-Type': 'application/json',
+          }
+        )
+          .then(response => response.json())
+          .then(json => {
+            learningGoalEvalIds.current[index] = json.id;
+            if (json.feedback) {
+              teacherFeedbacks.current[index] = json.feedback;
+            }
+            if (json.understanding >= 0 && json.understanding !== null) {
+              understandingLevels.current[index] = json.understanding;
+            }
+          })
+          .catch(error => console.error(error));
       });
-      HttpClient.post(
-        `${base_teacher_evaluation_endpoint}/get_or_create_evaluation`,
-        body,
-        true,
-        {
-          'Content-Type': 'application/json',
-        }
-      )
-        .then(response => response.json())
-        .then(json => {
-          setLearningGoalEval(json);
-          if (json.feedback) {
-            teacherFeedback.current = json.feedback;
-            setDisplayFeedback(teacherFeedback.current);
-          }
-          if (json.understanding >= 0 && json.understanding !== null) {
-            setDisplayUnderstanding(json.understanding);
-            understandingLevel.current = json.understanding;
-          }
-        })
-        .catch(error => console.error(error));
+      setDisplayFeedback(teacherFeedbacks.current[currentLearningGoal]);
+      setDisplayUnderstanding(understandingLevels.current[currentLearningGoal]);
     }
   }, [studentLevelInfo, learningGoals, currentLearningGoal]);
+
+  useEffect(() =>
+    document.addEventListener('keydown', handleKeyDown, {once: true})
+  );
 
   // Callback to retrieve understanding data from EvidenceLevels
   const radioButtonCallback = radioButtonData => {
@@ -156,10 +164,11 @@ export default function LearningGoals({
       learningGoalId: learningGoals[currentLearningGoal].id,
       learningGoal: learningGoals[currentLearningGoal].learningGoal,
       newlySelectedEvidenceLevel: radioButtonData,
-      previouslySelectedEvidenceLevel: understandingLevel.current,
+      previouslySelectedEvidenceLevel:
+        understandingLevels.current[currentLearningGoal],
     });
     setDisplayUnderstanding(radioButtonData);
-    understandingLevel.current = radioButtonData;
+    understandingLevels.current[currentLearningGoal] = radioButtonData;
     autosave();
   };
 
@@ -230,21 +239,44 @@ export default function LearningGoals({
     }
   };
 
+  const handleKeyDown = event => {
+    if (event.key === 'ArrowLeft') {
+      onCarouselPress(-1);
+    } else if (event.key === 'ArrowRight') {
+      onCarouselPress(1);
+    }
+  };
+
   return (
     <div className={style.learningGoalsContainer}>
       <div className={style.learningGoalsHeader}>
-        <button
-          type="button"
-          className={style.learningGoalButton}
-          onClick={() => onCarouselPress(-1)}
-        >
-          <FontAwesome icon="angle-left" />
-        </button>
         <div className={style.learningGoalsHeaderLeftSide}>
-          {/*TODO: [DES-321] Label-two styles here*/}
-          <StrongText>
-            {learningGoals[currentLearningGoal].learningGoal}
-          </StrongText>
+          <button
+            type="button"
+            className={style.learningGoalButton}
+            onClick={() => onCarouselPress(-1)}
+          >
+            <FontAwesome icon="angle-left" />
+          </button>
+          <ProgressRing
+            learningGoals={learningGoals}
+            currentLearningGoal={currentLearningGoal}
+            understandingLevels={understandingLevels.current}
+            radius={30}
+            stroke={4}
+          />
+          <div className={style.learningGoalsHeaderText}>
+            <Heading6>
+              {learningGoals[currentLearningGoal].learningGoal}
+            </Heading6>
+            <BodyThreeText>
+              {i18n.next()}:{' '}
+              {
+                learningGoals[(currentLearningGoal + 1) % learningGoals.length]
+                  .learningGoal
+              }
+            </BodyThreeText>
+          </div>
         </div>
         <div className={style.learningGoalsHeaderRightSide}>
           {aiEnabled && displayUnderstanding === INVALID_UNDERSTANDING && (
@@ -286,15 +318,15 @@ export default function LearningGoals({
               )}
             </div>
           )}
+          <button
+            id="uitest-next-goal"
+            type="button"
+            className={style.learningGoalButton}
+            onClick={() => onCarouselPress(1)}
+          >
+            <FontAwesome icon="angle-right" />
+          </button>
         </div>
-        <button
-          id="uitest-next-goal"
-          type="button"
-          className={style.learningGoalButton}
-          onClick={() => onCarouselPress(1)}
-        >
-          <FontAwesome icon="angle-right" />
-        </button>
       </div>
 
       {/*TODO: Pass through data to child component*/}
@@ -326,14 +358,17 @@ export default function LearningGoals({
             isAutosaving={autosaveStatus === STATUS.IN_PROGRESS}
           />
           {learningGoals[currentLearningGoal].tips && !isStudent && (
-            <div>
-              <Heading6>{i18n.tipsForEvaluation()}</Heading6>
-              <div className={style.learningGoalTips}>
+            <details>
+              <summary>
+                <strong>{i18n.tipsForEvaluation()}</strong>
+              </summary>
+
+              <div className={style.learningGoalsTips}>
                 <SafeMarkdown
                   markdown={learningGoals[currentLearningGoal].tips}
                 />
               </div>
-            </div>
+            </details>
           )}
           {!!studentLevelInfo && renderAutoSaveTextbox()}
         </div>

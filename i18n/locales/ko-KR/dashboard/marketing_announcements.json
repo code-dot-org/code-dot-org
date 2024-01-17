@@ -1,104 +1,9 @@
 {
   "banners": {
-    "csleadersprize": {
-      "title": "",
-      "body": "",
-      "buttonText": "더 알아보기"
-    },
-    "csjourneys-22": {
-      "title": "",
-      "body": "",
-      "buttonText": "더 알아보기"
-    },
-    "hoc-more": {
-      "title": "",
-      "body": "코딩의 시간 웹사이트에는 모든 연령 및 모든 경험 수준에 맞도록 Code.org와 파트너들이 함께 개발한 100가지 이상의 컴퓨터 과학 활동이 준비되어 있습니다.",
-      "buttonText": ""
-    },
     "superhero": {
       "title": "",
       "body": "",
       "buttonText": "더 알아보기"
-    },
-    "csjourneys": {
-      "title": "",
-      "body": "",
-      "buttonText": "더 알아보기"
-    },
-    "class-schedule-survey": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "back-to-school-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "더 알아보기"
-    },
-    "teacher-apps-open-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "함께 참여하기"
-    },
-    "teacher-apps-closing-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "함께 참여하기"
-    },
-    "teacher-apps-nominate-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "교사 지명"
-    },
-    "teacher-apps-stillon-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "함께 참여하기"
-    },
-    "home-learning-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "프로젝트 아이디어 보기"
-    },
-    "soonhoc-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "codebytes-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "더 알아보기"
-    },
-    "ai-2020": {
-      "title": "인공지능과 머신 러닝 탐구",
-      "body": "",
-      "buttonText": "더 알아보기"
-    },
-    "congrats-certificate-share": {
-      "title": "",
-      "body": "",
-      "buttonText": "시작"
-    },
-    "coldplay": {
-      "title": "",
-      "body": "",
-      "buttonText": "해보기"
-    },
-    "ai-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "더 알아보기"
-    },
-    "ai-pl-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "더 알아보기"
-    },
-    "state-of-cs-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
     },
     "hoc-2023": {
       "title": "아워오브코드: AI를 통한 창의성",
@@ -108,6 +13,11 @@
     "hoc-2023-dance-ai": {
       "title": "댄스 파티: AI 에디션",
       "body": "인공 지능(AI) 컨셉에 대해 알아보고 현재 최고의 아티스트들을 선보이는 나만의 가상 댄스 파티를 만들어 보세요. 선택할 수 있는 곡이 수십 곡 제공되므로 음악 취향에 상관없이 모든 학생들에게 다가갈 수 있습니다. 이제 실력을 뽐낼 시간입니다!",
+      "buttonText": "더 알아보기"
+    },
+    "co-teacher": {
+      "title": "",
+      "body": "",
       "buttonText": "더 알아보기"
     }
   }

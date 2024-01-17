@@ -4144,7 +4144,10 @@ ro:
           title: 'Modulul 2: Navigare prin Code.org'
         self-paced-pl-csp3-2023: {}
         self-paced-pl-csp4-2023: {}
-        musiclab: {}
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Joc la liber
         csa-software-engineering: {}
         csa-frq-practice: {}
         hoc-amazon-poc: {}
@@ -4398,3 +4401,26 @@ ro:
               display_name: Capirolul 2
         csd-post-survey-2024:
           title: Chestionar după curs
+        melissasandbox-2024-1: {}
+        coursec-maker-2024: {}
+        coursef-maker-2024: {}
+        coursee-maker-2024: {}
+        coursed-maker-2024: {}
+        self-paced-pl-k5-2024: {}
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Evenimente
+            lesson-4:
+              name: Comportamente
+            lesson-5:
+              name: Pașii următori
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Bucle
+            lesson-4:
+              name: Condiţionale
+            lesson-6:
+              name: Pașii următori
+          title: Introducere în Informatică

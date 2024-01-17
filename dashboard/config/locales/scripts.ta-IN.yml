@@ -2020,6 +2020,10 @@ ta:
           student_description: உங்கள் சொந்த Minecraft பதிப்பில் விலங்குகள் மற்றும்
             பிற Minecraft உயிரினங்களை நிரல் செய்யவும்.
           title: மைன்கிராஃப்டு வடிவமைப்பாளர்
+        musiclab:
+          lessons:
+            lesson-3:
+              name: இலவசமாக விளையாடு
         netsim:
           title: இணைய மாதிரி
         nevada-standards-aligned-fifth-grade-2023:
@@ -2739,6 +2743,17 @@ ta:
           title: 'தொகுதி 2: நேவிகேட்டிங் Code.org '
         self-paced-pl-csp2-2023:
           title: 'தொகுதி 2: நேவிகேட்டிங் Code.org '
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: சுழற்சிகள்
+            lesson-4:
+              name: நிபந்தனைகள்
+          title: கணினி அறிவியலின் அறிமுகம்
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: நிகழ்வுகள்
         soccer:
           description: ஒரு கால்பந்து விளையாட்டை உருவாக்குங்கள்
           description_short: ஒரு கால்பந்து விளையாட்டை உருவாக்குங்கள்

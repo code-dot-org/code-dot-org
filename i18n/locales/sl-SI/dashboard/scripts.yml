@@ -1449,3 +1449,16 @@ sl:
           lesson_groups:
             lessonGroup-7:
               display_name: Uvod
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Dogodki
+            lesson-4:
+              name: Vedenje
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Zanke
+            lesson-4:
+              name: Pogoji
+          title: Uvod v računalništvo

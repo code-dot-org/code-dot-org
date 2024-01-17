@@ -2540,6 +2540,10 @@ bg:
           student_description: Програмирай животни и други Minecraft същества в своя
             собствена версия на Minecraft.
           title: Minecraft Hour of Code Дизайнер
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Свободна игра
         netsim:
           description: Научете как работи Интернет.
           description_short: Научете как работи Интернет.
@@ -2724,6 +2728,31 @@ bg:
           description: 'Фаза 2 онлайн: Смесено лятно учене'
           description_short: 'Фаза 2 онлайн: Смесено лятно учене'
           student_description: 'Фаза 2 онлайн: Смесено лятно учене'
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Урок 1
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Урок 1
+            lesson-3:
+              name: Повторения
+            lesson-4:
+              name: Условия
+            lesson-6:
+              name: Следващи стъпки
+          title: Въведение в компютърните науки
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Урок 1
+            lesson-3:
+              name: Събития
+            lesson-4:
+              name: Поведения
+            lesson-5:
+              name: Следващи стъпки
         soccer:
           name: футбол
         spelling-bee:
