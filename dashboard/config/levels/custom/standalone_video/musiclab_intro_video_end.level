@@ -14,7 +14,8 @@
     "skip_sound": true,
     "background": "music-black",
     "video_full_width": true,
-    "uses_lab2": true
+    "uses_lab2": true,
+    "background": "music-black"
   },
   "audit_log": "[{\"changed_at\":\"2024-01-09T03:30:49.939+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_video_start\\\"\"],\"cloned_from\":\"musiclab_intro_video_start\"},{\"changed_at\":\"2024-01-09 03:31:03 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-09 11:16:47 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
