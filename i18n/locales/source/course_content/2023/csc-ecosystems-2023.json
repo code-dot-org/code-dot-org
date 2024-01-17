@@ -106,9 +106,9 @@
     "short_instructions": "Simulate your ecosystem falling out of balance with an overgrowth of algae.",
     "long_instructions": "## Too Much - An Algae Overgrowth!\n\n**If there is too much algae, it damages the coral reef**\n<img src=\"https://images.code.org/db2a268379f0bd5b031a95840a7c5d59-image-1682005193091.png\" style=\"width: 40%; float: right; padding-top: 20px\">\n\n-   Find the event <code style=\"color:black; background-color:#6AF36C\">when fish touches algae</code> and the <code style=\"color:black; background-color:#5ED5DD\">eat</code><code style=\"color:black; background-color:#F79EA5\">object</code> blocks\n\n-   Add the <code style=\"color:black; background-color:#99CEDB\">if too much algae</code> conditional block \n\n-   Place the <code style=\"color:black; background-color:#5ED5DD\">change costume</code> block **_inside_** the conditional\n\n-   Click <code style=\"color:black; background-color:#FFBD46\">Run</code> and watch the simulation for an algae overgrowth when the boat catches most of the fish.\n\n[][0]",
     "authored_hints": {
-      "TooMuch": "Connect the if too much algae block to the when fish touches algae event.",
-      "Costume": "If there's too much algae, the coral will be damaged. \n\nUse the change costume block next.",
-      "BlockInside": "Place the change costume block inside the if too much algae block."
+      "TooMuch": "Connect the `if too much algae` block to the `when fish touches algae` event.",
+      "Costume": "If there's too much algae, the coral will be damaged. \n\nUse the `change costume` block next.",
+      "BlockInside": "Place the `change costume` block inside the if too much algae block."
     },
     "behavior_descriptions": {
       "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",

@@ -8,7 +8,7 @@ describe('ProgressViewHeader', () => {
     scriptId: 132,
     sectionId: 6,
     currentView: 'summary',
-    scriptData: {
+    unitData: {
       id: 132,
       excludeCsfColumnInLegend: true,
       title: 'CSD Unit 1 - Problem Solving and Computing (19-20)',
