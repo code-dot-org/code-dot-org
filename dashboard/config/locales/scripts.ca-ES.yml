@@ -10118,6 +10118,10 @@ ca:
             de la unitat ML/AI per CSD. Per a futures preguntes sobre això, pregunteu
             a Dan Schneider.
           title: Unitat ML/AI - CSD
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Joc lliure
         netsim:
           description: Obteniu informació sobre com funciona Internet.
           description_short: Obteniu informació sobre com funciona Internet.
@@ -11379,6 +11383,33 @@ ca:
           name: auto-paced-pl-csp8-2021
         self-paced-pl-csp9-2021:
           name: auto-paced-pl-csp9-2021
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Lliçó 1
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Lliçó 1
+            lesson-3:
+              name: Bucles
+            lesson-4:
+              name: Condicionals
+            lesson-5:
+              name: Posant-ho tot junt
+            lesson-6:
+              name: Propers passos
+          title: Introducció a la informàtica
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Lliçó 1
+            lesson-3:
+              name: Esdeveniments
+            lesson-4:
+              name: Comportaments
+            lesson-5:
+              name: Propers passos
         self-paced-pl-k5-getting-started:
           name: auto-paced-pl-k5-getting-started
           title: 'Com començar amb Code.org (K-5) '

@@ -122,7 +122,7 @@
     "naan_toy": {
       "fields": {
         "cheese": {
-          "id": "Fromage"
+          "id": "fromage"
         },
         "chicken": {
           "id": "poulet"
@@ -164,7 +164,7 @@
           "id": "lard"
         },
         "cheese": {
-          "id": "Fromage"
+          "id": "fromage"
         },
         "lobster": {
           "id": "homard"
@@ -216,7 +216,7 @@
           "id": "haricot"
         },
         "cheese": {
-          "id": "Fromage"
+          "id": "fromage"
         },
         "chicken": {
           "id": "poulet"

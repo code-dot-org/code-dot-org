@@ -7896,6 +7896,10 @@ ca:
             -   Obteniu informació sobre les oportunitats per connectar-vos amb la comunitat CS més àmplia.
 
             \*\* Temps suggerit: 70 minuts
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Joc lliure
         csa-software-engineering:
           lessons:
             lesson-9:
@@ -8332,3 +8336,30 @@ ca:
         csd-post-survey-2024:
           title: Enquesta post-curs
           description: Aquesta unitat conté l'Enquesta post-curs. Aquesta unitat es pot assignar després de completar la seva unitat final en aquesta assignatura.
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Lliçó 1
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Lliçó 1
+            lesson-3:
+              name: Esdeveniments
+            lesson-4:
+              name: Comportaments
+            lesson-5:
+              name: Propers passos
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Lliçó 1
+            lesson-3:
+              name: Bucles
+            lesson-4:
+              name: Condicionals
+            lesson-5:
+              name: Posant-ho tot junt
+            lesson-6:
+              name: Propers passos
+          title: Introducció a la informàtica

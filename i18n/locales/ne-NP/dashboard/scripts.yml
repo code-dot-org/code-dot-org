@@ -1643,3 +1643,14 @@ ne:
             \*\*Durée suggérée : 30 minutes.
 
             Traduit avec www.DeepL.com/Translator (version gratuite)
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: घटनाहरु
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Loops
+            lesson-4:
+              name: Conditionals
+          title: Introduction to Computer Science

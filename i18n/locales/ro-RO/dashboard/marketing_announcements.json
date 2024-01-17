@@ -1,104 +1,9 @@
 {
   "banners": {
-    "csleadersprize": {
-      "title": "",
-      "body": "",
-      "buttonText": "Află mai mult"
-    },
-    "csjourneys-22": {
-      "title": "",
-      "body": "",
-      "buttonText": "Află mai mult"
-    },
-    "hoc-more": {
-      "title": "",
-      "body": "Site-ul Web Hour of Code are peste 500 de activități informatice pentru toate vârstele și nivelurile de experiență, dezvoltate de Code.org și parteneri.",
-      "buttonText": ""
-    },
     "superhero": {
       "title": "",
       "body": "",
       "buttonText": "Află mai mult"
-    },
-    "csjourneys": {
-      "title": "",
-      "body": "",
-      "buttonText": "Află mai mult"
-    },
-    "class-schedule-survey": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "back-to-school-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Află mai mult"
-    },
-    "teacher-apps-open-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Alatura-ni-te"
-    },
-    "teacher-apps-closing-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Alatura-ni-te"
-    },
-    "teacher-apps-nominate-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Nominalizează un profesor"
-    },
-    "teacher-apps-stillon-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Alatura-ni-te"
-    },
-    "home-learning-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Explorați idei de proiecte"
-    },
-    "soonhoc-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "codebytes-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Află mai mult"
-    },
-    "ai-2020": {
-      "title": "Explorează Inteligența Artificială și Învățarea Automată",
-      "body": "",
-      "buttonText": "Află mai mult"
-    },
-    "congrats-certificate-share": {
-      "title": "",
-      "body": "",
-      "buttonText": "Începe"
-    },
-    "coldplay": {
-      "title": "",
-      "body": "",
-      "buttonText": "Încearcă"
-    },
-    "ai-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "Află mai mult"
-    },
-    "ai-pl-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "Află mai mult"
-    },
-    "state-of-cs-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
     },
     "hoc-2023": {
       "title": "Hour of Code: Creativitate cu IA",
@@ -106,6 +11,11 @@
       "buttonText": "Află mai mult"
     },
     "hoc-2023-dance-ai": {
+      "title": "",
+      "body": "",
+      "buttonText": "Află mai mult"
+    },
+    "co-teacher": {
       "title": "",
       "body": "",
       "buttonText": "Află mai mult"

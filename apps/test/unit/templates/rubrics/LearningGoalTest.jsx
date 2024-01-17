@@ -87,7 +87,7 @@ describe('LearningGoal', () => {
         isStudent={false}
       />
     );
-    expect(wrapper.find('Heading6')).to.have.lengthOf(1);
+    expect(wrapper.find('Heading6')).to.have.lengthOf(2);
     expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(1);
     expect(wrapper.find('SafeMarkdown').props().markdown).to.equal('Tips');
   });
@@ -104,7 +104,7 @@ describe('LearningGoal', () => {
         isStudent={true}
       />
     );
-    expect(wrapper.find('Heading6')).to.have.lengthOf(0);
+    expect(wrapper.find('Heading6')).to.have.lengthOf(1);
     expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(0);
   });
 
@@ -119,7 +119,9 @@ describe('LearningGoal', () => {
         teacherHasEnabledAi
       />
     );
-    expect(wrapper.find('StrongText').props().children).to.equal('Testing');
+    expect(wrapper.find('Heading6').first().props().children).to.equal(
+      'Testing'
+    );
     expect(wrapper.find('AiToken')).to.have.lengthOf(1);
   });
 
@@ -134,7 +136,9 @@ describe('LearningGoal', () => {
         teacherHasEnabledAi
       />
     );
-    expect(wrapper.find('StrongText').props().children).to.equal('Testing');
+    expect(wrapper.find('Heading6').first().props().children).to.equal(
+      'Testing'
+    );
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
   });
 
@@ -149,7 +153,9 @@ describe('LearningGoal', () => {
         teacherHasEnabledAi={false}
       />
     );
-    expect(wrapper.find('StrongText').props().children).to.equal('Testing');
+    expect(wrapper.find('Heading6').first().props().children).to.equal(
+      'Testing'
+    );
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
   });
 

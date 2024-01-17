@@ -3,35 +3,7 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "ai-2020": {
-            "buttonText": "اعرف المزيد",
-            "title": "اكتشف الذكاء الاصطناعي والتعلم الآلي"
-          },
-          "ai-launch-2023": {
-            "buttonText": "اعرف المزيد"
-          },
-          "ai-pl-launch-2023": {
-            "buttonText": "اعرف المزيد"
-          },
-          "back-to-school-2021": {
-            "buttonText": "اعرف المزيد"
-          },
-          "codebytes-2020": {
-            "buttonText": "اعرف المزيد"
-          },
-          "coldplay": {
-            "buttonText": "جربها"
-          },
-          "congrats-certificate-share": {
-            "buttonText": "إبدأ"
-          },
-          "csjourneys": {
-            "buttonText": "اعرف المزيد"
-          },
-          "csjourneys-22": {
-            "buttonText": "اعرف المزيد"
-          },
-          "csleadersprize": {
+          "co-teacher": {
             "buttonText": "اعرف المزيد"
           },
           "hoc-2023": {
@@ -44,26 +16,8 @@
             "buttonText": "اعرف المزيد",
             "title": "حفلة الرقص: إصدار الذكاء الاصطناعي"
           },
-          "hoc-more": {
-            "body": "يحتوي موقع Hour of Code \"ساعة من البرمجة\" على أكثر من 100 نشاط في علم الحاسوب لجميع الأعمار ومستويات الخبرة التي طورها موقع Code.org وشركاؤه."
-          },
-          "home-learning-2020": {
-            "buttonText": "اعرض أفكار المشروع"
-          },
           "superhero": {
             "buttonText": "تعلّم المزيد"
-          },
-          "teacher-apps-closing-2021": {
-            "buttonText": "انضم إلينا"
-          },
-          "teacher-apps-nominate-2020": {
-            "buttonText": "ترشيح معلم"
-          },
-          "teacher-apps-open-2021": {
-            "buttonText": "انضم إلينا"
-          },
-          "teacher-apps-stillon-2020": {
-            "buttonText": "انضم إلينا"
           }
         }
       }

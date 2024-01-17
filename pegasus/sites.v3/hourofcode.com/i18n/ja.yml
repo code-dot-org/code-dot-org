@@ -170,6 +170,16 @@ ja:
   promote_code_dot_org_desc: 統計、引用、動画を活用して、お住まいの地域のコンピューターサイエンスを宣伝しましょう。
   afe_partnership_logo_alt: Amazon Future Engineerのロゴ
   afe_partnership_thanks_desc: Amazon Future Engineer は、低所得層やその他の困難な状況に置かれている子供や若者がコンピューター・サイエンスのキャリアを追求できるよう、インスピレーションを与え、教育し、訓練するための包括的な幼少期からキャリアまでのプログラムです。[パートナーシップについて詳しくはこちら](%{afe_url})。
+  donors_block_microsoft_infosys: We thank Microsoft and Infosys Foundation USA for
+    supporting our vision and mission to ensure every child has the opportunity to
+    learn computer science and the skills to succeed in the 21st century.
+  microsoft_logo_alt: Microsoft logo
+  infosys_logo_alt: Infosys Foundation USA logo
+  amazon_logo_alt: Amazon logo
+  google_logo_alt: Google logo
+  coinbase_logo_alt: Coinbase logo
+  ballmer_group_logo_alt: Ballmer Group logo
+  vista_equity_partners_logo_alt: Vista Equity Partners logo
   grade_level: 学年レベル
   grade_level_label_elementary: 小学校
   grade_level_label_middle: ミドルスクール
@@ -322,6 +332,7 @@ ja:
   call_to_action_open_positions: オープンポジションを表示
   call_to_action_explore_roles: 募集中の職種を見る
   call_to_action_get_guide: ガイドを入手
+  call_to_action_donate: Donate
   call_to_action_donate_to_cdo: Code.org に寄付してください
   call_to_action_start_fundraiser: 募金活動を始める
   call_to_action_view_donation_policy: 寄付ポリシーを見る
@@ -344,6 +355,7 @@ ja:
   call_to_action_learn_about_ai: AI について学ぼう
   call_to_action_learn_more_about_ai: AIについてさらに詳しく
   call_to_action_get_started: さあ、始めよう
+  call_to_action_view_our_supporters: View our supporters
   call_to_action_explore_self_paced_pl: Explore self-paced professional learning
   call_to_action_applications_get_notified: Get notified when applications open
   call_to_action_applications_notify_me: Notify me when I can apply
@@ -353,6 +365,9 @@ ja:
   call_to_action_for_intl_educators: For international educators
   call_to_action_learn_more_program_region: Learn more about the program in your region
   call_to_action_visit_support_center: Visit our support center
+  call_to_action_download_video: Download video
+  call_to_action_explore_learning_ages_5_11: Explore learning for ages 5-11
+  call_to_action_explore_learning_ages_11_plus: Explore learning for ages 11+
   aria_label_call_to_action_hoc_how_to_educators: 教育者向けハウツーガイドを見る
   aria_label_call_to_action_hoc_how_to_companies: 企業向けハウツーガイドを見る
   aria_label_call_to_action_hoc_how_to_districts: 地区向けハウツーガイドを見る
@@ -437,6 +452,9 @@ ja:
   aria_label_call_to_action_minecraft_2020: マインクラフト・AI・フォー・アースを始めよう
   aria_label_call_to_action_register_student_workshop: 無料の生徒向けワークショップに登録
   aria_label_call_to_action_view_more_cs_resources: コンピュータ・サイエンスのリソースをさらに表示
+  aria_label_call_to_action_farsi_donate: Donate to support the Code.org in Farsi
+    campaign
+  aria_label_call_to_action_farsi_learn_more: Learn more about Code.org in Farsi
   aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
     professional learning
   aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
@@ -448,6 +466,7 @@ ja:
   aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
     A
   video_title_professional_learning_program: Code.orgのプロフェッショナル・ラーニング・プログラム
+  video_title_young_women_in_computer_science: コンピュータサイエンスの若い女性
   curriculum_name_csf: コンピュータサイエンスの基礎
   curriculum_name_csf_02: すべてのCSファンダメンタルズ (コースA～F)
   curriculum_name_csf_a_f: CS基礎 A-F
@@ -569,6 +588,7 @@ ja:
   module_grade_3_12: 3-12
   module_grade_5_12: 5-12
   module_grade_6_12: 6-12
+  module_grade_6_12_plus: 6-12+
   module_grade_6_10: 6-10
   module_grade_7_12: 7-12
   module_grade_9_12: 9-12
@@ -647,6 +667,8 @@ ja:
   values_04: 私たちは機敏でフィードバックに迅速に対応します
   values_05: 私たちは誠実さと透明性をもって行動します
   values_06: 幅広い影響を与えるには、大きく考え、全体的に行動することが必要だと考えています。
+  heading_anyone_can_learn: Anyone can learn Computer Science
+  heading_find_right_opportunity: Find the right learning opportunity for you!
   heading_professional_learning: ニーズに合わせたプロフェッショナル・ラーニング
   heading_additional_resources: その他のリソース
   heading_support_and_questions: サポートとご質問
@@ -680,6 +702,19 @@ ja:
   heading_acceptance: Acceptance
   heading_enroll: Enroll
   heading_have_questions: Have questions?
+  student_courses_top_desc: Start coding today. Our courses and activities are free!
+    It's easier—and more fun—than you think.
+  student_courses_explore_desc: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more for all ages and
+    experience levels!
+  student_courses_k_5_desc: Start with an Hour of Code, then discover more block-based
+    coding in our Express Courses. Get creative in our fun programming environment,
+    Sprite Lab, or watch cool videos to learn more about key topics. There's so much
+    to explore!
+  student_courses_6_12_desc: Try an Hour of Code, or check out our self-paced courses
+    on creating apps, games, and animations. Do your own thing in our Web Lab, Game
+    Lab, and App Lab programming environments. Plus, learn more about AI, careers
+    in programming, scholarships, and more.
   cs_ambassador_subhead: より多くの若い女性に学校でコンピュータサイエンスを学ぶよう奨励することに情熱を注いでいる高校生なら、私たちにはあなたが必要です！
   cs_ambassador_desc: 医療、エンターテインメント、スポーツ、教育、ビジネス、ファッション、起業家精神など、あらゆる分野がコンピュータサイエンスの影響を受けています。しかし、高校生の若い女性のうち、コンピュータサイエンスの授業を受けるのはわずか
     5% です。アンバサダーは、仲間にコンピュータサイエンスの授業を受けるよう勧めることで、この男女格差を埋める手助けをすることができます。
@@ -1528,10 +1563,20 @@ ja:
   donate_page_top_desc: Code.orgは、コンピューター・サイエンス教育へのアクセスを拡大するという使命を果たすため、寄付を受け付けています。様々な寄付の方法をご用意しています。
   donate_page_fundraise_title: Code.org の資金集め
   donate_page_fundraise_desc: Code.orgのために資金を集めるのを手伝ってください！すべての学校のすべての生徒にコンピュータサイエンスを学ぶ機会が与えられるべきです。
+  donate_page_campaigns_heading: Support a campaign
+  donate_page_campaigns_farsi_desc: Talent is widespread, but opportunity often isn't.
+    The proposed Code.org in Farsi initiative aims to grant over 110 million Farsi
+    speakers from countries like Iran, Afghanistan, and Tajikistan to global diasporas,
+    access to educational resources currently available in other major languages.
+    Let's make it a reality.
   donate_page_other_ways_title: その他の寄付方法
   donate_page_other_ways_desc: 多様な貢献方法を模索し、あなたに最も適した選択肢を見つけてください。大小を問わず、あらゆる行動が私たちの使命を前進させるのです。
   donate_page_501c3: Code.orgは公益的な501 (c) (3) 非営利団体として登録されています。Code.org への寄付は、法律で認められている範囲で税控除の対象となります。Code.org
     の納税者番号は 46-0858543 です。
+  donate_page_supporters_heading: Join top industry leaders supporting Code.org
+  donate_page_supporters_desc: Prominent names nationwide trust and support our mission.
+    View our esteemed supporters and consider adding your own commitment to Code.org's
+    transformative cause.
   donate_page_donation_policy_title: 寄付ポリシーについて
   donate_page_donation_policy_desc: 寄付金の取り扱いと配分方法についてご覧ください。
   donate_tabs_tab_label_daf_direct: DAF ダイレクト
@@ -1568,6 +1613,9 @@ ja:
     of Code ライブのエピソードを通じて、自宅でも学習を続けてください。
   hoc_live_join_us: あなたもやってみませんか？
   hoc_live_learn_more: もっと詳しく知る
+  hoc_live_map_and_events_message: During peak Hour of Code traffic, we use a static
+    map to save bandwidth and keep our site running. To see a dynamic map of all events
+    [click here](%{map_url}), and to see the full event list [click here](%{events_url}).
   hoc_overview_oceans_tutorial_header: "  AI for Oceans  "
   hoc_overview_oceans_tutorial_desc: "  人工知能（AI）、機械学習、トレーニングデータ、偏見について学びながら、倫理的な問題やAIが世界の問題に対処するためにどのように利用できるかを探ります。
     \ "
@@ -2108,6 +2156,22 @@ ja:
   handouts_onepager: このチラシを使って、Hour of Codeを広めましょう
   handouts_brochure: このパンフレットを、先生や学校に配りましょう
   handouts_participationguide: 以下のイベント開催ガイドを使って、イベントのプランを建てよう
+  poster_aria_label_minecraft: 'Download a poster featuring Minecraft Education: Generation
+    AI'
+  poster_aria_label_dance_ai_01: 'Download a poster featuring Dance Party: AI Edition
+    frog, moose, and cat characters'
+  poster_aria_label_dance_ai_02: 'Download a poster featuring Dance Party: AI Edition
+    robot, sloth, and shark characters'
+  poster_aria_label_oceans_01: Download a poster featuring AI for Oceans underwarer
+    scene with AI Bot selecting a fish
+  poster_aria_label_oceans_02: Download a poster featuring AI for Oceans fish characters
+    with different emotions
+  poster_aria_label_steph: Download a poster featuring NBA star Steph Curry
+  poster_aria_label_malala: Download a poster featuring activist Malala Yousafzai
+  poster_aria_label_hadi: Download a poster featuring Code.org founder Hadi Partovi
+  poster_aria_label_mary: Download a poster featuring General Motors CEO Mary Barra
+  poster_aria_label_satya: Download a poster featuring Microsoft CEO Satya Nadella
+  poster_aria_label_shakira: Download a poster featuring singer-songwriter Shakira
   videos_title: '以下のビデオは、コンピュータサイエンスの重要性を生徒に感じさせるのに役立ちます:'
   videos_what_most_schools_dont_teach: 多くの学校が教えていない（が大切な）こと（５分）
   videos_hoc_2014: Hour of Code - 誰でも学べるプログラミング
@@ -10824,6 +10888,8 @@ ja:
   video_library_page_inspirational_video_title_13: NASA、アワー・オブ・コードを祝う (2 分)
   video_library_page_inspirational_video_title_14: それはゲーム以上のものだ（1分）
   video_library_page_inspirational_video_title_15: コンピュータサイエンスで創造 (1 分)
+  video_library_page_inspirational_video_title_16: Young Women in Computer Science
+    (2 min)
   video_library_page_not_hacked_video_title_1: 'ハッキングされない方法: はじめに'
   video_library_page_not_hacked_video_title_2: 'ハッキングされない方法: パスワード'
   video_library_page_not_hacked_video_title_3: 'ハッキングされない方法: 認証とデバイスロック'
@@ -10967,6 +11033,26 @@ ja:
   elementary_page_computer_science_card_title_2: コンピューター・サイエンス・コネクション
   elementary_page_computer_science_description_1: コンピュータ・サイエンスの基礎概念を紹介し、コンピューティングとテクノロジーがどのように世界に影響を与えることができるかを探求する1年間の無料カリキュラム。
   elementary_page_computer_science_description_2: コンピュータ・サイエンス（CS）と、数学、語学、理科、社会など他の教科との関連性を持たせます。
+  hoc_beyond_hero_description: Now that you've completed your Hour of Code, take your
+    learning to the next level! Many partners offer free, engaging options for teachers
+    and students alike - no experience needed.
+  hoc_beyond_for_teachers_section_title: For Teachers
+  hoc_beyond_for_teachers_section_description: You've held an Hour of Code event in
+    your classroom... now what? Join the more than 2 million educators who use Code.org
+    to teach computer science. Anyone can learn!
+  hoc_beyond_for_teachers_course_title_1: Teach with Code.org’s Courses
+  hoc_beyond_for_teachers_course_title_2: Teach Courses from Other Providers
+  hoc_beyond_for_teachers_course_description_1: Code.org offers a full K-12 course
+    pathway and professional learning workshops for teachers, free of charge.
+  hoc_beyond_for_teachers_course_description_2: Compare options by different partners,
+    organized by grade band.
+  hoc_beyond_for_teachers_course_link_1: Teach with Code.org
+  hoc_beyond_for_teachers_course_link_2: Explore other providers
+  hoc_beyond_carousel_title: For Students
+  hoc_beyond_carousel_description: Want to keep learning after Hour of Code? Check
+    out these activities for learners of all ages and skill levels.
+  hoc_beyond_submit_activity_form: Submit your own activity [here](%{form_url}).
+  hoc_beyond_end_section_label: The Hour of Code is organized by [Code.org](%{home_page})
   language_code:
     ar: アラビア語
     az: アゼルバイジャン語

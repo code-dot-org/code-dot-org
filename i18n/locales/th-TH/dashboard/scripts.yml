@@ -2817,6 +2817,10 @@ th:
           description_short: ศึกษาแนวคิดทั้งหมดที่เกี่ยวกับวิทยาการคอมพิวเตอร์พื้นฐาน ก่อนลงมือคิดงานศิลปะ เรื่องราวหรือเกมของคุณเอง
         self-paced-pl-csp2-2023:
           title: 'โมดูล 2: การนำทาง Code.org'
+        musiclab:
+          lessons:
+            lesson-3:
+              name: เล่นฟรี
         csa-frq-practice-2022:
           lessons:
             lesson-4:
@@ -2980,3 +2984,16 @@ th:
               display_name: ตอนที่ 1
             lessonGroup-3:
               display_name: ตอนที่ 2
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: เหตุการณ์
+            lesson-4:
+              name: พฤติกรรม
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: ลูป
+            lesson-4:
+              name: เงื่อนไข
+          title: แนะนำวิทยาการคอมพิวเตอร์เบื้องต้น

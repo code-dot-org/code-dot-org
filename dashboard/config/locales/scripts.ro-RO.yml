@@ -3479,6 +3479,10 @@ ro:
           student_description: Programeaza animale şi alte creaturi Minecraft în propria
             ta versiune a jocului.
           title: Minecraft Designer Hour of Code
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Joc la liber
         netsim:
           title: Simulator Internet
         nevada-standards-aligned-fifth-grade-2023:
@@ -4219,6 +4223,23 @@ ro:
           title: 'Modulul 2: Navigare prin Code.org'
         self-paced-pl-csp2-2023:
           title: 'Modulul 2: Navigare prin Code.org'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Bucle
+            lesson-4:
+              name: Condiţionale
+            lesson-6:
+              name: Pașii următori
+          title: Introducere în Informatică
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Evenimente
+            lesson-4:
+              name: Comportamente
+            lesson-5:
+              name: Pașii următori
         soccer:
           description: Creează un joc de fotbal
           description_short: Creează un joc de fotbal

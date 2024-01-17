@@ -382,13 +382,16 @@
     }
   },
   "https://studio.code.org/s/csd4-2023/lessons/9/levels/1": {
+    "display_name": "Apps for Good #1",
     "short_instructions": "Draw a 1x1 square above and to the left of the turtle's starting position. Click to see full instructions.",
     "long_instructions": "## Do More Durham\n\nWhat social issue do you think this app was designed to address?\n\nHow does it accomplish this?"
   },
   "https://studio.code.org/s/csd4-2023/lessons/9/levels/2": {
+    "display_name": "Apps for Good #2",
     "long_instructions": "## Water Conservation\n\n-   What social issue do you think this app was designed to address?\n-   How does it accomplish this?"
   },
   "https://studio.code.org/s/csd4-2023/lessons/9/levels/3": {
+    "display_name": "Apps for Good #3",
     "long_instructions": "## Four Square\n\nWhat social issue do you think this app was designed to address?\n\nHow does it accomplish this?"
   },
   "https://studio.code.org/s/csd4-2023/lessons/11/levels/1": {

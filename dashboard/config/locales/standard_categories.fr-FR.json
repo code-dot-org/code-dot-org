@@ -8,6 +8,15 @@
         "2": {
           "description": "Les élèves utilisent les médias et les environnements numériques pour communiquer et travailler en collaboration, y compris à distance, afin de favoriser l'apprentissage individuel et de contribuer à l'apprentissage des autres."
         },
+        "2-A-i": {
+          "description": "Représentation - Abstraction"
+        },
+        "2-A-ii": {
+          "description": "Représentation - Représentation symbolique"
+        },
+        "2-A-iii": {
+          "description": "Représentation - Structures de données"
+        },
         "3": {
           "description": "Les élèves utilisent des outils numériques pour recueillir, évaluer et utiliser des informations."
         },
@@ -49,6 +58,24 @@
         },
         "5": {
           "description": "Les étudiants comprennent les problèmes humains, culturels et sociétaux liés à la technologie et pratiquent un comportement légal et éthique."
+        },
+        "5-A-ii": {
+          "description": "IA éthique - Critères de conception éthiques"
+        },
+        "5-B-i": {
+          "description": "IA et culture - L'IA dans la vie quotidienne"
+        },
+        "5-B-ii": {
+          "description": "IA et culture - Confiance et responsabilité"
+        },
+        "5-C-ii": {
+          "description": "L'IA et l'économie - Effets sur l'emploi"
+        },
+        "5-D-i": {
+          "description": "L'IA au service du bien social - Démocratisation de la technologie de l'IA"
+        },
+        "5-D-ii": {
+          "description": "L'IA au service du bien social : utiliser l'IA pour résoudre les problèmes de société"
         },
         "6": {
           "description": "Les élèves démontrent une bonne compréhension des concepts, des systèmes et des opérations technologiques."

@@ -3,9 +3,24 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
+# Congratulations, you are finished! 
+
+<img src="https://images.code.org/da2033ad4fc1471a7729b273fc29d630-image-1673466799576.png" alt="Image of dance party characters celebrating" style="float: left; height: 300px; clear: both; margin: 0 20px 20px 0;">
+
+<div style="clear:both"/>
+
 # Next Steps
 
-<img src="https://images.code.org/4c4b6d046560e06ffc2ee3e73ee5601c-image-1679963901855.png" alt="Image of singing bird" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 0px 0px 0;">
+## Teaching CS 
+
+* #### Try out our free, and fun, elementary courses by grade-level in <a href="https://code.org/educate/csf" target="blank" rel="noopener noreferrer" >Computer Science Fundamentals</a>.
+
+* #### Teach CS while covering core subject standards with our <a href="https://code.org/educate/csc" target="blank" rel="noopener noreferrer" >Computer Science Connections</a> curriculum.
+
+* #### Explore careers in computer science with your students in<a href="https://code.org/csjourneys" target="blank" rel="noopener noreferrer"> CS Journeys</a>. 
+<br>
+
+<img src="https://images.code.org/4c4b6d046560e06ffc2ee3e73ee5601c-image-1679963901855.png" alt="Image of singing bird" style="border-radius:20px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 0px 0px 0;">
 
 ## Continue learning
 
@@ -15,7 +30,7 @@ markdown <<MARKDOWN
 
 * #### Explore careers in computer science with your students and <a href="https://code.org/csjourneys" target="blank" rel="noopener noreferrer">CS Journeys</a>. 
 
-* #### Get familiar with all of our <a href = "https://code.org/educate/csc" target="blank" rel="noopener noreferrer">CS Connections Modules</a>.
+* #### Get familiar with all of our <a href = "https://code.org/educate/csc" target="blank" rel="noopener noreferrer">CS Connections Modules</a> like the ones featured in this training. 
 
 ## Revisit this content
 
@@ -32,6 +47,6 @@ markdown <<MARKDOWN
 
 <br>
 
-# Thank you for learning with us!
+## Next, let's see how we can implement CS in our classes!
 
 MARKDOWN

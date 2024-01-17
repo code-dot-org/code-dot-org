@@ -2941,6 +2941,10 @@ nn:
             lessonGroup-4:
               display_name: Variablar
           description_short: Lær alle konspta i grunnleggande informatikk og skap din eigen kunst, historie eller spel.
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Gjer kva du vil
         test-nv-coursea-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3053,3 +3057,20 @@ nn:
               display_name: 'Kapittel 2: Bygge fysiske prototypar'
         csd-post-survey-2024:
           title: Undersøking etter kurs
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Hendingar
+            lesson-4:
+              name: Atferd
+            lesson-5:
+              name: Neste steg
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Løkker
+            lesson-4:
+              name: Betingelser
+            lesson-6:
+              name: Neste steg
+          title: Introduksjon til informatikk

@@ -1,37 +1,16 @@
-.carousel-wrapper#pl-middle-high-carousel
-  .carousel{style: "height: 180px"}
-    .slides
-      .slide
-        %p.quote-text{style: "font-size: 1.25rem"}
-          =hoc_s(:pl_middle_high_quotes_01)
-        %p AP® CSA Teacher <span>•</span> Nevada
-      .slide
-        %p.quote-text{style: "font-size: 1.25rem"}
-          =hoc_s(:pl_middle_high_quotes_02)
-        %p CS Discoveries Teacher <span>•</span> Alaska
-      .slide
-        %p.quote-text{style: "font-size: 1.25rem"}
-          =hoc_s(:pl_middle_high_quotes_03)
-        %p CS Principles Teacher <span>•</span> New Jersey
+.carousel-wrapper
+  %swiper-container#mid-high-carousel{navigation: false, init: "false"}
+    %swiper-slide
+      %p.quote-text{style: "font-size: 1.25rem"}
+        =hoc_s(:pl_middle_high_quotes_01)
+      %p.no-margin-bottom AP® CSA Teacher <span>•</span> Nevada
+    %swiper-slide
+      %p.quote-text{style: "font-size: 1.25rem"}
+        =hoc_s(:pl_middle_high_quotes_02)
+      %p.no-margin-bottom CS Discoveries Teacher <span>•</span> Alaska
+    %swiper-slide
+      %p.quote-text{style: "font-size: 1.25rem"}
+        =hoc_s(:pl_middle_high_quotes_03)
+      %p.no-margin-bottom CS Principles Teacher <span>•</span> New Jersey
 
-  .pagination.left-align
-    #pl-middle-high-carousel-pagination
-
-%script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
-%script{:src=>'/js/jquery.touchSwipe.min.js'}
-:javascript
-  $(document).ready(function() {
-
-    var id = '#pl-middle-high-carousel';
-    // Define the carousel using the ID.
-    $(id + ' .slides').carouFredSel({
-      items : 1,
-      auto  : false,
-      responsive : true,
-      pagination : '#pl-middle-high-carousel-pagination',
-      swipe	: {
-        onTouch : true,
-        onMouse : false
-      },
-    });
-  });
+= view :swiper

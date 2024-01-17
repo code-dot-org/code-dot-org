@@ -2467,6 +2467,10 @@
           student_description: Programmer dyr og andre Minecraft-vesener i din egen
             versjon av Minecraft.
           title: Kodetimens Minecraft-designer
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Fritt spill
         netsim:
           description: Lær om hvordan Internett fungerer.
           description_short: Lær om hvordan Internett fungerer.
@@ -2593,6 +2597,23 @@
           description: Lär ut funktionell programmering genom algebra
           description_short: Lär ut funktionell programmering genom algebra
           student_description: Lär ut funktionell programmering genom algebra
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Løkker
+            lesson-4:
+              name: Betingelser
+            lesson-6:
+              name: De Neste Trinnene
+          title: Introduksjon til informatikk
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Hendelser
+            lesson-4:
+              name: Oppførsler
+            lesson-5:
+              name: De Neste Trinnene
         soccer:
           name: fotball
         spelling-bee:
