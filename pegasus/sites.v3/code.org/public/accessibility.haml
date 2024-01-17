@@ -23,9 +23,9 @@ theme: responsive_full_width
   .wrapper
     .text-wrapper
       %h2
-        = hoc_s(:accessibility_efforts_title)
+        = hoc_s(:accessibility_efforts_heading_2024)
       %p.body-two
-        = hoc_s(:accessibility_efforts_desc)
+        = hoc_s(:accessibility_efforts_card_desc_1_2024)
     .grid-container
       - item_count = 4
       - item_count.times do |index|
@@ -37,7 +37,7 @@ theme: responsive_full_width
               =hoc_s("accessibility_efforts_card_title_#{index + 1}")
             %p.body-three.has-external-link
               - if index == 1
-                =hoc_s(:accessibility_efforts_card_desc_2, markdown: :inline, locals: {voluntary_url: "https://www.section508.gov/sell/vpat/"})
+                =hoc_s(:accessibility_efforts_card_desc_2, markdown: :inline, locals: {info_url: "https://support.code.org/hc/en-us/articles/20433651753101-Voluntary-Product-Accessibility-Template-2023"})
               - elsif index == 3
                 =hoc_s(:accessibility_efforts_card_desc_4, markdown: :inline, locals: {wcag_url: "https://www.w3.org/TR/WCAG20/"})
               - else
