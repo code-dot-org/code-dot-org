@@ -2478,6 +2478,10 @@ th:
           description_short: เขียนโปรแกรมให้กับสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกมไมน์คราฟท์ในแบบฉบับของคุณเอง
           student_description: เขียนโปรแกรมให้กับสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกมไมน์คราฟท์ในแบบฉบับของคุณเอง
           title: นักออกแบบชั่วโมงแห่งโค้ดตอนไมน์คราฟท์
+        musiclab:
+          lessons:
+            lesson-3:
+              name: เล่นฟรี
         netsim:
           title: เครื่องจำลองอินเตอร์เน็ต
         nevada-standards-aligned-fifth-grade-2023:
@@ -3051,6 +3055,19 @@ th:
           title: 'โมดูล 2: การนำทาง Code.org'
         self-paced-pl-csp2-2023:
           title: 'โมดูล 2: การนำทาง Code.org'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: ลูป
+            lesson-4:
+              name: เงื่อนไข
+          title: แนะนำวิทยาการคอมพิวเตอร์เบื้องต้น
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: เหตุการณ์
+            lesson-4:
+              name: พฤติกรรม
         soccer:
           description: สร้างเกมฟุตบอล
           description_short: สร้างเกมฟุตบอล

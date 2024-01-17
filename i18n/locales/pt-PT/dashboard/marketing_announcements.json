@@ -1,104 +1,9 @@
 {
   "banners": {
-    "csleadersprize": {
-      "title": "",
-      "body": "",
-      "buttonText": "Saber mais"
-    },
-    "csjourneys-22": {
-      "title": "",
-      "body": "",
-      "buttonText": "Saber mais"
-    },
-    "hoc-more": {
-      "title": "",
-      "body": "O site da Hora do Código tem mais de 500 atividades de ciência da computação para todas as idades e níveis de experiência, desenvolvidos pela Code.org e parceiros.",
-      "buttonText": ""
-    },
     "superhero": {
       "title": "",
       "body": "",
       "buttonText": "Saber mais"
-    },
-    "csjourneys": {
-      "title": "",
-      "body": "",
-      "buttonText": "Saber mais"
-    },
-    "class-schedule-survey": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "back-to-school-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Saber mais"
-    },
-    "teacher-apps-open-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Junta-te a nós"
-    },
-    "teacher-apps-closing-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Junta-te a nós"
-    },
-    "teacher-apps-nominate-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Indique um Professor"
-    },
-    "teacher-apps-stillon-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Junta-te a nós"
-    },
-    "home-learning-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Visualizar as Ideias do Projeto"
-    },
-    "soonhoc-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "codebytes-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Saber mais"
-    },
-    "ai-2020": {
-      "title": "Explore a inteligência artificial e o aprendizado de máquina",
-      "body": "",
-      "buttonText": "Saber mais"
-    },
-    "congrats-certificate-share": {
-      "title": "",
-      "body": "",
-      "buttonText": "Começar"
-    },
-    "coldplay": {
-      "title": "",
-      "body": "",
-      "buttonText": "Experimentar"
-    },
-    "ai-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "Saber mais"
-    },
-    "ai-pl-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "Saber mais"
-    },
-    "state-of-cs-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
     },
     "hoc-2023": {
       "title": "",
@@ -106,6 +11,11 @@
       "buttonText": "Saber mais"
     },
     "hoc-2023-dance-ai": {
+      "title": "",
+      "body": "",
+      "buttonText": "Saber mais"
+    },
+    "co-teacher": {
       "title": "",
       "body": "",
       "buttonText": "Saber mais"

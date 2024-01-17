@@ -756,6 +756,21 @@
           "name": "Laboratoř Sprite"
         },
         "weblab": {
+          "categories": {
+            "html_tags": {
+              "expressions": {
+                "body": {
+                  "content": "# Body\n\nTag `<body>` definuje hlavní obsah dokumentu HTML, který bude přímo viditelný na vaší webové stránce. Tento tag `<body>` obsahuje veškerý obsah dokumentu HTML, jako jsou nadpisy, odstavce, obrázky, hypertextové odkazy, tabulky, seznamy atd.",
+                  "examples": {
+                    "": {
+                      "description": "Použití `<body>` k vytvoření jednoduché webové stránky."
+                    }
+                  },
+                  "short_description": "# Body\n\nTag \\<body> definuje hlavní obsah dokumentu HTML, který bude přímo viditelný na vaší webové stránce. Tento tag \\<body> obsahuje veškerý obsah dokumentu HTML, jako jsou nadpisy, odstavce, obrázky, hypertextové odkazy, tabulky, seznamy atd."
+                }
+              }
+            }
+          },
           "name": "Web Lab"
         }
       }

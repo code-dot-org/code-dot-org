@@ -1137,6 +1137,10 @@ eu:
               display_name: Pertsonaiak
             lessonGroup-4:
               display_name: Aldagaiak
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Joku askea
         csa-frq-practice-2022:
           lessons:
             lesson-4:
@@ -1222,3 +1226,16 @@ eu:
           lesson_groups:
             lessonGroup-7:
               display_name: Sarrera
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Gertaerak
+            lesson-4:
+              name: Jokabideak
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Itzuliak
+            lesson-4:
+              name: Baldintzak
+          title: Konputazio zientzetarako sarrera

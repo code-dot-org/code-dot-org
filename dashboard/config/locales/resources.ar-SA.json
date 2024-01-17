@@ -1162,22 +1162,22 @@
         },
         "introduction_to_machine_learning/csd/2021": {
           "type": "شرائح",
-          "name": "مقدمة للتعلم الآلي",
+          "name": "مقدمة لتعلم الآلة",
           "url": "https://docs.google.com/presentation/d/1uT4weLbovBliCfxnkCERfjXWlWWRAYiJQ7brwfYP22U/copy"
         },
         "ai_what_is_machine_learning_/csd/2021": {
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "فيديو",
-          "name": "الذكاء الاصطناعي: ما هو التعلم الآلي؟"
+          "name": "الذكاء الاصطناعي: ما هو تعلم الآلة؟"
         },
         "types_of_machine_learning/csd/2021": {
           "type": "شرائح",
-          "name": "أنواع التعلم الآلي",
+          "name": "أنواع تعلم الآلة",
           "url": "https://docs.google.com/presentation/d/1FwOsAQW3y0eQ7NwdUitWwXbj74egitdSdrHGnSxXuOg/copy"
         },
         "types_of_machine_learning_2/csd/2021": {
           "type": "الحل النموذجي",
-          "name": "أنواع التعلم الآلي",
+          "name": "أنواع تعلم الآلة",
           "url": "https://docs.google.com/document/d/1vFoKH-h2k6wZRtlOeXYRzVORv1dzTsFO7EJ7l_CxV6Q/edit#"
         },
         "innovations_in_ai/csd/2021": {
@@ -1202,17 +1202,17 @@
         },
         "shoe_survey/csd/2021": {
           "type": "مصدر",
-          "name": "استطلاع الأحذية",
+          "name": "استبيان الأحذية",
           "url": "https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform"
         },
         "patterns_in_data_3/csd/2021": {
           "type": "الحل النموذجي",
-          "name": "[KEY] الأنماط في البيانات",
+          "name": "[مفتاح] الأنماط في البيانات",
           "url": "https://docs.google.com/document/d/1VyPGDJPygjGWgfjMJZR7rhwggk3mDz8HYJMm1KrAPzw/view"
         },
         "_key_classification_models/csd/2021": {
           "type": "الحل النموذجي",
-          "name": "[KEY] نماذج التصنيف",
+          "name": "[مفتاح] نماذج التصنيف",
           "url": "https://docs.google.com/document/d/1mCap8x_7umJbt3x7tRQj6J_txrfJNjHosNNSnyb5FKc/view"
         },
         "classification_models_1/csd/2021": {
@@ -1242,7 +1242,7 @@
         },
         "_key_training_a_model_in_ai_lab/csd/2021": {
           "type": "الحل النموذجي",
-          "name": "[KEY] تدريب نموذج في مختبر الذكاء الاصطناعي",
+          "name": "[مفتاح] تدريب نموذج في مختبر الذكاء الاصطناعي",
           "url": "https://docs.google.com/document/d/1B1PstB4HD-nWmOvUvyb0bpaZPm-ecx9iBMn9bj9fP4c/view"
         },
         "accuracy_in_ai_lab/csd/2021": {
@@ -1276,7 +1276,9 @@
           "type": "فيديو"
         },
         "model_cards/csd/2021": {
-          "type": "شرائح"
+          "type": "شرائح",
+          "name": "بطاقات نموذجية",
+          "url": "https://docs.google.com/presentation/d/1KLPpUnpn_gu5KqS0S5rVAjr3pqv6kBSeZ3V7ngydz4E/copy"
         },
         "model_cards_in_ai_lab/csd/2021": {
           "name": "بطاقات نموذجية في مختبر الذكاء الاصطناعي",
@@ -1290,7 +1292,7 @@
         },
         "_key_zoo_models/csd/2021": {
           "type": "الحل النموذجي",
-          "name": "[KEY] نماذج حديقة الحيوان",
+          "name": "[مفتاح] نماذج حديقة الحيوان",
           "url": "https://docs.google.com/document/d/1Oz8_h4DT9gIjt0SgFsEle0BZzDlRocl63hcPKHSLclc/view"
         },
         "selecting_a_label/csd/2021": {
@@ -1299,10 +1301,14 @@
           "url": "https://drive.google.com/file/d/1iCd0-YM5JK2Bk1u3XgEY6o0xcGwJdkau/view?usp=sharing"
         },
         "if-statements_in_app_lab/csd/2021": {
-          "type": "فيديو"
+          "type": "فيديو",
+          "name": "بيانات اذا في مختبر التطبيقات",
+          "url": "https://www.youtube.com/watch?v=0oG3Wck2fRU"
         },
         "model_cards_in_app_lab/csd/2021": {
-          "type": "شرائح"
+          "type": "شرائح",
+          "name": "بطاقات نموذجية في مختبر التطبيقات",
+          "url": "https://docs.google.com/presentation/d/1q_9LV_tmFEEqwCMuMo77heheFEyhATwMWYyVg6tn2HE/copy"
         },
         "numerical_models/csd/2021": {
           "type": "شرائح",
@@ -1311,12 +1317,12 @@
         },
         "zombie_prediction_-_answer_key/csd/2021": {
           "type": "الحل النموذجي",
-          "name": "[KEY] توقع الزومبي",
+          "name": "[مفتاح] توقع الزومبي",
           "url": "https://docs.google.com/document/d/1R2NzYw-wTtx05wdHMKBESh3XchqQnILHKM_wXGl1vow/edit"
         },
         "_key_numerical_accuracy/csd/2021": {
           "type": "الحل النموذجي",
-          "name": "[KEY] الدقة العددية",
+          "name": "[مفتاح] الدقة العددية",
           "url": "https://docs.google.com/document/d/1NtS2vGqt_4uvDpGn1-u5AR2o_Iza_Oi4whtpq41eNt0/edit"
         },
         "numerical_data_in_ai_lab/csd/2021": {
@@ -1345,11 +1351,13 @@
           "url": "https://drive.google.com/file/d/1gDKIbkvicZqyXlyj2a5InXaU9_lcxVlU/view?usp=sharing"
         },
         "customizing_apps/csd/2021": {
-          "type": "شرائح"
+          "type": "شرائح",
+          "name": "تخصيص التطبيقات",
+          "url": "https://docs.google.com/presentation/d/1EaYhIdYec-meNd2rrDnqrM76CYxNU54WDghIb0PCLks/copy"
         },
         "ai_code_of_ethics/csd/2021": {
           "type": "شرائح",
-          "name": "برمجة أخلاقيات الذكاء الاصطناعي",
+          "name": "مدونة أخلاقيات الذكاء الاصطناعي",
           "url": "https://docs.google.com/presentation/d/1jpT_cSs45ZwAz7NMYTn6vhefu3ImndFWfGubS_5wkGw/copy"
         },
         "ai_ethics_research_reflection/csd/2021": {
@@ -1359,38 +1367,42 @@
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "فيديو",
-          "name": "الأخلاق والذكاء الاصطناعي: المساواة في الوصول والتحيز الخوارزمي",
+          "name": "الأخلاقيات والذكاء الاصطناعي: المساواة في الوصول والتحيز الخوارزمي",
           "url": "https://www.youtube.com/watch?v=tJQSyzBUAew"
         },
         "our_ai_code_of_ethics_template_/csd/2021": {
           "type": "شرائح",
-          "name": "برمجة أخلاقيات الذكاء الاصطناعي الخاصة بنا [Template]",
+          "name": "مدونة أخلاقيات الذكاء الاصطناعي الخاصة بنا [نموذج]",
           "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing"
         },
         "make_a_machine_learning_app/csd/2021": {
           "type": "شرائح",
-          "name": "قم بإنشاء تطبيق التعلم الآلي",
+          "name": "قم بإنشاء تطبيق تعلم الآلة",
           "url": "https://docs.google.com/presentation/d/1SDcwI7zrjM9G6H8ncufxiJXBZoozWk7SwvKl_GOMle4/copy"
         },
         "create_an_ml_app/csd/2021": {
-          "type": "نموذج التقييم"
+          "type": "نموذج التقييم",
+          "name": "قم بإنشاء تطبيق ML",
+          "url": "https://docs.google.com/document/d/1iB8J-cuTNv00K-WSykY53O-UONmms6xxExgNXlLdVeA/view"
         },
         "issue_statements/csd/2021": {
-          "type": "شرائح"
+          "type": "شرائح",
+          "name": "بيانات المشكلة",
+          "url": "https://docs.google.com/presentation/d/11vB9jz1WAIcz2NFEJNMrl5IT87DfVfEPWgTxHG2_7Z4/copy"
         },
         "survey_planning/csd/2021": {
-          "name": "تصميم أداة لجمع البيانات",
+          "name": "تخطيط الاستبيان",
           "type": "شرائح",
           "url": "https://docs.google.com/presentation/d/1OOvhcw8TjjItSk8j40LauRLaKicLb2uNb-OCSs6fyX4/copy"
         },
         "creating_a_survey/csd/2021": {
           "type": "مصدر",
-          "name": "إنشاء استطلاع",
+          "name": "إنشاء استبيان",
           "url": "https://drive.google.com/file/d/1L8WM8UEpOUW7rY1DaGImAco2BGzj6J_y/view?usp=sharing"
         },
         "survey_data_in_ai_lab/csd/2021": {
           "type": "شرائح",
-          "name": "بيانات الاستطلاع في مختبر الذكاء الاصطناعي",
+          "name": "بيانات الاستبيان في مختبر الذكاء الاصطناعي",
           "url": "https://docs.google.com/presentation/d/1DhTshRLCTnVkQHEkpThwedSXL5NEXKtjwATlQIJk33w/copy"
         },
         "cleaning_survey_data/csd/2021": {
@@ -1400,12 +1412,12 @@
         },
         "view_and_download_survey_data/csd/2021": {
           "type": "فيديو",
-          "name": "عرض بيانات الاستطلاع وتنزيلها",
+          "name": "عرض وتنزيل بيانات الاستبيان",
           "url": "https://www.youtube.com/watch?v=J0Avopx7FpM"
         },
         "troubleshooting_models/csd/2021": {
           "type": "شرائح",
-          "name": "نماذج استكشاف الأخطاء وإصلاحها",
+          "name": "نماذج اكتشاف الأخطاء وإصلاحها",
           "url": "https://docs.google.com/presentation/d/1LUkDD4PMefznEJh27EZruk6V8343JrYBpMZ3ThjmcLA/copy"
         },
         "creating_an_app/csd/2021": {
@@ -1415,7 +1427,7 @@
         },
         "_template_5_why_s/csd/2021": {
           "type": "مصدر",
-          "name": "[Template] 5 لماذا",
+          "name": "[نموذج] ٥ لماذا",
           "url": "https://docs.google.com/presentation/d/18OGQCoNKsi63ArkV0jECeHWsS_accFDoYcDh9871ejk/edit"
         },
         "design_an_ai_app/csd/2021": {
@@ -4020,24 +4032,27 @@
         "ai_what_is_machine_learning_/csd/2022": {
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "فيديو",
-          "name": "الذكاء الاصطناعي: ما هو التعلم الآلي؟"
+          "name": "الذكاء الاصطناعي: ما هو تعلم الآلة؟"
         },
         "introduction_to_machine_learning/csd/2022": {
           "type": "شرائح",
-          "name": "مقدمة للتعلم الآلي"
+          "name": "مقدمة لتعلم الآلة",
+          "url": "https://docs.google.com/presentation/d/1uT4weLbovBliCfxnkCERfjXWlWWRAYiJQ7brwfYP22U/template/preview"
         },
         "types_of_machine_learning/csd/2022": {
           "type": "شرائح",
-          "name": "أنواع التعلم الآلي"
+          "name": "أنواع تعلم الآلة",
+          "url": "https://docs.google.com/presentation/d/1FwOsAQW3y0eQ7NwdUitWwXbj74egitdSdrHGnSxXuOg/template/preview"
         },
         "types_of_machine_learning_2/csd/2022": {
           "type": "الحل النموذجي",
-          "name": "أنواع التعلم الآلي",
+          "name": "أنواع تعلم الآلة",
           "url": "https://docs.google.com/document/d/1vFoKH-h2k6wZRtlOeXYRzVORv1dzTsFO7EJ7l_CxV6Q/edit#"
         },
         "innovations_in_ai/csd/2022": {
           "type": "شرائح",
-          "name": "الابتكارات في مجال الذكاء الاصطناعي"
+          "name": "الابتكارات في مجال الذكاء الاصطناعي",
+          "url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/template/preview"
         },
         "seeing_ai/csd/2022": {
           "name": "رؤية الذكاء الاصطناعي",
@@ -4046,30 +4061,33 @@
         },
         "_key_patterns_in_data/csd/2022": {
           "type": "الحل النموذجي",
-          "name": "[KEY] الأنماط في البيانات",
+          "name": "[مفتاح] الأنماط في البيانات",
           "url": "https://docs.google.com/document/d/1VyPGDJPygjGWgfjMJZR7rhwggk3mDz8HYJMm1KrAPzw/view"
         },
         "finding_patterns_in_data/csd/2022": {
           "type": "فيديو",
-          "name": "العثور على أنماط في البيانات"
+          "name": "العثور على أنماط في البيانات",
+          "url": "https://www.youtube.com/watch?v=edFO0bdpoHY"
         },
         "patterns_in_data/csd/2022": {
           "type": "شرائح",
-          "name": "الأنماط في البيانات"
+          "name": "الأنماط في البيانات",
+          "url": "https://docs.google.com/presentation/d/1FabWi7tB1SI-YjqiPPfgU3Yljb3lJpoD1mFRmzUJiI8/template/preview"
         },
         "shoe_survey/csd/2022": {
           "type": "مصدر",
-          "name": "استطلاع الأحذية",
+          "name": "استبيان الأحذية",
           "url": "https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform"
         },
         "_key_classification_models/csd/2022": {
           "type": "الحل النموذجي",
-          "name": "[KEY] نماذج التصنيف",
+          "name": "[مفتاح] نماذج التصنيف",
           "url": "https://docs.google.com/document/d/1mCap8x_7umJbt3x7tRQj6J_txrfJNjHosNNSnyb5FKc/view"
         },
         "classification_models_1/csd/2022": {
           "type": "شرائح",
-          "name": "نماذج التصنيف"
+          "name": "نماذج التصنيف",
+          "url": "https://docs.google.com/presentation/d/1f5PG9ASPlRlXNM7gBMOribyQaYpVAaVW9EXWjtrqk1c/template/preview"
         },
         "fruit_veggie_cards/csd/2022": {
           "type": "مصدر",
@@ -4078,7 +4096,7 @@
         },
         "_key_training_a_model_in_ai_lab/csd/2022": {
           "type": "الحل النموذجي",
-          "name": "[KEY] تدريب نموذج في مختبر الذكاء الاصطناعي",
+          "name": "[مفتاح] تدريب نموذج في مختبر الذكاء الاصطناعي",
           "url": "https://docs.google.com/document/d/1B1PstB4HD-nWmOvUvyb0bpaZPm-ecx9iBMn9bj9fP4c/view"
         },
         "accuracy_in_ai_lab/csd/2022": {
@@ -4092,7 +4110,8 @@
         },
         "introduction_to_ai_lab_1/csd/2022": {
           "name": "مقدمة لمختبر الذكاء الاصطناعي",
-          "type": "فيديو"
+          "type": "فيديو",
+          "url": "https://www.youtube.com/watch?v=bGJ05vdI3xA"
         },
         "selecting_features/csd/2022": {
           "type": "مصدر",
@@ -4101,7 +4120,8 @@
         },
         "training_and_testing_in_ai_lab/csd/2022": {
           "name": "التدريب والاختبار في مختبر الذكاء الاصطناعي",
-          "type": "فيديو"
+          "type": "فيديو",
+          "url": "https://www.youtube.com/watch?v=HcCtdaiMWPQ"
         },
         "using_data_with_categorical_features/csd/2022": {
           "type": "مصدر",
@@ -4115,7 +4135,8 @@
         },
         "importing_models_in_app_lab/csd/2022": {
           "type": "شرائح",
-          "name": "استيراد النماذج في مختبر التطبيق"
+          "name": "استيراد النماذج في مختبر التطبيق",
+          "url": "https://docs.google.com/presentation/d/1gkngAaMoJdp-8q2S9zomxHukJcdChkxtC38EA4dWvc0/template/preview"
         },
         "ai_training_data_bias/csd/2022": {
           "name": "الذكاء الاصطناعي: بيانات التدريب والتحيز",
@@ -4123,20 +4144,24 @@
           "type": "فيديو"
         },
         "model_cards/csd/2022": {
-          "type": "شرائح"
+          "type": "شرائح",
+          "name": "بطاقات نموذجية",
+          "url": "https://docs.google.com/presentation/d/1gA1VmDOMUzEwsrPLOwZQm6wN3a1uUQozRDuPCTqQFhA/template/preview"
         },
         "_key_zoo_models/csd/2022": {
           "type": "الحل النموذجي",
-          "name": "[KEY] نماذج حديقة الحيوان",
+          "name": "[مفتاح] نماذج حديقة الحيوان",
           "url": "https://docs.google.com/document/d/1Oz8_h4DT9gIjt0SgFsEle0BZzDlRocl63hcPKHSLclc/view"
         },
         "model_cards_in_ai_lab/csd/2022": {
           "name": "بطاقات نموذجية في مختبر الذكاء الاصطناعي",
-          "type": "فيديو"
+          "type": "فيديو",
+          "url": "https://www.youtube.com/watch?v=tz_ptkv0NxA"
         },
         "saving_models_in_ai_lab/csd/2022": {
           "type": "شرائح",
-          "name": "نماذج الحفظ في مختبر الذكاء الاصطناعي"
+          "name": "نماذج الحفظ في مختبر الذكاء الاصطناعي",
+          "url": "https://docs.google.com/presentation/d/1M9dxiG9GmZfoYxe2QYE7nQs3vs9T1knh0qxA9tOTtf8/template/preview"
         },
         "selecting_a_label/csd/2022": {
           "type": "مصدر",
@@ -4144,27 +4169,34 @@
           "url": "https://drive.google.com/file/d/1iCd0-YM5JK2Bk1u3XgEY6o0xcGwJdkau/view?usp=sharing"
         },
         "if-statements_in_app_lab/csd/2022": {
-          "type": "فيديو"
+          "type": "فيديو",
+          "name": "بيانات اذا في مختبر التطبيقات",
+          "url": "https://www.youtube.com/watch?v=0oG3Wck2fRU"
         },
         "model_cards_in_app_lab/csd/2022": {
-          "type": "شرائح"
+          "type": "شرائح",
+          "name": "بطاقات نموذجية في مختبر التطبيقات",
+          "url": "https://docs.google.com/presentation/d/1q_9LV_tmFEEqwCMuMo77heheFEyhATwMWYyVg6tn2HE/template/preview"
         },
         "printable_model_cards/csd/2022": {
-          "type": "مصدر"
+          "type": "مصدر",
+          "name": "بطاقات النموذج القابلة للطباعة",
+          "url": "https://docs.google.com/presentation/d/1e9SanMqNO12cpQoNlMYLxC4F35qhkJ20hVnZ_-E2TbM/edit"
         },
         "_key_numerical_accuracy/csd/2022": {
           "type": "الحل النموذجي",
-          "name": "[KEY] الدقة العددية",
+          "name": "[مفتاح] الدقة العددية",
           "url": "https://docs.google.com/document/d/1NtS2vGqt_4uvDpGn1-u5AR2o_Iza_Oi4whtpq41eNt0/edit"
         },
         "_key_zombie_prediction/csd/2022": {
           "type": "الحل النموذجي",
-          "name": "[KEY] توقع الزومبي",
+          "name": "[مفتاح] توقع الزومبي",
           "url": "https://docs.google.com/document/d/1R2NzYw-wTtx05wdHMKBESh3XchqQnILHKM_wXGl1vow/edit"
         },
         "numerical_models/csd/2022": {
           "type": "شرائح",
-          "name": "نماذج عددية"
+          "name": "نماذج عددية",
+          "url": "https://docs.google.com/presentation/d/1lKn_IQjmALHkAS7B1iJzFfg5DXIexbgJQOhjJ2F0wpM/template/preview"
         },
         "_key_-_numerical_data_in_ai_lab/csd/2022": {
           "type": "الحل النموذجي",
@@ -4173,7 +4205,8 @@
         },
         "numerical_data_in_ai_lab/csd/2022": {
           "name": "البيانات العددية في مختبر الذكاء الاصطناعي",
-          "type": "شرائح"
+          "type": "شرائح",
+          "url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/template/preview"
         },
         "numerical_data_in_ai_lab_1/csd/2022": {
           "name": "البيانات العددية في مختبر الذكاء الاصطناعي",
@@ -4181,7 +4214,8 @@
         },
         "numerical_data_in_ai_lab_2/csd/2022": {
           "name": "البيانات العددية في مختبر الذكاء الاصطناعي",
-          "type": "فيديو"
+          "type": "فيديو",
+          "url": "https://www.youtube.com/watch?v=a4JH1D_D7s4"
         },
         "using_data_with_numerical_features/csd/2022": {
           "type": "مصدر",
@@ -4189,11 +4223,14 @@
           "url": "https://drive.google.com/file/d/1gDKIbkvicZqyXlyj2a5InXaU9_lcxVlU/view?usp=sharing"
         },
         "customizing_apps/csd/2022": {
-          "type": "شرائح"
+          "type": "شرائح",
+          "name": "تخصيص التطبيقات",
+          "url": "https://docs.google.com/presentation/d/1EaYhIdYec-meNd2rrDnqrM76CYxNU54WDghIb0PCLks/template/preview"
         },
         "ai_code_of_ethics/csd/2022": {
           "type": "شرائح",
-          "name": "برمجة أخلاقيات الذكاء الاصطناعي"
+          "name": "مدونة أخلاقيات الذكاء الاصطناعي",
+          "url": "https://docs.google.com/presentation/d/1jpT_cSs45ZwAz7NMYTn6vhefu3ImndFWfGubS_5wkGw/template/preview"
         },
         "ai_ethics_research_reflection/csd/2022": {
           "type": "نشرة الطالب",
@@ -4202,64 +4239,78 @@
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
           "type": "فيديو",
-          "name": "الأخلاق والذكاء الاصطناعي: المساواة في الوصول والتحيز الخوارزمي",
+          "name": "الأخلاقيات والذكاء الاصطناعي: المساواة في الوصول والتحيز الخوارزمي",
           "url": "https://www.youtube.com/watch?v=tJQSyzBUAew"
         },
         "our_ai_code_of_ethics_template_/csd/2022": {
           "type": "شرائح",
-          "name": "برمجة أخلاقيات الذكاء الاصطناعي الخاصة بنا [Template]",
+          "name": "مدونة أخلاقيات الذكاء الاصطناعي الخاصة بنا [نموذج]",
           "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing"
         },
         "create_an_ml_app/csd/2022": {
-          "type": "نموذج التقييم"
+          "type": "نموذج التقييم",
+          "name": "قم بإنشاء تطبيق ML",
+          "url": "https://docs.google.com/document/d/1iB8J-cuTNv00K-WSykY53O-UONmms6xxExgNXlLdVeA/view"
         },
         "make_a_machine_learning_app/csd/2022": {
           "type": "شرائح",
-          "name": "قم بإنشاء تطبيق التعلم الآلي"
+          "name": "قم بإنشاء تطبيق تعلم الآلة",
+          "url": "https://docs.google.com/presentation/d/1SDcwI7zrjM9G6H8ncufxiJXBZoozWk7SwvKl_GOMle4/template/preview"
         },
         "issue_statements/csd/2022": {
-          "type": "شرائح"
+          "type": "شرائح",
+          "name": "بيانات المشكلة",
+          "url": "https://docs.google.com/presentation/d/11vB9jz1WAIcz2NFEJNMrl5IT87DfVfEPWgTxHG2_7Z4/template/preview"
         },
         "creating_a_survey/csd/2022": {
           "type": "مصدر",
-          "name": "إنشاء استطلاع",
+          "name": "إنشاء استبيان",
           "url": "https://drive.google.com/file/d/1L8WM8UEpOUW7rY1DaGImAco2BGzj6J_y/view?usp=sharing"
         },
         "survey_planning/csd/2022": {
-          "name": "تصميم أداة لجمع البيانات",
-          "type": "شرائح"
+          "name": "تخطيط الاستبيان",
+          "type": "شرائح",
+          "url": "https://docs.google.com/presentation/d/1OOvhcw8TjjItSk8j40LauRLaKicLb2uNb-OCSs6fyX4/template/preview"
         },
         "creating_a_survey_in_google_forms/csd/2022": {
-          "type": "فيديو"
+          "type": "فيديو",
+          "name": "إنشاء استبيان في نماذج جوجل Google",
+          "url": "https://www.youtube.com/watch?v=Ot6eXUYb3P0"
         },
         "cleaning_survey_data/csd/2022": {
           "type": "فيديو",
-          "name": "بيانات استطلاع التنظيف"
+          "name": "بيانات استطلاع التنظيف",
+          "url": "https://www.youtube.com/watch?v=NBTYgU71Jgw"
         },
         "survey_data_in_ai_lab/csd/2022": {
           "type": "شرائح",
-          "name": "بيانات الاستطلاع في مختبر الذكاء الاصطناعي"
+          "name": "بيانات الاستبيان في مختبر الذكاء الاصطناعي",
+          "url": "https://docs.google.com/presentation/d/1DhTshRLCTnVkQHEkpThwedSXL5NEXKtjwATlQIJk33w/template/preview"
         },
         "view_and_download_survey_data/csd/2022": {
           "type": "فيديو",
-          "name": "عرض بيانات الاستطلاع وتنزيلها"
+          "name": "عرض وتنزيل بيانات الاستبيان",
+          "url": "https://www.youtube.com/watch?v=orn4dpcIiCk"
         },
         "troubleshooting_models/csd/2022": {
           "type": "شرائح",
-          "name": "نماذج استكشاف الأخطاء وإصلاحها"
+          "name": "نماذج اكتشاف الأخطاء وإصلاحها",
+          "url": "https://docs.google.com/presentation/d/1LUkDD4PMefznEJh27EZruk6V8343JrYBpMZ3ThjmcLA/template/preview"
         },
         "creating_an_app/csd/2022": {
           "type": "شرائح",
-          "name": "إنشاء تطبيق"
+          "name": "إنشاء تطبيق",
+          "url": "https://docs.google.com/presentation/d/1D6EZitkNOVznhERKFHT1uD0DCVa8aOvengtVf2C2LDQ/template/preview"
         },
         "_template_5_why_s/csd/2022": {
           "type": "مصدر",
-          "name": "[Template] 5 لماذا",
+          "name": "[نموذج] ٥ لماذا",
           "url": "https://docs.google.com/presentation/d/18OGQCoNKsi63ArkV0jECeHWsS_accFDoYcDh9871ejk/edit"
         },
         "design_an_ai_app/csd/2022": {
           "type": "شرائح",
-          "name": "تصميم تطبيق الذكاء الاصطناعي"
+          "name": "تصميم تطبيق الذكاء الاصطناعي",
+          "url": "https://docs.google.com/presentation/d/1VOiSzm2soXCy2PhOHfgxiuqmwtKJJrxGQ6xhJlwPfCY/template/preview"
         },
         "design_an_ai_app_1/csd/2022": {
           "type": "نموذج التقييم",
@@ -5607,7 +5658,7 @@
         },
         "ai_code_of_ethics/ai-ethics/2023": {
           "type": "شرائح",
-          "name": "برمجة أخلاقيات الذكاء الاصطناعي"
+          "name": "مدونة أخلاقيات الذكاء الاصطناعي"
         },
         "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
           "type": "فيديو"
@@ -7342,21 +7393,21 @@
         "ai_what_is_machine_learning_/csd/2023": {
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "فيديو",
-          "name": "الذكاء الاصطناعي: ما هو التعلم الآلي؟"
+          "name": "الذكاء الاصطناعي: ما هو تعلم الآلة؟"
         },
         "introduction_to_machine_learning/csd/2023": {
           "type": "شرائح",
-          "name": "مقدمة للتعلم الآلي",
+          "name": "مقدمة لتعلم الآلة",
           "url": "https://docs.google.com/presentation/d/1ZOSt4G-bEqIiFIWFWQjvY54I2YgHlCURXmtX1FYnpFw/template/preview"
         },
         "types_of_machine_learning/csd/2023": {
           "type": "شرائح",
-          "name": "أنواع التعلم الآلي",
+          "name": "أنواع تعلم الآلة",
           "url": "https://docs.google.com/presentation/d/1w2aMrTfjvyUJNQKXsy_01cUSFvSFLmB4-r3LIo3ZFVM/template/preview"
         },
         "types_of_machine_learning_2/csd/2023": {
           "type": "الحل النموذجي",
-          "name": "أنواع التعلم الآلي",
+          "name": "أنواع تعلم الآلة",
           "url": "https://docs.google.com/document/d/1EEHJruthZ3ObknGOaVsC2SKY5RaZp042ozgzGau5NWw/view"
         },
         "innovations_in_ai/csd/2023": {
@@ -7376,12 +7427,13 @@
         },
         "_key_patterns_in_data/csd/2023": {
           "type": "الحل النموذجي",
-          "name": "[KEY] الأنماط في البيانات",
+          "name": "[مفتاح] الأنماط في البيانات",
           "url": "https://docs.google.com/document/d/1XYw_VE2B-yxIBEe8zir93crlOiT3Ry78kq3YZo_2FPg/view"
         },
         "finding_patterns_in_data/csd/2023": {
           "type": "فيديو",
-          "name": "العثور على أنماط في البيانات"
+          "name": "العثور على أنماط في البيانات",
+          "url": "https://www.youtube.com/watch?v=edFO0bdpoHY"
         },
         "patterns_in_data/csd/2023": {
           "type": "شرائح",
@@ -7389,11 +7441,11 @@
         },
         "shoe_survey/csd/2023": {
           "type": "مصدر",
-          "name": "استطلاع الأحذية"
+          "name": "استبيان الأحذية"
         },
         "_key_classification_models/csd/2023": {
           "type": "الحل النموذجي",
-          "name": "[KEY] نماذج التصنيف"
+          "name": "[مفتاح] نماذج التصنيف"
         },
         "classification_models_1/csd/2023": {
           "type": "شرائح",
@@ -7405,7 +7457,7 @@
         },
         "_key_training_a_model_in_ai_lab/csd/2023": {
           "type": "الحل النموذجي",
-          "name": "[KEY] تدريب نموذج في مختبر الذكاء الاصطناعي"
+          "name": "[مفتاح] تدريب نموذج في مختبر الذكاء الاصطناعي"
         },
         "accuracy_in_ai_lab/csd/2023": {
           "type": "مصدر",
@@ -7418,7 +7470,8 @@
         },
         "introduction_to_ai_lab_1/csd/2023": {
           "name": "مقدمة لمختبر الذكاء الاصطناعي",
-          "type": "فيديو"
+          "type": "فيديو",
+          "url": "https://www.youtube.com/watch?v=bGJ05vdI3xA"
         },
         "selecting_features/csd/2023": {
           "type": "مصدر",
@@ -7427,7 +7480,8 @@
         },
         "training_and_testing_in_ai_lab/csd/2023": {
           "name": "التدريب والاختبار في مختبر الذكاء الاصطناعي",
-          "type": "فيديو"
+          "type": "فيديو",
+          "url": "https://www.youtube.com/watch?v=HcCtdaiMWPQ"
         },
         "using_data_with_categorical_features/csd/2023": {
           "type": "مصدر",
@@ -7449,15 +7503,17 @@
           "type": "فيديو"
         },
         "model_cards/csd/2023": {
-          "type": "شرائح"
+          "type": "شرائح",
+          "name": "بطاقات نموذجية"
         },
         "_key_zoo_models/csd/2023": {
           "type": "الحل النموذجي",
-          "name": "[KEY] نماذج حديقة الحيوان"
+          "name": "[مفتاح] نماذج حديقة الحيوان"
         },
         "model_cards_in_ai_lab/csd/2023": {
           "name": "بطاقات نموذجية في مختبر الذكاء الاصطناعي",
-          "type": "فيديو"
+          "type": "فيديو",
+          "url": "https://www.youtube.com/watch?v=tz_ptkv0NxA"
         },
         "saving_models_in_ai_lab/csd/2023": {
           "type": "شرائح",
@@ -7469,21 +7525,25 @@
           "url": "https://drive.google.com/file/d/1iCd0-YM5JK2Bk1u3XgEY6o0xcGwJdkau/view?usp=sharing"
         },
         "if-statements_in_app_lab/csd/2023": {
-          "type": "فيديو"
+          "type": "فيديو",
+          "name": "بيانات اذا في مختبر التطبيقات",
+          "url": "https://www.youtube.com/watch?v=0oG3Wck2fRU"
         },
         "model_cards_in_app_lab/csd/2023": {
-          "type": "شرائح"
+          "type": "شرائح",
+          "name": "بطاقات نموذجية في مختبر التطبيقات"
         },
         "printable_model_cards/csd/2023": {
-          "type": "مصدر"
+          "type": "مصدر",
+          "name": "بطاقات النموذج القابلة للطباعة"
         },
         "_key_numerical_accuracy/csd/2023": {
           "type": "الحل النموذجي",
-          "name": "[KEY] الدقة العددية"
+          "name": "[مفتاح] الدقة العددية"
         },
         "_key_zombie_prediction/csd/2023": {
           "type": "الحل النموذجي",
-          "name": "[KEY] توقع الزومبي"
+          "name": "[مفتاح] توقع الزومبي"
         },
         "numerical_models/csd/2023": {
           "type": "شرائح",
@@ -7502,7 +7562,8 @@
         },
         "numerical_data_in_ai_lab_2/csd/2023": {
           "name": "البيانات العددية في مختبر الذكاء الاصطناعي",
-          "type": "فيديو"
+          "type": "فيديو",
+          "url": "https://www.youtube.com/watch?v=a4JH1D_D7s4"
         },
         "using_data_with_numerical_features/csd/2023": {
           "type": "مصدر",
@@ -7510,59 +7571,66 @@
           "url": "https://drive.google.com/file/d/1gDKIbkvicZqyXlyj2a5InXaU9_lcxVlU/view?usp=sharing"
         },
         "customizing_apps/csd/2023": {
-          "type": "شرائح"
+          "type": "شرائح",
+          "name": "تخصيص التطبيقات"
         },
         "ai_code_of_ethics/csd/2023": {
           "type": "شرائح",
-          "name": "برمجة أخلاقيات الذكاء الاصطناعي"
+          "name": "مدونة أخلاقيات الذكاء الاصطناعي"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
           "type": "فيديو",
-          "name": "الأخلاق والذكاء الاصطناعي: المساواة في الوصول والتحيز الخوارزمي",
+          "name": "الأخلاقيات والذكاء الاصطناعي: المساواة في الوصول والتحيز الخوارزمي",
           "url": "https://www.youtube.com/watch?v=tJQSyzBUAew"
         },
         "our_ai_code_of_ethics_template_/csd/2023": {
           "type": "شرائح",
-          "name": "برمجة أخلاقيات الذكاء الاصطناعي الخاصة بنا [Template]",
+          "name": "مدونة أخلاقيات الذكاء الاصطناعي الخاصة بنا [نموذج]",
           "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing"
         },
         "create_an_ml_app/csd/2023": {
-          "type": "نموذج التقييم"
+          "type": "نموذج التقييم",
+          "name": "قم بإنشاء تطبيق ML"
         },
         "make_a_machine_learning_app/csd/2023": {
           "type": "شرائح",
-          "name": "قم بإنشاء تطبيق التعلم الآلي"
+          "name": "قم بإنشاء تطبيق تعلم الآلة"
         },
         "issue_statements/csd/2023": {
-          "type": "شرائح"
+          "type": "شرائح",
+          "name": "بيانات المشكلة"
         },
         "creating_a_survey/csd/2023": {
           "type": "مصدر",
-          "name": "إنشاء استطلاع",
+          "name": "إنشاء استبيان",
           "url": "https://drive.google.com/file/d/1L8WM8UEpOUW7rY1DaGImAco2BGzj6J_y/view?usp=sharing"
         },
         "creating_a_survey_in_google_forms/csd/2023": {
-          "type": "فيديو"
+          "type": "فيديو",
+          "name": "إنشاء استبيان في نماذج جوجل Google",
+          "url": "https://www.youtube.com/watch?v=Ot6eXUYb3P0"
         },
         "survey_planning/csd/2023": {
-          "name": "تصميم أداة لجمع البيانات",
+          "name": "تخطيط الاستبيان",
           "type": "شرائح"
         },
         "cleaning_survey_data/csd/2023": {
           "type": "فيديو",
-          "name": "بيانات استطلاع التنظيف"
+          "name": "بيانات استطلاع التنظيف",
+          "url": "https://www.youtube.com/watch?v=NBTYgU71Jgw"
         },
         "survey_data_in_ai_lab/csd/2023": {
           "type": "شرائح",
-          "name": "بيانات الاستطلاع في مختبر الذكاء الاصطناعي"
+          "name": "بيانات الاستبيان في مختبر الذكاء الاصطناعي"
         },
         "view_and_download_survey_data/csd/2023": {
           "type": "فيديو",
-          "name": "عرض بيانات الاستطلاع وتنزيلها"
+          "name": "عرض وتنزيل بيانات الاستبيان",
+          "url": "https://www.youtube.com/watch?v=orn4dpcIiCk"
         },
         "troubleshooting_models/csd/2023": {
           "type": "شرائح",
-          "name": "نماذج استكشاف الأخطاء وإصلاحها"
+          "name": "نماذج اكتشاف الأخطاء وإصلاحها"
         },
         "creating_an_app/csd/2023": {
           "type": "شرائح",
@@ -7570,7 +7638,7 @@
         },
         "_template_5_why_s/csd/2023": {
           "type": "مصدر",
-          "name": "[Template] 5 لماذا"
+          "name": "[نموذج] ٥ لماذا"
         },
         "design_an_ai_app/csd/2023": {
           "type": "شرائح",
@@ -9403,7 +9471,7 @@
           "type": "دليل الأنشطة"
         },
         "types_of_machine_learning_1/csd/2021": {
-          "name": "أنواع التعلم الآلي",
+          "name": "أنواع تعلم الآلة",
           "url": "https://docs.google.com/document/d/1-riv3aqTarYTrUJlrrzWDU86Aga5gx1f7es6MoLg5bY/edit#",
           "type": "دليل الأنشطة"
         },
@@ -9447,7 +9515,7 @@
           "url": "https://docs.google.com/document/d/1UAGmOyfoqr5xKjKp8SjpYRmdemNK8FWV1fcrERoeoDo/edit"
         },
         "survey_planning_-_activity_guide/csd/2021": {
-          "name": "تخطيط الإستطلاع - دليل النشاط",
+          "name": "تخطيط الإستبيان - دليل النشاط",
           "url": "https://docs.google.com/document/d/1vLzqaZDRjA8_wvb4dePTLpXY5Skhy44JvxpCIAcLDE8/view"
         },
         "survey_template_google_form_/csd/2021": {
@@ -9455,7 +9523,7 @@
           "url": "https://docs.google.com/forms/d/1E4sGp03dDW6TYVh1G6zlNITuuSaLFGlMox2E0Iiczzo/copy"
         },
         "troubleshooting_models_-_activity_guide/csd/2021": {
-          "name": "نماذج استكشاف الأخطاء وإصلاحها - دليل النشاط",
+          "name": "نماذج اكتشاف الأخطاء وإصلاحها - دليل النشاط",
           "url": "https://docs.google.com/document/d/1RLnA_EbFrxwLOI-XGwmuryNbSPlBqndvjXGDlWdndpc/edit"
         },
         "classifying_fish/csd/2022": {
@@ -9463,7 +9531,7 @@
           "url": "https://docs.google.com/document/d/1Vfp8rokk4JzTGhkUw3LkhyHAD5gLm0hct5N6CDjkNSI/view"
         },
         "types_of_machine_learning_1/csd/2022": {
-          "name": "أنواع التعلم الآلي",
+          "name": "أنواع تعلم الآلة",
           "url": "https://docs.google.com/document/d/1-riv3aqTarYTrUJlrrzWDU86Aga5gx1f7es6MoLg5bY/edit#"
         },
         "innovations_in_ai_-_activity_guide/csd/2022": {
@@ -9503,7 +9571,7 @@
           "url": "https://docs.google.com/document/d/1UAGmOyfoqr5xKjKp8SjpYRmdemNK8FWV1fcrERoeoDo/edit"
         },
         "survey_planning_-_activity_guide/csd/2022": {
-          "name": "تخطيط الإستطلاع - دليل النشاط",
+          "name": "تخطيط الإستبيان - دليل النشاط",
           "url": "https://docs.google.com/document/d/1vLzqaZDRjA8_wvb4dePTLpXY5Skhy44JvxpCIAcLDE8/view"
         },
         "survey_template_google_form_/csd/2022": {
@@ -9511,7 +9579,7 @@
           "url": "https://docs.google.com/forms/d/1E4sGp03dDW6TYVh1G6zlNITuuSaLFGlMox2E0Iiczzo/copy"
         },
         "troubleshooting_models_-_activity_guide/csd/2022": {
-          "name": "نماذج استكشاف الأخطاء وإصلاحها - دليل النشاط",
+          "name": "نماذج اكتشاف الأخطاء وإصلاحها - دليل النشاط",
           "url": "https://docs.google.com/document/d/1RLnA_EbFrxwLOI-XGwmuryNbSPlBqndvjXGDlWdndpc/edit"
         },
         "classifying_fish/csd/2023": {
@@ -9519,7 +9587,7 @@
           "url": "https://docs.google.com/document/d/1ZCRVbRA6XLj1tRCzPed5fSGfqGjJ2I1ImES-BTo3GmY/view"
         },
         "types_of_machine_learning_1/csd/2023": {
-          "name": "أنواع التعلم الآلي",
+          "name": "أنواع تعلم الآلة",
           "url": "https://docs.google.com/document/d/1QxjxUn_X9RXolJfIMHVYYxxZB-9tAtJC067r__oQZfM/view"
         },
         "innovations_in_ai_-_activity_guide/csd/2023": {
@@ -9551,21 +9619,21 @@
           "name": "إنشاء تطبيق ML - دليل المشروع"
         },
         "survey_planning_-_activity_guide/csd/2023": {
-          "name": "تخطيط الإستطلاع - دليل النشاط"
+          "name": "تخطيط الإستبيان - دليل النشاط"
         },
         "survey_template_google_form_/csd/2023": {
           "name": "قالب الاستطلاع [نموذج جوجل]",
           "url": "https://docs.google.com/forms/d/1E4sGp03dDW6TYVh1G6zlNITuuSaLFGlMox2E0Iiczzo/copy"
         },
         "troubleshooting_models_-_activity_guide/csd/2023": {
-          "name": "نماذج استكشاف الأخطاء وإصلاحها - دليل النشاط"
+          "name": "نماذج اكتشاف الأخطاء وإصلاحها - دليل النشاط"
         },
         "training_a_model_in_ai_lab/csd/2021": {
           "name": "تدريب نموذج في مختبر الذكاء الاصطناعي",
           "url": "https://docs.google.com/document/d/17gVZ5E_0_bBddvEKnO_wFTlorJnGkW-KNAcz0zWRbAE/edit"
         },
         "kim_s_survey_data_-_student_resource/csd/2021": {
-          "name": "بيانات استطلاع كيم - مصدر الطالب",
+          "name": "بيانات استبيان كيم - مصدر الطالب",
           "url": "https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy"
         },
         "design_an_ai_app_-_project_guide/csd/2021": {
@@ -9589,7 +9657,7 @@
           "url": "https://docs.google.com/document/d/17gVZ5E_0_bBddvEKnO_wFTlorJnGkW-KNAcz0zWRbAE/edit"
         },
         "kim_s_survey_data_-_student_resource/csd/2022": {
-          "name": "بيانات استطلاع كيم - مصدر الطالب",
+          "name": "بيانات استبيان كيم - مصدر الطالب",
           "url": "https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy"
         },
         "design_an_ai_app_-_project_guide/csd/2022": {
@@ -9612,7 +9680,7 @@
           "name": "تدريب نموذج في مختبر الذكاء الاصطناعي"
         },
         "kim_s_survey_data_-_student_resource/csd/2023": {
-          "name": "بيانات استطلاع كيم - مصدر الطالب",
+          "name": "بيانات استبيان كيم - مصدر الطالب",
           "url": "https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy"
         },
         "design_an_ai_app_-_project_guide/csd/2023": {
@@ -9628,6 +9696,51 @@
         "exemplar_-_design_an_ai_app_project_guide/csd/2023": {
           "name": "نموذج - دليل مشروع تصميم تطبيق الذكاء الاصطناعي",
           "url": "https://docs.google.com/document/d/1GOcczf3U2d3qGXKSu4yeU0g2Tnnwib8q7xZcLsd0lLk/edit"
+        },
+        "model_cards_1/csd/2021": {
+          "name": "بطاقات نموذجية",
+          "url": "https://docs.google.com/document/d/1vdmL2UnG7KaMMenq5UsnsC4wbkuQZVP1OxVuT5WJvk0/edit#"
+        },
+        "5_why_s_-_activity_guide/csd/2021": {
+          "name": "٥ لماذا - دليل الأنشطة",
+          "url": "https://docs.google.com/presentation/d/1G8bmEuCtGcnQkL8DAcPUqhN4WsbwTnIBc6ihH2i86lU/view"
+        },
+        "app_brainstorm_-_activity_guide/csd/2021": {
+          "name": "تطبيق العصف الذهني - دليل الأنشطة",
+          "url": "https://docs.google.com/document/d/1ocmp1I80kRxFDYByT0B-IIjbK-c01cTmnsy_Lz1DApM/view"
+        },
+        "isaac_s_survey_data_-_student_resource/csd/2021": {
+          "name": "بيانات استبيان إسحاق - مصدر الطالب",
+          "url": "https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy"
+        },
+        "model_cards_1/csd/2022": {
+          "name": "بطاقات نموذجية",
+          "url": "https://docs.google.com/document/d/1I_y5dKeUe-84ao5B5yKqnMXVskx96h-H4TijVqiPs3A/view"
+        },
+        "5_why_s_-_activity_guide/csd/2022": {
+          "name": "٥ لماذا - دليل الأنشطة",
+          "url": "https://docs.google.com/presentation/d/1G8bmEuCtGcnQkL8DAcPUqhN4WsbwTnIBc6ihH2i86lU/view"
+        },
+        "app_brainstorm_-_activity_guide/csd/2022": {
+          "name": "تطبيق العصف الذهني - دليل الأنشطة",
+          "url": "https://docs.google.com/document/d/1ocmp1I80kRxFDYByT0B-IIjbK-c01cTmnsy_Lz1DApM/view"
+        },
+        "isaac_s_survey_data_-_student_resource/csd/2022": {
+          "name": "بيانات استبيان إسحاق - مصدر الطالب",
+          "url": "https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy"
+        },
+        "model_cards_1/csd/2023": {
+          "name": "بطاقات نموذجية"
+        },
+        "5_why_s_-_activity_guide/csd/2023": {
+          "name": "٥ لماذا - دليل الأنشطة"
+        },
+        "app_brainstorm_-_activity_guide/csd/2023": {
+          "name": "تطبيق العصف الذهني - دليل الأنشطة"
+        },
+        "isaac_s_survey_data_-_student_resource/csd/2023": {
+          "name": "بيانات استبيان إسحاق - مصدر الطالب",
+          "url": "https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy"
         }
       }
     }

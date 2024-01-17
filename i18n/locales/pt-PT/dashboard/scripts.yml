@@ -4813,6 +4813,10 @@ pt:
               display_name: Variáveis
           description_audience: 'Idades: 9-13'
           description_short: Aprenda todos os conceitos Fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Atividade livre
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -5134,3 +5138,28 @@ pt:
               display_name: Capítulo 2
         csd-post-survey-2024:
           title: Pesquisa Pós-Curso
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Lição 1
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Lição 1
+            lesson-3:
+              name: Eventos
+            lesson-4:
+              name: Comportamentos
+            lesson-5:
+              name: Próximas etapas
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Lição 1
+            lesson-3:
+              name: Ciclos
+            lesson-4:
+              name: Condicionais
+            lesson-6:
+              name: Próximas etapas
+          title: Introdução à Ciência Computacional

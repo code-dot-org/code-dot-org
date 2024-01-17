@@ -3777,6 +3777,12 @@ es-ES:
         description: Consulta tu guía de actividad para recomendar una de estas plantillas
           a cada cliente en función de sus necesidades.
         display_name: Plantillas de Animación y Diseño de Juegos
+      CSD U3 L1 - Design Templates_2023a:
+        description: Consulta tu guía de actividad para recomendar uno de estos diseños
+          prototipo a cada cliente en función de sus necesidades.
+      CSD U3 L1 - Design Templates_2023a_2023:
+        description: Consulta tu guía de actividad para recomendar uno de estos diseños
+          prototipo a cada cliente en función de sus necesidades.
       CSD U3 L7 review_2023:
         description: Repasa los distintos tipos de bloques de figuras que hemos visto
           hasta ahora. ¿Cuáles puedes utilizar para crear la cara de tu robot?
@@ -6491,6 +6497,46 @@ es-ES:
         display_name: Niveles de Práctica
       CSD U6 - Combine Inputs - Prac_mb2022:
         display_name: Niveles de Práctica
+      CSD U6 - Design - prototype1_2023:
+        content1: Prototipo A
+        markdown: |
+          # Prototipo A
+
+          _Este es un prototipo de semáforo. Se puede utilizar en situaciones en las que un semáforo está roto o se ha ido la luz en algún sitio. El controlador pulsa los botones Stop y Go que encienden las luces de diferentes colores"_
+
+          ![](https://images.code.org/abe4d34a23dfa3639954a1949294c67a-image-1679090944337.png)
+      CSD U6 - Design - prototype2_2023:
+        content1: Prototipo B
+        markdown: |
+          # Prototipo B
+
+          _"Este es un prototipo de monitor fitosanitario. Se coloca un sensor en una maceta y éste envía los datos a una aplicación del teléfono. La aplicación te da información sobre el entorno utilizando el sensor, y entonces puedes decidir si la planta necesita cuidados o atención".
+
+          ![](https://images.code.org/c1951365031ad4ecc5bfb8d2d8cf4bf2-image-1679091114002.png)
+      CSD U6 - Design - prototype3_2023:
+        content1: Prototipo C
+        markdown: |
+          # Prototipo C
+
+          _"Este es un prototipo para añadir luces y pantallas a tu ropa. Pones una pantalla o unas luces en un sombrero que está conectado a una aplicación o a unos botones en el bolsillo de la camisa. Cuando pulsas los botones, cambia el aspecto de las luces en la ropa."_
+
+          ![](https://images.code.org/a2aae3cb736074696c2a0e630120c9cb-image-1679091222479.png)
+      CSD U6 - Design - prototype4_2023:
+        content1: Prototipo D
+        markdown: |
+          # Prototipo D
+
+          _"Este es un prototipo de luz nocturna. Utiliza un sensor para detectar si la habitación está iluminada u oscura. Si la habitación está iluminada, la luz nocturna se apaga, y si la habitación está oscura, la luz nocturna se enciende".
+
+          ![](https://images.code.org/e0ab1eb4d859b0b74ae5bfa5b51a9abb-image-1679091317359.png)
+      CSD U6 - Design - prototype5_2023:
+        content1: Prototipo E
+        markdown: |
+          # Prototipo E
+
+          _"Este es un prototipo de un dispositivo que te permite controlar una mascota monstruosa digital desde tu teléfono. La mascota pasa por diferentes estados de ánimo y emociones, y tú tienes que decidir cómo quieres interactuar con ella pulsando botones. Dependiendo del botón que pulses, el monstruo reaccionará de forma diferente"._
+
+          ![](https://images.code.org/366628bbab217dbd12d294f0d427904e-image-1679091394146.png)
       CSD U6 - Functions - Prac_2023a_2023:
         display_name: Niveles de Práctica
       CSD U6 - Functions - Prac_2222:
@@ -29296,6 +29342,26 @@ es-ES:
           text: "¡Me ha encantado todo!"
         questions:
         - text: "¿Qué te han parecido las lecciones y los temas tratados en este curso?"
+      devices-pre-survey-levelgroup_mb2022:
+        title: Creando Aplicaciones con Dispositivos - Encuesta Previa del Alumno
+      devices-pre-survey-preamble 1_mb2022:
+        markdown: "### **Esta encuesta es anónima**\n\n* Completar esta breve encuesta
+          debería llevar **2 minutos o menos**.\n* Code.org se toma tu privacidad
+          muy en serio.\n* Tus respuestas se mantendrán anónimas. \n\nTu profesor
+          verá las respuestas agregadas de toda la clase, pero no podrá identificar
+          tus respuestas individuales.\n\nHacemos esto porque queremos que seas lo
+          más abierto y honesto posible. Nos preocupamos por tu experiencia en el
+          curso, y hacemos mejoras basadas en lo que dices.\n\n***\n### Escuela en
+          general### \n"
+        teacher_markdown: |+
+          ¿Por qué esta encuesta?
+          * Uno de los principales objetivos de este curso es ampliar la participación en la informática.
+          * Intentamos medir cómo pueden cambiar las actitudes y creencias de los estudiantes sobre la informática durante el curso a través de encuestas previas y posteriores.
+          * Completarla también nos ayuda a comprender las mejoras importantes que podemos introducir en el plan de estudios para mejorar la experiencia de profesores y alumnos.
+          * Por último, estos datos pueden **ayudarte** a entender a los alumnos de tu aula, especialmente si los comparas con la encuesta posterior en la que se hacen preguntas similares.
+
+          Podrás ver los resultados anónimos de la encuesta para tus alumnos.
+
       ever-learned-cs:
         answers:
         - correct: true

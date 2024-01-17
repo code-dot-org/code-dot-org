@@ -2772,7 +2772,7 @@
           "name": "Configuração Técnica"
         },
         "6ba2d996-2523-4b0a-b7a6-a499ac4a11ec": {
-          "name": "Pesquisa Pré-Curso da CSD"
+          "name": "Pesquisa Pré-Curso da DCC"
         },
         "3c2debf5-2b7b-43a9-b8bf-7462c01c6068": {
           "name": "Aquecimento"
@@ -2862,7 +2862,7 @@
           "name": "Configuração Técnica"
         },
         "500e5c48-de6b-416e-8df7-f6b10beb7060": {
-          "name": "Pesquisa Pré-Curso da CSD"
+          "name": "Pesquisa Pré-Curso da DCC"
         },
         "6c10e88f-a232-4ac7-91cb-97ff2bc7d461": {
           "name": "Aquecimento"
@@ -2877,7 +2877,7 @@
           "name": "Configuração Técnica"
         },
         "76131c35-1c28-4338-8643-6c55296414ca": {
-          "name": "Pesquisa Pré-Curso da CSD"
+          "name": "Pesquisa Pré-Curso da DCC"
         },
         "2b979bba-aad6-49d0-a32a-d436d4288649": {
           "name": "Aquecimento"
@@ -2892,7 +2892,7 @@
           "name": "Configuração Técnica"
         },
         "8b23f249-eb39-4cf4-8269-6d381fdc77b4": {
-          "name": "Pesquisa Pré-Curso da CSD"
+          "name": "Pesquisa Pré-Curso da DCC"
         },
         "747f358d-231e-4d8e-9f58-ac2a57daa0cf": {
           "name": "Aquecimento"
@@ -3801,7 +3801,7 @@
           "name": "Fechamento"
         },
         "1c6474e1-f1d7-4d13-94a0-2657589894ae": {
-          "name": "Aquecer "
+          "name": "Aquecimento"
         },
         "cdcd4d00-c6df-40db-a0c7-37064a6fcf40": {
           "name": "Atividade"
@@ -4722,7 +4722,7 @@
           "name": "Fechamento"
         },
         "69460e12-7295-400a-8fc1-135a17d25118": {
-          "name": "Aquecer "
+          "name": "Aquecimento"
         },
         "e63db04a-81d6-4b49-80b5-4afab4df2a05": {
           "name": "Atividade principal"
@@ -5682,10 +5682,10 @@
           "name": "Níveis"
         },
         "bc687e20-23c5-4c35-8a58-ab03724de645": {
-          "name": "Configuração técnica"
+          "name": "Configuração Técnica"
         },
         "871d9312-3b99-4003-b738-be355d6a92f0": {
-          "name": "Pesquisa Pré-Curso CSD"
+          "name": "Pesquisa Pré-Curso da DCC"
         },
         "e4a1b801-8e00-42e8-b7fc-fa00f74c5225": {
           "name": "Aquecimento"
@@ -5706,7 +5706,7 @@
           "name": "Fechamento"
         },
         "1a4b72ab-a188-46f5-ba3f-2aa0aecb9e37": {
-          "name": "Aprendizagem complementar"
+          "name": "Aprendizagem Complementar"
         },
         "3c85f039-d3a0-4661-9469-4e067ccb6087": {
           "name": "Aquecimento"
@@ -5766,7 +5766,7 @@
           "name": "Fechamento"
         },
         "7098db4e-836b-453e-8429-69229359a98d": {
-          "name": "Aprendizagem complementar"
+          "name": "Aprendizagem Complementar"
         },
         "048fcea8-22ea-4c85-92b9-64b420aa1863": {
           "name": "Teste pós-projeto"
@@ -5775,7 +5775,7 @@
           "name": "Configuração Técnica"
         },
         "7d66371e-9f65-4b5c-bb0b-1d3d98db0cde": {
-          "name": "Pesquisa Pré-Curso da CSD"
+          "name": "Pesquisa Pré-Curso da DCC"
         },
         "4891ceab-a23e-43af-a690-d4fd35b61d51": {
           "name": "Aquecimento"
@@ -5790,7 +5790,7 @@
           "name": "Configuração Técnica"
         },
         "e0aa6cce-ef80-41fc-b437-37e7bc543bf2": {
-          "name": "Pesquisa Pré-Curso da CSD"
+          "name": "Pesquisa Pré-Curso da DCC"
         },
         "cd5ffe12-60ad-4579-bba1-01cc93c1d482": {
           "name": "Aquecimento"
@@ -5805,7 +5805,7 @@
           "name": "Configuração Técnica"
         },
         "f116e7aa-a36e-47be-b2a4-459fd7fa6f0a": {
-          "name": "Pesquisa Pré-Curso da CSD"
+          "name": "Pesquisa Pré-Curso da DCC"
         },
         "f986b891-90fb-4cb6-810d-df9b0542ddfd": {
           "name": "Aquecimento"
@@ -6018,13 +6018,13 @@
           "name": "Aquecimento"
         },
         "cb6bf053-345c-47af-a7b9-39a67a9c70fa": {
-          "name": "Showcase"
+          "name": "Mostra"
         },
         "305d1465-9166-4ac4-a4e2-bc3bb6d1478e": {
           "name": "Depois da Lição"
         },
         "0754806a-e34d-4891-a471-399122e56ac9": {
-          "name": "Antes da aula"
+          "name": "Antes da lição"
         },
         "29c29273-e188-41d0-8559-b9048c892737": {
           "name": "Aquecimento"
@@ -6729,7 +6729,7 @@
           "name": "Fechamento"
         },
         "7b73b3f1-50b0-43a0-b986-6ca761f73d6f": {
-          "name": "Aquecer "
+          "name": "Aquecimento"
         },
         "fb244265-6cd6-459d-bc88-e056d9902b8d": {
           "name": "Atividade"
@@ -7686,7 +7686,7 @@
           "name": "Fechamento"
         },
         "91d98159-1f12-468b-acf3-5e44b885c44b": {
-          "name": "Aquecer "
+          "name": "Aquecimento"
         },
         "e019b34b-4c36-4f63-9059-e7cdc4b6d36f": {
           "name": "Atividade principal"
@@ -8586,16 +8586,16 @@
           "name": "Fechamento"
         },
         "46a069d2-b327-475f-8c2a-949cf06d6ccb": {
-          "name": "Preparação recomendada"
+          "name": "Preparação Recomendada"
         },
         "3d238b5e-6102-4c78-afc7-9f5beffd3741": {
-          "name": "Aquecer "
+          "name": "Aquecimento"
         },
         "5bd537e7-45bb-4968-a883-d8ba598753fb": {
           "name": "Atividade principal"
         },
         "a418e7ac-0146-460d-89e6-0acc14aefbb6": {
-          "name": "Oportunidades de extensão"
+          "name": "Oportunidades de Extensão"
         },
         "6f886134-c10b-497a-880f-f54e2888cf1d": {
           "name": "Aquecimento"
@@ -8607,7 +8607,7 @@
           "name": "Fechamento"
         },
         "59dd1048-c18b-43fb-a14c-4feb2887a274": {
-          "name": "Oportunidades de extensão"
+          "name": "Oportunidades de Extensão"
         },
         "e280ae49-7bb9-4bc9-8dd6-a8c5de968600": {
           "name": "Aquecimento"
@@ -8619,10 +8619,10 @@
           "name": "Fechamento"
         },
         "40033029-9a13-473d-9a2a-e6f090865876": {
-          "name": "Oportunidades de extensão"
+          "name": "Oportunidades de Extensão"
         },
         "3a69a53a-6bb6-40f5-a3cc-ff9b3057085f": {
-          "name": "Preparação recomendada"
+          "name": "Preparação Recomendada"
         },
         "08b3acc1-c672-4012-9d5c-78f4d99eb6b3": {
           "name": "Aquecimento"
@@ -8712,10 +8712,10 @@
           "name": "Fechamento"
         },
         "1684b440-4813-446c-a62d-201cf832b0fd": {
-          "name": "Oportunidades de extensão "
+          "name": "Oportunidades de Extensão "
         },
         "2acd0565-f462-437c-9be3-66bd44962646": {
-          "name": "Preparação recomendada"
+          "name": "Preparação Recomendada"
         },
         "4fd81bc5-4357-49e8-a2cf-07025eccbcfe": {
           "name": "Aquecimento"
@@ -8775,7 +8775,7 @@
           "name": "Oportunidades de extensão"
         },
         "eb3bde62-9ff7-4b66-b7d4-c55467aa91a8": {
-          "name": "Preparação recomendada"
+          "name": "Preparação Recomendada"
         },
         "0c2a6d6c-a0d9-4852-b81c-87db1783527d": {
           "name": "Aquecimento"
@@ -8802,7 +8802,7 @@
           "name": "Oportunidades de extensão"
         },
         "9e38b776-8b6b-4c75-8742-3776c454a8b7": {
-          "name": "Preparação recomendada"
+          "name": "Preparação Recomendada"
         },
         "54cef2c3-d829-48f3-ba0c-07905e2ecad0": {
           "name": "Aquecimento"
@@ -8850,10 +8850,10 @@
           "name": "Fechamento"
         },
         "0e7086c2-52d3-419a-b55c-9881ed7a8335": {
-          "name": "Oportunidades de extensão"
+          "name": "Oportunidades de Extensão"
         },
         "281ef28f-2969-4c60-80a4-8bdad8662658": {
-          "name": "Preparação recomendada"
+          "name": "Preparação Recomendada"
         },
         "7387ce3c-05c0-477a-a59c-d72b1e06f2a2": {
           "name": "Aquecimento"
@@ -8865,7 +8865,7 @@
           "name": "Resumo"
         },
         "aad4dda1-507b-42a5-a62c-1aac5671cb91": {
-          "name": "Oportunidades de extensão"
+          "name": "Oportunidades de Extensão"
         },
         "f3ff3f84-baa4-4480-9970-252a7478e738": {
           "name": "Aquecimento"
@@ -8877,7 +8877,7 @@
           "name": "Fechamento"
         },
         "9484e482-4713-4747-84d0-fba065c7e4a1": {
-          "name": "Oportunidades de extensão"
+          "name": "Oportunidades de Extensão"
         },
         "1bf99ed8-87aa-4bc1-b29e-77d8836cbff5": {
           "name": "Aquecimento"
@@ -8889,7 +8889,7 @@
           "name": "Fechamento"
         },
         "7934c32a-f4ba-48b1-8c92-903075552224": {
-          "name": "Oportunidades de extensão"
+          "name": "Oportunidades de Extensão"
         },
         "62058ba3-874c-4aae-9d67-8bed1cf236ae": {
           "name": "Aquecimento"
@@ -8901,13 +8901,13 @@
           "name": "Resumo"
         },
         "e57a4ee9-956b-410e-8d3e-b321b0abe71c": {
-          "name": "Oportunidades de extensão"
+          "name": "Oportunidades de Extensão"
         },
         "360c949e-7bb0-4183-8580-6f9cf3d3a2e1": {
           "name": "Configuração Técnica"
         },
         "592e1846-564c-4936-ac7b-4ff388cd7c40": {
-          "name": "Pesquisa Pré-Curso da CSD"
+          "name": "Pesquisa Pré-Curso da DCC"
         },
         "291b58e3-fed2-4c56-a443-2ec37239a680": {
           "name": "Aquecimento"
@@ -8997,7 +8997,7 @@
           "name": "Configuração Técnica"
         },
         "0bd16f58-6011-46a7-912e-38b5af689eed": {
-          "name": "Pesquisa Pré-Curso da CSD"
+          "name": "Pesquisa Pré-Curso da DCC"
         },
         "1bb29cc3-a3b7-4afc-b6fc-29ebb23f4f9b": {
           "name": "Aquecimento"
@@ -9012,7 +9012,7 @@
           "name": "Configuração Técnica"
         },
         "36b1b7e8-3757-451b-826c-a03e2f4bf3a5": {
-          "name": "Pesquisa Pré-Curso da CSD"
+          "name": "Pesquisa Pré-Curso da DCC"
         },
         "bf65b90a-c6e7-4214-a058-b69c54d65263": {
           "name": "Aquecimento"
@@ -9027,7 +9027,7 @@
           "name": "Configuração Técnica"
         },
         "528e7f51-d837-439b-a146-7a16d837ada4": {
-          "name": "Pesquisa Pré-Curso da CSD"
+          "name": "Pesquisa Pré-Curso da DCC"
         },
         "63c36223-77c1-452a-94e9-81a3fb72e348": {
           "name": "Aquecimento"
@@ -9963,7 +9963,7 @@
           "name": "Fechamento"
         },
         "1a8c52f0-5227-4714-ab5e-479f2da63854": {
-          "name": "Aquecer "
+          "name": "Aquecimento"
         },
         "6bae919e-c881-4470-990e-9d0fbb100c49": {
           "name": "Atividade"
@@ -10125,7 +10125,7 @@
           "name": "Fechamento"
         },
         "9cb28b56-16d2-4236-bebc-76a74d4d405c": {
-          "name": "Aquecer "
+          "name": "Aquecimento"
         },
         "3e83870c-b504-431a-9575-0a61cea5964d": {
           "name": "Atividade"
@@ -11085,7 +11085,7 @@
           "name": "Fechamento"
         },
         "e03d12ff-4d33-4c59-a0dd-ca9d9d9131a0": {
-          "name": "Aquecer "
+          "name": "Aquecimento"
         },
         "d2f6935f-e866-43fe-8e5a-ff111702f5cc": {
           "name": "Atividade principal"
@@ -13090,6 +13090,369 @@
         },
         "3c37c274-5b3f-4542-8363-59de96bef286": {
           "name": "Ética e IA: Acesso Igual e Viés Algorítmico"
+        },
+        "d57b5dae-d9df-4412-9501-893bc3fe13f2": {
+          "name": "Modificações da Aula"
+        },
+        "630fc7fe-bf16-4a13-9e9b-c553cc89881f": {
+          "name": "Modificações da Aula"
+        },
+        "f4f000c2-a4d3-4abc-a74b-f82cd0763966": {
+          "name": "Modificações da Aula"
+        },
+        "5dc9a356-5043-40cc-9e4c-154a4f2f59a3": {
+          "name": "Modificações da Aula"
+        },
+        "5408a452-af28-4695-bad4-f4faee4ca9cc": {
+          "name": "Modificações da Aula"
+        },
+        "f8bb7c14-8994-4d30-89da-876e17cb7c37": {
+          "name": "Modificações da Aula"
+        },
+        "513355cc-0fcb-4cef-be82-502d1776f914": {
+          "name": "Modificações da Aula"
+        },
+        "222bb994-3c71-4f14-b795-15f3f6ebaa0e": {
+          "name": "Modificações da Aula"
+        },
+        "7c74d83b-4571-4346-bca2-9a6e1cb926f3": {
+          "name": "Modificações da Aula"
+        },
+        "19043808-e22b-4373-bb0b-9ccac3ab949b": {
+          "name": "Modificações da Aula"
+        },
+        "57f76f74-a8e4-410d-a7e4-91c62a990b03": {
+          "name": "Modificações da Aula"
+        },
+        "ec6cd9a5-fb52-48fb-b15a-984d4ce84f5f": {
+          "name": "Modificações da Aula"
+        },
+        "29e7d7ec-f74b-4d8e-9d55-cd1ade072e78": {
+          "name": "Modificações da Aula"
+        },
+        "b582aa3a-6ce7-47a6-85e2-16c66a64c92d": {
+          "name": "Modificações da Aula"
+        },
+        "8d97665c-65b1-4019-985e-2f95f0628fcf": {
+          "name": "Modificações da Aula"
+        },
+        "357c7db1-4d26-4eeb-af22-2f85b1517d09": {
+          "name": "Modificações da Aula"
+        },
+        "3c8baa3a-4de5-4880-b6b8-ee25ebe562d6": {
+          "name": "Modificações da Aula"
+        },
+        "35f45b40-0f0b-4a84-bbdd-d6862a3a3ac0": {
+          "name": "Modificações da Aula"
+        },
+        "0ec1d9e8-2008-458a-a7aa-9129a4b95ed2": {
+          "name": "Modificações da Aula"
+        },
+        "d72bad77-760b-4fe9-9282-586e05a164a7": {
+          "name": "Atividade"
+        },
+        "21820bed-f5c7-49c3-9b49-79f69d0a1ab5": {
+          "name": "Modificações da Aula"
+        },
+        "5b8c6be4-7794-4512-b633-654f98a56153": {
+          "name": "Modificações da Aula"
+        },
+        "d022ef54-5b76-4800-9d60-4c05b46ae225": {
+          "name": "Modificações da Aula"
+        },
+        "af86f558-77c1-432e-a909-e02c93ad7c7c": {
+          "name": "Formando grupos"
+        },
+        "938915ec-566d-46c0-bf52-928f6dc0d6dd": {
+          "name": "Modificações da Aula"
+        },
+        "1956ac65-46c9-4a62-9249-f14d17e554d9": {
+          "name": "Modificações da Aula"
+        },
+        "3a9fab25-70d9-49fd-b319-966764dd6101": {
+          "name": "Modificações da Aula"
+        },
+        "3aff1958-2fc8-4449-ae64-a28eebb0d2b1": {
+          "name": "Modificações da Aula"
+        },
+        "a0484671-605e-44ec-89c0-f42d54b1dc69": {
+          "name": "Modificações da Aula"
+        },
+        "c5341676-ea59-415c-893c-2e56efb823a3": {
+          "name": "Modificações da Aula"
+        },
+        "55bcb29a-1215-4946-b5ab-bad9395e232b": {
+          "name": "Modificações da Aula"
+        },
+        "7d6a40f7-3dce-4820-a330-59810b38dc39": {
+          "name": "Teste e Feedback"
+        },
+        "5faf4484-24e1-457d-8aaa-936904fec0c6": {
+          "name": "Modificações da Aula"
+        },
+        "d3975f3d-44de-46c8-a995-423cd29d2b0e": {
+          "name": "Modificações da Aula"
+        },
+        "0cf5933c-75fd-49c6-9f63-1afdeb99892b": {
+          "name": "Modificações da Aula"
+        },
+        "57247884-1eca-40ac-abb4-36cf446a6ae4": {
+          "name": "Modificações da Aula"
+        },
+        "92c95b0a-5909-4de6-9501-c206eb277d18": {
+          "name": "Modificações da Aula"
+        },
+        "dad741db-e1fa-4efc-a1a5-9189172fd079": {
+          "name": "Modificações da Aula"
+        },
+        "e8906779-7748-4fae-9495-4140c38daffe": {
+          "name": "Modificações da Aula"
+        },
+        "18b942a4-0349-4392-923f-170a70cb6c8b": {
+          "name": "Modificações da Aula"
+        },
+        "9c63c110-299c-465c-b6ac-456d561ff1c0": {
+          "name": "Modificações da Aula"
+        },
+        "9368b7ab-08ee-4900-b007-3a008552079f": {
+          "name": "Modificações da Aula"
+        },
+        "5346ecf1-b80b-44cb-ad37-ea10eb8561c2": {
+          "name": "Modificações da Aula"
+        },
+        "0fa9a305-278c-4646-8533-02397317bb18": {
+          "name": "Modificações da Aula"
+        },
+        "30b9ca8a-86a0-4058-b2f5-e24d9f636c10": {
+          "name": "Modificações da Aula"
+        },
+        "42b55089-127b-435f-be68-691d07bd60f2": {
+          "name": "Modificações da Aula"
+        },
+        "87db84f0-e19c-4e75-a1ae-c66dbac3bad5": {
+          "name": "Modificações da Aula"
+        },
+        "bae868db-d958-4188-819b-7d9975721b16": {
+          "name": "Modificações da Aula"
+        },
+        "75823632-be81-4248-bd63-e69a3658941b": {
+          "name": "Modificações da Aula"
+        },
+        "6726d5e9-166b-4785-926b-549a92cf1ee5": {
+          "name": "Modificações da Aula"
+        },
+        "f3ca30bb-b17a-46fb-83d1-b49c20b2ba20": {
+          "name": "Modificações da Aula"
+        },
+        "3cc0dc1b-7e13-4bdb-9d40-a075b7c9597e": {
+          "name": "Modificações da Aula"
+        },
+        "055947d6-e6ec-4356-9343-4a1b2a5fe229": {
+          "name": "Modificações da Aula"
+        },
+        "e6a3f6b5-8159-4012-acbd-273af0e5e707": {
+          "name": "Modificações da Aula"
+        },
+        "68968d00-b2cb-436f-8b21-fa47c41e6c13": {
+          "name": "Modificações da Aula"
+        },
+        "d5f8482f-a875-457a-83a0-8fe8c8697621": {
+          "name": "Modificações da Aula"
+        },
+        "a3891ced-312c-4f1f-9823-28cdaf9a131f": {
+          "name": "Modificações da Aula"
+        },
+        "42d4a6d3-fc40-44cd-ab78-799ce99a9ddb": {
+          "name": "Modificações da Aula"
+        },
+        "acdadc8a-d94d-4ee3-bdcb-67a234ee4130": {
+          "name": "Modificações da Aula"
+        },
+        "13d72af9-3b54-4ff3-b3f5-bcbb29212d1b": {
+          "name": "Preparação do Projeto"
+        },
+        "84d660d9-6dc5-40da-8955-1aacbbe9a7b9": {
+          "name": "Dias 3 e 4"
+        },
+        "f0382e17-7382-485a-8bc9-c194902fd193": {
+          "name": "Atividade"
+        },
+        "4fada4f6-95c0-462f-af3f-7d3d655a466f": {
+          "name": "Extensões"
+        },
+        "e32a87eb-1d65-4f06-ae77-f9c2f4aaf4ec": {
+          "name": "Fechamento"
+        },
+        "3a46632a-43c7-47d3-85b7-e119bf9900ff": {
+          "name": "Fechamento"
+        },
+        "d5a88b8b-de36-473b-8206-46ac7d2801c2": {
+          "name": "Atividade 1"
+        },
+        "ca01af5b-36a3-461d-b6b0-9802dc211193": {
+          "name": "Atividade 2"
+        },
+        "09284bd4-8906-4775-8b69-db734dde7324": {
+          "name": "Atividade 3"
+        },
+        "fe9db805-4d94-4c5e-a497-5fba5af44ff1": {
+          "name": "Extensões"
+        },
+        "430b1921-1d02-451a-a74f-a573525f3ac9": {
+          "name": "Antes da Unidade"
+        },
+        "7d8c47b5-9e3b-43d6-88b2-e5693d2aef12": {
+          "name": "Feedback da Aula"
+        },
+        "06b83dae-bc1c-45cf-9f94-4971a541e4c9": {
+          "name": "Feedback da Aula"
+        },
+        "a981673a-b674-4d7c-a7af-81d452ff004a": {
+          "name": "Feedback da Aula"
+        },
+        "24627ff0-fa8e-49bc-8ca0-ae54303fd2eb": {
+          "name": "Feedback da Aula"
+        },
+        "bd946cd4-6889-42df-85a1-a2d14cb867e1": {
+          "name": "Feedback da Aula"
+        },
+        "c50ed674-70c2-4a8e-b875-e29e660330c8": {
+          "name": "Feedback da Aula"
+        },
+        "9568757c-27c0-4cd3-b71e-833f293f4540": {
+          "name": "Feedback da Aula"
+        },
+        "e8fe48d6-5516-4fc4-8fcf-2f49119e1ffd": {
+          "name": "Feedback da Aula"
+        },
+        "f6d432c1-41e1-4ee0-8c09-4baf546bbf62": {
+          "name": "Feedback da Aula"
+        },
+        "9fd72dba-2f3c-48ef-b4d9-b206ee2f44e7": {
+          "name": "Feedback da Aula"
+        },
+        "f15f6041-07c0-49d3-b5ee-7b3ebfd64c8f": {
+          "name": "Feedback da Aula"
+        },
+        "714c38b5-f042-461e-ad6f-08b74ca4a6e6": {
+          "name": "Feedback da Aula"
+        },
+        "40da799e-5e4c-46a9-97a5-f33856715d71": {
+          "name": "Feedback da Aula"
+        },
+        "134912a5-86d2-4404-9850-37b16c0d0243": {
+          "name": "Preparação para a Semana"
+        },
+        "57f0f140-56d0-4951-94e6-e9009781b5f1": {
+          "name": "Feedback da Aula"
+        },
+        "0442ce4e-2324-4815-aa2b-f842f5ea01fd": {
+          "name": "Feedback da Aula"
+        },
+        "273739e6-df37-46e8-9c15-0ebc875283af": {
+          "name": "Feedback da Aula"
+        },
+        "2da9ab90-ab1f-4df2-9875-583d970130b7": {
+          "name": "Feedback da Aula"
+        },
+        "a6536809-2fee-43de-ae35-96467d01d080": {
+          "name": "Dia 5"
+        },
+        "167ac810-4f9b-472b-9fee-8453d283104e": {
+          "name": "Feedback da Aula"
+        },
+        "8068a8ea-049d-49f0-bcb9-1601b6ff0490": {
+          "name": "Atividade"
+        },
+        "06493f49-cf92-41f2-8b5f-c39264524d3a": {
+          "name": "Formando grupos"
+        },
+        "7f1d3b52-252a-4c4b-87a5-0c983b8a9c64": {
+          "name": "Teste e Feedback"
+        },
+        "e9ddb1e4-3fb9-4b16-bbec-0519c37f899a": {
+          "name": "Preparação do Projeto"
+        },
+        "25c80e3e-628b-4f81-8c80-add568cec5f7": {
+          "name": "Atividade"
+        },
+        "7e0487d6-0de0-461b-b6b8-bae53fff3c55": {
+          "name": "Antes da Lição"
+        },
+        "919ed563-92a0-4e03-b316-14bf1a922f5a": {
+          "name": "Extensões"
+        },
+        "ab66741e-528f-4d29-81df-1b6a3f5ba1fa": {
+          "name": "Dia 5"
+        },
+        "ee81ca1c-5e75-40ee-880c-e12ef70a34f5": {
+          "name": "Fechamento"
+        },
+        "ea249449-8468-4a0f-9291-66fcb8e755c1": {
+          "name": "Fechamento"
+        },
+        "0e3432dd-ba1d-4c56-a446-81c419bd6db9": {
+          "name": "Extensões"
+        },
+        "1fea0616-f2de-4f97-b0d1-9849df75414d": {
+          "name": "Preparação para a Semana"
+        },
+        "09a6032e-c755-4dc8-9e89-9aaf0f9bb77e": {
+          "name": "Dia 5"
+        },
+        "87d33249-e0bc-4144-943d-b6403e852d17": {
+          "name": "Fechamento"
+        },
+        "9b7d9347-ba76-4a24-8e80-0328e74c039b": {
+          "name": "Atividade"
+        },
+        "ca6a593a-402e-4e1e-8bff-af9ac20e3a66": {
+          "name": "Teste e Feedback"
+        },
+        "858c29f1-16dd-490d-bb81-30b2d0a50382": {
+          "name": "Preparação do Projeto"
+        },
+        "5ee57200-4266-4f56-8e29-643ddc70c105": {
+          "name": "Dias 3 e 4"
+        },
+        "fc148775-a1f5-4b7a-9b69-cae748528971": {
+          "name": "Atividade"
+        },
+        "00326643-d26b-4503-b01b-b86de7e00657": {
+          "name": "Dia 5"
+        },
+        "7d9500ac-238a-4a3e-a2fb-1edb0c22ae99": {
+          "name": "Fechamento"
+        },
+        "c5696381-a65c-45c1-aedd-75fc34b5ab6f": {
+          "name": "Fechamento"
+        },
+        "0dd2ba98-7704-49fd-afe4-0c1611210d69": {
+          "name": "Feedback da Aula"
+        },
+        "f18a7cbe-b727-4e5c-a3d8-ffab0feef248": {
+          "name": "Extensões"
+        },
+        "ee0c52f6-7fd2-4191-96f1-d6e5c2065312": {
+          "name": "Dia 5"
+        },
+        "8e0ddf91-a297-4dd3-b853-757ee614b3a0": {
+          "name": "Fechamento"
+        },
+        "e9564cac-789d-449a-904f-66f6e8217fa7": {
+          "name": "Extensões"
+        },
+        "94150b12-745f-4dab-9186-1742e369f813": {
+          "name": "Antes da Lição"
+        },
+        "f8808c7a-459a-4fbb-9cec-ca7b660451c9": {
+          "name": "Preparação para a Semana"
+        },
+        "1f4d4012-e84c-4a82-b2cc-b79023834d5c": {
+          "name": "Dia 5"
+        },
+        "81f0f5ed-90c2-4cb4-8f2e-8f017df18dc6": {
+          "name": "Atividade"
         }
       }
     }

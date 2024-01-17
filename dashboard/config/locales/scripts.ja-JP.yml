@@ -4359,6 +4359,10 @@ ja:
           description_short: ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。
           student_description: ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。
           title: Minecraft Hour of Code デザイナー
+        musiclab:
+          lessons:
+            lesson-3:
+              name: じゆうあそび
         netsim:
           title: インターネット シミュレータ
         nevada-standards-aligned-fifth-grade-2023:
@@ -5047,6 +5051,23 @@ ja:
           title: モジュール2：Code. orgの操作方法
         self-paced-pl-csp2-2023:
           title: モジュール2：Code. orgの操作方法
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: くりかえし
+            lesson-4:
+              name: 条件
+            lesson-6:
+              name: 次の手順
+          title: コンピューター・サイエンス入門
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: イベント
+            lesson-4:
+              name: 行動
+            lesson-5:
+              name: 次の手順
         soccer:
           description: サッカーゲームを作成
           description_short: サッカーゲームを作成

@@ -1369,3 +1369,14 @@ mi:
           lesson_groups:
             lessonGroup-7:
               display_name: Kupu Whakataki
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Ngā Takunetanga
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Ngā Koromeke
+            lesson-4:
+              name: Ngā Here
+          title: Whakatakinga ki te Pūtaiao Rorohiko

@@ -1807,3 +1807,16 @@ ur:
               display_name: باب 1
             lessonGroup-3:
               display_name: باب 2
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: ایونٹس/واقعات
+            lesson-4:
+              name: رویے
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: لوپس
+            lesson-4:
+              name: شرائط
+          title: کمپیوٹر سائنس کا تعارف

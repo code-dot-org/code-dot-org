@@ -4356,6 +4356,10 @@ ru:
           student_description: Создайте игру Minecraft. Придумайте собственные варианты
             курицы, овцы, криперов, зомби и других существ.
           title: Редактор для «Часа Кода» Minecraft
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Свободная игра
         netsim:
           description: Узнайте о том, как работает Интернет.
           description_short: Узнайте о том, как работает Интернет.
@@ -5053,6 +5057,23 @@ ru:
           title: 'Модуль 2: Навигация по инструментам Code.org'
         self-paced-pl-csp2-2023:
           title: 'Модуль 2: Навигация по инструментам Code.org'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Циклы
+            lesson-4:
+              name: Условные команды
+            lesson-6:
+              name: Следующие шаги
+          title: Введение в Информатику
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: События
+            lesson-4:
+              name: Режимы работы
+            lesson-5:
+              name: Следующие шаги
         soccer:
           description: Создайте игру в футбол
           description_short: Создайте игру в футбол

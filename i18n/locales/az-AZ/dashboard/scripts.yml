@@ -7024,6 +7024,8 @@ az:
           lessons:
             lesson-1:
               name: Remiks layihələri
+            lesson-3:
+              name: Azad Oyna
         csa-software-engineering:
           lessons:
             lesson-1:
@@ -7481,3 +7483,28 @@ az:
           student_description: cədvəlli
         csd-post-survey-2024:
           title: Kursdan Sonra Sorğusu
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Dərs 1
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Dərs 1
+            lesson-3:
+              name: Tədbirlər
+            lesson-4:
+              name: Rəftar
+            lesson-5:
+              name: Növbəti addımlar
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Dərs 1
+            lesson-3:
+              name: dövrlər
+            lesson-4:
+              name: Şərti ifadələr
+            lesson-6:
+              name: Növbəti addımlar
+          title: İnformatikaya giriş

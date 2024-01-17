@@ -1625,6 +1625,19 @@ ur:
           title: 'ماڈیول 2: Code.org کو نیویگیٹ کرنا'
         self-paced-pl-csp2-2023:
           title: 'ماڈیول 2: Code.org کو نیویگیٹ کرنا'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: لوپس
+            lesson-4:
+              name: شرائط
+          title: کمپیوٹر سائنس کا تعارف
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: ایونٹس/واقعات
+            lesson-4:
+              name: رویے
         soccer:
           description: ایک قٹ بال گیم بنائیں
           description_short: ایک قٹ بال گیم بنائیں

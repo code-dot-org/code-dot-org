@@ -4390,6 +4390,10 @@ fil:
           student_description: Mag-program ng mga hayop at iba pang nilalang sa mga
             Minecraft sa iyong sariling bersyon ng Minecraft.
           title: Minecraft Hour of Code na Taga-disenyo
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Libreng Laro
         netsim:
           title: Simulator ng Internet
         nevada-standards-aligned-fifth-grade-2023:
@@ -5176,6 +5180,23 @@ fil:
           title: 'Module 2: Pag-navigate sa Code.org'
         self-paced-pl-csp2-2023:
           title: 'Module 2: Pag-navigate sa Code.org'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Mga loop
+            lesson-4:
+              name: Mga conditional
+            lesson-6:
+              name: Mga susunod na Hakbang
+          title: Panimula sa Computer Science
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Mga event
+            lesson-4:
+              name: Pag-uugali
+            lesson-5:
+              name: Mga susunod na Hakbang
         soccer:
           description: Gumawa ng soccer game
           description_short: Gumawa ng soccer game

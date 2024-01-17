@@ -3756,6 +3756,10 @@ fil:
           description: Lumikha kami ng kurso F para sa mga mag-aaral sa ikalimang baitang. Nagsisimula ang kurso sa pamamagitan ng pagtingin sa kung paano gumawa ng mga pagpipilian ang mga gumagamit sa mga app na ginagamit nila. Pagkatapos ay natututo ang mga mag-aaral na gumawa ng iba ' t ibang mga Sprite Lab app na nag-aalok din ng mga pagpipilian para sa gumagamit. Sa mga susunod na aralin sa kurso, malalaman ng mga mag-aaral ang tungkol sa mga variable sa iba ' t ibang mga konteksto. Ang mga mag-aaral ay binibigyan ng higit na awtonomiya at higit pang mga pagpipilian sa buong kursong ito. Sa pagtatapos ng kurso, ang mga mag-aaral ay lumikha ng mga interactive na proyekto upang ibahagi sa kanilang mga kaibigan at pamilya.
         self-paced-pl-csp2-2023:
           title: 'Module 2: Pag-navigate sa Code.org'
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Libreng Laro
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -3961,3 +3965,20 @@ fil:
               display_name: Kabanata 1
             lessonGroup-3:
               display_name: Kabanata 2
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Mga event
+            lesson-4:
+              name: Pag-uugali
+            lesson-5:
+              name: Mga susunod na Hakbang
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Mga loop
+            lesson-4:
+              name: Mga conditional
+            lesson-6:
+              name: Mga susunod na Hakbang
+          title: Panimula sa Computer Science

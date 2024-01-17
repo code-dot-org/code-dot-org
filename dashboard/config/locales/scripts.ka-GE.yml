@@ -7027,6 +7027,10 @@ ka:
           student_description: ტვინის შტორმი/სათამაშო მოედანი ML/AI განყოფილების განვითარებისთვის
             CSD— სთვის. ამის შესახებ მომავალი კითხვებისთვის ჰკითხეთ დენ შნაიდერს.
           title: ML/AI განყოფილება - CSD
+        musiclab:
+          lessons:
+            lesson-3:
+              name: თავისუფალი თამაში
         netsim:
           description: შეიტყვეთ, თუ როგორ მუშაობს ინტერნეტი.
           description_short: შეიტყვეთ, თუ როგორ მუშაობს ინტერნეტი.
@@ -7474,6 +7478,23 @@ ka:
           lesson_groups:
             lessonGroup-2:
               display_name: კეთილი იყოს თქვენი მობრძანება
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: ციკლები
+            lesson-4:
+              name: პირობითი ბრძანებები
+            lesson-6:
+              name: მომდევნო ნაბიჯები
+          title: ინფორმატიკის შესავალი
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: მოვლენები
+            lesson-4:
+              name: ქცევა
+            lesson-5:
+              name: მომდევნო ნაბიჯები
         soccer:
           description: შექმენით საფეხბურთო მატჩი
           description_short: შექმენით საფეხბურთო მატჩი
