@@ -6767,6 +6767,10 @@ de:
           student_description: Baue ein Minecraft-Spiel. Erschaffe deine eigene Version
             von Hühnern, Schafen, Creepern, Zombies und mehr.
           title: 'Mincecraft-Designer: Stunde des Codes'
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Freies Spiel
         netsim:
           description: Erfahren Sie, wie das Internet funktioniert.
           description_short: Erfahren Sie, wie das Internet funktioniert.
@@ -7648,6 +7652,23 @@ de:
           title: 'Modul 2: Navigieren in Code.org'
         self-paced-pl-csp2-2023:
           title: 'Modul 2: Navigieren in Code.org'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Schleifen
+            lesson-4:
+              name: Bedingungen
+            lesson-6:
+              name: Nächste Schritte
+          title: Einführung in die Informatik
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Ereignisse
+            lesson-4:
+              name: Verhaltensweisen
+            lesson-5:
+              name: Nächste Schritte
         soccer:
           description: Entwickle ein Fußballspiel
           description_short: Entwickle ein Fußballspiel

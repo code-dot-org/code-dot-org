@@ -221,7 +221,7 @@ fa:
   for_students_teacher_led_learning: 'برای دانش‌آموزان: یادگیری تحت رهبری معلم'
   for_students_teacher_led_lessons: 'برای دانش‌آموزان: درس‌های تحت رهبری معلم'
   professional_development: توسعه حرفه‌ای
-  additional_educator_resources: Additional Educator Resources
+  additional_educator_resources: منابع آموزشی اضافی
   teach_computer_science: آموزش علوم کامپیوتر
   explore_our_curriculum: کشف برنامه درسی ما
   start_professional_learning: شروع یادگیری حرفه‌ای
@@ -241,6 +241,16 @@ fa:
   afe_partnership_thanks_desc: مهندس آینده آمازون یک برنامه جامع از کودکی به بازار
     کار است که برای الهام بخشیدن، آموزش و تعلیم کودکان و جوانان کم‌درآمد و سایر افراد
     محروم برای یافتن مشاغل حوزه علوم رایانه است. [Learn about our partnership](%{afe_url}).
+  donors_block_microsoft_infosys: We thank Microsoft and Infosys Foundation USA for
+    supporting our vision and mission to ensure every child has the opportunity to
+    learn computer science and the skills to succeed in the 21st century.
+  microsoft_logo_alt: Microsoft logo
+  infosys_logo_alt: Infosys Foundation USA logo
+  amazon_logo_alt: Amazon logo
+  google_logo_alt: Google logo
+  coinbase_logo_alt: Coinbase logo
+  ballmer_group_logo_alt: Ballmer Group logo
+  vista_equity_partners_logo_alt: Vista Equity Partners logo
   grade_level: سطح
   grade_level_label_elementary: مدرسه ابتدایی
   grade_level_label_middle: مدرسه راهنمایی
@@ -308,7 +318,7 @@ fa:
   call_to_action_explore_all_hoc_activities: همه فعالیت‌های «ساعت کد» را از Code.org
     کشف کنید
   call_to_action_start_dance_party: شروع پارتی رقص
-  call_to_action_start_dance_party_ai_edition: 'Start Dance Party: AI Edition'
+  call_to_action_start_dance_party_ai_edition: 'شروع مهمانی رقص: نسخه هوش مصنوعی'
   call_to_action_start_part_02: قسمت دوم را شروع کنید
   call_to_action_start_unplugged_activity: فعالیت غیر متصل را شروع کنید
   call_to_action_view_promo_resources: مشاهده منابع تبلیغاتی
@@ -321,7 +331,7 @@ fa:
     کنید
   call_to_action_explore_activities: فعالیت‌ها را کشف کنید
   call_to_action_explore_ai: کشف هوش مصنوعی
-  call_to_action_explore_resources: Explore resources
+  call_to_action_explore_resources: کشف و بررسی منابع
   call_to_action_explore_tool: ابزار را کاوش کنید
   call_to_action_explore_unit: کاوش واحد
   call_to_action_explore_curriculum: برنامه درسی را کاوش کنید
@@ -403,6 +413,7 @@ fa:
   call_to_action_open_positions: مشاهده پوزیشن های باز
   call_to_action_explore_roles: نقش های باز را کاوش کنید
   call_to_action_get_guide: راهنما را دریافت کنید
+  call_to_action_donate: Donate
   call_to_action_donate_to_cdo: به Code.org کمک مالی کنید
   call_to_action_start_fundraiser: شروع یک جمع آوری کمک مالی
   call_to_action_view_donation_policy: مشاهده سیاست کمک مالی
@@ -425,15 +436,19 @@ fa:
   call_to_action_learn_about_ai: درباره هوش مصنوعی بیاموزید
   call_to_action_learn_more_about_ai: درباره‌ هوش مصنوعی بیش‌تر بدانید
   call_to_action_get_started: شروع کنید
-  call_to_action_explore_self_paced_pl: Explore self-paced professional learning
-  call_to_action_applications_get_notified: Get notified when applications open
-  call_to_action_applications_notify_me: Notify me when I can apply
-  call_to_action_apply_now: Apply now
-  call_to_action_explore_self_paced_learning: Explore self-paced learning
-  call_to_action_explore_k_5_workshops: Explore K-5 workshops
-  call_to_action_for_intl_educators: For international educators
-  call_to_action_learn_more_program_region: Learn more about the program in your region
-  call_to_action_visit_support_center: Visit our support center
+  call_to_action_view_our_supporters: View our supporters
+  call_to_action_explore_self_paced_pl: پیگیری یادگیری حرفه ای خودخوان
+  call_to_action_applications_get_notified: هنگام باز شدن برنامه ها مطلع شوید
+  call_to_action_applications_notify_me: وقتی می توانم درخواست کنم به من اطلاع دهید
+  call_to_action_apply_now: همین حالا اقدام کنید
+  call_to_action_explore_self_paced_learning: یادگیری خودخوان را گسترش دهید.
+  call_to_action_explore_k_5_workshops: کشف و بررسی کارگاه‌های K-5
+  call_to_action_for_intl_educators: برای مربیان بین المللی
+  call_to_action_learn_more_program_region: درباره برنامه در منطقه خود بیشتر بدانید
+  call_to_action_visit_support_center: به مرکز پشتیبانی ما مراجعه کنید
+  call_to_action_download_video: Download video
+  call_to_action_explore_learning_ages_5_11: Explore learning for ages 5-11
+  call_to_action_explore_learning_ages_11_plus: Explore learning for ages 11+
   aria_label_call_to_action_hoc_how_to_educators: راهنمای آموزش برای مربیان را مشاهده
     کنید
   aria_label_call_to_action_hoc_how_to_companies: راهنمای کارکرد شرکتها را مشاهده
@@ -461,8 +476,8 @@ fa:
     حرفه ای
   aria_label_call_to_action_teaching_problem_solving: شروع برنامه یادگیری حرفه ای
     آموزش حل مسئله و محاسبات
-  aria_label_call_to_action_teaching_interactive_animations_games: Start the Teaching
-    Interactive Animations and Games professional learning program
+  aria_label_call_to_action_teaching_interactive_animations_games: برنامه یادگیری
+    حرفه ای آموزش انیمیشن های تعاملی و بازی ها را شروع کنید
   aria_label_call_to_action_teaching_csc: برنامه یادگیری حرفه‌ای «تدریس پیوند با علوم
     کامپیوتر» را شروع کنید
   aria_label_call_to_action_teaching_ai: برنامه یادگیری حرفه ای آموزش هوش مصنوعی و
@@ -565,17 +580,20 @@ fa:
   aria_label_call_to_action_register_student_workshop: ثبت نام در کارگاه دانش‌آموزی
     رایگان
   aria_label_call_to_action_view_more_cs_resources: مشاهده منابع علوم کامپیوتر بیشتر
-  aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
-    professional learning
-  aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
-    professional learning
-  aria_label_call_to_action_pl_apply_csa: Apply now for AP® Computer Science A professional
-    learning
-  aria_label_call_to_action_learn_more_csd: Learn more about Computer Science Discoveries
-  aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
-  aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
-    A
+  aria_label_call_to_action_farsi_donate: Donate to support the Code.org in Farsi
+    campaign
+  aria_label_call_to_action_farsi_learn_more: Learn more about Code.org in Farsi
+  aria_label_call_to_action_pl_apply_csd: اکنون برای یادگیری حرفه ای اکتشافات علوم
+    کامپیوتر اقدام کنید
+  aria_label_call_to_action_pl_apply_csp: اکنون برای یادگیری حرفه ای اصول علوم کامپیوتر
+    درخواست دهید
+  aria_label_call_to_action_pl_apply_csa: اکنون برای آموزش حرفه ای AP® Computer Science
+    A اقدام کنید
+  aria_label_call_to_action_learn_more_csd: درباره اکتشافات علوم کامپیوتر بیشتر بدانید
+  aria_label_call_to_action_learn_more_csp: درباره اصول علوم کامپیوتر بیشتر بدانید
+  aria_label_call_to_action_learn_more_csa: درباره AP® علوم کامپیوتر A بیشتر بدانید
   video_title_professional_learning_program: برنامه یادگیری حرفه ای Code.org
+  video_title_young_women_in_computer_science: زنان جوان در علوم کامپیوتر
   curriculum_name_csf: مبانی علوم کامپیوتر
   curriculum_name_csf_02: هر اصول CS (دوره A-F)
   curriculum_name_csf_a_f: مبانی A-F علوم کامپیوتر
@@ -593,7 +611,7 @@ fa:
   curriculum_name_csd: اکتشافات علوم کامپیوتر
   curriculum_name_csp: اصول علوم کامپیوتر
   curriculum_name_problem_solving: حل مسئله و رایانش
-  curriculum_name_teaching_animation: Teaching Interactive Animations and Games
+  curriculum_name_teaching_animation: آموزش انیمیشن ها و بازی های تعاملی
   curriculum_name_csc: پیوند با علوم کامپیوتر
   curriculum_name_csa: علوم کامپیوتر A
   curriculum_name_csa_ai: مهندسی نرم افزار و بینایی کامپیوتر
@@ -722,10 +740,10 @@ fa:
   module_label_languages: 'زبان‌های پشتیبانی‌شده:'
   module_label_accessibility_features: 'دسترسی:'
   module_label_accessibility_features_full: 'ویژگی های دسترسی:'
-  module_label_teacher_requirements: 'Teacher Requirements:'
+  module_label_teacher_requirements: 'الزامات معلم:'
   module_label_educator_tool: ابزار مربی
   module_label_educator_course: دوره آموزشی
-  module_label_educator_resources: Educator resources
+  module_label_educator_resources: منابع آموزگار
   module_label_student_tool: ابزار دانش‌آموزی
   module_label_student_product: محصول
   module_label_student_content_resources: محتوا و منابع
@@ -734,7 +752,7 @@ fa:
   module_label_available_now: هم اکنون در دسترس است
   module_label_video_series: مجموعه های ویدئویی
   module_label_self_paced: ماژول خود گام
-  module_label_event_or_lessons: Event or lessons
+  module_label_event_or_lessons: رویداد یا درس
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -749,6 +767,7 @@ fa:
   module_grade_3_12: 3-12
   module_grade_5_12: ۵-۱۲
   module_grade_6_12: 6-12
+  module_grade_6_12_plus: 6-12+
   module_grade_6_10: 6-10
   module_grade_7_12: ۷-۱۲
   module_grade_9_12: 9-12
@@ -776,7 +795,7 @@ fa:
   module_duration_1_hr: 1 ساعت
   module_duration_2_hrs: 2 ساعت
   module_duration_3_hrs: 3 ساعت
-  module_duration_3_hrs_20_minutes: 3 hours 20 minutes
+  module_duration_3_hrs_20_minutes: 3 ساعت 20 دقیقه
   module_duration_5_hrs: 5 ساعت
   module_duration_5_hrs_plus: 5+ ساعت
   module_duration_8_hrs: 8 ساعت
@@ -798,7 +817,7 @@ fa:
   module_label_teaching_csd: آموزش علوم کامپیوتر اکتشافات
   module_label_teaching_csp: آموزش اصول علوم کامپیوتر
   module_label_teaching_problem_solving: آموزش حل مسئله و محاسبات
-  module_label_teaching_animations: Interactive Animations and Games
+  module_label_teaching_animations: انیمیشن ها و بازی های تعاملی
   module_label_teaching_csc: تدریس پیوند با علوم کامپیوتر
   module_label_teaching_ai: آموزش هوش مصنوعی و یادگیری ماشین
   module_label_teaching_maker_cp: آموزش ایجاد برنامه ها با دستگاه ها (زمین بازی مدار)
@@ -837,6 +856,8 @@ fa:
   values_04: ما چابک و پاسخگو به بازخورد هستیم
   values_05: ما با صداقت و شفافیت عمل می کنیم
   values_06: ما معتقدیم که تأثیر گسترده نیاز به تفکر بزرگ و عمل جامع دارد
+  heading_anyone_can_learn: Anyone can learn Computer Science
+  heading_find_right_opportunity: Find the right learning opportunity for you!
   heading_professional_learning: یادگیری حرفه‌ای که نیازهای شما را برآورده می‌کند
   heading_additional_resources: منابع اضافی
   heading_support_and_questions: پشتیبانی و سؤالات
@@ -866,12 +887,25 @@ fa:
   heading_attend_free_workshop: شرکت در کارگاه دانش‌آموزی رایگان
   heading_access_more_cs_resources: دسترسی به منابع علوم کامپیوتر بیشتر
   heading_available_on_code_dot_org: موجود در Code.org
-  heading_program_design: Program design
-  heading_how_does_application_process_work: How does the application process work?
-  heading_apply: Apply
-  heading_acceptance: Acceptance
-  heading_enroll: Enroll
-  heading_have_questions: Have questions?
+  heading_program_design: طراحی برنامه
+  heading_how_does_application_process_work: روند درخواست چگونه کار می کند؟
+  heading_apply: اعمال
+  heading_acceptance: پذیرش
+  heading_enroll: ثبت نام کنید
+  heading_have_questions: سوالی دارید؟
+  student_courses_top_desc: Start coding today. Our courses and activities are free!
+    It's easier—and more fun—than you think.
+  student_courses_explore_desc: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more for all ages and
+    experience levels!
+  student_courses_k_5_desc: Start with an Hour of Code, then discover more block-based
+    coding in our Express Courses. Get creative in our fun programming environment,
+    Sprite Lab, or watch cool videos to learn more about key topics. There's so much
+    to explore!
+  student_courses_6_12_desc: Try an Hour of Code, or check out our self-paced courses
+    on creating apps, games, and animations. Do your own thing in our Web Lab, Game
+    Lab, and App Lab programming environments. Plus, learn more about AI, careers
+    in programming, scholarships, and more.
   cs_ambassador_subhead: اگر دانش آموز دبیرستان هستید که علاقه مند به تشویق بیشتر
     زنان جوان برای تحصیل در علوم کامپیوتر در مدرسه خود هستید، پس ما به شما نیاز داریم!
   cs_ambassador_desc: هر زمینه، از جمله پزشکی، سرگرمی، ورزش، آموزش، تجارت، مد و کارآفرینی
@@ -881,9 +915,9 @@ fa:
   cs_ambassador_application_date: برنامه های کاربردی تا 8 نوامبر 2023 باز است
   cs_ambassador_application_subhead: امروز با یک معلم کار کنید تا درخواست خود را ارسال
     کنید
-  cs_ambassador_application_closed_title: Applications have now closed.
-  cs_ambassador_application_closed_subhead: Questions about future opportunities or
-    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
+  cs_ambassador_application_closed_title: برنامه ها اکنون بسته شده اند.
+  cs_ambassador_application_closed_subhead: درباره فرصت های آینده سؤال می کنید یا
+    می خواهید بیشتر بدانید؟ لطفا با [youngwomen@code.org] (%{email_url}) تماس بگیرید.
   cs_ambassador_application_questions: سوال؟ لطفا با [youngwomen@code.org] تماس بگیرید
     (%{email_url})
   cs_ambassador_do_heading: سفیران CS چه کاری انجام می دهند؟
@@ -943,19 +977,19 @@ fa:
     CSA curriculum to your students.
   professional_learning_section_workshops_starting: کارگاه‌های حضوری و مجازی از تابستان
     امسال آغاز می‌شود.
-  pl_self_paced_learning_heading: Self-Paced Learning
-  pl_self_paced_learning_desc: Learn at your own pace using our online learning modules.
-    You can start whenever is convenient for you and the courses are free.
-  pl_elementary_workshops_heading: Elementary Workshops
-  pl_elementary_workshops_desc: Do you teach Kindergarten through 5th grade? Check
-    out the link below to learn more about our K5 workshops.
-  pl_outside_us_heading: Outside the United States
-  pl_outside_us_desc: If you're an international teacher interested in professional
-    learning, learn more about what's offered in your area.
-  pl_regional_partner_desc: Your local Code.org Regional Partner provides high quality
-    Code.org professional learning to teachers, and can help guide your school or
-    district on implementation, certification, funding, and more. They are happy to
-    answer any questions you may have about the program!
+  pl_self_paced_learning_heading: یادگیری خودخوان
+  pl_self_paced_learning_desc: با استفاده از ماژول های یادگیری آنلاین ما با سرعت بیاموزید.
+    شما می توانید هر زمان که برای شما مناسب است شروع کنید و دوره ها رایگان هستند.
+  pl_elementary_workshops_heading: کارگاه های ابتدایی
+  pl_elementary_workshops_desc: آیا تا کلاس پنجم ابتدایی تدریس می کنید؟ برای کسب اطلاعات
+    بیشتر در مورد کارگاه های آموزشی K5، لینک زیر را بررسی کنید.
+  pl_outside_us_heading: خارج از ایالات متحده
+  pl_outside_us_desc: اگر یک معلم بین المللی علاقه مند به یادگیری حرفه ای هستید، در
+    مورد آنچه در منطقه شما ارائه می شود بیشتر بدانید.
+  pl_regional_partner_desc: شریک منطقه ای Code.org شما آموزش حرفه ای Code.org را با
+    کیفیت بالا به معلمان ارائه می دهد و می تواند به راهنمایی مدرسه یا منطقه شما در
+    مورد اجرا، صدور گواهینامه، بودجه و موارد دیگر کمک کند. آنها با خوشحالی به هر سؤالی
+    که ممکن است در مورد برنامه داشته باشید پاسخ می دهند!
   no_devices_section_subhead: جلو بروید، مستقل عمل کنید (برای مدتی)!
   no_devices_section_desc: آموزش علوم کامپیوتر همیشه نباید جلوی صفحه‌نمایش باشد و
     دسترسی به دستگاه نباید مانعی برای یادگیری مفاهیم علوم کامپیوتر باشد.
@@ -980,11 +1014,11 @@ fa:
   subscribe_form_section_desc_csp: برای دریافت ایمیل های ماهانه در مورد اصول علوم
     کامپیوتر Code.org ثبت نام کنید و یادآوری ها، نکات و به روزرسانی های مفید را مستقیماً
     به صندوق ورودی خود ارسال کنید.
-  subscribe_form_section_title_pl: Get notified when Professional Learning registration
-    opens
-  subscribe_form_section_desc_pl: Be the first to know when registration begins! Sign
-    up to receive an email notification when teachers can start applying for the Code.org
-    Professional Learning Program.
+  subscribe_form_section_title_pl: هنگامی که ثبت نام آموزش حرفه ای باز می شود مطلع
+    شوید
+  subscribe_form_section_desc_pl: اولین نفری باشید که از شروع ثبت نام مطلع می شوید!
+    ثبت نام کنید تا زمانی که معلمان می توانند برای برنامه یادگیری حرفه ای Code.org
+    درخواست دهند، اعلان ایمیلی دریافت کنید.
   subscribe_form_section_unsubscribe: در هر زمان می توانید اشتراک خود را لغو کنید.
   hoc_page_what_is_hoc_heading: ساعت کدنویسی چيست؟
   hoc_page_desc: "[ساعت کدنویسی](%{hoc_url}) یک جنبش جهانی است که ده‌ها میلیون دانش‌آموز
@@ -1184,7 +1218,8 @@ fa:
     سپس به عنوان یک تیم همکاری کنید تا دستورالعمل هایی ارائه دهید که بیشترین نیازهای
     همه شرکت کنندگان را برآورده کند.
   ai_curriculum_btn_aria_label_06: مشاهده تأثیر اجتماعی طرح درس هوش مصنوعی مولد
-  ai_curriculum_btn_aria_label_dance_ai: 'Try the Dance Party: AI Edition activity'
+  ai_curriculum_btn_aria_label_dance_ai: 'مهمانی رقص را امتحان کنید: فعالیت نسخه هوش
+    مصنوعی'
   ai_carousel_heading: 'آنچه معلمان در مورد هوش مصنوعی با Code.org می گویند:'
   ai_carousel_quote_01: این درس همچنین به دانش آموزان من این فرصت را داد تا ببینند
     که یک عنصر از نظر در سیستم های طبقه بندی وجود دارد. بعدها، زمانی که ما شروع کردیم
@@ -1379,22 +1414,21 @@ fa:
   ai_vid_computervision_caption: بینایی کامپیوتر
   ai_vid_ethics1_caption: 'اخلاق و هوش مصنوعی: دسترسی برابر و تعصب الگوریتمی'
   ai_vid_ethics2_caption: 'اخلاق و هوش مصنوعی: حریم خصوصی و آینده کار'
-  pl_middle_high_top_heading: Professional Learning Workshops for Grades 6-12
-  pl_middle_high_top_desc: Our engaging workshops are for new and experienced computer
-    science teachers!
-  pl_middle_high_top_desc_02: 'In this program, you will:'
-  pl_middle_high_top_list_01: Explore the curriculum and learning tools
-  pl_middle_high_top_list_02: Experience the course as a teacher and a learner
-  pl_middle_high_top_list_03: Collaborate with fellow teachers
-  pl_middle_high_quotes_heading: 'What teachers are saying about Code.org professional
-    learning:'
-  pl_middle_high_quotes_01: I liked seeing the lessons in action — it helped me understand
-    how to pace them in my own classroom. I liked the opportunity to talk to my peers
-    about assessment ideas and recruitment ideas.
-  pl_middle_high_quotes_02: This was excellent professional development that allowed
-    us time to reflect, process and debrief both individually and as a group. The
-    activities were engaging and meaningful to learning the content. I feel like I'm
-    leaving with skill I can immediately apply in teaching the curriculum.
+  pl_middle_high_top_heading: کارگاه های آموزشی حرفه ای برای کلاس های 6-12
+  pl_middle_high_top_desc: کارگاه های جذاب ما برای معلمان جدید و با تجربه علوم کامپیوتر
+    است!
+  pl_middle_high_top_desc_02: 'در این برنامه، شما:'
+  pl_middle_high_top_list_01: برنامه درسی و ابزارهای یادگیری را کشف کنید
+  pl_middle_high_top_list_02: دوره را به عنوان یک معلم و یک یادگیرنده تجربه کنید
+  pl_middle_high_top_list_03: همکاری با معلمان همکار
+  pl_middle_high_quotes_heading: 'معلمان در مورد یادگیری حرفه ای Code.org چه می گویند:'
+  pl_middle_high_quotes_01: من دیدن درس‌ها در عمل را دوست داشتم - این به من کمک کرد
+    تا بتوانم در کلاس خودم چگونه آن‌ها را تنظیم کنم. من از این فرصت برای صحبت با همکارانم
+    در مورد ایده‌های ارزیابی و ایده‌های استخدام لذت بردم.
+  pl_middle_high_quotes_02: این پیشرفت حرفه ای عالی بود که به ما فرصت داد تا به صورت
+    فردی و گروهی فکر کنیم، پردازش کنیم و توضیح دهیم. فعالیت ها برای یادگیری محتوا
+    جذاب و معنادار بود. احساس می‌کنم با مهارتی که می‌توانم فوراً در آموزش برنامه درسی
+    به کار ببرم، دارم می‌روم.
   pl_middle_high_quotes_03: By the end, I just felt so prepared, motivated, and ready
     to get back in the classroom again!
   pl_middle_high_programs_heading: Professional learning programs specific to the
@@ -2186,6 +2220,12 @@ fa:
   donate_page_fundraise_title: جمع آوری کمک مالی برای Code.org
   donate_page_fundraise_desc: کمک به جمع آوری پول برای Code.org! هر دانش آموز در هر
     مدرسه باید فرصت یادگیری علوم کامپیوتر را داشته باشد.
+  donate_page_campaigns_heading: Support a campaign
+  donate_page_campaigns_farsi_desc: Talent is widespread, but opportunity often isn't.
+    The proposed Code.org in Farsi initiative aims to grant over 110 million Farsi
+    speakers from countries like Iran, Afghanistan, and Tajikistan to global diasporas,
+    access to educational resources currently available in other major languages.
+    Let's make it a reality.
   donate_page_other_ways_title: راه های دیگر برای دادن
   donate_page_other_ways_desc: روش های متنوعی را برای مشارکت کاوش کنید و گزینه ای
     را پیدا کنید که مناسب شما باشد. هر حرکت، بزرگ یا کوچک، ماموریت ما را به جلو می
@@ -2193,6 +2233,10 @@ fa:
   donate_page_501c3: Code.org به عنوان یک سازمان غیرانتفاعی 501 (c) (3) عمومی ثبت
     شده است. مشارکت در Code.org تا حدی که توسط قانون مجاز است، از مالیات کسر می شود.
     شماره شناسایی مالیاتی Code.org 46-0858543 است.
+  donate_page_supporters_heading: Join top industry leaders supporting Code.org
+  donate_page_supporters_desc: Prominent names nationwide trust and support our mission.
+    View our esteemed supporters and consider adding your own commitment to Code.org's
+    transformative cause.
   donate_page_donation_policy_title: درک سیاست کمک مالی ما
   donate_page_donation_policy_desc: در مورد نحوه مدیریت و تخصیص مشارکت های خود بیاموزید.
   donate_tabs_tab_label_daf_direct: DAF مستقیم
@@ -2250,6 +2294,9 @@ fa:
     دهید.
   hoc_live_join_us: به ما بپیوندید
   hoc_live_learn_more: بیشتر بدانید
+  hoc_live_map_and_events_message: During peak Hour of Code traffic, we use a static
+    map to save bandwidth and keep our site running. To see a dynamic map of all events
+    [click here](%{map_url}), and to see the full event list [click here](%{events_url}).
   hoc_overview_oceans_tutorial_header: هوش مصنوعی برای اقیانوس
   hoc_overview_oceans_tutorial_desc: در مورد هوش مصنوعی (AI)، یادگیری ماشین، داده
     های آموزشی و تعصب یاد بگیرید، در حالی که به بررسی مسائل اخلاقی و نحوه استفاده
@@ -2958,6 +3005,22 @@ fa:
   handouts_brochure: این بروشور را به معلمان و مدارس بدهید
   handouts_participationguide: ساعت کدنویسی خود را با این راهنمای مشارکت برنامه ریزی
     کنید
+  poster_aria_label_minecraft: 'Download a poster featuring Minecraft Education: Generation
+    AI'
+  poster_aria_label_dance_ai_01: 'Download a poster featuring Dance Party: AI Edition
+    frog, moose, and cat characters'
+  poster_aria_label_dance_ai_02: 'Download a poster featuring Dance Party: AI Edition
+    robot, sloth, and shark characters'
+  poster_aria_label_oceans_01: Download a poster featuring AI for Oceans underwarer
+    scene with AI Bot selecting a fish
+  poster_aria_label_oceans_02: Download a poster featuring AI for Oceans fish characters
+    with different emotions
+  poster_aria_label_steph: Download a poster featuring NBA star Steph Curry
+  poster_aria_label_malala: Download a poster featuring activist Malala Yousafzai
+  poster_aria_label_hadi: Download a poster featuring Code.org founder Hadi Partovi
+  poster_aria_label_mary: Download a poster featuring General Motors CEO Mary Barra
+  poster_aria_label_satya: Download a poster featuring Microsoft CEO Satya Nadella
+  poster_aria_label_shakira: Download a poster featuring singer-songwriter Shakira
   videos_title: نمایش این فیلم ها برای الهام بخشیدن به دانش آموزان
   videos_what_most_schools_dont_teach: آنچه اکثر مدارس آموزش نمی دهند (5 دقیقه)
   videos_hoc_2014: ساعت کد اینجاست - هرکسی می تواند یاد بگیرد
@@ -13467,13 +13530,14 @@ fa:
   tutorial_wizmoon_name: 'Moon Phase: creating the moon phases with code'
   tutorial_wiztraffic_name: 'Traffic light: creating a traffic light with code'
   tutorial_wizpacman_name: 'Pacman game: creating a Pacman game with code'
-  tutorial_wizsea_name: 'Saving the sea: creating a game with code'
-  tutorial_wizroad_name: 'Road crossing game: building a road crossing game with code'
-  tutorial_bekidsadventure_name: Creative Coding Adventures
-  tutorial_myqpixel_name: MyQ Pixel - Cause and effect (formerly Plethora)
-  tutorial_creaticodechatgpt_name: Build Fun Apps/Games Using ChatGPT AI
-  tutorial_thunkabletranslator_name: Build a Translator and Text-to-Speech App with
-    Thunkable
+  tutorial_wizsea_name: 'نجات دریا: ایجاد یک بازی با کد'
+  tutorial_wizroad_name: 'بازی عبور از جاده: ساخت یک بازی عبور جاده با کد'
+  tutorial_bekidsadventure_name: ماجراهای برنامه نویسی خلاق
+  tutorial_myqpixel_name: پیکسل MyQ - علت و معلول ( پلتورا سابق )
+  tutorial_creaticodechatgpt_name: ساخت اپلیکیشنها/بازی های سرگرم کننده با استفاده
+    از ChatGPT AI
+  tutorial_thunkabletranslator_name: با Thunkable یک برنامه مترجم و تبدیل متن به گفتار
+    بسازید
   tutorial_ozobotircomm_name: Intro to IR Communications
   tutorial_gsmonster_name: Create Monster Maze with GameSalad
   tutorial_gsspacerocks_name: Build a Space Rocks game with GameSalad
@@ -15881,6 +15945,8 @@ fa:
     دقیقه)
   video_library_page_inspirational_video_title_14: بیشتر از یک بازی (1 دقیقه)
   video_library_page_inspirational_video_title_15: ایجاد با علوم کامپیوتر (1 دقیقه)
+  video_library_page_inspirational_video_title_16: Young Women in Computer Science
+    (2 min)
   video_library_page_not_hacked_video_title_1: چگونه هک نشم:مقدمه
   video_library_page_not_hacked_video_title_2: چگونه هک نشم:کلمات عبور
   video_library_page_not_hacked_video_title_3: چگونه هک نشم:احراز هویت و قفل دستگاه
@@ -16160,6 +16226,26 @@ fa:
     که چگونه محاسبات و تکنولوژی می‌تواند بر جهان تاثیر بگذارد.
   elementary_page_computer_science_description_2: بین علوم کامپیوتر (CS) و سایر موضوعات
     مانند ریاضی، هنرهای زبانی، علوم و مطالعات اجتماعی ارتباط برقرار کنید.
+  hoc_beyond_hero_description: Now that you've completed your Hour of Code, take your
+    learning to the next level! Many partners offer free, engaging options for teachers
+    and students alike - no experience needed.
+  hoc_beyond_for_teachers_section_title: For Teachers
+  hoc_beyond_for_teachers_section_description: You've held an Hour of Code event in
+    your classroom... now what? Join the more than 2 million educators who use Code.org
+    to teach computer science. Anyone can learn!
+  hoc_beyond_for_teachers_course_title_1: Teach with Code.org’s Courses
+  hoc_beyond_for_teachers_course_title_2: Teach Courses from Other Providers
+  hoc_beyond_for_teachers_course_description_1: Code.org offers a full K-12 course
+    pathway and professional learning workshops for teachers, free of charge.
+  hoc_beyond_for_teachers_course_description_2: Compare options by different partners,
+    organized by grade band.
+  hoc_beyond_for_teachers_course_link_1: Teach with Code.org
+  hoc_beyond_for_teachers_course_link_2: Explore other providers
+  hoc_beyond_carousel_title: For Students
+  hoc_beyond_carousel_description: Want to keep learning after Hour of Code? Check
+    out these activities for learners of all ages and skill levels.
+  hoc_beyond_submit_activity_form: Submit your own activity [here](%{form_url}).
+  hoc_beyond_end_section_label: The Hour of Code is organized by [Code.org](%{home_page})
   language_code:
     ar: عربی
     az: آذربایجانی

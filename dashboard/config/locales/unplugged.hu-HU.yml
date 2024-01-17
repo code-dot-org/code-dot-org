@@ -387,6 +387,8 @@ hu:
         desc: A diákok egyszerű algoritmusokat (utasítások sorozta) hoznak létre,
           hogy egy karaktert egyetlen paranccsal átvezessenek egy labirintuson.
         title: Vidám térképek
+      Unplugged- Melissa Sandbox:
+        title: Offline
       VideoGamesCoordinatePlanes:
         desc: Fedezd fel hogy a videójátékot amivel szeretsz játszani hogyan működteti
           az algebra! Az algebrai kifejezések és koordináta-rendszer segítenek megérteni

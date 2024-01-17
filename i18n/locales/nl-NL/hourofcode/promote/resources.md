@@ -18,7 +18,7 @@ title: Middelen
 
 ## Hang deze posters in uw school
 
-Er is een nieuwe set aan posters beschikbaar met daarop Malala, Stephen Curry, Shakira en meer. Dit jaar bestaat elke set uit 6 posters en 126 "I did the Hour of Code" stickers. Klik gewoon op een van de onderstaande afbeeldingen om een afdrukbare versie te bekijken en op te slaan als u zelf posters wilt afdrukken.
+Print your own posters! Simply click an image below to view and save a printable version.
 
 {{ promote_new_posters }}
 

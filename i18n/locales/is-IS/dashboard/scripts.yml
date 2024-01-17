@@ -3415,6 +3415,10 @@ is:
               display_name: Lokaverkefni námskeiðs
           description_audience: 'Aldur: 9-13'
           description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Frjáls æfing
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -3588,3 +3592,28 @@ is:
               display_name: Inntök og Úttök
         csd-post-survey-2024:
           title: Könnun eftir námskeið
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Kennslustund 1
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Kennslustund 1
+            lesson-3:
+              name: Atvik
+            lesson-4:
+              name: Hegðun
+            lesson-5:
+              name: Næstu skref
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Kennslustund 1
+            lesson-3:
+              name: Lykkjur
+            lesson-4:
+              name: Skilyrði
+            lesson-6:
+              name: Næstu skref
+          title: Kynning á tölvunarfræði

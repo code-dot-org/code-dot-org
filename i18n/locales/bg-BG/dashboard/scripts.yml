@@ -2612,6 +2612,10 @@ bg:
               display_name: Данни и Симулации
             lessonGroup-6:
               display_name: Проект за Края на Курса
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Свободна игра
         csa-frq-practice:
           lessons:
             lesson-2:
@@ -2724,3 +2728,28 @@ bg:
               display_name: 'Глава 1: Вход и Изход'
         csd7-2024:
           title: AI и Машинно Обучение
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Урок 1
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Урок 1
+            lesson-3:
+              name: Събития
+            lesson-4:
+              name: Поведения
+            lesson-5:
+              name: Следващи стъпки
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Урок 1
+            lesson-3:
+              name: Повторения
+            lesson-4:
+              name: Условия
+            lesson-6:
+              name: Следващи стъпки
+          title: Въведение в компютърните науки

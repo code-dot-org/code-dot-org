@@ -5285,6 +5285,10 @@ id:
           description_short: Pelajari seluruh konsep dalam dasar dasar ilmu komputer dan buat seni, cerita atau permainan anda sendiri.
         self-paced-pl-csp2-2023:
           title: 'Modul 2: Menavigasi Code.org'
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Permainan Gratis
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -5624,3 +5628,28 @@ id:
               display_name: Chapter 2
         csd-post-survey-2024:
           title: Survei Pasca Kursus
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Pelajaran 1
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Pelajaran 1
+            lesson-3:
+              name: kegiatan
+            lesson-4:
+              name: Perilaku
+            lesson-5:
+              name: Langkah berikutnya
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Pelajaran 1
+            lesson-3:
+              name: Loop
+            lesson-4:
+              name: Kondisi
+            lesson-6:
+              name: Langkah berikutnya
+          title: Perkenalan ilmu komputer

@@ -2689,7 +2689,10 @@ sq:
         self-paced-pl-csp2-2023: {}
         self-paced-pl-csp3-2023: {}
         self-paced-pl-csp4-2023: {}
-        musiclab: {}
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Lojë e lirë
         csa-software-engineering: {}
         csa-frq-practice:
           lesson_groups:
@@ -2915,3 +2918,26 @@ sq:
               display_name: Hyrje në App Lab
           student_description: Kjo njësi është një hyrje praktike për zhvillimin e një modeli të mësimit të makinave me të dhëna tabelare. Ju do të eksploroni se si kompjuterët mësojnë nga të dhënat për të marrë vendime, më pas do të zhvilloni projektet tuaja të mësimit të makinave rreth të dhënave të botës reale. Njësia arrin kulmin me dizajnimin e aplikacionit tuaj të mësimit të makinave për të zgjidhur një problem të rëndësishëm personalisht.
         csd-post-survey-2024: {}
+        melissasandbox-2024-1: {}
+        coursec-maker-2024: {}
+        coursef-maker-2024: {}
+        coursee-maker-2024: {}
+        coursed-maker-2024: {}
+        self-paced-pl-k5-2024: {}
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Ngjarje
+            lesson-4:
+              name: Sjelljet
+            lesson-5:
+              name: Hapat e ardhshme
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Cikle
+            lesson-4:
+              name: Kushtet
+            lesson-6:
+              name: Hapat e ardhshme
+          title: Hyrje në Shkencë Kompjuterike

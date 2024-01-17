@@ -68,7 +68,7 @@ pt:
           student_description: Aprenda programação funcional com álgebra
           name: álgebra
         infinity:
-          title: Disney Infinity Play Lab
+          title: Laboratório de jogos Disney Infinity
           description: Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity.
           description_short: Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity.
           student_description: Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity.
@@ -382,27 +382,87 @@ pt:
           description: Use o Widget de Análise de Frequência para analisar as frequências das letras em um texto de entrada em comparação com as frequências esperadas para o inglês padrão. Use essa comparação para explorar como decifrar cifras de mudança e substituição.
           description_short: Use o Componente Análise de Frequência para analisar frequências de letras em um texto comparado com frequências esperadas. Quebre Cifras de Troca e Substituição.
           student_description: Use o Widget de Análise de Frequência para analisar as frequências das letras em um texto de entrada em comparação com as frequências esperadas para o inglês padrão. Use essa comparação para explorar como decifrar cifras de mudança e substituição.
+        ECSPD3-Unit2:
+          title: 'Explorando a Ciência da Computação: Unidade 2'
+          description: Curso de Desenvolvimento Profissional Online
+          description_short: 'Unidade 2: PDF online'
+          student_description: Curso de Desenvolvimento Profissional Online
+        ECSPD3-Unit3:
+          title: 'Explorando a Ciência da Computação: Unidade 3'
+          description: Desenvolvimento do Ano Acadêmico
+          description_short: Desenvolvimento do Ano Acadêmico
+          student_description: Desenvolvimento do Ano Acadêmico
+        ECSPD3-Unit4:
+          title: 'Explorando a Ciência da Computação: Unidade 4'
+          description: Desenvolvimento do Ano Acadêmico
+          description_short: Desenvolvimento do Ano Acadêmico
+          student_description: Desenvolvimento do Ano Acadêmico
+        ECSPD3-Unit5:
+          title: 'Explorando o Desenvolvimento Profissional em Ciência da Computação: Desenvolvimento do Ano Letivo'
+          description: Desenvolvimento do Ano Acadêmico
+          description_short: Desenvolvimento do Ano Acadêmico
+          student_description: Desenvolvimento do Ano Acadêmico
+        ECSPD3-Unit6:
+          title: 'Explorando o Desenvolvimento Profissional em Ciência da Computação: Desenvolvimento do Ano Letivo'
+          description: Desenvolvimento do Ano Acadêmico
+          description_short: Desenvolvimento do Ano Acadêmico
+          student_description: Desenvolvimento do Ano Acadêmico
         cspunit4draft:
+          title: Fundamentos de Ciência da Computação - Unidade 4 - Dados
+          description: Colete, analise e extraia conhecimento dos dados programando e criando aplicativos. Processe dados importados de outras fontes e também extraia dados de IPAs (Interface de Programação de Aplicações) em tempo real.
           description_short: Dados
+          student_description: Colete, analise e extraia conhecimento dos dados programando e criando aplicativos. Processe dados importados de outras fontes e também extraia dados de IPAs (Interface de Programação de Aplicações) em tempo real.
+        ScienceP3OLPT2:
+          title: Ciência da Computação na Ciência PD - Fase 3A - Pós-Trabalho
+          description: Desenvolvimento do Ano Letivo - Fase 3
+          description_short: Desenvolvimento do Ano Letivo - Fase 3
         algebraPD3b:
           title: Ciência da computação em álgebra PD
+          description: 'Fase 3 (Parte 2): Suporte de Aula de Ciência da Computação e Álgebra - meio do ano'
+          description_short: 'Fase 3 (Parte 2): Suporte de Aula de Ciência da Computação e Álgebra - meio do ano'
+          student_description: 'Fase 3 (Parte 2): Suporte de Aula de Ciência da Computação e Álgebra - meio do ano'
+        CSPPD3-Unit2:
+          title: 'Fundamentos da Ciência da Computação: Unidade 2 PD'
+          description: Exploração Online da Unidade 2 do Programa em Ciência da Computação
+          description_short: Exploração Online da Unidade 2 do Programa em Ciência da Computação
+          student_description: Exploração Online da Unidade 2 do Programa em Ciência da Computação
+        duino:
+          title: Experimentando com Arduíno
+          description: Testando algumas ferramentas para ensinar com Arduínos
+          student_description: Testando algumas ferramentas para ensinar com Arduínos
         Special Fun:
+          title: Diversão Especial
+          description_short: Algo especial para quem sabe que existe. Esses quebra-cabeças podem não durar muito tempo, então aproveite-os enquanto puder!
           description_audience: 10-18 anos de idade
         SpecialSeries:
+          title: Níveis Especiais
+          description: Algo especial para quem sabe que existe. Esses quebra-cabeças podem não durar muito tempo, então aproveite-os enquanto puder!
+          description_short: Algo especial para quem sabe que existe. Esses quebra-cabeças podem não durar muito tempo, então aproveite-os enquanto puder!
           description_audience: 10-18 anos de idade
+          student_description: Algo especial para quem sabe que existe. Esses quebra-cabeças podem não durar muito tempo, então aproveite-os enquanto puder!
         iceage:
           title: Laboratório da Era do Gelo
           description: Crie uma história ou faça um jogo com o Laboratório da Era do Gelo!
           description_short: Crie uma história ou faça um jogo com o Laboratório da Era do Gelo!
           student_description: Crie uma história ou faça um jogo com o Laboratório da Era do Gelo!
           name: era do gelo
+        CSPPD3-Unit3:
+          title: 'Fundamentos em Ciência da Computação: Unidade 3 PD'
+          description: Exploração Online da Unidade 3 do CSP
+          description_short: Exploração Online da Unidade 3 do CSP
+          student_description: Exploração Online da Unidade 3 do CSP
         cspunit3temp:
           title: CSP Unidade 3 - Programação
           description: Esta unidade introduz os conceitos fundamentais de programação de computadores, que ajudam na habilidade de criar ricos aplicativos interativos. Esse curso usa JavaScript como linguagem de programação, e o Laboratório de Aplicativo App Lab é o ambiente de programação para construir aplicativos, mas os conceitos aprendidos nessas lições envolvem todas as ferramentas e linguagens de programação.
           description_short: Programação
           student_description: Esta unidade introduz os conceitos fundamentais de programação de computadores, que ajudam na habilidade de criar ricos aplicativos interativos. Esse curso usa JavaScript como linguagem de programação, e o Laboratório de Aplicativo App Lab é o ambiente de programação para construir aplicativos, mas os conceitos aprendidos nessas lições envolvem todas as ferramentas e linguagens de programação.
+        CSP-Unit3-Support:
+          title: 'Fundamentos em Ciência da Computação: Unidade 3 PD'
+          description: Exploração Online da Unidade 3 do CSP
+          description_short: Exploração Online da Unidade 3 do CSP
+          student_description: Exploração Online da Unidade 3 do CSP
         gumball:
-          title: Gumball Play Lab
+          title: Laboratório do Gumball
           description: Crie uma história ou faça um jogo com o Laboratório do Gumball!
           description_short: Crie uma história ou faça um jogo com o Laboratório do Gumball!
           student_description: Crie uma história ou faça um jogo com o Laboratório do Gumball!
@@ -434,6 +494,9 @@ pt:
           student_description: Exploração on-line da Unidade 3 do CSP - Desafios da aula
         ScienceP3OLPT3:
           title: Ciência da Computação em Ciência PD Pré-Fase 3B
+          description: Desenvolvimento do Ano Letivo - Fase 3
+          description_short: Desenvolvimento do Ano Letivo - Fase 3
+          student_description: Desenvolvimento do Ano Letivo - Fase 3
         cspunit5:
           title: "(antiga) Princípios de CS, Unidade 5 - Tarefas de desempenho"
           description: Esta unidade aborda a preparação e a conclusão das tarefas de exploração e criação de desempenho.
@@ -611,7 +674,7 @@ pt:
           description: Este é um curso de aprendizagem profissional de teste
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
             practice:
@@ -621,7 +684,7 @@ pt:
           title: Teste CPS PD
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
             practice:
@@ -641,8 +704,14 @@ pt:
           student_description: introdução ao simulador de internet e uma discussão sobre como o usamos para ensinar a internet
         csp-facilitators:
           title: Visão geral da ferramenta CSP
+          description: Uma coleção de ferramentas do curso Fundamentos em Ciência da Computação. Esses níveis fornecem um vislumbre das ferramentas que usamos em todo o currículo para
+          description_short: Introdução aos Fundamentos de CC para novos Facilitadores
+          student_description: Uma coleção de ferramentas do curso Fundamentos em Ciência da Computação. Esses níveis fornecem um vislumbre das ferramentas que usamos em todo o currículo para
         cspassessment:
+          title: "[Obsoleto] Avaliação Final dos Fundamentos de CC"
+          description: 'Essa avaliação foi descontinuada e está programada para ser removida no verão de 2017. Os alunos podem concluir o teste e ver seus próprios resultados, mas o professor não poderá ver os resultados dos alunos em uma seção. Use o exame prático oficial do CSP do College Board. [Esta avaliação de múltipla escolha de 55 perguntas abrange questões sobre 7 grandes ideias da ciência da computação: criatividade, abstração, dados, algoritmos, programação, Internet e impacto global.]'
           description_short: Essa avaliação foi descontinuada e está programada para ser removida no verão de 2017.
+          student_description: 'Essa avaliação foi descontinuada e está programada para ser removida no verão de 2017. Os alunos podem concluir o teste e ver seus próprios resultados, mas o professor não poderá ver os resultados dos alunos em uma seção. Use o exame prático oficial do CSP do College Board. [Esta avaliação de múltipla escolha de 55 perguntas abrange questões sobre 7 grandes ideias da ciência da computação: criatividade, abstração, dados, algoritmos, programação, Internet e impacto global.]'
         cspexam1-mWU7ilDYM9:
           title: Avaliação Cumulativa dos Princípios de CS - Parte 1
           description: 'Essa avaliação de 25 perguntas de múltipla escolha abrange questões sobre 7 grandes ideias relacionadas à ciência da computação: criatividade, abstração, dados, algoritmos, programação, Internet e impacto global.'
@@ -691,7 +760,7 @@ pt:
           description_short: Usaremos isso durante o TeacherCon para fornecer suporte e materiais para as sessões
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
             practice:
@@ -759,7 +828,7 @@ pt:
           description_short: Este é um exemplo de curso que tem todas as coisas especiais do PLC.
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
             practice:
@@ -811,7 +880,7 @@ pt:
           description: Este é um espaço de teste para PD online. A inscrição neste curso não faz nada.
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
             practice:
@@ -823,7 +892,7 @@ pt:
           description: Este é um conjunto de suportes online organizados em um Curso de Aprendizagem Profissional para professores do CSP que se preparam para ensinar a Unidade 1.
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
             practice:
@@ -858,7 +927,7 @@ pt:
           description: Este é um conjunto de suportes online organizados em um Curso de Aprendizagem Profissional para professores do CSP que se preparam para ensinar a Unidade 2.
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
             practice:
@@ -872,7 +941,7 @@ pt:
             csd4_1:
               display_name: 'Capítulo 1: Desenho orientado ao usuário'
             csd4_2:
-              display_name: 'Capítulo 1: Prototipando o App'
+              display_name: 'Capítulo 2: Prototipando o App'
             csd_survey:
               display_name: Pesquisa Pós-Curso
           student_description: A unidade 4 apresenta os impactos sociais mais amplos da computação. Através de uma série de desafios de design, você aprenderá a entender melhor as necessidades de outras pessoas enquanto desenvolve uma solução para um problema. A segunda metade da unidade consiste em um projeto de equipe iterativo, durante o qual as equipes têm a oportunidade de identificar uma necessidade com a qual se preocupam, protótipos de soluções tanto no papel quanto no App Lab e testam soluções com usuários reais para obter feedback e avançar iteração.
@@ -889,18 +958,31 @@ pt:
         coursea-draft:
           title: 'Fundamentos da CC: Curso A'
           description_short: Uma introdução à ciência da computação para novos leitores.
+          description: |-
+            O curso A é para leitores iniciantes. Os alunos criarão programas de computador que os ajudarão a aprender a colaborar com outras pessoas, desenvolver habilidades de resolução de problemas e persistir em tarefas difíceis. Ao final deste curso, os alunos criam seu próprio jogo ou história personalizada para compartilhar.
+            Recomendado para o 5o ano.
+          student_description: |-
+            O curso A é para leitores iniciantes. Os alunos criarão programas de computador que os ajudarão a aprender a colaborar com outras pessoas, desenvolver habilidades de resolução de problemas e persistir em tarefas difíceis. Ao final deste curso, os alunos criam seu próprio jogo ou história personalizada para compartilhar.
+            Recomendado para o 5o ano.
         courseb-draft:
           title: 'Fundamentos da CC: Curso B'
           description_short: Uma introdução à ciência da computação para novos leitores.
+          description: O curso B é para leitores iniciantes. Os alunos criarão programas de computador que os ajudarão a aprender a colaborar com outras pessoas, desenvolver habilidades de resolução de problemas e persistir em tarefas difíceis. Ao final deste curso, os alunos criam seu próprio jogo ou história personalizada para compartilhar. Recomendado para o 1o ano.
+          student_description: O curso B é para leitores iniciantes. Os alunos criarão programas de computador que os ajudarão a aprender a colaborar com outras pessoas, desenvolver habilidades de resolução de problemas e persistir em tarefas difíceis. Ao final deste curso, os alunos criam seu próprio jogo ou história personalizada para compartilhar. Recomendado para o 1o ano.
         coursec-draft:
           title: 'Fundamentos da CC: Curso C'
           description_short: Aprenda o básico da ciência da computação e crie sua própria arte, histórias e jogos.
+          description: Neste curso, os alunos criarão programas para resolver problemas e desenvolver jogos ou histórias interativas que possam compartilhar. Recomendado para o 2o ano.
+          student_description: Neste curso, os alunos criarão programas para resolver problemas e desenvolver jogos ou histórias interativas que possam compartilhar. Recomendado para o 2o ano.
         coursed-draft:
           title: 'Fundamentos da CC: Curso D'
           description_short: Aprenda o básico da ciência da computação e crie sua própria arte, histórias e jogos.
+          description: Neste curso, os alunos criarão programas para resolver problemas e desenvolver jogos ou histórias interativas que possam compartilhar. Recomendado para o 3o ano.
+          student_description: Neste curso, os alunos criarão programas para resolver problemas e desenvolver jogos ou histórias interativas que possam compartilhar. Recomendado para o 3o ano.
         coursee-draft:
           title: 'Fundamentos da CC: Curso E'
           description_short: Aprenda o básico da ciência da computação e crie sua própria arte, histórias e jogos.
+          description: Neste curso, os alunos criarão programas para resolver problemas e desenvolver jogos ou histórias interativas que possam compartilhar. O curso culmina em um projeto de vários dias. Recomendado para o 4o ano.
           lesson_groups:
             content:
               display_name: Conteúdo
@@ -908,19 +990,26 @@ pt:
               display_name: Projeto de Fim do Curso
             extra_course_content:
               display_name: Conteúdo do curso extra
+          student_description: Neste curso, os alunos criarão programas para resolver problemas e desenvolver jogos ou histórias interativas que possam compartilhar. O curso culmina em um projeto de vários dias. Recomendado para o 4o ano.
         coursef-draft:
           title: 'Fundamentos da CC: Curso F'
           description_short: Aprenda o básico da ciência da computação e crie sua própria arte, histórias e jogos.
+          description: Neste curso, os alunos criarão programas para resolver problemas e desenvolver jogos ou histórias interativas que possam compartilhar. O curso culmina em um projeto de vários dias. Recomendado para o 5o ano.
           lesson_groups:
             content:
               display_name: Conteúdo
             end_of_course_project:
               display_name: Projeto de Fim do Curso
+          student_description: Neste curso, os alunos criarão programas para resolver problemas e desenvolver jogos ou histórias interativas que possam compartilhar. O curso culmina em um projeto de vários dias. Recomendado para o 5o ano.
         classic-hoc-impact-study:
+          title: Hora do Código com Pesquisa
           description_short: Conheça os conceitos básicos da ciência da computação com a ajuda de vários personagens divertidos!
+          description: Experimente o básico da ciência da computação com personagens de Angry Birds e Plants vs. Zombies! Esta versão inclui pesquisas prévias e posteriores para nos ajudar a continuar aprimorando a Hora do Código. Peça à sua turma que passe para a pesquisa pós-pesquisa 10 minutos antes do término da aula.
         hoc-impact-study:
           title: Labirinto clássico com pesquisa
           description_short: Conheça os conceitos básicos da ciência da computação com a ajuda de vários personagens divertidos!
+          description: Experimente o básico da ciência da computação com personagens de Angry Birds e Plants vs. Zombies! Esta versão inclui pesquisas prévias e posteriores para nos ajudar a continuar aprimorando a Hora do Código. Peça à sua turma que passe para a pesquisa pós-pesquisa 10 minutos antes do término da aula.
+          student_description: Experimente o básico da ciência da computação com personagens de Angry Birds e Plants vs. Zombies! Esta versão inclui pesquisas prévias e posteriores para nos ajudar a continuar aprimorando a Hora do Código. Peça à sua turma que passe para a pesquisa pós-pesquisa 10 minutos antes do término da aula.
         sports:
           title: Programe seus próprios jogos esportivos
           description_short: Esportes
@@ -928,38 +1017,65 @@ pt:
           student_description: Esportes
           name: esportes
         csp3-support:
+          title: 'Unidade 3: Curso de aprendizagem profissional online'
           description_short: Curso de Aprendizagem Profissional para Professores da Unidade CSP 3
+          description: Este é um conjunto de suportes online organizados em um Curso de Aprendizagem Profissional para professores do CSP que se preparam para ensinar a Unidade 3.
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
             practice:
               display_name: Práticas de ensino
+          student_description: Este é um conjunto de suportes online organizados em um Curso de Aprendizagem Profissional para professores do CSP que se preparam para ensinar a Unidade 3.
         csp4-support:
+          title: 'Unidade 4: Curso de aprendizagem profissional online'
           description_short: Curso de Aprendizagem Profissional para Professores da Unidade CSP 4
+          description: Este é um conjunto de suportes online organizados em um Curso de Aprendizagem Profissional para professores do CSP que se preparam para ensinar a Unidade 4.
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
             practice:
               display_name: Práticas de ensino
+          student_description: Este é um conjunto de suportes online organizados em um Curso de Aprendizagem Profissional para professores do CSP que se preparam para ensinar a Unidade 4.
+        sciencepd4:
+          title: 'CS na Ciência: Parte 4'
+          description_short: 'Fase 3: Reflita sobre o workshop do primeiro semestre'
+          description: 'Fase 3: Reflita sobre o workshop do primeiro semestre'
+          student_description: 'Fase 3: Reflita sobre o workshop do primeiro semestre'
         csf2harvey:
+          title: Turma do Sr. Harvey
+          description: Bolhas especiais só para nossa turma!
           lesson_groups:
             end_of_course_project:
               display_name: Projeto de Fim do Curso
             content:
               display_name: Conteúdo
+          student_description: Bolhas especiais só para nossa turma!
+        sciencepd5:
+          title: 'CC na Ciência: Parte 5'
+          description_short: 'Fase 3: Prepare-se para o workshop do segundo semestre'
+          description: 'Fase 3: Prepare-se para o workshop do segundo semestre'
+          student_description: 'Fase 3: Prepare-se para o workshop do segundo semestre'
         csp5-support:
+          title: 'Unidade 5: Curso de aprendizagem profissional online'
           description_short: Curso de Aprendizagem Profissional para Professores da Unidade CSP 5
+          description: "#### **Este curso está associado a uma versão do curso que não é mais suportada. Visite nossa página de visão geral dos cursos (<https://studio.code.org/courses>) para ver nossos currículos mais atuais.**\n\nEste é um conjunto de suportes on-line organizados em um Curso de Aprendizagem Profissional para professores do CSP que se preparam para ensinar a Unidade 5."
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
             practice:
               display_name: Práticas de ensino
+          student_description: Este é um conjunto de suportes online organizados em um Curso de Aprendizagem Profissional para professores do CSP que se preparam para ensinar a Unidade 5.
+          name: Suporte ao CSP 5
+        csp6-support:
+          title: Preparação e recursos de AP para professores
+          description: 'EM BREVE: em breve, esta página hospedará um conjunto de recursos para professores que se preparam para o exame AP'
+          student_description: 'EM BREVE: em breve, esta página hospedará um conjunto de recursos para professores que se preparam para o exame AP'
         csppostap-2017:
           title: CSP pós-AP - Bancos de dados e dados utilizados em seus aplicativos ('17 -'18)
           description_short: Aprenda a coletar e usar dados em aplicativos do App Lab.
@@ -977,6 +1093,12 @@ pt:
               display_name: 'Capítulo 1: Programando com Hardware'
             csd6_2:
               display_name: 'Capítulo 2: Construindo protótipos físicos'
+        workshop-gamelab:
+          title: Oficina do Game Lab
+          description_audience: Professores participando de um workshop presencial do Game Lab
+          description_short: Progressão de nível para acompanhar um workshop presencial do Game Lab
+          description: Essa progressão de nível tem como objetivo acompanhar um workshop presencial do Game Lab. O objetivo não é ensinar a ferramenta ou os conceitos de CS, mas sim apoiar um facilitador de workshop na apresentação aos participantes da amplitude do Game Lab.
+          student_description: Essa progressão de nível tem como objetivo acompanhar um workshop presencial do Game Lab. O objetivo não é ensinar a ferramenta ou os conceitos de CS, mas sim apoiar um facilitador de workshop na apresentação aos participantes da amplitude do Game Lab.
         csd5-draft:
           title: Projeto de CSD5
           lesson_groups:
@@ -1073,6 +1195,7 @@ pt:
           description_short: Uma introdução à ciência da computação para pré-leitores.
           description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
           student_description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
+          name: curso A-2017
         courseb-2017:
           title: Curso B
           assignment_family_title: Curso B
@@ -1159,7 +1282,7 @@ pt:
           description: 'Um local para acompanhar sua reflexão do TeacherCon como facilitador iniciante. '
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: 'Um local para acompanhar sua reflexão do TeacherCon como facilitador iniciante. '
@@ -1176,7 +1299,7 @@ pt:
           description: 'Esta é a Unidade 1 do Plano de Aprendizagem Mais Profunda para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará orientações e orientações para demonstrar a proficiência da Unidade 1 do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: 'Esta é a Unidade 1 do Plano de Aprendizagem Mais Profunda para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará orientações e orientações para demonstrar a proficiência da Unidade 1 do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
@@ -1187,7 +1310,7 @@ pt:
           description: 'Esta é a Unidade 2 do Plano de Aprendizagem Mais Profunda para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará orientações  para demonstrar a proficiência da Unidade 2 do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: 'Esta é a Unidade 2 do Plano de Aprendizagem Mais Profunda para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará orientações  para demonstrar a proficiência da Unidade 2 do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
@@ -1198,7 +1321,7 @@ pt:
           description: 'Esta é a Unidade 3 do Plano de Aprendizagem Mais Profunda para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará orientações  para demonstrar a proficiência da Unidade 3 do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: 'Esta é a Unidade 3 do Plano de Aprendizagem Mais Profunda para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará orientações  para demonstrar a proficiência da Unidade 3 do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
@@ -1209,7 +1332,7 @@ pt:
           description: 'Esta é a Unidade 4 do Plano de Aprendizagem Mais Profunda para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará orientações  para demonstrar a proficiência da Unidade 4 do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: 'Esta é a Unidade 4 do Plano de Aprendizagem Mais Profunda para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará orientações  para demonstrar a proficiência da Unidade 4 do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
@@ -1220,7 +1343,7 @@ pt:
           description: 'Esta é a Unidade 5 do Plano de Aprendizagem Mais Profunda para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará orientações  para demonstrar a proficiência da Unidade 5 do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: 'Esta é a Unidade 5 do Plano de Aprendizagem Mais Profunda para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará orientações  para demonstrar a proficiência da Unidade 5 do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
@@ -1231,7 +1354,7 @@ pt:
           description: 'Esta é a Unidade 1 do Plano de Aprendizagem Mais Profunda para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará orientações e orientações para demonstrar a proficiência da Unidade 1 do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: 'Esta é a Unidade 1 do Plano de Aprendizagem Mais Profunda para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará orientações e orientações para demonstrar a proficiência da Unidade 1 do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
@@ -1242,7 +1365,7 @@ pt:
           description: Esta é a Unidade 6 do Plano de Aprendizagem Mais Profunda para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará orientações e orientações para demonstrar a proficiência da Unidade 6 do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade.
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: Esta é a Unidade 6 do Plano de Aprendizagem Mais Profunda para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará orientações e orientações para demonstrar a proficiência da Unidade 6 do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade.
@@ -1253,7 +1376,7 @@ pt:
           description: Esta é a Unidade 5 do Plano de Aprendizagem Mais Profunda para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará orientações e orientações para demonstrar a proficiência da Unidade 5 do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade.
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: Esta é a Unidade 5 do Plano de Aprendizagem Mais Profunda para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará orientações e orientações para demonstrar a proficiência da Unidade 5 do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade.
@@ -1264,7 +1387,7 @@ pt:
           description: Esta é a Unidade 4 do Plano de Aprendizagem Mais Profunda para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará orientações e orientações para demonstrar a proficiência da Unidade 4 do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade.
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: Esta é a Unidade 4 do Plano de Aprendizagem Mais Profunda para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará orientações e orientações para demonstrar a proficiência da Unidade 4 do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade.
@@ -1275,7 +1398,7 @@ pt:
           description: Esta é a Unidade 3 do Plano de Aprendizagem Mais Profunda para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará orientações e orientações para demonstrar a proficiência da Unidade 3 do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade.
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: Esta é a Unidade 3 do Plano de Aprendizagem Mais Profunda para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará orientações e orientações para demonstrar a proficiência da Unidade 3 do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade.
@@ -1286,7 +1409,7 @@ pt:
           description: Esta é a Unidade 2 do Plano de Aprendizagem Mais Profunda para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará orientações e orientações para demonstrar a proficiência da Unidade 2 do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade.
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: Esta é a Unidade 2 do Plano de Aprendizagem Mais Profunda para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará orientações e orientações para demonstrar a proficiência da Unidade 2 do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade.
@@ -1329,7 +1452,7 @@ pt:
             csd4_1:
               display_name: 'Capítulo 1: Desenho orientado ao usuário'
             csd4_2:
-              display_name: 'Capítulo 1: Prototipando o App'
+              display_name: 'Capítulo 2: Prototipando o App'
         craft17:
           title: Script de desenvolvimento Craft17
         applab-intro:
@@ -1406,7 +1529,7 @@ pt:
             csd4_1:
               display_name: 'Capítulo 1: Desenho orientado ao usuário'
             csd4_2:
-              display_name: 'Capítulo 1: Prototipando o App'
+              display_name: 'Capítulo 2: Prototipando o App'
         csp3-staging:
           title: CSP 3 Alterações propostas no campo de armazenamento temporário
           description_short: Campo temporário de preparação para alterações de outubro no csp3
@@ -1642,7 +1765,7 @@ pt:
             csd4_1:
               display_name: 'Capítulo 1: Desenho orientado ao usuário'
             csd4_2:
-              display_name: 'Capítulo 1: Prototipando o App'
+              display_name: 'Capítulo 2: Prototipando o App'
             cspSurvey:
               display_name: Questionário
           student_description: A unidade 4 apresenta os impactos sociais mais amplos da computação. Através de uma série de desafios de design, você aprenderá a entender melhor as necessidades de outras pessoas enquanto desenvolve uma solução para um problema. A segunda metade da unidade consiste em um projeto de equipe iterativo, durante o qual as equipes têm a oportunidade de identificar uma necessidade com a qual se preocupam, protótipos de soluções tanto no papel quanto no App Lab e testam soluções com usuários reais para obter feedback e avançar iteração.
@@ -1747,7 +1870,7 @@ pt:
           description: 'Esta é a Unidade 1 do Plano de Aprendizagem Mais Profunda para os facilitadores de CS do Code.org em treinamento. Aqui você encontrará sugestões e orientações para demonstrar a proficiência como facilitador da Unidade 1 do Currículo de Descobertas de CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: 'Esta é a Unidade 1 do Plano de Aprendizagem Mais Profunda para os facilitadores de CS do Code.org em treinamento. Aqui você encontrará sugestões e orientações para demonstrar a proficiência como facilitador da Unidade 1 do Currículo de Descobertas de CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
@@ -1758,7 +1881,7 @@ pt:
           description: 'Esta é a Unidade 2 do Plano de Aprendizagem Mais Profunda para os facilitadores de CS do Code.org em treinamento. Aqui você encontrará orientações e orientações para demonstrar a proficiência como facilitador da Unidade 2 do Currículo de Descobertas CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: 'Esta é a Unidade 2 do Plano de Aprendizagem Mais Profunda para os facilitadores de CS do Code.org em treinamento. Aqui você encontrará orientações e orientações para demonstrar a proficiência como facilitador da Unidade 2 do Currículo de Descobertas CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
@@ -1769,7 +1892,7 @@ pt:
           description: 'Esta é a Unidade 3 do Plano de Aprendizagem Mais Profunda para facilitadores de CS do Code.org em treinamento. Aqui você encontrará sugestões e orientações para demonstrar a proficiência como facilitador da Unidade 3 do Currículo de Descobertas de CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: 'Esta é a Unidade 3 do Plano de Aprendizagem Mais Profunda para facilitadores de CS do Code.org em treinamento. Aqui você encontrará sugestões e orientações para demonstrar a proficiência como facilitador da Unidade 3 do Currículo de Descobertas de CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
@@ -1780,7 +1903,7 @@ pt:
           description: 'Esta é a Unidade 4 do Plano de Aprendizagem Mais Profunda para os facilitadores de CS do Code.org em treinamento. Aqui você encontrará sugestões e orientações para demonstrar a proficiência como facilitador da Unidade 4 do Currículo de Descobertas de CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: 'Esta é a Unidade 4 do Plano de Aprendizagem Mais Profunda para os facilitadores de CS do Code.org em treinamento. Aqui você encontrará sugestões e orientações para demonstrar a proficiência como facilitador da Unidade 4 do Currículo de Descobertas de CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
@@ -1791,7 +1914,7 @@ pt:
           description: 'Esta é a Unidade 5 do Plano de Aprendizagem Mais Profunda para os facilitadores de CS do Code.org em treinamento. Aqui você encontrará sugestões e orientações para demonstrar a proficiência como facilitador da Unidade 5 do Currículo de Descobertas CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: 'Esta é a Unidade 5 do Plano de Aprendizagem Mais Profunda para os facilitadores de CS do Code.org em treinamento. Aqui você encontrará sugestões e orientações para demonstrar a proficiência como facilitador da Unidade 5 do Currículo de Descobertas CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
@@ -1802,7 +1925,7 @@ pt:
           description: 'Esta é a Unidade 6 do Plano de Aprendizagem Mais Profunda para os facilitadores de CS do Code.org em treinamento. Aqui você encontrará sugestões e orientações para demonstrar a proficiência como facilitador da Unidade 6 do Currículo de Descobertas CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: 'Esta é a Unidade 6 do Plano de Aprendizagem Mais Profunda para os facilitadores de CS do Code.org em treinamento. Aqui você encontrará sugestões e orientações para demonstrar a proficiência como facilitador da Unidade 6 do Currículo de Descobertas CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
@@ -1813,7 +1936,7 @@ pt:
           description: 'Esta é a Unidade 1 do Plano de Aprendizagem Mais Profunda para os facilitadores de Princípios de CS do Code.org. Aqui você encontrará sugestões e orientações para demonstrar a proficiência como facilitador da Unidade 1 do Currículo de Princípios de CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: 'Esta é a Unidade 1 do Plano de Aprendizagem Mais Profunda para os facilitadores de Princípios de CS do Code.org. Aqui você encontrará sugestões e orientações para demonstrar a proficiência como facilitador da Unidade 1 do Currículo de Princípios de CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
@@ -1824,7 +1947,7 @@ pt:
           description: 'Esta é a Unidade 2 do Plano de Aprendizagem Mais Profunda para os facilitadores de CS do Code.org CS. Aqui você encontrará orientações e orientações para demonstrar a proficiência como facilitador da Unidade 2 do Currículo de Princípios de CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: 'Esta é a Unidade 2 do Plano de Aprendizagem Mais Profunda para os facilitadores de CS do Code.org CS. Aqui você encontrará orientações e orientações para demonstrar a proficiência como facilitador da Unidade 2 do Currículo de Princípios de CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
@@ -1835,7 +1958,7 @@ pt:
           description: 'Esta é a Unidade 3 do Plano de Aprendizagem Mais Profunda para os facilitadores de CS do Code.org CS. Aqui você encontrará orientações e orientações para demonstrar a proficiência como facilitador da Unidade 3 do Currículo de Princípios de CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: 'Esta é a Unidade 3 do Plano de Aprendizagem Mais Profunda para os facilitadores de CS do Code.org CS. Aqui você encontrará orientações e orientações para demonstrar a proficiência como facilitador da Unidade 3 do Currículo de Princípios de CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
@@ -1846,7 +1969,7 @@ pt:
           description: 'Esta é a Unidade 4 do Plano de Aprendizagem Mais Profunda para os facilitadores de CS do Code.org CS. Aqui você encontrará orientações e orientações para demonstrar a proficiência como facilitador da Unidade 4 do Currículo de Princípios de CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: 'Esta é a Unidade 4 do Plano de Aprendizagem Mais Profunda para os facilitadores de CS do Code.org CS. Aqui você encontrará orientações e orientações para demonstrar a proficiência como facilitador da Unidade 4 do Currículo de Princípios de CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
@@ -1857,7 +1980,7 @@ pt:
           description: 'Esta é a Unidade 5 do Plano de Aprendizagem Mais Profunda para os facilitadores de Princípios CS do Code.org. Aqui você encontrará orientações e orientações para demonstrar a proficiência como facilitador da Unidade 5 do Currículo de Princípios de CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: 'Esta é a Unidade 5 do Plano de Aprendizagem Mais Profunda para os facilitadores de Princípios CS do Code.org. Aqui você encontrará orientações e orientações para demonstrar a proficiência como facilitador da Unidade 5 do Currículo de Princípios de CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
@@ -1868,7 +1991,7 @@ pt:
           description: 'Esta é a unidade Explore AP do Plano de Aprendizagem Mais Profunda para os facilitadores de Princípios CS do Code.org em treinamento. Aqui você encontrará orientações e orientações para demonstrar a proficiência como facilitador da Unidade Explore AP do Currículo de Princípios CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: 'Esta é a unidade Explore AP do Plano de Aprendizagem Mais Profunda para os facilitadores de Princípios CS do Code.org em treinamento. Aqui você encontrará orientações e orientações para demonstrar a proficiência como facilitador da Unidade Explore AP do Currículo de Princípios CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
@@ -1879,7 +2002,7 @@ pt:
           description: 'Esta é a unidade de criação de AP do plano de aprendizagem mais profunda para os facilitadores de princípios de CS do Code.org em treinamento. Aqui você encontrará orientações e orientações para demonstrar a proficiência como facilitador da Unidade Criar AP do Currículo de Princípios de CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: 'Esta é a unidade de criação de AP do plano de aprendizagem mais profunda para os facilitadores de princípios de CS do Code.org em treinamento. Aqui você encontrará orientações e orientações para demonstrar a proficiência como facilitador da Unidade Criar AP do Currículo de Princípios de CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
@@ -1899,7 +2022,7 @@ pt:
           description: Este é o conjunto de reflexões iniciantes para os facilitadores do CS das Descobertas do Code.org em treinamento durante seu workshop de verão de cinco dias. Aqui você encontrará dicas de reflexão para cada dia do seu workshop de verão de cinco dias em pessoa. Essas perguntas serão a base do trabalho que realizamos no fim de semana de treinamento de facilitadores.
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: Este é o conjunto de reflexões iniciantes para os facilitadores do CS das Descobertas do Code.org em treinamento durante seu workshop de verão de cinco dias. Aqui você encontrará dicas de reflexão para cada dia do seu workshop de verão de cinco dias em pessoa. Essas perguntas serão a base do trabalho que realizamos no fim de semana de treinamento de facilitadores.
@@ -1910,7 +2033,7 @@ pt:
           description: Este é o conjunto de reflexões de aprendizes para os facilitadores do Code.org CS Discoveries em treinamento durante o workshop de verão de cinco dias. Aqui você encontrará dicas de reflexão para cada dia do seu workshop de verão de cinco dias em pessoa. Essas perguntas serão a base do trabalho que realizamos no fim de semana de treinamento de facilitadores.
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: Este é o conjunto de reflexões de aprendizes para os facilitadores do Code.org CS Discoveries em treinamento durante o workshop de verão de cinco dias. Aqui você encontrará dicas de reflexão para cada dia do seu workshop de verão de cinco dias em pessoa. Essas perguntas serão a base do trabalho que realizamos no fim de semana de treinamento de facilitadores.
@@ -1921,7 +2044,7 @@ pt:
           description: Este é o conjunto de reflexões iniciantes para os facilitadores dos Princípios de CS do Code.org em treinamento durante o workshop de verão de cinco dias. Aqui você encontrará dicas de reflexão para cada dia do seu workshop de verão de cinco dias em pessoa. Essas perguntas serão a base do trabalho que realizamos no fim de semana de treinamento de facilitadores.
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: Este é o conjunto de reflexões iniciantes para os facilitadores dos Princípios de CS do Code.org em treinamento durante o workshop de verão de cinco dias. Aqui você encontrará dicas de reflexão para cada dia do seu workshop de verão de cinco dias em pessoa. Essas perguntas serão a base do trabalho que realizamos no fim de semana de treinamento de facilitadores.
@@ -1932,7 +2055,7 @@ pt:
           description: Este é o conjunto de reflexões de aprendizes para os facilitadores dos Princípios de CS do Code.org em treinamento durante seu workshop de verão de cinco dias. Aqui você encontrará dicas de reflexão para cada dia do seu workshop de verão de cinco dias em pessoa. Essas perguntas serão a base do trabalho que realizamos no fim de semana de treinamento de facilitadores.
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: Este é o conjunto de reflexões de aprendizes para os facilitadores dos Princípios de CS do Code.org em treinamento durante seu workshop de verão de cinco dias. Aqui você encontrará dicas de reflexão para cada dia do seu workshop de verão de cinco dias em pessoa. Essas perguntas serão a base do trabalho que realizamos no fim de semana de treinamento de facilitadores.
@@ -1952,7 +2075,7 @@ pt:
           description: Para ser usado para demonstrar como os cursos de CLP funcionam.
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: Para ser usado para demonstrar como os cursos de CLP funcionam.
@@ -1994,9 +2117,9 @@ pt:
             csp_variables:
               display_name: Variáveis
             csp_conditionals:
-              display_name: Condições
+              display_name: Condicionais
             csp_functions:
-              display_name: funções
+              display_name: Funções
             csp_project:
               display_name: Projeto
         dance-extras:
@@ -2017,7 +2140,7 @@ pt:
             csf_data:
               display_name: Dados
             csf_for_loops:
-              display_name: Laços para
+              display_name: Loops For
             csf_internet:
               display_name: Internet
             csf_sprites:
@@ -2043,7 +2166,7 @@ pt:
             csf_loops:
               display_name: laços
             csf_conditionals:
-              display_name: Condições
+              display_name: Condicionais
             csf_binary:
               display_name: Binário
             csf_digcit:
@@ -2068,7 +2191,7 @@ pt:
             csf_nested_loops:
               display_name: Laços aninhados
             csf_functions:
-              display_name: funções
+              display_name: Funções
             end_of_course_project:
               display_name: Projeto de Fim do Curso
           student_description: Comece a codificar com algoritmos, loops, condicionais e eventos e, em seguida, você passará às funções. Na segunda parte deste curso, projete e crie um projeto principal que você possa compartilhar com seus amigos e familiares.
@@ -2084,13 +2207,13 @@ pt:
             csf_loops:
               display_name: laços
             csf_conditionals:
-              display_name: Condições
+              display_name: Condicionais
             csf_functions:
-              display_name: funções
+              display_name: Funções
             csf_variables:
               display_name: Variáveis
             csf_for_loops:
-              display_name: Laços para
+              display_name: Loops For
             csf_sprites:
               display_name: Sprite
         csd1-2019:
@@ -2112,7 +2235,7 @@ pt:
           description: descrição mais longa na minha tentativa de criar um curso.... ainda me perguntando de onde vem a visão geral, o conteúdo....
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           name: andrea-teste
@@ -2233,7 +2356,7 @@ pt:
             csd4_1:
               display_name: 'Capítulo 1: Desenho orientado ao usuário'
             csd4_2:
-              display_name: 'Capítulo 1: Prototipando o App'
+              display_name: 'Capítulo 2: Prototipando o App'
             csd5_2:
               display_name: 'Capítulo 2: Resolvendo problemas de dados'
             cspSurvey:
@@ -2269,13 +2392,13 @@ pt:
             csp_variables:
               display_name: Variáveis
             csp_conditionals:
-              display_name: Condições
+              display_name: Condicionais
             csp_functions:
-              display_name: funções
+              display_name: Funções
             csp_project:
               display_name: Projeto
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
         csp1-2019:
           title: CSP Unidade 1 - A Internet ('19-'20)
           description: Esta unidade explora os desafios e questões técnicas que surgem da necessidade de representar informações digitais em computadores e transferi-las entre pessoas e dispositivos computacionais. A unidade explora a estrutura e o design da Internet e as implicações dessas decisões de design.
@@ -2374,7 +2497,7 @@ pt:
             cspSurvey:
               display_name: Questionário
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
         csd-tests:
           title: Testes pós-projeto para refrigerantes
         csd-videos:
@@ -2409,9 +2532,9 @@ pt:
             csp_variables:
               display_name: Variáveis
             csp_conditionals:
-              display_name: Condições
+              display_name: Condicionais
             csp_functions:
-              display_name: funções
+              display_name: Funções
             csp_project:
               display_name: Projeto
         csp2-pilot-staging:
@@ -2420,9 +2543,9 @@ pt:
             csp_variables:
               display_name: Variáveis
             csp_conditionals:
-              display_name: Condições
+              display_name: Condicionais
             csp_functions:
-              display_name: funções
+              display_name: Funções
             csp_project:
               display_name: Projeto
         csp3-pilot-staging:
@@ -2433,9 +2556,9 @@ pt:
             csp_variables:
               display_name: Variáveis
             csp_conditionals:
-              display_name: Condições
+              display_name: Condicionais
             csp_functions:
-              display_name: funções
+              display_name: Funções
             csp_project:
               display_name: Projeto
         csp5-pilot-staging:
@@ -2457,9 +2580,9 @@ pt:
             csp_variables:
               display_name: Variáveis
             csp_conditionals:
-              display_name: Condições
+              display_name: Condicionais
             csp_functions:
-              display_name: funções
+              display_name: Funções
             csp_project:
               display_name: Projeto
         csp7-pilot-staging:
@@ -2475,9 +2598,9 @@ pt:
             csp_variables:
               display_name: Variáveis
             csp_conditionals:
-              display_name: Condições
+              display_name: Condicionais
             csp_functions:
-              display_name: funções
+              display_name: Funções
             csp_project:
               display_name: Projeto
         csp9-pilot-staging:
@@ -2486,9 +2609,9 @@ pt:
             csp_variables:
               display_name: Variáveis
             csp_conditionals:
-              display_name: Condições
+              display_name: Condicionais
             csp_functions:
-              display_name: funções
+              display_name: Funções
             csp_project:
               display_name: Projeto
         csp10-pilot-staging:
@@ -2497,9 +2620,9 @@ pt:
             csp_variables:
               display_name: Variáveis
             csp_conditionals:
-              display_name: Condições
+              display_name: Condicionais
             csp_functions:
-              display_name: funções
+              display_name: Funções
             csp_project:
               display_name: Projeto
         pluralsight:
@@ -2542,7 +2665,7 @@ pt:
             csp_project:
               display_name: Projeto
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
         fit2019-novice:
           title: Workshop de Reflexões para Iniciantes de Verão de 2019
           description_audience: 6 - 12 Facilitadores Iniciantes em Treinamento
@@ -2550,7 +2673,7 @@ pt:
           description: Este é o conjunto de reflexões iniciantes para os facilitadores do Code.org em treinamento durante seu workshop de verão de cinco dias. Aqui, você encontrará dicas de reflexão para cada dia do seu workshop de verão de cinco dias em pessoa. Essas perguntas serão a base do trabalho que realizamos no Workshop de Treinamento do Facilitador.
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: Este é o conjunto de reflexões iniciantes para os facilitadores do Code.org em treinamento durante seu workshop de verão de cinco dias. Aqui, você encontrará dicas de reflexão para cada dia do seu workshop de verão de cinco dias em pessoa. Essas perguntas serão a base do trabalho que realizamos no Workshop de Treinamento do Facilitador.
@@ -2563,7 +2686,7 @@ pt:
           description: Este é o conjunto de reflexões de aprendizes para os facilitadores do Code.org em treinamento durante seu workshop de verão de cinco dias. Aqui, você encontrará dicas de reflexão para cada dia do seu workshop de verão de cinco dias em pessoa. Essas perguntas serão a base do trabalho que realizamos no Workshop de Treinamento do Facilitador
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           student_description: Este é o conjunto de reflexões de aprendizes para os facilitadores do Code.org em treinamento durante seu workshop de verão de cinco dias. Aqui, você encontrará dicas de reflexão para cada dia do seu workshop de verão de cinco dias em pessoa. Essas perguntas serão a base do trabalho que realizamos no Workshop de Treinamento do Facilitador
@@ -2613,7 +2736,7 @@ pt:
             content:
               display_name: Conteúdo
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
         csl-vn:
           title: Alfabetização em Ciência da Computação no Vietnã
           lesson_groups:
@@ -2629,7 +2752,7 @@ pt:
           description_short: Informações Básicas e instruções práticas para o Workshop FiT
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           name: dlp19-csd-mod-fit
@@ -2638,7 +2761,7 @@ pt:
           description_audience: Facilitadores dos princípios de CS no treinamento 2019
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
         pl-csd-bugs:
@@ -2650,7 +2773,7 @@ pt:
           description_short: Workshop Ano Acadêmico 1
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
         dlp19-csd-mod-w2:
@@ -2658,7 +2781,7 @@ pt:
           description_audience: Facilitadores de descobertas da CS em treinamento 2019
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
         dlp19-csd-mod-w3:
@@ -2666,7 +2789,7 @@ pt:
           description_audience: Facilitadores de descobertas da CS em treinamento 2019
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
         dlp19-csd-mod-w4:
@@ -2674,7 +2797,7 @@ pt:
           description_audience: Facilitadores de descobertas da CS em treinamento 2019
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
         dlp19-csp-mod-w1:
@@ -2682,7 +2805,7 @@ pt:
           description_audience: Facilitadores dos princípios de CS no treinamento 2019
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
         dlp19-csp-mod-w2:
@@ -2690,7 +2813,7 @@ pt:
           description_audience: Facilitadores dos princípios de CS no treinamento 2019
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           name: dlp19-csp-mod-w2
@@ -2699,7 +2822,7 @@ pt:
           description_audience: Facilitadores dos princípios de CS no treinamento 2019
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
         dlp19-csp-mod-w4:
@@ -2707,7 +2830,7 @@ pt:
           description_audience: Facilitadores dos princípios de CS no treinamento 2019
           lesson_groups:
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
             content:
               display_name: Conteúdo
           name: dlp19-csp-mod-w4
@@ -2724,7 +2847,7 @@ pt:
             content:
               display_name: Conteúdo
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
         denny-science:
           title: Detector de terremoto
         peru-2019:
@@ -2735,7 +2858,7 @@ pt:
             content:
               display_name: Conteúdo
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
         denny-science-8:
           title: Detector de colisão
         dance-2019:
@@ -2771,9 +2894,9 @@ pt:
             csp_variables:
               display_name: Variáveis
             csp_conditionals:
-              display_name: Condições
+              display_name: Condicionais
             csp_functions:
-              display_name: funções
+              display_name: Funções
             csp_project:
               display_name: Projeto
         time4cs-original-unit-1:
@@ -2785,11 +2908,11 @@ pt:
             csf_digcit:
               display_name: Cidadania digital
             csf_conditionals:
-              display_name: Condições
+              display_name: Condicionais
             csf_nested_loops:
               display_name: Laços aninhados
             csf_functions:
-              display_name: funções
+              display_name: Funções
             end_of_course_project:
               display_name: Projeto de Fim do Curso
           student_description: A descrição da unidade vai aqui
@@ -2817,7 +2940,7 @@ pt:
             csf_loops:
               display_name: laços
             csf_conditionals:
-              display_name: Condições
+              display_name: Condicionais
             csf_events:
               display_name: Eventos
             csf_sprites:
@@ -2836,7 +2959,7 @@ pt:
             csf_loops:
               display_name: laços
             csf_conditionals:
-              display_name: Condições
+              display_name: Condicionais
             csf_events:
               display_name: Eventos
             csf_sprites:
@@ -2855,7 +2978,7 @@ pt:
             csp_libraries:
               display_name: Bibliotecas
             required:
-              display_name: Visão geral
+              display_name: Visão Geral
         csp8-pilot:
           title: CSP Unidade 8 Piloto - Criar Preparação PT
         csp4-2020:
@@ -2866,9 +2989,9 @@ pt:
             csp_variables:
               display_name: Variáveis
             csp_conditionals:
-              display_name: Condições
+              display_name: Condicionais
             csp_functions:
-              display_name: funções
+              display_name: Funções
             csp_project:
               display_name: Projeto
             cspSurvey2020:
@@ -2950,7 +3073,7 @@ pt:
             csd4_1:
               display_name: 'Capítulo 1: Desenho orientado ao usuário'
             csd4_2:
-              display_name: 'Capítulo 1: Prototipando o App'
+              display_name: 'Capítulo 2: Prototipando o App'
             csd5_2:
               display_name: 'Capítulo 2: Resolvendo problemas de dados'
             cspSurvey:
@@ -3060,7 +3183,7 @@ pt:
             csf_loops:
               display_name: laços
             csf_conditionals:
-              display_name: Condições
+              display_name: Condicionais
             csf_binary:
               display_name: Binário
             csf_digcit:
@@ -3083,7 +3206,7 @@ pt:
             csf_nested_loops:
               display_name: Laços aninhados
             csf_functions:
-              display_name: funções
+              display_name: Funções
             csf_impacts:
               display_name: Impacto da computação
             end_of_course_project:
@@ -3104,7 +3227,7 @@ pt:
             csf_data:
               display_name: Dados
             csf_for_loops:
-              display_name: Laços para
+              display_name: Loops For
             csf_sprites:
               display_name: Sprite
             end_of_course_project:
@@ -3123,13 +3246,13 @@ pt:
             csf_loops:
               display_name: laços
             csf_conditionals:
-              display_name: Condições
+              display_name: Condicionais
             csf_functions:
-              display_name: funções
+              display_name: Funções
             csf_variables:
               display_name: Variáveis
             csf_for_loops:
-              display_name: Laços para
+              display_name: Loops For
             csf_sprites:
               display_name: Sprite
             end_of_course_project:
@@ -3256,14 +3379,25 @@ pt:
             k5_next_steps_1:
               display_name: Próximas etapas
           student_description: Aprenda a ensinar ciência da computação usando os Fundamentos de Ciência da Computação da Code.org com este curso on-line gratuito e individualizado!
+        dani-test-2020:
+          lesson_groups:
+            lesson group:
+              display_name: nome de exibição
         dani-june-2020-test:
           lesson_groups:
+            lesson group:
+              display_name: nome de exibição
+            lg_1:
+              display_name: NOME DE EXIBIÇÃO
             cspSurvey:
               display_name: Questionário
             csp5_1:
               display_name: 'Capítulo 1: Programação orientada a eventos'
+            cs_lg:
+              display_name: BOM LG
         csd3-virtual:
           title: Introdução ao Laboratório de Jogos no ritmo de cada aluno
+          description: Você programará animações, arte interativa e jogos no Game Lab. Comece com formas simples e crie animações e jogos mais sofisticados baseados em sprites, usando os mesmos conceitos de programação e o processo de design que os cientistas da computação usam diariamente. No projeto final, você desenvolverá um programa personalizado e interativo.
           description_short: Programação
           lesson_groups:
             csd3_1:
@@ -3272,6 +3406,7 @@ pt:
               display_name: Conteúdo
             cspSurvey:
               display_name: Conteúdo
+          student_description: Você programará animações, arte interativa e jogos no Game Lab. Comece com formas simples e crie animações e jogos mais sofisticados baseados em sprites, usando os mesmos conceitos de programação e o processo de design que os cientistas da computação usam diariamente. No projeto final, você desenvolverá um programa personalizado e interativo.
         ui-test-script-in-course-2017:
           lesson_groups:
             lg_1:
@@ -3288,9 +3423,44 @@ pt:
           lesson_groups:
             lg_1:
               display_name: Conteúdo
+        kaitie-test-script:
+          lesson_groups:
+            lesson group:
+              display_name: nome de exibição
+          name: script de teste kaitie
+        vpl-csd-2020:
+          title: Aprendizagem profissional virtual CS Discoveries 2020-21
+          name: vpl-csd-2020
+        vpl-csp-2020:
+          title: 'Princípios de CC: aprendizagem profissional virtual'
+          name: vpl-csp-2020
+        curriculum-sandbox-levels:
+          lesson_groups:
+            lesson group:
+              display_name: Níveis de Professores
+              description: Esses são níveis voltados para o ensino que estão vinculados aos planos de aula. Os níveis não aparecem em outros scripts.
+            slides:
+              display_name: Níveis do Tradutor
+              description: Esses níveis contêm um código inicial editável que se alinha aos conjuntos de slides do currículo.
+            video:
+              display_name: Níveis de captura de vídeo
+              description: Esses níveis são para uso de criadores de vídeos.
+          title: Níveis do Curriculum Sandbox
+          description_audience: Interno - Não exclua. Esse roteiro abriga níveis curriculares importantes que, de outra forma, não teriam um roteiro.
+          description_short: Níveis que estão vinculados diretamente aos planos de aula, mas não aparecem em outros scripts.
+          name: níveis curriculares e sandbox
         virustest:
+          lesson_groups:
+            csf_data:
+              display_name: Simulação de vírus para bytes de código
           title: Simulação de uma epidemia
           description_short: 'Use o Sprite Lab para criar uma simulação de epidemia de vírus. '
+        ml-playground:
+          title: Unidade ML/AI - CSD
+          description_short: Unidade ML/AI
+          description: Área de brainstorm/playground para desenvolvimento de unidades de ML/AI para CSD. Para perguntas futuras sobre isso, pergunte a Dan Schneider.
+          name: ml-playground
+          student_description: Área de brainstorm/playground para desenvolvimento de unidades de ML/AI para CSD. Para perguntas futuras sobre isso, pergunte a Dan Schneider.
         outbreak:
           lesson_groups:
             outbreak:
@@ -3300,17 +3470,40 @@ pt:
           description: 'Use o Sprite Lab para programar uma simulação de epidemia de vírus. '
           name: epidemia
           student_description: 'Use o Sprite Lab para programar uma simulação de epidemia de vírus. '
+        apps-for-good:
+          title: Aplicativos for Good
         2021drafting:
           lesson_groups:
+            Toolbox Levels:
+              display_name: Níveis da caixa de ferramentas
             introduction:
               display_name: Introdução
+              description: Explore projetos criados com o Sprite Lab. Aprenda as noções básicas de programação com sprites e eventos!
             lessonGroup-3:
               display_name: Variáveis
+              description: Armazene valores em variáveis e recupere-os posteriormente em seu programa. Modifique os valores armazenados nas variáveis para criar projetos interativos empolgantes!
             outbreak:
               display_name: Simulador de Epidemia
+            Loom Levels:
+              display_name: Níveis do Loom
+            contagion:
+              display_name: Contágio
+            lesson group:
+              display_name: Prática guiada por contágio
+            haiku bot:
+              display_name: Robô do Haiku
+            AB EOC:
+              display_name: Projeto EOC do Curso A e B
             debugging:
               display_name: Analisando
+            Argentina:
+              display_name: Argentina
+          title: Roteiro de planejamento para CI e CSF 2021
+          description_audience: Interno
+          description_short: Interno
+          name: Elaboração de 2021
         csd1-2021:
+          title: Resolução de problemas e computação ('21-'22)
           description: |-
             Resolução de Problemas e Computação é uma introdução altamente interativa e colaborativa ao campo da ciência da computação, pensada dentro de um escopo mais amplo da resolução de problemas. Você praticará o uso do processo de resolução de problemas para abordar uma série de quebra-cabeças, desafios e cenários do mundo real. A seguir, você aprenderá como os computadores captam, enviam, armazenam e processam informações para ajudar nós humanos a resolver problemas. A unidade é concluída com um projeto na qual você desenvolve uma aplicação, visando solucionar um problema de sua escolha.
 
@@ -3337,8 +3530,18 @@ pt:
             csd1_3:
               display_name: Lições Extras
               description: 'Este capítulo fornece lições alternativas para esta unidade.  '
+          name: csd1-2021
           student_description: Resolução de Problemas e Computação é uma introdução altamente interativa e colaborativa ao campo da ciência da computação, pensada dentro de um escopo mais amplo da resolução de problemas. Você praticará o uso do processo de resolução de problemas para abordar uma série de quebra-cabeças, desafios e cenários do mundo real. A seguir, você aprenderá como os computadores captam, enviam, armazenam e processam informações para ajudar nós humanos a resolver problemas. A unidade é concluída com um projeto na qual você desenvolve uma aplicação, visando solucionar um problema de sua escolha.
         csd2-2021:
+          title: Desenvolvimento Web ('21-'22)
+          description: |-
+            Na Unidade 2, você aprenderá como criar e compartilhar o conteúdo em suas próprias páginas da web. Depois de decidir qual conteúdo você quer compartilhar com o mundo, você aprenderá a estruturar e estilizar suas páginas usando HTML e CSS. Você também praticará habilidades valiosas de programação, como depuração, uso de recursos e trabalho em equipe.
+
+            **Orientação de implementação para a Unidade 2**
+
+            -   Conclua o capítulo 1 da Unidade 1 antes de iniciar esta unidade
+            -   Orientações sobre como apoiar os alunos nos níveis de programação e diferenciar tarefas estão disponíveis no [Guia de depuração] [0] e no [Guia de diferenciação] [1]
+            -   Você pode ver o [Guia do currículo] [2] e o [Guia de implementação] [3] completos para obter mais informações sobre esta unidade
           description_short: " Aprenda a criar seu próprio site no Web Lab."
           lesson_groups:
             csd2_1v2:
@@ -3386,7 +3589,7 @@ pt:
             csd4_1:
               display_name: 'Capítulo 1: Desenho orientado ao usuário'
             csd4_2:
-              display_name: 'Capítulo 1: Prototipando o App'
+              display_name: 'Capítulo 2: Prototipando o App'
             csd5_2:
               display_name: 'Capítulo 2: Resolvendo problemas de dados'
             cspSurvey:
@@ -3444,9 +3647,9 @@ pt:
             csp_variables:
               display_name: Variáveis
             csp_conditionals:
-              display_name: Condições
+              display_name: Condicionais
             csp_functions:
-              display_name: funções
+              display_name: Funções
             csp_project:
               display_name: Projeto
           student_description: Esta unidade explora como variáveis, condicionais e funções permitem o design de aplicativos cada vez mais complexos. Aprenda a programar com esses três novos conceitos por meio de uma sequência de atividades colaborativas. Em seguida, crie seu próprio aplicativo de tomada de decisões para compartilhar com amigos e ajudá-los a tomar uma decisão.
@@ -3570,7 +3773,7 @@ pt:
             csf_loops:
               display_name: laços
             csf_conditionals:
-              display_name: Condições
+              display_name: Condicionais
             csf_binary:
               display_name: Binário
             csf_digcit:
@@ -3589,9 +3792,9 @@ pt:
             csf_digcit:
               display_name: Cidadania digital
             csf_nested_loops:
-              display_name: Condições
+              display_name: Condicionais
             csf_functions:
-              display_name: funções
+              display_name: Funções
             csf_impacts:
               display_name: Impacto da computação
             end_of_course_project:
@@ -3607,9 +3810,9 @@ pt:
             csf_digcit:
               display_name: Cidadania digital
             csf_variables:
-              display_name: Laços para
+              display_name: Loops For
             csf_for_loops:
-              display_name: Laços para
+              display_name: Loops For
             csf_sprites:
               display_name: Impacto da computação
             end_of_course_project:
@@ -3631,13 +3834,13 @@ pt:
             csf_loops:
               display_name: laços
             csf_conditionals:
-              display_name: Condições
+              display_name: Condicionais
             csf_functions:
-              display_name: funções
+              display_name: Funções
             csf_variables:
               display_name: Variáveis
             csf_for_loops:
-              display_name: Laços para
+              display_name: Loops For
             csf_sprites:
               display_name: Sprite
             end_of_course_project:
@@ -3660,12 +3863,16 @@ pt:
               display_name: Introdução
             outbreak:
               display_name: Simulação de Epidemia
+            introduction:
+              description: Explore projetos criados com o Sprite Lab. Aprenda as noções básicas de programação com sprites e eventos!
             lessonGroup-3:
               display_name: Variáveis
+              description: Armazene valores em variáveis e recupere-os posteriormente em seu programa. Modifique os valores armazenados nas variáveis para criar projetos interativos empolgantes!
             Sprites:
               display_name: Sprite
             variables:
               display_name: Variáveis
+              description: Armazene valores em variáveis e recupere-os posteriormente em seu programa. Modifique os valores armazenados nas variáveis para criar projetos interativos empolgantes!
         csd4-preview-2021:
           description: A unidade 4 apresenta os impactos sociais mais amplos da computação. Através de uma série de desafios de design, você aprenderá a entender melhor as necessidades de outras pessoas enquanto desenvolve uma solução para um problema. A segunda metade da unidade consiste em um projeto de equipe iterativo, durante o qual as equipes têm a oportunidade de identificar uma necessidade com a qual se preocupam, protótipos de soluções tanto no papel quanto no App Lab e testam soluções com usuários reais para obter feedback e avançar iteração.
           description_short: "  Aprenda a criar um programa que atenda às necessidades de seus usuários."
@@ -3673,7 +3880,7 @@ pt:
             csd4_1:
               display_name: 'Capítulo 1: Desenho orientado ao usuário'
             csd4_2:
-              display_name: 'Capítulo 1: Prototipando o App'
+              display_name: 'Capítulo 2: Prototipando o App'
             csd5_2:
               display_name: 'Capítulo 2: Resolvendo problemas de dados'
             cspSurvey:
@@ -3693,10 +3900,21 @@ pt:
               display_name: Questionário
           student_description: A unidade 5 trata da importância dos dados na solução de problemas e destaca como os computadores podem ajudar nesse processo. O primeiro capítulo explora os diferentes sistemas usados ​​para representar informações em um computador e os desafios e as vantagens e desvantagens do uso deles. No segundo capítulo, você aprenderá como as coleções de dados são usadas para resolver problemas e como os computadores ajudam a automatizar as etapas desse processo. O capítulo conclui considerando como o processo de solução de problemas de dados pode ser aplicado a uma área de sua escolha.
         contagion-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: Prática guiada por contágio
+            contagion:
+              display_name: Contágio
+            haiku bot:
+              display_name: Robô do Haiku
           description_audience: 5° Ano
           description_short: 'Use o Sprite Lab para programar uma simulação de epidemia de vírus. '
           description: 'Use o Sprite Lab para programar uma simulação de epidemia de vírus. '
           student_description: 'Use o Sprite Lab para programar uma simulação de epidemia de vírus. '
+        contagion-guided-practice:
+          lesson_groups:
+            lesson group:
+              display_name: Prática guiada por contágio
         csa1-pilot:
           lesson_groups:
             lessonGroup-2:
@@ -3771,6 +3989,8 @@ pt:
               display_name: Introdução
         haikubot-pilot:
           lesson_groups:
+            haiku bot:
+              display_name: Robô do Haiku
             Lesson 1:
               display_name: Lição 1
             Lesson 2:
@@ -3934,6 +4154,8 @@ pt:
               display_name: Conteúdo
             lessonGroup-3:
               display_name: Mostre o Que Você Sabe
+        ai-lab:
+          title: IA Lab
         dlp21-csp-mod4:
           lesson_groups:
             lessonGroup-2:
@@ -4119,7 +4341,7 @@ pt:
           title: Unidade 5 – Organização de objetos [Exemplars]
         csd-post-survey-2021:
           name: csd- pós-pesquisa -2021
-          title: Pesquisa Pós-Curso - Descobertas da CS
+          title: Pesquisa Pós-curso do Descobertas da CC
           description: Esta unidade contém a Pesquisa Após o Curso das Descobertas CS. Esta unidade pode ser atribuída depois que os alunos completarem a sua unidade final de Descobertas CS.
           student_description: Esta unidade contém uma pesquisa para quando e a sua aula de Descobertas CS e as unidades forem concluídas. O seu professor lhe dirá quando você deverá fazer essa pesquisa.
         csa-pl-test:
@@ -4174,6 +4396,7 @@ pt:
               display_name: Fadas do Curso E (obsoletas)
             lessonGroup-8:
               display_name: Hora do Código
+          description_short: Interno
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -4242,13 +4465,13 @@ pt:
             csf_loops:
               display_name: laços
             csf_conditionals:
-              display_name: Condições
+              display_name: Condicionais
             csf_functions:
-              display_name: funções
+              display_name: Funções
             csf_variables:
               display_name: Variáveis
             csf_for_loops:
-              display_name: Laços para
+              display_name: Loops For
             end_of_course_project:
               display_name: Projeto de Fim do Curso
           description_short: 'Uma introdução à ciência da computação: combina o melhor do nosso currículo do ensino fundamental para alunos mais velhos.'
@@ -4282,9 +4505,9 @@ pt:
             csp_variables:
               display_name: Variáveis
             csp_conditionals:
-              display_name: Condições
+              display_name: Condicionais
             csp_functions:
-              display_name: funções
+              display_name: Funções
             csp_project:
               display_name: Projeto
           description: Esta unidade explora como variáveis, condicionais e funções permitem o design de aplicativos cada vez mais complexos. Aprenda a programar com esses três novos conceitos por meio de uma sequência de atividades colaborativas. Em seguida, crie seu próprio aplicativo de tomada de decisões para compartilhar com amigos e ajudá-los a tomar uma decisão.
@@ -4392,7 +4615,7 @@ pt:
             csf_loops:
               display_name: laços
             csf_conditionals:
-              display_name: Condições
+              display_name: Condicionais
             end_of_course_project:
               display_name: Projeto de Fim do Curso
           title: Curso D (2021)
@@ -4407,9 +4630,9 @@ pt:
             ramp_up:
               display_name: Laços aninhados
             csf_functions:
-              display_name: funções
+              display_name: Funções
             csf_nested_loops:
-              display_name: Condições
+              display_name: Condicionais
             lessonGroup-7:
               display_name: Impacto da computação
             end_of_course_project:
@@ -4601,7 +4824,7 @@ pt:
             csd1_3:
               display_name: Lições Extras
           title: Resolução de Problemas e Computação ('22-'23)
-          description: "Resolução de problemas e computação é uma introdução altamente interativa e colaborativa ao campo da ciência da computação, que integra a busca mais ampla da resolução de problemas. Você usará um processo de resolução de problemas para resolver uma série de quebra-cabeças, desafios e cenários do mundo real. Em seguida, você aprenderá como os computadores inserem, produzem, armazenam e processam informações para ajudar os humanos a resolver problemas. A unidade termina com um projeto no qual você projetará um aplicativo para auxiliar na resolução de um problema de sua escolha. \n\n**Orientação de implementação para resolução de problemas e computação**\n\n-   O primeiro capítulo desta unidade deve ser concluído antes de qualquer outra unidade no CS Discoveries\n-   Aulas alternativas são fornecidas para algumas aulas desta unidade, dependendo do contexto da sala de aula\n-   Você pode ver o [Guia Curricular](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) e o [Guia de Implementação](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) completos para obter mais informações sobre esta unidade"
+          description: "Resolução de problemas e computação é uma introdução altamente interativa e colaborativa ao campo da ciência da computação, que integra a busca mais ampla da resolução de problemas. Você usará um processo de resolução de problemas para resolver uma série de quebra-cabeças, desafios e cenários do mundo real. Em seguida, você aprenderá como os computadores inserem, produzem, armazenam e processam informações para ajudar os humanos a resolver problemas. A unidade termina com um projeto no qual você projetará um aplicativo para auxiliar na resolução de um problema de sua escolha. \n\n**Orientação de implementação para resolução de problemas e computação**\n\n-   O primeiro capítulo desta unidade deve ser concluído antes de qualquer outra unidade no Descobertas da CC\n-   Aulas alternativas são fornecidas para algumas aulas desta unidade, dependendo do contexto da sala de aula\n-   Você pode ver o [Guia Curricular](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) e o [Guia de Implementação](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) completos para obter mais informações sobre esta unidade"
           student_description: A resolução de problemas e a computação é uma forma altamente interativa e colaborativa de adentrar o campo da ciência da computação, como delimitado pela busca mais ampla da resolução de problemas. Você vai praticar a utilização de um processo de resolução e problemas para encarar uma série de jogos, desafios, e de cenários baseados no mundo real. Em seguida, você aprender como os computadores operam a entrada e a saída de dados, como eles armazenam e processam as informações que ajudam os humanos a resolverem problemas. A unidade termina com um projeto, no qual você vai criar uma aplicação que vai lhe ajudar a resolver um problema à sua escolha.
           description_short: "  Aprenda como os humanos trabalham com computadores para resolver problemas."
         csd2-2022:
@@ -4613,6 +4836,7 @@ pt:
             cspSurvey:
               display_name: Questionário
           title: Desenvolvimento Web ('22-'23)
+          description: "Na Desenvolvimento Web, os alunos têm o poder de criar e compartilhar conteúdo em suas próprias páginas da web. Eles começam pensando sobre o papel da internet e como ela pode ser usada como meio de expressão criativa. À medida que os alunos desenvolvem suas páginas e começam a se ver como programadores, eles são incentivados a pensar criticamente sobre o impacto do compartilhamento de informações on-line e sobre como ser consumidores mais críticos de conteúdo. Eles também são introduzidos à resolução de problemas no que se refere à programação, enquanto aprendem habilidades valiosas, como depuração, uso de recursos e trabalho em equipe. No final da unidade, os alunos terão criado um site pessoal que poderão publicar e compartilhar.\n\n**Orientação de Implementação para Desenvolvimento Web**\n\n-   Conclua as três primeiras lições da unidade de Resolução de Problemas e Computação antes de começar.\n-   Orientações sobre como apoiar os alunos nos níveis de programação e pesonalizar tarefas estão disponíveis no [Guia de Níveis de Programação] [0] e [Guia de Personalização](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)\n-   Você pode conferir a [Matriz Curricular] [2] e o [Guia de Implementação] [3] completos para obter mais informações sobre isso unidade.\n\n## Terminou de Lecionar esta Unidade?\n\nResponda a esta [\\*\\*breve pesquisa\\*\\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2) para a equipe curricular da Code.org saber como foi a sua experiência com esta unidade."
           student_description: Nesta unidade, você aprenderá como criar e compartilhar conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar com o mundo, você aprenderá como estruturar e estilizar suas páginas usando HTML e CSS. Você também praticará habilidades valiosas de programação como depuração, uso de recursos e trabalho em equipe.
           description_short: " Aprenda a criar seu próprio site no Web Lab."
         csd3-2022:
@@ -4624,17 +4848,19 @@ pt:
             cspSurvey:
               display_name: Questionário
           title: Jogos e Animações Interativas
+          description: "Na unidade de Animações e Jogos Interativos, os alunos criam imagens programáticas, animações, arte interativa e jogos. Começando com formas simples e até jogos mais sofisticados baseados em sprites, os alunos se familiarizam com os conceitos de programação e o processo de design que os cientistas da computação usam diariamente. Em seguida, eles aprendem como esses construtos mais simples podem ser combinados para criar programas mais complexos. No projeto final, os alunos desenvolvem um programa personalizado e interativo.\n\n**Orientação de Implementação para Animações e Jogos Interativos**\n\n-   Conclua as três primeiras lições da unidade de Resolução de Problemas e Computação antes de começar.\n-   Orientações sobre como apoiar os alunos nos níveis de programação e personalizar tarefas estão disponíveis no [Guia de Níveis de Programação](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) e [Guia de Personalização](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)\n-   Você pode conferir a [Matriz Curricular](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) e o [Guia de Implementação] [3] completos para saber mais informações sobre esta unidade.\n\n## Terminou de Lecionar esta Unidade?\n\nResponda a esta [\\*\\*breve pesquisa\\*\\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=3) para a equipe curricular da Code.org saber como foi a sua experiência com esta unidade."
           student_description: " Na Unidade 3, você aproveitará sua experiência de codificação ao programar animações, arte interativa e jogos no Laboratório de Jogos. A unidade começa com formas simples e cria jogos sofisticados baseados em sprites, usando os mesmos conceitos de programação e o processo de design que os cientistas da computação usam diariamente. No projeto final, você desenvolverá um programa interativo personalizado."
           description_short: Programação
         csd4-2022:
           lesson_groups:
             csd4_1:
-              display_name: 'Capítulo 1: Desenho orientado ao usuário'
+              display_name: 'Capítulo 1: Design orientado ao usuário'
             csd4_2:
-              display_name: 'Capítulo 1: Prototipando o App'
+              display_name: 'Capítulo 2: Prototipando o App'
             cspSurvey:
               display_name: Questionário
           title: O Processo de Design ('22-'23)
+          description: "A unidade de Processo de Design faz com que os alunos deixem de pensar na ciência da computação como uma ferramenta para resolver seus próprios problemas e passem a considerar os impactos sociais mais amplos da computação. Por meio de uma série de desafios de design, os alunos devem considerar e compreender as necessidades dos outros enquanto desenvolvem uma solução para um problema. A segunda parte da unidade consiste em um projeto de equipe iterativo, durante o qual os alunos têm a oportunidade de identificar uma necessidade do seu interesse, prototipar soluções em papel e no App Lab e testar suas soluções com usuários reais para obter feedback e impulsionar novas iterações.\n\n**Orientação de Implementação para O Processo de Design**\n\n-   Conclua as três primeiras lições da unidade de Resolução de Problemas e Computação antes de começar\n-   Você pode visualizar a [Matriz Curricular](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) e [Guia de Implementação](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) completospara mais informações sobre esta unidade\n\n## Terminou de Lecionar esta Unidade?\n\nResponda a esta [\\*\\*breve pesquisa\\*\\*](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) para a equipe curricular da Code.org saber como foi a sua experiência com esta unidade."
           student_description: A unidade 4 apresenta os impactos sociais mais amplos da computação. Através de uma série de desafios de design, você aprenderá a entender melhor as necessidades de outras pessoas enquanto desenvolve uma solução para um problema. A segunda metade da unidade consiste em um projeto de equipe iterativo, durante o qual as equipes têm a oportunidade de identificar uma necessidade com a qual se preocupam, protótipos de soluções tanto no papel quanto no App Lab e testam soluções com usuários reais para obter feedback e avançar iteração.
           description_short: "  Aprenda a criar um programa que atenda às necessidades de seus usuários."
         csd5-2022:
@@ -4646,21 +4872,22 @@ pt:
             cspSurvey:
               display_name: Questionário
           title: Dados e Sociedade ('22-'23)
+          description: "A unidade de Dados e Sociedade trata da importância de usar dados para resolver problemas e destaca como os computadores podem ajudar nesse processo. O primeiro capítulo explora os diferentes sistemas usados para representar informações em um computador e os desafios e desvantagens decorrentes do uso deles. No segundo capítulo, os alunos aprendem como as coleções de dados são usadas para resolver problemas e como os computadores ajudam a automatizar as etapas desse processo. No projeto final, os alunos coletam seus próprios dados e os usam para desenvolver uma solução automatizada para um problema.\n\n**Orientação de implementação para dados e sociedade**\n\n-   Conclua as três primeiras lições da unidade de Solução de Problemas e Computação antes de começar\n-   Você pode ver o [Guia Curricular] [0] e o [Guia de Implementação] [1] completos para obter mais informações sobre esta unidade\n\n## Concluiu o ensino desta unidade?\n\nResponda a esta [**breve pesquisa**] [2] para que a equipe curricular da Code.org saiba como foi a unidade."
           student_description: A unidade 5 trata da importância dos dados na solução de problemas e destaca como os computadores podem ajudar nesse processo. O primeiro capítulo explora os diferentes sistemas usados ​​para representar informações em um computador e os desafios e as vantagens e desvantagens do uso deles. No segundo capítulo, você aprenderá como as coleções de dados são usadas para resolver problemas e como os computadores ajudam a automatizar as etapas desse processo. O capítulo conclui considerando como o processo de solução de problemas de dados pode ser aplicado a uma área de sua escolha.
           description_short: Aprenda como as pessoas usam computadores para resolver problemas de dados.
         csd7-2022:
           lesson_groups:
             lessonGroup-2:
-              display_name: Capítulo 1 - Compreendendo o Machine Learning
+              display_name: Capítulo 1 - Compreendendo o Aprendizado de Máquina
             lessonGroup-3:
               display_name: Capítulo 2 - Crie um aplicativo de Aprendizado de Máquina
             lessonGroup-4:
               display_name: Questionário
-          title: Inteligência Artificial e Machine Learning
+          title: Inteligência Artificial e Aprendizado de Máquina
           description: |-
-            Esta unidade é uma introdução prática ao desenvolvimento de um modelo de machine learning com dados tabulares. Os alunos exploram como os computadores aprendem com os dados para tomar decisões, e então desenvolvem projetos de machine learning com base em dados do mundo real. Esta unidade culmina no projeto de um aplicativo de machine learning para solucionar um problema pessoal relevante.
+            Esta unidade é uma introdução prática ao desenvolvimento de um modelo de aprendizado de máquina com dados tabulares. Os alunos exploram como os computadores aprendem com os dados para tomar decisões, e então desenvolvem projetos de machine learning com base em dados do mundo real. Esta unidade culmina no projeto de um aplicativo de aprendizado de máquina para solucionar um problema pessoal relevante.
 
-            **Orientação de Implementação para Unidade de IA e Machine Learning**
+            **Orientação de Implementação para Unidade de IA e Aprendizado de Máquina**
 
             -   Conclua as três primeiras lições da unidade Resolução de Problema e Computação antes de começar.
             -   Esta unidade pressupõe que os alunos estejam familiarizados com o App Lab, especificamente usando o Modo Design para criar uma interface de usuário e usando Eventos para mudar a tela ao clicar em um botão. Isso pode ser feito ao pedir para que os alunos completem o [App Lab Hora do Código](https://studio.code.org/s/applab-intro/reset) antes de iniciar esta unidade.
@@ -4668,7 +4895,7 @@ pt:
             -   Você pode conferir a [Matriz Curricular](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) completa e o [Guia de Implementação](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) para mais informações sobre esta unidade.
 
             **Desenvolvimento Profissional:** Se você estiver interessado em lecionar este curso, recomendamos concluir o gratuito [Modulo de Desenvolvimento Profissional IA/ML Individualizado](https://studio.code.org/s/self-paced-pl-csd5-2021). O módulo foi projetado para ser concluído em 2 horas. Não se faz necessária experiência prévia com codificação ou IA.
-          student_description: Esta unidade é uma introdução prática ao desenvolvimento de um modelo de machine learning com dados tabulares. Os alunos exploram como os computadores aprendem com os dados para tomar decisões, e então desenvolvem projetos de machine learning com base em dados do mundo real. Esta unidade culmina no projeto de um aplicativo de machine learning para solucionar um problema pessoal relevante.
+          student_description: Esta unidade é uma introdução prática ao desenvolvimento de um modelo de apredizado de máquina com dados tabulares. Os alunos exploram como os computadores aprendem com os dados para tomar decisões, e então desenvolvem projetos de aprendizado de máquina com base em dados do mundo real. Esta unidade culmina no projeto de um aplicativo de aprendizado de máquina para solucionar um problema pessoal relevante.
         csd6-2022:
           lesson_groups:
             lessonGroup-2:
@@ -4679,10 +4906,11 @@ pt:
               display_name: Questionário
           title: Computação Física ('22-'23)
           description_short: Aprenda a programar com dispositivos físicos.
+          description: "Na unidade de Computação Física, os alunos exploram o papel dos dispositivos físicos na computação. Usando o App Lab e o Circuit Playground da Adafruit, os alunos desenvolvem programas que utilizam as mesmas entradas e saídas de hardware que você vê nos dispositivos inteligentes, observando como um simples protótipo bruto pode levar a um produto acabado. Em seguida, os alunos exploram como os dispositivos físicos podem ser usados para reagir ao mundo ao seu redor usando uma mentalidade de “criador” para criar protótipos com materiais do dia a dia.\n\n**Orientação de implementação para computação física**\n\n-   Conclua as três primeiras lições da unidade de Solução de Problemas e Computação antes de começar\n-   Esta unidade pressupõe que os alunos estejam familiarizados com o App Lab, usando especificamente o Modo Design para criar uma interface de usuário e usando Eventos para alterar a tela ao clicar em um botão. Isso pode ser feito fazendo com que os alunos concluam a [Hora do Código do App Lab] [0] antes de iniciar esta unidade.\n-   Esta unidade exige que os alunos tenham acesso ao Circuit Playground - [clique aqui] [1] para obter mais informações sobre como usar o Circuit Playground em sua sala de aula\n-   Orientações sobre como apoiar os alunos nos níveis de programação e diferenciar tarefas estão disponíveis no [Guia de níveis de programação] [2] e [Guia de diferenciação] [3]\n-   Você pode ver o [Guia do currículo] [4] e o [Guia de implementação] [5] completos para obter mais informações sobre isso unidade\n\n## Terminou de ensinar esta unidade?\n\nResponda a esta [**breve pesquisa**] [6] para que a equipe curricular da Code.org saiba como foi a unidade."
           student_description: Esta unidade explora o papel das plataformas de hardware na computação e como diferentes sensores podem fornecer entradas e saídas mais eficazes do que o teclado, o mouse e o monitor tradicionais. Usando o App Lab e o Circuit Playground da Adafruit, você desenvolverá programas que utilizam as mesmas entradas e saídas de hardware que você vê nos dispositivos inteligentes, observando como um simples protótipo bruto pode levar a um produto acabado. A unidade conclui com um desafio de projeto para usar o Circuit Playground como base para uma inovação de seu próprio projeto.
         csd-post-survey-2022:
-          title: Pesquisa Pós-Curso - Descobertas da CS
-          description: Esta unidade contém a Pesquisa Após o Curso das Descobertas CS. Esta unidade pode ser atribuída depois que os alunos completarem a sua unidade final de Descobertas CS.
+          title: Pesquisa Pós-curso da Descobertas da CC
+          description: Esta unidade contém a Pesquisa Pós-curso das Descobertas CC. Esta unidade pode ser atribuída depois que os alunos completarem a sua unidade final de Descobertas CC.
           student_description: Esta unidade contém uma pesquisa para quando e a sua aula de Descobertas CS e as unidades forem concluídas. O seu professor lhe dirá quando você deverá fazer essa pesquisa.
         csp-post-survey-2022:
           title: Pesquisa pós-curso de princípios do CS
@@ -4834,7 +5062,7 @@ pt:
             lesson-1:
               name: Matrizes unidimensionais (1D)
             lesson-3:
-              name: Laços para
+              name: Loops For
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
@@ -4925,7 +5153,7 @@ pt:
             lessonGroup-2:
               display_name: 'Capítulo 1: Desenho orientado ao usuário'
             lessonGroup-3:
-              display_name: 'Capítulo 1: Prototipando o App'
+              display_name: 'Capítulo 2: Prototipando o App'
           description: "A unidade de Processo de Design faz com que os alunos deixem de pensar na ciência da computação como uma ferramenta para resolver seus próprios problemas e passem a considerar os impactos sociais mais amplos da computação. Por meio de uma série de desafios de design, os alunos devem considerar e compreender as necessidades dos outros enquanto desenvolvem uma solução para um problema. A segunda parte da unidade consiste em um projeto de equipe iterativo, durante o qual os alunos têm a oportunidade de identificar uma necessidade do seu interesse, prototipar soluções em papel e no App Lab e testar suas soluções com usuários reais para obter feedback e impulsionar novas iterações.\n\n::: details [**Capítulo 1 - Visão Geral**]\n\\*\\*Descrição: \\*\\* Este capítulo introduz o processo de design como uma versão específica do processo de resolução de problemas em que a empatia pelas necessidades do usuário é consistentemente integrada. Os alunos aprendem estratégias para identificar as necessidades do usuário e avaliar o quão bem os diferentes designs as atendem. Especificamente, eles aprendem como desenvolver um protótipo em papel, como absorver e responder aos feedbacks sobre um protótipo e considerar como diferentes interfaces de usuário afetam ou não a usabilidade de seus aplicativos.\n\n**Objetivos:** \n\n-   Ver o processo de design como uma forma de resolução de problemas que prioriza as necessidades de um usuário. \n-   Identificar as necessidades do usuário e avaliar o quão bem os diferentes designs as atendem. \n-   Desenvolver protótipos em papel, absorver e responder aos feedbacks sobre um protótipo e considerar como diferentes interfaces de usuário afetam ou não a usabilidade de seus aplicativos. \n\n**Questões Norteadoras:**\n\n-   Como os designers identificam as necessidades de seus usuários?\n-   Como podemos garantir que as necessidades de um usuário sejam atendidas por nossos projetos?\n-   Quais processos nos permitirão criar, testar e iterar nossos projetos com eficiência?\n    :::\n\n::: details [**Capítulo 2 - Visão Geral**]\n**Descrição:** Este capítulo dedica-se a um projeto de grupo de longa duração o qual permite que os alunos apliquem tudo o que aprenderam sobre design centrado no usuário para desenvolver um protótipo de um aplicativo. Trabalhando em equipe, os alunos identificam um problema social que é seu interese, projetam e prototipam um aplicativo para resolver esse problema. Essa é uma oportunidade para os alunos explorarem outros papéis no desenvolvimento de software, como gerenciamento de produtos, marketing, design e testing.\n\n**Objetivos:**\n\n-   Desenvolver protótipos digitais, absorver e responder aos feedbacks sobre um protótipo e considerar como diferentes interfaces de usuário afetam ou não a usabilidade de seus aplicativos. \n-   Ter ciência de outros papéis no desenvolvimento de software, como gerenciamento de produtos, marketing, design e testing, e de como usar o que aprenderam sobre ciência da computação como uma ferramenta de impacto social.\n\n**Questões Norteadoras:**\n\n-   Como as equipes trabalham juntas de forma eficaz para desenvolver softwares?\n-   Quais papéis além da programação são necessários para projetar e desenvolver softwares?\n-   Como os designers incorporam os feedbacks em várias iterações de um produto?\n    :::\n\n::: details [**Orientação de Implementação para o Processo de Design**]\n\n-   Você pode conferir o [Guia de implementação](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) para mais informações sobre esta unidade.\n    :::\n\n## Terminou de Lecionar esta Unidade?\n\nResponda a esta [\\*\\*breve pesquisa\\*\\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4) para a equipe curricular da Code.org saber como foi a sua experiência com esta unidade."
           student_description: A unidade 4 apresenta os impactos sociais mais amplos da computação. Através de uma série de desafios de design, você aprenderá a entender melhor as necessidades de outras pessoas enquanto desenvolve uma solução para um problema. A segunda metade da unidade consiste em um projeto de equipe iterativo, durante o qual as equipes têm a oportunidade de identificar uma necessidade com a qual se preocupam, protótipos de soluções tanto no papel quanto no App Lab e testam soluções com usuários reais para obter feedback e avançar iteração.
         csd5-2023:
@@ -4964,7 +5192,7 @@ pt:
               display_name: Introdução Laboratório de Aplicativos
           title: Unidade 7 - IA e Machine Learning ('23-'24)
           description: "Esta unidade é uma introdução prática ao desenvolvimento de um modelo de machine learning com dados tabulares. Os alunos exploram como os computadores aprendem com os dados para tomar decisões, e então desenvolvem projetos de machine learning com base em dados do mundo real. Esta unidade culmina no projeto de um aplicativo de machine learning para solucionar um problema pessoal relevante.\n\n::: details [**Capítulo 1 - Visão Geral**]\n**Descrição:** Os alunos aprendem o básico de machine learning e usam uma ferramenta chamada AI Lab para criar modelos de machine learning os quais podem ser usados no pp Lab. A unidade começa com uma visão geral do que é machine learning e como os computadores utilizam-se de padrões nos dados para tomar decições e realizar predições. Então, os alunos aprendem a como usar o AI Lab para treinar modelos a partir de dados tabulares enquanto exploram questões de viés. As lições seguem um padrão de repetição \"desplugado - AI Lab - App Lab\" para que os alunos sejam continuamente expostos aos conceitos e ferramentas do machine learning. O capítulo culmina em um projeto em que os alunos escolhem de um conjunto de base de dados do mundo real para treinar modelos de machine learning e para criar um aplicativo. \n\n**Objetivos:**\n\n-   Criar um modelos de machine learning no AI Lab para solucionar um problema, e usar o App Lab para criar um aplicativo que use esse modelo.\n-   Entender como os modelos de machine learning tomam decisões a partir dos dados.\n\n**Questões Norteadoras:**\n\n-   Como o machine learning identifica padrões nos dados para tomar decisões?\n-   Como podemos evitar o viés ao treinar um modelo de machine learning?\n\n:::\n\n::: details [**Capítulo 2 - Visão Geral**]\n**Descrição:** Este capítulo prepara os alunos para serem cientistas de machine learning e criarem um aplicativo que solucione um problema em suas comunidades. Os alunos acompanham um grupo fictício de alunos enquanto definem um problema, formulam uma pesquisa para a coleta de dados, analisam seus dados no AI Lab, criam um cartão modelo, e criam um aplicativo para solucionar seu problema. Então, no projeto final, os alunos repetem os mesmo passos com um problema em sua comunidade. \n\n**Objetivo:**\n\n-   Criar um modelo de machine learning no AI Lab a partir de seus próprios dados e usar o App Lab para criar um aplicativo que utiliza de seu modelo para solucionar problemas em suas comunidades.\n\n**Questão Norteadora:**\n\n-   Como o machine learning pode ser usado para resolver problemas em nossas comunidades?\n\n:::\n\n::: details [**Orientação de Implementação para a Unidade de IA e Machine Learning**]\n\n-   Orientações sobre como auxiliar os alunos nos níveis de programação e como personalizar as atividades estão disponíveis no [Guia dos Níveis de Programação](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) e no [Guia de Personalização](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n-   Você pode conferir o [Guia de implementação] completo [2] para mais informações sobre esta unidade.\n    :::\n\n::: details [**Desenvolvimento Profissional**]\nSe você estiver interessado em lecionar este curso, recomendamos concluir o gratuito [Módulo de Desenvolvimento Profissional Individualizado de AI/ML](https://studio.code.org/courses/self-paced-pl-aiml-2023). O módulo é projetado para ser concluído em 2 horas. Não se faz necessária nenhuma experiência com codificação ou IA.\n\n## Terminou de Lecionar esta Unidade?\n\nResponda a esta [\\*\\*breve pesquisa\\*\\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7) para a equipe de currículo do Code.org saber como foi a sua experiência com esta unidade."
-          student_description: Esta unidade é uma introdução prática ao desenvolvimento de um modelo de machine learning com dados tabulares. Os alunos exploram como os computadores aprendem com os dados para tomar decisões, e então desenvolvem projetos de machine learning com base em dados do mundo real. Esta unidade culmina no projeto de um aplicativo de machine learning para solucionar um problema pessoal relevante.
+          student_description: Esta unidade é uma introdução prática ao desenvolvimento de um modelo de apredizado de máquina com dados tabulares. Os alunos exploram como os computadores aprendem com os dados para tomar decisões, e então desenvolvem projetos de aprendizado de máquina com base em dados do mundo real. Esta unidade culmina no projeto de um aplicativo de aprendizado de máquina para solucionar um problema pessoal relevante.
         physcomp-temp:
           lesson_groups:
             lessonGroup-2:
@@ -5001,9 +5229,9 @@ pt:
             csp_variables:
               display_name: Variáveis
             csp_conditionals:
-              display_name: Condições
+              display_name: Condicionais
             csp_functions:
-              display_name: funções
+              display_name: Funções
             csp_project:
               display_name: Projeto
           student_description: Esta unidade explora como variáveis, condicionais e funções permitem o design de aplicativos cada vez mais complexos. Aprenda a programar com esses três novos conceitos por meio de uma sequência de atividades colaborativas. Em seguida, crie seu próprio aplicativo de tomada de decisões para compartilhar com amigos e ajudá-los a tomar uma decisão.
@@ -5096,7 +5324,7 @@ pt:
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
-              display_name: Entradas e saídas
+              display_name: Entradas e Saídas
             lessonGroup-4:
               display_name: 'Capítulo 2: Construindo protótipos físicos'
         microbit-temp:
@@ -5104,7 +5332,7 @@ pt:
             lessonGroup-2:
               display_name: Introdução Laboratório de Aplicativos
             lessonGroup-3:
-              display_name: Entradas e saídas
+              display_name: Entradas e Saídas
         blockchain-2023:
           student_description: Aprenda como o Blockchain funciona participando de diferentes experiências imersivas e assistindo à série de vídeos [Como o Blockchain funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdzDlGJxd6B22G1bCDnPzkf)!
         csc-ecosystems-2023:
@@ -5151,13 +5379,13 @@ pt:
             csf_loops:
               display_name: laços
             csf_conditionals:
-              display_name: Condições
+              display_name: Condicionais
             csf_functions:
-              display_name: funções
+              display_name: Funções
             csf_variables:
               display_name: Variáveis
             csf_for_loops:
-              display_name: Laços para
+              display_name: Loops For
             end_of_course_project:
               display_name: Projeto de Fim do Curso
           description_short: 'Uma introdução à ciência da computação: combina o melhor do nosso currículo do ensino fundamental para alunos mais velhos.'
@@ -5222,7 +5450,7 @@ pt:
             csf_loops:
               display_name: laços
             csf_conditionals:
-              display_name: Condições
+              display_name: Condicionais
             end_of_course_project:
               display_name: Projeto de Fim do Curso
           title: Curso D (2021)
@@ -5237,9 +5465,9 @@ pt:
             ramp_up:
               display_name: Laços aninhados
             csf_functions:
-              display_name: funções
+              display_name: Funções
             csf_nested_loops:
-              display_name: Condições
+              display_name: Condicionais
             lessonGroup-7:
               display_name: Impacto da computação
             end_of_course_project:
@@ -5278,7 +5506,7 @@ pt:
             lessonGroup-2:
               display_name: 'Capítulo 1: Desenho orientado ao usuário'
             lessonGroup-3:
-              display_name: 'Capítulo 1: Prototipando o App'
+              display_name: 'Capítulo 2: Prototipando o App'
             lessonGroup-4:
               display_name: Questionário
           description: "A unidade de Processo de Design faz com que os alunos deixem de pensar na ciência da computação como uma ferramenta para resolver seus próprios problemas e passem a considerar os impactos sociais mais amplos da computação. Por meio de uma série de desafios de design, os alunos devem considerar e compreender as necessidades dos outros enquanto desenvolvem uma solução para um problema. A segunda parte da unidade consiste em um projeto de equipe iterativo, durante o qual os alunos têm a oportunidade de identificar uma necessidade do seu interesse, prototipar soluções em papel e no App Lab e testar suas soluções com usuários reais para obter feedback e impulsionar novas iterações.\n\n::: details [**Capítulo 1 - Visão Geral**]\n\\*\\*Descrição: \\*\\* Este capítulo introduz o processo de design como uma versão específica do processo de resolução de problemas em que a empatia pelas necessidades do usuário é consistentemente integrada. Os alunos aprendem estratégias para identificar as necessidades do usuário e avaliar o quão bem os diferentes designs as atendem. Especificamente, eles aprendem como desenvolver um protótipo em papel, como absorver e responder aos feedbacks sobre um protótipo e considerar como diferentes interfaces de usuário afetam ou não a usabilidade de seus aplicativos.\n\n**Objetivos:** \n\n-   Ver o processo de design como uma forma de resolução de problemas que prioriza as necessidades de um usuário. \n-   Identificar as necessidades do usuário e avaliar o quão bem os diferentes designs as atendem. \n-   Desenvolver protótipos em papel, absorver e responder aos feedbacks sobre um protótipo e considerar como diferentes interfaces de usuário afetam ou não a usabilidade de seus aplicativos. \n\n**Questões Norteadoras:**\n\n-   Como os designers identificam as necessidades de seus usuários?\n-   Como podemos garantir que as necessidades de um usuário sejam atendidas por nossos projetos?\n-   Quais processos nos permitirão criar, testar e iterar nossos projetos com eficiência?\n    :::\n\n::: details [**Capítulo 2 - Visão Geral**]\n**Descrição:** Este capítulo dedica-se a um projeto de grupo de longa duração o qual permite que os alunos apliquem tudo o que aprenderam sobre design centrado no usuário para desenvolver um protótipo de um aplicativo. Trabalhando em equipe, os alunos identificam um problema social que é seu interese, projetam e prototipam um aplicativo para resolver esse problema. Essa é uma oportunidade para os alunos explorarem outros papéis no desenvolvimento de software, como gerenciamento de produtos, marketing, design e testing.\n\n**Objetivos:**\n\n-   Desenvolver protótipos digitais, absorver e responder aos feedbacks sobre um protótipo e considerar como diferentes interfaces de usuário afetam ou não a usabilidade de seus aplicativos. \n-   Ter ciência de outros papéis no desenvolvimento de software, como gerenciamento de produtos, marketing, design e testing, e de como usar o que aprenderam sobre ciência da computação como uma ferramenta de impacto social.\n\n**Questões Norteadoras:**\n\n-   Como as equipes trabalham juntas de forma eficaz para desenvolver softwares?\n-   Quais papéis além da programação são necessários para projetar e desenvolver softwares?\n-   Como os designers incorporam os feedbacks em várias iterações de um produto?\n    :::\n\n::: details [**Orientação de Implementação para o Processo de Design**]\n\n-   Você pode conferir o [Guia de implementação](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) para mais informações sobre esta unidade.\n    :::\n\n## Terminou de Lecionar esta Unidade?\n\nResponda a esta [\\*\\*breve pesquisa\\*\\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4) para a equipe curricular da Code.org saber como foi a sua experiência com esta unidade."
@@ -5403,7 +5631,7 @@ pt:
             lessonGroup-4:
               display_name: Capítulo 2
           description: "Esta unidade é uma introdução prática ao desenvolvimento de um modelo de machine learning com dados tabulares. Os alunos exploram como os computadores aprendem com os dados para tomar decisões, e então desenvolvem projetos de machine learning com base em dados do mundo real. Esta unidade culmina no projeto de um aplicativo de machine learning para solucionar um problema pessoal relevante.\n\n::: details [**Capítulo 1 - Visão Geral**]\n**Descrição:** Os alunos aprendem o básico de machine learning e usam uma ferramenta chamada AI Lab para criar modelos de machine learning os quais podem ser usados no pp Lab. A unidade começa com uma visão geral do que é machine learning e como os computadores utilizam-se de padrões nos dados para tomar decições e realizar predições. Então, os alunos aprendem a como usar o AI Lab para treinar modelos a partir de dados tabulares enquanto exploram questões de viés. As lições seguem um padrão de repetição \"desplugado - AI Lab - App Lab\" para que os alunos sejam continuamente expostos aos conceitos e ferramentas do machine learning. O capítulo culmina em um projeto em que os alunos escolhem de um conjunto de base de dados do mundo real para treinar modelos de machine learning e para criar um aplicativo. \n\n**Objetivos:**\n\n-   Criar um modelos de machine learning no AI Lab para solucionar um problema, e usar o App Lab para criar um aplicativo que use esse modelo.\n-   Entender como os modelos de machine learning tomam decisões a partir dos dados.\n\n**Questões Norteadoras:**\n\n-   Como o machine learning identifica padrões nos dados para tomar decisões?\n-   Como podemos evitar o viés ao treinar um modelo de machine learning?\n\n:::\n\n::: details [**Capítulo 2 - Visão Geral**]\n**Descrição:** Este capítulo prepara os alunos para serem cientistas de machine learning e criarem um aplicativo que solucione um problema em suas comunidades. Os alunos acompanham um grupo fictício de alunos enquanto definem um problema, formulam uma pesquisa para a coleta de dados, analisam seus dados no AI Lab, criam um cartão modelo, e criam um aplicativo para solucionar seu problema. Então, no projeto final, os alunos repetem os mesmo passos com um problema em sua comunidade. \n\n**Objetivo:**\n\n-   Criar um modelo de machine learning no AI Lab a partir de seus próprios dados e usar o App Lab para criar um aplicativo que utiliza de seu modelo para solucionar problemas em suas comunidades.\n\n**Questão Norteadora:**\n\n-   Como o machine learning pode ser usado para resolver problemas em nossas comunidades?\n\n:::\n\n::: details [**Orientação de Implementação para a Unidade de IA e Machine Learning**]\n\n-   Orientações sobre como auxiliar os alunos nos níveis de programação e como personalizar as atividades estão disponíveis no [Guia dos Níveis de Programação](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) e no [Guia de Personalização](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n-   Você pode conferir o [Guia de implementação] completo [2] para mais informações sobre esta unidade.\n    :::\n\n::: details [**Desenvolvimento Profissional**]\nSe você estiver interessado em lecionar este curso, recomendamos concluir o gratuito [Módulo de Desenvolvimento Profissional Individualizado de AI/ML](https://studio.code.org/courses/self-paced-pl-aiml-2023). O módulo é projetado para ser concluído em 2 horas. Não se faz necessária nenhuma experiência com codificação ou IA.\n\n## Terminou de Lecionar esta Unidade?\n\nResponda a esta [\\*\\*breve pesquisa\\*\\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7) para a equipe de currículo do Code.org saber como foi a sua experiência com esta unidade."
-          student_description: Esta unidade é uma introdução prática ao desenvolvimento de um modelo de machine learning com dados tabulares. Os alunos exploram como os computadores aprendem com os dados para tomar decisões, e então desenvolvem projetos de machine learning com base em dados do mundo real. Esta unidade culmina no projeto de um aplicativo de machine learning para solucionar um problema pessoal relevante.
+          student_description: Esta unidade é uma introdução prática ao desenvolvimento de um modelo de apredizado de máquina com dados tabulares. Os alunos exploram como os computadores aprendem com os dados para tomar decisões, e então desenvolvem projetos de aprendizado de máquina com base em dados do mundo real. Esta unidade culmina no projeto de um aplicativo de aprendizado de máquina para solucionar um problema pessoal relevante.
         focus-on-design-with-purpose1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5427,7 +5655,7 @@ pt:
             lessonGroup-2:
               display_name: 'Capítulo 1: Desenho orientado ao usuário'
             lessonGroup-3:
-              display_name: 'Capítulo 1: Prototipando o App'
+              display_name: 'Capítulo 2: Prototipando o App'
           title: Unidade 3 - O Processo de Design ('23-'24)
           description: "A unidade de Processo de Design faz com que os alunos deixem de pensar na ciência da computação como uma ferramenta para resolver seus próprios problemas e passem a considerar os impactos sociais mais amplos da computação. Por meio de uma série de desafios de design, os alunos devem considerar e compreender as necessidades dos outros enquanto desenvolvem uma solução para um problema. A segunda parte da unidade consiste em um projeto de equipe iterativo, durante o qual os alunos têm a oportunidade de identificar uma necessidade do seu interesse, prototipar soluções em papel e no App Lab e testar suas soluções com usuários reais para obter feedback e impulsionar novas iterações.\n\n::: details [**Capítulo 1 - Visão Geral**]\n\\*\\*Descrição: \\*\\* Este capítulo introduz o processo de design como uma versão específica do processo de resolução de problemas em que a empatia pelas necessidades do usuário é consistentemente integrada. Os alunos aprendem estratégias para identificar as necessidades do usuário e avaliar o quão bem os diferentes designs as atendem. Especificamente, eles aprendem como desenvolver um protótipo em papel, como absorver e responder aos feedbacks sobre um protótipo e considerar como diferentes interfaces de usuário afetam ou não a usabilidade de seus aplicativos.\n\n**Objetivos:** \n\n-   Ver o processo de design como uma forma de resolução de problemas que prioriza as necessidades de um usuário. \n-   Identificar as necessidades do usuário e avaliar o quão bem os diferentes designs as atendem. \n-   Desenvolver protótipos em papel, absorver e responder aos feedbacks sobre um protótipo e considerar como diferentes interfaces de usuário afetam ou não a usabilidade de seus aplicativos. \n\n**Questões Norteadoras:**\n\n-   Como os designers identificam as necessidades de seus usuários?\n-   Como podemos garantir que as necessidades de um usuário sejam atendidas por nossos projetos?\n-   Quais processos nos permitirão criar, testar e iterar nossos projetos com eficiência?\n    :::\n\n::: details [**Capítulo 2 - Visão Geral**]\n**Descrição:** Este capítulo dedica-se a um projeto de grupo de longa duração o qual permite que os alunos apliquem tudo o que aprenderam sobre design centrado no usuário para desenvolver um protótipo de um aplicativo. Trabalhando em equipe, os alunos identificam um problema social que é seu interese, projetam e prototipam um aplicativo para resolver esse problema. Essa é uma oportunidade para os alunos explorarem outros papéis no desenvolvimento de software, como gerenciamento de produtos, marketing, design e testing.\n\n**Objetivos:**\n\n-   Desenvolver protótipos digitais, absorver e responder aos feedbacks sobre um protótipo e considerar como diferentes interfaces de usuário afetam ou não a usabilidade de seus aplicativos. \n-   Ter ciência de outros papéis no desenvolvimento de software, como gerenciamento de produtos, marketing, design e testing, e de como usar o que aprenderam sobre ciência da computação como uma ferramenta de impacto social.\n\n**Questões Norteadoras:**\n\n-   Como as equipes trabalham juntas de forma eficaz para desenvolver softwares?\n-   Quais papéis além da programação são necessários para projetar e desenvolver softwares?\n-   Como os designers incorporam os feedbacks em várias iterações de um produto?\n    :::\n\n::: details [**Orientação de Implementação para o Processo de Design**]\n\n-   Você pode conferir o [Guia de implementação](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) para mais informações sobre esta unidade.\n    :::\n\n## Terminou de Lecionar esta Unidade?\n\nResponda a esta [\\*\\*breve pesquisa\\*\\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4) para a equipe curricular da Code.org saber como foi a sua experiência com esta unidade."
           student_description: A unidade 4 apresenta os impactos sociais mais amplos da computação. Através de uma série de desafios de design, você aprenderá a entender melhor as necessidades de outras pessoas enquanto desenvolve uma solução para um problema. A segunda metade da unidade consiste em um projeto de equipe iterativo, durante o qual as equipes têm a oportunidade de identificar uma necessidade com a qual se preocupam, protótipos de soluções tanto no papel quanto no App Lab e testam soluções com usuários reais para obter feedback e avançar iteração.
@@ -5489,7 +5717,7 @@ pt:
             lessonGroup-2:
               display_name: 'Capítulo 1: Desenho orientado ao usuário'
             lessonGroup-3:
-              display_name: 'Capítulo 1: Prototipando o App'
+              display_name: 'Capítulo 2: Prototipando o App'
           description: "A unidade de Processo de Design faz com que os alunos deixem de pensar na ciência da computação como uma ferramenta para resolver seus próprios problemas e passem a considerar os impactos sociais mais amplos da computação. Por meio de uma série de desafios de design, os alunos devem considerar e compreender as necessidades dos outros enquanto desenvolvem uma solução para um problema. A segunda parte da unidade consiste em um projeto de equipe iterativo, durante o qual os alunos têm a oportunidade de identificar uma necessidade do seu interesse, prototipar soluções em papel e no App Lab e testar suas soluções com usuários reais para obter feedback e impulsionar novas iterações.\n\n::: details [**Capítulo 1 - Visão Geral**]\n\\*\\*Descrição: \\*\\* Este capítulo introduz o processo de design como uma versão específica do processo de resolução de problemas em que a empatia pelas necessidades do usuário é consistentemente integrada. Os alunos aprendem estratégias para identificar as necessidades do usuário e avaliar o quão bem os diferentes designs as atendem. Especificamente, eles aprendem como desenvolver um protótipo em papel, como absorver e responder aos feedbacks sobre um protótipo e considerar como diferentes interfaces de usuário afetam ou não a usabilidade de seus aplicativos.\n\n**Objetivos:** \n\n-   Ver o processo de design como uma forma de resolução de problemas que prioriza as necessidades de um usuário. \n-   Identificar as necessidades do usuário e avaliar o quão bem os diferentes designs as atendem. \n-   Desenvolver protótipos em papel, absorver e responder aos feedbacks sobre um protótipo e considerar como diferentes interfaces de usuário afetam ou não a usabilidade de seus aplicativos. \n\n**Questões Norteadoras:**\n\n-   Como os designers identificam as necessidades de seus usuários?\n-   Como podemos garantir que as necessidades de um usuário sejam atendidas por nossos projetos?\n-   Quais processos nos permitirão criar, testar e iterar nossos projetos com eficiência?\n    :::\n\n::: details [**Capítulo 2 - Visão Geral**]\n**Descrição:** Este capítulo dedica-se a um projeto de grupo de longa duração o qual permite que os alunos apliquem tudo o que aprenderam sobre design centrado no usuário para desenvolver um protótipo de um aplicativo. Trabalhando em equipe, os alunos identificam um problema social que é seu interese, projetam e prototipam um aplicativo para resolver esse problema. Essa é uma oportunidade para os alunos explorarem outros papéis no desenvolvimento de software, como gerenciamento de produtos, marketing, design e testing.\n\n**Objetivos:**\n\n-   Desenvolver protótipos digitais, absorver e responder aos feedbacks sobre um protótipo e considerar como diferentes interfaces de usuário afetam ou não a usabilidade de seus aplicativos. \n-   Ter ciência de outros papéis no desenvolvimento de software, como gerenciamento de produtos, marketing, design e testing, e de como usar o que aprenderam sobre ciência da computação como uma ferramenta de impacto social.\n\n**Questões Norteadoras:**\n\n-   Como as equipes trabalham juntas de forma eficaz para desenvolver softwares?\n-   Quais papéis além da programação são necessários para projetar e desenvolver softwares?\n-   Como os designers incorporam os feedbacks em várias iterações de um produto?\n    :::\n\n::: details [**Orientação de Implementação para o Processo de Design**]\n\n-   Você pode conferir o [Guia de implementação](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) para mais informações sobre esta unidade.\n    :::\n\n## Terminou de Lecionar esta Unidade?\n\nResponda a esta [\\*\\*breve pesquisa\\*\\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4) para a equipe curricular da Code.org saber como foi a sua experiência com esta unidade."
           student_description: A unidade 4 apresenta os impactos sociais mais amplos da computação. Através de uma série de desafios de design, você aprenderá a entender melhor as necessidades de outras pessoas enquanto desenvolve uma solução para um problema. A segunda metade da unidade consiste em um projeto de equipe iterativo, durante o qual as equipes têm a oportunidade de identificar uma necessidade com a qual se preocupam, protótipos de soluções tanto no papel quanto no App Lab e testam soluções com usuários reais para obter feedback e avançar iteração.
         focus-on-impact-in-society3-2023:
@@ -5509,7 +5737,7 @@ pt:
             lessonGroup-4:
               display_name: Capítulo 2
           description: "Esta unidade é uma introdução prática ao desenvolvimento de um modelo de machine learning com dados tabulares. Os alunos exploram como os computadores aprendem com os dados para tomar decisões, e então desenvolvem projetos de machine learning com base em dados do mundo real. Esta unidade culmina no projeto de um aplicativo de machine learning para solucionar um problema pessoal relevante.\n\n::: details [**Capítulo 1 - Visão Geral**]\n**Descrição:** Os alunos aprendem o básico de machine learning e usam uma ferramenta chamada AI Lab para criar modelos de machine learning os quais podem ser usados no pp Lab. A unidade começa com uma visão geral do que é machine learning e como os computadores utilizam-se de padrões nos dados para tomar decições e realizar predições. Então, os alunos aprendem a como usar o AI Lab para treinar modelos a partir de dados tabulares enquanto exploram questões de viés. As lições seguem um padrão de repetição \"desplugado - AI Lab - App Lab\" para que os alunos sejam continuamente expostos aos conceitos e ferramentas do machine learning. O capítulo culmina em um projeto em que os alunos escolhem de um conjunto de base de dados do mundo real para treinar modelos de machine learning e para criar um aplicativo. \n\n**Objetivos:**\n\n-   Criar um modelos de machine learning no AI Lab para solucionar um problema, e usar o App Lab para criar um aplicativo que use esse modelo.\n-   Entender como os modelos de machine learning tomam decisões a partir dos dados.\n\n**Questões Norteadoras:**\n\n-   Como o machine learning identifica padrões nos dados para tomar decisões?\n-   Como podemos evitar o viés ao treinar um modelo de machine learning?\n\n:::\n\n::: details [**Capítulo 2 - Visão Geral**]\n**Descrição:** Este capítulo prepara os alunos para serem cientistas de machine learning e criarem um aplicativo que solucione um problema em suas comunidades. Os alunos acompanham um grupo fictício de alunos enquanto definem um problema, formulam uma pesquisa para a coleta de dados, analisam seus dados no AI Lab, criam um cartão modelo, e criam um aplicativo para solucionar seu problema. Então, no projeto final, os alunos repetem os mesmo passos com um problema em sua comunidade. \n\n**Objetivo:**\n\n-   Criar um modelo de machine learning no AI Lab a partir de seus próprios dados e usar o App Lab para criar um aplicativo que utiliza de seu modelo para solucionar problemas em suas comunidades.\n\n**Questão Norteadora:**\n\n-   Como o machine learning pode ser usado para resolver problemas em nossas comunidades?\n\n:::\n\n::: details [**Orientação de Implementação para a Unidade de IA e Machine Learning**]\n\n-   Orientações sobre como auxiliar os alunos nos níveis de programação e como personalizar as atividades estão disponíveis no [Guia dos Níveis de Programação](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) e no [Guia de Personalização](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n-   Você pode conferir o [Guia de implementação] completo [2] para mais informações sobre esta unidade.\n    :::\n\n::: details [**Desenvolvimento Profissional**]\nSe você estiver interessado em lecionar este curso, recomendamos concluir o gratuito [Módulo de Desenvolvimento Profissional Individualizado de AI/ML](https://studio.code.org/courses/self-paced-pl-aiml-2023). O módulo é projetado para ser concluído em 2 horas. Não se faz necessária nenhuma experiência com codificação ou IA.\n\n## Terminou de Lecionar esta Unidade?\n\nResponda a esta [\\*\\*breve pesquisa\\*\\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7) para a equipe de currículo do Code.org saber como foi a sua experiência com esta unidade."
-          student_description: Esta unidade é uma introdução prática ao desenvolvimento de um modelo de machine learning com dados tabulares. Os alunos exploram como os computadores aprendem com os dados para tomar decisões, e então desenvolvem projetos de machine learning com base em dados do mundo real. Esta unidade culmina no projeto de um aplicativo de machine learning para solucionar um problema pessoal relevante.
+          student_description: Esta unidade é uma introdução prática ao desenvolvimento de um modelo de apredizado de máquina com dados tabulares. Os alunos exploram como os computadores aprendem com os dados para tomar decisões, e então desenvolvem projetos de aprendizado de máquina com base em dados do mundo real. Esta unidade culmina no projeto de um aplicativo de aprendizado de máquina para solucionar um problema pessoal relevante.
         csd6a-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5523,7 +5751,7 @@ pt:
         microbit-2023:
           lesson_groups:
             lessonGroup-3:
-              display_name: Entradas e saídas
+              display_name: Entradas e Saídas
             lessonGroup-5:
               display_name: Questionário
         vpl-csd-ci-1:
@@ -5569,17 +5797,17 @@ pt:
         focus-on-creativity4b-2023:
           lesson_groups:
             lessonGroup-3:
-              display_name: Entradas e saídas
+              display_name: Entradas e Saídas
           description: "Na unidade de Criação de Aplicativos para Dispositivos, os alunos exploram o papel dos dispositivos físicos na computação. Usando o App Lab e o micro:bit BBC, os alunos desenvolvem programas que utilizam as mesmas entradas e saídas dos hardwares que você vê em dispositivos inteligentes, observando como um simples protótipo bruto pode levar a um produto finalizado. Então, os alunos exploram como dispositivos físicos podem ser usados para reagir ao mundo ao seu redor usando uma mentalidade de \"criador\" para criar protótipos com materiais comuns. \n\n⚠️ Esta unidade utiliza o **micro:bit** para introduzir a computação física e a metalidade de criador. Você também pode lecionar este conteúdo usando dispositivos **circuito playground** atribuindo a \\[Unidade de Criação de Aplicativos com Dispositivos (Circuito Playground)[0]. As duas unidades ensinam o mesmo conteúdo e portanto são equivalentes - você não precisa comprar os dois conjuntos de dispositivos para lecionar ambas as unidades.\n\n::: details [**Capítulo 1 - Visão Geral**]\n**Descrição:** A unidade enfatiza as interações entre as entradas e as saídas do micro:bit e uma tela de aplicativo. No micro:bit, os alunos aprendem a controlar entradas como botões e saídas como Telas de LED. Os alunos também interagem com entradas e saídas no App lab, como botões e entradas de texto e menus suspensos. No fim do capítulo, os alunos serão capazes de criar um aplicativo que controla um dispositivo, similar a muitos hardwares \"inteligentes\" com quais possuem contato no dia a dia.\n\n**Objetivos:**\n\n-   Projetar e construir um dispositivo de computação físico que integre as entradas e saídas físicas com aplicativos digitais.\n-   Criar um protótipo de aplicativo que use um dispositivo físico para controlar um aplicativo digital.\n\n**Questões Norteadoras:**\n\n-   Quais entradas e saídas estão disponíveis em um dispositivo físico?\n-   Quais entradas e saídas estão disponíveis em um aplicativo?\n-   Como podemos criar aplicativos que usem um dispositivo físico para controlar um aplicativo digital?\n\n:::\n\n::: details [**Capítulo 2 - Visão Geral**]\n**Descrição:** Neste capítulo, os alunos focam em como seus dispositivos físicos podem interagir com o mundo exterior. Eles aprendem a como usarem sensores e o acelerômetro para reagir ao ambiente físico. Eles aprendem a conectar LEDs e botões os quais ampliam os tipos de dispositivos que eles podem criar. Ao longo da unidade, os alunos usam materiais físicos como papel ou papelão para ampliar as funcionalidades de seus dispositivos. No final da unidade, os alunos terão criado um projeto de arte interativo e desenvolvido um protótipo de um dispositivo físico que solucione um problema.\n\n**Objetivos:**\n\n-   Projetar e criar um dispositivo de computação físico que integre sensores com aplicativos digitais.\n-   Usar a computação física para solucionar um problema de maneira divertida e inovadora.\n\n**Questões Norteadoras:**\n\n-   Como um dispositivo físico pode utilizar sensores para reagir a um ambiente físico?\n-   Como um hardware simples  pode ser usado para desenvolver novos produtos inovadores?\n\n:::\n\n::: details [**Orientação de Implementação para Criação de Aplicativos com Dispositivos**]\n\n-   Esta unidade requer que os alunos tenham acesso a dispositivos micro:bit - [clique aqui para mais informações sobre como usar micro:bits na sala de aula](https://code.org/maker/microbit)\n-   -   Orientações sobre como auxiliar os alunos nos níveis de programação e como personalizar as atividades estão disponíveis no [Guia Níveis de Programação](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) e no [Guia de Personalização](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n        :::\n\n::: details [**Desenvolvimento Profissional**]\nSe você estiver interessado em lecionar este curso, recomendamos concluir o gratuito [Módulo de Desenvolvimento Profissional Individualizado de Criação de Aplicativos para Dispositivos (micro:bit)](https://studio.code.org/courses/self-paced-pl-microbit). Este módulo foi projetado para ser concluído em 2 horas. Não se faz necessária experiência com codificação ou com dispositivos.  \n\n:::\n\n## Terminou de Lecionar esta Unidade?\n\nResponda a esta [\\*\\*breve pesquisa\\*\\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) para a equipe de currículo da Code.org saber como foi a sua experiência com esta unidade."
         focus-on-hardware3b-2023:
           lesson_groups:
             lessonGroup-3:
-              display_name: Entradas e saídas
+              display_name: Entradas e Saídas
           description: "Na unidade de Criação de Aplicativos para Dispositivos, os alunos exploram o papel dos dispositivos físicos na computação. Usando o App Lab e o micro:bit BBC, os alunos desenvolvem programas que utilizam as mesmas entradas e saídas dos hardwares que você vê em dispositivos inteligentes, observando como um simples protótipo bruto pode levar a um produto finalizado. Então, os alunos exploram como dispositivos físicos podem ser usados para reagir ao mundo ao seu redor usando uma mentalidade de \"criador\" para criar protótipos com materiais comuns. \n\n⚠️ Esta unidade utiliza o **micro:bit** para introduzir a computação física e a metalidade de criador. Você também pode lecionar este conteúdo usando dispositivos **circuito playground** atribuindo a \\[Unidade de Criação de Aplicativos com Dispositivos (Circuito Playground)[0]. As duas unidades ensinam o mesmo conteúdo e portanto são equivalentes - você não precisa comprar os dois conjuntos de dispositivos para lecionar ambas as unidades.\n\n::: details [**Capítulo 1 - Visão Geral**]\n**Descrição:** A unidade enfatiza as interações entre as entradas e as saídas do micro:bit e uma tela de aplicativo. No micro:bit, os alunos aprendem a controlar entradas como botões e saídas como Telas de LED. Os alunos também interagem com entradas e saídas no App lab, como botões e entradas de texto e menus suspensos. No fim do capítulo, os alunos serão capazes de criar um aplicativo que controla um dispositivo, similar a muitos hardwares \"inteligentes\" com quais possuem contato no dia a dia.\n\n**Objetivos:**\n\n-   Projetar e construir um dispositivo de computação físico que integre as entradas e saídas físicas com aplicativos digitais.\n-   Criar um protótipo de aplicativo que use um dispositivo físico para controlar um aplicativo digital.\n\n**Questões Norteadoras:**\n\n-   Quais entradas e saídas estão disponíveis em um dispositivo físico?\n-   Quais entradas e saídas estão disponíveis em um aplicativo?\n-   Como podemos criar aplicativos que usem um dispositivo físico para controlar um aplicativo digital?\n\n:::\n\n::: details [**Capítulo 2 - Visão Geral**]\n**Descrição:** Neste capítulo, os alunos focam em como seus dispositivos físicos podem interagir com o mundo exterior. Eles aprendem a como usarem sensores e o acelerômetro para reagir ao ambiente físico. Eles aprendem a conectar LEDs e botões os quais ampliam os tipos de dispositivos que eles podem criar. Ao longo da unidade, os alunos usam materiais físicos como papel ou papelão para ampliar as funcionalidades de seus dispositivos. No final da unidade, os alunos terão criado um projeto de arte interativo e desenvolvido um protótipo de um dispositivo físico que solucione um problema.\n\n**Objetivos:**\n\n-   Projetar e criar um dispositivo de computação físico que integre sensores com aplicativos digitais.\n-   Usar a computação física para solucionar um problema de maneira divertida e inovadora.\n\n**Questões Norteadoras:**\n\n-   Como um dispositivo físico pode utilizar sensores para reagir a um ambiente físico?\n-   Como um hardware simples  pode ser usado para desenvolver novos produtos inovadores?\n\n:::\n\n::: details [**Orientação de Implementação para Criação de Aplicativos com Dispositivos**]\n\n-   Esta unidade requer que os alunos tenham acesso a dispositivos micro:bit - [clique aqui para mais informações sobre como usar micro:bits na sala de aula](https://code.org/maker/microbit)\n-   -   Orientações sobre como auxiliar os alunos nos níveis de programação e como personalizar as atividades estão disponíveis no [Guia Níveis de Programação](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) e no [Guia de Personalização](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n        :::\n\n::: details [**Desenvolvimento Profissional**]\nSe você estiver interessado em lecionar este curso, recomendamos concluir o gratuito [Módulo de Desenvolvimento Profissional Individualizado de Criação de Aplicativos para Dispositivos (micro:bit)](https://studio.code.org/courses/self-paced-pl-microbit). Este módulo foi projetado para ser concluído em 2 horas. Não se faz necessária experiência com codificação ou com dispositivos.  \n\n:::\n\n## Terminou de Lecionar esta Unidade?\n\nResponda a esta [\\*\\*breve pesquisa\\*\\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) para a equipe de currículo da Code.org saber como foi a sua experiência com esta unidade."
         focus-on-design-with-purpose4b-2023:
           lesson_groups:
             lessonGroup-3:
-              display_name: Entradas e saídas
+              display_name: Entradas e Saídas
           description: "Na unidade de Criação de Aplicativos para Dispositivos, os alunos exploram o papel dos dispositivos físicos na computação. Usando o App Lab e o micro:bit BBC, os alunos desenvolvem programas que utilizam as mesmas entradas e saídas dos hardwares que você vê em dispositivos inteligentes, observando como um simples protótipo bruto pode levar a um produto finalizado. Então, os alunos exploram como dispositivos físicos podem ser usados para reagir ao mundo ao seu redor usando uma mentalidade de \"criador\" para criar protótipos com materiais comuns. \n\n⚠️ Esta unidade utiliza o **micro:bit** para introduzir a computação física e a metalidade de criador. Você também pode lecionar este conteúdo usando dispositivos **circuito playground** atribuindo a \\[Unidade de Criação de Aplicativos com Dispositivos (Circuito Playground)[0]. As duas unidades ensinam o mesmo conteúdo e portanto são equivalentes - você não precisa comprar os dois conjuntos de dispositivos para lecionar ambas as unidades.\n\n::: details [**Capítulo 1 - Visão Geral**]\n**Descrição:** A unidade enfatiza as interações entre as entradas e as saídas do micro:bit e uma tela de aplicativo. No micro:bit, os alunos aprendem a controlar entradas como botões e saídas como Telas de LED. Os alunos também interagem com entradas e saídas no App lab, como botões e entradas de texto e menus suspensos. No fim do capítulo, os alunos serão capazes de criar um aplicativo que controla um dispositivo, similar a muitos hardwares \"inteligentes\" com quais possuem contato no dia a dia.\n\n**Objetivos:**\n\n-   Projetar e construir um dispositivo de computação físico que integre as entradas e saídas físicas com aplicativos digitais.\n-   Criar um protótipo de aplicativo que use um dispositivo físico para controlar um aplicativo digital.\n\n**Questões Norteadoras:**\n\n-   Quais entradas e saídas estão disponíveis em um dispositivo físico?\n-   Quais entradas e saídas estão disponíveis em um aplicativo?\n-   Como podemos criar aplicativos que usem um dispositivo físico para controlar um aplicativo digital?\n\n:::\n\n::: details [**Capítulo 2 - Visão Geral**]\n**Descrição:** Neste capítulo, os alunos focam em como seus dispositivos físicos podem interagir com o mundo exterior. Eles aprendem a como usarem sensores e o acelerômetro para reagir ao ambiente físico. Eles aprendem a conectar LEDs e botões os quais ampliam os tipos de dispositivos que eles podem criar. Ao longo da unidade, os alunos usam materiais físicos como papel ou papelão para ampliar as funcionalidades de seus dispositivos. No final da unidade, os alunos terão criado um projeto de arte interativo e desenvolvido um protótipo de um dispositivo físico que solucione um problema.\n\n**Objetivos:**\n\n-   Projetar e criar um dispositivo de computação físico que integre sensores com aplicativos digitais.\n-   Usar a computação física para solucionar um problema de maneira divertida e inovadora.\n\n**Questões Norteadoras:**\n\n-   Como um dispositivo físico pode utilizar sensores para reagir a um ambiente físico?\n-   Como um hardware simples  pode ser usado para desenvolver novos produtos inovadores?\n\n:::\n\n::: details [**Orientação de Implementação para Criação de Aplicativos com Dispositivos**]\n\n-   Esta unidade requer que os alunos tenham acesso a dispositivos micro:bit - [clique aqui para mais informações sobre como usar micro:bits na sala de aula](https://code.org/maker/microbit)\n-   -   Orientações sobre como auxiliar os alunos nos níveis de programação e como personalizar as atividades estão disponíveis no [Guia Níveis de Programação](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) e no [Guia de Personalização](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n        :::\n\n::: details [**Desenvolvimento Profissional**]\nSe você estiver interessado em lecionar este curso, recomendamos concluir o gratuito [Módulo de Desenvolvimento Profissional Individualizado de Criação de Aplicativos para Dispositivos (micro:bit)](https://studio.code.org/courses/self-paced-pl-microbit). Este módulo foi projetado para ser concluído em 2 horas. Não se faz necessária experiência com codificação ou com dispositivos.  \n\n:::\n\n## Terminou de Lecionar esta Unidade?\n\nResponda a esta [\\*\\*breve pesquisa\\*\\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) para a equipe de currículo da Code.org saber como foi a sua experiência com esta unidade."
         ai-temp:
           lessons:
@@ -5590,12 +5818,12 @@ pt:
         focus-on-coding4b-2023:
           lesson_groups:
             lessonGroup-3:
-              display_name: Entradas e saídas
+              display_name: Entradas e Saídas
           description: "Na unidade de Criação de Aplicativos para Dispositivos, os alunos exploram o papel dos dispositivos físicos na computação. Usando o App Lab e o micro:bit BBC, os alunos desenvolvem programas que utilizam as mesmas entradas e saídas dos hardwares que você vê em dispositivos inteligentes, observando como um simples protótipo bruto pode levar a um produto finalizado. Então, os alunos exploram como dispositivos físicos podem ser usados para reagir ao mundo ao seu redor usando uma mentalidade de \"criador\" para criar protótipos com materiais comuns. \n\n⚠️ Esta unidade utiliza o **micro:bit** para introduzir a computação física e a metalidade de criador. Você também pode lecionar este conteúdo usando dispositivos **circuito playground** atribuindo a \\[Unidade de Criação de Aplicativos com Dispositivos (Circuito Playground)[0]. As duas unidades ensinam o mesmo conteúdo e portanto são equivalentes - você não precisa comprar os dois conjuntos de dispositivos para lecionar ambas as unidades.\n\n::: details [**Capítulo 1 - Visão Geral**]\n**Descrição:** A unidade enfatiza as interações entre as entradas e as saídas do micro:bit e uma tela de aplicativo. No micro:bit, os alunos aprendem a controlar entradas como botões e saídas como Telas de LED. Os alunos também interagem com entradas e saídas no App lab, como botões e entradas de texto e menus suspensos. No fim do capítulo, os alunos serão capazes de criar um aplicativo que controla um dispositivo, similar a muitos hardwares \"inteligentes\" com quais possuem contato no dia a dia.\n\n**Objetivos:**\n\n-   Projetar e construir um dispositivo de computação físico que integre as entradas e saídas físicas com aplicativos digitais.\n-   Criar um protótipo de aplicativo que use um dispositivo físico para controlar um aplicativo digital.\n\n**Questões Norteadoras:**\n\n-   Quais entradas e saídas estão disponíveis em um dispositivo físico?\n-   Quais entradas e saídas estão disponíveis em um aplicativo?\n-   Como podemos criar aplicativos que usem um dispositivo físico para controlar um aplicativo digital?\n\n:::\n\n::: details [**Capítulo 2 - Visão Geral**]\n**Descrição:** Neste capítulo, os alunos focam em como seus dispositivos físicos podem interagir com o mundo exterior. Eles aprendem a como usarem sensores e o acelerômetro para reagir ao ambiente físico. Eles aprendem a conectar LEDs e botões os quais ampliam os tipos de dispositivos que eles podem criar. Ao longo da unidade, os alunos usam materiais físicos como papel ou papelão para ampliar as funcionalidades de seus dispositivos. No final da unidade, os alunos terão criado um projeto de arte interativo e desenvolvido um protótipo de um dispositivo físico que solucione um problema.\n\n**Objetivos:**\n\n-   Projetar e criar um dispositivo de computação físico que integre sensores com aplicativos digitais.\n-   Usar a computação física para solucionar um problema de maneira divertida e inovadora.\n\n**Questões Norteadoras:**\n\n-   Como um dispositivo físico pode utilizar sensores para reagir a um ambiente físico?\n-   Como um hardware simples  pode ser usado para desenvolver novos produtos inovadores?\n\n:::\n\n::: details [**Orientação de Implementação para Criação de Aplicativos com Dispositivos**]\n\n-   Esta unidade requer que os alunos tenham acesso a dispositivos micro:bit - [clique aqui para mais informações sobre como usar micro:bits na sala de aula](https://code.org/maker/microbit)\n-   -   Orientações sobre como auxiliar os alunos nos níveis de programação e como personalizar as atividades estão disponíveis no [Guia Níveis de Programação](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) e no [Guia de Personalização](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n        :::\n\n::: details [**Desenvolvimento Profissional**]\nSe você estiver interessado em lecionar este curso, recomendamos concluir o gratuito [Módulo de Desenvolvimento Profissional Individualizado de Criação de Aplicativos para Dispositivos (micro:bit)](https://studio.code.org/courses/self-paced-pl-microbit). Este módulo foi projetado para ser concluído em 2 horas. Não se faz necessária experiência com codificação ou com dispositivos.  \n\n:::\n\n## Terminou de Lecionar esta Unidade?\n\nResponda a esta [\\*\\*breve pesquisa\\*\\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) para a equipe de currículo da Code.org saber como foi a sua experiência com esta unidade."
         csd6b-2023:
           lesson_groups:
             lessonGroup-3:
-              display_name: Entradas e saídas
+              display_name: Entradas e Saídas
           title: Unidade 6B - (Opção B) Criação de Aplicativos com Dispositivos (micro:bit)
           description: "Na unidade de Criação de Aplicativos para Dispositivos, os alunos exploram o papel dos dispositivos físicos na computação. Usando o App Lab e o micro:bit BBC, os alunos desenvolvem programas que utilizam as mesmas entradas e saídas dos hardwares que você vê em dispositivos inteligentes, observando como um simples protótipo bruto pode levar a um produto finalizado. Então, os alunos exploram como dispositivos físicos podem ser usados para reagir ao mundo ao seu redor usando uma mentalidade de \"criador\" para criar protótipos com materiais comuns. \n\n⚠️ Esta unidade utiliza o **micro:bit** para introduzir a computação física e a metalidade de criador. Você também pode lecionar este conteúdo usando dispositivos **circuito playground** atribuindo a \\[Unidade de Criação de Aplicativos com Dispositivos (Circuito Playground)[0]. As duas unidades ensinam o mesmo conteúdo e portanto são equivalentes - você não precisa comprar os dois conjuntos de dispositivos para lecionar ambas as unidades.\n\n::: details [**Capítulo 1 - Visão Geral**]\n**Descrição:** A unidade enfatiza as interações entre as entradas e as saídas do micro:bit e uma tela de aplicativo. No micro:bit, os alunos aprendem a controlar entradas como botões e saídas como Telas de LED. Os alunos também interagem com entradas e saídas no App lab, como botões e entradas de texto e menus suspensos. No fim do capítulo, os alunos serão capazes de criar um aplicativo que controla um dispositivo, similar a muitos hardwares \"inteligentes\" com quais possuem contato no dia a dia.\n\n**Objetivos:**\n\n-   Projetar e construir um dispositivo de computação físico que integre as entradas e saídas físicas com aplicativos digitais.\n-   Criar um protótipo de aplicativo que use um dispositivo físico para controlar um aplicativo digital.\n\n**Questões Norteadoras:**\n\n-   Quais entradas e saídas estão disponíveis em um dispositivo físico?\n-   Quais entradas e saídas estão disponíveis em um aplicativo?\n-   Como podemos criar aplicativos que usem um dispositivo físico para controlar um aplicativo digital?\n\n:::\n\n::: details [**Capítulo 2 - Visão Geral**]\n**Descrição:** Neste capítulo, os alunos focam em como seus dispositivos físicos podem interagir com o mundo exterior. Eles aprendem a como usarem sensores e o acelerômetro para reagir ao ambiente físico. Eles aprendem a conectar LEDs e botões os quais ampliam os tipos de dispositivos que eles podem criar. Ao longo da unidade, os alunos usam materiais físicos como papel ou papelão para ampliar as funcionalidades de seus dispositivos. No final da unidade, os alunos terão criado um projeto de arte interativo e desenvolvido um protótipo de um dispositivo físico que solucione um problema.\n\n**Objetivos:**\n\n-   Projetar e criar um dispositivo de computação físico que integre sensores com aplicativos digitais.\n-   Usar a computação física para solucionar um problema de maneira divertida e inovadora.\n\n**Questões Norteadoras:**\n\n-   Como um dispositivo físico pode utilizar sensores para reagir a um ambiente físico?\n-   Como um hardware simples  pode ser usado para desenvolver novos produtos inovadores?\n\n:::\n\n::: details [**Orientação de Implementação para Criação de Aplicativos com Dispositivos**]\n\n-   Esta unidade requer que os alunos tenham acesso a dispositivos micro:bit - [clique aqui para mais informações sobre como usar micro:bits na sala de aula](https://code.org/maker/microbit)\n-   -   Orientações sobre como auxiliar os alunos nos níveis de programação e como personalizar as atividades estão disponíveis no [Guia Níveis de Programação](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) e no [Guia de Personalização](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n        :::\n\n::: details [**Desenvolvimento Profissional**]\nSe você estiver interessado em lecionar este curso, recomendamos concluir o gratuito [Módulo de Desenvolvimento Profissional Individualizado de Criação de Aplicativos para Dispositivos (micro:bit)](https://studio.code.org/courses/self-paced-pl-microbit). Este módulo foi projetado para ser concluído em 2 horas. Não se faz necessária experiência com codificação ou com dispositivos.  \n\n:::\n\n## Terminou de Lecionar esta Unidade?\n\nResponda a esta [\\*\\*breve pesquisa\\*\\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) para a equipe de currículo da Code.org saber como foi a sua experiência com esta unidade."
         self-paced-pl-csd1-2023:
@@ -5647,6 +5875,9 @@ pt:
               display_name: Dia 2
           title: Dia 2
         pl-csd-summer-day3:
+          lessons:
+            lesson-10:
+              name: Fechamento
           lesson_groups:
             lessonGroup-2:
               display_name: Dia 3
@@ -5685,6 +5916,7 @@ pt:
           lessons:
             lesson-3:
               name: Avaliação
+          title: Dia 5
         csd-post-survey-2023:
           title: Pesquisa Pós-Curso
           description: Esta unidade contém a Pesquisa Pós-Curso. Esta unidade pode ser disponibilizada depois que os alunos concluírem a sua unidade final neste curso.
@@ -5720,6 +5952,10 @@ pt:
           description_short: Aprenda todos os conceitos Fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.
         self-paced-pl-csp2-2023:
           title: 'Módulo 2: Navegação no Code.org'
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Atividade livre
         csa-software-engineering:
           lessons:
             lesson-7:
@@ -5862,7 +6098,7 @@ pt:
             lessonGroup-3:
               display_name: Laços aninhados
             lessonGroup-4:
-              display_name: funções
+              display_name: Funções
             lessonGroup-6:
               display_name: Projeto de Fim do Curso
           title: Curso de 4° Ano Alinhado aos Padrões de Nevada
@@ -5879,7 +6115,7 @@ pt:
             lessonGroup-2:
               display_name: Sprite
             lessonGroup-3:
-              display_name: Condições
+              display_name: Condicionais
             lessonGroup-5:
               display_name: Variáveis
             lessonGroup-6:
@@ -5976,6 +6212,8 @@ pt:
           title: Dia 3
         virtual-pl-csp-summer-day4:
           title: Dia 4
+        virtual-pl-csp-summer-day5:
+          title: Dia 5
         virtual-pl-csa-summer-day2:
           title: Dia 2
         virtual-pl-csa-summer-day3:
@@ -6069,7 +6307,7 @@ pt:
             lessonGroup-2:
               display_name: 'Capítulo 1: Desenho orientado ao usuário'
             lessonGroup-3:
-              display_name: 'Capítulo 1: Prototipando o App'
+              display_name: 'Capítulo 2: Prototipando o App'
           description: "A unidade de Processo de Design faz com que os alunos deixem de pensar na ciência da computação como uma ferramenta para resolver seus próprios problemas e passem a considerar os impactos sociais mais amplos da computação. Por meio de uma série de desafios de design, os alunos devem considerar e compreender as necessidades dos outros enquanto desenvolvem uma solução para um problema. A segunda parte da unidade consiste em um projeto de equipe iterativo, durante o qual os alunos têm a oportunidade de identificar uma necessidade do seu interesse, prototipar soluções em papel e no App Lab e testar suas soluções com usuários reais para obter feedback e impulsionar novas iterações.\n\n::: details [**Capítulo 1 - Visão Geral**]\n\\*\\*Descrição: \\*\\* Este capítulo introduz o processo de design como uma versão específica do processo de resolução de problemas em que a empatia pelas necessidades do usuário é consistentemente integrada. Os alunos aprendem estratégias para identificar as necessidades do usuário e avaliar o quão bem os diferentes designs as atendem. Especificamente, eles aprendem como desenvolver um protótipo em papel, como absorver e responder aos feedbacks sobre um protótipo e considerar como diferentes interfaces de usuário afetam ou não a usabilidade de seus aplicativos.\n\n**Objetivos:** \n\n-   Ver o processo de design como uma forma de resolução de problemas que prioriza as necessidades de um usuário. \n-   Identificar as necessidades do usuário e avaliar o quão bem os diferentes designs as atendem. \n-   Desenvolver protótipos em papel, absorver e responder aos feedbacks sobre um protótipo e considerar como diferentes interfaces de usuário afetam ou não a usabilidade de seus aplicativos. \n\n**Questões Norteadoras:**\n\n-   Como os designers identificam as necessidades de seus usuários?\n-   Como podemos garantir que as necessidades de um usuário sejam atendidas por nossos projetos?\n-   Quais processos nos permitirão criar, testar e iterar nossos projetos com eficiência?\n    :::\n\n::: details [**Capítulo 2 - Visão Geral**]\n**Descrição:** Este capítulo dedica-se a um projeto de grupo de longa duração o qual permite que os alunos apliquem tudo o que aprenderam sobre design centrado no usuário para desenvolver um protótipo de um aplicativo. Trabalhando em equipe, os alunos identificam um problema social que é seu interese, projetam e prototipam um aplicativo para resolver esse problema. Essa é uma oportunidade para os alunos explorarem outros papéis no desenvolvimento de software, como gerenciamento de produtos, marketing, design e testing.\n\n**Objetivos:**\n\n-   Desenvolver protótipos digitais, absorver e responder aos feedbacks sobre um protótipo e considerar como diferentes interfaces de usuário afetam ou não a usabilidade de seus aplicativos. \n-   Ter ciência de outros papéis no desenvolvimento de software, como gerenciamento de produtos, marketing, design e testing, e de como usar o que aprenderam sobre ciência da computação como uma ferramenta de impacto social.\n\n**Questões Norteadoras:**\n\n-   Como as equipes trabalham juntas de forma eficaz para desenvolver softwares?\n-   Quais papéis além da programação são necessários para projetar e desenvolver softwares?\n-   Como os designers incorporam os feedbacks em várias iterações de um produto?\n    :::\n\n::: details [**Orientação de Implementação para o Processo de Design**]\n\n-   Você pode conferir o [Guia de implementação](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) para mais informações sobre esta unidade.\n    :::\n\n## Terminou de Lecionar esta Unidade?\n\nResponda a esta [\\*\\*breve pesquisa\\*\\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4) para a equipe curricular da Code.org saber como foi a sua experiência com esta unidade."
           student_description: A unidade 4 apresenta os impactos sociais mais amplos da computação. Através de uma série de desafios de design, você aprenderá a entender melhor as necessidades de outras pessoas enquanto desenvolve uma solução para um problema. A segunda metade da unidade consiste em um projeto de equipe iterativo, durante o qual as equipes têm a oportunidade de identificar uma necessidade com a qual se preocupam, protótipos de soluções tanto no papel quanto no App Lab e testam soluções com usuários reais para obter feedback e avançar iteração.
         csd5-2024:
@@ -6095,7 +6333,7 @@ pt:
         csd6b-2024:
           lesson_groups:
             lessonGroup-3:
-              display_name: Entradas e saídas
+              display_name: Entradas e Saídas
           title: Unidade 6B - (Opção B) Criação de Aplicativos com Dispositivos (micro:bit)
           description: "Na unidade de Criação de Aplicativos para Dispositivos, os alunos exploram o papel dos dispositivos físicos na computação. Usando o App Lab e o micro:bit BBC, os alunos desenvolvem programas que utilizam as mesmas entradas e saídas dos hardwares que você vê em dispositivos inteligentes, observando como um simples protótipo bruto pode levar a um produto finalizado. Então, os alunos exploram como dispositivos físicos podem ser usados para reagir ao mundo ao seu redor usando uma mentalidade de \"criador\" para criar protótipos com materiais comuns. \n\n⚠️ Esta unidade utiliza o **micro:bit** para introduzir a computação física e a metalidade de criador. Você também pode lecionar este conteúdo usando dispositivos **circuito playground** atribuindo a \\[Unidade de Criação de Aplicativos com Dispositivos (Circuito Playground)[0]. As duas unidades ensinam o mesmo conteúdo e portanto são equivalentes - você não precisa comprar os dois conjuntos de dispositivos para lecionar ambas as unidades.\n\n::: details [**Capítulo 1 - Visão Geral**]\n**Descrição:** A unidade enfatiza as interações entre as entradas e as saídas do micro:bit e uma tela de aplicativo. No micro:bit, os alunos aprendem a controlar entradas como botões e saídas como Telas de LED. Os alunos também interagem com entradas e saídas no App lab, como botões e entradas de texto e menus suspensos. No fim do capítulo, os alunos serão capazes de criar um aplicativo que controla um dispositivo, similar a muitos hardwares \"inteligentes\" com quais possuem contato no dia a dia.\n\n**Objetivos:**\n\n-   Projetar e construir um dispositivo de computação físico que integre as entradas e saídas físicas com aplicativos digitais.\n-   Criar um protótipo de aplicativo que use um dispositivo físico para controlar um aplicativo digital.\n\n**Questões Norteadoras:**\n\n-   Quais entradas e saídas estão disponíveis em um dispositivo físico?\n-   Quais entradas e saídas estão disponíveis em um aplicativo?\n-   Como podemos criar aplicativos que usem um dispositivo físico para controlar um aplicativo digital?\n\n:::\n\n::: details [**Capítulo 2 - Visão Geral**]\n**Descrição:** Neste capítulo, os alunos focam em como seus dispositivos físicos podem interagir com o mundo exterior. Eles aprendem a como usarem sensores e o acelerômetro para reagir ao ambiente físico. Eles aprendem a conectar LEDs e botões os quais ampliam os tipos de dispositivos que eles podem criar. Ao longo da unidade, os alunos usam materiais físicos como papel ou papelão para ampliar as funcionalidades de seus dispositivos. No final da unidade, os alunos terão criado um projeto de arte interativo e desenvolvido um protótipo de um dispositivo físico que solucione um problema.\n\n**Objetivos:**\n\n-   Projetar e criar um dispositivo de computação físico que integre sensores com aplicativos digitais.\n-   Usar a computação física para solucionar um problema de maneira divertida e inovadora.\n\n**Questões Norteadoras:**\n\n-   Como um dispositivo físico pode utilizar sensores para reagir a um ambiente físico?\n-   Como um hardware simples  pode ser usado para desenvolver novos produtos inovadores?\n\n:::\n\n::: details [**Orientação de Implementação para Criação de Aplicativos com Dispositivos**]\n\n-   Esta unidade requer que os alunos tenham acesso a dispositivos micro:bit - [clique aqui para mais informações sobre como usar micro:bits na sala de aula](https://code.org/maker/microbit)\n-   -   Orientações sobre como auxiliar os alunos nos níveis de programação e como personalizar as atividades estão disponíveis no [Guia Níveis de Programação](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) e no [Guia de Personalização](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n        :::\n\n::: details [**Desenvolvimento Profissional**]\nSe você estiver interessado em lecionar este curso, recomendamos concluir o gratuito [Módulo de Desenvolvimento Profissional Individualizado de Criação de Aplicativos para Dispositivos (micro:bit)](https://studio.code.org/courses/self-paced-pl-microbit). Este módulo foi projetado para ser concluído em 2 horas. Não se faz necessária experiência com codificação ou com dispositivos.  \n\n:::\n\n## Terminou de Lecionar esta Unidade?\n\nResponda a esta [\\*\\*breve pesquisa\\*\\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) para a equipe de currículo da Code.org saber como foi a sua experiência com esta unidade."
         csd7-2024:
@@ -6108,7 +6346,32 @@ pt:
               display_name: Capítulo 2
           title: Unidade 7 - IA e Machine Learning ('23-'24)
           description: "Esta unidade é uma introdução prática ao desenvolvimento de um modelo de machine learning com dados tabulares. Os alunos exploram como os computadores aprendem com os dados para tomar decisões, e então desenvolvem projetos de machine learning com base em dados do mundo real. Esta unidade culmina no projeto de um aplicativo de machine learning para solucionar um problema pessoal relevante.\n\n::: details [**Capítulo 1 - Visão Geral**]\n**Descrição:** Os alunos aprendem o básico de machine learning e usam uma ferramenta chamada AI Lab para criar modelos de machine learning os quais podem ser usados no pp Lab. A unidade começa com uma visão geral do que é machine learning e como os computadores utilizam-se de padrões nos dados para tomar decições e realizar predições. Então, os alunos aprendem a como usar o AI Lab para treinar modelos a partir de dados tabulares enquanto exploram questões de viés. As lições seguem um padrão de repetição \"desplugado - AI Lab - App Lab\" para que os alunos sejam continuamente expostos aos conceitos e ferramentas do machine learning. O capítulo culmina em um projeto em que os alunos escolhem de um conjunto de base de dados do mundo real para treinar modelos de machine learning e para criar um aplicativo. \n\n**Objetivos:**\n\n-   Criar um modelos de machine learning no AI Lab para solucionar um problema, e usar o App Lab para criar um aplicativo que use esse modelo.\n-   Entender como os modelos de machine learning tomam decisões a partir dos dados.\n\n**Questões Norteadoras:**\n\n-   Como o machine learning identifica padrões nos dados para tomar decisões?\n-   Como podemos evitar o viés ao treinar um modelo de machine learning?\n\n:::\n\n::: details [**Capítulo 2 - Visão Geral**]\n**Descrição:** Este capítulo prepara os alunos para serem cientistas de machine learning e criarem um aplicativo que solucione um problema em suas comunidades. Os alunos acompanham um grupo fictício de alunos enquanto definem um problema, formulam uma pesquisa para a coleta de dados, analisam seus dados no AI Lab, criam um cartão modelo, e criam um aplicativo para solucionar seu problema. Então, no projeto final, os alunos repetem os mesmo passos com um problema em sua comunidade. \n\n**Objetivo:**\n\n-   Criar um modelo de machine learning no AI Lab a partir de seus próprios dados e usar o App Lab para criar um aplicativo que utiliza de seu modelo para solucionar problemas em suas comunidades.\n\n**Questão Norteadora:**\n\n-   Como o machine learning pode ser usado para resolver problemas em nossas comunidades?\n\n:::\n\n::: details [**Orientação de Implementação para a Unidade de IA e Machine Learning**]\n\n-   Orientações sobre como auxiliar os alunos nos níveis de programação e como personalizar as atividades estão disponíveis no [Guia dos Níveis de Programação](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) e no [Guia de Personalização](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n-   Você pode conferir o [Guia de implementação] completo [2] para mais informações sobre esta unidade.\n    :::\n\n::: details [**Desenvolvimento Profissional**]\nSe você estiver interessado em lecionar este curso, recomendamos concluir o gratuito [Módulo de Desenvolvimento Profissional Individualizado de AI/ML](https://studio.code.org/courses/self-paced-pl-aiml-2023). O módulo é projetado para ser concluído em 2 horas. Não se faz necessária nenhuma experiência com codificação ou IA.\n\n## Terminou de Lecionar esta Unidade?\n\nResponda a esta [\\*\\*breve pesquisa\\*\\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7) para a equipe de currículo do Code.org saber como foi a sua experiência com esta unidade."
-          student_description: Esta unidade é uma introdução prática ao desenvolvimento de um modelo de machine learning com dados tabulares. Os alunos exploram como os computadores aprendem com os dados para tomar decisões, e então desenvolvem projetos de machine learning com base em dados do mundo real. Esta unidade culmina no projeto de um aplicativo de machine learning para solucionar um problema pessoal relevante.
+          student_description: Esta unidade é uma introdução prática ao desenvolvimento de um modelo de apredizado de máquina com dados tabulares. Os alunos exploram como os computadores aprendem com os dados para tomar decisões, e então desenvolvem projetos de aprendizado de máquina com base em dados do mundo real. Esta unidade culmina no projeto de um aplicativo de aprendizado de máquina para solucionar um problema pessoal relevante.
         csd-post-survey-2024:
           title: Pesquisa Pós-Curso
           description: Esta unidade contém a Pesquisa Pós-Curso. Esta unidade pode ser disponibilizada depois que os alunos concluírem a sua unidade final neste curso.
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Lição 1
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Lição 1
+            lesson-3:
+              name: Eventos
+            lesson-4:
+              name: Comportamentos
+            lesson-5:
+              name: Próximas etapas
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Lição 1
+            lesson-3:
+              name: laços
+            lesson-4:
+              name: Condicionais
+            lesson-6:
+              name: Próximas etapas
+          title: Introdução à Ciência da Computação

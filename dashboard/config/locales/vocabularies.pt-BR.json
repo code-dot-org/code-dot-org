@@ -3,42 +3,52 @@
     "data": {
       "vocabularies": {
         "computer/csd/2021": {
-          "word": "Computador"
+          "word": "Computador",
+          "definition": "Uma máquina que trabalha com informações."
         },
         "input/csd/2021": {
-          "word": "Entrada"
+          "word": "Entrada",
+          "definition": "as informações que os computadores obtêm de usuários, dispositivos ou outros computadores"
         },
         "output/csd/2021": {
-          "word": "Saída"
+          "word": "Saída",
+          "definition": "as informações que os computadores fornecem aos usuários, dispositivos ou outros computadores"
         },
         "processing/csd/2021": {
-          "word": "Processando"
+          "word": "Processando",
+          "definition": "O trabalho racional que os computadores fazem para transformar entrada em saída."
         },
         "html/csd/2021": {
-          "word": "HTML"
+          "word": "HTML",
+          "definition": "Hypertext Markup Language, uma linguagem usada para criar páginas da web"
         },
         "html_element/csd/2021": {
-          "word": "Elemento HTML"
+          "word": "Elemento HTML",
+          "definition": "Uma parte de um site, marcada por uma tag inicial e geralmente finalizada com uma tag final"
         },
         "html_tag/csd/2021": {
-          "word": "Tag HTML"
+          "word": "Tag HTML",
+          "definition": "O conjunto especial de caracteres que indica o início e o fim de um elemento HTML e o tipo desse elemento"
         },
         "website_content/csd/2021": {
           "word": "Conteúdo do Site",
           "definition": "o texto e as imagens de um site"
         },
         "website_structure/csd/2021": {
-          "word": "Estrutura do Site"
+          "word": "Estrutura do Site",
+          "definition": "como o conteúdo de um site é organizado"
         },
         "heading/csd/2021": {
-          "word": "Cabeçalho"
+          "word": "Cabeçalho",
+          "definition": "Um título ou resumo de um documento ou seção de um documento."
         },
         "digital_footprint/csd/2021": {
           "word": "Pegada Digital",
           "definition": "As informações coletadas sobre um indivíduo com base em vários sites da  Internet."
         },
         "css_selector/csd/2021": {
-          "word": "Seletor CSS"
+          "word": "Seletor CSS",
+          "definition": "a parte de um conjunto de regras CSS que define a quais elementos HTML o estilo deve ser aplicado"
         },
         "copyright/csd/2021": {
           "word": "Direitos Autorais",
@@ -49,7 +59,7 @@
           "definition": "Parte de um programa que não funciona corretamente."
         },
         "debugging/csd/2021": {
-          "word": "Analisando",
+          "word": "Depuração",
           "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "program/csd/2021": {
@@ -58,26 +68,31 @@
         },
         "variable/csd/2021": {
           "word": "Variável",
-          "definition": "Espaço reservado para uma informação que pode mudar."
+          "definition": "Um rótulo reservado para uma informação usada num programa."
         },
         "sprite/csd/2021": {
           "word": "Sprite",
           "definition": "Um caractere na tela com propriedades que descrevem sua localização, movimento e aparência."
         },
         "dot_notation/csd/2021": {
-          "word": "Notação de pontos"
+          "word": "Notação de pontos",
+          "definition": "a forma como as propriedades dos sprites são usadas no Game Lab, conectando o sprite à propriedade com um ponto."
         },
         "condition/csd/2021": {
-          "word": "Condição"
+          "word": "Condição",
+          "definition": "Algo que um programa verifica para ver se é verdade antes de decidir executar uma ação."
         },
         "conditionals/csd/2021": {
-          "word": "Condições"
+          "word": "Condicionais",
+          "definition": "Instruções que só são executadas quando certas condições são verdadeiras."
         },
         "abstraction/csd/2021": {
-          "word": "Abstração"
+          "word": "Abstração",
+          "definition": "uma representação simplificada de algo mais complexo. As abstrações permitem ocultar detalhes para ajudá-lo a gerenciar a complexidade, focar em conceitos relevantes e raciocinar sobre problemas em um nível mais complexo."
         },
         "function/csd/2021": {
-          "word": "Função"
+          "word": "Função",
+          "definition": "Um trecho nomeado de instruções de programação."
         },
         "empathy/csd/2021": {
           "word": "Empatia",
@@ -89,7 +104,7 @@
         },
         "usability/csd/2021": {
           "word": "Usabilidade",
-          "definition": "Como é fácil, eficiente e gratificante usar um objeto ou dispositivo feito por humanos (incluindo software)."
+          "definition": "O quão fácil, eficiente e gratificante é usar um objeto ou dispositivo feito por humanos (incluindo software)."
         },
         "prototype/csd/2021": {
           "word": "Protótipo",
@@ -97,22 +112,23 @@
         },
         "user_interface/csd/2021": {
           "word": "Interface do Usuário",
-          "definition": "Os elementos visuais de um programa por meio dos quais um usuário controla ou se comunica com o aplicativo; frequentemente abreviada como UI."
+          "definition": "Os elementos visuais de um programa por meio dos quais um usuário controla ou se comunica com o aplicativo; frequentemente abreviada como IU."
         },
         "feature/csd/2021": {
           "word": "Recurso",
           "definition": "Parte de um programa que adiciona funcionalidade para o usuário"
         },
         "for_loop/csd/2021": {
-          "word": "Laço “for”",
-          "definition": "Laço com início, fim e incremento predeterminados (intervalo de passos)."
+          "word": "Loop For",
+          "definition": "Loops que têm início, fim e incremento predeterminados (intervalo de etapas)."
         },
         "machine_learning/csd/2021": {
-          "word": "Máquina de aprendizado",
+          "word": "Machine Learning",
           "definition": "A maneira como os computadores reconhecem padrões e tomam decisões sem que tenham sido programados para tal."
         },
         "features/csd/2021": {
-          "definition": "As entradas que um modelo utiliza para tomar decisões"
+          "definition": "As entradas que um modelo utiliza para tomar decisões",
+          "word": "Recursos"
         },
         "label/csd/2021": {
           "word": "Rótulo",
@@ -310,7 +326,7 @@
           "definition": "Uma instrução para o computador. Muitos comandos reunidos formam algoritmos e programas de computador."
         },
         "conditionals/coursed/2021": {
-          "word": "Condições",
+          "word": "Condicionais",
           "definition": "Instruções que são executadas apenas em determinadas condições."
         },
         "pseudocode/coursed/2021": {
@@ -366,7 +382,7 @@
           "definition": "Algo que um programa verifica para analisar se é verdadeiro antes de permitir uma ação."
         },
         "conditionals/coursee/2021": {
-          "word": "Condições",
+          "word": "Condicionais",
           "definition": "Instruções que são executadas apenas em determinadas condições."
         },
         "while_loop/coursee/2021": {
@@ -382,7 +398,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/coursee/2021": {
-          "word": "Refletir",
+          "word": "Reflita",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/coursee/2021": {
@@ -415,7 +431,7 @@
         },
         "variable/coursef/2021": {
           "word": "Variável",
-          "definition": "Espaço reservado para uma informação que pode mudar."
+          "definition": "Um rótulo para uma informação usada em um programa."
         },
         "prompt/coursef/2021": {
           "word": "Prompt",
@@ -434,11 +450,11 @@
           "definition": "Fazer algo de novo."
         },
         "for_loop/coursef/2021": {
-          "word": "Laço “for”",
+          "word": "Loop For",
           "definition": "Laço com início, fim e incremento predeterminados (intervalo de passos)."
         },
         "machine_learning/coursef/2021": {
-          "word": "Máquina de aprendizado",
+          "word": "Aprendizado de Máquina",
           "definition": "A maneira como os computadores reconhecem padrões e tomam decisões sem que tenham sido programados para tal."
         },
         "dns/coursef/2021": {
@@ -486,7 +502,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/coursef/2021": {
-          "word": "Refletir",
+          "word": "Reflita",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/coursef/2021": {
@@ -549,7 +565,7 @@
           "definition": "Algo que um programa verifica para analisar se é verdadeiro antes de permitir uma ação."
         },
         "conditionals/express/2021": {
-          "word": "Condições",
+          "word": "Condicionais",
           "definition": "Instruções que são executadas apenas em determinadas condições."
         },
         "while_loop/express/2021": {
@@ -570,10 +586,10 @@
         },
         "variable/express/2021": {
           "word": "Variável",
-          "definition": "Espaço reservado para uma informação que pode mudar."
+          "definition": "Um rótulo para uma informação usada em um programa."
         },
         "for_loop/express/2021": {
-          "word": "Laço “for”",
+          "word": "Loop For",
           "definition": "Laço com início, fim e incremento predeterminados (intervalo de passos)."
         },
         "define/express/2021": {
@@ -585,7 +601,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/express/2021": {
-          "word": "Refletir",
+          "word": "Reflita",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/express/2021": {
@@ -662,7 +678,7 @@
         },
         "storage/csd/2022": {
           "word": "armazenamento",
-          "definition": "informações salvas para uso futuro"
+          "definition": "armazenando informações para uso futuro"
         },
         "html/csd/2022": {
           "word": "HTML",
@@ -693,7 +709,8 @@
           "definition": "As informações coletadas sobre um indivíduo com base em vários sites da  Internet."
         },
         "css/csd/2022": {
-          "definition": "Folhas de estilo em cascata; uma linguagem usada para descrever como os elementos HTML devem ser estilizados"
+          "definition": "Folhas de estilo em cascata; uma linguagem usada para descrever como os elementos HTML devem ser estilizados",
+          "word": "CSS"
         },
         "css_selector/csd/2022": {
           "word": "Seletor CSS",
@@ -716,7 +733,7 @@
           "definition": "confiável, honesto e verdadeiro "
         },
         "css_class/csd/2022": {
-          "word": "Aula de CSS",
+          "word": "Classe CSS",
           "definition": "Um identificador que permite que vários elementos em um documento HTML sejam estilizados da mesma forma"
         },
         "bug/csd/2022": {
@@ -725,7 +742,7 @@
         },
         "debugging/csd/2022": {
           "word": "Depuração (Debugging)",
-          "definition": "Encontrando e corrigindo problemas em um algoritmo ou programa."
+          "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "program/csd/2022": {
           "word": "Programa",
@@ -781,7 +798,7 @@
         },
         "usability/csd/2022": {
           "word": "Usabilidade",
-          "definition": "Como é fácil, eficiente e gratificante usar um objeto ou dispositivo feito por humanos (incluindo software)."
+          "definition": "O quão fácil, eficiente e gratificante é usar um objeto ou dispositivo feito por humanos (incluindo software)."
         },
         "prototype/csd/2022": {
           "word": "Protótipo",
@@ -789,18 +806,18 @@
         },
         "user_interface/csd/2022": {
           "word": "Interface do Usuário",
-          "definition": "Os elementos visuais de um programa por meio dos quais um usuário controla ou se comunica com o aplicativo; frequentemente abreviada como UI."
+          "definition": "Os elementos visuais de um programa por meio dos quais um usuário controla ou se comunica com o aplicativo; frequentemente abreviada como IU."
         },
         "feature/csd/2022": {
           "word": "Recurso",
           "definition": "Parte de um programa que adiciona funcionalidade para o usuário"
         },
         "machine_learning/csd/2022": {
-          "word": "Máquina de aprendizado",
+          "word": "Aprendizado de máquina (Machine Learning)",
           "definition": "A maneira como os computadores reconhecem padrões e tomam decisões sem que tenham sido programados para tal."
         },
         "features/csd/2022": {
-          "word": "Características",
+          "word": "Recursos",
           "definition": "As entradas que um modelo utiliza para tomar decisões"
         },
         "label/csd/2022": {
@@ -812,19 +829,24 @@
           "definition": "Um programa de computador projetado para tomar uma decisão"
         },
         "supervised_learning/csd/2022": {
-          "definition": "Quando um humano treina um modelo para aprender com exemplos"
+          "definition": "Quando um ser humano treina um modelo para aprender a partir de exemplos",
+          "word": "Aprendizagem Supervisionada"
         },
         "training/csd/2022": {
-          "definition": "Dando exemplos a um modelo para que ele aprenda"
+          "definition": "Dar exemplos a um modelo para que ele aprenda",
+          "word": "Treinamento"
         },
         "unsupervised_learning/csd/2022": {
-          "definition": "Encontrando padrões em dados que não têm labels"
+          "definition": "Encontrar padrões em dados que não têm rótulos",
+          "word": "Aprendizagem Sem Supervisão"
         },
         "categorical_data/csd/2022": {
-          "definition": "Dados que podem ser separados em grupos"
+          "definition": "Dados que podem ser separados em grupos",
+          "word": "Dados Categóricos"
         },
         "classification/csd/2022": {
-          "definition": "Prever uma categoria com base em outros recursos"
+          "definition": "Prever uma categoria com base em outros recursos",
+          "word": "Classificação"
         },
         "algorithm/coursea/2022": {
           "word": "Algoritmo",
@@ -1020,7 +1042,7 @@
           "definition": "Uma instrução para o computador. Muitos comandos reunidos formam algoritmos e programas de computador."
         },
         "conditionals/coursed/2022": {
-          "word": "Condições",
+          "word": "Condicionais",
           "definition": "Instruções que são executadas apenas em determinadas condições."
         },
         "pseudocode/coursed/2022": {
@@ -1062,7 +1084,7 @@
           "word": "Condição"
         },
         "conditionals/coursee/2022": {
-          "word": "Condições",
+          "word": "Condicionais",
           "definition": "Instruções que são executadas apenas em determinadas condições."
         },
         "while_loop/coursee/2022": {
@@ -1082,7 +1104,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/coursee/2022": {
-          "word": "Refletir",
+          "word": "Reflita",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/coursee/2022": {
@@ -1114,7 +1136,7 @@
         },
         "variable/coursef/2022": {
           "word": "Variável",
-          "definition": "Espaço reservado para uma informação que pode mudar."
+          "definition": "Um rótulo para uma informação usada em um programa."
         },
         "prompt/coursef/2022": {
           "word": "Prompt",
@@ -1125,7 +1147,7 @@
           "definition": "As informações que os computadores obtêm dos usuários."
         },
         "machine_learning/coursef/2022": {
-          "word": "Máquina de aprendizado",
+          "word": "Aprendizado de Máquina",
           "definition": "A maneira como os computadores reconhecem padrões e tomam decisões sem que tenham sido programados para tal."
         },
         "dns/coursef/2022": {
@@ -1173,7 +1195,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/coursef/2022": {
-          "word": "Refletir",
+          "word": "Reflita",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/coursef/2022": {
@@ -1236,7 +1258,7 @@
           "definition": "Algo que um programa verifica para analisar se é verdadeiro antes de permitir uma ação."
         },
         "conditionals/express/2022": {
-          "word": "Condições",
+          "word": "Condicionais",
           "definition": "Instruções que são executadas apenas em determinadas condições."
         },
         "while_loop/express/2022": {
@@ -1257,10 +1279,10 @@
         },
         "variable/express/2022": {
           "word": "Variável",
-          "definition": "Espaço reservado para uma informação que pode mudar."
+          "definition": "Um rótulo para uma informação usada em um programa."
         },
         "for_loop/express/2022": {
-          "word": "Laço “for”",
+          "word": "Loop For",
           "definition": "Laço com início, fim e incremento predeterminados (intervalo de passos)."
         },
         "define/express/2022": {
@@ -1272,7 +1294,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/express/2022": {
-          "word": "Refletir",
+          "word": "Reflita",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/express/2022": {
@@ -1408,7 +1430,7 @@
           "definition": "Algo que um programa verifica para ver se é verdade antes de permitir uma ação"
         },
         "conditionals/csc-ecosystems/2023": {
-          "word": "Condições",
+          "word": "Condicionais",
           "definition": "Declarações que só são executadas sob certas condições"
         },
         "ecosystem/csc-ecosystems/2023": {
@@ -1437,15 +1459,15 @@
         },
         "ecologist/csc-ecosystems/2023": {
           "word": "Ecologista",
-          "definition": "Cientista que estuda como animais e plantas interagem com o meio ambiente."
+          "definition": "Um cientista que estuda como animais e plantas interagem com o meio ambiente."
         },
         "energy/csc-ecosystems/2023": {
           "word": "Energia",
           "definition": "Transferido entre organismos em cadeias alimentares de produtores para consumidores. A energia é usada pelos organismos para realizar tarefas complexas."
         },
         "food_chain/csc-ecosystems/2023": {
-          "word": "Cadeia alimentar ",
-          "definition": "Um grupo de organismos ligados na ordem dos alimentos que comem, de produtores a consumidores e de presas a predadores."
+          "word": "Cadeia Alimentar ",
+          "definition": "Um grupo de organismos ligados na ordem dos alimentos que comem, dos produtores aos consumidores e das presas aos predadores."
         },
         "code/csc-mappinglandmarks/2023": {
           "word": "Código",
@@ -1554,42 +1576,52 @@
           "definition": "Um espaço seguro e criativo para testar novos poemas e obter feedback construtivo de outras pessoas"
         },
         "computer/csd/2023": {
-          "word": "Computador"
+          "word": "Computador",
+          "definition": "Uma máquina que trabalha com informações."
         },
         "input/csd/2023": {
-          "word": "Entrada"
+          "word": "Entrada",
+          "definition": "as informações que os computadores obtêm de usuários, dispositivos ou outros computadores"
         },
         "output/csd/2023": {
-          "word": "Saída"
+          "word": "Saída",
+          "definition": "as informações que os computadores fornecem aos usuários, dispositivos ou outros computadores"
         },
         "processing/csd/2023": {
-          "word": "Processando"
+          "word": "Processando",
+          "definition": "O trabalho racional que os computadores fazem para transformar entrada em saída."
         },
         "html/csd/2023": {
-          "word": "HTML"
+          "word": "HTML",
+          "definition": "Hypertext Markup Language, uma linguagem usada para criar páginas da web"
         },
         "html_element/csd/2023": {
-          "word": "Elemento HTML"
+          "word": "Elemento HTML",
+          "definition": "Uma parte de um site, marcada por uma tag inicial e geralmente finalizada com uma tag final"
         },
         "html_tag/csd/2023": {
-          "word": "Tag HTML"
+          "word": "Tag HTML",
+          "definition": "O conjunto especial de caracteres que indica o início e o fim de um elemento HTML e o tipo desse elemento"
         },
         "website_content/csd/2023": {
           "word": "Conteúdo do Site",
           "definition": "o texto e as imagens de um site"
         },
         "website_structure/csd/2023": {
-          "word": "Estrutura do Site"
+          "word": "Estrutura do Site",
+          "definition": "como o conteúdo de um site é organizado"
         },
         "heading/csd/2023": {
-          "word": "Cabeçalho"
+          "word": "Cabeçalho",
+          "definition": "Um título ou resumo de um documento ou seção de um documento."
         },
         "digital_footprint/csd/2023": {
           "word": "Pegada Digital",
           "definition": "As informações coletadas sobre um indivíduo com base em vários sites da  Internet."
         },
         "css_selector/csd/2023": {
-          "word": "Seletor CSS"
+          "word": "Seletor CSS",
+          "definition": "a parte de um conjunto de regras CSS que define a quais elementos HTML o estilo deve ser aplicado"
         },
         "copyright/csd/2023": {
           "word": "Direitos Autorais",
@@ -1608,30 +1640,36 @@
           "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
         },
         "parameter/csd/2023": {
-          "definition": "Informações adicionais fornecidas como entrada a um bloco para personalizar sua funcionalidade"
+          "definition": "Informações adicionais fornecidas como entrada a um bloco para personalizar sua funcionalidade",
+          "word": "Parâmetro"
         },
         "variable/csd/2023": {
           "word": "Variável",
-          "definition": "Espaço reservado para uma informação que pode mudar."
+          "definition": "Um rótulo para uma informação usada em um programa."
         },
         "sprite/csd/2023": {
           "word": "Sprite",
           "definition": "Um caractere na tela com propriedades que descrevem sua localização, movimento e aparência."
         },
         "dot_notation/csd/2023": {
-          "word": "Notação de pontos"
+          "word": "Notação de pontos",
+          "definition": "a forma como as propriedades dos sprites são usadas no Game Lab, conectando o sprite à propriedade com um ponto."
         },
         "condition/csd/2023": {
-          "word": "Condição"
+          "word": "Condição",
+          "definition": "Algo que um programa verifica para ver se é verdade antes de decidir executar uma ação."
         },
         "conditionals/csd/2023": {
-          "word": "Condições"
+          "word": "Condicionais",
+          "definition": "Instruções que só são executadas quando certas condições são verdadeiras."
         },
         "abstraction/csd/2023": {
-          "word": "Abstração"
+          "word": "Abstração",
+          "definition": "uma representação simplificada de algo mais complexo. As abstrações permitem ocultar detalhes para ajudá-lo a gerenciar a complexidade, focar em conceitos relevantes e raciocinar sobre problemas em um nível mais complexo."
         },
         "function/csd/2023": {
-          "word": "Função"
+          "word": "Função",
+          "definition": "Um trecho nomeado de instruções de programação."
         },
         "empathy/csd/2023": {
           "word": "Empatia",
@@ -1643,7 +1681,7 @@
         },
         "usability/csd/2023": {
           "word": "Usabilidade",
-          "definition": "Como é fácil, eficiente e gratificante usar um objeto ou dispositivo feito por humanos (incluindo software)."
+          "definition": "O quão fácil, eficiente e gratificante é usar um objeto ou dispositivo feito por humanos (incluindo software)."
         },
         "prototype/csd/2023": {
           "word": "Protótipo",
@@ -1651,18 +1689,19 @@
         },
         "user_interface/csd/2023": {
           "word": "Interface do Usuário",
-          "definition": "Os elementos visuais de um programa por meio dos quais um usuário controla ou se comunica com o aplicativo; frequentemente abreviada como UI."
+          "definition": "Os elementos visuais de um programa por meio dos quais um usuário controla ou se comunica com o aplicativo; frequentemente abreviada como IU."
         },
         "feature/csd/2023": {
           "word": "Recurso",
           "definition": "Parte de um programa que adiciona funcionalidade para o usuário"
         },
         "machine_learning/csd/2023": {
-          "word": "Máquina de aprendizado",
+          "word": "Aprendizado de Máquina",
           "definition": "A maneira como os computadores reconhecem padrões e tomam decisões sem que tenham sido programados para tal."
         },
         "features/csd/2023": {
-          "definition": "As entradas que um modelo utiliza para tomar decisões"
+          "definition": "As entradas que um modelo utiliza para tomar decisões",
+          "word": "Recursos"
         },
         "label/csd/2023": {
           "word": "Rótulo",
@@ -1866,7 +1905,7 @@
           "definition": "Uma instrução para o computador. Muitos comandos reunidos formam algoritmos e programas de computador."
         },
         "conditionals/coursed/2023": {
-          "word": "Condições",
+          "word": "Condicionais",
           "definition": "Instruções que são executadas apenas em determinadas condições."
         },
         "pseudocode/coursed/2023": {
@@ -1908,7 +1947,7 @@
           "word": "Condição"
         },
         "conditionals/coursee/2023": {
-          "word": "Condições",
+          "word": "Condicionais",
           "definition": "Instruções que são executadas apenas em determinadas condições."
         },
         "while_loop/coursee/2023": {
@@ -1928,7 +1967,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/coursee/2023": {
-          "word": "Refletir",
+          "word": "Reflita",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/coursee/2023": {
@@ -1960,7 +1999,7 @@
         },
         "variable/coursef/2023": {
           "word": "Variável",
-          "definition": "Espaço reservado para uma informação que pode mudar."
+          "definition": "Um rótulo para uma informação usada em um programa."
         },
         "prompt/coursef/2023": {
           "word": "Prompt",
@@ -1971,7 +2010,7 @@
           "definition": "As informações que os computadores obtêm dos usuários."
         },
         "machine_learning/coursef/2023": {
-          "word": "Máquina de aprendizado",
+          "word": "Aprendizado de Máquina",
           "definition": "A maneira como os computadores reconhecem padrões e tomam decisões sem que tenham sido programados para tal."
         },
         "dns/coursef/2023": {
@@ -2019,7 +2058,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/coursef/2023": {
-          "word": "Refletir",
+          "word": "Reflita",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/coursef/2023": {
@@ -2082,7 +2121,7 @@
           "definition": "Algo que um programa verifica para analisar se é verdadeiro antes de permitir uma ação."
         },
         "conditionals/express/2023": {
-          "word": "Condições",
+          "word": "Condicionais",
           "definition": "Instruções que são executadas apenas em determinadas condições."
         },
         "while_loop/express/2023": {
@@ -2103,10 +2142,10 @@
         },
         "variable/express/2023": {
           "word": "Variável",
-          "definition": "Espaço reservado para uma informação que pode mudar."
+          "definition": "Um rótulo para uma informação usada em um programa."
         },
         "for_loop/express/2023": {
-          "word": "Laço “for”",
+          "word": "Loop For",
           "definition": "Laço com início, fim e incremento predeterminados (intervalo de passos)."
         },
         "define/express/2023": {
@@ -2118,7 +2157,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/express/2023": {
-          "word": "Refletir",
+          "word": "Reflita",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/express/2023": {
@@ -2178,7 +2217,7 @@
           "definition": "Uma ação que faz com que algo aconteça."
         },
         "machine_learning/how-ai-works/2023": {
-          "word": "Máquina de aprendizado",
+          "word": "Aprendizado de Máquina",
           "definition": "A maneira como os computadores reconhecem padrões e tomam decisões sem que tenham sido programados para tal."
         },
         "algorithm/how-ai-works/2023": {
@@ -2218,7 +2257,7 @@
           "definition": "Algo que um programa verifica para analisar se é verdadeiro antes de permitir uma ação."
         },
         "conditionals/aquatic/unversioned": {
-          "word": "Condições",
+          "word": "Condicionais",
           "definition": "Instruções que são executadas apenas em determinadas condições."
         },
         "debugging/aquatic/unversioned": {
@@ -2441,7 +2480,7 @@
           "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
         },
         "machine_learning/oceans/unversioned": {
-          "word": "Máquina de aprendizado",
+          "word": "Aprendizado de Máquina",
           "definition": "A maneira como os computadores reconhecem padrões e tomam decisões sem que tenham sido programados para tal."
         },
         "event/outbreak/unversioned": {
@@ -2563,16 +2602,20 @@
           "definition": "Um algoritmo que foi codificado tornando-se algo que pode ser administrado por uma máquina."
         },
         "binary_system/csd/2021": {
-          "definition": "uma forma de representar informações usando apenas duas opções"
+          "definition": "uma forma de representar informações usando apenas duas opções",
+          "word": "Sistema binário"
         },
         "ascii/csd/2021": {
-          "definition": "um sistema popular para representar texto em binário"
+          "definition": "um sistema popular para representar texto em binário",
+          "word": "ASCII"
         },
         "bit/csd/2021": {
-          "definition": "uma única informação binária"
+          "definition": "uma única informação binária",
+          "word": "Bit"
         },
         "pixel/csd/2021": {
-          "definition": "um pequeno quadrado ou ponto que contém um único ponto de cor de uma imagem maior."
+          "definition": "um pequeno quadrado ou ponto que contém um único ponto de cor de uma imagem maior.",
+          "word": "Pixel"
         },
         "decrypt/csd/2021": {
           "word": "Descriptografar",
@@ -2580,23 +2623,27 @@
         },
         "encrypt/csd/2021": {
           "word": "Criptografar",
-          "definition": "alterar as informações para que seu significado permaneça oculto"
+          "definition": "alterar as informações para que seu significado fique oculto"
         },
         "ethics/csd/2021": {
           "word": "Ética",
           "definition": "diretrizes para bom comportamento."
         },
         "ascii/csd/2022": {
-          "definition": "um sistema popular para representar texto em binário"
+          "definition": "um sistema popular para representar texto em binário",
+          "word": "ASCII"
         },
         "binary_system/csd/2022": {
-          "definition": "uma forma de representar informações usando apenas duas opções"
+          "definition": "uma forma de representar informações usando apenas duas opções",
+          "word": "Sistema binário"
         },
         "bit/csd/2022": {
-          "definition": "uma única informação binária"
+          "definition": "uma única informação binária",
+          "word": "Bit"
         },
         "pixel/csd/2022": {
-          "definition": "um pequeno quadrado ou ponto que contém um único ponto de cor de uma imagem maior."
+          "definition": "um pequeno quadrado ou ponto que contém um único ponto de cor de uma imagem maior.",
+          "word": "Pixel"
         },
         "decrypt/csd/2022": {
           "word": "Descriptografar",
@@ -2604,23 +2651,27 @@
         },
         "encrypt/csd/2022": {
           "word": "Criptografar",
-          "definition": "alterar as informações para que seu significado permaneça oculto"
+          "definition": "alterar as informações para que seu significado fique oculto"
         },
         "ethics/csd/2022": {
           "word": "Ética",
-          "definition": "diretrizes para bom comportamento."
+          "definition": "diretrizes para o bom comportamento"
         },
         "ascii/csd/2023": {
-          "definition": "um sistema popular para representar texto em binário"
+          "definition": "um sistema popular para representar texto em binário",
+          "word": "ASCII"
         },
         "binary_system/csd/2023": {
-          "definition": "uma forma de representar informações usando apenas duas opções"
+          "definition": "uma forma de representar informações usando apenas duas opções",
+          "word": "Sistema binário"
         },
         "bit/csd/2023": {
-          "definition": "uma única informação binária"
+          "definition": "uma única informação binária",
+          "word": "Bit"
         },
         "pixel/csd/2023": {
-          "definition": "um pequeno quadrado ou ponto que contém um único ponto de cor de uma imagem maior."
+          "definition": "um pequeno quadrado ou ponto que contém um único ponto de cor de uma imagem maior.",
+          "word": "Pixel"
         },
         "decrypt/csd/2023": {
           "word": "Descriptografar",
@@ -2628,7 +2679,7 @@
         },
         "encrypt/csd/2023": {
           "word": "Criptografar",
-          "definition": "alterar as informações para que seu significado permaneça oculto"
+          "definition": "alterar as informações para que seu significado fique oculto"
         },
         "ethics/csd/2023": {
           "word": "Ética",
@@ -2641,6 +2692,170 @@
         "ethics/how-ai-works/2023": {
           "word": "Ética",
           "definition": "diretrizes para bom comportamento."
+        },
+        "storage/csd/2021": {
+          "word": "Armazenamento",
+          "definition": "salvando informações para usar no futuro"
+        },
+        "css/csd/2021": {
+          "word": "CSS",
+          "definition": "Folhas de estilo em cascata; uma linguagem usada para descrever como os elementos HTML devem ser estilizados"
+        },
+        "relevant/csd/2021": {
+          "word": "Relevante",
+          "definition": "intimamente ligado a um tópico"
+        },
+        "trustworthy/csd/2021": {
+          "word": "Fidedigno",
+          "definition": "confiável, honesto e verdadeiro "
+        },
+        "search_engine/csd/2021": {
+          "word": "Ferramenta de Busca",
+          "definition": "Um programa que busca itens na World Wide Web."
+        },
+        "css_class/csd/2021": {
+          "word": "Classe CSS",
+          "definition": "Um identificador que permite que vários elementos em um documento HTML sejam estilizados da mesma forma"
+        },
+        "parameter/csd/2021": {
+          "word": "Parâmetro",
+          "definition": "Informações adicionais fornecidas como entrada a um bloco para personalizar sua funcionalidade"
+        },
+        "property/csd/2021": {
+          "word": "Propriedade",
+          "definition": "Um rótulo para uma característica de um sprite, como sua localização e aparência"
+        },
+        "boolean_expression/csd/2021": {
+          "word": "Expressão Booleana",
+          "definition": "em programação, uma expressão que avalia algo como verdadeiro ou falso. "
+        },
+        "innovation/csd/2021": {
+          "word": "Inovação",
+          "definition": "Uma ideia, dispositivo, produto, etc. novos ou aprimorados, ou o desenvolvimento dos mesmos"
+        },
+        "analog/csd/2021": {
+          "word": "Analógico",
+          "definition": "Qualquer sinal em constante mudança que não esteja restrito a um conjunto finito de valores. Por exemplo, as formas de onda das palavras faladas são um sinal analógico."
+        },
+        "digital/csd/2021": {
+          "word": "Digital",
+          "definition": "Dados ou sinais representados por um número finito de valores. Os sinais analógicos (que podem ter valores infinitos) devem ser convertidos em digitais para serem computados."
+        },
+        "array/csd/2021": {
+          "word": "Matriz",
+          "definition": "Uma estrutura de dados em JavaScript usada para representar uma lista."
+        },
+        "circuit/csd/2021": {
+          "word": "Circuito",
+          "definition": "Um dispositivo que fornece um caminho para o fluxo de uma corrente elétrica, muitas vezes modificando essa corrente. Nos computadores, os circuitos permitem operações lógicas e matemáticas simples usando eletricidade."
+        },
+        "supervised_learning/csd/2021": {
+          "word": "Aprendizagem Supervisionada",
+          "definition": "Quando um humano treina um modelo para aprender com exemplos"
+        },
+        "training/csd/2021": {
+          "word": "Treinamento",
+          "definition": "Dar exemplos a um modelo para que ele aprenda"
+        },
+        "unsupervised_learning/csd/2021": {
+          "word": "Aprendizagem Sem Supervisão",
+          "definition": "Encontrar padrões em dados que não têm rótulos"
+        },
+        "categorical_data/csd/2021": {
+          "word": "Dados Categóricos",
+          "definition": "dados que podem ser separados em grupos"
+        },
+        "classification/csd/2021": {
+          "word": "Classificação",
+          "definition": "prevendo uma categoria com base em outros recursos"
+        },
+        "bias/csd/2021": {
+          "word": "Viés",
+          "definition": "Quando uma decisão favorece algumas coisas e despreza ou exclui outras"
+        },
+        "numerical_data/csd/2021": {
+          "word": "Dados Numéricos",
+          "definition": "dados que podem ser contados ou medidos"
+        },
+        "innovation/csd/2022": {
+          "word": "Inovação",
+          "definition": "Uma ideia, dispositivo, produto, etc. novo ou aprimorado ou o seu desenvolvimento"
+        },
+        "circuit/csd/2022": {
+          "word": "Circuito",
+          "definition": "Um dispositivo que fornece um caminho para o fluxo de uma corrente elétrica, muitas vezes modificando essa corrente. Nos computadores, os circuitos permitem operações lógicas e matemáticas simples usando eletricidade."
+        },
+        "bias/csd/2022": {
+          "word": "Viés",
+          "definition": "Quando uma decisão favorece algumas coisas e despreza ou exclui outras"
+        },
+        "numerical_data/csd/2022": {
+          "word": "Dados Numéricos",
+          "definition": "dados que podem ser contados ou medidos"
+        },
+        "storage/csd/2023": {
+          "word": "Armazenamento",
+          "definition": "salvando informações para usar no futuro"
+        },
+        "css/csd/2023": {
+          "word": "CSS",
+          "definition": "Folhas de estilo em cascata; uma linguagem usada para descrever como os elementos HTML devem ser estilizados"
+        },
+        "relevant/csd/2023": {
+          "word": "Relevante",
+          "definition": "intimamente ligado a um tópico"
+        },
+        "search_engine/csd/2023": {
+          "word": "Ferramenta de Busca",
+          "definition": "Um programa que busca itens na World Wide Web."
+        },
+        "trustworthy/csd/2023": {
+          "word": "Fidedigno",
+          "definition": "confiável, honesto e verdadeiro "
+        },
+        "css_class/csd/2023": {
+          "word": "Classe CSS",
+          "definition": "Um identificador que permite que vários elementos em um documento HTML sejam estilizados da mesma forma"
+        },
+        "property/csd/2023": {
+          "word": "Propriedade",
+          "definition": "Um rótulo para uma característica de um sprite, como sua localização e aparência"
+        },
+        "boolean_expression/csd/2023": {
+          "word": "Expressão Booleana",
+          "definition": "em programação, uma expressão que avalia algo como verdadeiro ou falso. "
+        },
+        "circuit/csd/2023": {
+          "word": "Circuito",
+          "definition": "Um dispositivo que fornece um caminho para o fluxo de uma corrente elétrica, muitas vezes modificando essa corrente. Nos computadores, os circuitos permitem operações lógicas e matemáticas simples usando eletricidade."
+        },
+        "supervised_learning/csd/2023": {
+          "word": "Aprendizagem Supervisionada",
+          "definition": "Quando um humano treina um modelo para aprender com exemplos"
+        },
+        "training/csd/2023": {
+          "word": "Treinamento",
+          "definition": "Dar exemplos a um modelo para que ele aprenda"
+        },
+        "unsupervised_learning/csd/2023": {
+          "word": "Aprendizagem Sem Supervisão",
+          "definition": "Encontrar padrões em dados que não têm rótulos"
+        },
+        "categorical_data/csd/2023": {
+          "word": "Dados Categóricos",
+          "definition": "dados que podem ser separados em grupos"
+        },
+        "classification/csd/2023": {
+          "word": "Classificação",
+          "definition": "prevendo uma categoria com base em outros recursos"
+        },
+        "bias/csd/2023": {
+          "word": "Viés",
+          "definition": "Quando uma decisão favorece algumas coisas e despreza ou exclui outras"
+        },
+        "numerical_data/csd/2023": {
+          "word": "Dados Numéricos",
+          "definition": "dados que podem ser contados ou medidos"
         }
       }
     }

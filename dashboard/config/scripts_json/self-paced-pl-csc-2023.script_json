@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "self-paced-pl-csc",
-    "serialized_at": "2023-12-05 19:45:31 UTC",
+    "serialized_at": "2024-01-11 15:10:41 UTC",
     "published_state": "stable",
     "instruction_type": "self_paced",
     "instructor_audience": "universal_instructor",
@@ -47,7 +47,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**You will:**\n\n* Get an introduction to CS Connections modules.\n* Select a CS Connections module to teach.\n*  Set up a plan to implement CS Connections.\n\n**Suggested time:** 15 minutes",
-        "student_overview": "**You will:**\n\n* Get an introduction to artificial intelligence and machine learning.\n* Get a preview of the first week of the AI and Machine Learning unit content.\n\n**Suggested time:** 15 minutes"
+        "student_overview": "**You will:**\n\n* Get an introduction to CS Connections modules.\n* Select a CS Connections module to teach.\n*  Set up a plan to implement CS Connections.\n\n**Suggested time:** 15 minutes"
       },
       "seeding_key": {
         "lesson.key": "Introduction to AI and machine learning",
@@ -112,6 +112,7 @@
       "key": "9b4974df-015c-4953-8487-116f18d9e658",
       "position": 1,
       "properties": {
+        "duration": 15
       },
       "seeding_key": {
         "lesson_activity.key": "9b4974df-015c-4953-8487-116f18d9e658",
@@ -124,6 +125,7 @@
       "key": "7ea11708-31f5-4f0a-9116-44964d035b3d",
       "position": 1,
       "properties": {
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "7ea11708-31f5-4f0a-9116-44964d035b3d",
@@ -136,6 +138,7 @@
       "key": "e1c5cfdc-5f73-4b9c-b984-251ae2ad0cf6",
       "position": 1,
       "properties": {
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "e1c5cfdc-5f73-4b9c-b984-251ae2ad0cf6",
@@ -148,6 +151,7 @@
       "key": "892c42a2-6fa3-4273-8bdf-2afcb4dd1206",
       "position": 1,
       "properties": {
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "892c42a2-6fa3-4273-8bdf-2afcb4dd1206",

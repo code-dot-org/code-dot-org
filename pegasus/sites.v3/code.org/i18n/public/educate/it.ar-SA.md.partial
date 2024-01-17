@@ -70,16 +70,17 @@ theme: responsive
 
 للحصول على أفضل تجربة مع كل محتوى على منصة Code.org، نوصي بالتشاور مع قسم تكنولوجيا المعلومات في مدرستك أو منطقتك للتأكد من أن المواقع التالية مسموح بها وغير محظورة.
 
-| الأولوية                                                            | عنوان موقع الإنترنت                                                                                        |
-| ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **مطلوب**                                                           | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **اختياري**                                                         | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **لاستخدام مقاطع الفيديو الموجوة على يوتيوب (وضع الخصوصية المحسن)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **لاستخدام ملفات الفيديو المستضافة على منصة Code.org**              | `https://videos.code.org`                                                                                  |
-| **لاستخدام محاكي الإنترنت**                                         | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **لاستخدام معمل الويب**                                             | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **لاستخدام زر المشاركة في Google Classroom**                        | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**                                         | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| الأولوية                                                                            | عنوان موقع الإنترنت                                                                                        |
+| ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **مطلوب**                                                                           | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **لضمان قدرة أنظمة CAPTCHA على تمييز استخدامك عن النشاط الاحتيالي الآلي («البوت»)** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **اختياري**                                                                         | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **لاستخدام مقاطع الفيديو الموجوة على يوتيوب (وضع الخصوصية المحسن)**                 | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **لاستخدام ملفات الفيديو المستضافة على منصة Code.org**                              | `https://videos.code.org`                                                                                  |
+| **لاستخدام محاكي الإنترنت**                                                         | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **لاستخدام معمل الويب**                                                             | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **لاستخدام زر المشاركة في Google Classroom**                                        | `https://apis.google.com`                                                                                  |
+| **لاستخدام مجموعات بيانات App Lab**                                                 | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## تفاصيل دعم الهاتف المحمول والكمبيوتر اللوحي
 
@@ -104,7 +105,7 @@ All other content, such as K-5 courses (Computer Science Fundamentals) and Hour 
 
 
 <!--
-The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
 .md.erb without breaking i18n sync, this file should include that partial instead.
 -->
 <figure style="width:100%; height: 100%; margin: 0 auto;">

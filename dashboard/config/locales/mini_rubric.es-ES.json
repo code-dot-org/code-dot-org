@@ -752,7 +752,9 @@
           "rubric_performance_level_4": "La aplicación no se ha actualizado para que coincida con la descripción"
         },
         "CSD U6 - Board Inputs - PracB_mb2022": {
+          "rubric_key_concept": "Utiliza los botones del micro:bit para crear una aplicación",
           "rubric_performance_level_1": "La aplicación funciona tal y como se describe, y los emojis cambian en función de las entradas del usuario\n",
+          "rubric_performance_level_2": "La mayor parte de la aplicación funciona como se describe, pero algunas de las acciones no coinciden con la descripción, como el reinicio cuando el usuario suelta un botón.",
           "rubric_performance_level_3": "La aplicación cambia los elementos en la pantalla, pero no coincide con la descripción del programa",
           "rubric_performance_level_4": "La aplicación no se ha actualizado para que coincida con la descripción"
         },
@@ -769,6 +771,13 @@
           "rubric_performance_level_2": "Cada botón utiliza tanto los bloques de leds como los de sonidos, pero los parámetros pueden no coincidir con la descripción correcta (por ejemplo: que todos tengan la misma duración)",
           "rubric_performance_level_3": "En algunos botones faltan bloques enteros de leds o sonidos",
           "rubric_performance_level_4": "No se han añadido bloques adicionales de leds o sonidos al programa "
+        },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "rubric_key_concept": "Responder a la entrada del usuario utilizando la pantalla LED del micro:bit\n",
+          "rubric_performance_level_1": "Los tres botones coinciden correctamente con la descripción de su emoción y el texto y los números se desplazan correctamente por la pantalla\n",
+          "rubric_performance_level_2": "Dos botones coinciden con la descripción del programa, pero puede que uno de ellos no funcione correctamente (por ejemplo, no muestra un nombre correctamente o no muestra una cara triste).",
+          "rubric_performance_level_3": "Un botón coincide con la descripción del programa, pero es posible que los demás botones no funcionen correctamente (por ejemplo, no se muestra correctamente un nombre o no se muestra una cara triste).",
+          "rubric_performance_level_4": "Ninguno de los nuevos botones coincide con la descripción del programa"
         },
         "CSD U6 - Color LEDs - A_2023": {
           "rubric_key_concept": "Utiliza los LEDs de colores para crear un patrón en el Circuit Playground",
@@ -799,6 +808,10 @@
           "rubric_performance_level_4": "La aplicación no se ha modificado."
         },
         "CSD U6 - Combine Inputs - A_mb2022": {
+          "rubric_key_concept": "Combinando elementos de entrada y salida del micro:bit y la pantalla para crear una aplicación",
+          "rubric_performance_level_1": "La aplicación funciona como se describe, con variables y sentencias `if` utilizadas para obtener los valores de la pantalla y encender los LED en la dirección correcta.",
+          "rubric_performance_level_2": "La aplicación obtiene correctamente la variable de la pantalla e intenta actualizar los LEDs con sentencias `if`, pero puede haber un error con la sentencia `if`",
+          "rubric_performance_level_3": "Hay varios errores relacionados con las variables, las sentencias `if` o los bloques ledScreen que impiden que los LED se enciendan",
           "rubric_performance_level_4": "La aplicación no se ha modificado."
         },
         "CSD U6 - Functions - A_2023": {
@@ -835,6 +848,9 @@
           "rubric_performance_level_4": "El código no ha cambiado"
         },
         "CSD U6 - If Variables - A_mb2022": {
+          "rubric_key_concept": "Utiliza variables y sentencias `if` para crear una aplicación que utilice tu dispositivo",
+          "rubric_performance_level_1": "El programa funciona como se describe, utilizando variables para controlar el tamaño y una sentencia `if` para reproducir un sonido en el momento correcto",
+          "rubric_performance_level_2": "Se utilizan variables para controlar el tamaño del elemento, pero el sonido no se reproduce cuando alcanza el tamaño correcto.",
           "rubric_performance_level_3": "Las variables se utilizan para el tamaño, pero no aumentan cuando se pulsa el botón",
           "rubric_performance_level_4": "El código no ha cambiado"
         },

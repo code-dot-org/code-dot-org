@@ -7643,6 +7643,10 @@ es:
             -   Aprender sobre las oportunidades para conectar con la comunidad Informática en general.
 
             **Tiempo sugerido**: 70 minutos
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Juego libre
         csa-software-engineering:
           lessons:
             lesson-9:
@@ -8120,3 +8124,30 @@ es:
           student_description: La Unidad 7 es una introducción práctica al desarrollo de un modelo de aprendizaje automático con datos tabulares. Explorarás cómo los ordenadores aprenden de los datos para tomar decisiones, y luego desarrollarás tus propios proyectos de aprendizaje automático en torno a datos del mundo real. La unidad culmina con el diseño de tu propia aplicación de aprendizaje automático para resolver un problema de relevancia personal.
         csd-post-survey-2024:
           title: Encuesta de final de curso
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Lección 1
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Lección 1
+            lesson-3:
+              name: Eventos
+            lesson-4:
+              name: Comportamientos
+            lesson-5:
+              name: Siguientes Pasos
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Lección 1
+            lesson-3:
+              name: Bucles
+            lesson-4:
+              name: Condicionales
+            lesson-5:
+              name: Poniéndolo todo junto
+            lesson-6:
+              name: Siguientes Pasos
+          title: Introducción a la informática

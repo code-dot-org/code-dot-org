@@ -3,35 +3,7 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "ai-2020": {
-            "buttonText": "Mehr erfahren",
-            "title": "Erforschen Sie künstliche Intelligenz und maschinelles Lernen"
-          },
-          "ai-launch-2023": {
-            "buttonText": "Mehr erfahren"
-          },
-          "ai-pl-launch-2023": {
-            "buttonText": "Mehr erfahren"
-          },
-          "back-to-school-2021": {
-            "buttonText": "Mehr erfahren"
-          },
-          "codebytes-2020": {
-            "buttonText": "Mehr erfahren"
-          },
-          "coldplay": {
-            "buttonText": "Ausprobieren"
-          },
-          "congrats-certificate-share": {
-            "buttonText": "Start"
-          },
-          "csjourneys": {
-            "buttonText": "Mehr erfahren"
-          },
-          "csjourneys-22": {
-            "buttonText": "Mehr erfahren"
-          },
-          "csleadersprize": {
+          "co-teacher": {
             "buttonText": "Mehr erfahren"
           },
           "hoc-2023": {
@@ -43,26 +15,8 @@
             "body": "Lernen Sie etwas über Konzepte der künstlichen Intelligenz (KI) und gestalten Sie Ihre eigene virtuelle Tanzparty mit den besten Künstlern von heute. Wählen Sie aus dutzenden Song aus, um alle SchülerInnen zu erreichen, egal welchen Musikgeschmack sie haben. Zeigen Sie, was Sie können!",
             "buttonText": "Mehr erfahren"
           },
-          "hoc-more": {
-            "body": "Die Hour of Code-Website hat mehr als 100 Informatik-Aktivitäten für alle Altersgruppen- und Erfahrungsstufen, die von Code.org und Partnern entwickelt wurden."
-          },
-          "home-learning-2020": {
-            "buttonText": "Projektideen anzeigen"
-          },
           "superhero": {
             "buttonText": "Mehr erfahren"
-          },
-          "teacher-apps-closing-2021": {
-            "buttonText": "Mitmachen"
-          },
-          "teacher-apps-nominate-2020": {
-            "buttonText": "Benenne einen Lehrer"
-          },
-          "teacher-apps-open-2021": {
-            "buttonText": "Mitmachen"
-          },
-          "teacher-apps-stillon-2020": {
-            "buttonText": "Mitmachen"
           }
         }
       }

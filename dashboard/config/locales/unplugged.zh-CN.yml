@@ -230,6 +230,8 @@ zh-CN:
       UnplugHappyMaps_2019:
         desc: 学生们创建简单的算法 (指令集) 通过迷宫使用单个命令，移动角色。
         title: 快乐地图
+      Unplugged- Melissa Sandbox:
+        title: 离线的
       VideoGamesCoordinatePlanes:
         desc: 理解你喜欢玩的电子游戏实际上由如何代数驱动！探索代数表达式和坐标平面如何帮助我们理解电子游戏工作的原理，随后开始规划你接下来要开发的电子游戏。
         title: 电子游戏和坐标平面
