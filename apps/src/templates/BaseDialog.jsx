@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {BASE_DIALOG_WIDTH} from '../constants';
 import Button from './Button';
+import color from '../util/color';
 import i18n from '@cdo/locale';
 
 /**
@@ -154,7 +155,7 @@ export default class BaseDialog extends React.Component {
       top: 0,
       right: 0,
       padding: 0,
-      color: '#ddd',
+      color: color.neutral_dark30,
       cursor: 'pointer',
       fontSize: 24,
       border: 'none',
