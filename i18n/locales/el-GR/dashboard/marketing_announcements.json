@@ -1,104 +1,9 @@
 {
   "banners": {
-    "csleadersprize": {
-      "title": "",
-      "body": "",
-      "buttonText": "Μάθετε περισσότερα"
-    },
-    "csjourneys-22": {
-      "title": "",
-      "body": "",
-      "buttonText": "Μάθετε περισσότερα"
-    },
-    "hoc-more": {
-      "title": "",
-      "body": "Η ιστοσελίδα Ώρα του Κώδικα έχει πάνω από 100 δραστηριότητες της επιστήμης των υπολογιστών για όλες τις ηλικίες και τα επίπεδα εμπειρίας, και αναπτύχθηκε από το Code.org και συνεργάτες του.",
-      "buttonText": ""
-    },
     "superhero": {
       "title": "",
       "body": "",
       "buttonText": "Μάθετε περισσότερα"
-    },
-    "csjourneys": {
-      "title": "",
-      "body": "",
-      "buttonText": "Μάθετε περισσότερα"
-    },
-    "class-schedule-survey": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "back-to-school-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Μάθετε περισσότερα"
-    },
-    "teacher-apps-open-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Ελάτε μαζί μας"
-    },
-    "teacher-apps-closing-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Ελάτε μαζί μας"
-    },
-    "teacher-apps-nominate-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Προτείνετε μια Δασκάλα"
-    },
-    "teacher-apps-stillon-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Ελάτε μαζί μας"
-    },
-    "home-learning-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Προβολή Ιδεών Εργασίας"
-    },
-    "soonhoc-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "codebytes-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Μάθετε περισσότερα"
-    },
-    "ai-2020": {
-      "title": "Εξερευνήστε την Τεχνητή Νοημοσύνη και την Μηχανική Μάθηση",
-      "body": "",
-      "buttonText": "Μάθετε περισσότερα"
-    },
-    "congrats-certificate-share": {
-      "title": "",
-      "body": "",
-      "buttonText": "Έναρξη"
-    },
-    "coldplay": {
-      "title": "",
-      "body": "",
-      "buttonText": "Δοκιμάστε το"
-    },
-    "ai-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "Μάθετε περισσότερα"
-    },
-    "ai-pl-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "Μάθετε περισσότερα"
-    },
-    "state-of-cs-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
     },
     "hoc-2023": {
       "title": "Hour of Code: Δημιουργικότητα με AI",
@@ -106,6 +11,11 @@
       "buttonText": "Μάθετε περισσότερα"
     },
     "hoc-2023-dance-ai": {
+      "title": "",
+      "body": "",
+      "buttonText": "Μάθετε περισσότερα"
+    },
+    "co-teacher": {
       "title": "",
       "body": "",
       "buttonText": "Μάθετε περισσότερα"

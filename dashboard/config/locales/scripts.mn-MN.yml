@@ -4778,6 +4778,10 @@ mn:
           student_description: Майнкрафтын өөрийн ертөнц дээрээ амьтад болон Майнкрафтын
             бусад бүтээлийг программчлаарай.
           title: Майнкрафт Кодын цаг Дизайнер
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Чөлөөтэй тоглох
         netsim:
           title: Интернет симулятор
         nevada-standards-aligned-fifth-grade-2023:
@@ -5082,6 +5086,23 @@ mn:
           lesson_groups:
             lessonGroup-2:
               display_name: Мэндчилгээ
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Гогцоонууд
+            lesson-4:
+              name: Нөхцлүүд
+            lesson-6:
+              name: Дараагийн Алхамууд
+          title: Компьютерын шинжлэх ухааны танилцуулга
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Үйл явдлууд
+            lesson-4:
+              name: Зан чанар
+            lesson-5:
+              name: Дараагийн Алхамууд
         soccer:
           name: хөлбөмбөг
         spelling-bee:

@@ -2623,6 +2623,10 @@ el:
           description_short: Μάθετε όλες τις έννοιες των Θεμελιωδών της Επιστήμης της Πληροφορικής και δημιουργήστε τη δική σας τέχνη, ιστορία ή παιχνίδι.
         self-paced-pl-csp2-2023:
           title: 'Ενότητα 2: Πλοήγηση στο Code.org'
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Ελεύθερο παιχνίδι
         csa-frq-practice-2022:
           lessons:
             lesson-4:
@@ -2738,3 +2742,16 @@ el:
           lesson_groups:
             lessonGroup-4:
               display_name: Εισαγωγή στο App Lab
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Συμβάντα
+            lesson-4:
+              name: Συμπεριφορές
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Βρόχοι
+            lesson-4:
+              name: Συνθήκες
+          title: Εισαγωγή στην Επιστήμη των Υπολογιστών

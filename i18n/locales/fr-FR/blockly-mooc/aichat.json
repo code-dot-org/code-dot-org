@@ -1,4 +1,13 @@
 {
+  "allMessagesSentAreRecorded": "Tous les messages envoyés à AI Chat sont enregistrés.",
+  "anythingPersonalCanNotBeSubmitted": "Afin de protéger votre vie privée, tout ce qui est considéré comme une information personnelle (nom, numéro de téléphone, adresse, etc.) ne doit pas être soumis au chat AI.",
   "continue": "Continuer",
-  "waitingForChatResponse": "En attente d'une réponse..."
+  "inappropriateMessagesAreFlagged": "Les messages inappropriés seront signalés et votre professeur en sera informé.",
+  "inappropriateUserMessage": "Ce message a été signalé comme inapproprié.",
+  "tooPersonalUserMessage": "Ce message a été signalé comme étant trop personnel.",
+  "userChatMessagePlaceholder": "Ajouter un message...",
+  "waitingForChatResponse": "En attente d'une réponse...",
+  "warningModalHeader": "N'oubliez pas de discuter de manière responsable !",
+  "warningModalOkButtonText": "Commencez à discuter",
+  "whatIsPersonalInformation": "Qu'est-ce qui est considéré comme une information personnelle ?"
 }

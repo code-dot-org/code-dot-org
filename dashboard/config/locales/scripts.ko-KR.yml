@@ -967,11 +967,13 @@ ko:
             csf_sprites:
               display_name: 스프라이트
             end_of_course_project:
-              display_name: 과정말 프로젝트
+              display_name: 종합  프로젝트
             lessonGroup-7:
               display_name: 컴퓨팅의 영향
             ramp_up:
               display_name: 중첩 반복
+          student_description: 알고리즘, 이벤트, 반복, 선택, 함수로 코딩을 시작하세요! 이 강좌를 마치면 친구나 가족과
+            공유할 수 있는 게임이나 그림을 디자인하고 만들 수 있습니다.
           title: 과정 E (2022)
         coursee-2023:
           description: 4학년 학생들을 위해 코스 E를 만들었습니다.이 과정은 Sprite Lab 프로그래밍 도구에 대한 소개로
@@ -5119,6 +5121,10 @@ ko:
           name: ml-플레이그라운드
           student_description: 브레인스토밍 / CSD를 위한 ML/AI 단원 개발 플레이그라운드 영역. 이에 관한 향후 질문은
             Dan Schneider에게 문의하세요.
+        musiclab:
+          lessons:
+            lesson-3:
+              name: 자유 플레이
         netsim:
           title: 인터넷 시뮬레이터
         nevada-standards-aligned-fifth-grade-2023:
@@ -5545,6 +5551,23 @@ ko:
               display_name: 환영합니다
         self-paced-pl-csd5-2023:
           title: '모듈 7: AI와 머신 러닝 교습 준비'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: 반복
+            lesson-4:
+              name: 조건
+            lesson-6:
+              name: 다음 단계
+          title: 컴퓨터과학(정보과학) 소개
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: 이벤트
+            lesson-4:
+              name: 행동
+            lesson-5:
+              name: 다음 단계
         soccer:
           description: 축구 게임 만들기
           description_short: 축구 게임 만들기

@@ -1041,6 +1041,17 @@
         },
         "courseF_artist_for4_2020": {
           "courseF_artist_for4_a": "\\*\\*Kakšno je najmanjše število, ki ga potrebukeš?\nKakšno pa je največje?\nKako velik je korak po?\n\nTo so vprašanja, ki si jih moraš zastaviti, da boš lahko izpolnil polja v zanki 'za vsako število'."
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "HInt2": "Plesalec mora biti isti pri obeh blokih. Zaporedje je pomembno.",
+          "validation": "Dodaj naslednje bloke, da ustvariš prvega plesalca."
+        },
+        "dance_ai_generate_effect": {
+          "Hint2": "Dodaj blok na začetek.\nKlikni nanj, da začneš.",
+          "Hint3": "Če želiš ponovno generirati efekt ali zamenjati smeške, klikni na  'generiraj UI efekt' blok."
+        },
+        "dance_ai_generate_effect_again": {
+          "Hint2": "Dodaj blok na začetek.\nKlikni nanj, da začneš."
         }
       }
     }

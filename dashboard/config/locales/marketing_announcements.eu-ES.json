@@ -3,34 +3,7 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "ai-2020": {
-            "buttonText": "Ikasi gehiago"
-          },
-          "ai-launch-2023": {
-            "buttonText": "Ikasi gehiago"
-          },
-          "ai-pl-launch-2023": {
-            "buttonText": "Ikasi gehiago"
-          },
-          "back-to-school-2021": {
-            "buttonText": "Ikasi gehiago"
-          },
-          "codebytes-2020": {
-            "buttonText": "Ikasi gehiago"
-          },
-          "coldplay": {
-            "buttonText": "Saiatu"
-          },
-          "congrats-certificate-share": {
-            "buttonText": "Hasiera"
-          },
-          "csjourneys": {
-            "buttonText": "Ikasi gehiago"
-          },
-          "csjourneys-22": {
-            "buttonText": "Ikasi gehiago"
-          },
-          "csleadersprize": {
+          "co-teacher": {
             "buttonText": "Ikasi gehiago"
           },
           "hoc-2023": {
@@ -41,15 +14,6 @@
           },
           "superhero": {
             "buttonText": "Gehiago ikasi"
-          },
-          "teacher-apps-closing-2021": {
-            "buttonText": "Elkartu gurekin"
-          },
-          "teacher-apps-open-2021": {
-            "buttonText": "Elkartu gurekin"
-          },
-          "teacher-apps-stillon-2020": {
-            "buttonText": "Elkartu gurekin"
           }
         }
       }

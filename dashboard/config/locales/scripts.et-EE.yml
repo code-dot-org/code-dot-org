@@ -1913,6 +1913,10 @@ et:
           student_description: Programmeeri loomi ja teisi Minecrafti tegelasi omaenda
             Minecrafti versioonis.
           title: KoodiTund Minecraft Designer
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Tasuta mäng
         netsim:
           title: Interneti simulaator
         nevada-standards-aligned-fifth-grade-2023:
@@ -2030,6 +2034,23 @@ et:
           description: 'Faas 2 online: Blended Summer Study'
           description_short: 'Faas 2 online: Blended Summer Study'
           student_description: 'Faas 2 online: Blended Summer Study'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Tsüklid
+            lesson-4:
+              name: Tingimuslaused
+            lesson-6:
+              name: Järgmised sammud
+          title: Sissejuhatus arvutiõpetusse
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Sündmused
+            lesson-4:
+              name: Käitumised
+            lesson-5:
+              name: Järgmised sammud
         soccer:
           name: jalgpall
         spelling-bee:

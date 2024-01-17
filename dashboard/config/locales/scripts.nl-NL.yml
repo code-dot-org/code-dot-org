@@ -2953,6 +2953,10 @@ nl:
           student_description: Ga dieren en andere Minecraft wezens programmeren in
             je eigen Minecraft omgeving.
           title: Minecraft Code Uur Code Ontwerper
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Vrije Speelruimte
         netsim:
           description: Leer hoe het internet werkt.
           description_short: Leer hoe het internet werkt.
@@ -3206,6 +3210,31 @@ nl:
           lesson_groups:
             lessonGroup-2:
               display_name: Welkom
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Les 1
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Les 1
+            lesson-3:
+              name: Lussen
+            lesson-4:
+              name: Voorwaardelijke instructies
+            lesson-6:
+              name: Volgende stappen
+          title: Inleiding Informatica
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Les 1
+            lesson-3:
+              name: Gebeurtenissen
+            lesson-4:
+              name: Gedrag
+            lesson-5:
+              name: Volgende stappen
         soccer:
           name: voetbal
         spelling-bee:

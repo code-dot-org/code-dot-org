@@ -1467,6 +1467,19 @@ te:
           title: 'మోడ్యూల్ 2: Code.org న్యావిగేట్ చేయుట'
         self-paced-pl-csp2-2023:
           title: 'మోడ్యూల్ 2: Code.org న్యావిగేట్ చేయుట'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: ఉచ్చులు
+            lesson-4:
+              name: షరతులు
+          title: కంప్యూటర్ సైన్స్ పరిచయం
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: ఈవెంట్లు
+            lesson-4:
+              name: ప్రవర్తన
         soccer:
           description: ఒక సాకర్ ఆటను చేయండి
           description_short: ఒక సాకర్ ఆటను చేయండి

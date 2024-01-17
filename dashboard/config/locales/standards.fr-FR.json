@@ -2,6 +2,54 @@
   "fr-FR": {
     "data": {
       "standards": {
+        "1-A-i.3-5": {
+          "description": "Comparez la perception humaine et animale"
+        },
+        "1-A-i.6-8": {
+          "description": "Donnez des exemples de la façon dont les humains combinent des informations provenant de plusieurs modalités"
+        },
+        "1-A-i.K-2": {
+          "description": "Identifier les sens et les organes sensoriels humains"
+        },
+        "1-A-ii.9-12": {
+          "description": "Décrivez les limites et les avantages des différents types de capteurs informatiques."
+        },
+        "1-A-ii.K-2": {
+          "description": "Localisez et identifiez les capteurs (caméra, microphone) sur les ordinateurs, les téléphones, les robots et autres appareils."
+        },
+        "1-A-iii.3-5": {
+          "description": "Expliquez comment les images sont représentées numériquement sur un ordinateur."
+        },
+        "1-A-iii.6-8": {
+          "description": "Expliquez comment les sons sont représentés numériquement par un ordinateur."
+        },
+        "1-A-iii.9-12": {
+          "description": "Expliquez comment les données du radar, du lidar, du GPS et de l'accéléromètre sont représentées."
+        },
+        "1-B-i.6-8": {
+          "description": "Donnez des exemples de différents types de perception informatique qui peuvent extraire du sens des signaux sensoriels."
+        },
+        "1-B-i.K-2": {
+          "description": "Donnez des exemples de machines intelligentes par rapport à des machines non intelligentes et expliquez ce qui rend une machine intelligente."
+        },
+        "1-B-ii.K-2": {
+          "description": "Donnez des exemples de caractéristiques que vous rechercheriez si vous vouliez reconnaître une certaine classe d'objets (par exemple, des chats) dans une image."
+        },
+        "1-B-iii.6-8": {
+          "description": "Illustrez comment des séquences de mots peuvent être reconnues comme des phrases, même si certains mots ne sont pas clairs, en regardant comment les mots s'assemblent."
+        },
+        "1-B-iii.K-2": {
+          "description": "Décrivez les différents sons qui composent la langue parlée et, pour chaque voyelle, donnez un mot contenant ce son."
+        },
+        "1-C-i.3-5": {
+          "description": "Démontrez comment un système de synthèse vocale peut résoudre toute ambiguïté en fonction du contexte et comment son taux d'erreur augmente en cas de saisie non grammaticale ou dénuée de sens."
+        },
+        "1-C-i.6-8": {
+          "description": "Classez une image donnée (par exemple, « scène de circulation », « paysage naturel », « fête », etc.), puis décrivez les types de connaissances dont un ordinateur aurait besoin pour comprendre des scènes de ce type."
+        },
+        "1-C-i.K-2": {
+          "description": "Décrivez certaines choses qu'un agent intelligent doit « savoir » pour donner un sens à une question."
+        },
         "1-ESS1-1": {
           "description": "Utilisez les observations du soleil, de la lune et des étoiles pour décrire les modèles prévisibles."
         },
@@ -833,6 +881,24 @@
         "1B-NI-05": {
           "description": "Discutez des problèmes de cybersécurité du monde réel et de la manière dont les informations personnelles peuvent être protégées."
         },
+        "2-A-i.9-12": {
+          "description": "Décrivez comment représenter un concept sous forme de schéma."
+        },
+        "2-A-i.K-2": {
+          "description": "Construisez une carte d'une maison, d'une école ou d'un quartier."
+        },
+        "2-A-ii.3-5": {
+          "description": "Donnez des exemples de structures arborescentes couramment utilisées par les gens et expliquez les relations entre les composants."
+        },
+        "2-A-ii.K-2": {
+          "description": "Donnez des exemples de symboles que vous rencontrez dans la vie quotidienne."
+        },
+        "2-A-iii.9-12": {
+          "description": "Décrivez comment les schémas sont utilisés pour structurer les informations relatives à des personnes, des lieux ou des objets dans des graphes de connaissances."
+        },
+        "2-A-iv.K-2": {
+          "description": "Identifiez les caractéristiques qui rendent chaque objet d'une collection unique et créez un tableau des caractéristiques pour organiser les objets."
+        },
         "2-AP-10": {
           "description": "Utilisez des organigrammes et/ou des pseudocodes pour résoudre des problèmes complexes sous forme d'algorithmes."
         },
@@ -862,6 +928,18 @@
         },
         "2-AP-19": {
           "description": "Documentez les programmes afin de les rendre plus faciles à suivre, à tester et à déboguer."
+        },
+        "2-B-i.K-2": {
+          "description": "Illustrez un prochain état possible dans le jeu de tic-tac-toe en fonction d'un état de départ"
+        },
+        "2-C-i.3-5": {
+          "description": "Catégorisez les problèmes en tant que problèmes de classification ou problèmes de recherche."
+        },
+        "2-C-i.K-2": {
+          "description": "Catégorisez les problèmes en tant que problèmes de classification ou problèmes de recherche."
+        },
+        "2-C-ii.K-2": {
+          "description": "Modélisez l'utilisation d'un algorithme de classification ou de recherche pour résoudre un problème."
         },
         "2-CS-01": {
           "description": "Recommander des améliorations à la conception des dispositifs informatiques, sur la base d'une analyse de la façon dont les utilisateurs interagissent avec les appareils."
@@ -1994,6 +2072,48 @@
         "3B-NI-04": {
           "description": "Comparez les méthodes utilisées par les développeurs de logiciels pour protéger les appareils et les informations contre les accès non autorisés."
         },
+        "4-A-i.9-12": {
+          "description": "Identifiez les parties d'un texte qui seraient difficiles à comprendre pour un ordinateur et expliquez pourquoi."
+        },
+        "4-A-ii.3-5": {
+          "description": "Illustrez comment la compréhension d'une phrase peut être difficile pour un ordinateur en donnant des phrases où un pronom peut faire référence à deux noms selon le contexte."
+        },
+        "4-A-ii.9-12": {
+          "description": "Expliquez à quel point la compréhension d'une phrase peut être difficile pour un ordinateur en décrivant les multiples sens d'un mot donné."
+        },
+        "4-A-ii.K-2": {
+          "description": "Illustrez l'ambiguïté du langage en donnant des exemples d'homophones et d'homonymes et en montrant comment le bon mot peut être déterminé à l'aide du contexte."
+        },
+        "4-A-iii.3-5": {
+          "description": "Testez un système de synthèse vocale pour voir s'il sélectionne correctement les choix de mots alternatifs en fonction du contexte."
+        },
+        "4-A-iii.K-2": {
+          "description": "Démontrez comment un ordinateur peut produire différentes formes d'un verbe, comme le présent ou le passé"
+        },
+        "4-A-iv.3-5": {
+          "description": "Démontrez certains types de questions auxquelles un moteur de recherche ou un assistant intelligent peut répondre et d'autres auxquelles il ne peut pas répondre."
+        },
+        "4-A-iv.K-2": {
+          "description": "Démontrez les types de tâches qu'un assistant intelligent peut et ne peut pas effectuer."
+        },
+        "4-B-i.3-5": {
+          "description": "Expliquez quelles connaissances seraient nécessaires pour qu'un ordinateur comprenne une histoire"
+        },
+        "4-B-i.K-2": {
+          "description": "Donnez des explications sensées sur le comportement humain ou les événements qui pourraient être utiles à un robot."
+        },
+        "4-C-i.3-5": {
+          "description": "Illustrez comment les ordinateurs peuvent évaluer le ton émotionnel d'un texte."
+        },
+        "4-C-i.6-8": {
+          "description": "Décrivez comment les ordinateurs utilisent différents types d'indices pour reconnaître les états émotionnels humains."
+        },
+        "4-C-i.9-12": {
+          "description": "Identifiez les manières dont les applications d'IA peuvent modifier leur comportement pour répondre aux états émotionnels des utilisateurs."
+        },
+        "4-C-i.K-2": {
+          "description": "Démontrez comment les ordinateurs reconnaissent les émotions sur les visages"
+        },
         "4-ESS1-1": {
           "description": "Identifier les preuves provenant de motifs dans les formations rocheuses et de fossiles dans les couches rocheuses pour étayer une explication des changements survenus dans un paysage au fil du temps."
         },
@@ -2422,6 +2542,81 @@
         },
         "4.d": {
           "description": "Utilisez de multiples processus et diverses perspectives pour explorer des solutions alternatives."
+        },
+        "5-A-i.3-5": {
+          "description": "Évaluez comment une technologie d'IA peut avoir différents effets sur différents groupes de personnes."
+        },
+        "5-A-i.6-8": {
+          "description": "Évaluez la manière dont les objectifs et les valeurs des différentes parties prenantes influencent la conception des systèmes d'IA."
+        },
+        "5-A-i.9-12": {
+          "description": "Expliquez comment l'utilisation des systèmes d'IA a eu des impacts disparates sur différents groupes."
+        },
+        "5-A-i.K-2": {
+          "description": "Évaluez les différentes répercussions d'une décision sur les gens."
+        },
+        "5-A-ii.6-8": {
+          "description": "Évaluez dans quelle mesure un système d'IA répond aux critères de conception de responsabilité et de respect de la vie privée."
+        },
+        "5-A-ii.9-12": {
+          "description": "Analysez un système d'IA pour déterminer s'il répond à des critères de conception éthiques"
+        },
+        "5-A-ii.K-2": {
+          "description": "Discutez des caractéristiques des systèmes qui sont justes et injustes et de l'impact sur les personnes lorsqu'un système est injuste."
+        },
+        "5-A-iii.6-8": {
+          "description": "Évaluez les moyens par lesquels les concepteurs de systèmes d'IA peuvent découvrir et intégrer les valeurs de leurs parties prenantes dans le processus de conception."
+        },
+        "5-A-iii.9-12": {
+          "description": "Concevez un système d'IA à l'aide d'un processus de conception éthique."
+        },
+        "5-B-i.3-5": {
+          "description": "Décrivez comment les services basés sur l'IA sont utilisés dans la vie quotidienne"
+        },
+        "5-B-i.6-8": {
+          "description": "Examinez un aspect de la vie quotidienne qui devrait changer en raison de l'introduction des technologies de l'IA."
+        },
+        "5-B-i.9-12": {
+          "description": "Expliquez les types de débats qui pourraient survenir à mesure que la technologie de l'IA continue d'évoluer et qu'elle s'intègre à notre culture."
+        },
+        "5-B-i.K-2": {
+          "description": "Identifiez les appareils de la vie quotidienne qui utilisent les technologies de l'IA"
+        },
+        "5-C-i.3-5": {
+          "description": "Identifiez les changements dans le mode de fonctionnement des différents secteurs de la société en raison de l'introduction de l'IA."
+        },
+        "5-C-i.6-8": {
+          "description": "Comparez les changements que l'IA apporte à la société avec ceux des révolutions industrielles précédentes."
+        },
+        "5-C-i.9-12": {
+          "description": "Prédisez comment un secteur de la société est susceptible d'évoluer à court et à moyen terme en raison de la technologie de l'IA."
+        },
+        "5-C-i.K-2": {
+          "description": "Identifiez les utilisations actuelles de l'IA et leur impact sur la société."
+        },
+        "5-C-ii.3-5": {
+          "description": "Décrivez comment un emploi va changer en raison de l'introduction de l'IA ou des technologies robotiques."
+        },
+        "5-C-ii.6-8": {
+          "description": "Prédisez un nouveau type d'emploi qui pourrait apparaître, ou comment un type d'emploi existant pourrait changer ou disparaître à la suite de l'adoption des technologies de l'IA."
+        },
+        "5-C-ii.9-12": {
+          "description": "Étudiez les compétences nécessaires pour les carrières basées sur l'IA."
+        },
+        "5-C-ii.K-2": {
+          "description": "Décrivez certains emplois qui n'existent plus en raison des progrès technologiques."
+        },
+        "5-D-ii.3-5": {
+          "description": "Concevez une solution à un problème de société qui utilise la technologie de l'IA"
+        },
+        "5-D-ii.6-8": {
+          "description": "Effectuez des recherches sur un problème de société et décrivez comment les technologies de l'IA peuvent être utilisées pour résoudre ce problème."
+        },
+        "5-D-ii.9-12": {
+          "description": "Évaluez un projet d'IA au service du bien social en fonction du problème qu'il aborde et de son impact réel ou potentiel."
+        },
+        "5-D-ii.K-2": {
+          "description": "Décrivez comment l'IA peut être utilisée pour résoudre un problème sociétal"
         },
         "5-ESS1-1": {
           "description": "Soutenez l'argument selon lequel les différences de luminosité apparente du soleil par rapport aux autres étoiles sont dues à leur distance relative par rapport à la Terre."

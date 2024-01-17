@@ -5,31 +5,25 @@ import ProgressTableV2 from './ProgressTableV2';
 import {loadUnitProgress} from '../sectionProgress/sectionProgressLoader';
 import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
 import {connect} from 'react-redux';
-import {scriptDataPropType} from '../sectionProgress/sectionProgressConstants';
+import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
 import styles from './progress-table-v2.module.scss';
 
 function SectionProgressV2({
   scriptId,
   sectionId,
-  scriptData,
+  unitData,
   isLoadingProgress,
   isRefreshingProgress,
 }) {
   const levelDataInitialized = React.useMemo(() => {
-    return scriptData && !isLoadingProgress && !isRefreshingProgress;
-  }, [scriptData, isLoadingProgress, isRefreshingProgress]);
+    return unitData && !isLoadingProgress && !isRefreshingProgress;
+  }, [unitData, isLoadingProgress, isRefreshingProgress]);
 
   React.useEffect(() => {
-    if (!scriptData && !isLoadingProgress && !isRefreshingProgress) {
+    if (!unitData && !isLoadingProgress && !isRefreshingProgress) {
       loadUnitProgress(scriptId, sectionId);
     }
-  }, [
-    scriptData,
-    isLoadingProgress,
-    isRefreshingProgress,
-    scriptId,
-    sectionId,
-  ]);
+  }, [unitData, isLoadingProgress, isRefreshingProgress, scriptId, sectionId]);
 
   return (
     <div>
@@ -48,18 +42,17 @@ function SectionProgressV2({
 SectionProgressV2.propTypes = {
   scriptId: PropTypes.number,
   sectionId: PropTypes.number,
-  scriptData: scriptDataPropType,
+  unitData: unitDataPropType,
   isLoadingProgress: PropTypes.bool.isRequired,
   isRefreshingProgress: PropTypes.bool.isRequired,
 };
 
-export default connect(
-  state => ({
-    scriptId: state.unitSelection.scriptId,
-    sectionId: state.teacherSections.selectedSectionId,
-    scriptData: getCurrentUnitData(state),
-    isLoadingProgress: state.sectionProgress.isLoadingProgress,
-    isRefreshingProgress: state.sectionProgress.isRefreshingProgress,
-  }),
-  dispatch => ({})
-)(SectionProgressV2);
+export const UnconnectedSectionProgressV2 = SectionProgressV2;
+
+export default connect(state => ({
+  scriptId: state.unitSelection.scriptId,
+  sectionId: state.teacherSections.selectedSectionId,
+  unitData: getCurrentUnitData(state),
+  isLoadingProgress: state.sectionProgress.isLoadingProgress,
+  isRefreshingProgress: state.sectionProgress.isRefreshingProgress,
+}))(SectionProgressV2);

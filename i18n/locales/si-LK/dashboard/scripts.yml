@@ -1542,6 +1542,10 @@ si:
               display_name: ඩිජිටල් පුරවැසිකම
             lessonGroup-4:
               display_name: විචල්‍යන්
+        musiclab:
+          lessons:
+            lesson-3:
+              name: නොමිලේ ක්‍රීඩා කිරීම
         csa-frq-practice-2022:
           lessons:
             lesson-4:
@@ -1621,3 +1625,18 @@ si:
           lesson_groups:
             lessonGroup-7:
               display_name: හැදින්වීම
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: වැඩසටහන්
+            lesson-5:
+              name: ඉදිරි පියවර
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: ලූපයන්
+            lesson-4:
+              name: කන්ඩිෂනලස්
+            lesson-6:
+              name: ඉදිරි පියවර
+          title: පරිඝණක විද්‍යාව හැදින්වීම
