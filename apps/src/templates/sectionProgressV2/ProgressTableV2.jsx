@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import StudentColumn from './StudentColumn';
-import ProgressTableHeader from './ProgressTableHeader';
-import ProgressDataV2 from './ProgressDataV2';
 import styles from './progress-table-v2.module.scss';
 import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
 import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
+import ExpandedProgressDataColumn from './ExpandedProgressDataColumn';
+import LessonsProgressDataColumn from './LessonsProgressDataColumn';
 
 export function ProgressTableV2({
   isSortedByFamilyName,
@@ -18,10 +18,21 @@ export function ProgressTableV2({
 }) {
   const [expandedLessonIds, setExpandedLessons] = React.useState([]);
 
-  const addExpandedLesson = lessonId =>
-    setExpandedLessons([...expandedLessonIds, lessonId]);
-  const removeExpandedLesson = lessonId =>
-    setExpandedLessons(expandedLessonIds.filter(id => id !== lessonId));
+  const addExpandedLesson = React.useMemo(
+    () => lessonId =>
+      setExpandedLessons([...expandedLessonIds, lessonId])[
+        (expandedLessonIds, setExpandedLessons)
+      ],
+    [expandedLessonIds, setExpandedLessons]
+  );
+  const removeExpandedLesson = React.useMemo(
+    () => lessonId =>
+      setExpandedLessons(
+        expandedLessonIds.filter(id => id !== lessonId),
+        [setExpandedLessons, expandedLessonIds]
+      ),
+    [expandedLessonIds, setExpandedLessons]
+  );
 
   const sortedStudents = React.useMemo(() => {
     return isSortedByFamilyName
@@ -29,27 +40,60 @@ export function ProgressTableV2({
       : students.sort(stringKeyComparator(['name', 'familyName']));
   }, [students, isSortedByFamilyName]);
 
-  const groupedLessonIds = React.useMemo(() => {
+  const renderedColumns = React.useMemo(() => {
     const lessons = unitData?.lessons;
+    if (lessons === undefined || lessons.length === 0) {
+      return [];
+    }
 
-    let grouped = [];
     let currentGroup = [];
+    let columns = [];
     for (const lesson of lessons) {
       if (expandedLessonIds.includes(lesson.id)) {
         if (currentGroup.length > 0) {
-          grouped = [...grouped, {ids: currentGroup, expanded: false}];
+          columns.push(
+            <LessonsProgressDataColumn
+              lessons={currentGroup}
+              sortedStudents={sortedStudents}
+              addExpandedLesson={addExpandedLesson}
+              removeExpandedLesson={removeExpandedLesson}
+              key={columns.length}
+            />
+          );
           currentGroup = [];
         }
-        grouped = [...grouped, {ids: [lesson.id], expanded: true}];
+        columns.push(
+          <ExpandedProgressDataColumn
+            lesson={lesson}
+            sortedStudents={sortedStudents}
+            addExpandedLesson={addExpandedLesson}
+            removeExpandedLesson={removeExpandedLesson}
+            key={columns.length}
+          />
+        );
       } else {
-        currentGroup.push(lesson.id);
+        currentGroup.push(lesson);
       }
     }
     if (currentGroup.length > 0) {
-      grouped = [...grouped, {ids: currentGroup, expanded: false}];
+      columns.push(
+        <LessonsProgressDataColumn
+          lessons={currentGroup}
+          sortedStudents={sortedStudents}
+          addExpandedLesson={addExpandedLesson}
+          removeExpandedLesson={removeExpandedLesson}
+          key={columns.length}
+        />
+      );
     }
-    return grouped;
-  }, [unitData, expandedLessonIds]);
+    return columns;
+  }, [
+    unitData,
+    expandedLessonIds,
+    addExpandedLesson,
+    removeExpandedLesson,
+    sortedStudents,
+  ]);
 
   return (
     <div className={styles.progressTableV2}>
@@ -58,18 +102,7 @@ export function ProgressTableV2({
         unitName={unitData?.title}
         sectionId={sectionId}
       />
-      <div className={styles.table}>
-        <ProgressTableHeader
-          lessons={unitData?.lessons}
-          groupedLessonIds={groupedLessonIds}
-          addExpandedLesson={addExpandedLesson}
-          removeExpandedLesson={removeExpandedLesson}
-        />
-        <ProgressDataV2
-          sortedStudents={sortedStudents}
-          lessons={unitData?.lessons}
-        />
-      </div>
+      <div className={styles.table}>{renderedColumns}</div>
     </div>
   );
 }
