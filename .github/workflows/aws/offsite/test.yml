@@ -1,6 +1,10 @@
 name: Run Tests
 
 on:
+  push:
+    branches: [ refactor-aurora-snapshots-docker-for-2024 ]
+    paths:
+      - 'aws/offsite/**'
   pull_request:
     branches: [ staging ]
     paths:
