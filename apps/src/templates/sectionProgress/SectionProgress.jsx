@@ -15,7 +15,7 @@ import {
   setCurrentView,
 } from './sectionProgressRedux';
 import {loadUnitProgress} from './sectionProgressLoader';
-import {ViewType, scriptDataPropType} from './sectionProgressConstants';
+import {ViewType, unitDataPropType} from './sectionProgressConstants';
 import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import firehoseClient from '../../lib/util/firehose';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -41,7 +41,7 @@ class SectionProgress extends Component {
     coursesWithProgress: PropTypes.array.isRequired,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     setCurrentView: PropTypes.func.isRequired,
-    scriptData: scriptDataPropType,
+    scriptData: unitDataPropType,
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
