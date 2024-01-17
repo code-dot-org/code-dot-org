@@ -453,7 +453,12 @@ exports.appendNewFunctions = function (blocksXml, functionsXml) {
     ).stringValue;
     const alreadyPresent =
       startBlocksDocument.evaluate(
-        `//block[@type="${type}"]/field[@id="${name}"]`,
+        // Ignore namespaces. Find blocks of type e.g. behavior_definition
+        // Shared behavior name will either be in the mutation (Google Blockly)
+        // or the name field (CDO Blockly)
+        `//*[local-name()="block" and @type="${type}"]/*` +
+          `[self::*[local-name()="mutation" and @behaviorId="${name}"] or ` +
+          `self::*[local-name()="field" and @id="${name}"]]`,
         startBlocksDom,
         null,
         XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
