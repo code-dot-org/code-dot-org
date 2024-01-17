@@ -12,6 +12,8 @@
   width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
 }
 
 .gridBox {
@@ -98,6 +100,7 @@
     min-width: 80px;
     text-align: center;
     border-bottom: 1px solid $light_gray_200;
+    margin-bottom: 32px;
   }
 
   &Expanded {
@@ -140,4 +143,9 @@
     flex-direction: column;
     border-bottom: 1px solid $light_gray_200;
   }
+}
+
+.lessonGroupHeader {
+  display: flex;
+  flex-direction: row;
 }
