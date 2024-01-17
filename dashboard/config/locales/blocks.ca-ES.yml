@@ -1106,6 +1106,14 @@ ca:
         text: Establir microscopi a {INPUT1}
       DansBlocks_testRectangle:
         text: 'fer rectangle x: {X} y: {Y} w: {W} h: {H} color: {COLOR}'
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': blau
+            '"red"': vermell
+          OPT:
+            '"large"': gran
+            '"small"': petit
       FunctionBlocks_addEightBlock:
         text: afegirVuit
       FunctionBlocks_addFiveBlock:

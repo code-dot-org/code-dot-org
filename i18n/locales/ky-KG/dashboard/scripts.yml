@@ -53,6 +53,7 @@ ky:
           description: Angry Birds, Plants vs. Zombies каармандары менен компүтердик илимдин негиздерин ачкыла!
           description_short: Компүтердик илимдин негиздерин кызыктуу каармандар менен ачкыла!
           student_description: Angry Birds, Plants vs. Zombies каармандары менен компүтердик илимдин негиздерин ачкыла!
+          name: Код сааты
         asUnplugged:
           description_audience: 6-13 жаштагылар
         afterschool1:
@@ -643,3 +644,17 @@ ky:
             lesson-4:
               name: Шартуулар
           title: Компүтер илимине киришүү
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: Өзгөрмөлөр
+            csp_conditionals:
+              display_name: Шартуулар
+            csp_functions:
+              display_name: Функциялар
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Тизмелер
+            lessonGroup-3:
+              display_name: Циклдер

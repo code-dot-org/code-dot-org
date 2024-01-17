@@ -278,6 +278,11 @@ hr:
         options:
           INPUT1:
             '1': sok od limuna
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': plavo
+            '"red"': crvena
       FunctionBlocks_communicate:
         text: Komunikacija {VAR1} sa {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:

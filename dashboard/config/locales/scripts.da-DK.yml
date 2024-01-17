@@ -67,6 +67,7 @@ da:
             Angry Birds og Plants vs. Zombies!
           description_short: Prøv grundlæggende programmering med masser af sjove
             figurer!
+          name: Hour of Code
           student_description: Prøv det grundlæggende indenfor programmering med figurer
             fra Angry Birds og Plants vs. Zombies!
           title: Hour of Code 2013
@@ -720,6 +721,14 @@ da:
               display_name: Funktioner
             csp_variables:
               display_name: Variabler
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funktioner
+            csp_variables:
+              display_name: Variabler
         csp4-dlp:
           lesson_groups:
             required:
@@ -811,6 +820,12 @@ da:
             csp_unit6_2020:
               display_name: Algoritmer
         csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Lister
+            lessonGroup-3:
+              display_name: Løkker
+        csp6-2024:
           lesson_groups:
             csp_unit6_2020:
               display_name: Lister

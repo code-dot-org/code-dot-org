@@ -1362,6 +1362,7 @@
   "loginInfo_signinStep4_secretPicture": "Vyberte bezpečnostní obrázek.",
   "loginInfo_signinStep4_secretWords": "Vyberte bezpečnostní slova.",
   "loginInfo_signinStep5": "Klikněte na tlačítko \"Přihlásit\".",
+  "loginInfoLtiSetupHeader": "Nastavit třídu",
   "loginType": "Způsob přihlášení",
   "loginTypeClever": "Systém Clever",
   "loginTypeCleverButton": "Použít systém Clever",

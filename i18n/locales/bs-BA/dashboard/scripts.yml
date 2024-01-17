@@ -108,6 +108,7 @@ bs:
           description: Pokušajte osnove informatike s likovima iz Angry Birds i Plants vs. Zombies!
           description_short: Pokušaj osnove računarstva sa mnogim zabavnim karakterima!
           student_description: Pokušajte osnove informatike s likovima iz Angry Birds i Plants vs. Zombies!
+          name: Sat Kodiranja
         CodeStudioPuzzleChallenge:
           title: Izazov Studija Kodiranja
           description: Isprobaj ove zabavne zadatke kodiranja. Daj sve od sebe!
@@ -1399,3 +1400,21 @@ bs:
             lesson-6:
               name: Slijedeći Koraci
           title: Uvod u računarstvo
+        csp2-2024:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Jedinica 2: internet'
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: Varijable
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Liste
+            lessonGroup-3:
+              display_name: Petlje

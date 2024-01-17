@@ -1082,6 +1082,7 @@
   "loginInfo_signinStep4_secretPicture": "Kies hun geheime plaatje.",
   "loginInfo_signinStep4_secretWords": "Typ hun geheime woorden.",
   "loginInfo_signinStep5": "Klik op de inlog knop.",
+  "loginInfoLtiSetupHeader": "Stel uw klas in",
   "loginType": "Login-Type",
   "loginTypeClever": "Slim",
   "loginTypeCleverButton": "Gebruik Clever",

@@ -597,7 +597,7 @@ es-MX:
     powered_by_aws: 'Impulsado por Amazon Web Services'
     built_on_github: 'Creado en GitHub de Microsoft'
     google_copyright: '&copy; Google Inc. utilizado con permiso. Google Classroom es una marca comercial de Google Inc.'
-    trademark: '© Code.org, %{current_year}. Code.org®, el logotipo de CODE y el de Hora de Código ® son marcas registradas de Code.org.'
+    trademark: '© Code.org, %{current_year}. Code.org®, el logotipo de CODE y el de Hora de Code ® son marcas registradas de Code.org.'
     copyright: 'Derechos de autor'
     more: 'Más'
     feedback: 'Enviar comentarios'

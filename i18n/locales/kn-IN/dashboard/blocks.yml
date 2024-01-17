@@ -339,6 +339,14 @@ kn:
         options:
           INPUT1:
             '1': ನಿಂಬೆ ರಸ
+      DansBlocks_testShowVariable:
+        options:
+          OPT:
+            '"large"': ದೊಡ್ಡ
+            '"small"': ಸಣ್ಣ
+          COLOR:
+            '"blue"': ನೀಲಿ
+            '"red"': ಕೆಂಪು
       FunctionBlocks_communicate:
         text: "{VAR1} ಅನ್ನು {SPRITE1COSTUME} ಜೊತೆ ಸಂವಹನ ಮಾಡಿ"
       FunctionBlocks_makeManipulative2:

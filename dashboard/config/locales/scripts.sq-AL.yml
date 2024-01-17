@@ -66,6 +66,7 @@ sq:
             nga Angry Birds dhe Plants vs. Zombies!
           description_short: Provo bazat e shkencës kompjuterike me shumë karaktere
             zbavitëse!
+          name: Ora e Kodimit
           student_description: Provoni elementet baze te shkencave kompjuterike me
             personazhe nga Angry Birds dhe Plants vs. Zombies!
           title: Ora e Kodit 2013
@@ -924,6 +925,10 @@ sq:
           lessons:
             lesson-6:
               name: Cikle
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Përmbajtja
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -955,6 +960,10 @@ sq:
           lessons:
             lesson-4:
               name: variabla
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -982,6 +991,10 @@ sq:
           lessons:
             lesson-3:
               name: Për Ciklet
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1003,6 +1016,10 @@ sq:
             lessonGroup-2:
               display_name: Përmbajtja
         csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
@@ -1036,6 +1053,10 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1057,6 +1078,10 @@ sq:
             lessonGroup-2:
               display_name: Përmbajtja
         csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa6-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
@@ -1087,6 +1112,10 @@ sq:
           lessons:
             lesson-6:
               name: Pronë intelektuale
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1112,6 +1141,10 @@ sq:
             lessonGroup-2:
               display_name: Përmbajtja
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
@@ -1578,6 +1611,16 @@ sq:
               display_name: Projekt
             csp_variables:
               display_name: variabla
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: variabla
         csp4-dlp:
           lesson_groups:
             content:
@@ -1662,6 +1705,10 @@ sq:
               display_name: Cikle
             csp_project:
               display_name: Projekt
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: të dhëna
         csp5-dlp:
           lesson_groups:
             content:
@@ -1705,6 +1752,14 @@ sq:
             csp_unit6_2020:
               display_name: Algoritmet
         csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listat
+            lessonGroup-3:
+              display_name: Cikle
+            lessonGroup-5:
+              display_name: Projekt
+        csp6-2024:
           lesson_groups:
             csp_unit6_2020:
               display_name: Listat

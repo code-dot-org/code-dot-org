@@ -42,6 +42,7 @@ ne:
           description: Try the basics of computer science with characters from Angry
             Birds and Plants vs. Zombies!
           description_short: Try the basics of computer science with many fun characters!
+          name: Hour of Code
           student_description: Try the basics of computer science with characters
             from Angry Birds and Plants vs. Zombies!
           title: Hour of Code 2013
@@ -451,6 +452,10 @@ ne:
           lessons:
             lesson-6:
               name: Loops
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Content
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -482,6 +487,10 @@ ne:
           lessons:
             lesson-4:
               name: Variables
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -509,6 +518,10 @@ ne:
           lessons:
             lesson-3:
               name: For Loops
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -530,6 +543,10 @@ ne:
             lessonGroup-2:
               display_name: Content
         csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -563,6 +580,10 @@ ne:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -587,6 +608,10 @@ ne:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -608,6 +633,10 @@ ne:
             lessonGroup-2:
               display_name: Content
         csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -636,6 +665,10 @@ ne:
             lessonGroup-2:
               display_name: Content
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -821,6 +854,10 @@ ne:
           lesson_groups:
             csp_unit1_2020:
               display_name: "(old) Unit 1: Digital Information"
+        csp1-2024:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: "(old) Unit 1: Digital Information"
         csp1-dlp:
           lesson_groups:
             content:
@@ -882,6 +919,10 @@ ne:
             csp_unit2_2020:
               display_name: "(old) Unit 2: The Internet"
         csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(old) Unit 2: The Internet"
+        csp2-2024:
           lesson_groups:
             csp_unit2_2020:
               display_name: "(old) Unit 2: The Internet"
@@ -971,6 +1012,14 @@ ne:
             csp_variables:
               display_name: Variables
         csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_variables:
+              display_name: Variables
+        csp4-2024:
           lesson_groups:
             csp_conditionals:
               display_name: Conditionals
@@ -1090,6 +1139,12 @@ ne:
               display_name: Lists
             lessonGroup-3:
               display_name: Loops
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Lists
+            lessonGroup-3:
+              display_name: Loops
         csp6-pilot:
           lesson_groups:
             content:
@@ -1129,6 +1184,10 @@ ne:
             csp_unit9_2020:
               display_name: "(old) Unit 9: Data"
         csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(old) Unit 9: Data"
+        csp9-2024:
           lesson_groups:
             csp_unit9_2020:
               display_name: "(old) Unit 9: Data"
