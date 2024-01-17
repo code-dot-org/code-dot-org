@@ -68,7 +68,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-14T20:40:28.274+00:00\",\"changed\":[\"cloned from \\\"courseF_variables2_change_-2022-2\\\"\"],\"cloned_from\":\"courseF_variables2_change_-2022-2\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-14T20:40:28.274+00:00\",\"changed\":[\"cloned from \\\"courseF_variables2_change_-2022-2\\\"\"],\"cloned_from\":\"courseF_variables2_change_-2022-2\"},{\"changed_at\":\"2024-01-12 17:10:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -6741,7 +6741,7 @@
         </category>
         <category name="Sprites">
           <block type="gamelab_makeNewSpriteAnon">
-            <field name="ANIMATION_NAME">"purple bunny"</field>
+            <field name="ANIMATION_NAME">"brown bunny"</field>
             <value name="LOCATION">
               <block type="gamelab_location_picker">
                 <field name="LOCATION">{"x":200,"y":200}</field>
@@ -6751,7 +6751,7 @@
           <block type="gamelab_spriteSayTime">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <field name="ANIMATION">"brown bunny"</field>
               </block>
             </value>
             <value name="TEXT1">

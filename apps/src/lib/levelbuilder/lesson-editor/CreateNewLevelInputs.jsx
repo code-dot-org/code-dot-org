@@ -49,6 +49,7 @@ export default class CreateNewLevelInputs extends Component {
         data: JSON.stringify({
           type: this.state.levelType,
           name: this.state.levelName,
+          published: true,
         }),
         contentType: 'application/json;charset=UTF-8',
       })

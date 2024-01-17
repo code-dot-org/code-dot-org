@@ -49,8 +49,6 @@ export class WorkshopManagement extends React.Component {
         surveyBaseUrl = 'workshop_daily_survey_results';
       } else if (this.use_daily_survey_route()) {
         surveyBaseUrl = 'daily_survey_results';
-      } else if (props.subject === WorkshopTypes.local_summer) {
-        surveyBaseUrl = 'local_summer_workshop_survey_results';
       }
 
       if (surveyBaseUrl) {
