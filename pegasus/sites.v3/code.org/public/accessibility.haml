@@ -8,16 +8,16 @@ theme: responsive_full_width
 
 %section.hero-banner-basic.hero-banner-basic--accessibility
   .wrapper
-    .flex-container
-      .text-wrapper.col-50.flex-container.align-items-center
+    .flex-container.align-items-center.gap-2
+      .text-wrapper.col-50
         .hero-banner-basic__content
           %h1{style: "color: white"}
             =hoc_s(:accessibility_hero_heading)
           %p{style: "color: white"}
             =hoc_s(:accessibility_hero_desc)
-      .col-50.flex-container.justify-end
-        %img{src: "/images/accessibility/hero-image.png", alt: ""}
-    .clear
+      .col-45
+        %img{src: "/images/accessibility/accessibility-illustration-header.png", alt: "", style: "width: 100%"}
+  .clear
 
 %section.accessibility-efforts.bg-neutral-light
   .wrapper
