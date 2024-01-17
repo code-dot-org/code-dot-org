@@ -27,7 +27,6 @@ def sync_down
       project = Crowdin::Project.new(project_identifier, api_token)
       options = {
         etags_json: options[:etags_json],
-        files_to_sync_out_json: options[:files_to_sync_out_json],
         locales_dir: CDO.dir(I18N_LOCALES_DIR),
         logger: logger
       }
