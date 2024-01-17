@@ -13,6 +13,7 @@ const DEFAULT_PROPS = {
   isTeacher: false,
   hasStudents: false,
   dependentStudents: [],
+  isAdmin: false,
 };
 
 describe('DeleteAccount', () => {
