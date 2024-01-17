@@ -18,8 +18,6 @@ theme: responsive_full_width
       %p.body-one{style: "color: white"}=hoc_s(:self_paced_pl_hero_desc)
     %img{src: "../shared/images/banners/self-paced-pl-hero.png", alt: ""}
 
-= view :professional_learning_skinny_banner
-
 %section
   .wrapper
     %h2=hoc_s(:self_paced_pl_intro_heading)
@@ -50,11 +48,14 @@ theme: responsive_full_width
         %img{src: "/images/self-paced-pl-teacher-student-top.png", alt: "", style: "width: 100%; margin-top: 2.5rem;"}
     .clear
 
-%section.bg-primary-light
-  .wrapper
-    %p.heading-xs.no-margin-bottom
-      =hoc_s(:self_paced_pl_callout)
-      %a{href: "/professional-learning"}=hoc_s(:self_paced_pl_callout_link)
+= view :professional_learning_skinny_banner
+
+-# Hiding this section for now, but leaving it here until after Teacher Application season
+-# %section.bg-primary-light
+-#   .wrapper
+-#     %p.heading-xs.no-margin-bottom
+-#       =hoc_s(:self_paced_pl_callout)
+-#       %a{href: "/professional-learning"}=hoc_s(:self_paced_pl_callout_link)
 
 %section{id: "modules"}
   .wrapper
