@@ -682,7 +682,6 @@ module Pd::Application
         previous_yearlong_cdo_pd
 
         program
-        enough_course_hours
 
         gender_identity
         race
@@ -709,6 +708,7 @@ module Pd::Application
 
         # If the applicant will teach the course, we require extra information
         if hash[:will_teach] == 'Yes'
+          required << :enough_course_hours
           if hash[:program] == PROGRAMS[:csd]
             required << :csd_which_grades
           elsif hash[:program] == PROGRAMS[:csp]

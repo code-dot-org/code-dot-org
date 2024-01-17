@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2023-10-20 22:12:43 UTC",
+    "serialized_at": "2024-01-11 22:03:08 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -19140,7 +19140,7 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/s/express-2022/resources",
+      "url": "/s/express-2023/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -19151,7 +19151,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/express-2022/standards",
+      "url": "/s/express-2023/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -19162,13 +19162,13 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/express-2022/vocab",
-      "key": "all_vocabulary",
+      "url": "/s/express-2023/vocab",
+      "key": "all_vocabulary_1",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_vocabulary"
+        "resource.key": "all_vocabulary_1"
       }
     },
     {
@@ -19794,7 +19794,7 @@
     },
     {
       "seeding_key": {
-        "resource.key": "all_vocabulary",
+        "resource.key": "all_vocabulary_1",
         "script.name": "express-2023"
       }
     },
