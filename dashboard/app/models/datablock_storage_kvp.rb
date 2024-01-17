@@ -1,11 +1,11 @@
 # == Schema Information
 #
-# Table name: key_value_pairs
+# Table name: datablock_storage_kvps
 #
 #  channel_id :string(22)       not null, primary key
 #  key        :string(768)      not null, primary key
-#  value      :string(4096)
+#  value      :json
 #
-class KeyValuePair < ApplicationRecord
+class DatablockStorageKvp < ApplicationRecord
   self.primary_keys = :channel_id, :key
 end

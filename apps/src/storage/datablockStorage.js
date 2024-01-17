@@ -70,7 +70,7 @@ DatablockStorage.setKeyValue = function (key, value, onSuccess, onError) {
 async function createRecord(tableName, record) {
   const response = await _fetch('create_record', 'POST', {
     table_name: tableName,
-    json: JSON.stringify(record),
+    record_json: JSON.stringify(record),
   });
   console.log('response is ', response);
   return await response.json();
@@ -83,7 +83,10 @@ DatablockStorage.createRecord = function (
   onError
 ) {
   console.log('Using the overridden DatablockStorage method createRecord');
-  createRecord(tableName, record).then(json => onSuccess(json), onError);
+  createRecord(tableName, record).then(
+    newRecord => onSuccess(newRecord),
+    onError
+  );
 };
 
 DatablockStorage.updateRecord = function (
@@ -97,7 +100,7 @@ DatablockStorage.updateRecord = function (
   _fetch('update_record', 'PUT', {
     table_name: tableName,
     record_id: record.id,
-    json: JSON.stringify(record),
+    record_json: JSON.stringify(record),
   }).then(onSuccess, onError);
 };
 

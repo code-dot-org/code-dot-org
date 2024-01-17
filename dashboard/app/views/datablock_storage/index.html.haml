@@ -28,7 +28,7 @@
 %h3 create_record
 = form_tag "create_record", :method => :post, :remote => false do
   = text_field_tag "table_name", "", placeholder: "table_name"
-  = text_field_tag "json", "", placeholder: "json"
+  = text_field_tag "record_json", "", placeholder: "record_json"
   = submit_tag "create_record"
 
 %h3 read_records
@@ -40,7 +40,7 @@
 = form_tag "update_record", :method => :put, :remote => false do
   = text_field_tag "table_name", "", placeholder: "table_name"
   = text_field_tag "record_id", "", placeholder: "record_id"
-  = text_field_tag "json", "", placeholder: "json"
+  = text_field_tag "record_json", "", placeholder: "record_json"
   = submit_tag "update_record"
 
 
@@ -54,9 +54,9 @@
   %tr
     %td table_name
     %td record_id
-    %td json
+    %td record_json
   - @records.each do |record|
     %tr
       %td= record.table_name
       %td= record.record_id
-      %td= record.json.to_json
+      %td= record.record_json
