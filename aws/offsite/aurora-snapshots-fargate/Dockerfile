@@ -1,12 +1,10 @@
-FROM ubuntu:20.04
+FROM node:20
 
-RUN apt-get update && \
-    apt-get install -y \
-        nodejs \
-        npm
+WORKDIR /usr/src/app
 
-COPY . /root
-WORKDIR /root
+COPY package.json ./
 RUN npm install
-ENTRYPOINT node /root/restore-and-verify-backup.js
 
+COPY . .
+
+ENTRYPOINT node ./restore-and-verify-backup.js
