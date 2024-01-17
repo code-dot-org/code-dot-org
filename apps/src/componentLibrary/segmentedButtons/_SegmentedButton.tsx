@@ -1,13 +1,9 @@
 import React, {useCallback} from 'react';
 import classnames from 'classnames';
 import moduleStyles from '@cdo/apps/componentLibrary/segmentedButtons/segmentedButtons.module.scss';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-
-type SegmentedButtonIconProps = {
-  iconName: string;
-  iconStyle: 'light' | 'solid' | 'regular' | 'thin';
-  title: string;
-};
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 
 export type SegmentButtonType = 'withLabel' | 'iconOnly' | 'number';
 
@@ -23,11 +19,11 @@ export interface SegmentedButtonModel {
   /** Segmented Button Type */
   buttonType?: SegmentButtonType;
   /** Icon left from label*/
-  iconLeft?: SegmentedButtonIconProps;
+  iconLeft?: FontAwesomeV6IconProps;
   /** Icon right from label */
-  iconRight?: SegmentedButtonIconProps;
+  iconRight?: FontAwesomeV6IconProps;
   /** Icon for IconOnly button type */
-  icon?: SegmentedButtonIconProps;
+  icon?: FontAwesomeV6IconProps;
 }
 
 interface SegmentedButtonProps extends SegmentedButtonModel {
