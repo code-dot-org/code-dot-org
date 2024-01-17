@@ -3,8 +3,11 @@ import {
   getPartitionedBlockElements,
   createBlockOrderMap,
   addMutationToMiniToolboxBlocks,
+  partitionXmlBlocksByType,
 } from '@cdo/apps/blockly/addons/cdoXml';
 import {PROCEDURE_DEFINITION_TYPES} from '@cdo/apps/blockly/constants';
+const createBlockElement = data =>
+  parser.parseFromString(data, 'text/xml').querySelector('block');
 
 const parser = new DOMParser();
 
@@ -112,5 +115,38 @@ describe('addMutationToMiniToolboxBlocks', function () {
 
     // Compare the modified blockElement with the original copy
     expect(blockElement.isEqualNode(originalBlockElement)).to.be.true;
+  });
+});
+
+describe('partitionXmlBlocksByType', () => {
+  it('should work with block elements and prioritized types', () => {
+    const block1 = createBlockElement('<block type="blockType1"></block>');
+    const block2 = createBlockElement(
+      '<block type="procedures_defnoreturn"></block>'
+    );
+    const block3 = createBlockElement('<block type="blockType2"></block>');
+    const blockElements = [block1, block2, block3];
+
+    const result = partitionXmlBlocksByType(
+      blockElements,
+      PROCEDURE_DEFINITION_TYPES
+    );
+    expect(result).to.deep.equal([block2, block1, block3]);
+  });
+
+  it('should handle an empty block array', () => {
+    const result = partitionXmlBlocksByType([], PROCEDURE_DEFINITION_TYPES);
+    expect(result).to.deep.equal([]);
+  });
+
+  it('should handle undefined options', () => {
+    const block1 = createBlockElement('<block type="C"></block>');
+    const block2 = createBlockElement('<block type="B"></block>');
+    const block3 = createBlockElement('<block type="A"></block>');
+
+    const blockElements = [block1, block2, block3];
+
+    const result = partitionXmlBlocksByType(blockElements);
+    expect(result).to.deep.equal(blockElements);
   });
 });
