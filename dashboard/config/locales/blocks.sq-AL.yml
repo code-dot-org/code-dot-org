@@ -315,6 +315,11 @@ sq:
         options:
           EFFECT:
             '"hearts"': zemrat
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': blu
+            '"red"': e kuqe
       Mikelab_changePropBy:
         options:
           PROPERTY:

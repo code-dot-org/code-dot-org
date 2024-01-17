@@ -1010,6 +1010,14 @@ ta:
         options:
           INPUT1:
             '1': எலுமிச்சை சாறு
+      DansBlocks_testShowVariable:
+        options:
+          OPT:
+            '"large"': பெரிய
+            '"small"': சிறிய
+          COLOR:
+            '"blue"': நீலம்
+            '"red"': சிவப்பு
       FunctionBlocks_communicate:
         text: "{SPRITE1COSTUME} உடன் {VAR1} தொடர்பு கொள்ளவும்"
       FunctionBlocks_makeManipulative2:

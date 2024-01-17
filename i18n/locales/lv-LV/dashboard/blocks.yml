@@ -214,6 +214,11 @@ lv:
             '"space"': telpa
             '"enter"': ievadiet
             '"x"': x
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': zilās krāsas
+            '"red"': sarkanās krāsas
       gamelab_atTime:
         options:
           UNIT:

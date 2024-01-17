@@ -918,6 +918,11 @@
             '"confetti"': Konfetti
             '"hearts"': hjerter
             '"rain"': regn
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': blå
+            '"red"': rød
       Mikelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       Mikelab_changePropBy:

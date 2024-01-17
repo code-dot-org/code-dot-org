@@ -486,6 +486,11 @@ ne:
         options:
           EFFECT:
             '"hearts"': hearts
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': निलो
+            '"red"': रातो
       Mikelab_changePropBy:
         options:
           PROPERTY:

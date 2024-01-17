@@ -1269,6 +1269,7 @@
   "loginInfo_signinStep4_secretPicture": "აირჩიეთ მათი საიდუმლო სურათი.",
   "loginInfo_signinStep4_secretWords": "ჩაწერეთ მათი საიდუმლო სიტყვები.",
   "loginInfo_signinStep5": "დააჭირეთ ღილაკს „შესვლა“.",
+  "loginInfoLtiSetupHeader": "გამართეთ თქვენი კლასი",
   "loginType": "შესვლის ტიპი",
   "loginTypeClever": "Clever",
   "loginTypeCleverButton": "Clever-ის გამოყენება",

@@ -117,6 +117,7 @@ nl:
           description: Probeer de basis van de informatica met figuren van Angry Birds an Plants vs Zombies!
           description_short: Probeer de grondbeginselen van de informatica met veel leuke figuren!
           student_description: Probeer de basis van de informatica met figuren van Angry Birds an Plants vs Zombies!
+          name: Uur Code
         CodeStudioPuzzleChallenge:
           description: Probeer deze leuke programmeerpuzzels uit. Doe je best!
           description_short: Daag jezelf uit!
@@ -3169,3 +3170,71 @@ nl:
             lesson-6:
               name: Volgende stappen
           title: Inleiding Informatica
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vragenlijst
+            lessonGroup-3:
+              display_name: Content
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-4:
+              display_name: Vragenlijst
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabelen
+            csp_conditionals:
+              display_name: Voorwaardelijke instructies
+            csp_functions:
+              display_name: Functies
+            csp_project:
+              display_name: Project
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Data
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Lijsten
+            lessonGroup-3:
+              display_name: Lussen
+            lessonGroup-5:
+              display_name: Project
+        csp7-2024:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parameters en Returnwaardes
+            csp_libraries:
+              display_name: Bibliotheken
