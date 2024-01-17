@@ -51,8 +51,9 @@ frontend_device_name ||= '/dev/sda1'
   FrontendInstanceProfile:
     Type: AWS::IAM::InstanceProfile
     Properties: {Roles: [!Ref FrontendRole]}
-  # Signal when the instance is fully provisioned and ready for AMI creation.
+  # The WebServerAMI UserData shell script sends a signal when it completes successfully to this Resource.
   AMICreate<%=ami%>:
+    DependsOn: [WebServerAMI]
     Type: AWS::CloudFormation::WaitCondition
     CreationPolicy:
       ResourceSignal:
@@ -84,7 +85,7 @@ frontend_device_name ||= '/dev/sda1'
           sed -i 's/scripts-user$/\[scripts-user, always\]/' /etc/cloud/cloud.cfg
 
           <%=indent(build_ami, 10)%>
-          # Signal CloudFormation resource.
+          # Signal CloudFormation WaitCondition resource.
           aws cloudformation signal-resource \
             --unique-id $INSTANCE_ID \
             --stack-name $STACK \
@@ -95,7 +96,7 @@ frontend_device_name ||= '/dev/sda1'
 
           shutdown -h now
   AMI<%=ami%>: <%= lambda_fn 'AMIManager',
-    DependsOn: "AMICreate#{ami}",
+    DependsOn: "AMICreate#{ami}", # Don't invoke the AMIManage Lambda until the WaitCondition has received a signal from WebServerAMI.
     InstanceId: {Ref: "WebServerAMI" } %>
   FastSnapshotRestore: <%= lambda_fn 'FastSnapshotRestore',
     ImageIds: [{Ref: "AMI#{ami}" }],
