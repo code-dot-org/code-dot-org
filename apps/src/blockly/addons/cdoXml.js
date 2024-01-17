@@ -109,12 +109,12 @@ export function getProjectXml(workspace) {
   }
 
   // Also serialize blocks on the hidden workspace for procedure definitions.
-  const hiddenWsXml = Blockly.Xml.blockSpaceToDom(
+  const hiddenWorkspaceXml = Blockly.Xml.blockSpaceToDom(
     Blockly.getHiddenDefinitionWorkspace()
   );
 
   // Merge the hidden workspace XML into the primary XML
-  hiddenWsXml.childNodes.forEach(node => {
+  hiddenWorkspaceXml.childNodes.forEach(node => {
     const clonedNode = node.cloneNode(true);
     workspaceXml.appendChild(clonedNode);
   });
