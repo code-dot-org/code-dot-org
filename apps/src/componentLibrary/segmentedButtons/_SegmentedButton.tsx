@@ -7,7 +7,7 @@ import FontAwesomeV6Icon, {
 
 export type SegmentButtonType = 'withLabel' | 'iconOnly' | 'number';
 
-export interface SegmentedButtonModel {
+export interface BaseSegmentedButtonModel {
   /** Button Label */
   label?: string;
   /** Is button disabled */
@@ -17,31 +17,64 @@ export interface SegmentedButtonModel {
   /** Button unique value. Used for selected/not selected logic */
   value: string;
   /** Segmented Button Type */
-  buttonType?: SegmentButtonType;
-  /** Icon left from label*/
+  buttonType: SegmentButtonType;
+}
+
+export interface WithLabelSegmentedButtonModel
+  extends BaseSegmentedButtonModel {
+  buttonType: 'withLabel';
+  /** Icon left from label */
   iconLeft?: FontAwesomeV6IconProps;
   /** Icon right from label */
   iconRight?: FontAwesomeV6IconProps;
-  /** Icon for IconOnly button type */
-  icon?: FontAwesomeV6IconProps;
 }
 
-interface SegmentedButtonProps extends SegmentedButtonModel {
+export interface IconOnlySegmentedButtonModel extends BaseSegmentedButtonModel {
+  buttonType: 'iconOnly';
+  /** Icon for IconOnly button type */
+  icon: FontAwesomeV6IconProps;
+}
+
+export interface NumberSegmentedButtonModel extends BaseSegmentedButtonModel {
+  buttonType: 'number';
+  // No icon related properties for 'number' type
+}
+
+export type SegmentedButtonModel =
+  | WithLabelSegmentedButtonModel
+  | IconOnlySegmentedButtonModel
+  | NumberSegmentedButtonModel;
+
+export type SegmentedButtonProps = SegmentedButtonModel & {
   /** Segmented Button onChange handler */
   onChange: (value: string) => void;
+};
+
+/** Type Guards to make sure we can access type specific props */
+function isWithLabelSegmentedButtonModel(
+  model: SegmentedButtonModel
+): model is WithLabelSegmentedButtonModel {
+  return model.buttonType === 'withLabel';
 }
 
-const SegmentedButton: React.FunctionComponent<SegmentedButtonProps> = ({
-  label,
-  disabled,
-  selected,
-  buttonType = 'withLabel',
-  iconLeft,
-  iconRight,
-  icon,
-  value,
-  onChange,
-}) => {
+function isIconOnlySegmentedButtonModel(
+  model: SegmentedButtonModel
+): model is IconOnlySegmentedButtonModel {
+  return model.buttonType === 'iconOnly';
+}
+
+const SegmentedButton: React.FunctionComponent<
+  SegmentedButtonProps
+> = props => {
+  const {
+    label,
+    disabled,
+    selected,
+    buttonType = 'withLabel',
+    value,
+    onChange,
+  } = props;
+
   const handleClick = useCallback(() => onChange(value), [onChange, value]);
 
   return (
@@ -55,26 +88,26 @@ const SegmentedButton: React.FunctionComponent<SegmentedButtonProps> = ({
         selected && moduleStyles.selectedSegmentedButton
       )}
     >
-      {buttonType === 'iconOnly' && icon && (
+      {isIconOnlySegmentedButtonModel(props) && props.icon && (
         <FontAwesomeV6Icon
-          iconName={icon.iconName}
-          iconStyle={icon.iconStyle}
-          title={icon.title}
+          iconName={props.icon.iconName}
+          iconStyle={props.icon.iconStyle}
+          title={props.icon.title}
         />
       )}
-      {iconLeft && (
+      {isWithLabelSegmentedButtonModel(props) && props.iconLeft && (
         <FontAwesomeV6Icon
-          iconName={iconLeft.iconName}
-          iconStyle={iconLeft.iconStyle}
-          title={iconLeft.title}
+          iconName={props.iconLeft.iconName}
+          iconStyle={props.iconLeft.iconStyle}
+          title={props.iconLeft.title}
         />
       )}
       {label && <span>{label}</span>}
-      {iconRight && (
+      {isWithLabelSegmentedButtonModel(props) && props.iconRight && (
         <FontAwesomeV6Icon
-          iconName={iconRight.iconName}
-          iconStyle={iconRight.iconStyle}
-          title={iconRight.title}
+          iconName={props.iconRight.iconName}
+          iconStyle={props.iconRight.iconStyle}
+          title={props.iconRight.title}
         />
       )}
     </button>
