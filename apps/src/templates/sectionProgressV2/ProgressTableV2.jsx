@@ -56,7 +56,6 @@ export function ProgressTableV2({
               lessons={currentGroup}
               sortedStudents={sortedStudents}
               addExpandedLesson={addExpandedLesson}
-              removeExpandedLesson={removeExpandedLesson}
               key={columns.length}
             />
           );
@@ -66,7 +65,6 @@ export function ProgressTableV2({
           <ExpandedProgressDataColumn
             lesson={lesson}
             sortedStudents={sortedStudents}
-            addExpandedLesson={addExpandedLesson}
             removeExpandedLesson={removeExpandedLesson}
             key={columns.length}
           />
@@ -81,7 +79,6 @@ export function ProgressTableV2({
           lessons={currentGroup}
           sortedStudents={sortedStudents}
           addExpandedLesson={addExpandedLesson}
-          removeExpandedLesson={removeExpandedLesson}
           key={columns.length}
         />
       );
