@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import {WORKSPACE_PADDING, SETUP_TYPES} from '../constants';
-import {partitionBlocksByType} from './cdoUtils';
 import {frameSizes} from './cdoConstants';
 import {shouldSkipHiddenWorkspace} from '../utils';
 
@@ -109,10 +108,9 @@ export function positionBlocksOnWorkspace(workspace, blockOrderMap) {
   const topBlocks = workspace.getTopBlocks(SORT_BY_POSITION);
   const orderedBlocks = reorderBlocks(topBlocks, blockOrderMap);
   // Handles a rare case when immovable setup/when run blocks are not at the top of the workspace
-  const orderedBlocksSetupFirst = partitionBlocksByType(
+  const orderedBlocksSetupFirst = partitionJsonBlocksByType(
     orderedBlocks,
-    SETUP_TYPES,
-    false
+    SETUP_TYPES
   );
 
   adjustBlockPositions(orderedBlocksSetupFirst, workspace);
@@ -282,6 +280,30 @@ function reorderBlocks(blocks, blockOrderMap) {
   });
 
   return orderedBlocks;
+}
+
+/**
+ * Partitions JSON objects of the specified types to the front of the list.
+ *
+ * @param {Object[]} [blocks=[]] - An array of JSON blocks to be partitioned.
+ * @param {string[]} [prioritizedBlockTypes=[]] - An array of strings representing block types to move to the front.
+ * @returns {Object[]} A new array of JSON blocks partitioned based on their types.
+ */
+export function partitionJsonBlocksByType(
+  blocks = [],
+  prioritizedBlockTypes = []
+) {
+  const prioritizedBlocks = [];
+  const remainingBlocks = [];
+
+  blocks.forEach(block => {
+    const blockType = block.type;
+    prioritizedBlockTypes.includes(blockType)
+      ? prioritizedBlocks.push(block)
+      : remainingBlocks.push(block);
+  });
+
+  return [...prioritizedBlocks, ...remainingBlocks];
 }
 
 /**

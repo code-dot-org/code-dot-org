@@ -330,33 +330,6 @@ export function registerCustomProcedureBlocks() {
 }
 
 /**
- * Partitions blocks of the specified types to the front of the list.
- *
- * @param {Element[]|Object[]} blocks - An array of block elements or JSON blocks to be partitioned.
- * @param {Object} [options] - An object containing partitioning options.
- * @param {string[]} [options.prioritizedBlockTypes] - An array of strings representing block types to move to the front.
- * @param {boolean} [options.isJson] - A flag indicating whether the blocks are JSON blocks (vs. block elements).
- * @returns {Element[]|Object[]} A new array of block elements or JSON blocks partitioned based on their types.
- */
-export function partitionBlocksByType(
-  blocks = [],
-  prioritizedBlockTypes = [],
-  isBlockElements = true
-) {
-  const prioritizedBlocks = [];
-  const remainingBlocks = [];
-
-  blocks.forEach(block => {
-    const blockType = isBlockElements ? block.getAttribute('type') : block.type;
-    prioritizedBlockTypes.includes(blockType)
-      ? prioritizedBlocks.push(block)
-      : remainingBlocks.push(block);
-  });
-
-  return [...prioritizedBlocks, ...remainingBlocks];
-}
-
-/**
  * Retrieves the toolbox blocks for a custom category from the level config.
  * @param {string} customCategory The name of the custom category to retrieve blocks from. (Ex. 'VARIABLE', 'Behavior')
  * @returns {Document} A new XML document containing the filtered blocks.

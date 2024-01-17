@@ -1,5 +1,4 @@
 import {BLOCK_TYPES, PROCEDURE_DEFINITION_TYPES} from '../constants';
-import {partitionBlocksByType} from './cdoUtils';
 import {
   FALSEY_DEFAULT,
   TRUTHY_DEFAULT,
@@ -422,6 +421,30 @@ function makeLockedBlockImmovable(block) {
 }
 
 /**
+ * Partitions XML elements of the specified types to the front of the list.
+ *
+ * @param {Element[]} [blocks=[]] - An array of XML block elements to be partitioned.
+ * @param {string[]} [prioritizedBlockTypes=[]] - An array of strings representing block types to move to the front.
+ * @returns {Element[]} A new array of XML block elements partitioned based on their types.
+ */
+export function partitionXmlBlocksByType(
+  blocks = [],
+  prioritizedBlockTypes = []
+) {
+  const prioritizedBlocks = [];
+  const remainingBlocks = [];
+
+  blocks.forEach(block => {
+    const blockType = block.getAttribute('type');
+    prioritizedBlockTypes.includes(blockType)
+      ? prioritizedBlocks.push(block)
+      : remainingBlocks.push(block);
+  });
+
+  return [...prioritizedBlocks, ...remainingBlocks];
+}
+
+/**
  * Creates a block order map for the given XML by partitioning the block
  * elements based on their types and mapping their partitioned positions to
  * their original positions in the XML. This is used to reset a list of
@@ -467,10 +490,9 @@ export function getPartitionedBlockElements(xml, prioritizedBlockTypes) {
 
   // Procedure definitions should be loaded ahead of call
   // blocks, so that the procedures map is updated correctly.
-  const partitionedBlockElements = partitionBlocksByType(
+  const partitionedBlockElements = partitionXmlBlocksByType(
     blockElements,
-    prioritizedBlockTypes,
-    true
+    prioritizedBlockTypes
   );
   return partitionedBlockElements;
 }
