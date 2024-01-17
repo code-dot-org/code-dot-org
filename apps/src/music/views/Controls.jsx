@@ -100,7 +100,7 @@ const Controls = ({
 }) => {
   const isPlaying = useSelector(state => state.music.isPlaying);
   const isBeatPadShowing = useSelector(state => state.music.isBeatPadShowing);
-  const isLoading = useSelector(state => state.music.soundLoadingProgress < 1);
+  const isLoading = false; // useSelector(state => state.music.soundLoadingProgress < 1);
   const dispatch = useDispatch();
 
   useEffect(() => {

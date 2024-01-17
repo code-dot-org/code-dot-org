@@ -5,11 +5,12 @@ import {SoundEvent} from './interfaces/SoundEvent';
 import MusicLibrary, {SampleSequence, SoundFolder} from './MusicLibrary';
 import SamplePlayer, {SampleEvent} from './SamplePlayer';
 import {generateNotesFromChord, ChordNote} from '../utils/Chords';
-import {getTranposedNote, Key} from '../utils/Notes';
+import {getFullNoteName, getTranposedNote, Key} from '../utils/Notes';
 import {Effects} from './interfaces/Effects';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {LoadFinishedCallback} from '../types';
+import ToneJSPlayer, {SamplerSequence, Sound} from './ToneJSPlayer';
 
 // Using require() to import JS in TS files
 const constants = require('../constants');
@@ -34,7 +35,8 @@ export default class MusicPlayer {
     bpm: number = DEFAULT_BPM,
     key: Key = DEFAULT_KEY,
     samplePlayer: SamplePlayer = new SamplePlayer(),
-    metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
+    metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter(),
+    private readonly tonePlayer: ToneJSPlayer = new ToneJSPlayer()
   ) {
     this.samplePlayer = samplePlayer;
     this.metricsReporter = metricsReporter;
@@ -45,6 +47,7 @@ export default class MusicPlayer {
     if (bpm) {
       this.bpm = this.validateBpm(bpm);
       this.samplePlayer.setBpm(this.bpm);
+      this.tonePlayer.setBpm(this.bpm);
     }
     if (key) {
       this.key = this.validateKey(key);
@@ -88,7 +91,8 @@ export default class MusicPlayer {
       )
     );
 
-    this.samplePlayer.loadSounds(sampleIds, onLoadFinished);
+    // this.samplePlayer.loadSounds(sampleIds, onLoadFinished);
+    this.tonePlayer.loadSounds(sampleIds);
   }
 
   /**
@@ -158,10 +162,20 @@ export default class MusicPlayer {
    * (beginning of song) if not specified.
    */
   playSong(events: PlaybackEvent[], startPosition = 1) {
-    this.samplePlayer.startPlayback(
-      events.map(event => this.convertEventToSamples(event)).flat(),
-      this.convertPlayheadPositionToSeconds(startPosition)
-    );
+    // this.samplePlayer.startPlayback(
+    //   events.map(event => this.convertEventToSamples(event)).flat(),
+    //   this.convertPlayheadPositionToSeconds(startPosition)
+    // );
+    events.forEach(event => {
+      const sound = this.convertEventToSound(event);
+      if (sound && (sound as Sound).sampleId) {
+        this.tonePlayer.scheduleSound(sound as Sound);
+      } else if (sound && (sound as SamplerSequence).events) {
+        this.tonePlayer.scheduleSamplerSequence(sound as SamplerSequence);
+      }
+    });
+
+    this.tonePlayer.start(this.playbackTimeToTransportTime(startPosition));
   }
 
   /**
@@ -177,7 +191,8 @@ export default class MusicPlayer {
    * Stop playback. Tells the {@link SamplePlayer} to stop all sample playback.
    */
   stopSong() {
-    this.samplePlayer.stopPlayback();
+    // this.samplePlayer.stopPlayback();
+    this.tonePlayer.stop();
   }
 
   /**
@@ -191,11 +206,19 @@ export default class MusicPlayer {
   // 1-based, and scaled to measures.
   // Returns 0 if music is not playing.
   getCurrentPlayheadPosition(): number {
-    const elapsedTime = this.samplePlayer.getElapsedPlaybackTimeSeconds();
-    if (elapsedTime === -1) {
-      return 0;
-    }
-    return this.convertSecondsToPlayheadPosition(elapsedTime);
+    console.log(
+      `ToneJS: ${this.tonePlayer.getCurrentPosition()} | ${this.transportTimeToPlaybackTime(
+        this.tonePlayer.getCurrentPosition()
+      )}`
+    );
+    return this.transportTimeToPlaybackTime(
+      this.tonePlayer.getCurrentPosition()
+    );
+    // const elapsedTime = this.samplePlayer.getElapsedPlaybackTimeSeconds();
+    // if (elapsedTime === -1) {
+    //   return 0;
+    // }
+    //return this.convertSecondsToPlayheadPosition(elapsedTime);
   }
 
   // Converts actual seconds used by the audio system into a playhead
@@ -212,6 +235,70 @@ export default class MusicPlayer {
 
   secondsPerMeasure() {
     return (60 / this.bpm) * BEATS_PER_MEASURE;
+  }
+
+  private convertEventToSound(
+    event: PlaybackEvent
+  ): Sound | SamplerSequence | null {
+    const library = MusicLibrary.getInstance();
+    if (!library) {
+      this.metricsReporter.logWarning('Library not set. Cannot play sounds.');
+      return null;
+    }
+
+    if (event.type === 'sound') {
+      const soundEvent = event as SoundEvent;
+      const soundData = library.getSoundForId(soundEvent.id);
+      if (!soundData) {
+        this.metricsReporter.logWarning('No sound for ID: ' + soundEvent.id);
+        return null;
+      }
+
+      return {
+        sampleId: soundEvent.id,
+        transportTime: this.playbackTimeToTransportTime(soundEvent.when),
+        originalBpm: soundData.bpm || 120,
+        pitchShift:
+          soundData.type === 'beat' ? 0 : this.key - (soundData.key || Key.C),
+      };
+    }
+
+    if (event.type === 'chord') {
+      const chordEvent = event as ChordEvent;
+
+      const {instrument, notes} = chordEvent.value;
+      if (notes.length === 0) {
+        return null;
+      }
+
+      const generatedNotes: ChordNote[] = generateNotesFromChord(
+        chordEvent.value
+      );
+
+      return {
+        instrument,
+        events: generatedNotes.map(({note, tick}) => ({
+          notes: [getFullNoteName(note)],
+          transportTime: this.playbackTimeToTransportTime(
+            chordEvent.when + (tick - 1) / 16
+          ),
+        })),
+      };
+    }
+
+    return null;
+  }
+
+  private playbackTimeToTransportTime(playbackTime: number): string {
+    const bar = Math.floor(playbackTime);
+    const beat = Math.floor((playbackTime - bar) * 4);
+    const sixteenths = Math.floor((playbackTime - bar - beat / 4) * 16);
+    return `${bar - 1}:${beat}:${sixteenths}`;
+  }
+
+  private transportTimeToPlaybackTime(transportTime: string): number {
+    const [bar, beat, sixteenths] = transportTime.split(':').map(Number);
+    return bar + 1 + beat / 4 + sixteenths / 16;
   }
 
   private convertEventToSamples(event: PlaybackEvent): SampleEvent[] {
@@ -300,22 +387,44 @@ export default class MusicPlayer {
       chordEvent.value
     );
 
-    generatedNotes.forEach(note => {
-      const sampleId = this.getSampleForNote(note.note, instrument);
-      if (sampleId !== null) {
-        const noteWhen = chordEvent.when + (note.tick - 1) / 16;
+    // const samplerSequence: SamplerSequence = {
+    //   instrument,
+    //   events: generatedNotes.map(({note, tick}) => ({
+    //     notes: [note],
+    //     when: this.convertPlayheadPositionToSeconds(
+    //       chordEvent.when + (tick - 1) / 16
+    //     ),
+    //   })),
+    // };
 
-        results.push({
-          sampleId,
-          offsetSeconds: this.convertPlayheadPositionToSeconds(noteWhen),
-          playbackRate: 1,
-          pitchShift: 0,
-          ...event,
-        });
-      }
-    });
+    return [
+      {
+        //samplerSequence,
+        sampleId: 'sampler',
+        offsetSeconds: this.convertPlayheadPositionToSeconds(chordEvent.when),
+        triggered: chordEvent.triggered,
+        effects: chordEvent.effects,
+        playbackRate: 1,
+        pitchShift: 0,
+      },
+    ];
 
-    return results;
+    // generatedNotes.forEach(note => {
+    //   const sampleId = this.getSampleForNote(note.note, instrument);
+    //   if (sampleId !== null) {
+    //     const noteWhen = chordEvent.when + (note.tick - 1) / 16;
+
+    //     results.push({
+    //       sampleId,
+    //       offsetSeconds: this.convertPlayheadPositionToSeconds(noteWhen),
+    //       playbackRate: 1,
+    //       pitchShift: 0,
+    //       ...event,
+    //     });
+    //   }
+    // });
+
+    // return results;
   }
 
   private getSampleForNote(note: number, instrument: string): string | null {
@@ -388,5 +497,32 @@ export default class MusicPlayer {
     }
 
     return key;
+  }
+
+  setupInstruments() {
+    const library = MusicLibrary.getInstance();
+    if (library === undefined) {
+      console.warn('no library');
+      return;
+    }
+
+    const instruments = library.groups[0].folders.filter(
+      folder => folder.type === 'instrument'
+    );
+
+    instruments.forEach(instrument => {
+      // this.samplePlayer.setupInstrument(
+      //   instrument.path,
+      //   instrument.sounds.map(sound => `${instrument.path}/${sound.src}`),
+      //   instrument.sounds[0].note || 48
+      // );
+
+      const sampleMap = instrument.sounds.reduce((map, sound) => {
+        map[sound.note || 48] = `${instrument.path}/${sound.src}`;
+        return map;
+      }, {} as {[note: number]: string});
+
+      this.tonePlayer.loadInstrument(instrument.path, sampleMap);
+    });
   }
 }

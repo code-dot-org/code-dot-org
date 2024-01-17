@@ -8,8 +8,8 @@ import PreviewControls from './PreviewControls';
 import musicI18n from '../locale';
 import moduleStyles from './chordPanel.module.scss';
 
-const NUM_OCTAVES = 3;
-const START_OCTAVE = 4;
+const NUM_OCTAVES = 5;
+const START_OCTAVE = 3;
 const MAX_NOTES = 16;
 
 const styleDropdownOptions: [PlayStyle, string][] = [

@@ -36,6 +36,12 @@ export const isBlackKey = (note: number): boolean => {
 
 export const getNoteName = (note: number): string => Key[note % 12];
 
+export const getNoteOctave = (note: number): number =>
+  Math.floor(note / 12) - 1;
+
+export const getFullNoteName = (note: number): string =>
+  getNoteName(note) + getNoteOctave(note);
+
 // Transpose the note by adding the note offset to the target note defined
 // by the target key.
 export const getTranposedNote = (targetKey: Key, noteOffset: number) =>
