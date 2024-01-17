@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-12 21:21:20 UTC",
+    "serialized_at": "2024-01-16 19:54:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2712,7 +2712,7 @@
       "key": "90ba6bbc-b06b-4b64-9222-31a66e581c48",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each student a copy of the [r html_web_page_2/csd/2024]",
+        "description": "**Distribute:** Give each student a copy of the HTML Web Page Project Guide.",
         "name": "Designing and Building Web Pages for Users",
         "tips": [
           {
