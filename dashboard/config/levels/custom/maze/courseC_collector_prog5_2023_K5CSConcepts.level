@@ -1,6 +1,5 @@
 <Karel>
   <config><![CDATA[{
-  "published": true,
   "game_id": 25,
   "created_at": "2023-12-12T23:22:32.000Z",
   "level_num": "custom",
@@ -43,8 +42,9 @@
     "show_type_hints": "false",
     "preload_asset_list": null
   },
+  "published": true,
   "notes": "All blocks already attached, but some in wrong order. How do you fix?",
-  "audit_log": "[{\"changed_at\":\"2023-12-12T23:22:32.583+00:00\",\"changed\":[\"cloned from \\\"courseC_collector_prog5_2023\\\"\"],\"cloned_from\":\"courseC_collector_prog5_2023\"},{\"changed_at\":\"2023-12-12 23:22:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-03 20:57:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-03 21:00:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-03 21:01:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-03 21:02:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-03 21:04:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-12-12T23:22:32.583+00:00\",\"changed\":[\"cloned from \\\"courseC_collector_prog5_2023\\\"\"],\"cloned_from\":\"courseC_collector_prog5_2023\"},{\"changed_at\":\"2023-12-12 23:22:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-03 20:57:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-03 21:00:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-03 21:01:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-03 21:02:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-03 21:04:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-11 22:59:56 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -96,16 +96,13 @@
     <toolbox_blocks>
       <xml>
         <block type="maze_move">
-          <title name="DIR">moveForward</title>
+          <field name="DIR">moveForward</field>
         </block>
         <block type="maze_turn">
-          <title name="DIR">turnRight</title>
+          <field name="DIR">turnRight</field>
         </block>
         <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-        </block>
-        <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="2-10">???</title>
+          <field name="DIR">turnLeft</field>
         </block>
         <block type="collector_collect"/>
       </xml>
