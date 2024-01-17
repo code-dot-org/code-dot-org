@@ -1,3 +1,4 @@
+import {getFullNoteName} from '../utils/Notes';
 import SoundEffects from './soundEffects';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -58,6 +59,7 @@ class AudioSystem {
     }
 
     soundEffects = new SoundEffects(audioContext, DEFAULT_DELAY_TIME);
+    this.samplers = {};
   }
 
   /**
@@ -85,6 +87,26 @@ class AudioSystem {
     if (['suspended', 'interrupted'].includes(audioContext.state)) {
       audioContext.resume();
     }
+  }
+
+  CreateSampler(instrument, buffers, startNote) {
+    const urls = {};
+    for (let i = 0; i < buffers.length; i++) {
+      urls[startNote + i] = buffers[i];
+    }
+
+    // eslint-disable-next-line no-undef
+    const sampler = new Tone.Sampler(urls).toDestination();
+    this.samplers[instrument] = sampler;
+  }
+
+  PlayNotes(instrument, noteEvents) {
+    noteEvents.forEach(({notes, when}) => {
+      this.samplers[instrument].triggerAttack(
+        notes.map(note => getFullNoteName(note)),
+        `+${when}`
+      );
+    });
   }
 
   PlaySoundByBuffer(

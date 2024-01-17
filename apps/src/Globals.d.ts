@@ -32,4 +32,4 @@ declare module '*.svg' {
   export = value;
 }
 
-declare const Tone;
+declare const Tone: typeof import('tone') & Record<string, any>;
