@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_01_04_215831) do
+ActiveRecord::Schema.define(version: 2024_01_11_003957) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -414,6 +414,29 @@ ActiveRecord::Schema.define(version: 2024_01_04_215831) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["key"], name: "index_data_docs_on_key", unique: true
     t.index ["name"], name: "index_data_docs_on_name"
+  end
+
+  create_table "datablock_storage_kvps", primary_key: ["channel_id", "key"], charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.string "channel_id", limit: 22, null: false
+    t.string "key", limit: 768, null: false
+    t.json "value"
+  end
+
+  create_table "datablock_storage_records", primary_key: ["channel_id", "table_name", "record_id"], charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.string "channel_id", limit: 22, null: false
+    t.string "table_name", limit: 768, null: false
+    t.integer "record_id", null: false
+    t.json "record_json"
+    t.index ["channel_id", "table_name"], name: "index_datablock_storage_records_on_channel_id_and_table_name"
+  end
+
+  create_table "datablock_storage_tables", primary_key: ["channel_id", "table_name"], charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.string "channel_id", limit: 22, null: false
+    t.string "table_name", limit: 768, null: false
+    t.json "columns"
+    t.string "is_shared_table", limit: 768
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "delayed_jobs", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
