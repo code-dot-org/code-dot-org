@@ -1,0 +1,30 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-01-16T22:58:59.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "level_data": {
+      "panels": [
+        {
+          "imageUrl": "https://images.code.org/a0b21072c1fb7f0c21dedf4f806bf608-musiclab_intro_end_0.png",
+          "text": "Nice work!  You just learned how to:\n\n- Play a sound\n\n- Play sounds together\n\n- Repeat sounds\n\n- Use functions\n\n- Trigger sounds\n\nBut did you know there's even more?"
+        },
+        {
+          "imageUrl": "https://images.code.org/aa31c5258bbb31a623d50ba9482e6a00-musiclab_intro_end_1.png",
+          "text": "You'll see even more new things in the next level, including:\n\n- A beat-making block\n\n- Sounds effects like reverb and filters\n\n- A synthesizer block\n\n- A block for randomizing what gets played\n\n- And more!"
+        },
+        {
+          "imageUrl": "https://images.code.org/294f99cfd6e1d55a2738e91a71b53570-musiclab_intro_end_2.png",
+          "text": "You're Good To Go!\n\nYou've learned the basics, and now you're ready to make your own mix!  Be sure to explore the toolbox and the sound library - there's lots more to explore and use to make an amazing track."
+        }
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2024-01-16 23:00:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>
