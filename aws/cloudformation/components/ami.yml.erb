@@ -59,6 +59,8 @@ frontend_device_name ||= '/dev/sda1'
         Timeout: <%=ami_timeout%>
         Count: 1
   WebServerAMI:
+    # Don't start provisioning Front End web application server Resources until the Stack's Daemon has completed.
+    DependsOn: [<%=daemon%>]
     Type: AWS::EC2::Instance
     Properties:
       ImageId: <%=image_id%>
