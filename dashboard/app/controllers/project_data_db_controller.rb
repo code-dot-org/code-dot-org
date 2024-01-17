@@ -57,12 +57,12 @@ class ProjectDataDbController < ApplicationController
     # COMMIT;
 
     record = nil
+    json = JSON.parse params[:json]
 
     # BEGIN;
     Record.transaction do
       # channel_id_quoted = Record.connection.quote(params[:channel_id])
       # table_name_quoted = Record.connection.quote(params[:table_name])
-      json = JSON.parse params[:json]
 
       # SELECT MIN(record_id) FROM unfirebase.records WHERE channel_id='shared' AND table_name='words' LIMIT 1 FOR UPDATE;
       # =>
@@ -77,12 +77,16 @@ class ProjectDataDbController < ApplicationController
       max_record_id = Record.where(channel_id: params[:channel_id], table_name: params[:table_name]).maximum(:record_id)
       next_record_id = (max_record_id || 0) + 1
 
+      # We write the record_id into the JSON as well as storing it in its own column
+      # only create_record and update_record should be at risk of modifying this
+      json['id'] = next_record_id
+
       #   INSERT INTO unfirebase.records VALUES ('shared', 'words', @id, '{}');
       record = Record.create(channel_id: params[:channel_id], table_name: params[:table_name], record_id: next_record_id, json: json)
     end
     # COMMIT;
 
-    render json: record
+    render json: json
   end
 
   # This would require MySQL option MULTI_STATEMENTS set on the connection, which
@@ -119,7 +123,9 @@ class ProjectDataDbController < ApplicationController
   def update_record
     record = Record.find_by(channel_id: params[:channel_id], table_name: params[:table_name], record_id: params[:record_id])
     if record
-      record.json = JSON.parse params[:json]
+      json = JSON.parse params[:json]
+      json['id'] = params[:record_id].to_i
+      record.json = json
       record.save!
       render json: record
     else
