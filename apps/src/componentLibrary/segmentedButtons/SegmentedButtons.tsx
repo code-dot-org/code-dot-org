@@ -6,6 +6,8 @@ import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import SegmentedButton, {
   SegmentedButtonModel,
   SegmentButtonType,
+  isIconOnlySegmentedButtonModel,
+  isWithLabelSegmentedButtonModel,
 } from './_SegmentedButton';
 import moduleStyles from './segmentedButtons.module.scss';
 
@@ -52,20 +54,35 @@ const SegmentedButtons: React.FunctionComponent<SegmentedButtonsProps> = ({
         className
       )}
     >
-      {buttons.map(({label, disabled, iconLeft, iconRight, icon, value}) => (
-        <SegmentedButton
-          key={label}
-          selected={selectedButtonValue === value}
-          label={label}
-          onChange={onChange}
-          disabled={disabled}
-          iconLeft={iconLeft}
-          iconRight={iconRight}
-          icon={icon}
-          buttonType={type}
-          value={value}
-        />
-      ))}
+      {buttons.map(buttonProps => {
+        const {label, disabled, value, buttonType} = buttonProps;
+        return (
+          <SegmentedButton
+            key={label}
+            selected={selectedButtonValue === value}
+            label={label}
+            onChange={onChange}
+            disabled={disabled}
+            iconLeft={
+              isWithLabelSegmentedButtonModel(buttonProps)
+                ? buttonProps.iconLeft
+                : undefined
+            }
+            iconRight={
+              isWithLabelSegmentedButtonModel(buttonProps)
+                ? buttonProps.iconRight
+                : undefined
+            }
+            icon={
+              isIconOnlySegmentedButtonModel(buttonProps)
+                ? buttonProps.icon
+                : undefined
+            }
+            buttonType={buttonType || type}
+            value={value}
+          />
+        );
+      })}
     </div>
   );
 };
