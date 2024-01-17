@@ -117,20 +117,24 @@ export interface ProjectLevelData {
 // The level data for a standalone_video level that doesn't require
 // reloads between levels.
 export interface VideoLevelData {
-  video: {
-    src: string;
-    download: string;
-  }
+  src: string;
+  download: string;
+}
+
+// The level data for a panels level that doesn't require
+// reloads between levels.
+export interface PanelsLevelData {
   panels: [
     {
+      imageUrl: string;
       text: string;
     }
-  ]
+  ];
 }
 
 // TODO: Add AichatLevelData.
 
-export type LevelData = ProjectLevelData | VideoLevelData;
+export type LevelData = ProjectLevelData | VideoLevelData | PanelsLevelData;
 
 // A validation condition.
 export interface Condition {
@@ -203,7 +207,8 @@ export type AppName =
   | 'poetry'
   | 'pythonlab'
   | 'spritelab'
-  | 'standalone_video';
+  | 'standalone_video'
+  | 'panels';
 
 export type StandaloneAppName =
   | 'spritelab'
