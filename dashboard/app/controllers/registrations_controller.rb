@@ -7,7 +7,7 @@ class RegistrationsController < Devise::RegistrationsController
   respond_to :json
   prepend_before_action :authenticate_scope!, only: [
     :edit, :update, :destroy, :upgrade, :set_email, :set_user_type,
-    :migrate_to_multi_auth, :demigrate_from_multi_auth
+    :migrate_to_multi_auth, :demigrate_from_multi_auth, :revoke_admin
   ]
   skip_before_action :verify_authenticity_token, only: [:set_age]
   skip_before_action :clear_sign_up_session_vars, only: [:new, :begin_sign_up, :cancel, :create]
@@ -314,6 +314,26 @@ class RegistrationsController < Devise::RegistrationsController
              json: current_user.errors.as_json(full_messages: true),
              content_type: 'application/json'
     end
+  end
+
+  #
+  # PATCH /users/revoke_admin
+  #
+  # Route allowing user to revoke their admin permissions.
+  #
+  def revoke_admin
+    password_required = current_user.encrypted_password.present?
+    invalid_password = !current_user.valid_password?(params[:password_confirmation])
+    if password_required && invalid_password
+      current_user.errors.add :current_password
+      render json: {
+        error: current_user.errors.as_json(full_messages: true)
+      }, status: :bad_request
+      return
+    end
+
+    current_user.update(admin: false)
+    head :no_content
   end
 
   #

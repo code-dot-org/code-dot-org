@@ -14,6 +14,7 @@ import ManageLinkedAccountsController from '@cdo/apps/lib/ui/accounts/ManageLink
 import DeleteAccount from '@cdo/apps/lib/ui/accounts/DeleteAccount';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import color from '@cdo/apps/util/color';
+import RevokeAdmin from '@cdo/apps/lib/ui/accounts/RevokeAdmin';
 
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
@@ -139,17 +140,15 @@ $(document).ready(() => {
   }
 
   const revokeAdminMountPoint = document.getElementById('revoke-admin');
-  console.log(revokeAdminMountPoint);
   if (revokeAdminMountPoint) {
     ReactDOM.render(
-      // <RevokeAdmin
-      //   isPasswordRequired={isPasswordRequired}
-      //   isTeacher={userType === 'teacher'}
-      //   dependedUponForLogin={dependedUponForLogin}
-      //   dependentStudents={dependentStudents}
-      //   hasStudents={studentCount > 0}
-      // />
-      <div>Hello</div>,
+      <RevokeAdmin
+        isPasswordRequired={isPasswordRequired}
+        isTeacher={userType === 'teacher'}
+        dependedUponForLogin={dependedUponForLogin}
+        dependentStudents={dependentStudents}
+        hasStudents={studentCount > 0}
+      />,
       revokeAdminMountPoint
     );
   }

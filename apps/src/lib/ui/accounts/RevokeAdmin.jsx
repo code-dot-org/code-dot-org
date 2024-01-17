@@ -3,20 +3,15 @@ import React from 'react';
 import $ from 'jquery';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
-import {
-  TeacherWarning,
-  StudentWarning,
-  getCheckboxes,
-} from './DeleteAccountHelpers';
+import {getCheckboxes} from './DeleteAccountHelpers';
 import {navigateToHref} from '@cdo/apps/utils';
 import BootstrapButton from './BootstrapButton';
-import PersonalLoginDialog, {
-  dependentStudentsShape,
-} from './PersonalLoginDialog';
-import DeleteAccountDialog from './DeleteAccountDialog';
+import {dependentStudentsShape} from './PersonalLoginDialog';
+import RevokeAdminDialog from './RevokeAdminDialog';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 export const DELETE_VERIFICATION_STRING =
-  i18n.deleteAccountDialog_verificationString();
+  i18n.revokeAdminDialog_verificationString();
 
 const DEFAULT_STATE = {
   isPersonalLoginDialogOpen: false,
@@ -124,18 +119,18 @@ export default class RevokeAdmin extends React.Component {
     );
   };
 
-  deleteUser = () => {
+  revokeAdmin = () => {
     const payload = {
       password_confirmation: this.state.password,
     };
 
     $.ajax({
-      url: '/users',
-      method: 'DELETE',
+      url: '/users/revoke_admin',
+      method: 'PATCH',
       data: payload,
     })
       .done(result => {
-        navigateToHref('/');
+        navigateToHref('/users/edit');
       })
       .fail((jqXhr, _) => {
         this.onFailure(jqXhr);
@@ -156,9 +151,8 @@ export default class RevokeAdmin extends React.Component {
   };
 
   render() {
-    const {isTeacher, dependentStudents, isPasswordRequired} = this.props;
+    const {isTeacher, isPasswordRequired} = this.props;
     const {
-      isPersonalLoginDialogOpen,
       isDeleteAccountDialogOpen,
       checkboxes,
       password,
@@ -171,15 +165,15 @@ export default class RevokeAdmin extends React.Component {
     return (
       <div style={styles.container}>
         <hr style={styles.hr} />
-        <h2 style={styles.header}>{i18n.deleteAccount()}</h2>
+        <h2 style={styles.header}>{i18n.revokeAdmin()}</h2>
         <div style={styles.warning}>
-          {isTeacher ? <TeacherWarning /> : <StudentWarning />}
+          <SafeMarkdown markdown={i18n.revokeAdminMessage()} />
         </div>
         <div style={styles.buttonContainer}>
           {/* This button intentionally uses BootstrapButton to match other account page buttons */}
           <BootstrapButton
             type="danger"
-            text={i18n.deleteAccount()}
+            text={i18n.revokeAdmin()}
             onClick={
               isDependedUponForLogin
                 ? this.togglePersonalLoginDialog
@@ -187,13 +181,7 @@ export default class RevokeAdmin extends React.Component {
             }
           />
         </div>
-        <PersonalLoginDialog
-          isOpen={isPersonalLoginDialogOpen}
-          dependentStudents={dependentStudents}
-          onCancel={this.togglePersonalLoginDialog}
-          onConfirm={this.goToDeleteAccountDialog}
-        />
-        <DeleteAccountDialog
+        <RevokeAdminDialog
           isOpen={isDeleteAccountDialogOpen}
           isTeacher={isTeacher}
           isPasswordRequired={isPasswordRequired}
@@ -207,7 +195,7 @@ export default class RevokeAdmin extends React.Component {
           onDeleteVerificationChange={this.onDeleteVerificationChange}
           onCancel={this.toggleDeleteAccountDialog}
           disableConfirm={!this.isValid()}
-          deleteUser={this.deleteUser}
+          deleteUser={this.revokeAdmin}
           deleteError={deleteError}
         />
       </div>
