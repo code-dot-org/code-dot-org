@@ -80,6 +80,9 @@ cn:
   social_hoc2019_dance: 主演凯蒂·佩里、肖恩·门德斯、Panic！在 The Disco，Lil Nas X、Jonas Brothers、Nicki
     Minaj 等等 34 个！
   social_hoc_anybody: 编程一小时：任何人都可以学习
+  hoc_interest_form_header: Get notified when Hour of Code registration opens!
+  hoc_interest_form_desc: Be the first to know about this year's Hour of Code, including
+    new activities and when registrations for Hour of Code events begin.
   oceans_landing_title: "  保护海洋的人工智能 (AI for Oceans)"
   oceans_landing_description: "  了解机器学习和 AI 的道德使用。"
   cs_for_good_hashtag: "#面向未来的CS"
@@ -190,6 +193,12 @@ cn:
   curricula_desc_middle: 浏览引人入胜的课程，使您和您的中学生能够一起探索计算机科学。
   curricula_title_high: 高中课程
   curricula_desc_high: 浏览引人入胜的课程和活动，邀请您和您的高中生深入研究计算机科学。
+  facilitator_led_pl_heading: Facilitator-Led Professional Learning Workshops
+  facilitator_led_pl_desc: Learn about our professional learning workshops for elementary,
+    middle, and high school teachers.
+  self_paced_pl_heading: Self-Paced Professional Learning
+  self_paced_pl_desc: Professional learning at your own pace. Explore our online,
+    self-paced professional learning modules.
   for_administrators_heading: 对于管理员
   for_administrators_desc: 加入成千上万已经将计算机科学纳入课程的学校行列。
   for_parents_heading: 给父母
@@ -243,6 +252,7 @@ cn:
   call_to_action_start_part_02: 从第二部分开始
   call_to_action_start_unplugged_activity: 开始不插电的活动
   call_to_action_view_promo_resources: 查看促销资源
+  call_to_action_view_teach_with_cdo: Start teaching with Code.org
   call_to_action_get_involved: 参与其中
   call_to_action_learn_more: 了解更多
   call_to_action_watch_now: 立即观看
@@ -380,6 +390,9 @@ cn:
   aria_label_call_to_action_dance_02: 开始舞会活动的第二部分
   aria_label_call_to_action_dance_unplugged: 不插电就开始 Dance Party 活动
   aria_label_call_to_action_afe: 了解有关亚马逊未来工程师的更多信息
+  aria_label_call_to_action_facilitator_pl: Learn more about facilitator-led professional
+    learning workshops
+  aria_label_call_to_action_self_paced_pl: 进一步了解自定进度的专业学习
   aria_label_call_to_action_teaching_csf: 启动 “计算机科学基础知识教学” 专业学习计划
   aria_label_call_to_action_teaching_csd: 启动 “计算机科学发现” 教学专业学习计划
   aria_label_call_to_action_teaching_csp: 启动 “计算机科学原理教学” 专业学习计划
@@ -465,6 +478,17 @@ cn:
   aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
   aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
     A
+  aria_label_call_to_action_afe_alexa: Learn more about Alexa for Astronauts
+  aria_label_call_to_action_afe_cloud_tour: Learn more about the Uncovering Cloud
+    Computer Career Tour
+  aria_label_call_to_action_afe_voice: Learn more about Amazon's Your Voice is Power
+    competition
+  aria_label_call_to_action_afe_scholarships: Learn more about Amazon's scholarships
+    and internships
+  aria_label_call_to_action_afe_robotics: Learn more about the Robotics Fulfillment
+    Center Tour
+  aria_label_call_to_action_afe_data_tour: Learn more about the Keeping Data Safe
+    Career Tour
   video_title_professional_learning_program: Code.org 的专业学习计划
   video_title_young_women_in_computer_science: 计算机科学领域的年轻女性
   curriculum_name_csf: 计算机科学基础知识
@@ -535,6 +559,8 @@ cn:
   curriculum_desc_csa_ai_long: '这个分为两章的 AP 后 CSA 模块为高中生提供了使用专业软件开发工具（包括 GitHub 和 GitHub
     Copilot）的实践经验，并向他们传授了开发计算机视觉程序的现实技能。 '
   curriculum_desc_csa_ai_short: 这个 post-AP® CSA 模块为高中生提供了使用专业软件开发工具的实践经验。
+  curriculum_desc_catalog: Explore our robust catalog of curriculum offerings for
+    all ages and levels — completely free.
   collection_hardware: 聚焦硬件
   collection_hardware_desc: 使学生能够使用数据和物理设备来解决问题。
   collection_design_purpose: 专注于有目的的设计
@@ -574,6 +600,7 @@ cn:
   module_label_video_series: 视频系列
   module_label_self_paced: 自定进度模块
   module_label_event_or_lessons: Event or lessons
+  module_label_or: Or
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -702,6 +729,7 @@ cn:
   heading_acceptance: Acceptance
   heading_enroll: Enroll
   heading_have_questions: Have questions?
+  heading_resources_for_educators: Code.org resources for educators
   student_courses_top_desc: Start coding today. Our courses and activities are free!
     It's easier—and more fun—than you think.
   student_courses_explore_desc: Explore the world of computer science with engaging
@@ -808,6 +836,13 @@ cn:
   dance_and_more: 还有更多
   dance_choose_activity: 选择你的舞会
   dance_afe_disclaimer: 在本教程中使用音乐的艺术家不赞助或认可亚马逊，这是向Code.org许可其音乐使用权的一部分。
+  dance_ai_behind_the_scenes: 'How does Dance Party: AI Edition work behind the scenes?'
+  dance_ai_behind_the_scenes_markdown: |-
+    In **Dance Party: AI Edition**, three selected emojis are used to generate an output effect using AI. An output effect consists of values for background effect, background color palette, and foreground effect.
+
+    Each emoji and each output value has a descriptive phrase associated with it. By comparing the similarity of an input emoji's phrase with an output value's phrase, we are able to use AI to recommend the best match.
+
+    To compute the similarity, each phrase is assigned an embedding. An [embedding](https://en.wikipedia.org/wiki/Word_embedding) is a list of numbers that captures the meaning of a phrase, and the embeddings used in **Dance Party: AI Edition** are about 1,500 numbers long. Similarity is measured by the "distance" between the phrases' embeddings.  In **Dance Party: AI Edition**, we use embeddings generated by the [Amazon Bedrock Titan model](https://aws.amazon.com/bedrock/titan/) and calculate similarity by computing the cosine distance between embeddings.
   minecraft_hero_heading: "《我的世界》编程一小时教程"
   minecraft_activities_desc: 所有教程都有多种语言版本，并与现代浏览器和平板电脑兼容。没有互联网？[下载《我的世界冒险家》的离线版本！](%{offline_url})
   minecraft_cdo_activity_title_aquatic: 我的世界水上航行
@@ -829,6 +864,63 @@ cn:
   minecraft_education_activity_desc_2020: 编程我的世界特工，收集有关森林火灾的数据。学习编程基础知识并探索人工智能的真实示例。
   minecraft_resources_desc_01: 按需使用此课程[免费课程](%{course_url})或为整个班级注册，与客座教师一起参加编程一小时的直播研讨会。在计算机科学教育周期间多次提供，%{campaign_date}。
   minecraft_resources_desc_02: 在专业发展的支持下，通过200小时的计算机科学课程（从模块到python）激发 K-12年级学习者的STEM热情。
+  afe_page_heading: Free resources from Amazon Future Engineer
+  afe_page_top_desc: 'Enhance your teaching experience with Code.org in partnership
+    with [Amazon Future Engineer](%{afe_url}). Eligible educators from underserved
+    schools can access these benefits at no cost:'
+  afe_page_top_list_01: "**Professional Growth:** Complimentary CSTA+ membership,
+    with expert-led webinars and resources."
+  afe_page_top_list_02: "**Opportunities:** Chance to join a paid-fellowship experience
+    to increase access in computer science working alongside industry experts at Amazon!"
+  afe_page_top_list_03: "**Resources:** Inspiration kits, including posters and stickers,
+    to engage students in computer science."
+  afe_page_top_list_04: "**Innovation:** Exclusive access to pilot programs that explore
+    cutting-edge career and computer science topics."
+  afe_page_eligibility_heading: School Eligibility Requirements*
+  afe_page_eligibility_list_01: Title 1 and/or > 40% Free/Reduced Lunch (FRL) student
+    enrollment
+  afe_page_eligibility_list_02: ">30% Black/Latino/Native American (BLNA) student
+    enrollment"
+  afe_page_eligibility_list_03: Rural school
+  afe_page_eligibility_disclaimer: "*Eligibility requirements verified using [NCES
+    data](%{nces_url})."
+  afe_page_programs_heading: More Amazon Future Engineer programs & opportunities
+  afe_page_programs_alexa_title: Alexa Skills Inventor
+  afe_page_programs_alexa_desc: Learn how to program Alexa with skills that could
+    help astronauts solve problems in space and communities at home.
+  afe_page_programs_cloud_tour_title: Uncovering Cloud Computer Career Tour
+  afe_page_programs_cloud_tour_desc: How did we go from renting movies at the store
+    to streaming from anywhere at any time? Learn how data centers and cloud computing
+    have changed the way we watch our favorite content, and the careers behind it.
+  afe_page_programs_voice_title: Your Voice is Power
+  afe_page_programs_voice_desc: Students will code and compete to learn how entrepreneurship,
+    coding, and music can intersect for positive change.
+  afe_page_programs_scholarships_title: Scholarships and Internships
+  afe_page_programs_scholarships_desc: Supporting students after high school is imperative
+    to fulfilling the Amazon Future Engineer mission for all of our scholars.
+  afe_page_programs_robotics_title: Robotics Fulfillment Center Tour
+  afe_page_programs_robotics_desc: Discover how computer science, state-of-the-art
+    engineering, and incredible people deliver customer orders at Amazon.
+  afe_page_programs_data_tour_title: Keeping Data Safe Career Tour
+  afe_page_programs_data_tour_desc: You want to upload your photos to the cloud, but
+    what if something happens at a data center? Learn how AWS and data center professionals
+    keep data safe and sustainable.
+  afe_page_success_heading: Congratulations! You successfully signed up for the Amazon
+    Future Engineer Program.
+  afe_page_success_desc: You should receive an email shortly from Amazon Future Engineer
+    to claim your benefits. In the meantime, check out some of the amazing resources
+    around our site.
+  afe_page_eligibility_check_heading: We've checked your eligibility
+  afe_page_eligibility_check_fail_desc: Your school does not meet the eligibility
+    [requirements*](%{req_url}) for the Amazon Future Engineer benefits, but you can
+    still take advantage of all Code.org has to offer, including our robust curriculum
+    and professional learning opportunities.
+  afe_page_eligibility_check_fail_error: If you think you received this message in
+    error, contact us at [support@code.org](%{email_url}).
+  afe_page_eligibility_check_disclaimer: "*To participate in the Amazon Future Engineer
+    program, a school must have Title 1 status OR have student enrollment of more
+    than 40% underrepresented minority students and/or 40% students who qualify for
+    free or reduced lunch."
   blockchain_hero_heading: 区块链是如何运作的
   blockchain_hero_desc: 通过我们的新视频系列 “区块链的工作原理” 和随附的课程，深入了解区块链的世界！
   blockchain_intro_heading: 看看区块链是如何运作的
@@ -1378,6 +1470,8 @@ cn:
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
   csd_page_pick_a_course_heading: 为你的课堂选择合适的计算机科学发现课程
+  csd_page_pick_a_course_heading_non_en: Picking the right %{cs_discoveries} (CS Discoveries)
+    course for your classroom
   csd_page_pick_a_course_desc: 计算机科学发现提供多种选择，因此总有可以满足各种需求的课程。
   csd_page_pick_a_course_heading_02: 你想如何挑选内容？
   csd_page_courses_year_desc: 学生可以通过7个单元探索各种各样的主题。

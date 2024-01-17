@@ -204,6 +204,11 @@ mk:
         options:
           EFFECT:
             '"rain"': дожд
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': Сина
+            '"red"': Црвена
       gamelab_checkTouching:
         options:
           CONDITION:

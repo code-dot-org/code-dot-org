@@ -118,6 +118,7 @@ uk:
           description: Спробуйте основи інформатики з персонажами зі Злих птахів та Рослин проти Зомбі!
           description_short: Спробуйте основи інформатики з цікавими персонажами!
           student_description: Спробуйте основи інформатики з персонажами зі Злих птахів та Рослин проти Зомбі!
+          name: Година коду
         text-compression:
           title: Стиснення тексту
         algebraPD2a:
@@ -4419,6 +4420,9 @@ uk:
               name: Поведінка
             lesson-5:
               name: Наступні Кроки
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Починаємо
         self-paced-pl-k5-2024-1:
           lessons:
             lesson-3:
@@ -4427,4 +4431,107 @@ uk:
               name: Умови
             lesson-6:
               name: Наступні Кроки
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Починаємо
           title: Вступ до інформатики
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опитування
+            csp_unit1_2020:
+              display_name: 'Розділ 1: Цифрова інформація'
+        csp2-2024:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Розділ 2: Інтернет'
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Опитування
+            lessonGroup-3:
+              display_name: Зміст
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+            lessonGroup-4:
+              display_name: Опитування
+        csa-postap-se-and-computer-vision-2024:
+          title: Програмна інженерія та комп'ютерний зір
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: Змінні
+            csp_conditionals:
+              display_name: Умови
+            csp_functions:
+              display_name: Функції
+            csp_project:
+              display_name: Проєкт
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Дані
+            lessonGroup-5:
+              display_name: Опитування після закінчення курсу
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Списки
+            lessonGroup-3:
+              display_name: Цикли
+            lessonGroup-4:
+              display_name: Переходи
+            lessonGroup-5:
+              display_name: Проєкт
+            lessonGroup-2:
+              display_name: Опитування після закінчення курсу
+        csp7-2024:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Параметри і значення, які повертаються
+            csp_libraries:
+              display_name: Бібліотеки
+            lessonGroup-3:
+              display_name: Опитування після закінчення курсу
+        csp8-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Опитування після закінчення курсу
+        csp9-2024:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Розділ 9: Дані'
+            lessonGroup-2:
+              display_name: Опитування після закінчення курсу
+        csp10-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Опитування після закінчення курсу
+        csp-post-survey-2024:
+          description: Цей розділ містить опитування після завершення курсу Принципи інформатики CS Principles.

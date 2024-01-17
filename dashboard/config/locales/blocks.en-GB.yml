@@ -93,6 +93,11 @@ en-GB:
           KEY:
             '"space"': space
             '"x"': x
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': blue
+            '"red"': red
       Mikelab_randomColor:
         text: random colour
       Mikelab_setBG:

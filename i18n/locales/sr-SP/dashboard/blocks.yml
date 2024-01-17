@@ -442,6 +442,11 @@ sr:
           EFFECT:
             '"hearts"': срца
             '"rain"': киша
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': плава
+            '"red"': црвена
       gamelab_addTarget:
         options:
           OPT:

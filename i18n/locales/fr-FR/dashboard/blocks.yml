@@ -1112,6 +1112,14 @@ fr:
         options:
           INPUT1:
             '1': Jus de citron
+      DansBlocks_testShowVariable:
+        options:
+          OPT:
+            '"large"': grand(s)
+            '"small"': petit(s)
+          COLOR:
+            '"blue"': bleu
+            '"red"': rouge
       FunctionBlocks_communicate:
         text: Communiquez [VAR1]et[0] avec {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:

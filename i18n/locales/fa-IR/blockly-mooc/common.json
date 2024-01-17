@@ -1431,6 +1431,7 @@
   "loginInfo_signinStep4_secretPicture": "انتخاب عکس محرمانه آنها.",
   "loginInfo_signinStep4_secretWords": "وارد کردن واژه های محرمانه آنها.",
   "loginInfo_signinStep5": "کلیک بر دکمه \"Sign in\".",
+  "loginInfoLtiSetupHeader": "تشکیل کلاس خود",
   "loginType": "نوع ورود",
   "loginTypeClever": "Clever",
   "loginTypeCleverButton": "استفاده از Clever",

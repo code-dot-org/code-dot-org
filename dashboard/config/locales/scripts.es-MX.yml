@@ -260,6 +260,7 @@ es-MX:
             Angry Birds y Plantas vs. Zombis!"
           description_short: "¡Prueba los fundamentos de la informática con muchos
             personajes divertidos!"
+          name: Hora del código
           student_description: "¡Prueba los fundamentos de la informática con personajes
             de Angry Birds y Plantas vs. Zombis!"
           title: La hora del código 2013
@@ -2475,6 +2476,21 @@ es-MX:
             lesson-9:
               name: Estilo de Programación y Comentarios
           title: Programación Orientada a Objetos
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Encuesta
+            lessonGroup-3:
+              display_name: Contenido
+            lessonGroup-4:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-5:
+              display_name: Lecciones alternativas
+            lessonGroup-6:
+              display_name: Encuesta Final de la Unidad
+            lessonGroup-7:
+              display_name: Encuesta Piloto
+          title: Programación Orientada a Objetos
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2581,6 +2597,19 @@ es-MX:
               name: Variables
             lesson-9:
               name: Imprimiendo objetos
+          title: Estructura y Diseño de la Clase
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Lecciones alternativas
+            lessonGroup-5:
+              display_name: Encuesta Final de la Unidad
+            lessonGroup-6:
+              display_name: Encuesta Piloto
           title: Estructura y Diseño de la Clase
         csa2-exemplars:
           lesson_groups:
@@ -2705,6 +2734,19 @@ es-MX:
             lesson-3:
               name: Bucles Para
           title: Arrays y Algoritmos
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Lecciones alternativas
+            lessonGroup-5:
+              display_name: Encuesta Final de la Unidad
+            lessonGroup-6:
+              display_name: Encuesta Piloto
+          title: Arrays y Algoritmos
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2801,6 +2843,19 @@ es-MX:
               name: Proyecto Arte en el Asfalto - Día 2
             lesson-9:
               name: Aleatorio
+          title: Condiciones y Lógica
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Lecciones alternativas
+            lessonGroup-5:
+              display_name: Encuesta Final de la Unidad
+            lessonGroup-6:
+              display_name: Encuesta Piloto
           title: Condiciones y Lógica
         csa4-exemplars:
           lesson_groups:
@@ -2925,6 +2980,19 @@ es-MX:
             lesson-16:
               name: Proyecto Arte en el Asfalto - Día 2
           title: Arrays Bidimensionales
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Lecciones alternativas
+            lessonGroup-5:
+              display_name: Encuesta Final de la Unidad
+            lessonGroup-6:
+              display_name: Encuesta Piloto
+          title: Arrays Bidimensionales
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -3043,6 +3111,45 @@ es-MX:
               name: Encuesta de la Unidad 6
             lesson-16:
               name: Proyecto Arte en el Asfalto - Día 2
+          student_description: Esta unidad continúa ampliando las estructuras de datos
+            para introducirte en la creación de listas utilizando la clase `ArrayList`.
+            En el proceso, aprenderás sobre las clases `Integer` y `Double` y utilizarás
+            sus métodos para analizar datos de archivos de texto y explorar los límites
+            de los valores enteros. Diferenciarás cuándo utilizar cada tipo de estructura
+            de datos mientras aprendes sobre la estructura y funcionalidad de un `ArrayList`.
+            Aplicarás algoritmos estándar para encontrar y manipular datos en un `ArrayList`
+            de datos numéricos y de objetos. A lo largo de la unidad, se aprende a
+            utilizar la clase `String` para analizar y procesar el texto obtenido
+            de un usuario y de la entrada de un archivo, al tiempo que se aprenden
+            las técnicas y aplicaciones básicas del procesamiento del lenguaje natural.
+            Además, desarrollarás tus conocimientos de ingeniería de software escribiendo
+            comentarios Javadoc para crear documentación de la API para tus programas.
+          title: ArrayLists y Métodos de Cadena
+        csa6-2024:
+          description: |-
+            En esta unidad, los estudiantes utilizan `ArrayList`s para almacenar los datos del programa y diferencian cuándo utilizar arrays 1D y 2D y `ArrayList`s. Los alumnos exploran las ventajas y la funcionalidad de un `ArrayList`, utilizándolo para resolver problemas que implican datos numéricos y de objetos. Los alumnos utilizan los métodos de la clase `String` para analizar y procesar el texto obtenido de la entrada del usuario y del archivo. A lo largo de la unidad, los alumnos escriben la documentación del programa utilizando comentarios de una línea, comentarios de varias líneas y comentarios Javadoc para crear la documentación de la API. En el proceso, los estudiantes identifican y documentan las precondiciones y postcondiciones de los objetos y métodos.
+
+            ### Controles de progreso personal del Aula AP
+
+            Para asignar preguntas del banco de preguntas de AP Classroom que se ajusten a esta unidad, cree un cuestionario personalizado en AP Classroom buscando en el banco de preguntas los enunciados de los conocimientos esenciales en la página [\*\*Estándares\*\*](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=6) de la unidad. Puede encontrar instrucciones y vídeos de demostración para hacerlo en [**AP Central**][1].
+
+            Las siguientes comprobaciones de progreso personal en el Aula AP se pueden asignar durante la semana de "Demuestra lo que sabes":
+
+            -   Control de Progreso Personal 2
+            -   Control de Progreso Personal 7
+
+            **_Nota:_** _Algunos de los objetivos de aprendizaje y de los conocimientos esenciales que aparecen en los controles de progreso personal sugeridos se tratan en unidades posteriores._
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Lecciones alternativas
+            lessonGroup-5:
+              display_name: Encuesta Final de la Unidad
+            lessonGroup-6:
+              display_name: Encuesta Piloto
           student_description: Esta unidad continúa ampliando las estructuras de datos
             para introducirte en la creación de listas utilizando la clase `ArrayList`.
             En el proceso, aprenderás sobre las clases `Integer` y `Double` y utilizarás
@@ -3192,6 +3299,41 @@ es-MX:
               name: Proyecto Arte en el Asfalto - Día 2
             lesson-6:
               name: Propiedad Intelectual
+          student_description: En esta unidad, se practica el diseño y el desarrollo
+            de software utilizando los conocimientos que se han adquirido a lo largo
+            del plan de estudios mientras se planifica y desarrolla un proyecto de
+            codificación creativo para transmitir un interés personal o una historia
+            utilizando El Teatro. Utilizarás estrategias de descomposición y principios
+            orientados a objetos para planificar e implementar tus ideas mientras
+            te aseguras de que tu proyecto cumple con los requisitos especificados.
+            En el proceso, se aprende a escribir métodos `privados`, sobrecargados
+            y anulados y a utilizar la palabra clave `super` en un método de la subclase
+            para llamar a un método de la superclase mientras se explora la funcionalidad
+            de los métodos y sus parámetros. A lo largo de la unidad, practicarás
+            el rastreo y la escritura de métodos recursivos y la comparación de estos
+            métodos con las soluciones iterativas. Con los conocimientos y habilidades
+            adquiridos a lo largo del año, consideras la necesidad de maximizar la
+            fiabilidad del sistema mientras exploras errores y problemas en los programas
+            existentes.
+          title: Descomposición de Métodos y Recursión
+        csa7-2024:
+          description: |-
+            Esta unidad permite a los alumnos practicar el diseño y el desarrollo de software utilizando los conocimientos que han adquirido a lo largo del plan de estudios mientras planifican y desarrollan un proyecto de codificación creativo para transmitir un interés personal o una historia utilizando El Teatro. Los alumnos utilizan estrategias de descomposición y principios orientados a objetos para planificar e implementar sus ideas mientras se aseguran de que sus proyectos cumplen con los requisitos especificados. En el proceso, los estudiantes aprenden a escribir métodos `privados`, sobrecargados y anulados y a utilizar la palabra clave `super` en un método de la subclase para llamar a un método de la superclase mientras exploran la funcionalidad de los métodos y sus parámetros. A lo largo de la unidad, los alumnos practican el rastreo y la escritura de métodos recursivos y la comparación de estos métodos con las soluciones iterativas. Con los conocimientos y habilidades adquiridos a lo largo del año, los estudiantes consideran la necesidad de maximizar la fiabilidad del sistema mientras exploran los errores y problemas en los programas existentes.
+
+            ### Controles de Progreso Personal del Aula AP
+
+            Para asignar preguntas del Banco de Preguntas del Aula AP que se alineen con esta unidad, cree un cuestionario personalizado en el Aula AP buscando en el Banco de Preguntas los enunciados de Conocimientos Esenciales en la página [\*\*Estándares\*\*](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=7) de la unidad. Puede encontrar instrucciones y vídeos de demostración para hacerlo en [**AP Central**][1].
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Encuesta Final de la Unidad
+            lessonGroup-5:
+              display_name: Lecciones alternativas
+            lessonGroup-6:
+              display_name: Encuesta Piloto
           student_description: En esta unidad, se practica el diseño y el desarrollo
             de software utilizando los conocimientos que se han adquirido a lo largo
             del plan de estudios mientras se planifica y desarrolla un proyecto de
@@ -3362,6 +3504,43 @@ es-MX:
             del año, analizas la privacidad y la seguridad de los programas y los
             usuarios.
           title: Buscando y Ordenando
+        csa8-2024:
+          description: |-
+            En esta unidad, los estudiantes aplican algoritmos de búsqueda y ordenación para trabajar con listas de datos primitivos y de objetos almacenados en arrays 1D y 2D y `ArrayList`s. Los estudiantes analizan la eficiencia de los algoritmos de búsqueda y ordenación y amplían los algoritmos estándar que han desarrollado a lo largo del curso para resolver problemas más complejos. A lo largo de la unidad, los estudiantes aplican sus conocimientos y habilidades de programación para desarrollar un juego que incorpora el diseño orientado a objetos y la eficiencia. Los estudiantes concluyen la unidad y el curso considerando la privacidad y seguridad de sus programas y usuarios.
+
+            ### Controles de progreso personal del Aula AP
+
+            Para asignar preguntas del Banco de Preguntas de AP Classroom que se ajusten a esta unidad, cree un cuestionario personalizado en AP Classroom buscando en el Banco de Preguntas los enunciados de Conocimientos Esenciales en la página [\*\*Estándares\*\*](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=8) de la unidad. Puede encontrar instrucciones y vídeos de demostración para hacerlo en [**AP Central**][1].
+
+            Las siguientes comprobaciones de progreso personal en el Aula AP pueden asignarse durante la semana de "Demuestra lo que sabes":
+
+            -   Control de Progreso Personal 10
+
+            **_Nota:_** Algunos de los objetivos de aprendizaje y de los conocimientos esenciales que aparecen en los controles de progreso personal sugeridos se tratan en unidades posteriores.\_
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Encuesta
+            lessonGroup-5:
+              display_name: Lecciones alternativas
+            lessonGroup-6:
+              display_name: Encuesta Piloto
+          student_description: En esta unidad, ampliarás los algoritmos que has aprendido
+            para explorar enfoques comunes de búsqueda y ordenación de arrays 1D y
+            2D y `ArrayList`s. En el proceso, analizarás y compararás las eficiencias
+            de estos algoritmos utilizando recuentos de ejecución de sentencias y
+            desarrollarás aún más los conocimientos de resolución de problemas para
+            descomponer problemas complejos. A lo largo de la unidad, aplicas tus
+            conocimientos de programación e ingeniería de software para planificar
+            y desarrollar un proyecto de codificación creativo utilizando la consola
+            que incorpora diseño orientado a objetos, estructuras de datos y pensamiento
+            algorítmico. Con los conocimientos y habilidades adquiridos a lo largo
+            del año, analizas la privacidad y la seguridad de los programas y los
+            usuarios.
+          title: Buscando y Ordenando
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -3499,6 +3678,28 @@ es-MX:
             Identificarás los puntos fuertes y las áreas de mejora para crear planes
             de estudio individualizados que te permitan enfocar tu práctica y autoevaluar
             el progreso.
+        csa9-2024:
+          description: Esta unidad prepara a los estudiantes para el examen AP CSA
+            repasando los conceptos clave, practicando las preguntas de opción múltiple
+            y de respuesta libre, y reforzando las estrategias para realizar el examen.
+            Los estudiantes identifican los puntos fuertes y las áreas de mejora para
+            crear planes de estudio individualizados para enfocar su práctica y autoevaluar
+            su progreso.
+          description_short: Los estudiantes se preparan para el examen AP CSA practicando
+            estrategias para las preguntas de opción múltiple y de respuesta libre.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Revisión y Práctica
+            lessonGroup-3:
+              display_name: Simulacros de Exámenes
+            lessonGroup-4:
+              display_name: Encuesta Piloto
+          student_description: Esta unidad te prepara para el examen AP CSA repasando
+            los conceptos clave, practicando las preguntas de opción múltiple y de
+            respuesta libre, y reforzando las estrategias para realizar el examen.
+            Identificarás los puntos fuertes y las áreas de mejora para crear planes
+            de estudio individualizados que te permitan enfocar tu práctica y autoevaluar
+            el progreso.
         csa9-pilot:
           lesson_groups:
             lessonGroup-2:
@@ -3548,21 +3749,21 @@ es-MX:
             estudiantes simularán un ecosistema de vida marina en las Lecciones 1
             y 2. Para familiarizarte con este ecosistema, te recomendamos este [Video
             de Animales Marinos](https://www.youtube.com/watch?v=8adtdg0N2-g) (9:42
-            minutos). \n\nEn la Lección 2, los estudiantes codificarán varias prácticas
-            de pesca sostenibles. Estas son algunas lecturas para promover el conocimientos
+            minutos). \n\nEn la Lección 2, los estudiantes programarán varias prácticas
+            de pesca sostenibles. Estas son algunas lecturas para promover el conocimiento
             y profundizar las conexiones con el mundo real: [Entendiendo la sobrepesca](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing)
             (artículo del Acuario de la Bahía de Monterey), o [Mw, kwa Talks to the
             Loon](https://books.google.com/books/about/Mw_kwa_Talks_to_the_Loon.html?id=ZtJfkFFPTzIC)
             (Libro infantil).\n\n**Ciencias de la Computación:** En este módulo, los
-            estudiantes aprenderán nuevos conceptos de codificación que podrían ser
-            difíciles para los estudiantes de ciencias de la computación nuevos. Si
+            estudiantes aprenderán nuevos conceptos de programación que podrían ser
+            difíciles para los nuevos estudiantes de ciencias de la computación. Si
             los estudiantes no están familiarizados con el Sprite Lab de Code.org
             recomendamos probar [Peces en Sprite Lab](https://studio.code.org/s/coursee-2022/lessons/3)
             (55 minutos) para una introducción básica a la herramienta. \n\nEste módulo
-            también utiliza un concepto avanzado de CS llamado sentencias condicionales.
-            Los estudiantes aprenden este concepto de manera andamiada, pero algunos
-            estudiantes pueden beneficiarse de participar primero en esta introducción
-            a condicionales actividad desenchufada: [Tarjetas Condicionales](https://studio.code.org/s/coursed-2022/lessons/12)
+            también utiliza un conceptos más avanzados de la CS como las declaraciones
+            condicionales. Los estudiantes aprenden este concepto de manera estructurada,
+            pero algunos estudiantes pueden beneficiarse de participar primero en
+            esta introducción a condicionales actividad sin conexión: [Tarjetas Condicionales](https://studio.code.org/s/coursed-2022/lessons/12)
             (50 minutos)."
           lessons:
             lesson-3:
@@ -6431,6 +6632,13 @@ es-MX:
             Principios de Informática. Tu profesor te dirá cuándo es el momento de
             realizar esta encuesta.
           title: Encuesta de fin de curso de Principios de Ciencias de la Computación
+        csp-post-survey-2024:
+          description: Esta unidad contiene la Encuesta Final del Curso de Principios
+            de Informática.
+          student_description: Esta unidad contiene una encuesta sobre el Curso de
+            Principios de Informática. Tu profesor te dirá cuándo es el momento de
+            realizar esta encuesta.
+          title: Encuesta de fin de curso de Principios de Ciencias de la Computación
         csp-pre-survey:
           name: csp-pre-encuesta
           title: 'Principios de Informática: Encuesta previa'
@@ -6590,6 +6798,27 @@ es-MX:
             mundial.
           title: Información digital ('21-'22)
         csp1-2023:
+          description: Esta unidad estudia los retos y cuestiones técnicas que surgen
+            de la necesidad de representar la información digital en los ordenadores.
+            Aprende cómo se representa la información compleja, como los números,
+            el texto, las imágenes y el sonido, cómo funciona la compresión y las
+            repercusiones sociales más amplias de la digitalización de la información
+            mundial.
+          description_short: Explora los desafíos e impactos de representar la información
+            sobre el mundo que te rodea en bits.
+          lesson_groups:
+            cspSurvey:
+              display_name: Encuesta
+            csp_unit1_2020:
+              display_name: 'Tema 1: Información digital'
+          student_description: Esta unidad estudia los retos y cuestiones técnicas
+            que surgen de la necesidad de representar la información digital en los
+            ordenadores. Aprende cómo se representa la información compleja, como
+            los números, el texto, las imágenes y el sonido, cómo funciona la compresión
+            y las repercusiones sociales más amplias de la digitalización de la información
+            mundial.
+          title: Información digital ('21-'22)
+        csp1-2024:
           description: Esta unidad estudia los retos y cuestiones técnicas que surgen
             de la necesidad de representar la información digital en los ordenadores.
             Aprende cómo se representa la información compleja, como los números,
@@ -6850,6 +7079,25 @@ es-MX:
             a través de una variedad de actividades prácticas y descubre cómo se está
             aplicando en la informática moderna.
           title: Algoritmos ('21-'22)
+        csp10-2024:
+          description: Esta unidad es una rápida exploración de cómo los informáticos
+            diseñan algoritmos para resolver problemas y cómo analizan la velocidad
+            de diferentes algoritmos. Aprende sobre el concepto de eficiencia algorítmica
+            a través de una variedad de actividades prácticas y descubre cómo se está
+            aplicando en la informática moderna.
+          description_short: Diseñar y analizar algoritmos para entender cómo funcionan
+            y por qué algunos se consideran mejores que otros.
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Unidad 10: Ciberseguridad e impactos globales'
+            lessonGroup-2:
+              display_name: Encuesta de final de curso
+          student_description: Esta unidad es una rápida exploración de cómo los informáticos
+            diseñan algoritmos para resolver problemas y cómo analizan la velocidad
+            de diferentes algoritmos. Aprende sobre el concepto de eficiencia algorítmica
+            a través de una variedad de actividades prácticas y descubre cómo se está
+            aplicando en la informática moderna.
+          title: Algoritmos ('21-'22)
         csp10-pilot:
           title: Ciberseguridad e impactos globales
         csp10-pilot-staging:
@@ -7044,6 +7292,22 @@ es-MX:
             tanto bueno como malo, en la vida moderna.
           title: Internet ('21-'22)
         csp2-2023:
+          description: Esta unidad revela cómo se diseñó Internet para conectar miles
+            de millones de dispositivos y personas entre sí. Aprende cómo funcionan
+            los distintos protocolos de Internet y constrúyelos tú mismo con el Simulador
+            de Internet. A continuación, analiza el impacto que ha tenido Internet,
+            tanto bueno como malo, en la vida moderna.
+          description_short: Construye Internet desde cero con el Simulador de Internet.
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Unidad 2: Internet'
+          student_description: Esta unidad revela cómo se diseñó Internet para conectar
+            miles de millones de dispositivos y personas entre sí. Aprende cómo funcionan
+            los distintos protocolos de Internet y constrúyelos tú mismo con el Simulador
+            de Internet. A continuación, analiza el impacto que ha tenido Internet,
+            tanto bueno como malo, en la vida moderna.
+          title: Internet ('21-'22)
+        csp2-2024:
           description: Esta unidad revela cómo se diseñó Internet para conectar miles
             de millones de dispositivos y personas entre sí. Aprende cómo funcionan
             los distintos protocolos de Internet y constrúyelos tú mismo con el Simulador
@@ -7346,6 +7610,26 @@ es-MX:
             enseñe a tus compañeros de clase sobre un tema de tu elección.
           title: Introducción al Diseño de Aplicaciones ('21-'22)
         csp3-2023:
+          description: Esta unidad es una iniciación a la programación y al diseño
+            de aplicaciones con un fuerte enfoque en habilidades importantes como
+            la depuración, la programación en parejas y las pruebas de usuario. Aprende
+            a diseñar interfaces de usuario y a escribir programas basados en eventos
+            en Laboratorio de Aplicaciones y luego diseña un proyecto que enseñe a
+            tus compañeros de clase sobre un tema de tu elección.
+          description_short: Diseña tu primera aplicación y aprende cómo los programadores
+            colaboran e interactúan con los usuarios para construir las mejores soluciones
+            posibles a los problemas.
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Unidad 3: Introducción al diseño de aplicaciones'
+          student_description: Esta unidad es una iniciación a la programación y al
+            diseño de aplicaciones con un fuerte enfoque en habilidades importantes
+            como la depuración, la programación en parejas y las pruebas de usuario.
+            Aprende a diseñar interfaces de usuario y a escribir programas basados
+            en eventos en Laboratorio de Aplicaciones y luego diseña un proyecto que
+            enseñe a tus compañeros de clase sobre un tema de tu elección.
+          title: Introducción al Diseño de Aplicaciones ('21-'22)
+        csp3-2024:
           description: Esta unidad es una iniciación a la programación y al diseño
             de aplicaciones con un fuerte enfoque en habilidades importantes como
             la depuración, la programación en parejas y las pruebas de usuario. Aprende
@@ -7725,6 +8009,31 @@ es-MX:
             de toma de decisiones para compartirla con tus amigos y ayudarles a tomar
             una decisión.
           title: Variables, Condicionales y Funciones ('21-'22)
+        csp4-2024:
+          description: Esta unidad explora cómo las variables, las condicionales y
+            las funciones permiten el diseño de aplicaciones cada vez más complejas.
+            Aprende a programar con estos tres nuevos conceptos a través de una secuencia
+            de actividades colaborativas. A continuación, construye tu propia aplicación
+            de toma de decisiones para compartirla con tus amigos y ayudarles a tomar
+            una decisión.
+          description_short: Aprende a crear aplicaciones que almacenen información,
+            tomen decisiones y mantengan el código organizado.
+          lesson_groups:
+            csp_conditionals:
+              display_name: Condicionales
+            csp_functions:
+              display_name: Funciones
+            csp_project:
+              display_name: Proyecto
+            csp_variables:
+              display_name: Variables
+          student_description: Esta unidad explora cómo las variables, las condicionales
+            y las funciones permiten el diseño de aplicaciones cada vez más complejas.
+            Aprende a programar con estos tres nuevos conceptos a través de una secuencia
+            de actividades colaborativas. A continuación, construye tu propia aplicación
+            de toma de decisiones para compartirla con tus amigos y ayudarles a tomar
+            una decisión.
+          title: Variables, Condicionales y Funciones ('21-'22)
         csp4-dlp:
           description: 'Esta es la Unidad 4 del Plan de Aprendizaje Profundo para
             facilitadores de CSP de Code.org en período de formación. Aquí encontrarás
@@ -8051,6 +8360,30 @@ es-MX:
             mundo. En el proyecto de la unidad, analizarás un conjunto de datos de
             tu elección y presentarás tus conclusiones. '
           title: Datos ('21-'22)
+        csp5-2024:
+          description: Esta unidad describe las listas, los bucles y los recorridos,
+            y explora el modo en que pueden utilizarse para crear aplicaciones que
+            almacenen y procesen grandes cantidades de información. Aprende a programar
+            con la biblioteca de datos en Laboratorio de Aplicaciones y completa un
+            proyecto de hackatón de 5 días al final de la unidad donde puedes diseñar
+            un programa sobre cualquier tema que elijas.
+          description_short: Explora y visualiza conjuntos de datos de una gran variedad
+            de temas mientras buscas patrones e intentas aprender más sobre el mundo
+            que te rodea.
+          lesson_groups:
+            csp_lists:
+              display_name: Datos
+            lessonGroup-5:
+              display_name: Encuesta de final de curso
+          student_description: 'En esta unidad aprenderás cómo el análisis de datos
+            ayuda a convertir los datos en bruto en información útil sobre el mundo.
+            Aprendes a utilizar la visualización de datos para encontrar patrones
+            dentro de los conjuntos de datos y aprendes cómo este proceso de análisis
+            de datos se utiliza en contextos como los datos abiertos o el aprendizaje
+            automático para ayudar a tomar decisiones o aprender más sobre nuestro
+            mundo. En el proyecto de la unidad, analizarás un conjunto de datos de
+            tu elección y presentarás tus conclusiones. '
+          title: Datos ('21-'22)
         csp5-dlp:
           description: 'Esta es la Unidad 5 del Plan de Aprendizaje Profundo para
             facilitadores de CSP de Code.org en período de formación. Aquí encontrarás
@@ -8305,6 +8638,32 @@ es-MX:
             proyecto de hackatón de 5 días al final de la unidad donde puedes diseñar
             un programa sobre cualquier tema que elijas.
           title: Listas, Bucles y Recorridos ('21-'22)
+        csp6-2024:
+          description: Esta unidad es una rápida exploración de cómo los informáticos
+            diseñan algoritmos para resolver problemas y cómo analizan la velocidad
+            de diferentes algoritmos. Aprende sobre el concepto de eficiencia algorítmica
+            a través de una variedad de actividades prácticas y descubre cómo se está
+            aplicando en la informática moderna.
+          description_short: Aprende a crear aplicaciones que utilicen listas, bucles
+            y recorridos para almacenar y procesar grandes cantidades de información.
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listas
+            lessonGroup-2:
+              display_name: Encuesta de final de curso
+            lessonGroup-3:
+              display_name: Bucles
+            lessonGroup-4:
+              display_name: Recorridos
+            lessonGroup-5:
+              display_name: Proyecto
+          student_description: Esta unidad describe las listas, los bucles y los recorridos,
+            y explora el modo en que pueden utilizarse para crear aplicaciones que
+            almacenen y procesen grandes cantidades de información. Aprende a programar
+            con la biblioteca de datos en Laboratorio de Aplicaciones y completa un
+            proyecto de hackatón de 5 días al final de la unidad donde puedes diseñar
+            un programa sobre cualquier tema que elijas.
+          title: Listas, Bucles y Recorridos ('21-'22)
         csp6-pilot:
           lesson_groups:
             content:
@@ -8478,6 +8837,27 @@ es-MX:
             con tus compañeros de clase. Termina la unidad diseñando una biblioteca
             de funciones en torno a cualquier tema de tu elección.
           title: Parámetros, Retorno y Librerías ('21-'22)
+        csp7-2024:
+          description: Esta unidad explica los parámetros, el retorno y las bibliotecas.
+            Aprende a utilizar estos conceptos para construir nuevos tipos de aplicaciones,
+            así como bibliotecas de código que puedes compartir con tus compañeros
+            de clase. Termina la unidad diseñando una biblioteca de funciones en torno
+            a cualquier tema de tu elección.
+          description_short: Aprende a diseñar un código limpio y reutilizable que
+            puedas compartir con un solo compañero o con todo el mundo.
+          lesson_groups:
+            csp_libraries:
+              display_name: Librerías
+            csp_parameters_return_values:
+              display_name: Parámetros y valores de retorno
+            lessonGroup-3:
+              display_name: Encuesta de final de curso
+          student_description: Esta unidad explica los parámetros, el retorno y las
+            bibliotecas. Aprende a utilizar estos conceptos para construir nuevos
+            tipos de aplicaciones, así como bibliotecas de código que puedes compartir
+            con tus compañeros de clase. Termina la unidad diseñando una biblioteca
+            de funciones en torno a cualquier tema de tu elección.
+          title: Parámetros, Retorno y Librerías ('21-'22)
         csp7-pilot:
           lesson_groups:
             csp_libraries:
@@ -8538,6 +8918,30 @@ es-MX:
             útiles para ayudarte a entender la tarea y desarrollar un plan para completarla.
           title: Crear PT - Preparación ('21-'22)
         csp8-2023:
+          description: En esta unidad aprenderás cómo las innovaciones informáticas
+            han influido en nuestro mundo de forma beneficiosa y perjudicial. Aprende
+            cómo los datos pueden suponer una amenaza para nuestra privacidad y seguridad
+            y las formas en que se utilizan la encriptación y otras técnicas para
+            protegerlos. A lo largo de la unidad participa en una conferencia sobre
+            la "escuela del futuro" en la que tú y un equipo hacéis una propuesta
+            sobre la mejor manera de mejorar la vida escolar con las innovaciones
+            informáticas.
+          description_short: Practica y completa la Create Performance Task (PT).
+          lesson_groups:
+            lessonGroup-2:
+              display_name: PT de creación
+            lessonGroup-3:
+              display_name: Encuesta de final de curso
+          student_description: En esta unidad aprenderás cómo las innovaciones informáticas
+            han influido en nuestro mundo de forma beneficiosa y perjudicial. Aprende
+            cómo los datos pueden suponer una amenaza para nuestra privacidad y seguridad
+            y las formas en que se utilizan la encriptación y otras técnicas para
+            protegerlos. A lo largo de la unidad participa en una conferencia sobre
+            la "escuela del futuro" en la que tú y un equipo hacéis una propuesta
+            sobre la mejor manera de mejorar la vida escolar con las innovaciones
+            informáticas.
+          title: Ciberseguridad e Impactos Globales ('21-'22)
+        csp8-2024:
           description: En esta unidad aprenderás cómo las innovaciones informáticas
             han influido en nuestro mundo de forma beneficiosa y perjudicial. Aprende
             cómo los datos pueden suponer una amenaza para nuestra privacidad y seguridad
@@ -8699,6 +9103,20 @@ es-MX:
             tu elección y presentarás tus conclusiones. '
           title: Datos ('22-'23)
         csp9-2023:
+          description: En esta unidad se prepara y se realiza la AP Create Performance
+            Task. Cada lección contiene enlaces a documentos y actividades útiles
+            para ayudarte a entender la tarea y desarrollar un plan para completarla.
+          description_short: Practica y completa la Create Performance Task (PT).
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Unidad 9: Datos'
+            lessonGroup-2:
+              display_name: Encuesta de final de curso
+          student_description: En esta unidad se prepara y se realiza la AP Create
+            Performance Task. Cada lección contiene enlaces a documentos y actividades
+            útiles para ayudarte a entender la tarea y desarrollar un plan para completarla.
+          title: Crear PT - Preparación ('21-'22)
+        csp9-2024:
           description: En esta unidad se prepara y se realiza la AP Create Performance
             Task. Cada lección contiene enlaces a documentos y actividades útiles
             para ayudarte a entender la tarea y desarrollar un plan para completarla.
@@ -12004,6 +12422,9 @@ es-MX:
             lesson-1:
               name: Lección 1
         self-paced-pl-k5-2024-1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Primeros pasos
           lessons:
             lesson-1:
               name: Lección 1
@@ -12017,6 +12438,9 @@ es-MX:
               name: Próximos pasos
           title: Introducción a Ciencias de la Computación
         self-paced-pl-k5-2024-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Primeros pasos
           lessons:
             lesson-1:
               name: Lección 1

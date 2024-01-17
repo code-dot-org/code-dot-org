@@ -1328,6 +1328,7 @@
   "loginInfo_signinStep4_secretPicture": "Alege imaginea lor secretă.",
   "loginInfo_signinStep4_secretWords": "Introduceţi cuvintele lor secrete.",
   "loginInfo_signinStep5": "Faceți clic pe butonul \"Autentificare\".",
+  "loginInfoLtiSetupHeader": "Configurează clasa ta",
   "loginType": "Tip de conectare",
   "loginTypeClever": "Clever",
   "loginTypeCleverButton": "Utilizează Clever",

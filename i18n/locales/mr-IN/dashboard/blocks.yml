@@ -968,6 +968,14 @@ mr:
         options:
           INPUT1:
             '1': लिंबू रस
+      DansBlocks_testShowVariable:
+        options:
+          OPT:
+            '"large"': मोठे
+            '"small"': लहान
+          COLOR:
+            '"blue"': निळा
+            '"red"': लाल
       FunctionBlocks_communicate:
         text: "{VAR1} ला {SPRITE1COSTUME} शी संवाद साधा"
       FunctionBlocks_makeManipulative2:

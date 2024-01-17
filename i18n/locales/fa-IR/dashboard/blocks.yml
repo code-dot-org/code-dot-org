@@ -1063,6 +1063,14 @@ fa:
             '5': هر دو
       DansBlocks_testRectangle:
         text: 'ایجاد مستطیل x: {X} y: {Y} w: {W} h: {H} رنگ: {COLOR}'
+      DansBlocks_testShowVariable:
+        options:
+          OPT:
+            '"large"': بزرگ
+            '"small"': کوچک
+          COLOR:
+            '"blue"': آبی
+            '"red"': قرمز
       FunctionBlocks_addEightBlock:
         text: 8 واحد اضافه کنید
       FunctionBlocks_addFiveBlock:
@@ -1147,7 +1155,7 @@ fa:
             new Behavior(jittering, []): با عصبانیت رفتار کردن
             new Behavior(wobbling, []): تلوتلو خوردن
             new Behavior(wandering, []): گردش کردن
-            new Behavior(patrolling, []): گشت‌ زدن
+            new Behavior(patrolling, []): گشت‌زنی
             new Behavior(moving_west_and_looping, []): حرکت به سمت غرب و درست کردن حلقه‏
             new Behavior(moving_east_and_looping, []): حرکت به سمت شرق و درست کردن حلقه‏
             new Behavior(moving_north_and_looping, []): حرکت به سمت شمال و درست کردن حلقه‏
@@ -2524,7 +2532,7 @@ fa:
             new Behavior(jittering, []): با عصبانیت رفتار کردن
             new Behavior(wobbling, []): تلوتلو خوردن
             new Behavior(wandering, []): گردش کردن
-            new Behavior(patrolling, []): گشت‌ زدن
+            new Behavior(patrolling, []): گشت‌زنی
       adaptations_startFollowing:
         text: "{SPRITE} {TARGET} را دنبال میکند"
       binary_drawBin:
