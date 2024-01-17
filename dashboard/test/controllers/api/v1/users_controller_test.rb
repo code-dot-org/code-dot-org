@@ -73,6 +73,20 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_equal false, !!@user.mute_music
   end
 
+  test 'a post request to show_progress_table_v2 updates show_progress_table_v2' do
+    sign_in(@user)
+    assert_nil @user.show_progress_table_v2
+    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: true}
+    assert_response :success
+    @user.reload
+    assert @user.show_progress_table_v2
+
+    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: false}
+    assert_response :success
+    @user.reload
+    refute @user.show_progress_table_v2
+  end
+
   test 'a get request to display_theme returns display_theme attribute of user object' do
     sign_in(@user)
     get :get_display_theme, params: {user_id: 'me'}

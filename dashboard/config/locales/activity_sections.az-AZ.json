@@ -32500,7 +32500,7 @@
           "description": "**Keçid:**\n\nAğıllı şəkildə sıxılmış mətn mesajı nümunəsinə baxaq."
         },
         "78658467-dd3d-480e-9d99-1a7a190ff6ba": {
-          "description": "#### Bu Sirr Mətninin şifrəsini açın (10-15 dəqiqə)\n\n-   **Fəaliyyət təlimatını paylayın və ya göstərin**\n-   Tələbələri tərəfdaşlara qoyun və ya fərdi şəkildə işləyin.\n-   **Tapşırıq:** Orijinal mətn nə idi?\n-   Şagirdlərə mətni deşifrə etmək üçün bir neçə dəqiqə vaxt verin. Mətn qısa bir şeir olmalıdır (aşağıdakı fəaliyyət xülasəsinə baxın)\n\n| Tələbə Fəaliyyət Bələdçisi                                               | Fəaliyyət xülasəsi                                                                    |\n| ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------- |\n| **Paylaşdırın və ya göstərin** Fəaliyyət təlimatı                        | (Özünüzü göstərin və ya çəkin) Fəaliyyətin xülasəsi: Bu Mesajın şifrəsini açın        |\n| ![](https://code.org/curriculum/docs/csp/U2L02-pitterPatter-encoded.png) | ![](https://code.org/curriculum/docs/csp/U2L02-pitterPatter-compressionbreakdown.png) |\n\n**Recap: Nə qədər sıxılmışdı?**\n\nCavab vermək üçün orijinal şeirdəki simvolların sayını sıxılmış versiyanı təmsil etmək üçün lazım olan simvolların sayı ilə müqayisə etməliyik.\n\nGəlin onu parçalayaq.\n\n-   **Göstərin** və ya **Özünüzü nümayiş etdirin** ideyaları: [r activity-recap-decode-this-message] \\(yuxarıdakı cədvəldə göstərilib)\n\n-   **Vacib Qeyd**:\n\n    -   Sıxılmış şeir təkcə bu hissə deyil: ![](https://code.org/curriculum/docs/csp/U2L02-pitterPatter-compressed.png)\n\n Bunu İnternet üzərindən kiməsə göndərsəniz, o, kodu deşifrə edə bilməyəcək.\n     \\* Tam sıxılmış mətn HƏM sıxılmış mətni *həm də onu həll etmək üçün açarı ehtiva edir.\\\n     \\* Beləliklə, mesajdakı simvolların ümumi sayını \\_plus* açardakı simvolların ümumi sayını orijinal üzərində nə qədər sıxdığınızı görmək üçün hesablamalısınız.  \n\n**Keçid**\n\nİndi özünüz bəzi şeyləri sıxışdırmaq üçün əlinizi sınayacaqsınız."
+          "description": "#### Bu Sirr Mətninin şifrəsini açın (10-15 dəqiqə)\n\n-   **Fəaliyyət təlimatını paylayın və ya göstərin**\n-   Tələbələri tərəfdaşlara qoyun və ya fərdi şəkildə işləyin.\n-   **Tapşırıq:** Orijinal mətn nə idi?\n-   Şagirdlərə mətni deşifrə etmək üçün bir neçə dəqiqə vaxt verin. Mətn qısa bir şeir olmalıdır (aşağıdakı fəaliyyət xülasəsinə baxın)\n\n| Tələbə Fəaliyyət Bələdçisi                                               | Fəaliyyət xülasəsi                                                                    |\n| ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------- |\n| **Paylaşdırın və ya göstərin** Fəaliyyət təlimatı                        | (Özünüzü göstərin və ya çəkin) Fəaliyyətin xülasəsi: Bu Mesajın şifrəsini açın        |\n| ![](https://code.org/curriculum/docs/csp/U2L02-pitterPatter-encoded.png) | ![](https://code.org/curriculum/docs/csp/U2L02-pitterPatter-compressionbreakdown.png) |\n\n**Recap: Nə qədər sıxılmışdı?**\n\nCavab vermək üçün orijinal şeirdəki simvolların sayını sıxılmış versiyanı təmsil etmək üçün lazım olan simvolların sayı ilə müqayisə etməliyik.\n\nGəlin onu parçalayaq.\n\n-   **Göstərin** və ya **Özünüzü nümayiş etdirin** ideyaları: [r activity-recap-decode-this-message] \\(yuxarıdakı cədvəldə göstərilib)\n\n-   **Vacib Qeyd**:\n\n    -   Sıxılmış şeir təkcə bu hissə deyil: ![](https://code.org/curriculum/docs/csp/U2L02-pitterPatter-compressed.png)\n\n Bunu İnternet üzərindən kiməsə göndərsəniz, o, kodu deşifrə edə bilməyəcək.\n     \\* Tam sıxılmış mətn HƏM sıxılmış mətni _həm də onu həll etmək üçün açarı ehtiva edir.\\\n     \\\\_ Beləliklə, mesajdakı simvolların ümumi sayını \\_plus\\* açardakı simvolların ümumi sayını orijinal üzərində nə qədər sıxdığınızı görmək üçün hesablamalısınız.  \n\n**Keçid**\n\nİndi özünüz bəzi şeyləri sıxışdırmaq üçün əlinizi sınayacaqsınız."
         },
         "ad131c3e-2bb5-477f-a628-291c5ccc0410": {
           "description": "#### Mətn Sıxılma Vidcetindən istifadə edin\n\nVideonu göstərin - **Aloe Blacc ilə Mətn Kompressiyası**"
@@ -32749,17 +32749,17 @@
           "progression_name": "Mini-Layihə: Klik Oyunu"
         },
         "558aff7e-be0e-4c7a-be34-69b51c3a1561": {
-          "progression_name": "Arı ilə yuvalı döngələr"
+          "progression_name": "Arı ilə iç-içə dövrlər"
         },
         "1149d576-7d1e-4bd0-b17d-cbb82358303c": {
           "name": "Mini layihə: İnteraktiv plakat",
           "progression_name": "Mini layihə: İnteraktiv plakat"
         },
         "e749c485-42f3-45f1-9a42-ec47a42947d7": {
-          "progression_name": "Arı ilə yuvalı döngələr"
+          "progression_name": "Arı ilə iç-içə dövrlər"
         },
         "13e13a4d-03f1-45f6-8532-e69303f71086": {
-          "progression_name": "Arı ilə yuvalı döngələr"
+          "progression_name": "Arı ilə iç-içə dövrlər"
         },
         "7c7ef8a0-2eca-40ef-83c6-972c1aad2512": {
           "name": "Simulyasiya dəyişənlərini",
@@ -32772,17 +32772,17 @@
           "progression_name": "Mini-Layihə: Klik Oyunu"
         },
         "b4d6c23b-2f1e-40ff-9bbe-0839edb4c570": {
-          "progression_name": "Arı ilə yuvalı döngələr"
+          "progression_name": "Arı ilə iç-içə dövrlər"
         },
         "09dc1358-e6b6-46e9-9995-78d64b507557": {
           "name": "Mini layihə: İnteraktiv plakat",
           "progression_name": "Mini layihə: İnteraktiv plakat"
         },
         "9a52733e-7368-41eb-a0df-9c9ea52a10e1": {
-          "progression_name": "Arı ilə yuvalı döngələr"
+          "progression_name": "Arı ilə iç-içə dövrlər"
         },
         "be1bd9ff-944b-466e-98ac-52290ef315b5": {
-          "progression_name": "Arı ilə yuvalı döngələr"
+          "progression_name": "Arı ilə iç-içə dövrlər"
         },
         "48e30687-be8d-4670-98a7-838f5778f5a8": {
           "progression_name": "Simulyasiya dəyişənlərini"

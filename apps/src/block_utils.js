@@ -453,7 +453,12 @@ exports.appendNewFunctions = function (blocksXml, functionsXml) {
     ).stringValue;
     const alreadyPresent =
       startBlocksDocument.evaluate(
-        `//block[@type="${type}"]/field[@id="${name}"]`,
+        // Ignore namespaces. Find blocks of type e.g. behavior_definition
+        // Shared behavior name will either be in the mutation (Google Blockly)
+        // or the name field (CDO Blockly)
+        `//*[local-name()="block" and @type="${type}"]/*` +
+          `[self::*[local-name()="mutation" and @behaviorId="${name}"] or ` +
+          `self::*[local-name()="field" and @id="${name}"]]`,
         startBlocksDom,
         null,
         XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
@@ -961,6 +966,7 @@ exports.createJsWrapperBlockCreator = function (
       extraArgs,
       callbackParams,
       miniToolboxBlocks,
+      docFunc,
     },
     helperCode,
     pool
@@ -1037,11 +1043,15 @@ exports.createJsWrapperBlockCreator = function (
     const blockName = `${pool}_${name || func}`;
     if (eventLoopBlock && args.filter(arg => arg.statement).length === 0) {
       // If the eventloop block doesn't explicitly list its statement inputs,
-      // just tack one onto the end
-      args.push({
+      // just tack one onto the end.
+      let argsCopy = [...args];
+      // argsCopy is used to avoid a 'TypeError: Cannot add property 2, object is not extensible'
+      // that occurs for lab2 labs since `levelProperties` for lab2 is stored in Redux.
+      argsCopy.push({
         name: 'DO',
         statement: true,
       });
+      args = argsCopy;
     }
     const inputs = [...args];
     if (methodCall && !thisObject) {
@@ -1060,7 +1070,7 @@ exports.createJsWrapperBlockCreator = function (
     }
 
     blockly.Blocks[blockName] = {
-      helpUrl: '',
+      helpUrl: getHelpUrl(docFunc), // optional param
       init: function () {
         // Styles should be used over hard-coded colors in Google Blockly blocks
         if (style && this.setStyle) {
@@ -1119,6 +1129,12 @@ exports.createJsWrapperBlockCreator = function (
           );
         }
       },
+      // The following generic mutator functions are only used by Google Blockly
+      // and are intentionally undefined for CDO Blockly.
+      mutationToDom: Blockly.customBlocks.mutationToDom,
+      domToMutation: Blockly.customBlocks.domToMutation,
+      saveExtraState: Blockly.customBlocks.saveExtraState,
+      loadExtraState: Blockly.customBlocks.loadExtraState,
     };
 
     generator[blockName] = function () {
@@ -1270,4 +1286,12 @@ const sanitizeOptions = function (dropdownOptions) {
   return dropdownOptions.map(option =>
     option.length === 1 ? [option[0], option[0]] : option
   );
+};
+
+const getHelpUrl = function (docFunc) {
+  if (!docFunc) {
+    return '';
+  }
+  // Documentation is only available for Sprite Lab.
+  return `/docs/spritelab/${docFunc}`;
 };

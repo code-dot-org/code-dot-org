@@ -3,35 +3,7 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "ai-2020": {
-            "buttonText": "進一步了解",
-            "title": "探索人工智能和機器學習"
-          },
-          "ai-launch-2023": {
-            "buttonText": "進一步了解"
-          },
-          "ai-pl-launch-2023": {
-            "buttonText": "進一步了解"
-          },
-          "back-to-school-2021": {
-            "buttonText": "進一步了解"
-          },
-          "codebytes-2020": {
-            "buttonText": "進一步了解"
-          },
-          "coldplay": {
-            "buttonText": "試一試"
-          },
-          "congrats-certificate-share": {
-            "buttonText": "開始"
-          },
-          "csjourneys": {
-            "buttonText": "進一步了解"
-          },
-          "csjourneys-22": {
-            "buttonText": "進一步了解"
-          },
-          "csleadersprize": {
+          "co-teacher": {
             "buttonText": "進一步了解"
           },
           "hoc-2023": {
@@ -44,26 +16,8 @@
             "buttonText": "進一步了解",
             "title": "舞蹈派對：AI版"
           },
-          "hoc-more": {
-            "body": "一小時玩程式的網站匯集了由 Code.org 及其合作夥伴所設計的超過 500 多項計算機科學活動，適用於所有年齡和不同經驗水平的人。"
-          },
-          "home-learning-2020": {
-            "buttonText": "查看專案靈感"
-          },
           "superhero": {
             "buttonText": "繼續學習"
-          },
-          "teacher-apps-closing-2021": {
-            "buttonText": "加入我們"
-          },
-          "teacher-apps-nominate-2020": {
-            "buttonText": "任命為老師"
-          },
-          "teacher-apps-open-2021": {
-            "buttonText": "加入我們"
-          },
-          "teacher-apps-stillon-2020": {
-            "buttonText": "加入我們"
           }
         }
       }

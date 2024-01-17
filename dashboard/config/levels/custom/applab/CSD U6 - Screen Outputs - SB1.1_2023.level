@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:11:32.000Z",
   "level_num": "custom",
@@ -15,7 +16,7 @@
     "long_instructions": "# Changing Text\r\n\r\nYou can also change the text of elements on the screen using the [`setText()`(#fff176)](/docs/applab/setText/) block. Let's update the app so it uses your name in the app.\r\n\r\n_Note: We've removed the Design Mode tab for now so you can practice working with `setProperty` and `setText`, but it'll come back later once you're building apps of your own._\r\n\r\n## Do This\r\n\r\n1) Use a [`setText()`(#fff176)](/docs/applab/setText/) block to update the app to display your name\r\n\t* Drag out a [`setText()`(#fff176)](/docs/applab/setText/) block\r\n\t* For the first parameter, select \"nameLabel\" (the element's id)\r\n\t* For the second parameter, type in your name using quotes\r\n\r\n(Optional) Use [`setText()`(#fff176)](/docs/applab/setText/) to change the greeting as well - for example, changing it to \"Howdy\" or \"Hola\" or \"你好\"",
     "instructions_important": "false",
     "submittable": "false",
-    "start_blocks": "//This code updates the lable \"title\"\r\nsetProperty(\"title\", \"font-family\", \"Lucida Console\");\r\nsetProperty(\"title\", \"background-color\", \"cyan\");\r\n\r\n//1) Use a setText() block to update the app to display your name\r\n\r\n",
+    "start_blocks": "//This code updates the label \"title\"\r\nsetProperty(\"title\", \"font-family\", \"Lucida Console\");\r\nsetProperty(\"title\", \"background-color\", \"cyan\");\r\n\r\n//1) Use a setText() block to update the app to display your name\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -50,7 +51,6 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "false",
     "top_level_procedure_autopopulate": "false",
     "encrypted_examples": "ajxnGgCQa8F+tfog6NfbpHOo8R4hZXwZZZQlWGkKxNm2auxDT80Ffys3Gby6\n31P1aYQ7Eq9QS1Z7U7v/M29cQA==\n",
     "parent_level_id": 20376,
@@ -64,9 +64,8 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:11:32.502+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Outputs - SB1.1_2222\\\"\"],\"cloned_from\":\"CSD U6 - Screen Outputs - SB1.1_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:11:32.502+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Outputs - SB1.1_2222\\\"\"],\"cloned_from\":\"CSD U6 - Screen Outputs - SB1.1_2222\"},{\"changed_at\":\"2024-01-08 17:18:09 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

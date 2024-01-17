@@ -100,12 +100,12 @@ pt:
         desc: Para aprender sobre estruturas condicionais, o aluno joga um jogo de
           cartas e cria regras como "se eu comprar uma carta vermelha, eu ganho um
           ponto", e "se eu comprar uma carta preta, você ganha um ponto".
-        title: Condições
+        title: Condicionais
       Conditionals_2019:
         desc: Para aprender sobre estruturas condicionais, o aluno joga um jogo de
           cartas e cria regras como "se eu comprar uma carta vermelha, eu ganho um
           ponto", e "se eu comprar uma carta preta, você ganha um ponto".
-        title: Condições
+        title: Condicionais
       Contracts:
         desc: Os contratos nos dão uma forma de entender e discutir funções. Nesta
           lição, vamos ver como os contratos podem nos ajudar a entender uma nova
@@ -136,15 +136,15 @@ pt:
       DigitalFootprint:
         desc: Os professores informam aos alunos que colocar informações pessoais
           online cria um rastro digital, ou uma "trilha" que tem consequências.
-        title: Seu rastro digital
+        title: Seu Rastro Digital
       DigitalFootprint_2018:
         desc: Os professores informam aos alunos que colocar informações pessoais
           online cria um rastro digital, ou uma "trilha" que tem consequências.
-        title: Seu rastro digital
+        title: Seu Rastro Digital
       DigitalFootprint_2019:
         desc: Os professores informam aos alunos que colocar informações pessoais
           online cria um rastro digital, ou uma "trilha" que tem consequências.
-        title: Seu rastro digital
+        title: Seu Rastro Digital
       EnvelopeVariables:
         desc: As variáveis proporcionam muita liberdade na ciência da computação.
           Esta aula ajuda a explicar o que são variáveis e como podemos usá-las de
@@ -431,6 +431,8 @@ pt:
         desc: Os alunos criam algoritmos simples (conjuntos de instruções) para mover
           um personagem por um labirinto usando um único comando.
         title: Mapas divertidos
+      Unplugged- Melissa Sandbox:
+        title: Offline
       VideoGamesCoordinatePlanes:
         desc: Descubra como os video games que você ama jogar são, na verdade, conduzidos
           pela álgebra! Explore como expressões algébricas e o plano cartesiano podem
@@ -492,7 +494,7 @@ pt:
       courseB_unplugged_digitalFootprint:
         desc: Os professores informam aos alunos que colocar informações pessoais
           online cria um rastro digital, ou uma "trilha" que tem consequências.
-        title: Seu rastro digital
+        title: Seu Rastro Digital
       courseB_unplugged_loopyMRF:
         desc: Assim como em “Os meus amigos robótidos”, você irá “programar” seus
           amigos, mas desta vez com laços!
@@ -656,7 +658,7 @@ pt:
         desc: Para aprender sobre estruturas condicionais, o aluno joga um jogo de
           cartas e cria regras como "se eu comprar uma carta vermelha, eu ganho um
           ponto", e "se eu comprar uma carta preta, você ganha um ponto".
-        title: Condições
+        title: Condicionais
       timeforcs_demo_crowdsourcing:
         desc: '_Nota do Josh: em contraste com a primeira lição, eu formatei essa
           aqui como uma lição desconectada._'

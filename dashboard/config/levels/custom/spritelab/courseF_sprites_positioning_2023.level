@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2023-03-14T20:37:21.000Z",
   "level_num": "custom",
@@ -66,15 +65,16 @@
     "bubble_choice_description": "Practice making sprites and choosing their locations.",
     "thumbnail_url": "https://images.code.org/7864ddf06e124427b01d415e441977f0-image-1610554148293.png",
     "project_template_level_name": "courseF_sprites_template_2023",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"locations_category\",\r\n  \"callout_text\": \"Click here to open the Locations category.\",\r\n  \"element_id\": \"[id=':3.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"locations_category\",\"callout_text\":\"Click here to open the Locations category.\",\"element_id\":\"[id=':3.label']\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\"[id='blockly-2.label']\",\"localization_key\":\"locations_category\",\"callout_text\":\"Click here to open the Locations category.\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "encrypted_examples": "t+mnnRMOgI0h4CbYjxaiLWtLZNTJX9K95RK/aWVdguPQiojgcmHgvkM9DzpK\nlZXEqvGAV7ZnIaffsgoD7JDjtA==\n",
     "hide_pause_button": "false",
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Choose a new position for your sprite on the screen.",
     "instructions_icon": "strawberry",
-    "preload_asset_list": null,
-    "standalone_app_name": "spritelab"
+    "standalone_app_name": "spritelab",
+    "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2023-03-14T20:37:21.287+00:00\",\"changed\":[\"cloned from \\\"courseF_sprites_positioning_-2022-2\\\"\"],\"cloned_from\":\"courseF_sprites_positioning_-2022-2\"},{\"changed_at\":\"2023-07-10 16:36:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {

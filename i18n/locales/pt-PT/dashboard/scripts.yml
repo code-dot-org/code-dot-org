@@ -124,6 +124,7 @@ pt:
           description: Conheça as noções básicas de ciência da computação com personagens de Angry Birds e Plants vs. Zombies!
           description_short: Conheça os conceitos básicos da ciência da computação com a ajuda de vários personagens divertidos!
           student_description: Conheça as noções básicas de ciência da computação com personagens de Angry Birds e Plants vs. Zombies!
+          name: Hora do Código
         CodeStudioPuzzleChallenge:
           title: Desafio Code Studio
           description: Experimente esses divertidos desafios de programação. Dê o melhor de si!
@@ -4813,6 +4814,10 @@ pt:
               display_name: Variáveis
           description_audience: 'Idades: 9-13'
           description_short: Aprenda todos os conceitos Fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Atividade livre
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -5134,3 +5139,140 @@ pt:
               display_name: Capítulo 2
         csd-post-survey-2024:
           title: Pesquisa Pós-Curso
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Lição 1
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Lição 1
+            lesson-3:
+              name: Eventos
+            lesson-4:
+              name: Comportamentos
+            lesson-5:
+              name: Próximas etapas
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Iniciando
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Lição 1
+            lesson-3:
+              name: Ciclos
+            lesson-4:
+              name: Condicionais
+            lesson-6:
+              name: Próximas etapas
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Iniciando
+          title: Introdução à Ciência Computacional
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Questionário
+            csp_unit1_2020:
+              display_name: 'Unidade 1: Informação Digital'
+        csp2-2024:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Unidade 2: A internet'
+        csp3-2024:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Unidade 3: Introdução ao design de aplicativos'
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Questionário
+            lessonGroup-3:
+              display_name: Conteúdo
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-4:
+              display_name: Questionário
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: Variáveis
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funções
+            csp_project:
+              display_name: Projeto
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Dados
+            lessonGroup-5:
+              display_name: Pesquisa Pós-Curso
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listas
+            lessonGroup-3:
+              display_name: Ciclos
+            lessonGroup-4:
+              display_name: Traversais
+            lessonGroup-5:
+              display_name: Projeto
+            lessonGroup-2:
+              display_name: Pesquisa Pós-Curso
+        csp7-2024:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parâmetros e valores de retorno
+            csp_libraries:
+              display_name: Bibliotecas
+            lessonGroup-3:
+              display_name: Pesquisa Pós-Curso
+        csp8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Criar PT
+            lessonGroup-3:
+              display_name: Pesquisa Pós-Curso
+        csp9-2024:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Unidade 9: Dados'
+            lessonGroup-2:
+              display_name: Pesquisa Pós-Curso
+        csp10-2024:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Unidade 10: Segurança cibernética e impactos globais'
+            lessonGroup-2:
+              display_name: Pesquisa Pós-Curso
+        csp-post-survey-2024:
+          title: Pesquisa pós-curso de princípios do CS

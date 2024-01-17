@@ -242,6 +242,8 @@ lt:
         desc: Mokiniai sukuria paprastus algoritmus (instrukcijas), kad pajudintų
           veikėją per labirintą, naudodami vieną komandą.
         title: Laimingieji žemėlapiai
+      Unplugged- Melissa Sandbox:
+        title: Veikla be kompiuterių
       courseABC_unplugged_bigEvent:
         desc: Mokiniai bus supažindinami su sąvoka „įvykis“ – tai yra veiksmai, kurių
           kompiuteris laukia, kad jie įvyktų. Mokytoja spaudinės nupieštus mygtukus

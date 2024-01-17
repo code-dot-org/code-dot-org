@@ -258,6 +258,9 @@ de:
       Internet_2019:
         desc: 'translation missing: en-US.data.unplugged.Internet_2018.desc'
         title: 'translation missing: en-US.data.unplugged.Internet_2018.title'
+      'Introducing block-based programing ':
+        desc: " "
+        title: " "
       MadGlibs:
         desc: Die Fähigkeit zur Abstraktion ist eine der wichtigsten Fähigkeiten des
           Informatikers.  Bei dieser Aktivität analysieren die Schüler Geschichten,
@@ -455,6 +458,8 @@ de:
         desc: Die Schüler erstellen einfache Algorithmen (Gruppen von Anweisungen),
           um einen Charakter mit einem einzigen Befehl durch ein Labyrinth zu steuern.
         title: Glücklich Karten
+      Unplugged- Melissa Sandbox:
+        title: Offline
       VideoGamesCoordinatePlanes:
         desc: Erfahre, wie deine Lieblingsspiele von Algebra angetrieben werden! Erkunde,
           wie algebraische Ausdrücke und das Koordinatensystem helfen, die Funktion

@@ -111,6 +111,9 @@ mn:
   social_hoc2019_dance: Кэти Перри, Шон Мендес, Panic! Диско дээр Лил Нас X, Жонас
     Ах, Ники Минаж, 34 бусад!
   social_hoc_anybody: 'Кодын цаг: Хэн ч сурч болно'
+  hoc_interest_form_header: Get notified when Hour of Code registration opens!
+  hoc_interest_form_desc: Be the first to know about this year's Hour of Code, including
+    new activities and when registrations for Hour of Code events begin.
   oceans_landing_title: Далайнуудад зориулсан AI
   oceans_landing_description: Машин суралцах, AI-ийн ёс зүйн хэрэглээний талаар олж
     мэдэх.
@@ -261,6 +264,16 @@ mn:
     эмзэг бүлгийн хүүхэд, залуучуудыг компьютерийн шинжлэх ухааны чиглэлээр ажил мэргэжил
     эзэмшихэд нь урам зориг өгөх, сургах, сургах хүүхдийн карьерын цогц хөтөлбөр юм.
     [Бидний түншлэлийн талаар суралц] (%{afe_url}).
+  donors_block_microsoft_infosys: We thank Microsoft and Infosys Foundation USA for
+    supporting our vision and mission to ensure every child has the opportunity to
+    learn computer science and the skills to succeed in the 21st century.
+  microsoft_logo_alt: Microsoft logo
+  infosys_logo_alt: Infosys Foundation USA logo
+  amazon_logo_alt: Amazon logo
+  google_logo_alt: Google logo
+  coinbase_logo_alt: Coinbase logo
+  ballmer_group_logo_alt: Ballmer Group logo
+  vista_equity_partners_logo_alt: Vista Equity Partners logo
   grade_level: Ангийн түвшин
   grade_level_label_elementary: Бага сургууль
   grade_level_label_middle: Дунд сургууль
@@ -274,6 +287,12 @@ mn:
   curricula_title_high: Ахлах сургууль Crack
   curricula_desc_high: Та болон ахлах сургуулийн сурагчдыг компьютерийн шинжлэх ухаанд
     гүн гүнзгий ухахыг урьсан хичээл, үйл ажиллагаануудыг үзээрэй.
+  facilitator_led_pl_heading: Facilitator-Led Professional Learning Workshops
+  facilitator_led_pl_desc: Learn about our professional learning workshops for elementary,
+    middle, and high school teachers.
+  self_paced_pl_heading: Self-Paced Professional Learning
+  self_paced_pl_desc: Professional learning at your own pace. Explore our online,
+    self-paced professional learning modules.
   for_administrators_heading: Администраторуудын хувьд
   for_administrators_desc: Компьютерийн шинжлэх ухааныг сургалтын хөтөлбөртөө аль
     хэдийн оруулсан мянга мянган сургуулиудтай нэгдээрэй.
@@ -332,6 +351,7 @@ mn:
   call_to_action_start_part_02: Хоёр хэсгийг эхлээрэй
   call_to_action_start_unplugged_activity: Залгагдаагүй үйл ажиллагааг эхлүүлээрэй
   call_to_action_view_promo_resources: Сурталчилгааны нөөцийг харах
+  call_to_action_view_teach_with_cdo: Start teaching with Code.org
   call_to_action_get_involved: Get involved
   call_to_action_learn_more: Илүү ихийг олж мэдэх
   call_to_action_watch_now: Одоо үзэх
@@ -422,6 +442,7 @@ mn:
   call_to_action_open_positions: Нээлттэй байрлалыг харах
   call_to_action_explore_roles: Нээлттэй үүргийг судлах
   call_to_action_get_guide: Гарын авлагыг авах
+  call_to_action_donate: Donate
   call_to_action_donate_to_cdo: Code.org руу хандив өгөх
   call_to_action_start_fundraiser: нь хандивын арга эхлэх
   call_to_action_view_donation_policy: Хандивын бодлогыг харах
@@ -444,6 +465,7 @@ mn:
   call_to_action_learn_about_ai: АИ-ийн талаар мэдэж аваарай
   call_to_action_learn_more_about_ai: Learn more about AI
   call_to_action_get_started: Эхлэх
+  call_to_action_view_our_supporters: View our supporters
   call_to_action_explore_self_paced_pl: Explore self-paced professional learning
   call_to_action_applications_get_notified: Get notified when applications open
   call_to_action_applications_notify_me: Notify me when I can apply
@@ -453,6 +475,9 @@ mn:
   call_to_action_for_intl_educators: For international educators
   call_to_action_learn_more_program_region: Learn more about the program in your region
   call_to_action_visit_support_center: Visit our support center
+  call_to_action_download_video: Download video
+  call_to_action_explore_learning_ages_5_11: Explore learning for ages 5-11
+  call_to_action_explore_learning_ages_11_plus: Explore learning for ages 11+
   aria_label_call_to_action_hoc_how_to_educators: Сурган хүмүүжүүлэгчдэд зориулсан
     гарын авлагыг үзэх
   aria_label_call_to_action_hoc_how_to_companies: Компаниудад зориулсан гарын авлагыг
@@ -475,6 +500,10 @@ mn:
   aria_label_call_to_action_dance_unplugged: Бүжгийн үдэшлэгийн үйл ажиллагааг залгаагүй
     эхлүүлээрэй
   aria_label_call_to_action_afe: Амазоны ирээдүйн инженер талаар илүү ихийг олж мэдэх
+  aria_label_call_to_action_facilitator_pl: Learn more about facilitator-led professional
+    learning workshops
+  aria_label_call_to_action_self_paced_pl: Learn more about self-paced professional
+    learning
   aria_label_call_to_action_teaching_csf: Заах Компьютерийн шинжлэх ухааны үндэс мэргэжлийн
     сургалтын хөтөлбөрийг эхлүүлэх
   aria_label_call_to_action_teaching_csd: Багшлах компьютерийн шинжлэх ухааны нээлтүүдийг
@@ -590,6 +619,9 @@ mn:
   aria_label_call_to_action_register_student_workshop: Register for a free student
     workshop
   aria_label_call_to_action_view_more_cs_resources: View more computer science resources
+  aria_label_call_to_action_farsi_donate: Donate to support the Code.org in Farsi
+    campaign
+  aria_label_call_to_action_farsi_learn_more: Learn more about Code.org in Farsi
   aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
     professional learning
   aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
@@ -600,7 +632,19 @@ mn:
   aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
   aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
     A
+  aria_label_call_to_action_afe_alexa: Learn more about Alexa for Astronauts
+  aria_label_call_to_action_afe_cloud_tour: Learn more about the Uncovering Cloud
+    Computer Career Tour
+  aria_label_call_to_action_afe_voice: Learn more about Amazon's Your Voice is Power
+    competition
+  aria_label_call_to_action_afe_scholarships: Learn more about Amazon's scholarships
+    and internships
+  aria_label_call_to_action_afe_robotics: Learn more about the Robotics Fulfillment
+    Center Tour
+  aria_label_call_to_action_afe_data_tour: Learn more about the Keeping Data Safe
+    Career Tour
   video_title_professional_learning_program: Code.org-ийн мэргэжлийн сургалтын хөтөлбөр
+  video_title_young_women_in_computer_science: Компьютерийн шинжлэх ухааны залуу эмэгтэйчүүд
   curriculum_name_csf: Компьютерийн шинжлэх ухааны үндэс
   curriculum_name_csf_02: Аливаа CS үндэс (Курс A-F)
   curriculum_name_csf_a_f: CS үндэс A-F
@@ -722,6 +766,8 @@ mn:
     бодит ур чадварыг өгдөг. '
   curriculum_desc_csa_ai_short: Энэхүү POST-AP® CSA модуль нь ахлах ангийн сурагчдад
     мэргэжлийн програм хангамж хөгжүүлэх хэрэгслээр туршлага хуримтлуулдаг.
+  curriculum_desc_catalog: Explore our robust catalog of curriculum offerings for
+    all ages and levels — completely free.
   collection_hardware: Тоног төхөөрөмж дээр анхаарлаа төвлөрүүл
   collection_hardware_desc: Оюутнуудад асуудлыг шийдвэрлэхийн тулд өгөгдөл, физик
     төхөөрөмж ашиглах боломжийг олгодог.
@@ -768,6 +814,7 @@ mn:
   module_label_video_series: Видео цуврал
   module_label_self_paced: Өөрөө хурдацтай модуль
   module_label_event_or_lessons: Event or lessons
+  module_label_or: Or
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -782,6 +829,7 @@ mn:
   module_grade_3_12: 3-12
   module_grade_5_12: 5-12
   module_grade_6_12: 6-12
+  module_grade_6_12_plus: 6-12+
   module_grade_6_10: 6-10
   module_grade_7_12: 7-12
   module_grade_9_12: 9-12
@@ -872,6 +920,8 @@ mn:
   values_05: Бид шударга, ил тод байдлыг эрхэмлэн ажилладаг
   values_06: Өргөн цар хүрээтэй нөлөөлөл нь томоор бодож, цогцоор нь ажиллахыг шаарддаг
     гэдэгт бид итгэдэг
+  heading_anyone_can_learn: Anyone can learn Computer Science
+  heading_find_right_opportunity: Find the right learning opportunity for you!
   heading_professional_learning: Таны хэрэгцээнд нийцсэн мэргэжлийн сургалт
   heading_additional_resources: Нэмэлт нөөц
   heading_support_and_questions: Дэмжлэг ба асуултууд
@@ -906,6 +956,20 @@ mn:
   heading_acceptance: Acceptance
   heading_enroll: Enroll
   heading_have_questions: Have questions?
+  heading_resources_for_educators: Code.org resources for educators
+  student_courses_top_desc: Start coding today. Our courses and activities are free!
+    It's easier—and more fun—than you think.
+  student_courses_explore_desc: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more for all ages and
+    experience levels!
+  student_courses_k_5_desc: Start with an Hour of Code, then discover more block-based
+    coding in our Express Courses. Get creative in our fun programming environment,
+    Sprite Lab, or watch cool videos to learn more about key topics. There's so much
+    to explore!
+  student_courses_6_12_desc: Try an Hour of Code, or check out our self-paced courses
+    on creating apps, games, and animations. Do your own thing in our Web Lab, Game
+    Lab, and App Lab programming environments. Plus, learn more about AI, careers
+    in programming, scholarships, and more.
   cs_ambassador_subhead: Хэрэв та өөрийн сургуульд компьютерийн шинжлэх ухааныг авахыг
     илүү залуу эмэгтэйчүүдийг урамшуулах талаар хүсэл эрмэлзэлтэй ахлах сургуулийн
     оюутан бол бид танд хэрэгтэй!
@@ -1071,6 +1135,13 @@ mn:
   dance_afe_disclaimer: Энэ заавар нь тэдний хөгжим ашиглаж байгаа уран бүтээлчид
     нь Code.org өөрсдийн хөгжмийн ашиглалтыг лиценз олгох нэг хэсэг болгон Амазоныг
     ивээн тэтгэх эсвэл баталж байгаа юм биш юм.
+  dance_ai_behind_the_scenes: 'How does Dance Party: AI Edition work behind the scenes?'
+  dance_ai_behind_the_scenes_markdown: |-
+    In **Dance Party: AI Edition**, three selected emojis are used to generate an output effect using AI. An output effect consists of values for background effect, background color palette, and foreground effect.
+
+    Each emoji and each output value has a descriptive phrase associated with it. By comparing the similarity of an input emoji's phrase with an output value's phrase, we are able to use AI to recommend the best match.
+
+    To compute the similarity, each phrase is assigned an embedding. An [embedding](https://en.wikipedia.org/wiki/Word_embedding) is a list of numbers that captures the meaning of a phrase, and the embeddings used in **Dance Party: AI Edition** are about 1,500 numbers long. Similarity is measured by the "distance" between the phrases' embeddings.  In **Dance Party: AI Edition**, we use embeddings generated by the [Amazon Bedrock Titan model](https://aws.amazon.com/bedrock/titan/) and calculate similarity by computing the cosine distance between embeddings.
   minecraft_hero_heading: Minecraft Hour of Code Tutorials
   minecraft_activities_desc: All tutorials are available in many languages and compatible
     with modern browsers and tablets. Don't have internet? [Download the offline version
@@ -1111,6 +1182,63 @@ mn:
   minecraft_resources_desc_02: Inspire STEM passion in K-12 learners with 200 hours
     of computer science curriculum, from block to python, supported by professional
     development.
+  afe_page_heading: Free resources from Amazon Future Engineer
+  afe_page_top_desc: 'Enhance your teaching experience with Code.org in partnership
+    with [Amazon Future Engineer](%{afe_url}). Eligible educators from underserved
+    schools can access these benefits at no cost:'
+  afe_page_top_list_01: "**Professional Growth:** Complimentary CSTA+ membership,
+    with expert-led webinars and resources."
+  afe_page_top_list_02: "**Opportunities:** Chance to join a paid-fellowship experience
+    to increase access in computer science working alongside industry experts at Amazon!"
+  afe_page_top_list_03: "**Resources:** Inspiration kits, including posters and stickers,
+    to engage students in computer science."
+  afe_page_top_list_04: "**Innovation:** Exclusive access to pilot programs that explore
+    cutting-edge career and computer science topics."
+  afe_page_eligibility_heading: School Eligibility Requirements*
+  afe_page_eligibility_list_01: Title 1 and/or > 40% Free/Reduced Lunch (FRL) student
+    enrollment
+  afe_page_eligibility_list_02: ">30% Black/Latino/Native American (BLNA) student
+    enrollment"
+  afe_page_eligibility_list_03: Rural school
+  afe_page_eligibility_disclaimer: "*Eligibility requirements verified using [NCES
+    data](%{nces_url})."
+  afe_page_programs_heading: More Amazon Future Engineer programs & opportunities
+  afe_page_programs_alexa_title: Alexa Skills Inventor
+  afe_page_programs_alexa_desc: Learn how to program Alexa with skills that could
+    help astronauts solve problems in space and communities at home.
+  afe_page_programs_cloud_tour_title: Uncovering Cloud Computer Career Tour
+  afe_page_programs_cloud_tour_desc: How did we go from renting movies at the store
+    to streaming from anywhere at any time? Learn how data centers and cloud computing
+    have changed the way we watch our favorite content, and the careers behind it.
+  afe_page_programs_voice_title: Your Voice is Power
+  afe_page_programs_voice_desc: Students will code and compete to learn how entrepreneurship,
+    coding, and music can intersect for positive change.
+  afe_page_programs_scholarships_title: Scholarships and Internships
+  afe_page_programs_scholarships_desc: Supporting students after high school is imperative
+    to fulfilling the Amazon Future Engineer mission for all of our scholars.
+  afe_page_programs_robotics_title: Robotics Fulfillment Center Tour
+  afe_page_programs_robotics_desc: Discover how computer science, state-of-the-art
+    engineering, and incredible people deliver customer orders at Amazon.
+  afe_page_programs_data_tour_title: Keeping Data Safe Career Tour
+  afe_page_programs_data_tour_desc: You want to upload your photos to the cloud, but
+    what if something happens at a data center? Learn how AWS and data center professionals
+    keep data safe and sustainable.
+  afe_page_success_heading: Congratulations! You successfully signed up for the Amazon
+    Future Engineer Program.
+  afe_page_success_desc: You should receive an email shortly from Amazon Future Engineer
+    to claim your benefits. In the meantime, check out some of the amazing resources
+    around our site.
+  afe_page_eligibility_check_heading: We've checked your eligibility
+  afe_page_eligibility_check_fail_desc: Your school does not meet the eligibility
+    [requirements*](%{req_url}) for the Amazon Future Engineer benefits, but you can
+    still take advantage of all Code.org has to offer, including our robust curriculum
+    and professional learning opportunities.
+  afe_page_eligibility_check_fail_error: If you think you received this message in
+    error, contact us at [support@code.org](%{email_url}).
+  afe_page_eligibility_check_disclaimer: "*To participate in the Amazon Future Engineer
+    program, a school must have Title 1 status OR have student enrollment of more
+    than 40% underrepresented minority students and/or 40% students who qualify for
+    free or reduced lunch."
   blockchain_hero_heading: Блокчейн хэрхэн ажилладаг
   blockchain_hero_desc: нь blockchain ертөнцөд шумбах “Хэрхэн Blockchain ажил,” Манай
     шинэ видео цуврал болон дагалдах хичээл!
@@ -1968,6 +2096,8 @@ mn:
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
   csd_page_pick_a_course_heading: Таны ангид зөв CS Discoveries курс сонгож
+  csd_page_pick_a_course_heading_non_en: Picking the right %{cs_discoveries} (CS Discoveries)
+    course for your classroom
   csd_page_pick_a_course_desc: CS Discoveries санал болгож буй тохируулгууд нь янз
     бүрийн багц нь, бүх өөр өөр хэрэгцээнд зориулсан сургалт байдаг.
   csd_page_pick_a_course_heading_02: Та агуулгыг хэрхэн сонгохыг хүсч байна вэ?
@@ -2251,6 +2381,12 @@ mn:
   donate_page_fundraise_title: Code.org-д зориулсан хөрөнгө босгох
   donate_page_fundraise_desc: Code.org-д мөнгө босгоход тусална уу! Сургууль бүрийн
     оюутан бүр компьютерийн шинжлэх ухааныг сурах боломжтой байх ёстой.
+  donate_page_campaigns_heading: Support a campaign
+  donate_page_campaigns_farsi_desc: Talent is widespread, but opportunity often isn't.
+    The proposed Code.org in Farsi initiative aims to grant over 110 million Farsi
+    speakers from countries like Iran, Afghanistan, and Tajikistan to global diasporas,
+    access to educational resources currently available in other major languages.
+    Let's make it a reality.
   donate_page_other_ways_title: Өгөх бусад арга замууд
   donate_page_other_ways_desc: Хувь нэмэр оруулах янз бүрийн аргыг судалж, хамгийн
     сайн тохирсон сонголтыг олоорой. Том эсвэл жижиг дохио зангаа бүр бидний эрхэм
@@ -2258,6 +2394,10 @@ mn:
   donate_page_501c3: Code.org нь олон нийтийн 501 (c) (3) ашгийн бус байгууллагаар
     бүртгэгдсэн байдаг. Code.org-д оруулсан хувь нэмэр нь хуулиар зөвшөөрөгдсөн хэмжээгээр
     татвараас хасагдана. Code.org-ийн татварын дугаар 46-0858543 байна.
+  donate_page_supporters_heading: Join top industry leaders supporting Code.org
+  donate_page_supporters_desc: Prominent names nationwide trust and support our mission.
+    View our esteemed supporters and consider adding your own commitment to Code.org's
+    transformative cause.
   donate_page_donation_policy_title: Хандивын бодлогыг ойлгох нь
   donate_page_donation_policy_desc: Бид таны оруулсан хувь нэмрийг хэрхэн зохицуулж,
     хуваарилах талаар олж мэдээрэй.
@@ -2319,6 +2459,9 @@ mn:
     үргэлжлүүлэн сурах.
   hoc_live_join_us: Бидэнтэй нэгдээрэй
   hoc_live_learn_more: Илүү ихийг олж мэдэх
+  hoc_live_map_and_events_message: During peak Hour of Code traffic, we use a static
+    map to save bandwidth and keep our site running. To see a dynamic map of all events
+    [click here](%{map_url}), and to see the full event list [click here](%{events_url}).
   hoc_overview_oceans_tutorial_header: Далайнуудад зориулсан AI
   hoc_overview_oceans_tutorial_desc: Хиймэл оюун ухаан (AI), машин суралцах, сургалтын
     өгөгдөл, хэвийх утгыг олж мэдэхийн зэрэгцээ ёс зүйн асуудлууд, дэлхийн асуудлуудыг
@@ -3042,6 +3185,22 @@ mn:
   handouts_brochure: Энэ товхимолыг багш, сургуулиудад өг
   handouts_participationguide: Энэхүү оролцооны гарын авлагыг ашиглан кодын цагийг
     төлөвлө
+  poster_aria_label_minecraft: 'Download a poster featuring Minecraft Education: Generation
+    AI'
+  poster_aria_label_dance_ai_01: 'Download a poster featuring Dance Party: AI Edition
+    frog, moose, and cat characters'
+  poster_aria_label_dance_ai_02: 'Download a poster featuring Dance Party: AI Edition
+    robot, sloth, and shark characters'
+  poster_aria_label_oceans_01: Download a poster featuring AI for Oceans underwarer
+    scene with AI Bot selecting a fish
+  poster_aria_label_oceans_02: Download a poster featuring AI for Oceans fish characters
+    with different emotions
+  poster_aria_label_steph: Download a poster featuring NBA star Steph Curry
+  poster_aria_label_malala: Download a poster featuring activist Malala Yousafzai
+  poster_aria_label_hadi: Download a poster featuring Code.org founder Hadi Partovi
+  poster_aria_label_mary: Download a poster featuring General Motors CEO Mary Barra
+  poster_aria_label_satya: Download a poster featuring Microsoft CEO Satya Nadella
+  poster_aria_label_shakira: Download a poster featuring singer-songwriter Shakira
   videos_title: Оюутнуудад урам зориг өгөхийн тулд эдгээр видеог үзүүл
   videos_what_most_schools_dont_teach: Ихэнх сургуулиуд заадаггүй зүйл (5 мин)
   videos_hoc_2014: Кодын цаг энд байна - Хэн ч сурч болно
@@ -16056,6 +16215,8 @@ mn:
   video_library_page_inspirational_video_title_14: Энэ бол тоглоомоос илүү (1 мин)
   video_library_page_inspirational_video_title_15: Компьютерийн шинжлэх ухаан нь бий
     болгох (1 мин)
+  video_library_page_inspirational_video_title_16: Young Women in Computer Science
+    (2 min)
   video_library_page_not_hacked_video_title_1: 'Хэрхэн хакердахгүй байх вэ: Танилцуулга'
   video_library_page_not_hacked_video_title_2: 'Хэрхэн үгүй биш хакерджээ авах: Нууц
     үг'
@@ -16365,6 +16526,26 @@ mn:
   elementary_page_computer_science_description_2: Компьютерийн шинжлэх ухаан (CS)
     болон математик, хэлний урлаг, шинжлэх ухаан, нийгмийн судалгаа гэх мэт бусад
     сэдвүүдийн хоорондын холболтыг хий.
+  hoc_beyond_hero_description: Now that you've completed your Hour of Code, take your
+    learning to the next level! Many partners offer free, engaging options for teachers
+    and students alike - no experience needed.
+  hoc_beyond_for_teachers_section_title: For Teachers
+  hoc_beyond_for_teachers_section_description: You've held an Hour of Code event in
+    your classroom... now what? Join the more than 2 million educators who use Code.org
+    to teach computer science. Anyone can learn!
+  hoc_beyond_for_teachers_course_title_1: Teach with Code.org’s Courses
+  hoc_beyond_for_teachers_course_title_2: Teach Courses from Other Providers
+  hoc_beyond_for_teachers_course_description_1: Code.org offers a full K-12 course
+    pathway and professional learning workshops for teachers, free of charge.
+  hoc_beyond_for_teachers_course_description_2: Compare options by different partners,
+    organized by grade band.
+  hoc_beyond_for_teachers_course_link_1: Teach with Code.org
+  hoc_beyond_for_teachers_course_link_2: Explore other providers
+  hoc_beyond_carousel_title: For Students
+  hoc_beyond_carousel_description: Want to keep learning after Hour of Code? Check
+    out these activities for learners of all ages and skill levels.
+  hoc_beyond_submit_activity_form: Submit your own activity [here](%{form_url}).
+  hoc_beyond_end_section_label: The Hour of Code is organized by [Code.org](%{home_page})
   language_code:
     ar: Араб хэл
     az: Азербайжаны

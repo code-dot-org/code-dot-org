@@ -803,57 +803,101 @@ fr-FR:
       CSD U1 MC Q1_2023:
         answers:
         - correct: true
+          text: écran tactile
         - correct: true
+          text: Microphone
+        - text: Haut-parleur
+        - text: Moniteur
         - {}
-        - {}
-        - {}
+        markdown: |+
+          Lequel des éléments suivants pourrait être décrit comme une entrée pour un ordinateur ? * (Sélectionnez toutes les réponses qui s'appliquent) *
+
+
+
+        teacher_markdown: |-
+          **Contenu : Unité 1 Leçon 5**
+
+
+          L'entrée permet de transmettre à l'ordinateur les informations des utilisateurs ou d'autres appareils. Les écrans tactiles et les microphones permettent d'obtenir des informations.
+          Les haut-parleurs et les lumières de l'écran ne sont pas des entrées car ce sont des sorties qui *donnent* des informations.
       CSD U1 MC Q2_2023:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Après avoir compté le nombre de clics, l'écran se met à jour.
+        - text: Si vous vous trompez, vous recevrez un message.
+        - text: Si votre réponse correspond au bon nombre, vous entendrez de la musique.
+        - text: Si votre meilleur score est supérieur au plus haut score, le score
+            est mis à jour à l'écran.
         - correct: true
         questions:
         - {}
+        teacher_markdown: |-
+          **Contenu : Unité 1 Leçon 5**
+
+          La sortie est l'information que les ordinateurs fournissent aux utilisateurs. Ce sont tous des exemples des informations qui sont données à l'utilisateur après traitement, le travail de réflexion d'un ordinateur.
       CSD U1 MC Q3_2023:
         answers:
-        - {}
-        - {}
+        - text: Applications
+        - text: Photos
         - text: Musique
         - text: Localisation
         - correct: true
         questions:
-        - {}
+        - text: Quels types d'informations un ordinateur peut-il stocker ?
+        teacher_markdown: |
+          **Contenu : Unité 1 Leçon 7**
+
+          Tous ces éléments peuvent être stockés sur un ordinateur.
       CSD U1 MC Q4_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Compter et mesurer l'élévation du niveau de la mer
+        - text: Recherche de la ville la plus polluée
+        - text: Comparaison de la quantité de gaz à effet de serre émise par chaque
+            pays
         - correct: true
+          text: Prendre des mesures pour inverser le changement climatique
         - correct: true
+          text: Adopter des lois pour réduire les combustibles fossiles
         questions:
-        - {}
+        - text: Quels problèmes *ne peuvent pas* être résolus avec l'informatique ?
+            (Sélectionnez toutes les réponses qui s'appliquent)
+        teacher_markdown: |-
+          **Contenu : Unité 1 Leçon 4**
+
+          La simple utilisation d'ordinateurs utilisant des informations ne peut pas résoudre le problème du changement climatique et les ordinateurs ne peuvent pas non plus faire adopter de lois.
       CSD U1 Match Q5_2023:
         answers:
         - text: Entrée
         - text: Le Stockage
         - text: Le Traitement
+        content1: Vous développez une application qui vous avertira lorsque la qualité
+          de l'air dans votre ville est mauvaise. Faites correspondre les éléments
+          suivants à la saisie, au traitement et au stockage
         questions:
-        - {}
-        - {}
-        - {}
+        - text: Mesurez la qualité de l'air d'aujourd'hui
+        - text: Conservez les données sur la qualité de l'air pour chaque jour
+        - text: Comparez la qualité de l'air d'aujourd'hui avec la qualité de l'air
+            des derniers jours
+        teacher_markdown: |+
+          **Contenu : Unité 1 Leçon 5, 6, 7**
+
+
+
+
       CSD U1 Match Q6_2023:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Décidez quelles activités seront proposées lors de la fête de quartier,
+            quels plats et qui inviter
+        - text: Discutez de ce qui s'est bien passé et de ce qui pourrait être amélioré
+        - text: Organisez la fête de quartier
+        - text: Décidez de l'objectif de la fête de quartier
+        content1: Cinq étudiants organisent une fête de quartier. Associez ce qu'ils
+          doivent faire à une étape du processus de résolution de problèmes
         questions:
         - text: Préparer
         - text: Réfléchir
         - text: Essayer
         - text: Définir
+        teacher_markdown: "**Contenu : Unité 1, leçon 2**\n"
       CSD U1 Test PSP match:
         answers:
         - {}
@@ -8921,12 +8965,19 @@ fr-FR:
       confident-ability-to-learn_2023:
         answers:
         - correct: true
+          text: Tout à fait d'accord
         - correct: true
+          text: D'accord
         - correct: true
+          text: Plutôt d'accord
         - correct: true
+          text: Neutre
         - correct: true
+          text: 'Plutôt en désaccord '
         - correct: true
+          text: Pas d'accord
         - correct: true
+          text: Fortement en désaccord
         questions:
         - text: J'ai confiance en ma capacité d'apprendre l'informatique.
       confident-ability-to-learn_mb2022:
@@ -14157,7 +14208,7 @@ fr-FR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Je souhaite suivre d'autres cours d'informatique à l'avenir
       csd-post-survey-unit1-preamble:
         content1: description ici
       csd-post-survey-unit2-preamble:
@@ -14170,6 +14221,8 @@ fr-FR:
         content1: description ici
       csd-post-survey-unit6-preamble:
         content1: description ici
+      csd-pre-survey-levelgroup_21_22_2023:
+        title: Enquête auprès des étudiants de CSD avant le cours
       csd-pulse-check-survey-1-q1 U1Ch2:
         answers:
         - correct: true
@@ -16975,6 +17028,12 @@ fr-FR:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-preamble_2019_pilot_copy2_csd1_2023:
+        markdown: |-
+          ### Merci de prendre quelques instants pour répondre à ces **cinq brèves questions**.
+
+          <small>
+          <em>Code.org prends votre sécurité au sérieux.</em> Vos réponses resteront <strong>anonymes</strong>. Votre professeur peut voir les réponses de toute la classe, mais sans que les noms soient indiqués.</small>
       csf_be_a_super_digital_citizen:
         content1: description ici
         markdown: |-
@@ -17552,13 +17611,25 @@ fr-FR:
           vos commentaires.\n\n***\n### L'école en général### \n"
       csp-pre-survey-2017 preamble 1_2023:
         markdown: "### **Ce sondage est anonyme**\n\n* Ce petit sondage devrait prendre
-          **10 minutes ou moins** pour compléter.\n* Code.org prend très au sérieux
-          la protection de vos renseignements personnels.\n* Vos réponses seront **anonymes**.
+          **10 minutes ou moins** à compléter.\n* Code.org prend très au sérieux la
+          protection de vos données personnelles.\n* Vos réponses seront **anonymes**.
           \n\nVotre professor verra les données agrégées de toute la classe, mais
           ne pourra pas identifier les réponses individuelles/ nCeci est fait afin
           que vous soyez aussi **ouvert et honnête** que possible. Nous nous soucions
           de votre expérience dans ce cours et nous faisons des améliorations selon
           vos commentaires.\n\n***\n### L'école en général### \n"
+        teacher_markdown: |-
+          La meilleure pratique consiste à laisser les étudiants répondre à cette enquête **avant** de participer à des activités en classe. La plupart des enseignants le font dans le cadre d'une journée de configuration technique initiale de la classe.
+
+          Vous pourrez voir les résultats anonymisés de l'enquête pour vos étudiants.
+
+          Pourquoi cette enquête est-elle effectuée ?
+          * L'un des principaux objectifs de ce cours est d'élargir le public de participation à l'informatique.
+          * Nous essayons de mesurer l'évolution des attitudes et des croyances des étudiants à l'égard de l'informatique suite au cours par le biais d'enquêtes avant et après.
+          * La compléter nous aide également à mieux comprendre les modifications principales que nous pouvons apporter au programme pour améliorer l'expérience des enseignants et des élèves.
+
+
+          * Aidez-nous en demandant à vos élèves de contribuer à cet ensemble de données essentiel. Leurs voix font toute la différence !
       csp-pre-survey-2017 preamble 2 cs in general_2021:
         markdown: "## L'informatique en général\n"
       csp-pre-survey-2017 preamble 2 cs in general_2022:
@@ -17643,14 +17714,21 @@ fr-FR:
       csp-pre-survey-2017-q10_copy2_2023:
         answers:
         - correct: true
+          text: Tout à fait d'accord
         - correct: true
+          text: D'accord
         - correct: true
+          text: Plutôt d'accord
         - correct: true
+          text: Neutre
         - correct: true
+          text: 'Plutôt en désaccord '
         - correct: true
+          text: Pas d'accord
         - correct: true
+          text: Fortement en désaccord
         questions:
-        - {}
+        - text: J'aime l'informatique.
       csp-pre-survey-2017-q11:
         answers:
         - correct: true
@@ -17742,14 +17820,22 @@ fr-FR:
       csp-pre-survey-2017-q13_2023:
         answers:
         - correct: true
+          text: Tout à fait d'accord
         - correct: true
+          text: D'accord
         - correct: true
+          text: Plutôt d'accord
         - correct: true
+          text: Neutre
         - correct: true
+          text: 'Plutôt en désaccord '
         - correct: true
+          text: Pas d'accord
         - correct: true
+          text: Fortement en désaccord
         questions:
-        - {}
+        - text: Je pense que je serai meilleur en informatique que les autres élèves
+            de mon école.
       csp-pre-survey-2017-q14:
         answers:
         - correct: true
@@ -17819,14 +17905,21 @@ fr-FR:
       csp-pre-survey-2017-q16_copy2_2023:
         answers:
         - correct: true
+          text: Tout à fait d'accord
         - correct: true
+          text: D'accord
         - correct: true
+          text: Plutôt d'accord
         - correct: true
+          text: Neutre
         - correct: true
+          text: 'Plutôt en désaccord '
         - correct: true
+          text: Pas d'accord
         - correct: true
+          text: Fortement en désaccord
         questions:
-        - {}
+        - text: Il est important pour moi d'être bon en informatique.
       csp-pre-survey-2017-q17:
         answers:
         - correct: true
@@ -17874,12 +17967,19 @@ fr-FR:
       csp-pre-survey-2017-q17_copy2_2023:
         answers:
         - correct: true
+          text: Tout à fait d'accord
         - correct: true
+          text: D'accord
         - correct: true
+          text: Plutôt d'accord
         - correct: true
+          text: Neutre
         - correct: true
+          text: 'Plutôt en désaccord '
         - correct: true
+          text: Pas d'accord
         - correct: true
+          text: Fortement en désaccord
         questions:
         - {}
       csp-pre-survey-2017-q18:
@@ -18536,14 +18636,21 @@ fr-FR:
       csp-pre-survey-2017-q3_copy2_2023:
         answers:
         - correct: true
+          text: Tout à fait d'accord
         - correct: true
+          text: D'accord
         - correct: true
+          text: Plutôt d'accord
         - correct: true
+          text: Neutre
         - correct: true
+          text: 'Plutôt en désaccord '
         - correct: true
+          text: Pas d'accord
         - correct: true
+          text: Fortement en désaccord
         questions:
-        - {}
+        - text: Je trouve que mon travail scolaire est intéressant.
       csp-pre-survey-2017-q4:
         answers:
         - correct: true
@@ -18624,6 +18731,7 @@ fr-FR:
       csp-pre-survey-2017-q4_copy2_2023:
         answers:
         - correct: true
+          text: Tout à fait d'accord
         - correct: true
         - correct: true
         - correct: true
@@ -18781,11 +18889,15 @@ fr-FR:
         - correct: true
         - correct: true
         - correct: true
+          text: Neutre
         - correct: true
+          text: 'Plutôt en désaccord '
         - correct: true
+          text: Pas d'accord
         - correct: true
+          text: Fortement en désaccord
         questions:
-        - {}
+        - text: Je peux vraiment être moi-même à l'école.
       csp_unit_assessment_overview:
         content1: description ici
       curriculum-how-challenging:
@@ -19209,12 +19321,19 @@ fr-FR:
       interested-in-learning-cs_2023:
         answers:
         - correct: true
+          text: Tout à fait d'accord
         - correct: true
+          text: D'accord
         - correct: true
+          text: Plutôt d'accord
         - correct: true
+          text: Neutre
         - correct: true
+          text: 'Plutôt en désaccord '
         - correct: true
+          text: Pas d'accord
         - correct: true
+          text: Fortement en désaccord
         questions:
         - text: Apprendre l'informatique m'intéresse.
       interested-in-learning-cs_mb2022:
@@ -19231,10 +19350,16 @@ fr-FR:
       intro-pulse-survey-q1_csd1_2023:
         answers:
         - correct: true
+          text: C'est la première fois que j'apprends l'informatique
         - correct: true
+          text: 'J''ai déjà effectué quelques activités mineures en informatique (par
+            exemple: une heure de code), mais c''est mon premier cours plus long'
         - correct: true
+          text: J'ai déjà suivi des cours ou des tutoriels en ligne plus longs sur
+            l'informatique
         questions:
-        - {}
+        - text: Quelles expériences antérieures avez-vous eues dans le domaine de
+            l'informatique ?
       intro-pulse-survey-q1_csd2_2023:
         answers:
         - correct: true
@@ -19273,17 +19398,32 @@ fr-FR:
       intro-pulse-survey-q2_csd1_2023:
         answers:
         - correct: true
+          text: C'est la première fois que j'apprends à résoudre des problèmes grâce
+            à la technologie
         - correct: true
+          text: 'J''ai déjà effectué des activités de résolution de problèmes mineures
+            en informatique (par exemple : une heure de code), mais c''est mon premier
+            cours plus long'
         - correct: true
+          text: 'J''ai déjà suivi des cours ou des tutoriels en ligne sur la résolution
+            de problèmes avec l''informatique '
         questions:
-        - {}
+        - text: Quelles expériences antérieures avez-vous eues en matière de résolution
+            de problèmes à l'aide de la technologie ?
       intro-pulse-survey-q2_csd2_2023:
         answers:
         - correct: true
+          text: C'est la première fois que j'apprends le développement Web
         - correct: true
+          text: 'J''ai déjà effectué des activités de résolution de problèmes mineures
+            en développement web (par exemple : une heure de code), mais c''est mon
+            premier cours plus long'
         - correct: true
+          text: J'ai déjà suivi des cours ou des tutoriels en ligne sur le développement
+            web
         questions:
-        - {}
+        - text: Quelles expériences antérieures avez-vous eues dans le domaine du
+            développement web ?
       intro-pulse-survey-q2_csd3_2023:
         answers:
         - correct: true
@@ -19315,14 +19455,21 @@ fr-FR:
       intro-pulse-survey-q3_csd1_2023:
         answers:
         - correct: true
+          text: Tout à fait d'accord
         - correct: true
+          text: D'accord
         - correct: true
+          text: Plutôt d'accord
         - correct: true
+          text: Neutre
         - correct: true
+          text: 'Plutôt en désaccord '
         - correct: true
+          text: En désaccord
         - correct: true
+          text: Fortement en désaccord
         questions:
-        - {}
+        - text: J'ai la capacité d'apprendre l'informatique
       intro-pulse-survey-q3_csd2_2023:
         answers:
         - correct: true
@@ -19333,7 +19480,7 @@ fr-FR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: J'ai la capacité d'apprendre l'informatique
       intro-pulse-survey-q3_csd3_2023:
         answers:
         - correct: true
@@ -19344,7 +19491,7 @@ fr-FR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: J'ai la capacité d'apprendre l'informatique
       intro-pulse-survey-q3_csd4_2023:
         answers:
         - correct: true
@@ -19355,7 +19502,7 @@ fr-FR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: J'ai la capacité d'apprendre l'informatique
       intro-pulse-survey-q3_csd5_2023:
         answers:
         - correct: true
@@ -19366,7 +19513,7 @@ fr-FR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: J'ai la capacité d'apprendre l'informatique
       intro-pulse-survey-q3_csd6_2023:
         answers:
         - correct: true
@@ -19377,18 +19524,22 @@ fr-FR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: J'ai la capacité d'apprendre l'informatique
       intro-pulse-survey-q4_csd1_2023:
         answers:
         - correct: true
+          text: Tout à fait d'accord
         - correct: true
+          text: D'accord
         - correct: true
+          text: Plutôt d'accord
         - correct: true
+          text: Neutre
         - correct: true
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Je souhaite suivre d'autres cours d'informatique à l'avenir
       intro-pulse-survey-q4_csd2_2023:
         answers:
         - correct: true
@@ -19399,7 +19550,7 @@ fr-FR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Je souhaite suivre d'autres cours d'informatique à l'avenir
       intro-pulse-survey-q4_csd3_2023:
         answers:
         - correct: true
@@ -19410,7 +19561,7 @@ fr-FR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Je souhaite suivre d'autres cours d'informatique à l'avenir
       intro-pulse-survey-q4_csd4_2023:
         answers:
         - correct: true
@@ -19421,7 +19572,7 @@ fr-FR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Je souhaite suivre d'autres cours d'informatique à l'avenir
       intro-pulse-survey-q4_csd5_2023:
         answers:
         - correct: true
@@ -19432,7 +19583,7 @@ fr-FR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Je souhaite suivre d'autres cours d'informatique à l'avenir
       intro-pulse-survey-q4_csd6_2023:
         answers:
         - correct: true
@@ -19443,18 +19594,25 @@ fr-FR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Je souhaite suivre d'autres cours d'informatique à l'avenir
       intro-pulse-survey-q5_csd1_2023:
         answers:
         - correct: true
+          text: Tout à fait d'accord
         - correct: true
+          text: D'accord
         - correct: true
+          text: Plutôt d'accord
         - correct: true
+          text: Neutre
         - correct: true
+          text: 'Plutôt en désaccord '
         - correct: true
+          text: En désaccord
         - correct: true
+          text: Fortement en désaccord
         questions:
-        - {}
+        - text: J'aime l'informatique.
       intro-pulse-survey-q5_csd2_2023:
         answers:
         - correct: true
@@ -19510,6 +19668,10 @@ fr-FR:
         - correct: true
         questions:
         - {}
+      intro-pulse-survey_csd1_2023:
+        title: Enquête rapide sur la résolution de problèmes et l'informatique !
+      intro-pulse-survey_csd2_2023:
+        title: Enquête rapide sur le développement Web !
       made-choices-about-assignments:
         answers:
         - correct: true
@@ -20068,15 +20230,24 @@ fr-FR:
       reasons-took-course-csd_2023:
         answers:
         - correct: true
+          text: J'avais des amis qui prenaient ce cours
         - correct: true
+          text: J'aime beaucoup le professeur
         - correct: true
+          text: J'ai pensé que ce serait amusant
         - correct: true
+          text: Je voulais en savoir plus sur l'informatique
         - correct: true
+          text: Je pensais que ce serait facile
         - correct: true
+          text: Je pensais que ce serait difficile
         - correct: true
+          text: Ce cours est obligatoire, ou j'y est été inscrit.
         - correct: true
+          text: Autres raisons non répertoriées
         questions:
-        - {}
+        - text: Quelles sont les deux principales raisons pour lesquelles vous avez
+            suivi ce cours ? (choisissez deux réponses maximum).
       same-ability:
         answers:
         - correct: true
@@ -20235,13 +20406,19 @@ fr-FR:
         answers:
         - correct: true
         - correct: true
+          text: D'accord
         - correct: true
+          text: Plutôt d'accord
         - correct: true
+          text: Neutre
         - correct: true
+          text: 'Plutôt en désaccord '
         - correct: true
+          text: Pas d'accord
         - correct: true
+          text: Fortement en désaccord
         questions:
-        - {}
+        - text: Je vais vraiment pouvoir être moi-même dans ce cours d'informatique.
       will-be-myself-in-cs_mb2022:
         answers:
         - correct: true
@@ -20291,12 +20468,19 @@ fr-FR:
       worried-seen-incapable_2023:
         answers:
         - correct: true
+          text: Tout à fait d'accord
         - correct: true
+          text: D'accord
         - correct: true
+          text: Plutôt d'accord
         - correct: true
+          text: Neutre
         - correct: true
+          text: 'Plutôt en désaccord '
         - correct: true
+          text: Pas d'accord
         - correct: true
+          text: Fortement en désaccord
         questions:
         - text: J'ai peur d'être considéré par les autres comme moins compétent dans
             cette classe.

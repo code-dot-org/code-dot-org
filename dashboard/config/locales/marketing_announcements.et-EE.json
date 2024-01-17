@@ -3,34 +3,7 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "ai-2020": {
-            "buttonText": "Lisateave"
-          },
-          "ai-launch-2023": {
-            "buttonText": "Lisateave"
-          },
-          "ai-pl-launch-2023": {
-            "buttonText": "Lisateave"
-          },
-          "back-to-school-2021": {
-            "buttonText": "Lisateave"
-          },
-          "codebytes-2020": {
-            "buttonText": "Lisateave"
-          },
-          "coldplay": {
-            "buttonText": "Proovi seda"
-          },
-          "congrats-certificate-share": {
-            "buttonText": "Alusta"
-          },
-          "csjourneys": {
-            "buttonText": "Lisateave"
-          },
-          "csjourneys-22": {
-            "buttonText": "Lisateave"
-          },
-          "csleadersprize": {
+          "co-teacher": {
             "buttonText": "Lisateave"
           },
           "hoc-2023": {
@@ -41,15 +14,6 @@
           },
           "superhero": {
             "buttonText": "Lisateave"
-          },
-          "teacher-apps-closing-2021": {
-            "buttonText": "Liitu meiega"
-          },
-          "teacher-apps-open-2021": {
-            "buttonText": "Liitu meiega"
-          },
-          "teacher-apps-stillon-2020": {
-            "buttonText": "Liitu meiega"
           }
         }
       }

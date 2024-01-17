@@ -14,9 +14,7 @@ import SetUpSections from './SetUpSections';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import RosterDialog from '../teacherDashboard/RosterDialog';
 import AddSectionDialog from '../teacherDashboard/AddSectionDialog';
-import CoteacherInviteNotification, {
-  showCoteacherInviteNotification,
-} from './CoteacherInviteNotification';
+import CoteacherInviteNotification from './CoteacherInviteNotification';
 
 class TeacherSections extends Component {
   static propTypes = {
@@ -39,15 +37,13 @@ class TeacherSections extends Component {
 
   shouldRenderSections() {
     return (
-      this.props.studentSectionIds?.length > 0 ||
-      showCoteacherInviteNotification(this.props.coteacherInvite)
+      this.props.studentSectionIds?.length > 0 || !!this.props.coteacherInvite
     );
   }
 
   shouldRenderPlSections() {
     return (
-      this.props.plSectionIds?.length > 0 ||
-      showCoteacherInviteNotification(this.props.coteacherInviteForPl)
+      this.props.plSectionIds?.length > 0 || !!this.props.coteacherInviteForPl
     );
   }
 

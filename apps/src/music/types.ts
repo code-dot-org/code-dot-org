@@ -21,3 +21,8 @@ export interface MusicLevelData extends ProjectLevelData {
   };
   library?: string;
 }
+
+export type LoadFinishedCallback = (
+  loadTimeMs: number,
+  soundsLoaded: number
+) => void;

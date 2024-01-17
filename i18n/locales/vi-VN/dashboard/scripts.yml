@@ -107,6 +107,7 @@ vi:
           description: thử những căn bản của khoa học máy tính với các đặc tính từ Angry bird và Plants vs zombies!
           description_short: Thử các nền tảng của khoa học máy tính với các đặc tính dãy kí tự vui nhộn!
           student_description: thử những căn bản của khoa học máy tính với các đặc tính từ Angry bird và Plants vs zombies!
+          name: Giờ của mã
         CodeStudioPuzzleChallenge:
           description_short: Thử thách bản thân!
         Tutorial Video - Code Studio Puzzle Challenge:
@@ -3916,6 +3917,10 @@ vi:
           description_short: Tìm hiểu tất cả các khái niệm trong bài học Nguyên tắc cơ bản của khoa học máy tính và sáng tạo tác phẩm cũng như câu chuyện và game của riêng bạn.
         self-paced-pl-csp2-2023:
           title: 'Học phần 2: Điều hướng trên Code.org'
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Chơi tự do
         csa-frq-practice-2022:
           lessons:
             lesson-4:
@@ -4082,3 +4087,116 @@ vi:
               display_name: Chương 2
         csd-post-survey-2024:
           title: Khảo sát sau khoá học
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Các sự kiện
+            lesson-4:
+              name: Hành vi
+            lesson-5:
+              name: Bước tiếp theo
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bắt đầu
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Vòng lặp
+            lesson-4:
+              name: Điều kiện
+            lesson-6:
+              name: Bước tiếp theo
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bắt đầu
+          title: Giới thiệu về khoa học máy tính
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+            csp_unit1_2020:
+              display_name: 'Bài 1: Thông tin kỹ thuật số'
+        csp2-2024:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Bài 2: Internet'
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Khảo sát
+            lessonGroup-3:
+              display_name: Nội dung
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+        csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+            lessonGroup-4:
+              display_name: Khảo sát
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: Các biến
+            csp_conditionals:
+              display_name: Điều kiện
+            csp_functions:
+              display_name: Các hàm
+            csp_project:
+              display_name: Dự án
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Dữ liệu
+            lessonGroup-5:
+              display_name: Khảo sát sau khoá học
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Danh sách
+            lessonGroup-3:
+              display_name: Vòng lặp
+            lessonGroup-5:
+              display_name: Dự án
+            lessonGroup-2:
+              display_name: Khảo sát sau khoá học
+        csp7-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Khảo sát sau khoá học
+        csp8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tạo PT
+            lessonGroup-3:
+              display_name: Khảo sát sau khoá học
+        csp9-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Khảo sát sau khoá học
+        csp10-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Khảo sát sau khoá học

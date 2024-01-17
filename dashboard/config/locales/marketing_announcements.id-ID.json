@@ -3,35 +3,7 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "ai-2020": {
-            "buttonText": "Pelajari lebih lanjut",
-            "title": "Jelajahi Artificial Intelligence (Kecerdasan Buatan) dan Machine Learning"
-          },
-          "ai-launch-2023": {
-            "buttonText": "Pelajari lebih lanjut"
-          },
-          "ai-pl-launch-2023": {
-            "buttonText": "Pelajari lebih lanjut"
-          },
-          "back-to-school-2021": {
-            "buttonText": "Pelajari lebih lanjut"
-          },
-          "codebytes-2020": {
-            "buttonText": "Pelajari lebih lanjut"
-          },
-          "coldplay": {
-            "buttonText": "Cobalah"
-          },
-          "congrats-certificate-share": {
-            "buttonText": "Mulai"
-          },
-          "csjourneys": {
-            "buttonText": "Pelajari lebih lanjut"
-          },
-          "csjourneys-22": {
-            "buttonText": "Pelajari lebih lanjut"
-          },
-          "csleadersprize": {
+          "co-teacher": {
             "buttonText": "Pelajari lebih lanjut"
           },
           "hoc-2023": {
@@ -43,26 +15,8 @@
             "buttonText": "Pelajari lebih lanjut",
             "title": "Pesta Dansa: Edisi AI"
           },
-          "hoc-more": {
-            "body": "Situs Hour of Code memiliki lebih dari 100 aktifitas ilmu komputer untuk semua usia dan tingkat pengalaman,dikembangkan pleh Code.org dan partners."
-          },
-          "home-learning-2020": {
-            "buttonText": "Lihat Ide-Ide Proyek"
-          },
           "superhero": {
             "buttonText": "Pelajari lebih banyak"
-          },
-          "teacher-apps-closing-2021": {
-            "buttonText": "Bergabunglah dengan kami"
-          },
-          "teacher-apps-nominate-2020": {
-            "buttonText": "Nominasikan Guru"
-          },
-          "teacher-apps-open-2021": {
-            "buttonText": "Bergabunglah dengan kami"
-          },
-          "teacher-apps-stillon-2020": {
-            "buttonText": "Bergabunglah dengan kami"
           }
         }
       }

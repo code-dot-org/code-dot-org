@@ -254,6 +254,11 @@ ky:
           EFFECT:
             '"hearts"': жүрөктөр
             '"rain"': жаан
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': көк
+            '"red"': кызыл
       gamelab_atTime:
         options:
           UNIT:

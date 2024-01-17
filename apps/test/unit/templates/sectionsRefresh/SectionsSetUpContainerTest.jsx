@@ -5,12 +5,8 @@ import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/Sections
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/code-studio/utils';
 import * as windowUtils from '@cdo/apps/utils';
-import DCDO from '@cdo/apps/dcdo';
 
 describe('SectionsSetUpContainer', () => {
-  beforeEach(() => {
-    DCDO.set('show-coteacher-ui', true);
-  });
   it('renders an initial set up section form', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
 
@@ -39,15 +35,6 @@ describe('SectionsSetUpContainer', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
 
     expect(wrapper.find('CurriculumQuickAssign').length).to.equal(1);
-  });
-
-  it('does not render coteacher if flag is false', () => {
-    DCDO.set('show-coteacher-ui', false);
-
-    const wrapper = shallow(<SectionsSetUpContainer />);
-
-    expect(wrapper.find('Button').length).to.equal(3);
-    expect(wrapper.find('ReactTooltip').length).to.equal(0);
   });
 
   it('renders coteacher settings', () => {

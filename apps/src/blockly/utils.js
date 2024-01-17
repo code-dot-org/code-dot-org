@@ -4,6 +4,9 @@ import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 // Considers an attribute true only if it is explicitly set to 'true' (i.e. defaults to false if unset).
 export const FALSEY_DEFAULT = attributeValue => attributeValue === 'true';
 
+// Considers an attribute true unless it is explicitly set to 'false' (i.e. defaults to true if unset).
+export const TRUTHY_DEFAULT = attributeValue => attributeValue !== 'false';
+
 /**
  * Reads a boolean attribute from an XML element and determines its value based on a callback function.
  * The callback function determines how we interpret the attribute value as a boolean.
@@ -94,4 +97,19 @@ export function numberListToString(numberList) {
     numberString = numberString.slice(0, -1);
   }
   return numberString;
+}
+
+/**
+ * Determines whether the hidden procedure definition workspace should be skipped during serialization.
+ * The hidden workspace is a counter-part to the main workspace containing blocks for functions and behaviors.
+ *
+ * @param {Blockly.WorkspaceSvg} workspace - The workspace to be checked for serialization as hidden.
+ * @returns {boolean} Returns `true` if the hidden workspace should be skipped, otherwise `false`.
+ */
+export function shouldSkipHiddenWorkspace(workspace) {
+  return (
+    !Blockly.getHiddenDefinitionWorkspace ||
+    Blockly.getMainWorkspace().id !== workspace.id ||
+    Blockly.isToolboxMode
+  );
 }

@@ -1,104 +1,9 @@
 {
   "banners": {
-    "csleadersprize": {
-      "title": "",
-      "body": "",
-      "buttonText": "अधिक जाणून घ्या"
-    },
-    "csjourneys-22": {
-      "title": "",
-      "body": "",
-      "buttonText": "अधिक जाणून घ्या"
-    },
-    "hoc-more": {
-      "title": "",
-      "body": "अवर ऑफ कोड वेबसाईटवर सर्व वयांसाठी आणि अनुभवाच्या पातळ्यांसाठी Code.org आणि त्यांच्या भागीदारांनी तयार केलेल्या संगणक शास्त्रातील 500 पेक्षा जास्त कृती आहेत.",
-      "buttonText": ""
-    },
     "superhero": {
       "title": "",
       "body": "",
       "buttonText": "अधिक जाणून घ्या"
-    },
-    "csjourneys": {
-      "title": "",
-      "body": "",
-      "buttonText": "अधिक जाणून घ्या"
-    },
-    "class-schedule-survey": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "back-to-school-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "अधिक जाणून घ्या"
-    },
-    "teacher-apps-open-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "आमच्यात सामील व्हा"
-    },
-    "teacher-apps-closing-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "आमच्यात सामील व्हा"
-    },
-    "teacher-apps-nominate-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "एका शिक्षकाला नामनिर्देशित करा"
-    },
-    "teacher-apps-stillon-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "आमच्यात सामील व्हा"
-    },
-    "home-learning-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "प्रोजेक्टच्या कल्पना पहा"
-    },
-    "soonhoc-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "codebytes-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "अधिक जाणून घ्या"
-    },
-    "ai-2020": {
-      "title": "कृत्रिम बुद्धिमत्ता आणि मशीन लर्निंगबद्दल जाणून घ्या",
-      "body": "",
-      "buttonText": "अधिक जाणून घ्या"
-    },
-    "congrats-certificate-share": {
-      "title": "",
-      "body": "",
-      "buttonText": "सुरुवात"
-    },
-    "coldplay": {
-      "title": "",
-      "body": "",
-      "buttonText": "करून पाहा"
-    },
-    "ai-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "अधिक जाणून घ्या"
-    },
-    "ai-pl-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "अधिक जाणून घ्या"
-    },
-    "state-of-cs-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
     },
     "hoc-2023": {
       "title": "अवर ऑफ कोड: AI सह सर्जनशीलता",
@@ -106,6 +11,11 @@
       "buttonText": "अधिक जाणून घ्या"
     },
     "hoc-2023-dance-ai": {
+      "title": "",
+      "body": "",
+      "buttonText": "अधिक जाणून घ्या"
+    },
+    "co-teacher": {
       "title": "",
       "body": "",
       "buttonText": "अधिक जाणून घ्या"

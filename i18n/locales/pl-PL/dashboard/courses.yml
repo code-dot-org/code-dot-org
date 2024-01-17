@@ -249,6 +249,13 @@ pl:
           description_student: "## Powitanie\n\nWitamy w bezpłatnej, samodzielnej nauce online Code.org dla nauczycieli, by rozpoczęli nauczanie z Code.org! Po ukończeniu tego doświadczenia zawodowego **będziesz gotowy, aby rozpocząć naukę ze swoimi uczniami Jednostki 5 CSD na Code.org – Dane i społeczeństwo**.\n\n### Wybierz sposób uczenia się, która Ci odpowiada\n\n-   **Podążaj we własnym tempie:** Nauka we własnym tempie ma dać Ci kontrolę nad własną nauką. Sugerowane godziny zajęć podane są przy każdej lekcji. Zachęcamy Cię jednak do **zaangażowania się w treść we własnym tempie.**\n\n-   **Wybierz treści dla siebie:** Treści są zorganizowane według sugerowanej kolejności dla nauczycieli, którzy są nowicjuszami zarówno w Code.org, jak i w Jednostce 5 CSD  – Dane i społeczeństwo. Możesz jednak **zaangażować się w przerabianie treści w kolejności, która najlepiej odpowiada Twoim potrzebom.** Jeśli znasz już platformę Code.org, możesz pominąć wprowadzenie do Code.org i przejść od razu do Przygotowanie do Nauczania na temat Danych i społeczeństwa."
           description_teacher: "## Powitanie\n\nWitamy w bezpłatnej, samodzielnej nauce online Code.org dla nauczycieli, by rozpoczęli nauczanie z Code.org! Po ukończeniu tego doświadczenia zawodowego **będziesz gotowy, aby rozpocząć naukę ze swoimi uczniami Jednostki 5 CSD na Code.org – Dane i społeczeństwo**.\n\n### Wybierz sposób uczenia się, która Ci odpowiada\n\n-   **Podążaj we własnym tempie:** Nauka we własnym tempie ma dać Ci kontrolę nad własną nauką. Sugerowane godziny zajęć podane są przy każdej lekcji. Zachęcamy Cię jednak do **zaangażowania się w treść we własnym tempie.**\n\n-   **Wybierz treści dla siebie:** Treści są zorganizowane według sugerowanej kolejności dla nauczycieli, którzy są nowicjuszami zarówno w Code.org, jak i w Jednostce 5 CSD  – Dane i społeczeństwo. Możesz jednak **zaangażować się w przerabianie treści w kolejności, która najlepiej odpowiada Twoim potrzebom.** Jeśli znasz już platformę Code.org, możesz pominąć wprowadzenie do Code.org i przejść od razu do Przygotowanie do Nauczania na temat Danych i społeczeństwa."
           version_title: "'23-'24"
+        melissasandbox-2024:
+          title: melissasandbox-2024
+          description_short: piaskownica dla melissy toohey
+        self-paced-pl-k5-2024:
+          title: self-paced-pl-k5-2024
+        csp-2024:
+          title: csp-2024
     resources:
       curriculum/csd/2017:
         name: Program nauczania

@@ -283,6 +283,10 @@ When /^I wait until element "([^"]*)" is visible within element "([^"]*)"$/ do |
   wait_until {@browser.execute_script("return $(#{selector.dump}, $(#{parent_selector.dump}).contents()).is(':visible')")}
 end
 
+Then /^I wait until element "([^"]*)" is (not )?open$/ do |selector, negation|
+  wait_until {element_open?(selector) == negation.nil?}
+end
+
 When /^I wait until jQuery Ajax requests are finished$/ do
   wait_short_until {@browser.execute_script("return $.active == 0")}
 end
@@ -1063,7 +1067,7 @@ end
 
 And /^I dismiss the hoc guide dialog$/ do
   steps <<~GHERKIN
-    And I click selector "#uitest-no-email-guide" once I see it
+    And I click selector "#uitest-no-email-guide" if I see it
     And I wait until I don't see selector "#uitest-no-email-guide"
   GHERKIN
 end

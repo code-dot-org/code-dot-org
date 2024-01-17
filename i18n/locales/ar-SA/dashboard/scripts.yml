@@ -123,6 +123,7 @@ ar:
           description: جرّب أساسيات علوم الكمبيوتر مع شخصيات من لعبتي الطيور الغاضبة والنباتات ضد الزومبي!
           description_short: جرب تعلم مبادئ الحاسب الآلي من خلال الغديد من الشخصيات الممتعة!
           student_description: جرّب أساسيات علوم الكمبيوتر مع شخصيات من لعبتي الطيور الغاضبة والنباتات ضد الزومبي!
+          name: ساعة البرمجة
         CodeStudioPuzzleChallenge:
           title: تحدي لغز استوديو الكود
           description: جرب ألغاز الترميز الممتعة هذه. ابذل قصارى جهدك!
@@ -8109,9 +8110,9 @@ ar:
               name: اختتام اليوم الثالث
           lesson_groups:
             lessonGroup-2:
-              display_name: اليوم ٣
+              display_name: اليوم 3
           name: pl-CSD - اليوم الصيفي 3
-          title: اليوم ٣
+          title: اليوم 3
         pl-csd-summer-day4:
           lessons:
             lesson-4:
@@ -8134,9 +8135,9 @@ ar:
               name: الإنهاء
           lesson_groups:
             lessonGroup-2:
-              display_name: اليوم ٤
+              display_name: اليوم 4
           name: pl-CSD - الصيف - اليوم الرابع
-          title: اليوم ٤
+          title: اليوم 4
         pl-csd-summer-day5:
           lessons:
             lesson-1:
@@ -8219,7 +8220,7 @@ ar:
               display_name: الجزء المتزامن 2
             lessonGroup-5:
               display_name: الجزء 2 غير المتزامن
-          title: اليوم ٣
+          title: اليوم 3
         virtual-pl-csd-summer-day4:
           lessons:
             lesson-2:
@@ -8239,7 +8240,7 @@ ar:
               display_name: الجزء المتزامن 2
             lessonGroup-5:
               display_name: الجزء 2 غير المتزامن
-          title: اليوم ٤
+          title: اليوم 4
         virtual-pl-csd-summer-day5:
           lessons:
             lesson-9:
@@ -8261,7 +8262,7 @@ ar:
               display_name: الجزء 1 غير المتزامن
             lessonGroup-4:
               display_name: الجزء المتزامن 2
-          title: اليوم ٥
+          title: اليوم 5
         self-paced-pl-microbit2:
           lesson_groups:
             lessonGroup-2:
@@ -8348,6 +8349,10 @@ ar:
             -   تعرف على فرص التواصل مع مجتمع علوم الكمبيوتر الأوسع.
 
             **الوقت المقترح**: 70 دقيقة
+        musiclab:
+          lessons:
+            lesson-3:
+              name: اللعب الحر
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -8599,7 +8604,7 @@ ar:
               display_name: الجزء المتزامن 2
             lessonGroup-5:
               display_name: الجزء 2 غير المتزامن
-          title: اليوم ٣
+          title: اليوم 3
         virtual-pl-csp-summer-day4:
           lesson_groups:
             lessonGroup-2:
@@ -8610,7 +8615,7 @@ ar:
               display_name: الجزء المتزامن 2
             lessonGroup-5:
               display_name: الجزء 2 غير المتزامن
-          title: اليوم ٤
+          title: اليوم 4
         virtual-pl-csp-summer-day5:
           lessons:
             lesson-6:
@@ -8622,7 +8627,7 @@ ar:
               display_name: الجزء 1 غير المتزامن
             lessonGroup-4:
               display_name: الجزء المتزامن 2
-          title: اليوم ٥
+          title: اليوم 5
         virtual-pl-csa-summer-day2:
           lessons:
             lesson-2:
@@ -8658,7 +8663,7 @@ ar:
               display_name: الجزء المتزامن 2
             lessonGroup-5:
               display_name: الجزء 2 غير المتزامن
-          title: اليوم ٣
+          title: اليوم 3
         virtual-pl-csa-summer-day4:
           lessons:
             lesson-2:
@@ -8676,7 +8681,7 @@ ar:
               display_name: الجزء المتزامن 2
             lessonGroup-5:
               display_name: الجزء 2 غير المتزامن
-          title: اليوم ٤
+          title: اليوم 4
         virtual-pl-csa-summer-day5:
           lessons:
             lesson-1:
@@ -8885,3 +8890,258 @@ ar:
         csd-post-survey-2024:
           title: استبيان ما بعد الدورة التدريبية
           description: تحتوي هذه الوحدة على استبيان ما بعد الدورة. يمكن تعيين هذه الوحدة بعد أن يكمل الطلاب وحدتهم النهائية في هذا المقرر الدراسي.
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: الدرس 1
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: الدرس 1
+            lesson-3:
+              name: الأحداث
+            lesson-4:
+              name: السلوك
+            lesson-5:
+              name: الخطوات التالية
+          lesson_groups:
+            lessonGroup-2:
+              display_name: البدء
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: الدرس 1
+            lesson-3:
+              name: الحلقات
+            lesson-4:
+              name: الجمل الشرطية
+            lesson-5:
+              name: وضع كل ذلك معًا
+            lesson-6:
+              name: الخطوات التالية
+          lesson_groups:
+            lessonGroup-2:
+              display_name: البدء
+          title: مقدمة لعلوم الحاسب الآلي
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
+            csp_unit1_2020:
+              display_name: "(قديم) الوحدة 1: معلومات رقمية"
+          title: المعلومات الرقمية ('23-'24)
+          student_description: تستكشف هذه الوحدة التحديات والأسئلة التقنية التي تنشأ عن الحاجة إلى تمثيل المعلومات الرقمية في أجهزة الكمبيوتر. تعرف على كيفية تمثيل المعلومات المعقدة مثل الأرقام والنصوص والصور والصوت في النص، وكيفية عمل الضغط، والتأثيرات الاجتماعية الأوسع لرقمنة معلومات العالم.
+          description_short: استكشف تحديات وتأثيرات تمثيل المعلومات حول العالم من حولك في أجزاء صغيرة.
+        csp2-2024:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'الوحدة 2: الانترنت'
+          title: الإنترنت ('23-'24)
+          student_description: تكشف هذه الوحدة كيف تم تصميم الإنترنت لربط مليارات الأجهزة والأشخاص ببعضهم البعض. تعرف على كيفية عمل بروتوكولات الإنترنت المختلفة وقم ببنائها بنفسك باستخدام Internet Simulator. ثم ضع في اعتبارك التأثيرات التي أحدثها الإنترنت، سواء كانت جيدة أو سيئة، على الحياة الحديثة.
+          description_short: قم ببناء الإنترنت من الألف إلى الياء باستخدام Internet Simulator.
+        csp3-2024:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'الوحدة 3: مقدمة في تصميم التطبيقات'
+          title: مقدمة لتصميم التطبيقات ('23-'24)
+          student_description: هذه الوحدة عبارة عن مقدمة للبرمجة وتصميم التطبيقات مع التركيز الشديد على المهارات المهمة مثل تصحيح الأخطاء والبرمجة الزوجية واختبار المستخدم. تعرف على كيفية تصميم واجهات المستخدم وكتابة البرامج القائمة على الأحداث في App Lab ثم تصميم مشروع يعلم زملائك في الفصل حول موضوع من اختيارك.
+          description_short: صمم تطبيقك الأول وتعلم كيف يتعاون المبرمجون ويتفاعلون مع المستخدمين لبناء أفضل الحلول الممكنة للمشكلات.
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: استبيان
+            lessonGroup-3:
+              display_name: محتوى
+            lessonGroup-4:
+              display_name: أظهر ما تعرفه
+            lessonGroup-6:
+              display_name: مسح نهاية الوحدة
+            lessonGroup-5:
+              display_name: دروس بديلة
+            lessonGroup-7:
+              display_name: صناديق الرمل
+          title: البرمجة الشيئية
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+            lessonGroup-3:
+              display_name: أظهر ما تعرفه
+            lessonGroup-5:
+              display_name: مسح نهاية الوحدة
+            lessonGroup-4:
+              display_name: دروس بديلة
+            lessonGroup-6:
+              display_name: صناديق الرمل
+          title: هيكل الفصل والتصميم
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+            lessonGroup-3:
+              display_name: أظهر ما تعرفه
+            lessonGroup-5:
+              display_name: مسح نهاية الوحدة
+            lessonGroup-4:
+              display_name: دروس بديلة
+            lessonGroup-6:
+              display_name: صناديق الرمل
+          title: المصفوفات والخوارزميات
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+            lessonGroup-3:
+              display_name: أظهر ما تعرفه
+            lessonGroup-5:
+              display_name: مسح نهاية الوحدة
+            lessonGroup-4:
+              display_name: دروس بديلة
+            lessonGroup-6:
+              display_name: صناديق الرمل
+          title: الشروط والمنطق
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+            lessonGroup-3:
+              display_name: أظهر ما تعرفه
+            lessonGroup-5:
+              display_name: مسح نهاية الوحدة
+            lessonGroup-4:
+              display_name: دروس بديلة
+            lessonGroup-6:
+              display_name: صناديق الرمل
+          title: مصفوفات ثنائية الأبعاد
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+            lessonGroup-3:
+              display_name: أظهر ما تعرفه
+            lessonGroup-5:
+              display_name: مسح نهاية الوحدة
+            lessonGroup-4:
+              display_name: دروس بديلة
+            lessonGroup-6:
+              display_name: صناديق الرمل
+          title: قوائم المصفوفات وطرق السلسلة
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+            lessonGroup-3:
+              display_name: أظهر ما تعرفه
+            lessonGroup-4:
+              display_name: مسح نهاية الوحدة
+            lessonGroup-5:
+              display_name: دروس بديلة
+            lessonGroup-6:
+              display_name: صناديق الرمل
+          title: طريقة التحلل والتكرار
+          description: "تتيح هذه الوحدة للطلاب ممارسة تصميم البرامج وتطويرها باستخدام المهارات التي تعلموها في جميع المناهج الدراسية أثناء تخطيط وتطوير مشروع ترميز إبداعي لنقل اهتمام شخصي أو قصة باستخدام المسرح. يستخدم الطلاب استراتيجيات التحلل والمبادئ الموجهة للكائنات لتخطيط وتنفيذ أفكارهم مع ضمان تلبية مشاريعهم للمتطلبات المحددة. في هذه العملية، يتعلم الطلاب كتابة الأساليب «الخاصة» والمثقلة والمتجاوزة واستخدام الكلمة الأساسية «الفائقة» في طريقة الفئة الفرعية لاستدعاء طريقة superclass أثناء استكشاف وظائف الطرق ومعلماتها. في جميع أنحاء الوحدة، يتدرب الطلاب على التتبع وكتابة الأساليب العودية ومقارنة هذه الأساليب بالحلول التكرارية. من خلال المعرفة والمهارات المكتسبة على مدار العام، يأخذ الطلاب في الاعتبار الحاجة إلى زيادة موثوقية النظام إلى أقصى حد أثناء استكشافهم للأخطاء والمشكلات في البرامج الحالية.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF أهداف الوحدة</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>بنهاية هذه الوحدة، سيكون الطلاب قادرين على...</em></strong></p>\n\n-   التفريق بين تمرير القيم البدائية ومراجع الكائنات كمعايير\n\n-   الكتابة والاتصال بالطرق المحملة أو «الخاصة» أو التي تم تجاوزها\n\n-   شرح المشكلات القانونية ومخاوف الملكية الفكرية للبرامج التي تنشئ صورًا تم إنشاؤها بواسطة الذكاء الاصطناعي\n\n-   تتبع طريقة متكررة لتحديد نتيجتها\n\n-   تحديد الاستراتيجيات لتحقيق أقصى قدر من موثوقية النظام\n    </div>\n    </details>\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">✅ فحوصات التقدم الشخصي في AP Classroom</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p>لتعيين أسئلة من بنك أسئلة AP Classroom تتوافق مع هذه الوحدة، قم بإنشاء اختبار مخصص في AP Classroom من خلال البحث في بنك الأسئلة عن عبارات المعرفة الأساسية في صفحة <a href=\"https://studio.code.org/s/csa2-2023/standards\" target=\"_blank\"><strong>المعايير</strong></a> الخاصة بالوحدة. يمكنك العثور على التعليمات وعروض الفيديو للقيام بذلك على <a href=\"https://apcentral.collegeboard.org/instructional-resources/ap-classroom\" target=\"_blank\"><strong>AP Central</strong></a>.</p>\n    </div>\n</details>\n\n## هل انتهيت من تدريس هذه الوحدة؟\n\nأجب على هذا [\\*\\*استبيان قصير\\*\\*](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=7) للسماح لفريق مناهج Code.org بمعرفة كيفية سير الوحدة."
+          student_description: "تتيح لك هذه الوحدة ممارسة تصميم البرامج وتطويرها باستخدام المهارات التي تعلمتها خلال المناهج الدراسية أثناء تخطيط وتطوير مشروع ترميز إبداعي لنقل اهتمام شخصي أو قصة باستخدام The Theatre. يمكنك استخدام استراتيجيات التحلل والمبادئ الموجهة للكائنات لتخطيط وتنفيذ أفكارك مع ضمان تلبية مشروعك للمتطلبات المحددة. في هذه العملية، تتعلم كتابة الطرق «الخاصة» والمحملة بشكل زائد والمتجاوز واستخدام الكلمة الأساسية «الفائقة» في طريقة الفئة الفرعية لاستدعاء طريقة superclass أثناء استكشاف وظائف الطرق ومعلماتها. في جميع أنحاء الوحدة، تتدرب على التتبع وكتابة الطرق العودية ومقارنة هذه الطرق بالحلول التكرارية. من خلال المعرفة والمهارات المكتسبة على مدار العام، فإنك تفكر في الحاجة إلى زيادة موثوقية النظام إلى أقصى حد أثناء استكشاف الأخطاء والمشكلات في البرامج الحالية.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF أهداف الوحدة</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>بحلول نهاية هذه الوحدة، سوف تكون قادرًا على...</em></strong></p>\n\n-   التفريق بين تمرير القيم البدائية ومراجع الكائنات كمعايير\n\n-   الكتابة والاتصال بالطرق المحملة أو «الخاصة» أو التي تم تجاوزها\n\n-   شرح المشكلات القانونية ومخاوف الملكية الفكرية للبرامج التي تنشئ صورًا تم إنشاؤها بواسطة الذكاء الاصطناعي\n\n-   تتبع طريقة متكررة لتحديد نتيجتها\n\n-   تحديد استراتيجيات لتحقيق أقصى قدر من موثوقية النظام\n    </div>\n    </details>"
+        csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+            lessonGroup-3:
+              display_name: أظهر ما تعرفه
+            lessonGroup-4:
+              display_name: استبيان
+            lessonGroup-5:
+              display_name: دروس بديلة
+            lessonGroup-6:
+              display_name: صناديق الرمل
+          title: البحث والفرز
+        csa9-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: المراجعة والممارسة
+            lessonGroup-3:
+              display_name: اختبارات وهمية
+            lessonGroup-4:
+              display_name: صناديق الرمل
+          description: تقوم هذه الوحدة بإعداد الطلاب لامتحان AP CSA من خلال مراجعة المفاهيم الأساسية وممارسة الأسئلة متعددة الخيارات والإجابة المجانية وتعزيز استراتيجيات إجراء الاختبار. يحدد الطلاب نقاط القوة ومجالات التحسين لإنشاء خطط دراسية فردية لتركيز ممارساتهم والتقييم الذاتي لتقدمهم.
+          student_description: تعدك هذه الوحدة لامتحان AP CSA من خلال مراجعة المفاهيم الأساسية وممارسة الأسئلة متعددة الخيارات والإجابة المجانية وتعزيز استراتيجيات إجراء الاختبار. يمكنك تحديد نقاط القوة ومجالات التحسين لإنشاء خطط دراسية فردية للتركيز على الممارسة والتقييم الذاتي لتقدمك.
+          description_short: يستعد الطلاب لامتحان AP CSA من خلال التدرب على استراتيجيات الأسئلة متعددة الخيارات والإجابة المجانية.
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: المتغيرات
+            csp_conditionals:
+              display_name: الجمل الشرطية
+            csp_functions:
+              display_name: دوال
+            csp_project:
+              display_name: مشروع
+          title: المتغيرات والشروط والوظائف ('23-'24)
+          student_description: تستكشف هذه الوحدة كيف تسمح المتغيرات والشروط والوظائف بتصميم تطبيقات معقدة بشكل متزايد. تعرف على كيفية البرمجة باستخدام هذه المفاهيم الثلاثة الجديدة من خلال سلسلة من الأنشطة التعاونية. ثم قم بإنشاء تطبيق صانع القرار الخاص بك لمشاركته مع الأصدقاء ومساعدتهم على اتخاذ القرار.
+          description_short: تعرف على كيفية إنشاء تطبيقات تخزن المعلومات وتتخذ القرارات وتحافظ على تنظيم التعليمات البرمجية.
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: البيانات
+            lessonGroup-5:
+              display_name: استبيان ما بعد الدورة التدريبية
+          title: البيانات ('23-'24)
+          student_description: 'تعرف في هذه الوحدة على كيفية مساعدة تحليل البيانات في تحويل البيانات الأولية إلى معلومات مفيدة حول العالم. تعرف على كيفية استخدام تصور البيانات للعثور على الأنماط داخل مجموعات البيانات ومعرفة كيفية استخدام عملية تحليل البيانات هذه في سياقات مثل البيانات المفتوحة أو التعلم الآلي للمساعدة في اتخاذ القرارات أو معرفة المزيد عن عالمنا. في مشروع الوحدة، ستقوم بتحليل مجموعة بيانات من اختيارك وتقديم النتائج الخاصة بك. '
+          description_short: استكشف وتصور مجموعات البيانات من مجموعة متنوعة من الموضوعات أثناء البحث عن الأنماط ومحاولة معرفة المزيد عن العالم من حولك.
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: القوائم
+            lessonGroup-3:
+              display_name: الحلقات
+            lessonGroup-4:
+              display_name: الاجتيازات
+            lessonGroup-5:
+              display_name: مشروع
+            lessonGroup-2:
+              display_name: استبيان ما بعد الدورة التدريبية
+          title: القوائم والحلقات وعمليات العبور («23-24»)
+          student_description: تقدم هذه الوحدة القوائم والحلقات وعمليات العبور، وتستكشف الطريقة التي يمكن استخدامها لإنشاء تطبيقات تخزن وتعالج كميات كبيرة من المعلومات. تعلم البرمجة باستخدام مكتبة البيانات في App Lab وأكمل مشروع هاكاثون لمدة 5 أيام في نهاية الوحدة حيث يمكنك تصميم برنامج حول أي موضوع من اختيارك.
+          description_short: تعرّف على كيفية إنشاء تطبيقات تستخدم القوائم والحلقات وعمليات العبور لتخزين كميات كبيرة من المعلومات ومعالجتها.
+        csp7-2024:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: إعداد وإرجاع القيم
+            csp_libraries:
+              display_name: المكتبات
+            lessonGroup-3:
+              display_name: استبيان ما بعد الدورة التدريبية
+          title: المعلمات والعائدات والمكتبات ('23-'24)
+          student_description: تقدم هذه الوحدة المعلمات والمرتجعات والمكتبات. تعرف على كيفية استخدام هذه المفاهيم لإنشاء أنواع جديدة من التطبيقات بالإضافة إلى مكتبات التعليمات البرمجية التي يمكنك مشاركتها مع زملائك في الفصل. قم بإنهاء الوحدة من خلال تصميم مكتبة من الوظائف حول أي موضوع من اختيارك.
+          description_short: تعرف على كيفية تصميم كود نظيف وقابل لإعادة الاستخدام يمكنك مشاركته مع زميل واحد أو العالم بأسره.
+        csp8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: إنشاء مهام الأداء
+            lessonGroup-3:
+              display_name: استبيان ما بعد الدورة التدريبية
+          title: الأمن السيبراني والتأثيرات العالمية ('23-'24)
+          student_description: تعرف في هذه الوحدة على كيفية تأثير ابتكارات الحوسبة على عالمنا بطرق مفيدة وضارة. تعرف على كيف يمكن أن تشكل البيانات تهديدًا لخصوصيتنا وأمننا والطرق التي يتم بها استخدام التشفير والتقنيات الأخرى لحمايتها. شارك في جميع أنحاء الوحدة في مؤتمر «مدرسة المستقبل» الذي تقدم فيه أنت وفريقك اقتراحًا حول أفضل السبل لتحسين الحياة المدرسية من خلال ابتكارات الحوسبة.
+          description_short: 'البحث ومناقشة الأحداث الجارية عند تقاطع البيانات والسياسة العامة والقانون والأخلاق والتأثير المجتمعي. '
+        csp9-2024:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'الوحدة 9: البيانات'
+            lessonGroup-2:
+              display_name: استبيان ما بعد الدورة التدريبية
+          title: إنشاء برنامج PT الإعدادية ('23-'24)
+          description: في هذه الوحدة، استعد لمهمة إنشاء أداء AP وقم بتنفيذها. يحتوي كل درس على روابط لمستندات وأنشطة مفيدة لمساعدتك على فهم المهمة ووضع خطة لإكمالها.
+          student_description: في هذه الوحدة، استعد لمهمة إنشاء أداء AP وقم بتنفيذها. يحتوي كل درس على روابط لمستندات وأنشطة مفيدة لمساعدتك على فهم المهمة ووضع خطة لإكمالها.
+          description_short: تدرب على مهمة إنشاء الأداء (PT) وأكملها.
+        csp10-2024:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'الوحدة 10: الأمان عبر الإنترنت والآثار العالمية'
+            lessonGroup-2:
+              display_name: استبيان ما بعد الدورة التدريبية
+          title: الخوارزميات ('23-'24)
+          student_description: هذه الوحدة عبارة عن استكشاف سريع لكيفية تصميم علماء الكمبيوتر للخوارزميات لحل المشكلات وكيفية تحليل سرعة الخوارزميات المختلفة. تعرف على مفهوم الكفاءة الخوارزمية من خلال مجموعة متنوعة من الأنشطة العملية وتعلم كيفية تطبيقها في الحوسبة الحديثة.
+          description_short: قم بتصميم وتحليل الخوارزميات لفهم كيفية عملها ولماذا يعتبر بعضها أفضل من البعض الآخر.
+        csp-post-survey-2024:
+          title: استطلاع رأي بعد انتهاء دورة مبادئ علم الحاسوب
+          description: تحتوي هذه الوحدة على استبيان مبادئ علوم الكمبيوتر بعد الدورة.
+          student_description: تحتوي هذه الوحدة على استبيان حول دورة مبادئ علوم الكمبيوتر. سيخبرك معلمك عندما يحين وقت إجراء هذا الاستطلاع.

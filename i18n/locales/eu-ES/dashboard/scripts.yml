@@ -99,6 +99,7 @@ eu:
           description: Murgildu konputagailu zientziaren oinarrietan Angry Birds eta Plants vs. Zombiesen pertsonaien laguntzaz!
           description_short: Informatikaren oinarriak ikasi itzazu pertsonaia alaiekin!
           student_description: Murgildu konputagailu zientziaren oinarrietan Angry Birds eta Plants vs. Zombiesen pertsonaien laguntzaz!
+          name: Kode Ordua
         algebraPD2a:
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
           description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
@@ -1137,6 +1138,10 @@ eu:
               display_name: Pertsonaiak
             lessonGroup-4:
               display_name: Aldagaiak
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Joku askea
         csa-frq-practice-2022:
           lessons:
             lesson-4:
@@ -1222,3 +1227,34 @@ eu:
           lesson_groups:
             lessonGroup-7:
               display_name: Sarrera
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Gertaerak
+            lesson-4:
+              name: Jokabideak
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Itzuliak
+            lesson-4:
+              name: Baldintzak
+          title: Konputazio zientzetarako sarrera
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: Aldagaiak
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Datu
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Zerrendak
+            lessonGroup-3:
+              display_name: Itzuliak

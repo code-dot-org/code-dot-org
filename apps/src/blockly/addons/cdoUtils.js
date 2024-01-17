@@ -15,13 +15,13 @@ import {
   appendProceduresToState,
   convertFunctionsXmlToJson,
   convertXmlToJson,
-  getCombinedSerialization,
+  getProjectSerialization,
   hasBlocks,
   positionBlocksOnWorkspace,
-  resetEditorWorkspaceBlockConfig,
 } from './cdoSerializationHelpers';
 import {parseElement as parseXmlElement} from '../../xml';
 import * as blockUtils from '../../block_utils';
+import {getProjectXml} from '@cdo/apps/blockly/addons/cdoXml';
 
 /**
  * Loads blocks to a workspace.
@@ -76,7 +76,7 @@ function prepareSourcesForWorkspaces(source) {
   if (Blockly.useModalFunctionEditor) {
     procedureTypesToHide.push(BLOCK_TYPES.procedureDefinition);
   }
-  const {mainSource, hiddenDefinitionSource} = moveHiddenProcedures(
+  const {mainSource, hiddenDefinitionSource} = moveHiddenBlocks(
     parsedSource,
     procedureTypesToHide
   );
@@ -106,17 +106,18 @@ function parseSource(source) {
 }
 
 /**
- * Move hidden procedures from the source to a hidden definition object.
+ * Move hidden blocks (e.g. procedures) from the source to a hidden definition object.
  * These will be used to initialize the main and hidden definitions workspaces, respectively.
- * Procedures are hidden if they have a type in the procedureTypesToHide array.
+ * Blocks are hidden if they have a type in the procedureTypesToHide array, or if they
+ * are explicitly marked as invisible in the project source.
  * In addition, copy the procedure model from the source
- * object to the hidden definition object when moving a procedure.
+ * object to the hidden definition object when moving a procedure block.
  * @param {Object} source Project source object, parsed from JSON.
  * @param {Array<string>} procedureTypesToHide procedure types to move to procedures object.
  * @returns void
  * exported for unit testing
  */
-export function moveHiddenProcedures(source = {}, procedureTypesToHide = []) {
+export function moveHiddenBlocks(source = {}, procedureTypesToHide = []) {
   if (procedureTypesToHide.length === 0 || !hasBlocks(source)) {
     return {mainSource: {}, hiddenDefinitionSource: {}};
   }
@@ -131,16 +132,16 @@ export function moveHiddenProcedures(source = {}, procedureTypesToHide = []) {
   hiddenDefinitionSource.procedures = [];
 
   source.blocks.blocks.forEach(block => {
-    const destination = procedureTypesToHide.includes(block.type)
-      ? hiddenDefinitionSource
-      : mainSource;
+    const {invisible, procedureId} = block.extraState || {};
+    const hideBlock = procedureTypesToHide.includes(block.type) || invisible;
+    const destination = hideBlock ? hiddenDefinitionSource : mainSource;
     destination.blocks.blocks.push(block);
 
     // Also copy the procedure model for blocks to that need to be hidden
     // Equality check works because hiddenDefinitionSource and mainSource are different object references
-    if (destination === hiddenDefinitionSource) {
+    if (destination === hiddenDefinitionSource && procedureId) {
       const procedureModel = source.procedures.find(
-        procedure => procedure.id === block.extraState?.procedureId
+        procedure => procedure.id === procedureId
       );
       if (procedureModel) {
         hiddenDefinitionSource.procedures.push(procedureModel);
@@ -275,29 +276,10 @@ export function getUserTheme(themeOption) {
  */
 export function getCode(workspace, getSourceAsJson) {
   if (!getSourceAsJson) {
-    return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
+    return Blockly.Xml.domToText(getProjectXml(workspace));
+  } else {
+    return JSON.stringify(getProjectSerialization(workspace));
   }
-
-  const mainWorkspaceSerialization =
-    Blockly.serialization.workspaces.save(workspace);
-
-  const hiddenDefinitionWorkspace = Blockly.getHiddenDefinitionWorkspace();
-  const hiddenWorkspaceSerialization = hiddenDefinitionWorkspace
-    ? Blockly.serialization.workspaces.save(hiddenDefinitionWorkspace)
-    : null;
-
-  // Blocks rendered in the hidden workspace get extra properties that need to be
-  // removed so they don't apply if the block moves to the main workspace on subsequent loads
-  if (hasBlocks(hiddenWorkspaceSerialization)) {
-    resetEditorWorkspaceBlockConfig(hiddenWorkspaceSerialization.blocks.blocks);
-  }
-
-  const combinedSerialization = getCombinedSerialization(
-    mainWorkspaceSerialization,
-    hiddenWorkspaceSerialization
-  );
-
-  return JSON.stringify(combinedSerialization);
 }
 
 export function soundField(onClick, transformText, icon) {
@@ -345,33 +327,6 @@ export function locationField(icon, onClick) {
 export function registerCustomProcedureBlocks() {
   unregisterProcedureBlocks();
   Blockly.common.defineBlocks(procedureBlocks);
-}
-
-/**
- * Partitions blocks of the specified types to the front of the list.
- *
- * @param {Element[]|Object[]} blocks - An array of block elements or JSON blocks to be partitioned.
- * @param {Object} [options] - An object containing partitioning options.
- * @param {string[]} [options.prioritizedBlockTypes] - An array of strings representing block types to move to the front.
- * @param {boolean} [options.isJson] - A flag indicating whether the blocks are JSON blocks (vs. block elements).
- * @returns {Element[]|Object[]} A new array of block elements or JSON blocks partitioned based on their types.
- */
-export function partitionBlocksByType(
-  blocks = [],
-  prioritizedBlockTypes = [],
-  isBlockElements = true
-) {
-  const prioritizedBlocks = [];
-  const remainingBlocks = [];
-
-  blocks.forEach(block => {
-    const blockType = isBlockElements ? block.getAttribute('type') : block.type;
-    prioritizedBlockTypes.includes(blockType)
-      ? prioritizedBlocks.push(block)
-      : remainingBlocks.push(block);
-  });
-
-  return [...prioritizedBlocks, ...remainingBlocks];
 }
 
 /**

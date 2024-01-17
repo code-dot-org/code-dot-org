@@ -14,6 +14,11 @@
       "title": "Dance Party: AI Edition",
       "body": "Learn about artificial intelligence (AI) concepts to create your own virtual dance party showcasing today's top artists. With dozens of songs to choose from, reach every student no matter their music taste. It's time to strut your stuff!",
       "buttonText": "Learn more"
+    },
+    "co-teacher": {
+      "title": "New! Add co-teachers to your sections",
+      "body": "Streamline your classroom management by adding co-teachers from your \"Edit Section Details\" page.",
+      "buttonText": "Learn more"
     }
   }
 }

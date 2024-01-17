@@ -84,6 +84,7 @@ npm-debug.log
 /bin/cron/log
 /bin/i18n/*_credentials.yml
 /bin/i18n/crowdin/*files_to_sync_out.json
+/bin/i18n/crowdin/etags/*testing_etags.json
 /bin/test/coverage
 /dashboard/config/newrelic.yml
 /dashboard/db/ui_test_data.*

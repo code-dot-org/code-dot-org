@@ -1,12 +1,13 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2023-12-15T16:30:44.000Z",
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "## Reflection\r\n\r\nHow do you use the Internet? \r\n\r\nThink about your typical day. When are you using the Internet? For what purposes? What role does it have in your life?",
-    "encrypted_solution": "dlaZZZIphK8MQBdP4H63mb1u2+L1DSA6SRLMZ2j9x9ce6OshpFg0ExC0iZ8S\nB1YmyJL16fcGWfWKJY0/5SrA94JAFUjlSzoNkJ2QHHMRlprDqTrO3npCr0xY\nrh4oQl1ci7Xw8pzVp6tNtCiXRFisJDhkgysT+/TZyvoo+EcQVIIjg8Fcyp4x\ntTTRmQTysBR+O3LGwowG3goFWVLkYEBaK/DWtJ3ahaf87ATA2MxoVZV/QpWa\n1uUec786Yom00RxJYccSSEnTkFb6Ranse7TvMUosr1+6i0D4Prq7hS475Zlg\nk1Bb1xSAiWVZ/DrbapJ+g40PY0XO8FnREXGLMap77bJCbco6FqxGd5Zd9cQp\nOf0Vv/3I+IsAmK0LlqfXILoZxAoBJkUEszunH0RfziBTkFDo5fedjFNI3oSb\n+IreKZa2Jku83rr3pgdRBlJvH2/XPune7tZ1arx94nZFeGZ4q2qtRJ0c4V0h\nSzrxwW49B7A=\n",
+    "long_instructions": "## Reflection\r\n\r\nNow that you have learned about event-based programming, describe how event blocks can make a program more engaging and creative.   \r\n\r\nThink about your typical day. Where do you see this type of interactivity in your life? ",
+    "encrypted_solution": "CBYU+H5ZaW9Dv5olm9iiyoiVRLoWK984i2KX6EWvzf/UA4Anem7ZqPhbof/V\nMjY4rGXT9XuExcqo+cY6hK0lU3qbOaI3EFRV9ZgiKlMryEe+mk9bzNWDinst\ngclPKcb5adVzvWFtePwOvJlVzpZpTagd0iWLVqYC9eXnkwWofVBVfcz7qFD/\nSaikkAX2X0MqIwpYsyDKGHf3rpymnqxFFycIvUo8YBicB7k7vNqAh3EBVf+O\ngwRcEaE1WcaIytyOHNdWOFSkgerj6DZSoj0sLliY5XSQO/v0xU4YcaDOyiE=\n",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19619,
@@ -19,8 +20,9 @@
     "optional": "false",
     "allow_multiple_attempts": "true"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-12-15T16:30:44.164+00:00\",\"changed\":[\"cloned from \\\"U2L1 CFU how use internet_2023\\\"\"],\"cloned_from\":\"U2L1 CFU how use internet_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-12-15T16:30:44.164+00:00\",\"changed\":[\"cloned from \\\"U2L1 CFU how use internet_2023\\\"\"],\"cloned_from\":\"U2L1 CFU how use internet_2023\"},{\"changed_at\":\"2024-01-02 20:06:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-01-02 20:08:10 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-01-02 20:34:02 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

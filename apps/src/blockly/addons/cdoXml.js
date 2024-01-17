@@ -1,6 +1,10 @@
 import {BLOCK_TYPES, PROCEDURE_DEFINITION_TYPES} from '../constants';
-import {partitionBlocksByType} from './cdoUtils';
-import {FALSEY_DEFAULT, readBooleanAttribute} from '../utils';
+import {
+  FALSEY_DEFAULT,
+  TRUTHY_DEFAULT,
+  readBooleanAttribute,
+  shouldSkipHiddenWorkspace,
+} from '../utils';
 
 // The user created attribute needs to be read from XML start blocks as 'usercreated'.
 // Once this has been done, all subsequent steps in the serialization use userCreated.
@@ -88,6 +92,34 @@ export default function initializeBlocklyXml(blocklyWrapper) {
 
   blocklyWrapper.Xml.createBlockOrderMap = createBlockOrderMap;
 }
+/**
+ * Gets the XML representation for a project, including its workspace and, if applicable, the hidden definition workspace.
+ *
+ * @param {Blockly.Workspace} workspace - The workspace from which to obtain the project XML.
+ * @returns {string} The XML representation of the project.
+ *
+ */
+export function getProjectXml(workspace) {
+  // Start by getting the XML for all blocks on the workspace.
+  const workspaceXml = Blockly.Xml.blockSpaceToDom(workspace);
+
+  if (shouldSkipHiddenWorkspace(workspace)) {
+    return workspaceXml;
+  }
+
+  // Also serialize blocks on the hidden workspace for procedure definitions.
+  const hiddenWorkspaceXml = Blockly.Xml.blockSpaceToDom(
+    Blockly.getHiddenDefinitionWorkspace()
+  );
+
+  // Merge the hidden workspace XML into the primary XML
+  hiddenWorkspaceXml.childNodes.forEach(node => {
+    const clonedNode = node.cloneNode(true);
+    workspaceXml.appendChild(clonedNode);
+  });
+
+  return workspaceXml;
+}
 
 /**
  * Adds a mutation element to a block if it should have an open miniflyout.
@@ -167,7 +199,7 @@ export function addMutationToBehaviorDefBlocks(blockElement) {
 
   // In CDO Blockly, behavior ids were stored on the field. Google Blockly
   // expects this kind of extra state in a mutator.
-  const nameField = getNameField(blockElement);
+  const nameField = getFieldOrTitle(blockElement, 'NAME');
   const idAttribute = nameField && nameField.getAttribute('id');
   if (idAttribute) {
     // Create new mutation attribute based on original block attribute.
@@ -205,6 +237,34 @@ export function addMutationToProcedureDefBlocks(blockElement) {
 }
 
 /**
+ * Adds a mutation element to a block if it should be invisible.
+ * These blocks will be loaded onto the hidden workspace for procedure definitions.
+ *
+ * @param {Element} blockElement - The XML element for a single block.
+ */
+export function addMutationToInvisibleBlocks(blockElement) {
+  if (PROCEDURE_DEFINITION_TYPES.includes(blockElement.getAttribute('type'))) {
+    return;
+  }
+
+  const invisible = !readBooleanAttribute(
+    blockElement,
+    'uservisible',
+    TRUTHY_DEFAULT
+  );
+
+  if (!invisible) {
+    return;
+  }
+  const mutationElement =
+    blockElement.querySelector('mutation') ||
+    blockElement.ownerDocument.createElement('mutation');
+  // Place mutator before fields, values, and other nested blocks.
+  blockElement.insertBefore(mutationElement, blockElement.firstChild);
+  mutationElement.setAttribute('invisible', invisible);
+}
+
+/**
  * In the event that a legacy project has functions without names, add a name
  * to the definition block's NAME field.
  * @param {Element} blockElement - The XML element for a single block.
@@ -214,7 +274,7 @@ export function addNameToBlockFunctionDefinitionBlock(blockElement) {
   if (blockType !== BLOCK_TYPES.procedureDefinition) {
     return;
   }
-  const fieldElement = getNameField(blockElement);
+  const fieldElement = getFieldOrTitle(blockElement, 'NAME');
   if (!fieldElement) {
     return;
   }
@@ -246,6 +306,40 @@ export function addNameToBlockFunctionCallBlock(blockElement) {
 }
 
 /**
+ * If a field should was serialized before we had behavior ids, manually add
+ * one based on the behavior name found in the field.
+ *
+ * @param {Element} blockElement - The XML element for a single block.
+ */
+function addMissingBehaviorId(blockElement) {
+  const blockType = blockElement.getAttribute('type');
+  if (blockType === BLOCK_TYPES.behaviorGet) {
+    const behaviorNameField =
+      // CDO Blockly projects used a VAR field to store the behavior name.
+      getFieldOrTitle(blockElement, 'VAR') ||
+      // Google Blockly projects use a NAME field to store the behavior name.
+      getFieldOrTitle(blockElement, 'NAME');
+    setIdFromTextContent(behaviorNameField);
+  } else if (blockType === BLOCK_TYPES.behaviorDefinition) {
+    setIdFromTextContent(getFieldOrTitle(blockElement, 'NAME'));
+  }
+}
+
+/**
+ * If a field should was serialized before we had behavior ids, manually add
+ * one based on the behavior name found in the field.
+ *
+ * @param {Element} element - The XML element (title or field) for a block.
+ */
+function setIdFromTextContent(element) {
+  if (!element) {
+    return;
+  }
+  if (!element.getAttribute('id')) {
+    element.setAttribute('id', element.textContent);
+  }
+}
+/**
  * Adds a mutation element to a block if it's a text join block with an input count.
  * CDO Blockly uses an unsupported method for serializing input count state
  * where an arbitrary block attribute could be used to manage extra state.
@@ -274,12 +368,12 @@ export function addMutationToTextJoinBlock(blockElement) {
   mutationElement.setAttribute('items', inputCount);
 }
 
-function getNameField(blockElement) {
+function getFieldOrTitle(blockElement, name) {
   // Title is the legacy name for field, we support getting name from
   // either field or title.
   return (
-    blockElement.querySelector('field[name="NAME"]') ||
-    blockElement.querySelector('title[name="NAME"]')
+    blockElement.querySelector(`field[name="${name}"]`) ||
+    blockElement.querySelector(`title[name="${name}"]`)
   );
 }
 
@@ -303,9 +397,11 @@ function processBlockAndChildren(block) {
  */
 function processIndividualBlock(block) {
   addNameToBlockFunctionCallBlock(block);
+  addMissingBehaviorId(block);
   // Convert unsupported can_disconnect_from_parent attributes.
   makeLockedBlockImmovable(block);
   addMutationToTextJoinBlock(block);
+  addMutationToInvisibleBlocks(block);
 }
 
 /**
@@ -322,6 +418,30 @@ function makeLockedBlockImmovable(block) {
     block.setAttribute('movable', canDisconnectValue);
     block.removeAttribute('can_disconnect_from_parent');
   }
+}
+
+/**
+ * Partitions XML elements of the specified types to the front of the list.
+ *
+ * @param {Element[]} [blocks=[]] - An array of XML block elements to be partitioned.
+ * @param {string[]} [prioritizedBlockTypes=[]] - An array of strings representing block types to move to the front.
+ * @returns {Element[]} A new array of XML block elements partitioned based on their types.
+ */
+export function partitionXmlBlocksByType(
+  blocks = [],
+  prioritizedBlockTypes = []
+) {
+  const prioritizedBlocks = [];
+  const remainingBlocks = [];
+
+  blocks.forEach(block => {
+    const blockType = block.getAttribute('type');
+    prioritizedBlockTypes.includes(blockType)
+      ? prioritizedBlocks.push(block)
+      : remainingBlocks.push(block);
+  });
+
+  return [...prioritizedBlocks, ...remainingBlocks];
 }
 
 /**
@@ -370,10 +490,9 @@ export function getPartitionedBlockElements(xml, prioritizedBlockTypes) {
 
   // Procedure definitions should be loaded ahead of call
   // blocks, so that the procedures map is updated correctly.
-  const partitionedBlockElements = partitionBlocksByType(
+  const partitionedBlockElements = partitionXmlBlocksByType(
     blockElements,
-    prioritizedBlockTypes,
-    true
+    prioritizedBlockTypes
   );
   return partitionedBlockElements;
 }

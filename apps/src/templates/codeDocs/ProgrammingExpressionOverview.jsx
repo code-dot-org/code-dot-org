@@ -71,6 +71,7 @@ export default function ProgrammingExpressionOverview({
           title={programmingExpression.blockName}
           role="heading"
           aria-level="1"
+          style={{paddingBottom: 12}}
         />
       );
     }

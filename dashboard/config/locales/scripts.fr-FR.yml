@@ -266,6 +266,7 @@ fr:
             de Angry Birds et de Plants vs  Zombies !
           description_short: Découvre les bases des sciences informatiques grâce a
             de nombreux personnages rigolos !
+          name: Heure de Code
           student_description: Découvre les bases des sciences informatiques grâce
             aux personnages de Angry Birds et de Plants vs  Zombies !
           title: L'Heure de Code 2013
@@ -2553,6 +2554,21 @@ fr:
             lesson-9:
               name: Style de programmation et commentaires
           title: Programmation orientée objet
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Enquête
+            lessonGroup-3:
+              display_name: Contenu
+            lessonGroup-4:
+              display_name: Montre ce que tu sais
+            lessonGroup-5:
+              display_name: Leçons alternatives
+            lessonGroup-6:
+              display_name: Enquête de fin d'unité
+            lessonGroup-7:
+              display_name: Bacs à sable
+          title: Programmation orientée objet
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2674,6 +2690,19 @@ fr:
               name: Méthodes Mutator
             lesson-9:
               name: Objets d'impression
+          title: Structure et conception des classes
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-3:
+              display_name: Montre ce que tu sais
+            lessonGroup-4:
+              display_name: Leçons alternatives
+            lessonGroup-5:
+              display_name: Enquête de fin d'unité
+            lessonGroup-6:
+              display_name: Bacs à sable
           title: Structure et conception des classes
         csa2-exemplars:
           lesson_groups:
@@ -2809,6 +2838,19 @@ fr:
             lesson-9:
               name: Recherche de doublons
           title: Tableaux et algorithmes
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-3:
+              display_name: Montre ce que tu sais
+            lessonGroup-4:
+              display_name: Leçons alternatives
+            lessonGroup-5:
+              display_name: Enquête de fin d'unité
+            lessonGroup-6:
+              display_name: Bacs à sable
+          title: Tableaux et algorithmes
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2927,6 +2969,19 @@ fr:
               name: Moulage et arrondissement
             lesson-9:
               name: Random
+          title: Conditions et logique
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-3:
+              display_name: Montre ce que tu sais
+            lessonGroup-4:
+              display_name: Leçons alternatives
+            lessonGroup-5:
+              display_name: Enquête de fin d'unité
+            lessonGroup-6:
+              display_name: Bacs à sable
           title: Conditions et logique
         csa4-exemplars:
           lesson_groups:
@@ -3068,6 +3123,19 @@ fr:
             lesson-9:
               name: Impacts des programmes
           title: Tableaux bidimensionnels
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-3:
+              display_name: Montre ce que tu sais
+            lessonGroup-4:
+              display_name: Leçons alternatives
+            lessonGroup-5:
+              display_name: Enquête de fin d'unité
+            lessonGroup-6:
+              display_name: Bacs à sable
+          title: Tableaux bidimensionnels
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -3176,6 +3244,19 @@ fr:
               name: Supprimer des éléments
             lesson-9:
               name: Algorithmes ArrayList et String
+          title: ArrayLists et méthodes de chaîne
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-3:
+              display_name: Montre ce que tu sais
+            lessonGroup-4:
+              display_name: Leçons alternatives
+            lessonGroup-5:
+              display_name: Enquête de fin d'unité
+            lessonGroup-6:
+              display_name: Bacs à sable
           title: ArrayLists et méthodes de chaîne
         csa6-exemplars:
           lesson_groups:
@@ -3352,6 +3433,68 @@ fr:
                 </div>
                 </details>
           title: 'Méthode : décomposition et récursion'
+        csa7-2024:
+          description: |-
+            Cette unité permet aux étudiants de pratiquer la conception et le développement de logiciels en utilisant les compétences qu'ils ont acquises tout au long du programme tout en planifiant et en développant un projet de codage créatif visant à transmettre un intérêt personnel ou une histoire à l'aide de The Theater. Les élèves utilisent des stratégies de décomposition et des principes orientés objet pour planifier et mettre en œuvre leurs idées tout en s'assurant que leurs projets répondent à des exigences spécifiques. Au cours du processus, les élèves apprennent à écrire des méthodes « privées », surchargées et remplacées et à utiliser le mot clé « super » dans une méthode de sous-classe pour appeler une méthode de superclasse tout en explorant la fonctionnalité des méthodes et leurs paramètres. Tout au long de l'unité, les étudiants s'entraînent à tracer et à écrire des méthodes récursives et à comparer ces méthodes à des solutions itératives. Grâce aux connaissances et aux compétences acquises tout au long de l'année, les étudiants prennent conscience de la nécessité d'optimiser la fiabilité du système lorsqu'ils explorent les bogues et les problèmes des programmes existants.
+
+            <details style="padding: 10px; margin-bottom: 10px;">
+                <summary style="font-size: 1.2em; font-weight: bold;">\U0001Objectifs de l'unité F3AF</summary>
+                <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+                    <p><strong><em>À la fin de cette unité, les étudiants seront capables de...</em></strong></p>
+
+            -   Faire la différence entre la transmission de valeurs primitives et les références à des objets sous forme de paramètres
+
+            -   Écrire et appeler des méthodes surchargées, « privées » et remplacées
+
+            -   Expliquer les problèmes juridiques et de propriété intellectuelle liés aux programmes qui créent des images générées par l'IA
+
+            -   Tracer une méthode récursive pour déterminer son résultat
+
+            -   Identifier des stratégies pour optimiser la fiabilité du système
+                </div>
+                </details>
+
+            <details style="padding: 10px; margin-bottom: 10px;">
+                <summary style="font-size: 1.2em; font-weight: bold;">✅ AP Classroom Personal Progress Checks</summary>
+                <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+                    <p>Pour attribuer des questions de la banque de questions AP Classroom qui correspondent à cette unité, créez un questionnaire personnalisé dans AP Classroom en recherchant dans la banque de questions les énoncés de connaissances essentielles figurant sur la page <a href="https://studio.code.org/s/csa2-2023/standards" target="_blank"><strong>Standards</strong></a> de l'unité. Vous pouvez trouver des instructions et des démonstrations vidéo pour ce faire au <a href="https://apcentral.collegeboard.org/instructional-resources/ap-classroom" target="_blank"><strong>AP Central</strong></a>.</p>
+                </div>
+            </details>
+
+            ## Vous avez terminé d'enseigner cette unité ?
+
+            Répondez à cette [\*\*courte enquête\*\*](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=7) pour informer l'équipe du programme de Code.org du déroulement de l'unité.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-3:
+              display_name: Montre ce que tu sais
+            lessonGroup-4:
+              display_name: Enquête de fin d'unité
+            lessonGroup-5:
+              display_name: Leçons alternatives
+            lessonGroup-6:
+              display_name: Bacs à sable
+          student_description: |-
+            Cette unité vous permet de pratiquer la conception et le développement de logiciels en utilisant les compétences que vous avez acquises tout au long du programme tout en planifiant et en développant un projet de codage créatif visant à transmettre un intérêt personnel ou une histoire à l'aide de The Theater. Vous utilisez des stratégies de décomposition et des principes orientés objet pour planifier et mettre en œuvre vos idées tout en veillant à ce que votre projet réponde aux exigences spécifiées. Au cours du processus, vous apprendrez à écrire des méthodes « privées », surchargées et remplacées et à utiliser le mot clé « super » dans une méthode de sous-classe pour appeler une méthode de superclasse tout en explorant la fonctionnalité des méthodes et leurs paramètres. Tout au long de cette unité, vous vous entraînez à tracer et à écrire des méthodes récursives et à comparer ces méthodes à des solutions itératives. Grâce aux connaissances et aux compétences acquises tout au long de l'année, vous prenez en compte la nécessité d'optimiser la fiabilité du système lorsque vous explorez les bogues et les problèmes des programmes existants.
+
+            <details style="padding: 10px; margin-bottom: 10px;">
+                <summary style="font-size: 1.2em; font-weight: bold;">\U0001Objectifs de l'unité F3AF</summary>
+                <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+                    <p><strong><em>À la fin de cette unité, vous serez capable de...</em></strong></p>
+
+            -   Faire la différence entre la transmission de valeurs primitives et les références à des objets sous forme de paramètres
+
+            -   Écrire et appeler des méthodes surchargées, « privées » et remplacées
+
+            -   Expliquer les problèmes juridiques et de propriété intellectuelle liés aux programmes qui créent des images générées par l'IA
+
+            -   Tracer une méthode récursive pour déterminer son résultat
+
+            -   Identifier des stratégies pour optimiser la fiabilité du système
+                </div>
+                </details>
+          title: 'Méthode : décomposition et récursion'
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -3486,6 +3629,19 @@ fr:
             lesson-9:
               name: Confidentialité et sécurité
           title: Recherche et tri
+        csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-3:
+              display_name: Montre ce que tu sais
+            lessonGroup-4:
+              display_name: Enquête
+            lessonGroup-5:
+              display_name: Leçons alternatives
+            lessonGroup-6:
+              display_name: Bacs à sable
+          title: Recherche et tri
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -3594,6 +3750,29 @@ fr:
           lessons:
             lesson-2:
               name: Asphalt Art Project — Jour 2
+          student_description: Cette unité vous prépare à l'examen AP CSA en passant
+            en revue les concepts clés, en vous entraînant à poser des questions à
+            choix multiples et à réponse libre et en renforçant les stratégies de
+            réussite aux tests. Vous identifiez les points forts et les points à améliorer
+            pour créer des plans d'étude personnalisés afin de vous concentrer sur
+            votre pratique et d'auto-évaluer vos progrès.
+        csa9-2024:
+          description: Cette unité prépare les étudiants à l'examen AP CSA en passant
+            en revue les concepts clés, en pratiquant des questions à choix multiples
+            et à réponse libre, et en renforçant les stratégies de réussite aux tests.
+            Les étudiants identifient les points forts et les points à améliorer afin
+            de créer des plans d'étude individualisés afin de concentrer leur pratique
+            et d'auto-évaluer leurs progrès.
+          description_short: Les étudiants se préparent à l'examen AP CSA en mettant
+            en pratique des stratégies pour les questions à choix multiples et à réponse
+            libre.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Révision et pratique
+            lessonGroup-3:
+              display_name: Examens simulés
+            lessonGroup-4:
+              display_name: Bacs à sable
           student_description: Cette unité vous prépare à l'examen AP CSA en passant
             en revue les concepts clés, en vous entraînant à poser des questions à
             choix multiples et à réponse libre et en renforçant les stratégies de
@@ -6599,6 +6778,13 @@ fr:
             principes de l'informatique. Votre professeur vous indiquera quand il
             sera temps de répondre à ce sondage.
           title: CS PrincipPrincipleses Enquête Post-Cours
+        csp-post-survey-2024:
+          description: Cette unité contient l'enquête menée après le cours sur les
+            principes de l'informatique.
+          student_description: Cette unité contient une enquête sur le cours sur les
+            principes de l'informatique. Votre professeur vous indiquera quand il
+            sera temps de répondre à ce sondage.
+          title: CS PrincipPrincipleses Enquête Post-Cours
         csp-pre-survey:
           title: Enquête préliminaire sur les principes du CS
         csp1-2017:
@@ -6756,6 +6942,21 @@ fr:
             plus généraux de la numérisation des informations du monde entier.
           title: Informations numériques ('22-'23)
         csp1-2023:
+          description_short: Explorez les défis et les impacts de la représentation
+            des informations sur le monde qui vous entoure en bits.
+          lesson_groups:
+            cspSurvey:
+              display_name: Enquête
+            csp_unit1_2020:
+              display_name: Principes de l'informatique, unité 1
+          student_description: Cette unité explore les défis techniques et les questions
+            qui découlent de la nécessité de représenter l'information numérique dans
+            les ordinateurs. Découvrez comment des informations complexes telles que
+            des chiffres, du texte, des images et du son sont représentées dans le
+            texte, comment fonctionne la compression et quels sont les impacts sociaux
+            plus généraux de la numérisation des informations du monde entier.
+          title: Informations numériques ('23-'24)
+        csp1-2024:
           description_short: Explorez les défis et les impacts de la représentation
             des informations sur le monde qui vous entoure en bits.
           lesson_groups:
@@ -7002,6 +7203,21 @@ fr:
             Découvrez le concept d'efficacité algorithmique grâce à diverses activités
             pratiques et découvrez comment il est appliqué à l'informatique moderne.
           title: Algorithmes ('23-'24)
+        csp10-2024:
+          description_short: Concevez et analysez des algorithmes pour comprendre
+            comment ils fonctionnent et pourquoi certains sont considérés comme meilleurs
+            que d'autres.
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: " Unité 10: Cyber sécurité et impacts mondiaux"
+            lessonGroup-2:
+              display_name: Suivi d'après cours
+          student_description: Cette unité est une exploration rapide de la façon
+            dont les informaticiens conçoivent des algorithmes pour résoudre des problèmes
+            et de la manière dont ils analysent la vitesse de différents algorithmes.
+            Découvrez le concept d'efficacité algorithmique grâce à diverses activités
+            pratiques et découvrez comment il est appliqué à l'informatique moderne.
+          title: Algorithmes ('23-'24)
         csp10-pilot:
           title: Cybersécurité et Impacts Mondiaux
         csp10-pilot-staging:
@@ -7198,6 +7414,18 @@ fr:
             bons et mauvais, qu'Internet a eus sur la vie moderne.
           title: Internet (22-2023)
         csp2-2023:
+          description_short: Construisez Internet à partir de zéro à l'aide du simulateur
+            Internet.
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Unité 2: L''Internet'
+          student_description: Cette unité révèle comment Internet a été conçu pour
+            connecter des milliards d'appareils et de personnes entre eux. Apprenez
+            comment fonctionnent les différents protocoles d'Internet et créez-les
+            vous-même à l'aide du simulateur Internet. Pensez ensuite aux impacts,
+            bons et mauvais, qu'Internet a eus sur la vie moderne.
+          title: Internet (23-24)
+        csp2-2024:
           description_short: Construisez Internet à partir de zéro à l'aide du simulateur
             Internet.
           lesson_groups:
@@ -7422,6 +7650,21 @@ fr:
             de votre choix.
           title: Introduction à la conception d'applications ('22-'23)
         csp3-2023:
+          description_short: Concevez votre première application et découvrez comment
+            les programmeurs collaborent et interagissent avec les utilisateurs pour
+            créer les meilleures solutions possibles aux problèmes.
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Unité 3: Introduction à la conception d''applications'
+          student_description: Cette unité est une introduction à la programmation
+            et à la conception d'applications en mettant l'accent sur des compétences
+            importantes telles que le débogage, la programmation par paires et les
+            tests utilisateurs. Apprenez à concevoir des interfaces utilisateur et
+            à écrire des programmes pilotés par des événements dans App Lab, puis
+            à concevoir un projet qui enseignera à vos camarades de classe un sujet
+            de votre choix.
+          title: Introduction à la conception d'applications (23-24)
+        csp3-2024:
           description_short: Concevez votre première application et découvrez comment
             les programmeurs collaborent et interagissent avec les utilisateurs pour
             créer les meilleures solutions possibles aux problèmes.
@@ -7749,6 +7992,25 @@ fr:
             votre propre application de prise de décision à partager avec vos amis
             et à les aider à prendre une décision.
           title: Variables, conditions et fonctions (23-24)
+        csp4-2024:
+          description_short: Apprenez à créer des applications qui stockent des informations,
+            prennent des décisions et organisent le code.
+          lesson_groups:
+            csp_conditionals:
+              display_name: Instructions conditionnelles
+            csp_functions:
+              display_name: Fonctions
+            csp_project:
+              display_name: Projet
+            csp_variables:
+              display_name: Variables
+          student_description: Cette unité explore la manière dont les variables,
+            les conditions et les fonctions permettent de concevoir des applications
+            de plus en plus complexes. Apprenez à programmer avec ces trois nouveaux
+            concepts grâce à une séquence d'activités collaboratives. Créez ensuite
+            votre propre application de prise de décision à partager avec vos amis
+            et à les aider à prendre une décision.
+          title: Variables, conditions et fonctions (23-24)
         csp4-dlp:
           description: Il s'agit de l'Unité 4 du Plan D'apprentissage Approfondi pour
             les animateurs de CSP de Code.org en formation. Vous trouverez, ici, des
@@ -8039,6 +8301,24 @@ fr:
             ou en savoir plus sur notre monde. Dans le projet d''unité, vous allez
             analyser un ensemble de données de votre choix et présenter vos résultats. '
           title: Données (23-24)
+        csp5-2024:
+          description_short: Explorez et visualisez des ensembles de données portant
+            sur un large éventail de sujets tout en recherchant des modèles et en
+            essayant d'en savoir plus sur le monde qui vous entoure.
+          lesson_groups:
+            csp_lists:
+              display_name: Données
+            lessonGroup-5:
+              display_name: Suivi d'après cours
+          student_description: 'Dans cette unité, découvrez comment l''analyse des
+            données permet de transformer des données brutes en informations utiles
+            sur le monde. Apprenez à utiliser la visualisation des données pour trouver
+            des modèles au sein d''ensembles de données et découvrez comment ce processus
+            d''analyse de données est utilisé dans des contextes tels que les données
+            ouvertes ou l''apprentissage automatique pour aider à prendre des décisions
+            ou en savoir plus sur notre monde. Dans le projet d''unité, vous allez
+            analyser un ensemble de données de votre choix et présenter vos résultats. '
+          title: Données (23-24)
         csp5-dlp:
           description: Il s'agit de l'Unité 5 du Plan D'apprentissage Approfondi pour
             les animateurs de CSP de Code.org en formation. Vous trouverez, ici, des
@@ -8289,6 +8569,28 @@ fr:
             et terminez un projet de hackathon de 5 jours à la fin de l'unité au cours
             duquel vous pourrez concevoir un programme sur le sujet de votre choix.
           title: Listes, boucles et traversales (23-2024)
+        csp6-2024:
+          description_short: Apprenez à créer des applications qui utilisent des listes,
+            des boucles et des traversées pour stocker et traiter de grandes quantités
+            d'informations.
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listes
+            lessonGroup-2:
+              display_name: Suivi d'après cours
+            lessonGroup-3:
+              display_name: Boucles
+            lessonGroup-4:
+              display_name: Parcours
+            lessonGroup-5:
+              display_name: Projet
+          student_description: Cette unité présente les listes, les boucles et les
+            traversées, et explore la manière dont elles peuvent être utilisées pour
+            créer des applications qui stockent et traitent de grandes quantités d'informations.
+            Apprenez à programmer à l'aide de la bibliothèque de données d'App Lab
+            et terminez un projet de hackathon de 5 jours à la fin de l'unité au cours
+            duquel vous pourrez concevoir un programme sur le sujet de votre choix.
+          title: Listes, boucles et traversales (23-2024)
         csp6-pilot:
           lesson_groups:
             content:
@@ -8398,6 +8700,23 @@ fr:
             partager avec vos camarades de classe. Terminez l'unité en concevant une
             bibliothèque de fonctions autour du sujet de votre choix.
           title: Paramètres, retours et bibliothèques ('23-'24)
+        csp7-2024:
+          description_short: Apprenez à concevoir un code épuré et réutilisable que
+            vous pouvez partager avec un seul camarade de classe ou avec le monde
+            entier.
+          lesson_groups:
+            csp_libraries:
+              display_name: Bibliothèques
+            csp_parameters_return_values:
+              display_name: Paramètres et Valeurs de Retour
+            lessonGroup-3:
+              display_name: Suivi d'après cours
+          student_description: Cette unité présente les paramètres, les retours et
+            les bibliothèques. Apprenez à utiliser ces concepts pour créer de nouveaux
+            types d'applications ainsi que des bibliothèques de code que vous pourrez
+            partager avec vos camarades de classe. Terminez l'unité en concevant une
+            bibliothèque de fonctions autour du sujet de votre choix.
+          title: Paramètres, retours et bibliothèques ('23-'24)
         csp7-pilot:
           lesson_groups:
             csp_libraries:
@@ -8465,6 +8784,87 @@ fr:
             tâche et à élaborer un plan pour l'accomplir.
           title: Créer PT Prep (22-2023)
         csp8-2023:
+          description: "Dans cette unité, découvrez comment les innovations informatiques
+            ont eu un impact bénéfique et néfaste sur notre monde. Découvrez comment
+            les données peuvent constituer une menace pour notre confidentialité et
+            notre sécurité et comment le cryptage et d'autres techniques sont utilisés
+            pour les protéger. Tout au long de l'unité, participez à une conférence
+            sur « l'école du futur » au cours de laquelle vous et une équipe soumettez
+            une proposition sur la meilleure façon d'améliorer la vie scolaire grâce
+            aux innovations informatiques.\n\n : : détails [**\\U0001unité F9D0 Philosophie
+            et pédagogie**]\n\n#### Apprendre grâce à la simulation en classe complète\n\nLe
+            projet de simulation qui sous-tend cette unité répond à plusieurs objectifs
+            importants. Il permet de contextualiser ce que les élèves apprennent en
+            passant d'idées abstraites de confidentialité ou de sécurité à des innovations
+            potentielles concrètes. La simulation étant basée sur la modernisation
+            des écoles, les élèves peuvent envisager les conséquences des innovations
+            informatiques dans un environnement familier. En assumant un rôle assigné
+            et en interagissant avec un groupe de coéquipiers qui ont fait de même,
+            les élèves doivent prendre en compte un large éventail d'intérêts et d'objectifs
+            qui dépassent les leurs lorsqu'il s'agit d'innover dans les écoles. \n\n####
+            Terminer l'année en tant que « décideurs »\n\nL'un des principaux thèmes
+            abordés par les élèves tout au long de cette unité est la nécessité de
+            prendre en compte les deux aspects de l'innovation technologique. La technologie
+            informatique a apporté des avantages et des inconvénients à la culture,
+            à l'économie et à la société dans son ensemble. Pour répondre aux questions
+            importantes auxquelles notre monde est confronté, il faut comprendre la
+            technologie et être capable d'identifier et d'interpréter les impacts
+            qu'elle provoque. Cette unité n'est pas conçue pour défendre un point
+            de vue particulier sur l'impact de la technologie. Néanmoins, cela devrait
+            permettre aux étudiants de voir et d'évaluer habilement les conséquences
+            de la technologie qui les entoure. Bien que le projet Create PT puisse
+            sembler être le projet le plus important de ce cours, l'exigence Explore
+            Curricular et les questions abordées dans cette unité sont sans doute
+            plus cruciales. La plupart des jeunes qui suivent CS Principles peuvent
+            poursuivre des études ou des carrières dans le cadre desquelles ils sont
+            des « créateurs » dans le domaine de la technologie, mais ils devront
+            tous être des « décideurs » réfléchis dans un monde profondément façonné
+            par l'informatique. \n : : :\n\n : : détails [** ⭐️ Évaluation et projets
+            principaux**]\n\nLes élèves participent à la simulation Future School
+            Convention tout au long de cette unité. Travaillant en équipes d'environ
+            cinq personnes, les étudiants se voient attribuer un rôle et un ensemble
+            d'intérêts qu'ils devront étudier. Ils recherchent des innovations concrètes
+            qui pourraient améliorer les écoles et répondre aux intérêts de leur personnage.
+            Tout au long de l'unité, ils ont la possibilité d'affiner leurs propositions
+            en équipe et de débattre des avantages et des risques des différentes
+            innovations informatiques. Finalement, leur équipe soumet une proposition
+            globale pour la Future School, et tous les étudiants votent pour l'équipe
+            et l'innovation qu'ils considèrent comme les meilleures. Les étudiants
+            effectueront également une évaluation de fin d'unité alignée sur les objectifs
+            du cadre CS Principles abordés dans cette unité.\n : : :\n\n : : détails
+            [** ✅ Connexions AP**]\n\nCette unité et ce projet d'unité contribuent
+            à la réalisation des connaissances durables énumérées ci-dessous. Pour
+            une cartographie détaillée des unités par rapport aux objectifs d'apprentissage
+            et aux EK, veuillez consulter la page « Normes » de cette unité.\n\n-
+            \  IOC-1 : Bien que les innovations informatiques soient généralement
+            conçues pour atteindre un objectif précis, elles peuvent avoir des conséquences
+            imprévues.\n-   IOC-2 : L'utilisation d'innovations informatiques peut
+            présenter des risques pour votre sécurité et votre identité personnelles.\n\nCette
+            unité inclut du contenu des rubriques suivantes du cadre de principes
+            AP CS. Pour plus d'informations sur la couverture des sujets, consultez
+            la revue du cours [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1l9VDL92DCIbTNhTiLGIr-enBOTM4wEDTTQOBlJ7bBhM/edit?usp=sharing).\n\n-
+            \  5.1 Effets bénéfiques et nocifs\n-   5.6 Sécurité informatique\n\n : : :\n\n##
+            Vous avez fini d'enseigner cette unité ?\n\nRépondez à cette [\\*\\*courte
+            enquête\\*\\*](https://studio.code.org/form/teacher_csp_unit_survey?survey_data%5Bunit_number%5D=8)
+            pour informer l'équipe du programme de Code.org du déroulement de l'unité."
+          description_short: 'Faites des recherches et débattez de l''actualité à
+            l''intersection des données, des politiques publiques, du droit, de l''éthique
+            et de l''impact sociétal. '
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Créer la Tâche de Performance (PT)
+            lessonGroup-3:
+              display_name: Suivi d'après cours
+          student_description: Dans cette unité, découvrez comment les innovations
+            informatiques ont eu un impact bénéfique et néfaste sur notre monde. Découvrez
+            comment les données peuvent représenter une menace pour notre confidentialité
+            et notre sécurité et comment le chiffrement et d'autres techniques sont
+            utilisés pour les protéger. Tout au long de l'unité, participez à une
+            conférence « l'école du futur » au cours de laquelle vous et une équipe
+            faites une proposition sur la meilleure façon d'améliorer la vie scolaire
+            grâce aux innovations informatiques.
+          title: Cybersécurité et impacts mondiaux (23-24)
+        csp8-2024:
           description: "Dans cette unité, découvrez comment les innovations informatiques
             ont eu un impact bénéfique et néfaste sur notre monde. Découvrez comment
             les données peuvent constituer une menace pour notre confidentialité et
@@ -8684,6 +9084,23 @@ fr:
             analyser un ensemble de données de votre choix et présenter vos résultats. '
           title: Données (22-2023)
         csp9-2023:
+          description: Dans cette unité, préparez et exécutez la tâche de création
+            de performances AP Create. Chaque leçon contient des liens vers des documents
+            et des activités utiles qui vous aideront à comprendre la tâche et à élaborer
+            un plan pour l'accomplir.
+          description_short: Entraînez-vous et terminez la tâche Create Performance
+            (PT).
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Unité 9 : Les Données'
+            lessonGroup-2:
+              display_name: Suivi d'après cours
+          student_description: Dans cette unité, préparez et exécutez la tâche de
+            création de performances AP Create. Chaque leçon contient des liens vers
+            des documents et des activités utiles qui vous aideront à comprendre la
+            tâche et à élaborer un plan pour l'accomplir.
+          title: Créer PT Prep (23-2024)
+        csp9-2024:
           description: Dans cette unité, préparez et exécutez la tâche de création
             de performances AP Create. Chaque leçon contient des liens vers des documents
             et des activités utiles qui vous aideront à comprendre la tâche et à élaborer
@@ -10733,6 +11150,49 @@ fr:
             de glace !
           title: Labyrinthe classique
         how-ai-works-2023:
+          description: "Ces leçons viennent complémenter la série vidéo [Comment fonctionne
+            l'IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y).
+            Chaque leçon est associée à une vidéo particulière de la série, et approfondit
+            les notions qu'on découvre dans celle-ci. Les leçons cherchent à créer
+            de premières expériences enthousiasmantes pour les élèves, où les élèves
+            s'impliquent dans une activitié ou une simulation puis réfléchissent à
+            l'expérience, pour permettre de développer leur compréhension concernant
+            l'IA et de développer leur empathie envers ceux qui sont impactés par
+            celle-ci. Certaines leçons sont plus axées sur les technologies derrière
+            l'IA, alors que d'autres s'articulent autour des impacts sociétaux de
+            l'IA et des considérations éthiques qu'elle entraîne. \n\n**Soutien aux
+            enseignants :** Vous pouvez en apprendre plus sur comment intégrer des
+            cours sur l'IA dans votre classe à travers notre [série Les Bases de L'IA
+            pour Enseignants](https://code.org/ai/pl/101). Les Bases de l'IA pour
+            Enseignants est une série de formation professionnelle gratuite proposant
+            des bases solides pour tout enseignant ou autre éducateur qui s'intéresse
+            au monde révolutionnaire de l'intelligence artificielle (IA) et son potentiel
+            transformateur dans le domaine de l'éducation. \n\n**Options d'implementation
+            :** Cliquez sur l'une des options ci-dessous pour l'aggrandir et voir
+            plus de détails. \n\n::: détails [<span style=\"font-size: 1em; font-weight:
+            bold;\">« Je veux toutes les enseigner ! »</span>]\nLes leçons 1 à 7 peuvent
+            être enseignées en séquence sur 7 jours, où chaque journée est axée sur
+            une vidéo individuelle de la série de vidéos et approfondit les notions
+            qui y sont introduites. Pour les classes optant pour cette option, il
+            faudra masquer la Leçon 8, qui ne rentre pas dans cette séquence. [Cliquer
+            ici pour en savoir plus sur comment masquer une leçon](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)\n:::\n\n:::
+            détails [<span style=\"font-size: 1em; font-weight: bold;\">« Je veux
+            enseigner une leçon spécifique ou l'intégrer à un autre cours »</span>]\nChaque
+            leçon peut être autonome et s'enseigner indépendemment des autres. Cela
+            est particulièrement utile si vous souhaitez intégrer une leçon à un autre
+            sujet ou à un autre cours d'informatique, d'intelligence artificielle,
+            ou d'éducation générale existant. Pour les classes optant pour cette option,
+            il faudra masquer toutes les leçons sauf celle que vous souhaitez  enseigner.
+            [Cliquer ici pour en savoir plus sur comment masquer une leçon](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)\n:::\n:::
+            détails [<span style=\"font-size: 1em; font-weight: bold;\">« Je n'ai
+            qu'un seul jour à disposition »</span>]\nLa leçon 8 est conçue pour ceux
+            qui souhaitent faire découvrir l'IA à leurs élèves, mais n'ont qu'un seul
+            jour de disponible pour ce faire. Cette leçon fournit un preneur de notes
+            aux élèves pendant que la classe visionne toute la séquence vidéo. Pour
+            les classes optant pour cette option, il faudra masquer toutes les leçons
+            sauf la Leçon 8. [Cliquer ici pour en savoir plus sur comment masquer
+            une leçon](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)\n:::\n<br
+            />\n<br />"
           title: Comment fonctionne l'IA
         iceage:
           description: Crée une histoire ou fais un jeu avec le Labo de jeux Âge de
@@ -10977,6 +11437,10 @@ fr:
             ML/IA pour le CSD. Pour de futures questions à ce sujet, adressez-vous
             à Dan Schneider.
           title: Unité ML/IA - CSD
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Jeu libre
         netsim:
           description: Découvrez comment fonctionne Internet.
           description_short: Découvrez comment fonctionne Internet.
@@ -12284,6 +12748,39 @@ fr:
           name: self-paced-pl-csp8-2021
         self-paced-pl-csp9-2021:
           name: self-paced-pl-csp9-2021
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Leçon 1
+        self-paced-pl-k5-2024-1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: La Mise en Route
+          lessons:
+            lesson-1:
+              name: Leçon 1
+            lesson-3:
+              name: Boucles
+            lesson-4:
+              name: Instructions conditionnelles
+            lesson-5:
+              name: Mettre tout cela en place
+            lesson-6:
+              name: Prochaines étapes
+          title: Introduction à l'informatique
+        self-paced-pl-k5-2024-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: La Mise en Route
+          lessons:
+            lesson-1:
+              name: Leçon 1
+            lesson-3:
+              name: Événements
+            lesson-4:
+              name: Comportements
+            lesson-5:
+              name: Prochaines étapes
         self-paced-pl-k5-getting-started:
           name: self-paced-pl-k5-getting-started
           title: 'Débuter avec Code.org (K-5) '

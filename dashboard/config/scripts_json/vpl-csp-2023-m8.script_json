@@ -11,8 +11,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-12-13 19:19:39 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-01-02 18:53:10 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -155,6 +155,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M8 - Unit 10 Exploration_2023"
+        ],
         "progression": "Unit 10 Exploration (~30 minutes)"
       },
       "bonus": false,
@@ -177,6 +180,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M8 - Reflection_2023"
+        ],
         "progression": "Reflection (~15 minutes)"
       },
       "bonus": false,

@@ -1103,6 +1103,14 @@ ru:
             '3': пищевая сода
             '5': оба
         text: Установить Микроскоп на {INPUT1}
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': синий
+            '"red"': красный
+          OPT:
+            '"large"': большой
+            '"small"': маленький
       FunctionBlocks_communicate:
         text: Общение {VAR1} с {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:

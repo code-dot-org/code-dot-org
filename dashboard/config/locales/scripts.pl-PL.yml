@@ -133,6 +133,7 @@ pl:
           description: Poznaj podstawy informatyki z postaciami z Angry Birds i Plants
             vs Zombies!
           description_short: Poznaj podstawy informatyki z wieloma zabawnymi postaciami!
+          name: Godzina Kodowania
           student_description: Poznaj podstawy informatyki z postaciami z Angry Birds
             i Plants vs Zombies!
           title: Godzina Kodowania 2013
@@ -371,6 +372,8 @@ pl:
               name: Rubryki AI
             lesson-52:
               name: Dance Lab2
+            lesson-53:
+              name: Laboratorium Pythona
           name: wszystkie rzeczy
           student_description: Wszystkie typy poziomów dla testowania UI
           title: Wszystkie te Rzeczy!
@@ -1061,6 +1064,31 @@ pl:
           description_short: Poznaj podstawy informatyki i twórz własne artystyczne
             dzieła, opowiadania i gry.
           title: 'Podstawy CS: Kurs C'
+        coursec-maker-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Początkujący: Zdarzenia'
+            lessonGroup-3:
+              display_name: 'Pośredni: sekwencjonowanie i pętle'
+            lessonGroup-4:
+              display_name: 'Kontynuuj: dane i zmienne'
+          lessons:
+            lesson-1:
+              name: Poznaj swój micro:bit
+            lesson-2:
+              name: Licznik
+            lesson-3:
+              name: Poznaj swój micro:bit
+            lesson-4:
+              name: Odznaka emocji
+            lesson-5:
+              name: Poznaj swój micro:bit
+            lesson-6:
+              name: Uspokajające diody LED
+            lesson-7:
+              name: Potańcówka 2019 (trzeba sklonować)
+          name: coursec-maker-2024
+          title: Kurs C - Twórca z micro:bitem
         coursed-2017:
           assignment_family_title: Kurs D
           description: Ucz się nowych koncepcji kodowania, z uwzględnieniem algorytmów,
@@ -1205,6 +1233,29 @@ pl:
           description_short: Poznaj podstawy informatyki i twórz własne artystyczne
             dzieła, opowiadania i gry.
           title: 'Podstawy CS: Kurs D'
+        coursed-maker-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Początkujący: Warunki'
+            lessonGroup-3:
+              display_name: 'Średniozaawansowany: Zdarzenia i warunki '
+            lessonGroup-4:
+              display_name: 'Kontynuuj: Warunki i wejścia tekstowe '
+          lessons:
+            lesson-1:
+              name: Poznaj swój micro:bit
+            lesson-2:
+              name: Selektor aktywności
+            lesson-3:
+              name: Poznaj swój micro:bit
+            lesson-4:
+              name: Ratowanie żółwi morskich
+            lesson-5:
+              name: Poznaj swój micro:bit
+            lesson-6:
+              name: Kamień, papier, nożyce
+          name: coursed-maker-2024
+          title: Kurs D - Twórca z micro:bitem
         coursed-ramp:
           title: 'Podstawy CS: Kurs D'
         coursee-2017:
@@ -1383,6 +1434,31 @@ pl:
             extra_course_content:
               display_name: Dodatki do Kursu
           title: 'Podstawy CS: Kurs E'
+        coursee-maker-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Początkujący: Zdarzenia i projektowanie dostępności'
+            lessonGroup-3:
+              display_name: 'Pośredni: Warunki'
+            lessonGroup-4:
+              display_name: 'Kontynuuj: Funkcje'
+          lessons:
+            lesson-1:
+              name: Poznaj swój micro:bit
+            lesson-2:
+              name: Potańcówka 2019 (trzeba sklonować)
+            lesson-3:
+              name: Poznaj swój micro:bit
+            lesson-4:
+              name: Poznaj swój micro:bit
+            lesson-5:
+              name: Zabawka sensoryczna
+            lesson-6:
+              name: Prosty alarm drzwiowy
+            lesson-7:
+              name: Alarm pochylenia
+          name: coursee-maker-2024
+          title: Kurs E - Twórca z micro:bitem
         coursee-ramp:
           title: coursee-ramp
         coursef-2017:
@@ -1617,6 +1693,33 @@ pl:
             end_of_course_project:
               display_name: Koniec projektu kursu
           title: 'Podstawy CS: Kurs F'
+        coursef-maker-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Początkujący: Zdarzenia i zmienne'
+            lessonGroup-3:
+              display_name: 'Średnio zaawansowany: warunki, zdarzenia i dźwięki'
+            lessonGroup-4:
+              display_name: 'Stretch: zdarzenia, warunki i zmienne'
+          lessons:
+            lesson-1:
+              name: Poznaj swój micro:bit
+            lesson-2:
+              name: Poznaj swój micro:bit
+            lesson-3:
+              name: Potańcówka 2019 (trzeba sklonować)
+            lesson-4:
+              name: Poznaj swój micro:bit
+            lesson-5:
+              name: Licznik kroków
+            lesson-6:
+              name: Zwierzę micro:bit
+            lesson-7:
+              name: Termometr max-min
+            lesson-8:
+              name: Sztuka poezji 2021 (trzeba sklonować)
+          name: coursef-maker-2024
+          title: Kurs F - Twórca z micro:bitem
         craft17:
           title: Zajęcia techniczne 17 (craft17) Opracowywanie skryptu
         craft18:
@@ -1941,6 +2044,13 @@ pl:
             lessonGroup-3:
               display_name: 'Rozdział 2: Wizja komputerowa'
           title: Inżynieria oprogramowania i wizja komputerowa
+        csa-postap-se-and-computer-vision-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: GitHub i Copilot'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Wizja komputerowa'
+          title: Inżynieria oprogramowania i wizja komputerowa
         csa-preview:
           name: csa-preview
           title: Przegląd programu i narzędzi CSA
@@ -2086,6 +2196,19 @@ pl:
               name: Styl programowania i opinie
           name: csa1-2023
           title: Programowanie obiektowe
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ankieta
+            lessonGroup-3:
+              display_name: Treści
+            lessonGroup-4:
+              display_name: Pokaż, co wiesz
+            lessonGroup-5:
+              display_name: Lekcje alternatywne
+            lessonGroup-6:
+              display_name: Koniec ankiety jednostki
+          title: Programowanie obiektowe
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2181,6 +2304,17 @@ pl:
               name: Drukowanie obiektów
           name: csa2-2023
           title: Struktura klas i Projekt
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
+            lessonGroup-5:
+              display_name: Koniec ankiety jednostki
+          title: Struktura klas i Projekt
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2265,6 +2399,17 @@ pl:
             lesson-9:
               name: Znajdowanie duplikatów
           name: csa3-2023
+          title: Tablice i Algorytmy
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
+            lessonGroup-5:
+              display_name: Koniec ankiety jednostki
           title: Tablice i Algorytmy
         csa3-exemplars:
           lesson_groups:
@@ -2351,6 +2496,17 @@ pl:
             lesson-8:
               name: Odcinanie i zaokrąglanie
           name: csa4-2023
+          title: Warunki i Logika
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
+            lessonGroup-5:
+              display_name: Koniec ankiety jednostki
           title: Warunki i Logika
         csa4-exemplars:
           lesson_groups:
@@ -2446,6 +2602,17 @@ pl:
               name: Wpływ programów
           name: csa5-2023
           title: Tablice dwuwymiarowe
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
+            lessonGroup-5:
+              display_name: Koniec ankiety jednostki
+          title: Tablice dwuwymiarowe
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2533,6 +2700,17 @@ pl:
               name: Algorytmy na listach tablic i łańcuchach
           name: csa6-2023
           title: Listy tablic i Metody łańcuchów
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
+            lessonGroup-5:
+              display_name: Koniec ankiety jednostki
+          title: Listy tablic i Metody łańcuchów
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2618,6 +2796,17 @@ pl:
             lesson-9:
               name: Niezawodność systemu
           name: csa7-2023
+          title: Metoda dokompozycji i Rekurencja
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Koniec ankiety jednostki
+            lessonGroup-5:
+              display_name: Lekcje alternatywne
           title: Metoda dokompozycji i Rekurencja
         csa7-exemplars:
           lesson_groups:
@@ -2712,6 +2901,17 @@ pl:
               name: Prywatność i bezpieczeństwo
           name: csa8-2023
           title: Wyszukiwanie i porządkowanie
+        csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Ankieta
+            lessonGroup-5:
+              display_name: Lekcje alternatywne
+          title: Wyszukiwanie i porządkowanie
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2797,6 +2997,26 @@ pl:
             lesson-3:
               name: 'Piaskownica: Teatr'
           name: csa9-2023
+          student_description: Ta jednostka przygotowuje Ciebie do egzaminu AP CSA
+            poprzez przegląd kluczowych pojęć, ćwiczenie pytań wielokrotnego wyboru
+            i pytań z odpowiedziami swobodnymi oraz wzmacnianie strategii pisania
+            testu. Identyfikujesz mocne strony i obszary poprawy, aby tworzyć zindywidualizowane
+            plany studiów, aby skoncentrować ich praktykę i samodzielnie ocenić swoje
+            postępy.
+        csa9-2024:
+          description: Ta jednostka przygotowuje uczniów do egzaminu AP CSA poprzez
+            przegląd kluczowych pojęć, ćwiczenie pytań wielokrotnego wyboru i pytań
+            z odpowiedziami swobodnymi oraz wzmacnianie strategii pisania testu. Uczniowie
+            identyfikują mocne strony i obszary poprawy, aby tworzyć zindywidualizowane
+            plany studiów, aby skoncentrować ich praktykę i samodzielnie ocenić swoje
+            postępy.
+          description_short: Uczniowie przygotowują się do egzaminu AP CSA, ćwicząc
+            odpowiedzi na pytania wielokrotnego wyboru i pytania otwarte.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Przegląd i praktyka
+            lessonGroup-3:
+              display_name: Egzaminy próbne
           student_description: Ta jednostka przygotowuje Ciebie do egzaminu AP CSA
             poprzez przegląd kluczowych pojęć, ćwiczenie pytań wielokrotnego wyboru
             i pytań z odpowiedziami swobodnymi oraz wzmacnianie strategii pisania
@@ -2993,6 +3213,8 @@ pl:
               name: Plac zabaw AI
             lesson-13:
               name: Plac zabaw Gen AI Blocks
+            lesson-14:
+              name: Przetestuj lekcję z micro:bitem
             lesson-7:
               name: Wprowadzenie do Duszków
             lesson-9:
@@ -3439,6 +3661,7 @@ pl:
               display_name: 'Rozdział 1: Tworzenie stron internetowych'
             lessonGroup-3:
               display_name: 'Rozdział 2: Wielostronicowe witryny'
+          name: csd2-2024
           student_description: W Części 2 nauczysz się, jak tworzyć i udostępniać
             treści na Twoich własnych stronach internetowych. Po podjęciu decyzji
             jaką treść chcesz udostępniać światu nauczysz się, jak konstruować i stylizować
@@ -5359,6 +5582,11 @@ pl:
           student_description: Ta jednostka zawiera ankietę dotyczącą kursu Zasady
             Informatyki. Twój nauczyciel poinformuje Cię, kiedy masz wypełnić tę ankietę.
           title: Zasady informatyki Ankieta po kursie
+        csp-post-survey-2024:
+          description: Ta jednostka zawiera ankietę po kursie Zasady Informatyki
+          student_description: Ta jednostka zawiera ankietę dotyczącą kursu Zasady
+            Informatyki. Twój nauczyciel poinformuje Cię, kiedy masz wypełnić tę ankietę.
+          title: Zasady informatyki Ankieta po kursie
         csp-pre-survey:
           name: csp-pre-survey
         csp1-2017:
@@ -5501,6 +5729,12 @@ pl:
             csp_unit1_2020:
               display_name: 'Jednostka 1: Informacje cyfrowe'
           name: csp1-2023
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Ankieta
+            csp_unit1_2020:
+              display_name: 'Jednostka 1: Informacje cyfrowe'
         csp1-dlp:
           description: 'To jest Dział 1 "Planu pogłębionej nauki" dla prowadzących
             CSP Code.org w trakcie szkolenia. Tutaj znajdziesz podpowiedzi i wytyczne
@@ -5606,6 +5840,12 @@ pl:
             lessonGroup-2:
               display_name: Ankieta po odbyciu kursu
           name: csp10-2023
+        csp10-2024:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Jednostka 10: Cyberbezpieczeństwo i globalne oddziaływanie'
+            lessonGroup-2:
+              display_name: Ankieta po odbyciu kursu
         csp10-pilot:
           title: Cyberbezpieczeństwo i globalne oddziaływanie
         csp10-pilot-staging:
@@ -5733,6 +5973,11 @@ pl:
             csp_unit2_2020:
               display_name: 'Jednostka 2: Internet'
           name: csp2-2023
+          title: Internet ('21-'22)
+        csp2-2024:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Jednostka 2: Internet'
           title: Internet ('21-'22)
         csp2-dlp:
           description: 'To jest Dział 2 "Planu pogłębionej nauki" dla prowadzących
@@ -5864,6 +6109,10 @@ pl:
             csp_unit3_2020:
               display_name: Jednostka 3 - Wprowadzenie do projektowania aplikacji
           name: csp3-2023
+        csp3-2024:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: Jednostka 3 - Wprowadzenie do projektowania aplikacji
         csp3-a:
           description: W tej jednostce wprowadza się podstawowe koncepcje programowania
             komputerowego dla uczniów w Podcelach Grupy A.
@@ -6085,6 +6334,16 @@ pl:
             csp_variables:
               display_name: Zmienne
           name: csp4-2023
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Zdania z warunkami
+            csp_functions:
+              display_name: Funkcje
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: Zmienne
         csp4-dlp:
           description: 'To jest Dział 4 "Planu pogłębionej nauki" dla prowadzących
             CSP Code.org w trakcie szkolenia. Tutaj znajdziesz podpowiedzi i wytyczne
@@ -6310,6 +6569,12 @@ pl:
             lesson-1:
               name: Listy, pętle i przejścia przed ankietą
           name: csp5-2023
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Dane
+            lessonGroup-5:
+              display_name: Ankieta po odbyciu kursu
         csp5-dlp:
           description: 'To jest Dział 5 "Planu pogłębionej nauki" dla prowadzących
             CSP Code.org w trakcie szkolenia. Tutaj znajdziesz podpowiedzi i wytyczne
@@ -6470,6 +6735,18 @@ pl:
             lessonGroup-5:
               display_name: Projekt
           name: csp6-2023
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listy
+            lessonGroup-2:
+              display_name: Ankieta po odbyciu kursu
+            lessonGroup-3:
+              display_name: Pętle
+            lessonGroup-4:
+              display_name: Przejścia
+            lessonGroup-5:
+              display_name: Projekt
         csp6-pilot:
           lesson_groups:
             content:
@@ -6523,6 +6800,14 @@ pl:
             lessonGroup-3:
               display_name: Ankieta po odbyciu kursu
           name: csp7-2023
+        csp7-2024:
+          lesson_groups:
+            csp_libraries:
+              display_name: Biblioteki
+            csp_parameters_return_values:
+              display_name: Parametry i wartości zwracane
+            lessonGroup-3:
+              display_name: Ankieta po odbyciu kursu
         csp7-pilot:
           lesson_groups:
             csp_libraries:
@@ -6565,6 +6850,12 @@ pl:
             lessonGroup-3:
               display_name: Ankieta po odbyciu kursu
           name: csp8-2023
+        csp8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Twórz PT
+            lessonGroup-3:
+              display_name: Ankieta po odbyciu kursu
         csp8-pilot:
           title: CSP Jednostka 8 CSP Pilotaż - Utwórz przygotowanie PT
         csp8-pilot-staging:
@@ -6607,6 +6898,12 @@ pl:
             lessonGroup-2:
               display_name: Ankieta po odbyciu kursu
           name: csp9-2023
+        csp9-2024:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Jednostka 9: Dane'
+            lessonGroup-2:
+              display_name: Ankieta po odbyciu kursu
         csp9-pilot:
           title: CSP Jednostka 9 Pilotaż - Dane
         csp9-pilot-staging:
@@ -7153,6 +7450,8 @@ pl:
               name: NOWOŚĆ- Maszyny funkcyjne
             lesson-6:
               name: Test ekosystemów
+            lesson-7:
+              name: Dopasowywanie poziomów
           name: emmas-playground
         events:
           description: Zdarzenia
@@ -8121,6 +8420,11 @@ pl:
           student_description: Użyj bloków kodu, by zabrać Steva lub Alexa na przygodę
             w świecie gry Minecraft.
           title: Poszukiwacz przygód z Minecraftem
+        melissasandbox-2024-1:
+          lessons:
+            lesson-2:
+              name: 'Wprowadzenie do informatyki: przegląd'
+          name: melissasandbox-2024-1
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -8240,6 +8544,8 @@ pl:
               name: Remiksuj projekty
             lesson-2:
               name: SNAP - Rosa Linn
+            lesson-3:
+              name: Czas na zabawę
           name: musiclab
           title: Lekcje testowe w laboratorium muzycznym
         musiclab-2023:
@@ -9091,6 +9397,88 @@ pl:
           name: self-paced-pl-csp8-2021
         self-paced-pl-csp9-2021:
           name: self-paced-pl-csp9-2021
+        self-paced-pl-k5-2024:
+          description: |-
+            \*\*Czeka Cię: \*\*
+
+            -   Wprowadzenie do misji Code.org.
+            -   Poznasz, jak poruszać się po witrynie Code.org i narzędziach nauczyciela.
+            -   Konfiguracja sekcji w klasie.
+            -   Znalezienie i korzystanie z planów lekcji kursu i zasobów dla nauczycieli.
+            -   Poznasz, jak uzyskać dostęp do wsparcia podczas nauczania Code.org.
+
+            \*\*Sugerowany czas: \*\* 80 minut
+          lessons:
+            lesson-1:
+              name: Lekcja 1
+          name: self-paced-pl-k5-2024
+          student_description: |-
+            \*\*Czeka Cię: \*\*
+
+            -   Wprowadzenie do misji Code.org.
+            -   Poznasz, jak poruszać się po witrynie Code.org i narzędziach nauczyciela.
+            -   Konfiguracja sekcji w klasie.
+            -   Znalezienie i korzystanie z planów lekcji kursu i zasobów dla nauczycieli.
+            -   Poznasz, jak uzyskać dostęp do wsparcia podczas nauczania Code.org.
+
+            \*\*Sugerowany czas: \*\* 80 minut
+          title: 'Część I '
+        self-paced-pl-k5-2024-1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pierwsze kroki
+            lessonGroup-3:
+              display_name: Podstawowe koncepcje informatyki
+            lessonGroup-4:
+              display_name: Podejmowanie kolejnych kroków
+          lessons:
+            lesson-1:
+              name: Lekcja 1
+            lesson-2:
+              name: 'Algorytmy i sekwencjonowanie '
+            lesson-3:
+              name: Pętle
+            lesson-4:
+              name: Zdania z warunkami
+            lesson-5:
+              name: Zbierając to wszystko razem...
+            lesson-6:
+              name: Następne Kroki
+            lesson-7:
+              name: Kodowanie oparte na blokach
+          name: self-paced-pl-k5-2024-1
+          title: Wprowadzenie do informatyki
+        self-paced-pl-k5-2024-2:
+          description: "\\*\\*Wykonaj: \\*\\*\n\n-   Zidentyfikuj i wyjaśnij podstawowe
+            pojęcia informatyczne, w tym duszki, zdarzenia i zachowania. \n\n-   Zademonstruj
+            zastosowanie programowania opartego na zdarzeniach.\n\n-   Utwórz program
+            za pomocą duszków, zdarzeń i zachowań.\n\n\\*\\*Sugerowany czas: \\*\\*
+            60 minut"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pierwsze kroki
+            lessonGroup-3:
+              display_name: Kreatywne koncepcje informatyki
+            lessonGroup-4:
+              display_name: Podejmowanie kolejnych kroków
+          lessons:
+            lesson-1:
+              name: Lekcja 1
+            lesson-2:
+              name: Duszki i konfiguracja
+            lesson-3:
+              name: Zdarzenia
+            lesson-4:
+              name: Zachowanie
+            lesson-5:
+              name: Następne Kroki
+          name: self-paced-pl-k5-2024-2
+          student_description: "\\*\\*Wykonaj: \\*\\*\n\n-   Zidentyfikuj i wyjaśnij
+            podstawowe pojęcia informatyczne, w tym duszki, zdarzenia i zachowania.
+            \n\n-   Zademonstruj zastosowanie programowania opartego na zdarzeniach.\n\n-
+            \  Utwórz program za pomocą duszków, zdarzeń i zachowań.\n\n\\*\\*Sugerowany
+            czas: \\*\\* 60 minut"
+          title: Kreatywność z kodem
         self-paced-pl-k5-getting-started:
           name: self-paced-pl-k5-getting-started
           title: 'Pierwsze kroki z Code.org (K-5) '

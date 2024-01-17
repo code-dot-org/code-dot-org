@@ -224,6 +224,9 @@ sq:
       Internet_2018:
         desc: "[empty string]"
         title: "[empty string]"
+      'Introducing block-based programing ':
+        desc: "[empty string]"
+        title: "[empty string]"
       MadGlibs:
         desc: Abstraksioni është një nga njohuritë më të rëndësishme për një shkencëtar
           kompjuterash që ta kuptojë. Ky aktivitet do ti bëjë studentët të analizojnë
@@ -445,6 +448,8 @@ sq:
         desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur
           midis një tuneli duke përdorur një komandë të vetme.
         title: Hartat e Lumtura
+      Unplugged- Melissa Sandbox:
+        title: Unplugged
       VideoGamesCoordinatePlanes:
         desc: Mëso sesi lojrat që të pelqejnë janë faktikisht të drejtuara nga algjebra!
           Eksploro se si shprehjet algjebrike dhe plani koordinativ mund të n'a ndihmojnë

@@ -23,12 +23,12 @@ def sync_down
     CROWDIN_PROJECTS.each do |name, options|
       puts "Downloading translations from #{name} project"
       api_token = YAML.load_file(options[:identity_file])["api_token"]
-      project_identifier = YAML.load_file(options[:config_file])["project_identifier"]
+      project_identifier = YAML.load_file(options[:config_file])["project_id"]
       project = Crowdin::Project.new(project_identifier, api_token)
       options = {
         etags_json: options[:etags_json],
         files_to_sync_out_json: options[:files_to_sync_out_json],
-        locales_dir: File.join(I18N_SOURCE_DIR, '..'),
+        locales_dir: CDO.dir(I18N_LOCALES_DIR),
         logger: logger
       }
 
@@ -37,7 +37,7 @@ def sync_down
       case name.to_s
       when "codeorg-markdown-testing", "codeorg-markdown"
         options[:locale_subdir] = "codeorg-markdown"
-      when "hour-of-code"
+      when "hour-of-code-test", "hour-of-code"
         options[:locale_subdir] = "hourofcode"
       end
 
