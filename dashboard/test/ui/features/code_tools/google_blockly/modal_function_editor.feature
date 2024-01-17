@@ -31,7 +31,7 @@ Scenario: Can edit a function
   # Open Sprites flyout
   And I press "blockly-d"
   # Drag block to top of function
-  And I drag block "new-sprite-block" to offset "40, 100"
+  And I drag block "new-sprite-block" to offset "40, 105"
   # Close function
   And I press "closeModalFunctionEditor"
   And element "#modalFunctionEditor" is not visible
