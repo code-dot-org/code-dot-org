@@ -1,10 +1,10 @@
 - display_professional_learning_banners = true
 - if request.locale == "en-US" && display_professional_learning_banners
   = inline_css 'professional_learning_marketing_banner.css'
-  - header_text = 'Help students become superheroes!'
-  - text = "Join our highly supportive Professional Learning Program for middle and high school educators."
+  - header_text = hoc_s(:pl_superhero_title)
+  - text = hoc_s(:pl_superhero_desc)
   - link_address = "/educate/professional-learning/middle-high"
-  - button_label = "Learn more"
+  - button_label = hoc_s(:call_to_action_learn_more)
   - large_image = "/images/homepage/superhero-banner.png"
   - half_image = "/images/homepage/superhero-banner-half-blue.png"
 
