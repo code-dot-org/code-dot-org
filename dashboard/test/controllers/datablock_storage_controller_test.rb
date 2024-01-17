@@ -1,6 +1,6 @@
 require "test_helper"
 
-class ProjectDataDbControllerTest < ActionDispatch::IntegrationTest
+class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

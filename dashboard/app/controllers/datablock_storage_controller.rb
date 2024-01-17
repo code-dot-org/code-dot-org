@@ -1,4 +1,4 @@
-class ProjectDataDbController < ApplicationController
+class DatablockStorageController < ApplicationController
   # FIXME: implement validate_channel_id, see below
   before_action :validate_channel_id
   before_action :authenticate_user!

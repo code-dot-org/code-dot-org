@@ -230,19 +230,18 @@ Dashboard::Application.routes.draw do
     put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
     put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
 
-    SUPPORTS_DATA_DB = ['applab', 'gamelab'].freeze
+    SUPPORTS_DATABLOCK_STORAGE = ['applab', 'gamelab'].freeze
     resources :projects, path: '/projects/', only: [:index] do
       collection do
         ProjectsController::STANDALONE_PROJECTS.each do |key, _|
-          if SUPPORTS_DATA_DB.include? key
-            get "/#{key}/:channel_id/data_db", to: 'project_data_db#index'
-            post "/#{key}/:channel_id/data_db/set_key_value", to: 'project_data_db#set_key_value'
-            get "/#{key}/:channel_id/data_db/get_key_value", to: 'project_data_db#get_key_value'
-            delete "/#{key}/:channel_id/data_db/delete_record", to: 'project_data_db#delete_record'
-            get "/#{key}/:channel_id/data_db/read_records", to: 'project_data_db#read_records'
-            put "/#{key}/:channel_id/data_db/update_record", to: 'project_data_db#update_record'
-            post "/#{key}/:channel_id/data_db/create_record", to: 'project_data_db#create_record'
-            # post "/#{key}/:channel_id/data_db/:action", controller: 'project_data_db'
+          if SUPPORTS_DATABLOCK_STORAGE.include? key
+            get "/#{key}/:channel_id/datablock_storage", to: 'datablock_storage#index'
+            post "/#{key}/:channel_id/datablock_storage/set_key_value", to: 'datablock_storage#set_key_value'
+            get "/#{key}/:channel_id/datablock_storage/get_key_value", to: 'datablock_storage#get_key_value'
+            delete "/#{key}/:channel_id/datablock_storage/delete_record", to: 'datablock_storage#delete_record'
+            get "/#{key}/:channel_id/datablock_storage/read_records", to: 'datablock_storage#read_records'
+            put "/#{key}/:channel_id/datablock_storage/update_record", to: 'datablock_storage#update_record'
+            post "/#{key}/:channel_id/datablock_storage/create_record", to: 'datablock_storage#create_record'
           end
 
           get "/#{key}", to: 'projects#load', key: key.to_s, as: "#{key}_project"
@@ -838,8 +837,6 @@ Dashboard::Application.routes.draw do
       concerns :section_api_routes
       concerns :assessments_routes
     end
-
-    get 'project_data_db', to: 'project_data_db#index'
 
     # Wildcard routes for API controller: select all public instance methods in the controller,
     # and all template names in `app/views/api/*`.
