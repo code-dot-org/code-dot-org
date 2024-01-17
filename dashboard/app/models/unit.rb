@@ -721,6 +721,13 @@ class Unit < ApplicationRecord
     user.assigned_script?(self)
   end
 
+  def next_unit(user)
+    return nil unless unit_group
+    other_units = unit_group.units_for_user(user)
+    self_index = other_units.index {|u| u.id == id}
+    other_units[self_index + 1] if self_index
+  end
+
   # @param family_name [String] The family name for a unit family.
   # @param version_year [String] Version year to return. Optional.
   # @param locale [String] User or request locale. Optional.
@@ -919,6 +926,10 @@ class Unit < ApplicationRecord
 
   def csc?
     Unit.unit_in_category?('csc', name)
+  end
+
+  def self_paced_pl?
+    get_course_version&.course_offering&.self_paced_pl?
   end
 
   # TODO: (Dani) Update to use new course types framework.

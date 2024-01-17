@@ -175,6 +175,10 @@ class ScriptLevel < ApplicationRecord
           script_path(script)
         end
       end
+    elsif script.self_paced_pl?
+      build_script_level_path(level_to_follow) if level_to_follow
+      next_unit = script.next_unit(user)
+      next_unit ? script_path(next_unit) : script_completion_redirect(script)
     elsif bubble_choice? && !bubble_choice_parent
       # Redirect user back to the BubbleChoice activity page from sublevels.
       build_script_level_path(self)
