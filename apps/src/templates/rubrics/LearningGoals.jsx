@@ -29,6 +29,149 @@ import ProgressRing from './ProgressRing';
 
 const INVALID_UNDERSTANDING = -1;
 
+/**
+ * Clear prior line annotations
+ */
+export function clearAnnotations() {
+  studioApp().clearAnnotations();
+  studioApp().clearHighlightedLines();
+}
+
+/**
+ * Retrieves the currently viewed source code.
+ *
+ * All comments are replaced with whitespace of equal length.
+ */
+export function getAnonymizedCode() {
+  // Find code snippet by looking at the student code
+  let code = studioApp().getCode();
+
+  // Replace comments with whitespace. Our AI does not see the comments.
+  // So, we must replace them with whitespace so we can find the right
+  // code to reference.
+
+  // This regex pattern captures three groups:
+  // 1) Single or double quoted strings
+  // 2) Multi-line comments
+  // 3) Single-line comments
+  const pattern = /(".*?[^\\]"|\'.*?[^\\]\'|\/\*.*?\*\/|\/\/[^\n]*)/gs;
+  for (const submatch of code.matchAll(pattern)) {
+    const context = submatch[0].trim();
+    if (!context.startsWith('"') && !context.startsWith("'")) {
+      code = code.replace(context, context.replace(/[^\n]/g, ' '));
+    }
+  }
+
+  return code;
+}
+
+/**
+ * Returns the first and last line that contains the given code snippet.
+ */
+export function findCodeRegion(code, lines, snippet) {
+  // Attempt to just find the code in the full code listing
+  let index = code.indexOf(snippet);
+  let lastIndex = index + snippet.length;
+  if (index < 0) {
+    // Failing to find it, we need to find it line by line instead
+    let context = snippet;
+    let position = 0;
+    for (let line of lines) {
+      // Remember the original length of the line
+      let lineLength = line.length;
+      line = line.trim();
+      if (line !== '') {
+        if (context.startsWith(line)) {
+          if (index < 0) {
+            // Remember the first position in the original code that
+            // the AI references.
+            index = position;
+          }
+          // Remember the last position in the original code.
+          lastIndex = position + lineLength;
+          context = context.substring(line.length + 1).trim();
+          if (context === '') {
+            // All of the code was found
+            break;
+          }
+        } else {
+          // We didn't match it. Reset our search.
+          context = snippet;
+          index = -1;
+        }
+      }
+
+      // Move the current search position
+      position += lineLength + 1;
+    }
+  }
+
+  // As long as we found a region, we will determine what the line
+  // number was for the first and last line of the region.
+  if (index < 0) {
+    return [null, null];
+  }
+
+  let lineNumber = (code.substring(0, index).match(/\n/g) || []).length + 1;
+  let lastLineNumber =
+    (code.substring(0, lastIndex).match(/\n/g) || []).length + 1;
+
+  return [lineNumber, lastLineNumber];
+}
+
+/**
+ * Adds annotations to the source code viewed in the current editor based
+ * on the AI observations of the learning goal referenced by the given index.
+ */
+export function annotateLines(observations) {
+  // Get a reference to all the whitespaced lines of code
+  const code = getAnonymizedCode();
+  const lines = code.split('\n');
+
+  // Go through the AI observations
+  // For every reference the AI gave us, we will find it in the code.
+  // The AI has trouble giving line numbers, so even though we parse
+  // those out, we do not trust them and instead find the code it
+  // references to highlight it.
+  for (const match of observations.matchAll(
+    'Line (\\d+)(?:\\s*-\\s*(\\d+))?:(.+?)\\s*(?=Line|$)'
+  )) {
+    let lineNumber = parseInt(match[1]);
+    let lastLineNumber = parseInt(match[2] || lineNumber);
+    let found = false;
+    const context = match[3].trim();
+
+    const message = context
+      .substring(0, context.indexOf('`') || context.length)
+      .trim();
+
+    // We look at all of the code references the AI gave us which are
+    // surrounded by backticks.
+    const references = context.substring(message.length);
+    for (const submatch of references.matchAll(/`([^\`]+)`/g)) {
+      let snippet = submatch[1].trim();
+
+      let [lineNumber, lastLineNumber] = findCodeRegion(code, lines, snippet);
+
+      // Annotate that first line and highlight all lines, if they were found
+      if (lineNumber && lastLineNumber) {
+        found = true;
+        studioApp().annotateLine(message, lineNumber);
+        for (let i = lineNumber; i <= lastLineNumber; i++) {
+          studioApp().highlightLine(i);
+        }
+      }
+    }
+
+    if (!found) {
+      studioApp().annotateLine(message, lineNumber);
+      for (let i = lineNumber; i <= lastLineNumber; i++) {
+        studioApp().highlightLine(i);
+      }
+    }
+  }
+}
+
 export default function LearningGoals({
   learningGoals,
   teacherHasEnabledAi,
@@ -221,157 +364,6 @@ export default function LearningGoals({
     );
   };
 
-  /**
-   * Clear prior line annotations
-   */
-  const clearAnnotations = () => {
-    studioApp().clearAnnotations();
-    studioApp().clearHighlightedLines();
-  };
-
-  /**
-   * Retrieves the currently viewed source code.
-   *
-   * All comments are replaced with whitespace of equal length.
-   */
-  const getAnonymizedCode = () => {
-    // Find code snippet by looking at the student code
-    let code = studioApp().getCode();
-
-    // Replace comments with whitespace. Our AI does not see the comments.
-    // So, we must replace them with whitespace so we can find the right
-    // code to reference.
-
-    // This regex pattern captures three groups:
-    // 1) Single or double quoted strings
-    // 2) Multi-line comments
-    // 3) Single-line comments
-    const pattern = /(".*?[^\\]"|\'.*?[^\\]\'|\/\*.*?\*\/|\/\/[^\n]*)/gs;
-    for (const submatch of code.matchAll(pattern)) {
-      const context = submatch[0].trim();
-      if (!context.startsWith('"') && !context.startsWith("'")) {
-        code = code.replace(context, ''.padStart(context.length));
-      }
-    }
-
-    return code;
-  };
-
-  /**
-   * Returns the first and last line that contains the given code snippet.
-   */
-  const findCodeRegion = (code, lines, snippet) => {
-    // Attempt to just find the code in the full code listing
-    let index = code.indexOf(snippet);
-    let lastIndex = index + snippet.length;
-    if (index < 0) {
-      // Failing to find it, we need to find it line by line instead
-      let context = snippet;
-      let position = 0;
-      for (let line of lines) {
-        // Remember the original length of the line
-        let lineLength = line.length;
-        line = line.trim();
-        if (line !== '') {
-          if (context.startsWith(line)) {
-            if (index < 0) {
-              // Remember the first position in the original code that
-              // the AI references.
-              index = position;
-            }
-            // Remember the last position in the original code.
-            lastIndex = position + lineLength;
-            context = context.substring(line.length + 1).trim();
-            if (context === '') {
-              // All of the code was found
-              break;
-            }
-          } else {
-            // We didn't match it. Reset our search.
-            context = snippet;
-            index = -1;
-          }
-        }
-
-        // Move the current search position
-        position += lineLength + 1;
-      }
-    }
-
-    // As long as we found a region, we will determine what the line
-    // number was for the first and last line of the region.
-    if (index < 0) {
-      return [null, null];
-    }
-
-    let lineNumber = (code.substring(0, index).match(/\n/g) || []).length + 1;
-    let lastLineNumber =
-      (code.substring(0, lastIndex).match(/\n/g) || []).length + 1;
-
-    return [lineNumber, lastLineNumber];
-  };
-
-  /**
-   * Adds annotations to the source code viewed in the current editor based
-   * on the AI observations of the learning goal referenced by the given index.
-   */
-  const annotateLines = currentIndex => {
-    // Get a reference to all the whitespaced lines of code
-    const code = getAnonymizedCode();
-    const lines = code.split('\n');
-
-    // Go through the AI observations
-    const aiEvalInfo = getAiInfo(learningGoals[currentIndex].id);
-    if (!!aiEvalInfo && aiEvalInfo.observations) {
-      // For every reference the AI gave us, we will find it in the code.
-      // The AI has trouble giving line numbers, so even though we parse
-      // those out, we do not trust them and instead find the code it
-      // references to highlight it.
-      for (const match of aiEvalInfo.observations.matchAll(
-        'Line (\\d+)(?:\\s*-\\s*(\\d+))?:(.+?)\\s*(?=Line|$)'
-      )) {
-        let lineNumber = match[1];
-        let lastLineNumber = match[2] || lineNumber;
-        let found = false;
-        const context = match[3].trim();
-
-        const message = context.substring(
-          0,
-          context.indexOf('`') || context.length
-        );
-
-        // We look at all of the code references the AI gave us which are
-        // surrounded by backticks.
-        const references = context.substring(message.length);
-        for (const submatch of references.matchAll(/`([^\`]+)`/g)) {
-          let snippet = submatch[1].trim();
-
-          let [lineNumber, lastLineNumber] = findCodeRegion(
-            code,
-            lines,
-            snippet
-          );
-
-          // Annotate that first line and highlight all lines, if they were found
-          if (lineNumber && lastLineNumber) {
-            found = true;
-            studioApp().annotateLine(message, lineNumber);
-            for (let i = lineNumber; i <= lastLineNumber; i++) {
-              studioApp().highlightLine(i);
-            }
-          }
-        }
-
-        if (!found) {
-          studioApp().annotateLine(message, lineNumber);
-          for (let i = lineNumber; i <= lastLineNumber; i++) {
-            studioApp().highlightLine(i);
-          }
-        }
-      }
-    }
-  };
-
   const onCarouselPress = buttonValue => {
     let currentIndex = currentLearningGoal;
     currentIndex += buttonValue;
@@ -384,7 +376,10 @@ export default function LearningGoals({
 
     // Annotate the lines based on the AI observation
     clearAnnotations();
-    annotateLines(currentIndex);
+    const aiEvalInfo = getAiInfo(learningGoals[currentIndex].id);
+    if (!!aiEvalInfo && aiEvalInfo.observations) {
+      annotateLines(aiEvalInfo.observations);
+    }
 
     if (!isStudent) {
       const eventName = EVENTS.TA_RUBRIC_LEARNING_GOAL_SELECTED;

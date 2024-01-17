@@ -5,7 +5,13 @@ import sinon from 'sinon';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
-import LearningGoals from '@cdo/apps/templates/rubrics/LearningGoals';
+import {
+  LearningGoals,
+  clearAnnotations,
+  findCodeRegion,
+  getAnonymizedCode,
+  annotateLines,
+} from '@cdo/apps/templates/rubrics/LearningGoals';
 import {
   singleton as studioApp,
   stubStudioApp,
@@ -13,7 +19,11 @@ import {
 } from '@cdo/apps/StudioApp';
 
 describe('LearningGoals', () => {
-  //let editor, originalMainBlockSpace;
+  let originalMainBlockSpace;
+  let annotateLineStub,
+    highlightLineStub,
+    clearAnnotationsStub,
+    clearHighlightedLinesStub;
   const studentLevelInfo = {name: 'Grace Hopper', timeSpent: 706};
 
   const learningGoals = [
@@ -50,34 +60,138 @@ describe('LearningGoals', () => {
     },
   ];
 
+  const code = `// code
+    var x = 5;
+    var y = 6;
+    // add them together
+    /*
+    var z = x + y;
+    */
+    draw();
+  `;
+
+  const lines = code.split('\n');
+
   // Stub out our references to the studioApp singleton
   beforeEach(stubStudioApp);
   afterEach(restoreStudioApp);
 
   // Stub out the calls to the editor
   beforeEach(() => {
-    sinon.stub(studioApp(), 'annotateLine');
-    sinon.stub(studioApp(), 'highlightLine');
-    sinon.stub(studioApp(), 'clearAnnotations');
-    sinon.stub(studioApp(), 'clearHighlightedLines');
+    sinon.stub(studioApp(), 'getCode').returns(code);
+    annotateLineStub = sinon.stub(studioApp(), 'annotateLine');
+    highlightLineStub = sinon.stub(studioApp(), 'highlightLine');
+    clearAnnotationsStub = sinon.stub(studioApp(), 'clearAnnotations');
+    clearHighlightedLinesStub = sinon.stub(
+      studioApp(),
+      'clearHighlightedLines'
+    );
   });
 
-  /*
   // Necessary stubs for Blockly
   beforeEach(() => {
     originalMainBlockSpace = Blockly.blockly_.mainBlockSpace;
     Blockly.blockly_.mainBlockSpace = {events: {dispatchEvent: () => {}}};
   });
-  afterEach(() => Blockly.blockly_.mainBlockSpace = originalMainBlockSpace);*/
+  afterEach(() => (Blockly.blockly_.mainBlockSpace = originalMainBlockSpace));
 
   describe('findCodeRegion', () => {
-    beforeEach(() => {
-      shallow(
-        <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
-      );
+    it('returns null for both when the snippet is not found', () => {
+      let snippet = 'var a = 0;';
+      const [lineNumber, lastLineNumber] = findCodeRegion(code, lines, snippet);
+      expect(lineNumber).to.be.null;
+      expect(lastLineNumber).to.be.null;
     });
 
-    it('returns null for both when the snippet is not found', () => {});
+    it('returns the proper line when the snippet is found', () => {
+      let snippet = 'var y = 6;';
+      const [lineNumber, lastLineNumber] = findCodeRegion(code, lines, snippet);
+      expect(lineNumber).to.equal(3);
+      expect(lastLineNumber).to.equal(3);
+    });
+
+    it('returns the proper lines when the multiline snippet is found', () => {
+      let snippet = 'var x = 5; var y = 6;';
+      const [lineNumber, lastLineNumber] = findCodeRegion(code, lines, snippet);
+      expect(lineNumber).to.equal(2);
+      expect(lastLineNumber).to.equal(3);
+    });
+
+    it('returns the proper lines when the snippet is the last line', () => {
+      let snippet = 'draw();';
+      const [lineNumber, lastLineNumber] = findCodeRegion(code, lines, snippet);
+      expect(lineNumber).to.equal(8);
+      expect(lastLineNumber).to.equal(8);
+    });
+  });
+
+  describe('getAnonymizedCode', () => {
+    it('returns a result of the same length as the input', () => {
+      const result = getAnonymizedCode();
+      expect(result.length).to.equal(code.length);
+    });
+
+    it('returns a result that does not contain the comments', () => {
+      const result = getAnonymizedCode();
+      expect(result).to.not.have.string('// add them together');
+      expect(result).to.not.have.string('var z = x + y');
+      expect(result).to.not.have.string('// code');
+    });
+
+    it('returns a result that does still contain the code', () => {
+      const result = getAnonymizedCode();
+      expect(result).to.have.string('var x = 5');
+      expect(result).to.have.string('var y = 6');
+    });
+  });
+
+  describe('annotateLines', () => {
+    it('should annotate a single line of code referenced by the AI', () => {
+      // The AI tends to misreport the line number, so we shouldn't rely on it
+      annotateLines('Line 1: This is a line of code `var x = 5;`');
+      sinon.assert.calledWith(annotateLineStub, 'This is a line of code', 2);
+    });
+
+    it('should annotate the first line of code referenced by the AI', () => {
+      annotateLines('Line 1: This is a line of code `var x = 5; var y = 6;`');
+      sinon.assert.calledWith(annotateLineStub, 'This is a line of code', 2);
+    });
+
+    it('should highlight a single line of code referenced by the AI', () => {
+      // The AI tends to misreport the line number, so we shouldn't rely on it
+      annotateLines('Line 1: This is a line of code `var x = 5; var y = 6;`');
+      sinon.assert.calledWith(highlightLineStub, 2);
+    });
+
+    it('should highlight all lines of code referenced by the AI', () => {
+      annotateLines('Line 1: This is a line of code `var x = 5; var y = 6;`');
+      sinon.assert.calledWith(highlightLineStub, 2);
+      sinon.assert.calledWith(highlightLineStub, 3);
+    });
+
+    it('should just highlight the lines the AI thinks if the referenced code does not exist', () => {
+      annotateLines('Line 45: This is a line of code `var z = 0`');
+      sinon.assert.calledWith(annotateLineStub, 'This is a line of code', 45);
+      sinon.assert.calledWith(highlightLineStub, 45);
+    });
+
+    it('should annotate the last line of code when referenced by the AI', () => {
+      annotateLines('Line 55: This is a line of code `draw();`');
+      sinon.assert.calledWith(annotateLineStub, 'This is a line of code', 8);
+    });
+
+    it('should highlight the last line of code when referenced by the AI', () => {
+      annotateLines('Line 55: This is a line of code `draw();`');
+      sinon.assert.calledWith(highlightLineStub, 8);
+    });
+  });
+
+  describe('clearAnnotations', () => {
+    it('should clear annotations and clear highlighted lines', () => {
+      clearAnnotations();
+      sinon.assert.called(clearAnnotationsStub);
+      sinon.assert.called(clearHighlightedLinesStub);
+    });
   });
 
   it('renders EvidenceLevels', () => {

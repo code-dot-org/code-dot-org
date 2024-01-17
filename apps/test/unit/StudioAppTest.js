@@ -18,6 +18,7 @@ import {
   replaceOnWindow,
   restoreOnWindow,
 } from '../util/testUtils';
+import annotationList from '@cdo/apps/acemode/annotationList';
 import sampleLibrary from './code-studio/components/libraries/sampleLibrary.json';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import * as utils from '@cdo/apps/utils';
@@ -387,6 +388,167 @@ describe('StudioApp', () => {
       var footItems = makeFooterMenuItems();
       var itemKeys = footItems.map(item => item.key);
       expect(itemKeys).to.include('try-hoc');
+    });
+  });
+
+  describe('getCode', () => {
+    it('should get the starting blocks if the source is hidden', () => {
+      studioApp().editCode = true;
+      studioApp().hideSource = true;
+      studioApp().startBlocks_ = 'start blocks';
+      expect(studioApp().getCode()).to.equal('start blocks');
+    });
+
+    it('should get the blockly workspace code if it is read only', () => {
+      studioApp().editCode = false;
+      let stub = sinon
+        .stub(Blockly, 'getWorkspaceCode')
+        .returns('blockly workspace');
+      expect(studioApp().getCode()).to.equal('blockly workspace');
+      stub.restore();
+    });
+
+    it('should get the code from the editor itself if editable and the source is not hidden', () => {
+      studioApp().editCode = true;
+      studioApp().hideSource = false;
+      let oldEditor = studioApp().editor;
+      studioApp().editor = sinon.stub();
+      studioApp().editor.getValue = sinon.stub().returns('editor code');
+      expect(studioApp().getCode()).to.equal('editor code');
+      studioApp().editor = oldEditor;
+    });
+  });
+
+  describe('annotateLine', () => {
+    let annotationListStub;
+    beforeEach(() => {
+      annotationListStub = sinon.stub(annotationList, 'addRuntimeAnnotation');
+    });
+    afterEach(() => {
+      annotationListStub.restore();
+    });
+
+    it('should add the given annotation to the annotation list', () => {
+      let message = 'This is a line of code';
+      studioApp().annotateLine(message, 4, 'INFO');
+      sinon.assert.calledWith(annotationListStub, 'INFO', 4, message);
+    });
+  });
+
+  describe('clearAnnotations', () => {
+    let annotationListStub;
+    beforeEach(() => {
+      annotationListStub = sinon.stub(
+        annotationList,
+        'filterOutRuntimeAnnotations'
+      );
+    });
+    afterEach(() => {
+      annotationListStub.restore();
+    });
+
+    it('should tell the annotation list to filter out by the given log type', () => {
+      studioApp().clearAnnotations('ERROR');
+      sinon.assert.calledWith(annotationListStub, 'ERROR');
+    });
+  });
+
+  describe('highlightLine', () => {
+    let oldEditor, sessionStub, rangeStub;
+
+    beforeEach(() => {
+      // Stub out the app reference to the editor
+      oldEditor = studioApp().editor;
+      studioApp().editor = {
+        aceEditor: sinon.stub(),
+      };
+
+      // Stub out the editor session instance
+      sessionStub = sinon.stub();
+      sessionStub.addMarker = sinon.stub();
+      sessionStub.removeMarker = sinon.stub();
+
+      // All lines are 42 characters long
+      sessionStub.getLine = sinon.stub().returns('x'.repeat(42));
+      studioApp().editor.aceEditor.getSession = sinon
+        .stub()
+        .returns(sessionStub);
+
+      // Stub out the ace editor itself and the Range class
+      rangeStub = sinon.stub();
+
+      window.ace = {
+        require: sinon.stub().withArgs('ace/range').returns({
+          Range: rangeStub,
+        }),
+      };
+    });
+    afterEach(() => {
+      studioApp().editor = oldEditor;
+    });
+
+    it('should mark the given line in the editor with the given class', () => {
+      studioApp().highlightLine(4, 'my_class');
+      // It should create just one range with the (0-based) line index we
+      // passed it. The 42 is the length of the line which is stubbed out.
+      sinon.assert.calledOnceWithExactly(rangeStub, 3, 0, 3, 42);
+      sinon.assert.calledWithNew(rangeStub);
+      sinon.assert.calledWith(
+        sessionStub.addMarker,
+        sinon.match.instanceOf(rangeStub),
+        'my_class',
+        'text'
+      );
+
+      // Hopefully this function clears the state
+      studioApp().clearHighlightedLines();
+    });
+  });
+
+  describe('clearHighlightedLines', () => {
+    let oldEditor, sessionStub;
+
+    beforeEach(() => {
+      // Stub out the app reference to the editor
+      oldEditor = studioApp().editor;
+      studioApp().editor = {
+        aceEditor: sinon.stub(),
+      };
+
+      // Stub out the editor session instance
+      sessionStub = sinon.stub();
+
+      // We will call add marker, so we need to stub it out too
+      sessionStub.addMarker = sinon.stub();
+      sessionStub.removeMarker = sinon.stub();
+
+      // All lines are 42 characters long
+      sessionStub.getLine = sinon.stub().returns('x'.repeat(42));
+
+      studioApp().editor.aceEditor.getSession = sinon
+        .stub()
+        .returns(sessionStub);
+
+      // Stub out 'highlightLine's use of ace.Range
+      window.ace = {
+        require: sinon.stub().withArgs('ace/range').returns({
+          Range: sinon.stub(),
+        }),
+      };
+    });
+    afterEach(() => {
+      studioApp().editor = oldEditor;
+    });
+
+    it('should remove each highlighted line previously highlighted', () => {
+      // Highlight lines with a variety of classes
+      studioApp().highlightLine(4);
+      studioApp().highlightLine(5, 'my_class');
+      studioApp().highlightLine(6, 'my_other_class');
+      studioApp().clearHighlightedLines();
+
+      // Should call the removeMarker as many times as we called highlightLine
+      expect(sessionStub.removeMarker.callCount).to.equal(3);
     });
   });
 
