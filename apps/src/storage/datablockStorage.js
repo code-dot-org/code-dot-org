@@ -1,48 +1,136 @@
 import FirebaseStorage from './firebaseStorage';
 import {init} from './firebaseUtils';
+import {filterRecords} from './storageCommon';
 
 const DatablockStorage = {...FirebaseStorage};
 
 function getAuthToken() {
-  return document.querySelector('meta[name="csrf-token"]').content;
+  const tokenDOM = document.querySelector('meta[name="csrf-token"]');
+  if (!tokenDOM) {
+    throw new Error('Could not find CSRF token');
+  }
+  return tokenDOM.content;
+}
+
+function urlFor(func_name) {
+  // FIXME: this doesn't work for all URLs where this can be loaded from
+  // e.g. http://localhost-studio.code.org:3000/projects/applab/Yp05MnSdVubn04tBoEZn_g/edit/
+  // vs http://localhost-studio.code.org:3000/projects/applab/Yp05MnSdVubn04tBoEZn_g
+  return '../data_db/' + func_name;
+}
+
+function _fetch(path, method, params) {
+  if (method.toUpperCase() === 'GET') {
+    return fetch(
+      urlFor(path) +
+        '?' +
+        new URLSearchParams({
+          ...params,
+          authenticity_token: getAuthToken(),
+        }),
+      {
+        method: 'GET',
+      }
+    );
+  } else {
+    return fetch(urlFor(path), {
+      method,
+      body: JSON.stringify(params),
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-TOKEN': getAuthToken(),
+        'X-Requested-With': 'XMLHttpRequest',
+      },
+      credentials: 'same-origin',
+    });
+  }
 }
 
 async function getKeyValue(key) {
-  const response = await fetch(
-    '../data_db/get_key_value?' +
-      new URLSearchParams({
-        key,
-        authenticity_token: getAuthToken(),
-      }),
-    {
-      method: 'GET',
-    }
-  );
+  const response = await _fetch('get_key_value', 'GET', {key});
   const json = await response.json();
   console.log('json is ', json);
   return json === null ? undefined : json;
 }
 
 DatablockStorage.getKeyValue = function (key, onSuccess, onError) {
-  console.log('Using the overridden DatablockStorage method');
+  console.log('Using the overridden DatablockStorage method getKeyValue');
   return getKeyValue(key).then(onSuccess, onError);
 };
 
 DatablockStorage.setKeyValue = function (key, value, onSuccess, onError) {
-  console.log('Using the overridden DatablockStorage method');
+  console.log('Using the overridden DatablockStorage method setKeyValue');
 
-  fetch('../data_db/set_key_value', {
-    method: 'POST',
-    body: JSON.stringify({
-      key,
-      value: JSON.stringify(value),
-    }),
-    headers: {
-      'Content-Type': 'application/json',
-      'X-CSRF-TOKEN': getAuthToken(),
-      'X-Requested-With': 'XMLHttpRequest',
-    },
-    credentials: 'same-origin',
+  _fetch('set_key_value', 'POST', {
+    key,
+    value: JSON.stringify(value),
+  }).then(onSuccess, onError);
+};
+
+async function createRecord(tableName, record) {
+  const response = await _fetch('create_record', 'POST', {
+    table_name: tableName,
+    json: JSON.stringify(record),
+  });
+  console.log('response is ', response);
+  return await response.json();
+}
+
+DatablockStorage.createRecord = function (
+  tableName,
+  record,
+  onSuccess,
+  onError
+) {
+  console.log('Using the overridden DatablockStorage method createRecord');
+  createRecord(tableName, record).then(json => onSuccess(json), onError);
+};
+
+DatablockStorage.updateRecord = function (
+  tableName,
+  record,
+  onSuccess,
+  onError
+) {
+  console.log('Using the overridden DatablockStorage method updateRecord');
+
+  _fetch('update_record', 'PUT', {
+    table_name: tableName,
+    record_id: record.id,
+    json: JSON.stringify(record),
+  }).then(onSuccess, onError);
+};
+
+async function readRecords(tableName, searchParams) {
+  const response = await _fetch('read_records', 'GET', {
+    table_name: tableName,
+  });
+  const json = (await response.json()).map(record => record.json);
+  console.log('json is ', json);
+  return filterRecords(json, searchParams);
+}
+
+DatablockStorage.readRecords = function (
+  tableName,
+  searchParams,
+  onSuccess,
+  onError
+) {
+  console.log('Using the overridden DatablockStorage method readRecords');
+  return readRecords(tableName, searchParams).then(onSuccess, onError);
+};
+
+DatablockStorage.deleteRecord = function (
+  tableName,
+  record,
+  onSuccess,
+  onError
+) {
+  console.log('Using the overridden DatablockStorage method deleteRecord');
+
+  _fetch('delete_record', 'DELETE', {
+    table_name: tableName,
+    record_id: record.id,
   }).then(onSuccess, onError);
 };
 
