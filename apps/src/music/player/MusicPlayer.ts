@@ -78,7 +78,7 @@ export default class MusicPlayer {
   /**
    * Pre-load sounds for playback
    */
-  preloadSounds(
+  async preloadSounds(
     events: PlaybackEvent[],
     onLoadFinished?: LoadFinishedCallback
   ) {
@@ -92,7 +92,7 @@ export default class MusicPlayer {
     );
 
     // this.samplePlayer.loadSounds(sampleIds, onLoadFinished);
-    this.tonePlayer.loadSounds(sampleIds);
+    return this.tonePlayer.loadSounds(sampleIds);
   }
 
   /**
@@ -102,7 +102,16 @@ export default class MusicPlayer {
    * @param onStop called when the sound finished playing
    */
   previewSound(id: string, onStop?: () => void) {
-    this.samplePlayer.previewSample(id, onStop);
+    const sound = this.convertEventToSound({
+      type: 'sound',
+      when: 1,
+      id,
+      triggered: false,
+      length: 1,
+      blockId: 'preview',
+    });
+    this.tonePlayer.playSoundImmediately(sound as Sound, onStop);
+    // this.samplePlayer.previewSample(id, onStop);
   }
 
   previewChord(chordValue: ChordEventValue, onStop?: () => void) {
@@ -115,19 +124,22 @@ export default class MusicPlayer {
       id: 'preview',
       blockId: 'preview',
     };
-    this.samplePlayer.previewSamples(
-      this.convertEventToSamples(chordEvent),
-      onStop
-    );
+    const sequence = this.convertEventToSound(chordEvent);
+    this.tonePlayer.playSequenceImmediately(sequence as SamplerSequence);
+    // this.samplePlayer.previewSamples(
+    //   this.convertEventToSamples(chordEvent),
+    //   onStop
+    // );
   }
 
   previewNote(note: number, instrument: string, onStop?: () => void) {
-    const sampleId = this.getSampleForNote(note, instrument);
-    if (sampleId === null) {
-      return;
-    }
+    const singleNoteEvent: ChordEventValue = {
+      instrument,
+      notes: [note],
+      playStyle: 'together',
+    };
 
-    this.previewSound(sampleId, onStop);
+    this.previewChord(singleNoteEvent, onStop);
   }
 
   previewPattern(patternValue: PatternEventValue, onStop?: () => void) {
@@ -151,7 +163,8 @@ export default class MusicPlayer {
    * Cancels any ongoing previews.
    */
   cancelPreviews() {
-    this.samplePlayer.cancelPreviews();
+    this.tonePlayer.cancelPreviews();
+    // this.samplePlayer.cancelPreviews();
   }
 
   /**
@@ -181,10 +194,22 @@ export default class MusicPlayer {
   /**
    * Play the given events. Assumes that playback is in progress.
    */
-  playEvents(events: PlaybackEvent[]) {
-    this.samplePlayer.playSamples(
-      events.map(event => this.convertEventToSamples(event)).flat()
-    );
+  playEvents(events: PlaybackEvent[], replace?: boolean) {
+    if (replace) {
+      this.tonePlayer.cancelAllEvents();
+    }
+
+    events.forEach(event => {
+      const sound = this.convertEventToSound(event);
+      if (sound && (sound as Sound).sampleId) {
+        this.tonePlayer.scheduleSound(sound as Sound);
+      } else if (sound && (sound as SamplerSequence).events) {
+        this.tonePlayer.scheduleSamplerSequence(sound as SamplerSequence);
+      }
+    });
+    // this.samplePlayer.playSamples(
+    //   events.map(event => this.convertEventToSamples(event)).flat()
+    // );
   }
 
   /**
@@ -199,18 +224,19 @@ export default class MusicPlayer {
    * Stop any sounds that have not yet been played if playback is in progress.
    */
   stopAllSoundsStillToPlay() {
-    this.samplePlayer.stopAllSamplesStillToPlay();
+    this.tonePlayer.cancelAllEvents();
+    //this.samplePlayer.stopAllSamplesStillToPlay();
   }
 
   // Returns the current playhead position, in floating point for an exact position,
   // 1-based, and scaled to measures.
   // Returns 0 if music is not playing.
   getCurrentPlayheadPosition(): number {
-    console.log(
-      `ToneJS: ${this.tonePlayer.getCurrentPosition()} | ${this.transportTimeToPlaybackTime(
-        this.tonePlayer.getCurrentPosition()
-      )}`
-    );
+    // console.log(
+    //   `ToneJS: ${this.tonePlayer.getCurrentPosition()} | ${this.transportTimeToPlaybackTime(
+    //     this.tonePlayer.getCurrentPosition()
+    //   )}`
+    // );
     return this.transportTimeToPlaybackTime(
       this.tonePlayer.getCurrentPosition()
     );
