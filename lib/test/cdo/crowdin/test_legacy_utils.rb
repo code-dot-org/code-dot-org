@@ -79,6 +79,7 @@ class CrowdinLegacyUtilsTest < Minitest::Test
   end
 
   def test_downloading_is_idempotent
+    # +download_changed_files+ should return the same results if it runs multiple times.
     File.write @options[:etags_json], JSON.pretty_generate({})
 
     @utils.download_changed_files
@@ -99,6 +100,8 @@ class CrowdinLegacyUtilsTest < Minitest::Test
   end
 
   def test_downloading_updates_local_state
+    # If +download_changed_files+ successfully downloads files from Crowdin,
+    # it should update the local state tracked by etags_json.
     File.write @options[:etags_json], JSON.pretty_generate({})
 
     @utils.download_changed_files
@@ -112,6 +115,7 @@ class CrowdinLegacyUtilsTest < Minitest::Test
   end
 
   def test_downloading_respects_unchanged_files
+    # +download_changed_files+ should respect unchanged files that already exists in etags_json.
     files_to_download = {
       "i1-8n" => {
         "/baz.bat" => {
