@@ -358,13 +358,12 @@ class UnconnectedMusicView extends React.Component {
 
     const codeChanged = this.compileSong();
     if (codeChanged) {
-      this.executeCompiledSong();
-
-      // If code has changed mid-playback, clear and re-queue all events in the player
-      if (this.props.isPlaying) {
-        this.player.stopAllSoundsStillToPlay();
-        this.player.playEvents(this.sequencer.getPlaybackEvents());
-      }
+      this.executeCompiledSong().then(() => {
+        // If code has changed mid-playback, clear and re-queue all events in the player
+        if (this.props.isPlaying) {
+          this.player.playEvents(this.sequencer.getPlaybackEvents(), true);
+        }
+      });
 
       this.analyticsReporter.onBlocksUpdated(
         this.musicBlocklyWorkspace.getAllBlocks()
@@ -459,7 +458,7 @@ class UnconnectedMusicView extends React.Component {
       orderedFunctions: this.sequencer.getOrderedFunctions(),
     });
 
-    this.player.preloadSounds(
+    return this.player.preloadSounds(
       [...this.sequencer.getPlaybackEvents(), ...allTriggerEvents],
       (loadTimeMs, soundsLoaded) => {
         // Report load time metrics if any sounds were loaded.
@@ -520,9 +519,6 @@ class UnconnectedMusicView extends React.Component {
   };
 
   playSong = () => {
-    //const player = new Tone.Player({});
-    //console.log(player);
-
     this.player.stopSong();
     this.playingTriggers = [];
 
