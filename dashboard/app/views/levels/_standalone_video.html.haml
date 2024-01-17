@@ -37,8 +37,8 @@
     #fallback-player-caption-dialog-link
 
   - if @level.video_full_width
-    .buttons.below-video-right
-      = button_tag t('continue'), class: "btn btn-large btn-primary next-lesson submitButton pull-right"
+    .buttons.below-video-right{style: "float: right; max-width: 20%"}
+      = button_tag t('continue'), class: "btn btn-large btn-primary next-lesson submitButton"
 
   %br/
   %br/
