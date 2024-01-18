@@ -184,12 +184,12 @@ GoogleBlockly.Extensions.registerMutator(
  * @param {WorkspaceSvg} workspace The workspace containing procedures.
  * @returns an array of XML block elements
  */
-export function flyoutCategory(workspace) {
+export function flyoutCategory(workspace, functionEditorOpen = false) {
   const blockList = [];
 
-  // If the modal function editor is enabled, we render a button to open the editor
-  // Behaviors are not editable without the modal editor
-  if (Blockly.useModalFunctionEditor) {
+  if (functionEditorOpen) {
+    // No-op - cannot create new behaviors while the modal editor is open
+  } else if (Blockly.useModalFunctionEditor) {
     const newBehaviorButton = getNewBehaviorButtonWithCallback(workspace);
     blockList.push(newBehaviorButton);
   }
