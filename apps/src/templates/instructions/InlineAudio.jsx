@@ -1,6 +1,5 @@
 import MD5 from 'crypto-js/md5';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 import trackEvent from '../../util/trackEvent';
@@ -253,7 +252,11 @@ class InlineAudio extends React.Component {
           type="button"
         >
           <div
-            style={[this.props.style && this.props.style.button]}
+            style={
+              this.props.style && this.props.style.button
+                ? this.props.style.button
+                : {}
+            }
             className={classNames(
               moduleStyles.iconWrapper,
               isRoundedVolumeIcon
@@ -268,7 +271,11 @@ class InlineAudio extends React.Component {
                 moduleStyles.buttonImg,
                 moduleStyles.buttonImgVolume
               )}
-              style={[this.props.style && this.props.style.buttonImg]}
+              style={
+                this.props.style && this.props.style.buttonImg
+                  ? this.props.style.buttonImg
+                  : {}
+              }
             />
           </div>
           <div
@@ -277,14 +284,22 @@ class InlineAudio extends React.Component {
               moduleStyles.iconWrapper,
               moduleStyles.iconWrapperPlayPause
             )}
-            style={[this.props.style && this.props.style.button]}
+            style={
+              this.props.style && this.props.style.button
+                ? this.props.style.button
+                : {}
+            }
           >
             <i
               className={classNames(
                 this.state.playing ? 'fa fa-pause' : 'fa fa-play',
                 moduleStyles.buttonImg
               )}
-              style={[this.props.style && this.props.style.buttonImg]}
+              style={
+                this.props.style && this.props.style.buttonImg
+                  ? this.props.style.buttonImg
+                  : {}
+              }
             />
           </div>
         </button>
@@ -299,7 +314,6 @@ InlineAudio.defaultProps = {
 };
 InlineAudio.contextType = AudioQueueContext;
 
-export const StatelessInlineAudio = Radium(InlineAudio);
 export default connect(function propsFromStore(state) {
   return {
     assetUrl: state.pageConstants.assetUrl,
@@ -311,4 +325,4 @@ export default connect(function propsFromStore(state) {
     isOnCSFPuzzle: !state.instructions.noInstructionsWhenCollapsed,
     ttsAutoplayEnabled: state.instructions.ttsAutoplayEnabledForLevel,
   };
-})(StatelessInlineAudio);
+})(InlineAudio);
