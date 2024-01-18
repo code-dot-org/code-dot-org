@@ -36,11 +36,14 @@ const Callouts: React.FunctionComponent = () => {
       const elementTop = elementRect.bottom + 4;
       return (
         <div
+          id="callout"
           key={calloutId}
           style={{left: elementLeft, top: elementTop}}
           className={moduleStyles.callout}
         >
-          <FontAwesome icon={'arrow-up'} />
+          <div id="callout-arrow" className={moduleStyles.arrow}>
+            <FontAwesome icon={'arrow-up'} />
+          </div>
         </div>
       );
     }
