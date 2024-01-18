@@ -55,8 +55,13 @@ export interface MusicState {
     canUndo: boolean;
     canRedo: boolean;
   };
-  /** A callout that's being displayed. */
-  calloutId?: string;
+  /** A callout that's being shown.  The index lets the same callout be
+   * reshown multiple times in a row.
+   */
+  showCallout: {
+    id?: string;
+    index: number;
+  };
 }
 
 const initialState: MusicState = {
@@ -77,7 +82,10 @@ const initialState: MusicState = {
     canUndo: false,
     canRedo: false,
   },
-  calloutId: undefined,
+  showCallout: {
+    id: undefined,
+    index: 0,
+  },
 };
 
 const musicSlice = createSlice({
@@ -195,7 +203,8 @@ const musicSlice = createSlice({
       state.undoStatus = action.payload;
     },
     setShowCallout: (state, action: PayloadAction<string>) => {
-      state.calloutId = action.payload;
+      state.showCallout.id = action.payload;
+      state.showCallout.index = state.showCallout.index + 1;
     },
   },
 });
