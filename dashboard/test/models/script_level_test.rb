@@ -759,7 +759,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   test 'next_level_or_redirect_path_for_user returns to next unit if at the end of the current self paced pl unit' do
     unit1 = create :unit
     unit2 = create :unit
-    unit1.stubs(:self_paced_pl?).returns true
+    unit1.stubs(:pl_course?).returns true
     unit1.stubs(:next_unit).returns(unit2)
 
     script_level = create :script_level, script: unit1

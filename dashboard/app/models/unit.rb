@@ -928,10 +928,6 @@ class Unit < ApplicationRecord
     Unit.unit_in_category?('csc', name)
   end
 
-  def self_paced_pl?
-    get_course_version&.course_offering&.self_paced_pl?
-  end
-
   # TODO: (Dani) Update to use new course types framework.
   # Currently this grouping is used to determine whether the script should have # a custom end-of-lesson experience.
   def middle_high?

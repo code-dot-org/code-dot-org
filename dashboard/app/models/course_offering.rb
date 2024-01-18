@@ -445,10 +445,6 @@ class CourseOffering < ApplicationRecord
     grade_levels_list.any? {|g| HIGH_SCHOOL_GRADES.include?(g)}
   end
 
-  def self_paced_pl?
-    category == 'pl_self_paced'
-  end
-
   private def grade_levels_format
     return true if grade_levels.nil?
 

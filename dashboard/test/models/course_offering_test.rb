@@ -881,16 +881,6 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert course7.high_school_level?
   end
 
-  test 'self_paced_pl?' do
-    self_paced_pl_course = create :course_offering, category: 'pl_self_paced'
-    non_self_paced_pl_course = create :course_offering, category: 'pl_other'
-    csf_course = create :course_offering, category: 'csf'
-
-    assert self_paced_pl_course.self_paced_pl?
-    refute non_self_paced_pl_course.self_paced_pl?
-    refute csf_course.self_paced_pl?
-  end
-
   def course_offering_with_versions(num_versions, content_root_trait = :with_unit_group)
     create :course_offering do |offering|
       create_list :course_version, num_versions, content_root_trait, course_offering: offering
