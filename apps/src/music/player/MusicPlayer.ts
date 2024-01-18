@@ -30,6 +30,7 @@ export default class MusicPlayer {
 
   private bpm: number = DEFAULT_BPM;
   private key: Key = DEFAULT_KEY;
+  private updateLoadProgress: ((value: number) => void) | undefined;
 
   constructor(
     bpm: number = DEFAULT_BPM,
@@ -55,7 +56,8 @@ export default class MusicPlayer {
   }
 
   setUpdateLoadProgress(updateLoadProgress: (value: number) => void) {
-    this.samplePlayer.setUpdateLoadProgress(updateLoadProgress);
+    this.updateLoadProgress = updateLoadProgress;
+    // this.samplePlayer.setUpdateLoadProgress(updateLoadProgress);
   }
 
   /**
@@ -85,14 +87,16 @@ export default class MusicPlayer {
     const sampleIds = Array.from(
       new Set(
         events
-          .map(event => this.convertEventToSamples(event))
-          .flat()
-          .map(sampleEvent => sampleEvent.sampleId)
+          .filter(event => event.type === 'sound')
+          .map(event => (this.convertEventToSound(event) as Sound).sampleId)
       )
     );
 
     // this.samplePlayer.loadSounds(sampleIds, onLoadFinished);
-    return this.tonePlayer.loadSounds(sampleIds);
+    return this.tonePlayer.loadSounds(sampleIds, {
+      updateLoadProgress: this.updateLoadProgress,
+      onLoadFinished,
+    });
   }
 
   /**
@@ -142,6 +146,7 @@ export default class MusicPlayer {
     this.previewChord(singleNoteEvent, onStop);
   }
 
+  // TODO: Remove onStop in favor of sourcing time from player
   previewPattern(patternValue: PatternEventValue, onStop?: () => void) {
     const patternEvent: PatternEvent = {
       type: 'pattern',
@@ -152,11 +157,13 @@ export default class MusicPlayer {
       id: 'preview',
       blockId: 'preview',
     };
+    const sequence = this.convertEventToSound(patternEvent);
+    this.tonePlayer.playSequenceImmediately(sequence as SamplerSequence);
 
-    this.samplePlayer.previewSamples(
-      this.convertEventToSamples(patternEvent),
-      onStop
-    );
+    // this.samplePlayer.previewSamples(
+    //   this.convertEventToSamples(patternEvent),
+    //   onStop
+    // );
   }
 
   /**
@@ -309,6 +316,34 @@ export default class MusicPlayer {
             chordEvent.when + (tick - 1) / 16
           ),
         })),
+      };
+    }
+
+    if (event.type === 'pattern') {
+      const patternEvent = event as PatternEvent;
+
+      const kit = patternEvent.value.kit;
+      const folder = library.getFolderForPath(kit);
+      if (folder === null) {
+        this.metricsReporter.logWarning(`No instrument ${kit}`);
+        return null;
+      }
+
+      // TODO: Store note index instead of src for easier lookup
+      return {
+        instrument: kit,
+        events: patternEvent.value.events.map(event => {
+          return {
+            notes: [
+              getFullNoteName(
+                folder.sounds.findIndex(sound => sound.src === event.src)
+              ),
+            ],
+            transportTime: this.playbackTimeToTransportTime(
+              patternEvent.when + (event.tick - 1) / 16
+            ),
+          };
+        }),
       };
     }
 
@@ -525,30 +560,27 @@ export default class MusicPlayer {
     return key;
   }
 
-  setupInstruments() {
+  setupInstruments(onLoadFinished?: LoadFinishedCallback) {
     const library = MusicLibrary.getInstance();
     if (library === undefined) {
       console.warn('no library');
       return;
     }
 
-    const instruments = library.groups[0].folders.filter(
-      folder => folder.type === 'instrument'
+    const samplerFolders = library.groups[0].folders.filter(
+      folder => folder.type === 'instrument' || folder.type === 'kit'
     );
 
-    instruments.forEach(instrument => {
-      // this.samplePlayer.setupInstrument(
-      //   instrument.path,
-      //   instrument.sounds.map(sound => `${instrument.path}/${sound.src}`),
-      //   instrument.sounds[0].note || 48
-      // );
-
-      const sampleMap = instrument.sounds.reduce((map, sound) => {
-        map[sound.note || 48] = `${instrument.path}/${sound.src}`;
+    samplerFolders.forEach(folder => {
+      const sampleMap = folder.sounds.reduce((map, sound, index) => {
+        map[sound.note || index] = `${folder.path}/${sound.src}`;
         return map;
       }, {} as {[note: number]: string});
 
-      this.tonePlayer.loadInstrument(instrument.path, sampleMap);
+      this.tonePlayer.loadInstrument(folder.path, sampleMap, {
+        updateLoadProgress: this.updateLoadProgress,
+        onLoadFinished,
+      });
     });
   }
 }
