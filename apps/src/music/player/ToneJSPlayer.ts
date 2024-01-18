@@ -1,3 +1,4 @@
+import {LoadFinishedCallback, SoundLoadCallbacks} from '../types';
 import SoundCache from './SoundCache';
 
 const DEFAULT_BPM = 120;
@@ -33,16 +34,17 @@ class ToneJSPlayer {
     return Tone.Transport.position;
   }
 
-  async loadSounds(sampleIds: string[]) {
-    return this.soundCache.loadSounds(sampleIds);
+  async loadSounds(sampleIds: string[], callbacks?: SoundLoadCallbacks) {
+    return this.soundCache.loadSounds(sampleIds, callbacks);
   }
 
   async loadInstrument(
     instrumentName: string,
-    sampleMap: {[note: number]: string}
+    sampleMap: {[note: number]: string},
+    callbacks?: SoundLoadCallbacks
   ) {
     const urls: {[note: number]: AudioBuffer} = {};
-    await this.soundCache.loadSounds(Object.values(sampleMap));
+    await this.soundCache.loadSounds(Object.values(sampleMap), callbacks);
     Object.keys(sampleMap).forEach(note => {
       const buffer = this.soundCache.getSound(sampleMap[parseInt(note)]);
       if (buffer) {

@@ -3,7 +3,7 @@ import {baseAssetUrl} from '../constants';
 import MusicLibrary from './MusicLibrary';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
-import {LoadFinishedCallback} from '../types';
+import {LoadFinishedCallback, SoundLoadCallbacks} from '../types';
 
 const restrictedSoundUrlPath = '/restricted/musiclab/';
 
@@ -36,10 +36,7 @@ class SoundCache {
    */
   async loadSounds(
     paths: string[],
-    callbacks: {
-      onLoadFinished?: LoadFinishedCallback;
-      updateLoadProgress?: (progress: number) => void;
-    } = {}
+    callbacks: SoundLoadCallbacks = {}
   ): Promise<void> {
     const failedSounds = [];
     const {onLoadFinished, updateLoadProgress} = callbacks;

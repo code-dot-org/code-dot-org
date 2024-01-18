@@ -291,7 +291,13 @@ class UnconnectedMusicView extends React.Component {
       this.library.getBPM(),
       this.library.getKey()
     );
-    this.player.setupInstruments();
+    // TODO: Figure out metrics. Do we want to pre-load all instruments right away, or as
+    // they're opened in the workspace?
+    this.player.setupInstruments((loadTimeMs, soundsLoaded) => {
+      console.log(
+        `Loaded instrument in ${loadTimeMs}ms. ${soundsLoaded} sounds`
+      );
+    });
 
     this.setState({
       currentLibraryName: libraryName,
