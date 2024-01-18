@@ -27,23 +27,23 @@ module I18n
         UnpluggedContent.sync_in
       end
 
-      def self.sync_up
-        BaseContent.sync_up
-        Blocks.sync_up
-        CourseContent.sync_up
-        CourseOfferings.sync_up
-        Courses.sync_up
-        CurriculumContent.sync_up
-        DataContent.sync_up
-        DeviseContent.sync_up
-        Docs.sync_up
-        MarketingAnnouncements.sync_up
-        RestrictedContent.sync_up
-        Scripts.sync_up
-        SharedFunctions.sync_up
-        Slides.sync_up
-        Standards.sync_up
-        UnpluggedContent.sync_up
+      def self.sync_up(**opts)
+        BaseContent.sync_up(**opts)
+        Blocks.sync_up(**opts)
+        CourseContent.sync_up(**opts)
+        CourseOfferings.sync_up(**opts)
+        Courses.sync_up(**opts)
+        CurriculumContent.sync_up(**opts)
+        DataContent.sync_up(**opts)
+        DeviseContent.sync_up(**opts)
+        Docs.sync_up(**opts)
+        MarketingAnnouncements.sync_up(**opts)
+        RestrictedContent.sync_up(**opts)
+        Scripts.sync_up(**opts)
+        SharedFunctions.sync_up(**opts)
+        Slides.sync_up(**opts)
+        Standards.sync_up(**opts)
+        UnpluggedContent.sync_up(**opts)
       end
 
       def self.sync_out
