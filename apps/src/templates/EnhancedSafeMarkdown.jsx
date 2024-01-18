@@ -48,6 +48,12 @@ export const ExpandableImagesWrapper = connect(null, dispatch => ({
   },
 }))(UnconnectedExpandableImagesWrapper);
 
+// A callout can be added via markdown instructions like this:
+//   [play](#showcallout=play-sound-block)
+//
+// This code will replace any link that has #showcallout=[id]
+// with bold clickable text that, when clicked, will call the
+// provided showCallout function with the ID.
 export class ShowCalloutsWrapper extends React.Component {
   static propTypes = {
     showCallout: PropTypes.func.isRequired,
@@ -75,14 +81,17 @@ export class ShowCalloutsWrapper extends React.Component {
 
   renderShowCallouts(node) {
     const showCallouts = node.querySelectorAll('a[href]');
-    for (let i = 0; i < showCallouts.length; i++) {
-      const showCallout = showCallouts[i];
-      const id = showCallout.href.split('=').pop();
-      const textContent = showCallout.childNodes[0].textContent;
-      var newNode = document.createElement('span');
-      newNode.innerHTML = `<b style="cursor: pointer">${textContent}</b>`;
-      newNode.onclick = () => this.props.showCallout(id);
-      showCallout.replaceWith(newNode);
+    for (const showCallout of showCallouts) {
+      const regexp = /#showcallout=(.*)/;
+      const matches = showCallout.href.match(regexp);
+      if (matches?.length === 2) {
+        const calloutId = matches[1];
+        const textContent = showCallout.childNodes[0].textContent;
+        var newNode = document.createElement('span');
+        newNode.innerHTML = `<b style="cursor: pointer">${textContent}</b>`;
+        newNode.onclick = () => this.props.showCallout(calloutId);
+        showCallout.replaceWith(newNode);
+      }
     }
   }
 
