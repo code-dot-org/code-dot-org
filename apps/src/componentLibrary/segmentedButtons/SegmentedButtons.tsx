@@ -14,7 +14,12 @@ export interface SegmentedButtonsProps {
   buttons: SegmentedButtonModel[];
   /** Segmented Buttons Size*/
   size?: ComponentSizeXSToL;
-  /** Segmented Buttons Type (visual)*/
+  /** Segmented Buttons Type (visual)
+   * Please note (!) 'buttonType' affects which icons(props) can be rendered.
+   * 'withLabel' - we can render 'iconLeft' and/or 'iconRight' only (both of them are optional)
+   * 'iconOnly' - we have to render 'icon'.
+   * 'number' - we can not render any icons at all.
+   * */
   type?: SegmentButtonType;
   /** Segmented Buttons selected button unique value */
   selectedButtonValue: string;

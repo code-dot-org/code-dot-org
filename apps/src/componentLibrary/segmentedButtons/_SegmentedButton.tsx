@@ -16,7 +16,12 @@ export interface SegmentedButtonModel {
   selected?: boolean;
   /** Button unique value. Used for selected/not selected logic */
   value: string;
-  /** Segmented Button Type */
+  /** Segmented Button Type
+   * Please note (!) 'buttonType' affects which icons(props) can be rendered.
+   * 'withLabel' - we can render 'iconLeft' and/or 'iconRight' only (both of them are optional)
+   * 'iconOnly' - we have to render 'icon'.
+   * 'number' - we can not render any icons at all.
+   * */
   buttonType?: SegmentButtonType;
   /** Icon left from label*/
   iconLeft?: FontAwesomeV6IconProps;
@@ -62,7 +67,7 @@ const SegmentedButton: React.FunctionComponent<SegmentedButtonProps> = ({
           title={icon.title}
         />
       )}
-      {iconLeft && (
+      {buttonType === 'withLabel' && iconLeft && (
         <FontAwesomeV6Icon
           iconName={iconLeft.iconName}
           iconStyle={iconLeft.iconStyle}
@@ -70,7 +75,7 @@ const SegmentedButton: React.FunctionComponent<SegmentedButtonProps> = ({
         />
       )}
       {label && <span>{label}</span>}
-      {iconRight && (
+      {buttonType === 'withLabel' && iconRight && (
         <FontAwesomeV6Icon
           iconName={iconRight.iconName}
           iconStyle={iconRight.iconStyle}
