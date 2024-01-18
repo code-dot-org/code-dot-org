@@ -13,10 +13,11 @@ const swiperParams = {
   pagination: {
     clickable: true,
   },
+  spaceBetween: 24,
   // Responsive breakpoints
   breakpoints: {
-    // when window width is >= 1024px
-    1024: {
+    // when window width is >= 640px
+    640: {
       autoHeight: false,
     },
   },
