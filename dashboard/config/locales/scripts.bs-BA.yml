@@ -58,6 +58,7 @@ bs:
           description: Pokušajte osnove informatike s likovima iz Angry Birds i Plants
             vs. Zombies!
           description_short: Pokušaj osnove računarstva sa mnogim zabavnim karakterima!
+          name: Sat Kodiranja
           student_description: Pokušajte osnove informatike s likovima iz Angry Birds
             i Plants vs. Zombies!
           title: Sat Kodiranja 2013
@@ -787,6 +788,10 @@ bs:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Jedinica 2: internet'
+        csp2-2024:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Jedinica 2: internet'
         csp2-dlp:
           lesson_groups:
             required:
@@ -853,6 +858,14 @@ bs:
             csp_variables:
               display_name: Varijable
         csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+            csp_variables:
+              display_name: Varijable
+        csp4-2024:
           lesson_groups:
             csp_conditionals:
               display_name: Uvjeti
@@ -951,6 +964,12 @@ bs:
             csp_unit6_2020:
               display_name: Algoritmi
         csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Liste
+            lessonGroup-3:
+              display_name: Petlje
+        csp6-2024:
           lesson_groups:
             csp_unit6_2020:
               display_name: Liste

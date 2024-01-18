@@ -1111,7 +1111,7 @@ th:
   try_k8intro: ทดลอง K-8 ของพวกเราเพื่อเริ่มต้นศึกษาคอมพิวเตอร์  (15-25 ชั่วโมง)
   try_reloading: ลองโหลดหน้าใหม่อีกครั้ง
   unit_prefix: ยูนิต %{n}
-  unplugged_activity: กิจกรรมถอดปลั๊ก
+  unplugged_activity: กิจกรรมแบบออฟไลน์
   unsubmit: ไม่ส่งคำตอบ
   upsell:
     20-hour:

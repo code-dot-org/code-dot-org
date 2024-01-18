@@ -895,6 +895,11 @@ bs:
             '"confetti"': Konfeti
             '"hearts"': srca
             '"rain"': kiša
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': plava
+            '"red"': crvena
       Mikelab_changePropBy:
         options:
           PROPERTY:

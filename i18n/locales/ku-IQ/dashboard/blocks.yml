@@ -861,6 +861,11 @@ ku:
           EFFECT:
             '"bubbles"': بڵق
             '"confetti"': بڕشتی کاغەز
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': شین
+            '"red"': سور
       gamelab_addBehaviorSimple:
         text: سپڕایت {SPRITE} دەستپێدەکات {BEHAVIOR}
       gamelab_allSpritesWithAnimation:

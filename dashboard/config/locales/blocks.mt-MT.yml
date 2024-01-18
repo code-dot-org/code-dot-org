@@ -32,6 +32,11 @@ mt:
         options:
           KEY:
             '"enter"': daħħal
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': Ikħal
+            '"red"': aħmar
       Mikelab_randomColor:
         text: kulur bl-addoċċ
       aalab_layoutSprites:
