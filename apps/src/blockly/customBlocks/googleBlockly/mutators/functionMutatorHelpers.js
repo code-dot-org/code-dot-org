@@ -9,7 +9,7 @@ export function setBlockDescription(block, description) {
     block
       .appendEndRowInput('DESCRIPTION_ROW')
       .appendField(`${msg.description()} `, 'DESCRIPTION_LABEL')
-      .appendField(new Blockly.FieldMultilineInput(description), 'DESCRIPTION');
+      .appendField(new Blockly.FieldTextInput(description), 'DESCRIPTION');
     const inputToPrecede = block.getInput('flyout_input')
       ? 'flyout_input'
       : 'STACK';
