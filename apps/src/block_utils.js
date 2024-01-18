@@ -167,7 +167,7 @@ exports.generateSimpleBlock = function (blockly, generator, options) {
     init: function () {
       // Note: has a fixed HSV.  Could make this customizable if need be
       Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-      var input = this.appendDummyInput();
+      var input = this.appendEndRowInput();
       if (title) {
         input.appendField(title);
       }
@@ -453,7 +453,12 @@ exports.appendNewFunctions = function (blocksXml, functionsXml) {
     ).stringValue;
     const alreadyPresent =
       startBlocksDocument.evaluate(
-        `//block[@type="${type}"]/field[@id="${name}"]`,
+        // Ignore namespaces. Find blocks of type e.g. behavior_definition
+        // Shared behavior name will either be in the mutation (Google Blockly)
+        // or the name field (CDO Blockly)
+        `//*[local-name()="block" and @type="${type}"]/*` +
+          `[self::*[local-name()="mutation" and @behaviorId="${name}"] or ` +
+          `self::*[local-name()="field" and @id="${name}"]]`,
         startBlocksDom,
         null,
         XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
@@ -717,7 +722,7 @@ const STANDARD_INPUT_TYPES = {
   },
   [DUMMY_INPUT]: {
     addInputRow(blockly, block, inputConfig) {
-      return block.appendDummyInput();
+      return block.appendEndRowInput();
     },
     generateCode(block, inputConfig) {
       return null;

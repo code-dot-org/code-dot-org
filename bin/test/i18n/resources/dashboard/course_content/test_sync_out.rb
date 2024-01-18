@@ -26,6 +26,7 @@ describe I18n::Resources::Dashboard::CourseContent::SyncOut do
     let(:language) {{crowdin_name_s: 'expected Crowdin locale'}}
 
     before do
+      I18n::Metrics.stubs(:report_runtime).yields(nil)
       I18n::Resources::Dashboard::CourseContent::SyncOut.any_instance.stubs(:languages).returns([language])
     end
 
