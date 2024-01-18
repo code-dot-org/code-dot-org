@@ -1561,6 +1561,32 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     refute workshop.require_application?
   end
 
+  test 'send_automated_emails sends pre-workshop 10 days before' do
+    workshop = create :csf_intro_workshop, sessions_from: Time.zone.today + 10.days
+
+    facilitator = create(:facilitator)
+    workshop.facilitators = [facilitator]
+    workshop.save!
+
+    Pd::WorkshopMailer.any_instance.expects(:facilitator_pre_workshop).
+      with(facilitator, workshop)
+    Pd::WorkshopMailer.any_instance.expects(:facilitator_post_workshop).
+      never
+
+    Pd::Workshop.send_automated_emails
+  end
+
+  test 'send_automated_emails sends post-workshop 30 days after' do
+    workshop = create :csf_intro_workshop, sessions_from: Time.zone.today - 30.days, enrolled_and_attending_users: 1
+
+    Pd::WorkshopMailer.any_instance.expects(:facilitator_pre_workshop).
+      never
+    Pd::WorkshopMailer.any_instance.expects(:teacher_follow_up).
+      with(workshop.enrollments.first)
+
+    Pd::Workshop.send_automated_emails
+  end
+
   private
 
   def session_on_day(day_offset)
