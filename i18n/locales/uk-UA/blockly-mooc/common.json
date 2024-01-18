@@ -1397,6 +1397,7 @@
   "loginInfo_signinStep4_secretPicture": "Вибирайте їх секретну картинку.",
   "loginInfo_signinStep4_secretWords": "Наберіть їх таємні слова.",
   "loginInfo_signinStep5": "Натисніть кнопку «Увійти».",
+  "loginInfoLtiSetupHeader": "Налаштуйте свій клас",
   "loginType": "Тип логіну",
   "loginTypeClever": "Розумний",
   "loginTypeCleverButton": "Використовуйте Розумний",

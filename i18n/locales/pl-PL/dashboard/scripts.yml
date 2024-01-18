@@ -113,6 +113,7 @@ pl:
           description: Poznaj podstawy informatyki z postaciami z Angry Birds i Plants vs Zombies!
           description_short: Poznaj podstawy informatyki z wieloma zabawnymi postaciami!
           student_description: Poznaj podstawy informatyki z postaciami z Angry Birds i Plants vs Zombies!
+          name: Godzina Kodowania
         text-compression:
           title: Kompresja tekstu
         ECSPD:
@@ -5648,6 +5649,8 @@ pl:
               name: NOWOŚĆ- Maszyny funkcyjne
             lesson-6:
               name: Test ekosystemów
+            lesson-7:
+              name: Dopasowywanie poziomów
           name: emmas-playground
         amys-playground:
           lessons:
@@ -7978,6 +7981,13 @@ pl:
               name: Zachowanie
             lesson-5:
               name: Następne Kroki
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pierwsze kroki
+            lessonGroup-3:
+              display_name: Kreatywne koncepcje informatyki
+            lessonGroup-4:
+              display_name: Podejmowanie kolejnych kroków
           name: self-paced-pl-k5-2024-2
           title: Kreatywność z kodem
           description: "\\*\\*Wykonaj: \\*\\*\n\n-   Zidentyfikuj i wyjaśnij podstawowe pojęcia informatyczne, w tym duszki, zdarzenia i zachowania. \n\n-   Zademonstruj zastosowanie programowania opartego na zdarzeniach.\n\n-   Utwórz program za pomocą duszków, zdarzeń i zachowań.\n\n\\*\\*Sugerowany czas: \\*\\* 60 minut"
@@ -7996,5 +8006,193 @@ pl:
               name: Zbierając to wszystko razem...
             lesson-6:
               name: Następne Kroki
+            lesson-7:
+              name: Kodowanie oparte na blokach
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pierwsze kroki
+            lessonGroup-3:
+              display_name: Podstawowe koncepcje informatyki
+            lessonGroup-4:
+              display_name: Podejmowanie kolejnych kroków
           name: self-paced-pl-k5-2024-1
           title: Wprowadzenie do informatyki
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Ankieta
+            csp_unit1_2020:
+              display_name: 'Jednostka 1: Informacje cyfrowe'
+        csp2-2024:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Jednostka 2: Internet'
+          title: Internet ('21-'22)
+        csp3-2024:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: Jednostka 3 - Wprowadzenie do projektowania aplikacji
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ankieta
+            lessonGroup-3:
+              display_name: Treści
+            lessonGroup-4:
+              display_name: Pokaż, co wiesz
+            lessonGroup-6:
+              display_name: Koniec ankiety jednostki
+            lessonGroup-5:
+              display_name: Lekcje alternatywne
+          title: Programowanie obiektowe
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-5:
+              display_name: Koniec ankiety jednostki
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
+          title: Struktura klas i Projekt
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-5:
+              display_name: Koniec ankiety jednostki
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
+          title: Tablice i Algorytmy
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-5:
+              display_name: Koniec ankiety jednostki
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
+          title: Warunki i Logika
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-5:
+              display_name: Koniec ankiety jednostki
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
+          title: Tablice dwuwymiarowe
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-5:
+              display_name: Koniec ankiety jednostki
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
+          title: Listy tablic i Metody łańcuchów
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Koniec ankiety jednostki
+            lessonGroup-5:
+              display_name: Lekcje alternatywne
+          title: Metoda dokompozycji i Rekurencja
+        csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Ankieta
+            lessonGroup-5:
+              display_name: Lekcje alternatywne
+          title: Wyszukiwanie i porządkowanie
+        csa9-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Przegląd i praktyka
+            lessonGroup-3:
+              display_name: Egzaminy próbne
+          description: Ta jednostka przygotowuje uczniów do egzaminu AP CSA poprzez przegląd kluczowych pojęć, ćwiczenie pytań wielokrotnego wyboru i pytań z odpowiedziami swobodnymi oraz wzmacnianie strategii pisania testu. Uczniowie identyfikują mocne strony i obszary poprawy, aby tworzyć zindywidualizowane plany studiów, aby skoncentrować ich praktykę i samodzielnie ocenić swoje postępy.
+          student_description: Ta jednostka przygotowuje Ciebie do egzaminu AP CSA poprzez przegląd kluczowych pojęć, ćwiczenie pytań wielokrotnego wyboru i pytań z odpowiedziami swobodnymi oraz wzmacnianie strategii pisania testu. Identyfikujesz mocne strony i obszary poprawy, aby tworzyć zindywidualizowane plany studiów, aby skoncentrować ich praktykę i samodzielnie ocenić swoje postępy.
+          description_short: Uczniowie przygotowują się do egzaminu AP CSA, ćwicząc odpowiedzi na pytania wielokrotnego wyboru i pytania otwarte.
+        csa-postap-se-and-computer-vision-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: GitHub i Copilot'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Wizja komputerowa'
+          title: Inżynieria oprogramowania i wizja komputerowa
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: Zmienne
+            csp_conditionals:
+              display_name: Zdania z warunkami
+            csp_functions:
+              display_name: Funkcje
+            csp_project:
+              display_name: Projekt
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Dane
+            lessonGroup-5:
+              display_name: Ankieta po odbyciu kursu
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listy
+            lessonGroup-3:
+              display_name: Pętle
+            lessonGroup-4:
+              display_name: Przejścia
+            lessonGroup-5:
+              display_name: Projekt
+            lessonGroup-2:
+              display_name: Ankieta po odbyciu kursu
+        csp7-2024:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parametry i wartości zwracane
+            csp_libraries:
+              display_name: Biblioteki
+            lessonGroup-3:
+              display_name: Ankieta po odbyciu kursu
+        csp8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Twórz PT
+            lessonGroup-3:
+              display_name: Ankieta po odbyciu kursu
+        csp9-2024:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Jednostka 9: Dane'
+            lessonGroup-2:
+              display_name: Ankieta po odbyciu kursu
+        csp10-2024:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Jednostka 10: Cyberbezpieczeństwo i globalne oddziaływanie'
+            lessonGroup-2:
+              display_name: Ankieta po odbyciu kursu
+        csp-post-survey-2024:
+          title: Zasady informatyki Ankieta po kursie
+          description: Ta jednostka zawiera ankietę po kursie Zasady Informatyki
+          student_description: Ta jednostka zawiera ankietę dotyczącą kursu Zasady Informatyki. Twój nauczyciel poinformuje Cię, kiedy masz wypełnić tę ankietę.

@@ -1063,6 +1063,14 @@ ro:
         options:
           INPUT1:
             '1': suc de lămâie
+      DansBlocks_testShowVariable:
+        options:
+          OPT:
+            '"large"': mare
+            '"small"': mic
+          COLOR:
+            '"blue"': albastru
+            '"red"': roşu
       FunctionBlocks_communicate:
         text: Comunică {VAR1} cu {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:

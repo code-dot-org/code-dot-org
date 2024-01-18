@@ -125,6 +125,7 @@ ca:
           description: Proveu els conceptes bàsics de la informàtica amb personatges d'Angry Birds i Plantes vs Zombies!
           description_short: Prova els conceptes bàsics de la informàtica amb personatges divertits!
           student_description: Proveu els conceptes bàsics de la informàtica amb personatges d'Angry Birds i Plantes vs Zombies!
+          name: L'hora del codi
         CodeStudioPuzzleChallenge:
           title: Code Studio Trencaclosques Desafiament
           description: Proveu aquests divertits puzles de codificació. Fes tot el possible!
@@ -8350,6 +8351,9 @@ ca:
               name: Comportaments
             lesson-5:
               name: Propers passos
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Primers passos
         self-paced-pl-k5-2024-1:
           lessons:
             lesson-1:
@@ -8362,4 +8366,227 @@ ca:
               name: Posant-ho tot junt
             lesson-6:
               name: Propers passos
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Primers passos
           title: Introducció a la informàtica
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Enquesta
+            csp_unit1_2020:
+              display_name: 'Tema 1: Informació digital'
+          title: Informació Digital ('23-'24)
+          student_description: Aquesta unitat explora els reptes i preguntes tècniques que sorgeixen de la necessitat de representar la informació digital en els ordinadors. Obteniu informació complexa com els números, el text, les imatges i el so en el text, com funciona la compressió i els impactes socials més amplis de la digitalització de la informació del món.
+          description_short: Explora els reptes i impactes de representar informació sobre el món que t'envolta en bits.
+        csp2-2024:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Tema 2: Internet'
+          title: Internet ('23-'24)
+          student_description: Aquesta unitat revela com Internet va ser dissenyat per connectar milers de milions de dispositius i persones entre si. Apreneu com funcionen els diferents protocols d'Internet i construïu-los vosaltres mateixos mitjançant Internet Simulator. A continuació, considereu els impactes que Internet ha tingut, tant bons com dolents, en la vida moderna.
+          description_short: Construir Internet des de la base utilitzant el Simulador d'Internet.
+        csp3-2024:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Unitat 3: Introducció al disseny d''aplicacions'
+          title: Introducció al disseny d'aplicacions ('23-'24)
+          student_description: Aquesta unitat és una introducció a la programació i al disseny d'aplicacions amb un gran enfocament en habilitats importants com la depuració, la programació de parells i les proves d'usuaris. Apreneu a dissenyar interfícies d'usuari i escriure programes impulsats per esdeveniments en App Lab i després dissenyeu un projecte que ensenyi als vostres companys de classe sobre un tema que trieu.
+          description_short: Dissenya la teva primera app i aprèn com els programadors col·laboren i interactuen amb els usuaris per construir les millors solucions possibles als problemes.
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Enquesta
+            lessonGroup-3:
+              display_name: Contingut
+            lessonGroup-4:
+              display_name: Mostra el que saps
+            lessonGroup-6:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-5:
+              display_name: Lliçons alternatives
+            lessonGroup-7:
+              display_name: Caixes de sorra
+          title: Programació Orientada a Objectes
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-5:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-4:
+              display_name: Lliçons alternatives
+            lessonGroup-6:
+              display_name: Caixes de sorra
+          title: Estructura i disseny de classes
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-5:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-4:
+              display_name: Lliçons alternatives
+            lessonGroup-6:
+              display_name: Caixes de sorra
+          title: Matrius i algoritmes
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-5:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-4:
+              display_name: Lliçons alternatives
+            lessonGroup-6:
+              display_name: Caixes de sorra
+          title: Condicions i lògica
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-5:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-4:
+              display_name: Lliçons alternatives
+            lessonGroup-6:
+              display_name: Caixes de sorra
+          title: Matrius bidimensionals
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-5:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-4:
+              display_name: Lliçons alternatives
+            lessonGroup-6:
+              display_name: Caixes de sorra
+          title: ArrayLists i Mètodes de cadena
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-4:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-5:
+              display_name: Lliçons alternatives
+            lessonGroup-6:
+              display_name: Caixes de sorra
+          title: Mètode de descomposició i recursivitat
+        csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-4:
+              display_name: Enquesta
+            lessonGroup-5:
+              display_name: Lliçons alternatives
+            lessonGroup-6:
+              display_name: Caixes de sorra
+          title: Cercar i ordenar
+        csa9-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Revisió i pràctica
+            lessonGroup-3:
+              display_name: Exàmens simulacre
+            lessonGroup-4:
+              display_name: Caixes de sorra
+          description: Aquesta unitat prepara els estudiants per a l'examen d'AP CSA mitjançant la revisió dels conceptes clau, la pràctica de preguntes d'elecció múltiple i de resposta lliure, i l'enfortiment de les estratègies de presa de proves. Els estudiants identifiquen fortaleses i àrees de millora per crear plans d'estudi individualitzats per centrar la seva pràctica i autoavaluar el seu progrés.
+          student_description: Aquesta unitat us prepara per a l'examen AP CSA mitjançant la revisió dels conceptes clau, la pràctica de preguntes d'elecció múltiple i de resposta lliure, i l'enfortiment de les estratègies de presa de proves. Identifiques fortaleses i àrees de millora per crear plans d'estudi individualitzats per enfocar la pràctica i autoavaluar el teu progrés.
+          description_short: Els estudiants es preparen per l'examen AP CSA mitjançant la pràctica d'estratègies per a les preguntes d'elecció múltiple i de resposta lliure.
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionals
+            csp_functions:
+              display_name: Funcions
+            csp_project:
+              display_name: Projecte
+          title: Variables, condicionals i funcions ('23-'24)
+          student_description: Aquesta unitat explora com variables, condicionals i funcions permeten dissenyar aplicacions cada vegada més complexes. Aprèn a programar amb aquests tres nous conceptes a través d'una seqüència d'activitats col·laboratives. A continuació, creeu la vostra pròpia aplicació de presa de decisions per compartir-la amb els amics i ajudar-los a prendre una decisió.
+          description_short: Apreneu a construir aplicacions que emmagatzemin informació, prenguin decisions i mantinguin el codi organitzat.
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Dades
+            lessonGroup-5:
+              display_name: Enquesta post-curs
+          title: Dades ('23-'24)
+          student_description: 'En aquesta unitat aprendre com l''anàlisi de dades ajuda a convertir les dades en brut en informació útil sobre el món. Aprendre a utilitzar la visualització de dades per trobar patrons dins dels conjunts de dades i aprendre com aquest procés d''anàlisi de dades s''està utilitzant en contextos com les dades obertes o l''aprenentatge automàtic per ajudar a prendre decisions o aprendre més sobre el nostre món. En el projecte de la unitat, analitzareu un conjunt de dades de la vostra elecció i presentareu les vostres troballes. '
+          description_short: Exploreu i visualitzeu conjunts de dades d'una àmplia varietat de temes mentre cerqueu patrons i intenteu aprendre més sobre el món que us envolta.
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Llistes
+            lessonGroup-3:
+              display_name: Bucles
+            lessonGroup-4:
+              display_name: Travesses
+            lessonGroup-5:
+              display_name: Projecte
+            lessonGroup-2:
+              display_name: Enquesta post-curs
+          title: Llistes, bucles i travesses ('23-'24)
+          student_description: Aquesta unitat introdueix llistes, bucles i traversals, i explora la forma en què es poden utilitzar per construir aplicacions que emmagatzemen i processen grans quantitats d'informació. Aprendre a programar amb la biblioteca de dades en App Lab i completar un projecte hackathon de 5 dies al final de la unitat on es pot dissenyar un programa sobre qualsevol tema de la seva elecció.
+          description_short: Apreneu a construir aplicacions que utilitzen llistes, bucles i traversals per emmagatzemar i processar grans quantitats d'informació.
+        csp7-2024:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Paràmetres i valors de retorn
+            csp_libraries:
+              display_name: Biblioteques
+            lessonGroup-3:
+              display_name: Enquesta post-curs
+          title: Paràmetres, Retorn i Biblioteques ('23-'24)
+          student_description: Aquesta unitat introdueix paràmetres, retorn i biblioteques. Apreneu a utilitzar aquests conceptes per construir nous tipus d'aplicacions, així com biblioteques de codi que podeu compartir amb els vostres companys de classe. Acabeu la unitat dissenyant una biblioteca de funcions al voltant de qualsevol tema de la vostra elecció.
+          description_short: Aprèn a dissenyar un codi net i reutilitzable que pots compartir amb un sol company de classe o tot el món.
+        csp8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Tema 8: Ciberseguretat i Impactes Globals'
+            lessonGroup-3:
+              display_name: Enquesta post-curs
+          title: Ciberseguretat i Impactes Globals ('23-'24)
+          student_description: En aquesta unitat aprendrem com les innovacions informàtiques han impactat en el nostre món de maneres beneficioses i nocives. Obteniu informació sobre com les dades poden representar una amenaça per a la nostra privadesa i seguretat i les formes en què s'utilitzen el xifrat i altres tècniques per protegir-les. Al llarg de la unitat participa en una conferència “escola del futur” en la qual vostè i un equip fan una proposta de la millor manera de millorar la vida escolar amb innovacions informàtiques.
+          description_short: 'Recerca i debat sobre l''actualitat en la intersecció de dades, polítiques públiques, dret, ètica i impacte social. '
+        csp9-2024:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Unitat 9: Crear PT'
+            lessonGroup-2:
+              display_name: Enquesta post-curs
+          title: Crear PT Prep ('23-'24)
+          description: En aquesta unitat preparar-se per, i fer l'AP Crear tasca de rendiment. Cada lliçó conté enllaços a documents útils i activitats per ajudar-vos a comprendre la tasca i desenvolupar un pla per completar-la.
+          student_description: En aquesta unitat preparar-se per, i fer l'AP Crear tasca de rendiment. Cada lliçó conté enllaços a documents útils i activitats per ajudar-vos a comprendre la tasca i desenvolupar un pla per completar-la.
+          description_short: Practiqueu i completeu la tasca de creació de rendiment (PT).
+        csp10-2024:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Unitat 10: Algortihms'
+            lessonGroup-2:
+              display_name: Enquesta post-curs
+          title: Algorismes ('23-'24)
+          student_description: Aquesta unitat és una exploració ràpida de com els informàtics dissenyen algoritmes per resoldre problemes i com analitzen la velocitat dels diferents algoritmes. Aprendre sobre el concepte d'eficiència algorítmica a través d'una varietat d'activitats pràctiques i aprendre com s'està aplicant en la informàtica moderna.
+          description_short: Dissenyar i analitzar algoritmes per entendre com funcionen i per què alguns es consideren millors que altres.
+        csp-post-survey-2024:
+          title: CS Principis Enquesta post-curs
+          description: Aquesta unitat conté el CS Principis Post-Curs Enquesta.
+          student_description: Aquesta unitat conté una enquesta sobre el Curs de Principis CS. El vostre professor us indicarà quan és el moment de fer aquesta enquesta.

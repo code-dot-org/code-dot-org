@@ -1062,6 +1062,14 @@ ms:
         options:
           INPUT1:
             '1': jus lemon
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': biru
+            '"red"': merah
+          OPT:
+            '"large"': besar
+            '"small"': kecil
       FunctionBlocks_communicate:
         text: Berkomunikasi {VAR1} dengan {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:

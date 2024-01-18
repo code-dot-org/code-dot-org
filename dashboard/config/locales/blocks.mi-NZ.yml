@@ -1024,6 +1024,11 @@ mi:
             '"hearts"': ngā manawa
             '"rain"': ua
             '"starburst"': Pāpahu Whetū
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': kahurangi
+            '"red"': whero
       Mikelab_addBehaviorSimple:
         text: parehe {SPRITE} ka {BEHAVIOR}
       Mikelab_allSpritesWithAnimation:

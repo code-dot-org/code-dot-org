@@ -15,13 +15,13 @@ import {
   appendProceduresToState,
   convertFunctionsXmlToJson,
   convertXmlToJson,
-  getCombinedSerialization,
+  getProjectSerialization,
   hasBlocks,
   positionBlocksOnWorkspace,
-  resetEditorWorkspaceBlockConfig,
 } from './cdoSerializationHelpers';
 import {parseElement as parseXmlElement} from '../../xml';
 import * as blockUtils from '../../block_utils';
+import {getProjectXml} from '@cdo/apps/blockly/addons/cdoXml';
 
 /**
  * Loads blocks to a workspace.
@@ -276,29 +276,10 @@ export function getUserTheme(themeOption) {
  */
 export function getCode(workspace, getSourceAsJson) {
   if (!getSourceAsJson) {
-    return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
+    return Blockly.Xml.domToText(getProjectXml(workspace));
+  } else {
+    return JSON.stringify(getProjectSerialization(workspace));
   }
-
-  const mainWorkspaceSerialization =
-    Blockly.serialization.workspaces.save(workspace);
-
-  const hiddenDefinitionWorkspace = Blockly.getHiddenDefinitionWorkspace();
-  const hiddenWorkspaceSerialization = hiddenDefinitionWorkspace
-    ? Blockly.serialization.workspaces.save(hiddenDefinitionWorkspace)
-    : null;
-
-  // Blocks rendered in the hidden workspace get extra properties that need to be
-  // removed so they don't apply if the block moves to the main workspace on subsequent loads
-  if (hasBlocks(hiddenWorkspaceSerialization)) {
-    resetEditorWorkspaceBlockConfig(hiddenWorkspaceSerialization.blocks.blocks);
-  }
-
-  const combinedSerialization = getCombinedSerialization(
-    mainWorkspaceSerialization,
-    hiddenWorkspaceSerialization
-  );
-
-  return JSON.stringify(combinedSerialization);
 }
 
 export function soundField(onClick, transformText, icon) {
@@ -346,33 +327,6 @@ export function locationField(icon, onClick) {
 export function registerCustomProcedureBlocks() {
   unregisterProcedureBlocks();
   Blockly.common.defineBlocks(procedureBlocks);
-}
-
-/**
- * Partitions blocks of the specified types to the front of the list.
- *
- * @param {Element[]|Object[]} blocks - An array of block elements or JSON blocks to be partitioned.
- * @param {Object} [options] - An object containing partitioning options.
- * @param {string[]} [options.prioritizedBlockTypes] - An array of strings representing block types to move to the front.
- * @param {boolean} [options.isJson] - A flag indicating whether the blocks are JSON blocks (vs. block elements).
- * @returns {Element[]|Object[]} A new array of block elements or JSON blocks partitioned based on their types.
- */
-export function partitionBlocksByType(
-  blocks = [],
-  prioritizedBlockTypes = [],
-  isBlockElements = true
-) {
-  const prioritizedBlocks = [];
-  const remainingBlocks = [];
-
-  blocks.forEach(block => {
-    const blockType = isBlockElements ? block.getAttribute('type') : block.type;
-    prioritizedBlockTypes.includes(blockType)
-      ? prioritizedBlocks.push(block)
-      : remainingBlocks.push(block);
-  });
-
-  return [...prioritizedBlocks, ...remainingBlocks];
 }
 
 /**

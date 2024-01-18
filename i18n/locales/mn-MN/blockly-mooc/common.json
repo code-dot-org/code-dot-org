@@ -1265,6 +1265,7 @@
   "loginInfo_signinStep4_secretPicture": "Тэдний нууц зургийг сонгоорой.",
   "loginInfo_signinStep4_secretWords": "Тэдний нууц үгийг шивээрэй.",
   "loginInfo_signinStep5": "\"Нэвтрэх\" товчийг дараарай.",
+  "loginInfoLtiSetupHeader": "Анги дээрээ тохируулна уу",
   "loginType": "Нэвтрэх төрөл",
   "loginTypeClever": "Clever",
   "loginTypeCleverButton": "Clever-г ашиглах",

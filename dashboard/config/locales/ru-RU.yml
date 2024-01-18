@@ -322,8 +322,8 @@ ru:
       консультантов по вопросам образования</a> за поддержку в создании студии кода.
     tos: Условия предоставления услуг
     tos_short: Условия использования
-    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, логотип CODE и Час
-      кода&reg; являются товарными знаками Code.org."
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, Логотип CODE и Hour
+      of Code&reg; являются товарными знаками Code.org."
     translate: Помогите нам выполнить перевод на Ваш язык
     try_hour_of_code: Попробуйте Час кода!
     view_code: Смотреть Код

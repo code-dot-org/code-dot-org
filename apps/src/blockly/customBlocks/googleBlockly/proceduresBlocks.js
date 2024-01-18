@@ -36,7 +36,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
         text: '',
       },
       {
-        type: 'input_dummy',
+        type: 'input_end_row',
         name: 'TOP',
       },
     ],
@@ -106,13 +106,10 @@ GoogleBlockly.Extensions.register('procedures_edit_button', function () {
   // Edit buttons are used to open the modal editor. The button is appended to the last input.
   // If we are in the modal function editor, don't add the button, due to an issue with Blockly
   // not being able to handle us clearing the block right after it has been clicked.
-  // TODO: After we updgrade to Blockly v10, check if this issue has been fixed, and if it has,
-  // remove the check on functionEditor workspace id.
   if (
     Blockly.useModalFunctionEditor &&
     this.inputList.length &&
     !this.workspace.isFlyout &&
-    this.workspace.id !== Blockly.functionEditor.getWorkspaceId() &&
     toolboxConfigurationSupportsEditButton(this)
   ) {
     const button = new Blockly.FieldButton({
@@ -251,10 +248,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   if (functionEditorOpen) {
     // No-op - cannot create new functions while the modal editor is open
   } else if (Blockly.useModalFunctionEditor) {
-    const newFunctionButton = getNewFunctionButtonWithCallback(
-      workspace,
-      functionDefinitionBlock
-    );
+    const newFunctionButton = getNewFunctionButtonWithCallback(workspace);
     blockList.push(newFunctionButton);
   } else {
     blockList.push(functionDefinitionBlock);
@@ -296,17 +290,16 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   return blockList;
 }
 
-const getNewFunctionButtonWithCallback = (
-  workspace,
-  functionDefinitionBlock
-) => {
+const getNewFunctionButtonWithCallback = workspace => {
   let callbackKey, callback;
 
   callbackKey = 'newProcedureCallback';
-  callback = () =>
+  callback = () => {
+    workspace.hideChaff();
     Blockly.functionEditor.newProcedureCallback(
       BLOCK_TYPES.procedureDefinition
     );
+  };
 
   workspace.registerButtonCallback(callbackKey, callback);
 
