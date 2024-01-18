@@ -14,7 +14,6 @@ describe I18n::SyncOut do
         I18n::Resources::Apps.expects(:sync_out).in_sequence(execution_sequence)
         I18n::Resources::Dashboard.expects(:sync_out).in_sequence(execution_sequence)
         I18n::Resources::Pegasus.expects(:sync_out).in_sequence(execution_sequence)
-        I18n::SyncOut.expects(:clean_up_sync_out).with('expected_CROWDIN_PROJECTS').in_sequence(execution_sequence)
         I18n::Metrics.expects(:report_status).with(true, 'sync-out', 'Sync out completed successfully').in_sequence(execution_sequence)
 
         I18n::SyncOut.perform
@@ -28,7 +27,6 @@ describe I18n::SyncOut do
         I18n::Resources::Apps.stubs(:sync_out).raises(expected_error)
         I18n::Resources::Dashboard.stubs(:sync_out).raises(expected_error)
         I18n::Resources::Pegasus.stubs(:sync_out).raises(expected_error)
-        I18n::SyncOut.stubs(:clean_up_sync_out).raises(expected_error)
 
         I18n::Metrics.expects(:report_status).with(false, 'sync-out', "Sync out failed from the error: #{expected_error}")
 

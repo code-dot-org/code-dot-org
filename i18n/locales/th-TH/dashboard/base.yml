@@ -94,7 +94,7 @@ th:
   courses_page:
     title_student: "เรียนกับ Code Studio"
     title_teacher: "สอนวิทยาการคอมพิวเตอร์"
-  unplugged_activity: 'กิจกรรมถอดปลั๊ก'
+  unplugged_activity: 'กิจกรรมแบบออฟไลน์'
   of: "ของ"
   more: "เพิ่มเติม"
   less: "น้อย"

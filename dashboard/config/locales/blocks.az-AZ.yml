@@ -1101,6 +1101,14 @@ az:
             '1': limon suyu
             '3': çörək soda
             '5': hər ikisi
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': mavi
+            '"red"': qırmızı
+          OPT:
+            '"large"': böyük
+            '"small"': kiçik
       FunctionBlocks_addEightBlock:
         text: əlavə səkkiz
       KatiesBlocks_glideTo:

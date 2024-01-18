@@ -6,7 +6,9 @@ import {
   isBlockLocationUnset,
   isOverlapping,
   appendProceduresToState,
+  partitionJsonBlocksByType,
 } from '@cdo/apps/blockly/addons/cdoSerializationHelpers';
+import {PROCEDURE_DEFINITION_TYPES} from '@cdo/apps/blockly/constants';
 
 describe('CdoSerializationHelpers', () => {
   describe('addPositionsToState', () => {
@@ -239,6 +241,7 @@ describe('CdoSerializationHelpers', () => {
       expect(result).to.equal(false);
     });
   });
+
   describe('appendProceduresToState', () => {
     const sharedBehaviorsState = {
       blocks: {
@@ -343,6 +346,40 @@ describe('CdoSerializationHelpers', () => {
 
       expect(updatedState.blocks.blocks).to.have.lengthOf(3);
       expect(updatedState.procedures).to.have.lengthOf(2);
+    });
+  });
+
+  describe('partitionBlocksByType', () => {
+    it('should work with JSON blocks and prioritized types', () => {
+      const blocks = [
+        {type: 'blockType1'},
+        {type: 'when_run'},
+        {type: 'blockType2'},
+        {type: 'Dancelab_whenSetup'},
+      ];
+
+      const result = partitionJsonBlocksByType(blocks, [
+        'when_run',
+        'Dancelab_whenSetup',
+      ]);
+      expect(result).to.deep.equal([
+        {type: 'when_run'},
+        {type: 'Dancelab_whenSetup'},
+        {type: 'blockType1'},
+        {type: 'blockType2'},
+      ]);
+    });
+
+    it('should handle an empty block array', () => {
+      const result = partitionJsonBlocksByType([], PROCEDURE_DEFINITION_TYPES);
+      expect(result).to.deep.equal([]);
+    });
+
+    it('should return the original array if no prioritized types are provided', () => {
+      const blocks = [{type: 'A'}, {type: 'B'}, {type: 'C'}];
+
+      const result = partitionJsonBlocksByType(blocks, undefined);
+      expect(result).to.deep.equal(blocks);
     });
   });
 });

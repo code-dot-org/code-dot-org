@@ -811,6 +811,11 @@ et:
             '"bubbles"': Mullid
             '"hearts"': südamed
             '"rain"': vihm
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': sinine
+            '"red"': punane
       Mikelab_changePropBy:
         options:
           PROPERTY:

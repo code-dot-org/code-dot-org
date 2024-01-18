@@ -125,6 +125,7 @@ de:
           description: Teste die Grundlagen der Informatik mit Charakteren aus Angry Birds und Pflanzen gegen Zombies!
           description_short: Lerne die Grundlagen der Computertechnologie mit Deinen Lieblingsfiguren kennen!
           student_description: Teste die Grundlagen der Informatik mit Charakteren aus Angry Birds und Pflanzen gegen Zombies!
+          name: Hour of Code
         CodeStudioPuzzleChallenge:
           title: Code Studio Puzzle-Herausforderung
           description: Probiere diese lustigen Programmierpuzzle aus. Gib dein Bestes!
@@ -5864,6 +5865,9 @@ de:
               name: Verhaltensweisen
             lesson-5:
               name: Nächste Schritte
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Erste Schritte
         self-paced-pl-k5-2024-1:
           lessons:
             lesson-3:
@@ -5872,4 +5876,133 @@ de:
               name: Bedingungen
             lesson-6:
               name: Nächste Schritte
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Erste Schritte
           title: Einführung in die Informatik
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Umfrage
+            csp_unit1_2020:
+              display_name: 'Einheit 1: Digitale Informationen'
+        csp2-2024:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Lektion 2: Das Internet'
+          student_description: Diese Einheit zeigt, wie das Internet konzipiert wurde, um Milliarden von Geräten und Menschen miteinander zu verbinden. Erfahren Sie, wie die verschiedenen Protokolle des Internets funktionieren, und erstellen Sie sie mit dem Internet-Simulator selbst. Denken Sie dann an die guten und schlechten Auswirkungen des Internets auf das moderne Leben.
+          description_short: Erstellen Sie das Internet mit dem Internet-Simulator von Grund auf.
+        csp3-2024:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Lerneinheit 3: Einführung in das App Design '
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Umfrage
+            lessonGroup-3:
+              display_name: Inhalt
+            lessonGroup-5:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-5:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Umfrage
+            lessonGroup-5:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa9-2024: {}
+        csa-postap-se-and-computer-vision-2024: {}
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: Variablen
+            csp_conditionals:
+              display_name: Bedingungen
+            csp_functions:
+              display_name: Funktionen
+            csp_project:
+              display_name: Projekt
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Daten
+            lessonGroup-5:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listen
+            lessonGroup-3:
+              display_name: Schleifen
+            lessonGroup-4:
+              display_name: Traversierungen
+            lessonGroup-5:
+              display_name: Projekt
+            lessonGroup-2:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csp7-2024:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parameter und Rückgabewerte
+            csp_libraries:
+              display_name: Bibliotheken
+            lessonGroup-3:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csp8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: PT Erstellen
+            lessonGroup-3:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csp9-2024:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Lektion 9: Daten'
+            lessonGroup-2:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csp10-2024:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Lerneinheit 10: Cybersicherheit und globale Auswirkungen'
+            lessonGroup-2:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csp-post-survey-2024:
+          title: Befragung zu „Grundsätze der Informatik“ nach dem Kurs

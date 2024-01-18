@@ -1291,6 +1291,7 @@
   "loginInfo_signinStep4_secretPicture": "Escollir la imatge secreta.",
   "loginInfo_signinStep4_secretWords": "Introduir les paraules secretes.",
   "loginInfo_signinStep5": "Fer clic al botó \"Iniciar sessió\".",
+  "loginInfoLtiSetupHeader": "Configureu la vostra classe",
   "loginType": "Tipus d'inici de sessió",
   "loginTypeClever": "Clever",
   "loginTypeCleverButton": "Utilitzar Clever",

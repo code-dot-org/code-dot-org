@@ -1137,6 +1137,14 @@ tr:
             '5': her ikisi
       DansBlocks_testRectangle:
         text: 'dikdörtgen yap x: {X} y: {Y} w: {W} h: {H} renk: {COLOR}'
+      DansBlocks_testShowVariable:
+        options:
+          OPT:
+            '"large"': Büyük
+            '"small"': Küçük
+          COLOR:
+            '"blue"': mavi
+            '"red"': kırmızı
       FunctionBlocks_addEightBlock:
         text: Sekizekle
       FunctionBlocks_addFiveBlock:

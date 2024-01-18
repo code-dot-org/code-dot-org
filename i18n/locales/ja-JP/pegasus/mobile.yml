@@ -383,6 +383,7 @@
   homepage_below_hero_announcement_link_text: "もっと詳しく知る"
   homepage_higher_power_body: "ダンスパーティーで作成し、バンドライブを見るチャンスを手に入れましょう。"
   homepage_thebadguys_body: "映画** The Bad Guys **のタランチュラさん、ウルフさん、残りのキャラクターたちと一緒に冒険をしてみましょう！"
+  homepage_csa_title: "AP® コンピューターサイエンスA"
   homepage_csa_body: "エクイティ主導型のカリキュラムで、現実世界とつながったクリエイティブなプロジェクトで学生を支援します。"
   contact_form_topic_student: "私は学生です"
   contact_form_topic_parent: "私は親です"
@@ -1780,6 +1781,7 @@
   footer_store: "ストア"
   footer_support: "ヘルプとコミュニティ"
   footer_terms: "利用規約"
+  footer_trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logoとHour of Code&reg; は Code.org の商標です'
   ai_for_oceans: "海洋のためのAI"
   ai_for_oceans_lesson_plan: "レッスンのけいかく"
   ai_for_oceans_tile_description: "ゴミを検知するように訓練して、A.I. が海をきれいにするのを手伝ってください！トレーニングデータとバイアス、そしてAIが世界の問題にどう対処できるかについて学びます。[表示]"
@@ -1822,6 +1824,7 @@
   ai_ibm_machine_learning_for_kids: 'IBM: 子供向け機械学習'
   ai_ecs: 'ECS: 人工知能 (AI)'
   ai_ecs_description: "コンピュータサイエンスの探索 (ECS) カリキュラムの新しい代替カリキュラムユニット。"
+  ai_aiedu_intro: 'AiEdu: 人工知能入門'
   ai_aiedu_intro_description: "Intro to AI は、学生が AI とは何か、そしてそれが現実世界でどのように使用されているかについて、概念的な知識を身につけることができる、革新的で文化的な関連性を備えた無料のカリキュラムです。"
   ai_elements: "人工知能の要素"
   ai_elements_description: "Reaktorとヘルシンキ大学が作成した一連の無料オンラインコース。"
@@ -1849,5 +1852,7 @@
   try_it_yourself: "自分でやってみよう！"
   try_an_activity: "アクティビティを試す"
   see_more_activities: "アクティビティをもっと試す"
+  hoc2022_nasa_webb_alt_text: "NASAのジェイムズウェッブ望遠鏡のイラスト"
   hoc2022_nasa_banner_heading: "NASAに参加して、宇宙でのコンピューターサイエンスに関する特別な「Hour of Code」特集に参加しましょう！"
   hoc2022_nasa_banner_description: "NASA STEMのYouTubeチャンネルで12月5日午前10時（東部標準時）に初公開されます。"
+  hoc2022_nasa_banner_heading_posthoc: "宇宙でのコンピューターサイエンスに関するNASAの特別なHour of Code機能をチェックしてください！"

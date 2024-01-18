@@ -1032,6 +1032,14 @@ nl:
             '"starburst"': Sterrenvorming
             '"glass"': Brekend glas
             '"twinkling"': Fonkeling
+      DansBlocks_testShowVariable:
+        options:
+          OPT:
+            '"large"': groot
+            '"small"': klein
+          COLOR:
+            '"blue"': blauw
+            '"red"': rood
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} begint {BEHAVIOR}
       gamelab_addTarget:

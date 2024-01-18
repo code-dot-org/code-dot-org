@@ -1125,6 +1125,14 @@ es-MX:
         text: Configurar microscopio {INPUT1}
       DansBlocks_testRectangle:
         text: 'hacer rectàngulo x: {X} y: {Y} w: {W} h: {H} color: {COLOR}'
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': azul
+            '"red"': rojo
+          OPT:
+            '"large"': grande
+            '"small"': pequeño
       FunctionBlocks_communicate:
         text: Comunicar {VAR1} a {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
