@@ -1100,6 +1100,14 @@ zh-TW:
         options:
           INPUT1:
             '1': 檸檬汁
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': 藍
+            '"red"': 紅
+          OPT:
+            '"large"': 大
+            '"small"': 小
       FunctionBlocks_communicate:
         text: 讓{VAR1}與{SPRITE1COSTUME}交流
       FunctionBlocks_makeManipulative2:

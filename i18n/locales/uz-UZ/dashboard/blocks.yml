@@ -1052,6 +1052,11 @@ uz:
         options:
           INPUT1:
             '1': Limon sharbati
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': ko‘k
+            '"red"': qizil
       FunctionBlocks_communicate:
         text: "{VAR1} bilan {SPRITE1COSTUME} o'rtasida aloqa bogʻlash"
       FunctionBlocks_makeManipulative2:

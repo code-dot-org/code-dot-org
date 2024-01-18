@@ -73,7 +73,11 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     type: BLOCK_TYPES.behaviorGet,
     message0: '%1 %2',
     args0: [
-      {type: 'field_label', name: 'NAME', text: '%{BKY_UNNAMED_KEY}'},
+      {
+        type: 'field_label_serializable',
+        name: 'NAME',
+        text: '%{BKY_UNNAMED_KEY}',
+      },
       {
         type: 'input_dummy',
         name: 'TOPROW',

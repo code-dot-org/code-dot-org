@@ -1166,6 +1166,15 @@ pl:
             '5': oba
       DansBlocks_testRectangle:
         text: 'utwórz prostokąt x: {X} y: {Y} w: {W} h: {H} kolor: {COLOR}'
+      DansBlocks_testShowVariable:
+        text: 'Wyświetl tę liczbę: {SOMENUMBER} wielkości {SOMESIZE} w kolorze {COLOR}'
+        options:
+          OPT:
+            '"large"': duży
+            '"small"': mały
+          COLOR:
+            '"blue"': niebieski
+            '"red"': czerwony
       FunctionBlocks_addEightBlock:
         text: AddEight
       FunctionBlocks_addFiveBlock:

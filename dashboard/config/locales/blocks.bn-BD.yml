@@ -151,6 +151,11 @@ bn:
         options:
           EFFECT:
             '"hearts"': হরতন
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': নীল
+            '"red"': লাল
       Mikelab_changePropBy:
         options:
           PROPERTY:

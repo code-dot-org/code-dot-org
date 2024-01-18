@@ -482,7 +482,6 @@
   "makerSetupInstallSerialConnector": "Installa [Code.org Serial Connector Chrome App]({webstoreURL}).",
   "makerSetupInstallFirmataCP": "Dovresti assicurarti che il bozzetto corretto del firmware sia installato. Puoi installare il bozzetto di Firmata [per i circuiti Circuit Playground Express, con queste istruzioni]({firmataURLExpress}) e [per i circuiti Circuit Playground Classic con queste istruzioni]({firmataURLClassic}).",
   "makerSetupInstallFirmataMB": "Puoi aggiornare il tuo micro:bit facendo clic sul pulsante «Aggiorna micro:bit» qui sotto. Dopo aver premuto il pulsante, dovrebbe apparire una finestra con una riga che include «micro:bit». Seleziona quella riga e quindi fai clic sul pulsante «Connetti».",
-  "makerSetupInstallFirmataOther": "Dovresti assicurarti che il bozzetto corretto del firmware sia installato. Puoi installare il bozzetto di Firmata [per i circuiti Circuit Playground Express, con queste istruzioni]({firmataURLExpress}) e [per i circuiti Circuit Playground Classic con queste istruzioni]({firmataURLClassic}). Puoi installare il bozzetto di Firmata [per il micro:bit con queste istruzioni]({firmataURLMB}).",
   "makerSetupLinuxAddDialout": "Se non appartieni a 'dialout', ti consigliamo di aggiungerti a quel gruppo:",
   "makerSetupLinuxAlternative": "Installatori alternativi",
   "makerSetupLinuxAlternativeInstall": "[Installazione dal codice sorgente](https://github.com/code-dot-org/browser)",

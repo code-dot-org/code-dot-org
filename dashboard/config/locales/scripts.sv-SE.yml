@@ -65,6 +65,7 @@ sv:
           description: Prova grunderna i datavetenskap med karaktärerna från Angry
             Birds och Plants vs. Zombies!
           description_short: Prova grunderna i datavetenskap med många roliga figurer!
+          name: Timmen med Kod
           student_description: Prova grunderna i datavetenskap med karaktärerna från
             Angry Birds och Plants vs. Zombies!
           title: Timme av Kod 2013
@@ -660,6 +661,10 @@ sv:
           lessons:
             lesson-6:
               name: loopar
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Innehåll
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -696,6 +701,10 @@ sv:
           lessons:
             lesson-4:
               name: variabler
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -728,6 +737,10 @@ sv:
           lessons:
             lesson-3:
               name: "'För' loopar"
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -754,6 +767,10 @@ sv:
               display_name: Innehåll
           name: csa4-2022
         csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
@@ -792,6 +809,10 @@ sv:
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -822,6 +843,10 @@ sv:
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -849,6 +874,10 @@ sv:
             lessonGroup-5:
               display_name: Sandlåda
         csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
@@ -883,6 +912,10 @@ sv:
             lessonGroup-2:
               display_name: Innehåll
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
@@ -1421,6 +1454,16 @@ sv:
               display_name: Projekt
             csp_variables:
               display_name: variabler
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Villkor
+            csp_functions:
+              display_name: funktioner
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: variabler
         csp4-dlp:
           lesson_groups:
             content:
@@ -1507,6 +1550,10 @@ sv:
               display_name: loopar
             csp_project:
               display_name: Projekt
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Data
         csp5-dlp:
           lesson_groups:
             content:
@@ -1562,6 +1609,14 @@ sv:
               display_name: loopar
             lessonGroup-5:
               display_name: Projekt
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listor
+            lessonGroup-3:
+              display_name: loopar
+            lessonGroup-5:
+              display_name: Projekt
         csp6-pilot:
           lesson_groups:
             content:
@@ -1593,6 +1648,10 @@ sv:
             csp_libraries:
               display_name: Bibliotek
         csp7-2023:
+          lesson_groups:
+            csp_libraries:
+              display_name: Bibliotek
+        csp7-2024:
           lesson_groups:
             csp_libraries:
               display_name: Bibliotek

@@ -1101,6 +1101,14 @@ az:
             '1': limon suyu
             '3': çörək soda
             '5': hər ikisi
+      DansBlocks_testShowVariable:
+        options:
+          OPT:
+            '"large"': böyük
+            '"small"': kiçik
+          COLOR:
+            '"blue"': mavi
+            '"red"': qırmızı
       FunctionBlocks_addEightBlock:
         text: əlavə səkkiz
       gamelab_addBehaviorSimple:

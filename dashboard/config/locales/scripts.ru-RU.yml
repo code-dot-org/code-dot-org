@@ -223,6 +223,7 @@ ru:
           description: Постигай азы программирования с персонажами Angry Birds и Plants
             vs. Zombies!
           description_short: Постигай азы программирования с забавными персонажами!
+          name: Час Кода
           student_description: Постигай азы программирования с персонажами Angry Birds
             и Plants vs. Zombies!
           title: Час кода 2013
@@ -1536,6 +1537,12 @@ ru:
               name: Java Lab
             lesson-6:
               name: Циклы
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Опрос
+            lessonGroup-3:
+              display_name: Содержимое
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1574,6 +1581,10 @@ ru:
           lessons:
             lesson-4:
               name: Переменные
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1608,6 +1619,10 @@ ru:
               name: Одномерные (1D) массивы
             lesson-3:
               name: Циклы с параметром
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1640,6 +1655,10 @@ ru:
           lessons:
             lesson-9:
               name: СлучайноеЗначение
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
         csa4-exemplars:
           lesson_groups:
             content:
@@ -1672,6 +1691,10 @@ ru:
             lessonGroup-2:
               display_name: Содержимое
         csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+        csa5-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
@@ -1708,6 +1731,10 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1735,6 +1762,10 @@ ru:
             lessonGroup-5:
               display_name: Песочница
         csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+        csa7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
@@ -1771,6 +1802,12 @@ ru:
             lessonGroup-5:
               display_name: Опрос
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+            lessonGroup-4:
+              display_name: Опрос
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
@@ -2659,6 +2696,12 @@ ru:
               display_name: Опрос
             csp_unit1_2020:
               display_name: 'Урок 1: Цифровая информация'
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опрос
+            csp_unit1_2020:
+              display_name: 'Урок 1: Цифровая информация'
         csp1-dlp:
           lesson_groups:
             content:
@@ -2709,6 +2752,10 @@ ru:
             lessonGroup-2:
               display_name: Опрос после окончания курса
         csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Опрос после окончания курса
+        csp10-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Опрос после окончания курса
@@ -2822,6 +2869,10 @@ ru:
             csp_unit2_2020:
               display_name: 'Урок 2: Интернет'
         csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Урок 2: Интернет'
+        csp2-2024:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Урок 2: Интернет'
@@ -3100,6 +3151,16 @@ ru:
               display_name: Проект
             csp_variables:
               display_name: Переменные
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Условные команды
+            csp_functions:
+              display_name: функции
+            csp_project:
+              display_name: Проект
+            csp_variables:
+              display_name: Переменные
         csp4-dlp:
           lesson_groups:
             content:
@@ -3275,6 +3336,12 @@ ru:
               display_name: Обходов
             lessonGroup-5:
               display_name: Опрос после окончания курса
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Данные
+            lessonGroup-5:
+              display_name: Опрос после окончания курса
         csp5-dlp:
           lesson_groups:
             content:
@@ -3365,6 +3432,18 @@ ru:
               display_name: Обходов
             lessonGroup-5:
               display_name: Проект
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Списки
+            lessonGroup-2:
+              display_name: Опрос после окончания курса
+            lessonGroup-3:
+              display_name: Циклы
+            lessonGroup-4:
+              display_name: Обходов
+            lessonGroup-5:
+              display_name: Проект
         csp6-pilot:
           lesson_groups:
             content:
@@ -3413,6 +3492,14 @@ ru:
               display_name: Параметры и возвращаемые значения
             lessonGroup-3:
               display_name: Опрос после окончания курса
+        csp7-2024:
+          lesson_groups:
+            csp_libraries:
+              display_name: Библиотеки
+            csp_parameters_return_values:
+              display_name: Параметры и возвращаемые значения
+            lessonGroup-3:
+              display_name: Опрос после окончания курса
         csp7-pilot:
           lesson_groups:
             csp_libraries:
@@ -3436,6 +3523,10 @@ ru:
             lessonGroup-3:
               display_name: Опрос после окончания курса
         csp8-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Опрос после окончания курса
+        csp8-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: Опрос после окончания курса
@@ -3468,6 +3559,12 @@ ru:
             lessonGroup-2:
               display_name: Опрос после окончания курса
         csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Урок 9: Данные'
+            lessonGroup-2:
+              display_name: Опрос после окончания курса
+        csp9-2024:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Урок 9: Данные'
@@ -5058,6 +5155,9 @@ ru:
         self-paced-pl-csp2-2023:
           title: 'Модуль 2: Навигация по инструментам Code.org'
         self-paced-pl-k5-2024-1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Приступить к работе
           lessons:
             lesson-3:
               name: Циклы
@@ -5067,6 +5167,9 @@ ru:
               name: Следующие шаги
           title: Введение в Информатику
         self-paced-pl-k5-2024-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Приступить к работе
           lessons:
             lesson-3:
               name: События
