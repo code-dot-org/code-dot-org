@@ -314,6 +314,8 @@ InlineAudio.defaultProps = {
 };
 InlineAudio.contextType = AudioQueueContext;
 
+export const UnconnectedInlineAudio = InlineAudio;
+
 export default connect(function propsFromStore(state) {
   return {
     assetUrl: state.pageConstants.assetUrl,
