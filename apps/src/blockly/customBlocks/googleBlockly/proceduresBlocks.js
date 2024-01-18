@@ -106,8 +106,6 @@ GoogleBlockly.Extensions.register('procedures_edit_button', function () {
   // Edit buttons are used to open the modal editor. The button is appended to the last input.
   // If we are in the modal function editor, don't add the button, due to an issue with Blockly
   // not being able to handle us clearing the block right after it has been clicked.
-  // TODO: After we updgrade to Blockly v10, check if this issue has been fixed, and if it has,
-  // remove the check on functionEditor workspace id.
   if (
     Blockly.useModalFunctionEditor &&
     this.inputList.length &&

@@ -71,9 +71,9 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
     if (!this.isVisible()) {
       return new Blockly.utils.Size(0, 0);
     }
-    // On first render, if the flyout is not visible and it should be,
-    // show the flyout. We can't show the flyout until other components are
-    // rendered, so we delay showing it until here.
+    // On first render, if the flyout is not visible, show the flyout.
+    // We can't show the flyout until other components are rendered,
+    // so we delay showing it until here.
     if (!this.isFlyoutVisible()) {
       this.setFlyoutVisible();
     }
