@@ -35,7 +35,7 @@ const swiperParams = {
 Object.assign(swiperEl, swiperParams);
 swiperEl.initialize();
 
-// Set params for different columns amounts
+// Set params for different column amounts
 const setSwiperParams = (swiper, columns) => {
   let slidesPerView, slidesPerGroup;
 
@@ -54,11 +54,13 @@ const setSwiperParams = (swiper, columns) => {
   swiper.slidesPerGroup = slidesPerGroup;
 };
 
+// Add a .two-col class to the <swiper-container> element to enable two columns
 const twoCol = document.querySelector('swiper-container.two-col');
 if (twoCol) {
   setSwiperParams(twoCol, 2);
 }
 
+// Add a .three-col class to the <swiper-container> element to enable three columns
 const threeCol = document.querySelector('swiper-container.three-col');
 if (threeCol) {
   setSwiperParams(threeCol, 3);
