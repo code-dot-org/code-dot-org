@@ -5,8 +5,8 @@ import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import moduleStyles from './dropdownMenu.module.scss';
 
 export interface DropdownMenuProps {
-  /** Dropdown  Menu items list */
-  items: {value: string; label: string}[];
+  /** Dropdown Menu items list */
+  items: {value: string; text: string}[];
   /** Dropdown selected value */
   selectedValue?: string;
   /** Dropdown onChange handler */
@@ -79,9 +79,9 @@ const DropdownMenu: React.FunctionComponent<DropdownMenuProps> = ({
           className={moduleStyles.dropdown}
           disabled={disabled}
         >
-          {items.map(({value, label}) => (
+          {items.map(({value, text}) => (
             <option value={value} key={value}>
-              {label}
+              {text}
             </option>
           ))}
         </select>

@@ -83,8 +83,8 @@ export const DefaultDropdown = SingleTemplate.bind({});
 DefaultDropdown.args = {
   name: 'default-dropdown',
   items: [
-    {value: 'option-1', label: 'Option 1'},
-    {value: 'option-2', label: 'Option 2'},
+    {value: 'option-1', text: 'Option 1'},
+    {value: 'option-2', text: 'Option 2'},
   ],
   labelText: 'Default Dropdown',
   isLabelVisible: false,
@@ -97,8 +97,8 @@ export const DisabledDropdown = SingleTemplate.bind({});
 DisabledDropdown.args = {
   name: 'default-dropdown',
   items: [
-    {value: 'option-1', label: 'Option 1'},
-    {value: 'option-2', label: 'Option 2'},
+    {value: 'option-1', text: 'Option 1'},
+    {value: 'option-2', text: 'Option 2'},
   ],
   selectedValue: 'option-1',
   labelText: 'Disabled Dropdown',
@@ -113,8 +113,8 @@ GroupOfDropdownColors.args = {
     {
       name: 'default-dropdown-white',
       items: [
-        {value: 'option-1', label: 'Option 1'},
-        {value: 'option-2', label: 'Option 2'},
+        {value: 'option-1', text: 'Option 1'},
+        {value: 'option-2', text: 'Option 2'},
       ],
       selectedValue: 'option-1',
       labelText: 'White Dropdown',
@@ -125,8 +125,8 @@ GroupOfDropdownColors.args = {
     {
       name: 'default-dropdown-black',
       items: [
-        {value: 'option-1', label: 'Option 1'},
-        {value: 'option-2', label: 'Option 2'},
+        {value: 'option-1', text: 'Option 1'},
+        {value: 'option-2', text: 'Option 2'},
       ],
       selectedValue: 'option-1',
       labelText: 'Black Dropdown',
@@ -142,8 +142,8 @@ GroupOfSizesOfDropdown.args = {
     {
       name: 'default-dropdown-xs',
       items: [
-        {value: 'option-1', label: 'Option 1'},
-        {value: 'option-2', label: 'Option 2'},
+        {value: 'option-1', text: 'Option 1'},
+        {value: 'option-2', text: 'Option 2'},
       ],
       selectedValue: 'option-1',
       labelText: 'XS Dropdown',
@@ -153,8 +153,8 @@ GroupOfSizesOfDropdown.args = {
     {
       name: 'default-dropdown-s',
       items: [
-        {value: 'option-1', label: 'Option 1'},
-        {value: 'option-2', label: 'Option 2'},
+        {value: 'option-1', text: 'Option 1'},
+        {value: 'option-2', text: 'Option 2'},
       ],
       selectedValue: 'option-1',
       labelText: 'S Dropdown',
@@ -164,8 +164,8 @@ GroupOfSizesOfDropdown.args = {
     {
       name: 'default-dropdown-m',
       items: [
-        {value: 'option-1', label: 'Option 1'},
-        {value: 'option-2', label: 'Option 2'},
+        {value: 'option-1', text: 'Option 1'},
+        {value: 'option-2', text: 'Option 2'},
       ],
       selectedValue: 'option-1',
       labelText: 'M Dropdown',
@@ -175,8 +175,8 @@ GroupOfSizesOfDropdown.args = {
     {
       name: 'default-dropdown-white',
       items: [
-        {value: 'option-1', label: 'Option 1'},
-        {value: 'option-2', label: 'Option 2'},
+        {value: 'option-1', text: 'Option 1'},
+        {value: 'option-2', text: 'Option 2'},
       ],
       selectedValue: 'option-1',
       labelText: 'L Dropdown',

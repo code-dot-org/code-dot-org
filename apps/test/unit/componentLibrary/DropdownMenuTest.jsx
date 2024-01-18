@@ -20,9 +20,9 @@ describe('Design System - Dropdown Select Component', () => {
       <Dropdown
         name="test1-dropdown"
         items={[
-          {value: 'option-1', label: 'option1'},
-          {value: 'option-2', label: 'option2'},
-          {value: 'option-3', label: 'option3'},
+          {value: 'option-1', text: 'option1'},
+          {value: 'option-2', text: 'option2'},
+          {value: 'option-3', text: 'option3'},
         ]}
         selectedValue={dropdownValue}
         onChange={e => onDropdownChange(e.target.value)}
@@ -52,9 +52,9 @@ describe('Design System - Dropdown Select Component', () => {
       <Dropdown
         name="test2-dropdown"
         items={[
-          {value: 'option-1', label: 'option1'},
-          {value: 'option-2', label: 'option2'},
-          {value: 'option-3', label: 'option3'},
+          {value: 'option-1', text: 'option1'},
+          {value: 'option-2', text: 'option2'},
+          {value: 'option-3', text: 'option3'},
         ]}
         selectedValue={dropdownValue}
         onChange={onChange}
@@ -105,9 +105,9 @@ describe('Design System - Dropdown Select Component', () => {
         name="test2-dropdown"
         disabled={true}
         items={[
-          {value: 'option-1', label: 'option1'},
-          {value: 'option-2', label: 'option2'},
-          {value: 'option-3', label: 'option3'},
+          {value: 'option-1', text: 'option1'},
+          {value: 'option-2', text: 'option2'},
+          {value: 'option-3', text: 'option3'},
         ]}
         selectedValue={dropdownValue}
         onChange={onChange}
