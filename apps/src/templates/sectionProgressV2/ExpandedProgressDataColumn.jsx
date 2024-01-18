@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './progress-table-v2.module.scss';
 import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
-import {studentLessonProgressType} from '../progress/progressTypes';
+import {studentLevelProgressType} from '../progress/progressTypes';
 import {connect} from 'react-redux';
-import LessonDataCell from './LessonDataCell';
 import classNames from 'classnames';
 import FontAwesome from '../FontAwesome';
+import LevelDataCell from './LevelDataCell';
 
 function ExpandedProgressDataColumn({
   lesson,
-  lessonProgressByStudent,
+  levelProgressByStudent,
   sortedStudents,
   removeExpandedLesson,
 }) {
@@ -46,20 +46,24 @@ function ExpandedProgressDataColumn({
 
   const progress = React.useMemo(
     () => (
-      <div className={styles.lessonDataColumn}>
-        {sortedStudents.map(student => (
-          <LessonDataCell
-            studentId={student.id}
-            lesson={lesson}
-            studentLessonProgress={
-              lessonProgressByStudent[student.id][lesson.id]
-            }
-            key={student.id + '.' + lesson.id}
-          />
+      <div className={styles.expandedTable}>
+        {lesson.levels.map(level => (
+          <div className={styles.expandedLevelColumn}>
+            {sortedStudents.map(student => (
+              <LevelDataCell
+                studentId={student.id}
+                level={level}
+                studentLevelProgress={
+                  levelProgressByStudent[student.id][level.id]
+                }
+                key={student.id + '.' + lesson.id + '.' + level.id}
+              />
+            ))}
+          </div>
         ))}
       </div>
     ),
-    [lessonProgressByStudent, sortedStudents, lesson]
+    [levelProgressByStudent, sortedStudents, lesson]
   );
 
   return (
@@ -72,8 +76,8 @@ function ExpandedProgressDataColumn({
 
 ExpandedProgressDataColumn.propTypes = {
   sortedStudents: PropTypes.arrayOf(studentShape),
-  lessonProgressByStudent: PropTypes.objectOf(
-    PropTypes.objectOf(studentLessonProgressType)
+  levelProgressByStudent: PropTypes.objectOf(
+    PropTypes.objectOf(studentLevelProgressType)
   ).isRequired,
   lesson: PropTypes.object.isRequired,
   removeExpandedLesson: PropTypes.func.isRequired,
@@ -82,8 +86,8 @@ ExpandedProgressDataColumn.propTypes = {
 export const UnconnectedExpandedProgressDataColumn = ExpandedProgressDataColumn;
 
 export default connect(state => ({
-  lessonProgressByStudent:
-    state.sectionProgress.studentLessonProgressByUnit[
+  levelProgressByStudent:
+    state.sectionProgress.studentLevelProgressByUnit[
       state.unitSelection.scriptId
     ],
 }))(ExpandedProgressDataColumn);
