@@ -5,6 +5,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
+// Execute after page has fully loaded so the Amplitude event only fires on full page load
 $(() => {
   analyticsReporter.sendEvent(EVENTS.MY_PL_PAGE_VISITED);
 
