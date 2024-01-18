@@ -67,13 +67,7 @@
   &Column {
     display: flex;
     flex-direction: column;
-  }
-
-  &Header {
-    border-right: 1px solid $light_gray_200;
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 32px;
+    margin-right: -1px;
   }
 
   &HeaderCell {
@@ -81,18 +75,15 @@
     line-height: 42px;
     min-width: 80px;
     border-bottom: 1px solid $light_gray_200;
+    border-right: 1px solid $light_gray_200;
+    margin-bottom: 32px;
   }
 
   &DataColumn {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid $light_gray_200;
-  }
-
-  &Table {
     border-right: 1px solid $light_gray_200;
-    display: flex;
-    flex-direction: row;
   }
 }
 

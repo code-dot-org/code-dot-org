@@ -64,16 +64,8 @@ function LessonProgressDataColumn({
 
   return (
     <div className={styles.lessonColumn}>
-      <div className={styles.lessonHeader}>
-        {lessons.map(lesson => (
-          <div key={lesson.id + 'h'}>{getHeader(lesson)}</div>
-        ))}
-      </div>
-      <div className={styles.lessonTable}>
-        {lessons.map(lesson => (
-          <div key={lesson.id + 'p'}>{getProgress(lesson)}</div>
-        ))}
-      </div>
+      {getHeader(lesson)}
+      {getProgress(lesson)}
     </div>
   );
 }
