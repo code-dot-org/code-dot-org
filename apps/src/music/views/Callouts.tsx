@@ -22,12 +22,12 @@ const availableCallouts: {
  * Renders one of several pre-defined callouts.
  */
 const Callouts: React.FunctionComponent = () => {
-  const calloutId = useSelector(
-    (state: {music: MusicState}) => state.music.calloutId
+  const callout = useSelector(
+    (state: {music: MusicState}) => state.music.showCallout
   );
 
-  if (calloutId) {
-    const availableCallout = availableCallouts[calloutId];
+  if (callout.id) {
+    const availableCallout = availableCallouts[callout.id];
     const element = document.querySelector(availableCallout.selector);
     if (element) {
       const elementRect = element.getBoundingClientRect();
@@ -37,7 +37,7 @@ const Callouts: React.FunctionComponent = () => {
       return (
         <div
           id="callout"
-          key={calloutId}
+          key={callout.id + '-' + callout.index}
           style={{left: elementLeft, top: elementTop}}
           className={moduleStyles.callout}
         >
