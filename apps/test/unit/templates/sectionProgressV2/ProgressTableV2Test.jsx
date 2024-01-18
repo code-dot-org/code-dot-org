@@ -109,14 +109,14 @@ describe('ProgressTableV2', () => {
   });
 
   it('one lesson expanded', () => {
-    const wrapper = setUp({expandedLessonIds: [2]});
+    const wrapper = setUp({expandedLessonIds: [LESSONS[2].id]});
 
     expect(wrapper.find(LessonProgressDataColumn)).to.have.lengthOf(4);
     expect(wrapper.find(ExpandedProgressDataColumn)).to.have.lengthOf(1);
   });
 
   it('multiple lessons expanded', () => {
-    const wrapper = setUp({expandedLessonIds: [2, 4]});
+    const wrapper = setUp({expandedLessonIds: [LESSONS[2].id, LESSONS[4].id]});
 
     expect(wrapper.find(LessonProgressDataColumn)).to.have.lengthOf(3);
     expect(wrapper.find(ExpandedProgressDataColumn)).to.have.lengthOf(2);
