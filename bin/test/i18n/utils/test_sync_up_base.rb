@@ -108,6 +108,10 @@ describe I18n::Utils::SyncUpBase do
   describe '.perform' do
     let(:perform) {described_class.perform}
 
+    before do
+      I18n::Metrics.stubs(:report_runtime).yields(nil)
+    end
+
     it 'creates new instance with command-line options and calls #perform' do
       expected_options = {testing: true}
       sync_up_instance = stub
