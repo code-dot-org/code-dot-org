@@ -17,6 +17,7 @@ module LevelsHelper
   include AzureTextToSpeech
 
   def build_script_level_path(script_level, params = {})
+    params ||= {}
     if script_level.script.name == Unit::HOC_NAME
       hoc_chapter_path(script_level.chapter, params)
     elsif script_level.script.name == Unit::FLAPPY_NAME
