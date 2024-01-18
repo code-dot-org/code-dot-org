@@ -98,13 +98,12 @@ export default class FunctionEditor {
     }
 
     // Editor workspace toolbox procedure category callback
-    // we have to pass the main ws so that the correct procedures are populated
-    // false to not show the new function button inside the modal editor
+    const functionEditorOpen = true;
     this.editorWorkspace.registerToolboxCategoryCallback('PROCEDURE', () =>
-      functionsFlyoutCategory(Blockly.mainBlockSpace, true)
+      functionsFlyoutCategory(this.editorWorkspace, functionEditorOpen)
     );
     this.editorWorkspace.registerToolboxCategoryCallback('Behavior', () =>
-      behaviorsFlyoutCategory(Blockly.mainBlockSpace, true)
+      behaviorsFlyoutCategory(this.editorWorkspace, functionEditorOpen)
     );
 
     // Set up the "new procedure" button in the toolbox
