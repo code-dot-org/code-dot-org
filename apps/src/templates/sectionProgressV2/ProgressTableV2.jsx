@@ -30,9 +30,7 @@ export function ProgressTableV2({
       return [];
     }
 
-    let columns = [];
-
-    return lessons.map(lesson => {
+    return lessons.map((lesson, index) => {
       if (expandedLessonIds.includes(lesson.id)) {
         return (
           <ExpandedProgressDataColumn
@@ -43,7 +41,7 @@ export function ProgressTableV2({
                 expandedLessonIds.filter(id => id !== lessonId)
               )
             }
-            key={columns.length}
+            key={index}
           />
         );
       } else {
@@ -54,7 +52,7 @@ export function ProgressTableV2({
             addExpandedLesson={lessonId =>
               setExpandedLessons([...expandedLessonIds, lessonId])
             }
-            key={columns.length}
+            key={index}
           />
         );
       }
