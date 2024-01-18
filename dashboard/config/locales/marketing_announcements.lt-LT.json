@@ -3,34 +3,7 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "ai-2020": {
-            "buttonText": "Sužinok daugiau"
-          },
-          "ai-launch-2023": {
-            "buttonText": "Sužinok daugiau"
-          },
-          "ai-pl-launch-2023": {
-            "buttonText": "Sužinok daugiau"
-          },
-          "back-to-school-2021": {
-            "buttonText": "Sužinok daugiau"
-          },
-          "codebytes-2020": {
-            "buttonText": "Sužinok daugiau"
-          },
-          "coldplay": {
-            "buttonText": "Išmėginkite"
-          },
-          "congrats-certificate-share": {
-            "buttonText": "Pradėti"
-          },
-          "csjourneys": {
-            "buttonText": "Sužinok daugiau"
-          },
-          "csjourneys-22": {
-            "buttonText": "Sužinok daugiau"
-          },
-          "csleadersprize": {
+          "co-teacher": {
             "buttonText": "Sužinok daugiau"
           },
           "hoc-2023": {
@@ -41,15 +14,6 @@
           },
           "superhero": {
             "buttonText": "Sužinokite daugiau"
-          },
-          "teacher-apps-closing-2021": {
-            "buttonText": "Prisijunkite"
-          },
-          "teacher-apps-open-2021": {
-            "buttonText": "Prisijunkite"
-          },
-          "teacher-apps-stillon-2020": {
-            "buttonText": "Prisijunkite"
           }
         }
       }

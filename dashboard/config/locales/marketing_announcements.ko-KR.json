@@ -3,35 +3,7 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "ai-2020": {
-            "buttonText": "더 알아보기",
-            "title": "인공지능과 머신 러닝 탐구"
-          },
-          "ai-launch-2023": {
-            "buttonText": "더 알아보기"
-          },
-          "ai-pl-launch-2023": {
-            "buttonText": "더 알아보기"
-          },
-          "back-to-school-2021": {
-            "buttonText": "더 알아보기"
-          },
-          "codebytes-2020": {
-            "buttonText": "더 알아보기"
-          },
-          "coldplay": {
-            "buttonText": "해보기"
-          },
-          "congrats-certificate-share": {
-            "buttonText": "시작"
-          },
-          "csjourneys": {
-            "buttonText": "더 알아보기"
-          },
-          "csjourneys-22": {
-            "buttonText": "더 알아보기"
-          },
-          "csleadersprize": {
+          "co-teacher": {
             "buttonText": "더 알아보기"
           },
           "hoc-2023": {
@@ -44,26 +16,8 @@
             "buttonText": "더 알아보기",
             "title": "댄스 파티: AI 에디션"
           },
-          "hoc-more": {
-            "body": "코딩의 시간 웹사이트에는 모든 연령 및 모든 경험 수준에 맞도록 Code.org와 파트너들이 함께 개발한 100가지 이상의 컴퓨터 과학 활동이 준비되어 있습니다."
-          },
-          "home-learning-2020": {
-            "buttonText": "프로젝트 아이디어 보기"
-          },
           "superhero": {
             "buttonText": "더 알아보기"
-          },
-          "teacher-apps-closing-2021": {
-            "buttonText": "함께 참여하기"
-          },
-          "teacher-apps-nominate-2020": {
-            "buttonText": "교사 지명"
-          },
-          "teacher-apps-open-2021": {
-            "buttonText": "함께 참여하기"
-          },
-          "teacher-apps-stillon-2020": {
-            "buttonText": "함께 참여하기"
           }
         }
       }

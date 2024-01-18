@@ -18,7 +18,7 @@ title: Recursos
 
 ## Pendure estes cartazes em sua escola
 
-Um novo conjunto de pôsteres está disponível, apresentando Malala, Stephen Curry, Shakira e outros! Este ano, cada conjunto também vem com 6 pôsteres e 126 adesivos “Eu participei de um Hour of Code". Para imprimir por conta própria, basta clicar em uma imagem aaixo para ver e salvar a versão para impressão.
+Print your own posters! Simply click an image below to view and save a printable version.
 
 {{ promote_new_posters }}
 

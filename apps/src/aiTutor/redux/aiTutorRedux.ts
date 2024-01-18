@@ -77,9 +77,6 @@ export const submitChatMessage = createAsyncThunk(
     const systemPrompt = generalChatSystemPrompt;
     const storedMessages = state.aiTutor.chatMessages;
     const newMessageId = storedMessages[storedMessages.length - 1].id + 1;
-    const appropriateChatMessages = storedMessages.filter(
-      msg => msg.status === Status.OK
-    );
 
     // Create the new user ChatCompleteMessage and add to chatMessages.
     const newMessage: ChatCompletionMessage = {
@@ -95,7 +92,7 @@ export const submitChatMessage = createAsyncThunk(
       systemPrompt,
       newMessageId,
       message,
-      appropriateChatMessages
+      storedMessages
     );
 
     // Find message in chatMessages and update status.

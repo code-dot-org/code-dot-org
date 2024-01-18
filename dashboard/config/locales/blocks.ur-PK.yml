@@ -1058,6 +1058,14 @@ ur:
         options:
           INPUT1:
             '1': لیموں کا رس
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': نيلا
+            '"red"': لال
+          OPT:
+            '"large"': بڑا
+            '"small"': چھوٹا
       FunctionBlocks_communicate:
         text: " {VAR1} {SPRITE1COSTUME} کے ساتھ بات چیت کریں"
       FunctionBlocks_makeManipulative2:

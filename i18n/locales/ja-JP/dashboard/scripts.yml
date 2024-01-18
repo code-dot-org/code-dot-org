@@ -107,6 +107,7 @@ ja:
           description: 基礎試してくださいコンピュータと科学を文字ゾンビ対怒っている鳥や植物から！
           description_short: いろいろなキャラクターでコンピューター サイエンスの基礎を試してみよう！
           student_description: 基礎試してくださいコンピュータと科学を文字ゾンビ対怒っている鳥や植物から！
+          name: Hour of Code（アワー オブ コード）
         text-compression:
           title: テキスト圧縮
         allthethings:
@@ -4998,6 +4999,10 @@ ja:
           description_short: コンピューター サイエンス入門のすべての概念を学び、独自のアート、ストーリー、ゲームを作成しましょう。
         self-paced-pl-csp2-2023:
           title: モジュール2：Code. orgの操作方法
+        musiclab:
+          lessons:
+            lesson-3:
+              name: じゆうあそび
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -5311,3 +5316,148 @@ ja:
               display_name: 第二章
         csd-post-survey-2024:
           title: コース終了後アンケート
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: イベント
+            lesson-4:
+              name: 行動
+            lesson-5:
+              name: 次の手順
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 使用開始
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: くりかえし
+            lesson-4:
+              name: 条件
+            lesson-6:
+              name: 次の手順
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 使用開始
+          title: コンピューター・サイエンス入門
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
+            csp_unit1_2020:
+              display_name: 'ユニット1: デジタル情報'
+        csp2-2024:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'ユニット2: インターネット'
+        csp3-2024:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'ユニット3: アプリ設計入門'
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: アンケート
+            lessonGroup-3:
+              display_name: 内容
+            lessonGroup-5:
+              display_name: 代替レッスン
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-4:
+              display_name: 代替レッスン
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-4:
+              display_name: 代替レッスン
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-4:
+              display_name: 代替レッスン
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-4:
+              display_name: 代替レッスン
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-4:
+              display_name: 代替レッスン
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-5:
+              display_name: 代替レッスン
+        csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-4:
+              display_name: アンケート
+            lessonGroup-5:
+              display_name: 代替レッスン
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: 変数（へんすう）
+            csp_conditionals:
+              display_name: 条件
+            csp_functions:
+              display_name: 関数(かんすう)
+            csp_project:
+              display_name: プロジェクト
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: データ
+            lessonGroup-5:
+              display_name: コース終了後アンケート
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: リスト
+            lessonGroup-3:
+              display_name: くりかえし
+            lessonGroup-4:
+              display_name: トラバーサル
+            lessonGroup-5:
+              display_name: プロジェクト
+            lessonGroup-2:
+              display_name: コース終了後アンケート
+        csp7-2024:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: パラメータと戻り値
+            csp_libraries:
+              display_name: ライブラリ
+            lessonGroup-3:
+              display_name: コース終了後アンケート
+        csp8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: PTを作成
+            lessonGroup-3:
+              display_name: コース終了後アンケート
+        csp9-2024:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'ユニット9: データ'
+            lessonGroup-2:
+              display_name: コース終了後アンケート
+        csp10-2024:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'ユニット10: サイバーセキュリティとグローバルインパクト'
+            lessonGroup-2:
+              display_name: コース終了後アンケート
+        csp-post-survey-2024:
+          title: CS原則 のコース後アンケート

@@ -14,7 +14,7 @@
 #   (D) = master script downs interface
 #   (-) = master script does nothing with this
 
-if [ -x /lib/systemd/systemd-resolved ] ; then
+if systemctl is-enabled systemd-resolved > /dev/null 2>&1; then
         # For safety, first undefine the nasty default make_resolv_conf()
         make_resolv_conf() { : ; }
         case "$reason" in
@@ -30,7 +30,7 @@ if [ -x /lib/systemd/systemd-resolved ] ; then
               mkdir -p $statedir
 
               oldstate="$(mktemp)"
-              md5sum $statedir/isc-dhcp-v4-$interface.conf $statedir/isc-dhcp-v6-$interface.conf > $oldstate 2>&1
+              md5sum $statedir/isc-dhcp-v4-$interface.conf $statedir/isc-dhcp-v6-$interface.conf > $oldstate 2> /dev/null
               if [ -n "$new_domain_name_servers" ] ; then
                   cat <<EOF >$statedir/isc-dhcp-v4-$interface.conf
 [Resolve]
@@ -55,8 +55,12 @@ EOF
               fi
 
               newstate="$(mktemp)"
-              md5sum $statedir/isc-dhcp-v4-$interface.conf $statedir/isc-dhcp-v6-$interface.conf > $newstate 2>&1
+              md5sum $statedir/isc-dhcp-v4-$interface.conf $statedir/isc-dhcp-v6-$interface.conf > $newstate 2> /dev/null
               if ! cmp --quiet $oldstate $newstate; then
+                  # We need to reset-failed to reset the start limit counter,
+                  # in case we're processing more than StartLimitBurst interfaces
+                  # LP: #1939255
+                  systemctl reset-failed systemd-resolved.service
                   systemctl try-reload-or-restart systemd-resolved.service
               fi
 

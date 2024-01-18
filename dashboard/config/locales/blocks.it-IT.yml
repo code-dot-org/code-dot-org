@@ -1116,6 +1116,14 @@ it:
             '1': succo di limone
             '3': bicarbonato di sodio
             '5': entrambi
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': blu
+            '"red"': rosso
+          OPT:
+            '"large"': grande
+            '"small"': piccolo
       FunctionBlocks_communicate:
         text: Comunica {VAR1} con {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:

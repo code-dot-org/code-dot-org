@@ -53,7 +53,6 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     ],
     style: 'behavior_blocks',
     helpUrl: '/docs/spritelab/codestudio_defining-behaviors',
-    tooltip: '%{BKY_PROCEDURES_DEFNORETURN_TOOLTIP}',
     extensions: [
       'procedure_def_get_def_mixin',
       'procedure_def_var_mixin',
@@ -74,7 +73,11 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     type: BLOCK_TYPES.behaviorGet,
     message0: '%1 %2',
     args0: [
-      {type: 'field_label', name: 'NAME', text: '%{BKY_UNNAMED_KEY}'},
+      {
+        type: 'field_label_serializable',
+        name: 'NAME',
+        text: '%{BKY_UNNAMED_KEY}',
+      },
       {
         type: 'input_dummy',
         name: 'TOPROW',

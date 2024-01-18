@@ -180,7 +180,7 @@
           "dance_callout_11_b": "بلوک جدید!"
         },
         "CourseD_Dance_Party_11_5": {
-          "dance_party_11_5_groups": "برای بلوک‌های «همه اردک‌ها»، اینجا را ببینید"
+          "dance_party_11_5_groups": "برای بلوک‌های «همه اردک‌ها»، این قسمت را ببینید"
         },
         "CourseF_outbreak2": {
           "minitoolbox": "برای گسترش بلوک، اینجا را کلیک کنید.",
@@ -198,10 +198,10 @@
           "costumes_callout": "برای ساخت لباس جدید کلیک کنید"
         },
         "CourseF_outbreak7_-2022-2": {
-          "costumes_tab": "برای اضافه کردن لباس به پروژه خود اینجا را کلیک کنید."
+          "costumes_tab": "برای اضافه کردن نما به پروژه خود، روی این قسمت کلیک کنید."
         },
         "CourseF_outbreak7_2023": {
-          "costumes_tab": "برای اضافه کردن لباس به پروژه خود اینجا را کلیک کنید."
+          "costumes_tab": "برای اضافه کردن نما به پروژه خود، روی این قسمت کلیک کنید."
         },
         "Dance_2019_01": {
           "dance_callout_01": "نوع رقصنده را در اینجا انتخاب کنید."
@@ -243,7 +243,7 @@
           "dance_callout_11_b": "بلوک جدید!"
         },
         "Dance_Party_11_5": {
-          "dance_party_11_5_groups": "برای بلوک‌های «همه اردک‌ها»، اینجا را ببینید"
+          "dance_party_11_5_groups": "برای بلوک‌های «همه اردک‌ها»، این قسمت را ببینید"
         },
         "Fish Tank 3-validated2022": {
           "spritelab_comment": "برای گذاشتن یادداشت برای خود یا معلمتان در مورد نحوه عملکرد کد، از این بلوک استفاده کنید."
@@ -292,7 +292,7 @@
           "Infinity_repeat_callout": "بلوک های حرکت را داخل اینجا قرار دهید"
         },
         "MC HOC 2016 Level 2-2": {
-          "craft2_run_button_callout": "وقتی آماده شدید، روی «اجرا» بزنید تا برنامه خود را امتحان کنید."
+          "craft2_run_button_callout": "هر زمان که آماده بودید، روی «اجرا» بزنید تا بتوانید برنامه خود را امتحان کنید."
         },
         "MC HOC 2016 New Walk": {
           "MC_HOC_2016_New_Walk_callout2": "برای شروع حرکت، روی «اجرا» ضربه بزنید."
@@ -392,7 +392,7 @@
           "snowflake_dropdown": "از این منوی کشویی برای ساختن دانه های برف متفاوت استفاده کنید!"
         },
         "New Sprite Lab Project": {
-          "costumes_tab": "برای اضافه کردن لباس به پروژه خود اینجا را کلیک کنید."
+          "costumes_tab": "برای اضافه کردن نما به پروژه خود، روی این قسمت کلیک کنید."
         },
         "OPD-K5-forloops-5": {
           "courseF_bee_for4_1": "حلقه «برای» را در اینجا خواهید یافت!"
@@ -540,6 +540,9 @@
         },
         "Virtual Pet 6_2023": {
           "vp_costumes": "برای اضافه کردن لباس‌های جدید به پروژه خود، اینجا را کلیک کنید!"
+        },
+        "allthethings HOC Dance AI Customize": {
+          "ai_dance_callout_draft_level_6": "اینجا را کلیک کنید."
         },
         "behaviors 1": {
           "behaviors_edit": "برای مشاهده نحوه عملکرد این رفتار، اینجا را کلیک کنید."
@@ -1515,7 +1518,7 @@
           "": "اینجا را کلیک کنید!"
         },
         "courseE_aboutme_22022": {
-          "": "برای اضافه کردن لباس به پروژه خود اینجا را کلیک کنید."
+          "": "برای اضافه کردن نما به پروژه خود، روی این قسمت کلیک کنید."
         },
         "courseE_aboutme_2_2020": {
           "": "اینجا را کلیک کنید!"
@@ -1524,7 +1527,7 @@
           "": "اینجا را کلیک کنید!"
         },
         "courseE_aboutme_2_2023": {
-          "": "برای اضافه کردن لباس به پروژه خود اینجا را کلیک کنید."
+          "": "برای اضافه کردن نما به پروژه خود، روی این قسمت کلیک کنید."
         },
         "courseE_artist_functions2": {
           "courseD_artist_functions2_1": "با اجرای این بلوک سبز، تمام کدهای تابع اجرا می‌شود. هنرمند پس از ترسیم اولین مربع چه کاری باید انجام دهد؟"
@@ -2172,27 +2175,28 @@
           "hello_world_click_hint": "این بلوک رویداد را به فضای کاری خود اضافه کنید."
         },
         "coursee_helloworld_freeplay": {
-          "costumes_tab": "برای اضافه کردن لباس به پروژه خود اینجا را کلیک کنید."
+          "costumes_tab": "برای اضافه کردن نما به پروژه خود، روی این قسمت کلیک کنید."
         },
         "coursee_helloworld_freeplay_2023": {
-          "costumes_tab": "برای اضافه کردن لباس به پروژه خود اینجا را کلیک کنید."
+          "costumes_tab": "برای اضافه کردن نما به پروژه خود، روی این قسمت کلیک کنید."
         },
         "coursee_helloworld_say": {
           "hello_world_make_sprite": "از این بلوک برای ایجاد یک اسپرایت استفاده کنید.",
           "hello_world_say": "با استفاده از این بلوک اسپرایت‌ها را وادار به سخن گفتن کنید."
         },
         "coursee_helloworld_say_2023": {
-          "hello_world_make_sprite": "از این بلوک برای ایجاد یک جن استفاده کنید.",
-          "hello_world_say": "با استفاده از این بلوک را به جن صحبت می کنند."
+          "hello_world_make_sprite": "از این بلوک برای ایجاد یک اسپرایت استفاده کنید.",
+          "hello_world_say": "با استفاده از این بلوک، اسپرایت‌ها را وادار به سخن گفتن کنید."
         },
         "csc_animal_adaptations_bugs2": {
-          "hello_world_behavior_blocks": "از این بلوک با یکی از رفتارهای زیر استفاده کنید."
+          "hello_world_behavior_blocks": "از این بلوک به همراه یکی از رفتارهای زیر استفاده کنید."
         },
         "csc_animal_adaptations_predict_gamelab": {
           "behaviors_edit": "برای مشاهده نحوه عملکرد این رفتار، اینجا را کلیک کنید."
         },
         "dance_ai_code_at_measure": {
-          "ai_dance_callout_02_b": "⬆️ از این بلوک استفاده کنید."
+          "ai_dance_callout_02_b": "⬆️ از این بلوک استفاده کنید.",
+          "dance_callout_02": "بلوک افکت تولید هوش مصنوعی را در اینجا اضافه کنید."
         },
         "dance_ai_code_key_press": {
           "ai_dance_callout_02_b": "⬆️ از این بلوک استفاده کنید.",
@@ -2211,8 +2215,8 @@
           "dance_callout_01": "⬆️ از این بلوک استفاده کنید."
         },
         "ecosystems_helloworld_say_2023": {
-          "hello_world_make_sprite": "از این بلوک برای ایجاد یک جن استفاده کنید.",
-          "hello_world_say": "با استفاده از این بلوک را به جن صحبت می کنند."
+          "hello_world_make_sprite": "از این بلوک برای ایجاد یک اسپرایت استفاده کنید.",
+          "hello_world_say": "با استفاده از این بلوک، اسپرایت‌ها را وادار به سخن گفتن کنید."
         },
         "express_maze_debugging92022": {
           "express_maze_debugging9_2019_1": "بلوک‌ها را از جعبه ابزار به فضای کاری خود بکشانید."
@@ -2274,7 +2278,7 @@
           "hw_background_location": "از این بلوک برای تنظیم یک پس زمینه جدید استفاده کنید."
         },
         "helloworld_animals_behaviors": {
-          "hello_world_behavior_blocks": "از این بلوک با یکی از رفتارهای زیر استفاده کنید."
+          "hello_world_behavior_blocks": "از این بلوک به همراه یکی از رفتارهای زیر استفاده کنید."
         },
         "helloworld_animals_click": {
           "hw_Run": "برای اجرای کد روی این قسمت کلیک کنید."
@@ -2286,7 +2290,7 @@
           "hello_world_click_hint": "این بلوک رویداد را به فضای کاری خود اضافه کنید."
         },
         "helloworld_animals_freeplay": {
-          "costumes_tab": "برای اضافه کردن لباس به پروژه خود اینجا را کلیک کنید."
+          "costumes_tab": "برای اضافه کردن نما به پروژه خود، روی این قسمت کلیک کنید."
         },
         "helloworld_animals_location": {
           "pin": "پین"
@@ -2306,19 +2310,19 @@
           "hello_world_new": "بلوک جدید!"
         },
         "helloworld_bugs_behaviors_2023": {
-          "hello_world_behavior_blocks": "از این بلوک با یکی از رفتارهای زیر استفاده کنید."
+          "hello_world_behavior_blocks": "از این بلوک به همراه یکی از رفتارهای زیر استفاده کنید."
         },
         "helloworld_bunny_adaptation_2023": {
-          "hw_Run": "برای اجرای کد اینجا را کلیک کنید."
+          "hw_Run": "برای اجرای کد روی این قسمت کلیک کنید."
         },
         "helloworld_emoji_backgrounds": {
           "hw_background_location": "از این بلوک برای تنظیم یک پس زمینه جدید استفاده کنید."
         },
         "helloworld_emoji_behaviors": {
-          "hello_world_behavior_blocks": "از این بلوک با یکی از رفتارهای زیر استفاده کنید."
+          "hello_world_behavior_blocks": "از این بلوک به همراه یکی از رفتارهای زیر استفاده کنید."
         },
         "helloworld_emoji_click": {
-          "hw_Run": "برای اجرای کد اینجا را کلیک کنید."
+          "hw_Run": "برای اجرای کد روی این قسمت کلیک کنید."
         },
         "helloworld_emoji_costumes": {
           "hello_world_new": "بلوک جدید!"
@@ -2327,7 +2331,7 @@
           "hello_world_click_hint": "این بلوک رویداد را به فضای کاری خود اضافه کنید."
         },
         "helloworld_emoji_freeplay": {
-          "costumes_tab": "برای اضافه کردن لباس به پروژه خود اینجا را کلیک کنید."
+          "costumes_tab": "برای اضافه کردن نما به پروژه خود، روی این قسمت کلیک کنید."
         },
         "helloworld_emoji_location": {
           "pin": "پین"
@@ -2336,8 +2340,8 @@
           "pin": "پین"
         },
         "helloworld_emoji_say": {
-          "hello_world_make_sprite": "از این بلوک برای ایجاد یک جن استفاده کنید.",
-          "hello_world_say": "با استفاده از این بلوک را به جن صحبت می کنند."
+          "hello_world_make_sprite": "از این بلوک برای ایجاد یک اسپرایت استفاده کنید.",
+          "hello_world_say": "با استفاده از این بلوک، اسپرایت‌ها را وادار به سخن گفتن کنید."
         },
         "helloworld_emoji_sizes": {
           "hello_world_new": "بلوک جدید!",
@@ -2359,28 +2363,28 @@
           "hw_background_location": "از این بلوک برای تنظیم یک پس زمینه جدید استفاده کنید."
         },
         "helloworld_food_behaviors": {
-          "hello_world_behavior_blocks": "از این بلوک با یکی از رفتارهای زیر استفاده کنید."
+          "hello_world_behavior_blocks": "از این بلوک به همراه یکی از رفتارهای زیر استفاده کنید."
         },
         "helloworld_food_behaviors_2023": {
-          "hello_world_behavior_blocks": "از این بلوک با یکی از رفتارهای زیر استفاده کنید."
+          "hello_world_behavior_blocks": "از این بلوک به همراه یکی از رفتارهای زیر استفاده کنید."
         },
         "helloworld_food_behaviors_soccer-2022": {
-          "hello_world_behavior_blocks": "از این بلوک با یکی از رفتارهای زیر استفاده کنید."
+          "hello_world_behavior_blocks": "از این بلوک به همراه یکی از رفتارهای زیر استفاده کنید."
         },
         "helloworld_food_behaviors_space-2022": {
-          "hello_world_behavior_blocks": "از این بلوک با یکی از رفتارهای زیر استفاده کنید."
+          "hello_world_behavior_blocks": "از این بلوک به همراه یکی از رفتارهای زیر استفاده کنید."
         },
         "helloworld_food_click": {
-          "hw_Run": "برای اجرای کد اینجا را کلیک کنید."
+          "hw_Run": "برای اجرای کد روی این قسمت کلیک کنید."
         },
         "helloworld_food_click_2023": {
-          "hw_Run": "برای اجرای کد اینجا را کلیک کنید."
+          "hw_Run": "برای اجرای کد روی این قسمت کلیک کنید."
         },
         "helloworld_food_click_soccer-2022": {
-          "hw_Run": "برای اجرای کد اینجا را کلیک کنید."
+          "hw_Run": "برای اجرای کد روی این قسمت کلیک کنید."
         },
         "helloworld_food_click_space-2022": {
-          "hw_Run": "ابتدا اینجا را کلیک کنید!"
+          "hw_Run": "ابتدا روی این قسمت کلیک کنید!"
         },
         "helloworld_food_costumes": {
           "hello_world_new": "بلوک جدید!"
@@ -2404,13 +2408,13 @@
           "hello_world_click_hint": "این بلوک رویداد را به فضای کاری خود اضافه کنید."
         },
         "helloworld_food_freeplay": {
-          "costumes_tab": "برای اضافه کردن لباس به پروژه خود اینجا را کلیک کنید."
+          "costumes_tab": "برای اضافه کردن نما به پروژه خود، روی این قسمت کلیک کنید."
         },
         "helloworld_food_freeplay_soccer-2022": {
-          "costumes_tab": "برای اضافه کردن لباس به پروژه خود اینجا را کلیک کنید."
+          "costumes_tab": "برای اضافه کردن نما به پروژه خود، روی این قسمت کلیک کنید."
         },
         "helloworld_food_freeplay_space-2022": {
-          "costumes_tab": "برای اضافه کردن لباس به پروژه خود اینجا را کلیک کنید."
+          "costumes_tab": "برای اضافه کردن نما به پروژه خود، روی این قسمت کلیک کنید."
         },
         "helloworld_food_location": {
           "pin": "پین"
@@ -2437,16 +2441,16 @@
           "pin": "پین"
         },
         "helloworld_food_say": {
-          "hello_world_make_sprite": "از این بلوک برای ایجاد یک جن استفاده کنید.",
-          "hello_world_say": "با استفاده از این بلوک را به جن صحبت می کنند."
+          "hello_world_make_sprite": "از این بلوک برای ایجاد یک اسپرایت استفاده کنید.",
+          "hello_world_say": "با استفاده از این بلوک، اسپرایت‌ها را وادار به سخن گفتن کنید."
         },
         "helloworld_food_say_soccer-2022": {
-          "hello_world_make_sprite": "از این بلوک برای ایجاد یک جن استفاده کنید.",
-          "hello_world_say": "با استفاده از این بلوک را به جن صحبت می کنند."
+          "hello_world_make_sprite": "از این بلوک برای ایجاد یک اسپرایت استفاده کنید.",
+          "hello_world_say": "با استفاده از این بلوک، اسپرایت‌ها را وادار به سخن گفتن کنید."
         },
         "helloworld_food_say_space-2022": {
-          "hello_world_make_sprite": "از این بلوک برای ایجاد یک جن استفاده کنید.",
-          "hello_world_say": "با استفاده از این بلوک را به جن صحبت می کنند."
+          "hello_world_make_sprite": "از این بلوک برای ایجاد یک اسپرایت استفاده کنید.",
+          "hello_world_say": "با استفاده از این بلوک، اسپرایت‌ها را وادار به سخن گفتن کنید."
         },
         "helloworld_food_sizes": {
           "hello_world_new": "بلوک جدید!",
@@ -2480,10 +2484,10 @@
           "hw_background_location": "از این بلوک برای تنظیم یک پس زمینه جدید استفاده کنید."
         },
         "helloworld_retro_behaviors": {
-          "hello_world_behavior_blocks": "از این بلوک با یکی از رفتارهای زیر استفاده کنید."
+          "hello_world_behavior_blocks": "از این بلوک به همراه یکی از رفتارهای زیر استفاده کنید."
         },
         "helloworld_retro_click": {
-          "hw_Run": "برای اجرای کد اینجا را کلیک کنید."
+          "hw_Run": "برای اجرای کد روی این قسمت کلیک کنید."
         },
         "helloworld_retro_costumes": {
           "hello_world_new": "بلوک جدید!"
@@ -2492,7 +2496,7 @@
           "hello_world_click_hint": "این بلوک رویداد را به فضای کاری خود اضافه کنید."
         },
         "helloworld_retro_freeplay": {
-          "costumes_tab": "برای اضافه کردن لباس به پروژه خود اینجا را کلیک کنید."
+          "costumes_tab": "برای اضافه کردن نما به پروژه خود، روی این قسمت کلیک کنید."
         },
         "helloworld_retro_location": {
           "pin": "پین"
@@ -2501,8 +2505,8 @@
           "pin": "پین"
         },
         "helloworld_retro_say": {
-          "hello_world_make_sprite": "از این بلوک برای ایجاد یک جن استفاده کنید.",
-          "hello_world_say": "با استفاده از این بلوک را به جن صحبت می کنند."
+          "hello_world_make_sprite": "از این بلوک برای ایجاد یک اسپرایت استفاده کنید.",
+          "hello_world_say": "با استفاده از این بلوک، اسپرایت‌ها را وادار به سخن گفتن کنید."
         },
         "helloworld_retro_sizes": {
           "hello_world_new": "بلوک جدید!",

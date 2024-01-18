@@ -61,6 +61,7 @@ mn:
             шинжлэх ухааны үндсийг оролдоорой!
           description_short: Олон хөгжилтэй дүрээр компьютерын шинжлэх ухааны үндсийг
             оролдоорой!
+          name: Кодын цаг
           student_description: Ууртай шувуу, Ургамал ба Зомбигоос сонгосон дүрээр
             компьютерын шинжлэх ухааны үндсийг оролдоорой!
           title: Кодын цаг 2013
@@ -1142,6 +1143,10 @@ mn:
               name: Жава Лаб
             lesson-6:
               name: Гогцоонууд
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Судалгаа
         csa1-validation-pilot-2022:
           lesson_groups:
             lessonGroup-5:
@@ -1165,6 +1170,10 @@ mn:
             lessonGroup-5:
               display_name: Судалгаа
         csa8-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Судалгаа
+        csa8-2024:
           lesson_groups:
             lessonGroup-4:
               display_name: Судалгаа
@@ -2915,6 +2924,8 @@ mn:
           title: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
         csp-post-survey-2023:
           title: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
+        csp-post-survey-2024:
+          title: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
         csp1-2017:
           description: Энэ нэгж нь компьютерт дижитал мэдээллийг илэрхийлэх, хүмүүс
             болон тооцоолох төхөөрөмжийн хооронд дамжуулах хэрэгцээ шаардлагаас үүдэлтэй
@@ -3002,6 +3013,12 @@ mn:
               display_name: Судалгаа
             csp_unit1_2020:
               display_name: '1-р нэгж: Дижитал мэдээлэл'
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Судалгаа
+            csp_unit1_2020:
+              display_name: '1-р нэгж: Дижитал мэдээлэл'
         csp1-dlp:
           description: 'Энэ бол Code.org CSP-ийн сургагч багш нарт гүнзгий суралцах
             төлөвлөгөөний 1-р хэсэг юм. Эндээс Code.org CSP-ийн сургалтын хөтөлбөрийн
@@ -3073,6 +3090,10 @@ mn:
             lessonGroup-2:
               display_name: Хичээлийн дараах судалгаа
         csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Хичээлийн дараах судалгаа
+        csp10-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Хичээлийн дараах судалгаа
@@ -3180,6 +3201,10 @@ mn:
             csp_unit2_2020:
               display_name: 'Нэгж 2: Интернэт'
         csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Нэгж 2: Интернэт'
+        csp2-2024:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Нэгж 2: Интернэт'
@@ -3465,6 +3490,16 @@ mn:
               display_name: Төсөл
             csp_variables:
               display_name: Хувьсагчууд
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Нөхцлүүд
+            csp_functions:
+              display_name: Функцүүд
+            csp_project:
+              display_name: Төсөл
+            csp_variables:
+              display_name: Хувьсагчууд
         csp4-dlp:
           description: 'Энэ бол Code.org CSP-ийн сургагч багш нарт гүнзгий суралцах
             төлөвлөгөөний 4-р хэсэг юм. Эндээс Code.org CSP-ийн сургалтын хөтөлбөрийн
@@ -3658,6 +3693,12 @@ mn:
               display_name: Нэвтрэлтүүд
             lessonGroup-5:
               display_name: Хичээлийн дараах судалгаа
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Өгөгдөл
+            lessonGroup-5:
+              display_name: Хичээлийн дараах судалгаа
         csp5-dlp:
           description: 'Энэ бол Code.org CSP-ийн сургагч багш нарт гүнзгий суралцах
             төлөвлөгөөний 5-р хэсэг юм. Эндээс Code.org CSP-ийн сургалтын хөтөлбөрийн
@@ -3761,6 +3802,18 @@ mn:
               display_name: Нэвтрэлтүүд
             lessonGroup-5:
               display_name: Төсөл
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Жагсаалтууд
+            lessonGroup-2:
+              display_name: Хичээлийн дараах судалгаа
+            lessonGroup-3:
+              display_name: Гогцоонууд
+            lessonGroup-4:
+              display_name: Нэвтрэлтүүд
+            lessonGroup-5:
+              display_name: Төсөл
         csp6-pilot:
           lesson_groups:
             required:
@@ -3808,6 +3861,14 @@ mn:
               display_name: Параметрүүд ба буцаах утгууд
             lessonGroup-3:
               display_name: Хичээлийн дараах судалгаа
+        csp7-2024:
+          lesson_groups:
+            csp_libraries:
+              display_name: Номын сангууд
+            csp_parameters_return_values:
+              display_name: Параметрүүд ба буцаах утгууд
+            lessonGroup-3:
+              display_name: Хичээлийн дараах судалгаа
         csp7-pilot:
           lesson_groups:
             csp_libraries:
@@ -3836,6 +3897,12 @@ mn:
             lessonGroup-3:
               display_name: Хичээлийн дараах судалгаа
         csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: РТ-г үүсгэх
+            lessonGroup-3:
+              display_name: Хичээлийн дараах судалгаа
+        csp8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: РТ-г үүсгэх
@@ -3871,6 +3938,12 @@ mn:
             lessonGroup-2:
               display_name: Хичээлийн дараах судалгаа
         csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Нэгж 9: Өгөгдөл'
+            lessonGroup-2:
+              display_name: Хичээлийн дараах судалгаа
+        csp9-2024:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Нэгж 9: Өгөгдөл'
@@ -4778,6 +4851,10 @@ mn:
           student_description: Майнкрафтын өөрийн ертөнц дээрээ амьтад болон Майнкрафтын
             бусад бүтээлийг программчлаарай.
           title: Майнкрафт Кодын цаг Дизайнер
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Чөлөөтэй тоглох
         netsim:
           title: Интернет симулятор
         nevada-standards-aligned-fifth-grade-2023:
@@ -5082,6 +5159,29 @@ mn:
           lesson_groups:
             lessonGroup-2:
               display_name: Мэндчилгээ
+        self-paced-pl-k5-2024-1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Эхлүүлэх
+          lessons:
+            lesson-3:
+              name: Гогцоонууд
+            lesson-4:
+              name: Нөхцлүүд
+            lesson-6:
+              name: Дараагийн Алхамууд
+          title: Компьютерын шинжлэх ухааны танилцуулга
+        self-paced-pl-k5-2024-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Эхлүүлэх
+          lessons:
+            lesson-3:
+              name: Үйл явдлууд
+            lesson-4:
+              name: Зан чанар
+            lesson-5:
+              name: Дараагийн Алхамууд
         soccer:
           name: хөлбөмбөг
         spelling-bee:

@@ -405,6 +405,12 @@ se:
               display_name: Iskkadeapmi
             lessonGroup-3:
               display_name: Sisdoallu
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Iskkadeapmi
+            lessonGroup-3:
+              display_name: Sisdoallu
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -435,6 +441,10 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -459,6 +469,10 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -480,6 +494,10 @@ se:
             lessonGroup-2:
               display_name: Sisdoallu
         csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
@@ -513,6 +531,10 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -537,6 +559,10 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -558,6 +584,10 @@ se:
             lessonGroup-2:
               display_name: Sisdoallu
         csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
@@ -588,6 +618,12 @@ se:
             lessonGroup-5:
               display_name: Iskkadeapmi
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+            lessonGroup-4:
+              display_name: Iskkadeapmi
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
@@ -1197,6 +1233,10 @@ se:
           lesson_groups:
             cspSurvey:
               display_name: Iskkadeapmi
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
         csp1-dlp:
           lesson_groups:
             content:
@@ -1228,6 +1268,10 @@ se:
             lessonGroup-2:
               display_name: Maŋŋil Kurssa Iskkadeapmi
         csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp10-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Maŋŋil Kurssa Iskkadeapmi
@@ -1422,6 +1466,10 @@ se:
           lesson_groups:
             lessonGroup-5:
               display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp5-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
         csp5-dlp:
           lesson_groups:
             content:
@@ -1458,6 +1506,10 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
         csp6-pilot:
           lesson_groups:
             content:
@@ -1475,6 +1527,10 @@ se:
             lessonGroup-3:
               display_name: Maŋŋil Kurssa Iskkadeapmi
         csp7-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp7-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: Maŋŋil Kurssa Iskkadeapmi
@@ -1496,6 +1552,12 @@ se:
               display_name: Ráhkat PT
             lessonGroup-3:
               display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ráhkat PT
+            lessonGroup-3:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
         csp9-2020:
           lesson_groups:
             cspSurvey2020:
@@ -1509,6 +1571,10 @@ se:
             lessonGroup-2:
               display_name: Maŋŋil Kurssa Iskkadeapmi
         csp9-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp9-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Maŋŋil Kurssa Iskkadeapmi
@@ -1870,6 +1936,10 @@ se:
             du iežat Minecraft-veršuvnnas.
           student_description: Programmere elliid dahje eará Minecraft heakkalaččaid
             du iežat Minecraft-veršuvnnas.
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Friddja Speallan
         nevada-standards-aligned-fifth-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1949,6 +2019,24 @@ se:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
             lessonGroup-3:
               display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+        self-paced-pl-k5-2024-1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Álgge
+          lessons:
+            lesson-6:
+              name: Boahttevaš Lávkkit
+        self-paced-pl-k5-2024-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Álgge
+          lessons:
+            lesson-3:
+              name: Dáhpáhusaid
+            lesson-4:
+              name: Láhttemat
+            lesson-5:
+              name: Boahttevaš Lávkkit
         spelling-bee:
           title: Stávengilvu
         spritelab-effects-challenge:

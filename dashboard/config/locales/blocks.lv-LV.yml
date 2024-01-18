@@ -214,6 +214,11 @@ lv:
             '"space"': telpa
             '"up"': uz augšu
             '"x"': x
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': zilās krāsas
+            '"red"': sarkanās krāsas
       Mikelab_changePropBy:
         options:
           PROPERTY:

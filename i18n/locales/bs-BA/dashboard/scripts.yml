@@ -108,6 +108,7 @@ bs:
           description: Pokušajte osnove informatike s likovima iz Angry Birds i Plants vs. Zombies!
           description_short: Pokušaj osnove računarstva sa mnogim zabavnim karakterima!
           student_description: Pokušajte osnove informatike s likovima iz Angry Birds i Plants vs. Zombies!
+          name: Sat Kodiranja
         CodeStudioPuzzleChallenge:
           title: Izazov Studija Kodiranja
           description: Isprobaj ove zabavne zadatke kodiranja. Daj sve od sebe!
@@ -1282,6 +1283,10 @@ bs:
               display_name: Digitalno Državljanstvo
             lessonGroup-4:
               display_name: Varijable
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Slobodno Igranje
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -1372,3 +1377,44 @@ bs:
             lessonGroup-3:
               display_name: 'Poglavlje 2: Rješavanje problema podataka'
           description_short: Naučite kako ljudi koriste računala za rješavanje problema podataka.
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Lekcija 1
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Lekcija 1
+            lesson-3:
+              name: Događaji
+            lesson-5:
+              name: Slijedeći Koraci
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Lekcija 1
+            lesson-3:
+              name: Petlje
+            lesson-4:
+              name: Uvjeti
+            lesson-6:
+              name: Slijedeći Koraci
+          title: Uvod u računarstvo
+        csp2-2024:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Jedinica 2: internet'
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: Varijable
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Liste
+            lessonGroup-3:
+              display_name: Petlje

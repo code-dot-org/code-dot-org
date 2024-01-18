@@ -77,6 +77,7 @@ el:
             από τα Θυμωμένα Πουλιά και τα Ζόμπι εναντίων Φυτών!
           description_short: Δοκιμάστε τα βασικά της επιστήμης της πληροφορικής με
             πολλούς διασκεδαστικούς χαρακτήρες!
+          name: Ώρα του Κώδικα
           student_description: Δοκιμάστε τα βασικά της επιστήμης των υπολογιστών με
             χαρακτήρες από τα Θυμωμένα Πουλιά και τα Ζόμπι εναντίων Φυτών!
           title: Ώρα του Κώδικα 2013
@@ -1037,6 +1038,12 @@ el:
               name: Εργαστήριο Java
             lesson-6:
               name: Βρόχοι
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Έρευνα
+            lessonGroup-3:
+              display_name: Περιεχόμενο
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1070,6 +1077,10 @@ el:
           lessons:
             lesson-4:
               name: Μεταβλητές
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1099,6 +1110,10 @@ el:
               name: Μονοδιάστατες (1D) συστοιχίες
             lesson-3:
               name: Βρόχοι Για
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1120,6 +1135,10 @@ el:
             lessonGroup-2:
               display_name: Περιεχόμενο
         csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Περιεχόμενο
@@ -1153,6 +1172,10 @@ el:
           lesson_groups:
             lessonGroup-2:
               display_name: Περιεχόμενο
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1177,6 +1200,10 @@ el:
           lesson_groups:
             lessonGroup-2:
               display_name: Περιεχόμενο
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1198,6 +1225,10 @@ el:
             lessonGroup-2:
               display_name: Περιεχόμενο
         csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Περιεχόμενο
@@ -1228,6 +1259,12 @@ el:
             lessonGroup-5:
               display_name: Έρευνα
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+            lessonGroup-4:
+              display_name: Έρευνα
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Περιεχόμενο
@@ -1674,6 +1711,10 @@ el:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Έρευνα
         csp1-dlp:
           lesson_groups:
             content:
@@ -1861,6 +1902,16 @@ el:
               display_name: Έργο
             csp_variables:
               display_name: Μεταβλητές
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Συνθήκες
+            csp_functions:
+              display_name: Συναρτήσεις
+            csp_project:
+              display_name: Έργο
+            csp_variables:
+              display_name: Μεταβλητές
         csp4-dlp:
           lesson_groups:
             content:
@@ -1955,6 +2006,10 @@ el:
               display_name: Βρόχοι
             csp_project:
               display_name: Έργο
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Δεδομένα
         csp5-dlp:
           lesson_groups:
             content:
@@ -2005,6 +2060,14 @@ el:
               display_name: Βρόχοι
             lessonGroup-5:
               display_name: Έργο
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Λίστες
+            lessonGroup-3:
+              display_name: Βρόχοι
+            lessonGroup-5:
+              display_name: Έργο
         csp6-pilot:
           lesson_groups:
             content:
@@ -2036,6 +2099,10 @@ el:
             csp_libraries:
               display_name: Βιβλιοθήκες
         csp7-2023:
+          lesson_groups:
+            csp_libraries:
+              display_name: Βιβλιοθήκες
+        csp7-2024:
           lesson_groups:
             csp_libraries:
               display_name: Βιβλιοθήκες
@@ -2558,6 +2625,10 @@ el:
           student_description: Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft στην
             δικιά σου έκδοση του Minecraft.
           title: Σχεδιαστής Minecraft
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Ελεύθερο παιχνίδι
         netsim:
           title: Προσομοιωτής Διαδικτύου
         nevada-standards-aligned-fifth-grade-2023:
@@ -3094,6 +3165,19 @@ el:
           title: 'Ενότητα 2: Πλοήγηση στο Code.org'
         self-paced-pl-csp2-2023:
           title: 'Ενότητα 2: Πλοήγηση στο Code.org'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Βρόχοι
+            lesson-4:
+              name: Συνθήκες
+          title: Εισαγωγή στην Επιστήμη των Υπολογιστών
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Συμβάντα
+            lesson-4:
+              name: Συμπεριφορές
         soccer:
           description: Δημιουργήστε ένα παιχνίδι ποδοσφαίρου
           description_short: Δημιουργήστε ένα παιχνίδι ποδοσφαίρου

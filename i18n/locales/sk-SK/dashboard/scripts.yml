@@ -104,6 +104,7 @@ sk:
           description: Vyskúšaj si základy informatiky s postavami z Angry Birds a Plants vs. Zombies!
           description_short: Vyskúšaj si základy informatiky s mnohými zábavnými postavami!
           student_description: Vyskúšaj si základy informatiky s postavami z Angry Birds a Plants vs. Zombies!
+          name: Hodina Kódu
         CodeStudioPuzzleChallenge:
           description_short: Vyzvite sa!
         Tutorial Video - Code Studio Puzzle Challenge:
@@ -4155,6 +4156,10 @@ sk:
               display_name: Záverečný projekt
           description_audience: Vek 9-13
           description_short: Nauč sa všetky koncepty z kurzu Základy informatiky a vytvor vlastné umelecké dielo, príbeh alebo hru.
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Voľná hra
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -4431,3 +4436,141 @@ sk:
           title: Umelá inteligencia a strojové učenie
         csd-post-survey-2024:
           title: Hodnotenie kurzu
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Udalosti
+            lesson-4:
+              name: Správanie
+            lesson-5:
+              name: Ďalšie kroky
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Začíname
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Cykly
+            lesson-4:
+              name: Podmienené príkazy
+            lesson-6:
+              name: Ďalšie kroky
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Začíname
+          title: Úvod do informatiky
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Dotazník
+            csp_unit1_2020:
+              display_name: "(staré) Lekcia 2: Digitálne informácie"
+        csp2-2024:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(staré) Lekcia 2: Internet"
+          description: Táto lekcia vám odhalí ako je internet nadizajnovaný tak, aby medzi sebou prepájal miliardy ľudí a zariadení. Naučíte sa ako  fungujú rozdielne internetové protokoly a dokonca si ich aj sami postavíte pomocou internetového simulátora. Potom sa spoločne zamyslíme aký dopad má internet na súčasný život, aj ten dobrý aj ten zlý.
+          student_description: Táto lekcia vám odhalí ako je internet nadizajnovaný tak, aby medzi sebou prepájal miliardy ľudí a zariadení. Naučíte sa ako  fungujú rozdielne internetové protokoly a dokonca si ich aj sami postavíte pomocou internetového simulátora. Potom sa spoločne zamyslíme aký dopad má internet na súčasný život, aj ten dobrý aj ten zlý.
+          description_short: Vystavajte si internet od základov pomocou internetového simulátora
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dotazník
+            lessonGroup-3:
+              display_name: Obsah
+            lessonGroup-5:
+              display_name: Alternatívne lekcie
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-4:
+              display_name: Alternatívne lekcie
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-4:
+              display_name: Alternatívne lekcie
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-4:
+              display_name: Alternatívne lekcie
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-4:
+              display_name: Alternatívne lekcie
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-4:
+              display_name: Alternatívne lekcie
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-5:
+              display_name: Alternatívne lekcie
+        csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-4:
+              display_name: Dotazník
+            lessonGroup-5:
+              display_name: Alternatívne lekcie
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: Premenné
+            csp_conditionals:
+              display_name: Podmienené príkazy
+            csp_functions:
+              display_name: Funkcie
+            csp_project:
+              display_name: Projekt
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Dáta
+            lessonGroup-5:
+              display_name: Hodnotenie kurzu
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Zoznamy
+            lessonGroup-3:
+              display_name: Cykly
+            lessonGroup-4:
+              display_name: Prechody
+            lessonGroup-5:
+              display_name: Projekt
+            lessonGroup-2:
+              display_name: Hodnotenie kurzu
+        csp7-2024:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parametre a Hodnoty návratnosti
+            csp_libraries:
+              display_name: Knižnice
+            lessonGroup-3:
+              display_name: Hodnotenie kurzu
+        csp8-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Hodnotenie kurzu
+        csp9-2024:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(staré) Lekcia 9: Údaje"
+            lessonGroup-2:
+              display_name: Hodnotenie kurzu
+        csp10-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hodnotenie kurzu

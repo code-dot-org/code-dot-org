@@ -323,7 +323,8 @@ const styles = {
     paddingBottom: 10,
   },
   container: {
-    borderColor: color.teal,
+    backgroundColor: 'var(--neutral_white)',
+    border: '1px solid var(--neutral_dark20)',
     borderWidth: 'thin',
     borderStyle: 'solid',
     padding: '10px 15px 10px 15px',

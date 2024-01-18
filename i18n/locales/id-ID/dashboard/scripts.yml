@@ -117,6 +117,7 @@ id:
           description: Cobalah dasar-dasar ilmu komputer dengan karakter dari Angry Bird dan Plants vs. Zombies!
           description_short: Coba dasar-dasar ilmu komputer dengan banyak karakter yang menyenangkan!
           student_description: Cobalah dasar-dasar ilmu komputer dengan karakter dari Angry Bird dan Plants vs. Zombies!
+          name: Jam kode
         CodeStudioPuzzleChallenge:
           title: Tantangan Puzzle Kode Studio
           description: Cobalah ini coding puzzle yang menyenangkan ini. Lakukan yang terbaik!
@@ -5285,6 +5286,10 @@ id:
           description_short: Pelajari seluruh konsep dalam dasar dasar ilmu komputer dan buat seni, cerita atau permainan anda sendiri.
         self-paced-pl-csp2-2023:
           title: 'Modul 2: Menavigasi Code.org'
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Permainan Gratis
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -5624,3 +5629,156 @@ id:
               display_name: Chapter 2
         csd-post-survey-2024:
           title: Survei Pasca Kursus
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Pelajaran 1
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Pelajaran 1
+            lesson-3:
+              name: kegiatan
+            lesson-4:
+              name: Perilaku
+            lesson-5:
+              name: Langkah berikutnya
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dapat Dimulai
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Pelajaran 1
+            lesson-3:
+              name: Loop
+            lesson-4:
+              name: Kondisi
+            lesson-6:
+              name: Langkah berikutnya
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dapat Dimulai
+          title: Perkenalan ilmu komputer
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Survei
+            csp_unit1_2020:
+              display_name: "(Lama) Unit 1: Informasi Digital"
+        csp2-2024:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Unit 2: Internet'
+        csp3-2024:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Unit 3: Pengenalan Desain Aplikasi'
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Survei
+            lessonGroup-3:
+              display_name: Konten
+            lessonGroup-5:
+              display_name: Pelajaran Alternatif
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Pelajaran Alternatif
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Pelajaran Alternatif
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Pelajaran Alternatif
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Pelajaran Alternatif
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Pelajaran Alternatif
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-5:
+              display_name: Pelajaran Alternatif
+        csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Survei
+            lessonGroup-5:
+              display_name: Pelajaran Alternatif
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: variabel
+            csp_conditionals:
+              display_name: Kondisi
+            csp_functions:
+              display_name: fungsi
+            csp_project:
+              display_name: Proyek
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Data
+            lessonGroup-5:
+              display_name: Survei Pasca Kursus
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: List
+            lessonGroup-3:
+              display_name: Loop
+            lessonGroup-4:
+              display_name: Melintang
+            lessonGroup-5:
+              display_name: Proyek
+            lessonGroup-2:
+              display_name: Survei Pasca Kursus
+        csp7-2024:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parameter dan Nilai Balik
+            csp_libraries:
+              display_name: Perpustakaan
+            lessonGroup-3:
+              display_name: Survei Pasca Kursus
+        csp8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Buat PT
+            lessonGroup-3:
+              display_name: Survei Pasca Kursus
+        csp9-2024:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Unit 9: Data'
+            lessonGroup-2:
+              display_name: Survei Pasca Kursus
+        csp10-2024:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: Unit 10 - Cybersecurity dan Dampak Global
+            lessonGroup-2:
+              display_name: Survei Pasca Kursus
+        csp-post-survey-2024:
+          title: Survei Pascakursus CS Principles

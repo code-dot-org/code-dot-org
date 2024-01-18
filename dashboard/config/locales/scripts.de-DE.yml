@@ -162,6 +162,7 @@ de:
             Birds und Pflanzen gegen Zombies!
           description_short: Lerne die Grundlagen der Computertechnologie mit Deinen
             Lieblingsfiguren kennen!
+          name: Hour of Code
           student_description: Teste die Grundlagen der Informatik mit Charakteren
             aus Angry Birds und Pflanzen gegen Zombies!
           title: Hour of Code 2013
@@ -1727,6 +1728,14 @@ de:
               name: Java-Labor
             lesson-6:
               name: Schleifen
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Umfrage
+            lessonGroup-3:
+              display_name: Inhalt
+            lessonGroup-5:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1768,6 +1777,12 @@ de:
           lessons:
             lesson-4:
               name: Variablen
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1805,6 +1820,12 @@ de:
               name: Eindimensionale (1D) Arrays
             lesson-3:
               name: Schleifen mit dem Wiederhol-Block
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1831,6 +1852,12 @@ de:
             lessonGroup-2:
               display_name: Inhalt
         csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -1873,6 +1900,12 @@ de:
               display_name: Inhalt
             lessonGroup-4:
               display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1903,6 +1936,12 @@ de:
             lessonGroup-5:
               display_name: Sandbox
         csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa6-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -1943,6 +1982,12 @@ de:
           lessons:
             lesson-6:
               name: Geistiges Eigentum
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-5:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1976,6 +2021,14 @@ de:
             lessonGroup-5:
               display_name: Umfrage
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Umfrage
+            lessonGroup-5:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -4133,6 +4186,8 @@ de:
           title: Befragung zu „Grundsätze der Informatik“ nach dem Kurs
         csp-post-survey-2023:
           title: Befragung zu „Grundsätze der Informatik“ nach dem Kurs
+        csp-post-survey-2024:
+          title: Befragung zu „Grundsätze der Informatik“ nach dem Kurs
         csp-pre-survey:
           name: csp-vor-befragung
           title: CS-Prinzipien Vor-Befragung
@@ -4222,6 +4277,12 @@ de:
             csp_unit1_2020:
               display_name: 'Einheit 1: Digitale Informationen'
         csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Umfrage
+            csp_unit1_2020:
+              display_name: 'Einheit 1: Digitale Informationen'
+        csp1-2024:
           lesson_groups:
             cspSurvey:
               display_name: Umfrage
@@ -4330,6 +4391,12 @@ de:
             lessonGroup-2:
               display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
         csp10-2023:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Lerneinheit 10: Cybersicherheit und globale Auswirkungen'
+            lessonGroup-2:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csp10-2024:
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Lerneinheit 10: Cybersicherheit und globale Auswirkungen'
@@ -4499,6 +4566,17 @@ de:
             Sie, wie die verschiedenen Protokolle des Internets funktionieren, und
             erstellen Sie sie mit dem Internet-Simulator selbst. Denken Sie dann an
             die guten und schlechten Auswirkungen des Internets auf das moderne Leben.
+        csp2-2024:
+          description_short: Erstellen Sie das Internet mit dem Internet-Simulator
+            von Grund auf.
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Lektion 2: Das Internet'
+          student_description: Diese Einheit zeigt, wie das Internet konzipiert wurde,
+            um Milliarden von Geräten und Menschen miteinander zu verbinden. Erfahren
+            Sie, wie die verschiedenen Protokolle des Internets funktionieren, und
+            erstellen Sie sie mit dem Internet-Simulator selbst. Denken Sie dann an
+            die guten und schlechten Auswirkungen des Internets auf das moderne Leben.
         csp2-dlp:
           description: Dies ist Lerneinheit 2 des Plans für Vertieftes Lernen von
             Code.org - Grundsätze der Informatik für Moderatoren in der Ausbildung.
@@ -4649,6 +4727,10 @@ de:
             csp_unit3_2020:
               display_name: 'Lerneinheit 3: Einführung in das App Design '
         csp3-2023:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Lerneinheit 3: Einführung in das App Design '
+        csp3-2024:
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Lerneinheit 3: Einführung in das App Design '
@@ -4902,6 +4984,16 @@ de:
               display_name: Projekt
             csp_variables:
               display_name: Variablen
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Bedingungen
+            csp_functions:
+              display_name: Funktionen
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: Variablen
         csp4-dlp:
           description: Dies ist Lerneinheit 4 des Plans für Vertieftes Lernen von
             Code.org - Grundsätze der Informatik für Moderatoren in der Ausbildung.
@@ -5119,6 +5211,12 @@ de:
               display_name: Traversierungen
             lessonGroup-5:
               display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Daten
+            lessonGroup-5:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
         csp5-dlp:
           description: Dies ist Lerneinheit 5 des Plans für Vertieftes Lernen von
             Code.org - Grundsätze der Informatik für Moderatoren in der Ausbildung.
@@ -5265,6 +5363,18 @@ de:
               display_name: Traversierungen
             lessonGroup-5:
               display_name: Projekt
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listen
+            lessonGroup-2:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+            lessonGroup-3:
+              display_name: Schleifen
+            lessonGroup-4:
+              display_name: Traversierungen
+            lessonGroup-5:
+              display_name: Projekt
         csp6-pilot:
           lesson_groups:
             content:
@@ -5320,6 +5430,14 @@ de:
               display_name: Parameter und Rückgabewerte
             lessonGroup-3:
               display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csp7-2024:
+          lesson_groups:
+            csp_libraries:
+              display_name: Bibliotheken
+            csp_parameters_return_values:
+              display_name: Parameter und Rückgabewerte
+            lessonGroup-3:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
         csp7-pilot:
           lesson_groups:
             csp_libraries:
@@ -5358,6 +5476,12 @@ de:
               display_name: PT Erstellen
             lessonGroup-3:
               display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csp8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: PT Erstellen
+            lessonGroup-3:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
         csp8-pilot:
           title: Grundsätze der Informatik Lerneinheit 8 Pilot - PT-Vorbereitung erstellen
         csp8-pilot-staging:
@@ -5391,6 +5515,12 @@ de:
             lessonGroup-2:
               display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
         csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Lektion 9: Daten'
+            lessonGroup-2:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csp9-2024:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Lektion 9: Daten'
@@ -6767,6 +6897,10 @@ de:
           student_description: Baue ein Minecraft-Spiel. Erschaffe deine eigene Version
             von Hühnern, Schafen, Creepern, Zombies und mehr.
           title: 'Mincecraft-Designer: Stunde des Codes'
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Freies Spiel
         netsim:
           description: Erfahren Sie, wie das Internet funktioniert.
           description_short: Erfahren Sie, wie das Internet funktioniert.
@@ -7648,6 +7782,29 @@ de:
           title: 'Modul 2: Navigieren in Code.org'
         self-paced-pl-csp2-2023:
           title: 'Modul 2: Navigieren in Code.org'
+        self-paced-pl-k5-2024-1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Erste Schritte
+          lessons:
+            lesson-3:
+              name: Schleifen
+            lesson-4:
+              name: Bedingungen
+            lesson-6:
+              name: Nächste Schritte
+          title: Einführung in die Informatik
+        self-paced-pl-k5-2024-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Erste Schritte
+          lessons:
+            lesson-3:
+              name: Ereignisse
+            lesson-4:
+              name: Verhaltensweisen
+            lesson-5:
+              name: Nächste Schritte
         soccer:
           description: Entwickle ein Fußballspiel
           description_short: Entwickle ein Fußballspiel

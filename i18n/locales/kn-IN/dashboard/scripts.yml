@@ -52,6 +52,7 @@ kn:
           title: ಹಂತ
         Hour of Code:
           title: ಅವರ್ ಆಫ್‌ ಕೋಡ್ 2013
+          name: ಅವರ್ ಆಫ್‌ ಕೋಡ್
         text-compression:
           title: ಪಠ್ಯ ಕಂಪ್ರೆಶನ್
         allthethings:
@@ -1979,3 +1980,32 @@ kn:
               display_name: ಅಧ್ಯಾಯ 1
             lessonGroup-3:
               display_name: ಅಧ್ಯಾಯ 2
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: ಈವೆಂಟ್‌ಗಳು
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: ಲೂಪ್‌ಗಳು
+            lesson-4:
+              name: ಕಂಡೀಷನಲ್ಸ್‌
+          title: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಪರಿಚಯ
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            csp_conditionals:
+              display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csp_functions:
+              display_name: ಕಾರ್ಯಗಳು
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: ಡೇಟಾ
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: ಪಟ್ಟಿಗಳು
+            lessonGroup-3:
+              display_name: ಲೂಪ್‌ಗಳು

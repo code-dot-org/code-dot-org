@@ -111,6 +111,7 @@ pt:
             de Angry Birds e Plants vs. Zombies!
           description_short: Conheça os conceitos básicos da ciência da computação
             com a ajuda de vários personagens divertidos!
+          name: Hora do Código
           student_description: Conheça as noções básicas de ciência da computação
             com personagens de Angry Birds e Plants vs. Zombies!
           title: Hora do Código 2013
@@ -1382,6 +1383,12 @@ pt:
               name: Laboratório Java
             lesson-6:
               name: Ciclos
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Questionário
+            lessonGroup-3:
+              display_name: Conteúdo
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1420,6 +1427,10 @@ pt:
           lessons:
             lesson-4:
               name: Variáveis
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1454,6 +1465,10 @@ pt:
               name: Arrays Unidimensionais (1D)
             lesson-3:
               name: Ciclos "for"
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1486,6 +1501,10 @@ pt:
           lessons:
             lesson-9:
               name: Aleatório
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
         csa4-exemplars:
           lesson_groups:
             content:
@@ -1518,6 +1537,10 @@ pt:
             lessonGroup-2:
               display_name: Conteúdo
         csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa5-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
@@ -1554,6 +1577,10 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1587,6 +1614,10 @@ pt:
           lessons:
             lesson-6:
               name: Propriedade intelectual
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1620,6 +1651,12 @@ pt:
             lessonGroup-5:
               display_name: Questionário
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-4:
+              display_name: Questionário
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
@@ -3529,6 +3566,8 @@ pt:
           title: Pesquisa pós-curso de princípios do CS
         csp-post-survey-2023:
           title: Pesquisa pós-curso de princípios do CS
+        csp-post-survey-2024:
+          title: Pesquisa pós-curso de princípios do CS
         csp1-2017:
           description: Esta unidade explora os desafios e questões técnicas que surgem
             da necessidade de representar informações digitais em computadores e transferi-las
@@ -3611,6 +3650,12 @@ pt:
             csp_unit1_2020:
               display_name: 'Unidade 1: Informação Digital'
         csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Questionário
+            csp_unit1_2020:
+              display_name: 'Unidade 1: Informação Digital'
+        csp1-2024:
           lesson_groups:
             cspSurvey:
               display_name: Questionário
@@ -3707,6 +3752,12 @@ pt:
             lessonGroup-2:
               display_name: Pesquisa Pós-Curso
         csp10-2023:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Unidade 10: Segurança cibernética e impactos globais'
+            lessonGroup-2:
+              display_name: Pesquisa Pós-Curso
+        csp10-2024:
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Unidade 10: Segurança cibernética e impactos globais'
@@ -3825,6 +3876,10 @@ pt:
             csp_unit2_2020:
               display_name: 'Unidade 2: A internet'
         csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Unidade 2: A internet'
+        csp2-2024:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Unidade 2: A internet'
@@ -3968,6 +4023,10 @@ pt:
             csp_unit3_2020:
               display_name: 'Unidade 3: Introdução ao design de aplicativos'
         csp3-2023:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Unidade 3: Introdução ao design de aplicativos'
+        csp3-2024:
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Unidade 3: Introdução ao design de aplicativos'
@@ -4204,6 +4263,16 @@ pt:
               display_name: Projeto
             csp_variables:
               display_name: Variáveis
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funções
+            csp_project:
+              display_name: Projeto
+            csp_variables:
+              display_name: Variáveis
         csp4-dlp:
           description: 'Esta é a Unidade 4 do Plano de Aprendizagem Mais Profunda
             para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará
@@ -4412,6 +4481,12 @@ pt:
               display_name: Traversais
             lessonGroup-5:
               display_name: Pesquisa Pós-Curso
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Dados
+            lessonGroup-5:
+              display_name: Pesquisa Pós-Curso
         csp5-dlp:
           description: 'Esta é a Unidade 5 do Plano de Aprendizagem Mais Profunda
             para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará
@@ -4530,6 +4605,18 @@ pt:
               display_name: Traversais
             lessonGroup-5:
               display_name: Projeto
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listas
+            lessonGroup-2:
+              display_name: Pesquisa Pós-Curso
+            lessonGroup-3:
+              display_name: Ciclos
+            lessonGroup-4:
+              display_name: Traversais
+            lessonGroup-5:
+              display_name: Projeto
         csp6-pilot:
           lesson_groups:
             content:
@@ -4579,6 +4666,14 @@ pt:
               display_name: Parâmetros e valores de retorno
             lessonGroup-3:
               display_name: Pesquisa Pós-Curso
+        csp7-2024:
+          lesson_groups:
+            csp_libraries:
+              display_name: Bibliotecas
+            csp_parameters_return_values:
+              display_name: Parâmetros e valores de retorno
+            lessonGroup-3:
+              display_name: Pesquisa Pós-Curso
         csp7-pilot:
           lesson_groups:
             csp_libraries:
@@ -4610,6 +4705,12 @@ pt:
             lessonGroup-3:
               display_name: Pesquisa Pós-Curso
         csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Criar PT
+            lessonGroup-3:
+              display_name: Pesquisa Pós-Curso
+        csp8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Criar PT
@@ -4648,6 +4749,12 @@ pt:
             lessonGroup-2:
               display_name: Pesquisa Pós-Curso
         csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Unidade 9: Dados'
+            lessonGroup-2:
+              display_name: Pesquisa Pós-Curso
+        csp9-2024:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Unidade 9: Dados'
@@ -5720,6 +5827,10 @@ pt:
           student_description: Constrói um jogo Minecraft. Cria as tuas próprias versões
             de galinhas, ovelhas, Creepers, mortos-vivos e muito mais.
           title: Designer Minecraft Hora do Código
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Atividade livre
         netsim:
           description: Aprenda como a Internet funciona
           description_short: Aprenda como a Internet funciona
@@ -6163,6 +6274,37 @@ pt:
               display_name: Bem-vindo
         self-paced-pl-csd5-2023:
           title: 'Módulo 7: Preparação para ensinar IA e Aprendizagem Mecânica'
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Lição 1
+        self-paced-pl-k5-2024-1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Iniciando
+          lessons:
+            lesson-1:
+              name: Lição 1
+            lesson-3:
+              name: Ciclos
+            lesson-4:
+              name: Condicionais
+            lesson-6:
+              name: Próximas etapas
+          title: Introdução à Ciência Computacional
+        self-paced-pl-k5-2024-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Iniciando
+          lessons:
+            lesson-1:
+              name: Lição 1
+            lesson-3:
+              name: Eventos
+            lesson-4:
+              name: Comportamentos
+            lesson-5:
+              name: Próximas etapas
         soccer:
           name: futebol
         spelling-bee:
