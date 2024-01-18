@@ -57,9 +57,9 @@ class FirehoseClient
   # Ref: https://docs.aws.amazon.com/firehose/latest/dev/limits.html
   BYTES_PER_REQUEST = 1024 * 1024 * 4
 
-  # This limit is based on the empirical observation that no data_json column values larger than 65,535 bytes have
-  # successfully made it into redshift.
-  BYTES_PER_COLUMN = 65_535
+  # This limit is based on the empirical observation that no data_json column values larger than 65,526 bytes have
+  # successfully made it into redshift in the past year. use a slightly lower number to be safe.
+  BYTES_PER_COLUMN = 65_500
 
   # 'For US East (N. Virginia): 5,000 records/second, 2,000 requests/second, and 5 MiB/second.'
   # Ref: https://docs.aws.amazon.com/firehose/latest/dev/limits.html
