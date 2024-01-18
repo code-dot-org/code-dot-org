@@ -429,9 +429,19 @@ td {
   }
 }
 
-/* Carousel styles */
+/* Start carousel styles ------------------------ */
 .carousel-wrapper {
   position: relative;
+}
+
+/* Sets the font-family for text/image carousels */
+.carousel-wrapper p {
+  font-family: var(--barlowSemiCondensed-medium), sans-serif;
+}
+
+/* Sets the font-family for .action-block carousels */
+.carousel-wrapper .action-block p {
+  font-family: var(--main-font), sans-serif;
 }
 
 /* Swiper carousel library styles */

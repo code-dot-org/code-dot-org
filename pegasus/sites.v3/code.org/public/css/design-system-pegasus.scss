@@ -803,16 +803,6 @@ form {
 .carousel-wrapper {
   margin: 2rem 0 0;
 
-  // Sets the font-family for text/image carousels
-  p {
-    font-family: var(--barlowSemiCondensed-medium), sans-serif;
-  }
-
-  // Sets the font-family for .action-block carousels
-  .action-block p {
-    font-family: var(--main-font), sans-serif;
-  }
-
   @media screen and (max-width: $width-sm) {
     padding-bottom: 1rem;
   }
