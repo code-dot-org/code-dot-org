@@ -34,3 +34,32 @@ const swiperParams = {
 
 Object.assign(swiperEl, swiperParams);
 swiperEl.initialize();
+
+// Set params for different columns amounts
+const setSwiperParams = (swiper, columns) => {
+  let slidesPerView, slidesPerGroup;
+
+  if (window.matchMedia('(max-width: 640px)').matches) {
+    slidesPerView = slidesPerGroup = 1;
+  } else if (
+    columns === 3 &&
+    window.matchMedia('(max-width: 1024px)').matches
+  ) {
+    slidesPerView = slidesPerGroup = 2;
+  } else {
+    slidesPerView = slidesPerGroup = columns;
+  }
+
+  swiper.slidesPerView = slidesPerView;
+  swiper.slidesPerGroup = slidesPerGroup;
+};
+
+const twoCol = document.querySelector('swiper-container.two-col');
+if (twoCol) {
+  setSwiperParams(twoCol, 2);
+}
+
+const threeCol = document.querySelector('swiper-container.three-col');
+if (threeCol) {
+  setSwiperParams(threeCol, 3);
+}

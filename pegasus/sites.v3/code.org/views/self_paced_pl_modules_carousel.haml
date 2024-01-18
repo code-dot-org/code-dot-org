@@ -123,7 +123,7 @@
   ]
 
 .carousel-wrapper
-  %swiper-container{init: "false"}
+  %swiper-container.three-col{init: "false"}
     - block_item.each do |block_item|
       %swiper-slide
         .action-block.action-block--one-col.flex-space-between
@@ -149,21 +149,3 @@
               =hoc_s(:call_to_action_explore_curriculum)
 
 = view :swiper
-:javascript
-  const setSwiperProperties = (swiperEl) => {
-    let slidesPerView, slidesPerGroup;
-
-    if (window.matchMedia("(max-width: 640px)").matches) {
-      slidesPerView = slidesPerGroup = 1;
-    } else if (window.matchMedia("(max-width: 1024px)").matches) {
-      slidesPerView = slidesPerGroup = 2;
-    } else {
-      slidesPerView = slidesPerGroup = 3;
-    }
-
-    swiperEl.slidesPerView = slidesPerView;
-    swiperEl.slidesPerGroup = slidesPerGroup;
-  }
-
-  const swiperEl = document.querySelector('swiper-container');
-  setSwiperProperties(swiperEl);
