@@ -214,6 +214,49 @@ class LtiV1Controller < ApplicationController
     end
   end
 
+  # POST /lti/v1/integrations
+  # Creates a new LtiIntegration
+  def create_integration
+    begin
+      params.require([:client_id, :lms, :email])
+    rescue
+      render status: :bad_request, json: {error: I18n.t('lti.error.missing_params')}
+      return
+    end
+
+    client_id = params[:client_id]
+    platform_name = params[:lms]
+    admin_email = params[:email]
+
+    unless Policies::Lti::LMS_PLATFORMS.key?(platform_name.to_sym)
+      render status: :bad_request, json: {error: I18n.t('lti.error.unsupported_lms_type')}
+      return
+    end
+
+    platform_urls = Policies::Lti::LMS_PLATFORMS[platform_name.to_sym]
+    issuer = platform_urls[:issuer]
+    auth_redirect_url = platform_urls[:auth_redirect_url]
+    jwks_url = platform_urls[:jwks_url]
+    access_token_url = platform_urls[:access_token_url]
+
+    existing_integration = Queries::Lti.get_lti_integration(issuer, client_id)
+
+    if existing_integration.nil?
+      Services::Lti.create_lti_integration(
+        client_id: client_id,
+        issuer: issuer,
+        platform_name: platform_name,
+        auth_redirect_url: auth_redirect_url,
+        jwks_url: jwks_url,
+        access_token_url: access_token_url,
+        admin_email: admin_email
+      )
+      render status: :ok, json: {body: I18n.t('lti.create_integration_success')}
+    else
+      render status: :conflict, json: {error: I18n.t('lti.error.integration_exists')}
+    end
+  end
+
   private
 
   NAMESPACE = "lti_v1_controller".freeze
@@ -223,7 +266,7 @@ class LtiV1Controller < ApplicationController
   end
 
   def wrong_resource_type
-    render(status: :not_acceptable, json: {error: 'Only LtiResourceLink is supported right now'})
+    render(status: :not_acceptable, json: {error: I18n.t('lti.error.wrong_resource_type')})
   end
 
   def create_state_and_nonce
