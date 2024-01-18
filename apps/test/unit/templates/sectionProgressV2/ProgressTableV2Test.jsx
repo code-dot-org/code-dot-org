@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedProgressTableV2} from '@cdo/apps/templates/sectionProgressV2/ProgressTableV2.jsx';
 
-import LessonsProgressDataColumn from '@cdo/apps/templates/sectionProgressV2/LessonsProgressDataColumn.jsx';
+import LessonProgressDataColumn from '@cdo/apps/templates/sectionProgressV2/LessonProgressDataColumn.jsx';
 import ExpandedProgressDataColumn from '@cdo/apps/templates/sectionProgressV2/ExpandedProgressDataColumn.jsx';
 import StudentColumn from '@cdo/apps/templates/sectionProgressV2/StudentColumn.jsx';
 
@@ -104,21 +104,21 @@ describe('ProgressTableV2', () => {
   it('nothing expanded', () => {
     const wrapper = setUp();
 
-    expect(wrapper.find(LessonsProgressDataColumn)).to.have.lengthOf(5);
+    expect(wrapper.find(LessonProgressDataColumn)).to.have.lengthOf(5);
     expect(wrapper.find(ExpandedProgressDataColumn)).to.have.lengthOf(0);
   });
 
   it('one lesson expanded', () => {
     const wrapper = setUp({expandedLessonIds: [2]});
 
-    expect(wrapper.find(LessonsProgressDataColumn)).to.have.lengthOf(4);
+    expect(wrapper.find(LessonProgressDataColumn)).to.have.lengthOf(4);
     expect(wrapper.find(ExpandedProgressDataColumn)).to.have.lengthOf(1);
   });
 
   it('multiple lessons expanded', () => {
     const wrapper = setUp({expandedLessonIds: [2, 4]});
 
-    expect(wrapper.find(LessonsProgressDataColumn)).to.have.lengthOf(3);
+    expect(wrapper.find(LessonProgressDataColumn)).to.have.lengthOf(3);
     expect(wrapper.find(ExpandedProgressDataColumn)).to.have.lengthOf(2);
   });
 });
