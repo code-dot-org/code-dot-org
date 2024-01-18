@@ -23,59 +23,8 @@ export default function LegendItem({
   const iconColorStyle = fontAwesomeColor
     ? fontAwesomeColor
     : color.neutral_dark;
-  const needsFeedbackTriangle = (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g id="viewed">
-        <mask id="path-1-inside-1_2188_5788" fill={color.neutral_white}>
-          <path d="M0 0H20V20H0V0Z" />
-        </mask>
-        <path d="M0 0H20V20H0V0Z" fill={color.neutral_white} />
-        <path
-          d="M20 0H21V-1H20V0ZM0 1H20V-1H0V1ZM19 0V20H21V0H19Z"
-          fill={color.neutral_dark40}
-          mask="url(#path-1-inside-1_2188_5788)"
-        />
-        <path
-          id="Polygon 1"
-          d="M7.4152 1.99989L18.0029 2.00052L18.0028 12.5858L7.4152 1.99989Z"
-          stroke={color.light_secondary_500}
-          strokeWidth="2"
-        />
-      </g>
-    </svg>
-  );
-  const feedbackGivenTriangle = (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g id="viewed">
-        <mask id="path-1-inside-1_2188_5792" fill={color.neutral_white}>
-          <path d="M0 0H20V20H0V0Z" />
-        </mask>
-        <path d="M0 0H20V20H0V0Z" fill={color.neutral_white} />
-        <path
-          d="M20 0H21V-1H20V0ZM0 1H20V-1H0V1ZM19 0V20H21V0H19Z"
-          fill={color.neutral_dark40}
-          mask="url(#path-1-inside-1_2188_5792)"
-        />
-        <path
-          id="Polygon 1"
-          d="M19.0032 0.999893L19.0032 15L5.00014 0.998773L19.0032 0.999893Z"
-          fill={color.neutral_dark}
-        />
-      </g>
-    </svg>
-  );
+  const needsFeedbackTriangle = <div className={'needs-feedback corner-box'} />;
+  const feedbackGivenTriangle = <div className={'feedback-given corner-box'} />;
   const notStartedBox = (
     <ProgressBox
       started={false}
