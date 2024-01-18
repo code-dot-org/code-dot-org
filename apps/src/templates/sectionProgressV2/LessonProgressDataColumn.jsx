@@ -1,22 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
+import styles from './progress-table-v2.module.scss';
 import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
 import {studentLessonProgressType} from '../progress/progressTypes';
+import {connect} from 'react-redux';
 
-//TODO fill out later
 function LessonProgressDataColumn({
-  lessons,
+  lesson,
   lessonProgressByStudent,
   sortedStudents,
   addExpandedLesson,
 }) {
-  return (
-    <div>
-      {sortedStudents}
-      {lessons}
-    </div>
-  );
+  return <div className={styles.lessonColumn}>{lesson.id}</div>;
 }
 
 LessonProgressDataColumn.propTypes = {
@@ -24,7 +19,7 @@ LessonProgressDataColumn.propTypes = {
   lessonProgressByStudent: PropTypes.objectOf(
     PropTypes.objectOf(studentLessonProgressType)
   ).isRequired,
-  lessons: PropTypes.arrayOf(PropTypes.object).isRequired,
+  lesson: PropTypes.object.isRequired,
   addExpandedLesson: PropTypes.func.isRequired,
 };
 
