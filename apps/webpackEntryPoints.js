@@ -233,6 +233,7 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
 // by haml partials in the shared/haml/ directory.
 const SHARED_ENTRIES = {
   cookieBanner: './src/cookieBanner/cookieBanner.js',
+  createMenuEventLogger: './src/createMenuEventLogger/createMenuEventLogger.js',
 };
 
 // prettier-ignore
