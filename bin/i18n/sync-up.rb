@@ -17,6 +17,8 @@ Dir[File.expand_path('../resources/*.rb', __FILE__)].sort.each {|file| require f
 # globally changed for all Crowdin projects.
 ENV['I18N_SOURCE_DIR'] = CDO.dir(I18N_SOURCE_DIR)
 
+EXCLUDED_CROWDIN_PROJECTS = %i[codeorg-restricted codeorg-restricted-test].freeze
+
 module I18n
   class SyncUp
     def self.parse_options
@@ -35,8 +37,11 @@ module I18n
         puts "Sync up starting"
 
         I18n::Resources::Apps.sync_up(**opts)
+        I18n::Resources::Dashboard.sync_up(**opts)
 
         crowdin_projects.each do |name, options|
+          next if EXCLUDED_CROWDIN_PROJECTS.include?(name)
+
           puts "Uploading source strings to #{name} project"
           command = "crowdin upload sources --config #{options[:config_file]} --identity #{options[:identity_file]}"
           Open3.popen2(command) do |_stdin, stdout, status_thread|
