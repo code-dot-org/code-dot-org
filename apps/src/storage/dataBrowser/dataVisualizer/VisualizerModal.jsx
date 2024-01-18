@@ -212,20 +212,18 @@ class VisualizerModal extends React.Component {
     }
   });
 
-  filterTableColumnsByCount = memoize(
-    (tableColumns, countedCells, selectedColumn1) => {
-      if (!countedCells) {
-        return tableColumns;
-      } else {
-        const xCount = selectedColumn1 ? countedCells[selectedColumn1].size : 0;
-        return tableColumns.filter(
-          column =>
-            countedCells[column].size < MAX_CROSSTAB_COLUMNS &&
-            xCount * countedCells[column].size < MAX_CROSSTAB_CELLS
-        );
-      }
+  tooBigColumns = memoize((tableColumns, countedCells, selectedColumn1) => {
+    if (!countedCells) {
+      return tableColumns;
+    } else {
+      const xCount = selectedColumn1 ? countedCells[selectedColumn1].size : 0;
+      return tableColumns.filter(
+        column =>
+          countedCells[column].size >= MAX_CROSSTAB_COLUMNS ||
+          xCount * countedCells[column].size >= MAX_CROSSTAB_CELLS
+      );
     }
-  );
+  });
 
   render() {
     const parsedRecords = this.parseRecords(this.props.tableRecords);
@@ -353,11 +351,11 @@ class VisualizerModal extends React.Component {
                     ? msg.dataVisualizerXValues()
                     : msg.dataVisualizerValues()
                 }
-                options={this.filterTableColumnsByCount(
-                  this.props.tableColumns,
-                  countedCells
+                options={this.props.tableColumns}
+                disabledOptions={_.union(
+                  disabledOptions,
+                  this.tooBigColumns(this.props.tableColumns, countedCells)
                 )}
-                disabledOptions={disabledOptions}
                 value={this.state.selectedColumn1}
                 onChange={event =>
                   this.setState({selectedColumn1: event.target.value})
@@ -367,12 +365,15 @@ class VisualizerModal extends React.Component {
               {isMultiColumnChart && (
                 <DropdownField
                   displayName={msg.dataVisualizerYValues()}
-                  options={this.filterTableColumnsByCount(
-                    this.props.tableColumns,
-                    countedCells,
-                    this.state.selectedColumn1
+                  options={this.props.tableColumns}
+                  disabledOptions={_.union(
+                    disabledOptions,
+                    this.tooBigColumns(
+                      this.props.tableColumns,
+                      countedCells,
+                      this.state.selectedColumn1
+                    )
                   )}
-                  disabledOptions={disabledOptions}
                   value={this.state.selectedColumn2}
                   onChange={event =>
                     this.setState({selectedColumn2: event.target.value})
