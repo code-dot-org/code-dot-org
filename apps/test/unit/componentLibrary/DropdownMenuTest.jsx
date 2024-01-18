@@ -7,10 +7,14 @@ import {expect} from '../../util/reconfiguredChai';
 
 import Dropdown from '@cdo/apps/componentLibrary/dropdownMenu';
 
-const valuesMap = {};
-const onDropdownChange = (name, value) => (valuesMap[name] = value);
+let dropdownValue;
+let onDropdownChange = value => (dropdownValue = value);
 
 describe('Design System - Dropdown Select Component', () => {
+  beforeEach(() => {
+    onDropdownChange('');
+  });
+
   it('Dropdown Select - renders with correct text and options', () => {
     render(
       <Dropdown
@@ -20,8 +24,8 @@ describe('Design System - Dropdown Select Component', () => {
           {value: 'option-2', label: 'option2'},
           {value: 'option-3', label: 'option3'},
         ]}
-        selectedValue={valuesMap['test1-dropdown']}
-        onChange={e => onDropdownChange('test1-dropdown', e.target.value)}
+        selectedValue={dropdownValue}
+        onChange={e => onDropdownChange(e.target.value)}
         labelText="Dropdown label"
       />
     );
@@ -40,10 +44,8 @@ describe('Design System - Dropdown Select Component', () => {
   it('Dropdown Select - renders with correct text and options, changes selected value on when one is selected', async () => {
     const user = userEvent.setup();
     const spyOnChange = sinon.spy();
-    // set dropdown default value
-    onDropdownChange('test2-dropdown', '');
     const onChange = e => {
-      onDropdownChange('test2-dropdown', e.target.value);
+      onDropdownChange(e.target.value);
       spyOnChange(e.target.value);
     };
     const DropdownToRender = () => (
@@ -54,7 +56,7 @@ describe('Design System - Dropdown Select Component', () => {
           {value: 'option-2', label: 'option2'},
           {value: 'option-3', label: 'option3'},
         ]}
-        selectedValue={valuesMap['test2-dropdown']}
+        selectedValue={dropdownValue}
         onChange={onChange}
         labelText="Dropdown2 label"
       />
@@ -71,7 +73,7 @@ describe('Design System - Dropdown Select Component', () => {
     expect(selectElement).to.exist;
     expect(option1).to.exist;
     expect(option2).to.exist;
-    expect(valuesMap['test2-dropdown']).to.equal('');
+    expect(dropdownValue).to.equal('');
 
     await user.selectOptions(selectElement, 'option-1');
 
@@ -79,7 +81,7 @@ describe('Design System - Dropdown Select Component', () => {
 
     expect(spyOnChange).to.have.been.calledOnce;
     expect(spyOnChange).to.have.been.calledWith('option-1');
-    expect(valuesMap['test2-dropdown']).to.equal('option-1');
+    expect(dropdownValue).to.equal('option-1');
 
     await user.selectOptions(selectElement, 'option-2');
 
@@ -87,16 +89,14 @@ describe('Design System - Dropdown Select Component', () => {
 
     expect(spyOnChange).to.have.been.calledTwice;
     expect(spyOnChange).to.have.been.calledWith('option-2');
-    expect(valuesMap['test2-dropdown']).to.equal('option-2');
+    expect(dropdownValue).to.equal('option-2');
   });
 
   it("Dropdown Select - renders disabled dropdown, doesn't change on click", async () => {
     const user = userEvent.setup();
     const spyOnChange = sinon.spy();
-    // set dropdown default value
-    onDropdownChange('test2-dropdown', '');
     const onChange = e => {
-      onDropdownChange('test2-dropdown', e.target.value);
+      onDropdownChange(e.target.value);
       spyOnChange(e.target.value);
     };
 
@@ -109,7 +109,7 @@ describe('Design System - Dropdown Select Component', () => {
           {value: 'option-2', label: 'option2'},
           {value: 'option-3', label: 'option3'},
         ]}
-        selectedValue={valuesMap['test2-dropdown']}
+        selectedValue={dropdownValue}
         onChange={onChange}
         labelText="Dropdown2 label"
       />
@@ -126,20 +126,20 @@ describe('Design System - Dropdown Select Component', () => {
     expect(selectElement).to.exist;
     expect(option1).to.exist;
     expect(option2).to.exist;
-    expect(valuesMap['test2-dropdown']).to.equal('');
+    expect(dropdownValue).to.equal('');
 
     await user.selectOptions(selectElement, 'option-1');
 
     rerender(<DropdownToRender />);
 
     expect(spyOnChange).to.have.not.been.called;
-    expect(valuesMap['test2-dropdown']).to.equal('');
+    expect(dropdownValue).to.equal('');
 
     await user.selectOptions(selectElement, 'option-2');
 
     rerender(<DropdownToRender />);
 
     expect(spyOnChange).to.have.not.been.called;
-    expect(valuesMap['test2-dropdown']).to.equal('');
+    expect(dropdownValue).to.equal('');
   });
 });
