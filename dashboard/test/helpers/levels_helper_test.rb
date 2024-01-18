@@ -360,21 +360,6 @@ class LevelsHelperTest < ActionView::TestCase
     reset_view_options
   end
 
-  test 'use_google_blockly is false if Experiment is enabled but is_start_mode is true' do
-    @is_start_mode = true
-    Experiment.stubs(:enabled?).returns(true)
-    @level = build :level
-    refute use_google_blockly
-    Experiment.unstub(:enabled?)
-  end
-
-  test 'use_google_blockly is true if Experiment is enabled for google_blockly otherwise' do
-    Experiment.stubs(:enabled?).returns(true)
-    @level = build :level
-    assert use_google_blockly
-    Experiment.unstub(:enabled?)
-  end
-
   test 'use_google_blockly is true if Experiment is enabled for google_blockly' do
     Experiment.stubs(:enabled?).returns(true)
     @level = build :level
