@@ -459,10 +459,6 @@ swiper-slide {
   height: 48px;
 }
 
-.carousel-wrapper .swiper-button-disabled {
-  opacity: 0.5;
-}
-
 .carousel-wrapper .swiper-nav-prev {
   background: url("/images/carousel/prev.svg") no-repeat;
   left: -4rem;
@@ -472,6 +468,10 @@ swiper-slide {
 .carousel-wrapper .swiper-nav-next {
   background: url("/images/carousel/next.svg") no-repeat;
   right: -4rem;
+}
+
+.carousel-wrapper .swiper-button-disabled {
+  opacity: 0.5;
 }
 
 @media screen and (max-width: 1024px) {
