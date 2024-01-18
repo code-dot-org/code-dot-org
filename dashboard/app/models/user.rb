@@ -145,6 +145,7 @@ class User < ApplicationRecord
     family_name
     ai_rubrics_disabled
     sort_by_family_name
+    show_progress_table_v2
   )
 
   attr_accessor(
@@ -251,8 +252,6 @@ class User < ApplicationRecord
   has_many :user_school_infos
   after_save :update_and_add_users_school_infos, if: :saved_change_to_school_info_id?
   validate :complete_school_info, if: :school_info_id_changed?, unless: proc {|u| u.purged_at.present?}
-
-  has_one :circuit_playground_discount_application
 
   has_many :pd_applications,
     class_name: 'Pd::Application::ApplicationBase',

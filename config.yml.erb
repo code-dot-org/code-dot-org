@@ -605,9 +605,6 @@ ddconf_api_key: !Secret
 jwks_data: <%=File.read("#{File.expand_path(File.dirname(__FILE__))}/dashboard/public/oauth/jwks.json")%>
 jwk_private_key_data: !Secret
 
-# EC2 Metadata endpoint
-ec2_instance_id_endpoint: 'http://169.254.169.254/latest/meta-data/instance-id'
-
 # Credentials for OpenAI API
 openai_chat_completion_api_key: !Secret
 openai_chat_completion_org_id: !Secret

@@ -3,35 +3,7 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "ai-2020": {
-            "buttonText": "ស្វែងយល់បន្ថែម",
-            "title": "ស្វែងយល់ពីArtificial Intelligence(បញ្ញាសិប្បនិម្មិត)និងMachine Learning"
-          },
-          "ai-launch-2023": {
-            "buttonText": "ស្វែងយល់បន្ថែម"
-          },
-          "ai-pl-launch-2023": {
-            "buttonText": "ស្វែងយល់បន្ថែម"
-          },
-          "back-to-school-2021": {
-            "buttonText": "ស្វែងយល់បន្ថែម"
-          },
-          "codebytes-2020": {
-            "buttonText": "ស្វែងយល់បន្ថែម"
-          },
-          "coldplay": {
-            "buttonText": "សាកល្បង"
-          },
-          "congrats-certificate-share": {
-            "buttonText": "ចាប់​ផ្ដើម"
-          },
-          "csjourneys": {
-            "buttonText": "ស្វែងយល់បន្ថែម"
-          },
-          "csjourneys-22": {
-            "buttonText": "ស្វែងយល់បន្ថែម"
-          },
-          "csleadersprize": {
+          "co-teacher": {
             "buttonText": "ស្វែងយល់បន្ថែម"
           },
           "hoc-2023": {
@@ -40,23 +12,8 @@
           "hoc-2023-dance-ai": {
             "buttonText": "ស្វែងយល់បន្ថែម"
           },
-          "hoc-more": {
-            "body": "គេហទំព័រ Hour of Code មានសកម្មភាពវិទ្យាសាស្ត្រកុំព្យូទ័រជាង ៥០០ សម្រាប់គ្រប់វ័យ និងកម្រិតបទពិសោធន៍ ដែលត្រូវបានបង្កើតឡើងដោយ Code.org និងដៃគូសហការ។"
-          },
-          "home-learning-2020": {
-            "buttonText": "មើលគំនិតគម្រោង​"
-          },
           "superhero": {
             "buttonText": "ស្វែងយល់បន្ថែមទៀត"
-          },
-          "teacher-apps-closing-2021": {
-            "buttonText": "ចូលរួមជាមួយយើង"
-          },
-          "teacher-apps-open-2021": {
-            "buttonText": "ចូលរួមជាមួយយើង"
-          },
-          "teacher-apps-stillon-2020": {
-            "buttonText": "ចូលរួមជាមួយយើង"
           }
         }
       }

@@ -3096,34 +3096,34 @@
           "description": "Partager un artefact créatif avec d'autres élèves."
         },
         "13d689fe-f5b2-4e76-84d5-4fd24f91cfab": {
-          "description": "Décrire comment la vision par ordinateur est construite à partir de couches qui combinent des composants plus petits dans une prédiction finale"
+          "description": "Décrire comment la vision par ordinateur est composée de couches associant des composantes plus petites pour en faire une prévision finale"
         },
         "5bb33a90-28cb-40cb-9647-59a1818980b8": {
-          "description": "Expliquer le besoin de perspectives diverses lors de la création de systèmes de recommandation"
+          "description": "Expliquer l'importance d'avoir une diversité de points de vue lors de la création de systèmes de recommandation"
         },
         "bb862e7c-9808-4414-b027-fc747d58b6c0": {
-          "description": "Utiliser les poids d'un neurone artificiel pour ajuster les sorties d'un système de recommandation"
+          "description": "Utiliser les poids d'un neurone artificiel pour ajuster les données de sortie d'un système de recommandation"
         },
         "2b61407b-2812-4aa5-bdf0-661ae14b44d0": {
-          "description": "Discutez des effets secondaires positifs et négatifs de ces modèles"
+          "description": "Parler des effets inattendus positifs et négatifs de ces modèles"
         },
         "941fa029-220b-4d04-880f-29d93c952a9d": {
-          "description": "Collaborez avec l'IA pour créer un document texte créatif"
+          "description": "Collaborer avec l'IA pour créer un document textuel original"
         },
         "f766948a-55ae-4083-9e67-cd42e929adcc": {
-          "description": "Décrivez que le fait d'avoir une grande quantité de texte à partir duquel apprendre permet aux ordinateurs de paraître intelligents sous forme écrite"
+          "description": "Expliquer qu'avoir une grande quantité de texte sur lequel se former permet aux ordinateurs de paraître intelligents à l'écrit"
         },
         "13fca3f5-45af-4888-8d22-71ce991caf3d": {
-          "description": "Discutez si ces modèles sont créatifs ou non et à qui appartiennent ces images"
+          "description": "Parlez ensemble de si ces modèles sont dotés ou non de créativité et d'à qui appartiennent ces images."
         },
         "4b4fc091-b0d2-4cf4-bb61-a4b243abc4b8": {
-          "description": "Décrivez que l'IA peut générer des images assez réalistes grâce à un processus connu sous le nom de diffusion, dans le cadre duquel un modèle apprend à dessiner des détails en les inversant"
+          "description": "Expliquez que l'IA peut générer des images assez réalistes grâce à un procédé qu'on appelle la diffusion, dans lequel un modèle apprend à dessiner des détails en les inversant."
         },
         "cb45ec87-ad2c-41f8-96e5-cb48a1181314": {
-          "description": "La raison pour laquelle les types de tâches ne doivent pas être complétés par un algorithme"
+          "description": "Raisonner sur quels types de tâches ne devraient pas être accomplies par un algorithme"
         },
         "bb0c78af-3cdb-48cc-9f7a-f79c7d954752": {
-          "description": "Expliquer le fonctionnement de l'IA"
+          "description": "Expliquer comment fonctionne l'IA"
         },
         "e9b9d92d-83a3-4b3e-a6b9-e93a325e0acc": {
           "description": "Crée un programme pour compléter une image en utilisant des étapes séquentielles."

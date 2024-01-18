@@ -385,10 +385,11 @@ class EvaluateRubricJob < ApplicationJob
       rubric.learning_goals.each do |lg|
         next unless ai_mapping.key?(lg.learning_goal)
         ai_evaluation = ai_mapping[lg.learning_goal]
+        label = ai_evaluation.key?('Grade') ? ai_evaluation['Grade'] : ai_evaluation['Label']
         LearningGoalAiEvaluation.create!(
           learning_goal_id: lg.id,
           rubric_ai_evaluation_id: rubric_ai_evaluation.id,
-          understanding: understanding_s_to_i(ai_evaluation['Grade']),
+          understanding: understanding_s_to_i(label),
           ai_confidence: ai_evaluation['Confidence'],
         )
       end

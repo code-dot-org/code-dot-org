@@ -1,5 +1,7 @@
 require_relative './test_helper'
+# rubocop:disable CustomCops/DashboardRequires
 require_relative '../../dashboard/lib/script_constants'
+# rubocop:enable CustomCops/DashboardRequires
 require 'minitest/autorun'
 
 class MinecraftCertificatesTest < Minitest::Test

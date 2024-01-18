@@ -1,7 +1,9 @@
 require 'test_helper'
 require 'testing/projects_test_utils'
 require 'cdo/delete_accounts_helper'
+# rubocop:disable CustomCops/PegasusRequires
 require_relative '../../../pegasus/test/fixtures/mock_pegasus'
+# rubocop:enable CustomCops/PegasusRequires
 
 #
 # This test is the comprehensive spec on the desired behavior when purging a
@@ -743,52 +745,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # Table: dashboard.circuit_playground_discount_applications
-  #
-
-  test 'anonymizes signature on circuit_playground_discount_application' do
-    application = create :circuit_playground_discount_application, signature: 'Will Halloway'
-    user = application.user
-
-    assert_equal 'Will Halloway', application.signature
-
-    purge_user user
-    application.reload
-
-    assert_equal '(anonymized signature)', application.signature
-
-    assert_logged "Anonymized 1 CircuitPlaygroundDiscountApplication"
-  end
-
-  test 'leaves blank signature blank on circuit_playground_discount_application' do
-    application = create :circuit_playground_discount_application
-    user = application.user
-
-    assert_nil application.signature
-
-    purge_user user
-    application.reload
-
-    assert_nil application.signature
-
-    assert_logged "Anonymized 1 CircuitPlaygroundDiscountApplication"
-  end
-
-  test 'removes school id from circuit_playground_discount_application' do
-    application = create :circuit_playground_discount_application, school_id: create(:school).id
-    user = application.user
-
-    refute_nil application.school_id
-
-    purge_user user
-    application.reload
-
-    assert_nil application.school_id
-
-    assert_logged "Anonymized 1 CircuitPlaygroundDiscountApplication"
-  end
-
-  #
   # Table: dashboard.email_preferences
   # Associated through the user's email
   #
@@ -1232,22 +1188,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     application = get_record_with_sql("application", "pd_teacher_applications", {'user_id' => user.id})
     assert_empty application["application"]
-  end
-
-  #
-  # Table: dashboard.pd_workshop_surveys
-  # Associated via enrollment
-  #
-
-  test "clears form_data from pd_workshop_surveys" do
-    enrollment = create :pd_enrollment, :from_user
-    survey = create :pd_workshop_survey, pd_enrollment: enrollment
-    refute_equal '{}', survey.form_data
-
-    purge_user survey.pd_enrollment.user
-
-    survey.reload
-    assert_equal '{}', survey.form_data
   end
 
   #

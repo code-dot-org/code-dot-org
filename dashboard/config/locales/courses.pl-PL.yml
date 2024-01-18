@@ -254,6 +254,8 @@ pl:
           description_short: Poznaj podstawowe pojęcia informatyczne.
           title: Zasady informatyki '23-'24
           version_title: "'23-'24"
+        csp-2024:
+          title: csp-2024
         focus-on-coding-2023:
           title: Skoncentruj się na kodowaniu
           version_title: "'23-'24"
@@ -272,6 +274,9 @@ pl:
         focus-on-impact-in-society-2023:
           title: Skoncentruj się na wpływie w społeczeństwie
           version_title: "'23-'24"
+        melissasandbox-2024:
+          description_short: piaskownica dla melissy toohey
+          title: melissasandbox-2024
         mike-test:
           title: Podstawy Informatyki
         pl-csd-summer-2023:
@@ -466,6 +471,8 @@ pl:
         self-paced-pl-csp-2023:
           title: self-paced-pl-csp-2021
           version_title: 22-23
+        self-paced-pl-k5-2024:
+          title: self-paced-pl-k5-2024
         self-paced-pl-microbit-2023:
           title: self-paced-pl-microbit-2023
         self-paced-pl-physical-computing-2022:

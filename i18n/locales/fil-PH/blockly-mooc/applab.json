@@ -385,7 +385,6 @@
   "makerSetupInstallSerialConnector": "Paki-install ang [Code.org Serial Connector Chrome App]({webstoreURL}).",
   "makerSetupInstallFirmataCP": "Dapat mong tiyakin na mayroon itong tamang firmware sketch na naka-install. Maaari mong i-install ang Firmata sketch [para sa mga Circuit Playground Express board na may mga tagubiling ito]({firmataURLExpress}) at [para sa mga Circuit Playground Classic board na may mga tagubiling ito]({firmataURLClassic}).",
   "makerSetupInstallFirmataMB": "Dapat mong tiyakin na mayroon itong tamang Firmata application na tumatakbo dito. Maaari mong [i-install ang tamang Firmata application sa mga tagubiling ito][0].",
-  "makerSetupInstallFirmataOther": "Dapat mong tiyakin na mayroon itong tamang firmware sketch na naka-install. Maaari mong i-install ang Firmata sketch [para sa mga Circuit Playground Express board na may mga tagubiling ito]({firmataURLExpress}) at [para sa mga Circuit Playground Classic board na may mga tagubiling ito]({firmataURLClassic}). Maaari mong i-install ang Firmata sketch [para sa micro:bit gamit ang mga tagubiling ito]({firmataURLMB})",
   "makerSetupLinuxAddDialout": "Kung hindi ka kabilang sa 'dialout', idagdag ang sarili mo sa pangkat na iyon:",
   "makerSetupLinuxAlternative": "Mga Alternatibong Installer",
   "makerSetupLinuxAlternativeInstall": "[I-install mula sa pinagmulan](https://github.com/code-dot-org/browser)",

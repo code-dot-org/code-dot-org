@@ -3,35 +3,7 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "ai-2020": {
-            "buttonText": "Află mai mult",
-            "title": "Explorează Inteligența Artificială și Învățarea Automată"
-          },
-          "ai-launch-2023": {
-            "buttonText": "Află mai mult"
-          },
-          "ai-pl-launch-2023": {
-            "buttonText": "Află mai mult"
-          },
-          "back-to-school-2021": {
-            "buttonText": "Află mai mult"
-          },
-          "codebytes-2020": {
-            "buttonText": "Află mai mult"
-          },
-          "coldplay": {
-            "buttonText": "Încearcă"
-          },
-          "congrats-certificate-share": {
-            "buttonText": "Începe"
-          },
-          "csjourneys": {
-            "buttonText": "Află mai mult"
-          },
-          "csjourneys-22": {
-            "buttonText": "Află mai mult"
-          },
-          "csleadersprize": {
+          "co-teacher": {
             "buttonText": "Află mai mult"
           },
           "hoc-2023": {
@@ -42,26 +14,8 @@
           "hoc-2023-dance-ai": {
             "buttonText": "Află mai mult"
           },
-          "hoc-more": {
-            "body": "Site-ul Web Hour of Code are peste 500 de activități informatice pentru toate vârstele și nivelurile de experiență, dezvoltate de Code.org și parteneri."
-          },
-          "home-learning-2020": {
-            "buttonText": "Explorați idei de proiecte"
-          },
           "superhero": {
             "buttonText": "Află mai mult"
-          },
-          "teacher-apps-closing-2021": {
-            "buttonText": "Alatura-ni-te"
-          },
-          "teacher-apps-nominate-2020": {
-            "buttonText": "Nominalizează un profesor"
-          },
-          "teacher-apps-open-2021": {
-            "buttonText": "Alatura-ni-te"
-          },
-          "teacher-apps-stillon-2020": {
-            "buttonText": "Alatura-ni-te"
           }
         }
       }

@@ -1,9 +1,9 @@
+require 'test_helper'
 require 'json'
 require 'jwt'
 require 'policies/lti'
 require "services/lti"
 require "clients/lti_advantage_client"
-require 'test_helper'
 
 class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
@@ -438,14 +438,29 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_equal home_path, '/' + @response.redirect_url.split('/').last
   end
 
-  test 'sync - should sync and redirect to the homepage' do
+  test 'sync - should sync and show the confirmation page' do
+    had_changes = true
     user = create :teacher
     sign_in user
     lti_integration = create :lti_integration
     lti_course = create :lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps'
     LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id)
-    Services::Lti.expects(:parse_nrps_response).once
-    Services::Lti.expects(:sync_course_roster).once
+    Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
+    Services::Lti.expects(:sync_course_roster).returns(had_changes)
+
+    get '/lti/v1/sync_course', params: {lti_integration_id: lti_integration.id, deployment_id: 'foo', context_id: lti_course.context_id, rlid: lti_course.resource_link_id, nrps_url: lti_course.nrps_url}
+    assert_response :ok
+  end
+
+  test 'sync - should not sync given no changes' do
+    had_changes = false
+    user = create :teacher
+    sign_in user
+    lti_integration = create :lti_integration
+    lti_course = create :lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps'
+    LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id)
+    Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
+    Services::Lti.expects(:sync_course_roster).returns(had_changes)
 
     get '/lti/v1/sync_course', params: {lti_integration_id: lti_integration.id, deployment_id: 'foo', context_id: lti_course.context_id, rlid: lti_course.resource_link_id, nrps_url: lti_course.nrps_url}
     assert_response :redirect
@@ -458,11 +473,11 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     lti_course = create :lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps'
     lti_section = create :lti_section, lti_course: lti_course
     LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id)
-    Services::Lti.expects(:parse_nrps_response).once
-    Services::Lti.expects(:sync_course_roster).once
+    Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
+    Services::Lti.expects(:sync_course_roster).returns(true)
 
     get '/lti/v1/sync_course', params: {section_code: lti_section.section.code}
-    assert_response :redirect
+    assert_response :ok
   end
 
   test 'transaction prevents partial sync from creating a partially-synced state' do

@@ -1,5 +1,3 @@
-Sinatra::Verbs.custom :review
-
 post '/v2/forms/:kind' do |kind|
   dont_cache
   # TODO(asher): Change this to automatically pass on any non-current year HOC signup by using the
@@ -61,7 +59,7 @@ post '/v2/forms/:kind/:secret/update' do |kind, secret|
   call(env.merge('REQUEST_METHOD' => 'PATCH', 'PATH_INFO' => "/v2/forms/#{kind}/#{secret}"))
 end
 
-review '/v2/forms/:kind/:secret' do |kind, secret|
+post '/v2/forms/:kind/:secret/review' do |kind, secret|
   dont_cache
   hoc_year = DCDO.get("hoc_year", 2017)
   case kind
@@ -84,9 +82,6 @@ review '/v2/forms/:kind/:secret' do |kind, secret|
 
   content_type :json
   ({review: review}).to_json
-end
-post '/v2/forms/:kind/:secret/review' do |kind, secret|
-  call(env.merge('REQUEST_METHOD' => 'REVIEW', 'PATH_INFO' => "/v2/forms/#{kind}/#{secret}"))
 end
 
 get '/v2/forms/:parent_kind/:parent_secret/children/:kind' do |parent_kind, parent_secret, kind|

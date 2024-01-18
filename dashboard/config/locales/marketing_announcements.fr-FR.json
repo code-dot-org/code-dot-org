@@ -3,35 +3,7 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "ai-2020": {
-            "buttonText": "En savoir plus",
-            "title": "Explorez l'intelligence artificielle et l'apprentissage automatique"
-          },
-          "ai-launch-2023": {
-            "buttonText": "En savoir plus"
-          },
-          "ai-pl-launch-2023": {
-            "buttonText": "En savoir plus"
-          },
-          "back-to-school-2021": {
-            "buttonText": "En savoir plus"
-          },
-          "codebytes-2020": {
-            "buttonText": "En savoir plus"
-          },
-          "coldplay": {
-            "buttonText": "Participez"
-          },
-          "congrats-certificate-share": {
-            "buttonText": "Commencer"
-          },
-          "csjourneys": {
-            "buttonText": "En savoir plus"
-          },
-          "csjourneys-22": {
-            "buttonText": "En savoir plus"
-          },
-          "csleadersprize": {
+          "co-teacher": {
             "buttonText": "En savoir plus"
           },
           "hoc-2023": {
@@ -44,26 +16,8 @@
             "buttonText": "En savoir plus",
             "title": "Soirée dansante : Édition IA"
           },
-          "hoc-more": {
-            "body": "Le site Web Hour of Code propose plus de 500 activités informatiques, pour tous les âges et tous les niveaux d'expérience, développées par Code.org et ses partenaires."
-          },
-          "home-learning-2020": {
-            "buttonText": "Voir les idées de projets"
-          },
           "superhero": {
             "buttonText": "En savoir plus"
-          },
-          "teacher-apps-closing-2021": {
-            "buttonText": "Rejoins-nous"
-          },
-          "teacher-apps-nominate-2020": {
-            "buttonText": "Postuler en tant que Professeur"
-          },
-          "teacher-apps-open-2021": {
-            "buttonText": "Rejoins-nous"
-          },
-          "teacher-apps-stillon-2020": {
-            "buttonText": "Rejoins-nous"
           }
         }
       }

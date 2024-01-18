@@ -115,6 +115,7 @@ sq:
           description: Provoni elementet baze te shkencave kompjuterike me personazhe nga Angry Birds dhe Plants vs. Zombies!
           description_short: Provo bazat e shkencës kompjuterike me shumë karaktere zbavitëse!
           student_description: Provoni elementet baze te shkencave kompjuterike me personazhe nga Angry Birds dhe Plants vs. Zombies!
+          name: Ora e Kodimit
         CodeStudioPuzzleChallenge: {}
         Tutorial Video - Code Studio Puzzle Challenge: {}
         cspunit1: {}
@@ -2689,7 +2690,10 @@ sq:
         self-paced-pl-csp2-2023: {}
         self-paced-pl-csp3-2023: {}
         self-paced-pl-csp4-2023: {}
-        musiclab: {}
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Lojë e lirë
         csa-software-engineering: {}
         csa-frq-practice:
           lesson_groups:
@@ -2915,3 +2919,90 @@ sq:
               display_name: Hyrje në App Lab
           student_description: Kjo njësi është një hyrje praktike për zhvillimin e një modeli të mësimit të makinave me të dhëna tabelare. Ju do të eksploroni se si kompjuterët mësojnë nga të dhënat për të marrë vendime, më pas do të zhvilloni projektet tuaja të mësimit të makinave rreth të dhënave të botës reale. Njësia arrin kulmin me dizajnimin e aplikacionit tuaj të mësimit të makinave për të zgjidhur një problem të rëndësishëm personalisht.
         csd-post-survey-2024: {}
+        melissasandbox-2024-1: {}
+        coursec-maker-2024: {}
+        coursef-maker-2024: {}
+        coursee-maker-2024: {}
+        coursed-maker-2024: {}
+        self-paced-pl-k5-2024: {}
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Ngjarje
+            lesson-4:
+              name: Sjelljet
+            lesson-5:
+              name: Hapat e ardhshme
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Cikle
+            lesson-4:
+              name: Kushtet
+            lesson-6:
+              name: Hapat e ardhshme
+          title: Hyrje në Shkencë Kompjuterike
+        csp1-2024: {}
+        csp2-2024: {}
+        csp3-2024: {}
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Përmbajtja
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa9-2024: {}
+        csa-postap-se-and-computer-vision-2024: {}
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: variabla
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
+            csp_project:
+              display_name: Projekt
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: të dhëna
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listat
+            lessonGroup-3:
+              display_name: Cikle
+            lessonGroup-5:
+              display_name: Projekt
+        csp7-2024: {}
+        csp8-2024: {}
+        csp9-2024: {}
+        csp10-2024: {}
+        csp-post-survey-2024: {}

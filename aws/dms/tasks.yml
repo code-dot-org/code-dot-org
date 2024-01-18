@@ -20,8 +20,6 @@ cron-pii:
 - dashboard.authentication_options:
     remove_column: [data]
 - dashboard.peer_reviews
-- dashboard.circuit_playground_discount_applications
-- dashboard.circuit_playground_discount_codes
 - dashboard.projects
 - dashboard.foorm_%
 cron:

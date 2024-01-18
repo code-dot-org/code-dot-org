@@ -73,11 +73,49 @@ describe I18n::Utils::SyncUpBase do
     end
   end
 
+  describe '.parse_options' do
+    let(:parse_options) {described_class.parse_options}
+
+    it 'returns default options' do
+      _(parse_options).must_equal({testing: false})
+    end
+
+    describe ':testing' do
+      let(:option_testing) {parse_options[:testing]}
+
+      context 'when "-t" command line option is set' do
+        before do
+          ARGV << '-t'
+        end
+
+        it 'returns true' do
+          _(option_testing).must_equal true
+        end
+      end
+
+      context 'when "--testing" command line option is set' do
+        before do
+          ARGV << '--testing'
+        end
+
+        it 'returns true' do
+          _(option_testing).must_equal true
+        end
+      end
+    end
+  end
+
   describe '.perform' do
     let(:perform) {described_class.perform}
 
-    it 'creates new instance and calls #perform' do
-      described_class.any_instance.expects(:perform).once
+    it 'creates new instance with command-line options and calls #perform' do
+      expected_options = {testing: true}
+      sync_up_instance = stub
+
+      described_class.expects(:parse_options).returns(expected_options)
+      described_class.expects(:new).with(**expected_options).returns(sync_up_instance)
+      sync_up_instance.expects(:perform).once
+
       perform
     end
 
@@ -110,10 +148,13 @@ describe I18n::Utils::SyncUpBase do
   describe '#perform' do
     let(:perform) {described_instance.send(:perform)}
 
+    let(:config) {stub(crowdin_project: 'expected_crowdin_project')}
+
     let(:expected_crowdin_client) {stub}
     let(:expected_source_file_path) {'expected_source_file_path'}
 
     before do
+      described_class.stubs(:config).returns(config)
       described_instance.stubs(:crowdin_client).returns(expected_crowdin_client)
       described_instance.stubs(:source_files).returns([expected_source_file_path])
     end
@@ -128,46 +169,62 @@ describe I18n::Utils::SyncUpBase do
     end
   end
 
-  describe '#config' do
-    let(:config) {described_instance.send(:config)}
+  describe '#options' do
+    let(:options) {described_instance.send(:options)}
 
-    let(:expected_class_config) {'expected_class_config'}
-
-    before do
-      described_class.expects(:config).returns(expected_class_config)
+    it 'returns instance of Options struct' do
+      _(options).must_be_instance_of described_class::Options
     end
 
-    it 'returns class config' do
-      assert_equal expected_class_config, config
+    it 'is frozen' do
+      _(options).must_be :frozen?
+    end
+
+    describe ':testing' do
+      let(:option_testing) {options.testing}
+
+      it 'returns false by default' do
+        _(option_testing).must_equal false
+      end
+
+      context 'when value is provided' do
+        let(:described_instance) {described_class.new(testing: expected_option_testing)}
+
+        let(:expected_option_testing) {'expected_option_testing'}
+
+        it 'returns provided value' do
+          _(option_testing).must_equal expected_option_testing
+        end
+      end
     end
   end
 
   describe '#crowdin_project' do
     let(:crowdin_project) {described_instance.send(:crowdin_project)}
 
-    let(:described_class) do
-      Class.new(I18n::Utils::SyncUpBase) do
-        config.crowdin_project = 'expected-crowdin-project'
-      end
-    end
+    let(:crowdin_prod_project) {'expected_crowdin_prod_project'}
+    let(:crowdin_test_project) {'expected_crowdin_test_project'}
+
+    let(:config) {stub(crowdin_project: crowdin_prod_project)}
+    let(:options) {stub(testing: is_testing)}
 
     let(:is_testing) {false}
 
     before do
-      CDO.stubs(:crowdin_project_test_mapping).returns({'expected-crowdin-project' => 'expected-crowdin-project-test'})
-
-      described_instance.stubs(:testing?).returns(is_testing)
+      CDO.stubs(:crowdin_project_test_mapping).returns({crowdin_prod_project => crowdin_test_project})
+      described_class.stubs(:config).returns(config)
+      described_instance.stubs(:options).returns(options)
     end
 
     it 'returns Crowdin project from config' do
-      assert_equal 'expected-crowdin-project', crowdin_project
+      assert_equal crowdin_prod_project, crowdin_project
     end
 
     context 'when testing' do
       let(:is_testing) {true}
 
       it 'returns test Crowdin project from mapping' do
-        assert_equal 'expected-crowdin-project-test', crowdin_project
+        assert_equal crowdin_test_project, crowdin_project
       end
     end
   end
@@ -193,19 +250,22 @@ describe I18n::Utils::SyncUpBase do
   describe '#source_files' do
     let(:source_files) {described_instance.send(:source_files)}
 
-    let(:described_class) do
-      Class.new(I18n::Utils::SyncUpBase) do
-        config.source_paths << '/i18n/locales/sources/**/*.json'
-        config.ignore_paths << '/i18n/locales/sources/**/ignored_i18n_source_file.json'
-      end
+    let(:i18n_source_dir_path) {'/i18n/locales/sources/resource/'}
+
+    let(:config) do
+      stub(
+        source_paths: [File.join(i18n_source_dir_path, '**/*.json')],
+        ignore_paths: [File.join(i18n_source_dir_path, '**/ignored_*.json')],
+      )
     end
 
-    let(:i18n_source_dir_path) {'/i18n/locales/sources/resource/'}
     let(:expected_i18n_source_file_path) {File.join(i18n_source_dir_path, 'expected_i18n_source_file.json')}
     let(:ignored_i18n_source_file_path) {File.join(i18n_source_dir_path, 'ignored_i18n_source_file.json')}
     let(:unexpected_i18n_source_file_path) {File.join(i18n_source_dir_path, 'unexpected_i18n_source_file.yaml')}
 
     before do
+      described_class.stubs(:config).returns(config)
+
       FileUtils.mkdir_p(i18n_source_dir_path)
       FileUtils.touch(expected_i18n_source_file_path)
       FileUtils.touch(ignored_i18n_source_file_path)

@@ -469,7 +469,7 @@ export default {
         var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
         // Must be marked EDITABLE so that cloned blocks share the same var name
         fieldLabel.EDITABLE = true;
-        this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+        this.setHelpUrl('/docs/spritelab/codestudio_spriteName');
         this.appendDummyInput()
           .appendField(Blockly.Msg.VARIABLES_GET_TITLE)
           .appendField(

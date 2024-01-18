@@ -3,35 +3,7 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "ai-2020": {
-            "buttonText": "بیشتر بیاموزید",
-            "title": "بررسی هوش مصنوعی و یادگیری ماشینی"
-          },
-          "ai-launch-2023": {
-            "buttonText": "بیشتر بیاموزید"
-          },
-          "ai-pl-launch-2023": {
-            "buttonText": "بیشتر بیاموزید"
-          },
-          "back-to-school-2021": {
-            "buttonText": "بیشتر بیاموزید"
-          },
-          "codebytes-2020": {
-            "buttonText": "بیشتر بیاموزید"
-          },
-          "coldplay": {
-            "buttonText": "آن را امتحان کنید"
-          },
-          "congrats-certificate-share": {
-            "buttonText": "شروع کنید"
-          },
-          "csjourneys": {
-            "buttonText": "بیشتر بیاموزید"
-          },
-          "csjourneys-22": {
-            "buttonText": "بیشتر بیاموزید"
-          },
-          "csleadersprize": {
+          "co-teacher": {
             "buttonText": "بیشتر بیاموزید"
           },
           "hoc-2023": {
@@ -43,23 +15,8 @@
             "buttonText": "بیشتر بیاموزید",
             "title": "مهمانی رقص: نسخه هوش مصنوعی"
           },
-          "home-learning-2020": {
-            "buttonText": "مشاهده ایده‌های پروژه"
-          },
           "superhero": {
             "buttonText": "بیشتر یاد بگیرید"
-          },
-          "teacher-apps-closing-2021": {
-            "buttonText": "به ما بپیوندید"
-          },
-          "teacher-apps-nominate-2020": {
-            "buttonText": "نامزد کردن یک استاد"
-          },
-          "teacher-apps-open-2021": {
-            "buttonText": "به ما بپیوندید"
-          },
-          "teacher-apps-stillon-2020": {
-            "buttonText": "به ما بپیوندید"
           }
         }
       }

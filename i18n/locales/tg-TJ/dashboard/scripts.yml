@@ -17,6 +17,8 @@ tg:
           description_audience: 'Синну сол: 9-18'
         20-hour:
           description_audience: 'Синну сол: 10-18'
+        Hour of Code:
+          name: Соати рамз
         asUnplugged:
           description_audience: 'Синну сол: 6-13'
         afterschool1:

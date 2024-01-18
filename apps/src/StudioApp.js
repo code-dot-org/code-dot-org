@@ -44,7 +44,11 @@ import {
   NOTIFICATION_ALERT_TYPE,
   START_BLOCKS,
 } from './constants';
-import {Renderers, stringIsXml} from '@cdo/apps/blockly/constants';
+import {
+  Renderers,
+  stringIsXml,
+  stripUserCreated,
+} from '@cdo/apps/blockly/constants';
 import {assets as assetsApi} from './clientApi';
 import {
   configCircuitPlayground,
@@ -2239,29 +2243,6 @@ StudioApp.prototype.handleHideSource_ = function (options) {
         });
 
         buttonRow.appendChild(openWorkspace);
-
-        if (
-          ['algebra_game', 'calc', 'eval'].includes(
-            appOptions?.level?.projectType
-          )
-        ) {
-          const deprecationUrl =
-            'https://support.code.org/hc/en-us/articles/16268528601101-List-of-Deprecated-or-Non-Supported-Code-org-Courses';
-          ReactDOM.render(
-            <div style={{color: '#ff7a7a', textAlign: 'initial'}}>
-              {msg.deprecatedCalcAndEvalBrief()}
-              &nbsp;
-              <a
-                href={deprecationUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {msg.learnMore()}
-              </a>
-            </div>,
-            buttonRow.appendChild(document.createElement('div'))
-          );
-        }
       }
     }
   }
@@ -2750,6 +2731,13 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     loadLastAttempt = false;
   }
   var startBlocks = config.level.startBlocks || '';
+  // When procedure definition blocks are set using the modal function editor,
+  // they will end up deletable by the student unless the XML is manually
+  // updated. Removing usercreated="true" ensures functions and behaviors
+  // are not deletable by the student using the modal editor.
+  if (stringIsXml(startBlocks)) {
+    startBlocks = stripUserCreated(startBlocks);
+  }
   // TODO: When we start using json in levelbuilder, we will need to pull this from the level config.
   if (loadLastAttempt && config.levelGameName !== 'Jigsaw') {
     startBlocks = config.level.lastAttempt || startBlocks;
@@ -3454,6 +3442,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
       isK1: config.level.isK1,
       appType: config.app,
       nextLevelUrl: config.nextLevelUrl,
+      currentScriptLevelUrl: config.currentScriptLevelUrl,
       isProjectTemplateLevel:
         !!config.level.projectTemplateLevelName && !config.level.isK1,
       showProjectTemplateWorkspaceIcon:

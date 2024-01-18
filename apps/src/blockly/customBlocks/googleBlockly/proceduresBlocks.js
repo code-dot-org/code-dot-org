@@ -47,8 +47,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       },
     ],
     style: 'procedure_blocks',
-    helpUrl: '%{BKY_PROCEDURES_DEFNORETURN_HELPURL}',
-    tooltip: '%{BKY_PROCEDURES_DEFNORETURN_TOOLTIP}',
+    helpUrl: '/docs/spritelab/codestudio_definingFunction',
     extensions: [
       'procedure_def_get_def_mixin',
       'procedure_def_var_mixin',
@@ -78,9 +77,10 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     nextStatement: null,
     previousStatement: null,
     style: 'procedure_blocks',
-    helpUrl: '%{BKY_PROCEDURES_CALLNORETURN_HELPURL}',
+    helpUrl: '/docs/spritelab/codestudio_callingFunction',
     extensions: [
       'procedures_edit_button',
+      'procedure_caller_serialize_name',
       'procedure_caller_get_def_mixin',
       'procedure_caller_var_mixin',
       'procedure_caller_update_shape_mixin',
@@ -121,9 +121,20 @@ GoogleBlockly.Extensions.register('procedures_edit_button', function () {
       colorOverrides: {button: 'blue', text: 'white'},
       allowReadOnlyClick: true, // We support showing the editor even if viewing in read only mode.
     });
+    button.EDITABLE = false;
+    button.SERIALIZABLE = false;
     this.inputList[this.inputList.length - 1].appendField(button, 'EDIT');
   }
 });
+
+// This extension make the NAME fields of caller/getter blocks serializable.
+GoogleBlockly.Extensions.register(
+  'procedure_caller_serialize_name',
+  function () {
+    const labelField = this.getField('NAME');
+    labelField.SERIALIZABLE = true;
+  }
+);
 
 // This extension renders function and behavior definitions as mini toolboxes
 // The only toolbox blocks are a comment (for functions) or a comment + "this sprite" block (for behaviors)

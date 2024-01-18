@@ -255,7 +255,8 @@ module LevelsHelper
       view_options(
         lesson_position: @script_level.lesson.absolute_position,
         level_position: @script_level.position,
-        next_level_url: @script_level.next_level_or_redirect_path_for_user(current_user, @lesson)
+        next_level_url: @script_level.next_level_or_redirect_path_for_user(current_user, @lesson),
+        current_script_level_url: @script_level.path,
       )
     end
 
@@ -730,7 +731,7 @@ module LevelsHelper
       art_from_html: ERB::Util.url_encode(I18n.t('footer.art_from_html', current_year: Time.now.year)),
       code_from_html: ERB::Util.url_encode(I18n.t('footer.code_from_html')),
       powered_by_aws: I18n.t('footer.powered_by_aws'),
-      trademark: ERB::Util.url_encode(I18n.t('footer.trademark', current_year: Time.now.year)),
+      trademark: ERB::Util.url_encode(I18n.t('footer.trademark', current_year: Time.now.year, cs_discoveries: "CS Discoveries&reg;")),
       built_on_github: I18n.t('footer.built_on_github'),
       google_copyright: ERB::Util.url_encode(I18n.t('footer.google_copyright'))
     }

@@ -206,7 +206,7 @@ class ScriptLevelsController < ApplicationController
 
     @level = @script_level.level
 
-    render json: @level.summarize_for_lab2_properties
+    render json: @level.summarize_for_lab2_properties(@script)
   end
 
   # Get a list of hidden lessons for the current users section

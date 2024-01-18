@@ -1032,6 +1032,11 @@ is:
             '"hearts"': hjörtu
             '"rain"': regn
             '"starburst"': Stjörnublossi
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': blár
+            '"red"': rauður
       KatiesBlocks_tumbling:
         text: veltist
       Mikelab_addBehaviorSimple:

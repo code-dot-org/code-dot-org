@@ -398,6 +398,34 @@ describe I18n::Utils::CrowdinClient do
         assert_equal created_source_directory, source_directory
       end
     end
+
+    context 'when Crowdin source directory is already creating by another concurrent process' do
+      let(:error) {described_class::RequestError.new('directory[parallelCreation]: Already creating directory...')}
+
+      it 'returns existing Crowdin source directory data' do
+        execution_sequence = sequence('execution')
+
+        described_instance.expects(:get_source_directory).returns(nil).in_sequence(execution_sequence)
+        described_instance.expects(:add_source_directory).raises(error).in_sequence(execution_sequence)
+        described_instance.expects(:get_source_directory).returns(existing_source_directory).in_sequence(execution_sequence)
+
+        assert_equal existing_source_directory, source_directory
+      end
+    end
+
+    context 'when Crowdin source directory is already created by another concurrent process' do
+      let(:error) {described_class::RequestError.new('name[notUnique]: Invalid name given. Name must be unique')}
+
+      it 'returns existing Crowdin source directory data' do
+        execution_sequence = sequence('execution')
+
+        described_instance.expects(:get_source_directory).returns(nil).in_sequence(execution_sequence)
+        described_instance.expects(:add_source_directory).raises(error).in_sequence(execution_sequence)
+        described_instance.expects(:get_source_directory).returns(existing_source_directory).in_sequence(execution_sequence)
+
+        assert_equal existing_source_directory, source_directory
+      end
+    end
   end
 
   describe '#request' do

@@ -982,6 +982,11 @@ nn:
             '"confetti"': Konfetti
             '"hearts"': hjerter
             '"rain"': regn
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': blå
+            '"red"': raud
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} startar {BEHAVIOR}
       Mikelab_addTrainingData:

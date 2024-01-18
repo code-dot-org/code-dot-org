@@ -10,13 +10,8 @@ import {
 import Button from '../Button';
 import {BodyTwoText, StrongText} from '@cdo/apps/componentLibrary/typography';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import DCDO from '@cdo/apps/dcdo';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-
-export const showCoteacherInviteNotification = invite => {
-  return !!invite && DCDO.get('show-coteacher-ui', true);
-};
 
 const CoteacherInviteNotification = ({
   isForPl,
@@ -26,9 +21,9 @@ const CoteacherInviteNotification = ({
   coteacherInviteForPl,
 }) => {
   const invite = useMemo(() => {
-    if (showCoteacherInviteNotification(coteacherInviteForPl) && isForPl) {
+    if (!!coteacherInviteForPl && isForPl) {
       return coteacherInviteForPl;
-    } else if (showCoteacherInviteNotification(coteacherInvite) && !isForPl) {
+    } else if (!!coteacherInvite && !isForPl) {
       return coteacherInvite;
     }
     return null;

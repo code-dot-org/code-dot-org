@@ -46,6 +46,7 @@ ta:
             ஆகியவற்றின் எழுத்துக்களுடன் கணினி அறிவியலின் அடிப்படைகளை முயற்சிக்கவும்!
           description_short: பல வேடிக்கையான கதாபாத்திரங்களுடன் கணினி அறிவியலின் அடிப்படைகளை
             முயற்சிக்கவும்!
+          name: நிரல்வரி நேரம்
           student_description: Angry Birds மற்றும் Angry Birds  மற்றும் Plants vs.
             Zombies! ஆகியவற்றின் எழுத்துக்களுடன் கணினி அறிவியலின் அடிப்படைகளை முயற்சிக்கவும்!
           title: Hour of Code 2013
@@ -1426,6 +1427,16 @@ ta:
               display_name: திட்டம்
             csp_variables:
               display_name: மாறிலிகள்
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: நிபந்தனைகள்
+            csp_functions:
+              display_name: செயல்பாடுகள்
+            csp_project:
+              display_name: திட்டம்
+            csp_variables:
+              display_name: மாறிலிகள்
         csp4-dlp:
           lesson_groups:
             required:
@@ -1502,6 +1513,10 @@ ta:
               display_name: சுழற்சிகள்
             csp_project:
               display_name: திட்டம்
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: தகவல்கள்
         csp5-dlp:
           lesson_groups:
             required:
@@ -1543,6 +1558,14 @@ ta:
             csp_unit6_2020:
               display_name: வழிமுறைகள்
         csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: பட்டியல்கள்
+            lessonGroup-3:
+              display_name: சுழற்சிகள்
+            lessonGroup-5:
+              display_name: திட்டம்
+        csp6-2024:
           lesson_groups:
             csp_unit6_2020:
               display_name: பட்டியல்கள்
@@ -2020,6 +2043,10 @@ ta:
           student_description: உங்கள் சொந்த Minecraft பதிப்பில் விலங்குகள் மற்றும்
             பிற Minecraft உயிரினங்களை நிரல் செய்யவும்.
           title: மைன்கிராஃப்டு வடிவமைப்பாளர்
+        musiclab:
+          lessons:
+            lesson-3:
+              name: இலவசமாக விளையாடு
         netsim:
           title: இணைய மாதிரி
         nevada-standards-aligned-fifth-grade-2023:
@@ -2739,6 +2766,17 @@ ta:
           title: 'தொகுதி 2: நேவிகேட்டிங் Code.org '
         self-paced-pl-csp2-2023:
           title: 'தொகுதி 2: நேவிகேட்டிங் Code.org '
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: சுழற்சிகள்
+            lesson-4:
+              name: நிபந்தனைகள்
+          title: கணினி அறிவியலின் அறிமுகம்
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: நிகழ்வுகள்
         soccer:
           description: ஒரு கால்பந்து விளையாட்டை உருவாக்குங்கள்
           description_short: ஒரு கால்பந்து விளையாட்டை உருவாக்குங்கள்

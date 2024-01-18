@@ -189,6 +189,18 @@ module Api::V1::Pd
       assert_equal 2, data['csd_teachers']['unreviewed']['total']
     end
 
+    test 'enrollment count included in index' do
+      sign_in @workshop_admin
+      workshop = create :pd_workshop, num_sessions: 1
+      application = create TEACHER_APPLICATION_FACTORY, course: 'csd', status: 'accepted', pd_workshop_id: workshop.id
+      create :pd_enrollment, application_id: application.id, user: application.user, workshop: workshop
+      get :index
+      assert_response :success
+      data = JSON.parse(response.body)
+      assert_equal 0, data['csd_teachers']['accepted']['total']
+      assert_equal 1, data['csd_teachers']['enrolled']['total']
+    end
+
     test 'regional partners can show their applications as workshop organizers' do
       sign_in @workshop_organizer
       get :show, params: @test_show_params

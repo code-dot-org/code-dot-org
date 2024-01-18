@@ -51,11 +51,44 @@
     "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-12-13T21:22:50.003+00:00\",\"changed\":[\"cloned from \\\"courseD_bee_conditionals2_2023\\\"\"],\"cloned_from\":\"courseD_bee_conditionals2_2023\"},{\"changed_at\":\"2023-12-13 21:23:13 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-02 18:47:32 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-02 18:56:38 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-12-13T21:22:50.003+00:00\",\"changed\":[\"cloned from \\\"courseD_bee_conditionals2_2023\\\"\"],\"cloned_from\":\"courseD_bee_conditionals2_2023\"},{\"changed_at\":\"2023-12-13 21:23:13 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-02 18:47:32 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-02 18:56:38 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-03 18:10:35 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-03 18:16:53 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-03 19:09:54 +0000\",\"changed\":[],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-03 19:58:53 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"start_blocks\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveForward">
+              <next>
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="maze_turn">
+                      <field name="DIR">turnLeft</field>
+                      <next>
+                        <block type="maze_moveForward">
+                          <next>
+                            <block type="bee_ifOnlyFlower">
+                              <statement name="DO">
+                                <block type="maze_nectar"/>
+                              </statement>
+                              <next>
+                                <block type="maze_moveForward"/>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
     <toolbox_blocks>
       <xml>
         <block type="maze_moveForward"/>

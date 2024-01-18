@@ -487,7 +487,6 @@
   "makerSetupInstallSerialConnector": "لطفاً [Code.org Serial Connector Chrome App]({webstoreURL}) را نصب کنید.",
   "makerSetupInstallFirmataCP": "باید اطمینان حاصل کنید که طرح ثابت‌افزار مناسبی در آن نصب شده است. می‌توانید طرح Firmata [for Circuit Playground Express boards with these instructions]({firmataURLExpress}) و [for Circuit Playground Classic boards with these instructions]({firmataURLClassic}) را نصب کنید.",
   "makerSetupInstallFirmataMB": "شما می توانید میکروبیت خود را با کلیک بر روی دکمه \"آپدیت میکروبیت\" که در زیر مشاهده میکنید به روز کنید. بعد از اینکه دکمه را فشار دادید، یک پنجره با یک ردیف که شامل \"میکروبیت\" است ظاهر می‌شود. آن ردیف را انتخاب کنید و سپس روی دکمه \"اتصال\" کلیک کنید.",
-  "makerSetupInstallFirmataOther": "باید اطمینان حاصل کنید که طرح ثابت‌افزار مناسبی در آن نصب شده است. می‌توانید طرح Firmata [for Circuit Playground Express boards with these instructions]({firmataURLExpress}) و [for Circuit Playground Classic boards with these instructions]({firmataURLClassic}) را نصب کنید. می‌توانید طرح Firmata را [for micro:bit with these instructions]({firmataURLMB}) نصب کنید",
   "makerSetupInstructions": "دستورالعمل‌های راه‌اندازی",
   "makerSetupLinuxAddDialout": "اگر عضو 'dialout' نیستید، باید خود را به آن گروه اضافه کنید:",
   "makerSetupLinuxAlternative": "نصب‌کننده‌های جایگزین",

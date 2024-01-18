@@ -507,36 +507,6 @@ class Section < ApplicationRecord
     end
   end
 
-  # One of the constraints for teachers looking for discount codes is that they
-  # have a section in which 10+ students have made progress on 5+ levels in both
-  # csd2 and csd3
-  # Note: This code likely belongs in CircuitPlaygroundDiscountCodeApplication
-  # once such a thing exists
-  def has_sufficient_discount_code_progress?
-    return false if students.length < 10
-    csd2 = Unit.get_from_cache('csd2-2019')
-    csd3 = Unit.get_from_cache('csd3-2019')
-    raise 'Missing scripts' unless csd2 && csd3
-
-    csd2_programming_level_ids = csd2.levels.select {|level| level.is_a?(Weblab)}.map(&:id)
-    csd3_programming_level_ids = csd3.levels.select {|level| level.is_a?(Gamelab)}.map(&:id)
-
-    # Return true if 10+ students meet our progress condition
-    num_students_with_sufficient_progress = 0
-    students.each do |student|
-      csd2_progress_level_ids = student.user_levels_by_level(csd2).keys
-      csd3_progress_level_ids = student.user_levels_by_level(csd3).keys
-
-      # Count students who have made progress on 5+ programming levels in both units
-      next unless (csd2_progress_level_ids & csd2_programming_level_ids).count >= 5 &&
-        (csd3_progress_level_ids & csd3_programming_level_ids).count >= 5
-
-      num_students_with_sufficient_progress += 1
-      return true if num_students_with_sufficient_progress >= 10
-    end
-    false
-  end
-
   # Returns the ids of all units which any participant in this section has ever
   # been assigned to or made progress on if the instructor of the section can
   # be an instructor for that unit

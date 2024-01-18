@@ -4,7 +4,7 @@ import jsonic from 'jsonic';
 import {parseElement} from '@cdo/apps/xml';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
 import {customInputTypes as spriteLabInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
-import {customInputTypes as danceInputTypes} from '@cdo/apps/dance/blocks';
+import {customInputTypes as danceInputTypes} from '@cdo/apps/dance/blockly/blocks';
 import {
   valueTypeTabShapeMap,
   exampleSprites,

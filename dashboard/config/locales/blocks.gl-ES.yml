@@ -146,6 +146,11 @@ gl:
         options:
           EFFECT:
             '"hearts"': corazóns
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': azul
+            '"red"': vermello
       Mikelab_changePropBy:
         options:
           PROPERTY:

@@ -562,22 +562,22 @@
         },
         "CSD U3 abstraction velocityX control_2021": {
           "rubric_key_concept": "Use condicionais para controlar o fluxo de um programa; modele o movimento bidimensional em um plano cartesiano.",
-          "rubric_performance_level_1": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, então repete. O sprite parece estar sempre voltado para a direção apropriada. Não há blocos extras no programa e o contrapadrão não é usado.",
-          "rubric_performance_level_2": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, mas talvez não esteja voltado para a direção certa enquanto se move. O contrapadrão não é usado.",
+          "rubric_performance_level_1": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, então repete. O sprite parece estar sempre voltado para a direção apropriada. Não há blocos extras no programa e o Counter Pattern não é usado.",
+          "rubric_performance_level_2": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, mas talvez não esteja voltado para a direção certa enquanto se move. O Counter Pattern não é usado.",
           "rubric_performance_level_3": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, mas não repete o movimento. O aluno só mudou sua velocidade usando a primeira declaração condicional fornecida. ",
           "rubric_performance_level_4": "O peixe simplesmente se move para através da tela e depois desaparece."
         },
         "CSD U3 abstraction velocityX control_2022": {
           "rubric_key_concept": "Use condicionais para controlar o fluxo de um programa; modele o movimento bidimensional em um plano cartesiano.",
-          "rubric_performance_level_1": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, então repete. O sprite parece estar sempre voltado para a direção apropriada. Não há blocos extras no programa e o contrapadrão não é usado.",
-          "rubric_performance_level_2": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, mas talvez não esteja voltado para a direção certa enquanto se move. O contrapadrão não é usado.",
+          "rubric_performance_level_1": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, então repete. O sprite parece estar sempre voltado para a direção apropriada. Não há blocos extras no programa e o Counter Pattern não é usado.",
+          "rubric_performance_level_2": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, mas talvez não esteja voltado para a direção certa enquanto se move. O Counter Pattern não é usado.",
           "rubric_performance_level_3": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, mas não repete o movimento. O aluno só mudou sua velocidade usando a primeira declaração condicional fornecida. ",
           "rubric_performance_level_4": "O peixe simplesmente se move para através da tela e depois desaparece."
         },
         "CSD U3 abstraction velocityX control_2023": {
           "rubric_key_concept": "Use condicionais para controlar o fluxo de um programa; modele o movimento bidimensional em um plano cartesiano.",
-          "rubric_performance_level_1": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, então repete. O sprite parece estar sempre voltado para a direção apropriada. Não há blocos extras no programa e o contrapadrão não é usado.",
-          "rubric_performance_level_2": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, mas talvez não esteja voltado para a direção certa enquanto se move. O contrapadrão não é usado.",
+          "rubric_performance_level_1": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, então repete. O sprite parece estar sempre voltado para a direção apropriada. Não há blocos extras no programa e o Counter Pattern não é usado.",
+          "rubric_performance_level_2": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, mas talvez não esteja voltado para a direção certa enquanto se move. O Counter Pattern não é usado.",
           "rubric_performance_level_3": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, mas não repete o movimento. O aluno só mudou sua velocidade usando a primeira declaração condicional fornecida. ",
           "rubric_performance_level_4": "O peixe simplesmente se move para através da tela e depois desaparece."
         },
@@ -674,28 +674,28 @@
         "CSD U4 - Design Mode Project_2019": {
           "rubric_key_concept": "Crie um protótipo digital para um aplicativo de tela.",
           "rubric_performance_level_1": "O protótipo digital é uma boa recriação do protótipo em papel, com apenas pequenas inconsistências.",
-          "rubric_performance_level_2": "A maioria dos elementos do protótipo em papel foram recriado no protótipo digital, mas pode haver algumas inconsistências com o layout, o tamanho ou alguns pequenos elementos ausentes. As inconsistências não afetariam a funcionalidade do protótipo.",
+          "rubric_performance_level_2": "A maioria dos elementos do protótipo em papel foram recriados no protótipo digital, mas pode haver algumas inconsistências com o layout, o tamanho ou alguns pequenos elementos ausentes. As inconsistências não afetariam a funcionalidade do protótipo.",
           "rubric_performance_level_3": "Alguns elementos do protótipo em papel foram recriados no protótipo digital, mas há inconsistências suficientes para afetar a funcionalidade do protótipo.",
           "rubric_performance_level_4": "Não há elementos no protótipo digital ou os elementos não são consistentes com o protótipo em papel."
         },
         "CSD U4 - Design Mode Project_2021": {
           "rubric_key_concept": "Crie um protótipo digital para um aplicativo de tela.",
           "rubric_performance_level_1": "O protótipo digital é uma boa recriação do protótipo em papel, com apenas pequenas inconsistências.",
-          "rubric_performance_level_2": "A maioria dos elementos do protótipo em papel foram recriado no protótipo digital, mas pode haver algumas inconsistências com o layout, o tamanho ou alguns pequenos elementos ausentes. As inconsistências não afetariam a funcionalidade do protótipo.",
+          "rubric_performance_level_2": "A maioria dos elementos do protótipo em papel foram recriados no protótipo digital, mas pode haver algumas inconsistências com o layout, o tamanho ou alguns pequenos elementos ausentes. As inconsistências não afetariam a funcionalidade do protótipo.",
           "rubric_performance_level_3": "Alguns elementos do protótipo em papel foram recriados no protótipo digital, mas há inconsistências suficientes para afetar a funcionalidade do protótipo.",
           "rubric_performance_level_4": "Não há elementos no protótipo digital ou os elementos não são consistentes com o protótipo em papel."
         },
         "CSD U4 - Design Mode Project_2022": {
           "rubric_key_concept": "Crie um protótipo digital para um aplicativo de tela.",
           "rubric_performance_level_1": "O protótipo digital é uma boa recriação do protótipo em papel, com apenas pequenas inconsistências.",
-          "rubric_performance_level_2": "A maioria dos elementos do protótipo em papel foram recriado no protótipo digital, mas pode haver algumas inconsistências com o layout, o tamanho ou alguns pequenos elementos ausentes. As inconsistências não afetariam a funcionalidade do protótipo.",
+          "rubric_performance_level_2": "A maioria dos elementos do protótipo em papel foram recriados no protótipo digital, mas pode haver algumas inconsistências com o layout, o tamanho ou alguns pequenos elementos ausentes. As inconsistências não afetariam a funcionalidade do protótipo.",
           "rubric_performance_level_3": "Alguns elementos do protótipo em papel foram recriados no protótipo digital, mas há inconsistências suficientes para afetar a funcionalidade do protótipo.",
           "rubric_performance_level_4": "Não há elementos no protótipo digital ou os elementos não são consistentes com o protótipo em papel."
         },
         "CSD U4 - Design Mode Project_2023": {
           "rubric_key_concept": "Crie um protótipo digital para um aplicativo de tela.",
           "rubric_performance_level_1": "O protótipo digital é uma boa recriação do protótipo em papel, com apenas pequenas inconsistências.",
-          "rubric_performance_level_2": "A maioria dos elementos do protótipo em papel foram recriado no protótipo digital, mas pode haver algumas inconsistências com o layout, o tamanho ou alguns pequenos elementos ausentes. As inconsistências não afetariam a funcionalidade do protótipo.",
+          "rubric_performance_level_2": "A maioria dos elementos do protótipo em papel foram recriados no protótipo digital, mas pode haver algumas inconsistências com o layout, o tamanho ou alguns pequenos elementos ausentes. As inconsistências não afetariam a funcionalidade do protótipo.",
           "rubric_performance_level_3": "Alguns elementos do protótipo em papel foram recriados no protótipo digital, mas há inconsistências suficientes para afetar a funcionalidade do protótipo.",
           "rubric_performance_level_4": "Não há elementos no protótipo digital ou os elementos não são consistentes com o protótipo em papel."
         },
@@ -1020,20 +1020,20 @@
           "rubric_performance_level_4": "Nenhum botão além do botão “Feliz” responde ao ser clicado."
         },
         "CSD U6 for loop led color_2019": {
-          "rubric_key_concept": "Use um for loop para iterar sobre uma matriz"
+          "rubric_key_concept": "Use um loop for para iterar sobre uma matriz"
         },
         "CSD U6 for loop led color_2021": {
-          "rubric_key_concept": "Use um for loop para iterar sobre uma matriz"
+          "rubric_key_concept": "Use um loop for para iterar sobre uma matriz"
         },
         "CSD U6 for loop led personalize_2019": {
-          "rubric_key_concept": "Use um for loop para iterar sobre uma matriz",
+          "rubric_key_concept": "Use um loop for para iterar sobre uma matriz",
           "rubric_performance_level_1": "Todos os cinco botões funcionam conforme descrito usando for loops, e os loops usam o comprimento da matriz como condição de saída, sem erros ou códigos desnecessários.",
           "rubric_performance_level_2": "Os botões liga/desliga funcionam conforme descrito usando for loops, e não há erros no código.",
           "rubric_performance_level_3": "Os for loops são usados para ligar e desligar os LEDs, mas podem haver erros que impeçam os botões de funcionarem conforme descrito.",
           "rubric_performance_level_4": "Não há for loops no código."
         },
         "CSD U6 for loop led personalize_2021": {
-          "rubric_key_concept": "Use um for loop para iterar sobre uma matriz",
+          "rubric_key_concept": "Use um loop for para iterar sobre uma matriz",
           "rubric_performance_level_1": "Todos os cinco botões funcionam conforme descrito usando for loops, e os loops usam o comprimento da matriz como condição de saída, sem erros ou códigos desnecessários.",
           "rubric_performance_level_2": "Os botões liga/desliga funcionam conforme descrito usando for loops, e não há erros no código.",
           "rubric_performance_level_3": "Os for loops são usados para ligar e desligar os LEDs, mas podem haver erros que impeçam os botões de funcionarem conforme descrito.",
@@ -1391,42 +1391,42 @@
           "rubric_key_concept": "Conceito-chave"
         },
         "ml-club app-review submit": {
-          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use machine learning",
+          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use aprendizado de máquina",
           "rubric_performance_level_1": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt de cada menu suspenso foi editado para ser uma pergunta. O aplicativo tem uma tela de boas-vindas e um botão que altera as telas corretamente.",
           "rubric_performance_level_2": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt do menu suspenso foi editado para ser uma pergunta. No entanto, a tela de boas-vindas está incompleta ou não funciona corretamente.",
           "rubric_performance_level_3": "O modelo foi importado e o aplicativo funciona corretamente, mas não houve alterações no design ou no texto na tela. Não há tela de boas-vindas.",
           "rubric_performance_level_4": "O aplicativo não foi iniciado"
         },
         "ml-club app-review submit_2022": {
-          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use machine learning",
+          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use aprendizado de máquina",
           "rubric_performance_level_1": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt de cada menu suspenso foi editado para ser uma pergunta. O aplicativo tem uma tela de boas-vindas e um botão que altera as telas corretamente.",
           "rubric_performance_level_2": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt do menu suspenso foi editado para ser uma pergunta. No entanto, a tela de boas-vindas está incompleta ou não funciona corretamente.",
           "rubric_performance_level_3": "O modelo foi importado e o aplicativo funciona corretamente, mas não houve alterações no design ou no texto na tela. Não há tela de boas-vindas.",
           "rubric_performance_level_4": "O aplicativo não foi iniciado"
         },
         "ml-club app-review submit_2023": {
-          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use machine learning",
+          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use aprendizado de máquina",
           "rubric_performance_level_1": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt de cada menu suspenso foi editado para ser uma pergunta. O aplicativo tem uma tela de boas-vindas e um botão que altera as telas corretamente.",
           "rubric_performance_level_2": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt do menu suspenso foi editado para ser uma pergunta. No entanto, a tela de boas-vindas está incompleta ou não funciona corretamente.",
           "rubric_performance_level_3": "O modelo foi importado e o aplicativo funciona corretamente, mas não houve alterações no design ou no texto na tela. Não há tela de boas-vindas.",
           "rubric_performance_level_4": "O aplicativo não foi iniciado"
         },
         "ml-intro app lab-book recommender 4-2021": {
-          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use machine learning",
+          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use aprendizado de máquina",
           "rubric_performance_level_1": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt de cada menu suspenso foi editado para ser uma pergunta. O aplicativo tem uma tela de boas-vindas e um botão que altera as telas corretamente.",
           "rubric_performance_level_2": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt do menu suspenso foi editado para ser uma pergunta. No entanto, a tela de boas-vindas está incompleta ou não funciona corretamente.",
           "rubric_performance_level_3": "O modelo foi importado e o aplicativo funciona corretamente, mas não houve alterações no design ou no texto na tela. Não há tela de boas-vindas.",
           "rubric_performance_level_4": "O aplicativo não foi iniciado"
         },
         "ml-intro app lab-book recommender 4_2022": {
-          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use machine learning",
+          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use aprendizado de máquina",
           "rubric_performance_level_1": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt de cada menu suspenso foi editado para ser uma pergunta. O aplicativo tem uma tela de boas-vindas e um botão que altera as telas corretamente.",
           "rubric_performance_level_2": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt do menu suspenso foi editado para ser uma pergunta. No entanto, a tela de boas-vindas está incompleta ou não funciona corretamente.",
           "rubric_performance_level_3": "O modelo foi importado e o aplicativo funciona corretamente, mas não houve alterações no design ou no texto na tela. Não há tela de boas-vindas.",
           "rubric_performance_level_4": "O aplicativo não foi iniciado"
         },
         "ml-intro app lab-book recommender 4_2023": {
-          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use machine learning",
+          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use aprendizado de máquina",
           "rubric_performance_level_1": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt de cada menu suspenso foi editado para ser uma pergunta. O aplicativo tem uma tela de boas-vindas e um botão que altera as telas corretamente.",
           "rubric_performance_level_2": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt do menu suspenso foi editado para ser uma pergunta. No entanto, a tela de boas-vindas está incompleta ou não funciona corretamente.",
           "rubric_performance_level_3": "O modelo foi importado e o aplicativo funciona corretamente, mas não houve alterações no design ou no texto na tela. Não há tela de boas-vindas.",

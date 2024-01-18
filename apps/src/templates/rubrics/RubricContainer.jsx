@@ -114,10 +114,10 @@ export default function RubricContainer({
         <RubricSettings
           canProvideFeedback={canProvideFeedback}
           teacherHasEnabledAi={teacherHasEnabledAi}
-          rubricId={rubric.id}
           studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
           visible={selectedTab === TAB_NAMES.SETTINGS}
           refreshAiEvaluations={fetchAiEvaluations}
+          rubric={rubric}
           studentName={studentLevelInfo && studentLevelInfo.name}
           sectionId={sectionId}
         />

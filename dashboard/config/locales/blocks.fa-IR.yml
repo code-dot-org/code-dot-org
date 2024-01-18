@@ -1064,6 +1064,14 @@ fa:
         text: میکروسکوپ را روی [0][null] تنظیم کنید
       DansBlocks_testRectangle:
         text: 'ایجاد مستطیل x: {X} y: {Y} w: {W} h: {H} رنگ: {COLOR}'
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': آبی
+            '"red"': قرمز
+          OPT:
+            '"large"': بزرگ
+            '"small"': کوچک
       FunctionBlocks_addEightBlock:
         text: 8 واحد اضافه کنید
       FunctionBlocks_addFiveBlock:
@@ -1901,7 +1909,7 @@ fa:
           BEHAVIOR:
             new Behavior(fluttering, []): بال زدن
             new Behavior(jittering, []): با عصبانیت رفتار کردن
-            new Behavior(patrolling, []): گشت‌ زدن
+            new Behavior(patrolling, []): گشت‌زنی
             new Behavior(spinning_left, []): چرخش به سمت چپ
             new Behavior(spinning_right, []): چرخش به سمت راست
             new Behavior(wandering, []): گردش کردن
@@ -2124,7 +2132,7 @@ fa:
               حلقه‏
             new Behavior(moving_west_and_looping, []): حرکت به سمت غرب و درست کردن
               حلقه‏
-            new Behavior(patrolling, []): گشت‌ زدن
+            new Behavior(patrolling, []): گشت‌زنی
             new Behavior(spinning_left, []): چرخش به سمت چپ
             new Behavior(spinning_right, []): چرخش به سمت راست
             new Behavior(wandering, []): گردش کردن

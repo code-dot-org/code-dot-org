@@ -18,7 +18,7 @@ title: Sumber
 
 ## Gantungkan poster ini di sekolah anda
 
-Set poster baharu tersedia yang menampilkan Malala, Stephen Curry, Shakira dan ramai lagi! Tahun ini, setiap set akan dilengkapi dengan 6 poster dan 126 pelekat "Saya telah melaksanakan Hour of Code". Untuk mencetak sendiri, hanya perlu klik imej di bawah untuk melihat dan menyimpan versi yang boleh dicetak.
+Print your own posters! Simply click an image below to view and save a printable version.
 
 {{ promote_new_posters }}
 

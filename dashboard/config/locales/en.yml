@@ -620,7 +620,7 @@ en:
     powered_by_aws: 'Amazon Web Services and the “Powered by AWS” logo are trademarks of Amazon.com, Inc. or its affiliates in the United States and/or other countries.'
     built_on_github: 'Built on GitHub from Microsoft'
     google_copyright: '&copy; Google Inc. used with permission. Google Classroom is a trademark of Google Inc.'
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo, Hour of Code&reg; and %{cs_discoveries} are trademarks of Code.org.'
     copyright: 'Copyright'
     more: 'More'
     feedback: 'Provide feedback'

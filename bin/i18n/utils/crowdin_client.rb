@@ -131,8 +131,7 @@ module I18n
             storageId: crowdin_storage_id,
           )['data']
         else
-          # `mutex` prevents simultaneous creation of the same directory in multi-threaded processing
-          crowdin_directory = mutex.synchronize {source_directory File.dirname(file_path)}
+          crowdin_directory = source_directory File.dirname(file_path)
 
           request(
             :add_file,
@@ -148,10 +147,6 @@ module I18n
       private
 
       attr_reader :project, :client
-
-      def mutex
-        @mutex ||= Mutex.new
-      end
 
       def crowdin_source_path(source_path)
         path = source_path.delete_prefix(CDO.dir).split(I18N_SOURCE_DIR).last || ''
@@ -175,6 +170,16 @@ module I18n
         return @source_directories[crowdin_dir_path] if @source_directories.key?(crowdin_dir_path)
 
         @source_directories[crowdin_dir_path] = get_source_directory(dir_path) || add_source_directory(dir_path)
+      rescue RequestError => exception
+        # request errors:
+        # - "directory[parallelCreation]: Already creating directory..."
+        # - "name[notUnique]: Invalid name given. Name must be unique"
+        # indicate that the directory is creating/created by another concurrent process, so we can try to get it again.
+        if ['Already creating directory', 'Name must be unique'].any? {|error| exception.message.include?(error)}
+          @source_directories[crowdin_dir_path] ||= get_source_directory(dir_path)
+        else
+          raise exception
+        end
       end
 
       def stringify_errors(errors)

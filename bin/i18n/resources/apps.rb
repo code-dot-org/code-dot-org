@@ -9,10 +9,10 @@ module I18n
         Labs.sync_in
       end
 
-      def self.sync_up
-        Animations.sync_up
-        ExternalSources.sync_up
-        Labs.sync_up
+      def self.sync_up(**opts)
+        Animations.sync_up(**opts)
+        ExternalSources.sync_up(**opts)
+        Labs.sync_up(**opts)
       end
 
       def self.sync_out
