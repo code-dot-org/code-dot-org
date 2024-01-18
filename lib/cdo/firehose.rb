@@ -57,6 +57,10 @@ class FirehoseClient
   # Ref: https://docs.aws.amazon.com/firehose/latest/dev/limits.html
   BYTES_PER_REQUEST = 1024 * 1024 * 4
 
+  # This limit is based on the empirical observation that no data_json column values larger than 65,535 bytes have
+  # successfully made it into redshift.
+  BYTES_PER_COLUMN = 65_535
+
   # 'For US East (N. Virginia): 5,000 records/second, 2,000 requests/second, and 5 MiB/second.'
   # Ref: https://docs.aws.amazon.com/firehose/latest/dev/limits.html
   TRANSACTIONS_PER_SECOND = 2000.0
@@ -123,6 +127,9 @@ class FirehoseClient
     raise ArgumentError.new("stream must be defined") if stream.nil? || stream.blank?
     raise ArgumentError.new("Stream #{stream} not found in STREAMS") if (stream_name = STREAMS[stream]).nil?
 
+    if data[:data_json].to_s.bytesize > BYTES_PER_COLUMN
+      raise ArgumentError.new("data_json column too large (#{data[:data_json].to_s.bytesize} bytes)")
+    end
     record = add_common_values(data).to_json
     if (size = record.bytesize) > BYTES_PER_RECORD
       raise ArgumentError.new("Record too large (#{size} bytes)")
