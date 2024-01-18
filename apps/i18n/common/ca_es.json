@@ -1271,6 +1271,7 @@
   "loginExportHeader_studentName": "Nom de l'alumne",
   "loginExportInstructions": "**Fas la classe en remot?** Descarrega't un CSV amb les dades d'inici de sessió dels alumnes per crear una llista de correu o copiar el nom i la contrasenya d'accés de cada alumne als correus electrònics.",
   "loginInfo": "Dades d'inici de sessió",
+  "loginInfoLtiSetupHeader": "Configureu la vostra classe",
   "loginInfoResetSecretPicDesc": "Per restablir la imatge de la contrasenya de qualsevol dels vostres alumnes, aneu a la pestanya [Gestionar alumnes]({url}) de la secció, feu clic al botó \"Mostrar imatge\" sota la columna de \"Imatge de contrasenya\", i feu clic al botó \"Restablir\".",
   "loginInfoResetSecretWordDesc": "Per restablir les paraules secretes de qualsevol dels vostres alumnes, aneu a la pestanya [Gestionar alumnes]({url}) de la secció, feu clic al botó \"Mostrar paraules\" sota la columna de \"Paraules secretes\", i feu clic al botó \"Restablir\".",
   "loginInfoWordPicMoreBelow": "Els alumnes trobaran tota aquesta informació, incloses les seves {wordOrPicture} secretes, a les targetes d'inici de sessió que hi ha a continuació.",

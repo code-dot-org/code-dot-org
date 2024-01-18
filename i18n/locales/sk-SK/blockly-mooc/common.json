@@ -1316,6 +1316,7 @@
   "loginInfo_signinStep4_secretPicture": "Označ tvoj tajný obrázok.",
   "loginInfo_signinStep4_secretWords": "Vpíš tvoje tajné slová.",
   "loginInfo_signinStep5": "Klikni na tlačidlo \"Prihlásiť sa\".",
+  "loginInfoLtiSetupHeader": "Vytvoriť triedu",
   "loginType": "Spôsob prihlásenia",
   "loginTypeClever": "Clever",
   "loginTypeCleverButton": "Použiť Clever",

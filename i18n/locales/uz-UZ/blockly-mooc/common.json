@@ -1285,6 +1285,7 @@
   "loginInfo_signinStep4_secretPicture": "Ularning maxfiy rasmini tanlang.",
   "loginInfo_signinStep4_secretWords": "Ularning maxfiy so‘zlarini yozing.",
   "loginInfo_signinStep5": "\" Kirish \" tugmasini bosing.",
+  "loginInfoLtiSetupHeader": "Sinfingizni sozlang",
   "loginType": "Login Type",
   "loginTypeClever": "Aqlli",
   "loginTypeCleverButton": "Aqlli foydalaning",

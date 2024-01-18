@@ -388,7 +388,6 @@
   "makerSetupInstallSerialConnector": "Lütfen [Code.org Serial Connector Chrome App]({webstoreURL}) yükleyin.",
   "makerSetupInstallFirmataCP": "Doğru üretici yazılımı taslağının kurulu olduğundan emin olmalısınız. Firmata taslağını [Circuit Playground Express panoları için talimatlar ]({firmataURLExpress}) ve [Circuit Playground Express panoları için talimatlar]({firmataURLClassic}) kurabilirsiniz.",
   "makerSetupInstallFirmataMB": "Aşağıdaki \"micro:bit'i güncelle\" düğmesine tıklayarak micro:bit'inizi güncelleyebilirsiniz. Düğmeye bastıktan sonra, \"micro:bit\" içeren bir satır içeren bir pencere açılmalıdır. Bu satırı seçin ve ardından \"Bağlan\" düğmesine tıklayın.",
-  "makerSetupInstallFirmataOther": "Doğru üretici yazılımı taslağının kurulu olduğundan emin olmalısınız. Firmata taslağını [Circuit Playground Classic panoları için talimatlar]({firmataURLExpress}) ve [Circuit Playground Classic panoları için talimatlar]({firmataURLClassic}) kurabilirsiniz. Firmata taslağını [mikro:bit için bu talimatlarla] yükleyebilirsiniz][2]",
   "makerSetupLinuxAddDialout": "'Dışarı Arama'ya ait değilseniz, kendinizi o gruba eklemek isteyeceksiniz:",
   "makerSetupLinuxAlternative": "Alternatif Yükleyiciler",
   "makerSetupLinuxAlternativeInstall": "[Kaynaktan yükle](https://github.com/code-dot-org/browser)",

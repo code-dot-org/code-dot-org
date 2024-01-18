@@ -1064,6 +1064,14 @@ vi:
         options:
           INPUT1:
             '1': nước chanh
+      DansBlocks_testShowVariable:
+        options:
+          OPT:
+            '"large"': lớn
+            '"small"': nhỏ
+          COLOR:
+            '"blue"': màu xanh dương
+            '"red"': màu đỏ
       FunctionBlocks_communicate:
         text: Giao tiếp {VAR1} với {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:

@@ -103,6 +103,9 @@ si:
   social_hoc2019_dance: කැතී පෙරී, ෂෝන් මෙන්ඩස්, භීතිය! ද ඩිස්කෝ හි, ලිල් නාස් එක්ස්,
     ජොනාස් බ්රදර්ස්, නිකී මිනාජ් සහ තවත් 34 ක්!
   social_hoc_anybody: 'කේතය පැය: ඕනෑම කෙනෙකුට ඉගෙන ගත හැකිය'
+  hoc_interest_form_header: Get notified when Hour of Code registration opens!
+  hoc_interest_form_desc: Be the first to know about this year's Hour of Code, including
+    new activities and when registrations for Hour of Code events begin.
   oceans_landing_title: සාගර සඳහා කෘෂිකර්ම උපදේශක
   oceans_landing_description: යන්ත්ර ඉගෙනීම සහ AI හි සදාචාරාත්මක භාවිතය ගැන ඉගෙන ගන්න.
   cs_for_good_hashtag: "#CSforGood"
@@ -265,6 +268,12 @@ si:
   curricula_title_high: උසස් පාසල් විෂය මාලාව
   curricula_desc_high: පරිගණක විද්යාවට ගැඹුරට හාරා බැලීමට ඔබට සහ ඔබේ උසස් පාසැල් සිසුන්ට
     ආරාධනා කරන බලගතු පා courses මාලා සහ ක්රියාකාරකම් පිරික්සන්න.
+  facilitator_led_pl_heading: Facilitator-Led Professional Learning Workshops
+  facilitator_led_pl_desc: Learn about our professional learning workshops for elementary,
+    middle, and high school teachers.
+  self_paced_pl_heading: Self-Paced Professional Learning
+  self_paced_pl_desc: Professional learning at your own pace. Explore our online,
+    self-paced professional learning modules.
   for_administrators_heading: පරිපාලකයින් සඳහා
   for_administrators_desc: දැනටමත් පරිගණක විද්යාව ඔවුන්ගේ විෂය මාලාවට ඇතුළත් කර ඇති
     පාසල් දහස් ගණනක් සමඟ සම්බන්ධ වන්න.
@@ -323,6 +332,7 @@ si:
   call_to_action_start_part_02: දෙවන කොටස ආරම්භ කරන්න
   call_to_action_start_unplugged_activity: විසන්ධි කළ ක්රියාකාරකම් ආරම්භ කරන්න
   call_to_action_view_promo_resources: ප්රවර්ධන සම්පත් බලන්න
+  call_to_action_view_teach_with_cdo: Start teaching with Code.org
   call_to_action_get_involved: Get involved
   call_to_action_learn_more: තවත් ඉගෙන ගන්න
   call_to_action_watch_now: දැන් නරඹන්න
@@ -465,6 +475,10 @@ si:
   aria_label_call_to_action_dance_unplugged: ඩාන්ස් පාර්ටි නොප්ලග් කළ ක්රියාකාරකම්
     ආරම්භ කරන්න
   aria_label_call_to_action_afe: ඇමේසන් අනාගත ඉංජිනේරු ගැන තව දැනගන්න
+  aria_label_call_to_action_facilitator_pl: Learn more about facilitator-led professional
+    learning workshops
+  aria_label_call_to_action_self_paced_pl: Learn more about self-paced professional
+    learning
   aria_label_call_to_action_teaching_csf: ඉගැන්වීමේ පරිගණක විද්යා මූලධර්ම වෘත්තීය
     ඉගෙනුම් වැඩසටහන ආරම්භ කරන්න
   aria_label_call_to_action_teaching_csd: ඉගැන්වීමේ පරිගණක විද්යා සොයාගැනීම් වෘත්තීය
@@ -591,6 +605,17 @@ si:
   aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
   aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
     A
+  aria_label_call_to_action_afe_alexa: Learn more about Alexa for Astronauts
+  aria_label_call_to_action_afe_cloud_tour: Learn more about the Uncovering Cloud
+    Computer Career Tour
+  aria_label_call_to_action_afe_voice: Learn more about Amazon's Your Voice is Power
+    competition
+  aria_label_call_to_action_afe_scholarships: Learn more about Amazon's scholarships
+    and internships
+  aria_label_call_to_action_afe_robotics: Learn more about the Robotics Fulfillment
+    Center Tour
+  aria_label_call_to_action_afe_data_tour: Learn more about the Keeping Data Safe
+    Career Tour
   video_title_professional_learning_program: Code.org හි වෘත්තීය ඉගෙනුම් වැඩසටහන
   video_title_young_women_in_computer_science: පරිගණක විද්යාවේ තරුණ කාන්තාවන්
   curriculum_name_csf: පරිගණක විද්යා මූලධර්ම
@@ -707,6 +732,8 @@ si:
     ලබා දෙයි. '
   curriculum_desc_csa_ai_short: මෙම පශ්චාත්-AP® CSA මොඩියුලය උසස් පාසැල් සිසුන්ට වෘත්තීය
     මෘදුකාංග සංවර්ධන මෙවලම් සමඟ අත්දැකීම් ලබා දෙයි.
+  curriculum_desc_catalog: Explore our robust catalog of curriculum offerings for
+    all ages and levels — completely free.
   collection_hardware: දෘඩාංග කෙරෙහි අවධානය යොමු කරන්න
   collection_hardware_desc: ගැටළු විසඳීම සඳහා දත්ත සහ භෞතික උපාංග භාවිතා කිරීමට සිසුන්ට
     බලය ලබා දෙයි.
@@ -751,6 +778,7 @@ si:
   module_label_video_series: වීඩියෝ මාලාව
   module_label_self_paced: ස්වයං-වේග මොඩියුලය
   module_label_event_or_lessons: Event or lessons
+  module_label_or: Or
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -896,6 +924,7 @@ si:
   heading_acceptance: Acceptance
   heading_enroll: Enroll
   heading_have_questions: Have questions?
+  heading_resources_for_educators: Code.org resources for educators
   student_courses_top_desc: Start coding today. Our courses and activities are free!
     It's easier—and more fun—than you think.
   student_courses_explore_desc: Explore the world of computer science with engaging
@@ -1072,6 +1101,13 @@ si:
   dance_choose_activity: ඔබේ නර්තන සාදය තෝරන්න
   dance_afe_disclaimer: කාගේ සංගීතය මෙම නිබන්ධනය භාවිතා කරන කලාකරුවන් Code.org වෙත
     ඔවුන්ගේ සංගීතය භාවිතය බලපත්ර කොටසක් ලෙස ඇමසන් අනුග්රහය හෝ අනුමත නොකරයි.
+  dance_ai_behind_the_scenes: 'How does Dance Party: AI Edition work behind the scenes?'
+  dance_ai_behind_the_scenes_markdown: |-
+    In **Dance Party: AI Edition**, three selected emojis are used to generate an output effect using AI. An output effect consists of values for background effect, background color palette, and foreground effect.
+
+    Each emoji and each output value has a descriptive phrase associated with it. By comparing the similarity of an input emoji's phrase with an output value's phrase, we are able to use AI to recommend the best match.
+
+    To compute the similarity, each phrase is assigned an embedding. An [embedding](https://en.wikipedia.org/wiki/Word_embedding) is a list of numbers that captures the meaning of a phrase, and the embeddings used in **Dance Party: AI Edition** are about 1,500 numbers long. Similarity is measured by the "distance" between the phrases' embeddings.  In **Dance Party: AI Edition**, we use embeddings generated by the [Amazon Bedrock Titan model](https://aws.amazon.com/bedrock/titan/) and calculate similarity by computing the cosine distance between embeddings.
   minecraft_hero_heading: Minecraft Hour of Code Tutorials
   minecraft_activities_desc: All tutorials are available in many languages and compatible
     with modern browsers and tablets. Don't have internet? [Download the offline version
@@ -1112,6 +1148,63 @@ si:
   minecraft_resources_desc_02: Inspire STEM passion in K-12 learners with 200 hours
     of computer science curriculum, from block to python, supported by professional
     development.
+  afe_page_heading: Free resources from Amazon Future Engineer
+  afe_page_top_desc: 'Enhance your teaching experience with Code.org in partnership
+    with [Amazon Future Engineer](%{afe_url}). Eligible educators from underserved
+    schools can access these benefits at no cost:'
+  afe_page_top_list_01: "**Professional Growth:** Complimentary CSTA+ membership,
+    with expert-led webinars and resources."
+  afe_page_top_list_02: "**Opportunities:** Chance to join a paid-fellowship experience
+    to increase access in computer science working alongside industry experts at Amazon!"
+  afe_page_top_list_03: "**Resources:** Inspiration kits, including posters and stickers,
+    to engage students in computer science."
+  afe_page_top_list_04: "**Innovation:** Exclusive access to pilot programs that explore
+    cutting-edge career and computer science topics."
+  afe_page_eligibility_heading: School Eligibility Requirements*
+  afe_page_eligibility_list_01: Title 1 and/or > 40% Free/Reduced Lunch (FRL) student
+    enrollment
+  afe_page_eligibility_list_02: ">30% Black/Latino/Native American (BLNA) student
+    enrollment"
+  afe_page_eligibility_list_03: Rural school
+  afe_page_eligibility_disclaimer: "*Eligibility requirements verified using [NCES
+    data](%{nces_url})."
+  afe_page_programs_heading: More Amazon Future Engineer programs & opportunities
+  afe_page_programs_alexa_title: Alexa Skills Inventor
+  afe_page_programs_alexa_desc: Learn how to program Alexa with skills that could
+    help astronauts solve problems in space and communities at home.
+  afe_page_programs_cloud_tour_title: Uncovering Cloud Computer Career Tour
+  afe_page_programs_cloud_tour_desc: How did we go from renting movies at the store
+    to streaming from anywhere at any time? Learn how data centers and cloud computing
+    have changed the way we watch our favorite content, and the careers behind it.
+  afe_page_programs_voice_title: Your Voice is Power
+  afe_page_programs_voice_desc: Students will code and compete to learn how entrepreneurship,
+    coding, and music can intersect for positive change.
+  afe_page_programs_scholarships_title: Scholarships and Internships
+  afe_page_programs_scholarships_desc: Supporting students after high school is imperative
+    to fulfilling the Amazon Future Engineer mission for all of our scholars.
+  afe_page_programs_robotics_title: Robotics Fulfillment Center Tour
+  afe_page_programs_robotics_desc: Discover how computer science, state-of-the-art
+    engineering, and incredible people deliver customer orders at Amazon.
+  afe_page_programs_data_tour_title: Keeping Data Safe Career Tour
+  afe_page_programs_data_tour_desc: You want to upload your photos to the cloud, but
+    what if something happens at a data center? Learn how AWS and data center professionals
+    keep data safe and sustainable.
+  afe_page_success_heading: Congratulations! You successfully signed up for the Amazon
+    Future Engineer Program.
+  afe_page_success_desc: You should receive an email shortly from Amazon Future Engineer
+    to claim your benefits. In the meantime, check out some of the amazing resources
+    around our site.
+  afe_page_eligibility_check_heading: We've checked your eligibility
+  afe_page_eligibility_check_fail_desc: Your school does not meet the eligibility
+    [requirements*](%{req_url}) for the Amazon Future Engineer benefits, but you can
+    still take advantage of all Code.org has to offer, including our robust curriculum
+    and professional learning opportunities.
+  afe_page_eligibility_check_fail_error: If you think you received this message in
+    error, contact us at [support@code.org](%{email_url}).
+  afe_page_eligibility_check_disclaimer: "*To participate in the Amazon Future Engineer
+    program, a school must have Title 1 status OR have student enrollment of more
+    than 40% underrepresented minority students and/or 40% students who qualify for
+    free or reduced lunch."
   blockchain_hero_heading: බ්ලොක්චේන් ක්රියා කරන ආකාරය
   blockchain_hero_desc: අපගේ නව වීඩියෝ මාලාව සහ ඒ සමඟ ඇති පාඩම් “බ්ලොක්චේන් ක්රියා
     කරන ආකාරය” සමඟ බ්ලොක්චේන් ලෝකයට කිමිදෙන්න!
@@ -1942,6 +2035,8 @@ si:
     Closed captioning, Immersive reader
   csd_page_pick_a_course_heading: ඔබේ පන්ති කාමරය සඳහා ඇති අයිතිය CS සොයාගැනීම් පාඨමාලාව
     තෝරා
+  csd_page_pick_a_course_heading_non_en: Picking the right %{cs_discoveries} (CS Discoveries)
+    course for your classroom
   csd_page_pick_a_course_desc: CS Discoveries සඳහා ඉදිරිපත් කරන ලද විවිධාකාර විකල්ප
     සමූහයක් සමඟ, විවිධ අවශ්යතා සඳහා පා course මාලාවක් ඇත.
   csd_page_pick_a_course_heading_02: අන්තර්ගතය තෝරා ගැනීමට ඔබට අවශ්ය වන්නේ කෙසේද?

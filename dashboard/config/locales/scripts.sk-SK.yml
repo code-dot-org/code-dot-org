@@ -57,6 +57,7 @@ sk:
           description: Vyskúšaj si základy informatiky s postavami z Angry Birds a
             Plants vs. Zombies!
           description_short: Vyskúšaj si základy informatiky s mnohými zábavnými postavami!
+          name: Hodina Kódu
           student_description: Vyskúšaj si základy informatiky s postavami z Angry
             Birds a Plants vs. Zombies!
           title: Hodina Kódu 2013
@@ -1209,6 +1210,14 @@ sk:
               name: Java Lab
             lesson-6:
               name: Cykly
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dotazník
+            lessonGroup-3:
+              display_name: Obsah
+            lessonGroup-5:
+              display_name: Alternatívne lekcie
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1249,6 +1258,12 @@ sk:
           lessons:
             lesson-4:
               name: Premenné
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-4:
+              display_name: Alternatívne lekcie
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1285,6 +1300,12 @@ sk:
               name: Jednorozmerné (1D) polia
             lesson-3:
               name: Cykly "Pre"
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-4:
+              display_name: Alternatívne lekcie
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1311,6 +1332,12 @@ sk:
             lessonGroup-2:
               display_name: Obsah
         csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-4:
+              display_name: Alternatívne lekcie
+        csa4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -1353,6 +1380,12 @@ sk:
               display_name: Obsah
             lessonGroup-4:
               display_name: Alternatívne lekcie
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-4:
+              display_name: Alternatívne lekcie
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1383,6 +1416,12 @@ sk:
             lessonGroup-5:
               display_name: Sandbox
         csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-4:
+              display_name: Alternatívne lekcie
+        csa6-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -1423,6 +1462,12 @@ sk:
           lessons:
             lesson-6:
               name: Duševné vlastníctvo
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-5:
+              display_name: Alternatívne lekcie
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1456,6 +1501,14 @@ sk:
             lessonGroup-5:
               display_name: Dotazník
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-4:
+              display_name: Dotazník
+            lessonGroup-5:
+              display_name: Alternatívne lekcie
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -2665,6 +2718,12 @@ sk:
               display_name: Dotazník
             csp_unit1_2020:
               display_name: "(staré) Lekcia 2: Digitálne informácie"
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Dotazník
+            csp_unit1_2020:
+              display_name: "(staré) Lekcia 2: Digitálne informácie"
         csp1-dlp:
           lesson_groups:
             content:
@@ -2714,6 +2773,10 @@ sk:
             lessonGroup-2:
               display_name: Hodnotenie kurzu
         csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hodnotenie kurzu
+        csp10-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Hodnotenie kurzu
@@ -2802,6 +2865,22 @@ sk:
             internetového simulátora. Potom sa spoločne zamyslíme aký dopad má internet
             na súčasný život, aj ten dobrý aj ten zlý.
         csp2-2023:
+          description: Táto lekcia vám odhalí ako je internet nadizajnovaný tak, aby
+            medzi sebou prepájal miliardy ľudí a zariadení. Naučíte sa ako  fungujú
+            rozdielne internetové protokoly a dokonca si ich aj sami postavíte pomocou
+            internetového simulátora. Potom sa spoločne zamyslíme aký dopad má internet
+            na súčasný život, aj ten dobrý aj ten zlý.
+          description_short: Vystavajte si internet od základov pomocou internetového
+            simulátora
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(staré) Lekcia 2: Internet"
+          student_description: Táto lekcia vám odhalí ako je internet nadizajnovaný
+            tak, aby medzi sebou prepájal miliardy ľudí a zariadení. Naučíte sa ako  fungujú
+            rozdielne internetové protokoly a dokonca si ich aj sami postavíte pomocou
+            internetového simulátora. Potom sa spoločne zamyslíme aký dopad má internet
+            na súčasný život, aj ten dobrý aj ten zlý.
+        csp2-2024:
           description: Táto lekcia vám odhalí ako je internet nadizajnovaný tak, aby
             medzi sebou prepájal miliardy ľudí a zariadení. Naučíte sa ako  fungujú
             rozdielne internetové protokoly a dokonca si ich aj sami postavíte pomocou
@@ -2996,6 +3075,16 @@ sk:
               display_name: Projekt
             csp_variables:
               display_name: Premenné
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Podmienené príkazy
+            csp_functions:
+              display_name: Funkcie
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: Premenné
         csp4-dlp:
           lesson_groups:
             content:
@@ -3120,6 +3209,12 @@ sk:
               display_name: Prechody
             lessonGroup-5:
               display_name: Hodnotenie kurzu
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Dáta
+            lessonGroup-5:
+              display_name: Hodnotenie kurzu
         csp5-dlp:
           lesson_groups:
             content:
@@ -3198,6 +3293,18 @@ sk:
               display_name: Prechody
             lessonGroup-5:
               display_name: Projekt
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Zoznamy
+            lessonGroup-2:
+              display_name: Hodnotenie kurzu
+            lessonGroup-3:
+              display_name: Cykly
+            lessonGroup-4:
+              display_name: Prechody
+            lessonGroup-5:
+              display_name: Projekt
         csp6-pilot:
           lesson_groups:
             content:
@@ -3246,6 +3353,14 @@ sk:
               display_name: Parametre a Hodnoty návratnosti
             lessonGroup-3:
               display_name: Hodnotenie kurzu
+        csp7-2024:
+          lesson_groups:
+            csp_libraries:
+              display_name: Knižnice
+            csp_parameters_return_values:
+              display_name: Parametre a Hodnoty návratnosti
+            lessonGroup-3:
+              display_name: Hodnotenie kurzu
         csp7-pilot:
           lesson_groups:
             csp_libraries:
@@ -3269,6 +3384,10 @@ sk:
             lessonGroup-3:
               display_name: Hodnotenie kurzu
         csp8-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Hodnotenie kurzu
+        csp8-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: Hodnotenie kurzu
@@ -3301,6 +3420,12 @@ sk:
             lessonGroup-2:
               display_name: Hodnotenie kurzu
         csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(staré) Lekcia 9: Údaje"
+            lessonGroup-2:
+              display_name: Hodnotenie kurzu
+        csp9-2024:
           lesson_groups:
             csp_unit9_2020:
               display_name: "(staré) Lekcia 9: Údaje"
@@ -4486,6 +4611,9 @@ sk:
         self-paced-pl-csd5-2023:
           title: 'Modul 7: Príprava na výučbu umelej inteligencie a strojového učenia'
         self-paced-pl-k5-2024-1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Začíname
           lessons:
             lesson-3:
               name: Cykly
@@ -4495,6 +4623,9 @@ sk:
               name: Ďalšie kroky
           title: Úvod do informatiky
         self-paced-pl-k5-2024-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Začíname
           lessons:
             lesson-3:
               name: Udalosti

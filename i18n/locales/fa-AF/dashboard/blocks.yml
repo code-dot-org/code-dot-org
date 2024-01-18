@@ -4,6 +4,11 @@ fa:
     blocks:
       Dancelab_randomColor:
         text: رنگ تصادفی
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': آبی
+            '"red"': قرمز
       gamelab_randColor:
         text: رنگ تصادفی
       gamelab_randomColor:

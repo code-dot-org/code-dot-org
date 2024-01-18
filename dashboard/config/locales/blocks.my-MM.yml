@@ -233,6 +233,11 @@ my:
           EFFECT:
             '"hearts"': အသည်းနှလုံးများ
             '"rain"': မိုးရွာသည်
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': အပြာရောင်
+            '"red"': အနီ
       Mikelab_changePropBy:
         options:
           PROPERTY:

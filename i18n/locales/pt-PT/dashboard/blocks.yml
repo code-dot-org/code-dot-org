@@ -1051,6 +1051,14 @@ pt:
             '"starburst"': Starburst
             '"glass"': Vidro estilhaçando
             '"twinkling"': Cintilante
+      DansBlocks_testShowVariable:
+        options:
+          OPT:
+            '"large"': grande
+            '"small"': pequeno
+          COLOR:
+            '"blue"': azul
+            '"red"': vermelho
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} começa a {BEHAVIOR}
       gamelab_addTarget:
