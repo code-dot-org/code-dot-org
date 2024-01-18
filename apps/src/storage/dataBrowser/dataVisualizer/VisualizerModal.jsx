@@ -214,7 +214,7 @@ class VisualizerModal extends React.Component {
 
   tooBigColumns = memoize((tableColumns, countedCells, selectedColumn1) => {
     if (!countedCells) {
-      return tableColumns;
+      return [];
     } else {
       const xCount = selectedColumn1 ? countedCells[selectedColumn1].size : 0;
       return tableColumns.filter(
