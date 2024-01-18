@@ -254,6 +254,7 @@ pt:
             de Angry Birds e Plants vs. Zombies!
           description_short: Conheça os conceitos básicos da ciência da computação
             com a ajuda de vários personagens divertidos!
+          name: Hora do Código
           student_description: Conheça as noções básicas de ciência da computação
             com personagens de Angry Birds e Plants vs. Zombies!
           title: Hora do Código 2013
@@ -1843,6 +1844,11 @@ pt:
             lessonGroup-3:
               display_name: 'Capítulo 2: Visão Computacional'
           title: Engenharia de Software e Visão Computacional
+        csa-postap-se-and-computer-vision-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Visão Computacional'
+          title: Engenharia de Software e Visão Computacional
         csa-self-paced-pl:
           description: "Este módulo foi projetado para orientar o usuário no uso das
             ferramentas que serão utilizadas em apoio à aprendizagem dos alunos ao
@@ -1934,6 +1940,16 @@ pt:
               name: Laboratório Java
             lesson-6:
               name: laços
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Questionário
+            lessonGroup-3:
+              display_name: Conteúdo
+            lessonGroup-4:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-5:
+              display_name: Lições Extras
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1988,6 +2004,14 @@ pt:
           lessons:
             lesson-4:
               name: Variáveis
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-4:
+              display_name: Lições Extras
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2036,6 +2060,14 @@ pt:
               name: Matrizes unidimensionais (1D)
             lesson-3:
               name: Loops For
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-4:
+              display_name: Lições Extras
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2082,6 +2114,14 @@ pt:
           lessons:
             lesson-9:
               name: Aleatório
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-4:
+              display_name: Lições Extras
         csa4-exemplars:
           lesson_groups:
             content:
@@ -2131,6 +2171,14 @@ pt:
               display_name: Mostre o Que Você Sabe
             lessonGroup-4:
               display_name: Lições Extras
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-4:
+              display_name: Lições Extras
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2169,6 +2217,14 @@ pt:
             lessonGroup-5:
               display_name: Área restrita
         csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-4:
+              display_name: Lições Extras
+        csa6-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
@@ -2223,6 +2279,14 @@ pt:
           lessons:
             lesson-6:
               name: Propriedade intelectual
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-5:
+              display_name: Lições Extras
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2268,6 +2332,16 @@ pt:
             lessonGroup-5:
               display_name: Questionário
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-4:
+              display_name: Questionário
+            lessonGroup-5:
+              display_name: Lições Extras
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
@@ -5541,6 +5615,8 @@ pt:
           title: Pesquisa pós-curso de princípios do CS
         csp-post-survey-2023:
           title: Pesquisa pós-curso de princípios do CS
+        csp-post-survey-2024:
+          title: Pesquisa pós-curso de princípios do CS
         csp-pre-survey:
           title: Princípios CS Pré-pesquisa
         csp1-2017:
@@ -5674,6 +5750,19 @@ pt:
             Saiba como informações complexas, como números, texto, imagens e som,
             são representadas no texto, como a compressão funciona e os impactos sociais
             mais amplos da digitalização das informações do mundo.
+        csp1-2024:
+          description_short: Explore os desafios e os impactos de representar informações
+            sobre o mundo ao seu redor em bits.
+          lesson_groups:
+            cspSurvey:
+              display_name: Questionário
+            csp_unit1_2020:
+              display_name: 'Unidade 1: Informação Digital'
+          student_description: Esta unidade explora os desafios técnicos e as questões
+            que surgem da necessidade de representar informações digitais em computadores.
+            Saiba como informações complexas, como números, texto, imagens e som,
+            são representadas no texto, como a compressão funciona e os impactos sociais
+            mais amplos da digitalização das informações do mundo.
         csp1-dlp:
           description: 'Esta é a Unidade 1 do Plano de Aprendizagem Mais Profunda
             para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará
@@ -5774,6 +5863,19 @@ pt:
             lessonGroup-2:
               display_name: Pesquisa Pós-Curso
         csp10-2023:
+          description_short: Projete e analise algoritmos para entender como eles
+            funcionam e por que alguns são considerados melhores do que outros.
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Unidade 10: Segurança cibernética e impactos globais'
+            lessonGroup-2:
+              display_name: Pesquisa Pós-Curso
+          student_description: Esta unidade é uma rápida exploração de como os cientistas
+            da computação projetam algoritmos para resolver problemas e como eles
+            analisam a velocidade de diferentes algoritmos. Aprenda sobre o conceito
+            de eficiência algorítmica por meio de uma variedade de atividades práticas
+            e saiba como ele está sendo aplicado na computação moderna.
+        csp10-2024:
           description_short: Projete e analise algoritmos para entender como eles
             funcionam e por que alguns são considerados melhores do que outros.
           lesson_groups:
@@ -5933,6 +6035,16 @@ pt:
             você mesmo usando o Internet Simulator. Em seguida, considere os impactos
             que a Internet teve, tanto bons quanto ruins, na vida moderna.
         csp2-2023:
+          description_short: Crie a Internet do zero usando o Internet Simulator.
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Unidade 2: A internet'
+          student_description: Esta unidade revela como a Internet foi projetada para
+            conectar bilhões de dispositivos e pessoas umas às outras. Aprenda como
+            os diferentes protocolos da Internet funcionam e, na verdade, crie-os
+            você mesmo usando o Internet Simulator. Em seguida, considere os impactos
+            que a Internet teve, tanto bons quanto ruins, na vida moderna.
+        csp2-2024:
           description_short: Crie a Internet do zero usando o Internet Simulator.
           lesson_groups:
             csp_unit2_2020:
@@ -6140,6 +6252,18 @@ pt:
             e a escrever programas orientados por eventos no App Lab e, em seguida,
             crie um projeto que ensine seus colegas sobre um tópico de sua escolha.
         csp3-2023:
+          description_short: Crie seu primeiro aplicativo e saiba como os programadores
+            colaboram e interagem com os usuários para criar as melhores soluções
+            possíveis para os problemas.
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Unidade 3: Introdução ao design de aplicativos'
+          student_description: Esta unidade é uma introdução à programação e ao design
+            de aplicativos com foco em habilidades importantes, como depuração, programação
+            em pares e testes com usuários. Aprenda a criar interfaces de usuário
+            e a escrever programas orientados por eventos no App Lab e, em seguida,
+            crie um projeto que ensine seus colegas sobre um tópico de sua escolha.
+        csp3-2024:
           description_short: Crie seu primeiro aplicativo e saiba como os programadores
             colaboram e interagem com os usuários para criar as melhores soluções
             possíveis para os problemas.
@@ -6443,6 +6567,23 @@ pt:
             a programar com esses três novos conceitos por meio de uma sequência de
             atividades colaborativas. Em seguida, crie seu próprio aplicativo de tomada
             de decisões para compartilhar com amigos e ajudá-los a tomar uma decisão.
+        csp4-2024:
+          description_short: Aprenda a criar aplicativos que armazenam informações,
+            tomam decisões e mantêm o código organizado.
+          lesson_groups:
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funções
+            csp_project:
+              display_name: Projeto
+            csp_variables:
+              display_name: Variáveis
+          student_description: Esta unidade explora como variáveis, condicionais e
+            funções permitem o design de aplicativos cada vez mais complexos. Aprenda
+            a programar com esses três novos conceitos por meio de uma sequência de
+            atividades colaborativas. Em seguida, crie seu próprio aplicativo de tomada
+            de decisões para compartilhar com amigos e ajudá-los a tomar uma decisão.
         csp4-dlp:
           description: 'Esta é a Unidade 4 do Plano de Aprendizagem Mais Profunda
             para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará
@@ -6704,6 +6845,15 @@ pt:
               display_name: Traversais
             lessonGroup-5:
               display_name: Pesquisa Pós-Curso
+        csp5-2024:
+          description_short: Explore e visualize conjuntos de dados de uma ampla variedade
+            de tópicos enquanto procura padrões e tenta aprender mais sobre o mundo
+            ao seu redor.
+          lesson_groups:
+            csp_lists:
+              display_name: Dados
+            lessonGroup-5:
+              display_name: Pesquisa Pós-Curso
         csp5-dlp:
           description: 'Esta é a Unidade 5 do Plano de Aprendizagem Mais Profunda
             para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará
@@ -6886,6 +7036,26 @@ pt:
             a biblioteca de dados no App Lab e conclua um projeto de hackathon de
             5 dias no final da unidade, onde você pode criar um programa sobre qualquer
             tópico de sua escolha.
+        csp6-2024:
+          description_short: Aprenda a criar aplicativos que usam listas, loops e
+            travessias para armazenar e processar grandes quantidades de informações.
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listas
+            lessonGroup-2:
+              display_name: Pesquisa Pós-Curso
+            lessonGroup-3:
+              display_name: laços
+            lessonGroup-4:
+              display_name: Traversais
+            lessonGroup-5:
+              display_name: Projeto
+          student_description: Esta unidade apresenta listas, loops e travessias e
+            explora como eles podem ser usados para criar aplicativos que armazenam
+            e processam grandes quantidades de informações. Aprenda a programar com
+            a biblioteca de dados no App Lab e conclua um projeto de hackathon de
+            5 dias no final da unidade, onde você pode criar um programa sobre qualquer
+            tópico de sua escolha.
         csp6-pilot:
           lesson_groups:
             content:
@@ -6987,6 +7157,21 @@ pt:
             bem como bibliotecas de código que você pode compartilhar com seus colegas
             de classe. Finalize a unidade criando uma biblioteca de funções a partir
             de qualquer tópico de sua escolha.
+        csp7-2024:
+          description_short: Aprenda a criar um código limpo e reutilizável que você
+            pode compartilhar com um único colega de classe ou com o mundo inteiro.
+          lesson_groups:
+            csp_libraries:
+              display_name: Bibliotecas
+            csp_parameters_return_values:
+              display_name: Parâmetros e valores de retorno
+            lessonGroup-3:
+              display_name: Pesquisa Pós-Curso
+          student_description: Esta unidade apresenta parâmetros, retorno e bibliotecas.
+            Aprenda a usar esses conceitos para criar novos tipos de aplicativos,
+            bem como bibliotecas de código que você pode compartilhar com seus colegas
+            de classe. Finalize a unidade criando uma biblioteca de funções a partir
+            de qualquer tópico de sua escolha.
         csp7-pilot:
           lesson_groups:
             csp_libraries:
@@ -7051,6 +7236,12 @@ pt:
               display_name: Criar PT
             lessonGroup-3:
               display_name: Pesquisa Pós-Curso
+        csp8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Criar PT
+            lessonGroup-3:
+              display_name: Pesquisa Pós-Curso
         csp8-pilot:
           title: CSP Unidade 8 Piloto - Criar Preparação PT
         csp8-pilot-staging:
@@ -7108,6 +7299,21 @@ pt:
             lessonGroup-2:
               display_name: Pesquisa Pós-Curso
         csp9-2023:
+          description: Nesta unidade, prepare e execute a Tarefa de Criação de Desempenho
+            AP. Cada lição contém links para documentos e atividades úteis que lhe
+            ajudarão a entender a tarefa e a desenvolver um plano para concluí-la.
+          description_short: Pratique e conclua a Tarefa de Criação de Desempenho
+            (PT).
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Unidade 9: Dados'
+            lessonGroup-2:
+              display_name: Pesquisa Pós-Curso
+          student_description: Nesta unidade, prepare e execute a Tarefa de Criação
+            de Desempenho AP. Cada lição contém links para documentos e atividades
+            úteis que lhe ajudarão a entender a tarefa e a desenvolver um plano para
+            concluí-la.
+        csp9-2024:
           description: Nesta unidade, prepare e execute a Tarefa de Criação de Desempenho
             AP. Cada lição contém links para documentos e atividades úteis que lhe
             ajudarão a entender a tarefa e a desenvolver um plano para concluí-la.
@@ -11002,6 +11208,9 @@ pt:
             lesson-1:
               name: Lição 1
         self-paced-pl-k5-2024-1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Iniciando
           lessons:
             lesson-1:
               name: Lição 1
@@ -11013,6 +11222,9 @@ pt:
               name: Próximas etapas
           title: Introdução à Ciência da Computação
         self-paced-pl-k5-2024-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Iniciando
           lessons:
             lesson-1:
               name: Lição 1

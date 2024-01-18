@@ -153,6 +153,11 @@ hy:
         options:
           EFFECT:
             '"hearts"': hearts
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': կապույտ
+            '"red"': կարմիր
       gamelab_atTime:
         options:
           UNIT:

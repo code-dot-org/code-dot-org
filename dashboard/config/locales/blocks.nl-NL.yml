@@ -1032,6 +1032,14 @@ nl:
             '"starburst"': Sterrenvorming
             '"twinkling"': Fonkeling
         text: Effect {EFFECT} uitvoeren
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': blauw
+            '"red"': rood
+          OPT:
+            '"large"': groot
+            '"small"': klein
       KatiesBlocks_glideTo:
         text: "{SPRITE} glijdt naar {LOCATION}"
       KatiesBlocks_tumbling:

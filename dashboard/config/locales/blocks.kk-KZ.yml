@@ -144,6 +144,11 @@ kk:
         options:
           EFFECT:
             '"hearts"': жүрегтер
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': көк
+            '"red"': қызыл
       Mikelab_changePropBy:
         options:
           PROPERTY:

@@ -1031,6 +1031,11 @@ ga:
             '"hearts"': croíthe
             '"rain"': báisteach
             '"starburst"': Pléascadh Réaltaí
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': gorm
+            '"red"': dearg
       gamelab_addBehaviorSimple:
         text: nuair a thosaíonn {SPRITE} {BEHAVIOR}
       gamelab_allSpritesWithAnimation:

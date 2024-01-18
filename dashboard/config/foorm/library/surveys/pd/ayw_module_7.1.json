@@ -96,8 +96,8 @@
             {
               "type": "rating",
               "name": "strategies_ensure_inclusion_m7",
-              "visibleIf": "{workshop_course}='CS Principles'",
-              "title": "This workshop provided me with new ideas and strategies to ensure that my classroom is supportive for all students.",
+              "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles'",
+              "title": "This workshop provided me with new ideas and strategies to ensure that my classroom fosters a sense of belonging.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
               "maxRateDescription": "Strongly agree"

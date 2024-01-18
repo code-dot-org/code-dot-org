@@ -33,6 +33,8 @@ describe I18n::Resources::Dashboard::CourseOfferings::SyncOut do
     end
 
     before do
+      I18n::Metrics.stubs(:report_runtime).yields(nil)
+
       I18n::Resources::Dashboard::CourseOfferings::SyncOut.any_instance.stubs(:languages).returns(
         [{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}]
       )

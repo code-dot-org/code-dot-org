@@ -1167,6 +1167,15 @@ pl:
         text: Ustaw mikroskop na {INPUT1}
       DansBlocks_testRectangle:
         text: 'utwórz prostokąt x: {X} y: {Y} w: {W} h: {H} kolor: {COLOR}'
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': niebieski
+            '"red"': czerwony
+          OPT:
+            '"large"': duży
+            '"small"': mały
+        text: 'Wyświetl tę liczbę: {SOMENUMBER} wielkości {SOMESIZE} w kolorze {COLOR}'
       FunctionBlocks_addEightBlock:
         text: AddEight
       FunctionBlocks_addFiveBlock:

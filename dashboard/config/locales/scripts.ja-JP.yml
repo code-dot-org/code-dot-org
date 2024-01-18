@@ -61,6 +61,7 @@ ja:
         Hour of Code:
           description: 基礎試してくださいコンピュータと科学を文字ゾンビ対怒っている鳥や植物から！
           description_short: いろいろなキャラクターでコンピューター サイエンスの基礎を試してみよう！
+          name: Hour of Code（アワー オブ コード）
           student_description: 基礎試してくださいコンピュータと科学を文字ゾンビ対怒っている鳥や植物から！
           title: Hour of Code 2013
         MikeTest:
@@ -1099,6 +1100,14 @@ ja:
               name: Javaラボ
             lesson-6:
               name: くりかえし
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: アンケート
+            lessonGroup-3:
+              display_name: 内容
+            lessonGroup-5:
+              display_name: 代替レッスン
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1139,6 +1148,12 @@ ja:
           lessons:
             lesson-4:
               name: 変数（へんすう）
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-4:
+              display_name: 代替レッスン
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1175,6 +1190,12 @@ ja:
               name: 1次元 (1D) 配列
             lesson-3:
               name: ループ用
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-4:
+              display_name: 代替レッスン
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1209,6 +1230,12 @@ ja:
           lessons:
             lesson-9:
               name: ランダム
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-4:
+              display_name: 代替レッスン
         csa4-exemplars:
           lesson_groups:
             content:
@@ -1245,6 +1272,12 @@ ja:
               display_name: 内容
             lessonGroup-4:
               display_name: 代替レッスン
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-4:
+              display_name: 代替レッスン
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1274,6 +1307,12 @@ ja:
             lessonGroup-5:
               display_name: サンド ボックス
         csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-4:
+              display_name: 代替レッスン
+        csa6-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -1314,6 +1353,12 @@ ja:
           lessons:
             lesson-6:
               name: 知的財産
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-5:
+              display_name: 代替レッスン
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1347,6 +1392,14 @@ ja:
             lessonGroup-5:
               display_name: アンケート
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-4:
+              display_name: アンケート
+            lessonGroup-5:
+              display_name: 代替レッスン
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -2646,6 +2699,8 @@ ja:
           title: CS原則 のコース後アンケート
         csp-post-survey-2023:
           title: CS原則 のコース後アンケート
+        csp-post-survey-2024:
+          title: CS原則 のコース後アンケート
         csp1-2017:
           description: このユニットでは、コンピューターでデジタル情報を表現し、それを人と計算装置の間で転送する必要性から生じる技術的な課題と問題について検討します。次に、このユニットでは、インターネットの構造と設計、および設計で行った決定が与える影響について詳しく見ていきます。
           description_short: 情報をビットとして表現することに関する課題と、そのビットをある場所から別の場所に移す方法を探ります。
@@ -2704,6 +2759,12 @@ ja:
             csp_unit1_2020:
               display_name: 'ユニット1: デジタル情報'
         csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
+            csp_unit1_2020:
+              display_name: 'ユニット1: デジタル情報'
+        csp1-2024:
           lesson_groups:
             cspSurvey:
               display_name: アンケート
@@ -2787,6 +2848,12 @@ ja:
               display_name: 'ユニット10: サイバーセキュリティとグローバルインパクト'
             lessonGroup-2:
               display_name: コース終了後アンケート
+        csp10-2024:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'ユニット10: サイバーセキュリティとグローバルインパクト'
+            lessonGroup-2:
+              display_name: コース終了後アンケート
         csp10-pilot:
           title: サイバーセキュリティとグローバルインパクト
         csp10-pilot-staging:
@@ -2858,6 +2925,10 @@ ja:
             csp_unit2_2020:
               display_name: 'ユニット2: インターネット'
         csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'ユニット2: インターネット'
+        csp2-2024:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'ユニット2: インターネット'
@@ -2958,6 +3029,10 @@ ja:
             csp_unit3_2020:
               display_name: 'ユニット3: アプリ設計入門'
         csp3-2023:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'ユニット3: アプリ設計入門'
+        csp3-2024:
           lesson_groups:
             csp_unit3_2020:
               display_name: 'ユニット3: アプリ設計入門'
@@ -3111,6 +3186,16 @@ ja:
             csp_variables:
               display_name: 変数（へんすう）
         csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: 条件
+            csp_functions:
+              display_name: 関数(かんすう)
+            csp_project:
+              display_name: プロジェクト
+            csp_variables:
+              display_name: 変数（へんすう）
+        csp4-2024:
           lesson_groups:
             csp_conditionals:
               display_name: 条件
@@ -3277,6 +3362,12 @@ ja:
               display_name: トラバーサル
             lessonGroup-5:
               display_name: コース終了後アンケート
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: データ
+            lessonGroup-5:
+              display_name: コース終了後アンケート
         csp5-dlp:
           description: これは、トレーニング中のCode.org CSPファシリテーター向けの詳細学習プランのユニット5です。ここでは、Code.org
             CSPカリキュラムのユニット5の習熟度を示すためのおさらいプロンプトとガイダンスが見つかります。このユニットの感想を提出すると、このページの下部にあるピアレビュー項目が利用できるようになります。
@@ -3386,6 +3477,18 @@ ja:
               display_name: トラバーサル
             lessonGroup-5:
               display_name: プロジェクト
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: リスト
+            lessonGroup-2:
+              display_name: コース終了後アンケート
+            lessonGroup-3:
+              display_name: くりかえし
+            lessonGroup-4:
+              display_name: トラバーサル
+            lessonGroup-5:
+              display_name: プロジェクト
         csp6-pilot:
           lesson_groups:
             content:
@@ -3435,6 +3538,14 @@ ja:
               display_name: パラメータと戻り値
             lessonGroup-3:
               display_name: コース終了後アンケート
+        csp7-2024:
+          lesson_groups:
+            csp_libraries:
+              display_name: ライブラリ
+            csp_parameters_return_values:
+              display_name: パラメータと戻り値
+            lessonGroup-3:
+              display_name: コース終了後アンケート
         csp7-pilot:
           lesson_groups:
             csp_libraries:
@@ -3473,6 +3584,12 @@ ja:
               display_name: PTを作成
             lessonGroup-3:
               display_name: コース終了後アンケート
+        csp8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: PTを作成
+            lessonGroup-3:
+              display_name: コース終了後アンケート
         csp8-pilot:
           title: CSPユニット8パイロット - PT作成の準備
         csp8-pilot-staging:
@@ -3506,6 +3623,12 @@ ja:
             lessonGroup-2:
               display_name: コース終了後アンケート
         csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'ユニット9: データ'
+            lessonGroup-2:
+              display_name: コース終了後アンケート
+        csp9-2024:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'ユニット9: データ'
@@ -5052,6 +5175,9 @@ ja:
         self-paced-pl-csp2-2023:
           title: モジュール2：Code. orgの操作方法
         self-paced-pl-k5-2024-1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 使用開始
           lessons:
             lesson-3:
               name: くりかえし
@@ -5061,6 +5187,9 @@ ja:
               name: 次の手順
           title: コンピューター・サイエンス入門
         self-paced-pl-k5-2024-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 使用開始
           lessons:
             lesson-3:
               name: イベント

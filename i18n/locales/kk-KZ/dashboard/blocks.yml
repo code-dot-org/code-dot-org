@@ -144,6 +144,11 @@ kk:
         options:
           EFFECT:
             '"hearts"': жүрегтер
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': көк
+            '"red"': қызыл
       gamelab_atTime:
         options:
           UNIT:

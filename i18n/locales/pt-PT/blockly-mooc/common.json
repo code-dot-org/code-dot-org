@@ -1284,6 +1284,7 @@
   "loginInfo_signinStep4_secretPicture": "Escolha a imagem secreta deles.",
   "loginInfo_signinStep4_secretWords": "Digite as palavras secretas deles.",
   "loginInfo_signinStep5": "Clique no botão \"Entrar\".",
+  "loginInfoLtiSetupHeader": "Configure sua aula",
   "loginType": "Tipo de início de sessão",
   "loginTypeClever": "Clever",
   "loginTypeCleverButton": "Usar Clever",
