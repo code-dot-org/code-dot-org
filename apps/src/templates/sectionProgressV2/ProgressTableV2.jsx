@@ -34,7 +34,7 @@ export function ProgressTableV2({
 
     return lessons.map(lesson => {
       if (expandedLessonIds.includes(lesson.id)) {
-        columns.push(
+        return (
           <ExpandedProgressDataColumn
             lesson={lesson}
             sortedStudents={sortedStudents}
@@ -47,7 +47,7 @@ export function ProgressTableV2({
           />
         );
       } else {
-        columns.push(
+        return (
           <LessonProgressDataColumn
             lesson={lesson}
             sortedStudents={sortedStudents}
