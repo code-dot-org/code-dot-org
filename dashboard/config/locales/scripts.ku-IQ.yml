@@ -11,6 +11,8 @@ ku:
           lesson_groups:
             lessonGroup-8:
               display_name: كاژێری كۆدنووسی
+        Hour of Code:
+          name: كاژێری كۆدنووسی
         contagion-pilot:
           description_audience: پۆلەكانی 5
         course1:
@@ -242,6 +244,14 @@ ku:
               display_name: فرمانەکان
             csp_variables:
               display_name: گۆڕاوەکان
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: مەرجیەکان
+            csp_functions:
+              display_name: فرمانەکان
+            csp_variables:
+              display_name: گۆڕاوەکان
         csp4-pilot:
           lesson_groups:
             csp_conditionals:
@@ -305,6 +315,12 @@ ku:
             csp_unit6_2020:
               display_name: خوارزمیەکان
         csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: لیستەکان
+            lessonGroup-3:
+              display_name: گرێکان
+        csp6-2024:
           lesson_groups:
             csp_unit6_2020:
               display_name: لیستەکان

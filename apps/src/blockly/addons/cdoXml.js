@@ -1,5 +1,10 @@
 import {BLOCK_TYPES, PROCEDURE_DEFINITION_TYPES} from '../constants';
-import {FALSEY_DEFAULT, TRUTHY_DEFAULT, readBooleanAttribute} from '../utils';
+import {
+  FALSEY_DEFAULT,
+  TRUTHY_DEFAULT,
+  readBooleanAttribute,
+  shouldSkipHiddenWorkspace,
+} from '../utils';
 
 // The user created attribute needs to be read from XML start blocks as 'usercreated'.
 // Once this has been done, all subsequent steps in the serialization use userCreated.
@@ -81,6 +86,34 @@ export default function initializeBlocklyXml(blocklyWrapper) {
   };
 
   blocklyWrapper.Xml.blockSpaceToDom = blocklyWrapper.Xml.workspaceToDom;
+}
+/**
+ * Gets the XML representation for a project, including its workspace and, if applicable, the hidden definition workspace.
+ *
+ * @param {Blockly.Workspace} workspace - The workspace from which to obtain the project XML.
+ * @returns {string} The XML representation of the project.
+ *
+ */
+export function getProjectXml(workspace) {
+  // Start by getting the XML for all blocks on the workspace.
+  const workspaceXml = Blockly.Xml.blockSpaceToDom(workspace);
+
+  if (shouldSkipHiddenWorkspace(workspace)) {
+    return workspaceXml;
+  }
+
+  // Also serialize blocks on the hidden workspace for procedure definitions.
+  const hiddenWorkspaceXml = Blockly.Xml.blockSpaceToDom(
+    Blockly.getHiddenDefinitionWorkspace()
+  );
+
+  // Merge the hidden workspace XML into the primary XML
+  hiddenWorkspaceXml.childNodes.forEach(node => {
+    const clonedNode = node.cloneNode(true);
+    workspaceXml.appendChild(clonedNode);
+  });
+
+  return workspaceXml;
 }
 
 /**
@@ -276,7 +309,12 @@ export function addNameToBlockFunctionCallBlock(blockElement) {
 function addMissingBehaviorId(blockElement) {
   const blockType = blockElement.getAttribute('type');
   if (blockType === BLOCK_TYPES.behaviorGet) {
-    setIdFromTextContent(getFieldOrTitle(blockElement, 'VAR'));
+    const behaviorNameField =
+      // CDO Blockly projects used a VAR field to store the behavior name.
+      getFieldOrTitle(blockElement, 'VAR') ||
+      // Google Blockly projects use a NAME field to store the behavior name.
+      getFieldOrTitle(blockElement, 'NAME');
+    setIdFromTextContent(behaviorNameField);
   } else if (blockType === BLOCK_TYPES.behaviorDefinition) {
     setIdFromTextContent(getFieldOrTitle(blockElement, 'NAME'));
   }
@@ -289,6 +327,9 @@ function addMissingBehaviorId(blockElement) {
  * @param {Element} element - The XML element (title or field) for a block.
  */
 function setIdFromTextContent(element) {
+  if (!element) {
+    return;
+  }
   if (!element.getAttribute('id')) {
     element.setAttribute('id', element.textContent);
   }
@@ -375,7 +416,31 @@ function makeLockedBlockImmovable(block) {
 }
 
 /**
- * Extracts block elements from the provided XML and returns them.
+ * Partitions XML elements of the specified types to the front of the list.
+ *
+ * @param {Element[]} [blocks=[]] - An array of XML block elements to be partitioned.
+ * @param {string[]} [prioritizedBlockTypes=[]] - An array of strings representing block types to move to the front.
+ * @returns {Element[]} A new array of XML block elements partitioned based on their types.
+ */
+export function partitionXmlBlocksByType(
+  blocks = [],
+  prioritizedBlockTypes = []
+) {
+  const prioritizedBlocks = [];
+  const remainingBlocks = [];
+
+  blocks.forEach(block => {
+    const blockType = block.getAttribute('type');
+    prioritizedBlockTypes.includes(blockType)
+      ? prioritizedBlocks.push(block)
+      : remainingBlocks.push(block);
+  });
+
+  return [...prioritizedBlocks, ...remainingBlocks];
+}
+
+/**
+ * Extracts block elements from the provided XML and returns them partitioned based on their types.
  * If no block elements are found in the XML, an empty array is returned.
  *
  * @param {Element} xml - The XML element containing block elements.

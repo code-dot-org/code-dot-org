@@ -4484,6 +4484,16 @@ ar-SA:
           # كتابة الأغاني
 
            استخدم مفهوم اللازمة الغنائية في أغنية لتتعلّم تعريف الوظائف واستدعائها.
+      Student End of Unit Survey - Intro+TeacherMD_csd7-2022:
+        teacher_markdown: |
+          **استبيانات نهاية الوحدة للمعلمين:** بينما يكمل طلابك الاستبيان، سنكون ممتنين لك لإكمال استبيان المعلم السريع
+
+          ## [انقر هنا لاستبيان المعلم] (https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7)
+      Student End of Unit Survey - Intro+TeacherMD_csd7_2023:
+        teacher_markdown: |
+          **استبيانات نهاية الوحدة للمعلمين:** بينما يكمل طلابك الاستبيان، سنكون ممتنين لك لإكمال استبيان المعلم السريع
+
+          ## [انقر هنا لاستبيان المعلم] (https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7)
       Student End of Unit Survey - Q1_2022:
         answers:
         - correct: true
@@ -4778,7 +4788,7 @@ ar-SA:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: أفهم ويمكنني شرح مفاهيم الذكاء الاصطناعي وتعلم الآلة
       aiml-ch1-pulse-survey-q1_2022:
         answers:
         - correct: true
@@ -4789,7 +4799,7 @@ ar-SA:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: أفهم ويمكنني شرح مفاهيم الذكاء الاصطناعي وتعلم الآلة
       aiml-ch1-pulse-survey-q1_2023:
         answers:
         - correct: true
@@ -4800,7 +4810,7 @@ ar-SA:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: أفهم ويمكنني شرح مفاهيم الذكاء الاصطناعي وتعلم الآلة
       aiml-ch1-pulse-survey-q2_2021:
         answers:
         - correct: true
@@ -4811,7 +4821,7 @@ ar-SA:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: أعرف كيفية إنشاء تطبيقات لحل مشكلة أو لمصالحي الخاصة
       aiml-ch1-pulse-survey-q2_2022:
         answers:
         - correct: true
@@ -4822,7 +4832,7 @@ ar-SA:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: أعرف كيفية إنشاء تطبيقات لحل مشكلة أو لمصالحي الخاصة
       aiml-ch1-pulse-survey-q2_2023:
         answers:
         - correct: true
@@ -4833,7 +4843,7 @@ ar-SA:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: أعرف كيفية إنشاء تطبيقات لحل مشكلة أو لمصالحي الخاصة
       aiml-ch1-pulse-survey-q3_2021:
         answers:
         - correct: true
@@ -4954,17 +4964,27 @@ ar-SA:
       aiml-intro-pulse-survey-q1_2022:
         answers:
         - correct: true
+          text: هذه هي المرة الأولى التي أتعلم فيها عن علوم الكمبيوتر
         - correct: true
+          text: 'لقد قمت بأنشطة صغيرة في علوم الكمبيوتر (على سبيل المثال: ساعة من
+            البرمجة)، ولكن هذا هو أول صف دراسي أطول'
         - correct: true
+          text: لقد تلقيت بالفعل دروسًا أو قمت بأخذ دروس أطول عبر الإنترنت حول علوم
+            الكمبيوتر
         questions:
-        - {}
+        - text: ما هي التجارب السابقة التي مررت بها في علوم الكمبيوتر؟
       aiml-intro-pulse-survey-q1_2023:
         answers:
         - correct: true
+          text: هذه هي المرة الأولى التي أتعلم فيها عن علوم الكمبيوتر
         - correct: true
+          text: 'لقد قمت بأنشطة صغيرة في علوم الكمبيوتر (على سبيل المثال: ساعة من
+            البرمجة)، ولكن هذا هو أول صف دراسي أطول'
         - correct: true
+          text: لقد تلقيت بالفعل دروسًا أو قمت بأخذ دروس أطول عبر الإنترنت حول علوم
+            الكمبيوتر
         questions:
-        - {}
+        - text: ما هي التجارب السابقة التي مررت بها في علوم الكمبيوتر؟
       aiml-intro-pulse-survey-q2_2021:
         answers:
         - correct: true
@@ -4980,17 +5000,27 @@ ar-SA:
       aiml-intro-pulse-survey-q2_2022:
         answers:
         - correct: true
+          text: هذه هي المرة الأولى التي أتعلم فيها عن الذكاء الاصطناعي وتعلم الآلة
         - correct: true
+          text: 'لقد قمت بأنشطة أصغر في مجال الذكاء الاصطناعي (على سبيل المثال: ساعة
+            من البرمجة)، ولكن هذا هو أول صف دراسي أطول لي'
         - correct: true
+          text: لقد تلقيت بالفعل دروسًا أو قمت بأخذ دروس تعليمية أطول عبر الإنترنت
+            حول الذكاء الاصطناعي وتعلم الآلة
         questions:
-        - {}
+        - text: ما هي التجارب السابقة التي مررت بها مع الذكاء الاصطناعي وتعلم الآلة؟
       aiml-intro-pulse-survey-q2_2023:
         answers:
         - correct: true
+          text: هذه هي المرة الأولى التي أتعلم فيها عن الذكاء الاصطناعي وتعلم الآلة
         - correct: true
+          text: 'لقد قمت بأنشطة أصغر في مجال الذكاء الاصطناعي (على سبيل المثال: ساعة
+            من البرمجة)، ولكن هذا هو أول صف دراسي أطول لي'
         - correct: true
+          text: لقد تلقيت بالفعل دروسًا أو قمت بأخذ دروس تعليمية أطول عبر الإنترنت
+            حول الذكاء الاصطناعي وتعلم الآلة
         questions:
-        - {}
+        - text: ما هي التجارب السابقة التي مررت بها مع الذكاء الاصطناعي وتعلم الآلة؟
       aiml-intro-pulse-survey-q3_2021:
         answers:
         - correct: true
@@ -5007,7 +5037,7 @@ ar-SA:
           text: لا أوافق
         - correct: true
         questions:
-        - {}
+        - text: أفهم ويمكنني شرح مفاهيم الذكاء الاصطناعي وتعلم الآلة
       aiml-intro-pulse-survey-q3_2022:
         answers:
         - correct: true
@@ -5018,7 +5048,7 @@ ar-SA:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: أفهم ويمكنني شرح مفاهيم الذكاء الاصطناعي وتعلم الآلة
       aiml-intro-pulse-survey-q3_2023:
         answers:
         - correct: true
@@ -5029,7 +5059,7 @@ ar-SA:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: أفهم ويمكنني شرح مفاهيم الذكاء الاصطناعي وتعلم الآلة
       aiml-intro-pulse-survey-q4_2021:
         answers:
         - correct: true
@@ -5040,7 +5070,7 @@ ar-SA:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: أعرف كيفية إنشاء تطبيقات لحل مشكلة أو لمصالحي الخاصة
       aiml-intro-pulse-survey-q4_2022:
         answers:
         - correct: true
@@ -5051,7 +5081,7 @@ ar-SA:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: أعرف كيفية إنشاء تطبيقات لحل مشكلة أو لمصالحي الخاصة
       aiml-intro-pulse-survey-q4_2023:
         answers:
         - correct: true
@@ -5062,7 +5092,7 @@ ar-SA:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: أعرف كيفية إنشاء تطبيقات لحل مشكلة أو لمصالحي الخاصة
       aiml-intro-pulse-survey-q5_2021:
         answers:
         - correct: true
@@ -15373,45 +15403,75 @@ ar-SA:
       intro-pulse-survey-q1_csd1_2023:
         answers:
         - correct: true
+          text: هذه هي المرة الأولى التي أتعلم فيها عن علوم الكمبيوتر
         - correct: true
+          text: 'لقد قمت بأنشطة صغيرة في علوم الكمبيوتر (على سبيل المثال: ساعة من
+            البرمجة)، ولكن هذا هو أول صف دراسي أطول'
         - correct: true
+          text: لقد تلقيت بالفعل دروسًا أو قمت بأخذ دروس أطول عبر الإنترنت حول علوم
+            الكمبيوتر
         questions:
-        - {}
+        - text: ما هي التجارب السابقة التي مررت بها في علوم الكمبيوتر؟
       intro-pulse-survey-q1_csd2_2023:
         answers:
         - correct: true
+          text: هذه هي المرة الأولى التي أتعلم فيها عن علوم الكمبيوتر
         - correct: true
+          text: 'لقد قمت بأنشطة صغيرة في علوم الكمبيوتر (على سبيل المثال: ساعة من
+            البرمجة)، ولكن هذا هو أول صف دراسي أطول'
         - correct: true
+          text: لقد تلقيت بالفعل دروسًا أو قمت بأخذ دروس أطول عبر الإنترنت حول علوم
+            الكمبيوتر
         questions:
-        - {}
+        - text: ما هي التجارب السابقة التي مررت بها في علوم الكمبيوتر؟
       intro-pulse-survey-q1_csd3_2023:
         answers:
         - correct: true
+          text: هذه هي المرة الأولى التي أتعلم فيها عن علوم الكمبيوتر
         - correct: true
+          text: 'لقد قمت بأنشطة صغيرة في علوم الكمبيوتر (على سبيل المثال: ساعة من
+            البرمجة)، ولكن هذا هو أول صف دراسي أطول'
         - correct: true
+          text: لقد تلقيت بالفعل دروسًا أو قمت بأخذ دروس أطول عبر الإنترنت حول علوم
+            الكمبيوتر
         questions:
-        - {}
+        - text: ما هي التجارب السابقة التي مررت بها في علوم الكمبيوتر؟
       intro-pulse-survey-q1_csd4_2023:
         answers:
         - correct: true
+          text: هذه هي المرة الأولى التي أتعلم فيها عن علوم الكمبيوتر
         - correct: true
+          text: 'لقد قمت بأنشطة صغيرة في علوم الكمبيوتر (على سبيل المثال: ساعة من
+            البرمجة)، ولكن هذا هو أول صف دراسي أطول'
         - correct: true
+          text: لقد تلقيت بالفعل دروسًا أو قمت بأخذ دروس أطول عبر الإنترنت حول علوم
+            الكمبيوتر
         questions:
-        - {}
+        - text: ما هي التجارب السابقة التي مررت بها في علوم الكمبيوتر؟
       intro-pulse-survey-q1_csd5_2023:
         answers:
         - correct: true
+          text: هذه هي المرة الأولى التي أتعلم فيها عن علوم الكمبيوتر
         - correct: true
+          text: 'لقد قمت بأنشطة صغيرة في علوم الكمبيوتر (على سبيل المثال: ساعة من
+            البرمجة)، ولكن هذا هو أول صف دراسي أطول'
         - correct: true
+          text: لقد تلقيت بالفعل دروسًا أو قمت بأخذ دروس أطول عبر الإنترنت حول علوم
+            الكمبيوتر
         questions:
-        - {}
+        - text: ما هي التجارب السابقة التي مررت بها في علوم الكمبيوتر؟
       intro-pulse-survey-q1_csd6_2023:
         answers:
         - correct: true
+          text: هذه هي المرة الأولى التي أتعلم فيها عن علوم الكمبيوتر
         - correct: true
+          text: 'لقد قمت بأنشطة صغيرة في علوم الكمبيوتر (على سبيل المثال: ساعة من
+            البرمجة)، ولكن هذا هو أول صف دراسي أطول'
         - correct: true
+          text: لقد تلقيت بالفعل دروسًا أو قمت بأخذ دروس أطول عبر الإنترنت حول علوم
+            الكمبيوتر
         questions:
-        - {}
+        - text: ما هي التجارب السابقة التي مررت بها في علوم الكمبيوتر؟
       intro-pulse-survey-q2_csd1_2023:
         answers:
         - correct: true
@@ -15661,6 +15721,11 @@ ar-SA:
         - correct: true
         questions:
         - {}
+      ml-club app-choice parent_2022:
+        teacher_markdown: |-
+          **دعم الطلاب:** تشبه هذه المستويات التخصيصات المماثلة التي أكملها الطلاب في الدروس السابقة. في حالة تعثر الطلاب، فكر في إحالتهم إلى هذه الدروس السابقة:
+          - إضافة شاشات متعددة لكل ميزة: [الدرس 13 - تخصيص التطبيقات](../../13/المستويات/2)
+          - إضافة شاشات متعددة للتنبؤ الناتج: [الدرس 10 - بطاقات النماذج في مختبر التطبيقات](../../10/المستويات/5)
       ml-customize apps-practice choice-2021:
         display_name: تدرب على تخصيص تطبيقاتك
       ml-customize apps-practice choice_2022:
@@ -15716,7 +15781,7 @@ ar-SA:
         display_name: تخصيص تطبيقك
       ml-model card-medical-1-2021:
         markdown: |
-          # ER مقترح حلول غرفة الطوارئ V1
+          # مقترح حلول غرفة الطوارئ V1
 
           انقر على بطاقة النموذج للتكبير ومشاهدة نسخة أكبر
 
@@ -15725,7 +15790,7 @@ ar-SA:
           <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
       ml-model card-medical-1_2022:
         markdown: |
-          # ER مقترح حلول غرفة الطوارئ V1
+          # مقترح حلول غرفة الطوارئ V1
 
           انقر على بطاقة النموذج للتكبير ومشاهدة نسخة أكبر
 
@@ -15734,7 +15799,7 @@ ar-SA:
           <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
       ml-model card-medical-1_2023:
         markdown: |
-          # ER مقترح حلول غرفة الطوارئ V1
+          # مقترح حلول غرفة الطوارئ V1
 
           انقر على بطاقة النموذج للتكبير ومشاهدة نسخة أكبر
 

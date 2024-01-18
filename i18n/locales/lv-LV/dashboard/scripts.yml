@@ -81,6 +81,7 @@ lv:
           title: Solis
         Hour of Code:
           description_short: Izmēģini datrzinību pamatus ar daudz jaukiem tēliem!
+          name: Programmēšanas stunda
         asUnplugged:
           description_audience: Vecumā 6-13
         afterschool1:
@@ -1143,3 +1144,17 @@ lv:
             lesson-4:
               name: Sazarojumi
           title: Ievads datorzinātnēs
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: Mainīgie
+            csp_conditionals:
+              display_name: Sazarojumi
+            csp_functions:
+              display_name: Funkcijas
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Saraksti
+            lessonGroup-3:
+              display_name: Cikli

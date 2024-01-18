@@ -1298,6 +1298,7 @@
   "loginExportInstructions": "**Bạn muốn dạy từ xa?** Hãy tải xuống CSV thông tin đăng nhập của học sinh để có thể tiến hành trộn thư hoặc dễ dàng sao chép và dán tên người dùng cũng như mật khẩu của từng học sinh vào email.",
   "loginExportLink": "Tải xuống tệp CSV",
   "loginInfo": "Thông tin đăng nhập",
+  "loginInfoLtiSetupHeader": "Thiết lập lớp học",
   "loginInfoResetSecretPicDesc": "Bạn có thể đặt lại mật khẩu hình ảnh cho bất kỳ học sinh nào bằng cách đi tới tab [Quản lý học sinh]({url}) của nhóm đào tạo này, nhấp chuột vào nút “Hiển thị hình ảnh” dưới cột “Mật khẩu hình ảnh” và nhấp chuột vào nút “Đặt lại”.",
   "loginInfoResetSecretWordDesc": "Bạn có thể đặt lại từ bí mật cho bất kỳ học sinh nào bằng cách mở tab [Quản lý học sinh]({url}) của nhóm đào tạo này, nhấp chuột vào nút “Hiển thị từ” trong cột “Từ bí mật” và nhấp chuột vào nút “Đặt lại”.",
   "loginInfoWordPicMoreBelow": "Học sinh có thể tìm thấy tất cả thông tin này, bao gồm cả {wordOrPicture} bí mật của họ, trong thẻ đăng nhập bên dưới.",

@@ -1081,6 +1081,14 @@ sv:
         text: Ställ in mikroskop på {INPUT1}
       DansBlocks_testRectangle:
         text: 'gör rektangel x: {X} y: {Y} b: {W} h: {H} färg: {COLOR}'
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': blå
+            '"red"': röd
+          OPT:
+            '"large"': stor
+            '"small"': liten
       FunctionBlocks_addEightBlock:
         text: läggTillÅtta
       FunctionBlocks_addFiveBlock:

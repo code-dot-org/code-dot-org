@@ -243,6 +243,10 @@ sm:
           lesson_groups:
             csp_variables:
               display_name: Fuainumera lasi
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: Fuainumera lasi
         csp4-pilot:
           lesson_groups:
             csp_variables:
@@ -279,6 +283,10 @@ sm:
               display_name: Faamaumauga
             csp_loops:
               display_name: taamiloga
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Faamaumauga
         csp5-pilot:
           lesson_groups:
             csp_lists:
@@ -292,6 +300,12 @@ sm:
             csp_loops:
               display_name: taamiloga
         csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Lisi
+            lessonGroup-3:
+              display_name: taamiloga
+        csp6-2024:
           lesson_groups:
             csp_unit6_2020:
               display_name: Lisi

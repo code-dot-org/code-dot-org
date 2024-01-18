@@ -10890,23 +10890,23 @@ tr-TR:
         title: Kodu resimle eşleştirin
       csc_ecosystems_matching_conditionals:
         answers:
-        - text: "! [] (https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
+        - text: "![](https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
             PM.png)"
-        - text: "! [] (https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
+        - text: "![](https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
             PM.png)"
-        - text: "! [] (https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
+        - text: "![](https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
             PM.png)"
         markdown: |
           ## Üç ekosisteme bakın
 
           Bir ekosistem dengeli, diğer ikisi farklı şekillerde dengesiz. Kodu eşleşen görüntüye sürükleyin.
         questions:
-        - text: Çok az yosun balığın gitmesine neden olur.! [] (https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
+        - text: Çok az yosun balığın gitmesine neden olur.! [](https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
         - text: |-
             Çok fazla yosun mercanı hasta eder. <br>
-            ! [] (https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
+            ![](https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
         - text: Sadece doğru miktarda alg, hasta mercanın iyileşmesini sağlar ve balıkları
-            da sağlıklı tutar. [] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
+            da sağlıklı tutar. [](https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
         title: Kodu resimle eşleştirin
       csc_ecosystems_matching_events:
         answers:
