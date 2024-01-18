@@ -1,12 +1,12 @@
 @import "color.scss";
 
 // Fade out the callout.
-@keyframes fade-out {
-  0%, 75% {
-    opacity: 1;
-  }
-  100% {
+@keyframes fade-in-out {
+  0%, 100% {
     opacity: 0;
+  }
+  10%, 75% {
+    opacity: 1;
   }
 }
 
@@ -29,7 +29,7 @@
   width: 18px;
   height: 24px;
   transform: translateX(-50%);
-  animation: fade-out 2.5s;
+  animation: fade-in-out 2.5s;
 
   .arrow {
     position: absolute;
