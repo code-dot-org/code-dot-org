@@ -142,6 +142,7 @@ module Pd
       INTERACTIVE_ANIMATIONS_AND_GAMES = 'Teaching Interactive Animations and Games'.freeze,
       TEACHING_CS_CONNECTIONS = 'Teaching CS Connections'.freeze,
       CS_BASICS_FOR_K5_TEACHERS = 'Computer Science Basics for K-5 Teachers'.freeze,
+      TEACHING_DESIGN_PROCESS = 'Teaching Design Process'.freeze,
     ].freeze
 
     NOT_FUNDED_SUBJECTS = [
