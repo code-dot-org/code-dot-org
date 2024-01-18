@@ -429,6 +429,50 @@ td {
   }
 }
 
+/* Carousel styles */
+.carousel-wrapper {
+  position: relative;
+}
+
+/* Swiper carousel library styles */
+swiper-slide {
+  display: flex;
+  align-items: stretch;
+  height: auto;
+}
+
+.carousel-wrapper .swiper-nav-prev,
+.carousel-wrapper .swiper-nav-next {
+  position: absolute;
+  top: 42%;
+  border: 0;
+  height: 48px;
+}
+
+.carousel-wrapper .swiper-button-disabled {
+  opacity: 0.5;
+}
+
+.carousel-wrapper .swiper-nav-prev {
+  background: url("/images/carousel/prev.svg") no-repeat;
+  left: -4rem;
+  border: 0;
+}
+
+.carousel-wrapper .swiper-nav-next {
+  background: url("/images/carousel/next.svg") no-repeat;
+  right: -4rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel-wrapper .swiper-nav-prev,
+  .carousel-wrapper .swiper-nav-next {
+    display: none;
+  }
+}
+
+/* Begin legacy styles ------------------------ */
+
 /* for homepage 2.0.. */
 #homepage .clear {
   clear: both;

@@ -123,7 +123,7 @@
   ]
 
 .carousel-wrapper
-  %swiper-container.three-col{init: "false"}
+  %swiper-container.three-col{navigation: "true", "navigation-next-el": ".swiper-nav-next", "navigation-prev-el": ".swiper-nav-prev", init: "false"}
     - block_item.each do |block_item|
       %swiper-slide
         .action-block.action-block--one-col.flex-space-between
@@ -147,5 +147,8 @@
               =hoc_s(:call_to_action_start_pl)
             %a.link-button.secondary{href: block_item[:url_secondary], aria:{label: "#{block_item[:aria_label_secondary]}"}}
               =hoc_s(:call_to_action_explore_curriculum)
+
+  %button.swiper-nav-prev
+  %button.swiper-nav-next
 
 = view :swiper

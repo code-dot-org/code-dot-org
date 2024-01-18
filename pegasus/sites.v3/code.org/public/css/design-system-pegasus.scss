@@ -803,13 +803,6 @@ form {
 .carousel-wrapper {
   margin: 2rem 0 0;
 
-  // Swiper carousel library styles
-  swiper-slide {
-    display: flex;
-    align-items: stretch;
-    height: auto;
-  }
-
   // Sets the font-family for text/image carousels
   p {
     font-family: var(--barlowSemiCondensed-medium), sans-serif;
