@@ -11,12 +11,7 @@ function ExpandedProgressDataColumn({
   sortedStudents,
   removeExpandedLesson,
 }) {
-  return (
-    <div>
-      {sortedStudents}
-      {lesson}
-    </div>
-  );
+  return <div>{lesson.id}</div>;
 }
 
 ExpandedProgressDataColumn.propTypes = {

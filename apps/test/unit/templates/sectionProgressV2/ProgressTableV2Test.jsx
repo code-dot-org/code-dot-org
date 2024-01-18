@@ -104,21 +104,14 @@ describe('ProgressTableV2', () => {
   it('nothing expanded', () => {
     const wrapper = setUp();
 
-    expect(wrapper.find(LessonsProgressDataColumn)).to.have.lengthOf(1);
+    expect(wrapper.find(LessonsProgressDataColumn)).to.have.lengthOf(5);
     expect(wrapper.find(ExpandedProgressDataColumn)).to.have.lengthOf(0);
   });
 
   it('one lesson expanded', () => {
     const wrapper = setUp({expandedLessonIds: [2]});
 
-    expect(wrapper.find(LessonsProgressDataColumn)).to.have.lengthOf(2);
-    expect(wrapper.find(ExpandedProgressDataColumn)).to.have.lengthOf(1);
-  });
-
-  it('first lesson expanded', () => {
-    const wrapper = setUp({expandedLessonIds: [1]});
-
-    expect(wrapper.find(LessonsProgressDataColumn)).to.have.lengthOf(1);
+    expect(wrapper.find(LessonsProgressDataColumn)).to.have.lengthOf(4);
     expect(wrapper.find(ExpandedProgressDataColumn)).to.have.lengthOf(1);
   });
 
@@ -126,13 +119,6 @@ describe('ProgressTableV2', () => {
     const wrapper = setUp({expandedLessonIds: [2, 4]});
 
     expect(wrapper.find(LessonsProgressDataColumn)).to.have.lengthOf(3);
-    expect(wrapper.find(ExpandedProgressDataColumn)).to.have.lengthOf(2);
-  });
-
-  it('adjacent lessons expanded', () => {
-    const wrapper = setUp({expandedLessonIds: [2, 3]});
-
-    expect(wrapper.find(LessonsProgressDataColumn)).to.have.lengthOf(2);
     expect(wrapper.find(ExpandedProgressDataColumn)).to.have.lengthOf(2);
   });
 });

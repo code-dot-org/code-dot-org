@@ -8,7 +8,7 @@ import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
 import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
 import ExpandedProgressDataColumn from './ExpandedProgressDataColumn';
-import LessonsProgressDataColumn from './LessonsProgressDataColumn';
+import LessonProgressDataColumn from './LessonProgressDataColumn';
 
 export function ProgressTableV2({
   isSortedByFamilyName,
@@ -30,25 +30,10 @@ export function ProgressTableV2({
       return [];
     }
 
-    let currentGroup = [];
     let columns = [];
-    // Groups adjacent unexpanded lessons together into `LessonsProgressDataColumn`s
-    // Expanded lessons are not grouped with other lessons
-    for (const lesson of lessons) {
+
+    return lessons.map(lesson => {
       if (expandedLessonIds.includes(lesson.id)) {
-        if (currentGroup.length > 0) {
-          columns.push(
-            <LessonsProgressDataColumn
-              lessons={currentGroup}
-              sortedStudents={sortedStudents}
-              addExpandedLesson={lessonId =>
-                setExpandedLessons([...expandedLessonIds, lessonId])
-              }
-              key={columns.length}
-            />
-          );
-          currentGroup = [];
-        }
         columns.push(
           <ExpandedProgressDataColumn
             lesson={lesson}
@@ -62,22 +47,18 @@ export function ProgressTableV2({
           />
         );
       } else {
-        currentGroup.push(lesson);
+        columns.push(
+          <LessonProgressDataColumn
+            lesson={lesson}
+            sortedStudents={sortedStudents}
+            addExpandedLesson={lessonId =>
+              setExpandedLessons([...expandedLessonIds, lessonId])
+            }
+            key={columns.length}
+          />
+        );
       }
-    }
-    if (currentGroup.length > 0) {
-      columns.push(
-        <LessonsProgressDataColumn
-          lessons={currentGroup}
-          sortedStudents={sortedStudents}
-          addExpandedLesson={lessonId =>
-            setExpandedLessons([...expandedLessonIds, lessonId])
-          }
-          key={columns.length}
-        />
-      );
-    }
-    return columns;
+    });
   }, [unitData, expandedLessonIds, setExpandedLessons, sortedStudents]);
 
   return (
@@ -88,9 +69,7 @@ export function ProgressTableV2({
         sectionId={sectionId}
       />
 
-      <div className={styles.table}>
-        <div className={styles.table}>{renderedColumns}</div>
-      </div>
+      <div className={styles.table}>{renderedColumns}</div>
     </div>
   );
 }
