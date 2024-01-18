@@ -1,4 +1,13 @@
-import {LoadFinishedCallback, SoundLoadCallbacks} from '../types';
+/**
+ * TODO:
+ * - sequence playback
+ * - Effects
+ * - Experiment with loops and skips
+ * - Clean up playback event -> tone js events
+ * - Rename interfaces
+ */
+
+import {SoundLoadCallbacks} from '../types';
 import SoundCache from './SoundCache';
 
 const DEFAULT_BPM = 120;
