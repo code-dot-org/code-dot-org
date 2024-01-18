@@ -51,13 +51,13 @@ export type SegmentedButtonProps = SegmentedButtonModel & {
 };
 
 /** Type Guards to make sure we can access type specific props */
-export function isWithLabelSegmentedButtonModel(
+function isWithLabelSegmentedButtonModel(
   model: SegmentedButtonModel
 ): model is WithLabelSegmentedButtonModel {
   return model.buttonType === 'withLabel';
 }
 
-export function isIconOnlySegmentedButtonModel(
+function isIconOnlySegmentedButtonModel(
   model: SegmentedButtonModel
 ): model is IconOnlySegmentedButtonModel {
   return model.buttonType === 'iconOnly';
