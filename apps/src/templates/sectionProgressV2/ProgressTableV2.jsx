@@ -15,9 +15,9 @@ export function ProgressTableV2({
   sectionId,
   students,
   unitData,
+  expandedLessonIds,
+  setExpandedLessons,
 }) {
-  const [expandedLessonIds, setExpandedLessons] = React.useState([]);
-
   const addExpandedLesson = React.useMemo(
     () => lessonId =>
       setExpandedLessons([...expandedLessonIds, lessonId])[
@@ -114,6 +114,8 @@ ProgressTableV2.propTypes = {
   sectionId: PropTypes.number,
   students: PropTypes.arrayOf(studentShape).isRequired,
   unitData: unitDataPropType.isRequired,
+  expandedLessonIds: PropTypes.arrayOf(PropTypes.number).isRequired,
+  setExpandedLessons: PropTypes.func.isRequired,
 };
 
 export default connect(state => ({
