@@ -79,6 +79,8 @@ ExpandedProgressDataColumn.propTypes = {
   removeExpandedLesson: PropTypes.func.isRequired,
 };
 
+export const UnconnectedExpandedProgressDataColumn = ExpandedProgressDataColumn;
+
 export default connect(state => ({
   lessonProgressByStudent:
     state.sectionProgress.studentLessonProgressByUnit[
