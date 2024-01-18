@@ -191,6 +191,7 @@ const WEBPACK_BASE_CONFIG = {
         localeDoNotImport('@cdo/javalab/locale'),
         localeDoNotImport('@cdo/music/locale'),
         localeDoNotImport('@cdo/netsim/locale'),
+        localeDoNotImport('@cdo/panels/locale'),
         localeDoNotImport('@cdo/regionalPartnerMiniContact/locale'),
         localeDoNotImport('@cdo/regionalPartnerSearch/locale'),
         localeDoNotImport('@cdo/standaloneVideo/locale'),
