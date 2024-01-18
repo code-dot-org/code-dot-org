@@ -416,30 +416,6 @@ function makeLockedBlockImmovable(block) {
 }
 
 /**
- * Partitions XML elements of the specified types to the front of the list.
- *
- * @param {Element[]} [blocks=[]] - An array of XML block elements to be partitioned.
- * @param {string[]} [prioritizedBlockTypes=[]] - An array of strings representing block types to move to the front.
- * @returns {Element[]} A new array of XML block elements partitioned based on their types.
- */
-export function partitionXmlBlocksByType(
-  blocks = [],
-  prioritizedBlockTypes = []
-) {
-  const prioritizedBlocks = [];
-  const remainingBlocks = [];
-
-  blocks.forEach(block => {
-    const blockType = block.getAttribute('type');
-    prioritizedBlockTypes.includes(blockType)
-      ? prioritizedBlocks.push(block)
-      : remainingBlocks.push(block);
-  });
-
-  return [...prioritizedBlocks, ...remainingBlocks];
-}
-
-/**
  * Extracts block elements from the provided XML and returns them partitioned based on their types.
  * If no block elements are found in the XML, an empty array is returned.
  *
