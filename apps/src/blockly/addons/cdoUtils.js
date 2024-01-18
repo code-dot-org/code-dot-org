@@ -70,7 +70,7 @@ function loadHiddenDefinitionBlocksToWorkspace(hiddenDefinitionSource) {
  *  mainSource and hiddenDefinitionSource are Blockly serialization objects.
  */
 function prepareSourcesForWorkspaces(source) {
-  let {parsedSource} = parseSource(source);
+  const parsedSource = parseSource(source);
   const procedureTypesToHide = [BLOCK_TYPES.behaviorDefinition];
   if (Blockly.useModalFunctionEditor) {
     procedureTypesToHide.push(BLOCK_TYPES.procedureDefinition);
@@ -84,9 +84,8 @@ function prepareSourcesForWorkspaces(source) {
 
 /**
  * Convert source to parsed json objects. If source was xml, convert to json before parsing.
- * Also create a block order map if source was xml, which will allow us to correctly place blocks on the workspace.
  * @param {string} source - workspace serialization, either XML or JSON
- * @returns {parsedSource: Object}
+ * @returns Object: source as json
  */
 function parseSource(source) {
   let isXml = stringIsXml(source);
@@ -99,7 +98,7 @@ function parseSource(source) {
     parsedSource = JSON.parse(source);
   }
 
-  return {parsedSource};
+  return parsedSource;
 }
 
 /**
