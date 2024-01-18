@@ -122,8 +122,13 @@
     }
   }
   &Column {
-    margin-left: 8px;
+    // This is one more to compensate for the -1px margin-right on the lesson column
+    margin-left: 9px;
     margin-right: 8px;
+  }
+
+  &Column + &Column {
+    margin-left: 0;
   }
 }
 
