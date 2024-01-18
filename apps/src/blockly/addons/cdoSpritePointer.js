@@ -84,7 +84,7 @@ function getImageUrlFromImageSource(imageSourceBlock, imageIndexOnSource) {
     // Blocks of type gamelab_allSpritesWithAnimation have an input with one field (the costume
     // picker dropdown).
     return (
-      targetConnection.sourceBlock_.inputList[0].fieldRow[0].imageElement_.getAttribute(
+      targetConnection.sourceBlock_.inputList[0].fieldRow[0].imageElement.getAttribute(
         'xlink:href'
       ) || ''
     );
