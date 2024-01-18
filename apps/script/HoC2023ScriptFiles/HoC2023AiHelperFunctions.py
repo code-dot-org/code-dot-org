@@ -137,7 +137,7 @@ def retrieve_embedding(string: str,
 
 # This function calculates the similarity score between an input embedding and a list of output embeddings.
 def calculate_similarity_score(input_embeddings, output_embeddings, emojis):
-    # Creates matrix of cosine distances (similarities) where each subarray represents the distance between an input and each possible output
+    # Creates nested array of cosine distances (similarities) where each subarray represents the distance between an input and each possible output
     # e.g. [[input1:output1, input1:output2...], [input2:output1, output2:output2...]...]
     vectors = []
     indexes = []
@@ -157,8 +157,8 @@ def calculate_similarity_score(input_embeddings, output_embeddings, emojis):
     
     # Conversion from cosine distance to cosine similarity for easier readability in frontend computations.
     # Math explanation: Cosine distance outputs a value between 0 -> 1 where smaller values = greater similarity.
-    # Cosine similarity redefines this relationship so that larger values = greater similarity.
-    # Since we expose some of these values to students in the frontend, we felt that having the similarity values be focused on growing larger would be easier to understand.
+    # Cosine similarity redefines this relationship so that instead larger values = greater ssimilarity.
+    # Since we expose some of these values to students in the frontend, we felt that similarity values growing larger would be easier to understand.
     similarities = similarities.apply(lambda x: round((x-1)*-1, 3), axis = 0)
 
     # Conversion to required JSON lookup format
