@@ -244,5 +244,21 @@ describe('DeleteAccount', () => {
         );
       });
     });
+
+    describe('for admin', () => {
+      it('displays AdminAccountDialog if trying to delete admin account', () => {
+        const wrapper = mount(
+          <DeleteAccount {...DEFAULT_PROPS} isAdmin={true} />
+        );
+        const deleteAccountButton = wrapper.find('BootstrapButton').at(0);
+        deleteAccountButton.simulate('click');
+        const adminAccountDialog = wrapper.find('AdminAccountDialog');
+        expect(adminAccountDialog).to.exist;
+        const confirmButton = wrapper.find('Button').at(0);
+        confirmButton.simulate('click');
+        const deleteAccountDialog = wrapper.find('DeleteAccountDialog');
+        expect(deleteAccountDialog).to.exist;
+      });
+    });
   });
 });
