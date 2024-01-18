@@ -133,6 +133,7 @@ export default function RubricContent({
   } else if (!studentLevelInfo) {
     infoText = i18n.selectAStudentToEvaluateAlert();
   }
+
   return (
     <div
       className={classnames(style.rubricContent, {
@@ -205,17 +206,21 @@ export default function RubricContent({
         )}
       </div>
       {experiments.isEnabled('ai-rubrics-redesign') ? (
-        <LearningGoals
-          learningGoals={rubric.learningGoals}
-          teacherHasEnabledAi={teacherHasEnabledAi}
-          canProvideFeedback={canProvideFeedback}
-          reportingData={reportingData}
-          studentLevelInfo={studentLevelInfo}
-          isStudent={false}
-          feedbackAdded={feedbackAdded}
-          setFeedbackAdded={setFeedbackAdded}
-          aiEvaluations={aiEvaluations}
-        />
+        // TODO: remove tempContainer div when experiment is ready to roll out
+        <div className={style.tempContainer}>
+          <Heading5>{i18n.rubric()}</Heading5>
+          <LearningGoals
+            learningGoals={rubric.learningGoals}
+            teacherHasEnabledAi={teacherHasEnabledAi}
+            canProvideFeedback={canProvideFeedback}
+            reportingData={reportingData}
+            studentLevelInfo={studentLevelInfo}
+            isStudent={false}
+            feedbackAdded={feedbackAdded}
+            setFeedbackAdded={setFeedbackAdded}
+            aiEvaluations={aiEvaluations}
+          />
+        </div>
       ) : (
         <div className={style.learningGoalContainer}>
           {rubric.learningGoals.map(lg => (
