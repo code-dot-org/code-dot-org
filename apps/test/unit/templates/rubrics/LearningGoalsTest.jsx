@@ -5,8 +5,7 @@ import sinon from 'sinon';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
-import {
-  LearningGoals,
+import LearningGoals, {
   clearAnnotations,
   findCodeRegion,
   getAnonymizedCode,
