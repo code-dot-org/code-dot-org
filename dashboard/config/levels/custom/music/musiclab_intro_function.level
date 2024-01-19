@@ -8,6 +8,7 @@
   "properties": {
     "encrypted": "false",
     "background": "music-black",
+    "long_instructions": "#### Functions\n\nYou can organize your music using functions.\n\nClick **Functions**, then drag **bass** to **when run**, to play the content of the bass function.",
     "level_data": {
       "library": "will",
       "startSources": {
@@ -17,7 +18,9 @@
             {
               "type": "when_run_simple2",
               "x": 30,
-              "y": 30
+              "y": 30,
+              "deletable": false,
+              "movable": false
             },
             {
               "type": "procedures_defnoreturn",
@@ -25,8 +28,9 @@
               "y": 30,
               "extraState": {
                 "procedureId": "bass-procedure-id",
-                "initialDeleteConfig": true,
-                "userCreated": true
+                "initialDeleteConfig": false,
+                "initialMoveConfig": false,
+                "userCreated": false
               },
               "fields": {
                 "NAME": "bass"
@@ -35,6 +39,8 @@
                 "STACK": {
                   "block": {
                     "type": "play_sound_at_current_location_simple2",
+                    "deletable": false,
+                    "movable": false,
                     "fields": {
                       "sound": "bass/bass_synth_glow_up"
                     }
@@ -52,7 +58,6 @@
           }
         ]
       },
-      "text": "#### Functions\n\nYou can organize your music using functions.\n\nClick **Functions**, then drag **bass** to **when run**, to play the content of the bass function.",
       "toolbox": {
         "blocks": {
           "Functions": [

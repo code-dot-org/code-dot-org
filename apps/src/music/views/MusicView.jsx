@@ -100,6 +100,7 @@ class UnconnectedMusicView extends React.Component {
     setPageError: PropTypes.func,
     initialSources: PropTypes.object,
     levelData: PropTypes.object,
+    longInstructions: PropTypes.string,
     startingPlayheadPosition: PropTypes.number,
     isReadOnlyWorkspace: PropTypes.bool,
     updateLoadProgress: PropTypes.func,
@@ -247,7 +248,9 @@ class UnconnectedMusicView extends React.Component {
     );
 
     this.library.setAllowedSounds(levelData?.sounds);
-    this.props.setShowInstructions(!!levelData?.text);
+    this.props.setShowInstructions(
+      !!levelData?.text || !!this.props.longInstructions
+    );
 
     if (this.getStartSources() || initialSources) {
       let codeToLoad = this.getStartSources();
@@ -728,6 +731,7 @@ const MusicView = connect(
     currentlyPlayingBlockIds: getCurrentlyPlayingBlockIds(state),
     initialSources: state.lab.initialSources,
     levelData: state.lab.levelProperties?.levelData,
+    longInstructions: state.lab.levelProperties?.longInstructions,
     isReadOnlyWorkspace: isReadOnlyWorkspace(state),
     appName: state.lab.levelProperties?.appName,
     startingPlayheadPosition: state.music.startingPlayheadPosition,
