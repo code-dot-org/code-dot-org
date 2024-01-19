@@ -39,7 +39,7 @@
     }
 
     .markdownText {
-      background-color: white;
+      background-color: $neutral_light;
       border-radius: 5px;
       width: 40%;
       top: 40px;
@@ -65,7 +65,7 @@
       font-size: 14px;
       background-color: $brand_secondary_default;
       border-color: $brand_secondary_default;
-      color: white;
+      color: $neutral_light;
       padding: 5px 10px;
       border-radius: 8px;
       height: 38px;
