@@ -508,17 +508,8 @@
             {
               "type": "rating",
               "name": "plan_measure_w34",
-              "visibleIf": "{workshop_course}='CS Discoveries' and ({regional_partner_name} <> 'Broward County Public Schools' and {regional_partner_name}<>  'Florida International University' and {regional_partner_name} <> 'Orlando Science Center' and {regional_partner_name} <> 'Tampa Bay STEM Network' and {regional_partner_name} <> 'University of North Florida & STEM2 Hub')",
+              "visibleIf": "{workshop_course}='CS Discoveries' and ({regional_partner_name} <> 'Broward County Public Schools' and {regional_partner_name} <> 'Florida International University' and {regional_partner_name} <> 'Orlando Science Center' and {regional_partner_name} <> 'Tampa Bay STEM Network' and {regional_partner_name} <> 'University of North Florida & STEM2 Hub')",
               "title": "I feel ready to track the progress of my inclusion plan: I know how and what to measure as outcomes and supports.",
-              "rateMax": 7,
-              "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree"
-            },
-            {
-              "type": "rating",
-              "name": "plan_measure_w34_csp",
-              "visibleIf": "{workshop_course}='CS Principles'",
-              "title": "I feel ready to track the progress of my commitment to ensuring my CS classroom is supportive for all students.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
               "maxRateDescription": "Strongly agree"
