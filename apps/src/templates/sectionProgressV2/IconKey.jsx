@@ -38,7 +38,7 @@ export default function IconKey({isViewingLevelProgress, hasLevelValidation}) {
       >
         {i18n.iconKey()}
       </Button>
-      <div>{isOpen && sectionContent()}</div>
+      {isOpen && sectionContent()}
     </div>
   );
 }

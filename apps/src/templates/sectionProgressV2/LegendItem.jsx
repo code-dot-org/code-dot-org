@@ -5,6 +5,7 @@ import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '../FontAwesome';
 import ProgressBox from '../sectionProgress/ProgressBox';
+import classNames from 'classnames';
 
 export const ITEM_TYPE = Object.freeze({
   NOT_STARTED: 1,
@@ -21,13 +22,15 @@ export const ITEM_TYPE = Object.freeze({
 });
 
 export default function LegendItem({itemType, labelText}) {
-  const needsFeedbackTriangle = (
-    <div className={`${styles.needsFeedback} ${styles.cornerBox}`} />
+  const needsFeedbackTriangle = () => (
+    <div className={classNames(styles.needsFeedback, styles.cornerBox)} />
   );
-  const feedbackGivenTriangle = (
-    <div className={`${styles.feedbackGiven} ${styles.cornerBox}`} />
+
+  const feedbackGivenTriangle = () => (
+    <div className={classNames(styles.feedbackGiven, styles.cornerBox)} />
   );
-  const notStartedBox = (
+
+  const notStartedBox = () => (
     <ProgressBox
       started={false}
       incomplete={20}
@@ -37,7 +40,7 @@ export default function LegendItem({itemType, labelText}) {
     />
   );
 
-  const viewedBox = (
+  const viewedBox = () => (
     <ProgressBox
       started={false}
       incomplete={20}
@@ -47,6 +50,7 @@ export default function LegendItem({itemType, labelText}) {
       viewed={true}
     />
   );
+
   return (
     <div className={styles.legendItem}>
       {itemType?.length && (
@@ -57,10 +61,10 @@ export default function LegendItem({itemType, labelText}) {
           className={styles.fontAwesomeIcon}
         />
       )}
-      {itemType === ITEM_TYPE.NOT_STARTED && notStartedBox}
-      {itemType === ITEM_TYPE.VIEWED && viewedBox}
-      {itemType === ITEM_TYPE.NEEDS_FEEDBACK && needsFeedbackTriangle}
-      {itemType === ITEM_TYPE.FEEDBACK_GIVEN && feedbackGivenTriangle}
+      {itemType === ITEM_TYPE.NOT_STARTED && notStartedBox()}
+      {itemType === ITEM_TYPE.VIEWED && viewedBox()}
+      {itemType === ITEM_TYPE.NEEDS_FEEDBACK && needsFeedbackTriangle()}
+      {itemType === ITEM_TYPE.FEEDBACK_GIVEN && feedbackGivenTriangle()}
       <BodyThreeText className={styles.labelText}>{labelText}</BodyThreeText>
     </div>
   );
