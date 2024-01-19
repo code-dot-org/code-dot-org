@@ -17,13 +17,21 @@
 }
 
 .gridBox {
-  height: 47px;
   border-top: 1px solid $light_gray_200;
   border-left: 1px solid $light_gray_200;
-  line-height: 47px;
 
   &Student {
+    height: 47px;
+    line-height: 47px;
     padding-left: 12px;
+  }
+
+  &Lesson {
+    text-align: center;
+    min-width: 80px;
+    max-width: 80px;  
+    height: 47px;
+    line-height: 47px;
   }
 }
 
@@ -52,6 +60,30 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+  }
+}
+
+.lesson {
+  &Column {
+    display: flex;
+    flex-direction: column;
+    margin-right: -1px;
+  }
+
+  &HeaderCell {
+    height: 42px;
+    line-height: 42px;
+    min-width: 80px;
+    border-bottom: 1px solid $light_gray_200;
+    border-right: 1px solid $light_gray_200;
+    margin-bottom: 32px;
+  }
+
+  &DataColumn {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $light_gray_200;
+    border-right: 1px solid $light_gray_200;
   }
 }
 
