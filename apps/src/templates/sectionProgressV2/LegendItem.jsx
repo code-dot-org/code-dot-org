@@ -5,24 +5,22 @@ import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '../FontAwesome';
 import ProgressBox from '../sectionProgress/ProgressBox';
-import {NOT_STARTED, VIEWED, NEEDS_FEEDBACK, FEEDBACK_GIVEN} from './IconKey';
 
-export default function LegendItem({
-  labelText,
+export const ITEM_TYPE = Object.freeze({
+  NOT_STARTED: 1,
+  VIEWED: 2,
+  NEEDS_FEEDBACK: 3,
+  FEEDBACK_GIVEN: 4,
+  ASSESSMENT_LEVEL: ['star', color.neutral_dark],
+  CHOICE_LEVEL: ['split', color.neutral_dark],
+  KEEP_WORKING: ['rotate-left', color.neutral_dark],
+  NO_ONLINE_WORK: ['dash', color.neutral_dark],
+  IN_PROGRESS: ['circle-o', color.neutral_dark],
+  SUBMITTED: ['circle', color.product_affirmative_default],
+  VALIDATED: ['circle-check', color.product_affirmative_default],
+});
 
-  // Some of the legend items have a FontAwesome icon.
-  // These props describe the FontAwesome icon connected to the labelText
-  fontAwesomeId,
-  fontAwesomeColor,
-
-  // For legend items that do not have a FontAwesome icon,
-  // the stateDescription is used to determine what icon
-  // will be displayed with the labelText
-  stateDescription,
-}) {
-  const iconColorStyle = fontAwesomeColor
-    ? fontAwesomeColor
-    : color.neutral_dark;
+export default function LegendItem({itemType, labelText}) {
   const needsFeedbackTriangle = (
     <div className={`${styles.needsFeedback} ${styles.cornerBox}`} />
   );
@@ -51,18 +49,18 @@ export default function LegendItem({
   );
   return (
     <div className={styles.legendItem}>
-      {fontAwesomeId && (
+      {itemType?.length && (
         <FontAwesome
-          id={'uitest-' + fontAwesomeId}
-          icon={fontAwesomeId}
-          style={{color: iconColorStyle}}
+          id={'uitest-' + itemType[0]}
+          icon={itemType[0]}
+          style={{color: itemType[1]}}
           className={styles.fontAwesomeIcon}
         />
       )}
-      {stateDescription === NOT_STARTED && notStartedBox}
-      {stateDescription === VIEWED && viewedBox}
-      {stateDescription === NEEDS_FEEDBACK && needsFeedbackTriangle}
-      {stateDescription === FEEDBACK_GIVEN && feedbackGivenTriangle}
+      {itemType === ITEM_TYPE.NOT_STARTED && notStartedBox}
+      {itemType === ITEM_TYPE.VIEWED && viewedBox}
+      {itemType === ITEM_TYPE.NEEDS_FEEDBACK && needsFeedbackTriangle}
+      {itemType === ITEM_TYPE.FEEDBACK_GIVEN && feedbackGivenTriangle}
       <BodyThreeText className={styles.labelText}>{labelText}</BodyThreeText>
     </div>
   );
@@ -70,7 +68,5 @@ export default function LegendItem({
 
 LegendItem.propTypes = {
   labelText: PropTypes.string,
-  fontAwesomeId: PropTypes.string,
-  fontAwesomeColor: PropTypes.string,
-  stateDescription: PropTypes.string,
+  itemType: PropTypes.oneOf(Object.values(ITEM_TYPE)),
 };
