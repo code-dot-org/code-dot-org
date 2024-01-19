@@ -73,4 +73,18 @@ class FirehoseTest < Minitest::Test
       FirehoseClient.instance.put_record(@stream, invalid_record)
     end
   end
+
+  def test_firehose_data_string_size
+    valid_record = {
+      data_string: 'x' * (FirehoseClient::MAX_DATA_STRING_BYTES - 1)
+    }
+    FirehoseClient.instance.put_record(@stream, valid_record)
+
+    invalid_record = {
+      data_string: 'x' * (FirehoseClient::MAX_DATA_STRING_BYTES + 1)
+    }
+    assert_raises ArgumentError do
+      FirehoseClient.instance.put_record(@stream, invalid_record)
+    end
+  end
 end

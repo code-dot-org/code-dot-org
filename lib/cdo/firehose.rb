@@ -61,6 +61,8 @@ class FirehoseClient
   # successfully made it into redshift in the past year. use a slightly lower number to be safe.
   MAX_DATA_JSON_BYTES = 65_500
 
+  MAX_DATA_STRING_BYTES = 4095
+
   # 'For US East (N. Virginia): 5,000 records/second, 2,000 requests/second, and 5 MiB/second.'
   # Ref: https://docs.aws.amazon.com/firehose/latest/dev/limits.html
   TRANSACTIONS_PER_SECOND = 2000.0
@@ -129,6 +131,9 @@ class FirehoseClient
 
     if data[:data_json].to_s.bytesize > MAX_DATA_JSON_BYTES
       raise ArgumentError.new("data_json column too large (#{data[:data_json].to_s.bytesize} bytes)")
+    end
+    if data[:data_string].to_s.bytesize > MAX_DATA_STRING_BYTES
+      raise ArgumentError.new("data_string column too large (#{data[:data_string].to_s.bytesize} bytes)")
     end
     record = add_common_values(data).to_json
     if (size = record.bytesize) > BYTES_PER_RECORD
