@@ -58,10 +58,10 @@ export default function TeacherActionsBox({isViewingLevelProgress}) {
 
   return (
     <div className={styles.legend}>
-      <div className={styles.headerContainer}>
-        <StrongText>{i18n.teacherActions()}</StrongText>
-      </div>
-      <div>{legendIcons()}</div>
+      <StrongText className={styles.headerContainer}>
+        {i18n.teacherActions()}
+      </StrongText>
+      {legendIcons()}
     </div>
   );
 }
