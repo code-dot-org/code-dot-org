@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-empty-function */
+
+import * as packetio from './packetio';
 /**
  * For local testing of WebUSB, be sure to (temporarily)
  * enable the browser command line flag `--disable-webusb-security`
@@ -188,15 +192,15 @@ export interface USBDevice {
   forget?(): Promise<void>;
 }
 
-class WebUSBHID implements pxt.packetio.PacketIO {
-  lastKnownDeviceSerialNumber: string;
-  dev: USBDevice;
+class WebUSBHID implements packetio.PacketIO {
+  lastKnownDeviceSerialNumber: string | undefined;
+  dev: USBDevice | undefined;
   ready = false;
   connecting = false;
-  iface: USBInterface;
-  altIface: USBAlternateInterface;
-  epIn: USBEndpoint;
-  epOut: USBEndpoint;
+  iface!: USBInterface;
+  altIface!: USBAlternateInterface;
+  epIn: USBEndpoint | undefined;
+  epOut: USBEndpoint | undefined;
   readLoopStarted = false;
   onDeviceConnectionChanged = (connect: boolean) => {};
   onConnectionChanged = () => {};
@@ -249,7 +253,7 @@ class WebUSBHID implements pxt.packetio.PacketIO {
 
   private handleUSBDisconnected(event: any) {
     this.log('device disconnected');
-    if (event.device == this.dev) {
+    if (event.device === this.dev) {
       this.log('clear device');
       this.clearDev();
       if (this.onDeviceConnectionChanged) this.onDeviceConnectionChanged(false);
@@ -266,21 +270,19 @@ class WebUSBHID implements pxt.packetio.PacketIO {
 
   private clearDev() {
     if (this.dev) {
-      this.dev = null;
-      this.epIn = null;
-      this.epOut = null;
+      this.dev = undefined;
+      this.epIn = undefined;
+      this.epOut = undefined;
       if (this.onConnectionChanged) this.onConnectionChanged();
     }
   }
 
   error(msg: string) {
-    throw new USBError(
-      U.lf('USB error on device {0} ({1})', this.dev.productName, msg)
-    );
+    throw new USBError('USB error on device {0} ({1}) ' + msg);
   }
 
   log(msg: string) {
-    pxt.debug('webusb: ' + msg);
+    console.log('webusb: ' + msg);
   }
 
   disconnectAsync() {
@@ -294,7 +296,6 @@ class WebUSBHID implements pxt.packetio.PacketIO {
       })
       .then(() => {
         this.clearDev();
-        return U.delay(500);
       });
   }
 
@@ -319,7 +320,7 @@ class WebUSBHID implements pxt.packetio.PacketIO {
   }
 
   private setConnecting(v: boolean) {
-    if (v != this.connecting) {
+    if (v !== this.connecting) {
       this.connecting = v;
       if (this.onConnectionChanged) this.onConnectionChanged();
     }
@@ -336,7 +337,7 @@ class WebUSBHID implements pxt.packetio.PacketIO {
   private async connectAsync(devs: USBDevice[]) {
     this.log(`trying to connect (${devs.length} devices)`);
     // no devices...
-    if (devs.length == 0) {
+    if (devs.length === 0) {
       const e = new Error('Device not found.');
       (e as any).type = 'devicenotfound';
       throw e;
@@ -354,10 +355,6 @@ class WebUSBHID implements pxt.packetio.PacketIO {
           this.log(`last known device spotted`);
           devs.splice(devs.indexOf(lastDev), 1);
           devs.unshift(lastDev);
-        } else {
-          // give another frame a chance to grab the device
-          this.log(`delay for last known device`);
-          await U.delay(2000);
         }
       }
 
@@ -379,12 +376,12 @@ class WebUSBHID implements pxt.packetio.PacketIO {
           return;
         } catch (e) {
           this.dev = undefined; // clean state
-          this.log(`connection failed, ${e.message}`);
+          this.log(`connection failed, ${e}`);
           // try next
         }
       }
       // failed to connect, all devices are locked or broken
-      const e = new Error(U.lf('Device in use or not found.'));
+      const e = new Error('Device in use or not found.');
       (e as any).type = 'devicelocked';
       throw e;
     } finally {
@@ -392,9 +389,15 @@ class WebUSBHID implements pxt.packetio.PacketIO {
     }
   }
 
+  assert(cond: boolean, msg = 'Assertion failed') {
+    if (!cond) {
+      throw new Error(msg);
+    }
+  }
+
   sendPacketAsync(pkt: Uint8Array) {
     if (!this.dev) return Promise.reject(new Error('Disconnected'));
-    Util.assert(pkt.length <= 64);
+    this.assert(pkt.length <= 64);
     if (!this.epOut) {
       return this.dev
         .controlTransferOut(
@@ -408,11 +411,11 @@ class WebUSBHID implements pxt.packetio.PacketIO {
           pkt
         )
         .then(res => {
-          if (res.status != 'ok') this.error('USB CTRL OUT transfer failed');
+          if (res.status !== 'ok') this.error('USB CTRL OUT transfer failed');
         });
     }
     return this.dev.transferOut(this.epOut.endpointNumber, pkt).then(res => {
-      if (res.status != 'ok') this.error('USB OUT transfer failed');
+      if (res.status !== 'ok') this.error('USB OUT transfer failed');
     });
   }
 
@@ -420,9 +423,10 @@ class WebUSBHID implements pxt.packetio.PacketIO {
     if (this.readLoopStarted) return;
     this.readLoopStarted = true;
     this.log('start read loop');
-    let loop = (): void => {
-      if (!this.ready) U.delay(300).then(loop);
-      else
+    const loop = (): void => {
+      if (!this.ready) {
+        setTimeout(() => loop, 300);
+      } else
         this.recvPacketAsync().then(
           buf => {
             if (buf[0]) {
@@ -431,12 +435,12 @@ class WebUSBHID implements pxt.packetio.PacketIO {
               loop();
             } else {
               // throttle down if no data coming
-              U.delay(500).then(loop);
+              setTimeout(() => loop, 500);
             }
           },
           err => {
             if (this.dev) this.onError(err);
-            U.delay(300).then(loop);
+            setTimeout(() => loop, 300);
           }
         );
     };
@@ -444,10 +448,10 @@ class WebUSBHID implements pxt.packetio.PacketIO {
   }
 
   recvPacketAsync(): Promise<Uint8Array> {
-    let final = (res: USBInTransferResult) => {
-      if (res.status != 'ok') this.error('USB IN transfer failed');
-      let arr = new Uint8Array(res.data.buffer);
-      if (arr.length == 0) return this.recvPacketAsync();
+    const final = (res: USBInTransferResult) => {
+      if (res.status !== 'ok') this.error('USB IN transfer failed');
+      const arr = new Uint8Array(res.data.buffer);
+      if (arr.length === 0) return this.recvPacketAsync();
       return arr;
     };
 
@@ -473,7 +477,7 @@ class WebUSBHID implements pxt.packetio.PacketIO {
 
   initAsync(): Promise<void> {
     if (!this.dev) return Promise.reject(new Error('Disconnected'));
-    let dev = this.dev;
+    const dev = this.dev;
     this.log('open device');
     return (
       dev
@@ -484,22 +488,22 @@ class WebUSBHID implements pxt.packetio.PacketIO {
           return dev.selectConfiguration(1);
         })
         .then(() => {
-          let matchesFilters = (iface: USBInterface) => {
-            let a0 = iface.alternates[0];
-            for (let f of filters) {
-              if (f.classCode == null || a0.interfaceClass === f.classCode) {
+          const matchesFilters = (iface: USBInterface) => {
+            const a0 = iface.alternates[0];
+            for (const f of filters) {
+              if (f.classCode === null || a0.interfaceClass === f.classCode) {
                 if (
-                  f.subclassCode == null ||
+                  f.subclassCode === null ||
                   a0.interfaceSubclass === f.subclassCode
                 ) {
                   if (
-                    f.protocolCode == null ||
+                    f.protocolCode === null ||
                     a0.interfaceProtocol === f.protocolCode
                   ) {
-                    if (a0.endpoints.length == 0) return true;
+                    if (a0.endpoints.length === 0) return true;
                     if (
-                      a0.endpoints.length == 2 &&
-                      a0.endpoints.every(e => e.packetSize == 64)
+                      a0.endpoints.length === 2 &&
+                      a0.endpoints.every(e => e.packetSize === 64)
                     )
                       return true;
                   }
@@ -513,7 +517,7 @@ class WebUSBHID implements pxt.packetio.PacketIO {
           );
           const matching =
             dev.configurations[0].interfaces.filter(matchesFilters);
-          let iface = matching[matching.length - 1];
+          const iface = matching[matching.length - 1];
           this.log(
             `${matching.length} matching interfaces; picking ${
               iface ? '#' + iface.interfaceNumber : 'n/a'
@@ -525,13 +529,13 @@ class WebUSBHID implements pxt.packetio.PacketIO {
           if (this.altIface.endpoints.length) {
             this.log('using dedicated endpoints');
             this.epIn = this.altIface.endpoints.filter(
-              e => e.direction == 'in'
+              e => e.direction === 'in'
             )[0];
             this.epOut = this.altIface.endpoints.filter(
-              e => e.direction == 'out'
+              e => e.direction === 'out'
             )[0];
-            Util.assert(this.epIn.packetSize == 64);
-            Util.assert(this.epOut.packetSize == 64);
+            this.assert(this.epIn.packetSize === 64);
+            this.assert(this.epOut.packetSize === 64);
           } else {
             this.log('using ctrl pipe');
           }
@@ -540,7 +544,7 @@ class WebUSBHID implements pxt.packetio.PacketIO {
         })
         .then(() => {
           this.log('device ready');
-          this.lastKnownDeviceSerialNumber = this.dev.serialNumber;
+          this.lastKnownDeviceSerialNumber = this.dev?.serialNumber;
           this.ready = true;
           if (isHF2) this.readLoop();
           if (this.onConnectionChanged) this.onConnectionChanged();
@@ -549,7 +553,7 @@ class WebUSBHID implements pxt.packetio.PacketIO {
   }
 }
 
-export function pairAsync(): Promise<boolean> {
+export function pairAsync(): Promise<boolean | undefined> {
   return (
     (navigator as any).usb.requestDevice({
       filters: filters,
@@ -558,27 +562,27 @@ export function pairAsync(): Promise<boolean> {
     .then(dev => !!dev)
     .catch(e => {
       // user cancelled
-      if (e.name == 'NotFoundError') return undefined;
+      if (e.name === 'NotFoundError') return undefined;
       throw e;
     });
 }
 
 export async function tryGetDevicesAsync(): Promise<USBDevice[]> {
-  log(`webusb: get devices`);
+  console.log(`webusb: get devices`);
   try {
     const devs = await ((navigator as any).usb.getDevices() as Promise<
       USBDevice[]
     >);
     return devs || [];
   } catch (e) {
-    reportException(e);
+    console.log(e);
     return [];
   }
 }
 
 let _hid: WebUSBHID;
-export function mkWebUSBHIDPacketIOAsync(): Promise<pxt.packetio.PacketIO> {
-  pxt.debug(`packetio: mk webusb io`);
+export function mkWebUSBHIDPacketIOAsync(): Promise<packetio.PacketIO> {
+  console.log(`packetio: mk webusb io`);
   if (!_hid) _hid = new WebUSBHID();
   _hid.enable();
   return Promise.resolve(_hid);
@@ -586,7 +590,7 @@ export function mkWebUSBHIDPacketIOAsync(): Promise<pxt.packetio.PacketIO> {
 
 // returns true if device has been successfully forgotten, false otherwise.
 export async function forgetDeviceAsync(): Promise<boolean> {
-  pxt.debug(`packetio: forget webusb io`);
+  console.log(`packetio: forget webusb io`);
   if (!_hid) {
     // No device to forget
     return false;
@@ -601,17 +605,12 @@ export function setEnabled(v: boolean) {
   isEnabled = v;
 }
 
-let _available: boolean = undefined;
+let _available: boolean | undefined = undefined;
 export async function checkAvailableAsync() {
   if (_available !== undefined) return;
 
-  pxt.debug(`webusb: checking availability`);
+  console.log(`webusb: checking availability`);
   // not supported by editor, cut short
-  if (!pxt.appTarget?.compile?.webUSB) {
-    _available = false;
-    return;
-  }
-
   const failureReason = await getReasonUnavailable();
   if (!failureReason) {
     _available = true;
@@ -619,30 +618,11 @@ export async function checkAvailableAsync() {
   }
 
   _available = false;
-  pxt.tickEvent('webusb.off', {reason: failureReason});
-  switch (failureReason) {
-    case 'electron':
-      pxt.debug(`webusb: off, electron`);
-      break;
-    case 'notimpl':
-      pxt.debug(`webusb: off, not implemented by browser`);
-      break;
-    case 'oldwindows':
-      pxt.debug(`webusb: off, older windows version`);
-      break;
-    case 'security':
-      pxt.debug(`webusb: off, security exception`);
-      break;
-  }
 }
 
 export async function getReasonUnavailable(): Promise<
   'electron' | 'notimpl' | 'oldwindows' | 'security' | undefined
 > {
-  if (pxt.BrowserUtils.isElectron()) {
-    return 'electron';
-  }
-
   const _usb = (navigator as any).usb;
   if (!_usb) {
     return 'notimpl';
@@ -652,7 +632,7 @@ export async function getReasonUnavailable(): Promise<
   // 5.1 - XP, 6.0 - Vista, 6.1 - Win7, 6.2 - Win8, 6.3 - Win8.1, 10.0 - Win10
   // If on Windows, and Windows is older 8.1, don't enable WebUSB,
   // as it requires signed INF files.
-  let m = /Windows NT (\d+\.\d+)/.exec(navigator.userAgent);
+  const m = /Windows NT (\d+\.\d+)/.exec(navigator.userAgent);
   if (m && parseFloat(m[1]) < 6.3) {
     return 'oldwindows';
   }
