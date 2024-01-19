@@ -1,5 +1,5 @@
 /**
- * A TypeScript wrapper for the StandaloneVideolocale object which casts
+ * A TypeScript wrapper for the Panels object which casts
  * it to the {@link PanelsLocale} type.
  */
 import {PanelsLocale} from './types';

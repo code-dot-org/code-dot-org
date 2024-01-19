@@ -3,7 +3,7 @@
 // This is a React client for a panels level.  Note that this is
 // only used for levels that use Lab2.
 
-import React, {useEffect, useLayoutEffect, useState} from 'react';
+import React, {useCallback, useEffect, useLayoutEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {
@@ -38,29 +38,38 @@ function useWindowSize() {
 
 const PanelsView: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
+
+  const appName = 'panels';
+
   const levelData = useSelector(
-    (state: {lab: LabState}) => state.lab.levelProperties?.levelData
+    ({lab}: {lab: LabState}) => lab.levelProperties?.levelData
   );
   const currentAppName = useSelector(
-    (state: {lab: LabState}) => state.lab.levelProperties?.appName
+    ({lab}: {lab: LabState}) => lab.levelProperties?.appName
   );
 
-  const [levelPanels, setLevelPanels] = React.useState<PanelsLevelData | null>(
-    null
-  );
-
+  const [levelPanels, setLevelPanels] = useState<PanelsLevelData | null>(null);
   const [currentPanel, setCurrentPanel] = useState(0);
 
   useEffect(() => {
-    if (currentAppName === 'panels' && levelData) {
+    if (currentAppName === appName && levelData) {
       setLevelPanels(levelData as PanelsLevelData);
     }
   }, [currentAppName, levelData]);
 
-  const nextButtonPressed = () => {
-    const appType = 'panels';
-    dispatch(sendSuccessReport(appType));
-    dispatch(navigateToNextLevel());
+  const handleButtonClick = useCallback(() => {
+    if (levelPanels?.panels) {
+      if (currentPanel < levelPanels.panels.length - 1) {
+        setCurrentPanel(currentPanel + 1);
+      } else {
+        dispatch(sendSuccessReport(appName));
+        dispatch(navigateToNextLevel());
+      }
+    }
+  }, [levelPanels, currentPanel, dispatch]);
+
+  const handleBubbleClick = (index: number) => {
+    setCurrentPanel(index);
   };
 
   // Leave a margin to the left and the right of the panels, to the edges
@@ -118,17 +127,13 @@ const PanelsView: React.FunctionComponent = () => {
         style={{width: width, height: childrenAreaHeight}}
       >
         <button
-          id="panels-continue-button"
+          id="panels-button"
           type="button"
-          onClick={() =>
-            currentPanel < levelPanels.panels.length - 1
-              ? setCurrentPanel(currentPanel + 1)
-              : nextButtonPressed()
-          }
+          onClick={handleButtonClick}
           className={styles.button}
         >
           {currentPanel < levelPanels.panels.length - 1
-            ? 'Next'
+            ? panelsLocale.next()
             : panelsLocale.continue()}
         </button>
         <div id="panels-bubbles">
@@ -145,13 +150,7 @@ const PanelsView: React.FunctionComponent = () => {
                 )}
                 title={undefined}
                 icon="circle"
-                onClick={
-                  index !== currentPanel
-                    ? () => {
-                        setCurrentPanel(index);
-                      }
-                    : undefined
-                }
+                onClick={() => handleBubbleClick(index)}
               />
             );
           })}
