@@ -8,6 +8,7 @@
   "properties": {
     "encrypted": "false",
     "background": "music-black",
+    "long_instructions": "####Choose a Sound\n\nThere are tons of sounds you can choose from. Change up the beat!\n\nClick the name of the sound to select a new one, and then press Run.\n",
     "level_data": {
       "library": "will",
       "startSources": {
@@ -19,14 +20,14 @@
               "id": "when-run-block",
               "x": 30,
               "y": 30,
-              "movable": "false",
-              "deletable": "false",
+              "deletable": false,
+              "movable": false,
               "next": {
                 "block": {
                   "type": "play_sound_at_current_location_simple2",
                   "id": "play-sound-block",
-                  "movable": "false",
-                  "deletable": "false",
+                  "deletable": false,
+                  "movable": false,
                   "fields": {
                     "sound": "beats/groovy_beat"
                   }
@@ -36,7 +37,6 @@
           ]
         }
       },
-      "text": "####Choose a Sound\n\nThere are tons of sounds you can choose from. Change up the beat!\n\nClick the name of the sound to select a new one, and then press Run.\n",
       "sounds": {
         "beats": [
           "drum_kit_disco",
