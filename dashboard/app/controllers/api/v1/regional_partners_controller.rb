@@ -71,7 +71,8 @@ class Api::V1::RegionalPartnersController < ApplicationController
       {
         study: 'regional-partner-search-log',
         event: result,
-        data_string: zip_code,
+        # avoid overloading the data_string field with long zip codes
+        data_string: zip_code&.truncate(20),
         source_page_id: params[:source_page_id]
       }
     )
