@@ -126,7 +126,6 @@ class ScrollButtons extends React.Component {
       <button
         type="button"
         className={classNames(
-          moduleStyles.all,
           moduleStyles.up,
           moduleStyles.minecraftButton,
           this.props.visible && moduleStyles.visible,
@@ -152,7 +151,6 @@ class ScrollButtons extends React.Component {
         onClick={this.singleScrollUp}
         onMouseDown={this.continuousScrollStartUp}
         className={classNames(
-          moduleStyles.all,
           moduleStyles.arrowGlyph,
           moduleStyles.up,
           this.props.visible && moduleStyles.visible,
@@ -170,12 +168,11 @@ class ScrollButtons extends React.Component {
       <button
         type="button"
         className={classNames(
-          'arrow',
-          moduleStyles.all,
           moduleStyles.down,
           moduleStyles.minecraftButton,
           this.props.visible && moduleStyles.visible,
-          centerItems && moduleStyles.downCenter
+          centerItems && moduleStyles.downCenter,
+          'arrow'
         )}
         ref={c => {
           this.scrollDown = c;
@@ -194,7 +191,6 @@ class ScrollButtons extends React.Component {
         }}
         className={classNames(
           'uitest-scroll-button-down',
-          moduleStyles.all,
           moduleStyles.arrowGlyph,
           moduleStyles.down,
           this.props.visible && moduleStyles.visible,
@@ -213,7 +209,10 @@ class ScrollButtons extends React.Component {
 
     return (
       showItems && (
-        <div style={{height: this.props.height, ...this.props.style}}>
+        <div
+          className={moduleStyles.container}
+          style={{height: this.props.height, ...this.props.style}}
+        >
           {upButton}
           {downButton}
         </div>

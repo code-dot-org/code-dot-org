@@ -1,48 +1,51 @@
 @import "color";
 @import '../../mixins.scss';
 
-.all {
+%all {
   position: absolute;
   transition: opacity 200ms;
   margin: 0;
 }
 
-.arrowGlyph {
-  font-size: 50px;
-  color: $neutral_dark;
-  cursor: pointer;
-}
+.container {
+  .up {
+    @include remove-button-styles;
+    @extend %all;
+    opacity: 0;
+    top: 10px;
+    margin: 0 0 3px 0;
+    left: 25px;
+    transform: translateX(-50%);
 
-.up {
-  @include remove-button-styles;
-  opacity: 0;
-  top: 10px;
-  margin: 0 0 3px 0;
-  left: 25px;
-  transform: translateX(-50%);
-}
+    &Center {
+      left: 50%;
+    }
+  }
 
-.down {
-  @include remove-button-styles;
-  opacity: 0;
-  bottom: 10px;
-  right: 25px;
-  transform: translateX(50%);
-}
+  .down {
+    @include remove-button-styles;
+    @extend %all;
+    opacity: 0;
+    bottom: 10px;
+    right: 25px;
+    transform: translateX(50%);
 
-.visible {
-  opacity: 1;
-};
+    &Center {
+      right: 50%;
+    }
+  }
 
-// move within center?
-.upCenter {
-  left: 50%;
-};
+  .arrowGlyph {
+    font-size: 50px;
+    color: $neutral_dark;
+    cursor: pointer;
+  }
 
-.downCenter {
-  right: 50%;
-};
+  .visible {
+    opacity: 1;
+  }
 
-.minecraftButton {
-  width: 40px;
+  .minecraftButton {
+    width: 40px;
+  }
 }
