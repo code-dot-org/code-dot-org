@@ -7,41 +7,37 @@ import {Header, ConfirmCancelFooter} from '../SystemDialog/SystemDialog';
 
 const GUTTER = 20;
 
-export default class AdminAccountDialog extends React.Component {
-  static propTypes = {
-    isOpen: PropTypes.bool.isRequired,
-    onCancel: PropTypes.func.isRequired,
-    onConfirm: PropTypes.func.isRequired,
-  };
+const AdminAccountDialog = ({isOpen, onCancel, onConfirm}) => {
+  return (
+    <BaseDialog
+      useUpdatedStyles
+      fixedWidth={550}
+      isOpen={isOpen}
+      handleClose={onCancel}
+    >
+      <div style={styles.container}>
+        <Header text={i18n.adminAccountDeletionDialog_header()} />
+        <p>
+          <strong style={styles.dangerText}>
+            {i18n.adminAccountDeletionDialog_body()}
+          </strong>
+        </p>
+        <ConfirmCancelFooter
+          confirmText={i18n.continue()}
+          onConfirm={onConfirm}
+          onCancel={onCancel}
+          tabIndex="1"
+        />
+      </div>
+    </BaseDialog>
+  );
+};
 
-  render() {
-    const {isOpen, onCancel, onConfirm} = this.props;
-
-    return (
-      <BaseDialog
-        useUpdatedStyles
-        fixedWidth={550}
-        isOpen={isOpen}
-        handleClose={onCancel}
-      >
-        <div style={styles.container}>
-          <Header text={i18n.adminAccountDeletionDialog_header()} />
-          <p>
-            <strong style={styles.dangerText}>
-              {i18n.adminAccountDeletionDialog_body()}
-            </strong>
-          </p>
-          <ConfirmCancelFooter
-            confirmText={i18n.continue()}
-            onConfirm={onConfirm}
-            onCancel={onCancel}
-            tabIndex="1"
-          />
-        </div>
-      </BaseDialog>
-    );
-  }
-}
+AdminAccountDialog.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onCancel: PropTypes.func.isRequired,
+  onConfirm: PropTypes.func.isRequired,
+};
 
 const styles = {
   container: {
@@ -66,3 +62,5 @@ const styles = {
     marginBottom: '1em',
   },
 };
+
+export default AdminAccountDialog;
