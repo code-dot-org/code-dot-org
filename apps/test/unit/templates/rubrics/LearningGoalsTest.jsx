@@ -145,6 +145,12 @@ describe('LearningGoals', () => {
   });
 
   describe('annotateLines', () => {
+    it('should do nothing if the AI observation does not reference any lines', () => {
+      // The AI tends to misreport the line number, so we shouldn't rely on it
+      annotateLines('This is just a basic observation.');
+      expect(annotateLineStub.notCalled).to.be.true;
+    });
+
     it('should annotate a single line of code referenced by the AI', () => {
       // The AI tends to misreport the line number, so we shouldn't rely on it
       annotateLines('Line 1: This is a line of code `var x = 5;`');
