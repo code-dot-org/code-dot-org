@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import classNames from 'classnames';
 import FontAwesome from '../../templates/FontAwesome';
@@ -119,31 +118,6 @@ class ScrollButtons extends React.Component {
       ? this.props.height > 100
       : this.props.height > 60;
 
-    // check minecraft and remove
-    const upStyle = {
-      opacity: this.props.visible ? 1 : 0,
-      top: '10px',
-      margin: '0 0 3px 0',
-      left: centerItems ? '50%' : 25,
-      transform: 'translateX(-50%)',
-    };
-
-    // check minecraft and remove
-    const downStyle = {
-      opacity: this.props.visible ? 1 : 0,
-      bottom: '10px',
-      right: centerItems ? '50%' : 25,
-      transform: 'translateX(50%)',
-    };
-
-    const minecraftButton = {
-      width: 40,
-    };
-
-    const containerStyle = {
-      height: this.props.height,
-    };
-
     // for most tutorials, we have minimalist arrow elements. For
     // minecraft, we use a special button element to stylistically align
     // with the other buttons on the screen.
@@ -151,13 +125,20 @@ class ScrollButtons extends React.Component {
     const upButton = this.props.isMinecraft ? (
       <button
         type="button"
-        className="arrow"
+        className={classNames(
+          moduleStyles.all,
+          moduleStyles.up,
+          moduleStyles.minecraftButton,
+          this.props.visible && moduleStyles.visible,
+          centerItems && moduleStyles.upCenter,
+          'arrow'
+        )}
         ref={c => {
           this.scrollUp = c;
         }}
         key="scrollUp"
+        onClick={this.singleScrollUp}
         onMouseDown={this.continuousScrollStartUp}
-        style={[styles.all, upStyle, minecraftButton]}
       >
         <img src="/blockly/media/1x1.gif" className="scroll-up-btn" alt="" />
       </button>
@@ -188,13 +169,20 @@ class ScrollButtons extends React.Component {
     const downButton = this.props.isMinecraft ? (
       <button
         type="button"
-        className="arrow"
+        className={classNames(
+          'arrow',
+          moduleStyles.all,
+          moduleStyles.down,
+          moduleStyles.minecraftButton,
+          this.props.visible && moduleStyles.visible,
+          centerItems && moduleStyles.downCenter
+        )}
         ref={c => {
           this.scrollDown = c;
         }}
         key="scrollDown"
+        onClick={this.singleScrollDown}
         onMouseDown={this.continuousScrollStartDown}
-        style={[styles.all, downStyle, minecraftButton]}
       >
         <img src="/blockly/media/1x1.gif" className="scroll-down-btn" alt="" />
       </button>
@@ -225,7 +213,7 @@ class ScrollButtons extends React.Component {
 
     return (
       showItems && (
-        <div style={[containerStyle, this.props.style]}>
+        <div style={{height: this.props.height, ...this.props.style}}>
           {upButton}
           {downButton}
         </div>
@@ -234,12 +222,4 @@ class ScrollButtons extends React.Component {
   }
 }
 
-const styles = {
-  all: {
-    position: 'absolute',
-    transition: 'opacity 200ms',
-    margin: 0,
-  },
-};
-
-export default Radium(ScrollButtons);
+export default ScrollButtons;
