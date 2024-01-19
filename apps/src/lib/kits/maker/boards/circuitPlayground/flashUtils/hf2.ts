@@ -1,3 +1,5 @@
+import * as packetio from './packetio';
+import * as utils from './utils';
 export interface MutableArrayLike<T> {
   readonly length: number;
   [n: number]: T;
@@ -149,21 +151,15 @@ export interface BootloaderInfo {
   BoardID: string;
 }
 
-let logEnabled = false;
-export function enableLog() {
-  logEnabled = true;
-}
-
 function log(msg: string) {
-  if (logEnabled) pxt.log('HF2: ' + msg);
-  else pxt.debug('HF2: ' + msg);
+  console.log('HF2: ' + msg);
 }
 
-export class Wrapper implements pxt.packetio.PacketIOWrapper {
+export class Wrapper implements packetio.PacketIOWrapper {
   private initialized = false;
-  private cmdSeq = U.randomUint32();
+  private cmdSeq = utils.randomUint32();
 
-  constructor(public readonly io: pxt.packetio.PacketIO) {
+  constructor(public readonly io: packetio.PacketIO) {
     let frames: Uint8Array[] = [];
     io.onDeviceConnectionChanged = connect =>
       this.disconnectAsync().then(() => connect && this.reconnectAsync());
@@ -173,22 +169,22 @@ export class Wrapper implements pxt.packetio.PacketIOWrapper {
       const len = buf[0] & 63;
       //console.log(`msg tp=${tp} len=${len}`)
       const frame = new Uint8Array(len);
-      U.memcpy(frame, 0, buf, 1, len);
+      utils.memcpy(frame, 0, buf, 1, len);
       if (tp & HF2_FLAG_SERIAL_OUT) {
-        this.onSerial(frame, tp == HF2_FLAG_SERIAL_ERR);
+        this.onSerial(frame, tp === HF2_FLAG_SERIAL_ERR);
         return;
       }
       frames.push(frame);
-      if (tp == HF2_FLAG_CMDPKT_BODY) {
+      if (tp === HF2_FLAG_CMDPKT_BODY) {
         return;
       } else {
-        U.assert(tp == HF2_FLAG_CMDPKT_LAST);
+        this.assert(tp === HF2_FLAG_CMDPKT_LAST);
         let total = 0;
         for (const f of frames) total += f.length;
         const r = new Uint8Array(total);
         let ptr = 0;
         for (const f of frames) {
-          U.memcpy(r, ptr, f);
+          utils.memcpy(r, ptr, f);
           ptr += f.length;
         }
         frames = [];
@@ -202,7 +198,7 @@ export class Wrapper implements pxt.packetio.PacketIOWrapper {
     };
     io.onEvent = buf => {
       const evid = read32(buf, 0);
-      const f = U.lookup(this.eventHandlers, evid + '');
+      const f = utils.lookup(this.eventHandlers, evid + '');
       if (f) {
         f(buf.slice(4));
       } else {

@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 
 import * as packetio from './packetio';
+import * as utils from './utils';
 /**
  * For local testing of WebUSB, be sure to (temporarily)
  * enable the browser command line flag `--disable-webusb-security`
@@ -388,15 +389,9 @@ class WebUSBHID implements packetio.PacketIO {
     }
   }
 
-  assert(cond: boolean, msg = 'Assertion failed') {
-    if (!cond) {
-      throw new Error(msg);
-    }
-  }
-
   sendPacketAsync(pkt: Uint8Array) {
     if (!this.dev) return Promise.reject(new Error('Disconnected'));
-    this.assert(pkt.length <= 64);
+    utils.assert(pkt.length <= 64);
     if (!this.epOut) {
       return this.dev
         .controlTransferOut(
@@ -533,8 +528,8 @@ class WebUSBHID implements packetio.PacketIO {
             this.epOut = this.altIface.endpoints.filter(
               e => e.direction === 'out'
             )[0];
-            this.assert(this.epIn.packetSize === 64);
-            this.assert(this.epOut.packetSize === 64);
+            utils.assert(this.epIn.packetSize === 64);
+            utils.assert(this.epOut.packetSize === 64);
           } else {
             this.log('using ctrl pipe');
           }
