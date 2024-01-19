@@ -34,6 +34,7 @@ const Timeline = () => {
     MIN_NUM_MEASURES,
     useSelector(state => state.music.lastMeasure)
   );
+  const loop = useSelector(state => state.music.loop);
 
   const getEventHeight = (numUniqueRows, availableHeight = 110) => {
     // While we might not actually have this many rows to show,
@@ -97,6 +98,37 @@ const Timeline = () => {
     },
     [dispatch, isPlaying]
   );
+
+  const showLoopMarkers = useCallback(() => {
+    if (!loop) {
+      return null;
+    }
+
+    const {start, end} = loop;
+    const startOffset = (start - 1) * barWidth;
+    const endOffset = (end - 1) * barWidth;
+
+    return (
+      <>
+        <div id="timeline-playhead" className={moduleStyles.fullWidthOverlay}>
+          <div
+            className={classNames(moduleStyles.playhead)}
+            style={{left: paddingOffset + startOffset, color: 'green'}}
+          >
+            &nbsp;
+          </div>
+        </div>
+        <div id="timeline-playhead" className={moduleStyles.fullWidthOverlay}>
+          <div
+            className={classNames(moduleStyles.playhead)}
+            style={{left: paddingOffset + endOffset, color: 'green'}}
+          >
+            &nbsp;
+          </div>
+        </div>
+      </>
+    );
+  }, [loop]);
 
   return (
     <div
@@ -166,6 +198,7 @@ const Timeline = () => {
           &nbsp;
         </div>
       </div>
+      {loop && showLoopMarkers()}
     </div>
   );
 };

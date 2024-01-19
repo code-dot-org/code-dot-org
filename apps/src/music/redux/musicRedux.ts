@@ -55,6 +55,12 @@ export interface MusicState {
     canUndo: boolean;
     canRedo: boolean;
   };
+  loop:
+    | {
+        start: number;
+        end: number;
+      }
+    | undefined;
 }
 
 const initialState: MusicState = {
@@ -75,6 +81,7 @@ const initialState: MusicState = {
     canUndo: false,
     canRedo: false,
   },
+  loop: undefined,
 };
 
 const musicSlice = createSlice({
@@ -191,6 +198,15 @@ const musicSlice = createSlice({
     ) => {
       state.undoStatus = action.payload;
     },
+    enableLoop: (
+      state,
+      action: PayloadAction<{start: number; end: number}>
+    ) => {
+      state.loop = action.payload;
+    },
+    disableLoop: state => {
+      state.loop = undefined;
+    },
   },
 });
 
@@ -253,4 +269,6 @@ export const {
   moveStartPlayheadPositionForward,
   moveStartPlayheadPositionBackward,
   setUndoStatus,
+  enableLoop,
+  disableLoop,
 } = musicSlice.actions;
