@@ -14,6 +14,7 @@ import {BOARD_TYPE, shouldUseWebSerial, delayPromise} from '../util/boardUtils';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 import Button from '../../../../templates/Button';
 import MBFirmataUpdater from '@cdo/apps/lib/kits/maker/boards/microBit/MBFirmataUpdater';
+import CPXFirmataUpdater from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/CPXFirmataUpdater';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
@@ -195,6 +196,22 @@ class SetupChecklist extends Component {
       });
   }
 
+  updateCPXFirmata() {
+    this.spin(STATUS_BOARD_UPDATE_FIRMATA);
+    this.question(STATUS_BOARD_CONNECT);
+    const cpxFirmataUpdater = new CPXFirmataUpdater();
+    return cpxFirmataUpdater
+      .updateCPXFirmata()
+      .then(() => {
+        this.succeed(STATUS_BOARD_UPDATE_FIRMATA);
+      })
+      .catch(err => {
+        console.log(err);
+        this.fail(STATUS_BOARD_UPDATE_FIRMATA);
+        this.fail(STATUS_BOARD_CONNECT);
+      });
+  }
+
   componentDidMount() {
     this.detect();
   }
@@ -309,6 +326,23 @@ class SetupChecklist extends Component {
     } else if (!linuxPermissionError) {
       errorDetails = this.installFirmware();
     }
+    const showUpdateCPXButtonTest = true;
+    const cpxButton = (
+      <div>
+        <Button
+          text={'Update CPX Firmata'}
+          color={Button.ButtonColor.brandSecondaryDefault}
+          size={Button.ButtonSize.medium}
+          style={downloadButtonStyle}
+          onClick={() => this.updateCPXFirmata()}
+          title={'Update CPX Firmata'}
+        />
+        <SafeMarkdown
+          markdown={applabI18n.makerSetupMicrobitSupportArticle()}
+        />{' '}
+      </div>
+    );
+
     const microBitButton = showUpdateMicroBitButton ? (
       <div>
         <Button
@@ -325,15 +359,18 @@ class SetupChecklist extends Component {
       </div>
     ) : null;
     return (
-      <ValidationStep
-        stepStatus={this.state[STATUS_BOARD_CONNECT]}
-        stepName={i18n.validationStepBoardConnectable()}
-        hideWaitingSteps={true}
-      >
-        {applabI18n.makerSetupBoardBadResponse()}
-        {errorDetails}
-        {microBitButton}
-      </ValidationStep>
+      <div>
+        <div>{showUpdateCPXButtonTest && cpxButton}</div>
+        <ValidationStep
+          stepStatus={this.state[STATUS_BOARD_CONNECT]}
+          stepName={i18n.validationStepBoardConnectable()}
+          hideWaitingSteps={true}
+        >
+          {applabI18n.makerSetupBoardBadResponse()}
+          {errorDetails}
+          {microBitButton}
+        </ValidationStep>
+      </div>
     );
   }
 
