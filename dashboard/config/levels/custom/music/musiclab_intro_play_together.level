@@ -8,6 +8,7 @@
   "properties": {
     "encrypted": "false",
     "background": "music-black",
+    "long_instructions": "#### Play together\n\nThis code plays a bass sound after a drum sound.\n\nWhat if you want to play the two sounds at the same time? Use the **play together** block, of course!\n\nConnect **play together** to **when run**.\n\nThen, move the two **play** blocks into the **play together** block and press Run.",
     "level_data": {
       "library": "will",
       "startSources": {
@@ -19,6 +20,8 @@
               "id": "when-run-block",
               "x": 30,
               "y": 30,
+              "deletable": false,
+              "movable": false,
               "next": {
                 "block": {
                   "type": "play_sound_at_current_location_simple2",
@@ -52,7 +55,6 @@
         },
         "type": "flyout"
       },
-      "text": "#### Play together\n\nThis code plays a bass sound after a drum sound.\n\nWhat if you want to play the two sounds at the same time? Use the **play together** block, of course!\n\nConnect **play together** to **when run**.\n\nThen, move the two **play** blocks into the **play together** block and press Run.",
       "validations": [
         {
           "conditions": [

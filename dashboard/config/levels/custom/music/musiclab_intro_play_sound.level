@@ -8,6 +8,7 @@
   "properties": {
     "encrypted": "false",
     "background": "music-black",
+    "long_instructions": "#### Play a sound\n\nLet's play a new sound!\n\nDrag the **play** block and attach it to **when run**. Click the name of the sound if you want to select a new sound.\n\nThen press Run.\n",
     "level_data": {
       "library": "will",
       "startSources": {
@@ -18,12 +19,13 @@
               "type": "when_run_simple2",
               "id": "when-run-block",
               "x": 30,
-              "y": 30
+              "y": 30,
+              "deletable": false,
+              "movable": false
             }
           ]
         }
       },
-      "text": "#### Play a sound\n\nLet's play a new sound!\n\nDrag the **play** block and attach it to **when run**. Click the name of the sound if you want to select a new sound.\n\nThen press Run.\n",
       "toolbox": {
         "blocks": {
           "Play": [
