@@ -3,7 +3,13 @@
 // This is a React client for a panels level.  Note that this is
 // only used for levels that use Lab2.
 
-import React, {useCallback, useEffect, useLayoutEffect, useState} from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useLayoutEffect,
+  useState,
+} from 'react';
 import {useSelector} from 'react-redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {
@@ -84,21 +90,25 @@ const PanelsView: React.FunctionComponent = () => {
   // can contain things like a Continue button.
   const childrenAreaHeight = 70;
 
-  // The aspect ratio of the panels.
-  const contentAspectRatio = 16 / 9;
-
   let [targetWidth, targetHeight] = useWindowSize();
   targetWidth -= horizontalMargin * 2;
   targetHeight -= verticalMargin * 2 + childrenAreaHeight;
 
-  let width, height;
-  if (targetWidth / targetHeight > contentAspectRatio) {
-    height = targetHeight;
-    width = contentAspectRatio * height;
-  } else {
-    width = targetWidth;
-    height = width / contentAspectRatio;
-  }
+  const [width, height] = useMemo(() => {
+    let width, height;
+
+    // The aspect ratio of the panels.
+    const contentAspectRatio = 16 / 9;
+
+    if (targetWidth / targetHeight > contentAspectRatio) {
+      height = targetHeight;
+      width = contentAspectRatio * height;
+    } else {
+      width = targetWidth;
+      height = width / contentAspectRatio;
+    }
+    return [width, height];
+  }, [targetWidth, targetHeight]);
 
   if (!levelPanels?.panels) {
     return <div />;
