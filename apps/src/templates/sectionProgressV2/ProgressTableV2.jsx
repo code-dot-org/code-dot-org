@@ -23,7 +23,7 @@ function ProgressTableV2({
   isSkeleton,
 }) {
   const sortedStudents = React.useMemo(() => {
-    if (isSkeleton) {
+    if (isSkeleton && students.length === 0) {
       return STUDENT_IDS.map(id => ({id}));
     }
     return isSortedByFamilyName
@@ -72,7 +72,7 @@ function ProgressTableV2({
         sortedStudents={sortedStudents}
         unitName={unitData?.title}
         sectionId={sectionId}
-        isSkeleton={isSkeleton}
+        isSkeleton={true} //{isSkeleton && students.length === 0}
       />
 
       <div className={styles.table}>{renderedColumns}</div>

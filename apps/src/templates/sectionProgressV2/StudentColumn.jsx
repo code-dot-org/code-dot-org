@@ -4,6 +4,7 @@ import styles from './progress-table-v2.module.scss';
 import classNames from 'classnames';
 import SortByNameDropdown from '../SortByNameDropdown';
 import _ from 'lodash';
+import skeleton from '@cdo/apps/componentLibrary/skeleton.module.scss';
 
 const SECTION_PROGRESS_V2 = 'SectionProgressV2';
 
@@ -25,7 +26,7 @@ export default function StudentColumn({
         >
           <span
             style={{width: _.random(30, 90) + '%'}}
-            className={styles.skeletonize}
+            className={skeleton.skeletonize}
           />
         </div>
       );
