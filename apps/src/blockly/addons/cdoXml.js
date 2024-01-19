@@ -55,16 +55,13 @@ export default function initializeBlocklyXml(blocklyWrapper) {
    * @returns {Object[]} An array of objects containing the created blocks and their positions.
    */
   blocklyWrapper.Xml.domToBlockSpace = function (workspace, xml) {
-    const partitionedBlockElements = getPartitionedBlockElements(
-      xml,
-      PROCEDURE_DEFINITION_TYPES
-    );
+    const blockElements = getBlockElements(xml);
     const blocks = [];
     // To position the blocks, we first render them all to the Block Space
     //  and parse any X or Y coordinates set in the XML. Then, we store
     //  the rendered blocks and the coordinates in an array so that we can
     //  position them.
-    partitionedBlockElements.forEach(xmlChild => {
+    blockElements.forEach(xmlChild => {
       // Recursively check blocks for XML attributes that need to be manipulated.
       processBlockAndChildren(xmlChild);
 
@@ -89,8 +86,6 @@ export default function initializeBlocklyXml(blocklyWrapper) {
   };
 
   blocklyWrapper.Xml.blockSpaceToDom = blocklyWrapper.Xml.workspaceToDom;
-
-  blocklyWrapper.Xml.createBlockOrderMap = createBlockOrderMap;
 }
 /**
  * Gets the XML representation for a project, including its workspace and, if applicable, the hidden definition workspace.
@@ -421,78 +416,13 @@ function makeLockedBlockImmovable(block) {
 }
 
 /**
- * Partitions XML elements of the specified types to the front of the list.
- *
- * @param {Element[]} [blocks=[]] - An array of XML block elements to be partitioned.
- * @param {string[]} [prioritizedBlockTypes=[]] - An array of strings representing block types to move to the front.
- * @returns {Element[]} A new array of XML block elements partitioned based on their types.
- */
-export function partitionXmlBlocksByType(
-  blocks = [],
-  prioritizedBlockTypes = []
-) {
-  const prioritizedBlocks = [];
-  const remainingBlocks = [];
-
-  blocks.forEach(block => {
-    const blockType = block.getAttribute('type');
-    prioritizedBlockTypes.includes(blockType)
-      ? prioritizedBlocks.push(block)
-      : remainingBlocks.push(block);
-  });
-
-  return [...prioritizedBlocks, ...remainingBlocks];
-}
-
-/**
- * Creates a block order map for the given XML by partitioning the block
- * elements based on their types and mapping their partitioned positions to
- * their original positions in the XML. This is used to reset a list of
- * blocks into their original order before re-positioning blocks on the
- * rendered workspace.
- *
- * @param {Element} xml - The XML element containing block elements to create the order map.
- * @returns {Map} A map with partitioned block index as key and original index in the XML as value.
- */
-export function createBlockOrderMap(xml) {
-  // Convert XML to an array of block elements
-  const blockElements = Array.from(xml.childNodes).filter(
-    node => node.nodeName.toLowerCase() === 'block'
-  );
-  const partitionedBlockElements = getPartitionedBlockElements(
-    xml,
-    PROCEDURE_DEFINITION_TYPES
-  );
-  const blockOrderMap = new Map();
-  blockElements.forEach((element, index) => {
-    blockOrderMap.set(partitionedBlockElements.indexOf(element), index);
-  });
-  return blockOrderMap;
-}
-
-/**
  * Extracts block elements from the provided XML and returns them partitioned based on their types.
  * If no block elements are found in the XML, an empty array is returned.
  *
  * @param {Element} xml - The XML element containing block elements.
- * @param {string[]} prioritizedBlockTypes - An array of strings representing block types.
- *    These types are moved to the front of the list while maintaining the order of non-prioritized types.
- * @returns {Element[]} An array of partitioned block elements or an empty array if no blocks are present.
+ * @returns {Element[]} An array of block elements or an empty array if no blocks are present.
  */
-export function getPartitionedBlockElements(xml, prioritizedBlockTypes) {
+export function getBlockElements(xml) {
   // Convert XML to an array of block elements
-  const blockElements = Array.from(xml.querySelectorAll('xml > block'));
-
-  // Check if any block elements were found
-  if (blockElements.length === 0) {
-    return [];
-  }
-
-  // Procedure definitions should be loaded ahead of call
-  // blocks, so that the procedures map is updated correctly.
-  const partitionedBlockElements = partitionXmlBlocksByType(
-    blockElements,
-    prioritizedBlockTypes
-  );
-  return partitionedBlockElements;
+  return Array.from(xml.querySelectorAll('xml > block'));
 }

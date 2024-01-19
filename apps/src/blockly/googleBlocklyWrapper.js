@@ -25,7 +25,7 @@ import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRendererGeras from './addons/cdoRendererGeras';
-import {CdoRendererThrasos} from './addons/cdoRendererThrasos';
+import CdoRendererThrasos from './addons/cdoRendererThrasos';
 import CdoRendererZelos from './addons/cdoRendererZelos';
 import CdoTheme from './themes/cdoTheme';
 import CdoDarkTheme from './themes/cdoDark';
@@ -380,6 +380,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
     [Themes.TRITANOPIA]: CdoTritanopiaTheme,
     [Themes.TRITANOPIA_DARK]: CdoTritanopiaDarkTheme,
   };
+
+  // Assign all of the properties of the javascript generator to the forBlock array
+  // Prevents deprecation warnings related to https://github.com/google/blockly/pull/7150
+  Object.setPrototypeOf(javascriptGenerator.forBlock, javascriptGenerator);
+
   blocklyWrapper.JavaScript = javascriptGenerator;
   blocklyWrapper.navigationController = new NavigationController();
   // Initialize plugin.

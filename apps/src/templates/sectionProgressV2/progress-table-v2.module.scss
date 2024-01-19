@@ -12,6 +12,8 @@
   width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
 }
 
 .gridBox {
@@ -22,12 +24,6 @@
 
   &Student {
     padding-left: 12px;
-  }
-
-  &LessonHeader {
-    min-width: 80px;
-    max-width: 80px;
-    text-align: center;
   }
 }
 
@@ -59,25 +55,6 @@
   }
 }
 
-.header {
-  height: 76px;
-
-  &UnitSelector {
-    height: 32px;
-    margin-bottom: 12px;
-  }
-
-  &Columns {
-    display: flex;
-    flex-direction: row;
-    border-right: 1px solid $light_gray_200;
-    border-bottom: 1px solid $light_gray_200;
-    font-size: 14px;
-    height: 48px;
-    width:fit-content;
-  }
-}
-
 .sortDropdown {
   height: 76px;
   overflow-x: hidden;
@@ -88,19 +65,4 @@
   width: 195px;
   min-width: 195px;
   margin-right: 12px;
-}
-
-.data {
-  &Table {
-    display: flex;
-    flex-direction: row;
-    border-right: 1px solid $light_gray_200;
-    width: fit-content;
-  }
-
-  &Column {
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid $light_gray_200;
-  }
 }
