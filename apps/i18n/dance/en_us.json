@@ -2,7 +2,7 @@
   "clickToRunDanceParty": "Click to run Dance Party",
   "danceAiFeedbackAiBlockNoParameters": "⚠️ Choose three emojis for A.I. to generate the effect.",
   "danceAiFeedbackAiBlockInWorkspaceWithNoParameters": "⚠️ There is an `A.I. generate effect` block without emojis chosen. Choose three emojis for A.I. to generate the effect",
-  "danceAiFeedbackAiBlockNotConnectedSetup": "⚠️ Connect the `A.I. generate effect` block to the `setup` block.",
+  "danceAiFeedbackAiBlockNotConnectedSetup": "⚠️ Connect the `A.I. generate effect` block to the <code style=\"color:white; background-color:#FFBD46\">setup</code> block.",
   "danceAiFeedbackAiBlockNoParametersOnEvent": "⚠️ The effect didn't change after 2 measures. Choose three emojis for A.I. to generate the effect.",
   "danceAiFeedbackConnectPressUpArrowEvent": "⚠️ Press the up arrow ▲ button after pressing *\"Run\"*.",
   "danceAiFeedbackCustomize": "⚠️ You need to change the effect A.I. generates. You can either regenerate the effect, customize the code A.I. writes, or start over with new emojis.",
