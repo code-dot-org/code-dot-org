@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-import DropdownMenu, {DropdownMenuProps} from './index';
+import SimpleDropdown, {SimpleDropdownProps} from './index';
 import {Meta, Story} from '@storybook/react';
 
 export default {
-  title: 'DesignSystem/Dropdown Menu Component',
-  component: DropdownMenu,
+  title: 'DesignSystem/Simple Dropdown Component',
+  component: SimpleDropdown,
 } as Meta;
 
 //
@@ -12,10 +12,10 @@ export default {
 //
 // This is needed to fix children type error (passing string instead of React.ReactNode type)
 // eslint-disable-next-line
-const SingleTemplate: Story<DropdownMenuProps> = args => {
+const SingleTemplate: Story<SimpleDropdownProps> = args => {
   const [value, setValues] = useState('');
   return (
-    <DropdownMenu
+    <SimpleDropdown
       {...args}
       selectedValue={value || args.selectedValue}
       onChange={e => {
@@ -27,7 +27,7 @@ const SingleTemplate: Story<DropdownMenuProps> = args => {
 };
 
 const MultipleTemplate: Story<{
-  components: DropdownMenuProps[];
+  components: SimpleDropdownProps[];
 }> = args => {
   const [values, setValues] = useState({} as Record<string, string>);
 
@@ -37,12 +37,12 @@ const MultipleTemplate: Story<{
         * Margins on this screen does not represent Component's margins, and are
         only added to improve storybook view *
       </p>
-      <p>Multiple Dropdown:</p>
+      <p>Multiple Dropdowns:</p>
       <div style={{display: 'flex', gap: '20px'}}>
         {args.components?.map(componentArg =>
           componentArg.color === 'white' ? (
             <div style={{background: 'black', padding: 10}}>
-              <DropdownMenu
+              <SimpleDropdown
                 key={`${componentArg.name}`}
                 {...componentArg}
                 selectedValue={
@@ -58,7 +58,7 @@ const MultipleTemplate: Story<{
               />
             </div>
           ) : (
-            <DropdownMenu
+            <SimpleDropdown
               key={`${componentArg.name}`}
               {...componentArg}
               selectedValue={

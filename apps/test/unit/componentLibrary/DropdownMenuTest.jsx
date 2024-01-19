@@ -5,7 +5,7 @@ import sinon from 'sinon';
 
 import {expect} from '../../util/reconfiguredChai';
 
-import Dropdown from '@cdo/apps/componentLibrary/dropdownMenu';
+import Dropdown from 'apps/src/componentLibrary/simpleDropdown';
 
 let dropdownValue;
 let onDropdownChange = value => (dropdownValue = value);

@@ -2,30 +2,30 @@ import React from 'react';
 import classNames from 'classnames';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
-import moduleStyles from './dropdownMenu.module.scss';
+import moduleStyles from './simpleDropdown.module.scss';
 
-export interface DropdownMenuProps {
-  /** Dropdown Menu items list */
+export interface SimpleDropdownProps {
+  /** SimpleDropdown items list */
   items: {value: string; text: string}[];
-  /** Dropdown selected value */
+  /** SimpleDropdown selected value */
   selectedValue?: string;
-  /** Dropdown onChange handler */
+  /** SimpleDropdown onChange handler */
   onChange: (args: React.ChangeEvent<HTMLSelectElement>) => void;
-  /** Dropdown label text */
+  /** SimpleDropdown label text */
   labelText: string;
-  /** Is dropdown label visible or added via aria-label attribute */
+  /** Is SimpleDropdown label visible or added via aria-label attribute */
   isLabelVisible?: boolean;
-  /** Dropdown name */
+  /** SimpleDropdown name */
   name: string;
-  /** Dropdown id */
+  /** SimpleDropdown id */
   id?: string;
   /** Custom class name */
   className?: string;
-  /** Is dropdown disabled */
+  /** Is SimpleDropdown disabled */
   disabled?: boolean;
-  /** Dropdown color */
+  /** SimpleDropdown color */
   color?: 'white' | 'black';
-  /** Dropdown size */
+  /** SimpleDropdown size */
   size: ComponentSizeXSToL;
 }
 
@@ -34,16 +34,16 @@ export interface DropdownMenuProps {
  * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see apps/test/unit/componentLibrary/DropdownMenuTest.jsx)
+ * * (see apps/test/unit/componentLibrary/SimpleDropdownTest.jsx)
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready for dev```
  *
- * Design System: Dropdown Component.
- * Used to render simple dropdowns with styled select (Dropdown button)
+ * Design System: SimpleDropdown Component.
+ * Used to render simple SimpleDropdowns with styled select (SimpleDropdown button)
  * and browser's native select options.
  */
-const DropdownMenu: React.FunctionComponent<DropdownMenuProps> = ({
+const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
   items,
   selectedValue,
   onChange,
@@ -90,4 +90,4 @@ const DropdownMenu: React.FunctionComponent<DropdownMenuProps> = ({
   );
 };
 
-export default DropdownMenu;
+export default SimpleDropdown;
