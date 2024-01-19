@@ -2,9 +2,9 @@
  * TODO:
  * - sequence playback
  * - Effects
- * - Experiment with loops and skips
- * - Clean up playback event -> tone js events
- * - Rename interfaces
+ * - Experiment with loops and (x) skips
+ * - (x) Clean up playback event -> tone js events
+ * - (x) Rename interfaces
  */
 
 import {SoundLoadCallbacks} from '../types';
@@ -12,8 +12,8 @@ import SoundCache from './SoundCache';
 
 const DEFAULT_BPM = 120;
 
-export interface Sound {
-  sampleId: string;
+export interface SampleEvent {
+  id: string;
   transportTime: string;
   originalBpm: number;
   pitchShift: number;
@@ -43,6 +43,10 @@ class ToneJSPlayer {
     return Tone.Transport.position;
   }
 
+  goToPosition(position: string) {
+    Tone.Transport.position = position;
+  }
+
   async loadSounds(sampleIds: string[], callbacks?: SoundLoadCallbacks) {
     return this.soundCache.loadSounds(sampleIds, callbacks);
   }
@@ -65,12 +69,12 @@ class ToneJSPlayer {
     this.samplers[instrumentName] = sampler;
   }
 
-  async playSoundImmediately(sound: Sound, onStop?: () => void) {
+  async playSampleImmediately(sound: SampleEvent, onStop?: () => void) {
     if (this.currentPreview) {
       this.currentPreview.player.stop();
     }
 
-    const buffer = await this.soundCache.loadSound(sound.sampleId);
+    const buffer = await this.soundCache.loadSound(sound.id);
     if (!buffer) {
       console.log('not in cache');
       return;
@@ -84,10 +88,10 @@ class ToneJSPlayer {
     }).toDestination();
 
     player.onstop = () => {
-      console.log('stopping ' + sound.sampleId);
+      console.log('stopping ' + sound.id);
       player.dispose();
 
-      if (this.currentPreview?.id === sound.sampleId) {
+      if (this.currentPreview?.id === sound.id) {
         this.currentPreview = null;
       }
 
@@ -98,7 +102,7 @@ class ToneJSPlayer {
     player.playbackRate = playbackRate;
     player.start();
 
-    this.currentPreview = {id: sound.sampleId, player};
+    this.currentPreview = {id: sound.id, player};
   }
 
   playSequenceImmediately(sequence: SamplerSequence) {
@@ -122,23 +126,23 @@ class ToneJSPlayer {
     Tone.Transport.bpm.value = bpm;
   }
 
-  scheduleSound(sound: Sound) {
-    const buffer = this.soundCache.getSound(sound.sampleId);
+  scheduleSample(sample: SampleEvent) {
+    const buffer = this.soundCache.getSound(sample.id);
     if (!buffer) {
       console.log('not in cache');
       return;
     }
 
-    const playbackRate = Tone.Transport.bpm.value / sound.originalBpm;
+    const playbackRate = Tone.Transport.bpm.value / sample.originalBpm;
 
     const player = new Tone.GrainPlayer({
       url: buffer,
       grainSize: playbackRate * 0.1,
     }).toDestination();
 
-    player.detune = sound.pitchShift * 100;
+    player.detune = sample.pitchShift * 100;
     player.playbackRate = playbackRate;
-    player.sync().start(sound.transportTime);
+    player.sync().start(sample.transportTime);
 
     this.activePlayers.push(player);
   }
