@@ -16,12 +16,12 @@ export default function IconKey({isViewingLevelProgress, hasLevelValidation}) {
   // TO-DO (TEACH-801): Fix spacing between boxes once width of the page is expanded
   const sectionContent = () => (
     <div style={{display: 'flex'}}>
-      <LevelTypesBox />
-      <TeacherActionsBox isViewingLevelProgress={true} />
       <AssignmentCompletionStatesBox
         isViewingLevelProgress={isViewingLevelProgress}
         hasValidatedLevels={hasLevelValidation}
       />
+      <TeacherActionsBox isViewingLevelProgress={true} />
+      <LevelTypesBox />
     </div>
   );
 

@@ -2,8 +2,7 @@
 
 .legend {
   align-items: flex-start;
-  border: 1px solid;
-  border-color: var(--lightgray-200);
+  border: 1px solid $light_gray_200;
   border-radius: 4px;
   display: inline-flex;
   flex-direction: column;
@@ -13,7 +12,7 @@
 .legend .headerContainer {
   width: 100%;
   padding: 8px 16px;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid $light_gray_200;
   box-sizing: border-box;
 }
 
@@ -49,11 +48,6 @@
   width: 20px;
   height: 20px;
   font-size: 16px;
-
-  &:before {
-    left: 13%;
-    position: relative;
-  }
 }
 
 .legend .fa.fa-rotate-left {
