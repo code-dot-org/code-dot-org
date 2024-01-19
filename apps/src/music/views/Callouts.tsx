@@ -23,33 +23,39 @@ const availableCallouts: {
  */
 const Callouts: React.FunctionComponent = () => {
   const callout = useSelector(
-    (state: {music: MusicState}) => state.music.showCallout
+    (state: {music: MusicState}) => state.music.currentCallout
   );
 
-  if (callout.id) {
-    const availableCallout = availableCallouts[callout.id];
-    const element = document.querySelector(availableCallout.selector);
-    if (element) {
-      const elementRect = element.getBoundingClientRect();
-      const elementWidth = elementRect.right - elementRect.left + 1;
-      const elementLeft = elementRect.left + elementWidth / 2;
-      const elementTop = elementRect.bottom + 4;
-      return (
-        <div
-          id="callout"
-          key={callout.id + '-' + callout.index}
-          style={{left: elementLeft, top: elementTop}}
-          className={moduleStyles.callout}
-        >
-          <div id="callout-arrow" className={moduleStyles.arrow}>
-            <FontAwesome icon={'arrow-up'} />
-          </div>
-        </div>
-      );
-    }
+  if (!callout.id) {
+    return null;
   }
 
-  return null;
+  const availableCallout = availableCallouts[callout.id];
+  if (!availableCallout) {
+    return null;
+  }
+  const element = document.querySelector(availableCallout.selector);
+  if (!element) {
+    return null;
+  }
+
+  const elementRect = element.getBoundingClientRect();
+  const elementWidth = elementRect.right - elementRect.left + 1;
+  const elementLeft = elementRect.left + elementWidth / 2;
+  const elementTop = elementRect.bottom + 4;
+
+  return (
+    <div
+      id="callout"
+      key={callout.index}
+      style={{left: elementLeft, top: elementTop}}
+      className={moduleStyles.callout}
+    >
+      <div id="callout-arrow" className={moduleStyles.arrow}>
+        <FontAwesome icon={'arrow-up'} />
+      </div>
+    </div>
+  );
 };
 
 export default Callouts;

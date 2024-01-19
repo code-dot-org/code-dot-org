@@ -34,7 +34,7 @@ import {
   getCurrentlyPlayingBlockIds,
   setSoundLoadingProgress,
   setUndoStatus,
-  setShowCallout,
+  showCallout,
 } from '../redux/musicRedux';
 import KeyHandler from './KeyHandler';
 import Callouts from './Callouts';
@@ -106,7 +106,7 @@ class UnconnectedMusicView extends React.Component {
     updateLoadProgress: PropTypes.func,
     appName: PropTypes.string,
     setUndoStatus: PropTypes.func,
-    setShowCallout: PropTypes.func,
+    showCallout: PropTypes.func,
   };
 
   constructor(props) {
@@ -600,7 +600,7 @@ class UnconnectedMusicView extends React.Component {
             baseUrl={baseAssetUrl}
             vertical={position !== InstructionsPositions.TOP}
             right={position === InstructionsPositions.RIGHT}
-            showCallout={id => this.props.setShowCallout(id)}
+            showCallout={id => this.props.showCallout(id)}
           />
         </PanelContainer>
       </div>
@@ -756,7 +756,7 @@ const MusicView = connect(
     setPageError: pageError => dispatch(setPageError(pageError)),
     updateLoadProgress: value => dispatch(setSoundLoadingProgress(value)),
     setUndoStatus: value => dispatch(setUndoStatus(value)),
-    setShowCallout: id => dispatch(setShowCallout(id)),
+    showCallout: id => dispatch(showCallout(id)),
   })
 )(UnconnectedMusicView);
 
