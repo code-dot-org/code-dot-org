@@ -5,7 +5,7 @@ import sinon from 'sinon';
 
 import {expect} from '../../util/reconfiguredChai';
 
-import Dropdown from 'apps/src/componentLibrary/simpleDropdown';
+import SimpleDropdown from '@cdo/apps/componentLibrary/simpleDropdown';
 
 let dropdownValue;
 let onDropdownChange = value => (dropdownValue = value);
@@ -15,9 +15,9 @@ describe('Design System - Dropdown Select Component', () => {
     onDropdownChange('');
   });
 
-  it('Dropdown Select - renders with correct text and options', () => {
+  it('SimpleDropdown - renders with correct text and options', () => {
     render(
-      <Dropdown
+      <SimpleDropdown
         name="test1-dropdown"
         items={[
           {value: 'option-1', text: 'option1'},
@@ -41,7 +41,7 @@ describe('Design System - Dropdown Select Component', () => {
     expect(option3).to.exist;
   });
 
-  it('Dropdown Select - renders with correct text and options, changes selected value on when one is selected', async () => {
+  it('SimpleDropdown - renders with correct text and options, changes selected value on when one is selected', async () => {
     const user = userEvent.setup();
     const spyOnChange = sinon.spy();
     const onChange = e => {
@@ -49,7 +49,7 @@ describe('Design System - Dropdown Select Component', () => {
       spyOnChange(e.target.value);
     };
     const DropdownToRender = () => (
-      <Dropdown
+      <SimpleDropdown
         name="test2-dropdown"
         items={[
           {value: 'option-1', text: 'option1'},
@@ -92,7 +92,7 @@ describe('Design System - Dropdown Select Component', () => {
     expect(dropdownValue).to.equal('option-2');
   });
 
-  it("Dropdown Select - renders disabled dropdown, doesn't change on click", async () => {
+  it("SimpleDropdown - renders disabled dropdown, doesn't change on click", async () => {
     const user = userEvent.setup();
     const spyOnChange = sinon.spy();
     const onChange = e => {
@@ -101,7 +101,7 @@ describe('Design System - Dropdown Select Component', () => {
     };
 
     const DropdownToRender = () => (
-      <Dropdown
+      <SimpleDropdown
         name="test2-dropdown"
         disabled={true}
         items={[
