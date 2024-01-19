@@ -429,6 +429,122 @@ td {
   }
 }
 
+/* Top navigation styles ------------------------ */
+nav.main {
+  background-color: #00adbc;
+  margin: 0;
+  padding: 0.25rem 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+nav .left,
+nav .right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav .left {
+  gap: 3rem;
+}
+
+nav .right {
+  gap: 0.5rem;
+  justify-content: end;
+}
+
+nav.main ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: start;
+  gap: 2rem;
+}
+
+nav.main ul li {
+  padding: 0;
+  text-indent: 0;
+  list-style: none;
+  color: var(--neutral_white);
+}
+
+nav.main ul li::before {
+  content: "";
+}
+
+nav.main ul li a {
+  color: var(--neutral_white);
+  text-decoration: none;
+  font-weight: var(--regular-font-weight);
+}
+
+nav.main img.logo {
+  width: 42px;
+}
+
+nav.main i.fa-fw {
+  line-height: 1;
+}
+
+nav.main .create_menu {
+  border: 2px solid;
+  margin: 0;
+  display: flex;
+  gap: 2px;
+}
+
+nav.main .create_menu i {
+  font-size: 1.5rem;
+  width: auto;
+}
+
+nav.main .create_menu i.create_menu_arrow_down {
+  margin-top: -3px;
+}
+
+nav.main .create_menu i.create_menu_arrow_up {
+  margin-top: -1px;
+}
+
+nav.main .button-signin {
+  font-size: 0.875rem;
+  padding: 7px 12px;
+  margin: 0;
+  border: 2px solid var(--neutral_white);
+  border-radius: 4px;
+  color: var(--neutral_white);
+  font-weight: var(--regular-font-weight);
+  text-decoration: none;
+}
+
+nav.main .help_button {
+  all: unset;
+}
+
+nav.main .help_button .help_icon {
+  padding: 0;
+  height: unset;
+}
+
+nav.main .help_button .help_contents {
+  right: 1rem;
+}
+
+nav.main #hamburger #hamburger-icon {
+  margin-top: -1px;
+}
+
+@media screen and (max-width: 1010px) {
+  .hide_on_tablet {
+    display: none;
+  }
+}
+
 /* Start carousel styles ------------------------ */
 .carousel-wrapper {
   position: relative;
