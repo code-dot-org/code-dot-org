@@ -5,17 +5,15 @@ import moduleStyles from './callouts.module.scss';
 const FontAwesome = require('../../templates/FontAwesome');
 
 const availableCallouts: {
-  [key: string]: {selector: string; arrowAngle: number};
+  [key: string]: {selector: string};
 } = {
   'play-sound-block': {
     selector: ".blocklyFlyout g[data-id='play-sound-block']",
-    arrowAngle: 0,
   },
   'when-run-block': {
     selector: "g[data-id='when-run-block'] > path",
-    arrowAngle: 0,
   },
-  'run-button': {selector: '#run-button', arrowAngle: 180},
+  'run-button': {selector: '#run-button'},
 };
 
 /**
