@@ -59,6 +59,15 @@ class Policies::Lti
     nil
   end
 
+  # Converts the `issuer` or `iss` LTI value to a string we would show to
+  # users of Code.org
+  # Example: 'https://schoology.schoology.com' -> 'Schoology'
+  def self.issuer_name(issuer)
+    return 'Canvas' if /canvas/.match?(issuer)
+    return 'Schoology' if /schoology/.match?(issuer)
+    I18n.t(:lti_v1, scope: [:section, :type])
+  end
+
   # Returns the email provided by the LMS when creating the User through LTI
   # provisioning.
   def self.lti_provided_email(user)
