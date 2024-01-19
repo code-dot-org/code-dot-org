@@ -227,6 +227,12 @@ class UnconnectedMusicView extends React.Component {
     ) {
       this.onLevelLoad(this.props.levelData, this.props.initialSources);
     }
+
+    if (
+      prevProps.startingPlayheadPosition !== this.props.startingPlayheadPosition
+    ) {
+      this.player.jumpToPosition(this.props.startingPlayheadPosition);
+    }
   }
 
   async onLevelLoad(levelData, initialSources) {

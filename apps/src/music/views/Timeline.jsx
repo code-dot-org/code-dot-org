@@ -74,9 +74,9 @@ const Timeline = () => {
   const onMeasuresBackgroundClick = useCallback(
     event => {
       // Ignore if playing
-      if (isPlaying) {
-        return;
-      }
+      // if (isPlaying) {
+      //   return;
+      // }
       const offset =
         event.clientX - event.target.getBoundingClientRect().x - paddingOffset;
       const exactMeasure = offset / barWidth + 1;
@@ -84,7 +84,7 @@ const Timeline = () => {
       const roundedMeasure = Math.round(exactMeasure * 4) / 4;
       dispatch(setStartPlayheadPosition(roundedMeasure));
     },
-    [dispatch, isPlaying]
+    [dispatch]
   );
 
   const onMeasureNumberClick = useCallback(
