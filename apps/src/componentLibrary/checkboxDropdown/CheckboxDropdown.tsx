@@ -3,30 +3,28 @@ import classNames from 'classnames';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import moduleStyles from './checkboxDropdown.module.scss';
+import style from '@cdo/apps/templates/checkbox-dropdown.module.scss';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import i18n from '@cdo/locale';
+import Typography from '@cdo/apps/componentLibrary/typography';
+import Checkbox from '@cdo/apps/componentLibrary/checkbox';
+import Button from '@cdo/apps/templates/Button';
 
 export interface CheckboxDropdownProps {
-  /** Dropdown  Menu items list */
-  items: {value: string; label: string}[];
-  /** Dropdown selected value */
-  selectedValue?: string;
-  /** Dropdown onChange handler */
-  onChange: (args: React.ChangeEvent<HTMLSelectElement>) => void;
-  /** Dropdown label text */
-  labelText: string;
-  /** Is dropdown label visible or added via aria-label attribute */
-  isLabelVisible?: boolean;
-  /** Dropdown name */
+  /** CheckboxDropdown name */
   name: string;
-  /** Dropdown id */
-  id?: string;
-  /** Custom class name */
-  className?: string;
-  /** Is dropdown disabled */
-  disabled?: boolean;
-  /** Dropdown color */
-  color?: 'white' | 'black';
-  /** Dropdown size */
-  size: ComponentSizeXSToL;
+  /** CheckboxDropdown label */
+  label: string;
+  /** CheckboxDropdown options */
+  allOptions: string[];
+  /** CheckboxDropdown checked options */
+  checkedOptions: string[];
+  /** CheckboxDropdown onChange handler */
+  onChange: (args: React.ChangeEvent<HTMLInputElement>) => void;
+  /** CheckboxDropdown onSelectAll handler */
+  handleSelectAll: (args: React.ChangeEvent<HTMLInputElement>) => void;
+  /** CheckboxDropdown onClearAll handler */
+  handleClearAll: (args: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 /**
@@ -43,49 +41,74 @@ export interface CheckboxDropdownProps {
  * Used to render checkbox (multiple choice) dropdowns.
  */
 const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
-  items,
-  selectedValue,
-  onChange,
   name,
-  id,
-  className,
-  labelText,
-  isLabelVisible = true,
-  disabled = false,
-  color = 'black',
-  size = 'm',
+  label,
+  allOptions,
+  checkedOptions = [],
+  onChange,
+  handleSelectAll,
+  handleClearAll,
 }) => {
   return (
-    <label
-      className={classNames(
-        moduleStyles.dropdownContainer,
-        moduleStyles[`dropdownContainer-${size}`],
-        moduleStyles[`dropdownContainer-${color}`],
-        className
-      )}
-    >
-      {isLabelVisible && (
-        <span className={moduleStyles.dropdownLabel}>{labelText}</span>
-      )}
-
-      <div className={moduleStyles.dropdownArrowDiv}>
-        <select
-          name={name}
-          aria-label={isLabelVisible ? undefined : labelText}
-          onChange={onChange}
-          value={selectedValue}
-          id={id}
-          className={moduleStyles.dropdown}
-          disabled={disabled}
-        >
-          {items.map(({value, label}) => (
-            <option value={value} key={value}>
-              {label}
-            </option>
+    <div id={`${name}-dropdown`} className="dropdown" onKeyDown={onKeyDown}>
+      <button
+        id={`${name}-dropdown-button`}
+        type="button"
+        className={classnames('selectbox', style.dropdownButton)}
+        data-toggle="dropdown"
+        aria-haspopup={true}
+        aria-label={`${name} filter dropdown`}
+      >
+        {checkedOptions.length > 0 && (
+          <FontAwesome
+            id={'check-icon'}
+            icon="check-circle"
+            title={i18n.filterCheckIconTitle({filter_label: label})}
+          />
+        )}
+        <Typography semanticTag="span" visualAppearance="body-two">
+          {label}
+        </Typography>
+        <FontAwesome id={'chevron-down-icon'} icon={'chevron-down'} />
+      </button>
+      <form
+        className={classnames('dropdown-menu', style.dropDownMenuContainer)}
+      >
+        <ul className={style.dropdownCheckboxUL}>
+          {Object.keys(allOptions).map(optionKey => (
+            <li key={optionKey} className="checkbox form-group">
+              <Checkbox
+                checked={checkedOptions.includes(optionKey)}
+                onChange={onChange}
+                name={optionKey}
+                value={optionKey}
+                label={allOptions[optionKey]}
+              />
+            </li>
           ))}
-        </select>
-      </div>
-    </label>
+        </ul>
+        <div className={style.bottomButtonsContainer}>
+          <Button
+            id="select-all"
+            className={style.affectAllButton}
+            type="button"
+            text={i18n.selectAll()}
+            onClick={onSelectAll}
+            styleAsText
+            color={Button.ButtonColor.brandSecondaryDefault}
+          />
+          <Button
+            id="clear-all"
+            className={style.affectAllButton}
+            type="button"
+            text={i18n.clearAll()}
+            onClick={onClearAll}
+            styleAsText
+            color={Button.ButtonColor.brandSecondaryDefault}
+          />
+        </div>
+      </form>
+    </div>
   );
 };
 
