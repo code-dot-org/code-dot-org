@@ -53,12 +53,12 @@ class ScrollButtons extends React.Component {
     return scrollButtonsHeight + this.getMargin() * 2;
   }
 
-  scrollStartUp = () => {
-    this.scrollStart(DIRECTIONS.UP);
+  continuousScrollStartUp = () => {
+    this.continuousScrollStart(DIRECTIONS.UP);
   };
 
-  scrollStartDown = () => {
-    this.scrollStart(DIRECTIONS.DOWN);
+  continuousScrollStartDown = () => {
+    this.continuousScrollStart(DIRECTIONS.DOWN);
   };
 
   singleScrollUp = () => {
@@ -79,7 +79,7 @@ class ScrollButtons extends React.Component {
     scrollBy(contentContainer, initialScroll);
   }
 
-  scrollStart(dir) {
+  continuousScrollStart(dir) {
     // If mouse is held down for half a second, begin gradual continuous
     // scroll
     const contentContainer = this.props.getScrollTarget();
@@ -156,7 +156,7 @@ class ScrollButtons extends React.Component {
           this.scrollUp = c;
         }}
         key="scrollUp"
-        onMouseDown={this.scrollStartUp}
+        onMouseDown={this.continuousScrollStartUp}
         style={[styles.all, upStyle, minecraftButton]}
       >
         <img src="/blockly/media/1x1.gif" className="scroll-up-btn" alt="" />
@@ -169,7 +169,7 @@ class ScrollButtons extends React.Component {
         }}
         key="scrollUp"
         onClick={this.singleScrollUp}
-        onMouseDown={this.scrollStartUp}
+        onMouseDown={this.continuousScrollStartUp}
         className={classNames(
           moduleStyles.all,
           moduleStyles.arrowGlyph,
@@ -193,7 +193,7 @@ class ScrollButtons extends React.Component {
           this.scrollDown = c;
         }}
         key="scrollDown"
-        onMouseDown={this.scrollStartDown}
+        onMouseDown={this.continuousScrollStartDown}
         style={[styles.all, downStyle, minecraftButton]}
       >
         <img src="/blockly/media/1x1.gif" className="scroll-down-btn" alt="" />
@@ -214,7 +214,7 @@ class ScrollButtons extends React.Component {
         )}
         key="scrollDown"
         onClick={this.singleScrollDown}
-        onMouseDown={this.scrollStartDown}
+        onMouseDown={this.continuousScrollStartDown}
       >
         <FontAwesome
           icon="caret-down"
