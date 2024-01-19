@@ -22,6 +22,14 @@
   transform: translateX(-50%);
 }
 
+.down {
+  @include remove-button-styles;
+  opacity: 0;
+  bottom: 10px;
+  right: 25px;
+  transform: translateX(50%);
+}
+
 .visible {
   opacity: 1;
 };
@@ -29,4 +37,8 @@
 // move within center?
 .upCenter {
   left: 50%;
+};
+
+.downCenter {
+  right: 50%;
 };
