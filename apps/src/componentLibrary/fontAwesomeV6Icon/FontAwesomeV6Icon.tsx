@@ -26,7 +26,7 @@ export interface FontAwesomeV6IconProps {
  * ### Production-ready Checklist:
  * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
- * * (?) has tests: test every prop, every state and every interaction that's js related;
+ * * (✔) has tests: test every prop, every state and every interaction that's js related;
  * * (see apps/test/unit/componentLibrary/FontAwesomeV6IconTest.jsx)
  * * (?) passes accessibility checks;
  *
@@ -34,7 +34,8 @@ export interface FontAwesomeV6IconProps {
  *
  * Design System: FontAwesomeV6Icon Component.
  * Simple shortcut for FontAwesomeV6 icons. Requires FontAwesomeV6 to be installed.
- * Not a part of Design System in Figma initially, though can be used in any component.
+ * Not a part of Design System in Figma initially, but is used in some of Design System components.
+ * Can can be used in any component in/out of the scope of Design System.
  */
 const FontAwesomeV6Icon: React.FunctionComponent<FontAwesomeV6IconProps> = ({
   iconStyle,
