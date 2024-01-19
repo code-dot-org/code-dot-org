@@ -550,6 +550,20 @@ form {
       width: 100%;
     }
   }
+
+  // The following styles are used in the AFE form which is hosted on Pegasus
+  // but built in our apps directory
+  .form-group {
+    margin: 0;
+
+    input[type="text"], select {
+      margin: 0;
+    }
+  }
+
+  select#professionalRoleSelect {
+    margin: 0;
+  }
 }
 
 // Action blocks wrappers
@@ -849,10 +863,6 @@ form {
   // animation between slides on desktop, but keeps the content
   .slides.rtl {
     inset: 0 !important;
-  }
-
-  p {
-    font-family: var(--barlowSemiCondensed-medium), sans-serif;
   }
 
   .pagination {

@@ -3,34 +3,7 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "ai-2020": {
-            "buttonText": "Me ako tonu"
-          },
-          "ai-launch-2023": {
-            "buttonText": "Me ako tonu"
-          },
-          "ai-pl-launch-2023": {
-            "buttonText": "Me ako tonu"
-          },
-          "back-to-school-2021": {
-            "buttonText": "Me ako tonu"
-          },
-          "codebytes-2020": {
-            "buttonText": "Me ako tonu"
-          },
-          "coldplay": {
-            "buttonText": "Whakamātauria"
-          },
-          "congrats-certificate-share": {
-            "buttonText": "Tīmata"
-          },
-          "csjourneys": {
-            "buttonText": "Me ako tonu"
-          },
-          "csjourneys-22": {
-            "buttonText": "Me ako tonu"
-          },
-          "csleadersprize": {
+          "co-teacher": {
             "buttonText": "Me ako tonu"
           },
           "hoc-2023": {
@@ -41,15 +14,6 @@
           },
           "superhero": {
             "buttonText": "Ako Tonu"
-          },
-          "teacher-apps-closing-2021": {
-            "buttonText": "Whakapiri mai"
-          },
-          "teacher-apps-open-2021": {
-            "buttonText": "Whakapiri mai"
-          },
-          "teacher-apps-stillon-2020": {
-            "buttonText": "Whakapiri mai"
           }
         }
       }

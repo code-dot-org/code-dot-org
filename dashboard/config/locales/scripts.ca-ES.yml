@@ -255,6 +255,7 @@ ca:
             d'Angry Birds i Plantes vs Zombies!
           description_short: Prova els conceptes bàsics de la informàtica amb personatges
             divertits!
+          name: L'hora del codi
           student_description: Proveu els conceptes bàsics de la informàtica amb personatges
             d'Angry Birds i Plantes vs Zombies!
           title: Hora de codi 2013
@@ -2327,6 +2328,21 @@ ca:
             lesson-9:
               name: Estil de programació i retroalimentació
           title: Programació Orientada a Objectes
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Enquesta
+            lessonGroup-3:
+              display_name: Contingut
+            lessonGroup-4:
+              display_name: Mostra el que saps
+            lessonGroup-5:
+              display_name: Lliçons alternatives
+            lessonGroup-6:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-7:
+              display_name: Caixes de sorra
+          title: Programació Orientada a Objectes
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2448,6 +2464,19 @@ ca:
               name: Mètodes del mutador
             lesson-9:
               name: Impressió d'objectes
+          title: Estructura i disseny de classes
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-4:
+              display_name: Lliçons alternatives
+            lessonGroup-5:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-6:
+              display_name: Caixes de sorra
           title: Estructura i disseny de classes
         csa2-exemplars:
           lesson_groups:
@@ -2579,6 +2608,19 @@ ca:
             lesson-9:
               name: Trobar duplicats
           title: Matrius i algoritmes
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-4:
+              display_name: Lliçons alternatives
+            lessonGroup-5:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-6:
+              display_name: Caixes de sorra
+          title: Matrius i algoritmes
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2694,6 +2736,19 @@ ca:
               name: Fosa i arrodoniment
             lesson-9:
               name: Aleatori
+          title: Condicions i lògica
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-4:
+              display_name: Lliçons alternatives
+            lessonGroup-5:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-6:
+              display_name: Caixes de sorra
           title: Condicions i lògica
         csa4-exemplars:
           lesson_groups:
@@ -2827,6 +2882,19 @@ ca:
             lesson-9:
               name: Impactes dels programes
           title: Matrius bidimensionals
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-4:
+              display_name: Lliçons alternatives
+            lessonGroup-5:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-6:
+              display_name: Caixes de sorra
+          title: Matrius bidimensionals
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2933,6 +3001,19 @@ ca:
               name: Eliminació d'elements
             lesson-9:
               name: Algorismes ArrayList i String
+          title: ArrayLists i Mètodes de cadena
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-4:
+              display_name: Lliçons alternatives
+            lessonGroup-5:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-6:
+              display_name: Caixes de sorra
           title: ArrayLists i Mètodes de cadena
         csa6-exemplars:
           lesson_groups:
@@ -3053,6 +3134,19 @@ ca:
               name: Desenvolupament de projectes
             lesson-9:
               name: Fiabilitat del sistema
+          title: Mètode de descomposició i recursivitat
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-4:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-5:
+              display_name: Lliçons alternatives
+            lessonGroup-6:
+              display_name: Caixes de sorra
           title: Mètode de descomposició i recursivitat
         csa7-exemplars:
           lesson_groups:
@@ -3186,6 +3280,19 @@ ca:
             lesson-9:
               name: Privacitat i Seguretat
           title: Cercar i ordenar
+        csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-4:
+              display_name: Enquesta
+            lessonGroup-5:
+              display_name: Lliçons alternatives
+            lessonGroup-6:
+              display_name: Caixes de sorra
+          title: Cercar i ordenar
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -3292,6 +3399,28 @@ ca:
           lessons:
             lesson-2:
               name: Projecte Art Asfalt — Dia 2
+          student_description: Aquesta unitat us prepara per a l'examen AP CSA mitjançant
+            la revisió dels conceptes clau, la pràctica de preguntes d'elecció múltiple
+            i de resposta lliure, i l'enfortiment de les estratègies de presa de proves.
+            Identifiques fortaleses i àrees de millora per crear plans d'estudi individualitzats
+            per enfocar la pràctica i autoavaluar el teu progrés.
+        csa9-2024:
+          description: Aquesta unitat prepara els estudiants per a l'examen d'AP CSA
+            mitjançant la revisió dels conceptes clau, la pràctica de preguntes d'elecció
+            múltiple i de resposta lliure, i l'enfortiment de les estratègies de presa
+            de proves. Els estudiants identifiquen fortaleses i àrees de millora per
+            crear plans d'estudi individualitzats per centrar la seva pràctica i autoavaluar
+            el seu progrés.
+          description_short: Els estudiants es preparen per l'examen AP CSA mitjançant
+            la pràctica d'estratègies per a les preguntes d'elecció múltiple i de
+            resposta lliure.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Revisió i pràctica
+            lessonGroup-3:
+              display_name: Exàmens simulacre
+            lessonGroup-4:
+              display_name: Caixes de sorra
           student_description: Aquesta unitat us prepara per a l'examen AP CSA mitjançant
             la revisió dels conceptes clau, la pràctica de preguntes d'elecció múltiple
             i de resposta lliure, i l'enfortiment de les estratègies de presa de proves.
@@ -6149,6 +6278,12 @@ ca:
             Principis CS. El vostre professor us indicarà quan és el moment de fer
             aquesta enquesta.
           title: CS Principis Enquesta post-curs
+        csp-post-survey-2024:
+          description: Aquesta unitat conté el CS Principis Post-Curs Enquesta.
+          student_description: Aquesta unitat conté una enquesta sobre el Curs de
+            Principis CS. El vostre professor us indicarà quan és el moment de fer
+            aquesta enquesta.
+          title: CS Principis Enquesta post-curs
         csp-pre-survey:
           title: CS Principis Pre-Enquesta
         csp1-2017:
@@ -6277,6 +6412,20 @@ ca:
             socials més amplis de la digitalització de la informació del món.
           title: Informació Digital ('22-'23)
         csp1-2023:
+          description_short: Explora els reptes i impactes de representar informació
+            sobre el món que t'envolta en bits.
+          lesson_groups:
+            cspSurvey:
+              display_name: Enquesta
+            csp_unit1_2020:
+              display_name: 'Tema 1: Informació digital'
+          student_description: Aquesta unitat explora els reptes i preguntes tècniques
+            que sorgeixen de la necessitat de representar la informació digital en
+            els ordinadors. Obteniu informació complexa com els números, el text,
+            les imatges i el so en el text, com funciona la compressió i els impactes
+            socials més amplis de la digitalització de la informació del món.
+          title: Informació Digital ('23-'24)
+        csp1-2024:
           description_short: Explora els reptes i impactes de representar informació
             sobre el món que t'envolta en bits.
           lesson_groups:
@@ -6459,6 +6608,20 @@ ca:
             algorítmica a través d'una varietat d'activitats pràctiques i aprendre
             com s'està aplicant en la informàtica moderna.
           title: Algorismes ('23-'24)
+        csp10-2024:
+          description_short: Dissenyar i analitzar algoritmes per entendre com funcionen
+            i per què alguns es consideren millors que altres.
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Unitat 10: Algortihms'
+            lessonGroup-2:
+              display_name: Enquesta post-curs
+          student_description: Aquesta unitat és una exploració ràpida de com els
+            informàtics dissenyen algoritmes per resoldre problemes i com analitzen
+            la velocitat dels diferents algoritmes. Aprendre sobre el concepte d'eficiència
+            algorítmica a través d'una varietat d'activitats pràctiques i aprendre
+            com s'està aplicant en la informàtica moderna.
+          title: Algorismes ('23-'24)
         csp10-pilot:
           title: Ciberseguretat i Impactes Globals
         csp10-pilot-staging:
@@ -6612,6 +6775,18 @@ ca:
             impactes que Internet ha tingut, tant bons com dolents, en la vida moderna.
           title: Internet ('22-'23)
         csp2-2023:
+          description_short: Construir Internet des de la base utilitzant el Simulador
+            d'Internet.
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Tema 2: Internet'
+          student_description: Aquesta unitat revela com Internet va ser dissenyat
+            per connectar milers de milions de dispositius i persones entre si. Apreneu
+            com funcionen els diferents protocols d'Internet i construïu-los vosaltres
+            mateixos mitjançant Internet Simulator. A continuació, considereu els
+            impactes que Internet ha tingut, tant bons com dolents, en la vida moderna.
+          title: Internet ('23-'24)
+        csp2-2024:
           description_short: Construir Internet des de la base utilitzant el Simulador
             d'Internet.
           lesson_groups:
@@ -6837,6 +7012,20 @@ ca:
             de classe sobre un tema que trieu.
           title: Introducció al disseny d'aplicacions ('22-'23)
         csp3-2023:
+          description_short: Dissenya la teva primera app i aprèn com els programadors
+            col·laboren i interactuen amb els usuaris per construir les millors solucions
+            possibles als problemes.
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Unitat 3: Introducció al disseny d''aplicacions'
+          student_description: Aquesta unitat és una introducció a la programació
+            i al disseny d'aplicacions amb un gran enfocament en habilitats importants
+            com la depuració, la programació de parells i les proves d'usuaris. Apreneu
+            a dissenyar interfícies d'usuari i escriure programes impulsats per esdeveniments
+            en App Lab i després dissenyeu un projecte que ensenyi als vostres companys
+            de classe sobre un tema que trieu.
+          title: Introducció al disseny d'aplicacions ('23-'24)
+        csp3-2024:
           description_short: Dissenya la teva primera app i aprèn com els programadors
             col·laboren i interactuen amb els usuaris per construir les millors solucions
             possibles als problemes.
@@ -7161,6 +7350,25 @@ ca:
             de decisions per compartir-la amb els amics i ajudar-los a prendre una
             decisió.
           title: Variables, condicionals i funcions ('23-'24)
+        csp4-2024:
+          description_short: Apreneu a construir aplicacions que emmagatzemin informació,
+            prenguin decisions i mantinguin el codi organitzat.
+          lesson_groups:
+            csp_conditionals:
+              display_name: Condicionals
+            csp_functions:
+              display_name: Funcions
+            csp_project:
+              display_name: Projecte
+            csp_variables:
+              display_name: Variables
+          student_description: Aquesta unitat explora com variables, condicionals
+            i funcions permeten dissenyar aplicacions cada vegada més complexes. Aprèn
+            a programar amb aquests tres nous conceptes a través d'una seqüència d'activitats
+            col·laboratives. A continuació, creeu la vostra pròpia aplicació de presa
+            de decisions per compartir-la amb els amics i ajudar-los a prendre una
+            decisió.
+          title: Variables, condicionals i funcions ('23-'24)
         csp4-dlp:
           description: 'Aquesta és la unitat 4 del Pla d''aprenentatge profund per
             als facilitadors de Code.org CSP en formació. Aquí trobareu indicacions
@@ -7443,6 +7651,24 @@ ca:
             de la unitat, analitzareu un conjunt de dades de la vostra elecció i presentareu
             les vostres troballes. '
           title: Dades ('23-'24)
+        csp5-2024:
+          description_short: Exploreu i visualitzeu conjunts de dades d'una àmplia
+            varietat de temes mentre cerqueu patrons i intenteu aprendre més sobre
+            el món que us envolta.
+          lesson_groups:
+            csp_lists:
+              display_name: Dades
+            lessonGroup-5:
+              display_name: Enquesta post-curs
+          student_description: 'En aquesta unitat aprendre com l''anàlisi de dades
+            ajuda a convertir les dades en brut en informació útil sobre el món. Aprendre
+            a utilitzar la visualització de dades per trobar patrons dins dels conjunts
+            de dades i aprendre com aquest procés d''anàlisi de dades s''està utilitzant
+            en contextos com les dades obertes o l''aprenentatge automàtic per ajudar
+            a prendre decisions o aprendre més sobre el nostre món. En el projecte
+            de la unitat, analitzareu un conjunt de dades de la vostra elecció i presentareu
+            les vostres troballes. '
+          title: Dades ('23-'24)
         csp5-dlp:
           description: 'Aquesta és la Unitat 5 del Pla d''aprenentatge profund per
             als facilitadors de Code.org CSP en formació. Aquí trobareu indicacions
@@ -7661,6 +7887,27 @@ ca:
             hackathon de 5 dies al final de la unitat on es pot dissenyar un programa
             sobre qualsevol tema de la seva elecció.
           title: Llistes, bucles i travesses ('23-'24)
+        csp6-2024:
+          description_short: Apreneu a construir aplicacions que utilitzen llistes,
+            bucles i traversals per emmagatzemar i processar grans quantitats d'informació.
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Llistes
+            lessonGroup-2:
+              display_name: Enquesta post-curs
+            lessonGroup-3:
+              display_name: Bucles
+            lessonGroup-4:
+              display_name: Travesses
+            lessonGroup-5:
+              display_name: Projecte
+          student_description: Aquesta unitat introdueix llistes, bucles i traversals,
+            i explora la forma en què es poden utilitzar per construir aplicacions
+            que emmagatzemen i processen grans quantitats d'informació. Aprendre a
+            programar amb la biblioteca de dades en App Lab i completar un projecte
+            hackathon de 5 dies al final de la unitat on es pot dissenyar un programa
+            sobre qualsevol tema de la seva elecció.
+          title: Llistes, bucles i travesses ('23-'24)
         csp6-pilot:
           lesson_groups:
             content:
@@ -7766,6 +8013,22 @@ ca:
             de classe. Acabeu la unitat dissenyant una biblioteca de funcions al voltant
             de qualsevol tema de la vostra elecció.
           title: Paràmetres, Retorn i Biblioteques ('23-'24)
+        csp7-2024:
+          description_short: Aprèn a dissenyar un codi net i reutilitzable que pots
+            compartir amb un sol company de classe o tot el món.
+          lesson_groups:
+            csp_libraries:
+              display_name: Biblioteques
+            csp_parameters_return_values:
+              display_name: Paràmetres i valors de retorn
+            lessonGroup-3:
+              display_name: Enquesta post-curs
+          student_description: Aquesta unitat introdueix paràmetres, retorn i biblioteques.
+            Apreneu a utilitzar aquests conceptes per construir nous tipus d'aplicacions,
+            així com biblioteques de codi que podeu compartir amb els vostres companys
+            de classe. Acabeu la unitat dissenyant una biblioteca de funcions al voltant
+            de qualsevol tema de la vostra elecció.
+          title: Paràmetres, Retorn i Biblioteques ('23-'24)
         csp7-pilot:
           lesson_groups:
             csp_libraries:
@@ -7827,6 +8090,23 @@ ca:
             per ajudar-vos a comprendre la tasca i desenvolupar un pla per completar-la.
           title: Crear PT Prep ('22-'23)
         csp8-2023:
+          description_short: 'Recerca i debat sobre l''actualitat en la intersecció
+            de dades, polítiques públiques, dret, ètica i impacte social. '
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Tema 8: Ciberseguretat i Impactes Globals'
+            lessonGroup-3:
+              display_name: Enquesta post-curs
+          student_description: En aquesta unitat aprendrem com les innovacions informàtiques
+            han impactat en el nostre món de maneres beneficioses i nocives. Obteniu
+            informació sobre com les dades poden representar una amenaça per a la
+            nostra privadesa i seguretat i les formes en què s'utilitzen el xifrat
+            i altres tècniques per protegir-les. Al llarg de la unitat participa en
+            una conferència “escola del futur” en la qual vostè i un equip fan una
+            proposta de la millor manera de millorar la vida escolar amb innovacions
+            informàtiques.
+          title: Ciberseguretat i Impactes Globals ('23-'24)
+        csp8-2024:
           description_short: 'Recerca i debat sobre l''actualitat en la intersecció
             de dades, polítiques públiques, dret, ètica i impacte social. '
           lesson_groups:
@@ -7937,6 +8217,21 @@ ca:
             les vostres troballes. '
           title: Dades ('22-'23)
         csp9-2023:
+          description: En aquesta unitat preparar-se per, i fer l'AP Crear tasca de
+            rendiment. Cada lliçó conté enllaços a documents útils i activitats per
+            ajudar-vos a comprendre la tasca i desenvolupar un pla per completar-la.
+          description_short: Practiqueu i completeu la tasca de creació de rendiment
+            (PT).
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Unitat 9: Crear PT'
+            lessonGroup-2:
+              display_name: Enquesta post-curs
+          student_description: En aquesta unitat preparar-se per, i fer l'AP Crear
+            tasca de rendiment. Cada lliçó conté enllaços a documents útils i activitats
+            per ajudar-vos a comprendre la tasca i desenvolupar un pla per completar-la.
+          title: Crear PT Prep ('23-'24)
+        csp9-2024:
           description: En aquesta unitat preparar-se per, i fer l'AP Crear tasca de
             rendiment. Cada lliçó conté enllaços a documents útils i activitats per
             ajudar-vos a comprendre la tasca i desenvolupar un pla per completar-la.
@@ -10118,6 +10413,10 @@ ca:
             de la unitat ML/AI per CSD. Per a futures preguntes sobre això, pregunteu
             a Dan Schneider.
           title: Unitat ML/AI - CSD
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Joc lliure
         netsim:
           description: Obteniu informació sobre com funciona Internet.
           description_short: Obteniu informació sobre com funciona Internet.
@@ -11379,6 +11678,39 @@ ca:
           name: auto-paced-pl-csp8-2021
         self-paced-pl-csp9-2021:
           name: auto-paced-pl-csp9-2021
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Lliçó 1
+        self-paced-pl-k5-2024-1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Primers passos
+          lessons:
+            lesson-1:
+              name: Lliçó 1
+            lesson-3:
+              name: Bucles
+            lesson-4:
+              name: Condicionals
+            lesson-5:
+              name: Posant-ho tot junt
+            lesson-6:
+              name: Propers passos
+          title: Introducció a la informàtica
+        self-paced-pl-k5-2024-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Primers passos
+          lessons:
+            lesson-1:
+              name: Lliçó 1
+            lesson-3:
+              name: Esdeveniments
+            lesson-4:
+              name: Comportaments
+            lesson-5:
+              name: Propers passos
         self-paced-pl-k5-getting-started:
           name: auto-paced-pl-k5-getting-started
           title: 'Com començar amb Code.org (K-5) '

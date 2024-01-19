@@ -1057,6 +1057,14 @@ hu:
         options:
           INPUT1:
             '1': citromlé
+      DansBlocks_testShowVariable:
+        options:
+          OPT:
+            '"large"': nagy
+            '"small"': kicsi
+          COLOR:
+            '"blue"': kék
+            '"red"': piros
       FunctionBlocks_communicate:
         text: "{VAR1} kommunikál [SPRITE1COSTUME] Sprite-tal"
       FunctionBlocks_makeManipulative2:

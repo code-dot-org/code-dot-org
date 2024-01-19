@@ -72,6 +72,7 @@ ro:
         Hour of Code:
           description_short: Încercați elemente de bază în informatică cu multe personaje
             amuzante!
+          name: Oră de Programare
           title: Ora de Programare 2013
         MikeTest:
           description_audience: Vârste 8 - 98 ani
@@ -1288,6 +1289,12 @@ ro:
               name: Laboratorul Java
             lesson-6:
               name: Bucle
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sondaj
+            lessonGroup-3:
+              display_name: Conţinut
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1326,6 +1333,10 @@ ro:
           lessons:
             lesson-4:
               name: Variabile
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1360,6 +1371,10 @@ ro:
               name: Matrice Uni-Dimensionale (1D)
             lesson-3:
               name: Bucle Pentru
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1392,6 +1407,10 @@ ro:
           lessons:
             lesson-9:
               name: Aleatoriu
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
         csa4-exemplars:
           lesson_groups:
             content:
@@ -1424,6 +1443,10 @@ ro:
             lessonGroup-2:
               display_name: Conţinut
         csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa5-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -1460,6 +1483,10 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1487,6 +1514,10 @@ ro:
             lessonGroup-5:
               display_name: Cutie cu nisip
         csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -1523,6 +1554,12 @@ ro:
             lessonGroup-5:
               display_name: Sondaj
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+            lessonGroup-4:
+              display_name: Sondaj
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -2304,6 +2341,12 @@ ro:
               display_name: Sondaj
             csp_unit1_2020:
               display_name: "(vechi) Unitatea 1: Informaţii digitale"
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
+            csp_unit1_2020:
+              display_name: "(vechi) Unitatea 1: Informaţii digitale"
         csp1-dlp:
           lesson_groups:
             content:
@@ -2355,6 +2398,10 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Chestionar după curs
+        csp10-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chestionar după curs
         csp10-pilot-staging:
           lesson_groups:
             csp_conditionals:
@@ -2398,6 +2445,10 @@ ro:
             csp_unit2_2020:
               display_name: "(vechi) Unitatea 2: Internet"
         csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(vechi) Unitatea 2: Internet"
+        csp2-2024:
           lesson_groups:
             csp_unit2_2020:
               display_name: "(vechi) Unitatea 2: Internet"
@@ -2557,6 +2608,14 @@ ro:
               display_name: Funcţii
             csp_variables:
               display_name: Variabile
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Condiţionale
+            csp_functions:
+              display_name: Funcţii
+            csp_variables:
+              display_name: Variabile
         csp4-dlp:
           lesson_groups:
             content:
@@ -2647,6 +2706,12 @@ ro:
               display_name: Bucle
             lessonGroup-5:
               display_name: Chestionar după curs
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Date
+            lessonGroup-5:
+              display_name: Chestionar după curs
         csp5-dlp:
           lesson_groups:
             content:
@@ -2705,6 +2770,14 @@ ro:
               display_name: Chestionar după curs
             lessonGroup-3:
               display_name: Bucle
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Liste
+            lessonGroup-2:
+              display_name: Chestionar după curs
+            lessonGroup-3:
+              display_name: Bucle
         csp6-pilot:
           lesson_groups:
             content:
@@ -2735,6 +2808,10 @@ ro:
           lesson_groups:
             lessonGroup-3:
               display_name: Chestionar după curs
+        csp7-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Chestionar după curs
         csp7-pilot:
           lesson_groups:
             required:
@@ -2748,6 +2825,10 @@ ro:
             lessonGroup-3:
               display_name: Chestionar după curs
         csp8-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Chestionar după curs
+        csp8-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: Chestionar după curs
@@ -2778,6 +2859,12 @@ ro:
             lessonGroup-2:
               display_name: Chestionar după curs
         csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(vechi) Unitatea 9: date"
+            lessonGroup-2:
+              display_name: Chestionar după curs
+        csp9-2024:
           lesson_groups:
             csp_unit9_2020:
               display_name: "(vechi) Unitatea 9: date"
@@ -3479,6 +3566,10 @@ ro:
           student_description: Programeaza animale şi alte creaturi Minecraft în propria
             ta versiune a jocului.
           title: Minecraft Designer Hour of Code
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Joc la liber
         netsim:
           title: Simulator Internet
         nevada-standards-aligned-fifth-grade-2023:
@@ -4219,6 +4310,23 @@ ro:
           title: 'Modulul 2: Navigare prin Code.org'
         self-paced-pl-csp2-2023:
           title: 'Modulul 2: Navigare prin Code.org'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Bucle
+            lesson-4:
+              name: Condiţionale
+            lesson-6:
+              name: Pașii următori
+          title: Introducere în Informatică
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Evenimente
+            lesson-4:
+              name: Comportamente
+            lesson-5:
+              name: Pașii următori
         soccer:
           description: Creează un joc de fotbal
           description_short: Creează un joc de fotbal

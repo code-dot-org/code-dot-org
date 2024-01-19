@@ -18,7 +18,7 @@ title: Kaynaklar
 
 ## Bu posterleri okulunuza asın
 
-Malala, Stephen Curry, Shakira ve daha fazlasını içeren yeni bir poster seti hazır! Bu yıl her sette 6 poster ve 126 adet "I did the Hour of Code" çıkartması var. Kendiniz yazdırmak isterseniz yazdırılabilir bir sürümü görüntülemek ve kaydetmek için altındaki resme tıklamanız yeterlidir.
+Print your own posters! Simply click an image below to view and save a printable version.
 
 {{ promote_new_posters }}
 

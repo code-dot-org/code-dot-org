@@ -5220,10 +5220,12 @@
           ]
         },
         "2000a800-9ea1-4dbd-bb6c-7af93735477d": {
-          "progression_name": "Alkalmazás: Ruhaválasztó"
+          "progression_name": "Alkalmazás: Ruhaválasztó",
+          "name": "Ruhaválasztó"
         },
         "33b8468e-5c6c-4acb-b377-dd721dc0904a": {
-          "progression_name": "Alkalmazás: Barátkereső"
+          "progression_name": "Alkalmazás: Barátkereső",
+          "name": "Barátkereső"
         },
         "028c50a4-a63b-44aa-a686-55512682ee15": {
           "progression_name": "Alkalmazás: Egy gyerekfilm kiválasztása"
@@ -12492,10 +12494,12 @@
           ]
         },
         "286386cc-e586-4d44-bf85-60c800773505": {
-          "progression_name": "Alkalmazás: Ruhaválasztó"
+          "progression_name": "Alkalmazás: Ruhaválasztó",
+          "name": "Ruhaválasztó"
         },
         "e6e2ba98-c7fc-428e-9a47-f22073547f0c": {
-          "progression_name": "Alkalmazás: Barátkereső"
+          "progression_name": "Alkalmazás: Barátkereső",
+          "name": "Barátkereső"
         },
         "6b3b1859-20d3-4a4f-b929-8336e5c63082": {
           "progression_name": "Alkalmazás: Egy gyerekfilm kiválasztása"
@@ -21787,10 +21791,12 @@
           ]
         },
         "45881d31-b805-4b57-8ada-41046c9643bd": {
-          "progression_name": "Alkalmazás: Ruhaválasztó"
+          "progression_name": "Alkalmazás: Ruhaválasztó",
+          "name": "Ruhaválasztó"
         },
         "cb0df31d-ec5d-42bd-be39-b1b09bcff75d": {
-          "progression_name": "Alkalmazás: Barátkereső"
+          "progression_name": "Alkalmazás: Barátkereső",
+          "name": "Barátkereső"
         },
         "e5804c4b-55a2-4df2-ad40-ab99d97b2d7c": {
           "progression_name": "Alkalmazás: Egy gyerekfilm kiválasztása"

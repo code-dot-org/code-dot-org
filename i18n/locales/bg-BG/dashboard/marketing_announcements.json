@@ -1,104 +1,9 @@
 {
   "banners": {
-    "csleadersprize": {
-      "title": "",
-      "body": "",
-      "buttonText": "Научете повече"
-    },
-    "csjourneys-22": {
-      "title": "",
-      "body": "",
-      "buttonText": "Научете повече"
-    },
-    "hoc-more": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
     "superhero": {
       "title": "",
       "body": "",
       "buttonText": "Научете повече"
-    },
-    "csjourneys": {
-      "title": "",
-      "body": "",
-      "buttonText": "Научете повече"
-    },
-    "class-schedule-survey": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "back-to-school-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Научете повече"
-    },
-    "teacher-apps-open-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Присъединете се към нас"
-    },
-    "teacher-apps-closing-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Присъединете се към нас"
-    },
-    "teacher-apps-nominate-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Номинрайте Учител"
-    },
-    "teacher-apps-stillon-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Присъединете се към нас"
-    },
-    "home-learning-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Виж Идеи за Проекти"
-    },
-    "soonhoc-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "codebytes-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Научете повече"
-    },
-    "ai-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Научете повече"
-    },
-    "congrats-certificate-share": {
-      "title": "",
-      "body": "",
-      "buttonText": "Старт"
-    },
-    "coldplay": {
-      "title": "",
-      "body": "",
-      "buttonText": "Опитайте го"
-    },
-    "ai-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "Научете повече"
-    },
-    "ai-pl-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "Научете повече"
-    },
-    "state-of-cs-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
     },
     "hoc-2023": {
       "title": "",
@@ -106,6 +11,11 @@
       "buttonText": "Научете повече"
     },
     "hoc-2023-dance-ai": {
+      "title": "",
+      "body": "",
+      "buttonText": "Научете повече"
+    },
+    "co-teacher": {
       "title": "",
       "body": "",
       "buttonText": "Научете повече"

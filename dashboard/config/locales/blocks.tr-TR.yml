@@ -1139,6 +1139,14 @@ tr:
         text: Mikroskobu {INPUT1} olarak ayarlayın
       DansBlocks_testRectangle:
         text: 'dikdörtgen yap x: {X} y: {Y} w: {W} h: {H} renk: {COLOR}'
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': mavi
+            '"red"': kırmızı
+          OPT:
+            '"large"': Büyük
+            '"small"': Küçük
       FunctionBlocks_addEightBlock:
         text: Sekizekle
       FunctionBlocks_addFiveBlock:

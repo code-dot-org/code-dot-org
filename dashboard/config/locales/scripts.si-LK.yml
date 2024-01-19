@@ -46,6 +46,7 @@ si:
             මූලිකාංග ඉගෙනගන්න!
           description_short: පරිගණක විද්යාව පිළිබඳ මූලික දේ විනෝදාත්මක චරිත සමග උත්සාහ
             කරන්න!
+          name: Hour of Code
           student_description: ඇන්ග්‍රි බර්ඩ්ස් සහ ගස් යක්කු වල චරිත වලින් පරිගණක
             විද්‍යාවේ මූලිකාංග ඉගෙනගන්න!
           title: පැයේ කේතය 2013
@@ -473,6 +474,10 @@ si:
           lessons:
             lesson-6:
               name: ලූපයන්
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: අන්තර්ගතය
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -504,6 +509,10 @@ si:
           lessons:
             lesson-4:
               name: විචල්‍යන්
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -531,6 +540,10 @@ si:
           lessons:
             lesson-3:
               name: ලූපයන් සඳහා
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -552,6 +565,10 @@ si:
             lessonGroup-2:
               display_name: අන්තර්ගතය
         csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: අන්තර්ගතය
@@ -585,6 +602,10 @@ si:
           lesson_groups:
             lessonGroup-2:
               display_name: අන්තර්ගතය
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -609,6 +630,10 @@ si:
           lesson_groups:
             lessonGroup-2:
               display_name: අන්තර්ගතය
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -630,6 +655,10 @@ si:
             lessonGroup-2:
               display_name: අන්තර්ගතය
         csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: අන්තර්ගතය
@@ -658,6 +687,10 @@ si:
             lessonGroup-2:
               display_name: අන්තර්ගතය
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: අන්තර්ගතය
@@ -843,6 +876,10 @@ si:
           lesson_groups:
             csp_unit1_2020:
               display_name: 'ඒකක 1: ඩිජිටල් තොරතුරු'
+        csp1-2024:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: 'ඒකක 1: ඩිජිටල් තොරතුරු'
         csp1-dlp:
           lesson_groups:
             content:
@@ -904,6 +941,10 @@ si:
             csp_unit2_2020:
               display_name: 'පාඩම් අංක 2: අන්තර්ජාලය'
         csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'පාඩම් අංක 2: අන්තර්ජාලය'
+        csp2-2024:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'පාඩම් අංක 2: අන්තර්ජාලය'
@@ -1008,6 +1049,14 @@ si:
               display_name: ශ්‍රිතයන්
             csp_variables:
               display_name: විචල්‍යන්
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
+            csp_variables:
+              display_name: විචල්‍යන්
         csp4-dlp:
           lesson_groups:
             content:
@@ -1078,6 +1127,10 @@ si:
               display_name: දත්ත
             csp_loops:
               display_name: ලූපයන්
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: දත්ත
         csp5-dlp:
           lesson_groups:
             content:
@@ -1122,6 +1175,12 @@ si:
               display_name: ලැයිස්තු
             lessonGroup-3:
               display_name: ලූපයන්
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: ලැයිස්තු
+            lessonGroup-3:
+              display_name: ලූපයන්
         csp6-pilot:
           lesson_groups:
             content:
@@ -1161,6 +1220,10 @@ si:
             csp_unit9_2020:
               display_name: "(පැරණි) 9 වෙනි ඒකකය: දත්ත"
         csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(පැරණි) 9 වෙනි ඒකකය: දත්ත"
+        csp9-2024:
           lesson_groups:
             csp_unit9_2020:
               display_name: "(පැරණි) 9 වෙනි ඒකකය: දත්ත"
@@ -1466,6 +1529,10 @@ si:
           title: Minecraft Adventurer
         minecraft:
           title: Minecraft Designer
+        musiclab:
+          lessons:
+            lesson-3:
+              name: නොමිලේ ක්‍රීඩා කිරීම
         netsim:
           description: අන්තර්ජාලය වැඩ කරන ආකාරය ගැන දැනගන්න.
           description_short: අන්තර්ජාලය වැඩ කරන ආකාරය ගැන දැනගන්න.
@@ -1569,6 +1636,21 @@ si:
               display_name: වැඩසටහන්
             csf_loops:
               display_name: ලූපයන්
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: ලූපයන්
+            lesson-4:
+              name: කන්ඩිෂනලස්
+            lesson-6:
+              name: ඉදිරි පියවර
+          title: පරිඝණක විද්‍යාව හැදින්වීම
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: වැඩසටහන්
+            lesson-5:
+              name: ඉදිරි පියවර
         soccer:
           name: පාපන්දු
         spelling-bee:

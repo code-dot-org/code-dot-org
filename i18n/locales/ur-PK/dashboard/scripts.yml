@@ -51,6 +51,8 @@ ur:
           name: جگسا
         step:
           title: اسٹیپ
+        Hour of Code:
+          name: آور-آف-کوڈ
         text-compression:
           title: متن گٹھانا
         allthethings:
@@ -1807,3 +1809,34 @@ ur:
               display_name: باب 1
             lessonGroup-3:
               display_name: باب 2
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: ایونٹس/واقعات
+            lesson-4:
+              name: رویے
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: لوپس
+            lesson-4:
+              name: شرائط
+          title: کمپیوٹر سائنس کا تعارف
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرات
+            csp_conditionals:
+              display_name: شرائط
+            csp_functions:
+              display_name: افعال
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: ڈیٹا
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: فہرستیں
+            lessonGroup-3:
+              display_name: لوپس

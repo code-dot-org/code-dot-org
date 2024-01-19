@@ -1,104 +1,9 @@
 {
   "banners": {
-    "csleadersprize": {
-      "title": "",
-      "body": "",
-      "buttonText": "Ketahui lebih lanjut"
-    },
-    "csjourneys-22": {
-      "title": "",
-      "body": "",
-      "buttonText": "Ketahui lebih lanjut"
-    },
-    "hoc-more": {
-      "title": "",
-      "body": "Laman web Jam Kod mempunyai lebih daripada 500 aktiviti sains komputer untuk semua peringkat umur dan pengalaman yang dibangunkan oleh Code.org dan rakan kongsi.",
-      "buttonText": ""
-    },
     "superhero": {
       "title": "",
       "body": "",
       "buttonText": "Ketahui lebih lanjut"
-    },
-    "csjourneys": {
-      "title": "",
-      "body": "",
-      "buttonText": "Ketahui lebih lanjut"
-    },
-    "class-schedule-survey": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "back-to-school-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Ketahui lebih lanjut"
-    },
-    "teacher-apps-open-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Sertai kami"
-    },
-    "teacher-apps-closing-2021": {
-      "title": "",
-      "body": "",
-      "buttonText": "Sertai kami"
-    },
-    "teacher-apps-nominate-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Mencalonkan Guru"
-    },
-    "teacher-apps-stillon-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Sertai kami"
-    },
-    "home-learning-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Lihat Idea Projek"
-    },
-    "soonhoc-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
-    },
-    "codebytes-2020": {
-      "title": "",
-      "body": "",
-      "buttonText": "Ketahui lebih lanjut"
-    },
-    "ai-2020": {
-      "title": "Terokai Kecerdasan Buatan dan Pembelajaran Mesin",
-      "body": "",
-      "buttonText": "Ketahui lebih lanjut"
-    },
-    "congrats-certificate-share": {
-      "title": "",
-      "body": "",
-      "buttonText": "Mula"
-    },
-    "coldplay": {
-      "title": "",
-      "body": "",
-      "buttonText": "Selamat mencuba"
-    },
-    "ai-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "Ketahui lebih lanjut"
-    },
-    "ai-pl-launch-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": "Ketahui lebih lanjut"
-    },
-    "state-of-cs-2023": {
-      "title": "",
-      "body": "",
-      "buttonText": ""
     },
     "hoc-2023": {
       "title": "Hour of Code: Kreativiti dengan AI",
@@ -106,6 +11,11 @@
       "buttonText": "Ketahui lebih lanjut"
     },
     "hoc-2023-dance-ai": {
+      "title": "",
+      "body": "",
+      "buttonText": "Ketahui lebih lanjut"
+    },
+    "co-teacher": {
       "title": "",
       "body": "",
       "buttonText": "Ketahui lebih lanjut"

@@ -828,6 +828,11 @@ km:
             '"hearts"': បេះដូង
             '"rain"': ភ្លៀង
             '"starburst"': ផ្កាយផ្ទុះចេញ
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': ពណ៌​ខៀវ
+            '"red"': ពណ៌ក្រហម
       FunctionBlocks_makeManipulative2:
         text: បង្កើត​ {NUM} ថ្មី {ANIMATION_NAME} sprites {BEHAVIOR}
       FunctionBlocks_spriteSayVar:

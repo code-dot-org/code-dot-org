@@ -88,7 +88,8 @@ describe('ErrorDialogStack', function () {
         expect(dialog.text()).to.not.contain(
           'It looks like we are having trouble loading your animation'
         );
-        expect(dialog.find('Button')).to.have.length(0);
+        // only shows the close dialog 'X' button
+        expect(dialog.find('Button')).to.have.length(1);
       });
     });
 

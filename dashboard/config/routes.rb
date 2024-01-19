@@ -599,6 +599,7 @@ Dashboard::Application.routes.draw do
     match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
     post '/lti/v1/authenticate', to: 'lti_v1#authenticate'
     match '/lti/v1/sync_course', to: 'lti_v1#sync_course', via: [:get, :post]
+    post '/lti/v1/integrations', to: 'lti_v1#create_integration'
 
     # OAuth endpoints
     get '/oauth/jwks', to: 'oauth_jwks#jwks'
@@ -890,6 +891,7 @@ Dashboard::Application.routes.draw do
         get 'users/:user_id/mute_music', to: 'users#get_mute_music'
         get 'users/:user_id/contact_details', to: 'users#get_contact_details'
         get 'users/current', to: 'users#current'
+        get 'users/current/permissions', to: 'users#get_current_permissions'
         get 'users/netsim_signed_in', to: 'users#netsim_signed_in'
         get 'users/:user_id/school_name', to: 'users#get_school_name'
         get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'

@@ -45,6 +45,7 @@ mr:
             संगणक शास्त्रातील मूलभूत गोष्टी करून पहा!
           description_short: अनेक गंमतीदार पात्रांबरोबर संगणक शास्त्रातील मूलभूत गोष्टी
             करून पाहा!
+          name: अवर ऑफ कोड
           student_description: अँग्री बर्ड्स, प्लँट्स व्हर्सेस झोम्बीज यातील पात्रांच्याबरोबर
             संगणक शास्त्रातील मूलभूत गोष्टी करून पहा!
           title: अवर ऑफ कोड 2013
@@ -1276,6 +1277,14 @@ mr:
               display_name: प्रकल्प
             csp_variables:
               display_name: व्हेरीएबल्स
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: कंडीशनल्स
+            csp_project:
+              display_name: प्रकल्प
+            csp_variables:
+              display_name: व्हेरीएबल्स
         csp4-dlp:
           lesson_groups:
             required:
@@ -1346,6 +1355,10 @@ mr:
               display_name: लूप्स
             csp_project:
               display_name: प्रकल्प
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: डेटा
         csp5-dlp:
           lesson_groups:
             required:
@@ -1384,6 +1397,14 @@ mr:
         csp5-virtual:
           title: अॅप लॅबमध्ये इव्हेंट-ड्रीव्हन प्रोग्रामिंग
         csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: याद्या
+            lessonGroup-3:
+              display_name: लूप्स
+            lessonGroup-5:
+              display_name: प्रकल्प
+        csp6-2024:
           lesson_groups:
             csp_unit6_2020:
               display_name: याद्या
@@ -1777,6 +1798,10 @@ mr:
           student_description: माईनक्राफ्टच्या स्वत:च्या आवृत्तीत प्राणी आणि इतर माईनक्राफ्ट
             प्राणी प्रोग्राम करा.
           title: माईनक्राफ्ट  आरेखक
+        musiclab:
+          lessons:
+            lesson-3:
+              name: फ्री प्ले
         nevada-standards-aligned-fifth-grade-2023:
           description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका
             आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
@@ -2240,6 +2265,16 @@ mr:
           title: 'मॉड्यूल 2: Code.org नेव्हिगेट करणे'
         self-paced-pl-csp2-2023:
           title: 'मॉड्यूल 2: Code.org नेव्हिगेट करणे'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: लूप्स
+            lesson-4:
+              name: कंडीशनल्स
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: ईव्हेंट्स
         soccer:
           description: सॉकर गेम बनवा
           description_short: सॉकर गेम बनवा

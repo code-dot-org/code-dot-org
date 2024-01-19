@@ -203,6 +203,8 @@ sl:
         desc: Učenci ustvarijo preproste algoritme (naborov ukazov) da premaknejo
           lik skozi labirint z enim ukazom.
         title: Veseli zemljevidi
+      Unplugged- Melissa Sandbox:
+        title: Izštekano
       courseABC_unplugged_bigEvent:
         desc: Učenci spoznajo programerski koncept "dogodkov", ki so akcije, ki jih
           računalnik nenehno spremlja. Učitelj bo pritisnil gumb na papirnatem daljincu,

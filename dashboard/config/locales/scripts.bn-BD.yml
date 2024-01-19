@@ -21,6 +21,8 @@ bn:
           description_audience: বয়স ৮-১৮
         CSF_Secret_Sample_Story:
           description_audience: বয়স ৮-১৮+
+        Hour of Code:
+          name: এক ঘন্টার কোড
         MikeTest:
           description_audience: বয়স 8-98
         Special Fun:
@@ -441,6 +443,10 @@ bn:
           lesson_groups:
             csp_unit1_2020:
               display_name: "(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য"
+        csp1-2024:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: "(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য"
         csp1-dlp:
           lesson_groups:
             required:
@@ -486,6 +492,10 @@ bn:
             csp_unit2_2020:
               display_name: "(পুরাতন) ইউনিট ২: ইন্টারনেট"
         csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(পুরাতন) ইউনিট ২: ইন্টারনেট"
+        csp2-2024:
           lesson_groups:
             csp_unit2_2020:
               display_name: "(পুরাতন) ইউনিট ২: ইন্টারনেট"
@@ -555,6 +565,14 @@ bn:
             csp_variables:
               display_name: চলকগুলো
         csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
+            csp_variables:
+              display_name: চলকগুলো
+        csp4-2024:
           lesson_groups:
             csp_conditionals:
               display_name: শর্তযুক্ত
@@ -653,6 +671,12 @@ bn:
             csp_unit6_2020:
               display_name: অ্যালগরিদম
         csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: তালিকা
+            lessonGroup-3:
+              display_name: চক্র
+        csp6-2024:
           lesson_groups:
             csp_unit6_2020:
               display_name: তালিকা
@@ -874,6 +898,10 @@ bn:
             যেতে কোড ব্লকগুলি ব্যবহার করুন।
           student_description: স্টিভ বা অ্যালেক্স কে মাইনক্রাফটের এই দুনিয়ায় অভিযানের
             নিয়ে যেতে কোড ব্লকগুলি ব্যবহার করুন।
+        musiclab:
+          lessons:
+            lesson-3:
+              name: বিনা পয়সায় খেলা
         nevada-standards-aligned-fifth-grade-2023:
           lesson_groups:
             lessonGroup-3:
@@ -942,6 +970,17 @@ bn:
               display_name: ঘটনাবলী
             csf_loops:
               display_name: চক্র
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: চক্র
+            lesson-4:
+              name: শর্তযুক্ত
+          title: কম্পিউটার বিজ্ঞান পরিচিতি
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: ঘটনাবলী
         soccer:
           name: ফুটবল খেলা
         spelling-bee:
