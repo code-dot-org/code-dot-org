@@ -353,8 +353,7 @@ module Pd::Application
       # name and email
       partner.contact_name = 'We Teach Code'
       partner.contact_email = 'we_teach_code@ex.net'
-      assert_includes application.formatted_partner_contact_email, 'We Teach Code'
-      assert_includes application.formatted_partner_contact_email, 'we_teach_code@ex.net'
+      assert_equal "We Teach Code <we_teach_code@ex.net>", application.formatted_partner_contact_email
     end
 
     test 'formatted_applicant_email uses user account email' do
