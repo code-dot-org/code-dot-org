@@ -276,8 +276,8 @@ es:
       20th Century Fox. Todos los derechos reservados.<br />Angry Birds&#8482; &copy;
       2009-%{current_year} Rovio Entertainment Ltd. Todos los derechos reservados.<br
       />Plantas vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos
-      los derechos reservados.<br />El asombroso mundo de Gumball es marca comercial
-      y &copy; %{current_year} Cartoon Network.
+      los derechos reservados.<br />DreamWorks The Bad Guys &copy; %{current_year}
+      DreamWorks Animation LLC. Todos los derechor reservados.
     art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. Todos los
       derechos reservados. Star Wars&#8482; &copy; %{current_year} Disney y Lucasfilm.
       Todos los derechos reservados. Frozen&#8482; &copy; %{current_year} Disney.
@@ -304,7 +304,9 @@ es:
     locale_select: Seleccionar idioma
     make_my_own_app: Haz tu propia aplicación
     more: Más
-    powered_by_aws: Impulsado por Amazon Web Services
+    powered_by_aws: Amazon Web Services y el logotipo «Powered by AWS» son marcas
+      registradas de Amazon.com, Inc. o sus filiales en los Estados Unidos u otros
+      países.
     privacy: Política de Privacidad
     privacy_updated: Política de privacidad (actualizada)
     report_abuse: Reportar Abuso
@@ -318,8 +320,8 @@ es:
       académicos</a> su apoyo en la creación de Code Studio.
     tos: Términos de uso
     tos_short: Términos
-    trademark: "© Code.org, %{current_year}. Code.org®, el logotipo de CODE y el de
-      Hora de Code ® son marcas registradas de Code.org."
+    trademark: "© Code.org, %{current_year}. Code.org®, el logotipo de CODE,  la Hora
+      de Código ® y %{cs_discoveries} son marcas registradas de Code.org."
     translate: Ayúdanos a traducir a tu idioma
     try_hour_of_code: "¡Prueba una Hora de Code!"
     view_code: Ver Código

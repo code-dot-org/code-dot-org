@@ -387,7 +387,6 @@
   "makerSetupGeneralTitle": "Benvinguts Makers!",
   "makerSetupInstallFirmataCP": "Cal que us assegureu que teniu instal·lat el firmware adequat. Podeu instal·lat Firmata Sketch [amb aquestes instruccions per a les plaques Circuit Playground Express]({firmataURLExpress}) i [amb aquestes instruccions per a les plaques Circuit Playground Classic]({firmataURLClassic}).",
   "makerSetupInstallFirmataMB": "Cal que us assegureu que està executant l'aplicació de Firmata correcta. Podeu [instal·lar l'aplicació de Firmata correcta amb aquestes instruccions][0].",
-  "makerSetupInstallFirmataOther": "Cal que us assegureu que teniu instal·lat el firmware adequat. Podeu instal·lat Firmata Sketch [amb aquestes instruccions per a les plaques Circuit Playground Express]({firmataURLExpress}) i [amb aquestes instruccions per a les plaques Circuit Playground Classic]({firmataURLClassic}). ^pdei omstañ·ñar Firmata Sketch [per micro:bit amb aquestes instruccions]({firmataURLMB}).",
   "makerSetupInstallSerialConnector": "Instal·leu [l'aplicació de Chrome Code.org Serial Connector]({webstoreURL}).",
   "makerSetupLinuxAddDialout": "Si no formes part de \"dialout\", caldrà que t'afegeixis al grup:",
   "makerSetupLinuxAlternative": "Instal·ladors alternatius",

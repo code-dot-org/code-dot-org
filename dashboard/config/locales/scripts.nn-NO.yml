@@ -54,6 +54,7 @@ nn:
           description: Prøv deg på grunnleggjande informatikk med karakterar frå Angry
             Birds og Plants vs. Zombies!
           description_short: Prøv grunnleggande programmering med mange morsomme figurar!
+          name: Kodetimen
           student_description: Prøv deg på grunnleggjande informatikk med karakterar
             frå Angry Birds og Plants vs. Zombies!
           title: Kodetimen 2013
@@ -710,6 +711,12 @@ nn:
           lessons:
             lesson-6:
               name: Løkker
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Undersøking
+            lessonGroup-3:
+              display_name: Innhald
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -743,6 +750,10 @@ nn:
           lessons:
             lesson-4:
               name: Variablar
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -770,6 +781,10 @@ nn:
           lessons:
             lesson-3:
               name: For-løkker
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -791,6 +806,10 @@ nn:
             lessonGroup-2:
               display_name: Innhald
         csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhald
@@ -824,6 +843,10 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhald
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -848,6 +871,10 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhald
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -869,6 +896,10 @@ nn:
             lessonGroup-2:
               display_name: Innhald
         csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhald
@@ -899,6 +930,12 @@ nn:
             lessonGroup-5:
               display_name: Undersøking
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+            lessonGroup-4:
+              display_name: Undersøking
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhald
@@ -1656,6 +1693,12 @@ nn:
               display_name: Undersøking
             csp_unit1_2020:
               display_name: "(gammel) Eining 1: Digital informasjon"
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Undersøking
+            csp_unit1_2020:
+              display_name: "(gammel) Eining 1: Digital informasjon"
         csp1-dlp:
           lesson_groups:
             content:
@@ -1708,6 +1751,10 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: Undersøking etter kurs
+        csp10-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Undersøking etter kurs
         csp10-pilot-staging:
           lesson_groups:
             csp_conditionals:
@@ -1757,6 +1804,10 @@ nn:
             csp_unit2_2020:
               display_name: "(gammel) Eining 2: Internett"
         csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(gammel) Eining 2: Internett"
+        csp2-2024:
           lesson_groups:
             csp_unit2_2020:
               display_name: "(gammel) Eining 2: Internett"
@@ -1939,6 +1990,16 @@ nn:
               display_name: Prosjekt
             csp_variables:
               display_name: Variablar
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funksjonar
+            csp_project:
+              display_name: Prosjekt
+            csp_variables:
+              display_name: Variablar
         csp4-dlp:
           lesson_groups:
             content:
@@ -2061,6 +2122,10 @@ nn:
               display_name: Traversaler
             lessonGroup-5:
               display_name: Undersøking etter kurs
+        csp5-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Undersøking etter kurs
         csp5-dlp:
           lesson_groups:
             content:
@@ -2137,6 +2202,18 @@ nn:
               display_name: Traversaler
             lessonGroup-5:
               display_name: Prosjekt
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Lister
+            lessonGroup-2:
+              display_name: Undersøking etter kurs
+            lessonGroup-3:
+              display_name: Løkker
+            lessonGroup-4:
+              display_name: Traversaler
+            lessonGroup-5:
+              display_name: Prosjekt
         csp6-pilot:
           lesson_groups:
             content:
@@ -2185,6 +2262,14 @@ nn:
               display_name: Parameter og returverdiar
             lessonGroup-3:
               display_name: Undersøking etter kurs
+        csp7-2024:
+          lesson_groups:
+            csp_libraries:
+              display_name: Bibliotek
+            csp_parameters_return_values:
+              display_name: Parameter og returverdiar
+            lessonGroup-3:
+              display_name: Undersøking etter kurs
         csp7-pilot:
           lesson_groups:
             csp_libraries:
@@ -2208,6 +2293,10 @@ nn:
             lessonGroup-3:
               display_name: Undersøking etter kurs
         csp8-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Undersøking etter kurs
+        csp8-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: Undersøking etter kurs
@@ -2240,6 +2329,12 @@ nn:
             lessonGroup-2:
               display_name: Undersøking etter kurs
         csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(gammel) Eining 9: Data"
+            lessonGroup-2:
+              display_name: Undersøking etter kurs
+        csp9-2024:
           lesson_groups:
             csp_unit9_2020:
               display_name: "(gammel) Eining 9: Data"

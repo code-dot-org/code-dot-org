@@ -71,6 +71,7 @@ mr:
           description: अँग्री बर्ड्स, प्लँट्स व्हर्सेस झोम्बीज यातील पात्रांच्याबरोबर संगणक शास्त्रातील मूलभूत गोष्टी करून पहा!
           description_short: अनेक गंमतीदार पात्रांबरोबर संगणक शास्त्रातील मूलभूत गोष्टी करून पाहा!
           student_description: अँग्री बर्ड्स, प्लँट्स व्हर्सेस झोम्बीज यातील पात्रांच्याबरोबर संगणक शास्त्रातील मूलभूत गोष्टी करून पहा!
+          name: अवर ऑफ कोड
         text-compression:
           title: टेक्स्ट कॉम्प्रेशन
         allthethings:
@@ -2467,3 +2468,23 @@ mr:
               name: लूप्स
             lesson-4:
               name: कंडीशनल्स
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: व्हेरीएबल्स
+            csp_conditionals:
+              display_name: कंडीशनल्स
+            csp_project:
+              display_name: प्रकल्प
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: डेटा
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: याद्या
+            lessonGroup-3:
+              display_name: लूप्स
+            lessonGroup-5:
+              display_name: प्रकल्प

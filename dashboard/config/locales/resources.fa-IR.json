@@ -5895,7 +5895,7 @@
           "type": "اسلایدها"
         },
         "cs_connections_landing_page/csc-bookcovers/2023": {
-          "name": "اتصالات CS فرود صفحه",
+          "name": "صفحه فرود اتصالات سی‌اس",
           "url": "https://code.org/educate/csc",
           "type": "منبع"
         },
@@ -9672,7 +9672,7 @@
         "events-in-bounce-how-do-they-happen/sports/unversioned": {
           "name": "رویدادها در پرش - چگونه اتفاق می‌افتند؟",
           "url": "https://docs.google.com/presentation/d/11DzVtRaK1FtnI6wppsPBFNOnVFU1P-Jx_HNd0FYR11g/edit?usp=share_link",
-          "type": "اسلاید دک"
+          "type": "مجموع اسلاید"
         },
         "activity-guide-text-compression/text-compression/unversioned": {
           "name": "راهنمای فعالیت - فشرده‌سازی متن",
@@ -10823,6 +10823,9 @@
         "all_vocabulary/how-ai-works/2023": {
           "name": "تمام واژگان",
           "url": "/s/how-ai-works-2023/واژگان"
+        },
+        "all_vocabulary_1/express/2023": {
+          "name": "تمام واژگان"
         }
       }
     }

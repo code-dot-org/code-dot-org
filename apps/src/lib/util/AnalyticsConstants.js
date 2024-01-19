@@ -151,6 +151,9 @@ const EVENTS = {
     'Signed Out User Clicks Create Dropdown',
   SIGNED_OUT_USER_SELECTS_CREATE_DROPDOWN_OPTION:
     'Signed Out User Selects Create Dropdown Option',
+
+  // PL Landing Page
+  MY_PL_PAGE_VISITED: 'My Professional Learning Page Visited',
 };
 
 const EVENT_GROUP_NAMES = {

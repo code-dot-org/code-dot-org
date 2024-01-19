@@ -1323,6 +1323,7 @@
   "loginExportInstructions": "** Uzaqdan tədris edirsiniz? ** Tələbə giriş məlumatlarının CSV-sini yükləyin, beləliklə bir poçt birləşməsi edə və ya asanlıqla hər tələbənin istifadəçi adını və şifrəsini kopyalayıb e-poçtlara yapışdırın.",
   "loginExportLink": "CVS Yükləyin",
   "loginInfo": "Giriş məlumatları\n",
+  "loginInfoLtiSetupHeader": "Sinifinizi quraşdırın",
   "loginInfoResetSecretPicDesc": "Tələbələrinizdən hər hansı birinin şəkil parolunu sıfırlamaq üçün  [Tələbələri idarə et] ({url}) bölməsinə gələrək, \"Şəkil parolu\" sütununun altındakı \"Şəkil göstər\" düyməsini vurub və \"Sıfırla\" düyməsini basaraq şagirdlərinizdən hər hansı biri üçün şəkil parolunu sıfırlaya bilərsiniz.",
   "loginInfoResetSecretWordDesc": "Tələbələrinizdən hər hansı birinin gizli sözünü sıfırlamaq üçün [Tələbələri idarə et] ({url}) bölməsinə girdikdən sonra “Gizli sözlər” sütununun altındakı “Sözləri göstər” düyməsini vurub, “Sıfırla” nı basaraq tələbələrinizdən hər hansı biri üçün gizli sözləri sıfırlaya bilərsiniz.",
   "loginInfoWordPicMoreBelow": "Tələbələr, gizli {wordOrPicture} daxil olmaqla bütün bu məlumatları aşağıdakı giriş kartlarında tapa bilərlər.",

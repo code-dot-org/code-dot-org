@@ -1256,6 +1256,7 @@
   "loginInfo_signinStep4_secretPicture": "त्यांचे गुप्त चित्र निवडावे.",
   "loginInfo_signinStep4_secretWords": "त्यांचे गुप्त शब्द टाईप करावेत.",
   "loginInfo_signinStep5": "\"साईन इन\" बटण क्लिक करावे.",
+  "loginInfoLtiSetupHeader": "तुमचा वर्ग सेटअप करा",
   "loginType": "लॉगिन प्रकार",
   "loginTypeClever": "क्लेव्हर",
   "loginTypeCleverButton": "क्लेव्हर वापरा",

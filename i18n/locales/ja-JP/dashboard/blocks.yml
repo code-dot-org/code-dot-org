@@ -1098,6 +1098,14 @@ ja:
         options:
           INPUT1:
             '1': レモンジュース
+      DansBlocks_testShowVariable:
+        options:
+          OPT:
+            '"large"': 大
+            '"small"': 小
+          COLOR:
+            '"blue"': 青
+            '"red"': 赤
       FunctionBlocks_communicate:
         text: "{VAR1}を{SPRITE1COSTUME}と通信します"
       FunctionBlocks_makeManipulative2:

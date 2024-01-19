@@ -196,6 +196,28 @@ class Services::LtiTest < ActiveSupport::TestCase
     assert lti_user_identity
   end
 
+  test 'create_lti_integration should create an LtiIntegration when given valid inputs' do
+    client_id = 'client_id'
+    issuer = 'issuer'
+    platform_name = 'platform_name'
+    auth_redirect_url = 'auth_redirect_url'
+    jwks_url = 'jwks_url'
+    access_token_url = 'access_token_url'
+    admin_email = 'admin_email'
+
+    integration = Services::Lti.create_lti_integration(
+      client_id: client_id,
+      issuer: issuer,
+      platform_name: platform_name,
+      auth_redirect_url: auth_redirect_url,
+      jwks_url: jwks_url,
+      access_token_url: access_token_url,
+      admin_email: admin_email
+    )
+
+    assert integration
+  end
+
   test 'should create a student user given an LTI NRPS member object' do
     student_user = Services::Lti.initialize_lti_student_from_nrps(client_id: @id_token[:aud], issuer: @id_token[:iss], nrps_member: @nrps_student)
     assert student_user
