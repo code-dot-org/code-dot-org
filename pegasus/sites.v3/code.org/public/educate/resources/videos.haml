@@ -33,16 +33,16 @@ video_player: true
         = view :carousel_video_flexible
       - if index === 1
         = view :carousel_computer_works_video
-      - if index === 2
-        = view :carousel_internet_video
-      - if index === 3
-        = view :carousel_not_hacked_video
-      - if index === 4
-        = view :carousel_blockchain_video
-      - if index === 5
-        = view :carousel_inspirational_video
-      - if index === 6
-        = view :carousel_cs_video
+      -# - if index === 2
+      -#   = view :carousel_internet_video
+      -# - if index === 3
+      -#   = view :carousel_not_hacked_video
+      -# - if index === 4
+      -#   = view :carousel_blockchain_video
+      -# - if index === 5
+      -#   = view :carousel_inspirational_video
+      -# - if index === 6
+      -#   = view :carousel_cs_video
   = view :section_divider_line
 
 %section.centered
@@ -51,8 +51,7 @@ video_player: true
   %a.link-button.secondary{href: "https://www.youtube.com/channel/UCJyEBMU1xVP2be1-AoGS1BA", target: "_blank", rel: "noopener noreferrer"}
     =hoc_s(:video_library_page_footer_cta)
 
-%script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
-%script{:src=>'/js/jquery.touchSwipe.min.js'}
-%script{:src=>'/js/page/video_page.js'}
-
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::VIDEO_LIBRARY_PAGE_VISIT_EVENT
+
+-# Imports the Javascript for the video carousels
+= view :swiper
