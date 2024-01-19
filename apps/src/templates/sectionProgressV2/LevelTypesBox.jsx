@@ -10,22 +10,18 @@ export default function LevelTypesBox() {
       <div className={styles.headerContainer}>
         <StrongText>{i18n.levelTypes()}</StrongText>
       </div>
-      <div>
-        <div className={styles.icons}>
-          <div>
-            <div>
-              <LegendItem
-                itemType={ITEM_TYPE.ASSESSMENT_LEVEL}
-                labelText={i18n.assessmentLevel()}
-              />
-            </div>
-            <div>
-              <LegendItem
-                itemType={ITEM_TYPE.CHOICE_LEVEL}
-                labelText={i18n.choiceLevel()}
-              />
-            </div>
-          </div>
+      <div className={styles.icons}>
+        <div>
+          <LegendItem
+            itemType={ITEM_TYPE.ASSESSMENT_LEVEL}
+            labelText={i18n.assessmentLevel()}
+          />
+        </div>
+        <div>
+          <LegendItem
+            itemType={ITEM_TYPE.CHOICE_LEVEL}
+            labelText={i18n.choiceLevel()}
+          />
         </div>
       </div>
     </div>
