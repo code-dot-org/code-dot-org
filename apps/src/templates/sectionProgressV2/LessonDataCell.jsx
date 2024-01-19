@@ -17,7 +17,7 @@ export default function LessonDataCell({lesson, studentLessonProgress}) {
   }, [lesson, studentLessonProgress]);
 
   return (
-    <div className={classNames(styles.gridBox, styles.gridBoxLessonHeader)}>
+    <div className={classNames(styles.gridBox, styles.gridBoxLesson)}>
       {lessonData}
     </div>
   );
