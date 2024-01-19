@@ -16,7 +16,7 @@ export interface PacketIOWrapper {
   isConnecting(): boolean;
   // flash the device, does **not** reconnect
   reflashAsync(
-    resp: pxtc.CompileResult,
+    resp: void,
     progressCallback?: (percentageComplete: number) => void
   ): Promise<void>;
 
@@ -57,7 +57,8 @@ export let mkPacketIOAsync: () => Promise<PacketIO>;
 export let mkPacketIOWrapper: (io: PacketIO) => PacketIOWrapper;
 
 let wrapper: PacketIOWrapper;
-let initPromise: Promise<PacketIOWrapper>;
+let initPromise: Promise<PacketIOWrapper | void>;
+// eslint-disable-next-line @typescript-eslint/no-empty-function
 let onConnectionChangedHandler: () => void = () => {};
 let onSerialHandler: (buf: Uint8Array, isStderr: boolean) => void;
 let onCustomEventHandler: (type: string, buf: Uint8Array) => void;
@@ -80,15 +81,6 @@ export function isConnecting() {
   return !!wrapper?.isConnecting();
 }
 
-export function icon() {
-  return (
-    !!wrapper &&
-    (wrapper.icon ||
-      pxt.appTarget.appTheme.downloadDialogTheme?.deviceIcon ||
-      'usb')
-  );
-}
-
 export function unsupportedParts() {
   return wrapper?.unsupportedParts ? wrapper.unsupportedParts() : [];
 }
@@ -102,19 +94,20 @@ export function disconnectAsync(): Promise<void> {
   if (disconnectPromise) return disconnectPromise;
   let p = Promise.resolve();
   if (wrapper) {
-    debug('packetio: disconnect');
+    console.log('packetio: disconnect');
     const w = wrapper;
     p = p
       .then(() => w.disconnectAsync())
       .then(() => w.io.disposeAsync())
       .catch(e => {
         // swallow execeptions
-        pxt.reportException(e);
+        console.log(e);
       })
       .finally(() => {
-        initPromise = undefined; // dubious
-        wrapper = undefined;
-        disconnectPromise = undefined;
+        console.log('packetio: disconnected');
+        // initPromise = undefined; // dubious
+        // wrapper = undefined;
+        // disconnectPromise = undefined;
       });
     if (onConnectionChangedHandler)
       p = p.then(() => onConnectionChangedHandler());
@@ -143,15 +136,15 @@ export function sendCustomEventAsync(type: string, payload: Uint8Array) {
   else return Promise.resolve();
 }
 
-function wrapperAsync(): Promise<PacketIOWrapper> {
+function wrapperAsync(): Promise<PacketIOWrapper | void> {
   if (wrapper) return Promise.resolve(wrapper);
 
   if (!mkPacketIOAsync) {
-    pxt.debug(`packetio: not defined, skipping`);
-    return Promise.resolve(undefined);
+    console.log(`packetio: not defined, skipping`);
+    return Promise.resolve();
   }
 
-  pxt.debug(`packetio: new wrapper`);
+  console.log(`packetio: new wrapper`);
   return mkPacketIOAsync().then(io => {
     io.onConnectionChanged = onConnectionChangedHandler;
     wrapper = mkPacketIOWrapper(io);
@@ -163,15 +156,15 @@ function wrapperAsync(): Promise<PacketIOWrapper> {
   });
 }
 
-export function initAsync(force = false): Promise<PacketIOWrapper> {
-  pxt.debug(`packetio: init ${force ? '(force)' : ''}`);
+export function initAsync(force = false): Promise<PacketIOWrapper | void> {
+  console.log(`packetio: init ${force ? '(force)' : ''}`);
   if (!initPromise) {
     let p = Promise.resolve();
     if (force) p = p.then(() => disconnectAsync());
     initPromise = p
       .then(() => wrapperAsync())
       .finally(() => {
-        initPromise = undefined;
+        console.log('packetio: init done');
       });
   }
   return initPromise;
