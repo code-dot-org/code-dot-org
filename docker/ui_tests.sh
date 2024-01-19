@@ -63,6 +63,7 @@ saucelabs_username: $SAUCE_USERNAME
 skip_seed_all: true
 sources_s3_directory: sources_circle/$CIRCLE_BUILD_NUM
 use_my_apps: true
+optimize_rails_assets: false
 optimize_webpack_assets: false
 " >> locals.yml
 echo "Wrote secrets from env vars into locals.yml."
