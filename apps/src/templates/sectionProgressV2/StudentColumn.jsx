@@ -1,17 +1,35 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import styles from './progress-table-v2.module.scss';
 import classNames from 'classnames';
 import SortByNameDropdown from '../SortByNameDropdown';
+import _ from 'lodash';
 
 const SECTION_PROGRESS_V2 = 'SectionProgressV2';
 
-export default function StudentColumn({sortedStudents, unitName, sectionId}) {
+export default function StudentColumn({
+  sortedStudents,
+  unitName,
+  sectionId,
+  isSkeleton,
+}) {
   const getFullName = student =>
     student.familyName ? `${student.name} ${student.familyName}` : student.name;
 
   const studentColumnBox = (student, ind) => {
+    if (isSkeleton)
+      return (
+        <div
+          className={classNames(styles.gridBox, styles.gridBoxStudent)}
+          key={ind}
+        >
+          <span
+            style={{width: _.random(30, 90) + '%'}}
+            className={styles.skeletonize}
+          />
+        </div>
+      );
+
     return (
       <div
         className={classNames(styles.gridBox, styles.gridBoxStudent)}
@@ -41,5 +59,6 @@ export default function StudentColumn({sortedStudents, unitName, sectionId}) {
 StudentColumn.propTypes = {
   sectionId: PropTypes.number,
   unitName: PropTypes.string,
-  sortedStudents: PropTypes.arrayOf(studentShape),
+  sortedStudents: PropTypes.array,
+  isSkeleton: PropTypes.bool,
 };
