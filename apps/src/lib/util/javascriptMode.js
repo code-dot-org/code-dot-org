@@ -22,11 +22,6 @@ export function outputError(...args) {
   errorHandler.outputError(...args);
 }
 
-/** @see JavaScriptModeErrorHandler#outputInfo */
-export function outputInfo(...args) {
-  errorHandler.outputInfo(...args);
-}
-
 /** @see JavaScriptModeErrorHandler#outputWarning */
 export function outputWarning(...args) {
   errorHandler.outputWarning(...args);

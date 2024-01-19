@@ -12,7 +12,6 @@ import {
 import {TOOLBOX_EDIT_MODE} from '../constants';
 import experiments from '@cdo/apps/util/experiments';
 import {
-  outputInfo,
   outputError,
   injectErrorHandler,
 } from '@cdo/apps/lib/util/javascriptMode';
@@ -1541,15 +1540,6 @@ export default class P5Lab {
    */
   getReinfFeedbackMsg(_isFinalFreePlayLevel) {
     return this.getMsg().reinfFeedbackMsg();
-  }
-
-  /**
-   * Annotates lines with the given text and context.
-   */
-  annotateFeedback(messages) {
-    messages.forEach(info => {
-      outputInfo(info.message, info.lineNumber);
-    });
   }
 
   /**
