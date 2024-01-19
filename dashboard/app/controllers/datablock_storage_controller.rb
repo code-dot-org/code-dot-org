@@ -22,7 +22,7 @@ class DatablockStorageController < ApplicationController
 
     if value.nil?
       # Setting a key to null deletes it
-      DatablockStorageKvp.delete_all(channel_id: params[:channel_id], key: params[:key])
+      DatablockStorageKvp.where(channel_id: params[:channel_id], key: params[:key]).delete_all
     else
       # This should generate a single MySQL insert statement using the `ON DUPLICATE KEY UPDATE`
       # syntax. Should be faster than a find round-trip followed by an update or insert.
@@ -132,13 +132,13 @@ class DatablockStorageController < ApplicationController
       record.save!
       render json: record_json
     else
-      render json: null
+      render json: nil
     end
   end
 
   def delete_record
     DatablockStorageRecord.where(channel_id: params[:channel_id], table_name: params[:table_name], record_id: params[:record_id]).delete_all
-    render json: null
+    render json: nil
   end
 
   private
