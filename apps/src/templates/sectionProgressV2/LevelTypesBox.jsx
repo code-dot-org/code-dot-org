@@ -7,9 +7,9 @@ import {StrongText} from '@cdo/apps/componentLibrary/typography';
 export default function LevelTypesBox() {
   return (
     <div className={styles.legend}>
-      <div className={styles.headerContainer}>
-        <StrongText>{i18n.levelTypes()}</StrongText>
-      </div>
+      <StrongText className={styles.headerContainer}>
+        {i18n.levelTypes()}
+      </StrongText>
       <div className={styles.icons}>
         <div>
           <LegendItem

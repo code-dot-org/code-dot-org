@@ -57,10 +57,10 @@ export default function AssignmentCompletionStatesBox({
 
   return (
     <div className={styles.legend}>
-      <div className={styles.headerContainer}>
-        <StrongText>{i18n.assignmentCompletionStates()}</StrongText>
-      </div>
-      <div>{legendIcons()}</div>
+      <StrongText className={styles.headerContainer}>
+        {i18n.assignmentCompletionStates()}
+      </StrongText>
+      {legendIcons()}
     </div>
   );
 }
