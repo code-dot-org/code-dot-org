@@ -1,0 +1,18 @@
+#signup
+
+- if @integration_status == :created
+  .row
+    .span10.header
+      %h1= t('Thank you for registering your LMS!')
+  .row
+    .span10
+      %p= t('lti.integration_portal_success_body').html_safe
+      %p= t('lti.integration_portal_guide_instructions').html_safe
+- else
+  .row
+    .span10.header
+      %h1= t('Looks like you\'re are already registered!')
+  .row
+    .span10
+      %p= t('lti.integration_portal_exists_body').html_safe
+      %p= t('lti.integration_portal_guide_instructions').html_safe

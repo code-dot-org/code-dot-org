@@ -251,7 +251,7 @@ class LtiV1Controller < ApplicationController
     end
   end
 
-  # POST /lti/v1/integrations
+  # POST /lti/v1/integration
   # Creates a new LtiIntegration
   def create_integration
     begin
@@ -277,6 +277,7 @@ class LtiV1Controller < ApplicationController
     access_token_url = platform_urls[:access_token_url]
 
     existing_integration = Queries::Lti.get_lti_integration(issuer, client_id)
+    @integration_status = nil
 
     if existing_integration.nil?
       Services::Lti.create_lti_integration(
@@ -288,10 +289,18 @@ class LtiV1Controller < ApplicationController
         access_token_url: access_token_url,
         admin_email: admin_email
       )
-      render status: :ok, json: {body: I18n.t('lti.create_integration_success')}
-    else
-      render status: :conflict, json: {error: I18n.t('lti.error.integration_exists')}
+
+      @integration_status = :created
     end
+    render 'lti/v1/integration_status'
+  end
+
+  # GET /lti/v1/integration
+  # Displays the onboarding portal for creating a new LTI Integration
+  def new_integration
+    @form_data = {}
+    @form_data[:lms_platforms] = Policies::Lti::LMS_PLATFORMS.keys.map(&:to_s)
+    render lti_v1_integration_path
   end
 
   private
