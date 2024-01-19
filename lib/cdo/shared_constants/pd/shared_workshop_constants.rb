@@ -140,6 +140,9 @@ module Pd
       ARTIFICIAL_INTELLIGENCE_AND_MACHINE_LEARNING = 'Teaching Artificial Intelligence and Machine Learning'.freeze,
       PROBLEM_SOLVING_AND_COMPUTING = 'Teaching Problem Solving and Computing'.freeze,
       INTERACTIVE_ANIMATIONS_AND_GAMES = 'Teaching Interactive Animations and Games'.freeze,
+      TEACHING_CS_CONNECTIONS = 'Teaching CS Connections'.freeze,
+      CS_BASICS_FOR_K5_TEACHERS = 'Computer Science Basics for K-5 Teachers'.freeze,
+      TEACHING_DESIGN_PROCESS = 'Teaching Design Process'.freeze,
     ].freeze
 
     NOT_FUNDED_SUBJECTS = [
