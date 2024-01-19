@@ -12,11 +12,11 @@ import {
 } from '@cdo/apps/code-studio/progressRedux';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {PanelsLevelData} from './types';
-import panelsLocale from './locale';
 import styles from './panels.module.scss';
 import classNames from 'classnames';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+const commonI18n = require('@cdo/locale');
 
 function useWindowSize() {
   const [size, setSize] = useState([
@@ -133,8 +133,8 @@ const PanelsView: React.FunctionComponent = () => {
           className={styles.button}
         >
           {currentPanel < levelPanels.panels.length - 1
-            ? panelsLocale.next()
-            : panelsLocale.continue()}
+            ? commonI18n.next()
+            : commonI18n.continue()}
         </button>
         <div id="panels-bubbles">
           {Array.from(Array(levelPanels.panels.length).keys()).map(index => {
