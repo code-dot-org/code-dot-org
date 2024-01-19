@@ -87,7 +87,7 @@ export class ShowCalloutsWrapper extends React.Component {
       if (matches?.length === 2) {
         const calloutId = matches[1];
         const textContent = showCallout.childNodes[0].textContent;
-        var newNode = document.createElement('span');
+        const newNode = document.createElement('span');
         newNode.innerHTML = `<b style="cursor: pointer">${textContent}</b>`;
         newNode.onclick = () => this.props.showCallout(calloutId);
         showCallout.replaceWith(newNode);
@@ -104,10 +104,13 @@ export class ShowCalloutsWrapper extends React.Component {
  * A wrapper for our SafeMarkdown component which adds some extra
  * functionality.
  *
- * Right now, that extra functionality is limited to support for the
- * "expandable images" functionality, but the intent is for this to serve as a
- * common place to implement all of the other things we do on _top_ of
- * markdown; embedded Blockly, links automatically opening in a new tab, etc.
+ * Right now, that extra functionality is limited to:
+ *   - Support for the "expandable images" functionality.
+ *   - Support for clickable text that shows a callout.
+ *
+ * But the intent is for this to serve as a common place to implement all of
+ * the other things we do on _top_ of markdown; embedded Blockly, links
+ * automatically opening in a new tab, etc.
  */
 export default class EnhancedSafeMarkdown extends React.Component {
   static propTypes = {
