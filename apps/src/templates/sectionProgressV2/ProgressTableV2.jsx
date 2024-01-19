@@ -72,7 +72,7 @@ function ProgressTableV2({
         sortedStudents={sortedStudents}
         unitName={unitData?.title}
         sectionId={sectionId}
-        isSkeleton={isSkeleton && students.length === 0}
+        isSkeleton={true} //isSkeleton && students.length === 0}
       />
 
       <div className={styles.table}>{renderedColumns}</div>
