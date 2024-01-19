@@ -1545,6 +1545,7 @@
   "loginTypePictureAgeGroup": "Recommended for ages 4 - 8",
   "loginTypePictureDescription": "You will create accounts for your students. Students will log in with a secret picture.",
   "loginTypeSyncButton": "Sync students from {providerName}",
+  "loginTypeSyncButtonLti": "Sync students & sections from {providerName}",
   "loginTypeSyncButton_failure": "An error occurred. Click here to try again.",
   "loginTypeSyncButton_failure_more_info": "An error occurred. Click here for more info.",
   "loginTypeSyncButton_inProgress": "Connecting to {providerName}...",
