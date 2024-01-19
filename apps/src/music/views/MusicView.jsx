@@ -104,6 +104,7 @@ class UnconnectedMusicView extends React.Component {
     updateLoadProgress: PropTypes.func,
     appName: PropTypes.string,
     setUndoStatus: PropTypes.func,
+    loop: PropTypes.object,
   };
 
   constructor(props) {
@@ -232,6 +233,14 @@ class UnconnectedMusicView extends React.Component {
       prevProps.startingPlayheadPosition !== this.props.startingPlayheadPosition
     ) {
       this.player.jumpToPosition(this.props.startingPlayheadPosition);
+    }
+
+    if (prevProps.loop !== this.props.loop) {
+      if (this.props.loop) {
+        this.player.enableLoop(this.props.loop.start, this.props.loop.end);
+      } else {
+        this.player.disableLoop();
+      }
     }
   }
 
@@ -743,6 +752,7 @@ const MusicView = connect(
     isReadOnlyWorkspace: isReadOnlyWorkspace(state),
     appName: state.lab.levelProperties?.appName,
     startingPlayheadPosition: state.music.startingPlayheadPosition,
+    loop: state.music.loop,
   }),
   dispatch => ({
     setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),

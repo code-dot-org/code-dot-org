@@ -2,9 +2,10 @@
  * TODO:
  * - sequence playback
  * - Effects
- * - Experiment with loops and (x) skips
+ * - (x) Experiment with (x) loops and (x) skips
  * - (x) Clean up playback event -> tone js events
  * - (x) Rename interfaces
+ * - Clean up looping code
  */
 
 import {SoundLoadCallbacks} from '../types';
@@ -45,6 +46,16 @@ class ToneJSPlayer {
 
   goToPosition(position: string) {
     Tone.Transport.position = position;
+  }
+
+  enableLoop(startPosition: string, endPosition: string) {
+    Tone.Transport.loop = true;
+    Tone.Transport.loopStart = startPosition;
+    Tone.Transport.loopEnd = endPosition;
+  }
+
+  disableLoop() {
+    Tone.Transport.loop = false;
   }
 
   async loadSounds(sampleIds: string[], callbacks?: SoundLoadCallbacks) {

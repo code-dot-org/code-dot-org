@@ -217,6 +217,17 @@ export default class MusicPlayer {
     this.tonePlayer.goToPosition(this.playbackTimeToTransportTime(position));
   }
 
+  enableLoop(start: number, end: number) {
+    this.tonePlayer.enableLoop(
+      this.playbackTimeToTransportTime(start),
+      this.playbackTimeToTransportTime(end)
+    );
+  }
+
+  disableLoop() {
+    this.tonePlayer.disableLoop();
+  }
+
   /**
    * Stop playback. Tells the {@link SamplePlayer} to stop all sample playback.
    */
