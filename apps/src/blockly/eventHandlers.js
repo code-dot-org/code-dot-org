@@ -102,7 +102,7 @@ export function reflowToolbox(event) {
     mainWorkspaceFlyout.reflow();
   }
   if (Blockly.functionEditor) {
-    const modalWorkspace = Blockly.functionEditor.editorWorkspace;
+    const modalWorkspace = Blockly.getFunctionEditorWorkspace();
     const modalWorkspaceFlyout = findFlyout(modalWorkspace);
     if (modalWorkspaceFlyout) {
       modalWorkspaceFlyout.reflow();
