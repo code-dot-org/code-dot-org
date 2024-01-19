@@ -195,13 +195,35 @@ Feature: Checking the footer appearance
 
     Then I close my eyes
 
-  @eyes_mobile @as_student @skip
+  @eyes_mobile @as_student 
   Scenario: Mobile Applab share small footer
     When I open my eyes to test "Mobile Applab share small footer"
     Given I am on "http://studio.code.org/home"
     And I start a new Applab project
     And I navigate to the shared version of my project
     And I rotate to portrait
+    And I wait until element ".small-footer-base" is visible
+
+    # Additional wait to let scroll position settle and possibly have the
+    # pin-to-home-screen popup go away
+    And I wait for 20 seconds
+
+    Then I see no difference for "small footer portrait"
+
+    When I open the small footer menu
+    Then I see no difference for "footer menu portrait"
+
+    When I press menu item "Copyright"
+    Then I see no difference for "copyright flyout portrait"
+
+    Then I close my eyes
+
+  @eyes_mobile @as_student 
+  Scenario: Mobile Applab share small footer
+    When I open my eyes to test "Mobile Applab share small footer"
+    Given I am on "http://studio.code.org/home"
+    And I start a new Applab project
+    And I navigate to the shared version of my project
     And I wait until element ".small-footer-base" is visible
 
     # Additional wait to let scroll position settle and possibly have the
