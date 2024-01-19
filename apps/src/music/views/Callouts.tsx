@@ -19,7 +19,7 @@ const availableCallouts: {
 /**
  * Renders one of several pre-defined callouts.
  *
- * TODO: This system is a good candidate to be made available
+ * TODO: This component is a good candidate to be made available
  * for all Lab2 labs.
  */
 const Callouts: React.FunctionComponent = () => {
