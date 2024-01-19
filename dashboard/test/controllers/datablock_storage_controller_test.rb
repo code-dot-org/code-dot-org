@@ -55,7 +55,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   test "creates a record" do
     post _url(:create_record), params: {
       table_name: 'mytable',
-      record_json: {name: 'bob', age: 8}.to_json,
+      record_json: {"name"=>'bob', "age"=>8}.to_json,
     }
     assert_response :success
     get _url(:read_records), params: {
@@ -119,7 +119,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   test "deletes a record" do
     post _url(:create_record), params: {
       table_name: 'mytable',
-      record_json: {name: 'bob', age: 8}.to_json,
+      record_json: {'name'=>'bob', 'age'=>8}.to_json,
     }
     assert_response :success
     # assert_equal 1, JSON.parse(@response.body).id
@@ -135,6 +135,28 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     val = JSON.parse(@response.body)
     assert_equal [], val
+  end
+
+  test "updates a record" do
+    post _url(:create_record), params: {
+      table_name: 'mytable',
+      record_json: {'name'=> 'bob', 'age'=> 8}.to_json,
+    }
+    assert_response :success
+
+    assert_equal 1, @response.parsed_body['id']
+    put _url(:update_record), params: {
+      table_name: 'mytable',
+      record_id: 1,
+      record_json: {'name'=>'sally', 'age'=>10}.to_json
+    }
+    assert_response :success
+    get _url(:read_records), params: {
+      table_name: 'mytable',
+    }
+    assert_response :success
+    val = JSON.parse(@response.body)
+    assert_equal [{'name'=>'sally', 'age'=>10, 'id'=>1}], val
   end
 
   #   it('deletes a record', done => {
