@@ -23,7 +23,9 @@ export interface SimpleDropdownProps {
   className?: string;
   /** Is SimpleDropdown disabled */
   disabled?: boolean;
-  /** SimpleDropdown color */
+  /** SimpleDropdown color. Sets the color of dropdown arrow, text, label and border color.
+   * White stands for 'white' dropdown that'll be rendered on dark background,
+   * 'black' stands for black dropdown that'll be rendered on the white/light background. */
   color?: 'white' | 'black';
   /** SimpleDropdown size */
   size: ComponentSizeXSToL;
