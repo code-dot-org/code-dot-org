@@ -1,17 +1,17 @@
 import React from 'react';
 import i18n from '@cdo/locale';
 import LegendItem from './LegendItem';
-import './section-progress-refresh.scss';
+import styles from './section-progress-refresh.module.scss';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
 
 export default function LevelTypesBox() {
   return (
-    <div className="legend">
-      <div className="headerContainer">
+    <div className={styles.legend}>
+      <div className={styles.headerContainer}>
         <StrongText>{i18n.levelTypes()}</StrongText>
       </div>
       <div>
-        <div className="icons">
+        <div className={styles.icons}>
           <div>
             <div>
               <LegendItem

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './section-progress-refresh.scss';
+import styles from './section-progress-refresh.module.scss';
 import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '../FontAwesome';
@@ -23,8 +23,12 @@ export default function LegendItem({
   const iconColorStyle = fontAwesomeColor
     ? fontAwesomeColor
     : color.neutral_dark;
-  const needsFeedbackTriangle = <div className={'needs-feedback corner-box'} />;
-  const feedbackGivenTriangle = <div className={'feedback-given corner-box'} />;
+  const needsFeedbackTriangle = (
+    <div className={`${styles.needsFeedback} ${styles.cornerBox}`} />
+  );
+  const feedbackGivenTriangle = (
+    <div className={`${styles.feedbackGiven} ${styles.cornerBox}`} />
+  );
   const notStartedBox = (
     <ProgressBox
       started={false}
@@ -46,20 +50,20 @@ export default function LegendItem({
     />
   );
   return (
-    <div className="legend-item">
+    <div className={styles.legendItem}>
       {fontAwesomeId && (
         <FontAwesome
           id={'uitest-' + fontAwesomeId}
           icon={fontAwesomeId}
           style={{color: iconColorStyle}}
-          className="font-awesome-icon"
+          className={styles.fontAwesomeIcon}
         />
       )}
       {stateDescription === NOT_STARTED && notStartedBox}
       {stateDescription === VIEWED && viewedBox}
       {stateDescription === NEEDS_FEEDBACK && needsFeedbackTriangle}
       {stateDescription === FEEDBACK_GIVEN && feedbackGivenTriangle}
-      <BodyThreeText className="label-text">{labelText}</BodyThreeText>
+      <BodyThreeText className={styles.labelText}>{labelText}</BodyThreeText>
     </div>
   );
 }
