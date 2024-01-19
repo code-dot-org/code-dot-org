@@ -8,6 +8,8 @@
 // The library data should definitely live elsewhere.
 
 import {BlockDefinition} from '@cdo/apps/blockly/types';
+import {PanelsLevelData} from '@cdo/apps/panels/types';
+
 export interface Channel {
   id: string;
   name: string;
@@ -119,17 +121,6 @@ export interface ProjectLevelData {
 export interface VideoLevelData {
   src: string;
   download: string;
-}
-
-// The level data for a panels level that doesn't require
-// reloads between levels.
-export interface PanelsLevelData {
-  panels: [
-    {
-      imageUrl: string;
-      text: string;
-    }
-  ];
 }
 
 // TODO: Add AichatLevelData.
