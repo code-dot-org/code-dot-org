@@ -5,7 +5,7 @@ import logToCloud from './logToCloud';
 import {makeEnum} from './utils';
 
 /** @enum {string} */
-export const LogLevel = makeEnum('ERROR', 'WARNING', 'INFO');
+export const LogLevel = makeEnum('ERROR', 'WARNING');
 
 /**
  * Logging, annotation and error reporting mediator for use with toolkits where
@@ -29,7 +29,6 @@ export default class JavaScriptModeErrorHandler {
    * @param {number} [lineNumber]
    */
   outputError(errorString, lineNumber, libraryName) {
-    console.log('error', errorString, lineNumber, libraryName);
     this.output_(errorString, LogLevel.ERROR, lineNumber, libraryName);
   }
 
@@ -41,17 +40,7 @@ export default class JavaScriptModeErrorHandler {
    * @param {number} [lineNumber]
    */
   outputWarning(errorString, lineNumber) {
-    console.log('warning', errorString, lineNumber);
     this.output_(errorString, LogLevel.WARNING, lineNumber);
-  }
-
-  /**
-   * General info.
-   * @param {string} infoString
-   * @param {number} [lineNumber]
-   */
-  outputInfo(infoString, lineNumber) {
-    this.output_(infoString, LogLevel.INFO, lineNumber);
   }
 
   /**
