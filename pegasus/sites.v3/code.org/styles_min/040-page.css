@@ -429,6 +429,60 @@ td {
   }
 }
 
+/* Start carousel styles ------------------------ */
+.carousel-wrapper {
+  position: relative;
+}
+
+/* Sets the font-family for text/image carousels */
+.carousel-wrapper p {
+  font-family: var(--barlowSemiCondensed-medium), sans-serif;
+}
+
+/* Sets the font-family for .action-block carousels */
+.carousel-wrapper .action-block p {
+  font-family: var(--main-font), sans-serif;
+}
+
+/* Swiper carousel library styles */
+swiper-slide {
+  display: flex;
+  align-items: stretch;
+  height: auto;
+}
+
+.carousel-wrapper .swiper-nav-prev,
+.carousel-wrapper .swiper-nav-next {
+  position: absolute;
+  top: 42%;
+  border: 0;
+  height: 48px;
+}
+
+.carousel-wrapper .swiper-nav-prev {
+  background: url("/images/carousel/prev.svg") no-repeat;
+  left: -4rem;
+  border: 0;
+}
+
+.carousel-wrapper .swiper-nav-next {
+  background: url("/images/carousel/next.svg") no-repeat;
+  right: -4rem;
+}
+
+.carousel-wrapper .swiper-button-disabled {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel-wrapper .swiper-nav-prev,
+  .carousel-wrapper .swiper-nav-next {
+    display: none;
+  }
+}
+
+/* Begin legacy styles ------------------------ */
+
 /* for homepage 2.0.. */
 #homepage .clear {
   clear: both;
