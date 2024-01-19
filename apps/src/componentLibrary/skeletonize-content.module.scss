@@ -1,6 +1,9 @@
 @import "color.scss";
 
-.skeletonize {
+// Apply this style to your component to replace content with a loading skeleton animation.
+// This is a greyscale box that animates a gradient from left to right.
+// The animation is infinite.
+.skeletonizeContent {
   display: inline-block;
   height: 1em;
   position: relative;
