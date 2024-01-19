@@ -8,17 +8,10 @@
   "properties": {
     "encrypted": "false",
     "background": "music-black",
+    "long_instructions": "#Pick a Sound\n\nThere are a ton of sounds you can select. Change up the beat!\n\nIn the workspace, there's a block that plays a beat. Click the name of the sound to select a new sound to play, and then press the Run button to take a listen!\n",
     "level_data": {
       "library": "will",
       "startSources": {
-        "variables": [
-          {
-            "name": "currentTime"
-          },
-          {
-            "name": "i"
-          }
-        ],
         "blocks": {
           "languageVersion": 0,
           "blocks": [
@@ -26,12 +19,13 @@
               "type": "when_run_simple2",
               "id": "when-run-block",
               "x": 30,
-              "y": 30
+              "y": 30,
+              "deletable": false,
+              "movable": false
             }
           ]
         }
       },
-      "text": "#Pick a Sound\n\nThere are a ton of sounds you can select. Change up the beat!\n\nIn the workspace, there's a block that plays a beat. Click the name of the sound to select a new sound to play, and then press the Run button to take a listen!\n",
       "validations": [
         {
           "conditions": [
