@@ -2153,75 +2153,66 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@blockly/block-shareable-procedures@npm:~1.2.11":
-  version: 1.2.11
-  resolution: "@blockly/block-shareable-procedures@npm:1.2.11"
+"@blockly/block-shareable-procedures@npm:~4.0.5":
+  version: 4.0.6
+  resolution: "@blockly/block-shareable-procedures@npm:4.0.6"
   peerDependencies:
-    blockly: ^9.3.0
-  checksum: 7027b319feab1994ac46e67d9e8931bc4b7f7a3c4ee7345f37c056b65acb3a6c72db46a418b4c6834e5d802490b84240e02fd1db893d9315d795adeecbcde1a3
+    blockly: ^10.2.0
+  checksum: ef0ee49918357ba64bcfe21fc31f3011a5a1ef6e2d16ea702c597c434f666a34940245356ec8f783c880a3f8fc794f5d6db9499fd9cb686380dad7a8f16b9505
   languageName: node
   linkType: hard
 
-"@blockly/field-grid-dropdown@npm:~2.0.2":
-  version: 2.0.2
-  resolution: "@blockly/field-grid-dropdown@npm:2.0.2"
+"@blockly/field-grid-dropdown@npm:~4.0.9":
+  version: 4.0.10
+  resolution: "@blockly/field-grid-dropdown@npm:4.0.10"
   peerDependencies:
-    blockly: ^9.0.0
-  checksum: 3104e5510434438d80863fe966cd210f4b42c04c201e689dfb731a038f80c6948706f15d22deceeea09ec44e9aed0eb7b677e5b8b9158b6cd32af8ad9f80ee6e
+    blockly: ^10.0.0
+  checksum: 76f4e9d92a45ef31dc1c44e83e7ae35aaa9937a56423a808aeb18a3f08c642fa8903dec078129ae622fc5d679da4a7946aa51391738b4f6359f166ab4c01f29f
   languageName: node
   linkType: hard
 
-"@blockly/keyboard-navigation@npm:0.3.6":
-  version: 0.3.6
-  resolution: "@blockly/keyboard-navigation@npm:0.3.6"
+"@blockly/keyboard-navigation@npm:~0.5.6":
+  version: 0.5.7
+  resolution: "@blockly/keyboard-navigation@npm:0.5.7"
   peerDependencies:
-    blockly: ^9.0.0
-  checksum: e6325ba0c9cbb18d59132c6c8ed717b73f7957ab53b47d14fea87877632adc20e66e272268e59aa83328faf0630a70bf321ec4fad18334d4d775c6356c593497
+    blockly: ^10.2.0
+  checksum: 0d92312640f941794f5b15e2c6707373715dcc44ecb9f3f6bf86a0b61740512e0882ff40f0ea1ac0502f2c20035396b07fda56b4c37dbc38f524063f38a155cd
   languageName: node
   linkType: hard
 
-"@blockly/plugin-cross-tab-copy-paste@npm:^2.0.7":
-  version: 2.0.7
-  resolution: "@blockly/plugin-cross-tab-copy-paste@npm:2.0.7"
+"@blockly/plugin-cross-tab-copy-paste@npm:~5.0.4":
+  version: 5.0.5
+  resolution: "@blockly/plugin-cross-tab-copy-paste@npm:5.0.5"
   peerDependencies:
-    blockly: ^9.0.0
-  checksum: 6bcce714e04117883bc54a42c3f4810026c8162f5bec7700a4f080dbca46ea87852bb34e239db49fc60e91c974ac894d02799341c4f73fc429c12d0040d4debd
+    blockly: ^10.2.0
+  checksum: 27b7da1ef3c21287619e1cd9d9ad6a5db67a83968d1acbb5d5fecfee9a7dc63146da505cceebe4b68befc6bf5fac7a5787221cb4ab8997b2611a2c3273f3c375
   languageName: node
   linkType: hard
 
-"@blockly/plugin-scroll-options@npm:~3.0.3":
-  version: 3.0.3
-  resolution: "@blockly/plugin-scroll-options@npm:3.0.3"
+"@blockly/plugin-scroll-options@npm:~5.0.8":
+  version: 5.0.9
+  resolution: "@blockly/plugin-scroll-options@npm:5.0.9"
   peerDependencies:
-    blockly: ^9.0.0
-  checksum: 7be9e02f60ce07f2346f2bde29b34f855073aa5ede6af628dfa0b238423f6909e1c365039205447be1cc58beeda266e86f771367221a66050972c67236f23f85
+    blockly: ^10.0.0
+  checksum: 365c2750f6b55e5eac70c158cade9b6d1c7106ff9e9d9db9d62335135a1f994d1329db865b16f46c2bc1a07059d9aa588fe94b5efd0ef13861cceb70ca037d1d
   languageName: node
   linkType: hard
 
-"@blockly/renderer-inline-row-separators@npm:^0.2.13":
-  version: 0.2.14
-  resolution: "@blockly/renderer-inline-row-separators@npm:0.2.14"
+"@blockly/theme-dark@npm:6.0.4":
+  version: 6.0.4
+  resolution: "@blockly/theme-dark@npm:6.0.4"
   peerDependencies:
-    blockly: ^9.0.0
-  checksum: b1d4e828fa5fead415c16b3a5016b33bf397a8b7cf7fc1ee62a181a0564b4c254cc2f2f3a941556c5fd3a982c1a85bce9546b644a422a7cbe7cfd0519a40cf0a
+    blockly: ^10.0.0
+  checksum: 29b364af1953f70fc1f39fa261571a1f4ccda3a7049707083cfc3f71591e8bde44f34721842b43f5a74c5e8c8942e87c59e3cb078a13ded6fc8e56ffb1ca147f
   languageName: node
   linkType: hard
 
-"@blockly/theme-dark@npm:^4.0.3":
-  version: 4.0.3
-  resolution: "@blockly/theme-dark@npm:4.0.3"
+"@blockly/theme-highcontrast@npm:5.0.4":
+  version: 5.0.4
+  resolution: "@blockly/theme-highcontrast@npm:5.0.4"
   peerDependencies:
-    blockly: ^9.0.0
-  checksum: cf27b62cc84c555ad18332000cd253a24acee3c2b92d09acad2034c06608e8bf403e003da16b6afa6204488e8ecf20189de4eec14d11cb41fd3ddcd3c9255e87
-  languageName: node
-  linkType: hard
-
-"@blockly/theme-highcontrast@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "@blockly/theme-highcontrast@npm:3.0.3"
-  peerDependencies:
-    blockly: ^9.0.0
-  checksum: b9f07425053316e13d72ffbbd1989c6eac34fbc82507bf5dec622ed7c5751f90482a17b5bc6c9c957c7888104a41ab562be3c96079c069cf40fa5014e04a1512
+    blockly: ^10.0.0
+  checksum: 9b709d12ca79371edf0fa2b0da27d3d7e163ca53a13eef05ee9275e4142f12fb6d85e8293ec2d069fe6be9c46717e233854646260a1711a8124429d228b056b9
   languageName: node
   linkType: hard
 
@@ -2721,6 +2712,160 @@ __metadata:
   version: 0.2.5
   resolution: "@emotion/weak-memoize@npm:0.2.5"
   checksum: 27d402b0c683b94658220b6d47840346ee582329ca2a15ec9c233492e0f1a27687ccb233b76eedc922f2e185e444cc89f7b97a81a1d3e5ae9f075bab08e965ea
+  languageName: node
+  linkType: hard
+
+"@esbuild/android-arm64@npm:0.19.8":
+  version: 0.19.8
+  resolution: "@esbuild/android-arm64@npm:0.19.8"
+  conditions: os=android & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@esbuild/android-arm@npm:0.19.8":
+  version: 0.19.8
+  resolution: "@esbuild/android-arm@npm:0.19.8"
+  conditions: os=android & cpu=arm
+  languageName: node
+  linkType: hard
+
+"@esbuild/android-x64@npm:0.19.8":
+  version: 0.19.8
+  resolution: "@esbuild/android-x64@npm:0.19.8"
+  conditions: os=android & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@esbuild/darwin-arm64@npm:0.19.8":
+  version: 0.19.8
+  resolution: "@esbuild/darwin-arm64@npm:0.19.8"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@esbuild/darwin-x64@npm:0.19.8":
+  version: 0.19.8
+  resolution: "@esbuild/darwin-x64@npm:0.19.8"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@esbuild/freebsd-arm64@npm:0.19.8":
+  version: 0.19.8
+  resolution: "@esbuild/freebsd-arm64@npm:0.19.8"
+  conditions: os=freebsd & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@esbuild/freebsd-x64@npm:0.19.8":
+  version: 0.19.8
+  resolution: "@esbuild/freebsd-x64@npm:0.19.8"
+  conditions: os=freebsd & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@esbuild/linux-arm64@npm:0.19.8":
+  version: 0.19.8
+  resolution: "@esbuild/linux-arm64@npm:0.19.8"
+  conditions: os=linux & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@esbuild/linux-arm@npm:0.19.8":
+  version: 0.19.8
+  resolution: "@esbuild/linux-arm@npm:0.19.8"
+  conditions: os=linux & cpu=arm
+  languageName: node
+  linkType: hard
+
+"@esbuild/linux-ia32@npm:0.19.8":
+  version: 0.19.8
+  resolution: "@esbuild/linux-ia32@npm:0.19.8"
+  conditions: os=linux & cpu=ia32
+  languageName: node
+  linkType: hard
+
+"@esbuild/linux-loong64@npm:0.19.8":
+  version: 0.19.8
+  resolution: "@esbuild/linux-loong64@npm:0.19.8"
+  conditions: os=linux & cpu=loong64
+  languageName: node
+  linkType: hard
+
+"@esbuild/linux-mips64el@npm:0.19.8":
+  version: 0.19.8
+  resolution: "@esbuild/linux-mips64el@npm:0.19.8"
+  conditions: os=linux & cpu=mips64el
+  languageName: node
+  linkType: hard
+
+"@esbuild/linux-ppc64@npm:0.19.8":
+  version: 0.19.8
+  resolution: "@esbuild/linux-ppc64@npm:0.19.8"
+  conditions: os=linux & cpu=ppc64
+  languageName: node
+  linkType: hard
+
+"@esbuild/linux-riscv64@npm:0.19.8":
+  version: 0.19.8
+  resolution: "@esbuild/linux-riscv64@npm:0.19.8"
+  conditions: os=linux & cpu=riscv64
+  languageName: node
+  linkType: hard
+
+"@esbuild/linux-s390x@npm:0.19.8":
+  version: 0.19.8
+  resolution: "@esbuild/linux-s390x@npm:0.19.8"
+  conditions: os=linux & cpu=s390x
+  languageName: node
+  linkType: hard
+
+"@esbuild/linux-x64@npm:0.19.8":
+  version: 0.19.8
+  resolution: "@esbuild/linux-x64@npm:0.19.8"
+  conditions: os=linux & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@esbuild/netbsd-x64@npm:0.19.8":
+  version: 0.19.8
+  resolution: "@esbuild/netbsd-x64@npm:0.19.8"
+  conditions: os=netbsd & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@esbuild/openbsd-x64@npm:0.19.8":
+  version: 0.19.8
+  resolution: "@esbuild/openbsd-x64@npm:0.19.8"
+  conditions: os=openbsd & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@esbuild/sunos-x64@npm:0.19.8":
+  version: 0.19.8
+  resolution: "@esbuild/sunos-x64@npm:0.19.8"
+  conditions: os=sunos & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@esbuild/win32-arm64@npm:0.19.8":
+  version: 0.19.8
+  resolution: "@esbuild/win32-arm64@npm:0.19.8"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@esbuild/win32-ia32@npm:0.19.8":
+  version: 0.19.8
+  resolution: "@esbuild/win32-ia32@npm:0.19.8"
+  conditions: os=win32 & cpu=ia32
+  languageName: node
+  linkType: hard
+
+"@esbuild/win32-x64@npm:0.19.8":
+  version: 0.19.8
+  resolution: "@esbuild/win32-x64@npm:0.19.8"
+  conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
@@ -3231,6 +3376,19 @@ __metadata:
   version: 2.11.7
   resolution: "@popperjs/core@npm:2.11.7"
   checksum: 5b6553747899683452a1d28898c1b39173a4efd780e74360bfcda8eb42f1c5e819602769c81a10920fc68c881d07fb40429604517d499567eac079cfa6470f19
+  languageName: node
+  linkType: hard
+
+"@pyodide/webpack-plugin@npm:^1.3.2":
+  version: 1.3.2
+  resolution: "@pyodide/webpack-plugin@npm:1.3.2"
+  dependencies:
+    acorn-walk: ^8.2.0
+    copy-webpack-plugin: ^11.0.0
+    esbuild: ^0.19.5
+  peerDependencies:
+    pyodide: ">=0.21.3"
+  checksum: 3ba27f95af12eec1e9d25d7f5fe0c6e7be63367a2fbe6bd04d5814a592116ceb2e75902424427a62d637cff134108e5ae64496bd2036806f8b52d359211625e4
   languageName: node
   linkType: hard
 
@@ -6046,6 +6204,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"acorn-walk@npm:^8.2.0":
+  version: 8.3.0
+  resolution: "acorn-walk@npm:8.3.0"
+  checksum: 15ea56ab6529135be05e7d018f935ca80a572355dd3f6d3cd717e36df3346e0f635a93ae781b1c7942607693e2e5f3ef81af5c6fc697bbadcc377ebda7b7f5f6
+  languageName: node
+  linkType: hard
+
 "acorn@npm:^6.4.1":
   version: 6.4.2
   resolution: "acorn@npm:6.4.2"
@@ -6236,7 +6401,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ajv-keywords@npm:^5.0.0":
+"ajv-keywords@npm:^5.0.0, ajv-keywords@npm:^5.1.0":
   version: 5.1.0
   resolution: "ajv-keywords@npm:5.1.0"
   dependencies:
@@ -6292,6 +6457,18 @@ __metadata:
     require-from-string: ^2.0.2
     uri-js: ^4.2.2
   checksum: 5e0ff226806763be73e93dd7805b634f6f5921e3e90ca04acdf8db81eed9d8d3f0d4c5f1213047f45ebbf8047ffe0c840fa1ef2ec42c3a644899f69aa72b5bef
+  languageName: node
+  linkType: hard
+
+"ajv@npm:^8.9.0":
+  version: 8.12.0
+  resolution: "ajv@npm:8.12.0"
+  dependencies:
+    fast-deep-equal: ^3.1.1
+    json-schema-traverse: ^1.0.0
+    require-from-string: ^2.0.2
+    uri-js: ^4.2.2
+  checksum: 4dc13714e316e67537c8b31bc063f99a1d9d9a497eb4bbd55191ac0dcd5e4985bbb71570352ad6f1e76684fb6d790928f96ba3b2d4fd6e10024be9612fe3f001
   languageName: node
   linkType: hard
 
@@ -7596,6 +7773,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"base-64@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "base-64@npm:1.0.0"
+  checksum: d10b64a1fc9b2c5a5f39f1ce1e6c9d1c5b249222bbfa3a0604c592d90623caf74419983feadd8a170f27dc0c3389704f72faafa3e645aeb56bfc030c93ff074a
+  languageName: node
+  linkType: hard
+
 "base64-arraybuffer@npm:0.1.5":
   version: 0.1.5
   resolution: "base64-arraybuffer@npm:0.1.5"
@@ -7770,14 +7954,13 @@ __metadata:
     "@babel/polyfill": ^7.12.1
     "@babel/preset-env": ^7.18.10
     "@babel/preset-react": ^7.18.6
-    "@blockly/block-shareable-procedures": ~1.2.11
-    "@blockly/field-grid-dropdown": ~2.0.2
-    "@blockly/keyboard-navigation": 0.3.6
-    "@blockly/plugin-cross-tab-copy-paste": ^2.0.7
-    "@blockly/plugin-scroll-options": ~3.0.3
-    "@blockly/renderer-inline-row-separators": ^0.2.13
-    "@blockly/theme-dark": ^4.0.3
-    "@blockly/theme-highcontrast": ^3.0.3
+    "@blockly/block-shareable-procedures": ~4.0.5
+    "@blockly/field-grid-dropdown": ~4.0.9
+    "@blockly/keyboard-navigation": ~0.5.6
+    "@blockly/plugin-cross-tab-copy-paste": ~5.0.4
+    "@blockly/plugin-scroll-options": ~5.0.8
+    "@blockly/theme-dark": 6.0.4
+    "@blockly/theme-highcontrast": 5.0.4
     "@cdo/interpreted": "link:../dashboard/config/libraries"
     "@code-dot-org/artist": 0.2.1
     "@code-dot-org/blockly": 4.0.14
@@ -7804,6 +7987,7 @@ __metadata:
     "@dsco_/link": ^1.1.2
     "@lezer/highlight": ^1.2.0
     "@microsoft/immersive-reader-sdk": ^1.1.0
+    "@pyodide/webpack-plugin": ^1.3.2
     "@react-bootstrap/pagination": ^1.0.0
     "@reduxjs/toolkit": ^1.9.3
     "@storybook/addon-a11y": ^6.5.16
@@ -7828,7 +8012,7 @@ __metadata:
     babel-plugin-add-module-exports: ^0.2.1
     babel-plugin-dynamic-import-node: ^2.3.0
     babel-plugin-syntax-async-functions: ^6.8.0
-    blockly: 9.3.3
+    blockly: 10.3.1
     bootstrap-sass: ^3.3.6
     browser-process-hrtime: 0.1.2
     buffer: ^6.0.3
@@ -7840,6 +8024,7 @@ __metadata:
     chai-xml: ^0.3.2
     chalk: ^1.1.3
     chart.js: ^4.4.0
+    circular-dependency-plugin: ^5.2.2
     classnames: ^2.3.2
     codemirror: 5.5
     codemirror-spell-checker: ^1.1.2
@@ -7938,6 +8123,7 @@ __metadata:
     progress-bar-webpack-plugin: ^2.1.0
     prop-types: ^15.6.2
     pusher-js: 4.1.0
+    pyodide: ^0.24.1
     qrcode.react: ^0.8.0
     qtip2: 2.2.0
     query-string: 4.1.0
@@ -8015,6 +8201,7 @@ __metadata:
     stylelint-config-standard: ^33.0.0
     stylelint-config-standard-scss: ^9.0.0
     survey-react: ^1.9.28
+    swiper: ^11.0.5
     terser-webpack-plugin: ^5.3.6
     timers-browserify: ^2.0.12
     ts-loader: ^9.4.2
@@ -8041,12 +8228,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"blockly@npm:9.3.3":
-  version: 9.3.3
-  resolution: "blockly@npm:9.3.3"
+"blockly@npm:10.3.1":
+  version: 10.3.1
+  resolution: "blockly@npm:10.3.1"
   dependencies:
-    jsdom: 21.1.1
-  checksum: 73ecb2b97c4d4e0ade7e47155f916b7a415b8f4085af010e61af6455490efc588504becbef78faaad5e4802eebe2a626eb8ee804cb2ff105f4737915b82e45fe
+    jsdom: 22.1.0
+  checksum: cf81278b77c992d244a07e1a9957f29ffe835b8e54522decd555f59b7b02e1e60ec02fc6dd1aed9fc5d5053b5d18df0fcfc2e3befb0e731abd553da8630e7ef4
   languageName: node
   linkType: hard
 
@@ -9209,6 +9396,15 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"circular-dependency-plugin@npm:^5.2.2":
+  version: 5.2.2
+  resolution: "circular-dependency-plugin@npm:5.2.2"
+  peerDependencies:
+    webpack: ">=4.0.1"
+  checksum: d1a51e7f86e72d9e7a08c47234511cc7a5c3050781c2d6dcc77c0b22214f94f272702488c952e59b2af589c67944160ad1c9c0b7b3e0d4f89222f2a27ebf085e
+  languageName: node
+  linkType: hard
+
 "class-utils@npm:^0.3.5":
   version: 0.3.6
   resolution: "class-utils@npm:0.3.6"
@@ -9878,6 +10074,22 @@ canvg@gabelerner/canvg:
   version: 0.1.1
   resolution: "copy-descriptor@npm:0.1.1"
   checksum: d4b7b57b14f1d256bb9aa0b479241048afd7f5bcf22035fc7b94e8af757adeae247ea23c1a774fe44869fd5694efba4a969b88d966766c5245fdee59837fe45b
+  languageName: node
+  linkType: hard
+
+"copy-webpack-plugin@npm:^11.0.0":
+  version: 11.0.0
+  resolution: "copy-webpack-plugin@npm:11.0.0"
+  dependencies:
+    fast-glob: ^3.2.11
+    glob-parent: ^6.0.1
+    globby: ^13.1.1
+    normalize-path: ^3.0.0
+    schema-utils: ^4.0.0
+    serialize-javascript: ^6.0.0
+  peerDependencies:
+    webpack: ^5.1.0
+  checksum: df4f8743f003a29ee7dd3d9b1789998a3a99051c92afb2ba2203d3dacfa696f4e757b275560fafb8f206e520a0aa78af34b990324a0e36c2326cefdeef3ca82e
   languageName: node
   linkType: hard
 
@@ -12186,6 +12398,83 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
+"esbuild@npm:^0.19.5":
+  version: 0.19.8
+  resolution: "esbuild@npm:0.19.8"
+  dependencies:
+    "@esbuild/android-arm": 0.19.8
+    "@esbuild/android-arm64": 0.19.8
+    "@esbuild/android-x64": 0.19.8
+    "@esbuild/darwin-arm64": 0.19.8
+    "@esbuild/darwin-x64": 0.19.8
+    "@esbuild/freebsd-arm64": 0.19.8
+    "@esbuild/freebsd-x64": 0.19.8
+    "@esbuild/linux-arm": 0.19.8
+    "@esbuild/linux-arm64": 0.19.8
+    "@esbuild/linux-ia32": 0.19.8
+    "@esbuild/linux-loong64": 0.19.8
+    "@esbuild/linux-mips64el": 0.19.8
+    "@esbuild/linux-ppc64": 0.19.8
+    "@esbuild/linux-riscv64": 0.19.8
+    "@esbuild/linux-s390x": 0.19.8
+    "@esbuild/linux-x64": 0.19.8
+    "@esbuild/netbsd-x64": 0.19.8
+    "@esbuild/openbsd-x64": 0.19.8
+    "@esbuild/sunos-x64": 0.19.8
+    "@esbuild/win32-arm64": 0.19.8
+    "@esbuild/win32-ia32": 0.19.8
+    "@esbuild/win32-x64": 0.19.8
+  dependenciesMeta:
+    "@esbuild/android-arm":
+      optional: true
+    "@esbuild/android-arm64":
+      optional: true
+    "@esbuild/android-x64":
+      optional: true
+    "@esbuild/darwin-arm64":
+      optional: true
+    "@esbuild/darwin-x64":
+      optional: true
+    "@esbuild/freebsd-arm64":
+      optional: true
+    "@esbuild/freebsd-x64":
+      optional: true
+    "@esbuild/linux-arm":
+      optional: true
+    "@esbuild/linux-arm64":
+      optional: true
+    "@esbuild/linux-ia32":
+      optional: true
+    "@esbuild/linux-loong64":
+      optional: true
+    "@esbuild/linux-mips64el":
+      optional: true
+    "@esbuild/linux-ppc64":
+      optional: true
+    "@esbuild/linux-riscv64":
+      optional: true
+    "@esbuild/linux-s390x":
+      optional: true
+    "@esbuild/linux-x64":
+      optional: true
+    "@esbuild/netbsd-x64":
+      optional: true
+    "@esbuild/openbsd-x64":
+      optional: true
+    "@esbuild/sunos-x64":
+      optional: true
+    "@esbuild/win32-arm64":
+      optional: true
+    "@esbuild/win32-ia32":
+      optional: true
+    "@esbuild/win32-x64":
+      optional: true
+  bin:
+    esbuild: bin/esbuild
+  checksum: 1dff99482ecbfcc642ec66c71e4dc5c73ce6aef68e8158a4937890b570e86a95959ac47e0f14785ba70df5a673ae4289df88a162e9759b02367ed28074cee8ba
+  languageName: node
+  linkType: hard
+
 "escalade@npm:^3.1.1":
   version: 3.1.1
   resolution: "escalade@npm:3.1.1"
@@ -12936,6 +13225,19 @@ es6-shim@latest:
     merge2: ^1.2.3
     micromatch: ^3.1.10
   checksum: 304ccff1d437fcc44ae0168b0c3899054b92e0fd6af6ad7c3ccc82ab4ddd210b99c7c739d60ee3686da2aa165cd1a31810b31fd91f7c2a575d297342a9fc0534
+  languageName: node
+  linkType: hard
+
+"fast-glob@npm:^3.2.11, fast-glob@npm:^3.3.0":
+  version: 3.3.2
+  resolution: "fast-glob@npm:3.3.2"
+  dependencies:
+    "@nodelib/fs.stat": ^2.0.2
+    "@nodelib/fs.walk": ^1.2.3
+    glob-parent: ^5.1.2
+    merge2: ^1.3.0
+    micromatch: ^4.0.4
+  checksum: 900e4979f4dbc3313840078419245621259f349950411ca2fa445a2f9a1a6d98c3b5e7e0660c5ccd563aa61abe133a21765c6c0dec8e57da1ba71d8000b05ec1
   languageName: node
   linkType: hard
 
@@ -14457,6 +14759,19 @@ es6-shim@latest:
     merge2: ^1.4.1
     slash: ^3.0.0
   checksum: b4be8885e0cfa018fc783792942d53926c35c50b3aefd3fdcfb9d22c627639dc26bd2327a40a0b74b074100ce95bb7187bfeae2f236856aa3de183af7a02aea6
+  languageName: node
+  linkType: hard
+
+"globby@npm:^13.1.1":
+  version: 13.2.2
+  resolution: "globby@npm:13.2.2"
+  dependencies:
+    dir-glob: ^3.0.1
+    fast-glob: ^3.3.0
+    ignore: ^5.2.4
+    merge2: ^1.4.1
+    slash: ^4.0.0
+  checksum: f3d84ced58a901b4fcc29c846983108c426631fe47e94872868b65565495f7bee7b3defd68923bd480582771fd4bbe819217803a164a618ad76f1d22f666f41e
   languageName: node
   linkType: hard
 
@@ -17682,7 +17997,43 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"jsdom@npm:21.1.1, jsdom@npm:^21.1.1":
+"jsdom@npm:22.1.0":
+  version: 22.1.0
+  resolution: "jsdom@npm:22.1.0"
+  dependencies:
+    abab: ^2.0.6
+    cssstyle: ^3.0.0
+    data-urls: ^4.0.0
+    decimal.js: ^10.4.3
+    domexception: ^4.0.0
+    form-data: ^4.0.0
+    html-encoding-sniffer: ^3.0.0
+    http-proxy-agent: ^5.0.0
+    https-proxy-agent: ^5.0.1
+    is-potential-custom-element-name: ^1.0.1
+    nwsapi: ^2.2.4
+    parse5: ^7.1.2
+    rrweb-cssom: ^0.6.0
+    saxes: ^6.0.0
+    symbol-tree: ^3.2.4
+    tough-cookie: ^4.1.2
+    w3c-xmlserializer: ^4.0.0
+    webidl-conversions: ^7.0.0
+    whatwg-encoding: ^2.0.0
+    whatwg-mimetype: ^3.0.0
+    whatwg-url: ^12.0.1
+    ws: ^8.13.0
+    xml-name-validator: ^4.0.0
+  peerDependencies:
+    canvas: ^2.5.0
+  peerDependenciesMeta:
+    canvas:
+      optional: true
+  checksum: d955ab83a6dad3e6af444098d30647c719bbb4cf97de053aa5751c03c8d6f3283d8c4d7fc2774c181f1d432fb0250e7332bc159e6b466424f4e337d73adcbf30
+  languageName: node
+  linkType: hard
+
+"jsdom@npm:^21.1.1":
   version: 21.1.1
   resolution: "jsdom@npm:21.1.1"
   dependencies:
@@ -20510,6 +20861,13 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
+"nwsapi@npm:^2.2.4":
+  version: 2.2.7
+  resolution: "nwsapi@npm:2.2.7"
+  checksum: cab25f7983acec7e23490fec3ef7be608041b460504229770e3bfcf9977c41d6fe58f518994d3bd9aa3a101f501089a3d4a63536f4ff8ae4b8c4ca23bdbfda4e
+  languageName: node
+  linkType: hard
+
 "oauth-sign@npm:~0.9.0":
   version: 0.9.0
   resolution: "oauth-sign@npm:0.9.0"
@@ -22666,6 +23024,16 @@ es6-shim@latest:
     faye-websocket: 0.9.4
     xmlhttprequest: ^1.8.0
   checksum: d1a11de48abf47f0939010eeda5da2acac3b2d177b29847a0f73003da978d641b8346c62d94556795bc05b5feb8ab1b7811d010692ffa348df20c6b8f0daa612
+  languageName: node
+  linkType: hard
+
+"pyodide@npm:^0.24.1":
+  version: 0.24.1
+  resolution: "pyodide@npm:0.24.1"
+  dependencies:
+    base-64: ^1.0.0
+    ws: ^8.5.0
+  checksum: ab18e5eed3195b919c0e70b39a81bab0449ab56e42f28e8635664e688dba732da060492505719c3cb477302979791dbcc1df09ff39dc9e0816064b69818f283d
   languageName: node
   linkType: hard
 
@@ -25296,6 +25664,18 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
+"schema-utils@npm:^4.0.0":
+  version: 4.2.0
+  resolution: "schema-utils@npm:4.2.0"
+  dependencies:
+    "@types/json-schema": ^7.0.9
+    ajv: ^8.9.0
+    ajv-formats: ^2.1.1
+    ajv-keywords: ^5.1.0
+  checksum: 26a0463d47683258106e6652e9aeb0823bf0b85843039e068b57da1892f7ae6b6b1094d48e9ed5ba5cbe9f7166469d880858b9d91abe8bd249421eb813850cde
+  languageName: node
+  linkType: hard
+
 "script-loader@npm:^0.7.2":
   version: 0.7.2
   resolution: "script-loader@npm:0.7.2"
@@ -25866,6 +26246,13 @@ es6-shim@latest:
   version: 3.0.0
   resolution: "slash@npm:3.0.0"
   checksum: 94a93fff615f25a999ad4b83c9d5e257a7280c90a32a7cb8b4a87996e4babf322e469c42b7f649fd5796edd8687652f3fb452a86dc97a816f01113183393f11c
+  languageName: node
+  linkType: hard
+
+"slash@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "slash@npm:4.0.0"
+  checksum: da8e4af73712253acd21b7853b7e0dbba776b786e82b010a5bfc8b5051a1db38ed8aba8e1e8f400dd2c9f373be91eb1c42b66e91abb407ff42b10feece5e1d2d
   languageName: node
   linkType: hard
 
@@ -27140,6 +27527,13 @@ es6-shim@latest:
   version: 1.0.0
   resolution: "svg-tags@npm:1.0.0"
   checksum: 407e5ef87cfa2fb81c61d738081c2decd022ce13b922d035b214b49810630bf5d1409255a4beb3a940b77b32f6957806deff16f1bf0ce1ab11c7a184115a0b7f
+  languageName: node
+  linkType: hard
+
+"swiper@npm:^11.0.5":
+  version: 11.0.5
+  resolution: "swiper@npm:11.0.5"
+  checksum: 83b125d16733a66ed5f58627c81263116e39eea5cead92667d2e24692ff94632de9aa05fec1ed80dc352779c0d7525e9a18424fce1c39c5e970823414b212edb
   languageName: node
   linkType: hard
 
@@ -29870,6 +30264,21 @@ temporal@latest:
     utf-8-validate:
       optional: true
   checksum: 2152cf862cae0693f3775bc688a6afb2e989d19d626d215e70f5fcd8eb55b1c3b0d3a6a4052905ec320e2d7734e20aeedbf9744496d62f15a26ad79cf4cf7dae
+  languageName: node
+  linkType: hard
+
+"ws@npm:^8.5.0":
+  version: 8.14.2
+  resolution: "ws@npm:8.14.2"
+  peerDependencies:
+    bufferutil: ^4.0.1
+    utf-8-validate: ">=5.0.2"
+  peerDependenciesMeta:
+    bufferutil:
+      optional: true
+    utf-8-validate:
+      optional: true
+  checksum: 3ca0dad26e8cc6515ff392b622a1467430814c463b3368b0258e33696b1d4bed7510bc7030f7b72838b9fdeb8dbd8839cbf808367d6aae2e1d668ce741d4308b
   languageName: node
   linkType: hard
 

@@ -36,7 +36,7 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
    * 2. Create MenuItems for the buttons and add them before we render the menu.
    */
   showEditor_(opt_e = undefined) {
-    this.dropdownCreate_();
+    this.dropdownCreate();
     if (opt_e && typeof opt_e.clientX === 'number') {
       this.menu_.openingCoords = new Blockly.utils.Coordinate(
         opt_e.clientX,
