@@ -481,7 +481,18 @@ swiper-slide {
   }
 }
 
-/* Begin legacy styles ------------------------ */
+/* Video carousel styles */
+.carousel-wrapper.video-carousel swiper-slide {
+  display: block;
+  text-align: left;
+}
+
+.carousel-wrapper.video-carousel .swiper-nav-prev,
+.carousel-wrapper.video-carousel .swiper-nav-next {
+  top: 28%;
+}
+
+/* Legacy styles ------------------------ */
 
 /* for homepage 2.0.. */
 #homepage .clear {
