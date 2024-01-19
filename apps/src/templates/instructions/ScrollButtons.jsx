@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import classNames from 'classnames';
 import color from '../../util/color';
 import FontAwesome from '../../templates/FontAwesome';
+import moduleStyles from './scroll-buttons.module.scss';
 
 import {addMouseUpTouchEvent} from '../../dom';
 import {getOuterHeight, scrollBy} from './utils';
@@ -60,7 +62,15 @@ class ScrollButtons extends React.Component {
     this.scrollStart(DIRECTIONS.DOWN);
   };
 
-  scrollStart(dir) {
+  singleScrollUp = () => {
+    this.singleScroll(DIRECTIONS.UP);
+  };
+
+  singleScrollDown = () => {
+    this.singleScroll(DIRECTIONS.DOWN);
+  };
+
+  singleScroll(dir) {
     // initial scroll in response to button click
     const contentContainer = this.props.getScrollTarget();
     let initialScroll = SCROLL_BY;
@@ -68,9 +78,12 @@ class ScrollButtons extends React.Component {
       initialScroll *= -1;
     }
     scrollBy(contentContainer, initialScroll);
+  }
 
+  scrollStart(dir) {
     // If mouse is held down for half a second, begin gradual continuous
     // scroll
+    const contentContainer = this.props.getScrollTarget();
     this.scrollTimeout = setTimeout(
       function () {
         this.scrollInterval = setInterval(
@@ -107,7 +120,8 @@ class ScrollButtons extends React.Component {
       ? this.props.height > 100
       : this.props.height > 60;
 
-    let upStyle = {
+    // check minecraft and remove
+    const upStyle = {
       opacity: this.props.visible ? 1 : 0,
       top: '10px',
       margin: '0 0 3px 0',
@@ -115,6 +129,7 @@ class ScrollButtons extends React.Component {
       transform: 'translateX(-50%)',
     };
 
+    // check minecraft and remove
     const downStyle = {
       opacity: this.props.visible ? 1 : 0,
       bottom: '10px',
@@ -148,19 +163,27 @@ class ScrollButtons extends React.Component {
         <img src="/blockly/media/1x1.gif" className="scroll-up-btn" alt="" />
       </button>
     ) : (
-      <div
+      <button
+        type="button"
         ref={c => {
           this.scrollUp = c;
         }}
         key="scrollUp"
+        onClick={this.singleScrollUp}
         onMouseDown={this.scrollStartUp}
-        style={[styles.all, styles.arrowGlyph, upStyle]}
+        className={classNames(
+          moduleStyles.all,
+          moduleStyles.arrowGlyph,
+          moduleStyles.up,
+          this.props.visible && moduleStyles.visible,
+          centerItems && moduleStyles.upCenter
+        )}
       >
         <FontAwesome
           icon="caret-up"
           style={{lineHeight: '22px', pointerEvents: 'none'}}
         />
-      </div>
+      </button>
     );
 
     const downButton = this.props.isMinecraft ? (
@@ -183,8 +206,15 @@ class ScrollButtons extends React.Component {
         }}
         className="uitest-scroll-button-down"
         key="scrollDown"
+        onClick={this.singleScrollDown}
         onMouseDown={this.scrollStartDown}
-        style={[styles.all, styles.arrowGlyph, downStyle]}
+        style={[
+          styles.all,
+          styles.arrowGlyph,
+          styles.down,
+          this.props.visible && styles.visible,
+          centerItems && styles.downCenter,
+        ]}
       >
         <FontAwesome
           icon="caret-down"
@@ -214,6 +244,28 @@ const styles = {
     fontSize: 50,
     color: color.neutral_dark,
     cursor: 'pointer',
+  },
+  up: {
+    opacity: 0,
+    top: '10px',
+    margin: '0 0 3px 0',
+    left: 25,
+    transform: 'translateX(-50%)',
+  },
+  visible: {
+    opacity: 1,
+  },
+  upCenter: {
+    left: '50%',
+  },
+  down: {
+    opacity: 0,
+    bottom: '10px',
+    right: 25,
+    transform: 'translateX(50%)',
+  },
+  downCenter: {
+    right: '50%',
   },
 };
 

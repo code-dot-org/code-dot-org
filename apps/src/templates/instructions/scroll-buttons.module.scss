@@ -1,0 +1,32 @@
+@import "color";
+@import '../../mixins.scss';
+
+.all {
+  position: absolute;
+  transition: opacity 200ms;
+  margin: 0;
+}
+
+.arrowGlyph {
+  font-size: 50px;
+  color: $neutral_dark;
+  cursor: pointer;
+}
+
+.up {
+  @include remove-button-styles;
+  opacity: 0;
+  top: 10px;
+  margin: 0 0 3px 0;
+  left: 25px;
+  transform: translateX(-50%);
+}
+
+.visible {
+  opacity: 1;
+};
+
+// move within center?
+.upCenter {
+  left: 50%;
+};
