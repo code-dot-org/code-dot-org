@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
-import LegendItem from './LegendItem';
+import LegendItem, {ITEM_TYPE} from './LegendItem';
 import styles from './section-progress-refresh.module.scss';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
-import {NOT_STARTED} from './IconKey';
-import color from '@cdo/apps/util/color';
 
 export default function AssignmentCompletionStatesBox({
   isViewingLevelProgress,
@@ -18,25 +16,27 @@ export default function AssignmentCompletionStatesBox({
         <div className={styles.legendColumn}>
           <div className={styles.legendItemContainer}>
             <LegendItem
-              stateDescription={NOT_STARTED}
+              itemType={ITEM_TYPE.NOT_STARTED}
               labelText={i18n.notStarted()}
             />
           </div>
           <div className={styles.legendItemContainer}>
-            <LegendItem fontAwesomeId="dash" labelText={i18n.noOnlineWork()} />
+            <LegendItem
+              itemType={ITEM_TYPE.NO_ONLINE_WORK}
+              labelText={i18n.noOnlineWork()}
+            />
           </div>
         </div>
         <div className={styles.legendColumn}>
           <div className={styles.legendItemContainer}>
             <LegendItem
-              fontAwesomeId="circle-o"
+              itemType={ITEM_TYPE.IN_PROGRESS}
               labelText={i18n.inProgress()}
             />
           </div>
           <div className={styles.legendItemContainer}>
             <LegendItem
-              fontAwesomeId="circle"
-              fontAwesomeColor={color.product_affirmative_default}
+              itemType={ITEM_TYPE.SUBMITTED}
               labelText={i18n.submitted()}
             />
           </div>
@@ -45,9 +45,8 @@ export default function AssignmentCompletionStatesBox({
           <div className={styles.legendColumn}>
             <div className={styles.legendItemContainer}>
               <LegendItem
+                itemType={ITEM_TYPE.VALIDATED}
                 labelText={i18n.validated()}
-                fontAwesomeId="circle-check"
-                fontAwesomeColor={color.product_affirmative_default}
               />
             </div>
           </div>

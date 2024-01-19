@@ -7,11 +7,6 @@ import LevelTypesBox from './LevelTypesBox';
 import TeacherActionsBox from './TeacherActionsBox';
 import AssignmentCompletionStatesBox from './AssignmentCompletionStatesBox';
 
-export const NOT_STARTED = 'Not started';
-export const VIEWED = 'Viewed';
-export const NEEDS_FEEDBACK = 'Needs feedback';
-export const FEEDBACK_GIVEN = 'Feedback given';
-
 export default function IconKey({isViewingLevelProgress, hasLevelValidation}) {
   const [isOpen, setIsOpen] = useState(false);
 
