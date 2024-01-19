@@ -11,7 +11,7 @@ import {
   navigateToNextLevel,
 } from '@cdo/apps/code-studio/progressRedux';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
-import {PanelsLevelData} from '@cdo/apps/lab2/types';
+import {PanelsLevelData} from './types';
 import panelsLocale from './locale';
 import styles from './panels.module.scss';
 import classNames from 'classnames';
@@ -80,24 +80,24 @@ const PanelsView: React.FunctionComponent = () => {
   // screen.
   const verticalMargin = 50;
 
-  // We need room below the video for the children passed in.  This area
+  // We need room below the panels content for the children passed in.  This area
   // can contain things like a Continue button.
   const childrenAreaHeight = 70;
 
   // The aspect ratio of the panels.
-  const videoAspectRatio = 16 / 9;
+  const contentAspectRatio = 16 / 9;
 
   let [targetWidth, targetHeight] = useWindowSize();
   targetWidth -= horizontalMargin * 2;
   targetHeight -= verticalMargin * 2 + childrenAreaHeight;
 
   let width, height;
-  if (targetWidth / targetHeight > videoAspectRatio) {
+  if (targetWidth / targetHeight > contentAspectRatio) {
     height = targetHeight;
-    width = videoAspectRatio * height;
+    width = contentAspectRatio * height;
   } else {
     width = targetWidth;
-    height = width / videoAspectRatio;
+    height = width / contentAspectRatio;
   }
 
   if (!levelPanels?.panels) {
