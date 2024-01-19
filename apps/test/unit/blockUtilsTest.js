@@ -349,18 +349,18 @@ describe('block utils', () => {
 
   describe('interpolateInputs', () => {
     let fakeBlockly, fakeBlock, fakeInput;
-    let appendDummyInput, appendField, setCheck, appendValueInput, setAlign;
+    let appendEndRowInput, appendField, setCheck, appendValueInput, setAlign;
     beforeEach(() => {
-      appendDummyInput = sinon.stub();
+      appendEndRowInput = sinon.stub();
       appendValueInput = sinon.stub();
-      fakeBlock = {appendDummyInput, appendValueInput};
+      fakeBlock = {appendEndRowInput, appendValueInput};
 
       appendField = sinon.stub();
       setCheck = sinon.stub();
       setAlign = sinon.stub();
       fakeInput = {setCheck, appendField, setAlign};
 
-      appendDummyInput.returns(fakeInput);
+      appendEndRowInput.returns(fakeInput);
       appendValueInput.returns(fakeInput);
       appendField.returns(fakeInput);
       setCheck.returns(fakeInput);
@@ -388,7 +388,7 @@ describe('block utils', () => {
       expect(fakeBlockly.FieldDropdown).to.have.been.calledOnce;
       const dropdownArg = fakeBlockly.FieldDropdown.firstCall.args[0];
       expect(dropdownArg).to.deep.equal(TEST_SPRITES);
-      expect(appendDummyInput).to.have.been.calledOnce;
+      expect(appendEndRowInput).to.have.been.calledOnce;
       expect(appendField).to.have.been.calledWith(sinon.match.any, 'ANIMATION');
     });
 
@@ -423,7 +423,7 @@ describe('block utils', () => {
         ])
       );
 
-      expect(appendDummyInput).to.have.been.calledOnce;
+      expect(appendEndRowInput).to.have.been.calledOnce;
       expect(appendField).to.have.been.calledWith('block field');
     });
 
@@ -475,7 +475,7 @@ describe('block utils', () => {
 
       expect(appendValueInput).to.have.been.calledWith('VALUE');
       expect(appendField).to.have.been.calledWith('prefix');
-      expect(appendDummyInput).to.have.been.calledOnce;
+      expect(appendEndRowInput).to.have.been.calledOnce;
       expect(appendField).to.have.been.calledWith('suffix');
     });
 

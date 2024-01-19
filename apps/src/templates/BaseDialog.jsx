@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {BASE_DIALOG_WIDTH} from '../constants';
+import Button from './Button';
+import color from '../util/color';
+import i18n from '@cdo/locale';
 
 /**
  * BaseDialog
@@ -134,15 +137,6 @@ export default class BaseDialog extends React.Component {
         width: this.props.fixedWidth || BASE_DIALOG_WIDTH,
         marginLeft: -this.props.fixedWidth / 2 || -350,
       };
-      xCloseStyle = {
-        position: 'absolute',
-        top: 0,
-        right: 0,
-        padding: 10,
-        color: '#ddd',
-        cursor: 'pointer',
-        fontSize: 24,
-      };
     } else if (this.props.noModalStyles) {
       modalClassNames = '';
       modalBodyClassNames = '';
@@ -155,6 +149,16 @@ export default class BaseDialog extends React.Component {
         marginLeft: 0,
       }),
       ...this.props.style,
+    };
+    xCloseStyle = {
+      position: 'absolute',
+      top: 0,
+      right: 0,
+      padding: 0,
+      color: color.neutral_dark30,
+      cursor: 'pointer',
+      fontSize: 24,
+      border: 'none',
     };
 
     modalBodyClassNames = [modalBodyClassNames, this.props.bodyClassName]
@@ -174,22 +178,16 @@ export default class BaseDialog extends React.Component {
           id={this.props.bodyId}
           className={modalBodyClassNames}
         >
-          {!this.props.uncloseable &&
-            !this.props.hideCloseButton &&
-            (this.props.useUpdatedStyles ? (
-              <i
-                id="x-close"
-                className="fa fa-times"
-                style={xCloseStyle}
-                onClick={this.closeDialog}
-              />
-            ) : (
-              <div
-                id="x-close"
-                className="x-close"
-                onClick={this.closeDialog}
-              />
-            ))}
+          {!this.props.uncloseable && !this.props.hideCloseButton && (
+            <Button
+              id="x-close"
+              onClick={this.closeDialog}
+              icon="fa-solid fa-xmark"
+              style={xCloseStyle}
+              color="white"
+              aria-label={i18n.closeDialog()}
+            />
+          )}
           {this.props.children}
         </div>
       </div>

@@ -69,7 +69,7 @@ describe('SchoolInfoConfirmationDialog', () => {
     handleClickUpdateStub.callsFake(() => {});
     wrapper.setState({showSchoolInterstitial: false});
     wrapper.find('Button');
-    expect(wrapper.find('Button').length).to.equal(2);
+    expect(wrapper.find('Button').length).to.equal(3);
   });
 
   describe('fetch', () => {
