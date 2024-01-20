@@ -76,10 +76,6 @@ const Timeline = () => {
 
   const onMeasuresBackgroundClick = useCallback(
     event => {
-      // Ignore if playing
-      // if (isPlaying) {
-      //   return;
-      // }
       const offset =
         event.clientX - event.target.getBoundingClientRect().x - paddingOffset;
       const exactMeasure = offset / barWidth + 1;
