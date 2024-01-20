@@ -48,7 +48,7 @@ describe('VocabulariesEditor', () => {
       .first();
     removeVocabularyButton.simulate('mouseDown');
     const removeDialog = wrapper.find('Dialog');
-    const deleteButton = removeDialog.find('button').at(1);
+    const deleteButton = removeDialog.find('button').at(2);
     deleteButton.simulate('click');
     expect(removeVocabulary).to.have.been.calledOnce;
   });
@@ -63,7 +63,7 @@ describe('VocabulariesEditor', () => {
       .first();
     removeVocabularyButton.simulate('mouseDown');
     const removeDialog = wrapper.find('Dialog');
-    const cancelButton = removeDialog.find('button').at(0);
+    const cancelButton = removeDialog.find('button').at(1);
     cancelButton.simulate('click');
     expect(removeVocabulary).not.to.have.been.called;
   });

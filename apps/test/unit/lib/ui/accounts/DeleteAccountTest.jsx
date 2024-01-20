@@ -23,7 +23,7 @@ describe('DeleteAccount', () => {
         isDeleteAccountDialogOpen: true,
         deleteVerification: DELETE_VERIFICATION_STRING,
       });
-      const confirmButton = wrapper.find('Button').at(0);
+      const confirmButton = wrapper.find('Button').at(1);
       expect(confirmButton).to.have.attr('disabled');
     });
 
@@ -33,7 +33,7 @@ describe('DeleteAccount', () => {
         isDeleteAccountDialogOpen: true,
         password: 'password',
       });
-      const confirmButton = wrapper.find('Button').at(0);
+      const confirmButton = wrapper.find('Button').at(1);
       expect(confirmButton).to.have.attr('disabled');
     });
 
@@ -44,7 +44,7 @@ describe('DeleteAccount', () => {
         password: 'password',
         deleteVerification: 'some other string',
       });
-      const confirmButton = wrapper.find('Button').at(0);
+      const confirmButton = wrapper.find('Button').at(1);
       expect(confirmButton).to.have.attr('disabled');
     });
 
@@ -57,7 +57,7 @@ describe('DeleteAccount', () => {
           isDeleteAccountDialogOpen: true,
           deleteVerification: DELETE_VERIFICATION_STRING,
         });
-        const confirmButton = wrapper.find('Button').at(0);
+        const confirmButton = wrapper.find('Button').at(1);
         expect(confirmButton).to.not.have.attr('disabled');
       });
 
@@ -68,7 +68,7 @@ describe('DeleteAccount', () => {
           password: 'password',
           deleteVerification: DELETE_VERIFICATION_STRING,
         });
-        const confirmButton = wrapper.find('Button').at(0);
+        const confirmButton = wrapper.find('Button').at(1);
         expect(confirmButton).to.not.have.attr('disabled');
       });
     });
@@ -118,7 +118,7 @@ describe('DeleteAccount', () => {
           deleteVerification: DELETE_VERIFICATION_STRING,
           checkboxes,
         });
-        const confirmButton = wrapper.find('Button').at(0);
+        const confirmButton = wrapper.find('Button').at(1);
         expect(confirmButton).to.have.attr('disabled');
       });
 
@@ -138,7 +138,7 @@ describe('DeleteAccount', () => {
           deleteVerification: DELETE_VERIFICATION_STRING,
           checkboxes,
         });
-        const confirmButton = wrapper.find('Button').at(0);
+        const confirmButton = wrapper.find('Button').at(1);
         expect(confirmButton).to.not.have.attr('disabled');
       });
 
@@ -158,7 +158,7 @@ describe('DeleteAccount', () => {
           deleteVerification: DELETE_VERIFICATION_STRING,
           checkboxes,
         });
-        const confirmButton = wrapper.find('Button').at(0);
+        const confirmButton = wrapper.find('Button').at(1);
         expect(confirmButton).to.not.have.attr('disabled');
       });
 
@@ -175,7 +175,7 @@ describe('DeleteAccount', () => {
           password: 'password',
           deleteVerification: DELETE_VERIFICATION_STRING,
         });
-        const confirmButton = wrapper.find('Button').at(0);
+        const confirmButton = wrapper.find('Button').at(1);
         expect(confirmButton).to.not.have.attr('disabled');
       });
     });
@@ -191,7 +191,7 @@ describe('DeleteAccount', () => {
         password: 'password',
         deleteVerification: DELETE_VERIFICATION_STRING,
       });
-      confirmButton = wrapper.find('Button').at(0);
+      confirmButton = wrapper.find('Button').at(1);
       server = sinon.fakeServer.create();
     });
 

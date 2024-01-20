@@ -384,6 +384,8 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   Section::LOGIN_TYPES.each do |desired_type|
+    # LTI Section are not created using this API.
+    next if desired_type == Section::LOGIN_TYPE_LTI_V1
     test "can set login_type to #{desired_type} during creation" do
       sign_in @teacher
       post :create, params: {
