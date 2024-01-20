@@ -18,8 +18,6 @@ export interface SampleEvent {
   triggered: boolean;
   effects?: Effects;
   lengthSeconds?: number;
-  pitchShift: number;
-  playbackRate: number;
 }
 
 interface PlayingSample {
@@ -185,9 +183,7 @@ export default class SamplePlayer {
           undefined,
           false,
           sampleEvent.effects,
-          sampleEvent.lengthSeconds,
-          sampleEvent.pitchShift,
-          sampleEvent.playbackRate
+          sampleEvent.lengthSeconds
         );
 
         if (uniqueId !== undefined) {

@@ -47,9 +47,7 @@ class SoundPlayer {
     onStop: () => void = () => undefined,
     loop = false,
     effects: Effects | undefined = undefined,
-    duration: number | undefined = undefined,
-    pitchShift = 0,
-    playbackRate = 1
+    duration: number | undefined = undefined
   ) {
     // Set up a tag group if we don't have one already.
     if (!this.tagGroups[groupTag]) {
@@ -75,9 +73,7 @@ class SoundPlayer {
           onStop();
         }
       },
-      duration,
-      pitchShift,
-      playbackRate
+      duration
     );
 
     tagGroup.sources.push({source: source, id: this.audioIdUpto});
