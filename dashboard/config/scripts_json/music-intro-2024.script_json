@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "music-intro",
-    "serialized_at": "2024-01-10 04:53:11 UTC",
+    "serialized_at": "2024-01-16 23:03:28 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "teacher",
@@ -343,7 +343,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "musiclab_intro_video_end"
+          "musiclab_intro_panels_end"
         ],
         "lesson.key": "Music Lab introduction",
         "lesson_group.key": "",
@@ -351,7 +351,7 @@
         "activity_section.key": "5f0a9dec-52d3-466e-b76b-e4a921b23a10"
       },
       "level_keys": [
-        "musiclab_intro_video_end"
+        "musiclab_intro_panels_end"
       ]
     },
     {
@@ -464,9 +464,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "musiclab_intro_video_end",
+        "level.key": "musiclab_intro_panels_end",
         "script_level.level_keys": [
-          "musiclab_intro_video_end"
+          "musiclab_intro_panels_end"
         ],
         "lesson.key": "Music Lab introduction",
         "lesson_group.key": "",
