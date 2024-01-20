@@ -316,7 +316,6 @@
     "selectize": "^0.12.4",
     "slate": "^0.81.0",
     "slate-react": "^0.81.0",
-    "soundtouchjs": "^0.1.30",
     "source-map-loader": "^4.0.1",
     "stream-browserify": "^3.0.0",
     "survey-react": "^1.9.28",
