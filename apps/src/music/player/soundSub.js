@@ -1,12 +1,6 @@
-import {getFullNoteName} from '../utils/Notes';
 import SoundEffects from './soundEffects';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-//import * as Tone from 'tone';
-//import '../../../node_modules/tone/build/esm/index.js';
-// const Tone = require('tone');
-
-// import {PitchShifter} from 'soundtouchjs';
 
 const DEFAULT_DELAY_TIME = 60 / 120 / 2;
 
@@ -59,7 +53,6 @@ class AudioSystem {
     }
 
     soundEffects = new SoundEffects(audioContext, DEFAULT_DELAY_TIME);
-    this.samplers = {};
   }
 
   /**

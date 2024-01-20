@@ -2,10 +2,6 @@
  * TODO:
  * - sequence playback
  * - Effects
- * - (x) Experiment with (x) loops and (x) skips
- * - (x) Clean up playback event -> tone js events
- * - (x) Rename interfaces
- * - Clean up looping code
  */
 
 import {SoundLoadCallbacks} from '../types';
