@@ -1,3 +1,5 @@
+import {Key} from './utils/Notes';
+
 export const baseAssetUrl = 'https://curriculum.code.org/media/musiclab/';
 
 export interface Trigger {
@@ -66,3 +68,6 @@ export const REMOTE_STORAGE = 'remote';
 export const MIN_NUM_MEASURES = 30;
 
 export const DEFAULT_LIBRARY = 'default';
+
+export const DEFAULT_BPM = 120;
+export const DEFAULT_KEY = Key.C;

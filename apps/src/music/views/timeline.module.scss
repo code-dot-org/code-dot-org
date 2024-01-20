@@ -153,5 +153,9 @@
     &Playing {
       border-left: 3px yellow solid;
     }
+
+    &Loop {
+      border-left: 3px $light_primary_500 solid;
+    }
   }
 }

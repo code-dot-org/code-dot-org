@@ -36,17 +36,19 @@ export default class MusicPlayer {
     private readonly tonePlayer: ToneJSPlayer = new ToneJSPlayer()
   ) {
     this.metricsReporter = metricsReporter;
-    this.updateConfiguration(bpm, key);
+    this.setBpm(bpm);
+    this.setKey(key);
   }
 
-  updateConfiguration(bpm?: number, key?: Key) {
-    if (bpm) {
-      this.bpm = this.validateBpm(bpm);
-      this.tonePlayer.setBpm(this.bpm);
-    }
-    if (key) {
-      this.key = this.validateKey(key);
-    }
+  setBpm(bpm: number) {
+    this.bpm = bpm;
+    this.tonePlayer.setBpm(bpm);
+    console.log(`Setting BPM to ${bpm}`);
+  }
+
+  setKey(key: Key) {
+    this.key = key;
+    console.log(`Setting key to ${Key[key]}`);
   }
 
   setUpdateLoadProgress(updateLoadProgress: (value: number) => void) {
@@ -217,15 +219,16 @@ export default class MusicPlayer {
     this.tonePlayer.goToPosition(this.playbackTimeToTransportTime(position));
   }
 
-  enableLoop(start: number, end: number) {
-    this.tonePlayer.enableLoop(
-      this.playbackTimeToTransportTime(start),
-      this.playbackTimeToTransportTime(end)
-    );
+  setLoopEnabled(loopEnabled: boolean) {
+    this.tonePlayer.setLoopEnabled(loopEnabled);
   }
 
-  disableLoop() {
-    this.tonePlayer.disableLoop();
+  setLoopStart(position: number) {
+    this.tonePlayer.setLoopStart(this.playbackTimeToTransportTime(position));
+  }
+
+  setLoopEnd(position: number) {
+    this.tonePlayer.setLoopEnd(this.playbackTimeToTransportTime(position));
   }
 
   /**

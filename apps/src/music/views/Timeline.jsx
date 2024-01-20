@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react';
+import React, {useCallback, useMemo} from 'react';
 import moduleStyles from './timeline.module.scss';
 import classNames from 'classnames';
 import TimelineSampleEvents from './TimelineSampleEvents';
@@ -34,7 +34,9 @@ const Timeline = () => {
     MIN_NUM_MEASURES,
     useSelector(state => state.music.lastMeasure)
   );
-  const loop = useSelector(state => state.music.loop);
+  const loopEnabled = useSelector(state => state.music.loopEnabled);
+  const loopStart = useSelector(state => state.music.loopStart);
+  const loopEnd = useSelector(state => state.music.loopEnd);
 
   const getEventHeight = (numUniqueRows, availableHeight = 110) => {
     // While we might not actually have this many rows to show,
@@ -99,36 +101,37 @@ const Timeline = () => {
     [dispatch, isPlaying]
   );
 
-  const showLoopMarkers = useCallback(() => {
-    if (!loop) {
-      return null;
-    }
-
-    const {start, end} = loop;
-    const startOffset = (start - 1) * barWidth;
-    const endOffset = (end - 1) * barWidth;
+  const loopMarkers = useMemo(() => {
+    const startOffset = (loopStart - 1) * barWidth;
+    const endOffset = (loopEnd - 1) * barWidth;
 
     return (
       <>
         <div id="timeline-playhead" className={moduleStyles.fullWidthOverlay}>
           <div
-            className={classNames(moduleStyles.playhead)}
-            style={{left: paddingOffset + startOffset, color: 'green'}}
+            className={classNames(
+              moduleStyles.playhead,
+              moduleStyles.playheadLoop
+            )}
+            style={{left: paddingOffset + startOffset}}
           >
             &nbsp;
           </div>
         </div>
         <div id="timeline-playhead" className={moduleStyles.fullWidthOverlay}>
           <div
-            className={classNames(moduleStyles.playhead)}
-            style={{left: paddingOffset + endOffset, color: 'green'}}
+            className={classNames(
+              moduleStyles.playhead,
+              moduleStyles.playheadLoop
+            )}
+            style={{left: paddingOffset + endOffset}}
           >
             &nbsp;
           </div>
         </div>
       </>
     );
-  }, [loop]);
+  }, [loopStart, loopEnd]);
 
   return (
     <div
@@ -198,7 +201,7 @@ const Timeline = () => {
           &nbsp;
         </div>
       </div>
-      {loop && showLoopMarkers()}
+      {loopEnabled && loopMarkers}
     </div>
   );
 };

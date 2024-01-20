@@ -1,7 +1,8 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {MIN_NUM_MEASURES} from '../constants';
+import {DEFAULT_KEY, DEFAULT_BPM, MIN_NUM_MEASURES} from '../constants';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {FunctionEvents} from '../player/interfaces/FunctionEvents';
+import {Key} from '../utils/Notes';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
@@ -55,12 +56,11 @@ export interface MusicState {
     canUndo: boolean;
     canRedo: boolean;
   };
-  loop:
-    | {
-        start: number;
-        end: number;
-      }
-    | undefined;
+  loopEnabled: boolean;
+  loopStart: number;
+  loopEnd: number;
+  key: Key;
+  bpm: number;
 }
 
 const initialState: MusicState = {
@@ -81,7 +81,11 @@ const initialState: MusicState = {
     canUndo: false,
     canRedo: false,
   },
-  loop: undefined,
+  loopEnabled: false,
+  loopStart: 1,
+  loopEnd: 5,
+  key: DEFAULT_KEY,
+  bpm: DEFAULT_BPM,
 };
 
 const musicSlice = createSlice({
@@ -198,14 +202,32 @@ const musicSlice = createSlice({
     ) => {
       state.undoStatus = action.payload;
     },
-    enableLoop: (
-      state,
-      action: PayloadAction<{start: number; end: number}>
-    ) => {
-      state.loop = action.payload;
+    setLoopEnabled: (state, action: PayloadAction<boolean>) => {
+      state.loopEnabled = action.payload;
     },
-    disableLoop: state => {
-      state.loop = undefined;
+    setLoopStart: (state, action: PayloadAction<number>) => {
+      state.loopStart = action.payload;
+    },
+    setLoopEnd: (state, action: PayloadAction<number>) => {
+      state.loopEnd = action.payload;
+    },
+    setKey: (state, action: PayloadAction<Key>) => {
+      let key = action.payload;
+      if (Key[key] === undefined) {
+        console.warn('Invalid key. Defaulting to C');
+        key = Key.C;
+      }
+
+      state.key = key;
+    },
+    setBpm: (state, action: PayloadAction<number>) => {
+      let bpm = action.payload;
+      if (bpm < 60 || bpm > 200) {
+        console.warn('Invalid BPM. Defaulting to 120');
+        bpm = DEFAULT_BPM;
+      }
+
+      state.bpm = bpm;
     },
   },
 });
@@ -269,6 +291,9 @@ export const {
   moveStartPlayheadPositionForward,
   moveStartPlayheadPositionBackward,
   setUndoStatus,
-  enableLoop,
-  disableLoop,
+  setLoopEnabled,
+  setLoopStart,
+  setLoopEnd,
+  setKey,
+  setBpm,
 } = musicSlice.actions;
