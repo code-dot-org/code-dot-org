@@ -8221,7 +8221,6 @@ __metadata:
     slate: ^0.81.0
     slate-react: ^0.81.0
     sortabular: ^1.6.0
-    soundtouchjs: ^0.1.30
     source-map-loader: ^4.0.1
     sprintf-js: ^1.0.3
     storybook-addon-rtl: ^0.5.0
@@ -26437,13 +26436,6 @@ es6-shim@latest:
     lodash: ">= 4.0.0 < 5.0.0"
     react: ">= 15.0.0 < 17.0.0"
   checksum: e1a793bd76d3772cdfa00438d15982781b7051f988d283a33f791cabe76f0576aa5de38e2f1be45bc687550ca342d194164c347ebc2532a6add6345ba4c2fcc6
-  languageName: node
-  linkType: hard
-
-"soundtouchjs@npm:^0.1.30":
-  version: 0.1.30
-  resolution: "soundtouchjs@npm:0.1.30"
-  checksum: 971802cce200b546ac22eb4ba1c069d2170ca6e399e2d8f8d3e97a7539f551032d435dc93f543fb99be136292acb023d43190f1d27186b84542016c39901f723
   languageName: node
   linkType: hard
 
