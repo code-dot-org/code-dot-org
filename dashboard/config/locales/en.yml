@@ -312,6 +312,7 @@ en:
       email: 'Email'
       google_classroom: 'Google Classroom'
       clever: 'Clever'
+      lti_v1: 'LMS'
   follower:
     invite_sent: 'Invite sent'
     added_teacher: '%{name} added as your teacher'
