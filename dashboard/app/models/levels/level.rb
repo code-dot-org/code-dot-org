@@ -330,6 +330,7 @@ class Level < ApplicationRecord
     'BubbleChoice', # dsl defined, covered in dsl
     'NetSim', # widget
     'Odometer', # widget
+    'Panels', # no ideal solution
     'Pixelation', # widget
     'Poetry', # no ideal solution
     'PublicKeyCryptography', # widget
