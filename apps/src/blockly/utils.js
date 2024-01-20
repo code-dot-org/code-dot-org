@@ -113,3 +113,23 @@ export function shouldSkipHiddenWorkspace(workspace) {
     Blockly.isToolboxMode
   );
 }
+
+/**
+ * Finds the flyout associated with a workspace.
+ * @param {Blockly.Workspace} workspace - The workspace to find the flyout for.
+ * @returns {Blockly.Flyout|null} The flyout associated with the workspace, or null if not found.
+ */
+export function findFlyout(workspace) {
+  if (!workspace) {
+    return null;
+  }
+  if (workspace.flyout) {
+    // Workspace has a single flyout (uncategorized toolbox)
+    return workspace.flyout;
+  }
+  if (workspace.toolbox_ && workspace.toolbox_.flyout_) {
+    // Workspace has a categorized toolbox with a flyout.
+    return workspace.toolbox_.flyout_;
+  }
+  return null;
+}
