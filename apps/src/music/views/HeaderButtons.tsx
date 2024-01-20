@@ -7,9 +7,8 @@ import classNames from 'classnames';
 import React, {useCallback, useContext} from 'react';
 import {useSelector} from 'react-redux';
 import {AnalyticsContext} from '../context';
-import {MusicState, disableLoop, enableLoop} from '../redux/musicRedux';
+import {MusicState} from '../redux/musicRedux';
 import moduleStyles from './undo-redo-buttons.module.scss';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 interface HeaderButtonsProps {
   onClickUndo: () => void;
@@ -30,7 +29,6 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   );
   const analyticsReporter = useContext(AnalyticsContext);
   const dialogControl = useContext(DialogContext);
-  const dispatch = useAppDispatch();
 
   const onClickUndoRedo = useCallback(
     (action: 'undo' | 'redo') => {
@@ -50,25 +48,23 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   );
 
   const onClickStartOver = useCallback(() => {
-    dispatch(enableLoop({start: 1, end: 9}));
-    // if (dialogControl) {
-    //   dialogControl.showDialog(DialogType.StartOver, clearCode);
-    // }
+    if (dialogControl) {
+      dialogControl.showDialog(DialogType.StartOver, clearCode);
+    }
 
-    // if (analyticsReporter) {
-    //   analyticsReporter.onButtonClicked('startOver');
-    // }
-  }, [dispatch]);
+    if (analyticsReporter) {
+      analyticsReporter.onButtonClicked('startOver');
+    }
+  }, [dialogControl, analyticsReporter, clearCode]);
 
   const onFeedbackClicked = () => {
-    dispatch(disableLoop());
-    // if (analyticsReporter) {
-    //   analyticsReporter.onButtonClicked('feedback');
-    //   window.open(
-    //     'https://docs.google.com/forms/d/e/1FAIpQLScnUgehPPNjhSNIcCpRMcHFgtE72TlfTOh6GkER6aJ-FtIwTQ/viewform?usp=sf_link',
-    //     '_blank'
-    //   );
-    // }
+    if (analyticsReporter) {
+      analyticsReporter.onButtonClicked('feedback');
+      window.open(
+        'https://docs.google.com/forms/d/e/1FAIpQLScnUgehPPNjhSNIcCpRMcHFgtE72TlfTOh6GkER6aJ-FtIwTQ/viewform?usp=sf_link',
+        '_blank'
+      );
+    }
   };
 
   return (

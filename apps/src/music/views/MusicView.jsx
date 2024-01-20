@@ -54,7 +54,8 @@ import {isEqual} from 'lodash';
 import HeaderButtons from './HeaderButtons';
 import MusicLibrary from '../player/MusicLibrary';
 import {setUpBlocklyForMusicLab} from '../blockly/setup';
-// const Tone = require('tone');
+import AdvancedControls from './AdvancedControls';
+import PlayerUpdater from './PlayerUpdater';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -104,7 +105,6 @@ class UnconnectedMusicView extends React.Component {
     updateLoadProgress: PropTypes.func,
     appName: PropTypes.string,
     setUndoStatus: PropTypes.func,
-    loop: PropTypes.object,
   };
 
   constructor(props) {
@@ -149,10 +149,6 @@ class UnconnectedMusicView extends React.Component {
     if (props.inIncubator) {
       setUpBlocklyForMusicLab();
     }
-
-    window.updateConfiguration = (bpm, key) => {
-      this.player.updateConfiguration(bpm, key && Key[key.toUpperCase()]);
-    };
   }
 
   componentDidMount() {
@@ -234,14 +230,6 @@ class UnconnectedMusicView extends React.Component {
     ) {
       this.player.jumpToPosition(this.props.startingPlayheadPosition);
     }
-
-    if (prevProps.loop !== this.props.loop) {
-      if (this.props.loop) {
-        this.player.enableLoop(this.props.loop.start, this.props.loop.end);
-      } else {
-        this.player.disableLoop();
-      }
-    }
   }
 
   async onLevelLoad(levelData, initialSources) {
@@ -302,10 +290,6 @@ class UnconnectedMusicView extends React.Component {
       this.sequencer = new MusicPlayerStubSequencer();
     }
 
-    this.player.updateConfiguration(
-      this.library.getBPM(),
-      this.library.getKey()
-    );
     // TODO: Figure out metrics. Do we want to pre-load all instruments right away, or as
     // they're opened in the workspace?
     this.player.setupInstruments((loadTimeMs, soundsLoaded) => {
@@ -687,6 +671,7 @@ class UnconnectedMusicView extends React.Component {
           updateHighlightedBlocks={this.updateHighlightedBlocks}
         />
         <ValidatorProvider validator={this.musicValidator} />
+        <PlayerUpdater player={this.player} />
         <div id="music-lab" className={moduleStyles.musicLab}>
           {showInstructions &&
             instructionsPosition === InstructionsPositions.TOP &&
@@ -717,6 +702,9 @@ class UnconnectedMusicView extends React.Component {
                 }
               >
                 <div id="blockly-div" />
+                <div style={{position: 'absolute', right: 10, bottom: 0}}>
+                  <AdvancedControls />
+                </div>
               </PanelContainer>
             </div>
 
@@ -752,7 +740,6 @@ const MusicView = connect(
     isReadOnlyWorkspace: isReadOnlyWorkspace(state),
     appName: state.lab.levelProperties?.appName,
     startingPlayheadPosition: state.music.startingPlayheadPosition,
-    loop: state.music.loop,
   }),
   dispatch => ({
     setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),

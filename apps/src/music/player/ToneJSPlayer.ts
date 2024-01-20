@@ -48,14 +48,16 @@ class ToneJSPlayer {
     Tone.Transport.position = position;
   }
 
-  enableLoop(startPosition: string, endPosition: string) {
-    Tone.Transport.loop = true;
-    Tone.Transport.loopStart = startPosition;
-    Tone.Transport.loopEnd = endPosition;
+  setLoopEnabled(enabled: boolean) {
+    Tone.Transport.loop = enabled;
   }
 
-  disableLoop() {
-    Tone.Transport.loop = false;
+  setLoopStart(startPosition: string) {
+    Tone.Transport.loopStart = startPosition;
+  }
+
+  setLoopEnd(endPosition: string) {
+    Tone.Transport.loopEnd = endPosition;
   }
 
   async loadSounds(sampleIds: string[], callbacks?: SoundLoadCallbacks) {
