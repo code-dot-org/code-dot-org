@@ -1,6 +1,5 @@
 @import "color.scss";
 
-// We will fade in the next button for 1s after a 6s delay, then leave it showing.
 @keyframes fade-in {
   0%, 50% {
     opacity: 0;
