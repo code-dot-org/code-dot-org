@@ -82,6 +82,7 @@ const toolboxBlocks = {
     },
   },
   [BlockTypes.PLAY_SOUNDS_TOGETHER]: {
+    id: 'play-sounds-together-block',
     kind: 'block',
     type: BlockTypes.PLAY_SOUNDS_TOGETHER,
   },
@@ -95,6 +96,7 @@ const toolboxBlocks = {
   },
   [BlockTypes.REPEAT_SIMPLE2]: {
     kind: 'block',
+    id: 'repeat-block',
     type: BlockTypes.REPEAT_SIMPLE2,
     fields: {
       times: 1,

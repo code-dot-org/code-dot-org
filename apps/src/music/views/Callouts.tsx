@@ -10,10 +10,27 @@ const availableCallouts: {
   'play-sound-block': {
     selector: ".blocklyFlyout g[data-id='play-sound-block']",
   },
+  'play-sound-block-workspace': {
+    selector: "g[data-id='when-run-block'] g[data-id='play-sound-block']",
+  },
+  'trigger-block-workspace': {
+    selector: ".blocklyWorkspace g[data-id='trigger-block']",
+  },
+  'play-sounds-together-block': {
+    selector: ".blocklyFlyout g[data-id='play-sounds-together-block']",
+  },
+  'repeat-block': {
+    selector: ".blocklyFlyout g[data-id='repeat-block']",
+  },
   'when-run-block': {
     selector: "g[data-id='when-run-block'] > path",
   },
   'run-button': {selector: '#run-button'},
+  'trigger-button-1': {selector: '#trigger-button-1'},
+  'toolbox-first-row': {selector: '.blocklyTreeRow'},
+  'toolbox-second-block': {
+    selector: '.blocklyFlyout .blocklyDraggable:nth-of-type(3)',
+  },
 };
 
 /**
