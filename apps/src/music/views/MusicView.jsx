@@ -600,7 +600,7 @@ class UnconnectedMusicView extends React.Component {
             baseUrl={baseAssetUrl}
             vertical={position !== InstructionsPositions.TOP}
             right={position === InstructionsPositions.RIGHT}
-            showCallout={id => this.props.showCallout(id)}
+            handleInstructionsTextClick={id => this.props.showCallout(id)}
           />
         </PanelContainer>
       </div>

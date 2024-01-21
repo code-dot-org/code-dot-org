@@ -64,6 +64,7 @@ const TriggerButton = ({
 }) => {
   return (
     <div
+      id={'trigger-button-' + label}
       className={classNames(
         styles.triggerButton,
         colorClassName,
