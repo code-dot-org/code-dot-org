@@ -10,19 +10,26 @@ import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
 import ExpandedProgressDataColumn from './ExpandedProgressDataColumn';
 import LessonProgressDataColumn from './LessonProgressDataColumn';
 
-export function ProgressTableV2({
+const NUM_STUDENT_SKELETON_ROWS = 6;
+const STUDENT_IDS = [...Array(NUM_STUDENT_SKELETON_ROWS).keys()];
+
+function ProgressTableV2({
   isSortedByFamilyName,
   sectionId,
   students,
   unitData,
   expandedLessonIds,
   setExpandedLessons,
+  isSkeleton,
 }) {
   const sortedStudents = React.useMemo(() => {
+    if (isSkeleton && students.length === 0) {
+      return STUDENT_IDS.map(id => ({id}));
+    }
     return isSortedByFamilyName
       ? students.sort(stringKeyComparator(['familyName', 'name']))
       : students.sort(stringKeyComparator(['name', 'familyName']));
-  }, [students, isSortedByFamilyName]);
+  }, [students, isSortedByFamilyName, isSkeleton]);
 
   const renderedColumns = React.useMemo(() => {
     const lessons = unitData?.lessons;
@@ -65,6 +72,7 @@ export function ProgressTableV2({
         sortedStudents={sortedStudents}
         unitName={unitData?.title}
         sectionId={sectionId}
+        isSkeleton={true} //isSkeleton && students.length === 0}
       />
 
       <div className={styles.table}>{renderedColumns}</div>
@@ -77,10 +85,11 @@ export const UnconnectedProgressTableV2 = ProgressTableV2;
 ProgressTableV2.propTypes = {
   isSortedByFamilyName: PropTypes.bool,
   sectionId: PropTypes.number,
-  students: PropTypes.arrayOf(studentShape).isRequired,
-  unitData: unitDataPropType.isRequired,
+  students: PropTypes.arrayOf(studentShape),
+  unitData: unitDataPropType,
   expandedLessonIds: PropTypes.arrayOf(PropTypes.number).isRequired,
   setExpandedLessons: PropTypes.func.isRequired,
+  isSkeleton: PropTypes.bool,
 };
 
 export default connect(state => ({
