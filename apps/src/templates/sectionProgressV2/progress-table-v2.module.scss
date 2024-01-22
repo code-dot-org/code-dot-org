@@ -44,16 +44,6 @@
   &Skeleton {
     vertical-align: middle;
   }
-  
-  &Level {
-    min-width: 52px;
-    max-width: 52px;  
-    text-align: center;
-    height: 47px;
-    line-height: 47px;
-    // remove overflow after data icons are added
-    overflow-x: hidden;
-  }
 }
 
 .grid {
@@ -143,19 +133,6 @@
 
   &Column + &Column {
     margin-left: 0;
-  }
-
-  &Table {
-    display: flex;
-    flex-direction: row;
-    border-bottom: 1px solid $light_gray_200;
-    border-right: 1px solid $light_gray_200;
-    width: fit-content;
-  }
-
-  &LevelColumn {
-    display: flex;
-    flex-direction: column;
   }
 }
 
