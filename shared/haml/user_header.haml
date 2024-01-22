@@ -40,7 +40,6 @@
       %a.project_link_box{id: "create_menu_option_view_all", href: CDO.studio_url('projects')}
         .project_link#view_all_projects
           = I18n.t("#{loc_prefix}view_all")
-    = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'create_menu_event_logger.haml')), type: :haml, locals: {is_signed_out: current_user.nil?, options: create_drop_down_items.map{|entry| entry[:title]}.append("view_all")}
 
 - if current_user
   .header_button.header_user.user_menu{id: "header_user_menu", tabindex: 0, role: "button"}
@@ -76,6 +75,7 @@
     .header_button.header_user#header_user_signin
       %span= I18n.t("#{loc_prefix}signin")
       .signin_callout_wrapper
+= render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'user_header_event_logger.haml')), type: :haml, locals: {is_signed_out: current_user.nil?, options: create_drop_down_items.map{|entry| entry[:title]}.append("view_all")}
 
 :javascript
   window.cookieEnvSuffix = '#{rack_env?(:production) ? '' : "_#{rack_env}"}';
