@@ -34,7 +34,7 @@ function ExpandedProgressDataColumn({
                 styles.gridBox,
                 styles.expandedHeaderLevelCell
               )}
-              key={lesson.id + '.' + level.bubbleText}
+              key={lesson.id + '.' + level.bubbleText + '-h'}
             >
               {lesson.relative_position + '.' + level.bubbleText}
             </div>
@@ -48,7 +48,10 @@ function ExpandedProgressDataColumn({
     () => (
       <div className={styles.expandedTable}>
         {lesson.levels.map(level => (
-          <div className={styles.expandedLevelColumn}>
+          <div
+            className={styles.expandedLevelColumn}
+            key={lesson.bubbleText + '.' + level.id}
+          >
             {sortedStudents.map(student => (
               <LevelDataCell
                 studentId={student.id}
