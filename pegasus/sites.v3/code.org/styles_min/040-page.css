@@ -481,6 +481,7 @@ nav.main ul li a {
   color: var(--neutral_white);
   text-decoration: none;
   font-weight: var(--regular-font-weight);
+  cursor: pointer;
 }
 
 nav.main ul li a:hover {
