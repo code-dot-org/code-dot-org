@@ -48,14 +48,69 @@ export const ExpandableImagesWrapper = connect(null, dispatch => ({
   },
 }))(UnconnectedExpandableImagesWrapper);
 
+// A callout can be added via markdown instructions like this:
+//   [play](#showcallout=play-sound-block)
+//
+// This code will replace any link that has #showcallout=[id]
+// with bold clickable text that, when clicked, will call the
+// provided showCallout function with the ID.
+export class ShowCalloutsWrapper extends React.Component {
+  static propTypes = {
+    showCallout: PropTypes.func.isRequired,
+    children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node,
+    ]).isRequired,
+  };
+
+  componentDidMount() {
+    this.postRenderHook();
+  }
+
+  componentDidUpdate(prevProps) {
+    // TODO: do we need to do any kind of cleanup here? Or otherwise do
+    // something more precise than calling the method again when we're
+    // responding to an update rather than an initial render?
+    this.postRenderHook();
+  }
+
+  postRenderHook() {
+    const thisNode = ReactDOM.findDOMNode(this);
+    this.renderShowCallouts(thisNode);
+  }
+
+  renderShowCallouts(node) {
+    const showCallouts = node.querySelectorAll('a[href]');
+    for (const showCallout of showCallouts) {
+      const regexp = /#showcallout=(.*)/;
+      const matches = showCallout.href.match(regexp);
+      if (matches?.length === 2) {
+        const calloutId = matches[1];
+        const textContent = showCallout.childNodes[0].textContent;
+        const newNode = document.createElement('span');
+        newNode.innerHTML = `<b style="cursor: pointer">${textContent}</b>`;
+        newNode.onclick = () => this.props.showCallout(calloutId);
+        showCallout.replaceWith(newNode);
+      }
+    }
+  }
+
+  render() {
+    return this.props.children;
+  }
+}
+
 /**
  * A wrapper for our SafeMarkdown component which adds some extra
  * functionality.
  *
- * Right now, that extra functionality is limited to support for the
- * "expandable images" functionality, but the intent is for this to serve as a
- * common place to implement all of the other things we do on _top_ of
- * markdown; embedded Blockly, links automatically opening in a new tab, etc.
+ * Right now, that extra functionality is limited to:
+ *   - Support for the "expandable images" functionality.
+ *   - Support for clickable text that shows a callout.
+ *
+ * But the intent is for this to serve as a common place to implement all of
+ * the other things we do on _top_ of markdown; embedded Blockly, links
+ * automatically opening in a new tab, etc.
  */
 export default class EnhancedSafeMarkdown extends React.Component {
   static propTypes = {
@@ -63,6 +118,7 @@ export default class EnhancedSafeMarkdown extends React.Component {
     openExternalLinksInNewTab: PropTypes.bool,
     expandableImages: PropTypes.bool,
     className: PropTypes.string,
+    showCallout: PropTypes.func,
   };
 
   render() {
@@ -85,6 +141,14 @@ export default class EnhancedSafeMarkdown extends React.Component {
 
     if (this.props.expandableImages) {
       result = <ExpandableImagesWrapper>{result}</ExpandableImagesWrapper>;
+    }
+
+    if (this.props.showCallout) {
+      result = (
+        <ShowCalloutsWrapper showCallout={this.props.showCallout}>
+          {result}
+        </ShowCalloutsWrapper>
+      );
     }
 
     return result;
