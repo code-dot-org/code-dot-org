@@ -35,7 +35,7 @@ describe('Design System - Checkbox Dropdown Component', () => {
       <CheckboxDropdown
         name="test1-dropdown"
         allOptions={allOptions}
-        selectedValues={selectedValues}
+        checkedOptions={selectedValues}
         onChange={e =>
           onChceckboxDropdownChange(e.target.value, e.target.checked)
         }
@@ -67,7 +67,7 @@ describe('Design System - Checkbox Dropdown Component', () => {
       <CheckboxDropdown
         name="test2-dropdown"
         allOptions={allOptions}
-        selectedValues={selectedValues}
+        checkedOptions={selectedValues}
         onChange={onChange}
         labelText="Dropdown2 label"
       />
@@ -118,7 +118,7 @@ describe('Design System - Checkbox Dropdown Component', () => {
         name="test2-dropdown"
         disabled={true}
         allOptions={allOptions}
-        selectedValues={selectedValues}
+        checkedOptions={selectedValues}
         onChange={onChange}
         labelText="Dropdown2 label"
       />
@@ -165,7 +165,7 @@ describe('Design System - Checkbox Dropdown Component', () => {
         name="test2-dropdown"
         disabled={true}
         allOptions={allOptions}
-        selectedValues={selectedValues}
+        checkedOptions={selectedValues}
         onChange={onChange}
         labelText="Dropdown2 label"
       />
@@ -190,7 +190,7 @@ describe('Design System - Checkbox Dropdown Component', () => {
         name="test2-dropdown"
         disabled={true}
         allOptions={allOptions}
-        selectedValues={selectedValues}
+        checkedOptions={selectedValues}
         onChange={onChange}
         labelText="Dropdown2 label"
       />
