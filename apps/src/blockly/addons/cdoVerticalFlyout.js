@@ -30,18 +30,16 @@ export default class VerticalFlyout extends GoogleBlockly.VerticalFlyout {
 
     /* Begin CDO Customization */
     const mainWorkspace = Blockly.getMainWorkspace();
-    const hiddenDefinitionWorkspace = Blockly.getHiddenDefinitionWorkspace();
+    const functionEditorWorkspace = Blockly.getFunctionEditorWorkspace();
 
-    if (this.targetWorkspace.id === mainWorkspace?.id) {
+    if (
+      [mainWorkspace, functionEditorWorkspace].includes(this.targetWorkspace)
+    ) {
       // Constrain the main workspace flyout to not be wider than 40% of the total workspace space.
       flyoutWidth = Math.min(
         flyoutWidth,
         this.targetWorkspace.getMetricsManager().getSvgMetrics().width * 0.4
       );
-    } else if (this.targetWorkspace.id === hiddenDefinitionWorkspace?.id) {
-      // Before the modal editor workspace is opened, its svg metrics are unreliable.
-      // Assume the flyout should have the same width as the main workspace.
-      flyoutWidth = mainWorkspace?.getMetricsManager().getFlyoutMetrics().width;
     }
 
     /* End CDO Customization */
@@ -102,5 +100,9 @@ export default class VerticalFlyout extends GoogleBlockly.VerticalFlyout {
     this.reflowInternal_();
     const toolboxWidth = Blockly.cdoUtils.getToolboxWidth();
     document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
+  }
+
+  test() {
+    console.log('cdoVerticalFlyout!');
   }
 }
