@@ -27,7 +27,7 @@
   .left
     %a{href: current_user ? CDO.studio_url("/home") : CDO.code_org_url}
       %img.logo{src: '/images/logo.svg', alt: I18n.t(:code_org_logo_alt)}
-    %ul
+    %ul#headerlinks
       - Hamburger.get_header_contents(header_contents_options).each do |entry|
         %li
           %a{id: entry[:id], href: entry[:url]}= entry[:title]
