@@ -91,7 +91,7 @@ const optionsList = [
     ],
   },
   {
-    name: 'keyboard-shortcuts-enabled',
+    name: 'ui-keyboard-shortcuts-enabled',
     type: 'radio',
     values: [
       {value: 'false', description: 'Disable keyboard shortcuts.'},
