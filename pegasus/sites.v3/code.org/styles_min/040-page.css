@@ -429,7 +429,7 @@ td {
   }
 }
 
-/* Top navigation styles ------------------------ */
+/* Start top navigation bar styles ------------------------ */
 nav.main {
   background-color: #00adbc;
   margin: 0;
@@ -483,6 +483,11 @@ nav.main ul li a {
   font-weight: var(--regular-font-weight);
 }
 
+nav.main ul li a:hover {
+  padding-bottom: 2px;
+  border-bottom: 2px solid var(--orange);
+}
+
 nav.main img.logo {
   width: 42px;
 }
@@ -504,7 +509,7 @@ nav.main .create_menu i {
 }
 
 nav.main .create_menu i.create_menu_arrow_down {
-  margin-top: -3px;
+  margin-top: -4px;
 }
 
 nav.main .create_menu i.create_menu_arrow_up {
@@ -540,7 +545,8 @@ nav.main #hamburger #hamburger-icon {
 }
 
 @media screen and (max-width: 1010px) {
-  .hide_on_tablet {
+  nav.main .create_menu,
+  nav.main .left ul {
     display: none;
   }
 }
