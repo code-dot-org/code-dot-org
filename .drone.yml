@@ -46,7 +46,7 @@ steps:
 
   - name: unit-tests
     # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:simplify-node-installation
+    image: codedotorg/code-dot-org:mysql-8
     pull: always
     volumes:
       - name: rbenv
@@ -145,7 +145,7 @@ steps:
 
   - name: ui-tests
     # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:simplify-node-installation
+    image: codedotorg/code-dot-org:mysql-8
     pull: always
     volumes:
       - name: rbenv
@@ -212,6 +212,6 @@ trigger:
     - pull_request
 ---
 kind: signature
-hmac: 2c41f2af15b9b827e85829e603ac7b57609dbfea7d272a4f69c31eab3377fbe2
+hmac: 6fddaef89e2330c8bc0d83912039666304efe7d171ace576ce9351491e5cdb2b
 
 ...
