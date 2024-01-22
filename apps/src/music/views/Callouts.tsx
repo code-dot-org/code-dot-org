@@ -10,17 +10,20 @@ const availableCallouts: {
   'play-sound-block': {
     selector: ".blocklyFlyout g[data-id='play-sound-block']",
   },
-  'play-sound-block-workspace': {
-    selector: "g[data-id='when-run-block'] g[data-id='play-sound-block']",
-  },
-  'trigger-block-workspace': {
-    selector: ".blocklyWorkspace g[data-id='trigger-block']",
-  },
   'play-sounds-together-block': {
     selector: ".blocklyFlyout g[data-id='play-sounds-together-block']",
   },
   'repeat-block': {
     selector: ".blocklyFlyout g[data-id='repeat-block']",
+  },
+  'play-sound-block-workspace': {
+    selector: "g[data-id='when-run-block'] g[data-id='play-sound-block']",
+  },
+  'play-sounds-together-block-workspace': {
+    selector: ".blocklyWorkspace g[data-id='play-sounds-together-block'] path",
+  },
+  'trigger-block-workspace': {
+    selector: ".blocklyWorkspace g[data-id='trigger-block']",
   },
   'when-run-block': {
     selector: "g[data-id='when-run-block'] > path",
