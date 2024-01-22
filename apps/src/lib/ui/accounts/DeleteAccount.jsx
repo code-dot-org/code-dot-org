@@ -14,6 +14,7 @@ import PersonalLoginDialog, {
   dependentStudentsShape,
 } from './PersonalLoginDialog';
 import DeleteAccountDialog from './DeleteAccountDialog';
+import AdminAccountDialog from './AdminAccountDialog';
 
 export const DELETE_VERIFICATION_STRING =
   i18n.deleteAccountDialog_verificationString();
@@ -21,6 +22,7 @@ export const DELETE_VERIFICATION_STRING =
 const DEFAULT_STATE = {
   isPersonalLoginDialogOpen: false,
   isDeleteAccountDialogOpen: false,
+  isAdminAccountDialogOpen: false,
   password: '',
   passwordError: '',
   deleteVerification: '',
@@ -37,6 +39,7 @@ export default class DeleteAccount extends React.Component {
     isTeacher: PropTypes.bool.isRequired,
     dependentStudents: dependentStudentsShape,
     hasStudents: PropTypes.bool.isRequired,
+    isAdmin: PropTypes.bool.isRequired,
   };
 
   constructor(props) {
@@ -65,6 +68,15 @@ export default class DeleteAccount extends React.Component {
       return {
         ...DEFAULT_STATE,
         isPersonalLoginDialogOpen: !state.isPersonalLoginDialogOpen,
+      };
+    });
+  };
+
+  toggleAdminAccountDialog = () => {
+    this.setState(state => {
+      return {
+        ...DEFAULT_STATE,
+        isAdminAccountDialogOpen: !state.isAdminAccountDialogOpen,
       };
     });
   };
@@ -156,9 +168,11 @@ export default class DeleteAccount extends React.Component {
   };
 
   render() {
-    const {isTeacher, dependentStudents, isPasswordRequired} = this.props;
+    const {isTeacher, dependentStudents, isPasswordRequired, isAdmin} =
+      this.props;
     const {
       isPersonalLoginDialogOpen,
+      isAdminAccountDialogOpen,
       isDeleteAccountDialogOpen,
       checkboxes,
       password,
@@ -183,6 +197,8 @@ export default class DeleteAccount extends React.Component {
             onClick={
               isDependedUponForLogin
                 ? this.togglePersonalLoginDialog
+                : isAdmin
+                ? this.toggleAdminAccountDialog
                 : this.toggleDeleteAccountDialog
             }
           />
@@ -191,6 +207,11 @@ export default class DeleteAccount extends React.Component {
           isOpen={isPersonalLoginDialogOpen}
           dependentStudents={dependentStudents}
           onCancel={this.togglePersonalLoginDialog}
+          onConfirm={this.goToDeleteAccountDialog}
+        />
+        <AdminAccountDialog
+          isOpen={isAdminAccountDialogOpen}
+          onCancel={this.toggleAdminAccountDialog}
           onConfirm={this.goToDeleteAccountDialog}
         />
         <DeleteAccountDialog
