@@ -12,12 +12,13 @@ import LearningGoals, {
   annotateLines,
 } from '@cdo/apps/templates/rubrics/LearningGoals';
 import {
-  singleton as studioApp,
+  singleton as studioAppSingleton,
   stubStudioApp,
   restoreStudioApp,
 } from '@cdo/apps/StudioApp';
 
 describe('LearningGoals', () => {
+  let studioApp;
   let originalMainBlockSpace;
   let annotateLineStub,
     highlightLineStub,
@@ -77,14 +78,19 @@ describe('LearningGoals', () => {
 
   // Stub out the calls to the editor
   beforeEach(() => {
-    sinon.stub(studioApp(), 'getCode').returns(code);
-    annotateLineStub = sinon.stub(studioApp(), 'annotateLine');
-    highlightLineStub = sinon.stub(studioApp(), 'highlightLine');
-    clearAnnotationsStub = sinon.stub(studioApp(), 'clearAnnotations');
-    clearHighlightedLinesStub = sinon.stub(
-      studioApp(),
-      'clearHighlightedLines'
-    );
+    studioApp = studioAppSingleton();
+    sinon.stub(studioApp, 'getCode').returns(code);
+    annotateLineStub = sinon.stub(studioApp, 'annotateLine');
+    clearAnnotationsStub = sinon.stub(studioApp, 'clearAnnotations');
+    highlightLineStub = sinon.stub(studioApp, 'highlightLine');
+    clearHighlightedLinesStub = sinon.stub(studioApp, 'clearHighlightedLines');
+  });
+  afterEach(() => {
+    studioApp.getCode.restore();
+    studioApp.annotateLine.restore();
+    studioApp.clearAnnotations.restore();
+    studioApp.highlightLine.restore();
+    studioApp.clearHighlightedLines.restore();
   });
 
   // Necessary stubs for Blockly
