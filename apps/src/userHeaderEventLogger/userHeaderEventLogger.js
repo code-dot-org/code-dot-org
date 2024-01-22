@@ -15,7 +15,7 @@ $(document).ready(function () {
       });
 
     // Log if a signed-out user clicks an option in the "Create" menu dropdown
-    const createMenuOptions = getScriptData('options');
+    const createMenuOptions = getScriptData('createMenuOptions');
     createMenuOptions.forEach(option => {
       document
         .getElementById(`create_menu_option_${option}`)
