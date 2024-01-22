@@ -76,6 +76,8 @@ const initialState: MusicState = {
   playbackEvents: [],
   orderedFunctions: [],
   lastMeasure: 0,
+  // Default to 1 (fully loaded). When loading a new sound, the progress will be set back to 0 before the load starts.
+  // This is to prevent the progress bar from showing if there are no sounds to load initially.
   soundLoadingProgress: 1,
   startingPlayheadPosition: 1,
   undoStatus: {
