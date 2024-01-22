@@ -12,6 +12,8 @@ export const blocks = {
     // which adds the plus/minus block UI.
     blockly.Blocks.text_join_simple = blockly.Blocks.text_join;
     blockly.JavaScript.text_join_simple = blockly.JavaScript.text_join;
+    const generator = Blockly.getGenerator();
+    generator.forBlock.text_join_simple = generator.forBlock.text_join;
   },
   mutationToDom() {
     var container = Blockly.utils.xml.createElement('mutation');
