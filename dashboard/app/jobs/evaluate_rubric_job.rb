@@ -293,6 +293,7 @@ class EvaluateRubricJob < ApplicationJob
   private def read_file_from_s3(lesson_s3_name, key_suffix)
     key = "teaching_assistant/lessons/#{lesson_s3_name}/#{key_suffix}"
     if [:development, :test].include?(rack_env) && File.exist?(File.join("local-aws", S3_AI_BUCKET, key))
+      puts "Note: Reading AI prompt from local file: #{key}"
       File.read(File.join("local-aws", S3_AI_BUCKET, key))
     else
       s3_client.get_object(bucket: S3_AI_BUCKET, key: key)[:body].read
