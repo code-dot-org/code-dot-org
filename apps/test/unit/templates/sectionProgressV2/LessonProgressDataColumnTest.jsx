@@ -1,6 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
+import sinon from 'sinon';
 
 import {UnconnectedLessonProgressDataColumn} from '@cdo/apps/templates/sectionProgressV2/LessonProgressDataColumn.jsx';
 import LessonDataCell from '@cdo/apps/templates/sectionProgressV2/LessonDataCell.jsx';
@@ -65,5 +66,13 @@ describe('LessonProgressDataColumn', () => {
     const wrapper = setUp();
 
     expect(wrapper.find(LessonDataCell)).to.have.length(STUDENTS.length);
+  });
+  it('Expands on header click', () => {
+    const addExpandedLesson = sinon.spy();
+    const wrapper = setUp({addExpandedLesson: addExpandedLesson});
+
+    wrapper.find(`.${styles.lessonHeaderCell}`).simulate('click');
+
+    expect(addExpandedLesson).to.have.been.calledOnceWith(LESSON.id);
   });
 });

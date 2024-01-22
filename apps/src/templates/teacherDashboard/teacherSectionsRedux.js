@@ -93,6 +93,8 @@ const ASYNC_LOAD_END = 'teacherSections/ASYNC_LOAD_END';
 
 /** Sets a section's roster provider, which must be of type OAuthSectionTypes */
 const SET_ROSTER_PROVIDER = 'teacherSections/SET_ROSTER_PROVIDER';
+/** Sets a section's roster provider name which should be shown to users */
+const SET_ROSTER_PROVIDER_NAME = 'teacherSections/SET_ROSTER_PROVIDER_NAME';
 /** Opens the third-party roster UI */
 const IMPORT_ROSTER_FLOW_BEGIN = 'teacherSections/IMPORT_ROSTER_FLOW_BEGIN';
 /** Reports available rosters have been loaded */
@@ -129,6 +131,10 @@ export const setAuthProviders = providers => ({
 export const setRosterProvider = rosterProvider => ({
   type: SET_ROSTER_PROVIDER,
   rosterProvider,
+});
+export const setRosterProviderName = rosterProviderName => ({
+  type: SET_ROSTER_PROVIDER_NAME,
+  rosterProviderName,
 });
 export const setCourseOfferings = courseOfferings => ({
   type: SET_COURSE_OFFERINGS,
@@ -1112,6 +1118,13 @@ export default function teacherSections(state = initialState, action) {
     }
   }
 
+  if (action.type === SET_ROSTER_PROVIDER_NAME) {
+    return {
+      ...state,
+      rosterProviderName: action.rosterProviderName,
+    };
+  }
+
   //
   // Roster import action types
   //
@@ -1201,6 +1214,10 @@ export function rosterProvider(state) {
   return getRoot(state).rosterProvider;
 }
 
+export function rosterProviderName(state) {
+  return getRoot(state).rosterProviderName;
+}
+
 export function sectionCode(state, sectionId) {
   return (getRoot(state).sections[sectionId] || {}).code;
 }
@@ -1229,6 +1246,13 @@ export function selectedSection(state) {
 export function sectionProvider(state, sectionId) {
   if (isSectionProviderManaged(state, sectionId)) {
     return rosterProvider(state);
+  }
+  return null;
+}
+
+export function sectionProviderName(state, sectionId) {
+  if (isSectionProviderManaged(state, sectionId)) {
+    return rosterProviderName(state);
   }
   return null;
 }

@@ -55,6 +55,13 @@ export interface MusicState {
     canUndo: boolean;
     canRedo: boolean;
   };
+  /** A callout that's currently being shown.  The index lets the same callout be
+   * reshown multiple times in a row.
+   */
+  currentCallout: {
+    id?: string;
+    index: number;
+  };
 }
 
 const initialState: MusicState = {
@@ -74,6 +81,10 @@ const initialState: MusicState = {
   undoStatus: {
     canUndo: false,
     canRedo: false,
+  },
+  currentCallout: {
+    id: undefined,
+    index: 0,
   },
 };
 
@@ -191,6 +202,10 @@ const musicSlice = createSlice({
     ) => {
       state.undoStatus = action.payload;
     },
+    showCallout: (state, action: PayloadAction<string>) => {
+      state.currentCallout.id = action.payload;
+      state.currentCallout.index = state.currentCallout.index + 1;
+    },
   },
 });
 
@@ -253,4 +268,5 @@ export const {
   moveStartPlayheadPositionForward,
   moveStartPlayheadPositionBackward,
   setUndoStatus,
+  showCallout,
 } = musicSlice.actions;

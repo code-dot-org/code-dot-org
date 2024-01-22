@@ -17,6 +17,7 @@ import {AppName} from '../types';
 import moduleStyles from './lab-views-renderer.module.scss';
 import {DEFAULT_THEME, Theme, ThemeContext} from './ThemeWrapper';
 import PythonlabView from '@cdo/apps/pythonlab/PythonlabView';
+import PanelsView from '@cdo/apps/panels/PanelsView';
 
 // Configuration for how a Lab should be rendered
 interface AppProperties {
@@ -67,6 +68,10 @@ const appsProperties: {[appName in AppName]?: AppProperties} = {
     backgroundMode: false,
     node: <PythonlabView />,
     theme: Theme.LIGHT,
+  },
+  panels: {
+    backgroundMode: false,
+    node: <PanelsView />,
   },
 };
 
