@@ -798,6 +798,32 @@ form {
   }
 }
 
+// Editorial cards 2x2 grid
+// See code.org/administrators for an example
+.editorial-cards-wrapper-2x2 {
+  display: grid;
+  margin-top: 5rem;
+  gap: 4rem;
+
+  @media screen and (min-width: $width-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .flex-container {
+    gap: 2rem;
+  }
+
+  img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+  }
+
+  p {
+    @include body-three;
+  }
+}
+
 // Carousels
 // Uses the carouFredSel jQuery plugin: https://github.com/nzy/carouFredSel
 .carousel-wrapper {
