@@ -13,18 +13,24 @@ import Button from '@cdo/apps/templates/Button';
 export interface CheckboxDropdownProps {
   /** CheckboxDropdown name */
   name: string;
+  /** CheckboxDropdown color */
+  color?: 'white' | 'black';
+  /** CheckboxDropdown size */
+  size: ComponentSizeXSToL;
+  /** CheckboxDropdown disabled state */
+  disabled?: boolean;
   /** CheckboxDropdown label */
-  label: string;
+  labelText: string;
   /** CheckboxDropdown options */
-  allOptions: string[];
+  allOptions: {value: string; label: string}[];
   /** CheckboxDropdown checked options */
   checkedOptions: string[];
   /** CheckboxDropdown onChange handler */
   onChange: (args: React.ChangeEvent<HTMLInputElement>) => void;
   /** CheckboxDropdown onSelectAll handler */
-  handleSelectAll: (args: React.ChangeEvent<HTMLInputElement>) => void;
+  handleSelectAll?: (args: React.ChangeEvent<HTMLInputElement>) => void;
   /** CheckboxDropdown onClearAll handler */
-  handleClearAll: (args: React.ChangeEvent<HTMLInputElement>) => void;
+  handleClearAll?: (args: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 /**
@@ -42,19 +48,22 @@ export interface CheckboxDropdownProps {
  */
 const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   name,
-  label,
+  labelText,
   allOptions,
   checkedOptions = [],
   onChange,
   handleSelectAll,
   handleClearAll,
+  disabled = false,
+  color = 'black',
+  size = 'm',
 }) => {
   return (
     <div id={`${name}-dropdown`} className="dropdown" onKeyDown={onKeyDown}>
       <button
         id={`${name}-dropdown-button`}
         type="button"
-        className={classnames('selectbox', style.dropdownButton)}
+        className={classNames('selectbox', style.dropdownButton)}
         data-toggle="dropdown"
         aria-haspopup={true}
         aria-label={`${name} filter dropdown`}
@@ -63,16 +72,16 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
           <FontAwesome
             id={'check-icon'}
             icon="check-circle"
-            title={i18n.filterCheckIconTitle({filter_label: label})}
+            title={i18n.filterCheckIconTitle({filter_label: labelText})}
           />
         )}
         <Typography semanticTag="span" visualAppearance="body-two">
-          {label}
+          {labelText}
         </Typography>
         <FontAwesome id={'chevron-down-icon'} icon={'chevron-down'} />
       </button>
       <form
-        className={classnames('dropdown-menu', style.dropDownMenuContainer)}
+        className={classNames('dropdown-menu', style.dropDownMenuContainer)}
       >
         <ul className={style.dropdownCheckboxUL}>
           {Object.keys(allOptions).map(optionKey => (

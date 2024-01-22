@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useCallback} from 'react';
 import CheckboxDropdown, {CheckboxDropdownProps} from './index';
 import {Meta, Story} from '@storybook/react';
 
@@ -13,15 +13,26 @@ export default {
 // This is needed to fix children type error (passing string instead of React.ReactNode type)
 // eslint-disable-next-line
 const SingleTemplate: Story<CheckboxDropdownProps> = args => {
-  const [value, setValues] = useState('');
+  const [selectedValues, setValues] = useState(
+    (args.checkedOptions = [] as string[])
+  );
+  const onChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => e => {
+      if (e.target.checked) {
+        setValues([...selectedValues, e.target.value]);
+      } else {
+        setValues(selectedValues.filter(value => value !== e.target.value));
+      }
+      args.onChange(e);
+    },
+    [args, selectedValues]
+  );
+
   return (
     <CheckboxDropdown
       {...args}
-      selectedValue={value || args.selectedValue}
-      onChange={e => {
-        setValues(e.target.value);
-        args.onChange(e);
-      }}
+      checkedOptions={selectedValues}
+      onChange={onChange}
     />
   );
 };
@@ -29,7 +40,7 @@ const SingleTemplate: Story<CheckboxDropdownProps> = args => {
 const MultipleTemplate: Story<{
   components: CheckboxDropdownProps[];
 }> = args => {
-  const [values, setValues] = useState({} as Record<string, string>);
+  const [values, setValues] = useState({} as Record<string, string[]>);
 
   return (
     <>
@@ -39,41 +50,48 @@ const MultipleTemplate: Story<{
       </p>
       <p>Multiple Dropdown:</p>
       <div style={{display: 'flex', gap: '20px'}}>
-        {args.components?.map(componentArg =>
-          componentArg.color === 'white' ? (
+        {args.components?.map(componentArg => {
+          if (values[componentArg.name] === undefined) {
+            setValues({
+              ...values,
+              [componentArg.name]: componentArg.checkedOptions,
+            });
+          }
+
+          const onChange = (e: React.ChangeEvent<HTMLInputElement>) => e => {
+            if (e.target.checked) {
+              setValues({...values, [componentArg.name]: e.target.value});
+            } else {
+              setValues({
+                ...values,
+                [componentArg.name]: values[componentArg.name].filter(
+                  value => value !== e.target.value
+                ),
+              });
+            }
+            componentArg.onChange(e);
+          };
+
+          return componentArg.color === 'white' ? (
             <div style={{background: 'black', padding: 10}}>
               <CheckboxDropdown
                 key={`${componentArg.name}`}
                 {...componentArg}
-                selectedValue={
-                  values[componentArg.name] || componentArg.selectedValue
-                }
-                onChange={e => {
-                  setValues({
-                    ...values,
-                    [componentArg.name]: e.target.value,
-                  });
-                  componentArg.onChange(e);
-                }}
+                checkedOptions={values[componentArg.name]}
+                onChange={onChange}
               />
             </div>
           ) : (
             <CheckboxDropdown
               key={`${componentArg.name}`}
               {...componentArg}
-              selectedValue={
-                values[componentArg.name] || componentArg.selectedValue
+              checkedOptions={
+                values[componentArg.name] || componentArg.checkedOptions
               }
-              onChange={e => {
-                setValues({
-                  ...values,
-                  [componentArg.name]: e.target.value,
-                });
-                componentArg.onChange(e);
-              }}
+              onChange={onChange}
             />
-          )
-        )}
+          );
+        })}
       </div>
     </>
   );
@@ -82,13 +100,12 @@ const MultipleTemplate: Story<{
 export const DefaultCheckboxDropdown = SingleTemplate.bind({});
 DefaultCheckboxDropdown.args = {
   name: 'default-dropdown',
-  items: [
+  allOptions: [
     {value: 'option-1', label: 'Option 1'},
     {value: 'option-2', label: 'Option 2'},
   ],
   labelText: 'Default Dropdown',
-  isLabelVisible: false,
-  selectedValue: 'option-1',
+  checkedOptions: ['option-1'],
   onChange: args => console.log(args, args.target.value),
   size: 'm',
 };
@@ -96,11 +113,11 @@ DefaultCheckboxDropdown.args = {
 export const DisabledCheckboxDropdown = SingleTemplate.bind({});
 DisabledCheckboxDropdown.args = {
   name: 'default-dropdown',
-  items: [
+  allOptions: [
     {value: 'option-1', label: 'Option 1'},
     {value: 'option-2', label: 'Option 2'},
   ],
-  selectedValue: 'option-1',
+  checkedOptions: ['option-1'],
   labelText: 'Disabled Dropdown',
   onChange: args => console.log(args),
   disabled: true,
@@ -112,11 +129,11 @@ GroupOfCheckboxDropdownColors.args = {
   components: [
     {
       name: 'default-dropdown-white',
-      items: [
+      allOptions: [
         {value: 'option-1', label: 'Option 1'},
         {value: 'option-2', label: 'Option 2'},
       ],
-      selectedValue: 'option-1',
+      checkedOptions: ['option-1'],
       labelText: 'White Dropdown',
       onChange: args => console.log(args),
       size: 'm',
@@ -124,11 +141,11 @@ GroupOfCheckboxDropdownColors.args = {
     },
     {
       name: 'default-dropdown-black',
-      items: [
+      allOptions: [
         {value: 'option-1', label: 'Option 1'},
         {value: 'option-2', label: 'Option 2'},
       ],
-      selectedValue: 'option-1',
+      checkedOptions: ['option-1'],
       labelText: 'Black Dropdown',
       onChange: args => console.log(args),
       size: 'm',
@@ -141,44 +158,44 @@ GroupOfSizesOfCheckboxDropdown.args = {
   components: [
     {
       name: 'default-dropdown-xs',
-      items: [
+      allOptions: [
         {value: 'option-1', label: 'Option 1'},
         {value: 'option-2', label: 'Option 2'},
       ],
-      selectedValue: 'option-1',
+      checkedOptions: ['option-1'],
       labelText: 'XS Dropdown',
       onChange: args => console.log(args),
       size: 'xs',
     },
     {
       name: 'default-dropdown-s',
-      items: [
+      allOptions: [
         {value: 'option-1', label: 'Option 1'},
         {value: 'option-2', label: 'Option 2'},
       ],
-      selectedValue: 'option-1',
+      checkedOptions: ['option-1'],
       labelText: 'S Dropdown',
       onChange: args => console.log(args),
       size: 's',
     },
     {
       name: 'default-dropdown-m',
-      items: [
+      allOptions: [
         {value: 'option-1', label: 'Option 1'},
         {value: 'option-2', label: 'Option 2'},
       ],
-      selectedValue: 'option-1',
+      checkedOptions: ['option-1'],
       labelText: 'M Dropdown',
       onChange: args => console.log(args),
       size: 'm',
     },
     {
       name: 'default-dropdown-white',
-      items: [
+      allOptions: [
         {value: 'option-1', label: 'Option 1'},
         {value: 'option-2', label: 'Option 2'},
       ],
-      selectedValue: 'option-1',
+      checkedOptions: ['option-1'],
       labelText: 'L Dropdown',
       onChange: args => console.log(args),
       size: 'l',
