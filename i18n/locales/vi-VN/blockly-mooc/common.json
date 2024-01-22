@@ -1322,6 +1322,7 @@
   "loginInfo_signinStep4_secretPicture": "Chọn hình ảnh bí mật.",
   "loginInfo_signinStep4_secretWords": "Nhập từ bí mật.",
   "loginInfo_signinStep5": "Nhấp chuột vào nút “Đăng nhập”.",
+  "loginInfoLtiSetupHeader": "Thiết lập lớp học",
   "loginType": "Loại đăng nhập",
   "loginTypeClever": "Clever",
   "loginTypeCleverButton": "Sử dụng Clever",

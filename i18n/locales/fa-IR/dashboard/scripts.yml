@@ -106,6 +106,7 @@ fa:
           description: مبانی علوم کامپیوتر با شخصیت از گیاهان در مقابل زامبی و پرندگان عصبانی را امتحان کنید!
           description_short: اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های سرگرم کننده آزمایش کن!
           student_description: مبانی علوم کامپیوتر با شخصیت از گیاهان در مقابل زامبی و پرندگان عصبانی را امتحان کنید!
+          name: ساعت کدنویسی
         text-compression:
           title: فشرده‌سازی متن
         algebraPD2a:
@@ -1999,6 +2000,9 @@ fa:
               name: عملکردها
             lesson-5:
               name: مراحل بعدی
+          lesson_groups:
+            lessonGroup-2:
+              display_name: شروع کنید
         self-paced-pl-k5-2024-1:
           lessons:
             lesson-3:
@@ -2007,4 +2011,29 @@ fa:
               name: شرطی ها
             lesson-6:
               name: مراحل بعدی
+          lesson_groups:
+            lessonGroup-2:
+              display_name: شروع کنید
           title: آشنایی با علوم کامپیوتر
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرها
+            csp_conditionals:
+              display_name: شرطی ها
+            csp_functions:
+              display_name: توابع
+            csp_project:
+              display_name: پروژه
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: داده‌ها
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: لیست ها
+            lessonGroup-3:
+              display_name: حلقه‌ها
+            lessonGroup-5:
+              display_name: پروژه

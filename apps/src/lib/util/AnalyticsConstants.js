@@ -145,6 +145,9 @@ const EVENTS = {
   COTEACHER_INVITE_ACCEPTED: 'Coteacher Invite Accepted',
   COTEACHER_INVITE_DECLINED: 'Coteacher Invite Declined',
   COTEACHER_REMOVED: 'Coteacher Removed',
+
+  // PL Landing Page
+  MY_PL_PAGE_VISITED: 'My Professional Learning Page Visited',
 };
 
 const EVENT_GROUP_NAMES = {

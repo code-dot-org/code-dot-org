@@ -14274,6 +14274,15 @@ en:
 
 
             **Suggested time:** 60 minutes
+        music-intro-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: music-intro-2024
+          title: Music Intro
+          description_audience: ''
+          description_short: An introduction to Music Lab.
+          description: ''
+          student_description: ''
         csp1-2024:
           lesson_groups:
             cspSurvey:
@@ -14732,3 +14741,31 @@ en:
           student_description: This two-part module lets you explore pro-level tools like GitHub and GitHub Copilot and teaches you how to create your own computer vision program. You'll be solving real-world AI problems and tinkering with cutting-edge models, learning industry-standard practices along the way. This isn't just about understanding AI better - it's about sparking your creativity, improving your teamwork skills, and starting to build your own software development portfolio.
           description_short: ''
           description_audience: ''
+        aryanna-sandbox:
+          lessons:
+            lesson-1:
+              name: General Design Guidance
+            lesson-2:
+              name: Designing Visuals
+            lesson-3:
+              name: Designing Text
+            lesson-4:
+              name: Level Types
+          lesson_groups: {}
+          name: aryanna-sandbox
+          title: Aryanna's Sandbox
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        coding-with-ai:
+          lessons:
+            lesson-1:
+              name: Introduction to Coding with AI
+          lesson_groups: {}
+          name: coding-with-ai
+          title: Coding with AI
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

@@ -1261,6 +1261,7 @@
   "loginExportInstructions": "** Masofadan o‘qitish? ** Talabalarning kirish ma'lumotlari CSV-ni yuklab oling, shunda siz pochtani birlashtirishingiz yoki har bir talabaning foydalanuvchi nomi va parolini elektron pochta orqali osongina nusxalashingiz va joylashtirishingiz mumkin.",
   "loginExportLink": "CSVʼni yuklab olish",
   "loginInfo": "Kirish haqida ma'lumot",
+  "loginInfoLtiSetupHeader": "Sinfingizni sozlang",
   "loginInfoResetSecretPicDesc": "Siz rasmni parolini har qanday talabangiz uchun tiklashingiz mumkin. Bo‘lim uchun [Talabalarni boshqarish]({url}) yorlig‘iga o‘ting, \" Rasm paroli \" ustuni ostidagi \" Rasmni ko‘rsatish \" tugmasini bosing va \" Nolga o‘rnatish\" tugmachasini bosish. ",
   "loginInfoResetSecretWordDesc": "Siz har qanday talaba uchun maxfiy so‘zlarni tiklashingiz mumkin. Bo‘lim uchun [Talabalarni boshqarish]({url}) yorlig‘iga o‘ting, \" Yashirin so‘zlar \" ustunining ostidagi \" So‘zlarni ko‘rsatish \" tugmasini bosing va \" Nolga o‘rnatish \" tugmachasini bosish. ",
   "loginInfoWordPicMoreBelow": "Talabalar ushbu ma'lumotlarning barchasini, shu jumladan o‘zlarining maxfiy so‘zlarini {wordOrPicture} quyidagi kirish kartalarida topishlari mumkin.",
