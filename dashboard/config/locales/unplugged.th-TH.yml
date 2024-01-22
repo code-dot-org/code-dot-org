@@ -312,7 +312,7 @@ th:
         title: เป็นการดีที่จะสร้างและเล่นอย่างยุติธรรม
       courseB_unplugged_MRF:
         desc: ในบทเรียนนี้คุณจะ 'โปรแกรม' เพื่อนของคุณ!
-        title: กิจกรรมถอดปลั๊ก
+        title: กิจกรรมแบบออฟไลน์
       courseB_unplugged_MRF_2018:
         desc: เรียนรู้การเขียนโปรแกรมโดยการเขียนโค้ดสำหรับเพื่อนของคุณ!
         title: เพื่อนหุ่นยนต์
@@ -326,7 +326,7 @@ th:
       courseB_unplugged_loopyMRF:
         desc: เช่นเดียวกับใน “เพื่อนหุ่นยนต์ของฉัน” คุณจะเป็น “การเขียนโปรแกรม” เพื่อนของคุณ
           แต่คราวนี้กับลูป!
-        title: กิจกรรมถอดปลั๊ก
+        title: กิจกรรมแบบออฟไลน์
       courseB_unplugged_loopyMRF_2019:
         title: เพื่อนหุ่นยนต์ของฉันวนลูป
       courseB_unplugged_passwords_2019:
@@ -334,13 +334,13 @@ th:
         title: รหัสผ่านที่มีประสิทธิภาพ
       courseC_Unplugged_ScreenOutTheMean:
         desc: วันนี้คุณจะได้เรียนรู้เกี่ยวกับสิ่งที่ต้องทำถ้ามีคนหมายถึงออนไลน์
-        title: กิจกรรมถอดปลั๊ก
+        title: กิจกรรมแบบออฟไลน์
       courseC_Unplugged_ScreenOutTheMean_2018:
         desc: วันนี้คุณจะได้เรียนรู้เกี่ยวกับสิ่งที่ต้องทำถ้ามีคนหมายถึงออนไลน์
-        title: กิจกรรมถอดปลั๊ก
+        title: กิจกรรมแบบออฟไลน์
       courseC_Unplugged_ScreenOutTheMean_2019:
         desc: วันนี้คุณจะได้เรียนรู้เกี่ยวกับสิ่งที่ต้องทำถ้ามีคนหมายถึงออนไลน์
-        title: กิจกรรมถอดปลั๊ก
+        title: กิจกรรมแบบออฟไลน์
       courseC_unplugged_binaryBracelets:
         desc: นักเรียนสร้างกำไลเป็นตัวแทนไบนารีของตัวอักษรตัวแรกของชื่อของพวกเขานักเรียนเรียนรู้ว่าข้อมูลสามารถแสดงและจัดเก็บได้มากกว่าหนึ่งวิธี
         title: สร้อยข้อมือไบนารี
@@ -366,13 +366,13 @@ th:
         title: เงื่อนไข
       courseD_unplugged_digitalCitizenship:
         desc: วันนี้คุณจะได้เรียนรู้ว่าการเป็นพลเมืองดิจิทัลหมายถึงอะไร
-        title: กิจกรรมถอดปลั๊ก
+        title: กิจกรรมแบบออฟไลน์
       courseD_unplugged_digitalCitizenship_2018:
         desc: วันนี้คุณจะได้เรียนรู้ว่าการเป็นพลเมืองดิจิทัลหมายถึงอะไร
-        title: กิจกรรมถอดปลั๊ก
+        title: กิจกรรมแบบออฟไลน์
       courseD_unplugged_digitalCitizenship_2019:
         desc: วันนี้คุณจะได้เรียนรู้ว่าการเป็นพลเมืองดิจิทัลหมายถึงอะไร
-        title: กิจกรรมถอดปลั๊ก
+        title: กิจกรรมแบบออฟไลน์
       courseD_unplugged_graphPaperProgramming:
         desc: นักเรียนเขียนอัลกอริทึม (ชุดของคำแนะนำ) โดยใช้ชุดของคำสั่งที่กำหนดไว้ล่วงหน้าเพื่อสั่งให้เพื่อนร่วมชั้นของพวกเขาทำซ้ำภาพวาด
         title: การเขียนกระดาษกราฟ
@@ -428,7 +428,7 @@ th:
         title: สนุกกับ For ลูป
       courseF_unplugged_powerOfWords:
         desc: วันนี้คุณจะได้เรียนรู้เกี่ยวกับสิ่งที่ต้องทำถ้ามีคนหมายถึงออนไลน์
-        title: กิจกรรมถอดปลั๊ก
+        title: กิจกรรมแบบออฟไลน์
       courseF_unplugged_powerOfWords_2019:
         desc: 'แปลหายไป: en-us.data.unplugged.Coursef_unplugged_PowerOfwords_2018.desc'
         title: 'แปลหายไป: en-us.data.unplugged.Coursef_Unplugged_PowerOfwordS_2018.Title'

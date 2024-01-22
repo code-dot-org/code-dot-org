@@ -1335,6 +1335,7 @@
   "loginInfo_signinStep4_secretPicture": " Επιλέξτε τη μυστική τους εικόνα:",
   "loginInfo_signinStep4_secretWords": "Πληκτρολογήστε τις μυστικές τους λέξεις.",
   "loginInfo_signinStep5": "Κάντε κλικ στο κουμπί \"Σύνδεση\".",
+  "loginInfoLtiSetupHeader": "Προετοιμάστε την τάξη σας",
   "loginType": "Τύπος σύνδεσης",
   "loginTypeClever": "Εξυπνο",
   "loginTypeCleverButton": "Χρήση Clever",

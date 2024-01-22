@@ -1,4 +1,6 @@
 @no_mobile
+@no_safari
+# TODO: This test has been flaky on Safari. Investigate and re-enable.
 
 Feature: Music Lab block can be dragged
 

@@ -70,6 +70,7 @@ fil:
             ang mga karakter mula sa Angry Birds at Plants vs. Zombies!
           description_short: Subukan ang mga pangunahing kaalaman sa computer science
             gamit ang napakaraming nakaka-aliw na mga karakter!
+          name: Hour of Code
           student_description: Subukan ang mga panguhahing kaalaman sa computer science
             gamit ang mga karakter mula sa Angry Birds at Plants vs. Zombies!
           title: Hour of Code 2013
@@ -1463,6 +1464,10 @@ fil:
               name: Java Lab
             lesson-6:
               name: Mga loop
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pagsisiyasat
         csa1-pilot:
           lesson_groups:
             lessonGroup-5:
@@ -1562,6 +1567,10 @@ fil:
             lessonGroup-5:
               display_name: Pagsisiyasat
         csa8-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Pagsisiyasat
+        csa8-2024:
           lesson_groups:
             lessonGroup-4:
               display_name: Pagsisiyasat
@@ -3028,6 +3037,12 @@ fil:
               display_name: Pagsisiyasat
             csp_unit1_2020:
               display_name: "(luma) Yunit 1: Digital na Impormasyon"
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Pagsisiyasat
+            csp_unit1_2020:
+              display_name: "(luma) Yunit 1: Digital na Impormasyon"
         csp1-dlp:
           description: 'Ito ang Yunit 1 ng Plano sa Mas Malalim na Pag-aaral para
             sa Code.org na mga nagsasanay na mga tagapasiwa sa CSP. Dito mahahap ang
@@ -3125,6 +3140,10 @@ fil:
             csp_unit2_2020:
               display_name: "(luma) Yunit 2: Ang Internet"
         csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(luma) Yunit 2: Ang Internet"
+        csp2-2024:
           lesson_groups:
             csp_unit2_2020:
               display_name: "(luma) Yunit 2: Ang Internet"
@@ -3321,6 +3340,16 @@ fil:
               display_name: Proyekto
             csp_variables:
               display_name: Mga variable
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Mga conditional
+            csp_functions:
+              display_name: Mga function
+            csp_project:
+              display_name: Proyekto
+            csp_variables:
+              display_name: Mga variable
         csp4-dlp:
           description: 'Ito ang Yunit 3 ng Plano sa Mas Malalim na Pag-aaral para
             sa Code.org na mga nagsasanay na mga tagapangasiwa ng CSP. Dito makikita
@@ -3439,6 +3468,10 @@ fil:
               display_name: Mga loop
             csp_project:
               display_name: Proyekto
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Data
         csp5-dlp:
           description: 'Ito ang Yunit 5 na Plano sa Mas Malalim na Pag-aaral para
             sa mga nagsasanay ng mga tagapangasiwa sa CSP ng Code.org. Dito makikita
@@ -3507,6 +3540,14 @@ fil:
               display_name: Mga loop
             lessonGroup-5:
               display_name: Proyekto
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Mga listahan
+            lessonGroup-3:
+              display_name: Mga loop
+            lessonGroup-5:
+              display_name: Proyekto
         csp6-pilot:
           lesson_groups:
             required:
@@ -3540,6 +3581,10 @@ fil:
             lessonGroup-2:
               display_name: Maglikha ng PT
         csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maglikha ng PT
+        csp8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Maglikha ng PT
@@ -5181,6 +5226,9 @@ fil:
         self-paced-pl-csp2-2023:
           title: 'Module 2: Pag-navigate sa Code.org'
         self-paced-pl-k5-2024-1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pagsisimula
           lessons:
             lesson-3:
               name: Mga loop
@@ -5190,6 +5238,9 @@ fil:
               name: Mga susunod na Hakbang
           title: Panimula sa Computer Science
         self-paced-pl-k5-2024-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pagsisimula
           lessons:
             lesson-3:
               name: Mga event

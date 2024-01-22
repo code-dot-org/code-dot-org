@@ -102,8 +102,8 @@
             {
               "type": "rating",
               "name": "strategies_ensure_inclusion_m78",
-              "visibleIf": "{workshop_course}='CS Principles'",
-              "title": "This workshop provided me with new ideas and strategies to ensure that my classroom is supportive for all students.",
+              "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles'",
+              "title": "This workshop provided me with new ideas and strategies to ensure that my classroom fosters a sense of belonging.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
               "maxRateDescription": "Strongly agree"
@@ -120,8 +120,8 @@
             {
               "type": "rating",
               "name": "plan_measure_m78",
-              "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles'",
-              "title": "I know how to track the progress of my commitment to ensuring my CS classroom is supportive for all students.",
+              "visibleIf": "({workshop_course}='CS Discoveries' or {workshop_course}='CS Principles') and ({regional_partner_name} <> 'Broward County Public Schools' and {regional_partner_name} <> 'Florida International University' and {regional_partner_name} <> 'Orlando Science Center' and {regional_partner_name} <> 'Tampa Bay STEM Network' and {regional_partner_name} <> 'University of North Florida & STEM2 Hub')",
+              "title": "I feel ready to track the progress of my inclusion plan: I know how and what to measure as outcomes and supports.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
               "maxRateDescription": "Strongly agree"

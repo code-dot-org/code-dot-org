@@ -1125,6 +1125,14 @@ es-MX:
             '5': ambos
       DansBlocks_testRectangle:
         text: 'hacer rectàngulo x: {X} y: {Y} w: {W} h: {H} color: {COLOR}'
+      DansBlocks_testShowVariable:
+        options:
+          OPT:
+            '"large"': grande
+            '"small"': pequeño
+          COLOR:
+            '"blue"': azul
+            '"red"': rojo
       FunctionBlocks_communicate:
         text: Comunicar {VAR1} a {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:

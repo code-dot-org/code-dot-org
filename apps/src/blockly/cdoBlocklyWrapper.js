@@ -254,6 +254,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.Input.prototype.appendTitle;
   blocklyWrapper.Block.prototype.getFieldValue =
     blocklyWrapper.Block.prototype.getTitleValue;
+  blocklyWrapper.Block.prototype.appendEndRowInput =
+    blocklyWrapper.Block.prototype.appendDummyInput;
 
   blocklyWrapper.cdoUtils = {
     loadBlocksToWorkspace(blockSpace, source) {
@@ -337,9 +339,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
     registerCustomProcedureBlocks() {
       // Google Blockly only. Registers custom blocks for modal function editor.
-    },
-    partitionBlocksByType() {
-      // Google Blockly only. Used to load/render certain block types before others.
     },
     appendSharedFunctions(source, functionsXml) {
       const isXml = stringIsXml(source);

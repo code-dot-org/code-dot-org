@@ -1112,6 +1112,14 @@ bg:
         text: Задай Микроскоп на {INPUT1}
       DansBlocks_testRectangle:
         text: 'направи правоъгълник x: {X} y: [Y][Y] ш: {W} в: {H} цвят: {COLOR}'
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': синьо
+            '"red"': червено
+          OPT:
+            '"large"': голямо
+            '"small"': малко
       FunctionBlocks_addEightBlock:
         text: добавиОсем
       FunctionBlocks_addFiveBlock:

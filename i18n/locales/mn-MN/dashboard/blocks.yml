@@ -1033,6 +1033,11 @@ mn:
             '"hearts"': зүрхнүүд
             '"rain"': бороотой
             '"starburst"': Оддын тэсрэлт
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': цэнхэр
+            '"red"': улаан
       gamelab_addBehaviorSimple:
         text: шидтэн {SPRITE} нь {BEHAVIOR}-г эхлүүлнэ
       gamelab_allSpritesWithAnimation:

@@ -971,6 +971,7 @@
   "loginExportHeader_studentName": "Igoa o le Tamaitiiti Aoga",
   "loginExportInstructions": "Fai vaega i luga o le upega? Faaalu ifo le CSV o faamaumauga o ulufale a tamaiti aoga ina ia mafai ona tuufaatasi pe faigofie ona kopi ma faapipii username ma password o tamaiti aoga taitasi i imeli",
   "loginInfo": "Faamaumauga o Ulufale",
+  "loginInfoLtiSetupHeader": "Faatulaga lau vasega",
   "loginInfoResetSecretPicDesc": "E mafai ona fou le ata o loo fai ma password mo soo sau tamaitiiti aoga i le alu i le ki o le [Manage Students] {url} mo le vaega, oomi le ki \"Show picture\" lalo atu o le laina o le \"Picture password\" ma oomi le ki \"Reset\". ",
   "loginInfoResetSecretWordDesc": "E mafai ona e toe faafou upu lilo mo soo se tamaitiiti aoga i le alu lea i le ki o le [Manage Students]{url} mo le vaega, oomi le ki o le  \"Show words\"i lalo atu o le laina o le \"Secret words\", ma oomi le \"Reset\" ",
   "loginInfoWordPicMoreBelow": "E mafai ona maua uma e tamaiti aoga nei faamaumauga, faatasi ai ma a latou mea lilo {wordOrPicture}, i pepa ulufale o loo i lalo",

@@ -97,6 +97,7 @@ it:
             Birds e di Plants vs. Zombies!
           description_short: Prova i fondamenti dell'informatica insieme a tanti personaggi
             divertenti!
+          name: L'Ora del Codice
           student_description: Prova i fondamenti dell'informatica con i personaggi
             di Angry Birds e di Plants vs. Zombies!
           title: L'Ora del Codice 2013
@@ -1597,6 +1598,11 @@ it:
             lessonGroup-3:
               display_name: 'Capitolo 2: Visione Artificiale'
           title: Sondaggio preliminare su ingegneria del software e visione artificiale
+        csa-postap-se-and-computer-vision-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Visione Artificiale'
+          title: Sondaggio preliminare su ingegneria del software e visione artificiale
         csa-self-paced-pl:
           description: "Questo modulo è progettato per orientarti agli strumenti che
             userai durante l'insegnamento della CSA, per assistere gli studenti nell'apprendimento.
@@ -1684,6 +1690,16 @@ it:
               name: Laboratorio di Java
             lesson-6:
               name: Cicli
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sondaggio
+            lessonGroup-3:
+              display_name: Contenuto
+            lessonGroup-4:
+              display_name: Mostra ciò che sai
+            lessonGroup-5:
+              display_name: Lezioni alternative
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1738,6 +1754,14 @@ it:
           lessons:
             lesson-4:
               name: Variabili
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-4:
+              display_name: Lezioni alternative
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1786,6 +1810,14 @@ it:
               name: Array unidimensionale (1D)
             lesson-3:
               name: Cicli con contatore
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-4:
+              display_name: Lezioni alternative
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1832,6 +1864,14 @@ it:
           lessons:
             lesson-9:
               name: Casuale
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-4:
+              display_name: Lezioni alternative
         csa4-exemplars:
           lesson_groups:
             content:
@@ -1881,6 +1921,14 @@ it:
               display_name: Mostra ciò che sai
             lessonGroup-4:
               display_name: Lezioni alternative
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-4:
+              display_name: Lezioni alternative
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1919,6 +1967,14 @@ it:
             lessonGroup-5:
               display_name: Sandbox
         csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-4:
+              display_name: Lezioni alternative
+        csa6-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
@@ -1973,6 +2029,14 @@ it:
           lessons:
             lesson-6:
               name: Proprietà intellettuale
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-5:
+              display_name: Lezioni alternative
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2018,6 +2082,16 @@ it:
             lessonGroup-5:
               display_name: Sondaggio
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-4:
+              display_name: Sondaggio
+            lessonGroup-5:
+              display_name: Lezioni alternative
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
@@ -3868,6 +3942,12 @@ it:
               display_name: Sondaggio
             csp_unit1_2020:
               display_name: Princìpi dell'Informatica - Unità 1
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaggio
+            csp_unit1_2020:
+              display_name: Princìpi dell'Informatica - Unità 1
         csp1-dlp:
           lesson_groups:
             content:
@@ -3917,6 +3997,10 @@ it:
             lessonGroup-2:
               display_name: Sondaggio Post-corso
         csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sondaggio Post-corso
+        csp10-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Sondaggio Post-corso
@@ -3970,6 +4054,10 @@ it:
             csp_unit2_2020:
               display_name: Princìpi dell'Informatica - Unità 2
         csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: Princìpi dell'Informatica - Unità 2
+        csp2-2024:
           lesson_groups:
             csp_unit2_2020:
               display_name: Princìpi dell'Informatica - Unità 2
@@ -4155,6 +4243,16 @@ it:
               display_name: Progetto
             csp_variables:
               display_name: Variabili
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Istruzioni condizionali
+            csp_functions:
+              display_name: Funzioni
+            csp_project:
+              display_name: Progetto
+            csp_variables:
+              display_name: Variabili
         csp4-dlp:
           lesson_groups:
             content:
@@ -4280,6 +4378,13 @@ it:
             lessonGroup-5:
               display_name: Sondaggio Post-corso
           title: Dati ('22-'23)
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Dati
+            lessonGroup-5:
+              display_name: Sondaggio Post-corso
+          title: Dati ('22-'23)
         csp5-dlp:
           lesson_groups:
             content:
@@ -4358,6 +4463,18 @@ it:
               display_name: Traversali
             lessonGroup-5:
               display_name: Progetto
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Liste
+            lessonGroup-2:
+              display_name: Sondaggio Post-corso
+            lessonGroup-3:
+              display_name: Cicli
+            lessonGroup-4:
+              display_name: Traversali
+            lessonGroup-5:
+              display_name: Progetto
         csp6-pilot:
           lesson_groups:
             content:
@@ -4406,6 +4523,14 @@ it:
               display_name: Parametri e Valori di Ritorno
             lessonGroup-3:
               display_name: Sondaggio Post-corso
+        csp7-2024:
+          lesson_groups:
+            csp_libraries:
+              display_name: Librerie
+            csp_parameters_return_values:
+              display_name: Parametri e Valori di Ritorno
+            lessonGroup-3:
+              display_name: Sondaggio Post-corso
         csp7-pilot:
           lesson_groups:
             csp_libraries:
@@ -4429,6 +4554,10 @@ it:
             lessonGroup-3:
               display_name: Sondaggio Post-corso
         csp8-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sondaggio Post-corso
+        csp8-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: Sondaggio Post-corso
@@ -4462,6 +4591,12 @@ it:
               display_name: Sondaggio Post-corso
           title: Dati ('22-'23)
         csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: Princìpi dell'Informatica - Unità 9
+            lessonGroup-2:
+              display_name: Sondaggio Post-corso
+        csp9-2024:
           lesson_groups:
             csp_unit9_2020:
               display_name: Princìpi dell'Informatica - Unità 9
@@ -6159,6 +6294,9 @@ it:
             lesson-1:
               name: Lezione 1
         self-paced-pl-k5-2024-1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introduzione
           lessons:
             lesson-1:
               name: Lezione 1
@@ -6170,6 +6308,9 @@ it:
               name: Passi successivi
           title: Cos'è l'informatica
         self-paced-pl-k5-2024-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introduzione
           lessons:
             lesson-1:
               name: Lezione 1
