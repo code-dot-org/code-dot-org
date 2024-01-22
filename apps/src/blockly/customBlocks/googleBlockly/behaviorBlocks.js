@@ -41,7 +41,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
         text: '',
       },
       {
-        type: 'input_dummy',
+        type: 'input_end_row',
         name: 'TOP',
       },
     ],
@@ -187,23 +187,10 @@ GoogleBlockly.Extensions.registerMutator(
 export function flyoutCategory(workspace, functionEditorOpen = false) {
   const blockList = [];
 
-  const behaviorDefinitionBlock = {
-    kind: 'block',
-    type: BLOCK_TYPES.behaviorDefinition,
-    fields: {
-      NAME: Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,
-    },
-  };
-
-  // If the modal function editor is enabled, we render a button to open the editor
-  // Behaviors are not editable without the modal editor open
   if (functionEditorOpen) {
     // No-op - cannot create new behaviors while the modal editor is open
   } else if (Blockly.useModalFunctionEditor) {
-    const newBehaviorButton = getNewBehaviorButtonWithCallback(
-      workspace,
-      behaviorDefinitionBlock
-    );
+    const newBehaviorButton = getNewBehaviorButtonWithCallback(workspace);
     blockList.push(newBehaviorButton);
   }
 
@@ -258,12 +245,10 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   return blockList;
 }
 
-const getNewBehaviorButtonWithCallback = (
-  workspace,
-  behaviorDefinitionBlock
-) => {
+const getNewBehaviorButtonWithCallback = workspace => {
   const callbackKey = 'newBehaviorCallback';
   workspace.registerButtonCallback(callbackKey, () => {
+    workspace.hideChaff();
     Blockly.functionEditor.newProcedureCallback(BLOCK_TYPES.behaviorDefinition);
   });
 

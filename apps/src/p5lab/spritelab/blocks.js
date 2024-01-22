@@ -173,7 +173,7 @@ const customInputTypes = {
         );
     },
     generateCode(block, arg) {
-      return `'${block.getFieldValue(arg.name)}'`;
+      return JSON.stringify(block.getFieldValue(arg.name));
     },
   },
   costumePicker: {
