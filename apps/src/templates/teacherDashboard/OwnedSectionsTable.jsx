@@ -53,18 +53,18 @@ export const courseLinkFormatter = function (course, {rowData}) {
       {courseOfferingsAreLoaded ? (
         <>
           <a
-            href={`${rowData.assignmentPaths[0]}${stringifyQueryParams({
+            href={`${assignmentPaths[0]}${stringifyQueryParams({
               section_id: rowData.id,
             })}`}
             style={tableLayoutStyles.link}
           >
-            {rowData.assignmentNames[0]}
+            {assignmentNames[0]}
           </a>
           {assignmentPaths.length > 1 && (
             <div style={styles.currentUnit}>
               <div>{i18n.currentUnit()}</div>
               <a
-                href={`${rowData.assignmentPaths[1]}${stringifyQueryParams({
+                href={`${assignmentPaths[1]}${stringifyQueryParams({
                   section_id: rowData.id,
                 })}`}
                 style={tableLayoutStyles.link}
