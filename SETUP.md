@@ -32,8 +32,6 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 1. `rbenv rehash`
 
-1. `bundle config --local without staging test production levelbuilder`
-
 1. `bundle install`
     - This step often fails to due environment-specific issues. Look in the [Bundle Install Tips](#bundle-install-tips) section below for steps to resolve many common issues.
 
@@ -404,8 +402,7 @@ Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md) fo
 
 On Apple Silicon/Intel Mac, additional steps are required to get `bundle install` to work.
 
-Make you sure you've already run ```bundle config --local without staging test production levelbuilder``` command
-and run it if you haven't. Then run the following commands to successfully complete a bundle install:
+First, run the following commands to successfully complete a bundle install:
 
 ```sh
 gem install bundler -v 2.3.22
