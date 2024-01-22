@@ -63,7 +63,12 @@ import {
   ObservableProcedureModel,
   ObservableParameterModel,
 } from '@blockly/block-shareable-procedures';
-import {adjustCalloutsOnViewportChange, disableOrphans} from './eventHandlers';
+import {
+  adjustCalloutsOnViewportChange,
+  disableOrphans,
+  reflowToolbox,
+} from './eventHandlers';
+import {initializeScrollbarPair} from './addons/cdoScrollbar.js';
 
 const options = {
   contextMenu: true,
@@ -638,8 +643,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
         wheel: true,
         drag: true,
         scrollbars: {
+          horizontal: true,
           vertical: true,
-          horizontal: false,
         },
       },
       plugins: {
@@ -686,6 +691,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
       .getFlyout()
       ?.getWorkspace()
       ?.addChangeListener(adjustCalloutsOnViewportChange);
+
+    initializeScrollbarPair(workspace);
+
+    window.addEventListener('resize', reflowToolbox);
 
     document.dispatchEvent(
       utils.createEvent(Blockly.BlockSpace.EVENTS.MAIN_BLOCK_SPACE_CREATED)

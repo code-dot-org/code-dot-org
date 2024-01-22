@@ -78,7 +78,7 @@ theme: responsive_full_width
       %img.col-50{src: "/images/courses-catalog/CSD.png", alt: ""}
       .text-wrapper.col-50
         %p=hoc_s(:csd_page_courses_year_action_block_desc)
-        %a.link-button{href: CDO.studio_url("/courses/csd-2023?viewAs=Instructor")}
+        %a.link-button{href: CDO.studio_url("/courses/csd?viewAs=Instructor")}
           =hoc_s(:call_to_action_explore_full_course)
     .clear
 
@@ -104,7 +104,7 @@ theme: responsive_full_width
 
 %section
   .wrapper
-    = view :curriculum_pages_pl_section, facilitator_desc: hoc_s(:professional_learning_section_block_facilitator_led_workshops), apply_url: "/apply",modules_url: CDO.studio_url("/courses/self-paced-pl-csd-2023")
+    = view :curriculum_pages_pl_section, facilitator_desc: hoc_s(:professional_learning_section_block_facilitator_led_workshops), apply_url: "/apply",modules_url: CDO.studio_url("/courses/self-paced-pl-csd")
 
 = view :section_divider_line
 
