@@ -529,7 +529,8 @@ nav.main .button-signin {
 }
 
 nav.main .help_button {
-  all: unset;
+  padding: 0;
+  height: unset;
 }
 
 nav.main .help_button .help_icon {
@@ -538,7 +539,7 @@ nav.main .help_button .help_icon {
 }
 
 nav.main .help_button .help_contents {
-  right: 1rem;
+  top: 46px;
 }
 
 nav.main #hamburger #hamburger-icon {
