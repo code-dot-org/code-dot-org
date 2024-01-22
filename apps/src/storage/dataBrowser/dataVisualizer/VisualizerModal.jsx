@@ -198,7 +198,7 @@ class VisualizerModal extends React.Component {
     return options.join(', ');
   }
 
-  countCells = memoize((records, tableColumns, chartType) => {
+  getValuesByColumn = memoize((records, tableColumns, chartType) => {
     if (chartType !== ChartType.CROSS_TAB) {
       return undefined;
     } else {
@@ -212,15 +212,15 @@ class VisualizerModal extends React.Component {
     }
   });
 
-  tooBigColumns = memoize((tableColumns, countedCells, selectedColumn1) => {
-    if (!countedCells) {
+  tooBigColumns = memoize((tableColumns, valuesByColumn, selectedColumn1) => {
+    if (!valuesByColumn) {
       return [];
     } else {
-      const xCount = selectedColumn1 ? countedCells[selectedColumn1].size : 0;
+      const xCount = selectedColumn1 ? valuesByColumn[selectedColumn1].size : 0;
       return tableColumns.filter(
         column =>
-          countedCells[column].size >= MAX_CROSSTAB_COLUMNS ||
-          xCount * countedCells[column].size >= MAX_CROSSTAB_CELLS
+          valuesByColumn[column].size >= MAX_CROSSTAB_COLUMNS ||
+          xCount * valuesByColumn[column].size >= MAX_CROSSTAB_CELLS
       );
     }
   });
@@ -242,7 +242,7 @@ class VisualizerModal extends React.Component {
       this.props.tableColumns
     );
 
-    const countedCells = this.countCells(
+    const valuesByColumn = this.getValuesByColumn(
       filteredRecords,
       this.props.tableColumns,
       this.state.chartType
@@ -354,7 +354,7 @@ class VisualizerModal extends React.Component {
                 options={this.props.tableColumns}
                 disabledOptions={_.union(
                   disabledOptions,
-                  this.tooBigColumns(this.props.tableColumns, countedCells)
+                  this.tooBigColumns(this.props.tableColumns, valuesByColumn)
                 )}
                 value={this.state.selectedColumn1}
                 onChange={event =>
@@ -370,7 +370,7 @@ class VisualizerModal extends React.Component {
                     disabledOptions,
                     this.tooBigColumns(
                       this.props.tableColumns,
-                      countedCells,
+                      valuesByColumn,
                       this.state.selectedColumn1
                     )
                   )}
