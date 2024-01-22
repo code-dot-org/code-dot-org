@@ -48,6 +48,7 @@ class LevelsController < ApplicationController
     Music,
     NetSim,
     Odometer,
+    Panels,
     Pixelation,
     Poetry,
     PublicKeyCryptography,
@@ -451,6 +452,8 @@ class LevelsController < ApplicationController
         @game = Game.aichat
       elsif @type_class == Pythonlab
         @game = Game.pythonlab
+      elsif @type_class == Panels
+        @game = Game.panels
       end
       @level = @type_class.new
       render :edit
