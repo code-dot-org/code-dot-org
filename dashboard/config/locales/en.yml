@@ -1404,8 +1404,7 @@ en:
     founder: "Founder, Code.org"
     your_friends: "Your Friends at Code.org"
   lti:
-    create_integration_success: "Succesfully created your LTI integration"
-    create_integration_success: "Succesfully created your LTI integration"
+    create_integration_success: "Successfully created your LTI integration"
     error:
       integration_exists: "Lti Integration already exists for this Client ID"
       missing_params: "Missing required param(s): Client ID, LMS, Email"
