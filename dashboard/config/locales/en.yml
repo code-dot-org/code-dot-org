@@ -312,6 +312,7 @@ en:
       email: 'Email'
       google_classroom: 'Google Classroom'
       clever: 'Clever'
+      lti_v1: 'LMS'
   follower:
     invite_sent: 'Invite sent'
     added_teacher: '%{name} added as your teacher'
@@ -1402,3 +1403,10 @@ en:
     thank_you: "THANK YOU for championing computer science education. Our team wishes you and your students an unforgettable Hour of Code!"
     founder: "Founder, Code.org"
     your_friends: "Your Friends at Code.org"
+  lti:
+    create_integration_success: "Succesfully created your LTI integration"
+    error:
+      integration_exists: "Lti Integration already exists for this Client ID"
+      missing_params: "Missing required param(s): client_id, lms, email"
+      unsupported_lms_type: "Unsupported LMS platform type"
+      wrong_resource_type: "Only LtiResourceLink is supported right now"

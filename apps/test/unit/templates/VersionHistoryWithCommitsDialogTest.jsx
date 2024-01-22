@@ -121,14 +121,14 @@ describe('VersionHistoryWithCommitsDialog', () => {
       finishVersionHistoryLoad();
       expect(restoreSpy()).not.to.have.been.called;
 
-      wrapper.find('Button').at(2).simulate('click');
+      wrapper.find('Button').at(3).simulate('click');
       expect(restoreSpy()).to.have.been.calledOnce;
     });
 
     it('renders an error on failed restore', () => {
       wrapper = mount(<VersionHistoryWithCommitsDialog {...props} />);
       finishVersionHistoryLoad();
-      wrapper.find('Button').at(2).simulate('click');
+      wrapper.find('Button').at(3).simulate('click');
 
       failRestoreVersion();
       expect(wrapper.text()).to.include('An error occurred.');
@@ -137,7 +137,7 @@ describe('VersionHistoryWithCommitsDialog', () => {
     it('reloads the page on successful restore', () => {
       wrapper = mount(<VersionHistoryWithCommitsDialog {...props} />);
       finishVersionHistoryLoad();
-      wrapper.find('Button').at(2).simulate('click');
+      wrapper.find('Button').at(3).simulate('click');
       expect(utils.reload).not.to.have.been.called;
 
       finishRestoreVersion();
@@ -220,7 +220,7 @@ describe('VersionHistoryWithCommitsDialog', () => {
         );
         finishVersionHistoryLoad();
         wrapper.find('Button').last().simulate('click');
-        wrapper.find('Button').first().simulate('click');
+        wrapper.find('Button').at(1).simulate('click');
       });
 
       afterEach(async () => {

@@ -29,7 +29,7 @@ class Queries::Lti
   end
 
   def self.get_lti_course_from_section_code(section_code)
-    Section.find_by(code: section_code).lti_course
+    Section.find_by(code: section_code)&.lti_course
   end
 
   def self.find_or_create_lti_course(lti_integration_id:, context_id:, deployment_id:, nrps_url:, resource_link_id:)
