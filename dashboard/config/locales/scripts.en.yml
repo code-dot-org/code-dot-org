@@ -14749,3 +14749,14 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        coding-with-ai:
+          lessons:
+            lesson-1:
+              name: Introduction to Coding with AI
+          lesson_groups: {}
+          name: coding-with-ai
+          title: Coding with AI
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
