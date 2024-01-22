@@ -83,14 +83,14 @@ export default class ProgressBox extends Component {
         {viewed ? (
           <div style={viewedStyle} />
         ) : (
-          <div>
+          <>
             <div style={incompleteLevels} />
             <div style={imperfectLevels} />
             <div
               className={'uitest-perfect-bar'}
               style={lessonIsAllAssessment ? assessmentLevels : perfectLevels}
             />
-          </div>
+          </>
         )}
       </div>
     );
