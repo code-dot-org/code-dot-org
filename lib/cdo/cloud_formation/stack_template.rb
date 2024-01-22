@@ -50,17 +50,17 @@ module Cdo::CloudFormation
       "AssumeRolePolicyDocument: #{document.to_json}"
     end
 
-    private def erb_file(filename, vars={})
+    private def erb_file(filename, vars = {})
       file = File.expand_path filename
       erb_eval(File.read(file), file, vars)
     end
 
     # Inline a file into a CloudFormation template.
-    private def file(filename, vars={})
+    private def file(filename, vars = {})
       {'Fn::Sub': erb_file(filename, vars)}.to_json
     end
 
-    private def erb_eval(str, filename=nil, local_vars={})
+    private def erb_eval(str, filename = nil, local_vars = {})
       binding = get_binding
       local_vars.each_pair do |key, value|
         binding.local_variable_set(key, value)

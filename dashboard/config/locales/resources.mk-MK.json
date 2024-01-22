@@ -353,10 +353,32 @@
         "variables/express/2022": {
           "name": "Променливи"
         },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
+        "lists/csd/2023": {
+          "name": "Листи"
+        },
+        "variables/csd/2023": {
+          "name": "Променливи"
+        },
+        "variables_1/csd/2023": {
+          "name": "Променливи"
+        },
+        "variables_2/csd/2023": {
+          "name": "Променливи"
+        },
+        "sprites/csd/2023": {
+          "name": "Сприти"
+        },
+        "sprites_1/csd/2023": {
+          "name": "Сприти"
+        },
+        "text/csd/2023": {
+          "name": "Текст"
+        },
+        "how_to_make_a_class_section_on_code_org/courseb/2023": {
+          "url": "https://youtu.be/4Wugxc80fNU"
+        },
+        "variables/express/2023": {
+          "name": "Променливи"
         }
       }
     }

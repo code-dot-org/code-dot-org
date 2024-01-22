@@ -1,0 +1,24 @@
+{
+  "banners": {
+    "superhero": {
+      "title": "",
+      "body": "",
+      "buttonText": "Més informació"
+    },
+    "hoc-2023": {
+      "title": "Hora del Codi: Creativitat amb IA",
+      "body": "Uneix-te a milions de persones a tot el món per organitzar una hora de codificació, amb IA o sense i aprendre com funciona la IA. Qualsevol persona, en qualsevol lloc pot fer-ho. No cal experiència.",
+      "buttonText": "Més informació"
+    },
+    "hoc-2023-dance-ai": {
+      "title": "",
+      "body": "",
+      "buttonText": "Més informació"
+    },
+    "co-teacher": {
+      "title": "",
+      "body": "",
+      "buttonText": "Més informació"
+    }
+  }
+}

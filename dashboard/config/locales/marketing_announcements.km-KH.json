@@ -1,0 +1,22 @@
+{
+  "km-KH": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "co-teacher": {
+            "buttonText": "ស្វែងយល់បន្ថែម"
+          },
+          "hoc-2023": {
+            "buttonText": "ស្វែងយល់បន្ថែម"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "ស្វែងយល់បន្ថែម"
+          },
+          "superhero": {
+            "buttonText": "ស្វែងយល់បន្ថែមទៀត"
+          }
+        }
+      }
+    }
+  }
+}

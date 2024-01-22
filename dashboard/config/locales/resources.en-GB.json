@@ -32,10 +32,23 @@
         "variables/express/2022": {
           "name": "Variables"
         },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
+        "lists/csd/2023": {
+          "name": "Lists"
+        },
+        "variables/csd/2023": {
+          "name": "Variables"
+        },
+        "variables_1/csd/2023": {
+          "name": "Variables"
+        },
+        "variables_2/csd/2023": {
+          "name": "Variables"
+        },
+        "text/csd/2023": {
+          "name": "Text"
+        },
+        "variables/express/2023": {
+          "name": "Variables"
         }
       }
     }

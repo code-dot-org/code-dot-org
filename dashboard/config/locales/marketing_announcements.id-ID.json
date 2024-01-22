@@ -1,0 +1,25 @@
+{
+  "id-ID": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "co-teacher": {
+            "buttonText": "Pelajari lebih lanjut"
+          },
+          "hoc-2023": {
+            "body": "Bergabunglah bersama jutaan orang di seluruh dunia dalam menyelenggarakan kegiatan coding satu jam, dengan atau tanpa AI dan mempelajari cara kerja AI. Siapapun, dan di manapun dapat  melakukannya. Tidak harus punya pengalaman.",
+            "buttonText": "Pelajari lebih lanjut",
+            "title": "Hour of Code: Kreativitas dengan AI"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Pelajari lebih lanjut",
+            "title": "Pesta Dansa: Edisi AI"
+          },
+          "superhero": {
+            "buttonText": "Pelajari lebih banyak"
+          }
+        }
+      }
+    }
+  }
+}

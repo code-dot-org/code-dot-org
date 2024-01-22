@@ -68,36 +68,44 @@
         "define/express/2022": {
           "word": "Idefinixxi"
         },
-        "function/hero/unversioned": {
+        "variable/csc-ecosystems/2023": {
+          "word": "Varjabbli"
+        },
+        "copyright/csd/2023": {
+          "word": "Drittijiet tal-Awtur"
+        },
+        "variable/csd/2023": {
+          "word": "Varjabbli"
+        },
+        "function/csd/2023": {
           "word": "Funzjoni"
         },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
+        "function/coursee/2023": {
+          "word": "Funzjoni"
         },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
+        "copyright/coursee/2023": {
+          "word": "Drittijiet tal-Awtur"
         },
-        "code/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "define/coursee/2023": {
+          "word": "Idefinixxi"
         },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "variable/coursef/2023": {
+          "word": "Varjabbli"
         },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "define/coursef/2023": {
+          "word": "Idefinixxi"
         },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "function/express/2023": {
+          "word": "Funzjoni"
         },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "variable/express/2023": {
+          "word": "Varjabbli"
+        },
+        "define/express/2023": {
+          "word": "Idefinixxi"
+        },
+        "function/hero/unversioned": {
+          "word": "Funzjoni"
         }
       }
     }

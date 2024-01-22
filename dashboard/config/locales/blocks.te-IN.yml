@@ -48,6 +48,11 @@ te:
             '"measures"': మెజర్స్
             '"seconds"': సెకండ్లు
         text: తరుగాత {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': మెజర్స్
+            '"seconds"': సెకండ్లు
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -69,6 +74,26 @@ te:
             '"ROBOT"': రోబో
             '"SHARK"': షార్క్
             '"UNICORN"': యూనికార్న్
+          MOVE:
+            '"next"': "(తరువాత)"
+            '"prev"': "(ముందటి)"
+            '"rand"': "(రాండమ్)"
+            MOVES.ClapHigh: క్లాప్ హై
+            MOVES.Clown: గాంగ్నమ్
+            MOVES.Dab: డాబ్
+            MOVES.DoubleJam: డబుల్ డౌన్
+            MOVES.Drop: డ్రాప్
+            MOVES.Floss: ఫ్లాస్
+            MOVES.Fresh: ఫ్రెష్
+            MOVES.Kick: స్టార్
+            MOVES.Rest: ఏదీ కాదు
+            MOVES.Roll: బాడీ రోల్
+            MOVES.ThisOrThat: ఇది లేక అది
+        text: "{GROUP} చేయండి {MOVE} {DIR} ఎప్పటికీ"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': క్యాట్
           MOVE:
             '"next"': "(తరువాత)"
             '"prev"': "(ముందటి)"
@@ -482,6 +507,39 @@ te:
             '"vintage"': వింటేజ్
             '"warm"': వామ్
         text: "బ్యాక్‌గ్రౌండ్ ఎఫెక్ట్ \n{PALETTE} {EFFECT} సెట్ చేయండి"
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': సర్కిల్స్
+            '"color_cycle"': రంగులు
+            '"diamonds"': డైమండ్స్
+            '"disco"': స్క్వైర్స్
+            '"disco_ball"': డిస్కో బాల్
+            '"fireworks"': ఫైర్‌వర్క్స్
+            '"galaxy"': స్పేస్
+            '"lasers"': లేజర్ డాన్స్ ఫ్లోర్
+            '"none"': ఏదీ కాదు
+            '"rainbow"': రెయిన్‌బో
+            '"rand"': "(రాండమ్)"
+            '"snowflakes"': స్నో
+            '"sparkles"': స్పార్కల్స్
+            '"spiral"': స్పైరల్
+            '"splatter"': పెయింట్ స్ప్లాట్టర్
+            '"stars"': స్టార్స్
+            '"swirl"': హిప్నో
+            '"text"': పాట పేర్లు
+          PALETTE:
+            '"cool"': కూల్
+            '"default"': లైట్
+            '"electronic"': ఎలక్ట్రానిక్
+            '"iceCream"': ఐస్ క్రీమ్
+            '"neon"': నియోన్
+            '"rainbow"': రెయిన్‌బో
+            '"rave"': బ్లాక్ అండ్ వైట్
+            '"tropical"': ట్రాపికల్
+            '"vintage"': వింటేజ్
+            '"warm"': వామ్
+        text: "బ్యాక్‌గ్రౌండ్ ఎఫెక్ట్ \n{PALETTE} {EFFECT} సెట్ చేయండి"
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -859,6 +917,12 @@ te:
           వహించండి"
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}చెప్పండి{TEXT1}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': వాయువు
+            '"liquid"': ద్రవము
+            '"solid"': ఘనపదార్థం
       Mikelab_addTrainingData:
         options:
           LOCATION:

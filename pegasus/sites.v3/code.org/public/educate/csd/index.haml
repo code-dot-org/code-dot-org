@@ -35,6 +35,8 @@ theme: responsive_full_width
         =hoc_s(:call_to_action_explore_curriculum_options)
     .clear
 
+= view :professional_learning_skinny_banner
+
 %section.bg-neutral-light
   .wrapper
     = view :curriculum_glance_section, heading: hoc_s(:heading_curricula_at_a_glance), grades: hoc_s(:module_grade_6_10), duration: hoc_s(:module_duration_month_semester_year), level: hoc_s(:module_level_beginner), tools: hoc_s(:csd_page_curriculum_glance_tools), devices: hoc_s(:csd_page_curriculum_glance_devices), professional_learning: hoc_s(:csd_page_curriculum_glance_professional_learning), topics: hoc_s(:csd_page_curriculum_glance_topics), accessibility_features: hoc_s(:csd_page_curriculum_glance_professional_accessibility_features), languages: hoc_s(:csd_page_curriculum_glance_professional_languages)
@@ -51,7 +53,10 @@ theme: responsive_full_width
 
 %section#pick-a-course.bg-neutral-light
   .wrapper
-    %h2=hoc_s(:csd_page_pick_a_course_heading)
+    - if request.language == "en"
+      %h2=hoc_s(:csd_page_pick_a_course_heading, markdown: :inline)
+    - else
+      %h2=hoc_s(:csd_page_pick_a_course_heading_non_en, markdown: :inline, locals: {cs_discoveries: "CS Discoveries&reg;"})
     %p=hoc_s(:csd_page_pick_a_course_desc)
     %hr
     %div.centered
@@ -73,7 +78,7 @@ theme: responsive_full_width
       %img.col-50{src: "/images/courses-catalog/CSD.png", alt: ""}
       .text-wrapper.col-50
         %p=hoc_s(:csd_page_courses_year_action_block_desc)
-        %a.link-button{href: CDO.studio_url("/courses/csd-2023?viewAs=Instructor")}
+        %a.link-button{href: CDO.studio_url("/courses/csd?viewAs=Instructor")}
           =hoc_s(:call_to_action_explore_full_course)
     .clear
 
@@ -83,7 +88,6 @@ theme: responsive_full_width
   .wrapper
     %h2=hoc_s(:heading_flexible_units)
     %p=hoc_s(:csd_page_courses_flexible_units_desc)
-
     = view :carousel_csd_flexible
 
 = view :section_divider_line
@@ -92,17 +96,15 @@ theme: responsive_full_width
   .wrapper
     %h2=hoc_s(:heading_collections)
     %p=hoc_s(:csd_page_courses_collections_desc)
-
     = view :carousel_csd_collections
-
 
 %section.bg-neutral-light
   .wrapper
-    = view :resources_tabs
+    = view :"tabs_section/resources/resources_tabs"
 
 %section
   .wrapper
-    = view :curriculum_pages_pl_section, facilitator_desc: hoc_s(:professional_learning_section_block_facilitator_led_workshops), apply_url: "/apply",modules_url: CDO.studio_url("/courses/self-paced-pl-csd-2023")
+    = view :curriculum_pages_pl_section, facilitator_desc: hoc_s(:professional_learning_section_block_facilitator_led_workshops), apply_url: "/apply",modules_url: CDO.studio_url("/courses/self-paced-pl-csd")
 
 = view :section_divider_line
 
@@ -115,10 +117,12 @@ theme: responsive_full_width
   .wrapper
     = view :support_and_questions_section
 
+%section#csd-newsletter-signup{style: "padding-top: 2rem"}
+  .wrapper
+    = view :subscribe_form, subscribe_form_section_title: hoc_s(:subscribe_form_section_title), subscribe_form_section_desc: hoc_s(:subscribe_form_section_desc_csd), form_height: "375px", form_src: "http://go.pardot.com/l/153401/2017-08-24/jjjmqx"
+
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::CSD_CURRICULUM_PAGE_VISITED_EVENT
 
 %script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
 %script{:src=>'/js/jquery.touchSwipe.min.js'}
 %script{:src=>'/js/page/educate_csd.js'}
-
-

@@ -257,6 +257,24 @@
         "pre-express-2019/Spelling Bee": {
           "name": "Spelling Bee"
         },
+        "k5-onlinepd-2019/Loops": {
+          "name": "loops"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Իրադարձություններ"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "conditionals"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "գործառույթները"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "փոփոխականների"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "For Loops"
+        },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Ուրախ Քարտեզներ"
         },
@@ -389,8 +407,53 @@
         "coursef-2022/The Internet": {
           "name": "Համացանց"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Ժամ օրենսգրքի 2013-"
+        "csd3-2023/Variables": {
+          "name": "փոփոխականների"
+        },
+        "csd3-2023/Text": {
+          "name": "տեքստ"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "conditionals"
+        },
+        "csd3-2023/Functions": {
+          "name": "գործառույթները"
+        },
+        "csd6a-2023/Functions": {
+          "name": "գործառույթները"
+        },
+        "csd6b-2023/Functions": {
+          "name": "գործառույթները"
+        },
+        "coursea-2023/Happy Maps": {
+          "name": "Ուրախ Քարտեզներ"
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Տեղափոխել այն, տեղափոխել այն"
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Getting Loopy"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "The Big Event"
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Binary Bracelets"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Relay programming"
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Conditionals with Cards"
+        },
+        "coursee-2023/Songwriting": {
+          "name": "songwriting"
+        },
+        "coursef-2023/The Internet": {
+          "name": "Համացանց"
         },
         "artist/Artist": {
           "name": "Արտիստ"
@@ -415,12 +478,6 @@
         },
         "mc/Hour of Code 2015": {
           "name": "Minecraft Hour of Code"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
         },
         "playlab/Play Lab": {
           "name": "Play Lab"
@@ -754,6 +811,9 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Extreme Challenge - Comprehensive"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Ժամ օրենսգրքի 2013-"
         },
         "jigsaw/Jigsaw": {
           "name": "ոլորահատ սղոց"

@@ -14,8 +14,8 @@ namespace :build do
       # Only rebuild if any of the apps_build_trigger_paths have changed since last build.
       commit_hash = apps_dir('build/commit_hash')
       if !RakeUtils.git_staged_changes?(*apps_build_trigger_paths) &&
-        File.exist?(commit_hash) &&
-        File.read(commit_hash) == calculate_apps_commit_hash
+          File.exist?(commit_hash) &&
+          File.read(commit_hash) == calculate_apps_commit_hash
 
         ChatClient.log '<b>apps</b> unchanged since last build, skipping.'
         next
@@ -29,7 +29,7 @@ namespace :build do
       RakeUtils.system "npm run #{npm_target}"
       File.write(commit_hash, calculate_apps_commit_hash)
 
-      if rack_env?(:staging) && DCDO.get('deploy_storybook', false)
+      if rack_env?(:staging) && DCDO.get('deploy_storybook', true)
         ChatClient.log 'Deploying <b>storybook</b>...'
         RakeUtils.system 'npm run storybook:deploy'
       end
@@ -96,6 +96,34 @@ namespace :build do
           RakeUtils.rake_stream_output 'seed:default', (rack_env?(:test) ? '--trace' : nil)
         end
 
+        # Restart Active Job workers before restarting dashboard server so that:
+        # 1. the order of the restarts will be consistent between production and
+        # other environments, and
+        # 2. the server code which is queueing new jobs does not need to be
+        # backward compatible (although the job code itself still does).
+        #
+        # When making breaking changes to a job's api contract, the best
+        # practice is to update the job (in a backward compatible manner) in a
+        # first deploy, then update the code which calls it in a separate
+        # deploy, similarly to how we sequence deploys with database migrations
+        # or seeding changes.
+        #
+        # The sequencing described here is the best for mitigating any issues
+        # that may arise when that best practice is not followed.
+        ChatClient.log 'Restarting <b>dashboard</b> Active Job worker(s).'
+        if rack_env?(:production)
+          # WARNING: the number of workers in production is safe to increase,
+          # but is not safe to lower without additional steps. specifically, if
+          # you lower the number of jobs from 10 to 8 (for example), you'll need
+          # to manually kill workers 8 and 9 (zero-based). otherwise, those
+          # workers will continue to run jobs using older code indefinitely.
+          RakeUtils.system 'bin/delayed_job', '-n', '10', 'restart'
+        elsif !rack_env?(:development)
+          # development environment does not use delayed_job by default.
+          # all other non-production daemons should run one worker.
+          RakeUtils.system 'bin/delayed_job', 'restart'
+        end
+
         # Commit dsls.en.yml changes on staging
         dsls_file = dashboard_dir('config/locales/dsls.en.yml')
         if rack_env?(:staging) && GitUtils.file_changed_from_git?(dsls_file)
@@ -105,12 +133,12 @@ namespace :build do
           RakeUtils.git_push
         end
 
-        if rack_env?(:staging)
-          # This step will only complete successfully if we succeed in
-          # generating all curriculum PDFs.
-          ChatClient.log "Generating missing pdfs..."
-          RakeUtils.rake_stream_output 'curriculum_pdfs:generate_missing_pdfs'
-        end
+        # if rack_env?(:staging)
+        #  This step will only complete successfully if we succeed in
+        #  generating all curriculum PDFs.
+        #  ChatClient.log "Generating missing pdfs..."
+        #  RakeUtils.rake_stream_output 'curriculum_pdfs:generate_missing_pdfs'
+        # end
       end
 
       # Skip asset precompile in development.
@@ -123,7 +151,7 @@ namespace :build do
         ChatClient.log 'Cleaning <b>dashboard</b> assets...'
         RakeUtils.rake 'assets:clean'
         ChatClient.log 'Precompiling <b>dashboard</b> assets...'
-        RakeUtils.rake 'assets:precompile'
+        RakeUtils.rake 'assets:precompile', '--quiet'
       end
 
       ChatClient.log 'Restarting <b>dashboard</b> web server.'

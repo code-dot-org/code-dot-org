@@ -182,6 +182,9 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Rašanti bitė"
         },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Kiti žingsniai"
+        },
         "csd2-2019/Lists": {
           "name": "Sąrašai"
         },
@@ -247,6 +250,24 @@
         },
         "pre-express-2019/Spelling Bee": {
           "name": "Rašanti bitė"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Kartojimas"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Įvykiai"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Sąlyginiai sakiniai"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Komandų kūrimas"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Kintamieji"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Kartojimas"
         },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Laimingieji žemėlapiai"
@@ -329,6 +350,9 @@
         "coursef-2021/Internet": {
           "name": "Internetas"
         },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Kiti žingsniai"
+        },
         "csd3-2022/Variables": {
           "name": "Kintamieji"
         },
@@ -377,8 +401,56 @@
         "coursef-2022/The Internet": {
           "name": "Internetas"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Programavimo valanda 2013"
+        "csd3-2023/Variables": {
+          "name": "Kintamieji"
+        },
+        "csd3-2023/Text": {
+          "name": "Tekstas"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Sąlyginiai sakiniai"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Greitis"
+        },
+        "csd3-2023/Functions": {
+          "name": "Komandų kūrimas"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Komandų kūrimas"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Komandų kūrimas"
+        },
+        "coursea-2023/Happy Maps": {
+          "name": "Laimingieji žemėlapiai"
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Judėk, judėk"
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Kartojimo supratimas"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "Didelis įvykis"
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Dvejetainės apyrankės"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Programavimas ant languoto popieriaus"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Programavimas komandoje"
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Sąlyginiai sakiniai su kortomis"
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Dainų rašymas"
+        },
+        "coursef-2023/The Internet": {
+          "name": "Internetas"
         },
         "aquatic/Aquatic": {
           "name": "Minecraft: Kelionės vandeniu"
@@ -409,12 +481,6 @@
         },
         "minecraft/Minecraft Hour of Code Designer": {
           "name": "Minecraft „Programavimo valandos“ projektavimo aplinka"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
         },
         "playlab/Play Lab": {
           "name": "Laboratorija"
@@ -754,6 +820,9 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Ekstremalus iššūkis - Visapusiškumas"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Programavimo valanda 2013"
         },
         "jigsaw/Jigsaw": {
           "name": "Dėlionės"

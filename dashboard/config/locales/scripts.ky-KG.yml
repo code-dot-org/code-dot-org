@@ -22,6 +22,7 @@ ky:
             илимдин негиздерин ачкыла!
           description_short: Компүтердик илимдин негиздерин кызыктуу каармандар менен
             ачкыла!
+          name: Код сааты
           student_description: Angry Birds, Plants vs. Zombies каармандары менен компүтердик
             илимдин негиздерин ачкыла!
           title: Код сааты 2013
@@ -329,6 +330,14 @@ ky:
               display_name: Функциялар
             csp_variables:
               display_name: Өзгөрмөлөр
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Шартуулар
+            csp_functions:
+              display_name: Функциялар
+            csp_variables:
+              display_name: Өзгөрмөлөр
         csp4-pilot:
           lesson_groups:
             csp_conditionals:
@@ -392,6 +401,12 @@ ky:
             csp_unit6_2020:
               display_name: Алгоритмдер
         csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Тизмелер
+            lessonGroup-3:
+              display_name: Циклдер
+        csp6-2024:
           lesson_groups:
             csp_unit6_2020:
               display_name: Тизмелер
@@ -567,7 +582,7 @@ ky:
         k1hoc2017:
           title: Код сааты 2017, баштапкы класстар
         mc:
-          title: Minecraft код сааты
+          title: Minecraft тентек
         minecraft:
           title: Код сааты, Minecraft дизайнери
         netsim:
@@ -632,6 +647,17 @@ ky:
               display_name: Окуялар
             csf_loops:
               display_name: Циклдер
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Циклдер
+            lesson-4:
+              name: Шартуулар
+          title: Компүтер илимине киришүү
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Окуялар
         soccer:
           name: футбол
         spelling-bee:

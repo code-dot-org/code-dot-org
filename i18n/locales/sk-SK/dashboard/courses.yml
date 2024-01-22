@@ -84,6 +84,8 @@ sk:
           title: " Vyučujeme Aplikácie a hardvér  (Circuit Playground)"
         self-paced-pl-microbit-2023:
           title: Vyučujeme Aplikácie a hardvér (micro:bit)
+        self-paced-pl-csd-unit2-2023:
+          title: Výučba v oblasti vývoja webových stránok
     resources:
       curriculum/csd/2017:
         name: Osnovy

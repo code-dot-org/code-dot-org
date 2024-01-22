@@ -386,9 +386,6 @@
   volunteer_engineer_submission_subtitle_generic: '100,000 õpetajat korraldavad 2015. aastal, 7.–13. detsembril, KoodiTunni oma klassis. Nad vajavad Sinu abi! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} õpetajat otsib vabatahtlikke.<br>%{num_volunteers} vabatahtlikku on juba registreerinud. Liitu nendega."
   volunteer_engineer_submission_intro_background: "KoodiTund on globaalne liikumine, mille eesmärk on anda tunnine sissejuhatus arvutiteadusesse. See üritus jõuab sadade miljonite õpilasteni enam kui 180 riigis. Palun tule samuti osalema arvutiteaduse õppe nädala raames, mis toimub 7.-13. detsembril."
-  volunteer_engineer_submission_intro_recruit: 'Õpetajad otsivad vabatahtlikke, <span style="font-family: ''Gotham 7r'', sans-serif;">kes tahaksid õpetada arvutiteaduse </span> ja kes aitaksid neid klassiruumis või kes <span style="font-family: ''Gotham 7r'', sans-serif;">inspireeriks</span> nende õpilasi ja räägiks arvutiteaduse arvukatest võimalustest (seda saab teha ka videovestluse või Skype teel).'
-  volunteer_engineer_submission_intro_signup: "Palun sisesta järgnev info, kui oled arvutiteaduse jmt tudeng või programmeerija. Väljad märgiga <span class=\"form-required-field\">*</span> on kohustuslikud."
-  volunteer_engineer_submission_intro_links: "Kas olete õpetaja otsib vabatahtlikke? Leia kohalikke vabatahtlike meie <a href=\"%{volunteer_local}\"> vabatahtlike kaardilt</a>."
   volunteer_engineer_submission_update_information: "Uuendage oma andmeid"
   volunteer_engineer_submission_header_shared: "Vabatahtlike kaardil õpetajatega jagatud informatsioon"
   volunteer_engineer_submission_field_name: "Nimi"

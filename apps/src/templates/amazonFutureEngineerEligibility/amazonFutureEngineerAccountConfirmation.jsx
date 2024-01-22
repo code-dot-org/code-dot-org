@@ -1,4 +1,6 @@
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import React from 'react';
 import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {studio, pegasus} from '@cdo/apps/lib/util/urlHelpers';
@@ -19,6 +21,7 @@ export default class AmazonFutureEngineerAccountConfirmation extends React.Compo
       },
       {callback: () => (window.location = SIGN_UP_URL)}
     );
+    analyticsReporter.sendEvent(EVENTS.AFE_SIGN_UP_BUTTON_PRESS);
   };
 
   signInButtonPress = event => {
@@ -31,6 +34,7 @@ export default class AmazonFutureEngineerAccountConfirmation extends React.Compo
       },
       {callback: () => (window.location = SIGN_IN_URL)}
     );
+    analyticsReporter.sendEvent(EVENTS.AFE_SIGN_IN_BUTTON_PRESS);
   };
 
   render() {

@@ -1,5 +1,4 @@
 import React from 'react';
-import DCDO from '@cdo/apps/dcdo';
 import {mount} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedStatsTable as StatsTable} from '@cdo/apps/templates/teacherDashboard/StatsTable';
@@ -42,9 +41,6 @@ describe('StatsTable', () => {
   });
 
   it('sorts students by the correct name upon clicking the name header cells', () => {
-    DCDO.reset();
-    DCDO.set('family-name-features', true);
-
     const wrapper = mount(
       <StatsTable
         sectionId={1}
@@ -81,14 +77,9 @@ describe('StatsTable', () => {
     expect(nameCells.at(0).text()).to.equal('Lastname C');
     expect(nameCells.at(1).text()).to.equal('Lastname B');
     expect(nameCells.at(2).text()).to.equal('Lastname A');
-
-    DCDO.reset();
   });
 
   it('does not render a family name field in PL sections', async () => {
-    DCDO.reset();
-    DCDO.set('family-name-features', true);
-
     const wrapper = mount(
       <StatsTable
         sectionId={1}
@@ -100,7 +91,5 @@ describe('StatsTable', () => {
 
     expect(wrapper.find('uitest-family-name-header').exists()).to.be.false;
     expect(wrapper.find('uitest-family-name-cell').exists()).to.be.false;
-
-    DCDO.reset();
   });
 });

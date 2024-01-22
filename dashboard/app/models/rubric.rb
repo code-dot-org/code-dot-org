@@ -17,17 +17,27 @@ class Rubric < ApplicationRecord
   belongs_to :level
   belongs_to :lesson
 
+  def get_script_level
+    lesson.script_levels.find {|sl| sl.levels.include?(level)}
+  end
+
   def summarize
+    script_level = get_script_level
     {
+      id: id,
       learningGoals: learning_goals.map(&:summarize),
       lesson: {
         name: lesson.name,
         position: lesson.relative_position,
+      },
+      level: {
+        name: level.name,
+        position: script_level&.position,
       }
     }
   end
 
-  accepts_nested_attributes_for :learning_goals
+  accepts_nested_attributes_for :learning_goals, allow_destroy: true
 
   def seeding_key(seed_context)
     my_lesson = seed_context.lessons.find {|l| l.id == lesson_id}

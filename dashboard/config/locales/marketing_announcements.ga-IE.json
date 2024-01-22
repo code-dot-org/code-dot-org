@@ -1,0 +1,22 @@
+{
+  "ga-IE": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "co-teacher": {
+            "buttonText": "Tuilleadh eolais"
+          },
+          "hoc-2023": {
+            "buttonText": "Tuilleadh eolais"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Tuilleadh eolais"
+          },
+          "superhero": {
+            "buttonText": "Tuilleadh Eolais"
+          }
+        }
+      }
+    }
+  }
+}

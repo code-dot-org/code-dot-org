@@ -43,6 +43,30 @@
         },
         "csd-2022/web-lab": {
           "display_name": "వెబ్ ల్యాబ్"
+        },
+        "csd-2022/applab-overview": {
+          "display_name": "ఓవర్ వ్యూ"
+        },
+        "csd-2022/css-overview": {
+          "display_name": "ఓవర్ వ్యూ"
+        },
+        "csd-2022/game-lab-overview": {
+          "display_name": "ఓవర్ వ్యూ"
+        },
+        "csd-2022/html-overview": {
+          "display_name": "ఓవర్ వ్యూ"
+        },
+        "csd-2022/javascript-overview": {
+          "display_name": "ఓవర్ వ్యూ"
+        },
+        "csd-2022/maker-toolkit-overview": {
+          "display_name": "ఓవర్ వ్యూ"
+        },
+        "csd-2022/other-overview": {
+          "display_name": "ఓవర్ వ్యూ"
+        },
+        "csd-2022/patterns-overview": {
+          "display_name": "ఓవర్ వ్యూ"
         }
       }
     }

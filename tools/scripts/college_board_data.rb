@@ -340,7 +340,7 @@ end
 # Downloads the XLS files from the AP College Board.
 # @param [Integer] specific_year The specific year, if any, to download. If nil, all years are downloaded.
 #   Default is nil.
-def get_xlss(specific_year=nil)
+def get_xlss(specific_year = nil)
   STATES_WITH_DC.each do |state|
     puts "  DOWNLOADING #{state}..."
     SPECS.each do |spec|
@@ -360,7 +360,7 @@ end
 #   Default is nil.
 # @return [Array] An array of arrays, each subarray containing information about
 #   about one value extracted from some XLS file.
-def process_xlss(specific_year=nil)
+def process_xlss(specific_year = nil)
   data = []
   STATES_WITH_DC.each do |state|
     puts "PROCESSING #{state}..."

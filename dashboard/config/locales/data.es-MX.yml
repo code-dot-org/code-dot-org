@@ -975,6 +975,7 @@ es-MX:
         csd_gamelab_velocity: Velocidad
         csd_how_teamwork_works: Cómo funciona el trabajo en equipo
         csd_ml_ethics_ai: La Ética en la Inteligencia Artificial
+        csd_ml_how_ai_works: Cómo funciona la Inteligencia Artificial
         csd_ml_import_model: Importar un Modelo de Iinteligencia Artificial
         csd_ml_intro_ai_lab_july2021: Introducción al Laboratorio de Inteligencia
           Artificial
@@ -1062,6 +1063,7 @@ es-MX:
         hint_videos_d_11_7_last: 'Videos sugeridos: D.11.7 Último'
         hint_videos_d_11_9_first: 'Videos sugeridos: D.11.9 Primero'
         hint_videos_d_11_9_last: 'Videos sugeridos: D.11.9 Último'
+        hoc-dance-ai-warmup: 'Fiesta de Baile Edición IA: Calentamiento'
         hoc_dance_congrats: Fiesta de baile - ¡Que comience la fiesta!
         hoc_dance_congrats_2019: 'Fiesta de baile 2019: ¡Fiesta!'
         hoc_dance_events: Fiesta de baile - Eventos

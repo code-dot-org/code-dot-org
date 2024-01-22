@@ -134,7 +134,7 @@ Makipagtulungan sa paaralan o guro upang talakayin kung ano ang pinakamahalaga. 
 - Ipaliwanag kung paano nakakaapekto ang teknolohiya sa ating buhay, na may mga halimbawa na interesado ang mga mag-aaral sa lahat ng background - pag-usapan ang teknolohiyang nagliligtas ng mga buhay, tumutulong sa mga tao, nag-uugnay sa mga tao.
 - Kung isa kang tech na kompanya, masayang demo, mga makabagong produkto na ginagawa ng kompanya mo. Kung hindi ka isang tech na kompanya, talakayin ang mga paraan na ginagamit ng kompanya mo ang teknolohiya upang malutas ang mga problema at makamit ang mga layunin.
 - Mag imbita ng mga inhenyero ng software na mula sa iyong company para magbahagi ng kanilang miithiin kung bakit nila pinag aralan ang computer science at ang mga proyekto na kasalukuyan nilang tinatrabaho.
-- Kung mayroon kang grupo ng mga staff na magpapadali sa event mo o nagboboluntaryo sa isang lokal na paaralan, isaalang-alang ang pag-order ng [mga custom t-shirt](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) para sa grupo mo.
+- If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) for your group.
 
 ### 3. Planuhin ang mga pangangailangan mo sa teknolohiya
 
@@ -187,7 +187,7 @@ Ang isa sa mga pinakamahusay na paraan upang tumulong ay ang ipalaganap ang bali
 
 ### 1. Irehistro ang Event Mo
 
-Kapag [ iyong na sign-up ang iyong Hour of Code event](/#join) ikaw ay makakatanggap ng mga sulatronikong komunikasyon kasama ng mga balita at mungkahi para sa pag-host ng matagumpay na Hour of Code. Ito rin ay kung paano mo maipapaalam sa mga lokal na paaralan o magulang na nagho-host ka ng event na malapit sa kanila.
+When you [sign up your Hour of Code event](/events), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. Ito rin ay kung paano mo maipapaalam sa mga lokal na paaralan o magulang na nagho-host ka ng event na malapit sa kanila.
 
 ### 2. Mag-post sa Social Media
 

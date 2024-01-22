@@ -56,6 +56,7 @@ eu:
           description: Murgildu konputagailu zientziaren oinarrietan Angry Birds eta
             Plants vs. Zombiesen pertsonaien laguntzaz!
           description_short: Informatikaren oinarriak ikasi itzazu pertsonaia alaiekin!
+          name: Kode Ordua
           student_description: Murgildu konputagailu zientziaren oinarrietan Angry
             Birds eta Plants vs. Zombiesen pertsonaien laguntzaz!
           title: Kodearen ordua 2013
@@ -85,6 +86,10 @@ eu:
           lesson_groups:
             required:
               display_name: Bista orokorra
+        angelina-playground:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Ausazkoa
         artist:
           description: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
           description_short: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
@@ -696,6 +701,14 @@ eu:
               display_name: Funtzioak
             csp_variables:
               display_name: Aldagaiak
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
+            csp_variables:
+              display_name: Aldagaiak
         csp4-dlp:
           lesson_groups:
             required:
@@ -758,6 +771,10 @@ eu:
               display_name: Datu
             csp_loops:
               display_name: Itzuliak
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Datu
         csp5-dlp:
           lesson_groups:
             required:
@@ -789,6 +806,12 @@ eu:
             csp_unit6_2020:
               display_name: Algoritmoak
         csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Zerrendak
+            lessonGroup-3:
+              display_name: Itzuliak
+        csp6-2024:
           lesson_groups:
             csp_unit6_2020:
               display_name: Zerrendak
@@ -1075,7 +1098,10 @@ eu:
           description_short: Esploratu Minecraft mundu bat kodearen bitartez.
           student_description: Erabili kode blokeak Steve edo Alex eramateko abentura
             batera Minecraft mundu honetan.
-          title: Minecraft Kode Ordua
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Joku askea
         netsim:
           title: Internet simulagailua
         nevada-standards-aligned-fifth-grade-2023:
@@ -1185,6 +1211,19 @@ eu:
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
           description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
           student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Itzuliak
+            lesson-4:
+              name: Baldintzak
+          title: Konputazio zientzetarako sarrera
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Gertaerak
+            lesson-4:
+              name: Jokabideak
         soccer:
           name: futbola
         spelling-bee:
@@ -1260,7 +1299,22 @@ eu:
           lesson_groups:
             csf_sprites:
               display_name: Pertsonaiak
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Sarrera
+          lessons:
+            lesson-7:
+              name: Sarrera
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Sarrera
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
+              name: Sarrera
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
               name: Sarrera

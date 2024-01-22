@@ -37,9 +37,9 @@ Condividi le foto del tuo evento su Facebook e Twitter usando l'hashtag **#HourO
 
 ## Esempio di pianificazione di un evento in una scuola
 
-**Evento:** assemblea scolastica per l'inizio della "Settimana di Educazione all'Informatica"
+**Evento:** assemblea scolastica per l'inizio della "Settimana Internazionale di Educazione all'Informatica"
 
-**Data:** {{ campaign_date/start_short }} (inizio della Settimana di educazione all'informatica)
+**Data:** {{ campaign_date/start_short }} (inizio della Settimana Internazionale di Educazione all'Informatica)
 
 **Quando:** durante l'orario scolastico, preferibilmente a metà mattina. Durata 1 ora circa.
 

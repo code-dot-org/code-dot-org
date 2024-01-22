@@ -88,6 +88,9 @@
         "Overworld Chop Trees_2021": {
           "craft_callout_preplaced": "Stavili smo malo blokovi za početak"
         },
+        "Overworld Chop Trees_2023": {
+          "craft_callout_preplaced": "Stavili smo malo blokovi za početak"
+        },
         "Overworld House Frame Chosen": {
           "craft_callout_preplaced_house": "Ovaj kod će početi graditi svoju kuću. Može li to završiti?"
         },
@@ -101,6 +104,9 @@
           "craft_callout_preplaced_house": "Ovaj kod će početi graditi svoju kuću. Može li to završiti?"
         },
         "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Ovaj kod će početi graditi svoju kuću. Može li to završiti?"
+        },
+        "Overworld House Frame Chosen_2023": {
           "craft_callout_preplaced_house": "Ovaj kod će početi graditi svoju kuću. Može li to završiti?"
         },
         "Overworld Move to Sheep": {
@@ -118,6 +124,9 @@
         "Overworld Move to Sheep_2021": {
           "craft_run_button_callout": "Klikni na \"Pokreni\" da isprobaš svoj program"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_run_button_callout": "Klikni na \"Pokreni\" da isprobaš svoj program"
+        },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Ponavljanje akcije stavljanjem blokova ovdje"
         },
@@ -131,6 +140,9 @@
           "craft_inside_repeat": "Ponavljanje akcije stavljanjem blokova ovdje"
         },
         "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Ponavljanje akcije stavljanjem blokova ovdje"
+        },
+        "Overworld Place Wall_2023": {
           "craft_inside_repeat": "Ponavljanje akcije stavljanjem blokova ovdje"
         },
         "Underground Avoiding Lava": {
@@ -148,6 +160,9 @@
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "Ovaj kod htijenje ček za lava, možete dodati naredbu da se krene naprijed?"
         },
+        "Underground Avoiding Lava_2023": {
+          "craft_callout_moveforward": "Ovaj kod htijenje ček za lava, možete dodati naredbu da se krene naprijed?"
+        },
         "Underground Iron": {
           "craft_what_is_iron": "Meni ovo glačalo!"
         },
@@ -163,7 +178,18 @@
         "Underground Iron_2021": {
           "craft_what_is_iron": "Meni ovo glačalo!"
         },
+        "Underground Iron_2023": {
+          "craft_what_is_iron": "Meni ovo glačalo!"
+        },
         "coursee_helloworld_say": {
+          "hello_world_make_sprite": "Koristite ovaj blok da bi stvorio sprite.",
+          "hello_world_say": "Koristite ovaj blok da bi spriteovi govorili."
+        },
+        "coursee_helloworld_say_2023": {
+          "hello_world_make_sprite": "Koristite ovaj blok da bi stvorio sprite.",
+          "hello_world_say": "Koristite ovaj blok da bi spriteovi govorili."
+        },
+        "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "Koristite ovaj blok da bi stvorio sprite.",
           "hello_world_say": "Koristite ovaj blok da bi spriteovi govorili."
         },
@@ -240,6 +266,9 @@
         "helloworld_food_location": {
           "pin": "zakači"
         },
+        "helloworld_food_location_2023": {
+          "pin": "zakači"
+        },
         "helloworld_food_location_soccer-2022": {
           "pin": "zakači"
         },
@@ -247,6 +276,9 @@
           "pin": "zakači"
         },
         "helloworld_food_multi": {
+          "pin": "zakači"
+        },
+        "helloworld_food_multi_2023": {
           "pin": "zakači"
         },
         "helloworld_food_multi_soccer-2022": {

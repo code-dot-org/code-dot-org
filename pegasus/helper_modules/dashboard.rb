@@ -7,7 +7,9 @@ module Dashboard
   # The static constant is wrapped here so it's easy to stub for tests.
   # @returns [Database]
   def self.db
+    # rubocop:disable CustomCops/DashboardDbUsage
     DASHBOARD_DB
+    # rubocop:enable CustomCops/DashboardDbUsage
   end
 
   def self.admin?(user_id)

@@ -1454,7 +1454,7 @@
         "context": {
           "potentialUses": "Urči napríklad tržby filmu podľa jeho rozpočtu alebo žánru."
         },
-        "description": "Množina údajov o filmoch vydaných v rokoch 1986 – 2016 s údajmi o tržbách, hodnoteniach, hodnotení na IMDB a ďalšími údajmi."
+        "description": "Množina údajov o filmoch vydaných v rokoch 1986 – 2016 s údajmi o tržbách, prístupnosti, hodnotení na IMDB a ďalšími údajmi."
       },
       "fields": {
         "Budget": {

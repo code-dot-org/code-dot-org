@@ -25,7 +25,7 @@ Godzina Kodowania to prosty i przyjemny sposób na wprowadzenia uczniów do info
 
 <a id="how-to-video"></a>
 
-## 1. Obejrzyj film instruktażowy Godziny kodowania <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Obejrzyj film instruktażowy Godziny kodowania <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -72,7 +72,7 @@ Promuj Godzinę Kodowania wśród innych nauczycieli, którzy mogą chcieć przy
 
 ### Powiadom wolontariuszy rejestrując wydarzenie
 
-Gdy [ zarejestrujesz swoją Godzinę Kodowania](/#join), otrzymasz mail z pomocnymi wiadomościami i wskazówkami na temat organizacji udanej Godziny Kodowania. W ten sposób możesz poinformować lokalnych wolontariuszy o tym, że Twoja szkoła bierze udział. Wolontariusze są świetnym wsparciem, mogą przyjść i porozmawiać z klasą na temat informatyki lub po prostu pomóc uczniom w zajęciach Godziny Kodowania.
+Kiedy [zarejestrujesz się na wydarzenie Godziny Kodowania](/events), otrzymasz pomocne wiadomości e-mail z wiadomościami i wskazówkami dotyczącymi udanej Godziny Kodowania. W ten sposób możesz poinformować lokalnych wolontariuszy o tym, że Twoja szkoła bierze udział. Wolontariusze są świetnym wsparciem, mogą przyjść i porozmawiać z klasą na temat informatyki lub po prostu pomóc uczniom w zajęciach Godziny Kodowania.
 
 ### Spowoduj ekscytację wśród swoich uczniów
 
@@ -111,7 +111,7 @@ W porządku, jeśli zarówno Ty, jak i Twoi uczniowie, jesteście nowicjuszami w
 
 Skieruj uczniów na zadania
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- Napisz link do samouczka na tablicy. Znajdź link wymieniony w [informacjach dla wybranego samouczka]({{ urls/learn }}).
 
 Kiedy Twoi uczniowie napotkają trudności, możesz powiedzieć:
 
@@ -151,6 +151,6 @@ A co zrobić, jeśli któryś z uczniów skończy wcześniej?
 
 ### Co będzie się działo po Godzinie Kodowania?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+Informatyka nie musi kończyć się z Godziną Kodowania! [Dowiedz się](/beyond), jak przynieść informatykę do swojej szkoły i dla uczniów.
 
 {{ signup_button }}

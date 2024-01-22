@@ -18,7 +18,7 @@ title: Zdroje
 
 ## Vyvěste tyto plakáty ve škole
 
-Je k dispozici nová sada plakátů, na kterých je Malala, Stephen Curry, Shakira a další! Letos bude každá sada obsahovat 6 plakátů a 126 nálepek „Jsem absolvent Hodiny kódu“. Zásoby jsou omezené, proto si [plakáty objednejte](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) co nejdřív. Chcete-li si je vytisknout sami, klikněte na obrázek dole – zobrazí se tisknutelná verze, kterou si můžete uložit.
+Print your own posters! Simply click an image below to view and save a printable version.
 
 {{ promote_new_posters }}
 

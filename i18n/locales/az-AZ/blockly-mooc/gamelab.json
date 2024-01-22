@@ -51,6 +51,7 @@
   "dropletBlock_showMobileControls_param2_description": "Həqiqi olduqda dörd tərəfli yönlü yastıq, yalan olduqda səkkiz tərəfli yön yastıq.",
   "dropletBlock_showMobileControls_param3": "Yalnız MobileOnly",
   "dropletBlock_showMobileControls_param3_description": "Directional pad və kosmik düyməsini yalnız mobil görünür doğru.",
+  "dropletBlock_sprite.height_signatureOverride": "[Sprite].hündürlük",
   "dropletBlock_sprite.height_description": "Sprite hündürlüyü.",
   "dropletBlock_sprite.width_signatureOverride": "[Sprite]. Eni",
   "dropletBlock_sprite.width_description": "Sprite eni.",

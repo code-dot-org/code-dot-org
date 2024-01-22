@@ -1,37 +1,37 @@
 ---
-title: Hour of Code How-to Guide
+title: සංග්රහයේ පැය මාර්ගෝපදේශය කෙසේද
 ---
 
 {{ signup_button }}
 
 # පැයක කේථ කරනය සැලසුම් කරන්නේ කෙසේද?
 
-### Join the movement and introduce your students to computer science with these steps.
+### මෙම පියවර සමඟ ව්යාපාරයට සම්බන්ධ වී ඔබේ සිසුන් පරිගණක විද්යාවට හඳුන්වා දෙන්න.
 
-Students today should learn how to create technology, not just use it.
+අද සිසුන් ඉගෙන ගත යුත්තේ තාක්ෂණය නිර්මාණය කරන්නේ කෙසේද යන්න මිස එය භාවිතා කිරීම පමණක් නොවේ.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time! Find an activity that fits your setting, whether in-class or after-school, in-person or virtual. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}) after checking out the steps below:
+පැය සංග්රහයක් උත්සාහ කිරීම පරිගණක විද්යාවට සිසුන් හඳුන්වා දීම සඳහා සරල හා විනෝදජනක ක්රමයකි, සමහර විට පළමු වරට! පන්තියේ හෝ පාසලෙන් පසු, පුද්ගලිකව හෝ අතථ්ය වේවා, ඔබේ සැකසුමට ගැලපෙන ක්රියාකාරකමක් සොයා ගන්න. පහත පියවර පරීක්ෂා</a> කිරීමෙන් පසු ඔබට තවමත් ප්රශ්න ඇත්නම් අපගේ සහභාගීත්ව මාර්ගෝපදේශය දෙස බලන්න:</p> 
 
-- [Watch the Hour of Code how-to video](#how-to-video)
-- [Explore activities and tutorials](#explore-activities)
-- [Create your plan for the day](#create-your-plan)
+- [කොහොමද වීඩියෝ සංග්රහයේ පැය නරඹන්න](#how-to-video)
+- [ක්රියාකාරකම් සහ නිබන්ධන ගවේෂණය කරන්න](#explore-activities)
+- [දවස සඳහා ඔබේ සැලැස්ම සාදන්න](#create-your-plan)
 - [Promote your Hour of Code](#promote-your-hour)
-- [How to start your Hour of Code strong](#how-to-start)
-- [Get coding](#code)
-- [Celebrate your students' success](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [ඔබේ පැය කේතය ශක්තිමත් ලෙස ආරම්භ කරන්නේ කෙසේද](#how-to-start)
+- [කේතීකරණය ලබා ගන්න](#code)
+- [ඔබේ සිසුන්ගේ සාර්ථකත්වය සමරන්න](#celebrate)
+- [අධ්යාපනඥයන් සඳහා වෙනත් පැය සංග්රහය සම්පත්](#other-resources)
 
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. කොහොමද වීඩියෝ සංග්රහයේ පැය නරඹන්න <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
 <a id="explore-activities"></a>
 
-## 2. Explore activities and tutorials
+## 2. ක්රියාකාරකම් සහ නිබන්ධන ගවේෂණය කරන්න
 
 සියලුම වයස් කාණ්ඩ සහ අත්දැකීම් මට්ටම් සඳහා අපි විවිධාකාර විනෝදජනක, [ ශිෂ්‍ය මඟ පෙන්වීම් නිබන්ධන ](== {urls/learn }a>) සපයන්නෙමු. බොහෝ ක්‍රියාකාරකම් ගුරුවරුන්ට සාකච්ඡාවට මග පෙන්වීම හෝ ක්‍රියාකාරකම් දීර් extend කිරීම සඳහා පාඩම් සැලසුම් ඇතුළත් වුවද, ස්වයං-මෙහෙයවන නිබන්ධන අත්හදා බැලීම සිසුන්ට ජනප්‍රියය.
 
@@ -43,7 +43,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 <a id="create-your-plan"></a>
 
-## 3. Create your plan for the day
+## 3. දවස සඳහා ඔබේ සැලැස්ම සාදන්න
 
 ### ඔබේ තාක්ෂණ අවශ්‍යතා ගැන සිතන්න - පරිගණක අත්‍යවශ්‍ය නොවේ!
 
@@ -57,7 +57,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
     
     ### Pick a day and time
     
-    People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+    CS අධ්යාපන සතිය තුළ (දෙසැම්බර් 5-11) නවතම නිබන්ධන සහ ක්රියාකාරකම් නිකුත් කරන විට ලොව පුරා ජනතාව පැය කේත සැමරුමට එක්වෙති. But you can do an Hour of Code any day of the year!
     
     * * *
     
@@ -66,7 +66,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 <a id="promote-your-hour"></a>
 
     
-    ## 4. Promote your Hour of Code
+    ## 4. ඔබේ පැය සංග්රහයේ ප්රවර්ධනය
     
     Now that you've planned your event, it's time to start promoting it!
     
@@ -76,11 +76,11 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
     
     ### Let Volunteers Know by Registering Your Event
     
-    When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+    ඔබ ඔබේ කේත පැ [ය අවස්ථාවට ලියාපදිංචි වූ විට](/events), සාර්ථක කේත පැය සත්කාරකත්වය සඳහා ප්රවෘත්ති සහ ඉඟි සමඟ ප්රයෝජනවත් විද්යුත් තැපැල් සන්නිවේදන ඔබට ලැබෙනු ඇත. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
     
     ### Get your Students Excited
     
-    Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or print inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+    Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. නැතහොත් ඔබේ පන්ති කාමරය සඳහා දේවානුභාවයෙන් යුත් පෝස්ටර් මුද්රණය කරන්න! Students are more excited to participate in a subject when they see people who look like them encouraging it.
     
     {{ promote_new_posters }}
     
@@ -93,7 +93,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 <a id="how-to-start"></a>
 
     
-    ## 5. How to start your Hour of Code strong
+    ## 5. ඔබේ පැය කේතය ශක්තිමත් ලෙස ආරම්භ කරන්නේ කෙසේද
     
     Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
     
@@ -104,11 +104,11 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
     - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
     - Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
     
-    It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+    ඔබ සහ ඔබේ සිසුන් දෙදෙනාම පරිගණක විද්යාවට අළුත් නම් කමක් නැත. ඔබගේ පැය කේත ක්රියාකාරකම් හඳුන්වා දීමට අදහස් කිහිපයක් මෙන්න:
     
     - Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
     - As a class, list things that use code in everyday life.
-    - See tips for getting young women interested in computer science [here]({{ urls/girls }}).
+    - තරුණ කාන්තාවන් පරිගණක විද්යාව කෙරෙහි උනන්දුවක් දැක්වීම සඳහා උපදෙස් බලන්න [මෙහි]({{ urls/girls }}).
     
     * * *
     
@@ -117,56 +117,56 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 <a id="code"></a>
 
     
-    ## 6. Get coding!
+    ## 6. කේතීකරණය ලබා ගන්න!
     
     Direct students to the activity
     
-    - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
-    
-    When your students come across difficulties it's okay to respond:
-    
-    - “I don’t know. Let’s figure this out together.”
-    - “Technology doesn’t always work out the way we want.”
-    - “Learning to program is like learning a new language; you won’t be fluent right away.”
-    
-    What if a student finishes early?
-    
-    - Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
-    - Or, ask students who finish early to help classmates who are having trouble with the activity.
-    
-    * * *
-    
-    
+    - වයිට්බෝඩ් එකක නිබන්ධන සබැඳිය ලියන්න. ඔබ තෝරාගත් නිබන්ධනය</a>සඳහා තොරතුරු ලැයිස්තුගත කර ඇති සබැඳිය සොයා ගන්න.</li> </ul> 
+        
+        When your students come across difficulties it's okay to respond:
+        
+        - “මම දන්නේ නැහැ. අපි මෙය එකට තේරුම් ගනිමු.
+        - “Technology doesn’t always work out the way we want.”
+        - “Learning to program is like learning a new language; you won’t be fluent right away.”
+        
+        What if a student finishes early?
+        
+        - Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
+        - Or, ask students who finish early to help classmates who are having trouble with the activity.
+        
+        * * *
+        
+        
 
 <a id="celebrate"></a>
 
-    
-    ## 7. Celebrate your students' success
-    
-    [col-33]
-    
-    ![](/images/fit-600/boy-certificate.jpg)
-    
-    [/col-33]
-    
-    - [Print certificates]({{ urls/certificates }}) for your students.
-    - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-    - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
-    
-    * * *
-    
-    
+        
+        ## 7. ඔබේ සිසුන්ගේ සාර්ථකත්වය සමරන්න
+        
+        [col-33]
+        
+        ![](/images/fit-600/boy-certificate.jpg)
+        
+        [/col-33]
+        
+        - [ඔබේ සිසුන්]({{ urls/certificates }}) සඳහා සහතික මුද්රණය කරන්න.
+        - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
+        - ඔබේ හෝර් ඔෆ් කෝඩ් උත්සවයේ ඡායාරූප සහ වීඩියෝ සමාජ මාධ්ය ඔස්සේ බෙදා ගන්න. #HourOfCode සහ @codeorg භාවිතා කරන්න එවිට අපට ඔබේ සාර්ථකත්වය ද ඉස්මතු කළ හැකිය!
+        
+        * * *
+        
+        
 
 <a id="other-resources"></a>
 
-    
-    ## Other Hour of Code resources for educators:
-    
-    - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-    - Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
-    
-    ### කේත වේලාවෙන් පසුව පැමිණෙන්නේ කුමක්ද?
-    
-    Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
-    
-    {{ signup_button }}
+        
+        ## අධ්යාපනඥයින් සඳහා කේත සම්පත් වෙනත් පැය:
+        
+        - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
+        - කේත [පැය නිතර අසන පැය සමාලෝචනය](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)කරන්න.
+        
+        ### කේත වේලාවෙන් පසුව පැමිණෙන්නේ කුමක්ද?
+        
+        පරිගණක විද්යාව කේතයේ පැය සමඟ අවසන් විය යුතු නැත! [ඔබේ පාසලට සහ සිසුන්ට CS ගෙන එන්නේ කෙසේදැයි](/beyond) ඉගෙන ගන්න.
+        
+        {{ signup_button }}

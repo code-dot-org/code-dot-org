@@ -73,7 +73,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 - [Print certificates]({{ urls/certificates }}) for your students.
 - [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
+- [Order custom t-shirts](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) for participants.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 ## Other Hour of Code resources for educators
@@ -85,6 +85,6 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 ## Hour of Code पछि के आउँछ?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
+कसरी प्रविधिले काम गर्छ र कसरी सफ्टवेयरको एप्लिकेसनहरूको सिर्जना गर्ने भन्ने थप कुराको बारेमा सिक्न Hour of Code केबल पहिलो चरण मात्र हो। Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

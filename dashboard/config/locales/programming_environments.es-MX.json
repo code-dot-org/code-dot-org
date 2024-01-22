@@ -932,6 +932,25 @@
             "ui_controls": {
               "expressions": {
                 "button": {
+                  "content": "Crea un botón en la pantalla mostrando él _texto_ proporcionado y referenciado por la _id_ dada en la ubicación por defecto (0,0).\n\nMuchas aplicaciones usan botones para permitirle al usuario iniciar alguna acción de la aplicación. Un controlador de eventos debe ser creado para cada tipo de interacción de usuario, con un botón usando la funcion [`onEvent()`(#fff176)](/docs/applab/onEvent/) y su _id_ respectivo",
+                  "examples": {
+                    "Example: Click Me Button": {
+                      "name": "Ejemplo: Botón hazme clic"
+                    },
+                    "Example: Simple Turtle Control 1": {
+                      "description": "Mueve la tortuga hacia adelante con cada clic en el botón",
+                      "name": "Ejemplo: Control simple de Tortuga 1"
+                    },
+                    "Example: Simple Turtle Control 2": {
+                      "description": "Mueve la tortuga hacia adelante o atrás dependiendo del botón presionado",
+                      "name": "Ejemplo: Control simple de tortuga 2"
+                    }
+                  },
+                  "palette_params": {
+                    "id": {
+                      "description": "El id es identificador único del botón. Es usado para referenciar al botón en los controladores de eventos u otras funciones que modifiquen cualquier elemento de la interfaz de usuario. Debe empezar con una letra, no puede contener espacios, y puede contener letras, números, - y \\_"
+                    }
+                  },
                   "short_description": "Crea un botón en la pantalla mostrando el texto proporcionado y referenciado por el id dado en la ubicación por defecto (0,0)."
                 },
                 "getProperty": {

@@ -50,6 +50,7 @@ lt:
           description: Išmėginkite programavimo pradmenis su personažais iš Angry
             Birds ir Plants vs. Zombies!
           description_short: Išmėginkite programavimo pradmenis su daug smagių personažų!
+          name: "„Programavimo valanda“"
           student_description: Išmėginkite programavimo pradmenis su personažais iš
             Angry Birds ir Plants vs. Zombies!
           title: Programavimo valanda 2013
@@ -122,6 +123,8 @@ lt:
           lessons:
             lesson-5:
               name: Žinių patikrinimas
+            lesson-6:
+              name: 1 pamoka
         aquatic:
           name: vandens
           title: 'Minecraft: Kelionės vandeniu'
@@ -509,6 +512,10 @@ lt:
           lessons:
             lesson-6:
               name: Kartojimas
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Turinys
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -540,6 +547,10 @@ lt:
           lessons:
             lesson-4:
               name: Kintamieji
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -567,6 +578,10 @@ lt:
           lessons:
             lesson-3:
               name: Kartojimas
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -588,6 +603,10 @@ lt:
             lessonGroup-2:
               display_name: Turinys
         csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
@@ -621,6 +640,10 @@ lt:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -645,6 +668,10 @@ lt:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -666,6 +693,10 @@ lt:
             lessonGroup-2:
               display_name: Turinys
         csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
@@ -694,6 +725,10 @@ lt:
             lessonGroup-2:
               display_name: Turinys
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
@@ -995,6 +1030,14 @@ lt:
               display_name: Komandų kūrimas
             csp_variables:
               display_name: Kintamieji
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Sąlyginiai sakiniai
+            csp_functions:
+              display_name: Komandų kūrimas
+            csp_variables:
+              display_name: Kintamieji
         csp4-dlp:
           lesson_groups:
             content:
@@ -1102,6 +1145,12 @@ lt:
             csp_unit6_2020:
               display_name: Algoritmai
         csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Sąrašai
+            lessonGroup-3:
+              display_name: Kartojimas
+        csp6-2024:
           lesson_groups:
             csp_unit6_2020:
               display_name: Sąrašai
@@ -1431,7 +1480,6 @@ lt:
           description_short: Tyrinėk Minecraft pasaulį koduodamas.
           student_description: Panaudokite kodo blokelius aprašant Stivo ir Alekso
             nuotykius šiame Minecraft pasaulyje
-          title: Minecraft programavimo valanda
         minecraft:
           description: Programuok gyvūnus ir kitus Minecraft kūrinius savo asmeninėje
             Minecraft versijoje.
@@ -1527,6 +1575,29 @@ lt:
               display_name: Įvykiai
             csf_loops:
               display_name: Kartojimas
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: 1 pamoka
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: 1 pamoka
+            lesson-3:
+              name: Kartojimas
+            lesson-4:
+              name: Sąlyginiai sakiniai
+            lesson-6:
+              name: Kiti žingsniai
+          title: Informatikos įvadas
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: 1 pamoka
+            lesson-3:
+              name: Įvykiai
+            lesson-5:
+              name: Kiti žingsniai
         soccer:
           name: futbolas
         spelling-bee:
@@ -1628,7 +1699,22 @@ lt:
           lesson_groups:
             content:
               display_name: Turinys
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Įvadas
+          lessons:
+            lesson-7:
+              name: Įvadas
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Įvadas
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
+              name: Įvadas
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
               name: Įvadas

@@ -1,15 +1,18 @@
-import {Role, Status, ChatCompletionMessage} from './types';
+import {Role, Status, ChatCompletionMessage, PII} from './types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {CHAT_COMPLETION_URL} from './constants';
-import Lab2MetricsReporter from '../lab2/Lab2MetricsReporter';
+import Lab2Registry from '../lab2/Lab2Registry';
 
 /**
  * This function sends a POST request to the chat completion backend controller.
  */
-async function postOpenaiChatCompletion(
-  messagesToSend: OpenaiChatCompletionMessage[]
+export async function postOpenaiChatCompletion(
+  messagesToSend: OpenaiChatCompletionMessage[],
+  levelId?: number
 ): Promise<OpenaiChatCompletionMessage | null> {
-  const payload = {messages: messagesToSend};
+  const payload = levelId
+    ? {levelId: levelId, messages: messagesToSend}
+    : {messages: messagesToSend};
 
   const response = await HttpClient.post(
     CHAT_COMPLETION_URL,
@@ -53,16 +56,27 @@ export async function getChatCompletionMessage(
   try {
     response = await postOpenaiChatCompletion(messagesToSend);
   } catch (error) {
-    Lab2MetricsReporter.logError(
-      'Error in chat completion request',
-      error as Error
-    );
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError('Error in chat completion request', error as Error);
   }
 
   // For now, response will be null if there was an error.
-  // TODO: If user message was inappropriate or too personal, update status accordingly.
   if (!response) {
-    return {status: Status.PERSONAL, id: userMessageId}; // TODO: Update more accurately as either too personal or inappropriate.
+    return {status: Status.ERROR, id: userMessageId};
+  } else if (response.status === Status.PROFANITY) {
+    return {
+      status: Status.PROFANITY,
+      id: userMessageId,
+      assistantResponse:
+        "I can't respond because your message is inappropriate. Please don't use profanity.",
+    };
+  } else if (response && response.status && PII.includes(response.status)) {
+    return {
+      status: Status.PERSONAL,
+      id: userMessageId,
+      assistantResponse: `I can't respond because your message is inappropriate. Please don't include personal information like your ${response.status}.`,
+    };
   }
   return {
     status: Status.OK,
@@ -71,7 +85,11 @@ export async function getChatCompletionMessage(
   };
 }
 
-type OpenaiChatCompletionMessage = {role: string; content: string};
+type OpenaiChatCompletionMessage = {
+  status?: Status;
+  role: string;
+  content: string;
+};
 type ChatCompletionResponse = {
   status: Status;
   id: number;

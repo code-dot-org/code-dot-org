@@ -1259,6 +1259,7 @@ es-MX:
   header_incubator: Incubadora
   header_learn: Aprender
   header_legal: Privacidad y Legalidad
+  header_legal_cookie_notice: Aviso de Cookies
   header_legal_privacy: Política de privacidad
   header_legal_tos: Términos de uso
   header_my_dashboard: Mi panel de control
@@ -2810,35 +2811,15 @@ es-MX:
     mundial para introducir la Informática a millones de estudiantes en más de 180
     países. Únete a esta iniciativa durante la Semana de Educación en Ciencias de
     la Computación, del 7 al 13 de Diciembre.
-  volunteer_engineer_submission_intro_guide: Conoce más sobre nuestro <a href="%{volunteer_guide}">programa
-    de voluntariado aquí</a>.
   volunteer_engineer_submission_intro_guide_markdown: Obtén más información sobre
     nuestro [programa de voluntarios aquí](%{volunteer_guide}).
-  volunteer_engineer_submission_intro_links: ¿No está buscando ser voluntario? <a
-    href="%{learn_more}"> Aprende más</a> sobre organizar tu propio evento Hora de
-    Código y encontrando un voluntario local en nuestro <a href="%{volunteer_local}">
-    mapa de voluntariado</a>.
   volunteer_engineer_submission_intro_links_markdown: "¿Eres un profesor buscando
     voluntarios? Encuentra un voluntario local en nuestro [mapa de voluntarios](%{volunteer_local})."
-  volunteer_engineer_submission_intro_recruit: 'A estos maestros les encantaría tener
-    a alguien <span style="font-family: ''Gotham 7r'', sans-serif;"> apasionado por
-    enseñar ciencia de la computación</span>, la cual puede ayudar en el aula, o alguien
-    que pueda <span style="font-family: ''Gotham 7r'', sans-serif;"> inspirar </span>
-    a sus alumnos hablando de la amplitud de posibilidades con las ciencias de la
-    computación (que podría hacerse a través de una video conferencia). Si usted no
-    está buscando ofrecerse como voluntario, <a href="%{url}"> aprenda más</a> acerca
-    de organizar su propio evento de Hora de Código.'
   volunteer_engineer_submission_intro_recruit_markdown: A los profesores les encantaría
     tener a alguien **apasionado por la educación en la ciencia de la computación**
     que pueda ayudar en el aula, o alguien que pueda **inspirar** a sus estudiantes
     mediante charlas sobre la amplitud de posibilidades que brinda la ciencia de la
     computación (lo cual podría hacerse a través de un chat de video).
-  volunteer_engineer_submission_intro_signup: Ingresa la siguiente información si
-    eres estudiante de ciencias de la computación o profesional de software. Debes
-    tener al menos 18 años de edad para inscribirte como voluntario. Ten en cuenta
-    que todos los que miren el <a href="/volunteer/local">mapa de voluntarios</a>
-    verán los campos que completes en esta sección. Los campos marcados con <span
-    class="form-required-field">*</span> son obligatorios.
   volunteer_engineer_submission_intro_signup_markdown: Ingresa la siguiente información
     si eres un estudiante de ciencias de la computación o un profesional del software.
     Debes tener al menos 18 años para inscribirte como voluntario. Ten en cuenta que

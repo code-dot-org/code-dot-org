@@ -135,7 +135,7 @@ Uno dei modi migliori per supportarci è spargere la voce e promuovere l'Ora del
 
 ### 1. Registra il tuo evento
 
-Registrando [la tua "Ora del Codice"](/#join), riceverai comunicazioni utilissime tramite email contenenti notizie e suggerimenti per programmare con successo questa attività. In questo modo puoi anche far sapere alle scuole o ai genitori locali che stai ospitando un evento vicino a loro.
+Quando ti [iscrivi al tuo evento L'Ora del Codice](/events), riceverai utili comunicazioni via e-mail con notizie e suggerimenti per organizzare un'Ora del Codice di successo. In questo modo puoi anche far sapere alle scuole o ai genitori locali che stai ospitando un evento vicino a loro.
 
 ### 2. Posta sui Social Media
 

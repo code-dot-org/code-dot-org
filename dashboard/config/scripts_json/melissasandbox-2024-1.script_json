@@ -1,0 +1,391 @@
+{
+  "script": {
+    "name": "melissasandbox-2024-1",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2023-12-05 18:41:29 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "melissasandbox-2024-1"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-2",
+      "name": "Intro to Computer Science: Overview",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "Part II: Algorithms and Sequencing",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "835341d2-d950-42ed-a6e8-a7e3471164ab",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "835341d2-d950-42ed-a6e8-a7e3471164ab",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1"
+      }
+    },
+    {
+      "key": "564a07ec-0bea-4abf-8295-da08de6b8c68",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "564a07ec-0bea-4abf-8295-da08de6b8c68",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "74313633-2082-4031-8e9e-47a329e7cbb0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "74313633-2082-4031-8e9e-47a329e7cbb0",
+        "lesson_activity.key": "835341d2-d950-42ed-a6e8-a7e3471164ab"
+      }
+    },
+    {
+      "key": "e1dfecdc-b375-4be5-897a-0bcdae658d2d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e1dfecdc-b375-4be5-897a-0bcdae658d2d",
+        "lesson_activity.key": "564a07ec-0bea-4abf-8295-da08de6b8c68"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 About_copy_2023_MelissaSandbox"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1",
+        "activity_section.key": "74313633-2082-4031-8e9e-47a329e7cbb0"
+      },
+      "level_keys": [
+        "OPD-K5 About_copy_2023_MelissaSandbox"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5-PLVid_2023_MelissaSandbox"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1",
+        "activity_section.key": "74313633-2082-4031-8e9e-47a329e7cbb0"
+      },
+      "level_keys": [
+        "OPD-K5-PLVid_2023_MelissaSandbox"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Why teach CS_copy_2023_MelissaSandbox"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1",
+        "activity_section.key": "e1dfecdc-b375-4be5-897a-0bcdae658d2d"
+      },
+      "level_keys": [
+        "OPD-K5 Why teach CS_copy_2023_MelissaSandbox"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_collector_prog1_2023_MelissaSandbox"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1",
+        "activity_section.key": "e1dfecdc-b375-4be5-897a-0bcdae658d2d"
+      },
+      "level_keys": [
+        "courseC_collector_prog1_2023_MelissaSandbox"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_collector_prog3_2023_MelissaSandbox"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1",
+        "activity_section.key": "e1dfecdc-b375-4be5-897a-0bcdae658d2d"
+      },
+      "level_keys": [
+        "courseC_collector_prog3_2023_MelissaSandbox"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_collector_prog4_2023_MelissaSandbox"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1",
+        "activity_section.key": "e1dfecdc-b375-4be5-897a-0bcdae658d2d"
+      },
+      "level_keys": [
+        "courseC_collector_prog4_2023_MelissaSandbox"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_collector_prog5_2023_MelissaSandbox"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1",
+        "activity_section.key": "e1dfecdc-b375-4be5-897a-0bcdae658d2d"
+      },
+      "level_keys": [
+        "courseC_collector_prog5_2023_MelissaSandbox"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 About_copy_2023_MelissaSandbox",
+        "script_level.level_keys": [
+          "OPD-K5 About_copy_2023_MelissaSandbox"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1",
+        "activity_section.key": "74313633-2082-4031-8e9e-47a329e7cbb0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5-PLVid_2023_MelissaSandbox",
+        "script_level.level_keys": [
+          "OPD-K5-PLVid_2023_MelissaSandbox"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1",
+        "activity_section.key": "74313633-2082-4031-8e9e-47a329e7cbb0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Why teach CS_copy_2023_MelissaSandbox",
+        "script_level.level_keys": [
+          "OPD-K5 Why teach CS_copy_2023_MelissaSandbox"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1",
+        "activity_section.key": "e1dfecdc-b375-4be5-897a-0bcdae658d2d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_collector_prog1_2023_MelissaSandbox",
+        "script_level.level_keys": [
+          "courseC_collector_prog1_2023_MelissaSandbox"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1",
+        "activity_section.key": "e1dfecdc-b375-4be5-897a-0bcdae658d2d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_collector_prog3_2023_MelissaSandbox",
+        "script_level.level_keys": [
+          "courseC_collector_prog3_2023_MelissaSandbox"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1",
+        "activity_section.key": "e1dfecdc-b375-4be5-897a-0bcdae658d2d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_collector_prog4_2023_MelissaSandbox",
+        "script_level.level_keys": [
+          "courseC_collector_prog4_2023_MelissaSandbox"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1",
+        "activity_section.key": "e1dfecdc-b375-4be5-897a-0bcdae658d2d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_collector_prog5_2023_MelissaSandbox",
+        "script_level.level_keys": [
+          "courseC_collector_prog5_2023_MelissaSandbox"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1",
+        "activity_section.key": "e1dfecdc-b375-4be5-897a-0bcdae658d2d"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

@@ -1,92 +1,83 @@
 import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';
 import {mount, shallow} from 'enzyme';
+import sinon from 'sinon';
+import {act} from 'react-dom/test-utils';
 import RubricContainer from '@cdo/apps/templates/rubrics/RubricContainer';
 
 describe('RubricContainer', () => {
   const defaultRubric = {
-    learningGoals: [
-      {
-        key: 'goal1',
-        learningGoal: 'goal 1',
-        aiEnabled: false,
-        evidenceLevels: [],
-      },
-      {
-        key: 'goal2',
-        learningGoal: 'goal 2',
-        aiEnabled: true,
-        evidenceLevels: [],
-      },
-    ],
+    learningGoals: [],
     lesson: {
       position: 3,
       name: 'Data Structures',
     },
+    level: {
+      name: 'test_level',
+      position: 7,
+    },
   };
 
-  it('shows learning goals', () => {
+  it('renders a RubricContent component when the rubric tab is selected', () => {
     const wrapper = shallow(
-      <RubricContainer rubric={defaultRubric} teacherHasEnabledAi />
+      <RubricContainer
+        rubric={defaultRubric}
+        studentLevelInfo={{}}
+        teacherHasEnabledAi={true}
+        currentLevelName={'test_level'}
+        reportingData={{}}
+        open
+      />
     );
-    const renderedLearningGoals = wrapper.find('LearningGoal');
-    expect(renderedLearningGoals).to.have.lengthOf(2);
-    expect(
-      renderedLearningGoals.at(0).props().learningGoal.learningGoal
-    ).to.equal('goal 1');
-    expect(
-      renderedLearningGoals.at(1).props().learningGoal.learningGoal
-    ).to.equal('goal 2');
+    expect(wrapper.find('RubricContent')).to.have.lengthOf(1);
   });
 
-  it('shows level title', () => {
-    // mount is needed in order for text() to work
+  it('fetches AI evaluations and passes them to children', async () => {
+    const mockFetch = sinon.stub(window, 'fetch');
+    const mockAiEvaluations = [
+      {id: 2, learning_goal_id: 2, understanding: 2, ai_confidence: 2},
+    ];
+    mockFetch.returns(
+      Promise.resolve(new Response(JSON.stringify(mockAiEvaluations)))
+    );
     const wrapper = mount(
       <RubricContainer
         rubric={defaultRubric}
-        teacherHasEnabledAi
-        studentLevelInfo={{
-          name: 'Grace Hopper',
-        }}
+        studentLevelInfo={{}}
+        teacherHasEnabledAi={true}
+        currentLevelName={'test_level'}
+        reportingData={{}}
+        open
       />
     );
-    expect(wrapper.text()).to.include('Lesson 3: Data Structures');
+    await act(async () => {
+      await Promise.resolve();
+    });
+    wrapper.update();
+    expect(mockFetch).to.have.been.calledOnce;
+    expect(wrapper.find('RubricContent').props().aiEvaluations).to.eql(
+      mockAiEvaluations
+    );
   });
 
-  it('shows student data if provided', () => {
-    // mount is needed in order for text() to work
-    const wrapper = mount(
+  it('switches components when tabs are clicked', () => {
+    const wrapper = shallow(
       <RubricContainer
         rubric={defaultRubric}
-        teacherHasEnabledAi
-        studentLevelInfo={{
-          name: 'Grace Hopper',
-          timeSpent: 305,
-          lastAttempt: '1980-07-31T00:00:00.000Z',
-          attempts: 6,
-        }}
+        studentLevelInfo={{}}
+        teacherHasEnabledAi={true}
+        currentLevelName={'test_level'}
+        reportingData={{}}
+        open
       />
     );
-    expect(wrapper.text()).to.include('Grace Hopper');
-    expect(wrapper.text()).to.include('time spent 5m 5s');
-    expect(wrapper.text()).to.include('6 attempts');
-    expect(wrapper.text()).to.include('last updated');
-  });
-
-  it('handles missing student data', () => {
-    // mount is needed in order for text() to work
-    const wrapper = mount(
-      <RubricContainer
-        rubric={defaultRubric}
-        teacherHasEnabledAi
-        studentLevelInfo={{
-          name: 'Grace Hopper',
-        }}
-      />
-    );
-    expect(wrapper.text()).to.include('Grace Hopper');
-    expect(wrapper.text()).to.not.include('time spent');
-    expect(wrapper.text()).to.include('0 attempts');
-    expect(wrapper.text()).to.not.include('last updated');
+    expect(wrapper.find('RubricContent').props().visible).to.be.true;
+    expect(wrapper.find('RubricSettings').props().visible).to.be.false;
+    wrapper.find('HeaderTab').at(1).simulate('click');
+    expect(wrapper.find('RubricContent').props().visible).to.be.false;
+    expect(wrapper.find('RubricSettings').props().visible).to.be.true;
+    wrapper.find('HeaderTab').at(0).simulate('click');
+    expect(wrapper.find('RubricContent').props().visible).to.be.true;
+    expect(wrapper.find('RubricSettings').props().visible).to.be.false;
   });
 });

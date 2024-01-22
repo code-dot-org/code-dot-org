@@ -139,7 +139,7 @@ Una de les millors formes per ajudar a escampar la paraula i promocionar l'Hora 
 
 ### 1. Registreu el vostre esdeveniment
 
-Quan [us registreu a un esdeveniment de Codi d'Honor](/#join), rebreu comunicacions per email que seran d'ajuda amb notícies i recomanacions per acollir l'Hora del Codi. També és la forma de fer saber a les escoles locals i els pares que esteu acollint un esdeveniment a prop d'ells.
+Quan us [inscriviu a l'esdeveniment Hora del Codi](/events), rebreu comunicacions per correu electrònic útils amb notícies i consells per allotjar una Hora del Codi amb èxit. També és la forma de fer saber a les escoles locals i els pares que esteu acollint un esdeveniment a prop d'ells.
 
 ### 2. Publiqueu a les xarxes socials
 

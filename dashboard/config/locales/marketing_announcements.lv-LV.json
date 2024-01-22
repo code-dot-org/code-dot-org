@@ -1,0 +1,22 @@
+{
+  "lv-LV": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "co-teacher": {
+            "buttonText": "Uzzini vairāk"
+          },
+          "hoc-2023": {
+            "buttonText": "Uzzini vairāk"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Uzzini vairāk"
+          },
+          "superhero": {
+            "buttonText": "Uzzini vairāk"
+          }
+        }
+      }
+    }
+  }
+}

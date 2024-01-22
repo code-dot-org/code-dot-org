@@ -553,7 +553,8 @@
                     "interval": {
                       "type": "nömrə"
                     }
-                  }
+                  },
+                  "return_value": "Qaytarılan dəyər yoxdur."
                 },
                 "clearTimeout": {
                   "examples": {
@@ -566,14 +567,19 @@
                       "description": "SetTimeout funksiyası ləğv etmək üçün qaytarılan nəticə.",
                       "type": "nömrə"
                     }
-                  }
+                  },
+                  "return_value": "Qaytarılan dəyər yoxdur."
                 },
                 "ifBlock": {
                   "examples": {
                     "Example: Overtime": {
                       "name": "Misal: Əlavə iş vaxtı"
                     }
-                  }
+                  },
+                  "return_value": "Qaytarılan dəyər yoxdur."
+                },
+                "ifElseBlock": {
+                  "return_value": "Qaytarılan dəyər yoxdur."
                 },
                 "setInterval": {
                   "palette_params": {
@@ -626,6 +632,9 @@
                       "type": "Nömrə"
                     }
                   }
+                },
+                "whileBlock": {
+                  "return_value": "Qaytarılan dəyər yoxdur."
                 }
               },
               "name": "Nəzarət"
@@ -641,6 +650,9 @@
                 },
                 "createRecordSync": {
                   "palette_params": {
+                    "record": {
+                      "type": "əşya "
+                    },
                     "table": {
                       "type": "Simli"
                     }
@@ -696,6 +708,9 @@
                   "palette_params": {
                     "callback": {
                       "type": "Funksiya"
+                    },
+                    "data": {
+                      "type": "əşya "
                     },
                     "id": {
                       "type": "Simli"
@@ -1249,6 +1264,9 @@
                 "button": {
                   "short_description": "Ekranda verilmiş id tərəfindən verilən və standart yerdə istinad edilən mətni göstərən bir düyməni yaradır (0,0)."
                 },
+                "getChecked": {
+                  "return_value": "Boolean doğru və ya yalnış."
+                },
                 "getProperty": {
                   "palette_params": {
                     "id": {
@@ -1394,6 +1412,9 @@
                   "palette_params": {
                     "key": {
                       "type": "Simli"
+                    },
+                    "object": {
+                      "type": "əşya "
                     }
                   },
                   "return_value": "Heç biri"
@@ -1496,6 +1517,9 @@
                   "palette_params": {
                     "key": {
                       "type": "Simli"
+                    },
+                    "object": {
+                      "type": "əşya "
                     }
                   }
                 },
@@ -1539,7 +1563,8 @@
                     "index": {
                       "type": "nömrə"
                     }
-                  }
+                  },
+                  "return_value": "Qaytarılan dəyər yoxdur."
                 },
                 "join": {
                   "examples": {
@@ -1588,7 +1613,8 @@
                     "index": {
                       "type": "nömrə"
                     }
-                  }
+                  },
+                  "return_value": "Qaytarılan dəyər yoxdur."
                 },
                 "substring": {
                   "examples": {
@@ -1644,14 +1670,22 @@
                     "interval": {
                       "type": "nömrə"
                     }
-                  }
+                  },
+                  "return_value": "Qaytarılan dəyər yoxdur."
                 },
                 "clearTimeout": {
                   "palette_params": {
                     "timeout": {
                       "type": "nömrə"
                     }
-                  }
+                  },
+                  "return_value": "Qaytarılan dəyər yoxdur."
+                },
+                "ifBlock": {
+                  "return_value": "Qaytarılan dəyər yoxdur."
+                },
+                "ifElseBlock": {
+                  "return_value": "Qaytarılan dəyər yoxdur."
                 },
                 "setInterval": {
                   "palette_params": {
@@ -1668,6 +1702,9 @@
                       "type": "nömrə"
                     }
                   }
+                },
+                "whileBlock": {
+                  "return_value": "Qaytarılan dəyər yoxdur."
                 }
               },
               "name": "Nəzarət"
@@ -1702,6 +1739,9 @@
                       "type": "Simli"
                     }
                   }
+                },
+                "comment_Drawing": {
+                  "short_description": "// Rəy"
                 },
                 "ellipse": {
                   "palette_params": {
@@ -1886,47 +1926,183 @@
             },
             "game_lab": {
               "expressions": {
+                "World.allSprites": {
+                  "examples": {
+                    "Rotating Stickers": {
+                      "name": "Dönən Stikerlər"
+                    }
+                  },
+                  "return_value": "Bütün aktiv spraytları ehtiva edən bir sıra.",
+                  "short_description": "Bütün aktiv spraytları ehtiva edən sıranı qaytarır."
+                },
+                "World.frameCount": {
+                  "examples": {
+                    "Timer": {
+                      "name": "Vaxtölçən"
+                    }
+                  }
+                },
+                "World.mouseX": {
+                  "return_value": "Siçanın x koordinatı",
+                  "short_description": "Siçanın x koordinatı"
+                },
+                "World.mouseY": {
+                  "content": "Siçanın y koordinatı.\n\nmouseY dəyərləri ekran sahəsinin ölçüsü ilə məhdudlaşır. Varsayılan ekran sahəsi 400 piksel x 400 piksel, yuxarı sol künc isə (0.0).",
+                  "return_value": "Siçanın y koordinatı",
+                  "short_description": "Siçanın y koordinatı"
+                },
+                "World.seconds": {
+                  "examples": {
+                    "Example: Time Tracker": {
+                      "name": "Misal: Vaxt İzləyicisi"
+                    },
+                    "Example: Title Screen": {
+                      "name": "Misal: Başlıq Ekranı"
+                    }
+                  },
+                  "return_value": "Saniyələrin sayı (milisaniyədə yox, tam saniyələrdə)"
+                },
+                "World.width": {
+                  "return_value": "Dünyanın piksellərdə eni."
+                },
+                "camera.isActive": {
+                  "return_value": "Boolean doğru və ya yalnış."
+                },
+                "camera.off": {
+                  "short_description": "Kameranı söndürür. "
+                },
+                "camera.on": {
+                  "examples": {
+                    "Follow the Alien": {
+                      "name": "Yadplanetlini izləyin"
+                    }
+                  }
+                },
+                "camera.x": {
+                  "examples": {
+                    "Follow the Alien": {
+                      "name": "Yadplanetlini izləyin"
+                    },
+                    "Looking for Something": {
+                      "name": "Bir şey axtarır"
+                    }
+                  },
+                  "return_value": "Kameranın mərkəzinin x koordinatı.",
+                  "short_description": "Kameranın x mövqeyi."
+                },
+                "camera.y": {
+                  "examples": {
+                    "Follow the Alien": {
+                      "name": "Yadplanetlini izləyin"
+                    },
+                    "Looking for Something": {
+                      "name": "Bir şey axtarır"
+                    }
+                  }
+                },
+                "draw": {
+                  "examples": {
+                    "Mouse-Controlled Dots": {
+                      "name": "Siçan tərəfindən idarə olunan Nöqtələr"
+                    },
+                    "TV Static Line": {
+                      "name": "TV Statik Xətti"
+                    }
+                  },
+                  "return_value": "Qaytarılan dəyər yoxdur."
+                },
+                "drawSprites": {
+                  "palette_params": {
+                    "group": {
+                      "type": "əşya "
+                    }
+                  }
+                },
                 "keyDown": {
+                  "examples": {
+                    "Driving": {
+                      "name": "Sürmək"
+                    },
+                    "Rotary Phone": {
+                      "name": "Fırlanan Telefon"
+                    }
+                  },
                   "palette_params": {
                     "code": {
                       "type": "Simli"
                     }
-                  }
+                  },
+                  "return_value": "Boolean doğru və ya yalnış."
                 },
                 "keyWentDown": {
+                  "examples": {
+                    "Click Counter": {
+                      "name": "Sayğacı klikləyin"
+                    }
+                  },
                   "palette_params": {
                     "code": {
                       "type": "Simli"
                     }
-                  }
+                  },
+                  "return_value": "Boolean doğru və ya yalnış."
                 },
                 "keyWentUp": {
+                  "examples": {
+                    "Falling Star": {
+                      "name": "Düşən Ulduz"
+                    }
+                  },
                   "palette_params": {
                     "code": {
                       "type": "Simli"
                     }
-                  }
+                  },
+                  "return_value": "Boolean doğru və ya yalnış."
+                },
+                "mouseDidMove": {
+                  "return_value": "Boolean doğru və ya yalnış.",
+                  "short_description": "Siçanın hərəkət etdiyini yoxlayır."
                 },
                 "mouseDown": {
+                  "examples": {
+                    "Pencil Drawing": {
+                      "description": "mouseDown() ilə sadə karandaş rəsmləri.",
+                      "name": "Karandaşla Rəsm"
+                    }
+                  },
                   "palette_params": {
                     "button": {
                       "type": "Simli"
                     }
-                  }
+                  },
+                  "return_value": "Boolean doğru və ya yalnış."
                 },
                 "mouseIsOver": {
+                  "examples": {
+                    "Green is Good": {
+                      "name": "Yaşıl Yaxşıdır"
+                    }
+                  },
                   "palette_params": {
                     "sprite": {
                       "type": "Sprayt"
                     }
-                  }
+                  },
+                  "return_value": "Boolean doğru və ya yalnış."
                 },
                 "mousePressedOver": {
+                  "examples": {
+                    "Green is Good": {
+                      "name": "Yaşıl Yaxşıdır"
+                    }
+                  },
                   "palette_params": {
                     "sprite": {
                       "type": "Sprayt"
                     }
-                  }
+                  },
+                  "return_value": "Boolean doğru və ya yalnış."
                 },
                 "mouseWentDown": {
                   "examples": {
@@ -1938,14 +2114,21 @@
                     "button": {
                       "type": "Simli"
                     }
-                  }
+                  },
+                  "return_value": "Boolean doğru və ya yalnış."
                 },
                 "mouseWentUp": {
+                  "examples": {
+                    "Move to the Mouse": {
+                      "name": "Siçana keçin"
+                    }
+                  },
                   "palette_params": {
                     "button": {
                       "type": "Simli"
                     }
-                  }
+                  },
+                  "return_value": "Boolean doğru və ya yalnış."
                 },
                 "playSound": {
                   "examples": {
@@ -1995,6 +2178,11 @@
                   "short_description": "Oyun sahəsinin altında görünən mobil idarəetmələri dəyişdirir."
                 },
                 "stopSound": {
+                  "examples": {
+                    "Stop the Music": {
+                      "name": "Musiqini dayandır"
+                    }
+                  },
                   "palette_params": {
                     "url": {
                       "type": "Simli"
@@ -2011,12 +2199,24 @@
                     "sprite": {
                       "type": "Sprayt"
                     }
-                  }
+                  },
+                  "return_value": "Qaytarılan dəyər yoxdur."
+                },
+                "comment_Groups": {
+                  "short_description": "// Rəy"
                 },
                 "contains": {
                   "palette_params": {
                     "sprite": {
                       "type": "Sprayt"
+                    }
+                  },
+                  "return_value": "Boolean doğru və ya yalnış."
+                },
+                "createGroup": {
+                  "examples": {
+                    "Stay Cool!": {
+                      "name": "Təmkinli Qal!"
                     }
                   }
                 },
@@ -2024,6 +2224,37 @@
                   "palette_params": {
                     "i": {
                       "type": "Nömrə"
+                    }
+                  }
+                },
+                "group.bounce": {
+                  "palette_params": {
+                    "target": {
+                      "type": "Sprayt və ya Qrup"
+                    }
+                  }
+                },
+                "group.collide": {
+                  "palette_params": {
+                    "target": {
+                      "type": "Sprayt və ya Qrup"
+                    }
+                  }
+                },
+                "group.displace": {
+                  "palette_params": {
+                    "target": {
+                      "type": "Sprayt və ya Qrup"
+                    }
+                  }
+                },
+                "group.isTouching": {
+                  "return_value": "Boolean doğru və ya yalnış."
+                },
+                "group.overlap": {
+                  "palette_params": {
+                    "target": {
+                      "type": "Sprayt və ya Qrup"
                     }
                   }
                 },
@@ -2042,7 +2273,8 @@
                     "sprite": {
                       "type": "Sprayt"
                     }
-                  }
+                  },
+                  "return_value": "Qaytarılan dəyər yoxdur."
                 },
                 "setAnimationEach": {
                   "palette_params": {
@@ -2089,7 +2321,8 @@
                     "lifetime": {
                       "type": "Nömrə"
                     }
-                  }
+                  },
+                  "return_value": "Qaytarılan dəyər yoxdur."
                 },
                 "setMirrorXEach": {
                   "palette_params": {
@@ -2267,7 +2500,85 @@
             },
             "sprites": {
               "expressions": {
+                "alpha": {
+                  "examples": {
+                    "Ghost Cow": {
+                      "name": "Xəyal İnək"
+                    }
+                  }
+                },
+                "bounce": {
+                  "examples": {
+                    "Four Collisions": {
+                      "name": "Dörd Toqquşma"
+                    },
+                    "Shuffleboard": {
+                      "name": "Qarışdırma lövhəsi"
+                    }
+                  },
+                  "palette_params": {
+                    "target": {
+                      "type": "Sprayt və ya Qrup"
+                    }
+                  }
+                },
+                "bounceOff": {
+                  "examples": {
+                    "Breakout": {
+                      "name": "Qırılma"
+                    },
+                    "Four Collisions": {
+                      "name": "Dörd Toqquşma"
+                    }
+                  },
+                  "palette_params": {
+                    "target": {
+                      "type": "Sprayt və ya Qrup"
+                    }
+                  }
+                },
+                "bounciness": {
+                  "examples": {
+                    "My Three Bounces": {
+                      "name": "Mənim Üç Sıçrayışım"
+                    }
+                  },
+                  "return_value": "Spraytın sıçrayışı"
+                },
+                "collide": {
+                  "examples": {
+                    "Four Collisions": {
+                      "name": "Dörd Toqquşma"
+                    }
+                  },
+                  "palette_params": {
+                    "target": {
+                      "type": "Sprayt və ya Qrup"
+                    }
+                  }
+                },
+                "comment_Sprites": {
+                  "short_description": "// Rəy"
+                },
+                "createEdgeSprites": {
+                  "examples": {
+                    "Stay Cool!": {
+                      "name": "Təmkinli Qal!"
+                    },
+                    "Walls Closing In": {
+                      "name": "Divarlar bağlanır"
+                    }
+                  }
+                },
                 "createSprite": {
+                  "examples": {
+                    "Make Some Stickers": {
+                      "name": "Bəzi Stikerlər hazırlayın"
+                    },
+                    "Red Stripe": {
+                      "name": "Qırmızı Zolaq"
+                    }
+                  },
                   "palette_params": {
                     "height": {
                       "type": "Nömrə"
@@ -2283,6 +2594,28 @@
                     }
                   }
                 },
+                "displace": {
+                  "examples": {
+                    "Four Collisions": {
+                      "name": "Dörd Toqquşma"
+                    },
+                    "Umbrella": {
+                      "name": "Çətir"
+                    }
+                  },
+                  "palette_params": {
+                    "target": {
+                      "type": "Sprayt və ya Qrup"
+                    }
+                  }
+                },
+                "getDirection": {
+                  "examples": {
+                    "Circling": {
+                      "name": "Dövrə vurmaq"
+                    }
+                  }
+                },
                 "getSpeed": {
                   "examples": {
                     "Spiral": {
@@ -2290,7 +2623,28 @@
                     }
                   }
                 },
+                "isTouching": {
+                  "examples": {
+                    "Going for Gold": {
+                      "name": "Qızıl üçün getmək"
+                    }
+                  },
+                  "palette_params": {
+                    "target": {
+                      "type": "Sprayt və ya Qrup"
+                    }
+                  },
+                  "return_value": "Boolean doğru və ya yalnış."
+                },
+                "lifetime": {
+                  "return_value": "Spraytın ömrü"
+                },
                 "mirrorX": {
+                  "examples": {
+                    "Flipper": {
+                      "name": "Üzgəc"
+                    }
+                  },
                   "palette_params": {
                     "dir": {
                       "type": "Nömrə"
@@ -2298,9 +2652,28 @@
                   }
                 },
                 "mirrorY": {
+                  "examples": {
+                    "Flipper": {
+                      "name": "Üzgəc"
+                    }
+                  },
                   "palette_params": {
                     "dir": {
                       "type": "Nömrə"
+                    }
+                  }
+                },
+                "nextFrame": {
+                  "examples": {
+                    "Emoji Eyes": {
+                      "name": "Emoji Gözləri"
+                    }
+                  }
+                },
+                "overlap": {
+                  "palette_params": {
+                    "target": {
+                      "type": "Sprayt və ya Qrup"
                     }
                   }
                 },
@@ -2314,7 +2687,40 @@
                     }
                   }
                 },
+                "rotateToDirection": {
+                  "examples": {
+                    "Pacing": {
+                      "name": "Sürətləndirmə"
+                    },
+                    "Walking in a Circle": {
+                      "name": "Bir Dairədə gəzmək"
+                    }
+                  },
+                  "return_value": "Boolean doğru və ya yalnış."
+                },
+                "rotation": {
+                  "examples": {
+                    "Skidding Car": {
+                      "name": "Sürüşən Avtomobil"
+                    }
+                  }
+                },
+                "rotationSpeed": {
+                  "examples": {
+                    "Faster and Faster": {
+                      "name": "Daha sürətli və Daha sürətli"
+                    }
+                  }
+                },
+                "scale": {
+                  "return_value": "Spraytın miqyası"
+                },
                 "setAnimation": {
+                  "examples": {
+                    "Roll a Die": {
+                      "name": "Bir Zər atın"
+                    }
+                  },
                   "palette_params": {
                     "label": {
                       "type": "Simli"
@@ -2344,6 +2750,11 @@
                   }
                 },
                 "setFrame": {
+                  "examples": {
+                    "Happy, Surprised, Sad": {
+                      "name": "Xoşbəxt, Təəccüblənmiş, Qəmgin"
+                    }
+                  },
                   "palette_params": {
                     "frame": {
                       "type": "Nömrə"
@@ -2351,6 +2762,11 @@
                   }
                 },
                 "setSpeedAndDirection": {
+                  "examples": {
+                    "Circling": {
+                      "name": "Dövrə vurmaq"
+                    }
+                  },
                   "palette_params": {
                     "angle": {
                       "type": "Nömrə"
@@ -2375,6 +2791,44 @@
                 },
                 "sprite.width": {
                   "return_value": "Sprite eni."
+                },
+                "velocityX": {
+                  "examples": {
+                    "Vibration": {
+                      "name": "Vibrasiya"
+                    }
+                  },
+                  "return_value": "Müsbət x istiqamətində sürət."
+                },
+                "velocityY": {
+                  "examples": {
+                    "Zig-Zag": {
+                      "name": "Ziq-Zaq"
+                    }
+                  }
+                },
+                "visible": {
+                  "examples": {
+                    "Blinking Target": {
+                      "name": "Yanıb-Sönən Hədəf"
+                    }
+                  },
+                  "return_value": "Boolean doğru və ya yalnış.",
+                  "short_description": "Spraytın görünürlüyü, doğru və ya yalnış."
+                },
+                "x": {
+                  "examples": {
+                    "Movement": {
+                      "name": "Hərəkət"
+                    }
+                  }
+                },
+                "y": {
+                  "examples": {
+                    "Movement": {
+                      "name": "Hərəkət"
+                    }
+                  }
                 }
               },
               "name": "Spraytlar"
@@ -2662,6 +3116,20 @@
                     },
                     "Steps to Make Horchata": {
                       "name": "Horchata etmək üçün addımlar"
+                    }
+                  }
+                },
+                "style": {
+                  "examples": {
+                    "Style": {
+                      "name": "Stil"
+                    }
+                  }
+                },
+                "title": {
+                  "examples": {
+                    "Title": {
+                      "name": "Başlıq"
                     }
                   }
                 },

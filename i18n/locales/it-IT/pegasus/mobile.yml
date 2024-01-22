@@ -136,7 +136,7 @@
   third_party_codecademy_btn_curriculum: "Scarica il curriculum Codecademy"
   third_party_codecademy_btn_site: "Visita Codecademy"
   third_party_organization: "Organizzazione"
-  third_party_curriculum: "Curriculum"
+  third_party_curriculum: "Corso"
   third_party_pricing: "Prezzi"
   third_party_cost_free: "Gratuito"
   third_party_cost_5permonth: "$5/ mese per ogni classe"
@@ -544,13 +544,9 @@
   volunteer_engineer_submission_subtitle_generic: '100.000 insegnanti ospiteranno un''Ora di Codice nelle loro classi quest''anno: 7-13 Dicembre 2015. Hanno bisogno del tuo aiuto! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} insegnanti cercano volontari appassionati di formazione informatica per aiutarli nella loro Ora del Codice questo Dicembre.<br>%{num_volunteers} volontari hanno aderito. Unisciti a loro."
   volunteer_engineer_submission_intro_background: "L'Ora del Codice è un movimento globale per far provare un'ora di introduzione all'informatica, che raggiunge decine di milioni di studenti in più di 180 nazioni. Partecipa durante la Settimana di Educazione all'Informatica, dal 7-13 Dicembre 2015."
-  volunteer_engineer_submission_intro_recruit: 'Gli insegnanti cercano <span style="font-family: ''Gotham 7r'', sans-serif;"> appassionati di formazione informatica</span> che possano aiutare in classe, o qualcuno che possa <span style="font-family: ''Gotham 7r'', sans-serif;"> ispirare</span> i loro studenti parlando delle grandi possibilità dell''informatica (che potrebbe essere fatto con una chat video).'
   volunteer_engineer_submission_intro_recruit_markdown: "Gli insegnanti adorerebbero avere qualcuno di **appassionato all'istruzione informatica** che possa aiutare in classe, o qualcuno che possa **ispirare** i loro studenti parlando delle grandi possibilità con l'informatica (cosa che si potrebbe fare tramite una videochiamata)."
-  volunteer_engineer_submission_intro_guide: "Scopri di più sul nostro <a href=\"%{volunteer_guide}\">programma volontari</a>."
   volunteer_engineer_submission_intro_guide_markdown: "Scopri di più sul nostro [programma volontario qui](%{volunteer_guide})."
-  volunteer_engineer_submission_intro_signup: "Compila i campi sottostanti se sei uno studente di informatica o uno sviluppatore professionista. I campi contrassegnati con un <span class=\"form-required-field\">*</span> sono obbligatori."
   volunteer_engineer_submission_intro_signup_markdown: "Sei pregato di inserire le seguenti informazioni se sei uno studente di informatica o professionista di software. Devi avere almeno 18 anni per registrarti come volontario. Nota che tutti i campi che compili in questa sezione saranno disponibili pubblicamente a chiunque stia guardando la [mappa dei volontari](/volunteer/local). I cambi contrassegnati con un _*_ sono obbligatori."
-  volunteer_engineer_submission_intro_links: "Sei un insegnante in cerca di volontari? Trova un volontario locale sulla nostra <a href=\"%{volunteer_local}\">Mappa Volontari</a> (solo per gli USA)."
   volunteer_engineer_submission_intro_links_markdown: "Sei un insegnante alla ricerca di volontari? Trova un volontario locale sulla nostra [mappa dei volontari](%{volunteer_local})."
   volunteer_engineer_submission_update_information: "Aggiorna le tue informazioni"
   volunteer_engineer_submission_header_shared: "Informazioni condivise con gli insegnanti sulla mappa dei volontari"
@@ -660,7 +656,7 @@
   dashboard_course_csins_desc: "Code.org ha collaborato con Project GUTS per fornire un'introduzione ai concetti di informatica all'interno di contesti di modellazione e simulazione."
   dashboard_course_ecs: "Esplorando l'Informatica"
   dashboard_course_ecs_desc: 'Esplorare l''Informatica in un corso annuale costituito da 6 unità. Interazione Uomo-Computer, Risoluzione Problemi, Web Design, Programmazione, Elaborazione ed Analisi dei Dati e Robotica.'
-  dashboard_course_csp: "Principi di informatica"
+  dashboard_course_csp: "Princìpi di informatica AP®"
   dashboard_course_csp_desc: "I corsi di Code.org sono stati progettati in modo rigoroso, coinvolgente e approcciabile in modo da esplorare le idee alla base dei fondamenti dell'informatica."
   dashboard_landing_loading: "Sto caricando..."
   dashboard_action_cancel: "Annulla"
@@ -788,7 +784,7 @@
   dashboard_unplugged: "Se non hai un computer, <a href='%{unplugged_url}'>usa queste lezioni tradizionali</a> nella tua classe."
   dashboard_unplugged_markdown: "Se non hai un computer, [prova queste lezioni tradizionali](%{unplugged_url}) nella tua classe."
   dashboard_tools: 'Strumenti: '
-  dashboard_curriculum: "Curriculum"
+  dashboard_curriculum: "Corso"
   dashboard_curriculum_overview: "K-5 Curriculum Overview"
   dashboard_overview: "Panoramica"
   dashboard_sequence: "Sequenza"
@@ -803,7 +799,7 @@
   dashboard_teacher_worksheet: "teacher worksheet"
   dashboard_curriculum_csina: 'Informatica in Algebra:'
   dashboard_curriculum_csins: 'Informatica nelle Scienze:'
-  dashboard_curriculum_csp: 'Principi di informatica:'
+  dashboard_curriculum_csp: 'Princìpi di informatica:'
   dashboard_curriculum_ecs: 'Esplorando l''Informatica:'
   dashboard_curriculum_csd: 'Alla scoperta dell''informatica: '
   dashboard_curriculum_apcsa: 'Informatica di PA in Java: '
@@ -1498,9 +1494,9 @@
   header_sections: "Classi"
   header_professional_learning: "Professional learning"
   header_educate_overview: "Panoramica dei corsi"
-  header_educate_elementary: "Scuola elementare"
-  header_educate_middle: "Scuola media"
-  header_educate_high: "Scuola superiore"
+  header_educate_elementary: "Scuola primaria"
+  header_educate_middle: "Scuola secondaria di primo grado"
+  header_educate_high: "Scuola secondaria di secondo grado"
   header_educate_hoc: "L'Ora del Codice"
   header_educate_partner: "Collabora con noi"
   header_educate_beyond: "Dopo Code.org"
@@ -1530,6 +1526,7 @@
   header_report_abuse: "Segnala abuso"
   header_legal: "Privacy & Legale"
   header_legal_privacy: "Informativa sulla privacy"
+  header_legal_cookie_notice: "Informativa sui cookie"
   header_legal_tos: "Termini di servizio"
   header_tutorials: "Corsi"
   header_screen_reader_hamburger: "Menu"
@@ -1788,7 +1785,7 @@
   ai_for_oceans_lesson_plan: "piano di lavoro della lezione"
   ai_for_oceans_tile_description: "Aiuta l'intelligenza artificiale a pulire gli oceani addestrandola a rilevare la spazzatura! Scopri i dati di allenamento e i pregiudizi e come l'intelligenza artificiale può risolvere i problemi del mondo. Visualizza"
   how_ai_works: "Come funziona l'IA"
-  how_ai_works_tile_description: "Scopri come funziona l'IA e perché è importante con questa serie di brevi video. Con il CEO di Microsoft Satya Nadella e un cast diversificato di esperti."
+  how_ai_works_tile_description: "Scopri come funziona l'IA e perché è importante con questa serie di brevi video. Con il CEO di Microsoft Satya Nadella e con un eterogeneo gruppo di esperti."
   watch_the_videos: "Guarda i video"
   ai_and_ethics: "AI ed etica"
   ai_and_ethics_tile_description: "Gli studenti riflettono sulle implicazioni etiche dell'IA, quindi lavorano insieme per creare una risorsa «Codice etico dell'IA» per i creatori e i legislatori dell'IA in tutto il mondo."

@@ -11,6 +11,9 @@
         "CourseD_Dance_2020_01_2021": {
           "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   ఒక డాన్సర్ స్క్రీన్ మీద కనిపించేలా చూడండి.\n\n-   ఈ లెవల్ 4 మెజర్స్ తరువాత ముగుస్తుంది.\\*\""
         },
+        "CourseD_Dance_2020_01_2023": {
+          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   ఒక డాన్సర్ స్క్రీన్ మీద కనిపించేలా చూడండి.\n\n-   ఈ లెవల్ 4 మెజర్స్ తరువాత ముగుస్తుంది.\\*\""
+        },
         "CourseD_Dance_2020_04": {
           "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   4 మెజర్స్ తరువాత డాన్సర్ ఒక కొత్త మువ్‌కు మారవలసిన అవసరం ఉంది. \n\n-   ఈ లెవల్ 7 మెజర్స్ తరువాత ముగిస్తుంది.\\*\""
         },
@@ -20,6 +23,9 @@
         "CourseD_Dance_2020_04_2021": {
           "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   4 మెజర్స్ తరువాత డాన్సర్ ఒక కొత్త మువ్‌కు మారవలసిన అవసరం ఉంది. \n\n-   ఈ లెవల్ 7 మెజర్స్ తరువాత ముగిస్తుంది.\\*\""
         },
+        "CourseD_Dance_2020_04_2023": {
+          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   4 మెజర్స్ తరువాత డాన్సర్ ఒక కొత్త మువ్‌కు మారవలసిన అవసరం ఉంది. \n\n-   ఈ లెవల్ 7 మెజర్స్ తరువాత ముగిస్తుంది.\\*\""
+        },
         "CourseD_Dance_2020_05": {
           "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   6 మెజర్స్ తరువాత మీ డాన్సర్ తాను 4 మెజర్స్ తరువాత చేస్తున్న డాన్స్ కంటే భిన్నమైన డాన్స్ చేయవలసిన అవసరం ఉంది. \n\n_ఈ లెవల్ 11 మెజర్స్ తరువాత ముగుస్తుంది._\""
         },
@@ -27,6 +33,9 @@
           "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   6 మెజర్స్ తరువాత మీ డాన్సర్ తాను 4 మెజర్స్ తరువాత చేస్తున్న డాన్స్ కంటే భిన్నమైన డాన్స్ చేయవలసిన అవసరం ఉంది. \n\n_ఈ లెవల్ 11 మెజర్స్ తరువాత ముగుస్తుంది._\""
         },
         "CourseD_Dance_2020_05_2021": {
+          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   6 మెజర్స్ తరువాత మీ డాన్సర్ తాను 4 మెజర్స్ తరువాత చేస్తున్న డాన్స్ కంటే భిన్నమైన డాన్స్ చేయవలసిన అవసరం ఉంది. \n\n_ఈ లెవల్ 11 మెజర్స్ తరువాత ముగుస్తుంది._\""
+        },
+        "CourseD_Dance_2020_05_2023": {
           "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   6 మెజర్స్ తరువాత మీ డాన్సర్ తాను 4 మెజర్స్ తరువాత చేస్తున్న డాన్స్ కంటే భిన్నమైన డాన్స్ చేయవలసిన అవసరం ఉంది. \n\n_ఈ లెవల్ 11 మెజర్స్ తరువాత ముగుస్తుంది._\""
         },
         "CourseD_Dance_Party_01": {
@@ -124,7 +133,14 @@
         "courseA_collector_loops3_2021": {
           "courseA_collector_loops3_a": "Try using a \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n loop!"
         },
+        "courseA_collector_loops3_2023": {
+          "courseA_collector_loops3_a": "Try using a \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n loop!"
+        },
         "courseB_iceage_loops32022": {
+          "courseB_iceage_loops3_a": "Use this new block!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
+          "courseB_iceage_loops3_b": "To repeat code, drag out a `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>loop, then put the block you want inside of it."
+        },
+        "courseB_iceage_loops32022_2023": {
           "courseB_iceage_loops3_a": "Use this new block!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
           "courseB_iceage_loops3_b": "To repeat code, drag out a `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>loop, then put the block you want inside of it."
         },
@@ -143,8 +159,285 @@
         "coursee_helloworld_events": {
           "hello_world_click": "ఈవెంట్ బ్లాక్ క్లిక్ చేసినప్పుడు ``ఒక `Say` బ్లాక్ను \\`కనెక్ట్ చేయండి:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
+        "coursee_helloworld_events_2023": {
+          "hello_world_click": "ఈవెంట్ బ్లాక్ క్లిక్ చేసినప్పుడు ``ఒక `Say` బ్లాక్ను \\`కనెక్ట్ చేయండి:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
         "coursee_helloworld_say": {
           "hello-world-first-solution-pizza": "పిజ్జా ఏదో చెప్పటానికి చేయడానికి, ఈ వంటి కోడ్ బ్లాక్స్ కనెక్ట్:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "coursee_helloworld_say_2023": {
+          "hello-world-first-solution-pizza": "పిజ్జా ఏదో చెప్పటానికి చేయడానికి, ఈ వంటి కోడ్ బ్లాక్స్ కనెక్ట్:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "csc-starquilts-12point-repeat_2023": {
+          "hint1": "లూప్ బ్లాక్ యొక్క నంబర్ ఫీల్డ్లో `12` సంఖ్యను ఉంచండి. \n`టర్న్ రైట్` బ్లాక్ను 30 డిగ్రీలకు మార్చండి.\n\n<xml><block type=\"controls_repeat_ext\"><value name=\"TIMES\"><block type=\"math_number\"><field name=\"NUM\">12</field></block></value><statement name=\"DO\"><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusRed</field><value name=\"SIZE\"><block type=\"math_number\"><field name=\"NUM\">35</field></block></value><next><block type=\"draw_turn\"><field name=\"DIR\">turnRight</field><value name=\"VALUE\"><block type=\"math_number\"><field name=\"NUM\">30</field></block></value></block></next></block></statement></block></xml>"
+        },
+        "csc-starquilts-4point-repeat_2023": {
+          "hint1": "ఇది పునరావృతమయ్యే కోడ్ యొక్క భాగంగా ఉంది: \n<xml><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusRed</field><value name=\"SIZE\"><block type=\"math_number\"><field name=\"NUM\">35</field></block></value><next><block type=\"draw_turn\"><field name=\"DIR\">turnRight</field><value name=\"VALUE\"><block type=\"math_number\"><field name=\"NUM\">90</field></block></value></block></next></block></xml>",
+          "hint2": "కోడ్ యొక్క చంక్ను లూప్ బ్లాక్లో ఉంచండి: \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_ext\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <field name=\"NUM\">???</field>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"rhombus_shape_with_side_length\">\n            <field name=\"VALUE\">smallRhombusMaroon</field>\n            <value name=\"SIZE\">\n              <block type=\"math_number\">\n                <field name=\"NUM\">35</field>\n              </block>\n            </value>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <field name=\"DIR\">turnRight</field>\n                <field name=\"VALUE\" config=\"30,60,90,120,180\">90</field>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "hint3": "నమూనా ఎన్నిసార్లు పునరావృతమవుతుంది? \n4 సార్లు. \n\nలూప్ బ్లాక్ యొక్క సంఖ్య ఫీల్డ్లో 4 వ సంఖ్యను ఉంచండి. \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_ext\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <field name=\"NUM\">4</field>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"rhombus_shape_with_side_length\">\n            <field name=\"VALUE\">smallRhombusMaroon</field>\n            <value name=\"SIZE\">\n              <block type=\"math_number\">\n                <field name=\"NUM\">35</field>\n              </block>\n            </value>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <field name=\"DIR\">turnRight</field>\n                <field name=\"VALUE\" config=\"30,60,90,120,180\">90</field>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "csc-starquilts-comment_2023": {
+          "hint1": "మీ కోడ్ ఇలా ఉండాలి: \n<xml><block type=\"when_run\" deletable=\"false\" movable=\"false\" id=\"when_run\"><next><block type=\"comment\"><field name=\"TEXT\">This sets the length of the rhombus to 35</field><next><block type=\"variables_set\"><field name=\"VAR\">length</field><value name=\"VALUE\"><block type=\"math_number\"><field name=\"NUM\">35</field></block></value></block></next></block></next></block></xml>"
+        },
+        "csc-starquilts-repeat_2023": {
+          "hint1": "మీ కోడ్ ఇలా ఉండాలి: \n<xml><block type=\"when_run\" deletable=\"false\" movable=\"false\" id=\"when_run\"><next><block type=\"comment\"><field name=\"TEXT\">This sets the length of the rhombus to 35</field><next><block type=\"variables_set\"><field name=\"VAR\">length</field><value name=\"VALUE\"><block type=\"math_number\"><field name=\"NUM\">35</field></block></value><next><block type=\"controls_repeat_ext\"><value name=\"TIMES\"><block type=\"math_number\"><field name=\"NUM\">8</field></block></value><statement name=\"DO\"><block type=\"comment\"><field name=\"TEXT\">Row 1</field><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusRed45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"comment\"><field name=\"TEXT\">Row 2</field><next><block type=\"procedures_callnoreturn\"><mutation name=\"diagonalRight\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusOrange45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"procedures_callnoreturn\"><mutation name=\"bumpLeft\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusOrange45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"comment\"><field name=\"TEXT\">Row 3</field><next><block type=\"procedures_callnoreturn\"><mutation name=\"diagonalLeft\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusGreen45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"procedures_callnoreturn\"><mutation name=\"bumpRight\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusCyan45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"procedures_callnoreturn\"><mutation name=\"bumpRight\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusLightBlue45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"comment\"><field name=\"TEXT\">Row 4</field><next><block type=\"procedures_callnoreturn\"><mutation name=\"diagonalLeft\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusBlue45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"procedures_callnoreturn\"><mutation name=\"bumpLeft\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusBlue45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"comment\"><field name=\"TEXT\">Row 5</field><next><block type=\"procedures_callnoreturn\"><mutation name=\"diagonalRight\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusMagenta45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"jump_to\"><field name=\"VALUE\">13</field><next><block type=\"draw_turn\"><field name=\"DIR\">turnRight</field><value name=\"VALUE\"><block type=\"math_number\"><field name=\"NUM\">45</field></block></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block></next></block></next></block></next></block></xml>"
+        },
+        "csc-starquilts-row1_2023": {
+          "hing1": "మీ కోడ్ ఇలా ఉండాలి: \n<xml><block type=\"when_run\" deletable=\"false\" movable=\"false\" id=\"when_run\"><next><block type=\"comment\"><field name=\"TEXT\">This sets the length of the rhombus to 35</field><next><block type=\"variables_set\"><field name=\"VAR\">length</field><value name=\"VALUE\"><block type=\"math_number\"><field name=\"NUM\">35</field></block></value><next><block type=\"comment\"><field name=\"TEXT\">Row 1</field><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusRed45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        "csc-starquilts-row2_2023": {
+          "finished code": "మీ పూర్తి కోడ్ ఇలా ఉండాలి <xml><block type=\"when_run\" deletable=\"false\" movable=\"false\" id=\"when_run\"><next><block type=\"comment\"><field name=\"TEXT\">This sets the length of the rhombus to 35</field><next><block type=\"variables_set\"><field name=\"VAR\">length</field><value name=\"VALUE\"><block type=\"math_number\"><field name=\"NUM\">35</field></block></value><next><block type=\"comment\"><field name=\"TEXT\">Row 1</field><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusRed45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"comment\"><field name=\"TEXT\">Row 2</field><next><block type=\"procedures_callnoreturn\"><mutation name=\"diagonalRight\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusOrange45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"procedures_callnoreturn\"><mutation name=\"bumpLeft\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusOrange45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        "csc-starquilts-row3_2023": {
+          "hint1": "మీ కోడ్ ఇలా ఉండాలి: \n<xml><block type=\"when_run\" deletable=\"false\" movable=\"false\" id=\"when_run\"><next><block type=\"variables_set\"><field name=\"VAR\">length</field><value name=\"VALUE\"><block type=\"math_number\"><field name=\"NUM\">35</field></block></value><next><block type=\"comment\"><field name=\"TEXT\">Row 1</field><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusRed45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"comment\"><field name=\"TEXT\">Row 2</field><next><block type=\"procedures_callnoreturn\"><mutation name=\"diagonalRight\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusOrange45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"procedures_callnoreturn\"><mutation name=\"bumpLeft\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusOrange45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"comment\"><field name=\"TEXT\">Row 3</field><next><block type=\"procedures_callnoreturn\"><mutation name=\"diagonalLeft\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusGreen45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"procedures_callnoreturn\"><mutation name=\"bumpRight\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusCyan45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"procedures_callnoreturn\"><mutation name=\"bumpRight\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusLightBlue45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        "csc-starquilts-row4_2023": {
+          "hint1": "మీ కోడ్ ఇలా ఉండాలి:\n<xml><block type=\"when_run\" deletable=\"false\" movable=\"false\" id=\"when_run\"><next><block type=\"comment\"><field name=\"TEXT\">This sets the length of the rhombus to 35</field><next><block type=\"variables_set\"><field name=\"VAR\">length</field><value name=\"VALUE\"><block type=\"math_number\"><field name=\"NUM\">35</field></block></value><next><block type=\"comment\"><field name=\"TEXT\">Row 1</field><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusRed45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"comment\"><field name=\"TEXT\">Row 2</field><next><block type=\"procedures_callnoreturn\"><mutation name=\"diagonalRight\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusOrange45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"procedures_callnoreturn\"><mutation name=\"bumpLeft\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusOrange45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"comment\"><field name=\"TEXT\">Row 3</field><next><block type=\"procedures_callnoreturn\"><mutation name=\"diagonalLeft\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusGreen45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"procedures_callnoreturn\"><mutation name=\"bumpRight\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusCyan45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"procedures_callnoreturn\"><mutation name=\"bumpRight\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusLightBlue45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"comment\"><field name=\"TEXT\">Row 4</field><next><block type=\"procedures_callnoreturn\"><mutation name=\"diagonalLeft\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusBlue45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"procedures_callnoreturn\"><mutation name=\"bumpLeft\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusBlue45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        "csc-starquilts-row5_2023": {
+          "hint1": "మీ కోడ్ ఇలా ఉండాలి: \n<xml><block type=\"when_run\" deletable=\"false\" movable=\"false\" id=\"when_run\"><next><block type=\"comment\"><field name=\"TEXT\">This sets the length of the rhombus to 35</field><next><block type=\"variables_set\"><field name=\"VAR\">length</field><value name=\"VALUE\"><block type=\"math_number\"><field name=\"NUM\">35</field></block></value><next><block type=\"comment\"><field name=\"TEXT\">Row 1</field><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusRed45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"comment\"><field name=\"TEXT\">Row 2</field><next><block type=\"procedures_callnoreturn\"><mutation name=\"diagonalRight\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusOrange45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"procedures_callnoreturn\"><mutation name=\"bumpLeft\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusOrange45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"comment\"><field name=\"TEXT\">Row 3</field><next><block type=\"procedures_callnoreturn\"><mutation name=\"diagonalLeft\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusGreen45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"procedures_callnoreturn\"><mutation name=\"bumpRight\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusCyan45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"procedures_callnoreturn\"><mutation name=\"bumpRight\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusLightBlue45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"comment\"><field name=\"TEXT\">Row 4</field><next><block type=\"procedures_callnoreturn\"><mutation name=\"diagonalLeft\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusBlue45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"procedures_callnoreturn\"><mutation name=\"bumpLeft\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusBlue45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"comment\"><field name=\"TEXT\">Row 5</field><next><block type=\"procedures_callnoreturn\"><mutation name=\"diagonalRight\"></mutation><next><block type=\"rhombus_shape_with_side_length\"><field name=\"VALUE\">smallRhombusMagenta45</field><value name=\"SIZE\"><block type=\"variables_get\"><field name=\"VAR\">length</field></block></value><next><block type=\"jump_to\"><field name=\"VALUE\">13</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        "csc_animal_adaptaions_fishschool": {
+          "hint1": "కార్యస్థలం లో చేపలు రూపొందించినవారు</code> ఈవెంట్ ఈ బ్లాక్స్ జోడించండి. <code style=\"color:black; background-color:#6AF36C\">\n\n<xml><<block \ntype=\"gamelab_setProp\">\n  <field name=\"PROPERTY\">\"scale\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_newSpritePointer\"></block>\n  </value>\n  <value name=\"VAL\">\n    <block type=\"math_number\">\n      <field name=\"NUM\">30</field>\n    </block>\n  </value>\n</block>\n<block type=\"adaptations_toggleBehaviorSimple\">\n  <field name=\"TOGGLE\">\"begins\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_newSpritePointer\"></block>\n  </value>\n  <value name=\"BEHAVIOR\">\n    <block type=\"gamelab_behavior_get\">\n      <mutation></mutation>\n      <field name=\"VAR\" id=\"shrinking\">swimming in a group</field>\n    </block>\n  </value>\n</block>\n</xml>"
+        },
+        "csc_animal_adaptations_behavior_edit": {
+          "behavior hint": "ప్రవర్తనలను సవరించడానికి ప్రయత్నించండి! \n\n-   పక్షి ఏ దిశలో కదలాలి?"
+        },
+        "csc_animal_adaptations_behavior_edit2": {
+          "behavior hint": "ప్రవర్తనలను సవరించడానికి ప్రయత్నించండి! \n\n-   ప్రతి స్ప్రైట్ వేగాన్ని నియంత్రించే విలువ ఏది?\n-   పెద్ద సంఖ్య స్ప్రైట్ వేగంగా కదులుతుంది."
+        },
+        "csc_animal_adaptations_behaviors_edit2": {
+          "behavior hint": "ప్రవర్తనను సవరించడానికి ప్రయత్నించండి! "
+        },
+        "csc_animal_adaptations_behaviors_elephantleader": {
+          "All Sprites": "<code style=\"color:black; background-color:#6AF36C\">ప్రయాణ</code> ప్రవర్తన <code style=\"color:black; background-color:#F79EA5\">అన్ని</code>స్ప్రిట్లకు ప్రారంభమైనదా?"
+        },
+        "csc_animal_adaptations_behaviors_wolfpack": {
+          "behavior": "క్రొత్త ప్రవర్తన బ్లాక్ ఇప్పటికే వర్క్స్పేస్లో ఉన్న కోడ్ చివరిలో వెళుతుంది. ",
+          "costumes": "దుస్తులు సరిగ్గా సెట్ చేయబడ్డాయా? "
+        },
+        "csc_animal_adaptations_birds": {
+          "behavior 2": "పొరల ప్రవర్తనలు:\n\n-   మొదటిదాని కంటే భిన్నమైన ప్రవర్తనను ఎంచుకోండి\n-   మీరు కోరుకుంటున్నన్ని ప్రవర్తనలను జోడించవచ్చు"
+        },
+        "csc_animal_adaptations_bugs": {
+          "dance": "మీరు డ్రాప్ డౌన్ జాబితా నుండి ఏదైనా ప్రవర్తనను ఎంచుకోవచ్చు. \n<br>\n![](https://images.code.org/b93b1103cd53ca3112175529bc74e0f8-image-1681503579100.jpg)"
+        },
+        "csc_animal_adaptations_bugs2": {
+          "storyboard_behavior_example": "`స్ప్రైట్ ప్రారంభాలు` ప్రవర్తన బ్లాక్ను ఉపయోగించండి. క్రొత్త ప్రవర్తనను ఎంచుకోవడానికి డ్రాప్డౌన్ మెనుపై క్లిక్ చేయండి.\n\n<xml><block type=\"adaptations_toggleBehaviorSimple\">\n  <field name=\"TOGGLE\">\"begins\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"ladybug2\"</field>\n    </block>\n  </value>\n  <value name=\"BEHAVIOR\">\n    <block type=\"adaptations_adaptationBehaviors\" can_disconnect_from_parent=\"false\">\n      <field name=\"BEHAVIOR\">new Behavior(spinning_left, [])</field>\n    </block>\n  </value>\n</block></xml>"
+        },
+        "csc_animal_adaptations_butterfly": {
+          "Event1": "<code style=\"color:black; background-color:#6AF36C\">ఈవెంట్లు ఇప్పటికే వర్క్స్పేస్లో సెటప్</code> చేయబడ్డాయి. మీరు ఇప్పటికే ఉన్న కోడ్కు క్రొత్త ప్రవర్తనలను మాత్రమే జోడించాలి. ",
+          "north": "ఎప్పుడు <code style=\"color:black; background-color:#6AF36C\">నొక్కినప్పుడు</code> ఈవెంట్\\*\\* వలస వచ్చే ఉత్తర\\*\\* ప్రవర్తనను ప్రారంభించాలి. ![](https://images.code.org/a61006611d4eb7c0b851d83fede0706f-image-1681504507726.png)\n\nడౌన్ <code style=\"color:black; background-color:#6AF36C\">నొక్కినప్పుడు</code> ఈవెంట్\\*\\* వలస దక్షిణ\\*\\* ప్రవర్తనను ప్రారంభించాలి.\n\n![](https://images.code.org/cf2d819a233774602c27f769407cc7ef-image-1681504783359.png)"
+        },
+        "csc_animal_adaptations_choice1": {
+          "hint1": "** జంతువు మనుగడ సాగించడానికి వారి శరీరం గురించి ఏదైనా మార్చాల్సిన అవసరం ఉందా? ** మార్పు కాస్ట్యూమ్ బ్లాక్ను జోడించండి. మరిన్ని ఆలోచనల కోసం పాఠం 1 లోని స్థాయిలను ఉపయోగించండి! ",
+          "hint2": "** జంతువు మనుగడ సాగించడానికి భిన్నంగా ఏదైనా చేయడం ప్రారంభించాల్సిన అవసరం ఉందా? ** ప్రారంభ ప్రవర్తన బ్లాక్ను జోడించండి. మరిన్ని ఆలోచనల కోసం పాఠం 2 & 3 లోని స్థాయిలను ఉపయోగించండి! \n\n    "
+        },
+        "csc_animal_adaptations_choice2": {
+          "Hint1": "** జంతువు మనుగడ సాగించడానికి వారి శరీరం గురించి ఏదైనా మార్చాల్సిన అవసరం ఉందా? ** మార్పు కాస్ట్యూమ్ బ్లాక్ను జోడించండి. మరిన్ని ఆలోచనల కోసం పాఠం 1 లోని స్థాయిలను ఉపయోగించండి! ",
+          "Hint2": "** జంతువు మనుగడ సాగించడానికి భిన్నంగా ఏదైనా చేయడం ప్రారంభించాల్సిన అవసరం ఉందా? ** ప్రారంభ ప్రవర్తన బ్లాక్ను జోడించండి. మరిన్ని ఆలోచనల కోసం పాఠం 2 & 3 లోని స్థాయిలను ఉపయోగించండి! \n"
+        },
+        "csc_animal_adaptations_choice3": {
+          "Hint1": "** జంతువు మనుగడ సాగించడానికి వారి శరీరం గురించి ఏదైనా మార్చాల్సిన అవసరం ఉందా? ** మార్పు కాస్ట్యూమ్ బ్లాక్ను జోడించండి. మరిన్ని ఆలోచనల కోసం పాఠం 1 లోని స్థాయిలను ఉపయోగించండి! ",
+          "Hint2": "** జంతువు మనుగడ సాగించడానికి భిన్నంగా ఏదైనా చేయడం ప్రారంభించాల్సిన అవసరం ఉందా? ** ప్రారంభ ప్రవర్తన బ్లాక్ను జోడించండి. మరిన్ని ఆలోచనల కోసం పాఠం 2 & 3 లోని స్థాయిలను ఉపయోగించండి! "
+        },
+        "csc_animal_adaptations_fish": {
+          "event": "క్రొత్తది కుడివైపు <code style=\"color:black; background-color:#6AF36C\">నొక్కినప్పుడు</code> ఈవెంట్ను వర్క్స్పేస్లో ఎక్కడైనా ఉంచవచ్చు. ",
+          "event 2": "ఈవెంట్ ద్వారా ప్రేరేపించబడిన క్రొత్త ప్రవర్తనను ఎంచుకోవాలని నిర్ధారించుకోండి.\n\n![](https://images.code.org/b914b4625fcfc0c2f9b48b66ae7f1529-image-1681504075534.jpg)"
+        },
+        "csc_animal_adaptations_groups": {
+          "hint1": "మీ `క్లిక్ చేసినప్పుడు` ఈవెంట్ ఇలా ఉండాలి: \n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\">\n      <field name=\"ANIMATION\">\"ladybug2\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"adaptations_toggleBehaviorSimple\">\n      <field name=\"TOGGLE\">\"stops\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <field name=\"ANIMATION\">\"ladybug2\"</field>\n        </block>\n      </value>\n      <value name=\"BEHAVIOR\">\n        <block type=\"adaptations_adaptationBehaviors\">\n          <field name=\"BEHAVIOR\">new Behavior(spinning_right, [])</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
+        },
+        "csc_animal_adaptations_make_behavior": {
+          "behavior hint": "ఈ పజిల్ పరిష్కరించడానికి ప్రవర్తనను సవరించండి. ప్రవర్తన కోడ్లో చర్యలను జోడించండి. "
+        },
+        "csc_animal_adaptations_migration": {
+          "Arrow keys": "తిమింగలం ఉత్తరం వైపు కదలడానికి పైకి బాణం కీని ఉపయోగించండి.",
+          "move_sprite_up_hint": "బాణం కీలను ఉపయోగించి మీ తిమింగలం స్ప్రైట్ కదలడానికి ఈ బ్లాక్లను జోడించండి:\n<xml><block type=\"when_run\" deletable=\"false\" movable=\"false\"><next><block type=\"gamelab_setBackgroundImageAs\"><field name=\"IMG\">\"world-map\"</field><next><block type=\"gamelab_makeNewSpriteAnon\"><field name=\"ANIMATION_NAME\">\"whale-4\"</field><value name=\"LOCATION\"><block type=\"gamelab_location_picker\" can_disconnect_from_parent=\"false\"><field name=\"LOCATION\">{\"x\":165,\"y\":266}</field></block></value><next><block type=\"adaptations_toggleBehaviorSimple\"><field name=\"TOGGLE\">\"begins\"</field><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><field name=\"ANIMATION\">\"whale-4\"</field></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><field name=\"VAR\" id=\"moving with arrow keys\">moving NSEW with arrow keys</field></block></value></block></next></block></next></block></next></block></xml>"
+        },
+        "csc_animal_adaptations_speed": {
+          "fast slow": "జంతువును ఎంచుకోవడానికి మరియు దాని వేగాన్ని సెట్ చేయడానికి డ్రాప్డౌన్ మెనుని ఉపయోగించండి.\n\n![](https://images.code.org/bc9d43437cf9c46a4daf9dcfbedb31dc-image-1679096424749.gif)"
+        },
+        "csc_bookcover_background_2023": {
+          "hint1": "<code style=\"color:black; background-color:#B3B2FB\">సెట్ బ్యాక్గ్రౌండ్</code> బ్లాక్ ప్రోగ్రామ్ చివరిలో వెళుతుంది. \n\nఅమలు <code style=\"color:black; background-color:#FFBD46\">చేసినప్పుడు కింద ఇతర కోడ్ తరువాత</code>.",
+          "hint2": "డ్రాప్డౌన్ మెను నుండి నేపథ్యాన్ని ఎంచుకోండి\n\n<xml>\n<block type=\"gamelab_setBackgroundImageAs\">\n  <field name=\"IMG\">\"hw_sky_background\"</field>\n</block>\n</xml>"
+        },
+        "csc_bookcover_behavior_2023": {
+          "hint1": "మీ కోడ్కు `స్ప్రైట్ ప్రారంభాలు` బ్లాక్ మరియు `బిహేవియర్` బ్లాక్ను జోడించాలని నిర్ధారించుకోండి.\n\n<xml>\n<block type=\"gamelab_addBehaviorSimple\">\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\">\n      <field name=\"ANIMATION\">“ఫేస్_పీచ్_1\"</field>\n    </block>\n  </value>\n  <value name=\"BEHAVIOR\">\n    <block type=\"gamelab_behavior_get\">\n      <mutation></mutation>\n      <field name=\"VAR\" id=\"growing\">పెరుగుతున్న</field>\n    </block>\n  </value>\n</block>\n</xml>\n\n"
+        },
+        "csc_bookcover_burst_2023": {
+          "hint1": "మీ కోడ్కు `క్రియేట్ పేలుడు ప్రభావం` బ్లాక్ను జోడించాలని నిర్ధారించుకోండి.\n\n<xml>\n<block type=\"gamelab_makeBurst\">\n  <field name=\"EFFECT\">“పేలుడు”</field>\n  <field name=\"ANIMATION_NAME\">“పుస్తకం”</field>\n  <value name=\"NUM\">\n    <block type=\"math_number\">\n      <field name=\"NUM\">3</field>\n    </block>\n  </value>\n</block>\n</xml>\n"
+        },
+        "csc_bookcover_clicksay_2023": {
+          "hint1": "క్లిక్ చేసినప్పుడు `ఈవెంట్ బ్లాక్ కింద`చెప్పండి\\` బ్లాక్ను కనెక్ట్ చేయండి: [బ్లాక్లీ బ్లాక్]\n\n[0]",
+          "hint2": "గుర్తుంచుకోండి, క్లిక్ <code style=\"color:black; background-color:#6AF36C\">చేసినప్పుడు</code> బ్లాక్స్ కార్యస్థలం ఎక్కడైనా వెళ్ళవచ్చు. \n\nవారు <code style=\"color:black; background-color:#FFBD46\">ఎప్పుడు రన్</code> ప్రోగ్రామ్కు కనెక్ట్ చేయరు."
+        },
+        "csc_bookcover_clicksayb_2023": {
+          "hint1": "క్లిక్ చేసినప్పుడు `ఈవెంట్ బ్లాక్ కింద`చెప్పండి\\` బ్లాక్ను కనెక్ట్ చేయండి: [బ్లాక్లీ బ్లాక్]\n\n[0]",
+          "hint2": "గుర్తుంచుకోండి, క్లిక్ <code style=\"color:black; background-color:#6AF36C\">చేసినప్పుడు</code> బ్లాక్స్ కార్యస్థలం ఎక్కడైనా వెళ్ళవచ్చు. \n\nవారు <code style=\"color:black; background-color:#FFBD46\">ఎప్పుడు రన్</code> ప్రోగ్రామ్కు కనెక్ట్ చేయరు."
+        },
+        "csc_bookcover_foreground_2023": {
+          "hint1": "మీ కోడ్కు `డు ఎఫెక్ట్` బ్లాక్ను జోడించాలని నిర్ధారించుకోండి.\n\n<xml>\n<block type=\"storylab_setForegroundEffect2\">\n  <field name=\"EFFECT\">“బుడగలు”</field>\n</block>\n</xml>\n\n"
+        },
+        "csc_bookcover_print_2023": {
+          "hint1": "`ఎప్పుడు రన్` కింద కనీసం ఒక `ప్రింట్` బ్లాక్ను కనెక్ట్ చేయాలని నిర్ధారించుకోండి."
+        },
+        "csc_bookcover_project_title": {
+          "Hint1": "<code style=\"color:black; background-color:#B3B2FB\">సెట్ హెడ్డింగ్</code> బ్లాక్ పుస్తకం యొక్క శీర్షికను కవర్కు జోడిస్తుంది. ",
+          "Hint2": "<code style=\"color:black; background-color:#B3B2FB\">సెట్ ఉపశీర్షిక రచయితను పుస్తక కవర్కు</code> జోడిస్తుంది!\n\nవచనాన్ని మార్చాలని నిర్ధారించుకోండి."
+        },
+        "csc_bookcover_prop_2023": {
+          "Hint1": "మీ కొత్త బ్లాక్లు రెండూ ఒకే దుస్తులకు అమర్చాలి."
+        },
+        "csc_bookcover_say2_2023": {
+          "hint1": "`సెట్ సైజు` బ్లాక్లోని దుస్తులు `మేక్ న్యూ స్ప్రిట్` బ్లాక్లోని దుస్తులపై సరిపోయేలా చూసుకోండి.\n<xml>\n<block type=\"gamelab_makeNewSpriteAnon\">\n                    <field name=\"ANIMATION_NAME\">“గ్రీన్_స్వెటర్_హ్యాండ్_ఇన్_పాకెట్”</field>\n                    <value name=\"LOCATION\">\n                      <block type=\"gamelab_location_picker\" can_disconnect_from_parent=\"false\">\n                        <field name=\"LOCATION\">{\"x” :91, \"y” :269}</field>\n                      </block>\n                    </value>\n\n                        <next>\n                          <block type=\"gamelab_setProp\">\n                            <field name=\"PROPERTY\">“స్కేల్”</field>\n                            <value name=\"SPRITE\">\n                              <block type=\"gamelab_allSpritesWithAnimation\">\n                                <field name=\"ANIMATION\">“గ్రీన్_స్వెటర్_హ్యాండ్_ఇన్_పాకెట్”</field>\n                              </block>\n                            </value>\n                            <value name=\"VAL\">\n                              <block type=\"math_number\">\n                                <field name=\"NUM\">250</field>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n\n  </block>\n</xml>>"
+        },
+        "csc_bookcover_say_2023": {
+          "hint1": "<code style=\"color:black; background-color:#EBD546\">లొకేషన్</code> బ్లాక్ <code style=\"color:black; background-color:#F79EA5\">మేక్ కొత్త స్ప్రైట్</code> బ్లాక్కు జోడించబడింది.\n\nస్ప్రైట్ స్థానాన్ని మార్చడానికి, లొకేషన్ బ్లాక్లోని పిన్ను క్లిక్ చేసి, ఆపై మీరు ఎక్కడికి వెళ్లాలనుకుంటున్నారో క్లిక్ చేయండి.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "csc_bookcover_title_2023": {
+          "Hint1": "<code style=\"color:black; background-color:#B3B2FB\">సెట్ హెడ్డింగ్</code> బ్లాక్ పుస్తకం యొక్క శీర్షికను కవర్కు జోడిస్తుంది. \n\nమీకు కావాలంటే మీరు వచనాన్ని మార్చవచ్చు.",
+          "Hint2": "<code style=\"color:black; background-color:#B3B2FB\">సెట్ ఉపశీర్షిక రచయితను పుస్తక కవర్కు</code> జోడిస్తుంది!\n\nమీరు ఇక్కడ కూడా వచనాన్ని మార్చవచ్చు. "
+        },
+        "csc_bookcover_widget_2023": {
+          "hint1": "\\*\\* అక్షరాలు వారు చెప్పేది చూడటానికి బోత్\\*\\* పై క్లిక్ చేయండి!",
+          "hint2": "పుస్తకం యొక్క సారాంశాన్ని చూడటానికి **పైకి బాణం** క్లిక్ చేయండి."
+        },
+        "csc_bookcovers_project_character1": {
+          "hint1": "స్ప్రైట్ స్థానాన్ని మార్చడానికి, స్థాన బ్లాక్లోని పిన్ను క్లిక్ చేసి, ఆపై మీరు ఎక్కడికి వెళ్లాలనుకుంటున్నారో క్లిక్ చేయండి.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "csc_bookcovers_project_character2": {
+          "hint1": "స్ప్రైట్ దుస్తులు వాటి సంబంధిత కోడింగ్ బ్లాక్లతో సరిపోలుతున్నాయని నిర్ధారించుకోండి! ",
+          "hint2": "మీరు తమ గురించి వేర్వేరు విషయాలు చెప్పే రెండు స్ప్రిట్లను కలిగి ఉండాలి. "
+        },
+        "csc_bookcovers_project_clicksay": {
+          "hint1": "క్లిక్ చేసినప్పుడు `ఈవెంట్ బ్లాక్ కింద`చెప్పండి\\` బ్లాక్ను కనెక్ట్ చేయండి: [బ్లాక్లీ బ్లాక్]\n\n[0]",
+          "hint2": "గుర్తుంచుకోండి, క్లిక్ <code style=\"color:black; background-color:#6AF36C\">చేసినప్పుడు</code> బ్లాక్స్ కార్యస్థలం ఎక్కడైనా వెళ్ళవచ్చు. \n\nవారు <code style=\"color:black; background-color:#FFBD46\">ఎప్పుడు రన్</code> ప్రోగ్రామ్కు కనెక్ట్ చేయరు."
+        },
+        "csc_bookcovers_project_print": {
+          "hint1": "ఈవెంట్స్ వర్క్స్పేస్లో ఎక్కడైనా వెళ్ళవచ్చని మర్చిపోవద్దు. \n\nమీ ప్రతి అక్షరానికి మీరు `ఎప్పుడు స్ప్రైట్ క్లిక్ చేయండి` ఈవెంట్ను కలిగి ఉండాలి."
+        },
+        "csc_bookcovers_project_summary": {
+          "hint1": "`ఎప్పుడు రన్` కింద కనీసం ఒక `ప్రింట్` బ్లాక్ను కనెక్ట్ చేయాలని నిర్ధారించుకోండి."
+        },
+        "csc_ecosystems_algae_freeplay_2023": {
+          "YouCan": "మీరు చేయవచ్చు: \n\n-   చేపల సంఖ్యను మార్చండి\n-   ఆల్గే సంఖ్యను మార్చండి - చేపలు & ఆల్గే తిరిగి\n    పెరిగే \n    వరకు ఎన్ని సెకన్లలో మార్చండి\n-   ఇతర మార్పులు చేయండి",
+          "change": "అనుకరణలో రెండు మార్పులు చేయండి!"
+        },
+        "csc_ecosystems_arctic_2023": {
+          "hint1": "ధ్రువ ఎలుగుబంటి పెద్దదిగా ఉండాలి! దాని పరిమాణాన్ని 30 కంటే ఎక్కువగా మార్చండి.",
+          "hint2": "ధ్రువ ఎలుగుబంటిని వేటాడేందుకు ఎక్కువ మంచు ఉంటుంది కాబట్టి నేపథ్యాన్ని మార్చండి. "
+        },
+        "csc_ecosystems_desert_2023": {
+          "hint1": "కుందేళ్ళు వేగంగా కదలాలి! కుందేళ్ళ \nవేగాన్ని 0 కన్నా ఎక్కువగా మార్చండి."
+        },
+        "csc_ecosystems_giraffe_evo_2023": {
+          "first_event_hint": "మీ `ఈవెంట్` (#6AF36C) చిన్న మెడ జిరాఫీని ఉపయోగిస్తుందా? \n\nదుస్తులు\\*\\* చిన్న నుండి పొడవాటి మెడకు\\*\\* మారుతాయా?\n\nమార్పు కాస్ట్యూమ్ బ్లాక్ ఇలా ఉండాలి:\n<xml>\n<block type=\"gamelab_setAnimation\">\n  <field name=\"ANIMATION\">\"giraffe_longer_neck\"</field>\n  <value name=\"THIS\">\n    <block type=\"gamelab_allSpritesWithAnimation\" movable=\"false\">\n      <field name=\"ANIMATION\">\"giraffe_shorter_neck\"</field>\n    </block>\n  </value>\n</block></xml>"
+        },
+        "csc_ecosystems_marsh_2023": {
+          "Hint1": "మాకు ఎక్కువ కప్పలు అవసరం! కప్పల సంఖ్యను 0 కన్నా ఎక్కువగా మార్చండి."
+        },
+        "csc_ecosystems_ocean_algae_2023": {
+          "Connect": "ఈట్ బ్లాక్ ఈవెంట్ బ్లాక్కు కనెక్ట్ చేయబడిందని నిర్ధారించుకోండి. \n\nవారు పజిల్ ముక్కల లాగా కలిసి స్నాప్ చేయాలి!"
+        },
+        "csc_ecosystems_ocean_boat_2023": {
+          "Catch": "పడవ చేపలు పట్టుకుంటాడు కాబట్టి క్యాచ్ వస్తువు బ్లాక్ ఉపయోగించండి",
+          "CatchUnder": "క్యాచ్ వస్తువు బ్లాక్ పడవలు \nచేపలు ఈవెంట్ తాకిన కింద\nకనెక్ట్ చేయాలి."
+        },
+        "csc_ecosystems_ocean_coral_2023": {
+          "BlockInside": "చాలా ఆల్గే బ్లాక్ లోపల మార్పు కాస్ట్యూమ్ బ్లాక్ ఉంచండి.",
+          "Costume": "చాలా ఆల్గే ఉంటే, పగడపు దెబ్బతింటుంది. \n\nతదుపరి మార్పు కాస్ట్యూమ్ బ్లాక్ ఉపయోగించండి.",
+          "TooMuch": "చేపలు ఆల్గే ఈవెంట్ను తాకినప్పుడు ఎక్కువ ఆల్గే బ్లాక్ను కనెక్ట్ చేయండి."
+        },
+        "csc_ecosystems_ocean_coral_health_2023": {
+          "Below": "మీరు చివరి స్థాయి ముగిసిన వర్క్స్పేస్ దిగువన బ్లాక్లను కనెక్ట్ చేస్తూ ఉండండి!",
+          "BlocksInside": "చాలా తక్కువ ఆల్గే ఉంటే, చేపలు వదిలివేస్తాయి. \n\nచాలా తక్కువ ఆల్గే బ్లాక్ లోపల ఇతర బ్లాక్లను ఉంచండి.",
+          "TooLittle": "చేపలు ఆల్గే ఈవెంట్ను తాకినప్పుడు చాలా తక్కువ ఆల్గే బ్లాక్ను కనెక్ట్ చేయండి."
+        },
+        "csc_ecosystems_ocean_fish_2023": {
+          "No Code": "కోడ్ చేయడానికి ఇంకా ఏమీ లేదు. ఈ వ్యవస్థను చర్యలో గమనించండి. "
+        },
+        "csc_ecosystems_ocean_justright_algae": {
+          "Bellow": "మీరు చివరి స్థాయి ముగిసిన వర్క్స్పేస్ దిగువన బ్లాక్లను కనెక్ట్ చేస్తూ ఉండండి!",
+          "JustRight": "చేపలు ఆల్గే ఈవెంట్ను తాకినప్పుడు కుడి ఆల్గే బ్లాక్ను కనెక్ట్ చేయండి.",
+          "costume": "ఆల్గే సరిగ్గా ఉంటే, పగడపు ఆరోగ్యంగా\nఉంటుంది. \n\nకుడి ఆల్గే బ్లాక్ లోపల మార్పు కాస్ట్యూమ్ బ్లాక్ను ఉపయోగించండి."
+        },
+        "csc_ecosystems_rainforest_freeplay_2023": {
+          "hint1": "చాలా చిలుకలు ఉన్నాయి!\nచిలుకల సంఖ్యను 8 కన్నా తక్కువగా మార్చండి."
+        },
+        "csc_ecosystems_solution1_2023": {
+          "hint1": "కార్యక్రమం ప్రారంభించటానికి ముందు 0 చేపలు \nపట్టుబడ్డాయి. వర్క్స్పేస్ పైభాగంలో `సెట్ ఫిష్క్యాచ్ 0` కు ఉపయోగించండి. ",
+          "hint2": "పడవ పట్టుకున్న\nప్రతి చేపను లెక్కించడానికి క్యాచ్ ఫిష్ బ్లాక్\nకింద `ఫిష్క్యాచ్ బై 1` మార్పును ఉపయోగించండి.",
+          "hint3": "`బోట్ సేస్`\nబ్లాక్ను కనెక్ట్ చేయండి\\*\\* కింద\\*\\* 1`బ్లాక్ ద్వారా`మార్పు ఫిష్క్యాచ్ "
+        },
+        "csc_ecosystems_solution1b_2023": {
+          "hint1": "మీరు గత స్థాయి \nముగిసిన `పడవ చేపలను తాకినప్పుడు`ఈవెంట్ \nకింద బ్లాక్లను కనెక్ట్ చేస్తూ ఉండండి!",
+          "hint2": "5 చేపల వద్ద పడవ స్టాప్ ఫిషింగ్ చేయడానికి, `if ఫిష్క్యాచ్ = 5` బ్లాక్ను `పడవ చేపలను తాకినప్పుడు`ఈవెంట్ చివరిలో కనెక్ట్ చేయండి.",
+          "hint3": "అప్పుడు `తొలగించు పడవ` బ్లాక్ను\n\\*\\* లోపల\\*\\* `if ఫిష్క్యాచ్ = 5`బ్లాక్కు జోడించండి"
+        },
+        "csc_ecosystems_solution2_2023": {
+          "Hint1": "\\*\\* గమనిక\\*\\*: క్రొత్త బ్లాక్లకు సరిపోయేలా మీ స్క్రీన్పై తక్కువ</code> కోడ్ను  <code style=\"color:black; background-color:#6AF36C\">తాకినప్పుడు మీరు కొన్నింటిని లాగవలసి ఉంటుంది.",
+          "hint2": "Worskpace ఎగువన, నడుస్తున్నప్పుడు నేపథ్య బ్లాక్ను కనెక్ట్ చేయండి.",
+          "hint3": "నేపథ్యం కింద మాత్రమే\nఫిషింగ్\nజోన్ లో ఫిషింగ్ ప్రారంభమవుతుంది\nకనెక్ట్"
+        },
+        "csc_ecosystems_solution3A_2023": {
+          "hint1": "`రిపీట్ ప్రతి 4\nసెకన్ల` బ్లాక్ కింద కొత్త బ్లాక్లను జోడించండి.",
+          "hint2": "`ప్రతి 4 సెకన్లు` బ్లాక్ కింద వర్క్స్పేస్\nపైభాగంలో `నో ఫిషింగ్ బ్యాక్గ్రౌండ్` \nని కనెక్ట్ చేయండి.",
+          "hint3": "`నో ఫిషింగ్ నేపథ్యం`\nకింద `ఫిషింగ్ను ప్రారంభించండి` కనెక్ట్ చేయండి. "
+        },
+        "csc_ecosystems_solution3B_2023": {
+          "hint1": "రిపీట్ `ప్రతి 9\nసెకన్లు` బ్లాక్ కింద కొత్త బ్లాక్లను జోడించండి",
+          "hint2": "'నో ఫిషింగ్ నేపథ్యం`ఉపయోగించండి\nమరియు`ఫిషింగ్ సీజన్ ప్రారంభం\\` ప్రవర్తనను ఉపయోగించండి"
+        },
+        "csc_ecosystems_whale_explain_2023": {
+          "event_hint": "మీ ఈవెంట్ కింద `సెట్ బ్యాక్గ్రౌండ్` బ్లాక్ మరియు `చేంజ్ కాస్ట్యూమ్` బ్లాక్ను జోడించాలని నిర్ధారించుకోండి. \n\nమీ ఈవెంట్ను ప్రేరేపించడానికి క్రింది బాణాన్ని నొక్కడం మర్చిపోవద్దు! \n\n<xml><block type=\"gamelab_keyPressed\"><field name=\"CONDITION\">\"when\"</field><field name=\"KEY\">\"down\"</field><next><block type=\"gamelab_setBackgroundImageAs\"><field name=\"IMG\">\"night_moon\"</field><next><block type=\"gamelab_setAnimation\"><field name=\"ANIMATION\">\"firefily\"</field><value name=\"THIS\"><block type=\"gamelab_allSpritesWithAnimation\"><field name=\"ANIMATION\">\"firefily_dark\"</field></block></value></block></next></block></next></block></xml>"
+        },
+        "csc_ecosystems_whale_movement_2023": {
+          "change_size": "మీ స్ప్రైట్ పరిమాణాన్ని మార్చడానికి ఈ బ్లాక్ను ఉపయోగించండి. మీ స్వంతంగా నమోదు చేయడానికి మీరు నంబర్పై క్లిక్ చేయవచ్చు. \n\n<xml><block type=\"gamelab_setProp\"><field name=\"PROPERTY\">\"scale\"</field><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><field name=\"ANIMATION\">\"elephant_1\"</field></block></value><value name=\"VAL\"><block type=\"math_number\"><field name=\"NUM\">150</field></block></value></block></xml>"
+        },
+        "csc_landmarks_demo_usa_map_2023": {
+          "hint1": "టూర్ గైడ్ను మైలురాళ్లను తరలించడానికి బాణం కీలను ఉపయోగించండి. "
+        },
+        "csc_landmarks_events_2023": {
+          "hint1": "మీరు మీ కోడ్లో సరైన స్ప్రైట్ను పిలుస్తున్నారని నిర్ధారించుకోండి.\n\n![](https://images.code.org/2d3f4202ef62abbdfa5e02383c5200e9-image-1677193958594.gif)"
+        },
+        "csc_landmarks_freeplay_2023": {
+          "hint1": "ఎప్పుడు రన్ ప్రోగ్రామ్కు కొత్త స్ప్రైట్ను జోడించడం ద్వారా ప్రారంభించండి.",
+          "hint2": "కొత్త మైలురాయి యొక్క స్థానం మరియు పరిమాణాన్ని సెట్ చేయండి.",
+          "hint3": "క్రొత్త మైలురాయిని తాకినప్పుడు ఏదైనా చెప్పడానికి గైడ్ను ప్రోగ్రామ్ చేయండి."
+        },
+        "csc_landmarks_location_2023": {
+          "hint1": "స్ప్రైట్ స్థానాన్ని మార్చడానికి, లొకేషన్ బ్లాక్లోని పిన్ను క్లిక్ చేసి, ఆపై మీరు ఎక్కడికి వెళ్లాలనుకుంటున్నారో క్లిక్ చేయండి.\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "csc_landmarks_makesprite_2023": {
+          "hint1": "మీ టూల్బాక్స్ నుండి బ్లాక్ను లాగండి మరియు దాన్ని `ఎప్పుడు రన్ చేయండి` కింద కనెక్ట్ చేయండి.\n\n![](https://images.code.org/2aae680ee8d91999b5e4db064b42e18f-image-1666134725335.gif)"
+        },
+        "csc_landmarks_size_2023": {
+          "hint1": "స్ప్రైట్ పరిమాణాన్ని ఒక్కసారి సెట్ చేయడానికి, మీరు ఈ బ్లాక్ను ఉపయోగించవచ్చు:\n<xml><block type=\"gamelab_setProp\"><field name=\"PROPERTY\">\"scale\"</field><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><field name=\"ANIMATION\">\"purple bunny\"</field></block></value><value name=\"VAL\"><block type=\"math_number\"><field name=\"NUM\">50</field></block></value></block></xml>"
+        },
+        "csc_landmarks_touches1_2023": {
+          "hint1": "ఈవెంట్ బ్లాక్లు మీ ప్రధాన ప్రోగ్రామ్లోకి ప్రవేశించవని గమనించండి. బదులుగా, వారు తమ స్వంత చిన్న ప్రోగ్రామ్లను సృష్టిస్తారు.\n\n<xml><block type=\"gamelab_checkTouching\"><field name=\"CONDITION\">\"when\"</field><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><field name=\"ANIMATION\">\"blue_skirt_hand_behind\"</field></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><field name=\"ANIMATION\">\"location_pin_a\"</field></block></value><next><block type=\"gamelab_spriteSay\"><field name=\"SPEECH\">The U.S. Capitol Building is located in Washington D.C.</field><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><field name=\"ANIMATION\">\"blue_skirt_hand_behind\"</field></block></value></block></next></block></xml>",
+          "hint2": "మీరు మీ కోడ్లో సరైన స్ప్రైట్ను పిలుస్తున్నారని నిర్ధారించుకోండి.\n\n![](https://images.code.org/2d3f4202ef62abbdfa5e02383c5200e9-image-1677193958594.gif)"
+        },
+        "csc_timecapsule_background_2023": {
+          "hint1": "తప్పు సమాధానం లేదు. మీకు సరిగ్గా కనిపించేదాన్ని కనుగొనండి!",
+          "hint2": "మీరు పూర్తి చేసినప్పుడు `ముగించు` (#FFBD46) బటన్ను క్లిక్ చేయండి. "
+        },
+        "csc_timecapsule_behaviors_2023": {
+          "hint1": "మీ ఎరుపు బ్లాక్లలో స్ప్రైట్ దుస్తులు సరిపోతాయా?\n\n![](<https://images.code.org/5ede72587d5e107cd4166caaf414ef10-image-1660773318250.53.26 PM.png>)"
+        },
+        "csc_timecapsule_events_2023": {
+          "hint1": "మార్పు జరగాలని మీరు కోరుకున్నప్పుడు సరిపోలడానికి ఈవెంట్ బ్లాక్లో సంఖ్యను సెట్ చేయండి. \n\n![](<https://images.code.org/da7ca5c5564227e27ee0ecadea5e8b7c-image-1660772870082.47.45 PM.png>)"
+        },
+        "csc_timecapsule_music_2023": {
+          "hint1": "సౌండ్ ఎఫెక్ట్ లాగా శబ్దాలు కొద్దిసేపు ఆడతాయి. \n[బ్లాక్లీ బ్లాక్] నేపథ్య[0]\n\nసంగీతం వలె సంగీతం ఎక్కువ సమయం వరకు ప్లే అవుతుంది. \n\n<xml><block type=\"Poetry_playMusic\" id=\"11\" disabled=\"true\">\n  <field name=\"SOUND\">\"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3\"</field>\n</block></xml>"
+        },
+        "csc_timecapsule_textstyle_2023": {
+          "hint1": "విభిన్న రంగులు మరియు ప్రభావాల నుండి ఎంచుకోవడానికి డ్రాప్డౌన్ ఉపయోగించండి.\n\n![](<https://images.code.org/b3cd57bafe3e5eb487d61ef846a4715c-image-1660769880438.57.55 PM.png>)"
+        },
+        "ecosystems_helloworld_say_2023": {
+          "add_sprite": "`మేక్ న్యూ స్ప్రిట్` బ్లాక్ను క్లిక్ చేసి లాగండి మరియు `ఎప్పుడు రన్ చేయండి` కింద కనెక్ట్ చేయండి. \n\n<xml><block type=\"when_run\" deletable=\"false\"><next><block type=\"gamelab_makeNewSpriteAnon\"><field name=\"ANIMATION_NAME\">\"bunny1_ready\"</field><value name=\"LOCATION\"><block type=\"gamelab_location_picker\" can_disconnect_from_parent=\"false\"><field name=\"LOCATION\">{\"x\":200,\"y\":200}</field></block></value></block></next></block></xml>",
+          "change_location": "స్ప్రైట్ స్థానాన్ని మార్చడానికి, స్థాన బ్లాక్లోని పిన్ను క్లిక్ చేసి, ఆపై మీరు ఎక్కడికి వెళ్లాలనుకుంటున్నారో క్లిక్ చేయండి.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_animals_backgrounds": {
           "hello_world_background": "మీరు `సెట్ నేపథ్య` బ్లాక్ను `క్లిక్ చేసినప్పుడు` ఈవెంట్ బ్లాక్ కింద `సెట్ బ్యాక్గ్రౌండ్` బ్లాక్ను కనెక్ట్ చేయడం ద్వారా నేపథ్యాన్ని మార్చవచ్చు:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -174,6 +467,18 @@
         "helloworld_animals_sizes": {
           "storyboard_changePropBy": "మీరు స్ప్రైట్ పరిమాణాన్ని పదే పదే మార్చాలనుకుంటే (సంఘటనలతో), ఈ బ్లాక్ను ఉపయోగించండి:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_cheetah_hello\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>",
           "storyboard_setProp": "ఒక స్ప్రైట్ యొక్క పరిమాణం కేవలం ఒక సారి సెట్, మీరు ఈ బ్లాక్ ఉపయోగించవచ్చు:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_bugs_behaviors_2023": {
+          "new event": "మీ ఈవెంట్లో సరైన స్ప్రైట్ దుస్తులను ఎంచుకున్నారని నిర్ధారించుకోండి. \n\n<xml><block type=\"gamelab_checkTouching\"><field name=\"CONDITION\">\"when\"</field><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><field name=\"ANIMATION\">\"octopus_red\"</field></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><field name=\"ANIMATION\">\"underseadeco_34\"</field></block></value><next><block type=\"gamelab_setAnimation\"><field name=\"ANIMATION\">\"octopus_green\"</field><value name=\"THIS\"><block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\"><field name=\"ANIMATION\">\"octopus_red\"</field></block></value></block></next></block></xml>"
+        },
+        "helloworld_bunny_adaptation_2023": {
+          "click_hint": "“రన్” నొక్కిన తర్వాత పైకి బాణాన్ని క్లిక్ చేయాలని నిర్ధారించుకోండి."
+        },
+        "helloworld_bunny_click_2023": {
+          "sprite_say": "స్ప్రైట్ ఏదో చెప్పడానికి, కోడ్ యొక్క బ్లాక్లను ఇలా కనెక్ట్ చేయండి:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_bunny_location_2023": {
+          "change costume dropdown": "క్రొత్త స్ప్రైట్ దుస్తులను ఎంచుకోవడానికి డ్రాప్డౌన్ మెనుని క్లిక్ చేయండి. \n\n![](<https://images.code.org/f2619a41e09985a08feb40a9b7ba274f-image-1683127743607.28.44 AM.png>)"
         },
         "helloworld_emoji_backgrounds": {
           "hello_world_background": "మీరు `సెట్ నేపథ్య` బ్లాక్ను `క్లిక్ చేసినప్పుడు` ఈవెంట్ బ్లాక్ కింద `సెట్ బ్యాక్గ్రౌండ్` బ్లాక్ను కనెక్ట్ చేయడం ద్వారా నేపథ్యాన్ని మార్చవచ్చు:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_35_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_17_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -207,6 +512,9 @@
         "helloworld_food_backgrounds": {
           "hello_world_background": "మీరు `సెట్ నేపథ్య` బ్లాక్ను `క్లిక్ చేసినప్పుడు` ఈవెంట్ బ్లాక్ కింద `సెట్ బ్యాక్గ్రౌండ్` బ్లాక్ను కనెక్ట్ చేయడం ద్వారా నేపథ్యాన్ని మార్చవచ్చు:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
+        "helloworld_food_backgrounds_2023": {
+          "hello_world_background": "మీరు `సెట్ నేపథ్య` బ్లాక్ను `క్లిక్ చేసినప్పుడు` ఈవెంట్ బ్లాక్ కింద `సెట్ బ్యాక్గ్రౌండ్` బ్లాక్ను కనెక్ట్ చేయడం ద్వారా నేపథ్యాన్ని మార్చవచ్చు:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
         "helloworld_food_backgrounds_soccer-2022": {
           "hello_world_background": "మీరు `సెట్ నేపథ్య` బ్లాక్ను `క్లిక్ చేసినప్పుడు` ఈవెంట్ బ్లాక్ కింద `సెట్ బ్యాక్గ్రౌండ్` బ్లాక్ను కనెక్ట్ చేయడం ద్వారా నేపథ్యాన్ని మార్చవచ్చు:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -214,6 +522,9 @@
           "hello_world_background": "మీరు `సెట్ నేపథ్య` బ్లాక్ను `క్లిక్ చేసినప్పుడు` ఈవెంట్ బ్లాక్ కింద `సెట్ బ్యాక్గ్రౌండ్` బ్లాక్ను కనెక్ట్ చేయడం ద్వారా నేపథ్యాన్ని మార్చవచ్చు:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_food_behaviors": {
+          "storyboard_behavior_example": "_గమనిక:_ స్ప్రైట్కు ప్రవర్తనను ఇవ్వడానికి, మీరు `స్పిన్నింగ్ రైట్` వంటి ఆకుపచ్చ ప్రవర్తన బ్లాక్లలో ఒకదానితో `స్ప్రైట్ బిగినింగ్` బ్లాక్ను ఉపయోగించాలి.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_food_behaviors_2023": {
           "storyboard_behavior_example": "_గమనిక:_ స్ప్రైట్కు ప్రవర్తనను ఇవ్వడానికి, మీరు `స్పిన్నింగ్ రైట్` వంటి ఆకుపచ్చ ప్రవర్తన బ్లాక్లలో ఒకదానితో `స్ప్రైట్ బిగినింగ్` బ్లాక్ను ఉపయోగించాలి.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_food_behaviors_soccer-2022": {
@@ -226,6 +537,10 @@
           "hw_click_sprites": "ప్రోగ్రామ్ నడుస్తున్నప్పుడు స్ప్రిట్స్ పై క్లిక్ చేయండి.",
           "hw_no_changes": "మీరు ఈ స్థాయిలో ఏ కోడ్ మార్చడానికి అవసరం లేదు."
         },
+        "helloworld_food_click_2023": {
+          "hw_click_sprites": "ప్రోగ్రామ్ నడుస్తున్నప్పుడు స్ప్రిట్స్ పై క్లిక్ చేయండి.",
+          "hw_no_changes": "మీరు ఈ స్థాయిలో ఏ కోడ్ మార్చడానికి అవసరం లేదు."
+        },
         "helloworld_food_click_soccer-2022": {
           "hw_click_sprites": "ప్రోగ్రామ్ నడుస్తున్నప్పుడు స్ప్రిట్స్ పై క్లిక్ చేయండి.",
           "hw_no_changes": "మీరు ఈ స్థాయిలో ఏ కోడ్ మార్చడానికి అవసరం లేదు."
@@ -235,6 +550,9 @@
           "hw_no_changes": "మీరు ఈ స్థాయిలో ఏ కోడ్ మార్చడానికి అవసరం లేదు."
         },
         "helloworld_food_costumes": {
+          "hello_world_costumes": "ఈవెంట్ బ్లాక్ క్లిక్ చేసినప్పుడు `మార్పు దుస్తులు`బ్లాక్ను ``కింద కనెక్ట్ చేయడానికి ప్రయత్నించండి.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"face_taco_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_costumes_2023": {
           "hello_world_costumes": "ఈవెంట్ బ్లాక్ క్లిక్ చేసినప్పుడు `మార్పు దుస్తులు`బ్లాక్ను ``కింద కనెక్ట్ చేయడానికి ప్రయత్నించండి.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"face_taco_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_food_costumes_soccer-2022": {
@@ -255,6 +573,9 @@
         "helloworld_food_location": {
           "location_pin_hint": "స్ప్రైట్ స్థానాన్ని మార్చడానికి, స్థాన బ్లాక్లోని పిన్ను క్లిక్ చేసి, ఆపై మీరు ఎక్కడికి వెళ్లాలనుకుంటున్నారో క్లిక్ చేయండి.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
+        "helloworld_food_location_2023": {
+          "location_pin_hint": "స్ప్రైట్ స్థానాన్ని మార్చడానికి, స్థాన బ్లాక్లోని పిన్ను క్లిక్ చేసి, ఆపై మీరు ఎక్కడికి వెళ్లాలనుకుంటున్నారో క్లిక్ చేయండి.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
         "helloworld_food_location_soccer-2022": {
           "location_pin_hint": "స్ప్రైట్ స్థానాన్ని మార్చడానికి, స్థాన బ్లాక్లోని పిన్ను క్లిక్ చేసి, ఆపై మీరు ఎక్కడికి వెళ్లాలనుకుంటున్నారో క్లిక్ చేయండి.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
@@ -262,6 +583,9 @@
           "location_pin_hint": "స్ప్రైట్ స్థానాన్ని మార్చడానికి, స్థాన బ్లాక్లోని పిన్ను క్లిక్ చేసి, ఆపై మీరు ఎక్కడికి వెళ్లాలనుకుంటున్నారో క్లిక్ చేయండి.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_food_multi": {
+          "storyboard_costume": "ప్రతి స్ప్రైట్కు దుస్తులు సరిపోలాయని నిర్ధారించుకోండి.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, broccoli!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_food_multi_2023": {
           "storyboard_costume": "ప్రతి స్ప్రైట్కు దుస్తులు సరిపోలాయని నిర్ధారించుకోండి.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, broccoli!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_multi_soccer-2022": {
@@ -280,6 +604,10 @@
           "hello-world-first-solution-pizza": "స్ప్రైట్ ఏదో చెప్పడానికి, కోడ్ యొక్క బ్లాక్లను ఇలా కనెక్ట్ చేయండి:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_food_sizes": {
+          "storyboard_changePropBy": "మీరు స్ప్రైట్ పరిమాణాన్ని పదే పదే మార్చాలనుకుంటే (సంఘటనలతో), ఈ బ్లాక్ను ఉపయోగించండి:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_setProp": "ఒక స్ప్రైట్ యొక్క పరిమాణం కేవలం ఒక సారి సెట్, మీరు ఈ బ్లాక్ ఉపయోగించవచ్చు:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_food_sizes_2023": {
           "storyboard_changePropBy": "మీరు స్ప్రైట్ పరిమాణాన్ని పదే పదే మార్చాలనుకుంటే (సంఘటనలతో), ఈ బ్లాక్ను ఉపయోగించండి:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>",
           "storyboard_setProp": "ఒక స్ప్రైట్ యొక్క పరిమాణం కేవలం ఒక సారి సెట్, మీరు ఈ బ్లాక్ ఉపయోగించవచ్చు:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>"
         },

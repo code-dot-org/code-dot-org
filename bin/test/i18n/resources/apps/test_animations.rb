@@ -1,16 +1,27 @@
 require_relative '../../../test_helper'
 require_relative '../../../../i18n/resources/apps/animations'
 
-class I18n::Resources::Apps::AnimationsTest < Minitest::Test
-  def test_sync_in
-    I18n::Resources::Apps::Animations::SyncIn.expects(:perform).once
+describe I18n::Resources::Apps::Animations do
+  let(:described_class) {I18n::Resources::Apps::Animations}
 
-    I18n::Resources::Apps::Animations.sync_in
+  describe '.sync_in' do
+    it 'sync-in Animations resource' do
+      described_class::SyncIn.expects(:perform).once
+      described_class.sync_in
+    end
   end
 
-  def test_sync_out
-    I18n::Resources::Apps::Animations::SyncOut.expects(:perform).once
+  describe '.sync_up' do
+    it 'sync-up Animations resource' do
+      described_class::SyncUp.expects(:perform).once
+      described_class.sync_up
+    end
+  end
 
-    I18n::Resources::Apps::Animations.sync_out
+  describe '.sync_out' do
+    it 'sync-out Animations resource' do
+      described_class::SyncOut.expects(:perform).once
+      described_class.sync_out
+    end
   end
 end

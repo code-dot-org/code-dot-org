@@ -59,7 +59,7 @@ class Slack
 
   # @param channel_name [String] The channel to fetch the topic.
   # @return [String | nil] The existing topic, nil if not found.
-  def self.get_topic(channel_name, use_channel_map = false)
+  def self.get_topic(channel_name, use_channel_map: false)
     if use_channel_map && (CHANNEL_MAP.include? channel_name.to_sym)
       channel_name = CHANNEL_MAP[channel_name]
     end
@@ -77,7 +77,7 @@ class Slack
   # @param use_channel_map [Boolean] Whether to look up channel_name in
   #   CHANNEL_MAP.
   # @return [Boolean] Whether the topic was successfully updated.
-  def self.update_topic(channel_name, new_topic, use_channel_map = false)
+  def self.update_topic(channel_name, new_topic, use_channel_map: false)
     if use_channel_map && (CHANNEL_MAP.include? channel_name.to_sym)
       channel_name = CHANNEL_MAP[channel_name]
     end
@@ -118,7 +118,7 @@ class Slack
   # @return [Boolean] Whether the text was posted to Slack successfully.
   # WARNING: This function mutates params.
   # NOTE: This function utilizes an incoming webhook, not the Slack token
-  def self.message(text, params={})
+  def self.message(text, params = {})
     return false unless CDO.slack_endpoint
     params[:channel] = "##{Slack::CHANNEL_MAP[params[:channel]] || params[:channel]}"
     slackified_text = slackify text

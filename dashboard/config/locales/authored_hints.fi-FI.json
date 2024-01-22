@@ -114,6 +114,10 @@
           "challenges": "**Vapaaehtoiset haasteet**\n\n-   Valitse eri kappale soitettavaksi.\n-   Siirrä tanssijasi uuteen paikkaan.\n-   Tee enemmän kuin yksi tanssija.",
           "validation": "**Kuinka ylitän tämän tason?**\n\n-   Varmista, että tanssija näkyy ruudulla.\n\n_Tämä taso päättyy 4 tahdin jälkeen._"
         },
+        "CourseD_Dance_2020_01_2023": {
+          "challenges": "**Vapaaehtoiset haasteet**\n\n-   Valitse eri kappale soitettavaksi.\n-   Siirrä tanssijasi uuteen paikkaan.\n-   Tee enemmän kuin yksi tanssija.",
+          "validation": "**Kuinka ylitän tämän tason?**\n\n-   Varmista, että tanssija näkyy ruudulla.\n\n_Tämä taso päättyy 4 tahdin jälkeen._"
+        },
         "CourseD_Dance_2020_02": {
           "challenges": "**Vapaaehtoinen haaste**\n\n-   Käytä enemmän kuin yksi <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> -blokki.",
           "validation": "**Kuinka ylitän tämän tason?**\n\n-   Tanssijan täytyy suorittaa liike.\n-   Sinun täytyy painaa nuolinäppäintä.\n\n_Tämä taso päättyy 4 tahdin jälkeen._"
@@ -123,6 +127,10 @@
           "validation": "**Kuinka ylitän tämän tason?**\n\n-   Tanssijan täytyy suorittaa liike.\n-   Sinun täytyy painaa nuolinäppäintä.\n\n_Tämä taso päättyy 4 tahdin jälkeen._"
         },
         "CourseD_Dance_2020_02_2021": {
+          "challenges": "**Vapaaehtoinen haaste**\n\n-   Käytä enemmän kuin yksi <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> -blokki.",
+          "validation": "**Kuinka ylitän tämän tason?**\n\n-   Tanssijan täytyy suorittaa liike.\n-   Sinun täytyy painaa nuolinäppäintä.\n\n_Tämä taso päättyy 4 tahdin jälkeen._"
+        },
+        "CourseD_Dance_2020_02_2023": {
           "challenges": "**Vapaaehtoinen haaste**\n\n-   Käytä enemmän kuin yksi <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> -blokki.",
           "validation": "**Kuinka ylitän tämän tason?**\n\n-   Tanssijan täytyy suorittaa liike.\n-   Sinun täytyy painaa nuolinäppäintä.\n\n_Tämä taso päättyy 4 tahdin jälkeen._"
         },
@@ -138,6 +146,10 @@
           "challenges": "**Vapaaehtoinen haaste**\n\n-   Tee tanssija vastaamaan vasen ja oikea nuolinäppäimiin.",
           "validation": "**Kuinka ylitän tämän tason?**\n\n-   Molempien tanssijoiden täytyy suorittaa liike.\n-   Sinun täytyy painaa nuolinäppäimiä.\n\n_Tämä taso päättyy 4 tahdin jälkeen._"
         },
+        "CourseD_Dance_2020_03_2023": {
+          "challenges": "**Vapaaehtoinen haaste**\n\n-   Tee tanssija vastaamaan vasen ja oikea nuolinäppäimiin.",
+          "validation": "**Kuinka ylitän tämän tason?**\n\n-   Molempien tanssijoiden täytyy suorittaa liike.\n-   Sinun täytyy painaa nuolinäppäimiä.\n\n_Tämä taso päättyy 4 tahdin jälkeen._"
+        },
         "CourseD_Dance_2020_04": {
           "validation": "**Kuinka ylitän tämän tason?**\n\n-   Tanssijan täytyy vaihtaa uuteen liikkeeseen 4 tahdin jälkeen.\n\n_Tämä taso päättyy 8 tahdin jälkeen._"
         },
@@ -145,6 +157,9 @@
           "validation": "**Kuinka ylitän tämän tason?**\n\n-   Tanssijan täytyy vaihtaa uuteen liikkeeseen 4 tahdin jälkeen.\n\n_Tämä taso päättyy 8 tahdin jälkeen._"
         },
         "CourseD_Dance_2020_04_2021": {
+          "validation": "**Kuinka ylitän tämän tason?**\n\n-   Tanssijan täytyy vaihtaa uuteen liikkeeseen 4 tahdin jälkeen.\n\n_Tämä taso päättyy 8 tahdin jälkeen._"
+        },
+        "CourseD_Dance_2020_04_2023": {
           "validation": "**Kuinka ylitän tämän tason?**\n\n-   Tanssijan täytyy vaihtaa uuteen liikkeeseen 4 tahdin jälkeen.\n\n_Tämä taso päättyy 8 tahdin jälkeen._"
         },
         "CourseD_Dance_2020_05": {
@@ -156,6 +171,10 @@
           "validation": "**Kuinka ylitän tämän tason?**\n\n-   Kuuden tahdin jälkeen, tanssijasi täytyy tanssia eri tanssia, kuin 4 tahtia sitten.\n\n_Tämä taso päättyy 12 tahdin jälkeen._"
         },
         "CourseD_Dance_2020_05_2021": {
+          "challenges": "**Vapaaehtoinen haaste**\n\n-   Muuta taustaa aina, kun tanssijat vaihtavat liikkeitä.",
+          "validation": "**Kuinka ylitän tämän tason?**\n\n-   Kuuden tahdin jälkeen, tanssijasi täytyy tanssia eri tanssia, kuin 4 tahtia sitten.\n\n_Tämä taso päättyy 12 tahdin jälkeen._"
+        },
+        "CourseD_Dance_2020_05_2023": {
           "challenges": "**Vapaaehtoinen haaste**\n\n-   Muuta taustaa aina, kun tanssijat vaihtavat liikkeitä.",
           "validation": "**Kuinka ylitän tämän tason?**\n\n-   Kuuden tahdin jälkeen, tanssijasi täytyy tanssia eri tanssia, kuin 4 tahtia sitten.\n\n_Tämä taso päättyy 12 tahdin jälkeen._"
         },
@@ -171,6 +190,10 @@
           "challenges": "**Vapaaehtoinen haaste**\n\n-   Luo useita taustatanssijoiden ryhmiä.",
           "validation": "**Kuinka ylitän tämän tason?**\n\n-   Luo yksi päätanssija ja taustatanssijoiden ryhmä.\n\n_Tämä taso päättyy 7 tahdin jälkeen._"
         },
+        "CourseD_Dance_2020_06_2023": {
+          "challenges": "**Vapaaehtoinen haaste**\n\n-   Luo useita taustatanssijoiden ryhmiä.",
+          "validation": "**Kuinka ylitän tämän tason?**\n\n-   Luo yksi päätanssija ja taustatanssijoiden ryhmä.\n\n_Tämä taso päättyy 7 tahdin jälkeen._"
+        },
         "CourseD_Dance_2020_07": {
           "challenges": "**Vapaaehtoinen haaste**\n\n-   Kokeile vaihtelemalla muita ominaisuuksia (leveys, pituus, kierto, yms.)",
           "validation": "**Kuinka ylitän tämän tason?**\n\n-   Muuta vähintään yhden tanssijan kokoa musiikin alkamisen jälkeen.\n\n_Tämä taso päättyy 6 tahdin jälkeen._"
@@ -183,6 +206,10 @@
           "challenges": "**Vapaaehtoinen haaste**\n\n-   Kokeile vaihtelemalla muita ominaisuuksia (leveys, pituus, kierto, yms.)",
           "validation": "**Kuinka ylitän tämän tason?**\n\n-   Muuta vähintään yhden tanssijan kokoa musiikin alkamisen jälkeen.\n\n_Tämä taso päättyy 6 tahdin jälkeen._"
         },
+        "CourseD_Dance_2020_07_2023": {
+          "challenges": "**Vapaaehtoinen haaste**\n\n-   Kokeile vaihtelemalla muita ominaisuuksia (leveys, pituus, kierto, yms.)",
+          "validation": "**Kuinka ylitän tämän tason?**\n\n-   Muuta vähintään yhden tanssijan kokoa musiikin alkamisen jälkeen.\n\n_Tämä taso päättyy 6 tahdin jälkeen._"
+        },
         "CourseD_Dance_2020_08": {
           "tint_hint": "Huomasitko, että tanssijat eivät muutu valitsemasi värin värisiksi? Tämä johtuu siitä, että **sävyt** sekoittavat valitsemasi värin tanssijan värien kanssa.",
           "validation": "**Kuinka ylitän tämän tason?**\n\n-   Muuta vähintään yhden tanssijan sävyä.\n\n_Tämä taso päättyy 6 tahdin jälkeen._"
@@ -192,6 +219,10 @@
           "validation": "**Kuinka ylitän tämän tason?**\n\n-   Muuta vähintään yhden tanssijan sävyä.\n\n_Tämä taso päättyy 6 tahdin jälkeen._"
         },
         "CourseD_Dance_2020_08_2021": {
+          "tint_hint": "Huomasitko, että tanssijat eivät muutu valitsemasi värin värisiksi? Tämä johtuu siitä, että **sävyt** sekoittavat valitsemasi värin tanssijan värien kanssa.",
+          "validation": "**Kuinka ylitän tämän tason?**\n\n-   Muuta vähintään yhden tanssijan sävyä.\n\n_Tämä taso päättyy 6 tahdin jälkeen._"
+        },
+        "CourseD_Dance_2020_08_2023": {
           "tint_hint": "Huomasitko, että tanssijat eivät muutu valitsemasi värin värisiksi? Tämä johtuu siitä, että **sävyt** sekoittavat valitsemasi värin tanssijan värien kanssa.",
           "validation": "**Kuinka ylitän tämän tason?**\n\n-   Muuta vähintään yhden tanssijan sävyä.\n\n_Tämä taso päättyy 6 tahdin jälkeen._"
         },
@@ -210,6 +241,11 @@
           "repeat_every_ideas": "**Tarvitsetko ideoita?**\n\n-   Voit toistuvasti muuttaa tanssijan kokoa niin, että se kasvaa.\n-   Voit toistuvasti muuttaa tanssijan kiertoa niin, että se pyörii.\n-   Voit toistuvasti muuttaa tanssijan vaaka- tai pystyasentoa niin, että se liikkuu näytössä.\n\n_Voit myös käyttää negatiivisia numeroita saadaksesi vastareaktion aikaan!_",
           "validation": "**Kuinka ylitän tämän tason?**\n\n-   Paina \"Valmis\"-painiketta!"
         },
+        "CourseD_Dance_2020_09_2023": {
+          "next_previous": "**Vapaaehtoinen haaste**\n\n-   Voit myös käydä läpi tanssiliikkeitä tämän uuden tapahtuman blokin avulla määrittämällä liikkeen asetukseen `(Satunnainen)`, `(Seuraava)`, tai `(Edellinen)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>",
+          "repeat_every_ideas": "**Tarvitsetko ideoita?**\n\n-   Voit toistuvasti muuttaa tanssijan kokoa niin, että se kasvaa.\n-   Voit toistuvasti muuttaa tanssijan kiertoa niin, että se pyörii.\n-   Voit toistuvasti muuttaa tanssijan vaaka- tai pystyasentoa niin, että se liikkuu näytössä.\n\n_Voit myös käyttää negatiivisia numeroita saadaksesi vastareaktion aikaan!_",
+          "validation": "**Kuinka ylitän tämän tason?**\n\n-   Paina \"Valmis\"-painiketta!"
+        },
         "CourseD_Dance_2020_bonus1": {
           "alternate": "Vaihtoehtoinen lohko on Tanssijat-luokassa."
         },
@@ -219,10 +255,19 @@
         "CourseD_Dance_2020_bonus1_2021": {
           "alternate": "Vaihtoehtoinen lohko on Tanssijat-luokassa."
         },
+        "CourseD_Dance_2020_bonus1_2023": {
+          "alternate": "Vaihtoehtoinen lohko on Tanssijat-luokassa."
+        },
         "CourseD_Dance_2022_lessonextra1": {
           "alternate": "Vaihtoehtoinen lohko on Tanssijat-luokassa."
         },
         "CourseD_Dance_2022_lessonextra10a": {
+          "alternate": "Vaihtoehtoinen lohko on Tanssijat-luokassa."
+        },
+        "CourseD_Dance_2022_lessonextra10a_2023": {
+          "alternate": "Vaihtoehtoinen lohko on Tanssijat-luokassa."
+        },
+        "CourseD_Dance_2022_lessonextra1_2023": {
           "alternate": "Vaihtoehtoinen lohko on Tanssijat-luokassa."
         },
         "CourseD_Dance_Party_01": {
@@ -274,6 +319,9 @@
         "CourseE_HOC 2018 Level_10_2021": {
           "voyage_aquatic_10a": "Katso **Merilyhdyt** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Kuinka käytät konditionaalia heidän kanssaan päästäksesi Ocean Monumentille?"
         },
+        "CourseE_HOC 2018 Level_10_2023": {
+          "voyage_aquatic_10a": "Katso **Merilyhdyt** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Kuinka käytät konditionaalia heidän kanssaan päästäksesi Ocean Monumentille?"
+        },
         "CourseE_HOC 2018 Level_7a": {
           "aquatic7": "Voit käyttää \"jos polku\" -komentoa apuna oikealle kääntymisessä."
         },
@@ -286,6 +334,9 @@
         "CourseE_HOC 2018 Level_7a_2021": {
           "aquatic7": "Voit käyttää \"jos polku\" -komentoa apuna oikealle kääntymisessä."
         },
+        "CourseE_HOC 2018 Level_7a_2023": {
+          "aquatic7": "Voit käyttää \"jos polku\" -komentoa apuna oikealle kääntymisessä."
+        },
         "CourseE_HOC 2018 Level_9b": {
           "voyage_aquatic_9a": "Miten kaunis koralliriutta! Sininen koralli on **oikea** tie. Varmista, että punainen koralli ei ole **vasemmalla**!"
         },
@@ -296,6 +347,9 @@
           "voyage_aquatic_9a": "Miten kaunis koralliriutta! Sininen koralli on **oikea** tie. Varmista, että punainen koralli ei ole **vasemmalla**!"
         },
         "CourseE_HOC 2018 Level_9b_2021": {
+          "voyage_aquatic_9a": "Miten kaunis koralliriutta! Sininen koralli on **oikea** tie. Varmista, että punainen koralli ei ole **vasemmalla**!"
+        },
+        "CourseE_HOC 2018 Level_9b_2023": {
           "voyage_aquatic_9a": "Miten kaunis koralliriutta! Sininen koralli on **oikea** tie. Varmista, että punainen koralli ei ole **vasemmalla**!"
         },
         "Dance_2019_01": {
@@ -397,6 +451,10 @@
           "Function_intro_Ryan_a": "Voit kutsua toimintoa ohjelmassasi monta kertaa! Kokeile tehtävän selvittämistä kutsumalla sitä kaksi kertaa.",
           "Function_intro_Ryan_b": "Tämä on reitti jota kuljet jos kutsut funktioita oikein..."
         },
+        "Function intro Ryan_2023": {
+          "Function_intro_Ryan_a": "Voit kutsua toimintoa ohjelmassasi monta kertaa! Kokeile tehtävän selvittämistä kutsumalla sitä kaksi kertaa.",
+          "Function_intro_Ryan_b": "Tämä on reitti jota kuljet jos kutsut funktioita oikein..."
+        },
         "HOC 2018 Level_10": {
           "voyage_aquatic_10a": "Katso **Merilyhdyt** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Kuinka käytät konditionaalia heidän kanssaan päästäksesi Ocean Monumentille?"
         },
@@ -434,6 +492,11 @@
           "MC_HOC_2017_01_RETRY_b": "Älä unohda napsauttaa Suorita, jotta Agentin koodi suoritetaan.",
           "MC_HOC_2017_01_RETRY_c": "Kun Agent on suorittanut koodinsa loppuun, voit liikuttaa pelaajaa nuolinäppäimillä!"
         },
+        "MC_HOC_2017_01_RETRY_2023": {
+          "MC_HOC_2017_01_RETRY_a": "Vie yksi \"siirry eteenpäin\" -lohko työkalupakista työtilaan ja napsauta se paikalleen\"suorittaessa\" -lohkon alle.",
+          "MC_HOC_2017_01_RETRY_b": "Älä unohda napsauttaa Suorita, jotta Agentin koodi suoritetaan.",
+          "MC_HOC_2017_01_RETRY_c": "Kun Agent on suorittanut koodinsa loppuun, voit liikuttaa pelaajaa nuolinäppäimillä!"
+        },
         "MC_HOC_2017_02_Cole": {
           "MC_HOC_2017_02_Cole_a": "Liikuta Agentia kaksi ruutua eteenpäin seisomaan painelaatalla. Tämä avaa pelaajalle oven.",
           "MC_HOC_2017_02_Cole_b": "Paina Suorita! \nVoit suorittaa koodisi, vaikka se ei olisi oikein. Suorita koodisi ja korjaa sitä yhä uudelleen, kunnes saat selville, mikä on pielessä.",
@@ -464,6 +527,12 @@
           "MC_HOC_2017_02_Cole_c": "Kun Agent on avannut oven, liikuta pelaaja kartalle nuolinäppäinten avulla!",
           "MC_HOC_2017_02_Cole_d": "Varmista että Agent seuraa kartalla näkyvää reittiä!"
         },
+        "MC_HOC_2017_02_Cole_2023": {
+          "MC_HOC_2017_02_Cole_a": "Liikuta Agentia kaksi ruutua eteenpäin seisomaan painelaatalla. Tämä avaa pelaajalle oven.",
+          "MC_HOC_2017_02_Cole_b": "Paina Suorita! \nVoit suorittaa koodisi, vaikka se ei olisi oikein. Suorita koodisi ja korjaa sitä yhä uudelleen, kunnes saat selville, mikä on pielessä.",
+          "MC_HOC_2017_02_Cole_c": "Kun Agent on avannut oven, liikuta pelaaja kartalle nuolinäppäinten avulla!",
+          "MC_HOC_2017_02_Cole_d": "Varmista että Agent seuraa kartalla näkyvää reittiä!"
+        },
         "MC_HOC_2017_03_Cole": {
           "MC_HOC_2017_03_Cole_a": "Kun saat Agentin painelaatalle, voit liikuttaa pelaajan kompassille nuolinäppäinten avulla!",
           "MC_HOC_2017_03_Cole_b": "Tuntuuko koodi hieman pitkältä? Kokeile toisto-silmukan käyttöä ja katso, osaatko tehdä siitä lyhyemmän!"
@@ -484,6 +553,10 @@
           "MC_HOC_2017_03_Cole_a": "Kun saat Agentin painelaatalle, voit liikuttaa pelaajan kompassille nuolinäppäinten avulla!",
           "MC_HOC_2017_03_Cole_b": "Tuntuuko koodi hieman pitkältä? Kokeile toisto-silmukan käyttöä ja katso, osaatko tehdä siitä lyhyemmän!"
         },
+        "MC_HOC_2017_03_Cole_2023": {
+          "MC_HOC_2017_03_Cole_a": "Kun saat Agentin painelaatalle, voit liikuttaa pelaajan kompassille nuolinäppäinten avulla!",
+          "MC_HOC_2017_03_Cole_b": "Tuntuuko koodi hieman pitkältä? Kokeile toisto-silmukan käyttöä ja katso, osaatko tehdä siitä lyhyemmän!"
+        },
         "MC_HOC_2017_04POINT5_RYAN": {
           "MC_HOC_2017_04POINT5_RYAN_a": "Agentin on päästävä vain ensimmäiselle painelaatalle, jotta Alex tai Steve pääsee kirveen luokse.",
           "MC_HOC_2017_04POINT5_RYAN_b": "Muuta Agentin suuntaa käyttämällä \"käänny oikeaan\" -lohkoa. "
@@ -501,6 +574,10 @@
           "MC_HOC_2017_04POINT5_RYAN_b": "Muuta Agentin suuntaa käyttämällä \"käänny oikeaan\" -lohkoa. "
         },
         "MC_HOC_2017_04POINT5_RYAN_2021": {
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agentin on päästävä vain ensimmäiselle painelaatalle, jotta Alex tai Steve pääsee kirveen luokse.",
+          "MC_HOC_2017_04POINT5_RYAN_b": "Muuta Agentin suuntaa käyttämällä \"käänny oikeaan\" -lohkoa. "
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2023": {
           "MC_HOC_2017_04POINT5_RYAN_a": "Agentin on päästävä vain ensimmäiselle painelaatalle, jotta Alex tai Steve pääsee kirveen luokse.",
           "MC_HOC_2017_04POINT5_RYAN_b": "Muuta Agentin suuntaa käyttämällä \"käänny oikeaan\" -lohkoa. "
         },
@@ -529,6 +606,11 @@
           "MC_HOC_2017_04_Cole_b": "Kun Agent on painelaatalla, hän avaa oven pelaajalle.",
           "MC_HOC_2017_04_Cole_c": "Paina Suorita! \nVoit suorittaa koodisi, vaikka se ei olisi oikein. Suorita koodisi ja korjaa sitä yhä uudelleen, kunnes saat selville, mikä on pielessä."
         },
+        "MC_HOC_2017_04_Cole_2023": {
+          "MC_HOC_2017_04_Cole_a": "Agentin on saatava \"siirry eteenpäin\" -komento 7 kertaa. Miten voit käyttää toisto-silmukkaa siihen?",
+          "MC_HOC_2017_04_Cole_b": "Kun Agent on painelaatalla, hän avaa oven pelaajalle.",
+          "MC_HOC_2017_04_Cole_c": "Paina Suorita! \nVoit suorittaa koodisi, vaikka se ei olisi oikein. Suorita koodisi ja korjaa sitä yhä uudelleen, kunnes saat selville, mikä on pielessä."
+        },
         "MC_HOC_2017_05_Cole": {
           "MC_HOC_2017_05_Cole_a": "Tiesitkö, että voit laittaa silmukkaan enemmän kuin yhden koodijonon? Kokeile laudan asettamista **ja** eteenpäin liikkumista toisto-silmukassa tämän tehtävän suorittamiseksi.",
           "MC_HOC_2017_05_Cole_b": "Ohjaa Agent joen yli ja käske sen rakentaa silta kulkiessaan."
@@ -549,6 +631,10 @@
           "MC_HOC_2017_05_Cole_a": "Tiesitkö, että voit laittaa silmukkaan enemmän kuin yhden koodijonon? Kokeile laudan asettamista **ja** eteenpäin liikkumista toisto-silmukassa tämän tehtävän suorittamiseksi.",
           "MC_HOC_2017_05_Cole_b": "Ohjaa Agent joen yli ja käske sen rakentaa silta kulkiessaan."
         },
+        "MC_HOC_2017_05_Cole_2023": {
+          "MC_HOC_2017_05_Cole_a": "Tiesitkö, että voit laittaa silmukkaan enemmän kuin yhden koodijonon? Kokeile laudan asettamista **ja** eteenpäin liikkumista toisto-silmukassa tämän tehtävän suorittamiseksi.",
+          "MC_HOC_2017_05_Cole_b": "Ohjaa Agent joen yli ja käske sen rakentaa silta kulkiessaan."
+        },
         "MC_HOC_2017_06_Cole": {
           "MC_HOC_2017_06_Cole_a": "Kuinka monta kertaa silmukka suoritetaan? Kuinka monta kertaa se _pitäisi_ suorittaa?",
           "MC_HOC_2017_06_Cole_b": "Auta Agent rakentamaan silta koko matkan veden toiselle puolelle!"
@@ -566,6 +652,10 @@
           "MC_HOC_2017_06_Cole_b": "Auta Agent rakentamaan silta koko matkan veden toiselle puolelle!"
         },
         "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_a": "Kuinka monta kertaa silmukka suoritetaan? Kuinka monta kertaa se _pitäisi_ suorittaa?",
+          "MC_HOC_2017_06_Cole_b": "Auta Agent rakentamaan silta koko matkan veden toiselle puolelle!"
+        },
+        "MC_HOC_2017_06_Cole_2023": {
           "MC_HOC_2017_06_Cole_a": "Kuinka monta kertaa silmukka suoritetaan? Kuinka monta kertaa se _pitäisi_ suorittaa?",
           "MC_HOC_2017_06_Cole_b": "Auta Agent rakentamaan silta koko matkan veden toiselle puolelle!"
         },
@@ -594,6 +684,11 @@
           "MC_HOC_2017_07_Cole_b": "Kokeile toimintolohkojen sekoittamista muiden työkalupakin lohkojen kanssa, jotta pääset eteenpäin tämän tehtävän ratkaisemisessa.",
           "MC_HOC_2017_07_Cole_c": "Sinun pitää vain saada Agent raivaamaan reitti kaivosvaunulle."
         },
+        "MC_HOC_2017_07_Cole_2023": {
+          "MC_HOC_2017_07_Cole_a": "Ratkaise tämä tehtävä ottamalla selville, mitä raivaa polku -toiminto tekee ja kutsu sitä riittävän monta kertaa työkalupakin pienen vihreän raivaa polku -lohkon avulla.",
+          "MC_HOC_2017_07_Cole_b": "Kokeile toimintolohkojen sekoittamista muiden työkalupakin lohkojen kanssa, jotta pääset eteenpäin tämän tehtävän ratkaisemisessa.",
+          "MC_HOC_2017_07_Cole_c": "Sinun pitää vain saada Agent raivaamaan reitti kaivosvaunulle."
+        },
         "MC_HOC_2017_10_RETRY": {
           "MC_HOC_2017_10_Cole_a": "Käytä toimintoja helpottamaan tämän tehtävän ratkaisemista!",
           "MC_HOC_2017_10_Cole_b": "Etkö löydä oikeaa reittiä? Yritä etsiä kartalta pisteviiva!"
@@ -611,6 +706,10 @@
           "MC_HOC_2017_10_Cole_b": "Etkö löydä oikeaa reittiä? Yritä etsiä kartalta pisteviiva!"
         },
         "MC_HOC_2017_10_RETRY_2021": {
+          "MC_HOC_2017_10_Cole_a": "Käytä toimintoja helpottamaan tämän tehtävän ratkaisemista!",
+          "MC_HOC_2017_10_Cole_b": "Etkö löydä oikeaa reittiä? Yritä etsiä kartalta pisteviiva!"
+        },
+        "MC_HOC_2017_10_RETRY_2023": {
           "MC_HOC_2017_10_Cole_a": "Käytä toimintoja helpottamaan tämän tehtävän ratkaisemista!",
           "MC_HOC_2017_10_Cole_b": "Etkö löydä oikeaa reittiä? Yritä etsiä kartalta pisteviiva!"
         },
@@ -639,6 +738,11 @@
           "MC_HOC_2017_08_RY_b": "Tämän tehtävän ratkaisemiseen on todella MONTA tapaa. Kokeile niistä muutamia!",
           "MC_HOC_2017_08_RY_c": "Kokeile seurata pisteviivaa löytääksesi helpon reitin laavan läpi."
         },
+        "MC_HOC_2017_Ali_2023": {
+          "MC_HOC_2017_08_RY_a": "Paina Suorita! \nVoit suorittaa koodisi, vaikka se ei olisi oikein. Suorita koodisi ja korjaa sitä yhä uudelleen, kunnes saat selville, mikä on pielessä.",
+          "MC_HOC_2017_08_RY_b": "Tämän tehtävän ratkaisemiseen on todella MONTA tapaa. Kokeile niistä muutamia!",
+          "MC_HOC_2017_08_RY_c": "Kokeile seurata pisteviivaa löytääksesi helpon reitin laavan läpi."
+        },
         "MC_HOC_2017_FP20x20": {
           "MC_HOC_2017_13_Cole_a": "Kokeile laittaa Agent rakentamaan siltoja, jotta Alex tai Steve voi tehdä tutkimusmatkoja kartan reunojen ulkopuolelle."
         },
@@ -652,6 +756,9 @@
           "MC_HOC_2017_13_Cole_a": "Kokeile laittaa Agent rakentamaan siltoja, jotta Alex tai Steve voi tehdä tutkimusmatkoja kartan reunojen ulkopuolelle."
         },
         "MC_HOC_2017_FP20x20_2021": {
+          "MC_HOC_2017_13_Cole_a": "Kokeile laittaa Agent rakentamaan siltoja, jotta Alex tai Steve voi tehdä tutkimusmatkoja kartan reunojen ulkopuolelle."
+        },
+        "MC_HOC_2017_FP20x20_2023": {
           "MC_HOC_2017_13_Cole_a": "Kokeile laittaa Agent rakentamaan siltoja, jotta Alex tai Steve voi tehdä tutkimusmatkoja kartan reunojen ulkopuolelle."
         },
         "New Minecraft Hero Project": {
@@ -682,6 +789,11 @@
           "mc_8_b": "Käytä \"toista\" -silmukkaa tehdäksesi koodistasi yksinkertaisempaa.",
           "mc_8_c": "Tavoitteesi on päästä ruudun yläreunassa olevan talon oviaukolle."
         },
+        "Overworld Avoid Monsters_2023": {
+          "mc_8_a": "Voit valita muutaman eri reitin välillä. Mikä niistä on lyhin?",
+          "mc_8_b": "Käytä \"toista\" -silmukkaa tehdäksesi koodistasi yksinkertaisempaa.",
+          "mc_8_c": "Tavoitteesi on päästä ruudun yläreunassa olevan talon oviaukolle."
+        },
         "Overworld Chop Tree": {
           "mc_2_a": "Sinun pitää käyttää \"siirry eteepäin\" -komentoa kahdesti päästäksesi puun eteen.",
           "mc_2_b": "Käytä \"tuhoa kuutio\" -komentoa kaataaksesi edessäsi olevan puun."
@@ -702,6 +814,10 @@
           "mc_2_a": "Sinun pitää käyttää \"siirry eteepäin\" -komentoa kahdesti päästäksesi puun eteen.",
           "mc_2_b": "Käytä \"tuhoa kuutio\" -komentoa kaataaksesi edessäsi olevan puun."
         },
+        "Overworld Chop Tree_2023": {
+          "mc_2_a": "Sinun pitää käyttää \"siirry eteepäin\" -komentoa kahdesti päästäksesi puun eteen.",
+          "mc_2_b": "Käytä \"tuhoa kuutio\" -komentoa kaataaksesi edessäsi olevan puun."
+        },
         "Overworld Chop Trees": {
           "mc_4_a": "Voit kaataa puut missä järjestyksessä tahansa. Mikä reitti tarvitsee vähiten komentoja?",
           "mc_4_b": "Käytä \"tuhoa kuutio\" -komentoa kaataaksesi edessäsi olevan puun."
@@ -719,6 +835,10 @@
           "mc_4_b": "Käytä \"tuhoa kuutio\" -komentoa kaataaksesi edessäsi olevan puun."
         },
         "Overworld Chop Trees_2021": {
+          "mc_4_a": "Voit kaataa puut missä järjestyksessä tahansa. Mikä reitti tarvitsee vähiten komentoja?",
+          "mc_4_b": "Käytä \"tuhoa kuutio\" -komentoa kaataaksesi edessäsi olevan puun."
+        },
+        "Overworld Chop Trees_2023": {
           "mc_4_a": "Voit kaataa puut missä järjestyksessä tahansa. Mikä reitti tarvitsee vähiten komentoja?",
           "mc_4_b": "Käytä \"tuhoa kuutio\" -komentoa kaataaksesi edessäsi olevan puun."
         },
@@ -747,6 +867,11 @@
           "mc_6_b": "Virheiden tekemistä ei tarvitse pelätä! Suorita koodi nähdäksesi mitä tapahtuu vaikka et olisikaan vielä ratkaissut koko tehtävää.",
           "mc_6_c": "Voit laittaa useita komentoja \"toista\" -silmukan sisälle."
         },
+        "Overworld House Frame Chosen_2023": {
+          "mc_6_a": "Klikkaa \"aseta\" -komennon nuolta valitaksesi mitä haluat asettaa.",
+          "mc_6_b": "Virheiden tekemistä ei tarvitse pelätä! Suorita koodi nähdäksesi mitä tapahtuu vaikka et olisikaan vielä ratkaissut koko tehtävää.",
+          "mc_6_c": "Voit laittaa useita komentoja \"toista\" -silmukan sisälle."
+        },
         "Overworld Move to Sheep": {
           "mc_1_a": "\"siirry eteenpäin\" -komento on työkalupakin ylimmäisenä.",
           "mc_1_b": "Varmista että molemmat \"siirry eteenpäin\" -komennot ovat napsautettu kiinni \"suorittaessa\" -komentoon."
@@ -764,6 +889,10 @@
           "mc_1_b": "Varmista että molemmat \"siirry eteenpäin\" -komennot ovat napsautettu kiinni \"suorittaessa\" -komentoon."
         },
         "Overworld Move to Sheep_2021": {
+          "mc_1_a": "\"siirry eteenpäin\" -komento on työkalupakin ylimmäisenä.",
+          "mc_1_b": "Varmista että molemmat \"siirry eteenpäin\" -komennot ovat napsautettu kiinni \"suorittaessa\" -komentoon."
+        },
+        "Overworld Move to Sheep_2023": {
           "mc_1_a": "\"siirry eteenpäin\" -komento on työkalupakin ylimmäisenä.",
           "mc_1_b": "Varmista että molemmat \"siirry eteenpäin\" -komennot ovat napsautettu kiinni \"suorittaessa\" -komentoon."
         },
@@ -788,6 +917,11 @@
           "mc_5_c": "Virheiden tekemistä ei tarvitse pelätä! Suorita koodi nähdäksesi mitä tapahtuu vaikka et olisikaan vielä ratkaissut koko tehtävää."
         },
         "Overworld Place Wall_2021": {
+          "mc_5_a": "Käytä ensiksi \"aseta\" -komentoa ja sitten \"siirry eteenpäin\" -komentoa.",
+          "mc_5_b": "Tarkista että molemmat komennot ovat \"toista\" -silmukan sisällä jotta koodi suoritetaan useammin kuin kerran.",
+          "mc_5_c": "Virheiden tekemistä ei tarvitse pelätä! Suorita koodi nähdäksesi mitä tapahtuu vaikka et olisikaan vielä ratkaissut koko tehtävää."
+        },
+        "Overworld Place Wall_2023": {
           "mc_5_a": "Käytä ensiksi \"aseta\" -komentoa ja sitten \"siirry eteenpäin\" -komentoa.",
           "mc_5_b": "Tarkista että molemmat komennot ovat \"toista\" -silmukan sisällä jotta koodi suoritetaan useammin kuin kerran.",
           "mc_5_c": "Virheiden tekemistä ei tarvitse pelätä! Suorita koodi nähdäksesi mitä tapahtuu vaikka et olisikaan vielä ratkaissut koko tehtävää."
@@ -817,6 +951,11 @@
           "mc_7_b": "Viljaa pitää istuttaa molempiin veden äärellä oleviin tumman ruskean maan kaistaleisiin.",
           "mc_7_c": "Voit laittaa useita komentoja \"toista\" -silmukan sisälle."
         },
+        "Overworld Plant Crops_2023": {
+          "mc_7_a": "Käytä \"istuta viljaa\" -komentoa kylvääksesi viljaa siihen kohtaan missä seisot nyt.",
+          "mc_7_b": "Viljaa pitää istuttaa molempiin veden äärellä oleviin tumman ruskean maan kaistaleisiin.",
+          "mc_7_c": "Voit laittaa useita komentoja \"toista\" -silmukan sisälle."
+        },
         "Overworld Powered Minecart": {
           "mc_13_a": "Käytä \"aseta raide\"-komentoa asettaaksesi raiteen siihen ruutuun jossa nyt seisot.",
           "mc_13_b": "Käytä \"toista\" silmukkaa tehdäksesi koodistasi lyhyemmän."
@@ -834,6 +973,10 @@
           "mc_13_b": "Käytä \"toista\" silmukkaa tehdäksesi koodistasi lyhyemmän."
         },
         "Overworld Powered Minecart_2021": {
+          "mc_13_a": "Käytä \"aseta raide\"-komentoa asettaaksesi raiteen siihen ruutuun jossa nyt seisot.",
+          "mc_13_b": "Käytä \"toista\" silmukkaa tehdäksesi koodistasi lyhyemmän."
+        },
+        "Overworld Powered Minecart_2023": {
           "mc_13_a": "Käytä \"aseta raide\"-komentoa asettaaksesi raiteen siihen ruutuun jossa nyt seisot.",
           "mc_13_b": "Käytä \"toista\" silmukkaa tehdäksesi koodistasi lyhyemmän."
         },
@@ -862,6 +1005,11 @@
           "mc_3_b": "Käytä \"käänny\" -komentoa katsoaksesi eri suuntaan.",
           "mc_3_c": "Virheiden tekemistä ei tarvitse pelätä! Suorita koodi nähdäksesi mitä tapahtuu vaikka et olisikaan vielä ratkaissut koko tehtävää."
         },
+        "Overworld Shear Sheep_2023": {
+          "mc_3_a": "\"keritse\" -komento keritsee edessäsi olevaan lampaan. Katsotko varmasti lampaaseen päin?",
+          "mc_3_b": "Käytä \"käänny\" -komentoa katsoaksesi eri suuntaan.",
+          "mc_3_c": "Virheiden tekemistä ei tarvitse pelätä! Suorita koodi nähdäksesi mitä tapahtuu vaikka et olisikaan vielä ratkaissut koko tehtävää."
+        },
         "Underground Avoiding Lava": {
           "mc_11_a": "Kaikki koodi on valmiina laavan havaitsemiseen ja siihen reagoimiseen. Sinun pitää vain lisätä lohko liikkuaksesi.",
           "mc_11_b": "Kuuluisiko sinun \"siirry eteenpäin\" -komennon mennä \"jos\" -komennon sisälle vai sen jälkeen?"
@@ -879,6 +1027,10 @@
           "mc_11_b": "Kuuluisiko sinun \"siirry eteenpäin\" -komennon mennä \"jos\" -komennon sisälle vai sen jälkeen?"
         },
         "Underground Avoiding Lava_2021": {
+          "mc_11_a": "Kaikki koodi on valmiina laavan havaitsemiseen ja siihen reagoimiseen. Sinun pitää vain lisätä lohko liikkuaksesi.",
+          "mc_11_b": "Kuuluisiko sinun \"siirry eteenpäin\" -komennon mennä \"jos\" -komennon sisälle vai sen jälkeen?"
+        },
+        "Underground Avoiding Lava_2023": {
           "mc_11_a": "Kaikki koodi on valmiina laavan havaitsemiseen ja siihen reagoimiseen. Sinun pitää vain lisätä lohko liikkuaksesi.",
           "mc_11_b": "Kuuluisiko sinun \"siirry eteenpäin\" -komennon mennä \"jos\" -komennon sisälle vai sen jälkeen?"
         },
@@ -903,6 +1055,11 @@
           "mc_12_c": "Käytä \"jos\"-komentoa tarkistaaksesi onko edessä laavaa ja aseta sitten mukulakivi."
         },
         "Underground If Statements_2021": {
+          "mc_12_a": "Löydät Punakiveä kohdista joissa on punaisia pilkkuja.",
+          "mc_12_b": "Voitko käyttää \"toista\" -silmukkaa tehdäksesi koodistasi lyhyemmän?",
+          "mc_12_c": "Käytä \"jos\"-komentoa tarkistaaksesi onko edessä laavaa ja aseta sitten mukulakivi."
+        },
+        "Underground If Statements_2023": {
           "mc_12_a": "Löydät Punakiveä kohdista joissa on punaisia pilkkuja.",
           "mc_12_b": "Voitko käyttää \"toista\" -silmukkaa tehdäksesi koodistasi lyhyemmän?",
           "mc_12_c": "Käytä \"jos\"-komentoa tarkistaaksesi onko edessä laavaa ja aseta sitten mukulakivi."
@@ -932,6 +1089,11 @@
           "mc_10_b": "Käytä \"aseta mukulakivi eteen\" -komentoa kun seisot laavan reunalla tehdäksesi turvallisen reitin. Sitten voit kävellä laavan yli!",
           "mc_10_c": "Virheiden tekemistä ei tarvitse pelätä! Suorita koodi nähdäksesi mitä tapahtuu vaikka et olisikaan vielä ratkaissut koko tehtävää."
         },
+        "Underground Iron_2023": {
+          "mc_10_a": "Pilkukkaat kohdat soihdun takana ovat rautakuutioita. Miten sinä pääset sinne?",
+          "mc_10_b": "Käytä \"aseta mukulakivi eteen\" -komentoa kun seisot laavan reunalla tehdäksesi turvallisen reitin. Sitten voit kävellä laavan yli!",
+          "mc_10_c": "Virheiden tekemistä ei tarvitse pelätä! Suorita koodi nähdäksesi mitä tapahtuu vaikka et olisikaan vielä ratkaissut koko tehtävää."
+        },
         "Underground Mining Coal": {
           "mc_9_a": "Katsotko oikeaan suuntaan? \"tuhoa kuutio\" -komento louhii edessäsi olevan kuution.",
           "mc_9_b": "Seinässä olevat mustat pilkut ovat hiiltä! Käytä \"tuhoa kuutio\" -komentoa näihin louhiaksesi hiiltä.",
@@ -957,10 +1119,18 @@
           "mc_9_b": "Seinässä olevat mustat pilkut ovat hiiltä! Käytä \"tuhoa kuutio\" -komentoa näihin louhiaksesi hiiltä.",
           "mc_9_c": "Käytä \"aseta soihtu\" -komentoa asettaaksesi soihdun siihen kohtaan jossa nyt seisot."
         },
+        "Underground Mining Coal_2023": {
+          "mc_9_a": "Katsotko oikeaan suuntaan? \"tuhoa kuutio\" -komento louhii edessäsi olevan kuution.",
+          "mc_9_b": "Seinässä olevat mustat pilkut ovat hiiltä! Käytä \"tuhoa kuutio\" -komentoa näihin louhiaksesi hiiltä.",
+          "mc_9_c": "Käytä \"aseta soihtu\" -komentoa asettaaksesi soihdun siihen kohtaan jossa nyt seisot."
+        },
         "courseB_starWars_prog9": {
           "courseB_starWars_prog9_a": "Virheiden tekemistä ei tarvitse pelätä! Suorita koodi nähdäksesi mitä tapahtuu vaikka et olisikaan vielä ratkaissut koko tehtävää."
         },
         "courseB_starWars_prog92022": {
+          "courseB_starWars_prog9_a": "Virheiden tekemistä ei tarvitse pelätä! Suorita koodi nähdäksesi mitä tapahtuu vaikka et olisikaan vielä ratkaissut koko tehtävää."
+        },
+        "courseB_starWars_prog92022_2023": {
           "courseB_starWars_prog9_a": "Virheiden tekemistä ei tarvitse pelätä! Suorita koodi nähdäksesi mitä tapahtuu vaikka et olisikaan vielä ratkaissut koko tehtävää."
         },
         "courseB_starWars_prog9_2018": {
@@ -996,6 +1166,9 @@
         "courseC_starWars_loops10_2021": {
           "courseC_starWars_loops10_c": "Virheiden tekemistä ei tarvitse pelätä! Suorita koodi nähdäksesi mitä tapahtuu vaikka et olisikaan vielä ratkaissut koko tehtävää."
         },
+        "courseC_starWars_loops10_2023": {
+          "courseC_starWars_loops10_c": "Virheiden tekemistä ei tarvitse pelätä! Suorita koodi nähdäksesi mitä tapahtuu vaikka et olisikaan vielä ratkaissut koko tehtävää."
+        },
         "courseC_starWars_loops12022": {
           "courseC_starWars_loops1_b": "Virheiden tekemistä ei tarvitse pelätä! Suorita koodi nähdäksesi mitä tapahtuu vaikka et olisikaan vielä ratkaissut koko tehtävää."
         },
@@ -1009,6 +1182,9 @@
           "courseC_starWars_loops1_b": "Virheiden tekemistä ei tarvitse pelätä! Suorita koodi nähdäksesi mitä tapahtuu vaikka et olisikaan vielä ratkaissut koko tehtävää."
         },
         "courseC_starWars_loops1_2021": {
+          "courseC_starWars_loops1_b": "Virheiden tekemistä ei tarvitse pelätä! Suorita koodi nähdäksesi mitä tapahtuu vaikka et olisikaan vielä ratkaissut koko tehtävää."
+        },
+        "courseC_starWars_loops1_2023": {
           "courseC_starWars_loops1_b": "Virheiden tekemistä ei tarvitse pelätä! Suorita koodi nähdäksesi mitä tapahtuu vaikka et olisikaan vielä ratkaissut koko tehtävää."
         },
         "courseC_starWars_loops7": {
@@ -1027,6 +1203,9 @@
           "courseC_starWars_loops7_c": "Virheiden tekemistä ei tarvitse pelätä! Suorita koodi nähdäksesi mitä tapahtuu vaikka et olisikaan vielä ratkaissut koko tehtävää."
         },
         "courseC_starWars_loops7_2021": {
+          "courseC_starWars_loops7_c": "Virheiden tekemistä ei tarvitse pelätä! Suorita koodi nähdäksesi mitä tapahtuu vaikka et olisikaan vielä ratkaissut koko tehtävää."
+        },
+        "courseC_starWars_loops7_2023": {
           "courseC_starWars_loops7_c": "Virheiden tekemistä ei tarvitse pelätä! Suorita koodi nähdäksesi mitä tapahtuu vaikka et olisikaan vielä ratkaissut koko tehtävää."
         },
         "courseC_starWars_loops7_copy": {
@@ -1051,6 +1230,9 @@
           "courseD_artist_nestedLoops3_a": "Käytä `hyppää eteenpäin` lohkoa siirtyäksesi neliön päältä paikkaan, josta aloitat seuraavan neliön.\n\nJos neliöt ovat 20 pikseliä leveitä ja 20 pikselin etäisyydellä toisistaan, kuinka monta pikseliä pitää hypätä?"
         },
         "courseD_artist_nestedLoops3_2021": {
+          "courseD_artist_nestedLoops3_a": "Käytä `hyppää eteenpäin` lohkoa siirtyäksesi neliön päältä paikkaan, josta aloitat seuraavan neliön.\n\nJos neliöt ovat 20 pikseliä leveitä ja 20 pikselin etäisyydellä toisistaan, kuinka monta pikseliä pitää hypätä?"
+        },
+        "courseD_artist_nestedLoops3_2023": {
           "courseD_artist_nestedLoops3_a": "Käytä `hyppää eteenpäin` lohkoa siirtyäksesi neliön päältä paikkaan, josta aloitat seuraavan neliön.\n\nJos neliöt ovat 20 pikseliä leveitä ja 20 pikselin etäisyydellä toisistaan, kuinka monta pikseliä pitää hypätä?"
         },
         "courseE_artist_functions1": {
@@ -1081,6 +1263,9 @@
           "courseD_artist_functions2_a": "Sinun ohjelma olisi: \n\n-   Käytä funktiota \n-   Siirrä eteenpäin 100 + 75 kuvapistettä\n-   Käytä funktiota"
         },
         "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_a": "Sinun ohjelma olisi: \n\n-   Käytä funktiota \n-   Siirrä eteenpäin 100 + 75 kuvapistettä\n-   Käytä funktiota"
+        },
+        "courseE_artist_functions2_2023": {
           "courseD_artist_functions2_a": "Sinun ohjelma olisi: \n\n-   Käytä funktiota \n-   Siirrä eteenpäin 100 + 75 kuvapistettä\n-   Käytä funktiota"
         },
         "courseE_artist_functions2_copy": {

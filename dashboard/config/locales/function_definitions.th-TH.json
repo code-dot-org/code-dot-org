@@ -340,6 +340,11 @@
             "name": "ฟังก์ชันของฉัน"
           }
         },
+        "Course E: Artist Project_examples_2023": {
+          "my function": {
+            "name": "ฟังก์ชันของฉัน"
+          }
+        },
         "Course E: Frozen Project_examples2022": {
           "LOGIC FLOWER": {
             "name": "ตรรกะดอกไม้"
@@ -404,6 +409,69 @@
           }
         },
         "Course E: Frozen Project_examples_2021": {
+          "LOGIC FLOWER": {
+            "name": "ตรรกะดอกไม้"
+          },
+          "LOGIC FLOWERS": {
+            "name": "ตรรกะดอกไม้"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "ตรรกะดอกไม้2"
+          },
+          "draw a circle": {
+            "description": "วาดรูปวงกลมโดยมีรัศมีตามที่กำหนดไว้",
+            "name": "วาดวงกลม",
+            "parameters": {
+              "radius": "รัศมี"
+            }
+          },
+          "draw a house": {
+            "name": "วาดรูปบ้าน",
+            "parameters": {
+              "length": "ความยาว"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "วาดรูปกังหันลม",
+            "parameters": {
+              "length": "ความยาว",
+              "repeat": "ทำซ้ำ",
+              "sides": "ด้านข้าง"
+            }
+          },
+          "draw a shape": {
+            "name": "วาดรูปทรง",
+            "parameters": {
+              "length": "ความยาว",
+              "sides": "ด้านข้าง"
+            }
+          },
+          "draw a square": {
+            "name": "วาดสี่เหลี่ยมจตุรัส",
+            "parameters": {
+              "length": "ความยาว",
+              "sides": "ด้านข้าง"
+            }
+          },
+          "draw a star": {
+            "description": "วาดรูปดาวด้วยจุดที่ให้และด้านที่มีความยาวที่กำหนดไว้",
+            "name": "วาดรูปดวงดาว",
+            "parameters": {
+              "length": "ความยาว",
+              "points": "คะแนน"
+            }
+          },
+          "draw a triangle": {
+            "name": "วาดสามเหลี่ยม",
+            "parameters": {
+              "length": "ความยาว"
+            }
+          },
+          "small flower": {
+            "name": "ดอกไม้ดอกเล็ก"
+          }
+        },
+        "Course E: Frozen Project_examples_2023": {
           "LOGIC FLOWER": {
             "name": "ตรรกะดอกไม้"
           },
@@ -671,6 +739,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "description": "วาดรูปวงกลมโดยมีรัศมีตามที่กำหนดไว้",
+            "name": "วาดวงกลม",
+            "parameters": {
+              "radius": "รัศมี"
+            }
+          },
+          "draw a house": {
+            "name": "วาดรูปบ้าน",
+            "parameters": {
+              "length": "ความยาว"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "วาดรูปกังหันลม",
+            "parameters": {
+              "length": "ความยาว",
+              "repeat": "ทำซ้ำ",
+              "sides": "ด้านข้าง"
+            }
+          },
+          "draw a shape": {
+            "name": "วาดรูปทรง",
+            "parameters": {
+              "length": "ความยาว",
+              "sides": "ด้านข้าง"
+            }
+          },
+          "draw a square": {
+            "name": "วาดสี่เหลี่ยมจตุรัส",
+            "parameters": {
+              "length": "ความยาว"
+            }
+          },
+          "draw a star": {
+            "description": "วาดรูปดาวด้วยจุดที่ให้และด้านที่มีความยาวที่กำหนดไว้",
+            "name": "วาดรูปดวงดาว",
+            "parameters": {
+              "length": "ความยาว",
+              "points": "คะแนน"
+            }
+          },
+          "draw a triangle": {
+            "name": "วาดสามเหลี่ยม",
+            "parameters": {
+              "length": "ความยาว"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "description": "วาดรูปวงกลมโดยมีรัศมีตามที่กำหนดไว้",
@@ -771,6 +889,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_example2021_2023": {
+          "draw a circle": {
+            "description": "วาดรูปวงกลมโดยมีรัศมีตามที่กำหนดไว้",
+            "name": "วาดวงกลม",
+            "parameters": {
+              "radius": "รัศมี"
+            }
+          },
+          "draw a house": {
+            "name": "วาดรูปบ้าน",
+            "parameters": {
+              "length": "ความยาว"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "วาดรูปกังหันลม",
+            "parameters": {
+              "length": "ความยาว",
+              "repeat": "ทำซ้ำ",
+              "sides": "ด้านข้าง"
+            }
+          },
+          "draw a shape": {
+            "name": "วาดรูปทรง",
+            "parameters": {
+              "length": "ความยาว",
+              "sides": "ด้านข้าง"
+            }
+          },
+          "draw a square": {
+            "name": "วาดสี่เหลี่ยมจตุรัส",
+            "parameters": {
+              "length": "ความยาว"
+            }
+          },
+          "draw a star": {
+            "description": "วาดรูปดาวด้วยจุดที่ให้และด้านที่มีความยาวที่กำหนดไว้",
+            "name": "วาดรูปดวงดาว",
+            "parameters": {
+              "length": "ความยาว",
+              "points": "คะแนน"
+            }
+          },
+          "draw a triangle": {
+            "name": "วาดสามเหลี่ยม",
+            "parameters": {
+              "length": "ความยาว"
+            }
+          }
+        },
         "CourseF_app_computer": {
           "reset game": {
             "name": "รีเซ็ตเกม"
@@ -782,6 +950,11 @@
           }
         },
         "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": "รีเซ็ตเกม"
+          }
+        },
+        "CourseF_app_computer_2023": {
           "reset game": {
             "name": "รีเซ็ตเกม"
           }
@@ -819,6 +992,11 @@
           }
         },
         "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "สร้างสะพาน"
+          }
+        },
+        "Function intro Ryan_2023": {
           "build bridge": {
             "name": "สร้างสะพาน"
           }
@@ -931,6 +1109,11 @@
             "name": "เคลียร์เส้นทาง"
           }
         },
+        "MC_HOC_2017_07_Cole_2023": {
+          "clear path": {
+            "name": "เคลียร์เส้นทาง"
+          }
+        },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
             "name": "ซ่อมทางระยะยาว"
@@ -964,6 +1147,14 @@
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "ซ่อมทางระยะยาว"
+          },
+          "fix short path": {
+            "name": "ซ่อมทางระยะสั้น"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2023": {
           "fix long path": {
             "name": "ซ่อมทางระยะยาว"
           },
@@ -1011,6 +1202,14 @@
             "name": "สร้างสะพานสั้น"
           }
         },
+        "MC_HOC_2017_Ali_2023": {
+          "build long bridge": {
+            "name": "สร้างสะพานยาว"
+          },
+          "build short bridge": {
+            "name": "สร้างสะพานสั้น"
+          }
+        },
         "MC_HOC_2017_FP20x20": {
           "function 1": {
             "name": "ฟังก์ชั่น 1"
@@ -1044,6 +1243,14 @@
           }
         },
         "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "ฟังก์ชั่น 1"
+          },
+          "function 2": {
+            "name": "ฟังก์ชั่น 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2023": {
           "function 1": {
             "name": "ฟังก์ชั่น 1"
           },
@@ -1529,6 +1736,11 @@
             "name": "แนวทางแก้ไขที่เป็นไปได้"
           }
         },
+        "courseB_artist_loops_challenge2_2023": {
+          "potential solution": {
+            "name": "แนวทางแก้ไขที่เป็นไปได้"
+          }
+        },
         "courseC_artist_prog3": {
           "draw fire": {
             "name": "วาดไฟ"
@@ -1625,6 +1837,11 @@
             "name": "บูสเตอร์"
           }
         },
+        "courseC_artist_prog4_2023": {
+          "booster": {
+            "name": "บูสเตอร์"
+          }
+        },
         "courseC_data wizard": {
           "do something": {
             "name": "ทำบางสิ่ง"
@@ -1641,6 +1858,11 @@
           }
         },
         "courseC_data wizard_2021": {
+          "do something": {
+            "name": "ทำบางสิ่ง"
+          }
+        },
+        "courseC_data wizard_2023": {
           "do something": {
             "name": "ทำบางสิ่ง"
           }
@@ -1755,6 +1977,17 @@
             "name": "วาดเส้นของหกเหลี่ยม"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "ทำบางสิ่ง"
+          },
+          "draw hexagon": {
+            "name": "วาดรูปหกเหลี่ยม"
+          },
+          "draw line of hexagons": {
+            "name": "วาดเส้นของหกเหลี่ยม"
+          }
+        },
         "courseE_artist_functions1_copy": {
           "draw ear stems": {
             "name": "วาดก้าน"
@@ -1813,6 +2046,14 @@
             "name": "วาดก้าน"
           }
         },
+        "courseE_artist_functions2_2023": {
+          "draw a square": {
+            "name": "วาดสี่เหลี่ยมจตุรัส"
+          },
+          "draw ear stems": {
+            "name": "วาดก้าน"
+          }
+        },
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "วาดสี่เหลี่ยมจตุรัส"
@@ -1850,6 +2091,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "วาดรูปดวงดาว"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "วาดรูปดวงดาว"
           }
@@ -1899,6 +2145,11 @@
             "name": "วาดรูปดวงดาว"
           }
         },
+        "courseE_artist_functions5_2023": {
+          "draw a star": {
+            "name": "วาดรูปดวงดาว"
+          }
+        },
         "courseE_artist_functions5_copy": {
           "draw a star": {
             "name": "วาดรูปดวงดาว"
@@ -1944,6 +2195,11 @@
           }
         },
         "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "วาดหน้าต่าง"
+          }
+        },
+        "courseE_artist_functions7_2023": {
           "draw a window": {
             "name": "วาดหน้าต่าง"
           }
@@ -2029,6 +2285,20 @@
             "name": "สี่เหลี่ยมจัตุรัสที่สลับไปมา"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "ทำบางสิ่ง"
+          },
+          "draw a line of squares": {
+            "name": "วาดเส้นสีเหลี่ยมจตุรัส"
+          },
+          "draw square": {
+            "name": "วาดสี่เหลี่ยมจตุรัส"
+          },
+          "staggered squares": {
+            "name": "สี่เหลี่ยมจัตุรัสที่สลับไปมา"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "ทำบางสิ่ง"
@@ -2062,6 +2332,14 @@
           }
         },
         "courseE_artist_functions8a_2021": {
+          "do something": {
+            "name": "ทำบางสิ่ง"
+          },
+          "draw a square": {
+            "name": "วาดสี่เหลี่ยมจตุรัส"
+          }
+        },
+        "courseE_artist_functions8a_2023": {
           "do something": {
             "name": "ทำบางสิ่ง"
           },
@@ -2114,6 +2392,17 @@
           }
         },
         "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "ทำบางสิ่ง"
+          },
+          "draw a line of squares": {
+            "name": "วาดเส้นสีเหลี่ยมจตุรัส"
+          },
+          "draw square": {
+            "name": "วาดสี่เหลี่ยมจตุรัส"
+          }
+        },
+        "courseE_artist_functions8b_2023": {
           "do something": {
             "name": "ทำบางสิ่ง"
           },
@@ -2194,6 +2483,20 @@
             "name": "สี่เหลี่ยมจัตุรัสที่สลับไปมา"
           }
         },
+        "courseE_artist_functions8c_2023": {
+          "do something": {
+            "name": "ทำบางสิ่ง"
+          },
+          "draw a line of squares": {
+            "name": "วาดเส้นสีเหลี่ยมจตุรัส"
+          },
+          "draw square": {
+            "name": "วาดสี่เหลี่ยมจตุรัส"
+          },
+          "staggered squares": {
+            "name": "สี่เหลี่ยมจัตุรัสที่สลับไปมา"
+          }
+        },
         "courseE_artist_functions9": {
           "do something": {
             "name": "ทำบางสิ่ง"
@@ -2250,6 +2553,17 @@
           }
         },
         "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "ทำบางสิ่ง"
+          },
+          "draw line of triangles": {
+            "name": "วาดเส้นของสามเหลี่ยม"
+          },
+          "draw triangle": {
+            "name": "วาดสามเหลี่ยม"
+          }
+        },
+        "courseE_artist_functions9_2023": {
           "do something": {
             "name": "ทำบางสิ่ง"
           },
@@ -2345,6 +2659,23 @@
             "name": "สี่เหลี่ยมจัตุรัสที่สลับไปมา"
           }
         },
+        "courseE_artist_functionsProj_2023": {
+          "draw a line of squares": {
+            "name": "วาดเส้นสีเหลี่ยมจตุรัส"
+          },
+          "draw hexagon": {
+            "name": "วาดรูปหกเหลี่ยม"
+          },
+          "draw line of hexagons": {
+            "name": "วาดเส้นของหกเหลี่ยม"
+          },
+          "draw square": {
+            "name": "วาดสี่เหลี่ยมจตุรัส"
+          },
+          "staggered squares": {
+            "name": "สี่เหลี่ยมจัตุรัสที่สลับไปมา"
+          }
+        },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "ทำบางสิ่ง"
@@ -2386,6 +2717,14 @@
           }
         },
         "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "ทำบางสิ่ง"
+          },
+          "my design": {
+            "name": "งานออกแบบของฉัน"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "do something": {
             "name": "ทำบางสิ่ง"
           },
@@ -2441,6 +2780,14 @@
             "name": "งานออกแบบของฉัน"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "ทำบางสิ่ง"
+          },
+          "my design": {
+            "name": "งานออกแบบของฉัน"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "วาดสี่เหลี่ยมจตุรัส"
@@ -2482,6 +2829,14 @@
           }
         },
         "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "วาดสี่เหลี่ยมจตุรัส"
+          },
+          "draw ear stems": {
+            "name": "วาดก้าน"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
           "draw a square": {
             "name": "วาดสี่เหลี่ยมจตุรัส"
           },
@@ -2561,6 +2916,17 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "ทำบางสิ่ง"
+          },
+          "draw line of polygons": {
+            "name": "วาดเส้นของหลายเหลี่ยม"
+          },
+          "draw polygon": {
+            "name": "วาดหลายเหลี่ยม"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "ทำบางสิ่ง"
           },
@@ -2701,6 +3067,20 @@
             "name": "ฟักทองสี่เหลี่ยมจัตุรัส"
           }
         },
+        "courseE_farmer_functions10a1_2023": {
+          "check square for corn": {
+            "name": "มองหาข้าวโพด"
+          },
+          "get all pumpkins": {
+            "name": "เก็บฟักทองทั้งหมด"
+          },
+          "pick along path": {
+            "name": "เลือกตามเส้นทาง"
+          },
+          "pumpkin square": {
+            "name": "ฟักทองสี่เหลี่ยมจัตุรัส"
+          }
+        },
         "courseE_farmer_functions11_predict2022": {
           "check square for corn": {
             "name": "มองหาข้าวโพด"
@@ -2770,6 +3150,23 @@
           }
         },
         "courseE_farmer_functions11_predict_2021": {
+          "check square for corn": {
+            "name": "มองหาข้าวโพด"
+          },
+          "get all pumpkins": {
+            "name": "เก็บฟักทองทั้งหมด"
+          },
+          "get produce": {
+            "name": "เก็บพืชผล"
+          },
+          "pick along path": {
+            "name": "เลือกตามเส้นทาง"
+          },
+          "pumpkin square": {
+            "name": "ฟักทองสี่เหลี่ยมจัตุรัส"
+          }
+        },
+        "courseE_farmer_functions11_predict_2023": {
           "check square for corn": {
             "name": "มองหาข้าวโพด"
           },
@@ -2856,6 +3253,20 @@
             "name": "เลือกตามเส้นทาง"
           }
         },
+        "courseE_farmer_functions13_2023": {
+          "check for corn": {
+            "name": "มองหาข้าวโพด"
+          },
+          "corn rectangle": {
+            "name": "ข้าวโพดสี่เหลี่ยม"
+          },
+          "lettuce stairs": {
+            "name": "บันไดผักกาดหอม"
+          },
+          "pick along path": {
+            "name": "เลือกตามเส้นทาง"
+          }
+        },
         "courseE_farmer_functions1a2022": {
           "check square for corn": {
             "name": "มองหาข้าวโพด"
@@ -2881,6 +3292,11 @@
             "name": "มองหาข้าวโพด"
           }
         },
+        "courseE_farmer_functions1a_2023": {
+          "check square for corn": {
+            "name": "มองหาข้าวโพด"
+          }
+        },
         "courseE_farmer_functions2b2022": {
           "check square for corn": {
             "name": "มองหาข้าวโพด"
@@ -2902,6 +3318,11 @@
           }
         },
         "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "มองหาข้าวโพด"
+          }
+        },
+        "courseE_farmer_functions2b_2023": {
           "check square for corn": {
             "name": "มองหาข้าวโพด"
           }
@@ -2939,6 +3360,14 @@
           }
         },
         "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "มองหาข้าวโพด"
+          },
+          "get all pumpkins": {
+            "name": "เก็บฟักทองทั้งหมด"
+          }
+        },
+        "courseE_farmer_functions2ba_2023": {
           "check square for corn": {
             "name": "มองหาข้าวโพด"
           },
@@ -3001,6 +3430,17 @@
             "name": "เลือกตามเส้นทาง"
           }
         },
+        "courseE_farmer_functions3c1_2023": {
+          "check square for corn": {
+            "name": "มองหาข้าวโพด"
+          },
+          "get all pumpkins": {
+            "name": "เก็บฟักทองทั้งหมด"
+          },
+          "pick along path": {
+            "name": "เลือกตามเส้นทาง"
+          }
+        },
         "courseE_farmer_functions3c2022": {
           "check square for corn": {
             "name": "มองหาข้าวโพด"
@@ -3041,6 +3481,14 @@
             "name": "เก็บฟักทองทั้งหมด"
           }
         },
+        "courseE_farmer_functions3c_2023": {
+          "check square for corn": {
+            "name": "มองหาข้าวโพด"
+          },
+          "get all pumpkins": {
+            "name": "เก็บฟักทองทั้งหมด"
+          }
+        },
         "courseE_farmer_functions7a12022": {
           "garden square": {
             "name": "สวนรูปสี่เหลี่ยมจัตุรัส"
@@ -3062,6 +3510,11 @@
           }
         },
         "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "สวนรูปสี่เหลี่ยมจัตุรัส"
+          }
+        },
+        "courseE_farmer_functions7a1_2023": {
           "garden square": {
             "name": "สวนรูปสี่เหลี่ยมจัตุรัส"
           }
@@ -3091,6 +3544,11 @@
             "name": "สวนรูปสี่เหลี่ยมจัตุรัส"
           }
         },
+        "courseE_farmer_functions8a1_2023": {
+          "garden square": {
+            "name": "สวนรูปสี่เหลี่ยมจัตุรัส"
+          }
+        },
         "courseE_farmer_functions9a12022": {
           "garden square": {
             "name": "สวนรูปสี่เหลี่ยมจัตุรัส"
@@ -3112,6 +3570,11 @@
           }
         },
         "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "สวนรูปสี่เหลี่ยมจัตุรัส"
+          }
+        },
+        "courseE_farmer_functions9a1_2023": {
           "garden square": {
             "name": "สวนรูปสี่เหลี่ยมจัตุรัส"
           }
@@ -3152,6 +3615,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "จบเกม"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "จบเกม"
           }
@@ -3396,6 +3864,11 @@
           }
         },
         "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "บินไปและเก็บน้ำหวานด้วยตัวนับจำนวน"
+          }
+        },
+        "courseF_bee_for_challenge1_2023": {
           "move and get nectar with counter": {
             "name": "บินไปและเก็บน้ำหวานด้วยตัวนับจำนวน"
           }

@@ -67,6 +67,8 @@ pt:
           description_short: Aprende os conceitos fundamentais da ciência de computação.
         csd-2023:
           title: Descobertas da Ciência de Computação
+        self-paced-pl-csd-unit2-2023:
+          title: Ensinar Programação Web
     resources:
       curriculum/csd/2017:
         name: Currículo

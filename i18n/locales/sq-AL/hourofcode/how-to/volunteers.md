@@ -116,7 +116,7 @@ Nese jeni udheheqesi i nje eventi me nje klase te caktuar, perdoreni kete agjend
 
 Nese jeni duke konsideruar mbajtjen e Ores se Kodit ne shtepi ose ne komunitet, ne ju rekomandojme qe t'i hidhni nje sy disa nga guidat tona me te hollesishme per prinderit dhe organizatat ose kompanite. 
 
-### 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+### 1. Shikoni këtë video si <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Përcaktoni një datë, format dhe vendndodhje për ngjarjen tuaj
 
@@ -126,14 +126,14 @@ Puno me shkollen dhe mesuesin per t'i diskutuar cka ka me shume kuptim. Ne kemi 
 
 #### Shembulli i rendit të ditës:
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? Çfarë apo kush ju frymëzoi? Si u interesuat për shkencat kompjuterike? A keni pasur një mentor? Bëni studentëve pyetje dhe lini kohë për P & amp; A. | |30-60 minutes | Code! Nese eventi yt eshte ne ambient fizik, kjo eshte koha t;i pergjigjeni pyetjeve dhe ti udheheqni studentet kur kane te bejne me probleme te veshtira. Mundohuni te mos u'a jepni atyre pergjigjen menjehere, ne vend te saj, mundohu t'i pyetesh pyetje ne menyre qe ata t;i pergjigjen vetes se cka shkoi keq, dhe te enkurajojne studentet e tjer te pyesin njeri tjetrin nese kane pyetje. Nese je vullnetar virtual, puno me mesuesin on ate se cka mund te jete qasja e duhur. Do te kishte me shume kuptim nese do ti ktheheshim fundit te sesionit te shohim se cfare progresi kane bere studentet. | | | 1-3 minuta | Faleminderit të gjithëve dhe ndajnë fjalët frymëzuese të ndarjes. Shpërndani çdo swag të kompanisë suaj (ngjitëset [ ](#celebrate) janë të mrekullueshme)! | | <br />
+|Koha | Pika e Axhendës | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minuta | Trego një [video frymëzuese | |5-10 minuta](https://hourofcode.com/us/promote/resources#videos)| Prezantojeni veten dhe mësoni më shumë rreth studentëve: Ku punoni, çfarë bëni dhe çfarë ju pëlqen më shumë në punën tuaj? Çfarë apo kush ju frymëzoi? Si u interesuat për shkencat kompjuterike? A keni pasur një mentor? Bëni studentëve pyetje dhe lini kohë për P & amp; A. | |30-60 minuta | Kodi! Nese eventi yt eshte ne ambient fizik, kjo eshte koha t;i pergjigjeni pyetjeve dhe ti udheheqni studentet kur kane te bejne me probleme te veshtira. Mundohuni te mos u'a jepni atyre pergjigjen menjehere, ne vend te saj, mundohu t'i pyetesh pyetje ne menyre qe ata t;i pergjigjen vetes se cka shkoi keq, dhe te enkurajojne studentet e tjer te pyesin njeri tjetrin nese kane pyetje. Nese je vullnetar virtual, puno me mesuesin on ate se cka mund te jete qasja e duhur. Do te kishte me shume kuptim nese do ti ktheheshim fundit te sesionit te shohim se cfare progresi kane bere studentet. | | | 1-3 minuta | Faleminderit të gjithëve dhe ndajnë fjalët frymëzuese të ndarjes. Shpërndani çdo swag të kompanisë suaj (ngjitëset [ ](#celebrate) janë të mrekullueshme)! | | <br />
 
-#### Other ideas to add to your event
+#### Ide të tjera për të shtuar në ngjarjen tuaj
 
 - Shpjegoni menyrat se si tekonogjia ka impakt ne jeten tuaj, me shembuj qe do t'i interesojne te dy gjinive. Flisni se si teknologjia po shpeton jeterat e shume njerzve, po i ndohmon njerezit dhe po i lidhe ata me njeri tjetrin. 
 - Nese jeni nje kompani teknologjike, reklamoni produkte inovative ne te cilat eshte duke punuar kompania juaj. Nese nuk jeni kompani teknologjike, diskutoni menyra se si te perdoret teknologjia per te zgjithur probleme dhe per te permbushur qellimet tona.
 - Ftoni inxhinieret softuerik nga kompanija juaj to flesin rreth arsyejes se pse ata i studiojne shkencat kompjuterike, poashtu edhe projektet ne te cilat po punojne momentalisht. 
-- Nese e ke nje grup stafi qe do te persfhaq eventet tuaja ose nese eshte ndonje vullnetar ne ndonje shkolle lokale, konsideroni porositje e maicave te personalizuara per grupin tuaj. 
+- Nëse keni një grup stafi që do të lehtësojë ngjarjen tuaj ose vullnetarisht me një shkollë lokale, merrni parasysh porositjen e blu [zave me por](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) osi për grupin tuaj.
 
 ### 3. Planifikoni nevojat tuaja teknologjike
 
@@ -146,9 +146,9 @@ Përvoja më e mirë e Orës së Kodimit përfshin kompjutera të lidhur me inte
 - ** Aktivitetet testuese ** ne komjuter dhe pajisje. Sigurohuni qe ato funksionojne mire neper shfletuesit e internetit me tingull dhe video. 
 - **Nuk keni pajisje te mjaftueshme?** Perdorni programimin qiftor. Kur pjesëmarrësit bashkëpunojnë, ata ndihmojnë njëri-tjetrin dhe mbështeten më pak tek mësuesi. Ata gjithashtu do ta kuptojnë që shkencat kompjuterike janë sociale dhe bashkëpunuese.
 - **Siguroni kufje ** per pjesemarresit ose thuani ti sjellin te tyret, nese do te sjellin tutoriale te cilat funksionojne me mire me tinguj. 
-- **Have low bandwidth**? Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- **Keni bandë të ulët**? Planifikoni të shfaqni video në pjesën e përparme të ngjarjes, kështu që secili pjesëmarrës nuk do të shkarkojë videot e veta. Ose provoni aktivitetet e shkëput/jashtë linje.
 
-#### Virtual Events:
+#### Ngjarjet virtuale:
 
 Nese eventi juaj do te jete virtual, do te ju duhet te vendosni ne platformen e konferences tuaj (dhe ta testoni ate) perara se te filloj eventi juaj. Kjo mund te kete inpakt ne numrin e studenteve me te cilet mund te keni kontakt, pra eshte me mire ta percakoni kete perpara se te ftoni nje klase ose te promovoni eventin tuaj. Per Ide se si te mbani nje ore kodi ne distancem lexoni keshillat per mbajtjen e nje eventi te ores se kodit virtualisht. 
 
@@ -171,7 +171,7 @@ Pasi qe te keshe nje harte solide per eventin tend, mund te fillosh te ftosh stu
 Pasi qe studentet ose mysafiret e kane kompletuar oren e tyre te kodit, eshte koha te festojme suksesin e tyre. ja disa idea se si ta beni eventin tuaj edhe me zbavites: 
 
 - Sherndaj certifikatat per pjesemarresit dhe studentet. 
-- [Print "I did an Hour of Code! stickers"]({{ promote/resources_stickers }}) or find other prizes and swag on the [Code.org Amazon Store](https://code.org/shop).
+- [Shtypni “Unë bëra një orë të kodit! afishe”]({{ promote/resources_stickers }}) ose gjeni çmime të tjera dhe blerje në Dyqanin Amazon [Code.org.](https://code.org/shop)
 - Shpërndaj fotot dhe videot e Orës tënde të Kodimit në mediat sociale. Përdorni #HourOfCode dhe @codeorg kështu që ne mund të nxjerrim në pah suksesin tuaj!
 
 * * *
@@ -186,7 +186,7 @@ Njera nder menyrat me te mira per te shperndare fjalen eshte te promovini oren t
 
 ### 1. Regjistro eventin tend
 
-Kur ju aplikoni per nje ngjarje te Ores se Kodit, you do te pranoni nje email me informata, lajme dhe kurozitete per te mbajtur nje Ore Kodimi te suksessshme. Poashtu kjo sherben edhe per t'i njoftuar shkollat lokale ose prinderit te jene ne dijeni qe ju jeni duke e mbajtur ate event afer tyre. 
+Kur reg [jistroheni në ngjarjen tuaj Hour of Code](/events), do të merrni komunikime të dobishme me email me lajme dhe këshilla për organizimin e një Ore të Suksesshme të Kodit. Poashtu kjo sherben edhe per t'i njoftuar shkollat lokale ose prinderit te jene ne dijeni qe ju jeni duke e mbajtur ate event afer tyre. 
 
 ### 2. Posto ne rrjete sociale
 
@@ -206,7 +206,7 @@ Ndihmo ne shperndarjen e vetedijes rreth shkencave kompjuterike me kete permabjt
 #### Krijo tenden
 
 - Nje #hourofcode mund te dergoj deri te (trego storjen tende) https://hourofcode.com/
-- I’m supporting #HourOfCode because [fill in your thoughts]. Join us https://hourofcode.com
+- Unë po mbështes #HourOfCode sepse [plotësoni mendimet tuaja]. Bashkohuni me ne https://hourofcode.com
 
 #### Specifikisht per inxhinier
 
@@ -224,7 +224,7 @@ Ndihmo ne shperndarjen e vetedijes rreth shkencave kompjuterike me kete permabjt
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 
 - Shperndaj vemendje [Code.org swag](https://store.code.org/) (te gjitha fondet shkojne drejt vazhdimit te krijimit te mundesive per te gjithe te rinjet te kodojne).
-- Choose to benefit Code.org when you shop on [AmazonSmile](https://code.org/donate/amazonsmile).
+- Zgjidhni të përfitoni Code.org kur blini në [Amazon](https://code.org/donate/amazonsmile)Smile.
 - Pyetni drejtorin tuaj qe te dergoje nje email ne tere kompanine, duke e theksuar rendesine e shkencave kompjuterike dhe duke i inkurajuar punetoret te perhapin fjalen. 
 - Kaloni nje kohe te lire me koleget tuaj [ne nje kampanje dhurimi](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2)
 - [Nenshkruani kete peticion ](https://code.org/promote) to per tu siguruar qe cdo student e ka mundesine per te mesuar shkencat kompjuterike

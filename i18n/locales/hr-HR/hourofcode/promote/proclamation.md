@@ -4,55 +4,55 @@ title: Primjer Rezolucije podrške tjednu podučavanja informatike i Satu kodira
 
 {{ signup_button }}
 
-# Sample Computer Science Education Week resolution
+# Primjer rezolucije tjedna obrazovanja računalnih znanosti
 
-### Below is language for a sample resolution supportive of Computer Science Education Week and its goals that can be used by state and local legislators.
+### Ispod je jezik za rezoluciju uzorka koji podržava Tjedan obrazovanja za računalne znanosti i njegove ciljeve koje mogu koristiti državni i lokalni zakonodavci.
 
 * * *
 
-#### **RESOLUTION**  
+#### **REZOLUCIJA**  
 
 
-#### Supporting the goals and ideals of "Computer Science Education Week"
+#### Podržavanje ciljeva i ideala "Tjedna obrazovanja računalnih znanosti"
 
-Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+budući da Tjedan obrazovanja u računalnim znanostima naglašava ključnu ulogu koju informatika ima u preobrazbi našeg društva i načinu na koji računalna znanost omogućuje inovacije i stvara gospodarske prilike;
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+budući da je računalna tehnologija sastavni dio moderne kulture i transformira način na koji ljudi međusobno komuniciraju i sa svijetom oko sebe;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+budući da informatika transformira industriju, stvara nova područja trgovine, potiče inovacije u svim područjima znanosti i potiče produktivnost u uspostavljenim gospodarskim sektorima;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+budući da je područje informatike temeljni predmet koji podupire sektor informacijske tehnologije našeg gospodarstva, što značajno doprinosi gospodarskoj proizvodnji Sjedinjenih Država;
 
-Whereas the field of computer science is a foundational science for the digital age;
+budući da se pismenost umjetne inteligencije odnosi na znanje, vještine i stavove povezane s načinom na koji djeluje umjetna inteligencija, uključujući temeljne pojmove u računalnoj znanosti, te kako se umjetna inteligencija koristi sigurno, odgovorno i etički;
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+budući da su područje informatike, uključujući umjetnu inteligenciju, tehnologije koje imaju moć temeljne transformacije gotovo svih sektora gospodarstva Sjedinjenih Država;
 
-Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
+budući da je tehnološko vodstvo u svim područjima informatike, uključujući umjetnu inteligenciju, imperativ gospodarske i nacionalne sigurnosti;
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+budući da su izgledi za radna mjesta u računalnoj znanosti svijetli s više od 500.000 otvorenih računalnih pozicija diljem zemlje;
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+budući da se studentima pružanje prilike za sudjelovanje u visokokvalitetnim aktivnostima informatike izlaže bogatim mogućnostima koje polje nudi i pruža vještine kritičkog razmišljanja koje će im služiti tijekom cijelog života;
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+budući da svi učenici zaslužuju temeljitu pripremu u području informatičkog obrazovanja, uključujući pristup kvalificiranim nastavnicima, tehnologiji i kurikulumu koji odgovara dobi potrebnim za učenje informatike na osnovnoj i srednjoj razini obrazovanja;
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+budući da obrazovanje o računalnoj znanosti ima izazove za rješavanje problema, uključujući poboljšanje pristupa tečajevima informatike za sve studente te pružanje stručnog usavršavanja za nastavnike informatike;
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+budući da sudjelovanje u Sati kodiranja tijekom tjedna obrazovanja u računalnim znanostima može poslužiti za demistifikaciju područja informatike i potaknuti više studenata na daljnje studije informatike;
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+budući da područje informatike ima znatne prepreke za rješavanje jednakosti, uključujući privlačenje i zadržavanje područja kandidata različitih u rasi, etničkoj pripadnosti i spolu na svim razinama i granama;
 
-Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
+budući da je Grace Murray Hopper, jedna od prvih žena u području informatike, projektirala nove programske jezike i pionirske standarde za računalne sustave koji su postavili temelje za mnoge napretke u računalnoj znanosti; i
 
-Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
+Dok je tjedan {{ campaign_date/start_long }}, u čast rođendana Grace Hopper, označen kao "Tjedan obrazovanja računalnih znanosti": Sada, dakle, bilo da je to <br />
 
-(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
+Riješen, da je (kuća ili Senat, DRŽAVA, ŽUPANIJA, GRAD ILI ŠKOLSKA ODBOR) --
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(1) podupire imenovanje Tjedna obrazovanja u računalnim znanostima ({{ campaign_date/full }});
 
-(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(2) potiče škole, odgajatelje, roditelje i kreatore politika da sudjeluju u Tjednu obrazovanja o računalnim znanostima omogućujući svojim učenicima da sudjeluju u Sati kodiranja;
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(3) potiče škole, nastavnike, istraživače, sveučilišta, poslovne vođe i kreatore politika da utvrde mehanizme za nastavnike da dobiju vrhunski profesionalni razvoj kako bi osigurali održivo iskustvo učenja u računalnoj znanosti na svim obrazovnim razinama i potaknulo studente da budu izloženi konceptima informatike;
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(4) potiče prilike, uključujući kroz postojeće programe, za studentice i studente iz rasnih i etničkih skupina nedovoljno zastupljenih u računalnim znanostima.
 
 {{ signup_button }}

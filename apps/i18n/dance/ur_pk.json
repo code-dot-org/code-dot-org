@@ -1,5 +1,11 @@
 {
+  "danceAiModalBack": "واپس",
+  "danceAiModalClose": "بند",
+  "danceAiModalCodeButton": "ضابطہ کار(کوڈ)",
+  "danceAiModalExplanationButton": "مزید سیکھے",
+  "danceAiModalStartOverButton": "دوبارہ شروع کریں",
   "danceFeedbackDidntPress": "یقینی بنائیں کہ آپ کا ڈانس چلنے کے دوران، ایرو کلیدوں کو دبایا گیا ہے۔.",
+  "danceFeedbackKeepCoding": "آپ ہر اقسام کے تمام ضروری بلاکس استعمال کر رہے ہیں لیکن درست طریقہ سے نہیں۔",
   "danceFeedbackKeyEvent": "یقینی بنائیں کہ آپ نے کوئی کوڈ <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> بلاک سے منسلک کیا ہے اور آپ کا ڈانس چلنے کے دوران بٹن دبائیں۔.",
   "danceFeedbackNeedBackup": "آپ کو <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> بلاک کے ساتھ بیک اپ ڈانسرز کا ایک گروپ بنانے کی ضرورت ہے۔.",
   "danceFeedbackNeedDifferentDance": "آپ کو کوئی مختلف ڈانس استعمال کرنے کی ضرورت ہے۔.",

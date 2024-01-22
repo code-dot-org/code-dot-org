@@ -67,6 +67,8 @@ ja:
           description_short: 基礎的なコンピューター サイエンスのコンセプトを学びます。
         csd-2023:
           title: コンピューター サイエンス発見
+        self-paced-pl-csd-unit2-2023:
+          title: ウェブ開発を教える
     resources:
       curriculum/csd/2017:
         name: カリキュラム
@@ -86,3 +88,5 @@ ja:
         name: 先生用フォーラム
       getting_started_with_csd/csd/2021:
         name: CSDを始めるにあたって
+      csd_guide_to_curriculum_videos/csd/2023:
+        url: https://docs.google.com/document/d/1AOgwzEwfAa_1OLHPkL8d9jr6WsPnGr7LJ8wosllUUyo/

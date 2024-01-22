@@ -22,10 +22,18 @@ lt:
         options:
           UNIT:
             '"seconds"': sekundes
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"seconds"': sekundes
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
             '"ALIEN"': ateiviai
+          MOVE:
+            MOVES.Rest: Nė vienas
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
           MOVE:
             MOVES.Rest: Nė vienas
       Dancelab_changeMoveLR:
@@ -139,6 +147,10 @@ lt:
         options:
           EFFECT:
             '"none"': Nė vienas
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"none"': Nė vienas
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
@@ -236,6 +248,11 @@ lt:
         options:
           EFFECT:
             '"hearts"': širdelės
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': mėlyna
+            '"red"': raudona spalva
       Mikelab_changePropBy:
         options:
           PROPERTY:

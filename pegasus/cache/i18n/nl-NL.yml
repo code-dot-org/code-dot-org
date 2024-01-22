@@ -1178,6 +1178,7 @@ nl-NL:
   header_home: Home
   header_learn: Leren
   header_legal: Privacy & juridisch
+  header_legal_cookie_notice: Cookiebeleid
   header_legal_privacy: Privacybeleid
   header_legal_tos: Gebruiksvoorwaarden
   header_my_dashboard: Mijn Dashboard
@@ -2617,27 +2618,14 @@ nl-NL:
     beweging om een uur informatica uit te proberen, met een bereik van tientallen
     miljoenen leerlingen in meer dan 180 landen. Doe mee tijdens de Computer Science
     Eductaion Week, 7-13 december.
-  volunteer_engineer_submission_intro_guide: Lees hier meer over ons <a href="%{volunteer_guide}">vrijwilligersprogramma</a>.
   volunteer_engineer_submission_intro_guide_markdown: Lees meer over ons [vrijwilligersprogramma
     hier] (%{volunteer_guide}).
-  volunteer_engineer_submission_intro_links: Ben je op zoek naar vrijwilligers? Vind
-    een vrijwilliger op onze <a href="%{volunteer_local}">kaart</a>.
   volunteer_engineer_submission_intro_links_markdown: Ben je een leraar die vrijwilligers
     zoekt? Vind een lokale vrijwilliger op onze [vrijwilligerskaart] (%{volunteer_local}).
-  volunteer_engineer_submission_intro_recruit: 'Deze leerkrachten zijn op zoek naa
-    iemand die <span style="font-family: ''Gotham 7r'', sans-serif;">gepassioneerd
-    is over informaticaonderwijs</span> die kan helpen in de klas, of iemand die hun
-    leerlingen kan <span style="font-family: ''Gotham 7r'', sans-serif;">inspireren</span>
-    door ze te vertellen over wat je allemaal kan doen met informatie (dat zou via
-    videochat kunnen). Als je geen vrijwilliger wil worden, <a href="%{url}">lees
-    hier</a> over het organiseren van je eigen Uur Code.'
   volunteer_engineer_submission_intro_recruit_markdown: Leraren zouden graag iemand
     hebben die **gepassioneerd is door informaticaonderwijs** die kan helpen in de
     klas, of voor iemand die **inspireer** hun leerlingen kan door te praten over
     de brede mogelijkheden met informatica (dat kan via een videochat).
-  volunteer_engineer_submission_intro_signup: Voer de volgende gegevens in als je
-    een informaticastudent of software ontwikkelaar bent. Velden met een <span class="form-required-field">*</span>
-    zijn verplicht.
   volunteer_engineer_submission_intro_signup_markdown: Voer de volgende informatie
     in als u een student informatica of softwareprofessional bent. Je moet minstens
     18 jaar oud zijn om je als vrijwilliger aan te melden. Houd er rekening mee dat

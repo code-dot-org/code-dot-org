@@ -105,6 +105,7 @@ el:
           description: Δοκιμάστε τα βασικά της επιστήμης των υπολογιστών με χαρακτήρες από τα Θυμωμένα Πουλιά και τα Ζόμπι εναντίων Φυτών!
           description_short: Δοκιμάστε τα βασικά της επιστήμης της πληροφορικής με πολλούς διασκεδαστικούς χαρακτήρες!
           student_description: Δοκιμάστε τα βασικά της επιστήμης των υπολογιστών με χαρακτήρες από τα Θυμωμένα Πουλιά και τα Ζόμπι εναντίων Φυτών!
+          name: Ώρα του Κώδικα
         text-compression:
           title: Συμπίεση κειμένου
         algebraPD2a:
@@ -169,7 +170,7 @@ el:
           description_short: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
           student_description: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
         mc:
-          title: Η Ώρα του Κώδικα με το Minecraft
+          title: Ζήστε μια περιπέτεια στο Minecraft
           description: Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Steve ή την Alex σε μία περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft
           description_short: Εξερεύνησε έναν κόσμο του Minecraft μέσω κώδικα
           student_description: Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Steve ή την Alex σε μία περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft
@@ -297,6 +298,7 @@ el:
             content:
               display_name: Περιεχόμενο
         minecraft:
+          title: Σχεδιαστής Minecraft
           description_short: Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft στην δικιά σου έκδοση του Minecraft.
           description: Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft στην δικιά σου έκδοση του Minecraft.
           student_description: Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft στην δικιά σου έκδοση του Minecraft.
@@ -1883,6 +1885,8 @@ el:
         ai-ethics:
           title: Ο Κώδικας Δεοντολογίας Τεχνητής Νοημοσύνης μας
           description_audience: επίπεδα 6-12
+        dance-unplugged:
+          title: Πάρτι Χορού χωρίς υπολογιστή
         poem-art:
           title: Τέχνη της Ποίησης
         spelling-bee:
@@ -2620,6 +2624,10 @@ el:
           description_short: Μάθετε όλες τις έννοιες των Θεμελιωδών της Επιστήμης της Πληροφορικής και δημιουργήστε τη δική σας τέχνη, ιστορία ή παιχνίδι.
         self-paced-pl-csp2-2023:
           title: 'Ενότητα 2: Πλοήγηση στο Code.org'
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Ελεύθερο παιχνίδι
         csa-frq-practice-2022:
           lessons:
             lesson-4:
@@ -2708,3 +2716,109 @@ el:
           description_short: Μάθετε όλες τις έννοιες των Θεμελιωδών της Επιστήμης της Πληροφορικής και δημιουργήστε τη δική σας τέχνη, ιστορία ή παιχνίδι.
         how-ai-works-2023:
           title: Πώς λειτουργεί η Τεχνητή Νοημοσύνη
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Ο Κώδικας Δεοντολογίας Τεχνητής Νοημοσύνης μας
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Εισαγωγή
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Εισαγωγή
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Εισαγωγή
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Εισαγωγή
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Εισαγωγή στο App Lab
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Συμβάντα
+            lesson-4:
+              name: Συμπεριφορές
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Βρόχοι
+            lesson-4:
+              name: Συνθήκες
+          title: Εισαγωγή στην Επιστήμη των Υπολογιστών
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Έρευνα
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Έρευνα
+            lessonGroup-3:
+              display_name: Περιεχόμενο
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+        csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Περιεχόμενο
+            lessonGroup-4:
+              display_name: Έρευνα
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: Μεταβλητές
+            csp_conditionals:
+              display_name: Συνθήκες
+            csp_functions:
+              display_name: Συναρτήσεις
+            csp_project:
+              display_name: Έργο
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Δεδομένα
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Λίστες
+            lessonGroup-3:
+              display_name: Βρόχοι
+            lessonGroup-5:
+              display_name: Έργο
+        csp7-2024:
+          lesson_groups:
+            csp_libraries:
+              display_name: Βιβλιοθήκες

@@ -37,6 +37,6 @@ Consulta nuestra [guía práctica para eventos]({{ urls/how_to_events }}) para v
 La Hora del Código es solo el primer paso para aprender más sobre cómo funciona la tecnología y cómo crear aplicaciones de software. Para seguir adelante:
 
 - Anima a los estudiantes a que sigan [aprendiendo en línea]({{ urls/learn_beyond }}).
-- [Learn more](https://code.org/administrators) about implementing a computer science pathway in your district.
+- [Saber más](https://code.org/administrators) sobre la implementación de una carrera científica en el ordenador de tu distrito.
 
 {{ signup_button }}

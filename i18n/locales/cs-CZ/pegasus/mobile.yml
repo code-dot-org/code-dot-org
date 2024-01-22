@@ -540,13 +540,9 @@
   volunteer_engineer_submission_subtitle_generic: '100 000 učitelů bude hostit Hodinu kódu ve svých třídách letos 7.-13. prosince tohoto roku 2015. Chtějí vaši pomoc! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} učitelů shání dobrovolníky nadšené pro výuku informatiky, aby jim pomohli s Hodinou kódu letos v prosinci.<br>%{num_volunteers} dobrovolníků se přihlásilo. Přidejte se k nim."
   volunteer_engineer_submission_intro_background: "Hodina kódu je globální hnutí s cílem přinést hodinu informatiky do každé školy. Hodiny kódu se zúčastnili desítky milionů studentů z více než 180 zemí. Zapojte se i vy během týdne informatiky 7.-13. prosince, prosím."
-  volunteer_engineer_submission_intro_recruit: 'Tito učitelé by rádi našli někoho <span style="font-family: ''Gotham 7r'', sans-serif;">nadšeného do výuky informatiky</span>, kdo jim může pomoci v učebně, nebo někoho kodo může <span style="font-family: ''Gotham 7r'', sans-serif;">inspirovat</span> jejich studenty přednáškou o šíři možností v informatice (to lze provést přes videokonferenci). Pokud se nechcete přihlásit jako dobrovolník, <a href="%{url}">zjistěte více</a> o možnosti zorganizovat svoji vlastní Hodinu kódu.'
   volunteer_engineer_submission_intro_recruit_markdown: "Učitelé by rádi měli někoho, kdo by byl vášnivý vzděláváním informatiky, který může pomoci ve třídě, nebo pro někoho, kdo může inspirovat své studenty tím, že mluví o šíři možností s informatikou (což by mohlo být provedeno prostřednictvím videochatu)."
-  volunteer_engineer_submission_intro_guide: "Více informací o našem <a href=\"%{volunteer_guide}\">programu dobrovolníků zde</a>."
   volunteer_engineer_submission_intro_guide_markdown: "Přečtěte si více o našem [dobrovolnický program zde] (%{volunteer_guide})."
-  volunteer_engineer_submission_intro_signup: "Zadejte následující informace, pokud jste počítačové vědy student nebo software profesionál, prosím. Pole označená <span class=\"form-required-field\"> *</span> jsou požadovaná."
   volunteer_engineer_submission_intro_signup_markdown: "Pokud jste student počítačové vědy nebo odborník na software, zadejte prosím následující informace. Musíte být nejméně 18 let, abyste se přihlásil jako dobrovolník. Všimněte si, že všechna pole, která vyplníte v této sekci, budou veřejně dostupná každému, kdo se podívá na [mapu dobrovolníků] (/dobrovolník/místní). Pole označená _*_ jsou povinná."
-  volunteer_engineer_submission_intro_links: "Nehledáte dobrovolníkas? <a href=\"%{learn_more}\">Dozvi se více</a> o organizování tvé Hodiny kódu a nalezení dobrovolníka v místě na naší <a href=\"%{volunteer_local}\">mapě dobrovolníků</a>."
   volunteer_engineer_submission_intro_links_markdown: "Jste učitel, který hledá dobrovolníky? Najděte místního dobrovolníka na naší [mapě dobrovolníků] (%{volunteer_local})."
   volunteer_engineer_submission_update_information: "Aktualizujte vaše informace"
   volunteer_engineer_submission_header_shared: "Informace sdílené s učiteli na dobrovolnické mapě"
@@ -1526,6 +1522,7 @@
   header_report_abuse: "Nahlásit zneužití"
   header_legal: "Ochrana osobních údajů a právní"
   header_legal_privacy: "Zásady ochrany osobních údajů"
+  header_legal_cookie_notice: "Oznámení o souborech cookie"
   header_legal_tos: "Podmínky"
   header_tutorials: "Návody"
   header_screen_reader_hamburger: "Menu"

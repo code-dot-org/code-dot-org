@@ -41,13 +41,13 @@ class StorageIdTest < Minitest::Test
 
     # To simulate a race condition, say the storage id for this user is absent
     # the first time we ask, then present the second time.
-    mock_rows = stub('mock rows')
+    mock_rows = mock('mock rows')
     mock_rows.stubs(:first).
       returns(nil).then.
       returns({id: table_storage_id})
 
     # Mock the DB and table, raising an exception on insert.
-    mock_table = stub('user storage ids table')
+    mock_table = mock('user storage ids table')
     mock_table.stubs(:where).with({user_id: table_user_id}).returns(mock_rows).twice
     mock_table.stubs(:insert).with({user_id: table_user_id}).raises(Sequel::UniqueConstraintViolation).once
 

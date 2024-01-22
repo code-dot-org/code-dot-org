@@ -53,6 +53,7 @@ da:
         gender: 'Køn'
         edit_header: 'Rediger kontooplysninger'
         finish_sign_up_header: 'Afslut oprettelsen af din konto'
+        finish_sign_up_header_error: 'Ret venligst følgende fejl:'
         finish_sign_up_subheader: 'Udfyld følgende oplysninger for at afslutte oprettelsen af en Code.org konto for <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Udfyld de følgende oplysninger for at oprette en Code-org-konto med e-mailadressen **%{email}**.'
         finish_sign_up_subheader_provider: 'Udfyld følgende oplysninger for at afslutte oprettelsen af en Code.org konto <strong>%{provider}</strong> for <strong>%{email}</strong>.'
@@ -60,6 +61,7 @@ da:
         reset_password_token: "Adgangskode linket du har brugt"
         error:
           future: kan ikke være i fremtiden
+        user_type: 'Kontotype'
         us_state: 'Region'
   beta: "beta"
   hello: "Hej verden"
@@ -1007,4 +1009,3 @@ da:
     this_sprite: "denne figur"
   pixelation:
     binary: "Binære"
-

@@ -10,6 +10,7 @@ ms:
         error:
           future: tidak boleh ada di masa depan
         finish_sign_up_header: Selesai membuat akaun anda
+        finish_sign_up_header_error: 'Sila betulkan kesilapan yang berikut:'
         finish_sign_up_subheader: Isi maklumat berikut untuk menyelesaikan membuat
           akaun Code.org untuk <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Isikan maklumat berikut untuk menyelesaikan
@@ -31,6 +32,7 @@ ms:
           jika anda tidak mempunyai alamat e-mel)</a>)
         reset_password_token: Pautan tetapan semula kata laluan yang telah anda ikuti
         us_state: Negeri
+        user_type: Jenis Akaun
         username: nama pengguna
         verified_teacher: Guru Bertauliah
     errors:

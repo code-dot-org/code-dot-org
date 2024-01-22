@@ -10,6 +10,7 @@ de:
         error:
           future: darf nicht in der Zukunft liegen
         finish_sign_up_header: Kontoerstellung abschließen
+        finish_sign_up_header_error: 'Bitte korrigiere die folgenden Fehler:'
         finish_sign_up_subheader: Gib folgende Informationen ein um dein Code.org-Konto
           für <strong>%{email}</strong> fertigzustellen.
         finish_sign_up_subheader_markdown: Gib folgende Informationen ein um dein
@@ -32,6 +33,7 @@ de:
           keine E-Mail-Adresse hast)](%{url})
         reset_password_token: Den Link zum Zurücksetzen des Passworts hast du befolgt
         us_state: Bundesland
+        user_type: Kontentyp
         username: Benutzername
         verified_teacher: Verifizierter Lehrer
     errors:

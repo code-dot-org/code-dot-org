@@ -162,6 +162,7 @@ de:
             Birds und Pflanzen gegen Zombies!
           description_short: Lerne die Grundlagen der Computertechnologie mit Deinen
             Lieblingsfiguren kennen!
+          name: Hour of Code
           student_description: Teste die Grundlagen der Informatik mit Charakteren
             aus Angry Birds und Pflanzen gegen Zombies!
           title: Hour of Code 2013
@@ -228,6 +229,10 @@ de:
         ai-ethics-2021:
           description_audience: Klassen 6-12
           title: Unser KI-Ethikkodex
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Unser KI-Ethikkodex
         ai-temp:
           title: So funktioniert KI
         aiml-2021:
@@ -1723,6 +1728,14 @@ de:
               name: Java-Labor
             lesson-6:
               name: Schleifen
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Umfrage
+            lessonGroup-3:
+              display_name: Inhalt
+            lessonGroup-5:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1764,6 +1777,12 @@ de:
           lessons:
             lesson-4:
               name: Variablen
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1801,6 +1820,12 @@ de:
               name: Eindimensionale (1D) Arrays
             lesson-3:
               name: Schleifen mit dem Wiederhol-Block
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1827,6 +1852,12 @@ de:
             lessonGroup-2:
               display_name: Inhalt
         csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -1869,6 +1900,12 @@ de:
               display_name: Inhalt
             lessonGroup-4:
               display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1899,6 +1936,12 @@ de:
             lessonGroup-5:
               display_name: Sandbox
         csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa6-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -1939,6 +1982,12 @@ de:
           lessons:
             lesson-6:
               name: Geistiges Eigentum
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-5:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1972,6 +2021,14 @@ de:
             lessonGroup-5:
               display_name: Umfrage
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Umfrage
+            lessonGroup-5:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -2125,6 +2182,8 @@ de:
           title: CS Discoveries Nachbefragung
         csd-post-survey-2023:
           title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csd-post-survey-2024:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
         csd-sample-online:
           title: Beispiele von Online-Aktivitäten für Erkenntnisse aus der Informatik
         csd-test-saving-state:
@@ -2239,6 +2298,14 @@ de:
             cspSurvey:
               display_name: Umfrage
         csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Computer und Problemlösung'
+            lessonGroup-5:
+              display_name: Umfrage
+        csd1-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitel 1: Der Problemlösungsprozess'
@@ -2436,6 +2503,14 @@ de:
             üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging,
             Verwendung von Ressourcen und Teamarbeit.
         csd2-2023:
+          student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren
+            eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden
+            haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie
+            Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem
+            üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging,
+            Verwendung von Ressourcen und Teamarbeit.
+          title: Webentwicklung
+        csd2-2024:
           student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren
             eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden
             haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie
@@ -2697,6 +2772,19 @@ de:
             Beim dem abschließenden Projekt entwickeln Sie ein personalisiertes, interaktives
             Programm.
         csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Bilder und Animationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Erstellen von Spielen'
+          student_description: In Lerneinheit 3 arbeiten Sie bei der Programmierung
+            von Animationen, interaktiver Kunst und Spielen im Game Lab mit Ihrer
+            Programmiererfahrung. Die Lerneinheit beginnt mit einfachen Formen und
+            baut auf anspruchsvollere spritebasierte Spiele auf, wobei dieselben Programmierkonzepte
+            und der Designprozess eingesetzt werden, die Informatiker täglich verwenden.
+            Beim dem abschließenden Projekt entwickeln Sie ein personalisiertes, interaktives
+            Programm.
+        csd3-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitel 1: Bilder und Animationen'
@@ -2985,6 +3073,21 @@ de:
             sowohl auf Papier als auch im App-Lab prototypisch zu entwickeln und Lösungen
             mit realen Benutzern zu testen, um Feedback zu erhalten und die Iteration
             weiter voranzutreiben.
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Benutzerzentriertes Design'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: App Prototyping'
+          student_description: Die Lerneinheit 4 stellt die breiteren sozialen Auswirkungen
+            der Informatik vor. Anhand einer Reihe von Design-Aufgaben lernen Sie,
+            wie Sie die Bedürfnisse anderer besser verstehen und gleichzeitig eine
+            Lösung für ein Problem entwickeln können. Die zweite Hälfte der Lerneinheit
+            besteht aus einem iterativen Teamprojekt, bei dem die Teams die Möglichkeit
+            haben, einen Bedarf zu identifizieren, der ihnen am Herzen liegt, Lösungen
+            sowohl auf Papier als auch im App-Lab prototypisch zu entwickeln und Lösungen
+            mit realen Benutzern zu testen, um Feedback zu erhalten und die Iteration
+            weiter voranzutreiben.
         csd4-dlp:
           description: Dies ist Lerneinheit 4 des Plans für Vertieftes Lernen von
             Code.org - Erkenntnisse aus der Informatik für Moderatoren in der Ausbildung.
@@ -3246,6 +3349,23 @@ de:
             Das Kapitel schließt mit der Überlegung, wie ein Problemlösungsprozess
             für Daten in einem Bereich Ihrer Wahl eingesetzt werden kann.
         csd5-2023:
+          description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme
+            zu lösen.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Darstellung von Informationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Datenprobleme lösen'
+          student_description: Lerneinheit 5 befasst sich mit der Bedeutung von Daten
+            bei der Lösung von Problemen und erklärt, wie Computer dabei helfen können.
+            Das erste Kapitel befasst sich mit verschiedenen Systemen, die zur Darstellung
+            von Informationen in einem Computer verwendet werden, sowie mit den Aufgaben
+            und Kompromissen, die mit ihrer Verwendung einhergehen. Im zweiten Kapitel
+            erfahren Sie, wie Datensammlungen zur Lösung von Problemen verwendet werden
+            und wie Computer dabei helfen, die Schritte dieses Prozesses zu automatisieren.
+            Das Kapitel schließt mit der Überlegung, wie ein Problemlösungsprozess
+            für Daten in einem Bereich Ihrer Wahl eingesetzt werden kann.
+        csd5-2024:
           description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme
             zu lösen.
           lesson_groups:
@@ -3601,7 +3721,16 @@ de:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+        csd6a-2024:
+          description_short: Programmieren mit Geräten lernen.
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
         csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
+        csd6b-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: Ein- und Ausgaben
@@ -3615,6 +3744,14 @@ de:
             lessonGroup-4:
               display_name: Umfrage
         csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-3:
+              display_name: Kapitel 2
+            lessonGroup-4:
+              display_name: Einführung in AppLab
+        csd7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Kapitel 1
@@ -4049,6 +4186,8 @@ de:
           title: Befragung zu „Grundsätze der Informatik“ nach dem Kurs
         csp-post-survey-2023:
           title: Befragung zu „Grundsätze der Informatik“ nach dem Kurs
+        csp-post-survey-2024:
+          title: Befragung zu „Grundsätze der Informatik“ nach dem Kurs
         csp-pre-survey:
           name: csp-vor-befragung
           title: CS-Prinzipien Vor-Befragung
@@ -4138,6 +4277,12 @@ de:
             csp_unit1_2020:
               display_name: 'Einheit 1: Digitale Informationen'
         csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Umfrage
+            csp_unit1_2020:
+              display_name: 'Einheit 1: Digitale Informationen'
+        csp1-2024:
           lesson_groups:
             cspSurvey:
               display_name: Umfrage
@@ -4246,6 +4391,12 @@ de:
             lessonGroup-2:
               display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
         csp10-2023:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Lerneinheit 10: Cybersicherheit und globale Auswirkungen'
+            lessonGroup-2:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csp10-2024:
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Lerneinheit 10: Cybersicherheit und globale Auswirkungen'
@@ -4415,6 +4566,17 @@ de:
             Sie, wie die verschiedenen Protokolle des Internets funktionieren, und
             erstellen Sie sie mit dem Internet-Simulator selbst. Denken Sie dann an
             die guten und schlechten Auswirkungen des Internets auf das moderne Leben.
+        csp2-2024:
+          description_short: Erstellen Sie das Internet mit dem Internet-Simulator
+            von Grund auf.
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Lektion 2: Das Internet'
+          student_description: Diese Einheit zeigt, wie das Internet konzipiert wurde,
+            um Milliarden von Geräten und Menschen miteinander zu verbinden. Erfahren
+            Sie, wie die verschiedenen Protokolle des Internets funktionieren, und
+            erstellen Sie sie mit dem Internet-Simulator selbst. Denken Sie dann an
+            die guten und schlechten Auswirkungen des Internets auf das moderne Leben.
         csp2-dlp:
           description: Dies ist Lerneinheit 2 des Plans für Vertieftes Lernen von
             Code.org - Grundsätze der Informatik für Moderatoren in der Ausbildung.
@@ -4565,6 +4727,10 @@ de:
             csp_unit3_2020:
               display_name: 'Lerneinheit 3: Einführung in das App Design '
         csp3-2023:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Lerneinheit 3: Einführung in das App Design '
+        csp3-2024:
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Lerneinheit 3: Einführung in das App Design '
@@ -4818,6 +4984,16 @@ de:
               display_name: Projekt
             csp_variables:
               display_name: Variablen
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Bedingungen
+            csp_functions:
+              display_name: Funktionen
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: Variablen
         csp4-dlp:
           description: Dies ist Lerneinheit 4 des Plans für Vertieftes Lernen von
             Code.org - Grundsätze der Informatik für Moderatoren in der Ausbildung.
@@ -5035,6 +5211,12 @@ de:
               display_name: Traversierungen
             lessonGroup-5:
               display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Daten
+            lessonGroup-5:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
         csp5-dlp:
           description: Dies ist Lerneinheit 5 des Plans für Vertieftes Lernen von
             Code.org - Grundsätze der Informatik für Moderatoren in der Ausbildung.
@@ -5181,6 +5363,18 @@ de:
               display_name: Traversierungen
             lessonGroup-5:
               display_name: Projekt
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listen
+            lessonGroup-2:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+            lessonGroup-3:
+              display_name: Schleifen
+            lessonGroup-4:
+              display_name: Traversierungen
+            lessonGroup-5:
+              display_name: Projekt
         csp6-pilot:
           lesson_groups:
             content:
@@ -5236,6 +5430,14 @@ de:
               display_name: Parameter und Rückgabewerte
             lessonGroup-3:
               display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csp7-2024:
+          lesson_groups:
+            csp_libraries:
+              display_name: Bibliotheken
+            csp_parameters_return_values:
+              display_name: Parameter und Rückgabewerte
+            lessonGroup-3:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
         csp7-pilot:
           lesson_groups:
             csp_libraries:
@@ -5274,6 +5476,12 @@ de:
               display_name: PT Erstellen
             lessonGroup-3:
               display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csp8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: PT Erstellen
+            lessonGroup-3:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
         csp8-pilot:
           title: Grundsätze der Informatik Lerneinheit 8 Pilot - PT-Vorbereitung erstellen
         csp8-pilot-staging:
@@ -5307,6 +5515,12 @@ de:
             lessonGroup-2:
               display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
         csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Lektion 9: Daten'
+            lessonGroup-2:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csp9-2024:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Lektion 9: Daten'
@@ -6656,7 +6870,7 @@ de:
           description_short: Erkunde eine Minecraft-Welt durch programmieren
           student_description: Verwende Code-Bausteine, um Steve oder Alex auf einem
             Abenteuer durch die Minecraft-Welt zu begleiten.
-          title: Minecraft Hour of Code
+          title: Minecraft Abenteurer
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -6683,6 +6897,10 @@ de:
           student_description: Baue ein Minecraft-Spiel. Erschaffe deine eigene Version
             von Hühnern, Schafen, Creepern, Zombies und mehr.
           title: 'Mincecraft-Designer: Stunde des Codes'
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Freies Spiel
         netsim:
           description: Erfahren Sie, wie das Internet funktioniert.
           description_short: Erfahren Sie, wie das Internet funktioniert.
@@ -7187,6 +7405,41 @@ de:
           title: 'Modul 2: Navigieren in Code.org'
         self-paced-pl-csa2-2023:
           title: 'Modul 2: Navigieren in Code.org'
+        self-paced-pl-csd-unit1-2-2023:
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf
+            den Unterricht der Code.org-Stunde \"Problemlösung und Informatik\" vor.
+            \n\n**Aktivitäten in diesem professionellen Lernmodul:**\n\n– Sie erhalten
+            eine Einführung in das Problemlösen und die Informatik.\n– Sie üben die
+            wichtigsten Konzepte der Unterrichtseinheit.\n– Sie erkunden die Projekte
+            am Ende des Kapitels.\n\n**Geschätzte Dauer:** 30 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich
+            auf den Unterricht der Code.org-Stunde \"Problemlösung und Informatik\"
+            vor. \n\n**Aktivitäten in diesem professionellen Lernmodul:**\n\n– Sie
+            erhalten eine Einführung in das Problemlösen und die Informatik.\n– Sie
+            üben die wichtigsten Konzepte der Unterrichtseinheit.\n– Sie erkunden
+            die Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 30 Minuten"
+          title: 'Modul 1: Vorbereitung auf den Unterricht Problemlösung und Informatik'
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Modul 2: Vorbereitung auf das Unterrichten der Webentwicklung'
+        self-paced-pl-csd-unit3-2-2023:
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf
+            den Unterricht der Code.org-Stunde Interaktive Animationen und Spiele
+            vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung
+            in interaktive Animationen und Spiele.\n– Üben der wichtigsten Konzepte
+            der Unterrichtseinheit.\n– Beschäftigung mit Game Lab.\n– Erkunden der
+            Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich
+            auf den Unterricht der Code.org-Stunde Interaktive Animationen und Spiele
+            vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung
+            in interaktive Animationen und Spiele.\n– Üben der wichtigsten Konzepte
+            der Unterrichtseinheit.\n– Beschäftigung mit Game Lab.\n– Erkunden der
+            Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+          title: Vorbereitung auf das Unterrichten von interaktiven Animationen und
+            Spielen
+        self-paced-pl-csd-unit4-2-2023:
+          title: " Modul 4: Vorbereitung auf das Unterrichten des Design-Prozesses"
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Modul 5: Vorbereitung auf den Unterricht Fakten und Gesellschaft'
         self-paced-pl-csd1-2021:
           description: "Dieses Modul ist eine kurze Einführung sowohl in Code.org
             als auch in diesen professionellen Lernkurs. \n\n\\*\\*Aktivitäten des
@@ -7529,6 +7782,29 @@ de:
           title: 'Modul 2: Navigieren in Code.org'
         self-paced-pl-csp2-2023:
           title: 'Modul 2: Navigieren in Code.org'
+        self-paced-pl-k5-2024-1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Erste Schritte
+          lessons:
+            lesson-3:
+              name: Schleifen
+            lesson-4:
+              name: Bedingungen
+            lesson-6:
+              name: Nächste Schritte
+          title: Einführung in die Informatik
+        self-paced-pl-k5-2024-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Erste Schritte
+          lessons:
+            lesson-3:
+              name: Ereignisse
+            lesson-4:
+              name: Verhaltensweisen
+            lesson-5:
+              name: Nächste Schritte
         soccer:
           description: Entwickle ein Fußballspiel
           description_short: Entwickle ein Fußballspiel
@@ -7776,6 +8052,25 @@ de:
               display_name: Inhalt
             csd3_2:
               display_name: 'Kapitel 2: Erstellen von Spielen'
+        virtual-pl-csa-summer-2024-day1:
+          title: Tag 1
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Einführung
+          lessons:
+            lesson-7:
+              name: Einführung
+          title: Tag 1
+        virtual-pl-csa-summer-day2:
+          title: Tag 2
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Einführung
+          title: Tag 3
+        virtual-pl-csa-summer-day4:
+          title: Tag 4
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -7802,6 +8097,17 @@ de:
           lessons:
             lesson-3:
               name: Prüfung
+        virtual-pl-csp-summer-day1:
+          title: Tag 1
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Einführung
+          title: Tag 2
+        virtual-pl-csp-summer-day3:
+          title: Tag 3
+        virtual-pl-csp-summer-day4:
+          title: Tag 4
         virustest:
           description_short: 'Entwickle mit Sprite Lab die Simulation eines Virenausbruchs. '
           title: Simulieren eines Ausbruchs
@@ -8081,6 +8387,14 @@ de:
           title: Modul 7
         vpl-csp-2023-m8:
           title: Modul 8
+        web-dev-2024:
+          student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren
+            eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden
+            haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie
+            Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem
+            üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging,
+            Verwendung von Ressourcen und Teamarbeit.
+          title: Webentwicklung
         web-development-2023:
           lesson_groups:
             lessonGroup-4:

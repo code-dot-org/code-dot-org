@@ -16,7 +16,8 @@
 }
 
 .thumbnail-title {
-  font-family: "Gotham 7r", sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);
 }
 
 .tool-links {

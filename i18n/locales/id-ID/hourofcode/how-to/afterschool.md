@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: Panduan How-To Hour of Code untuk Setelah Sekolah
 ---
 
 {{ signup_button }}
@@ -10,7 +10,7 @@ title: Hour of Code How-to Guide for After-school
 
 Pemikirian komputasional membantu pengembangan keahlian memecahkan masalah, logika, dan kreativitas. Dan teknologi berhasil merombak setiap industri di planet ini. Siswa di masa ini harus belajar cara menciptakan teknologi, bukan hanya menggunakannya. Dengan memulai sejak dini, mereka akan memiliki pondasi menuju kesuksesan karier pada abad 21 ini.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+Mencoba Hour of Code adalah cara sederhana dan menyenangkan untuk memperkenalkan siswa pada ilmu komputer, mungkin untuk pertama kalinya. Jika Anda ingin satu set tangan tambahan untuk membantu, Anda dapat menemukan sukarelawan [lokal]({{ urls/volunteer_local }}) untuk membantu menjalankan Hour of Code di kelas atau klub setelah sekolah Anda.
 
 ### Hour of Code juga bisa diselenggarakan secara jarak jauh! Untuk memulai, lihat kiat [kami untuk menggelar acara Hour of Code virtual](https://hourofcode.com/us/how-to/virtual).
 
@@ -20,7 +20,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 ## 2. Pilih tutorial
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+Kami menyediakan berbagai tutorial [menyenangkan selama satu jam]({{ urls/learn }}) untuk peserta segala usia, dibuat oleh berbagai mitra. [Cobalah mereka!]({{ urls/learn }})
 
 **Semua Tutorial Hour of Code**memerlukan waktu minimal persiapan untuk mengorganisir, dan panduan mandiri- memungkinkan anak-anak bekerja pada langkahnya sendiri dan level keahlian.
 
@@ -30,7 +30,7 @@ We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for partici
 
 ## 3. Promosikan Jam Kode Anda
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+Promosikan Hour of Code Anda [dengan alat-alat ini]({{ urls/promote }}) dan dorong orang lain untuk menyelenggarakan acara mereka sendiri.
 
 ## 4. Rencanakan kebutuhan teknologi komputer Anda - bersifat opsional
 
@@ -57,23 +57,23 @@ Mulai Hour of Code Anda dengan menginspirasi peserta dan diskusi bagaimana ilmu 
 
 - Jelaskan cara teknologi berdampak pada kehidupan kita, dengan berbagai contoh yang anak laki-laki dan perempuan akan peduli (bicara tentang aplikasi dan teknologi yang digunakan untuk menyelamatkan nyawa, membantu orang, menghubungkan orang, dll).
 - Daftar hal-hal yang menggunakan pemrograman dalam kehidupan sehari-hari.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Lihat tips untuk membuat anak perempuan tertarik pada ilmu komputer [di sini]({{ urls/girls }}).
 
 **Butuh bimbingan lebih lanjut?** Download ini [ template rencana pelajaran](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6. Kode!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**Arahkan peserta ke aktivitas** - Tulis tautan tutorial di papan tulis. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Ayo cari solusinya bersama-sama.” - “Teknologi tidak selalu bekerja sesuai keinginan kita” - “Belajar membuat program seperti mempelajari bahasa baru; kamu tidak akan langsung bisa melakukannya.”
+**Ketika seseorang menemukan kesulitan, tidak apa-apa untuk menjawab:** - “Saya tidak tahu. Ayo cari solusinya bersama-sama.” - “Teknologi tidak selalu bekerja sesuai keinginan kita” - “Belajar membuat program seperti mempelajari bahasa baru; kamu tidak akan langsung bisa melakukannya.”
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+**Apa yang harus dilakukan jika seseorang selesai lebih awal?** - Dorong peserta untuk mencoba aktivitas Hour of Code lainnya di [hourofcode.com/learn]({{ urls/learn }}) - Atau, mintalah mereka yang selesai lebih awal untuk membantu orang lain yang mengalami masalah.
 
 ## 7. Rayakan
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
+- [Cetak sertifikat]({{ urls/certificates }}) untuk siswa Anda.
+- [Cetak “Saya melakukan Hour of Code!”]({{ promote/resources_stickers }}) stiker untuk siswa Anda.
+- [Pesan kaos khusus](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) untuk peserta.
 - Bagikan foto dan video Jam Pemrograman Anda pada media sosial. Gunakan tautan #HourOfCode dan @codeorg sehingga kami dapat menyoroti keberhasilan Anda juga!
 
 ## Sumber lain Hour of Code untuk pendidik
@@ -85,6 +85,6 @@ Mulai Hour of Code Anda dengan menginspirasi peserta dan diskusi bagaimana ilmu 
 
 ## Apa yang diharapkan selanjutnya setelah Jam Pemrograman?
 
-Jam Pemrograman adalah langkah pertama dalam suatu perjalanan untuk mempelajari lebih lanjut tentang bagaimana teknologi bekerja dan bagaimana untuk membuat aplikasi perangkat lunak. Help students continue their journey and encourage them to [learn more online](/beyond)!
+Jam Pemrograman adalah langkah pertama dalam suatu perjalanan untuk mempelajari lebih lanjut tentang bagaimana teknologi bekerja dan bagaimana untuk membuat aplikasi perangkat lunak. Bantu siswa melanjutkan perjalanan mereka dan dorong mereka untuk [belajar lebih banyak secara online](/beyond)!
 
 {{ signup_button }}

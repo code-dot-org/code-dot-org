@@ -398,3 +398,5 @@ ko:
       timeforcs_demo_conditionals:
         title: 조건
         desc: 학생들은 조건선택 명령문을 학습하기 위해서 카드 게임과 규칙을 만든다. 예를 들어 "빨간 카드를 가져오면 내가 점수를 얻는다"나 "검정 카드를 가져오면 상대방이 점수를 얻는다"등과 같은 규칙이다. 
+      Unplugged- Melissa Sandbox:
+        title: 언플러그드

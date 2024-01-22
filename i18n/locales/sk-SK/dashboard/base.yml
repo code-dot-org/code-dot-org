@@ -53,6 +53,7 @@ sk:
         gender: 'Pohlavie'
         edit_header: 'Upraviť nastavenia účtu'
         finish_sign_up_header: 'Dokončite vytvorenie svojho účtu'
+        finish_sign_up_header_error: 'Opravte tieto chyby:'
         finish_sign_up_subheader: 'Vyplň nasledujúce informácie na dokončenie vytvorenia Code.org účtu pre <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Vyplň nasledujúce informácie na dokončenie vytvorenia Code.org účtu pre **%{email}**.'
         finish_sign_up_subheader_provider: 'Vyplň nasledujúce informácie na dokončenie vytvorenia Code.org účtu s <strong>%{provider}</strong> pre <strong>%{email}</strong>.'
@@ -60,6 +61,7 @@ sk:
         reset_password_token: "Odkaz na obnovenie hesla, ktorý si použil"
         error:
           future: nemôže byť v budúcnosti
+        user_type: 'Typ účtu'
         us_state: 'Kraj'
   beta: "beta"
   hello: "Ahoj svet"
@@ -350,9 +352,10 @@ sk:
       report_bug: "Nahlásiť chybu"
       report_abuse: "Nahlásiť zneužitie"
       teacher_community: "Komunita učiteľov"
-      professional_learning: "Vzdelávanie pre profesionálov"
+      professional_learning: "Profesijný rozvoj"
       documentation: "Dokumentácia"
       tutorials: "Návody"
+      app_lab_documentation: "Dokumentácia aplikácie Lab"
       app_lab_tutorials: "App Lab Návody"
       game_lab_documentation: "Dokumentácia Game Lab"
       game_lab_tutorials: "Návody na herné laboratórium"
@@ -369,6 +372,7 @@ sk:
       educate_beyond: "Nad rámec Code.org"
       educate_inspire: "Inšpiruj študenta"
       educate_community: "Online komunita"
+      educate_requirements: "Technické požiadavky"
       educate_tools: "Nástroje a videá"
       about_us: "O nás"
       about_leadership: "Vedenie"
@@ -1144,13 +1148,16 @@ sk:
         israel: 'Izrael'
         jamaica: 'Jamajka'
         kenya: 'Keňa'
+        kosovo: 'Kosovo'
         malaysia: 'Malajzia'
         maldives: 'Maledivy'
         mexico: 'Mexiko'
         mongolia: 'Mongolsko'
         new_zealand: 'Nový Zéland'
         paraguay: 'Paraguaj'
+        philippines: 'Filipíny'
         portugal: 'Portugalsko'
+        puerto_rico: 'Portoriko'
         slovakia: 'Slovensko'
         south_korea: 'Južná Kórea'
         spain: 'Španielsko'
@@ -1305,4 +1312,3 @@ sk:
   course_deprecated:
     title: "Hlavy hore! Tento učebný plán už nie je k dispozícii, ale Code.org má pre vás k dispozícii novšie možnosti."
     button: "Zobraziť nové učebné osnovy"
-

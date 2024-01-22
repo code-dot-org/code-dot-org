@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: კოდის საათის სახელმძღვანელო სკოლის შემდეგ
 ---
 
 {{ signup_button }}
@@ -10,9 +10,9 @@ title: Hour of Code How-to Guide for After-school
 
 გამოთვლითი აზროვნება გვეხმარება პრობლემების გადაწყვეტის უნარების, ლოგიკის და კრეატიულობის განვითარებაში. ტექნოლოგია მსოფლიოში ყველა ინდუსტრიას ცვლის. დღეს, მოსწავლეებმა უნდა ისწავლონ, თუ როგორ შექმნან ტექნოლოგია და არა მხოლოდ გამოიყენონ ის. ადრეულ ასაკში დაწყებით მათ ექნებათ საფუძველი, რომელიც გამოადგებათ 21-ე საუკუნის ნებისმიერ პროფესიაში.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+კოდის საათის გამოცდება მარტივი და სახალისო გზაა სტუდენტებს კომპიუტერული მეცნიერების გაცნობის მიზნით, ალბათ პირველად. თუ გსურთ დამატებითი ხელების ნაკრები დასახმარებლად, შეგიძლიათ იპოვოთ ადგილობ [რივი მოხალისე, რომელიც დაგეხმარებათ კ]({{ urls/volunteer_local }}) ოდის საათის განხორციელებაში თქვენს სკოლის შემდგომი კლასში ან კლუბში.
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### კოდის საათის მასპინძლობა ასევე შესაძლებელია დისტანციურად! დასაწყებად, გადახედეთ ჩვენს რ [ჩევებს ვირტუალური კოდის საათის ღონისძიების მასპინძლ](https://hourofcode.com/us/how-to/virtual)ობის შესახებ
 
 * * *
 
@@ -20,7 +20,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 ## 2. აირჩიეთ ტუტორიალი
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+ჩვენ გთავაზობთ სხვადასხვა სახალის [ო, საათიანი გაკვეთილებს ყველა ასაკ]({{ urls/learn }}) ის მონაწილეებისთვის, რომლებიც შექმნილია სხვადასხვა პარტნიორების მიერ. [სცადეთ ისინი!]({{ urls/learn }})
 
 **კოდის ერთი საათის ყველა ტუტორიალი** საჭიროებს ორგანიზატორების მინიმალურ მოსამზადებელ დროს, ხელს უწყობს დამოუკიდებელ მუშაობას - აძლევს საშუალებას ბავშვებს იმუშავონ მათი ტემპის და უნარების შესაბამისად.
 
@@ -30,7 +30,7 @@ We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for partici
 
 ## 3. გაუწიეთ პოპულარიზაცია კოდის ერთ საათს
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+პოპულარიზაცია გაუწი [ეთ თქვენი კოდის საათს ამ]({{ urls/promote }}) ინსტრუმენტებით და წაახალისეთ სხვებს, უმასპინ
 
 ## 4. დაგეგმეთ, რა ტექნიკა დაგჭირდებათ - კომპიუტერი აუცილებელი არ არის
 
@@ -57,7 +57,7 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 - ისეთი მაგალითებით, როგორიც ბიჭებისთვისაც და გოგოებისთვისაც საინტერესო იქნება, ახსენით თუ რა გზებით ახდენს ტექნოლოგიები გავლენას ჩვენს ცხოვრებაზე (ისაუბრეთ აპლიკაციებსა და ტექნოლოგიაზე, რომელიც გამოიყენება ხალხის გადასარჩენად, დასახმარებლად, გასაერთიანებლად, ა. შ.).
 - ჩამოწერეთ რაღაცები ყოველდღიური ცხოვრებიდან, რომლებშიც კოდი გამოიყენება.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- იხილეთ რჩევები გოგონების კომპიუტერული მეცნიერებით [დაინტერ]({{ urls/girls }})ესებისთვის
 
 **უფრო ზუსტი ინსტრუქციები გჭირდებათ?** ჩამოტვირთეთ ეს [სანიმუშო გაკვეთილის გეგმა](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
@@ -65,15 +65,15 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 **მიეცით მონაწილეებს მითითებები აქტივობის შესახებ** - დაწერეთ ტუტორიალის ბმული დაფაზე. ბმული შეგიძლიათ იპოვოთ[ ტუტორიალის შესახებ ინფორმაციაში]({{ urls/learn }}), მონაწილეთა რაოდენობის ქვემოთ.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. მოდი ერთად მოვიფიქროთ.” - “ტექნოლოგია ყოველთვის არ მუშაობს იმგვარად, როგორც ცვენ გვინდა.” - “პროგრამირების სწავლა ახალი ენის სწავლას ჰგავს; უცბად ვერ დაეუფლები მაღალ დონეზე”
+**როდესაც ვინმე სირთულეებს შეხვდება, კარგია უპასუხოთ:** - „არ ვიცი. მოდი ერთად მოვიფიქროთ.” - “ტექნოლოგია ყოველთვის არ მუშაობს იმგვარად, როგორც ცვენ გვინდა.” - “პროგრამირების სწავლა ახალი ენის სწავლას ჰგავს; უცბად ვერ დაეუფლები მაღალ დონეზე”
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+**რა უნდა გავაკეთოთ, თუ ვინმე ადრე დასრულებს?** - წახალისეთ მონაწილეებს სცადონ კოდის საათის კიდევ ერთი აქტივობა [hourofcode.com/learn]({{ urls/learn }}) — ან სთხოვეთ მათ, ვინც ადრე დაასრულებს, დაეხმარონ სხვებს, ვისაც პრობლემ
 
 ## 7. აღნიშნეთ
 
 - [დაბეჭდეთ სერტიფიკატები]({{ urls/certificates }}) თქვენი მოსწავლეებისთვის.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
+- [დაბეჭდეთ „მე კოდის საათი გავაკეთე!“]({{ promote/resources_stickers }}) სტიკერები თქვენი სტუდენტებისთვის.
+- [შეუკვეთეთ მონაწილე](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) ებისთვის ინდივიდუალური
 - გააზიარეთ თქვენი კოდის ერთი საათის სურათები და ვიდეოები სოციალურ მედიაში. გამოიყენეთ #HourOfCode და @codeorg — ასე ჩვენც შევძლებთ გავაზიაროთ თქვენი წარმატება!
 
 ## კოდის ერთი საათის სხვა რესურსები მასწავლებლებისთვის
@@ -85,6 +85,6 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## რა ხდება კოდის ერთი საათის შემდეგ?
 
-კოდის ერთი საათი ტექნოლოგიებისა და პროგრამირების შესწავლის ერთი პატარა ეტაპია. Help students continue their journey and encourage them to [learn more online](/beyond)!
+კოდის ერთი საათი ტექნოლოგიებისა და პროგრამირების შესწავლის ერთი პატარა ეტაპია. დაეხმარეთ სტუდენტებს გააგრძელონ თავიანთი მოგზაურობ [ა და წაახალ](/beyond)ისეთ
 
 {{ signup_button }}

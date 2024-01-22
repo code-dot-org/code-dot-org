@@ -9,18 +9,6 @@ require 'dynamic_config/adapters/json_file_adapter'
 require 'dynamic_config/adapters/memory_adapter'
 
 class DCDOBase < DynamicConfigBase
-  # Adds a listener whose on_change() method will be invoked at least
-  # once whenever the configuration changes. The on_change() method
-  # will be invoked on an arbitrary thread and must not block.
-  def add_change_listener(listener)
-    @datastore_cache.add_change_listener(listener)
-  end
-
-  # Updates the cached configuration, for testing only.
-  def update_cache_for_test
-    @datastore_cache.update_cache
-  end
-
   # Factory method for creating DCDOBase objects
   # @returns [DCDOBase]
   def self.create
@@ -42,16 +30,19 @@ class DCDOBase < DynamicConfigBase
     {
       'frontend-i18n-tracking': DCDO.get('frontend-i18n-tracking', false),
       clearerSignUpUserType: DCDO.get('clearerSignUpUserType', false),
-      'csa-homepage-banner-2022': DCDO.get('csa-homepage-banner-2022', false),
-      'csa-skinny-banner': DCDO.get('csa-skinny-banner', false),
-      'csta-form-extension': DCDO.get('csta-form-extension', false),
+      'pl-teacher-application-off-season': DCDO.get('pl_teacher_application', false),
       'pl-launch-hero-banner': DCDO.get('pl-launch-hero-banner', false),
-      'curriculum-launch-hero-banner': DCDO.get('curriculum-launch-hero-banner', false),
-      'curriculum-launch-skinny-banner': DCDO.get('curriculum-launch-skinny-banner', false),
-      'ai-pl-launch-banners': DCDO.get('ai-pl-launch-banners', false),
-      'family-name-features': DCDO.get('family-name-features', false),
+      'csta-form-extension': DCDO.get('csta-form-extension', false),
       cpa_experience: DCDO.get('cpa_experience', false),
       gender: DCDO.get('gender', false),
+      'amplitude-event-sample-rates': DCDO.get('amplitude-event-sample-rates', {}),
+      # Whether to allow the user to toggle between the v1 and v2 progress tables.
+      'progress-table-v2-enabled': DCDO.get('progress-table-v2-enabled', false),
+      # Whether to show the v1 or v2 progress table by default.
+      'progress-table-v2-default-v2': DCDO.get('progress-table-v2-default-v2', false),
+      # Whether the scholarship dropdown is locked on the application dashboard.
+      'scholarship-dropdown-locked': DCDO.get('scholarship-dropdown-locked', true),
+      hoc_mode: DCDO.get('hoc_mode', false),
     }
   end
 end

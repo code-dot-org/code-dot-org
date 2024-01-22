@@ -133,7 +133,7 @@ Az iskolával vagy a tanárral közösen beszéljétek meg, hogy mi a legcélrav
 - Magyarázza el, hogy a technológia hogyan befolyásolja az életünket, olyan példákat mondjon, amelyek minden diákot érdekelhetnek, a hátterüktől függetlenül - technológiák, amely életeket mentenek, segítenek az embereknek, összekötik az embereket.
 - Ha technológiai vállalatnál dolgozik, mutassa be a cég szórakoztató és innovatív termékeit. Ha nem, beszéljen aról, hogy a cég hogyan használja a technológiát problémamegoldásra és céljai elérésére.
 - Győzz meg programozókat a vállalatodtól, hogy mondják el miért lettek programozók és jelenleg milyen projekteken dolgoznak épp.
-- Ha több munkatársad segíti az eseményt, vagy önkéntesként dolgozik egy helyi iskolában, fontold meg [egyedi pólók](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) megrendelését a csoport számára.
+- Ha van olyan munkatársa, aki megkönnyíti az eseményt vagy önkéntes munkát egy helyi iskolában, fontolja meg [egyedi pólók rendel](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) ését a csoport számára.
 
 ### 3. Tervezze meg, hogy milyen technológiára lesz szükség
 
@@ -186,7 +186,7 @@ A támogatás egyik legjobb módja a szájpropaganda és a Kódolás órájának
 
 ### 1. Regisztrálja a saját eseményét
 
-Miután [regisztrálsz egy Kódolás órájára](/#csatlakozás), e-mail üzeneteket fogsz kapni, amelyben híreket küldünk és hasznos ötleteket adunk ahhoz, hogy Kódolás óráját eredményesen meg tudjátok tartani. Így a helyi iskolákat és szülőket is lehet értesíteni a közelben rendezendő eseményről.
+Amikor felir [atkozik a Hour of Code eseményre](/events), hasznos e-mailes üzeneteket fog kapni hírekkel és tippekkel a sikeres kódolási óra megszervezéséhez. Így a helyi iskolákat és szülőket is lehet értesíteni a közelben rendezendő eseményről.
 
 ### 2. Posztoljon a közösségi médiában
 

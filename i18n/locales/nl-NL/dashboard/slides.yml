@@ -543,6 +543,9 @@ nl:
         text: "Het andere blok in deze puzzel zegt \"Draai 90 graden rechtsom\". Wanneer we deze \"Draai Rechts\" blok gebruiken, zorgt dit ervoor dat de tekenaar een bepaalde draai maakt. Je kan er dus mee spelen hoe ver je de tekenaar wil laten draaien. Dit is een draai van 90 graden."
       5:
         text: "En dit is een 120 graden draai. En vergeet niet, u kunt deze waarden wijzigen door op de pijlen naast de cijfers voor pixels en graden te klikken. Geniet van het tekenen met uw artiest!"
+    C3_artist_nested_loops:
+      1:
+        text: "Wanneer je een lus in een andere lus plaatst, noemen we dat een geneste lus. Hier zien we bijvoorbeeld code om één driehoek te tekenen met kanten van 100 pixels met het herhaal-blok ingesteld op drie; één keer voor elke kant van de driehoek."
     C3_bee_conditionals:
       1:
         text: "Dit is een voorwaardelijk blok. Het zegt ALS de nektar of honing minder dan, gelijk aan of meer dan een bepaald getal is DAN iets doen."

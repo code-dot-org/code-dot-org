@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import fontConstants from '@cdo/apps/fontConstants';
 import color from '@cdo/apps/util/color';
 
 const PROGRESS_BOX_SIZE = 20;
@@ -94,6 +95,6 @@ const styles = {
     paddingTop: 2,
     textAlign: 'center',
     width: PROGRESS_BOX_SIZE,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
   },
 };

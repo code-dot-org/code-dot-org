@@ -4,12 +4,14 @@ ja:
     attributes:
       user:
         age: 年齢
+        ai_settings_header: AI設定
         current_password: 現在のパスワード
         edit_header: アカウント詳細を編集する
         email: Eメール
         error:
           future: 現在までの日付にする
         finish_sign_up_header: アカウントの作成を完了します
+        finish_sign_up_header_error: 次の間違い（エラー）を正しく直してください。
         finish_sign_up_subheader: "<strong>%{email}</strong>のCode.orgアカウント作成を完了するには、次の情報を入力してください。"
         finish_sign_up_subheader_markdown: "**%{email}**のCode.orgアカウント作成を完了するには、次の情報を入力してください。"
         finish_sign_up_subheader_provider: "<strong>%{email}</strong>の<strong>%{provider}</strong>でCode.orgアカウント作成を完了するには、次の情報を入力してください。"
@@ -25,6 +27,7 @@ ja:
         personal_email_markdown: 個人のEメールアドレス [(メール アドレスを持っていない場合はここをクリック)](%{url})
         reset_password_token: あなたがフォローしたパスワードのリセットリンク
         us_state: 都道府県
+        user_type: アカウントの種類
         username: ユーザー名
         verified_teacher: 認定教師
     errors:
@@ -54,7 +57,7 @@ ja:
     already_linked: "%{provider}アカウントはすでにあなたのCode.orgアカウントにリンクされています。"
     already_signedup: もうサインアップしましたか？
     clever: Cleverアカウント
-    continue_with: "%{provider} で続きます"
+    continue_with: "%{provider} を使用してサインインする"
     demigration_success: あなたのアカウントで新しいアカウントエクスペリエンスが無効となりました。
     disconnect_successful: 成功しました！Code.orgアカウントから外部アカウントが切断されました。
     existing_account:

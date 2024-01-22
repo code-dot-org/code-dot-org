@@ -43,7 +43,11 @@ export const LegacyMatchAngiGifDialog = () => (
       <p className="dialog-title">{i18n.instructions()}</p>
       <p>{i18n.dragBlocksToMatch()}</p>
       <div className="aniGif example-image" style={{overflow: 'hidden'}}>
-        <img src="/script_assets/images/matching_ani.gif" />
+        {
+          // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+          // Verify or update this alt-text as necessary
+        }
+        <img src="/script_assets/images/matching_ani.gif" alt="" />
       </div>
       <div className="farSide">
         <button type="button" id="ok-button">

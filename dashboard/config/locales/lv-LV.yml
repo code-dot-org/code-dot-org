@@ -9,12 +9,14 @@ lv:
         email: E-pasts
         error:
           future: nevar būt nākotnē
+        finish_sign_up_header_error: 'Lūdzu, izlabojiet šādas kļūdas:'
         gender: Dzimums
         locale: Valoda
         name: Vārds ekrānā
         parent_email: Vecāka/aizbildņa e-pasts
         password: Parole
         password_confirmation: Paroles apstiprinājums
+        user_type: Konta tips
         username: Lietotājvārds
     errors:
       messages:

@@ -5,7 +5,7 @@ title: Как да бъдете домакин на Hour of Code - за фирм
 {{ signup_button }}
 
 # Как да проведете Hour of Code във Вашата компания
-### Find out how you and your employees can inspire students to try computer science!
+### Разберете как вие и вашите служители можете да вдъхновите учениците да опитат компютърни науки!
 
 ***
 
@@ -67,7 +67,7 @@ We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participa
 - If you are a tech company, demo fun, innovative products your company is working on.
 - If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Вижте съвети за привличане на момичетата да се интересуват от компютърни науки [тук]({{ urls/girls }}).
 
 ## 6. Code!
 **Пряко участие в дейността**

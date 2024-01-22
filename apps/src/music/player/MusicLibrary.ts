@@ -2,6 +2,16 @@ import {ResponseValidator} from '@cdo/apps/util/HttpClient';
 import {Key} from '../utils/Notes';
 
 export default class MusicLibrary {
+  private static instance: MusicLibrary;
+
+  static getInstance(): MusicLibrary | undefined {
+    return this.instance;
+  }
+
+  static setCurrent(library: MusicLibrary) {
+    this.instance = library;
+  }
+
   name: string;
   groups: FolderGroup[];
   private allowedSounds: Sounds | null;

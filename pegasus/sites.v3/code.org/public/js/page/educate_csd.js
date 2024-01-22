@@ -41,12 +41,12 @@ function reorganizeAndWrapSlides(carouselId, cardsList) {
 }
 
 function handleScreenSize(carouselId) {
-  if (windowWidth > 639 && windowWidth < 799) {
+  if (windowWidth > 639 && windowWidth < 899) {
     reorganizeAndWrapSlides(carouselId, 2);
-    console.log("639 - 799");
-  } else if (windowWidth > 799) {
+    console.log("639 - 899");
+  } else if (windowWidth > 899) {
     reorganizeAndWrapSlides(carouselId, 3);
-    console.log("> 800");
+    console.log("> 900");
   }
 }
 

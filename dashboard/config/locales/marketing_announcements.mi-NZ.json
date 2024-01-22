@@ -1,0 +1,22 @@
+{
+  "mi-NZ": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "co-teacher": {
+            "buttonText": "Me ako tonu"
+          },
+          "hoc-2023": {
+            "buttonText": "Me ako tonu"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Me ako tonu"
+          },
+          "superhero": {
+            "buttonText": "Ako Tonu"
+          }
+        }
+      }
+    }
+  }
+}

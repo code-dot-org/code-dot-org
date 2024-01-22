@@ -1,0 +1,22 @@
+{
+  "az-AZ": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "co-teacher": {
+            "buttonText": "Daha ətraflı"
+          },
+          "hoc-2023": {
+            "buttonText": "Daha ətraflı"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Daha ətraflı"
+          },
+          "superhero": {
+            "buttonText": "Daha çox"
+          }
+        }
+      }
+    }
+  }
+}

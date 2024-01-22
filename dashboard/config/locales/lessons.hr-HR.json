@@ -257,6 +257,27 @@
         "pre-express-2019/Spelling Bee": {
           "name": "Slovkanje"
         },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Petlje"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Događaji"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Uvjeti"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funkcije"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Varijable"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Petlja brojača"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Lab likova"
+        },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Vesele karte"
         },
@@ -401,8 +422,62 @@
         "coursef-2022/The Internet": {
           "name": "Internet"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Sat programiranja 2013"
+        "csd1-2023/What is a Computer?": {
+          "name": "Što je računalo?"
+        },
+        "csd3-2023/Variables": {
+          "name": "Varijable"
+        },
+        "csd3-2023/Sprites": {
+          "name": "Likovi"
+        },
+        "csd3-2023/Text": {
+          "name": "tekst"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Uvjeti"
+        },
+        "csd3-2023/Functions": {
+          "name": "Funkcije"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Funkcije"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Funkcije"
+        },
+        "csd7-2023/Introduction to AI Lab": {
+          "name": "Uvod u AI laboratorij"
+        },
+        "coursea-2023/Happy Maps": {
+          "name": "Vesele karte"
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Pomakni, pomakni"
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Zapetljancije"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "Veliki događaj"
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Binarne narukvice"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Grafičko programiranje"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Odnosno programiranje"
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Uvjeti s kartama"
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Pisanje pjesama"
+        },
+        "coursef-2023/The Internet": {
+          "name": "Internet"
         },
         "artist/Artist": {
           "name": "Umjetnik"
@@ -433,12 +508,6 @@
         },
         "mc/Hour of Code 2015": {
           "name": "Minecraft Sat Kodiranja"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
         },
         "playlab/Play Lab": {
           "name": "Laboratorij igara"
@@ -778,6 +847,9 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Ekstremni izazov - sveobuhvatno"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Sat programiranja 2013"
         },
         "jigsaw/Jigsaw": {
           "name": "Slagalica"

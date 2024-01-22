@@ -10,6 +10,7 @@ ru:
         error:
           future: не может быть в будущем
         finish_sign_up_header: Завершите создание учетной записи
+        finish_sign_up_header_error: 'Исправьте следующие ошибки:'
         finish_sign_up_subheader: Заполните следующую информацию для завершения создания
           учётной записи на Code.org для <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Заполните следующую информацию для завершения
@@ -31,6 +32,7 @@ ru:
           нет электронной почты)](%{url})
         reset_password_token: Ссылка для восстановления пароля, по которой вы перешли,
         us_state: Штат (регион, область)
+        user_type: Тип учётной Записи
         username: имя пользователя
         verified_teacher: Проверенный Преподаватель
     errors:
@@ -320,8 +322,8 @@ ru:
       консультантов по вопросам образования</a> за поддержку в создании студии кода.
     tos: Условия предоставления услуг
     tos_short: Условия использования
-    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, логотип CODE и Час
-      кода&reg; являются товарными знаками Code.org."
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, Логотип CODE и Hour
+      of Code&reg; являются товарными знаками Code.org."
     translate: Помогите нам выполнить перевод на Ваш язык
     try_hour_of_code: Попробуйте Час кода!
     view_code: Смотреть Код

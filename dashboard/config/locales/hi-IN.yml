@@ -4,12 +4,14 @@ hi:
     attributes:
       user:
         age: उम्र
+        ai_settings_header: ए.आई. सेटिंग्स
         current_password: वर्तमान पासवर्ड
         edit_header: खाता विवरण संपादित करें
         email: ईमेल
         error:
           future: भविष्य में नहीं किया जा सकता
         finish_sign_up_header: अपना खाता बनाना समाप्त करें
+        finish_sign_up_header_error: 'कृपया निम्न गलतिया सुधारें:'
         finish_sign_up_subheader: "< div वर्ग के लिए एक Code.org खाता बनाना समाप्त
           करने के लिए निंन जानकारी भरें <strong>%{email}</strong>"
         finish_sign_up_subheader_markdown: "&lt; div वर्ग के लिए एक Code.org खाता
@@ -31,6 +33,7 @@ hi:
           है तो यहां क्लिक करें)](%{url})
         reset_password_token: आपके द्वारा अनुसरण किया गया रीसेट पासवर्ड लिंक
         us_state: राज्य
+        user_type: खाता प्रकार
         username: उपयोगकर्ता नाम
         verified_teacher: सत्यापित शिक्षक
     errors:

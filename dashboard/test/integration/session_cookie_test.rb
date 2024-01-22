@@ -38,6 +38,6 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
     get '/hoc/1',
       headers: {'Cache-Control' => 'no-cache'},
       env: {'rack-cache.allow_reload' => true}
-    assert_not_nil cookies['_learn_session_test']
+    refute_nil cookies['_learn_session_test']
   end
 end

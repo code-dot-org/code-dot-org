@@ -11,7 +11,7 @@ layout: wide
 
 # 創建和提交一小時玩程式™ 和計算機科學教育週的教程和課程的指南
 
-Code.org 在 Code.org 和「一小時玩程式」網站上舉辦各種各樣的「一小時玩程式™」活動、課程和影片。 The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org 在 Code.org 和「一小時玩程式」網站上舉辦各種各樣的「一小時玩程式™」活動、課程和影片。 目前的清單位於學 [習]({{ urls/learn }})。
 
 想要提交您自己的自導教程，老師主導的課程或機器人/製作者活動來解釋計算機科學原理？ 加入這個全球運動，幫助世界各地的參與者開始使用一小時的編程，或者進行多課程，為期一天或為期一周的活動進一步。
 
@@ -85,7 +85,7 @@ Code.org 在 Code.org 和「一小時玩程式」網站上舉辦各種各樣的�
 
 這些活動應教授計算機科學概念，如循環，條件，加密或互聯網是如何工作的。 一項活動還可以教導計算機科學如何與現實世界的職業，事件或歷史聯繫起來。 例如，教導 UX 設計以製作對受眾或事業有意義的應用程序。 我們不鼓勵專注於編程語法而不是概念的活動。 例如，我們將列出，但不強調，教 HTML 的活動。 同樣，我們不鼓勵阻止編程課程，這些課程專注於設置/更改配置選項，而不是學習如何建模算法或過程。
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). 需要安裝應用程式、桌面應用程式或遊戲主機體驗的活動可以，但並不理想。 我們不會列出需要註冊或付款的活動。 （機器人活動可能需要購買機器人技術。）
+*技術要求：* 由於學校和教室的技術設置種類繁多，因此最好的活動是基於 Web 或智能手機友好的，或者不使用計算機即可教授計算機科學概念的其他未插拔式活動（見 http://csunplugged.com/）。 [](http://csunplugged.com/) 需要安裝應用程式、桌面應用程式或遊戲主機體驗的活動可以，但並不理想。 我們不會列出需要註冊或付款的活動。 （機器人活動可能需要購買機器人技術。）
 
 *學生主導（自助）格式：* 最初的「一小時玩程式編程」主要建立在自助式教程或課程的成功之上，並由老師選擇性地輔導。 有很多現有的選項, 但如果你想創建一個新的, 這些活動應該被設計，使他們可以是一個學生獨自工作的樂趣, 或在教室裡，其老師有最少的準備或 CS 背景. 他們應該為學生提供指導，而不是一個長達一小時的開放式挑戰。 理想情況下，說明和教程直接集成到編程平台中，以避免在教程和編程平台之間切換選項卡或窗口。
 
@@ -142,11 +142,11 @@ Code.org 在 Code.org 和「一小時玩程式」網站上舉辦各種各樣的�
     * 不插電活動
 * 「一小時玩程式」活動的截圖或市場推廣圖片。 請發送至少一張尺寸為 4：3 的圖像。 它至少應該是 520 像素乘以 390 像素。 此圖片上應該沒有任何文字 (您的標誌除外)，以便非英語使用者更容易使用。 如果沒有提供合適的圖像，我們可能會拍攝自己的教程屏幕截圖，或者我們可能會選擇不列出它。 所有影像都必須以連結至 .jpg、.jpeg 或 .png 的網址連結形式提交。
 * 為了更準確地追蹤參與情況，第三方教學合作夥伴必須在其「一小時玩程式」教學課程的第一頁加入 1 像素追蹤影像。 有關更多詳細信息，請參閱下面的 [跟踪像素](#pixel) 部分。
-* Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
+* 完成您的活動後，用戶應被引導到 [code.org/api/小時/](https://code.org/api/hour/finish) 完成，他們將能夠： 
     * 在社交媒體上分享他們完成了一小時玩程式活動
     * 收到他們完成了一小時玩程式的證書
     * 查看排行榜，了解哪些國家/城市在「一小時玩程式」活動中參與率最高
-    * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
+    * 對於在您的活動上花費一個小時但沒有完成活動的用戶，請在您的活動中添加一個按鈕，上面寫著「我已經完成了我的一小時玩程式」，該按鈕也會鏈接到 [code.org/](https://code.org/api/hour/finish) api/小時/完成。
 * (選擇性) 我們可能會透過線上調查問卷/表格連結進行跟進，要求提供下列活動指標的報告： 
     * 網上活動 (尤其是智能手機/平板電腦應用程式)： 
         * 用戶數量
@@ -263,7 +263,7 @@ Code.org 在 Code.org 和「一小時玩程式」網站上舉辦各種各樣的�
 
 舞會跟踪像素示例：
 
-IMG SRC = <http://code.org/api/hour/begin_dance.png>   
+圖格 SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
 
 [**返回頁首**](#top)
@@ -274,7 +274,7 @@ IMG SRC = <http://code.org/api/hour/begin_dance.png>
 
 請將您的活動推廣到您的網絡！ 將它們引導至您的「一小時玩程式」頁面。 您的用戶更有可能對您的活動發送的郵件做出反應。 在計算機科學教育週期間，利用國際一小時玩程式活動作為藉口，鼓勵用戶邀請其他人加入，並幫助我們接觸更多學生！
 
-- 功能一小時玩程式和 CSIDWeek 在您的網站上。 Ex: <http://www.tynker.com/hour-of-code>
+- 功能一小時玩程式和 CSIDWeek 在您的網站上。 例如： <http://www.tynker.com/hour-of-code>
 - 使用社交媒體、傳統媒體、郵件列表等，使用主題標籤 #HourOfCode 宣傳「一小時玩程式」（大寫字母 H、O、C）
 - 舉辦當地活動或要求您的員工在當地學校或社區團體舉辦活動。
 - 如需進一步資訊，請參閱我們的 [資源套件](https://hourofcode.com/us/promote) 。

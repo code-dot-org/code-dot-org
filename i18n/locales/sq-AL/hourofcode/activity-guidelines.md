@@ -45,7 +45,7 @@ Disa sugjerime:
 
 Keto aktivitete jane te dizajnuara per nxenesit qe t'i vete drejtojne permes tutorialeve nuk duhet te keni shume instruksione nga nje mesues.
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Mësimi i lehtësuar nga mësuesi ([shembull](https://studio.code.org/s/course1/lessons/2/levels/1), [shablloni](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
 Tani qe dhjetera e qindra mesues kane provuar Oren e Kodimit, shume klasa jane gati per me shume kreativitet, per te mesuar bazat e shkencave kompjuterike. Per te ndihmuar mesuesit te gjejne inspirim, ne deshirojme te bejme nje ore leksion "Mesuesi-Udheheqes" dhe plane aktiviteti per veteranet e Ores se kodimit. 
 
@@ -262,7 +262,7 @@ SHËNIM: kjo nuk është e rëndësishme për tu bërë për aplikacionet e inst
 
 Shembulli i pixel-ave për AppInventor:
 
-IMG SRC = <http://code.org/api/hour/begin_dance.png>   
+IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
 
 [**Përsëri në krye**](#top)

@@ -53,6 +53,7 @@ el:
         gender: 'Φύλο'
         edit_header: 'Στοιχεία Λογαριασμού'
         finish_sign_up_header: 'Ολοκληρώστε τη δημιουργία του λογαριασμού σας'
+        finish_sign_up_header_error: 'Παρακαλώ διορθώστε τα ακόλουθα σφάλματα:'
         finish_sign_up_subheader: 'Συμπληρώστε τις παρακάτω πληροφορίες για να ολοκληρώσετε τη δημιουργία λογαριασμού Code.org μέσω <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Συμπληρώστε τις παρακάτω πληροφορίες για να ολοκληρώσετε τη δημιουργία λογαριασμού Code.org μέσω **%{email}**.'
         finish_sign_up_subheader_provider: 'Συμπληρώστε τις παρακάτω πληροφορίες για να ολοκληρώσετε τη δημιουργία λογαριασμού Code.org με <strong>%{provider}</strong> μέσω <strong>%{email}</strong>.'
@@ -60,6 +61,7 @@ el:
         reset_password_token: "Ο σύνδεσμος επαναφοράς κωδικού πρόσβασης που ακολουθήσατε"
         error:
           future: δεν μπορεί να είναι στο μέλλον
+        user_type: 'Τύπος λογαριασμού'
         us_state: 'Νομός'
   beta: "βήτα"
   hello: "Γεια σου κόσμε"
@@ -1284,4 +1286,3 @@ el:
     binary: "Δυαδικό"
     hexadecimal: "Δεκαεξαδικό"
     pixel_format_header: "Μορφή εικονοστοιχείου"
-

@@ -1,6 +1,6 @@
 :css
   body {
-    font-family: Gotham, sans-serif;
+    font-family: Metropolis, sans-serif;
   }
 
 - code_org_link = link_to 'Code.org', 'http://code.org'
@@ -78,9 +78,7 @@
   %p
     Thank you,
     %br
-    Dave Frye
-    %br
-    Director of Program Development and Operations, Code.org
+    = @workshop.organizer.name
 
 - else
   %p

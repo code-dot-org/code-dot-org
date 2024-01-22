@@ -127,6 +127,7 @@ ru:
           description: Постигай азы программирования с персонажами Angry Birds и Plants vs. Zombies!
           description_short: Постигай азы программирования с забавными персонажами!
           student_description: Постигай азы программирования с персонажами Angry Birds и Plants vs. Zombies!
+          name: Час Кода
         CodeStudioPuzzleChallenge:
           title: 'Студия Кода: Задача-головоломка'
           description: Попробуйте эти забавные головоломки для программирования. Делайте все, что в ваших силах!
@@ -476,7 +477,7 @@ ru:
           description_short: Научись программировать роботов и создай свою собственную игру по мотивам Звездных войн в далекой-далекой галактике.
           student_description: Научись программировать роботов и создай свою собственную игру по мотивам Звездных войн в далекой-далекой галактике.
         mc:
-          title: Час кода с Minecraft
+          title: Приключение c Minecraft
           description: Используйте блоки кода, чтобы помочь Стиву или Алексу в их приключениях в мире Minecraft.
           description_short: Изучайте мир Minecraft через программный код.
           student_description: Используйте блоки кода, чтобы помочь Стиву или Алексу в их приключениях в мире Minecraft.
@@ -3795,6 +3796,9 @@ ru:
           lessons:
             lesson-5:
               name: Оценки
+          lesson_groups:
+            lessonGroup-4:
+              display_name: СлучайноеЗначение
         csp-playground:
           description_audience: Руководство для авторов
           description_short: Для поэтапныъ обновлений в уроках или уровней между версиями учебной программы
@@ -4241,6 +4245,10 @@ ru:
           description_short: Изучи все понятия в Основах компьютерных наук и создай собственную картинку, игру или историю!
         self-paced-pl-csp2-2023:
           title: 'Модуль 2: Навигация по инструментам Code.org'
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Свободная игра
         csa-software-engineering:
           lessons:
             lesson-9:
@@ -4383,3 +4391,195 @@ ru:
           description_short: Изучи все понятия в Основах компьютерных наук и создай собственную картинку, игру или историю!
         how-ai-works-2023:
           title: Как ИИ Работает
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Наш этический кодекс искусственного интеллекта
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Введение
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Введение
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Введение
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Введение
+        self-paced-pl-csd-unit1-2-2023:
+          title: 'Модуль 1: Подготовка к преподаванию по теме "Решения задач и вычисления"'
+          description: "Этот модуль профессионального обучения поможет вам подготовиться к преподаванию по модулю \"Решение задач и вычисления\" на Code.org. \n\n**В этом модуле профессионального обучения вы познакомитесь со следующими темами:**\n\n-   Введение в решение задач и вычисления.\n-   Знакомство с ключевыми понятиями модуля.\n-   Знакомство с проектами, выполняемыми в конце главы.\n\n**Примерное время:** 30 минут"
+          student_description: "Этот модуль профессионального обучения поможет вам подготовиться к преподаванию по модулю \"Решение задач и вычисления\" на Code.org. \n\n**В этом модуле профессионального обучения вы познакомитесь со следующими темами:**\n\n-   Введение в решение задач и вычисления.\n-   Знакомство с ключевыми понятиями модуля.\n-   Знакомство с проектами, выполняемыми в конце главы.\n\n**Примерное время:** 30 минут"
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Модуль 2: Подготовка к преподаванию по теме "Веб-разработка"'
+        self-paced-pl-csd-unit3-2-2023:
+          title: Подготовка к преподаванию по теме "Интерактивная анимация и игры"
+          description: "Этот модуль профессионального обучения поможет вам подготовиться к преподаванию по теме \"Интерактивная анимация и игры\" на Code.org. \n\n**В этом профессиональном модуле вы познакомитесь со следующими темами:**\n\n-   Введение в интерактивную анимацию и игры.\n-   Знакомство с ключевыми понятиями модуля.\n-   Работа в Лаборатории игр.\n-   Знакомство с проектами, выполняемыми в конце главы.\n\n**Примерное время:** 120 минут"
+          student_description: "Этот модуль профессионального обучения поможет вам подготовиться к преподаванию по теме \"Интерактивная анимация и игры\" на Code.org. \n\n**В этом профессиональном модуле вы познакомитесь со следующими темами:**\n\n-   Введение в интерактивную анимацию и игры.\n-   Знакомство с ключевыми понятиями модуля.\n-   Работа в Лаборатории игр.\n-   Знакомство с проектами, выполняемыми в конце главы.\n\n**Примерное время:** 120 минут"
+        self-paced-pl-csd-unit4-2-2023:
+          title: ' Модуль 4: Подготовка к преподаванию по теме "Процесс дизайна"'
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Модуль 5: Подготовка к преподаванию по теме "Данные и общество"'
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Опрос
+            lessonGroup-2:
+              display_name: 'Глава 1: Процесс решения проблемы'
+            lessonGroup-3:
+              display_name: 'Глава 2: Компьютеры и решение проблем'
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Изображения и анимации'
+            lessonGroup-3:
+              display_name: 'Глава 2: Создание игры'
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Пользовательский дизайн'
+            lessonGroup-3:
+              display_name: 'Глава 2: Прототипирование приложения'
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Представление информации'
+            lessonGroup-3:
+              display_name: 'Глава 2: Решение информационных проблем'
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Глава 2: Создание физических прототипов'
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Введение в Лабораторию приложений
+            lessonGroup-2:
+              display_name: Глава 1
+            lessonGroup-3:
+              display_name: Глава 2
+        csd-post-survey-2024:
+          title: Опрос после окончания курса
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: События
+            lesson-4:
+              name: Режимы работы
+            lesson-5:
+              name: Следующие шаги
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Приступить к работе
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Циклы
+            lesson-4:
+              name: Условные команды
+            lesson-6:
+              name: Следующие шаги
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Приступить к работе
+          title: Введение в Информатику
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опрос
+            csp_unit1_2020:
+              display_name: 'Урок 1: Цифровая информация'
+        csp2-2024:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Урок 2: Интернет'
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Опрос
+            lessonGroup-3:
+              display_name: Содержимое
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+        csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+            lessonGroup-4:
+              display_name: Опрос
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: Переменные
+            csp_conditionals:
+              display_name: Условные команды
+            csp_functions:
+              display_name: функции
+            csp_project:
+              display_name: Проект
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Данные
+            lessonGroup-5:
+              display_name: Опрос после окончания курса
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Списки
+            lessonGroup-3:
+              display_name: Циклы
+            lessonGroup-4:
+              display_name: Обходов
+            lessonGroup-5:
+              display_name: Проект
+            lessonGroup-2:
+              display_name: Опрос после окончания курса
+        csp7-2024:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Параметры и возвращаемые значения
+            csp_libraries:
+              display_name: Библиотеки
+            lessonGroup-3:
+              display_name: Опрос после окончания курса
+        csp8-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Опрос после окончания курса
+        csp9-2024:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Урок 9: Данные'
+            lessonGroup-2:
+              display_name: Опрос после окончания курса
+        csp10-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Опрос после окончания курса

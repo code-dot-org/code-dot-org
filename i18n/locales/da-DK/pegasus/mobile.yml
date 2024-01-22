@@ -358,9 +358,6 @@
   volunteer_engineer_submission_subtitle_generic: '100.000 lærere vil være værter i Hour Of Code i deres klasseværelser i år d. 7.-13. december 2015. De vil gerne bede om din hjælp! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} lærere vil gerne have frivillige, som er dedikerede i deres interesse for uddannelse i tekniske videnskaber, til at hjælpe med Hour of Code her i december. <br>%{num_volunteers} frivillige har meldt sig. Slut dig til dem."
   volunteer_engineer_submission_intro_background: "Kodetimen er en global bevægelse vil give en times Introduktion til programmering, nå millioner af studerende i 180 + lande. Blive involveret i programmeringsuddannelse uge, December 7-13."
-  volunteer_engineer_submission_intro_recruit: 'Disse lærere ville elske at have nogen der er <span style="font-family: ''Gotham 7r'', sans-serif;"> lidenskabelig omkring computer uddannelse</span> der kan hjælpe i klasseværelset, eller for nogen, der kan <span style="font-family: ''Gotham 7r'', sans-serif;"> inspirere</span> deres elever ved at tale om mulighederne med computer (som kunne ske gennem en video chat).'
-  volunteer_engineer_submission_intro_signup: "Angiv følgende oplysninger, hvis du er en computer studerende eller software professionel. Felter markeret med en <span class=\"form-required-field\"> *</span> er påkrævet."
-  volunteer_engineer_submission_intro_links: "Ønsker du ikke at være frivillig? <a href=\"%{learn_more}\"> Lær mere</a> om at organisere din egen kodetime begivenhed og finde en lokal frivillig på vores <a href=\"%{volunteer_local}\"> frivillige kort</a>."
   volunteer_engineer_submission_update_information: "Opdater dine oplysninger"
   volunteer_engineer_submission_header_shared: "Oplysninger, der deles med lærere på kort over frivillige"
   volunteer_engineer_submission_field_name: "Navn"

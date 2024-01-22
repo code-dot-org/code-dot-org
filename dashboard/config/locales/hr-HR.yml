@@ -9,12 +9,14 @@ hr:
         email: E-mail
         error:
           future: ne može biti u budućnosti
+        finish_sign_up_header_error: 'Molimo ispravite sljedeće pogreške:'
         gender: Spol
         locale: Jezik
         name: Ime za prikaz
         parent_email: E-mail roditelja/skrbnika
         password: Lozinka
         password_confirmation: Potvrda lozinke
+        user_type: Vrsta računa
         username: Korisničko ime
     errors:
       messages:

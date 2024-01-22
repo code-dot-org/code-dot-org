@@ -57,12 +57,85 @@
       "name": "Abulón"
     },
     "auto_mpg": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Dado que tiene 30 años de antigüedad, no reflejara ningún avance en la tecnología - ¡No compres un carro basado en esto!",
+          "potentialUses": "Determina las millas por galón (MPG) de un carro basado en varias características como el peso y los caballos de fuerza."
+        },
+        "description": "Un pequeño conjunto de datos distintos sobre las estadísticas de distintos carros, originalmente de 1983, fue usada para predecir él MPG (Millas por galón). Es poco probable que el conjunto de datos tenga una gran precisión en sus puntajes en un a regresión KNN, pero de todos modos es un modelo útil; ¿como puedes tomar un patron general en el modelo y usarlo para determinar cuales caracteristicas contibuyen a millas por galon mas altas? ¿Como podrias cambiar el conjunto de datos para conseguir un modelo mas presico - por ejemplo, cambiar el MPG de una columna numerica a una columna categorica con intervalos de 5 MPG?"
+      },
       "fields": {
+        "acceleration": {
+          "description": "La aceleración del carro",
+          "id": "Aceleración"
+        },
+        "car name": {
+          "description": "El nombre del carro: todos sus valores únicos",
+          "id": "El nombre del carro"
+        },
+        "cylinders": {
+          "description": "El número de cilindros en el motor",
+          "id": "cilindros"
+        },
+        "displacement": {
+          "description": "Una medida del volumen del cilindro",
+          "id": "Desplazamiento"
+        },
+        "horsepower": {
+          "description": "La potencia de un carro",
+          "id": "Caballos de fuerza"
+        },
+        "model year": {
+          "description": "El año en el que el carro fue lanzado",
+          "id": "El año del modelo"
+        },
         "mpg": {
           "description": "Millas por galón.",
-          "id": "mpg"
+          "id": "MPG"
+        },
+        "weight": {
+          "description": "El peso del carro en libras"
         }
       }
+    },
+    "basketball_shots": {
+      "card": {
+        "context": {
+          "potentialUses": "Predice si el tiro de 3 puntos se hizo o se falló"
+        },
+        "description": "Este set de datos contiene cada intento de un tiro de 3 puntos hecho durante el torneo de la NCAA 2017. Con esos datos es posible predecir si el tiro fue logrado o no"
+      },
+      "fields": {
+        "Away team alias": {
+          "description": "Abreviación del nombre del equipo visitante",
+          "id": "Alias del equipo visitante"
+        },
+        "Home team alias": {
+          "description": "Abreviación del nombre del equipo local",
+          "id": "Alias del equipo local"
+        },
+        "Inches from bottom sideline": {
+          "description": "Pulgadas desde la línea lateral del fondo(la línea a través la longitud de la cancha)",
+          "id": "Pulgadas desde la línea lateral del fondo"
+        },
+        "Inches from left baseline": {
+          "description": "Pulgadas desde la línea de base izquierda(la línea detrás de la canasta)",
+          "id": "Pulgadas desde la línea de base izquierda"
+        },
+        "Jersey number": {
+          "description": "El número del jugador que hizo el tiro",
+          "id": "Número de la camisa"
+        },
+        "Made or miss": {
+          "description": "Si el tiro de 3 puntos se logró o se falló",
+          "id": "Logrado o fallado"
+        },
+        "Time in seconds": {
+          "description": "Tiempo transcurrido en el reloj de juego, en segundos",
+          "id": "Tiempo en segundos"
+        }
+      },
+      "name": "Intentos de tiros de 3 puntos de la NCAA"
     },
     "bike_sharing": {
       "fields": {
@@ -219,7 +292,7 @@
     "naan_toy": {
       "fields": {
         "cheese": {
-          "id": "Queso"
+          "id": "queso"
         },
         "chicken": {
           "id": "gallina"
@@ -258,7 +331,7 @@
     "poke_toy": {
       "fields": {
         "avocado": {
-          "id": "aguacate"
+          "id": "palta"
         },
         "ginger": {
           "id": "jengibre"
@@ -277,7 +350,7 @@
           "id": "tocino"
         },
         "cheese": {
-          "id": "Queso"
+          "id": "queso"
         },
         "lobster": {
           "id": "langosta"
@@ -286,7 +359,7 @@
           "id": "carne"
         },
         "mushrooms": {
-          "id": "setas"
+          "id": "champiñones"
         },
         "preference": {
           "id": "preferencia"
@@ -302,7 +375,7 @@
           "id": "preferencia"
         },
         "strawberry": {
-          "id": "fresa"
+          "id": "frutilla"
         }
       }
     },
@@ -315,7 +388,7 @@
           "id": "elefante"
         },
         "people": {
-          "id": "personas"
+          "id": "gente"
         },
         "rhino": {
           "id": "rinoceronte"
@@ -329,13 +402,13 @@
     "salad_toy": {
       "fields": {
         "avocado": {
-          "id": "aguacate"
+          "id": "palta"
         },
         "beans": {
-          "id": "alubias"
+          "id": "porotos"
         },
         "cheese": {
-          "id": "Queso"
+          "id": "queso"
         },
         "chicken": {
           "id": "gallina"
@@ -354,10 +427,10 @@
     "salsa_toy": {
       "fields": {
         "avocado": {
-          "id": "aguacate"
+          "id": "palta"
         },
         "beans": {
-          "id": "alubias"
+          "id": "porotos"
         },
         "corn": {
           "id": "maíz"

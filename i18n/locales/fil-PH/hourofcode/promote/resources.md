@@ -18,7 +18,7 @@ title: Mga pwedeng makatulong
 
 ## Isabit ang mga poster na ito sa paaralan mo
 
-Available ang bagong poster set na nagtatampok kay Malala, Stephen Curry, Shakira at iba pa! Sa taong ito, magkakaroon din ang bawat set ng 6 na poster at 126 na "Ginawa ko ang Hour of Code" na mga sticker. Limitado ang mga supply, kaya[mag-order na ng](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH)mga poster mo. Upang i-print, i-click lang ang isang imahe sa ibaba upang tingnan at i-save ang isang pwedeng i-print na bersiyon.
+Print your own posters! Simply click an image below to view and save a printable version.
 
 {{ promote_new_posters }}
 

@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
-import React, {useRef, useLayoutEffect, useEffect, useState} from 'react';
+import React, {useLayoutEffect, useState} from 'react';
+import standaloneVideoLocale from './locale';
 import styles from './video.module.scss';
 
 interface VideoProps {
@@ -68,7 +68,7 @@ const Video: React.FunctionComponent<VideoProps> = ({children, src}) => {
               height="100%"
               style={{border: 'none'}}
               src={src}
-              title=""
+              title={standaloneVideoLocale.simpleModalVideoPlayer()}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             />

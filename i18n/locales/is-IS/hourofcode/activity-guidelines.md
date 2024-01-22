@@ -10,7 +10,7 @@ title: Leiðarvísar kennsluefnis
 
 # Leiðbeiningar um að búa til og senda námskeið og kennslustundir fyrir Hour of Code™ og Computer Science Education Week
 
-Code.org hýsir margs konar Hour of Code™ starfsemi, kennslustundir og myndbönd á Code.org og Hour of Code vefsíðunum. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org hýsir margs konar Hour of Code™ starfsemi, kennslustundir og myndbönd á Code.org og Hour of Code vefsíðunum. Núverandi listi er á []({{ urls/learn }})hourofcode.com/learn.
 
 Langar þig til að leggja fram eigin sjálf-leiðsögn einkatími, kennara-leiddur kennslustund, eða vélfærafræði/framleiðandi virkni sem útskýrir tölvunarfræði meginreglu? Taktu þátt í þessari alþjóðlegu hreyfingu og hjálpaðu þátttakendum um allan heim að byrja með klukkutíma kóða eða fara lengra með fjölkennslu, dagslanga eða vikulanga starfsemi.
 
@@ -18,7 +18,7 @@ Langar þig til að leggja fram eigin sjálf-leiðsögn einkatími, kennara-leid
 
 Nokkrar ábendingar:
 
-1. **Sendu inn fleiri en eina virkni**: Ef þú hefur byggt upp athafnir fyrir mismunandi stig, mismunandi aldur eða aðra flokka skráum við athafnir þínar sérstaklega svo hver kennari geti fundið það rétta fyrir kennslustofuna sína. Sendu hverja einkatími eða virkni fyrir sig. Given the number of submissions we have seen in recent years, we will have time to review **up to 5 activities** per partner. Eftir það munum við gera a bestur tilraun til að endurskoða sem flest áður en Hour of Code hefst.
+1. **Sendu inn fleiri en eina virkni**: Ef þú hefur byggt upp athafnir fyrir mismunandi stig, mismunandi aldur eða aðra flokka skráum við athafnir þínar sérstaklega svo hver kennari geti fundið það rétta fyrir kennslustofuna sína. Sendu hverja einkatími eða virkni fyrir sig. Miðað við fjölda innlagna sem við höfum séð undanfarin ár munum við hafa tíma til að fara yfir **allt að 5 starfsemi** á hvern samstarfsaðila. Eftir það munum við gera a bestur tilraun til að endurskoða sem flest áður en Hour of Code hefst.
 
 2. **Handan byrjendakennslu**: Til viðbótar við kennslustundir fyrir kennara og nemendur sem eru að læra tölvunarfræði í fyrsta skipti, skráum við námsreynslu fyrir tölvunarfræði-kunnátta kennslustofur sem vilja fara aðeins lengra! Hjálpaðu okkur með því að leggja fram kennslustundir fyrir námskeið sem eru nú þegar ánægð með grunnatriði.
 
@@ -45,7 +45,7 @@ Nokkrar ábendingar:
 
 Þessi starfsemi er hönnuð fyrir nemendur að sjálf-beina í gegnum einkatími. Þeir þurfa ekki mikið kennslu frá kennara eða kennara prep vinnu.
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Kennari auðveldað kennslustund ([dæmi](https://studio.code.org/s/course1/lessons/2/levels/1), [sniðmát](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
 Nú þegar hundruð þúsunda kennara hafa reynt Hour of Code, margir kennslustofur eru tilbúin fyrir fleiri skapandi starfsemi sem kenna grunnatriði tölvunarfræði. Til að hjálpa fleiri háþróaður kennara finna innblástur, safna við og curate “kennari-leiddi” kennslustundir og starfsemi áætlanir fyrir Hour of Code vopnahlésdagurinn.
 
@@ -84,11 +84,11 @@ Markmið Hour of Code er að gefa byrjendum aðgengilegt fyrsta bragð af tölvu
 
 Starfsemin ætti að kenna tölvunarfræði hugtak eins og lykkjur, conditionals, dulkóðun, eða hvernig internetið virkar. Starfsemi getur einnig kennt um hvernig tölvunarfræði tengist raunverulegum heimstörfum, atburðum eða sögu. Til dæmis, að kenna UX hönnun til að búa til forrit sem eru þýðingarmikil fyrir áhorfendur eða málstað. Við aftra starfsemi sem einblína á setningafræði forritun frekar en hugtökin. Til dæmis munum við skrá, en ekki varpa ljósi á, starfsemi sem kennir HTML. Að sama skapi letjum við loka forritunarkennslu sem einbeita sér að því að stilla/breyta stillingarmöguleikum frekar en að læra hvernig á að móta reiknirit eða ferli.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Starfsemi sem krefst app-install, skrifborð app, eða leikja-hugga reynslu eru í lagi en ekki hugsjón. Við munum ekki telja upp athafnir sem krefjast skráningar eða greiðslu. (Vélfærafræði starfsemi getur krafist vélfærafræði kaupa.)
+*Tæknilegar kröfur:* Vegna margs konar skóla og kennslustofunni tækni skipulag, bestu starfsemi eru Vefur-undirstaða eða smartphone-vingjarnlegur, eða á annan hátt unplugged-stíl starfsemi sem kenna tölvunarfræði hugtök án þess að nota tölvu (sjá http://csunplugged.com/). [](http://csunplugged.com/) Starfsemi sem krefst app-install, skrifborð app, eða leikja-hugga reynslu eru í lagi en ekki hugsjón. Við munum ekki telja upp athafnir sem krefjast skráningar eða greiðslu. (Vélfærafræði starfsemi getur krafist vélfærafræði kaupa.)
 
 *Student LED (Self-Guided) Snið:* Upprunalega Hour of Code var byggt að mestu leyti á velgengni sjálf-leiðsögn námskeið eða kennslustundir, mögulega auðveldað af kennaranum. Það eru fullt af núverandi valkostum, en ef þú vilt búa til nýjan, þessi starfsemi ætti að vera hönnuð þannig að þeir geta verið gaman fyrir nemanda að vinna einn, eða í kennslustofunni sem kennari hefur lágmarks prep eða CS bakgrunn. Þeir ættu að veita leiðbeiningar fyrir nemendur í stað opinnar klukkustundar langrar áskorunar. Helst eru leiðbeiningarnar og námskeiðin samþætt beint í forritunarvettvanginn, til að forðast að skipta um flipa eða glugga á milli námskeiðsins og forritunarpallsins.
 
-To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
+Til að fá tilfinningu fyrir fjölmörgum tegundum námskeiða og kennsluáætlana sem þú getur búið til skaltu fara á síðuna [Hour of Code Activities.](https://hourofcode.com/us/learn)
 
 [**Aftur á toppinn**](#top)
 
@@ -141,11 +141,11 @@ Farðu á [Hour of Code™ Activity Uppgjöf síðu](https://docs.google.com/for
     * Unplugged
 * Skjámynd eða markaðssetning mynd af Hour Code virkni. Vinsamlegast sendu að minnsta kosti eina mynd með 4:3 mál. Það ætti að vera að minnsta kosti 520px með 390px. Þessi mynd ætti að hafa ENGINN texta á sér (annan en lógóið þitt) til að gera hana aðgengilegri fyrir þá sem ekki eru enskumælandi. Ef viðeigandi mynd er ekki veitt gætum við tekið okkar eigin skjámynd af námskeiðinu þínu EÐA við gætum valið að skrá það ekki. Allar myndir verður að senda inn sem slóðatengil á.jpg, .jpeg eða .png.
 * Til þess að fylgjast nákvæmlega með þátttöku þurfa samstarfsaðilar þriðja aðila að innihalda 1-pixla mælingar myndir á fyrstu síðu Hour of Code námskeiðanna. Sjá kaflann [Rekja Pixel](#pixel) hér að neðan til að fá frekari upplýsingar.
-* Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
+* Þegar þú hefur lokið starfsemi þinni, notendur ættu að vera beint til [](https://code.org/api/hour/finish) code.org/api/hour/finish þar sem þeir vilja vera fær til: 
     * Deildu á samfélagsmiðlum sem þeir luku Hour of Code
     * Fá vottorð um að þeir hafi lokið klukkustund kóðans
     * Sjá topplista um hvaða lönd/borgir eru með hæsta þátttökuhlutfall í starfsemi Hour of Code
-    * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
+    * Fyrir notendur sem eyða klukkutíma í virkni þína og ljúka henni ekki, vinsamlegast láttu hnapp fylgja með virkni þína sem segir “Ég er búinn með Hour of Code” sem tengir aftur til [](https://code.org/api/hour/finish) code.org/api/klst/finish eins og heilbrigður.
 * (Valfrjálst) Við gætum fylgst með netkönnun/eyðublaðstengli þar sem beðið er um skýrslu um eftirfarandi starfsmælikvarða: 
     * Fyrir starfsemi á netinu (sérstaklega snjallsíma/spjaldtölvuforrit): 
         * Fjöldi notenda
@@ -228,7 +228,7 @@ Starfsemi þarf ekki að fela í sér AI, þó að við séum að leita að þv�
 
 **Útskýrðu eða tengdu starfsemina við félagslega þýðingarmikið samhengi.** Tölvuforritun verður stórveldi þegar nemendur sjá hvernig hún getur breytt heiminum til hins betra!
 
-**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
+**Gakktu úr skugga um að hægt sé að nota einkatími þinn í [](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paraforritun hugmyndafræði.** Þetta er sérstaklega gagnlegt fyrir Hour of Code vegna þess að margir kennslustofur hafa ekki 1:1 vélbúnað fyrir alla nemendur.
 
 [**Aftur á toppinn**](#top)
 
@@ -262,7 +262,7 @@ ATH: þetta er ekki mikilvægt að gera fyrir uppsetningarforrit (iOS/Android fo
 
 Dæmi mælingar pixla fyrir Dance Party:
 
-IMG SRC = <http://code.org/api/hour/begin_dance.png>   
+IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
 
 [**Aftur á toppinn**](#top)

@@ -10,11 +10,19 @@
           "No": "Ez",
           "Yes": "Bai"
         },
+        "CSD U1 IO Pet Chooser 2_2023": {
+          "No": "Ez",
+          "Yes": "Bai"
+        },
         "CSD U1 IO Pet Chooser_2021": {
           "No": "Ez",
           "Yes": "Bai"
         },
         "CSD U1 IO Pet Chooser_2022": {
+          "No": "Ez",
+          "Yes": "Bai"
+        },
+        "CSD U1 IO Pet Chooser_2023": {
           "No": "Ez",
           "Yes": "Bai"
         },
@@ -30,10 +38,19 @@
           "Name": "Izena",
           "text": "testua"
         },
+        "CSD U1 IO Story_2023": {
+          "City": "Hiria",
+          "Color": "Kolorea",
+          "Name": "Izena",
+          "text": "testua"
+        },
         "CSD U1 processing fastest_2021": {
           "s": "s"
         },
         "CSD U1 processing fastest_2022": {
+          "s": "s"
+        },
+        "CSD U1 processing fastest_2023": {
           "s": "s"
         },
         "CSD U1 processing guess_2021": {
@@ -44,16 +61,31 @@
           "?": "?",
           "text": "testua"
         },
+        "CSD U1 processing guess_2023": {
+          "?": "?",
+          "text": "testua"
+        },
+        "CSD U1 processing live_2023": {
+          "cat": "katua",
+          "chicken": "oilaskoa",
+          "dog": "txakurra"
+        },
         "CSD U1 processing npark_2021": {
           "Sorry!": "Barkatu!"
         },
         "CSD U1 processing npark_2022": {
           "Sorry!": "Barkatu!"
         },
+        "CSD U1 processing npark_2023": {
+          "Sorry!": "Barkatu!"
+        },
         "CSD U1 storage friends_2021": {
           "Back": "Atzera"
         },
         "CSD U1 storage friends_2022": {
+          "Back": "Atzera"
+        },
+        "CSD U1 storage friends_2023": {
           "Back": "Atzera"
         },
         "CSD U1 storage movies_2021": {
@@ -68,6 +100,12 @@
           "Yes": "Bai",
           "text": "testua"
         },
+        "CSD U1 storage movies_2023": {
+          "No": "Ez",
+          "Star Wars": "Star Wars",
+          "Yes": "Bai",
+          "text": "testua"
+        },
         "CSD U1 storage outfit_2021": {
           "black": "beltza",
           "green": "berde"
@@ -76,8 +114,29 @@
           "black": "beltza",
           "green": "berde"
         },
+        "CSD U1 storage outfit_2023": {
+          "black": "beltza",
+          "green": "berde"
+        },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Age": "Adina",
+          "Name": "Izena"
+        },
+        "CSD U6 - Board Outputs - ChalC_mb2022": {
+          "No": "Ez",
+          "Yes": "Bai"
+        },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "Medium": "Ertaina"
+        },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "Ertaina"
+        },
+        "CSD U6 - Combine Inputs - A_2023": {
+          "green": "berde",
+          "left": "ezkerrera",
+          "red": "gorri",
+          "right": "eskuinera"
         },
         "CSD U6 - Combine Inputs - A_2222": {
           "green": "berde",
@@ -85,19 +144,43 @@
           "red": "gorri",
           "right": "eskuinera"
         },
+        "CSD U6 - Combine Inputs - A_mb2022": {
+          "left": "ezkerrera",
+          "right": "eskuinera"
+        },
         "CSD U6 - Combine Inputs - CA_2022": {
           "long": "luzea",
           "short": "motza"
+        },
+        "CSD U6 - Combine Inputs - CA_2023": {
+          "long": "luzea",
+          "short": "motza"
+        },
+        "CSD U6 - Combine Inputs - PracA_2023": {
+          "left": "ezkerrera",
+          "right": "eskuinera"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "ezkerrera",
           "right": "eskuinera"
         },
+        "CSD U6 - Combine Inputs - PracC_2023": {
+          "blue": "urdin",
+          "green": "berde"
+        },
         "CSD U6 - Combine Inputs - PracC_2222": {
           "blue": "urdin",
           "green": "berde"
         },
+        "CSD U6 - Combine Inputs - SB2_2023": {
+          "long": "luzea",
+          "short": "motza"
+        },
         "CSD U6 - Combine Inputs - SB2_2222": {
+          "long": "luzea",
+          "short": "motza"
+        },
+        "CSD U6 - Combine Inputs - SB3_2023": {
           "long": "luzea",
           "short": "motza"
         },
@@ -105,18 +188,54 @@
           "long": "luzea",
           "short": "motza"
         },
+        "CSD U6 - Combine Inputs - SB4_2023": {
+          "long": "luzea",
+          "short": "motza"
+        },
         "CSD U6 - Combine Inputs - SB4_2222": {
           "long": "luzea",
           "short": "motza"
+        },
+        "CSD U6 - If Variables - ChalD_2023": {
+          "+": "+",
+          "-": "-"
         },
         "CSD U6 - If Variables - ChalD_2222": {
           "+": "+",
           "-": "-"
         },
+        "CSD U6 - If Variables - ChalD_mb2022": {
+          "+": "+",
+          "-": "-"
+        },
+        "CSD U6 - If Variables - SB3_2023": {
+          "Name": "Izena"
+        },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "Izena"
         },
+        "CSD U6 - If Variables - SB3_mb2022": {
+          "Name": "Izena"
+        },
+        "CSD U6 - Music - ChalD_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
+        },
         "CSD U6 - Music - ChalD_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - Piano_2023": {
           "A": "A",
           "B": "B",
           "C": "C",
@@ -134,7 +253,25 @@
           "F": "F",
           "G": "G"
         },
+        "CSD U6 - Music - SB1_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
+        },
         "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB2.5_2023": {
           "A": "A",
           "B": "B",
           "C": "C",
@@ -152,6 +289,15 @@
           "F": "F",
           "G": "G"
         },
+        "CSD U6 - Music - SB3_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
+        },
         "CSD U6 - Music - SB3_2222": {
           "A": "A",
           "B": "B",
@@ -161,23 +307,65 @@
           "F": "F",
           "G": "G"
         },
+        "CSD U6 - Physical Input - PA_2023": {
+          "Score": "Puntuaketa"
+        },
         "CSD U6 - Physical Input - PA_2222": {
           "Score": "Puntuaketa"
         },
+        "CSD U6 - Physical Input - PA_mb2022": {
+          "Score": "Puntuaketa"
+        },
+        "CSD U6 - Screen Inputs - P_2023": {
+          "Save": "Gorde"
+        },
         "CSD U6 - Screen Inputs - P_2222": {
+          "Save": "Gorde"
+        },
+        "CSD U6 - Screen Inputs - P_mb2022": {
           "Save": "Gorde"
         },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
           "black": "beltza"
         },
+        "CSD U6 - Screen Inputs - SB2.1_2023": {
+          "black": "beltza"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_mb2022": {
+          "black": "beltza"
+        },
         "CSD U6 - Screen Inputs - SB2.2_2022": {
           "black": "beltza"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_2023": {
+          "black": "beltza"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_mb2022": {
+          "black": "beltza"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2023": {
+          "?": "?"
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
           "?": "?"
         },
+        "CSD U6 - Screen Outputs - ChalB_mb2022": {
+          "?": "?"
+        },
+        "CSD U6 - Screen Outputs - P_2023": {
+          "title": "izenburua"
+        },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "izenburua"
+        },
+        "CSD U6 - Screen Outputs - P_mb2022": {
+          "title": "izenburua"
+        },
+        "CSD U6 - Screen Outputs - PracB_2023": {
+          "down": "behera",
+          "left": "ezkerrera",
+          "right": "eskuinera",
+          "up": "gora"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
           "down": "behera",
@@ -185,13 +373,37 @@
           "right": "eskuinera",
           "up": "gora"
         },
+        "CSD U6 - Screen Outputs - PracB_mb2022": {
+          "down": "behera",
+          "left": "ezkerrera",
+          "right": "eskuinera",
+          "up": "gora"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2023": {
+          "name": "izena"
+        },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "izena"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_mb2022": {
+          "name": "izena"
+        },
+        "CSD U6 - Sensors - P_2023": {
+          "text": "testua"
         },
         "CSD U6 - Sensors - P_2222": {
           "text": "testua"
         },
+        "CSD U6 - Sensors - P_mb2022": {
+          "text": "testua"
+        },
+        "CSD U6 - Sensors - SB2_2023": {
+          "Update": "Eguneratu"
+        },
         "CSD U6 - Sensors - SB2_2222": {
+          "Update": "Eguneratu"
+        },
+        "CSD U6 - Sensors - SB2_mb2022": {
           "Update": "Eguneratu"
         },
         "CSD U6 analog light": {
@@ -566,6 +778,12 @@
           "F": "F",
           "G": "G"
         },
+        "LLM - Written Voice Simulator_ai23": {
+          "Back": "Atzera"
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "Reset": "Berrezarri"
+        },
         "allthethings design mode elements": {
           "text": "testua"
         },
@@ -581,10 +799,16 @@
         "csd u5 recommender sample_2022": {
           "Start": "Hasiera"
         },
+        "csd u5 recommender sample_2023": {
+          "Start": "Hasiera"
+        },
         "csd-apps for good-2": {
           "Next": "Hurrengoa"
         },
         "csd-apps for good-2_2022": {
+          "Next": "Hurrengoa"
+        },
+        "csd-apps for good-2_2023": {
           "Next": "Hurrengoa"
         },
         "csd-explore ui-2": {
@@ -593,10 +817,16 @@
         "csd-explore ui-2_2022": {
           "Next": "Hurrengoa"
         },
+        "csd-explore ui-2_2023": {
+          "Next": "Hurrengoa"
+        },
         "csd-explore ui-4": {
           "Sorry!": "Barkatu!"
         },
         "csd-explore ui-4_2022": {
+          "Sorry!": "Barkatu!"
+        },
+        "csd-explore ui-4_2023": {
           "Sorry!": "Barkatu!"
         },
         "csd-explore ui-6": {
@@ -605,10 +835,16 @@
         "csd-explore ui-6_2022": {
           "Next": "Hurrengoa"
         },
+        "csd-explore ui-6_2023": {
+          "Next": "Hurrengoa"
+        },
         "ml-L2 unsupervised - 1-2021": {
           "Next": "Hurrengoa"
         },
         "ml-L2 unsupervised - 1_2022": {
+          "Next": "Hurrengoa"
+        },
+        "ml-L2 unsupervised - 1_2023": {
           "Next": "Hurrengoa"
         },
         "ml-customize-raspado-2021": {
@@ -619,11 +855,19 @@
           "no": "ez",
           "yes": "bai"
         },
+        "ml-customize-raspado_2023": {
+          "no": "ez",
+          "yes": "bai"
+        },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Jarraitu",
           "Loading...": "Kargatzen..."
         },
         "ml-intro ai lab- fruit veggie widget_2022": {
+          "Continue": "Jarraitu",
+          "Loading...": "Kargatzen..."
+        },
+        "ml-intro ai lab- fruit veggie widget_2023": {
           "Continue": "Jarraitu",
           "Loading...": "Kargatzen..."
         },
@@ -639,10 +883,19 @@
           "no": "ez",
           "yes": "bai"
         },
+        "ml-model card-medical app v2 2021-2_2023": {
+          "A": "A",
+          "W": "M",
+          "no": "ez",
+          "yes": "bai"
+        },
         "ml-models in applab-choice intended warnings": {
           "Back": "Atzera"
         },
         "ml-models in applab-choice intended warnings_2022": {
+          "Back": "Atzera"
+        },
+        "ml-models in applab-choice intended warnings_2023": {
           "Back": "Atzera"
         },
         "ml-models in applab-zoo assessment": {
@@ -655,11 +908,20 @@
           "No": "Ez",
           "Yes": "Bai"
         },
+        "ml-models in applab-zoo assessment_2023": {
+          "B": "B",
+          "No": "Ez",
+          "Yes": "Bai"
+        },
         "ml-models in applab-zoo model embed": {
           "No": "Ez",
           "Yes": "Bai"
         },
         "ml-models in applab-zoo model embed_2022": {
+          "No": "Ez",
+          "Yes": "Bai"
+        },
+        "ml-models in applab-zoo model embed_2023": {
           "No": "Ez",
           "Yes": "Bai"
         },
@@ -670,6 +932,12 @@
           "snow": "elurra"
         },
         "ml-use model card-example3A_2022": {
+          "cloudy": "lainotua",
+          "night": "gaua",
+          "rain": "euria",
+          "snow": "elurra"
+        },
+        "ml-use model card-example3A_2023": {
           "cloudy": "lainotua",
           "night": "gaua",
           "rain": "euria",

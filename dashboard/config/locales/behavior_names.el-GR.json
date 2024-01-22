@@ -85,6 +85,20 @@
           "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
           "wandering": "περιπλάνηση"
         },
+        "CourseE_Project_SpriteLab_2023": {
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση"
+        },
         "CourseE_Project_SpriteLab_cupcake_examples2022": {
           "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
           "fluttering": "τριγύρισμα",
@@ -125,6 +139,26 @@
           "wandering": "περιπλάνηση",
           "wobbling": "ταλάντευση"
         },
+        "CourseE_Project_SpriteLab_cupcake_examples_2023": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
         "CourseE_Project_SpriteLab_examples2022": {
           "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
           "fluttering": "τριγύρισμα",
@@ -146,6 +180,26 @@
           "wobbling": "ταλάντευση"
         },
         "CourseE_Project_SpriteLab_examples_2021": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "CourseE_Project_SpriteLab_examples_2023": {
           "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
@@ -249,6 +303,10 @@
           "recovering": "αναρρώνοντας",
           "wandering": "περιπλάνηση"
         },
+        "CourseF_outbreak1_2023": {
+          "recovering": "αναρρώνοντας",
+          "wandering": "περιπλάνηση"
+        },
         "CourseF_outbreak2": {
           "recovering": "αναρρώνοντας",
           "wandering": "περιπλάνηση"
@@ -257,11 +315,19 @@
           "recovering": "αναρρώνοντας",
           "wandering": "περιπλάνηση"
         },
+        "CourseF_outbreak2_2023": {
+          "recovering": "αναρρώνοντας",
+          "wandering": "περιπλάνηση"
+        },
         "CourseF_outbreak3": {
           "recovering": "αναρρώνοντας",
           "wandering": "περιπλάνηση"
         },
         "CourseF_outbreak3_-2022-2": {
+          "recovering": "αναρρώνοντας",
+          "wandering": "περιπλάνηση"
+        },
+        "CourseF_outbreak3_2023": {
           "recovering": "αναρρώνοντας",
           "wandering": "περιπλάνηση"
         },
@@ -297,6 +363,22 @@
           "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
           "wandering": "περιπλάνηση"
         },
+        "CourseF_outbreak4_2023": {
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "recovering": "αναρρώνοντας",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση"
+        },
         "CourseF_outbreak5": {
           "recovering": "αναρρώνοντας",
           "wandering": "περιπλάνηση"
@@ -305,11 +387,19 @@
           "recovering": "αναρρώνοντας",
           "wandering": "περιπλάνηση"
         },
+        "CourseF_outbreak5_2023": {
+          "recovering": "αναρρώνοντας",
+          "wandering": "περιπλάνηση"
+        },
         "CourseF_outbreak6": {
           "recovering": "αναρρώνοντας",
           "wandering": "περιπλάνηση"
         },
         "CourseF_outbreak6_-2022-2": {
+          "recovering": "αναρρώνοντας",
+          "wandering": "περιπλάνηση"
+        },
+        "CourseF_outbreak6_2023": {
           "recovering": "αναρρώνοντας",
           "wandering": "περιπλάνηση"
         },
@@ -345,6 +435,22 @@
           "spinning right": "περιστροφή δεξιά",
           "wandering": "περιπλάνηση"
         },
+        "CourseF_outbreak7_2023": {
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving left and right": "κίνηση αριστερά και δεξιά",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "recovering": "αναρρώνοντας",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση"
+        },
         "CourseF_outbreak8": {
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -362,6 +468,22 @@
           "wandering": "περιπλάνηση"
         },
         "CourseF_outbreak8_-2022-2": {
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving left and right": "κίνηση αριστερά και δεξιά",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "recovering": "αναρρώνοντας",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση"
+        },
+        "CourseF_outbreak8_2023": {
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
           "moving east": "μετακίνηση ανατολικά",
@@ -715,6 +837,19 @@
           "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
           "wandering": "περιπλάνηση"
         },
+        "Fish Tank 2-validated_2023": {
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση"
+        },
         "Fish Tank 3-validated2022": {
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -755,6 +890,19 @@
           "wandering": "περιπλάνηση"
         },
         "Fish Tank 3-validated_2021": {
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση"
+        },
+        "Fish Tank 3-validated_2023": {
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
           "moving east": "μετακίνηση ανατολικά",
@@ -819,6 +967,19 @@
           "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
           "wandering": "περιπλάνηση"
         },
+        "Fish Tank 4-validated_2023": {
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση"
+        },
         "Fish Tank 5-validated2022": {
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -871,6 +1032,19 @@
           "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
           "wandering": "περιπλάνηση"
         },
+        "Fish Tank 5-validated_2023": {
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση"
+        },
         "Fish Tank 6-validated2022": {
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -911,6 +1085,19 @@
           "wandering": "περιπλάνηση"
         },
         "Fish Tank 6-validated_2021": {
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση"
+        },
+        "Fish Tank 6-validated_2023": {
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
           "moving east": "μετακίνηση ανατολικά",
@@ -1056,6 +1243,26 @@
           "wandering": "περιπλάνηση",
           "wobbling": "ταλάντευση"
         },
+        "Virtual Pet 1_2023": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
         "Virtual Pet 2": {
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -1126,6 +1333,20 @@
           "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
           "wandering": "περιπλάνηση"
         },
+        "Virtual Pet 2_2023": {
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση"
+        },
         "Virtual Pet 3_-2022-2": {
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -1169,6 +1390,20 @@
           "wandering": "περιπλάνηση"
         },
         "Virtual Pet 3_2021": {
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση"
+        },
+        "Virtual Pet 3_2023": {
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
           "moving east": "μετακίνηση ανατολικά",
@@ -1581,6 +1816,20 @@
           "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
           "wandering": "περιπλάνηση"
         },
+        "courseE_aboutme_2_2023": {
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση"
+        },
         "courseE_aboutme_3": {
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -1624,6 +1873,20 @@
           "wandering": "περιπλάνηση"
         },
         "courseE_aboutme_3_2021": {
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση"
+        },
+        "courseE_aboutme_3_2023": {
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
           "moving east": "μετακίνηση ανατολικά",
@@ -1693,6 +1956,20 @@
           "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
           "wandering": "περιπλάνηση"
         },
+        "courseE_aboutme_4_2023": {
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση"
+        },
         "courseE_aboutme_5": {
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -1736,6 +2013,20 @@
           "wandering": "περιπλάνηση"
         },
         "courseE_aboutme_5_2021": {
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση"
+        },
+        "courseE_aboutme_5_2023": {
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
           "moving east": "μετακίνηση ανατολικά",
@@ -1800,6 +2091,23 @@
           "wandering": "περιπλάνηση",
           "wobbling": "ταλάντευση"
         },
+        "courseF_apps_aquarium_2023": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
         "courseF_apps_card": {
           "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
           "growing": "αυξάνεται",
@@ -1833,6 +2141,22 @@
           "wandering": "περιπλάνηση"
         },
         "courseF_apps_card_-2022-2": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση"
+        },
+        "courseF_apps_card_2023": {
           "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -1896,6 +2220,22 @@
           "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
           "wandering": "περιπλάνηση"
         },
+        "courseF_apps_chatbot_2023": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση"
+        },
         "courseF_apps_collector": {
           "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
           "fluttering": "τριγύρισμα",
@@ -1929,6 +2269,22 @@
           "wandering": "περιπλάνηση"
         },
         "courseF_apps_collector_-2022-2": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση"
+        },
+        "courseF_apps_collector_2023": {
           "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
@@ -1983,6 +2339,25 @@
           "wobbling": "ταλάντευση"
         },
         "courseF_apps_madlib_-2022-2": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "courseF_apps_madlib_2023": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -2061,6 +2436,26 @@
           "wandering": "περιπλάνηση",
           "wobbling": "ταλάντευση"
         },
+        "courseF_apps_pet_2023": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
         "courseF_editable_card": {
           "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
           "growing": "αυξάνεται",
@@ -2078,6 +2473,22 @@
           "wandering": "περιπλάνηση"
         },
         "courseF_editable_card_-2022-2": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση"
+        },
+        "courseF_editable_card_2023": {
           "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -2125,6 +2536,22 @@
           "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
           "wandering": "περιπλάνηση"
         },
+        "courseF_editable_chatbot_2023": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση"
+        },
         "courseF_editable_madlib": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
@@ -2145,6 +2572,25 @@
           "wobbling": "ταλάντευση"
         },
         "courseF_editable_madlib_-2022-2": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "courseF_editable_madlib_2023": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -2209,7 +2655,38 @@
           "spinning right": "περιστροφή δεξιά",
           "wandering": "περιπλάνηση"
         },
+        "courseF_events_choice_conflict2_2023": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση"
+        },
         "courseF_events_choice_conflict_-2022-2": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση"
+        },
+        "courseF_events_choice_conflict_2023": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -2243,6 +2720,23 @@
           "wobbling": "ταλάντευση"
         },
         "courseF_events_choice_penguin_-2022-2": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "courseF_events_choice_penguin_2023": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -2293,6 +2787,23 @@
           "wandering": "περιπλάνηση",
           "wobbling": "ταλάντευση"
         },
+        "courseF_events_choice_pufferfish_2023": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
         "courseF_events_conflict": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
@@ -2310,6 +2821,22 @@
           "wandering": "περιπλάνηση"
         },
         "courseF_events_conflict_-2022-2": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση"
+        },
+        "courseF_events_conflict_2023": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -2357,6 +2884,22 @@
           "wandering": "περιπλάνηση",
           "wobbling": "ταλάντευση"
         },
+        "courseF_events_freeplay_air_2023": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
         "courseF_events_freeplay_animals": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
@@ -2374,6 +2917,22 @@
           "wobbling": "ταλάντευση"
         },
         "courseF_events_freeplay_animals_-2022-2": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "courseF_events_freeplay_animals_2023": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -2421,6 +2980,22 @@
           "wandering": "περιπλάνηση",
           "wobbling": "ταλάντευση"
         },
+        "courseF_events_freeplay_aquatic_2023": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
         "courseF_events_freeplay_blank": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
@@ -2438,6 +3013,22 @@
           "wobbling": "ταλάντευση"
         },
         "courseF_events_freeplay_blank_-2022-2": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "courseF_events_freeplay_blank_2023": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -2485,6 +3076,22 @@
           "wandering": "περιπλάνηση",
           "wobbling": "ταλάντευση"
         },
+        "courseF_events_freeplay_food_2023": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
         "courseF_events_freeplay_space": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
@@ -2502,6 +3109,22 @@
           "wobbling": "ταλάντευση"
         },
         "courseF_events_freeplay_space_-2022-2": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "courseF_events_freeplay_space_2023": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -2535,6 +3158,23 @@
           "wobbling": "ταλάντευση"
         },
         "courseF_events_key_-2022-2": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "courseF_events_key_2023": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -2589,6 +3229,25 @@
           "wandering": "περιπλάνηση",
           "wobbling": "ταλάντευση"
         },
+        "courseF_events_practice_reorder_2023": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
         "courseF_events_predict": {
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -2604,6 +3263,20 @@
           "wandering": "περιπλάνηση"
         },
         "courseF_events_predict_-2022-2": {
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση"
+        },
+        "courseF_events_predict_2023": {
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
           "moving east": "μετακίνηση ανατολικά",
@@ -2651,6 +3324,23 @@
           "wandering": "περιπλάνηση",
           "wobbling": "ταλάντευση"
         },
+        "courseF_events_review_2023": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
         "courseF_events_ship": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
@@ -2669,6 +3359,23 @@
           "wobbling": "ταλάντευση"
         },
         "courseF_events_ship_-2022-2": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "courseF_events_ship_2023": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -2751,6 +3458,23 @@
           "wandering": "περιπλάνηση",
           "wobbling": "ταλάντευση"
         },
+        "courseF_events_time_2023": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
         "courseF_label_predict": {
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -2766,6 +3490,20 @@
           "wandering": "περιπλάνηση"
         },
         "courseF_label_predict_-2022-2": {
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση"
+        },
+        "courseF_label_predict_2023": {
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
           "moving east": "μετακίνηση ανατολικά",
@@ -2795,6 +3533,21 @@
           "wobbling": "ταλάντευση"
         },
         "courseF_place_fruit_-2022-2": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wobbling": "ταλάντευση"
+        },
+        "courseF_place_fruit_2023": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -2843,6 +3596,16 @@
           "spinning left": "περιστροφή αριστερά",
           "spinning right": "περιστροφή δεξιά"
         },
+        "courseF_sprites_behaviors_2023": {
+          "growing": "αυξάνεται",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά"
+        },
         "courseF_sprites_clouds": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
@@ -2860,6 +3623,22 @@
           "wobbling": "ταλάντευση"
         },
         "courseF_sprites_clouds_-2022-2": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "courseF_sprites_clouds_2023": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -2905,6 +3684,21 @@
           "spinning right": "περιστροφή δεξιά",
           "wobbling": "ταλάντευση"
         },
+        "courseF_sprites_desert_2023": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wobbling": "ταλάντευση"
+        },
         "courseF_sprites_freeplay_air": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
@@ -2922,6 +3716,22 @@
           "wobbling": "ταλάντευση"
         },
         "courseF_sprites_freeplay_air_-2022-2": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "courseF_sprites_freeplay_air_2023": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -2969,6 +3779,22 @@
           "wandering": "περιπλάνηση",
           "wobbling": "ταλάντευση"
         },
+        "courseF_sprites_freeplay_animals_2023": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
         "courseF_sprites_freeplay_aquatic": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
@@ -2986,6 +3812,22 @@
           "wobbling": "ταλάντευση"
         },
         "courseF_sprites_freeplay_aquatic_-2022-2": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "courseF_sprites_freeplay_aquatic_2023": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -3033,6 +3875,22 @@
           "wandering": "περιπλάνηση",
           "wobbling": "ταλάντευση"
         },
+        "courseF_sprites_freeplay_blank_2023": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
         "courseF_sprites_freeplay_food": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
@@ -3050,6 +3908,22 @@
           "wobbling": "ταλάντευση"
         },
         "courseF_sprites_freeplay_food_-2022-2": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "courseF_sprites_freeplay_food_2023": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -3097,6 +3971,22 @@
           "wandering": "περιπλάνηση",
           "wobbling": "ταλάντευση"
         },
+        "courseF_sprites_freeplay_space_2023": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
         "courseF_sprites_make": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
@@ -3113,6 +4003,21 @@
           "wobbling": "ταλάντευση"
         },
         "courseF_sprites_make_-2022-2": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wobbling": "ταλάντευση"
+        },
+        "courseF_sprites_make_2023": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -3157,6 +4062,21 @@
           "spinning right": "περιστροφή δεξιά",
           "wobbling": "ταλάντευση"
         },
+        "courseF_sprites_moreSprites_2023": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wobbling": "ταλάντευση"
+        },
         "courseF_sprites_positioning": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
@@ -3173,6 +4093,21 @@
           "wobbling": "ταλάντευση"
         },
         "courseF_sprites_positioning_-2022-2": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wobbling": "ταλάντευση"
+        },
+        "courseF_sprites_positioning_2023": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -3215,6 +4150,20 @@
           "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
           "wandering": "περιπλάνηση"
         },
+        "courseF_sprites_predict_2023": {
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση"
+        },
         "courseF_sprites_properties": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
@@ -3231,6 +4180,21 @@
           "wobbling": "ταλάντευση"
         },
         "courseF_sprites_properties_-2022-2": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wobbling": "ταλάντευση"
+        },
+        "courseF_sprites_properties_2023": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -3275,6 +4239,21 @@
           "spinning right": "περιστροφή δεξιά",
           "wobbling": "ταλάντευση"
         },
+        "courseF_sprites_ship_2023": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wobbling": "ταλάντευση"
+        },
         "courseF_text_answer": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
@@ -3292,6 +4271,22 @@
           "wandering": "περιπλάνηση"
         },
         "courseF_text_answer_-2022-2": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση"
+        },
+        "courseF_text_answer_2023": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -3339,6 +4334,22 @@
           "spinning right": "περιστροφή δεξιά",
           "wandering": "περιπλάνηση"
         },
+        "courseF_text_choice_color_2023": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση"
+        },
         "courseF_text_choice_conversation": {
           "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
           "fluttering": "τριγύρισμα",
@@ -3360,6 +4371,26 @@
           "wobbling": "ταλάντευση"
         },
         "courseF_text_choice_conversation_-2022-2": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "courseF_text_choice_conversation_2023": {
           "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
@@ -3419,6 +4450,26 @@
           "wandering": "περιπλάνηση",
           "wobbling": "ταλάντευση"
         },
+        "courseF_text_choice_events_2023": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
         "courseF_text_choice_freeplay": {
           "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
           "fluttering": "τριγύρισμα",
@@ -3440,6 +4491,26 @@
           "wobbling": "ταλάντευση"
         },
         "courseF_text_choice_freeplay_-2022-2": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "courseF_text_choice_freeplay_2023": {
           "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
@@ -3499,6 +4570,26 @@
           "wandering": "περιπλάνηση",
           "wobbling": "ταλάντευση"
         },
+        "courseF_text_choice_interview_2023": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
         "courseF_text_choice_multiprompt": {
           "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
           "fluttering": "τριγύρισμα",
@@ -3520,6 +4611,26 @@
           "wobbling": "ταλάντευση"
         },
         "courseF_text_choice_multiprompt_-2022-2": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "courseF_text_choice_multiprompt_2023": {
           "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
@@ -3571,6 +4682,22 @@
           "spinning right": "περιστροφή δεξιά",
           "wandering": "περιπλάνηση"
         },
+        "courseF_text_choice_title_2023": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση"
+        },
         "courseF_text_concat": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
@@ -3588,6 +4715,22 @@
           "wandering": "περιπλάνηση"
         },
         "courseF_text_concat_-2022-2": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση"
+        },
+        "courseF_text_concat_2023": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -3635,6 +4778,22 @@
           "spinning right": "περιστροφή δεξιά",
           "wandering": "περιπλάνηση"
         },
+        "courseF_text_events_2023": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση"
+        },
         "courseF_text_print": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
@@ -3652,6 +4811,22 @@
           "wandering": "περιπλάνηση"
         },
         "courseF_text_print_-2022-2": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση"
+        },
+        "courseF_text_print_2023": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -3699,6 +4874,22 @@
           "spinning right": "περιστροφή δεξιά",
           "wandering": "περιπλάνηση"
         },
+        "courseF_text_prompts_2023": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση"
+        },
         "courseF_text_review": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
@@ -3716,6 +4907,22 @@
           "wandering": "περιπλάνηση"
         },
         "courseF_text_review_-2022-2": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση"
+        },
+        "courseF_text_review_2023": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -3751,6 +4958,25 @@
           "wobbling": "ταλάντευση"
         },
         "courseF_variables_card_-2022-2": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "courseF_variables_card_2023": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -3807,6 +5033,25 @@
           "wandering": "περιπλάνηση",
           "wobbling": "ταλάντευση"
         },
+        "courseF_variables_card_finish_2023": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
         "courseF_variables_chatbot": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
@@ -3827,6 +5072,25 @@
           "wobbling": "ταλάντευση"
         },
         "courseF_variables_chatbot_-2022-2": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "courseF_variables_chatbot_2023": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -3883,6 +5147,25 @@
           "wandering": "περιπλάνηση",
           "wobbling": "ταλάντευση"
         },
+        "courseF_variables_chatbot_finish_2023": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
         "courseF_variables_madlib": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
@@ -3903,6 +5186,25 @@
           "wobbling": "ταλάντευση"
         },
         "courseF_variables_madlib_-2022-2": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "courseF_variables_madlib_2023": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -3959,6 +5261,25 @@
           "wandering": "περιπλάνηση",
           "wobbling": "ταλάντευση"
         },
+        "courseF_variables_madlib_finish_2023": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
         "courseF_variables_predict": {
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -3987,6 +5308,20 @@
           "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
           "wandering": "περιπλάνηση"
         },
+        "courseF_variables_predict_2023": {
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση"
+        },
         "coursee_helloworld_events": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
@@ -4002,6 +5337,308 @@
           "spinning left": "περιστροφή αριστερά",
           "spinning right": "περιστροφή δεξιά",
           "wandering": "περιπλάνηση"
+        },
+        "coursee_helloworld_events_2023": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wandering": "περιπλάνηση"
+        },
+        "csc_animal_adaptaions_fishschool": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving north and looping": "μετακίνηση βόρεια και δημιουργία βρόχου",
+          "moving south": "μετακίνηση νότια",
+          "moving south and looping": "μετακίνηση νότια και δημιουργία βρόχου",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "csc_animal_adaptations_birds": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving north and looping": "μετακίνηση βόρεια και δημιουργία βρόχου",
+          "moving south": "μετακίνηση νότια",
+          "moving south and looping": "μετακίνηση νότια και δημιουργία βρόχου",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "csc_animal_adaptations_bugs": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving north and looping": "μετακίνηση βόρεια και δημιουργία βρόχου",
+          "moving south": "μετακίνηση νότια",
+          "moving south and looping": "μετακίνηση νότια και δημιουργία βρόχου",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "csc_animal_adaptations_butterfly": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving north and looping": "μετακίνηση βόρεια και δημιουργία βρόχου",
+          "moving south": "μετακίνηση νότια",
+          "moving south and looping": "μετακίνηση νότια και δημιουργία βρόχου",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "csc_animal_adaptations_choice2": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving north and looping": "μετακίνηση βόρεια και δημιουργία βρόχου",
+          "moving south": "μετακίνηση νότια",
+          "moving south and looping": "μετακίνηση νότια και δημιουργία βρόχου",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "csc_animal_adaptations_choice3": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving north and looping": "μετακίνηση βόρεια και δημιουργία βρόχου",
+          "moving south": "μετακίνηση νότια",
+          "moving south and looping": "μετακίνηση νότια και δημιουργία βρόχου",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "csc_animal_adaptations_fish": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving north and looping": "μετακίνηση βόρεια και δημιουργία βρόχου",
+          "moving south": "μετακίνηση νότια",
+          "moving south and looping": "μετακίνηση νότια και δημιουργία βρόχου",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "csc_animal_adaptations_groups": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving north and looping": "μετακίνηση βόρεια και δημιουργία βρόχου",
+          "moving south": "μετακίνηση νότια",
+          "moving south and looping": "μετακίνηση νότια και δημιουργία βρόχου",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "csc_animal_adaptations_migration": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving north and looping": "μετακίνηση βόρεια και δημιουργία βρόχου",
+          "moving south": "μετακίνηση νότια",
+          "moving south and looping": "μετακίνηση νότια και δημιουργία βρόχου",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "csc_animal_adaptations_speed": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving north and looping": "μετακίνηση βόρεια και δημιουργία βρόχου",
+          "moving south": "μετακίνηση νότια",
+          "moving south and looping": "μετακίνηση νότια και δημιουργία βρόχου",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "csc_ecosystems_giraffe_evo_2023": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving north and looping": "μετακίνηση βόρεια και δημιουργία βρόχου",
+          "moving south": "μετακίνηση νότια",
+          "moving south and looping": "μετακίνηση νότια και δημιουργία βρόχου",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "csc_ecosystems_whale_explain_2023": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving north and looping": "μετακίνηση βόρεια και δημιουργία βρόχου",
+          "moving south": "μετακίνηση νότια",
+          "moving south and looping": "μετακίνηση νότια και δημιουργία βρόχου",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "csc_ecosystems_whale_movement_2023": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving north and looping": "μετακίνηση βόρεια και δημιουργία βρόχου",
+          "moving south": "μετακίνηση νότια",
+          "moving south and looping": "μετακίνηση νότια και δημιουργία βρόχου",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
         },
         "helloworld_animals_backgrounds": {
           "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
@@ -4219,6 +5856,28 @@
           "wandering": "περιπλάνηση",
           "wobbling": "ταλάντευση"
         },
+        "helloworld_food_backgrounds_2023": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving north and looping": "μετακίνηση βόρεια και δημιουργία βρόχου",
+          "moving south": "μετακίνηση νότια",
+          "moving south and looping": "μετακίνηση νότια και δημιουργία βρόχου",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
         "helloworld_food_backgrounds_soccer-2022": {
           "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
           "fluttering": "τριγύρισμα",
@@ -4285,7 +5944,44 @@
           "wandering": "περιπλάνηση",
           "wobbling": "ταλάντευση"
         },
+        "helloworld_food_behaviors_2023": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving north and looping": "μετακίνηση βόρεια και δημιουργία βρόχου",
+          "moving south": "μετακίνηση νότια",
+          "moving south and looping": "μετακίνηση νότια και δημιουργία βρόχου",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
         "helloworld_food_costumes": {
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "wobbling": "ταλάντευση"
+        },
+        "helloworld_food_costumes_2023": {
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -4317,6 +6013,28 @@
           "wandering": "περιπλάνηση"
         },
         "helloworld_food_sounds": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving north and looping": "μετακίνηση βόρεια και δημιουργία βρόχου",
+          "moving south": "μετακίνηση νότια",
+          "moving south and looping": "μετακίνηση νότια και δημιουργία βρόχου",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "helloworld_food_sounds_2023": {
           "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",
@@ -4573,6 +6291,26 @@
           "wobbling": "ταλάντευση"
         },
         "simcustom_2021": {
+          "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "fluttering": "τριγύρισμα",
+          "growing": "αυξάνεται",
+          "jittering": "τρεμούλιασμα",
+          "moving east": "μετακίνηση ανατολικά",
+          "moving east and looping": "μετακίνηση ανατολικά και δημιουργία βρόχου",
+          "moving north": "μετακίνηση βόρεια",
+          "moving south": "μετακίνηση νότια",
+          "moving west": "μετακίνηση δυτικά",
+          "moving west and looping": "μετακίνηση δυτικά και δημιουργία βρόχου",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "patrolling": "περιφρούρηση",
+          "shrinking": "συρρικνώνεται",
+          "spinning left": "περιστροφή αριστερά",
+          "spinning right": "περιστροφή δεξιά",
+          "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
+          "wandering": "περιπλάνηση",
+          "wobbling": "ταλάντευση"
+        },
+        "simcustom_2023": {
           "driving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
           "fluttering": "τριγύρισμα",
           "growing": "αυξάνεται",

@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: アフタースクールのためのHour of Codeハウツーガイド
 ---
 
 サインアップ
@@ -10,7 +10,7 @@ title: Hour of Code How-to Guide for After-school
 
 コンピューター的思考を養うと、問題解決能力、論理的思考、創造力が身に付きます。 また、テクノロジーは世界中の産業を変革しています。 今日の生徒は、テクノロジーを利用するだけでなく、それを創造する力をつけるべきです。 早いうちからコンピューターサイエンスを学んでおくと、21世紀のキャリアパスでの成功基盤を持つことになります。
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+Hour of Codeを試すことは、学生にコンピュータサイエンスを紹介する簡単で楽しい方法です。おそらくは初めてです。 支援してくれる人が増えたら、放課後のクラスやクラブでHour of []({{ urls/volunteer_local }}) Codeを運営するのを手伝ってくれる地元のボランティアを探すこともできます。
 
 ### Hour of Code はリモートでも開催できます！開始するには、 [Hour of Codeバーチャルイベント主催のヒント](https://hourofcode.com/us/how-to/virtual)をご覧ください。
 
@@ -20,7 +20,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 ## 2. チュートリアルを選ぶ
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+さまざまなパートナーが作成した、</a> あらゆる年齢の参加者向けに、 さまざまな楽しい1時間のチュートリアルを提供しています。 [ぜひ試してみてください！]({{ urls/learn }})</p> 
 
 **すべてのHour of Codeチュートリアル**は最低限の準備時間で済むようになっており、参加者は自分自身のペースやスキルレベルに応じて参加できる自習式となっています。
 
@@ -30,7 +30,7 @@ We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for partici
 
 ## 3. あなたのHour of Codeを宣伝する
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+[これらのツールを使ってHour of]({{ urls/promote }}) Codeを宣伝し、他の人にも自分のイベントを主催するよう勧めてください。
 
 ## 4. 必要な技術を準備する（コンピューターは必須ではありません）
 
@@ -57,23 +57,23 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 - なぜ、コンピュータが我々の生活に大きなインパクトを与えているのか、男の子も女の子も興味を持つ分野の実例を交えて（例えば、コンピュータが医療の分野でどの様に使われているのか、人々を助けるためにどんな役割を担っているのか、もしくは人々を国境を超えてつなげるためにどんなアプリケーションが使われているのか）説明してみましょう。
 - コンピュータが使われているシーンをリストアップしてみましょう。
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- 女の子にコンピュータサイエンスに興味を持ってもらうためのヒントについては、 [こちらをご覧ください]({{ urls/girls }})。
 
 **もう少し詳しく知りたいですか？**[こちらのレッスンプラン](/files/AfterschoolEducatorLessonPlanOutline.docx)をダウンロードすることをお勧めします。
 
 ## 6. コードを書く！
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**参加者をアクティビティに誘導する** -ホワイトボードにチュートリアルのリンクを記入してください。 Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. 一緒に考えてみよう」 - 「テクノロジーは常に私たちが望むように機能するわけではない」 -「プログラミング学習は、新しい言語を学ぶようなもの。すぐに使えるようにはならない」
+**誰かが困難に遭遇したときは、次のように答えても大丈夫です。** -「わかりません。 一緒に考えてみよう」 - 「テクノロジーは常に私たちが望むように機能するわけではない」 -「プログラミング学習は、新しい言語を学ぶようなもの。すぐに使えるようにはならない」
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+**誰かが早く終わったらどうしますか？** -参加者に、 [hourofcode.com/learn で「Hour of Code」のアクティビティをもうひとつ試してもらう]({{ urls/learn }}) -または、早く終わった人に、問題を抱えている他の人を助けてもらうように頼んでください。
 
 ## 7. ほめてあげる
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
-- 参加者向けの[特製Tシャツを注文](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)します。
+- []({{ urls/certificates }}) 学生用の証明書を印刷してください。
+- [「コード一時間やったよ！」をプリント]({{ promote/resources_stickers }}) 学生用のステッカー。
+- [](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) 参加者用のカスタムTシャツを注文してください。
 - Hour of Codeのイベントの様子を撮影した写真やビデオをソーシャルメディア上で共有しましょう。 #HourOfCodeハッシュタグや@codeorg参照を使うと、我々があなたの取り組みをハイライトすることもできます！
 
 ## Hour of Codeの教育者向けその他資料
@@ -85,6 +85,6 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## Hour of Codeを終えたら？
 
-Hour of Codeは、あくまでコンピュータやアプリケーションがどうやって作られているのかを理解する最初の一歩にすぎません。 Help students continue their journey and encourage them to [learn more online](/beyond)!
+Hour of Codeは、あくまでコンピュータやアプリケーションがどうやって作られているのかを理解する最初の一歩にすぎません。 学生が旅を続けるのを助け、 [](/beyond)オンラインでもっと学ぶように励ましてください！
 
 サインアップ

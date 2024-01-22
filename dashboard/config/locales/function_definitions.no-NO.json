@@ -400,6 +400,11 @@
             "name": "min funksjon"
           }
         },
+        "Course E: Artist Project_examples_2023": {
+          "my function": {
+            "name": "min funksjon"
+          }
+        },
         "Course E: Frozen Project_examples2022": {
           "draw a circle": {
             "description": "Tegn en sirkel med det forklarte radius",
@@ -451,6 +456,56 @@
           }
         },
         "Course E: Frozen Project_examples_2021": {
+          "draw a circle": {
+            "description": "Tegn en sirkel med det forklarte radius",
+            "name": "tegn en sirkel",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a house": {
+            "name": "tegn et hus",
+            "parameters": {
+              "length": "lengde"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "lengde",
+              "repeat": "gjenta",
+              "sides": "Sider"
+            }
+          },
+          "draw a shape": {
+            "name": "tegn en form",
+            "parameters": {
+              "length": "lengde",
+              "sides": "Sider"
+            }
+          },
+          "draw a square": {
+            "name": "tegn en firkant",
+            "parameters": {
+              "length": "lengde",
+              "sides": "Sider"
+            }
+          },
+          "draw a star": {
+            "description": "Tegn en stjerne med beskrive sider, lengde og  spiser",
+            "name": "tegn en stjerne",
+            "parameters": {
+              "length": "lengde",
+              "points": "poeng"
+            }
+          },
+          "draw a triangle": {
+            "name": "tegn en trekant",
+            "parameters": {
+              "length": "lengde"
+            }
+          }
+        },
+        "Course E: Frozen Project_examples_2023": {
           "draw a circle": {
             "description": "Tegn en sirkel med det forklarte radius",
             "name": "tegn en sirkel",
@@ -701,6 +756,55 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "description": "Tegn en sirkel med det forklarte radius",
+            "name": "tegn en sirkel",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a house": {
+            "name": "tegn et hus",
+            "parameters": {
+              "length": "lengde"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "lengde",
+              "repeat": "gjenta",
+              "sides": "Sider"
+            }
+          },
+          "draw a shape": {
+            "name": "tegn en form",
+            "parameters": {
+              "length": "lengde",
+              "sides": "Sider"
+            }
+          },
+          "draw a square": {
+            "name": "tegn en firkant",
+            "parameters": {
+              "length": "lengde"
+            }
+          },
+          "draw a star": {
+            "description": "Tegn en stjerne med beskrive sider, lengde og  spiser",
+            "name": "tegn en stjerne",
+            "parameters": {
+              "length": "lengde",
+              "points": "poeng"
+            }
+          },
+          "draw a triangle": {
+            "name": "tegn en trekant",
+            "parameters": {
+              "length": "lengde"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "description": "Tegn en sirkel med det forklarte radius",
@@ -799,6 +903,55 @@
             }
           }
         },
+        "CourseD_EOC_artist_example2021_2023": {
+          "draw a circle": {
+            "description": "Tegn en sirkel med det forklarte radius",
+            "name": "tegn en sirkel",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a house": {
+            "name": "tegn et hus",
+            "parameters": {
+              "length": "lengde"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "lengde",
+              "repeat": "gjenta",
+              "sides": "Sider"
+            }
+          },
+          "draw a shape": {
+            "name": "tegn en form",
+            "parameters": {
+              "length": "lengde",
+              "sides": "Sider"
+            }
+          },
+          "draw a square": {
+            "name": "tegn en firkant",
+            "parameters": {
+              "length": "lengde"
+            }
+          },
+          "draw a star": {
+            "description": "Tegn en stjerne med beskrive sider, lengde og  spiser",
+            "name": "tegn en stjerne",
+            "parameters": {
+              "length": "lengde",
+              "points": "poeng"
+            }
+          },
+          "draw a triangle": {
+            "name": "tegn en trekant",
+            "parameters": {
+              "length": "lengde"
+            }
+          }
+        },
         "Find the Wizard": {
           "do something": {
             "name": "gjør noe"
@@ -832,6 +985,11 @@
           }
         },
         "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "bygg bro"
+          }
+        },
+        "Function intro Ryan_2023": {
           "build bridge": {
             "name": "bygg bro"
           }
@@ -944,6 +1102,11 @@
             "name": "rydd vei"
           }
         },
+        "MC_HOC_2017_07_Cole_2023": {
+          "clear path": {
+            "name": "rydd vei"
+          }
+        },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
             "name": "reparer lang vei"
@@ -977,6 +1140,14 @@
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "reparer lang vei"
+          },
+          "fix short path": {
+            "name": "reparer kort vei"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2023": {
           "fix long path": {
             "name": "reparer lang vei"
           },
@@ -1024,6 +1195,14 @@
             "name": "bygg kort bro"
           }
         },
+        "MC_HOC_2017_Ali_2023": {
+          "build long bridge": {
+            "name": "bygg lang bro"
+          },
+          "build short bridge": {
+            "name": "bygg kort bro"
+          }
+        },
         "MC_HOC_2017_FP20x20": {
           "function 1": {
             "name": "Funksjon 1"
@@ -1057,6 +1236,14 @@
           }
         },
         "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "Funksjon 1"
+          },
+          "function 2": {
+            "name": "Funksjon 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2023": {
           "function 1": {
             "name": "Funksjon 1"
           },
@@ -1568,6 +1755,11 @@
             "name": "mulig løsning"
           }
         },
+        "courseB_artist_loops_challenge2_2023": {
+          "potential solution": {
+            "name": "mulig løsning"
+          }
+        },
         "courseC_artist_prog3": {
           "draw flame": {
             "parameters": {
@@ -1626,6 +1818,11 @@
           }
         },
         "courseC_data wizard_2021": {
+          "do something": {
+            "name": "gjør noe"
+          }
+        },
+        "courseC_data wizard_2023": {
           "do something": {
             "name": "gjør noe"
           }
@@ -2014,6 +2211,11 @@
             "name": "gjør noe"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "gjør noe"
+          }
+        },
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "tegn en firkant"
@@ -2040,6 +2242,11 @@
           }
         },
         "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "tegn en firkant"
+          }
+        },
+        "courseE_artist_functions2_2023": {
           "draw a square": {
             "name": "tegn en firkant"
           }
@@ -2075,6 +2282,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "tegn en stjerne"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "tegn en stjerne"
           }
@@ -2120,6 +2332,11 @@
           }
         },
         "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "tegn en stjerne"
+          }
+        },
+        "courseE_artist_functions5_2023": {
           "draw a star": {
             "name": "tegn en stjerne"
           }
@@ -2215,6 +2432,17 @@
             "name": "tegn en firkant"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "gjør noe"
+          },
+          "draw a line of squares": {
+            "name": "tegn en linje av firkanter"
+          },
+          "draw square": {
+            "name": "tegn en firkant"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "gjør noe"
@@ -2248,6 +2476,14 @@
           }
         },
         "courseE_artist_functions8a_2021": {
+          "do something": {
+            "name": "gjør noe"
+          },
+          "draw a square": {
+            "name": "tegn en firkant"
+          }
+        },
+        "courseE_artist_functions8a_2023": {
           "do something": {
             "name": "gjør noe"
           },
@@ -2300,6 +2536,17 @@
           }
         },
         "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "gjør noe"
+          },
+          "draw a line of squares": {
+            "name": "tegn en linje av firkanter"
+          },
+          "draw square": {
+            "name": "tegn en firkant"
+          }
+        },
+        "courseE_artist_functions8b_2023": {
           "do something": {
             "name": "gjør noe"
           },
@@ -2365,6 +2612,17 @@
             "name": "tegn en firkant"
           }
         },
+        "courseE_artist_functions8c_2023": {
+          "do something": {
+            "name": "gjør noe"
+          },
+          "draw a line of squares": {
+            "name": "tegn en linje av firkanter"
+          },
+          "draw square": {
+            "name": "tegn en firkant"
+          }
+        },
         "courseE_artist_functions9": {
           "do something": {
             "name": "gjør noe"
@@ -2391,6 +2649,11 @@
           }
         },
         "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "gjør noe"
+          }
+        },
+        "courseE_artist_functions9_2023": {
           "do something": {
             "name": "gjør noe"
           }
@@ -2435,6 +2698,14 @@
             "name": "tegn en firkant"
           }
         },
+        "courseE_artist_functionsProj_2023": {
+          "draw a line of squares": {
+            "name": "tegn en linje av firkanter"
+          },
+          "draw square": {
+            "name": "tegn en firkant"
+          }
+        },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "gjør noe"
@@ -2461,6 +2732,11 @@
           }
         },
         "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "gjør noe"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "do something": {
             "name": "gjør noe"
           }
@@ -2495,6 +2771,11 @@
             "name": "gjør noe"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "gjør noe"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "tegn en firkant"
@@ -2521,6 +2802,11 @@
           }
         },
         "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "tegn en firkant"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
           "draw a square": {
             "name": "tegn en firkant"
           }
@@ -2561,6 +2847,11 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "gjør noe"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "gjør noe"
           }
@@ -2626,6 +2917,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "Avslutt spill"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "Avslutt spill"
           }

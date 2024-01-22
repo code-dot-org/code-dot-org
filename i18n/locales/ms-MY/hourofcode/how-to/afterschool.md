@@ -73,7 +73,7 @@ Lancarkan acara Jam Kod anda dengan memberikan inspirasi kepada peserta dan memb
 
 - [Cetak sijil]({{ urls/certificates }}) untuk pelajar anda.
 - [Cetakkan pelekat "Saya telah melaksanakan Jam Kod!"]({{ promote/resources_stickers }}) untuk pelajar anda.
-- [Tempah t-shirt buatan khas](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) untuk peserta.
+- [Pesan t-shirt tersu](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) ai untuk peserta.
 - Kongsikan foto dan video acara Jam Kod anda di dalam media sosial. Gunakan #HourOfCode dan @codeorg supaya kami boleh menonjolkan kejayaan anda juga!
 
 ## Sumber Jam Kod lain untuk pendidik

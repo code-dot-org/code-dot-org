@@ -5,7 +5,7 @@ title: Како да се биде домаќин на еден Час на Ко
 {{ signup_button }}
 
 # How to bring the Hour of Code to your company
-### Find out how you and your employees can inspire students to try computer science!
+### Дознајте како вие и вашите вработени можете да ги инспирирате учениците да пробаат компјутерски науки!
 
 ***
 
@@ -57,9 +57,9 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 **Show an inspirational video:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Видео “ [Часот на кодот во светот”](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [Претседателот Обама ги повика сите студенти да учат компјутерски науки](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Најдете повеќе инспиративни видеа [овде](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Ideas to introduce your Hour of Code activity to students:**
 
@@ -67,7 +67,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 - If you are a tech company, demo fun, innovative products your company is working on.
 - If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Видете совети за добивање на девојки заинтересирани за компјутерски науки [тука]({{ urls/girls }}).
 
 ## 6. Code!
 **Direct participants to the activity**

@@ -1,0 +1,20 @@
+name 'OPD-K5 Begin_2023_K5CSConcepts_TextPage'
+skip_dialog true
+markdown <<MARKDOWN
+# Introducing Block-Based Programming 
+<IMG SRC="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXJvd25rcnZqa2Q1aGVqeGFqMTB6aGdlNGkwNmtyc2ZsZHUyNWd3byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fyaVEgUF9g8xYLRNau/giphy.gif">.
+## What is Block-Based Programming? 
+
+####**Block-based programming** is like building with digital blocks! Instead of typing out complicated code, early learners can use a **friendly and visual** approach.  
+
+####With block-based programming, you **drag and drop** digital 'blocks' to make things happen on a computer. You don't need to worry about writing exact words or symbols. 
+
+## Why Use Block-Based Programming?
+#### Block-based programming is a fantastic tool for early learners because it turns coding into a **creative and interactive** experience using simple **drag-and-drop** methods! Block-based coding is an excellent entry point into the world of programming, especially for young learners or beginners. It lays the groundwork for many of the concepts found in more advanced text-based coding, which is used for professional software development and more complex projects. The transition from block-based to text-based coding is a natural progression in the learning curve of a programmer.
+
+
+
+##Let’s get started. 
+
+
+MARKDOWN

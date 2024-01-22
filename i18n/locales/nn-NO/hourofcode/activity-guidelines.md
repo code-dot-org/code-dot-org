@@ -10,7 +10,7 @@ title: Retningslinjer for aktivitetar
 
 # Retningslinjer for å lage og sende inn opplæringsprogrammer og leksjoner for Hour of Code™ og Computer Science Education Week
 
-Code.org er vert for en rekke Hour of Code™ -aktiviteter, leksjoner og videoer på Code.org og Hour of Code nettsteder. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org er vert for en rekke Hour of Code™ -aktiviteter, leksjoner og videoer på Code.org og Hour of Code nettsteder. Den nåværende listen er på []({{ urls/learn }})hourofcode.com/learn.
 
 Vil du sende inn din egen selvstyrte opplæring, lærerledet leksjon eller robotikk/produsentaktivitet som forklarer et datavitenskapsprinsipp? Bli med i denne globale bevegelsen og hjelp deltakere over hele verden med å komme i gang med en times kode eller gå videre med aktiviteter med flere leksjoner, dagslange eller ukelange aktiviteter.
 
@@ -41,11 +41,11 @@ Noen tips:
 
 ## Hva du skal sende inn
 
-**Self-guided puzzle or game ([example](https://code.org/dance))**
+**Selvstyrt puslespill eller spill ([eksempel](https://code.org/dance))**
 
 Disse aktivitetene er designet for at studentene skal kunne styre seg selv gjennom en veiledning. De krever ikke mye instruksjon fra en lærer eller lærerarbeid.
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Lærer Tilrettelagt leksjon ([eksempel](https://studio.code.org/s/course1/lessons/2/levels/1), [mal](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
 Nå som hundretusener av lærere har prøvd Kodetimen, er mange klasserom klare for mer kreative aktiviteter som lærer grunnleggende informatikk. For å hjelpe mer avanserte lærere med å finne inspirasjon, samler og kuraterer vi «lærerledede» leksjoner og aktivitetsplaner for Hour of Code-veteraner.
 
@@ -84,11 +84,11 @@ Målet med en kodetime er å gi nybegynnere en tilgjengelig første smak av info
 
 Aktivitetene skal lære et datavitenskapskonsept som løkker, betingelser, kryptering eller hvordan Internett fungerer. En aktivitet kan også lære om hvordan informatikk kobles til virkelige yrker, hendelser eller historie. For eksempel å lære UX-design for å lage apper som er meningsfulle for et publikum eller en sak. Vi fraråder aktiviteter som fokuserer på syntaksen til programmering i stedet for konseptene. For eksempel vil vi liste opp, men ikke markere, aktiviteter som lærer HTML. På samme måte fraråder vi blokkprogrammeringstimer som fokuserer på å innstille/endre konfigurasjonsalternativer i stedet for å lære å modellere en algoritme eller prosess.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Aktiviteter som krever appinstallasjon, skrivebordsapp, eller spillkonsollopplevelser er ok, men ikke ideelle. Vi vil ikke liste opp aktiviteter som krever registrering eller betaling. (Robotikkaktiviteter kan kreve kjøp av robotikk.)
+*Tekniske krav:* På grunn av det store utvalget av skole- og klasseromsteknologioppsett, er de beste aktivitetene nettbaserte eller smarttelefonvennlige, eller på annen måte ikke-pluggede aktiviteter som lærer datavitenskapskonsepter uten bruk av datamaskin (se http://csunplugged.com/). [](http://csunplugged.com/) Aktiviteter som krever appinstallasjon, skrivebordsapp, eller spillkonsollopplevelser er ok, men ikke ideelle. Vi vil ikke liste opp aktiviteter som krever registrering eller betaling. (Robotikkaktiviteter kan kreve kjøp av robotikk.)
 
 *Studentledet (selvstyrt) format:* Den opprinnelige kodetimen ble hovedsakelig bygget på suksessen med selvstyrte opplæringsprogrammer eller leksjoner, eventuelt tilrettelagt av læreren. Det er mange eksisterende alternativer, men hvis du vil lage en ny, disse aktivitetene bør utformes slik at de kan være morsomme for en student som jobber alene, eller i et klasserom hvis lærer har minimal prep- eller CS-bakgrunn. De bør gi veibeskrivelse for studentene i motsetning til en åpen timelang utfordring. Ideelt sett er instruksjonene og veiledningene integrert direkte i programmeringsplattformen, for å unngå å bytte faner eller vinduer mellom opplæringen og programmeringsplattformen.
 
-To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
+For å få en følelse av det store utvalget av typer opplæringsprogrammer og leksjonsplaner du kan lage, besøk siden [Hour of Code Activities.](https://hourofcode.com/us/learn)
 
 [**Tilbake til toppen**](#top)
 
@@ -141,11 +141,11 @@ Hva du trenger:
     * Trekket ut støpselet
 * Skjermbilde eller markedsføringsbilde av Hour of Code-aktiviteten. Send minst ett bilde med 4:3 dimensjoner. Det bør være minst 520px x 390px. Dette bildet skal ikke ha tekst på seg (annet enn logoen din), for å gjøre det mer tilgjengelig for ikke-engelsktalende. Hvis et passende bilde ikke er gitt, kan vi ta vårt eget skjermbilde av opplæringen din ELLER vi kan velge å ikke liste det opp. Alle bilder må sendes inn som en URL-kobling til .jpg, .jpeg eller .png.
 * For å kunne spore deltakelsen mer nøyaktig, må tredjeparts opplæringspartnere inkludere sporingsbilder med én piksel på første side i veiledningen for timen. Se delen [Tracking Pixel](#pixel) nedenfor for mer informasjon.
-* Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
+* Når du er ferdig med aktiviteten din, bør brukerne sendes til [](https://code.org/api/hour/finish) code.org/api/hour/finish hvor de vil kunne: 
     * Del på sosiale medier at de fullførte Kodetimen
     * Motta et sertifikat om at de fullførte kodetimen
     * Se resultatlister om hvilke land/byer som har høyest deltakelsesrater i Kodetidsaktiviteter
-    * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
+    * For brukere som bruker en time på aktiviteten din og ikke fullfører den, vennligst ta med en knapp på aktiviteten din som sier «Jeg er ferdig med min Kodetime» som også lenker tilbake til [](https://code.org/api/hour/finish) code.org/api/hour/finish.
 * (Valgfritt) Vi kan følge opp med en online undersøkelse/skjema-lenke som ber om en rapport med følgende aktivitetsmålinger: 
     * For aktiviteter på nettet (spesielt smarttelefon/nettbrett-apper): 
         * Antall brukere
@@ -262,7 +262,7 @@ MERK: dette er ikke viktig å gjøre for installerbare apper (iOS/Android-apper 
 
 Eksempel på sporingspiksler for Dance Party:
 
-IMG SRC = <http://code.org/api/hour/begin_dance.png>   
+IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
 
 [**Tilbake til toppen**](#top)

@@ -1,7 +1,7 @@
 require_relative '../../deployment'
 
 module PDF
-  def self.generate_from_url(url, outpath, options={})
+  def self.generate_from_url(url, outpath, options = {})
     invoke_generation_script(
       [
         '-u', Shellwords.escape(url),
@@ -11,7 +11,7 @@ module PDF
     )
   end
 
-  def self.generate_from_html(html, outpath, options={})
+  def self.generate_from_html(html, outpath, options = {})
     invoke_generation_script(
       [
         '-h', Shellwords.escape(html),
@@ -23,7 +23,7 @@ module PDF
 
   PDF_GENERATION_TIMEOUT = 15 * 60
 
-  def self.invoke_generation_script(args, options={})
+  def self.invoke_generation_script(args, options = {})
     script_path = "#{deploy_dir}/bin/generate-pdf"
     cmd = (['timeout', PDF_GENERATION_TIMEOUT.to_s, 'node', script_path] + args).join(" ")
     puts cmd if options[:verbose]

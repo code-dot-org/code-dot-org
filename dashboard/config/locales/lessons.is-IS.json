@@ -434,6 +434,39 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Stafsetning"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Fyrstu skrefin"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Grunnatriði tölvunarfræði"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Horft fram á við"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Grunnfærni: Skipanaröðin"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Grunnfærni: Lykkjur"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Grunnfærni: Skilyrðingar"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Grunnfærni: Föll"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Grunnfærni: Atburðir"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Bestu aðferðir við kennslu tölvunarfræði"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Áætlanagerð"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Næstu skref"
+        },
         "csd1-2019/What is a Computer?": {
           "name": "Hvað er tölva?"
         },
@@ -622,6 +655,30 @@
         },
         "pre-express-2019/Loops in Collector": {
           "name": "Lykkjur með Láru"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Skipanaröð"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Lykkjur"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Atvik"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Skilyrði"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Föll"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Breytur"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Frá lykkjur"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Kvikasmiðjan"
         },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Krúttleg kort"
@@ -905,6 +962,39 @@
         "pre-express-2021/Loops with Laurel": {
           "name": "Lykkjur með Láru"
         },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Fyrstu skrefin"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Grunnatriði tölvunarfræði"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Horft fram á við"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Grunnfærni: Skipanaröðin"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Grunnfærni: Lykkjur"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Grunnfærni: Skilyrðingar"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Grunnfærni: Föll"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Grunnfærni: Atburðir"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Bestu aðferðir við kennslu tölvunarfræði"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Áætlanagerð"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Næstu skref"
+        },
         "csd1-2022/What is a Computer?": {
           "name": "Hvað er tölva?"
         },
@@ -1091,8 +1181,194 @@
         "pre-express-2022/Loops with Laurel": {
           "name": "Lykkjur með Láru"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Klukkustund kóðunar 2013"
+        "csd1-2023/What is a Computer?": {
+          "name": "Hvað er tölva?"
+        },
+        "csd1-2023/Input and Output": {
+          "name": "Inntak og Úttak"
+        },
+        "csd1-2023/Processing": {
+          "name": "Vinnsla"
+        },
+        "csd1-2023/Storage": {
+          "name": "Vistun"
+        },
+        "csd1-2023/Project - Propose an App": {
+          "name": "Verkefni - Tillaga að Appi"
+        },
+        "csd2-2023/Intro to HTML": {
+          "name": "Kynning á HTML"
+        },
+        "csd3-2023/Drawing in Game Lab": {
+          "name": "Teikning í Leikjasmiðju"
+        },
+        "csd3-2023/Variables": {
+          "name": "Breytur"
+        },
+        "csd3-2023/Sprites": {
+          "name": "Kvikar"
+        },
+        "csd3-2023/Sprite Properties": {
+          "name": "Eiginleikar kvika"
+        },
+        "csd3-2023/Text": {
+          "name": "texti"
+        },
+        "csd3-2023/Sprite Movement": {
+          "name": "Hreyfing kvika"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Skilyrði"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Hraði"
+        },
+        "csd3-2023/Collision Detection": {
+          "name": "Skynjun árekstra"
+        },
+        "csd3-2023/Complex Sprite Movement": {
+          "name": "Samsett kvikahreyfing"
+        },
+        "csd3-2023/Collisions": {
+          "name": "Árekstrar"
+        },
+        "csd3-2023/Functions": {
+          "name": "Föll"
+        },
+        "csd3-2023/The Game Design Process": {
+          "name": "Ferli leikjahönnunar"
+        },
+        "csd3-2023/Using the Game Design Process": {
+          "name": "Notkun leikjahönnunarferlisins"
+        },
+        "csd4-2023/Identifying User Needs": {
+          "name": "Greining á þörfum notenda"
+        },
+        "csd6a-2023/Making Music": {
+          "name": "Lagasmíð"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Föll"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Föll"
+        },
+        "csd7-2023/Survey Planning": {
+          "name": "Söfnun gagna hönnuð"
+        },
+        "coursea-2023/Happy Maps": {
+          "name": "Krúttleg kort"
+        },
+        "coursea-2023/Happy Loops": {
+          "name": "Lukkulegar lykkjur",
+          "overview": "Lykkjur eru mjög gagnlegt og öflugt verkfæri í forritun. Til að skilja hve lykkjur geta verið gagnlegar, þarf að haga því þannig að nemendur vilji fá auðveldari leið til að leysa hversdagsleg verkefni."
+        },
+        "coursea-2023/Loops with Laurel": {
+          "name": "Lykkjur með Láru"
+        },
+        "coursea-2023/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs"
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Hreyfa sig, hreyfa sig"
+        },
+        "courseb-2023/Sequencing with Angry Birds": {
+          "name": "Röð aðgerða með Angry Birds"
+        },
+        "courseb-2023/Programming with Harvester": {
+          "name": "Forritun með Hirðinum"
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Lykkjulæti"
+        },
+        "courseb-2023/Loops with Harvester": {
+          "name": "Lykkjur með Hirðinum"
+        },
+        "courseb-2023/Loops with Laurel": {
+          "name": "Lykkjur með Láru"
+        },
+        "courseb-2023/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "Stórviðburður"
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Stafræn armbönd"
+        },
+        "coursec-2023/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Forritun rúðublaða"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Boðhlaupsforritun"
+        },
+        "coursed-2023/Dance Party": {
+          "name": "Danspartý"
+        },
+        "coursed-2023/Loops in Ice Age": {
+          "name": "Lykkjur í Ísöld"
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Skilyrði með kortum"
+        },
+        "coursed-2023/Looking Ahead with Minecraft": {
+          "name": "Horft fram á við"
+        },
+        "coursed-2023/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs"
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Lagasmíð"
+        },
+        "coursee-2023/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs"
+        },
+        "coursef-2023/The Power of Words": {
+          "name": "Afl orða"
+        },
+        "coursef-2023/Introducing Sprite Lab": {
+          "name": "Kynning á Kvikasmiðjunni",
+          "overview": "Þessi kennslustund hjálpar nemendum að **setja efnið í samhengi** með því að ræða hlutverk tölva og tækni í eigin lífi, með áherslu á hvernig öpp og verkfæri gefa notendum kost á velja hvernig þau eru notuð. Nemendur munu líka kanna öpp lík þeim sem þeir munu sjálfir búa til síðar.",
+          "preparation": "-   Skoða hvernig nemendur munu skrá sig inn á Code.org.\n-   Ef með þarf: Stofna Code.org aðganga fyrir nemendur.\n-   Láta nemendur gera Kynningu á Kvikasmiðju verkefnið.\n-   Prenta eintök af **\\*Exploring Apps** vinnublaðinu (eða leggja stafræna útgáfu inn í námsumsjónarkerfið).",
+          "purpose": "Fyrsta kennslustundin gengur út á að kveikja áhuga nemenda á námskeiðinu og að tengja eigin áhugamál þeirra við tölvunarfræði. "
+        },
+        "coursef-2023/Sprites in Action": {
+          "name": "Kvikar í verki"
+        },
+        "coursef-2023/Mini-Project: Virtual Pet": {
+          "overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!",
+          "student_overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!"
+        },
+        "coursef-2023/The Internet": {
+          "name": "Internetið"
+        },
+        "coursef-2023/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs"
+        },
+        "express-2023/Sprites in Action": {
+          "name": "Kvikar í verki"
+        },
+        "express-2023/Virtual Pet with Sprite Lab": {
+          "overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!",
+          "student_overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!"
+        },
+        "express-2023/Dance Party": {
+          "name": "Danspartý"
+        },
+        "express-2023/Looking Ahead with Minecraft": {
+          "name": "Horft fram á við"
+        },
+        "express-2023/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs"
+        },
+        "pre-express-2023/Programming with Harvester": {
+          "name": "Forritun með Hirðinum"
+        },
+        "pre-express-2023/Loops with Laurel": {
+          "name": "Lykkjur með Láru"
         },
         "artist/Artist": {
           "name": "Listamaður"
@@ -1127,12 +1403,6 @@
         "minecraft/Minecraft Hour of Code Designer": {
           "name": "Klukkustund kóðunar - Minecraft Hönnuður"
         },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
         "playlab/Play Lab": {
           "name": "Leikjasmiðjan"
         },
@@ -1141,39 +1411,6 @@
         },
         "text-compression/Text Compression": {
           "name": "Þjöppun texta"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "Yfirlit og uppsetningarleiðbeiningar"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Milli jafningja - Sending bita á samnýttri línu"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "Milli jafningja - Sending talna"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Milli jafningja - Sending Ascii"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "Sending boða"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Beinar og vistföng"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "Pakkar og áreiðanleiki"
-        },
-        "netsim/Manual DNS": {
-          "name": "Handvirkt DNS"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "Sjálfvirk DNS stöð"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "Internet-hermir frjáls æfing"
-        },
-        "vigenere/Vigenere": {
-          "name": "Vigenere"
         },
         "allthethings/Jigsaw": {
           "name": "Púsl"
@@ -1568,8 +1805,41 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Ýkt áskorun - Fjölþætt"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Klukkustund kóðunar 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Púsl"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Yfirlit og uppsetningarleiðbeiningar"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Milli jafningja - Sending bita á samnýttri línu"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Milli jafningja - Sending talna"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Milli jafningja - Sending Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Sending boða"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Beinar og vistföng"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Pakkar og áreiðanleiki"
+        },
+        "netsim/Manual DNS": {
+          "name": "Handvirkt DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Sjálfvirk DNS stöð"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Internet-hermir frjáls æfing"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Svart-hvít dílamynstur - kennslustund"
@@ -1585,6 +1855,9 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "Lituð dílamynstur - frjáls æfing"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
         }
       }
     }

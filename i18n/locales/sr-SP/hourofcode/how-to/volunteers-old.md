@@ -9,7 +9,7 @@ title: How-to guide for Hour of Code volunteers
 
 ***
 
-## Why volunteer?
+## Зашто волонтирати?
 Check out some testimony from past volunteers:
 
 - “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
@@ -40,7 +40,7 @@ Do you believe that learning computer science can open doors of opportunity for 
 ## Recruit your co-workers to volunteer
 Tell your friends and co-workers about the Hour of Code. Thousands of teachers are  looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer). Ask your employer to get involved. [Send this email]({{ promote/sample_emails }}) to your manager or the CEO to get everyone on board.
 
-## How to prepare
+## Како се припремити
 - [Pick out a video]({{ promote/videos }}) to show to help focus the class and get them excited to do an Hour of Code.
 - Check out the [Hour of Code Volunteer Toolkit](/files/hoc-volunteer-toolkit.pdf) which includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
 - If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial]({{ urls/learn }}).

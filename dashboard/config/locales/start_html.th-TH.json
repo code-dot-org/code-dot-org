@@ -12,12 +12,22 @@
           "Yes": "ใช่",
           "cute": "น่ารัก"
         },
+        "CSD U1 IO Pet Chooser 2_2023": {
+          "No": "ไม่ใช่",
+          "Yes": "ใช่",
+          "cute": "น่ารัก"
+        },
         "CSD U1 IO Pet Chooser_2021": {
           "No": "ไม่ใช่",
           "Yes": "ใช่",
           "cute": "น่ารัก"
         },
         "CSD U1 IO Pet Chooser_2022": {
+          "No": "ไม่ใช่",
+          "Yes": "ใช่",
+          "cute": "น่ารัก"
+        },
+        "CSD U1 IO Pet Chooser_2023": {
           "No": "ไม่ใช่",
           "Yes": "ใช่",
           "cute": "น่ารัก"
@@ -30,6 +40,13 @@
           "text": "ข้อความ"
         },
         "CSD U1 IO Story_2022": {
+          "City": "เมือง",
+          "Color": "สี",
+          "Food": "อาหาร",
+          "Name": "ชื่อ",
+          "text": "ข้อความ"
+        },
+        "CSD U1 IO Story_2023": {
           "City": "เมือง",
           "Color": "สี",
           "Food": "อาหาร",
@@ -78,12 +95,38 @@
           "8": "8",
           "9": "9"
         },
+        "CSD U1 processing bday_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "CSD U1 processing fastest_2021": {
           "0": "0",
           "k": "k",
           "s": "s"
         },
         "CSD U1 processing fastest_2022": {
+          "0": "0",
+          "k": "k",
+          "s": "s"
+        },
+        "CSD U1 processing fastest_2023": {
           "0": "0",
           "k": "k",
           "s": "s"
@@ -134,6 +177,29 @@
           "?": "?",
           "text": "ข้อความ"
         },
+        "CSD U1 processing guess_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
+          "text": "ข้อความ"
+        },
         "CSD U1 processing live_2021": {
           "bear": "หมี",
           "rat": "หนู",
@@ -144,11 +210,22 @@
           "rat": "หนู",
           "walking": "การเดิน"
         },
+        "CSD U1 processing live_2023": {
+          "cat": "แมว",
+          "chicken": "ไก่",
+          "dog": "สุนัข",
+          "horse": "ม้า",
+          "walking": "การเดิน"
+        },
         "CSD U1 processing npark_2021": {
           "Correct!": "ถูกต้อง!",
           "Sorry!": "ขอโทษ!"
         },
         "CSD U1 processing npark_2022": {
+          "Correct!": "ถูกต้อง!",
+          "Sorry!": "ขอโทษ!"
+        },
+        "CSD U1 processing npark_2023": {
           "Correct!": "ถูกต้อง!",
           "Sorry!": "ขอโทษ!"
         },
@@ -194,10 +271,34 @@
           "8": "8",
           "9": "9"
         },
+        "CSD U1 processing writers_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "CSD U1 storage friends_2021": {
           "Back": "กลับ"
         },
         "CSD U1 storage friends_2022": {
+          "Back": "กลับ"
+        },
+        "CSD U1 storage friends_2023": {
           "Back": "กลับ"
         },
         "CSD U1 storage movies_2021": {
@@ -212,6 +313,12 @@
           "Yes": "ใช่",
           "text": "ข้อความ"
         },
+        "CSD U1 storage movies_2023": {
+          "No": "ไม่ใช่",
+          "Star Wars": "สตาร์วอร์ส",
+          "Yes": "ใช่",
+          "text": "ข้อความ"
+        },
         "CSD U1 storage outfit_2021": {
           "Clear": "ล้าง",
           "black": "สีดำ",
@@ -221,6 +328,14 @@
           "white": "สีขาว"
         },
         "CSD U1 storage outfit_2022": {
+          "Clear": "ล้าง",
+          "black": "สีดำ",
+          "green": "สีเขียว",
+          "pink": "สีชมพู",
+          "purple": "สีม่วง",
+          "white": "สีขาว"
+        },
+        "CSD U1 storage outfit_2023": {
           "Clear": "ล้าง",
           "black": "สีดำ",
           "green": "สีเขียว",
@@ -258,41 +373,121 @@
           "3": "3",
           "4": "4"
         },
+        "CSD U6 - Accelerometer - PB_2023": {
+          "0": "0"
+        },
         "CSD U6 - Accelerometer - PB_2222": {
           "0": "0"
+        },
+        "CSD U6 - Accelerometer - PB_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PD_2023": {
+          "You did it!": "คุณทำได้แล้ว!"
         },
         "CSD U6 - Accelerometer - PD_2222": {
           "You did it!": "คุณทำได้แล้ว!"
         },
+        "CSD U6 - Accelerometer - PF_2023": {
+          "0": "0"
+        },
         "CSD U6 - Accelerometer - PF_2222": {
           "0": "0"
         },
+        "CSD U6 - Accelerometer - PF_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - SB2_mb2022": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Board Inputs - P_2023": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Board Inputs - PracC_mb2022": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Board Inputs - SB1_2023": {
+          "Success!": "สำเร็จ!"
+        },
         "CSD U6 - Board Inputs - SB1_2222": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Board Inputs - SB1_mb2022": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Board Inputs - SB2_2023": {
           "Success!": "สำเร็จ!"
         },
         "CSD U6 - Board Inputs - SB2_2222": {
           "Success!": "สำเร็จ!"
         },
+        "CSD U6 - Board Inputs - SB2_mb2022": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Board Inputs - SB3_2023": {
+          "Success!": "สำเร็จ!"
+        },
         "CSD U6 - Board Inputs - SB3_2222": {
           "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Board Outputs - A_2023": {
+          "Happy": "มีความสุข"
         },
         "CSD U6 - Board Outputs - A_2222": {
           "Happy": "มีความสุข"
         },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Age": "อายุ",
+          "Happy": "มีความสุข",
+          "Name": "ชื่อ"
+        },
+        "CSD U6 - Board Outputs - ChalC_mb2022": {
+          "No": "ไม่ใช่",
+          "Yes": "ใช่"
+        },
+        "CSD U6 - Board Outputs - P_2023": {
+          "Success!": "สำเร็จ!"
+        },
         "CSD U6 - Board Outputs - P_2222": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Board Outputs - PracD_mb2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "CSD U6 - Board Outputs - SB1_2023": {
           "Success!": "สำเร็จ!"
         },
         "CSD U6 - Board Outputs - SB1_2222": {
           "Success!": "สำเร็จ!"
         },
+        "CSD U6 - Board Outputs - SB2_2023": {
+          "Success!": "สำเร็จ!"
+        },
         "CSD U6 - Board Outputs - SB2_2222": {
           "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Board Outputs - SB4_2023": {
+          "Fish": "ปลา"
         },
         "CSD U6 - Board Outputs - SB4_2222": {
           "Fish": "ปลา"
         },
+        "CSD U6 - Board Outputs - Setup_2023": {
+          "Success!": "สำเร็จ!"
+        },
         "CSD U6 - Board Outputs - Setup_2222": {
           "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Board Outputs - Setup_mb2022": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Color LEDs - ChalD_2023": {
+          "East": "ตะวันออก",
+          "North": "เหนือ",
+          "South": "ใต้",
+          "West": "ตะวันตก"
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
           "East": "ตะวันออก",
@@ -300,17 +495,37 @@
           "South": "ใต้",
           "West": "ตะวันตก"
         },
+        "CSD U6 - Color LEDs - PracA_2023": {
+          "Success!": "สำเร็จ!"
+        },
         "CSD U6 - Color LEDs - PracA_2222": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Color LEDs - SB2_2023": {
           "Success!": "สำเร็จ!"
         },
         "CSD U6 - Color LEDs - SB2_2222": {
           "Success!": "สำเร็จ!"
         },
+        "CSD U6 - Color LEDs - SB3_2023": {
+          "Success!": "สำเร็จ!"
+        },
         "CSD U6 - Color LEDs - SB3_2222": {
           "Success!": "สำเร็จ!"
         },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "Medium": "ปานกลาง"
+        },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "ปานกลาง"
+        },
+        "CSD U6 - Combine Inputs - A_2023": {
+          "green": "สีเขียว",
+          "left": "ซ้าย",
+          "purple": "สีม่วง",
+          "red": "สีแดง",
+          "right": "ขวา",
+          "yellow": "สีเหลือง"
         },
         "CSD U6 - Combine Inputs - A_2222": {
           "green": "สีเขียว",
@@ -319,6 +534,10 @@
           "red": "สีแดง",
           "right": "ขวา",
           "yellow": "สีเหลือง"
+        },
+        "CSD U6 - Combine Inputs - A_mb2022": {
+          "left": "ซ้าย",
+          "right": "ขวา"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
           "fast": "เร็ว",
@@ -329,14 +548,38 @@
           "short": "สั้น",
           "slow": "ช้า"
         },
+        "CSD U6 - Combine Inputs - CA_2023": {
+          "fast": "เร็ว",
+          "high": "สูง",
+          "long": "ยาว",
+          "low": "ต่ำ",
+          "on": "บน",
+          "short": "สั้น",
+          "slow": "ช้า"
+        },
+        "CSD U6 - Combine Inputs - ChalG_2023": {
+          "Blue": "สีฟ้า",
+          "Green": "สีเขียว",
+          "Red": "สีแดง"
+        },
         "CSD U6 - Combine Inputs - ChalG_2222": {
           "Blue": "สีฟ้า",
           "Green": "สีเขียว",
           "Red": "สีแดง"
         },
+        "CSD U6 - Combine Inputs - PracA_2023": {
+          "left": "ซ้าย",
+          "right": "ขวา"
+        },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "ซ้าย",
           "right": "ขวา"
+        },
+        "CSD U6 - Combine Inputs - PracC_2023": {
+          "blue": "สีน้ำเงิน",
+          "green": "สีเขียว",
+          "orange": "ส้ม",
+          "yellow": "สีเหลือง"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
           "blue": "สีน้ำเงิน",
@@ -344,11 +587,28 @@
           "orange": "ส้ม",
           "yellow": "สีเหลือง"
         },
+        "CSD U6 - Combine Inputs - PracD_2023": {
+          "quiet": "เงียบ"
+        },
         "CSD U6 - Combine Inputs - PracD_2222": {
           "quiet": "เงียบ"
         },
+        "CSD U6 - Combine Inputs - SB1_mb2022": {
+          "bottom row": "แถวล่างสุด",
+          "top row": "แถวบนสุด"
+        },
+        "CSD U6 - Combine Inputs - SB2_2023": {
+          "long": "ยาว",
+          "short": "สั้น"
+        },
         "CSD U6 - Combine Inputs - SB2_2222": {
           "long": "ยาว",
+          "short": "สั้น"
+        },
+        "CSD U6 - Combine Inputs - SB3_2023": {
+          "high": "สูง",
+          "long": "ยาว",
+          "low": "ต่ำ",
           "short": "สั้น"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
@@ -357,18 +617,47 @@
           "low": "ต่ำ",
           "short": "สั้น"
         },
+        "CSD U6 - Combine Inputs - SB4_2023": {
+          "long": "ยาว",
+          "short": "สั้น"
+        },
         "CSD U6 - Combine Inputs - SB4_2222": {
           "long": "ยาว",
           "short": "สั้น"
+        },
+        "CSD U6 - Functions - P2C_2023": {
+          "Blue": "สีฟ้า",
+          "Red": "สีแดง"
         },
         "CSD U6 - Functions - P2C_2222": {
           "Blue": "สีฟ้า",
           "Red": "สีแดง"
         },
+        "CSD U6 - Functions - P2C_mb2022": {
+          "Blue": "สีฟ้า",
+          "Red": "สีแดง"
+        },
+        "CSD U6 - Functions - P_2023": {
+          "0": "0"
+        },
         "CSD U6 - Functions - P_2222": {
           "0": "0"
         },
+        "CSD U6 - Functions - P_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_2023": {
+          "0": "0"
+        },
         "CSD U6 - Functions - SB7_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_2023": {
+          "+": "+",
+          "-": "-",
           "0": "0"
         },
         "CSD U6 - If Variables - ChalD_2222": {
@@ -376,14 +665,43 @@
           "-": "-",
           "0": "0"
         },
+        "CSD U6 - If Variables - ChalD_mb2022": {
+          "+": "+",
+          "-": "-",
+          "0": "0"
+        },
+        "CSD U6 - If Variables - SB3_2023": {
+          "Name": "ชื่อ"
+        },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "ชื่อ"
+        },
+        "CSD U6 - If Variables - SB3_mb2022": {
+          "Name": "ชื่อ"
+        },
+        "CSD U6 - If Variables - SB4_2023": {
+          "0": "0"
         },
         "CSD U6 - If Variables - SB4_2222": {
           "0": "0"
         },
+        "CSD U6 - If Variables - SB4_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Music - A_2023": {
+          "Happy": "มีความสุข"
+        },
         "CSD U6 - Music - A_2222": {
           "Happy": "มีความสุข"
+        },
+        "CSD U6 - Music - ChalD_2023": {
+          "A": "ก",
+          "B": "ข",
+          "C": "ค",
+          "D": "ง",
+          "E": "E",
+          "F": "จ",
+          "G": "ฉ"
         },
         "CSD U6 - Music - ChalD_2222": {
           "A": "ก",
@@ -393,6 +711,16 @@
           "E": "E",
           "F": "จ",
           "G": "ฉ"
+        },
+        "CSD U6 - Music - Piano_2023": {
+          "A": "ก",
+          "B": "ข",
+          "C": "ค",
+          "D": "ง",
+          "E": "E",
+          "F": "จ",
+          "G": "ฉ",
+          "Note:": "หมายเหตุ:"
         },
         "CSD U6 - Music - Piano_2222": {
           "A": "ก",
@@ -404,7 +732,25 @@
           "G": "ฉ",
           "Note:": "หมายเหตุ:"
         },
+        "CSD U6 - Music - SB1_2023": {
+          "A": "ก",
+          "B": "ข",
+          "C": "ค",
+          "D": "ง",
+          "E": "E",
+          "F": "จ",
+          "G": "ฉ"
+        },
         "CSD U6 - Music - SB1_2222": {
+          "A": "ก",
+          "B": "ข",
+          "C": "ค",
+          "D": "ง",
+          "E": "E",
+          "F": "จ",
+          "G": "ฉ"
+        },
+        "CSD U6 - Music - SB2.5_2023": {
           "A": "ก",
           "B": "ข",
           "C": "ค",
@@ -422,6 +768,15 @@
           "F": "จ",
           "G": "ฉ"
         },
+        "CSD U6 - Music - SB3_2023": {
+          "A": "ก",
+          "B": "ข",
+          "C": "ค",
+          "D": "ง",
+          "E": "E",
+          "F": "จ",
+          "G": "ฉ"
+        },
         "CSD U6 - Music - SB3_2222": {
           "A": "ก",
           "B": "ข",
@@ -431,69 +786,198 @@
           "F": "จ",
           "G": "ฉ"
         },
+        "CSD U6 - Music - SB4_2023": {
+          "Success!": "สำเร็จ!"
+        },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Physical Input - A_2023": {
+          "1": "1",
+          "2": "2"
         },
         "CSD U6 - Physical Input - A_2222": {
           "1": "1",
           "2": "2"
         },
+        "CSD U6 - Physical Input - A_mb2022": {
+          "1": "1",
+          "2": "2"
+        },
+        "CSD U6 - Physical Input - ChalA_2023": {
+          "Success!": "สำเร็จ!"
+        },
         "CSD U6 - Physical Input - ChalA_2222": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Physical Input - ChalA_mb2022": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Physical Input - ChalB_2023": {
           "Success!": "สำเร็จ!"
         },
         "CSD U6 - Physical Input - ChalB_2222": {
           "Success!": "สำเร็จ!"
         },
+        "CSD U6 - Physical Input - ChalB_mb2022": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Physical Input - ChalC_2023": {
+          "Success!": "สำเร็จ!"
+        },
         "CSD U6 - Physical Input - ChalC_2222": {
           "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Physical Input - ChalC_mb2022": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Physical Input - PA_2023": {
+          "0": "0",
+          "Score": "คะแนน"
         },
         "CSD U6 - Physical Input - PA_2222": {
           "0": "0",
           "Score": "คะแนน"
         },
+        "CSD U6 - Physical Input - PA_mb2022": {
+          "0": "0",
+          "Score": "คะแนน"
+        },
+        "CSD U6 - Physical Input - PC_2023": {
+          "Success!": "สำเร็จ!"
+        },
         "CSD U6 - Physical Input - PC_2222": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Physical Input - PD_2023": {
           "Success!": "สำเร็จ!"
         },
         "CSD U6 - Physical Input - PD_2222": {
           "Success!": "สำเร็จ!"
         },
+        "CSD U6 - Physical Input - PD_mb2022": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Physical Input - SB1_2023": {
+          "Success!": "สำเร็จ!"
+        },
         "CSD U6 - Physical Input - SB1_2222": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Physical Input - SB1_mb2022": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Physical Output - ChalA_2023": {
           "Success!": "สำเร็จ!"
         },
         "CSD U6 - Physical Output - ChalA_2222": {
           "Success!": "สำเร็จ!"
         },
+        "CSD U6 - Physical Output - ChalA_mb2022": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Physical Output - ChalB_2023": {
+          "Success!": "สำเร็จ!"
+        },
         "CSD U6 - Physical Output - ChalB_2222": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Physical Output - ChalB_mb2022": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Physical Output - ChalC_2023": {
           "Success!": "สำเร็จ!"
         },
         "CSD U6 - Physical Output - ChalC_2222": {
           "Success!": "สำเร็จ!"
         },
+        "CSD U6 - Physical Output - ChalC_mb2022": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Physical Output - PB_2023": {
+          "Success!": "สำเร็จ!"
+        },
         "CSD U6 - Physical Output - PB_2222": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Physical Output - PB_mb2022": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Physical Output - PC_2023": {
           "Success!": "สำเร็จ!"
         },
         "CSD U6 - Physical Output - PC_2222": {
           "Success!": "สำเร็จ!"
         },
+        "CSD U6 - Physical Output - PC_mb2022": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Physical Output - P_2023": {
+          "Success!": "สำเร็จ!"
+        },
         "CSD U6 - Physical Output - P_2222": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Physical Output - P_mb2022": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Physical Output - SB1_2023": {
           "Success!": "สำเร็จ!"
         },
         "CSD U6 - Physical Output - SB1_2222": {
           "Success!": "สำเร็จ!"
         },
+        "CSD U6 - Physical Output - SB1_mb2022": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Physical Output - SB2.2_2023": {
+          "Success!": "สำเร็จ!"
+        },
         "CSD U6 - Physical Output - SB2.2_2222": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Physical Output - SB2.2_mb2022": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Physical Output - SB2_2023": {
           "Success!": "สำเร็จ!"
         },
         "CSD U6 - Physical Output - SB2_2222": {
           "Success!": "สำเร็จ!"
         },
+        "CSD U6 - Physical Output - SB2_mb2022": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSD U6 - Screen Inputs - A_2023": {
+          "Name:": "ชื่อ:"
+        },
         "CSD U6 - Screen Inputs - A_2222": {
           "Name:": "ชื่อ:"
+        },
+        "CSD U6 - Screen Inputs - A_mb2022": {
+          "Name:": "ชื่อ:"
+        },
+        "CSD U6 - Screen Inputs - ChalB_2023": {
+          "Blue": "สีฟ้า",
+          "Green": "สีเขียว",
+          "Red": "สีแดง"
         },
         "CSD U6 - Screen Inputs - ChalB_2222": {
           "Blue": "สีฟ้า",
           "Green": "สีเขียว",
           "Red": "สีแดง"
+        },
+        "CSD U6 - Screen Inputs - ChalB_mb2022": {
+          "Blue": "สีฟ้า",
+          "Green": "สีเขียว",
+          "Red": "สีแดง"
+        },
+        "CSD U6 - Screen Inputs - P_2023": {
+          "Blue": "สีฟ้า",
+          "Green": "สีเขียว",
+          "Name:": "ชื่อ:",
+          "Red": "สีแดง",
+          "Save": "บันทึก"
         },
         "CSD U6 - Screen Inputs - P_2222": {
           "Blue": "สีฟ้า",
@@ -502,10 +986,31 @@
           "Red": "สีแดง",
           "Save": "บันทึก"
         },
+        "CSD U6 - Screen Inputs - P_mb2022": {
+          "Blue": "สีฟ้า",
+          "Green": "สีเขียว",
+          "Name:": "ชื่อ:",
+          "Red": "สีแดง",
+          "Save": "บันทึก"
+        },
+        "CSD U6 - Screen Inputs - PracD_2023": {
+          "0": "0"
+        },
         "CSD U6 - Screen Inputs - PracD_2222": {
           "0": "0"
         },
+        "CSD U6 - Screen Inputs - PracD_mb2022": {
+          "0": "0"
+        },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
+          "black": "สีดำ",
+          "white": "สีขาว"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2023": {
+          "black": "สีดำ",
+          "white": "สีขาว"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_mb2022": {
           "black": "สีดำ",
           "white": "สีขาว"
         },
@@ -513,12 +1018,40 @@
           "black": "สีดำ",
           "white": "สีขาว"
         },
+        "CSD U6 - Screen Inputs - SB2.2_2023": {
+          "black": "สีดำ",
+          "white": "สีขาว"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_mb2022": {
+          "black": "สีดำ",
+          "white": "สีขาว"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2023": {
+          "?": "?",
+          "Happy": "มีความสุข"
+        },
         "CSD U6 - Screen Outputs - ChalB_2222": {
           "?": "?",
           "Happy": "มีความสุข"
         },
+        "CSD U6 - Screen Outputs - ChalB_mb2022": {
+          "?": "?",
+          "Happy": "มีความสุข"
+        },
+        "CSD U6 - Screen Outputs - P_2023": {
+          "title": "ชื่อเรื่อง"
+        },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "ชื่อเรื่อง"
+        },
+        "CSD U6 - Screen Outputs - P_mb2022": {
+          "title": "ชื่อเรื่อง"
+        },
+        "CSD U6 - Screen Outputs - PracA_2023": {
+          "Blue": "สีฟ้า",
+          "Green": "สีเขียว",
+          "Red": "สีแดง",
+          "White": "ผิวขาว"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
           "Blue": "สีฟ้า",
@@ -526,41 +1059,111 @@
           "Red": "สีแดง",
           "White": "ผิวขาว"
         },
+        "CSD U6 - Screen Outputs - PracA_mb2022": {
+          "Blue": "สีฟ้า",
+          "Green": "สีเขียว",
+          "Red": "สีแดง",
+          "White": "ผิวขาว"
+        },
+        "CSD U6 - Screen Outputs - PracB_2023": {
+          "down": "เป็นตำแหน่ง",
+          "left": "ซ้าย",
+          "right": "ขวา",
+          "up": "ขึ้นข้างบน"
+        },
         "CSD U6 - Screen Outputs - PracB_2222": {
           "down": "เป็นตำแหน่ง",
           "left": "ซ้าย",
           "right": "ขวา",
           "up": "ขึ้นข้างบน"
         },
+        "CSD U6 - Screen Outputs - PracB_mb2022": {
+          "down": "เป็นตำแหน่ง",
+          "left": "ซ้าย",
+          "right": "ขวา",
+          "up": "ขึ้นข้างบน"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2023": {
+          "name": "ชื่อ"
+        },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "ชื่อ"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_mb2022": {
+          "name": "ชื่อ"
+        },
+        "CSD U6 - Sensors - A_2023": {
+          "0": "0"
         },
         "CSD U6 - Sensors - A_2222": {
           "0": "0"
         },
+        "CSD U6 - Sensors - A_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Sensors - PC_2023": {
+          "off": "ปิด",
+          "on": "บน"
+        },
         "CSD U6 - Sensors - PC_2222": {
           "off": "ปิด",
           "on": "บน"
+        },
+        "CSD U6 - Sensors - P_2023": {
+          "high": "สูง",
+          "low": "ต่ำ",
+          "text": "ข้อความ"
         },
         "CSD U6 - Sensors - P_2222": {
           "high": "สูง",
           "low": "ต่ำ",
           "text": "ข้อความ"
         },
+        "CSD U6 - Sensors - P_mb2022": {
+          "high": "สูง",
+          "low": "ต่ำ",
+          "text": "ข้อความ"
+        },
+        "CSD U6 - Sensors - SB1_2023": {
+          "value": "มูลค่า"
+        },
         "CSD U6 - Sensors - SB1_2222": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 - Sensors - SB2_2023": {
+          "Update": "อัพเดท",
           "value": "มูลค่า"
         },
         "CSD U6 - Sensors - SB2_2222": {
           "Update": "อัพเดท",
           "value": "มูลค่า"
         },
+        "CSD U6 - Sensors - SB2_mb2022": {
+          "Update": "อัพเดท",
+          "value": "มูลค่า"
+        },
+        "CSD U6 - Sensors - SB3_2023": {
+          "value": "มูลค่า"
+        },
         "CSD U6 - Sensors - SB3_2222": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 - Sensors - SB3_mb2022": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 - Sensors - SB4.1_2023": {
           "value": "มูลค่า"
         },
         "CSD U6 - Sensors - SB4.1_2222": {
           "value": "มูลค่า"
         },
+        "CSD U6 - Sensors - SB4_2023": {
+          "value": "มูลค่า"
+        },
         "CSD U6 - Sensors - SB4_2222": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 - Sensors - SB4_mb2022": {
           "value": "มูลค่า"
         },
         "CSD U6 Driver pt 2": {
@@ -1166,7 +1769,13 @@
         "CSDU6 Circuit Playground Test_2021": {
           "Success!": "สำเร็จ!"
         },
+        "CSDU6 Circuit Playground Test_2023": {
+          "Success!": "สำเร็จ!"
+        },
         "CSDU6 Circuit Playground Test_2222": {
+          "Success!": "สำเร็จ!"
+        },
+        "CSDU6 Circuit Playground Test_mb2022": {
           "Success!": "สำเร็จ!"
         },
         "CSDU6 circuit playground piano": {
@@ -1241,6 +1850,94 @@
           "F": "จ",
           "G": "ฉ"
         },
+        "GAN Guess Widget_ai23": {
+          "Click on the buttons below to build a guess for what follows the rule": "คลิกที่ปุ่มด้านล่างเพื่อสร้างการเดาว่าอะไรเป็นไปตามกฎ",
+          "Computer's Guess FOLLOWS Rule": "การคาดเดาของคอมพิวเตอร์เป็นไปตามกฎ",
+          "Computer's Guess does NOT follow the Rule": "การคาดเดาของคอมพิวเตอร์ไม่เป็นไปตามกฎ",
+          "Computer's Guess:": "การคาดเดาของคอมพิวเตอร์:",
+          "Current Guess": "การคาดเดาปัจจุบัน",
+          "Previous Guesses": "การคาดเดาก่อนหน้านี้",
+          "Submit Guess": "ส่งการคาดเดา"
+        },
+        "LLM - Eliza_ai23": {
+          "Talk to Eliza by entering text in the prompt box. When you are finished, type quit in the prompt.": "พูดคุยกับเอลิซา โดยป้อนข้อความในกล่องพร้อมท์ เมื่อเสร็จแล้ว ให้พิมพ์ qult ในพรอมต์"
+        },
+        "LLM - Written Voice Simulator_ai23": {
+          "BTS: \"Dynamite\"": "BTS: \"ไดนาไมต์\"",
+          "Back": "กลับ",
+          "Change Voice": "เปลี่ยนเสียง",
+          "Choose a voice to model": "เลือกเสียงที่จะสร้างโมเดล",
+          "Choose the Save file you want to load from the dropdown below": "เลือกไฟล์บันทึกที่คุณต้องการโหลดจากเมนูแบบเลื่อนลงด้านล่าง",
+          "Copy / Paste or type the words you want to create a model based on below": "คัดลอก/วาง หรือพิมพ์คำที่คุณต้องการสร้างแบบจำลองตามด้านล่าง",
+          "Create my own!": "สร้างของฉันเอง!",
+          "Delete Text": "ลบข้อความ",
+          "Dr Seuss: Green Eggs and Ham": "ดร. ซุส: ไข่สีเขียวและแฮม",
+          "Generate!": "สร้าง!",
+          "Give the voice a name": "ตั้งชื่อเสียง",
+          "Give your save file a name": "ตั้งชื่อไฟล์บันทึกของคุณ",
+          "Load Save": "โหลดบันทึก",
+          "Load this story": "โหลดเรื่องราวนี้",
+          "Maya Angelou: \"Caged Bird\"": "มายา แองเจลู: \"นกในกรง\"",
+          "Model This Voice!": "โมเดลเสียงนี้!",
+          "Modeling Voice": "การสร้างแบบจำลองเสียง",
+          "Pharell: \"Happy\"": "ฟาร์เรลล์: \"มีความสุข\"",
+          "Sandra Cisneros: \"Abuelito Who\"": "ซานดรา ซิสเนรอส: “อาบูเอลิโต วู”",
+          "Save Text": "บันทึกข้อความ",
+          "Save!": "บันทึก!"
+        },
+        "Neural Networks - Perceptron - Beta_ai23": {
+          "Choose one of the content creators below to generate recommendations for you. Clicking their name will show more information about them.Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!See Recommendations! ➡️Your RecommendationsThese are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "เลือกหนึ่งในผู้สร้างเนื้อหาด้านล่างเพื่อสร้างคำแนะนำสำหรับคุณ การคลิกที่ชื่อจะแสดงข้อมูลเพิ่มเติมเกี่ยวกับพวกเขา เมื่อคุณเลือกได้แล้ว ให้คลิกปุ่ม \"แสดงคำแนะนำ\" เพื่อดูว่าฟีดวิดีโอของคุณแสดงอะไรออกมา!! ดูคำแนะนำ! ➡️คำแนะนำของคุณ นี่คือวิดีโอที่คุณได้รับการแนะนำโดยพิจารณาจากคนที่คุณเลือกในหน้าจอสุดท้าย จะแสดงวิดีโอได้ครั้งละ 3 รายการเท่านั้น - ใช้ปุ่มเลื่อนเพื่อดูเพิ่มเติม ใช้ปุ่มทางด้านซ้ายเพื่อกรองตามหมวดหมู่ ตัวอย่าง!ตัวอย่าง!ตัวอย่าง!⬆️ เลื่อนขึ้น ⬆️⬇️ เลื่อนลง ⬇️⬅️ เลือกคนใหม่",
+          "Example!": "ตัวอย่าง!",
+          "Let's Get Started! ➡️": "มาเริ่มกันเลย! ➡️",
+          "Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!": "เมื่อคุณเลือกได้แล้ว ให้คลิกปุ่ม \"แสดงคำแนะนำ\" เพื่อดูว่าฟีดวิดีโอของคุณแสดงอะไรออกมา!",
+          "Only 3 videos are shown at a time - use the Scroll buttons to see more. ": "วิดีโอจะแสดงครั้งละ 3 รายการเท่านั้น - ใช้ปุ่มเลื่อนเพื่อดูเพิ่มเติม ",
+          "See Recommendations! ➡️": "ดูคำแนะนำ! ➡️",
+          "Select at least one person to use for recommendations to continue!": "เลือกอย่างน้อยหนึ่งคนเพื่อใช้สำหรับคำแนะนำเพื่อดำเนินการต่อ!",
+          "Simply pick which content creators you want to follow and then see your video recommendations!": "เพียงเลือกผู้สร้างเนื้อหาที่คุณต้องการติดตามแล้วดูวิดีโอแนะนำของคุณ!",
+          "These are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "นี่คือวิดีโอที่คุณได้รับการแนะนำโดยพิจารณาจากคนที่คุณเลือกในหน้าจอสุดท้าย วิดีโอจะแสดงครั้งละ 3 รายการเท่านั้น - ใช้ปุ่มเลื่อนเพื่อดูเพิ่มเติม ใช้ปุ่มทางด้านซ้ายเพื่อกรองตามหมวดหมู่ ตัวอย่าง!ตัวอย่าง!ตัวอย่าง!⬆️ เลื่อนขึ้น ⬆️⬇️ เลื่อนลง ⬇️⬅️ เลือกคนใหม่",
+          "Use the buttons on the left to filter by certain categories.": "ใช้ปุ่มทางด้านซ้ายเพื่อกรองตามหมวดหมู่",
+          "We've gathered all your favorite personalities to make videos that match your interests AND to help curate your video feed.": "เราได้รวบรวมบุคลิกที่คุณชื่นชอบทั้งหมดเพื่อสร้างวิดีโอที่ตรงกับความสนใจของคุณ และเพื่อช่วยดูแลจัดการฟีดวิดีโอของคุณ",
+          "WeTube Video Recommendations (Beta)": "คำแนะนำวิดีโอ WeTube (เบต้า)",
+          "WeTube is a new media website for all your favorite content creators. We've gathered all your favorite personalities to make videos that match your interests AND to help curate your video feed.Simply pick which content creators you want to follow and then see your video recommendations!Let's Get Started! ➡️Select at least one person to use for recommendations to continue!Choose one of the content creators below to generate recommendations for you. Clicking their name will show more information about them.Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!See Recommendations! ➡️Your RecommendationsThese are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "WeTube คือเว็บไซต์สื่อมีเดียใหม่สำหรับผู้สร้างเนื้อหาที่ชื่นชอบ เราได้รวบรวมบุคลิกที่คุณชื่นชอบทั้งหมดเพื่อสร้างวิดีโอที่ตรงกับความสนใจของคุณ และเพื่อช่วยดูแลฟีดวิดีโอของคุณ เพียงเลือกผู้สร้างเนื้อหาที่คุณต้องการติดตาม แล้วดูคำแนะนำวิดีโอของคุณ เริ่มกันเลย! ➡️เลือกอย่างน้อยหนึ่งคนเพื่อใช้สำหรับคำแนะนำเพื่อดำเนินการต่อ! เลือกหนึ่งในผู้สร้างเนื้อหาด้านล่างเพื่อสร้างคำแนะนำสำหรับคุณ การคลิกที่ชื่อจะแสดงข้อมูลเพิ่มเติมเกี่ยวกับพวกเขา เมื่อคุณเลือกใครบางคนแล้ว ให้คลิกปุ่ม \"แสดงคำแนะนำ\" เพื่อดูว่าฟีดวิดีโอของคุณคืออะไร! ดูคำแนะนำ! ➡️คำแนะนำของคุณ นี่คือวิดีโอที่คุณได้รับการแนะนำโดยพิจารณาจากคนที่คุณเลือกในหน้าจอสุดท้าย จะแสดงวิดีโอได้ครั้งละ 3 รายการเท่านั้น - ใช้ปุ่มเลื่อนเพื่อดูเพิ่มเติม ใช้ปุ่มทางด้านซ้ายเพื่อกรองตามหมวดหมู่ ตัวอย่าง!ตัวอย่าง!ตัวอย่าง!⬆️ เลื่อนขึ้น ⬆️⬇️ เลื่อนลง ⬇️⬅️ เลือกคนใหม่",
+          "Your Recommendations": "คำแนะนำของคุณ",
+          "⬅️ Select New Person": "⬅️ เลือกคนใหม่",
+          "⬆️ Scroll Up ⬆️": "⬆️เลื่อนขึ้น⬆️",
+          "⬇️ Scroll Down ⬇️": "⬇️เลื่อนลง⬇️"
+        },
+        "Neural Networks - Perceptron - Full_ai23": {
+          "0 means their opinion isn't included in your recommendations at all": "0 หมายความว่าความคิดเห็นของพวกเขาจะไม่อยู่ในคำแนะนำของคุณเลย",
+          "10 means they have a huge influence on the recommendations you receive": "10 หมายความว่าคำแนะนำเหล่านี้มีอิทธิพลอย่างมากต่อคำแนะนำที่คุณได้รับ",
+          "Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videos⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "เลือกอย่างน้อยหนึ่งคนเพื่อใช้สำหรับคำแนะนำเพื่อดำเนินการต่อ!เลือกหนึ่งในผู้สร้างเนื้อหาด้านล่าง จากนั้นใช้แถบเลื่อนเพื่อปรับว่าคุณต้องการให้พวกเขามีอิทธิพลต่อคำแนะนำของคุณมากน้อยเพียงใด!0 หมายความว่าความคิดเห็นของพวกเขาจะไม่อยู่ในคำแนะนำของคุณเลย10 หมายความว่าคำแนะนำเหล่านี้มีอิทธิพลอย่างมากต่อคำแนะนำที่คุณได้รับฟีเจอร์ดูคำแนะนำ! ➡️คุณค่าฟีเจอร์คำแนะนำของคุณ นี่คือวิดีโอที่คุณได้รับการแนะนำโดยพิจารณาจากวิธีที่คุณปรับค่าน้ำหนักของการมีอิทธิพลในหน้าจอที่แล้ว วิดีโอจะแสดงครั้งละ 3 รายการเท่านั้น - ใช้ปุ่มเลื่อนเพื่อดูเพิ่มเติม ใช้ปุ่มทางด้านซ้ายเพื่อกรองตามวิดีโอบางรายการ⬆️ เลื่อนขึ้น ⬆️⬇️ เลื่อนลง ⬇️⬅️ เลือกปรับค่าน้ำหนักใหม่",
+          "Let's Get Started! ➡️": "มาเริ่มกันเลย! ➡️",
+          "Only 3 videos are shown at a time - use the Scroll buttons to see more. ": "วิดีโอจะแสดงครั้งละ 3 รายการเท่านั้น - ใช้ปุ่มเลื่อนเพื่อดูเพิ่มเติม ",
+          "See Recommendations! ➡️": "ดูคำแนะนำ! ➡️",
+          "Select at least one person to use for recommendations to continue!": "เลือกอย่างน้อยหนึ่งคนเพื่อใช้สำหรับคำแนะนำเพื่อดำเนินการต่อ!",
+          "Simply pick which content creators you want to follow to see your recommendations!": "เพียงเลือกผู้สร้างเนื้อหาที่คุณต้องการติดตามเพื่อดูคำแนะนำของคุณ",
+          "These are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videos⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "นี่คือวิดีโอที่คุณได้รับการแนะนำโดยพิจารณาจากวิธีที่คุณปรับค่าน้ำหนักของการมีอิทธิพลในหน้าจอที่แล้ว วิดีโอจะแสดงครั้งละ 3 รายการเท่านั้น - ใช้ปุ่มเลื่อนเพื่อดูเพิ่มเติม ใช้ปุ่มทางด้านซ้ายเพื่อกรองตามวิดีโอบางรายการ⬆️ เลื่อนขึ้น ⬆️⬇️ เลื่อนลง ⬇️⬅️ เลือกปรับค่าน้ำหนักใหม่",
+          "Use the buttons on the left to filter by certain videos": "ใช้ปุ่มทางด้านซ้ายเพื่อกรองตามวิดีโอบางรายการ",
+          "We've gathered all your favorite personalities to make videos that match your interests.": "เราได้รวบรวมบุคลิกที่คุณชื่นชอบทั้งหมดเพื่อสร้างวิดีโอที่ตรงกับความสนใจของคุณ",
+          "WeTube Video Recommendations": "คำแนะนำวิดีโอ WeTube",
+          "WeTube is a new media website for all your favorite content creators. We've gathered all your favorite personalities to make videos that match your interests.Simply pick which content creators you want to follow to see your recommendations!Let's Get Started! ➡️Select at least one person to use for recommendations to continue!Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videos⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "WeTube คือเว็บไซต์สื่อใหม่สำหรับผู้สร้างเนื้อหาที่คุณชื่นชอบ เราได้รวบรวมบุคลิกที่คุณชื่นชอบทั้งหมดเพื่อสร้างวิดีโอที่ตรงกับความสนใจของคุณ เพียงเลือกผู้สร้างเนื้อหาที่คุณต้องการติดตามเพื่อดูคำแนะนำของคุณ เริ่มกันเลย! ➡️เลือกอย่างน้อยหนึ่งคนเพื่อใช้สำหรับคำแนะนำเพื่อดำเนินการต่อ!เลือกหนึ่งในผู้สร้างเนื้อหาด้านล่าง จากนั้นใช้แถบเลื่อนเพื่อปรับว่าคุณต้องการให้พวกเขามีอิทธิพลต่อคำแนะนำของคุณมากน้อยเพียงใด!0 หมายความว่าความคิดเห็นของพวกเขาจะไม่อยู่ในคำแนะนำของคุณเลย10 หมายความว่าคำแนะนำเหล่านี้มีอิทธิพลอย่างมากต่อคำแนะนำที่คุณได้รับฟีเจอร์ดูคำแนะนำ! ➡️คุณค่าฟีเจอร์คำแนะนำของคุณ นี่คือวิดีโอที่คุณได้รับการแนะนำโดยพิจารณาจากวิธีที่คุณปรับค่าน้ำหนักของการมีอิทธิพลในหน้าจอที่แล้ว วิดีโอจะแสดงครั้งละ 3 รายการเท่านั้น - ใช้ปุ่มเลื่อนเพื่อดูเพิ่มเติม ใช้ปุ่มทางด้านซ้ายเพื่อกรองตามวิดีโอบางรายการ⬆️ เลื่อนขึ้น ⬆️⬇️ เลื่อนลง ⬇️⬅️ เลือกปรับค่าน้ำหนักใหม่",
+          "Your Recommendations": "คำแนะนำของคุณ",
+          "featureLabel": "ฟีเจอร์ลาเบล",
+          "featureValue": "คุณค่าฟีเจอร์",
+          "⬅️ Select New Weights": "⬅️ เลือกปรับค่าน้ำหนักใหม่",
+          "⬆️ Scroll Up ⬆️": "⬆️เลื่อนขึ้น⬆️",
+          "⬇️ Scroll Down ⬇️": "⬇️เลื่อนลง⬇️"
+        },
+        "Noisy Image Widget_ai23": {
+          "0%": "0%",
+          "Be patient! Noisy image loading!": "อดทน! กำลังโหลดภาพที่มีสิ่งรบกวน!",
+          "Move the slider to add more or less generations of noise to the image": "เลื่อนแถบเลื่อนเพื่อเพิ่มสัญญาณรบกวนมากขึ้นหรือน้อยลงในภาพ",
+          "New Image": "รูปภาพใหม่",
+          "Noise Generations:": "การสร้างสิ่งรบกวน:",
+          "Noise Generations: ": "การสร้างสิ่งรบกวน:"
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "Crop": "ครอบตัด",
+          "Image Select": "เลือกรูปภาพ",
+          "Reset": "ตั้งค่าใหม่"
+        },
         "allthethings design mode elements": {
           "text": "ข้อความ"
         },
@@ -1259,10 +1956,16 @@
         "csd u5 recommender sample_2022": {
           "Start": "เริ่มต้น"
         },
+        "csd u5 recommender sample_2023": {
+          "Start": "เริ่มต้น"
+        },
         "csd-apps for good-2": {
           "Next": "ถัดไป"
         },
         "csd-apps for good-2_2022": {
+          "Next": "ถัดไป"
+        },
+        "csd-apps for good-2_2023": {
           "Next": "ถัดไป"
         },
         "csd-apps for good-3": {
@@ -1277,10 +1980,19 @@
           "3": "3",
           "4": "4"
         },
+        "csd-apps for good-3_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4"
+        },
         "csd-explore ui-2": {
           "Next": "ถัดไป"
         },
         "csd-explore ui-2_2022": {
+          "Next": "ถัดไป"
+        },
+        "csd-explore ui-2_2023": {
           "Next": "ถัดไป"
         },
         "csd-explore ui-3": {
@@ -1325,11 +2037,36 @@
           "8": "8",
           "9": "9"
         },
+        "csd-explore ui-3_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "csd-explore ui-4": {
           "Correct!": "ถูกต้อง!",
           "Sorry!": "ขอโทษ!"
         },
         "csd-explore ui-4_2022": {
+          "Correct!": "ถูกต้อง!",
+          "Sorry!": "ขอโทษ!"
+        },
+        "csd-explore ui-4_2023": {
           "Correct!": "ถูกต้อง!",
           "Sorry!": "ขอโทษ!"
         },
@@ -1375,10 +2112,34 @@
           "8": "8",
           "9": "9"
         },
+        "csd-explore ui-5_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "csd-explore ui-6": {
           "Next": "ถัดไป"
         },
         "csd-explore ui-6_2022": {
+          "Next": "ถัดไป"
+        },
+        "csd-explore ui-6_2023": {
           "Next": "ถัดไป"
         },
         "ml-L2 supervised - green glass door-2021": {
@@ -1389,10 +2150,17 @@
           "Accepted": "ได้รับการยอมรับ",
           "Rejected": "ถูกปฏิเสธ"
         },
+        "ml-L2 supervised - green glass door_2023": {
+          "Accepted": "ได้รับการยอมรับ",
+          "Rejected": "ถูกปฏิเสธ"
+        },
         "ml-L2 unsupervised - 1-2021": {
           "Next": "ถัดไป"
         },
         "ml-L2 unsupervised - 1_2022": {
+          "Next": "ถัดไป"
+        },
+        "ml-L2 unsupervised - 1_2023": {
           "Next": "ถัดไป"
         },
         "ml-customize-raspado-2021": {
@@ -1400,6 +2168,10 @@
           "yes": "ใช่"
         },
         "ml-customize-raspado_2022": {
+          "no": "ไม่ใช่",
+          "yes": "ใช่"
+        },
+        "ml-customize-raspado_2023": {
           "no": "ไม่ใช่",
           "yes": "ใช่"
         },
@@ -1411,10 +2183,17 @@
           "Continue": "\nไปต่อ",
           "Loading...": "กำลังโหลด..."
         },
+        "ml-intro ai lab- fruit veggie widget_2023": {
+          "Continue": "\nไปต่อ",
+          "Loading...": "กำลังโหลด..."
+        },
         "ml-intro app lab-book recommender demo-2021": {
           "Silly": "ทึ่ม"
         },
         "ml-intro app lab-book recommender demo_2022": {
+          "Silly": "ทึ่ม"
+        },
+        "ml-intro app lab-book recommender demo_2023": {
           "Silly": "ทึ่ม"
         },
         "ml-model card-medical app v2 2021-2": {
@@ -1431,10 +2210,20 @@
           "no": "ไม่ใช่",
           "yes": "ใช่"
         },
+        "ml-model card-medical app v2 2021-2_2023": {
+          "A": "ก",
+          "W": "W",
+          "head": "หัว",
+          "no": "ไม่ใช่",
+          "yes": "ใช่"
+        },
         "ml-model cards-book recommender model card": {
           "Silly": "ทึ่ม"
         },
         "ml-model cards-book recommender model card_2022": {
+          "Silly": "ทึ่ม"
+        },
+        "ml-model cards-book recommender model card_2023": {
           "Silly": "ทึ่ม"
         },
         "ml-models in applab-choice if quotes": {
@@ -1447,12 +2236,22 @@
           "2": "2",
           "3": "3"
         },
+        "ml-models in applab-choice if quotes_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
         "ml-models in applab-choice if wrong place": {
           "1": "1",
           "2": "2",
           "3": "3"
         },
         "ml-models in applab-choice if wrong place_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "ml-models in applab-choice if wrong place_2023": {
           "1": "1",
           "2": "2",
           "3": "3"
@@ -1469,12 +2268,23 @@
           "3": "3",
           "Back": "กลับ"
         },
+        "ml-models in applab-choice intended warnings_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Back": "กลับ"
+        },
         "ml-models in applab-choice predict typos": {
           "1": "1",
           "2": "2",
           "3": "3"
         },
         "ml-models in applab-choice predict typos_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "ml-models in applab-choice predict typos_2023": {
           "1": "1",
           "2": "2",
           "3": "3"
@@ -1489,6 +2299,11 @@
           "No": "ไม่ใช่",
           "Yes": "ใช่"
         },
+        "ml-models in applab-zoo assessment_2023": {
+          "B": "ข",
+          "No": "ไม่ใช่",
+          "Yes": "ใช่"
+        },
         "ml-models in applab-zoo model embed": {
           "No": "ไม่ใช่",
           "Yes": "ใช่"
@@ -1497,10 +2312,17 @@
           "No": "ไม่ใช่",
           "Yes": "ใช่"
         },
+        "ml-models in applab-zoo model embed_2023": {
+          "No": "ไม่ใช่",
+          "Yes": "ใช่"
+        },
         "ml-models-shoes decision tree-2021": {
           "Sports": "กีฬา"
         },
         "ml-models-shoes decision tree_2022": {
+          "Sports": "กีฬา"
+        },
+        "ml-models-shoes decision tree_2023": {
           "Sports": "กีฬา"
         },
         "ml-use model card-example3A-2021": {
@@ -1511,6 +2333,13 @@
           "snow": "หิมะ"
         },
         "ml-use model card-example3A_2022": {
+          "cloudy": "มีเมฆมาก",
+          "dusk": "อัสดง",
+          "night": "กลางคืน",
+          "rain": "มีฝน",
+          "snow": "หิมะ"
+        },
+        "ml-use model card-example3A_2023": {
           "cloudy": "มีเมฆมาก",
           "dusk": "อัสดง",
           "night": "กลางคืน",

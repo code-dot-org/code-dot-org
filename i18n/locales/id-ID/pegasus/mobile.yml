@@ -538,13 +538,9 @@
   volunteer_engineer_submission_subtitle_generic: '100.000 guru akan menjadi tuan rumah Hour of Code di kelas mereka tahun ini, 7-13 Desember, 2015. Mereka butuh bantuan Anda! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} guru-guru memerlukan bantuan sukarela.<br>%{num_volunteers} bantuan sukarela telah terdaftar. Bergabung."
   volunteer_engineer_submission_intro_background: "The Hour of Code merupakan gerakan bagi siswa di seluruh dunia untuk mencoba 1 jam pengenalan terhadap ilmu komputer. Gerakan ini meliputi puluhan juta siswa di lebih dari 180 negara. Silakan bergabung dalam Pekan Pendidikan Ilmu Komputer, 7--13 Desember."
-  volunteer_engineer_submission_intro_recruit: 'Guru akan senang untuk memiliki seseorang <span style="font-family: ''Gotham 7r'', sans-serif;"> bergairah tentang pendidikan ilmu komputer</span> yang dapat membantu di dalam kelas (melalui video), atau untuk seseorang yang dapat <span style="font-family: ''Gotham 7r'', sans-serif;"> menginspirasi</span> siswa mereka dengan berbicara tentang luasnya kemungkinan dengan ilmu komputer.'
   volunteer_engineer_submission_intro_recruit_markdown: "Guru tentu senang memiliki siswa yang **sangat menyukai pendidikan ilmu komputer** yang dapat membantu di ruang kelas, atau bagi seorang guru yang dapat **menginspirasi** siswanya dengan mengupas luasnya kemungkinan ilmu komputer (yang dapat dilakukan lewat obrolan video)."
-  volunteer_engineer_submission_intro_guide: "kami belajar lebih tentang <a href=\"%{volunteer_guide}\"> secara sukarela program disini </a>."
   volunteer_engineer_submission_intro_guide_markdown: "Pelajari selengkapnya [volunteer program here](%{volunteer_guide})."
-  volunteer_engineer_submission_intro_signup: "Masukkan informasi berikut jika Anda seorang mahasiswa ilmu komputer atau software profesional. Kolom yang ditandai dengan <span class=\"form-required-field\"> *</span> diperlukan."
   volunteer_engineer_submission_intro_signup_markdown: "Masukkan informasi berikut jika Anda seorang siswa ilmu komputer atau profesional perangkat lunak. Anda harus berusia minimal 18 tahun untuk mendaftar sebagai relawan. Catat bahwa semua kolom yang Anda isi di bagian ini akan dapat dilihat secara publik oleh siapa pun yang mencermati [volunteer map](/volunteer/local). Kolom dengan tanda _*_ wajib diisi."
-  volunteer_engineer_submission_intro_links: "Apakah Anda membutuhkan voluntir? Temukan seorang voluntir dari lingkungan anda pada <a href=\"%{volunteer_local}\">volunteer map</a>."
   volunteer_engineer_submission_intro_links_markdown: "Apakah Anda seorang guru yang sedang mencari relawan? Temukan relawan lokal di [volunteer map](%{volunteer_local}) kami."
   volunteer_engineer_submission_update_information: "Perbarui informasi Anda"
   volunteer_engineer_submission_header_shared: "Informasi yang dibagi dengan guru-guru pada peta relawan"
@@ -1542,6 +1538,7 @@
   header_report_abuse: "Laporkan penyalahgunaan"
   header_legal: "Privasi & Hukum"
   header_legal_privacy: "Kebijakan privasi"
+  header_legal_cookie_notice: "Informasi Cookie"
   header_legal_tos: "Ketentuan Layanan"
   header_tutorials: "Tutorial"
   header_screen_reader_hamburger: "Menu"

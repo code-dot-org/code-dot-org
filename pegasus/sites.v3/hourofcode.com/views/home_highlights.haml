@@ -34,66 +34,9 @@
     }
   ]
 
--# As of 2023 Twitter no longer supports tweet collection embeds.
--# To account for this we'll feature one tweet and link out to the collection.
--if @language == 'en'
-  .section-wrapper
-    .article-wrapper
-      %article
-        =view :home_twitter_embed_single
-        %a.twitter-grid{href: "https://twitter.com/codeorg/timelines/925449654308704256"}
-          =hoc_s(:highlights_header)
-    .highlights-column
-      .highlight-tiles
-        - highlights.each do |item|
-          = view :highlight_item, item: item
-        .clear
-      %a.see-more{href: "/highlights"}
-        =hoc_s(:highlights_see_more)
--elsif latam_country_code?(@country) || @country == 'la' || @language == 'la'
-  -# For LATAM countries and Spanish-LATAM language, show only the LATAM HoC Twitter Feed.
-  -# For historical reasons, we also use 'la' code to represent LATAM countries in
-  -# i18n/countries.json. Unfortunately, it is a real country code for Laos Republic
-  -# (ISO_3166-1_alpha-2 codes). We should change it to a different code later.
-  .row
-    .col-md-8
-      %div
-        =view :home_twitter_embed_single_es
-        %a.twitter-grid{href: "https://twitter.com/codeorg/timelines/1299406095904116742"}
-          =hoc_s(:highlights_header)
--else
-  -# Highlights
-  %br/
-
-  .row
-    .col-xs-6.col-sm-4
-      %img{src: localized_image("/images/fill-600x400/highlight-girl-hawaii.jpg"), style: "width: 100%;"}
-
-    .col-xs-6.col-sm-4
-      %img{src: localized_image("/images/fill-600x400/highlight-robot.jpg"), style: "width: 100%;"}
-
-    .hidden-xs.col-sm-4
-      %img{src: localized_image("/images/fill-600x400/highlight-girl-purple.jpg"), style: "width: 100%;"}
-
-  .gap{style: "height:30px"}
-
-  .row
-    .col-xs-6.col-sm-4
-      .hidden-xs
-        %img{src: localized_image("/images/fill-600x400/highlight-india.jpg"), style: "width: 100%; padding-bottom:30px"}
-      %img{src: localized_image("/images/fill-600x400/highlight-celebrate.jpg"), style: "width: 100%;"}
-
-    .col-xs-6.col-sm-8
-      %img{src: localized_image("/images/fill-800x543/highlight-nba.jpg"), style: "width: 100%;"}
-
-  .gap{style: "height:30px"}
-
-  .row
-    .col-xs-6.col-sm-4
-      %img{src: localized_image("/images/fill-600x400/highlight-stickers.jpg"), style: "width: 100%;"}
-
-    .hidden-xs.col-sm-4
-      %img{src: localized_image("/images/fill-600x400/highlight-girl-star-wars.jpg"), style: "width: 100%;"}
-
-    .col-xs-6.col-sm-4
-      %img{src: localized_image("/images/fill-600x400/highlight-kids-certificates.jpg"), style: "width: 100%;"}
+.highlights-column
+  .highlight-tiles
+    - highlights.each do |item|
+      = view :highlight_item, item: item
+  %a{href: resolve_url("/highlights")}
+    =hoc_s(:highlights_see_more)

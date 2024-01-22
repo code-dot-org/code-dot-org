@@ -708,7 +708,11 @@ vi:
         star_quilts_intro_to_artist: 'Star Quilt: Giới thiệu cho nghệ sĩ'
         upload_sprites_backgrounds: Tải lên tùy chỉnh Sprites và hình nền
         what-is-creativity: Sáng tạo là gì?
+        poetry-programming: Thơ & Lập trình
         code-break: Giờ giải lao lập trình
+        blockchain-introd: 'Cách Blockchain hoạt động: Giới thiệu'
+        ai-ethis: Đạo đức & AI
+        csd_ml_how_ai_works: Cách thức hoạt động của AI
     callout:
       text:
         drag_blocks: Kéo một khối "di chuyển" và gán nó bên dưới khối khác

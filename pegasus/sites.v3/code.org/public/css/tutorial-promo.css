@@ -64,11 +64,6 @@
   line-height: 16px;
 }
 
-.tutorial-button {
-  font-size: 18px;
-  height: 40px;
-}
-
 @media screen and (min-width: 0px) and (max-width: 970px) {
   .tutorial-promo-container .tutorial-box h2 {
     font-size: 17px;

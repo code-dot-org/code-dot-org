@@ -16,8 +16,8 @@ Semasa kempen Hour of Code, syarikat anda boleh membantu meningkatkan kesedaran 
 
 Semak langkah-langkah di bawah untuk bermula dan lihat [guide for corporate partners](/files/hoc-corporate-toolkit.pdf) kami untuk mendapatkan maklumat lanjut tentang cara membuat syarikat anda teruja tentang Hour of Code.
 
-- [Connect with a local school](#connect-with-a-school)
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
+- [Berhubung dengan sekolah tempatan](#connect-with-a-school)
+- [Galakkan pekerja untuk menjadi sukarelawan di dalam kelas](#encourage-employees)
 - [Anjurkan acara Hour of Code anda sendiri](#hos-hour-of-code)
 - [Promosikan Hour of Code](#promosikan-hour-of-code)
 - [Lebih banyak cara menyokong Hour of Code](#support-hour-of-code)
@@ -26,31 +26,31 @@ Semak langkah-langkah di bawah untuk bermula dan lihat [guide for corporate part
 
 <a id="connect-with-a-school"></a>
 
-## Connect with a local school
+## Berhubung dengan sekolah tempatan
 
-It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+Adalah lebih baik untuk bermula secara tempatan, dengan sekolah yang anda atau pekerja anda mempunyai hubungan yang kuat, seperti alma mater, sekolah kanak-kanak, atau organisasi atau sekolah tempatan yang tertumpu untuk melayani penduduk yang secara historis kurang diwakili dalam sains komputer.
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+Dari sana, anda boleh melayari laman web sekolah untuk mencari kenalan yang sesuai untuk menghubungi, seperti pengetua, naib pengetua, pengajar teknologi atau sains komputer, atau bahkan PTSA sekolah. Anda juga boleh bekerjasama dengan organisasi seperti Boys & Girls Clubs of America, cawangan YMCA, dan banyak lagi untuk menganjurkan acara bersama.
 
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+Jika anda tidak boleh berhubung dengan sekolah, sila [hubungi kami](https://support.code.org/hc/en-us/requests/new) dan kami akan menghubungkan anda dengan satu daripada rakan kongsi tempatan kami sekiranya boleh.
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## Galakkan pekerja untuk menjadi sukarelawan di dalam kelas
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
+Salah satu cara yang paling memuaskan untuk mengambil bahagian dalam Hour of Code adalah dengan menjadi sukarelawan dengan bilik darjah tempatan, sama ada secara bersemuka atau secara maya. Paling penting, anda tidak perlu menjadi seorang jurutera untuk menjadi sukarelawan. Anda masih boleh memberikan pengalaman yang bermakna kepada pelajar dengan berkongsi pengalaman kerjaya anda sendiri dan bagaimana CS atau teknologi telah mempengaruhi peranan anda.
 
 [<button>Daftarkan diri untuk menjadi sukarelawan</button>]({{ urls/volunteer }})
 
-Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+Sebaik sahaja sukarelawan mendaftarkan diri, guru dapat menyemak profil mereka pada [peta sukarelawan](https://code.org/volunteer/local) kami - oleh itu profil perlu dihantar selengkap yang mungkin. Jika anda sesuai untuk bilik darjah mereka, seorang guru akan menghubungi anda melalui platform (kami tidak akan sekali-kali berkongsi alamat e-mel anda dengan guru). Anda kemudiannya boleh menyelaraskan butiran secara langsung dengan guru tentang [cara terbaik untuk menjadi sukarelawan dengan bilik darjah mereka](https://hourofcode.com/us/how-to/volunteers).
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+Untuk panduan lebih lanjut tentang sukarelawan dan sampel pemesejan bagi membuatkan syarikat anda teruja dengan Hour of Code, sila lihat [panduan untuk rakan kongsi]({{ localized_files/hoc_corporate_toolkit }}) kami.
 
 * * *
 
@@ -135,7 +135,7 @@ Satu cara paling baik untuk membantu ialah menyebarkan berita dan mempromosikan 
 
 ### 1. Daftarkan Acara Anda
 
-Apabila anda [mendaftar acara Hour of Code anda](/#join), anda akan menerima komunikasi e-mel yang berguna dengan berita dan petua untuk menganjurkan Hour of Code yang berjaya. Ini juga merupakan cara anda boleh memberitahu sekolah tempatan atau ibu bapa bahawa anda menganjurkan acara berdekatan mereka.
+Apabila anda [mendaftar acara Hour of Code anda](/events), anda akan menerima komunikasi e-mel yang berguna dengan berita dan petua untuk menganjurkan Hour of Code yang berjaya. Ini juga merupakan cara anda boleh memberitahu sekolah tempatan atau ibu bapa bahawa anda menganjurkan acara berdekatan mereka.
 
 ### 2. Siarkan di dalam Media Sosial
 
@@ -162,7 +162,7 @@ Bantu meningkatkan kesedaran mengenai pergerakan sains komputer dengan kandungan
 - Jika barisan kod pertama anda mengubah hidup anda, bantu pelajar yang berdekatan dengan anda untuk menulis barisan pertama mereka #HourOfCode https://code.org/volunteer
 - Jika anda belajar mengekod—apakah cerita anda? Berikan inspirasi kepada pelajar berdekatan anda melalui pengalaman pertama #HourOfCode https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">Cari lebih banyak</a> poster, video, pelekat dan cara lain untuk mempromosikan acara anda kepada komuniti anda.
 
 * * *
 

@@ -15,5 +15,7 @@ end
 # @returns [Hash] the dashboard user row associated with the current request.
 def current_user
   return nil if (id = current_user_id).nil?
+  # rubocop:disable CustomCops/DashboardDbUsage
   @current_user ||= DASHBOARD_DB[:users][id: id]
+  # rubocop:enable CustomCops/DashboardDbUsage
 end

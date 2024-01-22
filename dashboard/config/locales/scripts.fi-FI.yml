@@ -64,6 +64,7 @@ fi:
             Plants vs. Zombies -pelien hahmoilla!
           description_short: Kokeile tietotekniikan perusteita hauskojen hahmojen
             seurassa!
+          name: Koodaustunti
           student_description: Kokeile tietojenkäsittelytieteen perusteita Angry Birds
             ja Plants vs. Zombies -pelien hahmoilla!
           title: Kooditunti 2013
@@ -521,6 +522,10 @@ fi:
           lessons:
             lesson-6:
               name: Silmukat
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kysely
         csa1-validation-pilot-2022:
           lesson_groups:
             lessonGroup-5:
@@ -538,6 +543,10 @@ fi:
             lessonGroup-5:
               display_name: Kysely
         csa8-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Kysely
+        csa8-2024:
           lesson_groups:
             lessonGroup-4:
               display_name: Kysely
@@ -606,6 +615,14 @@ fi:
             cspSurvey:
               display_name: Kysely
         csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Ongelmanratkaisu prosessi'
+            lessonGroup-3:
+              display_name: 'Luku 2: Tietokoneet ja ongelmanratkaisu'
+            lessonGroup-5:
+              display_name: Kysely
+        csd1-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Luku 1: Ongelmanratkaisu prosessi'
@@ -751,6 +768,12 @@ fi:
               display_name: 'Luku 1: Kuvia ja animaatioita'
             lessonGroup-3:
               display_name: 'Luku 2: Pelien rakentaminen'
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Kuvia ja animaatioita'
+            lessonGroup-3:
+              display_name: 'Luku 2: Pelien rakentaminen'
         csd3-dlp:
           lesson_groups:
             required:
@@ -820,6 +843,12 @@ fi:
             cspSurvey:
               display_name: Kysely
         csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Käyttäjäkeskeinen suunnittelu'
+            lessonGroup-3:
+              display_name: 'Luku 2: Apsin prototypointi'
+        csd4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Luku 1: Käyttäjäkeskeinen suunnittelu'
@@ -908,6 +937,12 @@ fi:
             cspSurvey:
               display_name: Kysely
         csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Tiedon esittäminen'
+            lessonGroup-3:
+              display_name: 'Luku 2: Tieto-ongelmien ratkaisu'
+        csd5-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Luku 1: Tiedon esittäminen'
@@ -1010,6 +1045,10 @@ fi:
             csd6_2:
               display_name: 'Luku 2: Laitteiston syöte'
         csd6a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Luku 2: Laitteiston syöte'
+        csd6a-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Luku 2: Laitteiston syöte'
@@ -1124,6 +1163,10 @@ fi:
             cspSurvey:
               display_name: Kysely
         csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kysely
+        csp1-2024:
           lesson_groups:
             cspSurvey:
               display_name: Kysely
@@ -1277,6 +1320,14 @@ fi:
               display_name: Funktiot
             csp_variables:
               display_name: Muuttujat
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Ehtolausekkeet
+            csp_functions:
+              display_name: Funktiot
+            csp_variables:
+              display_name: Muuttujat
         csp4-dlp:
           lesson_groups:
             required:
@@ -1380,6 +1431,12 @@ fi:
             csp_unit6_2020:
               display_name: Algoritmit
         csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listat
+            lessonGroup-3:
+              display_name: Silmukat
+        csp6-2024:
           lesson_groups:
             csp_unit6_2020:
               display_name: Listat
@@ -1849,7 +1906,7 @@ fi:
           description_short: Tutki Minecraft-maailmaa koodin kautta
           student_description: Käytä koodipalikoita viedäksesi Steven tai Alexin seikkailulle
             läpi Minecraft-maailman
-          title: Minecraft Koodaustunti
+          title: Minecraft seikkailija
         microbit-2022:
           lesson_groups:
             lessonGroup-4:
@@ -1866,6 +1923,10 @@ fi:
           student_description: Koodaa eläimiä ja muita Minecraft otuksia omalla Minecraft
             versiollasi.
           title: Koodaustunti Minecraft Suunnittelija
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Vapaata kokeilua
         netsim:
           title: Internet simulaattori
         nevada-standards-aligned-fifth-grade-2023:
@@ -1974,6 +2035,19 @@ fi:
           description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           description_short: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           student_description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Silmukat
+            lesson-4:
+              name: Ehtolausekkeet
+          title: Johdanto tietotekniikkaan
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Tapahtumat
+            lesson-4:
+              name: Käyttäytymiset
         soccer:
           name: Jalkapallo
         spelling-bee:
@@ -2050,9 +2124,24 @@ fi:
           lesson_groups:
             csd3_2:
               display_name: 'Luku 2: Pelien rakentaminen'
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Johdanto
+          lessons:
+            lesson-7:
+              name: Johdanto
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Johdanto
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
+              name: Johdanto
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
               name: Johdanto
         web-development-2023:
           lesson_groups:

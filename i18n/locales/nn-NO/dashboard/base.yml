@@ -52,6 +52,7 @@ nn:
         gender: 'Kjønn'
         edit_header: 'Rediger kontodetaljar'
         finish_sign_up_header: 'Fullfør oppretting av kontoen'
+        finish_sign_up_header_error: 'Ver snill og endre følgande feil:'
         finish_sign_up_subheader: 'Fyll ut følgande informasjon for å gjere ferdig Code.org-konto for <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Fyll ut følgande informasjon for å gjere ferdig Code.org-konto for **%{email}**.'
         finish_sign_up_subheader_provider: 'Fyll ut følgande informasjon for å fullføre opprettinga av ein Code.org-konto med <strong>%{provider}</strong> for <strong>%{email}</strong>.'
@@ -59,6 +60,7 @@ nn:
         reset_password_token: "Passordlenka for nullstilling du har fulgt"
         error:
           future: kan ikkje vere i framtida
+        user_type: 'Kontotype'
         us_state: 'Fylke'
   beta: "beta"
   hello: "Hallo, verda"
@@ -1067,4 +1069,3 @@ nn:
   teacher_feedback: "Tilbakemeldingar frå lærarar"
   pixelation:
     binary: "Binær"
-

@@ -52,7 +52,9 @@ zh-CN:
         age: '年龄'
         gender: '性别'
         edit_header: '编辑用户信息'
+        ai_settings_header: 'AI设置'
         finish_sign_up_header: '完成创建帐户'
+        finish_sign_up_header_error: '请更正以下错误：'
         finish_sign_up_subheader: '填写以下信息为 <strong>%{email}</strong> 创建 Code.org 帐户。'
         finish_sign_up_subheader_markdown: '填写以下信息为 **%{email}** 创建 Code.org 帐户。'
         finish_sign_up_subheader_provider: '填写信息，来使用 <strong>%{provider}</strong> 的 <strong>%{email}</strong> 创建 Code.org 账户。'
@@ -60,7 +62,9 @@ zh-CN:
         reset_password_token: "重置密码链接"
         error:
           future: 不能选择将来的时间
+        user_type: '帐户类型'
         us_state: '省/直辖市/自治区'
+        ai_rubrics_disabled: '禁用人工智能规则功能'
   beta: "测试版"
   hello: "世界你好"
   welcome_back: "欢迎回来，%{name}"
@@ -202,6 +206,8 @@ zh-CN:
     parent_account_email_progress_permission: "我们是否可以偶尔通过电子邮件向你发送关于你孩子进度和项目的最新信息，以及关于其课程和计算机科学的最新信息？[(参见我们的隐私政策)](%{privacy_policy_url})"
     parent_account_email_label: "家长/监护人电子邮箱"
     us_state: '省/直辖市/自治区'
+    us_state_dropdown_options:
+      other: "我住的地方没有列出"
   school_info:
     title: '学校信息（选填）'
     school_country: '学校所在国家'
@@ -270,6 +276,9 @@ zh-CN:
   parent_mailer:
     student_associated_subject: 'Code.org 的登录信息'
     parent_email_added_subject: '欢迎来到 Code.org ！'
+    parent_permission_request_subject: "孩子需要父母的同意后，才能访问 Code.org 。"
+    parent_permission_reminder_subject: "提示：孩子需要父母的同意后，才能访问 Code.org 。"
+    parent_permission_confirmation_subject: "感谢批准您的孩子访问 Code.org！"
   teacher_mailer:
     new_teacher_subject: '欢迎来到 Code.org ！'
     delete_teacher_subject: 'Code.org 通知：你的帐户已被删除'
@@ -335,7 +344,7 @@ zh-CN:
         personal_login_created_username: '您已成功创建了个人账号。您现在可以使用用户名(%{username}) 和密码登录。'
   nav:
     header:
-      finished_hoc: "我已经完成了我的Hour of Code项目。"
+      finished_hoc: "完成了！"
       sign_in_to_save: '登录以保存进度'
       my_dashboard: "我的控制面板"
       course_catalog: "课程分类"
@@ -434,7 +443,7 @@ zh-CN:
       starwars: '星球大战'
       starwarsblocks: '星球大战(块)'
       starwarsblocks_hour: '星球大战(块)'
-      thebadguys: '坏人'
+      thebadguys: '坏蛋联盟'
       loading: '正在载入...​​​'
       weblab: '网络实验室'
       view_all: '查看所有项目……'
@@ -868,6 +877,8 @@ zh-CN:
     submit-incomplete-body: "您有未完成问题，提交评估之后您将无法编辑它，您确定要这么做吗？"
     submit-complete-title: "提交您的评估"
     submit-complete-body: "提交后您不能编辑您的评估。 是否确定？"
+  level_summary:
+    correct_answer: "正确答案"
   match:
     wrong_title: "不正确的解决方案"
     wrong_body: "您输入的解决方案不正确。请再试一次 ！"
@@ -1120,7 +1131,7 @@ zh-CN:
       workshop_facilitator: '工作室主持人'
       workshop_course: '工作室课程'
       email_opt_in: '我们是否能发给你关于 Code.org 国际项目，课程更新或其它计算机科学新闻的邮件？'
-      legal_opt_in: '提交此表单即表示您同意允许 Code.org 与您的所在国家、所在学区和主持人的 Code.org 国际合作伙伴共享有关您如何使用 Code.org 和专业学习资源的信息。我们将分享您的联系信息， 您正在使用哪些课程/组件以及如何与这些合作伙伴聚合有关您的数据。这包括你的班级的学生数量、你的教室的人员数据以及您的学校和地区的名称。我们不会与我们的合作伙伴分享关于个别学生的任何信息：所有学生的信息将不会被识别和聚合。我们的国际合作伙伴和主持人在合同上有义务以和 Code.org 相同的保密级别对待这一信息。'
+      legal_opt_in: '提交此表单，即表示您同意允许 Code.org 与您所在国家的国际合作伙伴，共享您如何使用 Code.org 以及专业学习资源的信息。我们将与这些合作伙伴共享您的联系信息（如姓名和电子邮件）， 您的学校信息，正在使用哪些课程/组件以及课程的统计数据（如使用每个课程的学生数量）。我们不会与合作伙伴分享任何关于学生的个人信息：所有学生的个人信息会被混淆并聚合。我们的国际合作伙伴和主持人在合同上有义务以和 Code.org 相同的保密级别对待这些信息。'
     form_entries:
       gender:
         male: '男性'
@@ -1129,17 +1140,35 @@ zh-CN:
         not_listed: '期望的术语未列出'
         none: '不愿回答'
       school_country:
+        australia: '澳大利亚'
         barbados: '巴巴多斯'
         belize: '伯利兹'
+        brazil: '巴西'
         canada: '加拿大'
         chile: '智利'
         colombia: '哥伦比亚'
+        india: '印度'
+        indonesia: '印度尼西亚'
         israel: '以色列'
+        jamaica: '牙买加'
+        kenya: '肯尼亚'
+        kosovo: '科索沃'
         malaysia: '马来西亚'
+        maldives: '马尔代夫'
         mexico: '墨西哥'
+        mongolia: '蒙古'
+        new_zealand: '新西兰'
         paraguay: '巴拉圭'
+        philippines: '菲律宾'
+        portugal: '葡萄牙'
+        puerto_rico: '波多黎各'
+        slovakia: '斯洛伐克'
+        south_korea: '韩国'
+        spain: '西班牙'
         thailand: '泰国'
+        trinidad_and_tobago: '特立尼达和多巴哥'
         uzbekistan: '乌兹别克斯坦'
+        vietnam: '越南'
       ages:
         ages_under_6: '6岁以下'
         ages_7_8: '7-8岁'
@@ -1228,6 +1257,7 @@ zh-CN:
       workshops_k5: 'K-5 研讨会'
       summer_workshops_612: '6-12 暑期工作坊'
       virtual_academic_year_workshops_612: '6—12 学年虚拟研讨会'
+      unsupported: '不支持'
   cookie_banner:
     message: '通过继续浏览我们的网站或单击"我同意"，您同意在你的计算机或设备上存储 cookies。'
     more_information: "查看 Code.org 的隐私政策。"
@@ -1248,6 +1278,7 @@ zh-CN:
       error_invalid_user: '无效的用户ID，请重新登录。'
       error_no_code: '请输入您的登录代码。'
       confirm_login: '选择“确认”以使用您的Google帐户登录。'
+    setup_page_title: '创客设置'
   parent_email_banner:
     text: "**您是否是一位家长或监护人？**将您的电子邮箱地址关联到此帐户，以了解孩子的进度和项目的最新信息！"
     link_your_email: "关联您的电子邮箱"
@@ -1283,4 +1314,3 @@ zh-CN:
     binary: "二进制"
     hexadecimal: "十六进制"
     pixel_format_header: "像素格式"
-

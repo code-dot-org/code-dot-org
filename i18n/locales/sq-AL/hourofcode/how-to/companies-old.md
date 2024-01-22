@@ -57,7 +57,7 @@ Planifiko Orën tënde të Kodimit duke inspiruar fëmijët dhe diskutoni se si 
 **Trego një video frymëzuese:**
 
 - Video origjinale e lansimit te code.org perfshine, Bill Gates, Mark Zuckerberg, si dhe yllin e NBA Cris Bosh (ekzistojne dy versione: ajo qe zgjate 1 minute dhe ajo me kohezgjatje prej 5 minutash.
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
+- Videoja “ [Ora e Kodit në mbarë botën”](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [Presidenti Obama duke i bere thirrje nxenesve qe te mesojne shkencat kompjuterike](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Gjej me shume video inspiruese [ketu](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)
 

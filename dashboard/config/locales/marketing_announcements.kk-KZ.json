@@ -1,0 +1,22 @@
+{
+  "kk-KZ": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "co-teacher": {
+            "buttonText": "толығырақ білу"
+          },
+          "hoc-2023": {
+            "buttonText": "толығырақ білу"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "толығырақ білу"
+          },
+          "superhero": {
+            "buttonText": "Толығырақ"
+          }
+        }
+      }
+    }
+  }
+}

@@ -95,6 +95,7 @@ is:
             Birds og Plants vs. Zombies!
           description_short: Prófaðu grunnatriði í tölvufræði með mörgum skemmtilegum
             fígúrum!
+          name: Klukkustund kóðunar
           student_description: Prófaðu undirstöðuatriði tölvunarfræði með leikverum
             úr Angry Birds og Plants vs. Zombies!
           title: Klukkustund kóðunar 2013
@@ -221,6 +222,8 @@ is:
           lessons:
             lesson-5:
               name: Mat
+            lesson-6:
+              name: Kennslustund 1
         aquatic:
           description_short: Notaðu sköpunargáfuna og hæfileika til að leysa þrautir
             til að kanna og byggja neðansjávarheima með kóða!
@@ -1052,6 +1055,14 @@ is:
           lessons:
             lesson-6:
               name: Lykkjur
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Könnun
+            lessonGroup-3:
+              display_name: Innihald
+            lessonGroup-5:
+              display_name: Annað kennsluefni
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1087,6 +1098,12 @@ is:
           lessons:
             lesson-4:
               name: Breytur
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-4:
+              display_name: Annað kennsluefni
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1116,6 +1133,12 @@ is:
           lessons:
             lesson-3:
               name: Frá lykkjur
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-4:
+              display_name: Annað kennsluefni
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1137,6 +1160,12 @@ is:
             lessonGroup-2:
               display_name: Innihald
         csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-4:
+              display_name: Annað kennsluefni
+        csa4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
@@ -1174,6 +1203,12 @@ is:
               display_name: Innihald
             lessonGroup-4:
               display_name: Annað kennsluefni
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-4:
+              display_name: Annað kennsluefni
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1200,6 +1235,12 @@ is:
               display_name: Innihald
             lessonGroup-4:
               display_name: Annað kennsluefni
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-4:
+              display_name: Annað kennsluefni
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1221,6 +1262,12 @@ is:
             lessonGroup-2:
               display_name: Innihald
         csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-5:
+              display_name: Annað kennsluefni
+        csa7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
@@ -1253,6 +1300,14 @@ is:
             lessonGroup-5:
               display_name: Könnun
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-4:
+              display_name: Könnun
+            lessonGroup-5:
+              display_name: Annað kennsluefni
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
@@ -1303,6 +1358,8 @@ is:
             cspSurvey:
               display_name: Könnun
         csd-post-survey-2023:
+          title: Könnun eftir námskeið
+        csd-post-survey-2024:
           title: Könnun eftir námskeið
         csd1-2017:
           description_short: "  Lærðu hvernig fólk notar tölvur til að leysa vandamál."
@@ -1365,6 +1422,14 @@ is:
             cspSurvey:
               display_name: Könnun
         csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kafli 1: Lausn vandamála sem ferli'
+            lessonGroup-3:
+              display_name: 'Kafli 2: Tölvur og lausn vandamála'
+            lessonGroup-5:
+              display_name: Könnun
+        csd1-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kafli 1: Lausn vandamála sem ferli'
@@ -1531,6 +1596,12 @@ is:
               display_name: 'Kafli 1: Myndir og Hreyfing'
             lessonGroup-3:
               display_name: 'Kafli 2: Gerð leikja'
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kafli 1: Myndir og Hreyfing'
+            lessonGroup-3:
+              display_name: 'Kafli 2: Gerð leikja'
         csd3-dlp:
           lesson_groups:
             content:
@@ -1614,6 +1685,12 @@ is:
             cspSurvey:
               display_name: Könnun
         csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kafli 1: Notendamiðuð hönnun'
+            lessonGroup-3:
+              display_name: 'Kafli 2: Frumgerðir appa'
+        csd4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kafli 1: Notendamiðuð hönnun'
@@ -1720,6 +1797,14 @@ is:
             cspSurvey:
               display_name: Könnun
         csd5-2023:
+          description_short: Lærðu um hvernig fólk notar tölvur til að leysa vandamál
+            með gögn.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kafli 1: Kóðun upplýsinga'
+            lessonGroup-3:
+              display_name: 'Kafli 2: Lausn vandamála með gögn'
+        csd5-2024:
           description_short: Lærðu um hvernig fólk notar tölvur til að leysa vandamál
             með gögn.
           lesson_groups:
@@ -1841,7 +1926,15 @@ is:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Kafli 2: Smíði frumgerða vélbúnaðar'
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kafli 2: Smíði frumgerða vélbúnaðar'
         csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inntök og Úttök
+        csd6b-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: Inntök og Úttök
@@ -2027,6 +2120,12 @@ is:
               display_name: Könnun
             csp_unit1_2020:
               display_name: Kafli 1 - Stafrænar upplýsingar
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Könnun
+            csp_unit1_2020:
+              display_name: Kafli 1 - Stafrænar upplýsingar
         csp1-dlp:
           lesson_groups:
             content:
@@ -2087,6 +2186,12 @@ is:
               display_name: 'Eining 10: Netöryggi og mikilvægi þess'
             lessonGroup-2:
               display_name: Könnun eftir námskeið
+        csp10-2024:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Eining 10: Netöryggi og mikilvægi þess'
+            lessonGroup-2:
+              display_name: Könnun eftir námskeið
         csp10-pilot-staging:
           lesson_groups:
             csp_conditionals:
@@ -2136,6 +2241,10 @@ is:
             csp_unit2_2020:
               display_name: 'Kafli 2: Internetið'
         csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Kafli 2: Internetið'
+        csp2-2024:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Kafli 2: Internetið'
@@ -2221,6 +2330,10 @@ is:
             csp_unit3_2020:
               display_name: 'Eining 3: Kynning á gerð appa'
         csp3-2023:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Eining 3: Kynning á gerð appa'
+        csp3-2024:
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Eining 3: Kynning á gerð appa'
@@ -2333,6 +2446,16 @@ is:
             csp_variables:
               display_name: Breytur
         csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Skilyrði
+            csp_functions:
+              display_name: Föll
+            csp_project:
+              display_name: Verkefni
+            csp_variables:
+              display_name: Breytur
+        csp4-2024:
           lesson_groups:
             csp_conditionals:
               display_name: Skilyrði
@@ -2466,6 +2589,12 @@ is:
               display_name: Yfirferðir
             lessonGroup-5:
               display_name: Könnun eftir námskeið
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Gögn
+            lessonGroup-5:
+              display_name: Könnun eftir námskeið
         csp5-dlp:
           lesson_groups:
             content:
@@ -2542,6 +2671,18 @@ is:
               display_name: Yfirferðir
             lessonGroup-5:
               display_name: Verkefni
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listar
+            lessonGroup-2:
+              display_name: Könnun eftir námskeið
+            lessonGroup-3:
+              display_name: Lykkjur
+            lessonGroup-4:
+              display_name: Yfirferðir
+            lessonGroup-5:
+              display_name: Verkefni
         csp6-pilot:
           lesson_groups:
             content:
@@ -2590,6 +2731,14 @@ is:
               display_name: Stikar og skilagildi
             lessonGroup-3:
               display_name: Könnun eftir námskeið
+        csp7-2024:
+          lesson_groups:
+            csp_libraries:
+              display_name: Söfn
+            csp_parameters_return_values:
+              display_name: Stikar og skilagildi
+            lessonGroup-3:
+              display_name: Könnun eftir námskeið
         csp7-pilot:
           lesson_groups:
             csp_libraries:
@@ -2613,6 +2762,10 @@ is:
             lessonGroup-3:
               display_name: Könnun eftir námskeið
         csp8-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Könnun eftir námskeið
+        csp8-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: Könnun eftir námskeið
@@ -2645,6 +2798,12 @@ is:
             lessonGroup-2:
               display_name: Könnun eftir námskeið
         csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Kafli 9: Gögn'
+            lessonGroup-2:
+              display_name: Könnun eftir námskeið
+        csp9-2024:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Kafli 9: Gögn'
@@ -2763,6 +2922,8 @@ is:
           student_description: Halda áfram eftir fyrstu klukkustundina með fleiri
             hugmyndir að verkefnum.
           title: Halda áfram að dansa
+        dance-unplugged:
+          title: Danspartý án tölvu
         dani-june-2020-test:
           lesson_groups:
             csp5_1:
@@ -3318,7 +3479,7 @@ is:
           description_short: Kannaðu Minecraft heim með kóða
           student_description: Notaðu kubba með kóða til að fara með Steve eða Alex
             í ævintýraferð um þennan Minecraft heim.
-          title: Klukkustund kóðunar með Minecraft
+          title: Minecraft Könnuður
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -3343,6 +3504,10 @@ is:
           student_description: Forritaðu dýr og aðrar Minecraft verur í þinni eigin
             útgáfu af Minecraft.
           title: Klukkustund kóðunar - Minecraft Hönnuður
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Frjáls æfing
         netsim:
           title: Internet hermir
         nevada-standards-aligned-fifth-grade-2023:
@@ -3583,6 +3748,37 @@ is:
           description: '2.  áfangi á neti: Blandað sumarnám'
           description_short: '2.  áfangi á neti: Blandað sumarnám'
           student_description: '2.  áfangi á neti: Blandað sumarnám'
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Kennslustund 1
+        self-paced-pl-k5-2024-1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Fyrstu skrefin
+          lessons:
+            lesson-1:
+              name: Kennslustund 1
+            lesson-3:
+              name: Lykkjur
+            lesson-4:
+              name: Skilyrði
+            lesson-6:
+              name: Næstu skref
+          title: Kynning á tölvunarfræði
+        self-paced-pl-k5-2024-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Fyrstu skrefin
+          lessons:
+            lesson-1:
+              name: Kennslustund 1
+            lesson-3:
+              name: Atvik
+            lesson-4:
+              name: Hegðun
+            lesson-5:
+              name: Næstu skref
         soccer:
           name: fótbolti
         spelling-bee:
@@ -3726,6 +3922,17 @@ is:
               display_name: Innihald
             csd3_2:
               display_name: 'Kafli 2: Gerð leikja'
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Kynning
+          lessons:
+            lesson-7:
+              name: Kynning
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Kynning
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -3734,6 +3941,10 @@ is:
           lessons:
             lesson-3:
               name: Mat
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Kynning
         web-development-2023:
           lesson_groups:
             lessonGroup-4:

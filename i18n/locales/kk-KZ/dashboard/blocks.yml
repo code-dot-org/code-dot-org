@@ -14,6 +14,10 @@ kk:
         options:
           UNIT:
             '"seconds"': секунд
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"seconds"': секунд
       Dancelab_changePropBy:
         options:
           PROPERTY:
@@ -140,6 +144,11 @@ kk:
         options:
           EFFECT:
             '"hearts"': жүрегтер
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': көк
+            '"red"': қызыл
       gamelab_atTime:
         options:
           UNIT:

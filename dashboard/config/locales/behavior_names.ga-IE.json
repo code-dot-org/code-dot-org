@@ -80,6 +80,19 @@
           "swimming left and right": "snámh anonn is anall",
           "wandering": "fánaíocht"
         },
+        "CourseE_Project_SpriteLab_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
         "CourseE_Project_SpriteLab_cupcake_examples2022": {
           "growing": "fás",
           "growing2": "fás2",
@@ -128,6 +141,30 @@
           "wandering": "fánaíocht",
           "wandering2": "fánaíocht2"
         },
+        "CourseE_Project_SpriteLab_cupcake_examples_2023": {
+          "growing": "fás",
+          "growing2": "fás2",
+          "jittering": "crith",
+          "jittering2": "crith2",
+          "moving east": "dul soir",
+          "moving east2": "dul soir2",
+          "moving north": "dul ó thuaidh",
+          "moving north2": "dul ó thuaidh2",
+          "moving south": "dul ó dheas",
+          "moving south2": "dul ó dheas2",
+          "moving west": "dul siar",
+          "moving west2": "dul siar2",
+          "patrolling": "patrólú",
+          "patrolling2": "patrólú2",
+          "shrinking": "crapadh",
+          "shrinking2": "crapadh2",
+          "spinning right": "casadh ar deiseal",
+          "spinning right2": "casadh ar deiseal2",
+          "swimming left and right": "snámh anonn is anall",
+          "swimming left and right2": "snámh anonn is anall2",
+          "wandering": "fánaíocht",
+          "wandering2": "fánaíocht2"
+        },
         "CourseE_Project_SpriteLab_examples2022": {
           "growing": "fás",
           "growing2": "fás2",
@@ -153,6 +190,30 @@
           "wandering2": "fánaíocht2"
         },
         "CourseE_Project_SpriteLab_examples_2021": {
+          "growing": "fás",
+          "growing2": "fás2",
+          "jittering": "crith",
+          "jittering2": "crith2",
+          "moving east": "dul soir",
+          "moving east2": "dul soir2",
+          "moving north": "dul ó thuaidh",
+          "moving north2": "dul ó thuaidh2",
+          "moving south": "dul ó dheas",
+          "moving south2": "dul ó dheas2",
+          "moving west": "dul siar",
+          "moving west2": "dul siar2",
+          "patrolling": "patrólú",
+          "patrolling2": "patrólú2",
+          "shrinking": "crapadh",
+          "shrinking2": "crapadh2",
+          "spinning right": "casadh ar deiseal",
+          "spinning right2": "casadh ar deiseal2",
+          "swimming left and right": "snámh anonn is anall",
+          "swimming left and right2": "snámh anonn is anall2",
+          "wandering": "fánaíocht",
+          "wandering2": "fánaíocht2"
+        },
+        "CourseE_Project_SpriteLab_examples_2023": {
           "growing": "fás",
           "growing2": "fás2",
           "jittering": "crith",
@@ -247,16 +308,25 @@
         "CourseF_outbreak1_-2022-2": {
           "wandering": "fánaíocht"
         },
+        "CourseF_outbreak1_2023": {
+          "wandering": "fánaíocht"
+        },
         "CourseF_outbreak2": {
           "wandering": "fánaíocht"
         },
         "CourseF_outbreak2_-2022-2": {
           "wandering": "fánaíocht"
         },
+        "CourseF_outbreak2_2023": {
+          "wandering": "fánaíocht"
+        },
         "CourseF_outbreak3": {
           "wandering": "fánaíocht"
         },
         "CourseF_outbreak3_-2022-2": {
+          "wandering": "fánaíocht"
+        },
+        "CourseF_outbreak3_2023": {
           "wandering": "fánaíocht"
         },
         "CourseF_outbreak4": {
@@ -285,16 +355,35 @@
           "swimming left and right": "snámh anonn is anall",
           "wandering": "fánaíocht"
         },
+        "CourseF_outbreak4_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
         "CourseF_outbreak5": {
           "wandering": "fánaíocht"
         },
         "CourseF_outbreak5_-2022-2": {
           "wandering": "fánaíocht"
         },
+        "CourseF_outbreak5_2023": {
+          "wandering": "fánaíocht"
+        },
         "CourseF_outbreak6": {
           "wandering": "fánaíocht"
         },
         "CourseF_outbreak6_-2022-2": {
+          "wandering": "fánaíocht"
+        },
+        "CourseF_outbreak6_2023": {
           "wandering": "fánaíocht"
         },
         "CourseF_outbreak7": {
@@ -321,6 +410,18 @@
           "spinning right": "casadh ar deiseal",
           "wandering": "fánaíocht"
         },
+        "CourseF_outbreak7_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
         "CourseF_outbreak8": {
           "growing": "fás",
           "jittering": "crith",
@@ -334,6 +435,18 @@
           "wandering": "fánaíocht"
         },
         "CourseF_outbreak8_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
+        "CourseF_outbreak8_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -670,6 +783,19 @@
           "swimming left and right": "snámh anonn is anall",
           "wandering": "fánaíocht"
         },
+        "Fish Tank 2-validated_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
         "Fish Tank 3-validated2022": {
           "growing": "fás",
           "jittering": "crith",
@@ -710,6 +836,19 @@
           "wandering": "fánaíocht"
         },
         "Fish Tank 3-validated_2021": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "Fish Tank 3-validated_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -774,6 +913,19 @@
           "swimming left and right": "snámh anonn is anall",
           "wandering": "fánaíocht"
         },
+        "Fish Tank 4-validated_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
         "Fish Tank 5-validated2022": {
           "growing": "fás",
           "jittering": "crith",
@@ -826,6 +978,19 @@
           "swimming left and right": "snámh anonn is anall",
           "wandering": "fánaíocht"
         },
+        "Fish Tank 5-validated_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
         "Fish Tank 6-validated2022": {
           "growing": "fás",
           "jittering": "crith",
@@ -866,6 +1031,19 @@
           "wandering": "fánaíocht"
         },
         "Fish Tank 6-validated_2021": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "Fish Tank 6-validated_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -995,6 +1173,19 @@
           "swimming left and right": "snámh anonn is anall",
           "wandering": "fánaíocht"
         },
+        "Virtual Pet 1_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
         "Virtual Pet 2": {
           "growing": "fás",
           "jittering": "crith",
@@ -1048,6 +1239,19 @@
           "wandering": "fánaíocht"
         },
         "Virtual Pet 2_2021": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "Virtual Pet 2_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -1133,6 +1337,30 @@
           "wandering2": "fánaíocht2"
         },
         "Virtual Pet 3_2021": {
+          "growing": "fás",
+          "growing2": "fás2",
+          "jittering": "crith",
+          "jittering2": "crith2",
+          "moving east": "dul soir",
+          "moving east2": "dul soir2",
+          "moving north": "dul ó thuaidh",
+          "moving north2": "dul ó thuaidh2",
+          "moving south": "dul ó dheas",
+          "moving south2": "dul ó dheas2",
+          "moving west": "dul siar",
+          "moving west2": "dul siar2",
+          "patrolling": "patrólú",
+          "patrolling2": "patrólú2",
+          "shrinking": "crapadh",
+          "shrinking2": "crapadh2",
+          "spinning right": "casadh ar deiseal",
+          "spinning right2": "casadh ar deiseal2",
+          "swimming left and right": "snámh anonn is anall",
+          "swimming left and right2": "snámh anonn is anall2",
+          "wandering": "fánaíocht",
+          "wandering2": "fánaíocht2"
+        },
+        "Virtual Pet 3_2023": {
           "growing": "fás",
           "growing2": "fás2",
           "jittering": "crith",
@@ -1535,6 +1763,19 @@
           "swimming left and right": "snámh anonn is anall",
           "wandering": "fánaíocht"
         },
+        "courseE_aboutme_2_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
         "courseE_aboutme_3": {
           "growing": "fás",
           "jittering": "crith",
@@ -1575,6 +1816,19 @@
           "wandering": "fánaíocht"
         },
         "courseE_aboutme_3_2021": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "courseE_aboutme_3_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -1639,6 +1893,19 @@
           "swimming left and right": "snámh anonn is anall",
           "wandering": "fánaíocht"
         },
+        "courseE_aboutme_4_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
         "courseE_aboutme_5": {
           "growing": "fás",
           "jittering": "crith",
@@ -1679,6 +1946,19 @@
           "wandering": "fánaíocht"
         },
         "courseE_aboutme_5_2021": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "courseE_aboutme_5_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -1763,6 +2043,30 @@
           "wandering": "fánaíocht",
           "wandering2": "fánaíocht2"
         },
+        "courseF_apps_aquarium_2023": {
+          "growing": "fás",
+          "growing2": "fás2",
+          "jittering": "crith",
+          "jittering2": "crith2",
+          "moving east": "dul soir",
+          "moving east2": "dul soir2",
+          "moving north": "dul ó thuaidh",
+          "moving north2": "dul ó thuaidh2",
+          "moving south": "dul ó dheas",
+          "moving south2": "dul ó dheas2",
+          "moving west": "dul siar",
+          "moving west2": "dul siar2",
+          "patrolling": "patrólú",
+          "patrolling2": "patrólú2",
+          "shrinking": "crapadh",
+          "shrinking2": "crapadh2",
+          "spinning right": "casadh ar deiseal",
+          "spinning right2": "casadh ar deiseal2",
+          "swimming left and right": "snámh anonn is anall",
+          "swimming left and right2": "snámh anonn is anall2",
+          "wandering": "fánaíocht",
+          "wandering2": "fánaíocht2"
+        },
         "courseF_apps_card": {
           "growing": "fás",
           "jittering": "crith",
@@ -1790,6 +2094,19 @@
           "wandering": "fánaíocht"
         },
         "courseF_apps_card_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "courseF_apps_card_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -1851,6 +2168,30 @@
           "wandering2": "fánaíocht2"
         },
         "courseF_apps_chatbot_-2022-2": {
+          "growing": "fás",
+          "growing2": "fás2",
+          "jittering": "crith",
+          "jittering2": "crith2",
+          "moving east": "dul soir",
+          "moving east2": "dul soir2",
+          "moving north": "dul ó thuaidh",
+          "moving north2": "dul ó thuaidh2",
+          "moving south": "dul ó dheas",
+          "moving south2": "dul ó dheas2",
+          "moving west": "dul siar",
+          "moving west2": "dul siar2",
+          "patrolling": "patrólú",
+          "patrolling2": "patrólú2",
+          "shrinking": "crapadh",
+          "shrinking2": "crapadh2",
+          "spinning right": "casadh ar deiseal",
+          "spinning right2": "casadh ar deiseal2",
+          "swimming left and right": "snámh anonn is anall",
+          "swimming left and right2": "snámh anonn is anall2",
+          "wandering": "fánaíocht",
+          "wandering2": "fánaíocht2"
+        },
+        "courseF_apps_chatbot_2023": {
           "growing": "fás",
           "growing2": "fás2",
           "jittering": "crith",
@@ -1943,6 +2284,29 @@
           "wandering": "fánaíocht",
           "wandering2": "fánaíocht2"
         },
+        "courseF_apps_collector_2023": {
+          "growing": "fás",
+          "growing2": "fás2",
+          "jittering": "crith",
+          "jittering2": "crith2",
+          "moving east": "dul soir",
+          "moving east2": "dul soir2",
+          "moving north": "dul ó thuaidh",
+          "moving north2": "dul ó thuaidh2",
+          "moving south": "dul ó dheas",
+          "moving south2": "dul ó dheas2",
+          "moving west2": "dul siar2",
+          "patrolling": "patrólú",
+          "patrolling2": "patrólú2",
+          "shrinking": "crapadh",
+          "shrinking2": "crapadh2",
+          "spinning right": "casadh ar deiseal",
+          "spinning right2": "casadh ar deiseal2",
+          "swimming left and right": "snámh anonn is anall",
+          "swimming left and right2": "snámh anonn is anall2",
+          "wandering": "fánaíocht",
+          "wandering2": "fánaíocht2"
+        },
         "courseF_apps_madlib": {
           "growing": "fás",
           "jittering": "crith",
@@ -1970,6 +2334,19 @@
           "wandering": "fánaíocht"
         },
         "courseF_apps_madlib_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "courseF_apps_madlib_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -2021,6 +2398,19 @@
           "swimming left and right": "snámh anonn is anall",
           "wandering": "fánaíocht"
         },
+        "courseF_apps_pet_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
         "courseF_editable_card": {
           "growing": "fás",
           "jittering": "crith",
@@ -2035,6 +2425,19 @@
           "wandering": "fánaíocht"
         },
         "courseF_editable_card_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "courseF_editable_card_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -2073,6 +2476,19 @@
           "swimming left and right": "snámh anonn is anall",
           "wandering": "fánaíocht"
         },
+        "courseF_editable_chatbot_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
         "courseF_editable_madlib": {
           "growing": "fás",
           "jittering": "crith",
@@ -2087,6 +2503,19 @@
           "wandering": "fánaíocht"
         },
         "courseF_editable_madlib_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "courseF_editable_madlib_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -2133,7 +2562,30 @@
           "spinning right": "casadh ar deiseal",
           "wandering": "fánaíocht"
         },
+        "courseF_events_choice_conflict2_2023": {
+          "growing": "fás",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
         "courseF_events_choice_conflict_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
+        "courseF_events_choice_conflict_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -2169,6 +2621,18 @@
           "spinning right": "casadh ar deiseal",
           "wandering": "fánaíocht"
         },
+        "courseF_events_choice_penguin_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
         "courseF_events_choice_pufferfish": {
           "growing": "fás",
           "jittering": "crith",
@@ -2182,6 +2646,18 @@
           "wandering": "fánaíocht"
         },
         "courseF_events_choice_pufferfish_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
+        "courseF_events_choice_pufferfish_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -2217,6 +2693,18 @@
           "spinning right": "casadh ar deiseal",
           "wandering": "fánaíocht"
         },
+        "courseF_events_conflict_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
         "courseF_events_freeplay_air": {
           "growing": "fás",
           "jittering": "crith",
@@ -2229,6 +2717,17 @@
           "wandering": "fánaíocht"
         },
         "courseF_events_freeplay_air_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
+        "courseF_events_freeplay_air_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -2261,6 +2760,17 @@
           "spinning right": "casadh ar deiseal",
           "wandering": "fánaíocht"
         },
+        "courseF_events_freeplay_animals_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
         "courseF_events_freeplay_aquatic": {
           "growing": "fás",
           "jittering": "crith",
@@ -2273,6 +2783,17 @@
           "wandering": "fánaíocht"
         },
         "courseF_events_freeplay_aquatic_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
+        "courseF_events_freeplay_aquatic_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -2305,6 +2826,17 @@
           "spinning right": "casadh ar deiseal",
           "wandering": "fánaíocht"
         },
+        "courseF_events_freeplay_blank_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
         "courseF_events_freeplay_food": {
           "growing": "fás",
           "jittering": "crith",
@@ -2327,6 +2859,17 @@
           "spinning right": "casadh ar deiseal",
           "wandering": "fánaíocht"
         },
+        "courseF_events_freeplay_food_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
         "courseF_events_freeplay_space": {
           "growing": "fás",
           "jittering": "crith",
@@ -2339,6 +2882,17 @@
           "wandering": "fánaíocht"
         },
         "courseF_events_freeplay_space_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
+        "courseF_events_freeplay_space_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -2373,6 +2927,18 @@
           "spinning right": "casadh ar deiseal",
           "wandering": "fánaíocht"
         },
+        "courseF_events_key_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
         "courseF_events_practice_reorder": {
           "growing": "fás",
           "jittering": "crith",
@@ -2386,6 +2952,18 @@
           "wandering": "fánaíocht"
         },
         "courseF_events_practice_reorder_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
+        "courseF_events_practice_reorder_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -2423,6 +3001,19 @@
           "swimming left and right": "snámh anonn is anall",
           "wandering": "fánaíocht"
         },
+        "courseF_events_predict_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
         "courseF_events_review": {
           "growing": "fás",
           "jittering": "crith",
@@ -2447,6 +3038,18 @@
           "spinning right": "casadh ar deiseal",
           "wandering": "fánaíocht"
         },
+        "courseF_events_review_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
         "courseF_events_ship": {
           "growing": "fás",
           "jittering": "crith",
@@ -2460,6 +3063,18 @@
           "wandering": "fánaíocht"
         },
         "courseF_events_ship_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
+        "courseF_events_ship_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -2519,6 +3134,18 @@
           "spinning right": "casadh ar deiseal",
           "wandering": "fánaíocht"
         },
+        "courseF_events_time_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
         "courseF_label_predict": {
           "growing": "fás",
           "jittering": "crith",
@@ -2545,6 +3172,19 @@
           "swimming left and right": "snámh anonn is anall",
           "wandering": "fánaíocht"
         },
+        "courseF_label_predict_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
         "courseF_place_fruit": {
           "growing": "fás",
           "jittering": "crith",
@@ -2556,6 +3196,16 @@
           "spinning right": "casadh ar deiseal"
         },
         "courseF_place_fruit_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal"
+        },
+        "courseF_place_fruit_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -2596,6 +3246,15 @@
           "shrinking": "crapadh",
           "spinning right": "casadh ar deiseal"
         },
+        "courseF_sprites_behaviors_2023": {
+          "growing": "fás",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal"
+        },
         "courseF_sprites_clouds": {
           "growing": "fás",
           "jittering": "crith",
@@ -2608,6 +3267,17 @@
           "wandering": "fánaíocht"
         },
         "courseF_sprites_clouds_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
+        "courseF_sprites_clouds_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -2638,6 +3308,16 @@
           "shrinking": "crapadh",
           "spinning right": "casadh ar deiseal"
         },
+        "courseF_sprites_desert_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal"
+        },
         "courseF_sprites_freeplay_air": {
           "growing": "fás",
           "jittering": "crith",
@@ -2650,6 +3330,17 @@
           "wandering": "fánaíocht"
         },
         "courseF_sprites_freeplay_air_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
+        "courseF_sprites_freeplay_air_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -2682,6 +3373,17 @@
           "spinning right": "casadh ar deiseal",
           "wandering": "fánaíocht"
         },
+        "courseF_sprites_freeplay_animals_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
         "courseF_sprites_freeplay_aquatic": {
           "growing": "fás",
           "jittering": "crith",
@@ -2694,6 +3396,17 @@
           "wandering": "fánaíocht"
         },
         "courseF_sprites_freeplay_aquatic_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
+        "courseF_sprites_freeplay_aquatic_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -2726,6 +3439,17 @@
           "spinning right": "casadh ar deiseal",
           "wandering": "fánaíocht"
         },
+        "courseF_sprites_freeplay_blank_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
         "courseF_sprites_freeplay_food": {
           "growing": "fás",
           "jittering": "crith",
@@ -2738,6 +3462,17 @@
           "wandering": "fánaíocht"
         },
         "courseF_sprites_freeplay_food_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
+        "courseF_sprites_freeplay_food_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -2770,6 +3505,17 @@
           "spinning right": "casadh ar deiseal",
           "wandering": "fánaíocht"
         },
+        "courseF_sprites_freeplay_space_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
         "courseF_sprites_make": {
           "growing": "fás",
           "jittering": "crith",
@@ -2781,6 +3527,16 @@
           "spinning right": "casadh ar deiseal"
         },
         "courseF_sprites_make_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal"
+        },
+        "courseF_sprites_make_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -2810,6 +3566,16 @@
           "shrinking": "crapadh",
           "spinning right": "casadh ar deiseal"
         },
+        "courseF_sprites_moreSprites_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal"
+        },
         "courseF_sprites_positioning": {
           "growing": "fás",
           "jittering": "crith",
@@ -2821,6 +3587,16 @@
           "spinning right": "casadh ar deiseal"
         },
         "courseF_sprites_positioning_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal"
+        },
+        "courseF_sprites_positioning_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -2856,6 +3632,19 @@
           "swimming left and right": "snámh anonn is anall",
           "wandering": "fánaíocht"
         },
+        "courseF_sprites_predict_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
         "courseF_sprites_properties": {
           "growing": "fás",
           "jittering": "crith",
@@ -2867,6 +3656,16 @@
           "spinning right": "casadh ar deiseal"
         },
         "courseF_sprites_properties_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal"
+        },
+        "courseF_sprites_properties_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -2896,6 +3695,16 @@
           "shrinking": "crapadh",
           "spinning right": "casadh ar deiseal"
         },
+        "courseF_sprites_ship_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal"
+        },
         "courseF_text_answer": {
           "growing": "fás",
           "jittering": "crith",
@@ -2909,6 +3718,18 @@
           "wandering": "fánaíocht"
         },
         "courseF_text_answer_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
+        "courseF_text_answer_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -2944,6 +3765,18 @@
           "spinning right": "casadh ar deiseal",
           "wandering": "fánaíocht"
         },
+        "courseF_text_choice_color_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
         "courseF_text_choice_conversation": {
           "growing": "fás",
           "jittering": "crith",
@@ -2958,6 +3791,19 @@
           "wandering": "fánaíocht"
         },
         "courseF_text_choice_conversation_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "courseF_text_choice_conversation_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -2996,6 +3842,19 @@
           "swimming left and right": "snámh anonn is anall",
           "wandering": "fánaíocht"
         },
+        "courseF_text_choice_events_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
         "courseF_text_choice_freeplay": {
           "growing": "fás",
           "jittering": "crith",
@@ -3010,6 +3869,19 @@
           "wandering": "fánaíocht"
         },
         "courseF_text_choice_freeplay_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "courseF_text_choice_freeplay_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -3048,6 +3920,19 @@
           "swimming left and right": "snámh anonn is anall",
           "wandering": "fánaíocht"
         },
+        "courseF_text_choice_interview_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
         "courseF_text_choice_multiprompt": {
           "growing": "fás",
           "jittering": "crith",
@@ -3062,6 +3947,19 @@
           "wandering": "fánaíocht"
         },
         "courseF_text_choice_multiprompt_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "courseF_text_choice_multiprompt_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -3098,6 +3996,18 @@
           "spinning right": "casadh ar deiseal",
           "wandering": "fánaíocht"
         },
+        "courseF_text_choice_title_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
         "courseF_text_concat": {
           "growing": "fás",
           "jittering": "crith",
@@ -3111,6 +4021,18 @@
           "wandering": "fánaíocht"
         },
         "courseF_text_concat_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
+        "courseF_text_concat_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -3146,6 +4068,18 @@
           "spinning right": "casadh ar deiseal",
           "wandering": "fánaíocht"
         },
+        "courseF_text_events_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
         "courseF_text_print": {
           "growing": "fás",
           "jittering": "crith",
@@ -3159,6 +4093,18 @@
           "wandering": "fánaíocht"
         },
         "courseF_text_print_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
+        "courseF_text_print_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -3194,6 +4140,18 @@
           "spinning right": "casadh ar deiseal",
           "wandering": "fánaíocht"
         },
+        "courseF_text_prompts_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
         "courseF_text_review": {
           "growing": "fás",
           "jittering": "crith",
@@ -3207,6 +4165,18 @@
           "wandering": "fánaíocht"
         },
         "courseF_text_review_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
+        "courseF_text_review_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -3232,6 +4202,19 @@
           "wandering": "fánaíocht"
         },
         "courseF_variables_card_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "courseF_variables_card_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -3270,6 +4253,19 @@
           "swimming left and right": "snámh anonn is anall",
           "wandering": "fánaíocht"
         },
+        "courseF_variables_card_finish_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
         "courseF_variables_chatbot": {
           "growing": "fás",
           "jittering": "crith",
@@ -3284,6 +4280,19 @@
           "wandering": "fánaíocht"
         },
         "courseF_variables_chatbot_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "courseF_variables_chatbot_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -3322,6 +4331,19 @@
           "swimming left and right": "snámh anonn is anall",
           "wandering": "fánaíocht"
         },
+        "courseF_variables_chatbot_finish_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
         "courseF_variables_madlib": {
           "growing": "fás",
           "jittering": "crith",
@@ -3336,6 +4358,19 @@
           "wandering": "fánaíocht"
         },
         "courseF_variables_madlib_-2022-2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "courseF_variables_madlib_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -3374,6 +4409,19 @@
           "swimming left and right": "snámh anonn is anall",
           "wandering": "fánaíocht"
         },
+        "courseF_variables_madlib_finish_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
         "courseF_variables_predict": {
           "growing": "fás",
           "jittering": "crith",
@@ -3400,6 +4448,19 @@
           "swimming left and right": "snámh anonn is anall",
           "wandering": "fánaíocht"
         },
+        "courseF_variables_predict_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
         "coursee_helloworld_events": {
           "growing": "fás",
           "jittering": "crith",
@@ -3410,6 +4471,187 @@
           "patrolling": "patrólú",
           "shrinking": "crapadh",
           "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
+        "coursee_helloworld_events_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "wandering": "fánaíocht"
+        },
+        "csc_animal_adaptaions_fishschool": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "csc_animal_adaptations_birds": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "csc_animal_adaptations_bugs": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "csc_animal_adaptations_butterfly": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "csc_animal_adaptations_choice2": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "csc_animal_adaptations_choice3": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "csc_animal_adaptations_fish": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "csc_animal_adaptations_groups": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "csc_animal_adaptations_migration": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "csc_animal_adaptations_speed": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "csc_ecosystems_giraffe_evo_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "csc_ecosystems_whale_explain_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "csc_ecosystems_whale_movement_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
           "wandering": "fánaíocht"
         },
         "helloworld_animals_backgrounds": {
@@ -3547,6 +4789,19 @@
           "swimming left and right": "snámh anonn is anall",
           "wandering": "fánaíocht"
         },
+        "helloworld_food_backgrounds_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
         "helloworld_food_backgrounds_soccer-2022": {
           "growing": "fás",
           "jittering": "crith",
@@ -3586,7 +4841,30 @@
           "swimming left and right": "snámh anonn is anall",
           "wandering": "fánaíocht"
         },
+        "helloworld_food_behaviors_2023": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
         "helloworld_food_costumes": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal"
+        },
+        "helloworld_food_costumes_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -3609,6 +4887,19 @@
           "wandering": "fánaíocht"
         },
         "helloworld_food_sounds": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "helloworld_food_sounds_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",
@@ -3888,6 +5179,19 @@
           "wandering": "fánaíocht"
         },
         "simcustom_2021": {
+          "growing": "fás",
+          "jittering": "crith",
+          "moving east": "dul soir",
+          "moving north": "dul ó thuaidh",
+          "moving south": "dul ó dheas",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "shrinking": "crapadh",
+          "spinning right": "casadh ar deiseal",
+          "swimming left and right": "snámh anonn is anall",
+          "wandering": "fánaíocht"
+        },
+        "simcustom_2023": {
           "growing": "fás",
           "jittering": "crith",
           "moving east": "dul soir",

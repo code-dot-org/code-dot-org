@@ -12,9 +12,27 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     refute_equal enrollment1.code, enrollment2.code
   end
 
-  test 'enrollment.for_user' do
+  test 'enrollment.for_user using application alternate email' do
     user = create :teacher
-    enrollment1 = create :pd_enrollment, user_id: nil, email: user.email, workshop: (create :workshop, course: COURSE_CSD)
+
+    workshop = create :workshop, course: COURSE_CSD
+
+    application = create :pd_teacher_application, user: user, pd_workshop_id: workshop.id, course: 'csd', status: 'accepted'
+    assert_equal user.email_for_enrollments, application.form_data_hash['alternateEmail']
+
+    enrollment1 = create :pd_enrollment, user_id: nil, email: user.email_for_enrollments, workshop: workshop, application_id: application.id
+    enrollment2 = create :pd_enrollment, user_id: user.id, email: 'someoneelse@example.com', workshop: (create :workshop, course: COURSE_CSF)
+
+    enrollments = Pd::Enrollment.for_user(user).to_a
+    assert_equal Set.new([enrollment1, enrollment2]), Set.new(enrollments)
+  end
+
+  test 'enrollment.for_user using user email instead of application alternate email' do
+    user = create :teacher
+
+    assert_equal user.email_for_enrollments, user.email
+
+    enrollment1 = create :pd_enrollment, user_id: nil, email: user.email_for_enrollments, workshop: (create :workshop, course: COURSE_CSD)
     enrollment2 = create :pd_enrollment, user_id: user.id, email: 'someoneelse@example.com', workshop: (create :workshop, course: COURSE_CSF)
 
     enrollments = Pd::Enrollment.for_user(user).to_a
@@ -28,21 +46,39 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal enrollment, found_enrollment
   end
 
-  test 'resolve_user' do
-    teacher1 = create :teacher
-    teacher2 = create :teacher
-    enrollment_with_email = build :pd_enrollment, email: teacher1.email
-    enrollment_with_user = build :pd_enrollment, user: teacher2
+  test 'resolve_user returns nil for no user' do
     enrollment_with_no_user = build :pd_enrollment
-
-    assert_nil enrollment_with_email.user
-    assert_equal teacher1, enrollment_with_email.resolve_user
-
-    assert_equal teacher2, enrollment_with_user.user
-    assert_equal teacher2, enrollment_with_user.resolve_user
 
     assert_nil enrollment_with_no_user.user
     assert_nil enrollment_with_no_user.resolve_user
+  end
+
+  test 'resolve_user returns user using explicitly defined user' do
+    teacher = create :teacher
+    enrollment_with_user = build :pd_enrollment, user: teacher
+
+    assert_equal teacher, enrollment_with_user.user
+    assert_equal teacher, enrollment_with_user.resolve_user
+  end
+
+  test 'resolve_user returns user using user email' do
+    teacher = create :teacher
+    enrollment_with_email = build :pd_enrollment, email: teacher.email_for_enrollments
+
+    assert_equal enrollment_with_email.email, teacher.email
+    assert_nil enrollment_with_email.user
+    assert_equal teacher, enrollment_with_email.resolve_user
+  end
+
+  test 'resolve_user returns user using application alternate email' do
+    teacher = create :teacher
+    workshop = create :workshop, course: COURSE_CSD
+    application = create :pd_teacher_application, user: teacher, pd_workshop_id: workshop.id, course: 'csd', status: 'accepted'
+    enrollment_with_alt_email = build :pd_enrollment, email: teacher.email_for_enrollments, application_id: application.id
+
+    assert_equal enrollment_with_alt_email.email, application.form_data_hash['alternateEmail']
+    assert_nil enrollment_with_alt_email.user
+    assert_equal teacher, enrollment_with_alt_email.resolve_user
   end
 
   test 'autoupdate_user_field called on validation' do
@@ -185,7 +221,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     Pd::WorkshopMailer.expects(:exit_survey).once.returns(mock_mail)
 
     enrollment.send_exit_survey
-    assert_not_nil enrollment.reload.survey_sent_at
+    refute_nil enrollment.reload.survey_sent_at
   end
 
   test 'send_exit_survey tries to send email and, if unsuccessful, does not update survey_sent_at' do

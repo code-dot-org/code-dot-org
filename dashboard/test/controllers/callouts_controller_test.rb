@@ -15,7 +15,7 @@ class CalloutsControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:callouts)
+    refute_nil assigns(:callouts)
   end
 
   test "should get new" do

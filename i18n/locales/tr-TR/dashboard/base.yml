@@ -52,7 +52,9 @@ tr:
         age: 'Yaş'
         gender: 'Cinsiyet'
         edit_header: 'Hesap Bilgilerini Düzenle'
+        ai_settings_header: 'Yapay Zeka Ayarları'
         finish_sign_up_header: 'Hesabınızı oluşturmayı bitirin'
+        finish_sign_up_header_error: 'Lütfen aşağıdaki hataları düzeltiniz:'
         finish_sign_up_subheader: ' <strong>%{email}</strong> için bir Code.org hesabı oluşturmayı tamamlamak için sıradaki bilgileri doldurunuz.'
         finish_sign_up_subheader_markdown: '**%{email}** için bir Code.org hesabı oluşturmayı tamamlamak için sıradaki bilgileri doldurunuz.'
         finish_sign_up_subheader_provider: '<strong>%{email}</strong> için <strong>%{provider}</strong> ile bir Code.org hesabı oluşturmayı tamamlamak üzere aşağıdaki bilgileri doldurun.'
@@ -60,6 +62,7 @@ tr:
         reset_password_token: "Takip ettiğiniz şifre sıfırlama bağlantısı"
         error:
           future: gelecekte olması mümkün değil
+        user_type: 'Hesap Türü'
         us_state: 'Eyalet'
   beta: "beta"
   hello: "Merhaba dünya"
@@ -1285,4 +1288,3 @@ tr:
     binary: "İkili"
     hexadecimal: "Onaltılık"
     pixel_format_header: "Piksel Biçimi"
-

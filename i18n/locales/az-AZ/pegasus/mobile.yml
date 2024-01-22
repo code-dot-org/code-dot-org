@@ -544,13 +544,9 @@
   volunteer_engineer_submission_subtitle_generic: '100.000 müəllim bu il 7-13 dekabr 2015-ci il tarixində siniflərində Kod Saatı təşkil edəcəkdir. Kömək istəyirlər!'
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} müəllim könüllülər lazımdır.<br>%{num_volunteers} könüllü qeydiyyatdan keçib. Onlara qoşulun."
   volunteer_engineer_submission_intro_background: "Kod Saatı 180-dən çox ölkədə on milyonlarla tələbəni özünə cəlb edən kompüter elmlərinə bir saatlıq girişi sınamaq üçün qlobal hərəkatdır. Zəhmət olmasa 7-13 dekabr - Kompüter Elmləri Təhsil Həftəsi zamanı iştirak edin."
-  volunteer_engineer_submission_intro_recruit: 'Müəllimlər sinifdə kömək edə biləcək <span style="font-family: ''Gotham 7r'', sans-serif;">kompüter elmləri təhsili ilə maraqlanan</span> və ya <span style bilən kimsəyə sahib olmaq istərdilər. ="font-family: ''Gotham 7r'', sans-serif;">tələbələrini informatika ilə bağlı geniş imkanlar haqqında danışaraq ruhlandırın</span> (bunu video söhbət vasitəsilə etmək olar).'
   volunteer_engineer_submission_intro_recruit_markdown: "Müəllimlər sinifdə kömək edə biləcək **kompüter elmləri təhsili ilə maraqlanan** və ya informatika ilə bağlı imkanların genişliyi haqqında danışaraq tələbələrini **ilhamlandıra bilən kimsənin olmasını çox istərdilər (bunu vasitəsilə edilə bilər). video söhbət)"
-  volunteer_engineer_submission_intro_guide: "Bizim könüllülük proqramlarımız haqqında burdan <a href=\"%{volunteer_guide}\"> öyrənə bilərsiniz. "
   volunteer_engineer_submission_intro_guide_markdown: "Haqqımızda daha çox məlumat əldə edin [könüllü proqramı burada](%{volunteer_guide})."
-  volunteer_engineer_submission_intro_signup: "Əgər siz kompüter elmləri tələbəsisinizsə və ya proqram təminatı üzrə mütəxəssissinizsə, zəhmət olmasa aşağıdakı məlumatları daxil edin. Könüllü kimi qeydiyyatdan keçmək üçün ən azı 18 yaşınız olmalıdır. Nəzərə alın ki, bu bölmədə doldurduğunuz bütün sahələr <a href=\"/volunteer/local\">könüllülər xəritəsinə</a> baxan hər kəs üçün açıq olacaq. <span class=\"form-required-field\">*</span> ilə işarələnmiş sahələr tələb olunur."
   volunteer_engineer_submission_intro_signup_markdown: "Əgər siz kompüter elmləri tələbəsisinizsə və ya proqram təminatı üzrə mütəxəssissinizsə, zəhmət olmasa aşağıdakı məlumatları daxil edin. Könüllü kimi qeydiyyatdan keçmək üçün ən azı 18 yaşınız olmalıdır. Qeyd edək ki, bu bölmədə doldurduğunuz bütün sahələr [könüllülər xəritəsi](/volunteer/local)-a baxan hər kəs üçün açıq olacaq. _*_ ilə işarələnmiş sahələr tələb olunur."
-  volunteer_engineer_submission_intro_links: "Müəllim könüllü axtarırsınız? <a href=\"%{volunteer_local}\">könüllülər xəritəmizdə</a> yerli könüllü tapın."
   volunteer_engineer_submission_intro_links_markdown: "Müəllim könüllü axtarırsınız? [könüllü xəritəmizdə](%{volunteer_local}) yerli könüllü tapın."
   volunteer_engineer_submission_update_information: "Öz məlumatınızı yeniləyin"
   volunteer_engineer_submission_header_shared: "Könüllülər xəritəsində müəllimlərlə bölüşülən məlumat"
@@ -989,15 +985,27 @@
   coursed-2020_name: D Kursu (2020)
   coursee-2020_name: E Kursu (2020)
   coursef-2020_name: F Kursu (2020)
+  coursea-2021_name: Kurs A (2021)
+  courseb-2021_name: Kurs B (2021)
+  coursec-2021_name: Kurs C (2021)
   coursed-2021_name: D Kursu (2021)
+  coursee-2021_name: Kurs E (2021)
+  coursef-2021_name: Kurs F (2021)
+  coursea-2022_name: A kursu (2022)
+  courseb-2022_name: B kursu (2022)
+  coursec-2022_name: C kursu (2022)
   coursed-2022_name: D Kursu (2021)
+  coursee-2022_name: E kursu (2022)
+  coursef-2022_name: F kursu (2022)
   express-2018_name: Ekspress Kurs (2018)
   pre-express-2018_name: Ön-oxucu Ekspres Kursu (2018)
   express-2019_name: Ekspress Kurs (2019)
   pre-express-2019_name: Ön-oxucu Ekspres Kursu (2019)
   express-2020_name: Ekspress Kurs (2020)
   pre-express-2020_name: Ön-oxucu Ekspres Kursu (2020)
+  express-2021_name: Ekspres Kurs (2021)
   pre-express-2021_name: Ön-oxucu Ekspres Kursu (2021)
+  express-2022_name: Ekspres Kurs (2022)
   pre-express-2022_name: Öncədən Oxucu Ekspres Kursu (2022)
   csd2_name: 'Hissə 2: Veb İnkişafı'
   csd3_name: 'Bölmə 3: Animasiya və Oyunlar'
@@ -1515,6 +1523,7 @@
   header_report_abuse: "Şikayət etmək"
   header_legal: "Məxfilik və Hüquq"
   header_legal_privacy: "Məxfilik siyasəti"
+  header_legal_cookie_notice: "Kuki Xəbərdarlığı"
   header_legal_tos: "Xidmət şərtləri"
   header_tutorials: "Dərsliklər"
   header_screen_reader_hamburger: "Menyu"
@@ -1820,6 +1829,7 @@
   ai_cognimates: "Bilir"
   ai_cognimates_description: "Oyunların qurulması, robotların proqramlaşdırılması və təlim üçün AI təhsil platforması."
   ai_try_activity: "Aktivliyi cəhd et"
+  outbreak_tile_title: "Yayılma"
   outbreak_tile_subtitle: "Monster Town-a virus yoluxdu! Bir epidemiya simulyatorunu kodlayın və Monster Town qonşularının başına nə gələcəyi barədə proqnozlar verin."
   outbreak_tile_alt: "Virusun bir qrup bənövşəyi canavar vasitəsilə necə yayıldığının simulyasiyası."
   footer_cookie_notice: "Kuki Xəbərdarlığı"
@@ -1836,7 +1846,12 @@
   hoc2022_landing_page_create_title: "Düzəlt"
   hoc2022_landing_page_create_description: "Qəribə və gözəl bir şey edin!"
   hoc2022_landing_page_banner_alt_left: "Kosmosda Saturnun yanında rəqs edən yadplanetli"
+  hoc2022_landing_page_banner_alt_right: "Uçan raketin qarşısında kosmosda futbol topu ilə driblinq edən bir robot"
   try_it_yourself: "Özünüz edin!"
   try_an_activity: "Aktivitə sınayın"
   see_more_activities: "Daha çox aktivitəyə bax"
+  hoc2022_nasa_webb_alt_text: "NASA-nın James Webb teleskopunun təsviri"
+  hoc2022_nasa_banner_heading: "Kosmosdakı kompüter elmləri ilə bağlı xüsusi Kod Saatı xüsusiyyəti üçün NASA-ya qoşulun!"
+  hoc2022_nasa_banner_description: "NASA STEM-in YouTube kanalında dekabrın 5-də 10AM ET premyerası."
+  hoc2022_nasa_banner_heading_posthoc: "Kosmosdakı kompüter elmləri ilə bağlı NASA-nın xüsusi Kod Saatı xüsusiyyətini  yoxlayın !"
   microsoft_logo_alt: "Microsoft Loqosu"

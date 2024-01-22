@@ -31,7 +31,7 @@ describe ManifestBuilder do
 
       it 'uploads spritelab animations manifest to the S3 bucket' do
         expected_uploads = 2
-        expected_manifest_data = <<-JSON.strip.gsub(/^ {10}/, '')
+        expected_manifest_data = <<~JSON.strip
           {
             "//": [
               "Animation Library Manifest",

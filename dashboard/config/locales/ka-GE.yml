@@ -10,6 +10,7 @@ ka:
         error:
           future: არ შეიძლება იყოს მომავალში
         finish_sign_up_header: დაასრულეთ თქვენი ანგარიშის შექმნა
+        finish_sign_up_header_error: 'თუ შეიძლება, შეასწორეთ შემდეგი შეცდომები:'
         finish_sign_up_subheader: შეავსეთ შემდეგი ინფორმაცია, Code.org ანგარიშის,
           <strong>%{email}</strong> შექმნის დასრულებისთვის.
         finish_sign_up_subheader_markdown: შეავსეთ შემდეგი ინფორმაცია, Code.org ანგარიშის,
@@ -29,6 +30,7 @@ ka:
           თუ არ გაქვთ ელფოსტის მისამართი)](%{url})
         reset_password_token: პაროლის გადატვირთვის ბმული, რომელსაც თქვენ მიჰყევით
         us_state: შტატი
+        user_type: ანგარიშის ტიპი
         username: მომხმარებლის სახელი
         verified_teacher: ვერიფიცირებული მასწავლებელი
     errors:

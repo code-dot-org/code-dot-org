@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
@@ -6,10 +6,12 @@ import EvidenceDescriptions from './EvidenceDescriptions';
 import Button from '../../../templates/Button';
 
 export default function LearningGoalItem({
-  deleteItem,
+  deleteLearningGoal,
   exisitingLearningGoalData,
   updateLearningGoal,
 }) {
+  const [canEditLearningGoalName, setCanEditLearningGoalName] = useState(false);
+
   const handleCheckboxChange = () => {
     const newAiEnabledValue = !exisitingLearningGoalData.aiEnabled;
     updateLearningGoal(
@@ -25,6 +27,24 @@ export default function LearningGoalItem({
       'learningGoal',
       event.target.value
     );
+  };
+
+  const handleKeyConceptFocus = event => {
+    if (exisitingLearningGoalData.aiEnabled && !canEditLearningGoalName) {
+      if (
+        confirm(
+          'Please contact the teacher tools team before changing the name of any key concept that uses AI assessment.'
+        )
+      ) {
+        setCanEditLearningGoalName(true);
+      } else {
+        document.activeElement.blur();
+      }
+    }
+  };
+
+  const handleDelete = event => {
+    deleteLearningGoal(exisitingLearningGoalData.id);
   };
 
   return (
@@ -44,6 +64,7 @@ export default function LearningGoalItem({
                   style={{width: 600}}
                   className="uitest-rubric-key-concept-input"
                   onChange={handleKeyConceptChange}
+                  onFocus={handleKeyConceptFocus}
                 />
               </label>
             </div>
@@ -73,12 +94,32 @@ export default function LearningGoalItem({
       </div>
       <div style={styles.activityBody}>
         <EvidenceDescriptions
-          isAiEnabled={exisitingLearningGoalData.aiEnabled}
+          learningGoalData={exisitingLearningGoalData}
+          updateLearningGoal={updateLearningGoal}
         />
+        <label
+          style={{...styles.labelAndInput, ...styles.textboxLabelAndInput}}
+        >
+          Tips
+          <textarea
+            value={exisitingLearningGoalData.tips || ''}
+            onChange={event =>
+              updateLearningGoal(
+                exisitingLearningGoalData.id,
+                'tips',
+                event.target.value
+              )
+            }
+            style={{width: '100%', height: 100}}
+          />
+        </label>
+        <label style={styles.labelAndInput}>
+          Unique Key: {exisitingLearningGoalData.key}
+        </label>
         <Button
           text="Delete key concept"
           color={Button.ButtonColor.red}
-          onClick={() => deleteItem()}
+          onClick={handleDelete}
           icon="trash"
           iconClassName="fa-trash"
           className="ui-test-delete-concept-button"
@@ -89,7 +130,7 @@ export default function LearningGoalItem({
 }
 
 LearningGoalItem.propTypes = {
-  deleteItem: PropTypes.func,
+  deleteLearningGoal: PropTypes.func,
   exisitingLearningGoalData: PropTypes.object,
   updateLearningGoal: PropTypes.func,
 };
@@ -163,5 +204,11 @@ const styles = {
     justifyContent: 'flex-start',
     flexWrap: 'wrap',
     flex: '1 1',
+  },
+  textboxLabelAndInput: {
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    marginLeft: 0,
+    marginRight: 25,
   },
 };

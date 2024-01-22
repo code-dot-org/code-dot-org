@@ -9,7 +9,6 @@ import PasswordReset from './PasswordReset';
 import ShowSecret from './ShowSecret';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
-import DCDO from '@cdo/apps/dcdo';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
@@ -56,6 +55,7 @@ import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpe
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import SafeMarkdown from '../SafeMarkdown';
 import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const LOGIN_TYPES_WITH_PASSWORD_COLUMN = [
   SectionLoginType.word,
@@ -348,7 +348,6 @@ class ManageStudentsTable extends Component {
         familyName={familyName}
         isEditing={rowData.isEditing}
         editedValue={editedValue}
-        sectionId={rowData.sectionId}
         inputDisabled={isTeacher}
       />
     );
@@ -463,11 +462,9 @@ class ManageStudentsTable extends Component {
       }),
     });
     if (
-      !!DCDO.get('family-name-features', false) &&
       this.props.participantType === 'student' &&
       selectedColumn === COLUMNS.FAMILY_NAME
     ) {
-      // Only in non-PL sections, only when DCDO flag is on.
       this.props.setSortByFamilyName(
         true,
         this.props.sectionId,
@@ -489,11 +486,9 @@ class ManageStudentsTable extends Component {
 
     const columns = [this.nameColumn(sortable)];
 
-    if (!!DCDO.get('family-name-features', false)) {
-      if (this.props.participantType === 'student') {
-        // Only in non-PL sections.
-        columns.push(this.familyNameColumn(sortable));
-      }
+    // Only include family name in non-PL sections
+    if (this.props.participantType === 'student') {
+      columns.push(this.familyNameColumn(sortable));
     }
 
     columns.push(this.ageColumn(sortable));
@@ -993,7 +988,7 @@ const styles = {
   sectionCode: {
     marginLeft: 5,
     color: color.teal,
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
     cursor: 'copy',
   },
   noSectionCode: {
@@ -1002,7 +997,7 @@ const styles = {
     cursor: 'pointer',
   },
   sectionCodeNotApplicable: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
   },
 };
 

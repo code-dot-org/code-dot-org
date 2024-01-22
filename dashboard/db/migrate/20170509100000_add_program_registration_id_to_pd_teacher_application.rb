@@ -10,13 +10,17 @@ class AddProgramRegistrationIdToPdTeacherApplication < ActiveRecord::Migration[5
     reversible do |dir|
       # Update existing teacher application entries (3150 as of 2017-05-08) with their program registration ids.
       dir.up do
-        PEGASUS_DB[:forms].where(kind: 'PdProgramRegistration').each do |registration|
-          data = JSON.parse registration[:data]
-          application_id = data['pd_teacher_application_id_i']
-          next unless application_id
+        # The following code is disabled because access to PEGASUS_DB from outside
+        # of the pegasus or bin directories is not allowed. For more details, see:
+        # https://github.com/code-dot-org/code-dot-org/pull/55417
 
-          Pd::TeacherApplication.find(application_id).update!(program_registration_id: registration[:id])
-        end
+        # PEGASUS_DB[:forms].where(kind: 'PdProgramRegistration').each do |registration|
+        #   data = JSON.parse registration[:data]
+        #   application_id = data['pd_teacher_application_id_i']
+        #   next unless application_id
+        #
+        #   Pd::TeacherApplication.find(application_id).update!(program_registration_id: registration[:id])
+        # end
       end
     end
   end

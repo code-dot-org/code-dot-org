@@ -13,6 +13,7 @@ km:
       Collision Detection: ការរកឃើញការប៉ះទង្គិច
       Collision Detection Review: ការរកឃើញការប៉ះទង្គិច
       Course E Artist Project: វគ្គសិក្សា​ E គម្រោងអ្នកសិល្បៈ
+      Create your project: បង្កើតគម្រោងរបស់អ្នក
       Creating Sprites: ការបង្កើត Sprites
       Dance Crews: ក្រុមរាំ
       Debugging: ការបំបាត់កំហុស (Debugging)
@@ -22,6 +23,10 @@ km:
       End of Course Projects: គម្រោងត្រូវបានបញ្ចប់
       Events: ព្រឹត្តិការណ៍
       Example: ឧទាហរណ៍
+      Example Projects: ឧទាហរណ៍គម្រោងមួយចំនួន
+      Exploration: ការរុករក
+      'Exploration: Clicker Game': 'ការរុករក៖ ហ្គេម Clicker'
+      'Exploration: For Loops': 'ការស្វែងយល់៖ For Loops'
       Explore HTML: ស្វែងយល់ពី HTML
       Free Play: លេងដោយសេរី
       Functions: អនុ​គមន៍
@@ -30,6 +35,7 @@ km:
       Headings in HTML: "ចំណងជើងក្នុង HTML\n\n"
       How to Make a Sprite: របៀបបង្កើត SPRITE
       Introducing Sprite Lab: សេចក្ដីណែនាំពី Sprite Lab
+      Introduction: ការណែនាំ
       Introduction to Game Lab: ការណែនាំទៅកាន់បន្ទប់ពិសោធន៍ហ្គេម
       Lesson Extras: មេរៀនបន្ថែម
       Lesson Overview: ទិដ្ឋភាព​ទូទៅ​របស់​មេរៀន
@@ -37,6 +43,8 @@ km:
       Lists: បញ្ជី
       Make a Prediction: សូម​ធ្វើការ​ប៉ាន់ស្មាន
       'Minecraft: Hero''s Journey': 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស'
+      'Mini-Project: Clicker Game': 'គម្រោងខ្នាតតូច៖ ហ្គេម Clicker'
+      'Mini-Project: Create a Virtual Pet': 'គម្រោងខ្នាតតូច៖ បង្កើតសត្វចិញ្ចឹមសិប្បនិម្មិត'
       'Mini-Project: Royal Battle': 'គម្រោងខ្នាតតូច៖ សមរភូមិក្សត្រ'
       'Mini-Project: Sticker Art': 'គម្រោងខ្នាតតូច៖ សិល្បៈស្ទីគ័រ'
       'Mini-project: Jorge the Dog': 'គម្រោងខ្នាតតូច៖ Jorge (ឆ្កែ)'
@@ -44,14 +52,17 @@ km:
       Naming Variables: ការដាក់ឈ្មោះអថេរ
       Overview: ទិដ្ឋភាពទូទៅ 
       Pair Programming: ការសរសេរកម្មវិធីជាគូ
+      Planning: គម្រោង
       Plotting Shapes in Game Lab: គម្រោងរូបភាពនៅក្នុងបន្ទប់ល្បែងពិសោធន៍
       Practice: អនុវត្តន៍
       Prediction: ការទស្សន៍ទាយ
       Programming with Rey and BB-8: សរសេរកម្មវិធីជាមួយ Rey និង BB-8
+      Project Guide: មគ្គុទ្ទេសក៍លើគម្រោង
       Properties: ធាតុ
       Quarter Notes: រង្វាស់ ១ ភាគ ៤
       Random Numbers: លេខចៃដន្យ
       Reflection: ការឆ្លុះបញ្ចាំង
+      Review: រំលឹកមេរៀន
       Sample Game: ល្បែងគំរូ
       Shapes and Parameters: រូបរាងនិងប៉ារ៉ាម៉ែត្រ
       Skill Building: ការកសាងជំនាញ
@@ -62,16 +73,22 @@ km:
       Sprite Velocity: ល្បឿន Sprite
       The Draw Loop: ការគូររង្វិលជុំដដែលៗ
       The Harvester: អ្នកប្រមូលផល
+      Unplugged Activity: Unplugged Activity
       Using the Grid: ប្រើប្រាស់រូបក្រឡាចត្រង្គ
       Variables: អ​ថេរ
       Velocity and the Counter Pattern: ល្បឿននិងលំនាំរាប់
       Velocity and the Counter Pattern Review: ល្បឿននិងការពិនិត្យឡើងវិញនៃគំរូរាប់
       Video: វីដេអូ
+      'Video:  Minecraft - The Agent': 'វីដេអូ៖ Minecraft - The Agent'
+      'Video: Conditionals: If and If/Else Statements': 'វីដេអូ៖ ការណែនាំពីការប្រើប្រាស់ប្លុក If/else'
       'Video: Dance Party Events': 'វីដេអូ៖ ពិធីជប់លៀងរាំកម្តៅសាច់ដុំ'
       'Video: Dance Party Warm Up': 'វីដេអូ៖ ពិធីជប់លៀងរាំកម្តៅសាច់ដុំ'
+      'Video: Debugging with Scrat ': 'វីដេអូ៖ បំបាត់កំហុសជាមួយកំប្រុក'
       'Video: Debugging with the Step Button': 'វីដេអូ: ការបំបាត់កំហុសដោយប្រើ ប៊ូតុងជំហាន'
       'Video: Drawing in Game Lab - Part 1': 'វីដេអូ: គំនូរនៅក្នុងបន្ទប់ពិសោធន៍នៃហ្គេម- ផ្នែកទី១'
       'Video: Drawing in Game Lab - Part 2': 'វីដេអូ: គំនូរគំនូរនៅក្នុងបន្ទប់ពិសោធន៍នៃហ្គេម-ផ្នែកទី២'
+      'Video: For Loops': 'វីដេអូ៖ For Loops'
+      'Video: How to Create a Simple Function': 'វីដេអូ៖ របៀបបង្កើតអនុគមន៍សាមញ្ញមួយ'
       'Video: How to Make a Sprite': 'របៀបបង្កើតអាង (Sprite)'
       'Video: Ice Age Loops': 'វីដេអូ: ប្រតិបត្តិដដែលៗក្នុង Ice Age'
       'Video: Intro to Web Lab - Part 1': 'វីដេអូ: ការណែនាំមកកាន់ Web Lab - ផ្នែកទី ១'
@@ -80,6 +97,14 @@ km:
       'Video: Introduction to Sprites': 'វីដេអូ: ការណែនាំមកកាន់ Sprites'
       'Video: Introduction to the Draw Loop': 'វីដេអូ: សេចក្តីណែនាំអំពីការគូររង្វិលជុំដដែលៗ'
       'Video: Loops in Artist': 'វីដេអូ៖ប្រតិបត្តិដដែលៗជាមួយវិចិត្រករ'
+      'Video: Minecraft - Congratulations': 'វីដេអូ៖ Minecraft - សូមអបអរសាទរ'
+      'Video: Minecraft - Functions': 'វីដេអូ៖ Minecraft - អនុគមន៍'
+      'Video: Minecraft - Repeat Loops': 'វីដេអូ៖ Minecraft - Repeat Loops'
+      'Video: Minecraft: Voyage Aquatic Conditionals': 'វីដេអូ៖ Minecraft: ដំណើរផ្សងព្រេងក្នុងទឹក ដោយប្រើលក្ខខណ្ឌ'
+      'Video: Minecraft: Voyage Aquatic Congratulations': 'វីដេអូ៖ Minecraft: សូមអបអរសាទរការបញ្ចប់ ដំណើរកម្សាន្តក្នុងទឹក'
+      'Video: Minecraft: Voyage Aquatic Introduction': 'វីដេអូ៖ ការណែនាំអំពីដំណើរកម្សាន្តក្នុងទឹក'
+      'Video: Minecraft: Voyage Aquatic Repeat Until': 'វីដេអូ៖ Minecraft: Voyage Aquatic Repeat Until'
+      'Video: Nested Loops with the Bee': 'វីដេអូ៖ បណ្ដុំប្រតិបត្តិដដែលៗជាមួយតួអង្គឃ្មុំ'
       'Video: Problem Solving Process': 'វីដេអូ៖ របៀបដោះស្រាយបញ្ហា'
       'Video: Programming with Blocks': 'វីដេអូ: សរសេរកម្មវិធីដោយប្រើ កូដប្លុក'
       'Video: Programming with Rey and BB-8': 'វីដេអូ: សរសេរកម្មវិធីជាមួយ Rey និង BB-8'
@@ -88,7 +113,9 @@ km:
       'Video: The Artist in Code Studio': 'វីដេអូ៖ វិចិត្រករក្នុង Code Studio'
       'Video: The Collector': 'វីដេអូ៖ អ្នកប្រមូល'
       'Video: The Harvester': 'វីដេអូ៖ អ្នកប្រមូលផល'
+      'Video: Variables in Artist': 'វីដេអូ៖ អថេរ ជាមួយវិចិត្រករ'
       'Video: Velocity': 'វីដេអូ៖ ល្បឿន'
       'Video: What Makes a Computer, a Computer?': 'វីដេអូ: តើអ្វីទៅដែលធ្វើអោយកុំព្យូរទ័រទៅជាកុំព្យូរទ័រ?'
+      'Video: While Loops with the Farmer': 'វីដេអូ៖ While loops ជាមួយកសិករ'
       Warm Up: ការចាប់ផ្តើម
       Where'd They Go?: តើគេទៅណាអស់ទៅ?

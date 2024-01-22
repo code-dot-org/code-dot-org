@@ -39,8 +39,10 @@ bs:
         age: 'Starost'
         gender: 'Spol'
         edit_header: 'Preuredi Detalje Računa'
+        finish_sign_up_header_error: 'Ispravi ove greške:'
         error:
           future: ne može biti u budućnosti
+        user_type: 'Tip računa'
   beta: "beta"
   hello: "Pozdrav svijete"
   welcome_back: "Dobrodošao/la natrag, %{name}"
@@ -651,4 +653,3 @@ bs:
   copy: 'Kopiraj'
   pixelation:
     binary: "Binarno"
-

@@ -11,7 +11,8 @@
   padding: 1rem 1.5rem;
   border: 1px solid $neutral_dark20;
   border-radius: 4px;
-  font-family: $gotham-regular;
+  font-family: var(--main-font);
+  font-weight: var(--regular-font-weight);
 }
 
 .teacher-info-inner-container {

@@ -268,6 +268,13 @@ Then /^I navigate to teacher dashboard for the section I saved with experiment "
   }
 end
 
+Then /^I navigate to manage students for the section I saved$/ do
+  expect(@section_id).to be > 0
+  steps %{
+    Then I am on "http://studio.code.org/teacher_dashboard/sections/#{@section_id}/manage_students"
+  }
+end
+
 Then /^I navigate to the script "([^"]*)" lesson (\d+) lesson extras page for the section I saved$/ do |script_name, lesson_num|
   expect(@section_id).to be > 0
   steps %{

@@ -22,10 +22,18 @@ ky:
         options:
           UNIT:
             '"seconds"': секунд
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"seconds"': секунд
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: баары
+          MOVE:
+            MOVES.Rest: Жок
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
           MOVE:
             MOVES.Rest: Жок
       Dancelab_changeMoveLR:
@@ -137,6 +145,10 @@ ky:
         options:
           EFFECT:
             '"none"': Жок
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"none"': Жок
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -242,6 +254,11 @@ ky:
           EFFECT:
             '"hearts"': жүрөктөр
             '"rain"': жаан
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': көк
+            '"red"': кызыл
       Mikelab_changePropBy:
         options:
           PROPERTY:

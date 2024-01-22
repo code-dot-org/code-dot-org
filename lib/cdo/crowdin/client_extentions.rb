@@ -7,21 +7,17 @@ module Crowdin
   module ClientExtensions
     # Project Id is at https://crowdin.com/project/<project_name>/tools/api
     # Project source language is at https://crowdin.com/project/<project_name>/settings
-    CDO_PROJECT_IDS = {
-      'codeorg' => 26074,
-      'hour-of-code' => 55536,
-      'codeorg-markdown' => 314545,
-      'codeorg-restricted' => 464582,
-      'codeorg-testing' => 346087,
-      'codeorg-markdown-testing' => 547997
-    }
+    CDO_PROJECT_IDS = CDO.crowdin_project_ids.freeze
 
     CDO_PROJECT_SOURCE_LANGUAGES = {
       'codeorg' => 'enus',
       'hour-of-code' => 'en',
       'codeorg-markdown' => 'en',
       'codeorg-restricted' => 'en',
-      'codeorg-testing' => 'en'
+      'codeorg-testing' => 'en',
+      'codeorg-markdown-testing' => 'en',
+      'hour-of-code-test' => 'en',
+      'codeorg-restricted-test' => 'en'
     }
 
     # Maximum number of items to retrieve from Crowdin in an API call
@@ -159,19 +155,19 @@ module Crowdin
   end
 
   class CrowdinRateLimitError < StandardError
-    def initialize(msg="Rate Limit Error")
+    def initialize(msg = "Rate Limit Error")
       super
     end
   end
 
   class CrowdinInternalServerError < StandardError
-    def initialize(msg="Internal Server Error")
+    def initialize(msg = "Internal Server Error")
       super
     end
   end
 
   class CrowdinServiceUnavailableError < StandardError
-    def initialize(msg="Service Unavailable")
+    def initialize(msg = "Service Unavailable")
       super
     end
   end

@@ -75,7 +75,7 @@ Amata lau Hour of Code e ala i le fa'amalosia o tagata ma fa'amatala le aoga ma 
         
         - [Lolomi ni tusi faailoga ]({{ urls/certificates }})mo tagata na auai i le polokalame ma tamaiti aoga
         - [Lolomi ni pepa fa'apipii "Ua maea a'u galuega mo le Hour of Code]({{ promote/resources_stickers }}).
-        - [ Oka ni mitiafu faapitoa ](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)mo tagata.
+        - [Order custom t-shirts](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) for participants.
         - Fa'ailoa ma fa'aali ata ma videos o lau Hour of Code i luga o ala fesootaiga. Fa'aaoga le #HourOfCode ma le @codeorg ina ia mafai ona fa'ailoa atu lou ausia foi o se tulaga manuia!
         
         ## O isi alagaoa a le Hour of Code mo faiaoga

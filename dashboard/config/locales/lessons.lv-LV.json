@@ -266,6 +266,24 @@
         "pre-express-2019/Spelling Bee": {
           "name": "Burtošanas bite"
         },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Cikli"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Pasākumi"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Sazarojumi"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funkcijas"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Mainīgie"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "\"par\" cikli"
+        },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Laimīgās kartes"
         },
@@ -404,6 +422,57 @@
         "coursef-2022/The Internet": {
           "name": "Internets"
         },
+        "csd3-2023/Variables": {
+          "name": "Mainīgie"
+        },
+        "csd3-2023/Text": {
+          "name": "Teksts"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Sazarojumi"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Ātrums"
+        },
+        "csd3-2023/Functions": {
+          "name": "Funkcijas"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Funkcijas"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Funkcijas"
+        },
+        "coursea-2023/Happy Maps": {
+          "name": "Laimīgās kartes"
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Ej, ej"
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Kļūst ciklisks"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "Lielais notikums"
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Binārās aproces"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Rūtiņpapīra programmēšana"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Releju programmēšana"
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "nosacījumi ar kārtēm"
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Dziesmu rakstīšana"
+        },
+        "coursef-2023/The Internet": {
+          "name": "Internets"
+        },
         "artist/Artist": {
           "name": "Mākslinieks"
         },
@@ -415,12 +484,6 @@
         },
         "hourofcode/Maze": {
           "name": "Labirints"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
         },
         "playlab/Play Lab": {
           "name": "Spēles laboratorija"

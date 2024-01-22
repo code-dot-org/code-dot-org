@@ -27,7 +27,8 @@
 .careers__banner--faq a:link,
 .careers__banner--faq a:visited {
   color: #ffffff;
-  font-family: "Gotham 4r", sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--regular-font-weight);
 }
 
 .careers__banner--faq i {
@@ -54,7 +55,8 @@
 }
 
 .careers__explore-button {
-  font-family: "Gotham 7r", sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);
   font-size: 16px;
   padding: 6px 24px;
 }

@@ -6,6 +6,10 @@ bn:
         options:
           UNIT:
             '"seconds"': সেকেন্ড
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"seconds"': সেকেন্ড
       Dancelab_changePropBy:
         options:
           PROPERTY:
@@ -147,6 +151,11 @@ bn:
         options:
           EFFECT:
             '"hearts"': হরতন
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': নীল
+            '"red"': লাল
       gamelab_atTime:
         options:
           UNIT:

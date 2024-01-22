@@ -47,12 +47,14 @@
         gender: 'Kjønn'
         edit_header: 'Rediger kontodetaljer'
         finish_sign_up_header: 'Fullfør oppretting av kontoen'
+        finish_sign_up_header_error: 'Vennligst korriger følgende feil:'
         finish_sign_up_subheader: 'Fyll ut for å gjøre ferdig Code.org-konto for <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Fyll ut for å gjøre ferdig Code.org-konto for **%{email}**.'
         finish_sign_up_subheader_provider: 'Fyll ut følgende informasjon for å fullføre opprettelsen av en Code.org konto med <strong>%{provider}</strong> for <strong>%{email}</strong>.'
         finish_sign_up_subheader_provider_markdown: 'Fyll ut følgende informasjon for å fullføre opprettelsen av en Code.org konto med **%{provider}** for **%{email}**.'
         error:
           future: ikke mulig å være i framtiden
+        user_type: 'Kontotype'
         us_state: 'Fylke'
   beta: "beta"
   hello: "Hei, verden"
@@ -990,4 +992,3 @@
   confirm: 'Bekreft'
   pixelation:
     binary: "Binær"
-

@@ -67,7 +67,7 @@ Alusta oma KoodiTund läbiviimist osalejate inspireerimisega ning aruteluga, kui
 - Kui töötad tehnoloogiaettevõttes, näita lõbusaid ja innovaatilisi tooteid/teenuseid, millega hetkel tegelete.
 - Kui te ei ole tehnoloogiaettevõtte, siis arutage, milliseid tehnoloogiaid teie ettevõtte kasutab probleemide lahendamiseks ning ärieesmärkide saavutamiseks.
 - Kutsuge oma ettevõtte tarkvaraarendaid rääkima, miks nad otsustasid arvutiteaduse õppimise kasuks ning milliste projektide kallal nad hetkel töötavad.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Siit leiate näpunäiteid tüdrukute arvutiteaduse vastu huvi [tekitamiseks]({{ urls/girls }}).
 
 ## 6. Code!
 **Juhata osalised tegevuse juurde**

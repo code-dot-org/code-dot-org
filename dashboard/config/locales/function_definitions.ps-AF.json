@@ -16,6 +16,13 @@
             }
           }
         },
+        "Course E: Frozen Project_examples_2023": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "تکرار"
+            }
+          }
+        },
         "Course F: Artist Project_Flowers_examples_2021": {
           "draw a pinwheel": {
             "parameters": {
@@ -44,6 +51,13 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "تکرار"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a pinwheel": {
             "parameters": {
@@ -52,6 +66,13 @@
           }
         },
         "CourseD_EOC_artist_example20212022": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "تکرار"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021_2023": {
           "draw a pinwheel": {
             "parameters": {
               "repeat": "تکرار"

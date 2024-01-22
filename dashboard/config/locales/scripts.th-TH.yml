@@ -57,6 +57,7 @@ th:
           description: ลองทำความคุ้นเคยกับวิทยาการคอมพิวเตอร์พื้นฐานผ่านตัวละครจากเจ้านกขี้โมโห
             และแพล็นส์ วีเอส. ซอมบีส์!
           description_short: ลองทำความคุ้นเคยกับวิทยาการคอมพิวเตอร์พื้นฐานผ่านตัวละครชวนหัวมากมาย!
+          name: ช่วงเวลาของ Code
           student_description: ลองทำความคุ้นเคยกับวิทยาการคอมพิวเตอร์พื้นฐานผ่านตัวละครจากเจ้านกขี้โมโห
             และแพล็นส์ วีเอส. ซอมบีส์!
           title: ชั่วโมงของรหัส 2013
@@ -76,6 +77,10 @@ th:
         ai-ethics-2021:
           description_audience: เกรด 6-12
           title: จรรยาบรรณ AI ของเรา
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: จรรยาบรรณ AI ของเรา
         ai-temp:
           title: AI ทำงานอย่างไร
         aiml-2021:
@@ -1094,6 +1099,10 @@ th:
               name: จาวาแลป
             lesson-6:
               name: ลูป
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: แบบสำรวจ
         csa1-pilot:
           lesson_groups:
             lessonGroup-5:
@@ -1192,6 +1201,10 @@ th:
           lesson_groups:
             lessonGroup-4:
               display_name: แบบสำรวจ
+        csa8-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
         csa8-pilot:
           lesson_groups:
             lessonGroup-5:
@@ -1271,6 +1284,10 @@ th:
             cspSurvey:
               display_name: แบบสำรวจ
         csd1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: แบบสำรวจ
+        csd1-2024:
           lesson_groups:
             lessonGroup-5:
               display_name: แบบสำรวจ
@@ -1377,6 +1394,12 @@ th:
             cspSurvey:
               display_name: แบบสำรวจ
         csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'บทที่ 1: ภาพและการเคลื่อนไหว'
+            lessonGroup-3:
+              display_name: 'บทที่ 2: การสร้างเกม'
+        csd3-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'บทที่ 1: ภาพและการเคลื่อนไหว'
@@ -1517,6 +1540,14 @@ th:
               display_name: ตอนที่ 2
             lessonGroup-4:
               display_name: แอปแลปเบื้องต้น
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ตอนที่ 1
+            lessonGroup-3:
+              display_name: ตอนที่ 2
+            lessonGroup-4:
+              display_name: แอปแลปเบื้องต้น
         csdu6-playground:
           description_short: สนาม CSD U6 โปรดดูคำถามจาก Dan Schneider
           lesson_groups:
@@ -1645,6 +1676,10 @@ th:
             cspSurvey:
               display_name: แบบสำรวจ
         csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csp1-2024:
           lesson_groups:
             cspSurvey:
               display_name: แบบสำรวจ
@@ -1813,6 +1848,16 @@ th:
               display_name: โปรเจกต์
             csp_variables:
               display_name: ตัวแปร
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: เงื่อนไข
+            csp_functions:
+              display_name: ฟังก์ชัน
+            csp_project:
+              display_name: โปรเจกต์
+            csp_variables:
+              display_name: ตัวแปร
         csp4-dlp:
           lesson_groups:
             required:
@@ -1901,6 +1946,10 @@ th:
               display_name: ลูป
             csp_project:
               display_name: โปรเจกต์
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: ข้อมูล
         csp5-dlp:
           lesson_groups:
             required:
@@ -1938,6 +1987,14 @@ th:
             csp_unit6_2020:
               display_name: อัลกอริทึม
         csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: รายการ
+            lessonGroup-3:
+              display_name: ลูป
+            lessonGroup-5:
+              display_name: โปรเจกต์
+        csp6-2024:
           lesson_groups:
             csp_unit6_2020:
               display_name: รายการ
@@ -2442,7 +2499,7 @@ th:
           description: ใช้บล็อคของโค้ดเพื่อพาสตีฟหรือแอเล็กซ์สู่การผจญภัยในโลกของไมน์คราฟท์
           description_short: สำรวจโลก Minecraft ผ่านโค้ด
           student_description: ใช้บล็อคของโค้ดเพื่อพาสตีฟหรือแอเล็กซ์สู่การผจญภัยในโลกของไมน์คราฟท์
-          title: ชั่วโมงแห่งการเขียนโค้ดกับไมน์คราฟท์
+          title: การผจญภัยในไมน์คราฟท์
         microbit-2023:
           lesson_groups:
             lessonGroup-5:
@@ -2456,6 +2513,10 @@ th:
           description_short: เขียนโปรแกรมให้กับสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกมไมน์คราฟท์ในแบบฉบับของคุณเอง
           student_description: เขียนโปรแกรมให้กับสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกมไมน์คราฟท์ในแบบฉบับของคุณเอง
           title: นักออกแบบชั่วโมงแห่งโค้ดตอนไมน์คราฟท์
+        musiclab:
+          lessons:
+            lesson-3:
+              name: เล่นฟรี
         netsim:
           title: เครื่องจำลองอินเตอร์เน็ต
         nevada-standards-aligned-fifth-grade-2023:
@@ -2713,6 +2774,32 @@ th:
           title: 'โมดูล 2: การนำทาง Code.org'
         self-paced-pl-csa2-2023:
           title: 'โมดูล 2: การนำทาง Code.org'
+        self-paced-pl-csd-unit1-2-2023:
+          description: "บทเรียนการเรียนรู้ระดับอาชีพนี้ได้รับการออกแบบมาเพื่อช่วยสร้างความพร้อมให้กับคุณเพื่อใช้ในการสอนบทเรียนการแก้ไขปัญหาและการคำนวณเบื้องต้นใน
+            Code.org \n\n**ในบทเรียนการเรียนรู้ระดับอาชีพนี้ คุณจะได้:**\n\n-   เรียนรู้การแก้ปัญหาและการคำนวณเบื้องต้น\n-
+            \  ฝึกฝนด้านรูปแบบคีย์ที่มีในบทเรียน\n-   เรียนจนจบโปรเจกต์\n\n**เวลาที่แนะนำ:**
+            30 นาที"
+          student_description: "บทเรียนการเรียนรู้ระดับอาชีพนี้ได้รับการออกแบบมาเพื่อช่วยสร้างความพร้อมให้กับคุณเพื่อใช้ในการสอนบทเรียนการแก้ไขปัญหาและการคำนวณเบื้องต้นใน
+            Code.org \n\n**ในบทเรียนการเรียนรู้ระดับอาชีพนี้ คุณจะได้:**\n\n-   เรียนรู้การแก้ปัญหาและการคำนวณเบื้องต้น\n-
+            \  ฝึกฝนด้านรูปแบบคีย์ที่มีในบทเรียน\n-   เรียนจนจบโปรเจกต์\n\n**เวลาที่แนะนำ:**
+            30 นาที"
+          title: 'รูปแบบที่ 1: การเตรียมพร้อมในการสอนการแก้ไขปัญหาและการคำนวณ'
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'รูปแบบที่ 2: การเตรียมพร้อมในการสอนพัฒนาเว็บ'
+        self-paced-pl-csd-unit3-2-2023:
+          description: "บทเรียนการเรียนรู้ระดับอาชีพนี้ได้รับการออกแบบมาเพื่อช่วยสร้างความพร้อมให้กับคุณเพื่อใช้ในการสอนบทเรียนการโต้ตอบเบื้องต้นในอะนิเมชันและเกมใน
+            Code.org \n\n**ในบทเรียนการเรียนรู้ระดับอาชีพนี้ คุณจะได้:**\n\n-   เรียนรู้การโต้ตอบเบื้องต้นในอะนิเมชันและเกม\n-
+            \  ฝึกฝนด้านรูปแบบคีย์ที่มีในบทเรียน\n-   เข้าร่วมทำงานใน Game Lab\n-
+            \  เรียนจนจบโปรเจกต์\n\n**เวลาที่แนะนำ:** 120 นาที"
+          student_description: "บทเรียนการเรียนรู้ระดับอาชีพนี้ได้รับการออกแบบมาเพื่อช่วยสร้างความพร้อมให้กับคุณเพื่อใช้ในการสอนบทเรียนการโต้ตอบเบื้องต้นในอะนิเมชันและเกมใน
+            Code.org \n\n**ในบทเรียนการเรียนรู้ระดับอาชีพนี้ คุณจะได้:**\n\n-   เรียนรู้การโต้ตอบเบื้องต้นในอะนิเมชันและเกม\n-
+            \  ฝึกฝนด้านรูปแบบคีย์ที่มีในบทเรียน\n-   เข้าร่วมทำงานใน Game Lab\n-
+            \  เรียนจนจบโปรเจกต์\n\n**เวลาที่แนะนำ:** 120 นาที"
+          title: การเตรียมพร้อมในการสอนการตอบโต้ในอะนิเมชันและเกม
+        self-paced-pl-csd-unit4-2-2023:
+          title: " รูปแบบที่ 4: การเตรียมพร้อมในการสอนกระบวนการออกแบบ"
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'รูปแบบที่ 5: การเตรียมพร้อมในการสอนด้านข้อมูลและสังคม'
         self-paced-pl-csd1-2021:
           description: "โมดูลนี้เป็นบทนำสั้น ๆ ทั้ง Code.org และหลักสูตรการเรียนรู้แบบมืออาชีพนี้
             \n\n\\*\\*คุณจะ: \\*\\*\n\n-   รับรู้เบื้องต้นเกี่ยวกับ Code.org และการค้นพบ
@@ -3003,6 +3090,19 @@ th:
           title: 'โมดูล 2: การนำทาง Code.org'
         self-paced-pl-csp2-2023:
           title: 'โมดูล 2: การนำทาง Code.org'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: ลูป
+            lesson-4:
+              name: เงื่อนไข
+          title: แนะนำวิทยาการคอมพิวเตอร์เบื้องต้น
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: เหตุการณ์
+            lesson-4:
+              name: พฤติกรรม
         soccer:
           description: สร้างเกมฟุตบอล
           description_short: สร้างเกมฟุตบอล
@@ -3120,6 +3220,17 @@ th:
           lesson_groups:
             csd3_2:
               display_name: 'บทที่ 2: การสร้างเกม'
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: บทเกริ่นนำ
+          lessons:
+            lesson-7:
+              name: บทเกริ่นนำ
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: บทเกริ่นนำ
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -3142,6 +3253,10 @@ th:
           lessons:
             lesson-3:
               name: การประเมิน
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: บทเกริ่นนำ
         virustest:
           description_short: 'ใช้แลปสไปรท์เพื่อสร้างการจำลองการระบาดของไวรัส '
           title: จำลองการระบาด

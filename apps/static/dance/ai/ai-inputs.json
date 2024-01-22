@@ -1,0 +1,129 @@
+{
+  "items": [
+    {
+      "emoji": "🌀",
+      "id": "cyclone",
+      "modelDescriptiveName": "cyclone swirl icy blue"
+    },
+    {
+      "emoji": "🥰",
+      "id": "smiling-face-with-hearts",
+      "modelDescriptiveName": "romantic hearts cozy warm"
+    },
+    {
+      "emoji": "🎉",
+      "id": "party-popper",
+      "modelDescriptiveName": "party celebrate"
+    },
+    {
+      "emoji": "💎",
+      "id": "gem-stone",
+      "modelDescriptiveName": "diamond gem stone geometric shapes"
+    },
+    {
+      "emoji": "🌱",
+      "id": "seedling",
+      "modelDescriptiveName": "green plant springtime"
+    },
+    {
+      "emoji": "✨",
+      "id": "sparkles",
+      "modelDescriptiveName": "sparkly star"
+    },
+    {
+      "emoji": "🌹",
+      "id": "rose",
+      "modelDescriptiveName": "flower springtime"
+    },
+    {
+      "emoji": "👑",
+      "id": "crown",
+      "modelDescriptiveName": "crown geometric grid round gems"
+    },
+    {
+      "emoji": "👻",
+      "id": "ghost",
+      "modelDescriptiveName": "ghost autumn spooky"
+    },
+    {
+      "emoji": "🍦",
+      "id": "soft-ice-cream",
+      "modelDescriptiveName": "ice cream sweet summer fruit"
+    },
+    {
+      "emoji": "🏁",
+      "id": "chequered-flag",
+      "modelDescriptiveName": "checkered flag black-and-white geometric fast"
+    },
+    {
+      "emoji": "🌊",
+      "id": "water-wave",
+      "modelDescriptiveName": "waves water ocean"
+    },
+    {
+      "emoji": "🌈",
+      "id": "rainbow",
+      "modelDescriptiveName": "prism"
+    },
+    {
+      "emoji": "💡",
+      "id": "light-bulb",
+      "modelDescriptiveName": "stars light"
+    },
+    {
+      "emoji": "🤖",
+      "id": "robot",
+      "modelDescriptiveName": "electronic"
+    },
+    {
+      "emoji": "😵‍💫",
+      "id": "face-with-spiral-eyes",
+      "modelDescriptiveName": "wavy ripple hypnotic turbulent spiral"
+    },
+    {
+      "emoji": "🥶",
+      "id": "cold-face",
+      "modelDescriptiveName": "icy winter cold"
+    },
+    {
+      "emoji": "🎨",
+      "id": "artist-palette",
+      "modelDescriptiveName": "art paint palette"
+    },
+    {
+      "emoji": "🪩",
+      "id": "mirror-ball",
+      "modelDescriptiveName": "disco ball party grid"
+    },
+    {
+      "emoji": "🎵",
+      "id": "musical-note",
+      "modelDescriptiveName": "music notes sound"
+    },
+    {
+      "emoji": "💩", 
+      "id": "pile-of-poo",
+      "modelDescriptiveName": "poopy funny stinky"
+    },
+    {
+      "emoji": "🚀",
+      "id": "rocket",
+      "modelDescriptiveName": "rocket space cosmic galaxy"
+    },
+    {
+      "emoji": "😋",
+      "id": "face-savoring-food",
+      "modelDescriptiveName": "savory hungry food"
+    },
+    {
+      "emoji": "🔥",
+      "id": "fire",
+      "modelDescriptiveName": "hot fire sun"
+    },
+    {
+      "emoji": "😃",
+      "id": "grinning-face-with-big-eyes",
+      "modelDescriptiveName": "happy grin"
+    }
+  ]
+}

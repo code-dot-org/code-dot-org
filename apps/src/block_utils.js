@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import {styleTypes} from './blockly/themes/cdoBlockStyles.mjs';
 import xml from './xml';
+import MetricsReporter from './lib/metrics/MetricsReporter';
 
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
 const DEFAULT_COLOR = [184, 1.0, 0.74];
@@ -166,7 +167,7 @@ exports.generateSimpleBlock = function (blockly, generator, options) {
     init: function () {
       // Note: has a fixed HSV.  Could make this customizable if need be
       Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-      var input = this.appendDummyInput();
+      var input = this.appendEndRowInput();
       if (title) {
         input.appendField(title);
       }
@@ -452,7 +453,12 @@ exports.appendNewFunctions = function (blocksXml, functionsXml) {
     ).stringValue;
     const alreadyPresent =
       startBlocksDocument.evaluate(
-        `//block[@type="${type}"]/field[@id="${name}"]`,
+        // Ignore namespaces. Find blocks of type e.g. behavior_definition
+        // Shared behavior name will either be in the mutation (Google Blockly)
+        // or the name field (CDO Blockly)
+        `//*[local-name()="block" and @type="${type}"]/*` +
+          `[self::*[local-name()="mutation" and @behaviorId="${name}"] or ` +
+          `self::*[local-name()="field" and @id="${name}"]]`,
         startBlocksDom,
         null,
         XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
@@ -545,14 +551,31 @@ const LABELED_INPUT_PARTS_REGEX = /(.*?)({([^}]*)}|\n|$)/m;
  * Finds the input config for the given input name, and removes it from args.
  * @param {InputConfig[]} args List of configs to search through
  * @param {string} inputName name of input to find and remove
+ * @param {string} blockText original block text used for metrics reporting in the case of a missing input
  * @returns InputConfig the input config with name `inputName`
  */
-const findAndRemoveInputConfig = (args, inputName) => {
-  const argIndex = args.findIndex(arg => arg.name === inputName);
-  if (argIndex !== -1) {
-    return args.splice(argIndex, 1)[0];
+const findAndRemoveInputConfig = (args, inputName, blockText) => {
+  if (args.length === 0) {
+    MetricsReporter.logWarning({
+      event: 'BLOCK_MISSING_INPUT',
+      message: `${inputName} not found in args. No args remaining.`,
+      blockText,
+    });
+    return null;
   }
-  throw new Error(`${inputName} not found in args`);
+
+  let argIndex = args.findIndex(arg => arg.name === inputName);
+  if (argIndex === -1) {
+    // In the case of a missing input, default to the first available arg.
+    // We're assuming that the order of the inputs in args matches the order in the block text.
+    argIndex = 0;
+    MetricsReporter.logWarning({
+      event: 'BLOCK_MISSING_INPUT',
+      message: `${inputName} not found in args. Defaulting to ${args[argIndex].name}`,
+      blockText,
+    });
+  }
+  return args.splice(argIndex, 1)[0];
 };
 
 /**
@@ -577,7 +600,14 @@ const determineInputs = function (text, args, strictTypes = []) {
     const label = parts[1];
     const inputName = parts[3];
     if (inputName) {
-      const arg = findAndRemoveInputConfig(args, inputName);
+      const arg = findAndRemoveInputConfig(args, inputName, text);
+      if (arg === null) {
+        // If no valid arg was found, just use the label.
+        return {
+          mode: DUMMY_INPUT,
+          label,
+        };
+      }
       const strict = arg.strict || strictTypes.includes(arg.type);
       let mode;
       if (arg.options) {
@@ -629,8 +659,11 @@ const determineInputs = function (text, args, strictTypes = []) {
   args = args.filter(arg => !arg.statement);
 
   if (args.length > 0) {
-    console.warn('Unexpected args in block definition:');
-    console.warn(args);
+    MetricsReporter.logWarning({
+      event: 'BLOCK_UNEXPECTED_ARGS',
+      args,
+      blockText: text,
+    });
   }
   return inputs;
 };
@@ -689,7 +722,7 @@ const STANDARD_INPUT_TYPES = {
   },
   [DUMMY_INPUT]: {
     addInputRow(blockly, block, inputConfig) {
-      return block.appendDummyInput();
+      return block.appendEndRowInput();
     },
     generateCode(block, inputConfig) {
       return null;
@@ -745,7 +778,7 @@ const STANDARD_INPUT_TYPES = {
       block.superSetTitleValue = block.setTitleValue;
       block.setTitleValue = function (newValue, name) {
         if (name === inputConfig.name && block.blockSpace.isFlyout) {
-          newValue = Blockly.Variables.generateUniqueName(newValue);
+          newValue = Blockly.Variables.generateUniqueName(newValue, block);
         }
         block.superSetTitleValue(newValue, name);
       };
@@ -933,6 +966,7 @@ exports.createJsWrapperBlockCreator = function (
       extraArgs,
       callbackParams,
       miniToolboxBlocks,
+      docFunc,
     },
     helperCode,
     pool
@@ -1009,11 +1043,15 @@ exports.createJsWrapperBlockCreator = function (
     const blockName = `${pool}_${name || func}`;
     if (eventLoopBlock && args.filter(arg => arg.statement).length === 0) {
       // If the eventloop block doesn't explicitly list its statement inputs,
-      // just tack one onto the end
-      args.push({
+      // just tack one onto the end.
+      let argsCopy = [...args];
+      // argsCopy is used to avoid a 'TypeError: Cannot add property 2, object is not extensible'
+      // that occurs for lab2 labs since `levelProperties` for lab2 is stored in Redux.
+      argsCopy.push({
         name: 'DO',
         statement: true,
       });
+      args = argsCopy;
     }
     const inputs = [...args];
     if (methodCall && !thisObject) {
@@ -1032,7 +1070,7 @@ exports.createJsWrapperBlockCreator = function (
     }
 
     blockly.Blocks[blockName] = {
-      helpUrl: '',
+      helpUrl: getHelpUrl(docFunc), // optional param
       init: function () {
         // Styles should be used over hard-coded colors in Google Blockly blocks
         if (style && this.setStyle) {
@@ -1091,6 +1129,12 @@ exports.createJsWrapperBlockCreator = function (
           );
         }
       },
+      // The following generic mutator functions are only used by Google Blockly
+      // and are intentionally undefined for CDO Blockly.
+      mutationToDom: Blockly.customBlocks.mutationToDom,
+      domToMutation: Blockly.customBlocks.domToMutation,
+      saveExtraState: Blockly.customBlocks.saveExtraState,
+      loadExtraState: Blockly.customBlocks.loadExtraState,
     };
 
     generator[blockName] = function () {
@@ -1227,21 +1271,6 @@ exports.installCustomBlocks = function ({
     }
   });
 
-  // TODO: extract Sprite-Lab-specific logic.
-  if (
-    blockly.Blocks.gamelab_location_variable_set &&
-    blockly.Blocks.gamelab_location_variable_get
-  ) {
-    Blockly.Variables.registerGetter(
-      Blockly.BlockValueType.LOCATION,
-      'gamelab_location_variable_get'
-    );
-    Blockly.Variables.registerSetter(
-      Blockly.BlockValueType.LOCATION,
-      'gamelab_location_variable_set'
-    );
-  }
-
   return blocksByCategory;
 };
 
@@ -1257,4 +1286,12 @@ const sanitizeOptions = function (dropdownOptions) {
   return dropdownOptions.map(option =>
     option.length === 1 ? [option[0], option[0]] : option
   );
+};
+
+const getHelpUrl = function (docFunc) {
+  if (!docFunc) {
+    return '';
+  }
+  // Documentation is only available for Sprite Lab.
+  return `/docs/spritelab/${docFunc}`;
 };

@@ -538,13 +538,9 @@
   volunteer_engineer_submission_subtitle_generic: '100,000 na mga guro ang maghohost ng Hour of Code sa kanilang mga silid-aralan ngayong taon 2015, sa ika-7 hanggang ika-13 ng Disyembre. Gusto nila ang tulong mo! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} na mga guro ang nangangailangan ng mga boluntaryo.<br>%{num_volunteers} na mga boluntaryo ang nagsign-up. Sumali sa kanila."
   volunteer_engineer_submission_intro_background: "Ang Hour of Code ay isang global na kilusan para subukan ang isang oras na panimula sa computer science, umabot sa sampung milyong mga estudyante ang naabot sa 180+ na mga bansa. Sana makalahok ka sa Computer Science Education Week ngayong ika-7 hanggang ika-13 ng Disyembre."
-  volunteer_engineer_submission_intro_recruit: 'Gusto ng mga guro na magkaroon ng isang tao na <span style="font-family: ''Gotham 7r'', sans-serif;">mainit tungkol sa edukasyon sa computer science</span> na maaaring tumulong sa silid-aralan, o kahit na sino na maaaring <span style="font-family: ''Gotham 7r'', sans-serif;">magbigay inspirasyon</span> sa kanilang mga estudyante sa pamamagitan ng pakikipag-usap sa lawak ng posibilidad sa computer science (na maaaring magawa sa pamamagitan ng video chat).'
   volunteer_engineer_submission_intro_recruit_markdown: "Gusto ng mga guro na magkaroon ng isang tao na **may pasyon tungkol sa edukasyon sa computer science ** na maaaring tumulong sa silid-aralan, o kahit na sino na maaaring magbigay **inspirasyon** sa kanilang mga mag-aaral sa pamamagitan ng pakikipag-usap sa lawak ng posibilidad sa computer science (na maaaring magawa sa pamamagitan ng video chat)."
-  volunteer_engineer_submission_intro_guide: "Alamin pa ang tungkol sa ating <a href=\"%{volunteer_guide}\">programa sa pagboluntaryo dito</a>."
   volunteer_engineer_submission_intro_guide_markdown: "Matuto nang higit pa tungkol sa aming [volunteer program dito](%{volunteer_guide})."
-  volunteer_engineer_submission_intro_signup: "Pakilagyan ang sumusunod na mga impormasyon kung ikaw ay isang estudyante sa computer sciece o isang software na propesyonal. Ang mga patlang na may markang<span class=\"form-required-field\">*</span> ay kinakailangan."
   volunteer_engineer_submission_intro_signup_markdown: "Ilagay ang sumusunod na impormasyon kung ikaw ay isang computer science na mag-aaral o software professional. Ikaw ay dapat na hindi bababa sa 18 taong gulang upang mag-sign up bilang isang boluntaryo. Tandaan na ang lahat ng field na pupunan mo sa seksiyong ito ay magiging available sa publiko sa sinumang tumitingin sa [volunteer map](/volunteer/local). Kinakailangan ang mga field na may markang _*_."
-  volunteer_engineer_submission_intro_links: "Isa ka bang guro na naghahanap ng mga boluntaryo? Maghanap ng boluntaryo sa ating <a href=\"%{volunteer_local}\">mapa ng boluntaryo</a>."
   volunteer_engineer_submission_intro_links_markdown: "Isa ka bang guro na naghahanap ng mga boluntaryo? Maghanap ng lokal na boluntaryo sa aming [volunteer map](%{volunteer_local})."
   volunteer_engineer_submission_update_information: "I-update ang iyong impormasyon"
   volunteer_engineer_submission_header_shared: "Mga impormasyong ibinahagi sa mga guro sa volunteer map"
@@ -982,12 +978,18 @@
   coursed-2020_name: Kursong D (2020)
   coursee-2020_name: Kursong E (2020)
   coursef-2020_name: Kursong F (2020)
+  coursea-2021_name: Kursong A (2021)
+  courseb-2021_name: Kursong B (2021)
+  coursec-2021_name: Kursong C (2021)
+  coursee-2021_name: Kursong E (2021)
+  coursef-2021_name: Kursong F (2021)
   express-2018_name: Mabilis na Kurso
   pre-express-2018_name: Pre-reader na Pinabilis na Kurso (2018)
   express-2019_name: Pinabilis na Kurso (2019)
   pre-express-2019_name: Pre-reader na Pinabilis na Kurso (2019)
   express-2020_name: Pinabilis na Kurso (2020)
   pre-express-2020_name: Pre-reader na Pinabilis na Kurso (2020)
+  express-2021_name: Express Kurso (2021)
   pre-express-2021_name: Pre-reader na Pinabilis na Kurso (2021)
   pre-express-2022_name: Pre-reader na Pinabilis na Kurso (2022)
   csd2_name: 'Yunit 2: Pagbuo ng Web'
@@ -1506,6 +1508,7 @@
   header_report_abuse: "I-report ang pag-abuso"
   header_legal: "Pagkapribado at Legal"
   header_legal_privacy: "Patakaran sa Pagkapribado"
+  header_legal_cookie_notice: "Paunawa ng Cookie"
   header_legal_tos: "Mga Alituntunin ng Serbisyo"
   header_tutorials: "Mga Tutorial"
   header_screen_reader_hamburger: "Menu"

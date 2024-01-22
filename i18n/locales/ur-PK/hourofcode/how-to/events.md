@@ -35,17 +35,17 @@ title: آور-آف-کوڈ ایونٹ ھاؤ-ٹو
 
 * * *
 
-## Example plan for a school assembly or event
+## اسکول کی اسمبلی یا ایونٹ کا ایک مثالی پلان
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**ایونٹ:** اسکول بھر میں کمپیوٹر سائنس ایجوکیشن ویک کک آف اسمبلی
 
-**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
+**تاریخ:** {{ campaign_date/start_short }} (کمپیوٹر سائنس ایجوکیشن ویک کا آغاز)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**وقت:** پڑھائی کے دنوں کے دوران۔ مڈ مارننگ ایونٹ کو ترجیح ہے۔ تقریباً 1 گھنٹہ۔
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+**مقام:** اسکول اسمبلی ہال (مثلاً تھیٹر، جم، کیفے ٹیریا)
 
-## Run of Show
+## شو کی تفصیلات
 
 | وقت               | عمل                                                                                                                                            |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |

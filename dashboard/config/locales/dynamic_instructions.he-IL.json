@@ -12,12 +12,22 @@
           "saveModel": " ",
           "uploadedDataset": " "
         },
+        "ml-bad data-club investigations_2023": {
+          "modelSummary": " ",
+          "saveModel": " ",
+          "uploadedDataset": " "
+        },
         "ml-bad data-loneliness all": {
           "modelSummary": " ",
           "saveModel": " ",
           "uploadedDataset": " "
         },
         "ml-bad data-loneliness all_2022": {
+          "modelSummary": " ",
+          "saveModel": " ",
+          "uploadedDataset": " "
+        },
+        "ml-bad data-loneliness all_2023": {
           "modelSummary": " ",
           "saveModel": " ",
           "uploadedDataset": " "
@@ -29,6 +39,12 @@
           "uploadedDataset": " "
         },
         "ml-data decisions-zoo1_2022": {
+          "selectDataset": " ",
+          "selectedDataset": " ",
+          "selectedFeatureNumerical": " ",
+          "uploadedDataset": " "
+        },
+        "ml-data decisions-zoo1_2023": {
           "selectDataset": " ",
           "selectedDataset": " ",
           "selectedFeatureNumerical": " ",
@@ -46,6 +62,12 @@
           "selectedFeatureNumerical": " ",
           "uploadedDataset": " "
         },
+        "ml-data decisions-zoo2_2023": {
+          "selectDataset": " ",
+          "selectedDataset": " ",
+          "selectedFeatureNumerical": " ",
+          "uploadedDataset": " "
+        },
         "ml-data decisions-zoo3-2021": {
           "selectDataset": " ",
           "selectedDataset": " ",
@@ -58,11 +80,21 @@
           "selectedFeatureNumerical": " ",
           "uploadedDataset": " "
         },
+        "ml-data decisions-zoo3_2023": {
+          "selectDataset": " ",
+          "selectedDataset": " ",
+          "selectedFeatureNumerical": " ",
+          "uploadedDataset": " "
+        },
         "ml-good data-upload isaac csv": {
           "modelSummary": " ",
           "saveModel": " "
         },
         "ml-good data-upload isaac csv_2022": {
+          "modelSummary": " ",
+          "saveModel": " "
+        },
+        "ml-good data-upload isaac csv_2023": {
           "modelSummary": " ",
           "saveModel": " "
         },
@@ -84,6 +116,15 @@
           "selectedFeatureNumerical": " ",
           "uploadedDataset": " "
         },
+        "ml-intro ai lab-shapes v1_2023": {
+          "dataDisplayLabel": " ",
+          "modelSummary": " ",
+          "saveModel": " ",
+          "selectDataset": " ",
+          "selectedDataset": " ",
+          "selectedFeatureNumerical": " ",
+          "uploadedDataset": " "
+        },
         "ml-intro categorical-food choices-2021": {
           "dataDisplayLabel": " ",
           "modelSummary": " ",
@@ -92,6 +133,13 @@
           "uploadedDataset": " "
         },
         "ml-intro categorical-food choices_2022": {
+          "dataDisplayLabel": " ",
+          "modelSummary": " ",
+          "saveModel": " ",
+          "selectedFeatureNumerical": " ",
+          "uploadedDataset": " "
+        },
+        "ml-intro categorical-food choices_2023": {
           "dataDisplayLabel": " ",
           "modelSummary": " ",
           "saveModel": " ",
@@ -116,10 +164,22 @@
           "selectedFeatureNumerical": " ",
           "uploadedDataset": " "
         },
+        "ml-intro categorical-pizza_2023": {
+          "dataDisplayLabel": " ",
+          "modelSummary": " ",
+          "saveModel": " ",
+          "selectDataset": " ",
+          "selectedDataset": " ",
+          "selectedFeatureNumerical": " ",
+          "uploadedDataset": " "
+        },
         "ml-mini project-ai lab 2": {
           "uploadedDataset": " "
         },
         "ml-mini project-ai lab 2_2022": {
+          "uploadedDataset": " "
+        },
+        "ml-mini project-ai lab 2_2023": {
           "uploadedDataset": " "
         },
         "ml-numerical ai lab-safari 1-2021": {
@@ -129,6 +189,12 @@
           "uploadedDataset": " "
         },
         "ml-numerical ai lab-safari 1_2022": {
+          "dataDisplayLabel": " ",
+          "selectDataset": " ",
+          "selectedDataset": " ",
+          "uploadedDataset": " "
+        },
+        "ml-numerical ai lab-safari 1_2023": {
           "dataDisplayLabel": " ",
           "selectDataset": " ",
           "selectedDataset": " ",

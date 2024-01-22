@@ -80,6 +80,18 @@
         "coursef-2019/Internet": {
           "name": "ئینتەرنێت"
         },
+        "k5-onlinepd-2019/Loops": {
+          "name": "گرێکان"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "مەرجیەکان"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "فرمانەکان"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "گۆڕاوەکان"
+        },
         "coursea-2020/Programming: Happy Maps": {
           "name": "نەخشەی دڵخۆش"
         },
@@ -146,11 +158,35 @@
         "coursef-2022/The Internet": {
           "name": "ئینتەرنێت"
         },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2023/Variables": {
+          "name": "گۆڕاوەکان"
+        },
+        "csd3-2023/Text": {
+          "name": "دەق"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "مەرجیەکان"
+        },
+        "csd3-2023/Functions": {
+          "name": "فرمانەکان"
+        },
+        "csd6a-2023/Functions": {
+          "name": "فرمانەکان"
+        },
+        "csd6b-2023/Functions": {
+          "name": "فرمانەکان"
+        },
+        "coursea-2023/Happy Maps": {
+          "name": "نەخشەی دڵخۆش"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "بەرنامەڕێژی بە پێشبڕکێ"
+        },
+        "coursef-2023/The Internet": {
+          "name": "ئینتەرنێت"
         },
         "allthethings/Jigsaw": {
           "name": "مەتەڵە وێنە"

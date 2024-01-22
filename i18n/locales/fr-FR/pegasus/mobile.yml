@@ -520,13 +520,9 @@
   volunteer_engineer_submission_subtitle_generic: '100 000 enseignants vont animer une Hour of Code dans leur classe cette année, du 7 au 13 décembre 2015. Ils ont besoin de votre aide ! '
   volunteer_engineer_submission_subtitle_specific: "% {num_teachers} enseignants ont besoin de bénévoles.<br>% {num_volunteers} bénévoles se sont inscrits. Rejoignez-les."
   volunteer_engineer_submission_intro_background: "Hour of Code est un mouvement mondial qui a pour but de présenter l'informatique durant une heure à des dizaines de millions d’élèves dans plus de 180 pays. Engagez-vous dans la Semaine de l’Enseignement de l’Informatique, du 7 au 13 décembre."
-  volunteer_engineer_submission_intro_recruit: 'Les enseignants aimeraient avoir quelqu''un de <span style="font-family: ''Gotham 7r'', sans-serif;">passionné par l''enseignement de l’informatique, </span> qui pourrait les aider dans la salle de classe, ou quelqu''un qui pourrait <span style="font-family: ''Gotham 7r'', sans-serif;">inspirer</span> leurs élèves en leur parlant des nombreuses possibilités qu’offre l''informatique (ce qui pourrait se faire par un échange vidéo).'
   volunteer_engineer_submission_intro_recruit_markdown: "Les enseignants aimeraient avoir quelqu'un **passionné par l'enseignement de l'informatique** qui puisse aider en classe, ou pour quelqu'un qui puisse **inspirer** leurs élèves en parlant de l'étendue des possibilités offertes par l'informatique (ce qui pourrait se faire par le biais d'un chat vidéo)."
-  volunteer_engineer_submission_intro_guide: "En savoir plus sur notre <a href=\"%{volunteer_guide}\"> programme de bénévolat</a>."
   volunteer_engineer_submission_intro_guide_markdown: "Pour en savoir plus sur notre [programme de bénévolat, cliquez ici] (%{volunteer_guide})."
-  volunteer_engineer_submission_intro_signup: "Veuillez saisir les informations suivantes si vous êtes étudiant en informatique ou professionnel des logiciels. Vous devez être âgé d’au moins 18 ans pour vous inscrire en tant que bénévole. Notez que toutes les informations que vous fournirez, dans cette section, seront accessibles à quiconque consultera la <a href=\"/volunteer/local\">carte des bénévoles</a>.  Les champs marqués d'un <span class=\"form-required-field\">*</span> sont obligatoires."
   volunteer_engineer_submission_intro_signup_markdown: "Veuillez saisir les informations suivantes si vous êtes un étudiant en informatique ou un professionnel du logiciel. Vous devez être âgé d'au moins 18 ans pour vous inscrire en tant que bénévole. Notez que tous les champs que vous remplissez dans cette section seront accessibles au public pour tous ceux qui consultent la [carte des bénévoles] (/volunteer/local). Les champs marqués d'un _*_ sont obligatoires."
-  volunteer_engineer_submission_intro_links: "Êtes-vous un enseignant et cherchez-vous des bénévoles ? Trouvez un bénévole près de chez vous sur notre <a href=\"%{volunteer_local}\">carte des bénévoles</a>."
   volunteer_engineer_submission_intro_links_markdown: "Vous êtes enseignant à la recherche de bénévoles ? Trouvez un bénévole local sur notre [carte des bénévoles] (%{volunteer_local})."
   volunteer_engineer_submission_update_information: "Mettez à jour vos informations"
   volunteer_engineer_submission_header_shared: "Informations partagées avec les enseignants sur la carte des bénévoles"
@@ -1505,6 +1501,7 @@
   header_report_abuse: "Signaler un abus"
   header_legal: "Confidentialité et mentions légales"
   header_legal_privacy: "Politique de confidentialité"
+  header_legal_cookie_notice: " Utilisation des cookies"
   header_legal_tos: "Conditions Générales d'Utilisation"
   header_tutorials: "Didacticiels"
   header_screen_reader_hamburger: "Menu"

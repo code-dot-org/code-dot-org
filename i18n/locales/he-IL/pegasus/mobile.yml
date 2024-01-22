@@ -432,7 +432,6 @@
   no_internet: "אין אינטרנט?"
   are_you_teacher: "האם אתה מורה?"
   volunteer_engineer_submission_subtitle_generic: '100,000 מורות ומורים יקיימו שעה של קוד בכיתות השנה, דצבמר 7-13, 2015. הן/ם רוצות/ים לעזור! '
-  volunteer_engineer_submission_intro_signup: "אנא הכנס את הפרטים הבאים אם אתה סטודנט למחשבים או מומחה תוכנה. עליך להיות לפחות בן 18 כדי להירשם כמתנדב. שים לב שכל השדות אשר תמלא בחלק זה יהיו זמינים לכל מי שיצפה ב - <a href=\"/volunteer/local\">מפת המתנדבים</a>. חובה למלא שדות אשר מסומנים ב <span class=\"form-required-field\">*</span>."
   volunteer_engineer_submission_update_information: "עדכן את המידע שלך"
   volunteer_engineer_submission_field_name: "שם"
   volunteer_engineer_submission_field_name_placeholder: "שם מלא"

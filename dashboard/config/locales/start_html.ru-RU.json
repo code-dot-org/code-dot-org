@@ -12,12 +12,22 @@
           "Yes": "Да",
           "cute": "милый"
         },
+        "CSD U1 IO Pet Chooser 2_2023": {
+          "No": "Нет",
+          "Yes": "Да",
+          "cute": "милый"
+        },
         "CSD U1 IO Pet Chooser_2021": {
           "No": "Нет",
           "Yes": "Да",
           "cute": "милый"
         },
         "CSD U1 IO Pet Chooser_2022": {
+          "No": "Нет",
+          "Yes": "Да",
+          "cute": "милый"
+        },
+        "CSD U1 IO Pet Chooser_2023": {
           "No": "Нет",
           "Yes": "Да",
           "cute": "милый"
@@ -30,6 +40,13 @@
           "text": "текст"
         },
         "CSD U1 IO Story_2022": {
+          "City": "Город",
+          "Color": "Цвет",
+          "Food": "Еда",
+          "Name": "Имя",
+          "text": "текст"
+        },
+        "CSD U1 IO Story_2023": {
           "City": "Город",
           "Color": "Цвет",
           "Food": "Еда",
@@ -102,10 +119,46 @@
           "8": "8",
           "9": "9"
         },
+        "CSD U1 processing bday_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "21": "21",
+          "22": "22",
+          "23": "23",
+          "24": "24",
+          "25": "25",
+          "26": "26",
+          "27": "27",
+          "28": "28",
+          "29": "29",
+          "3": "3",
+          "30": "30",
+          "31": "31",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "CSD U1 processing countries_2021": {
           "32": "32"
         },
         "CSD U1 processing countries_2022": {
+          "32": "32"
+        },
+        "CSD U1 processing countries_2023": {
           "32": "32"
         },
         "CSD U1 processing fastest_2021": {
@@ -114,6 +167,11 @@
           "s": "s"
         },
         "CSD U1 processing fastest_2022": {
+          "0": "0",
+          "k": "k",
+          "s": "s"
+        },
+        "CSD U1 processing fastest_2023": {
           "0": "0",
           "k": "k",
           "s": "s"
@@ -206,6 +264,50 @@
           "?": "?",
           "text": "текст"
         },
+        "CSD U1 processing guess_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "21": "21",
+          "22": "22",
+          "23": "23",
+          "24": "24",
+          "25": "25",
+          "26": "26",
+          "27": "27",
+          "28": "28",
+          "29": "29",
+          "3": "3",
+          "30": "30",
+          "31": "31",
+          "32": "32",
+          "33": "33",
+          "34": "34",
+          "35": "35",
+          "36": "36",
+          "37": "37",
+          "38": "38",
+          "39": "39",
+          "4": "4",
+          "40": "40",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
+          "text": "текст"
+        },
         "CSD U1 processing live_2021": {
           "bear": "Медведь",
           "rat": "крыса",
@@ -216,11 +318,22 @@
           "rat": "крыса",
           "walking": "прогулка"
         },
+        "CSD U1 processing live_2023": {
+          "cat": "кот",
+          "chicken": "курица",
+          "dog": "собака",
+          "horse": "лошадь",
+          "walking": "прогулка"
+        },
         "CSD U1 processing npark_2021": {
           "Correct!": "Верно\n",
           "Sorry!": "Извините!"
         },
         "CSD U1 processing npark_2022": {
+          "Correct!": "Верно\n",
+          "Sorry!": "Извините!"
+        },
+        "CSD U1 processing npark_2023": {
           "Correct!": "Верно\n",
           "Sorry!": "Извините!"
         },
@@ -290,10 +403,46 @@
           "8": "8",
           "9": "9"
         },
+        "CSD U1 processing writers_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "21": "21",
+          "22": "22",
+          "23": "23",
+          "24": "24",
+          "25": "25",
+          "26": "26",
+          "27": "27",
+          "28": "28",
+          "29": "29",
+          "3": "3",
+          "30": "30",
+          "31": "31",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "CSD U1 storage friends_2021": {
           "Back": "Назад"
         },
         "CSD U1 storage friends_2022": {
+          "Back": "Назад"
+        },
+        "CSD U1 storage friends_2023": {
           "Back": "Назад"
         },
         "CSD U1 storage movies_2021": {
@@ -308,6 +457,12 @@
           "Yes": "Да",
           "text": "текст"
         },
+        "CSD U1 storage movies_2023": {
+          "No": "Нет",
+          "Star Wars": "Звездные войны",
+          "Yes": "Да",
+          "text": "текст"
+        },
         "CSD U1 storage outfit_2021": {
           "Clear": "Очистить",
           "black": "черный",
@@ -317,6 +472,14 @@
           "white": "белый"
         },
         "CSD U1 storage outfit_2022": {
+          "Clear": "Очистить",
+          "black": "черный",
+          "green": "зеленый",
+          "pink": "розовый",
+          "purple": "пурпурный",
+          "white": "белый"
+        },
+        "CSD U1 storage outfit_2023": {
           "Clear": "Очистить",
           "black": "черный",
           "green": "зеленый",
@@ -359,44 +522,130 @@
           "4": "4",
           "5": "5"
         },
+        "CSD U6 - Accelerometer - PA_2023": {
+          "Game Over": "Игра Окончена"
+        },
         "CSD U6 - Accelerometer - PA_2222": {
           "Game Over": "Игра Окончена"
+        },
+        "CSD U6 - Accelerometer - PA_mb2022": {
+          "Game Over": "Игра Окончена"
+        },
+        "CSD U6 - Accelerometer - PB_2023": {
+          "0": "0"
         },
         "CSD U6 - Accelerometer - PB_2222": {
           "0": "0"
         },
+        "CSD U6 - Accelerometer - PB_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PD_2023": {
+          "You did it!": "У тебя получилось!"
+        },
         "CSD U6 - Accelerometer - PD_2222": {
           "You did it!": "У тебя получилось!"
+        },
+        "CSD U6 - Accelerometer - PF_2023": {
+          "0": "0"
         },
         "CSD U6 - Accelerometer - PF_2222": {
           "0": "0"
         },
+        "CSD U6 - Accelerometer - PF_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - SB2_mb2022": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Board Inputs - P_2023": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Board Inputs - PracC_mb2022": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Board Inputs - SB1_2023": {
+          "Success!": "Успешно!"
+        },
         "CSD U6 - Board Inputs - SB1_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Board Inputs - SB1_mb2022": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Board Inputs - SB2_2023": {
           "Success!": "Успешно!"
         },
         "CSD U6 - Board Inputs - SB2_2222": {
           "Success!": "Успешно!"
         },
+        "CSD U6 - Board Inputs - SB2_mb2022": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Board Inputs - SB3_2023": {
+          "Success!": "Успешно!"
+        },
         "CSD U6 - Board Inputs - SB3_2222": {
           "Success!": "Успешно!"
+        },
+        "CSD U6 - Board Outputs - A_2023": {
+          "Happy": "Счастливый"
         },
         "CSD U6 - Board Outputs - A_2222": {
           "Happy": "Счастливый"
         },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Age": "Возраст",
+          "Happy": "Счастливый",
+          "Name": "Имя"
+        },
+        "CSD U6 - Board Outputs - ChalC_mb2022": {
+          "No": "Нет",
+          "Yes": "Да"
+        },
+        "CSD U6 - Board Outputs - P_2023": {
+          "Success!": "Успешно!"
+        },
         "CSD U6 - Board Outputs - P_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Board Outputs - PracD_mb2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "CSD U6 - Board Outputs - SB1_2023": {
           "Success!": "Успешно!"
         },
         "CSD U6 - Board Outputs - SB1_2222": {
           "Success!": "Успешно!"
         },
+        "CSD U6 - Board Outputs - SB2_2023": {
+          "Success!": "Успешно!"
+        },
         "CSD U6 - Board Outputs - SB2_2222": {
           "Success!": "Успешно!"
+        },
+        "CSD U6 - Board Outputs - SB4_2023": {
+          "Fish": "Рыба"
         },
         "CSD U6 - Board Outputs - SB4_2222": {
           "Fish": "Рыба"
         },
+        "CSD U6 - Board Outputs - Setup_2023": {
+          "Success!": "Успешно!"
+        },
         "CSD U6 - Board Outputs - Setup_2222": {
           "Success!": "Успешно!"
+        },
+        "CSD U6 - Board Outputs - Setup_mb2022": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Color LEDs - ChalD_2023": {
+          "East": "Восток",
+          "North": "Север",
+          "South": "Юг",
+          "West": "Запад"
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
           "East": "Восток",
@@ -404,17 +653,37 @@
           "South": "Юг",
           "West": "Запад"
         },
+        "CSD U6 - Color LEDs - PracA_2023": {
+          "Success!": "Успешно!"
+        },
         "CSD U6 - Color LEDs - PracA_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Color LEDs - SB2_2023": {
           "Success!": "Успешно!"
         },
         "CSD U6 - Color LEDs - SB2_2222": {
           "Success!": "Успешно!"
         },
+        "CSD U6 - Color LEDs - SB3_2023": {
+          "Success!": "Успешно!"
+        },
         "CSD U6 - Color LEDs - SB3_2222": {
           "Success!": "Успешно!"
         },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "Medium": "Средний"
+        },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "Средний"
+        },
+        "CSD U6 - Combine Inputs - A_2023": {
+          "green": "зеленый",
+          "left": "влево",
+          "purple": "пурпурный",
+          "red": "красный",
+          "right": "вправо",
+          "yellow": "жёлтый"
         },
         "CSD U6 - Combine Inputs - A_2222": {
           "green": "зеленый",
@@ -423,6 +692,10 @@
           "red": "красный",
           "right": "вправо",
           "yellow": "жёлтый"
+        },
+        "CSD U6 - Combine Inputs - A_mb2022": {
+          "left": "влево",
+          "right": "вправо"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
           "fast": "быстро",
@@ -433,17 +706,44 @@
           "short": "недолго",
           "slow": "медленно"
         },
+        "CSD U6 - Combine Inputs - CA_2023": {
+          "fast": "быстро",
+          "high": "высокий",
+          "long": "долго",
+          "low": "низкий",
+          "on": "вкл",
+          "short": "недолго",
+          "slow": "медленно"
+        },
+        "CSD U6 - Combine Inputs - ChalG_2023": {
+          "Blue": "Синий",
+          "Green": "Зеленый",
+          "Red": "Красный"
+        },
         "CSD U6 - Combine Inputs - ChalG_2222": {
           "Blue": "Синий",
           "Green": "Зеленый",
           "Red": "Красный"
         },
+        "CSD U6 - Combine Inputs - PracA_2023": {
+          "left": "влево",
+          "right": "вправо"
+        },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "влево",
           "right": "вправо"
         },
+        "CSD U6 - Combine Inputs - PracB_2023": {
+          "bright": "яркий"
+        },
         "CSD U6 - Combine Inputs - PracB_2222": {
           "bright": "яркий"
+        },
+        "CSD U6 - Combine Inputs - PracC_2023": {
+          "blue": "синий",
+          "green": "зеленый",
+          "orange": "оранжевый",
+          "yellow": "жёлтый"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
           "blue": "синий",
@@ -451,12 +751,30 @@
           "orange": "оранжевый",
           "yellow": "жёлтый"
         },
+        "CSD U6 - Combine Inputs - PracD_2023": {
+          "Test": "Тест",
+          "quiet": "спокойный"
+        },
         "CSD U6 - Combine Inputs - PracD_2222": {
           "Test": "Тест",
           "quiet": "спокойный"
         },
+        "CSD U6 - Combine Inputs - SB1_mb2022": {
+          "bottom row": "нижний ряд",
+          "top row": "верхний ряд"
+        },
+        "CSD U6 - Combine Inputs - SB2_2023": {
+          "long": "долго",
+          "short": "недолго"
+        },
         "CSD U6 - Combine Inputs - SB2_2222": {
           "long": "долго",
+          "short": "недолго"
+        },
+        "CSD U6 - Combine Inputs - SB3_2023": {
+          "high": "высокий",
+          "long": "долго",
+          "low": "низкий",
           "short": "недолго"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
@@ -465,18 +783,53 @@
           "low": "низкий",
           "short": "недолго"
         },
+        "CSD U6 - Combine Inputs - SB4_2023": {
+          "long": "долго",
+          "short": "недолго"
+        },
         "CSD U6 - Combine Inputs - SB4_2222": {
           "long": "долго",
           "short": "недолго"
+        },
+        "CSD U6 - Combine Inputs - SB4v2_mb2022": {
+          "Row": "Ряд"
+        },
+        "CSD U6 - Combine Inputs - SB5v2_mb2022": {
+          "Row": "Ряд"
+        },
+        "CSD U6 - Functions - P2C_2023": {
+          "Blue": "Синий",
+          "Red": "Красный"
         },
         "CSD U6 - Functions - P2C_2222": {
           "Blue": "Синий",
           "Red": "Красный"
         },
+        "CSD U6 - Functions - P2C_mb2022": {
+          "Blue": "Синий",
+          "Red": "Красный"
+        },
+        "CSD U6 - Functions - P_2023": {
+          "0": "0"
+        },
         "CSD U6 - Functions - P_2222": {
           "0": "0"
         },
+        "CSD U6 - Functions - P_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_2023": {
+          "0": "0"
+        },
         "CSD U6 - Functions - SB7_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_2023": {
+          "+": "+",
+          "-": "-",
           "0": "0"
         },
         "CSD U6 - If Variables - ChalD_2222": {
@@ -484,14 +837,43 @@
           "-": "-",
           "0": "0"
         },
+        "CSD U6 - If Variables - ChalD_mb2022": {
+          "+": "+",
+          "-": "-",
+          "0": "0"
+        },
+        "CSD U6 - If Variables - SB3_2023": {
+          "Name": "Имя"
+        },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "Имя"
+        },
+        "CSD U6 - If Variables - SB3_mb2022": {
+          "Name": "Имя"
+        },
+        "CSD U6 - If Variables - SB4_2023": {
+          "0": "0"
         },
         "CSD U6 - If Variables - SB4_2222": {
           "0": "0"
         },
+        "CSD U6 - If Variables - SB4_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Music - A_2023": {
+          "Happy": "Счастливый"
+        },
         "CSD U6 - Music - A_2222": {
           "Happy": "Счастливый"
+        },
+        "CSD U6 - Music - ChalD_2023": {
+          "A": "А",
+          "B": "Б",
+          "C": "В",
+          "D": "Г",
+          "E": "В",
+          "F": "Д",
+          "G": "Е"
         },
         "CSD U6 - Music - ChalD_2222": {
           "A": "А",
@@ -501,6 +883,16 @@
           "E": "В",
           "F": "Д",
           "G": "Е"
+        },
+        "CSD U6 - Music - Piano_2023": {
+          "A": "А",
+          "B": "Б",
+          "C": "В",
+          "D": "Г",
+          "E": "В",
+          "F": "Д",
+          "G": "Е",
+          "Note:": "Примечание:"
         },
         "CSD U6 - Music - Piano_2222": {
           "A": "А",
@@ -512,7 +904,25 @@
           "G": "Е",
           "Note:": "Примечание:"
         },
+        "CSD U6 - Music - SB1_2023": {
+          "A": "А",
+          "B": "Б",
+          "C": "В",
+          "D": "Г",
+          "E": "В",
+          "F": "Д",
+          "G": "Е"
+        },
         "CSD U6 - Music - SB1_2222": {
+          "A": "А",
+          "B": "Б",
+          "C": "В",
+          "D": "Г",
+          "E": "В",
+          "F": "Д",
+          "G": "Е"
+        },
+        "CSD U6 - Music - SB2.5_2023": {
           "A": "А",
           "B": "Б",
           "C": "В",
@@ -530,6 +940,15 @@
           "F": "Д",
           "G": "Е"
         },
+        "CSD U6 - Music - SB3_2023": {
+          "A": "А",
+          "B": "Б",
+          "C": "В",
+          "D": "Г",
+          "E": "В",
+          "F": "Д",
+          "G": "Е"
+        },
         "CSD U6 - Music - SB3_2222": {
           "A": "А",
           "B": "Б",
@@ -539,69 +958,198 @@
           "F": "Д",
           "G": "Е"
         },
+        "CSD U6 - Music - SB4_2023": {
+          "Success!": "Успешно!"
+        },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Input - A_2023": {
+          "1": "1",
+          "2": "2"
         },
         "CSD U6 - Physical Input - A_2222": {
           "1": "1",
           "2": "2"
         },
+        "CSD U6 - Physical Input - A_mb2022": {
+          "1": "1",
+          "2": "2"
+        },
+        "CSD U6 - Physical Input - ChalA_2023": {
+          "Success!": "Успешно!"
+        },
         "CSD U6 - Physical Input - ChalA_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Input - ChalA_mb2022": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Input - ChalB_2023": {
           "Success!": "Успешно!"
         },
         "CSD U6 - Physical Input - ChalB_2222": {
           "Success!": "Успешно!"
         },
+        "CSD U6 - Physical Input - ChalB_mb2022": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Input - ChalC_2023": {
+          "Success!": "Успешно!"
+        },
         "CSD U6 - Physical Input - ChalC_2222": {
           "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Input - ChalC_mb2022": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Input - PA_2023": {
+          "0": "0",
+          "Score": "Счет"
         },
         "CSD U6 - Physical Input - PA_2222": {
           "0": "0",
           "Score": "Счет"
         },
+        "CSD U6 - Physical Input - PA_mb2022": {
+          "0": "0",
+          "Score": "Счет"
+        },
+        "CSD U6 - Physical Input - PC_2023": {
+          "Success!": "Успешно!"
+        },
         "CSD U6 - Physical Input - PC_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Input - PD_2023": {
           "Success!": "Успешно!"
         },
         "CSD U6 - Physical Input - PD_2222": {
           "Success!": "Успешно!"
         },
+        "CSD U6 - Physical Input - PD_mb2022": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Input - SB1_2023": {
+          "Success!": "Успешно!"
+        },
         "CSD U6 - Physical Input - SB1_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Input - SB1_mb2022": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Output - ChalA_2023": {
           "Success!": "Успешно!"
         },
         "CSD U6 - Physical Output - ChalA_2222": {
           "Success!": "Успешно!"
         },
+        "CSD U6 - Physical Output - ChalA_mb2022": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Output - ChalB_2023": {
+          "Success!": "Успешно!"
+        },
         "CSD U6 - Physical Output - ChalB_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Output - ChalB_mb2022": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Output - ChalC_2023": {
           "Success!": "Успешно!"
         },
         "CSD U6 - Physical Output - ChalC_2222": {
           "Success!": "Успешно!"
         },
+        "CSD U6 - Physical Output - ChalC_mb2022": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Output - PB_2023": {
+          "Success!": "Успешно!"
+        },
         "CSD U6 - Physical Output - PB_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Output - PB_mb2022": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Output - PC_2023": {
           "Success!": "Успешно!"
         },
         "CSD U6 - Physical Output - PC_2222": {
           "Success!": "Успешно!"
         },
+        "CSD U6 - Physical Output - PC_mb2022": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Output - P_2023": {
+          "Success!": "Успешно!"
+        },
         "CSD U6 - Physical Output - P_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Output - P_mb2022": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Output - SB1_2023": {
           "Success!": "Успешно!"
         },
         "CSD U6 - Physical Output - SB1_2222": {
           "Success!": "Успешно!"
         },
+        "CSD U6 - Physical Output - SB1_mb2022": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Output - SB2.2_2023": {
+          "Success!": "Успешно!"
+        },
         "CSD U6 - Physical Output - SB2.2_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Output - SB2.2_mb2022": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Output - SB2_2023": {
           "Success!": "Успешно!"
         },
         "CSD U6 - Physical Output - SB2_2222": {
           "Success!": "Успешно!"
         },
+        "CSD U6 - Physical Output - SB2_mb2022": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Screen Inputs - A_2023": {
+          "Name:": "Имя:"
+        },
         "CSD U6 - Screen Inputs - A_2222": {
           "Name:": "Имя:"
+        },
+        "CSD U6 - Screen Inputs - A_mb2022": {
+          "Name:": "Имя:"
+        },
+        "CSD U6 - Screen Inputs - ChalB_2023": {
+          "Blue": "Синий",
+          "Green": "Зеленый",
+          "Red": "Красный"
         },
         "CSD U6 - Screen Inputs - ChalB_2222": {
           "Blue": "Синий",
           "Green": "Зеленый",
           "Red": "Красный"
+        },
+        "CSD U6 - Screen Inputs - ChalB_mb2022": {
+          "Blue": "Синий",
+          "Green": "Зеленый",
+          "Red": "Красный"
+        },
+        "CSD U6 - Screen Inputs - P_2023": {
+          "Blue": "Синий",
+          "Green": "Зеленый",
+          "Name:": "Имя:",
+          "Red": "Красный",
+          "Save": "Сохранить"
         },
         "CSD U6 - Screen Inputs - P_2222": {
           "Blue": "Синий",
@@ -610,13 +1158,40 @@
           "Red": "Красный",
           "Save": "Сохранить"
         },
+        "CSD U6 - Screen Inputs - P_mb2022": {
+          "Blue": "Синий",
+          "Green": "Зеленый",
+          "Name:": "Имя:",
+          "Red": "Красный",
+          "Save": "Сохранить"
+        },
+        "CSD U6 - Screen Inputs - PracD_2023": {
+          "0": "0"
+        },
         "CSD U6 - Screen Inputs - PracD_2222": {
           "0": "0"
+        },
+        "CSD U6 - Screen Inputs - PracD_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Screen Inputs - SB1_2023": {
+          "Welcome": "Добро пожаловать"
         },
         "CSD U6 - Screen Inputs - SB1_2222": {
           "Welcome": "Добро пожаловать"
         },
+        "CSD U6 - Screen Inputs - SB1_mb2022": {
+          "Welcome": "Добро пожаловать"
+        },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
+          "black": "черный",
+          "white": "белый"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2023": {
+          "black": "черный",
+          "white": "белый"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_mb2022": {
           "black": "черный",
           "white": "белый"
         },
@@ -624,12 +1199,40 @@
           "black": "черный",
           "white": "белый"
         },
+        "CSD U6 - Screen Inputs - SB2.2_2023": {
+          "black": "черный",
+          "white": "белый"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_mb2022": {
+          "black": "черный",
+          "white": "белый"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2023": {
+          "?": "?",
+          "Happy": "Счастливый"
+        },
         "CSD U6 - Screen Outputs - ChalB_2222": {
           "?": "?",
           "Happy": "Счастливый"
         },
+        "CSD U6 - Screen Outputs - ChalB_mb2022": {
+          "?": "?",
+          "Happy": "Счастливый"
+        },
+        "CSD U6 - Screen Outputs - P_2023": {
+          "title": "название"
+        },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "название"
+        },
+        "CSD U6 - Screen Outputs - P_mb2022": {
+          "title": "название"
+        },
+        "CSD U6 - Screen Outputs - PracA_2023": {
+          "Blue": "Синий",
+          "Green": "Зеленый",
+          "Red": "Красный",
+          "White": "Белый"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
           "Blue": "Синий",
@@ -637,41 +1240,111 @@
           "Red": "Красный",
           "White": "Белый"
         },
+        "CSD U6 - Screen Outputs - PracA_mb2022": {
+          "Blue": "Синий",
+          "Green": "Зеленый",
+          "Red": "Красный",
+          "White": "Белый"
+        },
+        "CSD U6 - Screen Outputs - PracB_2023": {
+          "down": "вниз",
+          "left": "влево",
+          "right": "вправо",
+          "up": "вверх"
+        },
         "CSD U6 - Screen Outputs - PracB_2222": {
           "down": "вниз",
           "left": "влево",
           "right": "вправо",
           "up": "вверх"
         },
+        "CSD U6 - Screen Outputs - PracB_mb2022": {
+          "down": "вниз",
+          "left": "влево",
+          "right": "вправо",
+          "up": "вверх"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2023": {
+          "name": "наименование"
+        },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "наименование"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_mb2022": {
+          "name": "наименование"
+        },
+        "CSD U6 - Sensors - A_2023": {
+          "0": "0"
         },
         "CSD U6 - Sensors - A_2222": {
           "0": "0"
         },
+        "CSD U6 - Sensors - A_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Sensors - PC_2023": {
+          "off": "выкл",
+          "on": "вкл"
+        },
         "CSD U6 - Sensors - PC_2222": {
           "off": "выкл",
           "on": "вкл"
+        },
+        "CSD U6 - Sensors - P_2023": {
+          "high": "высокий",
+          "low": "низкий",
+          "text": "текст"
         },
         "CSD U6 - Sensors - P_2222": {
           "high": "высокий",
           "low": "низкий",
           "text": "текст"
         },
+        "CSD U6 - Sensors - P_mb2022": {
+          "high": "высокий",
+          "low": "низкий",
+          "text": "текст"
+        },
+        "CSD U6 - Sensors - SB1_2023": {
+          "value": "значение"
+        },
         "CSD U6 - Sensors - SB1_2222": {
+          "value": "значение"
+        },
+        "CSD U6 - Sensors - SB2_2023": {
+          "Update": "Обновить",
           "value": "значение"
         },
         "CSD U6 - Sensors - SB2_2222": {
           "Update": "Обновить",
           "value": "значение"
         },
+        "CSD U6 - Sensors - SB2_mb2022": {
+          "Update": "Обновить",
+          "value": "значение"
+        },
+        "CSD U6 - Sensors - SB3_2023": {
+          "value": "значение"
+        },
         "CSD U6 - Sensors - SB3_2222": {
+          "value": "значение"
+        },
+        "CSD U6 - Sensors - SB3_mb2022": {
+          "value": "значение"
+        },
+        "CSD U6 - Sensors - SB4.1_2023": {
           "value": "значение"
         },
         "CSD U6 - Sensors - SB4.1_2222": {
           "value": "значение"
         },
+        "CSD U6 - Sensors - SB4_2023": {
+          "value": "значение"
+        },
         "CSD U6 - Sensors - SB4_2222": {
+          "value": "значение"
+        },
+        "CSD U6 - Sensors - SB4_mb2022": {
           "value": "значение"
         },
         "CSD U6 Driver pt 2": {
@@ -1290,7 +1963,13 @@
         "CSDU6 Circuit Playground Test_2021": {
           "Success!": "Успешно!"
         },
+        "CSDU6 Circuit Playground Test_2023": {
+          "Success!": "Успешно!"
+        },
         "CSDU6 Circuit Playground Test_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSDU6 Circuit Playground Test_mb2022": {
           "Success!": "Успешно!"
         },
         "CSDU6 circuit playground piano": {
@@ -1365,6 +2044,94 @@
           "F": "Д",
           "G": "Е"
         },
+        "GAN Guess Widget_ai23": {
+          "Click on the buttons below to build a guess for what follows the rule": "Нажмите на кнопки ниже, чтобы угадать, что следует правилу",
+          "Computer's Guess FOLLOWS Rule": "Компьютерная догадка подчиняется правилу",
+          "Computer's Guess does NOT follow the Rule": "Компьютерная догадка не соответствует правилу",
+          "Computer's Guess:": "Догадка компьютера:",
+          "Current Guess": "Текущее предположение",
+          "Previous Guesses": "Предыдущие догадки",
+          "Submit Guess": "Отправить предположение"
+        },
+        "LLM - Eliza_ai23": {
+          "Talk to Eliza by entering text in the prompt box. When you are finished, type quit in the prompt.": "Поговорите с Элизой, введя текст в поле командной строки. Закончив, введите quit в командной строке."
+        },
+        "LLM - Written Voice Simulator_ai23": {
+          "BTS: \"Dynamite\"": "BTS: «Динамит»",
+          "Back": "Назад",
+          "Change Voice": "Изменить голос",
+          "Choose a voice to model": "Выберите голос для модели",
+          "Choose the Save file you want to load from the dropdown below": "Выберите Сохранить файл, который хотите загрузить, в раскрывающемся списке ниже",
+          "Copy / Paste or type the words you want to create a model based on below": "Скопируйте/вставьте или введите слова, на основе которых вы хотите создать модель, ниже",
+          "Create my own!": "Создай свой!",
+          "Delete Text": "Удалить текст",
+          "Dr Seuss: Green Eggs and Ham": "Доктор Сьюз: зеленые яйца и ветчина",
+          "Generate!": "Сгенерируйте!",
+          "Give the voice a name": "Дайте голосу имя",
+          "Give your save file a name": "Присвойте файлу сохранения имя",
+          "Load Save": "Загрузить Сохранить",
+          "Load this story": "Загрузите эту историю",
+          "Maya Angelou: \"Caged Bird\"": "Майя Анжелу: «Птица в клетке»",
+          "Model This Voice!": "Моделируйте этот голос!",
+          "Modeling Voice": "Моделирование голоса",
+          "Pharell: \"Happy\"": "Фарелл: «Счастлив»",
+          "Sandra Cisneros: \"Abuelito Who\"": "Сандра Сиснерос: «Абуэлито Кто»",
+          "Save Text": "Сохранить текст",
+          "Save!": "Экономьте!"
+        },
+        "Neural Networks - Perceptron - Beta_ai23": {
+          "Choose one of the content creators below to generate recommendations for you. Clicking their name will show more information about them.Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!See Recommendations! ➡️Your RecommendationsThese are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "Выберите одного из создателей контента ниже, чтобы составить для вас рекомендации. Нажав на его имя, вы увидите дополнительную информацию о них. Выбрав кого-нибудь, нажмите кнопку «Показать рекомендации», чтобы увидеть, какая у вас видеолента! См. раздел «Рекомендации»! ➡️ Ваши рекомендацииЭто видео, которые вам рекомендовали в зависимости от того, кого вы выбрали на последнем экране. Одновременно показывается только 3 видео. Используйте кнопки прокрутки, чтобы увидеть больше. Используйте кнопки слева для фильтрации по определенным категориям. Пример! Пример! Пример! ⬆️ Прокрутите вверх ⬆️⬇️ Прокрутите вниз ⬇️⬅️ Выберите нового пользователя",
+          "Example!": "Пример!",
+          "Let's Get Started! ➡️": "Давайте начнем! ➡️",
+          "Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!": "Выбрав кого-то, нажмите кнопку «Показать рекомендации», чтобы увидеть, какая у вас видеолента!",
+          "Only 3 videos are shown at a time - use the Scroll buttons to see more. ": "Одновременно показывается только 3 видео — используйте кнопки прокрутки, чтобы увидеть больше. ",
+          "See Recommendations! ➡️": "См. рекомендации! ➡️",
+          "Select at least one person to use for recommendations to continue!": "Выберите хотя бы одного человека, к которому вы хотите обратиться за рекомендациями по продолжению!",
+          "Simply pick which content creators you want to follow and then see your video recommendations!": "Просто выберите создателей контента, на которых вы хотите подписаться, и посмотрите рекомендации по видео!",
+          "These are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "Это видео, которые вам рекомендовали в зависимости от того, кого вы выбрали на последнем экране. Одновременно показываются только 3 видео — используйте кнопки прокрутки, чтобы увидеть больше. Используйте кнопки слева для фильтрации по определенным категориям. Пример! Пример! Пример! ⬆️ Прокрутите вверх ⬆️⬇️ Прокрутите вниз ⬇️⬅️ Выберите нового пользователя",
+          "Use the buttons on the left to filter by certain categories.": "Используйте кнопки слева для фильтрации по определенным категориям.",
+          "We've gathered all your favorite personalities to make videos that match your interests AND to help curate your video feed.": "Мы собрали всех ваших любимых личностей, чтобы создавать видеоролики, соответствующие вашим интересам, и помогать в создании вашей видеотрансляции.",
+          "WeTube is a new media website for all your favorite content creators. We've gathered all your favorite personalities to make videos that match your interests AND to help curate your video feed.Simply pick which content creators you want to follow and then see your video recommendations!Let's Get Started! ➡️Select at least one person to use for recommendations to continue!Choose one of the content creators below to generate recommendations for you. Clicking their name will show more information about them.Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!See Recommendations! ➡️Your RecommendationsThese are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "WeTube — это новый медиа-сайт для всех ваших любимых создателей контента. Мы собрали всех ваших любимых персонажей, чтобы создавать видеоролики, отвечающие вашим интересам, и помогать в создании вашей видеотрансляции. Просто выберите создателей контента, на которых вы хотите подписаться, и посмотрите ваши рекомендации по видео! Давайте начнем! ➡️ Выберите хотя бы одного человека, к которому вы хотите обратиться за рекомендациями по продолжению! Выберите одного из создателей контента ниже, чтобы составить для вас рекомендации. Нажав на его имя, вы увидите дополнительную информацию о них. Выбрав кого-нибудь, нажмите кнопку «Показать рекомендации», чтобы увидеть, какая у вас видеолента! См. раздел «Рекомендации»! ➡️ Ваши рекомендацииЭто видео, которые вам рекомендовали в зависимости от того, кого вы выбрали на последнем экране. Одновременно показывается только 3 видео. Используйте кнопки прокрутки, чтобы увидеть больше. Используйте кнопки слева для фильтрации по определенным категориям. Пример! Пример! Пример! ⬆️ Прокрутите вверх ⬆️⬇️ Прокрутите вниз ⬇️⬅️ Выберите нового пользователя",
+          "Your Recommendations": "Ваши рекомендации",
+          "⬅️ Select New Person": "⬅️ Выберите нового человека",
+          "⬆️ Scroll Up ⬆️": "⬆️ Прокрутите вверх ⬆️",
+          "⬇️ Scroll Down ⬇️": "⬇️ Прокрутите вниз ⬇️"
+        },
+        "Neural Networks - Perceptron - Full_ai23": {
+          "0 means their opinion isn't included in your recommendations at all": "0 означает, что их мнение вообще не включено в ваши рекомендации",
+          "10 means they have a huge influence on the recommendations you receive": "10 означает, что они оказывают огромное влияние на получаемые вами рекомендации",
+          "Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "Выберите одного из создателей контента ниже, а затем с помощью ползунка укажите, насколько вы хотите, чтобы они повлияли на ваши рекомендации! 0 означает, что их мнение вообще не включено в ваши рекомендации10 означает, что они оказывают огромное влияние на ваши рекомендацииFeatureLabelSee! ➡️ FeatureValueВаши рекомендации Эти видеоролики были рекомендованы вам на основе того, как вы скорректировали веса на последнем экране. Одновременно показывается только 3 видео. Используйте кнопки прокрутки, чтобы увидеть больше. Используйте кнопки слева для фильтрации по определенным видеоПример! Пример! Пример! ⬆️ Прокрутите вверх ⬆️⬇️ Прокрутите вниз ⬇️⬅️ Выберите новые гири",
+          "Example!": "Пример!",
+          "Let's Get Started! ➡️": "Давайте начнем! ➡️",
+          "Only 3 videos are shown at a time - use the Scroll buttons to see more. ": "Одновременно показывается только 3 видео — используйте кнопки прокрутки, чтобы увидеть больше. ",
+          "See Recommendations! ➡️": "См. рекомендации! ➡️",
+          "Select at least one person to use for recommendations to continue!": "Выберите хотя бы одного человека, к которому вы хотите обратиться за рекомендациями по продолжению!",
+          "Simply pick which content creators you want to follow to see your recommendations!": "Просто выберите создателей контента, за которыми вы хотите подписаться, чтобы увидеть ваши рекомендации!",
+          "These are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "Это видео, которые вам рекомендовали, исходя из того, как вы корректировали веса на последнем экране. Одновременно показывается только 3 видео. Используйте кнопки прокрутки, чтобы увидеть больше. Используйте кнопки слева для фильтрации по определенным видеоПример! Пример! Пример! ⬆️ Прокрутите вверх ⬆️⬇️ Прокрутите вниз ⬇️⬅️ Выберите новые гири",
+          "Use the buttons on the left to filter by certain videos": "Используйте кнопки слева для фильтрации по определенным видео",
+          "We've gathered all your favorite personalities to make videos that match your interests.": "Мы собрали всех ваших любимых личностей, чтобы снять видеоролики, соответствующие вашим интересам.",
+          "WeTube Video Recommendations": "Рекомендации по видео на WeTube",
+          "WeTube is a new media website for all your favorite content creators. We've gathered all your favorite personalities to make videos that match your interests.Simply pick which content creators you want to follow to see your recommendations!Let's Get Started! ➡️Select at least one person to use for recommendations to continue!Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "WeTube — это новый медиа-сайт для всех ваших любимых создателей контента. Мы собрали всех ваших любимых персонажей для создания видеороликов, соответствующих вашим интересам. Просто выберите создателей контента, на которых вы хотите подписаться, чтобы увидеть ваши рекомендации! Давайте начнем! ➡️ Выберите хотя бы одного человека, к которому вы хотите обратиться за рекомендациями по продолжению! Выберите одного из создателей контента ниже, а затем с помощью ползунка укажите, насколько сильно вы хотите, чтобы они повлияли на ваши рекомендации! 0 означает, что их мнение вообще не включено в ваши рекомендации10 означает, что они оказывают огромное влияние на ваши рекомендацииFeatureLabelSee! ➡️ FeatureValueВаши рекомендации Эти видеоролики были рекомендованы вам на основе того, как вы скорректировали веса на последнем экране. Одновременно показывается только 3 видео. Используйте кнопки прокрутки, чтобы увидеть больше. Используйте кнопки слева для фильтрации по определенным видеоПример! Пример! Пример! ⬆️ Прокрутите вверх ⬆️⬇️ Прокрутите вниз ⬇️⬅️ Выберите новые гири",
+          "Your Recommendations": "Ваши рекомендации",
+          "featureLabel": "Этикетка функции",
+          "featureValue": "Значение функции",
+          "⬅️ Select New Weights": "⬅️ Выберите новые веса",
+          "⬆️ Scroll Up ⬆️": "⬆️ Прокрутите вверх ⬆️",
+          "⬇️ Scroll Down ⬇️": "⬇️ Прокрутите вниз ⬇️"
+        },
+        "Noisy Image Widget_ai23": {
+          "0%": "0%",
+          "Be patient! Noisy image loading!": "Наберитесь терпения! Шумная загрузка изображений!",
+          "Move the slider to add more or less generations of noise to the image": "Переместите ползунок, чтобы добавить к изображению больше или меньше поколений шума",
+          "New Image": "Новое изображение",
+          "Noise Generations:": "Поколения шума:",
+          "Noise Generations: ": "Поколения шума: "
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "Crop": "урожай",
+          "Image Select": "Выберите изображение",
+          "Reset": "Сбросить"
+        },
         "allthethings design mode elements": {
           "text": "текст"
         },
@@ -1388,11 +2155,19 @@
           "Start": "Начать",
           "flying": "полет"
         },
+        "csd u5 recommender sample_2023": {
+          "Start": "Начать",
+          "flying": "полет"
+        },
         "csd-apps for good-2": {
           "Home": "Домой",
           "Next": "Вперед"
         },
         "csd-apps for good-2_2022": {
+          "Home": "Домой",
+          "Next": "Вперед"
+        },
+        "csd-apps for good-2_2023": {
           "Home": "Домой",
           "Next": "Вперед"
         },
@@ -1410,11 +2185,22 @@
           "4": "4",
           "???": "???\n"
         },
+        "csd-apps for good-3_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "???": "???\n"
+        },
         "csd-explore ui-2": {
           "Home": "Домой",
           "Next": "Вперед"
         },
         "csd-explore ui-2_2022": {
+          "Home": "Домой",
+          "Next": "Вперед"
+        },
+        "csd-explore ui-2_2023": {
           "Home": "Домой",
           "Next": "Вперед"
         },
@@ -1484,11 +2270,48 @@
           "8": "8",
           "9": "9"
         },
+        "csd-explore ui-3_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "21": "21",
+          "22": "22",
+          "23": "23",
+          "24": "24",
+          "25": "25",
+          "26": "26",
+          "27": "27",
+          "28": "28",
+          "29": "29",
+          "3": "3",
+          "30": "30",
+          "31": "31",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "csd-explore ui-4": {
           "Correct!": "Верно\n",
           "Sorry!": "Извините!"
         },
         "csd-explore ui-4_2022": {
+          "Correct!": "Верно\n",
+          "Sorry!": "Извините!"
+        },
+        "csd-explore ui-4_2023": {
           "Correct!": "Верно\n",
           "Sorry!": "Извините!"
         },
@@ -1558,10 +2381,46 @@
           "8": "8",
           "9": "9"
         },
+        "csd-explore ui-5_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "21": "21",
+          "22": "22",
+          "23": "23",
+          "24": "24",
+          "25": "25",
+          "26": "26",
+          "27": "27",
+          "28": "28",
+          "29": "29",
+          "3": "3",
+          "30": "30",
+          "31": "31",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "csd-explore ui-6": {
           "Next": "Вперед"
         },
         "csd-explore ui-6_2022": {
+          "Next": "Вперед"
+        },
+        "csd-explore ui-6_2023": {
           "Next": "Вперед"
         },
         "ml-L2 supervised - green glass door-2021": {
@@ -1574,10 +2433,18 @@
           "Green Glass Door": "Зеленая Стеклянная Дверь",
           "Rejected": "Отклонено"
         },
+        "ml-L2 supervised - green glass door_2023": {
+          "Accepted": "Принято",
+          "Green Glass Door": "Зеленая Стеклянная Дверь",
+          "Rejected": "Отклонено"
+        },
         "ml-L2 unsupervised - 1-2021": {
           "Next": "Вперед"
         },
         "ml-L2 unsupervised - 1_2022": {
+          "Next": "Вперед"
+        },
+        "ml-L2 unsupervised - 1_2023": {
           "Next": "Вперед"
         },
         "ml-customize-raspado-2021": {
@@ -1592,6 +2459,12 @@
           "no": "нет",
           "yes": "да"
         },
+        "ml-customize-raspado_2023": {
+          "Predict": "Предсказать",
+          "Raspado Recommender": "Рекомендатель Сока со льдом",
+          "no": "нет",
+          "yes": "да"
+        },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Продолжить",
           "Loading...": "ЗАГРУЗКА..."
@@ -1600,11 +2473,19 @@
           "Continue": "Продолжить",
           "Loading...": "ЗАГРУЗКА..."
         },
+        "ml-intro ai lab- fruit veggie widget_2023": {
+          "Continue": "Продолжить",
+          "Loading...": "ЗАГРУЗКА..."
+        },
         "ml-intro app lab-book recommender demo-2021": {
           "Predict": "Предсказать",
           "Silly": "Глупый"
         },
         "ml-intro app lab-book recommender demo_2022": {
+          "Predict": "Предсказать",
+          "Silly": "Глупый"
+        },
+        "ml-intro app lab-book recommender demo_2023": {
           "Predict": "Предсказать",
           "Silly": "Глупый"
         },
@@ -1622,11 +2503,22 @@
           "no": "нет",
           "yes": "да"
         },
+        "ml-model card-medical app v2 2021-2_2023": {
+          "A": "А",
+          "W": "З",
+          "head": "голова",
+          "no": "нет",
+          "yes": "да"
+        },
         "ml-model cards-book recommender model card": {
           "Predict": "Предсказать",
           "Silly": "Глупый"
         },
         "ml-model cards-book recommender model card_2022": {
+          "Predict": "Предсказать",
+          "Silly": "Глупый"
+        },
+        "ml-model cards-book recommender model card_2023": {
           "Predict": "Предсказать",
           "Silly": "Глупый"
         },
@@ -1642,6 +2534,12 @@
           "3": "3",
           "Predict": "Предсказать"
         },
+        "ml-models in applab-choice if quotes_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Предсказать"
+        },
         "ml-models in applab-choice if wrong place": {
           "1": "1",
           "2": "2",
@@ -1649,6 +2547,12 @@
           "Predict": "Предсказать"
         },
         "ml-models in applab-choice if wrong place_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Предсказать"
+        },
+        "ml-models in applab-choice if wrong place_2023": {
           "1": "1",
           "2": "2",
           "3": "3",
@@ -1668,6 +2572,13 @@
           "Back": "Назад",
           "Predict": "Предсказать"
         },
+        "ml-models in applab-choice intended warnings_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Back": "Назад",
+          "Predict": "Предсказать"
+        },
         "ml-models in applab-choice predict typos": {
           "1": "1",
           "2": "2",
@@ -1675,6 +2586,12 @@
           "Predict": "Предсказать"
         },
         "ml-models in applab-choice predict typos_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Предсказать"
+        },
+        "ml-models in applab-choice predict typos_2023": {
           "1": "1",
           "2": "2",
           "3": "3",
@@ -1692,12 +2609,23 @@
           "Predict": "Предсказать",
           "Yes": "Да"
         },
+        "ml-models in applab-zoo assessment_2023": {
+          "B": "Б",
+          "No": "Нет",
+          "Predict": "Предсказать",
+          "Yes": "Да"
+        },
         "ml-models in applab-zoo model embed": {
           "No": "Нет",
           "Predict": "Предсказать",
           "Yes": "Да"
         },
         "ml-models in applab-zoo model embed_2022": {
+          "No": "Нет",
+          "Predict": "Предсказать",
+          "Yes": "Да"
+        },
+        "ml-models in applab-zoo model embed_2023": {
           "No": "Нет",
           "Predict": "Предсказать",
           "Yes": "Да"
@@ -1710,16 +2638,26 @@
           "Improved Shoe Recommender": "Улучшенный Рекомендатель Обуви",
           "Sports": "Виды спорта"
         },
+        "ml-models-shoes decision tree_2023": {
+          "Improved Shoe Recommender": "Улучшенный Рекомендатель Обуви",
+          "Sports": "Виды спорта"
+        },
         "ml-models-shoes points-2021": {
           "Ultimate Shoe Recommender": "Итоговый Рекомендатель Обуви"
         },
         "ml-models-shoes points_2022": {
           "Ultimate Shoe Recommender": "Итоговый Рекомендатель Обуви"
         },
+        "ml-models-shoes points_2023": {
+          "Ultimate Shoe Recommender": "Итоговый Рекомендатель Обуви"
+        },
         "ml-models-shoes random-2021": {
           "Shoe Recommender": "Рекомендатель Обуви"
         },
         "ml-models-shoes random_2022": {
+          "Shoe Recommender": "Рекомендатель Обуви"
+        },
+        "ml-models-shoes random_2023": {
           "Shoe Recommender": "Рекомендатель Обуви"
         },
         "ml-use model card-example3A-2021": {
@@ -1732,6 +2670,15 @@
           "snow": "снег"
         },
         "ml-use model card-example3A_2022": {
+          "Driver Alert System": "Система Оповещения Водителя",
+          "Predict": "Предсказать",
+          "cloudy": "облачно",
+          "dusk": "Сумерки ",
+          "night": "ночь",
+          "rain": "дождь",
+          "snow": "снег"
+        },
+        "ml-use model card-example3A_2023": {
           "Driver Alert System": "Система Оповещения Водителя",
           "Predict": "Предсказать",
           "cloudy": "облачно",

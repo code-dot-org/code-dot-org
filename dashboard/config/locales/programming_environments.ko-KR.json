@@ -12,70 +12,70 @@
                 "getAlpha": {
                   "palette_params": {
                     "imageData": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
                 "getBlue": {
                   "palette_params": {
                     "imageData": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
                 "getGreen": {
                   "palette_params": {
                     "imageData": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
                 "getRed": {
                   "palette_params": {
                     "imageData": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
                 "putImageData": {
                   "palette_params": {
                     "imageData": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
                 "setAlpha": {
                   "palette_params": {
                     "imageData": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
                 "setBlue": {
                   "palette_params": {
                     "imageData": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
                 "setGreen": {
                   "palette_params": {
                     "imageData": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
                 "setRGB": {
                   "palette_params": {
                     "imageData": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
                 "setRed": {
                   "palette_params": {
                     "imageData": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 }
@@ -99,28 +99,28 @@
                 "createRecord": {
                   "palette_params": {
                     "record": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
                 "deleteRecord": {
                   "palette_params": {
                     "record": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
                 "drawChart": {
                   "palette_params": {
                     "options": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
                 "drawChartFromRecords": {
                   "palette_params": {
                     "options": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
@@ -131,17 +131,24 @@
                     }
                   }
                 },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "이벤트 핸들러가 적용될 표의 이름."
+                    }
+                  }
+                },
                 "readRecords": {
                   "palette_params": {
                     "terms": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
                 "updateRecord": {
                   "palette_params": {
                     "record": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 }
@@ -180,6 +187,42 @@
               "name": "계산"
             },
             "turtle": {
+              "expressions": {
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "거북이를 오른쪽으로 움직일 픽셀 수."
+                    },
+                    "y": {
+                      "description": "거북이를 아래쪽으로 움직일 픽셀 수."
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "short_description": "거북이를 현재 방향에서 지정된 픽셀만큼 뒤로 이동시킵니다."
+                },
+                "moveForward": {
+                  "short_description": "거북이를 현재 방향에서 지정된 픽셀만큼 앞으로 이동시킵니다."
+                },
+                "moveTo": {
+                  "short_description": "거북이를 화면의 특정 (x, y) 좌표로 이동합니다."
+                },
+                "penColor": {
+                  "short_description": "거북이가 선과 점을 그릴 때 사용하는 펜의 색상을 설정합니다."
+                },
+                "penDown": {
+                  "short_description": "펜을 내려 거북이가 움직일 때마다 선이 그려지게 만듭니다."
+                },
+                "penRGB": {
+                  "short_description": "RGBA 값을 사용해 거북이가 선과 점을 그릴 때 사용하는 펜의 색상을 설정합니다."
+                },
+                "penUp": {
+                  "short_description": "펜을 올려 거북이가 움직일 때 선이 그어지지 않게 합니다."
+                },
+                "penWidth": {
+                  "short_description": "거북이가 움직일 때 그려지는 선의 너비를 픽셀 단위로 설정합니다."
+                }
+              },
               "name": "Turtle"
             },
             "ui_controls": {
@@ -216,6 +259,23 @@
                 },
                 "declareAssign_x": {
                   "short_description": "‘var’ 다음에 변수 이름을 선언하고, 수식 오른쪽에 값을 할당하세요."
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "검색할 문자열"
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "검색할 문자열"
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "문자열의 길이"
                 }
               },
               "name": "변수"
@@ -357,6 +417,23 @@
                 },
                 "declareAssign_x": {
                   "short_description": "‘var’ 다음에 변수 이름을 선언하고, 수식 오른쪽에 값을 할당하세요."
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "검색할 문자열"
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "검색할 문자열"
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "문자열의 길이"
                 }
               },
               "name": "변수"

@@ -42,6 +42,10 @@ dv:
         options:
           UNIT:
             '"measures"': މެޝަރސް
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': މެޝަރސް
       Dancelab_changeColorBy:
         text: "{AMOUNT} އަދަދަށް {COLOR} {METHOD} ބަދަލުކުރޭ"
         options:
@@ -74,6 +78,25 @@ dv:
             MOVES.Clown: ގަންގަމް
             MOVES.Kick: ސްޓަރ - ތަރި
             MOVES.ThisOrThat: މީތި ނޫނީ އޭތި
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} ހަދާ {MOVE} {DIR} އަބަދަށް"
+        options:
+          GROUP:
+            '"SLOTH"': ސްލޮތު
+          MOVE:
+            MOVES.Roll: ހަށިގަނޑު އަނބުރާލުން
+            MOVES.ClapHigh: މަތިން އަތްތިލަބަޑި ޖެހުން
+            MOVES.Dab: ޑެބް ކުރުން
+            MOVES.DoubleJam: ޑަބަލް ޑައުން
+            MOVES.Drop: ޑްރޮޕް
+            MOVES.Floss: ފްލޮސް
+            MOVES.Fresh: ފްރެޝް
+            MOVES.Clown: ގަންގަމް
+            MOVES.Kick: ސްޓަރ - ތަރި
+            MOVES.ThisOrThat: މީތި ނޫނީ އޭތި
+            '"next"': "(ނެކްސްޓް - ކުރިއަށް)"
+            '"prev"': "(ޕްރީވިއަސް - ފަހަތަށް)"
+            '"rand"': "(ރެންޑަމް - ވަކި ދިމާލެއް ނެތް)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} ހަދާ {MOVE} {DIR} އަބަދަށް"
         options:
@@ -433,6 +456,47 @@ dv:
             '"iceCream"': އައިސްކްރީމް
             '"default"': ލައިޓް - އަލި
             '"neon"': ނިއޯން
+            '"tropical"': ޓްރޮޕިކަލް
+            '"vintage"': ވިންޓޭޖް
+            '"warm"': ވޯރމް
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: "{PALETTE} {EFFECT} އަށް ބެކްގްރައުންޑް އެފެކްޓް ސެޓް ކުރަން"
+        options:
+          EFFECT:
+            '"rand"': "(ރެންޑަމް - ވަކި ދިމާލެއް ނެތް)"
+            '"quads"': އެންޖެލްސް
+            '"circles"': ސަރކަލް (ވަށްބުރު)
+            '"color_cycle"': ކުލަ
+            '"diamonds"': ޑަޔަމަންޑް
+            '"disco_ball"': ޑިސްކޯ ބޯޅަ
+            '"fireworks"': ފަޔަރވޯކް (ހަވާ)
+            '"flowers"': ފްލާވަރ - މައު
+            '"growing_stars"': ބޮޑުވަމުންދާ ތަރި
+            '"swirl"': ހިޕްނޯ
+            '"kaleidoscope"': ކެލައިޑެސްކޯޕް
+            '"lasers"': ލޭޒަރ ޑާންސް ފްލޯ
+            '"splatter"': ޕެއިންޓް ސްޕްލެޓަރ
+            '"rainbow"': ރެއިންބޯ (ވިއްސާރަދުނި)
+            '"ripples_random"': ރެންޑަމް ރިޕްލްސް
+            '"ripples"': ރިޕްލްސް
+            '"snowflakes"': ސްނޯ
+            '"text"': ލަވައިގެ ނަން
+            '"galaxy"': ސްޕޭސް
+            '"sparkles"': ސްޕާކްލްސް
+            '"spiral"': ސްޕައިރަލް
+            '"disco"': ސްކޮޔަރ (ހަތަރެސްކަން)
+            '"squiggles"': ސްކުއިގްލްސް
+            '"starburst"': ސްޓަރ ބަރސްޓް
+            '"stars"': ސްޓަރ - ތަރި
+            '"music_wave"': ވޭވްސް
+          PALETTE:
+            '"rave"': ކަޅާއި ހުދު
+            '"cool"': ކޫލް
+            '"electronic"': އެލެކްޓްރޯނިކް
+            '"iceCream"': އައިސްކްރީމް
+            '"default"': ލައިޓް - އަލި
+            '"neon"': ނިއޯން
+            '"rainbow"': ރެއިންބޯ (ވިއްސާރަދުނި)
             '"tropical"': ޓްރޮޕިކަލް
             '"vintage"': ވިންޓޭޖް
             '"warm"': ވޯރމް

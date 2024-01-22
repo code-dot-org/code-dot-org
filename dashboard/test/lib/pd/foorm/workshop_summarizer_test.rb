@@ -98,7 +98,7 @@ module Pd::Foorm
       ).with_indifferent_access
 
       facilitator_answers = summarized_answers['Post Workshop'.to_s][:facilitator]['surveys/pd/workshop_csf_intro_post_test.0']
-      assert_not_empty facilitator_answers
+      refute_empty facilitator_answers
       expected_matrix_data = {
         demonstrated_knowledge: {'7': 1, '1': 1},
         built_equitable: {'7': 1, '1': 1},
@@ -154,7 +154,7 @@ module Pd::Foorm
       }.with_indifferent_access
 
       facilitator_answers = summarized_answers['Post Workshop'.to_s][:facilitator]['surveys/pd/workshop_csf_intro_post_test.0']
-      assert_not_empty facilitator_answers
+      refute_empty facilitator_answers
 
       assert_equal expected_matrix_data_high, facilitator_answers[:facilitator_effectiveness][facilitator1.id]
       assert_equal expected_matrix_data_low, facilitator_answers[:facilitator_effectiveness][facilitator2.id]

@@ -26,7 +26,7 @@ theme: responsive
 
 <a id="hoc"></a>
 <h2>Try an Hour of Code with these fun introductory tutorial</h2>
-<p>Try a <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">one-hour tutorial</a> featuring popular games and movies like Minecraft, Frozen, and Star Wars. Many tutorials are structured like games, designed to teach basic computer science concepts in fun, engaging ways.</p>
+<p>Try a <a class="linktag" id="hoc-overview" href="/hourofcode" target="_blank">one-hour tutorial</a> featuring popular games and movies like Minecraft, Frozen, and Star Wars. Many tutorials are structured like games, designed to teach basic computer science concepts in fun, engaging ways.</p>
 <br>
 
 <div class="col-33" style="padding-bottom:15px">
@@ -154,7 +154,7 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Pre-reader Express Course"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Express Course for pre-readers</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Pre-reader Express Course"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank">Express Course for pre-readers</a>
 
 </div>
 <div style="clear: both; margin-bottom: 2rem"></div>

@@ -11,16 +11,17 @@
   - else
     We've received your application.
     = @application.regional_partner&.name || 'We'
-    will review your application within 2 to 4 weeks.
+    will review your application within 2-4 weeks.
 
 - if !@application.regional_partner
   %p
-    We do not have a Regional Partner in your area. However, we have a number of partners in nearby states or regions
-    who may have space available in their program. We'll let you know if we can find you a nearby spot in the program!
+    We do not have a Regional Partner in your area. However, a partner in a nearby state or region
+    may have space available in their program or there may be a virtual workshop option available.
+    We'll let you know when we can find you a spot in the program!
 
   %p
     If we find a spot, we'll let you know the workshop dates and program fees (if applicable) so you can decide at
-    that point if it is something you or your school can cover.
+    that point if the workshop will work for you.
 
 - if @application.status == 'awaiting_admin_approval'
   %p
@@ -37,19 +38,20 @@
     has applied to
     = @application.effective_regional_partner_name + "'s"
     Professional Learning Program!" with a link to the approval form. To prevent delay, we encourage you to also contact
-    them directly to make them aware of the approval requirement. If they can not find the email you can also give them
+    them directly to make them aware of the approval requirement. If they cannot find the email, you can also give them
     this unique link to the
     = link_to 'Administrator/School Leader approval form', @application.principal_approval_url
     for your application.
 
     %p
-      Your application will not be fully reviewed until the school administrator/leader approval form is received.
       After your school administrator/leader submits the approval form using the unique link,
       = @application.effective_regional_partner_name
-      will review your application within 2 to 4 weeks.
+      will review your application within 2-4 weeks.
+      Your application will not be fully reviewed until the school administrator/leader approval
+      form is received.
 
     %p
-      Thank you for helping in expediting the application review process by letting your school administrator/leader
+      Thank you for helping to expedite the application review process by letting your school administrator/leader
       know where to find the approval form in their inbox and the urgency of submitting it.
 
 %p

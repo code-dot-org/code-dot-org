@@ -28,7 +28,7 @@
           "id": "العمر"
         },
         "Gender": {
-          "id": "الجنس"
+          "id": "نوع الجنس "
         }
       }
     },
@@ -317,8 +317,8 @@
           "id": "الرقص"
         },
         "Gender": {
-          "description": "الجنس",
-          "id": "الجنس"
+          "description": "نوع الجنس ",
+          "id": "نوع الجنس "
         },
         "Height": {
           "description": "الارتفاع",
@@ -344,12 +344,16 @@
     }
   },
   "incorrectAnswer": "غير صحيح",
+  "modelCardFeatures": "الميزات",
+  "modelCardLabel": "التسمية",
   "modelCardPossibleValuesMaximum": "الأكبر",
   "modelCardPossibleValuesMinimum": "على الاقل ",
   "navigateBack": "العودة",
   "navigateDone": "إنهاء",
   "navigateForward": "الاستمرار",
+  "resultsTableFeatureHeader": "الميزات",
   "saveProgress": "حفظ\n",
+  "trainModelHeading": "التدريب",
   "tryAgain": "حاول مرة أخرى",
   "uniqueOptionsWarningNotice": "ملاحظة"
 }

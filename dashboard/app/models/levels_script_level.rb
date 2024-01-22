@@ -35,7 +35,7 @@ class LevelsScriptLevel < ApplicationRecord
 
     my_script_level = seed_context.script_levels.select {|sl| sl.id == script_level_id}.first
     raise "No ScriptLevel found for #{self.class}: #{inspect}" unless my_script_level
-    script_level_seeding_key = my_script_level.seeding_key(seed_context, use_existing_level_keys)
+    script_level_seeding_key = my_script_level.seeding_key(seed_context, use_existing_level_keys: use_existing_level_keys)
 
     my_key.merge!(script_level_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
     my_key = my_key.stringify_keys

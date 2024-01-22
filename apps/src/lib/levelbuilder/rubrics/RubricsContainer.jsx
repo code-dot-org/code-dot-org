@@ -1,33 +1,28 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import {BodyTwoText, Heading1} from '@cdo/apps/componentLibrary/typography';
+import {
+  BodyThreeText,
+  BodyTwoText,
+  Heading1,
+} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/templates/Button';
-import {navigateToHref} from '@cdo/apps/utils';
 import RubricEditor from './RubricEditor';
-import {snakeCase} from 'lodash';
-
-const RUBRIC_PATH = '/rubrics';
+import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import {saveRubricToTable, SAVING_TEXT, styles} from './rubricHelper';
 
 export default function RubricsContainer({
   unitName,
   lessonNumber,
-  levels,
+  submittableLevels,
   rubric,
   lessonId,
 }) {
   const [learningGoalList, setLearningGoalList] = useState(
-    !!rubric
-      ? rubric.learningGoals
-      : [
-          {
-            key: 'learningGoal-1',
-            id: 'learningGoal-1',
-            learningGoal: '',
-            aiEnabled: false,
-            position: 1,
-          },
-        ]
+    !!rubric ? rubric.learningGoals : initialLearningGoal
   );
+
+  const [saveNotificationText, setSaveNotificationText] = useState('');
+  const hasSubmittableLevels = submittableLevels.length > 0;
 
   const generateLearningGoalKey = () => {
     let learningGoalNumber = learningGoalList.length + 1;
@@ -40,7 +35,7 @@ export default function RubricsContainer({
       learningGoalNumber++;
     }
 
-    return `learningGoal-${learningGoalNumber}`;
+    return `ui-${learningGoalNumber}`;
   };
 
   const emptyKeyConcept = () => {
@@ -55,6 +50,29 @@ export default function RubricsContainer({
       learningGoal: '',
       aiEnabled: false,
       position: nextPosition,
+      tips: null,
+      learningGoalEvidenceLevelsAttributes: [
+        {
+          teacherDescription: '',
+          understanding: RubricUnderstandingLevels.NONE,
+          aiPrompt: '',
+        },
+        {
+          teacherDescription: '',
+          understanding: RubricUnderstandingLevels.LIMITED,
+          aiPrompt: '',
+        },
+        {
+          teacherDescription: '',
+          understanding: RubricUnderstandingLevels.CONVINCING,
+          aiPrompt: '',
+        },
+        {
+          teacherDescription: '',
+          understanding: RubricUnderstandingLevels.EXTENSIVE,
+          aiPrompt: '',
+        },
+      ],
     };
   };
 
@@ -68,20 +86,44 @@ export default function RubricsContainer({
     setLearningGoalList([...oldLearningGoalList, startingData]);
   };
 
-  const deleteKeyConcept = id => {
-    event.preventDefault();
-    var updatedLearningGoalList = learningGoalList.filter(
-      item => item.id !== id
-    );
-    setLearningGoalList(updatedLearningGoalList);
-  };
-
-  const updateLearningGoal = (idToUpdate, keyToUpdate, newValue) => {
+  const updateLearningGoal = (
+    idToUpdate,
+    keyToUpdate,
+    newValue,
+    evidenceLevel,
+    evidenceLevelKeyToUpdate
+  ) => {
     const newLearningGoalData = learningGoalList.map(learningGoal => {
       if (idToUpdate === learningGoal.id) {
+        if (keyToUpdate === 'learningGoalEvidenceLevelsAttributes') {
+          const newEvidenceLevels =
+            learningGoal.learningGoalEvidenceLevelsAttributes;
+          newEvidenceLevels.find(
+            level => level.understanding === evidenceLevel
+          )[evidenceLevelKeyToUpdate] = newValue;
+          return {
+            ...learningGoal,
+            [keyToUpdate]: newEvidenceLevels,
+          };
+        } else {
+          return {
+            ...learningGoal,
+            [keyToUpdate]: newValue,
+          };
+        }
+      } else {
+        return learningGoal;
+      }
+    });
+    setLearningGoalList(newLearningGoalData);
+  };
+
+  const deleteLearningGoal = idToDelete => {
+    const newLearningGoalData = learningGoalList.map(learningGoal => {
+      if (idToDelete === learningGoal.id) {
         return {
           ...learningGoal,
-          [keyToUpdate]: newValue,
+          _destroy: true,
         };
       } else {
         return learningGoal;
@@ -90,108 +132,93 @@ export default function RubricsContainer({
     setLearningGoalList(newLearningGoalData);
   };
 
-  // TODO: Check that there is at least one programming level here
-  const initialLevelForAssessment = !!rubric ? rubric.levelId : levels[0].id;
+  // TODO-AITT-168: Check that there is at least one submittable programming level here
+  const initialLevelForAssessment = !!rubric
+    ? rubric.levelId
+    : submittableLevels[0].id;
   const [selectedLevelForAssessment, setSelectedLevelForAssessment] = useState(
     initialLevelForAssessment
   );
 
-  const saveRubric = event => {
+  // TODO-AITT-171: Enable deleting LearningGoals when saveRubric is called
+  const saveRubric = async event => {
     event.preventDefault();
-    const dataUrl = !!rubric ? `/rubrics/${rubric.id}` : RUBRIC_PATH;
-    const method = !!rubric ? 'PATCH' : 'POST';
-
-    // Checking that the csrf-token exists since it is disabled on test
-    const csrfToken = document.querySelector('meta[name="csrf-token"]')
-      ? document.querySelector('meta[name="csrf-token"]').attributes['content']
-          .value
-      : null;
-
-    const learningGoalListAsData = transformKeys(learningGoalList);
-
-    const rubric_data = {
-      levelId: selectedLevelForAssessment,
-      lessonId: lessonId,
-      learningGoalsAttributes: learningGoalListAsData,
-    };
-
-    fetch(dataUrl, {
-      method: method,
-      headers: {
-        'Content-Type': 'application/json',
-        'X-CSRF-Token': csrfToken,
-      },
-      body: JSON.stringify(rubric_data),
-    })
-      .then(response => response.json())
-      .then(data => {
-        navigateToHref(data.redirectUrl);
-      })
-      .catch(err => {
-        console.error('Error saving rubric:' + err);
-      });
+    await saveRubricToTable(
+      setSaveNotificationText,
+      rubric,
+      learningGoalList,
+      setLearningGoalList,
+      selectedLevelForAssessment,
+      lessonId
+    );
   };
 
-  // transforms keys from camelCase to snake_case for rails
-  // specifically created to do this for an array of objects
-  // with keys in camelCase
-  function transformKeys(startingList) {
-    const newList = [];
-
-    startingList.forEach(item => {
-      const newItem = {};
-      for (const [key, value] of Object.entries(item)) {
-        newItem[snakeCase(key)] = value;
-      }
-      newList.push(newItem);
-    });
-
-    return newList;
+  function renderOptions() {
+    const selectOptions = submittableLevels.map(level => (
+      <option key={level.id} value={level.id}>
+        {level.name}
+      </option>
+    ));
+    return selectOptions;
   }
 
   const handleDropdownChange = event => {
     setSelectedLevelForAssessment(event.target.value);
   };
 
-  // TODO: In the future we might want to filter the levels in the dropdown for "submittable" levels
-  //  "submittable" is in the properties of each level in the list.
+  const pageHeader = !!rubric ? 'Modify your rubric' : 'Create your rubric';
+
   return (
     <div>
-      <Heading1>Create or modify your rubric</Heading1>
-      <BodyTwoText>
-        This rubric will be used for {unitName}, lesson {lessonNumber}.
-      </BodyTwoText>
-
-      <div style={styles.containerStyle}>
-        <label>Choose a level for this rubric to be evaluated on</label>
-        <select
-          id="rubric_level_id"
-          required={true}
-          onChange={handleDropdownChange}
-          value={selectedLevelForAssessment}
-        >
-          {levels.map(level => (
-            <option key={level.id} value={level.id}>
-              {level.name}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      <RubricEditor
-        learningGoalList={learningGoalList}
-        addNewConcept={addNewConceptHandler}
-        deleteItem={id => deleteKeyConcept(id)}
-        updateLearningGoal={updateLearningGoal}
-      />
-      <div style={styles.bottomRow}>
-        <Button
-          color={Button.ButtonColor.brandSecondaryDefault}
-          text="Save your rubric"
-          onClick={saveRubric}
-          size={Button.ButtonSize.narrow}
-        />
-      </div>
+      <Heading1>{pageHeader}</Heading1>
+      {hasSubmittableLevels && (
+        <div>
+          <BodyTwoText>
+            This rubric will be used for {unitName}, lesson {lessonNumber}.
+          </BodyTwoText>
+          <div style={styles.containerStyle}>
+            <label>Choose a level for this rubric to be evaluated on</label>
+            <select
+              id="rubric_level_id"
+              required={true}
+              onChange={handleDropdownChange}
+              value={selectedLevelForAssessment}
+            >
+              {renderOptions()}
+            </select>
+          </div>
+          <RubricEditor
+            learningGoalList={learningGoalList}
+            addNewConcept={addNewConceptHandler}
+            deleteLearningGoal={deleteLearningGoal}
+            updateLearningGoal={updateLearningGoal}
+          />
+          <div style={styles.bottomRow}>
+            <Button
+              className="ui-test-save-button"
+              color={Button.ButtonColor.brandSecondaryDefault}
+              text="Save your rubric"
+              onClick={saveRubric}
+              size={Button.ButtonSize.narrow}
+              disabled={saveNotificationText === SAVING_TEXT}
+            />
+          </div>
+          <div style={styles.bottomRow}>
+            <BodyThreeText>{saveNotificationText}</BodyThreeText>
+          </div>
+        </div>
+      )}
+      {!hasSubmittableLevels && (
+        <div>
+          <BodyTwoText>
+            {unitName}, lesson {lessonNumber} currently has no submittable
+            levels. To create or modify a rubric, there must be a submittable
+            level connected to the rubric. Go back to the lesson landing page
+            and either add a new submittable level or modify an existing level
+            to be submittable.
+          </BodyTwoText>
+        </div>
+      )}
     </div>
   );
 }
@@ -199,21 +226,44 @@ export default function RubricsContainer({
 RubricsContainer.propTypes = {
   unitName: PropTypes.string,
   lessonNumber: PropTypes.number,
-  levels: PropTypes.arrayOf(
-    PropTypes.shape({id: PropTypes.number, name: PropTypes.string})
+  submittableLevels: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string,
+    })
   ),
   rubric: PropTypes.object,
   lessonId: PropTypes.number,
 };
 
-const styles = {
-  containerStyle: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: 10,
+const initialLearningGoal = [
+  {
+    key: 'ui-1',
+    id: 'ui-1',
+    learningGoal: '',
+    aiEnabled: false,
+    position: 1,
+    learningGoalEvidenceLevelsAttributes: [
+      {
+        teacherDescription: '',
+        understanding: RubricUnderstandingLevels.NONE,
+        aiPrompt: '',
+      },
+      {
+        teacherDescription: '',
+        understanding: RubricUnderstandingLevels.LIMITED,
+        aiPrompt: '',
+      },
+      {
+        teacherDescription: '',
+        understanding: RubricUnderstandingLevels.CONVINCING,
+        aiPrompt: '',
+      },
+      {
+        teacherDescription: '',
+        understanding: RubricUnderstandingLevels.EXTENSIVE,
+        aiPrompt: '',
+      },
+    ],
   },
-  bottomRow: {
-    display: 'flex',
-    justifyContent: 'space-between',
-  },
-};
+];

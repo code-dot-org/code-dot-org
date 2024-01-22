@@ -16,7 +16,7 @@ title: 방과후 수업을 위한 아워오브코드 하우 투 가이드
 
 * * *
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. 하우 투 동영상 시청 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ## 2. 튜토리얼을 선택하십시오.
 
@@ -73,7 +73,7 @@ The best Hour of Code experience includes Internet-connected computers. 하지�
 
 - [학생들을 위한 인증서를]({{ urls/certificates }}) 프린트합니다.
 - [학생들을 위한 "아워오브코드를 해냈다!"]({{ promote/resources_stickers }}) 라는 스티커를 인쇄하세요.
-- [참가자를 위한 티 셔츠](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) 를 주문하세요.
+- [참가자를](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) 위한 맞춤 티셔츠를 주문하세요.
 - 소셜 미디어에 여러분의 Hour of Code 이벤트 사진이나 동영상을 공유하세요. #HourOfCode 와 @codeorg를 이용하면 우리도 여러분의 성공을 강조할 수 있어요.
 
 ## 교육자를 위한 기타 아워오브 리소스

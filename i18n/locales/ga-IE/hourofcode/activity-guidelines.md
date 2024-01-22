@@ -10,7 +10,7 @@ title: Treoirlínte Gníomhaíochta
 
 # Treoirlínte maidir le ranganna teagaisc agus ceachtanna a chruthú agus a chur isteach le haghaidh Uair an Chóid™ agus Seachtain Oideachais na Ríomheolaíochta
 
-Code.org hóstach ar éagsúlacht na Uair an Chóid™ gníomhaíochtaí, ceachtanna, agus físeáin ar an Code.org agus Uair na láithreáin ghréasáin Cód. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org hóstach ar éagsúlacht na Uair an Chóid™ gníomhaíochtaí, ceachtanna, agus físeáin ar an Code.org agus Uair na láithreáin ghréasáin Cód. Tá an liosta reatha ag []({{ urls/learn }})hourofcode.com/learn.
 
 Ar mhaith leat do rang teagaisc féin-threoraithe féin, ceacht faoi stiúir an mhúinteora, nó gníomhaíocht róbataiceacha/déantóra a chur isteach a mhíníonn prionsabal eolaíochta ríomhaireachta? Bí ar an ngluaiseacht dhomhanda seo agus cuidigh le rannpháirtithe ar fud an domhain tosú le uair an chloig de chód nó téigh níos faide le gníomhaíochtaí ilcheachta, lae nó seachtaine.
 
@@ -45,7 +45,7 @@ Tá roinnt leideanna:
 
 Dearadh na gníomhaíochtaí seo do mhic léinn féin-dhíreach a dhéanamh trí rang teagaisc. Níl siad a cheangal ar teagasc i bhfad ó mhúinteoir nó obair prep múinteoir.
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Ceacht Éascaithe do Mhúinteoirí ([mar shampla](https://studio.code.org/s/course1/lessons/2/levels/1), [teimpléad](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
 Anois go ndearna na céadta mílte oideachasóirí iarracht ar Uair an Chóid, tá go leor seomraí ranga réidh le haghaidh gníomhaíochtaí níos cruthaithí a mhúineann buneilimintí na heolaíochta ríomhaireachta. Chun cabhrú le múinteoirí níos airde inspioráid a fháil, bailímid agus coimeádaimid ceachtanna agus pleananna gníomhaíochta “faoi stiúir an mhúinteora” do shean-saighdiúirí Uair an Chóid.
 
@@ -84,7 +84,7 @@ Is é an sprioc de Uair an Chóid a thabhairt thosaitheoirí blas an chéad inro
 
 Ba chóir na gníomhaíochtaí a mhúineadh coincheap eolaíocht ríomhaireachta ar nós lúba, conditionals, criptithe, nó conas a oibríonn an Idirlíon. Is féidir le gníomhaíocht múineadh freisin faoin gcaoi a nascann eolaíocht ríomhaireachta le gairmeacha, imeachtaí nó stair an domhain réadaigh. Mar shampla, dearadh UX a mhúineadh chun aipeanna a dhéanamh a bhfuil brí leo do lucht féachana nó do chúis. Spreagann muid gníomhaíochtaí a dhíríonn ar chomhréir na gclár seachas na coincheapa. Mar shampla, liostóimid gníomhaíochtaí a mhúineann HTML, ach gan aird a tharraingt orthu. Ar an gcaoi chéanna, díspreagann muid bloccheachtanna cláraithe a dhíríonn ar roghanna cumraíochta a shocrú/a athrú seachas foghlaim conas algartam nó próiseas a shamhaltú.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Tá gníomhaíochtaí a éilíonn aip-shuiteáil, aip deisce, nó eispéiris consól cluiche ceart go leor ach níl siad oiriúnach. Ní liostóimid gníomhaíochtaí a dteastaíonn clárú nó íocaíocht uathu. (Is féidir le gníomhaíochtaí róbataic a cheangal ar cheannach róbataic.)
+*Ceanglais theicniúla:* Mar gheall ar an réimse leathan socruithe teicneolaíochta scoile agus seomra ranga, tá na gníomhaíochtaí is fearr bunaithe ar an nGréasán nó cairdiúil don fhón cliste, nó gníomhaíochtaí ar stíl neamhphlugáilte ar bhealach eile a mhúineann coincheapa eolaíochta ríomhaireachta gan ríomhaire a úsáid (féach http://csunplugged.com/). [](http://csunplugged.com/) Tá gníomhaíochtaí a éilíonn aip-shuiteáil, aip deisce, nó eispéiris consól cluiche ceart go leor ach níl siad oiriúnach. Ní liostóimid gníomhaíochtaí a dteastaíonn clárú nó íocaíocht uathu. (Is féidir le gníomhaíochtaí róbataic a cheangal ar cheannach róbataic.)
 
 *Formáid faoi stiúir an Mhic Léinn (Féin-Threoraithe):* Tógadh an Uair an Chóid bunaidh den chuid is mó ar rath ranganna teagaisc nó ceachtanna féin-threoraithe, arna éascú ag an múinteoir go roghnach. Tá neart na roghanna atá ann cheana, ach más mian leat a chruthú ceann nua, Ba chóir na gníomhaíochtaí a dhearadh ionas gur féidir leo a bheith spraoi do mhac léinn ag obair ina n-aonar, nó i seomra ranga a bhfuil a múinteoir prep íosta nó CS cúlra. Ba chóir dóibh treoracha a sholáthar do mhic léinn seachas dúshlán oscailte uair an chloig. Go hidéalach, déantar na treoracha agus na ranganna teagaisc a chomhtháthú go díreach san ardán cláraithe, chun cluaisíní nó fuinneoga a athrú idir an rang teagaisc agus an t-ardán cláraithe.
 
@@ -141,11 +141,11 @@ Cad beidh ort:
     * Unplugged
 * Seat nó íomhá margaíochta de ghníomhaíocht Uair an Chóid. Seol íomhá amháin ar a laghad le toisí 4:3. Ba chóir go mbeadh 520px ar a laghad faoi 390px. Níor cheart go mbeadh NÍL téacs ar an íomhá seo (seachas do lógó), d'fhonn í a dhéanamh níos inrochtana do chainteoirí nach cainteoirí Béarla iad. Mura gcuirtear íomhá chuí ar fáil, féadfaimid ár seat féin de do rang teagaisc a thógáil NÓ is féidir linn a roghnú gan é a liostáil. Caithfear gach íomhá a chur isteach mar nasc URL chuig .jpg, .jpeg, nó .png.
 * D'fhonn rannpháirtíocht a rianú níos cruinne, ní mór do chomhpháirtithe teagaisc tríú páirtí íomhánna rianaithe 1-picteilín a áireamh ar an gcéad leathanach dá ranganna teagaisc Uair an Chóid. Féach an rannán [Tracking Pixel](#pixel) thíos le haghaidh tuilleadh sonraí.
-* Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
+* Ar chríochnú do ghníomhaíocht, ba chóir úsáideoirí a chur chuig [code.org/api/hour/finish](https://code.org/api/hour/finish) áit a mbeidh siad in ann: 
     * Comhroinn ar na meáin shóisialta gur chríochnaigh siad Uair an Chóid
     * Deimhniú a fháil gur chomhlíon siad Uair an Chóid
     * Féach leaderboards faoi a bhfuil na tíortha/cathracha na rátaí rannpháirtíochta is airde i ngníomhaíochtaí Uair an Chóid
-    * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
+    * Maidir le húsáideoirí a chaitheann uair an chloig ar do ghníomhaíocht agus nach gcríochnaíonn é, cuir cnaipe ar do ghníomhaíocht a deir “Táim críochnaithe le mo Uair an Chóid” a nascann ar ais go [](https://code.org/api/hour/finish) code.org/api/uair/bailchríoch chomh maith.
 * (Roghnach) Féadfaimid obair leantach a dhéanamh le suirbhé ar líne/nasc foirme ag iarraidh tuairisc ar na méadrachtaí gníomhaíochta seo a leanas: 
     * Le haghaidh gníomhaíochtaí ar líne (go háirithe fón cliste/aipeanna táibléid): 
         * Líon na n-úsáideoirí
@@ -262,7 +262,7 @@ TABHAIR FAOI DEARA: nach bhfuil sé seo tábhachtach a dhéanamh le haghaidh app
 
 Sampla rianú picteilíní do Damhsa Páirtí:
 
-IMG SRC = <http://code.org/api/hour/begin_dance.png>   
+IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
 
 [**Ar ais go dtí an barr**](#top)

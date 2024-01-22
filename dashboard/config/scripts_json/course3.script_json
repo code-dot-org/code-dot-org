@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "announcements": [
+        {
+          "key": "f503efed-1d08-4a36-b7ba-e64f583d5209",
+          "notice": "Course Warning",
+          "details": "We are in the process of fully removing the Course 3 content and course from Code.org within the next 6-8 months, as we no longer actively support this older offering. Any existing bugs or seemingly-missing content within Course 3 content will unfortunately not be addressed or fixed, as we work towards fully removing it and dedicate our staff resources on new content offerings.",
+          "link": "https://support.code.org/hc/en-us/articles/16268528601101-List-of-Deprecated-or-Non-Supported-Code-org-Courses",
+          "type": "warning",
+          "visibility": "Teacher-only",
+          "dismissible": false,
+          "buttonText": "Learn More"
+        }
+      ],
       "curriculum_path": "https://code.org/curriculum/course3/{LESSON}/Teacher",
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
@@ -21,7 +33,7 @@
     },
     "new_name": null,
     "family_name": "course3",
-    "serialized_at": "2023-05-17 13:59:01 UTC",
+    "serialized_at": "2023-09-18 14:47:33 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -7891,6 +7903,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

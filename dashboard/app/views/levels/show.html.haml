@@ -84,3 +84,7 @@
 
 - if @rubric.present? && current_user&.teacher?
   %div#rubric-fab-mount-point
+
+- if current_user&.has_ai_tutor_access? && @script&.csa?
+  = render partial: 'levels/ai_tutor_panel'
+

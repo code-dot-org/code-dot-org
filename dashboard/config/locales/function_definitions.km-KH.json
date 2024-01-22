@@ -30,6 +30,7 @@
             "name": "គូរ​រង្វង់​មួយ"
           },
           "draw square": {
+            "name": "គូរ​ការ៉េ",
             "parameters": {
               "height": "កម្ពស់",
               "width": "ទទឹង"
@@ -112,6 +113,11 @@
           },
           "witch ending": {
             "name": "មេធ្មប់ ចុងបញ្ចប់ "
+          }
+        },
+        "Course 4 Artist Functions challenge": {
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
           }
         },
         "Course 4 Bee Params 8": {
@@ -232,6 +238,11 @@
             "name": "អនុគមន៍របស់ខ្ញុំ"
           }
         },
+        "Course E: Artist Project_examples_2023": {
+          "my function": {
+            "name": "អនុគមន៍របស់ខ្ញុំ"
+          }
+        },
         "Course E: Frozen Project_examples2022": {
           "draw a circle": {
             "name": "គូរ​រង្វង់​មួយ"
@@ -274,6 +285,47 @@
           }
         },
         "Course E: Frozen Project_examples_2021": {
+          "draw a circle": {
+            "name": "គូរ​រង្វង់​មួយ"
+          },
+          "draw a house": {
+            "name": "គូរ​ផ្ទះ​មួយ",
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "ប្រវែង",
+              "repeat": "ធ្វើ​ឡើង​វិញ"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          },
+          "draw a square": {
+            "name": "គូរ​ការេ​មួយ",
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          },
+          "draw a star": {
+            "name": "គូរផ្កាយមួយ",
+            "parameters": {
+              "length": "ប្រវែង",
+              "points": "ពិន្ទុ"
+            }
+          },
+          "draw a triangle": {
+            "name": "គូរ​ត្រីកោណ​មួយ",
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          }
+        },
+        "Course E: Frozen Project_examples_2023": {
           "draw a circle": {
             "name": "គូរ​រង្វង់​មួយ"
           },
@@ -483,6 +535,47 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "name": "គូរ​រង្វង់​មួយ"
+          },
+          "draw a house": {
+            "name": "គូរ​ផ្ទះ​មួយ",
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "ប្រវែង",
+              "repeat": "ធ្វើ​ឡើង​វិញ"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          },
+          "draw a square": {
+            "name": "គូរ​ការេ​មួយ",
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          },
+          "draw a star": {
+            "name": "គូរផ្កាយមួយ",
+            "parameters": {
+              "length": "ប្រវែង",
+              "points": "ពិន្ទុ"
+            }
+          },
+          "draw a triangle": {
+            "name": "គូរ​ត្រីកោណ​មួយ",
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "name": "គូរ​រង្វង់​មួយ"
@@ -565,6 +658,47 @@
             }
           }
         },
+        "CourseD_EOC_artist_example2021_2023": {
+          "draw a circle": {
+            "name": "គូរ​រង្វង់​មួយ"
+          },
+          "draw a house": {
+            "name": "គូរ​ផ្ទះ​មួយ",
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "ប្រវែង",
+              "repeat": "ធ្វើ​ឡើង​វិញ"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          },
+          "draw a square": {
+            "name": "គូរ​ការេ​មួយ",
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          },
+          "draw a star": {
+            "name": "គូរផ្កាយមួយ",
+            "parameters": {
+              "length": "ប្រវែង",
+              "points": "ពិន្ទុ"
+            }
+          },
+          "draw a triangle": {
+            "name": "គូរ​ត្រីកោណ​មួយ",
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          }
+        },
         "Find the Wizard": {
           "check guess": {
             "name": "ឆែក ការទាយ "
@@ -601,6 +735,11 @@
           }
         },
         "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "សង់ស្ពាន"
+          }
+        },
+        "Function intro Ryan_2023": {
           "build bridge": {
             "name": "សង់ស្ពាន"
           }
@@ -683,6 +822,11 @@
             "name": "ទ្រោះត្រាយផ្លូវ"
           }
         },
+        "MC_HOC_2017_07_Cole_2023": {
+          "clear path": {
+            "name": "ទ្រោះត្រាយផ្លូវ"
+          }
+        },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
             "name": "ជួសជុលផ្លូវវែង"
@@ -716,6 +860,14 @@
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "ជួសជុលផ្លូវវែង"
+          },
+          "fix short path": {
+            "name": "ជួសជុលផ្លូវខ្លី"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2023": {
           "fix long path": {
             "name": "ជួសជុលផ្លូវវែង"
           },
@@ -761,6 +913,37 @@
           },
           "build short bridge": {
             "name": "សង់ស្ពានខ្លី"
+          }
+        },
+        "MC_HOC_2017_Ali_2023": {
+          "build long bridge": {
+            "name": "សង់ស្ពានវែង"
+          },
+          "build short bridge": {
+            "name": "សង់ស្ពានខ្លី"
+          }
+        },
+        "NEW Course 4 Artist Functions 11": {
+          "draw a line of  squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          }
+        },
+        "NEW Course 4 Artist Functions 12": {
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          }
+        },
+        "NEW Course 4 Artist Functions 13": {
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          }
+        },
+        "NEW Course 4 Artist Functions 14": {
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
           }
         },
         "NEW Course 4 Artist Functions 3": {
@@ -1140,6 +1323,11 @@
             "name": "ដំណោះស្រាយសក្តានុពល"
           }
         },
+        "courseB_artist_loops_challenge2_2023": {
+          "potential solution": {
+            "name": "ដំណោះស្រាយសក្តានុពល"
+          }
+        },
         "courseC_artist_prog3": {
           "draw flame": {
             "parameters": {
@@ -1202,6 +1390,11 @@
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
           }
         },
+        "courseC_data wizard_2023": {
+          "do something": {
+            "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          }
+        },
         "courseE_artist_concept1": {
           "do something": {
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
@@ -1216,11 +1409,17 @@
           }
         },
         "courseE_artist_concept4": {
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
           "draw a square": {
             "name": "គូរ​ការេ​មួយ"
           }
         },
         "courseE_artist_concept4_2018": {
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
           "draw a square": {
             "name": "គូរ​ការេ​មួយ"
           }
@@ -1265,6 +1464,11 @@
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          }
+        },
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "គូរ​ការេ​មួយ"
@@ -1291,6 +1495,11 @@
           }
         },
         "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "គូរ​ការេ​មួយ"
+          }
+        },
+        "courseE_artist_functions2_2023": {
           "draw a square": {
             "name": "គូរ​ការេ​មួយ"
           }
@@ -1326,6 +1535,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "គូរផ្កាយមួយ"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "គូរផ្កាយមួយ"
           }
@@ -1375,6 +1589,11 @@
             "name": "គូរផ្កាយមួយ"
           }
         },
+        "courseE_artist_functions5_2023": {
+          "draw a star": {
+            "name": "គូរផ្កាយមួយ"
+          }
+        },
         "courseE_artist_functions5_copy": {
           "draw a star": {
             "name": "គូរផ្កាយមួយ"
@@ -1388,46 +1607,122 @@
         "courseE_artist_functions7": {
           "draw a house": {
             "name": "គូរ​ផ្ទះ​មួយ"
+          },
+          "draw a window": {
+            "name": "គូរបង្អួចមួយ"
+          }
+        },
+        "courseE_artist_functions72022": {
+          "draw a window": {
+            "name": "គូរបង្អួចមួយ"
           }
         },
         "courseE_artist_functions7_2018": {
           "draw a house": {
             "name": "គូរ​ផ្ទះ​មួយ"
+          },
+          "draw a window": {
+            "name": "គូរបង្អួចមួយ"
+          }
+        },
+        "courseE_artist_functions7_2019": {
+          "draw a window": {
+            "name": "គូរបង្អួចមួយ"
           }
         },
         "courseE_artist_functions7_2020": {
           "draw a house": {
             "name": "គូរ​ផ្ទះ​មួយ"
+          },
+          "draw a window": {
+            "name": "គូរបង្អួចមួយ"
+          }
+        },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "គូរបង្អួចមួយ"
+          }
+        },
+        "courseE_artist_functions7_2023": {
+          "draw a window": {
+            "name": "គូរបង្អួចមួយ"
           }
         },
         "courseE_artist_functions8": {
           "do something": {
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          },
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
+          "draw square": {
+            "name": "គូរ​ការ៉េ"
           }
         },
         "courseE_artist_functions82022": {
           "do something": {
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          },
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
+          "draw square": {
+            "name": "គូរ​ការ៉េ"
           }
         },
         "courseE_artist_functions8_2018": {
           "do something": {
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          },
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
+          "draw square": {
+            "name": "គូរ​ការ៉េ"
           }
         },
         "courseE_artist_functions8_2019": {
           "do something": {
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          },
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
+          "draw square": {
+            "name": "គូរ​ការ៉េ"
           }
         },
         "courseE_artist_functions8_2020": {
           "do something": {
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          },
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
+          "draw square": {
+            "name": "គូរ​ការ៉េ"
           }
         },
         "courseE_artist_functions8_2021": {
           "do something": {
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          },
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
+          "draw square": {
+            "name": "គូរ​ការ៉េ"
+          }
+        },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          },
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
+          "draw square": {
+            "name": "គូរ​ការ៉េ"
           }
         },
         "courseE_artist_functions8a2022": {
@@ -1470,54 +1765,144 @@
             "name": "គូរ​ការេ​មួយ"
           }
         },
+        "courseE_artist_functions8a_2023": {
+          "do something": {
+            "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          },
+          "draw a square": {
+            "name": "គូរ​ការេ​មួយ"
+          }
+        },
         "courseE_artist_functions8b2022": {
           "do something": {
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          },
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
+          "draw square": {
+            "name": "គូរ​ការ៉េ"
           }
         },
         "courseE_artist_functions8b_2018": {
           "do something": {
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          },
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
+          "draw square": {
+            "name": "គូរ​ការ៉េ"
           }
         },
         "courseE_artist_functions8b_2019": {
           "do something": {
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          },
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
+          "draw square": {
+            "name": "គូរ​ការ៉េ"
           }
         },
         "courseE_artist_functions8b_2020": {
           "do something": {
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          },
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
+          "draw square": {
+            "name": "គូរ​ការ៉េ"
           }
         },
         "courseE_artist_functions8b_2021": {
           "do something": {
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          },
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
+          "draw square": {
+            "name": "គូរ​ការ៉េ"
+          }
+        },
+        "courseE_artist_functions8b_2023": {
+          "do something": {
+            "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          },
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
+          "draw square": {
+            "name": "គូរ​ការ៉េ"
           }
         },
         "courseE_artist_functions8c2022": {
           "do something": {
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          },
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
+          "draw square": {
+            "name": "គូរ​ការ៉េ"
           }
         },
         "courseE_artist_functions8c_2018": {
           "do something": {
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          },
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
+          "draw square": {
+            "name": "គូរ​ការ៉េ"
           }
         },
         "courseE_artist_functions8c_2019": {
           "do something": {
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          },
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
+          "draw square": {
+            "name": "គូរ​ការ៉េ"
           }
         },
         "courseE_artist_functions8c_2020": {
           "do something": {
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          },
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
+          "draw square": {
+            "name": "គូរ​ការ៉េ"
           }
         },
         "courseE_artist_functions8c_2021": {
           "do something": {
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          },
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
+          "draw square": {
+            "name": "គូរ​ការ៉េ"
+          }
+        },
+        "courseE_artist_functions8c_2023": {
+          "do something": {
+            "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          },
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
+          "draw square": {
+            "name": "គូរ​ការ៉េ"
           }
         },
         "courseE_artist_functions9": {
@@ -1550,6 +1935,59 @@
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
           }
         },
+        "courseE_artist_functions9_2023": {
+          "do something": {
+            "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          }
+        },
+        "courseE_artist_functionsProj2022": {
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
+          "draw square": {
+            "name": "គូរ​ការ៉េ"
+          }
+        },
+        "courseE_artist_functionsProj_2018": {
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
+          "draw square": {
+            "name": "គូរ​ការ៉េ"
+          }
+        },
+        "courseE_artist_functionsProj_2019": {
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
+          "draw square": {
+            "name": "គូរ​ការ៉េ"
+          }
+        },
+        "courseE_artist_functionsProj_2020": {
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
+          "draw square": {
+            "name": "គូរ​ការ៉េ"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
+          "draw square": {
+            "name": "គូរ​ការ៉េ"
+          }
+        },
+        "courseE_artist_functionsProj_2023": {
+          "draw a line of squares": {
+            "name": "គូរមួយជួរនៃការ៉េ"
+          },
+          "draw square": {
+            "name": "គូរ​ការ៉េ"
+          }
+        },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
@@ -1576,6 +2014,11 @@
           }
         },
         "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "do something": {
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
           }
@@ -1610,6 +2053,11 @@
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "គូរ​ការេ​មួយ"
@@ -1636,6 +2084,11 @@
           }
         },
         "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "គូរ​ការេ​មួយ"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
           "draw a square": {
             "name": "គូរ​ការេ​មួយ"
           }
@@ -1676,6 +2129,11 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
           }
@@ -1735,6 +2193,36 @@
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
           }
         },
+        "courseE_farmer_functions10a12022": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions10a1_2018": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions10a1_2019": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions10a1_2020": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions10a1_2021": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions10a1_2023": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
         "courseE_farmer_functions10b": {
           "navigate": {
             "name": "រុករក"
@@ -1751,14 +2239,224 @@
             "name": "ទីតាំង​ថត"
           }
         },
+        "courseE_farmer_functions11_predict2022": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions11_predict_2018": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions11_predict_2019": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions11_predict_2020": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions11_predict_2021": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions11_predict_2023": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions132022": {
+          "check for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions13_2018": {
+          "check for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions13_2019": {
+          "check for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions13_2020": {
+          "check for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions13_2021": {
+          "check for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions13_2023": {
+          "check for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions1a2022": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions1a_2018": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions1a_2019": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions1a_2020": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions1a_2021": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions1a_2023": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions2b2022": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions2b_2018": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions2b_2019": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions2b_2020": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions2b_2023": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
         "courseE_farmer_functions2ba": {
           "corn and pumpkin": {
             "name": "ពោតនិងល្ពៅ"
           }
         },
+        "courseE_farmer_functions2ba2022": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions2ba_2018": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions2ba_2019": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions2ba_2020": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions2ba_2023": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
         "courseE_farmer_functions3c": {
           "corn and pumpkin": {
             "name": "ពោតនិងល្ពៅ"
+          }
+        },
+        "courseE_farmer_functions3c12022": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions3c1_2018": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions3c1_2019": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions3c1_2020": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions3c1_2023": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions3c2022": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions3c_2018": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions3c_2019": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions3c_2020": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
+          }
+        },
+        "courseE_farmer_functions3c_2023": {
+          "check square for corn": {
+            "name": "ពិនិត្យពោត"
           }
         },
         "courseE_farmer_functions4b": {
@@ -1817,6 +2515,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "បញ្ចប់​ហ្គេម"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "បញ្ចប់​ហ្គេម"
           }

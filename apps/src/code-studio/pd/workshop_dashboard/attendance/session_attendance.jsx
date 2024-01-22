@@ -6,13 +6,19 @@ import React from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
 import _ from 'lodash';
+import fontConstants from '@cdo/apps/fontConstants';
 import SessionAttendanceRow from './session_attendance_row';
 import VisibilitySensor from '../components/visibility_sensor';
 import Spinner from '../../components/spinner';
 import {Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import IdleTimer from 'react-idle-timer';
 import {COURSE_CSF} from '../workshopConstants';
-import {PermissionPropType, WorkshopAdmin, ProgramManager} from '../permission';
+import {
+  PermissionPropType,
+  WorkshopAdmin,
+  ProgramManager,
+  Facilitator,
+} from '../permission';
 
 // in milliseconds
 const REFRESH_DELAY = 5000;
@@ -145,7 +151,11 @@ export class SessionAttendance extends React.Component {
           accountRequiredForAttendance={this.props.accountRequiredForAttendance}
           scholarshipWorkshop={this.props.scholarshipWorkshop}
           displayYesNoAttendance={
-            !this.props.permission.hasAny(WorkshopAdmin, ProgramManager)
+            !this.props.permission.hasAny(
+              WorkshopAdmin,
+              ProgramManager,
+              Facilitator
+            )
           }
         />
       );
@@ -200,7 +210,7 @@ const styles = {
     opacity: 0.5,
   },
   attendanceSummary: {
-    fontFamily: 'Gotham 4r',
+    ...fontConstants['main-font-regular'],
     fontSize: 16,
     margin: 15,
   },

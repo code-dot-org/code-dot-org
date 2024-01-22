@@ -34,17 +34,17 @@ Utilizza [questo messaggio di posta elettronica]({{ promote/sample_emails }}) o 
 
 Consulta la nostra [guida]({{ urls/how_to_events }}) per l'organizzazione degli eventi e [altre risorse per la pianificazione di eventi]({{ promote/press_kit_url }}). Organizzare un evento è un ottimo modo per promuovere l'Ora del Codice ed aumentare la partecipazione.
 
-### 4. Partecipa ad un evento durante la Settimana di educazione all'informatica ({{ campaign_date/short }})
+### 4. Partecipa ad un evento durante la Settimana Internazionale di Educazione all'Informatica ({{ campaign_date/short }})
 
 [Trova classi e scuole]({{ urls/events }}) che partecipano nella tua città o in provincia.
 
 ### 5. Pubblica una dichiarazione o una delibera
 
-Consulta questo [esempio di risoluzione]({{ urls/proclamation }}) a sostegno della Settimana di educazione all'informatica e dei suoi obiettivi che potrebbero essere condivisi dagli amministratori locali.
+Consulta questo [esempio di risoluzione]({{ urls/proclamation }}) a sostegno della Settimana Internazionale di Educazione all'Informatica e dei suoi obiettivi che potrebbero essere condivisi dagli amministratori locali.
 
 ### 6. Abbozza un editoriale
 
-Considera la possibilità di pubblicare un editoriale su un giornale locale. Consulta questo [esempio di editoriale]({{ promote/op_ed }}) a sostegno della Settimana di educazione all'informatica e dei suoi obiettivi.
+Considera la possibilità di pubblicare un editoriale su un giornale locale. Consulta questo [esempio di editoriale]({{ promote/op_ed }}) a sostegno della Settimana Internazionale di Educazione all'Informatica e dei suoi obiettivi.
 
 ### 7. Diffondi la notizia
 

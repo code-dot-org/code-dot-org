@@ -62,6 +62,7 @@ hr:
           description: Isprobaj osnove informatike s likovima iz Angry Birds i Plants
             vs. Zombies!
           description_short: Isprobaj osnove računalstva s mnogim zanimljivim likovima!
+          name: Hour of Code
           student_description: Isprobaj osnove informatike s likovima iz Angry Birds
             i Plants vs. Zombies!
           title: Sat programiranja 2013
@@ -690,6 +691,14 @@ hr:
               display_name: Funkcije
             csp_variables:
               display_name: Varijable
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+            csp_variables:
+              display_name: Varijable
         csp4-dlp:
           lesson_groups:
             required:
@@ -781,6 +790,12 @@ hr:
             csp_unit6_2020:
               display_name: Algoritmi
         csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Liste
+            lessonGroup-3:
+              display_name: Petlje
+        csp6-2024:
           lesson_groups:
             csp_unit6_2020:
               display_name: Liste
@@ -1063,7 +1078,10 @@ hr:
           description_short: Istraži Minecraft svijet pomoću koda
           student_description: Koristeći blokove koda, odvedi Stevea ili Alexa na
             avanturu kroz ovaj svijet Minecrafta
-          title: Minecraft Sat Kodiranja
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Slobodna igra
         netsim:
           title: Internetski Simulator
         nevada-standards-aligned-fifth-grade-2023:
@@ -1159,6 +1177,19 @@ hr:
           description: 'Faza 2 online: Mješoviti ljetni studij'
           description_short: 'Faza 2 online: Mješoviti ljetni studij'
           student_description: 'Faza 2 online: Mješoviti ljetni studij'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Petlje
+            lesson-4:
+              name: Uvjeti
+          title: Uvod u Informatiku
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Događaji
+            lesson-4:
+              name: Ponašanja
         soccer:
           description: Napravite nogometnu igru
           description_short: Napravite nogometnu igru
@@ -1241,9 +1272,24 @@ hr:
           description: Izbor nivoa iz Tečaja 4 za testiranje upotrebljivosti.
           student_description: Izbor nivoa iz Tečaja 4 za testiranje upotrebljivosti.
           title: Testiranje upotrebljivosti
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Uvod
+          lessons:
+            lesson-7:
+              name: Uvod
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Uvod
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
+              name: Uvod
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
               name: Uvod
         vpl-csd1-ayw-pilot-2022:
           lessons:

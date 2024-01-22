@@ -78,6 +78,11 @@
             "name": "mu funkšuvdna"
           }
         },
+        "Course E: Artist Project_examples_2023": {
+          "my function": {
+            "name": "mu funkšuvdna"
+          }
+        },
         "Course E: Frozen Project_examples2022": {
           "draw a circle": {
             "description": "tevdne jorbbá mas lea mearriduvvon rádius",
@@ -107,6 +112,34 @@
           }
         },
         "Course E: Frozen Project_examples_2021": {
+          "draw a circle": {
+            "description": "tevdne jorbbá mas lea mearriduvvon rádius",
+            "parameters": {
+              "radius": "rádius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "tevdne bieggamillu",
+            "parameters": {
+              "sides": "siiddut"
+            }
+          },
+          "draw a shape": {
+            "name": "tevdne hámi",
+            "parameters": {
+              "sides": "siiddut"
+            }
+          },
+          "draw a square": {
+            "parameters": {
+              "sides": "siiddut"
+            }
+          },
+          "draw a star": {
+            "description": "tevdne nástti mearriduvvon čuoggáiguin ja siidduiguin main leat mearriduvvon guhkkodagat"
+          }
+        },
+        "Course E: Frozen Project_examples_2023": {
           "draw a circle": {
             "description": "tevdne jorbbá mas lea mearriduvvon rádius",
             "parameters": {
@@ -226,6 +259,29 @@
             "description": "tevdne nástti mearriduvvon čuoggáiguin ja siidduiguin main leat mearriduvvon guhkkodagat"
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "description": "tevdne jorbbá mas lea mearriduvvon rádius",
+            "parameters": {
+              "radius": "rádius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "tevdne bieggamillu",
+            "parameters": {
+              "sides": "siiddut"
+            }
+          },
+          "draw a shape": {
+            "name": "tevdne hámi",
+            "parameters": {
+              "sides": "siiddut"
+            }
+          },
+          "draw a star": {
+            "description": "tevdne nástti mearriduvvon čuoggáiguin ja siidduiguin main leat mearriduvvon guhkkodagat"
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "description": "tevdne jorbbá mas lea mearriduvvon rádius",
@@ -272,6 +328,29 @@
             "description": "tevdne nástti mearriduvvon čuoggáiguin ja siidduiguin main leat mearriduvvon guhkkodagat"
           }
         },
+        "CourseD_EOC_artist_example2021_2023": {
+          "draw a circle": {
+            "description": "tevdne jorbbá mas lea mearriduvvon rádius",
+            "parameters": {
+              "radius": "rádius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "tevdne bieggamillu",
+            "parameters": {
+              "sides": "siiddut"
+            }
+          },
+          "draw a shape": {
+            "name": "tevdne hámi",
+            "parameters": {
+              "sides": "siiddut"
+            }
+          },
+          "draw a star": {
+            "description": "tevdne nástti mearriduvvon čuoggáiguin ja siidduiguin main leat mearriduvvon guhkkodagat"
+          }
+        },
         "Function intro Ryan": {
           "build bridge": {
             "name": "hukse šaldi"
@@ -293,6 +372,11 @@
           }
         },
         "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "hukse šaldi"
+          }
+        },
+        "Function intro Ryan_2023": {
           "build bridge": {
             "name": "hukse šaldi"
           }
@@ -349,6 +433,11 @@
             "name": "sihko geainnu"
           }
         },
+        "MC_HOC_2017_07_Cole_2023": {
+          "clear path": {
+            "name": "sihko geainnu"
+          }
+        },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
             "name": "divus guhkes geainnu"
@@ -382,6 +471,14 @@
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "divus guhkes geainnu"
+          },
+          "fix short path": {
+            "name": "divus oanehis geainnu"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2023": {
           "fix long path": {
             "name": "divus guhkes geainnu"
           },
@@ -429,6 +526,14 @@
             "name": "hukse oanehis šaldi"
           }
         },
+        "MC_HOC_2017_Ali_2023": {
+          "build long bridge": {
+            "name": "hukse guhkes šaldi"
+          },
+          "build short bridge": {
+            "name": "hukse oanehis šaldi"
+          }
+        },
         "MC_HOC_2017_FP20x20": {
           "function 1": {
             "name": "funkšuvdna 1"
@@ -462,6 +567,14 @@
           }
         },
         "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "funkšuvdna 1"
+          },
+          "function 2": {
+            "name": "funkšuvdna 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2023": {
           "function 1": {
             "name": "funkšuvdna 1"
           },

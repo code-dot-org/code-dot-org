@@ -10,6 +10,7 @@ pt:
         error:
           future: não pode estar no futuro
         finish_sign_up_header: Terminar de criar a tua conta
+        finish_sign_up_header_error: 'Por favor, corrige os seguintes erros:'
         finish_sign_up_subheader: Preenche a informação seguinte para terminar de
           criar uma conta da Code.org para <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Preencha as informações a seguir para concluir
@@ -31,6 +32,7 @@ pt:
         personal_email_markdown: E-mail pessoal [(clique aqui caso não tenha um e-mail)](%{url})
         reset_password_token: O link de redefinição da palavra-passe que tu seguiste
         us_state: Estado
+        user_type: Tipo de conta
         username: Nome de utilizador
         verified_teacher: Professor verificado
     errors:
@@ -313,8 +315,8 @@ pt:
       pelo apoio na criação do Code Studio.
     tos: Termos de utilização
     tos_short: Termos
-    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, o logótipo do CODE
-      e a Hora de Código&reg; são marcas registadas do Code.org."
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE
+      e Hora do Código&reg; são marcas registradas da Code.org."
     translate: Voluntaria-te para traduzir o nosso conteúdo
     try_hour_of_code: Experimenta uma Hora de Código!
     view_code: Exibir código

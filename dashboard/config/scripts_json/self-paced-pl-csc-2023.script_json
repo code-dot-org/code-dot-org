@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "CSC Self Paced PL",
       "has_verified_resources": true,
       "is_course": true,
       "is_migrated": true,
@@ -13,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "self-paced-pl-csc",
-    "serialized_at": "2023-07-03 14:48:37 UTC",
+    "serialized_at": "2024-01-11 15:10:41 UTC",
     "published_state": "stable",
     "instruction_type": "self_paced",
     "instructor_audience": "universal_instructor",
@@ -46,7 +47,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**You will:**\n\n* Get an introduction to CS Connections modules.\n* Select a CS Connections module to teach.\n*  Set up a plan to implement CS Connections.\n\n**Suggested time:** 15 minutes",
-        "student_overview": "**You will:**\n\n* Get an introduction to artificial intelligence and machine learning.\n* Get a preview of the first week of the AI and Machine Learning unit content.\n\n**Suggested time:** 15 minutes"
+        "student_overview": "**You will:**\n\n* Get an introduction to CS Connections modules.\n* Select a CS Connections module to teach.\n*  Set up a plan to implement CS Connections.\n\n**Suggested time:** 15 minutes"
       },
       "seeding_key": {
         "lesson.key": "Introduction to AI and machine learning",
@@ -111,6 +112,7 @@
       "key": "9b4974df-015c-4953-8487-116f18d9e658",
       "position": 1,
       "properties": {
+        "duration": 15
       },
       "seeding_key": {
         "lesson_activity.key": "9b4974df-015c-4953-8487-116f18d9e658",
@@ -123,6 +125,7 @@
       "key": "7ea11708-31f5-4f0a-9116-44964d035b3d",
       "position": 1,
       "properties": {
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "7ea11708-31f5-4f0a-9116-44964d035b3d",
@@ -135,6 +138,7 @@
       "key": "e1c5cfdc-5f73-4b9c-b984-251ae2ad0cf6",
       "position": 1,
       "properties": {
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "e1c5cfdc-5f73-4b9c-b984-251ae2ad0cf6",
@@ -147,6 +151,7 @@
       "key": "892c42a2-6fa3-4273-8bdf-2afcb4dd1206",
       "position": 1,
       "properties": {
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "892c42a2-6fa3-4273-8bdf-2afcb4dd1206",
@@ -524,6 +529,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "CSC-SelfPaced-sprite1_2023"
         ],
@@ -549,6 +555,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "CSC-SelfPaced-sprite2_2023"
         ],
@@ -574,6 +581,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "CSC-SelfPaced-behavior_2023"
         ],
@@ -599,6 +607,7 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "CSC-SelfPaced-eventsclick2_2023"
         ],
@@ -674,6 +683,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "CSC-SelfPaced-spritebehavior_2023"
         ],
@@ -699,6 +709,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "CSC-SelfPaced-eventsclick_2023"
         ],
@@ -724,6 +735,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "CSC-SelfPaced-touches_2023"
         ],
@@ -874,6 +886,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "CSC-SelfPaced-customization1_2023"
         ],
@@ -949,6 +962,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "CSC-SelfPaced-teacherpanel_2023"
         ],
@@ -1024,6 +1038,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "CSC-SelfPaced-skillbuildinglevel_2023"
         ],
@@ -1049,6 +1064,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "CSC-SelfPaced-freeplay_2023"
         ],
@@ -1074,6 +1090,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "CSC-SelfPaced-choicelevel_2023"
         ],
@@ -1842,6 +1859,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

@@ -6,14 +6,14 @@
     "properties": {
       "announcements": [
         {
-          "key": "488fc86d-7f7d-48fe-9bc2-0b8869fb6ae1",
-          "notice": "Extension Lessons with the micro:bit",
-          "details": "Interested in introducing your students to physical computing? Check out our new extension lessons from micro:bit to continue students’ learning.",
-          "link": "https://code.org/maker/csf-microbit",
+          "key": "9797909d-7ee9-436a-9c18-d58b3e7f1e0b",
+          "notice": "Free Teacher Resources from Amazon Future Engineer",
+          "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
+          "link": "code.org/afe",
           "type": "bullhorn",
           "visibility": "Teacher-only",
           "dismissible": true,
-          "buttonText": "Learn more"
+          "buttonText": "Get free resources"
         }
       ],
       "curriculum_umbrella": "CSF",
@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2023-07-25 23:05:54 UTC",
+    "serialized_at": "2024-01-05 02:55:19 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -4196,7 +4196,7 @@
       "key": "0d21f898-a943-478d-aa3e-998cc95e9ce2",
       "position": 2,
       "properties": {
-        "description": "To build on the skills you learned in CS Fundamentals Course F, click [here](http://code.org/maker/csf-microbit) to check out Extension Lessons with the micro:bit. These [4 micro:bit lessons](https://code.org/maker/assets/CSF-Booklet-Course-F-v3.pdf) cover the following topics: Meet your micro:bit, Variables, Data, Events, Simulation, Loops, and Conditionals.",
+        "description": "To build on the skills you learned in CS Fundamentals Course F, [click here to check out Extension Lessons with the micro:bit](https://code.org/maker/csf-microbit). These 4 micro:bit lessons cover the following topics: Meet your micro:bit, Variables, Data, Events, Simulation, Loops, and Conditionals.",
         "name": "Extension Lessons with the micro:bit"
       },
       "seeding_key": {
@@ -8042,6 +8042,7 @@
       "key": "end_of_course_project_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -8347,6 +8348,7 @@
       "key": "user_input_programs",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -9860,6 +9862,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

@@ -353,6 +353,47 @@
             }
           }
         },
+        "Course E: Frozen Project_examples_2023": {
+          "draw a circle": {
+            "name": "debuxar un círculo"
+          },
+          "draw a house": {
+            "name": "debuxar unha casa",
+            "parameters": {
+              "length": "lonxitude"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "lonxitude",
+              "repeat": "repetir"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "lonxitude"
+            }
+          },
+          "draw a square": {
+            "name": "debuxar un cadrado",
+            "parameters": {
+              "length": "lonxitude"
+            }
+          },
+          "draw a star": {
+            "name": "debuxar unha estrela",
+            "parameters": {
+              "length": "lonxitude",
+              "points": "puntos"
+            }
+          },
+          "draw a triangle": {
+            "name": "debuxar un triángulo",
+            "parameters": {
+              "length": "lonxitude"
+            }
+          }
+        },
         "Course E: Play Lab Project": {
           "do something": {
             "name": "facer algo"
@@ -522,6 +563,47 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "name": "debuxar un círculo"
+          },
+          "draw a house": {
+            "name": "debuxar unha casa",
+            "parameters": {
+              "length": "lonxitude"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "lonxitude",
+              "repeat": "repetir"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "lonxitude"
+            }
+          },
+          "draw a square": {
+            "name": "debuxar un cadrado",
+            "parameters": {
+              "length": "lonxitude"
+            }
+          },
+          "draw a star": {
+            "name": "debuxar unha estrela",
+            "parameters": {
+              "length": "lonxitude",
+              "points": "puntos"
+            }
+          },
+          "draw a triangle": {
+            "name": "debuxar un triángulo",
+            "parameters": {
+              "length": "lonxitude"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "name": "debuxar un círculo"
@@ -564,6 +646,47 @@
           }
         },
         "CourseD_EOC_artist_example20212022": {
+          "draw a circle": {
+            "name": "debuxar un círculo"
+          },
+          "draw a house": {
+            "name": "debuxar unha casa",
+            "parameters": {
+              "length": "lonxitude"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "lonxitude",
+              "repeat": "repetir"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "lonxitude"
+            }
+          },
+          "draw a square": {
+            "name": "debuxar un cadrado",
+            "parameters": {
+              "length": "lonxitude"
+            }
+          },
+          "draw a star": {
+            "name": "debuxar unha estrela",
+            "parameters": {
+              "length": "lonxitude",
+              "points": "puntos"
+            }
+          },
+          "draw a triangle": {
+            "name": "debuxar un triángulo",
+            "parameters": {
+              "length": "lonxitude"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021_2023": {
           "draw a circle": {
             "name": "debuxar un círculo"
           },
@@ -1026,6 +1149,11 @@
             "name": "facer algo"
           }
         },
+        "courseC_data wizard_2023": {
+          "do something": {
+            "name": "facer algo"
+          }
+        },
         "courseD_artist_binary1": {
           "draw": {
             "parameters": {
@@ -1404,6 +1532,11 @@
             "name": "facer algo"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "facer algo"
+          }
+        },
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "debuxar un cadrado"
@@ -1430,6 +1563,11 @@
           }
         },
         "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "debuxar un cadrado"
+          }
+        },
+        "courseE_artist_functions2_2023": {
           "draw a square": {
             "name": "debuxar un cadrado"
           }
@@ -1465,6 +1603,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "debuxar unha estrela"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "debuxar unha estrela"
           }
@@ -1510,6 +1653,11 @@
           }
         },
         "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "debuxar unha estrela"
+          }
+        },
+        "courseE_artist_functions5_2023": {
           "draw a star": {
             "name": "debuxar unha estrela"
           }
@@ -1569,6 +1717,11 @@
             "name": "facer algo"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "facer algo"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "facer algo"
@@ -1609,6 +1762,14 @@
             "name": "debuxar un cadrado"
           }
         },
+        "courseE_artist_functions8a_2023": {
+          "do something": {
+            "name": "facer algo"
+          },
+          "draw a square": {
+            "name": "debuxar un cadrado"
+          }
+        },
         "courseE_artist_functions8b2022": {
           "do something": {
             "name": "facer algo"
@@ -1634,6 +1795,11 @@
             "name": "facer algo"
           }
         },
+        "courseE_artist_functions8b_2023": {
+          "do something": {
+            "name": "facer algo"
+          }
+        },
         "courseE_artist_functions8c2022": {
           "do something": {
             "name": "facer algo"
@@ -1655,6 +1821,11 @@
           }
         },
         "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "facer algo"
+          }
+        },
+        "courseE_artist_functions8c_2023": {
           "do something": {
             "name": "facer algo"
           }
@@ -1689,6 +1860,11 @@
             "name": "facer algo"
           }
         },
+        "courseE_artist_functions9_2023": {
+          "do something": {
+            "name": "facer algo"
+          }
+        },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "facer algo"
@@ -1715,6 +1891,11 @@
           }
         },
         "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "facer algo"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "do something": {
             "name": "facer algo"
           }
@@ -1749,6 +1930,11 @@
             "name": "facer algo"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "facer algo"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "debuxar un cadrado"
@@ -1775,6 +1961,11 @@
           }
         },
         "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "debuxar un cadrado"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
           "draw a square": {
             "name": "debuxar un cadrado"
           }
@@ -1815,6 +2006,11 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "facer algo"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "facer algo"
           }
@@ -1880,6 +2076,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "final de xogo"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "final de xogo"
           }

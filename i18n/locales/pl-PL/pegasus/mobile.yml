@@ -539,13 +539,9 @@
   volunteer_engineer_submission_subtitle_generic: '100 000 nauczycieli będzie gościć Godzinę Kodowanie w swoich klasach w tym roku między 7 a 13 grudnia. Potrzebują Twojej pomocy! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} nauczycieli potrzebuje wolontariuszy. <br>%{num_volunteers} zarejestrowanych wolontariuszy. Dołącz do nich."
   volunteer_engineer_submission_intro_background: "Godzina Kodowania jest globalną inicjatywą godzinnego wprowadzenia do informatyki, podejmowaną przez dziesiątki milionów uczniów w 180+ krajach. Weź udział w tej inicjatywie podczas Tygodnia Edukacji Informatycznej w dniach 7-13 grudnia."
-  volunteer_engineer_submission_intro_recruit: 'Nauczyciele byliby szczęśliwi mając kogoś <span style="font-family: ''Gotham 7r'', sans-serif;">, pasjonata edukacji informatycznej </span>, kto mógłby pomóc w klasie, lub kogoś, kto potrafi <span style="font-family: ''Gotham 7r'', sans-serif;"> zainspirować</span> uczniów opowiadając o szerokich możliwościach informatyki (na przykład za pośrednictwem wideo czatu).'
   volunteer_engineer_submission_intro_recruit_markdown: "Nauczyciele byliby szczęśliwi mając kogoś , **pasjonata edukacji informatycznej**, kto mógłby pomóc w klasie, lub kogoś, kto potrafi  **zainspirować** uczniów opowiadając o szerokich możliwościach informatyki (na przykład za pośrednictwem wideo czatu)."
-  volunteer_engineer_submission_intro_guide: "Dowiedz się tutaj więcej o naszym <a href=\"%{volunteer_guide}\"> programie dla wolontariuszy</a>."
   volunteer_engineer_submission_intro_guide_markdown: "Dowiedz się tutaj więcej o naszym  [programie dla wolontariuszy](%{volunteer_guide})."
-  volunteer_engineer_submission_intro_signup: "Podaj następujące informacje, jeśli jesteś studentem informatyki lub profesjonalnym programistą. Aby zarejestrować się jako wolontariusz, musisz mieć co najmniej 18 lat. Pamiętaj, że wszystkie pola, które wypełnisz w tej sekcji, będą dostępne dla każdego, kto przegląda <a href=\"/volunteer/local\"> mapę wolontariuszy</a>. Pola oznaczone <span class=\"form-required-field\">*</span> są wymagane."
   volunteer_engineer_submission_intro_signup_markdown: "Podaj następujące informacje, jeśli jesteś studentem informatyki lub profesjonalnym programistą. Musisz mieć ukończone 18 lat i zgłosić się jako wolontariusz. Należy mieć na uwadze, że wszystkie pola, które wypełnisz w tej części będą dostępne publicznie dla każdego, kto będzie oglądał [mapę wolontariuszy](/wolontariusz/miejscowy). Pola oznaczone _*_ są wymagane."
-  volunteer_engineer_submission_intro_links: "Czy jesteś nauczycielem poszukującym wolontariusza? Odszukaj wolontariusza w okolicy na naszej <a href=\"%{volunteer_local}\"> mapie wolontariuszy</a>."
   volunteer_engineer_submission_intro_links_markdown: "Czy jesteś nauczycielem poszukującym wolontariuszy? Odszukaj wolontariusza w okolicy na naszej  [mapie wolontariuszy](%{volunteer_local})."
   volunteer_engineer_submission_update_information: "Uaktualnij informacje o sobie"
   volunteer_engineer_submission_header_shared: "Informacje udostępniane nauczycielom na mapie wolontariuszy"
@@ -1545,6 +1541,7 @@
   header_report_abuse: "Zgłoś nadużycie"
   header_legal: "Prywatność i legalność"
   header_legal_privacy: "Polityka prywatności"
+  header_legal_cookie_notice: "Informacja o plikach cookie"
   header_legal_tos: "Regulamin"
   header_tutorials: "Samouczki"
   header_screen_reader_hamburger: "Menu"
@@ -1801,6 +1798,7 @@
   footer_store: "Skład"
   footer_support: "Wsparcie"
   footer_terms: "Warunki"
+  footer_trademark: '„&copy; Code.org, %{current_year}. Code.org&reg;, logo CODE, Godzina Kodowania&reg; i %{cs_discoveries} są znakami towarowymi Code.org.'
   ai_for_oceans: "AI dla oceanów"
   ai_for_oceans_lesson_plan: "plan lekcji"
   ai_for_oceans_tile_description: "Pomóż A.I. oczyść oceany, ucząc go wykrywania śmieci! Dowiedz się o danych treningowych i uprzedzeniach oraz o tym, jak sztuczna inteligencja może zajmować się problemami świata. Widok "

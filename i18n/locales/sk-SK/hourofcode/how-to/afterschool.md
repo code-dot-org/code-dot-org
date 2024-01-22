@@ -73,7 +73,7 @@ Začnite Hodinu kódu tým, že účastníkov inšpirujete a porozprávate sa s
 
 - Vytlačte pre svojich žiakov [certifikáty]({{ urls/certificates }}).
 - Vytlačte pre žiakov [nálepky s textom „I did the Hour of Code!“]({{ promote/resources_stickers }}) (Mám za sebou Hodinu kódu!).
-- Objednajte pre účastníkov [špeciálne tričká s potlačou](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
+- [Objednajte si vlastné tričká](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) pre účastníkov.
 - Zdieľajte na sociálnych sieťach fotky a videá z vašej Hodiny kódu. Použite hashtagy #HodinaKodu a #HourOfCode, ako aj označenie @codeorg, aby sme vaše úspechy mohli ukázať aj my!
 
 ## Ďalšie zdroje k Hodine kódu pre pedagógov

@@ -25,7 +25,7 @@ Dasturlash Soatini sinab ko'rish - bu talabalarni informatika bilan tanishtirish
 
 <a id="how-to-video"></a>
 
-## 1. Dasturlash Soati amaliy qo'llanma videosini tomosha qiling <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Dasturlash Soati amaliy qo'llanma videosini tomosha qiling <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Tadbiringizni ro‘yxatdan o‘tkazish orqali ko‘ngillilarga xabar bering
 
-Siz [Dasturlash Soati tadbirini](/#join) ro‘yxatdan o‘tkazganingizda, sizga yangiliklar va Dasturlash Soatini muvaffaqiyatli o‘tkazish bo‘yicha maslahatlar bilan foydali elektron pochta xabarlarini olasiz. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Kod soati [tadbiriga ro'yxatdan o'tganingizda](/events), muvaffaqiyatli Kod soati o'tkazish bo'yicha yangiliklar va maslahatlar bilan foydali elektron pochta xabarlarini olasiz. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Talabalaringizni hayajonga soling
 

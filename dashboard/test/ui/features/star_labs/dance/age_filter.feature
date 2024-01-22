@@ -11,7 +11,7 @@ Feature: Dance Lab Age Filter
     #Local PG-13 option should not be visible after filter in any environment
     And I do not see "synthesize" option in the dropdown "#song_selector"
     #Test PG-13 option should not be visible after filter in any environment
-    And I do not see "shapeofyou_edsheeran" option in the dropdown "#song_selector"
+    And I do not see "badhabit_stevelacy" option in the dropdown "#song_selector"
     And I sign out
 
   Scenario: Song selector is visible and displays all songs for age > 13 and teacher flag turns filter on
@@ -23,8 +23,8 @@ Feature: Dance Lab Age Filter
     And I close the instructions overlay if it exists
     Then element "#runButton" is visible
     And element "#song_selector" is visible
-    #synthesize is available on local and shapeofyou_edsheeran is available on test
-    And I see option "Synthesize" or "Ed Sheeran - Shape of You" in the dropdown "#song_selector"
+    #synthesize is available on local and badhabit_stevelacy is available on test
+    And I see option "Synthesize" or "Steve Lacy - Bad Habit" in the dropdown "#song_selector"
 
     Then I am on "http://studio.code.org/s/allthethings/lessons/37/levels/1?noautoplay=true&songfilter=on"
     And I reload the page
@@ -34,7 +34,7 @@ Feature: Dance Lab Age Filter
     #Local PG-13 option should not be visible after filter in any environment
     And I do not see "synthesize" option in the dropdown "#song_selector"
     #Test PG-13 option should not be visible after filter in any environment
-    And I do not see "shapeofyou_edsheeran" option in the dropdown "#song_selector"
+    And I do not see "badhabit_stevelacy" option in the dropdown "#song_selector"
     And I sign out
 
   Scenario: Selecting <13 in age dialog turns filter on
@@ -50,7 +50,7 @@ Feature: Dance Lab Age Filter
     #Local PG-13 option should not be visible after filter in any environment
     And I do not see "synthesize" option in the dropdown "#song_selector"
     #Test PG-13 option should not be visible after filter in any environment
-    And I do not see "shapeofyou_edsheeran" option in the dropdown "#song_selector"
+    And I do not see "badhabit_stevelacy" option in the dropdown "#song_selector"
 
   Scenario: Selecting 13 in age dialog turns filter off
     Given I am on "http://studio.code.org/s/allthethings/lessons/37/levels/1?noautoplay=true"
@@ -62,8 +62,8 @@ Feature: Dance Lab Age Filter
     And I close the instructions overlay if it exists
     Then element "#runButton" is visible
     And element "#song_selector" is visible
-    #synthesize is available on local and shapeofyou_edsheeran is available on test
-    And I see option "Synthesize" or "Ed Sheeran - Shape of You" in the dropdown "#song_selector"
+    #synthesize is available on local and badhabit_stevelacy is available on test
+    And I see option "Synthesize" or "Steve Lacy - Bad Habit" in the dropdown "#song_selector"
 
     # session cookie should persist and no dialog should show up
     Then I am on "http://studio.code.org/s/dance/lessons/1/levels/9"
@@ -74,8 +74,8 @@ Feature: Dance Lab Age Filter
     And I close the instructions overlay if it exists
     Then element "#runButton" is visible
     And element "#song_selector" is visible
-    #synthesize is available on local and shapeofyou_edsheeran is available on test
-    And I see option "Synthesize" or "Ed Sheeran - Shape of You" in the dropdown "#song_selector"
+    #synthesize is available on local and badhabit_stevelacy is available on test
+    And I see option "Synthesize" or "Steve Lacy - Bad Habit" in the dropdown "#song_selector"
 
   Scenario: Song selector is hidden when initializing with teacher flag on and teacher flag stays on after level complete
     Given I am on "http://studio.code.org/s/allthethings/lessons/37/levels/1?noautoplay=true&songfilter=on"
@@ -88,7 +88,7 @@ Feature: Dance Lab Age Filter
     #Local PG-13 option should not be visible after filter in any environment
     And I do not see "synthesize" option in the dropdown "#song_selector"
     #Test PG-13 option should not be visible after filter in any environment
-    And I do not see "shapeofyou_edsheeran" option in the dropdown "#song_selector"
+    And I do not see "badhabit_stevelacy" option in the dropdown "#song_selector"
 
     #Run for two measures until level success
     Then I click selector "#runButton" once I see it
@@ -102,7 +102,7 @@ Feature: Dance Lab Age Filter
     #Local PG-13 option should not be visible after filter in any environment
     And I do not see "synthesize" option in the dropdown "#song_selector"
     #Test PG-13 option should not be visible after filter in any environment
-    And I do not see "shapeofyou_edsheeran" option in the dropdown "#song_selector"
+    And I do not see "badhabit_stevelacy" option in the dropdown "#song_selector"
 
     And I sign out
 
@@ -117,6 +117,6 @@ Feature: Dance Lab Age Filter
     #Local PG-13 option should not be visible after filter in any environment
     And I do not see "synthesize" option in the dropdown "#song_selector"
     #Test PG-13 option should not be visible after filter in any environment
-    And I do not see "shapeofyou_edsheeran" option in the dropdown "#song_selector"
+    And I do not see "badhabit_stevelacy" option in the dropdown "#song_selector"
 
     And I sign out

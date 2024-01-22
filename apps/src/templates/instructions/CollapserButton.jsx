@@ -31,6 +31,7 @@ class CollapserButton extends Component {
         {this.props.isMinecraft ? (
           <img
             src="/blockly/media/1x1.gif"
+            alt=""
             className={[
               this.props.collapsed ? 'more-btn' : 'less-btn',
               'toggle26',

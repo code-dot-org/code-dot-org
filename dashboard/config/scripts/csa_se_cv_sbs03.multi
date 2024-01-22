@@ -1,0 +1,11 @@
+name 'CSA-SE-CV-SBS03'
+
+question 'I have encountered AI-generated examples in class and found the experience beneficial to my learning of CS.'
+
+right 'Strongly Agree'
+right 'Agree'
+right 'Neutral'
+right 'Disagree'
+right 'Strongly Disagree'
+
+allow_multiple_attempts true

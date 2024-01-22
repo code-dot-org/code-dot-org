@@ -52,6 +52,7 @@ ga:
         gender: 'Inscne'
         edit_header: 'Cuir Sonraí an Chuntais in Eagar'
         finish_sign_up_header: 'Críochnaigh an próiseas cláraithe'
+        finish_sign_up_header_error: 'Ceartaigh na hearráidí seo a leanas:'
         finish_sign_up_subheader: 'Líon isteach an t-eolas seo a leanas chun cuntas Code.org a chruthú le haghaidh <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Líon isteach an t-eolas seo a leanas chun cuntas Code.org a chruthú le haghaidh **%{email}**.'
         finish_sign_up_subheader_provider: 'Líon isteach an t-eolas seo a leanas chun cuntas Code.org a chruthú le <strong>%{provider}</strong> le haghaidh <strong>%{email}</strong>.'
@@ -59,6 +60,7 @@ ga:
         reset_password_token: "Tá an nasc a chliceáil tú chun d'fhocal faire a athshocrú"
         error:
           future: earráid - dáta sa todhchaí
+        user_type: 'Cineál Cuntais'
         us_state: 'Stát'
   beta: "béite"
   hello: "Dia dhuit a dhomhain"
@@ -1090,4 +1092,3 @@ ga:
   teacher_feedback: "Aiseolas ó Mhúinteoirí"
   pixelation:
     binary: "Dénártha"
-

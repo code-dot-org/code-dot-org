@@ -13,7 +13,7 @@ module HocEventReview
   end
 
   FORMS = ::PEGASUS_DB[:forms]
-  COUNTRY_CODE_COLUMN = :location_country_code_s
+  COUNTRY_CODE_COLUMN = json('data.hoc_event_country_s')
   STATE_CODE_COLUMN = json('processed_data.location_state_code_s')
   SPECIAL_EVENT_FLAG_COLUMN = json('data.special_event_flag_b')
 

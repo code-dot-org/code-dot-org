@@ -4,12 +4,14 @@ tr:
     attributes:
       user:
         age: Yaş
+        ai_settings_header: Yapay Zeka Ayarları
         current_password: Geçerli Şifre
         edit_header: Hesap Bilgilerini Düzenle
         email: e-posta
         error:
           future: gelecekte olması mümkün değil
         finish_sign_up_header: Hesabınızı oluşturmayı bitirin
+        finish_sign_up_header_error: 'Lütfen aşağıdaki hataları düzeltiniz:'
         finish_sign_up_subheader: " <strong>%{email}</strong> için bir Code.org hesabı
           oluşturmayı tamamlamak için sıradaki bilgileri doldurunuz."
         finish_sign_up_subheader_markdown: "**%{email}** için bir Code.org hesabı
@@ -34,6 +36,7 @@ tr:
           yoksa buraya tıklayın)](%{url})
         reset_password_token: Takip ettiğiniz şifre sıfırlama bağlantısı
         us_state: Eyalet
+        user_type: Hesap Türü
         username: kullanıcı adı
         verified_teacher: Doğrulanmış Öğretmen
     errors:

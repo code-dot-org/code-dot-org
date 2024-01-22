@@ -16,8 +16,8 @@ title: 一小時玩程式公司指南
 
 查看下面的步驟開始，並查看我們的[企業合作夥伴指南](/files/hoc-corporate-toolkit.pdf)，進一步瞭解如何激發你的公司對一小時玩程式的熱情。
 
-- [Connect with a local school](#connect-with-a-school)
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
+- [與當地學校聯繫](#connect-with-a-school)
+- [鼓勵員工在課堂做志工](#encourage-employees)
 - [舉辦你自己的一小時玩程式活動](#host-hour-of-code)
 - [推廣一小時玩程式活動](#promote-hour-of-code)
 - [更多支持一小時玩程式的方式](#support-hour-of-code)
@@ -26,31 +26,31 @@ title: 一小時玩程式公司指南
 
 <a id="connect-with-a-school"></a>
 
-## Connect with a local school
+## 與當地學校聯繫
 
-It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+最好在本地開始，您或您的員工與您的員工具有強大聯繫的學校，例如母校、孩子的學校，或是專注於為計算機科學歷史上缺乏代表的人口服務的當地組織或學校。
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+從那裡，您可以訪問學校的網站，找到適當的聯繫人以聯繫，例如校長，副校長，技術或計算機科學講師，甚至學校的 PTSA。 您還可以與美國男孩女 & 孩俱樂部、YMCA 分支機構等組織合作，共同主持活動。
 
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+如果你無法聯繫到學校，請[聯繫我們](https://support.code.org/hc/en-us/requests/new)，如果可能的話，我們會為你聯繫我們的當地合作夥伴。
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## 鼓勵員工在課堂做志工
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
+參與一小時玩程式最令人滿足的方式之一是在當地課堂上做志工，無論是面對面參與還是遠端參與。 最重要的是，成為志工不必是工程師。 您仍然可以通過分享自己的職業經驗以及 CS 或技術如何影響您的職位，為學生提供有意義的體驗。
 
 [<button>註冊志工</button>]({{ urls/volunteer }})
 
-Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+一旦志工報名，老師可以在我們的[志工地圖](https://code.org/volunteer/local)上查看他們的個人資料 - 因此個人資料應該盡可能完整地提交。 如果你很適合他們的課堂，老師會通過平臺聯繫你（我們決不會將你的電子郵箱地址告訴老師）。 然後，你可以就[如何最好地在課堂上做志工](https://hourofcode.com/us/how-to/volunteers)直接與老師協調細節。
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+想瞭解更多關於志工服務和示例消息的指導，激發你的公司對一小時玩程式的熱情，請查看我們的[企業合作夥伴指南]({{ localized_files/hoc_corporate_toolkit }})。
 
 * * *
 
@@ -135,7 +135,7 @@ For more guidance on volunteering and sample messaging to get your company excit
 
 ### 1. 註冊活動
 
-當你[註冊一小時玩程式活動](/#join)時，你將收到有用的電子郵件通訊，其中包括新聞和舉辦成功的一小時玩程式活動的提示。 這也是你讓當地學校或家長知道你在他們附近舉辦活動的方式。
+當您[註冊一小時玩程式活動時，您將收](/events)到有用的電子郵件通訊，其中包含有關舉辦成功的一小時玩程式的新聞和提示。 這也是你讓當地學校或家長知道你在他們附近舉辦活動的方式。
 
 ### 2. 在社交媒體上發佈
 
@@ -162,7 +162,7 @@ For more guidance on volunteering and sample messaging to get your company excit
 - 如果你的第一行代碼改變了你的生活，那就幫助你附近的學生編寫他們的第一個#HourOfCode。https://code.org/volunteer
 - 如果你學習了編碼 — 你的故事是什麼？通過第一個#HourOfCode激勵你身邊的學生。https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">尋找更</a> 多海報、影片、貼紙和其他方式，以向社區宣傳活動。
 
 * * *
 

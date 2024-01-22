@@ -399,9 +399,6 @@
   volunteer_engineer_submission_subtitle_generic: 'এই বছর, ডিসেম্বর ৭-১৩, ২০১৫, ১০০০০০ শিক্ষক তাদের শ্রেণীকক্ষে এক ঘন্টার কোড আয়জন করতে যাচ্ছি। তারা আপনার সাহায্য চায়!'
   volunteer_engineer_submission_subtitle_specific: "এই ডিসেম্বরে %{num_teachers} শিক্ষক এক ঘণ্টার কোড আয়জন করতে কম্পিউটার বিজ্ঞান শিক্ষার উত্সাহী স্বেচ্ছাসেবকদের সাহায্য চা।<br>%{num_volunteers}স্বাক্ষর করেছেন। তাদের সাথে যোগ দিন।"
   volunteer_engineer_submission_intro_background: "এক ঘন্টার কোড একটি বিশ্বব্যাপী আন্দোলন যা একটি ঘন্টা কম্পিউটার বিজ্ঞানের সূচনার বিষয়গুলি শিখানোর চেষ্টার মধ্যমে ১৮০ বেশি দেশে দশ লক্ষাধিক ছাত্রের কাছে পৌঁছনোর চেষ্টা করে। দয়া করে ডিসেম্বর ৭-১৩ তে কম্পিউটার বিজ্ঞান শিক্ষা সপ্তাহে, সংশ্লিষ্ট হন।"
-  volunteer_engineer_submission_intro_recruit: 'এই শিক্ষকরা এমন কাউকে পেলে খুশি হবেন<span style="font-family: ''Gotham 7r'', sans-serif;">যারা কম্পিউটার বিজ্ঞান শিক্ষায় উত্সাহী</span>যারা তাদের শ্রেনীকক্ষে সাহায্য করতে পারবে বা তাদের <span style="font-family: ''Gotham 7r'', sans-serif;"> যারা অনুপ্রাণিত করতে পারবে</span> তাদের ছাত্রদের কম্পিউটার বিজ্ঞানের প্রসার সম্ভাবনা নিয়ে কথা বলে (যা একটি ভিডিও আলাপের মাধ্যমেও করা সম্ভব)।'
-  volunteer_engineer_submission_intro_signup: " প্রয়োজন হয়।\nআপনি কম্পিউটার বিজ্ঞানের ছাত্র বা সফটওয়্যার পেশাদার হলে নিম্নবর্ণিত তথ্য জমা দিন। <span class=\"form-required-field\">*</span> চিহ্নিত স্থানগুলি অবশ্যক।"
-  volunteer_engineer_submission_intro_links: "স্বেচ্ছাসেবক খুজছেন না? এখনে নিজের এক ঘন্টা কোড আয়োজন করার জন্য <a href=\"%{learn_more}\">আরো জানুন</a>  <a href=\"%{volunteer_local}\"> </a> এবং স্বেচ্ছাসেবক মানচিত্রে স্থানীয় স্বেচ্ছাসেবক খুজুন।"
   volunteer_engineer_submission_update_information: "আপনার তথ্য হালনাগাদ করুন"
   volunteer_engineer_submission_header_shared: "স্বেচ্ছাসেবকদের মানচিত্রে শিক্ষকদের সাথে তথ্য শেয়ার করা"
   volunteer_engineer_submission_field_name: "নাম"

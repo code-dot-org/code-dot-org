@@ -6,14 +6,16 @@ style_min: true
 
 <style>
   h3 {
-    font-family: var(--gotham-bold);
+    font-family: var(--main-font);
+    font-weight: var(--semi-bold-font-weight);
     font-size: 1.25rem;
     line-height: 1.40;
     margin-bottom: 0.5em;
   }
 
   h4 {
-    font-family: var(--gotham-bold);
+    font-family: var(--main-font);
+    font-weight: var(--semi-bold-font-weight);
     font-size: 1rem;
     line-height: 1.48;
     margin-bottom: 0.5em;

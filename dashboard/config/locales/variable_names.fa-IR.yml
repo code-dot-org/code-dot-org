@@ -1,0 +1,35 @@
+---
+fa:
+  data:
+    variable_names:
+      Blue: آبی
+      Green: سبز
+      Red: قرمز
+      actor: عامل
+      age: سن
+      answer: پاسخ
+      binary: دو دویی
+      birds: پرندگان
+      color: رنگ
+      counter: شمارشگر
+      height: ارتفاع
+      honey: عسل
+      left: سمت چپ
+      length: طول
+      name: نام
+      nectar: شهد
+      object: شیء
+      planet: سیاره
+      points: امتیازات
+      random: در هم
+      repeat: تکرار کن
+      right: سمت راست
+      score: امتیاز
+      shout: فریاد
+      sides: اضلاع
+      size: اندازه
+      speed: سرعت
+      type: نوع
+      variable: متغیر
+      wizard: جادوگر
+      x: طول (x)

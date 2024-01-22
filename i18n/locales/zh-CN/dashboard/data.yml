@@ -657,7 +657,7 @@ zh-CN:
         csc-sprite-lab-pixel-editor: 画自己的精灵图
         csa-pl-intro-to-strings: Java 中的字符串简介
         csa-pl-compareTo: compareTo() 方法
-        csc-event-short-intro: 活动简短介绍
+        csc-event-short-intro: 事件简介
         PL_CSD_CircuitPlayground_Overview_AppsWithDevices: 赛道游乐场单元概述
         csa-day-in-pm-pl: 项目经理会做什么？
         csa-pl-intro-to-pm: 项目管理简介
@@ -727,6 +727,8 @@ zh-CN:
         upload_sprites_backgrounds: 上传自定义精灵和背景
         what-is-creativity: 什么是创造力?
         code-break: 观看代码小憩
+        csd_ml_how_ai_works: AI 的工作原理
+        hoc-dance-ai-warmup: '舞会AI版：热身'
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

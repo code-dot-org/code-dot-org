@@ -52,7 +52,9 @@ es:
         age: 'Edad'
         gender: 'Sexo'
         edit_header: 'Editar información de la cuenta'
+        ai_settings_header: 'Los ajustes de IA'
         finish_sign_up_header: 'Termina de crear tu cuenta'
+        finish_sign_up_header_error: 'Corrige los siguientes errores:'
         finish_sign_up_subheader: 'Completa la siguiente información para terminar de crear tu cuenta en Code.org para <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Completa la siguiente información para terminar de crear tu cuenta en Code.org para **%{email}**.'
         finish_sign_up_subheader_provider: 'Completa la siguiente información para terminar de crear tu cuenta en Code.org con <strong>%{provider}</strong> para <strong>%{email}</strong>.'
@@ -60,7 +62,9 @@ es:
         reset_password_token: "El enlace para restablecer la contraseña que has seguido"
         error:
           future: No puede ser en el futuro
+        user_type: 'Tipo de cuenta'
         us_state: 'Estado/provincia'
+        ai_rubrics_disabled: 'Desactivar la función de rúbrica de IA'
   beta: "beta"
   hello: "Hola mundo"
   welcome_back: "Bienvenido, %{name}"
@@ -202,6 +206,8 @@ es:
     parent_account_email_progress_permission: "¿Podemos enviarle emails con para contarle sobre el rendimiento y los proyectos de su hijo? Tambien mandaremos informacion sobre los cursos de ciencias computacionales [(Mira nuestra política de privacidad)](%{privacy_policy_url})"
     parent_account_email_label: "Correo electrónico del padre o tutor"
     us_state: 'Estado/provincia'
+    us_state_dropdown_options:
+      other: "Vivo en un lugar que no aparece aquí"
   school_info:
     title: 'Información de la escuela (opcional)'
     school_country: 'País en el que está la escuela'
@@ -264,6 +270,7 @@ es:
   parent_mailer:
     student_associated_subject: 'Información de inicio de sesión para Code.org'
     parent_email_added_subject: '¡Bienvenido a Code.org!'
+    parent_permission_request_subject: "Se necesita el consentimiento de los padres para que su hijo tenga acceso a Code.org"
   teacher_mailer:
     new_teacher_subject: '¡Bienvenido a Code.org!'
     delete_teacher_subject: 'Aviso de Code.org: tu cuenta ha sido eliminada'
@@ -582,13 +589,13 @@ es:
     thank_you: 'Agradecemos a nuestros <a href="https://code.org/about/donors">donantes</a>, <a href="https://code.org/about/partners">asociados</a>, a nuestro <a href="https://code.org/about/team">equipo ampliado</a> nuestro elenco de vídeo y a nuestros <a href="https://code.org/about/advisors">asesores académicos</a> su apoyo en la creación de Code Studio.'
     help_from_html: 'Queremos reconocer especialmente el trabajo de los ingenieros de Amazon, Google y Microsoft, que han ayudado a crear estos materiales.'
     help_from_html_old: 'Ingenieros de Amazon, Google y Microsoft, que han ayudado a crear estos materiales.'
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos los derechos reservados.<br />Star Wars&#8482; &copy; %{current_year} Disney y Lucasfilm. Todos los derechos reservados.<br />Frozen&#8482; &copy; %{current_year} Disney. Todos los derechos reservados.<br />La Era de Hielo&#8482; &copy; %{current_year} 20th Century Fox. Todos los derechos reservados.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos los derechos reservados.<br />Plantas vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos los derechos reservados.<br />El asombroso mundo de Gumball es marca comercial y &copy; %{current_year} Cartoon Network.'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos los derechos reservados.<br />Star Wars&#8482; &copy; %{current_year} Disney y Lucasfilm. Todos los derechos reservados.<br />Frozen&#8482; &copy; %{current_year} Disney. Todos los derechos reservados.<br />La Era de Hielo&#8482; &copy; %{current_year} 20th Century Fox. Todos los derechos reservados.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos los derechos reservados.<br />Plantas vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos los derechos reservados.<br />DreamWorks The Bad Guys &copy; %{current_year} DreamWorks Animation LLC. Todos los derechor reservados.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos los derechos reservados. Star Wars&#8482; &copy; %{current_year} Disney y Lucasfilm. Todos los derechos reservados. Frozen&#8482; &copy; %{current_year} Disney. Todos los derechos reservados. La Era de Hielo&#8482; &copy; %{current_year} 20th Century Fox. Todos los derechos reservados. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos los derechos reservados. Plantas vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos los derechos reservados. El asombroso mundo de Gumball es marca comercial y &copy; %{current_year} Cartoon Network.'
     code_from_html: 'Code.org utiliza p5.play, bajo la licencia <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
-    powered_by_aws: 'Impulsado por Amazon Web Services'
+    powered_by_aws: 'Amazon Web Services y el logotipo «Powered by AWS» son marcas registradas de Amazon.com, Inc. o sus filiales en los Estados Unidos u otros países.'
     built_on_github: 'Creado en GitHub de Microsoft'
     google_copyright: '&copy; Google Inc. utilizado con permiso. Google Classroom es una marca comercial de Google Inc.'
-    trademark: '© Code.org, %{current_year}. Code.org®, el logotipo de CODE y el de Hora de Code ® son marcas registradas de Code.org.'
+    trademark: '© Code.org, %{current_year}. Code.org®, el logotipo de CODE,  la Hora de Código ® y %{cs_discoveries} son marcas registradas de Code.org.'
     copyright: 'Derechos de autor'
     more: 'Más'
     feedback: 'Enviar comentarios'
@@ -683,6 +690,12 @@ es:
       image_alt: 'La caricatura de una persona sosteniendo un enorme lápiz y dibujando un triángulo.'
     conditionals:
       image_alt: 'Dos manos barajando un mazo de cartas.'
+    course2:
+      image_alt: 'Un collage de rompecabezas de Code.org que muestra a un mago verde, un artista y un pez naranja.'
+    course3:
+      image_alt: 'Un collage de rompecabezas de Code.org que muestra un juego, un zombi y un ninja.'
+    coursec:
+      image_alt: ''
     dance-2019:
       title: 'Fiesta de Baile'
     dance:
@@ -1186,4 +1199,3 @@ es:
     save_image: "Guardar imagen"
     actual_size: "Tamaño real"
     binary: "Binario"
-

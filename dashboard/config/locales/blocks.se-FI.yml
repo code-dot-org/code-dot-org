@@ -47,6 +47,10 @@ se:
           UNIT:
             '"measures"': távttat
         text: maŋŋil {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': távttat
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -69,6 +73,26 @@ se:
             '"SHARK"': háiat
             '"SLOTH"': láikkeseallit
             '"UNICORN"': unikornat
+          MOVE:
+            '"next"': "(Boahtte)"
+            '"prev"': "(Ovddit)"
+            '"rand"': "(Sahtedohko)"
+            MOVES.ClapHigh: Spežže Bajas
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Duppalit Vulos
+            MOVES.Drop: Gahčá
+            MOVES.Floss: Flossa
+            MOVES.Fresh: Ođas
+            MOVES.Kick: Násti
+            MOVES.Roll: Gorut Jorran
+            MOVES.ThisOrThat: Dát vai Duot
+        text: "{GROUP} daga {MOVE} {DIR} vaikko man galle geardde"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': bussát
+            '"SLOTH"': láikkeseallit
           MOVE:
             '"next"': "(Boahtte)"
             '"prev"': "(Ovddit)"
@@ -488,6 +512,49 @@ se:
             '"electronic"': Elektrovnnalaš
             '"iceCream"': LákcaJiekŋa
             '"neon"': Neona
+            '"rave"': Čáhppes ja Vilges
+            '"tropical"': Trohpalaš
+            '"vintage"': Retro
+            '"warm"': Liekkus
+        text: |-
+          bija duogábeal-effeavtta
+          {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Jorbbát
+            '"color_cycle"': Ivnnit
+            '"diamonds"': Diamánttat
+            '"disco"': Njealječiegagat
+            '"disco_ball"': Diskospábba
+            '"fireworks"': Dollarusonat
+            '"flowers"': Lieđit
+            '"galaxy"': Gomuvuohta
+            '"growing_stars"': Šaddi Násttit
+            '"kaleidoscope"': Kaleidoskohpa
+            '"lasers"': Laser Dánsenguolbi
+            '"music_wave"': Bárut
+            '"quads"': Čiegat
+            '"rainbow"': Arvedávgi
+            '"rand"': "(Sahtedohko)"
+            '"ripples"': Bárožat
+            '"ripples_random"': Sahtedohko Bárožat
+            '"snowflakes"': Muohta
+            '"sparkles"': Šelggonat
+            '"spiral"': Spirála
+            '"splatter"': Málá Goaikkanas
+            '"squiggles"': Squiggles
+            '"starburst"': Starburst
+            '"stars"': Násttit
+            '"swirl"': Hypno
+            '"text"': Lávlagiid namat
+          PALETTE:
+            '"cool"': Čáffa
+            '"default"': Čuovga
+            '"electronic"': Elektrovnnalaš
+            '"iceCream"': LákcaJiekŋa
+            '"neon"': Neona
+            '"rainbow"': Arvedávgi
             '"rave"': Čáhppes ja Vilges
             '"tropical"': Trohpalaš
             '"vintage"': Retro

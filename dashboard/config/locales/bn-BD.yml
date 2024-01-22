@@ -9,11 +9,13 @@ bn:
         email: ই-মেইল
         error:
           future: ভবিষ্যতের হতে পারবে না
+        finish_sign_up_header_error: 'অনুগ্রহ করে নিম্নের ত্রুটিগুলো সংশোধন করুন:'
         gender: লিঙ্গ
         locale: ভাষা
         name: প্রদর্শিত নাম
         password: পাসওআর্ড
         password_confirmation: পাসওআর্ড নিশ্চিতকরণ
+        user_type: অ্যাকাউন্ট-এর ধরন
         username: উজারন্যাম
     errors:
       messages:
@@ -82,6 +84,8 @@ bn:
   errors:
     messages:
       not_saved: 'অনুগ্রহ করে নিম্নের ত্রুটিগুলো সংশোধন করুন:'
+      too_young: এই বিষয়বস্তুতে বয়স সীমাবদ্ধতা রয়েছে এবং তরুণ শিক্ষার্থীদের জন্য
+        উপলব্ধ নয়।
   follower:
     added_teacher: "%{name} আপনার শিক্ষক হিসেবে যুক্ত হলেন।"
     error:

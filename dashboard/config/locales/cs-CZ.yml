@@ -10,6 +10,7 @@ cs:
         error:
           future: nemůže být v budoucnosti
         finish_sign_up_header: Dokončete vytvoření účtu
+        finish_sign_up_header_error: 'Opravte prosím následující chyby:'
         finish_sign_up_subheader: Vyplňte následující informace pro vytvoření účtu
           Code.org <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Vyplňte následující informace pro vytvoření
@@ -33,6 +34,7 @@ cs:
           e-mailovou adresu)](%{url})
         reset_password_token: Odkaz na obnovení hesla, který jsi použil/a.
         us_state: Stát (USA)
+        user_type: Typ účtu
         username: Uživatelské jméno
         verified_teacher: Ověřený učitel
     errors:

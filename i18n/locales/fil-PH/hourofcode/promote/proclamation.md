@@ -21,11 +21,13 @@ Samantalang ang computer technology ay mahalagang bahagi ng modernong kultura at
 
 Samantalang ang computer science ay binabago ang industriya, naglilikha ng bagong larangan ng science, at nagpapatakbo ng pagbabago sa lahat ng larangan ng science, at nagbo-bolstering ng produktibo sa natatag na ekomoniyang mga sektor;
 
-Samantalang ang larangan ng computer science ay sumusuporta sa sektor ng information technology sa ating ekonomiya, kung saan ang isang mahalagang kontribyutor sa resulta ng ekonomiya sa Estados Unidos;
+Whereas the field of computer science is a foundational subject that underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
 
-Samantalang ang larangan ng computer science ay pundasyon ng science sa panahon ng makabagong teknolohiya;
+Whereas artificial intelligence literacy refers to the knowledge, skills, and attitudes associated with how artificial intelligence works, including fundamental concepts in computer science, and how to use artificial intelligence safely, responsibly, and ethically;
 
-Samantalang ang sektor ng information technology ay katangi-tangi na nakaposisyon upang makatulong sa pagbangon ng ating ekonomiya sa pamamagitan ng pagsasaliksik at pag-unlad ng mga bagong inobasyon;
+Whereas the field of computer science, including artificial intelligence, are technologies with the power to fundamentally transform nearly all sectors of the United States economy;
+
+Whereas technological leadership in all areas of computer science, including artificial intelligence, is an economic and national security imperative;
 
 Samantalang ang pananaw para sa mga trabaho sa computer science ay maliwanag na higit pa sa 500,00 ang magbubukas ng computing na posisyon sa buong bansa;
 
@@ -33,11 +35,11 @@ Samantalang ang pagbibigay sa mga estudyante ng pagkakataong na lumahok sa mataa
 
 Samantalang ang lahat ng estudyante ay nararapat sa isang masusing paghahanda sa computer science education, kabilang ang pag-access sa mga kwalipikadong mga guro, teknolohiya, at angkop sa edad ng kurikulum ay kailangan upang matuto ng computer science sa elementarya at sekundaryang antas ng edukasyon;
 
-Samantalang ang computer science education ay may hamon na mensahe, kabilang na ang pagbibilang ng mga klase sa computer science patungo sa mga iniaatas sa pagtatapos ng high school, at pagbibigay ng mga propesyonal na pagpapaunlad para sa mga guro sa computer science;
+Whereas computer science education has challenges to address, including improving access to computer science courses for all students, and providing professional development for computer science teachers;
 
 Samantalang ang pagsali sa isang oras ng Code sa panahon ng Computer Science Education Week ay maglilingkod upang linawin at simplihan ang larangan ng computer science at maghikayat ng mas marami pang estudyante na humawak ng mga karagdagang pag-aaral ng computer science;
 
-Samantalang sa larangan ng computer science ay may makabuluhang mga hadlang sa equity upang matugunan, kabilang na ang pag-akit sa higit pang partisipasyon ng mga babae at minorya na kulang ang pagkatawan sa lahat ng antas at sangay;
+Whereas the field of computer science has significant equity barriers to address, including attracting and retaining a field of candidates diverse in race, ethnicity, and gender at all levels and branches;
 
 Samantalang si Grace Murray Hopper, isa sa unang mga babae sa larangan ng computer science, bagong programming languages at naunang mga pamantayan para sa computer systems kung saan inilatag ang pundasyon para sa maraming pagsulong sa computer science; at
 
@@ -51,8 +53,6 @@ Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
 
 (3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
 
-(4) hinihikayat ang mga mambabatas na tanggalin ang mga balakid na pumipigil sa mga klase ng computer science na tinuturing bilang kredito ng matematika or agham tungo sa inaatas para sa pagtatapos;
-
-(5) hinihikayat ang mga oportunidad, kabilang sa pamamagitan ng umiiral na programa, para sa mga babae at sa mga minorya na kulang sa pagkatawan sa computer science.
+(4) encourages opportunities, including through existing programs, for female students and students from racial and ethnic groups underrepresented in computer science.
 
 {{ signup_button }}

@@ -447,6 +447,10 @@ mi:
           lessons:
             lesson-6:
               name: Ngā Koromeke
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ihirangi
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -478,6 +482,10 @@ mi:
           lessons:
             lesson-4:
               name: Ngā Taurangi
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -505,6 +513,10 @@ mi:
           lessons:
             lesson-3:
               name: Mō Ngā Koromeke
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -526,6 +538,10 @@ mi:
             lessonGroup-2:
               display_name: Ihirangi
         csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Ihirangi
@@ -559,6 +575,10 @@ mi:
           lesson_groups:
             lessonGroup-2:
               display_name: Ihirangi
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -583,6 +603,10 @@ mi:
           lesson_groups:
             lessonGroup-2:
               display_name: Ihirangi
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -604,6 +628,10 @@ mi:
             lessonGroup-2:
               display_name: Ihirangi
         csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Ihirangi
@@ -632,6 +660,10 @@ mi:
             lessonGroup-2:
               display_name: Ihirangi
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Ihirangi
@@ -869,6 +901,14 @@ mi:
               display_name: Ngā Taumahi
             csp_variables:
               display_name: Ngā Taurangi
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
+            csp_variables:
+              display_name: Ngā Taurangi
         csp4-dlp:
           lesson_groups:
             content:
@@ -965,6 +1005,12 @@ mi:
               display_name: Ngā Rārangi
             lessonGroup-3:
               display_name: Ngā Koromeke
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Ngā Rārangi
+            lessonGroup-3:
+              display_name: Ngā Koromeke
         csp6-pilot:
           lesson_groups:
             content:
@@ -1031,6 +1077,8 @@ mi:
           description: Neke atu i te kotahi haora, anei ethahi wero ano.
           student_description: Neke atu i te kotahi haora, anei ethahi wero ano.
           title: Me Kanikani Tonu
+        dance-unplugged:
+          title: Te Pāti Kanikani Purukore
         dlp19-csd-mod-fit:
           lesson_groups:
             content:
@@ -1246,7 +1294,7 @@ mi:
           description_short: Tūhura i te Minecraft ao i roto i te tohu pūmanawa
           student_description: Whakamahia ngā paraka tuhiwaehere hei kawe i a Steve,
             i a Alex rānei i tētahi mahi mātātoa mā tēnei ao Mahimaina
-          title: Hour of Code Mahimaina
+          title: Kiri Māia Mahimaina
         minecraft:
           description: Papatonotia ngā kararehe me ētahi atu koiora o Mahimaina i
             tāu ake whakaputanga Mahimaina.
@@ -1343,6 +1391,17 @@ mi:
               display_name: Ngā Takunetanga
             csf_loops:
               display_name: Ngā Koromeke
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Ngā Koromeke
+            lesson-4:
+              name: Ngā Here
+          title: Whakatakinga ki te Pūtaiao Rorohiko
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Ngā Takunetanga
         soccer:
           name: poiwhana
         spelling-bee:
@@ -1440,7 +1499,22 @@ mi:
           lesson_groups:
             content:
               display_name: Ihirangi
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Kupu Whakataki
+          lessons:
+            lesson-7:
+              name: Kupu Whakataki
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Kupu Whakataki
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
+              name: Kupu Whakataki
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
               name: Kupu Whakataki

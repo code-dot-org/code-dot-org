@@ -9,6 +9,7 @@ mt:
         email: Ittre
         error:
           future: ma tistax tkun fil-futur
+        finish_sign_up_header_error: 'Jekk jogħġbok ikkoreġu dawn l-iżbalji:'
         gender: Sess
         locale: Lingwa
         name: Isem li jintwera

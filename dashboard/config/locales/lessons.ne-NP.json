@@ -254,6 +254,24 @@
         "pre-express-2019/Spelling Bee": {
           "name": "Spelling Bee"
         },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Loops"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "घटनाहरु"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Conditionals"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Functions"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variables"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "For Loops"
+        },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Happy Maps"
         },
@@ -389,8 +407,53 @@
         "coursef-2022/The Internet": {
           "name": "The Internet"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Hour of Code 2013"
+        "csd3-2023/Variables": {
+          "name": "Variables"
+        },
+        "csd3-2023/Text": {
+          "name": "Text"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Conditionals"
+        },
+        "csd3-2023/Functions": {
+          "name": "Functions"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Functions"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Functions"
+        },
+        "coursea-2023/Happy Maps": {
+          "name": "Happy Maps"
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Move It, Move It"
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Getting Loopy"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "The Big Event"
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Binary Bracelets"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Graph Paper Programming"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Relay programming"
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Conditionals with Cards"
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Songwriting"
+        },
+        "coursef-2023/The Internet": {
+          "name": "The Internet"
         },
         "artist/Artist": {
           "name": "Artist"
@@ -421,12 +484,6 @@
         },
         "oceans/Oceans": {
           "name": "महासागरका लागि A.I"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
         },
         "playlab/Play Lab": {
           "name": "Play Lab"
@@ -754,6 +811,9 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Extreme Challenge - Comprehensive"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hour of Code 2013"
         },
         "jigsaw/Jigsaw": {
           "name": "Jigsaw"

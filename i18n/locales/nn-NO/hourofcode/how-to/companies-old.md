@@ -67,7 +67,7 @@ Køyr i gong Kodetimen med å inspirere deltakarane og diskutere korleis informa
 - Dersom du kjem frå eit teknologiselskap, vis gjerne demoar av morosame og innovative produkt som verksemda di jobbar med.
 - Viss du ikkje representerar eit teknologiselskap, diskuter på kva måtar selskapet ditt brukar teknologi for å løysa problem og nå måla dykkar.
 - Invitér programmerarar frå verksemda di for å snakke om kvifor dei valde å studera datateknologi, og kva prosjekt dei jobbar med no.
-- Se tips for å få jenter interessert i dataprogrammering [her]({{ urls/girls }}).
+- Se tips for å få jenter interessert i informatikk [her]({{ urls/girls }}).
 
 ## 6. Koding!
 **Lei deltakarane til aktiviteten**

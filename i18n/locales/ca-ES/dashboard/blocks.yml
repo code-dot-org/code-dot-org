@@ -101,6 +101,11 @@ ca:
           UNIT:
             '"measures"': mesures
             '"seconds"': segons
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': mesures
+            '"seconds"': segons
       Dancelab_changeColorBy:
         text: canvi {COLOR} {METHOD} per {AMOUNT}
         options:
@@ -140,6 +145,27 @@ ca:
             MOVES.Kick: Estrella
             MOVES.ThisOrThat: Aquest o aquell
             MOVES.Rest: Cap
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} fer {MOVE} {DIR} per sempre"
+        options:
+          GROUP:
+            '"CAT"': tots els gats
+            '"SLOTH"': peresosos
+          MOVE:
+            MOVES.Roll: Rodar per terra
+            MOVES.ClapHigh: aplaudir ben fort
+            MOVES.Dab: Dansa d'amagar el cap
+            MOVES.DoubleJam: Baixada doble
+            MOVES.Drop: Deixar anar
+            MOVES.Floss: Provocació
+            MOVES.Fresh: Fresc
+            MOVES.Clown: Pallasso
+            MOVES.Kick: Estrella
+            MOVES.ThisOrThat: Aquest o aquell
+            MOVES.Rest: Cap
+            '"next"': "(Següent)"
+            '"prev"': "(Anterior)"
+            '"rand"': "(Aleatori)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} fer {MOVE} {DIR} per sempre"
         options:
@@ -600,6 +626,49 @@ ca:
             '"tropical"': Tropical
             '"vintage"': Vintage
             '"warm"': Vermells
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: definir l'efecte de fons {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Cap
+            '"rand"': "(Aleatori)"
+            '"quads"': Angles
+            '"circles"': Túnel
+            '"color_cycle"': Colors
+            '"diamonds"': Diamants
+            '"disco_ball"': Bola de discoteca
+            '"fireworks"': Focs artificials
+            '"flowers"': Flors
+            '"growing_stars"': Estrelles creixents
+            '"swirl"': Hipnosi
+            '"kaleidoscope"': Calidoscopi
+            '"lasers"': Zona de ball amb làser
+            '"splatter"': Esquitxades de pintura
+            '"rainbow"': Arc de Sant Martí
+            '"ripples_random"': Ones aleatòries
+            '"ripples"': Ones
+            '"snowflakes"': Neu
+            '"text"': Títol de la cançó
+            '"galaxy"': Espai
+            '"sparkles"': Guspires
+            '"spiral"': Espiral
+            '"disco"': Requadres
+            '"squiggles"': Guixots
+            '"starburst"': esclat d'estrelles
+            '"stars"': Estrelles
+            '"music_wave"': Onades
+          PALETTE:
+            '"rave"': Blanc i negre
+            '"cool"': Blues
+            '"electronic"': Electrònic
+            '"iceCream"': Gelat
+            '"default"': Llum
+            '"neon"': Neó
+            '"ocean"': Oceà
+            '"rainbow"': Arc de Sant Martí
+            '"tropical"': Tropical
+            '"vintage"': Vintage
+            '"warm"': Vermells
       Dancelab_setDanceSpeed:
         text: canviar {SPRITE} velocitat de dansa a {SPEED}
         options:
@@ -1035,6 +1104,14 @@ ca:
             '5': tots dos
       DansBlocks_testRectangle:
         text: 'fer rectangle x: {X} y: {Y} w: {W} h: {H} color: {COLOR}'
+      DansBlocks_testShowVariable:
+        options:
+          OPT:
+            '"large"': gran
+            '"small"': petit
+          COLOR:
+            '"blue"': blau
+            '"red"': vermell
       FunctionBlocks_addEightBlock:
         text: afegirVuit
       FunctionBlocks_addFiveBlock:
@@ -1724,6 +1801,15 @@ ca:
         text: coordenada y de {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} patina cap a {LOCATION}"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': sòlid
+            '"liquid"': líquid
+            '"gas"': gas
       KatiesBlocks_spriteBirdSay:
         text: "{SPRITE} diu {SPEECH}"
         options:

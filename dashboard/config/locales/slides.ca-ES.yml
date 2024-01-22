@@ -2386,6 +2386,19 @@ ca:
         image: notes/hoc_hello_world_2021_introduction_10.jpg
         text: Quan premeu “Executar”, el sprite dirà qualsevol text que li digueu.
           Ara toca començar amb Sprite Lab, i veure cap a on et porta la imaginació!
+    hoc-dance-ai-warmup:
+      2:
+        text: Hola, em dic Miral Kotb i soc ballarina, desenvolupadora de software
+          i creadora d'iLuminate.
+      3:
+        text: La informàtica i la creativitat estan relacionades de moltes maneres.
+          Són impossibles de comptar! Perquè un cop tens l'habilitat d'escriure codi,
+          pots convertir les teves idees en el que vulguis. Jo ho faig amb vestits
+          de llum. Quan tens els recursos necessaris per escriure codi, pots fer moltíssimes
+          coses, i les possibilitats són inifites.
+      5:
+        text: Fareu servir blocs de codi per triar ballarins diferents, canviar els
+          passos de ball que fan, fer que segueixin la música i fer-los interactius.
     hoc_dance_congrats:
       1:
         text: 'Hour of Code | Dance Party: Party On!'

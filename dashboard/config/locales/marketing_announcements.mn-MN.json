@@ -1,0 +1,22 @@
+{
+  "mn-MN": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "co-teacher": {
+            "buttonText": "Илүү мэдээлэл авах"
+          },
+          "hoc-2023": {
+            "buttonText": "Илүү мэдээлэл авах"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Илүү мэдээлэл авах"
+          },
+          "superhero": {
+            "buttonText": "Илүү мэдээлэл авах"
+          }
+        }
+      }
+    }
+  }
+}

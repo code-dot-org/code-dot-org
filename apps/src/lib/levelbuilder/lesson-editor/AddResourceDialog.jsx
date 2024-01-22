@@ -8,6 +8,7 @@ import color from '@cdo/apps/util/color';
 import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 import LessonEditorDialog from './LessonEditorDialog';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const TYPE_OPTIONS = [
   'Activity Guide',
@@ -281,8 +282,7 @@ const styles = {
     borderColor: color.orange,
     borderRadius: 3,
     fontSize: 12,
-    fontFamily: '"Gotham 4r", sans-serif',
-    fontWeight: 'bold',
+    ...fontConstants['main-font-regular'],
     paddingLeft: 20,
     paddingRight: 20,
     paddingTop: 5,

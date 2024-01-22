@@ -10,6 +10,7 @@ da:
         error:
           future: kan ikke være i fremtiden
         finish_sign_up_header: Afslut oprettelsen af din konto
+        finish_sign_up_header_error: 'Ret venligst følgende fejl:'
         finish_sign_up_subheader: Udfyld følgende oplysninger for at afslutte oprettelsen
           af en Code.org konto for <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Udfyld de følgende oplysninger for at oprette
@@ -31,6 +32,7 @@ da:
           har en e-mailadresse)](%{url})
         reset_password_token: Adgangskode linket du har brugt
         us_state: Region
+        user_type: Kontotype
         username: brugernavn
         verified_teacher: Verificeret lærer
     errors:

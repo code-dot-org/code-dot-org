@@ -43,6 +43,7 @@ sr:
         gender: 'Пол'
         edit_header: 'Уреди детаље налога'
         finish_sign_up_header: 'Заврши креирање твог налога'
+        finish_sign_up_header_error: 'Молим вас исправите следеће грешке:'
         finish_sign_up_subheader: 'Попуни следеће информације да би завршио креирање Code.org налога за <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Попуни следеће информације да би завршио креирање Code.org налога за **%{email}**.'
         finish_sign_up_subheader_provider: 'Попуни следеће информације да би завршио креирање Code.org налога са <strong>%{provider}</strong> за <strong>%{email}</strong>.'
@@ -50,6 +51,7 @@ sr:
         reset_password_token: "Веза за ресетовање шифре коју си пратио"
         error:
           future: не може бити у будућности
+        user_type: 'Врста налога'
   beta: "пробна верзија"
   hello: "Здраво свете"
   welcome_back: "Добродошао назад, %{name}"
@@ -502,4 +504,3 @@ sr:
     accept: 'Слажем се'
   copy: 'Копирај'
   confirm: 'Потврди'
-

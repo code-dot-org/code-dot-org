@@ -16,11 +16,12 @@ namespace :rds do
       clone_cluster_id: ENV['CLONE_CLUSTER_ID'],
       instance_type: ENV['INSTANCE_TYPE']
     }
-    Cdo::RDS.clone_cluster(options.compact)
+    Cdo::RDS.clone_cluster(**options.compact)
   end
 
   desc 'Delete CLUSTER_ID'
   timed_task_with_logging :delete_cluster do
+    raise StandardError.new("CLUSTER_ID environment variable is required.") unless ENV['CLUSTER_ID'].present?
     Cdo::RDS.delete_cluster(ENV['CLUSTER_ID'])
   end
 end

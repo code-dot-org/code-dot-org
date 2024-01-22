@@ -25,7 +25,7 @@ Probar una Hora del Código es una forma sencilla y divertida de introducir a lo
 
 <a id="how-to-video"></a>
 
-## Mira el vídeo de la Hora del Código. <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## Mira el vídeo de la Hora del Código. <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -72,7 +72,7 @@ Ahora que has planificado tu evento, ¡es hora de comenzar a difundirlo!
 
 ### Informa a los voluntarios cuando se registren a tu evento
 
-Cuando [inscribas tu evento de la Hora del Código](/#join), recibirás útiles comunicaciones por correo electrónico con noticias y consejos para organizar con éxito la Hora del Código. También es la forma en que puedes informar a los voluntarios locales de que tu escuela está participando. Los voluntarios son un gran recurso y pueden venir a hablar con tu clase sobre Ciencias de la computación o simplemente ayudar a tus estudiantes con las actividades de la Hora del Código.
+Cuando te [inscribas en tu evento de la Hora del Código](/events), recibirás comunicaciones útiles por correo electrónico con noticias y consejos para organizar una Hora del Código exitosa. También es la forma en que puedes informar a los voluntarios locales de que tu escuela está participando. Los voluntarios son un gran recurso y pueden venir a hablar con tu clase sobre Ciencias de la computación o simplemente ayudar a tus estudiantes con las actividades de la Hora del Código.
 
 ### ¡Genera entusiasmo entre tus estudiantes!
 
@@ -111,7 +111,7 @@ No hay ningún problema si tanto tú como tus estudiantes sois nuevos en la Cien
 
 Involucra a los estudiantes en la actividad
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- Escribe el enlace del tutorial en una pizarra. Busque el enlace que aparece en la [información del tutorial]({{ urls/learn }})que haya seleccionado.
 
 Si los estudiantes encuentran dificultades, está bien responder:
 
@@ -151,6 +151,6 @@ Si los estudiantes encuentran dificultades, está bien responder:
 
 ### ¿Qué viene después de la Hora de Código?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+¡La informática no tiene por qué terminar con la Hora del Código! [Aprenda](/beyond) a llevar la informática a su escuela y a sus alumnos.
 
 {{ signup_button }}

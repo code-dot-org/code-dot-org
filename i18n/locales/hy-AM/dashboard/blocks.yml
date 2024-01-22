@@ -6,6 +6,10 @@ hy:
         options:
           UNIT:
             '"seconds"': վայրկյան
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"seconds"': վայրկյան
       Dancelab_changePropBy:
         options:
           PROPERTY:
@@ -149,6 +153,11 @@ hy:
         options:
           EFFECT:
             '"hearts"': hearts
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': կապույտ
+            '"red"': կարմիր
       gamelab_atTime:
         options:
           UNIT:

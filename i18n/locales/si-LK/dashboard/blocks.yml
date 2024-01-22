@@ -18,6 +18,10 @@ si:
         options:
           UNIT:
             '"seconds"': තත්පර
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"seconds"': තත්පර
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
@@ -198,6 +202,11 @@ si:
         options:
           EFFECT:
             '"hearts"': හදවත්
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': නිල්
+            '"red"': රතු
       gamelab_atTime:
         options:
           UNIT:

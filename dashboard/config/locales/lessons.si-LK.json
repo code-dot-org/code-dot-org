@@ -185,6 +185,9 @@
         "pre-express-2018/Spelling Bee": {
           "name": "අක්ෂර වින්‍යාස බඹරා"
         },
+        "K5-OnlinePD/Next Steps": {
+          "name": "ඉදිරි පියවර"
+        },
         "csd2-2019/Lists": {
           "name": "ලැයිස්තු"
         },
@@ -253,6 +256,24 @@
         },
         "pre-express-2019/Spelling Bee": {
           "name": "අක්ෂර වින්‍යාස බඹරා"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "ලූපයන්"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "වැඩසටහන්"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "කන්ඩිෂනලස්"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "ශ්‍රිතයන්"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "විචල්‍යන්"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "ලූපයන් සඳහා"
         },
         "coursea-2020/Programming: Happy Maps": {
           "name": "සතුටු සිතියම්"
@@ -341,6 +362,9 @@
         "coursef-2021/Internet": {
           "name": "අන්තර්ජාලය"
         },
+        "kodea-pd-2021/Next Steps": {
+          "name": "ඉදිරි පියවර"
+        },
         "csd3-2022/Variables": {
           "name": "විචල්‍යන්"
         },
@@ -386,8 +410,53 @@
         "coursef-2022/The Internet": {
           "name": "අන්තර්ජාලය"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "පැයේ කේතය 2013"
+        "csd3-2023/Variables": {
+          "name": "විචල්‍යන්"
+        },
+        "csd3-2023/Text": {
+          "name": "පෙළ"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "කන්ඩිෂනලස්"
+        },
+        "csd3-2023/Functions": {
+          "name": "ශ්‍රිතයන්"
+        },
+        "csd6a-2023/Functions": {
+          "name": "ශ්‍රිතයන්"
+        },
+        "csd6b-2023/Functions": {
+          "name": "ශ්‍රිතයන්"
+        },
+        "coursea-2023/Happy Maps": {
+          "name": "සතුටු සිතියම්"
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "එය ගෙන යන්න, ගෙන යන්න"
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "ඔල්මාද වීම"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "විශාල සිදුවීම"
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "ද්විමය වළලු"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "ප්‍රස්තාර රටා වැඩසටහන්"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "කාඩ්පත් සමඟ කොන්දේසික"
+        },
+        "coursee-2023/Songwriting": {
+          "name": "ගීත ලිවීම"
+        },
+        "coursef-2023/The Internet": {
+          "name": "අන්තර්ජාලය"
         },
         "artist/Artist": {
           "name": "කලාකරු"
@@ -413,32 +482,11 @@
         "mc/Hour of Code 2015": {
           "name": "Minecraft Hour of Code"
         },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
         "playlab/Play Lab": {
           "name": "ක්‍රීඩා පරීක්ෂණාගාරය"
         },
         "starwars/Hour of Code 2015": {
           "name": "Star Wars: කේත හරහා මන්දාකිනිය ගොඩනගන්න (JavaScript)"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "දළ විශ්ලේෂණය සහ පිහිටුවීමේ උපදෙස්"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "ප්‍රචාරණ පණිවිඩ"
-        },
-        "netsim/Manual DNS": {
-          "name": "හස්තීය DNS"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "ස්වයංක්‍රීය DNS නෝඩුව"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "අන්තර්ජාල සමාකෘති නිදහස්ව ක්‍රීඩා කිරීම"
         },
         "allthethings/Jigsaw": {
           "name": "පින්තූර ප්‍රෙහේලිකාව"
@@ -767,8 +815,26 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "දැඩි අභියෝගය - පුළුල්"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "පැයේ කේතය 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "පින්තූර ප්‍රෙහේලිකාව"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "දළ විශ්ලේෂණය සහ පිහිටුවීමේ උපදෙස්"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "ප්‍රචාරණ පණිවිඩ"
+        },
+        "netsim/Manual DNS": {
+          "name": "හස්තීය DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "ස්වයංක්‍රීය DNS නෝඩුව"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "අන්තර්ජාල සමාකෘති නිදහස්ව ක්‍රීඩා කිරීම"
         }
       }
     }

@@ -134,7 +134,7 @@ Diskusikan dengan sekolah atau guru untuk membahas apa yang paling cocok. Kami s
 - Jelaskan dampak teknologi terhadap kehidupan kita, dengan contoh yang akan diperhatikan oleh siswa dari semua latar belakang - bicarakan tentang teknologi yang menyelamatkan nyawa, membantu orang, menghubungkan orang.
 - Jika Anda adalah perusahaan teknologi, demonstrasikan produk inovatif dan seru yang sedang dikembangkan oleh perusahaan Anda. Jika Anda bukan perusahaan teknologi, ceritakan cara perusahaan Anda dalam menggunakan teknologi untuk memecahkan masalah dan mencapai tujuan.
 - Undang software engineer dari perusahaan Anda untuk berbicara mengenai alasan mereka memutuskan untuk belajar ilmu komputer dan proyek-proyek yang sedang mereka kerjakan.
-- Jika Anda memiliki beberapa staf yang akan memfasilitasi acara atau menjadi relawan di sekolah lokal, pertimbangkan untuk memesan [kaos khusus](http://blog.code.org/post/132608499493/hour-of-code-shirts-and -more) untuk mereka.
+- Jika Anda memiliki sekelompok staf yang akan memfasilitasi acara Anda atau menjadi sukarelawan dengan sekolah setempat, pertimbangkan untuk memesan [kaos khusus](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) untuk grup Anda.
 
 ### 3. Rencanakan kebutuhan teknologi Anda
 
@@ -187,7 +187,7 @@ Salah satu cara terbaik untuk membantu adalah menyebarkan informasi ini dan memp
 
 ### 1. Daftarkan Acara Anda
 
-Saat [mendaftarkan acara Hour of Code Anda](/#join), Anda akan menerima email yang berisi berita dan kiat untuk menyelenggarakan Hour of Code yang sukses. Ini juga dapat menjadi cara Anda dalam memberi tahu sekolah setempat atau orang tua bahwa Anda mengadakan acara di dekat wilayah mereka.
+Saat Anda [mendaftar untuk mengikuti acara Hour of Code](/events), Anda akan menerima email yang berisi informasi dan kiat untuk menyelenggarakan Hour of Code yang sukses. Ini juga dapat menjadi cara Anda dalam memberi tahu sekolah setempat atau orang tua bahwa Anda mengadakan acara di dekat wilayah mereka.
 
 ### 2. Posting di Media Sosial
 

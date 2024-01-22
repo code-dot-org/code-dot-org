@@ -881,6 +881,7 @@ cs:
         csd_gamelab_velocity: Rychlost
         csd_how_teamwork_works: Jak funguje týmová práce
         csd_ml_ethics_ai: 'Etika a umělá inteligence '
+        csd_ml_how_ai_works: Jak funguje umělá inteligence
         csd_ml_import_model: Import modelu umělé inteligence
         csd_ml_intro_ai_lab_july2021: Úvod do laboratoře umělé inteligence
         csd_ml_intro_to_ai_lab: Úvod do laboratoře umělé inteligence

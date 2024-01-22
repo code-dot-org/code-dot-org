@@ -2522,6 +2522,19 @@ es-MX:
         text: Cuando pulses "Ejecutar", el sprite mostrará el texto que le indiques.
           Ahora es el momento de empezar con Laboratorio Sprite ¡y ver hasta dónde
           te lleva tu imaginación!
+    hoc-dance-ai-warmup:
+      2:
+        text: "¡Hola! Mi nombre es Miral Kotb y soy bailarina, desarrolladora de software
+          y creadora de iLuminate."
+      3:
+        text: Las ciencias de la computación se relacionan con la creatividad de muchas
+          maneras. Muchísimas, de hecho. Me refiero a que, una vez que tienes la capacidad
+          de escribir software, puedes innovar en lo que sea. Yo lo hago en los trajes
+          de luces. Hay tantas cosas que puedes hacer una vez que tienes las herramientas
+          para escribir software, y las posibilidades son realmente infinitas.
+      5:
+        text: Usarás bloques de código para elegir diferentes bailarines, cambiar
+          sus movimientos de baile, hacerlos responder a la música y que puedan interactuar.
     hoc_dance_congrats:
       1:
         text: 'Hora del Código | Fiesta de baile: ¡que comience la fiesta!'

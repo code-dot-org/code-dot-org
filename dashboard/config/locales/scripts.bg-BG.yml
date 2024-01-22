@@ -112,6 +112,7 @@ bg:
           description: Опитайте основите на компютърните науки с герои от Angry Birds
             и Plants vs. Zombies!
           description_short: Опитайте основите на програмирането с много забавни герои!
+          name: Час на Кода
           student_description: Опитайте основите на компютърните науки с герои от
             Angry Birds и Plants vs. Zombies!
           title: Час на кодирането 2013
@@ -253,9 +254,14 @@ bg:
           name: андреа-тест
           title: андреа-тест
         angelina-playground:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Случаен
           lessons:
             lesson-5:
               name: Оценки
+            lesson-6:
+              name: Урок 1
         aquatic:
           description_short: Използвай своята изобретателност и умения да решаваш
             проблеми, за да изследваш и построиш подводни светове с код!
@@ -879,6 +885,12 @@ bg:
               name: Java (Джава) Практически Урок
             lesson-6:
               name: Повторения
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Проучване
+            lessonGroup-3:
+              display_name: Съдържание
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -912,6 +924,10 @@ bg:
           lessons:
             lesson-4:
               name: Променливи
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -941,6 +957,10 @@ bg:
               name: Едномерни (1D) Масиви
             lesson-3:
               name: За циклите
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -968,6 +988,10 @@ bg:
           lessons:
             lesson-9:
               name: Случаен
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
         csa4-exemplars:
           lesson_groups:
             content:
@@ -998,6 +1022,10 @@ bg:
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1022,6 +1050,10 @@ bg:
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1043,6 +1075,10 @@ bg:
             lessonGroup-2:
               display_name: Съдържание
         csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
@@ -1073,6 +1109,12 @@ bg:
             lessonGroup-5:
               display_name: Проучване
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+            lessonGroup-4:
+              display_name: Проучване
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
@@ -1145,6 +1187,10 @@ bg:
             cspSurvey:
               display_name: Проучване
         csd1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Проучване
+        csd1-2024:
           lesson_groups:
             lessonGroup-5:
               display_name: Проучване
@@ -1376,6 +1422,10 @@ bg:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Глава 1: Вход и Изход'
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Вход и Изход'
         csd7-2021:
           lesson_groups:
             lessonGroup-4:
@@ -1386,6 +1436,8 @@ bg:
             lessonGroup-4:
               display_name: Проучване
         csd7-2023:
+          title: AI и Машинно Обучение
+        csd7-2024:
           title: AI и Машинно Обучение
         csf-2021-pilot:
           lesson_groups:
@@ -1529,6 +1581,12 @@ bg:
               display_name: Проучване
             csp_unit1_2020:
               display_name: 'Урок 1: Цифрова информация'
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+            csp_unit1_2020:
+              display_name: 'Урок 1: Цифрова информация'
         csp1-dlp:
           lesson_groups:
             content:
@@ -1608,6 +1666,10 @@ bg:
             csp_unit2_2020:
               display_name: 'Раздел 2: Интернет'
         csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Раздел 2: Интернет'
+        csp2-2024:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Раздел 2: Интернет'
@@ -1792,6 +1854,16 @@ bg:
               display_name: Проект
             csp_variables:
               display_name: Променливи
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Условия
+            csp_functions:
+              display_name: Функции
+            csp_project:
+              display_name: Проект
+            csp_variables:
+              display_name: Променливи
         csp4-dlp:
           lesson_groups:
             content:
@@ -1894,6 +1966,10 @@ bg:
               display_name: Повторения
             csp_project:
               display_name: Проект
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Данни
         csp5-dlp:
           lesson_groups:
             content:
@@ -1941,6 +2017,14 @@ bg:
             csp_unit6_2020:
               display_name: Алгоритми
         csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Списъци
+            lessonGroup-3:
+              display_name: Повторения
+            lessonGroup-5:
+              display_name: Проект
+        csp6-2024:
           lesson_groups:
             csp_unit6_2020:
               display_name: Списъци
@@ -2001,6 +2085,10 @@ bg:
             csp_unit9_2020:
               display_name: 'Раздел 9: данни'
         csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Раздел 9: данни'
+        csp9-2024:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Раздел 9: данни'
@@ -2512,7 +2600,7 @@ bg:
           description_short: Изследвайте Minecraft света чрез код.
           student_description: Използвайте блокове с код, за да въведете Steve или
             Alex в приключението чрез този Minecraft свят.
-          title: Minecraft Hour of Code
+          title: Minecraft авантюрист
         microbit-2023:
           lesson_groups:
             lessonGroup-5:
@@ -2525,6 +2613,10 @@ bg:
           student_description: Програмирай животни и други Minecraft същества в своя
             собствена версия на Minecraft.
           title: Minecraft Hour of Code Дизайнер
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Свободна игра
         netsim:
           description: Научете как работи Интернет.
           description_short: Научете как работи Интернет.
@@ -2709,6 +2801,31 @@ bg:
           description: 'Фаза 2 онлайн: Смесено лятно учене'
           description_short: 'Фаза 2 онлайн: Смесено лятно учене'
           student_description: 'Фаза 2 онлайн: Смесено лятно учене'
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Урок 1
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Урок 1
+            lesson-3:
+              name: Повторения
+            lesson-4:
+              name: Условия
+            lesson-6:
+              name: Следващи стъпки
+          title: Въведение в компютърните науки
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Урок 1
+            lesson-3:
+              name: Събития
+            lesson-4:
+              name: Поведения
+            lesson-5:
+              name: Следващи стъпки
         soccer:
           name: футбол
         spelling-bee:
@@ -2839,6 +2956,17 @@ bg:
           lesson_groups:
             content:
               display_name: Съдържание
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Въведение
+          lessons:
+            lesson-7:
+              name: Въведение
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Въведение
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -2847,6 +2975,10 @@ bg:
           lessons:
             lesson-3:
               name: Оценка
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Въведение
         web-development-2023:
           lesson_groups:
             lessonGroup-4:

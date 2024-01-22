@@ -124,6 +124,7 @@ cs:
           description: Zkus základy informatiky s postavičkami z Angry birds a Plants vs. Zombies!
           description_short: Zkuste základy informatiky s mnoha zábavnými postavami!
           student_description: Zkus základy informatiky s postavičkami z Angry birds a Plants vs. Zombies!
+          name: Hodina kódu
         CodeStudioPuzzleChallenge:
           title: Kód Studio Puzzle Výzva
           description: Vyzkoušejte tyto zábavné kódovací hádanky. Udělej to nejlepší!
@@ -487,7 +488,7 @@ cs:
           student_description: Nauč se programovat droidy a vytvoř si vlastní hru Star Wars ve vzdálené galaxii.
           name: starwarsblocks
         mc:
-          title: Hodina kódu s Minecraftem
+          title: Minecraft Adventurer
           description: Vezmi pomocí kódu Steva nebo Alex za dobrodružstvím po světě Minecraft.
           description_short: Prozkoumej svět Minecraftu pomocí kódu
           student_description: Vezmi pomocí kódu Steva nebo Alex za dobrodružstvím po světě Minecraft.
@@ -6875,6 +6876,8 @@ cs:
               name: Mřížka CSS
             lesson-5:
               name: Hodnocení
+            lesson-6:
+              name: Lekce 1
           name: angelina-hřiště
           title: Angelina místo dělat věci
         csc-pilot-fa2022-timecapsule:
@@ -8011,6 +8014,10 @@ cs:
             -   Zjistěte více o příležitostech spojit se s širší komunitou CS.
 
             **Doporučený čas**: 70 minut
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Volná hra
         csa-frq-practice-2022:
           lessons:
             lesson-4:
@@ -8189,3 +8196,512 @@ cs:
           title: Modul 7
         vpl-csd-2023-m8:
           title: Modul 8
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Náš etický kodex umělé inteligence
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Úvod
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronní část 1
+            lessonGroup-3:
+              display_name: Asynchronní část 1
+            lessonGroup-4:
+              display_name: Synchronní část 2
+            lessonGroup-5:
+              display_name: Asynchronní část 2
+        virtual-pl-csp-summer-day3:
+          lessons:
+            lesson-2:
+              name: Asynchronní část 1
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronní část 1
+            lessonGroup-3:
+              display_name: Asynchronní část 1
+            lessonGroup-4:
+              display_name: Synchronní část 2
+            lessonGroup-5:
+              display_name: Asynchronní část 2
+        virtual-pl-csp-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronní část 1
+            lessonGroup-3:
+              display_name: Asynchronní část 1
+            lessonGroup-4:
+              display_name: Synchronní část 2
+            lessonGroup-5:
+              display_name: Asynchronní část 2
+        virtual-pl-csp-summer-day5:
+          lessons:
+            lesson-6:
+              name: Závěrečné ceremonie
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronní část 1
+            lessonGroup-3:
+              display_name: Asynchronní část 1
+            lessonGroup-4:
+              display_name: Synchronní část 2
+        virtual-pl-csa-summer-day2:
+          lessons:
+            lesson-2:
+              name: Asynchronní část 1
+            lesson-3:
+              name: Synchronní část 2
+            lesson-4:
+              name: Asynchronní část 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronní část 1
+            lessonGroup-3:
+              display_name: Asynchronní část 1
+            lessonGroup-4:
+              display_name: Synchronní část 2
+            lessonGroup-5:
+              display_name: Asynchronní část 2
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Úvod
+            lesson-2:
+              name: Asynchronní část 1
+            lesson-4:
+              name: Asynchronní část 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronní část 1
+            lessonGroup-3:
+              display_name: Asynchronní část 1
+            lessonGroup-4:
+              display_name: Synchronní část 2
+            lessonGroup-5:
+              display_name: Asynchronní část 2
+        virtual-pl-csa-summer-day4:
+          lessons:
+            lesson-2:
+              name: Asynchronní část 1
+            lesson-4:
+              name: Asynchronní část 2
+            lesson-5:
+              name: Workshop otvírák
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronní část 1
+            lessonGroup-3:
+              display_name: Asynchronní část 1
+            lessonGroup-4:
+              display_name: Synchronní část 2
+            lessonGroup-5:
+              display_name: Asynchronní část 2
+        virtual-pl-csa-summer-day5:
+          lessons:
+            lesson-1:
+              name: Workshop otvírák
+            lesson-2:
+              name: Asynchronní část 1
+            lesson-3:
+              name: Synchronní část 2
+            lesson-4:
+              name: Asynchronní část 2
+            lesson-13:
+              name: Závěrečné ceremonie
+            lesson-16:
+              name: Závěrečné ceremonie
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronní část 1
+            lessonGroup-4:
+              display_name: Synchronní část 2
+            lessonGroup-5:
+              display_name: Asynchronní část 2
+          title: 'Den 5 '
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-2:
+              name: Asynchronní část 1
+            lesson-3:
+              name: Synchronní část 2
+            lesson-4:
+              name: Asynchronní část 2
+            lesson-7:
+              name: Úvod
+            lesson-8:
+              name: Workshop otvírák
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronní část 1
+            lessonGroup-3:
+              display_name: Asynchronní část 1
+            lessonGroup-4:
+              display_name: Synchronní část 2
+            lessonGroup-5:
+              display_name: Asynchronní část 2
+            lessonGroup-7:
+              display_name: Úvod
+        virtual-pl-csp-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronní část 1
+            lessonGroup-3:
+              display_name: Synchronní část 2
+            lessonGroup-4:
+              display_name: Asynchronní část 1
+            lessonGroup-5:
+              display_name: Asynchronní část 2
+        self-paced-pl-csd-unit1-2-2023:
+          title: 'Modul 1: Příprava na výuku řešení problémů a výpočtů'
+          description: "Tento profesionální výukový modul je navržen tak, aby Vám pomohl připravit se na jednotku řešení problémů a výpočtů Code.org. \n\n**V tomto profesionálním výukovém modulu budete:**\n\n-   Absolvovat úvod so řešení problémů a výpočtů.\n-   Praktikovat kléčové koncepce obsažené v této jednotce.\n-   Zkoumat projekty na koncích kapitol.\n\n**Navrhovaná doba:** 30 minut"
+          student_description: "Tento profesionální výukový modul je navržen tak, aby Vám pomohl připravit se na jednotku řešení problémů a výpočtů Code.org. \n\n**V tomto profesionálním výukovém modulu budete:**\n\n-   Absolvovat úvod so řešení problémů a výpočtů.\n-   Praktikovat kléčové koncepce obsažené v této jednotce.\n-   Zkoumat projekty na koncích kapitol.\n\n**Navrhovaná doba:** 30 minut"
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Modul 2: Příprava na výuku vývoje webu'
+        self-paced-pl-csd-unit3-2-2023:
+          title: Příprava na výuku interaktivních animací a her
+          description: "Tento profesionální výukový modul je určen k tomu, aby Vám pomohl připravit se na výuku jednotky Interaktivní animace a hry Code.org. \n\n**V tomto profesionálním výukovém modulu budete:**\n\n-   Absolvovat úvod do Interaktivních animací a her.\n-   Praktikovat klíčové koncepce obsažené v jednotce.\n-   Zapojovat se do Laboratoře her.\n-   Zkoumat projekty na koncích kapitol.\n\n**Navrhovaná doba:** 120 minut"
+          student_description: "Tento profesionální výukový modul je určen k tomu, aby Vám pomohl připravit se na výuku jednotky Interaktivní animace a hry Code.org. \n\n**V tomto profesionálním výukovém modulu budete:**\n\n-   Absolvovat úvod do Interaktivních animací a her.\n-   Praktikovat klíčové koncepce obsažené v jednotce.\n-   Zapojovat se do Laboratoře her.\n-   Zkoumat projekty na koncích kapitol.\n\n**Navrhovaná doba:** 120 minut"
+        self-paced-pl-csd-unit4-2-2023:
+          title: " Modul 4: Příprava na výuku procesu návrhu"
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Modul 5: Příprava na výuku dat a společnosti'
+        web-dev-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Vytváření webových stránek'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Vícestránkové webové stránky'
+          title: Jednotka 2 - Vývoj webových aplikací ('23-'24)
+          student_description: " V této jednotce, naučíte se, jak vytvořit a sdílet obsah na svých vlastních webových stránkách. Poté, co se rozhodnete, jaký obsah chcete sdílet se světem, se naučíte, jak strukturovat a stylovat své stránky pomocí HTML a CSS. Procvičíte si také cenné programovací dovednosti, jako je ladění, pomocí zdrojů a týmová práce.  "
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Průzkum
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Proces řešení problémů'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Počítače a řešení problémů'
+            lessonGroup-4:
+              display_name: Alternativní lekce
+          title: Jednotka 1 - Řešení problémů a výpočetní technika ('23-'24)
+          student_description: Řešení problémů a výpočetní technika je vysoce interaktivní a kolaborativní úvod do oblasti informatiky, jak je koncipováno v širším úsilí o řešení problémů. Procvičíte si pomocí procesu řešení problémů k řešení řady hádanek, výzvy, a scénáře skutečného světa. Dále se dozvíte, jak počítače vstupují, výstupní, ukládají a zpracovávají informace, které lidem pomáhají řešit problémy. Jednotka končí projektem, ve kterém navrhujete aplikaci, která pomáhá vyřešit problém podle vašeho výběru.
+        csd2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Vytváření webových stránek'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Vícestránkové webové stránky'
+          title: Jednotka 2 - Vývoj webových aplikací ('23-'24)
+          student_description: " V této jednotce, naučíte se, jak vytvořit a sdílet obsah na svých vlastních webových stránkách. Poté, co se rozhodnete, jaký obsah chcete sdílet se světem, se naučíte, jak strukturovat a stylovat své stránky pomocí HTML a CSS. Procvičíte si také cenné programovací dovednosti, jako je ladění, pomocí zdrojů a týmová práce.  "
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Obrázky a animace'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Tvorba her'
+          title: Jednotka 3 - Interaktivní animace a hry ('23-'24)
+          student_description: " V této jednotce, budete stavět na své zkušenosti s kódováním při programování animací, interaktivní umění, a hry v Game Lab. Jednotka začíná jednoduchými tvary a vytváří sofistikovanější hry založené na sprite, pomocí stejných programovacích konceptů a procesu návrhu, který počítačoví vědci používají denně. V závěrečném projektu vytvoříte osobní interaktivní program."
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Design zaměřený na uživatele'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Prototypování aplikací'
+          title: Jednotka 4 - Proces návrhu ('23-'24)
+          student_description: Tato jednotka představuje širší sociální dopady výpočetní techniky. Prostřednictvím řady návrhových výzev, naučíte se, jak lépe porozumět potřebám ostatních a zároveň vyvíjet řešení problému. Druhá polovina jednotky se skládá z iterativního týmového projektu, během kterého mají týmy příležitost identifikovat potřebu, na které jim záleží, prototypová řešení jak na papíře, tak v App Lab, a testovací řešení se skutečnými uživateli, abyste získali zpětnou vazbu a podpořili další iteraci.
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Zastupování informací'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Řešení datových problémů'
+          title: Oddělení 5 — Data a společnost („23-'24)
+          student_description: Tato jednotka je o důležitosti dat při řešení problémů a zdůrazňuje, jak mohou počítače v tomto procesu pomoci. První kapitola zkoumá různé systémy používané k reprezentaci informací v počítači a výzvy a kompromisy, které představuje jejich používání. Ve druhé kapitole se dozvíte, jak se sbírky dat používají k řešení problémů a jak počítače pomáhají automatizovat kroky tohoto procesu. Kapitola je zakončena zvážením toho, jak lze proces řešení datových problémů aplikovat na oblast, kterou si vyberete.
+          description_short: Zjistěte, jak lidé používají počítače k řešení problémů s daty.
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Úvod do App Lab
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Vstupy a výstupy'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
+          title: Jednotka 6A - (možnost A) Vytváření aplikací se zařízeními - hřiště s obvodem ('23-'24)
+          student_description: Tato jednotka zkoumá roli hardwarových platforem ve výpočetní technice a to, jak různé senzory mohou poskytovat efektivnější vstup a výstup než tradiční klávesnice, myš, a monitor. Pomocí App Lab a Adafruit's Circuit Playground, budete vyvíjet programy, které využívají stejné hardwarové vstupy a výstupy, jaké vidíte v inteligentních zařízeních, při pohledu na to, jak jednoduchý hrubý prototyp může vést k hotovému produktu. Jednotka končí konstrukční výzvou použít Circuit Playground jako základ pro inovaci vašeho vlastního designu.
+          description_short: Naučte se programovat s fyzickými zařízeními.
+        csd6b-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Úvod do App Lab
+            lessonGroup-4:
+              display_name: Budování fyzikálních prototypů
+          title: Jednotka 6B - (možnost B) Vytváření aplikací se zařízeními (micro:bit)
+          student_description: Tato jednotka zkoumá roli hardwarových platforem ve výpočetní technice a to, jak různé senzory mohou poskytovat efektivnější vstup a výstup než tradiční klávesnice, myš, a monitor. Pomocí aplikace App Lab a BBC micro:bit, budete vyvíjet programy, které využívají stejné hardwarové vstupy a výstupy, jaké vidíte v chytrých zařízeních, při pohledu na to, jak jednoduchý hrubý prototyp může vést k hotovému produktu. Jednotka končí konstrukční výzvou použít mikro:bit jako základ pro inovaci vašeho vlastního designu.
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Úvod do App Lab
+            lessonGroup-2:
+              display_name: Kapitola 1
+            lessonGroup-3:
+              display_name: Kapitola 2
+          title: Jednotka 7 - AI a strojové učení ('23-'24)
+          student_description: Tato jednotka je praktickým úvodem do vývoje modelu strojového učení s tabulkovými daty. Prozkoumáte, jak se počítače učí z dat, aby se rozhodovali, a poté vytvořte své vlastní projekty strojového učení kolem dat z reálného světa. Jednotka vyvrcholí návrhem vlastní aplikace pro strojové učení, která vyřeší osobně relevantní problém.
+        csd-post-survey-2024:
+          title: Průzkum po kurzu
+          description: Tato jednotka obsahuje průzkum po kurzu. Tuto jednotku lze přiřadit poté, co studenti absolvují závěrečnou jednotku v tomto kurzu.
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Lekce 1
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Lekce 1
+            lesson-3:
+              name: Události
+            lesson-4:
+              name: Chování
+            lesson-5:
+              name: Další kroky
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Začínáme
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Lekce 1
+            lesson-3:
+              name: Cykly
+            lesson-4:
+              name: Podmínky
+            lesson-5:
+              name: Dát to všechno dohromady
+            lesson-6:
+              name: Další kroky
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Začínáme
+          title: Úvod do informatiky
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Průzkum
+            csp_unit1_2020:
+              display_name: '1.  lekce: Digitální informace'
+          title: Digitální informace („23-'24)
+          student_description: Tato jednotka zkoumá technické výzvy a otázky, které vyplývají z potřeby reprezentovat digitální informace v počítačích. Zjistěte, jak složité informace, jako jsou čísla, text, snímky, a zvuk jsou reprezentovány v textu, jak funguje komprese, a širší sociální dopady digitalizace světových informací.
+          description_short: Prozkoumejte výzvy a dopady reprezentace informací o světě kolem vás v bitech.
+        csp2-2024:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: '2.  lekce: Internet'
+          title: Internet ('23-'24)
+          student_description: Tato jednotka odhaluje, jak byl internet navržen tak, aby propojil miliardy zařízení a lidí k sobě navzájem. Naučte se, jak fungují různé protokoly internetu, a skutečně je vytvořte sami pomocí internetového simulátoru. Pak zvažte dopady, které měl internet, dobré i špatné, na moderní život.
+          description_short: Vytvářejte internet od základů pomocí internetového simulátoru.
+        csp3-2024:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Jednotka 3: Úvod do návrhu aplikace'
+          title: Úvod do designu aplikací ('23-'24)
+          student_description: Tato jednotka je úvodem do programování a designu aplikací se silným zaměřením na důležité dovednosti, jako je ladění, párové programování, a uživatelské testování. Naučte se, jak navrhovat uživatelská rozhraní a psát programy založené na událostech v App Lab a poté navrhnout projekt, který učí vaše spolužáky o tématu podle vašeho výběru.
+          description_short: Navrhněte svou první aplikaci a zjistěte, jak programátoři spolupracují a komunikují s uživateli, aby vytvořili nejlepší možná řešení problémů.
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Průzkum
+            lessonGroup-3:
+              display_name: Obsah
+            lessonGroup-4:
+              display_name: Ukažte, co víte
+            lessonGroup-6:
+              display_name: Konec zjišťování jednotek
+            lessonGroup-5:
+              display_name: Alternativní lekce
+            lessonGroup-7:
+              display_name: Pískoviště
+          title: Objektově orientované programování
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-3:
+              display_name: Ukažte, co víte
+            lessonGroup-5:
+              display_name: Konec zjišťování jednotek
+            lessonGroup-4:
+              display_name: Alternativní lekce
+            lessonGroup-6:
+              display_name: Pískoviště
+          title: Struktura a design třídy
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-3:
+              display_name: Ukažte, co víte
+            lessonGroup-5:
+              display_name: Konec zjišťování jednotek
+            lessonGroup-4:
+              display_name: Alternativní lekce
+            lessonGroup-6:
+              display_name: Pískoviště
+          title: Pole a algoritmy
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-3:
+              display_name: Ukažte, co víte
+            lessonGroup-5:
+              display_name: Konec zjišťování jednotek
+            lessonGroup-4:
+              display_name: Alternativní lekce
+            lessonGroup-6:
+              display_name: Pískoviště
+          title: Podmínky a logika
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-3:
+              display_name: Ukažte, co víte
+            lessonGroup-5:
+              display_name: Konec zjišťování jednotek
+            lessonGroup-4:
+              display_name: Alternativní lekce
+            lessonGroup-6:
+              display_name: Pískoviště
+          title: Dvourozměrná pole
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-3:
+              display_name: Ukažte, co víte
+            lessonGroup-5:
+              display_name: Konec zjišťování jednotek
+            lessonGroup-4:
+              display_name: Alternativní lekce
+            lessonGroup-6:
+              display_name: Pískoviště
+          title: ArrayLists a String metody
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-3:
+              display_name: Ukažte, co víte
+            lessonGroup-4:
+              display_name: Konec zjišťování jednotek
+            lessonGroup-5:
+              display_name: Alternativní lekce
+            lessonGroup-6:
+              display_name: Pískoviště
+          title: Metoda rozkladu a rekurze
+        csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-3:
+              display_name: Ukažte, co víte
+            lessonGroup-4:
+              display_name: Průzkum
+            lessonGroup-5:
+              display_name: Alternativní lekce
+            lessonGroup-6:
+              display_name: Pískoviště
+          title: Vyhledávání a třídění
+        csa9-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Přezkoumání a praxe
+            lessonGroup-3:
+              display_name: Vysmívat se zkouškám
+            lessonGroup-4:
+              display_name: Pískoviště
+          description: Tato jednotka připravuje studenty na zkoušku AP CSA přezkoumáním klíčových konceptů, procvičování otázek s výběrem odpovědí a bezplatnou odpovědí, a posílení strategií přijímání testů. Studenti identifikují silné stránky a oblasti zlepšování, aby vytvořili individualizované studijní plány, aby zaměřili svou praxi a sebehodnotili svůj pokrok.
+          student_description: Tato jednotka vás připraví na zkoušku AP CSA přezkoumáním klíčových konceptů, procvičování otázek s výběrem odpovědí a bezplatnou odpovědí, a posílení strategií přijímání testů. Identifikujete silné stránky a oblasti zlepšování, abyste vytvořili individualizované studijní plány, které vás zaměří na procvičování a sebehodnocení vašeho pokroku.
+          description_short: Studenti se připravují na zkoušku AP CSA procvičováním strategií pro otázky s výběrem odpovědí a bezplatnou odpovědí.
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: Proměnné
+            csp_conditionals:
+              display_name: Podmínky
+            csp_functions:
+              display_name: Funkce
+            csp_project:
+              display_name: Projekt
+          title: Proměnné, podmíněné a funkce ('23-'24)
+          student_description: Tato jednotka zkoumá, jak proměnné, podmíněné a funkce umožňují navrhovat stále složitější aplikace. Naučte se, jak programovat s těmito třemi novými koncepty prostřednictvím posloupnosti společných aktivit. Poté si vytvořte vlastní aplikaci pro rozhodování, kterou můžete sdílet s přáteli a pomoci jim při rozhodování.
+          description_short: Přečtěte si, jak vytvářet aplikace, které ukládají informace, rozhodovat, a udržovat kód organizovaný.
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Data
+            lessonGroup-5:
+              display_name: Průzkum po kurzu
+          title: Údaje („23-'24)
+          student_description: 'V této jednotce se dozvíte, jak analýza dat pomáhá přeměnit nezpracovaná data na užitečné informace o světě. Naučte se, jak používat vizualizaci dat k nalezení vzorců uvnitř datových sad, a zjistěte, jak se tento proces analýzy dat používá v kontextech, jako jsou otevřená data nebo strojové učení, které pomáhají rozhodovat nebo se dozvědět více o našem světě. V projektu jednotky, budete analyzovat datovou sadu podle vašeho výběru a prezentovat svá zjištění. '
+          description_short: Prozkoumejte a vizualizujte datové sady z nejrůznějších témat při hledání vzorů a pokuste se dozvědět více o světě kolem vás.
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Seznamy
+            lessonGroup-3:
+              display_name: Cykly
+            lessonGroup-4:
+              display_name: Traversals
+            lessonGroup-5:
+              display_name: Projekt
+            lessonGroup-2:
+              display_name: Průzkum po kurzu
+          title: Seznamy, smyčky a průchody ('23-'24)
+          student_description: Tato jednotka zavádí seznamy, smyčky, a průchody, a zkoumá způsob, jakým mohou být použity k vytváření aplikací, které ukládají a zpracovávají velké množství informací. Naučte se programovat pomocí datové knihovny v App Lab a dokončete 5denní hackathon projekt na konci jednotky, kde můžete navrhnout program o jakémkoli tématu podle vašeho výběru.
+          description_short: Naučte se, jak vytvářet aplikace, které používají seznamy, smyčky, a procházky k ukládání a zpracování velkého množství informací.
+        csp7-2024:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parametry a návratové hodnoty
+            csp_libraries:
+              display_name: Knihovny
+            lessonGroup-3:
+              display_name: Průzkum po kurzu
+          title: Parametry, návratnost a knihovny ('23-'24)
+          student_description: Tato jednotka zavádí parametry, návrat, a knihovny. Naučte se, jak tyto koncepty používat k vytváření nových druhů aplikací a knihoven kódu, které můžete sdílet se svými spolužáky. Ukončete jednotku navržením knihovny funkcí kolem libovolného tématu podle vašeho výběru.
+          description_short: Naučte se, jak navrhnout čistý a opakovaně použitelný kód, který můžete sdílet s jedním spolužákem nebo celým světem.
+        csp8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Oddělení 8: Kybernetická bezpečnost a globální dopady'
+            lessonGroup-3:
+              display_name: Průzkum po kurzu
+          title: Kybernetická bezpečnost a globální dopady („23-'24)
+          student_description: V této jednotce se dozvíte, jak výpočetní inovace ovlivnily náš svět prospěšným a škodlivým způsobem. Zjistěte, jak mohou data představovat hrozbu pro naše soukromí a bezpečnost a jak se šifrování a další techniky používají k jejich ochraně. V celé jednotce se účastníte konference „škola budoucnosti“, na které vy a tým navrhnete, jak nejlépe zlepšit školní život pomocí počítačových inovací.
+          description_short: 'Výzkum a debata o aktuálních událostech na křižovatce dat, veřejná politika, zákon, etika, a společenský dopad. '
+        csp9-2024:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: '9.  lekce: Data'
+            lessonGroup-2:
+              display_name: Průzkum po kurzu
+          title: Vytvořit PT Prep ('23-'24)
+          description: V této jednotce se připravte a proveďte úlohu AP Create Performance Task. Každá lekce obsahuje odkazy na užitečné dokumenty a aktivity, které vám pomohou pochopit úkol a vypracovat plán jeho dokončení.
+          student_description: V této jednotce se připravte a proveďte úlohu AP Create Performance Task. Každá lekce obsahuje odkazy na užitečné dokumenty a aktivity, které vám pomohou pochopit úkol a vypracovat plán jeho dokončení.
+          description_short: Procvičte a dokončete úlohu Vytvořit výkon (PT).
+        csp10-2024:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Jednotka 10: Algortihms'
+            lessonGroup-2:
+              display_name: Průzkum po kurzu
+          title: Algoritmy ('23-'24)
+          student_description: Tato jednotka je rychlým zkoumáním toho, jak počítačoví vědci navrhují algoritmy pro řešení problémů a jak analyzují rychlost různých algoritmů. Zjistěte více o konceptu algoritmické účinnosti prostřednictvím různých praktických aktivit a zjistěte, jak se používá v moderní výpočetní technice.
+          description_short: Navrhněte a analyzujte algoritmy, abyste pochopili, jak fungují a proč jsou některé považovány za lepší než jiné.
+        csp-post-survey-2024:
+          title: CS Principy Post-Course Survey
+          description: Tato jednotka obsahuje průzkum CS Principles Post-Course Survey.
+          student_description: Tato jednotka obsahuje průzkum o kurzu CS Principles. Váš učitel vám řekne, kdy je čas provést tento průzkum.

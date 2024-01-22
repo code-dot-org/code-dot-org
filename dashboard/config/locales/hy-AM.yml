@@ -9,6 +9,7 @@ hy:
         email: Էլ. փոստ
         error:
           future: հակում է լինի ապագայում
+        finish_sign_up_header_error: 'Խնդրում ենք ուղղել հետեւյալ սխալներ:'
         gender: Սեռ
         locale: Լեզու
         name: Ցուցադրել Անունը

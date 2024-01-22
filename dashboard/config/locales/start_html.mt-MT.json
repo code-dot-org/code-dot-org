@@ -8,25 +8,56 @@
         "CSD U1 storage friends_2022": {
           "Back": "Lura"
         },
+        "CSD U1 storage friends_2023": {
+          "Back": "Lura"
+        },
         "CSD U1 storage outfit_2021": {
           "green": "aħdar"
         },
         "CSD U1 storage outfit_2022": {
           "green": "aħdar"
         },
+        "CSD U1 storage outfit_2023": {
+          "green": "aħdar"
+        },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Age": "Età"
+        },
+        "CSD U6 - Combine Inputs - A_2023": {
+          "green": "aħdar",
+          "red": "aħmar"
+        },
         "CSD U6 - Combine Inputs - A_2222": {
           "green": "aħdar",
           "red": "aħmar"
+        },
+        "CSD U6 - Combine Inputs - PracC_2023": {
+          "blue": "Ikħal",
+          "green": "aħdar"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
           "blue": "Ikħal",
           "green": "aħdar"
         },
+        "CSD U6 - If Variables - ChalD_2023": {
+          "+": "+",
+          "-": "-"
+        },
         "CSD U6 - If Variables - ChalD_2222": {
           "+": "+",
           "-": "-"
         },
+        "CSD U6 - If Variables - ChalD_mb2022": {
+          "+": "+",
+          "-": "-"
+        },
+        "CSD U6 - Sensors - SB2_2023": {
+          "Update": "Aggorna"
+        },
         "CSD U6 - Sensors - SB2_2222": {
+          "Update": "Aggorna"
+        },
+        "CSD U6 - Sensors - SB2_mb2022": {
           "Update": "Aggorna"
         },
         "CSD U6 analog light": {
@@ -62,10 +93,16 @@
         "CSDU6 - UI and Inputs - setScreen": {
           "Back": "Lura"
         },
+        "LLM - Written Voice Simulator_ai23": {
+          "Back": "Lura"
+        },
         "ml-models in applab-choice intended warnings": {
           "Back": "Lura"
         },
         "ml-models in applab-choice intended warnings_2022": {
+          "Back": "Lura"
+        },
+        "ml-models in applab-choice intended warnings_2023": {
           "Back": "Lura"
         }
       }

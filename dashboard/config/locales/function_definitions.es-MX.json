@@ -692,6 +692,11 @@
             "name": "mi función"
           }
         },
+        "Course E: Artist Project_examples_2023": {
+          "my function": {
+            "name": "mi función"
+          }
+        },
         "Course E: Frozen Project_examples2022": {
           "LOGIC FLOWER": {
             "name": "FLOR LÓGICA"
@@ -756,6 +761,69 @@
           }
         },
         "Course E: Frozen Project_examples_2021": {
+          "LOGIC FLOWER": {
+            "name": "FLOR LÓGICA"
+          },
+          "LOGIC FLOWERS": {
+            "name": "FLORES LÓGICAS"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "FLORES LÓGICAS2"
+          },
+          "draw a circle": {
+            "description": "Dibuja un circulo especificando su radio",
+            "name": "dibujar un círculo",
+            "parameters": {
+              "radius": "radio"
+            }
+          },
+          "draw a house": {
+            "name": "dibujar una casa",
+            "parameters": {
+              "length": "longitud"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "dibujar un molinete",
+            "parameters": {
+              "length": "longitud",
+              "repeat": "repetir",
+              "sides": "lados"
+            }
+          },
+          "draw a shape": {
+            "name": "dibujar una forma",
+            "parameters": {
+              "length": "longitud",
+              "sides": "lados"
+            }
+          },
+          "draw a square": {
+            "name": "dibujar un cuadrado",
+            "parameters": {
+              "length": "longitud",
+              "sides": "lados"
+            }
+          },
+          "draw a star": {
+            "description": "Dibuja una estrella especificando sus puntos y la longitud de sus lados ",
+            "name": "dibujar una estrella",
+            "parameters": {
+              "length": "longitud",
+              "points": "puntos"
+            }
+          },
+          "draw a triangle": {
+            "name": "dibujar un triángulo",
+            "parameters": {
+              "length": "longitud"
+            }
+          },
+          "small flower": {
+            "name": "flor pequeña"
+          }
+        },
+        "Course E: Frozen Project_examples_2023": {
           "LOGIC FLOWER": {
             "name": "FLOR LÓGICA"
           },
@@ -1023,6 +1091,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "description": "Dibuja un circulo especificando su radio",
+            "name": "dibujar un círculo",
+            "parameters": {
+              "radius": "radio"
+            }
+          },
+          "draw a house": {
+            "name": "dibujar una casa",
+            "parameters": {
+              "length": "longitud"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "dibujar un molinete",
+            "parameters": {
+              "length": "longitud",
+              "repeat": "repetir",
+              "sides": "lados"
+            }
+          },
+          "draw a shape": {
+            "name": "dibujar una forma",
+            "parameters": {
+              "length": "longitud",
+              "sides": "lados"
+            }
+          },
+          "draw a square": {
+            "name": "dibujar un cuadrado",
+            "parameters": {
+              "length": "longitud"
+            }
+          },
+          "draw a star": {
+            "description": "Dibuja una estrella especificando sus puntos y la longitud de sus lados ",
+            "name": "dibujar una estrella",
+            "parameters": {
+              "length": "longitud",
+              "points": "puntos"
+            }
+          },
+          "draw a triangle": {
+            "name": "dibujar un triángulo",
+            "parameters": {
+              "length": "longitud"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "description": "Dibuja un circulo especificando su radio",
@@ -1123,6 +1241,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_example2021_2023": {
+          "draw a circle": {
+            "description": "Dibuja un circulo especificando su radio",
+            "name": "dibujar un círculo",
+            "parameters": {
+              "radius": "radio"
+            }
+          },
+          "draw a house": {
+            "name": "dibujar una casa",
+            "parameters": {
+              "length": "longitud"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "dibujar un molinete",
+            "parameters": {
+              "length": "longitud",
+              "repeat": "repetir",
+              "sides": "lados"
+            }
+          },
+          "draw a shape": {
+            "name": "dibujar una forma",
+            "parameters": {
+              "length": "longitud",
+              "sides": "lados"
+            }
+          },
+          "draw a square": {
+            "name": "dibujar un cuadrado",
+            "parameters": {
+              "length": "longitud"
+            }
+          },
+          "draw a star": {
+            "description": "Dibuja una estrella especificando sus puntos y la longitud de sus lados ",
+            "name": "dibujar una estrella",
+            "parameters": {
+              "length": "longitud",
+              "points": "puntos"
+            }
+          },
+          "draw a triangle": {
+            "name": "dibujar un triángulo",
+            "parameters": {
+              "length": "longitud"
+            }
+          }
+        },
         "CourseF_app_computer": {
           "reset game": {
             "name": "reinicia el juego"
@@ -1134,6 +1302,11 @@
           }
         },
         "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": "reinicia el juego"
+          }
+        },
+        "CourseF_app_computer_2023": {
           "reset game": {
             "name": "reinicia el juego"
           }
@@ -1180,6 +1353,11 @@
           }
         },
         "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "construir puente"
+          }
+        },
+        "Function intro Ryan_2023": {
           "build bridge": {
             "name": "construir puente"
           }
@@ -1350,6 +1528,11 @@
             "name": "despejar camino"
           }
         },
+        "MC_HOC_2017_07_Cole_2023": {
+          "clear path": {
+            "name": "despejar camino"
+          }
+        },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
             "name": "fijar camino largo"
@@ -1383,6 +1566,14 @@
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "fijar camino largo"
+          },
+          "fix short path": {
+            "name": "fijar camino corto"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2023": {
           "fix long path": {
             "name": "fijar camino largo"
           },
@@ -1430,6 +1621,14 @@
             "name": "construir puente corto"
           }
         },
+        "MC_HOC_2017_Ali_2023": {
+          "build long bridge": {
+            "name": "construir puente largo"
+          },
+          "build short bridge": {
+            "name": "construir puente corto"
+          }
+        },
         "MC_HOC_2017_FP20x20": {
           "function 1": {
             "name": "función 1"
@@ -1463,6 +1662,14 @@
           }
         },
         "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "función 1"
+          },
+          "function 2": {
+            "name": "función 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2023": {
           "function 1": {
             "name": "función 1"
           },
@@ -2091,6 +2298,11 @@
             "name": "posible solución"
           }
         },
+        "courseB_artist_loops_challenge2_2023": {
+          "potential solution": {
+            "name": "posible solución"
+          }
+        },
         "courseC_artist_prog3": {
           "draw fire": {
             "name": "dibujar fuego"
@@ -2187,6 +2399,11 @@
             "name": "potenciador"
           }
         },
+        "courseC_artist_prog4_2023": {
+          "booster": {
+            "name": "potenciador"
+          }
+        },
         "courseC_data wizard": {
           "do something": {
             "name": "hacer algo"
@@ -2203,6 +2420,11 @@
           }
         },
         "courseC_data wizard_2021": {
+          "do something": {
+            "name": "hacer algo"
+          }
+        },
+        "courseC_data wizard_2023": {
           "do something": {
             "name": "hacer algo"
           }
@@ -2924,6 +3146,17 @@
             "name": "dibujar una línea de hexágonos"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "hacer algo"
+          },
+          "draw hexagon": {
+            "name": "dibujar hexágono"
+          },
+          "draw line of hexagons": {
+            "name": "dibujar una línea de hexágonos"
+          }
+        },
         "courseE_artist_functions1_copy": {
           "draw ear stems": {
             "name": "dibujar tallos de oreja"
@@ -2982,6 +3215,14 @@
             "name": "dibujar tallos de oreja"
           }
         },
+        "courseE_artist_functions2_2023": {
+          "draw a square": {
+            "name": "dibujar un cuadrado"
+          },
+          "draw ear stems": {
+            "name": "dibujar tallos de oreja"
+          }
+        },
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "dibujar un cuadrado"
@@ -3019,6 +3260,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "dibujar una estrella"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "dibujar una estrella"
           }
@@ -3068,6 +3314,11 @@
             "name": "dibujar una estrella"
           }
         },
+        "courseE_artist_functions5_2023": {
+          "draw a star": {
+            "name": "dibujar una estrella"
+          }
+        },
         "courseE_artist_functions5_copy": {
           "draw a star": {
             "name": "dibujar una estrella"
@@ -3113,6 +3364,11 @@
           }
         },
         "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "dibujar una ventana"
+          }
+        },
+        "courseE_artist_functions7_2023": {
           "draw a window": {
             "name": "dibujar una ventana"
           }
@@ -3198,6 +3454,20 @@
             "name": "cuadrados escalonados"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "hacer algo"
+          },
+          "draw a line of squares": {
+            "name": "dibujar una línea de cuadrados"
+          },
+          "draw square": {
+            "name": "dibujar cuadrado"
+          },
+          "staggered squares": {
+            "name": "cuadrados escalonados"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "hacer algo"
@@ -3236,6 +3506,14 @@
           },
           "draw a square": {
             "name": "Dibuja un cuadrado"
+          }
+        },
+        "courseE_artist_functions8a_2023": {
+          "do something": {
+            "name": "hacer algo"
+          },
+          "draw a square": {
+            "name": "dibujar un cuadrado"
           }
         },
         "courseE_artist_functions8b2022": {
@@ -3283,6 +3561,17 @@
           }
         },
         "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "hacer algo"
+          },
+          "draw a line of squares": {
+            "name": "dibujar una línea de cuadrados"
+          },
+          "draw square": {
+            "name": "dibujar cuadrado"
+          }
+        },
+        "courseE_artist_functions8b_2023": {
           "do something": {
             "name": "hacer algo"
           },
@@ -3363,6 +3652,20 @@
             "name": "cuadrados escalonados"
           }
         },
+        "courseE_artist_functions8c_2023": {
+          "do something": {
+            "name": "hacer algo"
+          },
+          "draw a line of squares": {
+            "name": "dibujar una línea de cuadrados"
+          },
+          "draw square": {
+            "name": "dibujar cuadrado"
+          },
+          "staggered squares": {
+            "name": "cuadrados escalonados"
+          }
+        },
         "courseE_artist_functions9": {
           "do something": {
             "name": "hacer algo"
@@ -3419,6 +3722,17 @@
           }
         },
         "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "hacer algo"
+          },
+          "draw line of triangles": {
+            "name": "dibujar una línea de triángulos"
+          },
+          "draw triangle": {
+            "name": "dibujar un triángulo"
+          }
+        },
+        "courseE_artist_functions9_2023": {
           "do something": {
             "name": "hacer algo"
           },
@@ -3514,6 +3828,23 @@
             "name": "cuadrados escalonados"
           }
         },
+        "courseE_artist_functionsProj_2023": {
+          "draw a line of squares": {
+            "name": "dibujar una línea de cuadrados"
+          },
+          "draw hexagon": {
+            "name": "dibujar hexágono"
+          },
+          "draw line of hexagons": {
+            "name": "dibujar una línea de hexágonos"
+          },
+          "draw square": {
+            "name": "dibujar cuadrado"
+          },
+          "staggered squares": {
+            "name": "cuadrados escalonados"
+          }
+        },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "hacer algo"
@@ -3555,6 +3886,14 @@
           }
         },
         "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "hacer algo"
+          },
+          "my design": {
+            "name": "mi diseño"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "do something": {
             "name": "hacer algo"
           },
@@ -3610,6 +3949,14 @@
             "name": "mi diseño"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "hacer algo"
+          },
+          "my design": {
+            "name": "mi diseño"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "dibujar un cuadrado"
@@ -3653,6 +4000,14 @@
         "courseE_artist_functions_predict1_2021": {
           "draw a square": {
             "name": "Dibuja un cuadrado"
+          },
+          "draw ear stems": {
+            "name": "dibujar tallos de oreja"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
+          "draw a square": {
+            "name": "dibujar un cuadrado"
           },
           "draw ear stems": {
             "name": "dibujar tallos de oreja"
@@ -3730,6 +4085,17 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "hacer algo"
+          },
+          "draw line of polygons": {
+            "name": "dibujar una línea de polígonos"
+          },
+          "draw polygon": {
+            "name": "dibujar polígono"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "hacer algo"
           },
@@ -3909,6 +4275,20 @@
             "name": "cuadrado de calabaza"
           }
         },
+        "courseE_farmer_functions10a1_2023": {
+          "check square for corn": {
+            "name": "buscar maíz en cuadrado"
+          },
+          "get all pumpkins": {
+            "name": "obtener todas las calabazas"
+          },
+          "pick along path": {
+            "name": "recoger a lo largo del camino"
+          },
+          "pumpkin square": {
+            "name": "cuadrado de calabaza"
+          }
+        },
         "courseE_farmer_functions10b": {
           "navigate": {
             "name": "navegar"
@@ -4010,6 +4390,23 @@
             "name": "cuadrado de calabaza"
           }
         },
+        "courseE_farmer_functions11_predict_2023": {
+          "check square for corn": {
+            "name": "buscar maíz en cuadrado"
+          },
+          "get all pumpkins": {
+            "name": "obtener todas las calabazas"
+          },
+          "get produce": {
+            "name": "obtener productos"
+          },
+          "pick along path": {
+            "name": "recoger a lo largo del camino"
+          },
+          "pumpkin square": {
+            "name": "cuadrado de calabaza"
+          }
+        },
         "courseE_farmer_functions132022": {
           "check for corn": {
             "name": "buscar maíz"
@@ -4080,6 +4477,20 @@
             "name": "recoger a lo largo del camino"
           }
         },
+        "courseE_farmer_functions13_2023": {
+          "check for corn": {
+            "name": "buscar maíz"
+          },
+          "corn rectangle": {
+            "name": "rectángulo de maíz"
+          },
+          "lettuce stairs": {
+            "name": "escaleras de lechuga"
+          },
+          "pick along path": {
+            "name": "recoger a lo largo del camino"
+          }
+        },
         "courseE_farmer_functions1a2022": {
           "check square for corn": {
             "name": "buscar maíz en cuadrado"
@@ -4105,6 +4516,11 @@
             "name": "buscar maíz en cuadrado"
           }
         },
+        "courseE_farmer_functions1a_2023": {
+          "check square for corn": {
+            "name": "buscar maíz en cuadrado"
+          }
+        },
         "courseE_farmer_functions2b2022": {
           "check square for corn": {
             "name": "buscar maíz en cuadrado"
@@ -4126,6 +4542,11 @@
           }
         },
         "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "buscar maíz en cuadrado"
+          }
+        },
+        "courseE_farmer_functions2b_2023": {
           "check square for corn": {
             "name": "buscar maíz en cuadrado"
           }
@@ -4168,6 +4589,14 @@
           }
         },
         "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "buscar maíz en cuadrado"
+          },
+          "get all pumpkins": {
+            "name": "obtener todas las calabazas"
+          }
+        },
+        "courseE_farmer_functions2ba_2023": {
           "check square for corn": {
             "name": "buscar maíz en cuadrado"
           },
@@ -4235,6 +4664,17 @@
             "name": "recoger por el camino"
           }
         },
+        "courseE_farmer_functions3c1_2023": {
+          "check square for corn": {
+            "name": "buscar maíz en cuadrado"
+          },
+          "get all pumpkins": {
+            "name": "obtener todas las calabazas"
+          },
+          "pick along path": {
+            "name": "recoger a lo largo del camino"
+          }
+        },
         "courseE_farmer_functions3c2022": {
           "check square for corn": {
             "name": "buscar maíz en cuadrado"
@@ -4268,6 +4708,14 @@
           }
         },
         "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "buscar maíz en cuadrado"
+          },
+          "get all pumpkins": {
+            "name": "obtener todas las calabazas"
+          }
+        },
+        "courseE_farmer_functions3c_2023": {
           "check square for corn": {
             "name": "buscar maíz en cuadrado"
           },
@@ -4315,6 +4763,11 @@
             "name": "cuadrado de jardín"
           }
         },
+        "courseE_farmer_functions7a1_2023": {
+          "garden square": {
+            "name": "cuadrado de jardín"
+          }
+        },
         "courseE_farmer_functions8a12022": {
           "garden square": {
             "name": "cuadrado de jardín"
@@ -4336,6 +4789,11 @@
           }
         },
         "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "cuadrado de jardín"
+          }
+        },
+        "courseE_farmer_functions8a1_2023": {
           "garden square": {
             "name": "cuadrado de jardín"
           }
@@ -4366,6 +4824,11 @@
           }
         },
         "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "cuadrado de jardín"
+          }
+        },
+        "courseE_farmer_functions9a1_2023": {
           "garden square": {
             "name": "cuadrado de jardín"
           }
@@ -4417,6 +4880,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "final del juego"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "final del juego"
           }
@@ -4691,6 +5159,11 @@
           }
         },
         "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "mover y obtener néctar con contador"
+          }
+        },
+        "courseF_bee_for_challenge1_2023": {
           "move and get nectar with counter": {
             "name": "mover y obtener néctar con contador"
           }

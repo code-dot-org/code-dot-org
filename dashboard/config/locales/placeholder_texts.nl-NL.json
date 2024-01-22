@@ -82,6 +82,10 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "typ de tekst hier",
           "30fcc1693fa8402931d13ac3a5f396fd": "typ hier de titel"
         },
+        "courseC19_playLab_EOC1_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "typ de tekst hier",
+          "30fcc1693fa8402931d13ac3a5f396fd": "typ hier de titel"
+        },
         "courseC19_playLab_EOC2": {
           "0ab65920c84bec05a22e09feea7fe4ea": "typ de tekst hier",
           "30fcc1693fa8402931d13ac3a5f396fd": "typ hier de titel"
@@ -95,6 +99,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "typ hier de titel"
         },
         "courseC19_playLab_EOC2_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "typ de tekst hier",
+          "30fcc1693fa8402931d13ac3a5f396fd": "typ hier de titel"
+        },
+        "courseC19_playLab_EOC2_2023": {
           "0ab65920c84bec05a22e09feea7fe4ea": "typ de tekst hier",
           "30fcc1693fa8402931d13ac3a5f396fd": "typ hier de titel"
         },
@@ -114,6 +122,10 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "typ de tekst hier",
           "30fcc1693fa8402931d13ac3a5f396fd": "typ hier de titel"
         },
+        "courseC19_playLab_EOC3_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "typ de tekst hier",
+          "30fcc1693fa8402931d13ac3a5f396fd": "typ hier de titel"
+        },
         "courseC19_playLab_EOC4": {
           "0ab65920c84bec05a22e09feea7fe4ea": "typ de tekst hier",
           "30fcc1693fa8402931d13ac3a5f396fd": "typ hier de titel"
@@ -127,6 +139,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "typ hier de titel"
         },
         "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "typ de tekst hier",
+          "30fcc1693fa8402931d13ac3a5f396fd": "typ hier de titel"
+        },
+        "courseC19_playLab_EOC4_2023": {
           "0ab65920c84bec05a22e09feea7fe4ea": "typ de tekst hier",
           "30fcc1693fa8402931d13ac3a5f396fd": "typ hier de titel"
         },
@@ -154,6 +170,10 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "typ de tekst hier",
           "30fcc1693fa8402931d13ac3a5f396fd": "typ hier de titel"
         },
+        "courseC_PlayLab_eventsFP_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "typ de tekst hier",
+          "30fcc1693fa8402931d13ac3a5f396fd": "typ hier de titel"
+        },
         "courseD_playLab_condFP": {
           "0ab65920c84bec05a22e09feea7fe4ea": "typ de tekst hier",
           "30fcc1693fa8402931d13ac3a5f396fd": "typ hier de titel"
@@ -173,6 +193,9 @@
         "courseE_aboutme_3_2021": {
           "ed076287532e86365e841e92bfc50d8c": "Hallo wereld!"
         },
+        "courseE_aboutme_3_2023": {
+          "ed076287532e86365e841e92bfc50d8c": "Hallo wereld!"
+        },
         "courseE_aboutme_4": {
           "ed076287532e86365e841e92bfc50d8c": "Hallo wereld!"
         },
@@ -185,6 +208,9 @@
         "courseE_aboutme_4_2021": {
           "ed076287532e86365e841e92bfc50d8c": "Hallo wereld!"
         },
+        "courseE_aboutme_4_2023": {
+          "ed076287532e86365e841e92bfc50d8c": "Hallo wereld!"
+        },
         "courseE_aboutme_5": {
           "ed076287532e86365e841e92bfc50d8c": "Hallo wereld!"
         },
@@ -195,6 +221,9 @@
           "ed076287532e86365e841e92bfc50d8c": "Hallo wereld!"
         },
         "courseE_aboutme_5_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Hallo wereld!"
+        },
+        "courseE_aboutme_5_2023": {
           "ed076287532e86365e841e92bfc50d8c": "Hallo wereld!"
         },
         "courseE_playLab_scaffold1": {
@@ -225,6 +254,10 @@
           "795f3202b17cb6bc3d4b771d8c6c9eaf": "anders",
           "83e4a96aed96436c621b9809e258b309": "vis"
         },
+        "courseF_apps_aquarium_2023": {
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "anders",
+          "83e4a96aed96436c621b9809e258b309": "vis"
+        },
         "courseF_apps_collector": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Je wint!"
         },
@@ -232,6 +265,9 @@
           "e8a10c04d72b2f135dabe360c4bdd534": "Je wint!"
         },
         "courseF_apps_collector_-2022-2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Je wint!"
+        },
+        "courseF_apps_collector_2023": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Je wint!"
         },
         "courseF_playlab_variables1a": {
@@ -285,6 +321,12 @@
           "e8a10c04d72b2f135dabe360c4bdd534": "Je wint!"
         },
         "coursee_helloworld_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Hallo, wereld!"
+        },
+        "coursee_helloworld_freeplay_2023": {
+          "6cd3556deb0da54bca060b4c39479839": "Hallo, wereld!"
+        },
+        "csc_bookcover_widget_2023": {
           "6cd3556deb0da54bca060b4c39479839": "Hallo, wereld!"
         },
         "helloworld_animals_freeplay": {

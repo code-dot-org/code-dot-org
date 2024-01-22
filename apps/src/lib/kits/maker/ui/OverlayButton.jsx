@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import color from '../../../../util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const style = {
   height: 40,
@@ -11,7 +12,7 @@ const style = {
   paddingRight: 30,
   boxSizing: 'border-box',
   overflow: 'hidden',
-  fontFamily: '"Gotham 4r", sans-serif',
+  ...fontConstants['main-font-regular'],
   fontSize: 12,
   fontWeight: 'bold',
   color: color.charcoal,

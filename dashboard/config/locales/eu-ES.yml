@@ -9,6 +9,7 @@ eu:
         email: E-posta
         error:
           future: ezin du izan etorkizunean
+        finish_sign_up_header_error: 'Zuzendu hurrengo akatsak mesedez:'
         gender: Generoa
         locale: Hizkuntza
         name: Izena Erakutsi

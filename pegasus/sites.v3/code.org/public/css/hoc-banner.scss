@@ -1,5 +1,10 @@
 @import 'color.scss', 'font.scss', 'breakpoints.scss';
 
+#pageheader-wrapper #pageheader {
+  position: relative;
+  z-index: 10;
+}
+
 // Code.org HoC homepage banner
 #bars {
   height: 450px;
@@ -7,6 +12,10 @@
 
   @media screen and (max-width: $width-md) {
     height: 400px;
+  }
+
+  @media screen and (max-width: $width-sm) {
+    height: 500px;
   }
 
   & > div.col-33 {
@@ -17,11 +26,16 @@
       height: inherit;
       max-width: 500px;
       left: 0;
-      bottom: 0;
+      top: -10%;
 
-      @media screen and (max-width: $width-md) {
+      @media (min-width: 768px) and (max-width: 1190px) {
         width: 45%;
-        left: -6%;
+        left: -9%;
+        top: -15%;
+      }
+
+      @media screen and (max-width: 800px) {
+        display: none;
       }
     }
 
@@ -33,7 +47,8 @@
       transform: translate(-50%, -50%);
 
       @media screen and (max-width: $width-lg) {
-        width: 570px;
+        width: 610px;
+        margin-top: 0;
       }
 
       @media screen and (max-width: $width-sm) {
@@ -60,46 +75,47 @@
   text-align: center;
   color: $white;
   line-height: 1.4;
-  text-shadow: 0px 0px 8px #5d1582;
+  max-width: 860px;
+  margin: 2rem auto 4rem;
+  padding: 0 1rem;
 
   h1, h2 {
     color: $white
   }
 
   h1 {
-    font-size: 4.5em;
-    font-family: $gotham-extra-bold;
+    font-size: 4rem;
+    font-family: var(--barlowSemiCondensed-semibold);
+    font-weight: var(--bold-font-weight);
     margin: 0 auto 0.5em;
 
-    @media screen and (max-width: $width-lg) {
-      font-size: 3.75em;
+    @media screen and (max-width: 1024px) {
+      font-size: 3.5rem;
     }
-
-    @media screen and (max-width: $width-md) {
-      font-size: 3.5em;
-    }
-
     @media screen and (max-width: $width-sm) {
-      font-size: 2.75em;
+      font-size: 3rem;
     }
   }
 
   h2 {
-    margin-top: 0;
-    font-family: $gotham-regular;
+    margin: 0 auto 1rem;
+    font-family: var(--main-font);
+    font-size: 1.25rem;
 
     @media screen and (max-width: $width-md) {
-      font-size: 1.25em;
       width: 80%;
-      margin-left: auto;
-      margin-right: auto;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      width: 100%;
     }
   }
 
   // The Hour of Code is coming/here text
   p {
     font-size: 2em;
-    font-family: $gotham-bold;
+    font-family: var(--main-font);
+    font-weight: var(--semi-bold-font-weight);
 
     @media screen and (max-width: $width-md) {
       font-size: 1.75em;
@@ -111,68 +127,12 @@
   }
 }
 
-// Code.org HoC /learn page banner
-#fullwidth.hoc-banner {
-  background: url('/images/hoc2022-codeorg-hero-banner-01.svg') no-repeat center center;
-  background-size: cover;
-
-  @media screen and (max-width: $width-sm) {
-    background: url('/images/hoc2022-codeorg-hero-banner-mobile-01.svg') no-repeat center center;
-    background-size: cover;
-  }
+// Misc styles that need to be overridden
+.widehero_do_not_hide.phone-feature {
+  background-position: 50% 0% !important;
 }
 
-section.banner {
-  text-align: center;
-  color: $darkest_gray;
-
-  h1, h2 {
-    color: $darkest_gray;
-    margin: 0;
-  }
-
-  h1 {
-    font-size: 3em;
-
-    @media screen and (max-width: $width-md) {
-      font-size: 2.5em;
-    }
-  }
-
-  h2 {
-    font-family: $gotham-regular;
-    font-size: 1.2em;
-    line-height: 1.4;
-    margin: 1em auto 2em;
-
-    @media screen and (max-width: $width-md) {
-      font-size: 1em;
-    }
-  }
-
-  .wrapper {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 5.75em 0 6.5em;
-
-    @media screen and (max-width: $width-md) {
-      padding: 6em 0 6.5em;
-      width: 80%;
-    }
-
-    @media screen and (max-width: $width-sm) {
-      padding: 4.5em 1em 6em;
-      width: 88%;
-    }
-  }
-
-  a {
-    color: $darkest_gray;
-    text-decoration: underline;
-    font-family: $gotham-bold;
-  }
-
-  p:last-child {
-    margin-bottom: 0;
-  }
+#homepage #actions .herohocbutton-solid-yellow {
+  background-color: #1AADBB;
+  border-color: #1AADBB;
 }

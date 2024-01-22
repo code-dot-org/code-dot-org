@@ -102,6 +102,7 @@ hu:
           description: Próbáld ki az alapszintű számítástechnikát az Angry Birds, Plants vs. Zombies karaktereivel!
           description_short: Ismerd meg a számítógép-tudomány alapjait közösen a sok szórakoztató karakterrel!
           student_description: Próbáld ki az alapszintű számítástechnikát az Angry Birds, Plants vs. Zombies karaktereivel!
+          name: A kódolás órája
         text-compression:
           title: Szöveg tömörítése
         algebraPD2a:
@@ -166,7 +167,7 @@ hu:
           description_short: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
           student_description: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
         mc:
-          title: Minecraft Kódolás Órája
+          title: Minecraft kaland
           description: Használj blokkokat a programozáshoz és kalandozz el Steve-vel vagy Alexszel a Minecraft világába
           description_short: Fedezd fel a Minecraft világát kódolással
           student_description: Használj blokkokat a programozáshoz és kalandozz el Steve-vel vagy Alexszel a Minecraft világába
@@ -2116,6 +2117,8 @@ hu:
               display_name: Tartalom
             lessonGroup-2:
               display_name: Tartalom
+        dance-unplugged:
+          title: Offline táncos buli
         csc-things:
           name: csc-things
           title: 'CSC információk tárháza '
@@ -2908,6 +2911,10 @@ hu:
             lessonGroup-6:
               display_name: Kurzus Projekt vége
           description_short: Ismerje meg a Computer Science Fundamentals összes koncepcióját, és hozzon létre saját művészetét, történetét vagy
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Ingyenes Játék
         csa-frq-practice-2022:
           lessons:
             lesson-4:
@@ -2997,3 +3004,141 @@ hu:
           description_short: Ismerje meg a Computer Science Fundamentals összes koncepcióját, és hozzon létre saját művészetét, történetét vagy
         how-ai-works-2023:
           title: Hogyan működik az MI?
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Bevezető
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Bevezető
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Bevezető
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Bevezető
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kérdőív
+            lessonGroup-2:
+              display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            lessonGroup-3:
+              display_name: '2.  fejezet: Számítógépek és problémamegoldás'
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1.  fejezet
+            lessonGroup-3:
+              display_name: 2.  fejezet
+        csd-post-survey-2024:
+          title: Tanfomlyam Utáni Felmérés
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Események
+            lesson-4:
+              name: Viselkedések
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Első lépések
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Ciklusok
+            lesson-4:
+              name: Feltételek
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Első lépések
+          title: Bevezetés a számítógép tudományába
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+            csp_unit1_2020:
+              display_name: '1.  fejezet: Digitális információ'
+        csp2-2024:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: '2.  lecke: Az internet'
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kérdőív
+            lessonGroup-3:
+              display_name: Tartalom
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-4:
+              display_name: Kérdőív
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: változók
+            csp_conditionals:
+              display_name: Feltételek
+            csp_functions:
+              display_name: Függvények
+            csp_project:
+              display_name: Projekt
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Adat
+            lessonGroup-5:
+              display_name: Tanfomlyam Utáni Felmérés
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listák
+            lessonGroup-3:
+              display_name: Ciklusok
+            lessonGroup-5:
+              display_name: Projekt
+            lessonGroup-2:
+              display_name: Tanfomlyam Utáni Felmérés
+        csp7-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Tanfomlyam Utáni Felmérés
+        csp8-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Tanfomlyam Utáni Felmérés
+        csp9-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tanfomlyam Utáni Felmérés
+        csp10-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tanfomlyam Utáni Felmérés

@@ -437,4 +437,25 @@ class UsersHelperTest < ActionView::TestCase
     assert_equal(101, level_with_best_progress([101, 102], level_progress))
     assert_equal(101, level_with_best_progress([102, 101], level_progress))
   end
+
+  def test_move_sections_and_destroy_source_user
+    teacher = create :teacher
+    coteacher = create :teacher
+    section = create :section, user: teacher
+    create :section_instructor, section: section, instructor: coteacher
+    section2 = create :section, user: coteacher
+    section_instructor2 = create :section_instructor, section: section2, instructor: teacher
+    destination_teacher = create :teacher
+
+    move_sections_and_destroy_source_user(source_user: teacher, destination_user: destination_teacher, takeover_type: 'type', provider: 'provider')
+
+    section.reload
+    section_instructor2.reload
+
+    assert_equal 2, destination_teacher.sections_instructed.count
+    assert_equal 0, teacher.sections_instructed.count
+    assert_equal 2, coteacher.sections_instructed.count
+    assert_equal destination_teacher.id, section.user.id
+    assert_equal destination_teacher.id, section_instructor2.instructor.id
+  end
 end

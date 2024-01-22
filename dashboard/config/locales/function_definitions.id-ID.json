@@ -525,6 +525,11 @@
             "name": "Fungsiku"
           }
         },
+        "Course E: Artist Project_examples_2023": {
+          "my function": {
+            "name": "Fungsiku"
+          }
+        },
         "Course E: Frozen Project_examples2022": {
           "LOGIC FLOWER": {
             "name": "LOGIC FLOWER"
@@ -589,6 +594,69 @@
           }
         },
         "Course E: Frozen Project_examples_2021": {
+          "LOGIC FLOWER": {
+            "name": "LOGIC FLOWER"
+          },
+          "LOGIC FLOWERS": {
+            "name": "LOGIC FLOWERS"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "LOGIC FLOWERS2"
+          },
+          "draw a circle": {
+            "description": "buat lingkaran dengan radius tertentu",
+            "name": "Gambar sebuah lingkaran",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a house": {
+            "name": "gambar sebuah rumah",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "gambarlah kincir angin",
+            "parameters": {
+              "length": "panjang",
+              "repeat": "Ulangi",
+              "sides": "sisi"
+            }
+          },
+          "draw a shape": {
+            "name": "gambarlah bentuk",
+            "parameters": {
+              "length": "panjang",
+              "sides": "sisi"
+            }
+          },
+          "draw a square": {
+            "name": "menggambar sebuah persegi empat",
+            "parameters": {
+              "length": "panjang",
+              "sides": "sisi"
+            }
+          },
+          "draw a star": {
+            "description": "gambarlah bintang dengan titik-titik tertentu dan sisi-sisi dengan panjang tertentu",
+            "name": "gambar bintang",
+            "parameters": {
+              "length": "panjang",
+              "points": "poin"
+            }
+          },
+          "draw a triangle": {
+            "name": "menggambar sebuah segitiga",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "small flower": {
+            "name": "bunga kecil"
+          }
+        },
+        "Course E: Frozen Project_examples_2023": {
           "LOGIC FLOWER": {
             "name": "LOGIC FLOWER"
           },
@@ -856,6 +924,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "description": "buat lingkaran dengan radius tertentu",
+            "name": "Gambar sebuah lingkaran",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a house": {
+            "name": "gambar sebuah rumah",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "gambarlah kincir angin",
+            "parameters": {
+              "length": "panjang",
+              "repeat": "Ulangi",
+              "sides": "sisi"
+            }
+          },
+          "draw a shape": {
+            "name": "gambarlah bentuk",
+            "parameters": {
+              "length": "panjang",
+              "sides": "sisi"
+            }
+          },
+          "draw a square": {
+            "name": "menggambar sebuah persegi empat",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a star": {
+            "description": "gambarlah bintang dengan titik-titik tertentu dan sisi-sisi dengan panjang tertentu",
+            "name": "gambar bintang",
+            "parameters": {
+              "length": "panjang",
+              "points": "poin"
+            }
+          },
+          "draw a triangle": {
+            "name": "menggambar sebuah segitiga",
+            "parameters": {
+              "length": "panjang"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "description": "buat lingkaran dengan radius tertentu",
@@ -956,6 +1074,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_example2021_2023": {
+          "draw a circle": {
+            "description": "buat lingkaran dengan radius tertentu",
+            "name": "Gambar sebuah lingkaran",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a house": {
+            "name": "gambar sebuah rumah",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "gambarlah kincir angin",
+            "parameters": {
+              "length": "panjang",
+              "repeat": "Ulangi",
+              "sides": "sisi"
+            }
+          },
+          "draw a shape": {
+            "name": "gambarlah bentuk",
+            "parameters": {
+              "length": "panjang",
+              "sides": "sisi"
+            }
+          },
+          "draw a square": {
+            "name": "menggambar sebuah persegi empat",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a star": {
+            "description": "gambarlah bintang dengan titik-titik tertentu dan sisi-sisi dengan panjang tertentu",
+            "name": "gambar bintang",
+            "parameters": {
+              "length": "panjang",
+              "points": "poin"
+            }
+          },
+          "draw a triangle": {
+            "name": "menggambar sebuah segitiga",
+            "parameters": {
+              "length": "panjang"
+            }
+          }
+        },
         "CourseF_app_computer": {
           "reset game": {
             "name": "atur ulang game"
@@ -967,6 +1135,11 @@
           }
         },
         "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": "atur ulang game"
+          }
+        },
+        "CourseF_app_computer_2023": {
           "reset game": {
             "name": "atur ulang game"
           }
@@ -1007,6 +1180,11 @@
           }
         },
         "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "bangun jembatan"
+          }
+        },
+        "Function intro Ryan_2023": {
           "build bridge": {
             "name": "bangun jembatan"
           }
@@ -1118,6 +1296,11 @@
             "name": "jalur yang lancar"
           }
         },
+        "MC_HOC_2017_07_Cole_2023": {
+          "clear path": {
+            "name": "jalur yang lancar"
+          }
+        },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
             "name": "perbaiki jalur panjang"
@@ -1151,6 +1334,14 @@
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "perbaiki jalur panjang"
+          },
+          "fix short path": {
+            "name": "perbaiki jalur pendek"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2023": {
           "fix long path": {
             "name": "perbaiki jalur panjang"
           },
@@ -1198,6 +1389,14 @@
             "name": "bangun jembatan pendek"
           }
         },
+        "MC_HOC_2017_Ali_2023": {
+          "build long bridge": {
+            "name": "bangun jembatan panjang"
+          },
+          "build short bridge": {
+            "name": "bangun jembatan pendek"
+          }
+        },
         "MC_HOC_2017_FP20x20": {
           "function 1": {
             "name": "function 1"
@@ -1231,6 +1430,14 @@
           }
         },
         "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "function 1"
+          },
+          "function 2": {
+            "name": "function 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2023": {
           "function 1": {
             "name": "function 1"
           },
@@ -1717,6 +1924,11 @@
             "name": "Kemungkinan solusi"
           }
         },
+        "courseB_artist_loops_challenge2_2023": {
+          "potential solution": {
+            "name": "Kemungkinan solusi"
+          }
+        },
         "courseC_artist_prog3": {
           "draw fire": {
             "name": "buat gambar api"
@@ -1813,6 +2025,11 @@
             "name": "booster"
           }
         },
+        "courseC_artist_prog4_2023": {
+          "booster": {
+            "name": "booster"
+          }
+        },
         "courseC_data wizard": {
           "do something": {
             "name": "buat sesuatu"
@@ -1829,6 +2046,11 @@
           }
         },
         "courseC_data wizard_2021": {
+          "do something": {
+            "name": "buat sesuatu"
+          }
+        },
+        "courseC_data wizard_2023": {
           "do something": {
             "name": "buat sesuatu"
           }
@@ -2258,6 +2480,17 @@
             "name": "gambarlah garis heksagon"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "buat sesuatu"
+          },
+          "draw hexagon": {
+            "name": "gambarlah heksagon"
+          },
+          "draw line of hexagons": {
+            "name": "gambarlah garis heksagon"
+          }
+        },
         "courseE_artist_functions1_copy": {
           "draw ear stems": {
             "name": "gambarlah batang telinga"
@@ -2316,6 +2549,14 @@
             "name": "gambarlah batang telinga"
           }
         },
+        "courseE_artist_functions2_2023": {
+          "draw a square": {
+            "name": "menggambar sebuah persegi empat"
+          },
+          "draw ear stems": {
+            "name": "gambarlah batang telinga"
+          }
+        },
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "menggambar sebuah persegi empat"
@@ -2353,6 +2594,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "gambar bintang"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "gambar bintang"
           }
@@ -2402,6 +2648,11 @@
             "name": "gambar bintang"
           }
         },
+        "courseE_artist_functions5_2023": {
+          "draw a star": {
+            "name": "gambar bintang"
+          }
+        },
         "courseE_artist_functions5_copy": {
           "draw a star": {
             "name": "gambar bintang"
@@ -2447,6 +2698,11 @@
           }
         },
         "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "gambarlah sebuah jendela"
+          }
+        },
+        "courseE_artist_functions7_2023": {
           "draw a window": {
             "name": "gambarlah sebuah jendela"
           }
@@ -2532,6 +2788,20 @@
             "name": "persegi melekuk-lekuk"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "buat sesuatu"
+          },
+          "draw a line of squares": {
+            "name": "gambarlah garis persegi"
+          },
+          "draw square": {
+            "name": "gambar kotak"
+          },
+          "staggered squares": {
+            "name": "persegi melekuk-lekuk"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "buat sesuatu"
@@ -2565,6 +2835,14 @@
           }
         },
         "courseE_artist_functions8a_2021": {
+          "do something": {
+            "name": "buat sesuatu"
+          },
+          "draw a square": {
+            "name": "menggambar sebuah persegi empat"
+          }
+        },
+        "courseE_artist_functions8a_2023": {
           "do something": {
             "name": "buat sesuatu"
           },
@@ -2617,6 +2895,17 @@
           }
         },
         "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "buat sesuatu"
+          },
+          "draw a line of squares": {
+            "name": "gambarlah garis persegi"
+          },
+          "draw square": {
+            "name": "gambar kotak"
+          }
+        },
+        "courseE_artist_functions8b_2023": {
           "do something": {
             "name": "buat sesuatu"
           },
@@ -2697,6 +2986,20 @@
             "name": "persegi melekuk-lekuk"
           }
         },
+        "courseE_artist_functions8c_2023": {
+          "do something": {
+            "name": "buat sesuatu"
+          },
+          "draw a line of squares": {
+            "name": "gambarlah garis persegi"
+          },
+          "draw square": {
+            "name": "gambar kotak"
+          },
+          "staggered squares": {
+            "name": "persegi melekuk-lekuk"
+          }
+        },
         "courseE_artist_functions9": {
           "do something": {
             "name": "buat sesuatu"
@@ -2753,6 +3056,17 @@
           }
         },
         "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "buat sesuatu"
+          },
+          "draw line of triangles": {
+            "name": "gambarlah garis segitiga"
+          },
+          "draw triangle": {
+            "name": "gambar segitiga"
+          }
+        },
+        "courseE_artist_functions9_2023": {
           "do something": {
             "name": "buat sesuatu"
           },
@@ -2848,6 +3162,23 @@
             "name": "persegi melekuk-lekuk"
           }
         },
+        "courseE_artist_functionsProj_2023": {
+          "draw a line of squares": {
+            "name": "gambarlah garis persegi"
+          },
+          "draw hexagon": {
+            "name": "gambarlah heksagon"
+          },
+          "draw line of hexagons": {
+            "name": "gambarlah garis heksagon"
+          },
+          "draw square": {
+            "name": "gambar kotak"
+          },
+          "staggered squares": {
+            "name": "persegi melekuk-lekuk"
+          }
+        },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "buat sesuatu"
@@ -2889,6 +3220,14 @@
           }
         },
         "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "buat sesuatu"
+          },
+          "my design": {
+            "name": "desain saya"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "do something": {
             "name": "buat sesuatu"
           },
@@ -2944,6 +3283,14 @@
             "name": "desain saya"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "buat sesuatu"
+          },
+          "my design": {
+            "name": "desain saya"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "menggambar sebuah persegi empat"
@@ -2985,6 +3332,14 @@
           }
         },
         "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "menggambar sebuah persegi empat"
+          },
+          "draw ear stems": {
+            "name": "gambarlah batang telinga"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
           "draw a square": {
             "name": "menggambar sebuah persegi empat"
           },
@@ -3064,6 +3419,17 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "buat sesuatu"
+          },
+          "draw line of polygons": {
+            "name": "gambarlah garis poligon"
+          },
+          "draw polygon": {
+            "name": "gambarlah poligon"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "buat sesuatu"
           },
@@ -3229,6 +3595,20 @@
             "name": "persegi labu"
           }
         },
+        "courseE_farmer_functions10a1_2023": {
+          "check square for corn": {
+            "name": "periksa persegi untuk menemukan akorn"
+          },
+          "get all pumpkins": {
+            "name": "dapatkan semua labu"
+          },
+          "pick along path": {
+            "name": "petik di sepanjang jalur"
+          },
+          "pumpkin square": {
+            "name": "persegi labu"
+          }
+        },
         "courseE_farmer_functions10b": {
           "navigate": {
             "name": "navigasi"
@@ -3330,6 +3710,23 @@
             "name": "persegi labu"
           }
         },
+        "courseE_farmer_functions11_predict_2023": {
+          "check square for corn": {
+            "name": "periksa persegi untuk menemukan akorn"
+          },
+          "get all pumpkins": {
+            "name": "dapatkan semua labu"
+          },
+          "get produce": {
+            "name": "dapatkan hasil panen"
+          },
+          "pick along path": {
+            "name": "petik di sepanjang jalur"
+          },
+          "pumpkin square": {
+            "name": "persegi labu"
+          }
+        },
         "courseE_farmer_functions132022": {
           "check for corn": {
             "name": "periksa untuk menemukan akorn"
@@ -3400,6 +3797,20 @@
             "name": "petik di sepanjang jalur"
           }
         },
+        "courseE_farmer_functions13_2023": {
+          "check for corn": {
+            "name": "periksa untuk menemukan akorn"
+          },
+          "corn rectangle": {
+            "name": "persegi panjang jagung"
+          },
+          "lettuce stairs": {
+            "name": "tangga selada"
+          },
+          "pick along path": {
+            "name": "petik di sepanjang jalur"
+          }
+        },
         "courseE_farmer_functions1a2022": {
           "check square for corn": {
             "name": "periksa persegi untuk menemukan akorn"
@@ -3425,6 +3836,11 @@
             "name": "periksa persegi untuk menemukan akorn"
           }
         },
+        "courseE_farmer_functions1a_2023": {
+          "check square for corn": {
+            "name": "periksa persegi untuk menemukan akorn"
+          }
+        },
         "courseE_farmer_functions2b2022": {
           "check square for corn": {
             "name": "periksa persegi untuk menemukan akorn"
@@ -3446,6 +3862,11 @@
           }
         },
         "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "periksa persegi untuk menemukan akorn"
+          }
+        },
+        "courseE_farmer_functions2b_2023": {
           "check square for corn": {
             "name": "periksa persegi untuk menemukan akorn"
           }
@@ -3488,6 +3909,14 @@
           }
         },
         "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "periksa persegi untuk menemukan akorn"
+          },
+          "get all pumpkins": {
+            "name": "dapatkan semua labu"
+          }
+        },
+        "courseE_farmer_functions2ba_2023": {
           "check square for corn": {
             "name": "periksa persegi untuk menemukan akorn"
           },
@@ -3555,6 +3984,17 @@
             "name": "petik di sepanjang jalur"
           }
         },
+        "courseE_farmer_functions3c1_2023": {
+          "check square for corn": {
+            "name": "periksa persegi untuk menemukan akorn"
+          },
+          "get all pumpkins": {
+            "name": "dapatkan semua labu"
+          },
+          "pick along path": {
+            "name": "petik di sepanjang jalur"
+          }
+        },
         "courseE_farmer_functions3c2022": {
           "check square for corn": {
             "name": "periksa persegi untuk menemukan akorn"
@@ -3588,6 +4028,14 @@
           }
         },
         "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "periksa persegi untuk menemukan akorn"
+          },
+          "get all pumpkins": {
+            "name": "dapatkan semua labu"
+          }
+        },
+        "courseE_farmer_functions3c_2023": {
           "check square for corn": {
             "name": "periksa persegi untuk menemukan akorn"
           },
@@ -3635,6 +4083,11 @@
             "name": "persegi kebun"
           }
         },
+        "courseE_farmer_functions7a1_2023": {
+          "garden square": {
+            "name": "persegi kebun"
+          }
+        },
         "courseE_farmer_functions8a12022": {
           "garden square": {
             "name": "persegi kebun"
@@ -3656,6 +4109,11 @@
           }
         },
         "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "persegi kebun"
+          }
+        },
+        "courseE_farmer_functions8a1_2023": {
           "garden square": {
             "name": "persegi kebun"
           }
@@ -3686,6 +4144,11 @@
           }
         },
         "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "persegi kebun"
+          }
+        },
+        "courseE_farmer_functions9a1_2023": {
           "garden square": {
             "name": "persegi kebun"
           }
@@ -3726,6 +4189,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "akhir dari permainan"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "akhir dari permainan"
           }
@@ -3974,6 +4442,11 @@
           }
         },
         "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "bergerak dan dapatkan nektar dengan penghitung (counter)"
+          }
+        },
+        "courseF_bee_for_challenge1_2023": {
           "move and get nectar with counter": {
             "name": "bergerak dan dapatkan nektar dengan penghitung (counter)"
           }

@@ -53,6 +53,7 @@ km:
         gender: 'ភេទ'
         edit_header: 'កែសម្រួល​ព័ត៌មាន​គណនី'
         finish_sign_up_header: 'បញ្ចប់ការបង្កើតគណនីរបស់អ្នក'
+        finish_sign_up_header_error: 'សូមកែរនូវកំហុសដែលមានបន្តបន្ទាប់'
         finish_sign_up_subheader: 'ចូរបំពេញព័ត៌មានខាងក្រោមដើម្បីបញ្ចប់ការបង្កើតគណនីមួយជាមួយ Code.org សម្រាប់ <strong>%{email}</strong>។'
         finish_sign_up_subheader_markdown: 'ចូរបំពេញព័ត៌មានខាងក្រោមដើម្បីបញ្ចប់ការបង្កើតគណនីមួយជាមួយ Code.org សម្រាប់ **%{email}**។'
         finish_sign_up_subheader_provider: 'ចូរបំពេញព័ត៌មានខាងក្រោមដើម្បីបញ្ចប់ការបង្កើតគណនីមួយជាមួយ Code.org ជាមួយនឹង <strong>%{provider}</strong> សម្រាប់ <strong>%{email}</strong>។'
@@ -60,6 +61,7 @@ km:
         reset_password_token: "តំណភ្ជាប់សម្រាប់ការផ្លាស់ប្តូរលេខសម្ងាត់ដែលអ្នកបានធ្វើតាម"
         error:
           future: មិន​អាច​នៅ​ក្នុង​ថ្ងៃ​ក្រោយ
+        user_type: 'ប្រភេទនៃគណនេយ្យ'
         us_state: 'រដ្ឋ​(សាលា)'
   hello: "សួស្ដី​ពិភពលោក"
   welcome_back: "ស្វាគមន៍​ការ​មក​វិញ, %{name}"
@@ -190,7 +192,7 @@ km:
   signin_form:
     title: 'មាន​គណនី​រួច​ហើយ​មែនទេ? ចូលគណនី'
     login: 'អ៊ីម៉ែល'
-    login_username: 'Email or Username'
+    login_username: 'អ៊ីមែល ឬ ឈ្មោះ​អ្នក​ប្រើប្រាស់'
     password: 'ពាក្យ​សម្ងាត់'
     remember: 'ចងចាំ​ខ្ញុំ'
     submit: 'ចូល​គណនី'
@@ -466,8 +468,10 @@ km:
     help_from_html_old: 'វិស្វករមកពីក្រុមហ៊ុន Amazon, Google, and Microsoft បានជួយបង្កើតឯកសារនេះឡើង។'
     art_from_html: 'Minecraft&#8482; &ចម្លង; %{current_year} Microsoft ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ សង្គ្រាមផ្កាយ&#8482; &ចម្លង; %{current_year} Disney និង Lucasfilm ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ បង្កក&#8482; &ចម្លង; %{current_year} Disney ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ យុគសម័យទឹកកក&#8482; &ចម្លង; %{current_year} 20th Century Fox។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ Angry Birds&#8482; &ចម្លង; 2009-%{current_year} Rovio Entertainment Ltd. រក្សាសិទ្ធិគ្រប់យ៉ាង។ រុក្ខជាតិទល់នឹង Zombies&#8482; &ចម្លង; %{current_year} Electronic Arts Inc. រក្សាសិទ្ធិគ្រប់យ៉ាង។ DreamWorks មនុស្សអាក្រក់ &copy; %{current_year} DreamWorks Animation LLC ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។'
     art_from_html_old: 'Minecraft&#8482; &ចម្លង; %{current_year} Microsoft ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ សង្គ្រាមផ្កាយ&#8482; &ចម្លង; %{current_year} Disney និង Lucasfilm ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ បង្កក&#8482; &ចម្លង; %{current_year} Disney ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ យុគសម័យទឹកកក&#8482; &ចម្លង; %{current_year} 20th Century Fox។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ Angry Birds&#8482; &ចម្លង; 2009-%{current_year} Rovio Entertainment Ltd. រក្សាសិទ្ធិគ្រប់យ៉ាង។ រុក្ខជាតិទល់នឹង Zombies&#8482; &ចម្លង; %{current_year} Electronic Arts Inc. រក្សាសិទ្ធិគ្រប់យ៉ាង។ DreamWorks មនុស្សអាក្រក់ &copy; %{current_year} DreamWorks Animation LLC ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។'
+    code_from_html: ''
     powered_by_aws: 'Amazon Web Services ដែល “Powered by AWS” គឺជាពាណិជ្ជសញ្ញារបស់ Amazon.com, Inc. ឬសាខារបស់ខ្លួន នៅសហរដ្ឋអាមេរិក និង ប្រទេសផ្សេងទៀត។'
     built_on_github: 'បង្កើតឡើងលើ GitHub ដោយ Microsoft'
+    trademark: 'ចងចាំថាត្រូវឆ្ពោះទៅមុខរវាងរង្វិលជុំនីមួយៗ ដូច្នេះអ្នកទៅដល់ផ្កានីមួយៗ។'
     copyright: 'រក្សាសិទ្ធ'
     more: 'ច្រើនទៀត'
     feedback: 'ផ្ដល់​មតិ​កែ​លម្អ'
@@ -653,4 +657,3 @@ km:
   behaviors:
     this_sprite: "Sprite មួយនេះ"
   code_org_logo_alt: "ទំព័រដើម Code.org​"
-

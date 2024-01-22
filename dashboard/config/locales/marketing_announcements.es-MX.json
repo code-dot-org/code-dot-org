@@ -1,0 +1,26 @@
+{
+  "es-MX": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "co-teacher": {
+            "buttonText": "Aprende más"
+          },
+          "hoc-2023": {
+            "body": "Súmate a millones de personas en todo el mundo y organiza una hora de programación para aprender cómo funciona la Inteligencia Artificial. Cualquiera, en cualquier lugar puede hacerlo sin necesidad de experiencia previa.",
+            "buttonText": "Aprende más",
+            "title": "Hora del Código: Creatividad con IA"
+          },
+          "hoc-2023-dance-ai": {
+            "body": "Aprende conceptos de inteligencia artificial (IA) para crear tu propia fiesta de baile virtual con los mejores artistas de la actualidad. Con docenas de canciones para elegir, llega a todos los estudiantes sin importar sus gustos musicales. ¡Es hora de presumir tus creaciones!",
+            "buttonText": "Aprende más",
+            "title": "Fiesta de Baile: Edición IA"
+          },
+          "superhero": {
+            "buttonText": "Aprenda más"
+          }
+        }
+      }
+    }
+  }
+}

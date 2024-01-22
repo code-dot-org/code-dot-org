@@ -88,6 +88,9 @@
         "Overworld Chop Trees_2021": {
           "craft_callout_preplaced": "Colocamos algúns bloques aquí para poderes comezar"
         },
+        "Overworld Chop Trees_2023": {
+          "craft_callout_preplaced": "Colocamos algúns bloques aquí para poderes comezar"
+        },
         "Overworld House Frame Chosen": {
           "craft_callout_preplaced_house": "Este código vai comezar a construír a túa casa. Consegues terminala?"
         },
@@ -101,6 +104,9 @@
           "craft_callout_preplaced_house": "Este código vai comezar a construír a túa casa. Consegues terminala?"
         },
         "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Este código vai comezar a construír a túa casa. Consegues terminala?"
+        },
+        "Overworld House Frame Chosen_2023": {
           "craft_callout_preplaced_house": "Este código vai comezar a construír a túa casa. Consegues terminala?"
         },
         "Overworld Move to Sheep": {
@@ -118,6 +124,9 @@
         "Overworld Move to Sheep_2021": {
           "craft_run_button_callout": "Preme en \"Correr\" para probares o teu programa"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_run_button_callout": "Preme en \"Correr\" para probares o teu programa"
+        },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Repite accións colocando bloques aquí"
         },
@@ -131,6 +140,9 @@
           "craft_inside_repeat": "Repite accións colocando bloques aquí"
         },
         "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Repite accións colocando bloques aquí"
+        },
+        "Overworld Place Wall_2023": {
           "craft_inside_repeat": "Repite accións colocando bloques aquí"
         },
         "Underground Avoiding Lava": {
@@ -148,6 +160,9 @@
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "Este código vai verificar se hai lava, consegues agregarlle un comando para mover cara adiante?"
         },
+        "Underground Avoiding Lava_2023": {
+          "craft_callout_moveforward": "Este código vai verificar se hai lava, consegues agregarlle un comando para mover cara adiante?"
+        },
         "Underground Iron": {
           "craft_what_is_iron": "Escava este ferro!"
         },
@@ -161,6 +176,9 @@
           "craft_what_is_iron": "Escava este ferro!"
         },
         "Underground Iron_2021": {
+          "craft_what_is_iron": "Escava este ferro!"
+        },
+        "Underground Iron_2023": {
           "craft_what_is_iron": "Escava este ferro!"
         },
         "frozen circle function with parameter": {

@@ -67,7 +67,7 @@ We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participa
 - もしIT企業で働いている場合、開発に携わっている製品のデモをする。
 - もしIT企業ではない場合、どのようにテクノロジーを使って問題を解決し、ゴールを達成しているか説明する。
 - 会社のソフトウェアエンジニアを招待して、なぜコンピュータサイエンス学ぼうと思ったのか、どんな開発や研究をしているのか話してもらう。
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- 女の子にコンピュータサイエンスに興味を持ってもらうためのヒントについては、 [こちらをご覧ください]({{ urls/girls }})。
 
 ## 6. Code!
 **参加者をアクティビティへ誘導する**

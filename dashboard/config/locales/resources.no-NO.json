@@ -1706,6 +1706,683 @@
         "pause_and_think_online/pre-express/2022": {
           "type": "Video"
         },
+        "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
+          "type": "Video"
+        },
+        "how_ai_works_large_language_models/ai-ethics/2023": {
+          "type": "Video"
+        },
+        "star_quilts_1/csc-starquilts/2023": {
+          "type": "Video"
+        },
+        "poem_art_1_-_introduction/csc-timecapsule/2023": {
+          "type": "Video"
+        },
+        "poem_art_2_-_events/csc-timecapsule/2023": {
+          "type": "Video"
+        },
+        "poem_art_3_-_imagery/csc-timecapsule/2023": {
+          "type": "Video"
+        },
+        "poem_art_4_-_celebration/csc-timecapsule/2023": {
+          "type": "Video"
+        },
+        "poem_art_celebration_video_optional_/csc-timecapsule/2023": {
+          "type": "Video"
+        },
+        "poem_art_events_video_optional_/csc-timecapsule/2023": {
+          "type": "Video"
+        },
+        "poem_art_video_optional_/csc-timecapsule/2023": {
+          "type": "Video"
+        },
+        "enter_your_own_poem/csc-timecapsule/2023": {
+          "type": "Video"
+        },
+        "poem_art_1_-_introduction/poetry/2023": {
+          "type": "Video"
+        },
+        "poem_art_2_-_events/poetry/2023": {
+          "type": "Video"
+        },
+        "poem_art_3_-_imagery/poetry/2023": {
+          "type": "Video"
+        },
+        "poem_art_4_-_celebration/poetry/2023": {
+          "type": "Video"
+        },
+        "enter_your_own_poem/poetry/2023": {
+          "type": "Video"
+        },
+        "poem_art_celebration_video_optional_/poetry/2023": {
+          "type": "Video"
+        },
+        "poem_art_events_video_optional_/poetry/2023": {
+          "type": "Video"
+        },
+        "poem_art_video_optional_/poetry/2023": {
+          "type": "Video"
+        },
+        "teacher_forum/csd/2023": {
+          "name": "Lærer-Forum"
+        },
+        "problem_solving_process_1/csd/2023": {
+          "type": "Video"
+        },
+        "the_problem_solving_process/csd/2023": {
+          "type": "Video"
+        },
+        "what_is_a_computer/csd/2023": {
+          "type": "Video"
+        },
+        "what_do_computers_do/csd/2023": {
+          "type": "Video"
+        },
+        "apps_and_problem_solving_1/csd/2023": {
+          "type": "Tilbakemelding"
+        },
+        "computer_science_practices/csd/2023": {
+          "type": "Refleksjon"
+        },
+        "intro_to_web_lab_part_2/csd/2023": {
+          "type": "Video"
+        },
+        "pair_programming/csd/2023": {
+          "name": "Parprogrammering",
+          "type": "Video"
+        },
+        "video_intro_to_web_lab_part_1/csd/2023": {
+          "type": "Video"
+        },
+        "lists/csd/2023": {
+          "name": "Lister"
+        },
+        "video_debugging/csd/2023": {
+          "type": "Video"
+        },
+        "video_pair_programming/csd/2023": {
+          "type": "Video"
+        },
+        "html_web_page_1/csd/2023": {
+          "type": "Tilbakemelding"
+        },
+        "intro_to_css_-_part_1/csd/2023": {
+          "name": "Introduksjon til programmering - Del 1",
+          "type": "Video"
+        },
+        "intro_to_css_-_part_2/csd/2023": {
+          "name": "Introduksjon til programmering - Del 2",
+          "type": "Video"
+        },
+        "your_personal_style_1/csd/2023": {
+          "type": "Tilbakemelding"
+        },
+        "creative_commons_overview/csd/2023": {
+          "type": "Video"
+        },
+        "personal_web_page/csd/2023": {
+          "type": "Tilbakemelding"
+        },
+        "publishing_your_website/csd/2023": {
+          "type": "Video"
+        },
+        "video_managing_disagreement/csd/2023": {
+          "type": "Video"
+        },
+        "video_teamwork/csd/2023": {
+          "type": "Video"
+        },
+        "video_how_search_works/csd/2023": {
+          "name": "Hvordan søk fungerer",
+          "type": "Video"
+        },
+        "website_for_a_purpose_1/csd/2023": {
+          "type": "Tilbakemelding"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2023": {
+          "type": "Video"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2023": {
+          "type": "Video"
+        },
+        "introduction_to_variables/csd/2023": {
+          "type": "Video"
+        },
+        "variables/csd/2023": {
+          "name": "Variabler"
+        },
+        "variables_1/csd/2023": {
+          "name": "Variabler",
+          "type": "Video"
+        },
+        "variables_2/csd/2023": {
+          "name": "Variabler"
+        },
+        "introduction_to_sprites/csd/2023": {
+          "type": "Video"
+        },
+        "the_animation_tab/csd/2023": {
+          "name": "Animasjons-lab",
+          "type": "Video"
+        },
+        "sprite_properties/csd/2023": {
+          "name": "Figuregenskaper"
+        },
+        "sprite_properties_1/csd/2023": {
+          "name": "Figuregenskaper"
+        },
+        "sprite_properties_needs_updating_/csd/2023": {
+          "name": "Figuregenskaper",
+          "type": "Video"
+        },
+        "text/csd/2023": {
+          "name": "tekst"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2023": {
+          "type": "Video"
+        },
+        "introduction_to_the_draw_loop/csd/2023": {
+          "type": "Video"
+        },
+        "sprite_movement/csd/2023": {
+          "type": "Video"
+        },
+        "boolean_expressions/csd/2023": {
+          "type": "Video"
+        },
+        "conditional_statements/csd/2023": {
+          "type": "Video"
+        },
+        "conditionals/csd/2023": {
+          "name": "Betingelser"
+        },
+        "if_else_statements/csd/2023": {
+          "type": "Video"
+        },
+        "velocity/csd/2023": {
+          "name": "Hastighet",
+          "type": "Video"
+        },
+        "velocity_1/csd/2023": {
+          "name": "Hastighet"
+        },
+        "velocity_2/csd/2023": {
+          "name": "Hastighet"
+        },
+        "functions/csd/2023": {
+          "name": "Funksjoner",
+          "type": "Video"
+        },
+        "functions_1/csd/2023": {
+          "name": "Funksjoner"
+        },
+        "functions_2/csd/2023": {
+          "name": "Funksjoner"
+        },
+        "the_design_thinking_process/csd/2023": {
+          "type": "Video"
+        },
+        "design_mode/csd/2023": {
+          "name": "Utformingsmodus"
+        },
+        "what_s_for_lunch_testing/csd/2023": {
+          "type": "Video"
+        },
+        "intro_to_design_mode/csd/2023": {
+          "type": "Video"
+        },
+        "events_in_app_lab/csd/2023": {
+          "type": "Video"
+        },
+        "events_in_app_lab_1/csd/2023": {
+          "type": "Video"
+        },
+        "binary_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "amazon_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "netflix_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "waze_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "video_impact_on_society/csd/2023": {
+          "type": "Video"
+        },
+        "video_machine_learning/csd/2023": {
+          "name": "Maskiner lærer",
+          "type": "Video"
+        },
+        "video_training_data_and_bias/csd/2023": {
+          "type": "Video"
+        },
+        "make_a_recommendation/csd/2023": {
+          "type": "Tilbakemelding"
+        },
+        "circuits_and_logic/csd/2023": {
+          "type": "Video"
+        },
+        "the_counter_pattern/csd/2023": {
+          "type": "Video"
+        },
+        "if_statements_1/csd/2023": {
+          "type": "Video"
+        },
+        "input_output_devices/csd/2023": {
+          "type": "Video"
+        },
+        "introduction_to_arrays/csd/2023": {
+          "type": "Video"
+        },
+        "functions_with_parameters/csd/2023": {
+          "name": "Funksjoner med parametre",
+          "type": "Video"
+        },
+        "fucntions_devices/csd/2023": {
+          "name": "Funksjoner"
+        },
+        "teacher_forum_1/csd/2023": {
+          "name": "Lærer-Forum"
+        },
+        "the_counter_pattern_2/csd/2023": {
+          "type": "Video"
+        },
+        "functions_3/csd/2023": {
+          "name": "Funksjoner"
+        },
+        "ai_what_is_machine_learning_/csd/2023": {
+          "type": "Video"
+        },
+        "seeing_ai/csd/2023": {
+          "type": "Video"
+        },
+        "finding_patterns_in_data/csd/2023": {
+          "type": "Video"
+        },
+        "introduction_to_ai_lab_1/csd/2023": {
+          "type": "Video"
+        },
+        "training_and_testing_in_ai_lab/csd/2023": {
+          "type": "Video"
+        },
+        "ai_training_data_bias/csd/2023": {
+          "type": "Video"
+        },
+        "model_cards_in_ai_lab/csd/2023": {
+          "type": "Video"
+        },
+        "if-statements_in_app_lab/csd/2023": {
+          "type": "Video"
+        },
+        "numerical_data_in_ai_lab_2/csd/2023": {
+          "type": "Video"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
+          "type": "Video"
+        },
+        "creating_a_survey_in_google_forms/csd/2023": {
+          "type": "Video"
+        },
+        "cleaning_survey_data/csd/2023": {
+          "type": "Video"
+        },
+        "view_and_download_survey_data/csd/2023": {
+          "type": "Video"
+        },
+        "implementation_guide/coursea/2023": {
+          "name": "Implementeringsguide"
+        },
+        "teacher_forum/coursea/2023": {
+          "name": "Lærer-Forum"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2023": {
+          "type": "Video"
+        },
+        "pair_programming/coursea/2023": {
+          "name": "Parprogrammering"
+        },
+        "wiggles-go_noodle/coursea/2023": {
+          "type": "Video"
+        },
+        "happy_maps/coursea/2023": {
+          "name": "Glade Kart"
+        },
+        "wiggles_-_gonoodle/coursea/2023": {
+          "type": "Video"
+        },
+        "debugging_with_the_step_button/coursea/2023": {
+          "type": "Video"
+        },
+        "pair-programming/coursea/2023": {
+          "type": "Video"
+        },
+        "pause_and_think_online/coursea/2023": {
+          "type": "Video"
+        },
+        "the_big_event/coursea/2023": {
+          "name": "Den store begivenheten"
+        },
+        "the_big_event_1/coursea/2023": {
+          "name": "Den store begivenheten"
+        },
+        "the_big_event_2/coursea/2023": {
+          "name": "Den store begivenheten"
+        },
+        "implementation_guide/courseb/2023": {
+          "name": "Implementeringsguide"
+        },
+        "teacher_forum/courseb/2023": {
+          "name": "Lærer-Forum"
+        },
+        "move_it_move_it/courseb/2023": {
+          "name": "Flytt den, flytt den"
+        },
+        "move_it_move_it_1/courseb/2023": {
+          "name": "Flytt den, flytt den"
+        },
+        "move_it_move_it_2/courseb/2023": {
+          "name": "Flytt den, flytt den"
+        },
+        "move_it_move_it_3/courseb/2023": {
+          "name": "Flytt den, flytt den"
+        },
+        "pair_programming/courseb/2023": {
+          "name": "Parprogrammering"
+        },
+        "wiggles_-_gonoodle/courseb/2023": {
+          "type": "Video"
+        },
+        "stevie_and_the_big_project/courseb/2023": {
+          "name": "Stevie og det Store Prosjektet"
+        },
+        "unspotted_bugs/courseb/2023": {
+          "name": "Uoppdagede feil",
+          "type": "Video"
+        },
+        "getting_loopy/courseb/2023": {
+          "name": "Gå i spinn"
+        },
+        "getting_loopy_1/courseb/2023": {
+          "name": "Gå i spinn"
+        },
+        "getting_loopy_2/courseb/2023": {
+          "name": "Gå i spinn"
+        },
+        "getting_loopy_3/courseb/2023": {
+          "name": "Gå i spinn"
+        },
+        "pause_and_think_online/courseb/2023": {
+          "type": "Video"
+        },
+        "the_big_event/courseb/2023": {
+          "name": "Den store begivenheten"
+        },
+        "the_big_event_1/courseb/2023": {
+          "name": "Den store begivenheten"
+        },
+        "the_big_event_2/courseb/2023": {
+          "name": "Den store begivenheten"
+        },
+        "implementation_guide/coursec/2023": {
+          "name": "Implementeringsguide"
+        },
+        "teacher_forum/coursec/2023": {
+          "name": "Lærer-Forum"
+        },
+        "my_robotic_friends/coursec/2023": {
+          "name": "Mine robotliknende venner"
+        },
+        "my_robotic_friends_1/coursec/2023": {
+          "name": "Mine robotliknende venner"
+        },
+        "my_robotic_friends_2/coursec/2023": {
+          "name": "Mine robotliknende venner"
+        },
+        "my_robotic_friends_3/coursec/2023": {
+          "name": "Mine robotliknende venner"
+        },
+        "my_robotic_friends_4/coursec/2023": {
+          "name": "Mine robotliknende venner"
+        },
+        "pair_programming/coursec/2023": {
+          "name": "Parprogrammering",
+          "type": "Video"
+        },
+        "the_big_event/coursec/2023": {
+          "name": "Den store begivenheten"
+        },
+        "the_big_event_1/coursec/2023": {
+          "name": "Den store begivenheten"
+        },
+        "the_big_event_2/coursec/2023": {
+          "name": "Den store begivenheten"
+        },
+        "pause_and_think_online/coursec/2023": {
+          "type": "Video"
+        },
+        "binary_bracelets/coursec/2023": {
+          "name": "Binær armbånd"
+        },
+        "binary_bracelets_1/coursec/2023": {
+          "name": "Binær armbånd"
+        },
+        "binary_bracelets_2/coursec/2023": {
+          "name": "Binær armbånd"
+        },
+        "binary_bracelets_3/coursec/2023": {
+          "name": "Binær armbånd"
+        },
+        "binary_bracelets_4/coursec/2023": {
+          "name": "Binær armbånd"
+        },
+        "implementation_guide/coursed/2023": {
+          "name": "Implementeringsguide"
+        },
+        "teacher_forum/coursed/2023": {
+          "name": "Lærer-Forum"
+        },
+        "graph_paper_programming/coursed/2023": {
+          "name": "Millimeterpapirprogrammering"
+        },
+        "graph_paper_programming_1/coursed/2023": {
+          "name": "Millimeterpapirprogrammering"
+        },
+        "graph_paper_programming_2/coursed/2023": {
+          "name": "Millimeterpapirprogrammering"
+        },
+        "graph_paper_programming_3/coursed/2023": {
+          "name": "Millimeterpapirprogrammering"
+        },
+        "graph_paper_programming_4/coursed/2023": {
+          "name": "Millimeterpapirprogrammering"
+        },
+        "graph_paper_programming_5/coursed/2023": {
+          "name": "Millimeterpapirprogrammering"
+        },
+        "pair_programming/coursed/2023": {
+          "name": "Parprogrammering"
+        },
+        "relay_programming/coursed/2023": {
+          "name": "Relé programmering"
+        },
+        "relay_programming_1/coursed/2023": {
+          "name": "Relé programmering"
+        },
+        "relay_programming_2/coursed/2023": {
+          "name": "Relé programmering"
+        },
+        "relay_programming_3/coursed/2023": {
+          "name": "Relé programmering"
+        },
+        "relay_programming_4/coursed/2023": {
+          "name": "Relé programmering"
+        },
+        "relay_programming_5/coursed/2023": {
+          "name": "Relé programmering"
+        },
+        "pause_and_think_online/coursed/2023": {
+          "type": "Video"
+        },
+        "conditionals_with_cards/coursed/2023": {
+          "name": "Betingelser med kort"
+        },
+        "conditionals_with_cards_1/coursed/2023": {
+          "name": "Betingelser med kort"
+        },
+        "conditionals_with_cards_2/coursed/2023": {
+          "name": "Betingelser med kort"
+        },
+        "conditionals_with_cards_3/coursed/2023": {
+          "name": "Betingelser med kort"
+        },
+        "conditionals_with_cards_4/coursed/2023": {
+          "name": "Betingelser med kort"
+        },
+        "implementation_guide/coursee/2023": {
+          "name": "Implementeringsguide"
+        },
+        "sprite_lab_documentation/coursee/2023": {
+          "name": "Animerte figurer lab dokumentasjon"
+        },
+        "teacher_forum/coursee/2023": {
+          "name": "Lærer-Forum"
+        },
+        "pause_and_think_online/coursee/2023": {
+          "type": "Video"
+        },
+        "digital_sharing_ethics_video_/coursee/2023": {
+          "type": "Video"
+        },
+        "implementation_guide/coursef/2023": {
+          "name": "Implementeringsguide"
+        },
+        "sprite_lab_documentation_1/coursef/2023": {
+          "name": "Animerte figurer lab dokumentasjon"
+        },
+        "teacher_forum/coursef/2023": {
+          "name": "Lærer-Forum"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2023": {
+          "type": "Video"
+        },
+        "introducing_sprite_lab/coursef/2023": {
+          "type": "Video"
+        },
+        "sprite_lab_documentation/coursef/2023": {
+          "name": "Animerte figurer lab dokumentasjon"
+        },
+        "ai_impact_on_society/coursef/2023": {
+          "type": "Video"
+        },
+        "ai_machine_learning/coursef/2023": {
+          "type": "Video"
+        },
+        "ai_training_data_bias/coursef/2023": {
+          "type": "Video"
+        },
+        "internet/coursef/2023": {
+          "name": "Internett"
+        },
+        "internet_1/coursef/2023": {
+          "name": "Internett"
+        },
+        "the_internet/coursef/2023": {
+          "name": "Internett"
+        },
+        "teacher_forum/express/2023": {
+          "name": "Lærer-Forum"
+        },
+        "pair_programming/express/2023": {
+          "name": "Parprogrammering",
+          "type": "Video"
+        },
+        "artist_introduction/express/2023": {
+          "type": "Video"
+        },
+        "turns_angles/express/2023": {
+          "type": "Video"
+        },
+        "sprite_lab_documentation/express/2023": {
+          "name": "Animerte figurer lab dokumentasjon"
+        },
+        "pause_and_think_online/express/2023": {
+          "type": "Video"
+        },
+        "pair_programming_video/express/2023": {
+          "type": "Video"
+        },
+        "variables/express/2023": {
+          "name": "Variabler"
+        },
+        "teacher_forum/pre-express/2023": {
+          "name": "Lærer-Forum"
+        },
+        "20_20_20_rule/pre-express/2023": {
+          "type": "Video"
+        },
+        "pair_programming/pre-express/2023": {
+          "name": "Parprogrammering"
+        },
+        "wiggles_-_go_noodle/pre-express/2023": {
+          "type": "Video"
+        },
+        "pause_and_think_online/pre-express/2023": {
+          "type": "Video"
+        },
+        "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
+          "type": "Video"
+        },
+        "how_ai_works_-_what_is_machine_learning_/how-ai-works/2023": {
+          "type": "Video"
+        },
+        "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
+          "type": "Video"
+        },
+        "what_a_neural_network_sees/how-ai-works/2023": {
+          "type": "Video"
+        },
+        "how_ai_works_how_neural_networks_work/how-ai-works/2023": {
+          "type": "Video"
+        },
+        "how_ai_works_chatbots_and_large_language_models_part_1_/how-ai-works/2023": {
+          "type": "Video"
+        },
+        "how_ai_works_chatbots_and_large_language_models_part_2_/how-ai-works/2023": {
+          "type": "Video"
+        },
+        "how_ai_works_creativity_and_imagination/how-ai-works/2023": {
+          "type": "Video"
+        },
+        "how_ai_works_-_societal_impact/how-ai-works/2023": {
+          "type": "Video"
+        },
+        "how_ai_works_-_privacy_and_future_of_work/how-ai-works/2023": {
+          "type": "Video"
+        },
+        "does_ai_have_creativity_and_imagination_/how-ai-works/2023": {
+          "type": "Video"
+        },
+        "how_ai_works_ethics_ai_equal_access_and_algorithmic_bias/how-ai-works/2023": {
+          "type": "Video"
+        },
+        "how_ai_works_ethics_ai_privacy_the_future_of_work/how-ai-works/2023": {
+          "type": "Video"
+        },
+        "how_ai_works_introduction/how-ai-works/2023": {
+          "type": "Video"
+        },
+        "how_ai_works_training_data_and_bias/how-ai-works/2023": {
+          "type": "Video"
+        },
+        "how_ai_works_what_is_machine_learning_/how-ai-works/2023": {
+          "type": "Video"
+        },
+        "how_chatbots_and_large_language_models_work/how-ai-works/2023": {
+          "type": "Video"
+        },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
           "type": "Video"
         },
@@ -1732,11 +2409,6 @@
         },
         "video-text-compression/text-compression/unversioned": {
           "type": "Video"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
         }
       }
     }

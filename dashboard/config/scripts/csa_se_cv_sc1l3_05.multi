@@ -1,0 +1,11 @@
+name 'CSA-SE-CV-SC1L3-05'
+
+question 'The AI-generated code examples in today\'s lesson felt more engaging and relevant than standard examples.'
+
+right 'Strongly Agree'
+right 'Agree'
+right 'Neutral'
+right 'Disagree'
+right 'Strongly Disagree'
+
+allow_multiple_attempts true

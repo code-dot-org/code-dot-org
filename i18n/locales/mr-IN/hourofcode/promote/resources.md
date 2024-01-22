@@ -18,7 +18,7 @@ title: संसाधने
 
 ## हे पोस्टर्स तुमच्या शाळेत लावा
 
-मलाला, स्टीफन करी, शकीरा आणि बरेच काही दर्शविणारा एक नवीन पोस्टर सेट उपलब्ध आहे! या वर्षी, प्रत्येक संच 6 पोस्टर्स आणि 126 "I did the Hour of Code" स्टिकर्ससह येतील. पुरवठा मर्यादित आहे, त्यामुळे लवकरच [आपले पोस्टर्स मागवा ](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH). स्वतः प्रिंट करण्यासाठी, प्रिंट करण्यायोग्य आवृत्ती पाहण्यासाठी आणि सेव्ह करण्यासाठी खाली दिलेल्या इमेज वर क्लिक करा.
+Print your own posters! Simply click an image below to view and save a printable version.
 
 {{ promote_new_posters }}
 

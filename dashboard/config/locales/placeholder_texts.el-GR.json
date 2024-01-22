@@ -29,6 +29,10 @@
           "968c8b54671ab303d48320f86937c40b": "Οι μάσκες συμβάλλουν στην καθυστέρηση της εξάπλωσης των ιών!",
           "fac94901e68fc1dea6e749c012e3efc0": "Κάντε κλικ πάνω στους χαρακτήρες ηρώων σας για να τους βάλετε μάσκες."
         },
+        "CourseF_outbreak8_2023": {
+          "968c8b54671ab303d48320f86937c40b": "Οι μάσκες συμβάλλουν στην καθυστέρηση της εξάπλωσης των ιών!",
+          "fac94901e68fc1dea6e749c012e3efc0": "Κάντε κλικ πάνω στους χαρακτήρες ηρώων σας για να τους βάλετε μάσκες."
+        },
         "Find the Wizard": {
           "0ab65920c84bec05a22e09feea7fe4ea": "γράψε κείμενο εδώ",
           "0b895ef4c917e50663bc2a7327cbee3d": "Με βρήκες!",
@@ -86,6 +90,10 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "γράψε κείμενο εδώ",
           "30fcc1693fa8402931d13ac3a5f396fd": "γράψε τίτλο εδώ"
         },
+        "courseC19_playLab_EOC1_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "γράψε κείμενο εδώ",
+          "30fcc1693fa8402931d13ac3a5f396fd": "γράψε τίτλο εδώ"
+        },
         "courseC19_playLab_EOC2": {
           "0ab65920c84bec05a22e09feea7fe4ea": "γράψε κείμενο εδώ",
           "30fcc1693fa8402931d13ac3a5f396fd": "γράψε τίτλο εδώ"
@@ -99,6 +107,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "γράψε τίτλο εδώ"
         },
         "courseC19_playLab_EOC2_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "γράψε κείμενο εδώ",
+          "30fcc1693fa8402931d13ac3a5f396fd": "γράψε τίτλο εδώ"
+        },
+        "courseC19_playLab_EOC2_2023": {
           "0ab65920c84bec05a22e09feea7fe4ea": "γράψε κείμενο εδώ",
           "30fcc1693fa8402931d13ac3a5f396fd": "γράψε τίτλο εδώ"
         },
@@ -118,6 +130,10 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "γράψε κείμενο εδώ",
           "30fcc1693fa8402931d13ac3a5f396fd": "γράψε τίτλο εδώ"
         },
+        "courseC19_playLab_EOC3_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "γράψε κείμενο εδώ",
+          "30fcc1693fa8402931d13ac3a5f396fd": "γράψε τίτλο εδώ"
+        },
         "courseC19_playLab_EOC4": {
           "0ab65920c84bec05a22e09feea7fe4ea": "γράψε κείμενο εδώ",
           "30fcc1693fa8402931d13ac3a5f396fd": "γράψε τίτλο εδώ"
@@ -131,6 +147,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "γράψε τίτλο εδώ"
         },
         "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "γράψε κείμενο εδώ",
+          "30fcc1693fa8402931d13ac3a5f396fd": "γράψε τίτλο εδώ"
+        },
+        "courseC19_playLab_EOC4_2023": {
           "0ab65920c84bec05a22e09feea7fe4ea": "γράψε κείμενο εδώ",
           "30fcc1693fa8402931d13ac3a5f396fd": "γράψε τίτλο εδώ"
         },
@@ -158,6 +178,10 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "γράψε κείμενο εδώ",
           "30fcc1693fa8402931d13ac3a5f396fd": "γράψε τίτλο εδώ"
         },
+        "courseC_PlayLab_eventsFP_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "γράψε κείμενο εδώ",
+          "30fcc1693fa8402931d13ac3a5f396fd": "γράψε τίτλο εδώ"
+        },
         "courseD_playLab_condFP": {
           "0ab65920c84bec05a22e09feea7fe4ea": "γράψε κείμενο εδώ",
           "30fcc1693fa8402931d13ac3a5f396fd": "γράψε τίτλο εδώ"
@@ -177,6 +201,9 @@
         "courseE_aboutme_3_2021": {
           "ed076287532e86365e841e92bfc50d8c": "Γεια σου Κόσμε!"
         },
+        "courseE_aboutme_3_2023": {
+          "ed076287532e86365e841e92bfc50d8c": "Γεια σου Κόσμε!"
+        },
         "courseE_aboutme_4": {
           "ed076287532e86365e841e92bfc50d8c": "Γεια σου Κόσμε!"
         },
@@ -189,6 +216,9 @@
         "courseE_aboutme_4_2021": {
           "ed076287532e86365e841e92bfc50d8c": "Γεια σου Κόσμε!"
         },
+        "courseE_aboutme_4_2023": {
+          "ed076287532e86365e841e92bfc50d8c": "Γεια σου Κόσμε!"
+        },
         "courseE_aboutme_5": {
           "ed076287532e86365e841e92bfc50d8c": "Γεια σου Κόσμε!"
         },
@@ -199,6 +229,9 @@
           "ed076287532e86365e841e92bfc50d8c": "Γεια σου Κόσμε!"
         },
         "courseE_aboutme_5_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Γεια σου Κόσμε!"
+        },
+        "courseE_aboutme_5_2023": {
           "ed076287532e86365e841e92bfc50d8c": "Γεια σου Κόσμε!"
         },
         "courseE_playLab_scaffold1": {
@@ -229,6 +262,10 @@
           "83e4a96aed96436c621b9809e258b309": "ψάρι",
           "8a52e7a8d3b4c955d6f7927c6ba3fe72": "πλάσματα"
         },
+        "courseF_apps_aquarium_2023": {
+          "83e4a96aed96436c621b9809e258b309": "ψάρι",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "πλάσματα"
+        },
         "courseF_apps_chatbot": {
           "1f258d88a70309efc1435ef5daa277a0": "Ευχαριστώ για την κουβέντα μαζί μου σήμερα!"
         },
@@ -236,6 +273,9 @@
           "1f258d88a70309efc1435ef5daa277a0": "Ευχαριστώ για την κουβέντα μαζί μου σήμερα!"
         },
         "courseF_apps_chatbot_-2022-2": {
+          "1f258d88a70309efc1435ef5daa277a0": "Ευχαριστώ για την κουβέντα μαζί μου σήμερα!"
+        },
+        "courseF_apps_chatbot_2023": {
           "1f258d88a70309efc1435ef5daa277a0": "Ευχαριστώ για την κουβέντα μαζί μου σήμερα!"
         },
         "courseF_apps_collector": {
@@ -247,10 +287,16 @@
         "courseF_apps_collector_-2022-2": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Κέρδισες!"
         },
+        "courseF_apps_collector_2023": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Κέρδισες!"
+        },
         "courseF_editable_chatbot": {
           "1f258d88a70309efc1435ef5daa277a0": "Ευχαριστώ για την κουβέντα μαζί μου σήμερα!"
         },
         "courseF_editable_chatbot_-2022-2": {
+          "1f258d88a70309efc1435ef5daa277a0": "Ευχαριστώ για την κουβέντα μαζί μου σήμερα!"
+        },
+        "courseF_editable_chatbot_2023": {
           "1f258d88a70309efc1435ef5daa277a0": "Ευχαριστώ για την κουβέντα μαζί μου σήμερα!"
         },
         "courseF_playlab_variables1a": {
@@ -304,6 +350,12 @@
           "e8a10c04d72b2f135dabe360c4bdd534": "Κέρδισες!"
         },
         "coursee_helloworld_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Γεια σου, κόσμε!"
+        },
+        "coursee_helloworld_freeplay_2023": {
+          "6cd3556deb0da54bca060b4c39479839": "Γεια σου, κόσμε!"
+        },
+        "csc_bookcover_widget_2023": {
           "6cd3556deb0da54bca060b4c39479839": "Γεια σου, κόσμε!"
         },
         "helloworld_animals_freeplay": {

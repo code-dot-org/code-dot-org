@@ -24,41 +24,41 @@ title: رہنمائی کیسے کریں – برائے عوامی-نمائندگ
 
 ### 1 ۔ ہماری ایک صفحہ کار کا مطالعہ
 
-See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
+دیکھیں [کمپیوٹر سائنس کی تعلیم کیوں ضروری ہے]({{ localized_files/hoc_one_pager }}) اور آپ آور آف کوڈ کی مدد کرکے اس مقصد میں کس طرح مدد کر سکتے ہیں۔.
 
 ### 2 ۔ بھرتی مقامی اسکولوں اور اضلاع
 
-Use [this email]({{ promote/sample_emails }}) or [this blurb]({{ promote/stats_url }}) as a starting point, and take a look at this [how-to]({{ urls/how_to_guide }}) for schools and districts.
+اس [ای میل میل]({{ promote/sample_emails }}) یا [اس بلرب]({{ promote/stats_url }}) کو نقطہ اغاز کے طور پر استعمال کریں اور اسکولوں اور اضلاع کے لئے اس [کرنے کا طریقہ]({{ urls/how_to_guide }}) پر ایک نظر ڈالیں۔
 
 ### آور-آف-کوڈ کا ایک ایونٹ کیسے ھوسٹ کریں۔
 
-See our [event how-to guide]({{ urls/how_to_events }}) for a sample run of show, [media outreach kit]({{ promote/press_kit_url }}), and other event-planning resources. ایونٹ ہوسٹنگ کوڈ کو فروغ دینے اور شراکت میں اضافہ کرنے کا ایک بڑا طریقہ ہے.
+شو کی تفصیلات [میڈیا آؤٹ ریچ کٹ]({{ promote/press_kit_url }}) اور ایونٹ کی منصوبہ بندی کے دیگر وسائل کے لیے ہمارا [ایونٹ کیسے گائیڈ]({{ urls/how_to_events }}) دیکھیں۔ ایونٹ ہوسٹنگ کوڈ کو فروغ دینے اور شراکت میں اضافہ کرنے کا ایک بڑا طریقہ ہے.
 
-### 4. Attend an event during Computer Science Education Week ({{ campaign_date/short }})
+### 4. کمپیوٹر سائنس ایجوکیشن ویک کے دوران ایک تقریب میں شرکت کریں ({{ campaign_date/short }})
 
-[Find classrooms and schools]({{ urls/events }}) participating in your district, city, or state.
+اپنے ضلع، شہر یا ریاست میں حصہ لینے والے [کلاس رومز اور اسکول تلاش کریں]({{ urls/events }})۔
 
 ### 5. تحریر یا قرارداد جاری کریں
 
-See this [sample resolution]({{ urls/proclamation }}) supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+کمپیوٹر سائنس ایجوکیشن ویک اور اس کے مقاصد میں مدد کرنے والی یہ [نمونہ ریزولیوشن]({{ urls/proclamation }}) دیکھیں جو ریاست اور مقامی قانون ساز استعمال کر سکتے ہیں۔
 
 ### 6. ایک اختیاری ڈرافٹ
 
-Consider publishing an opinion piece in your local paper. See this [sample op-ed]({{ promote/op_ed }}) supporting Computer Science Education Week and its goals.
+اپنے مقامی اخبار میں اپنی رائے شائع کرنے پر غور کریں۔ کمپیوٹر سائنس ایجوکیشن ویک اور اس کے مقاصد کو سپورٹ کرنے والا یہ [مثالی آپ ایڈ]({{ promote/op_ed }}) دیکھیں۔
 
 ### 1. دوسروں تک بھجیں
 
- قیامت کا کوڈ کرتے ہوئے واقعات کی تصاویر یا آپ کے اور دیگر بالغوں کا ایک ویڈیو اشتراک کریں. اس کوڈ پر آپ پہلے ہی غلط استعمال کی رپورٹ کر چکے / چکی ہیں. ہیلپ ڈیسک جلد از جلد اس معاملے کو دیکھے گا. اس تصویر پر آپ پہلے ہی غلط استعمال کی رپورٹ کر چکے / چکی ہیں. یا، ان نمونے ٹویٹس کا استعمال کریں:</p> 
+[Facebook پر آور آف کوڈ کا ویڈیو شیئر کریں](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) اور [Twitter پر اپنے سپورٹ کے بارے میں بات کریں](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=)۔ قیامت کا کوڈ کرتے ہوئے واقعات کی تصاویر یا آپ کے اور دیگر بالغوں کا ایک ویڈیو اشتراک کریں. اس کوڈ پر آپ پہلے ہی غلط استعمال کی رپورٹ کر چکے / چکی ہیں. ہیلپ ڈیسک جلد از جلد اس معاملے کو دیکھے گا. اس تصویر پر آپ پہلے ہی غلط استعمال کی رپورٹ کر چکے / چکی ہیں. یا، ان نمونے ٹویٹس کا استعمال کریں:
 
-- *Every student, boy or girl, should have the chance to learn computer science. Join us in starting with one #HourOfCode [https://hourofcode.com]({{ urls/home }})*
-- *Today, we're proud to join the Hour of Code movement. Are you in? #HourOfCode [https://hourofcode.com]({{ urls/home }})*
+- *ہر طالب علم کو خودہ وہ لڑکا ہو یا لڑکی، کمپیوٹر سائنس سیکھنے کا موقع ملنا چاہیے۔ ایک #HourOfCode شروع کرکے ہمارے ساتھ شامل ہوں۔ [https://hourofcode.com]({{ urls/home }})*
+- *آج، ہمیں آور آف کوڈ تحریک میں شامل ہونے پر فخر ہے۔ کیا آپ ہمارے ساتھ شامل ہیں؟ #HourOfCode [https://hourofcode.com]({{ urls/home }})*
 
 ### 8 ۔ ایک پریس ریلیز جاری
 
-[Use this sample]({{ promote/official_press_release }}) as a guide.
+[اس نمونے کو]({{ promote/official_press_release }}) ایک گائیڈ کے طور استعمال کریں۔
 
 ### 9 ۔ جڑیں مقامی طور پر
 
-[Learn more about computer science education in your state]({{ urls/advocacy }}). Sign the petition there and you’ll get updates on Code.org's local, state, and federal advocacy efforts.
+[اپنی ریاست میں کمپیوٹر سائنس کی تعلیم کے بارے میں مزید جانیں]({{ urls/advocacy }})۔ وہاں پیٹیشن پر دستخط کریں اور آپ کو Code.org کی مقامی، ریاستی اور وفاقی وکالت کی کوششوں کے بارے میں اپ ڈیٹس ملیں گے۔
 
 {{ signup_button }}

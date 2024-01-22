@@ -38,7 +38,7 @@ Die beste "Hour of Code"-Erfahrung macht man mit Computern, die einen Internetzu
 
 Testen Sie Tutorials auf den Computern oder Geräten der SchülerInnen. Prüfen Sie, Ton und Video im Browser ordnungsgemäß funktionieren. **Geringe Bandbreite haben?** Abspielen Videos vor der Klasse, sodass jeder Student nicht eigenen Videos herunterladen muss. Oder probieren die ausgesteckt/offline Tutorials.
 
-Stellen Sie Ihrer Klasse Kopfhörer zur Verfügung, oder bitten Sie sie, eigene mitzubringen, wenn das ausgewählte Tutorial am Besten mit Ton funktioniert.
+Stellen Sie Ihrer Klasse Kopfhörer zur Verfügung, oder bitten Sie sie, eigene mitzubringen, wenn das ausgewählte Tutorial am besten mit Ton funktioniert.
 
 **Nicht genug Geräte haben?** Benutzen Sie [](https://www.youtube.com/watch?v=vgkahOzFH2Q)Paar-Programmiuerung </a>. Wenn Lernende in Paaren arbeiten, helfen sich sich gegenseitig und sind weniger auf die Lehrkraft angewiesen. Sie werden dann auch feststellen, dass Informatik sozial und kooperativ ist.
 
@@ -73,7 +73,7 @@ Beginnen Sie Ihre Hour of Code mit einer motivierenden Diskussion mit den Teilne
 
 - [Drucken Sie Zertifikate]({{ urls/certificates }}) für Ihre Schüler.
 - [Drucken Sie "I did an hour of code!"]({{ promote/resources_stickers }}}) Aufkleber für Ihre Schüler.
-- Bestellen Sie hier [speziell angefertigte T-Shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) für die Teilnehmer.
+- [Bestellen Sie individuelle T-Shirts](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) für die Teilnehmenden.
 - Teilen Sie Fotos und Videos Ihrer Hour of Code-Veranstaltung in den sozialen Medien. Verwenden Sie #HourOfCode und @codeorg, damit wir Ihren Erfolg auch hervorheben können!
 
 ## Weitere Hour of Code-Ressourcen für Unterrichtende

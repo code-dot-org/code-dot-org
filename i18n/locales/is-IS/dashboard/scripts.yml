@@ -114,6 +114,7 @@ is:
           description: Prófaðu undirstöðuatriði tölvunarfræði með leikverum úr Angry Birds og Plants vs. Zombies!
           description_short: Prófaðu grunnatriði í tölvufræði með mörgum skemmtilegum fígúrum!
           student_description: Prófaðu undirstöðuatriði tölvunarfræði með leikverum úr Angry Birds og Plants vs. Zombies!
+          name: Klukkustund kóðunar
         CodeStudioPuzzleChallenge:
           title: Áskorun - Þraut í kóðastúdíói
           description: Prófaðu þessar skemmtilegu forritunarþrautir. Gerðu þitt besta!
@@ -267,7 +268,7 @@ is:
           description_short: Lærðu að forrita vélmenni og búðu til þinn eigin Star Wars leik í órafjarlægri vetrarbraut.
           student_description: Lærðu að forrita vélmenni og búðu til þinn eigin Star Wars leik í órafjarlægri vetrarbraut.
         mc:
-          title: Klukkustund kóðunar með Minecraft
+          title: Minecraft Könnuður
           description: Notaðu kubba með kóða til að fara með Steve eða Alex í ævintýraferð um þennan Minecraft heim.
           description_short: Kannaðu Minecraft heim með kóða
           student_description: Notaðu kubba með kóða til að fara með Steve eða Alex í ævintýraferð um þennan Minecraft heim.
@@ -2513,6 +2514,8 @@ is:
               display_name: Innihald
             lessonGroup-2:
               display_name: Innihald
+        dance-unplugged:
+          title: Danspartý án tölvu
         spelling-bee:
           title: Stafsetning
         csa5-exemplars:
@@ -3072,6 +3075,8 @@ is:
           lessons:
             lesson-5:
               name: Mat
+            lesson-6:
+              name: Kennslustund 1
         devices-2022:
           lesson_groups:
             lessonGroup-4:
@@ -3411,6 +3416,10 @@ is:
               display_name: Lokaverkefni námskeiðs
           description_audience: 'Aldur: 9-13'
           description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Frjáls æfing
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -3532,3 +3541,204 @@ is:
               display_name: Lokaverkefni námskeiðs
           description_audience: 'Aldur: 9-13'
           description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Kynning
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Kynning
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Kynning
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Kynning
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Könnun
+            lessonGroup-2:
+              display_name: 'Kafli 1: Lausn vandamála sem ferli'
+            lessonGroup-3:
+              display_name: 'Kafli 2: Tölvur og lausn vandamála'
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kafli 1: Myndir og Hreyfing'
+            lessonGroup-3:
+              display_name: 'Kafli 2: Gerð leikja'
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kafli 1: Notendamiðuð hönnun'
+            lessonGroup-3:
+              display_name: 'Kafli 2: Frumgerðir appa'
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kafli 1: Kóðun upplýsinga'
+            lessonGroup-3:
+              display_name: 'Kafli 2: Lausn vandamála með gögn'
+          description_short: Lærðu um hvernig fólk notar tölvur til að leysa vandamál með gögn.
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kafli 2: Smíði frumgerða vélbúnaðar'
+        csd6b-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inntök og Úttök
+        csd-post-survey-2024:
+          title: Könnun eftir námskeið
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Kennslustund 1
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Kennslustund 1
+            lesson-3:
+              name: Atvik
+            lesson-4:
+              name: Hegðun
+            lesson-5:
+              name: Næstu skref
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Fyrstu skrefin
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Kennslustund 1
+            lesson-3:
+              name: Lykkjur
+            lesson-4:
+              name: Skilyrði
+            lesson-6:
+              name: Næstu skref
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Fyrstu skrefin
+          title: Kynning á tölvunarfræði
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Könnun
+            csp_unit1_2020:
+              display_name: Kafli 1 - Stafrænar upplýsingar
+        csp2-2024:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Kafli 2: Internetið'
+        csp3-2024:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Eining 3: Kynning á gerð appa'
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Könnun
+            lessonGroup-3:
+              display_name: Innihald
+            lessonGroup-5:
+              display_name: Annað kennsluefni
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-4:
+              display_name: Annað kennsluefni
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-4:
+              display_name: Annað kennsluefni
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-4:
+              display_name: Annað kennsluefni
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-4:
+              display_name: Annað kennsluefni
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-4:
+              display_name: Annað kennsluefni
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-5:
+              display_name: Annað kennsluefni
+        csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-4:
+              display_name: Könnun
+            lessonGroup-5:
+              display_name: Annað kennsluefni
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: Breytur
+            csp_conditionals:
+              display_name: Skilyrði
+            csp_functions:
+              display_name: Föll
+            csp_project:
+              display_name: Verkefni
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Gögn
+            lessonGroup-5:
+              display_name: Könnun eftir námskeið
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listar
+            lessonGroup-3:
+              display_name: Lykkjur
+            lessonGroup-4:
+              display_name: Yfirferðir
+            lessonGroup-5:
+              display_name: Verkefni
+            lessonGroup-2:
+              display_name: Könnun eftir námskeið
+        csp7-2024:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Stikar og skilagildi
+            csp_libraries:
+              display_name: Söfn
+            lessonGroup-3:
+              display_name: Könnun eftir námskeið
+        csp8-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Könnun eftir námskeið
+        csp9-2024:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Kafli 9: Gögn'
+            lessonGroup-2:
+              display_name: Könnun eftir námskeið
+        csp10-2024:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Eining 10: Netöryggi og mikilvægi þess'
+            lessonGroup-2:
+              display_name: Könnun eftir námskeið

@@ -62,33 +62,44 @@
         "drop/pre-express/2022": {
           "word": "Gahčá"
         },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
+        "artist/csc-starquilts/2023": {
+          "word": "Dáiddár"
         },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
+        "comments/csc-starquilts/2023": {
+          "word": "Kommentárat"
         },
-        "code/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "input/csd/2023": {
+          "word": "Inputa"
         },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "processing/csd/2023": {
+          "word": "Gieđahallan"
         },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "digital_footprint/csd/2023": {
+          "word": "Digitála Luodda"
         },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "copyright/csd/2023": {
+          "word": "Dahkkivuoigatvuohta"
         },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "drop/coursea/2023": {
+          "word": "Gahčá"
+        },
+        "drop/courseb/2023": {
+          "word": "Gahčá"
+        },
+        "copyright/coursee/2023": {
+          "word": "Dahkkivuoigatvuohta"
+        },
+        "input/coursef/2023": {
+          "word": "Inputa"
+        },
+        "internet/coursef/2023": {
+          "word": "Interneahtta"
+        },
+        "drop/pre-express/2023": {
+          "word": "Gahčá"
+        },
+        "network/how-ai-works/2023": {
+          "word": "Fierbmi"
         }
       }
     }

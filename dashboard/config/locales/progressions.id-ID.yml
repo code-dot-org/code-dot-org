@@ -89,6 +89,7 @@ id:
       Challenges: Tantangan
       Change: Ubah
       Check Your Work: Periksa Karya Anda
+      Check for Understanding: Periksa Pemahaman
       Check-In Survey: Survei Tengah Semester
       Checking for a Winner: Memeriksa Pemenang
       'Choice Levels: Customize Your App': 'Level Pilihan: Sesuaikan Apl. Anda'
@@ -182,6 +183,7 @@ id:
       Extra: Tambahan
       Extra Challenge: Tantangan Ekstra
       'Extra Challenge: Sound Board': 'Tantangan Ekstra: Sound Board'
+      Final Dance Party Project: Proyek Pesta Dansa Akhir
       Final Personal Website: Situs Pribadi
       Final Room Escape App: Aplikasi Room Escape Final
       Find the Wizard: Temukan Wizard
@@ -233,17 +235,20 @@ id:
       Input with If-Else: Input dengan If-Else
       Inspiration!: Inspirasi!
       InspirationalArtwork: Karya Seni Inspiratif
+      Intro Video: Video Pembuka
       Intro to Flyer Game: Pengantar Flyer Game
       Intro to For Loops: Pengantar For Loop
       Intro to Side Scrollers: Pengantar Side Scroller
       Intro to Sprites: Pengantar Sprite
       Intro to Variables: Pengantar Variable
       Introducing Sprite Lab: Memperkenalkan Sprite Lab
+      Introduction: Pendahuluan
       Introduction to Arrays: Pengenalan Array
       Isaac's Survey Data: Data Survei Isaac
       Iteration and Parameters: Iterasi dan Parameter
       Keep On Dancing!: Teruslah Berdansa!
       Keeping Data Secret: Menjaga Kerahasiaan Data
+      Key Press & At Measure Events: Tekanan Tombol & Event Pada Hitungan
       Keyboard Input: Input Keyboard
       Kim's Survey: Survei Kim
       Kim's Survey Data: Data Survei Kim
@@ -262,6 +267,7 @@ id:
       Looking for Patterns: Mencari Pola
       Looping: Perulangan
       Loops with the Artist: Loop dengan Artis
+      Make Dancer & Dance Move: Membuat Penari & Gerakan Tari
       Make Your Sprites: Buat Sprite Anda
       Make a Prediction: Buat Prediksi
       Make an Interactive Card: Buat Kartu Interaktif
@@ -281,7 +287,7 @@ id:
       'Mini-Project: Alien Dance Moves': 'Mini-Project: Gerakan Dansa Alien'
       'Mini-Project: Alien Dance Party': 'Mini-Project: Pesta Dansa Alien'
       'Mini-Project: Create a Virtual Pet': 'Mini-Project: Membuat Piaraan Virtual'
-      'Mini-Project: Outbreak Simulator': 'Mini-Project: Simulator Pendobrak'
+      'Mini-Project: Outbreak Simulator': 'Proyek Mini: Simulator Wabah'
       'Mini-Project: Royal Battle': 'Mini-Project: Royal Battle'
       'Mini-Project: Snowflake #1': 'Mini-Project: Keping Salju #1'
       'Mini-Project: Snowflake #2': 'Mini-Project: Keping Salju #2'
@@ -404,6 +410,7 @@ id:
       Set Up Sprites: Membuat Sprite
       Setting Properties: Mengatur Properti
       Shapes and the Draw Loop: Bentuk dan Draw Loop
+      Share Out: Bagi ke Seluruh Kelas
       Share Your App: Bagikan Aplikasi Anda
       Share Your Pages: Bagikan Halaman Anda
       Share Your Stylesheets: Bagikan Stylesheet Anda
@@ -411,7 +418,7 @@ id:
       Shoe Recommender: Pemberi Rekomendasi Sepatu
       Side Scroller: Side Scroller
       Simple Circuits: Sirkuit Sederhana
-      Skill Building: Pembangunan Keterampilan
+      Skill Building: Pengembangan Kecakapan
       Skill-Building: Pengembangan Kecakapan
       Sliders: Slider
       Smart Bike - Blinkers: Smart Bike - Blinker
@@ -451,6 +458,7 @@ id:
       UI Element Properties: Properti Elemen UI
       Ultimate Shoe Recommender: Pemberi Rekomendasi Sepatu Terbaik
       Unit 5 Lesson 1 Overview: Unit 5 Pelajaran 1 Ikhtisar
+      Unplugged Activity: Aktivitas Offline
       Upload Your Images: Unggah Gambar Anda
       User Interface: Antarmuka Pengguna
       Using Getters and Setters: Menggunakan Getter dan Setter
@@ -577,7 +585,7 @@ id:
       'Video: Wrap-up': 'Video: Rangkuman'
       Warm Up: Pemanasan
       Website Project: Proyek Situs Web
-      Welcome to Monster Town: Selamat Datang di Monster Town
+      Welcome to Monster Town: Selamat datang di Kota Monster
       Where'd They Go?: Kemana mereka pergi?
       While Loops with the Farmer: While Loop dengan Petani
       'Widget: Text Compression': 'Widget: Kompresi Teks'

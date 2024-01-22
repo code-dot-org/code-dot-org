@@ -1,0 +1,25 @@
+name 'pl-k5-2_behaviors_custom_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Behavior Blocks
+
+#### Behavior blocks animate our sprites. These are special blocks that allow our sprite to complete specific actions. The behavior blocks make it easier for beginning coders to use more complex actions. 
+ 
+
+## Let’s take a look at this *growing* behavior.
+
+#### By adding the ‘Sprite begins’ block, when we press run, the Sprite will slowly get bigger. 
+
+
+<img src="https://images.code.org/72569b194a488784e90945a2f87e6b48-image-1705006395844.gif" alt= "moving playspace and workspace window size" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
+
+
+
+<div style="clear:both"/>
+
+<hr style="clear:both">
+
+![]()
+MARKDOWN

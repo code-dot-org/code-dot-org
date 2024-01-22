@@ -4,12 +4,14 @@ vi:
     attributes:
       user:
         age: Tuổi
+        ai_settings_header: Cài đặt AI
         current_password: Mật khẩu hiện tại
         edit_header: Chỉnh sửa thông tin tài khoản
         email: Thư điện tử
         error:
           future: không thể trong tương lai
         finish_sign_up_header: Hoàn thành tạo tài khoản
+        finish_sign_up_header_error: 'Hãy sửa các lỗi sau đây:'
         finish_sign_up_subheader: Điền thông tin sau để hoàn thành tạo tài khoản Code.org
           cho <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Điền thông tin sau để hoàn thành tạo tài
@@ -31,6 +33,7 @@ vi:
           có địa chỉ email)](%{url})
         reset_password_token: Liên kết đặt lại mật khẩu bạn đã theo dõi
         us_state: Quốc gia
+        user_type: Kiểu tài khoản
         username: tài khoản
         verified_teacher: Giáo viên đã xác minh
     errors:
@@ -164,6 +167,8 @@ vi:
       mình.
     more_information: Xem Chính sách quyền riêng tư của Code.org.
   copy: Sao chép
+  course_deprecated:
+    button: Xem chương trình giảng dạy mới
   course_offering:
     headers:
       collections: Bộ sưu tập
@@ -180,6 +185,7 @@ vi:
       sports: Thể thao
       summer_workshops_612: 6-12 Hội thảo Mùa hè
       teacher_led: Giáo viên hướng dẫn
+      unsupported: Không được hỗ trợ
       virtual_academic_year_workshops_612: Hội thảo năm học ảo 6—12
       workshops_k5: Hội thảo K-5
       year_long: Năm dài
@@ -511,6 +517,8 @@ vi:
     unsubmit-title: Không nộp bản đánh giá nănng lực của bạn
     wrong_body: Cảm ơn bạn đã gửi câu trả lời.
     wrong_title: Cảm ơn bạn
+  level_summary:
+    correct_answer: Câu trả lời đúng
   locked_stage: Nội dung của giai đoạn này không hiển thị vì giai đoạn này hiện đang
     bị khóa. Giáo viên của bạn có thể mở khóa giai đoạn này khi đến lúc làm việc hoặc
     xem lại câu trả lời của bạn.
@@ -718,6 +726,10 @@ vi:
       khoản này để luôn cập nhật về tiến trình và dự án của con bạn!"
   parent_mailer:
     parent_email_added_subject: Chào mừng tới Code.org!
+    parent_permission_confirmation_subject: Cảm ơn bạn đã chấp thuận quyền truy cập
+      của con bạn vào Code.org!
+    parent_permission_reminder_subject: Nhắc nhở, cần có sự đồng ý của cha mẹ để con
+      bạn truy cập Code.org
     student_associated_subject: Thông tin đăng nhập vào Code.org
   password:
     change_form:
@@ -777,17 +789,37 @@ vi:
         sphero: Sphero
         wonder: Hội thảo kỳ diệu
       school_country:
+        australia: Úc
         barbados: Barbados
         belize: Belize
+        brazil: Braxin
         canada: Canada
         chile: Chile
         colombia: Colombia
+        dominican_republic: Cộng hòa Dominica
+        india: Ấn Độ
+        indonesia: Indonesia
         israel: Israel
+        italy: Ý
+        jamaica: Jamaica
+        kenya: Kenya
+        kosovo: Kosovo
         malaysia: Malaysia
+        maldives: Maldives
         mexico: Mexico
+        mongolia: Mông Cổ
+        new_zealand: New Zealand
         paraguay: Paraguay
+        philippines: Philippines
+        portugal: Bồ Đào Nha
+        puerto_rico: Puerto Rico
+        slovakia: Slovakia
+        south_korea: Hàn Quốc
+        spain: Tây Ban Nha
         thailand: Thái Lan
+        trinidad_and_tobago: Trinidad và Tobago
         uzbekistan: Uzbekistan
+        vietnam: Việt Nam
       subjects:
         art: Mỹ thuật
         cs: Khoa học máy tính
@@ -1205,6 +1237,8 @@ vi:
     teacher_educator_guide: Hãy xem chỉ dẫn
     title: Ghi danh cho Code.org
     us_state: Quốc gia
+    us_state_dropdown_options:
+      other: Tôi sống ở một nơi không được liệt kê ở đây
     user_type: Bạn là học viên hay Giáo viên?
     user_type_button: Cập nhật tài khoản
     user_type_label: Kiểu tài khoản

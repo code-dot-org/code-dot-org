@@ -1,37 +1,37 @@
 ---
-title: Hour of Code How-to Guide
+title: Uair an Chóid Conas-chun Treoir
 ---
 
 {{ signup_button }}
 
 # How to plan your Hour of Code
 
-### Join the movement and introduce your students to computer science with these steps.
+### Bí ar an ngluaiseacht agus cuir ríomheolaíocht in aithne do mhic léinn leis na céimeanna seo.
 
-Students today should learn how to create technology, not just use it.
+Ba chóir do mhic léinn inniu foghlaim conas teicneolaíocht a chruthú, ní amháin í a úsáid
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time! Find an activity that fits your setting, whether in-class or after-school, in-person or virtual. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}) after checking out the steps below:
+Bealach simplí agus spraíúil is ea Uair an Chóid a thriail chun eolaíocht ríomhaireachta a thabhairt isteach do mhic léinn, b'fhéidir den chéad uair riamh! Faigh gníomhaíocht a oireann do do shuíomh, cibé acu in-aicme nó iarscoile, go pearsanta nó fíorúil. Féach ar ár dtreoir [rannpháirtíochta má tá ceisteanna agat fós]({{ localized_files/participation_guide }}) tar éis duit na céimeanna thíos a sheiceáil:
 
-- [Watch the Hour of Code how-to video](#how-to-video)
-- [Explore activities and tutorials](#explore-activities)
-- [Create your plan for the day](#create-your-plan)
+- [Féach ar an Uair an Chóid conas físeán](#how-to-video)
+- [Déan iniúchadh ar ghníomhaíochtaí agus ranganna teagaisc](#explore-activities)
+- [Cruthaigh do phlean don lá](#create-your-plan)
 - [Promote your Hour of Code](#promote-your-hour)
-- [How to start your Hour of Code strong](#how-to-start)
-- [Get coding](#code)
-- [Celebrate your students' success](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [Conas do Uair an Chóid a thosú go láidir](#how-to-start)
+- [Faigh códú](#code)
+- [Ceiliúradh a dhéanamh ar rath do mhic léinn](#celebrate)
+- [Acmhainní eile Uair an Chód d'oideachasóirí](#other-resources)
 
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Féach ar an Uair an Chóid conas físeán <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
 <a id="explore-activities"></a>
 
-## 2. Explore activities and tutorials
+## 2. Déan iniúchadh ar ghníomhaíochtaí agus ranganna teagaisc
 
 We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
 
@@ -43,7 +43,7 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 <a id="create-your-plan"></a>
 
-## 3. Create your plan for the day
+## 3. Cruthaigh do phlean don lá
 
 ### Think about your technology needs - computers are optional!
 
@@ -56,13 +56,13 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 ### Pick a day and time
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+Glacann daoine ar fud an domhain páirt i gceiliúradh Uair an Chóid le linn Sheachtain Oideachais CS (Nollaig 5-11) nuair a scaoiltear na ranganna teagaisc agus na gníomhaíochtaí is déanaí. But you can do an Hour of Code any day of the year!
 
 * * *
 
 <a id="promote-your-hour"></a>
 
-## 4. Promote your Hour of Code
+## 4. Cuir d'Uair an Chóid chun cinn
 
 Now that you've planned your event, it's time to start promoting it!
 
@@ -72,11 +72,11 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Nuair a ch [láraíonn tú d'imeacht Uair an Chód](/events), gheobhaidh tú cumarsáid ríomhphoist cabhrach le nuacht agus leideanna chun Uair an Chód rathúil a óstáil. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
-Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or print inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Nó priontáil póstaeir spreagthacha do do sheomra ranga! Students are more excited to participate in a subject when they see people who look like them encouraging it.
 
 {{ promote_new_posters }}
 
@@ -86,7 +86,7 @@ Learn more about posters, videos, stickers and other ways to [promote your event
 
 <a id="how-to-start"></a>
 
-## 5. How to start your Hour of Code strong
+## 5. Conas do Uair an Chóid a thosú go láidir
 
 Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
 
@@ -97,25 +97,25 @@ Show an inspirational video:
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
 - Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+Tá sé ceart go leor má tá tú féin agus do mhic léinn úrnua don eolaíocht ríomhaireachta. Seo roinnt smaointe chun gníomhaíocht Uair an Chóid a thabhairt isteach:
 
 - Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
 - As a class, list things that use code in everyday life.
-- See tips for getting young women interested in computer science [here]({{ urls/girls }}).
+- Féach leideanna chun dul do mhná óga suim acu san eolaíocht ríomhaireachta [anseo]({{ urls/girls }}).
 
 * * *
 
 <a id="code"></a>
 
-## 6. Get coding!
+## 6. Faigh códú!
 
 Direct students to the activity
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- Scríobh an nasc teagaisc ar chlár bán. Faigh an nasc atá liostaithe ar an [bhfaisnéis do do rang teagaisc roghnaithe]({{ urls/learn }}).
 
 When your students come across difficulties it's okay to respond:
 
-- “I don’t know. Let’s figure this out together.”
+- “Níl a fhios agam. Déanaimis é seo a dhéanamh amach le chéile.”
 - “Technology doesn’t always work out the way we want.”
 - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
@@ -128,7 +128,7 @@ What if a student finishes early?
 
 <a id="celebrate"></a>
 
-## 7. Celebrate your students' success
+## 7. Ceiliúradh a dhéanamh ar rath do mhic léinn
 
 [col-33]
 
@@ -136,21 +136,21 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Priontáil deimhni]({{ urls/certificates }}) the do do mhic léinn.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Roinn grianghraif agus físeáin de d'imeacht Uair an Chód ar na meáin shóisialta. Úsáid #HourOfCode agus @codeorg ionas gur féidir linn aird a tharraingt ar do rath freisin!
 
 * * *
 
 <a id="other-resources"></a>
 
-## Other Hour of Code resources for educators:
+## Acmhainní Uair Eile an Chóid d'oideachasóirí:
 
 - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Déan athbhreith [niú ar na Ceisteanna Co](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)itianta
 
 ### What comes after the Hour of Code?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+Ní eolaíocht ríomhaireachta a deireadh leis an Uair an Chóid! [Foghlaim conas CS](/beyond) a thabhairt chuig do scoil agus do mhic léinn.
 
 {{ signup_button }}

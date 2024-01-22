@@ -1,0 +1,23 @@
+{
+  "he-IL": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "co-teacher": {
+            "buttonText": "למד עוד"
+          },
+          "hoc-2023": {
+            "buttonText": "למד עוד"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "למד עוד",
+            "title": "מסיבת ריקודים: מהדורת AI"
+          },
+          "superhero": {
+            "buttonText": "למד עוד"
+          }
+        }
+      }
+    }
+  }
+}

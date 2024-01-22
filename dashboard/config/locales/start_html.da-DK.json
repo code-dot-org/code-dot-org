@@ -10,11 +10,19 @@
           "No": "Nej",
           "Yes": "Ja"
         },
+        "CSD U1 IO Pet Chooser 2_2023": {
+          "No": "Nej",
+          "Yes": "Ja"
+        },
         "CSD U1 IO Pet Chooser_2021": {
           "No": "Nej",
           "Yes": "Ja"
         },
         "CSD U1 IO Pet Chooser_2022": {
+          "No": "Nej",
+          "Yes": "Ja"
+        },
+        "CSD U1 IO Pet Chooser_2023": {
           "No": "Nej",
           "Yes": "Ja"
         },
@@ -26,6 +34,13 @@
           "text": "tekst"
         },
         "CSD U1 IO Story_2022": {
+          "City": "By",
+          "Color": "Farve",
+          "Food": "Mad",
+          "Name": "Navn",
+          "text": "tekst"
+        },
+        "CSD U1 IO Story_2023": {
           "City": "By",
           "Color": "Farve",
           "Food": "Mad",
@@ -76,12 +91,39 @@
           "8": "8",
           "9": "9"
         },
+        "CSD U1 processing bday_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "CSD U1 processing fastest_2021": {
           "0": "0",
           "k": "k",
           "s": "s"
         },
         "CSD U1 processing fastest_2022": {
+          "0": "0",
+          "k": "k",
+          "s": "s"
+        },
+        "CSD U1 processing fastest_2023": {
           "0": "0",
           "k": "k",
           "s": "s"
@@ -132,16 +174,47 @@
           "9": "9",
           "text": "tekst"
         },
+        "CSD U1 processing guess_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "text": "tekst"
+        },
         "CSD U1 processing live_2021": {
           "bear": "bjørne"
         },
         "CSD U1 processing live_2022": {
           "bear": "bjørne"
         },
+        "CSD U1 processing live_2023": {
+          "cat": "kat",
+          "chicken": "kylling",
+          "dog": "hund"
+        },
         "CSD U1 processing npark_2021": {
           "Sorry!": "Beklager!"
         },
         "CSD U1 processing npark_2022": {
+          "Sorry!": "Beklager!"
+        },
+        "CSD U1 processing npark_2023": {
           "Sorry!": "Beklager!"
         },
         "CSD U1 processing writers_2021": {
@@ -188,10 +261,35 @@
           "8": "8",
           "9": "9"
         },
+        "CSD U1 processing writers_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "CSD U1 storage friends_2021": {
           "Back": "Tilbage"
         },
         "CSD U1 storage friends_2022": {
+          "Back": "Tilbage"
+        },
+        "CSD U1 storage friends_2023": {
           "Back": "Tilbage"
         },
         "CSD U1 storage movies_2021": {
@@ -206,11 +304,21 @@
           "Yes": "Ja",
           "text": "tekst"
         },
+        "CSD U1 storage movies_2023": {
+          "No": "Nej",
+          "Star Wars": "Star Wars",
+          "Yes": "Ja",
+          "text": "tekst"
+        },
         "CSD U1 storage outfit_2021": {
           "black": "sort",
           "green": "grøn"
         },
         "CSD U1 storage outfit_2022": {
+          "black": "sort",
+          "green": "grøn"
+        },
+        "CSD U1 storage outfit_2023": {
           "black": "sort",
           "green": "grøn"
         },
@@ -249,14 +357,48 @@
           "4": "4",
           "5": "5"
         },
+        "CSD U6 - Accelerometer - PB_2023": {
+          "0": "0"
+        },
         "CSD U6 - Accelerometer - PB_2222": {
           "0": "0"
+        },
+        "CSD U6 - Accelerometer - PB_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PD_2023": {
+          "You did it!": "Du klarede det!"
         },
         "CSD U6 - Accelerometer - PD_2222": {
           "You did it!": "Du klarede det!"
         },
+        "CSD U6 - Accelerometer - PF_2023": {
+          "0": "0"
+        },
         "CSD U6 - Accelerometer - PF_2222": {
           "0": "0"
+        },
+        "CSD U6 - Accelerometer - PF_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Age": "Alder",
+          "Name": "Navn"
+        },
+        "CSD U6 - Board Outputs - ChalC_mb2022": {
+          "No": "Nej",
+          "Yes": "Ja"
+        },
+        "CSD U6 - Board Outputs - PracD_mb2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "CSD U6 - Color LEDs - ChalD_2023": {
+          "East": "Øst",
+          "North": "Nord",
+          "South": "Syd",
+          "West": "Vest"
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
           "East": "Øst",
@@ -264,13 +406,26 @@
           "South": "Syd",
           "West": "Vest"
         },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "Medium": "Mellem"
+        },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "Mellem"
+        },
+        "CSD U6 - Combine Inputs - A_2023": {
+          "green": "grøn",
+          "left": "venstre",
+          "red": "rød",
+          "right": "højre"
         },
         "CSD U6 - Combine Inputs - A_2222": {
           "green": "grøn",
           "left": "venstre",
           "red": "rød",
+          "right": "højre"
+        },
+        "CSD U6 - Combine Inputs - A_mb2022": {
+          "left": "venstre",
           "right": "højre"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
@@ -280,20 +435,52 @@
           "short": "kort",
           "slow": "langsom"
         },
+        "CSD U6 - Combine Inputs - CA_2023": {
+          "fast": "hurtig",
+          "long": "lang",
+          "on": "til",
+          "short": "kort",
+          "slow": "langsom"
+        },
+        "CSD U6 - Combine Inputs - ChalG_2023": {
+          "Blue": "Blå",
+          "Green": "Grøn",
+          "Red": "Rød"
+        },
         "CSD U6 - Combine Inputs - ChalG_2222": {
           "Blue": "Blå",
           "Green": "Grøn",
           "Red": "Rød"
         },
+        "CSD U6 - Combine Inputs - PracA_2023": {
+          "left": "venstre",
+          "right": "højre"
+        },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "venstre",
           "right": "højre"
+        },
+        "CSD U6 - Combine Inputs - PracC_2023": {
+          "blue": "blå",
+          "green": "grøn"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
           "blue": "blå",
           "green": "grøn"
         },
+        "CSD U6 - Combine Inputs - SB1_mb2022": {
+          "bottom row": "nederste række",
+          "top row": "øverste række"
+        },
+        "CSD U6 - Combine Inputs - SB2_2023": {
+          "long": "lang",
+          "short": "kort"
+        },
         "CSD U6 - Combine Inputs - SB2_2222": {
+          "long": "lang",
+          "short": "kort"
+        },
+        "CSD U6 - Combine Inputs - SB3_2023": {
           "long": "lang",
           "short": "kort"
         },
@@ -301,18 +488,47 @@
           "long": "lang",
           "short": "kort"
         },
+        "CSD U6 - Combine Inputs - SB4_2023": {
+          "long": "lang",
+          "short": "kort"
+        },
         "CSD U6 - Combine Inputs - SB4_2222": {
           "long": "lang",
           "short": "kort"
+        },
+        "CSD U6 - Functions - P2C_2023": {
+          "Blue": "Blå",
+          "Red": "Rød"
         },
         "CSD U6 - Functions - P2C_2222": {
           "Blue": "Blå",
           "Red": "Rød"
         },
+        "CSD U6 - Functions - P2C_mb2022": {
+          "Blue": "Blå",
+          "Red": "Rød"
+        },
+        "CSD U6 - Functions - P_2023": {
+          "0": "0"
+        },
         "CSD U6 - Functions - P_2222": {
           "0": "0"
         },
+        "CSD U6 - Functions - P_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_2023": {
+          "0": "0"
+        },
         "CSD U6 - Functions - SB7_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_2023": {
+          "+": "+",
+          "-": "-",
           "0": "0"
         },
         "CSD U6 - If Variables - ChalD_2222": {
@@ -320,13 +536,48 @@
           "-": "-",
           "0": "0"
         },
+        "CSD U6 - If Variables - ChalD_mb2022": {
+          "+": "+",
+          "-": "-",
+          "0": "0"
+        },
+        "CSD U6 - If Variables - SB3_2023": {
+          "Name": "Navn"
+        },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "Navn"
+        },
+        "CSD U6 - If Variables - SB3_mb2022": {
+          "Name": "Navn"
+        },
+        "CSD U6 - If Variables - SB4_2023": {
+          "0": "0"
         },
         "CSD U6 - If Variables - SB4_2222": {
           "0": "0"
         },
+        "CSD U6 - If Variables - SB4_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Music - ChalD_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "Ø",
+          "F": "F",
+          "G": "G"
+        },
         "CSD U6 - Music - ChalD_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "Ø",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - Piano_2023": {
           "A": "A",
           "B": "B",
           "C": "C",
@@ -344,7 +595,25 @@
           "F": "F",
           "G": "G"
         },
+        "CSD U6 - Music - SB1_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "Ø",
+          "F": "F",
+          "G": "G"
+        },
         "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "Ø",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB2.5_2023": {
           "A": "A",
           "B": "B",
           "C": "C",
@@ -362,6 +631,15 @@
           "F": "F",
           "G": "G"
         },
+        "CSD U6 - Music - SB3_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "Ø",
+          "F": "F",
+          "G": "G"
+        },
         "CSD U6 - Music - SB3_2222": {
           "A": "A",
           "B": "B",
@@ -371,18 +649,50 @@
           "F": "F",
           "G": "G"
         },
+        "CSD U6 - Physical Input - A_2023": {
+          "1": "1",
+          "2": "2"
+        },
         "CSD U6 - Physical Input - A_2222": {
           "1": "1",
           "2": "2"
+        },
+        "CSD U6 - Physical Input - A_mb2022": {
+          "1": "1",
+          "2": "2"
+        },
+        "CSD U6 - Physical Input - PA_2023": {
+          "0": "0",
+          "Score": "Score"
         },
         "CSD U6 - Physical Input - PA_2222": {
           "0": "0",
           "Score": "Score"
         },
+        "CSD U6 - Physical Input - PA_mb2022": {
+          "0": "0",
+          "Score": "Score"
+        },
+        "CSD U6 - Screen Inputs - ChalB_2023": {
+          "Blue": "Blå",
+          "Green": "Grøn",
+          "Red": "Rød"
+        },
         "CSD U6 - Screen Inputs - ChalB_2222": {
           "Blue": "Blå",
           "Green": "Grøn",
           "Red": "Rød"
+        },
+        "CSD U6 - Screen Inputs - ChalB_mb2022": {
+          "Blue": "Blå",
+          "Green": "Grøn",
+          "Red": "Rød"
+        },
+        "CSD U6 - Screen Inputs - P_2023": {
+          "Blue": "Blå",
+          "Green": "Grøn",
+          "Red": "Rød",
+          "Save": "Gem"
         },
         "CSD U6 - Screen Inputs - P_2222": {
           "Blue": "Blå",
@@ -390,17 +700,53 @@
           "Red": "Rød",
           "Save": "Gem"
         },
+        "CSD U6 - Screen Inputs - P_mb2022": {
+          "Blue": "Blå",
+          "Green": "Grøn",
+          "Red": "Rød",
+          "Save": "Gem"
+        },
+        "CSD U6 - Screen Inputs - PracD_2023": {
+          "0": "0"
+        },
         "CSD U6 - Screen Inputs - PracD_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Screen Inputs - PracD_mb2022": {
           "0": "0"
         },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
           "black": "sort"
         },
+        "CSD U6 - Screen Inputs - SB2.1_2023": {
+          "black": "sort"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_mb2022": {
+          "black": "sort"
+        },
         "CSD U6 - Screen Inputs - SB2.2_2022": {
           "black": "sort"
         },
+        "CSD U6 - Screen Inputs - SB2.2_2023": {
+          "black": "sort"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_mb2022": {
+          "black": "sort"
+        },
+        "CSD U6 - Screen Outputs - P_2023": {
+          "title": "titel"
+        },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "titel"
+        },
+        "CSD U6 - Screen Outputs - P_mb2022": {
+          "title": "titel"
+        },
+        "CSD U6 - Screen Outputs - PracA_2023": {
+          "Blue": "Blå",
+          "Green": "Grøn",
+          "Red": "Rød",
+          "White": "Hvid"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
           "Blue": "Blå",
@@ -408,26 +754,72 @@
           "Red": "Rød",
           "White": "Hvid"
         },
+        "CSD U6 - Screen Outputs - PracA_mb2022": {
+          "Blue": "Blå",
+          "Green": "Grøn",
+          "Red": "Rød",
+          "White": "Hvid"
+        },
+        "CSD U6 - Screen Outputs - PracB_2023": {
+          "down": "ned",
+          "left": "venstre",
+          "right": "højre",
+          "up": "op"
+        },
         "CSD U6 - Screen Outputs - PracB_2222": {
           "down": "ned",
           "left": "venstre",
           "right": "højre",
           "up": "op"
         },
+        "CSD U6 - Screen Outputs - PracB_mb2022": {
+          "down": "ned",
+          "left": "venstre",
+          "right": "højre",
+          "up": "op"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2023": {
+          "name": "name"
+        },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "name"
         },
+        "CSD U6 - Screen Outputs - SB1.1_mb2022": {
+          "name": "name"
+        },
+        "CSD U6 - Sensors - A_2023": {
+          "0": "0"
+        },
         "CSD U6 - Sensors - A_2222": {
           "0": "0"
+        },
+        "CSD U6 - Sensors - A_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Sensors - PC_2023": {
+          "off": "fra",
+          "on": "til"
         },
         "CSD U6 - Sensors - PC_2222": {
           "off": "fra",
           "on": "til"
         },
+        "CSD U6 - Sensors - P_2023": {
+          "text": "tekst"
+        },
         "CSD U6 - Sensors - P_2222": {
           "text": "tekst"
         },
+        "CSD U6 - Sensors - P_mb2022": {
+          "text": "tekst"
+        },
+        "CSD U6 - Sensors - SB2_2023": {
+          "Update": "Opdater"
+        },
         "CSD U6 - Sensors - SB2_2222": {
+          "Update": "Opdater"
+        },
+        "CSD U6 - Sensors - SB2_mb2022": {
           "Update": "Opdater"
         },
         "CSD U6 Driver pt 2": {
@@ -935,6 +1327,12 @@
           "F": "F",
           "G": "G"
         },
+        "LLM - Written Voice Simulator_ai23": {
+          "Back": "Tilbage"
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "Reset": "Nulstil"
+        },
         "allthethings design mode elements": {
           "text": "tekst"
         },
@@ -953,11 +1351,18 @@
         "csd u5 recommender sample_2022": {
           "Start": "Start"
         },
+        "csd u5 recommender sample_2023": {
+          "Start": "Start"
+        },
         "csd-apps for good-2": {
           "Home": "Hjem",
           "Next": "Næste"
         },
         "csd-apps for good-2_2022": {
+          "Home": "Hjem",
+          "Next": "Næste"
+        },
+        "csd-apps for good-2_2023": {
           "Home": "Hjem",
           "Next": "Næste"
         },
@@ -973,11 +1378,21 @@
           "3": "3",
           "4": "4"
         },
+        "csd-apps for good-3_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4"
+        },
         "csd-explore ui-2": {
           "Home": "Hjem",
           "Next": "Næste"
         },
         "csd-explore ui-2_2022": {
+          "Home": "Hjem",
+          "Next": "Næste"
+        },
+        "csd-explore ui-2_2023": {
           "Home": "Hjem",
           "Next": "Næste"
         },
@@ -1025,10 +1440,35 @@
           "8": "8",
           "9": "9"
         },
+        "csd-explore ui-3_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "csd-explore ui-4": {
           "Sorry!": "Beklager!"
         },
         "csd-explore ui-4_2022": {
+          "Sorry!": "Beklager!"
+        },
+        "csd-explore ui-4_2023": {
           "Sorry!": "Beklager!"
         },
         "csd-explore ui-5": {
@@ -1075,10 +1515,35 @@
           "8": "8",
           "9": "9"
         },
+        "csd-explore ui-5_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "csd-explore ui-6": {
           "Next": "Næste"
         },
         "csd-explore ui-6_2022": {
+          "Next": "Næste"
+        },
+        "csd-explore ui-6_2023": {
           "Next": "Næste"
         },
         "ml-L2 supervised - green glass door-2021": {
@@ -1089,10 +1554,17 @@
           "Accepted": "Accepteret",
           "Rejected": "Afvist"
         },
+        "ml-L2 supervised - green glass door_2023": {
+          "Accepted": "Accepteret",
+          "Rejected": "Afvist"
+        },
         "ml-L2 unsupervised - 1-2021": {
           "Next": "Næste"
         },
         "ml-L2 unsupervised - 1_2022": {
+          "Next": "Næste"
+        },
+        "ml-L2 unsupervised - 1_2023": {
           "Next": "Næste"
         },
         "ml-customize-raspado-2021": {
@@ -1103,11 +1575,19 @@
           "no": "nej",
           "yes": "ja"
         },
+        "ml-customize-raspado_2023": {
+          "no": "nej",
+          "yes": "ja"
+        },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Fortsæt",
           "Loading...": "Indlæser..."
         },
         "ml-intro ai lab- fruit veggie widget_2022": {
+          "Continue": "Fortsæt",
+          "Loading...": "Indlæser..."
+        },
+        "ml-intro ai lab- fruit veggie widget_2023": {
           "Continue": "Fortsæt",
           "Loading...": "Indlæser..."
         },
@@ -1123,6 +1603,12 @@
           "no": "nej",
           "yes": "ja"
         },
+        "ml-model card-medical app v2 2021-2_2023": {
+          "A": "A",
+          "W": "V",
+          "no": "nej",
+          "yes": "ja"
+        },
         "ml-models in applab-choice if quotes": {
           "1": "1",
           "2": "2",
@@ -1133,12 +1619,22 @@
           "2": "2",
           "3": "3"
         },
+        "ml-models in applab-choice if quotes_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
         "ml-models in applab-choice if wrong place": {
           "1": "1",
           "2": "2",
           "3": "3"
         },
         "ml-models in applab-choice if wrong place_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "ml-models in applab-choice if wrong place_2023": {
           "1": "1",
           "2": "2",
           "3": "3"
@@ -1155,12 +1651,23 @@
           "3": "3",
           "Back": "Tilbage"
         },
+        "ml-models in applab-choice intended warnings_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Back": "Tilbage"
+        },
         "ml-models in applab-choice predict typos": {
           "1": "1",
           "2": "2",
           "3": "3"
         },
         "ml-models in applab-choice predict typos_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "ml-models in applab-choice predict typos_2023": {
           "1": "1",
           "2": "2",
           "3": "3"
@@ -1175,11 +1682,20 @@
           "No": "Nej",
           "Yes": "Ja"
         },
+        "ml-models in applab-zoo assessment_2023": {
+          "B": "B",
+          "No": "Nej",
+          "Yes": "Ja"
+        },
         "ml-models in applab-zoo model embed": {
           "No": "Nej",
           "Yes": "Ja"
         },
         "ml-models in applab-zoo model embed_2022": {
+          "No": "Nej",
+          "Yes": "Ja"
+        },
+        "ml-models in applab-zoo model embed_2023": {
           "No": "Nej",
           "Yes": "Ja"
         },
@@ -1190,6 +1706,12 @@
           "snow": "sne"
         },
         "ml-use model card-example3A_2022": {
+          "cloudy": "overskyet",
+          "night": "nat",
+          "rain": "regn",
+          "snow": "sne"
+        },
+        "ml-use model card-example3A_2023": {
           "cloudy": "overskyet",
           "night": "nat",
           "rain": "regn",

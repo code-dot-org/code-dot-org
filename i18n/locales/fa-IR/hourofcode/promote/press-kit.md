@@ -4,17 +4,17 @@ title: بسته مطبوعات
 
 {{ signup_button }}
 
-# How to attract media to your Hour of Code event
+# چگونه توجه رسانه‌ها را به رويداد ساعت كدنويسي تان جلب كنيد
 
-### Make a splash with your Hour of Code event and invite local media to see why computer science is important at your school.
+### با رویداد Hour of Code تان سروصدا کنید و از رسانه های محلی دعوت کنید تا ببینید چرا علوم کامپیوتر در مدرسه شما مهم است.
 
-*For all press and media inquiries, contact <press@code.org>*
+*برای کلیه سوالات مطبوعات و رسانه ها، با <press@code.org> تماس بگیرید*
 
 * * *
 
-## Key Tips
+## نکات کلیدی
 
-- Reach out to media two weeks before your event via email. Follow up by email and phone if you don't receive an initial response.
+- دو هفته قبل از رویداد تان از طریق ایمیل با رسانه ها تماس بگیرید. در صورت عدم دریافت پاسخ اولیه از طریق ایمیل و تلفن پیگیری کنید.
 - Ask a school staff member or volunteer to take photos to share online or send to press.
 - Write about the Hour of Code on your website’s homepage and in your school newspaper. Post your event details, and pictures of student activities.
 - On Facebook and Twitter, share updates on your plans, announce your events, and post pictures during {{ campaign_date/year }}. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
@@ -41,13 +41,13 @@ Look online to find reporter contact information. If you can't find it, call the
 
 ### 4. Prepare to field questions about your school event. Here are some examples:
 
-#### Why is your school doing an Hour of Code?
+#### چرا مدرسه شما یک ساعت کد اجرا می کند؟
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+در حالی که همه ما می‌دانیم که برای دانش آموزان مهم است که یاد بگیرند چگونه در دنیای اشباع شده از فناوری امروزی حرکت کنند، بسیاری از معلمان در علوم کامپیوتر تجربه ندارند و نمی دانند از کجا شروع کنند. این رویداد فرصتی است تا همه ما ببینیم که علوم کامپیوتر چیست.
 
-We hope it’ll spark interest in students to keep learning. Research also shows that kids can pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages. <br /> <br />
+ما امیدواریم که علاقه دانش آموزان را برای ادامه یادگیری برانگیزد. تحقیقات همچنین نشان می دهد که کودکان می توانند مفاهیم برنامه نویسی را قبل از اینکه بدانند چگونه بخوانند و بنویسند، درک کنند. در واقع، مغز آنها در سنین جوانی بیشتر پذیرای زبان های کامپیوتری است، درست مانند زبان های خارجی. <br /> <br />
 
-#### Why is this important?
+#### چرا این موضوع مهم است؟
 
 Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 60 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st-century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge. <br />
 
@@ -57,7 +57,7 @@ Technology is transforming every industry on the planet. In 2015, 7 million open
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Good news is, we’re on our way to change this.
+Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. خبر خوب این است که ما در راه تغییر این وضعیت هستیم.
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
 
@@ -73,11 +73,11 @@ I look forward to being in touch. <br />
 
 ## Additional details and a quote you can use in materials
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
+هادی پرتوی، موسس و مدیرعامل Code.org گفت: «ساعت کد برای ابهام زدایی از کد طراحی شده است و نشان می‌دهد که علم کامپیوتر علم موشک نیست – هر کسی می‌تواند اصول اولیه را یاد بگیرد.» بیش از 100 میلیون دانش آموز در سراسر جهان یک ساعت کد را امتحان کرده اند. تقاضا برای آموزش مرتبط با علوم کامپیوتر در قرن بیست و یکم از همه مرزها می گذرد و هیچ مرزی نمی شناسد." <br /> <br />
 
-#### About Code.org
+#### درباره Code.org
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
+Code.org یک سازمان غیرانتفاعی عمومی 501c3 است که به گسترش مشارکت در علوم کامپیوتر و افزایش مشارکت زنان جوان و دانشجویان از سایر گروه های کم نماینده اختصاص یافته است. چشم‌انداز آن این است که هر دانش‌آموزی در هر مدرسه‌ای فرصت یادگیری برنامه‌نویسی کامپیوتر را داشته باشد. پس از راه‌اندازی در سال 2013، Code.org کمپین Hour of Code را سازماندهی کرد - که تا به امروز بیش از 100 میلیون دانش آموز را با علوم کامپیوتر آشنا کرده است - و با 70 منطقه مدرسه دولتی در سراسر کشور برای گسترش برنامه های علوم رایانه همکاری کرده است. Code.org توسط کمک‌های بشردوستانه شرکت‌ها، بنیادها و افراد سخاوتمند از جمله مایکروسافت، فیس‌بوک، بنیاد Infosys ایالات متحده آمریکا، آمازون و دیگران پشتیبانی می‌شود. For more information, please visit: [code.org]({{ urls/codeorg }}).
 
   
 Find more resources and sample emails [here]({{ promote/sample_emails }}).

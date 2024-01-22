@@ -47,6 +47,9 @@
         "CourseD_Dance_2020_04_2021": {
           "dance_callout_02": "Tapiri atu tenei paraka ki to taupānga!"
         },
+        "CourseD_Dance_2020_04_2023": {
+          "dance_callout_02": "Tapiri atu tenei paraka ki to taupānga!"
+        },
         "CourseD_Dance_2020_06": {
           "dance_party_11_5_groups": "He paraka/wahanga hou!"
         },
@@ -54,6 +57,9 @@
           "dance_party_11_5_groups": "He paraka/wahanga hou!"
         },
         "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "He paraka/wahanga hou!"
+        },
+        "CourseD_Dance_2020_06_2023": {
           "dance_party_11_5_groups": "He paraka/wahanga hou!"
         },
         "CourseD_Dance_2020_07": {
@@ -65,6 +71,9 @@
         "CourseD_Dance_2020_07_2021": {
           "setprop_hint": "He paraka/wahanga hou!"
         },
+        "CourseD_Dance_2020_07_2023": {
+          "setprop_hint": "He paraka/wahanga hou!"
+        },
         "CourseD_Dance_2020_09": {
           "new_block_3": "He paraka/wahanga hou!",
           "new_block_4": "He paraka/wahanga hou!"
@@ -74,6 +83,10 @@
           "new_block_4": "He paraka/wahanga hou!"
         },
         "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "He paraka/wahanga hou!",
+          "new_block_4": "He paraka/wahanga hou!"
+        },
+        "CourseD_Dance_2020_09_2023": {
           "new_block_3": "He paraka/wahanga hou!",
           "new_block_4": "He paraka/wahanga hou!"
         },
@@ -184,6 +197,9 @@
         "Overworld Chop Trees_2021": {
           "craft_callout_preplaced": "Kua hoatu e mātou ētahi paraka hei tīmatanga māu"
         },
+        "Overworld Chop Trees_2023": {
+          "craft_callout_preplaced": "Kua hoatu e mātou ētahi paraka hei tīmatanga māu"
+        },
         "Overworld House Frame Chosen": {
           "craft_callout_preplaced_house": "Ka tīmata te waehere ki te hanga i tō whare. Ka taea e koe tēnā te whakamutu?"
         },
@@ -197,6 +213,9 @@
           "craft_callout_preplaced_house": "Ka tīmata te waehere ki te hanga i tō whare. Ka taea e koe tēnā te whakamutu?"
         },
         "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Ka tīmata te waehere ki te hanga i tō whare. Ka taea e koe tēnā te whakamutu?"
+        },
+        "Overworld House Frame Chosen_2023": {
           "craft_callout_preplaced_house": "Ka tīmata te waehere ki te hanga i tō whare. Ka taea e koe tēnā te whakamutu?"
         },
         "Overworld Move to Sheep": {
@@ -214,6 +233,9 @@
         "Overworld Move to Sheep_2021": {
           "craft_run_button_callout": "Pāwhiritia te \"Whakahaerehia\" ki te whakamātau i tō papatono"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_run_button_callout": "Pāwhiritia te \"Whakahaerehia\" ki te whakamātau i tō papatono"
+        },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Tōaitia ngā hohenga mā te hoatu i ngā paraka ki roto nei"
         },
@@ -227,6 +249,9 @@
           "craft_inside_repeat": "Tōaitia ngā hohenga mā te hoatu i ngā paraka ki roto nei"
         },
         "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Tōaitia ngā hohenga mā te hoatu i ngā paraka ki roto nei"
+        },
+        "Overworld Place Wall_2023": {
           "craft_inside_repeat": "Tōaitia ngā hohenga mā te hoatu i ngā paraka ki roto nei"
         },
         "Underground Avoiding Lava": {
@@ -244,6 +269,9 @@
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "Mā tēnei waehere e taki i te tahepuia. E taea ana e koe tētahi tono neke ki mua te tāpiri?"
         },
+        "Underground Avoiding Lava_2023": {
+          "craft_callout_moveforward": "Mā tēnei waehere e taki i te tahepuia. E taea ana e koe tētahi tono neke ki mua te tāpiri?"
+        },
         "Underground Iron": {
           "craft_what_is_iron": "Mainahia tēnei rino!"
         },
@@ -257,6 +285,9 @@
           "craft_what_is_iron": "Mainahia tēnei rino!"
         },
         "Underground Iron_2021": {
+          "craft_what_is_iron": "Mainahia tēnei rino!"
+        },
+        "Underground Iron_2023": {
           "craft_what_is_iron": "Mainahia tēnei rino!"
         },
         "frozen circle function with parameter": {
@@ -321,6 +352,9 @@
         "helloworld_food_costumes": {
           "hello_world_new": "He paraka/wahanga hou!"
         },
+        "helloworld_food_costumes_2023": {
+          "hello_world_new": "He paraka/wahanga hou!"
+        },
         "helloworld_food_costumes_soccer-2022": {
           "hello_world_new": "He paraka/wahanga hou!"
         },
@@ -328,6 +362,10 @@
           "hello_world_new": "He paraka/wahanga hou!"
         },
         "helloworld_food_sizes": {
+          "hello_world_new": "He paraka/wahanga hou!",
+          "hello_world_new_block": "He paraka/wahanga hou!"
+        },
+        "helloworld_food_sizes_2023": {
           "hello_world_new": "He paraka/wahanga hou!",
           "hello_world_new_block": "He paraka/wahanga hou!"
         },
@@ -340,6 +378,9 @@
           "hello_world_new_block": "He paraka/wahanga hou!"
         },
         "helloworld_food_sounds": {
+          "hello_world_new": "He paraka/wahanga hou!"
+        },
+        "helloworld_food_sounds_2023": {
           "hello_world_new": "He paraka/wahanga hou!"
         },
         "helloworld_food_sounds_soccer-2022": {
@@ -361,7 +402,14 @@
         "poetry_hoc_addSprites": {
           "poetry_sprite": "He paraka/wahanga hou!"
         },
+        "poetry_hoc_addSprites_2023": {
+          "poetry_sprite": "He paraka/wahanga hou!"
+        },
         "poetry_hoc_events1": {
+          "poetry_event": "He paraka/wahanga hou!",
+          "poetry_foreground": "He paraka/wahanga hou!"
+        },
+        "poetry_hoc_events1_2023": {
           "poetry_event": "He paraka/wahanga hou!",
           "poetry_foreground": "He paraka/wahanga hou!"
         },
@@ -370,7 +418,14 @@
           "poetry_multiple_sprites": "He paraka/wahanga hou!",
           "poetry_new_block": "He paraka/wahanga hou!"
         },
+        "poetry_hoc_freeplay_2023": {
+          "poetry_new_block": "He paraka/wahanga hou!"
+        },
         "poetry_hoc_sounds": {
+          "poetry_music": "He paraka/wahanga hou!",
+          "poetry_sound": "He paraka/wahanga hou!"
+        },
+        "poetry_hoc_sounds_2023": {
           "poetry_music": "He paraka/wahanga hou!",
           "poetry_sound": "He paraka/wahanga hou!"
         },
@@ -378,7 +433,15 @@
           "poetry_sprite_begins": "He paraka/wahanga hou!",
           "poetry_sprite_stops": "He paraka/wahanga hou!"
         },
+        "poetry_hoc_spriteBehaviors_2023": {
+          "poetry_sprite_begins": "He paraka/wahanga hou!",
+          "poetry_sprite_stops": "He paraka/wahanga hou!"
+        },
         "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "He paraka/wahanga hou!",
+          "poetry_set_sprite": "He paraka/wahanga hou!"
+        },
+        "poetry_hoc_spriteSizes_2023": {
           "poetry_remove_sprite": "He paraka/wahanga hou!",
           "poetry_set_sprite": "He paraka/wahanga hou!"
         }

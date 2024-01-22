@@ -63,6 +63,8 @@
   "makeNHoney": "vyrob %1 medu",
   "moveBackward": "posuň sa dozadu",
   "moveEastTooltip": "Posunie ma o jedno miesto na východ.",
+  "moveNForward": "posunúť sa dopredu o %1 medzier",
+  "moveNForwardTooltip": "Posuňte ma dopredu o zadaný počet medzier.",
   "moveForward": "posuň sa dopredu",
   "moveForwardTooltip": "Posunie ma jedno pole vpred.",
   "moveNorthTooltip": "Posunie ma o jedno pole na sever.",

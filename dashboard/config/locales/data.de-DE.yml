@@ -963,6 +963,7 @@ de:
         csd_gamelab_velocity: Geschwindigkeit
         csd_how_teamwork_works: Wie Teamarbeit funktioniert
         csd_ml_ethics_ai: 'Ethik und KI '
+        csd_ml_how_ai_works: So funktioniert KI
         csd_ml_import_model: Importieren eines KI-Modells
         csd_ml_intro_ai_lab_july2021: Einführung in das KI-Spielelabor
         csd_ml_intro_to_ai_lab: Einführung in das KI-Spielelabor
@@ -1038,6 +1039,7 @@ de:
         hint_videos_d_11_7_last: 'Hinweisvideo: D.11.7 zuletzt'
         hint_videos_d_11_9_first: 'Hinweisvideo: D.11.9 zuerst'
         hint_videos_d_11_9_last: 'Hinweisvideo: D.11.9 zuletzt'
+        hoc-dance-ai-warmup: 'Tanzparty KI-Edition: Aufwärmen'
         hoc_dance_congrats: Tanzparty - Los geht's!
         hoc_dance_congrats_2019: Tanzparty 2019-Party an!
         hoc_dance_events: Tanzparty - Ereignisse

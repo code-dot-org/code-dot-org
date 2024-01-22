@@ -7,7 +7,7 @@ class LearningGoalEvidenceLevelTest < ActiveSupport::TestCase
     valid_evidence_level = build :learning_goal_evidence_level, learning_goal: learning_goal, understanding: SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.CONVINCING
     assert valid_evidence_level.valid?
 
-    invalid_evidence_level = build :learning_goal_evidence_level, learning_goal: learning_goal, understanding: -1
+    invalid_evidence_level = build :learning_goal_evidence_level, learning_goal: learning_goal, understanding: -2
     refute invalid_evidence_level.valid?
   end
 end

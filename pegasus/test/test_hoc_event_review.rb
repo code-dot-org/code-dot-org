@@ -129,6 +129,7 @@ class HocEventReviewTest < Minitest::Test
       stubs(:request).returns(stub(ip: '1.2.3.4'))
 
       data = HocEventReviewTest.fake_data.merge(
+        hoc_event_country_s: country,
         special_event_flag_b: special_event
       )
 

@@ -17,7 +17,7 @@ module Crowdin
       @id = project_identifier
       @crowdin_client = Crowdin::Client.new do |config|
         config.api_token = api_token
-        config.project_id = Crowdin::Client::CDO_PROJECT_IDS[@id]
+        config.project_id = @id
       end
       # For more specific requests outside of the crowdin-api gem
       self.class.base_uri("https://api.crowdin.com/api/v2")
@@ -88,7 +88,7 @@ module Crowdin
     end
 
     def list_languages
-      result = @crowdin_client.get_project(Crowdin::Client::CDO_PROJECT_IDS[@id])
+      result = @crowdin_client.get_project(@id)
       result['data']['targetLanguages']
     end
 

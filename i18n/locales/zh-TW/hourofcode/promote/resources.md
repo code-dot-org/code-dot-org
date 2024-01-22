@@ -18,7 +18,7 @@ title: 資源
 
 ## 在你的學校張貼這些海報。
 
-有新的海報集，包括馬拉拉、斯蒂芬庫里、夏奇拉等等！ 今年，每套還有6張海報和126張“我進行了一小時玩程式”貼紙。 供應有限，趕緊[訂購海報](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH)吧。 若要自己列印，只需點擊下面的圖像查看並儲存可列印版本。
+Print your own posters! Simply click an image below to view and save a printable version.
 
 {{ promote_new_posters }}
 

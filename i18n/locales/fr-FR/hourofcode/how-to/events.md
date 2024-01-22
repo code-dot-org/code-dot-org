@@ -36,17 +36,17 @@ title: Guide pratique pour un événement Une Heure de Code
     
     * * *
     
-    ## Example plan for a school assembly or event
+    ## Exemple de plan pour une réunion ou un événement scolaire
     
-    **Event:** School-wide Computer Science Education Week kick-off assembly
+    **Événement :** Rassemblement pour le lancement de la semaine de l'enseignement de l'informatique à tous les niveaux scolaires
     
-    **Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
+    **Date :** {{ campaign_date/start_short }} (début de la Semaine de l'Enseignement de l'Informatique)
     
-    **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+    **Temps :** Au cours de la journée scolaire. Idéalement, en milieu de matinée. Pendant environ 1 heure.
     
-    **Location:** School assembly hall (e.g. theater, gym, cafeteria)
+    **Lieu :** Une salle de réunion de l'école (par exemple, la cantine, la salle de projection, la salle de sport).
     
-    ## Run of Show
+    ## Déroulement de l'événement
     
     | Temps          | Action                                                                                                                                                                                                 |
     | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

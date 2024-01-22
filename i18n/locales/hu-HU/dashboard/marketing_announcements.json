@@ -1,0 +1,24 @@
+{
+  "banners": {
+    "superhero": {
+      "title": "",
+      "body": "",
+      "buttonText": "Tudj meg többet"
+    },
+    "hoc-2023": {
+      "title": "Kód órája: Kreativitás AI-vel",
+      "body": "A világon milliók szerveznek Kódolás óráját mesterséges intelligenciával vagy anélkül, s tanulnak arról, hogy hogyan működik az AI. Csatlakozz hozzájuk! Bárhol és bárki megteheti. Nincs szükség tapasztalatra.",
+      "buttonText": "Tudj meg többet"
+    },
+    "hoc-2023-dance-ai": {
+      "title": "",
+      "body": "",
+      "buttonText": "Tudj meg többet"
+    },
+    "co-teacher": {
+      "title": "",
+      "body": "",
+      "buttonText": "Tudj meg többet"
+    }
+  }
+}

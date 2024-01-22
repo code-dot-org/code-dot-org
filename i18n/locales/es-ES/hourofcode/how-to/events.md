@@ -35,17 +35,17 @@ Comparte fotos de tu evento en Facebook y Twitter con el hashtag **#HoraDelCódi
 
 * * *
 
-## Example plan for a school assembly or event
+## Plan de ejemplo para una asamblea o evento escolar
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Evento:** Reunión global del Inicio de la Semana de Ciencia y Tecnología
 
-**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
+**Fecha:** {{ campaign_date/start_short }} (inicio de la semana de la Educación en Ciencia y Tecnología)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Tiempo:** Durante la jornada escolar. Preferentemente a media mañana. Aproximadamente, 1 hora.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+**Ubicación:** Salón de reuniones escolares (por ejemplo, teatro, gimnasio, cafetería)
 
-## Run of Show
+## Recorrido del Evento
 
 | Hora             | Acción                                                                                                                                                                                                  |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

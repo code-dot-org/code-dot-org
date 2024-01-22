@@ -71,12 +71,22 @@
           "7fec9998c3e5a11f435dc6f2f8e399db": "scelta 2\n",
           "c3787b1ed128fdeec3ad638c8ba547d3": "scelta 3"
         },
+        "CourseF_Project_SpriteLab_chatbot_examples_2023": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "scelta 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "scelta 2\n",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "scelta 3"
+        },
         "CourseF_Project_SpriteLab_cupcake_examples_-2022-2": {
           "6e41661ddc1edd50b00b7c607cdcec1a": "scelta 1",
           "7fec9998c3e5a11f435dc6f2f8e399db": "scelta 2\n",
           "c3787b1ed128fdeec3ad638c8ba547d3": "scelta 3"
         },
         "CourseF_Project_SpriteLab_cupcake_examples_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "scelta 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "scelta 2\n",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "scelta 3"
+        },
+        "CourseF_Project_SpriteLab_cupcake_examples_2023": {
           "6e41661ddc1edd50b00b7c607cdcec1a": "scelta 1",
           "7fec9998c3e5a11f435dc6f2f8e399db": "scelta 2\n",
           "c3787b1ed128fdeec3ad638c8ba547d3": "scelta 3"
@@ -91,6 +101,11 @@
           "78d989e01047ba7043a38650d695abaa": "Seleziona giocatore",
           "7fec9998c3e5a11f435dc6f2f8e399db": "scelta 2\n",
           "8e7d34ed67fe4ec0910cefee2f5059cd": "Volo acrobatico",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "scelta 3"
+        },
+        "CourseF_Project_SpriteLab_examples_2023": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "scelta 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "scelta 2\n",
           "c3787b1ed128fdeec3ad638c8ba547d3": "scelta 3"
         },
         "Find the Wizard": {
@@ -197,6 +212,10 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "scrivi qua il testo",
           "30fcc1693fa8402931d13ac3a5f396fd": "scrivi qua il titolo"
         },
+        "courseC19_playLab_EOC1_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "scrivi qua il testo",
+          "30fcc1693fa8402931d13ac3a5f396fd": "scrivi qua il titolo"
+        },
         "courseC19_playLab_EOC2": {
           "0ab65920c84bec05a22e09feea7fe4ea": "scrivi qua il testo",
           "30fcc1693fa8402931d13ac3a5f396fd": "scrivi qua il titolo"
@@ -210,6 +229,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "scrivi qua il titolo"
         },
         "courseC19_playLab_EOC2_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "scrivi qua il testo",
+          "30fcc1693fa8402931d13ac3a5f396fd": "scrivi qua il titolo"
+        },
+        "courseC19_playLab_EOC2_2023": {
           "0ab65920c84bec05a22e09feea7fe4ea": "scrivi qua il testo",
           "30fcc1693fa8402931d13ac3a5f396fd": "scrivi qua il titolo"
         },
@@ -229,6 +252,10 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "scrivi qua il testo",
           "30fcc1693fa8402931d13ac3a5f396fd": "scrivi qua il titolo"
         },
+        "courseC19_playLab_EOC3_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "scrivi qua il testo",
+          "30fcc1693fa8402931d13ac3a5f396fd": "scrivi qua il titolo"
+        },
         "courseC19_playLab_EOC4": {
           "0ab65920c84bec05a22e09feea7fe4ea": "scrivi qua il testo",
           "30fcc1693fa8402931d13ac3a5f396fd": "scrivi qua il titolo"
@@ -242,6 +269,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "scrivi qua il titolo"
         },
         "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "scrivi qua il testo",
+          "30fcc1693fa8402931d13ac3a5f396fd": "scrivi qua il titolo"
+        },
+        "courseC19_playLab_EOC4_2023": {
           "0ab65920c84bec05a22e09feea7fe4ea": "scrivi qua il testo",
           "30fcc1693fa8402931d13ac3a5f396fd": "scrivi qua il titolo"
         },
@@ -261,6 +292,10 @@
           "3e11a2dc6edb909c47778bed75a81769": "Scrivi qui il testo",
           "5cec903c4d41c49412a70a94d54999ee": "Puoi scrivere qualcosa."
         },
+        "courseC19_playLab_EOC5_2023": {
+          "3e11a2dc6edb909c47778bed75a81769": "Scrivi qui il testo",
+          "5cec903c4d41c49412a70a94d54999ee": "Puoi scrivere qualcosa."
+        },
         "courseC19_playLab_EOC6": {
           "3e11a2dc6edb909c47778bed75a81769": "Scrivi qui il testo",
           "5cec903c4d41c49412a70a94d54999ee": "Puoi scrivere qualcosa."
@@ -277,11 +312,19 @@
           "3e11a2dc6edb909c47778bed75a81769": "Scrivi qui il testo",
           "5cec903c4d41c49412a70a94d54999ee": "Puoi scrivere qualcosa."
         },
+        "courseC19_playLab_EOC6_2023": {
+          "3e11a2dc6edb909c47778bed75a81769": "Scrivi qui il testo",
+          "5cec903c4d41c49412a70a94d54999ee": "Puoi scrivere qualcosa."
+        },
         "courseC19_playLab_sample12022": {
           "3e11a2dc6edb909c47778bed75a81769": "Scrivi qui il testo",
           "5cec903c4d41c49412a70a94d54999ee": "Puoi scrivere qualcosa."
         },
         "courseC19_playLab_sample1_2021": {
+          "3e11a2dc6edb909c47778bed75a81769": "Scrivi qui il testo",
+          "5cec903c4d41c49412a70a94d54999ee": "Puoi scrivere qualcosa."
+        },
+        "courseC19_playLab_sample1_2023": {
           "3e11a2dc6edb909c47778bed75a81769": "Scrivi qui il testo",
           "5cec903c4d41c49412a70a94d54999ee": "Puoi scrivere qualcosa."
         },
@@ -296,6 +339,16 @@
           "df8312187449c70820d7c58229a6b17e": "Il robot spaziale sta spaventando le altre creature."
         },
         "courseC19_playLab_sample2_2021": {
+          "0192cdc04916ec27aa11738bb6e48d6e": "Neila sta provando a proteggere la propria casa dal robot spaziale.",
+          "2a28483f9f4f9ee44cec653a445d4c82": "Le altre creature non hanno più paura!",
+          "3e11a2dc6edb909c47778bed75a81769": "Scrivi qui il testo",
+          "5cec903c4d41c49412a70a94d54999ee": "Puoi scrivere qualcosa.",
+          "83db90f8846d091d3532256816f105d9": "Lei è Neila.",
+          "b2f02bf648ce32c4362afe1578d41f70": "Ha funzionato! Neila ha mostrato al robot spaziale la forza della gentilezza.",
+          "c084e152431f9116b9fdb3f7d465f13d": "Neila vuole aiutare il robot spaziale a imparare come essere gentile.",
+          "df8312187449c70820d7c58229a6b17e": "Il robot spaziale sta spaventando le altre creature."
+        },
+        "courseC19_playLab_sample2_2023": {
           "0192cdc04916ec27aa11738bb6e48d6e": "Neila sta provando a proteggere la propria casa dal robot spaziale.",
           "2a28483f9f4f9ee44cec653a445d4c82": "Le altre creature non hanno più paura!",
           "3e11a2dc6edb909c47778bed75a81769": "Scrivi qui il testo",
@@ -326,6 +379,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "scrivi qua il titolo"
         },
         "courseC_PlayLab_eventsFP_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "scrivi qua il testo",
+          "30fcc1693fa8402931d13ac3a5f396fd": "scrivi qua il titolo"
+        },
+        "courseC_PlayLab_eventsFP_2023": {
           "0ab65920c84bec05a22e09feea7fe4ea": "scrivi qua il testo",
           "30fcc1693fa8402931d13ac3a5f396fd": "scrivi qua il titolo"
         },
@@ -369,6 +426,19 @@
           "f62038e77820419cd978f7b722da560a": "Quanti ne appariranno?"
         },
         "courseC_data wizard_2021": {
+          "1c64ef29c853587fbe94f69f05272b79": "Un uccello!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " gatti!",
+          "27944770529dd15319a983bee8951560": "Un gatto!",
+          "336ad881e37e713ba0325500a8fa1f00": " cani!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Un drago!",
+          "5b402e6ea05e847a076e03ad74420c45": " uccelli!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Conta tutti gli animali!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " draghi!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Conta gli animali",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Un cane!",
+          "f62038e77820419cd978f7b722da560a": "Quanti ne appariranno?"
+        },
+        "courseC_data wizard_2023": {
           "1c64ef29c853587fbe94f69f05272b79": "Un uccello!",
           "22f6f6821f4d6d0a08653935b466ac2f": " gatti!",
           "27944770529dd15319a983bee8951560": "Un gatto!",
@@ -431,6 +501,9 @@
         "courseE_aboutme_3_2021": {
           "ed076287532e86365e841e92bfc50d8c": "Ciao mondo!"
         },
+        "courseE_aboutme_3_2023": {
+          "ed076287532e86365e841e92bfc50d8c": "Ciao mondo!"
+        },
         "courseE_aboutme_4": {
           "ed076287532e86365e841e92bfc50d8c": "Ciao mondo!"
         },
@@ -441,6 +514,9 @@
           "ed076287532e86365e841e92bfc50d8c": "Ciao mondo!"
         },
         "courseE_aboutme_4_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Ciao mondo!"
+        },
+        "courseE_aboutme_4_2023": {
           "ed076287532e86365e841e92bfc50d8c": "Ciao mondo!"
         },
         "courseE_aboutme_5": {
@@ -456,6 +532,10 @@
           "ed076287532e86365e841e92bfc50d8c": "Ciao mondo!"
         },
         "courseE_aboutme_5_2021": {
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Ehi!",
+          "ed076287532e86365e841e92bfc50d8c": "Ciao mondo!"
+        },
+        "courseE_aboutme_5_2023": {
           "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Ehi!",
           "ed076287532e86365e841e92bfc50d8c": "Ciao mondo!"
         },
@@ -517,6 +597,16 @@
           "caaf8264ca397dba2d35ef902bbbd953": "Quale creatura?",
           "f655df68ec33643278de7e69794e8d76": "Aquario virtuale"
         },
+        "courseF_apps_aquarium_2023": {
+          "0d3e73168beb875063ea0f0302fe32bd": "Quali pesci?",
+          "78574118d153534fd0925a2f5ca25e79": "Quali oggetti?",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "altro",
+          "83e4a96aed96436c621b9809e258b309": "pesce",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "creatura",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Tu cosa aggiungerai?",
+          "caaf8264ca397dba2d35ef902bbbd953": "Quale creatura?",
+          "f655df68ec33643278de7e69794e8d76": "Aquario virtuale"
+        },
         "courseF_apps_card": {
           "d1210f945885351b13feb9bbb868aeef": "Quanti anni compie?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda",
@@ -528,6 +618,11 @@
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Chi è che compie gli anni?"
         },
         "courseF_apps_card_-2022-2": {
+          "d1210f945885351b13feb9bbb868aeef": "Quanti anni compie?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Chi è che compie gli anni?"
+        },
+        "courseF_apps_card_2023": {
           "d1210f945885351b13feb9bbb868aeef": "Quanti anni compie?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda",
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Chi è che compie gli anni?"
@@ -565,6 +660,17 @@
           "ae096fbf24d913754b01a1601672bf62": " io!",
           "f0e5da70d264f312a1658d51c130b101": "Inserisci il tuo nome:"
         },
+        "courseF_apps_chatbot_2023": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Inserisci la tua età:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Quanti anni hai?",
+          "1f258d88a70309efc1435ef5daa277a0": "Grazie per aver chattato con me oggi!",
+          "605f302ebc9f7fbacba60b15f551a633": "Qual è il tuo colore preferito?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " ha la stessa età!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Inserisci il tuo colore preferito:",
+          "a72e7c5c68af0546e963e510297f5233": "Ciao, sono X-9! Come ti chiami?",
+          "ae096fbf24d913754b01a1601672bf62": " io!",
+          "f0e5da70d264f312a1658d51c130b101": "Inserisci il tuo nome:"
+        },
         "courseF_apps_collector": {
           "077449fb290b51b9d70c9f2f3d3213bc": " secondi",
           "41f2b2212de0105c2a942ebb4a44e449": "Il Gioco del Grande Collezionista",
@@ -578,6 +684,12 @@
           "e8a10c04d72b2f135dabe360c4bdd534": "Hai vinto!"
         },
         "courseF_apps_collector_-2022-2": {
+          "077449fb290b51b9d70c9f2f3d3213bc": " secondi",
+          "41f2b2212de0105c2a942ebb4a44e449": "Il Gioco del Grande Collezionista",
+          "490082498449bd20ff0199737dfa4916": "Seleziona il tipo di gioco:",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Hai vinto!"
+        },
+        "courseF_apps_collector_2023": {
           "077449fb290b51b9d70c9f2f3d3213bc": " secondi",
           "41f2b2212de0105c2a942ebb4a44e449": "Il Gioco del Grande Collezionista",
           "490082498449bd20ff0199737dfa4916": "Seleziona il tipo di gioco:",
@@ -616,12 +728,28 @@
           "e522ee28f39133b45497637539ff429b": "Inserisci un numero:",
           "f6175c6f0b0bcfff0256286315f0eb7b": "Giochi di società"
         },
+        "courseF_apps_madlib_2023": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Inserisci una parte del corpo: ",
+          "514b8d5320196898a9ced3efe0d4c802": "Inserisci un aggettivo:",
+          "5306eed2fd2c43fe033efd6016c0c38b": "corsa a -gambe!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " giochi.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Inserisci un oggetto:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Una storia delle caselle vuote",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda",
+          "e522ee28f39133b45497637539ff429b": "Inserisci un numero:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Giochi di società"
+        },
         "courseF_editable_card": {
           "d1210f945885351b13feb9bbb868aeef": "Quanti anni compie?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda",
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Chi è che compie gli anni?"
         },
         "courseF_editable_card_-2022-2": {
+          "d1210f945885351b13feb9bbb868aeef": "Quanti anni compie?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Chi è che compie gli anni?"
+        },
+        "courseF_editable_card_2023": {
           "d1210f945885351b13feb9bbb868aeef": "Quanti anni compie?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda",
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Chi è che compie gli anni?"
@@ -639,6 +767,18 @@
           "f0e5da70d264f312a1658d51c130b101": "Inserisci il tuo nome:"
         },
         "courseF_editable_chatbot_-2022-2": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Inserisci la tua età:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Quanti anni hai?",
+          "1f258d88a70309efc1435ef5daa277a0": "Grazie per aver chattato con me oggi!",
+          "605f302ebc9f7fbacba60b15f551a633": "Qual è il tuo colore preferito?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " ha la stessa età!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Inserisci il tuo colore preferito:",
+          "a72e7c5c68af0546e963e510297f5233": "Ciao, sono X-9! Come ti chiami?",
+          "ae096fbf24d913754b01a1601672bf62": " io!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda",
+          "f0e5da70d264f312a1658d51c130b101": "Inserisci il tuo nome:"
+        },
+        "courseF_editable_chatbot_2023": {
           "05584ab56b744b51cd8c4a6e8b3a08ee": "Inserisci la tua età:",
           "13e575be866ecf5ac3dcbf61ab2048d7": "Quanti anni hai?",
           "1f258d88a70309efc1435ef5daa277a0": "Grazie per aver chattato con me oggi!",
@@ -672,6 +812,17 @@
           "e522ee28f39133b45497637539ff429b": "Inserisci un numero:",
           "f6175c6f0b0bcfff0256286315f0eb7b": "Giochi di società"
         },
+        "courseF_editable_madlib_2023": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Inserisci una parte del corpo: ",
+          "514b8d5320196898a9ced3efe0d4c802": "Inserisci un aggettivo:",
+          "5306eed2fd2c43fe033efd6016c0c38b": "corsa a -gambe!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " giochi.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Inserisci un oggetto:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Una storia delle caselle vuote",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda",
+          "e522ee28f39133b45497637539ff429b": "Inserisci un numero:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Giochi di società"
+        },
         "courseF_extras_sim": {
           "a2e534e7e893bd7ddb5d2047ed29dc8e": "l'elefante ha raccolto "
         },
@@ -680,6 +831,10 @@
           "f15045cb7e57652546d4a0b2c695356f": "Cosa vorresti mangiare?"
         },
         "courseF_label_predict_-2022-2": {
+          "937dc37c06cc5d89a7096eb048b73590": " in arrivo!",
+          "f15045cb7e57652546d4a0b2c695356f": "Cosa vorresti mangiare?"
+        },
+        "courseF_label_predict_2023": {
           "937dc37c06cc5d89a7096eb048b73590": " in arrivo!",
           "f15045cb7e57652546d4a0b2c695356f": "Cosa vorresti mangiare?"
         },
@@ -777,16 +932,25 @@
         "courseF_text_answer_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
+        "courseF_text_answer_2023": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
         "courseF_text_choice_color": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_text_choice_color_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
+        "courseF_text_choice_color_2023": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
         "courseF_text_choice_conversation": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_text_choice_conversation_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
+        "courseF_text_choice_conversation_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_text_choice_events": {
@@ -799,10 +963,18 @@
           "c529a06c3f8518b63ff6dfac482b335c": "Dai un nome a questo pianeta:",
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
+        "courseF_text_choice_events_2023": {
+          "44506356d48394cd903b579df9de9117": ", terrestre!",
+          "c529a06c3f8518b63ff6dfac482b335c": "Dai un nome a questo pianeta:",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
         "courseF_text_choice_freeplay": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_text_choice_freeplay_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
+        "courseF_text_choice_freeplay_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_text_choice_interview": {
@@ -810,6 +982,10 @@
           "5bd698afd23bccde289bb0b4aa72a518": "Dai un nome al robot."
         },
         "courseF_text_choice_interview_-2022-2": {
+          "34088af1fb721900963462375b3bbe23": "il robot!",
+          "5bd698afd23bccde289bb0b4aa72a518": "Dai un nome al robot."
+        },
+        "courseF_text_choice_interview_2023": {
           "34088af1fb721900963462375b3bbe23": "il robot!",
           "5bd698afd23bccde289bb0b4aa72a518": "Dai un nome al robot."
         },
@@ -821,10 +997,17 @@
           "d1210f945885351b13feb9bbb868aeef": "Quanti anni compie?",
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Chi è che compie gli anni?"
         },
+        "courseF_text_choice_multiprompt_2023": {
+          "d1210f945885351b13feb9bbb868aeef": "Quanti anni compie?",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Chi è che compie gli anni?"
+        },
         "courseF_text_choice_title": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_text_choice_title_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
+        "courseF_text_choice_title_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_text_concat": {
@@ -832,6 +1015,10 @@
           "f6429fe0f1a76611670df7e1234af936": "Come ti chiami?"
         },
         "courseF_text_concat_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda",
+          "f6429fe0f1a76611670df7e1234af936": "Come ti chiami?"
+        },
+        "courseF_text_concat_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda",
           "f6429fe0f1a76611670df7e1234af936": "Come ti chiami?"
         },
@@ -843,10 +1030,17 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda",
           "f6429fe0f1a76611670df7e1234af936": "Come ti chiami?"
         },
+        "courseF_text_prompts_2023": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda",
+          "f6429fe0f1a76611670df7e1234af936": "Come ti chiami?"
+        },
         "courseF_variables_card": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_variables_card_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
+        "courseF_variables_card_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_variables_card_finish": {
@@ -857,10 +1051,17 @@
           "464a456e0747ec9b09fc9afc6fbd13ed": "cosa desideri per il tuo compleanno?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
+        "courseF_variables_card_finish_2023": {
+          "464a456e0747ec9b09fc9afc6fbd13ed": "cosa desideri per il tuo compleanno?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
         "courseF_variables_chatbot": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_variables_chatbot_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
+        "courseF_variables_chatbot_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_variables_chatbot_finish": {
@@ -873,10 +1074,18 @@
           "c757766b0a7e2017c79e1c94f60e44f7": "Grazie per aver chattato!",
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
+        "courseF_variables_chatbot_finish_2023": {
+          "46463b2e9f71f2f15b7238f56f09ba30": "Fine",
+          "c757766b0a7e2017c79e1c94f60e44f7": "Grazie per aver chattato!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
         "courseF_variables_madlib": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_variables_madlib_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
+        "courseF_variables_madlib_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_variables_madlib_finish": {
@@ -887,13 +1096,26 @@
           "50d489a15105b987ec6d4410900c95dd": "Inserisci un termine che indichi un'azione:",
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
+        "courseF_variables_madlib_finish_2023": {
+          "50d489a15105b987ec6d4410900c95dd": "Inserisci un termine che indichi un'azione:",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
         "courseF_variables_predict": {
           "f6429fe0f1a76611670df7e1234af936": "Come ti chiami?"
         },
         "courseF_variables_predict_-2022-2": {
           "f6429fe0f1a76611670df7e1234af936": "Come ti chiami?"
         },
+        "courseF_variables_predict_2023": {
+          "f6429fe0f1a76611670df7e1234af936": "Come ti chiami?"
+        },
         "coursee_helloworld_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Ciao mondo!"
+        },
+        "coursee_helloworld_freeplay_2023": {
+          "6cd3556deb0da54bca060b4c39479839": "Ciao mondo!"
+        },
+        "csc_bookcover_widget_2023": {
           "6cd3556deb0da54bca060b4c39479839": "Ciao mondo!"
         },
         "helloworld_animals_freeplay": {

@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: คู่มือวิธีใช้ Hour of Code สำหรับหลังเลิกเรียน
 ---
 
 {{ signup_button }}
@@ -10,7 +10,7 @@ title: Hour of Code How-to Guide for After-school
 
 แนวคิดเชิงคำนวณจะช่วยเสริมทักษะด้านการแก้ไขปัญหา ตรรกะและความคิดสร้างสรรค์ และเทคโนโลยีกำลังจะเข้ามาเปลี่ยนแปลงทุกอุตสาหกรรมบนโลกใบนี้ ไม่เพียงแต่เรียนรู้วิธีใช้แต่นักเรียนยุคปัจจุบันจึงควรเรียนรู้วิธีการสร้างเทคโนโลยีไปด้วย ด้วยการเริ่มต้นอย่างรวดเร็วนี้นั้นจะเป็นรากฐานแห่งความสำเร็จด้านอาชีพของพวกเขาในศตวรรษที่ 21
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+การลองใช้ Hour of Code เป็นวิธีที่ง่ายและสนุกในการแนะนำนักเรียนให้รู้จักกับวิทยาการคอมพิวเตอร์ อาจเป็นครั้งแรก หากคุณต้องการชุดมือพิเศษเพื่อช่วย คุณสามารถหาอาสาสมัครใน [ท้องถิ่น]({{ urls/volunteer_local }}) เพื่อช่วยเรียกใช้ Hour of Code ในชั้นเรียนหรือสโมสรหลังเลิกเรียนของคุณ
 
 ### นอกจากนี้ Hour of Code ยังสามารถใช้ทำงานจากระยะไกลได้อีกด้วย! ดูข้อมูลเพิ่มเติม [เพื่อเริ่มใช้งาน Hour of Code แบบเสมือนจริงในอีเวนต์](https://hourofcode.com/us/how-to/virtual)
 
@@ -20,7 +20,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 ## 2. เลือกวิธีการสอน
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+เรามีบทช่วยสอนที่ [สนุกสนานหลายชั่วโมงสำหรับผู้เข้าร่วม]({{ urls/learn }}) ทุกวัย สร้างขึ้นโดยพันธมิตรที่หลากหลาย [ลองใช้พวกเขา!]({{ urls/learn }})
 
 **บทเรียนของ Hour of Code ทั้งหมด**ใช้เวลาไม่มากในการเตรียมการสอน บทเรียนถูกออกแบบให้ผู้เรียนสามารถเรียนรู้ด้วยตนเอง ได้ตามระดับทักษะและความสามารถในการเรียนรู้
 
@@ -30,7 +30,7 @@ We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for partici
 
 ## 3. การประชาสัมพันธ์ชั้นเรียน Hour of Code ของคุณ
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+โปรโมต Hour of Code ของคุณ [ด้วยเครื่องมือเหล่านี้]({{ urls/promote }}) และสนับสนุนให้ผู้อื่นเป็นเจ้าภาพกิจกรรมของตนเอง
 
 ## 4. วางแผนเทคโนโลยีที่จำเป็นต้องใช้ในชั้นเรียน - คอมพิวเตอร์ มีหรือไม่มีก็ได้
 
@@ -57,7 +57,7 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 - อธิบายถึงวิธีที่เทคโนโลยีส่งผลต่อชีวิตของเรา ใช้ตัวอย่างที่ทั้งเด็กผู้ชายและเด็กผู้หญิงให้สนใจ (พูดถึงแอปและเทคโนโลยีที่ใช้เพื่อช่วยชีวิตคน, ช่วยเหลือคน, เชื่อมต่อผู้คน เเละอื่นๆ)
 - เขียนรายชื่อของสิ่งที่ใช้โปรแกรมคอมพิวเตอร์ในชีวิตประจำวัน
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- ดูเคล็ดลับในการทำให้ผู้หญิงสนใจวิทยาการคอมพิวเตอร์ [ที่]({{ urls/girls }})นี่
 
 **ต้องการการแนะนำอีกหรือไม่?** ดาวน์โหลด[แผ่นแบบแผนการสอน](/files/AfterschoolEducatorLessonPlanOutline.docx)นี้
 
@@ -67,13 +67,13 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 **เมื่อผู้เรียนคนใดมีปัญหาในการเข้าใจบทเรียน คุณสามารถตอบว่า:** - "คุณก็ไม่รู้" "ให้เราช่วยกันค้นหาคำตอบด้วยกัน" -"เทคโนโลยีบางครั้งก็ไม่ได้เป็นอย่างที่เราต้องการ" -"การเรียนการเขียนโปรแกรมก็เหมือนกับการเรียนภาษาใหม่ คุณจะไม่เก่งในทันที"
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+**จะทำอย่างไรถ้ามีคนเสร็จเร็ว** - ส่งเสริมให้ผู้เข้าร่วมลองกิจกรรมHour of Code อีกครั้งที่ [hourofcode.com/learn]({{ urls/learn }}) - หรือขอให้ผู้ที่จบเร็วเพื่อช่วยเหลือผู้อื่นที่มีปัญหา
 
 ## 7. ฉลอง
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
+- [พิมพ์ใบรับ]({{ urls/certificates }}) รองสำหรับนักเรียนของคุณ
+- [พิมพ์ “ฉันทำหนึ่งชั่วโมงแห่งรหัส!”]({{ promote/resources_stickers }}) สติกเกอร์สำหรับนักเรียนของคุณ
+- [สั่งซื้อเสื้อยืดแบบกำหนด](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) เองสำหรับผู้เข้าร่วม
 - แชร์รูปถ่ายและวิดีโอของกิจกรรม Hour of Code ของคุณลงในโซเชียลมีเดีย ใช้ #HourOfCode และ @codeorg เพื่อที่เราจะสามารถเห็นความสำเร็จของคุณด้วยเช่นกัน!
 
 ## แหล่ง Hour of Code อื่นๆสำหรับนักการศึกษา
@@ -85,6 +85,6 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## จะทำอะไรต่อหลังจาก Hour of Code?
 
-Hour of Code นี้เป็นเพียงแค่ก้าวแรกในเดินทางเพื่อเรียนรู้เกี่ยวกับการทำงานของเทคโนโลยี และ การสร้างซอฟต์แวร์ Help students continue their journey and encourage them to [learn more online](/beyond)!
+Hour of Code นี้เป็นเพียงแค่ก้าวแรกในเดินทางเพื่อเรียนรู้เกี่ยวกับการทำงานของเทคโนโลยี และ การสร้างซอฟต์แวร์ ช่วยให้นักเรียนเดินทางต่อไปและกระตุ้นให้พวกเขา [เรียนรู้เพิ่มเติมทางออนไลน์](/beyond)!
 
 {{ signup_button }}

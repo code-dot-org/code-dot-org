@@ -133,7 +133,7 @@ Besprechen Sie mit der Schule oder dem Lehrer/der Lehrerin, was am sinnvollsten 
 - Beschreiben Sie, wie Technologien unser Leben beeinflussen, mit Beispielen, die SchülerInnen mit unterschiedlichem Hintergrund interessieren (beschreiben Sie Technologien, die Leben retten, Menschen helfen, Menschen verbinden usw.).
 - Wenn Sie bei einem Technologieunternehmen tätig sind, zeigen Sie interessante, innovative Produkte, an denen Ihr Unternehmen arbeitet. Wenn Sie nicht bei einem Technologieunternehmen tätig sind, sprechen Sie darüber, wie Ihr Unternehmen Technologie einsetzt, um Probleme zu lösen und Ziele zu erreichen.
 - Bitten Sie Programmierer aus Ihrem Unternehmen, etwas darüber erzählen, warum sie Informatik studiert haben und an welcher Art von Projekten sie arbeiten. 
-- Wenn es eine Gruppe von Mitarbeitern gibt, die Ihre Veranstaltung moderieren oder als Freiwillige mit einer örtlichen Schule zusammenarbeiten, könnten Sie die[speziellen T-Shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) für sie bestellen.
+- Wenn Sie eine Gruppe von Mitarbeitenden haben, die Ihre Veranstaltung organisieren oder sich ehrenamtlich an einer örtlichen Schule engagieren, sollten Sie erwägen, [maßgeschneiderte T-Shirts](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) für Ihre Gruppe zu bestellen.
 
 ### 3. Planen Sie Ihren Technologiebedarf
 
@@ -186,7 +186,7 @@ Eine der besten Möglichkeiten, zu helfen, sind das Verbreiten der Informationen
 
 ### 1. Registrieren Sie Ihre Veranstaltung
 
-Wenn Sie [Ihre Hour of Code-Veranstaltung registrieren](/), erhalten Sie E-Mails mit aktuellen Informationen und Tipps für eine erfolgreiche Hour of Code. Auf diese Weise können Sie auch Schulen oder Eltern in Ihrer Gegend wissen lassen, dass Sie eine Veranstaltung in ihrer Nähe organisieren.
+Wenn du [dich für deine Hour of Code-Veranstaltung anmeldest](/events), erhältst du hilfreiche E-Mail-Mitteilungen mit Neuigkeiten und Tipps für die Ausrichtung einer erfolgreichen Hour of Code. Auf diese Weise können Sie auch Schulen oder Eltern in Ihrer Gegend wissen lassen, dass Sie eine Veranstaltung in ihrer Nähe organisieren.
 
 ### 2. Beiträge in den sozialen Medien
 

@@ -17,6 +17,12 @@
           "rubric_performance_level_2": "모델을 가져왔고 앱이 제대로 작동합니다. 앱에는 테마가 있으며 드롭다운 프롬프트가 질문으로 편집되었습니다. 하지만 시작 화면이 불완전하거나 제대로 작동하지 않습니다.",
           "rubric_performance_level_3": "모델을 가져와서 앱이 제대로 작동하지만 화면 산의 디자인이나 텍스트가 변경되지 않았습니다. 시작 화면이 없습니다."
         },
+        "ml-club app-review submit_2023": {
+          "rubric_key_concept": "머신 러닝을 사용하는 사용자 친화적인 앱 만들기",
+          "rubric_performance_level_1": "모델을 가져왔고 앱이 제대로 작동합니다. 앱에는 테마가 있으며 각 드롭다운의 프롬프트는 질문으로 편집되었습니다. 앱에는 시작 화면과 화면을 올바르게 변경하는 버튼이 있습니다.",
+          "rubric_performance_level_2": "모델을 가져왔고 앱이 제대로 작동합니다. 앱에는 테마가 있으며 드롭다운 프롬프트가 질문으로 편집되었습니다. 하지만 시작 화면이 불완전하거나 제대로 작동하지 않습니다.",
+          "rubric_performance_level_3": "모델을 가져와서 앱이 제대로 작동하지만 화면 산의 디자인이나 텍스트가 변경되지 않았습니다. 시작 화면이 없습니다."
+        },
         "ml-intro app lab-book recommender 4-2021": {
           "rubric_key_concept": "머신 러닝을 사용하는 사용자 친화적인 앱 만들기",
           "rubric_performance_level_1": "모델을 가져왔고 앱이 제대로 작동합니다. 앱에는 테마가 있으며 각 드롭다운의 프롬프트는 질문으로 편집되었습니다. 앱에는 시작 화면과 화면을 올바르게 변경하는 버튼이 있습니다.",
@@ -24,6 +30,12 @@
           "rubric_performance_level_3": "모델을 가져와서 앱이 제대로 작동하지만 화면 산의 디자인이나 텍스트가 변경되지 않았습니다. 시작 화면이 없습니다."
         },
         "ml-intro app lab-book recommender 4_2022": {
+          "rubric_key_concept": "머신 러닝을 사용하는 사용자 친화적인 앱 만들기",
+          "rubric_performance_level_1": "모델을 가져왔고 앱이 제대로 작동합니다. 앱에는 테마가 있으며 각 드롭다운의 프롬프트는 질문으로 편집되었습니다. 앱에는 시작 화면과 화면을 올바르게 변경하는 버튼이 있습니다.",
+          "rubric_performance_level_2": "모델을 가져왔고 앱이 제대로 작동합니다. 앱에는 테마가 있으며 드롭다운 프롬프트가 질문으로 편집되었습니다. 하지만 시작 화면이 불완전하거나 제대로 작동하지 않습니다.",
+          "rubric_performance_level_3": "모델을 가져와서 앱이 제대로 작동하지만 화면 산의 디자인이나 텍스트가 변경되지 않았습니다. 시작 화면이 없습니다."
+        },
+        "ml-intro app lab-book recommender 4_2023": {
           "rubric_key_concept": "머신 러닝을 사용하는 사용자 친화적인 앱 만들기",
           "rubric_performance_level_1": "모델을 가져왔고 앱이 제대로 작동합니다. 앱에는 테마가 있으며 각 드롭다운의 프롬프트는 질문으로 편집되었습니다. 앱에는 시작 화면과 화면을 올바르게 변경하는 버튼이 있습니다.",
           "rubric_performance_level_2": "모델을 가져왔고 앱이 제대로 작동합니다. 앱에는 테마가 있으며 드롭다운 프롬프트가 질문으로 편집되었습니다. 하지만 시작 화면이 불완전하거나 제대로 작동하지 않습니다.",
@@ -37,6 +49,13 @@
           "rubric_performance_level_4": "앱이 업데이트되지 않았습니다."
         },
         "ml-models in applab-zoo assessment_2022": {
+          "rubric_key_concept": "모델 카드를 사용하여 앱을 업데이트하고 if-문을 사용하여 앱의 화면을 변경합니다.",
+          "rubric_performance_level_1": "예측 화면에는 각 특징에 대한 전체 문장이 표시되며, if-문은 예측된 값을 기반으로 화면을 변경하기 위해 사용됩니다.",
+          "rubric_performance_level_2": "예측 화면에는 전체 문장이 있고, 일부 if 문은 예측된 값을 기반으로 화면을 변경하는데 사용되지만 앱은 불완전합니다.",
+          "rubric_performance_level_3": "예측 화면에 전체 문장이 없거나 화면을 변경하기 위한 if-문에 오류가 있습니다.",
+          "rubric_performance_level_4": "앱이 업데이트되지 않았습니다."
+        },
+        "ml-models in applab-zoo assessment_2023": {
           "rubric_key_concept": "모델 카드를 사용하여 앱을 업데이트하고 if-문을 사용하여 앱의 화면을 변경합니다.",
           "rubric_performance_level_1": "예측 화면에는 각 특징에 대한 전체 문장이 표시되며, if-문은 예측된 값을 기반으로 화면을 변경하기 위해 사용됩니다.",
           "rubric_performance_level_2": "예측 화면에는 전체 문장이 있고, 일부 if 문은 예측된 값을 기반으로 화면을 변경하는데 사용되지만 앱은 불완전합니다.",

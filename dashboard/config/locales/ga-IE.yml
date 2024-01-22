@@ -10,6 +10,7 @@ ga:
         error:
           future: earráid - dáta sa todhchaí
         finish_sign_up_header: Críochnaigh an próiseas cláraithe
+        finish_sign_up_header_error: 'Ceartaigh na hearráidí seo a leanas:'
         finish_sign_up_subheader: Líon isteach an t-eolas seo a leanas chun cuntas
           Code.org a chruthú le haghaidh <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Líon isteach an t-eolas seo a leanas chun
@@ -31,6 +32,7 @@ ga:
           bhfuil seoladh ríomhphoist agat)](%{url})
         reset_password_token: Tá an nasc a chliceáil tú chun d'fhocal faire a athshocrú
         us_state: Stát
+        user_type: Cineál Cuntais
         username: Ainm úsáideora
     errors:
       messages:

@@ -51,6 +51,10 @@
           "968c8b54671ab303d48320f86937c40b": "Maszkok segítségével a vírusok terjedése lelassul.",
           "fac94901e68fc1dea6e749c012e3efc0": "Kattintással adj maszkot a sprite-okra."
         },
+        "CourseF_outbreak8_2023": {
+          "968c8b54671ab303d48320f86937c40b": "Maszkok segítségével a vírusok terjedése lelassul.",
+          "fac94901e68fc1dea6e749c012e3efc0": "Kattintással adj maszkot a sprite-okra."
+        },
         "Find the Wizard": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
           "0b895ef4c917e50663bc2a7327cbee3d": "Megtaláltál!",
@@ -116,6 +120,10 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
           "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
         },
+        "courseC19_playLab_EOC1_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
         "courseC19_playLab_EOC2": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
           "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
@@ -129,6 +137,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
         },
         "courseC19_playLab_EOC2_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseC19_playLab_EOC2_2023": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
           "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
         },
@@ -148,6 +160,10 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
           "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
         },
+        "courseC19_playLab_EOC3_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
         "courseC19_playLab_EOC4": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
           "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
@@ -161,6 +177,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
         },
         "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseC19_playLab_EOC4_2023": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
           "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
         },
@@ -185,6 +205,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
         },
         "courseC_PlayLab_eventsFP_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseC_PlayLab_eventsFP_2023": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
           "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
         },
@@ -240,6 +264,19 @@
           "d93dfc24c6ce3e53d8ee07416c743e60": "Egy kutya!",
           "f62038e77820419cd978f7b722da560a": "Hányan fognak megjelenni?"
         },
+        "courseC_data wizard_2023": {
+          "1c64ef29c853587fbe94f69f05272b79": "Egy madár!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " macska!",
+          "27944770529dd15319a983bee8951560": "Egy macska!",
+          "336ad881e37e713ba0325500a8fa1f00": " kutya!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Egy sárkány!",
+          "5b402e6ea05e847a076e03ad74420c45": " madár!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Számold meg az állatokat!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " sárkány!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Az állatok megszámolása",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Egy kutya!",
+          "f62038e77820419cd978f7b722da560a": "Hányan fognak megjelenni?"
+        },
         "courseD_playLab_condFP": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
           "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
@@ -259,6 +296,9 @@
         "courseE_aboutme_3_2021": {
           "ed076287532e86365e841e92bfc50d8c": "Helló világ!"
         },
+        "courseE_aboutme_3_2023": {
+          "ed076287532e86365e841e92bfc50d8c": "Helló világ!"
+        },
         "courseE_aboutme_4": {
           "ed076287532e86365e841e92bfc50d8c": "Helló világ!"
         },
@@ -271,6 +311,9 @@
         "courseE_aboutme_4_2021": {
           "ed076287532e86365e841e92bfc50d8c": "Helló világ!"
         },
+        "courseE_aboutme_4_2023": {
+          "ed076287532e86365e841e92bfc50d8c": "Helló világ!"
+        },
         "courseE_aboutme_5": {
           "ed076287532e86365e841e92bfc50d8c": "Helló világ!"
         },
@@ -281,6 +324,9 @@
           "ed076287532e86365e841e92bfc50d8c": "Helló világ!"
         },
         "courseE_aboutme_5_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Helló világ!"
+        },
+        "courseE_aboutme_5_2023": {
           "ed076287532e86365e841e92bfc50d8c": "Helló világ!"
         },
         "courseE_playLab_scaffold1": {
@@ -314,6 +360,11 @@
           "83e4a96aed96436c621b9809e258b309": "hal",
           "8a52e7a8d3b4c955d6f7927c6ba3fe72": "teremtmény"
         },
+        "courseF_apps_aquarium_2023": {
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "egyéb",
+          "83e4a96aed96436c621b9809e258b309": "hal",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "teremtmény"
+        },
         "courseF_apps_collector": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Nyertél!"
         },
@@ -321,6 +372,9 @@
           "e8a10c04d72b2f135dabe360c4bdd534": "Nyertél!"
         },
         "courseF_apps_collector_-2022-2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Nyertél!"
+        },
+        "courseF_apps_collector_2023": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Nyertél!"
         },
         "courseF_extras_sim": {
@@ -382,6 +436,12 @@
           "e8a10c04d72b2f135dabe360c4bdd534": "Nyertél!"
         },
         "coursee_helloworld_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Helló, világ!"
+        },
+        "coursee_helloworld_freeplay_2023": {
+          "6cd3556deb0da54bca060b4c39479839": "Helló, világ!"
+        },
+        "csc_bookcover_widget_2023": {
           "6cd3556deb0da54bca060b4c39479839": "Helló, világ!"
         },
         "helloworld_animals_freeplay": {

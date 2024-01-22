@@ -13,7 +13,7 @@ pt:
         Artist2: O Artista 2
         Unplug5: Funções
         Farmer: A Fazendeira
-        Unplug6: Condições
+        Unplug6: Condicionais
         Artist3: O Artista 3
         Unplug7: Escrevendo uma Canção
         Farmer2: A Fazendeira 2
@@ -30,11 +30,11 @@ pt:
         Jigsaw: Quebra-cabeça
         MazeStep: Modo Labirinto
         Wordsearch: Caça Palavras
-        Webapp: Laboratório de Aplicativo
+        Webapp: App Lab
         ArtistEC: O Artista
         TextMatch: Correspondência de texto
         StudioEC: Laboratório
-        Applab: Laboratório de Aplicativo
+        Applab: App Lab
         NetSim: Simulador de internet
         Custom: Artista
         CustomStudio: Laboratório
@@ -54,7 +54,7 @@ pt:
         loop_until: Bloco "Repita até que"
         loop_while: Bloco "Enquanto"
         loop_for: Bloco "contador"
-        function: funções
+        function: Funções
         parameters: Funções com parâmetros
     level:
       instructions:
@@ -314,8 +314,8 @@ pt:
         C2_binary_bracelets: Pulseiras binárias
         C2_relay_programming: Programação por revezamento
         C2_paper_airplanes: Aviões de papel
-        C2_digital_footprint: Seu rastro digital
-        C2_digital_footprint_v2: Seu rastro digital
+        C2_digital_footprint: Seu Rastro Digital
+        C2_digital_footprint_v2: Seu Rastro Digital
         C3_maze_level_4: Laços do labirinto
         C3_artist_intro: Introdução ao Artista
         C3_artist_functions: Funções do artista
@@ -339,18 +339,18 @@ pt:
         C4_bee_conditional: Condicionais da abelha
         C4_variables_artist: Variáveis - Artista
         C4_variables_playlab: Variáveis - Laboratório
-        C4_for_loops: Laços para
-        C4_for_loops_bee: Laços para
-        C4_for_loops_no_bee: Laços para
+        C4_for_loops: Loops For
+        C4_for_loops_bee: Loops For
+        C4_for_loops_no_bee: Loops For
         C4_math_artist: Programação do Artista com matemática
         C4_function_edit: Editando funções
         C4_function_create: Criando funções
         C4_function_parameters: Funções com Parâmetros
-        C4_conditionals: Condições
+        C4_conditionals: Condicionais
         C4_unplugged_algorithms: Algoritmos com tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variáveis em envelopes
-        C4_unplugged_forloops: Laços para
+        C4_unplugged_forloops: Loops For
         C4_unplugged_parameters: Composição de música com parâmetros
         C4_unplugged_binary: Binário
         CSF_a_b_artist_loops: Laços no Artista
@@ -394,6 +394,7 @@ pt:
         csd_gamelab_draw_1: Desenho no Game Lab - Parte 1
         csd_gamelab_draw_2: Desenho no Game Lab - Parte 2
         csd_gamelab_drawloop: Introdução ao Draw Loop
+        csd_gamelab_sprites_1: Introdução aos Sprites
         csd_gamelab_velocity: Velocidade
         csd_weblab_intro_1: Introdução para o Laboratório Web - Parte 1
         csd_weblab_intro_2: Introdução para o Laboratório Web - Parte 2
@@ -484,7 +485,7 @@ pt:
         applab_intro_sounds: Laboratório de Aplicativo - Imagens e Sons
         applab_intro_designmode: Laboratório de Aplicativo - Modo de Design
         applab_intro_share: Laboratório de Aplicativo - Compartilhe seu Aplicativo
-        csd_applab_arrays: Introdução a Arrays
+        csd_applab_arrays: Introdução a Vetores
         CSF_skinOverview_Harvester: A Colheitadeira
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
@@ -547,7 +548,7 @@ pt:
         how-to-k5-workshops: 'Fundamentos de CS do Code.org: estudante testado, professor aprovado'
         why-should-teach-unplugged-activities: 'FAQ: Por que devo ensinar atividades "desplugadas"?'
         cs-principles-intro-to-objects: 'Princípios de CS: Introdução aos Objetos'
-        oceans_machine_learning: Máquina de aprendizado
+        oceans_machine_learning: Aprendizado de Máquina
         oceans_training_data: Dados de treinamento
         oceans_societal_implications: 'Vídeo: Impactos na Sociedade'
         hoc_dance_congrats_2019: Dance Party 2019 - Festejar!
@@ -559,12 +560,12 @@ pt:
         csf_my_online_neighborhood_2020: Minha Vizinhança Online
         csf_follow_the_digital_trail: Siga o Trilha Digital
         csf_private_and_personal_information: Informações Privadas e Pessoais
-        csd_what_computers_are: O que é um computador?
+        csd_what_computers_are: O que é um Computador?
         csd_how_teamwork_works: Como funciona o trabalho em equipe
         csd_teamwork_and_disagreement: Trabalho em equipe - Lidar com discordâncias
         csf21pilot_events: 'Sprite Lab: Sprites em ação'
         csf21pilot_prompts: 'Sprite Lab: texto e instruções'
-        csd_ml_intro_to_ai_lab: Introdução ao AI Lab
+        csd_ml_intro_to_ai_lab: "Introdução ao IA Lab\n"
         csd_ml_import_model: Importando um modelo de IA
         csf_lots_of_sprites: 'Sprite Lab: Muitos Sprites'
         playlab_2021: Introdução ao Laboratório
@@ -575,10 +576,10 @@ pt:
         PL-Video-21: Bem-vindo ao aprendizado profissional da Code.org!
         csp_tutorial_datavis1: Visualizador de dados no App Lab - Parte 1
         csp_tutorial_datavis2: Visualizador de dados no App Lab - Parte 2
-        csd_ml_intro_ai_lab_july2021: Introdução ao AI Lab
-        csd_ml_training_testing_ai_lan: Treinamento e testes no AI Lab
-        csd_ml_model_cards_july2021: Cartões modelo no AI Lab
-        csd_ml_numerical_ai_lab: Dados numéricos no AI Lab
+        csd_ml_intro_ai_lab_july2021: "Introdução ao IA Lab\n"
+        csd_ml_training_testing_ai_lan: Treinamento e Testes no IA Lab
+        csd_ml_model_cards_july2021: Cartões Modelo no IA Lab
+        csd_ml_numerical_ai_lab: Dados Numéricos no IA Lab
         Gettting_Started_Progress: Progresso, feedback e avaliação
         Gettting_Started_ClassSection: Criando uma seção de classe
         Gettting_Started_StudentExperience: A experiência do aluno
@@ -623,7 +624,7 @@ pt:
         csd_app_lab_events: Eventos do CSD App Lab
         PL_CSD_Unit4_AppTesting: Teste de protótipo em papel
         csd_u6_circuit_playground: Computação Física
-        csd_u6_input_output: Entrada e saída
+        csd_u6_input_output: Entrada e Saída
         CSA-PL-for-loops: Para loops em Java
         CSA-PL-variables: Criando variáveis em Java
         PL_CS_Journeys_Overview: Jornada de CC
@@ -648,7 +649,7 @@ pt:
         PL_CSP_TeacherTips_LeadLearner: 'Dicas para professores: como ser um aluno líder'
         PL_CSP_TeacherTips_APExam: 'Dicas para professores: preparação para o exame AP'
         PL_CSP_TeacherTips_EIPM: 'Dicas para professores: O processo EIPM'
-        PL_CSD_CircuitPlayground_Overview: Visão geral do Circuit Play
+        PL_CSD_CircuitPlayground_Overview: Visão geral do Circuit Playground
         CSA-PL-debugging-22: Depuração no Java Lab
         CSD_Unit6_InteractiveArtExemplar: Exemplo de arte interativa
         CS_Changing_Everything: Ciência da Computação está Mudando Tudo
@@ -667,7 +668,7 @@ pt:
         csc-sprite-lab-pixel-editor: Desenhe seu próprio Sprite
         csa-pl-intro-to-strings: Introdução às cadeias de caracteres em Java
         csa-pl-compareTo: O método compareTo ()
-        csc-event-short-intro: Breve introdução aos eventos
+        csc-event-short-intro: Breve Introdução aos Eventos
         PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Visão geral da unidade Circuit Playground
         csa-day-in-pm-pl: O que um gerente de projeto faz?
         csa-pl-intro-to-pm: Introdução ao gerenciamento de projetos
@@ -732,13 +733,42 @@ pt:
         csa_remving_data_from_an_arraylist: 'CSA: Removendo dados de uma lista de matrizes'
         csa_private_methods: 'CSA: Métodos privados'
         csa_recursion: 'CSA: Recursão'
-        csa_searching_algorithms: 'CSA: Algoritmos de busca'
+        csa_searching_algorithms: 'CSA: Algoritmos de Busca'
         csa_sorting_algorithms: 'CSA: Algoritmos de classificação'
         star_quilts_intro_to_artist: 'Star Quilts: Introdução ao artista'
         upload_sprites_backgrounds: Fazendo upload de sprites e planos de fundo personalizados
+        PL_CSD_EquityBlindSpotsvid: Viés & Responsabilidade
+        how-ai-works-llms-full: Como os Chatbots e os Grandes Modelos de Linguagem Funcionam
+        how-ai-works-creativity-full: A IA Possui Criatividade e Imaginação?
+        how-ai-works-llms-part1: Chatbots e Grandes Modelos de Linguagem (LLMs) Parte 1
+        how-ai-works-llms-part2: Chatbots e Grandes Modelos de Linguagem (LLMs) Parte 2
         csc_bookcovers_intro: Codificando Capas de Livros
+        llms-cobranded: 'Como a IA Funciona: Chatbots e Grandes Modelos de Linguagem (LLMs)'
+        generative-ai-cobranded: 'Como a IA funciona: IA Generativa'
+        csa-overview: Uma Nova Abordagem para a Ciência da Computação AP A
         what-is-creativity: O que é criatividade?
+        poetry-programming: Poesia & Programação
+        push-yourself: Esforce-se. Todos podem aprender.
+        classic-maze-intro: Labirinto Clássico - Introdução
         code-break: Faça uma quebra de código
+        blockchain-introd: 'Como funciona o Blockchain: Introdução'
+        ai-ethis: Ética & IA
+        how-ai-works-lessons: 'Como a IA funciona: Visão Geral das Lições'
+        se-cv-intro-to-lessons: 'Engenharia de Software e Visão Computacional: Introdução às Lições'
+        PL_CSP_SummerAsync_U1ConnectionsConclusions: Unidade 1 Conexões e Conclusões
+        PL_CSP_SummerAsync_U3L7Debugging: Unidade 3 Lição 7 - Depuração
+        PL_CSP_SummerAsync_U3ConnectionsConclusions: 'Unidade 2: Conclusões e Conexões'
+        PL_CSP_SummerAsync_U3L1Computers: Anteriormente, Em relação a... Unidade 3
+        PL_CSP_SummerAsync_Unit2Internet: Anteriormente, Em relação a... Unidade 2
+        PL_CSP_SummerAsync_U2ConnectionsConclusions: 'Unidade 3: Conclusões e Conexões'
+        csd_ml_how_ai_works: Como funciona a IA
+        hoc-dance-ai-warmup: 'Festa Dançante, Edição para IA: Aquecimento'
+        dance_ai_events_intro: Festa Dançante - Edição IA - Introdução a Eventos
+        dance_ai_intro_to_ai: Festa Dançante - Edição IA - Introdução à IA
+        dance_ai_how_ai_works: Festa Dançante - Edição IA - Como a IA Funciona
+        dance_ai_event_at_measure: Festa Dançante - Edição IA - Evento Sob Medida
+        dance_ai_events_measure_noST: Festa Dançante - Edição IA - Eventos Sob Medida Sem Sub
+        dance_ai_intro_to_ai_v3: 'Festa Dançante - Edição IA - Uma Introdução à IA'
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco

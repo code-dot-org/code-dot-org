@@ -4,55 +4,55 @@ title: Компьютерийн шинжлэх ухааны боловсролы
 
 {{ signup_button }}
 
-# Sample Computer Science Education Week resolution
+# Компьютерийн шинжлэх ухааны боловсролын долоо хоногийн тогтоолын жишээ
 
-### Below is language for a sample resolution supportive of Computer Science Education Week and its goals that can be used by state and local legislators.
+### Доорх жишээ тогтоол Компьютерийн шинжлэх ухааны боловсролын долоо хоногийн дэмжиж, түүний зорилго нь улсын болон орон нутгийн хууль тогтоогчид ашиглаж болно хэл юм.
 
 * * *
 
-#### **RESOLUTION**  
+#### **ТОГТООЛ**  
 
 
-#### Supporting the goals and ideals of "Computer Science Education Week"
+#### “Компьютерийн шинжлэх ухааны боловсролын долоо хоног” -ийн зорилго, үзэл санааг дэмжих
 
-Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+Компьютерийн шинжлэх ухааны боловсролын долоо хоног нь манай нийгмийг өөрчлөхөд компьютерийн шинжлэх ухаан чухал үүрэг гүйцэтгэдэг, компьютерийн шинжлэх ухаан нь инновацийг хэрхэн идэвхжүүлж, эдийн засгийн боломжийг бий болгодог.
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+Тооцооллын технологи нь орчин үеийн соёлын салшгүй хэсэг бөгөөд хүмүүс бие биетэйгээ болон эргэн тойрныхоо ертөнцтэй хэрхэн харилцаж байгааг өөрчилж байна.
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+Компьютерийн шинжлэх ухаан нь аж үйлдвэрийг өөрчлөх, худалдааны шинэ салбарыг бий болгох, шинжлэх ухааны бүхий л салбарт инновацийг жолоодох, эдийн засгийн тогтсон салбаруудад бүтээмжийг нэмэгдүүлэх;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+Компьютерийн шинжлэх ухааны салбар нь АНУ-ын эдийн засгийн гарцад чухал хувь нэмэр оруулдаг манай эдийн засгийн мэдээллийн технологийн салбарыг онцлон авч үздэг суурь сэдэв юм.
 
-Whereas the field of computer science is a foundational science for the digital age;
+Хиймэл оюун ухааны бичиг үсэг гэдэг нь хиймэл оюун ухаан хэрхэн ажилладаг, түүний дотор компьютерийн шинжлэх ухааны үндсэн ойлголтууд, хиймэл оюун ухааныг хэрхэн аюулгүй, хариуцлагатай, ёс зүйтэй ашиглахтай холбоотой мэдлэг, ур чадвар, хандлагыг хэлнэ;
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+Компьютерийн шинжлэх ухаан, түүний дотор хиймэл оюун ухаан нь АНУ-ын эдийн засгийн бараг бүх салбарыг үндсээр нь өөрчлөх хүч чадалтай технологи юм.
 
-Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
+Компьютерийн шинжлэх ухааны бүхий л салбарт технологийн манлайлал, түүний дотор хиймэл оюун ухаан нь эдийн засаг, үндэсний аюулгүй байдлын зайлшгүй шаардлагатай;
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+Компьютерийн шинжлэх ухааны ажлын байрны төлөв байдал улс даяар 500,000 гаруй нээлттэй тооцооллын албан тушаалуудтай тод харагдаж байна;
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+Оюутнуудад өндөр чанартай компьютерийн шинжлэх ухааны үйл ажиллагаанд оролцох боломжийг олгож байгаа нь талбайн санал болгож буй баялаг боломжуудыг бий болгож, амьдралынхаа туршид тэдэнд үйлчлэх шүүмжлэлтэй сэтгэлгээний ур чадварыг бий болгодог;
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+Бүх оюутнууд компьютерийн шинжлэх ухааны боловсролыг сайтар бэлтгэх, үүнд бага, дунд боловсролын түвшинд компьютерийн шинжлэх ухааныг сурахад шаардлагатай мэргэшсэн багш, технологи, насны онцлогт тохирсон сургалтын хөтөлбөрт хамрагдах ёстой;
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+Компьютерийн шинжлэх ухааны боловсрол нь бүх оюутнуудад зориулсан компьютерийн шинжлэх ухааны сургалтын хүртээмжийг сайжруулах, компьютерийн шинжлэх ухааны багш нарын мэргэжлийн хөгжлийг хангах зэрэг асуудлуудыг шийдвэрлэхэд бэрхшээлтэй байдаг.
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+Компьютерийн шинжлэх ухааны боловсролын долоо хоногт Код цагийн хөтөлбөрт хамрагдах нь компьютерийн шинжлэх ухааны салбарыг задалж, илүү олон оюутнуудыг компьютерийн шинжлэх ухааны цаашдын судалгааг авахад түлхэц болно.
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+Компьютерийн шинжлэх ухааны салбар нь бүх түвшинд, салбар дахь арьсны өнгө, үндэс угсаа, жендэрийн янз бүрийн нэр дэвшигчдийн талбарыг татах, хадгалах зэрэг чухал ач холбогдолтой өмчийн саад бэрхшээлтэй байдаг.
 
-Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
+Компьютерийн шинжлэх ухааны салбарын анхны эмэгтэйчүүдийн нэг Грейс Мюррей Хоппер бол шинэ програмчлалын хэлийг боловсруулж, компьютерийн системийн анхдагч стандартыг боловсруулсан бөгөөд энэ нь компьютерийн шинжлэх ухааны олон дэвшлийн үндэс суурийг тавьсан; болон
 
-Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
+Грэйс Хопперын төрсөн өдрийг тохиолдуулан “Компьютерийн шинжлэх ухааны боловсролын долоо хоног” гэж нэрлэдэг. Тиймээс одоо {{ campaign_date/start_long }} <br />
 
-(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
+шийдвэрлэсэн, гэж (HOUSE ЭСВЭЛ Сенатын, ТӨРИЙН, COUNTY, CITY OR сургуулийн зөвлөл) --
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(1) Компьютерийн шинжлэх ухааны боловсролын долоо хоногийн тэмдэглэгээг дэмждэг ({{ campaign_date/full }});
 
-(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(2) сургууль, сурган хүмүүжүүлэгч, эцэг эх, бодлого боловсруулагчдыг Компьютерийн шинжлэх ухааны боловсролын долоо хоногт оролцохыг уриалж, оюутнууддаа Кодын цагт оролцох боломжийг олгодог;
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(3) сургууль, багш, судлаачид, их дээд сургууль, бизнесийн удирдагчид, бодлого боловсруулагчдыг бүх боловсролын түвшинд компьютерийн шинжлэх ухааны чиглэлээр тогтвортой суралцах туршлагыг бий болгох, оюутнуудыг компьютерийн шинжлэх ухааны үзэл баримтлалд өртөхийг уриалахын тулд багш нарын мэргэжлийн хөгжлийг хангах механизмыг тодорхойлох;
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(4) компьютерийн шинжлэх ухаанд дутагдалтай арьс өнгө, угсаатны бүлгийн эмэгтэй оюутан, оюутнуудад зориулсан боломжуудыг, түүний дотор одоо байгаа хөтөлбөрүүдээр дамжуулан дэмжинэ.
 
 {{ signup_button }}

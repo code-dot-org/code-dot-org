@@ -68,6 +68,9 @@
         "Overworld Move to Sheep_2021": {
           "craft_run_button_callout": "Klikni \"Zaženi\" in preizkusi"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_run_button_callout": "Klikni \"Zaženi\" in preizkusi"
+        },
         "course2_bee_conditionals_challenge2": {
           "courseD_bee_conditionals_challenge2_1": "S to zanko zberete ves nektar (ali med) iz enega cveta (ali satja)."
         },
@@ -90,6 +93,9 @@
           "sticker2": "Dodaj to v sredino programa."
         },
         "courseC_artist_loops1b_2021": {
+          "sticker2": "Dodaj to v sredino programa."
+        },
+        "courseC_artist_loops1b_2023": {
           "sticker2": "Dodaj to v sredino programa."
         },
         "courseC_harvester_loops1_2021": {
@@ -115,6 +121,15 @@
         },
         "courseD_bee_conditionals_challenge2_2021": {
           "courseD_bee_conditionals_challenge2_1": "S to zanko zberete ves nektar (ali med) iz enega cveta (ali satja)."
+        },
+        "courseD_bee_conditionals_challenge2_2023": {
+          "courseD_bee_conditionals_challenge2_1": "S to zanko zberete ves nektar (ali med) iz enega cveta (ali satja)."
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "ai_dance_callout_draft_level_02": "Začni tu."
+        },
+        "dance_ai_generate_effect": {
+          "ai_dance_callout_draft_level_03": "Uporabi ta blok."
         },
         "frozen circle function with parameter": {
           "frozen_circle_function_with_parameter_circle": "Uporabi blok \"ustvari krog\" in mu spremeni velikost."

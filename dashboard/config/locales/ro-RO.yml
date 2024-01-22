@@ -10,6 +10,7 @@ ro:
         error:
           future: nu poate fi în viitor
         finish_sign_up_header: Finalizează crearea contului tău
+        finish_sign_up_header_error: 'Te rog să corectezi următoarele greșeli:'
         finish_sign_up_subheader: Completează următoarele informații pentru a finaliza
           crearea unui cont Code.org pentru <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Completează următoarele informații pentru
@@ -31,6 +32,7 @@ ro:
           o adresă de e-mail)](%{url})
         reset_password_token: Linkul pentru resetarea parolei pe care l-ai folosit
         us_state: Județ
+        user_type: Tipul contului
         username: nume de utilizator
         verified_teacher: Profesor Verificat
     errors:

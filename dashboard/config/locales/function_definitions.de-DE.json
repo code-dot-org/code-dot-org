@@ -658,6 +658,11 @@
             "name": "meine Funktion"
           }
         },
+        "Course E: Artist Project_examples_2023": {
+          "my function": {
+            "name": "meine Funktion"
+          }
+        },
         "Course E: Frozen Project_examples2022": {
           "LOGIC FLOWER": {
             "name": "LOGISCHE BLUME"
@@ -722,6 +727,69 @@
           }
         },
         "Course E: Frozen Project_examples_2021": {
+          "LOGIC FLOWER": {
+            "name": "LOGISCHE BLUME"
+          },
+          "LOGIC FLOWERS": {
+            "name": "LOGISCHE BLUMEN"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "LOGISCHE BLUMEN2"
+          },
+          "draw a circle": {
+            "description": "zeichne einen Kreis mit vorgegebenem Radius",
+            "name": "Zeichne einen Kreis",
+            "parameters": {
+              "radius": "Radius"
+            }
+          },
+          "draw a house": {
+            "name": "Zeichne ein Haus",
+            "parameters": {
+              "length": "Länge"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "zeichne ein Windrad",
+            "parameters": {
+              "length": "Länge",
+              "repeat": "wiederhole",
+              "sides": "Kanten"
+            }
+          },
+          "draw a shape": {
+            "name": "zeichne eine Form",
+            "parameters": {
+              "length": "Länge",
+              "sides": "Kanten"
+            }
+          },
+          "draw a square": {
+            "name": "zeichne ein Quadrat",
+            "parameters": {
+              "length": "Länge",
+              "sides": "Kanten"
+            }
+          },
+          "draw a star": {
+            "description": "zeichne einen Stern mit vorgegebener Spitzenzahl und Seitenlänge",
+            "name": "zeichne einen Stern",
+            "parameters": {
+              "length": "Länge",
+              "points": "Punkte"
+            }
+          },
+          "draw a triangle": {
+            "name": "zeichne ein Dreieck",
+            "parameters": {
+              "length": "Länge"
+            }
+          },
+          "small flower": {
+            "name": "kleine Blume"
+          }
+        },
+        "Course E: Frozen Project_examples_2023": {
           "LOGIC FLOWER": {
             "name": "LOGISCHE BLUME"
           },
@@ -989,6 +1057,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "description": "zeichne einen Kreis mit vorgegebenem Radius",
+            "name": "Zeichne einen Kreis",
+            "parameters": {
+              "radius": "Radius"
+            }
+          },
+          "draw a house": {
+            "name": "Zeichne ein Haus",
+            "parameters": {
+              "length": "Länge"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "zeichne ein Windrad",
+            "parameters": {
+              "length": "Länge",
+              "repeat": "wiederhole",
+              "sides": "Kanten"
+            }
+          },
+          "draw a shape": {
+            "name": "zeichne eine Form",
+            "parameters": {
+              "length": "Länge",
+              "sides": "Kanten"
+            }
+          },
+          "draw a square": {
+            "name": "zeichne ein Quadrat",
+            "parameters": {
+              "length": "Länge"
+            }
+          },
+          "draw a star": {
+            "description": "zeichne einen Stern mit vorgegebener Spitzenzahl und Seitenlänge",
+            "name": "zeichne einen Stern",
+            "parameters": {
+              "length": "Länge",
+              "points": "Punkte"
+            }
+          },
+          "draw a triangle": {
+            "name": "zeichne ein Dreieck",
+            "parameters": {
+              "length": "Länge"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "description": "zeichne einen Kreis mit vorgegebenem Radius",
@@ -1089,6 +1207,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_example2021_2023": {
+          "draw a circle": {
+            "description": "zeichne einen Kreis mit vorgegebenem Radius",
+            "name": "Zeichne einen Kreis",
+            "parameters": {
+              "radius": "Radius"
+            }
+          },
+          "draw a house": {
+            "name": "Zeichne ein Haus",
+            "parameters": {
+              "length": "Länge"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "zeichne ein Windrad",
+            "parameters": {
+              "length": "Länge",
+              "repeat": "wiederhole",
+              "sides": "Kanten"
+            }
+          },
+          "draw a shape": {
+            "name": "zeichne eine Form",
+            "parameters": {
+              "length": "Länge",
+              "sides": "Kanten"
+            }
+          },
+          "draw a square": {
+            "name": "zeichne ein Quadrat",
+            "parameters": {
+              "length": "Länge"
+            }
+          },
+          "draw a star": {
+            "description": "zeichne einen Stern mit vorgegebener Spitzenzahl und Seitenlänge",
+            "name": "zeichne einen Stern",
+            "parameters": {
+              "length": "Länge",
+              "points": "Punkte"
+            }
+          },
+          "draw a triangle": {
+            "name": "zeichne ein Dreieck",
+            "parameters": {
+              "length": "Länge"
+            }
+          }
+        },
         "CourseF_app_computer": {
           "reset game": {
             "name": "Spiel zurücksetzen"
@@ -1100,6 +1268,11 @@
           }
         },
         "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": "Spiel zurücksetzen"
+          }
+        },
+        "CourseF_app_computer_2023": {
           "reset game": {
             "name": "Spiel zurücksetzen"
           }
@@ -1145,6 +1318,11 @@
           }
         },
         "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "baue Brücke"
+          }
+        },
+        "Function intro Ryan_2023": {
           "build bridge": {
             "name": "baue Brücke"
           }
@@ -1315,6 +1493,11 @@
             "name": "Weg freimachen"
           }
         },
+        "MC_HOC_2017_07_Cole_2023": {
+          "clear path": {
+            "name": "Weg freimachen"
+          }
+        },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
             "name": "langen Pfad in Ordnung bringen"
@@ -1348,6 +1531,14 @@
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "langen Pfad in Ordnung bringen"
+          },
+          "fix short path": {
+            "name": "kurzen Pfad in Ordnung bringen"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2023": {
           "fix long path": {
             "name": "langen Pfad in Ordnung bringen"
           },
@@ -1395,6 +1586,14 @@
             "name": "kleine Brücke bauen"
           }
         },
+        "MC_HOC_2017_Ali_2023": {
+          "build long bridge": {
+            "name": "lange Brücke bauen"
+          },
+          "build short bridge": {
+            "name": "kleine Brücke bauen"
+          }
+        },
         "MC_HOC_2017_FP20x20": {
           "function 1": {
             "name": "Funktion 1"
@@ -1428,6 +1627,14 @@
           }
         },
         "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "Funktion 1"
+          },
+          "function 2": {
+            "name": "Funktion 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2023": {
           "function 1": {
             "name": "Funktion 1"
           },
@@ -2039,6 +2246,11 @@
             "name": "mögliche Lösung"
           }
         },
+        "courseB_artist_loops_challenge2_2023": {
+          "potential solution": {
+            "name": "mögliche Lösung"
+          }
+        },
         "courseC_artist_prog3": {
           "draw fire": {
             "name": "zeichne Feuer"
@@ -2135,6 +2347,11 @@
             "name": "Booster"
           }
         },
+        "courseC_artist_prog4_2023": {
+          "booster": {
+            "name": "Booster"
+          }
+        },
         "courseC_data wizard": {
           "do something": {
             "name": "Funktionsblock"
@@ -2151,6 +2368,11 @@
           }
         },
         "courseC_data wizard_2021": {
+          "do something": {
+            "name": "Funktionsblock"
+          }
+        },
+        "courseC_data wizard_2023": {
           "do something": {
             "name": "Funktionsblock"
           }
@@ -2848,6 +3070,17 @@
             "name": "zeichne Linie aus Sechsecken"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "Funktionsblock"
+          },
+          "draw hexagon": {
+            "name": "zeichne Sechseck"
+          },
+          "draw line of hexagons": {
+            "name": "zeichne Linie aus Sechsecken"
+          }
+        },
         "courseE_artist_functions1_copy": {
           "draw ear stems": {
             "name": "zeichne Ohrstäbchen"
@@ -2906,6 +3139,14 @@
             "name": "zeichne Ohrstäbchen"
           }
         },
+        "courseE_artist_functions2_2023": {
+          "draw a square": {
+            "name": "zeichne ein Quadrat"
+          },
+          "draw ear stems": {
+            "name": "zeichne Ohrstäbchen"
+          }
+        },
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "zeichne ein Quadrat"
@@ -2943,6 +3184,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "zeichne einen Stern"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "zeichne einen Stern"
           }
@@ -2992,6 +3238,11 @@
             "name": "zeichne einen Stern"
           }
         },
+        "courseE_artist_functions5_2023": {
+          "draw a star": {
+            "name": "zeichne einen Stern"
+          }
+        },
         "courseE_artist_functions5_copy": {
           "draw a star": {
             "name": "zeichne einen Stern"
@@ -3037,6 +3288,11 @@
           }
         },
         "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "zeichne ein Fenster"
+          }
+        },
+        "courseE_artist_functions7_2023": {
           "draw a window": {
             "name": "zeichne ein Fenster"
           }
@@ -3122,6 +3378,20 @@
             "name": "versetzte Quadrate"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "Funktionsblock"
+          },
+          "draw a line of squares": {
+            "name": "zeichne eine Linie aus Quadraten"
+          },
+          "draw square": {
+            "name": "zeichne Quadrat"
+          },
+          "staggered squares": {
+            "name": "versetzte Quadrate"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "Funktionsblock"
@@ -3155,6 +3425,14 @@
           }
         },
         "courseE_artist_functions8a_2021": {
+          "do something": {
+            "name": "Funktionsblock"
+          },
+          "draw a square": {
+            "name": "zeichne ein Quadrat"
+          }
+        },
+        "courseE_artist_functions8a_2023": {
           "do something": {
             "name": "Funktionsblock"
           },
@@ -3207,6 +3485,17 @@
           }
         },
         "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "Funktionsblock"
+          },
+          "draw a line of squares": {
+            "name": "zeichne eine Linie aus Quadraten"
+          },
+          "draw square": {
+            "name": "zeichne Quadrat"
+          }
+        },
+        "courseE_artist_functions8b_2023": {
           "do something": {
             "name": "Funktionsblock"
           },
@@ -3287,6 +3576,20 @@
             "name": "versetzte Quadrate"
           }
         },
+        "courseE_artist_functions8c_2023": {
+          "do something": {
+            "name": "Funktionsblock"
+          },
+          "draw a line of squares": {
+            "name": "zeichne eine Linie aus Quadraten"
+          },
+          "draw square": {
+            "name": "zeichne Quadrat"
+          },
+          "staggered squares": {
+            "name": "versetzte Quadrate"
+          }
+        },
         "courseE_artist_functions9": {
           "do something": {
             "name": "Funktionsblock"
@@ -3343,6 +3646,17 @@
           }
         },
         "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "Funktionsblock"
+          },
+          "draw line of triangles": {
+            "name": "zeichne eine Reihe aus Dreiecken"
+          },
+          "draw triangle": {
+            "name": "zeichne Dreieck"
+          }
+        },
+        "courseE_artist_functions9_2023": {
           "do something": {
             "name": "Funktionsblock"
           },
@@ -3438,6 +3752,23 @@
             "name": "versetzte Quadrate"
           }
         },
+        "courseE_artist_functionsProj_2023": {
+          "draw a line of squares": {
+            "name": "zeichne eine Linie aus Quadraten"
+          },
+          "draw hexagon": {
+            "name": "zeichne Sechseck"
+          },
+          "draw line of hexagons": {
+            "name": "zeichne Linie aus Sechsecken"
+          },
+          "draw square": {
+            "name": "zeichne Quadrat"
+          },
+          "staggered squares": {
+            "name": "versetzte Quadrate"
+          }
+        },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "Funktionsblock"
@@ -3479,6 +3810,14 @@
           }
         },
         "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "Funktionsblock"
+          },
+          "my design": {
+            "name": "mein Design"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "do something": {
             "name": "Funktionsblock"
           },
@@ -3534,6 +3873,14 @@
             "name": "mein Design"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "Funktionsblock"
+          },
+          "my design": {
+            "name": "mein Design"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "zeichne ein Quadrat"
@@ -3575,6 +3922,14 @@
           }
         },
         "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "zeichne ein Quadrat"
+          },
+          "draw ear stems": {
+            "name": "zeichne Ohrstäbchen"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
           "draw a square": {
             "name": "zeichne ein Quadrat"
           },
@@ -3654,6 +4009,17 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "Funktionsblock"
+          },
+          "draw line of polygons": {
+            "name": "zeichne Reihe aus Vielecken"
+          },
+          "draw polygon": {
+            "name": "zeichne Vieleck"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "Funktionsblock"
           },
@@ -3833,6 +4199,20 @@
             "name": "Kürbis-Quadrat"
           }
         },
+        "courseE_farmer_functions10a1_2023": {
+          "check square for corn": {
+            "name": "untersuche Quadrat nach Mais"
+          },
+          "get all pumpkins": {
+            "name": "hole alle Kürbisse"
+          },
+          "pick along path": {
+            "name": "am Weg sammeln\n"
+          },
+          "pumpkin square": {
+            "name": "Kürbis-Quadrat"
+          }
+        },
         "courseE_farmer_functions10b": {
           "navigate": {
             "name": "navigieren"
@@ -3934,6 +4314,23 @@
             "name": "Kürbis-Quadrat"
           }
         },
+        "courseE_farmer_functions11_predict_2023": {
+          "check square for corn": {
+            "name": "untersuche Quadrat nach Mais"
+          },
+          "get all pumpkins": {
+            "name": "hole alle Kürbisse"
+          },
+          "get produce": {
+            "name": "Landwirtschaftliche Erzeugnisse holen"
+          },
+          "pick along path": {
+            "name": "am Weg sammeln\n"
+          },
+          "pumpkin square": {
+            "name": "Kürbis-Quadrat"
+          }
+        },
         "courseE_farmer_functions132022": {
           "check for corn": {
             "name": "Mais suchen\n"
@@ -4004,6 +4401,20 @@
             "name": "am Weg sammeln"
           }
         },
+        "courseE_farmer_functions13_2023": {
+          "check for corn": {
+            "name": "Mais suchen\n"
+          },
+          "corn rectangle": {
+            "name": "Mais-Rechteck"
+          },
+          "lettuce stairs": {
+            "name": "Salat-Treppe"
+          },
+          "pick along path": {
+            "name": "am Weg sammeln\n"
+          }
+        },
         "courseE_farmer_functions1a2022": {
           "check square for corn": {
             "name": "untersuche Quadrat nach Mais"
@@ -4029,6 +4440,11 @@
             "name": "untersuche Quadrat nach Mais"
           }
         },
+        "courseE_farmer_functions1a_2023": {
+          "check square for corn": {
+            "name": "untersuche Quadrat nach Mais"
+          }
+        },
         "courseE_farmer_functions2b2022": {
           "check square for corn": {
             "name": "untersuche Quadrat nach Mais"
@@ -4050,6 +4466,11 @@
           }
         },
         "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "untersuche Quadrat nach Mais"
+          }
+        },
+        "courseE_farmer_functions2b_2023": {
           "check square for corn": {
             "name": "untersuche Quadrat nach Mais"
           }
@@ -4092,6 +4513,14 @@
           }
         },
         "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "untersuche Quadrat nach Mais"
+          },
+          "get all pumpkins": {
+            "name": "hole alle Kürbisse"
+          }
+        },
+        "courseE_farmer_functions2ba_2023": {
           "check square for corn": {
             "name": "untersuche Quadrat nach Mais"
           },
@@ -4159,6 +4588,17 @@
             "name": "am Weg sammeln"
           }
         },
+        "courseE_farmer_functions3c1_2023": {
+          "check square for corn": {
+            "name": "untersuche Quadrat nach Mais"
+          },
+          "get all pumpkins": {
+            "name": "hole alle Kürbisse"
+          },
+          "pick along path": {
+            "name": "am Weg sammeln\n"
+          }
+        },
         "courseE_farmer_functions3c2022": {
           "check square for corn": {
             "name": "untersuche Quadrat nach Mais"
@@ -4192,6 +4632,14 @@
           }
         },
         "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "untersuche Quadrat nach Mais"
+          },
+          "get all pumpkins": {
+            "name": "hole alle Kürbisse"
+          }
+        },
+        "courseE_farmer_functions3c_2023": {
           "check square for corn": {
             "name": "untersuche Quadrat nach Mais"
           },
@@ -4239,6 +4687,11 @@
             "name": "Gartenplatz"
           }
         },
+        "courseE_farmer_functions7a1_2023": {
+          "garden square": {
+            "name": "Gartenplatz"
+          }
+        },
         "courseE_farmer_functions8a12022": {
           "garden square": {
             "name": "Gartenplatz"
@@ -4260,6 +4713,11 @@
           }
         },
         "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "Gartenplatz"
+          }
+        },
+        "courseE_farmer_functions8a1_2023": {
           "garden square": {
             "name": "Gartenplatz"
           }
@@ -4290,6 +4748,11 @@
           }
         },
         "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "Gartenplatz"
+          }
+        },
+        "courseE_farmer_functions9a1_2023": {
           "garden square": {
             "name": "Gartenplatz"
           }
@@ -4341,6 +4804,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "Spiel beenden"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "Spiel beenden"
           }
@@ -4610,6 +5078,11 @@
           }
         },
         "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "Bewege dich und hole den Nektar mit einem Zähler"
+          }
+        },
+        "courseF_bee_for_challenge1_2023": {
           "move and get nectar with counter": {
             "name": "Bewege dich und hole den Nektar mit einem Zähler"
           }

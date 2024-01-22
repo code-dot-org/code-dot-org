@@ -2,6 +2,48 @@
   "pl-PL": {
     "data": {
       "standards": {
+        "1-A-i.3-5": {
+          "description": "Porównaj percepcję człowieka i zwierząt"
+        },
+        "1-A-i.6-8": {
+          "description": "Podaj przykłady tego, jak ludzie łączą informacje z wielu modalności"
+        },
+        "1-A-i.K-2": {
+          "description": "Zidentyfikuj ludzkie zmysły i narządy zmysłów"
+        },
+        "1-A-ii.3-5": {
+          "description": "Zilustruj, w jaki sposób wykrywanie komputerowe różni się od wykrywania ludzkiego."
+        },
+        "1-A-ii.6-8": {
+          "description": "Podaj przykłady, w jaki sposób inteligentni agenci łączą informacje z wielu czujników."
+        },
+        "1-A-ii.9-12": {
+          "description": "Opisz ograniczenia i zalety różnych typów czujników komputerowych."
+        },
+        "1-A-ii.K-2": {
+          "description": "Zlokalizuj i identyfikuj czujniki (aparat, mikrofon) na komputerach, telefonach, robotach i innych urządzeniach."
+        },
+        "1-A-iii.3-5": {
+          "description": "Wyjaśnij, w jaki sposób obrazy są reprezentowane cyfrowo w komputerze."
+        },
+        "1-A-iii.6-8": {
+          "description": "Wyjaśnij, w jaki sposób dźwięki są reprezentowane cyfrowo w komputerze."
+        },
+        "1-A-iii.9-12": {
+          "description": "Wyjaśnij, w jaki sposób reprezentowane są dane z radaru, lidaru, GPS i akcelerometru."
+        },
+        "1-B-i.6-8": {
+          "description": "Podaj przykłady różnych typów percepcji komputerowej, które mogą wydobyć znaczenie z sygnałów sensorycznych."
+        },
+        "1-B-i.9-12": {
+          "description": "Wyjaśnij algorytmy percepcji i sposób ich wykorzystania w rzeczywistych aplikacjach."
+        },
+        "1-B-i.K-2": {
+          "description": "Podaj przykłady inteligentnych i nieinteligentnych maszyn i omów, co czyni maszynę inteligentną."
+        },
+        "1-B-ii.6-8": {
+          "description": "Zilustruj koncepcję wyodrębniania elementów z obrazów poprzez symulację detektora krawędzi."
+        },
         "1-ESS1-1": {
           "description": "Użyj obserwacji Słońca, Księżyca i gwiazd, aby opisać wzorce, które można przewidzieć."
         },
@@ -833,6 +875,9 @@
         "1B-NI-05": {
           "description": "Omów problemy cyberbezpieczeństwa w świecie oraz, jak mogą być chronione informacje osobiste."
         },
+        "2-A-iv.K-2": {
+          "description": "Zidentyfikuj własciwości, które sprawiają, że każdy obiekt w kolekcji jest niepowtarzalny, i utwórz tabelę wlaściwości, aby uporządkować obiekty."
+        },
         "2-AP-10": {
           "description": "Użyj schematów blokowych i/lub pseudokodu, aby rozwiązać złożone problemy w postaci algorytmów."
         },
@@ -862,6 +907,15 @@
         },
         "2-AP-19": {
           "description": "Dokumentuj programy, aby ułatwić ich śledzenie, testowanie i debugowanie."
+        },
+        "2-B-i.K-2": {
+          "description": "Zilustruj następny możliwy stan w grze tic-tac-toe z uwzględnieniem stanu początkowego"
+        },
+        "2-C-i.K-2": {
+          "description": "Zidentyfikuj problemy jako problemy klasyfikacji lub problemy z wyszukiwania."
+        },
+        "2-C-ii.K-2": {
+          "description": "Modeluj użycie algorytmu klasyfikacji lub wyszukiwania do rozwiązania problemu."
         },
         "2-CS-01": {
           "description": "Zalecanie ulepszeń w projektowaniu urządzeń komputerowych, w oparciu o analizę interakcji użytkowników z urządzeniami."
@@ -1254,7 +1308,7 @@
           "description": "Rozwijaj zrozumienie kulturowe i globalną świadomość poprzez angażowanie się w uczących się innych kultur."
         },
         "2.d": {
-          "description": "Wkład w zespoły projektowe do tworzenia oryginalnych prac lub rozwiązywania problemów."
+          "description": "Pomóż zespołom projektowym przy tworzeniu oryginalnych prac lub rozwiązań problemów."
         },
         "3-5-ETS1-1": {
           "description": "Zdefiniuj prosty problem projektowy odzwierciedlający potrzebę lub zapotrzebowanie, który zawiera określone kryteria sukcesu i ograniczenia dotyczące materiałów, czasu lub kosztów."
@@ -1994,6 +2048,27 @@
         "3B-NI-04": {
           "description": "Porównaj sposoby ochrony urządzeń i informacji przed nieuprawnionym dostępem stosowane przez różnych twórców oprogramowania."
         },
+        "4-A-i.9-12": {
+          "description": "Zidentyfikuj fragmenty tekstu, które byłyby trudne do zrozumienia dla komputera, i wyjaśnij dlaczego."
+        },
+        "4-A-ii.9-12": {
+          "description": "Wyjaśnij, jak zrozumienie zdania może być trudne dla komputera, opisując wiele znaczeń danego słowa."
+        },
+        "4-A-iv.6-8": {
+          "description": "Opisz niektóre zadania NLP (Natural Language Processing), które mogą wykonywać komputery i wyjaśnij, jak działają."
+        },
+        "4-B-i.3-5": {
+          "description": "Wyjaśnij, jaka wiedza byłaby wymagana, aby komputer zrozumiał opowieść"
+        },
+        "4-B-i.6-8": {
+          "description": "Wyjaśnij wiedzę potrzebną komputerowi do rozwiązania naiwnego problemu rozumowania fizyki."
+        },
+        "4-C-i.3-5": {
+          "description": "Zilustruj, jak komputery mogą oceniać emocjonalny ton tekstu."
+        },
+        "4-C-i.6-8": {
+          "description": "Opisz, w jaki sposób komputery wykorzystują różne rodzaje sygnałów do rozpoznawania ludzkich stanów emocjonalnych."
+        },
         "4-ESS1-1": {
           "description": "Zidentyfikuj dowody ze wzorów w formacjach skalnych i skamieniałości w warstwach skalnych, aby uzasadnić wyjaśnienie zmian w krajobrazie w czasie."
         },
@@ -2422,6 +2497,27 @@
         },
         "4.d": {
           "description": "Korzystaj z wielu procesorów i zróżnicowanych perspektyw, aby badać rozwiązania alternatywne."
+        },
+        "5-A-i.K-2": {
+          "description": "Oceń, w jaki sposób decyzja wpływa na ludzi w różny sposób."
+        },
+        "5-A-ii.K-2": {
+          "description": "Omów cechy systemów, które są uczciwe i niesprawiedliwe oraz wpływ na ludzi, gdy system jest niesprawiedliwy."
+        },
+        "5-B-i.K-2": {
+          "description": "Zidentyfikuj urządzenia w życiu codziennym, które wykorzystują technologie sztucznej inteligencji"
+        },
+        "5-C-i.K-2": {
+          "description": "Zidentyfikuj obecne zastosowania sztucznej inteligencji i ich wpływ na społeczeństwo."
+        },
+        "5-C-ii.K-2": {
+          "description": "Opisz niektóre miejsca pracy, które już nie istnieją z powodu postępu technologicznego."
+        },
+        "5-D-i.9-12": {
+          "description": "Utwórz nową aplikację, korzystając z niektórych narzędzi AI dostępnych w wybranym przez Ciebie środowisku programowania."
+        },
+        "5-D-ii.K-2": {
+          "description": "Opisz, w jaki sposób sztuczna inteligencja może być wykorzystana do rozwiązania problemu społecznego"
         },
         "5-ESS1-1": {
           "description": "Poparcie argument, że różnice w pozornej jasności Słońca w porównaniu z innymi gwiazdami wynikają z ich względnych odległości od Ziemi."

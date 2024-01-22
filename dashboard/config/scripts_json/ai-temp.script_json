@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "ai-temp",
-    "serialized_at": "2023-08-01 21:31:25 UTC",
+    "serialized_at": "2023-09-06 16:43:07 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1222,11 +1222,44 @@
       "key": "dcbcf9bb-8865-4af8-8046-e973665ad029",
       "position": 1,
       "properties": {
-        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.",
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.",
         "name": "Preparing for the Unit"
       },
       "seeding_key": {
         "activity_section.key": "dcbcf9bb-8865-4af8-8046-e973665ad029",
+        "lesson_activity.key": "05eb47de-456c-419b-9582-ad9e3bd96cf0"
+      }
+    },
+    {
+      "key": "aa421126-4b98-4cee-85d3-349eec254001",
+      "position": 2,
+      "properties": {
+        "description": "**Augmenting the Lesson with AI:** After reading through the lesson and getting an understanding of the flow, student resources, and lesson outcomes: consider using an AI chatbot to provide additional recommendations for how to fit this lesson to your classroom and your students. You can learn more about how to leverage AI as a partner in lesson design in our AI 101 Video [Demystifying AI for Educators](https://youtu.be/SgGVlTTXxMI).\n\nHere are some potential prompts you could consider specifically for this lesson using an internet-connected chatbot such as Bing AI or Perplexity AI. Click the bolded text to expand and see the example prompt."
+      },
+      "seeding_key": {
+        "activity_section.key": "aa421126-4b98-4cee-85d3-349eec254001",
+        "lesson_activity.key": "05eb47de-456c-419b-9582-ad9e3bd96cf0"
+      }
+    },
+    {
+      "key": "0d305aa2-6e87-4387-b7bb-0182ddd6cacb",
+      "position": 3,
+      "properties": {
+        "description": "::: details [**I want to provide differentiation for a specific group of students.**]\n_Replace the text in [brackets] with information specific to your class, like a Mad-Lib_\n\nI need to differentiate this lesson ([link]) for my [grade level] students. Specifically, I need help making this lesson accessible for [specific group of students]. Please identify 3 points in the lesson where these students might struggle, then suggest three specific, unique strategies I can use to better adapt the lesson for these students. Do not include strategies that will require additional materials I am unlikely to have on hand, such as decks of cards or magnets. For each strategy, point to a specific place in the lesson where that strategy can be implemented. One strategy I have successfully used in the past is [successful strategy], so strategies similar in effectiveness and implementation to that one would be great.\n\n:::"
+      },
+      "seeding_key": {
+        "activity_section.key": "0d305aa2-6e87-4387-b7bb-0182ddd6cacb",
+        "lesson_activity.key": "05eb47de-456c-419b-9582-ad9e3bd96cf0"
+      }
+    },
+    {
+      "key": "18aecaea-a84d-43d1-8008-c68a26922d41",
+      "position": 4,
+      "properties": {
+        "description": "::: details [**I would like to connect the content in this lesson to locally or personally relevant topics.**]\n_Replace the text in [brackets] with information specific to your class, like a Mad-Lib_\n\nI am teaching this lesson ([link]) to my [grade level] students. I need help making specific, relevant connections to my students’ lives. Please examine the lesson I provided and identify 3 areas where the lesson would benefit from personally relevant examples. For each of those areas, give a highly interesting and relevant example or metaphor that my students might understand that I can connect the content to. Choose examples that have direct and clear relevance to the topic, rather than examples that dilute students' understanding. Some topics that interest my students are [list of topics].\n\n:::"
+      },
+      "seeding_key": {
+        "activity_section.key": "18aecaea-a84d-43d1-8008-c68a26922d41",
         "lesson_activity.key": "05eb47de-456c-419b-9582-ad9e3bd96cf0"
       }
     },

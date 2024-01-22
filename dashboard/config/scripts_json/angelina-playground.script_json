@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "angelina-playground",
-    "serialized_at": "2023-08-25 18:30:25 UTC",
+    "serialized_at": "2023-12-21 17:09:11 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -21,21 +21,70 @@
   },
   "lesson_groups": [
     {
-      "key": "",
-      "user_facing": false,
+      "key": "lessonGroup-2",
+      "user_facing": true,
       "position": 1,
       "properties": {
+        "display_name": "Cyber"
       },
       "seeding_key": {
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "angelina-playground"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "CSD"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "angelina-playground"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Coding w/AI"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "angelina-playground"
+      }
+    },
+    {
+      "key": "lessonGroup-6",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "PL Stuff"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "angelina-playground"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "Random"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground"
       }
     }
   ],
   "lessons": [
     {
-      "key": "lesson-2",
-      "name": "OG States of Matter",
+      "key": "lesson-3",
+      "name": "CTF Flash Talk",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -43,14 +92,14 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "angelina-playground"
       }
     },
     {
-      "key": "lesson-1",
-      "name": "States of Matter",
+      "key": "lesson-4",
+      "name": "CSS Flex & Grid",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -58,14 +107,14 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "angelina-playground"
       }
     },
     {
-      "key": "lesson-3",
-      "name": "CTF Flash Talk",
+      "key": "lesson-5",
+      "name": "Assessments",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -73,14 +122,14 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "angelina-playground"
       }
     },
     {
-      "key": "lesson-4",
-      "name": "CSS Flex & Grid",
+      "key": "lesson-6",
+      "name": "Lesson 1",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -88,120 +137,111 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground"
-      }
-    },
-    {
-      "key": "lesson-5",
-      "name": "Assessments",
-      "absolute_position": 5,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 5,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "angelina-playground"
       }
     },
     {
       "key": "Introduction to Creating Apps with Devices ",
       "name": "Introduction to Creating Apps with Devices ",
-      "absolute_position": 6,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 6,
+      "relative_position": 5,
       "properties": {
         "overview": "**You will:**\n\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground.\n\n**Suggested time:** 20 minutes",
         "student_overview": "**You will:**\n\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground.\n\n**Suggested time:** 20 minutes"
       },
       "seeding_key": {
         "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground"
       }
     },
     {
       "key": "Experiment with Inputs and Outputs",
       "name": "Experiment with Inputs and Outputs",
-      "absolute_position": 7,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 7,
+      "relative_position": 6,
       "properties": {
         "overview": "**You will:**\n\n* Use board inputs such as buttons and toggle switches to control app events and board outputs. \n* Program apps to control board outputs such as the buzzer and LED lights. \n\n**Suggested time:** 35 minutes",
         "student_overview": "**You will:**\n\n* Use board inputs such as buttons and toggle switches to control app events and board outputs. \n* Program apps to control board outputs such as the buzzer and LED lights. \n\n**Suggested time:** 35 minutes"
       },
       "seeding_key": {
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground"
       }
     },
     {
       "key": "Engage with Prototypes",
       "name": "Engage with Prototypes",
-      "absolute_position": 8,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 8,
+      "relative_position": 7,
       "properties": {
         "overview": "**You will:**\n\n* Explore sample apps and prototypes. \n\n**Suggested time:** 20 minutes",
         "student_overview": "**You will:**\n\n* Explore sample apps and prototypes. \n\n**Suggested time:** 20 minutes"
       },
       "seeding_key": {
         "lesson.key": "Engage with Prototypes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground"
       }
     },
     {
       "key": "Teaching Creating Apps for Devices ",
       "name": "Teaching Creating Apps for Devices ",
-      "absolute_position": 9,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 9,
+      "relative_position": 8,
       "properties": {
         "overview": "**You will:**\n\n* Consider the role of the teacher in a computer science classroom.\n* Learn about authentic CS practices that students will develop throughout the Creating Apps for Devices unit.\n* Reflect on how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.\n\n**Suggested Time:** 25 minutes",
         "student_overview": "**You will:**\n\n* Consider the role of the teacher in a computer science classroom.\n* Learn about authentic CS practices that students will develop throughout the Creating Apps for Devices unit.\n* Reflect on how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.\n\n**Suggested Time:** 25 minutes"
       },
       "seeding_key": {
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "angelina-playground"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "OG States of Matter",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "States of Matter",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground"
       }
     }
   ],
   "lesson_activities": [
-    {
-      "key": "6a61f803-ec43-4dfb-a58c-a5db9a5a466a",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "6a61f803-ec43-4dfb-a58c-a5db9a5a466a",
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground"
-      }
-    },
-    {
-      "key": "889092de-266a-4959-8ef5-177592f16b97",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "889092de-266a-4959-8ef5-177592f16b97",
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground"
-      }
-    },
     {
       "key": "458fbc93-ddf9-4ea7-889d-c6d08289e56f",
       "position": 1,
@@ -210,7 +250,7 @@
       "seeding_key": {
         "lesson_activity.key": "458fbc93-ddf9-4ea7-889d-c6d08289e56f",
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "angelina-playground"
       }
     },
@@ -222,7 +262,7 @@
       "seeding_key": {
         "lesson_activity.key": "ec84671c-709d-4e0b-87d3-a84e7a74d70d",
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "angelina-playground"
       }
     },
@@ -234,7 +274,19 @@
       "seeding_key": {
         "lesson_activity.key": "b6b6a0ab-1831-444e-bc42-c5839d36357f",
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "angelina-playground"
+      }
+    },
+    {
+      "key": "b3990805-ba82-4fcb-9892-fc1af95373cc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b3990805-ba82-4fcb-9892-fc1af95373cc",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "angelina-playground"
       }
     },
@@ -246,7 +298,7 @@
       "seeding_key": {
         "lesson_activity.key": "4994ceed-0dba-4c93-9d97-83d4a3548576",
         "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground"
       }
     },
@@ -258,7 +310,7 @@
       "seeding_key": {
         "lesson_activity.key": "992d814a-f359-4481-b127-c206848ec3a0",
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground"
       }
     },
@@ -270,7 +322,7 @@
       "seeding_key": {
         "lesson_activity.key": "4be97093-986c-4b7e-b335-7f4626bd9eab",
         "lesson.key": "Engage with Prototypes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground"
       }
     },
@@ -282,32 +334,36 @@
       "seeding_key": {
         "lesson_activity.key": "2b7f05ea-baa5-450f-8bea-4c7d88c91151",
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "angelina-playground"
+      }
+    },
+    {
+      "key": "6a61f803-ec43-4dfb-a58c-a5db9a5a466a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6a61f803-ec43-4dfb-a58c-a5db9a5a466a",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground"
+      }
+    },
+    {
+      "key": "889092de-266a-4959-8ef5-177592f16b97",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "889092de-266a-4959-8ef5-177592f16b97",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground"
       }
     }
   ],
   "activity_sections": [
-    {
-      "key": "e0dccd0c-394e-4c22-853b-2f797509b16c",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c",
-        "lesson_activity.key": "6a61f803-ec43-4dfb-a58c-a5db9a5a466a"
-      }
-    },
-    {
-      "key": "59eadfd3-43bd-4608-ae74-8763daf78b0b",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b",
-        "lesson_activity.key": "889092de-266a-4959-8ef5-177592f16b97"
-      }
-    },
     {
       "key": "13a3c920-5774-4483-8939-a14351a17f40",
       "position": 1,
@@ -352,8 +408,30 @@
       }
     },
     {
-      "key": "99641234-92ff-4ee2-bd19-75b04bbf2129",
+      "key": "d9097317-d713-4028-a173-89b4f474c38e",
       "position": 2,
+      "properties": {
+        "progression_name": "flexbox"
+      },
+      "seeding_key": {
+        "activity_section.key": "d9097317-d713-4028-a173-89b4f474c38e",
+        "lesson_activity.key": "ec84671c-709d-4e0b-87d3-a84e7a74d70d"
+      }
+    },
+    {
+      "key": "5a136d29-226c-4603-b487-4ea36814905f",
+      "position": 3,
+      "properties": {
+        "progression_name": "U2 L10 Starter Code - NEW User Personas"
+      },
+      "seeding_key": {
+        "activity_section.key": "5a136d29-226c-4603-b487-4ea36814905f",
+        "lesson_activity.key": "ec84671c-709d-4e0b-87d3-a84e7a74d70d"
+      }
+    },
+    {
+      "key": "99641234-92ff-4ee2-bd19-75b04bbf2129",
+      "position": 4,
       "properties": {
         "progression_name": "U3 Samples New Mini Project"
       },
@@ -364,7 +442,7 @@
     },
     {
       "key": "623ee432-c38f-4678-87ee-a18e96e4789c",
-      "position": 3,
+      "position": 5,
       "properties": {
         "description": "[`rotation`(#f78183)](/docs/ide/gamelab/expressions/rotation)\n\n[`randomNumber();`(#FFB74D)](/docs/ide/gamelab/expressions/randomNumber)\n\n[`x`(#f78183)](/docs/ide/gamelab/expressions/x)\n\n[`y`(#f78183)](/docs/ide/gamelab/expressions/y)\n\n[`x = ___;`(#BB77C7)](/docs/ide/gamelab/expressions/assign_x)\n\n[`noFill()`(#4dd0e1)](/docs/ide/gamelab/expressions/noFill)\n\n\n\n\n[`stroke()`(#4dd0e1)](/docs/ide/gamelab/expressions/stroke)\n\n[`ellipse()`(#4dd0e1)](/docs/ide/gamelab/expressions/ellipse)\n\n[`strokeWeight()`(#4dd0e1)](/docs/ide/gamelab/expressions/strokeWeight)\n\n[`scale`(#f78183)](/docs/ide/gamelab/expressions/scale)\n\n[`background()`(#4dd0e1)](/docs/ide/gamelab/expressions/background)\n\n[`console.log()`(#BB77C7)](/docs/ide/gamelab/expressions/console.log)\n\n[`text()`(#4dd0e1)](/docs/ide/gamelab/expressions/text)\n\n[`if ()`(#64B5F6)](/docs/ide/gamelab/expressions/ifBlock)\n\n[`< `(#FFB74D)](/docs/ide/gamelab/expressions/lessThanOperator)\n\n[`setAnimation(label)`(#f78183)](/docs/ide/gamelab/expressions/setAnimation)\n\n[`var sprite = createSprite(x, y)`(#f78183)](/docs/ide/gamelab/expressions/createSprite)\n\n[`visible`(#f78183)](/docs/ide/gamelab/expressions/visible)\n\n[`World.mouseY`(#fff176)](/docs/ide/gamelab/expressions/World.mouseY)\n\n[`if () / else`(#64B5F6)](/docs/ide/gamelab/expressions/ifElseBlock)\n\n[`mouseDown()`(#fff176)](/docs/ide/gamelab/expressions/mouseDown)\n\n[`World.frameRate`(#fff176)](/docs/ide/gamelab/expressions/World.frameRate)\n\n[`mouseDidMove()`(#fff176)](/docs/ide/gamelab/expressions/mouseDidMove)\n\n[`velocityX`(#f78183)](/docs/ide/gamelab/expressions/velocityX)\n\n[`rotationSpeed`(#f78183)](/docs/ide/gamelab/expressions/rotationSpeed)\n\n[`keyWentDown()`(#fff176)](/docs/ide/gamelab/expressions/keyWentDown)\n\n[`sprite.isTouching()`(#f78183)](/docs/ide/gamelab/expressions/isTouching)\n\n[`debug`(#f78183)](/docs/ide/gamelab/expressions/debug)\n\n[`setCollider()`(#f78183)](/docs/ide/gamelab/expressions/setCollider)\n\n[`sprite.displace()`(#f78183)](/docs/ide/gamelab/expressions/displace)\n\n[`sprite.collide()`(#f78183)](/docs/ide/gamelab/expressions/collide)\n\n[`sprite.bounce()`(#f78183)](/docs/ide/gamelab/expressions/bounce)\n\n[`sprite.bounceOff()`(#f78183)](/docs/ide/gamelab/expressions/bounceOff)\n\n[`sprite.bounciness`(#f78183)](/docs/ide/gamelab/expressions/bounciness)\n\n[`myFunction();`(#68D995)](/docs/ide/gamelab/expressions/callMyFunction)\n\n[`function myFunction() {}`(#68D995)](/docs/ide/gamelab/expressions/functionParams_none)\n\n[`fill()`(#4dd0e1)](/docs/ide/gamelab/expressions/fill)\n\n[`function draw() {}`(#68D995)](/docs/ide/gamelab/expressions/draw)\n\n[`keyDown()`(#fff176)](/docs/ide/gamelab/expressions/keyDown)\n\n[`mouseDown()`(#fff176)](/docs/ide/gamelab/expressions/mouseDown)\n\n[`__ == __`(#FFB74D)](/docs/ide/applab/expressions/equalityOperator)"
       },
@@ -381,6 +459,16 @@
       "seeding_key": {
         "activity_section.key": "1c5b870f-880c-4368-8012-248ef03ebbe7",
         "lesson_activity.key": "b6b6a0ab-1831-444e-bc42-c5839d36357f"
+      }
+    },
+    {
+      "key": "7dc1a6e1-18a7-46f0-9f07-63eb2871bbbd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7dc1a6e1-18a7-46f0-9f07-63eb2871bbbd",
+        "lesson_activity.key": "b3990805-ba82-4fcb-9892-fc1af95373cc"
       }
     },
     {
@@ -624,731 +712,31 @@
         "activity_section.key": "64b36d56-4b1c-41fc-961d-b2f8cd8db74a",
         "lesson_activity.key": "2b7f05ea-baa5-450f-8bea-4c7d88c91151"
       }
+    },
+    {
+      "key": "e0dccd0c-394e-4c22-853b-2f797509b16c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c",
+        "lesson_activity.key": "6a61f803-ec43-4dfb-a58c-a5db9a5a466a"
+      }
+    },
+    {
+      "key": "59eadfd3-43bd-4608-ae74-8763daf78b0b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b",
+        "lesson_activity.key": "889092de-266a-4959-8ef5-177592f16b97"
+      }
     }
   ],
   "script_levels": [
     {
       "chapter": 1,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_Particles_StatesOfMatter_L1"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_Particles_StatesOfMatter_L1"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      },
-      "level_keys": [
-        "csc_Particles_StatesOfMatter_L1"
-      ]
-    },
-    {
-      "chapter": 2,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_Paricles_StatesOfMatter_Predict"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_Paricles_StatesOfMatter_Predict"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      },
-      "level_keys": [
-        "csc_Paricles_StatesOfMatter_Predict"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_Paricles_StatesOfMatter_L2"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_Paricles_StatesOfMatter_L2"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      },
-      "level_keys": [
-        "csc_Paricles_StatesOfMatter_L2"
-      ]
-    },
-    {
-      "chapter": 4,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_Particles_StatesOfMatter_L3-Solid"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_Particles_StatesOfMatter_L3-Solid"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      },
-      "level_keys": [
-        "csc_Particles_StatesOfMatter_L3-Solid"
-      ]
-    },
-    {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_Paricles_StatesOfMatter_L4"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_Paricles_StatesOfMatter_L4"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      },
-      "level_keys": [
-        "csc_Paricles_StatesOfMatter_L4"
-      ]
-    },
-    {
-      "chapter": 6,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_Paricles_StatesOfMatter_L5"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_Paricles_StatesOfMatter_L5"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      },
-      "level_keys": [
-        "csc_Paricles_StatesOfMatter_L5"
-      ]
-    },
-    {
-      "chapter": 7,
-      "position": 7,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_Paricles_StatesOfMatter_L6"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_Paricles_StatesOfMatter_L6"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      },
-      "level_keys": [
-        "csc_Paricles_StatesOfMatter_L6"
-      ]
-    },
-    {
-      "chapter": 8,
-      "position": 8,
-      "activity_section_position": 8,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_Particles_StatesOfMatter_L7-Liquid"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_Particles_StatesOfMatter_L7-Liquid"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      },
-      "level_keys": [
-        "csc_Particles_StatesOfMatter_L7-Liquid"
-      ]
-    },
-    {
-      "chapter": 9,
-      "position": 9,
-      "activity_section_position": 9,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_Paricles_StatesOfMatter_L8"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_Paricles_StatesOfMatter_L8"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      },
-      "level_keys": [
-        "csc_Paricles_StatesOfMatter_L8"
-      ]
-    },
-    {
-      "chapter": 10,
-      "position": 10,
-      "activity_section_position": 10,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_Paricles_StatesOfMatter_L9"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_Paricles_StatesOfMatter_L9"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      },
-      "level_keys": [
-        "csc_Paricles_StatesOfMatter_L9"
-      ]
-    },
-    {
-      "chapter": 11,
-      "position": 11,
-      "activity_section_position": 11,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_Particles_StatesOfMatter_L10-Gas"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_Particles_StatesOfMatter_L10-Gas"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      },
-      "level_keys": [
-        "csc_Particles_StatesOfMatter_L10-Gas"
-      ]
-    },
-    {
-      "chapter": 12,
-      "position": 12,
-      "activity_section_position": 12,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_Paricles_StatesOfMatter_L11"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_Paricles_StatesOfMatter_L11"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      },
-      "level_keys": [
-        "csc_Paricles_StatesOfMatter_L11"
-      ]
-    },
-    {
-      "chapter": 13,
-      "position": 13,
-      "activity_section_position": 13,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_Paricles_StatesOfMatter_L12"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_Paricles_StatesOfMatter_L12"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      },
-      "level_keys": [
-        "csc_Paricles_StatesOfMatter_L12"
-      ]
-    },
-    {
-      "chapter": 14,
-      "position": 14,
-      "activity_section_position": 14,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_Paricles_StatesOfMatter_L13A Challenge"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_Paricles_StatesOfMatter_L13A Challenge"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      },
-      "level_keys": [
-        "csc_Paricles_StatesOfMatter_L13A Challenge"
-      ]
-    },
-    {
-      "chapter": 15,
-      "position": 15,
-      "activity_section_position": 15,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_Paricles_StatesOfMatter_L12 Challenge"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_Paricles_StatesOfMatter_L12 Challenge"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      },
-      "level_keys": [
-        "csc_Paricles_StatesOfMatter_L12 Challenge"
-      ]
-    },
-    {
-      "chapter": 16,
-      "position": 16,
-      "activity_section_position": 16,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_Paricles_StatesOfMatter_L14 Challenge"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_Paricles_StatesOfMatter_L14 Challenge"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      },
-      "level_keys": [
-        "csc_Paricles_StatesOfMatter_L14 Challenge"
-      ]
-    },
-    {
-      "chapter": 17,
-      "position": 17,
-      "activity_section_position": 17,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_Paricles_StatesOfMatter_L15 Challenge"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_Paricles_StatesOfMatter_L15 Challenge"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      },
-      "level_keys": [
-        "csc_Paricles_StatesOfMatter_L15 Challenge"
-      ]
-    },
-    {
-      "chapter": 18,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_Paricles_StatesOfMatter_Predict_-particles"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_Paricles_StatesOfMatter_Predict_-particles"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
-      },
-      "level_keys": [
-        "csc_Paricles_StatesOfMatter_Predict_-particles"
-      ]
-    },
-    {
-      "chapter": 19,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_Particles_StatesOfMatter_L7-Liquid_-particles"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_Particles_StatesOfMatter_L7-Liquid_-particles"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
-      },
-      "level_keys": [
-        "csc_Particles_StatesOfMatter_L7-Liquid_-particles"
-      ]
-    },
-    {
-      "chapter": 20,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_particles_solid_predict"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_particles_solid_predict"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
-      },
-      "level_keys": [
-        "csc_particles_solid_predict"
-      ]
-    },
-    {
-      "chapter": 21,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_Particles_StatesOfMatter_L3-Solid_-particles"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_Particles_StatesOfMatter_L3-Solid_-particles"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
-      },
-      "level_keys": [
-        "csc_Particles_StatesOfMatter_L3-Solid_-particles"
-      ]
-    },
-    {
-      "chapter": 22,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_particles_gas_predict"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_particles_gas_predict"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
-      },
-      "level_keys": [
-        "csc_particles_gas_predict"
-      ]
-    },
-    {
-      "chapter": 23,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_Particles_StatesOfMatter_L10-Gas_-particles"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_Particles_StatesOfMatter_L10-Gas_-particles"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
-      },
-      "level_keys": [
-        "csc_Particles_StatesOfMatter_L10-Gas_-particles"
-      ]
-    },
-    {
-      "chapter": 24,
-      "position": 7,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_particles_your turn"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_particles_your turn"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
-      },
-      "level_keys": [
-        "csc_particles_your turn"
-      ]
-    },
-    {
-      "chapter": 25,
-      "position": 8,
-      "activity_section_position": 8,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseF_video_introSpriteLab_-2022-2"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseF_video_introSpriteLab_-2022-2"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
-      },
-      "level_keys": [
-        "CourseF_video_introSpriteLab_-2022-2"
-      ]
-    },
-    {
-      "chapter": 26,
-      "position": 9,
-      "activity_section_position": 9,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_Paricles_StatesOfMatter_setbackground"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_Paricles_StatesOfMatter_setbackground"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
-      },
-      "level_keys": [
-        "csc_Paricles_StatesOfMatter_setbackground"
-      ]
-    },
-    {
-      "chapter": 27,
-      "position": 10,
-      "activity_section_position": 10,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_Paricles_StatesOfMatter_createSprites"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_Paricles_StatesOfMatter_createSprites"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
-      },
-      "level_keys": [
-        "csc_Paricles_StatesOfMatter_createSprites"
-      ]
-    },
-    {
-      "chapter": 28,
-      "position": 11,
-      "activity_section_position": 11,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_Paricles_StatesOfMatter_magnifyingCutout"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_Paricles_StatesOfMatter_magnifyingCutout"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
-      },
-      "level_keys": [
-        "csc_Paricles_StatesOfMatter_magnifyingCutout"
-      ]
-    },
-    {
-      "chapter": 29,
-      "position": 12,
-      "activity_section_position": 12,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_Paricles_StatesOfMatter_addBehavior"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_Paricles_StatesOfMatter_addBehavior"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
-      },
-      "level_keys": [
-        "csc_Paricles_StatesOfMatter_addBehavior"
-      ]
-    },
-    {
-      "chapter": 30,
-      "position": 13,
-      "activity_section_position": 13,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "states of matter matching"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "states of matter matching"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "angelina-playground",
-        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
-      },
-      "level_keys": [
-        "states of matter matching"
-      ]
-    },
-    {
-      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1364,7 +752,7 @@
           "CTF Trivia 22"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "angelina-playground",
         "activity_section.key": "13a3c920-5774-4483-8939-a14351a17f40"
       },
@@ -1373,7 +761,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 2,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1389,7 +777,7 @@
           "CTF Cryptography 22"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "angelina-playground",
         "activity_section.key": "cfe0cbd9-94cf-4ab1-b6e2-b05511159bf8"
       },
@@ -1398,7 +786,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 3,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1414,7 +802,7 @@
           "CTF Recon 22"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "angelina-playground",
         "activity_section.key": "767cdacb-8eeb-4c0b-91f0-427e33d7dcf9"
       },
@@ -1423,11 +811,14 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "web lab flex angelina experiment"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1435,7 +826,7 @@
           "web lab flex angelina experiment"
         ],
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "angelina-playground",
         "activity_section.key": "59b83b1c-6ade-44b5-be50-96eec2803e3e"
       },
@@ -1444,7 +835,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 5,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1459,7 +850,7 @@
           "web lab angelina experiment"
         ],
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "angelina-playground",
         "activity_section.key": "59b83b1c-6ade-44b5-be50-96eec2803e3e"
       },
@@ -1468,7 +859,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 6,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1483,7 +874,7 @@
           "Angelina's Place to Build Levels"
         ],
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "angelina-playground",
         "activity_section.key": "59b83b1c-6ade-44b5-be50-96eec2803e3e"
       },
@@ -1492,8 +883,171 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 7,
       "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "flexbox"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "web lab flex angelina experiment 2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "angelina-playground",
+        "activity_section.key": "d9097317-d713-4028-a173-89b4f474c38e"
+      },
+      "level_keys": [
+        "web lab flex angelina experiment 2"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "flexbox"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "web lab flex angelina experiment 3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "angelina-playground",
+        "activity_section.key": "d9097317-d713-4028-a173-89b4f474c38e"
+      },
+      "level_keys": [
+        "web lab flex angelina experiment 3"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "flexbox"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "web lab flex angelina experiment 4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "angelina-playground",
+        "activity_section.key": "d9097317-d713-4028-a173-89b4f474c38e"
+      },
+      "level_keys": [
+        "web lab flex angelina experiment 4"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "flexbox"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "web lab flex angelina experiment 5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "angelina-playground",
+        "activity_section.key": "d9097317-d713-4028-a173-89b4f474c38e"
+      },
+      "level_keys": [
+        "web lab flex angelina experiment 5"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "L10 Starter Code - Savannah"
+        ],
+        "progression": "U2 L10 Starter Code - NEW User Personas"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "L10 Starter Code - Savannah"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "angelina-playground",
+        "activity_section.key": "5a136d29-226c-4603-b487-4ea36814905f"
+      },
+      "level_keys": [
+        "L10 Starter Code - Savannah"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "L10 Starter Code - Sofia"
+        ],
+        "progression": "U2 L10 Starter Code - NEW User Personas"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "L10 Starter Code - Sofia"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "angelina-playground",
+        "activity_section.key": "5a136d29-226c-4603-b487-4ea36814905f"
+      },
+      "level_keys": [
+        "L10 Starter Code - Sofia"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "L10 Starter Code - Pedro"
+        ],
+        "progression": "U2 L10 Starter Code - NEW User Personas"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "L10 Starter Code - Pedro"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "angelina-playground",
+        "activity_section.key": "5a136d29-226c-4603-b487-4ea36814905f"
+      },
+      "level_keys": [
+        "L10 Starter Code - Pedro"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1508,7 +1062,7 @@
           "PSP U3 Sample"
         ],
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "angelina-playground",
         "activity_section.key": "99641234-92ff-4ee2-bd19-75b04bbf2129"
       },
@@ -1517,8 +1071,8 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 5,
+      "chapter": 15,
+      "position": 12,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1533,7 +1087,7 @@
           "PSP U3 Sample 2"
         ],
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "angelina-playground",
         "activity_section.key": "99641234-92ff-4ee2-bd19-75b04bbf2129"
       },
@@ -1542,7 +1096,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1557,7 +1111,7 @@
           "csp multiple answers example"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "angelina-playground",
         "activity_section.key": "1c5b870f-880c-4368-8012-248ef03ebbe7"
       },
@@ -1566,7 +1120,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1581,7 +1135,7 @@
           "CSP multiple answers example 2"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "angelina-playground",
         "activity_section.key": "1c5b870f-880c-4368-8012-248ef03ebbe7"
       },
@@ -1590,7 +1144,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 18,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1605,7 +1159,7 @@
           "matching example"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "angelina-playground",
         "activity_section.key": "1c5b870f-880c-4368-8012-248ef03ebbe7"
       },
@@ -1614,7 +1168,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 19,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -1629,7 +1183,7 @@
           "example with image"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "angelina-playground",
         "activity_section.key": "1c5b870f-880c-4368-8012-248ef03ebbe7"
       },
@@ -1638,7 +1192,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 20,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -1653,7 +1207,7 @@
           "Image between lines example"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "angelina-playground",
         "activity_section.key": "1c5b870f-880c-4368-8012-248ef03ebbe7"
       },
@@ -1662,7 +1216,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 21,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -1677,7 +1231,7 @@
           "Image in MC Options Example"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "angelina-playground",
         "activity_section.key": "1c5b870f-880c-4368-8012-248ef03ebbe7"
       },
@@ -1686,7 +1240,31 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 22,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CwAI-L1-L1-Warm up Quotes"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CwAI-L1-L1-Warm up Quotes"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "angelina-playground",
+        "activity_section.key": "7dc1a6e1-18a7-46f0-9f07-63eb2871bbbd"
+      },
+      "level_keys": [
+        "CwAI-L1-L1-Warm up Quotes"
+      ]
+    },
+    {
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1702,7 +1280,7 @@
           "VPL-CSD-PILOT-S22-CI-ModuleOverview-U6_physical-computing_-ci_ci-6-mb"
         ],
         "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "8a0fa182-9fe7-4dd8-86bc-ec7233b42c21"
       },
@@ -1711,7 +1289,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 24,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1727,7 +1305,7 @@
           "VPL-CSD-pilot-S22-CI-Unit_Overview_U6L2_physical-computing_-ci_ci-6-mb"
         ],
         "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "eed2ead4-6a10-4034-a79e-7eb328e2676d"
       },
@@ -1736,7 +1314,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 25,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -1752,7 +1330,7 @@
           "VPL-CSD-Summer-CI-Unit_PSP-U6L3_ci-6-mb"
         ],
         "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "eed2ead4-6a10-4034-a79e-7eb328e2676d"
       },
@@ -1761,7 +1339,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 26,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -1777,7 +1355,7 @@
           "SP-VPL-PC-22-PSP-vid_ci-6-mb"
         ],
         "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "eed2ead4-6a10-4034-a79e-7eb328e2676d"
       },
@@ -1786,7 +1364,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 27,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -1802,7 +1380,7 @@
           "SP-VPL-PC-22-LessonTypes_-ci_ci-6-mb"
         ],
         "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "eed2ead4-6a10-4034-a79e-7eb328e2676d"
       },
@@ -1811,7 +1389,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 28,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -1827,7 +1405,7 @@
           "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_setup_ci-6-mb"
         ],
         "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "066c9045-4688-4f77-b58d-d6a65588666e"
       },
@@ -1836,7 +1414,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 29,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -1852,7 +1430,7 @@
           "VPL-CSD-CI-U6-MB_setup_ci-6-mb"
         ],
         "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "066c9045-4688-4f77-b58d-d6a65588666e"
       },
@@ -1861,7 +1439,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 30,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -1877,7 +1455,7 @@
           "VPL-CSD-PILOT-22-CI-mod6-MakerApp-appLab_physical-computing_-c_ci-6-mb"
         ],
         "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "066c9045-4688-4f77-b58d-d6a65588666e"
       },
@@ -1886,7 +1464,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 31,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -1902,7 +1480,7 @@
           "VPL-CSD-Summer-CI-MB Test-U6L1_2023"
         ],
         "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "066c9045-4688-4f77-b58d-d6a65588666e"
       },
@@ -1911,7 +1489,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1927,7 +1505,7 @@
           "VPL-CSD-PILOT-S22-CI-Overview-U6L3_physical-computing_-ci_ci-6-mb"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "09c020b2-5ce1-4ffb-b180-b900c80caaa4"
       },
@@ -1936,7 +1514,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1952,7 +1530,7 @@
           "VPL-CSD-PILOT-S22-CI6-CSD circuit video_ci-6-mb"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "09c020b2-5ce1-4ffb-b180-b900c80caaa4"
       },
@@ -1961,7 +1539,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1977,7 +1555,7 @@
           "VPL-CSD-PILOT-S22-CI-mod 6- lesson3-inputOutput-Ove_physical-c_ci-6-mb"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "8f9f2cba-663b-488d-bff4-88217b70ff7b"
       },
@@ -1986,7 +1564,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 35,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -2002,7 +1580,7 @@
           "VPL-CSD-S23-CI-U6-MB-Back-inputOutput-ci-6-mb"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "8f9f2cba-663b-488d-bff4-88217b70ff7b"
       },
@@ -2011,7 +1589,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 36,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -2027,7 +1605,7 @@
           "VPL-CSD-Summer-CI-U6 - MB Board Outputs"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "8f9f2cba-663b-488d-bff4-88217b70ff7b"
       },
@@ -2036,7 +1614,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 37,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -2052,7 +1630,7 @@
           "VPL-CSD-CI-U6-Board Inputs-MB"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "8f9f2cba-663b-488d-bff4-88217b70ff7b"
       },
@@ -2061,7 +1639,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 38,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -2077,7 +1655,7 @@
           "VPL-CSD-CI-U6- Board Inputs-MB"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "8f9f2cba-663b-488d-bff4-88217b70ff7b"
       },
@@ -2086,7 +1664,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 39,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -2102,7 +1680,7 @@
           "VPL-CSD-Summer-CI-U6-If Variables"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "83d672bd-f6e7-4278-aa22-6d686f58cb77"
       },
@@ -2111,7 +1689,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 40,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -2127,7 +1705,7 @@
           "VPL-CSD-Summer-U6-If Variables-Counter-MB"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "83d672bd-f6e7-4278-aa22-6d686f58cb77"
       },
@@ -2136,7 +1714,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 41,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -2152,7 +1730,7 @@
           "VPL-CSD-Summer-U6-If Variables-MB-L8"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "83d672bd-f6e7-4278-aa22-6d686f58cb77"
       },
@@ -2161,7 +1739,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 42,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -2177,7 +1755,7 @@
           "VPL-CSD-CI-U6MB-Predict-Combine Inputs"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "8276a27c-6472-41c5-bfa8-ff2f4ce519d6"
       },
@@ -2186,7 +1764,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 43,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -2202,7 +1780,7 @@
           "VPL-CSD-CI-U6MB-Combine Inputs2"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "8276a27c-6472-41c5-bfa8-ff2f4ce519d6"
       },
@@ -2211,7 +1789,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 44,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
@@ -2227,7 +1805,7 @@
           "VPL-CSD-CI-U6MB-Combine Inputs-Sliders"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "8276a27c-6472-41c5-bfa8-ff2f4ce519d6"
       },
@@ -2236,7 +1814,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 45,
       "position": 14,
       "activity_section_position": 4,
       "assessment": false,
@@ -2252,7 +1830,7 @@
           "VPL-CSD-CI-U6MB-Combine Inputs-TicTacToe"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "8276a27c-6472-41c5-bfa8-ff2f4ce519d6"
       },
@@ -2261,7 +1839,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 46,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -2277,7 +1855,7 @@
           "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C_physical-c_ci-6-mb"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "a7512515-0737-43f9-9264-b8ad8cb8c1f1"
       },
@@ -2286,7 +1864,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2302,7 +1880,7 @@
           "VPL-CSD-PILOT-S22-CI-Overview-U6L4_physical-computing_-ci_ci-6-mb"
         ],
         "lesson.key": "Engage with Prototypes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "2507d5f5-946b-4c72-b5d9-f09a9f35447e"
       },
@@ -2311,7 +1889,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2327,7 +1905,7 @@
           "VPL-CSD-CI-U6MB-Sensors-Play"
         ],
         "lesson.key": "Engage with Prototypes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "49d3002c-58f9-4e82-a17a-125924bb8b8e"
       },
@@ -2336,7 +1914,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 49,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -2352,7 +1930,7 @@
           "VPL-CSD-CI-U6MB-Accelerometer-Predict"
         ],
         "lesson.key": "Engage with Prototypes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "49d3002c-58f9-4e82-a17a-125924bb8b8e"
       },
@@ -2361,7 +1939,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 50,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -2377,7 +1955,7 @@
           "VPL-CSD-PILOT-S22-CI-CSD U6 - Music - Piano_ci-6-mb"
         ],
         "lesson.key": "Engage with Prototypes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "58fe1fd6-cf63-4122-8fbf-231b869a957e"
       },
@@ -2386,7 +1964,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 51,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -2402,7 +1980,7 @@
           "VPL-CSD-CI-U6MB-FunctionsWParameters"
         ],
         "lesson.key": "Engage with Prototypes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "58fe1fd6-cf63-4122-8fbf-231b869a957e"
       },
@@ -2411,7 +1989,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 52,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -2427,7 +2005,7 @@
           "VPL-CSD-PILOT-S22-CI-CSD U6 - Interactive Art - Rev_ci-6-mb"
         ],
         "lesson.key": "Engage with Prototypes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "58fe1fd6-cf63-4122-8fbf-231b869a957e"
       },
@@ -2436,7 +2014,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 53,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -2452,7 +2030,7 @@
           "VPL-CSD-PILOT-22-CI-mod6-Sensor Overview_physical-computing_-c_ci-6-mb"
         ],
         "lesson.key": "Engage with Prototypes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "58fe1fd6-cf63-4122-8fbf-231b869a957e"
       },
@@ -2461,7 +2039,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 54,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -2477,7 +2055,7 @@
           "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U6L5C_physical-c_ci-6-mb"
         ],
         "lesson.key": "Engage with Prototypes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "dad976f4-d68a-4959-9782-ef67eb786294"
       },
@@ -2486,7 +2064,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 55,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -2502,7 +2080,7 @@
           "-VPL-CSD-PILOT-summer22-navigation_2023"
         ],
         "lesson.key": "Engage with Prototypes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "2a9684df-61cb-4339-b47d-11b321a12e1a"
       },
@@ -2511,7 +2089,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2527,7 +2105,7 @@
           "SP-VPL-physical-computing-22-Overview-TeachingLearning_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "f59703bc-28c6-470c-96bc-a5ddb6544a3d"
       },
@@ -2536,7 +2114,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2552,7 +2130,7 @@
           "SP-VPL-PC-22-LeadLearner_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "99acd319-a38b-4fec-bc29-3e8f616bdda1"
       },
@@ -2561,7 +2139,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 58,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -2577,7 +2155,7 @@
           "SP-VPL-PC-22-LeadLearner-vid_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "99acd319-a38b-4fec-bc29-3e8f616bdda1"
       },
@@ -2586,7 +2164,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 59,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -2602,7 +2180,7 @@
           "SP-VPL-PC-22-ClassroomCulture_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "99acd319-a38b-4fec-bc29-3e8f616bdda1"
       },
@@ -2611,7 +2189,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 60,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -2627,7 +2205,7 @@
           "SP-VPL-PC-22-PairProgramming_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "de57623d-ebc6-42b9-b126-12b9e9bc4085"
       },
@@ -2636,7 +2214,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 61,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -2652,7 +2230,7 @@
           "SP-VPL-PC-22-PairProgramming-TipVid_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "de57623d-ebc6-42b9-b126-12b9e9bc4085"
       },
@@ -2661,7 +2239,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 62,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -2677,7 +2255,7 @@
           "SP-VPL-PC-22-Resources_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "de57623d-ebc6-42b9-b126-12b9e9bc4085"
       },
@@ -2686,7 +2264,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 63,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -2702,7 +2280,7 @@
           "SP-VPL-PC-22-Debugging_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "de57623d-ebc6-42b9-b126-12b9e9bc4085"
       },
@@ -2711,7 +2289,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 64,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
@@ -2727,7 +2305,7 @@
           "SP-VPL-PC-22-Debugging-TipVid_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "de57623d-ebc6-42b9-b126-12b9e9bc4085"
       },
@@ -2736,7 +2314,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 65,
       "position": 10,
       "activity_section_position": 6,
       "assessment": false,
@@ -2752,7 +2330,7 @@
           "SP-VPL-CP-22-teamworkOverview_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "de57623d-ebc6-42b9-b126-12b9e9bc4085"
       },
@@ -2761,7 +2339,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 66,
       "position": 11,
       "activity_section_position": 7,
       "assessment": false,
@@ -2777,7 +2355,7 @@
           "SP-VPL-PC-22-Strategies-StudentVideos_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "de57623d-ebc6-42b9-b126-12b9e9bc4085"
       },
@@ -2786,7 +2364,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 67,
       "position": 12,
       "activity_section_position": 8,
       "assessment": false,
@@ -2802,7 +2380,7 @@
           "SP-VPL-CP-22-ProgrammingLevelsOverview_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "de57623d-ebc6-42b9-b126-12b9e9bc4085"
       },
@@ -2811,7 +2389,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 68,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -2827,7 +2405,7 @@
           "SP-VPL-CP-22-Inclusion_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "5bb715b6-afc8-40b2-a74b-b4de8be156c8"
       },
@@ -2836,7 +2414,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 69,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -2852,7 +2430,7 @@
           "SP-VPL-PC-22-Differentiation_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "5bb715b6-afc8-40b2-a74b-b4de8be156c8"
       },
@@ -2861,7 +2439,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 70,
       "position": 15,
       "activity_section_position": 3,
       "assessment": false,
@@ -2877,7 +2455,7 @@
           "SP-VPL-PC-22-DifferentiationContinued_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "5bb715b6-afc8-40b2-a74b-b4de8be156c8"
       },
@@ -2886,7 +2464,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 71,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -2902,7 +2480,7 @@
           "SP-VPL-PC-22-Assessment_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "b14d97fa-0c80-4c8f-9263-6cbfd66baade"
       },
@@ -2911,7 +2489,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 72,
       "position": 17,
       "activity_section_position": 2,
       "assessment": false,
@@ -2927,7 +2505,7 @@
           "SP-VPL-PC-22-AssessmentPlan_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "b14d97fa-0c80-4c8f-9263-6cbfd66baade"
       },
@@ -2936,7 +2514,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 73,
       "position": 18,
       "activity_section_position": 1,
       "assessment": false,
@@ -2952,7 +2530,7 @@
           "VPL-Devices-22-post-survey_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "8c84cd20-3247-424b-8e17-9f2f5426e28f"
       },
@@ -2961,7 +2539,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 74,
       "position": 19,
       "activity_section_position": 2,
       "assessment": false,
@@ -2977,376 +2555,736 @@
           "SP-VPL-PC-22-mod2-WrapUp_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "8c84cd20-3247-424b-8e17-9f2f5426e28f"
       },
       "level_keys": [
         "SP-VPL-PC-22-mod2-WrapUp_-ci_ci-6-mb"
       ]
-    }
-  ],
-  "levels_script_levels": [
+    },
     {
+      "chapter": 75,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Particles_StatesOfMatter_L1"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_Particles_StatesOfMatter_L1",
         "script_level.level_keys": [
           "csc_Particles_StatesOfMatter_L1"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      }
+      },
+      "level_keys": [
+        "csc_Particles_StatesOfMatter_L1"
+      ]
     },
     {
+      "chapter": 76,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_Predict"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_Paricles_StatesOfMatter_Predict",
         "script_level.level_keys": [
           "csc_Paricles_StatesOfMatter_Predict"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      }
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_Predict"
+      ]
     },
     {
+      "chapter": 77,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L2"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_Paricles_StatesOfMatter_L2",
         "script_level.level_keys": [
           "csc_Paricles_StatesOfMatter_L2"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      }
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_L2"
+      ]
     },
     {
+      "chapter": 78,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Particles_StatesOfMatter_L3-Solid"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_Particles_StatesOfMatter_L3-Solid",
         "script_level.level_keys": [
           "csc_Particles_StatesOfMatter_L3-Solid"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      }
+      },
+      "level_keys": [
+        "csc_Particles_StatesOfMatter_L3-Solid"
+      ]
     },
     {
+      "chapter": 79,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L4"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_Paricles_StatesOfMatter_L4",
         "script_level.level_keys": [
           "csc_Paricles_StatesOfMatter_L4"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      }
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_L4"
+      ]
     },
     {
+      "chapter": 80,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L5"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_Paricles_StatesOfMatter_L5",
         "script_level.level_keys": [
           "csc_Paricles_StatesOfMatter_L5"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      }
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_L5"
+      ]
     },
     {
+      "chapter": 81,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L6"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_Paricles_StatesOfMatter_L6",
         "script_level.level_keys": [
           "csc_Paricles_StatesOfMatter_L6"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      }
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_L6"
+      ]
     },
     {
+      "chapter": 82,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Particles_StatesOfMatter_L7-Liquid"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_Particles_StatesOfMatter_L7-Liquid",
         "script_level.level_keys": [
           "csc_Particles_StatesOfMatter_L7-Liquid"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      }
+      },
+      "level_keys": [
+        "csc_Particles_StatesOfMatter_L7-Liquid"
+      ]
     },
     {
+      "chapter": 83,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L8"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_Paricles_StatesOfMatter_L8",
         "script_level.level_keys": [
           "csc_Paricles_StatesOfMatter_L8"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      }
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_L8"
+      ]
     },
     {
+      "chapter": 84,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L9"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_Paricles_StatesOfMatter_L9",
         "script_level.level_keys": [
           "csc_Paricles_StatesOfMatter_L9"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      }
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_L9"
+      ]
     },
     {
+      "chapter": 85,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Particles_StatesOfMatter_L10-Gas"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_Particles_StatesOfMatter_L10-Gas",
         "script_level.level_keys": [
           "csc_Particles_StatesOfMatter_L10-Gas"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      }
+      },
+      "level_keys": [
+        "csc_Particles_StatesOfMatter_L10-Gas"
+      ]
     },
     {
+      "chapter": 86,
+      "position": 12,
+      "activity_section_position": 12,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L11"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_Paricles_StatesOfMatter_L11",
         "script_level.level_keys": [
           "csc_Paricles_StatesOfMatter_L11"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      }
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_L11"
+      ]
     },
     {
+      "chapter": 87,
+      "position": 13,
+      "activity_section_position": 13,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L12"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_Paricles_StatesOfMatter_L12",
         "script_level.level_keys": [
           "csc_Paricles_StatesOfMatter_L12"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      }
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_L12"
+      ]
     },
     {
+      "chapter": 88,
+      "position": 14,
+      "activity_section_position": 14,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L13A Challenge"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_Paricles_StatesOfMatter_L13A Challenge",
         "script_level.level_keys": [
           "csc_Paricles_StatesOfMatter_L13A Challenge"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      }
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_L13A Challenge"
+      ]
     },
     {
+      "chapter": 89,
+      "position": 15,
+      "activity_section_position": 15,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L12 Challenge"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_Paricles_StatesOfMatter_L12 Challenge",
         "script_level.level_keys": [
           "csc_Paricles_StatesOfMatter_L12 Challenge"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      }
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_L12 Challenge"
+      ]
     },
     {
+      "chapter": 90,
+      "position": 16,
+      "activity_section_position": 16,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L14 Challenge"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_Paricles_StatesOfMatter_L14 Challenge",
         "script_level.level_keys": [
           "csc_Paricles_StatesOfMatter_L14 Challenge"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      }
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_L14 Challenge"
+      ]
     },
     {
+      "chapter": 91,
+      "position": 17,
+      "activity_section_position": 17,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L15 Challenge"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_Paricles_StatesOfMatter_L15 Challenge",
         "script_level.level_keys": [
           "csc_Paricles_StatesOfMatter_L15 Challenge"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
-      }
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_L15 Challenge"
+      ]
     },
     {
+      "chapter": 92,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_Predict_-particles"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_Paricles_StatesOfMatter_Predict_-particles",
         "script_level.level_keys": [
           "csc_Paricles_StatesOfMatter_Predict_-particles"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
-      }
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_Predict_-particles"
+      ]
     },
     {
+      "chapter": 93,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Particles_StatesOfMatter_L7-Liquid_-particles"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_Particles_StatesOfMatter_L7-Liquid_-particles",
         "script_level.level_keys": [
           "csc_Particles_StatesOfMatter_L7-Liquid_-particles"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
-      }
+      },
+      "level_keys": [
+        "csc_Particles_StatesOfMatter_L7-Liquid_-particles"
+      ]
     },
     {
+      "chapter": 94,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_particles_solid_predict"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_particles_solid_predict",
         "script_level.level_keys": [
           "csc_particles_solid_predict"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
-      }
+      },
+      "level_keys": [
+        "csc_particles_solid_predict"
+      ]
     },
     {
+      "chapter": 95,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Particles_StatesOfMatter_L3-Solid_-particles"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_Particles_StatesOfMatter_L3-Solid_-particles",
         "script_level.level_keys": [
           "csc_Particles_StatesOfMatter_L3-Solid_-particles"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
-      }
+      },
+      "level_keys": [
+        "csc_Particles_StatesOfMatter_L3-Solid_-particles"
+      ]
     },
     {
+      "chapter": 96,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_particles_gas_predict"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_particles_gas_predict",
         "script_level.level_keys": [
           "csc_particles_gas_predict"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
-      }
+      },
+      "level_keys": [
+        "csc_particles_gas_predict"
+      ]
     },
     {
+      "chapter": 97,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Particles_StatesOfMatter_L10-Gas_-particles"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_Particles_StatesOfMatter_L10-Gas_-particles",
         "script_level.level_keys": [
           "csc_Particles_StatesOfMatter_L10-Gas_-particles"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
-      }
+      },
+      "level_keys": [
+        "csc_Particles_StatesOfMatter_L10-Gas_-particles"
+      ]
     },
     {
+      "chapter": 98,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_particles_your turn"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_particles_your turn",
         "script_level.level_keys": [
           "csc_particles_your turn"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
-      }
+      },
+      "level_keys": [
+        "csc_particles_your turn"
+      ]
     },
     {
+      "chapter": 99,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_video_introSpriteLab_-2022-2"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "CourseF_video_introSpriteLab_-2022-2",
         "script_level.level_keys": [
           "CourseF_video_introSpriteLab_-2022-2"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
-      }
+      },
+      "level_keys": [
+        "CourseF_video_introSpriteLab_-2022-2"
+      ]
     },
     {
+      "chapter": 100,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_setbackground"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_Paricles_StatesOfMatter_setbackground",
         "script_level.level_keys": [
           "csc_Paricles_StatesOfMatter_setbackground"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
-      }
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_setbackground"
+      ]
     },
     {
+      "chapter": 101,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_createSprites"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_Paricles_StatesOfMatter_createSprites",
         "script_level.level_keys": [
           "csc_Paricles_StatesOfMatter_createSprites"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
-      }
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_createSprites"
+      ]
     },
     {
+      "chapter": 102,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_magnifyingCutout"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_Paricles_StatesOfMatter_magnifyingCutout",
         "script_level.level_keys": [
           "csc_Paricles_StatesOfMatter_magnifyingCutout"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
-      }
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_magnifyingCutout"
+      ]
     },
     {
+      "chapter": 103,
+      "position": 12,
+      "activity_section_position": 12,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_addBehavior"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csc_Paricles_StatesOfMatter_addBehavior",
         "script_level.level_keys": [
           "csc_Paricles_StatesOfMatter_addBehavior"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
-      }
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_addBehavior"
+      ]
     },
     {
+      "chapter": 104,
+      "position": 13,
+      "activity_section_position": 13,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "states of matter matching"
+        ]
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "states of matter matching",
         "script_level.level_keys": [
           "states of matter matching"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground",
         "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
-      }
-    },
+      },
+      "level_keys": [
+        "states of matter matching"
+      ]
+    }
+  ],
+  "levels_script_levels": [
     {
       "seeding_key": {
         "level.key": "CTF Trivia 22",
@@ -3354,7 +3292,7 @@
           "CTF Trivia 22"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "angelina-playground",
         "activity_section.key": "13a3c920-5774-4483-8939-a14351a17f40"
       }
@@ -3366,7 +3304,7 @@
           "CTF Cryptography 22"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "angelina-playground",
         "activity_section.key": "cfe0cbd9-94cf-4ab1-b6e2-b05511159bf8"
       }
@@ -3378,7 +3316,7 @@
           "CTF Recon 22"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "angelina-playground",
         "activity_section.key": "767cdacb-8eeb-4c0b-91f0-427e33d7dcf9"
       }
@@ -3390,7 +3328,7 @@
           "web lab flex angelina experiment"
         ],
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "angelina-playground",
         "activity_section.key": "59b83b1c-6ade-44b5-be50-96eec2803e3e"
       }
@@ -3402,7 +3340,7 @@
           "web lab angelina experiment"
         ],
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "angelina-playground",
         "activity_section.key": "59b83b1c-6ade-44b5-be50-96eec2803e3e"
       }
@@ -3414,9 +3352,93 @@
           "Angelina's Place to Build Levels"
         ],
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "angelina-playground",
         "activity_section.key": "59b83b1c-6ade-44b5-be50-96eec2803e3e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "web lab flex angelina experiment 2",
+        "script_level.level_keys": [
+          "web lab flex angelina experiment 2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "angelina-playground",
+        "activity_section.key": "d9097317-d713-4028-a173-89b4f474c38e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "web lab flex angelina experiment 3",
+        "script_level.level_keys": [
+          "web lab flex angelina experiment 3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "angelina-playground",
+        "activity_section.key": "d9097317-d713-4028-a173-89b4f474c38e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "web lab flex angelina experiment 4",
+        "script_level.level_keys": [
+          "web lab flex angelina experiment 4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "angelina-playground",
+        "activity_section.key": "d9097317-d713-4028-a173-89b4f474c38e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "web lab flex angelina experiment 5",
+        "script_level.level_keys": [
+          "web lab flex angelina experiment 5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "angelina-playground",
+        "activity_section.key": "d9097317-d713-4028-a173-89b4f474c38e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "L10 Starter Code - Savannah",
+        "script_level.level_keys": [
+          "L10 Starter Code - Savannah"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "angelina-playground",
+        "activity_section.key": "5a136d29-226c-4603-b487-4ea36814905f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "L10 Starter Code - Sofia",
+        "script_level.level_keys": [
+          "L10 Starter Code - Sofia"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "angelina-playground",
+        "activity_section.key": "5a136d29-226c-4603-b487-4ea36814905f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "L10 Starter Code - Pedro",
+        "script_level.level_keys": [
+          "L10 Starter Code - Pedro"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "angelina-playground",
+        "activity_section.key": "5a136d29-226c-4603-b487-4ea36814905f"
       }
     },
     {
@@ -3426,7 +3448,7 @@
           "PSP U3 Sample"
         ],
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "angelina-playground",
         "activity_section.key": "99641234-92ff-4ee2-bd19-75b04bbf2129"
       }
@@ -3438,7 +3460,7 @@
           "PSP U3 Sample 2"
         ],
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "angelina-playground",
         "activity_section.key": "99641234-92ff-4ee2-bd19-75b04bbf2129"
       }
@@ -3450,7 +3472,7 @@
           "csp multiple answers example"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "angelina-playground",
         "activity_section.key": "1c5b870f-880c-4368-8012-248ef03ebbe7"
       }
@@ -3462,7 +3484,7 @@
           "CSP multiple answers example 2"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "angelina-playground",
         "activity_section.key": "1c5b870f-880c-4368-8012-248ef03ebbe7"
       }
@@ -3474,7 +3496,7 @@
           "matching example"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "angelina-playground",
         "activity_section.key": "1c5b870f-880c-4368-8012-248ef03ebbe7"
       }
@@ -3486,7 +3508,7 @@
           "example with image"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "angelina-playground",
         "activity_section.key": "1c5b870f-880c-4368-8012-248ef03ebbe7"
       }
@@ -3498,7 +3520,7 @@
           "Image between lines example"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "angelina-playground",
         "activity_section.key": "1c5b870f-880c-4368-8012-248ef03ebbe7"
       }
@@ -3510,9 +3532,21 @@
           "Image in MC Options Example"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "angelina-playground",
         "activity_section.key": "1c5b870f-880c-4368-8012-248ef03ebbe7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CwAI-L1-L1-Warm up Quotes",
+        "script_level.level_keys": [
+          "CwAI-L1-L1-Warm up Quotes"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "angelina-playground",
+        "activity_section.key": "7dc1a6e1-18a7-46f0-9f07-63eb2871bbbd"
       }
     },
     {
@@ -3522,7 +3556,7 @@
           "VPL-CSD-PILOT-S22-CI-ModuleOverview-U6_physical-computing_-ci_ci-6-mb"
         ],
         "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "8a0fa182-9fe7-4dd8-86bc-ec7233b42c21"
       }
@@ -3534,7 +3568,7 @@
           "VPL-CSD-pilot-S22-CI-Unit_Overview_U6L2_physical-computing_-ci_ci-6-mb"
         ],
         "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "eed2ead4-6a10-4034-a79e-7eb328e2676d"
       }
@@ -3546,7 +3580,7 @@
           "VPL-CSD-Summer-CI-Unit_PSP-U6L3_ci-6-mb"
         ],
         "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "eed2ead4-6a10-4034-a79e-7eb328e2676d"
       }
@@ -3558,7 +3592,7 @@
           "SP-VPL-PC-22-PSP-vid_ci-6-mb"
         ],
         "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "eed2ead4-6a10-4034-a79e-7eb328e2676d"
       }
@@ -3570,7 +3604,7 @@
           "SP-VPL-PC-22-LessonTypes_-ci_ci-6-mb"
         ],
         "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "eed2ead4-6a10-4034-a79e-7eb328e2676d"
       }
@@ -3582,7 +3616,7 @@
           "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_setup_ci-6-mb"
         ],
         "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "066c9045-4688-4f77-b58d-d6a65588666e"
       }
@@ -3594,7 +3628,7 @@
           "VPL-CSD-CI-U6-MB_setup_ci-6-mb"
         ],
         "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "066c9045-4688-4f77-b58d-d6a65588666e"
       }
@@ -3606,7 +3640,7 @@
           "VPL-CSD-PILOT-22-CI-mod6-MakerApp-appLab_physical-computing_-c_ci-6-mb"
         ],
         "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "066c9045-4688-4f77-b58d-d6a65588666e"
       }
@@ -3618,7 +3652,7 @@
           "VPL-CSD-Summer-CI-MB Test-U6L1_2023"
         ],
         "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "066c9045-4688-4f77-b58d-d6a65588666e"
       }
@@ -3630,7 +3664,7 @@
           "VPL-CSD-PILOT-S22-CI-Overview-U6L3_physical-computing_-ci_ci-6-mb"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "09c020b2-5ce1-4ffb-b180-b900c80caaa4"
       }
@@ -3642,7 +3676,7 @@
           "VPL-CSD-PILOT-S22-CI6-CSD circuit video_ci-6-mb"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "09c020b2-5ce1-4ffb-b180-b900c80caaa4"
       }
@@ -3654,7 +3688,7 @@
           "VPL-CSD-PILOT-S22-CI-mod 6- lesson3-inputOutput-Ove_physical-c_ci-6-mb"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "8f9f2cba-663b-488d-bff4-88217b70ff7b"
       }
@@ -3666,7 +3700,7 @@
           "VPL-CSD-S23-CI-U6-MB-Back-inputOutput-ci-6-mb"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "8f9f2cba-663b-488d-bff4-88217b70ff7b"
       }
@@ -3678,7 +3712,7 @@
           "VPL-CSD-Summer-CI-U6 - MB Board Outputs"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "8f9f2cba-663b-488d-bff4-88217b70ff7b"
       }
@@ -3690,7 +3724,7 @@
           "VPL-CSD-CI-U6-Board Inputs-MB"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "8f9f2cba-663b-488d-bff4-88217b70ff7b"
       }
@@ -3702,7 +3736,7 @@
           "VPL-CSD-CI-U6- Board Inputs-MB"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "8f9f2cba-663b-488d-bff4-88217b70ff7b"
       }
@@ -3714,7 +3748,7 @@
           "VPL-CSD-Summer-CI-U6-If Variables"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "83d672bd-f6e7-4278-aa22-6d686f58cb77"
       }
@@ -3726,7 +3760,7 @@
           "VPL-CSD-Summer-U6-If Variables-Counter-MB"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "83d672bd-f6e7-4278-aa22-6d686f58cb77"
       }
@@ -3738,7 +3772,7 @@
           "VPL-CSD-Summer-U6-If Variables-MB-L8"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "83d672bd-f6e7-4278-aa22-6d686f58cb77"
       }
@@ -3750,7 +3784,7 @@
           "VPL-CSD-CI-U6MB-Predict-Combine Inputs"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "8276a27c-6472-41c5-bfa8-ff2f4ce519d6"
       }
@@ -3762,7 +3796,7 @@
           "VPL-CSD-CI-U6MB-Combine Inputs2"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "8276a27c-6472-41c5-bfa8-ff2f4ce519d6"
       }
@@ -3774,7 +3808,7 @@
           "VPL-CSD-CI-U6MB-Combine Inputs-Sliders"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "8276a27c-6472-41c5-bfa8-ff2f4ce519d6"
       }
@@ -3786,7 +3820,7 @@
           "VPL-CSD-CI-U6MB-Combine Inputs-TicTacToe"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "8276a27c-6472-41c5-bfa8-ff2f4ce519d6"
       }
@@ -3798,7 +3832,7 @@
           "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C_physical-c_ci-6-mb"
         ],
         "lesson.key": "Experiment with Inputs and Outputs",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "a7512515-0737-43f9-9264-b8ad8cb8c1f1"
       }
@@ -3810,7 +3844,7 @@
           "VPL-CSD-PILOT-S22-CI-Overview-U6L4_physical-computing_-ci_ci-6-mb"
         ],
         "lesson.key": "Engage with Prototypes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "2507d5f5-946b-4c72-b5d9-f09a9f35447e"
       }
@@ -3822,7 +3856,7 @@
           "VPL-CSD-CI-U6MB-Sensors-Play"
         ],
         "lesson.key": "Engage with Prototypes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "49d3002c-58f9-4e82-a17a-125924bb8b8e"
       }
@@ -3834,7 +3868,7 @@
           "VPL-CSD-CI-U6MB-Accelerometer-Predict"
         ],
         "lesson.key": "Engage with Prototypes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "49d3002c-58f9-4e82-a17a-125924bb8b8e"
       }
@@ -3846,7 +3880,7 @@
           "VPL-CSD-PILOT-S22-CI-CSD U6 - Music - Piano_ci-6-mb"
         ],
         "lesson.key": "Engage with Prototypes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "58fe1fd6-cf63-4122-8fbf-231b869a957e"
       }
@@ -3858,7 +3892,7 @@
           "VPL-CSD-CI-U6MB-FunctionsWParameters"
         ],
         "lesson.key": "Engage with Prototypes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "58fe1fd6-cf63-4122-8fbf-231b869a957e"
       }
@@ -3870,7 +3904,7 @@
           "VPL-CSD-PILOT-S22-CI-CSD U6 - Interactive Art - Rev_ci-6-mb"
         ],
         "lesson.key": "Engage with Prototypes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "58fe1fd6-cf63-4122-8fbf-231b869a957e"
       }
@@ -3882,7 +3916,7 @@
           "VPL-CSD-PILOT-22-CI-mod6-Sensor Overview_physical-computing_-c_ci-6-mb"
         ],
         "lesson.key": "Engage with Prototypes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "58fe1fd6-cf63-4122-8fbf-231b869a957e"
       }
@@ -3894,7 +3928,7 @@
           "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U6L5C_physical-c_ci-6-mb"
         ],
         "lesson.key": "Engage with Prototypes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "dad976f4-d68a-4959-9782-ef67eb786294"
       }
@@ -3906,7 +3940,7 @@
           "-VPL-CSD-PILOT-summer22-navigation_2023"
         ],
         "lesson.key": "Engage with Prototypes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "2a9684df-61cb-4339-b47d-11b321a12e1a"
       }
@@ -3918,7 +3952,7 @@
           "SP-VPL-physical-computing-22-Overview-TeachingLearning_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "f59703bc-28c6-470c-96bc-a5ddb6544a3d"
       }
@@ -3930,7 +3964,7 @@
           "SP-VPL-PC-22-LeadLearner_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "99acd319-a38b-4fec-bc29-3e8f616bdda1"
       }
@@ -3942,7 +3976,7 @@
           "SP-VPL-PC-22-LeadLearner-vid_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "99acd319-a38b-4fec-bc29-3e8f616bdda1"
       }
@@ -3954,7 +3988,7 @@
           "SP-VPL-PC-22-ClassroomCulture_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "99acd319-a38b-4fec-bc29-3e8f616bdda1"
       }
@@ -3966,7 +4000,7 @@
           "SP-VPL-PC-22-PairProgramming_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "de57623d-ebc6-42b9-b126-12b9e9bc4085"
       }
@@ -3978,7 +4012,7 @@
           "SP-VPL-PC-22-PairProgramming-TipVid_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "de57623d-ebc6-42b9-b126-12b9e9bc4085"
       }
@@ -3990,7 +4024,7 @@
           "SP-VPL-PC-22-Resources_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "de57623d-ebc6-42b9-b126-12b9e9bc4085"
       }
@@ -4002,7 +4036,7 @@
           "SP-VPL-PC-22-Debugging_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "de57623d-ebc6-42b9-b126-12b9e9bc4085"
       }
@@ -4014,7 +4048,7 @@
           "SP-VPL-PC-22-Debugging-TipVid_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "de57623d-ebc6-42b9-b126-12b9e9bc4085"
       }
@@ -4026,7 +4060,7 @@
           "SP-VPL-CP-22-teamworkOverview_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "de57623d-ebc6-42b9-b126-12b9e9bc4085"
       }
@@ -4038,7 +4072,7 @@
           "SP-VPL-PC-22-Strategies-StudentVideos_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "de57623d-ebc6-42b9-b126-12b9e9bc4085"
       }
@@ -4050,7 +4084,7 @@
           "SP-VPL-CP-22-ProgrammingLevelsOverview_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "de57623d-ebc6-42b9-b126-12b9e9bc4085"
       }
@@ -4062,7 +4096,7 @@
           "SP-VPL-CP-22-Inclusion_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "5bb715b6-afc8-40b2-a74b-b4de8be156c8"
       }
@@ -4074,7 +4108,7 @@
           "SP-VPL-PC-22-Differentiation_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "5bb715b6-afc8-40b2-a74b-b4de8be156c8"
       }
@@ -4086,7 +4120,7 @@
           "SP-VPL-PC-22-DifferentiationContinued_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "5bb715b6-afc8-40b2-a74b-b4de8be156c8"
       }
@@ -4098,7 +4132,7 @@
           "SP-VPL-PC-22-Assessment_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "b14d97fa-0c80-4c8f-9263-6cbfd66baade"
       }
@@ -4110,7 +4144,7 @@
           "SP-VPL-PC-22-AssessmentPlan_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "b14d97fa-0c80-4c8f-9263-6cbfd66baade"
       }
@@ -4122,7 +4156,7 @@
           "VPL-Devices-22-post-survey_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "8c84cd20-3247-424b-8e17-9f2f5426e28f"
       }
@@ -4134,9 +4168,369 @@
           "SP-VPL-PC-22-mod2-WrapUp_-ci_ci-6-mb"
         ],
         "lesson.key": "Teaching Creating Apps for Devices ",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "angelina-playground",
         "activity_section.key": "8c84cd20-3247-424b-8e17-9f2f5426e28f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Particles_StatesOfMatter_L1",
+        "script_level.level_keys": [
+          "csc_Particles_StatesOfMatter_L1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_Predict",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_Predict"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_L2",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Particles_StatesOfMatter_L3-Solid",
+        "script_level.level_keys": [
+          "csc_Particles_StatesOfMatter_L3-Solid"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_L4",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L4"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_L5",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L5"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_L6",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L6"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Particles_StatesOfMatter_L7-Liquid",
+        "script_level.level_keys": [
+          "csc_Particles_StatesOfMatter_L7-Liquid"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_L8",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L8"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_L9",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L9"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Particles_StatesOfMatter_L10-Gas",
+        "script_level.level_keys": [
+          "csc_Particles_StatesOfMatter_L10-Gas"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_L11",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L11"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_L12",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L12"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_L13A Challenge",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L13A Challenge"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_L12 Challenge",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L12 Challenge"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_L14 Challenge",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L14 Challenge"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_L15 Challenge",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L15 Challenge"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "e0dccd0c-394e-4c22-853b-2f797509b16c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_Predict_-particles",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_Predict_-particles"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Particles_StatesOfMatter_L7-Liquid_-particles",
+        "script_level.level_keys": [
+          "csc_Particles_StatesOfMatter_L7-Liquid_-particles"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_solid_predict",
+        "script_level.level_keys": [
+          "csc_particles_solid_predict"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Particles_StatesOfMatter_L3-Solid_-particles",
+        "script_level.level_keys": [
+          "csc_Particles_StatesOfMatter_L3-Solid_-particles"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_gas_predict",
+        "script_level.level_keys": [
+          "csc_particles_gas_predict"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Particles_StatesOfMatter_L10-Gas_-particles",
+        "script_level.level_keys": [
+          "csc_Particles_StatesOfMatter_L10-Gas_-particles"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_your turn",
+        "script_level.level_keys": [
+          "csc_particles_your turn"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_video_introSpriteLab_-2022-2",
+        "script_level.level_keys": [
+          "CourseF_video_introSpriteLab_-2022-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_setbackground",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_setbackground"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_createSprites",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_createSprites"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_magnifyingCutout",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_magnifyingCutout"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_addBehavior",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_addBehavior"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "states of matter matching",
+        "script_level.level_keys": [
+          "states of matter matching"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
       }
     }
   ],

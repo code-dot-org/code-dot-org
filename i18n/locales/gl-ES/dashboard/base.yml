@@ -47,12 +47,14 @@ gl:
         gender: 'Xénero'
         edit_header: 'Editar os Detalles da Conta'
         finish_sign_up_header: 'Remata de crear a túa conta'
+        finish_sign_up_header_error: 'Por favor, corrixe os seguintes erros:'
         finish_sign_up_subheader: 'Completa a seguinte información para acabar de crear unha conta de Code.org para <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Completa a seguinte información para acabar de crear unha conta de Code.org para **%{email}**.'
         finish_sign_up_subheader_provider: 'Completa a seguinte información para acabar de crear unha conta de Code.org con <strong>%{provider}</strong> para <strong>%{email}</strong>.'
         finish_sign_up_subheader_provider_markdown: 'Completa a seguinte información para acabar de crear unha conta de Code.org con **%{provider}** para **%{email}**.'
         error:
           future: non pode estar no futuro
+        user_type: 'Tipo de conta'
         us_state: 'Estado'
   beta: "beta"
   hello: "Ola, mundo"
@@ -723,4 +725,3 @@ gl:
   copy: 'Copiar'
   pixelation:
     binary: "Binario"
-

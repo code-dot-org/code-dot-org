@@ -1,0 +1,24 @@
+{
+  "ro-RO": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "co-teacher": {
+            "buttonText": "Află mai mult"
+          },
+          "hoc-2023": {
+            "body": "Alătură-te milioanelor de oameni din întreaga lume pentru a organiza o oră de codare, cu sau fără IA și pentru a învăța cum funcționează IA. Oricine, oriunde o poate face. Nu este nevoie de experiență",
+            "buttonText": "Află mai mult",
+            "title": "Hour of Code: Creativitate cu IA"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Află mai mult"
+          },
+          "superhero": {
+            "buttonText": "Află mai mult"
+          }
+        }
+      }
+    }
+  }
+}

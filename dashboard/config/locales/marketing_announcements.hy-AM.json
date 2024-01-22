@@ -1,0 +1,22 @@
+{
+  "hy-AM": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "co-teacher": {
+            "buttonText": "Սովորել ավելին"
+          },
+          "hoc-2023": {
+            "buttonText": "Սովորել ավելին"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Սովորել ավելին"
+          },
+          "superhero": {
+            "buttonText": "Սովորել ավելին"
+          }
+        }
+      }
+    }
+  }
+}

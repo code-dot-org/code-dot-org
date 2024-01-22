@@ -21,25 +21,27 @@ Hesaplama teknolojisi modern kültürün ayrılmaz bir parçası iken ve insanla
 
 Bilgisayar bilimi sanayiyi dönüştürürken, yeni ticaret alanları yaratıyor, bilimin her alanında yeniliği sürüyor ve kurulu ekonomik sektörlerde üretkenliği artıyor;
 
-ABD ekonomisinin çıkışına önemli katkıda bulunan bilgisayar bilimi alanı, ekonomimizin bilgi teknolojisi sektörünü desteklemektedir;
+Bilgisayar bilimi alanı, ABD'nin ekonomik çıktısına önemli bir katkı sağlayan ekonomimizin bilgi teknolojisi sektörünün temelini oluşturan temel bir konudur;
 
-Bilgisayar bilimi alanı, dijital çağın temel bilimidir;
+Yapay zeka okuryazarlığı, bilgisayar bilimindeki temel kavramlar da dahil olmak üzere yapay zekanın nasıl çalıştığı ve yapay zekanın güvenli, sorumlu ve etik olarak nasıl kullanılacağı ile ilgili bilgi, beceri ve tutumları ifade ederken;
 
-Bilişim teknolojisi sektörü, yeni yeniliklerin araştırılması ve geliştirilmesi yoluyla ekonomik iyileşmeye yardımcı olmak için benzersiz bir konumdadır;
+Yapay zeka da dahil olmak üzere bilgisayar bilimi alanı, ABD ekonomisinin neredeyse tüm sektörlerini temelden dönüştürme gücüne sahip teknolojilerdir;
 
-Bilgisayar bilimindeki işlerde, ülkenin genelinde 500.000'i aşkın açık pozisyonla aydınlık bir tablo vardır;
+Yapay zeka da dahil olmak üzere bilgisayar biliminin tüm alanlarında teknolojik liderlik ekonomik ve ulusal bir güvenlik zorunluluğudur;
 
-Öğrencilere yüksek kaliteli bilgisayar bilimleri aktivitelerine katılma şansı verilerek alanın sunduğu zengin fırsatlar elde etmeleri sağlanır ve hayatları boyunca işlerine yarayacak eleştirel düşünme becerileri kazandırılır;
+Bilgisayar bilimindeki işler için görünüm, ülkenin her yerinde 500.000'i aşkın açık bilgisayar pozisyonuyla aydınlatılmışken;
 
-Tüm öğrenciler, ilk ve orta öğrenim seviyesinde bilgisayar bilimi öğrenmek için gerekli nitelikli öğretmenlere, teknolojiye ve yaşa uygun müfredata erişim de dahil olmak üzere, bilgisayar bilimleri eğitimiyle kapsamlı bir hazırlık yapmayı hak etmektedir;
+Öğrencilere yüksek kaliteli bilgisayar bilimleri etkinliklerine katılma şansını sunmak onları alanın sunduğu zengin fırsatlara ve hayatları boyunca onlara hizmet edecek eleştirel düşünme becerilerine bırakır;
 
-Bilgisayar bilimleri eğitiminde, bilgisayar bilimi derslerinin mezuniyet şartı olarak sayılması ve bilgisayar bilimleri öğretmenleri için mesleki gelişim sağlanması gibi, ele alınması gereken zorluklar bulunmaktadır;
+Tüm öğrenciler, ilk ve orta öğrenim seviyesinde bilgisayar bilimi öğrenmek için gerekli kalifiye öğretmenlere, teknolojiye ve yaşa uygun müfredata erişim de dahil olmak üzere bilgisayar bilimleri eğitiminde kapsamlı bir hazırlık yapmayı hak ediyor;
 
-Bilgisayar Bilimi Eğitim Haftası boyunca Hour of Code'a katılmak, bilgisayar bilimleri alanının gizemini aralayıp ve daha fazla öğrenciyi bilgisayar bilimi konusunda daha çok çalışmaya teşvik etmeye yarayabilir;
+Bilgisayar bilimleri eğitiminin, tüm öğrenciler için bilgisayar bilimleri kurslarına erişimin iyileştirilmesi ve bilgisayar bilimleri öğretmenleri için mesleki gelişim sağlanması da dahil olmak üzere ele alınacak zorluklar vardır;
 
-Bilgisayar bilimi alanında, kadınları ve yeterince temsil edilmeyen azınlıkları tüm düzeylere ve branşlara daha fazla çekmek dahil olmak üzere ele alınması gereken önemli eşitlik engelleri vardır;
+Bilgisayar Bilimleri Eğitim Haftası boyunca Kodlama Saatine katılarak bilgisayar bilimleri alanının gizemini aralayıp açıklayarak ve daha fazla öğrenciyi bilgisayar bilimi konusunda daha fazla çalışmaya teşvik etmeye hizmet ederken;
 
-Bilgisayar bilimi alanında çalışan ilk kadınlardan biri olan Grace Murray Hopper, yeni yazılım dilleri geliştirdi ve bilgisayar bilimlerinde pek çok ilerlemenin temelini atan bilgisayar sistemleri için öncül standartlar geliştirdi; ve
+Bilgisayar bilimi alanının, her düzeyde ve dalda ırk, etnik köken ve cinsiyet açısından farklı bir aday alanını çekmek ve elde tutmak da dahil olmak üzere ele alınacak önemli eşitlik engelleri vardır;
+
+Bilgisayar bilimi alanında ilk kadınlardan biri olan Grace Murray Hopper, yeni yazılım dilleri geliştirdi ve bilgisayar bilimlerinde pek çok ilerlemenin temelini atan bilgisayar sistemleri için öncül standartlar geliştirdi; ve
 
 {{ campaign_date/start_long }} haftası, Grace Hopper'ın doğum günü onuruna "Bilgisayar Bilimi Eğitim Haftası" olarak ilan edilmiştir. Yukarıdaki hususlar göz önünde bulundurularak<br />
 
@@ -47,12 +49,10 @@ Bilgisayar bilimi alanında çalışan ilk kadınlardan biri olan Grace Murray H
 
 (1) Bilgisayar Bilimi Eğitim Haftası ({{ campaign_date/full }}) tanıtılması desteklenecek;
 
-(2) okullar, eğitimciler, ebeveynler ve politika yapıcılar, öğrencilerinin Hour of Code'a katılmalarını sağlayarak Bilgisayar Bilim Eğitimi Haftası'na katılmaya teşvik edilecek;
+(2) okulları, eğiticileri, ebeveynleri ve politika yapıcıları Bilgisayar Bilim Eğitim Haftası'na öğrencilerinin Kod Yasasına katılmalarını sağlayarak katılmalarını teşvik eder;
 
 (3) okullar, öğretmenler, araştırmacılar, üniversiteler, iş dünyası liderleri ve politika yapıcılar; öğretmenlerin tüm eğitim düzeylerinde bilgisayar bilimlerinde sürdürülebilir öğrenmeyi sağlamaları için en yeni mesleki gelişim olanaklarından yararlanabilmeleri ve öğrencileri bilgisayar bilimi kavramlarıyla tanıştırmaları için gerekli mekanizmaları belirlemeye teşvik edilecek;
 
-(4) kural koyucular; bilgisayar bilimi derslerinin mezuniyet şartlarında matematik veya fen kredisi olarak sayılmasının önündeki engelleri kaldırmaya teşvik edilecek;
-
-(5) mevcut ve gelecekteki programlar aracılığıyla, kadınlara ve yetersiz temsil edilen azınlıklara bilgisayar bilimi alanında fırsatlar sunulması teşvik edilecektir.
+(4) kız öğrenciler ve bilgisayar bilimlerinde yeterince temsil edilmeyen ırksal ve etnik gruplardan gelen öğrenciler için mevcut programlar dahil olmak üzere fırsatları teşvik eder.
 
 {{ signup_button }}

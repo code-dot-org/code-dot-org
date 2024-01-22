@@ -10,6 +10,10 @@ lv:
         options:
           UNIT:
             '"seconds"': sekundes
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"seconds"': sekundes
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
@@ -119,6 +123,11 @@ lv:
           EFFECT:
             '"color_cycle"': Krāsas
             '"disco"': Kvadrāti
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"color_cycle"': Krāsas
+            '"disco"': Kvadrāti
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
@@ -205,6 +214,11 @@ lv:
             '"space"': telpa
             '"enter"': ievadiet
             '"x"': x
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': zilās krāsas
+            '"red"': sarkanās krāsas
       gamelab_atTime:
         options:
           UNIT:

@@ -180,7 +180,7 @@ class CourseVersion < ApplicationRecord
         type: content_root_type,
         is_stable: stable?,
         is_recommended: recommended?(locale_code),
-        locales: content_root_type == 'UnitGroup' ? ['English'] : content_root.supported_locale_names,
+        locales: content_root.supported_locale_names,
         units: units.select {|u| u.course_assignable?(user)}.map(&:summarize_for_assignment_dropdown).to_h
       }
     ]
@@ -196,6 +196,7 @@ class CourseVersion < ApplicationRecord
 
   def summarize_for_unit_selector
     {
+      id: id,
       display_name: content_root.launched? ? content_root.localized_title : content_root.localized_title + ' *',
       units: units.map(&:summarize_for_unit_selector).sort_by {|u| u[:position]}
     }

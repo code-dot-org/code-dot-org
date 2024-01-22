@@ -56,6 +56,48 @@
         "define/express/2022": {
           "word": "Define"
         },
+        "code/csc-adaptations/2023": {
+          "word": "Code"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Code"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Variable"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Code"
+        },
+        "code/poetry/2023": {
+          "word": "Code"
+        },
+        "variable/csd/2023": {
+          "word": "Variable"
+        },
+        "function/csd/2023": {
+          "word": "Function"
+        },
+        "function/coursee/2023": {
+          "word": "Function"
+        },
+        "define/coursee/2023": {
+          "word": "Define"
+        },
+        "variable/coursef/2023": {
+          "word": "Variable"
+        },
+        "define/coursef/2023": {
+          "word": "Define"
+        },
+        "function/express/2023": {
+          "word": "Function"
+        },
+        "variable/express/2023": {
+          "word": "Variable"
+        },
+        "define/express/2023": {
+          "word": "Define"
+        },
         "loops/aquatic/unversioned": {
           "word": "Loops"
         },
@@ -65,39 +107,14 @@
         "function/hero/unversioned": {
           "word": "Function"
         },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/poem-art/2021": {
           "word": "Code"
         },
         "code/sports/unversioned": {
           "word": "Code"
         },
-        "code/poem-art/unversioned": {
-          "word": "Code",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "code/dance-ai/2023": {
+          "word": "Code"
         }
       }
     }

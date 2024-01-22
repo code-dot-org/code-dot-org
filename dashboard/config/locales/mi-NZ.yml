@@ -9,11 +9,13 @@ mi:
         email: Īmēra
         error:
           future: tē āhei haere ake nei
+        finish_sign_up_header_error: 'Tēnā whakatikaina ngā hapa e haere ake nei:'
         gender: Ira
         locale: Reo
         name: Ingoa Whakaatu
         password: Kupuhipa
         password_confirmation: Whakaū kupuhipa
+        user_type: Momo Pūkete
         username: Ingoa Kaiwhakamahi
     errors:
       messages:

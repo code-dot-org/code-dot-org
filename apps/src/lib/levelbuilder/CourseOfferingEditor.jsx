@@ -471,7 +471,7 @@ export default function CourseOfferingEditor(props) {
           <option value="">{translatedNoneOption}</option>
           {Object.values(props.selfPacedPLCourseOfferings).map(co => (
             <option key={co.id} value={co.id}>
-              {co.display_name}
+              {`${co.display_name}: ${co.key}`}
             </option>
           ))}
         </select>

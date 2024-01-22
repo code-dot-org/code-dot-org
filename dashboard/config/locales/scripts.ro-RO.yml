@@ -72,6 +72,7 @@ ro:
         Hour of Code:
           description_short: Încercați elemente de bază în informatică cu multe personaje
             amuzante!
+          name: Oră de Programare
           title: Ora de Programare 2013
         MikeTest:
           description_audience: Vârste 8 - 98 ani
@@ -89,6 +90,10 @@ ro:
         ai-ethics-2021:
           description_audience: Clasele 6-12
           title: Codul nostru de Etică IA
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Codul nostru de Etică IA
         aiml-2021:
           lesson_groups:
             lessonGroup-4:
@@ -151,6 +156,9 @@ ro:
             required:
               display_name: Prezentare generală
         angelina-playground:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Aleatoriu
           lessons:
             lesson-5:
               name: Evaluări
@@ -1281,6 +1289,12 @@ ro:
               name: Laboratorul Java
             lesson-6:
               name: Bucle
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sondaj
+            lessonGroup-3:
+              display_name: Conţinut
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1319,6 +1333,10 @@ ro:
           lessons:
             lesson-4:
               name: Variabile
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1353,6 +1371,10 @@ ro:
               name: Matrice Uni-Dimensionale (1D)
             lesson-3:
               name: Bucle Pentru
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1385,6 +1407,10 @@ ro:
           lessons:
             lesson-9:
               name: Aleatoriu
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
         csa4-exemplars:
           lesson_groups:
             content:
@@ -1417,6 +1443,10 @@ ro:
             lessonGroup-2:
               display_name: Conţinut
         csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa5-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -1453,6 +1483,10 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1480,6 +1514,10 @@ ro:
             lessonGroup-5:
               display_name: Cutie cu nisip
         csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -1516,6 +1554,12 @@ ro:
             lessonGroup-5:
               display_name: Sondaj
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+            lessonGroup-4:
+              display_name: Sondaj
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -1601,6 +1645,8 @@ ro:
             va spune când trebuie să răspunzi la acest sondaj.
         csd-post-survey-2023:
           title: Chestionar după curs
+        csd-post-survey-2024:
+          title: Chestionar după curs
         csd1-2017:
           lesson_groups:
             csd1_1:
@@ -1650,6 +1696,14 @@ ro:
             cspSurvey:
               display_name: Sondaj
         csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            lessonGroup-3:
+              display_name: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
+            lessonGroup-5:
+              display_name: Sondaj
+        csd1-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
@@ -1809,6 +1863,12 @@ ro:
               display_name: 'Capitolul 1: Imagini şi animaţii'
             lessonGroup-3:
               display_name: 'Capitolul 2: Cum facem jocuri'
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolul 1: Imagini şi animaţii'
+            lessonGroup-3:
+              display_name: 'Capitolul 2: Cum facem jocuri'
         csd3-dlp:
           lesson_groups:
             content:
@@ -1893,6 +1953,12 @@ ro:
             cspSurvey:
               display_name: Sondaj
         csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolul 1: Design orientat spre utilizator'
+            lessonGroup-3:
+              display_name: 'Capitolul 2: Prototipare aplicații'
+        csd4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Design orientat spre utilizator'
@@ -1987,6 +2053,12 @@ ro:
             cspSurvey:
               display_name: Sondaj
         csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolul 1: Reprezentarea informaţiilor'
+            lessonGroup-3:
+              display_name: 'Capitolul 2: Rezolvarea problemelor cu seturi de date'
+        csd5-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Reprezentarea informaţiilor'
@@ -2094,6 +2166,14 @@ ro:
             lessonGroup-4:
               display_name: Sondaj
         csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capitolul 1
+            lessonGroup-3:
+              display_name: Capirolul 2
+            lessonGroup-4:
+              display_name: Introducere în App Lab
+        csd7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Capitolul 1
@@ -2261,6 +2341,12 @@ ro:
               display_name: Sondaj
             csp_unit1_2020:
               display_name: "(vechi) Unitatea 1: Informaţii digitale"
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
+            csp_unit1_2020:
+              display_name: "(vechi) Unitatea 1: Informaţii digitale"
         csp1-dlp:
           lesson_groups:
             content:
@@ -2312,6 +2398,10 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Chestionar după curs
+        csp10-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chestionar după curs
         csp10-pilot-staging:
           lesson_groups:
             csp_conditionals:
@@ -2355,6 +2445,10 @@ ro:
             csp_unit2_2020:
               display_name: "(vechi) Unitatea 2: Internet"
         csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(vechi) Unitatea 2: Internet"
+        csp2-2024:
           lesson_groups:
             csp_unit2_2020:
               display_name: "(vechi) Unitatea 2: Internet"
@@ -2514,6 +2608,14 @@ ro:
               display_name: Funcţii
             csp_variables:
               display_name: Variabile
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Condiţionale
+            csp_functions:
+              display_name: Funcţii
+            csp_variables:
+              display_name: Variabile
         csp4-dlp:
           lesson_groups:
             content:
@@ -2604,6 +2706,12 @@ ro:
               display_name: Bucle
             lessonGroup-5:
               display_name: Chestionar după curs
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Date
+            lessonGroup-5:
+              display_name: Chestionar după curs
         csp5-dlp:
           lesson_groups:
             content:
@@ -2662,6 +2770,14 @@ ro:
               display_name: Chestionar după curs
             lessonGroup-3:
               display_name: Bucle
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Liste
+            lessonGroup-2:
+              display_name: Chestionar după curs
+            lessonGroup-3:
+              display_name: Bucle
         csp6-pilot:
           lesson_groups:
             content:
@@ -2692,6 +2808,10 @@ ro:
           lesson_groups:
             lessonGroup-3:
               display_name: Chestionar după curs
+        csp7-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Chestionar după curs
         csp7-pilot:
           lesson_groups:
             required:
@@ -2705,6 +2825,10 @@ ro:
             lessonGroup-3:
               display_name: Chestionar după curs
         csp8-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Chestionar după curs
+        csp8-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: Chestionar după curs
@@ -2735,6 +2859,12 @@ ro:
             lessonGroup-2:
               display_name: Chestionar după curs
         csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(vechi) Unitatea 9: date"
+            lessonGroup-2:
+              display_name: Chestionar după curs
+        csp9-2024:
           lesson_groups:
             csp_unit9_2020:
               display_name: "(vechi) Unitatea 9: date"
@@ -3419,7 +3549,7 @@ ro:
           description_short: Exploreaza o lume Minecraft prin cod.
           student_description: Utilizeaza blocuri de cod pentru a-l lua pe Steve sau
             Alex intr-o aventura in acest univers Minecraft.
-          title: Ora de Programare Minecraft
+          title: Minecraft Adventurer
         microbit-2023:
           lesson_groups:
             lessonGroup-5:
@@ -3436,6 +3566,10 @@ ro:
           student_description: Programeaza animale şi alte creaturi Minecraft în propria
             ta versiune a jocului.
           title: Minecraft Designer Hour of Code
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Joc la liber
         netsim:
           title: Simulator Internet
         nevada-standards-aligned-fifth-grade-2023:
@@ -3785,6 +3919,36 @@ ro:
           title: 'Modulul 2: Navigare prin Code.org'
         self-paced-pl-csa2-2023:
           title: 'Modulul 2: Navigare prin Code.org'
+        self-paced-pl-csd-unit1-2-2023:
+          description: Acest modul de învățare profesională are rolul să te ajute
+            să îți pregătești modul de predare a unității Code.org Rezolvarea Problemelor
+            și Calculatoarele.
+          student_description: Acest modul de învățare profesională are rolul să te
+            ajute să îți pregătești modul de predare a unității Code.org Rezolvarea
+            Problemelor și Calculatoarele.
+          title: 'Modul 1: Pregătirea Predării Rezolvarea Problemelor și Calculatoarele'
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Modulul 2: Pregătirea Predării Dezvoltării Web'
+        self-paced-pl-csd-unit3-2-2023:
+          description: "Acest modul de învățare profesională este conceput să te ajute
+            să te pregătești pentru predarea unitatea de Animații și Jocuri Interactive
+            de la Code.org. \n\n**În acest modul de învățare profesională, vei:**\n\n-
+            \  Obține o introducere în Animații și Jocuri Interactive.\n-   Practica
+            conceptele cheie incluse în unitate.\n-   Te vei implica în Game Lab.\n-
+            \  Explora proiectele de sfârșit de capitol.\n\n**Timp sugerat:** 120
+            de minute"
+          student_description: "Acest modul de învățare profesională este conceput
+            să te ajute să te pregătești pentru predarea unitatea de Animații și Jocuri
+            Interactive de la Code.org. \n\n**În acest modul de învățare profesională,
+            vei:**\n\n-   Obține o introducere în Animații și Jocuri Interactive.\n-
+            \  Practica conceptele cheie incluse în unitate.\n-   Te vei implica în
+            Game Lab.\n-   Explora proiectele de sfârșit de capitol.\n\n**Timp sugerat:**
+            120 de minute"
+          title: Pregătire pentru Predarea Animații și Jocuri Interactive
+        self-paced-pl-csd-unit4-2-2023:
+          title: 'Modulul 4: Pregătirea pentru Predarea Procesului de Design'
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Modulul 5: Pregătirea pentru Predarea Date și Societate'
         self-paced-pl-csd1-2021:
           description: |-
             Acest modul este o scurtă introducere atât în Code.org, cât și în acest curs de învățare profesională.
@@ -4146,6 +4310,23 @@ ro:
           title: 'Modulul 2: Navigare prin Code.org'
         self-paced-pl-csp2-2023:
           title: 'Modulul 2: Navigare prin Code.org'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Bucle
+            lesson-4:
+              name: Condiţionale
+            lesson-6:
+              name: Pașii următori
+          title: Introducere în Informatică
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Evenimente
+            lesson-4:
+              name: Comportamente
+            lesson-5:
+              name: Pașii următori
         soccer:
           description: Creează un joc de fotbal
           description_short: Creează un joc de fotbal
@@ -4307,6 +4488,17 @@ ro:
               display_name: Conţinut
             csd3_2:
               display_name: 'Capitolul 2: Cum facem jocuri'
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introducere
+          lessons:
+            lesson-7:
+              name: Introducere
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introducere
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -4329,6 +4521,10 @@ ro:
           lessons:
             lesson-3:
               name: Evaluare
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introducere
         virustest:
           description_short: Folosește Sprite Lab pentru a creea o simulare dintr-o
             epidemie a unui virus.

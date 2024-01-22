@@ -92,7 +92,7 @@
   background-color: $brand_secondary_default;
   border-color: $brand_secondary_default;
   color: $neutral_white;
-  font-family: $gotham-bold;
+  @include main-font-semi-bold;
 }
 
 #terms-modal .disabled-button {
@@ -120,7 +120,7 @@
 }
 #race-modal .dismiss-link {
   font-size: 14px;
-  font-family: $gotham-regular;
+  @include main-font-regular;
   line-height: 20px;
 }
 #school-info-modal .disabled,
@@ -158,10 +158,10 @@ $almost_white: #eee;
   }
 
   #close_btn_go_to_account {
+    @include main-font-bold;
     background-color: $orange;
     border: 1px solid $orange;
     color: $white;
-    font-family: "Gotham 7r", sans-serif;
     margin: 25px 0 0 0;
     padding: 10px 25px;
   }

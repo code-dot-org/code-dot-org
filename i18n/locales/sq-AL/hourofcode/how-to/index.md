@@ -25,7 +25,7 @@ Provimi i ores se kodit eshte nje menyre e thjeshte dhe zbavitese t'i njoftoni s
 
 <a id="how-to-video"></a>
 
-## 1. Shikoni videon e orës së kodit si <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Shikoni videon e orës së kodit si <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -72,7 +72,7 @@ Rreklamo dhe rekomando, oren e kodit tek mesuesit e tjere qe mund te kene deshir
 
 ### Njoftoni vullnetared duke e regjistruar eventin tuaj 
 
-Kur ju aplikoni per nje ngjarje te Ores se Kodit, you do te pranoni nje email me informata, lajme dhe kurozitete per te mbajtur nje Ore Kodimi te suksessshme. Eshte poashtu nje menyre e mire t'i njoftoni vullnetaret lokal se shkolla juaj po merr pjese! Vullnetaret jane nje burim i mire dhe mund te vijne per te folur ne klasen tuaj rreth shkencave kompjuterike, ose thjeshte t'i ndihmojne studentet me aktivitetet e tyre ne oren e kodimit. 
+Kur reg [jistroheni në ngjarjen tuaj Hour of Code](/events), do të merrni komunikime të dobishme me email me lajme dhe këshilla për organizimin e një Ore të Suksesshme të Kodit. Eshte poashtu nje menyre e mire t'i njoftoni vullnetaret lokal se shkolla juaj po merr pjese! Vullnetaret jane nje burim i mire dhe mund te vijne per te folur ne klasen tuaj rreth shkencave kompjuterike, ose thjeshte t'i ndihmojne studentet me aktivitetet e tyre ne oren e kodimit. 
 
 ### Gezoni studentet tuaj!
 

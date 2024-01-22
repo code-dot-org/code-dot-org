@@ -1011,6 +1011,7 @@ el:
         csd_gamelab_velocity: Ταχύτητα
         csd_how_teamwork_works: Πώς λειτουργεί η ομαδική εργασία
         csd_ml_ethics_ai: 'Ηθική και ΤΝ '
+        csd_ml_how_ai_works: Πώς λειτουργεί η Τεχνητή Νοημοσύνη
         csd_ml_import_model: Εισαγωγή μοντέλου AI
         csd_ml_intro_ai_lab_july2021: Εισαγωγή στο Εργαστήριο Τεχνητής Νοημοσύνης
         csd_ml_intro_to_ai_lab: Εισαγωγή στο Εργαστήριο Τεχνητής Νοημοσύνης

@@ -10,7 +10,8 @@
 }
 
 body {
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--regular-font-weight);
   font-size: 11px;
   line-height: 16px;
   font-weight: normal;
@@ -20,7 +21,8 @@ body {
 h1 {
   color: #7665a0;
   font-size: 32px;
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   font-weight: bold;
   margin-top: 0px;
   margin-bottom: 20px;
@@ -30,7 +32,8 @@ h1 {
 h2 {
   color: #00adbc;
   font-size: 22px;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   margin-top: 35px;
   margin-bottom: 15px;
   line-height: 1.2em;
@@ -39,7 +42,8 @@ h2 {
 h3 {
   color: #5b6770;
   font-size: 18px;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--regular-font-weight);
   margin-top: 25px;
   margin-bottom: 10px;
   line-height: 1.2em;
@@ -48,7 +52,8 @@ h3 {
 a {
   color: #7665a0;
   text-decoration: none;
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   font-weight: bold;
 }
 

@@ -14,7 +14,7 @@ describe('SetUpCourses', () => {
           headingText="Start learning"
           descriptionText="Assign a course to your classroom or start your own course."
           buttonText="Find a course"
-          buttonUrl="/courses"
+          buttonUrl="/catalog"
         />
       )
     );

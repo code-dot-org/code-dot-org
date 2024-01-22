@@ -75,6 +75,10 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
           "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
         },
+        "courseC19_playLab_EOC1_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
         "courseC19_playLab_EOC2": {
           "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
           "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
@@ -88,6 +92,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
         },
         "courseC19_playLab_EOC2_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC19_playLab_EOC2_2023": {
           "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
           "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
         },
@@ -107,6 +115,10 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
           "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
         },
+        "courseC19_playLab_EOC3_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
         "courseC19_playLab_EOC4": {
           "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
           "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
@@ -120,6 +132,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
         },
         "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC19_playLab_EOC4_2023": {
           "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
           "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
         },
@@ -147,6 +163,10 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
           "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
         },
+        "courseC_PlayLab_eventsFP_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
         "courseD_playLab_condFP": {
           "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
           "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
@@ -166,6 +186,9 @@
         "courseE_aboutme_3_2021": {
           "ed076287532e86365e841e92bfc50d8c": "Talofa le lalolagi!"
         },
+        "courseE_aboutme_3_2023": {
+          "ed076287532e86365e841e92bfc50d8c": "Talofa le lalolagi!"
+        },
         "courseE_aboutme_4": {
           "ed076287532e86365e841e92bfc50d8c": "Talofa le lalolagi!"
         },
@@ -178,6 +201,9 @@
         "courseE_aboutme_4_2021": {
           "ed076287532e86365e841e92bfc50d8c": "Talofa le lalolagi!"
         },
+        "courseE_aboutme_4_2023": {
+          "ed076287532e86365e841e92bfc50d8c": "Talofa le lalolagi!"
+        },
         "courseE_aboutme_5": {
           "ed076287532e86365e841e92bfc50d8c": "Talofa le lalolagi!"
         },
@@ -188,6 +214,9 @@
           "ed076287532e86365e841e92bfc50d8c": "Talofa le lalolagi!"
         },
         "courseE_aboutme_5_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Talofa le lalolagi!"
+        },
+        "courseE_aboutme_5_2023": {
           "ed076287532e86365e841e92bfc50d8c": "Talofa le lalolagi!"
         },
         "courseE_playLab_scaffold1": {
@@ -215,6 +244,9 @@
         "courseF_apps_aquarium_-2022-2": {
           "8a52e7a8d3b4c955d6f7927c6ba3fe72": "manu "
         },
+        "courseF_apps_aquarium_2023": {
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "manu "
+        },
         "courseF_apps_collector": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Ua e manumalo"
         },
@@ -222,6 +254,9 @@
           "e8a10c04d72b2f135dabe360c4bdd534": "Ua e manumalo"
         },
         "courseF_apps_collector_-2022-2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Ua e manumalo"
+        },
+        "courseF_apps_collector_2023": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Ua e manumalo"
         },
         "courseF_playlab_variables1a": {

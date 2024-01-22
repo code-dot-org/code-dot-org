@@ -780,6 +780,14 @@ pl:
           rozwiązywania problemu
         PL_CSD_Unit4_AppTesting: Testowanie prototypów papieru
         PL_CSP_EIPMOverview: Przewodnik po lekcjach EIPM
+        PL_CSP_SummerAsync_U1ConnectionsConclusions: |2-
+
+          Jednostka 1 Powiązania i wnioski
+        PL_CSP_SummerAsync_U2ConnectionsConclusions: 'Jednostka 3: Wnioski i powiązania'
+        PL_CSP_SummerAsync_U3ConnectionsConclusions: 'Jednostka 2: Wnioski i powiązania'
+        PL_CSP_SummerAsync_U3L1Computers: Poprzednio, w... Jednostka  3
+        PL_CSP_SummerAsync_U3L7Debugging: Jednostka 3 Lekcja 7 - Debugowanie
+        PL_CSP_SummerAsync_Unit2Internet: Poprzednio, w... Jednostka  2
         PL_CSP_TeacherTips_APExam: 'Wskazówki dla nauczycieli: Przygotowanie do egzaminu
           AP'
         PL_CSP_TeacherTips_Advice: 'Wskazówki dla nauczycieli: Porady dla nowych nauczycieli
@@ -806,6 +814,7 @@ pl:
         Unplug8: Abstrakcja
         Unplug9: Programowanie przekaźnika
         ai-ethis: Etyka i sztuczna inteligencja
+        ai_dance_editblocks_draft: Potańcówka AI Edytuj szkic bloków
         alg_10_conditionals: Informatyka w algebrze - instrukcje warunkowe
         alg_11_coordinate_plane: Informatyka w algebrze - płaszczyzna współrzędnych
         alg_12_biggame_variables: Informatyka w Algebrze - zmienne Wielkiej Gry (Big
@@ -976,6 +985,7 @@ pl:
         csd_gamelab_velocity: Prędkość
         csd_how_teamwork_works: Na czym polega praca zespołowa
         csd_ml_ethics_ai: Etyka i AI
+        csd_ml_how_ai_works: Jak działa AI
         csd_ml_import_model: Importowanie modelu AI
         csd_ml_intro_ai_lab_july2021: Wprowadzenie do AI Lab
         csd_ml_intro_to_ai_lab: Wprowadzenie do AI Lab
@@ -988,7 +998,7 @@ pl:
         csd_teamwork_and_disagreement: Praca zespołowa - Postępowanie w przypadku
           nieporozumienia
         csd_u6_call_define_functions: 'CSD: Wywoływanie i definiowanie funkcji'
-        csd_u6_circuit_playground: Oiczenia fizyczne
+        csd_u6_circuit_playground: Informatyka z urządzeniami fizycznymi
         csd_u6_if_statements: 'CSD: Instrukcje "jeśli"'
         csd_u6_input_output: Wejście i Wyjście
         csd_u6_variables_part2: Zmienne - Część 2
@@ -1150,6 +1160,8 @@ pl:
         rough_poemart_events: v1 Sztuka poezji Zdarzenia
         rough_poemart_imagery: v1 Sztuka poezji Obrazy
         rough_poemart_intro: v1 Sztuka poezji Wprowadzenie
+        se-cv-intro-to-lessons: 'Inżynieria oprogramowania i wizja komputerowa: wprowadzenie
+          do lekcji'
         songwriting_with_functions: Lekcja bez komputera w działaniu - Pisanie piosenki
           z funkcjami
         star_quilts_intro_to_artist: 'Star Quilts: Wprowadzenie do Artysty'

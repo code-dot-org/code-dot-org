@@ -41,7 +41,7 @@ h6 {
   color: $neutral_dark;
   font-size: 1em;
   line-height: 1.2;
-  font-family: $gotham-bold;
+  @include main-font-semi-bold;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -87,7 +87,7 @@ p {
     font-size: 14px;
   }
   a {
-    font-family: $gotham-bold;
+    @include main-font-semi-bold;
     font-size:  1em;
   }
 
@@ -99,13 +99,13 @@ p {
     .signup-field-label {
       label {
         color: $neutral_dark;
-        font-family: $gotham-bold;
+        @include main-font-semi-bold;
         font-size: 1em;
       }
     }
 
     .submit {
-      font-family: $gotham-bold;
+      @include main-font-semi-bold;
       padding: 10px 20px;
       height: auto;
       margin-right: 0;
@@ -214,7 +214,7 @@ p {
         color: $neutral_dark;
 
         a {
-          font-family: $gotham-extra-bold;
+          @include main-font-bold;
           text-decoration: underline;
           color: $brand_secondary_default;
           &:hover {
@@ -224,7 +224,7 @@ p {
       }
 
       .launch {
-        font-family: $gotham-bold;
+        @include main-font-semi-bold;
         font-size: 1em !important;
         padding: 10px 20px;
         height: auto;
@@ -253,7 +253,7 @@ p {
       }
 
       .course-explorer-gray-button {
-        font-family: $gotham-bold;
+        @include main-font-semi-bold;
         font-size: 1em !important;
         color: $neutral_dark;
         background-color: $neutral_white;
@@ -285,7 +285,7 @@ p {
     color: $neutral_white;
 
     .course-explorer-gray-button {
-      font-family: $gotham-bold;
+      @include main-font-semi-bold;
       font-size: .8em !important;
       background-color: $brand_primary_default;
       border: 2px solid $neutral_white;
@@ -361,7 +361,7 @@ p {
   }
 
   .tutorial-gray {
-    font-family: $gotham-bold;
+    @include main-font-semi-bold;
     font-size: 1em !important;
     padding: 10px 16px;
     height: auto;

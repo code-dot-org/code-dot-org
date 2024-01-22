@@ -26,7 +26,7 @@ end
 #   @option [Integer] :parent_id The ID of the parent form.
 # TODO(asher): Fix this method, both the naming of it (to indicate the upsert behavior) and its
 # implementation (not overwriting various fields on update).
-def insert_or_upsert_form(kind, data, options={})
+def insert_or_upsert_form(kind, data, options = {})
   if dashboard_user
     data[:email_s] ||= dashboard_user[:email]
     data[:name_s] ||= dashboard_user[:name]

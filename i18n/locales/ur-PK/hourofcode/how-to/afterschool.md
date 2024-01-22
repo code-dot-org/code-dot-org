@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: اسکول کے بعد کے لیے کوڈ کا گھنٹہ ہاتھ گائیڈ
 ---
 
 {{ signup_button }}
@@ -10,7 +10,7 @@ title: Hour of Code How-to Guide for After-school
 
 کمپیوٹیشنل سوچ مسائل کو حل کرنے کی مہارت، منطق اور تخلیقی صلاحیتوں کو پروان چڑھانے میں مدد کرتی ہے۔ اور ٹیکنالوجی سیارے کی ہر انڈسٹری کو تبدیل کر رہی ہے۔ آج کے طالب علموں کو نہ صرف ٹیکنالوجی استمعال کرنا بلکہ بنانا بھی سیکھنا چاہیئے۔ جلد شروع کرنے سے، ان کے پاس 21ویں صدی کے کیریئر کے کسی بھی راستے میں کامیابی کی بنیاد ہوگی۔
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+ایک گھنٹہ آف کوڈ آزمانا طلباء کو کمپیوٹر سائنس سے متعارف کروانے کا ایک آسان اور تفریحی طریقہ ہے، شاید پہلی بار ۔ اگر آپ مدد کے لئے ہاتھوں کا ایک اضافی سیٹ چاہتے ہیں تو، آپ اپنی اسکول کے بعد کی کلاس یا کلب میں ایک گھر آف کوڈ چلانے میں مدد کے لئے ایک مق [امی رض]({{ urls/volunteer_local }}) اکار تلاش کرسکتے ہیں۔
 
 ### آور آف کوڈ کی میزبانی ریموٹ طریقے سے بھی کی جا سکتی ہے! شروع کرنے کے لیے، یہاں دیکھیئے [ایک آور آف کوڈ کی میزبانی کرنے کے لیے ہمارے مشورے](https://hourofcode.com/us/how-to/virtual).
 
@@ -20,7 +20,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 ## 2. سبق کا انتخاب کریں مضمون | مضمون کے لیَےدرخواست عنوان 2 XPath: /h2[2]
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+ہم ہر عمر کے شرکاء کے لیے مختلف ق [سم کے تفریحی، گھنٹے طویل سب]({{ urls/learn }}) ق فراہم کرتے ہیں، جو متعدد شراکت داروں کے ذریعہ تیار کیے گئے ہیں۔ [ان کو آزمائیں!]({{ urls/learn }})
 
 ** کوڈ کا تمام گھنٹے سبق ** کو منتظمین کے لئے کم سے کم وقت کی ضرورت ہوتی ہے، اور خود ہدایت کی جاتی ہے - بچوں کو اپنی رفتار اور مہارت کی سطح پر کام کرنے کی اجازت دیتا ہے.
 
@@ -30,7 +30,7 @@ We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for partici
 
 ## 3. اپنے قیامت کو فروغ دینا
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+ان ٹولز کے ساتھ اپنے اوور آف [کوڈ کو فروغ دیں]({{ urls/promote }}) اور دوسروں کو اپنے پروگرام کی میزبانی کرنے کی ترغیب دیں۔
 
 ## 4. اپنی ٹیکنالوجی کی ضروریات کی منصوبہ بندی کریں - کمپیوٹر اختیاری ہیں
 
@@ -57,23 +57,23 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 - طریقوں کی ٹیکنالوجی ہماری زندگیوں پر اثر انداز کرتی ہے، مثال کے طور پر لڑکوں اور لڑکیوں دونوں کی پرواہ کریں گے (اطلاقات اور ٹیکنالوجی کے بارے میں گفتگو کریں جو زندگی کو بچانے کے لئے استعمال کیا جاتا ہے، لوگوں کی مدد کریں، لوگوں سے رابطہ قائم کریں).
 - روزمرہ زندگی میں کوڈ استعمال کرنے والی اشیاء درج فہرست کریں۔
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- لڑکیوں کو کمپیوٹر سائنس میں دلچسپی دلانے کے لئے ن [کات]({{ urls/girls }})یہاں
 
 ** زیادہ رہنمائی کی ضرورت ہے؟ </ strong> اس [ ٹیمپلیٹ سبق کا منصوبہ ](/files/AfterschoolEducatorLessonPlanOutline.docx) ڈاؤن لوڈ کریں.</p> 
 
 ## 6. کوڈ!
 
-**شرکاء سرگرمی** کو براہ راست - ٹٹوریل لنک ایک سفید تختہ پر لکھتے ہیں ۔ Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**شرکاء سرگرمی** کو براہ راست - ٹٹوریل لنک ایک سفید تختہ پر لکھتے ہیں ۔ شرکاء کی تعداد کے تحت [اپنے منتخب کردہ ٹیوٹوریل کی معلومات]({{ urls/learn }}) پر درج لنک کو تلاش کریں۔
 
 **کسی بھر میں مشکلات آتی ہے تو یہ جواب دینے کے لئے ٹھیک ہے:** - "میں نہیں جانتا ۔ چلو یہ باہر مل کر اعداد و شمار." "ٹیکنالوجی ہمیشہ جس طرح کے ہم چاہتے ہیں کہ کام نہیں کرتا."- "سیکھنے کے پروگرام کے لئے؛ ایک نئی زبان سیکھنے کی طرح ہے- آپ فوراً روانی ہو نہیں کریں گے ۔
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+**اگر کوئی جلد ختم کرتا ہے تو کیا کریں؟** - شرکاء کو [hourofcode.com/learn پر ایک اور اوور آف کوڈ سرگرمی آزمانے کی ترغیب دیں]({{ urls/learn }}) - یا، ان لوگوں سے پوچھیں جو جلد ختم ہوتے ہیں ان لوگوں کی مدد کریں جن کو پریشانی کا سامنا کرنا پڑتا ہے۔
 
 ## 7. جشن منائیں
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
-- آپ کے اسکول کے لئے [ آرڈر اپنی مرضی کے مطابق ٹی شرٹس ](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
+- [اپنے طلباء کے]({{ urls/certificates }}) لئے سرٹیفکیٹ پرنٹ کریں۔
+- [پرنٹ کریں “میں نے کوڈ کا ایک گھنٹہ کیا!”]({{ promote/resources_stickers }}) آپ کے طلباء کے لئے اسٹیکر۔
+- [شرکاء کے لئے کسٹم](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) ٹی شرٹس آرڈر کریں۔
 - ! سوشل میڈیا پر اپنے آور-آف-کوڈ کے دلچسپ لمحات کی تصاویر اور ویڈیوز شیئر کریں۔ #HourOfCode اور @codeorg استعمال کریں تاکہ ہم آپ کی کامیابی کو بھی اجاگر کرسکیں!
 
 ## دیگر وسائل کوڈ وسائل کے لئے وسائل
@@ -85,6 +85,6 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## آور-آف-کوڈ کے بعد کیا ہو گا?
 
-ٹیکانالوجی کیسے کام کرتی ہے اور سوفٹ ویئر ایپلیکیشنز کیسے بنائی جاتی ہیں، یہ سب جاننے کے لیے آور-آف-کوڈ اس سفر کا صرف پہلا قدم ہے۔ Help students continue their journey and encourage them to [learn more online](/beyond)!
+ٹیکانالوجی کیسے کام کرتی ہے اور سوفٹ ویئر ایپلیکیشنز کیسے بنائی جاتی ہیں، یہ سب جاننے کے لیے آور-آف-کوڈ اس سفر کا صرف پہلا قدم ہے۔ طلباء کو اپنا سفر جاری رکھنے میں مدد کریں اور انہیں م [زید آن لائن سیکھنے](/beyond)کی تر
 
 {{ signup_button }}

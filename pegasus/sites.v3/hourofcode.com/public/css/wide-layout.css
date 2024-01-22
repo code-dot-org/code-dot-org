@@ -59,7 +59,8 @@
 
 .resources-navigation .nav-link {
   color: #272822;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--regular-font-weight);
   text-decoration: none;
 }
 
@@ -71,7 +72,8 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   margin-bottom: 6px;
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);
   text-align: center;
 }
 

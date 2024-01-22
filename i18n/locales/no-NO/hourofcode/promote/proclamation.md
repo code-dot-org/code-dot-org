@@ -4,55 +4,55 @@ title: Eksempel støtte til informatikk utdanningsuke og Kodetimen
 
 {{ signup_button }}
 
-# Sample Computer Science Education Week resolution
+# Eksempel på Computer Science Education Uke oppløsning
 
-### Below is language for a sample resolution supportive of Computer Science Education Week and its goals that can be used by state and local legislators.
+### Nedenfor er språk for en prøveoppløsning som støtter Computer Science Education Week og dens mål som kan brukes av statlige og lokale lovgivere.
 
 * * *
 
-#### **RESOLUTION**  
+#### **OPPLØSNING**  
 
 
-#### Supporting the goals and ideals of "Computer Science Education Week"
+#### Støtte målene og idealene til «Computer Science Education Week»
 
-Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+Mens Computer Science Education Week fremhever den avgjørende rollen som informatikk spiller for å transformere samfunnet vårt og hvordan informatikk muliggjør innovasjon og skaper økonomiske muligheter;
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+Mens datateknologi er en integrert del av moderne kultur og transformerer hvordan mennesker samhandler med hverandre og verden rundt dem;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+Mens informatikk transformerer industrien, skaper nye handelsområder, driver innovasjon innen alle fagområder og styrker produktiviteten i etablerte økonomiske sektorer;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+Mens feltet informatikk er et grunnleggende fag som underbygger informasjonsteknologisektoren i økonomien vår, som er en betydelig bidragsyter til USAs økonomiske produksjon;
 
-Whereas the field of computer science is a foundational science for the digital age;
+Kunstig intelligens refererer til kunnskap, ferdigheter og holdninger knyttet til hvordan kunstig intelligens fungerer, inkludert grunnleggende begreper innen informatikk, og hvordan man bruker kunstig intelligens trygt, ansvarlig og etisk.
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+Mens feltet informatikk, inkludert kunstig intelligens, er teknologier med makt til å fundamentalt transformere nesten alle sektorer i USAs økonomi;
 
-Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
+Mens teknologisk ledelse på alle områder av informatikk, inkludert kunstig intelligens, er et økonomisk og nasjonalt sikkerhetsimperativ;
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+Mens utsiktene for informatikkjobber er lyse med over 500 000 åpne databehandlingsstillinger over hele landet;
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+Mens det å gi studentene muligheten til å delta i datavitenskapsaktiviteter av høy kvalitet, utsetter dem for de rike mulighetene feltet tilbyr og gir kritiske tenkningsevner som vil tjene dem gjennom livet;
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+Mens alle studenter fortjener en grundig forberedelse i informatikkutdanning, inkludert tilgang til kvalifiserte lærere, teknologi og alderstilpasset læreplan som trengs for å lære informatikk på grunnskolen og videregående nivå.
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+Mens informatikkutdanning har utfordringer å ta tak i, inkludert å forbedre tilgangen til datavitenskapskurs for alle studenter, og gi faglig utvikling for datavitenskapslærere;
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+Mens deltakelse i en kodetime under Computer Science Education Week kan tjene til å avmystifisere feltet informatikk og oppmuntre flere studenter til å ta opp videre studier av informatikk;
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+Mens feltet informatikk har betydelige egenkapitalbarrierer å adressere, inkludert å tiltrekke og beholde et felt av kandidater som er forskjellige i rase, etnisitet og kjønn på alle nivåer og grener;
 
-Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
+Mens Grace Murray Hopper, en av de første kvinnene innen informatikk, konstruerte nye programmeringsspråk og banebrytende standarder for datasystemer som la grunnlaget for mange fremskritt innen informatikk; og
 
-Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
+Mens uken til {{ campaign_date/start_long }}, til ære for Grace Hoppers bursdag, er utpekt som 'Computer Science Education Week': Nå, derfor, det være seg <br />
 
-(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
+Løst, at (HUS ELLER SENAT, STAT, FYLKE, BY ELLER SKOLESTYRE) -
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(1) støtter betegnelsen Computer Science Education Week ({{ campaign_date/full }});
 
-(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(2) oppfordrer skoler, lærere, foreldre og beslutningstakere til å delta i Computer Science Education Week ved å gjøre det mulig for elevene å delta i Kodetimen;
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(3) oppfordrer skoler, lærere, forskere, universiteter, bedriftsledere og beslutningstakere til å identifisere mekanismer for lærere til å motta banebrytende faglig utvikling for å gi bærekraftige læringsopplevelser innen informatikk på alle utdanningsnivåer og oppmuntre elevene til å bli utsatt for datavitenskapskonsepter;
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(4) oppmuntrer til muligheter, blant annet gjennom eksisterende programmer, for kvinnelige studenter og studenter fra rasemessige og etniske grupper underrepresentert i informatikk.
 
 {{ signup_button }}

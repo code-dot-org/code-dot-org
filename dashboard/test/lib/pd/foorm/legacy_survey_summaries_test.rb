@@ -6,7 +6,7 @@ module Pd::Foorm
       facilitator = create :facilitator
       result = LegacySurveySummaries.get_summaries(facilitator)
 
-      assert_not_empty result
+      refute_empty result
     end
   end
 end

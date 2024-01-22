@@ -18,7 +18,7 @@ title: Burime
 
 ## Vendosni këta posterë në shkollën tuaj
 
-Nje poster i ri eshte i gatshem i cili perfshine Malala, Stephen Curry, Shakira dhe me shume te tjere! Kete vit, cdo set do te permbaje 6 postera dhe 126 stickera me mbishkrimin "Une perfundova nje ore kodi" Pajisjet jane te limituara, prandaj porositni posterat tuaj tani! Te printosh posterin tend, thjesht klikoni ne nje foto me poshte te shihni dhe ruani versionin per printim. 
+Print your own posters! Simply click an image below to view and save a printable version.
 
 {{ promote_new_posters }}
 

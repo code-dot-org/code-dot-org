@@ -67,7 +67,8 @@ const TriggerButton = ({
       className={classNames(
         styles.triggerButton,
         colorClassName,
-        isSelected && styles.selected
+        isSelected && styles.selected,
+        disabled && styles.disabled
       )}
       onClick={disabled ? null : onClick}
     >

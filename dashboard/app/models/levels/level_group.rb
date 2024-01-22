@@ -225,7 +225,7 @@ class LevelGroup < DSLDefined
     # Go through each sublevel
     script_level.level.levels.map do |sublevel|
       question_text = sublevel.properties.try(:[], "questions").try(:[], 0).try(:[], "text") ||
-                      sublevel.properties.try(:[], "long_instructions")
+        sublevel.properties.try(:[], "long_instructions")
 
       # Go through each student, and make sure to shuffle their results for additional
       # anonymity.

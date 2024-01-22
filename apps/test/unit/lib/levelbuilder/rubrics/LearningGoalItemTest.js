@@ -6,7 +6,7 @@ import sinon from 'sinon';
 
 describe('LearningGoalItem', () => {
   let defaultProps;
-  const deleteItemSpy = sinon.spy();
+  const deleteLearningGoalSpy = sinon.spy();
   const exisitingLearningGoalData = {
     key: 'learningGoal-1',
     id: 'learningGoal-1',
@@ -16,7 +16,7 @@ describe('LearningGoalItem', () => {
 
   beforeEach(() => {
     defaultProps = {
-      deleteItem: deleteItemSpy,
+      deleteLearningGoal: deleteLearningGoalSpy,
       exisitingLearningGoalData: exisitingLearningGoalData,
     };
   });
@@ -31,13 +31,19 @@ describe('LearningGoalItem', () => {
     expect(wrapper.find('input[type="checkbox"]').length).to.equal(1);
     expect(wrapper.find('Button').length).to.equal(1);
     expect(wrapper.find('EvidenceDescriptions').length).to.equal(1);
+    expect(
+      wrapper.find('EvidenceDescriptions').prop('learningGoalData')
+    ).to.equal(defaultProps.exisitingLearningGoalData);
+    expect(wrapper.find('textarea').length).to.equal(1);
   });
 
   it('disables editing of AI textboxes when unchecked', () => {
     const wrapper = shallow(<LearningGoalItem {...defaultProps} />);
     expect(wrapper.find('input[type="checkbox"]').prop('checked')).to.be.false;
-    expect(wrapper.find('EvidenceDescriptions').at(0).props().isAiEnabled).to.be
-      .false;
+    expect(
+      wrapper.find('EvidenceDescriptions').at(0).props().learningGoalData
+        .aiEnabled
+    ).to.be.false;
   });
 
   it('enables editing of AI textboxes when checked', () => {
@@ -54,13 +60,56 @@ describe('LearningGoalItem', () => {
       />
     );
     expect(wrapper.find('input[type="checkbox"]').prop('checked')).to.be.true;
-    expect(wrapper.find('EvidenceDescriptions').at(0).props().isAiEnabled).to.be
-      .true;
+    expect(
+      wrapper.find('EvidenceDescriptions').at(0).props().learningGoalData
+        .aiEnabled
+    ).to.be.true;
   });
 
-  it('calls deleteItem when delete button is clicked', () => {
+  it('calls deleteLearningGoal when delete button is clicked', () => {
     const wrapper = shallow(<LearningGoalItem {...defaultProps} />);
     wrapper.find('Button').simulate('click');
-    expect(deleteItemSpy.calledOnce).to.be.true;
+    expect(deleteLearningGoalSpy.calledOnce).to.be.true;
+  });
+
+  it('calls updateLearningGoal when tips text is changed', () => {
+    const updateLearningGoalSpy = sinon.spy();
+    const wrapper = shallow(
+      <LearningGoalItem
+        {...defaultProps}
+        updateLearningGoal={updateLearningGoalSpy}
+      />
+    );
+    wrapper
+      .find('textarea')
+      .simulate('change', {target: {value: 'Learning Goal Tip'}});
+    expect(
+      updateLearningGoalSpy.withArgs(
+        exisitingLearningGoalData.id,
+        'tips',
+        'Learning Goal Tip'
+      ).calledOnce
+    ).to.be.true;
+  });
+
+  it('displays confirmation dialog when learning goal name input receives focus and AI assessment is checked', () => {
+    const dialogStub = sinon.stub(window, 'confirm').returns(true);
+
+    const enabledAiData = {
+      key: 'learningGoal-1',
+      id: 'learningGoal-1',
+      learningGoal: '',
+      aiEnabled: true,
+    };
+    const wrapper = shallow(
+      <LearningGoalItem
+        {...defaultProps}
+        exisitingLearningGoalData={enabledAiData}
+      />
+    );
+
+    wrapper.find('input').first().prop('onFocus')();
+    expect(dialogStub.calledOnce).to.be.true;
+    dialogStub.restore();
   });
 });

@@ -45,7 +45,7 @@ Alguns consells:
 
 Aquestes activitats estan pensades perquè els alumnes s'autodirigeixin a través d'un tutorial. No requereixen molta instrucció d'un treball de preparació de professor o professor.
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Professor Lliçó facilitada ([exemple](https://studio.code.org/s/course1/lessons/2/levels/1), [plantilla](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
 Ara que centenars de milers d'educadors han provat l'Hora del Codi, moltes aules estan preparades per a activitats més creatives que ensenyin els fonaments de la informàtica. Per ajudar els professors més avançats a trobar inspiració, recollim i comissariem lliçons i plans d'activitats “dirigits per professors” per als veterans de l'Hour of Code.
 
@@ -84,7 +84,7 @@ L'objectiu d'una Hora del Codi és donar als principiants un primer tast accessi
 
 Les activitats han d'ensenyar un concepte d'informàtica com bucles, condicionals, xifrat, o com funciona Internet. Una activitat també pot ensenyar sobre com la informàtica es connecta amb ocupacions, esdeveniments o història del món real. Per exemple, ensenyar disseny UX per fer aplicacions que siguin significatives per a un públic o causa. Desaconsellem les activitats que se centren en la sintaxi de la programació més que en els conceptes. Per exemple, llistarem, però no ressaltarem, les activitats que ensenyen HTML. De la mateixa manera, desaconsellem les lliçons de programació de blocs que se centren en configurar/canviar les opcions de configuració en lloc d'aprendre a modelar un algoritme o procés.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Les activitats que requereixen una aplicació d'instal·lació, aplicació d'escriptori o experiències de consola de jocs estan bé però no són ideals. No llistarem les activitats que requereixin inscripció o pagament. (Les activitats de robòtica poden requerir la compra de robòtica).
+*Requisits tècnics:* A causa de la gran varietat d'instal · lacions de tecnologia escolar i d'aula, les millors activitats són basades en web o telèfons intel·ligents, o d'una altra manera activitats d'estil no connectades que ensenyen conceptes d'informàtica sense l'ús d'un ordinador (vegeu http://csunplugged.com/). [](http://csunplugged.com/) Les activitats que requereixen una aplicació d'instal·lació, aplicació d'escriptori o experiències de consola de jocs estan bé però no són ideals. No llistarem les activitats que requereixin inscripció o pagament. (Les activitats de robòtica poden requerir la compra de robòtica).
 
 *Format dirigit per l'estudiant (Autoguiat):* L'Hora del Codi original es va basar majoritàriament en l'èxit de les tutories o lliçons autoguiades, facilitades opcionalment pel professor. Hi ha un munt d'opcions existents, però si voleu crear-ne una de nova, aquestes activitats han de ser dissenyades perquè puguin ser divertides per a un estudiant que treballi sol, o en una aula el professor tingui un mínim de preparació o antecedents CS. Haurien de proporcionar indicacions per als estudiants en contraposició a un repte obert d'una hora de durada. Idealment, les instruccions i tutorials estan integrats directament en la plataforma de programació, per evitar la commutació de pestanyes o finestres entre la classe i la plataforma de programació.
 
@@ -141,11 +141,11 @@ El que necessitaràs:
     * Unplugged
 * Captura de pantalla o imatge de màrqueting de l'activitat de l'Hora del Codi. Si us plau, envieu almenys una imatge amb 4:3 dimensions. Hauria de ser almenys 520px per 390px. Aquesta imatge no hauria de tenir cap text (que no sigui el vostre logotip), per tal de fer-la més accessible per als no anglòfons. Si no es proporciona una imatge adequada, podem fer la nostra pròpia captura de pantalla del vostre tutorial o podem optar per no enumerar-la. Totes les imatges s'han d'enviar com a enllaç URL a un.jpg, .jpeg o .png.
 * Per tal de fer un seguiment més precís de la participació, els socis tutorials de tercers han d'incloure imatges de seguiment d'1 píxel a la primera pàgina dels seus tutorials de l'Hora del Codi. Vegeu la secció [Pixel de seguiment](#pixel) a continuació per obtenir més detalls.
-* Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
+* En acabar la vostra activitat, els usuaris han de ser dirigits a [](https://code.org/api/hour/finish) codi.org/api/hora/finish on podran: 
     * Comparteix a les xarxes socials que van completar l'Hora del Codi
     * Rebre un certificat que han completat l'Hora del Codi
     * Vegeu taules de classificació sobre quins països/ciutats tenen els índexs de participació més alts en les activitats de l'Hora del Codi
-    * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
+    * Per als usuaris que dediqueu una hora a la vostra activitat i no la completeu, incloeu un botó a la vostra activitat que digui “He acabat amb la meva Hora de Codi” que enllaça de nou a [](https://code.org/api/hour/finish) code.org/api/hora/finish també.
 * (Opcional) Podem fer un seguiment amb un enllaç d'enquesta/formulari en línia demanant un informe de les següents mètriques d'activitat: 
     * Per a activitats en línia (especialment aplicacions per a telèfons intel·ligents/tauletes): 
         * Nombre d'usuaris
@@ -262,7 +262,7 @@ NOTA: això no és important fer-ho per a aplicacions instal·lables (aplicacion
 
 Exemple de seguiment de píxels per a Dance Party:
 
-IMG SRC = <http://code.org/api/hour/begin_dance.png>   
+IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
 
 [**Tornar a dalt**](#top)

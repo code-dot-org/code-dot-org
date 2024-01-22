@@ -86,6 +86,69 @@
         "define/express/2022": {
           "word": "Аныктоо"
         },
+        "code/csc-adaptations/2023": {
+          "word": "Код жазуу"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Код жазуу"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "Шартуулар"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Өзгөрмө"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Код жазуу"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "Сүрөтчү"
+        },
+        "code/poetry/2023": {
+          "word": "Код жазуу"
+        },
+        "variable/csd/2023": {
+          "word": "Өзгөрмө"
+        },
+        "conditionals/csd/2023": {
+          "word": "Шартуулар"
+        },
+        "abstraction/csd/2023": {
+          "word": "Абстракция"
+        },
+        "function/csd/2023": {
+          "word": "Функция"
+        },
+        "conditionals/coursed/2023": {
+          "word": "Шартуулар"
+        },
+        "function/coursee/2023": {
+          "word": "Функция"
+        },
+        "conditionals/coursee/2023": {
+          "word": "Шартуулар"
+        },
+        "define/coursee/2023": {
+          "word": "Аныктоо"
+        },
+        "variable/coursef/2023": {
+          "word": "Өзгөрмө"
+        },
+        "define/coursef/2023": {
+          "word": "Аныктоо"
+        },
+        "conditionals/express/2023": {
+          "word": "Шартуулар"
+        },
+        "function/express/2023": {
+          "word": "Функция"
+        },
+        "variable/express/2023": {
+          "word": "Өзгөрмө"
+        },
+        "define/express/2023": {
+          "word": "Аныктоо"
+        },
         "conditionals/aquatic/unversioned": {
           "word": "Шартуулар"
         },
@@ -98,39 +161,14 @@
         "function/hero/unversioned": {
           "word": "Функция"
         },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/poem-art/2021": {
           "word": "Код жазуу"
         },
         "code/sports/unversioned": {
           "word": "Код жазуу"
         },
-        "code/poem-art/unversioned": {
-          "word": "Код жазуу",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "code/dance-ai/2023": {
+          "word": "Код жазуу"
         }
       }
     }

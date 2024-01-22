@@ -10,6 +10,7 @@ sk:
         error:
           future: nemôže byť v budúcnosti
         finish_sign_up_header: Dokončite vytvorenie svojho účtu
+        finish_sign_up_header_error: 'Opravte tieto chyby:'
         finish_sign_up_subheader: Vyplň nasledujúce informácie na dokončenie vytvorenia
           Code.org účtu pre <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Vyplň nasledujúce informácie na dokončenie
@@ -31,6 +32,7 @@ sk:
           emailovú adresu)](%{url})
         reset_password_token: Odkaz na obnovenie hesla, ktorý si použil
         us_state: Kraj
+        user_type: Typ účtu
         username: Používateľské meno
         verified_teacher: Overený Učiteľ
     errors:
@@ -555,6 +557,7 @@ sk:
       about_partners: Partneri
       about_team: Celý tím
       about_us: O nás
+      app_lab_documentation: Dokumentácia aplikácie Lab
       app_lab_tutorials: App Lab Návody
       course_catalog: Katalóg kurzov
       documentation: Dokumentácia
@@ -567,6 +570,7 @@ sk:
       educate_middle: 2. stupeň základnej školy
       educate_overview: Prehľad školiteľov
       educate_partner: Staňte sa naším partnerom
+      educate_requirements: Technické požiadavky
       educate_tools: Nástroje a videá
       finished_hoc: Hotovo!
       game_lab_documentation: Dokumentácia Game Lab
@@ -580,7 +584,7 @@ sk:
       legal_privacy: Zásady ochrany súkromia
       legal_tos: Podmienky používania služby
       my_dashboard: Môj hlavný panel
-      professional_learning: Vzdelávanie pre profesionálov
+      professional_learning: Profesijný rozvoj
       project_beats_documentation: Dokumentácia projektu Beats
       project_gallery: Projekty
       report_abuse: Nahlásiť zneužitie
@@ -772,13 +776,16 @@ sk:
         israel: Izrael
         jamaica: Jamajka
         kenya: Keňa
+        kosovo: Kosovo
         malaysia: Malajzia
         maldives: Maledivy
         mexico: Mexiko
         mongolia: Mongolsko
         new_zealand: Nový Zéland
         paraguay: Paraguaj
+        philippines: Filipíny
         portugal: Portugalsko
+        puerto_rico: Portoriko
         slovakia: Slovensko
         south_korea: Južná Kórea
         spain: Španielsko

@@ -74,7 +74,7 @@ Bắt đầu Giờ lập trình của bạn bằng cách truyền cảm hứng c
     
     - [In chứng chỉ]({{ urls/certificates }}) cho học sinh của bạn.
     - [In sticker “Tôi đã thực hiện Giờ lập trình!”]({{ promote/resources_stickers }}) cho học sinh của bạn.
-    - [Đặt hàng áo thun theo yêu cầu](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) cho người tham gia.
+    - [Đặt áo phông tùy chỉnh](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) cho người tham gia.
     - Chia sẻ ảnh và video về sự kiện Giờ lập trình của bạn trên mạng xã hội. Sử dụng hashtag #GiờLậpTrình và @codeorg để chúng tôi cũng có thể làm tôn vinh thành tựu của bạn!
     
     ## Các nguồn tài liệu Giờ lập trình khác dành cho giáo viên

@@ -145,7 +145,7 @@ class ScrollButtons extends React.Component {
         onMouseDown={this.scrollStartUp}
         style={[styles.all, upStyle, minecraftButton]}
       >
-        <img src="/blockly/media/1x1.gif" className="scroll-up-btn" />
+        <img src="/blockly/media/1x1.gif" className="scroll-up-btn" alt="" />
       </button>
     ) : (
       <div
@@ -174,7 +174,7 @@ class ScrollButtons extends React.Component {
         onMouseDown={this.scrollStartDown}
         style={[styles.all, downStyle, minecraftButton]}
       >
-        <img src="/blockly/media/1x1.gif" className="scroll-down-btn" />
+        <img src="/blockly/media/1x1.gif" className="scroll-down-btn" alt="" />
       </button>
     ) : (
       <div

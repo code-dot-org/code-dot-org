@@ -1,0 +1,24 @@
+{
+  "sk-SK": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "co-teacher": {
+            "buttonText": "Zistiť viac"
+          },
+          "hoc-2023": {
+            "body": "Pridajte sa k miliónom ľudí po celom svete a zorganizujte Hodinu kódu s umelou inteligenciou alebo bez nej a naučte sa, ako funguje. Ktokoľvek a kdekoľvek sa môže zapojiť. Predchádzajúce skúsenosti nie sú potrebné.",
+            "buttonText": "Zistiť viac",
+            "title": "Hodina kódu: Kreativita pomocou AI"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Zistiť viac"
+          },
+          "superhero": {
+            "buttonText": "Ďalšie informácie"
+          }
+        }
+      }
+    }
+  }
+}

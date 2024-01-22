@@ -65,7 +65,7 @@ ko:
       name: 맵 이름
       nectar: 꽃꿀의 양
       nectars: 꽃꿀
-      object: 객체로 이동합니다
+      object: 대상
       planet: 행성
       player_score: 플레이어_점수
       points: 점수
