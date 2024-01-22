@@ -3,6 +3,7 @@ import React from 'react';
 import {CROSS_TAB_CHART_AREA} from './constants';
 import * as color from '../../../util/color';
 import fontConstants from '@cdo/apps/fontConstants';
+import msg from '@cdo/locale';
 
 export const MAX_CROSSTAB_COLUMNS = 150;
 export const MAX_CROSSTAB_ROWS = 10000;
@@ -52,28 +53,13 @@ export default function CrossTabChart(props) {
   );
 
   if (columns.length > MAX_CROSSTAB_COLUMNS) {
-    return (
-      <div>
-        We're unable to render your chart because the Y value contains too much
-        data.
-      </div>
-    );
+    return <div>{msg.crossTabTooMuchYData()}</div>;
   }
   if (chartData.length > MAX_CROSSTAB_ROWS) {
-    return (
-      <div>
-        We're unable to render your chart because the X value contains too much
-        data.
-      </div>
-    );
+    return <div>{msg.crossTabTooMuchXData()}</div>;
   }
   if (columns.length * chartData.length > MAX_CROSSTAB_CELLS) {
-    return (
-      <div>
-        We're unable to render your chart because the X and Y values contains
-        too much data.
-      </div>
-    );
+    return <div>{msg.crossTabTooManyCellsData()}</div>;
   }
   return (
     <div id={CROSS_TAB_CHART_AREA} style={wrapperStyle}>
