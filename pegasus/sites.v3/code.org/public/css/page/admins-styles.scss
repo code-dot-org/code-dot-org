@@ -1,0 +1,25 @@
+section.driving-change {
+
+  .stat-box {
+    background: var(--neutral_white);
+    border: 1px solid var(--neutral_dark20);
+    border-radius: 4px;
+    border-top: 0.5rem solid var(--brand_primary_default);
+    padding: 1.5rem 2rem;
+    flex: 1;
+  }
+
+  p.heading-xxl {
+    color: var(--brand_primary_default);
+  }
+
+  p.location {
+    text-transform: uppercase;
+    font-weight: var(--semi-bold-font-weight);
+    margin: 1.5rem 0;
+
+    span {
+      color: var(--brand_accent_default)
+    }
+  }
+}

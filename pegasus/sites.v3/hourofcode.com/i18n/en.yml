@@ -397,6 +397,7 @@
   call_to_action_get_started: "Get started"
   call_to_action_discover_district_program: "Discover our District Program"
   call_to_action_see_district_partners: "See our District Partners"
+  call_to_action_read_full_story: "Read the full story"
 
   aria_label_call_to_action_hoc_how_to_educators: "View how-to guide for Educators"
   aria_label_call_to_action_hoc_how_to_companies: "View how-to guide for Companies"
@@ -1091,6 +1092,14 @@
   admins_page_elevate_desc_04: "Code.org remains steadfast in its commitment to keeping our curriculum free. We believe in equitable access to computer science education, ensuring every student has the opportunity to succeed in a technology-driven future."
   admins_page_district_program_header: "Join the Code.org District Program"
   admins_page_district_program_desc: "District leaders around the United States have joined the Code.org District Program—at no cost!—to bring computer science to their district, empower their educators, and teach students the skills of the future."
+  admins_page_driving_change_heading: "Districts and schools driving change"
+  admins_page_driving_change_desc: "Join pioneering districts and schools nationwide that are driving educational change and shaping the future of computer science education with the support of Code.org"
+  admins_page_driving_change_stat_desc_01: "Increase in CS access"
+  admins_page_driving_change_desc_01: "Broward County's commitment to computer science resulted in all high schools offering CS courses within three years, underpinned by a district-wide, cross-departmental team and robust Hour of Code initiatives."
+  admins_page_driving_change_stat_desc_02: "New educators teaching CS"
+  admins_page_driving_change_desc_02: "In Charles County, a passionate teacher's vision and superintendent support fueled a district-wide computer science initiative, integrating CS into graduation requirements and achieving notable diversity in student participation."
+  admins_page_pathway_heading: "A comprehensive K-12 curriculum pathway"
+  admins_page_pathway_desc: "Explore our complete, no-cost K-12 curriculum designed to empower the next generation of learners through computer science (CS), providing robust resources and consistent support at every educational stage."
 
   pl_middle_high_top_heading: "Professional Learning Workshops for Grades 6-12"
   pl_middle_high_top_desc: "Our engaging workshops are for new and experienced computer science teachers!"
