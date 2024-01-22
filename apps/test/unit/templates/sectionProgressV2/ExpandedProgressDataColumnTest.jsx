@@ -3,19 +3,17 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
 
-import {UnconnectedLessonProgressDataColumn} from '@cdo/apps/templates/sectionProgressV2/LessonProgressDataColumn.jsx';
+import {UnconnectedExpandedProgressDataColumn} from '@cdo/apps/templates/sectionProgressV2/ExpandedProgressDataColumn.jsx';
 import LessonDataCell from '@cdo/apps/templates/sectionProgressV2/LessonDataCell.jsx';
 
-import {
-  fakeLessonWithLevels,
-  fakeLesson,
-} from '@cdo/apps/templates/progress/progressTestHelpers';
+import {fakeLessonWithLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
 import styles from '@cdo/apps/templates/sectionProgressV2/progress-table-v2.module.scss';
 
 const STUDENT_1 = {id: 1, name: 'Student 1', familyName: 'FamNameB'};
 const STUDENT_2 = {id: 2, name: 'Student 2', familyName: 'FamNameA'};
 const STUDENTS = [STUDENT_1, STUDENT_2];
-const LESSON = fakeLessonWithLevels({}, 1);
+const NUM_LEVELS = 4;
+const LESSON = fakeLessonWithLevels({}, NUM_LEVELS);
 const LESSON_PROGRESS = {
   [STUDENT_1.id]: {
     [LESSON.id]: {
@@ -41,38 +39,37 @@ const DEFAULT_PROPS = {
   lesson: LESSON,
   lessonProgressByStudent: LESSON_PROGRESS,
   sortedStudents: STUDENTS,
-  addExpandedLesson: () => {},
+  removeExpandedLesson: () => {},
 };
 
 const setUp = overrideProps => {
   const props = {...DEFAULT_PROPS, ...overrideProps};
-  return shallow(<UnconnectedLessonProgressDataColumn {...props} />);
+  return shallow(<UnconnectedExpandedProgressDataColumn {...props} />);
 };
 
-describe('LessonProgressDataColumn', () => {
-  it('Shows header lesson', () => {
+describe('ExpandedProgressDataColumn', () => {
+  it('Shows header with lesson and all levels', () => {
     const wrapper = setUp();
 
-    expect(wrapper.find(`.${styles.lessonHeaderCell}`)).to.have.length(1);
+    expect(wrapper.find(`.${styles.expandedHeaderLessonCell}`)).to.have.length(
+      1
+    );
+    expect(wrapper.find(`.${styles.expandedHeaderLevelCell}`)).to.have.length(
+      NUM_LEVELS
+    );
   });
 
-  it('Shows no expansion if no levels', () => {
-    const wrapper = setUp({lesson: fakeLesson()});
-
-    expect(wrapper.find('FontAwesome')).to.have.length(0);
-  });
-
-  it('shows progress for all students', () => {
+  it('Shows all levels for all students', () => {
     const wrapper = setUp();
-
     expect(wrapper.find(LessonDataCell)).to.have.length(STUDENTS.length);
   });
-  it('Expands on header click', () => {
-    const addExpandedLesson = sinon.spy();
-    const wrapper = setUp({addExpandedLesson: addExpandedLesson});
 
-    wrapper.find(`.${styles.lessonHeaderCell}`).simulate('click');
+  it('Un-expands on header click', () => {
+    const removeExpandedLesson = sinon.spy();
+    const wrapper = setUp({removeExpandedLesson: removeExpandedLesson});
 
-    expect(addExpandedLesson).to.have.been.calledOnceWith(LESSON.id);
+    wrapper.find(`.${styles.expandedHeaderLessonCell}`).simulate('click');
+
+    expect(removeExpandedLesson).to.have.been.calledOnceWith(LESSON.id);
   });
 });

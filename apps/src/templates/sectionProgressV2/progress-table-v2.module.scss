@@ -14,6 +14,13 @@
   overflow-y: hidden;
   display: flex;
   flex-direction: row;
+
+  :first-child {
+    margin-inline-start: 0;
+  }
+  :last-child {
+    margin-inline-end: 0;
+  }
 }
 
 .gridBox {
@@ -84,6 +91,44 @@
     flex-direction: column;
     border-bottom: 1px solid $light_gray_200;
     border-right: 1px solid $light_gray_200;
+  }
+}
+
+.expanded {
+  &Header {
+    min-width: 80px;
+
+    &LessonCell {
+      height: 42px;
+      line-height: 42px;
+      min-width: 80px;
+      border-bottom: 1px solid $light_gray_200;
+      border-right: 1px solid $light_gray_200;
+    }
+
+    &SecondRow {
+      display: flex;
+      flex-direction: row;
+      width: fit-content;
+      border-right: 1px solid $light_gray_200;
+    }
+
+    &LevelCell {
+      min-width: 52px;
+      text-align: center;
+      height: 32px;
+      line-height: 32px;
+      border-top: 0;
+    }
+  }
+  &Column {
+    // This is one more to compensate for the -1px margin-right on the lesson column
+    margin-left: 9px;
+    margin-right: 8px;
+  }
+
+  &Column + &Column {
+    margin-left: 0;
   }
 }
 
