@@ -604,14 +604,15 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('detect-production-webpack-chunks', function () {
-    if (process.env.DEV) {
-      if (fs.existsSync('./build/package/js/code-studio-common.js')) {
-        grunt.warn(
-          'You are building in dev mode (DEV=1), but the build/ directory already contains production Webpack chunks, such as code-studio-common.js.\n' +
-            'These will not be overwritten by a dev build, and their presence will cause loading errors in some labs (e.g., Applab).\n' +
-            'Run yarn clean and try again.'
-        );
-      }
+    if (
+      process.env.DEV &&
+      fs.existsSync('./build/package/js/code-studio-common.js')
+    ) {
+      grunt.warn(
+        'You are building in dev mode (DEV=1), but the build/ directory already contains production Webpack chunks, such as code-studio-common.js.\n' +
+          'These will not be overwritten by a dev build, and their presence will cause loading errors in some labs (e.g., Applab).\n' +
+          'Run yarn clean and try again.'
+      );
     }
   });
 
