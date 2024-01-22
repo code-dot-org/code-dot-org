@@ -101,8 +101,4 @@ export default class VerticalFlyout extends GoogleBlockly.VerticalFlyout {
     const toolboxWidth = Blockly.cdoUtils.getToolboxWidth();
     document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
   }
-
-  test() {
-    console.log('cdoVerticalFlyout!');
-  }
 }
