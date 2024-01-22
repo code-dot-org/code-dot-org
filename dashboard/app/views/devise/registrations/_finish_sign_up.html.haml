@@ -24,8 +24,8 @@
         %p
           - if Policies::Lti.lti? @user
             - issuer_url = Policies::Lti.issuer @user
-            - issuer = URI.parse(issuer_url).host
-            = t('activerecord.attributes.user.finish_sign_up_subheader_provider_markdown', provider: issuer, email: @user.email, markdown: :inline).html_safe
+            - issuer_name = Policies::Lti.issuer_name issuer_url
+            = t('activerecord.attributes.user.finish_sign_up_subheader_provider_markdown', provider: issuer_name, email: @user.email, markdown: :inline).html_safe
           - elsif @user.provider.present?
             - provider = t("auth.#{@user.provider}")
             = t('activerecord.attributes.user.finish_sign_up_subheader_provider_markdown', provider: provider, email: @user.email, markdown: :inline).html_safe

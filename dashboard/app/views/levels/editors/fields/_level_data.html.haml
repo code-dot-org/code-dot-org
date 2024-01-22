@@ -2,5 +2,5 @@
   Level Data
 
 #level_data.in.collapse
-  = f.label :music_level_data, 'Level data JSON'
+  = f.label :level_data_label, 'Level data JSON'
   = f.text_area :level_data, placeholder: 'Insert JSON Data', rows: 10, style: 'width: 90%', value: JSON.pretty_generate(@level.level_data)
