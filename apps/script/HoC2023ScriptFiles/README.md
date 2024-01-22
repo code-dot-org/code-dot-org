@@ -7,7 +7,7 @@ Run the `HoC2023AiGenerateWeights.py` to generate the associated output weights 
 
 Before running the script, make sure to adjust your local parameters based off the current model being used. Previous iterations have leveraged spaCy and OpenAI's Ada models and it is not unreasonable to anticipate that the model "vendor" may change again in the future.
 
-As of 01/08/2024, this script uses AWS's Titan v1 LLM through their Bedrock API. For additional background context and testing resources, check the google drive here: https://drive.google.com/drive/folders/1Kxx3Y91Cb8aPY7KsnIDIva_x60seAexZ
+As of 01/08/2024, this script uses AWS's Titan v1 LLM through their Bedrock API. For additional background context and testing resources, check the google drive here: https://docs.google.com/document/d/1beDoalfB1Y7BybN82YGhuzTNos_TE5l0dX4XdKPzNdw/edit?usp=sharing
 
 ## Script Outputs
 
