@@ -34,6 +34,11 @@ section.bg-primary-light {
     &.link-button { color: var(--neutral_white) !important; }
   }
 }
+section.bg-pattern-dark {
+  background: url("/images/banners/banner-bg-lines-neutral-dark.png") center repeat;
+  background-size: 12rem;
+  background-color: var(--neutral_dark);
+}
 
 // Hide random whitespace at the bottom
 //  of the page from legacy code
