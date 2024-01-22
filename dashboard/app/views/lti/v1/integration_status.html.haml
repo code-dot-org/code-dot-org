@@ -1,18 +1,27 @@
-#signup
-
-- if @integration_status == :created
-  .row
-    .span10.header
-      %h1= t('Thank you for registering your LMS!')
+#lti-integration-portal
   .row
     .span10
-      %p= t('lti.integration_portal_success_body').html_safe
-      %p= t('lti.integration_portal_guide_instructions').html_safe
-- else
-  .row
-    .span10.header
-      %h1= t('Looks like you\'re are already registered!')
-  .row
-    .span10
-      %p= t('lti.integration_portal_exists_body').html_safe
-      %p= t('lti.integration_portal_guide_instructions').html_safe
+      .padded-container
+        - if @integration_status == :created
+          .row
+            .span10.header
+              %h1= t('lti.integration_portal_success_header')
+          .row
+            .span10
+              %p= t('lti.integration_portal_success_body').html_safe
+              %p= t('lti.integration_portal_guide_instructions').html_safe
+        - else
+          .row
+            .span10.header
+              %h1= t('Looks like you\'re are already registered!')
+          .row
+            .span10
+              %p= t('lti.integration_portal_exists_body').html_safe
+              %p= t('lti.integration_portal_guide_instructions').html_safe
+        .row
+          .span10
+            %br
+            = link_to :home do
+              %button.lti-btn-orange-right= t('lti.integration_navigate_home')
+            = link_to :lti_v1_integrations do
+              %button.button= t('lti.integration_navigate_registration')

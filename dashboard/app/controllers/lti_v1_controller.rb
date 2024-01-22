@@ -251,14 +251,14 @@ class LtiV1Controller < ApplicationController
     end
   end
 
-  # POST /lti/v1/integration
+  # POST /lti/v1/integrations
   # Creates a new LtiIntegration
   def create_integration
     begin
       params.require([:client_id, :lms, :email])
     rescue
-      render status: :bad_request, json: {error: I18n.t('lti.error.missing_params')}
-      return
+      flash.alert = I18n.t('lti.error.missing_params')
+      return redirect_to lti_v1_integrations_path
     end
 
     client_id = params[:client_id]
@@ -295,12 +295,12 @@ class LtiV1Controller < ApplicationController
     render 'lti/v1/integration_status'
   end
 
-  # GET /lti/v1/integration
+  # GET /lti/v1/integrations
   # Displays the onboarding portal for creating a new LTI Integration
   def new_integration
     @form_data = {}
     @form_data[:lms_platforms] = Policies::Lti::LMS_PLATFORMS.keys.map(&:to_s)
-    render lti_v1_integration_path
+    render lti_v1_integrations_path
   end
 
   private

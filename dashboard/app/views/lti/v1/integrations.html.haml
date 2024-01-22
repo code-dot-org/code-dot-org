@@ -1,4 +1,4 @@
-#signup
+#lti-integration-portal
 
   .row
     .span10.header
@@ -7,24 +7,22 @@
     .span10
       %p= t('lti.integration_portal_instructions').html_safe
       %p= t('lti.integration_portal_instructions_2').html_safe
-    = form_with(url: :lti_v1_integration, method: :post, class: "finish-signup") do |f|
+    = form_with(url: :lti_v1_integrations, method: :post, class: "lti-integration-form") do |f|
       .row
         .span8
           .padded-container
             .row
-              .span3.signup-field-label
-                #teacher-email-label
-                  = f.label :client_id, t('lti.integration_client_id').html_safe
+              .span3.lti-integration-field-label
+                = f.label :client_id, t('lti.integration_client_id').html_safe
               .span5
                 = f.text_field :client_id, maxlength: 50
             .row
-              .span3.signup-field-label
-                #teacher-email-label
-                  = f.label :email, t('lti.integration_email').html_safe
+              .span3.lti-integration-field-label
+                = f.label :email, t('lti.integration_email').html_safe
               .span5
                 = f.email_field :email, maxlength: 255
             .row
-              .span3.signup-field-label
+              .span3.lti-integration-field-label
                 = f.label :lms, t('lti.integration_lms_selector')
               .span5
                 = f.select :lms, @form_data[:lms_platforms].map {|l| l}
@@ -32,7 +30,7 @@
               .span10
                 %p= t('lti.integration_portal_instructions_3').html_safe
 
-            %button.submit= t('lti.integration_register')
+            %button.lti-btn-orange= t('lti.integration_register')
 
   .row
     .span10
