@@ -2118,6 +2118,7 @@ class UnitTest < ActiveSupport::TestCase
     create :unit_group_unit, unit_group: unit_group, script: unit1, position: 1
     create :unit_group_unit, unit_group: unit_group, script: unit2, position: 2
     unit1.reload
+    unit2.reload
 
     student = create :student
 
@@ -2130,6 +2131,8 @@ class UnitTest < ActiveSupport::TestCase
     unit_group = create :unit_group
     create :unit_group_unit, unit_group: unit_group, script: unit1, position: 1
     create :unit_group_unit, unit_group: unit_group, script: unit2, position: 2
+    unit1.reload
+    unit2.reload
 
     student = create :student
 

@@ -721,6 +721,9 @@ class Unit < ApplicationRecord
     user.assigned_script?(self)
   end
 
+  # If this unit is in a unit group, returns the next unit in the unit group.
+  # If it's the last unit in the unit group, returns nil.
+  # If it's not in a unit group, returns nil.
   def next_unit(user)
     return nil unless unit_group
     other_units = unit_group.units_for_user(user)
