@@ -1,4 +1,77 @@
---
+---
 title: Administrators
 theme: responsive_full_width
 ---
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+
+%section.top
+  .wrapper
+    .text-wrapper.col-50
+      %h1=hoc_s(:admins_page_top_heading)
+      %p.heading-xs
+        =hoc_s(:admins_page_top_subhead)
+      %p.body-three
+        =hoc_s(:admins_page_top_desc)
+      %a.link-button{href: "/districts"}
+        =hoc_s(:call_to_action_discover_district_program)
+    %figure.col-45{style: "float: right; margin-top: 1.25rem;"}
+      %img.rounded-corners.box-shadow-primary{src: "/images/admins-page-top.png", alt: "", style: "position: relative; width: 100%;"}
+    .clear
+
+= view :section_divider_line
+
+%section.why-teach-cs
+  .wrapper
+    %h2.centered
+      =hoc_s(:teach_page_why_teach_cs_heading)
+    .editorial-cards-wrapper-2x2
+      .flex-container
+        %figure
+          %img{src: "/images/admins-page-pathways.png", alt: ""}
+        .text-wrapper
+          %h3.heading-sm
+            =hoc_s(:admins_page_elevate_title_01)
+          %p=hoc_s(:admins_page_elevate_desc_01)
+      .flex-container
+        %figure
+          %img{src: "/images/admins-page-superhero.png", alt: ""}
+        .text-wrapper
+          %h3.heading-sm
+            =hoc_s(:admins_page_elevate_title_02)
+          %p=hoc_s(:admins_page_elevate_desc_02)
+      .flex-container
+        %figure
+          %img{src: "/images/admins-page-standards.png", alt: ""}
+        .text-wrapper
+          %h3.heading-sm
+            =hoc_s(:admins_page_elevate_title_03)
+          %p=hoc_s(:admins_page_elevate_desc_03)
+      .flex-container
+        %figure
+          %img{src: "/images/admins-page-curriculum.png", alt: ""}
+        .text-wrapper
+          %h3.heading-sm
+            =hoc_s(:admins_page_elevate_title_04)
+          %p=hoc_s(:admins_page_elevate_desc_04)
+
+%section.bg-neutral-dark
+  .wrapper.centered
+    %h2{style: "color: white"}
+      =hoc_s(:admins_page_district_program_header)
+    %p{style: "color: white"}
+      =hoc_s(:admins_page_district_program_desc)
+    .button-wrapper.centered
+      %a.link-button{href: "/districts"}
+        =hoc_s(:call_to_action_discover_district_program)
+      -# TODO - show this once the distrcit partners page is live
+      -# %a.link-button.secondary.white{href: "/districts"}
+      -#   =hoc_s(:call_to_action_see_district_partners)
+
+%section.bg-neutral-dark
+  .wrapper.centered
+    %h2{style: "color: white"}
+      =hoc_s(:admins_page_district_program_header)
+    %p{style: "color: white"}
+      =hoc_s(:admins_page_district_program_desc)
+
