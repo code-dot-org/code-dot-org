@@ -756,6 +756,19 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal script_levels[1].path, script_levels[0].next_level_or_redirect_path_for_user(student)
   end
 
+  test 'next_level_or_redirect_path_for_user returns to next unit if at the end of the current self paced pl unit' do
+    unit1 = create :unit
+    unit2 = create :unit
+    unit1.stubs(:pl_course?).returns true
+    unit1.stubs(:next_unit).returns(unit2)
+
+    script_level = create :script_level, script: unit1
+
+    student = create :student
+
+    assert_equal "/s/#{unit2.name}", script_level.next_level_or_redirect_path_for_user(student)
+  end
+
   test 'end of lesson' do
     script = Unit.find_by_name('course1')
 
