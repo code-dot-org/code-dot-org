@@ -433,7 +433,7 @@ module Pd::Application
     end
 
     def formatted_principal_email
-      "\"#{principal_greeting}\" <#{principal_email}>"
+      ActionMailer::Base.email_address_with_name(principal_email, principal_greeting)
     end
 
     def effective_regional_partner_name
