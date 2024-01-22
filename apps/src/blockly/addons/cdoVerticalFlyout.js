@@ -35,10 +35,11 @@ export default class VerticalFlyout extends GoogleBlockly.VerticalFlyout {
     if (
       [mainWorkspace, functionEditorWorkspace].includes(this.targetWorkspace)
     ) {
-      // Constrain the main workspace flyout to not be wider than 40% of the total workspace space.
+      // Constrain the flyout to not be wider than 40% of the total main workspace space.
       flyoutWidth = Math.min(
         flyoutWidth,
-        this.targetWorkspace.getMetricsManager().getSvgMetrics().width * 0.4
+        // Before the modal editor workspace is opened, its svg metrics are unreliable.
+        mainWorkspace?.getMetricsManager().getSvgMetrics().width * 0.4
       );
     }
 
