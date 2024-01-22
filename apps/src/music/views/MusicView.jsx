@@ -190,12 +190,14 @@ class UnconnectedMusicView extends React.Component {
     }
 
     // When changing levels, stop playback and reset the initial sounds loaded flag
-    // since a new set of sounds will be loaded on the next level.
+    // since a new set of sounds will be loaded on the next level.  Also clear
+    // the callout that's showing.
     if (prevProps.currentLevelIndex !== this.props.currentLevelIndex) {
       this.stopSong();
       this.setState({
         hasLoadedInitialSounds: false,
       });
+      this.props.showCallout(undefined);
     }
 
     if (
