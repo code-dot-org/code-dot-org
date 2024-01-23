@@ -1109,6 +1109,9 @@
   admins_page_pl_self_paced_desc: "Flexible and concise, our self-paced modules exist alongside our curriculum, letting educators build their CS teaching skills at their own pace."
   admins_page_pl_workshops_desc: "Engage with expert-led CS education workshops, available virtually and in-person, for hands-on learning and peer networking."
   admins_page_pl_every_grade_desc: "Tailored learning for every grade and at every experience level ensures educators can confidently teach CS, at any starting point."
+  admins_page_subscribe_form_heading: "Sign up for our administrator newsletter!"
+  admins_page_subscribe_form_desc: "Sign up to receive monthly emails from Code.org on bringing computer science to your school or district. Get helpful reminders, tips, and updates sent right to your inbox. You can unsubscribe at any time."
+  admins_page_subscribe_form_district_disclaimer: "District Administrator? [Discover our District Program](%{district_program_url})."
 
   pl_middle_high_top_heading: "Professional Learning Workshops for Grades 6-12"
   pl_middle_high_top_desc: "Our engaging workshops are for new and experienced computer science teachers!"

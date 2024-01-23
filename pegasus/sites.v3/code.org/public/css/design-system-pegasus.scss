@@ -1306,6 +1306,10 @@ section.quote {
   border-radius: $border-radius;
   padding: 2rem;
 
+  &.no-bg {
+    background: none;
+  }
+
   @media screen and (max-width: $width-md) {
     gap: 1rem;
   }
