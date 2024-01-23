@@ -9,9 +9,13 @@ import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
 import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
 import ExpandedProgressDataColumn from './ExpandedProgressDataColumn';
 import LessonProgressDataColumn from './LessonProgressDataColumn';
+import classNames from 'classnames';
 
 const NUM_STUDENT_SKELETON_ROWS = 6;
-const STUDENT_IDS = [...Array(NUM_STUDENT_SKELETON_ROWS).keys()];
+const STUDENT_SKELETON_IDS = [...Array(NUM_STUDENT_SKELETON_ROWS).keys()];
+
+const NUM_LESSON_SKELETON_COLUMNS = 20;
+const LESSON_SKELETON_DATA = [...Array(NUM_LESSON_SKELETON_COLUMNS).keys()];
 
 function ProgressTableV2({
   isSortedByFamilyName,
@@ -24,7 +28,7 @@ function ProgressTableV2({
 }) {
   const sortedStudents = React.useMemo(() => {
     if (isSkeleton && students.length === 0) {
-      return STUDENT_IDS.map(id => ({id}));
+      return STUDENT_SKELETON_IDS.map(id => ({id}));
     }
     return isSortedByFamilyName
       ? students.sort(stringKeyComparator(['familyName', 'name']))
@@ -32,13 +36,15 @@ function ProgressTableV2({
   }, [students, isSortedByFamilyName, isSkeleton]);
 
   const renderedColumns = React.useMemo(() => {
-    const lessons = unitData?.lessons;
+    const lessons = isSkeleton
+      ? LESSON_SKELETON_DATA.map(id => ({id, relativePosition: id}))
+      : unitData?.lessons;
     if (lessons === undefined || lessons.length === 0) {
       return [];
     }
 
     return lessons.map((lesson, index) => {
-      if (expandedLessonIds.includes(lesson.id)) {
+      if (!isSkeleton || expandedLessonIds.includes(lesson.id)) {
         return (
           <ExpandedProgressDataColumn
             lesson={lesson}
@@ -60,11 +66,22 @@ function ProgressTableV2({
               setExpandedLessons([...expandedLessonIds, lessonId])
             }
             key={index}
+            isSkeleton={isSkeleton}
           />
         );
       }
     });
-  }, [unitData, expandedLessonIds, setExpandedLessons, sortedStudents]);
+  }, [
+    unitData,
+    expandedLessonIds,
+    setExpandedLessons,
+    sortedStudents,
+    isSkeleton,
+  ]);
+
+  const tableStyles = isSkeleton
+    ? classNames(styles.table, styles.tableLoading)
+    : styles.table;
 
   return (
     <div className={styles.progressTableV2}>
@@ -75,7 +92,7 @@ function ProgressTableV2({
         isSkeleton={true} //isSkeleton && students.length === 0}
       />
 
-      <div className={styles.table}>{renderedColumns}</div>
+      <div className={tableStyles}>{renderedColumns}</div>
     </div>
   );
 }

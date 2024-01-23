@@ -6,6 +6,7 @@
   margin-bottom: 76px;
   display: flex;
   flex-direction: row;
+
 }
 
 .table {
@@ -14,6 +15,10 @@
   overflow-y: hidden;
   display: flex;
   flex-direction: row;
+
+  &Loading {
+    overflow-x: hidden;
+  }
 
   :first-child {
     margin-inline-start: 0;
@@ -88,6 +93,22 @@
     border-bottom: 1px solid $light_gray_200;
     border-right: 1px solid $light_gray_200;
     margin-bottom: 32px;
+    text-align: center;
+  }
+  
+  &HeaderCaret {
+    margin-inline-end: 12px;
+    vertical-align: middle;
+  }
+
+  &SkeletonHeaderCell {
+    width: 75%;
+    vertical-align: middle;
+  }
+
+  &SkeletonCell {
+    width: 1em;
+    border-radius: 100%;
   }
 
   &DataColumn {

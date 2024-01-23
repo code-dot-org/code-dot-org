@@ -8,6 +8,40 @@ import LessonDataCell from './LessonDataCell';
 import classNames from 'classnames';
 import FontAwesome from '../FontAwesome';
 import {lessonHasLevels} from '../progress/progressHelpers';
+import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+
+const getSkeletonLessonColumn = (lessonId, sortedStudents) => {
+  return (
+    <div className={styles.lessonColumn} key={lessonId}>
+      <div
+        className={classNames(styles.gridBox, styles.lessonHeaderCell)}
+        key={lessonId}
+      >
+        <div
+          className={classNames(
+            styles.lessonSkeletonHeaderCell,
+            skeletonizeContent.skeletonizeContent
+          )}
+        />
+      </div>
+      <div className={styles.lessonDataColumn}>
+        {sortedStudents.map(student => (
+          <div
+            className={classNames(styles.gridBox, styles.gridBoxLesson)}
+            key={student.id + '.' + lessonId}
+          >
+            <div
+              className={classNames(
+                styles.lessonSkeletonCell,
+                skeletonizeContent.skeletonizeContent
+              )}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const getUninteractiveLessonColumnHeader = lesson => {
   return (
@@ -25,6 +59,7 @@ function LessonProgressDataColumn({
   lessonProgressByStudent,
   sortedStudents,
   addExpandedLesson,
+  isSkeleton,
 }) {
   const getHeader = React.useCallback(
     lesson => {
@@ -36,7 +71,10 @@ function LessonProgressDataColumn({
           className={classNames(styles.gridBox, styles.lessonHeaderCell)}
           onClick={() => addExpandedLesson(lesson.id)}
         >
-          <FontAwesome icon="caret-right" />
+          <FontAwesome
+            icon="caret-right"
+            className={styles.lessonHeaderCaret}
+          />
           {lesson.relative_position}
         </div>
       );
@@ -64,8 +102,14 @@ function LessonProgressDataColumn({
 
   return (
     <div className={styles.lessonColumn}>
-      {getHeader(lesson)}
-      {getProgress(lesson)}
+      {isSkeleton ? (
+        getSkeletonLessonColumn(lesson.id, sortedStudents)
+      ) : (
+        <>
+          {getHeader(lesson)}
+          {getProgress(lesson)}
+        </>
+      )}
     </div>
   );
 }
@@ -74,7 +118,8 @@ LessonProgressDataColumn.propTypes = {
   sortedStudents: PropTypes.arrayOf(studentShape),
   lessonProgressByStudent: PropTypes.objectOf(
     PropTypes.objectOf(studentLessonProgressType)
-  ).isRequired,
+  ),
+  isSkeleton: PropTypes.bool,
   lesson: PropTypes.object.isRequired,
   addExpandedLesson: PropTypes.func.isRequired,
 };
