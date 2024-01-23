@@ -262,7 +262,7 @@ export default class SmallFooter extends React.Component {
               )}
             />
             <Button
-              id="x-close"
+              id="x-close-copyright"
               onClick={() => this.setState({menuState: MenuState.MINIMIZED})}
               icon="fa-solid fa-xmark"
               style={styles.copyrightXClose}
