@@ -4,6 +4,7 @@ import MD5 from 'crypto-js/md5';
 import RGBColor from 'rgbcolor';
 import {Position} from './constants';
 import {dataURIFromURI} from './imageUtils';
+import logToCloud from '@cdo/apps/logToCloud';
 import './polyfills';
 
 /**
@@ -988,9 +989,9 @@ export function validateFirehoseDataSize(data) {
   const json_size = new Blob([data.data_json]).size;
   const string_size = new Blob([data.data_string]).size;
   if (json_size > maxDataJSONBytes) {
-    throw new Error(`data_json column too large (${json_size} bytes)`);
+    logToCloud.logError(`data_json column too large (${json_size} bytes)`);
   }
   if (string_size > maxDataStringBytes) {
-    throw new Error(`data_string column too large (${string_size} bytes)`);
+    logToCloud.logError(`data_json column too large (${string_size} bytes)`);
   }
 }
