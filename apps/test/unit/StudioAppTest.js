@@ -392,6 +392,9 @@ describe('StudioApp', () => {
   });
 
   describe('getCode', () => {
+    beforeEach(() => stubStudioApp);
+    afterEach(() => restoreStudioApp);
+
     it('should get the starting blocks if the source is hidden', () => {
       studioApp().editCode = true;
       studioApp().hideSource = true;
@@ -420,6 +423,9 @@ describe('StudioApp', () => {
   });
 
   describe('annotateLine', () => {
+    beforeEach(() => stubStudioApp);
+    afterEach(() => restoreStudioApp);
+
     let annotationListStub;
     beforeEach(() => {
       annotationListStub = sinon.stub(annotationList, 'addRuntimeAnnotation');
@@ -436,6 +442,9 @@ describe('StudioApp', () => {
   });
 
   describe('clearAnnotations', () => {
+    beforeEach(() => stubStudioApp);
+    afterEach(() => restoreStudioApp);
+
     let annotationListStub;
     beforeEach(() => {
       annotationListStub = sinon.stub(
@@ -455,6 +464,9 @@ describe('StudioApp', () => {
 
   describe('highlightLine', () => {
     let oldEditor, sessionStub, rangeStub;
+
+    beforeEach(() => stubStudioApp);
+    afterEach(() => restoreStudioApp);
 
     beforeEach(() => {
       // Stub out the app reference to the editor
@@ -507,6 +519,9 @@ describe('StudioApp', () => {
 
   describe('clearHighlightedLines', () => {
     let oldEditor, sessionStub;
+
+    beforeEach(() => stubStudioApp);
+    afterEach(() => restoreStudioApp);
 
     beforeEach(() => {
       // Stub out the app reference to the editor
