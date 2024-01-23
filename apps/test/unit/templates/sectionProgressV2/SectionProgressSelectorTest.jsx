@@ -44,7 +44,7 @@ describe('SectionProgressSelector', () => {
     expect(wrapper.find(SectionProgressV2)).to.have.length(0);
     expect(wrapper.find('Button')).to.have.length(1);
     console.log(wrapper);
-    console.log("---------------");
+    console.log('---------------');
     console.log(wrapper.find('Button').at(0).props().text);
     expect(wrapper.find('Button').at(0).props().text).to.equal(
       'Switch to new progress view'
