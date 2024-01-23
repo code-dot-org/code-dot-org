@@ -528,6 +528,9 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
     post '/lti/v1/integrations', params: {client_id: client_id}
     assert_equal I18n.t('lti.error.missing_params'), flash[:alert]
+
+    post '/lti/v1/integrations', params: {client_id: client_id, lms: 'unsupported', email: email}
+    assert_equal I18n.t('lti.error.unsupported_lms_type'), flash[:alert]
   end
 
   test 'integration - if existing integration, does not create a new one' do
