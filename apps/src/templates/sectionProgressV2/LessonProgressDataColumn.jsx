@@ -40,7 +40,7 @@ LessonProgressDataColumn.propTypes = {
   sortedStudents: PropTypes.arrayOf(studentShape),
   lessonProgressByStudent: PropTypes.objectOf(
     PropTypes.objectOf(studentLessonProgressType)
-  ),
+  ).isRequired,
   lesson: PropTypes.object.isRequired,
   addExpandedLesson: PropTypes.func.isRequired,
 };
