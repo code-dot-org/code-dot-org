@@ -58,7 +58,7 @@ class SchoolStatsByYear < ApplicationRecord
     errored_schools = []
 
     ActiveRecord::Base.transaction do
-      CSV.read(filename, options).each do |row|
+      CSV.read(filename, **options).each do |row|
         parsed = yield row
         loaded = find_by(primary_keys.map(&:to_sym).index_with {|k| parsed[k]})
         if loaded.nil?

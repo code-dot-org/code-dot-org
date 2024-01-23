@@ -48,6 +48,7 @@ module Api::V1::Pd
         @application,
         scope: {raw_form_data: params[:raw_form_data]}
       ).attributes
+      puts serialized_application
 
       render json: serialized_application
     end

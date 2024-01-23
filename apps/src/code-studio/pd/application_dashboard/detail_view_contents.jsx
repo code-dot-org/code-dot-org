@@ -663,6 +663,7 @@ export class DetailViewContents extends React.Component {
       );
     }
 
+    console.log(this.scoreableQuestions);
     if (
       this.scoreableQuestions['scholarshipQuestions'].includes(snakeCaseKey)
     ) {
@@ -723,6 +724,7 @@ export class DetailViewContents extends React.Component {
   renderDetailViewTableLayout = () => {
     const questionsToRemove = ['genderIdentity', 'race'];
 
+    console.log(this.pageLabels);
     return (
       <div>
         {Object.keys(this.sectionHeaders).map((header, i) => (
@@ -785,7 +787,9 @@ export class DetailViewContents extends React.Component {
   };
 
   renderAnswer = (key, answer) => {
+    console.log(key, answer);
     if (this.multiAnswerQuestionFields[key]) {
+      console.log(this.multiAnswerQuestionFields[key]);
       return (
         <div>
           {this.multiAnswerQuestionFields[key]['teacher'] && (
