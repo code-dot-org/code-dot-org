@@ -521,13 +521,13 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     email = "fake@email.com"
 
     post '/lti/v1/integrations', params: {lms: lms, email: email}
-    assert_response :bad_request
+    assert flash[:alert]
 
     post '/lti/v1/integrations', params: {client_id: client_id, lms: '', email: email}
-    assert_response :bad_request
+    assert flash[:alert]
 
     post '/lti/v1/integrations', params: {client_id: client_id}
-    assert_response :bad_request
+    assert flash[:alert]
   end
 
   test 'integration - if existing integration, does not create a new one' do
@@ -536,9 +536,9 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     email = "fake@email.com"
 
     post '/lti/v1/integrations', params: {client_id: client_id, lms: lms, email: email}
-    assert_response :ok
+    assert_template 'lti/v1/integration_status'
     post '/lti/v1/integrations', params: {client_id: client_id, lms: lms, email: email}
-    assert_response :conflict
+    assert_template 'lti/v1/integration_status'
   end
 
   test 'attempting to sync a section with no LTI course should return a 400' do
