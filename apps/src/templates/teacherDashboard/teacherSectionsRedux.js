@@ -621,6 +621,7 @@ const initialState = {
   // with options like "CSD", "Course A", or "Frozen". See the
   // assignmentCourseOfferingShape PropType.
   courseOfferings: {},
+  courseOfferingsAreLoaded: false,
   // The participant types the user can create sections for
   availableParticipantTypes: [],
   // Mapping from sectionId to section object
@@ -713,6 +714,7 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       courseOfferings: action.courseOfferings,
+      courseOfferingsAreLoaded: true,
     };
   }
 
@@ -1282,7 +1284,7 @@ export function getVisibleSections(state) {
  * @param {number[]} sectionIds - List of section ids we want row data for
  */
 export function getSectionRows(state, sectionIds) {
-  const {sections, courseOfferings} = getRoot(state);
+  const {sections, courseOfferings, courseOfferingsAreLoaded} = getRoot(state);
   return sectionIds.map(id => ({
     ..._.pick(sections[id], [
       'id',
@@ -1298,6 +1300,7 @@ export function getSectionRows(state, sectionIds) {
     ]),
     assignmentNames: assignmentNames(courseOfferings, sections[id]),
     assignmentPaths: assignmentPaths(courseOfferings, sections[id]),
+    courseOfferingsAreLoaded,
   }));
 }
 
