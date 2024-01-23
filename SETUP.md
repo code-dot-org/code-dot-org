@@ -27,16 +27,16 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     - The simplest option is to clone via SSH with: `git clone git@github.com:code-dot-org/code-dot-org.git`
     - The fastest option is to clone via HTTP with: `git clone https://github.com/code-dot-org/code-dot-org.git`. Although faster than SSH, this option requires you to reauthenticate every time you want to update. You will therefore probably want to switch to SSH after the initial clone with `git remote set-url origin git@github.com:code-dot-org/code-dot-org.git`
 
-3. `cd code-dot-org`
+1. `cd code-dot-org`
 
-4. `gem install bundler -v 2.3.22`
+1. `gem install bundler -v 2.3.22`
 
-5. `rbenv rehash`
+1. `rbenv rehash`
 
-6. `bundle install`
+1. `bundle install`
     - This step often fails to due environment-specific issues. Look in the [Bundle Install Tips](#bundle-install-tips) section below for steps to resolve many common issues.
 
-7. `bundle exec rake install:hooks`
+1. `bundle exec rake install:hooks`
     <details>
       <summary>Troubleshoot: `rake aborted! Gem::LoadError: You have already activated...` </summary>
 
@@ -65,23 +65,23 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
       - This is an issue specific to Windows System for Linux (WSL) OS configuration where connection to mysql without sudo would fail with the above error. This can be rectified with some permission updates on mysql files and updating SQL client side configuration as called out [in this SO post](https://stackoverflow.com/a/66949451)
     </details>
 
-8. `bundle exec rake install`
+1. `bundle exec rake install`
     - This can take a long time, ~30 minutes or more. The most expensive are the "seeding" tasks, where your local DB is populated from data in the repository. Some of the seeding rake tasks can take several minutes. The longest one, `seed:scripts`, can take > 10 minutes, but it should at least print out progress as it goes.
 
-9. fix your database charset and collation to match our servers
+1. fix your database charset and collation to match our servers
     - `bin/mysql-client-admin`
     - `ALTER DATABASE dashboard_development CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
     - `ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
 
-10. `bundle exec rake build`
+1. `bundle exec rake build`
     - This may fail if you are on a Mac and your OSX XCode Command Line Tools were not installed properly. See [Bundle Install Tips](#bundle-install-tips) for more information.
     - This may fail for external contributors who don't have permissions to access Code.org AWS Secrets. Assign placeholder values to any configuration settings that are [ordinarily populated in Development environments from AWS Secrets](https://github.com/code-dot-org/code-dot-org/blob/staging/config/development.yml.erb) as indicated in this example: https://github.com/code-dot-org/code-dot-org/blob/5b3baed4a9c2e7226441ca4492a3bca23a4d7226/locals.yml.default#L136-L139
 
-11. Run the website `bin/dashboard-server`
+1. Run the website `bin/dashboard-server`
 
-12. Visit <http://localhost-studio.code.org:3000/> to verify it is running.
+1. Visit <http://localhost-studio.code.org:3000/> to verify it is running.
 
-13. Install necessary plugins described in the [Editor configuration](#editor-configuration) section below.
+1. Install necessary plugins described in the [Editor configuration](#editor-configuration) section below.
 
 After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
 
