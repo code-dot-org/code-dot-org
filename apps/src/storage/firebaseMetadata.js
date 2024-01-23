@@ -11,7 +11,7 @@ export function getColumnsRef(database, tableName) {
  * @returns {Firebase} A reference to the column with the specified name, or null if
  * none exists.
  */
-export function getColumnRefByName(tableName, columnName) {
+function getColumnRefByName(tableName, columnName) {
   return getColumnsRef(getProjectDatabase(), tableName)
     .once('value')
     .then(columnsSnapshot => {
