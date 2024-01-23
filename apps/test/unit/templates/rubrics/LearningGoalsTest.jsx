@@ -72,12 +72,9 @@ describe('LearningGoals', () => {
 
   const lines = code.split('\n');
 
-  // Stub out our references to the studioApp singleton
-  beforeEach(stubStudioApp);
-  afterEach(restoreStudioApp);
-
-  // Stub out the calls to the editor
+  // Stub out our references to the studioApp singleton and editor
   beforeEach(() => {
+    stubStudioApp();
     studioApp = studioAppSingleton();
     sinon.stub(studioApp, 'getCode').returns(code);
     annotateLineStub = sinon.stub(studioApp, 'annotateLine');
@@ -91,6 +88,7 @@ describe('LearningGoals', () => {
     studioApp.clearAnnotations.restore();
     studioApp.highlightLine.restore();
     studioApp.clearHighlightedLines.restore();
+    restoreStudioApp();
   });
 
   // Necessary stubs for Blockly
