@@ -259,6 +259,7 @@
     edit: {
       userAge: current_user.age,
       userType: current_user.user_type,
+      isAdmin: current_user.admin,
       isOauth: current_user.oauth?,
       isPasswordRequired: current_user.encrypted_password.present?,
       authenticationOptions: current_user.authentication_options.map(&:summarize),

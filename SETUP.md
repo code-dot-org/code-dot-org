@@ -32,8 +32,6 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 1. `rbenv rehash`
 
-1. `bundle config --local without staging test production levelbuilder`
-
 1. `bundle install`
     - This step often fails to due environment-specific issues. Look in the [Bundle Install Tips](#bundle-install-tips) section below for steps to resolve many common issues.
 
@@ -404,44 +402,7 @@ Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md) fo
 
 On Apple Silicon/Intel Mac, additional steps are required to get `bundle install` to work.
 
-If you're having issues with installing ```libv8``` and/or ```mini_racer``` gems - 
-make you sure you've already run ```bundle config --local without staging test production levelbuilder``` command
-and run it if you haven't.
-
-<details>
-<summary>If that didn't help - do following:</summary>
-
-Simply run (if you're having issues only with part of gems in the command - you can run it with just needed gems)
-```
-bundle update libv8 mini_racer
-```
-To fix issues in one line. It will update the Gemfile.lock file for you in the same way as described below.
-
-OR
-
-In Gemfile.lock, replace the two occurrences of libv8 (8.4.255.0) with libv8-node (15.14.0.0).
-Also update mini_racer to 0.4.0 (from 0.3.1):
-
-```
-libv8-node (15.14.0.0)
-...
-mini_racer (0.4.0)
-  libv8-node (~> 15.14.0.0)
-```
-
-FINALLY
-
-To prevent Gemfile.lock changes from constantly appearing in your commits - run following commands:
-```
-git update-index --assume-unchanged Gemfile.lock
-git update-index --no-assume-unchanged Gemfile.lock
-git ls-files -v | grep '^[[:lower:]]'
-```
-</details>
-
-
-
-Then run the following commands to successfully complete a bundle install:
+First, run the following commands to successfully complete a bundle install:
 
 ```sh
 gem install bundler -v 2.3.22
@@ -522,14 +483,6 @@ bundle add rmagick
 
 Restart `dashboard-server` and if all went well, we see text rendering on customized certificates again.
 
-#### libv8
-
-If you run into an error with libv8 while running bundle install
-
-- Uninstall libv8: `gem uninstall libv8`
-- Make sure the gem no longer exists with: `gem list libv8`
-- Install the current version used in code.org repo: `gem install libv8 -v CURRENT_CODEORG_VERSION -- --with-system-v8` (you can find what to fill in for CURRENT_CODEORG_VERSION as the current version of libv8 in the [Gemfile.lock](./Gemfile.lock)).
-
 #### mysql2
 
 If you run into an issue about mysql2 while running `bundle install` and the error output includes "ld: library not found for -lssl" try :
@@ -542,16 +495,6 @@ If you run into an issue about mysql2 while running `bundle install` and the err
 If you run into an error like "Don't know how to set rpath on your system, if MySQL libraries are not in path mysql2 may not load" during `bundle install` and are running on a Mac with M1, try :
 
 - `gem install mysql2 -v '0.5.2' -- --with-opt-dir=$(brew --prefix openssl) --with-ldflags=-L/opt/homebrew/Cellar/zstd/1.5.0/lib`
-
-#### therubyracer
-
-If you run into an issue about therubyracer while running `bundle install` try :
-
-- `gem uninstall libv8`
-- `gem install therubyracer -v CURRENT_CODEORG_VERSION` (you can find  what to fill in for CURRENT_CODEORG_VERSION as the current version of the therubyracer in the [Gemfile.lock](./Gemfile.lock)).
-- `gem install libv8 -v CURRENT_CODEORG_VERSION -- --with-system-v8` (You can find what to fill in for CURRENT_CODEORG_VERSION as the current version of libv8 in the [Gemfile.lock](./Gemfile.lock)).
-
-(Steps from [this stackoverflow question](https://stackoverflow.com/questions/19577759/installing-libv8-gem-on-os-x-10-9))
 
 #### bundler gem
 
