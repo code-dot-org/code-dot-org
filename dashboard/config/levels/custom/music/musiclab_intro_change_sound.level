@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "background": "music-black",
-    "long_instructions": "####Choose a Sound\n\nThere are tons of sounds you can choose from. Change up the beat!\n\nClick the name of the sound to select a new one, and then press Run.\n",
+    "long_instructions": "####Change a Sound\n\nThere are tons of sounds you can choose from. Change up the beat!\n\nClick the [name](#clickable=play-sound-block-workspace) of the sound to select a new one.\n\nThen press [Run](#clickable=run-button).\n",
     "level_data": {
       "library": "will",
       "startSources": {
@@ -17,7 +17,7 @@
           "blocks": [
             {
               "type": "when_run_simple2",
-              "id": "when-run-block",
+              "id": "when_run_simple2",
               "x": 30,
               "y": 30,
               "deletable": false,
@@ -25,7 +25,7 @@
               "next": {
                 "block": {
                   "type": "play_sound_at_current_location_simple2",
-                  "id": "play-sound-block",
+                  "id": "play_sound_at_current_location_simple2",
                   "deletable": false,
                   "movable": false,
                   "fields": {
