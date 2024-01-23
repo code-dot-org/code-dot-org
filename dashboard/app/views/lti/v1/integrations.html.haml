@@ -25,7 +25,7 @@
               .span3.lti-integration-field-label
                 = f.label :lms, t('lti.integration_lms_selector')
               .span5
-                = f.select :lms, @form_data[:lms_platforms].map {|l| l}
+                = f.select :lms, @form_data[:lms_platforms]
             .row
               .span10
                 %p= t('lti.integration_portal_instructions_3').html_safe
