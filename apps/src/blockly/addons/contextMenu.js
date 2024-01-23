@@ -338,7 +338,17 @@ function setAllWorkspacesTheme(theme) {
   Blockly.Workspace.getAll().forEach(workspace => {
     // Headless workspaces do not have the ability to set the theme.
     if (typeof workspace.setTheme === 'function') {
+      const currentTheme = workspace.getTheme();
       workspace.setTheme(theme);
+      // Re-render blocks if the font size changed.
+      // Once https://github.com/google/blockly/issues/7782 is resolved,
+      // we should be able to remove this.
+      if (theme.fontStyle?.size !== currentTheme.fontStyle?.size) {
+        workspace.getAllBlocks().map(block => {
+          block.markDirty();
+          block.render();
+        });
+      }
     }
   });
 }
