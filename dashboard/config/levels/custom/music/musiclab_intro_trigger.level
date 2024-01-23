@@ -17,7 +17,7 @@
           "blocks": [
             {
               "type": "when_run_simple2",
-              "id": "when-run-block",
+              "id": "when_run_simple2",
               "x": 30,
               "y": 30,
               "deletable": false,
@@ -25,7 +25,7 @@
             },
             {
               "type": "triggered_at_simple2",
-              "id": "trigger-block",
+              "id": "triggered_at_simple2",
               "x": 230,
               "y": 30,
               "deletable": false,
