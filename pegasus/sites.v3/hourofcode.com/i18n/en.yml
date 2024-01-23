@@ -398,6 +398,7 @@
   call_to_action_discover_district_program: "Discover our District Program"
   call_to_action_see_district_partners: "See our District Partners"
   call_to_action_read_full_story: "Read the full story"
+  call_to_action_learn_about_pl: "Learn about Professional Learning"
 
   aria_label_call_to_action_hoc_how_to_educators: "View how-to guide for Educators"
   aria_label_call_to_action_hoc_how_to_companies: "View how-to guide for Companies"
@@ -743,6 +744,9 @@
   heading_enroll: "Enroll"
   heading_have_questions: "Have questions?"
   heading_resources_for_educators: "Code.org resources for educators"
+  heading_self_paced_learning: "Self-paced learning"
+  heading_in_person_virtual_workshops: "In-person/virtual workshops"
+  heading_every_grade_every_level: "For every grade at every level"
 
   student_courses_top_desc: "Start coding today. Our courses and activities are free! It's easier—and more fun—than you think."
   student_courses_explore_desc: "Explore the world of computer science with engaging videos, self-paced tutorials, programming activities, and more for all ages and experience levels!"
@@ -1100,6 +1104,11 @@
   admins_page_driving_change_desc_02: "In Charles County, a passionate teacher's vision and superintendent support fueled a district-wide computer science initiative, integrating CS into graduation requirements and achieving notable diversity in student participation."
   admins_page_pathway_heading: "A comprehensive K-12 curriculum pathway"
   admins_page_pathway_desc: "Explore our complete, no-cost K-12 curriculum designed to empower the next generation of learners through computer science (CS), providing robust resources and consistent support at every educational stage."
+  admins_page_pl_heading: "Professional learning to empower educators"
+  admins_page_pl_desc: "Our Professional Learning programs are crafted to turn educators at any level into confident CS teachers. Discover accessible, comprehensive, and flexible learning that equips your educators with the skills to empower their students."
+  admins_page_pl_self_paced_desc: "Flexible and concise, our self-paced modules exist alongside our curriculum, letting educators build their CS teaching skills at their own pace."
+  admins_page_pl_workshops_desc: "Engage with expert-led CS education workshops, available virtually and in-person, for hands-on learning and peer networking."
+  admins_page_pl_every_grade_desc: "Tailored learning for every grade and at every experience level ensures educators can confidently teach CS, at any starting point."
 
   pl_middle_high_top_heading: "Professional Learning Workshops for Grades 6-12"
   pl_middle_high_top_desc: "Our engaging workshops are for new and experienced computer science teachers!"

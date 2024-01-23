@@ -112,5 +112,19 @@ theme: responsive_full_width
         %a.link-button{href: "/educate/curriculum/high-school"}
           =hoc_s(:grade_level_label_high)
 
-%section
+%section.admins-pl
   .wrapper
+    %h2=hoc_s(:admins_page_pl_heading)
+    %p=hoc_s(:admins_page_pl_desc)
+    %div.content-wrapper.flex-container.justify-space-between.wrap-reverse.gap-2
+      = view :"administrators/admins_pl"
+      %figure.rounded-corners.col-33
+    .clear
+    %a.link-button{href: "/educate/professional-learning"}
+      =hoc_s(:call_to_action_learn_about_pl)
+
+
+
+
+
+
