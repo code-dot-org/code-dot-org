@@ -248,13 +248,16 @@ class VisualizerModal extends React.Component {
       this.state.chartType
     );
 
-    let disabledOptions = [];
+    let disabledNonNumericOptions = [];
     const disableNonNumericColumns = [
       ChartType.SCATTER_PLOT,
       ChartType.HISTOGRAM,
     ].includes(this.state.chartType);
     if (disableNonNumericColumns) {
-      disabledOptions = _.difference(this.props.tableColumns, numericColumns);
+      disabledNonNumericOptions = _.difference(
+        this.props.tableColumns,
+        numericColumns
+      );
     }
     const isMultiColumnChart = [
       ChartType.SCATTER_PLOT,
@@ -353,7 +356,7 @@ class VisualizerModal extends React.Component {
                 }
                 options={this.props.tableColumns}
                 disabledOptions={_.union(
-                  disabledOptions,
+                  disabledNonNumericOptions,
                   this.tooBigColumns(this.props.tableColumns, valuesByColumn)
                 )}
                 value={this.state.selectedColumn1}
@@ -367,7 +370,7 @@ class VisualizerModal extends React.Component {
                   displayName={msg.dataVisualizerYValues()}
                   options={this.props.tableColumns}
                   disabledOptions={_.union(
-                    disabledOptions,
+                    disabledNonNumericOptions,
                     this.tooBigColumns(
                       this.props.tableColumns,
                       valuesByColumn,
