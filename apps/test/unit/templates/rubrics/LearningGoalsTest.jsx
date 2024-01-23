@@ -106,6 +106,20 @@ describe('LearningGoals', () => {
       expect(lastLineNumber).to.be.null;
     });
 
+    it('returns null for both when the snippet is empty', () => {
+      let snippet = '';
+      const [lineNumber, lastLineNumber] = findCodeRegion(code, lines, snippet);
+      expect(lineNumber).to.be.null;
+      expect(lastLineNumber).to.be.null;
+    });
+
+    it('returns null for both when the snippet is just whitespace', () => {
+      let snippet = ' \n ';
+      const [lineNumber, lastLineNumber] = findCodeRegion(code, lines, snippet);
+      expect(lineNumber).to.be.null;
+      expect(lastLineNumber).to.be.null;
+    });
+
     it('returns the proper line when the snippet is found', () => {
       let snippet = 'var y = 6;';
       const [lineNumber, lastLineNumber] = findCodeRegion(code, lines, snippet);
@@ -192,6 +206,11 @@ describe('LearningGoals', () => {
     it('should highlight the last line of code when referenced by the AI', () => {
       annotateLines('Line 55: This is a line of code `draw();`');
       sinon.assert.calledWith(highlightLineStub, 8);
+    });
+
+    it('should ignore code snippets that are empty', () => {
+      annotateLines('Line 42: This is totally a thing ` `');
+      sinon.assert.notCalled(highlightLineStub);
     });
   });
 

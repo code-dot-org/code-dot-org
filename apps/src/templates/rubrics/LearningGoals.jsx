@@ -86,6 +86,11 @@ export function getAnonymizedCode() {
  * @returns {[number, number]} The line numbers of the region or null if not found.
  */
 export function findCodeRegion(code, lines, snippet) {
+  // Do not allow matching against whitespace
+  if (snippet.trim() === '') {
+    return [null, null];
+  }
+
   // Attempt to just find the code in the full code listing
   let index = code.indexOf(snippet);
   let lastIndex = index + snippet.length;
@@ -184,6 +189,7 @@ export function annotateLines(observations) {
     let lineNumber = parseInt(match[1]);
     let lastLineNumber = parseInt(match[2] || lineNumber);
     let found = false;
+    let hasSnippet = false;
     const context = match[3].trim();
 
     const message = context
@@ -196,6 +202,16 @@ export function annotateLines(observations) {
     for (const submatch of references.matchAll(/`([^\`]+)`/g)) {
       let snippet = submatch[1].trim();
 
+      // Skip empty code snippets... just in case the AI very strangely
+      // gives an empty code response (e.g. 'Line 1: Description ` `')
+      if (snippet === '') {
+        continue;
+      }
+
+      // We have some kind of code reference
+      hasSnippet = true;
+
+      // Find where this snippet actually happens
       let [lineNumber, lastLineNumber] = findCodeRegion(code, lines, snippet);
 
       // Annotate that first line and highlight all lines, if they were found
@@ -208,7 +224,7 @@ export function annotateLines(observations) {
       }
     }
 
-    if (!found) {
+    if (!found && hasSnippet) {
       studioApp().annotateLine(message, lineNumber);
       for (let i = lineNumber; i <= lastLineNumber; i++) {
         studioApp().highlightLine(i);
