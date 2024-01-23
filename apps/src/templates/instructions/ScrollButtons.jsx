@@ -152,6 +152,7 @@ class ScrollButtons extends React.Component {
         onMouseDown={this.continuousScrollStartUp}
         className={classNames(
           moduleStyles.arrowGlyph,
+          moduleStyles.removeButtonStyles,
           moduleStyles.up,
           this.props.visible && moduleStyles.visible,
           centerItems && moduleStyles.upCenter
@@ -192,6 +193,7 @@ class ScrollButtons extends React.Component {
         className={classNames(
           'uitest-scroll-button-down',
           moduleStyles.arrowGlyph,
+          moduleStyles.removeButtonStyles,
           moduleStyles.down,
           this.props.visible && moduleStyles.visible,
           centerItems && moduleStyles.downCenter

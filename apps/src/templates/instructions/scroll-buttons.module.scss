@@ -7,9 +7,12 @@
   margin: 0;
 }
 
+.removeButtonStyles {
+  @include remove-button-styles;
+}
+
 .container {
   .up {
-    @include remove-button-styles;
     @extend %all;
     opacity: 0;
     top: 10px;
@@ -23,7 +26,6 @@
   }
 
   .down {
-    @include remove-button-styles;
     @extend %all;
     opacity: 0;
     bottom: 10px;
