@@ -14,41 +14,31 @@ export default function AssignmentCompletionStatesBox({
     return (
       <div className={styles.icons}>
         <div className={styles.legendColumn}>
-          <div className={styles.legendItemContainer}>
-            <LegendItem
-              itemType={ITEM_TYPE.NOT_STARTED}
-              labelText={i18n.notStarted()}
-            />
-          </div>
-          <div className={styles.legendItemContainer}>
-            <LegendItem
-              itemType={ITEM_TYPE.NO_ONLINE_WORK}
-              labelText={i18n.noOnlineWork()}
-            />
-          </div>
+          <LegendItem
+            itemType={ITEM_TYPE.NOT_STARTED}
+            labelText={i18n.notStarted()}
+          />
+          <LegendItem
+            itemType={ITEM_TYPE.NO_ONLINE_WORK}
+            labelText={i18n.noOnlineWork()}
+          />
         </div>
         <div className={styles.legendColumn}>
-          <div className={styles.legendItemContainer}>
-            <LegendItem
-              itemType={ITEM_TYPE.IN_PROGRESS}
-              labelText={i18n.inProgress()}
-            />
-          </div>
-          <div className={styles.legendItemContainer}>
-            <LegendItem
-              itemType={ITEM_TYPE.SUBMITTED}
-              labelText={i18n.submitted()}
-            />
-          </div>
+          <LegendItem
+            itemType={ITEM_TYPE.IN_PROGRESS}
+            labelText={i18n.inProgress()}
+          />
+          <LegendItem
+            itemType={ITEM_TYPE.SUBMITTED}
+            labelText={i18n.submitted()}
+          />
         </div>
         {isViewingLevelProgress && hasValidatedLevels && (
           <div className={styles.legendColumn}>
-            <div className={styles.legendItemContainer}>
-              <LegendItem
-                itemType={ITEM_TYPE.VALIDATED}
-                labelText={i18n.validated()}
-              />
-            </div>
+            <LegendItem
+              itemType={ITEM_TYPE.VALIDATED}
+              labelText={i18n.validated()}
+            />
           </div>
         )}
       </div>
