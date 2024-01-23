@@ -30,9 +30,9 @@ interface InstructionsProps {
    */
   imagePopOutDirection?: 'right' | 'left';
   /**
-   * A callback when the user clicks on something that might show a callout.
+   * A callback when the user clicks on clickable text.
    */
-  showCallout?: (id: string) => null;
+  handleInstructionsTextClick?: (id: string) => null;
 }
 
 /**
@@ -48,7 +48,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   baseUrl,
   layout,
   imagePopOutDirection,
-  showCallout,
+  handleInstructionsTextClick,
 }) => {
   // Prefer using long instructions if available, otherwise fall back to level data text.
   const instructionsText = useSelector(
@@ -91,7 +91,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       showNextButton={showNextButton}
       onNextPanel={onNextPanel}
       theme={theme}
-      {...{baseUrl, layout, imagePopOutDirection, showCallout}}
+      {...{baseUrl, layout, imagePopOutDirection, handleInstructionsTextClick}}
     />
   );
 };
@@ -117,9 +117,9 @@ interface InstructionsPanelProps {
   /** Display theme. Defaults to dark. */
   theme?: 'dark' | 'light';
   /**
-   * A callback when the user clicks on something that might show a callout.
+   * A callback when the user clicks on clickable text.
    */
-  showCallout?: (id: string) => null;
+  handleInstructionsTextClick?: (id: string) => null;
 }
 
 /**
@@ -135,7 +135,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   layout = 'vertical',
   imagePopOutDirection = 'right',
   theme = 'dark',
-  showCallout,
+  handleInstructionsTextClick,
 }) => {
   const [showBigImage, setShowBigImage] = useState(false);
 
@@ -207,7 +207,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
             <EnhancedSafeMarkdown
               markdown={text}
               className={moduleStyles.markdownText}
-              showCallout={showCallout}
+              handleInstructionsTextClick={handleInstructionsTextClick}
             />
           </div>
         )}
@@ -221,7 +221,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                 <EnhancedSafeMarkdown
                   markdown={message}
                   className={moduleStyles.markdownText}
-                  showCallout={showCallout}
+                  handleInstructionsTextClick={handleInstructionsTextClick}
                 />
               )}
               {canShowNextButton && (

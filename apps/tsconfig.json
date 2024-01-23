@@ -26,6 +26,7 @@
     "paths": {
       "@cdo/apps/*": ["./src/*"],
       "@cdo/static/*": ["./static/*"],
+      "@cdo/i18n/*": ["./i18n/*"],
     },
     "resolveJsonModule": true,
   }

@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "background": "music-black",
-    "long_instructions": "#### Functions\n\nYou can organize your music using functions.\n\nClick **Functions**, then drag **bass** to **when run**, to play the content of the bass function.",
+    "long_instructions": "#### Functions\n\nYou can organize your music using functions.\n\nClick [Functions](#clickable=toolbox-first-row), then drag [bass](#clickable=toolbox-second-block) to [when run](#clickable=when-run-block), to play the content of the bass function.",
     "level_data": {
       "library": "will",
       "startSources": {
@@ -17,6 +17,7 @@
           "blocks": [
             {
               "type": "when_run_simple2",
+              "id": "when_run_simple2",
               "x": 30,
               "y": 30,
               "deletable": false,
