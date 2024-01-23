@@ -1,6 +1,5 @@
 <Karel>
   <config><![CDATA[{
-  "published": true,
   "game_id": 25,
   "created_at": "2023-12-12T23:10:04.000Z",
   "level_num": "custom",
@@ -43,8 +42,9 @@
     "show_type_hints": "false",
     "preload_asset_list": null
   },
+  "published": true,
   "notes": "Sequence matters. Blocks already in the workspace, but not connected.  Order these blocks to solve the puzzle.",
-  "audit_log": "[{\"changed_at\":\"2023-12-12T23:10:04.914+00:00\",\"changed\":[\"cloned from \\\"courseC_collector_prog3_2023\\\"\"],\"cloned_from\":\"courseC_collector_prog3_2023\"},{\"changed_at\":\"2023-12-12 23:14:38 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2023-12-14 22:27:39 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-02 22:14:33 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-12-12T23:10:04.914+00:00\",\"changed\":[\"cloned from \\\"courseC_collector_prog3_2023\\\"\"],\"cloned_from\":\"courseC_collector_prog3_2023\"},{\"changed_at\":\"2023-12-12 23:14:38 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2023-12-14 22:27:39 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-02 22:14:33 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-01-22 21:01:25 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -68,7 +68,13 @@
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml/>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <field name="DIR">turnRight</field>
+        </block>
+        <block type="collector_collect"/>
+      </xml>
     </toolbox_blocks>
     <solution_blocks>
       <xml>
