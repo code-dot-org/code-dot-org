@@ -19,6 +19,7 @@ const {
   normalize,
   stringifyQueryParams,
   getTabId,
+  validateFirehoseDataSize,
 } = utils;
 
 describe('utils modules', () => {
@@ -799,6 +800,31 @@ describe('utils modules', () => {
 
       result = stripEncapsulatingDoubleQuotes('blah"');
       expect(result).to.equal('blah"');
+    });
+  });
+
+  describe('firehoseDataSize', () => {
+    const maxDataJSONBytes = 65500;
+    const maxDataStringBytes = 4095;
+
+    it('checks json size for correct error', () => {
+      const valid_record = {data_json: 'x'.repeat(maxDataJSONBytes - 1)};
+      validateFirehoseDataSize(valid_record);
+
+      const invalid_record = {data_json: 'x'.repeat(maxDataJSONBytes + 1)};
+      expect(() => {
+        validateFirehoseDataSize(invalid_record);
+      }).to.throw(Error);
+    });
+
+    it('checks string size for correct error', () => {
+      const valid_record = {data_string: 'x'.repeat(maxDataStringBytes - 1)};
+      validateFirehoseDataSize(valid_record);
+
+      const invalid_record = {data_string: 'x'.repeat(maxDataStringBytes + 1)};
+      expect(() => {
+        validateFirehoseDataSize(invalid_record);
+      }).to.throw(Error);
     });
   });
 });

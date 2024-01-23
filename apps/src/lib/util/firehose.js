@@ -4,6 +4,7 @@ import {
   createUuid,
   trySetLocalStorage,
   tryGetLocalStorage,
+  validateFirehoseDataSize,
 } from '@cdo/apps/utils';
 import {getStore} from '@cdo/apps/redux';
 import {
@@ -52,14 +53,6 @@ import {
  */
 
 const deliveryStreamName = 'analysis-events';
-
-// This limit is based on the empirical observation that no data_json column
-// values larger than 65,526 bytes made it into redshift in 2023. See
-// firehose.rb for more matching data validation.
-
-const maxDataJSONBytes = 65500;
-
-const maxDataStringBytes = 4095;
 
 // TODO(asher): Add the ability to queue records individually, to be submitted
 // as a batch.
@@ -219,16 +212,7 @@ class FirehoseClient {
       return;
     }
 
-    if (data.data.data_json.to_s.bytesize > maxDataJSONBytes) {
-      throw new Error(
-        `data_json column too large (${data.data.data_json.to_s.bytesize} bytes)`
-      );
-    }
-    if (data.data.data_string.to_s.bytesize > maxDataStringBytes) {
-      throw new Error(
-        `data_string column too large (${data.data.data_string.to_s.bytesize} bytes)`
-      );
-    }
+    validateFirehoseDataSize(data.data);
 
     this.firehose.putRecord(
       {
