@@ -3,6 +3,7 @@ import {useSelector} from 'react-redux';
 import {MusicState} from '../redux/musicRedux';
 import moduleStyles from './callouts.module.scss';
 import {BlockTypes} from '../blockly/blockTypes';
+import {Triggers} from '../constants';
 const FontAwesome = require('../../templates/FontAwesome');
 
 const availableCallouts: {
@@ -30,7 +31,7 @@ const availableCallouts: {
     selector: `g[data-id="${BlockTypes.WHEN_RUN_SIMPLE2}"] > path`,
   },
   'run-button': {selector: '#run-button'},
-  'trigger-button-1': {selector: '#trigger-button-1'},
+  'trigger-button-1': {selector: `#${Triggers[0].id}`},
   'toolbox-first-row': {selector: '.blocklyTreeRow'},
   'toolbox-second-block': {
     selector: '.blocklyFlyout .blocklyDraggable:nth-of-type(3)',
