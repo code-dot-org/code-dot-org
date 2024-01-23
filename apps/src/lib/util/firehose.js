@@ -212,7 +212,10 @@ class FirehoseClient {
       return;
     }
 
-    validateFirehoseDataSize(data.data);
+    if (validateFirehoseDataSize(data.data)) {
+      // Don't call putRecord if the size will fail the batch
+      return;
+    }
 
     this.firehose.putRecord(
       {

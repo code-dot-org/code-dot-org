@@ -990,8 +990,10 @@ export function validateFirehoseDataSize(data) {
   const string_size = new Blob([data.data_string]).size;
   if (json_size > maxDataJSONBytes) {
     logToCloud.logError(`data_json column too large (${json_size} bytes)`);
+    return true;
   }
   if (string_size > maxDataStringBytes) {
     logToCloud.logError(`data_json column too large (${string_size} bytes)`);
+    return true;
   }
 }
