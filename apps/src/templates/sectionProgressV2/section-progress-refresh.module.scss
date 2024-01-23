@@ -6,7 +6,7 @@
   border-radius: 4px;
   display: inline-flex;
   flex-direction: column;
-  flex: 1 1 auto;
+  white-space: nowrap;
 }
 
 .legend .headerContainer {
@@ -16,45 +16,38 @@
   box-sizing: border-box;
 }
 
-.legend .legendColumn {
+.legendColumn {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
 }
 
-.legend .icons {
+.icons {
+  display: flex;
   padding: 16px;
-  height: 70px;
+  align-items: flex-start;
+  gap: 40px;
 }
 
-.legend .legendItem {
+.legendItem {
+  display: flex;
   align-items: center;
-  display: inline-flex;
-  flex: 0 0 auto;
-  padding: 7px;
   gap: 8px;
 }
 
-.legend .legendItemContainer {
-  align-items: center;
-  display: inline-flex;
-  width: 100%;
-}
-
-.legend .labelText {
+.labelText {
   margin-bottom: 0;
 }
 
-.legend .fontAwesomeIcon {
+.fontAwesomeIcon {
   width: 20px;
   height: 20px;
   font-size: 16px;
 }
 
-.legend .fa.fa-rotate-left {
-  padding-top: 5px;
-}
-
-.legend .cornerBox {
+.cornerBox {
   width: 20px;
   height: 20px;
   border-top: 1px solid;
