@@ -123,6 +123,7 @@ module Pd
         title_i_status: 'Title I status',
         rural_status: 'Rural Status',
         school_type: 'School Type',
+        not_teaching_in_access_report: 'Not Teaching in Access Report',
         total_student_enrollment: 'Total Student Enrollment',
         free_lunch_percent: 'Percent of students eligible to receive free/reduced lunch',
         underrepresented_minority_percent: 'Percent of students from underrepresented racial and ethnic groups',
@@ -247,6 +248,7 @@ module Pd
       title_i_status: {stats: :title_i_status},
       rural_status: {stats: :rural_status},
       school_type: {teacher: :school_type, stats: :school_type},
+      not_teaching_in_access_report: {census: :not_teaching_in_access_report},
       total_student_enrollment: {principal: :principal_total_enrollment, stats: :students_total},
       free_lunch_percent: {principal: :principal_free_lunch_percent, stats: :frl_eligible_percent},
       underrepresented_minority_percent: {principal: :principal_underrepresented_minority_percent, stats: :urm_percent},
@@ -278,6 +280,7 @@ module Pd
       # Scholarship requirements
       free_lunch_percent: YES_NO,
       underrepresented_minority_percent: YES_NO,
+      not_teaching_in_access_report: YES_NO,
     }
 
     # Need to explicitly list these for the shared constant generation to work.

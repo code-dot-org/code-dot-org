@@ -187,6 +187,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
       title_i_status: stats.title_i_status,
       rural_status: yes_no_string(stats.rural_school?),
       school_type: school.school_type.try(:titleize),
+      not_teaching_in_access_report: %w(NO HISTORICAL_NO).include?(school.census_for_year(object.census_year).teaches_cs) ? 'No' : 'Yes',
       frl_eligible_percent: percent_string(stats.frl_eligible_total, stats.students_total),
       urm_percent: percent_string(urm_total, stats.students_total),
       students_total: stats.students_total,
