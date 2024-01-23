@@ -6,9 +6,9 @@ export default class VerticalFlyout extends GoogleBlockly.VerticalFlyout {
    * This is copied almost entirely from
    * https://github.com/google/blockly/blob/master/core/flyout_vertical.js#L322
    * We override flyoutWidth to constrain it to be at most 40% of the total
-   * workspace space.
-   * Once https://github.com/google/blockly/issues/5684 is resolved, we can
-   * remove this duplicated code and use the API to set the max width of the flyout.
+   * workspace space. Later, we resize the flyout's workspace to fill this smaller container.
+   * This is necessary to ensure that the delete area doesn't extend into the main workspace.
+   * If Blockly adds an API to set the max width of the flyout, we can remove this override.
    **/
   reflowInternal_() {
     this.workspace_.scale = this.getFlyoutScale();
@@ -89,7 +89,11 @@ export default class VerticalFlyout extends GoogleBlockly.VerticalFlyout {
 
       // Record the width for workspace metrics and .position.
       this.width_ = flyoutWidth;
+
+      /* Begin CDO Customization */
       Blockly.svgResize(this.workspace_);
+      /* End CDO Customization */
+
       this.position();
       this.targetWorkspace.recordDragTargets();
     }
