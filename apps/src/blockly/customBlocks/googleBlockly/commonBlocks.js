@@ -11,9 +11,8 @@ export const blocks = {
     // text_join is included with core Blockly. We register a custom text_join_mutator
     // which adds the plus/minus block UI.
     blockly.Blocks.text_join_simple = blockly.Blocks.text_join;
-    blockly.JavaScript.text_join_simple = blockly.JavaScript.text_join;
-    const generator = Blockly.getGenerator();
-    generator.forBlock.text_join_simple = generator.forBlock.text_join;
+    blockly.JavaScript.forBlock.text_join_simple =
+      blockly.JavaScript.forBlock.text_join;
   },
   mutationToDom() {
     var container = Blockly.utils.xml.createElement('mutation');
