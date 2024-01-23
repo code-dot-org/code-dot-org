@@ -821,24 +821,28 @@ describe('utils modules', () => {
       const valid_record = {data_json: 'x'.repeat(maxDataJSONBytes - 1)};
       validateFirehoseDataSize(valid_record);
       assert(logToCloud.logError.notCalled);
+      expect(validateFirehoseDataSize(valid_record)).not.to.be.true;
 
       const invalid_record = {data_json: 'x'.repeat(maxDataJSONBytes + 1)};
       expect(() => {
         validateFirehoseDataSize(invalid_record);
       }).not.to.throw();
       assert(logToCloud.logError.calledOnce);
+      expect(validateFirehoseDataSize(invalid_record)).to.be.true;
     });
 
     it('checks string size to send newrelic error', () => {
       const valid_record = {data_string: 'x'.repeat(maxDataStringBytes - 1)};
       validateFirehoseDataSize(valid_record);
       assert(logToCloud.logError.notCalled);
+      expect(validateFirehoseDataSize(valid_record)).not.to.be.true;
 
       const invalid_record = {data_string: 'x'.repeat(maxDataStringBytes + 1)};
       expect(() => {
         validateFirehoseDataSize(invalid_record);
       }).not.to.throw();
       assert(logToCloud.logError.calledOnce);
+      expect(validateFirehoseDataSize(invalid_record)).to.be.true;
     });
   });
 });
