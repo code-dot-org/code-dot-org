@@ -747,6 +747,9 @@
   heading_self_paced_learning: "Self-paced learning"
   heading_in_person_virtual_workshops: "In-person/virtual workshops"
   heading_every_grade_every_level: "For every grade at every level"
+  heading_resources_schools_districts: "Additional resources for schools and districts"
+  heading_intl_opportunities: "International Opportunities"
+  heading_unplugged_resources: "Unplugged Resources"
 
   student_courses_top_desc: "Start coding today. Our courses and activities are free! It's easier—and more fun—than you think."
   student_courses_explore_desc: "Explore the world of computer science with engaging videos, self-paced tutorials, programming activities, and more for all ages and experience levels!"
@@ -1112,6 +1115,10 @@
   admins_page_subscribe_form_heading: "Sign up for our administrator newsletter!"
   admins_page_subscribe_form_desc: "Sign up to receive monthly emails from Code.org on bringing computer science to your school or district. Get helpful reminders, tips, and updates sent right to your inbox. You can unsubscribe at any time."
   admins_page_subscribe_form_district_disclaimer: "District Administrator? [Discover our District Program](%{district_program_url})."
+  admins_page_resources_desc: "Beyond curriculum and professional learning, we have many materials to support your classroom."
+  admins_page_resources_desc_intl: "We have a growing number of partners around the world that are helping to bring computer science to students in their area."
+  admins_page_resources_desc_videos: "We offer a growing library of educational videos for use by educators worldwide, online or in classrooms."
+  admins_page_resources_desc_unplugged: "Now you can teach the fundamentals of computer science to your students, whether you have computers in your classroom or not!"
 
   pl_middle_high_top_heading: "Professional Learning Workshops for Grades 6-12"
   pl_middle_high_top_desc: "Our engaging workshops are for new and experienced computer science teachers!"
@@ -1246,6 +1253,8 @@
 
   resources_tabs_heading: "Resources that support you every step of the way"
   resources_tabs_desc: "[Sign up for a Code.org account](%{sign_up_url}) to get access to materials that will help you teach computer science with confidence. Code.org has extensive resources designed to support educators, even those without prior CS teaching experience."
+  resources_tabs_heading_admins: "Resources to support your educators every step of the way"
+  resources_tabs_desc_admins: "A Code.org account will give your educators access to materials that empower them to teach computer science with confidence. Click the tabs to learn more about the extensive resources we offer."
   resources_tabs_tab_label_lesson_plans: "Lesson Plans"
   resources_tabs_tab_label_videos: "Videos"
   resources_tabs_tab_label_slides: "Slides"

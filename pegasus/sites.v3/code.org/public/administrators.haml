@@ -79,11 +79,18 @@ theme: responsive_full_width
     %a.link-button{href: "/educate/professional-learning"}
       =hoc_s(:call_to_action_learn_about_pl)
 
-%section.bg-neutral-light
+%section.resources.bg-neutral-light
   .wrapper
-    RESOURCES TABS GO HERE
+    = view :"tabs_section/resources/resources_tabs", resources_heading: hoc_s(:resources_tabs_heading_admins), resources_desc: hoc_s(:resources_tabs_desc_admins)
 
 %section.bg-pattern-dark
   .wrapper
     = view :"administrators/admins_subscribe_form"
 
+%section
+  .wrapper
+    %h2.centered
+      =hoc_s(:heading_resources_schools_districts)
+    %p.centered
+      =hoc_s(:admins_page_resources_desc)
+    = view :"administrators/admins_additional_resources"
