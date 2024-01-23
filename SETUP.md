@@ -221,7 +221,7 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
         fi     
         ```
 1. Install git-lfs >= 3.0
-    1. Add packagecloud.io apt repositories to your system to get a newer version of Git LFS (this step is not required if using Ubuntu >= 22.04): 
+    1. The default version of git-lfs in Ubuntu 20.04 is 2.9. This does not have support for Git SSH operations. Therefore, you'll want to add packagecloud.io apt repositories to your system to get a newer version of Git LFS (this step is not required if using Ubuntu >= 22.04): 
         `curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash`
     1. `apt-get install git-lfs`
     1. Ensure `git-lfs --version` is >= 3.0. Git LFS < 3.0 only supports HTTPS, not SSH.
