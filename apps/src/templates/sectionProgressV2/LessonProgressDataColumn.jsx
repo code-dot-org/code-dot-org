@@ -13,8 +13,13 @@ function LessonProgressDataColumn({
   sortedStudents,
   addExpandedLesson,
 }) {
-  const getProgress = React.useCallback(
-    () => (
+  return (
+    <div className={styles.lessonColumn}>
+      <LessonProgressColumnHeader
+        lesson={lesson}
+        addExpandedLesson={addExpandedLesson}
+      />
+
       <div className={styles.lessonDataColumn}>
         {sortedStudents.map(student => (
           <LessonDataCell
@@ -27,16 +32,6 @@ function LessonProgressDataColumn({
           />
         ))}
       </div>
-    ),
-    [lesson, lessonProgressByStudent, sortedStudents]
-  );
-  return (
-    <div className={styles.lessonColumn}>
-      <LessonProgressColumnHeader
-        lesson={lesson}
-        addExpandedLesson={addExpandedLesson}
-      />
-      {getProgress(lesson)}
     </div>
   );
 }

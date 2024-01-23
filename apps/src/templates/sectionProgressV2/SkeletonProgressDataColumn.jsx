@@ -6,24 +6,6 @@ import classNames from 'classnames';
 import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
 import LessonProgressColumnHeader from './LessonProgressColumnHeader';
 
-const getSkeletonLessonData = (lessonId, sortedStudents) => (
-  <div className={styles.lessonDataColumn}>
-    {sortedStudents.map(student => (
-      <div
-        className={classNames(styles.gridBox, styles.gridBoxLesson)}
-        key={student.id + '.' + lessonId}
-      >
-        <div
-          className={classNames(
-            styles.lessonSkeletonCell,
-            skeletonizeContent.skeletonizeContent
-          )}
-        />
-      </div>
-    ))}
-  </div>
-);
-
 export default function SkeletonProgressDataColumn({lesson, sortedStudents}) {
   return (
     <div className={styles.lessonColumn}>
@@ -31,7 +13,21 @@ export default function SkeletonProgressDataColumn({lesson, sortedStudents}) {
         lesson={lesson}
         addExpandedLesson={() => {}}
       />
-      {getSkeletonLessonData(lesson.id, sortedStudents)}
+      <div className={styles.lessonDataColumn}>
+        {sortedStudents.map(student => (
+          <div
+            className={classNames(styles.gridBox, styles.gridBoxLesson)}
+            key={student.id + '.' + lesson.id}
+          >
+            <div
+              className={classNames(
+                styles.lessonSkeletonCell,
+                skeletonizeContent.skeletonizeContent
+              )}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
