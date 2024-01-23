@@ -33,7 +33,6 @@ function SectionProgressV2({
     <div>
       <Heading1>Progress</Heading1>
       <IconKey isViewingLevelProgress={true} hasLevelValidation={false} />
-      <ProgressTableV2 />
       <div className={styles.title}>
         <Heading6 className={styles.titleStudents}>Students</Heading6>
         <Heading6 className={styles.titleUnitSelector}>
