@@ -266,8 +266,8 @@ class LtiV1Controller < ApplicationController
     admin_email = params[:email]
 
     unless Policies::Lti::LMS_PLATFORMS.key?(platform_name.to_sym)
-      render status: :bad_request, json: {error: I18n.t('lti.error.unsupported_lms_type')}
-      return
+      flash.alert = I18n.t('lti.error.unsupported_lms_type')
+      return redirect_to lti_v1_integrations_path
     end
 
     platform_urls = Policies::Lti::LMS_PLATFORMS[platform_name.to_sym]
