@@ -1,6 +1,8 @@
 import {connect} from 'react-redux';
+import i18n from '@cdo/locale';
 import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
+import color from '@cdo/apps/util/color';
 import DCDO from '@cdo/apps/dcdo';
 import SectionProgress from '../sectionProgress/SectionProgress';
 import Button from '@cdo/apps/templates/Button';
@@ -28,8 +30,20 @@ function SectionProgressSelector({
   }
 
   const toggleV1OrV2Button = () => (
-    <div>
-      <Button onClick={onShowProgressTableV2Change}>Toggle V1/V2</Button>
+    <div style={{float: 'right'}}>
+      <Button
+        style={{
+          color: color.light_secondary_500,
+          fontSize: '14px',
+          textDecoration: 'underline',
+        }}
+        styleAsText={true}
+        onClick={onShowProgressTableV2Change}
+      >
+        {showProgressTableV2
+          ? i18n.switchToOldProgressView()
+          : i18n.switchToNewProgressView()}
+      </Button>
     </div>
   );
 
