@@ -977,9 +977,8 @@ export function getAlphanumericId() {
   return id.join('');
 }
 
-// These limits are based on the empirical observation that no data_json column
-// values larger than 65,526 bytes made it into redshift in 2023. See
-// firehose.rb for more matching data validation.
+// These limits are based on the maximum lengths in the coresponding Redshift
+// data columns. See firehose.rb for matching data validation.
 
 const maxDataJSONBytes = 65500;
 const maxDataStringBytes = 4095;
