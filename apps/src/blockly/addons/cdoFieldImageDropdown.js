@@ -120,7 +120,10 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
    * @returns A valid language-neutral option, or null if invalid.
    */
   doClassValidation_(newValue) {
-    const options = this.getOptions(false); // false means do not use cache
+    /* Begin CDO Customization */
+    const options = this.getOptions(false); // false = do not use cache
+    /* End CDO Customization */
+
     const isValueValid = options.some(option => option[1] === newValue);
 
     if (!isValueValid) {
