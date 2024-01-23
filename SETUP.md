@@ -23,7 +23,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
      ```
 
 1. Clone the repo, which also may take a while.
-    - Note you should have `git-lfs` >= 3.0 installed prior to cloning, see OS-specific install steps referenced above.
+    - Note you should have `git lfs --version` >= 3.0 installed prior to cloning, see OS-specific install steps referenced above.
     - The simplest option is to clone via SSH with: `git clone git@github.com:code-dot-org/code-dot-org.git`
     - The fastest option is to clone via HTTP with: `git clone https://github.com/code-dot-org/code-dot-org.git`. Although faster than SSH, this option requires you to reauthenticate every time you want to update. You will therefore probably want to switch to SSH after the initial clone with `git remote set-url origin git@github.com:code-dot-org/code-dot-org.git`
 
