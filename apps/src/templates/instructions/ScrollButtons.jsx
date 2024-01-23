@@ -127,9 +127,9 @@ class ScrollButtons extends React.Component {
         type="button"
         className={classNames(
           moduleStyles.up,
-          moduleStyles.minecraftButton,
           this.props.visible && moduleStyles.visible,
           centerItems && moduleStyles.upCenter,
+          moduleStyles.minecraftButton,
           'arrow'
         )}
         ref={c => {
@@ -151,11 +151,11 @@ class ScrollButtons extends React.Component {
         onClick={this.singleScrollUp}
         onMouseDown={this.continuousScrollStartUp}
         className={classNames(
-          moduleStyles.arrowGlyph,
-          moduleStyles.removeButtonStyles,
           moduleStyles.up,
           this.props.visible && moduleStyles.visible,
-          centerItems && moduleStyles.upCenter
+          centerItems && moduleStyles.upCenter,
+          moduleStyles.arrowGlyph,
+          moduleStyles.removeButtonStyles
         )}
       >
         <FontAwesome
@@ -170,9 +170,9 @@ class ScrollButtons extends React.Component {
         type="button"
         className={classNames(
           moduleStyles.down,
-          moduleStyles.minecraftButton,
           this.props.visible && moduleStyles.visible,
           centerItems && moduleStyles.downCenter,
+          moduleStyles.minecraftButton,
           'arrow'
         )}
         ref={c => {
@@ -191,12 +191,12 @@ class ScrollButtons extends React.Component {
           this.scrollDown = c;
         }}
         className={classNames(
-          'uitest-scroll-button-down',
-          moduleStyles.arrowGlyph,
-          moduleStyles.removeButtonStyles,
           moduleStyles.down,
           this.props.visible && moduleStyles.visible,
-          centerItems && moduleStyles.downCenter
+          centerItems && moduleStyles.downCenter,
+          moduleStyles.arrowGlyph,
+          moduleStyles.removeButtonStyles,
+          'uitest-scroll-button-down'
         )}
         key="scrollDown"
         onClick={this.singleScrollDown}
