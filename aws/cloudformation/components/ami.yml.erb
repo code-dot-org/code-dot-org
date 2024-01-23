@@ -124,7 +124,7 @@ frontend_device_name ||= '/dev/sda1'
     CreationPolicy:
       ResourceSignal:
         Timeout: <%=frontend_timeout%>
-        Count: !GetAtt ASGCount.DesiredCapacity
+        Count: !GetAtt [ASGCount, DesiredCapacity]
       AutoScalingCreationPolicy:
         MinSuccessfulInstancesPercent: 80
     UpdatePolicy:
