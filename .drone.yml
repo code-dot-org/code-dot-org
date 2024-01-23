@@ -46,7 +46,7 @@ steps:
 
   - name: unit-tests
     # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:simplify-node-installation
+    image: codedotorg/code-dot-org:1.9.2
     pull: always
     volumes:
       - name: rbenv
@@ -145,7 +145,7 @@ steps:
 
   - name: ui-tests
     # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:simplify-node-installation
+    image: codedotorg/code-dot-org:1.9.2
     pull: always
     volumes:
       - name: rbenv
@@ -212,6 +212,6 @@ trigger:
     - pull_request
 ---
 kind: signature
-hmac: 2c41f2af15b9b827e85829e603ac7b57609dbfea7d272a4f69c31eab3377fbe2
+hmac: 56684bc035260fcae2cb0cf949c9731243ee9a63795322bff4d8b13352fafd0d
 
 ...
