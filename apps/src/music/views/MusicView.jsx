@@ -35,6 +35,7 @@ import {
   setSoundLoadingProgress,
   setUndoStatus,
   showCallout,
+  clearCallout,
 } from '../redux/musicRedux';
 import KeyHandler from './KeyHandler';
 import Callouts from './Callouts';
@@ -107,6 +108,7 @@ class UnconnectedMusicView extends React.Component {
     appName: PropTypes.string,
     setUndoStatus: PropTypes.func,
     showCallout: PropTypes.func,
+    clearCallout: PropTypes.func,
   };
 
   constructor(props) {
@@ -190,12 +192,14 @@ class UnconnectedMusicView extends React.Component {
     }
 
     // When changing levels, stop playback and reset the initial sounds loaded flag
-    // since a new set of sounds will be loaded on the next level.
+    // since a new set of sounds will be loaded on the next level.  Also clear
+    // the callout that's showing.
     if (prevProps.currentLevelIndex !== this.props.currentLevelIndex) {
       this.stopSong();
       this.setState({
         hasLoadedInitialSounds: false,
       });
+      this.props.clearCallout();
     }
 
     if (
@@ -600,7 +604,7 @@ class UnconnectedMusicView extends React.Component {
             baseUrl={baseAssetUrl}
             vertical={position !== InstructionsPositions.TOP}
             right={position === InstructionsPositions.RIGHT}
-            showCallout={id => this.props.showCallout(id)}
+            handleInstructionsTextClick={id => this.props.showCallout(id)}
           />
         </PanelContainer>
       </div>
@@ -657,12 +661,13 @@ class UnconnectedMusicView extends React.Component {
 
     return (
       <AnalyticsContext.Provider value={this.analyticsReporter}>
-        {AppConfig.getValue('keyboard-shortcuts-enabled') === 'true' && (
-          <KeyHandler
-            togglePlaying={this.togglePlaying}
-            playTrigger={this.playTrigger}
-          />
-        )}
+        <KeyHandler
+          togglePlaying={this.togglePlaying}
+          playTrigger={this.playTrigger}
+          uiShortcutsEnabled={
+            AppConfig.getValue('ui-keyboard-shortcuts-enabled') === 'true'
+          }
+        />
         <UpdateTimer
           getCurrentPlayheadPosition={this.getCurrentPlayheadPosition}
           updateHighlightedBlocks={this.updateHighlightedBlocks}
@@ -757,6 +762,7 @@ const MusicView = connect(
     updateLoadProgress: value => dispatch(setSoundLoadingProgress(value)),
     setUndoStatus: value => dispatch(setUndoStatus(value)),
     showCallout: id => dispatch(showCallout(id)),
+    clearCallout: id => dispatch(clearCallout()),
   })
 )(UnconnectedMusicView);
 

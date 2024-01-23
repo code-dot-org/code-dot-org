@@ -13,7 +13,12 @@ import Spinner from '../../components/spinner';
 import {Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import IdleTimer from 'react-idle-timer';
 import {COURSE_CSF} from '../workshopConstants';
-import {PermissionPropType, WorkshopAdmin, ProgramManager} from '../permission';
+import {
+  PermissionPropType,
+  WorkshopAdmin,
+  ProgramManager,
+  Facilitator,
+} from '../permission';
 
 // in milliseconds
 const REFRESH_DELAY = 5000;
@@ -146,7 +151,11 @@ export class SessionAttendance extends React.Component {
           accountRequiredForAttendance={this.props.accountRequiredForAttendance}
           scholarshipWorkshop={this.props.scholarshipWorkshop}
           displayYesNoAttendance={
-            !this.props.permission.hasAny(WorkshopAdmin, ProgramManager)
+            !this.props.permission.hasAny(
+              WorkshopAdmin,
+              ProgramManager,
+              Facilitator
+            )
           }
         />
       );
