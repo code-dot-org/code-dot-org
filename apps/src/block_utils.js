@@ -466,7 +466,6 @@ exports.appendNewFunctions = function (blocksXml, functionsXml) {
         null
       ).snapshotLength > 0;
     if (!alreadyPresent) {
-      console.log(name);
       startBlocksDom.ownerDocument.firstChild.appendChild(func);
     }
   }
