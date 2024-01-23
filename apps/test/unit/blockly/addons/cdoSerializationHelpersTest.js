@@ -3,7 +3,7 @@ import {
   addPositionsToState,
   getCombinedSerialization,
   insertCollider,
-  isBlockLocationUnset,
+  isBlockAtEdge,
   isOverlapping,
   appendProceduresToState,
   partitionJsonBlocksByType,
@@ -163,7 +163,7 @@ describe('CdoSerializationHelpers', () => {
     });
   });
 
-  describe('isBlockLocationUnset', () => {
+  describe('isBlockAtEdge', () => {
     const workspaceLTR = {RTL: false, getMetrics: () => ({viewWidth: 515})};
     const workspaceRTL = {RTL: true, getMetrics: () => ({viewWidth: 515})};
 
@@ -173,7 +173,7 @@ describe('CdoSerializationHelpers', () => {
         getRelativeToSurfaceXY: () => ({x: 0, y: 0}),
       };
 
-      const result = isBlockLocationUnset(block);
+      const result = isBlockAtEdge(block);
       expect(result).to.be.true;
     });
 
@@ -183,7 +183,7 @@ describe('CdoSerializationHelpers', () => {
         getRelativeToSurfaceXY: () => ({x: 20, y: 140}),
       };
 
-      const result = isBlockLocationUnset(block);
+      const result = isBlockAtEdge(block);
       expect(result).to.be.false;
     });
 
@@ -193,7 +193,7 @@ describe('CdoSerializationHelpers', () => {
         getRelativeToSurfaceXY: () => ({x: 515, y: 0}),
       };
 
-      const result = isBlockLocationUnset(block);
+      const result = isBlockAtEdge(block);
       expect(result).to.be.true;
     });
 
@@ -203,7 +203,7 @@ describe('CdoSerializationHelpers', () => {
         getRelativeToSurfaceXY: () => ({x: 495, y: 140}),
       };
 
-      const result = isBlockLocationUnset(block);
+      const result = isBlockAtEdge(block);
       expect(result).to.be.false;
     });
   });
