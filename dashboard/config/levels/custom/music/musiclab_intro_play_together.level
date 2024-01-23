@@ -17,7 +17,7 @@
           "blocks": [
             {
               "type": "when_run_simple2",
-              "id": "when-run-block",
+              "id": "when_run_simple2",
               "x": 30,
               "y": 30,
               "deletable": false,
@@ -25,14 +25,14 @@
               "next": {
                 "block": {
                   "type": "play_sound_at_current_location_simple2",
-                  "id": "play-sound-block",
+                  "id": "play_sound_at_current_location_simple2",
                   "fields": {
                     "sound": "beats/groovy_beat"
                   },
                   "next": {
                     "block": {
                       "type": "play_sound_at_current_location_simple2",
-                      "id": "play-sound-block",
+                      "id": "play_sound_at_current_location_simple2",
                       "fields": {
                         "sound": "bass/bass_home_steady"
                       }

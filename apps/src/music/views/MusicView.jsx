@@ -35,6 +35,7 @@ import {
   setSoundLoadingProgress,
   setUndoStatus,
   showCallout,
+  clearCallout,
 } from '../redux/musicRedux';
 import KeyHandler from './KeyHandler';
 import Callouts from './Callouts';
@@ -109,6 +110,7 @@ class UnconnectedMusicView extends React.Component {
     appName: PropTypes.string,
     setUndoStatus: PropTypes.func,
     showCallout: PropTypes.func,
+    clearCallout: PropTypes.func,
   };
 
   constructor(props) {
@@ -199,7 +201,7 @@ class UnconnectedMusicView extends React.Component {
       this.setState({
         hasLoadedInitialSounds: false,
       });
-      this.props.showCallout(undefined);
+      this.props.clearCallout();
     }
 
     if (
@@ -764,6 +766,7 @@ const MusicView = connect(
     updateLoadProgress: value => dispatch(setSoundLoadingProgress(value)),
     setUndoStatus: value => dispatch(setUndoStatus(value)),
     showCallout: id => dispatch(showCallout(id)),
+    clearCallout: id => dispatch(clearCallout()),
   })
 )(UnconnectedMusicView);
 

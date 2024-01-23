@@ -41,7 +41,7 @@ const toolboxBlocks = {
     type: BlockTypes.SET_CURRENT_LOCATION_NEXT_MEASURE,
   },
   [BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2]: {
-    id: 'play-sound-block',
+    id: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
     kind: 'block',
     type: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
   },
@@ -82,7 +82,7 @@ const toolboxBlocks = {
     },
   },
   [BlockTypes.PLAY_SOUNDS_TOGETHER]: {
-    id: 'play-sounds-together-block',
+    id: BlockTypes.PLAY_SOUNDS_TOGETHER,
     kind: 'block',
     type: BlockTypes.PLAY_SOUNDS_TOGETHER,
   },
@@ -95,8 +95,8 @@ const toolboxBlocks = {
     type: BlockTypes.PLAY_SOUNDS_RANDOM,
   },
   [BlockTypes.REPEAT_SIMPLE2]: {
+    id: BlockTypes.REPEAT_SIMPLE2,
     kind: 'block',
-    id: 'repeat-block',
     type: BlockTypes.REPEAT_SIMPLE2,
     fields: {
       times: 1,
