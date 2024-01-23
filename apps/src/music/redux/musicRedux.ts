@@ -206,6 +206,9 @@ const musicSlice = createSlice({
       state.currentCallout.id = action.payload;
       state.currentCallout.index = state.currentCallout.index + 1;
     },
+    clearCallout: state => {
+      state.currentCallout.id = undefined;
+    },
   },
 });
 
@@ -269,4 +272,5 @@ export const {
   moveStartPlayheadPositionBackward,
   setUndoStatus,
   showCallout,
+  clearCallout,
 } = musicSlice.actions;
