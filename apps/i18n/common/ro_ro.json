@@ -1304,6 +1304,7 @@
   "loginExportInstructions": "**Predare de la distanță?** Descarcă un fișier CSV cu informațiile de autentificare ale elevului, pentru a efectua îmbinarea corespondenței (mail merge) sau mai simplu copiază și lipește numele de utilizator și parola fiecărui elev în emailuri.",
   "loginExportLink": "Descarca CSV",
   "loginInfo": "Info de autentificare",
+  "loginInfoLtiSetupHeader": "Configurează clasa ta",
   "loginInfoResetSecretPicDesc": "Poți reseta imaginea cu parolă pentru oricare dintre elevii tăi mergând la pagina [Gestionează Elevii]({url}) pentru secțiune, făcând clic pe butonul „Arată imaginea” sub coloana „Imagine cu parolă” și făcând clic pe butonul ”Resetează”.",
   "loginInfoResetSecretWordDesc": "Poţi reseta cuvintele secrete pentru fiecare dintre elevi mergând la fila [Manage Students]({url}) a secţiunii, apăsând butonul \"Arată cuvintele\" de sub coloana \"Cuvinte secrete\" şi apăsând butonul \"Resetare\".",
   "loginInfoWordPicMoreBelow": "Elevii pot găsi toate aceste informații, inclusiv secretul lor {wordOrPicture}, în cardurile de autentificare de mai jos.",

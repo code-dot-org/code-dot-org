@@ -1058,6 +1058,14 @@ cs:
         options:
           INPUT1:
             '1': citronová šťáva
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': modrou
+            '"red"': červenou
+          OPT:
+            '"large"': velký
+            '"small"': malý
       FunctionBlocks_communicate:
         text: Komunikujte {VAR1} s {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:

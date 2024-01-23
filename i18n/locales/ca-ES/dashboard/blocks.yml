@@ -1104,6 +1104,14 @@ ca:
             '5': tots dos
       DansBlocks_testRectangle:
         text: 'fer rectangle x: {X} y: {Y} w: {W} h: {H} color: {COLOR}'
+      DansBlocks_testShowVariable:
+        options:
+          OPT:
+            '"large"': gran
+            '"small"': petit
+          COLOR:
+            '"blue"': blau
+            '"red"': vermell
       FunctionBlocks_addEightBlock:
         text: afegirVuit
       FunctionBlocks_addFiveBlock:

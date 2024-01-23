@@ -1080,6 +1080,14 @@ hi:
         options:
           INPUT1:
             '1': नींबू का रस
+      DansBlocks_testShowVariable:
+        options:
+          OPT:
+            '"large"': बड़ा
+            '"small"': छोटा
+          COLOR:
+            '"blue"': नीला
+            '"red"': लाल
       FunctionBlocks_communicate:
         text: "{VAR1} को {SPRITE1COSTUME}के साथ संवाद करें"
       FunctionBlocks_makeManipulative2:

@@ -1024,6 +1024,11 @@ fi:
             '"hearts"': sydämet
             '"rain"': sade
             '"starburst"': Tähtisäteet
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': sininen
+            '"red"': punainen
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} alkaa {BEHAVIOR}
       gamelab_addTarget:

@@ -1102,6 +1102,14 @@ ru:
             '1': лимонный сок
             '3': пищевая сода
             '5': оба
+      DansBlocks_testShowVariable:
+        options:
+          OPT:
+            '"large"': большой
+            '"small"': маленький
+          COLOR:
+            '"blue"': синий
+            '"red"': красный
       FunctionBlocks_communicate:
         text: Общение {VAR1} с {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:

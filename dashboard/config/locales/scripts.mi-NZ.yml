@@ -447,6 +447,10 @@ mi:
           lessons:
             lesson-6:
               name: Ngā Koromeke
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ihirangi
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -478,6 +482,10 @@ mi:
           lessons:
             lesson-4:
               name: Ngā Taurangi
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -505,6 +513,10 @@ mi:
           lessons:
             lesson-3:
               name: Mō Ngā Koromeke
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -526,6 +538,10 @@ mi:
             lessonGroup-2:
               display_name: Ihirangi
         csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Ihirangi
@@ -559,6 +575,10 @@ mi:
           lesson_groups:
             lessonGroup-2:
               display_name: Ihirangi
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -583,6 +603,10 @@ mi:
           lesson_groups:
             lessonGroup-2:
               display_name: Ihirangi
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -604,6 +628,10 @@ mi:
             lessonGroup-2:
               display_name: Ihirangi
         csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Ihirangi
@@ -632,6 +660,10 @@ mi:
             lessonGroup-2:
               display_name: Ihirangi
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Ihirangi
@@ -869,6 +901,14 @@ mi:
               display_name: Ngā Taumahi
             csp_variables:
               display_name: Ngā Taurangi
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
+            csp_variables:
+              display_name: Ngā Taurangi
         csp4-dlp:
           lesson_groups:
             content:
@@ -960,6 +1000,12 @@ mi:
             csp_unit6_2020:
               display_name: Ngā Hātepe
         csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Ngā Rārangi
+            lessonGroup-3:
+              display_name: Ngā Koromeke
+        csp6-2024:
           lesson_groups:
             csp_unit6_2020:
               display_name: Ngā Rārangi
