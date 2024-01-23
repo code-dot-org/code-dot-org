@@ -1,17 +1,13 @@
 :scss
-
-  .subscribe-form { padding: 0; }
-
   p.body-three a {
     color: var(--neutral_white);
     &:hover { color: var(--neutral_dark10); }
   }
 
-%div.subscribe-form.no-bg.flex-container.justify-space-between.align-items-center.wrap
+%div.subscribe-form.no-bg.flex-container.justify-space-between.align-items-center.wrap{style: "padding: 0"}
   .text-wrapper
     %h2=hoc_s(:admins_page_subscribe_form_heading)
     %p=hoc_s(:admins_page_subscribe_form_desc)
-    %hr.light
     %p.body-three
       =hoc_s(:admins_page_subscribe_form_district_disclaimer, markdown: :inline, locals:{district_program_url: "/districts"})
   %figure.col-50
