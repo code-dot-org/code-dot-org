@@ -173,7 +173,7 @@ const registerDarkMode = function () {
       return MenuOptionStates.ENABLED;
     },
     callback: function (scope) {
-      const currentTheme = scope.workspace?.getTheme();
+      const currentTheme = scope.workspace.getTheme();
       const themeName =
         baseName(currentTheme.name) +
         (isDarkTheme(scope.workspace) ? '' : dark);
@@ -228,7 +228,7 @@ const registerTheme = function (name, label, index) {
       }
     },
     callback: function (scope) {
-      const currentTheme = scope.workspace?.getTheme();
+      const currentTheme = scope.workspace.getTheme();
       const themeName = name + (isDarkTheme(scope.workspace) ? dark : '');
       localStorage.setItem(BLOCKLY_THEME, themeName);
       setAllWorkspacesTheme(Blockly.themes[themeName], currentTheme);
