@@ -33,11 +33,7 @@ function ProgressTableV2({
 
   const renderedColumns = React.useMemo(() => {
     const lessons = unitData?.lessons;
-    if (
-      lessons === undefined ||
-      lessons.length === 0 ||
-      expandedLessonIds === undefined
-    ) {
+    if (lessons === undefined || lessons.length === 0) {
       return [];
     }
 
