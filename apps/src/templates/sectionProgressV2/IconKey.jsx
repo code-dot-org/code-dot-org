@@ -15,7 +15,7 @@ export default function IconKey({isViewingLevelProgress, hasLevelValidation}) {
   // TO-DO (TEACH-800): Make content responsive to view on page
   // TO-DO (TEACH-801): Fix spacing between boxes once width of the page is expanded
   const sectionContent = () => (
-    <div style={{display: 'flex'}}>
+    <div>
       <AssignmentCompletionStatesBox
         isViewingLevelProgress={isViewingLevelProgress}
         hasValidatedLevels={hasLevelValidation}
