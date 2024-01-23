@@ -26,35 +26,7 @@ theme: responsive_full_width
   .wrapper
     %h2.centered
       =hoc_s(:teach_page_why_teach_cs_heading)
-    .editorial-cards-wrapper-2x2
-      .flex-container
-        %figure
-          %img{src: "/images/admins-page-pathways.png", alt: ""}
-        .text-wrapper
-          %h3.heading-sm
-            =hoc_s(:admins_page_elevate_title_01)
-          %p=hoc_s(:admins_page_elevate_desc_01)
-      .flex-container
-        %figure
-          %img{src: "/images/admins-page-superhero.png", alt: ""}
-        .text-wrapper
-          %h3.heading-sm
-            =hoc_s(:admins_page_elevate_title_02)
-          %p=hoc_s(:admins_page_elevate_desc_02)
-      .flex-container
-        %figure
-          %img{src: "/images/admins-page-standards.png", alt: ""}
-        .text-wrapper
-          %h3.heading-sm
-            =hoc_s(:admins_page_elevate_title_03)
-          %p=hoc_s(:admins_page_elevate_desc_03)
-      .flex-container
-        %figure
-          %img{src: "/images/admins-page-curriculum.png", alt: ""}
-        .text-wrapper
-          %h3.heading-sm
-            =hoc_s(:admins_page_elevate_title_04)
-          %p=hoc_s(:admins_page_elevate_desc_04)
+    = view :"administrators/admins_editorial_cards"
 
 %section.bg-pattern-dark
   .wrapper.centered
