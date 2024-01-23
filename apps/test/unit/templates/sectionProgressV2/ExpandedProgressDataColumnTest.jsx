@@ -4,9 +4,12 @@ import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
 
 import {UnconnectedExpandedProgressDataColumn} from '@cdo/apps/templates/sectionProgressV2/ExpandedProgressDataColumn.jsx';
-import LessonDataCell from '@cdo/apps/templates/sectionProgressV2/LessonDataCell.jsx';
+import LevelDataCell from '@cdo/apps/templates/sectionProgressV2/LevelDataCell.jsx';
 
-import {fakeLessonWithLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
+import {
+  fakeLessonWithLevels,
+  fakeStudentLevelProgress,
+} from '@cdo/apps/templates/progress/progressTestHelpers';
 import styles from '@cdo/apps/templates/sectionProgressV2/progress-table-v2.module.scss';
 
 const STUDENT_1 = {id: 1, name: 'Student 1', familyName: 'FamNameB'};
@@ -14,30 +17,11 @@ const STUDENT_2 = {id: 2, name: 'Student 2', familyName: 'FamNameA'};
 const STUDENTS = [STUDENT_1, STUDENT_2];
 const NUM_LEVELS = 4;
 const LESSON = fakeLessonWithLevels({}, NUM_LEVELS);
-const LESSON_PROGRESS = {
-  [STUDENT_1.id]: {
-    [LESSON.id]: {
-      incompletePercent: 20,
-      imperfectPercent: 20,
-      completedPercent: 60,
-      timeSpent: 300, // time spent = 5 minutes
-      lastTimestamp: 1614841198, // date = 3/4
-    },
-  },
-  [STUDENT_2.id]: {
-    [LESSON.id]: {
-      incompletePercent: 0,
-      imperfectPercent: 0,
-      completedPercent: 100,
-      timeSpent: 300, // time spent = 5 minutes
-      lastTimestamp: 1614841198, // date = 3/4
-    },
-  },
-};
+const LEVEL_PROGRESS = fakeStudentLevelProgress(LESSON.levels, STUDENTS);
 
 const DEFAULT_PROPS = {
   lesson: LESSON,
-  lessonProgressByStudent: LESSON_PROGRESS,
+  levelProgressByStudent: LEVEL_PROGRESS,
   sortedStudents: STUDENTS,
   removeExpandedLesson: () => {},
 };
@@ -61,7 +45,9 @@ describe('ExpandedProgressDataColumn', () => {
 
   it('Shows all levels for all students', () => {
     const wrapper = setUp();
-    expect(wrapper.find(LessonDataCell)).to.have.length(STUDENTS.length);
+    expect(wrapper.find(LevelDataCell)).to.have.length(
+      STUDENTS.length * NUM_LEVELS
+    );
   });
 
   it('Un-expands on header click', () => {
