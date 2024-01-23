@@ -657,12 +657,13 @@ class UnconnectedMusicView extends React.Component {
 
     return (
       <AnalyticsContext.Provider value={this.analyticsReporter}>
-        {AppConfig.getValue('keyboard-shortcuts-enabled') === 'true' && (
-          <KeyHandler
-            togglePlaying={this.togglePlaying}
-            playTrigger={this.playTrigger}
-          />
-        )}
+        <KeyHandler
+          togglePlaying={this.togglePlaying}
+          playTrigger={this.playTrigger}
+          uiShortcutsEnabled={
+            AppConfig.getValue('ui-keyboard-shortcuts-enabled') === 'true'
+          }
+        />
         <UpdateTimer
           getCurrentPlayheadPosition={this.getCurrentPlayheadPosition}
           updateHighlightedBlocks={this.updateHighlightedBlocks}
