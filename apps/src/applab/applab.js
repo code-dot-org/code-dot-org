@@ -18,11 +18,7 @@ import * as utils from '../utils';
 import * as dropletConfig from './dropletConfig';
 import {getDatasetInfo} from '../storage/dataBrowser/dataUtils';
 import {initDatablockStorage as initFirebaseStorage} from '../storage/datablockStorage'; // TODO: unfirebase
-import {
-  subscribeToListOfProjectTables,
-  onDataPreview,
-  onDataViewChange,
-} from './applabStorage';
+import {onDataPreview} from './applabStorage';
 import * as apiTimeoutList from '../lib/util/timeoutList';
 import designMode from './designMode';
 import applabTurtle from './applabTurtle';
@@ -42,8 +38,17 @@ import {add as addWatcher} from '../redux/watchedExpressions';
 import {changeScreen} from './redux/screens';
 import * as applabConstants from './constants';
 const {ApplabInterfaceMode} = applabConstants;
+import {DataView} from '../storage/constants';
 import consoleApi from '../consoleApi';
-import {setLibraryManifest} from '../storage/redux/data';
+import {
+  tableType,
+  addTableName,
+  deleteTableName,
+  updateTableColumns,
+  updateTableRecords,
+  updateKeyValueData,
+  setLibraryManifest,
+} from '../storage/redux/data';
 import {setStepSpeed} from '../redux/runState';
 import {
   getContainedLevelResultInfo,
@@ -840,6 +845,48 @@ function changedToDataMode(state, lastState) {
 }
 
 /**
+ * When we
+ * @param {DataView} view
+ */
+function onDataViewChange(view, oldTableName, newTableName) {
+  if (!getStore().getState().pageConstants.hasDataMode) {
+    throw new Error('onDataViewChange triggered without data mode enabled');
+  }
+
+  Applab.storage.unsubscribeFromKeyValuePairs();
+  if (oldTableName) {
+    Applab.storage.unsubscribeFromTable(oldTableName);
+  }
+
+  switch (view) {
+    case DataView.PROPERTIES: {
+      // Triggered when the Key Value Pairs tab is brought up
+      Applab.storage.subscribeToKeyValuePairs(keyValueData => {
+        getStore().dispatch(updateKeyValueData(keyValueData));
+      });
+      return;
+    }
+    case DataView.TABLE: {
+      // Triggered when we browse a specific table
+      console.log('view=DataView.TABLE');
+
+      Applab.storage.subscribeToTable(
+        newTableName,
+        columnNames => {
+          getStore().dispatch(updateTableColumns(newTableName, columnNames));
+        },
+        records => {
+          getStore().dispatch(updateTableRecords(newTableName, records));
+        }
+      );
+      return;
+    }
+    default:
+      return;
+  }
+}
+
+/**
  * Subscribe to state changes on the store.
  * @param {!Store} store
  */
@@ -885,7 +932,12 @@ function setupReduxSubscribers(store) {
   });
 
   if (store.getState().pageConstants.hasDataMode) {
-    subscribeToListOfProjectTables(store);
+    // Initialize redux's list of tables from firebase, and keep it up to date as
+    // new tables are added and removed.
+    Applab.storage.subscribeToListOfProjectTables(
+      tableName => store.dispatch(addTableName(tableName, tableType.PROJECT)),
+      tableName => store.dispatch(deleteTableName(tableName))
+    );
 
     // Get data library manifest from cdo-v3-shared/v3/channels/shared/metadata/manifest
     Applab.storage

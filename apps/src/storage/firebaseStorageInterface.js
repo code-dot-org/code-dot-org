@@ -31,6 +31,14 @@ FirebaseStorage.renameColumn = function (tableName, oldName, newName, onSuccess,
 FirebaseStorage.coerceColumn = function (tableName, columnName, columnType, onSuccess, onError) {}
 FirebaseStorage.importCsv = function (tableName, tableDataCsv, onSuccess, onError) {}
 
+
+/* NEw METHODS WE DEFINED */
+FirebaseStorage.subscribeToListOfProjectTables = function (onTableAdded, onTableRemoved) {}
+FirebaseStorage.subscribeToKeyValuePairs = function (onKeyValuePairsChanged) {}
+FirebaseStorage.subscribeToTable = function (tableName, onColumnsChanged, onRecordsChanged) {}
+FirebaseStorage.unsubscribeFromTable = function (tableName) {}
+FirebaseStorage.unsubscribeFromKeyValuePairs = function () {}
+
 /* NOT BLOCKS */
 
 // Used to inject levelbuilder defined data tables into the current project (see applab.js)
