@@ -611,7 +611,9 @@ module.exports = function (grunt) {
       grunt.warn(
         'You are building in dev mode (DEV=1), but the build/ directory already contains production Webpack chunks, such as code-studio-common.js.\n' +
           'These will not be overwritten by a dev build, and their presence will cause loading errors in some labs (e.g., Applab).\n' +
-          'Run yarn clean and try again.'
+          "Note that after cleaning your build directory, some static assets that aren't rebuilt via yarn start may not load.\n" +
+          'These can be regenerated via yarn build.\n' +
+          'Run yarn clean (then yarn build) and try again.'
       );
     }
   });
