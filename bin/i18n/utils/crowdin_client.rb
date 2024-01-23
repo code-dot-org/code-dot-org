@@ -7,9 +7,6 @@ module I18n
     class CrowdinClient
       RequestError = Class.new(StandardError)
 
-      CREDENTIALS_PATH = CDO.dir('bin/i18n/crowdin_credentials.yml').freeze
-      PROJECT_IDS = CDO.crowdin_project_ids.freeze
-
       MAX_ITEMS_COUNT = Crowdin::Web::FetchAllExtensions::MAX_ITEMS_COUNT_PER_REQUEST.freeze
       MAX_CONCURRENT_REQUESTS = 20 # https://developer.crowdin.com/api/v2/#section/Introduction/Rate-Limits
       REQUEST_RETRY_ATTEMPTS = 2 # Number of retries for a failed request
@@ -23,13 +20,13 @@ module I18n
 
       # @param project [String] the Crowdin project name, one of the keys of PROJECT_IDS
       def initialize(project:)
-        raise ArgumentError, 'project is invalid' unless PROJECT_IDS[project]
+        raise ArgumentError, 'project is invalid' unless CDO.crowdin_project_ids[project]
 
         @project = project
 
         @client = ::Crowdin::Client.new do |config|
-          config.api_token = YAML.load_file(CREDENTIALS_PATH)['api_token']
-          config.project_id = PROJECT_IDS[project]
+          config.api_token = I18nScriptUtils.crowdin_creds['api_token']
+          config.project_id = CDO.crowdin_project_ids[project]
         end
       end
 

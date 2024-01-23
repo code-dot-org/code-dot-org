@@ -61,8 +61,26 @@ class I18nScriptUtilsTest < Minitest::Test
 end
 
 describe I18nScriptUtils do
-  def around
-    FakeFS.with_fresh {yield}
+  let(:described_class) {I18nScriptUtils}
+
+  around do |test|
+    FakeFS.with_fresh {test.call}
+  end
+
+  describe '.crowdin_creds' do
+    let(:crowdin_creds) {I18nScriptUtils.crowdin_creds}
+
+    let(:crowdin_creds_file_path) {CDO.dir('bin/i18n/crowdin_credentials.yml')}
+    let(:crowdin_creds_file_data) {{'api_token' => 'expected_api_token'}}
+
+    before do
+      FileUtils.mkdir_p File.dirname(crowdin_creds_file_path)
+      File.write crowdin_creds_file_path, YAML.dump(crowdin_creds_file_data)
+    end
+
+    it 'returns crowdin_credentials.yml data' do
+      _(crowdin_creds).must_equal crowdin_creds_file_data
+    end
   end
 
   describe '.to_dashboard_i18n_struct' do

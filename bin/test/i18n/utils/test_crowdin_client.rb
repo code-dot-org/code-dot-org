@@ -16,14 +16,9 @@ describe I18n::Utils::CrowdinClient do
     FakeFS.with_fresh {test.call}
   end
 
-  around do |test|
-    described_class.stub_const(:PROJECT_IDS, project_ids) {test.call}
-  end
-
   before do
-    FileUtils.mkdir_p File.dirname(described_class::CREDENTIALS_PATH)
-    File.write described_class::CREDENTIALS_PATH, YAML.dump({'api_token' => api_token})
-
+    CDO.stubs(:crowdin_project_ids).returns(project_ids)
+    I18nScriptUtils.stubs(:crowdin_creds).returns({'api_token' => api_token})
     Crowdin::Client.stubs(:new).returns(client)
   end
 

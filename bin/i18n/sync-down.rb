@@ -48,7 +48,7 @@ module I18n
 
         crowdin_projects.each do |name, options|
           puts "Downloading translations from #{name} project"
-          api_token = YAML.load_file(options[:identity_file])["api_token"]
+          api_token = I18nScriptUtils.crowdin_creds['api_token']
           project_identifier = YAML.load_file(options[:config_file])["project_id"]
           project = Crowdin::Project.new(project_identifier, api_token)
           options = {
