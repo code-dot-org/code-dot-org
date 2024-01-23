@@ -28,5 +28,6 @@
       "@cdo/static/*": ["./static/*"],
     },
     "resolveJsonModule": true,
+    "incremental": true,
   }
 }
