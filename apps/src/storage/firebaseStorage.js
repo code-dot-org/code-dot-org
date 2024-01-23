@@ -39,6 +39,7 @@ import {
 import {tableType} from './redux/data';
 import {WarningType} from './constants';
 import {filterRecords} from './storageCommon';
+import _ from 'lodash';
 
 // TODO: unfirebase
 // this should NOT be imported at the firebaseStorage.js level
@@ -1150,7 +1151,7 @@ FirebaseStorage.subscribeToTable = function (
       : getSharedDatabase();
 
   // subscribe to records
-  getPathRef(getPathRef(db, 'storage'), `tables/${tableName}/records`).on(
+  getPathRef(db, `storage/tables/${tableName}/records`).on(
     'value',
     snapshot => {
       onRecordsChanged(snapshot.val());
@@ -1159,6 +1160,27 @@ FirebaseStorage.subscribeToTable = function (
 
   // subscribe to columns
   onColumnsChange(db, tableName, columnNames => {
+    onColumnsChanged(columnNames);
+  });
+};
+
+FirebaseStorage.previewSharedTable = function (
+  sharedTableName,
+  onColumnsChanged,
+  onRecordsChanged
+) {
+  const db = getSharedDatabase();
+
+  // load records, note only once
+  getPathRef(db, `storage/tables/${sharedTableName}/records`).once(
+    'value',
+    snapshot => {
+      onRecordsChanged(snapshot.val());
+    }
+  );
+
+  // subscribe to columns
+  onColumnsChange(db, sharedTableName, columnNames => {
     onColumnsChanged(columnNames);
   });
 };

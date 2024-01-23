@@ -18,7 +18,6 @@ import * as utils from '../utils';
 import * as dropletConfig from './dropletConfig';
 import {getDatasetInfo} from '../storage/dataBrowser/dataUtils';
 import {initDatablockStorage as initFirebaseStorage} from '../storage/datablockStorage'; // TODO: unfirebase
-import {onDataPreview} from './applabStorage';
 import * as apiTimeoutList from '../lib/util/timeoutList';
 import designMode from './designMode';
 import applabTurtle from './applabTurtle';
@@ -872,12 +871,10 @@ function onDataViewChange(view, oldTableName, newTableName) {
 
       Applab.storage.subscribeToTable(
         newTableName,
-        columnNames => {
-          getStore().dispatch(updateTableColumns(newTableName, columnNames));
-        },
-        records => {
-          getStore().dispatch(updateTableRecords(newTableName, records));
-        }
+        columnNames =>
+          getStore().dispatch(updateTableColumns(newTableName, columnNames)),
+        records =>
+          getStore().dispatch(updateTableRecords(newTableName, records))
       );
       return;
     }
@@ -920,7 +917,13 @@ function setupReduxSubscribers(store) {
     const lastIsPreview = lastState.data && lastState.data.isPreviewOpen;
     const isPreview = state.data && state.data.isPreviewOpen;
     if (isDataMode && isPreview && !lastIsPreview) {
-      onDataPreview(state.data.tableName);
+      const tableName = state.data.tableName;
+      Applab.storage.previewSharedTable(
+        tableName,
+        columnNames =>
+          getStore().dispatch(updateTableColumns(tableName, columnNames)),
+        records => getStore().dispatch(updateTableRecords(tableName, records))
+      );
     }
 
     if (
