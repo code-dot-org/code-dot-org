@@ -6,7 +6,6 @@
   margin-bottom: 76px;
   display: flex;
   flex-direction: row;
-
 }
 
 .table {
@@ -20,10 +19,10 @@
     overflow-x: hidden;
   }
 
-  :first-child {
+  .expandedColumn:first-child {
     margin-inline-start: 0;
   }
-  :last-child {
+  .expandedColumn:last-child {
     margin-inline-end: 0;
   }
 }
@@ -98,7 +97,6 @@
   
   &HeaderCaret {
     margin-inline-end: 12px;
-    vertical-align: middle;
   }
 
   &SkeletonHeaderCell {
@@ -109,6 +107,7 @@
   &SkeletonCell {
     width: 1em;
     border-radius: 100%;
+    vertical-align: middle;
   }
 
   &DataColumn {

@@ -10,6 +10,7 @@ import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
 import ExpandedProgressDataColumn from './ExpandedProgressDataColumn';
 import LessonProgressDataColumn from './LessonProgressDataColumn';
 import classNames from 'classnames';
+import SkeletonProgressDataColumn from './SkeletonProgressDataColumn';
 
 const NUM_STUDENT_SKELETON_ROWS = 6;
 const STUDENT_SKELETON_IDS = [...Array(NUM_STUDENT_SKELETON_ROWS).keys()];
@@ -36,15 +37,24 @@ function ProgressTableV2({
   }, [students, isSortedByFamilyName, isSkeleton]);
 
   const renderedColumns = React.useMemo(() => {
-    const lessons = isSkeleton
-      ? LESSON_SKELETON_DATA.map(id => ({id, relativePosition: id}))
-      : unitData?.lessons;
+    const lessons =
+      isSkeleton && unitData?.lessons.length === 0
+        ? LESSON_SKELETON_DATA.map(id => ({id, isFake: true}))
+        : unitData?.lessons;
     if (lessons === undefined || lessons.length === 0) {
       return [];
     }
 
     return lessons.map((lesson, index) => {
-      if (!isSkeleton || expandedLessonIds.includes(lesson.id)) {
+      if (isSkeleton) {
+        return (
+          <SkeletonProgressDataColumn
+            lesson={lesson}
+            sortedStudents={sortedStudents}
+          />
+        );
+      }
+      if (expandedLessonIds.includes(lesson.id)) {
         return (
           <ExpandedProgressDataColumn
             lesson={lesson}
@@ -79,9 +89,13 @@ function ProgressTableV2({
     isSkeleton,
   ]);
 
-  const tableStyles = isSkeleton
-    ? classNames(styles.table, styles.tableLoading)
-    : styles.table;
+  const table = React.useMemo(() => {
+    const tableStyles = isSkeleton
+      ? classNames(styles.table, styles.tableLoading)
+      : styles.table;
+
+    return <div className={tableStyles}>{renderedColumns}</div>;
+  }, [isSkeleton, renderedColumns]);
 
   return (
     <div className={styles.progressTableV2}>
@@ -89,10 +103,9 @@ function ProgressTableV2({
         sortedStudents={sortedStudents}
         unitName={unitData?.title}
         sectionId={sectionId}
-        isSkeleton={true} //isSkeleton && students.length === 0}
+        isSkeleton={isSkeleton && students.length === 0}
       />
-
-      <div className={tableStyles}>{renderedColumns}</div>
+      {table}
     </div>
   );
 }
