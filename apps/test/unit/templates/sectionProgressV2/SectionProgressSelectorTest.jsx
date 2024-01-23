@@ -43,6 +43,9 @@ describe('SectionProgressSelector', () => {
     expect(wrapper.find(SectionProgress)).to.have.length(1);
     expect(wrapper.find(SectionProgressV2)).to.have.length(0);
     expect(wrapper.find('Button')).to.have.length(1);
+    expect(wrapper.find('Button').at(0).props().text).to.equal(
+      'Switch to new progress view'
+    );
   });
   it('shows v2', () => {
     const wrapper = setUp({showProgressTableV2: true});
@@ -50,6 +53,9 @@ describe('SectionProgressSelector', () => {
     expect(wrapper.find(SectionProgress)).to.have.length(0);
     expect(wrapper.find(SectionProgressV2)).to.have.length(1);
     expect(wrapper.find('Button')).to.have.length(1);
+    expect(wrapper.find('Button').at(0).props().text).to.equal(
+      'Switch to old progress view'
+    );
   });
 
   it('shows default if no user preference', () => {
