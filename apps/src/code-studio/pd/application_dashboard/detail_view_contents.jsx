@@ -818,6 +818,14 @@ export class DetailViewContents extends React.Component {
               ] || NA}
             </p>
           )}
+          {this.multiAnswerQuestionFields[key]['census'] && (
+            <p>
+              Data from Census:{' '}
+              {this.props.applicationData.school_stats[
+                this.multiAnswerQuestionFields[key]['census']
+              ] || NA}
+            </p>
+          )}
         </div>
       );
     } else {
