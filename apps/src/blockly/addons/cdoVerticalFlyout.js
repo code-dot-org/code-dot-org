@@ -89,6 +89,7 @@ export default class VerticalFlyout extends GoogleBlockly.VerticalFlyout {
 
       // Record the width for workspace metrics and .position.
       this.width_ = flyoutWidth;
+      Blockly.svgResize(this.workspace_);
       this.position();
       this.targetWorkspace.recordDragTargets();
     }
