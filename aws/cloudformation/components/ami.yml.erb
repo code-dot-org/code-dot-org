@@ -64,6 +64,9 @@ frontend_device_name ||= '/dev/sda1'
     DependsOn: [<%=daemon%>]
     Type: AWS::EC2::Instance
     Properties:
+      Tags:
+        # TODO: Include logic to handle naming convention for production (Stack Name is `autoscale-prod`).
+        - {Key: Name, Value: !Sub "${AWS::StackName}-AMI-Builder"}
       ImageId: <%=image_id%>
       InstanceType: <%=instance_type%>
       IamInstanceProfile: !Ref FrontendInstanceProfile
