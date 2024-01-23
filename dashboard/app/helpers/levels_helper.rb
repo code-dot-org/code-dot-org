@@ -771,10 +771,11 @@ module LevelsHelper
         content_tag(:style, '.blocklySvg { background: none; }') +
         content_tag(:script, '', src: webpack_asset_path('js/blockly.js')) +
         content_tag(:script, '', src: webpack_asset_path("js/#{js_locale}/blockly_locale.js")) +
-        content_tag(:script, '', src: webpack_asset_path('js/common.js')) +
         content_tag(:script, '', src: webpack_asset_path("js/#{js_locale}/#{app}_locale.js")) +
         content_tag(:script, '', src: webpack_asset_path("js/#{app}.js"), 'data-appoptions': options.to_json) +
         content_tag(:script, '', src: webpack_asset_path('js/embedBlocks.js'))
+
+      blocks += content_tag(:script, '', src: webpack_asset_path('js/common.js')) unless Rails.env.development?
     end
 
     blocks

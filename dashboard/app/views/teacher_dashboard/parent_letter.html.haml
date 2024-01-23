@@ -22,11 +22,12 @@
 
   -# These files are all prerequisites for running a code studio webpack bundle
   %script{src: webpack_asset_path('js/webpack-runtime.js')}
+  - unless Rails.env.development?
+    %script{src: webpack_asset_path('js/vendors.js')}
+    %script{src: webpack_asset_path('js/code-studio-common.js')}
   %script{src: webpack_asset_path('js/essential.js')}
-  %script{src: webpack_asset_path('js/vendors.js')}
   = javascript_include_tag 'application'
   %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
-  %script{src: webpack_asset_path('js/code-studio-common.js')}
 
   :ruby
     script_data = {}

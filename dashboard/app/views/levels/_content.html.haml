@@ -4,7 +4,8 @@
 - app, data, content_class, source_level, hide_header, postcontent = %i(app data content_class source_level hide_header postcontent).map{ |x| local_assigns[x] }
 - level = source_level || @level
 - content_for(:head) do
-  %script{src: webpack_asset_path('js/common.js')}
+  - unless Rails.env.development?
+    %script{src: webpack_asset_path('js/common.js')}
   / Import Blockly assets in order to render them in the Markdown section of
   / content levels.
   %script{src: webpack_asset_path('js/blockly.js')}
