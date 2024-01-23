@@ -2392,10 +2392,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/remark-plugins@npm:^1.3.0":
-  version: 1.3.0
-  resolution: "@code-dot-org/remark-plugins@npm:1.3.0"
-  checksum: 1fa14933b59df0d26511b8b5973a479365ad287544f85a5539a951e93d456a39559b37ba94efb6551b4b5647f74d770b1ca947717cc7a56f1d9c3b350e14cb41
+"@code-dot-org/remark-plugins@npm:1.3.1":
+  version: 1.3.1
+  resolution: "@code-dot-org/remark-plugins@npm:1.3.1"
+  checksum: 09f327ff42e87cb4b990d1cdfc36a0730ba6dbac443bd16816bcd41dbb269c208b07f29a5ced6a231c0409fb392baab667f545f50ee89a523a9bf7079f222813
   languageName: node
   linkType: hard
 
@@ -7975,7 +7975,7 @@ __metadata:
     "@code-dot-org/p5.play": 1.3.21-cdo
     "@code-dot-org/piskel": 0.13.0-cdo.13
     "@code-dot-org/redactable-markdown": 0.4.0
-    "@code-dot-org/remark-plugins": ^1.3.0
+    "@code-dot-org/remark-plugins": 1.3.1
     "@codemirror/autocomplete": ^6.11.1
     "@codemirror/commands": ^6.3.2
     "@codemirror/lang-java": ^6.0.1
