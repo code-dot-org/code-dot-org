@@ -237,9 +237,6 @@ button.arrow > img {
   opacity: 1;
   vertical-align: text-bottom;
 }
-button.arrow:focus {
-  outline-style: none;
-}
 button.arrow:disabled {
   border: 1px solid $neutral_dark20;
   background-color: $neutral_dark20;
