@@ -20,10 +20,7 @@
 # is an easy way to force a rebuild without needing to make a commit.
 #
 require_relative '../lib/cdo/only_one'
-require_relative 'ci_build_metrics'
-require_relative 'ci_builder'
 exit(0) unless only_one_running?(__FILE__)
-
 require 'active_support/inflector'
 require_relative '../deployment'
 require 'cdo/aws/s3'
@@ -38,6 +35,8 @@ require 'cdo/test_server_status'
 require 'cdo/metrics_helper'
 require 'dynamic_config/dcdo'
 require 'aws-sdk-cloudwatch'
+require_relative 'ci_build_metrics'
+require_relative 'ci_builder'
 
 STARTED = 'build-started'.freeze
 S3_LOGS_BUCKET = 'cdo-build-logs'.freeze
