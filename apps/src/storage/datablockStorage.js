@@ -167,6 +167,34 @@ DatablockStorage.subscribeToListOfProjectTables = function (
   });
 };
 
+DatablockStorage.subscribeToTable = function (
+  tableName,
+  onColumnsChanged,
+  onRecordsChanged
+) {
+  readRecords(tableName).then(records => {
+    console.log('Got a response from readRecords: ', records);
+
+    // FIXME: unfirebase, we are currently inferring the columns from the
+    // data values, but based on our schema, we should be loading them
+    // from DatablockStorageTables column columns.
+    console.warn(
+      'FIXME DatablockStorage.subscribeToTable: onColumnsChanged is not yet implemented to load from the SQL table'
+    );
+    const columnNames = new Set(records.flatMap(record => Object.keys(record)));
+    onColumnsChanged(Array.from(columnNames));
+
+    // DataTableView.getTableJson() expects an array of JSON strings
+    // which it then parses as JSON, and then stringifies again 🙈
+    // see: https://github.com/code-dot-org/code-dot-org/blob/208ed1f6733ca2524cc91bdfa696ba98c3250f47/apps/src/storage/dataBrowser/DataTableView.jsx/#L89-L93
+    //
+    // This is a relic of how our Firebase records were stored
+    // and a future improvement might be to optimize this.
+    const recordStrings = records.map(record => JSON.stringify(record));
+    onRecordsChanged(recordStrings);
+  });
+};
+
 export function initDatablockStorage(config) {
   console.log('LOADING DATABLOCK STORAGE SHIM!!!');
   init(config);
