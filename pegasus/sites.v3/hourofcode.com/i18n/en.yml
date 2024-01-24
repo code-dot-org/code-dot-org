@@ -226,6 +226,12 @@
   volunteers_label: "Volunteers"
   virtual_events_label: "Virtual Events"
 
+  course_name_csf: "CS Fundamentals"
+  course_name_csc: "CS Connections"
+  course_name_csd: "CS Discoveries"
+  course_name_csp: "CS Principles"
+  course_name_csa: "AP® CSA"
+
   teacher_label_csf: "CS Fundamentals Teacher"
   teacher_label_csd: "CS Discoveries Teacher"
   teacher_label_csp: "CS Principles Teacher"
