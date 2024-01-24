@@ -43,20 +43,18 @@ describe('SectionProgressSelector', () => {
     expect(wrapper.find(SectionProgress)).to.have.length(1);
     expect(wrapper.find(SectionProgressV2)).to.have.length(0);
     expect(wrapper.find('Button')).to.have.length(1);
-    console.log(wrapper.debug());
-    console.log('---------------');
-    console.log(wrapper.find('Button').at(0).props().text);
-    expect(wrapper.find('Button').at(0).props().text).to.equal(
+    expect(wrapper.find('Button').at(0).props().children).to.equal(
       'Switch to new progress view'
     );
   });
+
   it('shows v2', () => {
     const wrapper = setUp({showProgressTableV2: true});
 
     expect(wrapper.find(SectionProgress)).to.have.length(0);
     expect(wrapper.find(SectionProgressV2)).to.have.length(1);
     expect(wrapper.find('Button')).to.have.length(1);
-    expect(wrapper.find('Button').at(0).props().text).to.equal(
+    expect(wrapper.find('Button').at(0).props().children).to.equal(
       'Switch to old progress view'
     );
   });
