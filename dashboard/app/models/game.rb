@@ -61,6 +61,7 @@ class Game < ApplicationRecord
   MUSIC = 'music'.freeze
   AICHAT = 'aichat'.freeze
   PYTHONLAB = 'pythonlab'.freeze
+  PANELS = 'panels'.freeze
 
   def self.bounce
     @@game_bounce ||= find_by_name("Bounce")
@@ -192,6 +193,10 @@ class Game < ApplicationRecord
 
   def self.pythonlab
     @@game_pythonlab ||= find_by_name('Pythonlab')
+  end
+
+  def self.panels
+    @@game_panels ||= find_by_name('Panels')
   end
 
   def unplugged?
@@ -351,6 +356,7 @@ class Game < ApplicationRecord
     Music:music
     Aichat:aichat
     Pythonlab:pythonlab
+    Panels:panels
   )
 
   def self.setup

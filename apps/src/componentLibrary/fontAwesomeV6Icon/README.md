@@ -8,6 +8,5 @@ This package exports one styled React component: [FontAwesomeV6Icon](FontAwesome
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6';
 ```
 
-For guidelines on how to use these components and the features they offer, [visit Storybook](https://code-dot-org.github.io/dsco_) 
-(link to be updated once code-dot-org storybook will be public.).
-Or run storybook locally and go to [Design System / FontAwesomeV6Icon](http://localhost:9001/?path=/story/designsystem-link-component--default-link).
+For guidelines on how to use these components and the features they offer, [visit Storybook](https://code-dot-org.github.io/cdo-styleguide/?path=/story/designsystem-fontawesomev6icon-component--default-font-awesome-v-6-icon_).
+Or run storybook locally and go to [Design System / FontAwesomeV6Icon](http://localhost:9001/?path=/story/designsystem-fontawesomev6icon-component--default-font-awesome-v-6-icon).

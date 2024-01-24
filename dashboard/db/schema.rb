@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_01_11_003957) do
+ActiveRecord::Schema.define(version: 2024_01_22_193916) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -37,6 +37,25 @@ ActiveRecord::Schema.define(version: 2024_01_11_003957) do
     t.datetime "updated_at", null: false
     t.index ["key"], name: "index_activity_sections_on_key", unique: true
     t.index ["lesson_activity_id"], name: "index_activity_sections_on_lesson_activity_id"
+  end
+
+  create_table "ai_tutor_interactions", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "level_id"
+    t.integer "script_id"
+    t.string "ai_model_version"
+    t.string "type"
+    t.string "project_id"
+    t.string "project_version_id"
+    t.text "prompt"
+    t.string "status"
+    t.text "ai_response"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["level_id"], name: "index_ai_tutor_interactions_on_level_id"
+    t.index ["script_id"], name: "index_ai_tutor_interactions_on_script_id"
+    t.index ["user_id", "level_id", "script_id"], name: "index_ati_user_level_script"
+    t.index ["user_id"], name: "index_ai_tutor_interactions_on_user_id"
   end
 
   create_table "assessment_activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
