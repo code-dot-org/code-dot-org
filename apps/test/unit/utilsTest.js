@@ -2,7 +2,6 @@ import _ from 'lodash';
 import {stub} from 'sinon';
 import {assert, expect} from '../util/reconfiguredChai';
 import * as utils from '@cdo/apps/utils';
-import logToCloud from '@cdo/apps/logToCloud';
 
 const {
   isSubsequence,
@@ -21,7 +20,6 @@ const {
   normalize,
   stringifyQueryParams,
   getTabId,
-  validateFirehoseDataSize,
 } = utils;
 
 describe('utils modules', () => {
@@ -802,47 +800,6 @@ describe('utils modules', () => {
 
       result = stripEncapsulatingDoubleQuotes('blah"');
       expect(result).to.equal('blah"');
-    });
-  });
-
-  describe('firehoseDataSize', () => {
-    const maxDataJSONBytes = 65500;
-    const maxDataStringBytes = 4095;
-
-    beforeEach(() => {
-      stub(logToCloud, 'logError');
-    });
-
-    afterEach(() => {
-      logToCloud.logError.restore();
-    });
-
-    it('checks json size to send newrelic error', () => {
-      const valid_record = {data_json: 'x'.repeat(maxDataJSONBytes - 1)};
-      validateFirehoseDataSize(valid_record);
-      assert(logToCloud.logError.notCalled);
-      expect(validateFirehoseDataSize(valid_record)).not.to.be.true;
-
-      const invalid_record = {data_json: 'x'.repeat(maxDataJSONBytes + 1)};
-      expect(() => {
-        validateFirehoseDataSize(invalid_record);
-      }).not.to.throw();
-      assert(logToCloud.logError.calledOnce);
-      expect(validateFirehoseDataSize(invalid_record)).to.be.true;
-    });
-
-    it('checks string size to send newrelic error', () => {
-      const valid_record = {data_string: 'x'.repeat(maxDataStringBytes - 1)};
-      validateFirehoseDataSize(valid_record);
-      assert(logToCloud.logError.notCalled);
-      expect(validateFirehoseDataSize(valid_record)).not.to.be.true;
-
-      const invalid_record = {data_string: 'x'.repeat(maxDataStringBytes + 1)};
-      expect(() => {
-        validateFirehoseDataSize(invalid_record);
-      }).not.to.throw();
-      assert(logToCloud.logError.calledOnce);
-      expect(validateFirehoseDataSize(invalid_record)).to.be.true;
     });
   });
 });

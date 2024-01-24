@@ -4,7 +4,6 @@ import MD5 from 'crypto-js/md5';
 import RGBColor from 'rgbcolor';
 import {Position} from './constants';
 import {dataURIFromURI} from './imageUtils';
-import logToCloud from '@cdo/apps/logToCloud';
 import './polyfills';
 
 /**
@@ -976,24 +975,4 @@ export function getAlphanumericId() {
     );
   }
   return id.join('');
-}
-
-// These limits are based on the maximum lengths in the coresponding Redshift
-// data columns. See firehose.rb for matching data validation.
-
-const maxDataJSONBytes = 65500;
-const maxDataStringBytes = 4095;
-
-// Verifies that given data will not fail firehose batch
-export function validateFirehoseDataSize(data) {
-  const json_size = new Blob([data.data_json]).size;
-  const string_size = new Blob([data.data_string]).size;
-  if (json_size > maxDataJSONBytes) {
-    logToCloud.logError(`data_json column too large (${json_size} bytes)`);
-    return true;
-  }
-  if (string_size > maxDataStringBytes) {
-    logToCloud.logError(`data_json column too large (${string_size} bytes)`);
-    return true;
-  }
 }
