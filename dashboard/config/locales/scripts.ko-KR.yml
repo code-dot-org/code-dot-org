@@ -87,6 +87,7 @@ ko:
         Hour of Code:
           description: 컴퓨터과학(정보과학) 의 기초를 앵그리버드, Plats vs Zombies 캐릭터들과 함께 배워보세요.
           description_short: 컴퓨터과학(정보과학) 의 기초를 재미있는 캐릭터들과 함께 배워보세요!
+          name: Hour of Code
           student_description: 컴퓨터과학(정보과학) 의 기초를 앵그리버드, Plats vs Zombies 캐릭터들과 함께
             배워보세요.
           title: Hour of Code 2013
@@ -1297,6 +1298,14 @@ ko:
               name: Java 연구소
             lesson-6:
               name: 반복
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 설문조사
+            lessonGroup-3:
+              display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 대체 레슨
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1337,6 +1346,12 @@ ko:
           lessons:
             lesson-4:
               name: 변수
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 대체 레슨
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1373,6 +1388,12 @@ ko:
               name: 1차원 (1D) 어레이
             lesson-3:
               name: 반복을 위한
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 대체 레슨
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1399,6 +1420,12 @@ ko:
             lessonGroup-2:
               display_name: 컨텐츠
         csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 대체 레슨
+        csa4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
@@ -1441,6 +1468,12 @@ ko:
               display_name: 컨텐츠
             lessonGroup-4:
               display_name: 대체 레슨
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 대체 레슨
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1471,6 +1504,12 @@ ko:
             lessonGroup-5:
               display_name: 샌드박스
         csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 대체 레슨
+        csa6-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
@@ -1511,6 +1550,12 @@ ko:
           lessons:
             lesson-6:
               name: 지적 재산
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 대체 레슨
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1544,6 +1589,14 @@ ko:
             lessonGroup-5:
               display_name: 설문조사
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 설문조사
+            lessonGroup-5:
+              display_name: 대체 레슨
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
@@ -3198,6 +3251,8 @@ ko:
           title: CS 원리 과정 후 설문 조사
         csp-post-survey-2023:
           title: CS 원리 과정 후 설문 조사
+        csp-post-survey-2024:
+          title: CS 원리 과정 후 설문 조사
         csp1-2017:
           description: 이 단원은 컴퓨터 내 디지털 정보를 표현해고 이를 사람과 컴퓨팅 기기 간에 전달해야 하는 필요에서 제기된
             기술적 도전과 질문을 탐구합니다. 그 다음, 이 단원은 인터넷의 구조와 설계, 그러한 설계 결정이 암시하는 바를 탐구합니다.
@@ -3267,6 +3322,12 @@ ko:
             csp_unit1_2020:
               display_name: '단원 1: 디지털 정보'
         csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: 설문조사
+            csp_unit1_2020:
+              display_name: '단원 1: 디지털 정보'
+        csp1-2024:
           lesson_groups:
             cspSurvey:
               display_name: 설문조사
@@ -3350,6 +3411,12 @@ ko:
             lessonGroup-2:
               display_name: 과정 후 설문조사
         csp10-2023:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: '단원 10: 사이버보안 및 세계적 영향'
+            lessonGroup-2:
+              display_name: 과정 후 설문조사
+        csp10-2024:
           lesson_groups:
             csp_unit10_2020:
               display_name: '단원 10: 사이버보안 및 세계적 영향'
@@ -3440,6 +3507,10 @@ ko:
             csp_unit2_2020:
               display_name: '단원 2: 인터넷'
         csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: '단원 2: 인터넷'
+        csp2-2024:
           lesson_groups:
             csp_unit2_2020:
               display_name: '단원 2: 인터넷'
@@ -3549,6 +3620,10 @@ ko:
             csp_unit3_2020:
               display_name: 단원 1 - 앱 설계 소개
         csp3-2023:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 단원 1 - 앱 설계 소개
+        csp3-2024:
           lesson_groups:
             csp_unit3_2020:
               display_name: 단원 1 - 앱 설계 소개
@@ -3721,6 +3796,16 @@ ko:
             csp_variables:
               display_name: 변수
         csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: 조건
+            csp_functions:
+              display_name: 함수
+            csp_project:
+              display_name: 프로젝트
+            csp_variables:
+              display_name: 변수
+        csp4-2024:
           lesson_groups:
             csp_conditionals:
               display_name: 조건
@@ -3905,6 +3990,12 @@ ko:
               display_name: " 트래버스"
             lessonGroup-5:
               display_name: 과정 후 설문조사
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: 데이터
+            lessonGroup-5:
+              display_name: 과정 후 설문조사
         csp5-dlp:
           description: 'Code.org CSP 교육 중인 진행자를 위한 심화 학습 계획의 단원 5입니다. 여기서 Code.org
             CSP 커리큘럼의 단원 5를 충분히 숙지했음을 입증하기 위한 성찰 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀
@@ -4028,6 +4119,18 @@ ko:
               display_name: " 트래버스"
             lessonGroup-5:
               display_name: 프로젝트
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 리스트
+            lessonGroup-2:
+              display_name: 과정 후 설문조사
+            lessonGroup-3:
+              display_name: 반복
+            lessonGroup-4:
+              display_name: " 트래버스"
+            lessonGroup-5:
+              display_name: 프로젝트
         csp6-pilot:
           lesson_groups:
             content:
@@ -4080,6 +4183,14 @@ ko:
               display_name: 매개변수 및 반환값
             lessonGroup-3:
               display_name: 과정 후 설문조사
+        csp7-2024:
+          lesson_groups:
+            csp_libraries:
+              display_name: 라이브러리
+            csp_parameters_return_values:
+              display_name: 매개변수 및 반환값
+            lessonGroup-3:
+              display_name: 과정 후 설문조사
         csp7-pilot:
           lesson_groups:
             csp_libraries:
@@ -4120,6 +4231,12 @@ ko:
               display_name: PT 만들기
             lessonGroup-3:
               display_name: 과정 후 설문조사
+        csp8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: PT 만들기
+            lessonGroup-3:
+              display_name: 과정 후 설문조사
         csp8-pilot:
           title: CSP 단원 8 파일럿 - PT 제작 준비
         csp8-pilot-staging:
@@ -4155,6 +4272,12 @@ ko:
             lessonGroup-2:
               display_name: 과정 후 설문조사
         csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: '단원 9: 데이터'
+            lessonGroup-2:
+              display_name: 과정 후 설문조사
+        csp9-2024:
           lesson_groups:
             csp_unit9_2020:
               display_name: '단원 9: 데이터'
@@ -5552,6 +5675,9 @@ ko:
         self-paced-pl-csd5-2023:
           title: '모듈 7: AI와 머신 러닝 교습 준비'
         self-paced-pl-k5-2024-1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 시작하기
           lessons:
             lesson-3:
               name: 반복
@@ -5561,6 +5687,9 @@ ko:
               name: 다음 단계
           title: 컴퓨터과학(정보과학) 소개
         self-paced-pl-k5-2024-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 시작하기
           lessons:
             lesson-3:
               name: 이벤트

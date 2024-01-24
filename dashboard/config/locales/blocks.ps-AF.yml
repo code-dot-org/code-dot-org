@@ -4,6 +4,11 @@ ps:
     blocks:
       Dancelab_randomColor:
         text: نا ټاکلۍ رنګ
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': ابي
+            '"red"': سور
       Mikelab_randomColor:
         text: نا ټاکلۍ رنګ
       gamelab_checkTouching:

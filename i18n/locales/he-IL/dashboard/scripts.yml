@@ -87,6 +87,7 @@ he:
         Hour of Code:
           title: שעת קוד 2013
           description_short: נסו את יסודות מדעי המחשב עם המון דמויות כפיות!
+          name: שעת הקוד
         CodeStudioPuzzleChallenge: {}
         Tutorial Video - Code Studio Puzzle Challenge: {}
         cspunit1: {}
@@ -3039,3 +3040,68 @@ he:
             lesson-6:
               name: השלבים הבאים
           title: היכרות למדעי המחשב
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csp2-2024: {}
+        csp3-2024: {}
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר
+        csa2-2024: {}
+        csa3-2024: {}
+        csa4-2024: {}
+        csa5-2024: {}
+        csa6-2024: {}
+        csa7-2024: {}
+        csa8-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: סקר
+        csa9-2024: {}
+        csa-postap-se-and-computer-vision-2024: {}
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: משתנים
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: נתונים
+            lessonGroup-5:
+              display_name: סקר שלאחר הקורס
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: רשימות
+            lessonGroup-3:
+              display_name: חזרות
+            lessonGroup-5:
+              display_name: פּרוֹיֶקט
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
+        csp7-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: סקר שלאחר הקורס
+        csp8-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: סקר שלאחר הקורס
+        csp9-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
+        csp10-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
+        csp-post-survey-2024: {}

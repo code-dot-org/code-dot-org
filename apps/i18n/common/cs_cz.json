@@ -1338,6 +1338,7 @@
   "loginExportInstructions": "**Učíte vzdáleně?** Stáhněte si soubor CSV s přihlašovacími údaji studentů, abyste mohli provést sloučení e-mailů nebo snadno kopírovat a vkládat do e-mailů uživatelská jména a hesla studentů.",
   "loginExportLink": "Stáhnout CSV",
   "loginInfo": "Přihlašovací informace",
+  "loginInfoLtiSetupHeader": "Nastavit třídu",
   "loginInfoResetSecretPicDesc": "Obrázkové heslo pro kteréhokoli studenta můžete resetovat tak, že v dané sekci přejdete na panel [Správa studentů]({url}), pak ve sloupci „Obrázkové heslo“ kliknete na tlačítko „Zobrazit obrázek“ a potom kliknete na tlačítko „Obnovit“.",
   "loginInfoResetSecretWordDesc": "Bezpečnostní slova pro kteréhokoli studenta můžete resetovat tak, že v dané sekci přejdete na panel [Správa studentů]({url}), pak ve sloupci „Bezpečnostní slova“ kliknete na tlačítko „Zobrazit slova“ a potom kliknete na tlačítko „Obnovit“.",
   "loginInfoWordPicMoreBelow": "Všechny tyto informace i bezpečnostní {wordOrPicture} najdou žáci na přihlašovacích kartách níže.",

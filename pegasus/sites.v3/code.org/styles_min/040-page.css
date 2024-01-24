@@ -41,6 +41,12 @@
   --bold-font-weight: 700;
   --extra-bold-font-weight: 800;
   --black-font-weight: 900;
+  /* Swiper carousel styles */
+  --swiper-pagination-color: var(--brand_primary_default);
+  --swiper-pagination-bullet-size: 1rem;
+  --swiper-pagination-bullet-inactive-color: var(--brand_primary_light);
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 0.5rem;
 }
 
 html {
@@ -422,6 +428,190 @@ td {
     z-index: 1;
   }
 }
+
+/* Start top navigation bar styles ------------------------ */
+nav.main {
+  background-color: #00adbc;
+  margin: 0;
+  padding: 0.25rem 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+nav .left,
+nav .right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav .left {
+  gap: 2rem;
+}
+
+nav .right {
+  gap: 0.5rem;
+  justify-content: end;
+}
+
+nav.main ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: start;
+  gap: 2rem;
+}
+
+nav.main ul li {
+  padding: 0;
+  text-indent: 0;
+  list-style: none;
+  color: var(--neutral_white);
+}
+
+nav.main ul li::before {
+  content: "";
+}
+
+nav.main ul li a {
+  color: var(--neutral_white);
+  text-decoration: none;
+  font-weight: var(--regular-font-weight);
+  cursor: pointer;
+}
+
+nav.main ul li a:hover {
+  padding-bottom: 2px;
+  border-bottom: 2px solid var(--orange);
+}
+
+nav.main img.logo {
+  width: 42px;
+}
+
+nav.main i.fa-fw {
+  line-height: 1;
+}
+
+nav.main .create_menu,
+nav.main .user_menu,
+nav.main .button-signin {
+  border: 2px solid var(--neutral_white);
+  border-radius: 4px;
+  color: var(--neutral_white);
+  font-size: 0.875rem;
+  font-weight: var(--regular-font-weight);
+  text-decoration: none;
+  padding: 7px 12px;
+  margin: 0;
+}
+
+nav.main .create_menu,
+nav.main .user_menu {
+  border: 2px solid;
+  margin: 0;
+  display: flex;
+  gap: 2px;
+}
+
+nav.main .create_menu i,
+nav.main .user_menu i {
+  font-size: 1.5rem;
+  width: auto;
+}
+
+nav.main .create_menu i.create_menu_arrow_down,
+nav.main .user_menu i.user_menu_arrow_down {
+  margin-top: -4px;
+}
+
+nav.main .create_menu i.create_menu_arrow_up,
+nav.main .user_menu i.user_menu_arrow_up {
+  margin-top: -1px;
+}
+
+nav.main .help_button {
+  padding: 0;
+  height: unset;
+}
+
+nav.main .help_button .help_icon {
+  padding: 0;
+  height: unset;
+}
+
+nav.main .help_button .help_contents {
+  top: 46px;
+}
+
+nav.main #hamburger #hamburger-icon {
+  margin-top: -1px;
+}
+
+@media screen and (max-width: 1010px) {
+  nav.main .create_menu,
+  nav.main .left ul {
+    display: none;
+  }
+}
+
+/* Start carousel styles ------------------------ */
+.carousel-wrapper {
+  position: relative;
+}
+
+/* Sets the font-family for text/image carousels */
+.carousel-wrapper p {
+  font-family: var(--barlowSemiCondensed-medium), sans-serif;
+}
+
+/* Sets the font-family for .action-block carousels */
+.carousel-wrapper .action-block p {
+  font-family: var(--main-font), sans-serif;
+}
+
+/* Swiper carousel library styles */
+swiper-slide {
+  display: flex;
+  align-items: stretch;
+  height: auto;
+}
+
+.carousel-wrapper .swiper-nav-prev,
+.carousel-wrapper .swiper-nav-next {
+  position: absolute;
+  top: 42%;
+  border: 0;
+  height: 48px;
+}
+
+.carousel-wrapper .swiper-nav-prev {
+  background: url("/images/carousel/prev.svg") no-repeat;
+  left: -4rem;
+  border: 0;
+}
+
+.carousel-wrapper .swiper-nav-next {
+  background: url("/images/carousel/next.svg") no-repeat;
+  right: -4rem;
+}
+
+.carousel-wrapper .swiper-button-disabled {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel-wrapper .swiper-nav-prev,
+  .carousel-wrapper .swiper-nav-next {
+    display: none;
+  }
+}
+
+/* Begin legacy styles ------------------------ */
 
 /* for homepage 2.0.. */
 #homepage .clear {

@@ -1380,3 +1380,49 @@ mi:
             lesson-4:
               name: Ngā Here
           title: Whakatakinga ki te Pūtaiao Rorohiko
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ihirangi
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: Ngā Taurangi
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Ngā Rārangi
+            lessonGroup-3:
+              display_name: Ngā Koromeke

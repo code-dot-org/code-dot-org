@@ -19788,15 +19788,15 @@ es-MX:
             PM.png)"
         - text: "![](https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
             PM.png)"
-        markdown: |
+        markdown: |-
           ## Mira los tres ecosistemas
 
           Un ecosistema está equilibrado y los otros dos están desequilibrados de diferentes maneras. Arrastre el código a la imagen coincidente.
         questions:
         - text: Muy poca alga hace que los peces se vayan. ![](https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
         - text: Demasiadas algas enferman al coral. <br>![] (https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
-        - text: La cantidad justa de algas permite que el coral enfermo sane y mantiene
-            a los peces sanos también. ![](https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
+        - text: La cantidad justa de algas permite que el coral enfermo sane y también
+            mantiene a los peces sanos. ![](https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
         title: Coincide el código con la imagen
       csc_ecosystems_matching_events:
         answers:
@@ -19837,10 +19837,10 @@ es-MX:
           ¡Trabajando juntos, podemos ayudar a mantener nuestros océanos llenos de
           vida para las generaciones venideras!\n\n\n\n<br>\n<br>\n<br>\n\n"
       csc_ecosystems_overfishing_solutions_overview:
-        markdown: "#Save nuestros Mares! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
+        markdown: "#¡Ayuda a nuestros mares! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
           width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
           El océano tiene muchos peces en él, pero a veces la gente captura demasiados
-          peces y puede ser malo para el ecosistema. En los siguientes niveles codificarás
+          peces, lo cual perjudica el ecosistema. En los siguientes niveles programarás
           **tres prácticas de pesca sustentable** diferentes para ayudar a proteger
           nuestros ecosistemas oceánicos.\n\n<br>\n###Para leer más sobre soluciones
           sostenibles para nuestros océanos: <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"

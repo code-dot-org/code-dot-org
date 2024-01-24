@@ -46,6 +46,7 @@ ta:
             ஆகியவற்றின் எழுத்துக்களுடன் கணினி அறிவியலின் அடிப்படைகளை முயற்சிக்கவும்!
           description_short: பல வேடிக்கையான கதாபாத்திரங்களுடன் கணினி அறிவியலின் அடிப்படைகளை
             முயற்சிக்கவும்!
+          name: நிரல்வரி நேரம்
           student_description: Angry Birds மற்றும் Angry Birds  மற்றும் Plants vs.
             Zombies! ஆகியவற்றின் எழுத்துக்களுடன் கணினி அறிவியலின் அடிப்படைகளை முயற்சிக்கவும்!
           title: Hour of Code 2013
@@ -1426,6 +1427,16 @@ ta:
               display_name: திட்டம்
             csp_variables:
               display_name: மாறிலிகள்
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: நிபந்தனைகள்
+            csp_functions:
+              display_name: செயல்பாடுகள்
+            csp_project:
+              display_name: திட்டம்
+            csp_variables:
+              display_name: மாறிலிகள்
         csp4-dlp:
           lesson_groups:
             required:
@@ -1502,6 +1513,10 @@ ta:
               display_name: சுழற்சிகள்
             csp_project:
               display_name: திட்டம்
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: தகவல்கள்
         csp5-dlp:
           lesson_groups:
             required:
@@ -1543,6 +1558,14 @@ ta:
             csp_unit6_2020:
               display_name: வழிமுறைகள்
         csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: பட்டியல்கள்
+            lessonGroup-3:
+              display_name: சுழற்சிகள்
+            lessonGroup-5:
+              display_name: திட்டம்
+        csp6-2024:
           lesson_groups:
             csp_unit6_2020:
               display_name: பட்டியல்கள்

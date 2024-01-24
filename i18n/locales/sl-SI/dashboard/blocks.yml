@@ -476,6 +476,11 @@ sl:
           EFFECT:
             '"hearts"': srca
             '"rain"': dež
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': modra
+            '"red"': rdeča
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}reci{TEXT1}"
       gamelab_atTime:
