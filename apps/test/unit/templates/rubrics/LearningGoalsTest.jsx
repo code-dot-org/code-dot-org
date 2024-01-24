@@ -198,6 +198,14 @@ describe('LearningGoals', () => {
       sinon.assert.calledWith(highlightLineStub, 45);
     });
 
+    it('should just highlight all of the lines the AI thinks if the referenced code does not exist', () => {
+      annotateLines('Line 42-44: This is a line of code `var z = 0`');
+      sinon.assert.calledWith(annotateLineStub, 'This is a line of code', 42);
+      sinon.assert.calledWith(highlightLineStub, 42);
+      sinon.assert.calledWith(highlightLineStub, 43);
+      sinon.assert.calledWith(highlightLineStub, 44);
+    });
+
     it('should annotate the last line of code when referenced by the AI', () => {
       annotateLines('Line 55: This is a line of code `draw();`');
       sinon.assert.calledWith(annotateLineStub, 'This is a line of code', 8);
