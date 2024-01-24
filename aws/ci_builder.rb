@@ -1,4 +1,5 @@
 require 'cdo/rake_utils'
+require 'cdo/git_utils'
 require_relative 'ci_build_metrics'
 module CiBuilder
   require_relative '../lib/cdo/rake_utils'
@@ -11,9 +12,7 @@ module CiBuilder
 
       FileUtils.touch BUILD_STARTED
 
-      git_update_count = update_repository
-
-      log_build_history(git_update_count)
+      update_repository
 
       display_commit_link
 
