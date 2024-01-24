@@ -32,10 +32,12 @@ FirebaseStorage.coerceColumn = function (tableName, columnName, columnType, onSu
 FirebaseStorage.importCsv = function (tableName, tableDataCsv, onSuccess, onError) {}
 
 
-/* NEw METHODS WE DEFINED */
+/* DATA BROWSER: data loading methods */
+/* We added/defined these by extracting tightly bound view/storage code from applab.js: */
 FirebaseStorage.subscribeToListOfProjectTables = function (onTableAdded, onTableRemoved) {}
 FirebaseStorage.subscribeToKeyValuePairs = function (onKeyValuePairsChanged) {}
 FirebaseStorage.subscribeToTable = function (tableName, onColumnsChanged, onRecordsChanged) {}
+FirebaseStorage.previewSharedTable = function (sharedTableName, onColumnsChanged, onRecordsChanged) {}
 FirebaseStorage.unsubscribeFromTable = function (tableName) {}
 FirebaseStorage.unsubscribeFromKeyValuePairs = function () {}
 
