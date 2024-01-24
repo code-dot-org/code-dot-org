@@ -109,6 +109,39 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
       this.dropdownDispose_.bind(this)
     );
   }
+
+  /**
+   * @override
+   * Ensure that the input value is a valid language-neutral option.
+   * The only change we made from the parent method is to not use the cache,
+   * as the list of options can change.
+   *
+   * @param newValue The input value.
+   * @returns A valid language-neutral option, or null if invalid.
+   */
+  doClassValidation_(newValue) {
+    /* Begin CDO Customization */
+    const options = this.getOptions(false); // false = do not use cache
+    /* End CDO Customization */
+
+    const isValueValid = options.some(option => option[1] === newValue);
+
+    if (!isValueValid) {
+      if (this.sourceBlock_) {
+        console.warn(
+          "Cannot set the dropdown's value to an unavailable option." +
+            ' Block type: ' +
+            this.sourceBlock_.type +
+            ', Field name: ' +
+            this.name +
+            ', Value: ' +
+            newValue
+        );
+      }
+      return null;
+    }
+    return newValue;
+  }
 }
 
 export function fixMenuGenerator(menuGenerator, width, height) {
