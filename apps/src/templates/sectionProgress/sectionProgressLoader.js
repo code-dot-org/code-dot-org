@@ -26,6 +26,7 @@ export function loadUnitProgress(scriptId, sectionId) {
   const state = getStore().getState().sectionProgress;
   const sectionData = getStore().getState().teacherSections.sections[sectionId];
   const students = getStore().getState().teacherSections.selectedStudents;
+  const startTime = new Date().getTime();
 
   // TODO: Save Standards data in a way that allows us
   // not to reload all data to get correct standards data
@@ -47,7 +48,7 @@ export function loadUnitProgress(scriptId, sectionId) {
     });
   }
 
-  let sectionProgress = {
+  const sectionProgress = {
     unitDataByUnit: {},
     studentLevelProgressByUnit: {},
     studentLessonProgressByUnit: {},
@@ -103,6 +104,7 @@ export function loadUnitProgress(scriptId, sectionId) {
     logToCloud.addPageAction(logToCloud.PageAction.LoadScriptProgressFinished, {
       sectionId,
       scriptId,
+      progressLatencyMs: new Date().getTime() - startTime,
     });
 
     sectionProgress.studentLessonProgressByUnit = {
