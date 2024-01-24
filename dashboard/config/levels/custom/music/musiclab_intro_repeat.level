@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "background": "music-black",
-    "long_instructions": "#### Repeat\n\nSave effort and use code to repeat a sound.\n\nUse the **repeat** block to play the same thing three times.",
+    "long_instructions": "#### Repeat\n\nSave effort and use code to repeat a sound.\n\nUse the [repeat](#clickable=repeat-block) block to play the same sound three times.",
     "level_data": {
       "library": "will",
       "startSources": {
@@ -17,7 +17,7 @@
           "blocks": [
             {
               "type": "when_run_simple2",
-              "id": "when-run-block",
+              "id": "when_run_simple2",
               "x": 30,
               "y": 30,
               "deletable": false,
@@ -67,7 +67,7 @@
           "message": "You've played one sound.  Play three."
         },
         {
-          "message": "Please play a sound three times."
+          "message": "Please play a sound three times.  Attached a [repeat](#clickable=repeat-block) block to [when run](#clickable=when-run-block). Then put a [play](#clickable=play-sound-block) block inside of it."
         }
       ]
     },
