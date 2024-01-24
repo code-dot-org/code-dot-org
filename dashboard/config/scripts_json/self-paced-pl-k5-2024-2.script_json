@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-12 21:32:32 UTC",
+    "serialized_at": "2024-01-22 19:14:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -705,6 +705,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2_DebuggingVideo_2024"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,

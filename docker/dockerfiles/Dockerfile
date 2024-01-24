@@ -120,6 +120,10 @@ RUN add-apt-repository ppa:git-core/ppa && \
     apt-get update && \
     apt-get install -y git>=2.15
 
+# we need git-lfs >= 3.0 to use SSH authentication with git-lfs
+RUN curl -sS https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash && \
+    apt-get install -y git-lfs
+
 # install node, based on instructions at https://github.com/nodesource/distributions#using-ubuntu-1
 RUN curl -sL https://deb.nodesource.com/setup_20.x | bash - && \
     apt-get install -y nodejs && \
@@ -168,6 +172,9 @@ RUN curl -SsL https://github.com/boxboat/fixuid/releases/download/v0.4/fixuid-0.
 USER ${USER}
 
 WORKDIR /home/${USER}
+
+# Enable Git LFS in ~/.gitconfig
+RUN git lfs install
 
 # This bashrc file will be used whenever someone runs bash in interactive mode.
 # This is mostly intended for the use case where you want to start a shell into a running container with
