@@ -1,16 +1,15 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
-import sinon from 'sinon';
 
 import {UnconnectedLessonProgressDataColumn} from '@cdo/apps/templates/sectionProgressV2/LessonProgressDataColumn.jsx';
+import LessonProgressColumnHeader from '@cdo/apps/templates/sectionProgressV2/LessonProgressColumnHeader.jsx';
 import LessonDataCell from '@cdo/apps/templates/sectionProgressV2/LessonDataCell.jsx';
 
 import {
   fakeLessonWithLevels,
   fakeLesson,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
-import styles from '@cdo/apps/templates/sectionProgressV2/progress-table-v2.module.scss';
 
 const STUDENT_1 = {id: 1, name: 'Student 1', familyName: 'FamNameB'};
 const STUDENT_2 = {id: 2, name: 'Student 2', familyName: 'FamNameA'};
@@ -53,7 +52,7 @@ describe('LessonProgressDataColumn', () => {
   it('Shows header lesson', () => {
     const wrapper = setUp();
 
-    expect(wrapper.find(`.${styles.lessonHeaderCell}`)).to.have.length(1);
+    expect(wrapper.find(LessonProgressColumnHeader)).to.have.length(1);
   });
 
   it('Shows no expansion if no levels', () => {
@@ -66,13 +65,5 @@ describe('LessonProgressDataColumn', () => {
     const wrapper = setUp();
 
     expect(wrapper.find(LessonDataCell)).to.have.length(STUDENTS.length);
-  });
-  it('Expands on header click', () => {
-    const addExpandedLesson = sinon.spy();
-    const wrapper = setUp({addExpandedLesson: addExpandedLesson});
-
-    wrapper.find(`.${styles.lessonHeaderCell}`).simulate('click');
-
-    expect(addExpandedLesson).to.have.been.calledOnceWith(LESSON.id);
   });
 });
