@@ -136,8 +136,9 @@ function adjustBlockPositions(blocks, workspace) {
   const {defaultX, defaultY} = getDefaultLocation(workspace);
   blocksToPlace.forEach(block => {
     let {x, y} = block.getRelativeToSurfaceXY();
-    // Only overwrite x/y if it is 0; otherwise, use the existing value
-    // This allows for partial adjustments of user-defined positions
+
+    // Don't overwrite x- (or y-) coordinate if it is set to something other than the default
+    // This retains partially positioned blocks (with either an x- or y-coordinate set)
     if (x === defaultX) {
       x = getXCoordinate(block, workspace);
     }
