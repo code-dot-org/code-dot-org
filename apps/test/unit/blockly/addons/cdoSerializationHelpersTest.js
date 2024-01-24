@@ -167,7 +167,7 @@ describe('CdoSerializationHelpers', () => {
     const viewWidth = 515;
     const arbitraryCoordinates = {x: 20, y: 140};
     const defaultLTRCoordinates = {x: 0, y: 0};
-    const defaultRTLCoordinates = {x: 515, y: 0};
+    const defaultRTLCoordinates = {x: viewWidth, y: 0};
 
     let block, result;
     const workspaceLTR = {RTL: false, getMetrics: () => ({viewWidth})};
