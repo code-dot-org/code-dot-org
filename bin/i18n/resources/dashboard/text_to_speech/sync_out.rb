@@ -42,8 +42,16 @@ module I18n
             @tts_units ||= Unit.tts_enabled
           end
 
+          def mutex
+            @mutex ||= Mutex.new
+          end
+
           def sanitize_tts(text)
-            ::TextToSpeech.sanitize(text || '')
+            # Because the Redcarpet instance is not thread-safe (https://github.com/vmg/redcarpet/issues/570),
+            # sharing the Markdown formatter in multi-threaded operations may cause the error:
+            # "markdown.c:2897: sd_markdown_render: Assertion `md->work_bufs[BUFFER_BLOCK].size == 0' failed."
+            # more details here: https://www.redmine.org/issues/32563
+            mutex.synchronize {::TextToSpeech.sanitize(text || '')}
           end
 
           def squash(value)
