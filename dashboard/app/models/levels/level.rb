@@ -342,6 +342,7 @@ class Level < ApplicationRecord
     'Unplugged', # no solutions
     'Vigenere', # widget
     'Weblab', # no ideal solution
+    'Weblab2', # no ideal solution
     'Widget', # widget
   ].freeze
   TYPES_WITH_IDEAL_LEVEL_SOURCE = %w(
