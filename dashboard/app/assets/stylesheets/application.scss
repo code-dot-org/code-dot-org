@@ -4134,24 +4134,40 @@ a {
     }
   }
 
-  @mixin orange-button {
-    background-color: $orange;
-    border: 1px solid $orange;
-    color: $white;
+  @mixin button {
+    background-image: none;
     padding: 0 20px;
     margin: 5px 0;
     font-size: 18px;
     height: 40px;
-    @include main-font-bold;
+    @include main-font-semi-bold;
   }
 
-  .lti-btn-orange {
-    @include orange-button;
+  @mixin purple-button {
+    @include button;
+    border-color: $purple;
+    background-color: $purple;
+    color: $white;
   }
 
-  .lti-btn-orange-right {
-    @include orange-button;
+  @mixin white-button {
+    @include button;
+    border-color: $black;
+    background-color: $white;
+    color: $black;
+  }
+
+  .lti-btn-purple {
+    @include purple-button;
+  }
+
+  .lti-btn-purple-right {
+    @include purple-button;
     float: right;
+  }
+
+  .lti-btn-white {
+    @include white-button;
   }
 }
 
