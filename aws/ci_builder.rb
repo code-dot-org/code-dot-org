@@ -33,14 +33,10 @@ module CiBuilder
 
   def update_repository
     RakeUtils.git_fetch
-    count = RakeUtils.git_update_count
-    RakeUtils.git_pull if count > 0
-    [1, count].max # I think this is not needed. unless count can be a real number between 0 and 1.
-  end
-
-  def log_build_history(git_update_count)
-    log = `git log --pretty=format:"%h %s (%an)" -n #{git_update_count}`
-    File.write(deploy_dir('rebuild'), log)
+    update_count = RakeUtils.git_update_count
+    RakeUtils.git_pull if update_count > 0
+    update_log = `git log --pretty=format:"%h %s (%an)" -n #{[1, update_count].max}`
+    File.write(deploy_dir('rebuild'), update_log)
   end
 
   def display_commit_link
