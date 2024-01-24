@@ -9,18 +9,17 @@ figure.curriculum-pathway {
   background-color: var(--neutral_light);
   border-radius: $border-radius;
   position: relative;
+  text-align: center;
 
   .header {
     position: relative;
     background: var(--neutral_dark20);
     border-radius: $border-radius $border-radius 0 0;
     border-bottom: 1px solid var(--neutral_dark20);
-    text-align: center;
     display: grid;
     grid-template-columns: repeat(13, 1fr);
     grid-template-rows: auto;
     grid-column-gap: 1px;
-    grid-row-gap: 0;
     z-index: 2;
 
     .school.elementary { grid-area: 1 / 1 / 2 / 7; }
@@ -39,11 +38,6 @@ figure.curriculum-pathway {
     .grade:nth-of-type(14) { grid-area: 2 / 11 / 3 / 12; }
     .grade:nth-of-type(15) { grid-area: 2 / 12 / 3 / 13; }
     .grade:nth-of-type(16) { grid-area: 2 / 13 / 3 / 14; }
-    .course.csf { grid-area: 3 / 1 / 4 / 7; }
-    .course.csc { grid-area: 4 / 4 / 5 / 7; }
-    .course.csd { grid-area: 5 / 7 / 6 / 12; }
-    .course.csp { grid-area: 6 / 10 / 7 / 14; }
-    .course.csa { grid-area: 7 / 11 / 8 / 14; }
 
     p {
       margin-bottom: 0;
@@ -83,7 +77,6 @@ figure.curriculum-pathway {
     grid-template-columns: repeat(13, 1fr);
     grid-template-rows: auto;
     grid-column-gap: 0px;
-    grid-row-gap: 0px;
     z-index: 1;
 
     .course.csf { grid-area: 1 / 1 / 2 / 7; }
@@ -126,7 +119,6 @@ figure.curriculum-pathway {
       p {
         font-weight: var(--semi-bold-font-weight);
         margin: 0;
-        text-align: center;
       }
     }
   }
