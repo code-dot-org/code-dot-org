@@ -48,7 +48,7 @@ module CiBuilder
     git_revision_short = GitUtils.git_revision_short
 
     ChatClient.log "https://github.com/code-dot-org/code-dot-org/commit/#{git_revision}", message_format: 'text', color: 'purple'
-    write_build_status rack_env, git_revision_short, :start
+    CiBuildMetrics.write_build_status rack_env, git_revision_short, :start
   end
 
   def install_dependencies
