@@ -2124,6 +2124,8 @@
   "rubricLevelTwoHeader": "Convincing Evidence",
   "rubricLevelFourHeader": "No Evidence",
   "rubricScores": "Rubric Scores",
+  "rubricTabStudent" : "Student Rubric",
+  "rubricTabClassManagement": "Class Management",
   "runAiAssessment": "Run AI Assessment for {studentName}",
   "runAiAssessmentAll": "Run AI Assessment for all unsubmitted",
   "runAiAssessmentDescription": "Manually run the AI Assessment if a student forgot to press Submit on their project",
