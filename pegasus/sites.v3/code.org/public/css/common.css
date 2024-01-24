@@ -638,29 +638,6 @@
   margin-left:5%;
 }
 
-.user_menu, .create_menu { /* copied from dashboard's .header-button */
-  color: var(--neutral_white);
-  display: inline-block;
-  background-color: #ffa400;
-  background-color: transparent;
-  border-radius: 5px;
-  padding: 7px 14px;
-  font-size: 14px;
-  line-height: 20px;
-  box-sizing: border-box;
-  float: left;
-  cursor: pointer;
-  margin-top: -6px;
-  a:hover {
-    text-decoration: none;
-    background-color: #ffa400;
-  }
-}
-
-.user_menu {
-  margin-left: 6px;
-}
-
 @media screen and (min-width: 970px) {
   .starwars-container .img-container {
     min-height: 334px;
