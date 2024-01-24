@@ -179,7 +179,7 @@ export default class SmallFooter extends React.Component {
         top: 0,
         right: 0,
         padding: 0,
-        color: color.charcoal,
+        color: color.neutral_dark30,
         backgroundColor: color.background_gray,
         cursor: 'pointer',
         fontSize: 24,
