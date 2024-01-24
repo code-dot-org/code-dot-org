@@ -22,6 +22,7 @@ function SectionProgressV2({
   }, [unitData, isLoadingProgress, isRefreshingProgress]);
 
   React.useEffect(() => {
+    console.log('lfm', unitData);
     if (!unitData && !isLoadingProgress && !isRefreshingProgress) {
       loadUnitProgress(scriptId, sectionId);
     }
@@ -36,12 +37,11 @@ function SectionProgressV2({
           UNIT SELECTOR GOES HERE
         </Heading6>
       </div>
-      {levelDataInitialized && (
-        <ProgressTableV2
-          expandedLessonIds={expandedLessonIds}
-          setExpandedLessons={setExpandedLessons}
-        />
-      )}
+      <ProgressTableV2
+        expandedLessonIds={expandedLessonIds}
+        setExpandedLessons={setExpandedLessons}
+        isSkeleton={!levelDataInitialized}
+      />
     </div>
   );
 }
