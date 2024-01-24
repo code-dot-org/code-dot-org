@@ -1,5 +1,3 @@
-// This is the tsconfig used for building apps. We extend it in tsconfig.json
-// with specific settings for development.
 {
   "include": [
     "./src/**/*.ts",

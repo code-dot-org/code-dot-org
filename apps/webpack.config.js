@@ -176,6 +176,7 @@ const WEBPACK_BASE_CONFIG = {
     ...nodePolyfillConfig.plugins,
     // Run TypeScript type checking in parallel with the build
     new ForkTsCheckerWebpackPlugin({
+      // tsconfig.build.json only type-checks TypeScript files.
       typescript: {configFile: 'tsconfig.build.json'},
     }),
   ],

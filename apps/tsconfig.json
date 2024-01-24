@@ -1,4 +1,4 @@
-// This tsconfig is used for development. It extends the tsconfig used for building apps.
+// This tsconfig is used for development. It extends tsconfig.build.json, used for building apps.
 {
   "extends": "./tsconfig.build.json",
   "include": [
