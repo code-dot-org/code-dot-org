@@ -497,35 +497,41 @@ nav.main i.fa-fw {
   line-height: 1;
 }
 
-nav.main .create_menu {
+nav.main .create_menu,
+nav.main .user_menu,
+nav.main .button-signin {
+  border: 2px solid var(--neutral_white);
+  border-radius: 4px;
+  color: var(--neutral_white);
+  font-size: 0.875rem;
+  font-weight: var(--regular-font-weight);
+  text-decoration: none;
+  padding: 7px 12px;
+  margin: 0;
+}
+
+nav.main .create_menu,
+nav.main .user_menu {
   border: 2px solid;
   margin: 0;
   display: flex;
   gap: 2px;
 }
 
-nav.main .create_menu i {
+nav.main .create_menu i,
+nav.main .user_menu i {
   font-size: 1.5rem;
   width: auto;
 }
 
-nav.main .create_menu i.create_menu_arrow_down {
+nav.main .create_menu i.create_menu_arrow_down,
+nav.main .user_menu i.user_menu_arrow_down {
   margin-top: -4px;
 }
 
-nav.main .create_menu i.create_menu_arrow_up {
+nav.main .create_menu i.create_menu_arrow_up,
+nav.main .user_menu i.user_menu_arrow_up {
   margin-top: -1px;
-}
-
-nav.main .button-signin {
-  font-size: 0.875rem;
-  padding: 7px 12px;
-  margin: 0;
-  border: 2px solid var(--neutral_white);
-  border-radius: 4px;
-  color: var(--neutral_white);
-  font-weight: var(--regular-font-weight);
-  text-decoration: none;
 }
 
 nav.main .help_button {
