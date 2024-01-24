@@ -1,5 +1,6 @@
 import FirebaseStorage from './firebaseStorage';
 import {init} from './firebaseUtils';
+import _ from 'lodash';
 
 const DatablockStorage = {...FirebaseStorage};
 
@@ -193,6 +194,14 @@ DatablockStorage.subscribeToTable = function (
     const recordStrings = records.map(record => JSON.stringify(record));
     onRecordsChanged(recordStrings);
   });
+};
+
+DatablockStorage.subscribeToKeyValuePairs = function (onKeyValuePairsChanged) {
+  _fetch('get_key_values', 'GET', {})
+    .then(response => response.json())
+    .then(json => {
+      onKeyValuePairsChanged(_.mapValues(json, value => JSON.stringify(value)));
+    });
 };
 
 export function initDatablockStorage(config) {

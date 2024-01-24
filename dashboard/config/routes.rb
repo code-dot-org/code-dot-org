@@ -235,14 +235,20 @@ Dashboard::Application.routes.draw do
       collection do
         ProjectsController::STANDALONE_PROJECTS.each do |key, _|
           if SUPPORTS_DATABLOCK_STORAGE.include? key
+            # Test / Experimentation Method
             get "/#{key}/:channel_id/datablock_storage", to: 'datablock_storage#index'
+
+            # Datablock Methods
             post "/#{key}/:channel_id/datablock_storage/set_key_value", to: 'datablock_storage#set_key_value'
             get "/#{key}/:channel_id/datablock_storage/get_key_value", to: 'datablock_storage#get_key_value'
             delete "/#{key}/:channel_id/datablock_storage/delete_record", to: 'datablock_storage#delete_record'
             get "/#{key}/:channel_id/datablock_storage/read_records", to: 'datablock_storage#read_records'
             put "/#{key}/:channel_id/datablock_storage/update_record", to: 'datablock_storage#update_record'
             post "/#{key}/:channel_id/datablock_storage/create_record", to: 'datablock_storage#create_record'
+
+            # Dataset Browser Methods
             get "/#{key}/:channel_id/datablock_storage/get_table_names", to: 'datablock_storage#get_table_names'
+            get "/#{key}/:channel_id/datablock_storage/get_key_values", to: 'datablock_storage#get_key_values'
           end
 
           get "/#{key}", to: 'projects#load', key: key.to_s, as: "#{key}_project"
