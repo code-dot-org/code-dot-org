@@ -138,7 +138,9 @@ Setup steps for macOS:
 
 1. Install **Git LFS**
     1. `brew install git-lfs`
-    1. Run: `git lfs install` to add the git hooks to your system
+    1. From your homedir, run: `git lfs install`
+       - This adds a `[filter "lfs"]` section to your `~/.gitconfig`.
+       - Note: the install command must be run while you are **outside** a git repo directory. If you run it from inside a git repo, it will instead try to install git hooks in that repo.
 
 1. Install [Redis](https://redis.io/) via `brew install redis`
 
@@ -227,7 +229,10 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
         `curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash`
     1. `apt-get install git-lfs`
     1. Ensure `git-lfs --version` is >= 3.0. Git LFS < 3.0 only supports HTTPS, not SSH.
-    1. Run `git lfs install` to install git hooks.
+    1. From your homedir, run: `git lfs install`
+       - This adds a `[filter "lfs"]` section to your `~/.gitconfig`.
+       - Note: the install command must be run while you are **outside** a git repo directory. If you run it from inside a git repo, it will instead try to install git hooks in that repo.
+
 1. Install Node and Nodejs
     1. Install the latest version of [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm)
     1. Running `nvm install` or `nvm use` within the project directory will install and use the version specified in [.nvmrc](.nvmrc)
