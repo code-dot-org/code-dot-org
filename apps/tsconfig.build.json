@@ -1,3 +1,6 @@
+// This is the tsconfig used for building apps, and is the one
+// used by webpack. We extend it in tsconfig.json with settings for IDEs.
+// Most settings should be set in this config file.
 {
   "include": [
     "./src/**/*.ts",

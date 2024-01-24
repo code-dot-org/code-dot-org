@@ -1,5 +1,8 @@
 // This tsconfig is used by your code editor, such as VS Code. 
 // It extends tsconfig.build.json, used for building apps.
+// This file should only include configuration settings that are
+// needed for the IDE experience (such as Intellisense).
+// By default, put new settings in tsconfig.build.json.
 {
   "extends": "./tsconfig.build.json",
   "include": [
