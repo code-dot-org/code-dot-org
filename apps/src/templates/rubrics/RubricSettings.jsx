@@ -288,6 +288,7 @@ export default function RubricSettings({
   return (
     <div
       className={classnames(
+        'uitest-rubric-settings',
         {[style.settings]: !experiments.isEnabled('ai-rubrics-redesign')},
         {
           [style.settingsVisible]: visible,
