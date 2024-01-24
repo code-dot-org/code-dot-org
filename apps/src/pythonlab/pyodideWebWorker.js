@@ -13,7 +13,7 @@ async function loadPyodideAndPackages() {
 }
 
 let pyodideReadyPromise = null;
-export async function initializePyodide() {
+async function initializePyodide() {
   if (pyodideReadyPromise === null) {
     pyodideReadyPromise = loadPyodideAndPackages();
   }
