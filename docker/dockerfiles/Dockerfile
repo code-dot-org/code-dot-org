@@ -7,7 +7,7 @@
 #########################################################
 FROM ubuntu:20.04 as base
 #########################################################
-# multi-stage build for parallel compiling node & ruby: 
+# multi-stage build for parallel compiling ruby:
 # see: https://docs.docker.com/build/building/multi-stage/
 #
 # For adding regular deps, skip to `primary-layer` below
@@ -45,35 +45,6 @@ RUN apt-get update && \
 RUN groupadd --gid 3434 ${USER} && \
     useradd --uid 3434 --gid ${GROUP} --shell /bin/bash --create-home ${USER} && \
     printf "${USER} ALL=NOPASSWD: ALL\n" > /etc/sudoers.d/50-${USER}
-
-#########################################################
-FROM ubuntu:20.04 as node
-#########################################################
-# compile node to /build, this layer is merged at the end
-#########################################################
-
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
-        build-essential \
-        curl \
-        g++ \
-        g++-8 \
-        gcc-8 \
-        python3-pip
-
-# install node
-RUN curl -sSLOJ https://nodejs.org/dist/v18.16.0/node-v18.16.0.tar.gz && \
-    tar -xzf node-v18.16.0.tar.gz && \
-    rm node-v18.16.0.tar.gz && \
-    cd node-v18.16.0 && \
-    ./configure && \
-    make -j `nproc` && \
-    make install PREFIX=/build && \
-    cd .. && \
-    rm -r node-v18.16.0
-
-# Enable Corepack, for Yarn support
-RUN PATH=/build/bin corepack enable
 
 #########################################################
 FROM base as rbenv
@@ -148,6 +119,7 @@ RUN curl -sSLOJ https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb && \
     echo "mysql-apt-config mysql-apt-config/repo-codename select bionic" | /usr/bin/debconf-set-selections && \
     dpkg -i mysql-apt-config_0.8.22-1_all.deb || apt-get --fix-broken --yes install && \
     rm -rf mysql-apt-config_0.8.22-1_all.deb && \
+    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C && \
     apt-get update && \
     apt-get install --yes libmysqlclient-dev mysql-client=5.7.42-1ubuntu18.04 mysql-server=5.7.42-1ubuntu18.04
 
@@ -162,6 +134,11 @@ RUN service mysql start && \
 RUN add-apt-repository ppa:git-core/ppa && \
     apt-get update && \
     apt-get install -y git>=2.15
+
+# install node, based on instructions at https://github.com/nodesource/distributions#using-ubuntu-1
+RUN curl -sL https://deb.nodesource.com/setup_20.x | bash - && \
+    apt-get install -y nodejs && \
+    corepack enable # corepack required for yarn support
 
 # install firefox
 RUN curl --output /tmp/firefox.deb https://s3.amazonaws.com/circle-downloads/firefox-mozilla-build_47.0.1-0ubuntu1_amd64.deb && \
@@ -212,9 +189,8 @@ WORKDIR /home/${USER}
 # docker exec -it <container_name> bash, which bypasses the entrypoint script.
 RUN echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 
-# Finally, merge in the node & ruby layers
+# Finally, merge in the ruby layer
 COPY --from=rbenv --chown=${USER}:${GROUP} /home/${USER}/.rbenv /home/${USER}/.rbenv
-COPY --from=node /build /usr/local
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
