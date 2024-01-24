@@ -1,6 +1,5 @@
 import FirebaseStorage from './firebaseStorage';
 import {init} from './firebaseUtils';
-import {filterRecords} from './storageCommon';
 
 const DatablockStorage = {...FirebaseStorage};
 
@@ -104,13 +103,30 @@ DatablockStorage.updateRecord = function (
   }).then(onSuccess, onError);
 };
 
+/**
+ * Returns true if record matches the given search parameters, which are a map
+ * from key name to expected value.
+ */
+function matchesSearch(record, searchParams) {
+  let matches = true;
+  Object.keys(searchParams || {}).forEach(key => {
+    matches = matches && record[key] === searchParams[key];
+  });
+  return matches;
+}
+
+function filterRecords(recordList, searchParams) {
+  return recordList.filter(record => {
+    return matchesSearch(record, searchParams);
+  });
+}
+
 async function readRecords(tableName, searchParams) {
   const response = await _fetch('read_records', 'GET', {
     table_name: tableName,
   });
-  const json = (await response.json()).map(record => record.json);
-  console.log('json is ', json);
-  return filterRecords(json, searchParams);
+  const json = await response.json();
+  return searchParams ? filterRecords(json, searchParams) : json;
 }
 
 DatablockStorage.readRecords = function (

@@ -38,7 +38,6 @@ import {
 } from './firebaseMetadata';
 import {tableType} from './redux/data';
 import {WarningType} from './constants';
-import {filterRecords} from './storageCommon';
 import _ from 'lodash';
 
 // TODO: unfirebase
@@ -296,6 +295,29 @@ function validateRecord(record, hasId) {
     }
     return Promise.resolve();
   });
+}
+
+/**
+ * Returns true if record matches the given search parameters, which are a map
+ * from key name to expected value.
+ */
+function matchesSearch(record, searchParams) {
+  let matches = true;
+  Object.keys(searchParams || {}).forEach(key => {
+    matches = matches && record[key] === searchParams[key];
+  });
+  return matches;
+}
+
+function filterRecords(recordMap, searchParams) {
+  let records = [];
+  Object.keys(recordMap).forEach(id => {
+    let record = JSON.parse(recordMap[id]);
+    if (matchesSearch(record, searchParams)) {
+      records.push(record);
+    }
+  });
+  return records;
 }
 
 /**
