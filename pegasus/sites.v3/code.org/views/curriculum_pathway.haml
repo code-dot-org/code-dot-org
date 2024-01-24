@@ -26,17 +26,6 @@
     %a.course.csa.border-top-primary-default{href: "/csa"}
       %p=hoc_s(:course_name_csa)
 
-  .body
-    .div1
-    .div2
-    .div3
-    .div4
-    .div5
-    .div6
-    .div7
-    .div8
-    .div9
-    .div10
-    .div11
-    .div12
-    .div13
+  .background
+    - (1..13).each do |i|
+      %div

@@ -8,8 +8,10 @@ $colors: (
 figure.curriculum-pathway {
   background-color: var(--neutral_light);
   border-radius: $border-radius;
+  position: relative;
 
   .header {
+    position: relative;
     background: var(--neutral_dark20);
     border-radius: $border-radius $border-radius 0 0;
     border-bottom: 1px solid var(--neutral_dark20);
@@ -19,6 +21,7 @@ figure.curriculum-pathway {
     grid-template-rows: auto;
     grid-column-gap: 1px;
     grid-row-gap: 0;
+    z-index: 2;
 
     .school.elementary { grid-area: 1 / 1 / 2 / 7; }
     .school.middle { grid-area: 1 / 7 / 2 / 10; }
@@ -52,7 +55,11 @@ figure.curriculum-pathway {
       border-bottom: 5px solid;
       padding: 0.875rem;
 
-      p { font-weight: var(--semi-bold-font-weight); }
+      p {
+        font-weight: var(--semi-bold-font-weight);
+        font-size: 0.875rem;
+      }
+
       &.elementary { border-radius: $border-radius 0 0 0; }
       &.high { border-radius: 0 $border-radius 0 0; }
     }
@@ -69,29 +76,15 @@ figure.curriculum-pathway {
     }
   }
 
-  .body {
-    background-color: var(--neutral_dark20);
-    border-radius: 0 0 $border-radius $border-radius;
-    display: flex;
-    flex-direction: row;
-    gap: 1px;
-
-    & > div {
-      background-color: var(--neutral_light);
-      flex: 1;
-
-      &:first-of-type { border-radius: 0 0 0 $border-radius; }
-      &:last-of-type { border-radius: 0 0 $border-radius 0; }
-    }
-  }
-
   .courses {
-    margin: 0.5rem 0;
+    position: relative;
+    padding: 0.5rem 0;
     display: grid;
     grid-template-columns: repeat(13, 1fr);
     grid-template-rows: auto;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    z-index: 1;
 
     .course.csf { grid-area: 1 / 1 / 2 / 7; }
     .course.csc { grid-area: 2 / 4 / 3 / 7; }
@@ -106,31 +99,56 @@ figure.curriculum-pathway {
       border-top: 5px solid;
       height: fit-content;
       margin: 0.25rem 0.75rem;
-      padding: 0.75rem 1rem;
+      padding: 0.65rem 1rem;
       transition: box-shadow 0.2s ease-in-out;
       display: flex;
       place-content: center;
       gap: 4px;
 
-      &:hover {
+      &:is(:hover, :focus) {
         box-shadow: 0 1px 6px var(--neutral_dark20);
 
         &:after {
+          color: var(--neutral_dark40);
           font: var(--fa-font-solid);
           content: "\f054";
-          color: var(--neutral_dark40);
           margin-top: 4px;
 
           html[dir="rtl"] & { content: "\f053"; }
         }
       }
 
+      &:focus {
+        outline: var(--brand_primary_default) solid 2px;
+        outline-offset: 2px;
+      }
 
       p {
         font-weight: var(--semi-bold-font-weight);
         margin: 0;
         text-align: center;
       }
+    }
+  }
+
+  .background {
+    position: absolute;
+    background-color: var(--neutral_dark20);
+    border-radius: $border-radius;
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+
+    & > div {
+      background-color: var(--neutral_light);
+      flex: 1;
+
+      &:first-of-type { border-radius: $border-radius 0 0 $border-radius; }
+      &:last-of-type { border-radius: 0 $border-radius $border-radius 0; }
     }
   }
 
