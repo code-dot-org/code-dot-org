@@ -70,6 +70,10 @@ module CiBuilder
 
   def validate_git_revision
     git_revision = RakeUtils.git_revision
-    raise 'Git revision unexpectedly changed during DTT' if git_revision != RakeUtils.git_revision
+    exception_message = 'Git revision unexpectedly changed during DTT'
+    is_valid_revision = git_revision == RakeUtils.git_revision
+    return true if is_valid_revision
+    ChatClient.log exception_message, message_format: 'text', color: 'red'
+    raise ArgumentError, "Invalid git revision"
   end
 end
