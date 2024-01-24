@@ -141,6 +141,13 @@ class DatablockStorageController < ApplicationController
     render json: nil
   end
 
+  #### METHODS USED BY THE DATASET BROWSER FOR LOADING/BROWSING DATA ####
+  
+  def get_table_names
+    # SELECT DISTINCT table_name FROM datablock_storage_records WHERE channel_id='{params[:channel_id]}';
+    render json: DatablockStorageRecord.where(channel_id: params[:channel_id]).select(:table_name).distinct.pluck(:table_name)
+  end
+
   private
 
   def validate_channel_id

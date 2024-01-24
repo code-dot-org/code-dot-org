@@ -242,6 +242,7 @@ Dashboard::Application.routes.draw do
             get "/#{key}/:channel_id/datablock_storage/read_records", to: 'datablock_storage#read_records'
             put "/#{key}/:channel_id/datablock_storage/update_record", to: 'datablock_storage#update_record'
             post "/#{key}/:channel_id/datablock_storage/create_record", to: 'datablock_storage#create_record'
+            get "/#{key}/:channel_id/datablock_storage/get_table_names", to: 'datablock_storage#get_table_names'
           end
 
           get "/#{key}", to: 'projects#load', key: key.to_s, as: "#{key}_project"
