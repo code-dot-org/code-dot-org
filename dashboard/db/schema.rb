@@ -52,9 +52,7 @@ ActiveRecord::Schema.define(version: 2024_01_22_193916) do
     t.text "ai_response"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["level_id"], name: "index_ai_tutor_interactions_on_level_id"
-    t.index ["script_id"], name: "index_ai_tutor_interactions_on_script_id"
-    t.index ["user_id"], name: "index_ai_tutor_interactions_on_user_id"
+    t.index ["user_id", "level_id", "script_id"], name: "index_ati_user_level_script"
   end
 
   create_table "assessment_activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
