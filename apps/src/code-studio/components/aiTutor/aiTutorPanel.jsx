@@ -4,7 +4,6 @@ import {useDispatch} from 'react-redux';
 import i18n from '@cdo/locale';
 import style from './ai-tutor.module.scss';
 import classnames from 'classnames';
-import AITutorPanelContainer from '@cdo/apps/code-studio/components/aiTutor/aiTutorPanelContainer';
 import CompilationTutor from './compilationTutor';
 import ValidationTutor from './validationTutor';
 import GeneralChatTutor from './generalChatTutor';
@@ -49,24 +48,22 @@ const AITutorPanel = ({level, open}) => {
 
   return (
     <div
-      className={classnames(style.rubricContainer, {
-        [style.hiddenRubricContainer]: !open,
+      className={classnames(style.aiTutorPanel, {
+        [style.hiddenAITutorPanel]: !open,
       })}
     >
-      <AITutorPanelContainer level={level}>
-        <h3 id="ai_tutor_panel">AI Tutor</h3>
-        <img alt={i18n.aiBot()} src={icon} className={style.aiBotImg} />
-        <div>
-          <h4> What would you like AI Tutor to help you with?</h4>
-          <RadioButtonsGroup
-            radioButtons={radioButtons}
-            onChange={() => onChange(event)}
-          />
-        </div>
-        {compilationSelected && <CompilationTutor levelId={level.id} />}
-        {validationSelected && <ValidationTutor levelId={level.id} />}
-        {questionSelected && <GeneralChatTutor />}
-      </AITutorPanelContainer>
+      <h3 id="ai_tutor_panel">AI Tutor</h3>
+      <img alt={i18n.aiBot()} src={icon} className={style.aiBotImg} />
+      <div>
+        <h4> What would you like AI Tutor to help you with?</h4>
+        <RadioButtonsGroup
+          radioButtons={radioButtons}
+          onChange={() => onChange(event)}
+        />
+      </div>
+      {compilationSelected && <CompilationTutor levelId={level.id} />}
+      {validationSelected && <ValidationTutor levelId={level.id} />}
+      {questionSelected && <GeneralChatTutor />}
     </div>
   );
 };
