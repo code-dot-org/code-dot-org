@@ -8,7 +8,7 @@ import LessonProgressColumnHeader from './LessonProgressColumnHeader';
 
 export default function SkeletonProgressDataColumn({lesson, sortedStudents}) {
   return (
-    <div className={styles.lessonColumn} key={lesson.id}>
+    <div className={styles.lessonColumn}>
       <LessonProgressColumnHeader
         lesson={lesson}
         addExpandedLesson={() => {}}

@@ -43,6 +43,7 @@ function ProgressTableV2({
           <SkeletonProgressDataColumn
             lesson={lesson}
             sortedStudents={sortedStudents}
+            key={index}
           />
         );
       }
