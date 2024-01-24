@@ -17,6 +17,7 @@ export default function RubricTabButtons({
   return (
     <div className={style.rubricTabGroup}>
       <SegmentedButtons
+        className="uitest-rubric-tab-buttons"
         selectedButtonValue={selectedTab}
         size="s"
         buttons={[
