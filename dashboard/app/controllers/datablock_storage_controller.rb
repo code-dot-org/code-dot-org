@@ -142,10 +142,20 @@ class DatablockStorageController < ApplicationController
   end
 
   #### METHODS USED BY THE DATASET BROWSER FOR LOADING/BROWSING DATA ####
-  
+
   def get_table_names
     # SELECT DISTINCT table_name FROM datablock_storage_records WHERE channel_id='{params[:channel_id]}';
     render json: DatablockStorageRecord.where(channel_id: params[:channel_id]).select(:table_name).distinct.pluck(:table_name)
+  end
+
+  def get_key_values
+    # SELECT key, value FROM datablock_storage_kvps WHERE channel_id='{params[:channel_id]}';
+    kvps = DatablockStorageKvp.
+      where(channel_id: params[:channel_id]).
+      select(:key, :value).
+      to_h {|kvp| [kvp.key, JSON.parse(kvp.value)]}
+
+    render json: kvps
   end
 
   private
