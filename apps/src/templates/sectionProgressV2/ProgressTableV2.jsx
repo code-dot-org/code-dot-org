@@ -88,11 +88,7 @@ function ProgressTableV2({
     const tableStyles = isSkeleton
       ? classNames(styles.table, styles.tableLoading)
       : styles.table;
-    return (
-      <div className={tableStyles}>
-        {lessons.map((lesson, index) => getRenderedColumn(lesson, index))}
-      </div>
-    );
+    return <div className={tableStyles}>{lessons.map(getRenderedColumn)}</div>;
   }, [isSkeleton, getRenderedColumn, unitData]);
 
   return (
