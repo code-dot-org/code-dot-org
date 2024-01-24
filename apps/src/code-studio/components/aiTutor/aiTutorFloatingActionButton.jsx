@@ -1,12 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {Provider} from 'react-redux';
+import {getStore} from '@cdo/apps/redux';
 import style from '@cdo/apps/templates/rubrics/rubrics.module.scss';
 import aiFabIcon from '@cdo/static/ai-fab-background.png';
+import AITutorPanel from './aiTutorPanel';
 
 function AITutorFloatingActionButton() {
-  //const [isOpen, setIsOpen] = useState(false);
+  const store = getStore();
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
-    console.log('clicked the ai tutor floating action button!');
+    setIsOpen(!isOpen);
+  };
+
+  const level = {
+    id: 123,
+    type: 'Javalab',
+    hasValidation: true,
   };
 
   return (
@@ -19,6 +29,9 @@ function AITutorFloatingActionButton() {
         onClick={handleClick}
         type="button"
       />
+      <Provider store={store}>
+        <AITutorPanel level={level} open={isOpen} />
+      </Provider>
     </div>
   );
 }

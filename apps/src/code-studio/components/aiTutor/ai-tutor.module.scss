@@ -86,3 +86,16 @@ $default-spacing: 2px;
 .textArea {
     width: 80%;
 }
+
+
+.rubricContainer {
+    position: fixed;
+    left: 10px;
+    bottom: 116px;
+    z-index: 400;
+    width: 760px;
+  }
+  
+  .hiddenRubricContainer {
+    display: none;
+  }
