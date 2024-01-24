@@ -1,34 +1,14 @@
+// This tsconfig is used for development. It extends the tsconfig used for building apps.
 {
+  "extends": "./tsconfig.build.json",
   "include": [
     "./src/**/*.ts",
     "./src/**/*.tsx",
     "./test/**/*.ts",
     "./test/**/*.tsx",
+    // For development, include js and jsx. This allows Intellisense to
+    // detect js and jsx files for imports.
     "./src/**/*.js",
     "./src/**/*.jsx",
   ],
-  "compilerOptions": {
-    "jsx": "react",
-    "target": "es5",
-    "lib": ["ES2022", "DOM"],
-    "module": "node16",
-    "rootDir": "./",
-    "moduleResolution": "node16",
-    "outDir": "build",
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipDefaultLibCheck": true,
-    "skipLibCheck": true,
-    "allowJs": true,
-    "baseUrl": "./",
-    "paths": {
-      "@cdo/apps/*": ["./src/*"],
-      "@cdo/static/*": ["./static/*"],
-      "@cdo/i18n/*": ["./i18n/*"],
-    },
-    "resolveJsonModule": true,
-    "incremental": true,
-  }
 }

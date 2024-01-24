@@ -169,13 +169,15 @@ const localeDoNotImportP5Lab = (cdo, dir = 'src') => [
 // including our main config, the karma config, and the storybook config.
 //
 // To find our main webpack config (that runs on e.g. `yarn build`),
-// see `createWepbackConfig()` below. That function extends this config
+// see `createWebpackConfig()` below. That function extends this config
 // with many more plugins etc.
 const WEBPACK_BASE_CONFIG = {
   plugins: [
     ...nodePolyfillConfig.plugins,
     // Run TypeScript type checking in parallel with the build
-    new ForkTsCheckerWebpackPlugin(),
+    new ForkTsCheckerWebpackPlugin({
+      typescript: {configFile: 'tsconfig.build.json'},
+    }),
   ],
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
@@ -290,6 +292,7 @@ const WEBPACK_BASE_CONFIG = {
               // Half the build time was waiting for ts-loader to typecheck.
               // Instead we typecheck in parallel using ForkTsCheckerWebpackPlugin
               transpileOnly: true,
+              configFile: 'tsconfig.build.json',
             },
           },
         ],

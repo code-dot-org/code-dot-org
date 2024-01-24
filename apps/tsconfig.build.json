@@ -1,0 +1,34 @@
+// This is the tsconfig used for building apps. We extend it in tsconfig.json
+// with specific settings for development.
+{
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./test/**/*.ts",
+    "./test/**/*.tsx",
+  ],
+  "compilerOptions": {
+    "jsx": "react",
+    "target": "es5",
+    "lib": ["ES2022", "DOM"],
+    "module": "node16",
+    "rootDir": "./",
+    "moduleResolution": "node16",
+    "outDir": "build",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "baseUrl": "./",
+    "paths": {
+      "@cdo/apps/*": ["./src/*"],
+      "@cdo/static/*": ["./static/*"],
+      "@cdo/i18n/*": ["./i18n/*"],
+    },
+    "resolveJsonModule": true,
+    "incremental": true,
+  }
+}
