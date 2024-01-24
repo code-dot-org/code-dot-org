@@ -8,14 +8,19 @@
   "properties": {
     "validation_enabled": "true",
     "encrypted": "false",
-    "mini_rubric": "false",
+    "mini_rubric": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
+    "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n    <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\n  </head>\\n  <body>\\n    \\n\\n    \\n  </body>\\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"\",\r\n      \"data\": \"\"\r\n    }\r\n  ]\r\n}\r\n            ",
     "encrypted_examples": [
 
     ],
-    "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n    <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\n  </head>\\n  <body>\\n    \\n\\n    \\n  </body>\\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"\",\r\n      \"data\": \"\"\r\n    }\r\n  ]\r\n}\r\n            "
+    "rubric_key_concept": "Create a `div` container and a ruleset for the container that uses Flexbox properties.",
+    "rubric_performance_level_1": "Added a `div` container with a class attribute around the images in the HTML. Added a rule for the class attribute in the CSS. Used correct Flexbox properties to match the image in the instructions.",
+    "rubric_performance_level_2": "Added a `div` container with a class attribute around the images in the HTML. Added a rule for the class attribute in the CSS. Used Flexbox properties but the result does not necessarily match the image in the instructions.",
+    "rubric_performance_level_3": "Added a `div` container but did not use a class attribute in the `div` tag. Added a rule for the div in the CSS but did not use all needed Flexbox properties resulting in a page that does not necessarily match the image in the instructions.",
+    "rubric_performance_level_4": "There are no rule sets in the stylesheet for the `div` container, or the rule sets do not have the necessary Flexbox properties to style the images as shown in the instructions."
   },
-  "audit_log": "[{\"changed_at\":\"2024-01-04 19:03:41 +0000\",\"changed\":[\"published\",\"validation_enabled\"],\"changed_by_id\":19162,\"changed_by_email\":\"carl.reiner@code.org\"},{\"changed_at\":\"2024-01-05 18:03:47 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-01-04 19:03:41 +0000\",\"changed\":[\"published\",\"validation_enabled\"],\"changed_by_id\":19162,\"changed_by_email\":\"carl.reiner@code.org\"},{\"changed_at\":\"2024-01-05 18:03:47 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-23 18:30:23 +0000\",\"changed\":[\"mini_rubric\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>
