@@ -6,7 +6,7 @@ $colors: (
 );
 
 figure.curriculum-pathway {
-  background-color: var(--neutral_dark20);
+  background-color: var(--neutral_light);
   border-radius: $border-radius;
 
   .header {
@@ -89,7 +89,7 @@ figure.curriculum-pathway {
     margin: 0.5rem 0;
     display: grid;
     grid-template-columns: repeat(13, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: auto;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 
@@ -99,20 +99,37 @@ figure.curriculum-pathway {
     .course.csp { grid-area: 4 / 10 / 5 / 14; }
     .course.csa { grid-area: 5 / 11 / 6 / 14; }
 
-    .course {
+    a.course {
       background: white;
       border-radius: 4px;
       border: 1px solid var(--neutral_dark20);
       border-top: 5px solid;
-      display: flex;
-      place-content: center;
       height: fit-content;
       margin: 0.25rem 0.75rem;
       padding: 0.75rem 1rem;
+      transition: box-shadow 0.2s ease-in-out;
+      display: flex;
+      place-content: center;
+      gap: 4px;
+
+      &:hover {
+        box-shadow: 0 1px 6px var(--neutral_dark20);
+
+        &:after {
+          font: var(--fa-font-solid);
+          content: "\f054";
+          color: var(--neutral_dark40);
+          margin-top: 4px;
+
+          html[dir="rtl"] & { content: "\f053"; }
+        }
+      }
+
 
       p {
         font-weight: var(--semi-bold-font-weight);
         margin: 0;
+        text-align: center;
       }
     }
   }

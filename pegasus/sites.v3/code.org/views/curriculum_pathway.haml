@@ -3,49 +3,28 @@
 %figure.curriculum-pathway
   .header
     .school.elementary.border-bottom-primary-light
-      %p Elementary
+      %p=hoc_s(:grade_level_label_elementary)
     .school.middle.border-bottom-primary-medium
-      %p Middle
+      %p=hoc_s(:grade_level_label_middle)
     .school.high.border-bottom-primary-default
-      %p High
+      %p=hoc_s(:grade_level_label_high)
     .grade
       %p K
-    .grade
-      %p 1
-    .grade
-      %p 2
-    .grade
-      %p 3
-    .grade
-      %p 4
-    .grade
-      %p 5
-    .grade
-      %p 6
-    .grade
-      %p 7
-    .grade
-      %p 8
-    .grade
-      %p 9
-    .grade
-      %p 10
-    .grade
-      %p 11
-    .grade
-      %p 12
+    - (1..12).each do |grade|
+      .grade
+        %p= grade
 
   .courses
-    .course.csf.border-top-primary-light
-      %p CS Fundamentals
-    .course.csc.border-top-primary-light
-      %p CS Connections
-    .course.csd.border-top-primary-medium
-      %p CS Discoveries
-    .course.csp.border-top-primary-default
-      %p CS Principles
-    .course.csa.border-top-primary-default
-      %p AP® CSA
+    %a.course.csf.border-top-primary-light{href: "/csf"}
+      %p=hoc_s(:course_name_csf)
+    %a.course.csc.border-top-primary-light{href: "/csc"}
+      %p=hoc_s(:course_name_csc)
+    %a.course.csd.border-top-primary-medium{href: "/csd"}
+      %p=hoc_s(:course_name_csd)
+    %a.course.csp.border-top-primary-default{href: "/csp"}
+      %p=hoc_s(:course_name_csp)
+    %a.course.csa.border-top-primary-default{href: "/csa"}
+      %p=hoc_s(:course_name_csa)
 
   .body
     .div1
