@@ -137,6 +137,20 @@ DatablockStorage.deleteRecord = function (
   }).then(onSuccess, onError);
 };
 
+async function getTableNames() {
+  const response = await _fetch('get_table_names', 'GET', {});
+  return await response.json();
+}
+
+DatablockStorage.subscribeToListOfProjectTables = function (
+  onTableAdded,
+  onTableRemoved
+) {
+  getTableNames().then(tableNames => {
+    tableNames.forEach(onTableAdded);
+  });
+};
+
 export function initDatablockStorage(config) {
   console.log('LOADING DATABLOCK STORAGE SHIM!!!');
   init(config);

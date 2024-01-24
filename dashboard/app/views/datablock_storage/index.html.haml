@@ -50,6 +50,14 @@
   = text_field_tag "record_id", "", placeholder: "record_id"
   = submit_tag "delete_record"
 
+%hr
+
+%h2 Dataset Browser Data Loading Methods
+
+%h3 get_table_names
+= form_tag "get_table_names", :method => :get, :remote => false do
+  = submit_tag "get_table_names"
+
 %table
   %tr
     %td table_name
