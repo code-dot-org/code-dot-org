@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {useDispatch} from 'react-redux';
 import i18n from '@cdo/locale';
 import style from './ai-tutor.module.scss';
+import classnames from 'classnames';
 import AITutorPanelContainer from '@cdo/apps/code-studio/components/aiTutor/aiTutorPanelContainer';
 import CompilationTutor from './compilationTutor';
 import ValidationTutor from './validationTutor';
@@ -11,10 +12,9 @@ import {addAIResponse} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {RadioButtonsGroup} from '@cdo/apps/componentLibrary/radioButton';
 const icon = require('@cdo/static/ai-bot.png');
 
-const AITutorPanel = ({level}) => {
+const AITutorPanel = ({level, open}) => {
   const dispatch = useDispatch();
   const isCodingLevel = level.type === 'Javalab';
-
   const [selected, setSelected] = useState('');
 
   const radioButtons = [
@@ -48,20 +48,26 @@ const AITutorPanel = ({level}) => {
   const questionSelected = selected === 'question';
 
   return (
-    <AITutorPanelContainer level={level}>
-      <h3 id="ai_tutor_panel">AI Tutor</h3>
-      <img alt={i18n.aiBot()} src={icon} className={style.aiBotImg} />
-      <div>
-        <h4> What would you like AI Tutor to help you with?</h4>
-        <RadioButtonsGroup
-          radioButtons={radioButtons}
-          onChange={() => onChange(event)}
-        />
-      </div>
-      {compilationSelected && <CompilationTutor levelId={level.id} />}
-      {validationSelected && <ValidationTutor levelId={level.id} />}
-      {questionSelected && <GeneralChatTutor />}
-    </AITutorPanelContainer>
+    <div
+      className={classnames(style.rubricContainer, {
+        [style.hiddenRubricContainer]: !open,
+      })}
+    >
+      <AITutorPanelContainer level={level}>
+        <h3 id="ai_tutor_panel">AI Tutor</h3>
+        <img alt={i18n.aiBot()} src={icon} className={style.aiBotImg} />
+        <div>
+          <h4> What would you like AI Tutor to help you with?</h4>
+          <RadioButtonsGroup
+            radioButtons={radioButtons}
+            onChange={() => onChange(event)}
+          />
+        </div>
+        {compilationSelected && <CompilationTutor levelId={level.id} />}
+        {validationSelected && <ValidationTutor levelId={level.id} />}
+        {questionSelected && <GeneralChatTutor />}
+      </AITutorPanelContainer>
+    </div>
   );
 };
 
@@ -71,6 +77,7 @@ AITutorPanel.propTypes = {
     type: PropTypes.string,
     hasValidation: PropTypes.bool,
   }),
+  open: PropTypes.bool,
 };
 
 export default AITutorPanel;
