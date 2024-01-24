@@ -11,16 +11,17 @@ module CiBuilder
       return 0 unless build_required?
 
       FileUtils.touch BUILD_STARTED
-
+      ChatClient.log 'Updating repository', message_format: 'text', color: 'white'
       update_repository
-
+      ChatClient.log 'Displaying commit link', message_format: 'text', color: 'white'
       display_commit_link
-
+      ChatClient.log 'Installing dependencies', message_format: 'text', color: 'white'
       install_dependencies
-
+      ChatClient.log 'Notifying honeybadger', message_format: 'text', color: 'white'
       notify_honeybadger
-
+      ChatClient.log 'Executing ci task', message_format: 'text', color: 'white'
       execute_ci_task
+      ChatClient.log 'Done', message_format: 'text', color: 'white'
     end
   end
 
