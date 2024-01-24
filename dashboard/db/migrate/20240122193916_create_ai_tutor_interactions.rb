@@ -15,6 +15,9 @@ class CreateAiTutorInteractions < ActiveRecord::Migration[6.1]
       t.timestamps
     end
 
+    add_index :ai_tutor_interactions, :user_id
+    add_index :ai_tutor_interactions, :level_id
+    add_index :ai_tutor_interactions, :script_id
     add_index :ai_tutor_interactions, [:user_id, :level_id, :script_id], unique: false, name: "index_ati_user_level_script"
   end
 end
