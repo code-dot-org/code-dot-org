@@ -227,7 +227,7 @@ describe('CdoSerializationHelpers', () => {
 
     it('should return true for a block at either x=width or y=0 on a RTL workspace', () => {
       block = {
-        workspace: workspaceLTR,
+        workspace: workspaceRTL,
         getRelativeToSurfaceXY: () => ({
           x: defaultRTLCoordinates.x,
           y: arbitraryCoordinates.y,
@@ -237,7 +237,7 @@ describe('CdoSerializationHelpers', () => {
       expect(result).to.be.true;
 
       block = {
-        workspace: workspaceLTR,
+        workspace: workspaceRTL,
         getRelativeToSurfaceXY: () => ({
           x: arbitraryCoordinates.x,
           y: defaultRTLCoordinates.y,
