@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-08 15:55:15 UTC",
+    "serialized_at": "2024-01-23 16:44:08 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1130,12 +1130,22 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Move Quickly to the Activity:** There's a lot in the main activity of today's lesson. It is advisable to give students more time to get hands on with some code."
+            "markdown": "**Note:** Students will be working with a large dataset in this lesson. Depending on the type of device that they are using, it might take several moments for the dataset to download and populate into the lists that they are creating. \n\nAs such, please stress the importance of waiting a few moments after hitting the RUN button to test the app's function, otherwise students may receive an error message that the data has not been loaded."
           }
         ]
       },
       "seeding_key": {
         "activity_section.key": "204249a2-a6aa-4885-ab1f-f5ab1cbb5503",
+        "lesson_activity.key": "54e56b69-9dc0-45cb-89af-8ecf6e207bec"
+      }
+    },
+    {
+      "key": "73701928-d9ff-410d-bc25-c9208b20fcfc",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "73701928-d9ff-410d-bc25-c9208b20fcfc",
         "lesson_activity.key": "54e56b69-9dc0-45cb-89af-8ecf6e207bec"
       }
     },

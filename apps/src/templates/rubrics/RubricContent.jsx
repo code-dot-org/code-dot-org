@@ -136,10 +136,13 @@ export default function RubricContent({
 
   return (
     <div
-      className={classnames(style.rubricContent, {
-        [style.visibleRubricContent]: visible,
-        [style.hiddenRubricContent]: !visible,
-      })}
+      className={classnames(
+        {[style.rubricContent]: !experiments.isEnabled('ai-rubrics-redesign')},
+        {
+          [style.visibleRubricContent]: visible,
+          [style.hiddenRubricContent]: !visible,
+        }
+      )}
     >
       {infoText && <InfoAlert text={infoText} />}
       <div className={style.studentInfoGroup}>

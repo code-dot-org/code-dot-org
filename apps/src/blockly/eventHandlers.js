@@ -2,6 +2,7 @@
 
 import {handleWorkspaceResizeOrScroll} from '@cdo/apps/code-studio/callouts';
 import {BLOCK_TYPES} from './constants';
+import {findFlyout} from './utils';
 
 // A custom version of Blockly's Events.disableOrphans. This makes a couple
 // changes to the original function.
@@ -90,5 +91,21 @@ function updateBlockEnabled(block) {
 export function adjustCalloutsOnViewportChange(event) {
   if (event.type === Blockly.Events.VIEWPORT_CHANGE) {
     handleWorkspaceResizeOrScroll();
+  }
+}
+
+// When the browser is resized, we need to re-adjust the width of any open flyout.
+export function reflowToolbox(event) {
+  const mainWorkspace = Blockly.getMainWorkspace();
+  const mainWorkspaceFlyout = findFlyout(mainWorkspace);
+  if (mainWorkspaceFlyout) {
+    mainWorkspaceFlyout.reflow();
+  }
+  if (Blockly.functionEditor) {
+    const modalWorkspace = Blockly.getFunctionEditorWorkspace();
+    const modalWorkspaceFlyout = findFlyout(modalWorkspace);
+    if (modalWorkspaceFlyout) {
+      modalWorkspaceFlyout.reflow();
+    }
   }
 }

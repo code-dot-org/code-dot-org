@@ -75,7 +75,7 @@ export default class MusicPlayer {
   /**
    * Pre-load sounds for playback
    */
-  preloadSounds(
+  async preloadSounds(
     events: PlaybackEvent[],
     onLoadFinished?: LoadFinishedCallback
   ) {
@@ -88,7 +88,7 @@ export default class MusicPlayer {
       )
     );
 
-    this.samplePlayer.loadSounds(sampleIds, onLoadFinished);
+    return this.samplePlayer.loadSounds(sampleIds, onLoadFinished);
   }
 
   /**
