@@ -1,8 +1,64 @@
 require 'minitest/autorun'
 require_relative '../test_runner_options_parser'
 class TestRunnerOptionsParserTest < Minitest::Test
+  BROWSERS_JSON_CONTENT = [
+    {
+      name: "Chrome",
+      browserName: "chrome",
+      browserVersion: "105",
+      platformName: "Windows 10",
+      'sauce:options': {
+        screenResolution: "1280x1024",
+        extendedDebugging: true
+      }
+    },
+    {
+      name: "Safari",
+      browserName: "Safari",
+      browserVersion: "14",
+      platformName: "macOS 11.00"
+    },
+    {
+      name: "Firefox",
+      browserName: "firefox",
+      browserVersion: "112",
+      platformName: "Windows 10"
+    },
+    {
+      name: "iPhone",
+      platformName: "iOS",
+      platformVersion: "15.4",
+      browserName: "safari",
+      'appium:deviceName': "iPhone Simulator",
+      mobile: true,
+      'sauce:options': {
+        deviceOrientation: "LANDSCAPE"
+      }
+    },
+    {
+      name: "iPad",
+      platformName: "iOS",
+      platformVersion: "14.5",
+      browserName: "safari",
+      'appium:deviceName': "iPad Simulator",
+      mobile: true,
+      'sauce:options': {
+        deviceOrientation: "LANDSCAPE"
+      }
+    }
+  ].to_json
+
+  def test_all_browser_configs
+    argv = %w[-c Chrome,Safari,Firefox,iPhone,iPad]
+
+    parser = TestRunnerOptionsParser.new(argv)
+    parser.parse
+    expected_config = JSON.parse(BROWSERS_JSON_CONTENT)
+    assert_equal expected_config, parser.select_browser_configs
+  end
+
   def test_browser_os_version_and_browser_version_combinations
-    argv = ['-b', 'chrome', '-o', 'Windows', '-v', '86.0']
+    argv = %w[-b chrome -o Windows -v 86.0]
     parser = TestRunnerOptionsParser.new(argv)
     options = parser.parse
 
@@ -12,7 +68,7 @@ class TestRunnerOptionsParserTest < Minitest::Test
   end
 
   def test_local_and_local_headless_interaction
-    argv = ['-l', '--headed']
+    argv = %w[-l --headed]
     parser = TestRunnerOptionsParser.new(argv)
     options = parser.parse
 
@@ -29,7 +85,7 @@ class TestRunnerOptionsParserTest < Minitest::Test
   end
 
   def test_maximize_and_auto_retry_flags
-    argv = ['-m', '-a']
+    argv = %w[-m -a]
     parser = TestRunnerOptionsParser.new(argv)
     options = parser.parse
 
@@ -38,7 +94,7 @@ class TestRunnerOptionsParserTest < Minitest::Test
   end
 
   def test_domain_overrides
-    argv = ['-p', 'custom.code.org', '-d', 'custom-studio.code.org']
+    argv = %w[-p custom.code.org -d custom-studio.code.org]
     parser = TestRunnerOptionsParser.new(argv)
     options = parser.parse
 

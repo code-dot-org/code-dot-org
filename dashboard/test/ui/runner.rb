@@ -1,11 +1,8 @@
 #!/usr/bin/env ruby
 require_relative '../../../deployment'
 
-UI_TEST_DIR = File.expand_path(__dir__)
-ROOT = File.expand_path('../../..', UI_TEST_DIR)
-
 # Set up gems listed in the Gemfile.
-ENV['BUNDLE_GEMFILE'] ||= "#{ROOT}//Gemfile"
+ENV['BUNDLE_GEMFILE'] ||= "#{TestRunnerConfigVariables::ROOT}//Gemfile"
 require 'bundler'
 require 'bundler/setup'
 
@@ -37,7 +34,7 @@ ENV['BUILD'] ||= `git rev-parse --short HEAD`
 
 GIT_BRANCH = GitUtils.current_branch
 COMMIT_HASH = RakeUtils.git_revision
-LOCAL_LOG_DIRECTORY = File.join(UI_TEST_DIR, 'log')
+LOCAL_LOG_DIRECTORY = File.join(TestRunnerConfigVariables::UI_TEST_DIR, 'log')
 S3_LOGS_BUCKET = 'cucumber-logs'
 S3_LOGS_PREFIX = ENV['CI'] ? "circle/#{ENV['CIRCLE_BUILD_NUM']}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
 LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, make_public: true)
@@ -49,7 +46,7 @@ LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, make_pub
 #
 def main(test_runner_option_parser)
   $options = test_runner_option_parser.parse
-  $browsers = select_browser_configs(options)
+  $browsers = test_runner_option_parser.select_browser_configs
   $lock = Mutex.new
   # We track the number of failed features in this test run so we can abort the run
   # if we exceed a certain limit.  See options.abort_when_failures_exceed.
@@ -90,31 +87,6 @@ def main(test_runner_option_parser)
   run_results.count {|feature_succeeded, _, _| !feature_succeeded}
 ensure
   close_log_files
-end
-
-def select_browser_configs(options)
-  if options.local
-    return [{
-      'browser' => options.browser || 'chrome',
-      'name' => 'LocalBrowser',
-      'browserName' => options.browser || 'chrome',
-      'version' => options.browser_version || 'latest'
-    }]
-  end
-
-  browsers = JSON.parse(File.read(File.join(UI_TEST_DIR, 'browsers.json')))
-  if options.config
-    options.config.map do |name|
-      browsers.detect {|b| b['name'] == name}.tap do |browser|
-        unless browser
-          puts "No config exists with name #{name}"
-          exit
-        end
-      end
-    end
-  else
-    browsers # Use all of them
-  end
 end
 
 # Upload the given log to the cucumber-logs s3 bucket.
@@ -167,7 +139,7 @@ def run_tests(env, feature, arguments, log_prefix)
   start_time = Time.now
   cmd = "cucumber #{feature} #{arguments}"
   puts "#{log_prefix}#{cmd}"
-  Open3.popen3(env, cmd, chdir: UI_TEST_DIR) do |stdin, stdout, stderr, wait_thr|
+  Open3.popen3(env, cmd, chdir: TestRunnerConfigVariables::UI_TEST_DIR) do |stdin, stdout, stderr, wait_thr|
     stdin.close
     stdout = stdout.read
     stderr = stderr.read
@@ -187,7 +159,7 @@ end
 def features_to_run
   $features_to_run ||=
     if $options.features.empty?
-      Dir.glob(File.join(UI_TEST_DIR, 'features', '**', '*.feature'))
+      Dir.glob(File.join(TestRunnerConfigVariables::UI_TEST_DIR, 'features', '**', '*.feature'))
     else
       $options.features
     end
@@ -209,7 +181,7 @@ end
 def browser_features
   ($browsers.product features_to_run).filter_map do |browser, feature|
     full_feature_path = File.expand_path(feature)
-    relative_feature_path = Pathname.new(full_feature_path).relative_path_from(UI_TEST_DIR).to_s
+    relative_feature_path = Pathname.new(full_feature_path).relative_path_from(TestRunnerConfigVariables::UI_TEST_DIR).to_s
     arguments = cucumber_arguments_for_browser(browser, $options)
     scenario_count = ParallelTests::Cucumber::Scenarios.all([full_feature_path], test_options: arguments).length
     next if scenario_count.zero?
@@ -300,10 +272,10 @@ def scheme_for_environment
 end
 
 def generate_status_page(suite_start_time)
-  test_status_template = File.read(File.join(UI_TEST_DIR, 'test_status.haml'))
+  test_status_template = File.read(File.join(TestRunnerConfigVariables::UI_TEST_DIR, 'test_status.haml'))
   haml_engine = Haml::Engine.new(test_status_template)
   File.write(
-    File.join(UI_TEST_DIR, status_page_filename),
+    File.join(TestRunnerConfigVariables::UI_TEST_DIR, status_page_filename),
     haml_engine.render(
       Object.new,
       {

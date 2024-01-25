@@ -1,5 +1,6 @@
 require 'ostruct'
 require 'optparse'
+require_relative './test_runner_config_variables'
 
 class TestRunnerOptionsParser
   def initialize(argv)
@@ -20,6 +21,32 @@ class TestRunnerOptionsParser
       @options.local = false
     end
     @options
+  end
+
+  def select_browser_configs
+    if @options.local
+      return [{
+        'browser' => @options.browser || 'chrome',
+                'name' => 'LocalBrowser',
+                'browserName' => @options.browser || 'chrome',
+                'version' => @options.browser_version || 'latest'
+      }]
+    end
+
+    browsers = JSON.parse(File.read(File.join(TestRunnerConfigVariables::UI_TEST_DIR, 'browsers.json')))
+
+    if @options.config
+      @options.config.map do |name|
+        browsers.detect {|b| b['name'] == name}.tap do |browser|
+          unless browser
+            puts "No config exists with name #{name}"
+            exit
+          end
+        end
+      end
+    else
+      browsers # Use all of them
+    end
   end
 
   private
