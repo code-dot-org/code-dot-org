@@ -255,12 +255,13 @@ class LtiV1Controller < ApplicationController
   # Creates a new LtiIntegration
   def create_integration
     begin
-      params.require([:client_id, :lms, :email])
+      params.require([:name, :client_id, :lms, :email])
     rescue
       flash.alert = I18n.t('lti.error.missing_params')
       return redirect_to lti_v1_integrations_path
     end
 
+    integration_name = params[:name]
     client_id = params[:client_id]
     platform_name = params[:lms]
     admin_email = params[:email]
@@ -281,6 +282,7 @@ class LtiV1Controller < ApplicationController
 
     if existing_integration.nil?
       Services::Lti.create_lti_integration(
+        name: integration_name,
         client_id: client_id,
         issuer: issuer,
         platform_name: platform_name,
