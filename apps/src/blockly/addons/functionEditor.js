@@ -85,7 +85,7 @@ export default class FunctionEditor {
     // Disable blocks that aren't attached. We don't want these to generate
     // code in the hidden workspace.
     this.editorWorkspace.addChangeListener(disableOrphans);
-
+    Blockly.navigationController.addWorkspace(this.editorWorkspace);
     // Close handler
     document
       .getElementById(MODAL_EDITOR_CLOSE_ID)
@@ -124,6 +124,11 @@ export default class FunctionEditor {
   }
 
   hide() {
+    // If keyboard navigation was on, enable it on the main workspace
+    if (this.editorWorkspace.keyboardAccessibilityMode) {
+      Blockly.navigationController.disable(this.editorWorkspace);
+      Blockly.navigationController.enable(Blockly.getMainWorkspace());
+    }
     if (this.dom) {
       this.dom.style.display = 'none';
       this.editorWorkspace.hideChaff();
@@ -242,6 +247,19 @@ export default class FunctionEditor {
     }
     this.block.setDeletable(false);
 
+    // If keyboard navigation was on, enable it on the editor workspace.
+    if (
+      this.editorWorkspace.keyboardAccessibilityMode ||
+      Blockly.getMainWorkspace().keyboardAccessibilityMode
+    ) {
+      Blockly.navigationController.disable(Blockly.getMainWorkspace());
+      Blockly.navigationController.enable(this.editorWorkspace);
+      // If this editor was already open (e.g. changing from one function to another)
+      // we need to re-focus so the cursor highlights the correct block.
+      Blockly.navigationController.navigation.focusWorkspace(
+        this.editorWorkspace
+      );
+    }
     // We only want to be able to delete things that are user-created (functions and behaviors)
     // and not things that are being previewed from a read-only workspace.
     // We allow deleting non-user created behaviors in start mode.
