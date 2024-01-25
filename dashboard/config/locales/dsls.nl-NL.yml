@@ -763,6 +763,18 @@ nl-NL:
         content1: beschrijving hier
       CSD U2 Design Project_2018_2019:
         content1: beschrijving hier
+      CSD U2 Image challenge_pilot_2021:
+        display_name: Afbeeldingen Toevoegen
+      CSD U2 Image challenge_pilot_2022:
+        display_name: Afbeeldingen Toevoegen
+      CSD U2 Image challenge_pilot_2023:
+        display_name: Afbeeldingen Toevoegen
+      CSD U2 Image practice_pilot_2021:
+        display_name: Afbeeldingen Toevoegen
+      CSD U2 Image practice_pilot_2022:
+        display_name: Afbeeldingen Toevoegen
+      CSD U2 Image practice_pilot_2023:
+        display_name: Afbeeldingen Toevoegen
       CSD U2 L1 Overview:
         content1: beschrijving hier
       CSD U2 L2 Overview:
@@ -1851,6 +1863,12 @@ nl-NL:
         - {}
         - {}
         - {}
+      CSD U3 drawing practice choice_2021:
+        display_name: Oefenen
+      CSD U3 drawing practice choice_2022:
+        display_name: Oefenen
+      CSD U3 drawing practice choice_2023:
+        display_name: Oefenen
       CSD U3 game intro:
         content1: beschrijving hier
       CSD U3 game intro_2018:
@@ -2508,6 +2526,7 @@ nl-NL:
         - correct: true
         questions:
         - {}
+        title: Doe een Voorspelling
       CSD U6 setProperty predict multi_2018:
         answers:
         - {}
@@ -2516,6 +2535,7 @@ nl-NL:
         - correct: true
         questions:
         - {}
+        title: Doe een Voorspelling
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - {}
@@ -2524,6 +2544,7 @@ nl-NL:
         - correct: true
         questions:
         - {}
+        title: Doe een Voorspelling
       CSD U6 setProperty predict multi_2021:
         answers:
         - {}
@@ -2532,6 +2553,7 @@ nl-NL:
         - correct: true
         questions:
         - {}
+        title: Doe een Voorspelling
       CSD U6 setProperty predict multi_2023:
         answers:
         - {}
@@ -2540,6 +2562,7 @@ nl-NL:
         - correct: true
         questions:
         - {}
+        title: Doe een Voorspelling
       CSD U6 setProperty predict multi_2222:
         answers:
         - {}
@@ -2548,6 +2571,7 @@ nl-NL:
         - correct: true
         questions:
         - {}
+        title: Doe een Voorspelling
       CSD U6 setProperty predict multi_mb2022:
         answers:
         - {}
@@ -2556,6 +2580,7 @@ nl-NL:
         - correct: true
         questions:
         - {}
+        title: Doe een Voorspelling
       CSD U6 test algorithms multi2:
         answers:
         - {}
@@ -2706,6 +2731,24 @@ nl-NL:
         display_name: Voorwaardelijke instructies oefenen
       CSD web conditionals practice choice_2023:
         display_name: Voorwaardelijke instructies oefenen
+      CSD web draw loop practice choice_2021:
+        display_name: Oefenen
+      CSD web draw loop practice choice_2022:
+        display_name: Oefenen
+      CSD web draw loop practice choice_2023:
+        display_name: Oefenen
+      CSD web movement practice choice_2021:
+        display_name: Oefenen
+      CSD web movement practice choice_2022:
+        display_name: Oefenen
+      CSD web movement practice choice_2023:
+        display_name: Oefenen
+      CSD web text practice choice_2021:
+        display_name: Oefenen
+      CSD web text practice choice_2022:
+        display_name: Oefenen
+      CSD web text practice choice_2023:
+        display_name: Oefenen
       CSP PD Example Question 1:
         answers:
         - {}
@@ -4514,10 +4557,10 @@ nl-NL:
         display_name: Project aan het einde van de cursus
       courseC_multi_artist_prog6_predict1:
         answers:
-        - feedback: Fout. De artiest tekent een vierkant.
-          text: De artiest zal een driehoek tekenen met drie gelijke zijden.
-        - feedback: Fout. De artiest tekent een vierkant.
-          text: De artiest zal een enkele lijn tekenen.
+        - feedback: Onjuist. De kunstenaar tekent een vierkant.
+          text: De kunstenaar zal een driehoek tekenen met drie gelijke zijden.
+        - feedback: Onjuist. De kunstenaar tekent een vierkant.
+          text: De kunstenaar zal een enkele lijn tekenen.
         - correct: true
           feedback: Juist!
           text: De artiest tekent een vierkant.
@@ -4528,36 +4571,41 @@ nl-NL:
             op `start` klikt?
       courseC_multi_artist_prog6_predict12022:
         answers:
-        - feedback: Fout. De artiest tekent een vierkant.
-          text: De artiest zal een driehoek tekenen met drie gelijke zijden.
-        - feedback: Fout. De artiest tekent een vierkant.
-          text: De artiest zal een enkele lijn tekenen.
+        - feedback: Onjuist. De kunstenaar tekent een vierkant.
+          text: De kunstenaar zal een driehoek tekenen met drie gelijke zijden.
+        - feedback: Onjuist. De kunstenaar tekent een vierkant.
+          text: De kunstenaar zal een enkele lijn tekenen.
         - correct: true
           feedback: Juist!
-        - {}
+          text: De kunstenaar zal een vierkant tekenen.
+        - feedback: Onjuist. De kunstenaar tekent een vierkant.
+          text: De kunstenaar zal een vijfhoek tekenen.
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
             op `start` klikt?
       courseC_multi_artist_prog6_predict12022_2023:
         answers:
-        - feedback: Fout. De artiest tekent een vierkant.
-          text: De artiest zal een driehoek tekenen met drie gelijke zijden.
-        - feedback: Fout. De artiest tekent een vierkant.
-          text: De artiest zal een enkele lijn tekenen.
+        - feedback: Onjuist. De kunstenaar tekent een vierkant.
+          text: De kunstenaar zal een driehoek tekenen met drie gelijke zijden.
+        - feedback: Onjuist. De kunstenaar tekent een vierkant.
+          text: De kunstenaar zal een enkele lijn tekenen.
         - correct: true
           feedback: Juist!
-        - {}
+          text: De kunstenaar zal een vierkant tekenen.
+        - feedback: Onjuist. De kunstenaar tekent een vierkant.
+          text: De kunstenaar zal een vijfhoek tekenen.
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
             op `start` klikt?
       courseC_multi_artist_prog6_predict1_2018:
         answers:
-        - feedback: Fout. De artiest tekent een vierkant.
-          text: De artiest zal een driehoek tekenen met drie gelijke zijden.
-        - feedback: Fout. De artiest tekent een vierkant.
-          text: De artiest zal een enkele lijn tekenen.
+        - feedback: Onjuist. De kunstenaar tekent een vierkant.
+          text: De kunstenaar zal een driehoek tekenen met drie gelijke zijden.
+        - feedback: Onjuist. De kunstenaar tekent een vierkant.
+          text: De kunstenaar zal een enkele lijn tekenen.
         - correct: true
           feedback: Juist!
+          text: De kunstenaar zal een vierkant tekenen.
         - feedback: De artiest tekent een vierkant.
           text: Geen idee.
         questions:
@@ -4565,12 +4613,13 @@ nl-NL:
             op `start` klikt?
       courseC_multi_artist_prog6_predict1_2018_2019:
         answers:
-        - feedback: Fout. De artiest tekent een vierkant.
-          text: De artiest zal een driehoek tekenen met drie gelijke zijden.
-        - feedback: Fout. De artiest tekent een vierkant.
-          text: De artiest zal een enkele lijn tekenen.
+        - feedback: Onjuist. De kunstenaar tekent een vierkant.
+          text: De kunstenaar zal een driehoek tekenen met drie gelijke zijden.
+        - feedback: Onjuist. De kunstenaar tekent een vierkant.
+          text: De kunstenaar zal een enkele lijn tekenen.
         - correct: true
           feedback: Juist!
+          text: De kunstenaar zal een vierkant tekenen.
         - feedback: De artiest tekent een vierkant.
           text: Geen idee.
         questions:
@@ -4578,12 +4627,13 @@ nl-NL:
             op `start` klikt?
       courseC_multi_artist_prog6_predict1_2018_2019_2020:
         answers:
-        - feedback: Fout. De artiest tekent een vierkant.
-          text: De artiest zal een driehoek tekenen met drie gelijke zijden.
-        - feedback: Fout. De artiest tekent een vierkant.
-          text: De artiest zal een enkele lijn tekenen.
+        - feedback: Onjuist. De kunstenaar tekent een vierkant.
+          text: De kunstenaar zal een driehoek tekenen met drie gelijke zijden.
+        - feedback: Onjuist. De kunstenaar tekent een vierkant.
+          text: De kunstenaar zal een enkele lijn tekenen.
         - correct: true
           feedback: Juist!
+          text: De kunstenaar zal een vierkant tekenen.
         - feedback: De artiest tekent een vierkant.
           text: Geen idee.
         questions:
@@ -4591,13 +4641,15 @@ nl-NL:
             op `start` klikt?
       courseC_multi_artist_prog6_predict1_2021:
         answers:
-        - feedback: Fout. De artiest tekent een vierkant.
-          text: De artiest zal een driehoek tekenen met drie gelijke zijden.
-        - feedback: Fout. De artiest tekent een vierkant.
-          text: De artiest zal een enkele lijn tekenen.
+        - feedback: Onjuist. De kunstenaar tekent een vierkant.
+          text: De kunstenaar zal een driehoek tekenen met drie gelijke zijden.
+        - feedback: Onjuist. De kunstenaar tekent een vierkant.
+          text: De kunstenaar zal een enkele lijn tekenen.
         - correct: true
           feedback: Juist!
-        - {}
+          text: De kunstenaar zal een vierkant tekenen.
+        - feedback: Onjuist. De kunstenaar tekent een vierkant.
+          text: De kunstenaar zal een vijfhoek tekenen.
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
             op `start` klikt?
@@ -6161,7 +6213,7 @@ nl-NL:
           text: Geen idee.
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
-            op `start` klikt?
+            op "Start" klikt?
       courseD_multi_farmer_while4_predict12022:
         answers:
         - feedback: Fout. De boer zal zand verwijderen zolang er een stapel ligt,
@@ -6178,7 +6230,7 @@ nl-NL:
             en stoppen zodra de stapel weg is
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
-            op `start` klikt?
+            op "Start" klikt?
       courseD_multi_farmer_while4_predict12022_2023:
         answers:
         - feedback: Fout. De boer zal zand verwijderen zolang er een stapel ligt,
@@ -6195,7 +6247,7 @@ nl-NL:
             en stoppen zodra de stapel weg is
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
-            op `start` klikt?
+            op "Start" klikt?
       courseD_multi_farmer_while4_predict1_2018:
         answers:
         - feedback: Fout. De boer zal zand verwijderen zolang er een stapel ligt,
@@ -6213,7 +6265,7 @@ nl-NL:
           text: Geen idee.
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
-            op `start` klikt?
+            op "Start" klikt?
       courseD_multi_farmer_while4_predict1_2018_2019:
         answers:
         - feedback: Fout. De boer zal zand verwijderen zolang er een stapel ligt,
@@ -6231,7 +6283,7 @@ nl-NL:
           text: Geen idee.
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
-            op `start` klikt?
+            op "Start" klikt?
       courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
         - feedback: Fout. De boer zal zand verwijderen zolang er een stapel ligt,
@@ -6249,7 +6301,7 @@ nl-NL:
           text: Geen idee.
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
-            op `start` klikt?
+            op "Start" klikt?
       courseD_multi_farmer_while4_predict1_2021:
         answers:
         - feedback: Fout. De boer zal zand verwijderen zolang er een stapel ligt,
@@ -6266,7 +6318,7 @@ nl-NL:
             en stoppen zodra de stapel weg is
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
-            op `start` klikt?
+            op "Start" klikt?
       courseD_multi_maze_until10_predict2:
         answers:
         - correct: true
@@ -6623,14 +6675,15 @@ nl-NL:
         - feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
           text: Niets. De functie wordt niet aangeroepen in het programma.
         - feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
-          text: De artiest zal een enkel vierkant tekenen.
-        - feedback: Fout. De zijde van elk vierkant is maar 100 pixels lang, maar
-            de artiest maakt een sprong van 175 pixels tussen de functie-aanroepen.
-          text: De artiest zal twee vierkanten tekenen die over elkaar heen vallen.
+          text: De kunstenaar zal één vierkant tekenen.
+        - feedback: Onjuist. De zijden van elk vierkant zijn maar 100 pixels lang,
+            maar de kunstenaar springt 175 pixels tussen de functie-aanroepen.
+          text: De kunstenaar zal twee vierkanten tekenen die overlappen.
         - correct: true
           feedback: Goed! De functie wordt twee keer aangeropen in het programma,
             met een sprong er tussen in.
-          text: De artiest zal twee vierkanten tekenen met wat lege ruimte er tussen.
+          text: De kunstenaar zal twee vierkanten tekenen met een kleine opening er
+            tussen.
         questions:
         - text: Wat zal er gebeuren als je op 'Start' drukt?
       courseE_prediction_artistFunction12022:
@@ -6638,14 +6691,15 @@ nl-NL:
         - feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
           text: Niets. De functie wordt niet aangeroepen in het programma.
         - feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
-          text: De artiest zal een enkel vierkant tekenen.
-        - feedback: Fout. De zijde van elk vierkant is maar 100 pixels lang, maar
-            de artiest maakt een sprong van 175 pixels tussen de functie-aanroepen.
-          text: De artiest zal twee vierkanten tekenen die over elkaar heen vallen.
+          text: De kunstenaar zal één vierkant tekenen.
+        - feedback: Onjuist. De zijden van elk vierkant zijn maar 100 pixels lang,
+            maar de kunstenaar springt 175 pixels tussen de functie-aanroepen.
+          text: De kunstenaar zal twee vierkanten tekenen die overlappen.
         - correct: true
           feedback: Goed! De functie wordt twee keer aangeropen in het programma,
             met een sprong er tussen in.
-          text: De artiest zal twee vierkanten tekenen met wat lege ruimte er tussen.
+          text: De kunstenaar zal twee vierkanten tekenen met een kleine opening er
+            tussen.
         questions:
         - text: Wat zal er gebeuren als je op 'Start' drukt?
       courseE_prediction_artistFunction12022_2023:
@@ -6653,14 +6707,15 @@ nl-NL:
         - feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
           text: Niets. De functie wordt niet aangeroepen in het programma.
         - feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
-          text: De artiest zal een enkel vierkant tekenen.
-        - feedback: Fout. De zijde van elk vierkant is maar 100 pixels lang, maar
-            de artiest maakt een sprong van 175 pixels tussen de functie-aanroepen.
-          text: De artiest zal twee vierkanten tekenen die over elkaar heen vallen.
+          text: De kunstenaar zal één vierkant tekenen.
+        - feedback: Onjuist. De zijden van elk vierkant zijn maar 100 pixels lang,
+            maar de kunstenaar springt 175 pixels tussen de functie-aanroepen.
+          text: De kunstenaar zal twee vierkanten tekenen die overlappen.
         - correct: true
           feedback: Goed! De functie wordt twee keer aangeropen in het programma,
             met een sprong er tussen in.
-          text: De artiest zal twee vierkanten tekenen met wat lege ruimte er tussen.
+          text: De kunstenaar zal twee vierkanten tekenen met een kleine opening er
+            tussen.
         questions:
         - text: Wat zal er gebeuren als je op 'Start' drukt?
       courseE_prediction_artistFunction1_2018:
@@ -6668,14 +6723,15 @@ nl-NL:
         - feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
           text: Niets. De functie wordt niet aangeroepen in het programma.
         - feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
-          text: De artiest zal een enkel vierkant tekenen.
-        - feedback: Fout. De zijde van elk vierkant is maar 100 pixels lang, maar
-            de artiest maakt een sprong van 175 pixels tussen de functie-aanroepen.
-          text: De artiest zal twee vierkanten tekenen die over elkaar heen vallen.
+          text: De kunstenaar zal één vierkant tekenen.
+        - feedback: Onjuist. De zijden van elk vierkant zijn maar 100 pixels lang,
+            maar de kunstenaar springt 175 pixels tussen de functie-aanroepen.
+          text: De kunstenaar zal twee vierkanten tekenen die overlappen.
         - correct: true
           feedback: Goed! De functie wordt twee keer aangeropen in het programma,
             met een sprong er tussen in.
-          text: De artiest zal twee vierkanten tekenen met wat lege ruimte er tussen.
+          text: De kunstenaar zal twee vierkanten tekenen met een kleine opening er
+            tussen.
         questions:
         - text: Wat zal er gebeuren als je op 'Start' drukt?
       courseE_prediction_artistFunction1_2018_2019:
@@ -6683,14 +6739,15 @@ nl-NL:
         - feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
           text: Niets. De functie wordt niet aangeroepen in het programma.
         - feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
-          text: De artiest zal een enkel vierkant tekenen.
-        - feedback: Fout. De zijde van elk vierkant is maar 100 pixels lang, maar
-            de artiest maakt een sprong van 175 pixels tussen de functie-aanroepen.
-          text: De artiest zal twee vierkanten tekenen die over elkaar heen vallen.
+          text: De kunstenaar zal één vierkant tekenen.
+        - feedback: Onjuist. De zijden van elk vierkant zijn maar 100 pixels lang,
+            maar de kunstenaar springt 175 pixels tussen de functie-aanroepen.
+          text: De kunstenaar zal twee vierkanten tekenen die overlappen.
         - correct: true
           feedback: Goed! De functie wordt twee keer aangeropen in het programma,
             met een sprong er tussen in.
-          text: De artiest zal twee vierkanten tekenen met wat lege ruimte er tussen.
+          text: De kunstenaar zal twee vierkanten tekenen met een kleine opening er
+            tussen.
         questions:
         - text: Wat zal er gebeuren als je op 'Start' drukt?
       courseE_prediction_artistFunction1_2018_2019_2020:
@@ -6698,14 +6755,15 @@ nl-NL:
         - feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
           text: Niets. De functie wordt niet aangeroepen in het programma.
         - feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
-          text: De artiest zal een enkel vierkant tekenen.
-        - feedback: Fout. De zijde van elk vierkant is maar 100 pixels lang, maar
-            de artiest maakt een sprong van 175 pixels tussen de functie-aanroepen.
-          text: De artiest zal twee vierkanten tekenen die over elkaar heen vallen.
+          text: De kunstenaar zal één vierkant tekenen.
+        - feedback: Onjuist. De zijden van elk vierkant zijn maar 100 pixels lang,
+            maar de kunstenaar springt 175 pixels tussen de functie-aanroepen.
+          text: De kunstenaar zal twee vierkanten tekenen die overlappen.
         - correct: true
           feedback: Goed! De functie wordt twee keer aangeropen in het programma,
             met een sprong er tussen in.
-          text: De artiest zal twee vierkanten tekenen met wat lege ruimte er tussen.
+          text: De kunstenaar zal twee vierkanten tekenen met een kleine opening er
+            tussen.
         questions:
         - text: Wat zal er gebeuren als je op 'Start' drukt?
       courseE_prediction_artistFunction1_2021:
@@ -6713,14 +6771,15 @@ nl-NL:
         - feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
           text: Niets. De functie wordt niet aangeroepen in het programma.
         - feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
-          text: De artiest zal een enkel vierkant tekenen.
-        - feedback: Fout. De zijde van elk vierkant is maar 100 pixels lang, maar
-            de artiest maakt een sprong van 175 pixels tussen de functie-aanroepen.
-          text: De artiest zal twee vierkanten tekenen die over elkaar heen vallen.
+          text: De kunstenaar zal één vierkant tekenen.
+        - feedback: Onjuist. De zijden van elk vierkant zijn maar 100 pixels lang,
+            maar de kunstenaar springt 175 pixels tussen de functie-aanroepen.
+          text: De kunstenaar zal twee vierkanten tekenen die overlappen.
         - correct: true
           feedback: Goed! De functie wordt twee keer aangeropen in het programma,
             met een sprong er tussen in.
-          text: De artiest zal twee vierkanten tekenen met wat lege ruimte er tussen.
+          text: De kunstenaar zal twee vierkanten tekenen met een kleine opening er
+            tussen.
         questions:
         - text: Wat zal er gebeuren als je op 'Start' drukt?
       courseE_prediction_artistFunction1_copy:
@@ -6728,14 +6787,15 @@ nl-NL:
         - feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
           text: Niets. De functie wordt niet aangeroepen in het programma.
         - feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
-          text: De artiest zal een enkel vierkant tekenen.
-        - feedback: Fout. De zijde van elk vierkant is maar 100 pixels lang, maar
-            de artiest maakt een sprong van 175 pixels tussen de functie-aanroepen.
-          text: De artiest zal twee vierkanten tekenen die over elkaar heen vallen.
+          text: De kunstenaar zal één vierkant tekenen.
+        - feedback: Onjuist. De zijden van elk vierkant zijn maar 100 pixels lang,
+            maar de kunstenaar springt 175 pixels tussen de functie-aanroepen.
+          text: De kunstenaar zal twee vierkanten tekenen die overlappen.
         - correct: true
           feedback: Goed! De functie wordt twee keer aangeropen in het programma,
             met een sprong er tussen in.
-          text: De artiest zal twee vierkanten tekenen met wat lege ruimte er tussen.
+          text: De kunstenaar zal twee vierkanten tekenen met een kleine opening er
+            tussen.
         questions:
         - text: Wat zal er gebeuren als je op 'Start' drukt?
       courseE_prediction_artistFunction1_dani:
@@ -6762,7 +6822,7 @@ nl-NL:
         - {}
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
-            op `start` klikt?
+            op "Start" klikt?
       courseE_swim_fish_behavior_predict12022_2023:
         answers:
         - text: Er zal niets gebeuren.
@@ -6772,7 +6832,7 @@ nl-NL:
         - {}
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
-            op `start` klikt?
+            op "Start" klikt?
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: Er zal niets gebeuren.
@@ -6782,7 +6842,7 @@ nl-NL:
         - {}
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
-            op `start` klikt?
+            op "Start" klikt?
       courseExpress_EOC_2020:
         description: Je hebt de laatste les van de Express Course bereikt! Kies een
           project om te maken.
@@ -7216,112 +7276,112 @@ nl-NL:
         answers:
         - feedback: Fout. De lus gebruikt `teken ene veelhoek` in plaats van `teken
             een rij veelhoeken`.
-          text: De artiest zal deze functie correct oplossen.
+          text: De kunstenaar zal de puzzel correct oplossen.
         - correct: true
           feedback: Juist!
-          text: De artiest zal vier vierkanten tekenen in een venster-patroon.
+          text: De kunstenaar zal vier vierkanten tekenen in een raam-patroon.
         - feedback: Fout. Het programma roept de `teken een rij veelhoeken`-functie
             niet aan.
-          text: De artiest zal slechts een rij vierkanten tekenen.
+          text: De kunstenaar zal maar één lijn van vierkanten tekenen.
         - feedback: Fout. De lus draait 90 graden tussen de aanroepen van `teken een
             veelhoek`.
-          text: De artiest zal vier vierkanten boven op elkaar tekenen.
+          text: De kunstenaar zal vier vierkanten boven op elkaar tekenen.
         questions:
         - text: Wat gebeurt er als je op `Start` drukt?
       coursee_prediction_artistfunction22022:
         answers:
         - feedback: Fout. De lus gebruikt `teken ene veelhoek` in plaats van `teken
             een rij veelhoeken`.
-          text: De artiest zal deze functie correct oplossen.
+          text: De kunstenaar zal de puzzel correct oplossen.
         - correct: true
           feedback: Juist!
-          text: De artiest zal vier vierkanten tekenen in een venster-patroon.
+          text: De kunstenaar zal vier vierkanten tekenen in een raam-patroon.
         - feedback: Fout. Het programma roept de `teken een rij veelhoeken`-functie
             niet aan.
-          text: De artiest zal slechts een rij vierkanten tekenen.
+          text: De kunstenaar zal maar één lijn van vierkanten tekenen.
         - feedback: Fout. De lus draait 90 graden tussen de aanroepen van `teken een
             veelhoek`.
-          text: De artiest zal vier vierkanten boven op elkaar tekenen.
+          text: De kunstenaar zal vier vierkanten boven op elkaar tekenen.
         questions:
         - text: Wat gebeurt er als je op `Start` drukt?
       coursee_prediction_artistfunction22022_2023:
         answers:
         - feedback: Fout. De lus gebruikt `teken ene veelhoek` in plaats van `teken
             een rij veelhoeken`.
-          text: De artiest zal deze functie correct oplossen.
+          text: De kunstenaar zal de puzzel correct oplossen.
         - correct: true
           feedback: Juist!
-          text: De artiest zal vier vierkanten tekenen in een venster-patroon.
+          text: De kunstenaar zal vier vierkanten tekenen in een raam-patroon.
         - feedback: Fout. Het programma roept de `teken een rij veelhoeken`-functie
             niet aan.
-          text: De artiest zal slechts een rij vierkanten tekenen.
+          text: De kunstenaar zal maar één lijn van vierkanten tekenen.
         - feedback: Fout. De lus draait 90 graden tussen de aanroepen van `teken een
             veelhoek`.
-          text: De artiest zal vier vierkanten boven op elkaar tekenen.
+          text: De kunstenaar zal vier vierkanten boven op elkaar tekenen.
         questions:
         - text: Wat gebeurt er als je op `Start` drukt?
       coursee_prediction_artistfunction2_2018:
         answers:
         - feedback: Fout. De lus gebruikt `teken ene veelhoek` in plaats van `teken
             een rij veelhoeken`.
-          text: De artiest zal deze functie correct oplossen.
+          text: De kunstenaar zal de puzzel correct oplossen.
         - correct: true
           feedback: Juist!
-          text: De artiest zal vier vierkanten tekenen in een venster-patroon.
+          text: De kunstenaar zal vier vierkanten tekenen in een raam-patroon.
         - feedback: Fout. Het programma roept de `teken een rij veelhoeken`-functie
             niet aan.
-          text: De artiest zal slechts een rij vierkanten tekenen.
+          text: De kunstenaar zal maar één lijn van vierkanten tekenen.
         - feedback: Fout. De lus draait 90 graden tussen de aanroepen van `teken een
             veelhoek`.
-          text: De artiest zal vier vierkanten boven op elkaar tekenen.
+          text: De kunstenaar zal vier vierkanten boven op elkaar tekenen.
         questions:
         - text: Wat gebeurt er als je op `Start` drukt?
       coursee_prediction_artistfunction2_2018_2019:
         answers:
         - feedback: Fout. De lus gebruikt `teken ene veelhoek` in plaats van `teken
             een rij veelhoeken`.
-          text: De artiest zal deze functie correct oplossen.
+          text: De kunstenaar zal de puzzel correct oplossen.
         - correct: true
           feedback: Juist!
-          text: De artiest zal vier vierkanten tekenen in een venster-patroon.
+          text: De kunstenaar zal vier vierkanten tekenen in een raam-patroon.
         - feedback: Fout. Het programma roept de `teken een rij veelhoeken`-functie
             niet aan.
-          text: De artiest zal slechts een rij vierkanten tekenen.
+          text: De kunstenaar zal maar één lijn van vierkanten tekenen.
         - feedback: Fout. De lus draait 90 graden tussen de aanroepen van `teken een
             veelhoek`.
-          text: De artiest zal vier vierkanten boven op elkaar tekenen.
+          text: De kunstenaar zal vier vierkanten boven op elkaar tekenen.
         questions:
         - text: Wat gebeurt er als je op `Start` drukt?
       coursee_prediction_artistfunction2_2018_2019_2020:
         answers:
         - feedback: Fout. De lus gebruikt `teken ene veelhoek` in plaats van `teken
             een rij veelhoeken`.
-          text: De artiest zal deze functie correct oplossen.
+          text: De kunstenaar zal de puzzel correct oplossen.
         - correct: true
           feedback: Juist!
-          text: De artiest zal vier vierkanten tekenen in een venster-patroon.
+          text: De kunstenaar zal vier vierkanten tekenen in een raam-patroon.
         - feedback: Fout. Het programma roept de `teken een rij veelhoeken`-functie
             niet aan.
-          text: De artiest zal slechts een rij vierkanten tekenen.
+          text: De kunstenaar zal maar één lijn van vierkanten tekenen.
         - feedback: Fout. De lus draait 90 graden tussen de aanroepen van `teken een
             veelhoek`.
-          text: De artiest zal vier vierkanten boven op elkaar tekenen.
+          text: De kunstenaar zal vier vierkanten boven op elkaar tekenen.
         questions:
         - text: Wat gebeurt er als je op `Start` drukt?
       coursee_prediction_artistfunction2_2021:
         answers:
         - feedback: Fout. De lus gebruikt `teken ene veelhoek` in plaats van `teken
             een rij veelhoeken`.
-          text: De artiest zal deze functie correct oplossen.
+          text: De kunstenaar zal de puzzel correct oplossen.
         - correct: true
           feedback: Juist!
-          text: De artiest zal vier vierkanten tekenen in een venster-patroon.
+          text: De kunstenaar zal vier vierkanten tekenen in een raam-patroon.
         - feedback: Fout. Het programma roept de `teken een rij veelhoeken`-functie
             niet aan.
-          text: De artiest zal slechts een rij vierkanten tekenen.
+          text: De kunstenaar zal maar één lijn van vierkanten tekenen.
         - feedback: Fout. De lus draait 90 graden tussen de aanroepen van `teken een
             veelhoek`.
-          text: De artiest zal vier vierkanten boven op elkaar tekenen.
+          text: De kunstenaar zal vier vierkanten boven op elkaar tekenen.
         questions:
         - text: Wat gebeurt er als je op `Start` drukt?
       csc_animal_adaptations_predict:
@@ -12743,8 +12803,10 @@ nl-NL:
           text: Laurel zal alle schatten verzamelen.
         - feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
             niets ligt, en dat veroorzaakt een fout.
+          text: Laurel zal één deel van de schat verzamelen met deze code.
         questions:
-        - {}
+        - text: Kijk goed naar deze code. Wat denk je dat er zal gebeuren als het
+            programma wordt uitgevoerd?
       grade2_multi_collector_A_predict12022_2023:
         answers:
         - feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
@@ -12759,8 +12821,10 @@ nl-NL:
           text: Laurel zal alle schatten verzamelen.
         - feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
             niets ligt, en dat veroorzaakt een fout.
+          text: Laurel zal één deel van de schat verzamelen met deze code.
         questions:
-        - {}
+        - text: Kijk goed naar deze code. Wat denk je dat er zal gebeuren als het
+            programma wordt uitgevoerd?
       grade2_multi_collector_A_predict1_2018:
         answers:
         - feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
@@ -12777,7 +12841,8 @@ nl-NL:
             ligt, en dat veroorzaakt een fout.
           text: Geen idee.
         questions:
-        - {}
+        - text: Kijk goed naar deze code. Wat denk je dat er zal gebeuren als het
+            programma wordt uitgevoerd?
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
         - feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
@@ -12794,7 +12859,8 @@ nl-NL:
             ligt, en dat veroorzaakt een fout.
           text: Geen idee.
         questions:
-        - {}
+        - text: Kijk goed naar deze code. Wat denk je dat er zal gebeuren als het
+            programma wordt uitgevoerd?
       grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
         - feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
@@ -12811,7 +12877,8 @@ nl-NL:
             ligt, en dat veroorzaakt een fout.
           text: Geen idee.
         questions:
-        - {}
+        - text: Kijk goed naar deze code. Wat denk je dat er zal gebeuren als het
+            programma wordt uitgevoerd?
       grade2_multi_collector_A_predict1_2021:
         answers:
         - feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
@@ -12826,8 +12893,10 @@ nl-NL:
           text: Laurel zal alle schatten verzamelen.
         - feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
             niets ligt, en dat veroorzaakt een fout.
+          text: Laurel zal één deel van de schat verzamelen met deze code.
         questions:
-        - {}
+        - text: Kijk goed naar deze code. Wat denk je dat er zal gebeuren als het
+            programma wordt uitgevoerd?
       how-often-consider-alternative-approaches-2019:
         answers:
         - correct: true
