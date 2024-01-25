@@ -39,11 +39,16 @@ S3_LOGS_BUCKET = 'cucumber-logs'
 S3_LOGS_PREFIX = ENV['CI'] ? "circle/#{ENV['CIRCLE_BUILD_NUM']}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
 LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, make_public: true)
 
+# This method should be moved to TestRunnerLogger but it is too entangled right now.
+def prefix_string(msg, prefix)
+  msg.to_s.lines.map {|line| "#{prefix}#{line}"}.join
+end
 #
 # Run a set of UI/Eyes tests according to the provided options.
 # @param [OpenStruct] options - the configuration for this test run. See parse_options for details.
 # @return [int] a status code
 #
+
 def main(test_runner_option_parser)
   $options = test_runner_option_parser.parse
   $browsers = test_runner_option_parser.select_browser_configs
@@ -56,7 +61,9 @@ def main(test_runner_option_parser)
   ENV['GIT_BRANCH'] = GIT_BRANCH
   ENV['BATCH_NAME'] = "#{GIT_BRANCH} | #{start_time}"
 
-  open_log_files
+  @logger = TestRunnerLogger.new(TestRunnerConfigVariables::UI_TEST_DIR, $options.verbose, $options.html)
+  @logger.open_log_files
+
   configure_for_eyes if eyes?
   report_tests_starting
   generate_status_page(start_time) if options.with_status_page
@@ -86,53 +93,7 @@ def main(test_runner_option_parser)
   report_tests_finished start_time, run_results
   run_results.count {|feature_succeeded, _, _| !feature_succeeded}
 ensure
-  close_log_files
-end
-
-# Upload the given log to the cucumber-logs s3 bucket.
-# @param [String] filename of log file to be uploaded.
-# @return [String] a public hyperlink to the uploaded log, or empty string.
-def upload_log_and_get_public_link(filename, metadata)
-  return '' unless $options.html
-  # Assume all log files are Cucumber reports in html format.
-  # TODO: Set content type dynamically based on filename extension.
-  log_url = LOG_UPLOADER.upload_file(filename, {content_type: 'text/html', metadata: metadata})
-  " <a href='#{log_url}'>☁ Log on S3</a>"
-rescue Exception => exception
-  ChatClient.log "Uploading log to S3 failed: #{exception}"
-  return ''
-end
-
-def prefix_string(msg, prefix)
-  msg.to_s.lines.map {|line| "#{prefix}#{line}"}.join
-end
-
-def open_log_files
-  FileUtils.mkdir_p(LOCAL_LOG_DIRECTORY)
-  $success_log = File.open(File.join(LOCAL_LOG_DIRECTORY, "success.log"), 'w')
-  $error_log = File.open(File.join(LOCAL_LOG_DIRECTORY, "error.log"), 'w')
-  $errorbrowsers_log = File.open(File.join(LOCAL_LOG_DIRECTORY, "errorbrowsers.log"), 'w')
-end
-
-def close_log_files
-  $success_log&.close
-  $error_log&.close
-  $errorbrowsers_log&.close
-end
-
-def log_success(msg)
-  $success_log.puts msg
-  puts msg if $options.verbose
-end
-
-def log_error(msg)
-  $error_log.puts msg
-  puts msg if $options.verbose
-end
-
-def log_browser_error(msg)
-  $errorbrowsers_log.puts msg
-  puts msg if $options.verbose
+  @logger.close_log_files
 end
 
 def run_tests(env, feature, arguments, log_prefix)
@@ -588,12 +549,12 @@ def run_feature(browser, feature, options)
     # Since output_stderr is empty, we do not log it to ChatClient.
     ChatClient.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)})#{log_link}, retrying (#{reruns}/#{max_reruns}, flakiness: #{flakiness_for_test(test_run_string) || '?'})..."
     $lock.synchronize do
-      log_error prefix_string(Time.now, log_prefix)
-      log_error prefix_string(browser.to_yaml, log_prefix)
-      log_error prefix_string(log_link, log_prefix)
-      log_error prefix_string(output_stdout, log_prefix)
-      log_error prefix_string(output_stderr, log_prefix)
-      log_browser_error prefix_string(browser.to_yaml, log_prefix)
+      @logger.log_error prefix_string(Time.now, log_prefix)
+      @logger.log_error prefix_string(browser.to_yaml, log_prefix)
+      @logger.log_error prefix_string(log_link, log_prefix)
+      @logger.log_error prefix_string(output_stdout, log_prefix)
+      @logger.log_error prefix_string(output_stderr, log_prefix)
+      @logger.log_browser_error prefix_string(browser.to_yaml, log_prefix)
     end
 
     rerun_feature = File.exist?(rerun_file) ? File.read(rerun_file).split.join(' ') : feature
@@ -613,17 +574,17 @@ def run_feature(browser, feature, options)
 
   $lock.synchronize do
     if feature_succeeded
-      log_success prefix_string(Time.now, log_prefix)
-      log_success prefix_string(browser.to_yaml, log_prefix)
-      log_success prefix_string(output_stdout, log_prefix)
-      log_success prefix_string(output_stderr, log_prefix)
+      @logger.log_success prefix_string(Time.now, log_prefix)
+      @logger.log_success prefix_string(browser.to_yaml, log_prefix)
+      @logger.log_success prefix_string(output_stdout, log_prefix)
+      @logger.log_success prefix_string(output_stderr, log_prefix)
     else
-      log_error prefix_string(Time.now, log_prefix)
-      log_error prefix_string(browser.to_yaml, log_prefix)
-      log_error prefix_string(log_link, log_prefix)
-      log_error prefix_string(output_stdout, log_prefix)
-      log_error prefix_string(output_stderr, log_prefix)
-      log_browser_error prefix_string(browser.to_yaml, log_prefix)
+      @logger.log_error prefix_string(Time.now, log_prefix)
+      @logger.log_error prefix_string(browser.to_yaml, log_prefix)
+      @logger.log_error prefix_string(log_link, log_prefix)
+      @logger.log_error prefix_string(output_stdout, log_prefix)
+      @logger.log_error prefix_string(output_stderr, log_prefix)
+      @logger.log_browser_error prefix_string(browser.to_yaml, log_prefix)
     end
   end
 
