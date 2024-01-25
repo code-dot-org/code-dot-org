@@ -4,14 +4,54 @@
       "name": "page1",
       "elements": [
         {
+          "type": "panel",
+          "name": "testing_panel",
+          "visible": true,
+          "title": " ",
+          "elements": [
+            {
+              "type": "html",
+              "name": "testing_warning",
+              "html": "<h2 style='background-color: yellow'>Panel for variable testing (hide before shipping)</h2>"
+            },
+            {
+              "type": "radiogroup",
+              "name": "survey_variable",
+              "defaultValueExpression": "{unit1}",
+              "visible": true,
+              "choices": [
+                {
+                  "value": "unit1",
+                  "text": "Unit 1: Introduction to Computer Science"
+                },
+                {
+                  "value": "unit2",
+                  "text": "Unit 2: Creativity with Code"
+                }
+              ]
+            },
+            {
+              "type": "html",
+              "name": "variable_testing",
+              "visible": true,
+              "html": "<h3>variables</h3>\n<p>Test to make sure variables are working as expected - make invisible when live</p><p><li>survey_variable = {survey_variable}</p>"
+            },
+            {
+              "type": "html",
+              "name": "testing_warning",
+              "html": "<p style='background-color: yellow; text-align:center'>-- End of testing panel -- </p>"
+            }
+          ]
+        },
+        {
           "type": "html",
-          "name": "question1",
-          "html": "<h1>Code.org Self-paced Online Professional Learning - AI/ML<h3><strong>Post-Module Survey </strong></h3><p><strong>Thanks for learning with us!</strong></p>\n\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>AI/ML Post-Module Survey</h2>"
+          "name": "Intro_csb",
+          "html": "<h1>Code.org Self-paced Online Professional Learning - Computer Science Basics</p> <h3><strong>Post-Unit Survey</strong></h3><p><strong>Thanks for learning with us!</strong></p>\n\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>Computer Science Basics -  {survey_variable}</p>Post-Unit Survey</h2>"
         },
         {
           "type": "radiogroup",
-          "name": "aiml_better_understanding",
-          "title": "After completing this module, I have a better understanding of AI and machine learning. ",
+          "name": "csb_better_understanding",
+          "title": "After completing this module, I have a better understanding of basic computer science concepts.",
           "choices": [
             {
               "value": "1",
@@ -37,8 +77,8 @@
         },
         {
           "type": "radiogroup",
-          "name": "aiml_comfort_supporting_students",
-          "title": "After completing this module, I am more comfortable in my ability to support students in training machine learning models in AI Lab. ",
+          "name": "csb_comfort_supporting_students_spritelab",
+          "title": "After completing this module, I am more comfortable in my ability to support students learning introductory computer science concepts.",
           "choices": [
             {
               "value": "1",
@@ -64,8 +104,8 @@
         },
         {
           "type": "radiogroup",
-          "name": "aiml_know_what_students_learn",
-          "title": "After completing this module, I have a basic understanding of what my students will learn in Code.org’s AI and Machine Learning unit. ",
+          "name": "csb_know_what_students_learn",
+          "title": "After completing this module, I have a basic understanding of what my students will learn in Code.org’s K-5 curriculum.",
           "choices": [
             {
               "value": "1",
@@ -91,8 +131,8 @@
         },
         {
           "type": "radiogroup",
-          "name": "aiml_comfort_ability_to_teach",
-          "title": "After completing this module, I feel more comfortable in my ability to teach Code.org’s AI and Machine Learning curriculum than I did before starting this professional learning course. ",
+          "name": "csb_comfort_ability_to_teach",
+          "title": "After completing this module, I feel more comfortable in my ability to teach Code.org’s K-5 curriculum than I did before starting this professional learning course. ",
           "choices": [
             {
               "value": "1",
@@ -118,7 +158,7 @@
         },
         {
           "type": "matrix",
-          "name": "aiml_supported_learning",
+          "name": "csb_supported_learning",
           "title": "Which of the following supported your learning the most? Rank the options from most helpful (5) to least helpful (1). Please apply each rank (1-5) exactly once; don't give the same ranking to two different items.",
           "columns": [
             {
@@ -153,7 +193,7 @@
             },
             {
               "value": "making_a_plan",
-              "text": "Making a plan related to preparing to teach CS Discoveries."
+              "text": "Making a plan to prepare to teach computer science."
             },
             {
               "value": "check_for_understanding",
@@ -163,7 +203,7 @@
         },
         {
           "type": "radiogroup",
-          "name": "aiml_how_long_to_complete",
+          "name": "csb_how_long_to_complete",
           "title": "How long did you spend completing this module?",
           "choices": [
             {
@@ -190,19 +230,19 @@
         },
         {
           "type": "rating",
-          "name": "aiml_how_likely_attend_inperson",
-          "title": "After engaging in this self-paced professional learning module, how likely are you to attend a facilitator-led professional development workshop if one were offered in your region? ",
+          "name": "csb_how_likely_attend_inperson",
+          "title": "After engaging in this self-paced professional learning module, how likely are you to attend a facilitator-led professional development workshop for teaching Code.org's K-5 curriculum, if one were offered in your region? ",
           "minRateDescription": "Not likely at all",
           "maxRateDescription": "Very likely"
         },
         {
           "type": "comment",
-          "name": "aiml_other_feedback",
+          "name": "csb_other_feedback",
           "title": "Do you have any feedback about this module that you would like to share with the Code.org team? "
         },
         {
           "type": "radiogroup",
-          "name": "aiml_participate_focus_group",
+          "name": "csb_participate_focus_group",
           "title": "OPTIONAL: Would you be willing to participate in a follow-up focus group to provide direct feedback about this online course?",
           "choices": [
             {
@@ -217,15 +257,14 @@
         },
         {
           "type": "text",
-          "name": "aiml_email_focus_group",
+          "name": "csb_email_focus_group",
           "title": "Great! Please share an email address where we may contact you.",
-          "visibleIf": "{aiml_participate_focus_group}='yes'"
+          "visibleIf": "{csb_participate_focus_group}='yes'"
         },
         {
           "type": "library_item",
           "library_name": "surveys/pd/workshop_elements",
           "library_version": 0,
-          "baker_comment": "Update this after learning what thank you page is actually",
           "name": "thank_you_heading"
         }
       ]
