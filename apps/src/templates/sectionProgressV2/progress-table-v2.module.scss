@@ -15,10 +15,14 @@
   display: flex;
   flex-direction: row;
 
-  :first-child {
+  &Loading {
+    overflow-x: hidden;
+  }
+
+  .expandedColumn:first-child {
     margin-inline-start: 0;
   }
-  :last-child {
+  .expandedColumn:last-child {
     margin-inline-end: 0;
   }
 }
@@ -43,6 +47,16 @@
 
   &Skeleton {
     vertical-align: middle;
+  }
+  
+  &Level {
+    min-width: 52px;
+    max-width: 52px;  
+    text-align: center;
+    height: 47px;
+    line-height: 47px;
+    // remove overflow after data icons are added
+    overflow-x: hidden;
   }
 }
 
@@ -88,6 +102,22 @@
     border-bottom: 1px solid $light_gray_200;
     border-right: 1px solid $light_gray_200;
     margin-bottom: 32px;
+    text-align: center;
+  }
+  
+  &HeaderCaret {
+    margin-inline-end: 12px;
+  }
+
+  &SkeletonHeaderCell {
+    width: 75%;
+    vertical-align: middle;
+  }
+
+  &SkeletonCell {
+    width: 1em;
+    border-radius: 100%;
+    vertical-align: middle;
   }
 
   &DataColumn {
@@ -133,6 +163,19 @@
 
   &Column + &Column {
     margin-left: 0;
+  }
+
+  &Table {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid $light_gray_200;
+    border-right: 1px solid $light_gray_200;
+    width: fit-content;
+  }
+
+  &LevelColumn {
+    display: flex;
+    flex-direction: column;
   }
 }
 
