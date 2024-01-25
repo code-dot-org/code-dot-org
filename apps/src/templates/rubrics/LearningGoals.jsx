@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import classnames from 'classnames';
 import style from './rubrics.module.scss';
-import {singleton as studioApp} from '../../StudioApp';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
+import EditorAnnotator from '@cdo/apps/EditorAnnotator';
 import {
   learningGoalShape,
   reportingDataShape,
@@ -32,9 +33,9 @@ const INVALID_UNDERSTANDING = -1;
 /**
  * Clear prior line annotations
  */
-export function clearAnnotations() {
-  studioApp().clearAnnotations();
-  studioApp().clearHighlightedLines();
+export function clearAnnotations(annotator) {
+  annotator.clearAnnotations();
+  annotator.clearHighlightedLines();
 }
 
 /**
@@ -173,7 +174,7 @@ export function findCodeRegion(code, lines, snippet) {
  *
  * @param {string} observations - A text block described above.
  */
-export function annotateLines(observations) {
+export function annotateLines(observations, annotator) {
   // Get a reference to all the whitespaced lines of code
   const code = getAnonymizedCode();
   const lines = code.split('\n');
@@ -217,17 +218,17 @@ export function annotateLines(observations) {
       // Annotate that first line and highlight all lines, if they were found
       if (lineNumber && lastLineNumber) {
         found = true;
-        studioApp().annotateLine(message, lineNumber);
+        annotator.annotateLine(message, lineNumber);
         for (let i = lineNumber; i <= lastLineNumber; i++) {
-          studioApp().highlightLine(i);
+          annotator.highlightLine(i);
         }
       }
     }
 
     if (!found && hasSnippet) {
-      studioApp().annotateLine(message, lineNumber);
+      annotator.annotateLine(message, lineNumber);
       for (let i = lineNumber; i <= lastLineNumber; i++) {
-        studioApp().highlightLine(i);
+        annotator.highlightLine(i);
       }
     }
   }
@@ -262,6 +263,9 @@ export default function LearningGoals({
   const understandingLevels = useRef(
     Array(learningGoals.length).fill(INVALID_UNDERSTANDING)
   );
+
+  // Line annotation service
+  const annotator = new EditorAnnotator(studioApp());
 
   const aiEnabled =
     learningGoals[currentLearningGoal].aiEnabled && teacherHasEnabledAi;
@@ -436,10 +440,10 @@ export default function LearningGoals({
     setCurrentLearningGoal(currentIndex);
 
     // Annotate the lines based on the AI observation
-    clearAnnotations();
+    clearAnnotations(annotator);
     const aiEvalInfo = getAiInfo(learningGoals[currentIndex].id);
     if (!!aiEvalInfo && aiEvalInfo.observations) {
-      annotateLines(aiEvalInfo.observations);
+      annotateLines(aiEvalInfo.observations, annotator);
     }
 
     if (!isStudent) {
