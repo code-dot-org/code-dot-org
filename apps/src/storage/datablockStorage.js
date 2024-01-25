@@ -4,6 +4,43 @@ import _ from 'lodash';
 
 const DatablockStorage = {...FirebaseStorage};
 
+/*
+
+Docs useful to have in here while implementing
+// FIXME: unfirebase, remove this comment before merging PR
+
+Records table:
+
+channelID: VARCHAR(22),
+tableName: VARCHAR(768),
+recordID: INT,
+json: JSON
+Tables table:
+
+channelID: VARCHAR(22),
+tableName: VARCHAR(768),
+columns: JSON,
+isSharedTable: VARCHAR(768), // if it points to a shared/stock table, load records using this table name instead
+columns (JSON) might look like: ['id', 'Word'], note this assumes the columnIDs (like -Mw7ENQB6uKfQYc0kI8U) that are present in Firebase are not actually used. It doesn't look like they are, e.g. firebaseStorage.js references columns by name not by ID.
+
+KeyValuePairs table:
+
+channelID: VARCHAR(22),
+key: VARCHAR(768), 
+value: VARCHAR(4096), -- v3.config.channels.maxPropertySize, see `rules.bolt`
+VARCHAR sizes:
+
+Firebase validation rules:
+
+maxPropertySize:4096 // value length of a key value pair
+maxRecordSize:4096 // max length of a record
+maxTableCount:10 // this doesn't seem to be encorced in rules.bolt?
+maxTableRows: 20000 // number of records inside a table
+maxKeySize: 768 // this is a firebase limit
+
+Stock/Shared tables are also stored in Records and Tables but use a fixed channelID: channelID: shared
+*/
+
 function getAuthToken() {
   const tokenDOM = document.querySelector('meta[name="csrf-token"]');
   if (!tokenDOM) {
@@ -122,9 +159,14 @@ function filterRecords(recordList, searchParams) {
   });
 }
 
-async function readRecords(tableName, searchParams) {
+async function readRecords({
+  tableName,
+  searchParams = false,
+  isSharedTable = false,
+}) {
   const response = await _fetch('read_records', 'GET', {
     table_name: tableName,
+    is_shared_table: isSharedTable,
   });
   const json = await response.json();
   return searchParams ? filterRecords(json, searchParams) : json;
@@ -137,7 +179,7 @@ DatablockStorage.readRecords = function (
   onError
 ) {
   console.log('Using the overridden DatablockStorage method readRecords');
-  return readRecords(tableName, searchParams).then(onSuccess, onError);
+  return readRecords({tableName, searchParams}).then(onSuccess, onError);
 };
 
 DatablockStorage.deleteRecord = function (
@@ -168,12 +210,13 @@ DatablockStorage.subscribeToListOfProjectTables = function (
   });
 };
 
-DatablockStorage.subscribeToTable = function (
+function loadTableAndColumns({
   tableName,
+  isSharedTable,
   onColumnsChanged,
-  onRecordsChanged
-) {
-  readRecords(tableName).then(records => {
+  onRecordsChanged,
+}) {
+  readRecords({tableName, isSharedTable}).then(records => {
     console.log('Got a response from readRecords: ', records);
 
     // FIXME: unfirebase, we are currently inferring the columns from the
@@ -194,6 +237,19 @@ DatablockStorage.subscribeToTable = function (
     const recordStrings = records.map(record => JSON.stringify(record));
     onRecordsChanged(recordStrings);
   });
+}
+
+DatablockStorage.subscribeToTable = function (
+  tableName,
+  onColumnsChanged,
+  onRecordsChanged
+) {
+  loadTableAndColumns({
+    tableName,
+    isSharedTable: false,
+    onColumnsChanged,
+    onRecordsChanged,
+  });
 };
 
 DatablockStorage.subscribeToKeyValuePairs = function (onKeyValuePairsChanged) {
@@ -202,6 +258,29 @@ DatablockStorage.subscribeToKeyValuePairs = function (onKeyValuePairsChanged) {
     .then(json => {
       onKeyValuePairsChanged(_.mapValues(json, value => JSON.stringify(value)));
     });
+};
+
+DatablockStorage.previewSharedTable = function (
+  sharedTableName,
+  onColumnsChanged,
+  onRecordsChanged
+) {
+  loadTableAndColumns({
+    tableName: sharedTableName,
+    isSharedTable: true,
+    onColumnsChanged,
+    onRecordsChanged,
+  });
+};
+
+DatablockStorage.unsubscribeFromTable = function (tableName) {
+  // Used by FirebaseStorage, but we don't need it for DatablockStorage
+  // since we don't hold subscriptions.
+};
+
+DatablockStorage.unsubscribeFromKeyValuePairs = function () {
+  // Used by FirebaseStorage, but we don't need it for DatablockStorage
+  // since we don't hold subscriptions.
 };
 
 export function initDatablockStorage(config) {

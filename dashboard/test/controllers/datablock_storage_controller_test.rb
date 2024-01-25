@@ -1148,12 +1148,12 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   # });
 
   test "get_table_names" do
-    # Implement a test for get_table_names
-    assert_equal True, False
+    # FIXME: Implement a test for get_table_names
+    assert_equal true, false
   end
 
   test "get_key_values" do
-    # Implement a test for get_key_values
-    assert_equal True, False
+    # FIXME: Implement a test for get_key_values
+    assert_equal true, false
   end
 end
