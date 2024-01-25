@@ -36,7 +36,7 @@ const ExpandedCurriculumCatalogCard = ({
   imageAltText,
   availableResources,
   isSignedOut,
-  isTeacher,
+  userType,
 }) => {
   const expandedCardRef = useRef(null);
   const iconData = {
@@ -53,6 +53,8 @@ const ExpandedCurriculumCatalogCard = ({
       color: style.circleXmark,
     },
   };
+
+  const isTeacher = userType === 'teacher';
 
   const devices = JSON.parse(deviceCompatibility);
 
@@ -297,7 +299,7 @@ ExpandedCurriculumCatalogCard.propTypes = {
   imageSrc: PropTypes.string,
   imageAltText: PropTypes.string,
   availableResources: PropTypes.object,
-  isTeacher: PropTypes.bool.isRequired,
+  userType: PropTypes.string,
   isSignedOut: PropTypes.bool.isRequired,
 };
 export default ExpandedCurriculumCatalogCard;

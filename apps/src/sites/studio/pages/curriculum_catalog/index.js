@@ -18,7 +18,7 @@ $(document).ready(function () {
     languageNativeName,
     sections,
     isSignedOut,
-    isTeacher,
+    userType,
     isInUS,
   } = catalogData;
 
@@ -36,7 +36,7 @@ $(document).ready(function () {
         isEnglish={isEnglish}
         languageNativeName={languageNativeName}
         isSignedOut={isSignedOut}
-        isTeacher={isTeacher}
+        userType={userType}
         isInUS={isInUS}
       />
     </Provider>,
