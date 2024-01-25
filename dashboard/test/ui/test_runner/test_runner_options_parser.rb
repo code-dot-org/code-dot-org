@@ -24,29 +24,9 @@ class TestRunnerOptionsParser
   end
 
   def select_browser_configs
-    if @options.local
-      return [{
-        'browser' => @options.browser || 'chrome',
-                'name' => 'LocalBrowser',
-                'browserName' => @options.browser || 'chrome',
-                'version' => @options.browser_version || 'latest'
-      }]
-    end
-
-    browsers = JSON.parse(File.read(File.join(TestRunnerConfigVariables::UI_TEST_DIR, 'browsers.json')))
-
-    if @options.config
-      @options.config.map do |name|
-        browsers.detect {|b| b['name'] == name}.tap do |browser|
-          unless browser
-            puts "No config exists with name #{name}"
-            exit
-          end
-        end
-      end
-    else
-      browsers # Use all of them
-    end
+    return local_browser_config if @options.local
+    browsers = load_browser_configs
+    @options.config ? select_configured_browsers(browsers) : browsers
   end
 
   private
@@ -229,6 +209,35 @@ class TestRunnerOptionsParser
       @options.pegasus_db_access = /test/.match?(@options.pegasus_domain)
       @options.dashboard_db_access = /test/.match?(@options.dashboard_domain)
     end
+  end
+
+  def local_browser_config
+    [{
+      'browser' => @options.browser || 'chrome',
+       'name' => 'LocalBrowser',
+       'browserName' => @options.browser || 'chrome',
+       'version' => @options.browser_version || 'latest'
+    }]
+  end
+
+  def load_browser_configs
+    file_path = File.join(TestRunnerConfigVariables::UI_TEST_DIR, 'browsers.json')
+    JSON.parse(File.read(file_path))
+  end
+
+  def select_configured_browsers(browsers)
+    @options.config.map do |config_name|
+      find_browser_config(browsers, config_name) or handle_missing_config(config_name)
+    end
+  end
+
+  def find_browser_config(browsers, config_name)
+    browsers.detect {|b| b['name'] == config_name}
+  end
+
+  def handle_missing_config(config_name)
+    puts "No config exists with name #{config_name}"
+    exit # Consider raising an exception instead of exiting directly
   end
 
   def parse_options
