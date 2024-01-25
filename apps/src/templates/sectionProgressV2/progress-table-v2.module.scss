@@ -133,21 +133,27 @@
     min-width: 80px;
 
     &LessonCell {
-      height: 42px;
+      height: 43px;
       line-height: 42px;
-      min-width: 64px;
-      border-bottom: 1px solid $light_gray_200;
-      border-right: 1px solid $light_gray_200;
+      min-width: 82px;
+      border: 0;
       background-color: $light_primary_500;
-      padding-inline-start: 16px;
       color: $light_white;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    
+    &LessonText {
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow-x: hidden;
+      margin-inline-end: 8px;
     }
 
     &Caret {
       margin-inline-end: 12px;
+      margin-inline-start: 16px;
     }
 
     &SecondRow {
@@ -158,11 +164,11 @@
     }
 
     &LevelCell {
+      // If width is updated, must also update `LEVEL_HEADER_WIDTH` in ExpandedProgressDataColumn.jsx
       min-width: 52px;
       text-align: center;
       height: 32px;
       line-height: 32px;
-      border-top: 0;
     }
   }
   &Column {

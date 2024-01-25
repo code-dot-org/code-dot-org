@@ -9,6 +9,9 @@ import FontAwesome from '../FontAwesome';
 import LevelDataCell from './LevelDataCell';
 import i18n from '@cdo/locale';
 
+// see styles.expandedHeaderLevelCell{min-width} + 1px border
+const LEVEL_HEADER_WIDTH = 53;
+
 function ExpandedProgressDataColumn({
   lesson,
   levelProgressByStudent,
@@ -16,12 +19,15 @@ function ExpandedProgressDataColumn({
   removeExpandedLesson,
 }) {
   const header = React.useMemo(() => {
-    // If there are only 2 levels, we only show the number to make the text fit the cell.
+    // If there are only 2 levels, we only show the number so that the text fits the cell.
     const headerText =
-      i18n.lesson() + ' ' + lesson.relative_position + ': ' + lesson.name;
-    // lesson.levels.length < 3
-    //   ? lesson.relative_position
-    //   : i18n.lesson() + ' ' + lesson.relative_position + ': ' + lesson.name;
+      lesson.levels.length < 3
+        ? lesson.relative_position
+        : i18n.lesson() + ' ' + lesson.relative_position + ': ' + lesson.name;
+
+    // Manual width is necessary so that overflow text is hidden and lesson header exactly fits levels.
+    // Add one for border. Each level cell has a 1px border on the right and there i.
+    const width = lesson.levels.length * LEVEL_HEADER_WIDTH + 1 + 'px';
     return (
       <div className={styles.expandedHeader}>
         <div
@@ -29,13 +35,15 @@ function ExpandedProgressDataColumn({
             styles.gridBox,
             styles.expandedHeaderLessonCell
           )}
+          style={{width}}
           onClick={() => removeExpandedLesson(lesson.id)}
+          aria-label={headerText}
         >
           <FontAwesome
             icon="caret-down"
             className={styles.expandedHeaderCaret}
           />
-          {headerText}
+          <div className={styles.expandedHeaderLessonText}>{headerText}</div>
         </div>
         <div className={styles.expandedHeaderSecondRow}>
           {lesson.levels.map(level => (
