@@ -17,7 +17,10 @@ const SingleTemplate: Story<CheckboxDropdownProps> = args => {
     (args.checkedOptions = [] as string[])
   );
   const onChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => e => {
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      // e.stopPropagation();
+      // e.preventDefault();
+      console.log(e);
       if (e.target.checked) {
         setValues([...selectedValues, e.target.value]);
       } else {
@@ -25,7 +28,21 @@ const SingleTemplate: Story<CheckboxDropdownProps> = args => {
       }
       args.onChange(e);
     },
-    [args, selectedValues]
+    [args, selectedValues, setValues]
+  );
+  const onSelectAll = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      setValues(args.allOptions.map(option => option.value));
+      args.onSelectAll(e);
+    },
+    [args]
+  );
+  const onClearAll = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      setValues([]);
+      args.onClearAll(e);
+    },
+    [args]
   );
 
   return (
@@ -33,6 +50,8 @@ const SingleTemplate: Story<CheckboxDropdownProps> = args => {
       {...args}
       checkedOptions={selectedValues}
       onChange={onChange}
+      onSelectAll={onSelectAll}
+      onClearAll={onClearAll}
     />
   );
 };
@@ -58,9 +77,17 @@ const MultipleTemplate: Story<{
             });
           }
 
-          const onChange = (e: React.ChangeEvent<HTMLInputElement>) => e => {
+          const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+            // e.stopPropagation();
+            console.log(e);
             if (e.target.checked) {
-              setValues({...values, [componentArg.name]: e.target.value});
+              setValues({
+                ...values,
+                [componentArg.name]: [
+                  ...values[componentArg.name],
+                  e.target.value,
+                ],
+              });
             } else {
               setValues({
                 ...values,
@@ -71,6 +98,19 @@ const MultipleTemplate: Story<{
             }
             componentArg.onChange(e);
           };
+          const onSelectAll = (e: React.MouseEvent<HTMLButtonElement>) => {
+            setValues({
+              ...values,
+              [componentArg.name]: componentArg.allOptions.map(
+                option => option.value
+              ),
+            });
+            componentArg.onSelectAll(e);
+          };
+          const onClearAll = (e: React.MouseEvent<HTMLButtonElement>) => {
+            setValues({...values, [componentArg.name]: []});
+            componentArg.onClearAll(e);
+          };
 
           return componentArg.color === 'white' ? (
             <div style={{background: 'black', padding: 10}}>
@@ -79,6 +119,8 @@ const MultipleTemplate: Story<{
                 {...componentArg}
                 checkedOptions={values[componentArg.name]}
                 onChange={onChange}
+                onSelectAll={onSelectAll}
+                onClearAll={onClearAll}
               />
             </div>
           ) : (
@@ -89,6 +131,8 @@ const MultipleTemplate: Story<{
                 values[componentArg.name] || componentArg.checkedOptions
               }
               onChange={onChange}
+              onSelectAll={onSelectAll}
+              onClearAll={onClearAll}
             />
           );
         })}
@@ -107,6 +151,8 @@ DefaultCheckboxDropdown.args = {
   labelText: 'Default Dropdown',
   checkedOptions: ['option-1'],
   onChange: args => console.log(args, args.target.value),
+  onSelectAll: args => console.log(args),
+  onClearAll: args => console.log(args),
   size: 'm',
 };
 
@@ -120,6 +166,8 @@ DisabledCheckboxDropdown.args = {
   checkedOptions: ['option-1'],
   labelText: 'Disabled Dropdown',
   onChange: args => console.log(args),
+  onSelectAll: args => console.log(args),
+  onClearAll: args => console.log(args),
   disabled: true,
   size: 'm',
 };
@@ -136,6 +184,8 @@ GroupOfCheckboxDropdownColors.args = {
       checkedOptions: ['option-1'],
       labelText: 'White Dropdown',
       onChange: args => console.log(args),
+      onSelectAll: args => console.log(args),
+      onClearAll: args => console.log(args),
       size: 'm',
       color: 'white',
     },
@@ -148,6 +198,8 @@ GroupOfCheckboxDropdownColors.args = {
       checkedOptions: ['option-1'],
       labelText: 'Black Dropdown',
       onChange: args => console.log(args),
+      onSelectAll: args => console.log(args),
+      onClearAll: args => console.log(args),
       size: 'm',
       color: 'black',
     },
@@ -165,6 +217,8 @@ GroupOfSizesOfCheckboxDropdown.args = {
       checkedOptions: ['option-1'],
       labelText: 'XS Dropdown',
       onChange: args => console.log(args),
+      onSelectAll: args => console.log(args),
+      onClearAll: args => console.log(args),
       size: 'xs',
     },
     {
@@ -176,6 +230,8 @@ GroupOfSizesOfCheckboxDropdown.args = {
       checkedOptions: ['option-1'],
       labelText: 'S Dropdown',
       onChange: args => console.log(args),
+      onSelectAll: args => console.log(args),
+      onClearAll: args => console.log(args),
       size: 's',
     },
     {
@@ -187,6 +243,8 @@ GroupOfSizesOfCheckboxDropdown.args = {
       checkedOptions: ['option-1'],
       labelText: 'M Dropdown',
       onChange: args => console.log(args),
+      onSelectAll: args => console.log(args),
+      onClearAll: args => console.log(args),
       size: 'm',
     },
     {
@@ -198,6 +256,8 @@ GroupOfSizesOfCheckboxDropdown.args = {
       checkedOptions: ['option-1'],
       labelText: 'L Dropdown',
       onChange: args => console.log(args),
+      onSelectAll: args => console.log(args),
+      onClearAll: args => console.log(args),
       size: 'l',
     },
   ],
