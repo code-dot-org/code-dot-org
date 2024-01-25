@@ -57,11 +57,17 @@ function initPage() {
     );
   }
 
-  const aiTutorFabMountPoint = document.getElementById(
-    'ai-tutor-fab-mount-point'
-  );
-  if (aiTutorFabMountPoint) {
-    ReactDOM.render(<AITutorFloatingActionButton />, aiTutorFabMountPoint);
+  if (hasScriptData('script[data-aitutorleveldata]')) {
+    const aiTutorLevelData = getScriptData('aitutorleveldata');
+    const aiTutorFabMountPoint = document.getElementById(
+      'ai-tutor-fab-mount-point'
+    );
+    if (aiTutorFabMountPoint) {
+      ReactDOM.render(
+        <AITutorFloatingActionButton level={aiTutorLevelData} />,
+        aiTutorFabMountPoint
+      );
+    }
   }
 
   const inRubricsPilot =

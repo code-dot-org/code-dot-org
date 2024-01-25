@@ -9,6 +9,7 @@ import ValidationTutor from './validationTutor';
 import GeneralChatTutor from './generalChatTutor';
 import {addAIResponse} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {RadioButtonsGroup} from '@cdo/apps/componentLibrary/radioButton';
+import {levelShape} from './aiTutorShapes';
 const icon = require('@cdo/static/ai-bot.png');
 
 const AITutorPanel = ({level, open}) => {
@@ -69,11 +70,7 @@ const AITutorPanel = ({level, open}) => {
 };
 
 AITutorPanel.propTypes = {
-  level: PropTypes.shape({
-    id: PropTypes.number,
-    type: PropTypes.string,
-    hasValidation: PropTypes.bool,
-  }),
+  level: levelShape,
   open: PropTypes.bool,
 };
 
