@@ -47,15 +47,11 @@ const ProgressContainer: React.FunctionComponent<ProgressContainerProps> = ({
     (state: {lab: LabState}) => state.lab.levelProperties?.levelData
   );
 
-  const validationPassIndex = useSelector(
-    (state: {lab: LabState}) => state.lab.validationPassIndex
-  );
-
   useEffect(() => {
     progressManager.current.onLevelChange(
       levelData as ProjectLevelData | undefined
     );
-  }, [levelData, validationPassIndex]);
+  }, [levelData]);
 
   return (
     <ProgressManagerContext.Provider value={progressManager.current}>

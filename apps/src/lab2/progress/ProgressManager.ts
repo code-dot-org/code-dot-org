@@ -17,12 +17,14 @@ export interface ValidationState {
   hasConditions: boolean;
   satisfied: boolean;
   message: string | null;
+  index: number;
 }
 
 export const getInitialValidationState: () => ValidationState = () => ({
   hasConditions: false,
   satisfied: false,
   message: null,
+  index: 0,
 });
 
 export default class ProgressManager {
@@ -43,9 +45,7 @@ export default class ProgressManager {
    */
   onLevelChange(levelData?: ProjectLevelData) {
     this.levelData = levelData;
-    this.resetValidation(
-      (levelData?.validations && levelData.validations.length > 0) || false
-    );
+    this.resetValidation();
   }
 
   setValidator(validator: Validator) {
@@ -96,16 +96,21 @@ export default class ProgressManager {
     this.onProgressChange();
   }
 
-  private resetValidation(hasConditions: boolean) {
+  resetValidation() {
     if (this.validator) {
       // Give the lab the chance to clear accumulated satisfied conditions.
       this.validator.clear();
     }
 
+    const hasConditions =
+      (this.levelData?.validations && this.levelData.validations.length > 0) ||
+      false;
+
     this.currentValidationState = {
       hasConditions,
       satisfied: false,
       message: null,
+      index: this.currentValidationState.index + 1,
     };
 
     this.onProgressChange();
