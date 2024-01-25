@@ -1,25 +1,19 @@
-import React, {useEffect, useRef} from 'react';
-import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import classNames from 'classnames';
-import {EditorView, ViewUpdate} from '@codemirror/view';
-import {EditorState} from '@codemirror/state';
-import {darkMode} from '../javalab/editorThemes';
+import React from 'react';
+import {darkMode} from '@cdo/apps/lab2/views/components/editor/editorThemes';
 import {python} from '@codemirror/lang-python';
 import moduleStyles from './python-editor.module.scss';
 import {useDispatch, useSelector} from 'react-redux';
 import {PythonlabState, resetOutput, setCode} from './pythonlabRedux';
-import Button from '../templates/Button';
+import Button from '@cdo/apps/templates/Button';
 import {runPythonCode} from './pyodideRunner';
 import {useFetch} from '@cdo/apps/util/useFetch';
-import {editorConfig} from '@cdo/apps/lab2/views/components/editorConfig';
-import CodeEditor from '../lab2/views/components/CodeEditor';
+import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 
 interface PermissionResponse {
   permissions: string[];
 }
 
 const PythonEditor: React.FunctionComponent = () => {
-  //const editorRef = useRef<HTMLDivElement>(null);
   const code = useSelector(
     (state: {pythonlab: PythonlabState}) => state.pythonlab.code
   );
@@ -50,7 +44,7 @@ const PythonEditor: React.FunctionComponent = () => {
     <div className={moduleStyles.editorContainer}>
       <CodeEditor
         onCodeChange={onCodeUpdate}
-        startCode={code}
+        startCode={'print("Hello world!")'}
         editorConfigExtensions={editorExtensions}
       />
       <div>

@@ -2,9 +2,10 @@ import React, {useEffect, useRef, useState} from 'react';
 import classNames from 'classnames';
 import {EditorState, Extension} from '@codemirror/state';
 import {EditorView, ViewUpdate} from '@codemirror/view';
-import PanelContainer from './PanelContainer';
+import PanelContainer from '../PanelContainer';
 import {useDispatch} from 'react-redux';
 import {editorConfig} from './editorConfig';
+import {darkMode} from './editorThemes';
 
 interface CodeEditorProps {
   onCodeChange: (code: string) => void;
@@ -34,8 +35,9 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
 
     const editorExtensions = [
       ...editorConfig,
-      ...editorConfigExtensions,
+      darkMode,
       onEditorUpdate,
+      ...editorConfigExtensions,
     ];
     new EditorView({
       state: EditorState.create({
