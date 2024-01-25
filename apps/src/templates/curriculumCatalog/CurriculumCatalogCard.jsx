@@ -177,6 +177,7 @@ const CustomizableCurriculumCatalogCard = ({
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
+  const isTeacherOrSignedOut = isSignedOut || isTeacher;
 
   const handleClickAssign = cardType => {
     setIsAssignDialogOpen(true);
@@ -228,11 +229,6 @@ const CustomizableCurriculumCatalogCard = ({
     }
   };
 
-  const quickViewButtonColor =
-    !isSignedOut && !isTeacher
-      ? Button.ButtonColor.brandSecondaryDefault
-      : Button.ButtonColor.neutralDark;
-
   return (
     <div className={style.cardsContainer}>
       <div>
@@ -277,7 +273,7 @@ const CustomizableCurriculumCatalogCard = ({
               )}
             >
               <Button
-                color={quickViewButtonColor}
+                color={Button.ButtonColor.neutralDark}
                 type="button"
                 onClick={onQuickViewClick}
                 aria-label={quickViewButtonDescription}
@@ -286,16 +282,20 @@ const CustomizableCurriculumCatalogCard = ({
               />
               <Button
                 __useDeprecatedTag
-                color={quickViewButtonColor}
+                color={Button.ButtonColor.neutralDark}
                 type="button"
                 href={pathToCourse}
-                aria-label={i18n.learnMoreDescription({
-                  course_name: courseDisplayName,
-                })}
-                text={i18n.learnMore()}
+                aria-label={
+                  isTeacherOrSignedOut
+                    ? i18n.learnMoreDescription({
+                        course_name: courseDisplayName,
+                      })
+                    : i18n.tryNow()
+                }
+                text={isTeacherOrSignedOut ? i18n.learnMore() : i18n.tryNow()}
                 className={`${style.buttonFlex} ${style.learnMoreButton}`}
               />
-              {(isSignedOut || isTeacher) && (
+              {isTeacherOrSignedOut && (
                 <Button
                   color={Button.ButtonColor.brandSecondaryDefault}
                   type="button"
