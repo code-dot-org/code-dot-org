@@ -1,5 +1,5 @@
 import React from 'react';
-import {mount, shallow} from 'enzyme';
+import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import * as progressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
@@ -40,14 +40,9 @@ describe('SectionProgressV2', () => {
     );
   };
 
-  it('loads progress on mount', () => {
-    mount(<UnconnectedSectionProgressV2 {...DEFAULT_PROPS} unitData={null} />);
-    expect(progressLoader.loadUnitProgress).to.have.been.calledOnce;
-  });
-
-  it('does not show table if loading', () => {
+  it('shows skeleton if loading', () => {
     const wrapper = setUp({isLoadingProgress: true});
-    expect(wrapper.find(ProgressTableV2)).to.have.length(0);
+    expect(wrapper.find(ProgressTableV2).props().isSkeleton).to.be.true;
   });
 
   it('shows students and unit selector', () => {

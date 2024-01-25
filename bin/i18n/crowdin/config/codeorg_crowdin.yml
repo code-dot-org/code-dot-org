@@ -62,24 +62,5 @@ files: [
   # e.g. "update_as_unapproved" or "update_without_changes"
   #
   "update_option" : "update_as_unapproved"
- }, {
-  # config for json content
-  "source" : "/**/*.json",
-  "translation" : "/%language%/**/%original_file_name%",
-  "ignore" : [
-    "/animations/**",
-    "/blockly-core/**",
-    "/blockly-mooc/**",
-    "/course_content/**",
-    "/curriculum_content/**",
-    "/dashboard/**",
-    "/docs/**",
-    "/external-sources/**",
-    "/hourofcode/**",
-    "/markdown/**",
-    "/pegasus/**",
-    "/standards/**",
-  ],
-  "update_option" : "update_as_unapproved"
  }
 ]
