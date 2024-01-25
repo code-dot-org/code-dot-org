@@ -778,7 +778,6 @@
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
-  "debugMakerToolkit": "Check out our general [Maker Toolkit support article](https://codeorg.zendesk.com/hc/en-us/articles/115003407851) to get help debugging common issues.",
   "debugWatchHeader": "Watchers",
   "debugShowWatchHeader": "Show Watchers",
   "debugWatchNotAvailable": "<not available>",
