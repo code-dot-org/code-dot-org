@@ -70,7 +70,7 @@ def main
   status = 0
 
   log = RakeUtils.capture do
-    ChatClient.log "about to build"
+    ChatClient.log "Starting build"
     status = CiBuilder.build
   rescue => exception
     status = "Error: #{exception.message}\n#{CDO.backtrace exception}"
