@@ -64,7 +64,6 @@ rescue Exception => exception
 end
 
 def main
-  ChatClient.log "hello, starting build"
   start_time = Time.now
   # Run the build command and exit if it didn't do anything.
   status = 0
