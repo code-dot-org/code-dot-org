@@ -125,8 +125,10 @@ export default class FunctionEditor {
   }
 
   hide() {
-    // If keyboard navigation was on, enable it on the main workspace
+    // If keyboard navigation was on, enable it on the primary workspace
     if (this.editorWorkspace.keyboardAccessibilityMode) {
+      // Disable it on the current workspace so there's no chance of
+      // controlling it accidentally while it is hidden.
       Blockly.navigationController.disable(this.editorWorkspace);
       Blockly.navigationController.enable(this.primaryWorkspace);
     }
@@ -254,6 +256,8 @@ export default class FunctionEditor {
       this.editorWorkspace.keyboardAccessibilityMode ||
       this.primaryWorkspace.keyboardAccessibilityMode
     ) {
+      // Disable it on the primary workspace so there's no chance of
+      // controlling it accidentally while the function editor is open.
       Blockly.navigationController.disable(this.primaryWorkspace);
       Blockly.navigationController.enable(this.editorWorkspace);
       // If this editor was already open (e.g. changing from one function to another)
