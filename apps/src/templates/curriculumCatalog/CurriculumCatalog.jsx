@@ -19,7 +19,7 @@ const CurriculumCatalog = ({
   languageNativeName,
   isInUS,
   isSignedOut,
-  isTeacher,
+  userType,
   ...props
 }) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
@@ -142,7 +142,7 @@ const CurriculumCatalog = ({
                   isInUS={isInUS}
                   availableResources={available_resources}
                   isSignedOut={isSignedOut}
-                  isTeacher={isTeacher}
+                  userType={userType}
                   {...props}
                 />
               )
@@ -212,7 +212,7 @@ CurriculumCatalog.propTypes = {
   languageNativeName: PropTypes.string.isRequired,
   isInUS: PropTypes.bool.isRequired,
   isSignedOut: PropTypes.bool.isRequired,
-  isTeacher: PropTypes.bool.isRequired,
+  userType: PropTypes.string,
 };
 
 export default CurriculumCatalog;

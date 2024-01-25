@@ -53,7 +53,7 @@ const CurriculumCatalogCard = ({
   isInUS,
   availableResources,
   isSignedOut,
-  isTeacher,
+  userType,
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
@@ -83,9 +83,9 @@ const CurriculumCatalogCard = ({
     imageAltText={imageAltText}
     translationIconTitle={i18n.courseInYourLanguage()}
     pathToCourse={`${
-      isSignedOut || isTeacher
-        ? pathToCourse + '?viewAs=Instructor'
-        : pathToCourse
+      userType === 'student'
+        ? pathToCourse
+        : pathToCourse + '?viewAs=Instructor'
     }`}
     onAssignSuccess={onAssignSuccess}
     deviceCompatibility={deviceCompatibility}
@@ -99,7 +99,7 @@ const CurriculumCatalogCard = ({
     isInUS={isInUS}
     availableResources={availableResources}
     isSignedOut={isSignedOut}
-    isTeacher={isTeacher}
+    userType={userType}
     {...props}
   />
 );
@@ -138,7 +138,7 @@ CurriculumCatalogCard.propTypes = {
   onQuickViewClick: PropTypes.func,
   isInUS: PropTypes.bool,
   availableResources: PropTypes.object,
-  isTeacher: PropTypes.bool.isRequired,
+  userType: PropTypes.string,
   isSignedOut: PropTypes.bool.isRequired,
 };
 
@@ -160,7 +160,7 @@ const CustomizableCurriculumCatalogCard = ({
   isEnglish,
   pathToCourse,
   sectionsForDropdown = [],
-  isTeacher,
+  userType,
   isSignedOut,
   onAssignSuccess,
   courseId,
@@ -177,6 +177,7 @@ const CustomizableCurriculumCatalogCard = ({
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
+  const isTeacher = userType === 'teacher';
 
   const handleClickAssign = cardType => {
     setIsAssignDialogOpen(true);
@@ -331,7 +332,7 @@ const CustomizableCurriculumCatalogCard = ({
           imageAltText={imageAltText}
           availableResources={availableResources}
           isSignedOut={isSignedOut}
-          isTeacher={isTeacher}
+          userType={userType}
         />
       )}
     </div>
@@ -358,7 +359,7 @@ CustomizableCurriculumCatalogCard.propTypes = {
   scriptId: PropTypes.number,
   isStandAloneUnit: PropTypes.bool,
   sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
-  isTeacher: PropTypes.bool.isRequired,
+  userType: PropTypes.string,
   isSignedOut: PropTypes.bool.isRequired,
   onAssignSuccess: PropTypes.func,
   // for screenreaders
