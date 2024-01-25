@@ -675,7 +675,7 @@ sq:
             new Behavior(fluttering, []): përplasje krahësh
             new Behavior(jittering, []): nervozë
             new Behavior(moving_east_and_looping, []): lëviz nga lindja dhe loop
-            new Behavior(moving_west_and_looping, []): lëviz nga perëndimi dhe loop
+            new Behavior(moving_west_and_looping, []): lëviz nga perëndimi dhe looping
             new Behavior(patrolling, []): patrullim
             new Behavior(spinning_left, []): rrotullim në të majtë
             new Behavior(spinning_right, []): rrotullim në të djathtë
