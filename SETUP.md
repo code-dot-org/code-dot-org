@@ -7,12 +7,6 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 ## Overview
 
-1. Clone the repo, which also may take a while.
-    - The simplest option is to clone via SSH with: `git clone git@github.com:code-dot-org/code-dot-org.git`
-    - The fastest option is to clone via HTTP with: `git clone https://github.com/code-dot-org/code-dot-org.git`. Although faster than SSH, this option requires you to reauthenticate every time you want to update. You will therefore probably want to switch to SSH after the initial clone with `git remote set-url origin git@github.com:code-dot-org/code-dot-org.git`
-
-1. `cd code-dot-org`
-
 1. Request and Configure AWS access (code.org staff) or configure local secrets (open source contributors). See [Configure AWS Access or Secrets](#configure-aws-access-or-secrets) below. This step is not required until rake is first run below, but staff may wish to submit the request first so its ready when rake is.
     <details> 
       <summary>Troubleshoot: wrong version of ruby</summary>
@@ -20,7 +14,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
       </details>
 
 1. Install OS-specific prerequisites
-   - See the appropriate section below: [macOS](#macos), [Ubuntu](#ubuntu-1804), [Windows](#windows)
+   - See the appropriate section below: [macOS](#macos), [Ubuntu](#ubuntu-2004), [Windows](#windows)
    - *Important*: When done, check for correct versions of these dependencies:
 
      ```sh
@@ -28,11 +22,16 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
      node --version  # --> v18.16.0
      ```
 
+1. Clone the repo, which also may take a while.
+    - Note you should have `git lfs --version` >= 3.0 installed prior to cloning, see OS-specific install steps referenced above.
+    - The simplest option is to clone via SSH with: `git clone git@github.com:code-dot-org/code-dot-org.git`
+    - The fastest option is to clone via HTTP with: `git clone https://github.com/code-dot-org/code-dot-org.git`. Although faster than SSH, this option requires you to reauthenticate every time you want to update. You will therefore probably want to switch to SSH after the initial clone with `git remote set-url origin git@github.com:code-dot-org/code-dot-org.git`
+
+1. `cd code-dot-org`
+
 1. `gem install bundler -v 2.3.22`
 
 1. `rbenv rehash`
-
-1. `bundle config --local without staging test production levelbuilder`
 
 1. `bundle install`
     - This step often fails to due environment-specific issues. Look in the [Bundle Install Tips](#bundle-install-tips) section below for steps to resolve many common issues.
@@ -137,6 +136,12 @@ Setup steps for macOS:
 
 1. Install [Homebrew](https://brew.sh/), a macOS package manager
 
+1. Install **Git LFS**
+    1. `brew install git-lfs`
+    1. From your homedir, run: `git lfs install`
+       - This adds a `[filter "lfs"]` section to your `~/.gitconfig`.
+       - Note: the install command must be run while you are **outside** a git repo directory. If you run it from inside a git repo, it will instead try to install git hooks in that repo.
+
 1. Install [Redis](https://redis.io/) via `brew install redis`
 
 1. Install [MySql 5.7](https://dev.mysql.com/doc/refman/5.7/en/) via `brew install mysql@5.7`
@@ -219,6 +224,15 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
           source ~/.bashrc
         fi     
         ```
+1. Install git-lfs >= 3.0
+    1. The default version of git-lfs in Ubuntu 20.04 is 2.9. This does not have support for Git SSH operations. Therefore, you'll want to add packagecloud.io apt repositories to your system to get a newer version of Git LFS (this step is not required if using Ubuntu >= 22.04): 
+        `curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash`
+    1. `apt-get install git-lfs`
+    1. Ensure `git-lfs --version` is >= 3.0. Git LFS < 3.0 only supports HTTPS, not SSH.
+    1. From your homedir, run: `git lfs install`
+       - This adds a `[filter "lfs"]` section to your `~/.gitconfig`.
+       - Note: the install command must be run while you are **outside** a git repo directory. If you run it from inside a git repo, it will instead try to install git hooks in that repo.
+
 1. Install Node and Nodejs
     1. Install the latest version of [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm)
     1. Running `nvm install` or `nvm use` within the project directory will install and use the version specified in [.nvmrc](.nvmrc)
@@ -279,7 +293,7 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
             1. `sudo apt install ./google-chrome-stable_current_amd64.deb`
             1. Add `export CHROME_BIN=$(which google-chrome)` to your `~/.bashrc` or desired shell configuration file.
         
-1. Follow the [Ubuntu instructions](#ubuntu-1804) to install required tools on the Ubuntu instance, _with the following modifications_:
+1. Follow the [Ubuntu instructions](#ubuntu-2004) to install required tools on the Ubuntu instance, _with the following modifications_:
     * There is an ongoing clock skew issue going on with wsl. This can cause issues with `apt update`, ssl certs, among other things. You can force your clock to sync with `sudo hwclock -s` to fix these issues temporarily. See the [megathread](https://github.com/microsoft/WSL/issues/10006) for more details.
     * Skip exporting `CHROME_BIN` since you already did so above.
     * Before updating the root password to empty in SQL (step 10), restart MySQL using `sudo /etc/init.d/mysql restart`
@@ -404,44 +418,7 @@ Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md) fo
 
 On Apple Silicon/Intel Mac, additional steps are required to get `bundle install` to work.
 
-If you're having issues with installing ```libv8``` and/or ```mini_racer``` gems - 
-make you sure you've already run ```bundle config --local without staging test production levelbuilder``` command
-and run it if you haven't.
-
-<details>
-<summary>If that didn't help - do following:</summary>
-
-Simply run (if you're having issues only with part of gems in the command - you can run it with just needed gems)
-```
-bundle update libv8 mini_racer
-```
-To fix issues in one line. It will update the Gemfile.lock file for you in the same way as described below.
-
-OR
-
-In Gemfile.lock, replace the two occurrences of libv8 (8.4.255.0) with libv8-node (15.14.0.0).
-Also update mini_racer to 0.4.0 (from 0.3.1):
-
-```
-libv8-node (15.14.0.0)
-...
-mini_racer (0.4.0)
-  libv8-node (~> 15.14.0.0)
-```
-
-FINALLY
-
-To prevent Gemfile.lock changes from constantly appearing in your commits - run following commands:
-```
-git update-index --assume-unchanged Gemfile.lock
-git update-index --no-assume-unchanged Gemfile.lock
-git ls-files -v | grep '^[[:lower:]]'
-```
-</details>
-
-
-
-Then run the following commands to successfully complete a bundle install:
+First, run the following commands to successfully complete a bundle install:
 
 ```sh
 gem install bundler -v 2.3.22
@@ -522,14 +499,6 @@ bundle add rmagick
 
 Restart `dashboard-server` and if all went well, we see text rendering on customized certificates again.
 
-#### libv8
-
-If you run into an error with libv8 while running bundle install
-
-- Uninstall libv8: `gem uninstall libv8`
-- Make sure the gem no longer exists with: `gem list libv8`
-- Install the current version used in code.org repo: `gem install libv8 -v CURRENT_CODEORG_VERSION -- --with-system-v8` (you can find what to fill in for CURRENT_CODEORG_VERSION as the current version of libv8 in the [Gemfile.lock](./Gemfile.lock)).
-
 #### mysql2
 
 If you run into an issue about mysql2 while running `bundle install` and the error output includes "ld: library not found for -lssl" try :
@@ -542,16 +511,6 @@ If you run into an issue about mysql2 while running `bundle install` and the err
 If you run into an error like "Don't know how to set rpath on your system, if MySQL libraries are not in path mysql2 may not load" during `bundle install` and are running on a Mac with M1, try :
 
 - `gem install mysql2 -v '0.5.2' -- --with-opt-dir=$(brew --prefix openssl) --with-ldflags=-L/opt/homebrew/Cellar/zstd/1.5.0/lib`
-
-#### therubyracer
-
-If you run into an issue about therubyracer while running `bundle install` try :
-
-- `gem uninstall libv8`
-- `gem install therubyracer -v CURRENT_CODEORG_VERSION` (you can find  what to fill in for CURRENT_CODEORG_VERSION as the current version of the therubyracer in the [Gemfile.lock](./Gemfile.lock)).
-- `gem install libv8 -v CURRENT_CODEORG_VERSION -- --with-system-v8` (You can find what to fill in for CURRENT_CODEORG_VERSION as the current version of libv8 in the [Gemfile.lock](./Gemfile.lock)).
-
-(Steps from [this stackoverflow question](https://stackoverflow.com/questions/19577759/installing-libv8-gem-on-os-x-10-9))
 
 #### bundler gem
 
