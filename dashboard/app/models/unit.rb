@@ -721,6 +721,16 @@ class Unit < ApplicationRecord
     user.assigned_script?(self)
   end
 
+  # If this unit is in a unit group, returns the next unit in the unit group.
+  # If it's the last unit in the unit group, returns nil.
+  # If it's not in a unit group, returns nil.
+  def next_unit(user)
+    return nil unless unit_group
+    other_units = unit_group.units_for_user(user)
+    self_index = other_units.index {|u| u.id == id}
+    other_units[self_index + 1] if self_index
+  end
+
   # @param family_name [String] The family name for a unit family.
   # @param version_year [String] Version year to return. Optional.
   # @param locale [String] User or request locale. Optional.

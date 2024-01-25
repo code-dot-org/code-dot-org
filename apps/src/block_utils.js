@@ -455,10 +455,11 @@ exports.appendNewFunctions = function (blocksXml, functionsXml) {
       startBlocksDocument.evaluate(
         // Ignore namespaces. Find blocks of type e.g. behavior_definition
         // Shared behavior name will either be in the mutation (Google Blockly)
-        // or the name field (CDO Blockly)
+        // or the name field/title (CDO Blockly)
         `//*[local-name()="block" and @type="${type}"]/*` +
           `[self::*[local-name()="mutation" and @behaviorId="${name}"] or ` +
-          `self::*[local-name()="field" and @id="${name}"]]`,
+          `self::*[(local-name()="title" or local-name()="field") and (@id="${name}" or .="${name}")]
+        ]`,
         startBlocksDom,
         null,
         XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
