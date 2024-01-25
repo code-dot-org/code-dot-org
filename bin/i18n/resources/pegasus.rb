@@ -1,7 +1,5 @@
 require_relative '../i18n_script_utils'
 
-Dir[File.expand_path('../pegasus/**/*.rb', __FILE__)].sort.each {|file| require file}
-
 module I18n
   module Resources
     module Pegasus
@@ -9,6 +7,12 @@ module I18n
         HourOfCode.sync_in
         Markdown.sync_in
         Mobile.sync_in
+      end
+
+      def self.sync_up(**opts)
+        HourOfCode.sync_up(**opts)
+        Markdown.sync_up(**opts)
+        Mobile.sync_up(**opts)
       end
 
       def self.sync_out
@@ -19,3 +23,5 @@ module I18n
     end
   end
 end
+
+Dir[File.expand_path('../pegasus/*.rb', __FILE__)].sort.each {|file| require file}
