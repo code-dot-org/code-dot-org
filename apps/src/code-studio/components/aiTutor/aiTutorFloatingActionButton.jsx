@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
-import style from '@cdo/apps/templates/rubrics/rubrics.module.scss';
+import style from './ai-tutor.module.scss';
 import aiFabIcon from '@cdo/static/ai-fab-background.png';
 import AITutorPanel from './aiTutorPanel';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';

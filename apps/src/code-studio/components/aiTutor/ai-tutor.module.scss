@@ -1,5 +1,19 @@
 @import 'color.scss';
 
+.floatingActionButton {
+    position: fixed;
+    left: 10px;
+    bottom: 48px;
+  
+    height: 60px;
+    width: 60px;
+    background-size: 60px;
+    padding: 0;
+  
+    border-width: 0;
+    border-radius: 30px;
+}
+
 .aiBotImg {
     width: 42px;
     height: 68px;
@@ -108,7 +122,6 @@ $default-spacing: 2px;
     h3 {
       padding: 5px;
       font-size: 18px;
-    //   @include main-font-bold;
       font-weight: normal;
       color: $white;
       background: $dark_teal;
