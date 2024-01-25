@@ -3,13 +3,12 @@ require_relative '../../../i18n/utils/crowdin_client'
 
 describe I18n::Utils::CrowdinClient do
   let(:described_class) {I18n::Utils::CrowdinClient}
-  let(:described_instance) {described_class.new(project: project, base_path: base_path)}
+  let(:described_instance) {described_class.new(project: project)}
 
   let(:project) {'expected_crowdin_project'}
   let(:project_id) {'expected_crowdin_project_id'}
   let(:project_ids) {{project => project_id}}
 
-  let(:base_path) {'/expected_base_path/'}
   let(:api_token) {'expected_crowdin_api_token'}
   let(:client) {stub(:client)}
 
@@ -22,8 +21,6 @@ describe I18n::Utils::CrowdinClient do
   end
 
   before do
-    FileUtils.mkdir_p(base_path)
-
     FileUtils.mkdir_p File.dirname(described_class::CREDENTIALS_PATH)
     File.write described_class::CREDENTIALS_PATH, YAML.dump({'api_token' => api_token})
 
@@ -49,23 +46,13 @@ describe I18n::Utils::CrowdinClient do
         assert_equal 'project is invalid', actual_error.message
       end
     end
-
-    context 'when `base_path` does not exist' do
-      before do
-        FileUtils.rm_r(base_path)
-      end
-
-      it 'raises "base_path is invalid" error' do
-        actual_error = assert_raises(ArgumentError) {described_instance}
-        assert_equal 'base_path is invalid', actual_error.message
-      end
-    end
   end
 
   describe '#add_source_directory' do
-    let(:add_source_directory) {described_instance.add_source_directory(dir_path)}
+    let(:add_source_directory) {described_instance.add_source_directory(dir_path, base_path: base_path)}
 
-    let(:dir_path) {'expected_dir_path'}
+    let(:base_path) {'expected_base_path'}
+    let(:dir_path) {File.join(base_path, 'expected_dir_path')}
 
     let(:parent_crowdin_dir_path) {'expected_parent_crowdin_dir_path'}
     let(:parent_crowdin_dir_id) {'expected_parent_crowdin_dir_id'}
@@ -76,10 +63,14 @@ describe I18n::Utils::CrowdinClient do
     let(:added_crowdin_directory_data) {'added_crowdin_directory_data'}
 
     before do
-      described_instance.stubs(:crowdin_source_path).with(dir_path).returns(crowdin_dir_path)
+      described_instance.stubs(:crowdin_source_path).with(dir_path, base_path: base_path).returns(crowdin_dir_path)
       described_instance.stubs(:crowdin_source_name).with(crowdin_dir_path).returns(crowdin_dir_name)
 
-      described_instance.stubs(:source_directory).with(parent_crowdin_dir_path).returns({'id' => parent_crowdin_dir_id})
+      described_instance.
+        stubs(:source_directory).
+        with(parent_crowdin_dir_path, base_path: base_path).
+        returns({'id' => parent_crowdin_dir_id})
+
       described_instance.
         stubs(:request).
         with(:add_directory, directoryId: parent_crowdin_dir_id, name: crowdin_dir_name).
@@ -94,7 +85,7 @@ describe I18n::Utils::CrowdinClient do
       let(:parent_crowdin_dir_id) {nil}
 
       before do
-        described_instance.expects(:source_directory).with(parent_crowdin_dir_path).returns(nil)
+        described_instance.expects(:source_directory).with(parent_crowdin_dir_path, base_path: base_path).returns(nil)
       end
 
       it 'returns added Crowdin source directory data without parent directoryId' do
@@ -120,9 +111,10 @@ describe I18n::Utils::CrowdinClient do
   end
 
   describe '#get_source_directory' do
-    let(:get_source_directory) {described_instance.get_source_directory(dir_path)}
+    let(:get_source_directory) {described_instance.get_source_directory(dir_path, base_path: base_path)}
 
-    let(:dir_path) {'expected_dir_path'}
+    let(:base_path) {'expected_base_path'}
+    let(:dir_path) {File.join(base_path, 'expected_dir_path')}
 
     let(:expected_crowdin_dir_name) {'expected_crowdin_dir_name'}
 
@@ -149,7 +141,7 @@ describe I18n::Utils::CrowdinClient do
     end
 
     before do
-      described_instance.stubs(:crowdin_source_path).with(dir_path).returns(expected_crowdin_dir_path)
+      described_instance.stubs(:crowdin_source_path).with(dir_path, base_path: base_path).returns(expected_crowdin_dir_path)
       described_instance.stubs(:crowdin_source_name).with(expected_crowdin_dir_path).returns(expected_crowdin_dir_name)
     end
 
@@ -189,9 +181,10 @@ describe I18n::Utils::CrowdinClient do
   end
 
   describe '#get_source_file' do
-    let(:get_source_file) {described_instance.get_source_file(file_path)}
+    let(:get_source_file) {described_instance.get_source_file(file_path, base_path: base_path)}
 
-    let(:file_path) {'expected_file_path'}
+    let(:base_path) {'expected_base_path'}
+    let(:file_path) {File.join(base_path, 'expected_file_path')}
 
     let(:expected_crowdin_file_name) {'expected_crowdin_file_name'}
     let(:expected_crowdin_file_path) {'expected_crowdin_file_path'}
@@ -219,7 +212,7 @@ describe I18n::Utils::CrowdinClient do
 
     before do
       described_instance.stubs(:crowdin_source_name).with(file_path).returns(expected_crowdin_file_name)
-      described_instance.stubs(:crowdin_source_path).with(file_path).returns(expected_crowdin_file_path)
+      described_instance.stubs(:crowdin_source_path).with(file_path, base_path: base_path).returns(expected_crowdin_file_path)
     end
 
     it 'returns Crowdin source directory data' do
@@ -251,7 +244,7 @@ describe I18n::Utils::CrowdinClient do
 
       described_instance.
         expects(:request).
-        with(:add_storage, File.join(base_path, file_path)).
+        with(:add_storage, file_path).
         returns({'data' => added_crowdin_storage_data})
 
       assert_equal added_crowdin_storage_data, add_storage
@@ -259,11 +252,12 @@ describe I18n::Utils::CrowdinClient do
   end
 
   describe '#upload_source_file' do
-    let(:upload_source_file) {described_instance.upload_source_file(file_path)}
+    let(:upload_source_file) {described_instance.upload_source_file(file_path, base_path: base_path)}
 
+    let(:base_path) {'/expected_base_path'}
     let(:file_path) {File.join(expected_dir_path, expected_file_name)}
 
-    let(:expected_dir_path) {'/expected_dir_path'}
+    let(:expected_dir_path) {File.join(base_path, 'expected_dir_path')}
     let(:expected_file_name) {'expected_file_name'}
 
     let(:expected_storage_id) {'expected_storage_id'}
@@ -282,7 +276,7 @@ describe I18n::Utils::CrowdinClient do
 
       described_instance.
         expects(:get_source_file).
-        with(file_path).
+        with(file_path, base_path: base_path).
         in_sequence(execution_sequence).
         returns({'id' => expected_crowdin_file_id})
 
@@ -313,13 +307,13 @@ describe I18n::Utils::CrowdinClient do
 
       described_instance.
         expects(:get_source_file).
-        with(file_path).
+        with(file_path, base_path: base_path).
         in_sequence(execution_sequence).
         returns(nil)
 
       described_instance.
         expects(:source_directory).
-        with(expected_dir_path).
+        with(expected_dir_path, base_path: base_path).
         in_sequence(execution_sequence).
         returns({'id' => expected_directory_id})
 
@@ -339,15 +333,19 @@ describe I18n::Utils::CrowdinClient do
   end
 
   describe '#upload_source_file' do
-    let(:upload_source_file) {described_instance.upload_source_files(source_files)}
+    let(:upload_source_file) {described_instance.upload_source_files(source_files, base_path: base_path)}
 
-    let(:source_file_path) {'expected_source_file_path'}
+    let(:base_path) {'expected_base_path'}
+    let(:source_file_path) {File.join(base_path, 'expected_source_file_path')}
     let(:source_files) {[source_file_path]}
 
     it 'returns uploaded source file data' do
       expected_source_file_data = 'uploaded_source_file_data'
 
-      described_instance.expects(:upload_source_file).with(source_file_path).returns(expected_source_file_data)
+      described_instance.
+        expects(:upload_source_file).
+        with(source_file_path, base_path: base_path).
+        returns(expected_source_file_data)
 
       source_files_data = upload_source_file do |uploaded_source_file_data|
         _(uploaded_source_file_data).must_equal expected_source_file_data
@@ -358,10 +356,11 @@ describe I18n::Utils::CrowdinClient do
   end
 
   describe '#crowdin_source_path' do
-    let(:crowdin_source_path) {described_instance.send(:crowdin_source_path, source_path)}
+    let(:crowdin_source_path) {described_instance.send(:crowdin_source_path, source_path, base_path: base_path)}
 
     let(:relative_source_path) {'/relative/source/path'}
 
+    let(:base_path) {'/expected_base_path'}
     let(:source_path) {File.join(base_path, relative_source_path, '/')}
 
     it 'returns Crowdin source path of CDO source path' do
@@ -399,16 +398,17 @@ describe I18n::Utils::CrowdinClient do
   end
 
   describe '#source_directory' do
-    let(:source_directory) {described_instance.send(:source_directory, dir_path)}
+    let(:source_directory) {described_instance.send(:source_directory, dir_path, base_path: base_path)}
 
-    let(:dir_path) {'expected_dir_path'}
+    let(:base_path) {'expected_base_path'}
+    let(:dir_path) {File.join(base_path, 'expected_dir_path')}
 
     let(:expected_crowdin_dir_path) {'/expected_crowdin_dir_path'}
     let(:existing_source_directory) {'existing_source_directory'}
     let(:created_source_directory) {'created_source_directory'}
 
     before do
-      described_instance.stubs(:crowdin_source_path).with(dir_path).returns(expected_crowdin_dir_path)
+      described_instance.stubs(:crowdin_source_path).with(dir_path, base_path: base_path).returns(expected_crowdin_dir_path)
       described_instance.stubs(:get_source_directory).returns(existing_source_directory)
       described_instance.stubs(:add_source_directory).returns(created_source_directory)
     end

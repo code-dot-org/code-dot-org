@@ -172,7 +172,10 @@ describe I18n::Utils::SyncUpBase do
   describe '#perform' do
     let(:perform) {described_instance.send(:perform)}
 
-    let(:config) {stub(crowdin_project: 'expected_crowdin_project')}
+    let(:crowdin_project) {'expected_crowdin_project'}
+    let(:base_path) {'expected_base_path'}
+
+    let(:config) {stub(crowdin_project: crowdin_project, base_path: base_path)}
 
     let(:crowdin_client) {stub}
     let(:source_files) {['expected_source_file_path']}
@@ -184,7 +187,7 @@ describe I18n::Utils::SyncUpBase do
     end
 
     it 'uploads source files' do
-      crowdin_client.expects(:upload_source_files).with(source_files).once
+      crowdin_client.expects(:upload_source_files).with(source_files, base_path: base_path).once
       perform
     end
   end
@@ -253,12 +256,8 @@ describe I18n::Utils::SyncUpBase do
     let(:crowdin_client) {described_instance.send(:crowdin_client)}
 
     let(:expected_crowdin_project) {'expected_crowdin_project'}
-    let(:expected_base_path) {'expected_base_path'}
-
-    let(:config) {stub(base_path: expected_base_path)}
 
     before do
-      described_instance.stubs(:config).returns(config)
       described_instance.stubs(:crowdin_project).returns(expected_crowdin_project)
     end
 
@@ -267,7 +266,7 @@ describe I18n::Utils::SyncUpBase do
 
       I18n::Utils::CrowdinClient.
         expects(:new).
-        with(project: expected_crowdin_project, base_path: expected_base_path).
+        with(project: expected_crowdin_project).
         returns(expected_i18n_utils_crowdin_client_instance)
 
       _(crowdin_client).must_equal expected_i18n_utils_crowdin_client_instance

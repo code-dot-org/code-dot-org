@@ -61,7 +61,7 @@ module I18n
       def perform
         progress_bar.start
 
-        crowdin_client.upload_source_files(source_files) do |_source_file_data|
+        crowdin_client.upload_source_files(source_files, base_path: config.base_path) do |_source_file_data|
           progress_bar.increment
         end
 
@@ -81,10 +81,7 @@ module I18n
       end
 
       def crowdin_client
-        @crowdin_client ||= I18n::Utils::CrowdinClient.new(
-          project: crowdin_project,
-          base_path: config.base_path,
-        )
+        @crowdin_client ||= I18n::Utils::CrowdinClient.new(project: crowdin_project)
       end
 
       def source_files
