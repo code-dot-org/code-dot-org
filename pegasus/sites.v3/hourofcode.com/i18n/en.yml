@@ -395,6 +395,7 @@
   call_to_action_explore_learning_ages_5_11: "Explore learning for ages 5-11"
   call_to_action_explore_learning_ages_11_plus: "Explore learning for ages 11+"
   call_to_action_get_started: "Get started"
+  call_to_action_discover_district_program: "Discover our District Program"
 
   aria_label_call_to_action_hoc_how_to_educators: "View how-to guide for Educators"
   aria_label_call_to_action_hoc_how_to_companies: "View how-to guide for Companies"
@@ -1074,6 +1075,11 @@
   ai_vid_computervision_caption: "Computer Vision"
   ai_vid_ethics1_caption: "Ethics & AI: Equal Access and Algorithmic Bias"
   ai_vid_ethics2_caption: "Ethics & AI: Privacy and the Future of Work"
+
+  districts_page_top_heading: "Districts in the Code.org District Program"
+  districts_page_top_desc: "We're actively expanding our network of district partners across the US. Explore this list of districts currently enrolled in our District Partner program."
+  districts_page_join_heading: "Join our District Partner Program"
+  districts_page_join_desc: "District leaders around the United States have partnered with Code.org directly, at no cost to bring computer science to their district, and teach students the skills of the future."
 
   pl_middle_high_top_heading: "Professional Learning Workshops for Grades 6-12"
   pl_middle_high_top_desc: "Our engaging workshops are for new and experienced computer science teachers!"
