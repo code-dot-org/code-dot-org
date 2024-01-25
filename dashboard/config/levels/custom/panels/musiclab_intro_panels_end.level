@@ -20,7 +20,8 @@
         },
         {
           "imageUrl": "https://images.code.org/294f99cfd6e1d55a2738e91a71b53570-musiclab_intro_end_2.png",
-          "text": "You're good to go!\n\nYou've learned the basics, and now you're ready to make your own mix!  Be sure to explore the toolbox and the sound library - there's lots more to explore and use to make an amazing track."
+          "text": "You're good to go!\n\nYou've learned the basics, and now you're ready to make your own mix!  Be sure to explore the toolbox and the sound library - there's lots more to explore and use to make an amazing track.",
+          "nextUrl": "/projectbeats"
         }
       ]
     }

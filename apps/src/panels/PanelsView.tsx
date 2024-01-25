@@ -65,8 +65,14 @@ const PanelsView: React.FunctionComponent = () => {
 
   const handleButtonClick = useCallback(() => {
     if (levelPanels?.panels) {
+      const nextUrl = levelPanels.panels[currentPanel].nextUrl;
+
       if (currentPanel < levelPanels.panels.length - 1) {
         setCurrentPanel(currentPanel + 1);
+      } else if (nextUrl) {
+        // This is a short-term solution for the Music Lab progression in incubation.  We will not attempt
+        // to send a success report for a level that uses this feature.
+        window.location.href = nextUrl;
       } else {
         dispatch(sendSuccessReport(appName));
         dispatch(navigateToNextLevel());
