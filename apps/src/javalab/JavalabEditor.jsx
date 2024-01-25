@@ -24,7 +24,7 @@ import {
 import {DisplayTheme} from './DisplayTheme';
 import PropTypes from 'prop-types';
 import {EditorView} from '@codemirror/view';
-import {editorSetup} from './editorSetup';
+import {editorConfig} from '@cdo/apps/lab2/views/components/editorConfig';
 import {EditorState, Compartment} from '@codemirror/state';
 import {projectChanged} from '@cdo/apps/code-studio/initApp/project';
 import classNames from 'classnames';
@@ -202,7 +202,7 @@ class JavalabEditor extends React.Component {
   createEditor(key, doc) {
     const {displayTheme, isReadOnlyWorkspace, fileMetadata, editorFontSize} =
       this.props;
-    const extensions = [...editorSetup];
+    const extensions = [...editorConfig];
 
     extensions.push(
       displayTheme === DisplayTheme.DARK
