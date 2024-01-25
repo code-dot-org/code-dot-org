@@ -12,11 +12,17 @@ async function loadPyodideAndPackages() {
   });
 }
 
-const pyodideReadyPromise = loadPyodideAndPackages();
+let pyodideReadyPromise = null;
+async function initializePyodide() {
+  if (pyodideReadyPromise === null) {
+    pyodideReadyPromise = loadPyodideAndPackages();
+  }
+  await pyodideReadyPromise;
+}
 
 self.onmessage = async event => {
   // make sure loading is done
-  await pyodideReadyPromise;
+  await initializePyodide();
   const {id, python, ...context} = event.data;
   // The worker copies the context in its own "memory" (an object mapping name to values)
   for (const key of Object.keys(context)) {
