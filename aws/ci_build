@@ -67,7 +67,6 @@ def main
   start_time = Time.now
   # Run the build command and exit if it didn't do anything.
   status = 0
-
   log = RakeUtils.capture do
     status = CiBuilder.build
   rescue => exception
