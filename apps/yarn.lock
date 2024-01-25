@@ -8206,7 +8206,7 @@ __metadata:
     timers-browserify: ^2.0.12
     ts-loader: ^9.4.2
     ts-sinon: ^2.0.2
-    typescript: 4.9.5
+    typescript: ^4.9.5
     uglifyjs-webpack-plugin: ^2.2.0
     unminified-webpack-plugin: ^3.0.0
     url-loader: ^4.1.1
@@ -28393,7 +28393,7 @@ temporal@latest:
   languageName: node
   linkType: hard
 
-"typescript@npm:4.9.5":
+"typescript@npm:^4.9.5":
   version: 4.9.5
   resolution: "typescript@npm:4.9.5"
   bin:
@@ -28403,7 +28403,7 @@ temporal@latest:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4.9.5#~builtin<compat/typescript>":
+"typescript@patch:typescript@^4.9.5#~builtin<compat/typescript>":
   version: 4.9.5
   resolution: "typescript@patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=289587"
   bin:
