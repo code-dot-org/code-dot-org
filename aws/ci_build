@@ -38,6 +38,7 @@ require 'dynamic_config/dcdo'
 require 'aws-sdk-cloudwatch'
 require_relative './ci_build_metrics'
 require_relative './ci_builder'
+include CiBuildMetrics
 
 STARTED = 'build-started'.freeze
 S3_LOGS_BUCKET = 'cdo-build-logs'.freeze
