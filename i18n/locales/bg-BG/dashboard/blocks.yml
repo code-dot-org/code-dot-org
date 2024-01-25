@@ -1112,6 +1112,14 @@ bg:
             '5': и двете
       DansBlocks_testRectangle:
         text: 'направи правоъгълник x: {X} y: [Y][Y] ш: {W} в: {H} цвят: {COLOR}'
+      DansBlocks_testShowVariable:
+        options:
+          OPT:
+            '"large"': голямо
+            '"small"': малко
+          COLOR:
+            '"blue"': синьо
+            '"red"': червено
       FunctionBlocks_addEightBlock:
         text: добавиОсем
       FunctionBlocks_addFiveBlock:

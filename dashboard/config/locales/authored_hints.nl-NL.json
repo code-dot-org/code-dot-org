@@ -691,9 +691,9 @@
           "voyage_aquatic_9a": "Wat een prachtig koraalrif! Blauw koraal geeft de \\*\\* rechte \\*\\* manier aan, en zorg ervoor dat je rood koraal niet \\*\\* links \\*\\* laat liggen!"
         },
         "CourseF_outbreak1": {
-          "step1": "Gebruik deze blokken om uw eigen sprites te creëren:\n\n[blockly block][0]\n\n[blockly block][1]\n\nDit blok is te vinden in de categorie **Sprites** van de gereedschapskist.",
-          "step2": "Wijzig de grootte van de sprites met dit blok: [blockly block][0].\n\nHet is te vinden in de categorie **Actie** van de gereedschapskist.",
-          "step3": "Laat alle sprites rondzwerven met dit: [blockly block][0].\n\nDit blok is te vinden in de categorie **Actie** van de gereedschapskist."
+          "step1": "Gebruik deze blokken om uw eigen sprites te creëren:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nDit blok is te vinden in de categorie **Sprites** van de gereedschapskist.",
+          "step2": "Wijzig de grootte van de sprites met dit blok: <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>.\n\nHet is te vinden in de categorie **Actie** van de gereedschapskist.",
+          "step3": "Laat alle sprites rondzwerven met dit: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\nDit blok is te vinden in de categorie **Actie** van de gereedschapskist."
         },
         "CourseF_outbreak1_-2022-2": {
           "step1": "Gebruik deze blokken om uw eigen sprites te creëren:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nDit blok is te vinden in de categorie **Sprites** van de gereedschapskist.",
@@ -706,7 +706,7 @@
           "step3": "Laat alle sprites rondzwerven met dit: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\nDit blok is te vinden in de categorie **Actie** van de gereedschapskist."
         },
         "CourseF_outbreak2": {
-          "hint1": "Klik op de `+` knop op het gebeurtenisblok. Vul de lege plek in het blok 'kostuum wijzigen' met het 'subjectblok' dat aan de binnenkant zit.\n\n[blockly block][0]"
+          "hint1": "Klik op de `+` knop op het gebeurtenisblok. Vul de lege plek in het blok 'kostuum wijzigen' met het 'subjectblok' dat aan de binnenkant zit.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak2_-2022-2": {
           "hint1": "Klik op de `+` knop op het gebeurtenisblok. Vul de lege plek in het blok 'kostuum wijzigen' met het 'subjectblok' dat aan de binnenkant zit.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
@@ -715,8 +715,8 @@
           "hint1": "Klik op de `+` knop op het gebeurtenisblok. Vul de lege plek in het blok 'kostuum wijzigen' met het 'subjectblok' dat aan de binnenkant zit.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak3": {
-          "hint1": "Gebruik het blok 'kostuum wijzigen' bij een 'wanneer op geklikt' om monsters een mondkapje te geven:\n\n[blockly block][0]\n\nVergeet niet om het kleine rode 'geklikte' blok eveneens te verslepen.",
-          "hint2": "Het nieuwe programma voor dit nieuwe dient er als volgt uit te zien:\n\n[blockly block][0]"
+          "hint1": "Gebruik het blok 'kostuum wijzigen' bij een 'wanneer op geklikt' om monsters een mondkapje te geven:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nVergeet niet om het kleine rode 'geklikte' blok eveneens te verslepen.",
+          "hint2": "Het nieuwe programma voor dit nieuwe dient er als volgt uit te zien:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak3_-2022-2": {
           "hint1": "Gebruik het blok 'kostuum wijzigen' bij een 'wanneer op geklikt' om monsters een mondkapje te geven:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nVergeet niet om het kleine rode 'geklikte' blok eveneens te verslepen.",
@@ -727,7 +727,7 @@
           "hint2": "Het nieuwe programma voor dit nieuwe dient er als volgt uit te zien:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak4": {
-          "challenge": "## Op zoek naar een extra uitdaging?\n\nU kunt de monsters sneller of langzamer laten bewegen.\n\n1.  Klik op 'Bewerken' in dit blok [blockly block][0] \n2.  Verhoog of verlaag het cijfer in dit blok: \n\n[blockly block][1]\n\nGebruik decimalen zoals '0,5' of '0,25' om de monsters langzamer te laten bewegen. Kies een cijfer groter dan 1 om ze sneller te laten bewegen."
+          "challenge": "## Op zoek naar een extra uitdaging?\n\nU kunt de monsters sneller of langzamer laten bewegen.\n\n1.  Klik op 'Bewerken' in dit blok <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  Verhoog of verlaag het cijfer in dit blok: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nGebruik decimalen zoals '0,5' of '0,25' om de monsters langzamer te laten bewegen. Kies een cijfer groter dan 1 om ze sneller te laten bewegen."
         },
         "CourseF_outbreak4_-2022-2": {
           "challenge": "## Op zoek naar een extra uitdaging?\n\nU kunt de monsters sneller of langzamer laten bewegen.\n\n1.  Klik op 'Bewerken' in dit blok <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  Verhoog of verlaag het cijfer in dit blok: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nGebruik decimalen zoals '0,5' of '0,25' om de monsters langzamer te laten bewegen. Kies een cijfer groter dan 1 om ze sneller te laten bewegen."
@@ -737,7 +737,7 @@
         },
         "CourseF_outbreak6": {
           "hint1": "U moet nog 3 'bij aanraken' gebeurtenissen toevoegen om alle mogelijke combinaties van 'aanraken' tussen gezonde en geïnfecteerde sprites te kunnen controleren.",
-          "hint2": "Vergeet niet om de andere 'actieblokken' naar de binnenkant van de 'als kans' blok te verplaatsen:\n\n[blockly block][0]"
+          "hint2": "Vergeet niet om de andere 'actieblokken' naar de binnenkant van de 'als kans' blok te verplaatsen:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "CourseF_outbreak6_-2022-2": {
           "hint1": "U moet nog 3 'bij aanraken' gebeurtenissen toevoegen om alle mogelijke combinaties van 'aanraken' tussen gezonde en geïnfecteerde sprites te kunnen controleren.",
@@ -749,7 +749,7 @@
         },
         "CourseF_outbreak7": {
           "verionhistory": "Denkt u vast te zitten? U kunt u programma altijd resetten door op 'Versiegeschiedenis' onder te klikken en daarna 'Opnieuw beginnen' te selecteren.",
-          "whenclicked": "## Vaccins\n\nU kunt het geven van een vaccin aan monsters simuleren als u op ze klikt. Gebruik het blok 'kostuum wijzigen' met deze gebeurtenis als u dat wilt doen:\n\n[blockly block][0]"
+          "whenclicked": "## Vaccins\n\nU kunt het geven van een vaccin aan monsters simuleren als u op ze klikt. Gebruik het blok 'kostuum wijzigen' met deze gebeurtenis als u dat wilt doen:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "CourseF_outbreak7_-2022-2": {
           "verionhistory": "Denkt u vast te zitten? U kunt u programma altijd resetten door op 'Versiegeschiedenis' onder te klikken en daarna 'Opnieuw beginnen' te selecteren.",
@@ -1537,7 +1537,7 @@
           "courseC_maze_programming_challenge2_b": "De kortste oplossing gebruikt enkel 5 blokken, gebruik makende van de `herhaal` blok!"
         },
         "course3_artist_functions_challenge2": {
-          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nMet het `jump to` (spring naar) blok kun je de artiest laten springen maar elke pixel in het raster. Dit werkt door de artiest eerst een aantal pixels naar rechts te bewegen, en daarna een aantal pixels omlaag. Het begint altijd vanuit de linkerbovenhoek, dus het maakt helemaal niet uit waar de zombie is _voordat_ het commando wordt uitgevoerd!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nDit `spring naar` blok laat jou de zombie kunstenaar naar iedere pixel op het raster verplaatsen, wanneer je wilt. Het werkt door hem een aantal pixels naar rechts en een aantal pixels naar beneden te verplaatsen, altijd geteld vanuit de linkerbovenhoek. Hierdoor maakt het niet uit waar de kunstenaar staat _voordat_ deze opdracht wordt uitgevoerd!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "course3_bee_functions_challenge1": {
           "courseE_bee_functions_challenge1_a": "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!",
@@ -1555,7 +1555,14 @@
           "courseD_collector_debugging_challenge2_d": "**Oplossing:**\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">4</title>\n<statement name=\"DO\">\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">4</title>\n<statement name=\"DO\">\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">2</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n<next>\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">2</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\"/>\n</statement>\n</block>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_move\">\n<title name=\"DIR\">moveBackward</title>\n</block>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</xml>"
         },
         "course3_maze_debugging_challenge1": {
-          "courseC_maze_debugging_challenge1_a": "Links of rechts? Aan jou de keuze!"
+          "courseC_maze_debugging_challenge1_a": "Links of rechts? Aan jou de keuze!",
+          "courseC_maze_debugging_challenge1_b": "Het pad van Scrat is in de vorm van een rechthoek! Hij moet iedere keer in dezelfde richting draaien!",
+          "courseC_maze_debugging_challenge1_c": "Als je vastloopt, kun je altijd opnieuw beginnen, of alle code verwijderen en je eigen weg vinden!"
+        },
+        "course3_maze_debugging_challenge2": {
+          "courseC_maze_debugging_challenge2_a": "Een manier om deze puzzel op te lossen is om meer stappen vooruit toe te voegen tussen de draaiingen.",
+          "courseC_maze_debugging_challenge2_b": "Als je vastloopt, kun je altijd opnieuw beginnen, of alle code verwijderen en je eigen weg vinden!",
+          "courseC_maze_debugging_challenge2_c": "Er zijn twee verschillende paden die je kunt volgen met enkel `beweeg vooruit` en slechts vier `draai` opdrachten. Als je een manier vindt om het `herhaal` blok te gebruiken, zijn er misschien wel meer!\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
         },
         "course3_playLab_challenge1": {
           "courseE_playLab_challenge1_a": "Hier zijn wat dingen die je zou kunnen doen als de speler het spel wint:\n\n-   Laat de dinosaurus verdwijnen.\n-   Stop de eekhoorns.\n-   Maak de eekhoorns en de ridder blij.\n-   Verander de achtergrond.\n-   Zorg dat de ridder de spelter bedankt voor de hulp.\n-   Laat alle spelers verdwijnen en toon een boodschap \"Je hebt gewonnen!\".",
@@ -1569,7 +1576,7 @@
           "courseE_artist_concept_challenge2_b": "Met dit commando kun je naar een willekeurige plaats op het canvas springen."
         },
         "course4_artist_functions_challenge2": {
-          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nMet het `jump to` (spring naar) blok kun je de artiest laten springen maar elke pixel in het raster. Dit werkt door de artiest eerst een aantal pixels naar rechts te bewegen, en daarna een aantal pixels omlaag. Het begint altijd vanuit de linkerbovenhoek, dus het maakt helemaal niet uit waar de zombie is _voordat_ het commando wordt uitgevoerd!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nDit `spring naar` blok laat jou de zombie kunstenaar naar iedere pixel op het raster verplaatsen, wanneer je wilt. Het werkt door hem een aantal pixels naar rechts en een aantal pixels naar beneden te verplaatsen, altijd geteld vanuit de linkerbovenhoek. Hierdoor maakt het niet uit waar de kunstenaar staat _voordat_ deze opdracht wordt uitgevoerd!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "course4_artist_variables_challenge1": {
           "courseF_artist_variables_challenge1_e": "**Oplossing:**\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"variables_set\" inline=\"false\">\n<title name=\"VAR\">length</title>\n<value name=\"VALUE\">\n<block type=\"math_number\">\n<title name=\"NUM\">10</title>\n</block>\n</value>\n<next>\n<block type=\"controls_repeat_ext\" inline=\"true\">\n<value name=\"TIMES\">\n<block type=\"math_number\">\n<title name=\"NUM\">18</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"draw_move\" inline=\"true\">\n<title name=\"DIR\">moveForward</title>\n<value name=\"VALUE\">\n<block type=\"math_number\">\n<title name=\"NUM\">10</title>\n</block>\n</value>\n<next>\n<block type=\"draw_turn\" inline=\"true\">\n<title name=\"DIR\">turnRight</title>\n<value name=\"VALUE\">\n<block type=\"math_number\">\n<title name=\"NUM\">90</title>\n</block>\n</value>\n<next>\n<block type=\"draw_move\" inline=\"true\">\n<title name=\"DIR\">moveForward</title>\n<value name=\"VALUE\">\n<block type=\"variables_get\">\n<title name=\"VAR\">length</title>\n</block>\n</value>\n<next>\n<block type=\"variables_set\" inline=\"false\">\n<title name=\"VAR\">length</title>\n<value name=\"VALUE\">\n<block type=\"math_arithmetic\" inline=\"true\">\n<title name=\"OP\">ADD</title>\n<value name=\"A\">\n<block type=\"variables_get\">\n<title name=\"VAR\">length</title>\n</block>\n</value>\n<value name=\"B\">\n<block type=\"math_number\">\n<title name=\"NUM\">10</title>\n</block>\n</value>\n</block>\n</value>\n<next>\n<block type=\"draw_turn\" inline=\"true\">\n<title name=\"DIR\">turnLeft</title>\n<value name=\"VALUE\">\n<block type=\"math_number\">\n<title name=\"NUM\">90</title>\n</block>\n</value>\n<next>\n<block type=\"draw_move\" inline=\"true\">\n<title name=\"DIR\">moveForward</title>\n<value name=\"VALUE\">\n<block type=\"math_number\">\n<title name=\"NUM\">10</title>\n</block>\n</value>\n<next>\n<block type=\"draw_turn\" inline=\"true\">\n<title name=\"DIR\">turnLeft</title>\n<value name=\"VALUE\">\n<block type=\"math_number\">\n<title name=\"NUM\">90</title>\n</block>\n</value>\n<next>\n<block type=\"draw_move\" inline=\"true\">\n<title name=\"DIR\">moveForward</title>\n<value name=\"VALUE\">\n<block type=\"variables_get\">\n<title name=\"VAR\">length</title>\n</block>\n</value>\n<next>\n<block type=\"variables_set\" inline=\"false\">\n<title name=\"VAR\">length</title>\n<value name=\"VALUE\">\n<block type=\"math_arithmetic\" inline=\"true\">\n<title name=\"OP\">ADD</title>\n<value name=\"A\">\n<block type=\"variables_get\">\n<title name=\"VAR\">length</title>\n</block>\n</value>\n<value name=\"B\">\n<block type=\"math_number\">\n<title name=\"NUM\">10</title>\n</block>\n</value>\n</block>\n</value>\n<next>\n<block type=\"draw_turn\" inline=\"true\">\n<title name=\"DIR\">turnRight</title>\n<value name=\"VALUE\">\n<block type=\"math_number\">\n<title name=\"NUM\">90</title>\n</block>\n</value>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -1602,24 +1609,31 @@
           "courseA_collector_loops1_b": "Een eenvoudige oplossing is om 2 keer naar het oosten te bewegen, en dan de schat te machtigen."
         },
         "courseA_collector_loops6": {
+          "courseA_collector_loops6_a": "Kun je er niet achter komen wat er mis is? Probeer de code een paar keer uit te voeren om te zien wat er gebeurt.",
           "courseA_collector_loops6_b": "De kortste oplossing heeft 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> lussen. De één achter de andere."
         },
         "courseA_collector_loops62022": {
+          "courseA_collector_loops6_a": "Kun je er niet achter komen wat er mis is? Probeer de code een paar keer uit te voeren om te zien wat er gebeurt.",
           "courseA_collector_loops6_b": "De kortste oplossing heeft 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> lussen. De één achter de andere."
         },
         "courseA_collector_loops6_2018": {
+          "courseA_collector_loops6_a": "Kun je er niet achter komen wat er mis is? Probeer de code een paar keer uit te voeren om te zien wat er gebeurt.",
           "courseA_collector_loops6_b": "De kortste oplossing heeft 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> lussen. De één achter de andere."
         },
         "courseA_collector_loops6_2019": {
+          "courseA_collector_loops6_a": "Kun je er niet achter komen wat er mis is? Probeer de code een paar keer uit te voeren om te zien wat er gebeurt.",
           "courseA_collector_loops6_b": "De kortste oplossing heeft 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> lussen. De één achter de andere."
         },
         "courseA_collector_loops6_2020": {
+          "courseA_collector_loops6_a": "Kun je er niet achter komen wat er mis is? Probeer de code een paar keer uit te voeren om te zien wat er gebeurt.",
           "courseA_collector_loops6_b": "De kortste oplossing heeft 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> lussen. De één achter de andere."
         },
         "courseA_collector_loops6_2021": {
+          "courseA_collector_loops6_a": "Kun je er niet achter komen wat er mis is? Probeer de code een paar keer uit te voeren om te zien wat er gebeurt.",
           "courseA_collector_loops6_b": "De kortste oplossing heeft 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> lussen. De één achter de andere."
         },
         "courseA_collector_loops6_2023": {
+          "courseA_collector_loops6_a": "Kun je er niet achter komen wat er mis is? Probeer de code een paar keer uit te voeren om te zien wat er gebeurt.",
           "courseA_collector_loops6_b": "De kortste oplossing heeft 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> lussen. De één achter de andere."
         },
         "courseA_collector_loops_challenge2kp": {
@@ -2273,74 +2287,242 @@
           "courseC_artist_loopsPrePre1a_b": "Om 50 pixels vooruit te gaan, kun je het volgende blok gebruiken:\n\n![](<https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png>)"
         },
         "courseC_artist_prog2": {
-          "courseC_artist_prog2_a": "Als je het blok 'beweeg vooruit door 100 pixels', zal ik automatisch een lijn tekenen.",
-          "courseC_artist_prog2_b": "Problemen met het draaien van de hoek? Gebruik het blok 'rechts 90 graden'."
+          "courseC_artist_prog2_a": "*\"Als je het <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> blok gebruikt, zal ik een lijn tekenen.\"*",
+          "courseC_artist_prog2_b": "Moeite met het nemen van de bocht? Gebruik het <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml> blok."
         },
         "courseC_artist_prog22022": {
-          "courseC_artist_prog2_a": "Als je het blok 'beweeg vooruit door 100 pixels', zal ik automatisch een lijn tekenen.",
-          "courseC_artist_prog2_b": "Problemen met het draaien van de hoek? Gebruik het blok 'rechts 90 graden'."
+          "courseC_artist_prog2_a": "*\"Als je het <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> blok gebruikt, zal ik een lijn tekenen.\"*",
+          "courseC_artist_prog2_b": "Moeite met het nemen van de bocht? Gebruik het <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml> blok."
         },
         "courseC_artist_prog2_2018": {
-          "courseC_artist_prog2_a": "Als je het blok 'beweeg vooruit door 100 pixels', zal ik automatisch een lijn tekenen.",
-          "courseC_artist_prog2_b": "Problemen met het draaien van de hoek? Gebruik het blok 'rechts 90 graden'."
+          "courseC_artist_prog2_a": "*\"Als je het <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> blok gebruikt, zal ik een lijn tekenen.\"*",
+          "courseC_artist_prog2_b": "Moeite met het nemen van de bocht? Gebruik het <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml> blok."
         },
         "courseC_artist_prog2_2019": {
-          "courseC_artist_prog2_a": "Als je het blok 'beweeg vooruit door 100 pixels', zal ik automatisch een lijn tekenen.",
-          "courseC_artist_prog2_b": "Problemen met het draaien van de hoek? Gebruik het blok 'rechts 90 graden'."
+          "courseC_artist_prog2_a": "*\"Als je het <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> blok gebruikt, zal ik een lijn tekenen.\"*",
+          "courseC_artist_prog2_b": "Moeite met het nemen van de bocht? Gebruik het <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml> blok."
         },
         "courseC_artist_prog2_2020": {
-          "courseC_artist_prog2_a": "Als je het blok 'beweeg vooruit door 100 pixels', zal ik automatisch een lijn tekenen.",
-          "courseC_artist_prog2_b": "Problemen met het draaien van de hoek? Gebruik het blok 'rechts 90 graden'."
+          "courseC_artist_prog2_a": "*\"Als je het <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> blok gebruikt, zal ik een lijn tekenen.\"*",
+          "courseC_artist_prog2_b": "Moeite met het nemen van de bocht? Gebruik het <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml> blok."
         },
         "courseC_artist_prog2_2021": {
-          "courseC_artist_prog2_a": "Als je het blok 'beweeg vooruit door 100 pixels', zal ik automatisch een lijn tekenen.",
-          "courseC_artist_prog2_b": "Problemen met het draaien van de hoek? Gebruik het blok 'rechts 90 graden'."
+          "courseC_artist_prog2_a": "*\"Als je het <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> blok gebruikt, zal ik een lijn tekenen.\"*",
+          "courseC_artist_prog2_b": "Moeite met het nemen van de bocht? Gebruik het <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml> blok."
         },
         "courseC_artist_prog2_2023": {
-          "courseC_artist_prog2_a": "Als je het blok 'beweeg vooruit door 100 pixels', zal ik automatisch een lijn tekenen.",
-          "courseC_artist_prog2_b": "Problemen met het draaien van de hoek? Gebruik het blok 'rechts 90 graden'."
+          "courseC_artist_prog2_a": "*\"Als je het <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> blok gebruikt, zal ik een lijn tekenen.\"*",
+          "courseC_artist_prog2_b": "Moeite met het nemen van de bocht? Gebruik het <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml> blok."
+        },
+        "courseC_artist_prog3": {
+          "courseC_artist_prog3_a": "Om dit raam te maken, teken je een vierkant met zijden van 100 pixels.\n\n-   ga vooruit\n-   draai\n-   ga vooruit\n-   draai\n-   ga vooruit\n-   draai\n-   ga vooruit",
+          "courseC_artist_prog3_b": "Wil je de code korter maken? Probeer een lus te gebruiken."
+        },
+        "courseC_artist_prog32022": {
+          "courseC_artist_prog3_a": "Om dit raam te maken, teken je een vierkant met zijden van 100 pixels.\n\n-   ga vooruit\n-   draai\n-   ga vooruit\n-   draai\n-   ga vooruit\n-   draai\n-   ga vooruit",
+          "courseC_artist_prog3_b": "Wil je de code korter maken? Probeer een lus te gebruiken."
+        },
+        "courseC_artist_prog3_2018": {
+          "courseC_artist_prog3_a": "Om dit raam te maken, teken je een vierkant met zijden van 100 pixels.\n\n-   ga vooruit\n-   draai\n-   ga vooruit\n-   draai\n-   ga vooruit\n-   draai\n-   ga vooruit",
+          "courseC_artist_prog3_b": "Wil je de code korter maken? Probeer een lus te gebruiken."
+        },
+        "courseC_artist_prog3_2019": {
+          "courseC_artist_prog3_a": "Om dit raam te maken, teken je een vierkant met zijden van 100 pixels.\n\n-   ga vooruit\n-   draai\n-   ga vooruit\n-   draai\n-   ga vooruit\n-   draai\n-   ga vooruit",
+          "courseC_artist_prog3_b": "Wil je de code korter maken? Probeer een lus te gebruiken."
+        },
+        "courseC_artist_prog3_2020": {
+          "courseC_artist_prog3_a": "Om dit raam te maken, teken je een vierkant met zijden van 100 pixels.\n\n-   ga vooruit\n-   draai\n-   ga vooruit\n-   draai\n-   ga vooruit\n-   draai\n-   ga vooruit",
+          "courseC_artist_prog3_b": "Wil je de code korter maken? Probeer een lus te gebruiken."
+        },
+        "courseC_artist_prog3_2021": {
+          "courseC_artist_prog3_a": "Om dit raam te maken, teken je een vierkant met zijden van 100 pixels.\n\n-   ga vooruit\n-   draai\n-   ga vooruit\n-   draai\n-   ga vooruit\n-   draai\n-   ga vooruit",
+          "courseC_artist_prog3_b": "Wil je de code korter maken? Probeer een lus te gebruiken."
+        },
+        "courseC_artist_prog3_2023": {
+          "courseC_artist_prog3_a": "Om dit raam te maken, teken je een vierkant met zijden van 100 pixels.\n\n-   ga vooruit\n-   draai\n-   ga vooruit\n-   draai\n-   ga vooruit\n-   draai\n-   ga vooruit",
+          "courseC_artist_prog3_b": "Wil je de code korter maken? Probeer een lus te gebruiken."
+        },
+        "courseC_artist_prog4": {
+          "courseC_artist_prog4_a": "Om de raket te voltooien, teken je gewoon de driehoek bovenop!",
+          "courseC_artist_prog4_b": "Je kunt het uitklapmenu op de `draai` blokken gebruiken om te zien welke hoek je nodig hebt!",
+          "courseC_artist_prog4_c": "Om een driehoek te tekenen:\n\n-   ga vooruit\n-   draai linksom met 120 graden\n-   ga vooruit\n-   draai linksom met 120 graden\n-   ga vooruit"
+        },
+        "courseC_artist_prog42022": {
+          "courseC_artist_prog4_a": "Om de raket te voltooien, teken je gewoon de driehoek bovenop!",
+          "courseC_artist_prog4_b": "Je kunt het uitklapmenu op de `draai` blokken gebruiken om te zien welke hoek je nodig hebt!",
+          "courseC_artist_prog4_c": "Om een driehoek te tekenen:\n\n-   ga vooruit\n-   draai linksom met 120 graden\n-   ga vooruit\n-   draai linksom met 120 graden\n-   ga vooruit"
+        },
+        "courseC_artist_prog4_2018": {
+          "courseC_artist_prog4_a": "Om de raket te voltooien, teken je gewoon de driehoek bovenop!",
+          "courseC_artist_prog4_b": "Je kunt het uitklapmenu op de `draai` blokken gebruiken om te zien welke hoek je nodig hebt!",
+          "courseC_artist_prog4_c": "Om een driehoek te tekenen:\n\n-   ga vooruit\n-   draai linksom met 120 graden\n-   ga vooruit\n-   draai linksom met 120 graden\n-   ga vooruit"
+        },
+        "courseC_artist_prog4_2019": {
+          "courseC_artist_prog4_a": "Om de raket te voltooien, teken je gewoon de driehoek bovenop!",
+          "courseC_artist_prog4_b": "Je kunt het uitklapmenu op de `draai` blokken gebruiken om te zien welke hoek je nodig hebt!",
+          "courseC_artist_prog4_c": "Om een driehoek te tekenen:\n\n-   ga vooruit\n-   draai linksom met 120 graden\n-   ga vooruit\n-   draai linksom met 120 graden\n-   ga vooruit"
+        },
+        "courseC_artist_prog4_2020": {
+          "courseC_artist_prog4_a": "Om de raket te voltooien, teken je gewoon de driehoek bovenop!",
+          "courseC_artist_prog4_b": "Je kunt het uitklapmenu op de `draai` blokken gebruiken om te zien welke hoek je nodig hebt!",
+          "courseC_artist_prog4_c": "Om een driehoek te tekenen:\n\n-   ga vooruit\n-   draai linksom met 120 graden\n-   ga vooruit\n-   draai linksom met 120 graden\n-   ga vooruit"
+        },
+        "courseC_artist_prog4_2021": {
+          "courseC_artist_prog4_a": "Om de raket te voltooien, teken je gewoon de driehoek bovenop!",
+          "courseC_artist_prog4_b": "Je kunt het uitklapmenu op de `draai` blokken gebruiken om te zien welke hoek je nodig hebt!",
+          "courseC_artist_prog4_c": "Om een driehoek te tekenen:\n\n-   ga vooruit\n-   draai linksom met 120 graden\n-   ga vooruit\n-   draai linksom met 120 graden\n-   ga vooruit"
+        },
+        "courseC_artist_prog4_2023": {
+          "courseC_artist_prog4_a": "Om de raket te voltooien, teken je gewoon de driehoek bovenop!",
+          "courseC_artist_prog4_b": "Je kunt het uitklapmenu op de `draai` blokken gebruiken om te zien welke hoek je nodig hebt!",
+          "courseC_artist_prog4_c": "Om een driehoek te tekenen:\n\n-   ga vooruit\n-   draai linksom met 120 graden\n-   ga vooruit\n-   draai linksom met 120 graden\n-   ga vooruit"
         },
         "courseC_artist_prog5": {
-          "courseC_artist_prog5_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+          "courseC_artist_prog5_a": "Zet de slider lager tot je code regel voor regel wordt uitgevoerd zodat je kunt zien waar het mis gaat.",
+          "courseC_artist_prog5_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost.",
+          "courseC_artist_prog5_c": "Je kunt het uitklapmenu op de `draai` blokken gebruiken om te zien welke hoek je nodig hebt!",
+          "courseC_artist_prog5_d": "Iedere draai moet 90 graden naar rechts zijn."
         },
         "courseC_artist_prog52022": {
-          "courseC_artist_prog5_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+          "courseC_artist_prog5_a": "Zet de slider lager tot je code regel voor regel wordt uitgevoerd zodat je kunt zien waar het mis gaat.",
+          "courseC_artist_prog5_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost.",
+          "courseC_artist_prog5_c": "Je kunt de uitklapmenus in de blokken gebruiken om te veranderen wat ze doen!",
+          "courseC_artist_prog5_d": "Iedere draai moet 90 graden naar rechts zijn."
         },
         "courseC_artist_prog5_2018": {
-          "courseC_artist_prog5_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+          "courseC_artist_prog5_a": "Zet de slider lager tot je code regel voor regel wordt uitgevoerd zodat je kunt zien waar het mis gaat.",
+          "courseC_artist_prog5_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost.",
+          "courseC_artist_prog5_c": "Je kunt de uitklapmenus in de blokken gebruiken om te veranderen wat ze doen!",
+          "courseC_artist_prog5_d": "Iedere draai moet 90 graden naar rechts zijn."
         },
         "courseC_artist_prog5_2019": {
-          "courseC_artist_prog5_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+          "courseC_artist_prog5_a": "Zet de slider lager tot je code regel voor regel wordt uitgevoerd zodat je kunt zien waar het mis gaat.",
+          "courseC_artist_prog5_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost.",
+          "courseC_artist_prog5_c": "Je kunt de uitklapmenus in de blokken gebruiken om te veranderen wat ze doen!",
+          "courseC_artist_prog5_d": "Iedere draai moet 90 graden naar rechts zijn."
         },
         "courseC_artist_prog5_2020": {
-          "courseC_artist_prog5_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+          "courseC_artist_prog5_a": "Zet de slider lager tot je code regel voor regel wordt uitgevoerd zodat je kunt zien waar het mis gaat.",
+          "courseC_artist_prog5_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost.",
+          "courseC_artist_prog5_c": "Je kunt de uitklapmenus in de blokken gebruiken om te veranderen wat ze doen!",
+          "courseC_artist_prog5_d": "Iedere draai moet 90 graden naar rechts zijn."
         },
         "courseC_artist_prog5_2021": {
-          "courseC_artist_prog5_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+          "courseC_artist_prog5_a": "Zet de slider lager tot je code regel voor regel wordt uitgevoerd zodat je kunt zien waar het mis gaat.",
+          "courseC_artist_prog5_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost.",
+          "courseC_artist_prog5_c": "Je kunt de uitklapmenus in de blokken gebruiken om te veranderen wat ze doen!",
+          "courseC_artist_prog5_d": "Iedere draai moet 90 graden naar rechts zijn."
         },
         "courseC_artist_prog5_2023": {
-          "courseC_artist_prog5_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+          "courseC_artist_prog5_a": "Zet de slider lager tot je code regel voor regel wordt uitgevoerd zodat je kunt zien waar het mis gaat.",
+          "courseC_artist_prog5_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost.",
+          "courseC_artist_prog5_c": "Je kunt de uitklapmenus in de blokken gebruiken om te veranderen wat ze doen!",
+          "courseC_artist_prog5_d": "Iedere draai moet 90 graden naar rechts zijn."
+        },
+        "courseC_artist_prog6": {
+          "courseC_artist_prog6_a": "De kunstenaar staat al de juiste kant uit om zijn eerste lijn te kunnen tekenen.",
+          "courseC_artist_prog6_b": "Deze diamant is eigenlijk gewoon een vierkant dat op één van zijn hoeken staat.",
+          "courseC_artist_prog6_c": "Omdat deze diamant ook een vierkant is, moet je in de hoeken 90 graden draaien."
+        },
+        "courseC_artist_prog62022": {
+          "courseC_artist_prog6_a": "De kunstenaar staat al de juiste kant uit om zijn eerste lijn te kunnen tekenen.",
+          "courseC_artist_prog6_b": "Deze diamant is eigenlijk gewoon een vierkant dat op één van zijn hoeken staat.",
+          "courseC_artist_prog6_c": "Omdat deze diamant ook een vierkant is, moet je in de hoeken 90 graden draaien."
+        },
+        "courseC_artist_prog6_2018": {
+          "courseC_artist_prog6_a": "De kunstenaar staat al de juiste kant uit om zijn eerste lijn te kunnen tekenen.",
+          "courseC_artist_prog6_b": "Deze diamant is eigenlijk gewoon een vierkant dat op één van zijn hoeken staat.",
+          "courseC_artist_prog6_c": "Omdat deze diamant ook een vierkant is, moet je in de hoeken 90 graden draaien."
+        },
+        "courseC_artist_prog6_2019": {
+          "courseC_artist_prog6_a": "De kunstenaar staat al de juiste kant uit om zijn eerste lijn te kunnen tekenen.",
+          "courseC_artist_prog6_b": "Deze diamant is eigenlijk gewoon een vierkant dat op één van zijn hoeken staat.",
+          "courseC_artist_prog6_c": "Omdat deze diamant ook een vierkant is, moet je in de hoeken 90 graden draaien."
+        },
+        "courseC_artist_prog6_2020": {
+          "courseC_artist_prog6_a": "De kunstenaar staat al de juiste kant uit om zijn eerste lijn te kunnen tekenen.",
+          "courseC_artist_prog6_b": "Deze diamant is eigenlijk gewoon een vierkant dat op één van zijn hoeken staat.",
+          "courseC_artist_prog6_c": "Omdat deze diamant ook een vierkant is, moet je in de hoeken 90 graden draaien."
+        },
+        "courseC_artist_prog6_2021": {
+          "courseC_artist_prog6_a": "De kunstenaar staat al de juiste kant uit om zijn eerste lijn te kunnen tekenen.",
+          "courseC_artist_prog6_b": "Deze diamant is eigenlijk gewoon een vierkant dat op één van zijn hoeken staat.",
+          "courseC_artist_prog6_c": "Omdat deze diamant ook een vierkant is, moet je in de hoeken 90 graden draaien."
+        },
+        "courseC_artist_prog6_2023": {
+          "courseC_artist_prog6_a": "De kunstenaar staat al de juiste kant uit om zijn eerste lijn te kunnen tekenen.",
+          "courseC_artist_prog6_b": "Deze diamant is eigenlijk gewoon een vierkant dat op één van zijn hoeken staat.",
+          "courseC_artist_prog6_c": "Omdat deze diamant ook een vierkant is, moet je in de hoeken 90 graden draaien."
         },
         "courseC_artist_prog7": {
+          "courseC_artist_prog7_a": "Elke hoek is 45 of 90 graden.",
+          "courseC_artist_prog7_b": "Werkt het bij de eerste stap?\\\nEn de tweede?\\\nWaar gaat het mis?",
+          "courseC_artist_prog7_c": "Je kunt het uitklapmenu op de draai-blokken gebruiken om te zien welke hoek je nodig hebt!",
+          "courseC_artist_prog7_d": "Je moet het volgende doen:\n\n-   ga vooruit\n-   draai rechtsom 45 graden\n-   ga vooruit\n-   draai rechtsom 90 graden\n-   ga vooruit\n-   draai rechtsom 45 graden\n\nHerhaal dit patroon 2 keer!",
           "courseC_artist_prog7_e": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
         },
         "courseC_artist_prog72022": {
+          "courseC_artist_prog7_a": "Elke hoek is 45 of 90 graden.",
+          "courseC_artist_prog7_b": "Werkt het bij de eerste stap?\\\nEn de tweede?\\\nWaar gaat het mis?",
+          "courseC_artist_prog7_c": "Je kunt het uitklapmenu op de draai-blokken gebruiken om te zien welke hoek je nodig hebt!",
+          "courseC_artist_prog7_d": "Je moet het volgende doen:\n\n-   ga vooruit\n-   draai rechtsom 45 graden\n-   ga vooruit\n-   draai rechtsom 90 graden\n-   ga vooruit\n-   draai rechtsom 45 graden\n\nHerhaal dit patroon 2 keer!",
           "courseC_artist_prog7_e": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
         },
         "courseC_artist_prog7_2018": {
+          "courseC_artist_prog7_a": "Elke hoek is 45 of 90 graden.",
+          "courseC_artist_prog7_b": "Werkt het bij de eerste stap?\\\nEn de tweede?\\\nWaar gaat het mis?",
+          "courseC_artist_prog7_c": "Je kunt het uitklapmenu op de draai-blokken gebruiken om te zien welke hoek je nodig hebt!",
+          "courseC_artist_prog7_d": "Je moet het volgende doen:\n\n-   ga vooruit\n-   draai rechtsom 45 graden\n-   ga vooruit\n-   draai rechtsom 90 graden\n-   ga vooruit\n-   draai rechtsom 45 graden\n\nHerhaal dit patroon 2 keer!",
           "courseC_artist_prog7_e": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
         },
         "courseC_artist_prog7_2019": {
+          "courseC_artist_prog7_a": "Elke hoek is 45 of 90 graden.",
+          "courseC_artist_prog7_b": "Werkt het bij de eerste stap?\\\nEn de tweede?\\\nWaar gaat het mis?",
+          "courseC_artist_prog7_c": "Je kunt het uitklapmenu op de draai-blokken gebruiken om te zien welke hoek je nodig hebt!",
+          "courseC_artist_prog7_d": "Je moet het volgende doen:\n\n-   ga vooruit\n-   draai rechtsom 45 graden\n-   ga vooruit\n-   draai rechtsom 90 graden\n-   ga vooruit\n-   draai rechtsom 45 graden\n\nHerhaal dit patroon 2 keer!",
           "courseC_artist_prog7_e": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
         },
         "courseC_artist_prog7_2020": {
+          "courseC_artist_prog7_a": "Elke hoek is 45 of 90 graden.",
+          "courseC_artist_prog7_b": "Werkt het bij de eerste stap?\\\nEn de tweede?\\\nWaar gaat het mis?",
+          "courseC_artist_prog7_c": "Je kunt het uitklapmenu op de draai-blokken gebruiken om te zien welke hoek je nodig hebt!",
+          "courseC_artist_prog7_d": "Je moet het volgende doen:\n\n-   ga vooruit\n-   draai rechtsom 45 graden\n-   ga vooruit\n-   draai rechtsom 90 graden\n-   ga vooruit\n-   draai rechtsom 45 graden\n\nHerhaal dit patroon 2 keer!",
           "courseC_artist_prog7_e": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
         },
         "courseC_artist_prog7_2021": {
+          "courseC_artist_prog7_a": "Elke hoek is 45 of 90 graden.",
+          "courseC_artist_prog7_b": "Werkt het bij de eerste stap?\\\nEn de tweede?\\\nWaar gaat het mis?",
+          "courseC_artist_prog7_c": "Je kunt het uitklapmenu op de draai-blokken gebruiken om te zien welke hoek je nodig hebt!",
+          "courseC_artist_prog7_d": "Je moet het volgende doen:\n\n-   ga vooruit\n-   draai rechtsom 45 graden\n-   ga vooruit\n-   draai rechtsom 90 graden\n-   ga vooruit\n-   draai rechtsom 45 graden\n\nHerhaal dit patroon 2 keer!",
           "courseC_artist_prog7_e": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
         },
         "courseC_artist_prog7_2023": {
+          "courseC_artist_prog7_a": "Elke hoek is 45 of 90 graden.",
+          "courseC_artist_prog7_b": "Werkt het bij de eerste stap?\\\nEn de tweede?\\\nWaar gaat het mis?",
+          "courseC_artist_prog7_c": "Je kunt het uitklapmenu op de draai-blokken gebruiken om te zien welke hoek je nodig hebt!",
+          "courseC_artist_prog7_d": "Je moet het volgende doen:\n\n-   ga vooruit\n-   draai rechtsom 45 graden\n-   ga vooruit\n-   draai rechtsom 90 graden\n-   ga vooruit\n-   draai rechtsom 45 graden\n\nHerhaal dit patroon 2 keer!",
           "courseC_artist_prog7_e": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseC_artist_prog_challenge1": {
+          "courseC_artist_prog_challenge1_a": "Je kunt dit tekenen als een rechthoek met een lijn in het midden of als twee vierkanten."
+        },
+        "courseC_artist_prog_challenge12022": {
+          "courseC_artist_prog_challenge1_a": "Je kunt dit tekenen als een rechthoek met een lijn in het midden of als twee vierkanten."
+        },
+        "courseC_artist_prog_challenge1_2018": {
+          "courseC_artist_prog_challenge1_a": "Je kunt dit tekenen als een rechthoek met een lijn in het midden of als twee vierkanten."
+        },
+        "courseC_artist_prog_challenge1_2019": {
+          "courseC_artist_prog_challenge1_a": "Je kunt dit tekenen als een rechthoek met een lijn in het midden of als twee vierkanten."
+        },
+        "courseC_artist_prog_challenge1_2020": {
+          "courseC_artist_prog_challenge1_a": "Je kunt dit tekenen als een rechthoek met een lijn in het midden of als twee vierkanten."
+        },
+        "courseC_artist_prog_challenge1_2021": {
+          "courseC_artist_prog_challenge1_a": "Je kunt dit tekenen als een rechthoek met een lijn in het midden of als twee vierkanten."
+        },
+        "courseC_artist_prog_challenge1_2023": {
+          "courseC_artist_prog_challenge1_a": "Je kunt dit tekenen als een rechthoek met een lijn in het midden of als twee vierkanten."
         },
         "courseC_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_b": "Gebruik lussen, want anders heb je niet genoeg `verzamel`-blokken!"
@@ -2422,37 +2604,37 @@
         "courseC_collector_prog3": {
           "courseC_collector_prog3_a": "Het programma zal alleen de blokken uitvoeren die vastzitten aan het  <xml><block type=\"when_run\"/></xml>-blok.",
           "courseC_collector_prog3_b": "Gebruik de `Stap`-knop eens om je code blok voor blok (of regel voor regel) uit te voeren.  Zie je waar het programma fout loopt?",
-          "courseC_collector_prog3_c": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier."
+          "courseC_collector_prog3_c": "Als je het lastig vindt om deze puzzel op te lossen, probeer dan eens de bewegingen op papier uit te schrijven."
         },
         "courseC_collector_prog32022": {
           "courseC_collector_prog3_a": "Het programma zal alleen de blokken uitvoeren die vastzitten aan het  <xml><block type=\"when_run\"/></xml>-blok.",
           "courseC_collector_prog3_b": "Gebruik de `Stap`-knop eens om je code blok voor blok (of regel voor regel) uit te voeren.  Zie je waar het programma fout loopt?",
-          "courseC_collector_prog3_c": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier."
+          "courseC_collector_prog3_c": "Als je het lastig vindt om deze puzzel op te lossen, probeer dan eens de bewegingen op papier uit te schrijven."
         },
         "courseC_collector_prog3_2018": {
           "courseC_collector_prog3_a": "Het programma zal alleen de blokken uitvoeren die vastzitten aan het  <xml><block type=\"when_run\"/></xml>-blok.",
           "courseC_collector_prog3_b": "Gebruik de `Stap`-knop eens om je code blok voor blok (of regel voor regel) uit te voeren.  Zie je waar het programma fout loopt?",
-          "courseC_collector_prog3_c": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier."
+          "courseC_collector_prog3_c": "Als je het lastig vindt om deze puzzel op te lossen, probeer dan eens de bewegingen op papier uit te schrijven."
         },
         "courseC_collector_prog3_2019": {
           "courseC_collector_prog3_a": "Het programma zal alleen de blokken uitvoeren die vastzitten aan het  <xml><block type=\"when_run\"/></xml>-blok.",
           "courseC_collector_prog3_b": "Gebruik de `Stap`-knop eens om je code blok voor blok (of regel voor regel) uit te voeren.  Zie je waar het programma fout loopt?",
-          "courseC_collector_prog3_c": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier."
+          "courseC_collector_prog3_c": "Als je het lastig vindt om deze puzzel op te lossen, probeer dan eens de bewegingen op papier uit te schrijven."
         },
         "courseC_collector_prog3_2020": {
           "courseC_collector_prog3_a": "Het programma zal alleen de blokken uitvoeren die vastzitten aan het  <xml><block type=\"when_run\"/></xml>-blok.",
           "courseC_collector_prog3_b": "Gebruik de `Stap`-knop eens om je code blok voor blok (of regel voor regel) uit te voeren.  Zie je waar het programma fout loopt?",
-          "courseC_collector_prog3_c": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier."
+          "courseC_collector_prog3_c": "Als je het lastig vindt om deze puzzel op te lossen, probeer dan eens de bewegingen op papier uit te schrijven."
         },
         "courseC_collector_prog3_2021": {
           "courseC_collector_prog3_a": "Het programma zal alleen de blokken uitvoeren die vastzitten aan het  <xml><block type=\"when_run\"/></xml>-blok.",
           "courseC_collector_prog3_b": "Gebruik de `Stap`-knop eens om je code blok voor blok (of regel voor regel) uit te voeren.  Zie je waar het programma fout loopt?",
-          "courseC_collector_prog3_c": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier."
+          "courseC_collector_prog3_c": "Als je het lastig vindt om deze puzzel op te lossen, probeer dan eens de bewegingen op papier uit te schrijven."
         },
         "courseC_collector_prog3_2023": {
           "courseC_collector_prog3_a": "Het programma zal alleen de blokken uitvoeren die vastzitten aan het  <xml><block type=\"when_run\"/></xml>-blok.",
           "courseC_collector_prog3_b": "Gebruik de `Stap`-knop eens om je code blok voor blok (of regel voor regel) uit te voeren.  Zie je waar het programma fout loopt?",
-          "courseC_collector_prog3_c": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier."
+          "courseC_collector_prog3_c": "Als je het lastig vindt om deze puzzel op te lossen, probeer dan eens de bewegingen op papier uit te schrijven."
         },
         "courseC_collector_prog4": {
           "courseC_collector_prog4_a": "Als je vastzit, probeer dan het pad uit te tekenen op een blad papier.",
@@ -3161,88 +3343,255 @@
           "courseC_maze_debugging1_b": "Je hebt nog 1 blok nodig om de puzzel af te maken."
         },
         "courseC_maze_debugging2": {
-          "courseC_maze_debugging2_b": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?"
+          "courseC_maze_debugging2_a": "Er staat veel waardevolle code binnen de werkplaats.  Verwijder niet zomaar alles om opnieuw te beginnen!",
+          "courseC_maze_debugging2_b": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?",
+          "courseC_maze_debugging2_c": "Kun je er niet achter komen wat er mis is? Probeer de code een paar keer uit te voeren om te zien wat er gebeurt."
         },
         "courseC_maze_debugging22022": {
-          "courseC_maze_debugging2_b": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?"
+          "courseC_maze_debugging2_a": "Er staat veel waardevolle code binnen de werkplaats.  Verwijder niet zomaar alles om opnieuw te beginnen!",
+          "courseC_maze_debugging2_b": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?",
+          "courseC_maze_debugging2_c": "Kun je er niet achter komen wat er mis is? Probeer de code een paar keer uit te voeren om te zien wat er gebeurt."
         },
         "courseC_maze_debugging2_2018": {
-          "courseC_maze_debugging2_b": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?"
+          "courseC_maze_debugging2_a": "Er staat veel waardevolle code binnen de werkplaats.  Verwijder niet zomaar alles om opnieuw te beginnen!",
+          "courseC_maze_debugging2_b": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?",
+          "courseC_maze_debugging2_c": "Kun je er niet achter komen wat er mis is? Probeer de code een paar keer uit te voeren om te zien wat er gebeurt."
         },
         "courseC_maze_debugging2_2019": {
-          "courseC_maze_debugging2_b": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?"
+          "courseC_maze_debugging2_a": "Er staat veel waardevolle code binnen de werkplaats.  Verwijder niet zomaar alles om opnieuw te beginnen!",
+          "courseC_maze_debugging2_b": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?",
+          "courseC_maze_debugging2_c": "Kun je er niet achter komen wat er mis is? Probeer de code een paar keer uit te voeren om te zien wat er gebeurt."
         },
         "courseC_maze_debugging2_2020": {
-          "courseC_maze_debugging2_b": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?"
+          "courseC_maze_debugging2_a": "Er staat veel waardevolle code binnen de werkplaats.  Verwijder niet zomaar alles om opnieuw te beginnen!",
+          "courseC_maze_debugging2_b": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?",
+          "courseC_maze_debugging2_c": "Kun je er niet achter komen wat er mis is? Probeer de code een paar keer uit te voeren om te zien wat er gebeurt."
         },
         "courseC_maze_debugging2_2021": {
-          "courseC_maze_debugging2_b": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?"
+          "courseC_maze_debugging2_a": "Er staat veel waardevolle code binnen de werkplaats.  Verwijder niet zomaar alles om opnieuw te beginnen!",
+          "courseC_maze_debugging2_b": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?",
+          "courseC_maze_debugging2_c": "Kun je er niet achter komen wat er mis is? Probeer de code een paar keer uit te voeren om te zien wat er gebeurt."
         },
         "courseC_maze_debugging2_2023": {
-          "courseC_maze_debugging2_b": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?"
+          "courseC_maze_debugging2_a": "Er staat veel waardevolle code binnen de werkplaats.  Verwijder niet zomaar alles om opnieuw te beginnen!",
+          "courseC_maze_debugging2_b": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?",
+          "courseC_maze_debugging2_c": "Kun je er niet achter komen wat er mis is? Probeer de code een paar keer uit te voeren om te zien wat er gebeurt."
         },
         "courseC_maze_debugging3": {
-          "courseC_maze_debugging3_a": "Om een blok in het midden van je code te verwijderen, sleep je de blokken er onder naar een ander gedeelte van het werkgebied.\n\nSleep dan het blok wat je wilt verwijderen terug naar de gereedschapskist.\n\nPlaats daarna je andere blokken terug waar ze horen.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)"
+          "courseC_maze_debugging3_a": "Om een blok in het midden van je code te verwijderen, sleep je de blokken er onder naar een ander gedeelte van het werkgebied.\n\nSleep dan het blok wat je wilt verwijderen terug naar de gereedschapskist.\n\nPlaats daarna je andere blokken terug waar ze horen.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_b": "Kun je er niet achter komen wat er mis is? Probeer de code een paar keer uit te voeren om te zien wat er gebeurt."
         },
         "courseC_maze_debugging32022": {
-          "courseC_maze_debugging3_a": "Om een blok in het midden van je code te verwijderen, sleep je de blokken er onder naar een ander gedeelte van het werkgebied.\n\nSleep dan het blok wat je wilt verwijderen terug naar de gereedschapskist.\n\nPlaats daarna je andere blokken terug waar ze horen.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)"
+          "courseC_maze_debugging3_a": "Om een blok in het midden van je code te verwijderen, sleep je de blokken er onder naar een ander gedeelte van het werkgebied.\n\nSleep dan het blok wat je wilt verwijderen terug naar de gereedschapskist.\n\nPlaats daarna je andere blokken terug waar ze horen.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_b": "Kun je er niet achter komen wat er mis is? Probeer de code een paar keer uit te voeren om te zien wat er gebeurt."
         },
         "courseC_maze_debugging3_2018": {
-          "courseC_maze_debugging3_a": "Om een blok in het midden van je code te verwijderen, sleep je de blokken er onder naar een ander gedeelte van het werkgebied.\n\nSleep dan het blok wat je wilt verwijderen terug naar de gereedschapskist.\n\nPlaats daarna je andere blokken terug waar ze horen.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)"
+          "courseC_maze_debugging3_a": "Om een blok in het midden van je code te verwijderen, sleep je de blokken er onder naar een ander gedeelte van het werkgebied.\n\nSleep dan het blok wat je wilt verwijderen terug naar de gereedschapskist.\n\nPlaats daarna je andere blokken terug waar ze horen.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_b": "Kun je er niet achter komen wat er mis is? Probeer de code een paar keer uit te voeren om te zien wat er gebeurt."
         },
         "courseC_maze_debugging3_2019": {
-          "courseC_maze_debugging3_a": "Om een blok in het midden van je code te verwijderen, sleep je de blokken er onder naar een ander gedeelte van het werkgebied.\n\nSleep dan het blok wat je wilt verwijderen terug naar de gereedschapskist.\n\nPlaats daarna je andere blokken terug waar ze horen.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)"
+          "courseC_maze_debugging3_a": "Om een blok in het midden van je code te verwijderen, sleep je de blokken er onder naar een ander gedeelte van het werkgebied.\n\nSleep dan het blok wat je wilt verwijderen terug naar de gereedschapskist.\n\nPlaats daarna je andere blokken terug waar ze horen.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_b": "Kun je er niet achter komen wat er mis is? Probeer de code een paar keer uit te voeren om te zien wat er gebeurt."
         },
         "courseC_maze_debugging3_2020": {
-          "courseC_maze_debugging3_a": "Om een blok in het midden van je code te verwijderen, sleep je de blokken er onder naar een ander gedeelte van het werkgebied.\n\nSleep dan het blok wat je wilt verwijderen terug naar de gereedschapskist.\n\nPlaats daarna je andere blokken terug waar ze horen.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)"
+          "courseC_maze_debugging3_a": "Om een blok in het midden van je code te verwijderen, sleep je de blokken er onder naar een ander gedeelte van het werkgebied.\n\nSleep dan het blok wat je wilt verwijderen terug naar de gereedschapskist.\n\nPlaats daarna je andere blokken terug waar ze horen.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_b": "Kun je er niet achter komen wat er mis is? Probeer de code een paar keer uit te voeren om te zien wat er gebeurt."
         },
         "courseC_maze_debugging3_2021": {
-          "courseC_maze_debugging3_a": "Om een blok in het midden van je code te verwijderen, sleep je de blokken er onder naar een ander gedeelte van het werkgebied.\n\nSleep dan het blok wat je wilt verwijderen terug naar de gereedschapskist.\n\nPlaats daarna je andere blokken terug waar ze horen.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)"
+          "courseC_maze_debugging3_a": "Om een blok in het midden van je code te verwijderen, sleep je de blokken er onder naar een ander gedeelte van het werkgebied.\n\nSleep dan het blok wat je wilt verwijderen terug naar de gereedschapskist.\n\nPlaats daarna je andere blokken terug waar ze horen.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_b": "Kun je er niet achter komen wat er mis is? Probeer de code een paar keer uit te voeren om te zien wat er gebeurt."
         },
         "courseC_maze_debugging3_2023": {
-          "courseC_maze_debugging3_a": "Om een blok in het midden van je code te verwijderen, sleep je de blokken er onder naar een ander gedeelte van het werkgebied.\n\nSleep dan het blok wat je wilt verwijderen terug naar de gereedschapskist.\n\nPlaats daarna je andere blokken terug waar ze horen.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)"
+          "courseC_maze_debugging3_a": "Om een blok in het midden van je code te verwijderen, sleep je de blokken er onder naar een ander gedeelte van het werkgebied.\n\nSleep dan het blok wat je wilt verwijderen terug naar de gereedschapskist.\n\nPlaats daarna je andere blokken terug waar ze horen.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_b": "Kun je er niet achter komen wat er mis is? Probeer de code een paar keer uit te voeren om te zien wat er gebeurt."
         },
         "courseC_maze_debugging4": {
-          "courseC_maze_debugging4_a": "Gebruik de \"Stap\" knop om de instructies één voor één uit te voeren. Helpt dit je om de regel te vinden waar het misgaat?"
+          "courseC_maze_debugging4_a": "Gebruik de \"Stap\" knop om de instructies één voor één uit te voeren. Helpt dit je om de regel te vinden waar het misgaat?",
+          "courseC_maze_debugging4_b": "Eén van de draaiingen zorgt ervoor dat Scrat de verkeerde kant uit gaat. Kun je uitvinden welke?"
         },
         "courseC_maze_debugging42022": {
-          "courseC_maze_debugging4_a": "Gebruik de \"Stap\" knop om de instructies één voor één uit te voeren. Helpt dit je om de regel te vinden waar het misgaat?"
+          "courseC_maze_debugging4_a": "Gebruik de \"Stap\" knop om de instructies één voor één uit te voeren. Helpt dit je om de regel te vinden waar het misgaat?",
+          "courseC_maze_debugging4_b": "Eén van de draaiingen zorgt ervoor dat Scrat de verkeerde kant uit gaat. Kun je uitvinden welke?"
         },
         "courseC_maze_debugging4_2018": {
-          "courseC_maze_debugging4_a": "Gebruik de \"Stap\" knop om de instructies één voor één uit te voeren. Helpt dit je om de regel te vinden waar het misgaat?"
+          "courseC_maze_debugging4_a": "Gebruik de \"Stap\" knop om de instructies één voor één uit te voeren. Helpt dit je om de regel te vinden waar het misgaat?",
+          "courseC_maze_debugging4_b": "Eén van de draaiingen zorgt ervoor dat Scrat de verkeerde kant uit gaat. Kun je uitvinden welke?"
         },
         "courseC_maze_debugging4_2019": {
-          "courseC_maze_debugging4_a": "Gebruik de \"Stap\" knop om de instructies één voor één uit te voeren. Helpt dit je om de regel te vinden waar het misgaat?"
+          "courseC_maze_debugging4_a": "Gebruik de \"Stap\" knop om de instructies één voor één uit te voeren. Helpt dit je om de regel te vinden waar het misgaat?",
+          "courseC_maze_debugging4_b": "Eén van de draaiingen zorgt ervoor dat Scrat de verkeerde kant uit gaat. Kun je uitvinden welke?"
         },
         "courseC_maze_debugging4_2020": {
-          "courseC_maze_debugging4_a": "Gebruik de \"Stap\" knop om de instructies één voor één uit te voeren. Helpt dit je om de regel te vinden waar het misgaat?"
+          "courseC_maze_debugging4_a": "Gebruik de \"Stap\" knop om de instructies één voor één uit te voeren. Helpt dit je om de regel te vinden waar het misgaat?",
+          "courseC_maze_debugging4_b": "Eén van de draaiingen zorgt ervoor dat Scrat de verkeerde kant uit gaat. Kun je uitvinden welke?"
         },
         "courseC_maze_debugging4_2021": {
-          "courseC_maze_debugging4_a": "Gebruik de \"Stap\" knop om de instructies één voor één uit te voeren. Helpt dit je om de regel te vinden waar het misgaat?"
+          "courseC_maze_debugging4_a": "Gebruik de \"Stap\" knop om de instructies één voor één uit te voeren. Helpt dit je om de regel te vinden waar het misgaat?",
+          "courseC_maze_debugging4_b": "Eén van de draaiingen zorgt ervoor dat Scrat de verkeerde kant uit gaat. Kun je uitvinden welke?"
         },
         "courseC_maze_debugging4_2023": {
-          "courseC_maze_debugging4_a": "Gebruik de \"Stap\" knop om de instructies één voor één uit te voeren. Helpt dit je om de regel te vinden waar het misgaat?"
+          "courseC_maze_debugging4_a": "Gebruik de \"Stap\" knop om de instructies één voor één uit te voeren. Helpt dit je om de regel te vinden waar het misgaat?",
+          "courseC_maze_debugging4_b": "Eén van de draaiingen zorgt ervoor dat Scrat de verkeerde kant uit gaat. Kun je uitvinden welke?"
+        },
+        "courseC_maze_debugging5": {
+          "courseC_maze_debugging5_a": "Er staan al veel handige blokken binnen de werkplaats. Verwijder ze niet allemaal! \n\nGebruik de \"Stap\" knop om uit te zoeken waar de code verkeerd gaat.",
+          "courseC_maze_debugging5_b": "Probeer hardop te zeggen wat Scrat moet doen. Is dit hetzelfde als de code in de werkplaats? Wat gaat er mis?"
+        },
+        "courseC_maze_debugging52022": {
+          "courseC_maze_debugging5_a": "Er staan al veel handige blokken binnen de werkplaats. Verwijder ze niet allemaal! \n\nGebruik de \"Stap\" knop om uit te zoeken waar de code verkeerd gaat.",
+          "courseC_maze_debugging5_b": "Probeer hardop te zeggen wat Scrat moet doen. Is dit hetzelfde als de code in de werkplaats? Wat gaat er mis?",
+          "courseC_maze_debugging5_c": "Je kunt de richting van het draai-blok veranderen door op de dropdown te klikken."
+        },
+        "courseC_maze_debugging5_2018": {
+          "courseC_maze_debugging5_a": "Er staan al veel handige blokken binnen de werkplaats. Verwijder ze niet allemaal! \n\nGebruik de \"Stap\" knop om uit te zoeken waar de code verkeerd gaat.",
+          "courseC_maze_debugging5_b": "Probeer hardop te zeggen wat Scrat moet doen. Is dit hetzelfde als de code in de werkplaats? Wat gaat er mis?",
+          "courseC_maze_debugging5_c": "Je kunt de richting van het draai-blok veranderen door op de dropdown te klikken."
+        },
+        "courseC_maze_debugging5_2019": {
+          "courseC_maze_debugging5_a": "Er staan al veel handige blokken binnen de werkplaats. Verwijder ze niet allemaal! \n\nGebruik de \"Stap\" knop om uit te zoeken waar de code verkeerd gaat.",
+          "courseC_maze_debugging5_b": "Probeer hardop te zeggen wat Scrat moet doen. Is dit hetzelfde als de code in de werkplaats? Wat gaat er mis?",
+          "courseC_maze_debugging5_c": "Je kunt de richting van het draai-blok veranderen door op de dropdown te klikken."
+        },
+        "courseC_maze_debugging5_2020": {
+          "courseC_maze_debugging5_a": "Er staan al veel handige blokken binnen de werkplaats. Verwijder ze niet allemaal! \n\nGebruik de \"Stap\" knop om uit te zoeken waar de code verkeerd gaat.",
+          "courseC_maze_debugging5_b": "Probeer hardop te zeggen wat Scrat moet doen. Is dit hetzelfde als de code in de werkplaats? Wat gaat er mis?",
+          "courseC_maze_debugging5_c": "Je kunt de richting van het draai-blok veranderen door op de dropdown te klikken."
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_a": "Er staan al veel handige blokken binnen de werkplaats. Verwijder ze niet allemaal! \n\nGebruik de \"Stap\" knop om uit te zoeken waar de code verkeerd gaat.",
+          "courseC_maze_debugging5_b": "Probeer hardop te zeggen wat Scrat moet doen. Is dit hetzelfde als de code in de werkplaats? Wat gaat er mis?",
+          "courseC_maze_debugging5_c": "Je kunt de richting van het draai-blok veranderen door op de dropdown te klikken."
+        },
+        "courseC_maze_debugging5_2023": {
+          "courseC_maze_debugging5_a": "Er staan al veel handige blokken binnen de werkplaats. Verwijder ze niet allemaal! \n\nGebruik de \"Stap\" knop om uit te zoeken waar de code verkeerd gaat.",
+          "courseC_maze_debugging5_b": "Probeer hardop te zeggen wat Scrat moet doen. Is dit hetzelfde als de code in de werkplaats? Wat gaat er mis?",
+          "courseC_maze_debugging5_c": "Je kunt de richting van het draai-blok veranderen door op de dropdown te klikken."
+        },
+        "courseC_maze_debugging6": {
+          "courseC_maze_debugging6_a": "-   Wat zou Scrat moeten doen?\n-   Wat doet Scrat nu?\n-   Wat zegt dit jou?",
+          "courseC_maze_debugging6_b": "Als je de eerste bug gevonden en gefixt hebt, herhaal dan het debug proces nogmaals om de tweede bug te vinden.\n\nHerhaal het proces tot het programma werkt!"
+        },
+        "courseC_maze_debugging62022": {
+          "courseC_maze_debugging6_a": "-   Wat zou Scrat moeten doen?\n-   Wat doet Scrat nu?\n-   Wat zegt dit jou?",
+          "courseC_maze_debugging6_b": "Als je de eerste bug gevonden en gefixt hebt, herhaal dan het debug proces nogmaals om de tweede bug te vinden.\n\nHerhaal het proces tot het programma werkt!"
+        },
+        "courseC_maze_debugging6_2018": {
+          "courseC_maze_debugging6_a": "-   Wat zou Scrat moeten doen?\n-   Wat doet Scrat nu?\n-   Wat zegt dit jou?",
+          "courseC_maze_debugging6_b": "Als je de eerste bug gevonden en gefixt hebt, herhaal dan het debug proces nogmaals om de tweede bug te vinden.\n\nHerhaal het proces tot het programma werkt!"
+        },
+        "courseC_maze_debugging6_2019": {
+          "courseC_maze_debugging6_a": "-   Wat zou Scrat moeten doen?\n-   Wat doet Scrat nu?\n-   Wat zegt dit jou?",
+          "courseC_maze_debugging6_b": "Als je de eerste bug gevonden en gefixt hebt, herhaal dan het debug proces nogmaals om de tweede bug te vinden.\n\nHerhaal het proces tot het programma werkt!"
+        },
+        "courseC_maze_debugging6_2020": {
+          "courseC_maze_debugging6_a": "-   Wat zou Scrat moeten doen?\n-   Wat doet Scrat nu?\n-   Wat zegt dit jou?",
+          "courseC_maze_debugging6_b": "Als je de eerste bug gevonden en gefixt hebt, herhaal dan het debug proces nogmaals om de tweede bug te vinden.\n\nHerhaal het proces tot het programma werkt!"
+        },
+        "courseC_maze_debugging6_2021": {
+          "courseC_maze_debugging6_a": "-   Wat zou Scrat moeten doen?\n-   Wat doet Scrat nu?\n-   Wat zegt dit jou?",
+          "courseC_maze_debugging6_b": "Als je de eerste bug gevonden en gefixt hebt, herhaal dan het debug proces nogmaals om de tweede bug te vinden.\n\nHerhaal het proces tot het programma werkt!"
+        },
+        "courseC_maze_debugging6_2023": {
+          "courseC_maze_debugging6_a": "-   Wat zou Scrat moeten doen?\n-   Wat doet Scrat nu?\n-   Wat zegt dit jou?",
+          "courseC_maze_debugging6_b": "Als je de eerste bug gevonden en gefixt hebt, herhaal dan het debug proces nogmaals om de tweede bug te vinden.\n\nHerhaal het proces tot het programma werkt!"
+        },
+        "courseC_maze_debugging7": {
+          "courseC_maze_debugging7_a": "-   Werkt alles bij de eerste stap goed?\n-   En bij de tweede stap?\n-   Waar gaat het mis?",
+          "courseC_maze_debugging7_b": "Vergeet niet om de \"Stap\" knop te gebruiken, om het programma regel voor regel uit te voeren!",
+          "courseC_maze_debugging7_c": "Zorg dat je, na het vinden en fixen van de eerste bug, doorgaat met debuggen om de volgende bug te vinden.\n\nHerhaal het debug-proces tot het programma werkt!"
+        },
+        "courseC_maze_debugging72022": {
+          "courseC_maze_debugging7_a": "-   Werkt alles bij de eerste stap goed?\n-   En bij de tweede stap?\n-   Waar gaat het mis?",
+          "courseC_maze_debugging7_b": "Vergeet niet om de \"Stap\" knop te gebruiken, om het programma regel voor regel uit te voeren!",
+          "courseC_maze_debugging7_c": "Zorg dat je, na het vinden en fixen van de eerste bug, doorgaat met debuggen om de volgende bug te vinden.\n\nHerhaal het debug-proces tot het programma werkt!"
+        },
+        "courseC_maze_debugging7_2018": {
+          "courseC_maze_debugging7_a": "-   Werkt alles bij de eerste stap goed?\n-   En bij de tweede stap?\n-   Waar gaat het mis?",
+          "courseC_maze_debugging7_b": "Vergeet niet om de \"Stap\" knop te gebruiken, om het programma regel voor regel uit te voeren!",
+          "courseC_maze_debugging7_c": "Zorg dat je, na het vinden en fixen van de eerste bug, doorgaat met debuggen om de volgende bug te vinden.\n\nHerhaal het debug-proces tot het programma werkt!"
+        },
+        "courseC_maze_debugging7_2019": {
+          "courseC_maze_debugging7_a": "-   Werkt alles bij de eerste stap goed?\n-   En bij de tweede stap?\n-   Waar gaat het mis?",
+          "courseC_maze_debugging7_b": "Vergeet niet om de \"Stap\" knop te gebruiken, om het programma regel voor regel uit te voeren!",
+          "courseC_maze_debugging7_c": "Zorg dat je, na het vinden en fixen van de eerste bug, doorgaat met debuggen om de volgende bug te vinden.\n\nHerhaal het debug-proces tot het programma werkt!"
+        },
+        "courseC_maze_debugging7_2020": {
+          "courseC_maze_debugging7_a": "-   Werkt alles bij de eerste stap goed?\n-   En bij de tweede stap?\n-   Waar gaat het mis?",
+          "courseC_maze_debugging7_b": "Vergeet niet om de \"Stap\" knop te gebruiken, om het programma regel voor regel uit te voeren!",
+          "courseC_maze_debugging7_c": "Zorg dat je, na het vinden en fixen van de eerste bug, doorgaat met debuggen om de volgende bug te vinden.\n\nHerhaal het debug-proces tot het programma werkt!"
+        },
+        "courseC_maze_debugging7_2021": {
+          "courseC_maze_debugging7_a": "-   Werkt alles bij de eerste stap goed?\n-   En bij de tweede stap?\n-   Waar gaat het mis?",
+          "courseC_maze_debugging7_b": "Vergeet niet om de \"Stap\" knop te gebruiken, om het programma regel voor regel uit te voeren!",
+          "courseC_maze_debugging7_c": "Zorg dat je, na het vinden en fixen van de eerste bug, doorgaat met debuggen om de volgende bug te vinden.\n\nHerhaal het debug-proces tot het programma werkt!"
+        },
+        "courseC_maze_debugging7_2023": {
+          "courseC_maze_debugging7_a": "-   Werkt alles bij de eerste stap goed?\n-   En bij de tweede stap?\n-   Waar gaat het mis?",
+          "courseC_maze_debugging7_b": "Vergeet niet om de \"Stap\" knop te gebruiken, om het programma regel voor regel uit te voeren!",
+          "courseC_maze_debugging7_c": "Zorg dat je, na het vinden en fixen van de eerste bug, doorgaat met debuggen om de volgende bug te vinden.\n\nHerhaal het debug-proces tot het programma werkt!"
         },
         "courseC_maze_debugging_challenge1": {
-          "courseC_maze_debugging_challenge1_a": "Links of rechts? Aan jou de keuze!"
+          "courseC_maze_debugging_challenge1_a": "Links of rechts? Aan jou de keuze!",
+          "courseC_maze_debugging_challenge1_b": "Het pad van Scrat heeft de vorm van een rechthoek! Hij moet elke keer op dezelfde manier draaien.",
+          "courseC_maze_debugging_challenge1_c": "Als je vastloopt, kun je altijd opnieuw beginnen en een nieuwe weg vinden!"
         },
         "courseC_maze_debugging_challenge12022": {
-          "courseC_maze_debugging_challenge1_a": "Links of rechts? Aan jou de keuze!"
+          "courseC_maze_debugging_challenge1_a": "Links of rechts? Aan jou de keuze!",
+          "courseC_maze_debugging_challenge1_b": "Het pad van Scrat heeft de vorm van een rechthoek! Hij moet elke keer op dezelfde manier draaien.",
+          "courseC_maze_debugging_challenge1_c": "Als je vastloopt, kun je altijd opnieuw beginnen en een nieuwe weg vinden!"
         },
         "courseC_maze_debugging_challenge1_2018": {
-          "courseC_maze_debugging_challenge1_a": "Links of rechts? Aan jou de keuze!"
+          "courseC_maze_debugging_challenge1_a": "Links of rechts? Aan jou de keuze!",
+          "courseC_maze_debugging_challenge1_b": "Het pad van Scrat heeft de vorm van een rechthoek! Hij moet elke keer op dezelfde manier draaien.",
+          "courseC_maze_debugging_challenge1_c": "Als je vastloopt, kun je altijd opnieuw beginnen en een nieuwe weg vinden!"
         },
         "courseC_maze_debugging_challenge1_2019": {
-          "courseC_maze_debugging_challenge1_a": "Links of rechts? Aan jou de keuze!"
+          "courseC_maze_debugging_challenge1_a": "Links of rechts? Aan jou de keuze!",
+          "courseC_maze_debugging_challenge1_b": "Het pad van Scrat heeft de vorm van een rechthoek! Hij moet elke keer op dezelfde manier draaien.",
+          "courseC_maze_debugging_challenge1_c": "Als je vastloopt, kun je altijd opnieuw beginnen en een nieuwe weg vinden!"
         },
         "courseC_maze_debugging_challenge1_2020": {
-          "courseC_maze_debugging_challenge1_a": "Links of rechts? Aan jou de keuze!"
+          "courseC_maze_debugging_challenge1_a": "Links of rechts? Aan jou de keuze!",
+          "courseC_maze_debugging_challenge1_b": "Het pad van Scrat heeft de vorm van een rechthoek! Hij moet elke keer op dezelfde manier draaien.",
+          "courseC_maze_debugging_challenge1_c": "Als je vastloopt, kun je altijd opnieuw beginnen en een nieuwe weg vinden!"
         },
         "courseC_maze_debugging_challenge1_2021": {
-          "courseC_maze_debugging_challenge1_a": "Links of rechts? Aan jou de keuze!"
+          "courseC_maze_debugging_challenge1_a": "Links of rechts? Aan jou de keuze!",
+          "courseC_maze_debugging_challenge1_b": "Het pad van Scrat heeft de vorm van een rechthoek! Hij moet elke keer op dezelfde manier draaien.",
+          "courseC_maze_debugging_challenge1_c": "Als je vastloopt, kun je altijd opnieuw beginnen en een nieuwe weg vinden!"
         },
         "courseC_maze_debugging_challenge1_2023": {
-          "courseC_maze_debugging_challenge1_a": "Links of rechts? Aan jou de keuze!"
+          "courseC_maze_debugging_challenge1_a": "Links of rechts? Aan jou de keuze!",
+          "courseC_maze_debugging_challenge1_b": "Het pad van Scrat heeft de vorm van een rechthoek! Hij moet elke keer op dezelfde manier draaien.",
+          "courseC_maze_debugging_challenge1_c": "Als je vastloopt, kun je altijd opnieuw beginnen en een nieuwe weg vinden!"
+        },
+        "courseC_maze_debugging_challenge2": {
+          "courseC_maze_debugging_challenge2_b": "Loop je vast? Probeer de code te debuggen. Waar gaat het mis?",
+          "courseC_maze_debugging_challenge2_c": "Er zijn twee routes die je kunt volgen door vooruit te bewegen en vier keer te draaien. Als je een manier vindt om een lus te gebruiken, zijn er misschien wel meer!\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
+        },
+        "courseC_maze_debugging_challenge22022": {
+          "courseC_maze_debugging_challenge2_b": "Loop je vast? Probeer de code te debuggen. Waar gaat het mis?",
+          "courseC_maze_debugging_challenge2_c": "Er zijn twee routes die je kunt volgen door vooruit te bewegen en vier keer te draaien. Als je een manier vindt om een lus te gebruiken, zijn er misschien wel meer!\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
+        },
+        "courseC_maze_debugging_challenge2_2018": {
+          "courseC_maze_debugging_challenge2_b": "Loop je vast? Probeer de code te debuggen. Waar gaat het mis?",
+          "courseC_maze_debugging_challenge2_c": "Er zijn twee routes die je kunt volgen door vooruit te bewegen en vier keer te draaien. Als je een manier vindt om een lus te gebruiken, zijn er misschien wel meer!\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
+        },
+        "courseC_maze_debugging_challenge2_2019": {
+          "courseC_maze_debugging_challenge2_b": "Loop je vast? Probeer de code te debuggen. Waar gaat het mis?",
+          "courseC_maze_debugging_challenge2_c": "Er zijn twee routes die je kunt volgen door vooruit te bewegen en vier keer te draaien. Als je een manier vindt om een lus te gebruiken, zijn er misschien wel meer!\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
+        },
+        "courseC_maze_debugging_challenge2_2020": {
+          "courseC_maze_debugging_challenge2_b": "Loop je vast? Probeer de code te debuggen. Waar gaat het mis?",
+          "courseC_maze_debugging_challenge2_c": "Er zijn twee routes die je kunt volgen door vooruit te bewegen en vier keer te draaien. Als je een manier vindt om een lus te gebruiken, zijn er misschien wel meer!\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
+        },
+        "courseC_maze_debugging_challenge2_2021": {
+          "courseC_maze_debugging_challenge2_b": "Loop je vast? Probeer de code te debuggen. Waar gaat het mis?",
+          "courseC_maze_debugging_challenge2_c": "Er zijn twee routes die je kunt volgen door vooruit te bewegen en vier keer te draaien. Als je een manier vindt om een lus te gebruiken, zijn er misschien wel meer!\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
+        },
+        "courseC_maze_debugging_challenge2_2023": {
+          "courseC_maze_debugging_challenge2_b": "Loop je vast? Probeer de code te debuggen. Waar gaat het mis?",
+          "courseC_maze_debugging_challenge2_c": "Er zijn twee routes die je kunt volgen door vooruit te bewegen en vier keer te draaien. Als je een manier vindt om een lus te gebruiken, zijn er misschien wel meer!\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
         },
         "courseC_maze_loops_challenge1a": {
           "courseC_maze_loops_challenge1_a": "Beschouw dit pad als twee opeenvolgende routes, Elke route heeft een patroon dat je kunt herhalen.",
@@ -3456,31 +3805,31 @@
         },
         "courseC_maze_programming7": {
           "courseC_maze_programming7_a": "Vergeet niet om de `Stap`-knop te gebruiken. Daarmee kun je het programma stap voor stap uitvoeren en kijken waar het fout gaat.",
-          "courseC_maze_programming7_b": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier."
+          "courseC_maze_programming7_b": "Als je het lastig vindt om deze puzzel op te lossen, probeer dan eens de bewegingen op papier uit te schrijven."
         },
         "courseC_maze_programming72022": {
           "courseC_maze_programming7_a": "Vergeet niet om de `Stap`-knop te gebruiken. Daarmee kun je het programma stap voor stap uitvoeren en kijken waar het fout gaat.",
-          "courseC_maze_programming7_b": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier."
+          "courseC_maze_programming7_b": "Als je het lastig vindt om deze puzzel op te lossen, probeer dan eens de bewegingen op papier uit te schrijven."
         },
         "courseC_maze_programming7_2018": {
           "courseC_maze_programming7_a": "Vergeet niet om de `Stap`-knop te gebruiken. Daarmee kun je het programma stap voor stap uitvoeren en kijken waar het fout gaat.",
-          "courseC_maze_programming7_b": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier."
+          "courseC_maze_programming7_b": "Als je het lastig vindt om deze puzzel op te lossen, probeer dan eens de bewegingen op papier uit te schrijven."
         },
         "courseC_maze_programming7_2019": {
           "courseC_maze_programming7_a": "Vergeet niet om de `Stap`-knop te gebruiken. Daarmee kun je het programma stap voor stap uitvoeren en kijken waar het fout gaat.",
-          "courseC_maze_programming7_b": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier."
+          "courseC_maze_programming7_b": "Als je het lastig vindt om deze puzzel op te lossen, probeer dan eens de bewegingen op papier uit te schrijven."
         },
         "courseC_maze_programming7_2020": {
           "courseC_maze_programming7_a": "Vergeet niet om de `Stap`-knop te gebruiken. Daarmee kun je het programma stap voor stap uitvoeren en kijken waar het fout gaat.",
-          "courseC_maze_programming7_b": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier."
+          "courseC_maze_programming7_b": "Als je het lastig vindt om deze puzzel op te lossen, probeer dan eens de bewegingen op papier uit te schrijven."
         },
         "courseC_maze_programming7_2021": {
           "courseC_maze_programming7_a": "Vergeet niet om de `Stap`-knop te gebruiken. Daarmee kun je het programma stap voor stap uitvoeren en kijken waar het fout gaat.",
-          "courseC_maze_programming7_b": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier."
+          "courseC_maze_programming7_b": "Als je het lastig vindt om deze puzzel op te lossen, probeer dan eens de bewegingen op papier uit te schrijven."
         },
         "courseC_maze_programming7_2023": {
           "courseC_maze_programming7_a": "Vergeet niet om de `Stap`-knop te gebruiken. Daarmee kun je het programma stap voor stap uitvoeren en kijken waar het fout gaat.",
-          "courseC_maze_programming7_b": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier."
+          "courseC_maze_programming7_b": "Als je het lastig vindt om deze puzzel op te lossen, probeer dan eens de bewegingen op papier uit te schrijven."
         },
         "courseC_maze_programming8": {
           "courseC_maze_programming8_a": "Denk er aan dat je de `Stap`-knop kunt gebruiken om het programma stap voor stap uit te voeren, als je er niet uit komt.",
@@ -3797,7 +4146,7 @@
         "courseC_starWars_loops8": {
           "course_starWars_loops8_a": "Bekijk het probleem eens in kleine stapjes.  Neem er de tijd voor.  Je hoeft het niet allemaal in de eerste poging op te lossen!",
           "course_starWars_loops8_b": "Bekijk de eerste helft van dit probleem als een trap probleem. Hoe heb je dat de vorige keer opgelost?",
-          "course_starWars_loops8_c": "Bekijk deze route eens.\n\n[][0]"
+          "course_starWars_loops8_c": "Bekijk deze route eens.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
         },
         "courseC_starWars_loops82022": {
           "course_starWars_loops8_a": "Bekijk het probleem eens in kleine stapjes.  Neem er de tijd voor.  Je hoeft het niet allemaal in de eerste poging op te lossen!",
@@ -4411,7 +4760,8 @@
         },
         "courseD_artist_ramp12": {
           "courseD_artist_ramp12_a": "Je kunt eerst het vierkant tekenen en daarna de driehoek, of andersom!",
-          "courseD_artist_ramp12_b": "Probeer het probleem in 2 delen te splitsen, en 2 lussen te gebruiken."
+          "courseD_artist_ramp12_b": "Probeer het probleem in 2 delen te splitsen, en 2 lussen te gebruiken.",
+          "courseD_artist_ramp12_c": "Je kunt het uitklapmenu op de `draai` blokken gebruiken om te zien welke hoek je nodig hebt!"
         },
         "courseD_bee_conditionals1_predict1": {
           "courseD_bee_conditionals1_a": "Je zult een `als`-blok nodig hebben om te kunnen zien of er een bloem onder de wolk staat, voordat je probeert nectar te halen."
@@ -4500,7 +4850,7 @@
           "courseD_bee_conditionals3_hintVid2": "Kijk naar deze video voor hulp bij deze puzzle."
         },
         "courseD_bee_conditionals4": {
-          "courseD_bee_conditionals4_c": "Met het [blockly block][0] blok, moet je vooruit bewegen en kijken of er bloemen zijn. Als er een bloem is, wat zou de bloem dan moeten doen?",
+          "courseD_bee_conditionals4_c": "Met het <xml><block type=\"maze_untilBlocked\"/></xml> blok, moet je vooruit bewegen en kijken of er bloemen zijn. Als er een bloem is, wat zou de bloem dan moeten doen?",
           "courseD_bee_conditionals4_hintVid1": "Heb je hulp nodig om op gang te komen?  Kijk naar de video!",
           "courseD_bee_conditionals4_hintVid2": "Kijk naar deze video voor hulp bij deze puzzle."
         },
@@ -5043,6 +5393,27 @@
           "courseD_maze_ramp7_b": "Vergeet niet om de `Stap`-knop te gebruiken. Daarmee kun je het programma stap voor stap uitvoeren en kijken waar het fout gaat.",
           "courseD_maze_ramp7_c": "Als je je code eenvoudiger wilt maken, kun je een herhaal lus binnen in een andere herhaal lus plaatsen! Dat noemen we een **geneste lus** (nested loop)."
         },
+        "courseD_maze_until4": {
+          "courseD_maze_until4_a": "Gebruik de \"Stap\" knop, om regel voor regel door je programma heen te lopen.\n\n-   Werkt alles bij de eerste stap?\n-   Werkt alles bij de tweede stap?\n-   Waar gaat het mis?"
+        },
+        "courseD_maze_until42022": {
+          "courseD_maze_until4_a": "Gebruik de \"Stap\" knop, om regel voor regel door je programma heen te lopen.\n\n-   Werkt alles bij de eerste stap?\n-   Werkt alles bij de tweede stap?\n-   Waar gaat het mis?"
+        },
+        "courseD_maze_until4_2018": {
+          "courseD_maze_until4_a": "Gebruik de \"Stap\" knop, om regel voor regel door je programma heen te lopen.\n\n-   Werkt alles bij de eerste stap?\n-   Werkt alles bij de tweede stap?\n-   Waar gaat het mis?"
+        },
+        "courseD_maze_until4_2019": {
+          "courseD_maze_until4_a": "Gebruik de \"Stap\" knop, om regel voor regel door je programma heen te lopen.\n\n-   Werkt alles bij de eerste stap?\n-   Werkt alles bij de tweede stap?\n-   Waar gaat het mis?"
+        },
+        "courseD_maze_until4_2020": {
+          "courseD_maze_until4_a": "Gebruik de \"Stap\" knop, om regel voor regel door je programma heen te lopen.\n\n-   Werkt alles bij de eerste stap?\n-   Werkt alles bij de tweede stap?\n-   Waar gaat het mis?"
+        },
+        "courseD_maze_until4_2021": {
+          "courseD_maze_until4_a": "Gebruik de \"Stap\" knop, om regel voor regel door je programma heen te lopen.\n\n-   Werkt alles bij de eerste stap?\n-   Werkt alles bij de tweede stap?\n-   Waar gaat het mis?"
+        },
+        "courseD_maze_until4_2023": {
+          "courseD_maze_until4_a": "Gebruik de \"Stap\" knop, om regel voor regel door je programma heen te lopen.\n\n-   Werkt alles bij de eerste stap?\n-   Werkt alles bij de tweede stap?\n-   Waar gaat het mis?"
+        },
         "courseD_playLab_cond1": {
           "courseD_playLab_cond1_a": "Om deze puzzle op te lossen, moet je het `verplaats speler 1 omhoog`-blok vastmaken aan de `wanneer pijltje naar boven`-gebeurtenis. En daarna moet je hetzelfde doen voor alle andere richtingen.",
           "courseD_playLab_cond1_b": "Gebruik de drop-down menus op de `wanneer pijltje`- en `verplaats speler`-blokken om de richting te veranderen.",
@@ -5126,6 +5497,7 @@
         },
         "courseD_video_nestedLoopsArtist": {
           "courseD_artist_ramp12_a": "Wat is er hetzelfde als bij een vierkant? En wat is er anders?",
+          "courseD_artist_ramp12_b": "Je kunt het uitklapmenu op de `draai` blokken gebruiken om te zien welke hoek je nodig hebt!",
           "courseD_artist_ramp12_c": "Om een zijde te tekenen, moet je eerst 100 pixels vooruit bewegen, en daarna 120 graden naar rechts draaien. Hoeveel zijden heb je nodig?",
           "courseE_artist_ramp8_a": "Om een zijde te tekenen, kun je het `beweeg vooruit met 100 pixels`-blok gebruiken, en de 100 in 200 veranderen.",
           "courseE_artist_ramp8_b": "Om 4 zijden te tekenen, moet je het `ga vooruit met 100 pixels` blok in een herhaal lus plaatsen. Zorg ervoor dat de lus 4 keer iets tekent.\n\nVergeet niet, om daarna te draaien!",
@@ -5472,25 +5844,25 @@
           "courseE_artist_functions_challenge1_b": "Je kunt ook naar aandere posities `springen`, of het hele ontwerp veranderen, zoals je maar wilt."
         },
         "courseE_artist_functions_challenge2": {
-          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nMet het `jump to` (spring naar) blok kun je de artiest laten springen maar elke pixel in het raster. Dit werkt door de artiest eerst een aantal pixels naar rechts te bewegen, en daarna een aantal pixels omlaag. Het begint altijd vanuit de linkerbovenhoek, dus het maakt helemaal niet uit waar de zombie is _voordat_ het commando wordt uitgevoerd!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nDit `spring naar` blok laat jou de zombie kunstenaar naar iedere pixel op het raster verplaatsen, wanneer je wilt. Het werkt door hem een aantal pixels naar rechts en een aantal pixels naar beneden te verplaatsen, altijd geteld vanuit de linkerbovenhoek. Hierdoor maakt het niet uit waar de kunstenaar staat _voordat_ deze opdracht wordt uitgevoerd!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "courseE_artist_functions_challenge22022": {
-          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nMet het `jump to` (spring naar) blok kun je de artiest laten springen maar elke pixel in het raster. Dit werkt door de artiest eerst een aantal pixels naar rechts te bewegen, en daarna een aantal pixels omlaag. Het begint altijd vanuit de linkerbovenhoek, dus het maakt helemaal niet uit waar de zombie is _voordat_ het commando wordt uitgevoerd!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nDit `spring naar` blok laat jou de zombie kunstenaar naar iedere pixel op het raster verplaatsen, wanneer je wilt. Het werkt door hem een aantal pixels naar rechts en een aantal pixels naar beneden te verplaatsen, altijd geteld vanuit de linkerbovenhoek. Hierdoor maakt het niet uit waar de kunstenaar staat _voordat_ deze opdracht wordt uitgevoerd!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "courseE_artist_functions_challenge2_2018": {
-          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nMet het `jump to` (spring naar) blok kun je de artiest laten springen maar elke pixel in het raster. Dit werkt door de artiest eerst een aantal pixels naar rechts te bewegen, en daarna een aantal pixels omlaag. Het begint altijd vanuit de linkerbovenhoek, dus het maakt helemaal niet uit waar de zombie is _voordat_ het commando wordt uitgevoerd!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nDit `spring naar` blok laat jou de zombie kunstenaar naar iedere pixel op het raster verplaatsen, wanneer je wilt. Het werkt door hem een aantal pixels naar rechts en een aantal pixels naar beneden te verplaatsen, altijd geteld vanuit de linkerbovenhoek. Hierdoor maakt het niet uit waar de kunstenaar staat _voordat_ deze opdracht wordt uitgevoerd!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "courseE_artist_functions_challenge2_2019": {
-          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nMet het `jump to` (spring naar) blok kun je de artiest laten springen maar elke pixel in het raster. Dit werkt door de artiest eerst een aantal pixels naar rechts te bewegen, en daarna een aantal pixels omlaag. Het begint altijd vanuit de linkerbovenhoek, dus het maakt helemaal niet uit waar de zombie is _voordat_ het commando wordt uitgevoerd!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nDit `spring naar` blok laat jou de zombie kunstenaar naar iedere pixel op het raster verplaatsen, wanneer je wilt. Het werkt door hem een aantal pixels naar rechts en een aantal pixels naar beneden te verplaatsen, altijd geteld vanuit de linkerbovenhoek. Hierdoor maakt het niet uit waar de kunstenaar staat _voordat_ deze opdracht wordt uitgevoerd!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "courseE_artist_functions_challenge2_2020": {
-          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nMet het `jump to` (spring naar) blok kun je de artiest laten springen maar elke pixel in het raster. Dit werkt door de artiest eerst een aantal pixels naar rechts te bewegen, en daarna een aantal pixels omlaag. Het begint altijd vanuit de linkerbovenhoek, dus het maakt helemaal niet uit waar de zombie is _voordat_ het commando wordt uitgevoerd!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nDit `spring naar` blok laat jou de zombie kunstenaar naar iedere pixel op het raster verplaatsen, wanneer je wilt. Het werkt door hem een aantal pixels naar rechts en een aantal pixels naar beneden te verplaatsen, altijd geteld vanuit de linkerbovenhoek. Hierdoor maakt het niet uit waar de kunstenaar staat _voordat_ deze opdracht wordt uitgevoerd!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "courseE_artist_functions_challenge2_2021": {
-          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nMet het `jump to` (spring naar) blok kun je de artiest laten springen maar elke pixel in het raster. Dit werkt door de artiest eerst een aantal pixels naar rechts te bewegen, en daarna een aantal pixels omlaag. Het begint altijd vanuit de linkerbovenhoek, dus het maakt helemaal niet uit waar de zombie is _voordat_ het commando wordt uitgevoerd!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nDit `spring naar` blok laat jou de zombie kunstenaar naar iedere pixel op het raster verplaatsen, wanneer je wilt. Het werkt door hem een aantal pixels naar rechts en een aantal pixels naar beneden te verplaatsen, altijd geteld vanuit de linkerbovenhoek. Hierdoor maakt het niet uit waar de kunstenaar staat _voordat_ deze opdracht wordt uitgevoerd!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "courseE_artist_functions_challenge2_2023": {
-          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nMet het `jump to` (spring naar) blok kun je de artiest laten springen maar elke pixel in het raster. Dit werkt door de artiest eerst een aantal pixels naar rechts te bewegen, en daarna een aantal pixels omlaag. Het begint altijd vanuit de linkerbovenhoek, dus het maakt helemaal niet uit waar de zombie is _voordat_ het commando wordt uitgevoerd!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nDit `spring naar` blok laat jou de zombie kunstenaar naar iedere pixel op het raster verplaatsen, wanneer je wilt. Het werkt door hem een aantal pixels naar rechts en een aantal pixels naar beneden te verplaatsen, altijd geteld vanuit de linkerbovenhoek. Hierdoor maakt het niet uit waar de kunstenaar staat _voordat_ deze opdracht wordt uitgevoerd!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "courseE_artist_ramp8": {
           "courseE_artist_ramp8_a": "Om een zijde te tekenen, kun je het `beweeg vooruit met 100 pixels`-blok gebruiken, en de 100 in 200 veranderen.",
@@ -5504,6 +5876,7 @@
         },
         "courseE_artist_ramp9": {
           "courseD_artist_ramp12_a": "Wat is er hetzelfde als bij een vierkant? En wat is er anders?",
+          "courseD_artist_ramp12_b": "Je kunt het uitklapmenu op de `draai` blokken gebruiken om te zien welke hoek je nodig hebt!",
           "courseD_artist_ramp12_c": "Om een zijde te tekenen, moet je eerst 100 pixels vooruit bewegen, en daarna 120 graden naar rechts draaien. Hoeveel zijden heb je nodig?"
         },
         "courseE_bee_concept1": {

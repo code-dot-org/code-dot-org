@@ -30,10 +30,31 @@ files: [
   # files or directories for ignore
   # e.g. ["/**/?.txt", "/**/[0-9].txt", "/**/*\?*.txt"]
   #
-  # hourofcode content is handled by the hourofcode-specific sync
+  # animations content is handled by the `I18n::Resources::Apps::Animations::SyncUp` class
+  # blockly-core content is handled by the `I18n::Resources::Apps::ExternalSources::SyncUp` class
+  # blockly-mooc content is handled by the `I18n::Resources::Apps::Labs::SyncUp` class
+  # course_content content is handled by the `I18n::Resources::Dashboard::CourseContent::SyncUp` class
+  # curriculum_content content is handled by the `I18n::Resources::Dashboard::CurriculumContent::SyncUp` class
+  # dashboard content is handled by the `I18n::Resources::Dashboard::*::SyncUp` classes
+  # docs content is handled by the `I18n::Resources::Dashboard::Docs::SyncUp` class
+  # external-sources content is handled by the `I18n::Resources::Apps::ExternalSources::SyncUp` class
+  # hourofcode content is handled by the `I18n::Resources::Pegasus::HourOfCode::SyncUp` class
+  # markdown content is handled by the `I18n::Resources::Pegasus::Markdown::SyncUp` class
+  # pegasus content is handled by the `I18n::Resources::Pegasus::Pegasus::SyncUp` class
+  # standards content is handled by the `I18n::Resources::Dashboard::Standards::SyncUp` class
   "ignore" : [
+    "/animations/**",
+    "/blockly-core/**",
+    "/blockly-mooc/**",
+    "/course_content/**",
+    "/curriculum_content/**",
+    "/dashboard/**",
+    "/docs/**",
+    "/external-sources/**",
     "/hourofcode/**",
-    "/dashboard/restricted.yml"
+    "/markdown/**",
+    "/pegasus/**",
+    "/standards/**",
   ],
 
   #
@@ -46,11 +67,18 @@ files: [
   "source" : "/**/*.json",
   "translation" : "/%language%/**/%original_file_name%",
   "ignore" : [
+    "/animations/**",
+    "/blockly-core/**",
+    "/blockly-mooc/**",
+    "/course_content/**",
+    "/curriculum_content/**",
+    "/dashboard/**",
+    "/docs/**",
+    "/external-sources/**",
     "/hourofcode/**",
-    "/blockly-mooc/calc.json",
-    "/blockly-mooc/eval.json",
-    "/blockly-mooc/netsim.json",
-    "/blockly-mooc/mlPlayground.json"
+    "/markdown/**",
+    "/pegasus/**",
+    "/standards/**",
   ],
   "update_option" : "update_as_unapproved"
  }

@@ -110,8 +110,15 @@ export default class QuickActionsCell extends Component {
         <FontAwesome
           icon={icons[type]}
           style={iconStyle}
-          onClick={this.state.canOpen ? this.open : undefined}
           className="ui-test-section-dropdown ui-projects-table-dropdown"
+          onClick={this.state.canOpen ? this.open : undefined}
+          tabIndex="0"
+          onKeyDown={e => {
+            if ([' ', 'Enter', 'Spacebar'].includes(e.key)) {
+              e.preventDefault();
+              this.state.canOpen ? this.open() : undefined;
+            }
+          }}
         />
         <PopUpMenu
           targetPoint={targetPoint}

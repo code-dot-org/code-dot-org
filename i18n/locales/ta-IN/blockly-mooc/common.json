@@ -1362,6 +1362,7 @@
   "loginInfo_signinStep4_secretPicture": "அவர்களின் இரகசிய படத்தை தேர்வு செய்யவும்.",
   "loginInfo_signinStep4_secretWords": "அவர்களின் ரகசிய வார்த்தைகளை உள்ளிடவும்.",
   "loginInfo_signinStep5": "\"உள்நுழை\" பொத்தானைக் கிளிக் செய்யவும்.",
+  "loginInfoLtiSetupHeader": "உங்கள் வகுப்பை அமைக்கவும்",
   "loginType": "லாகின் வகை",
   "loginTypeClever": "புத்திசாலி",
   "loginTypeCleverButton": "புத்திசாலி பயன்படுத்தவும்",

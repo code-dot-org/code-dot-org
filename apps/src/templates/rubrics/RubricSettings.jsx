@@ -287,10 +287,14 @@ export default function RubricSettings({
 
   return (
     <div
-      className={classnames('uitest-rubric-settings', style.settings, {
-        [style.settingsVisible]: visible,
-        [style.settingsHidden]: !visible,
-      })}
+      className={classnames(
+        'uitest-rubric-settings',
+        {[style.settings]: !experiments.isEnabled('ai-rubrics-redesign')},
+        {
+          [style.settingsVisible]: visible,
+          [style.settingsHidden]: !visible,
+        }
+      )}
     >
       {!experiments.isEnabled('ai-rubrics-redesign') && (
         <Heading2>{i18n.settings()}</Heading2>

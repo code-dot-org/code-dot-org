@@ -25,7 +25,7 @@ import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRendererGeras from './addons/cdoRendererGeras';
-import {CdoRendererThrasos} from './addons/cdoRendererThrasos';
+import CdoRendererThrasos from './addons/cdoRendererThrasos';
 import CdoRendererZelos from './addons/cdoRendererZelos';
 import CdoTheme from './themes/cdoTheme';
 import CdoDarkTheme from './themes/cdoDark';
@@ -63,7 +63,12 @@ import {
   ObservableProcedureModel,
   ObservableParameterModel,
 } from '@blockly/block-shareable-procedures';
-import {adjustCalloutsOnViewportChange, disableOrphans} from './eventHandlers';
+import {
+  adjustCalloutsOnViewportChange,
+  disableOrphans,
+  reflowToolbox,
+} from './eventHandlers';
+import {initializeScrollbarPair} from './addons/cdoScrollbar.js';
 
 const options = {
   contextMenu: true,
@@ -380,6 +385,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
     [Themes.TRITANOPIA]: CdoTritanopiaTheme,
     [Themes.TRITANOPIA_DARK]: CdoTritanopiaDarkTheme,
   };
+
+  // Assign all of the properties of the javascript generator to the forBlock array
+  // Prevents deprecation warnings related to https://github.com/google/blockly/pull/7150
+  Object.setPrototypeOf(javascriptGenerator.forBlock, javascriptGenerator);
+
   blocklyWrapper.JavaScript = javascriptGenerator;
   blocklyWrapper.navigationController = new NavigationController();
   // Initialize plugin.
@@ -633,8 +643,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
         wheel: true,
         drag: true,
         scrollbars: {
+          horizontal: true,
           vertical: true,
-          horizontal: false,
         },
       },
       plugins: {
@@ -659,6 +669,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       container.style.height = `calc(100% - ${styleConstants['workspace-headers-height']}px)`;
     }
     blocklyWrapper.isStartMode = !!opt_options.editBlocks;
+    blocklyWrapper.isToolboxMode = opt_options.editBlocks === 'toolbox_blocks';
     blocklyWrapper.toolboxBlocks = options.toolbox;
     const workspace = blocklyWrapper.blockly_.inject(container, options);
 
@@ -680,6 +691,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
       .getFlyout()
       ?.getWorkspace()
       ?.addChangeListener(adjustCalloutsOnViewportChange);
+
+    initializeScrollbarPair(workspace);
+
+    window.addEventListener('resize', reflowToolbox);
 
     document.dispatchEvent(
       utils.createEvent(Blockly.BlockSpace.EVENTS.MAIN_BLOCK_SPACE_CREATED)

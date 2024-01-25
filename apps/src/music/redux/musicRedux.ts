@@ -55,6 +55,13 @@ export interface MusicState {
     canUndo: boolean;
     canRedo: boolean;
   };
+  /** A callout that's currently being shown.  The index lets the same callout be
+   * reshown multiple times in a row.
+   */
+  currentCallout: {
+    id?: string;
+    index: number;
+  };
 }
 
 const initialState: MusicState = {
@@ -69,11 +76,17 @@ const initialState: MusicState = {
   playbackEvents: [],
   orderedFunctions: [],
   lastMeasure: 0,
-  soundLoadingProgress: 0,
+  // Default to 1 (fully loaded). When loading a new sound, the progress will be set back to 0 before the load starts.
+  // This is to prevent the progress bar from showing if there are no sounds to load initially.
+  soundLoadingProgress: 1,
   startingPlayheadPosition: 1,
   undoStatus: {
     canUndo: false,
     canRedo: false,
+  },
+  currentCallout: {
+    id: undefined,
+    index: 0,
   },
 };
 
@@ -191,6 +204,13 @@ const musicSlice = createSlice({
     ) => {
       state.undoStatus = action.payload;
     },
+    showCallout: (state, action: PayloadAction<string>) => {
+      state.currentCallout.id = action.payload;
+      state.currentCallout.index = state.currentCallout.index + 1;
+    },
+    clearCallout: state => {
+      state.currentCallout.id = undefined;
+    },
   },
 });
 
@@ -253,4 +273,6 @@ export const {
   moveStartPlayheadPositionForward,
   moveStartPlayheadPositionBackward,
   setUndoStatus,
+  showCallout,
+  clearCallout,
 } = musicSlice.actions;

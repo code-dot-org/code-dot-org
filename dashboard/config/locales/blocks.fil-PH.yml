@@ -1091,6 +1091,14 @@ fil:
         options:
           INPUT1:
             '1': katas ng limon
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': asul
+            '"red"': pula
+          OPT:
+            '"large"': malaki
+            '"small"': maliit
       FunctionBlocks_communicate:
         text: Makipag-ugnay sa {VAR1} gamit ang {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:

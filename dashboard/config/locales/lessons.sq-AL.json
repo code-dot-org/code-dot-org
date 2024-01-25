@@ -5964,7 +5964,9 @@
         },
         "coursef-2023/Outbreak": {
           "name": "Shpërthimi",
-          "preparation": "-   Luaj nëpër enigma për të gjetur ndonjë fushë problematike të mundshme për klasën tuaj.\n-   Sigurohuni që çdo nxënës të ketë një ditar reflektimi."
+          "preparation": "-   Luaj nëpër enigma për të gjetur ndonjë fushë problematike të mundshme për klasën tuaj.\n-   Sigurohuni që çdo nxënës të ketë një ditar reflektimi.",
+          "overview": "Ky mësim kombinon **zhvillimin e shkathtësive** rreth ngjarjeve me një **mini-projekt** ku nxënësit mund të ndërtojnë simulimin e tyre kompjuterik në Sprite Lab. Nxënësit do të studiojnë simulimin për të kuptuar se sa shpejt mund të përhapet një virus dhe çfarë mund të bëhet për ta ngadalësuar atë.",
+          "purpose": "Në mësimin e mëparshëm, nxënësit mblodhën dhe interpretuan të dhëna nga një simulim i thjeshtë. Në këtë mësim, nxënësit do të ndjekin udhëzimet për të koduar modelin e tyre të simulimit. Njohuritë e mëparshme të nxënësve për shpërthimet e viruseve në botën reale do të zbatohen në një skenar fiktiv."
         },
         "coursef-2023/AI For Oceans": {
           "name": "AI Për oqeanet",

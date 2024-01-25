@@ -1286,6 +1286,7 @@
   "loginInfo_signinStep4_secretPicture": "Válaszd ki a titkos képüket.",
   "loginInfo_signinStep4_secretWords": "Írd be a titkos szavaikat.",
   "loginInfo_signinStep5": "Kattints a \"Bejelentkezés\" gombra.",
+  "loginInfoLtiSetupHeader": "Osztály létrehozása",
   "loginType": "Bejelentkezés típusa",
   "loginTypeClever": "Okos",
   "loginTypeCleverButton": "Clever használata",

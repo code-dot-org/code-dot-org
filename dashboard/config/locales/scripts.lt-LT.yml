@@ -50,6 +50,7 @@ lt:
           description: Išmėginkite programavimo pradmenis su personažais iš Angry
             Birds ir Plants vs. Zombies!
           description_short: Išmėginkite programavimo pradmenis su daug smagių personažų!
+          name: "„Programavimo valanda“"
           student_description: Išmėginkite programavimo pradmenis su personažais iš
             Angry Birds ir Plants vs. Zombies!
           title: Programavimo valanda 2013
@@ -511,6 +512,10 @@ lt:
           lessons:
             lesson-6:
               name: Kartojimas
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Turinys
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -542,6 +547,10 @@ lt:
           lessons:
             lesson-4:
               name: Kintamieji
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -569,6 +578,10 @@ lt:
           lessons:
             lesson-3:
               name: Kartojimas
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -590,6 +603,10 @@ lt:
             lessonGroup-2:
               display_name: Turinys
         csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
@@ -623,6 +640,10 @@ lt:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -647,6 +668,10 @@ lt:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -668,6 +693,10 @@ lt:
             lessonGroup-2:
               display_name: Turinys
         csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
@@ -696,6 +725,10 @@ lt:
             lessonGroup-2:
               display_name: Turinys
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
@@ -997,6 +1030,14 @@ lt:
               display_name: Komandų kūrimas
             csp_variables:
               display_name: Kintamieji
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Sąlyginiai sakiniai
+            csp_functions:
+              display_name: Komandų kūrimas
+            csp_variables:
+              display_name: Kintamieji
         csp4-dlp:
           lesson_groups:
             content:
@@ -1104,6 +1145,12 @@ lt:
             csp_unit6_2020:
               display_name: Algoritmai
         csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Sąrašai
+            lessonGroup-3:
+              display_name: Kartojimas
+        csp6-2024:
           lesson_groups:
             csp_unit6_2020:
               display_name: Sąrašai

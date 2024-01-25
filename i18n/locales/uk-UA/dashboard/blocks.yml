@@ -1080,6 +1080,14 @@ uk:
         options:
           INPUT1:
             '1': лимонний сік
+      DansBlocks_testShowVariable:
+        options:
+          OPT:
+            '"large"': великий
+            '"small"': маленький
+          COLOR:
+            '"blue"': синій
+            '"red"': червоний
       FunctionBlocks_communicate:
         text: Спілкуйтеся з {VAR1} з {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
