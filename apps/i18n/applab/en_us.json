@@ -468,7 +468,7 @@
   "makerSetupAcceptPrompt": "If a prompt asking for permission for Code Studio to connect to the Chrome App pops up, click Accept.",
   "makerSetupAdafruitWindowsDrivers": "If your board is plugged in, you may be missing the **Adafruit Windows Drivers**. Follow the instructions [on this page](https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/using-with-arduino-ide#install-drivers-windows-only) to install the drivers and try again.",
   "makerSetupAppInstalled": "Chrome App installed",
-  "makerSetupBoardBadResponse": "We detected that your board doesn't have the correct software installed to work with Code.org.",
+  "makerSetupBoardBadResponse": "We detected that your board doesn't have the correct Firmata firmware installed to work with Code.org.",
   "makerSetupBrowserTitle": "Code.org Browser",
   "makerSetupBrowserSupported": "Using a supported browser",
   "makerSetupCheck": "Setup Check",
