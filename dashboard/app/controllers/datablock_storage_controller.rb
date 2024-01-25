@@ -111,7 +111,8 @@ class DatablockStorageController < ApplicationController
   # end
 
   def read_records
-    records = DatablockStorageRecord.where(channel_id: params[:channel_id], table_name: params[:table_name])
+    channel_id = params[:is_shared_table] == 'true' ? 'shared' : params[:channel_id]
+    records = DatablockStorageRecord.where(channel_id: channel_id, table_name: params[:table_name])
 
     # FIXME: what should we return to indicate that table_name doesn't exist?
     #
