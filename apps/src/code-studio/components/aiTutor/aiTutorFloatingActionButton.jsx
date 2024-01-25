@@ -6,16 +6,11 @@ import aiFabIcon from '@cdo/static/ai-fab-background.png';
 import AITutorPanel from './aiTutorPanel';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {levelShape} from './aiTutorShapes';
 
-function AITutorFloatingActionButton() {
+const AITutorFloatingActionButton = ({level}) => {
   const store = getStore();
   const [isOpen, setIsOpen] = useState(false);
-
-  const level = {
-    id: 123,
-    type: 'Javalab',
-    hasValidation: true,
-  };
 
   const handleClick = () => {
     const event = isOpen
@@ -33,7 +28,6 @@ function AITutorFloatingActionButton() {
       <button
         id="ui-floatingActionButton"
         className={style.floatingActionButton}
-        // I couldn't get an image url to work in the SCSS module, so using an inline style for now
         style={{backgroundImage: `url(${aiFabIcon})`}}
         onClick={handleClick}
         type="button"
@@ -43,6 +37,10 @@ function AITutorFloatingActionButton() {
       </Provider>
     </div>
   );
-}
+};
+
+AITutorFloatingActionButton.propTypes = {
+  level: levelShape,
+};
 
 export default AITutorFloatingActionButton;
