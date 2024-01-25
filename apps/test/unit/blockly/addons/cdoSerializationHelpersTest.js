@@ -3,7 +3,7 @@ import {
   addPositionsToState,
   getCombinedSerialization,
   insertCollider,
-  isBlockLocationUnset,
+  isBlockAtEdge,
   isOverlapping,
   appendProceduresToState,
   partitionJsonBlocksByType,
@@ -163,47 +163,97 @@ describe('CdoSerializationHelpers', () => {
     });
   });
 
-  describe('isBlockLocationUnset', () => {
-    const workspaceLTR = {RTL: false, getMetrics: () => ({viewWidth: 515})};
-    const workspaceRTL = {RTL: true, getMetrics: () => ({viewWidth: 515})};
+  describe('isBlockAtEdge', () => {
+    const viewWidth = 515;
+    const arbitraryCoordinates = {x: 20, y: 140};
+    const defaultLTRCoordinates = {x: 0, y: 0};
+    const defaultRTLCoordinates = {x: viewWidth, y: 0};
 
-    it('should return true for a block at (0, 0) on an LTR workspace', () => {
-      const block = {
+    let block, result;
+    const workspaceLTR = {RTL: false, getMetrics: () => ({viewWidth})};
+    const workspaceRTL = {RTL: true, getMetrics: () => ({viewWidth})};
+
+    it('should return true for a block at (0, 0) on a LTR workspace', () => {
+      block = {
         workspace: workspaceLTR,
-        getRelativeToSurfaceXY: () => ({x: 0, y: 0}),
+        getRelativeToSurfaceXY: () => defaultLTRCoordinates,
       };
 
-      const result = isBlockLocationUnset(block);
+      result = isBlockAtEdge(block);
       expect(result).to.be.true;
     });
 
-    it('should return false for a block at specific coordinates on an LTR workspace', () => {
-      const block = {
+    it('should return true for a block at either x=0 or y=0 on a LTR workspace', () => {
+      block = {
         workspace: workspaceLTR,
-        getRelativeToSurfaceXY: () => ({x: 20, y: 140}),
+        getRelativeToSurfaceXY: () => ({
+          x: defaultLTRCoordinates.x,
+          y: arbitraryCoordinates.y,
+        }),
+      };
+      result = isBlockAtEdge(block);
+      expect(result).to.be.true;
+
+      block = {
+        workspace: workspaceLTR,
+        getRelativeToSurfaceXY: () => ({
+          x: arbitraryCoordinates.x,
+          y: defaultLTRCoordinates.y,
+        }),
+      };
+      result = isBlockAtEdge(block);
+      expect(result).to.be.true;
+    });
+
+    it('should return false for a block at specific coordinates on a LTR workspace', () => {
+      block = {
+        workspace: workspaceLTR,
+        getRelativeToSurfaceXY: () => arbitraryCoordinates,
       };
 
-      const result = isBlockLocationUnset(block);
+      result = isBlockAtEdge(block);
       expect(result).to.be.false;
     });
 
     it('should return true for a block at the top-right corner of an RTL workspace', () => {
-      const block = {
+      block = {
         workspace: workspaceRTL,
-        getRelativeToSurfaceXY: () => ({x: 515, y: 0}),
+        getRelativeToSurfaceXY: () => defaultRTLCoordinates,
       };
 
-      const result = isBlockLocationUnset(block);
+      result = isBlockAtEdge(block);
+      expect(result).to.be.true;
+    });
+
+    it('should return true for a block at either x=width or y=0 on a RTL workspace', () => {
+      block = {
+        workspace: workspaceRTL,
+        getRelativeToSurfaceXY: () => ({
+          x: defaultRTLCoordinates.x,
+          y: arbitraryCoordinates.y,
+        }),
+      };
+      result = isBlockAtEdge(block);
+      expect(result).to.be.true;
+
+      block = {
+        workspace: workspaceRTL,
+        getRelativeToSurfaceXY: () => ({
+          x: arbitraryCoordinates.x,
+          y: defaultRTLCoordinates.y,
+        }),
+      };
+      result = isBlockAtEdge(block);
       expect(result).to.be.true;
     });
 
     it('should return false for a block at specific coordinates of an RTL workspace', () => {
-      const block = {
+      block = {
         workspace: workspaceRTL,
-        getRelativeToSurfaceXY: () => ({x: 495, y: 140}),
+        getRelativeToSurfaceXY: () => arbitraryCoordinates,
       };
 
-      const result = isBlockLocationUnset(block);
+      result = isBlockAtEdge(block);
       expect(result).to.be.false;
     });
   });
