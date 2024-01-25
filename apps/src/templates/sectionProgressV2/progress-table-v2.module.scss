@@ -135,9 +135,19 @@
     &LessonCell {
       height: 42px;
       line-height: 42px;
-      min-width: 80px;
+      min-width: 64px;
       border-bottom: 1px solid $light_gray_200;
       border-right: 1px solid $light_gray_200;
+      background-color: $light_primary_500;
+      padding-inline-start: 16px;
+      color: $light_white;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow-x: hidden;
+    }
+
+    &Caret {
+      margin-inline-end: 12px;
     }
 
     &SecondRow {

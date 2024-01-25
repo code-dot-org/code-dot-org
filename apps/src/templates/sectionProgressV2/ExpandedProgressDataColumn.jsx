@@ -7,6 +7,7 @@ import {connect} from 'react-redux';
 import classNames from 'classnames';
 import FontAwesome from '../FontAwesome';
 import LevelDataCell from './LevelDataCell';
+import i18n from '@cdo/locale';
 
 function ExpandedProgressDataColumn({
   lesson,
@@ -15,6 +16,12 @@ function ExpandedProgressDataColumn({
   removeExpandedLesson,
 }) {
   const header = React.useMemo(() => {
+    // If there are only 2 levels, we only show the number to make the text fit the cell.
+    const headerText =
+      i18n.lesson() + ' ' + lesson.relative_position + ': ' + lesson.name;
+    // lesson.levels.length < 3
+    //   ? lesson.relative_position
+    //   : i18n.lesson() + ' ' + lesson.relative_position + ': ' + lesson.name;
     return (
       <div className={styles.expandedHeader}>
         <div
@@ -24,8 +31,11 @@ function ExpandedProgressDataColumn({
           )}
           onClick={() => removeExpandedLesson(lesson.id)}
         >
-          <FontAwesome icon="caret-down" />
-          {lesson.relative_position}
+          <FontAwesome
+            icon="caret-down"
+            className={styles.expandedHeaderCaret}
+          />
+          {headerText}
         </div>
         <div className={styles.expandedHeaderSecondRow}>
           {lesson.levels.map(level => (
