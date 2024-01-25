@@ -9,7 +9,7 @@ module CiBuilder
   def build
     Dir.chdir(deploy_dir) do
       return 0 unless build_required?
-
+      ChatClient.log 'Starting build', message_format: 'text', color: 'white'
       FileUtils.touch BUILD_STARTED
       ChatClient.log 'Updating repository', message_format: 'text', color: 'white'
       update_repository
@@ -71,10 +71,10 @@ module CiBuilder
 
   def validate_git_revision
     git_revision = RakeUtils.git_revision
-    exception_message = 'Git revision unexpectedly changed during DTT'
+    exception_message = "Git revision unexpectedly changed from #{git_revision} to #{RakeUtils.git_revision} during DTT"
     is_valid_revision = git_revision == RakeUtils.git_revision
     return true if is_valid_revision
-    ChatClient.log exception_message, message_format: 'text', color: 'red'
-    raise ArgumentError, "Invalid git revision"
+    ChatClient.log exception_message, color: 'red'
+    raise ArgumentError, exception_message
   end
 end
