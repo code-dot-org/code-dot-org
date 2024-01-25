@@ -1,18 +1,33 @@
-// This tsconfig is used by your code editor, such as VS Code. 
-// It extends tsconfig.build.json, used for building apps.
-// This file should only include configuration settings that are
-// needed for the IDE experience (such as Intellisense).
-// By default, put new settings in tsconfig.build.json.
 {
-  "extends": "./tsconfig.build.json",
   "include": [
     "./src/**/*.ts",
     "./src/**/*.tsx",
     "./test/**/*.ts",
     "./test/**/*.tsx",
-    // For IDEs, include js and jsx. This allows Intellisense to
-    // detect js and jsx files for imports.
     "./src/**/*.js",
     "./src/**/*.jsx",
   ],
+  "compilerOptions": {
+    "jsx": "react",
+    "target": "es5",
+    "lib": ["ES2022", "DOM"],
+    "module": "node16",
+    "rootDir": "./",
+    "moduleResolution": "node16",
+    "outDir": "build",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "baseUrl": "./",
+    "paths": {
+      "@cdo/apps/*": ["./src/*"],
+      "@cdo/static/*": ["./static/*"],
+      "@cdo/i18n/*": ["./i18n/*"],
+    },
+    "resolveJsonModule": true,
+  }
 }
