@@ -70,13 +70,10 @@ def main
   status = 0
 
   log = RakeUtils.capture do
-    ChatClient.log "Starting build"
     status = CiBuilder.build
   rescue => exception
     status = "Error: #{exception.message}\n#{CDO.backtrace exception}"
-    ChatClient.log status, message_format: 'text', color: 'red'
   end
-  ChatClient.log "done building"
   return status if status == 0 && log.empty?
 
   Dir.chdir(deploy_dir) do
