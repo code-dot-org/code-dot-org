@@ -55,6 +55,7 @@ export default class FunctionEditor {
     this.dom = modalEditor;
     this.isReadOnly = options.readOnly;
 
+    this.primaryWorkspace = Blockly.getMainWorkspace();
     // Customize auto-populated Functions toolbox category.
     this.editorWorkspace = Blockly.blockly_.inject(modalEditor, {
       comments: false, // Disables Blockly's built-in comment functionality.
@@ -127,12 +128,13 @@ export default class FunctionEditor {
     // If keyboard navigation was on, enable it on the main workspace
     if (this.editorWorkspace.keyboardAccessibilityMode) {
       Blockly.navigationController.disable(this.editorWorkspace);
-      Blockly.navigationController.enable(Blockly.getMainWorkspace());
+      Blockly.navigationController.enable(this.primaryWorkspace);
     }
     if (this.dom) {
       this.dom.style.display = 'none';
       this.editorWorkspace.hideChaff();
     }
+    Blockly.common.setMainWorkspace(this.primaryWorkspace);
   }
 
   // We kept this around for backwards compatibility with the CDO
@@ -250,9 +252,9 @@ export default class FunctionEditor {
     // If keyboard navigation was on, enable it on the editor workspace.
     if (
       this.editorWorkspace.keyboardAccessibilityMode ||
-      Blockly.getMainWorkspace().keyboardAccessibilityMode
+      this.primaryWorkspace.keyboardAccessibilityMode
     ) {
-      Blockly.navigationController.disable(Blockly.getMainWorkspace());
+      Blockly.navigationController.disable(this.primaryWorkspace);
       Blockly.navigationController.enable(this.editorWorkspace);
       // If this editor was already open (e.g. changing from one function to another)
       // we need to re-focus so the cursor highlights the correct block.
@@ -286,6 +288,9 @@ export default class FunctionEditor {
       getDefinitionBlockColor
     );
     this.editorWorkspace.svgFrame_.render();
+
+    // Make the function editor workspace the active/focused workspace.
+    Blockly.common.setMainWorkspace(this.editorWorkspace);
   }
 
   /**
