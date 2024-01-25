@@ -62,13 +62,14 @@ def main
     formatted_duration = RakeUtils.format_duration(duration)
     time_message = " 🕐 #{formatted_duration}"
 
-    # Upload build log to S3
-    metadata = {
+    start_time = start_time.strftime('%Y%m%dT%H%M%S%z')
+    log_body = "#{log}\n#{status}\n#{projects} #{status == 0 ? 'built' : 'failed'} in #{formatted_duration}"
+    log_metadata = {
       commit: commit_hash,
       duration: duration.to_s,
       success: (status == 0).to_s
     }
-    log_link = build_logger.log_build_end(status, log, metadata)
+    log_link = CiBuildLogger.log_build_end(start_time, log_body, log_metadata)
 
     # Notify the ChatClient channels about what happened.
     if status == 0

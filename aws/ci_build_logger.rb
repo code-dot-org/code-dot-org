@@ -8,35 +8,29 @@ class CiBuildLogger
     @s3_client = aws_client
   end
 
-  def log_build_end(status, log, metadata)
-    log_url = upload_log_to_s3(generate_log_key, body, metadata)
+  # Upload the given log to the logs s3 bucket.
+  # @param [String] key where uploaded log should be located
+  # @param [String] body of log to upload
+  # @param [Hash] metadata to be attached to uploaded log
+  # @return [String] Hyperlink to uploaded log, or empty string
+  def log_build_end(start_time, body, metadata)
+    log_url = AWS::S3::LogUploader.
+      new(S3_LOGS_BUCKET, S3_LOGS_PREFIX).
+      upload_log(
+        generate_log_key(start_time),
+        body,
+        {metadata: metadata}
+      )
     permalink = AWS::S3.get_console_link_from_presigned(log_url)
-    " <a href='#{log_url}'>☁ Log on S3</a> (<a href='#{permalink}'>permalink</a>)"
-  rescue StandardError => exception
+    "<a href='#{log_url}'>☁ Log on S3</a> (<a href='#{permalink}'>permalink</a>)"
+  rescue Exception => exception
     ChatClient.log "Uploading log to S3 failed: #{exception}"
-  end
-
-  def upload_log_and_get_link(key, body, metadata)
-    log_url = upload_log_to_s3(key, body, metadata)
-    permalink = AWS::S3.get_console_link_from_presigned(log_url)
-    " <a href='#{log_url}'>☁ Log on S3</a> (<a href='#{permalink}'>permalink</a>)"
-  rescue StandardError => exception
-    ChatClient.log "Uploading log to S3 failed: #{exception}"
+    return ''
   end
 
   private
 
-  def generate_log_key
-    Time.now.strftime('%Y%m%dT%H%M%S%z')
-  end
-
-  def upload_log_to_s3(key, body, metadata)
-    @s3_client.put_object(
-      bucket: S3_LOGS_BUCKET,
-      key: "#{S3_LOGS_PREFIX}/#{key}",
-      body: body,
-      metadata: metadata
-    )
-    "https://s3.console.aws.amazon.com/s3/object/#{S3_LOGS_BUCKET}/#{S3_LOGS_PREFIX}/#{key}"
+  def generate_log_key(timestamp)
+    timestamp.strftime('%Y%m%dT%H%M%S%z')
   end
 end
