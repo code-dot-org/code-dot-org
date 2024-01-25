@@ -43,30 +43,30 @@ figure.curriculum-pathway {
       margin-bottom: 0;
       line-height: 1;
     }
+  }
 
-    .school {
-      background: var(--neutral_white);
-      border-bottom: 5px solid;
-      padding: 0.875rem;
+  .school {
+    background: var(--neutral_white);
+    border-bottom: 5px solid;
+    padding: 0.875rem;
 
-      p {
-        font-weight: var(--semi-bold-font-weight);
-        font-size: 0.875rem;
-      }
-
-      &.elementary { border-radius: $border-radius 0 0 0; }
-      &.high { border-radius: 0 $border-radius 0 0; }
+    p {
+      font-weight: var(--semi-bold-font-weight);
+      font-size: 0.875rem;
     }
 
-    .grade {
-      background-color: var(--neutral_white);
-      padding: 0.5rem;
-      height: 2rem;
+    &.elementary { border-radius: $border-radius 0 0 0; }
+    &.high { border-radius: 0 $border-radius 0 0; }
+  }
 
-      p {
-        color: var(--neutral_dark70);
-        font-size: 0.875rem;
-      }
+  .grade {
+    background-color: var(--neutral_white);
+    padding: 0.5rem;
+    height: 2rem;
+
+    p {
+      color: var(--neutral_dark70);
+      font-size: 0.875rem;
     }
   }
 
@@ -114,6 +114,8 @@ figure.curriculum-pathway {
       &:focus {
         outline: var(--brand_primary_default) solid 2px;
         outline-offset: 2px;
+
+        &:not(:focus-visible) { outline: none; }
       }
 
       p {
@@ -151,6 +153,56 @@ figure.curriculum-pathway {
     }
     .border-top-primary-#{$name} {
       border-top-color: $color !important;
+    }
+  }
+
+  &.mobile { display: none; }
+
+  @media (max-width: 700px) {
+    &.desktop { display: none; }
+    &.mobile { display: block; }
+
+    background: none;
+
+    .school-wrapper {
+      background-color: var(--neutral_light);
+      border-radius: $border-radius;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    p.heading-xs {
+      padding: 0.65rem;
+      background-color: var(--neutral_white);
+      border-bottom: 1px solid var(--neutral_dark20);
+      border-radius: $border-radius $border-radius 0 0;
+      font-weight: var(--regular-font-weight);
+    }
+
+    .courses {
+      display: block;
+      padding: 0;
+
+      a.course {
+        margin: 0.75rem;
+        text-align: initial;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        &:is(:hover, :focus, :active):after { all: unset; }
+
+        p {
+          font-size: 0.875rem;
+
+          &.grades {
+            color: var(--neutral_dark70);
+            font-weight: var(--regular-font-weight);
+          }
+        }
+      }
     }
   }
 }
