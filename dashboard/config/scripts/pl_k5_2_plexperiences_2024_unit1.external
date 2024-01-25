@@ -1,11 +1,13 @@
-name 'pl-k5-2_PLexperiences_2024'
+name 'pl-k5-2_PLexperiences_2024_Unit1'
 title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
 # Next Steps
 
-#### Thank you for completing **CS Basics: Creativity with Code.** Now that you've learned some basic computer science skills, check out some of our curriculum and professional learning offerings to continue your journey!
+## Click the `continue` button below to complete this course and learn more foundational skills in our next unit, <a href="https://studio.code.org/s/self-paced-pl-k5-2024-2" target="blank" rel="noopener noreferrer"> CS Basics: Creativity with Code</a>. 
+
+#or 
 
 ## Teach CS in your class
 
@@ -29,12 +31,6 @@ markdown <<MARKDOWN
 <br>
 
 <p>
-
-## Help us make this module better!
-
-#### Code.org values and is responsive to feedback. Please fill out this <a href="https://studio.code.org/form/csb_selfpaced_pl_module4" target="blank" rel="noopener noreferrer">short survey</a> to provide your feedback on this module.
-
-<a class="btn btn-large btn-primary" href="https://studio.code.org/form/csb_selfpaced_pl_module4" target="blank" rel="noopener noreferrer">Take the survey</a>
 
 
 ## Stay connected 
