@@ -59,11 +59,8 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   );
   const levelIndex = useSelector(currentLevelIndex);
   const currentLevelCount = useSelector(levelCount);
-  const {hasConditions, message, satisfied} = useSelector(
+  const {hasConditions, message, satisfied, index} = useSelector(
     (state: {lab: LabState}) => state.lab.validationState
-  );
-  const validationPassIndex = useSelector(
-    (state: {lab: LabState}) => state.lab.validationPassIndex
   );
 
   // If there are no validation conditions, we can show the next button so long as
@@ -91,7 +88,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     <InstructionsPanel
       text={instructionsText}
       message={message || undefined}
-      messageIndex={validationPassIndex}
+      messageIndex={index}
       showNextButton={showNextButton}
       onNextPanel={onNextPanel}
       theme={theme}

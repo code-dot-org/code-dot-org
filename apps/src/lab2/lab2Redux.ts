@@ -55,8 +55,6 @@ export interface LabState {
   // Validation status for the current level. This is used by the progress system to determine
   // what instructions to display and if the user has satisfied the validation conditions, if present.
   validationState: ValidationState;
-  // Updated each time a new validation pass begins, which is typically when user code is run.
-  validationPassIndex: number;
   // Level properties for the current level.
   levelProperties: LevelProperties | undefined;
 }
@@ -68,7 +66,6 @@ const initialState: LabState = {
   channel: undefined,
   initialSources: undefined,
   validationState: getInitialValidationState(),
-  validationPassIndex: 0,
   levelProperties: undefined,
 };
 
@@ -257,9 +254,6 @@ const labSlice = createSlice({
     setValidationState(state, action: PayloadAction<ValidationState>) {
       state.validationState = {...action.payload};
     },
-    updateValidationPass(state) {
-      state.validationPassIndex = state.validationPassIndex + 1;
-    },
     // Update the level properties, initial sources, and channel simultaneously when the level changes.
     // These fields are updated together so that labs receive all updates at once.
     onLevelChange(
@@ -422,13 +416,8 @@ async function cleanUpProjectManager() {
   Lab2Registry.getInstance().clearProjectManager();
 }
 
-export const {
-  setIsLoading,
-  setPageError,
-  clearPageError,
-  setValidationState,
-  updateValidationPass,
-} = labSlice.actions;
+export const {setIsLoading, setPageError, clearPageError, setValidationState} =
+  labSlice.actions;
 
 // These should not be set outside of the lab slice.
 const {setChannel, onLevelChange} = labSlice.actions;

@@ -44,7 +44,6 @@ import {
   isReadOnlyWorkspace,
   setIsLoading,
   setPageError,
-  updateValidationPass,
 } from '@cdo/apps/lab2/lab2Redux';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
@@ -92,7 +91,6 @@ class UnconnectedMusicView extends React.Component {
     instructionsPosition: PropTypes.string,
     setShowInstructions: PropTypes.func,
     setInstructionsPosition: PropTypes.func,
-    updateValidationPass: PropTypes.func,
     clearPlaybackEvents: PropTypes.func,
     clearOrderedFunctions: PropTypes.func,
     addPlaybackEvents: PropTypes.func,
@@ -529,8 +527,6 @@ class UnconnectedMusicView extends React.Component {
     this.player.stopSong();
     this.playingTriggers = [];
 
-    this.props.updateValidationPass();
-
     this.compileSong();
 
     this.executeCompiledSong();
@@ -755,7 +751,6 @@ const MusicView = connect(
       dispatch(setShowInstructions(showInstructions)),
     setInstructionsPosition: instructionsPosition =>
       dispatch(setInstructionsPosition(instructionsPosition)),
-    updateValidationPass: () => dispatch(updateValidationPass()),
     clearPlaybackEvents: () => dispatch(clearPlaybackEvents()),
     clearOrderedFunctions: () => dispatch(clearOrderedFunctions()),
     addPlaybackEvents: playbackEvents =>
