@@ -110,6 +110,10 @@ export default class ProgressManager {
       hasConditions,
       satisfied: false,
       message: null,
+      // Ensure that the validation feedback UI is rendered fresh.  This index is
+      // used as part of the key for that React component; having a unique value
+      // ensures that the UI is rendered fresh, and any apperance animation is
+      // played again, even if it's the same message as last time.
       index: this.currentValidationState.index + 1,
     };
 
