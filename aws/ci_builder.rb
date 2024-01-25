@@ -8,6 +8,7 @@ module CiBuilder
 
   def build
     Dir.chdir(deploy_dir) do
+      return 0 unless build_required?
       FileUtils.touch BUILD_STARTED
       update_repository
       display_commit_link
