@@ -1792,7 +1792,11 @@
           }
         },
         "courseC_artist_prog3": {
+          "draw fire": {
+            "name": "teken vuur"
+          },
           "draw flame": {
+            "name": "teken vlam",
             "parameters": {
               "x": "x"
             }
@@ -1806,28 +1810,44 @@
           }
         },
         "courseC_artist_prog3_2018": {
+          "draw fire": {
+            "name": "teken vuur"
+          },
           "draw flame": {
+            "name": "teken vlam",
             "parameters": {
               "x": "x"
             }
           }
         },
         "courseC_artist_prog3_2019": {
+          "draw fire": {
+            "name": "teken vuur"
+          },
           "draw flame": {
+            "name": "teken vlam",
             "parameters": {
               "x": "x"
             }
           }
         },
         "courseC_artist_prog3_2020": {
+          "draw fire": {
+            "name": "teken vuur"
+          },
           "draw flame": {
+            "name": "teken vlam",
             "parameters": {
               "x": "x"
             }
           }
         },
         "courseC_artist_prog3_2021": {
+          "draw fire": {
+            "name": "teken vuur"
+          },
           "draw flame": {
+            "name": "teken vlam",
             "parameters": {
               "x": "x"
             }
