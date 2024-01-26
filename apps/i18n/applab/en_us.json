@@ -476,7 +476,7 @@
   "makerSetupChromebook": "Maker Toolkit works on Chromebooks without any installations or extensions. You should be able to plug in your board and get started right away!",
   "makerSetupChromebookHistoricalNote": "Previously, we required the installation of the Code.org Serial Connector to use the Maker Toolkit with Chromebooks. This is no longer needed. If you have the Code.org Serial Connector installed, you may uninstall it if you wish. We will be removing it from the Chrome Web Store at the end of November. This will not affect your experience with the Maker Toolkit and requires no action from you.",
   "makerSetupChromebookPage": "Open this page ([{makerSetupPage}]({makerSetupPage})) on your Chromebook.",
-  "makerSetupCircuitPlaygroundDescription": "The Adafruit [Circuit Playground Express](https://www.adafruit.com/product/3333) (and the older [Circuit Playground Classic](https://www.adafruit.com/product/3000)) is a programmable circuit board with various sensors and components and includes 10 color LEDs along with a mini-speaker.",
+  "makerSetupCircuitPlaygroundDescription": "The Adafruit [Circuit Playground](https://www.adafruit.com/category/965) (Express or Classic) is a programmable circuit board with various sensors and components and includes 10 color LEDs along with a mini-speaker.",
   "makerSetupCircuitPlaygroundImageAltText": "The Circuit Playground board is a circular circuit board with a USB connector at the top rim, 14 connection pins along the rim, 10 LED lights, two buttons and multiple sensors.",
   "makerSetupCircuitPlaygroundTitle": "The Circuit Playground",
   "makerSetupConnectBoardChecklistTitle": "Connect your Board: Checklist",
