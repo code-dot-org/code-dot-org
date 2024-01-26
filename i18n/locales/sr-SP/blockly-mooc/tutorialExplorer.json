@@ -18,6 +18,7 @@
   "filterPlatformComputers": "Компјутери",
   "filterPlatformAndroid": "Android",
   "filterPlatformIos": "iPad/iPhone",
+  "filterPlatformRobotics": "Погледај активности робота",
   "filterPlatformNoInternet": "Слаб или без интернета",
   "filterPlatformNoComputers": "Нема компјутера или уређаја",
   "filterTopics": "Теме",
