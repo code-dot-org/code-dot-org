@@ -2,13 +2,14 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
-import color from '@cdo/apps/util/color';
+// import color from '@cdo/apps/util/color';
 import DCDO from '@cdo/apps/dcdo';
 import SectionProgress from '../sectionProgress/SectionProgress';
-import Button from '@cdo/apps/templates/Button';
+// import Button from '@cdo/apps/templates/Button';
 import {setShowProgressTableV2} from '@cdo/apps/templates/currentUserRedux';
 import SectionProgressV2 from './SectionProgressV2';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
+import {Link} from '@dsco_/link';
 
 function SectionProgressSelector({
   showProgressTableV2,
@@ -31,7 +32,7 @@ function SectionProgressSelector({
 
   const toggleV1OrV2Button = () => (
     <div style={{float: 'right'}}>
-      <Button
+      {/* <Button
         style={{
           color: color.light_secondary_500,
           fontSize: '14px',
@@ -43,7 +44,13 @@ function SectionProgressSelector({
         {showProgressTableV2
           ? i18n.switchToOldProgressView()
           : i18n.switchToNewProgressView()}
-      </Button>
+      </Button> */}
+
+      <Link type="primary" size="s" onClick={onShowProgressTableV2Change}>
+        {showProgressTableV2
+          ? i18n.switchToOldProgressView()
+          : i18n.switchToNewProgressView()}
+      </Link>
     </div>
   );
 
