@@ -25,7 +25,7 @@ jobs:
           MYSQL_ROOT_PASSWORD: ${{ env.MYSQL_ROOT_PASSWORD }}
         ports:
           - 3306:3306
-
+    
     steps:
       - name: Get Branch Name from Pull Request ID
         id: get_branch
@@ -47,7 +47,10 @@ jobs:
         with:
           path: ~/.npm
           key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
-
+      
+      - name: Setup upterm session
+        uses: lhotari/action-upterm@v1
+        
       - name: Set up Docker Environment
         run: |
           docker build -t my-ci-image .
