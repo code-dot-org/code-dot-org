@@ -26,7 +26,7 @@ markdown <<MARKDOWN
 
 <a href = "https://studio.code.org/s/k5-onlinepd-2023" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/961358fcf2607737cc76b565bff0ec2f-image-1706036398849.png" alt="thumbnail for the CS Fundamentals self-paced professional learniing module " width="240px" style="border-radius:5px; float:left; margin: 20px 40px 40px 20px;"></a>
 
-<a href = "https://studio.code.org/courses/self-paced-pl-aiml-2023" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/bf069bacc09e2e7e9907e4a315d48bb8-image-1706036898931.png" alt="thumbnail for the CS Connections self-paced professional learniing module " width="240px" style="border-radius:5px; float:left; margin: 20px 50px 50px 20px;"></a>
+<a href = "https://studio.code.org/s/self-paced-pl-k5-2024-2" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/ccc79ee9879ff8d510fed4011fb679a6-image-1706220747592.jpg" alt="thumbnail for the CS Connections self-paced professional learniing module " width="240px" style="border-radius:5px; float:left; margin: 20px 50px 50px 20px;"></a>
 
 <br>
 
@@ -50,5 +50,5 @@ markdown <<MARKDOWN
 <br>
 </p>
 
-![]()
+![](https://images.code.org/ccc79ee9879ff8d510fed4011fb679a6-image-1706220747592.jpg)
 MARKDOWN
