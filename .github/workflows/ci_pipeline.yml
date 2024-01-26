@@ -34,13 +34,13 @@ jobs:
           echo "DRONE_GIT_HTTP_URL is: $DRONE_GIT_HTTP_URL"          
       - name: Clone and Prepare Git
         run: |
-          git clone --branch $DRONE_SOURCE_BRANCH --depth 1 $DRONE_GIT_HTTP_URL .
-          git reset --hard $DRONE_COMMIT
-          git remote set-branches --add origin $DRONE_TARGET_BRANCH
-          git fetch --depth 100 origin $DRONE_TARGET_BRANCH
-          git config user.name "Drone"
-          git config user.email "drone-fake-user@code.org"
-          git merge origin/$DRONE_TARGET_BRANCH
+          git clone --branch ${{ github.base_ref }} --depth 1 https://github.com/${{ github.repository }}.git .
+          git reset --hard ${{ github.sha }}
+          # Assumes you're merging into main branch. Replace 'main' if your target branch is different.
+          git fetch --depth 100 origin main
+          git config user.name "GitHub Actions"
+          git config user.email "<email>"
+          git merge origin/main
 
       - name: Restore Cache
         uses: actions/cache@v2
