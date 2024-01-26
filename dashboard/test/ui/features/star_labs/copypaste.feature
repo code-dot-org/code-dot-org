@@ -11,6 +11,7 @@ Scenario: Copy and paste a block
   Then the workspace has "1" blocks of type "draw_move_by_constant"
   And I ctrl-c
   And I ctrl-v
+  And I wait for 1 second
   Then the workspace has "2" blocks of type "draw_move_by_constant"
 
 Scenario: Cut and paste a block
