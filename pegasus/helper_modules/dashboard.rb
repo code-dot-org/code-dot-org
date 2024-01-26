@@ -2,13 +2,14 @@
 # A set of utilities that provide access to the current user, their
 # authentication state, and other DASHBOARD_DB access.
 #
-# rubocop:disable CustomCops/DashboardDbUsage
 module Dashboard
   # Get the dashboard database
   # The static constant is wrapped here so it's easy to stub for tests.
   # @returns [Database]
   def self.db
+    # rubocop:disable CustomCops/DashboardDbUsage
     DASHBOARD_DB
+    # rubocop:enable CustomCops/DashboardDbUsage
   end
 
   class User
@@ -22,9 +23,11 @@ module Dashboard
     # @returns [User] for given user_id, or nil if not found in database
     def self.get(user_id)
       return nil if user_id.nil?
+      # rubocop:disable CustomCops/DashboardDbUsage
       row = Dashboard.db[:users].where(id: user_id, deleted_at: nil).first
       return nil unless row
       Dashboard::User.new(row)
+      # rubocop:enable CustomCops/DashboardDbUsage
     end
 
     def id
@@ -47,4 +50,3 @@ module Dashboard
     end
   end
 end
-# rubocop:enable CustomCops/DashboardDbUsage
