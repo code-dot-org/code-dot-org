@@ -1,57 +1,51 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
 import {evidenceLevelShape} from './rubricShapes';
-import RadioButton from '@cdo/apps/componentLibrary/radioButton/RadioButton';
 import {
   BodyThreeText,
+  BodyFourText,
   StrongText,
   Heading6,
 } from '@cdo/apps/componentLibrary/typography';
-import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
+import {
+  UNDERSTANDING_LEVEL_STRINGS,
+  UNDERSTANDING_LEVEL_STRINGS_V2,
+} from './rubricHelpers';
 
 export default function EvidenceLevelsForTeachersV2({
   evidenceLevels,
-  learningGoalKey,
   understanding,
   radioButtonCallback,
   canProvideFeedback,
   isAutosaving,
 }) {
-  const radioGroupName = `evidence-levels-${learningGoalKey}`;
   if (canProvideFeedback) {
     return (
-      <div className={style.evidenceLevelSet}>
+      <div>
         <Heading6>{i18n.assignARubricScore()}</Heading6>
-        {evidenceLevels.map(evidenceLevel => (
-          <div
-            key={evidenceLevel.id}
-            className={classNames(
-              style.evidenceLevelOption,
-              style.evidenceLevelLabel
-            )}
-          >
-            {' '}
-            <RadioButton
-              label={UNDERSTANDING_LEVEL_STRINGS[evidenceLevel.understanding]}
-              name={radioGroupName}
-              value={evidenceLevel.id}
-              size="s"
-              onChange={() => {
-                radioButtonCallback(evidenceLevel.understanding);
-              }}
-              checked={understanding === evidenceLevel.understanding}
-              disabled={isAutosaving}
-            />
-            <BodyThreeText
-              className={classNames(style.evidenceLevelDescriptionIndented)}
+        <div className={style.evidenceLevelSetHorizontal}>
+          {evidenceLevels.reverse().map(evidenceLevel => (
+            <button
+              type="button"
+              key={evidenceLevel.id}
+              onClick={() => radioButtonCallback(evidenceLevel.understanding)}
+              className={
+                understanding === evidenceLevel.understanding
+                  ? style.evidenceLevelSelected
+                  : style.evidenceLevelUnselected
+              }
             >
-              {evidenceLevel.teacherDescription}
-            </BodyThreeText>
-          </div>
-        ))}
+              {UNDERSTANDING_LEVEL_STRINGS_V2[evidenceLevel.understanding]}
+            </button>
+          ))}
+          <BodyFourText>
+            {understanding >= 0 &&
+              evidenceLevels.find(e => e.understanding === understanding)
+                .teacherDescription}
+          </BodyFourText>
+        </div>
       </div>
     );
   } else {

@@ -278,7 +278,7 @@ export default function LearningGoals({
             </BodyThreeText>
           </div>
         </div>
-        <div className={style.learningGoalsHeaderRightSide}>
+        <div className={style.learningGoalsHeaderRightSideV2}>
           {aiEnabled && displayUnderstanding === INVALID_UNDERSTANDING && (
             <AiToken />
           )}
