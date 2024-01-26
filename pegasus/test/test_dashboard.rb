@@ -4,6 +4,7 @@ require_relative './test_helper'
 require_relative '../helper_modules/dashboard'
 require_relative 'fixtures/fake_dashboard'
 
+# rubocop:disable CustomCops/DashboardDbUsage
 class DashboardTest < Minitest::Test
   describe 'Dashboard::User' do
     before do
@@ -32,3 +33,4 @@ class DashboardTest < Minitest::Test
     end
   end
 end
+# rubocop:enable CustomCops/DashboardDbUsage

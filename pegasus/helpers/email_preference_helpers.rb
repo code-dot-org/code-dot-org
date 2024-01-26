@@ -4,6 +4,7 @@ require 'active_support/dependencies'
 require_dependency 'cdo/shared_constants/email_preference_constants'
 require_relative '../helper_modules/dashboard'
 
+# rubocop:disable CustomCops/DashboardDbUsage
 class EmailPreferenceHelper
   include EmailPreferenceConstants
 
@@ -56,3 +57,4 @@ class EmailPreferenceHelper
     return
   end
 end
+# rubocop:enable CustomCops/DashboardDbUsage

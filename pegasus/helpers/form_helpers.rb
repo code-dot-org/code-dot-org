@@ -1,3 +1,4 @@
+# rubocop:disable CustomCops/DashboardDbUsage
 require 'digest/md5'
 require_relative '../../deployment'
 require lib_dir 'forms/pegasus_form_validation'
@@ -114,3 +115,4 @@ def update_form(kind, secret, updates)
   update_form.save_changes
   update_form
 end
+# rubocop:enable CustomCops/DashboardDbUsage
