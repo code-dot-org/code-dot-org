@@ -1076,7 +1076,9 @@ exports.createJsWrapperBlockCreator = function (
         // Styles should be used over hard-coded colors in Google Blockly blocks
         if (color) {
           Blockly.cdoUtils.setHSV(this, ...color);
-        } else {
+        } else if (!returnType) {
+          // CDO Blockly automatically sets block color for blocks with a specific
+          // returnType (e.g. yellow for "Location")
           Blockly.cdoUtils.setHSV(this, ...DEFAULT_COLOR);
         }
         if (style) {
