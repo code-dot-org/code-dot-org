@@ -198,6 +198,7 @@ class UnconnectedMusicView extends React.Component {
         hasLoadedInitialSounds: false,
       });
       this.props.clearCallout();
+      this.musicBlocklyWorkspace.hideFlyout();
     }
 
     if (
