@@ -5,7 +5,7 @@ pt:
       user:
         age: Idade
         ai_rubrics_disabled: Desativar o Recurso IA Rubric
-        ai_settings_header: Configurações da I.A.
+        ai_settings_header: Configurações da IA
         current_password: Senha atual
         edit_header: Editar Detalhes da Conta
         email: E-mail

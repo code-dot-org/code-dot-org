@@ -4,6 +4,6 @@ title: 全校参与
 
 {{ signup_button }}
 
-# Get your whole school to participate
+# 组织全校同学参加
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+组织全校同学参加《编程一小时》的信息会在这
