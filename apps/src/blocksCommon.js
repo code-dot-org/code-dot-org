@@ -230,6 +230,10 @@ function installWhenRun(blockly, skin, isK1) {
     shouldBeGrayedOut: function () {
       return false;
     },
+    mutationToDom: Blockly.customBlocks.mutationToDom,
+    domToMutation: Blockly.customBlocks.domToMutation,
+    saveExtraState: Blockly.customBlocks.saveExtraState,
+    loadExtraState: Blockly.customBlocks.loadExtraState,
   };
 
   Blockly.customBlocks.defineNewBlockGenerator(

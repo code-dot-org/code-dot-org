@@ -329,7 +329,13 @@ export const install = (blockly, blockInstallOptions) => {
   }
 
   function createEventBlockForEntity(entityID, displayName) {
-    blockly.Blocks[`craft_${entityID}`] = blockFor(displayName);
+    blockly.Blocks[`craft_${entityID}`] = {
+      ...blockFor(displayName),
+      mutationToDom: Blockly.customBlocks.mutationToDom,
+      domToMutation: Blockly.customBlocks.domToMutation,
+      saveExtraState: Blockly.customBlocks.saveExtraState,
+      loadExtraState: Blockly.customBlocks.loadExtraState,
+    };
     blockly.getGenerator()[`craft_${entityID}`] = generatorFor(entityID);
   }
 
@@ -339,7 +345,13 @@ export const install = (blockly, blockInstallOptions) => {
     displayName,
     statementNames
   ) {
-    blockly.Blocks[`craft_${entityID}`] = blockFor(displayName, statementNames);
+    blockly.Blocks[`craft_${entityID}`] = {
+      ...blockFor(displayName, statementNames),
+      mutationToDom: Blockly.customBlocks.mutationToDom,
+      domToMutation: Blockly.customBlocks.domToMutation,
+      saveExtraState: Blockly.customBlocks.saveExtraState,
+      loadExtraState: Blockly.customBlocks.loadExtraState,
+    };
     blockly.getGenerator()[`craft_${entityID}`] = generatorFor(
       entityType,
       statementNames
