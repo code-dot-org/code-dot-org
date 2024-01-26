@@ -73,7 +73,11 @@ class ConnectionInstructions extends React.Component {
     return (
       <div>
         <h2>{applabI18n.makerSetupConnectBoardChecklistTitle()}</h2>
-        <p>{applabI18n.makerSetupConnectWithWebSerial()}</p>
+        <p>
+          {applabI18n.makerSetupConnectWithWebSerial()}
+          <strong>{applabI18n.makerSetupConnectOnlyOneTab()}</strong>
+          {applabI18n.makerSetupConnectOnlyOneTabDetails()}
+        </p>
         <ol>
           <li>{applabI18n.makerSetupWebSerialConnectToComputer()}</li>
           <li>{applabI18n.makerSetupWebSerialConnectToBoardButton()}</li>
