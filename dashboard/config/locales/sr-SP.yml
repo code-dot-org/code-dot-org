@@ -35,6 +35,8 @@ sr:
     errors:
       messages:
         blank: је обавезан
+        blank_plural: су потребни
+        invalid: је погрешан
   add_hint_form:
     placeholder: Молимо унесите ваш савет овде
     submit: Додај савет

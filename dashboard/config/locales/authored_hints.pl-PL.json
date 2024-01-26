@@ -1822,6 +1822,11 @@
           "mc_9_b": "Czarne plamy na ścianie to węgiel! Aby je wykopać, użyj bloku `zniszcz blok`.",
           "mc_9_c": "Użyj bloku `umieść pochodnię`, aby umieścić pochodnię w miejscu, w którym stoisz."
         },
+        "allthethings HOC Dance AI Customize": {
+          "Hint1": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> Dostosuj efekt, klikając emotikony na bloku <xml> <block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Dancelab_ai\" id=\"*6NOt^DsApsRC-pPZKBQ\">\n  <field name=\"VALUE\">{\"inputs\":[\"cold-face\",\"water-wave\",\"sparkles\"],\"backgroundEffect\":\"sparkles\",\"backgroundColor\":\"cool\",\"foregroundEffect\":\"bubbles\"}</field></block></xml> w obszarze roboczym.  ",
+          "Hint2": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> \\*\\*Nadal utknąłeś? \\*\\* Obejrzyj wideo, aby zobaczyć, jak możesz dostosować efekt. ",
+          "HintEdit": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> Jeśli chcesz użyć kodu zapisanego przez A.I., przełącz, aby wyświetlić kod, a następnie kliknij „Użyj kodu”. Bloki zastąpią blok [blockly block] [0] w Twoim obszarze roboczym. "
+        },
         "behaviors 2": {
           "behavior hint": "Spróbuj edytować zachowania! \n\n-   W którym kierunku rakieta musi się poruszać?"
         },
