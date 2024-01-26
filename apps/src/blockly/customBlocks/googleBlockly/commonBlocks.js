@@ -23,7 +23,9 @@ export const blocks = {
   mutationToDom() {
     var container = Blockly.utils.xml.createElement('mutation');
     mutatorProperties.forEach(prop => {
-      container.setAttribute(prop, this[prop]);
+      if (this[prop]) {
+        container.setAttribute(prop, this[prop]);
+      }
     });
     return container;
   },
@@ -50,7 +52,9 @@ export const blocks = {
   saveExtraState() {
     let state = {};
     mutatorProperties.forEach(prop => {
-      state[prop] = this[prop];
+      if (this[prop]) {
+        state[prop] = this[prop];
+      }
     });
     return state;
   },

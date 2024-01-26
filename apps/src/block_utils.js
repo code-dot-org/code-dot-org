@@ -2,6 +2,7 @@ import _ from 'lodash';
 import {styleTypes} from './blockly/themes/cdoBlockStyles.mjs';
 import xml from './xml';
 import MetricsReporter from './lib/metrics/MetricsReporter';
+import {SERIALIZATION_HOOKS} from '@cdo/apps/blocksCommon';
 
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
 const DEFAULT_COLOR = [184, 1.0, 0.74];
@@ -1130,13 +1131,14 @@ exports.createJsWrapperBlockCreator = function (
             flyoutToggleButton
           );
         }
+        // The following generic mutator functions are only used by Google Blockly
+        // and are intentionally undefined for CDO Blockly.
+        SERIALIZATION_HOOKS.forEach(hook => {
+          if (Blockly.customBlocks[hook]) {
+            this[hook] = Blockly.customBlocks[hook];
+          }
+        });
       },
-      // The following generic mutator functions are only used by Google Blockly
-      // and are intentionally undefined for CDO Blockly.
-      mutationToDom: Blockly.customBlocks.mutationToDom,
-      domToMutation: Blockly.customBlocks.domToMutation,
-      saveExtraState: Blockly.customBlocks.saveExtraState,
-      loadExtraState: Blockly.customBlocks.loadExtraState,
     };
 
     generator[blockName] = function () {
