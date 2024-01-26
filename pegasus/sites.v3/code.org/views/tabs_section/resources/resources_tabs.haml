@@ -1,9 +1,10 @@
 -# Can only be used on rebranded pages that use the
 -# "design-system-pegasus.scss" stylesheet.
 
-%h2=hoc_s(:resources_tabs_heading)
+%h2
+  #{resources_heading}
 %p.desc
-  =hoc_s(:resources_tabs_desc, markdown: :inline, locals: {sign_up_url: CDO.studio_url("/users/sign_up")})
+  #{resources_desc}
 
 -# Shows tabs UI on desktop
 .tabs-section.resources-tabs.show-desktop

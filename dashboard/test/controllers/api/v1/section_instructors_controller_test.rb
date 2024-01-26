@@ -126,10 +126,13 @@ class Api::V1::SectionInstructorsControllerTest < ActionController::TestCase
   end
 
   test 'instructor cannot remove section owner' do
+    section = create(:section, user: @teacher, login_type: 'word')
+    si = section.instructors.first
+    create(:section_instructor, section: section, instructor: @teacher2, status: :active)
     sign_in @teacher2
-    delete :destroy, params: {id: @si2.id}
+    delete :destroy, params: {id: si.id}
     assert_response :forbidden
-    assert @si2.reload.deleted_at.nil?
+    assert si.reload.deleted_at.nil?
   end
 
   test 'instructor can remove themselves if not section owner' do

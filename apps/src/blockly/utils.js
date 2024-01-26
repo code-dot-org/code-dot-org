@@ -98,3 +98,38 @@ export function numberListToString(numberList) {
   }
   return numberString;
 }
+
+/**
+ * Determines whether the hidden procedure definition workspace should be skipped during serialization.
+ * The hidden workspace is a counter-part to the main workspace containing blocks for functions and behaviors.
+ *
+ * @param {Blockly.WorkspaceSvg} workspace - The workspace to be checked for serialization as hidden.
+ * @returns {boolean} Returns `true` if the hidden workspace should be skipped, otherwise `false`.
+ */
+export function shouldSkipHiddenWorkspace(workspace) {
+  return (
+    !Blockly.getHiddenDefinitionWorkspace ||
+    Blockly.getMainWorkspace().id !== workspace.id ||
+    Blockly.isToolboxMode
+  );
+}
+
+/**
+ * Finds the flyout associated with a workspace.
+ * @param {Blockly.Workspace} workspace - The workspace to find the flyout for.
+ * @returns {Blockly.Flyout|null} The flyout associated with the workspace, or null if not found.
+ */
+export function findFlyout(workspace) {
+  if (!workspace) {
+    return null;
+  }
+  if (workspace.flyout) {
+    // Workspace has a single flyout (uncategorized toolbox)
+    return workspace.flyout;
+  }
+  if (workspace.toolbox_ && workspace.toolbox_.flyout_) {
+    // Workspace has a categorized toolbox with a flyout.
+    return workspace.toolbox_.flyout_;
+  }
+  return null;
+}

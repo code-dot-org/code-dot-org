@@ -6,6 +6,7 @@ export default class MetricsManager extends ScrollMetricsManager {
    */
   getPaddedContent_(viewMetrics, contentMetrics) {
     const contentBottom = contentMetrics.top + contentMetrics.height;
+    const contentRight = contentMetrics.left + contentMetrics.width;
 
     // Add extra vertical space beneath the last block
     const extraVerticalSpace = 100;
@@ -21,9 +22,20 @@ export default class MetricsManager extends ScrollMetricsManager {
       viewMetrics.height
     );
 
-    // No horizontal scroll
-    const right = viewMetrics.width;
+    const right = Math.max(contentRight, viewMetrics.width);
 
     return {top, left, bottom, right};
+  }
+
+  /**
+   * Returns whether the scroll area has fixed edges.
+   * Core Blockly doesn't have fixed edges when both the horizontal or vertical scrollbar are present.
+   * This keeps blocks from moving past the fixed left/top edges of our workspaces.
+   *
+   * @returns Whether the scroll area has fixed edges.
+   * @override
+   */
+  hasFixedEdges() {
+    return true;
   }
 }

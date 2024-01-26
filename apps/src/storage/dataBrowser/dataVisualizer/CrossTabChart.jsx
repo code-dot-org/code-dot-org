@@ -3,6 +3,11 @@ import React from 'react';
 import {CROSS_TAB_CHART_AREA} from './constants';
 import * as color from '../../../util/color';
 import fontConstants from '@cdo/apps/fontConstants';
+import msg from '@cdo/locale';
+
+export const MAX_CROSSTAB_COLUMNS = 150;
+export const MAX_CROSSTAB_ROWS = 10000;
+export const MAX_CROSSTAB_CELLS = 10000;
 
 export default function CrossTabChart(props) {
   if (!props.records || !props.selectedColumn1 || !props.selectedColumn2) {
@@ -37,9 +42,25 @@ export default function CrossTabChart(props) {
   //    shrink to fit evenly.
   const columnWidth = 99 / (columns.length - 1) + '%';
 
-  const min = Math.min(...numericValues);
-  const max = Math.max(...numericValues);
+  const {min, max} = numericValues.reduce(
+    (values, currentVal) => {
+      return {
+        min: Math.min(currentVal, values.min),
+        max: Math.max(currentVal, values.max),
+      };
+    },
+    {min: Number.POSITIVE_INFINITY, max: Number.NEGATIVE_INFINITY}
+  );
 
+  if (columns.length > MAX_CROSSTAB_COLUMNS) {
+    return <div>{msg.crossTabTooMuchYData()}</div>;
+  }
+  if (chartData.length > MAX_CROSSTAB_ROWS) {
+    return <div>{msg.crossTabTooMuchXData()}</div>;
+  }
+  if (columns.length * chartData.length > MAX_CROSSTAB_CELLS) {
+    return <div>{msg.crossTabTooManyCellsData()}</div>;
+  }
   return (
     <div id={CROSS_TAB_CHART_AREA} style={wrapperStyle}>
       <h1 style={chartTitleStyle}>{props.chartTitle}</h1>

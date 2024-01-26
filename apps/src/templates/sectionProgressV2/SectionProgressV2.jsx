@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Heading1, Heading6} from '@cdo/apps/componentLibrary/typography';
 import ProgressTableV2 from './ProgressTableV2';
+import IconKey from './IconKey';
 import {loadUnitProgress} from '../sectionProgress/sectionProgressLoader';
 import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
 import {connect} from 'react-redux';
@@ -15,6 +16,8 @@ function SectionProgressV2({
   isLoadingProgress,
   isRefreshingProgress,
 }) {
+  const [expandedLessonIds, setExpandedLessons] = React.useState([]);
+
   const levelDataInitialized = React.useMemo(() => {
     return unitData && !isLoadingProgress && !isRefreshingProgress;
   }, [unitData, isLoadingProgress, isRefreshingProgress]);
@@ -28,13 +31,18 @@ function SectionProgressV2({
   return (
     <div>
       <Heading1>Progress</Heading1>
+      <IconKey isViewingLevelProgress={true} hasLevelValidation={false} />
       <div className={styles.title}>
         <Heading6 className={styles.titleStudents}>Students</Heading6>
         <Heading6 className={styles.titleUnitSelector}>
           UNIT SELECTOR GOES HERE
         </Heading6>
       </div>
-      {levelDataInitialized && <ProgressTableV2 />}
+      <ProgressTableV2
+        expandedLessonIds={expandedLessonIds}
+        setExpandedLessons={setExpandedLessons}
+        isSkeleton={!levelDataInitialized}
+      />
     </div>
   );
 }
