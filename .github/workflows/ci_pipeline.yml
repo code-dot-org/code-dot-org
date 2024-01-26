@@ -2,10 +2,6 @@ name: CI Pipeline
 
 on:
   workflow_dispatch:
-    inputs:
-      pull_request_id:
-        description: 'Pull Request ID'
-        required: true
 
 env:
   AWS_DEFAULT_REGION: us-east-1
@@ -25,35 +21,14 @@ jobs:
           MYSQL_ROOT_PASSWORD: ${{ env.MYSQL_ROOT_PASSWORD }}
         ports:
           - 3306:3306
-    
+
     steps:
-      - name: Get Branch Name from Pull Request ID
-        id: get_branch
-        run: |
-          PR_ID=${{ github.event.inputs.pull_request_id }}
-          PR_DATA=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-                        https://api.github.com/repos/${{ github.repository }}/pulls/$PR_ID)
-          BRANCH_NAME=$(echo $PR_DATA | jq -r .head.ref)
-          echo "Branch Name: $BRANCH_NAME"
-          echo "::set-output name=branch_name::$BRANCH_NAME"
-
-      - name: Checkout Branch
+      - name: Checkout code
         uses: actions/checkout@v2
-        with:
-          ref: ${{ steps.get_branch.outputs.branch_name }}
 
-      - name: Restore Cache
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
-      
-      - name: Setup upterm session
-        uses: lhotari/action-upterm@v1
-        
       - name: Set up Docker Environment
         run: |
-          docker build -t my-ci-image .
+          docker build -t my-ci-image -f /home/runner/work/code-dot-org/code-dot-org/docker/dockerfiles/Dockerfile /home/runner/work/code-dot-org/code-dot-org/docker/dockerfiles
 
       - name: Run Unit Tests
         run: |
