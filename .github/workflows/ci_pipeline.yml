@@ -12,7 +12,6 @@ env:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
-    # Only run this workflow for the user 'pablo-code-dot-org'
     if: github.actor == 'pablo-code-org'
 
     services:
@@ -24,8 +23,30 @@ jobs:
           - 3306:3306
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Get EC2 Hostname
+        uses: curlimages/curl@latest
+        with:
+          entrypoint: /bin/sh
+          args: -c |
+            IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")
+            hostname=$(curl -s -H "X-aws-ec2-metadata-token: $IMDS_TOKEN" http://169.254.169.254/latest/meta-data/public-hostname)
+            echo "Running on $hostname"
+
+      - name: Clone and Prepare Git
+        run: |
+          git clone --branch $DRONE_SOURCE_BRANCH --depth 1 $DRONE_GIT_HTTP_URL .
+          git reset --hard $DRONE_COMMIT
+          git remote set-branches --add origin $DRONE_TARGET_BRANCH
+          git fetch --depth 100 origin $DRONE_TARGET_BRANCH
+          git config user.name "Drone"
+          git config user.email "drone-fake-user@code.org"
+          git merge origin/$DRONE_TARGET_BRANCH
+
+      - name: Restore Cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
 
       - name: Set up Docker Environment
         run: |
@@ -38,3 +59,9 @@ jobs:
       - name: Run UI Tests
         run: |
           docker run my-ci-image /bin/bash -c "source docker/ui_tests.sh"
+
+      - name: Update Cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
