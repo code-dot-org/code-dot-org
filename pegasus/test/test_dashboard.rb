@@ -4,15 +4,16 @@ require_relative './test_helper'
 require_relative '../helper_modules/dashboard'
 require_relative 'fixtures/fake_dashboard'
 
-# rubocop:disable CustomCops/DashboardDbUsage
 class DashboardTest < Minitest::Test
   describe 'Dashboard::User' do
     before do
       FakeDashboard.use_fake_database
+      # rubocop:disable CustomCops/DashboardDbUsage
       @student = Dashboard::User.get(FakeDashboard::STUDENT[:id])
       @deleted_student = Dashboard::User.
         get(FakeDashboard::STUDENT_DELETED[:id])
       @teacher = Dashboard::User.get(FakeDashboard::TEACHER[:id])
+      # rubocop:enable CustomCops/DashboardDbUsage
     end
 
     describe 'to_hash' do
@@ -33,4 +34,3 @@ class DashboardTest < Minitest::Test
     end
   end
 end
-# rubocop:enable CustomCops/DashboardDbUsage
