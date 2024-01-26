@@ -1360,13 +1360,13 @@ table {
   border: 1px solid var(--neutral_dark20);
   width: 100%;
 
-
   th {
     background-color: var(--neutral_light);
     border: 1px solid var(--neutral_dark20);
     color: var(--neutral_dark);
     font-size: 1rem;
     font-weight: var(--semi-bold-font-weight);
+    text-align: initial;
   }
 
   td {
