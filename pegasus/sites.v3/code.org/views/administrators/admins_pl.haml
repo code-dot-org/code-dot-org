@@ -1,27 +1,29 @@
--# FontAwesome icons
-- icon_laptop = "fa-solid fa-laptop"
-- icon_chalkboard = "fa-solid fa-chalkboard-user"
-- icon_arrow = "fa-solid fa-arrow-up-wide-short"
+:ruby
+  list_item = [
+    {
+      icon: "fa-solid fa-laptop",
+      title: hoc_s(:heading_self_paced_learning),
+      desc: hoc_s(:admins_page_pl_self_paced_desc)
+    },
+    {
+      icon: "fa-solid fa-chalkboard-user",
+      title: hoc_s(:heading_in_person_virtual_workshops),
+      desc: hoc_s(:admins_page_pl_workshops_desc)
+    },
+    {
+      icon: "fa-solid fa-arrow-up-wide-short",
+      title: hoc_s(:heading_every_grade_every_level),
+      desc: hoc_s(:admins_page_pl_every_grade_desc)
+    },
+  ]
 
 %ul.icon-bullet-list.full-width
-  %li
-    %div
-      %i{class: "#{icon_laptop}"}
-    .text-wrapper
-      %h3=hoc_s(:heading_self_paced_learning)
-      %p.no-margin-bottom
-        =hoc_s(:admins_page_pl_self_paced_desc)
-  %li
-    %div
-      %i{class: "#{icon_chalkboard}"}
-    .text-wrapper
-      %h3=hoc_s(:heading_in_person_virtual_workshops)
-      %p.no-margin-bottom
-        =hoc_s(:admins_page_pl_workshops_desc)
-  %li
-    %div
-      %i{class: "#{icon_arrow}"}
-    .text-wrapper
-      %h3=hoc_s(:heading_every_grade_every_level)
-      %p.no-margin-bottom
-        =hoc_s(:admins_page_pl_every_grade_desc)
+  - list_item.each do |list_item|
+    %li
+      %div
+        %i{class: "#{list_item[:icon]}"}
+      .text-wrapper
+        %h3
+          = list_item[:title]
+        %p.no-margin-bottom
+          = list_item[:desc]
