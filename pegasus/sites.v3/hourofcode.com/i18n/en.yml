@@ -1122,6 +1122,8 @@
   admins_page_subscribe_form_heading: "Sign up for our administrator newsletter!"
   admins_page_subscribe_form_desc: "Sign up to receive monthly emails from Code.org on bringing computer science to your school or district. Get helpful reminders, tips, and updates sent right to your inbox. You can unsubscribe at any time."
   admins_page_subscribe_form_district_disclaimer: "District Administrator? [Discover our District Program](%{district_program_url})."
+  admins_page_lms_heading: "Seamless LMS integration for simplified management"
+  admins_page_lms_desc: "Connect Code.org with your district or school's Learning Management System. Our platform integrates with leading LMS and LTI providers, making class management more efficient while ensuring a unified learning experience."
   admins_page_resources_desc: "Beyond curriculum and professional learning, we have many materials to support your classroom."
   admins_page_resources_desc_intl: "We have a growing number of partners around the world that are helping to bring computer science to students in their area."
   admins_page_resources_desc_videos: "We offer a growing library of educational videos for use by educators worldwide, online or in classrooms."
