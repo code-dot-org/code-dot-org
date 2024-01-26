@@ -179,6 +179,20 @@ const CustomizableCurriculumCatalogCard = ({
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
   const isTeacherOrSignedOut = isSignedOut || isTeacher;
 
+  const learnMoreButtonText = isTeacherOrSignedOut
+    ? i18n.learnMore()
+    : i18n.tryNow();
+  const learnMoreButtonAriaLabel = isTeacherOrSignedOut
+    ? i18n.learnMoreDescription({
+        course_name: courseDisplayName,
+      })
+    : i18n.tryNow();
+  const learnMoreButtonClasses = `${style.buttonFlex} ${
+    isTeacherOrSignedOut
+      ? style.teacherAndSignedOutLearnMoreButton
+      : style.studentLearnMoreButton
+  }`;
+
   const handleClickAssign = cardType => {
     setIsAssignDialogOpen(true);
     analyticsReporter.sendEvent(
@@ -285,15 +299,9 @@ const CustomizableCurriculumCatalogCard = ({
                 color={Button.ButtonColor.neutralDark}
                 type="button"
                 href={pathToCourse}
-                aria-label={
-                  isTeacherOrSignedOut
-                    ? i18n.learnMoreDescription({
-                        course_name: courseDisplayName,
-                      })
-                    : i18n.tryNow()
-                }
-                text={isTeacherOrSignedOut ? i18n.learnMore() : i18n.tryNow()}
-                className={`${style.buttonFlex} ${style.learnMoreButton}`}
+                aria-label={learnMoreButtonAriaLabel}
+                text={learnMoreButtonText}
+                className={learnMoreButtonClasses}
               />
               {isTeacherOrSignedOut && (
                 <Button
