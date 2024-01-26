@@ -22,6 +22,7 @@ import styles from './panels.module.scss';
 import classNames from 'classnames';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {currentLevelIndex} from '@cdo/apps/code-studio/progressReduxSelectors';
 const commonI18n = require('@cdo/locale');
 
 function useWindowSize() {
@@ -53,9 +54,15 @@ const PanelsView: React.FunctionComponent = () => {
   const currentAppName = useSelector(
     ({lab}: {lab: LabState}) => lab.levelProperties?.appName
   );
+  const levelIndex = useSelector(currentLevelIndex);
 
   const [levelPanels, setLevelPanels] = useState<PanelsLevelData | null>(null);
   const [currentPanel, setCurrentPanel] = useState(0);
+
+  // Go back to the first panel whenever a level switch occurs.
+  useEffect(() => {
+    setCurrentPanel(0);
+  }, [levelIndex]);
 
   useEffect(() => {
     if (currentAppName === appName && levelData) {
