@@ -1,12 +1,12 @@
 {
   "pages": [
     {
-      "name": "page1",
+      "name": "page0",
       "elements": [
         {
           "type": "panel",
           "name": "testing_panel",
-          "visible": true,
+          "visible": false,
           "title": " ",
           "elements": [
             {
@@ -45,12 +45,29 @@
         },
         {
           "type": "html",
-          "name": "question1",
+          "name": "intro_k5pre",
           "html": "<h1>Code.org Self-paced Online Professional Learning</h1><p><h2>Welcome to {survey_variable}!</h2></p>\n\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>Pre-Course Survey</h2>"
         },
         {
           "type": "radiogroup",
+          "name": "first_time_csb",
+          "title": "Is this your first self-paced professional learning experience for teaching Code.org's K-5 Computer Science curriculum?",
+          "visibleIf": "{survey_variable}='csb'",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes"
+            },
+            {
+              "value": "no",
+              "text": "No"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
           "name": "main_goal",
+          "visibleIf": "{survey_variable}='csc' or {first_time_csb}='yes'",
           "title": "My main goal for this professional learning is to:",
           "choices": [
             {
@@ -80,6 +97,7 @@
         {
           "type": "radiogroup",
           "name": "reason_for_selfpaced",
+          "visibleIf": "{survey_variable}='csc' or {first_time_csb}='yes'",
           "title": "My main reason for choosing self-paced professional development, as opposed to facilitator-led professional development, is: ",
           "choices": [
             {
@@ -114,8 +132,9 @@
         },
         {
           "type": "radiogroup",
-          "name": "plan_to_teach_csd",
+          "name": "plan_to_teach_csc",
           "title": "Are you planning to teach one or more Computer Science Connections Modules? ",
+          "visibleIf": "{survey_variable}='csc'",
           "choices": [
             {
               "value": "no",
@@ -139,7 +158,39 @@
             },
             {
               "value": "yes",
-              "text": "yes"
+              "text": "Yes"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "plan_to_teach_csb",
+          "title": "Are you planning to teach Code.org's K-5 Computer Science content? ",
+          "visibleIf": "{survey_variable}='csb' and {first_time_csb}='yes'",
+          "choices": [
+            {
+              "value": "no",
+              "text": "No"
+            },
+            {
+              "value": "prob_not",
+              "text": "Probably not"
+            },
+            {
+              "value": "dont_know",
+              "text": "I don't know yet"
+            },
+            {
+              "value": "prob_yes",
+              "text": "Probably yes"
+            },
+            {
+              "value": "def_yes",
+              "text": "Definitely yes"
+            },
+            {
+              "value": "yes",
+              "text": "Yes"
             }
           ]
         }
@@ -152,6 +203,7 @@
           "type": "rating",
           "name": "interest_learning_cs",
           "title": "How interested are you in learning computer science?",
+          "visibleIf": "{first_time_csb}<>'no'",
           "rateMax": 7,
           "minRateDescription": "Very uninterested",
           "maxRateDescription": "Very interested"
@@ -160,14 +212,16 @@
           "type": "rating",
           "name": "interest_teaching_cs",
           "title": "How interested are you in teaching computer science?",
+          "visibleIf": "{first_time_csb}<>'no'",
           "rateMax": 7,
           "minRateDescription": "Very uninterested",
           "maxRateDescription": "Very interested"
         },
         {
           "type": "rating",
-          "name": "confidence_to_teache",
+          "name": "confidence_to_teach",
           "title": "How confident do you feel in your ability to teach computer science effectively right now?",
+          "visibleIf": "{first_time_csb}<>'no'",
           "rateMax": 7,
           "minRateDescription": "Very unconfident",
           "maxRateDescription": "Very confident"
@@ -176,6 +230,7 @@
           "type": "rating",
           "name": "how_nessessary_to_learn",
           "title": "How necessary is it for students to learn computer science?",
+          "visibleIf": "{first_time_csb}<>'no'",
           "rateMax": 7,
           "minRateDescription": "Very unnecessary",
           "maxRateDescription": "Very necessary"
@@ -189,6 +244,7 @@
           "type": "radiogroup",
           "name": "current_level_cs_knowledge",
           "title": "Which best describes your current level of knowledge about computer science?",
+          "visibleIf": "{first_time_csb}<>'no'",
           "choices": [
             {
               "value": "none",
@@ -216,6 +272,7 @@
           "type": "radiogroup",
           "name": "teacher_role",
           "title": "Which best describes you? ",
+          "visibleIf": "{first_time_csb}<>'no'",
           "choices": [
             {
               "value": "classroom",
@@ -256,6 +313,7 @@
           "type": "radiogroup",
           "name": "gender",
           "title": "Gender (optional):",
+          "visibleIf": "{first_time_csb}<>'no'",
           "choices": [
             {
               "value": "male",
@@ -283,6 +341,7 @@
           "type": "checkbox",
           "name": "race_eth",
           "title": "Which of the following best represents your racial or ethnic background? Please select all that apply. (optional)",
+          "visibleIf": "{first_time_csb}<>'no'",
           "choices": [
             {
               "value": "white",
