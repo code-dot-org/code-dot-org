@@ -1,0 +1,20 @@
+{
+  "category": "World",
+  "config": {
+    "func": "showVariable",
+    "blockText": "show variable {VARIABLE} at {LOCATION}",
+    "color": [240, 0.45, 0.65],
+    "args": [
+      {
+        "name": "VARIABLE",
+        "variableInput": true
+      },
+      {
+        "name": "LOCATION",
+        "type": "Location"
+      }
+    ],
+    "inline": true,
+    "style": "world_blocks"
+  }
+}
