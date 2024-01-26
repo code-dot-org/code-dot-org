@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-20 19:15:33 UTC",
+    "serialized_at": "2024-01-25 21:51:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -263,7 +263,7 @@
     },
     {
       "key": "Websites for Expression",
-      "name": "Organizing My Content",
+      "name": "Organizing Content with Flexbox",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -282,7 +282,7 @@
     },
     {
       "key": "Your Web Page - Prepare",
-      "name": "Your Web Page - Prepare",
+      "name": "Flexbox Children for More Control",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
@@ -357,12 +357,31 @@
       }
     },
     {
-      "key": "Websites for a Purpose",
-      "name": "Websites for a Purpose",
+      "key": "Linking Pages",
+      "name": "Linking Pages",
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 17,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "This lesson will give students practice in using links and introduce them to good navigation practices for their sites. Students begin by looking online for the first web page and discussing how its use of links was what started the web. They then transition to Web Lab where they learn how to make their own links, as well as good conventions that make it easier for users to navigate on a page.  Finally, they reflect on their group project and what their personal goals are for the final stretch.\n\n**Question of the Day:** How can we combine several different web pages into one website?\n",
+        "preparation": "* Make sure students have access to their website plans from the previous lesson.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "student_overview": "**Question of the Day:** How can we combine several different web pages into one website?\n\nIn this lesson, you will learn how to use hyperlinks on a web page. "
+      },
+      "seeding_key": {
+        "lesson.key": "Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2024"
+      }
+    },
+    {
+      "key": "Websites for a Purpose",
+      "name": "CSS Pseudo-classes",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 18,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson transitions students from thinking about websites as a form of personal expression to considering how websites might serve broader purposes for their creators. They first think of different reasons that they visit websites, then investigate websites that have been created to address a particular problem. After deciding what different purposes those websites might serve for the creators, they begin to think about the problem that they might want to solve with a website. At the end of the lesson, students form the groups that they will be in for their chapter projects, in which students will work in teams to create websites to solve a problem of their choosing.\n\n**Question of the Day:** What are the different reasons people make websites?\n",
@@ -378,10 +397,10 @@
     {
       "key": "Planning a Multi-Page Site",
       "name": "Planning a Multi-Page Site",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students work in teams to plan out their websites and create a sketch of each page. They then download the media that they will need for their sites. At the end of the activity, they decide how the work will be distributed among team members and report whether the entire group agreed to the plan.\n\n**Question of the Day:**  How do we plan a web page as a group?\n",
@@ -390,25 +409,6 @@
       },
       "seeding_key": {
         "lesson.key": "Planning a Multi-Page Site",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd2-2024"
-      }
-    },
-    {
-      "key": "Linking Pages",
-      "name": "Linking Pages",
-      "absolute_position": 19,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 19,
-      "properties": {
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This lesson will give students practice in using links and introduce them to good navigation practices for their sites. Students begin by looking online for the first web page and discussing how its use of links was what started the web. They then transition to Web Lab where they learn how to make their own links, as well as good conventions that make it easier for users to navigate on a page.  Finally, they reflect on their group project and what their personal goals are for the final stretch.\n\n**Question of the Day:** How can we combine several different web pages into one website?\n",
-        "preparation": "* Make sure students have access to their website plans from the previous lesson.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
-        "student_overview": "**Question of the Day:** How can we combine several different web pages into one website?\n\nIn this lesson, you will learn how to use hyperlinks on a web page. "
-      },
-      "seeding_key": {
-        "lesson.key": "Linking Pages",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd2-2024"
       }
@@ -1204,6 +1204,48 @@
       }
     },
     {
+      "key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1",
+        "lesson.key": "Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2024"
+      }
+    },
+    {
+      "key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3",
+      "position": 2,
+      "properties": {
+        "duration": 80,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3",
+        "lesson.key": "Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2024"
+      }
+    },
+    {
+      "key": "ecfcaf15-ea06-428e-9841-4f76984f6091",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ecfcaf15-ea06-428e-9841-4f76984f6091",
+        "lesson.key": "Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2024"
+      }
+    },
+    {
       "key": "8821bb97-680b-493d-a504-b000c90980e6",
       "position": 1,
       "properties": {
@@ -1283,48 +1325,6 @@
       "seeding_key": {
         "lesson_activity.key": "5dfe500d-5460-4df9-85b6-365e45f2400a",
         "lesson.key": "Planning a Multi-Page Site",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd2-2024"
-      }
-    },
-    {
-      "key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1",
-      "position": 1,
-      "properties": {
-        "duration": 5,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1",
-        "lesson.key": "Linking Pages",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd2-2024"
-      }
-    },
-    {
-      "key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3",
-      "position": 2,
-      "properties": {
-        "duration": 80,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3",
-        "lesson.key": "Linking Pages",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd2-2024"
-      }
-    },
-    {
-      "key": "ecfcaf15-ea06-428e-9841-4f76984f6091",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "ecfcaf15-ea06-428e-9841-4f76984f6091",
-        "lesson.key": "Linking Pages",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd2-2024"
       }
@@ -5292,6 +5292,171 @@
       }
     },
     {
+      "key": "d09dec71-a2ac-4bb2-bd80-178157bfb69e",
+      "position": 1,
+      "properties": {
+        "description": "**Group:** Place students in pairs.  They do not need to be in their project groups.",
+        "name": "First Web Page Hunt\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "d09dec71-a2ac-4bb2-bd80-178157bfb69e",
+        "lesson_activity.key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1"
+      }
+    },
+    {
+      "key": "5fa8c8cf-ac08-442d-a52c-e00e67bae70b",
+      "position": 2,
+      "properties": {
+        "description": "**Display:**  Show the two following prompt questions on the board, and direct students to find the answers online by using a search engine of their choice, or whatever methods they might normally use for research.\n\n1. What was the first web page ever created?\n2. What's the one feature it has that we haven't learned how to do yet?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Although there are many places students could go for the answer to this question, a Google search will most likely take them to an article describing the page that Tim Berners-Lee created on August 6, 1991.  The page is comprised of simple text with a few hyperlinks.\r\n\r\n![](https://curriculum.code.org/media/uploads/Screen-Shot-2019-10-18-at-11.58.45-AM.png)\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5fa8c8cf-ac08-442d-a52c-e00e67bae70b",
+        "lesson_activity.key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1"
+      }
+    },
+    {
+      "key": "5828b01d-42d5-4323-afd1-89f294bc3e40",
+      "position": 3,
+      "properties": {
+        "description": "\n\n**Share:**  After giving students time to search online, let them share out their answers."
+      },
+      "seeding_key": {
+        "activity_section.key": "5828b01d-42d5-4323-afd1-89f294bc3e40",
+        "lesson_activity.key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1"
+      }
+    },
+    {
+      "key": "a51daefc-2ba5-4aaf-af65-4c127004a2b8",
+      "position": 4,
+      "properties": {
+        "description": "Even though the first web page looks simple, it had something that had never been done before: links. Links are what made the web special, because they let people easily move around the Internet. Today, you'll learn how to put links on your own web pages, so that your team can combine all your pages together into one website.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a51daefc-2ba5-4aaf-af65-4c127004a2b8",
+        "lesson_activity.key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1"
+      }
+    },
+    {
+      "key": "73b67a6d-af2b-409f-9b6e-3cef3ddfc967",
+      "position": 5,
+      "properties": {
+        "description": "**Question of the Day: How can we combine several different web pages into one website?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "73b67a6d-af2b-409f-9b6e-3cef3ddfc967",
+        "lesson_activity.key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1"
+      }
+    },
+    {
+      "key": "3e72fb46-5ad9-40e8-947c-994e5668d473",
+      "position": 1,
+      "properties": {
+        "description": "**Group:** Allow students to continue in their pairs.\r\n\r\n**Transition:** Send students to Code Studio.",
+        "name": "Web Lab\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3e72fb46-5ad9-40e8-947c-994e5668d473",
+        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3"
+      }
+    },
+    {
+      "key": "276767de-004e-43d5-a258-c06f57aa9356",
+      "position": 2,
+      "properties": {
+        "progression_name": "Exploration"
+      },
+      "seeding_key": {
+        "activity_section.key": "276767de-004e-43d5-a258-c06f57aa9356",
+        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3"
+      }
+    },
+    {
+      "key": "6d6835e2-1a3f-4259-9bcb-df94385d2ec0",
+      "position": 3,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "6d6835e2-1a3f-4259-9bcb-df94385d2ec0",
+        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3"
+      }
+    },
+    {
+      "key": "04374cfa-25a5-4331-b64b-0616fb392258",
+      "position": 4,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "04374cfa-25a5-4331-b64b-0616fb392258",
+        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3"
+      }
+    },
+    {
+      "key": "fa194aa0-7750-46cd-acf8-5da83b20d1c9",
+      "position": 5,
+      "properties": {
+        "progression_name": "Adding Pages",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fa194aa0-7750-46cd-acf8-5da83b20d1c9",
+        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3"
+      }
+    },
+    {
+      "key": "7ddc96c8-788e-42ee-a79e-224f45cb7274",
+      "position": 6,
+      "properties": {
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ddc96c8-788e-42ee-a79e-224f45cb7274",
+        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3"
+      }
+    },
+    {
+      "key": "343fcba8-acca-4345-9bc9-3a8ccf285122",
+      "position": 1,
+      "properties": {
+        "description": "**Question of the Day: How can we combine several different web pages into one website?**\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Have students update their HTML Tags chart in their journals to include the hyperlink tag and its attribute.\n\n**Prompt:**  Today, you learned how to link pages, which will help your team work together to build one website.  Besides all linking to each other, what else will help all your pages feel like a single site?",
+        "name": "Journal\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "343fcba8-acca-4345-9bc9-3a8ccf285122",
+        "lesson_activity.key": "ecfcaf15-ea06-428e-9841-4f76984f6091"
+      }
+    },
+    {
+      "key": "b7ad77b9-6f8c-4a7d-a31d-2d02df1d02e0",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** After students have time to write down their thoughts, allow them to share in small groups before taking ideas from the whole class.\n\n**Discussion Goal:** Students may come up with ideas such as a similar color scheme or styles, or similar content.  They may mention a header at the top of the page or navigation bar.  The most important thing is that they are thinking of the site as a single project that they are all contributing to, rather than a set of individual web pages.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "b7ad77b9-6f8c-4a7d-a31d-2d02df1d02e0",
+        "lesson_activity.key": "ecfcaf15-ea06-428e-9841-4f76984f6091"
+      }
+    },
+    {
       "key": "93014448-dbf4-42d4-80e9-a424b630cdb4",
       "position": 1,
       "properties": {
@@ -5669,171 +5834,6 @@
       "seeding_key": {
         "activity_section.key": "7fe2bfaa-0b21-44b6-a637-c1c077c1d826",
         "lesson_activity.key": "5dfe500d-5460-4df9-85b6-365e45f2400a"
-      }
-    },
-    {
-      "key": "d09dec71-a2ac-4bb2-bd80-178157bfb69e",
-      "position": 1,
-      "properties": {
-        "description": "**Group:** Place students in pairs.  They do not need to be in their project groups.",
-        "name": "First Web Page Hunt\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "d09dec71-a2ac-4bb2-bd80-178157bfb69e",
-        "lesson_activity.key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1"
-      }
-    },
-    {
-      "key": "5fa8c8cf-ac08-442d-a52c-e00e67bae70b",
-      "position": 2,
-      "properties": {
-        "description": "**Display:**  Show the two following prompt questions on the board, and direct students to find the answers online by using a search engine of their choice, or whatever methods they might normally use for research.\n\n1. What was the first web page ever created?\n2. What's the one feature it has that we haven't learned how to do yet?",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Although there are many places students could go for the answer to this question, a Google search will most likely take them to an article describing the page that Tim Berners-Lee created on August 6, 1991.  The page is comprised of simple text with a few hyperlinks.\r\n\r\n![](https://curriculum.code.org/media/uploads/Screen-Shot-2019-10-18-at-11.58.45-AM.png)\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "5fa8c8cf-ac08-442d-a52c-e00e67bae70b",
-        "lesson_activity.key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1"
-      }
-    },
-    {
-      "key": "5828b01d-42d5-4323-afd1-89f294bc3e40",
-      "position": 3,
-      "properties": {
-        "description": "\n\n**Share:**  After giving students time to search online, let them share out their answers."
-      },
-      "seeding_key": {
-        "activity_section.key": "5828b01d-42d5-4323-afd1-89f294bc3e40",
-        "lesson_activity.key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1"
-      }
-    },
-    {
-      "key": "a51daefc-2ba5-4aaf-af65-4c127004a2b8",
-      "position": 4,
-      "properties": {
-        "description": "Even though the first web page looks simple, it had something that had never been done before: links. Links are what made the web special, because they let people easily move around the Internet. Today, you'll learn how to put links on your own web pages, so that your team can combine all your pages together into one website.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "a51daefc-2ba5-4aaf-af65-4c127004a2b8",
-        "lesson_activity.key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1"
-      }
-    },
-    {
-      "key": "73b67a6d-af2b-409f-9b6e-3cef3ddfc967",
-      "position": 5,
-      "properties": {
-        "description": "**Question of the Day: How can we combine several different web pages into one website?**"
-      },
-      "seeding_key": {
-        "activity_section.key": "73b67a6d-af2b-409f-9b6e-3cef3ddfc967",
-        "lesson_activity.key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1"
-      }
-    },
-    {
-      "key": "3e72fb46-5ad9-40e8-947c-994e5668d473",
-      "position": 1,
-      "properties": {
-        "description": "**Group:** Allow students to continue in their pairs.\r\n\r\n**Transition:** Send students to Code Studio.",
-        "name": "Web Lab\r",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "3e72fb46-5ad9-40e8-947c-994e5668d473",
-        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3"
-      }
-    },
-    {
-      "key": "276767de-004e-43d5-a258-c06f57aa9356",
-      "position": 2,
-      "properties": {
-        "progression_name": "Exploration"
-      },
-      "seeding_key": {
-        "activity_section.key": "276767de-004e-43d5-a258-c06f57aa9356",
-        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3"
-      }
-    },
-    {
-      "key": "6d6835e2-1a3f-4259-9bcb-df94385d2ec0",
-      "position": 3,
-      "properties": {
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "6d6835e2-1a3f-4259-9bcb-df94385d2ec0",
-        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3"
-      }
-    },
-    {
-      "key": "04374cfa-25a5-4331-b64b-0616fb392258",
-      "position": 4,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "04374cfa-25a5-4331-b64b-0616fb392258",
-        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3"
-      }
-    },
-    {
-      "key": "fa194aa0-7750-46cd-acf8-5da83b20d1c9",
-      "position": 5,
-      "properties": {
-        "progression_name": "Adding Pages",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "fa194aa0-7750-46cd-acf8-5da83b20d1c9",
-        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3"
-      }
-    },
-    {
-      "key": "7ddc96c8-788e-42ee-a79e-224f45cb7274",
-      "position": 6,
-      "properties": {
-        "progression_name": "Challenges"
-      },
-      "seeding_key": {
-        "activity_section.key": "7ddc96c8-788e-42ee-a79e-224f45cb7274",
-        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3"
-      }
-    },
-    {
-      "key": "343fcba8-acca-4345-9bc9-3a8ccf285122",
-      "position": 1,
-      "properties": {
-        "description": "**Question of the Day: How can we combine several different web pages into one website?**\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Have students update their HTML Tags chart in their journals to include the hyperlink tag and its attribute.\n\n**Prompt:**  Today, you learned how to link pages, which will help your team work together to build one website.  Besides all linking to each other, what else will help all your pages feel like a single site?",
-        "name": "Journal\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "343fcba8-acca-4345-9bc9-3a8ccf285122",
-        "lesson_activity.key": "ecfcaf15-ea06-428e-9841-4f76984f6091"
-      }
-    },
-    {
-      "key": "b7ad77b9-6f8c-4a7d-a31d-2d02df1d02e0",
-      "position": 2,
-      "properties": {
-        "description": "**Discuss:** After students have time to write down their thoughts, allow them to share in small groups before taking ideas from the whole class.\n\n**Discussion Goal:** Students may come up with ideas such as a similar color scheme or styles, or similar content.  They may mention a header at the top of the page or navigation bar.  The most important thing is that they are thinking of the site as a single project that they are all contributing to, rather than a set of individual web pages.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "b7ad77b9-6f8c-4a7d-a31d-2d02df1d02e0",
-        "lesson_activity.key": "ecfcaf15-ea06-428e-9841-4f76984f6091"
       }
     },
     {
@@ -7893,6 +7893,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L12 - Prac_2024"
+        ],
         "progression": "Practice Levels"
       },
       "bonus": false,
@@ -7915,6 +7918,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L12 Div Flex SB_9"
+        ],
         "progression": "Assessment Level"
       },
       "bonus": false,
@@ -7937,6 +7943,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L12 Div Flex SB_10"
+        ],
         "progression": "Challenge Levels"
       },
       "bonus": false,
@@ -8135,56 +8144,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSD U2 Top Websites_2018_2019_pilot_2024"
-        ],
-        "progression": "Top Websites"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U2 Top Websites_2018_2019_pilot_2024"
-        ],
-        "lesson.key": "Websites for a Purpose",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd2-2024",
-        "activity_section.key": "1adcdf42-6618-4832-bbde-0db7e878a674"
-      },
-      "level_keys": [
-        "CSD U2 Top Websites_2018_2019_pilot_2024"
-      ]
-    },
-    {
-      "chapter": 81,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSD web upload images multi_2024"
-        ],
-        "progression": "Upload Your Images"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD web upload images multi_2024"
-        ],
-        "lesson.key": "Planning a Multi-Page Site",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd2-2024",
-        "activity_section.key": "97f0f23b-f873-4c27-8343-674c30296c13"
-      },
-      "level_keys": [
-        "CSD web upload images multi_2024"
-      ]
-    },
-    {
-      "chapter": 82,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "CSD U2 link demo_2024"
         ],
         "progression": "Exploration"
@@ -8204,7 +8163,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 81,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8229,7 +8188,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 82,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8254,7 +8213,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 83,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -8279,7 +8238,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 84,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8304,7 +8263,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 85,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -8329,7 +8288,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 86,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -8351,6 +8310,56 @@
       },
       "level_keys": [
         "CSD U2 links challenge_2024"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Top Websites_2018_2019_pilot_2024"
+        ],
+        "progression": "Top Websites"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Top Websites_2018_2019_pilot_2024"
+        ],
+        "lesson.key": "Websites for a Purpose",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2024",
+        "activity_section.key": "1adcdf42-6618-4832-bbde-0db7e878a674"
+      },
+      "level_keys": [
+        "CSD U2 Top Websites_2018_2019_pilot_2024"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD web upload images multi_2024"
+        ],
+        "progression": "Upload Your Images"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD web upload images multi_2024"
+        ],
+        "lesson.key": "Planning a Multi-Page Site",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2024",
+        "activity_section.key": "97f0f23b-f873-4c27-8343-674c30296c13"
+      },
+      "level_keys": [
+        "CSD web upload images multi_2024"
       ]
     },
     {
@@ -9529,30 +9538,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2 Top Websites_2018_2019_pilot_2024",
-        "script_level.level_keys": [
-          "CSD U2 Top Websites_2018_2019_pilot_2024"
-        ],
-        "lesson.key": "Websites for a Purpose",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd2-2024",
-        "activity_section.key": "1adcdf42-6618-4832-bbde-0db7e878a674"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD web upload images multi_2024",
-        "script_level.level_keys": [
-          "CSD web upload images multi_2024"
-        ],
-        "lesson.key": "Planning a Multi-Page Site",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd2-2024",
-        "activity_section.key": "97f0f23b-f873-4c27-8343-674c30296c13"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "CSD U2 link demo_2024",
         "script_level.level_keys": [
           "CSD U2 link demo_2024"
@@ -9633,6 +9618,30 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd2-2024",
         "activity_section.key": "7ddc96c8-788e-42ee-a79e-224f45cb7274"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Top Websites_2018_2019_pilot_2024",
+        "script_level.level_keys": [
+          "CSD U2 Top Websites_2018_2019_pilot_2024"
+        ],
+        "lesson.key": "Websites for a Purpose",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2024",
+        "activity_section.key": "1adcdf42-6618-4832-bbde-0db7e878a674"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD web upload images multi_2024",
+        "script_level.level_keys": [
+          "CSD web upload images multi_2024"
+        ],
+        "lesson.key": "Planning a Multi-Page Site",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2024",
+        "activity_section.key": "97f0f23b-f873-4c27-8343-674c30296c13"
       }
     },
     {
