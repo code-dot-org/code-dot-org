@@ -141,6 +141,51 @@ describe('CurriculumCatalog', () => {
     });
   });
 
+  it('curriculum cards show Assign button for signed-out users', () => {
+    const props = {...defaultProps, isSignedOut: true};
+    render(
+      <Provider store={store}>
+        <CurriculumCatalog {...props} />
+      </Provider>
+    );
+
+    const numCardsWithAssign = screen.getAllByText('Assign', {
+      exact: false,
+    }).length;
+    expect(numCardsWithAssign).to.equal(allShownCurricula.length);
+    expect(screen.queryByText('Try Now')).to.be.null;
+  });
+
+  it('curriculum cards show Assign button for teachers', () => {
+    const props = {...defaultProps, isSignedOut: false, isTeacher: true};
+    render(
+      <Provider store={store}>
+        <CurriculumCatalog {...props} />
+      </Provider>
+    );
+
+    const numCardsWithAssign = screen.getAllByText('Assign', {
+      exact: false,
+    }).length;
+    expect(numCardsWithAssign).to.equal(allShownCurricula.length);
+    expect(screen.queryByText('Try Now')).to.be.null;
+  });
+
+  it('curriculum cards show Try Now button for students', () => {
+    const props = {...defaultProps, isSignedOut: false, isTeacher: false};
+    render(
+      <Provider store={store}>
+        <CurriculumCatalog {...props} />
+      </Provider>
+    );
+
+    const numCardsWithTryNow = screen.getAllByText('Try Now', {
+      exact: false,
+    }).length;
+    expect(numCardsWithTryNow).to.equal(allShownCurricula.length);
+    expect(screen.queryByText('Assign')).to.be.null;
+  });
+
   it('filtering by grade level shows any shown course that supports one of the selected grades', () => {
     renderDefault();
 
