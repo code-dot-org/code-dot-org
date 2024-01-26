@@ -13,7 +13,7 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     # Only run this workflow for the user 'pablo-code-dot-org'
-    if: github.actor == 'pablo-code-dot-org'
+    if: github.actor == 'pablo-code-org'
 
     services:
       mysql:
