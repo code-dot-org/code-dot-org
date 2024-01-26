@@ -123,6 +123,8 @@ const PanelsView: React.FunctionComponent = () => {
     return [width, height];
   }, [targetWidth, targetHeight]);
 
+  const showSmallText = height < 300;
+
   if (!levelPanels?.panels) {
     return <div />;
   }
@@ -142,7 +144,10 @@ const PanelsView: React.FunctionComponent = () => {
         />
         <EnhancedSafeMarkdown
           markdown={levelPanels.panels[currentPanel]?.text}
-          className={styles.markdownText}
+          className={classNames(
+            styles.markdownText,
+            showSmallText && styles.markdownTextSmall
+          )}
         />
       </div>
       <div
