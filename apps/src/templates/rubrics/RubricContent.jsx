@@ -288,15 +288,28 @@ RubricContent.propTypes = {
   aiEvaluations: PropTypes.arrayOf(aiEvaluationShape),
 };
 
-const InfoAlert = ({text}) => {
+export const InfoAlert = ({text, dismissable}) => {
   return (
     <div className={style.infoAlert}>
-      <FontAwesome icon="info-circle" className={style.infoAlertIcon} />
-      <BodyTwoText>{text}</BodyTwoText>
+      <div className={style.infoAlertLeft}>
+        <FontAwesome icon="info-circle" className={style.infoAlertIcon} />
+        <BodyTwoText>{text}</BodyTwoText>
+      </div>
+      {!!dismissable && (
+        <button
+          type="button"
+          className={classnames('close', style.infoAlertRight)}
+          data-dismiss="alert"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      )}
     </div>
   );
 };
 
 InfoAlert.propTypes = {
   text: PropTypes.string.isRequired,
+  dismissable: PropTypes.bool,
 };
