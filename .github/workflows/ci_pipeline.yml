@@ -27,12 +27,6 @@ jobs:
           - 3306:3306
 
     steps:
-      - name: Checkout Branch
-        uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.inputs.pull_request_id }}
-          path: 'code-dot-org'
-
       - name: Get Branch Name from Pull Request ID
         id: get_branch
         run: |
@@ -43,6 +37,12 @@ jobs:
           echo "Branch Name: $BRANCH_NAME"
           echo "::set-output name=branch_name::$BRANCH_NAME"
         working-directory: ./code-dot-org
+          
+      - name: Checkout Branch
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ steps.get_branch.outputs.branch_name }}
+          path: code-dot-org
 
       - name: Set up Docker Environment
         run: docker build -t my-ci-image -f ./docker/dockerfiles/Dockerfile .
