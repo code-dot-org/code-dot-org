@@ -3,10 +3,13 @@ import {WORKSPACE_PADDING, SETUP_TYPES} from '../constants';
 import {frameSizes} from './cdoConstants';
 import {shouldSkipHiddenWorkspace} from '../utils';
 
-const {BLOCK_HEADER_HEIGHT, MARGIN_BOTTOM, MARGIN_SIDE, MARGIN_TOP} =
-  frameSizes;
+const {
+  BLOCK_HEADER_HEIGHT,
+  MARGIN_BOTTOM,
+  MARGIN_SIDE: SVG_FRAME_SIDE_PADDING,
+  MARGIN_TOP,
+} = frameSizes;
 const SVG_FRAME_HEIGHT = BLOCK_HEADER_HEIGHT + MARGIN_TOP + MARGIN_BOTTOM;
-const SVG_FRAME_SIDE_PADDING = MARGIN_SIDE;
 const SVG_FRAME_TOP_PADDING = BLOCK_HEADER_HEIGHT + MARGIN_TOP;
 const SORT_BY_POSITION = true;
 const VERTICAL_SPACE_BETWEEN_BLOCKS = 10;
@@ -32,9 +35,17 @@ function getXCoordinate(block, workspace) {
 
   // Multiplier accounts for the fact that blocks with SVG frames need twice as much padding
   // so their edges don't touch the edge of the workspace
-  let horizontalOffset = block.functionalSvg_ ? 2 * padding : padding;
+  let horizontalOffset = block.functionalSvg_
+    ? SVG_FRAME_SIDE_PADDING + padding
+    : padding;
   // If the workspace is RTL, horizontally mirror the starting position
   return workspace.RTL ? width - horizontalOffset : horizontalOffset;
+}
+
+function getYCoordinate(block) {
+  return block.functionalSvg_
+    ? WORKSPACE_PADDING + SVG_FRAME_TOP_PADDING
+    : WORKSPACE_PADDING;
 }
 
 /**
@@ -143,7 +154,7 @@ function adjustBlockPositions(blocks, workspace) {
       x = getXCoordinate(block, workspace);
     }
     if (y === defaultY) {
-      y = WORKSPACE_PADDING;
+      y = getYCoordinate(block);
     }
 
     // Set initial position; collision area must be updated to account for new position
