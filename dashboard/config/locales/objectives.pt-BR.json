@@ -3630,7 +3630,7 @@
           "description": "Descreva como a visão computacional é construída a partir de camadas que combinam componentes menores em uma previsão final"
         },
         "5bb33a90-28cb-40cb-9647-59a1818980b8": {
-          "description": "Explique a necessidade de perspectivas diversas ao se criar sistemas de recomendação"
+          "description": "Explique a necessidade de diversas perspectivas ao se criar sistemas de recomendação"
         },
         "bb862e7c-9808-4414-b027-fc747d58b6c0": {
           "description": "Use os pesos de um neurônio artificial para ajustar as saídas de um sistema de recomendação"
@@ -3642,10 +3642,10 @@
           "description": "Colabore com a IA para criar um documento de texto criativo"
         },
         "f766948a-55ae-4083-9e67-cd42e929adcc": {
-          "description": "Descreva que ter uma grande quantidade de texto para aprender permite que os computadores pareçam inteligentes na forma escrita"
+          "description": "Descreva como ter uma grande quantidade de texto para aprender permite que os computadores pareçam inteligentes na forma escrita"
         },
         "13fca3f5-45af-4888-8d22-71ce991caf3d": {
-          "description": "Discuta se esses modelos são criativos ou não e quem possui essas imagens"
+          "description": "Discuta se esses modelos são criativos ou não e quem é o dono dessas imagens"
         },
         "4b4fc091-b0d2-4cf4-bb61-a4b243abc4b8": {
           "description": "Descreva sobre que a IA pode gerar imagens com aparência bastante realista por meio de um processo conhecido como difusão - em que um modelo aprende a desenhar detalhes através da inversão de detalhes"
