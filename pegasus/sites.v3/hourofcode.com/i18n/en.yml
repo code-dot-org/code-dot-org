@@ -226,6 +226,12 @@
   volunteers_label: "Volunteers"
   virtual_events_label: "Virtual Events"
 
+  course_name_csf: "CS Fundamentals"
+  course_name_csc: "CS Connections"
+  course_name_csd: "CS Discoveries"
+  course_name_csp: "CS Principles"
+  course_name_csa: "AP® CSA"
+
   teacher_label_csf: "CS Fundamentals Teacher"
   teacher_label_csd: "CS Discoveries Teacher"
   teacher_label_csp: "CS Principles Teacher"
@@ -626,6 +632,7 @@
   module_grade_6_10: "6-10"
   module_grade_7_12: "7-12"
   module_grade_9_12: "9-12"
+  module_grade_10_12: "10-12"
   module_grade_kindergarten: "Kindergarten"
   module_grade_grade_01: "Grade 1"
   module_grade_grade_02: "Grade 2"
