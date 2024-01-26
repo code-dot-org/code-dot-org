@@ -27,7 +27,11 @@ jobs:
         run: |
           IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")
           hostname=$(curl -s -H "X-aws-ec2-metadata-token: $IMDS_TOKEN" http://169.254.169.254/latest/meta-data/public-hostname)
-          echo "Running on $hostname"          
+                echo "Running on $hostname"
+      - name: Debug Variables
+        run: |
+          echo "DRONE_SOURCE_BRANCH is: $DRONE_SOURCE_BRANCH"
+          echo "DRONE_GIT_HTTP_URL is: $DRONE_GIT_HTTP_URL"          
       - name: Clone and Prepare Git
         run: |
           git clone --branch $DRONE_SOURCE_BRANCH --depth 1 $DRONE_GIT_HTTP_URL .
