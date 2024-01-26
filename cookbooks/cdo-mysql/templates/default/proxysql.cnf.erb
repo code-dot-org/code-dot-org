@@ -35,7 +35,7 @@ mysql_variables=
 
   # Semicolon-separated list of hostname:port entries for interfaces for incoming MySQL traffic.
   # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-interfaces
-  interfaces="127.0.0.1:<%=@port%>
+  interfaces="127.0.0.1:<%=@port%>"
 
   # The server version with which the proxy will respond to the clients.
   # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-server_version
@@ -190,5 +190,5 @@ mysql_query_rules:
     active=1
     match_digest="SET @@wait_timeout"
     multiplex=2
-  }
+  },
 )
