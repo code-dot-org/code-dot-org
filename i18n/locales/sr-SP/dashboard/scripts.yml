@@ -91,6 +91,7 @@ sr:
           description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
           description_short: Try the basics of computer science with many fun characters!
           student_description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
+          name: Час кода
         algebraPD2a:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
@@ -1096,3 +1097,17 @@ sr:
             lesson-4:
               name: Кондиционали
           title: Увод у Компјутерске Науке
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: Променљиве
+            csp_conditionals:
+              display_name: Кондиционали
+            csp_functions:
+              display_name: Функције
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Листе
+            lessonGroup-3:
+              display_name: Петље

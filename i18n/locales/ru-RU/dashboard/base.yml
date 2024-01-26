@@ -596,7 +596,7 @@ ru:
     powered_by_aws: 'Создано с помощью Amazon Web Services'
     built_on_github: 'Построен на GitHub от Microsoft'
     google_copyright: 'С разрешения &copy; Google Inc. Google Classroom является торговой маркой Google Inc.'
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, логотип CODE и Час кода&reg; являются товарными знаками Code.org.'
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, Логотип CODE и Hour of Code&reg; являются товарными знаками Code.org.'
     copyright: 'Авторские права'
     more: 'Ещё'
     feedback: 'Оставить отзыв'

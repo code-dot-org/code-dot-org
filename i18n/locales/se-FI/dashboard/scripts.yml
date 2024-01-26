@@ -1992,7 +1992,79 @@ se:
               name: Láhttemat
             lesson-5:
               name: Boahttevaš Lávkkit
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Álgge
         self-paced-pl-k5-2024-1:
           lessons:
             lesson-6:
               name: Boahttevaš Lávkkit
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Álgge
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Iskkadeapmi
+            lessonGroup-3:
+              display_name: Sisdoallu
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+            lessonGroup-4:
+              display_name: Iskkadeapmi
+        csp5-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp7-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ráhkat PT
+            lessonGroup-3:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp9-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp10-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maŋŋil Kurssa Iskkadeapmi

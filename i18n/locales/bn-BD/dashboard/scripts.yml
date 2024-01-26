@@ -44,6 +44,8 @@ bn:
           description: ধাপ টিউটোরিয়াল
           description_short: ধাপ টিউটোরিয়াল
           student_description: ধাপ টিউটোরিয়াল
+        Hour of Code:
+          name: এক ঘন্টার কোড
         asUnplugged:
           description_audience: বয়স 6-13
         afterschool1:
@@ -1026,3 +1028,25 @@ bn:
             lesson-4:
               name: শর্তযুক্ত
           title: কম্পিউটার বিজ্ঞান পরিচিতি
+        csp1-2024:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: "(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য"
+        csp2-2024:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(পুরাতন) ইউনিট ২: ইন্টারনেট"
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: চলকগুলো
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: তালিকা
+            lessonGroup-3:
+              display_name: চক্র

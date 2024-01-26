@@ -76,6 +76,7 @@ uk:
           description: Спробуйте основи інформатики з персонажами зі Злих птахів та
             Рослин проти Зомбі!
           description_short: Спробуйте основи інформатики з цікавими персонажами!
+          name: Година коду
           student_description: Спробуйте основи інформатики з персонажами зі Злих
             птахів та Рослин проти Зомбі!
           title: Година коду 2013
@@ -1293,6 +1294,8 @@ uk:
           title: Лабораторія Говоруна для курсу AP CSA
         csa-postap-se-and-computer-vision-2023:
           title: Програмна інженерія та комп'ютерний зір
+        csa-postap-se-and-computer-vision-2024:
+          title: Програмна інженерія та комп'ютерний зір
         csa-software-engineering:
           lessons:
             lesson-7:
@@ -1347,6 +1350,12 @@ uk:
               name: Лабораторія Java
             lesson-6:
               name: Цикли
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Опитування
+            lessonGroup-3:
+              display_name: Зміст
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1380,6 +1389,10 @@ uk:
           lessons:
             lesson-4:
               name: Змінні
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1407,6 +1420,10 @@ uk:
           lessons:
             lesson-3:
               name: Цикли For
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1428,6 +1445,10 @@ uk:
             lessonGroup-2:
               display_name: Зміст
         csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
@@ -1461,6 +1482,10 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1482,6 +1507,10 @@ uk:
             lessonGroup-2:
               display_name: Зміст
         csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa6-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
@@ -1512,6 +1541,10 @@ uk:
           lessons:
             lesson-6:
               name: Інтелектуальна власність
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1539,6 +1572,12 @@ uk:
             lessonGroup-5:
               display_name: Опитування
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+            lessonGroup-4:
+              display_name: Опитування
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
@@ -3824,6 +3863,9 @@ uk:
         csp-post-survey-2023:
           description: Цей розділ містить опитування після завершення курсу Принципи
             інформатики CS Principles.
+        csp-post-survey-2024:
+          description: Цей розділ містить опитування після завершення курсу Принципи
+            інформатики CS Principles.
         csp1-2017:
           lesson_groups:
             csp1_1:
@@ -3869,6 +3911,12 @@ uk:
             csp_unit1_2020:
               display_name: 'Розділ 1: Цифрова інформація'
         csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опитування
+            csp_unit1_2020:
+              display_name: 'Розділ 1: Цифрова інформація'
+        csp1-2024:
           lesson_groups:
             cspSurvey:
               display_name: Опитування
@@ -3926,6 +3974,10 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Опитування після закінчення курсу
+        csp10-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Опитування після закінчення курсу
         csp10-pilot-staging:
           lesson_groups:
             csp_conditionals:
@@ -3975,6 +4027,10 @@ uk:
             csp_unit2_2020:
               display_name: 'Розділ 2: Інтернет'
         csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Розділ 2: Інтернет'
+        csp2-2024:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Розділ 2: Інтернет'
@@ -4162,6 +4218,16 @@ uk:
               display_name: Проєкт
             csp_variables:
               display_name: Змінні
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Умови
+            csp_functions:
+              display_name: Функції
+            csp_project:
+              display_name: Проєкт
+            csp_variables:
+              display_name: Змінні
         csp4-dlp:
           lesson_groups:
             content:
@@ -4286,6 +4352,12 @@ uk:
               display_name: Переходи
             lessonGroup-5:
               display_name: Опитування після закінчення курсу
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Дані
+            lessonGroup-5:
+              display_name: Опитування після закінчення курсу
         csp5-dlp:
           lesson_groups:
             content:
@@ -4364,6 +4436,18 @@ uk:
               display_name: Переходи
             lessonGroup-5:
               display_name: Проєкт
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Списки
+            lessonGroup-2:
+              display_name: Опитування після закінчення курсу
+            lessonGroup-3:
+              display_name: Цикли
+            lessonGroup-4:
+              display_name: Переходи
+            lessonGroup-5:
+              display_name: Проєкт
         csp6-pilot:
           lesson_groups:
             content:
@@ -4412,6 +4496,14 @@ uk:
               display_name: Параметри і значення, які повертаються
             lessonGroup-3:
               display_name: Опитування після закінчення курсу
+        csp7-2024:
+          lesson_groups:
+            csp_libraries:
+              display_name: Бібліотеки
+            csp_parameters_return_values:
+              display_name: Параметри і значення, які повертаються
+            lessonGroup-3:
+              display_name: Опитування після закінчення курсу
         csp7-pilot:
           lesson_groups:
             csp_libraries:
@@ -4435,6 +4527,10 @@ uk:
             lessonGroup-3:
               display_name: Опитування після закінчення курсу
         csp8-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Опитування після закінчення курсу
+        csp8-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: Опитування після закінчення курсу
@@ -4467,6 +4563,12 @@ uk:
             lessonGroup-2:
               display_name: Опитування після закінчення курсу
         csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Розділ 9: Дані'
+            lessonGroup-2:
+              display_name: Опитування після закінчення курсу
+        csp9-2024:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Розділ 9: Дані'
@@ -6979,6 +7081,9 @@ uk:
             lessonGroup-2:
               display_name: Ласкаво просимо
         self-paced-pl-k5-2024-1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Починаємо
           lessons:
             lesson-3:
               name: Цикли
@@ -6988,6 +7093,9 @@ uk:
               name: Наступні Кроки
           title: Вступ до інформатики
         self-paced-pl-k5-2024-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Починаємо
           lessons:
             lesson-3:
               name: Події

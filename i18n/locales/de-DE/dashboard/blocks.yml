@@ -1102,6 +1102,14 @@ de:
         options:
           INPUT1:
             '1': Zitronensaft
+      DansBlocks_testShowVariable:
+        options:
+          OPT:
+            '"large"': groß
+            '"small"': klein
+          COLOR:
+            '"blue"': blau
+            '"red"': rot
       FunctionBlocks_communicate:
         text: Kommuniziere {VAR1} mit {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:

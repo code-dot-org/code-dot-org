@@ -1035,6 +1035,11 @@ da:
             '"hearts"': hjerter
             '"rain"': regn
             '"starburst"': Starburst
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': blå
+            '"red"': rød
       gamelab_addBehaviorSimple:
         text: figur {SPRITE} begynder {BEHAVIOR}
       gamelab_addTarget:

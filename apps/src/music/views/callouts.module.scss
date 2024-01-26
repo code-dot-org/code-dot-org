@@ -1,0 +1,38 @@
+@import "color.scss";
+
+// Fade out the callout.
+@keyframes fade-in-out {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 75% {
+    opacity: 1;
+  }
+}
+
+// Move the arrow up and down.
+@keyframes up-down {
+  0%, 100% {
+    top: 10px;
+  }
+  50% {
+    top: 0;
+  }
+}
+
+.callout {
+  position: fixed;
+  color: yellow;
+  font-size: 24px;
+  z-index: 70;
+  opacity: 0;
+  width: 18px;
+  height: 24px;
+  transform: translateX(-50%);
+  animation: fade-in-out 2.5s;
+
+  .arrow {
+    position: absolute;
+    animation: up-down 0.75s infinite;
+  }
+}

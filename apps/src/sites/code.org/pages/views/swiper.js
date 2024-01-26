@@ -13,10 +13,11 @@ const swiperParams = {
   pagination: {
     clickable: true,
   },
+  spaceBetween: 24,
   // Responsive breakpoints
   breakpoints: {
-    // when window width is >= 1024px
-    1024: {
+    // when window width is >= 640px
+    640: {
       autoHeight: false,
     },
   },
@@ -33,3 +34,34 @@ const swiperParams = {
 
 Object.assign(swiperEl, swiperParams);
 swiperEl.initialize();
+
+// Set params for different column amounts
+const setSwiperParams = (swiper, columns) => {
+  let slidesPerView, slidesPerGroup;
+
+  if (window.matchMedia('(max-width: 640px)').matches) {
+    slidesPerView = slidesPerGroup = 1;
+  } else if (
+    columns === 3 &&
+    window.matchMedia('(max-width: 1024px)').matches
+  ) {
+    slidesPerView = slidesPerGroup = 2;
+  } else {
+    slidesPerView = slidesPerGroup = columns;
+  }
+
+  swiper.slidesPerView = slidesPerView;
+  swiper.slidesPerGroup = slidesPerGroup;
+};
+
+// Add a .two-col class to the <swiper-container> element to enable two columns
+const twoCol = document.querySelector('swiper-container.two-col');
+if (twoCol) {
+  setSwiperParams(twoCol, 2);
+}
+
+// Add a .three-col class to the <swiper-container> element to enable three columns
+const threeCol = document.querySelector('swiper-container.three-col');
+if (threeCol) {
+  setSwiperParams(threeCol, 3);
+}

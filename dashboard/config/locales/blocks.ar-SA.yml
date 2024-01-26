@@ -1106,6 +1106,14 @@ ar:
         options:
           INPUT1:
             '1': عصير ليمون
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': أزرق
+            '"red"': أحمر
+          OPT:
+            '"large"': كبير
+            '"small"': صغير
       FunctionBlocks_communicate:
         text: التواصل {VAR1} مع {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:

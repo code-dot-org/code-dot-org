@@ -248,6 +248,11 @@ lt:
         options:
           EFFECT:
             '"hearts"': širdelės
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': mėlyna
+            '"red"': raudona spalva
       Mikelab_changePropBy:
         options:
           PROPERTY:

@@ -15,13 +15,13 @@ import {
   appendProceduresToState,
   convertFunctionsXmlToJson,
   convertXmlToJson,
-  getCombinedSerialization,
+  getProjectSerialization,
   hasBlocks,
   positionBlocksOnWorkspace,
-  resetEditorWorkspaceBlockConfig,
 } from './cdoSerializationHelpers';
 import {parseElement as parseXmlElement} from '../../xml';
 import * as blockUtils from '../../block_utils';
+import {getProjectXml} from '@cdo/apps/blockly/addons/cdoXml';
 
 /**
  * Loads blocks to a workspace.
@@ -34,14 +34,14 @@ export function loadBlocksToWorkspace(
   source,
   includeHiddenDefinitions = true
 ) {
-  const {mainSource, hiddenDefinitionSource, blockOrderMap} =
+  const {mainSource, hiddenDefinitionSource} =
     prepareSourcesForWorkspaces(source);
   // We intentionally load hidden definitions before other blocks on the main workspace.
   if (includeHiddenDefinitions) {
     loadHiddenDefinitionBlocksToWorkspace(hiddenDefinitionSource);
   }
   Blockly.serialization.workspaces.load(mainSource, workspace);
-  positionBlocksOnWorkspace(workspace, blockOrderMap);
+  positionBlocksOnWorkspace(workspace);
 }
 
 /**
@@ -66,12 +66,11 @@ function loadHiddenDefinitionBlocksToWorkspace(hiddenDefinitionSource) {
  * Split source into appropriate serialization objects for the main and the hidden workspaces for loading.
  * Which blocks are moved depends on whether the modal function editor is enabled.
  * @param {string} source - workspace serialization, either XML or JSON
- * @returns {mainSource: Object, hiddenDefinitionSource: Object, blockOrderMap: Object}
+ * @returns {mainSource: Object, hiddenDefinitionSource: Object}
  *  mainSource and hiddenDefinitionSource are Blockly serialization objects.
- *  blockOrderMap is only used when source is XML, and is a map of blocks to their positions on the workspace.
  */
 function prepareSourcesForWorkspaces(source) {
-  let {parsedSource, blockOrderMap} = parseSource(source);
+  const parsedSource = parseSource(source);
   const procedureTypesToHide = [BLOCK_TYPES.behaviorDefinition];
   if (Blockly.useModalFunctionEditor) {
     procedureTypesToHide.push(BLOCK_TYPES.procedureDefinition);
@@ -80,29 +79,26 @@ function prepareSourcesForWorkspaces(source) {
     parsedSource,
     procedureTypesToHide
   );
-  return {mainSource, hiddenDefinitionSource, blockOrderMap};
+  return {mainSource, hiddenDefinitionSource};
 }
 
 /**
  * Convert source to parsed json objects. If source was xml, convert to json before parsing.
- * Also create a block order map if source was xml, which will allow us to correctly place blocks on the workspace.
  * @param {string} source - workspace serialization, either XML or JSON
- * @returns {parsedSource: Object, blockOrderMap: Object}
+ * @returns Object: source as json
  */
 function parseSource(source) {
   let isXml = stringIsXml(source);
   let parsedSource;
-  let blockOrderMap;
 
   if (isXml) {
     const xml = parseXmlElement(source);
     parsedSource = convertXmlToJson(xml);
-    blockOrderMap = Blockly.Xml.createBlockOrderMap(xml);
   } else {
     parsedSource = JSON.parse(source);
   }
 
-  return {parsedSource, blockOrderMap};
+  return parsedSource;
 }
 
 /**
@@ -276,29 +272,10 @@ export function getUserTheme(themeOption) {
  */
 export function getCode(workspace, getSourceAsJson) {
   if (!getSourceAsJson) {
-    return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
+    return Blockly.Xml.domToText(getProjectXml(workspace));
+  } else {
+    return JSON.stringify(getProjectSerialization(workspace));
   }
-
-  const mainWorkspaceSerialization =
-    Blockly.serialization.workspaces.save(workspace);
-
-  const hiddenDefinitionWorkspace = Blockly.getHiddenDefinitionWorkspace();
-  const hiddenWorkspaceSerialization = hiddenDefinitionWorkspace
-    ? Blockly.serialization.workspaces.save(hiddenDefinitionWorkspace)
-    : null;
-
-  // Blocks rendered in the hidden workspace get extra properties that need to be
-  // removed so they don't apply if the block moves to the main workspace on subsequent loads
-  if (hasBlocks(hiddenWorkspaceSerialization)) {
-    resetEditorWorkspaceBlockConfig(hiddenWorkspaceSerialization.blocks.blocks);
-  }
-
-  const combinedSerialization = getCombinedSerialization(
-    mainWorkspaceSerialization,
-    hiddenWorkspaceSerialization
-  );
-
-  return JSON.stringify(combinedSerialization);
 }
 
 export function soundField(onClick, transformText, icon) {
@@ -346,33 +323,6 @@ export function locationField(icon, onClick) {
 export function registerCustomProcedureBlocks() {
   unregisterProcedureBlocks();
   Blockly.common.defineBlocks(procedureBlocks);
-}
-
-/**
- * Partitions blocks of the specified types to the front of the list.
- *
- * @param {Element[]|Object[]} blocks - An array of block elements or JSON blocks to be partitioned.
- * @param {Object} [options] - An object containing partitioning options.
- * @param {string[]} [options.prioritizedBlockTypes] - An array of strings representing block types to move to the front.
- * @param {boolean} [options.isJson] - A flag indicating whether the blocks are JSON blocks (vs. block elements).
- * @returns {Element[]|Object[]} A new array of block elements or JSON blocks partitioned based on their types.
- */
-export function partitionBlocksByType(
-  blocks = [],
-  prioritizedBlockTypes = [],
-  isBlockElements = true
-) {
-  const prioritizedBlocks = [];
-  const remainingBlocks = [];
-
-  blocks.forEach(block => {
-    const blockType = isBlockElements ? block.getAttribute('type') : block.type;
-    prioritizedBlockTypes.includes(blockType)
-      ? prioritizedBlocks.push(block)
-      : remainingBlocks.push(block);
-  });
-
-  return [...prioritizedBlocks, ...remainingBlocks];
 }
 
 /**

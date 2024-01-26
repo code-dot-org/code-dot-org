@@ -436,6 +436,11 @@ sr:
           EFFECT:
             '"hearts"': срца
             '"rain"': киша
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': плава
+            '"red"': црвена
       Mikelab_changePropBy:
         options:
           PROPERTY:

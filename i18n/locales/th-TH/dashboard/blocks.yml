@@ -1064,6 +1064,14 @@ th:
         options:
           INPUT1:
             '1': น้ำมะนาว
+      DansBlocks_testShowVariable:
+        options:
+          OPT:
+            '"large"': ใหญ่
+            '"small"': เล็ก
+          COLOR:
+            '"blue"': สีน้ำเงิน
+            '"red"': สีแดง
       FunctionBlocks_communicate:
         text: สื่อสาร {VAR1} กับ {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:

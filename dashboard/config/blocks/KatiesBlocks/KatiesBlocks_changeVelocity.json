@@ -1,0 +1,36 @@
+{
+  "category": "Experimental",
+  "config": {
+    "func": "changeVelocity",
+    "docFunc": "gamelab_changePropBy",
+    "blockText": "change {SPRITE} {PROPERTY} by {VAL}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "PROPERTY",
+        "options": [
+          [
+            "velocityX",
+            "\"velocityX\""
+          ],
+          [
+            "velocityY",
+            "\"velocityY\""
+          ],
+          [
+            "rotationSpeed",
+            "\"rotationSpeed\""
+          ]
+        ]
+      },
+      {
+        "name": "VAL",
+        "type": "Number"
+      }
+    ],
+    "style": "default"
+  }
+}

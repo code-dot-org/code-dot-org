@@ -118,9 +118,9 @@ const nodePolyfillConfig = {
         if (seenCircles.size > 0) {
           compilation.warnings.push(
             new Error(
-              `Circular Dependency Checker : Resolved circular dependencies can be removed from circles.json : ${Array.from(
+              `Circular Dependency Checker : Resolved circular dependencies can be removed from circular_dependencies.json :\n  ${Array.from(
                 seenCircles
-              ).join(',')}`
+              ).join('\n  ')}`
             )
           );
         }

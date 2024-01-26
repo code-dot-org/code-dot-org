@@ -34,6 +34,7 @@ const BeatPad = ({triggers, playTrigger, onClose, isPlaying, hasTrigger}) => {
       if (hasTrigger(triggers[j].id)) {
         buttons.push(
           <TriggerButton
+            id={triggers[j].id}
             label={triggers[j].buttonLabel}
             onClick={() => playTrigger(triggers[j].id)}
             key={triggers[j].id}
@@ -56,6 +57,7 @@ const BeatPad = ({triggers, playTrigger, onClose, isPlaying, hasTrigger}) => {
 };
 
 const TriggerButton = ({
+  id,
   label,
   onClick,
   colorClassName,
@@ -64,6 +66,7 @@ const TriggerButton = ({
 }) => {
   return (
     <div
+      id={id}
       className={classNames(
         styles.triggerButton,
         colorClassName,
@@ -78,6 +81,7 @@ const TriggerButton = ({
 };
 
 TriggerButton.propTypes = {
+  id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
   colorClassName: PropTypes.string,

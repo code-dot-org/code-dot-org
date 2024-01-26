@@ -108,6 +108,7 @@ da:
           description: Prøv det grundlæggende indenfor programmering med figurer fra Angry Birds og Plants vs. Zombies!
           description_short: Prøv grundlæggende programmering med masser af sjove figurer!
           student_description: Prøv det grundlæggende indenfor programmering med figurer fra Angry Birds og Plants vs. Zombies!
+          name: Hour of Code
         algebraPD2a:
           description: 'Fase 2 Online: Blandet Sommerkursus'
           description_short: 'Fase 2 Online: Blandet Sommerkursus'
@@ -1283,3 +1284,17 @@ da:
             lesson-4:
               name: Betingelser
           title: Introduktion til programmering
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabler
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funktioner
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Lister
+            lessonGroup-3:
+              display_name: Løkker

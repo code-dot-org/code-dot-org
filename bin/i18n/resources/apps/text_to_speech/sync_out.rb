@@ -114,7 +114,7 @@ module I18n
                   localized_message = localized_messages[message_key]
                   next unless localized_message
 
-                  tts_message_l10n = ::TextToSpeech.sanitize(localized_message)
+                  tts_message_l10n = mutex.synchronize {::TextToSpeech.sanitize(localized_message)}
                   tts_file_path = ::TextToSpeech.tts_path(localized_message, localized_message, locale: locale)
 
                   ::TextToSpeech.tts_upload_to_s3(tts_message_l10n, tts_file_path, METRIC_CONTEXT, locale: locale)
