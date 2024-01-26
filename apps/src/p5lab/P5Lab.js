@@ -343,6 +343,10 @@ export default class P5Lab {
         getStore().dispatch(setLocaleCode('en_us'));
       }
 
+      if (this.isBlockly) {
+        getStore().dispatch(addWatcher('a'));
+      }
+
       this.setupReduxSubscribers(getStore());
       if (config.level.watchersPrepopulated) {
         try {
@@ -1445,6 +1449,12 @@ export default class P5Lab {
         });
       } else if (this.isBlockly) {
         this.eventHandlers.draw.apply(null);
+        console.log('this.eventHandlers.draw', this.eventHandlers.draw);
+
+        // Before or after the user's draw logic, add code to render the score
+        this.p5Wrapper.p5.fill(255); // Set text color
+        this.p5Wrapper.p5.textSize(24); // Set text size
+        this.p5Wrapper.p5.text('Score: 0', 10, 30); // Display the score
       }
     }
 
@@ -1628,9 +1638,5 @@ export default class P5Lab {
 
   getAppReducers() {
     return reducers;
-  }
-
-  evaluateVariable(variableName) {
-    return this.JSInterpreter.evalInCurrentScope(variableName);
   }
 }
