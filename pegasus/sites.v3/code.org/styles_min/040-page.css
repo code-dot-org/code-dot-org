@@ -263,6 +263,16 @@ input[type=submit] {
     &:hover {
       background: var(--neutral_dark10);
     }
+
+    &.white {
+      background: none;
+      border-color: var(--neutral_white);
+      color: var(--neutral_white);
+
+      &:hover {
+        background: var(--neutral_dark90);
+      }
+    }
   }
 
   /* White button styles */
