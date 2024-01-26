@@ -24,7 +24,7 @@ markdown <<MARKDOWN
 
 <a href = "https://studio.code.org/s/k5-onlinepd-2023" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/961358fcf2607737cc76b565bff0ec2f-image-1706036398849.png" alt="thumbnail for the CS Fundamentals self-paced professional learniing module " width="240px" style="border-radius:5px; float:left; margin: 20px 40px 40px 20px;"></a>
 
-<a href = "https://studio.code.org/courses/self-paced-pl-aiml-2023" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/bf069bacc09e2e7e9907e4a315d48bb8-image-1706036898931.png" alt="thumbnail for the CS Connections self-paced professional learniing module " width="240px" style="border-radius:5px; float:left; margin: 20px 50px 50px 20px;"></a>
+<a href = "https://images.code.org/eab8b38416b81b495275cd83372e9c9d-image-1706220671094.jpg" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/321deda3a8c0cbfc405e1c327c859902-image-1706220237692.png" alt="thumbnail for the CS Basicss self-paced professional learniing module " width="240px" style="border-radius:5px; float:left; margin: 20px 50px 50px 20px;"></a>
 
 <br>
 
@@ -47,6 +47,8 @@ markdown <<MARKDOWN
 
 <br>
 </p>
+
+![]()
 
 ![]()
 MARKDOWN
