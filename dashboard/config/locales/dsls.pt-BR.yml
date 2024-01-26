@@ -17903,7 +17903,7 @@ pt-BR:
           - Primeiro, o computador verifica se uma condição é verdadeira ou falsa.
 
           - Se for verdade, ele executará os blocos internos.
-          - Se for falso, não fará nada.
+          - Se for falsa, não fará nada.
 
           <br>
           <br>
@@ -17989,9 +17989,9 @@ pt-BR:
 
           Um ecossistema está equilibrado e os outros dois estão desequilibrados de maneiras diferentes. Arraste o código até a imagem correspondente.
         questions:
-        - text: Poucas algas fazem os peixes saírem. ![](https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
+        - text: Poucas algas fazem os peixes irem embora. ![](https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
         - text: |-
-            Muita alga deixam o coral doente. <br>
+            Muita alga deixa o coral doente. <br>
             ![](https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
         - text: A quantidade certa de algas permite que o coral doente se cure e também
             mantém os peixes saudáveis. ![] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
@@ -18025,7 +18025,7 @@ pt-BR:
           sustentável para ajudar a proteger esses ecossistemas e garantir que as
           populações de peixes permaneçam saudáveis.\n\n\n\n<br>\n<br>\n<br>\n"
       csc_ecosystems_overfishing_solution3_overview:
-        markdown: "> #Prática de Pesca Sustentáveis #3:\n>># #Defina os Limites de
+        markdown: "> #Prática de Pesca Sustentável #3:\n>># #Defina os Limites de
           Pesca <img src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
           \ width=300 style=\"margin-right: 30px; float: left\">\n**Os cientistas
           podem ajudar a descobrir quantos peixes podem ser capturados sem causar
@@ -18038,7 +18038,7 @@ pt-BR:
         markdown: "#Save Nossos Mares! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
           width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
           O oceano tem muitos peixes, mas às vezes as pessoas pescam peixes demais
-          e isso pode ser ruim para o ecossistema. Nos níveis a seguir, você codificará
+          e isso pode ser ruim para o ecossistema. Nos níveis a seguir, você programará
           **três diferentes práticas de pesca sustentável** para ajudar a proteger
           nossos ecossistemas oceânicos.\n\n<br>\n\n## #Para ler mais sobre soluções
           sustentáveis para nossos oceanos: <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
@@ -18052,7 +18052,7 @@ pt-BR:
           PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**Ecologistas!
           É hora de compartilhar sua pesquisa!**\n\n### Explique as seguintes observações
           que você fez:\n\n>1. Explique a cadeia alimentar em seu ecossistema e como
-          você a codificou.\n>2. Havia muito ou muito pouco de um organismo?\n>3.
+          você a programou.\n>2. Havia muito ou muito pouco de um organismo?\n>3.
           Explique as modificações que você fez na simulação. \n>4. O que você notou
           depois de alterar os valores?\n</div>\n\n<div style=\"background-color:
           #a6e3e8; border-radius: 10px; color: #000000; width: 95%; padding: 0.5px

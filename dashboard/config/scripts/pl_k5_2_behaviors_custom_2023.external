@@ -10,7 +10,7 @@ markdown <<MARKDOWN
 
 ## Let’s take a look at this *growing* behavior.
 
-#### By adding the ‘Sprite begins’ block, when we press run, the Sprite will slowly get bigger. 
+#### By adding the ‘sprite begins’ block, when we press run, the sprite will slowly get bigger. 
 
 
 <img src="https://images.code.org/72569b194a488784e90945a2f87e6b48-image-1705006395844.gif" alt= "moving playspace and workspace window size" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">

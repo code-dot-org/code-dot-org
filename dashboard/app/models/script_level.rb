@@ -176,7 +176,7 @@ class ScriptLevel < ApplicationRecord
         end
       end
     elsif script.pl_course?
-      build_script_level_path(level_to_follow) if level_to_follow
+      return build_script_level_path(level_to_follow) if level_to_follow
       next_unit = script.next_unit(user)
       next_unit ? script_path(next_unit) : script_completion_redirect(script)
     elsif bubble_choice? && !bubble_choice_parent
