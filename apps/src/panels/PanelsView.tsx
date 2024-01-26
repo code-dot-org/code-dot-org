@@ -123,11 +123,15 @@ const PanelsView: React.FunctionComponent = () => {
     return [width, height];
   }, [targetWidth, targetHeight]);
 
-  const showSmallText = height < 300;
-
   if (!levelPanels?.panels) {
     return <div />;
   }
+
+  const showSmallText = height < 300;
+  const textLayoutClass =
+    levelPanels.panels[currentPanel].layout === 'text-bottom-left'
+      ? styles.markdownTextBottomLeft
+      : styles.markdownTextTopRight;
 
   return (
     <div
@@ -146,7 +150,8 @@ const PanelsView: React.FunctionComponent = () => {
           markdown={levelPanels.panels[currentPanel]?.text}
           className={classNames(
             styles.markdownText,
-            showSmallText && styles.markdownTextSmall
+            showSmallText && styles.markdownTextSmall,
+            textLayoutClass
           )}
         />
       </div>

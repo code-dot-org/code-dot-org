@@ -10,16 +10,18 @@
     "level_data": {
       "panels": [
         {
-          "imageUrl": "https://images.code.org/e8cf0ed0263af03d3bed73749081b995-musiclab_intro_function_0.png",
-          "text": "Functions\n\nSometimes you'll want part of the mix take up less room or be easy to repeat. For instance, let's say you had a chorus in your track that looked like this."
+          "imageUrl": "https://images.code.org/0110f782ffc35dfd10584e068742e2b9-musiclab_intro_function_0.png",
+          "text": "Sometimes you'll want part of the mix to take up less room or be reusable in other parts of the mix. For instance, let's say you had a chorus in your track that looked like this."
         },
         {
-          "imageUrl": "https://images.code.org/79cffd279632872b91b162a1fe460e15-musiclab_intro_function_1.png",
-          "text": "This green block from the **Functions** category lets you group the chorus together. You can name this whatever you want."
+          "imageUrl": "https://images.code.org/685a20f269ea8a53be4abcdc182fb7d7-musiclab_intro_function_1.png",
+          "text": "This green block from the **Functions** category lets you group the chorus together. You can name this whatever you want.",
+          "layout": "text-bottom-left"
         },
         {
-          "imageUrl": "https://images.code.org/79cffd279632872b91b162a1fe460e15-musiclab_intro_function_1.png",
-          "text": "You'll then see a small block, with the name you chose, in the **Functions** category. Let's try it out!"
+          "imageUrl": "https://images.code.org/211f25a646fdb1aa77259176fdb3cd36-musiclab_intro_function_2.png",
+          "text": "You'll then see a small block, with the name you chose, in the **Functions** category. This can be attached to the **when run** block to play your whole chorus in a single block. Let's try it out!",
+          "layout": "text-bottom-left"
         }
       ]
     }
