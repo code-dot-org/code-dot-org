@@ -9,7 +9,7 @@ import SectionProgress from '../sectionProgress/SectionProgress';
 import {setShowProgressTableV2} from '@cdo/apps/templates/currentUserRedux';
 import SectionProgressV2 from './SectionProgressV2';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
-import {Link} from '@dsco_/link';
+import Link from '@cdo/apps/componentLibrary/link';
 
 function SectionProgressSelector({
   showProgressTableV2,
@@ -32,20 +32,6 @@ function SectionProgressSelector({
 
   const toggleV1OrV2Button = () => (
     <div style={{float: 'right'}}>
-      {/* <Button
-        style={{
-          color: color.light_secondary_500,
-          fontSize: '14px',
-          textDecoration: 'underline',
-        }}
-        styleAsText={true}
-        onClick={onShowProgressTableV2Change}
-      >
-        {showProgressTableV2
-          ? i18n.switchToOldProgressView()
-          : i18n.switchToNewProgressView()}
-      </Button> */}
-
       <Link type="primary" size="s" onClick={onShowProgressTableV2Change}>
         {showProgressTableV2
           ? i18n.switchToOldProgressView()

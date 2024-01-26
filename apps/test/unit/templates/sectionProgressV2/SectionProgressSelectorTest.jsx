@@ -22,11 +22,11 @@ describe('SectionProgressSelector', () => {
     DCDO.set('progress-table-v2-enabled', true);
     DCDO.set('progress-table-v2-default-v2', false);
   });
-  it('does not show toggle button if disabled', () => {
+  it('does not show toggle link if disabled', () => {
     DCDO.set('progress-table-v2-enabled', false);
     const wrapper = setUp({showProgressTableV2: true});
 
-    expect(wrapper.find('Button')).to.have.length(0);
+    expect(wrapper.find('Link')).to.have.length(0);
   });
 
   it('shows v1 if disabled', () => {
@@ -42,8 +42,8 @@ describe('SectionProgressSelector', () => {
 
     expect(wrapper.find(SectionProgress)).to.have.length(1);
     expect(wrapper.find(SectionProgressV2)).to.have.length(0);
-    expect(wrapper.find('Button')).to.have.length(1);
-    expect(wrapper.find('Button').at(0).props().children).to.equal(
+    expect(wrapper.find('Link')).to.have.length(1);
+    expect(wrapper.find('Link').at(0).props().children).to.equal(
       'Switch to new progress view'
     );
   });
@@ -53,8 +53,8 @@ describe('SectionProgressSelector', () => {
 
     expect(wrapper.find(SectionProgress)).to.have.length(0);
     expect(wrapper.find(SectionProgressV2)).to.have.length(1);
-    expect(wrapper.find('Button')).to.have.length(1);
-    expect(wrapper.find('Button').at(0).props().children).to.equal(
+    expect(wrapper.find('Link')).to.have.length(1);
+    expect(wrapper.find('Link').at(0).props().children).to.equal(
       'Switch to old progress view'
     );
   });
@@ -72,7 +72,7 @@ describe('SectionProgressSelector', () => {
     expect(wrapper_1.find(SectionProgressV2)).to.have.length(1);
   });
 
-  it('sets user preference when button toggled', () => {
+  it('sets user preference when link clicked', () => {
     const stub = sinon.stub();
     const wrapper = setUp({
       showProgressTableV2: false,
@@ -81,8 +81,8 @@ describe('SectionProgressSelector', () => {
 
     expect(wrapper.find(SectionProgress)).to.have.length(1);
     expect(wrapper.find(SectionProgressV2)).to.have.length(0);
-    const button = wrapper.find('Button');
-    button.simulate('click', {preventDefault: () => {}});
+    const link = wrapper.find('Link');
+    link.simulate('click', {preventDefault: () => {}});
     expect(stub).calledOnceWith(true);
   });
 });
