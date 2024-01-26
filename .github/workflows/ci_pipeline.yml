@@ -36,7 +36,7 @@ jobs:
 
       - name: Clone and Prepare Git
         run: |
-          git clone --branch ${{ github.head_ref }} --depth 1 https://github.com/${{ github.repository }}.git .
+          git clone --branch ${{ github.event.inputs.branchName }} --depth 1 https://github.com/${{ github.repository }}.git .
           git reset --hard ${{ github.sha }}
           git fetch --depth 100 origin ${{ github.base_ref }}
           git config user.name "GitHub Actions"
