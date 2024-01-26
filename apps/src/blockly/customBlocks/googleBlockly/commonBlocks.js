@@ -14,6 +14,12 @@ export const blocks = {
     blockly.JavaScript.forBlock.text_join_simple =
       blockly.JavaScript.forBlock.text_join;
   },
+  copyBlockGenerator(generator, type1, type2) {
+    generator.forBlock[type1] = generator.forBlock[type2];
+  },
+  defineNewBlockGenerator(generator, type, generatorFunction) {
+    generator.forBlock[type] = generatorFunction;
+  },
   mutationToDom() {
     var container = Blockly.utils.xml.createElement('mutation');
     mutatorProperties.forEach(prop => {

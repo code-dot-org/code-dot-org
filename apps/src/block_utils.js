@@ -1074,16 +1074,15 @@ exports.createJsWrapperBlockCreator = function (
       helpUrl: getHelpUrl(docFunc), // optional param
       init: function () {
         // Styles should be used over hard-coded colors in Google Blockly blocks
-        if (style && this.setStyle) {
-          this.setStyle(style);
-        } else if (color) {
+        if (color) {
           Blockly.cdoUtils.setHSV(this, ...color);
-        } else if (!returnType) {
-          if (this.setStyle) {
-            this.setStyle('default');
-          } else {
-            Blockly.cdoUtils.setHSV(this, ...DEFAULT_COLOR);
-          }
+        } else {
+          Blockly.cdoUtils.setHSV(this, ...DEFAULT_COLOR);
+        }
+        if (style) {
+          this.setStyle(style);
+        } else {
+          this.setStyle('default');
         }
 
         if (returnType) {

@@ -257,6 +257,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.Block.prototype.appendEndRowInput =
     blocklyWrapper.Block.prototype.appendDummyInput;
 
+  blocklyWrapper.Block.prototype.setStyle = function () {};
   blocklyWrapper.cdoUtils = {
     loadBlocksToWorkspace(blockSpace, source) {
       const isXml = stringIsXml(source);

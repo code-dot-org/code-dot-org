@@ -106,4 +106,10 @@ export const blocks = {
       return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
     };
   },
+  copyBlockGenerator(generator, type1, type2) {
+    generator[type1] = generator[type2];
+  },
+  defineNewBlockGenerator(generator, type, generatorFunction) {
+    generator[type] = generatorFunction;
+  },
 };
