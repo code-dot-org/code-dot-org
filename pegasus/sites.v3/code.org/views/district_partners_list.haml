@@ -1,4 +1,15 @@
--DB[:cdo_district_partners].each do |value|
-  %p=value[:district_s]
-  %p=value[:state_s]
+- district_partners = DB[:cdo_district_partners].all
 
+%figure
+  .heading-wrapper.flex-container.flex-direction-row
+    %p.heading-sm
+      =hoc_s(:heading_district)
+    %p.heading-sm
+      =hoc_s(:heading_state)
+  .data-wrapper.flex-container.flex-direction-row
+    .flex-container.flex-direction-column
+      - district_partners.each do |value|
+        %p=value[:district_s]
+    .flex-container.flex-direction-column
+      - district_partners.each do |value|
+        %p=value[:state_s]

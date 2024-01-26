@@ -757,6 +757,8 @@
   heading_resources_schools_districts: "Additional resources for schools and districts"
   heading_intl_opportunities: "International Opportunities"
   heading_unplugged_resources: "Unplugged Resources"
+  heading_district: "District"
+  heading_state: "State"
 
   student_courses_top_desc: "Start coding today. Our courses and activities are free! It's easier—and more fun—than you think."
   student_courses_explore_desc: "Explore the world of computer science with engaging videos, self-paced tutorials, programming activities, and more for all ages and experience levels!"
