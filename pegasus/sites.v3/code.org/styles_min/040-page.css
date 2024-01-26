@@ -9,6 +9,7 @@
 :root {
   /* Colors */
   --brand_primary_light: #ABDFE5;
+  --brand_primary_medium: #7BC6CF;
   --brand_primary_default: #009EB0;
   --brand_primary_dark: #008291;
   --brand_secondary_light: #E0D1EC;
