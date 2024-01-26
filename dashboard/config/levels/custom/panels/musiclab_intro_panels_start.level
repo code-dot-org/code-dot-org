@@ -11,11 +11,7 @@
       "panels": [
         {
           "imageUrl": "https://studio.code.org/shared/images/teacher-announcement/incubator-projectbeats.png",
-          "text": "Welcome to **Project Beats**!\n\nMake music with code! Try mixing and matching beats, bass, and other sounds to make your own songs."
-        },
-        {
-          "imageUrl": "https://images.code.org/876d6cbaccf66d5c4818736abeca2d82-musiclab_intro_start_1.png",
-          "text": "**Project Beats** is part of the **Code.org Incubator** where you get to try out some of the latest ideas from inside **Code.org**.\n\nBy using the **Incubator**, you can help us shape the future of computer science education. We would love to hear what you think."
+          "text": "Welcome to **Project Beats**!\n\n**Project Beats** lets you mix, remix, and even perform music using code. Don’t worry if you don’t know much about code, or even music! All you need is a little time and some curiosity to start making your own creations."
         }
       ]
     }
