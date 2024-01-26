@@ -10,7 +10,6 @@ import Button from '@cdo/apps/templates/Button';
 
 const WarningModal = () => {
   const [open, setOpen] = useState(true);
-  console.log(open);
 
   const onClose = () => {
     setOpen(false);
