@@ -33,7 +33,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2023-11-20 20:59:07 UTC",
+    "serialized_at": "2024-01-25 18:23:24 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -8497,6 +8497,13 @@
         "lesson.key": "Programming with Scrat",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Safety in My Online Neighborhood",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-CS-01"
       }
     },
     {
