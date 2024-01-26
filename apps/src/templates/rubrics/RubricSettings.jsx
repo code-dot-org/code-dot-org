@@ -81,11 +81,14 @@ export default function RubricSettings({
   const polling = useMemo(
     () =>
       status === STATUS.EVALUATION_PENDING ||
-      status === STATUS.EVALUATION_RUNNING,
-    [status]
+      status === STATUS.EVALUATION_RUNNING ||
+      statusAll === STATUS_ALL.EVALUATION_PENDING,
+    [status, statusAll]
   );
   const [statusAll, setStatusAll] = useState(STATUS_ALL.INITIAL_LOAD);
   const [unevaluatedCount, setUnevaluatedCount] = useState(0);
+  const [totalCount, setTotalCount] = useState(0);
+  const [evaluatedCount, setEvaluatedCount] = useState(0);
 
   const statusText = () => {
     switch (status) {
@@ -131,6 +134,13 @@ export default function RubricSettings({
       case STATUS.NOT_ATTEMPTED:
         return i18n.aiEvaluationStatusAll_not_attempted();
     }
+  };
+
+  const summaryText = () => {
+    return i18n.aiEvaluationStatusAll_summary({
+      evaluatedCount: evaluatedCount,
+      totalCount: totalCount,
+    });
   };
 
   const studentButtonText = () => {
@@ -180,6 +190,8 @@ export default function RubricSettings({
             // is disabled on script level pages.
             setCsrfToken(data.csrfToken);
             setUnevaluatedCount(data.attemptedUnevaluatedCount);
+            setTotalCount(data.attemptedCount + data.notAttemptedCount);
+            setEvaluatedCount(data.lastAttemptEvaluatedCount);
             if (data.attemptedCount === 0) {
               setStatusAll(STATUS_ALL.NOT_ATTEMPTED);
             } else if (data.attemptedUnevaluatedCount === 0) {
@@ -312,7 +324,8 @@ export default function RubricSettings({
           </div>
         </div>
       )}
-      {canProvideFeedback && (
+
+      {canProvideFeedback && !experiments.isEnabled('ai-rubrics-redesign') && (
         <div className={style.aiAssessmentOptions}>
           <div>
             <BodyTwoText>
@@ -354,6 +367,35 @@ export default function RubricSettings({
           <BodyTwoText className="uitest-eval-status-all-text">
             {statusAllText() || ''}
           </BodyTwoText>
+        </div>
+      )}
+
+      {canProvideFeedback && experiments.isEnabled('ai-rubrics-redesign') && (
+        <div>
+          <Heading2>{i18n.aiAssessment()}</Heading2>
+          <div className={style.settingsContainers}>
+            <div className={style.runAiAllStatuses}>
+              <BodyTwoText className="uitest-eval-status-all-text">
+                <StrongText>{summaryText()}</StrongText>
+              </BodyTwoText>
+              {statusAllText() && (
+                <BodyTwoText>{statusAllText() || ''}</BodyTwoText>
+              )}
+            </div>
+            <Button
+              className="uitest-run-ai-assessment-all"
+              text={i18n.runAiAssessmentClass()}
+              color={Button.ButtonColor.brandSecondaryDefault}
+              onClick={handleRunAiAssessmentAll}
+              style={{margin: 0}}
+              disabled={statusAll !== STATUS_ALL.READY}
+            >
+              {statusAll === STATUS_ALL.EVALUATION_PENDING && (
+                <i className="fa fa-spinner fa-spin" />
+              )}
+            </Button>
+            <BodyTwoText>{i18n.aiEvaluationDetails()}</BodyTwoText>
+          </div>
         </div>
       )}
     </div>
