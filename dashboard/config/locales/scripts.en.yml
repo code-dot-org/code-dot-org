@@ -14213,7 +14213,7 @@ en:
           title: Creativity with Code
           description_audience: ''
           description_short: ''
-          description: "**You will:**\n\n* Identify and explain fundamental CS concepts, including Sprites, events and behaviors. \n* Demonstrate the application of event-based programming.\n* Create a program using sprites, events, and behaviors.\n\n**Suggested time:** 60 minutes\n"
+          description: "**You will:**\n\n* Identify and explain fundamental CS concepts, including sprites, events and behaviors. \n* Demonstrate the application of event-based programming.\n* Create a program using sprites, events, and behaviors.\n\n**Suggested time:** 60 minutes\n"
           student_description: "**You will:**\n\n* Identify and explain fundamental CS concepts, including Sprites, evenets and behaviors. \n* Demonstrate the application of event-based programming.\n* Create a program using sprites, events, and behaviors.\n\n**Suggested time:** 60 minutes\n\n"
         self-paced-pl-k5-2024-1:
           lessons:
@@ -14769,3 +14769,30 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        pl-team-design-guide:
+          lessons:
+            lesson-1:
+              name: General Online Learning Design
+            lesson-2:
+              name: Designing Visuals
+            lesson-3:
+              name: Designing Text
+            lesson-4:
+              name: Level Types
+          lesson_groups: {}
+          name: pl-team-design-guide
+          title: Professional Learning Design Guide
+          description_audience: ''
+          description_short: ''
+          description: |-
+            ## Welcome!
+
+            ##### This guide is written and maintained by the Code.org Professional Learning team. It houses norms, best practices, and examples for creating a self-paced, asynchronous learning experience. **Please do not revise this script without permission from the team**, but please feel free to look at the code for individual levels for inspiration and guidance.
+
+            <!-- Despite our guidance stating that body text should be H4 size, this overview text is H5 size to be visually consistent with the curriculum. -->
+          student_description: |-
+            ## Welcome!
+
+            ##### This guide is written and maintained by the Code.org Professional Learning team. It houses norms, best practices, and examples for creating a self-paced, asynchronous learning experience. **Please do not revise this script without permission from the team**, but please feel free to look at the code for individual levels for inspiration and guidance.
+
+            <!-- Despite our guidance stating that body text should be H4 size, this overview text is H5 size to be visually consistent with the curriculum. -->
