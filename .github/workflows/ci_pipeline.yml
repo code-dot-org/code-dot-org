@@ -44,6 +44,7 @@ jobs:
 
           # Verify the key fingerprint
           FINGERPRINT=$(gpg --fingerprint B7B3B788A8D3785C | grep -oP 'THE_EXPECTED_FINGERPRINT')
+          echo "Extracted Fingerprint: --$FINGERPRINT--"
           if [ "$FINGERPRINT" != "THE_EXPECTED_FINGERPRINT" ]; then
             echo "Fingerprint verification failed!"
             exit 1
