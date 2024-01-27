@@ -15,6 +15,12 @@ jobs:
     runs-on: ubuntu-latest
     if: github.actor == 'pablo-code-org'
     steps:
+      - name: Cache Checked-Out Repository
+        uses: actions/cache@v2
+        with:
+          path: code-dot-org
+          key: checkout-${{ runner.os }}-${{ hashFiles('**') }}
+          restore-keys: checkout-${{ runner.os }}-    
       - name: Checkout Repository
         uses: actions/checkout@v2
         with:
