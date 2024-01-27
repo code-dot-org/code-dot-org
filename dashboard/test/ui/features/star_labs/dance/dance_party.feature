@@ -70,20 +70,18 @@ Feature: Dance Party
     And element ".signInOrAgeDialog" is hidden
     # Tested level from Dance Party 2018 level 13 does not use visualization column preview.
     # When level is shared, project level does use preview.
-    # Click on run/reset once to resolve test flakiness.
+    # First check run/reset buttons. This helps resolve test flakiness.
     Then I click selector "#runButton" once I see it
-    Then I wait until element "#runButton" is not visible
     Then I click selector "#resetButton" once I see it
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
 
+    # Next check that correct number of sprites are displayed when program is run.
     Then I click selector "#runButton" once I see it
     Then I wait until element "#runButton" is not visible
-    Then evaluate JavaScript expression "window.__DanceTestInterface.getSprites().length >= 10"
+    Then evaluate JavaScript expression "window.__DanceTestInterface.getSprites().length === 10"
     Then I click selector "#resetButton" once I see it
-    Then element "#runButton" is visible
-    And element "#resetButton" is hidden
-   
+
     And I select the "How it Works (View Code)" small footer item to load a new page
     And I wait for the song selector to load
     And element "#song_selector" has value "cheapthrills_sia"
