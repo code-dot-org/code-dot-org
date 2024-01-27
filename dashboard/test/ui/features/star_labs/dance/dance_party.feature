@@ -80,7 +80,7 @@ Feature: Dance Party
     And element "#song_selector" has value "cheapthrills_sia"
     Then I click selector "#runButton" once I see it
     Then I wait until element "#runButton" is not visible    
-    Then evaluate JavaScript expression "window.__DanceTestInterface.getSprites().length === 10
+    Then evaluate JavaScript expression "window.__DanceTestInterface.getSprites().length === 10"
     Then I click selector "#resetButton" once I see it
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
