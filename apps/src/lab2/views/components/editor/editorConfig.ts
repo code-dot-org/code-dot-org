@@ -25,8 +25,9 @@ import {closeBrackets, closeBracketsKeymap} from '@codemirror/autocomplete';
 import {highlightSelectionMatches, searchKeymap} from '@codemirror/search';
 
 // Extensions for codemirror. Based on @codemirror/basic-setup, with javascript-specific
-// extensions removed (lint, autocomplete).
-const editorSetup = [
+// extensions removed (lint, autocomplete). This is the base configuration for all codemirror
+// editors on the site. Any changes here will impact Java Lab, Python Lab, and Web Lab 2.
+const editorConfig = [
   lineNumbers(),
   highlightSpecialChars(),
   history(),
@@ -51,4 +52,4 @@ const editorSetup = [
   EditorState.tabSize.of(2),
 ];
 
-export {editorSetup};
+export {editorConfig};
