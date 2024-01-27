@@ -18,51 +18,11 @@ jobs:
       - name: Cache Checked-Out Repository
         uses: actions/cache@v2
         with:
-          path: code-dot-org
+          path: |
+            code-dot-org
           key: checkout-${{ runner.os }}-${{ hashFiles('**') }}
-          restore-keys: checkout-${{ runner.os }}-    
+          restore-keys: checkout-${{ runner.os }}-
+
       - name: Checkout Repository
-        uses: actions/checkout@v2
-        with:
-          path: code-dot-org
-
-      - name: Get Branch Name from Hardcoded Pull Request ID
-        id: get_branch
-        run: |
-          PR_ID=55766
-          PR_DATA=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-                        https://api.github.com/repos/code-dot-org/code-dot-org/pulls/$PR_ID)
-          BRANCH_NAME=$(echo $PR_DATA | jq -r .head.ref)
-          echo "Branch Name: $BRANCH_NAME"
-          echo "::set-output name=branch_name::$BRANCH_NAME"
-        working-directory: ./code-dot-org
-
-      - name: Checkout Branch
-        uses: actions/checkout@v2
-        with:
-          ref: ${{ steps.get_branch.outputs.branch_name }}
-          path: code-dot-org
-          repository: code-dot-org/code-dot-org
-          token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 0
-        working-directory: ./code-dot-org
-
-      - name: Set up Docker Environment
-        run: docker build -t my-ci-image -f ./Dockerfile ./code-dot-org
-        working-directory: .  # Assuming your Dockerfile is in the root of your repository
-
-      - name: Run Unit Tests
-        run: |
-          docker run my-ci-image /bin/bash -c "source /home/runner/work/code-dot-org/code-dot-org/docker/unit_test.sh"
-        working-directory: ./code-dot-org
-
-      - name: Run UI Tests
-        run: |
-          docker run my-ci-image /bin/bash -c "source /home/runner/work/code-dot-org/code-dot-org/docker/ui_tests.sh"
-        working-directory: ./code-dot-org
-
-      - name: Update Cache
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+        if: steps.cache-checked-out-repository.outputs.cache-hit != 'true'
+        run: git clone https://github.com/code-dot-org/code-dot-org.git ./code-dot-org
