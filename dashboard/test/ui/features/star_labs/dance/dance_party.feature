@@ -68,14 +68,22 @@ Feature: Dance Party
 
     When I navigate to the shared version of my project
     And element ".signInOrAgeDialog" is hidden
+    # Tested level from Dance Party 2018 level 13 does not use visualization column preview.
+    # When level is shared, project level does use preview.
+    # Click on run/reset once to resolve test flakiness.
     Then I click selector "#runButton" once I see it
     Then I wait until element "#runButton" is not visible
+    Then I click selector "#resetButton" once I see it
+    Then element "#runButton" is visible
+    And element "#resetButton" is hidden
 
-    # TODO: Fix flakiness. This test should assert that number of sprites is === to 10, not >= 10.
-    # Bug: In some automated tests, this nondeterministicaly displays doubles of the sprites. This
-    # Does not repro outside of automated testing.
+    Then I click selector "#runButton" once I see it
+    Then I wait until element "#runButton" is not visible
     Then evaluate JavaScript expression "window.__DanceTestInterface.getSprites().length >= 10"
-
+    Then I click selector "#resetButton" once I see it
+    Then element "#runButton" is visible
+    And element "#resetButton" is hidden
+   
     Then I click selector "#resetButton" once I see it
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
