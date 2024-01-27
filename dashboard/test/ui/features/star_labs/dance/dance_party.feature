@@ -63,8 +63,6 @@ Feature: Dance Party
   Scenario: Dance Party Share
     Given I am on "http://studio.code.org/s/dance/lessons/1/levels/13?noautoplay=true"
     And I wait for the page to fully load
-    And I select age 10 in the age dialog
-    And I close the instructions overlay if it exists
     And I wait for the song selector to load
     And element "#song_selector" has value "cheapthrills_sia"
 
@@ -72,8 +70,9 @@ Feature: Dance Party
     And element ".signInOrAgeDialog" is hidden
     Then I click selector "#runButton" once I see it
     Then I wait until element "#runButton" is not visible
-
-    Then evaluate JavaScript expression "window.__DanceTestInterface.getSprites().length === 10"
+    And I wait for 1 second
+    Then evaluate JavaScript expression "window.__DanceTestInterface.getSprites().length === 10
+    And I wait for 1 second
 
     Then I click selector "#resetButton" once I see it
     Then element "#runButton" is visible
