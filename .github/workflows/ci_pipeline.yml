@@ -36,7 +36,7 @@ jobs:
           path: |
             $(cat stale_files.txt)
           key: ${{ runner.os }}-stale-${{ steps.stalefiles.outputs.stale_hash }}
-
+  
       - name: Get Branch Name from Hardcoded Pull Request ID
         id: get_branch
         run: |
@@ -57,7 +57,7 @@ jobs:
           fetch-depth: 0
 
       - name: List contents of the code-dot-org directory
-        run: ls -la ./code-dot-org
+        run: ls -la ./code-dot-org/docker
 
       - name: Set up Docker Environment
         run: docker build -t my-ci-image -f ./code-dot-org/Dockerfile ./code-dot-org
