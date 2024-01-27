@@ -56,13 +56,15 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
+      - name: List contents of the code-dot-org directory
+        run: ls -la ./code-dot-org
+
       - name: Set up Docker Environment
         run: docker build -t my-ci-image -f ./code-dot-org/Dockerfile ./code-dot-org
 
       - name: Run Unit Tests
         run: |
           docker run my-ci-image /bin/bash -c "source /home/runner/work/code-dot-org/code-dot-org/docker/unit_test.sh"
- 
 
       - name: Run UI Tests
         run: |
