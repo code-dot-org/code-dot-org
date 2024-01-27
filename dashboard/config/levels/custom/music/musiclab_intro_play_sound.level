@@ -42,11 +42,11 @@
               "value": 1
             }
           ],
-          "message": "Nice work!",
+          "message": "Nice work.  You successfully played a sound.",
           "next": true
         },
         {
-          "message": "Please play a sound."
+          "message": "Drag the [play](#clickable=play-sound-block) block and attach it to [when run](#clickable=when-run-block)."
         }
       ]
     },

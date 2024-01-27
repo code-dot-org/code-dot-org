@@ -60,7 +60,7 @@
           "conditions": [
             {"name": "played_sounds_together", "value": 2}
           ],
-          "message": "Nice work.",
+          "message": "Nice work.  You successfully played two sounds together.",
           "next": "true"
         },
         {
