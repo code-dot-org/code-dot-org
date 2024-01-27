@@ -33,50 +33,25 @@ jobs:
           path: |
             $(cat stale_files.txt)
           key: ${{ runner.os }}-stale-${{ steps.stalefiles.outputs.stale_hash }}
-  
-      - name: Get Branch Name from Hardcoded Pull Request ID
-        id: get_branch
+
+      - name: Fetch and Verify MySQL GPG Key
         run: |
-          PR_ID=55766
-          PR_DATA=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-                        https://api.github.com/repos/code-dot-org/code-dot-org/pulls/$PR_ID)
-          BRANCH_NAME=$(echo $PR_DATA | jq -r .head.ref)
-          echo "Branch Name: $BRANCH_NAME"
-          echo "::set-output name=branch_name::$BRANCH_NAME"
-
-      - name: Checkout Branch
-        uses: actions/checkout@v2
-        with:
-          ref: ${{ steps.get_branch.outputs.branch_name }}
-          path: code-dot-org
-          repository: code-dot-org/code-dot-org
-          token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 0
-
-      - name: List contents of the code-dot-org directory
-        run: ls -la ./code-dot-org/docker
-
-      - name: Prepare entrypoint script
-        run: cp ./code-dot-org/docker/dockerfiles/entrypoint.sh ./code-dot-org/
-        
-      - name: Fetch and Verify GPG Key
-        id: fetch_gpg_key
-        run: |
-          # Fetch the GPG key
-          apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C
+          # Fetch the GPG key using gpg
+          gpg --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C
           
-          # Verify the key (replace 'expected_fingerprint' with the actual fingerprint)
-          FINGERPRINT=$(apt-key finger B7B3B788A8D3785C | grep -oP 'THE EXPECTED FINGERPRINT')
-          if [ "$FINGERPRINT" != "THE EXPECTED FINGERPRINT" ]; then
+          # Export the key to a file
+          gpg --export B7B3B788A8D3785C > mysql.gpg
+
+          # Verify the key fingerprint
+          FINGERPRINT=$(gpg --fingerprint B7B3B788A8D3785C | grep -oP 'THE_EXPECTED_FINGERPRINT')
+          if [ "$FINGERPRINT" != "THE_EXPECTED_FINGERPRINT" ]; then
             echo "Fingerprint verification failed!"
             exit 1
           fi
-          
-          # Export the key to a file
-          apt-key export B7B3B788A8D3785C > mysql.gpg
-          
+
       - name: Set up Docker Environment
-        run: docker build -t code-dot-org-testing-docker-image -f ./code-dot-org/docker/dockerfiles/Dockerfile ./code-dot-org
+        run: |
+          docker build --build-arg MYSQL_GPG_KEY_FILE=mysql.gpg -t code-dot-org-testing-docker-image -f ./code-dot-org/docker/dockerfiles/Dockerfile ./code-dot-org
 
       - name: Run Unit Tests
         run: |
