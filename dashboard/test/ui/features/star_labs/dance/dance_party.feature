@@ -70,9 +70,7 @@ Feature: Dance Party
     And element ".signInOrAgeDialog" is hidden
     Then I click selector "#runButton" once I see it
     Then I wait until element "#runButton" is not visible
-    And I wait for 1 second
     Then evaluate JavaScript expression "window.__DanceTestInterface.getSprites().length === 10
-    And I wait for 1 second
 
     Then I click selector "#resetButton" once I see it
     Then element "#runButton" is visible
