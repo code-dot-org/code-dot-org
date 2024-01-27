@@ -53,7 +53,7 @@
               "name": "played_sound_triggered"
             }
           ],
-          "message": "Nice work!",
+          "message": "Nice work.  You successfully played a sound by using the trigger.",
           "next": true
         },
         {

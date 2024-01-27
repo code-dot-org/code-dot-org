@@ -51,15 +51,15 @@
         {
           "conditions": [
             {
-              "name": "played_sounds_together",
-              "value": 1
+              "name": "played_sound_id",
+              "value": "beats/drum_kit_disco"
             }
           ],
-          "message": "Nice work!",
+          "message": "Nice work.  You successfully changed the sound.",
           "next": true
         },
         {
-          "message": "Please change the sound."
+          "message": "Please [change](#clickable=play-sound-block-workspace) the sound."
         }
       ]
     },
