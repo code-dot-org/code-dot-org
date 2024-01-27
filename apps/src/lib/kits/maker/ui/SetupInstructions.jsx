@@ -72,8 +72,12 @@ class ConnectionInstructions extends React.Component {
 
     return (
       <div>
-        <h2>WebSerial</h2>
-        <p>{applabI18n.makerSetupConnectWithWebSerial()}</p>
+        <h2>{applabI18n.makerSetupConnectBoardChecklistTitle()}</h2>
+        <p>
+          {applabI18n.makerSetupConnectWithWebSerial()}
+          <strong>{applabI18n.makerSetupConnectOnlyOneTab()}</strong>
+          {applabI18n.makerSetupConnectOnlyOneTabDetails()}
+        </p>
         <ol>
           <li>{applabI18n.makerSetupWebSerialConnectToComputer()}</li>
           <li>{applabI18n.makerSetupWebSerialConnectToBoardButton()}</li>
@@ -98,7 +102,6 @@ class Support extends React.Component {
     return (
       <div>
         <h2>{i18n.support()}</h2>
-        <SafeMarkdown markdown={i18n.debugMakerToolkit()} />
         <SafeMarkdown markdown={i18n.contactGeneralSupport()} />
       </div>
     );
