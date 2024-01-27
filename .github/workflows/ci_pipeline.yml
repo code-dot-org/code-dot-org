@@ -2,6 +2,7 @@ name: CI Pipeline
 
 on:
   workflow_dispatch:
+    # Add additional trigger events as needed (e.g., push, pull_request, etc.)
 
 env:
   AWS_DEFAULT_REGION: us-east-1
@@ -13,15 +14,6 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     if: github.actor == 'pablo-code-org'
-
-    services:
-      mysql:
-        image: mysql:5.7
-        env:
-          MYSQL_ROOT_PASSWORD: ${{ env.MYSQL_ROOT_PASSWORD }}
-        ports:
-          - 3306:3306
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
@@ -37,7 +29,7 @@ jobs:
           BRANCH_NAME=$(echo $PR_DATA | jq -r .head.ref)
           echo "Branch Name: $BRANCH_NAME"
           echo "::set-output name=branch_name::$BRANCH_NAME"
-        working-directory: /home/runner/work/code-dot-org/code-dot-org/
+        working-directory: ./code-dot-org
 
       - name: Checkout Branch
         uses: actions/checkout@v2
@@ -46,21 +38,22 @@ jobs:
           path: code-dot-org
           repository: code-dot-org/code-dot-org
           token: ${{ secrets.GITHUB_TOKEN }}
-          working-directory: /home/runner/work/code-dot-org/code-dot-org/
+          fetch-depth: 0
+        working-directory: ./code-dot-org
 
       - name: Set up Docker Environment
-        run: docker build -t my-ci-image -f /home/runner/work/code-dot-org/code-dot-org/ .
-        working-directory: /home/runner/work/code-dot-org/code-dot-org/
+        run: docker build -t my-ci-image -f ./Dockerfile ./code-dot-org
+        working-directory: .  # Assuming your Dockerfile is in the root of your repository
 
       - name: Run Unit Tests
         run: |
           docker run my-ci-image /bin/bash -c "source /home/runner/work/code-dot-org/code-dot-org/docker/unit_test.sh"
-        working-directory: /home/runner/work/code-dot-org/code-dot-org/
+        working-directory: ./code-dot-org
 
       - name: Run UI Tests
         run: |
           docker run my-ci-image /bin/bash -c "source /home/runner/work/code-dot-org/code-dot-org/docker/ui_tests.sh"
-        working-directory: /home/runner/work/code-dot-org/code-dot-org/
+        working-directory: ./code-dot-org
 
       - name: Update Cache
         uses: actions/cache@v2
