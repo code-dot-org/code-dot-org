@@ -50,8 +50,7 @@ jobs:
           fi
 
       - name: Set up Docker Environment
-        run: |
-          docker build --build-arg MYSQL_GPG_KEY_FILE=mysql.gpg -t code-dot-org-testing-docker-image -f ./code-dot-org/docker/dockerfiles/Dockerfile ./code-dot-org
+        run: docker build --build-arg MYSQL_GPG_KEY_FILE=mysql.gpg -t code-dot-org-testing-docker-image -f ./code-dot-org/docker/dockerfiles/Dockerfile ./code-dot-org
 
       - name: Run Unit Tests
         run: |
