@@ -58,7 +58,23 @@ jobs:
 
       - name: Prepare entrypoint script
         run: cp ./code-dot-org/docker/dockerfiles/entrypoint.sh ./code-dot-org/
-
+        
+      - name: Fetch and Verify GPG Key
+        id: fetch_gpg_key
+        run: |
+          # Fetch the GPG key
+          apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C
+          
+          # Verify the key (replace 'expected_fingerprint' with the actual fingerprint)
+          FINGERPRINT=$(apt-key finger B7B3B788A8D3785C | grep -oP 'THE EXPECTED FINGERPRINT')
+          if [ "$FINGERPRINT" != "THE EXPECTED FINGERPRINT" ]; then
+            echo "Fingerprint verification failed!"
+            exit 1
+          fi
+          
+          # Export the key to a file
+          apt-key export B7B3B788A8D3785C > mysql.gpg
+          
       - name: Set up Docker Environment
         run: docker build -t code-dot-org-testing-docker-image -f ./code-dot-org/docker/dockerfiles/Dockerfile ./code-dot-org
 
