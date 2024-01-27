@@ -46,7 +46,7 @@ jobs:
           path: code-dot-org
           repository: code-dot-org/code-dot-org
           token: ${{ secrets.GITHUB_TOKEN }}
-        working-directory: /home/runner/work/code-dot-org/code-dot-org/
+          working-directory: /home/runner/work/code-dot-org/code-dot-org/
 
       - name: Set up Docker Environment
         run: docker build -t my-ci-image -f ./docker/dockerfiles/Dockerfile .
