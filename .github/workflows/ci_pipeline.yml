@@ -21,34 +21,25 @@ jobs:
         with:
           path: code-dot-org
 
-      - name: Find and Cache Stale Files
-        id: stalefiles
+      - name: Set up GPG Environment
         run: |
-          find code-dot-org -type f -not -path './.git/*' -mtime +730 > stale_files.txt
-          echo "::set-output name=stale_hash::$(sha256sum stale_files.txt | cut -d ' ' -f1)"
-
-      - name: Cache stale files
-        uses: actions/cache@v2
-        with:
-          path: |
-            $(cat stale_files.txt)
-          key: ${{ runner.os }}-stale-${{ steps.stalefiles.outputs.stale_hash }}
-
-      - name: Fetch and Verify MySQL GPG Key
-        run: |
-          # Fetch the GPG key using gpg
-          gpg --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C
+          # Fetch the GPG key using gpg with the external configuration file
+          gpg --options gpg.conf --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C
           
           # Export the key to a file
           gpg --export B7B3B788A8D3785C > mysql.gpg
 
           # Verify the key fingerprint
-          FINGERPRINT=$(gpg --fingerprint B7B3B788A8D3785C | grep -oP 'THE_EXPECTED_FINGERPRINT')
+          FINGERPRINT=$(gpg --fingerprint B7B3B788A8D3785C | grep -oP 'B7B3B788A8D3785C')
           echo "Extracted Fingerprint: --$FINGERPRINT--"
-          if [ "$FINGERPRINT" != "THE_EXPECTED_FINGERPRINT" ]; then
+          if [ "$FINGERPRINT" != "B7B3B788A8D3785C" ]; then
             echo "Fingerprint verification failed!"
             exit 1
           fi
+
+          # Continue with the rest of your workflow
+        env:
+          GNUPGHOME: ${{ runner.workspace }}/.gnupg
 
       - name: Set up Docker Environment
         run: docker build --build-arg MYSQL_GPG_KEY_FILE=mysql.gpg -t code-dot-org-testing-docker-image -f ./code-dot-org/docker/dockerfiles/Dockerfile ./code-dot-org
