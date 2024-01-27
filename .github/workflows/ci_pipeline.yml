@@ -60,7 +60,7 @@ jobs:
         run: ls -la ./code-dot-org/docker
 
       - name: Set up Docker Environment
-        run: docker build -t my-ci-image -f ./code-dot-org/Dockerfile ./code-dot-org
+        run: docker build -t my-ci-image -f ./code-dot-org/docker/dockerfiles/Dockerfile ./code-dot-org
 
       - name: Run Unit Tests
         run: |
