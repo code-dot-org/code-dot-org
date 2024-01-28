@@ -42,6 +42,7 @@ linters:
       - Lint/AmbiguousOperatorPrecedence
       - Lint/BooleanSymbol
       - Lint/DeprecatedClassMethods
+      - Lint/EmptyConditionalBody
       - Lint/RedundantStringCoercion
       - Lint/RedundantWithIndex
       - Lint/SafeNavigationChain
@@ -73,6 +74,7 @@ linters:
       - Style/CaseEquality
       - Style/CaseLikeIf
       - Style/ConditionalAssignment
+      - Style/EachForSimpleLoop
       - Style/EvenOdd
       - Style/For
       - Style/HashSyntax
@@ -80,6 +82,7 @@ linters:
       - Style/MultipleComparison
       - Style/NegatedIf
       - Style/NegatedIfElseCondition
+      - Style/NestedTernaryOperator
       - Style/Next
       - Style/NilComparison
       - Style/NonNilCheck
