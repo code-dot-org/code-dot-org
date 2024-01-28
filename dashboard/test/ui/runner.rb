@@ -48,7 +48,7 @@ LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, make_pub
 # @return [int] a status code
 #
 def main
-  $options = TestRunner::OptionsParser.parse_options
+  $options = TestRunner::OptionsParser.parse_options(ARGV)
   $browsers = select_browser_configs(options)
   $lock = Mutex.new
   # We track the number of failed features in this test run so we can abort the run
