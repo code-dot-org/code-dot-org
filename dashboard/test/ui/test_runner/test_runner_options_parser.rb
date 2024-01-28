@@ -1,7 +1,8 @@
 require 'ostruct'
 require 'optparse'
 
-class TestRunnerOptionsParser
+module TestRunner
+  class OptionsParser
   def initialize(argv)
     @argv = argv
     @options = OpenStruct.new
