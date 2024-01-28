@@ -47,8 +47,8 @@ LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, make_pub
 # @param [OpenStruct] options - the configuration for this test run. See parse_options for details.
 # @return [int] a status code
 #
-def main
-  $options = TestRunner::OptionsParser.parse_options(ARGV)
+def main(options)
+  $options = options
   $browsers = select_browser_configs(options)
   $lock = Mutex.new
   # We track the number of failed features in this test run so we can abort the run
@@ -714,6 +714,6 @@ end
 # This is the actual beginning of the script.
 # Please keep this simple!
 # Changes to the test procedure should live in main()
-#
-status = main
+
+status = main(TestRunner::OptionsParser.parse_options(ARGV))
 exit status
