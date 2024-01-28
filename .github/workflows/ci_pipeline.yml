@@ -24,11 +24,12 @@ jobs:
       - name: Set up GPG Environment
         run: |
           # Fetch the GPG key using gpg with the external configuration file
-          gpg --options gpg.conf --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C
+          # Fetch the GPG key using gpg without the external configuration file
+          gpg --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C
           
           # Export the key to a file
           gpg --export B7B3B788A8D3785C > mysql.gpg
-
+      
           # Verify the key fingerprint
           FINGERPRINT=$(gpg --fingerprint B7B3B788A8D3785C | grep -oP 'B7B3B788A8D3785C')
           echo "Extracted Fingerprint: --$FINGERPRINT--"
