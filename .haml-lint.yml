@@ -12,6 +12,97 @@ linters:
     enabled: true
     include:
       - '/**/*mailer*/**/*.haml'
+
+  RuboCop:
+    enabled: true
+    ignored_cops:
+      - Layout/ArrayAlignment
+      - Layout/ElseAlignment
+      - Layout/EndAlignment
+      - Layout/FirstArrayElementIndentation
+      - Layout/FirstHashElementIndentation
+      - Layout/IndentationConsistency
+      - Layout/IndentationWidth
+      - Layout/MultilineMethodCallBraceLayout
+      - Layout/SpaceAfterColon
+      - Layout/SpaceAfterComma
+      - Layout/SpaceAfterNot
+      - Layout/SpaceAroundBlockParameters
+      - Layout/SpaceAroundKeyword
+      - Layout/SpaceAroundOperators
+      - Layout/SpaceBeforeBlockBraces
+      - Layout/SpaceBeforeComma
+      - Layout/SpaceBeforeFirstArg
+      - Layout/SpaceInsideArrayLiteralBrackets
+      - Layout/SpaceInsideBlockBraces
+      - Layout/SpaceInsideHashLiteralBraces
+      - Layout/SpaceInsideParens
+      - Layout/TrailingEmptyLines
+      - Layout/TrailingWhitespace
+      - Lint/AmbiguousOperatorPrecedence
+      - Lint/BooleanSymbol
+      - Lint/DeprecatedClassMethods
+      - Lint/RedundantStringCoercion
+      - Lint/RedundantWithIndex
+      - Lint/SafeNavigationChain
+      - Lint/SafeNavigationConsistency
+      - Lint/ShadowingOuterLocalVariable
+      - Lint/SymbolConversion
+      - Lint/Syntax
+      - Lint/UnexpectedBlockArity
+      - Lint/UnusedBlockArgument
+      - Lint/UselessAssignment
+      - Lint/Void
+      - Naming/VariableName
+      - Performance/Casecmp
+      - Performance/CollectionLiteralInLoop
+      - Performance/MapCompact
+      - Performance/RegexpMatch
+      - Performance/Squeeze
+      - Performance/StringIdentifierArgument
+      - Performance/StringReplacement
+      - Rails/Blank
+      - Rails/ContentTag
+      - Rails/LinkToBlank
+      - Rails/OutputSafety
+      - Rails/Presence
+      - Rails/Present
+      - Rails/RenderInline
+      - Rails/WhereExists
+      - RailsAccessibility/ImageHasAlt
+      - Style/CaseEquality
+      - Style/CaseLikeIf
+      - Style/ConditionalAssignment
+      - Style/EvenOdd
+      - Style/For
+      - Style/HashSyntax
+      - Style/MethodCallWithoutArgsParentheses
+      - Style/MultipleComparison
+      - Style/NegatedIf
+      - Style/NegatedIfElseCondition
+      - Style/Next
+      - Style/NilComparison
+      - Style/NonNilCheck
+      - Style/ParenthesesAroundCondition
+      - Style/PreferredHashMethods
+      - Style/QuotedSymbols
+      - Style/RedundantConstantBase
+      - Style/RedundantFreeze
+      - Style/RedundantInterpolation
+      - Style/RedundantStringEscape
+      - Style/SafeNavigation
+      - Style/SelfAssignment
+      - Style/Semicolon
+      - Style/SlicingWithRange
+      - Style/SoleNestedConditional
+      - Style/StringLiteralsInInterpolation
+      - Style/SymbolLiteral
+      - Style/SymbolProc
+      - Style/UnlessElse
+      - Style/WordArray
+      - Style/YodaCondition
+      - Style/ZeroLengthPredicate
+
 exclude:
 - '/**/pegasus/test/fixtures/**/*.haml'
 - 'pegasus/test/fixtures/**/*.haml'
