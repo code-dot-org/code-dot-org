@@ -29,7 +29,7 @@ jobs:
 
       - name: Run Unit Tests
         run: |
-          docker run code-dot-org-testing-docker-image /bin/bash -c "source /home/runner/work/code-dot-org/code-dot-org/docker/unit_test.sh"
+          docker run code-dot-org-testing-docker-image /bin/bash -c "source /home/runner/work/code-dot-org/code-dot-org/docker/unit_tests.sh"
 
       - name: Run UI Tests
         run: |
