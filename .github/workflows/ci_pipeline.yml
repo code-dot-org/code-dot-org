@@ -20,6 +20,9 @@ jobs:
         uses: actions/checkout@v2
         with:
           path: code-dot-org
+      
+      - name: Prepare entrypoint script
+        run: cp ./code-dot-org/docker/dockerfiles/entrypoint.sh ./code-dot-org/
 
       - name: Set up Docker Environment
         run: docker build --build-arg MYSQL_GPG_KEY_FILE=mysql.gpg -t code-dot-org-testing-docker-image -f ./code-dot-org/docker/dockerfiles/Dockerfile ./code-dot-org
