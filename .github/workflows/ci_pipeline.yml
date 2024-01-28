@@ -20,13 +20,41 @@ jobs:
         uses: actions/checkout@v2
         with:
           path: code-dot-org
-      
+      - name: Check PR ID and Post Comment for running
+        if: github.event.pull_request.number == env.HARD_CODED_PR_ID
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const prNumber = context.issue.number;
+            const message = `Running tests on PR #${prNumber}`;
+            github.issues.createComment({
+              issue_number: prNumber,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: message
+            });      
       - name: Prepare entrypoint script
         run: cp ./code-dot-org/docker/dockerfiles/entrypoint.sh ./code-dot-org/
 
       - name: Set up Docker Environment
         run: docker build --build-arg MYSQL_GPG_KEY_FILE=mysql.gpg -t code-dot-org-testing-docker-image -f ./code-dot-org/docker/dockerfiles/Dockerfile ./code-dot-org
 
+      - name: Check PR ID and Post Docker environment finished installing
+        if: github.event.pull_request.number == env.HARD_CODED_PR_ID
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const prNumber = context.issue.number;
+            const message = `Done setting up docker environment Running tests on PR #${prNumber}`;
+            github.issues.createComment({
+              issue_number: prNumber,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: message
+            });   
+            
       - name: Run Unit Tests
         run: |
           docker run code-dot-org-testing-docker-image /bin/bash -c "source /home/runner/work/code-dot-org/docker/unit_tests.sh"
@@ -40,3 +68,4 @@ jobs:
         with:
           path: ~/.npm
           key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          
