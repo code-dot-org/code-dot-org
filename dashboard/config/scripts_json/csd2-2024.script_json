@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-25 21:51:16 UTC",
+    "serialized_at": "2024-01-26 17:32:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7943,15 +7943,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U2L12 Div Flex SB_10"
-        ],
         "progression": "Challenge Levels"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2L12 Div Flex SB_10"
+          "CSD U2 Flex challenge_2024"
         ],
         "lesson.key": "Websites for Expression",
         "lesson_group.key": "lessonGroup-2",
@@ -7959,7 +7956,7 @@
         "activity_section.key": "8b4ef7f7-510b-4416-add3-0132465f985f"
       },
       "level_keys": [
-        "CSD U2L12 Div Flex SB_10"
+        "CSD U2 Flex challenge_2024"
       ]
     },
     {
@@ -9442,9 +9439,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2L12 Div Flex SB_10",
+        "level.key": "CSD U2 Flex challenge_2024",
         "script_level.level_keys": [
-          "CSD U2L12 Div Flex SB_10"
+          "CSD U2 Flex challenge_2024"
         ],
         "lesson.key": "Websites for Expression",
         "lesson_group.key": "lessonGroup-2",
