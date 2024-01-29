@@ -44,6 +44,8 @@ si:
         locale: 'භාෂාව'
         age: 'වයස'
         gender: 'ස්ත්‍රී/පුරුෂ භාවය'
+        gender_student_input: 'ස්ත්‍රී/පුරුෂ භාවය'
+        gender_teacher_input: 'ස්ත්‍රී/පුරුෂ භාවය'
         edit_header: 'ගිනුමේ තොරතුරු 	සංස්කරණය කරන්න'
         finish_sign_up_header_error: 'කරුණාකර පහත දෝෂ නිවැරදි කරන්න:'
         error:

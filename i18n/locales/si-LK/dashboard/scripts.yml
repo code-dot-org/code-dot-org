@@ -1703,3 +1703,35 @@ si:
           lesson_groups:
             csp_unit9_2020:
               display_name: "(පැරණි) 9 වෙනි ඒකකය: දත්ත"
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: අන්තර්ගතය
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa4-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය

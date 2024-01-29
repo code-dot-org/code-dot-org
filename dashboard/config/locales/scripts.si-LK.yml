@@ -478,6 +478,10 @@ si:
           lesson_groups:
             lessonGroup-3:
               display_name: අන්තර්ගතය
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: අන්තර්ගතය
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -513,6 +517,10 @@ si:
           lesson_groups:
             lessonGroup-2:
               display_name: අන්තර්ගතය
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -544,6 +552,10 @@ si:
           lesson_groups:
             lessonGroup-2:
               display_name: අන්තර්ගතය
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -569,6 +581,10 @@ si:
             lessonGroup-2:
               display_name: අන්තර්ගතය
         csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa4-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: අන්තර්ගතය
@@ -606,6 +622,10 @@ si:
           lesson_groups:
             lessonGroup-2:
               display_name: අන්තර්ගතය
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -634,6 +654,10 @@ si:
           lesson_groups:
             lessonGroup-2:
               display_name: අන්තර්ගතය
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -659,6 +683,10 @@ si:
             lessonGroup-2:
               display_name: අන්තර්ගතය
         csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa7-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: අන්තර්ගතය
@@ -691,6 +719,10 @@ si:
             lessonGroup-2:
               display_name: අන්තර්ගතය
         csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa8-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: අන්තර්ගතය
