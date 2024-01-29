@@ -104,8 +104,10 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
     // Argument of type (event: MouseEvent<Document>) => void is not assignable to parameter of type (this: Document, ev: MouseEvent) => any
     // Types of parameters event and ev are incompatible.
     document.addEventListener('mousedown', handleClickOutside as never);
+    document.addEventListener('keydown', handleClickOutside as never);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside as never);
+      document.removeEventListener('keydown', handleClickOutside as never);
     };
   }, [handleClickOutside]);
 
