@@ -1029,6 +1029,10 @@ fi:
           COLOR:
             '"blue"': sininen
             '"red"': punainen
+      KatiesBlocks_changeVelocity:
+        text: muuta {SPRITE} {PROPERTY} määrä {VAL}
+      KatiesBlocks_setVelocity:
+        text: aseta {SPRITE} {PROPERTY} arvoksi {VAL}
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} alkaa {BEHAVIOR}
       Mikelab_addTrainingData:

@@ -526,6 +526,10 @@ fi:
           lesson_groups:
             lessonGroup-2:
               display_name: Kysely
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kysely
         csa1-validation-pilot-2022:
           lesson_groups:
             lessonGroup-5:
@@ -547,6 +551,10 @@ fi:
             lessonGroup-4:
               display_name: Kysely
         csa8-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Kysely
+        csa8-2025:
           lesson_groups:
             lessonGroup-4:
               display_name: Kysely

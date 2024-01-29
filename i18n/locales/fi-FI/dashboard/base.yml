@@ -50,6 +50,8 @@ fi:
         locale: 'Kieli'
         age: 'Ikä'
         gender: 'Sukupuoli'
+        gender_student_input: 'Sukupuoli'
+        gender_teacher_input: 'Sukupuoli'
         edit_header: 'Muokkaa tiliä'
         finish_sign_up_header: 'Viimeistele tilin luominen'
         finish_sign_up_header_error: 'Ole hyvä ja korjaa seuraavat virheet:'

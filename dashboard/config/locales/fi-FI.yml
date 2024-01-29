@@ -21,6 +21,8 @@ fi:
         finish_sign_up_subheader_provider_markdown: Täytä seuraavat tiedot viimeistelläksesi
           Code.org -tilin luomisen palvelun **%{provider}** tunnuksella **%{email}**.
         gender: Sukupuoli
+        gender_student_input: Sukupuoli
+        gender_teacher_input: Sukupuoli
         locale: Kieli
         name: Nimimerkki
         name_example: Nimimerkki (esim. Viileä Koodaaja tai Jaana S.)
