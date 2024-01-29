@@ -39,6 +39,8 @@ lt:
         locale: 'Kalba'
         age: 'Amžius'
         gender: 'Lytis'
+        gender_student_input: 'Lytis'
+        gender_teacher_input: 'Lytis'
         edit_header: 'Keisti paskyros duomenis'
         finish_sign_up_header_error: 'Ištaisyk šias klaidas:'
         error:

@@ -11,6 +11,8 @@ lt:
           future: negali būti ateitis
         finish_sign_up_header_error: 'Ištaisyk šias klaidas:'
         gender: Lytis
+        gender_student_input: Lytis
+        gender_teacher_input: Lytis
         locale: Kalba
         name: Tavo vardas
         name_example: Tavo vardas (jį matys tavo mokytoja(-s))
