@@ -525,6 +525,10 @@ hy:
           lesson_groups:
             lessonGroup-3:
               display_name: պարունակություն
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: պարունակություն
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -560,6 +564,10 @@ hy:
           lesson_groups:
             lessonGroup-2:
               display_name: պարունակություն
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -591,6 +599,10 @@ hy:
           lesson_groups:
             lessonGroup-2:
               display_name: պարունակություն
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -616,6 +628,10 @@ hy:
             lessonGroup-2:
               display_name: պարունակություն
         csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa4-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: պարունակություն
@@ -653,6 +669,10 @@ hy:
           lesson_groups:
             lessonGroup-2:
               display_name: պարունակություն
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -681,6 +701,10 @@ hy:
           lesson_groups:
             lessonGroup-2:
               display_name: պարունակություն
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -706,6 +730,10 @@ hy:
             lessonGroup-2:
               display_name: պարունակություն
         csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa7-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: պարունակություն
@@ -738,6 +766,10 @@ hy:
             lessonGroup-2:
               display_name: պարունակություն
         csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa8-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: պարունակություն

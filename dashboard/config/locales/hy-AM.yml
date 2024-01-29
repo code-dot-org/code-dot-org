@@ -11,6 +11,8 @@ hy:
           future: հակում է լինի ապագայում
         finish_sign_up_header_error: 'Խնդրում ենք ուղղել հետեւյալ սխալներ:'
         gender: Սեռ
+        gender_student_input: Սեռ
+        gender_teacher_input: Սեռ
         locale: Լեզու
         name: Ցուցադրել Անունը
         password: գաղտնաբառ

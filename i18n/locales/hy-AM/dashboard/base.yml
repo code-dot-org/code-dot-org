@@ -37,6 +37,8 @@ hy:
         locale: 'Լեզու'
         age: 'Տարիք'
         gender: 'Սեռ'
+        gender_student_input: 'Սեռ'
+        gender_teacher_input: 'Սեռ'
         edit_header: 'Խմբագրել Հաշիվը Մանրամասներ'
         finish_sign_up_header_error: 'Խնդրում ենք ուղղել հետեւյալ սխալներ:'
         error:

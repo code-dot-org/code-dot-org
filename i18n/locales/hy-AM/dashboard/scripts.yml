@@ -1705,3 +1705,35 @@ hy:
           lesson_groups:
             csp_unit9_2020:
               display_name: CS Principles Unit 9
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: պարունակություն
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa4-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
