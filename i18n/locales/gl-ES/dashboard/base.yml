@@ -45,6 +45,8 @@ gl:
         locale: 'Idioma'
         age: 'Idade'
         gender: 'Xénero'
+        gender_student_input: 'Xénero'
+        gender_teacher_input: 'Xénero'
         edit_header: 'Editar os Detalles da Conta'
         finish_sign_up_header: 'Remata de crear a túa conta'
         finish_sign_up_header_error: 'Por favor, corrixe os seguintes erros:'

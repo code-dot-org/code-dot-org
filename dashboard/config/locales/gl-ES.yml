@@ -20,6 +20,8 @@ gl:
         finish_sign_up_subheader_provider_markdown: Completa a seguinte información
           para acabar de crear unha conta de Code.org con **%{provider}** para **%{email}**.
         gender: Xénero
+        gender_student_input: Xénero
+        gender_teacher_input: Xénero
         locale: Idioma
         name: Nome a mostrar
         name_example: 'Nome amosado (ex: Antía C. ou Trasno)'
