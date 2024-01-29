@@ -2,6 +2,7 @@ name: CI Pipeline
 
 on:
   workflow_dispatch:
+    # Add additional trigger events as needed (e.g., push, pull_request, etc.)
 
 env:
   AWS_DEFAULT_REGION: us-east-1
@@ -14,19 +15,24 @@ jobs:
     runs-on: ubuntu-latest
     if: github.actor == 'pablo-code-org'
 
-    services:
-      mysql:
-        image: mysql:5.7
-        env:
-          MYSQL_ROOT_PASSWORD: ${{ env.MYSQL_ROOT_PASSWORD }}
-        ports:
-          - 3306:3306
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
         with:
           path: code-dot-org
+
+      - name: Find and Cache Stale Files
+        id: stalefiles
+        run: |
+          find code-dot-org -type f -not -path './.git/*' -mtime +730 > stale_files.txt
+          echo "::set-output name=stale_hash::$(sha256sum stale_files.txt | cut -d ' ' -f1)"
+
+      - name: Cache stale files
+        uses: actions/cache@v2
+        with:
+          path: |
+            $(cat stale_files.txt)
+          key: ${{ runner.os }}-stale-${{ steps.stalefiles.outputs.stale_hash }}
 
       - name: Get Branch Name from Hardcoded Pull Request ID
         id: get_branch
@@ -36,8 +42,7 @@ jobs:
                         https://api.github.com/repos/code-dot-org/code-dot-org/pulls/$PR_ID)
           BRANCH_NAME=$(echo $PR_DATA | jq -r .head.ref)
           echo "Branch Name: $BRANCH_NAME"
-          echo "::set-output name=branch_name::$BRANCH_NAME"
-        working-directory: /home/runner/work/code-dot-org/code-dot-org/
+          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
 
       - name: Checkout Branch
         uses: actions/checkout@v2
@@ -46,24 +51,27 @@ jobs:
           path: code-dot-org
           repository: code-dot-org/code-dot-org
           token: ${{ secrets.GITHUB_TOKEN }}
-          working-directory: /home/runner/work/code-dot-org/code-dot-org/
+          fetch-depth: 0
+
+      - name: Prepare entrypoint script
+        run: cp ./code-dot-org/docker/dockerfiles/entrypoint.sh ./code-dot-org/
 
       - name: Set up Docker Environment
-        run: docker build -t my-ci-image -f ./docker/dockerfiles/Dockerfile .
-        working-directory: /home/runner/work/code-dot-org/code-dot-org/
+        run: docker build -t code-dot-org-testing-docker-image -f ./code-dot-org/docker/dockerfiles/Dockerfile ./code-dot-org
 
       - name: Run Unit Tests
         run: |
-          docker run my-ci-image /bin/bash -c "source ./docker/unit_test.sh"
-        working-directory: /home/runner/work/code-dot-org/code-dot-org/
+          docker run --workdir=/home/code-dot-org \
+            code-dot-org-testing-docker-image \
+            /bin/bash -c "ls -la /home/code-dot-org/docker; source /home/code-dot-org/docker/unit_tests.sh"
 
       - name: Run UI Tests
         run: |
-          docker run my-ci-image /bin/bash -c "source ./docker/ui_tests.sh"
-        working-directory: /home/runner/work/code-dot-org/code-dot-org/
+          docker run --workdir=/home/code-dot-org \
+            code-dot-org-testing-docker-image \
+            /bin/bash -c "ls -la /home/code-dot-org/docker; source /home/code-dot-org/docker/ui_tests.sh"
 
       - name: Update Cache
         uses: actions/cache@v2
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
