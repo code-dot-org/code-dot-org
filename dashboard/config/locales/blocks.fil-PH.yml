@@ -1075,6 +1075,8 @@ fil:
           INPUT1:
             '1': katas ng limon
         text: Ang mikroskopyo merong {INPUT1}
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -1107,6 +1109,8 @@ fil:
         text: kumakatawan sa {NUM} bagong {ANIMATION_NAME} sprite [BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}sabihin{TEXT1}"
+      KatiesBlocks_changeVelocity:
+        text: palitan ang {SPRITE} {PROPERTY} ng {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} dumausdos sa {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1115,6 +1119,8 @@ fil:
             '"gas"': gas
             '"liquid"': likido
             '"solid"': matibay
+      KatiesBlocks_setVelocity:
+        text: set {SPRITE} {PROPERTY} sa {VAL}
       KatiesBlocks_tumbling:
         text: gumulung-gulong
       Mikelab_addBehaviorSimple:

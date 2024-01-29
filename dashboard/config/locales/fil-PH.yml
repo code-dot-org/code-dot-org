@@ -22,6 +22,8 @@ fil:
           upang matapos ang paglikha ng isang Code.org account na may **%{provider}
           para kay %{email}**.
         gender: Kasarian
+        gender_student_input: Kasarian
+        gender_teacher_input: Kasarian
         locale: Lengwahe
         name: Ipapakita na Pangalan
         name_example: Naka-display na Pangalan (e.g. Cool Coder o Jane S.)

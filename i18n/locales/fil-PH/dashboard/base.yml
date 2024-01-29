@@ -51,6 +51,8 @@ fil:
         locale: 'Lengwahe'
         age: 'Edad'
         gender: 'Kasarian'
+        gender_student_input: 'Kasarian'
+        gender_teacher_input: 'Kasarian'
         edit_header: 'Palitan ang Account Details'
         finish_sign_up_header: 'Tapusin ang paglikha ng iyong account'
         finish_sign_up_header_error: 'Pakiwasto ang mga sumusunod na mga error:'

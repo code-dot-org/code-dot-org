@@ -1074,6 +1074,8 @@ fil:
         options:
           INPUT1:
             '1': katas ng limon
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         text: gawin ang {EFFECT} effect
         options:
@@ -1760,6 +1762,8 @@ fil:
         text: x coordinate ng {SPRITE}
       gamelab_yLocationOf:
         text: y ang mga {SPRITE}
+      KatiesBlocks_changeVelocity:
+        text: palitan ang {SPRITE} {PROPERTY} ng {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} dumausdos sa {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1768,6 +1772,8 @@ fil:
             '"solid"': matibay
             '"liquid"': likido
             '"gas"': gas
+      KatiesBlocks_setVelocity:
+        text: set {SPRITE} {PROPERTY} sa {VAL}
       KatiesBlocks_tumbling:
         text: gumulung-gulong
       Mikelab_addBehaviorSimple:
