@@ -7,6 +7,8 @@ my:
         current_password: စကားဝှက်အဟောင်း
         email: email လိပ္စာ
         gender: က်ား/မ
+        gender_student_input: က်ား/မ
+        gender_teacher_input: က်ား/မ
         locale: ဘာသာစကား
         parent_email: မိဘ/အုပ်ထိန်းသူ အီးမေး
         username: အသုံးပြုမည့်အမည်

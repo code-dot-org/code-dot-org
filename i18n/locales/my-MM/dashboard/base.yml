@@ -27,6 +27,8 @@ my:
         locale: 'ဘာသာစကား'
         age: 'အသက်'
         gender: 'က်ား/မ'
+        gender_student_input: 'က်ား/မ'
+        gender_teacher_input: 'က်ား/မ'
   hello: "မဂၤလာပါ ကမာၻၾကီး"
   submit: ပေးပို့ပါ
   cancel: "ပယ်ဖျတ်သည်"
