@@ -4,7 +4,11 @@ import {
 } from '@cdo/apps/aichat/chatApi';
 import {Role, Status, ChatCompletionMessage} from '@cdo/apps/aichat/types';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
-import {generalChatSystemPrompt} from '@cdo/apps/aiTutor/constants';
+import {
+  aiTutorTypes,
+  validationSystemPrompt,
+  generalChatSystemPrompt,
+} from '@cdo/apps/aiTutor/constants';
 import {savePromptAndResponse} from '../interactionsApi';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
@@ -65,7 +69,24 @@ export const askAITutor = createAsyncThunk(
     );
 
     thunkAPI.dispatch(addAIResponse(chatApiResponse?.content));
-    savePromptAndResponse();
+    const prompt = ChatContext.systemPrompt + ChatContext.studentCode;
+    const type =
+      ChatContext.systemPrompt === validationSystemPrompt
+        ? aiTutorTypes.VALIDATION
+        : aiTutorTypes.COMPILATION;
+
+    const interactionData = {
+      userId: 123456789,
+      levelId: ChatContext.levelId,
+      scriptId: 123,
+      type: type,
+      prompt: prompt,
+      status: chatApiResponse?.status,
+      aiResponse: chatApiResponse?.content,
+    };
+
+    console.log('interactionData', interactionData);
+    savePromptAndResponse(interactionData);
   }
 );
 
@@ -114,7 +135,6 @@ export const submitChatMessage = createAsyncThunk(
         chatMessageText: chatApiResponse.assistantResponse,
       };
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
-      savePromptAndResponse();
     }
   }
 );
