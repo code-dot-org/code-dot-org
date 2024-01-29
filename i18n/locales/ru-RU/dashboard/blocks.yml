@@ -1083,6 +1083,8 @@ ru:
             '1': лимонный сок
             '3': пищевая сода
             '5': оба
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         text: выполнить эффект  {EFFECT}
         options:
@@ -1781,6 +1783,8 @@ ru:
         text: x координата {SPRITE}
       gamelab_yLocationOf:
         text: y координата {SPRITE}
+      KatiesBlocks_changeVelocity:
+        text: изменить {SPRITE} {PROPERTY} на {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} плавно перейти к {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1789,6 +1793,8 @@ ru:
             '"solid"': твердый
             '"liquid"': жидкий
             '"gas"': газ
+      KatiesBlocks_setVelocity:
+        text: установить {SPRITE} {PROPERTY} в {VAL}
       KatiesBlocks_tumbling:
         text: акробатика
       Mikelab_addBehaviorSimple:

@@ -20,6 +20,8 @@ ru:
         finish_sign_up_subheader_provider_markdown: Заполните следующую информацию
           для завершения создания учетной записи на Code.org с **%{provider}** **%{email}**.
         gender: Пол
+        gender_student_input: Пол
+        gender_teacher_input: Пол
         locale: Язык
         name: Отобразить имя
         name_example: Отображаемое имя (например, Крутой Кодер или Джейн С.)

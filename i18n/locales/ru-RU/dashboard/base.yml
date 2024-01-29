@@ -51,6 +51,8 @@ ru:
         locale: 'Язык'
         age: 'Возраст'
         gender: 'Пол'
+        gender_student_input: 'Пол'
+        gender_teacher_input: 'Пол'
         edit_header: 'Изменить учетные данные'
         finish_sign_up_header: 'Завершите создание учетной записи'
         finish_sign_up_header_error: 'Исправьте следующие ошибки:'
