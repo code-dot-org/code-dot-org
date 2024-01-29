@@ -486,6 +486,10 @@ kk:
           lesson_groups:
             lessonGroup-3:
               display_name: Контент
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Контент
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -521,6 +525,10 @@ kk:
           lesson_groups:
             lessonGroup-2:
               display_name: Контент
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -552,6 +560,10 @@ kk:
           lesson_groups:
             lessonGroup-2:
               display_name: Контент
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -577,6 +589,10 @@ kk:
             lessonGroup-2:
               display_name: Контент
         csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa4-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Контент
@@ -614,6 +630,10 @@ kk:
           lesson_groups:
             lessonGroup-2:
               display_name: Контент
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -642,6 +662,10 @@ kk:
           lesson_groups:
             lessonGroup-2:
               display_name: Контент
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -667,6 +691,10 @@ kk:
             lessonGroup-2:
               display_name: Контент
         csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa7-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Контент
@@ -699,6 +727,10 @@ kk:
             lessonGroup-2:
               display_name: Контент
         csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa8-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Контент

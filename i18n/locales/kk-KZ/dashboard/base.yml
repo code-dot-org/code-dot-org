@@ -36,6 +36,8 @@ kk:
         locale: 'Тілі'
         age: 'Жасы'
         gender: 'Жынысы'
+        gender_student_input: 'Жынысы'
+        gender_teacher_input: 'Жынысы'
         edit_header: 'Жеке парақша мәліметтерін өзгерту'
         finish_sign_up_header_error: 'Өтінеміз көрсетілген қателерді түзетіңіз:'
         error:

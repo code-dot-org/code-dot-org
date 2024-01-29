@@ -11,6 +11,8 @@ kk:
           future: болашақта болуы мүмкін емес
         finish_sign_up_header_error: 'Өтінеміз көрсетілген қателерді түзетіңіз:'
         gender: Жынысы
+        gender_student_input: Жынысы
+        gender_teacher_input: Жынысы
         locale: Тілі
         name: Аты
         password: Құпия сөз
