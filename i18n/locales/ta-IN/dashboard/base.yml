@@ -51,6 +51,8 @@ ta:
         locale: 'மொழி'
         age: 'வயது'
         gender: 'பாலினம்'
+        gender_student_input: 'பாலினம்'
+        gender_teacher_input: 'பாலினம்'
         edit_header: 'கணக்கு விவரங்களை திருத்து'
         finish_sign_up_header: 'உங்கள் கணக்கை உருவாக்குவதை முடிக்கவும்'
         finish_sign_up_header_error: 'பின்வரும் பிழைகளைத் திருத்துக:'

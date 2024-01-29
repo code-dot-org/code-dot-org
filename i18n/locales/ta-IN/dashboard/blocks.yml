@@ -1665,6 +1665,8 @@ ta:
         text: x ஒருங்கிணைப்பு {SPRITE}
       gamelab_yLocationOf:
         text: y ஒருங்கிணைப்பு {SPRITE}
+      KatiesBlocks_changeVelocity:
+        text: மாற்றவும் {SPRITE} {PROPERTY} இந்த அளவிற்கு {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} சறுக்கி {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1673,6 +1675,8 @@ ta:
             '"solid"': திடமான
             '"liquid"': திரவம்
             '"gas"': கேஸ்
+      KatiesBlocks_setVelocity:
+        text: "{SPRITE} {PROPERTY} ஐ {VAL} ஆக்கவும்"
       KatiesBlocks_tumbling:
         text: உருளும்
       Mikelab_addBehaviorSimple:

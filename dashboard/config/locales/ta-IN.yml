@@ -20,6 +20,8 @@ ta:
         finish_sign_up_subheader_provider_markdown: "**%{email}** க்கு **%{provider}**
           உடன் Code.org கணக்கை உருவாக்கி முடிக்க பின்வரும் தகவலை நிரப்பவும்."
         gender: பாலினம்
+        gender_student_input: பாலினம்
+        gender_teacher_input: பாலினம்
         locale: மொழி
         name: காட்டப்படும் பெயர்
         name_example: காட்சி பெயர் (e.g. Cool Coder or Jane S.)

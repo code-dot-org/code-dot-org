@@ -1026,6 +1026,8 @@ ta:
         text: பிரதிநிதித்துவம் {NUM} புதிய {ANIMATION_NAME} உருவங்களுக்கு [BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE} சொல் {TEXT1}"
+      KatiesBlocks_changeVelocity:
+        text: மாற்றவும் {SPRITE} {PROPERTY} இந்த அளவிற்கு {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} சறுக்கி {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1034,6 +1036,8 @@ ta:
             '"gas"': கேஸ்
             '"liquid"': திரவம்
             '"solid"': திடமான
+      KatiesBlocks_setVelocity:
+        text: "{SPRITE} {PROPERTY} ஐ {VAL} ஆக்கவும்"
       KatiesBlocks_tumbling:
         text: உருளும்
       Mikelab_addBehaviorSimple:
