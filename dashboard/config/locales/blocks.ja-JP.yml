@@ -1082,6 +1082,8 @@ ja:
           INPUT1:
             '1': レモンジュース
         text: 顕微鏡には{INPUT1}があります
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -1114,6 +1116,8 @@ ja:
         text: "{NUM}新しい{ANIMATION_NAME}スプライト[BEHAVIOR][2]を表す"
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE} が {TEXT1} と言う"
+      KatiesBlocks_changeVelocity:
+        text: "{SPRITE} {PROPERTY} を {VAL} 変更"
       KatiesBlocks_glideTo:
         text: "{SPRITE} が {LOCATION} へと進む"
       KatiesBlocks_goldilocks:
@@ -1125,6 +1129,8 @@ ja:
         text: |2-
            もし {CONDITION}{SPRITE}
           {STATEMENT}
+      KatiesBlocks_setVelocity:
+        text: 設定 {SPRITE} {PROPERTY} 宛先 {VAL}
       KatiesBlocks_tumbling:
         text: ころがる
       Mikelab_addBehaviorSimple:

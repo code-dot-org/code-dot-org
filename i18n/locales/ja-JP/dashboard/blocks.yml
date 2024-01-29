@@ -1082,6 +1082,8 @@ ja:
         options:
           INPUT1:
             '1': レモンジュース
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         text: "{EFFECT} 前景エフェクトを実行する"
         options:
@@ -1764,6 +1766,8 @@ ja:
         text: x 座標の {SPRITE}
       gamelab_yLocationOf:
         text: y 座標 {SPRITE}
+      KatiesBlocks_changeVelocity:
+        text: "{SPRITE} {PROPERTY} を {VAL} 変更"
       KatiesBlocks_glideTo:
         text: "{SPRITE} が {LOCATION} へと進む"
       KatiesBlocks_goldilocks:
@@ -1775,6 +1779,8 @@ ja:
             '"solid"': 単色
             '"liquid"': 液体
             '"gas"': ガス
+      KatiesBlocks_setVelocity:
+        text: 設定 {SPRITE} {PROPERTY} 宛先 {VAL}
       KatiesBlocks_tumbling:
         text: ころがる
       Mikelab_addBehaviorSimple:
