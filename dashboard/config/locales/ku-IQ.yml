@@ -20,6 +20,8 @@ ku:
         finish_sign_up_subheader_provider_markdown: ئەم زانیاریانەی خوارەوە پڕبكەوە
           بۆ درووستكردنی هەژماری (Code.org) بە **%{provider}** بۆ **%{email}**.
         gender: ڕەگەز
+        gender_student_input: ڕەگەز
+        gender_teacher_input: ڕەگەز
         locale: زمان
         name: ناوی پیشاندراو
         name_example: 'ناوی پیشاندراو (نمونە: بەرنامەسازە ناوازەکە یان ئازاد س.)'

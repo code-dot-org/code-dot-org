@@ -45,6 +45,8 @@ ku:
         locale: 'زمان'
         age: 'تەمەن'
         gender: 'ڕەگەز'
+        gender_student_input: 'ڕەگەز'
+        gender_teacher_input: 'ڕەگەز'
         edit_header: 'دەستکاریکردنی وردەکارییەکانی هەژمار'
         finish_sign_up_header: 'كرداری درووستكردنی هەژمارەكەت تەواوبكە'
         finish_sign_up_header_error: 'تکایە ئەم هەڵانەی خوارەوە ڕاست بکەوە:'

@@ -866,6 +866,10 @@ ku:
           COLOR:
             '"blue"': شین
             '"red"': سور
+      KatiesBlocks_changeVelocity:
+        text: بگۆڕە {SPRITE} {PROPERTY} بە بڕی {VAL}
+      KatiesBlocks_setVelocity:
+        text: دابنی {SPRITE} {PROPERTY} بە بڕی {VAL}
       Mikelab_addBehaviorSimple:
         text: سپڕایت {SPRITE} دەستپێدەکات {BEHAVIOR}
       Mikelab_allSpritesWithAnimation:
