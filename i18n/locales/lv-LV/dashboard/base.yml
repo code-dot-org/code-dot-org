@@ -38,6 +38,8 @@ lv:
         locale: 'Valoda'
         age: 'Vecums'
         gender: 'Dzimums'
+        gender_student_input: 'Dzimums'
+        gender_teacher_input: 'Dzimums'
         edit_header: 'Rediģēt konta detaļas'
         finish_sign_up_header_error: 'Lūdzu, izlabojiet šādas kļūdas:'
         error:

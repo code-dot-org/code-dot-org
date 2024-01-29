@@ -11,6 +11,8 @@ lv:
           future: nevar būt nākotnē
         finish_sign_up_header_error: 'Lūdzu, izlabojiet šādas kļūdas:'
         gender: Dzimums
+        gender_student_input: Dzimums
+        gender_teacher_input: Dzimums
         locale: Valoda
         name: Vārds ekrānā
         parent_email: Vecāka/aizbildņa e-pasts
