@@ -51,6 +51,8 @@ mn:
         locale: 'Хэл'
         age: 'Нас'
         gender: 'Жендер'
+        gender_student_input: 'Жендер'
+        gender_teacher_input: 'Жендер'
         edit_header: 'Бүртгэлийн мэдээллээ засах'
         finish_sign_up_header: 'Бүртгэлээ үүсгэж дуусгах'
         finish_sign_up_header_error: 'Дараах алдааг засаарай:'

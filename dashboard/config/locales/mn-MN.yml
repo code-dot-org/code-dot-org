@@ -20,6 +20,8 @@ mn:
         finish_sign_up_subheader_provider_markdown: "**%{email}**-д зориулж **%{provider}**-н
           хамт Code.org-н бүртгэл үүсгэж дуусгахын тулд дараах мэдээллийг бөглөөрэй."
         gender: Жендер
+        gender_student_input: Жендер
+        gender_teacher_input: Жендер
         locale: Хэл
         name: Дэлгэцийн нэр
         name_example: Дэлгэцийн нэр(жишээ нь, Күүл Кодер эсвэл Жэйн С.)

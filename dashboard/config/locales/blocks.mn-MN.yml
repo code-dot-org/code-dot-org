@@ -1038,6 +1038,10 @@ mn:
           COLOR:
             '"blue"': цэнхэр
             '"red"': улаан
+      KatiesBlocks_changeVelocity:
+        text: "{SPRITE} {PROPERTY}-г {VAL}-р өөрчлөх"
+      KatiesBlocks_setVelocity:
+        text: "{SPRITE} {PROPERTY}-г {VAL} руу тохируулах"
       Mikelab_addBehaviorSimple:
         text: шидтэн {SPRITE} нь {BEHAVIOR}-г эхлүүлнэ
       Mikelab_addTrainingData:
