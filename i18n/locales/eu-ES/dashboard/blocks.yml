@@ -676,6 +676,8 @@ eu:
             '"w"': w
             '"s"': s
             '"d"': d
+      KatiesBlocks_changeVelocity:
+        text: aldatu {SPRITE} {PROPERTY} honekin {VAL}
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} hasi {BEHAVIOR}
       Mikelab_changePropBy:

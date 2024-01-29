@@ -11,6 +11,8 @@ eu:
           future: ezin du izan etorkizunean
         finish_sign_up_header_error: 'Zuzendu hurrengo akatsak mesedez:'
         gender: Generoa
+        gender_student_input: Generoa
+        gender_teacher_input: Generoa
         locale: Hizkuntza
         name: Izena Erakutsi
         parent_email: Guraso/tutore emaila

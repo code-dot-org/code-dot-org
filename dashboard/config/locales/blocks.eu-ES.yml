@@ -484,6 +484,8 @@ eu:
           COLOR:
             '"blue"': urdin
             '"red"': gorri
+      KatiesBlocks_changeVelocity:
+        text: aldatu {SPRITE} {PROPERTY} honekin {VAL}
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} hasi {BEHAVIOR}
       Mikelab_changePropBy:

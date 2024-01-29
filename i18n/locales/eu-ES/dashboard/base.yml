@@ -40,6 +40,8 @@ eu:
         locale: 'Hizkuntza'
         age: 'Adina'
         gender: 'Generoa'
+        gender_student_input: 'Generoa'
+        gender_teacher_input: 'Generoa'
         edit_header: 'Aldatu kontuaren xehetasunak'
         finish_sign_up_header_error: 'Zuzendu hurrengo akatsak mesedez:'
         error:
