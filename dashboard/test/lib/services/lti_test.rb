@@ -197,6 +197,7 @@ class Services::LtiTest < ActiveSupport::TestCase
   end
 
   test 'create_lti_integration should create an LtiIntegration when given valid inputs' do
+    name = "name"
     client_id = 'client_id'
     issuer = 'issuer'
     platform_name = 'platform_name'
@@ -206,6 +207,7 @@ class Services::LtiTest < ActiveSupport::TestCase
     admin_email = 'admin_email'
 
     integration = Services::Lti.create_lti_integration(
+      name: name,
       client_id: client_id,
       issuer: issuer,
       platform_name: platform_name,
