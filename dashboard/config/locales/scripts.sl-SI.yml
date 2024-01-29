@@ -458,6 +458,10 @@ sl:
           lesson_groups:
             lessonGroup-3:
               display_name: Vsebina
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Vsebina
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -493,6 +497,10 @@ sl:
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -521,6 +529,10 @@ sl:
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -546,6 +558,10 @@ sl:
             lessonGroup-2:
               display_name: Vsebina
         csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa4-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina
@@ -583,6 +599,10 @@ sl:
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -611,6 +631,10 @@ sl:
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -636,6 +660,10 @@ sl:
             lessonGroup-2:
               display_name: Vsebina
         csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa7-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina
@@ -668,6 +696,10 @@ sl:
             lessonGroup-2:
               display_name: Vsebina
         csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa8-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina

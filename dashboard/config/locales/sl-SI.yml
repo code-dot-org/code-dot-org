@@ -12,6 +12,8 @@ sl:
         finish_sign_up_header: Dokončaj registracijo
         finish_sign_up_header_error: 'Prosim popravite sledeče napake:'
         gender: Spol
+        gender_student_input: Spol
+        gender_teacher_input: Spol
         locale: Jezik
         name: Prikazno ime
         parent_email: Elektronska pošta staršev/skrbnikov

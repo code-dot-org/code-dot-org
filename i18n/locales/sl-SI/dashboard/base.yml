@@ -41,6 +41,8 @@ sl:
         locale: 'Jezik'
         age: 'Starost'
         gender: 'Spol'
+        gender_student_input: 'Spol'
+        gender_teacher_input: 'Spol'
         edit_header: 'Uredi podrobnosti računa'
         finish_sign_up_header: 'Dokončaj registracijo'
         finish_sign_up_header_error: 'Prosim popravite sledeče napake:'
