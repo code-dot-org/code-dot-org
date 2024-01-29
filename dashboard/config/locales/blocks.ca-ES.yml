@@ -1085,6 +1085,8 @@ ca:
             '3': bicarbonat de sodi
             '5': tots dos
         text: El microscopi té {INPUT1}
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -1142,6 +1144,8 @@ ca:
         text: "[testing] representar {NUM} sprites {ANIMATION_NAME} nous"
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}dir{TEXT1}"
+      KatiesBlocks_changeVelocity:
+        text: canvi {SPRITE} {PROPERTY} per {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} patina cap a {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1153,6 +1157,8 @@ ca:
         text: |2-
            si {CONDITION}{SPRITE}
           {STATEMENT}
+      KatiesBlocks_setVelocity:
+        text: configurar {SPRITE} {PROPERTY} a {VAL}
       KatiesBlocks_spriteBirdSay:
         options:
           SPEECH:

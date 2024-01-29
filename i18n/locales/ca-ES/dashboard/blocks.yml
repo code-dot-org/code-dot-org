@@ -1083,6 +1083,8 @@ ca:
             '1': suc de llimona
             '3': bicarbonat de sodi
             '5': tots dos
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         text: fer efecte {EFFECT}
         options:
@@ -1799,6 +1801,8 @@ ca:
         text: coordenada x de {SPRITE}
       gamelab_yLocationOf:
         text: coordenada y de {SPRITE}
+      KatiesBlocks_changeVelocity:
+        text: canvi {SPRITE} {PROPERTY} per {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} patina cap a {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1810,6 +1814,8 @@ ca:
             '"solid"': sòlid
             '"liquid"': líquid
             '"gas"': gas
+      KatiesBlocks_setVelocity:
+        text: configurar {SPRITE} {PROPERTY} a {VAL}
       KatiesBlocks_spriteBirdSay:
         text: "{SPRITE} diu {SPEECH}"
         options:

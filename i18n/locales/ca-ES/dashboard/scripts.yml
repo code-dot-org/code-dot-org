@@ -8590,3 +8590,120 @@ ca:
           title: CS Principis Enquesta post-curs
           description: Aquesta unitat conté el CS Principis Post-Curs Enquesta.
           student_description: Aquesta unitat conté una enquesta sobre el Curs de Principis CS. El vostre professor us indicarà quan és el moment de fer aquesta enquesta.
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Enquesta
+            lessonGroup-3:
+              display_name: Contingut
+            lessonGroup-4:
+              display_name: Mostra el que saps
+            lessonGroup-6:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-5:
+              display_name: Lliçons alternatives
+            lessonGroup-7:
+              display_name: Caixes de sorra
+          title: Programació Orientada a Objectes
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-5:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-4:
+              display_name: Lliçons alternatives
+            lessonGroup-6:
+              display_name: Caixes de sorra
+          title: Estructura i disseny de classes
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-5:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-4:
+              display_name: Lliçons alternatives
+            lessonGroup-6:
+              display_name: Caixes de sorra
+          title: Matrius i algoritmes
+        csa4-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-5:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-4:
+              display_name: Lliçons alternatives
+            lessonGroup-6:
+              display_name: Caixes de sorra
+          title: Condicions i lògica
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-5:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-4:
+              display_name: Lliçons alternatives
+            lessonGroup-6:
+              display_name: Caixes de sorra
+          title: Matrius bidimensionals
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-5:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-4:
+              display_name: Lliçons alternatives
+            lessonGroup-6:
+              display_name: Caixes de sorra
+          title: ArrayLists i Mètodes de cadena
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-4:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-5:
+              display_name: Lliçons alternatives
+            lessonGroup-6:
+              display_name: Caixes de sorra
+          title: Mètode de descomposició i recursivitat
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-4:
+              display_name: Enquesta
+            lessonGroup-5:
+              display_name: Lliçons alternatives
+            lessonGroup-6:
+              display_name: Caixes de sorra
+          title: Cercar i ordenar
+        csa9-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Revisió i pràctica
+            lessonGroup-3:
+              display_name: Exàmens simulacre
+            lessonGroup-4:
+              display_name: Caixes de sorra
+          description: Aquesta unitat prepara els estudiants per a l'examen d'AP CSA mitjançant la revisió dels conceptes clau, la pràctica de preguntes d'elecció múltiple i de resposta lliure, i l'enfortiment de les estratègies de presa de proves. Els estudiants identifiquen fortaleses i àrees de millora per crear plans d'estudi individualitzats per centrar la seva pràctica i autoavaluar el seu progrés.
+          student_description: Aquesta unitat us prepara per a l'examen AP CSA mitjançant la revisió dels conceptes clau, la pràctica de preguntes d'elecció múltiple i de resposta lliure, i l'enfortiment de les estratègies de presa de proves. Identifiques fortaleses i àrees de millora per crear plans d'estudi individualitzats per enfocar la pràctica i autoavaluar el teu progrés.
+          description_short: Els estudiants es preparen per l'examen AP CSA mitjançant la pràctica d'estratègies per a les preguntes d'elecció múltiple i de resposta lliure.

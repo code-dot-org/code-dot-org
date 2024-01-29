@@ -20,6 +20,8 @@ ca:
         finish_sign_up_subheader_provider_markdown: Empleneu la informació següent
           per acabar creant un compte Code.org amb **%{provider}** per a **%{email}**.
         gender: Sexe
+        gender_student_input: Sexe
+        gender_teacher_input: Sexe
         locale: Llengua
         name: Nom a mostrar
         name_example: 'Mostra el nom (ex: Programador fantàstic o Joana S.)'

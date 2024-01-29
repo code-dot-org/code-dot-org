@@ -2343,6 +2343,21 @@ ca:
             lessonGroup-7:
               display_name: Caixes de sorra
           title: Programació Orientada a Objectes
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Enquesta
+            lessonGroup-3:
+              display_name: Contingut
+            lessonGroup-4:
+              display_name: Mostra el que saps
+            lessonGroup-5:
+              display_name: Lliçons alternatives
+            lessonGroup-6:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-7:
+              display_name: Caixes de sorra
+          title: Programació Orientada a Objectes
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2466,6 +2481,19 @@ ca:
               name: Impressió d'objectes
           title: Estructura i disseny de classes
         csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-4:
+              display_name: Lliçons alternatives
+            lessonGroup-5:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-6:
+              display_name: Caixes de sorra
+          title: Estructura i disseny de classes
+        csa2-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Contingut
@@ -2621,6 +2649,19 @@ ca:
             lessonGroup-6:
               display_name: Caixes de sorra
           title: Matrius i algoritmes
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-4:
+              display_name: Lliçons alternatives
+            lessonGroup-5:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-6:
+              display_name: Caixes de sorra
+          title: Matrius i algoritmes
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2738,6 +2779,19 @@ ca:
               name: Aleatori
           title: Condicions i lògica
         csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-4:
+              display_name: Lliçons alternatives
+            lessonGroup-5:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-6:
+              display_name: Caixes de sorra
+          title: Condicions i lògica
+        csa4-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Contingut
@@ -2895,6 +2949,19 @@ ca:
             lessonGroup-6:
               display_name: Caixes de sorra
           title: Matrius bidimensionals
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-4:
+              display_name: Lliçons alternatives
+            lessonGroup-5:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-6:
+              display_name: Caixes de sorra
+          title: Matrius bidimensionals
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -3003,6 +3070,19 @@ ca:
               name: Algorismes ArrayList i String
           title: ArrayLists i Mètodes de cadena
         csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-4:
+              display_name: Lliçons alternatives
+            lessonGroup-5:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-6:
+              display_name: Caixes de sorra
+          title: ArrayLists i Mètodes de cadena
+        csa6-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Contingut
@@ -3136,6 +3216,19 @@ ca:
               name: Fiabilitat del sistema
           title: Mètode de descomposició i recursivitat
         csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-4:
+              display_name: Enquesta de final d'unitat
+            lessonGroup-5:
+              display_name: Lliçons alternatives
+            lessonGroup-6:
+              display_name: Caixes de sorra
+          title: Mètode de descomposició i recursivitat
+        csa7-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Contingut
@@ -3293,6 +3386,19 @@ ca:
             lessonGroup-6:
               display_name: Caixes de sorra
           title: Cercar i ordenar
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contingut
+            lessonGroup-3:
+              display_name: Mostra el que saps
+            lessonGroup-4:
+              display_name: Enquesta
+            lessonGroup-5:
+              display_name: Lliçons alternatives
+            lessonGroup-6:
+              display_name: Caixes de sorra
+          title: Cercar i ordenar
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -3405,6 +3511,28 @@ ca:
             Identifiques fortaleses i àrees de millora per crear plans d'estudi individualitzats
             per enfocar la pràctica i autoavaluar el teu progrés.
         csa9-2024:
+          description: Aquesta unitat prepara els estudiants per a l'examen d'AP CSA
+            mitjançant la revisió dels conceptes clau, la pràctica de preguntes d'elecció
+            múltiple i de resposta lliure, i l'enfortiment de les estratègies de presa
+            de proves. Els estudiants identifiquen fortaleses i àrees de millora per
+            crear plans d'estudi individualitzats per centrar la seva pràctica i autoavaluar
+            el seu progrés.
+          description_short: Els estudiants es preparen per l'examen AP CSA mitjançant
+            la pràctica d'estratègies per a les preguntes d'elecció múltiple i de
+            resposta lliure.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Revisió i pràctica
+            lessonGroup-3:
+              display_name: Exàmens simulacre
+            lessonGroup-4:
+              display_name: Caixes de sorra
+          student_description: Aquesta unitat us prepara per a l'examen AP CSA mitjançant
+            la revisió dels conceptes clau, la pràctica de preguntes d'elecció múltiple
+            i de resposta lliure, i l'enfortiment de les estratègies de presa de proves.
+            Identifiques fortaleses i àrees de millora per crear plans d'estudi individualitzats
+            per enfocar la pràctica i autoavaluar el teu progrés.
+        csa9-2025:
           description: Aquesta unitat prepara els estudiants per a l'examen d'AP CSA
             mitjançant la revisió dels conceptes clau, la pràctica de preguntes d'elecció
             múltiple i de resposta lliure, i l'enfortiment de les estratègies de presa
