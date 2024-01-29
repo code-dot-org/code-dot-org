@@ -1048,6 +1048,8 @@ th:
           INPUT1:
             '1': น้ำมะนาว
         text: กล้องจุลทรรศน์มี {INPUT1}
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -1080,6 +1082,8 @@ th:
         text: เป็นตัวแทน {NUM} ใหม่ {ANIMATION_NAME} สไปรต์ [BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}พูด{TEXT1}"
+      KatiesBlocks_changeVelocity:
+        text: เปลี่ยน {SPRITE} {PROPERTY} โดย {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} พุ่งไปที่ {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1088,6 +1092,8 @@ th:
             '"gas"': แก๊ส
             '"liquid"': ของเหลว
             '"solid"': ของแข็ง
+      KatiesBlocks_setVelocity:
+        text: ตั้ง ค่า {SPRITE} {PROPERTY} ถึง {VAL}
       KatiesBlocks_tumbling:
         text: ตีลังกา
       Mikelab_addBehaviorSimple:

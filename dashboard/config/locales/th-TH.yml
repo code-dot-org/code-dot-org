@@ -12,6 +12,8 @@ th:
         finish_sign_up_header: เสร็จสิ้นการสร้างบัญชีผู้ใช้ของคุณ
         finish_sign_up_header_error: 'โปรดแก้ไขข้อผิดพลาดต่อไปนี้:'
         gender: เพศ
+        gender_student_input: เพศ
+        gender_teacher_input: เพศ
         locale: ภาษา
         name: ชื่อที่ใช้แสดง
         name_example: ชื่อที่แสดง (เช่น Cool Coder หรือ Jane S.)

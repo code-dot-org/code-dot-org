@@ -1048,6 +1048,8 @@ th:
         options:
           INPUT1:
             '1': น้ำมะนาว
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         text: ใช้เอฟเฟกต์ {EFFECT}
         options:
@@ -1695,6 +1697,8 @@ th:
         text: x พิกัดของ {SPRITE}
       gamelab_yLocationOf:
         text: พิกัด y ของ {SPRITE}
+      KatiesBlocks_changeVelocity:
+        text: เปลี่ยน {SPRITE} {PROPERTY} โดย {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} พุ่งไปที่ {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1703,6 +1707,8 @@ th:
             '"solid"': ของแข็ง
             '"liquid"': ของเหลว
             '"gas"': แก๊ส
+      KatiesBlocks_setVelocity:
+        text: ตั้ง ค่า {SPRITE} {PROPERTY} ถึง {VAL}
       KatiesBlocks_tumbling:
         text: ตีลังกา
       Mikelab_addBehaviorSimple:

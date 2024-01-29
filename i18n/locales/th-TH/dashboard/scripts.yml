@@ -3032,3 +3032,11 @@ th:
               display_name: ลูป
             lessonGroup-5:
               display_name: โปรเจกต์
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: แบบสำรวจ
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ

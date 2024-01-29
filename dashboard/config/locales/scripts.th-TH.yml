@@ -1103,6 +1103,10 @@ th:
           lesson_groups:
             lessonGroup-2:
               display_name: แบบสำรวจ
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: แบบสำรวจ
         csa1-pilot:
           lesson_groups:
             lessonGroup-5:
@@ -1202,6 +1206,10 @@ th:
             lessonGroup-4:
               display_name: แบบสำรวจ
         csa8-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
+        csa8-2025:
           lesson_groups:
             lessonGroup-4:
               display_name: แบบสำรวจ

@@ -51,6 +51,8 @@ th:
         locale: 'ภาษา'
         age: 'อายุ'
         gender: 'เพศ'
+        gender_student_input: 'เพศ'
+        gender_teacher_input: 'เพศ'
         edit_header: 'แก้ไขรายละเอียดบัญชี'
         finish_sign_up_header: 'เสร็จสิ้นการสร้างบัญชีผู้ใช้ของคุณ'
         finish_sign_up_header_error: 'โปรดแก้ไขข้อผิดพลาดต่อไปนี้:'
