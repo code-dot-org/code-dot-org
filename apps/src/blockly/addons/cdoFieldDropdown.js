@@ -6,6 +6,14 @@ import {
 } from '@cdo/apps/blockly/utils';
 
 export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
+  // Blockly expects a menu generator, but some of our older blocks skip this and use
+  // the field element's config attribute to specify a range of menu options.
+  constructor(menuGenerator, validator, config) {
+    if (!menuGenerator) {
+      menuGenerator = [['', '']];
+    }
+    super(menuGenerator, validator, config);
+  }
   /**
    * Ensure that the input value is a valid language-neutral option.
    * @param newValue The input value.
