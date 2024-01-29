@@ -4,6 +4,7 @@ import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '../../templates/Button';
+import Link from '@cdo/apps/componentLibrary/link/Link';
 
 export default class CourseVersionPublishingEditor extends Component {
   static propTypes = {
@@ -218,68 +219,15 @@ export default class CourseVersionPublishingEditor extends Component {
             ))}
           </select>
           <HelpTip>
-            <table>
-              <thead>
-                <tr>
-                  <th>Publish State</th>
-                  <th>Overview</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td style={styles.tableBorder}>In-Development</td>
-                  <td style={styles.tableBorder}>
-                    Only levelbuilder can see this course. Used for creating new
-                    content you don't want anyone to access.
-                  </td>
-                </tr>
-                <tr>
-                  <td style={styles.tableBorder}>Pilot</td>
-                  <td style={styles.tableBorder}>
-                    A limited set of teachers who are in a pilot experiment can
-                    see and assign the course.
-                  </td>
-                </tr>
-                <tr>
-                  <td style={styles.tableBorder}>Beta</td>
-                  <td style={styles.tableBorder}>
-                    Anyone who has the link can view the course and make
-                    progress on it. It is not assignable by teachers yet.
-                  </td>
-                </tr>
-                <tr>
-                  <td style={styles.tableBorder}>Preview</td>
-                  <td style={styles.tableBorder}>
-                    The course is now a choice in the dropdown that is
-                    assignable.
-                  </td>
-                </tr>
-                <tr>
-                  <td style={styles.tableBorder}>Stable</td>
-                  <td style={styles.tableBorder}>
-                    A course that is not changing. If it is the most recent
-                    course in your language it will be the recommended course.
-                  </td>
-                </tr>
-                <tr>
-                  <td style={styles.tableBorder}>Sunsetting</td>
-                  <td style={styles.tableBorder}>
-                    A course that is in the process of being deprecated.
-                  </td>
-                </tr>
-                <tr>
-                  <td style={styles.tableBorder}>Deprecated</td>
-                  <td style={styles.tableBorder}>
-                    A course that has been deprecated. <br />
-                    <br />
-                    For Deeper Learning Courses, deprecation prevents Peer
-                    Reviews conducted as part of this unit from being displayed
-                    in the admin-only Peer Review Dashboard.
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            Making a change to this setting updates who can see and assign this
+            curriculum. It also impacts what kinds of edits can be made, some of
+            which can not be reversed without engineering assistance.
+            <br />
+            Click "More info" for more information.
           </HelpTip>
+          <Link href="https://github.com/code-dot-org/code-dot-org/wiki/Updating-Publish-State-of-Scripts-or-Courses">
+            More info
+          </Link>
         </label>
         {this.props.publishedState === PublishedState.pilot && (
           <label>
