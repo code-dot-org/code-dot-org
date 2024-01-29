@@ -31,6 +31,8 @@ en-GB:
         current_password: 'Current password'
         age: 'Age'
         gender: 'Gender'
+        gender_student_input: 'Gender'
+        gender_teacher_input: 'Gender'
         finish_sign_up_header_error: 'Please correct the following errors:'
   beta: "beta"
   hello: "Hello World"

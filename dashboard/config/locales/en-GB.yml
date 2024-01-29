@@ -8,6 +8,8 @@ en-GB:
         email: Email
         finish_sign_up_header_error: 'Please correct the following errors:'
         gender: Gender
+        gender_student_input: Gender
+        gender_teacher_input: Gender
         name: Display Name
         password: Password
         password_confirmation: Password confirmation
