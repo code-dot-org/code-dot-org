@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2024-01-05 02:55:19 UTC",
+    "serialized_at": "2024-01-25 19:50:44 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -9634,6 +9634,13 @@
         "lesson.key": "End of Course Project",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-03"
       }
     },
     {

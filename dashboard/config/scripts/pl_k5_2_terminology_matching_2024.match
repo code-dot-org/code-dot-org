@@ -3,15 +3,15 @@ title 'Check for Understanding: Behaviors'
 
 height '75'
 
-question 'Digital character in our program'
+question 'Digital character in a program'
 answer 'Sprite'
-question 'Allows us to change the look of our sprite'
+question 'Changes the look of a sprite'
 answer 'Costume'
-question 'Sets the scene for our program'
+question 'Sets the scene for the program'
 answer 'Background'
-question 'Makes something happen in our program based on an action like pressing a button'
+question 'Makes something happen in a program based on an action like pressing a button'
 answer 'Event'
-question 'Simplifies complex code to animate our programs'
+question 'Simplifies complex code to animate programs'
 answer 'Behaviors'
 
 
