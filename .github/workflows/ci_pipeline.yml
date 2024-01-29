@@ -63,16 +63,10 @@ jobs:
         run: |
           docker run \
             code-dot-org-testing-docker-image \
-            /bin/bash -c "ls -la ."
-
-      - name: Run ls Unit Tests with working dir
-        run: |
-          docker run --workdir=/home/code-dot-org \
-            code-dot-org-testing-docker-image \
-            /bin/bash -c "ls -la ."            
-
+            /bin/bash -c "ls -la ./code-dot-org"
 
       - name: Update Cache
         uses: actions/cache@v2
         with:
           path: ~/.npm
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
