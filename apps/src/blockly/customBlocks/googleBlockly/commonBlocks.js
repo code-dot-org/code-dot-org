@@ -64,4 +64,19 @@ export const blocks = {
       mutatorProperties.indexOf(prop) === -1 && mutatorProperties.push(prop);
     }
   },
+  // Global function to handle serialization hooks
+  addSerializationHooksToBlock(block) {
+    if (!block.mutationToDom) {
+      block.mutationToDom = this.mutationToDom;
+    }
+    if (!block.domToMutation) {
+      block.domToMutation = this.domToMutation;
+    }
+    if (!block.saveExtraState) {
+      block.saveExtraState = this.saveExtraState;
+    }
+    if (!block.loadExtraState) {
+      block.loadExtraState = this.loadExtraState;
+    }
+  },
 };

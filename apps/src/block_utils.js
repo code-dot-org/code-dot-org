@@ -2,7 +2,6 @@ import _ from 'lodash';
 import {styleTypes} from './blockly/themes/cdoBlockStyles.mjs';
 import xml from './xml';
 import MetricsReporter from './lib/metrics/MetricsReporter';
-import {SERIALIZATION_HOOKS} from '@cdo/apps/blocksCommon';
 
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
 const DEFAULT_COLOR = [184, 1.0, 0.74];
@@ -1085,6 +1084,8 @@ exports.createJsWrapperBlockCreator = function (
         if (color) {
           Blockly.cdoUtils.setHSV(this, ...color);
         } else if (!returnType) {
+          // CDO Blockly assigns colors to blocks with an output connection based on return type.
+          // See Blockly.Connection.prototype.colorForType
           // Blocks with neither style or color that do not have a return type can
           // use the default teal color and style.
           Blockly.cdoUtils.setHSV(this, ...DEFAULT_COLOR);
@@ -1134,13 +1135,7 @@ exports.createJsWrapperBlockCreator = function (
             flyoutToggleButton
           );
         }
-        // The following generic mutator functions are only used by Google Blockly
-        // and are intentionally undefined for CDO Blockly.
-        SERIALIZATION_HOOKS.forEach(hook => {
-          if (Blockly.customBlocks[hook]) {
-            this[hook] = Blockly.customBlocks[hook];
-          }
-        });
+        // Blockly.customBlocks.(this);
       },
     };
 

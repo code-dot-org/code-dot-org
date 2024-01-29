@@ -3,13 +3,6 @@
  */
 var commonMsg = require('@cdo/locale');
 
-exports.SERIALIZATION_HOOKS = [
-  'mutationToDom',
-  'domToMutation',
-  'saveExtraState',
-  'loadExtraState',
-];
-
 /**
  * Install extensions to Blockly's language and JavaScript generator
  * @param blockly instance of Blockly
@@ -233,11 +226,7 @@ function installWhenRun(blockly, skin, isK1) {
       }
       this.setPreviousStatement(false);
       this.setNextStatement(true);
-      exports.SERIALIZATION_HOOKS.forEach(hook => {
-        if (Blockly.customBlocks[hook]) {
-          this[hook] = Blockly.customBlocks[hook];
-        }
-      });
+      Blockly.customBlocks.addSerializationHooksToBlock(this);
     },
     shouldBeGrayedOut: function () {
       return false;

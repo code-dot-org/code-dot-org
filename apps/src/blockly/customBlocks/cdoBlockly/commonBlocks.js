@@ -112,4 +112,5 @@ export const blocks = {
   defineNewBlockGenerator(generator, type, generatorFunction) {
     generator[type] = generatorFunction;
   },
+  addSerializationHooksToBlock() {},
 };

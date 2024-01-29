@@ -4,7 +4,6 @@ import {stripQuotes} from '../../utils';
 import _ from 'lodash';
 import {EventType} from '@code-dot-org/craft';
 import {BLOCK_NAME_TO_DISPLAY_TEXT} from '../utils';
-import {SERIALIZATION_HOOKS} from '@cdo/apps/blocksCommon';
 
 const ENTITY_INPUT_EXTRA_SPACING = 14;
 
@@ -311,6 +310,7 @@ export const install = (blockly, blockInstallOptions) => {
         });
         this.setColour(120);
         this.setTooltip('');
+        Blockly.customBlocks.addSerializationHooksToBlock(this);
       },
     };
   }
@@ -331,11 +331,6 @@ export const install = (blockly, blockInstallOptions) => {
 
   function createEventBlockForEntity(entityID, displayName) {
     blockly.Blocks[`craft_${entityID}`] = blockFor(displayName);
-    SERIALIZATION_HOOKS.forEach(hook => {
-      if (Blockly.customBlocks[hook]) {
-        blockly.Blocks[`craft_${entityID}`][hook] = Blockly.customBlocks[hook];
-      }
-    });
     blockly.getGenerator()[`craft_${entityID}`] = generatorFor(entityID);
   }
 
@@ -346,11 +341,6 @@ export const install = (blockly, blockInstallOptions) => {
     statementNames
   ) {
     blockly.Blocks[`craft_${entityID}`] = blockFor(displayName, statementNames);
-    SERIALIZATION_HOOKS.forEach(hook => {
-      if (Blockly.customBlocks[hook]) {
-        blockly.Blocks[`craft_${entityID}`][hook] = Blockly.customBlocks[hook];
-      }
-    });
     blockly.getGenerator()[`craft_${entityID}`] = generatorFor(
       entityType,
       statementNames
