@@ -7,7 +7,7 @@ describe I18n::Utils::CrowdinClient do
 
   let(:project) {'expected_crowdin_project'}
   let(:project_id) {'expected_crowdin_project_id'}
-  let(:project_ids) {{project => project_id}}
+  let(:cdo_crowdin_projects) {{project => {'id' => project_id}}}
 
   let(:api_token) {'expected_crowdin_api_token'}
   let(:client) {stub(:client)}
@@ -17,7 +17,7 @@ describe I18n::Utils::CrowdinClient do
   end
 
   before do
-    CDO.stubs(:crowdin_project_ids).returns(project_ids)
+    CDO.stubs(:crowdin_projects).returns(cdo_crowdin_projects)
     I18nScriptUtils.stubs(:crowdin_creds).returns({'api_token' => api_token})
     Crowdin::Client.stubs(:new).returns(client)
   end
@@ -33,8 +33,8 @@ describe I18n::Utils::CrowdinClient do
       assert_equal client, described_instance.send(:client)
     end
 
-    context 'when `project` is not in the PROJECT_IDS list' do
-      let(:project_ids) {{'unexpected_crowdin_project' => 'unexpected_crowdin_project_id'}}
+    context 'when `project` is not in the CDO.crowdin_projects list' do
+      let(:cdo_crowdin_projects) {{'unexpected_crowdin_project' => {'id' => 'unexpected_crowdin_project_id'}}}
 
       it 'raises "project is invalid" error' do
         actual_error = assert_raises(ArgumentError) {described_instance}

@@ -18,15 +18,15 @@ module I18n
         '503 Service Unavailable',
       ].freeze # Request errors to retry
 
-      # @param project [String] the Crowdin project name, one of the keys of PROJECT_IDS
+      # @param project [String] the Crowdin project name, one of the `CDO.crowdin_projects` keys
       def initialize(project:)
-        raise ArgumentError, 'project is invalid' unless CDO.crowdin_project_ids[project]
+        raise ArgumentError, 'project is invalid' unless CDO.crowdin_projects.key?(project)
 
         @project = project
 
         @client = ::Crowdin::Client.new do |config|
           config.api_token = I18nScriptUtils.crowdin_creds['api_token']
-          config.project_id = CDO.crowdin_project_ids[project]
+          config.project_id = CDO.crowdin_projects.dig(project, 'id')
         end
       end
 
