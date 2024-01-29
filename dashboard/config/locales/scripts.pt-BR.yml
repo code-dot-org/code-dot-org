@@ -1849,6 +1849,11 @@ pt:
             lessonGroup-3:
               display_name: 'Capítulo 2: Visão Computacional'
           title: Engenharia de Software e Visão Computacional
+        csa-postap-se-and-computer-vision-2025:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Visão Computacional'
+          title: Engenharia de Software e Visão Computacional
         csa-self-paced-pl:
           description: "Este módulo foi projetado para orientar o usuário no uso das
             ferramentas que serão utilizadas em apoio à aprendizagem dos alunos ao
@@ -1950,6 +1955,16 @@ pt:
               display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Lições Extras
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Questionário
+            lessonGroup-3:
+              display_name: Conteúdo
+            lessonGroup-4:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-5:
+              display_name: Lições Extras
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2005,6 +2020,14 @@ pt:
             lesson-4:
               name: Variáveis
         csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-4:
+              display_name: Lições Extras
+        csa2-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
@@ -2068,6 +2091,14 @@ pt:
               display_name: Mostre o Que Você Sabe
             lessonGroup-4:
               display_name: Lições Extras
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-4:
+              display_name: Lições Extras
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2115,6 +2146,14 @@ pt:
             lesson-9:
               name: Aleatório
         csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-4:
+              display_name: Lições Extras
+        csa4-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
@@ -2179,6 +2218,14 @@ pt:
               display_name: Mostre o Que Você Sabe
             lessonGroup-4:
               display_name: Lições Extras
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-4:
+              display_name: Lições Extras
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2225,6 +2272,14 @@ pt:
             lessonGroup-4:
               display_name: Lições Extras
         csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-4:
+              display_name: Lições Extras
+        csa6-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
@@ -2287,6 +2342,14 @@ pt:
               display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Lições Extras
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-5:
+              display_name: Lições Extras
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2342,6 +2405,16 @@ pt:
             lessonGroup-5:
               display_name: Lições Extras
         csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-4:
+              display_name: Questionário
+            lessonGroup-5:
+              display_name: Lições Extras
+        csa8-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo

@@ -1096,6 +1096,8 @@ pt:
           INPUT1:
             '1': suco de limão
         text: O microscópio tem {INPUT1}
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -1128,6 +1130,8 @@ pt:
         text: represente {NUM} novas {ANIMATION_NAME} fadas [BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}diga{TEXT1}"
+      KatiesBlocks_changeVelocity:
+        text: alterar {SPRITE} {PROPERTY} por {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} deslizar para {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1139,6 +1143,8 @@ pt:
         text: |-
           if {CONDITION}{SPRITE}
           {STATEMENT}
+      KatiesBlocks_setVelocity:
+        text: definir {SPRITE} {PROPERTY} para {VAL}
       KatiesBlocks_tumbling:
         text: em queda
       Mikelab_addBehaviorSimple:

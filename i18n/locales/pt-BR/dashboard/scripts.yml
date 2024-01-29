@@ -6543,3 +6543,76 @@ pt:
           description_short: Projete e analise algoritmos para entender como eles funcionam e por que alguns são considerados melhores do que outros.
         csp-post-survey-2024:
           title: Pesquisa pós-curso de princípios do CS
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Questionário
+            lessonGroup-3:
+              display_name: Conteúdo
+            lessonGroup-4:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-5:
+              display_name: Lições Extras
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-4:
+              display_name: Lições Extras
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-4:
+              display_name: Lições Extras
+        csa4-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-4:
+              display_name: Lições Extras
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-4:
+              display_name: Lições Extras
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-4:
+              display_name: Lições Extras
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-5:
+              display_name: Lições Extras
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-4:
+              display_name: Questionário
+            lessonGroup-5:
+              display_name: Lições Extras
+        csa-postap-se-and-computer-vision-2025:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Visão Computacional'
+          title: Engenharia de Software e Visão Computacional
