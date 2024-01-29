@@ -70,7 +70,7 @@ Location: (<%= row[:latitude_f] %>, <%= row[:longitude_f] %>)
 ```
 
 ### Developer Details
-Make sure you're in the `cd pegasus` directory.
+Make sure you're in the `pegasus` directory.
 
 - `bundle exec rake seed:sync` will detect modified gsheets, download updated versions as .csv files, and then perform a `seed:migrate`.
 - `bundle exec rake seed:migrate` will import any modified .csv files into the database.
