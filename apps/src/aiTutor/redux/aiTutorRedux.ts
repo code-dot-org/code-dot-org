@@ -5,6 +5,7 @@ import {
 import {Role, Status, ChatCompletionMessage} from '@cdo/apps/aichat/types';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
 import {generalChatSystemPrompt} from '@cdo/apps/aiTutor/constants';
+import {savePromptAndResponse} from '../interactionsApi';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
@@ -64,6 +65,7 @@ export const askAITutor = createAsyncThunk(
     );
 
     thunkAPI.dispatch(addAIResponse(chatApiResponse?.content));
+    savePromptAndResponse();
   }
 );
 
