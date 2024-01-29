@@ -50,6 +50,8 @@ se:
         locale: 'Giella'
         age: 'Ahki'
         gender: 'Sohkabealli'
+        gender_student_input: 'Sohkabealli'
+        gender_teacher_input: 'Sohkabealli'
         edit_header: 'Divo kontodieđuid'
         finish_sign_up_header: 'Válbme du kontoásaheami'
         finish_sign_up_header_error: 'Divo dáid boasttuvuođaid:'

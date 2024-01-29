@@ -411,6 +411,12 @@ se:
               display_name: Iskkadeapmi
             lessonGroup-3:
               display_name: Sisdoallu
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Iskkadeapmi
+            lessonGroup-3:
+              display_name: Sisdoallu
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -445,6 +451,10 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -473,6 +483,10 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -498,6 +512,10 @@ se:
             lessonGroup-2:
               display_name: Sisdoallu
         csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa4-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
@@ -535,6 +553,10 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -563,6 +585,10 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -588,6 +614,10 @@ se:
             lessonGroup-2:
               display_name: Sisdoallu
         csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa7-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
@@ -624,6 +654,12 @@ se:
             lessonGroup-4:
               display_name: Iskkadeapmi
         csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+            lessonGroup-4:
+              display_name: Iskkadeapmi
+        csa8-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu

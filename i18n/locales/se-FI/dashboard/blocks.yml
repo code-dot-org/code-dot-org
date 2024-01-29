@@ -1269,6 +1269,10 @@ se:
         text: x koordináhta {SPRITE}
       gamelab_yLocationOf:
         text: y koordináhta {SPRITE}
+      KatiesBlocks_changeVelocity:
+        text: rievdat {SPRITE} {PROPERTY} {VAL}:in
+      KatiesBlocks_setVelocity:
+        text: bija {SPRITE} {PROPERTY} dása {VAL}
       KatiesBlocks_tumbling:
         text: fierrat
       Mikelab_addBehaviorSimple:

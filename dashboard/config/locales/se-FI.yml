@@ -20,6 +20,8 @@ se:
         finish_sign_up_subheader_provider_markdown: Deavdde dáid dieđuid válbmet ásahit
           Code.org-konto **%{provider}**:in **%{email}**:ii.
         gender: Sohkabealli
+        gender_student_input: Sohkabealli
+        gender_teacher_input: Sohkabealli
         locale: Giella
         name: ČájehanNamma
         name_example: ČájehanNamma (omd. Kulas Ánte dahje Fávrros Ánne)
