@@ -9,9 +9,6 @@ import FontAwesome from '../FontAwesome';
 import LevelDataCell from './LevelDataCell';
 import i18n from '@cdo/locale';
 
-// see styles.expandedHeaderLevelCell{min-width} + 1px border
-const LEVEL_HEADER_WIDTH = 53;
-
 function ExpandedProgressDataColumn({
   lesson,
   levelProgressByStudent,
@@ -23,11 +20,18 @@ function ExpandedProgressDataColumn({
     const headerText =
       lesson.levels.length < 3
         ? lesson.relative_position
-        : i18n.lesson() + ' ' + lesson.relative_position + ': ' + lesson.name;
+        : i18n.lessonNumbered({
+            lessonNumber: lesson.relative_position,
+            lessonName: lesson.name,
+          });
 
     // Manual width is necessary so that overflow text is hidden and lesson header exactly fits levels.
-    // Add one for border. Each level cell has a 1px border on the right and there i.
-    const width = lesson.levels.length * LEVEL_HEADER_WIDTH + 1 + 'px';
+    // Add (numLevels + 1)px to account for borders.
+    const width =
+      lesson.levels.length * styles.levelCellWidth +
+      lesson.levels.length +
+      1 +
+      'px';
     return (
       <div className={styles.expandedHeader}>
         <div

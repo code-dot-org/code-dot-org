@@ -8,6 +8,12 @@
   flex-direction: row;
 }
 
+$level-cell-width: 52px;
+
+:export {
+   c: $level-cell-width;
+}
+
 .table {
   width: 100%;
   overflow-x: auto;
@@ -50,8 +56,7 @@
   }
   
   &Level {
-    min-width: 52px;
-    max-width: 52px;  
+    width: $level-cell-width;
     text-align: center;
     height: 47px;
     line-height: 47px;
