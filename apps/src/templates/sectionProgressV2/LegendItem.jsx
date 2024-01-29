@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './section-progress-refresh.module.scss';
+import styles from './progress-table-legend.module.scss';
 import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '../FontAwesome';
