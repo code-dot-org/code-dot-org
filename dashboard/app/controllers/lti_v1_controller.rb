@@ -301,7 +301,10 @@ class LtiV1Controller < ApplicationController
   # Displays the onboarding portal for creating a new LTI Integration
   def new_integration
     @form_data = {}
-    @form_data[:lms_platforms] = Policies::Lti::LMS_PLATFORMS.keys.map(&:to_s)
+    @form_data[:lms_platforms] = Policies::Lti::LMS_PLATFORMS.map do |key, value|
+      {platform: key, name: value[:name]}
+    end
+
     render lti_v1_integrations_path
   end
 
