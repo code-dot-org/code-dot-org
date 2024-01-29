@@ -1104,6 +1104,8 @@ es-MX:
             '1': jugo de limón
             '3': bicarbonato de sodio
             '5': ambos
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         text: hacer efecto de {EFFECT}
         options:
@@ -1804,6 +1806,8 @@ es-MX:
         text: coordenada x de {SPRITE}
       gamelab_yLocationOf:
         text: coordenada y de {SPRITE}
+      KatiesBlocks_changeVelocity:
+        text: cambiar {SPRITE} {PROPERTY} por {VAL}.
       KatiesBlocks_glideTo:
         text: "{SPRITE} vuela a {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1815,6 +1819,8 @@ es-MX:
             '"solid"': sólido
             '"liquid"': Líquido
             '"gas"': gaseoso
+      KatiesBlocks_setVelocity:
+        text: establecer {SPRITE} {PROPERTY} a {VAL}
       KatiesBlocks_tumbling:
         text: rodando
       Mikelab_addBehaviorSimple:

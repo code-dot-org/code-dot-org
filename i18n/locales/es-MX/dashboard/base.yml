@@ -51,6 +51,8 @@ es-MX:
         locale: 'Idioma'
         age: 'Edad'
         gender: 'Sexo'
+        gender_student_input: 'Sexo'
+        gender_teacher_input: 'Sexo'
         edit_header: 'Editar información de la cuenta'
         ai_settings_header: 'Configuración de IA'
         finish_sign_up_header: 'Termina de crear tu cuenta'
