@@ -955,6 +955,8 @@ dv:
             '"w"': w
             '"s"': s
             '"d"': d
+      KatiesBlocks_changeVelocity:
+        text: "{VAL} އަދަދަށް {SPRITE} {PROPERTY} ބަދަލުކުރޭ"
       Mikelab_changePropBy:
         options:
           PROPERTY:

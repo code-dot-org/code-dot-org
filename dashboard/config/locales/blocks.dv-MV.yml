@@ -824,6 +824,8 @@ dv:
             '"bubbles"': ބަބްލްސް
             '"confetti"': ކޮންފެޓީ
             '"starburst"': ސްޓަރ ބަރސްޓް
+      KatiesBlocks_changeVelocity:
+        text: "{VAL} އަދަދަށް {SPRITE} {PROPERTY} ބަދަލުކުރޭ"
       Mikelab_changePropBy:
         options:
           PROPERTY:
