@@ -20,6 +20,8 @@ sv:
         finish_sign_up_subheader_provider_markdown: Fyll i följande information för
           att slutföra skapandet av ett Code.org-konto med **%{provider}** för **%{email}**.
         gender: Kön
+        gender_student_input: Kön
+        gender_teacher_input: Kön
         locale: språk
         name: Visat namn
         name_example: Visningsnamn (t.ex. "Cool Coder" eller "JohanS")

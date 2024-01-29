@@ -1107,8 +1107,12 @@ sv:
         text: läggTillTre
       FunctionBlocks_addTwoBlock:
         text: läggTillTvå
+      KatiesBlocks_changeVelocity:
+        text: ändra {SPRITE} {PROPERTY} via {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} glid till {LOCATION}"
+      KatiesBlocks_setVelocity:
+        text: ligger {SPRITE} {PROPERTY} Att {VAL}
       KatiesBlocks_tumbling:
         text: tumlande
       Mikelab_addBehaviorSimple:

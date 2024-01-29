@@ -51,6 +51,8 @@ sv:
         locale: 'språk'
         age: 'Ålder'
         gender: 'Kön'
+        gender_student_input: 'Kön'
+        gender_teacher_input: 'Kön'
         edit_header: 'Redigera kontouppgifter'
         finish_sign_up_header: 'Fortsätt färdigställa ditt konto'
         finish_sign_up_header_error: 'Rätta följande fel:'
