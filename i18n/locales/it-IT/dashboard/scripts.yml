@@ -4956,3 +4956,76 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Sondaggio Post-corso
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sondaggio
+            lessonGroup-3:
+              display_name: Contenuto
+            lessonGroup-4:
+              display_name: Mostra ciò che sai
+            lessonGroup-5:
+              display_name: Lezioni alternative
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-4:
+              display_name: Lezioni alternative
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-4:
+              display_name: Lezioni alternative
+        csa4-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-4:
+              display_name: Lezioni alternative
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-4:
+              display_name: Lezioni alternative
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-4:
+              display_name: Lezioni alternative
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-5:
+              display_name: Lezioni alternative
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-4:
+              display_name: Sondaggio
+            lessonGroup-5:
+              display_name: Lezioni alternative
+        csa-postap-se-and-computer-vision-2025:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Visione Artificiale'
+          title: Sondaggio preliminare su ingegneria del software e visione artificiale

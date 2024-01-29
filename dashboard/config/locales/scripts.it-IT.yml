@@ -1603,6 +1603,11 @@ it:
             lessonGroup-3:
               display_name: 'Capitolo 2: Visione Artificiale'
           title: Sondaggio preliminare su ingegneria del software e visione artificiale
+        csa-postap-se-and-computer-vision-2025:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Visione Artificiale'
+          title: Sondaggio preliminare su ingegneria del software e visione artificiale
         csa-self-paced-pl:
           description: "Questo modulo è progettato per orientarti agli strumenti che
             userai durante l'insegnamento della CSA, per assistere gli studenti nell'apprendimento.
@@ -1700,6 +1705,16 @@ it:
               display_name: Mostra ciò che sai
             lessonGroup-5:
               display_name: Lezioni alternative
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sondaggio
+            lessonGroup-3:
+              display_name: Contenuto
+            lessonGroup-4:
+              display_name: Mostra ciò che sai
+            lessonGroup-5:
+              display_name: Lezioni alternative
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1755,6 +1770,14 @@ it:
             lesson-4:
               name: Variabili
         csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-4:
+              display_name: Lezioni alternative
+        csa2-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
@@ -1818,6 +1841,14 @@ it:
               display_name: Mostra ciò che sai
             lessonGroup-4:
               display_name: Lezioni alternative
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-4:
+              display_name: Lezioni alternative
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1865,6 +1896,14 @@ it:
             lesson-9:
               name: Casuale
         csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-4:
+              display_name: Lezioni alternative
+        csa4-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
@@ -1929,6 +1968,14 @@ it:
               display_name: Mostra ciò che sai
             lessonGroup-4:
               display_name: Lezioni alternative
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-4:
+              display_name: Lezioni alternative
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1975,6 +2022,14 @@ it:
             lessonGroup-4:
               display_name: Lezioni alternative
         csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-4:
+              display_name: Lezioni alternative
+        csa6-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
@@ -2037,6 +2092,14 @@ it:
               display_name: Mostra ciò che sai
             lessonGroup-5:
               display_name: Lezioni alternative
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-5:
+              display_name: Lezioni alternative
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2092,6 +2155,16 @@ it:
             lessonGroup-5:
               display_name: Lezioni alternative
         csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-4:
+              display_name: Sondaggio
+            lessonGroup-5:
+              display_name: Lezioni alternative
+        csa8-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto

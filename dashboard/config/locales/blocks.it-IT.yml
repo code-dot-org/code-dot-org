@@ -1098,6 +1098,8 @@ it:
             '3': bicarbonato di sodio
             '5': entrambi
         text: Il microscopio ha {INPUT1}
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -1133,6 +1135,8 @@ it:
           [BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE} dice {TEXT1}"
+      KatiesBlocks_changeVelocity:
+        text: modifica la {PROPERTY} di {SPRITE} di {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} scivola a {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1144,6 +1148,8 @@ it:
         text: |2-
            se {CONDITION}{SPRITE}
           {STATEMENT}
+      KatiesBlocks_setVelocity:
+        text: imposta la {PROPERTY} di {SPRITE} a {VAL}
       KatiesBlocks_tumbling:
         text: ruzzolando
       Mikelab_addBehaviorSimple:

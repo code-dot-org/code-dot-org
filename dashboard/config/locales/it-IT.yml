@@ -22,6 +22,8 @@ it:
         finish_sign_up_subheader_provider_markdown: Compila i seguenti dati per terminare
           la creazione del tuo account Code.org con **%{provider}** per **%{email}**.
         gender: Sesso
+        gender_student_input: Sesso
+        gender_teacher_input: Sesso
         locale: Linguaggio
         name: Nome da visualizzare
         name_example: Mostra Nome (es. Cool Coder o Jane S.)
