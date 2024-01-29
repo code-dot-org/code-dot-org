@@ -5,8 +5,9 @@ module HocEventReview
   Sequel.extension :core_refinements
   using Sequel::CoreRefinements
 
-  # Converts a simple x.y JSON-attribute path to a MySQL 5.7 JSON expression using the inline-path operator.
-  # Ref: https://dev.mysql.com/doc/refman/5.7/en/json-search-functions.html#operator_json-inline-path
+  # Converts a simple x.y JSON-attribute path to a MySQL JSON expression
+  # (available in MySQL 5.7.13 and later) using the inline-path operator.
+  # Ref: https://dev.mysql.com/doc/refman/8.0/en/json-search-functions.html#operator_json-inline-path
   private_class_method def self.json(path)
     column, attribute = path.split('.')
     "#{column}->>'$.#{attribute}'".lit
