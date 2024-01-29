@@ -596,6 +596,7 @@ Dashboard::Application.routes.draw do
     post '/lti/v1/authenticate', to: 'lti_v1#authenticate'
     match '/lti/v1/sync_course', to: 'lti_v1#sync_course', via: [:get, :post]
     post '/lti/v1/integrations', to: 'lti_v1#create_integration'
+    get '/lti/v1/integrations', to: 'lti_v1#new_integration'
 
     # OAuth endpoints
     get '/oauth/jwks', to: 'oauth_jwks#jwks'

@@ -501,44 +501,58 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'integration - given valid inputs, creates a new integration if one does not exist' do
+    name = "Fake School"
     client_id = "1234canvas"
     lms = "canvas_cloud"
     email = "fake@email.com"
 
-    post '/lti/v1/integrations', params: {client_id: client_id, lms: lms, email: email}
+    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
     assert_response :ok
 
     client_id = "5678schoology"
     lms = "schoology"
 
-    post '/lti/v1/integrations', params: {client_id: client_id, lms: lms, email: email}
+    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
     assert_response :ok
   end
 
   test 'integration - given missing inputs, does not create a new integration' do
+    name = "Fake School"
     client_id = "1234canvas"
     lms = "canvas_cloud"
     email = "fake@email.com"
 
-    post '/lti/v1/integrations', params: {lms: lms, email: email}
-    assert_response :bad_request
+    # missing client_id
+    post '/lti/v1/integrations', params: {name: name, lms: lms, email: email}
+    assert_equal I18n.t('lti.error.missing_params'), flash[:alert]
 
-    post '/lti/v1/integrations', params: {client_id: client_id, lms: '', email: email}
-    assert_response :bad_request
+    # missing lms
+    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: '', email: email}
+    assert_equal I18n.t('lti.error.missing_params'), flash[:alert]
 
-    post '/lti/v1/integrations', params: {client_id: client_id}
-    assert_response :bad_request
+    # missing email
+    post '/lti/v1/integrations', params: {name: name, client_id: client_id}
+    assert_equal I18n.t('lti.error.missing_params'), flash[:alert]
+
+    # unsupported lms type
+    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: 'unsupported', email: email}
+    assert_equal I18n.t('lti.error.unsupported_lms_type'), flash[:alert]
+
+    # missing name
+    post '/lti/v1/integrations', params: {client_id: client_id, lms: lms, email: email}
+    assert_equal I18n.t('lti.error.missing_params'), flash[:alert]
   end
 
   test 'integration - if existing integration, does not create a new one' do
+    name = "Fake School"
     client_id = "1234canvas"
     lms = "canvas_cloud"
     email = "fake@email.com"
 
-    post '/lti/v1/integrations', params: {client_id: client_id, lms: lms, email: email}
-    assert_response :ok
-    post '/lti/v1/integrations', params: {client_id: client_id, lms: lms, email: email}
-    assert_response :conflict
+    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
+    assert_template 'lti/v1/integration_status'
+    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
+    assert_template 'lti/v1/integration_status'
   end
 
   test 'attempting to sync a section with no LTI course should return a 400' do
