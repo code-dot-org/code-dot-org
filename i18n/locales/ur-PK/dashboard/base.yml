@@ -51,6 +51,8 @@ ur:
         locale: 'زبان'
         age: 'عمر'
         gender: 'Jinss'
+        gender_student_input: 'Jinss'
+        gender_teacher_input: 'Jinss'
         edit_header: 'اکاؤنٹ کی تفصیلات میں ترمیم کیجیے'
         finish_sign_up_header: 'اپنا اکاؤنٹ بنانا مکمل کریں'
         finish_sign_up_header_error: 'براے مہربانی نیچے دی گئی غلطیاں درست کیجئے:'

@@ -1678,6 +1678,8 @@ ur:
         text: ایکس {SPRITE} کے مربوط
       gamelab_yLocationOf:
         text: Y کے ہم آہنگ {SPRITE}
+      KatiesBlocks_changeVelocity:
+        text: "{SPRITE} {PROPERTY} کو بذریعہ {VAL} تبدیل کریں"
       KatiesBlocks_glideTo:
         text: "{SPRITE} چلتا ہے بجانب {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1686,6 +1688,8 @@ ur:
             '"solid"': ٹھوس
             '"liquid"': مائع
             '"gas"': گیس
+      KatiesBlocks_setVelocity:
+        text: سیٹ {SPRITE} {PROPERTY} کرنے {VAL}
       KatiesBlocks_tumbling:
         text: قلابازیاں کھاتے ہوئے
       Mikelab_addBehaviorSimple:

@@ -1074,6 +1074,8 @@ ur:
         text: نئے {NUM} {ANIMATION_NAME} سپرائٹس [BEHAVIOR][2] کی نمائندگی کرتے ہیں
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}کہتا ہے{TEXT1}"
+      KatiesBlocks_changeVelocity:
+        text: "{SPRITE} {PROPERTY} کو بذریعہ {VAL} تبدیل کریں"
       KatiesBlocks_glideTo:
         text: "{SPRITE} چلتا ہے بجانب {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1082,6 +1084,8 @@ ur:
             '"gas"': گیس
             '"liquid"': مائع
             '"solid"': ٹھوس
+      KatiesBlocks_setVelocity:
+        text: سیٹ {SPRITE} {PROPERTY} کرنے {VAL}
       KatiesBlocks_tumbling:
         text: قلابازیاں کھاتے ہوئے
       Mikelab_addBehaviorSimple:

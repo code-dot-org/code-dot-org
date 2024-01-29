@@ -18,6 +18,8 @@ ur:
         finish_sign_up_subheader_provider: "<strong>%{email}</strong>کے لئے <strong>%{provider}</strong>
           کے ساتھ Code.org اکاؤنٹ بنانے کے ختم کرنے کے لئے مندرجہ ذیل معلومات کو بھریں."
         gender: Jinss
+        gender_student_input: Jinss
+        gender_teacher_input: Jinss
         locale: زبان
         name: ڈسپلے نام
         name_example: ظاہری نام (مثلاً، سعد حسن یا ایم شیراز وغیرہ)
