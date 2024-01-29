@@ -21,6 +21,8 @@ is:
         finish_sign_up_subheader_provider_markdown: Færðu inn eftirfarandi upplýsingar
           til að ljúka við að stofna Code.org aðgang hjá **%{provider}** fyrir **%{email}**.
         gender: Kyn
+        gender_student_input: Kyn
+        gender_teacher_input: Kyn
         locale: Forritunarmál
         name: Sýnilegt nafn
         name_example: Birtingarnafn (t.d. Kalli kóðari eða Anna J.)
