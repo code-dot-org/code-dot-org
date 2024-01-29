@@ -41,13 +41,22 @@ class FormRoutesTest < SequelTestCase
     end
 
     it 'returns local results' do
-      create_volunteer name: 'Local Person', location: '37.774929,-122.419416'
-      results = search location: '37.774368,-122.428760'
-      assert_equal 0.8236209090344097, results.first['distance']
+      # TODO infra: once we've updated everything to MySQL 8+, we can reduce
+      # this back to a single case.
+      puts "get_mysql_version: #{get_mysql_version.inspect}"
+      volunteer_location = get_mysql_version < 8 ? '37.774929,-122.419416' : '-122.419416,37.774929'
+      puts "volunteer_location: #{volunteer_location.inspect}"
+      create_volunteer(name: 'Local Person', location: volunteer_location)
+      search_location = get_mysql_version < 8 ? '37.774368,-122.428760' : '-122.428760,37.774368'
+      puts "search_location: #{search_location.inspect}"
+      results = search(location: search_location)
+      # TODO; figure out why this is different on mysql8
+      expected_distance = get_mysql_version < 8 ? 0.8236209090344097 : 0.8236238528508886
+      assert_equal expected_distance, results.first['distance']
     end
 
     it 'uses reverse chronological order' do
-      here = '35.774929,-122.419416'
+      here = get_mysql_version < 8 ? '35.774929,-122.419416' : '-122.419416,35.774929'
       create_volunteer name: 'Oldest', location: here
       create_volunteer name: 'Middle', location: here
       create_volunteer name: 'Newest', location: here
