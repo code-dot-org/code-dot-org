@@ -12,7 +12,7 @@ export async function savePromptAndResponse() {
   };
 
   try {
-    let response = await fetch(`ai_tutor_interactions`, {
+    let response = await fetch('/ai_tutor_interactions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

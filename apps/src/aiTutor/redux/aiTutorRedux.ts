@@ -114,6 +114,7 @@ export const submitChatMessage = createAsyncThunk(
         chatMessageText: chatApiResponse.assistantResponse,
       };
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
+      savePromptAndResponse();
     }
   }
 );
