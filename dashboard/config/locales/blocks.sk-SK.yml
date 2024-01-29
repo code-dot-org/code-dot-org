@@ -1104,6 +1104,8 @@ sk:
         text: predstaviť {NUM} nové {ANIMATION_NAME} postavičky [BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}hovorí{TEXT1}"
+      KatiesBlocks_changeVelocity:
+        text: zmeň {PROPERTY} {SPRITE} o {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} kĺzať sa do {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1117,6 +1119,8 @@ sk:
           {STATEMENT}
       KatiesBlocks_makeNumSpritesNear:
         text: vytvor {NUM} nových {ANIMATION_NAME} postáv pri {LOCATION}
+      KatiesBlocks_setVelocity:
+        text: nastav {SPRITE} {PROPERTY} na {VAL}
       KatiesBlocks_spriteBirdSay:
         text: "{SPRITE} povie {SPEECH}"
       KatiesBlocks_tumbling:

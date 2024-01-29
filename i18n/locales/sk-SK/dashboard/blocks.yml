@@ -1734,6 +1734,8 @@ sk:
         text: x súradnica {SPRITE}
       gamelab_yLocationOf:
         text: y súradnica {SPRITE}
+      KatiesBlocks_changeVelocity:
+        text: zmeň {PROPERTY} {SPRITE} o {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} kĺzať sa do {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1747,6 +1749,8 @@ sk:
             '"gas"': plyn
       KatiesBlocks_makeNumSpritesNear:
         text: vytvor {NUM} nových {ANIMATION_NAME} postáv pri {LOCATION}
+      KatiesBlocks_setVelocity:
+        text: nastav {SPRITE} {PROPERTY} na {VAL}
       KatiesBlocks_spriteBirdSay:
         text: "{SPRITE} povie {SPEECH}"
       KatiesBlocks_tumbling:

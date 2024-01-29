@@ -51,6 +51,8 @@ sk:
         locale: 'Jazyk'
         age: 'Vek'
         gender: 'Pohlavie'
+        gender_student_input: 'Pohlavie'
+        gender_teacher_input: 'Pohlavie'
         edit_header: 'Upraviť nastavenia účtu'
         finish_sign_up_header: 'Dokončite vytvorenie svojho účtu'
         finish_sign_up_header_error: 'Opravte tieto chyby:'

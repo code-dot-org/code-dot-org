@@ -20,6 +20,8 @@ sk:
         finish_sign_up_subheader_provider_markdown: Vyplň nasledujúce informácie na
           dokončenie vytvorenia Code.org účtu s **%{provider}** pre **%{email}**.
         gender: Pohlavie
+        gender_student_input: Pohlavie
+        gender_teacher_input: Pohlavie
         locale: Jazyk
         name: Zobrazované meno
         name_example: Zobrazované meno (napr. SuperKóder alebo Jana S.)
