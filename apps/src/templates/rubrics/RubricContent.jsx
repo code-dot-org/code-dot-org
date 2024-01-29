@@ -43,6 +43,7 @@ const formatLastAttempt = lastAttempt => {
 export default function RubricContent({
   studentLevelInfo,
   rubric,
+  open,
   teacherHasEnabledAi,
   canProvideFeedback,
   onLevelForEvaluation,
@@ -210,6 +211,7 @@ export default function RubricContent({
         <div className={style.tempContainer}>
           <Heading5>{i18n.rubric()}</Heading5>
           <LearningGoals
+            open={open}
             learningGoals={rubric.learningGoals}
             teacherHasEnabledAi={teacherHasEnabledAi}
             canProvideFeedback={canProvideFeedback}
@@ -278,6 +280,7 @@ RubricContent.propTypes = {
   onLevelForEvaluation: PropTypes.bool,
   canProvideFeedback: PropTypes.bool,
   rubric: rubricShape.isRequired,
+  open: PropTypes.bool,
   reportingData: reportingDataShape,
   studentLevelInfo: studentLevelInfoShape,
   teacherHasEnabledAi: PropTypes.bool,

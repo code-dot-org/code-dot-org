@@ -29,6 +29,7 @@ import ProgressRing from './ProgressRing';
 const INVALID_UNDERSTANDING = -1;
 
 export default function LearningGoals({
+  open,
   learningGoals,
   teacherHasEnabledAi,
   canProvideFeedback,
@@ -151,7 +152,7 @@ export default function LearningGoals({
       setDisplayFeedback(teacherFeedbacks.current[currentLearningGoal]);
       setDisplayUnderstanding(understandingLevels.current[currentLearningGoal]);
     }
-  }, [studentLevelInfo, learningGoals, currentLearningGoal]);
+  }, [studentLevelInfo, learningGoals, currentLearningGoal, open]);
 
   useEffect(() =>
     document.addEventListener('keydown', handleKeyDown, {once: true})
@@ -378,6 +379,7 @@ export default function LearningGoals({
 }
 
 LearningGoals.propTypes = {
+  open: PropTypes.bool,
   teacherHasEnabledAi: PropTypes.bool,
   canProvideFeedback: PropTypes.bool,
   reportingData: reportingDataShape,
