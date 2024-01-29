@@ -929,6 +929,10 @@ sq:
           lesson_groups:
             lessonGroup-3:
               display_name: Përmbajtja
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Përmbajtja
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -964,6 +968,10 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -995,6 +1003,10 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1020,6 +1032,10 @@ sq:
             lessonGroup-2:
               display_name: Përmbajtja
         csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa4-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
@@ -1057,6 +1073,10 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1082,6 +1102,10 @@ sq:
             lessonGroup-2:
               display_name: Përmbajtja
         csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa6-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
@@ -1116,6 +1140,10 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1145,6 +1173,10 @@ sq:
             lessonGroup-2:
               display_name: Përmbajtja
         csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa8-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja

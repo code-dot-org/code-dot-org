@@ -22,6 +22,8 @@ sq:
           për të përfunduar krijimin e një llogarie në Code.org **%{provider}** për
           **%{email}**.
         gender: Gjinia
+        gender_student_input: Gjinia
+        gender_teacher_input: Gjinia
         locale: Gjuha
         name: Shfaq Emrin
         name_example: Shfaq Emrin (Psh. Cool Coder ose Jane S.)

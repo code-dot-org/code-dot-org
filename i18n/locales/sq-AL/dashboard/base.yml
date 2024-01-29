@@ -51,6 +51,8 @@ sq:
         locale: 'Gjuha'
         age: 'Mosha'
         gender: 'Gjinia'
+        gender_student_input: 'Gjinia'
+        gender_teacher_input: 'Gjinia'
         edit_header: 'Ndrysho detajet e llogarisë'
         finish_sign_up_header: 'Përfundo krijimin e llogarisë'
         finish_sign_up_header_error: 'Të lutem korrigjo gabimet që vijojnë:'

@@ -359,13 +359,13 @@
           "hint2": "Kodi i ri për këtë nivel duhet të duket kështu:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak4": {
-          "challenge": "## Apo kërkoni për një sfidë shtesë?\n\nJu gjithashtu mund t'i bëni përbindëshat të lëvizin më shpejt ose më ngadalë.\n\n1.  Kliko \\`Edito' në këtë bllok  [blockly block][0] \n    Rritni ose zvogëloni numrin në këtë bllok: \n\n[blockly block][1]\n\nPër t'i bërë monstrat të lëvizin më ngadalë, zgjidhni një numër dhjetor si `0.5` ose `0.25`. Për t'i bërë ata të lëvizin më shpejt, zgjidhni ndonjë numër më të madh se 1."
+          "challenge": "## Po kërkoni për një sfidë shtesë?\n\nJu gjithashtu mund t'i bëni përbindëshat të lëvizin më shpejt ose më ngadalë.\n\n1.  Kliko \\`Edito' në këtë bllok  [blockly block][0] \n    Rritni ose zvogëloni numrin në këtë bllok: \n\n[blockly block][1]\n\nPër t'i bërë monstrat të lëvizin më ngadalë, zgjidhni një numër dhjetor si `0.5` ose `0.25`. Për t'i bërë ata të lëvizin më shpejt, zgjidhni ndonjë numër më të madh se 1."
         },
         "CourseF_outbreak4_-2022-2": {
-          "challenge": "## Apo kërkoni për një sfidë shtesë?\n\nJu gjithashtu mund t'i bëni përbindëshat të lëvizin më shpejt ose më ngadalë.\n\n1.  Kliko \\`Edito' në këtë bllok  <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n    Rritni ose zvogëloni numrin në këtë bllok: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nPër t'i bërë monstrat të lëvizin më ngadalë, zgjidhni një numër dhjetor si `0.5` ose `0.25`. Për t'i bërë ata të lëvizin më shpejt, zgjidhni ndonjë numër më të madh se 1."
+          "challenge": "## Po kërkoni për një sfidë shtesë?\n\nJu gjithashtu mund t'i bëni përbindëshat të lëvizin më shpejt ose më ngadalë.\n\n1.  Kliko \\`Edito' në këtë bllok  <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n    Rritni ose zvogëloni numrin në këtë bllok: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nPër t'i bërë monstrat të lëvizin më ngadalë, zgjidhni një numër dhjetor si `0.5` ose `0.25`. Për t'i bërë ata të lëvizin më shpejt, zgjidhni ndonjë numër më të madh se 1."
         },
         "CourseF_outbreak4_2023": {
-          "challenge": "## Apo kërkoni për një sfidë shtesë?\n\nJu gjithashtu mund t'i bëni përbindëshat të lëvizin më shpejt ose më ngadalë.\n\n1.  Kliko \\`Edito' në këtë bllok  <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n    Rritni ose zvogëloni numrin në këtë bllok: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nPër t'i bërë monstrat të lëvizin më ngadalë, zgjidhni një numër dhjetor si `0.5` ose `0.25`. Për t'i bërë ata të lëvizin më shpejt, zgjidhni ndonjë numër më të madh se 1."
+          "challenge": "## Po kërkoni për një sfidë shtesë?\n\nJu gjithashtu mund t'i bëni përbindëshat të lëvizin më shpejt ose më ngadalë.\n\n1.  Kliko \\`Edito' në këtë bllok  <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n    Rritni ose zvogëloni numrin në këtë bllok: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nPër t'i bërë monstrat të lëvizin më ngadalë, zgjidhni një numër dhjetor si `0.5` ose `0.25`. Për t'i bërë ata të lëvizin më shpejt, zgjidhni ndonjë numër më të madh se 1."
         },
         "CourseF_outbreak6": {
           "hint1": "Do të ju duhet të shtoni 3 ngjarje të tjera “kur preket” për të kontrolluar të gjitha kombinimet e mundshme të “prekjeve” midis spriteve të shëndetshme dhe të infektuara.\n\n[blockly block][0]",
@@ -380,15 +380,15 @@
           "hint2": "Sigurohuni që të zhvendosni blloqet e tjera të “veprimit” në brendësi të bllokut “nëse ka mundësi”:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "CourseF_outbreak7": {
-          "verionhistory": "Ndjeheni të ngecur? Ju gjithëmonë mund ta resetoni kodin duke klikuar \"Versioni i historisë\" më poshtë dhe më pas duke zgjedhur \"Fillo nga e para\".",
+          "verionhistory": "Ndjeheni të ngecur? Ju gjithmonë mund ta resetoni kodin duke klikuar \"Versioni i historisë\" më poshtë dhe më pas duke zgjedhur \"Fillo nga e para\".",
           "whenclicked": "## Vaksina\n\nJu mund të simuloni duke i dhënë përbindëshave një vaksinë kur ju klikoni mbi to. Për ta bërë këtë, përdorni bllokun “ndrysho kostumin” me këtë event:\n\n[blockly block][0]"
         },
         "CourseF_outbreak7_-2022-2": {
-          "verionhistory": "Ndjeheni të ngecur? Ju gjithëmonë mund ta resetoni kodin duke klikuar \"Versioni i historisë\" më poshtë dhe më pas duke zgjedhur \"Fillo nga e para\".",
+          "verionhistory": "Ndjeheni të ngecur? Ju gjithmonë mund ta resetoni kodin duke klikuar \"Versioni i historisë\" më poshtë dhe më pas duke zgjedhur \"Fillo nga e para\".",
           "whenclicked": "## Vaksina\n\nJu mund të simuloni duke i dhënë përbindëshave një vaksinë kur ju klikoni mbi to. Për ta bërë këtë, përdorni bllokun “ndrysho kostumin” me këtë event:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "CourseF_outbreak7_2023": {
-          "verionhistory": "Ndjeheni të ngecur? Ju gjithëmonë mund ta resetoni kodin duke klikuar \"Versioni i historisë\" më poshtë dhe më pas duke zgjedhur \"Fillo nga e para\".",
+          "verionhistory": "Ndjeheni të ngecur? Ju gjithmonë mund ta resetoni kodin duke klikuar \"Versioni i historisë\" më poshtë dhe më pas duke zgjedhur \"Fillo nga e para\".",
           "whenclicked": "## Vaksina\n\nJu mund të simuloni duke i dhënë përbindëshave një vaksinë kur ju klikoni mbi to. Për ta bërë këtë, përdorni bllokun “ndrysho kostumin” me këtë event:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "Dance_2019_01": {
@@ -1188,16 +1188,16 @@
         },
         "courseA_artist_loops6_2021": {
           "courseA_artist_loops6_a": "Nuk mund të kuptoni se si ta vendosni kodrën? Mundohuni të luani pak me blloqet për të parë se çfarë vizaton secili prej tyre.",
-          "courseA_artist_loops6_b": "Juve do t'ju duhet 2 blloqe në 2 drejtime për të zgjidhur këtë enigmë."
+          "courseA_artist_loops6_b": "Ju do të duhet 2 blloqe në 2 drejtime për të zgjidhur këtë enigmë."
         },
         "courseA_artist_loops7_2021": {
           "courseA_artist_loops7_a": "Nuk mund të kuptoni se ku të vendosni këtë loop? Provoni të shkruani kodin hap pas hapi dhe kërkoni një model.",
           "courseA_artist_loops7_b": "Shkruani kodin për një valë së pari, pastaj përsëriteni atë për të nxjerrë dy të tjera.",
-          "courseA_artist_loops7_c": "Mos harroni, ju mund të vendosni më shumë se 1 bllok në <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> loop."
+          "courseA_artist_loops7_c": "Mos harroni, ju mund të vendosni më shumë se një bllok në <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> loop."
         },
         "courseA_artist_loops8_2021": {
           "courseA_artist_loops8_a": "Provoni të ekzekutoni kodin për të parë se çfarë është shkruar për ju.",
-          "courseA_artist_loops8_b": "Si do ta bënit kodin që ju është dhënë?",
+          "courseA_artist_loops8_b": "Si do ta lidhni kodin që ju është dhënë?",
           "courseA_artist_loops8_c": "Çfarë bën kodi juaj?\nÇfarë supozohet të bëjë?\nÇfarë ju tregon kjo?"
         },
         "courseA_artist_loops9_2021": {
@@ -1686,7 +1686,7 @@
           "courseB_artist_loops2_b": "Provoni së pari të ekzekutoni kodin për të parë se ku përfundon artisti."
         },
         "courseB_artist_loops3_2021": {
-          "courseB_artist_loops3_a": "Mos harroni të përdorni një loop “përsëritës” <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> për një kodim më të mirë!",
+          "courseB_artist_loops3_a": "Mos harroni të përdorni një loop `përsërit` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> për një kodim më të mirë!",
           "courseB_artist_loops3_b": "Artistit do t'i duhet të lëvizë nga jugu për të vizatuar këtë vijë."
         },
         "courseB_artist_loops4_2021": {
@@ -1695,7 +1695,7 @@
           "courseB_artist_loops4_c": "Mos harroni të ndryshoni numrin e herëve që loop-i përsëritet."
         },
         "courseB_artist_loops5_2021": {
-          "courseB_artist_loops5_a": "Tërhiqni një loop \"përsëritës\" <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, më pas vendosni blloqet e tjera brenda tij. Sa herë duhet të përsërisni?"
+          "courseB_artist_loops5_a": "Tërhiqni një loop `përsëritës` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, më pas vendosni blloqet e tjera brenda tij. Sa herë duhet të përsërisni?"
         },
         "courseB_artist_loops6_2021": {
           "courseB_artist_loops6_b": "Provoni të shkruani lëvizjet në një copë letër dhe kërkoni një model."
@@ -1711,13 +1711,13 @@
         },
         "courseB_artist_loops9_2021": {
           "courseB_artist_loops9_a": "Mos harroni se blloqet e kërcimit mund të përdoren për të lëvizur pa tërhequr një vijë.",
-          "courseB_artist_loops9_b": "Ju do të dëshironi të përdorni bllokun P për të zgjidhur këtë enigmë.",
+          "courseB_artist_loops9_b": "Ju do të dëshironi të përdorni bllokun W për të zgjidhur këtë enigmë.",
           "courseB_artist_loops9_c": "Nuk mund të kuptoni se ku të vendosni këtë loop? Provoni të shkruani kodin hap pas hapi dhe kërkoni një model."
         },
         "courseB_artist_loops_challenge1_2021": {
           "courseB_artist_loops_challenge1_a": "Blloqe si kjo: <xml>  <block type=\"simple_move_up_right\"/></xml> do ta lejojnë artistin tuaj të lëvizë në një pjerrtësi!",
           "courseB_artist_loops_challenge1_b": "Kur të përfundoni një nga zaret, “hidheni” tjetrën!",
-          "courseB_artist_loops_challenge1_c": "Do të ju duhet të “lëvizni” ose “kërceni” mbi disa nga të njëjtat rreshta dy herë. "
+          "courseB_artist_loops_challenge1_c": "Do të ju duhet të  `lëvizni` ose `kërceni` mbi disa nga të njëjtat rreshta dy herë. "
         },
         "courseB_artist_loops_challenge2_2021": {
           "courseB_artist_loops_challenge2_a": "Kodi për të tërhequr një X është dhënë tashmë për ju. E tëra çfarë ju duhet të bëni është të përsërisni X dhe “kërceni” në vendin tjetër.",
@@ -1741,7 +1741,7 @@
         "courseB_collector_loops4_2021": {
           "courseB_collector_loops4_a": "Provoni të përdorni butonin e hapit për të kuptuar kur gjërat shkojnë keq.",
           "courseB_collector_loops4_b": "Për të ndryshuar se sa larg shkon Laurela, ndryshoni numrin e herave që ekzekutohet loop-i.",
-          "courseB_collector_loops4_c": "Laurela duhet të ecë poshtë dhe të mbledhë thesarin pasi të përfundojë loop-in \"përsëritës\" <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>!"
+          "courseB_collector_loops4_c": "Laurela duhet të ecë poshtë dhe të mbledhë thesarin pasi të përfundojë loop-in `përsërit` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>!"
         },
         "courseB_collector_loops5_2021": {
           "courseB_collector_loops5_a": "Përdorni më shumë se një loop për të kryer punën.",
@@ -1772,7 +1772,7 @@
         "courseB_collector_loops_challenge2a_2021": {
           "courseB_collector_loops_challenge2a_a": "Nëse diçka shkon keq, provoni të debugg-oni atë. Mos u dorëzoni!",
           "courseB_collector_loops_challenge2a_b": "Shikoni këtë mundësi për të kaluar nëpër labirint. A shihni një model që mund ta përsërisni?",
-          "courseB_collector_loops_challenge2a_c": "Për të mbledhur të gjithë thesarin, ose do t'ju duhet të shtoni dy blloqe <xml> <block type=\"collector_collect\"/></xml> brenda loop-it tuaj, ose të vendosni bllokun brenda bllokut të tij \"përsëritës\"."
+          "courseB_collector_loops_challenge2a_c": "Për të mbledhur të gjithë thesarin, ose do t'ju duhet të shtoni dy blloqe <xml> <block type=\"collector_collect\"/></xml> brenda loop-it tuaj, ose të vendosni bllokun brenda bllokut të tij \"përsërit\"."
         },
         "courseB_iceage_loops10": {
           "courseB_iceage_loops10_a": "Kujdes, akull i thyer! Scrat do të bjerë në ujë!",
@@ -2014,7 +2014,7 @@
         },
         "courseB_playlab_events6_2021": {
           "courseB_playlab_events6_a": "Do të të duhen këto blloqe eventesh:\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events6_b": "Përdorni shigjetat rënëse në blloqet e eventeve \"kur shtypet \\_\\_\\_ shigjeta\" jeshile për të zgjedhur drejtime të ndryshme.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
+          "courseB_playlab_events6_b": "Përdorni shigjetat rënëse në blloqet e eventeve \"kur shtypet \\_\\_\\_ shigjeta\" gjelbërt për të zgjedhur drejtime të ndryshme.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
           "courseB_playlab_events6_c": "Merrni të gjithë flamujt për të kaluar!"
         },
         "courseB_playlab_events7_2021": {
@@ -2031,7 +2031,7 @@
           "courseB_playlab_events_challenge2_a": "Çdo kafshë në lojë duhet të zhduket kur klikohet. Duhet gjithashtu të kthehet pas një ose dy sekondash!",
           "courseB_playlab_events_challenge2_b": "Përdorni blloqe të tjera ngjarjesh për të zhdukur kafshët e tjera!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
           "courseB_playlab_events_challenge2_c": "Përdorni komanda shtesë për të luajtur tinguj ose për të fituar pikë kur klikoni kafshët!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
-          "courseB_playlab_events_challenge2_d": "Përziejini!\n\nBëni disa kafshë të japin më shumë pikë se të tjerat.\nPërdorni tinguj të ndryshëm.\nNdryshoni disponimin e kafshëve!"
+          "courseB_playlab_events_challenge2_d": "Përzieni atë!\n\nBëni disa kafshë të japin më shumë pikë se të tjerët.\nPërdorni tinguj të ndryshëm.\nNdryshoni humorin e kafshëve!"
         },
         "courseB_starWars_prog1_2021": {
           "courseB_starWars_prog1_a": "Provoni të shtoni blloqe një nga një, pastaj klikoni “Ekzekuto” për të parë se çfarë ndodh.",
@@ -2104,7 +2104,7 @@
           "courseB_starWars_prog9_a": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
         },
         "courseB_starWars_prog9_2021": {
-          "courseB_starWars_prog9_a": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende.",
+          "courseB_starWars_prog9_a": "Mos kini frikë të bëni një gabim! Drejtoni kodin për të parë se çfarë ndodh edhe nëse ende nuk e keni zgjidhur enigmën.",
           "courseB_starWars_prog9_b": "Ka më shumë se një mënyrë për të zgjidhur këtë enigmë.",
           "courseB_starWars_prog9_c": "A mund të ndihmojë loop-i `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> këtu?"
         },

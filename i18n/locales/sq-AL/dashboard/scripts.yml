@@ -2942,6 +2942,7 @@ sq:
             lesson-6:
               name: Hapat e ardhshme
           title: Hyrje në Shkencë Kompjuterike
+        music-intro-2024: {}
         csp1-2024: {}
         csp2-2024: {}
         csp3-2024: {}
@@ -3006,3 +3007,40 @@ sq:
         csp9-2024: {}
         csp10-2024: {}
         csp-post-survey-2024: {}
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Përmbajtja
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa4-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa9-2025: {}
+        csa-postap-se-and-computer-vision-2025: {}
+        aryanna-sandbox: {}
+        coding-with-ai: {}
+        pl-team-design-guide: {}
