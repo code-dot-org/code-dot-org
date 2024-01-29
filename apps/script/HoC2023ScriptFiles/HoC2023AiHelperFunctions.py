@@ -15,7 +15,7 @@ module_path = ".."
 sys.path.append(os.path.abspath(module_path))
 
 # aws_utils contains a custom library file unique to their bedrock tutorial located here: https://github.com/aws-samples/amazon-bedrock-workshop/blob/109ed616fd14c9eb26eda9bef96eb78c490d5ef6/utils/bedrock.py
-# See readme.md for more detailed access information and further amazon documentation links
+# See readme.md for more detailed access information and additional amazon documentation links.
 from aws_utils import bedrock
 
 # ---- ⚠️ Un-comment and edit the below lines as needed for your AWS setup ⚠️ ----
@@ -96,8 +96,8 @@ def load_embeddings_cache(path):
             pickle.dump(embedding_cache, embedding_cache_file)    
     return embedding_cache
 
-# This function retrieves an embedding for a string from the cache if present, otherwise requests for the embedding through an available model (variable stored in constants.py)
-# As of 01/08/2024, the model being used is AWS's Titan v1 within their Bedrock framework; adjust function body as needed to replace with other models as necessary
+# This function retrieves an embedding for a string from the cache if present, otherwise requests for the embedding through an available model.
+# As of 01/08/2024, the model being used is AWS's Titan v1 within their Bedrock framework; adjust function body as needed to replace with other models as necessary.
 def retrieve_embedding(string: str,
     cache_path: str,
     embedding_cache,
@@ -137,7 +137,7 @@ def retrieve_embedding(string: str,
 
 # This function calculates the similarity score between an input embedding and a list of output embeddings.
 def calculate_similarity_score(input_embeddings, output_embeddings, emojis):
-    # Creates matrix of cosine distances (similarities) where each subarray represents the distance between an input and each possible output
+    # Creates nested array of cosine distances (similarities) where each subarray represents the distance between an input and each possible output
     # e.g. [[input1:output1, input1:output2...], [input2:output1, output2:output2...]...]
     vectors = []
     indexes = []
@@ -149,16 +149,16 @@ def calculate_similarity_score(input_embeddings, output_embeddings, emojis):
         
     similarities = vectors
     
-    # Conversion to pandas DataFrame for ease of manipulation
+    # Conversion to pandas DataFrame for ease of manipulation.
     similarities = pd.DataFrame(similarities)
     
-    # We use the emoji_ids and not the emoji modelDescriptiveNames as index for use by client
+    # We use the emoji_ids and not the emoji modelDescriptiveNames as index for use by client.
     similarities.index = emojis.values()
     
-    # Conversion from cosine distance to cosine similarity for ease of summation later in pipeline.
-    # Math explanation: Cosine distance outputs a value between 0 -> 1 where smaller values = greater similarity
-    # We can redefine this into cosine similarity with a simple (x-1)*-1 due to their mathematical relationship
-    # Since we take the SUM(MAX(similarity)) value when determining which options to present the user, cosine similarity is preferable
+    # Conversion from cosine distance to cosine similarity for easier readability in frontend computations.
+    # Math explanation: Cosine distance outputs a value between 0 -> 1 where smaller values = greater similarity.
+    # Cosine similarity redefines this relationship so that instead larger values = greater ssimilarity.
+    # Since we expose some of these values to students in the frontend, we felt that similarity values growing larger would be easier to understand.
     similarities = similarities.apply(lambda x: round((x-1)*-1, 3), axis = 0)
 
     # Conversion to required JSON lookup format

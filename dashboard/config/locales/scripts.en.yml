@@ -398,6 +398,8 @@ en:
               name: Dance Lab2
             lesson-53:
               name: Python Lab
+            lesson-54:
+              name: Web Lab 2
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -14269,9 +14271,9 @@ en:
           description: |
             **You will:**
 
-            * Identify and explain fundamental CS concepts.
+            * Identify and explain fundamental K-5 grade coding concepts.
             * Demonstrate the application of algorithms, sequences, loops, and conditionals.
-            * Create programs to solve puzzles using algorithms, sequences, loops, and conditionals
+            * Write code to solve puzzles using algorithms, sequences, loops, and conditionals
 
 
 
@@ -14280,19 +14282,9 @@ en:
           student_description: |
             **You will:**
 
-            * Identify and explain fundamental CS concepts.
+            * Identify and explain fundamental K-5 grade coding concepts.
             * Demonstrate the application of algorithms, sequences, loops, and conditionals.
-            * Create programs to solve puzzles using algorithms, sequences, loops, and conditionals
-
-
-
-
-            **Suggested time:** 60 minutes
-            **You will:**
-
-            * Identify and explain fundamental CS concepts.
-            * Demonstrate the application of algorithms, sequences, loops, and conditionals.
-            * Create programs to solve puzzles using algorithms, sequences, loops, and conditionals
+            * Write code to solve puzzles using algorithms, sequences, loops, and conditionals
 
 
 

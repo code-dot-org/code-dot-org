@@ -1,0 +1,77 @@
+name: CI Pipeline
+
+on:
+  workflow_dispatch:
+    # Add additional trigger events as needed (e.g., push, pull_request, etc.)
+
+env:
+  AWS_DEFAULT_REGION: us-east-1
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  MYSQL_ROOT_PASSWORD: root
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    if: github.actor == 'pablo-code-org'
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        with:
+          path: code-dot-org
+
+      - name: Find and Cache Stale Files
+        id: stalefiles
+        run: |
+          find code-dot-org -type f -not -path './.git/*' -mtime +730 > stale_files.txt
+          echo "::set-output name=stale_hash::$(sha256sum stale_files.txt | cut -d ' ' -f1)"
+
+      - name: Cache stale files
+        uses: actions/cache@v2
+        with:
+          path: |
+            $(cat stale_files.txt)
+          key: ${{ runner.os }}-stale-${{ steps.stalefiles.outputs.stale_hash }}
+
+      - name: Get Branch Name from Hardcoded Pull Request ID
+        id: get_branch
+        run: |
+          PR_ID=55766
+          PR_DATA=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+                        https://api.github.com/repos/code-dot-org/code-dot-org/pulls/$PR_ID)
+          BRANCH_NAME=$(echo $PR_DATA | jq -r .head.ref)
+          echo "Branch Name: $BRANCH_NAME"
+          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
+
+      - name: Checkout Branch
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ steps.get_branch.outputs.branch_name }}
+          path: code-dot-org
+          repository: code-dot-org/code-dot-org
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Prepare entrypoint script
+        run: cp ./code-dot-org/docker/dockerfiles/entrypoint.sh ./code-dot-org/
+
+      - name: Set up Docker Environment
+        run: docker build -t code-dot-org-testing-docker-image -f ./code-dot-org/docker/dockerfiles/Dockerfile ./code-dot-org
+
+      - name: Run ls Unit Tests
+        run: |
+          docker run --workdir=/home/code-dot-org \
+            code-dot-org-testing-docker-image \
+            /bin/bash -c "ls -la /home/code-dot-org/docker"
+
+      - name: Run Unit Tests
+        run: |
+          docker run --workdir=/home/code-dot-org \
+            code-dot-org-testing-docker-image \
+            /bin/bash -c "source /home/code-dot-org/docker/unit_tests.sh"
+
+      - name: Update Cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
