@@ -1,0 +1,57 @@
+name: Custom Health Check
+
+on:
+  workflow_dispatch:
+    inputs:
+      pullRequestNumber:
+        description: 'Pull Request Number'  # User inputs the PR ID here
+        required: true
+        type: integer
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check PR Author
+      id: pr-check
+      uses: actions/github-script@v5
+      with:
+        script: |
+          const prNumber = ${{ github.event.inputs.pullRequestNumber }};
+          const pr = await github.rest.pulls.get({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            pull_number: prNumber
+          });
+          if (pr.data.user.login !== 'pablo-code-org') {
+            throw new Error('PR author is not pablo-code-org');
+          }
+          return pr.data.number;
+
+    - name: Post Start Comment
+      if: steps.pr-check.outputs.pullRequestNumber
+      uses: actions/github-script@v5
+      with:
+        script: |
+          github.rest.issues.createComment({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: ${{ steps.pr-check.outputs.pullRequestNumber }},
+            body: '🚀 Custom Health Check Started!'
+          });
+
+    # Add your health check steps here
+    # - name: Run Health Check
+    #   run: ...
+
+    - name: Post Completion Comment
+      if: steps.pr-check.outputs.pullRequestNumber
+      uses: actions/github-script@v5
+      with:
+        script: |
+          github.rest.issues.createComment({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: ${{ steps.pr-check.outputs.pullRequestNumber }},
+            body: '✅ Custom Health Check Completed!'
+          });
