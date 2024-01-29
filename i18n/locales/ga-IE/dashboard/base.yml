@@ -50,6 +50,8 @@ ga:
         locale: 'Teanga'
         age: 'Aois'
         gender: 'Inscne'
+        gender_student_input: 'Inscne'
+        gender_teacher_input: 'Inscne'
         edit_header: 'Cuir Sonraí an Chuntais in Eagar'
         finish_sign_up_header: 'Críochnaigh an próiseas cláraithe'
         finish_sign_up_header_error: 'Ceartaigh na hearráidí seo a leanas:'

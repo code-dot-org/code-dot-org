@@ -1418,6 +1418,10 @@ ga:
         text: comhordanáid x de {SPRITE}
       gamelab_yLocationOf:
         text: comhordanáid y de {SPRITE}
+      KatiesBlocks_changeVelocity:
+        text: 'méadaigh {PROPERTY} de gach {SPRITE}: {VAL}'
+      KatiesBlocks_setVelocity:
+        text: 'socraigh {PROPERTY} do {SPRITE}: {VAL}'
       KatiesBlocks_tumbling:
         text: rothlam
       Mikelab_addBehaviorSimple:

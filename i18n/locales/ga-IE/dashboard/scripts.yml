@@ -3310,3 +3310,55 @@ ga:
               display_name: Suirbhé Iarchúrsa
         csp-post-survey-2024:
           title: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Suirbhé
+            lessonGroup-3:
+              display_name: Ábhar
+            lessonGroup-5:
+              display_name: Ceachtanna Malartacha
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+            lessonGroup-4:
+              display_name: Ceachtanna Malartacha
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+            lessonGroup-4:
+              display_name: Ceachtanna Malartacha
+        csa4-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+            lessonGroup-4:
+              display_name: Ceachtanna Malartacha
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+            lessonGroup-4:
+              display_name: Ceachtanna Malartacha
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+            lessonGroup-4:
+              display_name: Ceachtanna Malartacha
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+            lessonGroup-5:
+              display_name: Ceachtanna Malartacha
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+            lessonGroup-4:
+              display_name: Suirbhé
+            lessonGroup-5:
+              display_name: Ceachtanna Malartacha

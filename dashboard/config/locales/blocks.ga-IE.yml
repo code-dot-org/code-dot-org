@@ -1036,6 +1036,10 @@ ga:
           COLOR:
             '"blue"': gorm
             '"red"': dearg
+      KatiesBlocks_changeVelocity:
+        text: 'méadaigh {PROPERTY} de gach {SPRITE}: {VAL}'
+      KatiesBlocks_setVelocity:
+        text: 'socraigh {PROPERTY} do {SPRITE}: {VAL}'
       KatiesBlocks_tumbling:
         text: rothlam
       Mikelab_addBehaviorSimple:

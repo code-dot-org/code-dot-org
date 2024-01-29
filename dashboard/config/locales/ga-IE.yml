@@ -20,6 +20,8 @@ ga:
         finish_sign_up_subheader_provider_markdown: Líon isteach an t-eolas seo a
           leanas chun cuntas Code.org a chruthú le **%{provider}** le haghaidh **%{email}**.
         gender: Inscne
+        gender_student_input: Inscne
+        gender_teacher_input: Inscne
         locale: Teanga
         name: Ainm Taispeána
         name_example: Ainm Taispeána (m.sh. Sárchódálaí nó Sinéad S.)
