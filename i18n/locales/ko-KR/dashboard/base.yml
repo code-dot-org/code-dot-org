@@ -51,6 +51,8 @@ ko:
         locale: '언어'
         age: '나이'
         gender: '성별'
+        gender_student_input: '성별'
+        gender_teacher_input: '성별'
         edit_header: '계정 정보 수정'
         ai_settings_header: 'AI 설정'
         finish_sign_up_header: '계정 만들기를 마칩니다.'

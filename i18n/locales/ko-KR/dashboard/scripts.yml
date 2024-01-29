@@ -5398,3 +5398,55 @@ ko:
               display_name: 과정 후 설문조사
         csp-post-survey-2024:
           title: CS 원리 과정 후 설문 조사
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 설문조사
+            lessonGroup-3:
+              display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 대체 레슨
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 대체 레슨
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 대체 레슨
+        csa4-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 대체 레슨
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 대체 레슨
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 대체 레슨
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 대체 레슨
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 설문조사
+            lessonGroup-5:
+              display_name: 대체 레슨

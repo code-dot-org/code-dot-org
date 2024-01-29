@@ -1068,6 +1068,8 @@ ko:
           INPUT1:
             '1': 레몬 주스
         text: 현미경에 {INPUT1}이(가) 있습니다
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -1100,6 +1102,8 @@ ko:
         text: "{NUM}을(를) 새로운 {ANIMATION_NAME} 스프라이트 [BEHAVIOR][2](으)로 나타내기"
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}이(가) {TEXT1}을(를) 말함"
+      KatiesBlocks_changeVelocity:
+        text: "{SPRITE}{PROPERTY}을(를) {VAL}만큼 변경"
       KatiesBlocks_glideTo:
         text: "{SPRITE}이(가) {LOCATION}(으)로 글라이딩"
       KatiesBlocks_goldilocks:
@@ -1111,6 +1115,8 @@ ko:
         text: |2-
            만약 {CONDITION}{SPRITE}이면
           {STATEMENT}
+      KatiesBlocks_setVelocity:
+        text: "{SPRITE} {PROPERTY}을(를) {VAL}(으)로 설정 "
       KatiesBlocks_tumbling:
         text: 텀블링
       Mikelab_addBehaviorSimple:

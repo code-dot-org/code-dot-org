@@ -21,6 +21,8 @@ ko:
         finish_sign_up_subheader_provider_markdown: "**%{provider}**으로 **%{email}**을
           위한 Code.org 계정 만들기를 마치려면 다음 정보를 작성하세요."
         gender: 성별
+        gender_student_input: 성별
+        gender_teacher_input: 성별
         locale: 언어
         name: 사용자 이름
         name_example: 이름 표시 (예. 멋진 코더 또는 제인 S.)

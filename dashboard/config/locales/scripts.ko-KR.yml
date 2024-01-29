@@ -1306,6 +1306,14 @@ ko:
               display_name: 컨텐츠
             lessonGroup-5:
               display_name: 대체 레슨
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 설문조사
+            lessonGroup-3:
+              display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 대체 레슨
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1347,6 +1355,12 @@ ko:
             lesson-4:
               name: 변수
         csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 대체 레슨
+        csa2-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
@@ -1394,6 +1408,12 @@ ko:
               display_name: 컨텐츠
             lessonGroup-4:
               display_name: 대체 레슨
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 대체 레슨
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1426,6 +1446,12 @@ ko:
             lessonGroup-4:
               display_name: 대체 레슨
         csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 대체 레슨
+        csa4-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
@@ -1474,6 +1500,12 @@ ko:
               display_name: 컨텐츠
             lessonGroup-4:
               display_name: 대체 레슨
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 대체 레슨
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1510,6 +1542,12 @@ ko:
             lessonGroup-4:
               display_name: 대체 레슨
         csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 대체 레슨
+        csa6-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
@@ -1556,6 +1594,12 @@ ko:
               display_name: 컨텐츠
             lessonGroup-5:
               display_name: 대체 레슨
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 대체 레슨
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1597,6 +1641,14 @@ ko:
             lessonGroup-5:
               display_name: 대체 레슨
         csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 설문조사
+            lessonGroup-5:
+              display_name: 대체 레슨
+        csa8-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
