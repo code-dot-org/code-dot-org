@@ -5276,3 +5276,39 @@ pt:
               display_name: Pesquisa Pós-Curso
         csp-post-survey-2024:
           title: Pesquisa pós-curso de princípios do CS
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Questionário
+            lessonGroup-3:
+              display_name: Conteúdo
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa4-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-4:
+              display_name: Questionário

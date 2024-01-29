@@ -51,6 +51,8 @@ pt:
         locale: 'Idioma'
         age: 'Idade  '
         gender: 'Género'
+        gender_student_input: 'Género'
+        gender_teacher_input: 'Género'
         edit_header: 'Edita os detalhes da tua conta'
         finish_sign_up_header: 'Terminar de criar a tua conta'
         finish_sign_up_header_error: 'Por favor, corrige os seguintes erros:'

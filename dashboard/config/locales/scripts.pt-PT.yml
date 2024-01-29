@@ -1389,6 +1389,12 @@ pt:
               display_name: Questionário
             lessonGroup-3:
               display_name: Conteúdo
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Questionário
+            lessonGroup-3:
+              display_name: Conteúdo
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1431,6 +1437,10 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1469,6 +1479,10 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1502,6 +1516,10 @@ pt:
             lesson-9:
               name: Aleatório
         csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa4-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
@@ -1544,6 +1562,10 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1581,6 +1603,10 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1615,6 +1641,10 @@ pt:
             lesson-6:
               name: Propriedade intelectual
         csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa7-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
@@ -1657,6 +1687,12 @@ pt:
             lessonGroup-4:
               display_name: Questionário
         csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-4:
+              display_name: Questionário
+        csa8-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo

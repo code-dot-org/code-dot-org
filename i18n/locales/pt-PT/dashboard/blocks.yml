@@ -1652,8 +1652,12 @@ pt:
         text: coordenada x do {SPRITE}
       gamelab_yLocationOf:
         text: coordenada y do {SPRITE}
+      KatiesBlocks_changeVelocity:
+        text: alterar {SPRITE} {PROPERTY} por {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} deslizar para {LOCATION}"
+      KatiesBlocks_setVelocity:
+        text: definir {SPRITE} {PROPERTY} para {VAL}
       KatiesBlocks_tumbling:
         text: em queda
       Mikelab_addBehaviorSimple:

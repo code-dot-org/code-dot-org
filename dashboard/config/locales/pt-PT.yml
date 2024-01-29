@@ -21,6 +21,8 @@ pt:
           para concluir a criação de uma conta do Code.org usando o **%{provider}**
           para **%{email}**.
         gender: Género
+        gender_student_input: Género
+        gender_teacher_input: Género
         locale: Idioma
         name: Nome a apresentar
         name_example: 'Nome de exibição (ex: João da Silva ou Maria Alves)'
