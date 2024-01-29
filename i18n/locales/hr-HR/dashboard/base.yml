@@ -37,6 +37,8 @@ hr:
         locale: 'Jezik'
         age: 'Godine'
         gender: 'Spol'
+        gender_student_input: 'Spol'
+        gender_teacher_input: 'Spol'
         edit_header: 'Uredi podatke o računu'
         finish_sign_up_header_error: 'Molimo ispravite sljedeće pogreške:'
         error:
