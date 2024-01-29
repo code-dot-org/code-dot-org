@@ -43,6 +43,8 @@ sr:
         locale: 'Језик'
         age: 'Узраст'
         gender: 'Пол'
+        gender_student_input: 'Пол'
+        gender_teacher_input: 'Пол'
         edit_header: 'Уреди детаље налога'
         finish_sign_up_header: 'Заврши креирање твог налога'
         finish_sign_up_header_error: 'Молим вас исправите следеће грешке:'

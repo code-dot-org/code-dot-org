@@ -20,6 +20,8 @@ sr:
         finish_sign_up_subheader_provider_markdown: Попуни следеће информације да
           би завршио креирање Code.org налога са **%{provider}** за **%{email}**.
         gender: Пол
+        gender_student_input: Пол
+        gender_teacher_input: Пол
         locale: Језик
         name: Прикажи назив
         parent_email: Имејл од родитеља/старатеља
