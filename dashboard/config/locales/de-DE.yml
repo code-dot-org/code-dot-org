@@ -21,6 +21,8 @@ de:
         finish_sign_up_subheader_provider_markdown: Gib folgende Informationen ein
           um dein Code.org-Konto mit **%{provider}** für **%{email}** fertigzustellen.
         gender: Geschlecht
+        gender_student_input: Geschlecht
+        gender_teacher_input: Geschlecht
         locale: Sprache
         name: Name anzeigen
         name_example: Angezeigter Name (z.B. Cooler Codierer oder Jana B.)

@@ -1118,6 +1118,8 @@ de:
         text: repräsentieren {NUM} neue {ANIMATION_NAME} Sprites [BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE} sagt {TEXT1}"
+      KatiesBlocks_changeVelocity:
+        text: ändern {SPRITE} {PROPERTY} um {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} gleite zu {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1126,6 +1128,8 @@ de:
             '"gas"': Gas
             '"liquid"': flüssig
             '"solid"': Solid
+      KatiesBlocks_setVelocity:
+        text: setze {SPRITE} {PROPERTY} auf {VAL}
       KatiesBlocks_tumbling:
         text: hingefallen
       Mikelab_addBehaviorSimple:

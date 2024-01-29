@@ -1736,6 +1736,14 @@ de:
               display_name: Inhalt
             lessonGroup-5:
               display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Umfrage
+            lessonGroup-3:
+              display_name: Inhalt
+            lessonGroup-5:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1778,6 +1786,12 @@ de:
             lesson-4:
               name: Variablen
         csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa2-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -1826,6 +1840,12 @@ de:
               display_name: Inhalt
             lessonGroup-4:
               display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1858,6 +1878,12 @@ de:
             lessonGroup-4:
               display_name: Alternate Lessons (alternative Lerneinheiten)
         csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa4-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -1906,6 +1932,12 @@ de:
               display_name: Inhalt
             lessonGroup-4:
               display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1942,6 +1974,12 @@ de:
             lessonGroup-4:
               display_name: Alternate Lessons (alternative Lerneinheiten)
         csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa6-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -1988,6 +2026,12 @@ de:
               display_name: Inhalt
             lessonGroup-5:
               display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-5:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2029,6 +2073,14 @@ de:
             lessonGroup-5:
               display_name: Alternate Lessons (alternative Lerneinheiten)
         csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Umfrage
+            lessonGroup-5:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa8-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt

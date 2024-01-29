@@ -5880,6 +5880,7 @@ de:
             lessonGroup-2:
               display_name: Erste Schritte
           title: Einführung in die Informatik
+        music-intro-2024: {}
         csp1-2024:
           lesson_groups:
             cspSurvey:
@@ -6006,3 +6007,60 @@ de:
               display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
         csp-post-survey-2024:
           title: Befragung zu „Grundsätze der Informatik“ nach dem Kurs
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Umfrage
+            lessonGroup-3:
+              display_name: Inhalt
+            lessonGroup-5:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa4-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-5:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Umfrage
+            lessonGroup-5:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa9-2025: {}
+        csa-postap-se-and-computer-vision-2025: {}
+        aryanna-sandbox: {}
+        coding-with-ai: {}
+        pl-team-design-guide: {}

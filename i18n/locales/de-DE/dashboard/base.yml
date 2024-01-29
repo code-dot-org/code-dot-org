@@ -51,6 +51,8 @@ de:
         locale: 'Sprache'
         age: 'Alter'
         gender: 'Geschlecht'
+        gender_student_input: 'Geschlecht'
+        gender_teacher_input: 'Geschlecht'
         edit_header: 'Kontodaten bearbeiten'
         finish_sign_up_header: 'Kontoerstellung abschließen'
         finish_sign_up_header_error: 'Bitte korrigiere die folgenden Fehler:'
