@@ -63,13 +63,13 @@ jobs:
         run: |
           docker run --workdir=~/code-dot-org \
             code-dot-org-testing-docker-image \
-            /bin/bash -c "ls -la ~/code-dot-org/docker; source ~/code-dot-org/docker/unit_tests.sh"
+            /bin/bash -c "ls -la ~/code-dot-org/docker; source /home/code-dot-org/docker/unit_tests.sh"
 
       - name: Run UI Tests
         run: |
           docker run --workdir=~/code-dot-org \
             code-dot-org-testing-docker-image \
-            /bin/bash -c "ls -la ~/code-dot-org/docker; source ~/code-dot-org/docker/unit_tests.sh"
+            /bin/bash -c "ls -la ~/code-dot-org/docker; source /home/code-dot-org/docker/unit_tests.sh"
 
       - name: Update Cache
         uses: actions/cache@v2
