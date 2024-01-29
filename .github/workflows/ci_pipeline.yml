@@ -63,7 +63,7 @@ jobs:
         run: |
           docker run \
             code-dot-org-testing-docker-image \
-            /bin/bash -c "ls -la ./circleci/"
+            /bin/bash -c "cd ./circleci && ls -la ."
 
       - name: Update Cache
         uses: actions/cache@v2
