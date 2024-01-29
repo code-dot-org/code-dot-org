@@ -1,4 +1,4 @@
-export async function savePromptAndResponse() {
+export async function savePromptAndResponse({}) {
   console.log('savePromptAndResponse was called');
 
   // Checking that the csrf-token exists since it is disabled on test
