@@ -33,8 +33,7 @@ function getXCoordinate(block, workspace) {
   const padding = viewWidth ? WORKSPACE_PADDING : 0;
   const width = viewWidth || contentWidth;
 
-  // Multiplier accounts for the fact that blocks with SVG frames need twice as much padding
-  // so their edges don't touch the edge of the workspace
+  // SVG frames need additional padding so their edges don't touch the edge of the workspace
   let horizontalOffset = block.functionalSvg_
     ? SVG_FRAME_SIDE_PADDING + padding
     : padding;
