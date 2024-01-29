@@ -223,6 +223,7 @@ export default class CourseVersionPublishingEditor extends Component {
             curriculum. It also impacts what kinds of edits can be made, some of
             which can not be reversed without engineering assistance.
             <br />
+            <br />
             Click "More info" for more information.
           </HelpTip>
           <Link href="https://github.com/code-dot-org/code-dot-org/wiki/Updating-Publish-State-of-Scripts-or-Courses">
