@@ -20,6 +20,8 @@ km:
         finish_sign_up_subheader_provider_markdown: ចូរបំពេញព័ត៌មានខាងក្រោមដើម្បីបញ្ចប់ការបង្កើតគណនីមួយជាមួយ
           Code.org ជាមួយនឹង **%{provider}** សម្រាប់ **%{email}**។
         gender: ភេទ
+        gender_student_input: ភេទ
+        gender_teacher_input: ភេទ
         locale: ភាសា
         name: បង្ហាញ​ឈ្មោះ
         name_example: ឈ្មោះដែលត្រូវបង្ហាយ (ឧទាហរណ៏៖ Cool Coder រឺក៏​ Jane S.)

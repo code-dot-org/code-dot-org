@@ -837,8 +837,12 @@ km:
         text: បង្កើត​ {NUM} ថ្មី {ANIMATION_NAME} sprites {BEHAVIOR}
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}និយាយ{TEXT1}"
+      KatiesBlocks_changeVelocity:
+        text: ផ្លាស់ប្តូរ {SPRITE} {PROPERTY} ទៅជា {VAL}
       KatiesBlocks_makeNumSpritesNear:
         text: បង្កើត​ {NUM} ថ្មី {ANIMATION_NAME} sprites ក្បែ {LOCATION}
+      KatiesBlocks_setVelocity:
+        text: កំណត់ {SPRITE} {PROPERTY} ទៅជា {VAL}
       KatiesBlocks_spriteBirdSay:
         text: "{SPRITE}និយាយ{SPEECH}"
       Mikelab_addBehaviorSimple:
