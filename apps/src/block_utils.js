@@ -1074,18 +1074,21 @@ exports.createJsWrapperBlockCreator = function (
     blockly.Blocks[blockName] = {
       helpUrl: getHelpUrl(docFunc), // optional param
       init: function () {
-        // Styles should be used over hard-coded colors in Google Blockly blocks
+        // All Google Blockly blocks must have a style in order to be compatible with themes.
+        // However, blocks with just a color and no style are still permitted.
+        if (style) {
+          // Google Blockly method. No-op for CDO Blockly.
+          this.setStyle(style);
+        }
+        // CDO Blockly uses colors, not styles. However, the color may be determined
+        // automatically based on a block's returnType (e.g. yellow for "Location").
         if (color) {
           Blockly.cdoUtils.setHSV(this, ...color);
         } else if (!returnType) {
-          // CDO Blockly automatically sets block color for blocks with a specific
-          // returnType (e.g. yellow for "Location")
+          // Blocks with neither style or color that do not have a return type can
+          // use the default teal color and style.
           Blockly.cdoUtils.setHSV(this, ...DEFAULT_COLOR);
-        }
-        if (style) {
-          this.setStyle(style);
-        } else {
-          this.setStyle('default');
+          this.setStyle(style || 'default');
         }
 
         if (returnType) {
