@@ -37,6 +37,7 @@ const PythonEditor: React.FunctionComponent = () => {
     if (parsedData.permissions.includes('levelbuilder')) {
       dispatch(appendOutput('Simulating running code.'));
       // TODO: re-enable once we fix iPad issues.
+      // https://codedotorg.atlassian.net/browse/CT-299
       // runPythonCode(code);
     } else {
       alert('You do not have permission to run python code.');
