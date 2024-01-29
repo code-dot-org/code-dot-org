@@ -23,6 +23,8 @@ az:
         finish_sign_up_subheader_provider_markdown: "**%{email}** üçün **%{provider}**
           ilə bir Code.org hesabı yaratmağı bitirmək üçün aşağıdakı məlumatları doldurun."
         gender: Cins
+        gender_student_input: Cins
+        gender_teacher_input: Cins
         locale: Dil
         name: Göstərilən adınız
         name_example: 'Görünən Adınız (məs. Super Koder və ya Filankəs F.) '

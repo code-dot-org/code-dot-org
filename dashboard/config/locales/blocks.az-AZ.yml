@@ -1083,6 +1083,8 @@ az:
             '1': limon suyu
             '3': çörək soda
             '5': hər ikisi
+      DansBlocks_gravity_test:
+        text: davranış
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -1111,6 +1113,8 @@ az:
             '"small"': kiçik
       FunctionBlocks_addEightBlock:
         text: əlavə səkkiz
+      KatiesBlocks_changeVelocity:
+        text: "{SPRITE} {PROPERTY} ilə {VAL} dəyişin"
       KatiesBlocks_glideTo:
         text: "{SPRITE} {LOCATION} yerə sürüşmək"
       KatiesBlocks_goldilocks:
@@ -1119,6 +1123,8 @@ az:
             '"gas"': qaz
             '"liquid"': maye
             '"solid"': bərk
+      KatiesBlocks_setVelocity:
+        text: "{SPRITE}{PROPERTY} {VAL} təyin et"
       KatiesBlocks_tumbling:
         text: yıxılma
       Mikelab_addBehaviorSimple:

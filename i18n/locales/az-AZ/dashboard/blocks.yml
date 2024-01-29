@@ -1083,6 +1083,8 @@ az:
             '1': limon suyu
             '3': çörək soda
             '5': hər ikisi
+      DansBlocks_gravity_test:
+        text: davranış
       DansBlocks_setForegroundEffect2:
         text: "{EFFECT} effekti elə"
         options:
@@ -1764,6 +1766,8 @@ az:
         text: x koordinatı
       gamelab_yLocationOf:
         text: y koordinatı
+      KatiesBlocks_changeVelocity:
+        text: "{SPRITE} {PROPERTY} ilə {VAL} dəyişin"
       KatiesBlocks_glideTo:
         text: "{SPRITE} {LOCATION} yerə sürüşmək"
       KatiesBlocks_goldilocks:
@@ -1772,6 +1776,8 @@ az:
             '"solid"': bərk
             '"liquid"': maye
             '"gas"': qaz
+      KatiesBlocks_setVelocity:
+        text: "{SPRITE}{PROPERTY} {VAL} təyin et"
       KatiesBlocks_tumbling:
         text: yıxılma
       Mikelab_addBehaviorSimple:

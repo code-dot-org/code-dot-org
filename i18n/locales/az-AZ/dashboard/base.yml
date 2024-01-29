@@ -51,6 +51,8 @@ az:
         locale: 'Dil'
         age: 'Yaşınız'
         gender: 'Cins'
+        gender_student_input: 'Cins'
+        gender_teacher_input: 'Cins'
         edit_header: 'Hesab Detallarına düzəliş edin'
         ai_settings_header: 'AI Parametrləri'
         finish_sign_up_header: 'Hesabınızı yaratmağı başa çatdırın'

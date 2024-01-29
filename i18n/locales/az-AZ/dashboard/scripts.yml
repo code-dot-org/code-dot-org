@@ -7731,3 +7731,126 @@ az:
           title: CS Prinsipləri Kursdan Sonra Sorğu
           description: Bu bölməyə CS Prinsipləri Kursdan Sonra Sorğu daxildir.
           student_description: Bu bölmədə CS Prinsipləri Kursu haqqında sorğu var. Müəlliminiz bu sorğunun nə vaxt keçəcəyini sizə xəbər verəcəkdir.
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sorğu
+            lessonGroup-3:
+              display_name: Məzmun
+            lessonGroup-4:
+              display_name: Bildiyinizi göstərin
+            lessonGroup-6:
+              display_name: Vahid sorğusunun sonu
+            lessonGroup-5:
+              display_name: Alternativ Dərslər
+            lessonGroup-7:
+              display_name: Qum qutuları
+          title: Obyekt yönümlü proqramlaşdırma
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+            lessonGroup-3:
+              display_name: Bildiyinizi göstərin
+            lessonGroup-5:
+              display_name: Vahid sorğusunun sonu
+            lessonGroup-4:
+              display_name: Alternativ Dərslər
+            lessonGroup-6:
+              display_name: Qum qutuları
+          title: Sinif strukturu və dizaynı
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+            lessonGroup-3:
+              display_name: Bildiyinizi göstərin
+            lessonGroup-5:
+              display_name: Vahid sorğusunun sonu
+            lessonGroup-4:
+              display_name: Alternativ Dərslər
+            lessonGroup-6:
+              display_name: Qum qutuları
+          title: Massivlər və Alqoritmlər
+        csa4-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+            lessonGroup-3:
+              display_name: Bildiyinizi göstərin
+            lessonGroup-5:
+              display_name: Vahid sorğusunun sonu
+            lessonGroup-4:
+              display_name: Alternativ Dərslər
+            lessonGroup-6:
+              display_name: Qum qutuları
+          title: Şərtlər və Məntiq
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+            lessonGroup-3:
+              display_name: Bildiyinizi göstərin
+            lessonGroup-5:
+              display_name: Vahid sorğusunun sonu
+            lessonGroup-4:
+              display_name: Alternativ Dərslər
+            lessonGroup-6:
+              display_name: Qum qutuları
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+            lessonGroup-3:
+              display_name: Bildiyinizi göstərin
+            lessonGroup-5:
+              display_name: Vahid sorğusunun sonu
+            lessonGroup-4:
+              display_name: Alternativ Dərslər
+            lessonGroup-6:
+              display_name: Qum qutuları
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+            lessonGroup-3:
+              display_name: Bildiyinizi göstərin
+            lessonGroup-4:
+              display_name: Vahid sorğusunun sonu
+            lessonGroup-5:
+              display_name: Alternativ Dərslər
+            lessonGroup-6:
+              display_name: Qum qutuları
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+            lessonGroup-3:
+              display_name: Bildiyinizi göstərin
+            lessonGroup-4:
+              display_name: Sorğu
+            lessonGroup-5:
+              display_name: Alternativ Dərslər
+            lessonGroup-6:
+              display_name: Qum qutuları
+          title: Axtarış və Çeşidləmə
+        csa9-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Baxış və Təcrübə
+            lessonGroup-3:
+              display_name: Sınaq imtahanları
+            lessonGroup-4:
+              display_name: Qum qutuları
+          description: Bu bölmə tələbələri əsas anlayışları nəzərdən keçirməklə, çoxseçimli və sərbəst cavab suallarını məşq etməklə və sınaqdan keçmə strategiyalarını gücləndirməklə AP CSA İmtahanına hazırlayır. Tələbələr təcrübələrini cəmləşdirmək və öz tərəqqilərini qiymətləndirmək üçün fərdi təhsil planları yaratmaq üçün güclü tərəfləri və təkmilləşdirmə sahələrini müəyyənləşdirirlər.
+          student_description: Bu bölmə əsas anlayışları nəzərdən keçirməklə, çoxseçimli və sərbəst cavab suallarını məşq etməklə və sınaqdan keçmə strategiyalarını gücləndirməklə sizi AP CSA İmtahana hazırlayır. Siz təcrübəyə diqqət yetirmək və tərəqqinizi qiymətləndirmək üçün fərdiləşdirilmiş təhsil planları yaratmaq üçün güclü tərəfləri və təkmilləşdirmə sahələrini müəyyənləşdirirsiniz.
+          description_short: Tələbələr çoxseçimli və pulsuz cavab sualları üçün strategiyaları tətbiq etməklə AP CSA İmtahanına hazırlaşırlar.
+        csa-postap-se-and-computer-vision-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Fəsil 1: GitHub və Copilot'
+            lessonGroup-3:
+              display_name: 'Fəsil 2: Kompüter görməsi'
+            lessonGroup-5:
+              display_name: Sorğu sonrası
+          title: Proqram təminatı mühəndisliyi və kompüter görməsi

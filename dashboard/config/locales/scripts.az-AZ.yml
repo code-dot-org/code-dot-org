@@ -2076,6 +2076,15 @@ az:
             lessonGroup-5:
               display_name: Sorğu sonrası
           title: Proqram təminatı mühəndisliyi və kompüter görməsi
+        csa-postap-se-and-computer-vision-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Fəsil 1: GitHub və Copilot'
+            lessonGroup-3:
+              display_name: 'Fəsil 2: Kompüter görməsi'
+            lessonGroup-5:
+              display_name: Sorğu sonrası
+          title: Proqram təminatı mühəndisliyi və kompüter görməsi
         csa-self-paced-pl:
           lesson_groups:
             lessonGroup-2:
@@ -2222,6 +2231,21 @@ az:
             lessonGroup-7:
               display_name: Qum qutuları
           title: Obyekt yönümlü proqramlaşdırma
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sorğu
+            lessonGroup-3:
+              display_name: Məzmun
+            lessonGroup-4:
+              display_name: Bildiyinizi göstərin
+            lessonGroup-5:
+              display_name: Alternativ Dərslər
+            lessonGroup-6:
+              display_name: Vahid sorğusunun sonu
+            lessonGroup-7:
+              display_name: Qum qutuları
+          title: Obyekt yönümlü proqramlaşdırma
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2333,6 +2357,19 @@ az:
               name: Obyektlərin çap edilməsi
           title: Sinif strukturu və dizaynı
         csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+            lessonGroup-3:
+              display_name: Bildiyinizi göstərin
+            lessonGroup-4:
+              display_name: Alternativ Dərslər
+            lessonGroup-5:
+              display_name: Vahid sorğusunun sonu
+            lessonGroup-6:
+              display_name: Qum qutuları
+          title: Sinif strukturu və dizaynı
+        csa2-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
@@ -2478,6 +2515,19 @@ az:
             lessonGroup-6:
               display_name: Qum qutuları
           title: Massivlər və Alqoritmlər
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+            lessonGroup-3:
+              display_name: Bildiyinizi göstərin
+            lessonGroup-4:
+              display_name: Alternativ Dərslər
+            lessonGroup-5:
+              display_name: Vahid sorğusunun sonu
+            lessonGroup-6:
+              display_name: Qum qutuları
+          title: Massivlər və Alqoritmlər
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2587,6 +2637,19 @@ az:
               name: Təsadüf
           title: Şərtlər və Məntiq
         csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+            lessonGroup-3:
+              display_name: Bildiyinizi göstərin
+            lessonGroup-4:
+              display_name: Alternativ Dərslər
+            lessonGroup-5:
+              display_name: Vahid sorğusunun sonu
+            lessonGroup-6:
+              display_name: Qum qutuları
+          title: Şərtlər və Məntiq
+        csa4-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
@@ -2720,6 +2783,18 @@ az:
               display_name: Vahid sorğusunun sonu
             lessonGroup-6:
               display_name: Qum qutuları
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+            lessonGroup-3:
+              display_name: Bildiyinizi göstərin
+            lessonGroup-4:
+              display_name: Alternativ Dərslər
+            lessonGroup-5:
+              display_name: Vahid sorğusunun sonu
+            lessonGroup-6:
+              display_name: Qum qutuları
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2802,6 +2877,18 @@ az:
             lesson-8:
               name: Elementlərin Silinməsi
         csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+            lessonGroup-3:
+              display_name: Bildiyinizi göstərin
+            lessonGroup-4:
+              display_name: Alternativ Dərslər
+            lessonGroup-5:
+              display_name: Vahid sorğusunun sonu
+            lessonGroup-6:
+              display_name: Qum qutuları
+        csa6-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
@@ -2902,6 +2989,18 @@ az:
             lesson-9:
               name: Sistem etibarlılığı
         csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+            lessonGroup-3:
+              display_name: Bildiyinizi göstərin
+            lessonGroup-4:
+              display_name: Vahid sorğusunun sonu
+            lessonGroup-5:
+              display_name: Alternativ Dərslər
+            lessonGroup-6:
+              display_name: Qum qutuları
+        csa7-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
@@ -3027,6 +3126,19 @@ az:
             lessonGroup-6:
               display_name: Qum qutuları
           title: Axtarış və Çeşidləmə
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+            lessonGroup-3:
+              display_name: Bildiyinizi göstərin
+            lessonGroup-4:
+              display_name: Sorğu
+            lessonGroup-5:
+              display_name: Alternativ Dərslər
+            lessonGroup-6:
+              display_name: Qum qutuları
+          title: Axtarış və Çeşidləmə
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -3139,6 +3251,26 @@ az:
             və tərəqqinizi qiymətləndirmək üçün fərdiləşdirilmiş təhsil planları yaratmaq
             üçün güclü tərəfləri və təkmilləşdirmə sahələrini müəyyənləşdirirsiniz.
         csa9-2024:
+          description: Bu bölmə tələbələri əsas anlayışları nəzərdən keçirməklə, çoxseçimli
+            və sərbəst cavab suallarını məşq etməklə və sınaqdan keçmə strategiyalarını
+            gücləndirməklə AP CSA İmtahanına hazırlayır. Tələbələr təcrübələrini cəmləşdirmək
+            və öz tərəqqilərini qiymətləndirmək üçün fərdi təhsil planları yaratmaq
+            üçün güclü tərəfləri və təkmilləşdirmə sahələrini müəyyənləşdirirlər.
+          description_short: Tələbələr çoxseçimli və pulsuz cavab sualları üçün strategiyaları
+            tətbiq etməklə AP CSA İmtahanına hazırlaşırlar.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Baxış və Təcrübə
+            lessonGroup-3:
+              display_name: Sınaq imtahanları
+            lessonGroup-4:
+              display_name: Qum qutuları
+          student_description: Bu bölmə əsas anlayışları nəzərdən keçirməklə, çoxseçimli
+            və sərbəst cavab suallarını məşq etməklə və sınaqdan keçmə strategiyalarını
+            gücləndirməklə sizi AP CSA İmtahana hazırlayır. Siz təcrübəyə diqqət yetirmək
+            və tərəqqinizi qiymətləndirmək üçün fərdiləşdirilmiş təhsil planları yaratmaq
+            üçün güclü tərəfləri və təkmilləşdirmə sahələrini müəyyənləşdirirsiniz.
+        csa9-2025:
           description: Bu bölmə tələbələri əsas anlayışları nəzərdən keçirməklə, çoxseçimli
             və sərbəst cavab suallarını məşq etməklə və sınaqdan keçmə strategiyalarını
             gücləndirməklə AP CSA İmtahanına hazırlayır. Tələbələr təcrübələrini cəmləşdirmək
