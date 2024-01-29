@@ -226,7 +226,10 @@ export default class CourseVersionPublishingEditor extends Component {
             <br />
             Click "More info" for more information.
           </HelpTip>
-          <Link href="https://github.com/code-dot-org/code-dot-org/wiki/Updating-Publish-State-of-Scripts-or-Courses">
+          <Link
+            href="https://github.com/code-dot-org/code-dot-org/wiki/Updating-Publish-State-of-Scripts-or-Courses"
+            openInNewTab={true}
+          >
             More info
           </Link>
         </label>
