@@ -1257,7 +1257,7 @@
         },
         "using_data_with_categorical_features/csd/2021": {
           "type": "مصدر",
-          "name": "استخدام البيانات ذات الميزات الفئوية",
+          "name": "استخدام البيانات ذات الميزات التصنيفية",
           "url": "https://drive.google.com/file/d/1blY6e6hX5DszuAdHXTEeB735kYUy1Hyj/view?usp=sharing"
         },
         "importing_models_in_app_lab/csd/2021": {
@@ -1287,7 +1287,7 @@
         },
         "saving_models_in_ai_lab/csd/2021": {
           "type": "شرائح",
-          "name": "نماذج الحفظ في مختبر الذكاء الاصطناعي",
+          "name": "حفظ النماذج في مختبر الذكاء الاصطناعي",
           "url": "https://docs.google.com/presentation/d/1M9dxiG9GmZfoYxe2QYE7nQs3vs9T1knh0qxA9tOTtf8/copy"
         },
         "_key_zoo_models/csd/2021": {
@@ -1302,7 +1302,7 @@
         },
         "if-statements_in_app_lab/csd/2021": {
           "type": "فيديو",
-          "name": "بيانات اذا في مختبر التطبيقات",
+          "name": "العبارات الشرطية \"إذا\" في مختبر التطبيقات",
           "url": "https://www.youtube.com/watch?v=0oG3Wck2fRU"
         },
         "model_cards_in_app_lab/csd/2021": {
@@ -1342,7 +1342,7 @@
         },
         "_key_-_numerical_data_in_ai_lab/csd/2021": {
           "type": "الحل النموذجي",
-          "name": "[KEY]-البيانات العددية في مختبر الذكاء الاصطناعي",
+          "name": "[مفتاح] - البيانات العددية في مختبر الذكاء الاصطناعي",
           "url": "https://docs.google.com/document/d/1eRaCraF6eSL25qBph4cxZTxLMsdtxHQADApfxKs3TOI/edit"
         },
         "using_data_with_numerical_features/csd/2021": {
@@ -1382,7 +1382,7 @@
         },
         "create_an_ml_app/csd/2021": {
           "type": "نموذج التقييم",
-          "name": "قم بإنشاء تطبيق ML",
+          "name": "قم بإنشاء تطبيق تعلم الآلة ML",
           "url": "https://docs.google.com/document/d/1iB8J-cuTNv00K-WSykY53O-UONmms6xxExgNXlLdVeA/view"
         },
         "issue_statements/csd/2021": {
@@ -1407,7 +1407,7 @@
         },
         "cleaning_survey_data/csd/2021": {
           "type": "فيديو",
-          "name": "بيانات استبيان التنظيف",
+          "name": "تنظيم بيانات الاستبيان",
           "url": "https://www.youtube.com/watch?v=w8w-AosDcN8"
         },
         "view_and_download_survey_data/csd/2021": {
@@ -4126,7 +4126,7 @@
         },
         "using_data_with_categorical_features/csd/2022": {
           "type": "مصدر",
-          "name": "استخدام البيانات ذات الميزات الفئوية",
+          "name": "استخدام البيانات ذات الميزات التصنيفية",
           "url": "https://drive.google.com/file/d/1blY6e6hX5DszuAdHXTEeB735kYUy1Hyj/view?usp=sharing"
         },
         "importing_a_model_in_app_lab/csd/2022": {
@@ -4161,7 +4161,7 @@
         },
         "saving_models_in_ai_lab/csd/2022": {
           "type": "شرائح",
-          "name": "نماذج الحفظ في مختبر الذكاء الاصطناعي",
+          "name": "حفظ النماذج في مختبر الذكاء الاصطناعي",
           "url": "https://docs.google.com/presentation/d/1M9dxiG9GmZfoYxe2QYE7nQs3vs9T1knh0qxA9tOTtf8/template/preview"
         },
         "selecting_a_label/csd/2022": {
@@ -4171,7 +4171,7 @@
         },
         "if-statements_in_app_lab/csd/2022": {
           "type": "فيديو",
-          "name": "بيانات اذا في مختبر التطبيقات",
+          "name": "العبارات الشرطية \"إذا\" في مختبر التطبيقات",
           "url": "https://www.youtube.com/watch?v=0oG3Wck2fRU"
         },
         "model_cards_in_app_lab/csd/2022": {
@@ -4201,7 +4201,7 @@
         },
         "_key_-_numerical_data_in_ai_lab/csd/2022": {
           "type": "الحل النموذجي",
-          "name": "[KEY]-البيانات العددية في مختبر الذكاء الاصطناعي",
+          "name": "[مفتاح] - البيانات العددية في مختبر الذكاء الاصطناعي",
           "url": "https://docs.google.com/document/d/1eRaCraF6eSL25qBph4cxZTxLMsdtxHQADApfxKs3TOI/edit"
         },
         "numerical_data_in_ai_lab/csd/2022": {
@@ -4250,7 +4250,7 @@
         },
         "create_an_ml_app/csd/2022": {
           "type": "نموذج التقييم",
-          "name": "قم بإنشاء تطبيق ML",
+          "name": "قم بإنشاء تطبيق تعلم الآلة ML",
           "url": "https://docs.google.com/document/d/1iB8J-cuTNv00K-WSykY53O-UONmms6xxExgNXlLdVeA/view"
         },
         "make_a_machine_learning_app/csd/2022": {
@@ -4280,7 +4280,7 @@
         },
         "cleaning_survey_data/csd/2022": {
           "type": "فيديو",
-          "name": "بيانات استبيان التنظيف",
+          "name": "تنظيم بيانات الاستبيان",
           "url": "https://www.youtube.com/watch?v=NBTYgU71Jgw"
         },
         "survey_data_in_ai_lab/csd/2022": {
@@ -7493,7 +7493,7 @@
         },
         "using_data_with_categorical_features/csd/2023": {
           "type": "مصدر",
-          "name": "استخدام البيانات ذات الميزات الفئوية",
+          "name": "استخدام البيانات ذات الميزات التصنيفية",
           "url": "https://drive.google.com/file/d/1blY6e6hX5DszuAdHXTEeB735kYUy1Hyj/view?usp=sharing"
         },
         "importing_a_model_in_app_lab/csd/2023": {
@@ -7528,7 +7528,7 @@
         },
         "saving_models_in_ai_lab/csd/2023": {
           "type": "شرائح",
-          "name": "نماذج الحفظ في مختبر الذكاء الاصطناعي",
+          "name": "حفظ النماذج في مختبر الذكاء الاصطناعي",
           "url": "https://docs.google.com/presentation/d/1VAtkWeEY9FwyLykuTlJr58El62Xz7CLxNeL44jOZqvs/template/preview"
         },
         "selecting_a_label/csd/2023": {
@@ -7538,7 +7538,7 @@
         },
         "if-statements_in_app_lab/csd/2023": {
           "type": "فيديو",
-          "name": "بيانات اذا في مختبر التطبيقات",
+          "name": "العبارات الشرطية \"إذا\" في مختبر التطبيقات",
           "url": "https://www.youtube.com/watch?v=0oG3Wck2fRU"
         },
         "model_cards_in_app_lab/csd/2023": {
@@ -7568,7 +7568,7 @@
         },
         "_key_-_numerical_data_in_ai_lab/csd/2023": {
           "type": "الحل النموذجي",
-          "name": "[KEY]-البيانات العددية في مختبر الذكاء الاصطناعي",
+          "name": "[مفتاح] - البيانات العددية في مختبر الذكاء الاصطناعي",
           "url": "https://docs.google.com/document/d/1ChaLFrOmn56Obv_e7Ep54Yn7GSPHH9CSDDiKUVIS6yk/view"
         },
         "numerical_data_in_ai_lab/csd/2023": {
@@ -7612,7 +7612,7 @@
         },
         "create_an_ml_app/csd/2023": {
           "type": "نموذج التقييم",
-          "name": "قم بإنشاء تطبيق ML",
+          "name": "قم بإنشاء تطبيق تعلم الآلة ML",
           "url": "https://docs.google.com/document/d/1vZrQXBaQclP25oPwNXCNSX1-CERz4vwNSIMl0ZyH4oc/view"
         },
         "make_a_machine_learning_app/csd/2023": {
@@ -7642,7 +7642,7 @@
         },
         "cleaning_survey_data/csd/2023": {
           "type": "فيديو",
-          "name": "بيانات استبيان التنظيف",
+          "name": "تنظيم بيانات الاستبيان",
           "url": "https://www.youtube.com/watch?v=NBTYgU71Jgw"
         },
         "survey_data_in_ai_lab/csd/2023": {
@@ -9545,7 +9545,7 @@
           "url": "https://docs.google.com/document/d/1duhFg6-NyUw5GBhCdkJbnC21IP_PoILvrlvl_HdOdZY/edit"
         },
         "create_an_ml_app_-_project_guide/csd/2021": {
-          "name": "إنشاء تطبيق ML-دليل المشروع",
+          "name": "إنشاء تطبيق تعلم الآلة ML - دليل المشروع",
           "url": "https://docs.google.com/document/d/1UAGmOyfoqr5xKjKp8SjpYRmdemNK8FWV1fcrERoeoDo/edit"
         },
         "survey_planning_-_activity_guide/csd/2021": {
@@ -9553,7 +9553,7 @@
           "url": "https://docs.google.com/document/d/1vLzqaZDRjA8_wvb4dePTLpXY5Skhy44JvxpCIAcLDE8/view"
         },
         "survey_template_google_form_/csd/2021": {
-          "name": "قالب الاستبيان [نموذج جوجل]",
+          "name": "قالب الاستبيان [نموذج استبيان جوجل Google form]",
           "url": "https://docs.google.com/forms/d/1E4sGp03dDW6TYVh1G6zlNITuuSaLFGlMox2E0Iiczzo/copy"
         },
         "troubleshooting_models_-_activity_guide/csd/2021": {
@@ -9601,7 +9601,7 @@
           "url": "https://docs.google.com/document/d/1duhFg6-NyUw5GBhCdkJbnC21IP_PoILvrlvl_HdOdZY/edit"
         },
         "create_an_ml_app_-_project_guide/csd/2022": {
-          "name": "إنشاء تطبيق ML-دليل المشروع",
+          "name": "إنشاء تطبيق تعلم الآلة ML - دليل المشروع",
           "url": "https://docs.google.com/document/d/1UAGmOyfoqr5xKjKp8SjpYRmdemNK8FWV1fcrERoeoDo/edit"
         },
         "survey_planning_-_activity_guide/csd/2022": {
@@ -9609,7 +9609,7 @@
           "url": "https://docs.google.com/document/d/1vLzqaZDRjA8_wvb4dePTLpXY5Skhy44JvxpCIAcLDE8/view"
         },
         "survey_template_google_form_/csd/2022": {
-          "name": "قالب الاستبيان [نموذج جوجل]",
+          "name": "قالب الاستبيان [نموذج استبيان جوجل Google form]",
           "url": "https://docs.google.com/forms/d/1E4sGp03dDW6TYVh1G6zlNITuuSaLFGlMox2E0Iiczzo/copy"
         },
         "troubleshooting_models_-_activity_guide/csd/2022": {
@@ -9657,7 +9657,7 @@
           "url": "https://docs.google.com/document/d/1STOrwXgubRtaDInE5OZZFoqIVONFiJ6MWSvJbwUS3Zg/view"
         },
         "create_an_ml_app_-_project_guide/csd/2023": {
-          "name": "إنشاء تطبيق ML-دليل المشروع",
+          "name": "إنشاء تطبيق تعلم الآلة ML - دليل المشروع",
           "url": "https://docs.google.com/document/d/1ySXUw0Lre1O6qvHS6zv3CN0BFBOKsZhE3PKE6D2hN60/view"
         },
         "survey_planning_-_activity_guide/csd/2023": {
@@ -9665,7 +9665,7 @@
           "url": "https://docs.google.com/document/d/1Z_diIi_5bK5hEf6zky_BYh-B0xVlWabwJEddK3CxSv8/view"
         },
         "survey_template_google_form_/csd/2023": {
-          "name": "قالب الاستبيان [نموذج جوجل]",
+          "name": "قالب الاستبيان [نموذج استبيان جوجل Google form]",
           "url": "https://docs.google.com/forms/d/1E4sGp03dDW6TYVh1G6zlNITuuSaLFGlMox2E0Iiczzo/copy"
         },
         "troubleshooting_models_-_activity_guide/csd/2023": {
@@ -9689,7 +9689,7 @@
           "url": "https://studio.code.org/projects/applab/9g5u-sqHLP9fU2FGmfhMJcS06nWpXsQt2ApYFb3CNaw"
         },
         "exemplar_-_design_an_ai_app_model_card/csd/2021": {
-          "name": "نموذج - تصميم بطاقة نموذج تطبيق الذكاء الاصطناعي",
+          "name": "مثال - تصميم بطاقة نموذج تطبيق الذكاء الاصطناعي",
           "url": "https://docs.google.com/presentation/d/1X-KeHTkggkRya0_upLvQIIj9SrZm7vPuOtCPdiqSECg/edit"
         },
         "exemplar_-_design_an_ai_app_project_guide/csd/2021": {
@@ -9713,7 +9713,7 @@
           "url": "https://studio.code.org/projects/applab/9g5u-sqHLP9fU2FGmfhMJcS06nWpXsQt2ApYFb3CNaw"
         },
         "exemplar_-_design_an_ai_app_model_card/csd/2022": {
-          "name": "نموذج - تصميم بطاقة نموذج تطبيق الذكاء الاصطناعي",
+          "name": "مثال - تصميم بطاقة نموذج تطبيق الذكاء الاصطناعي",
           "url": "https://docs.google.com/presentation/d/1X-KeHTkggkRya0_upLvQIIj9SrZm7vPuOtCPdiqSECg/edit"
         },
         "exemplar_-_design_an_ai_app_project_guide/csd/2022": {
@@ -9737,7 +9737,7 @@
           "url": "https://studio.code.org/projects/applab/9g5u-sqHLP9fU2FGmfhMJcS06nWpXsQt2ApYFb3CNaw"
         },
         "exemplar_-_design_an_ai_app_model_card/csd/2023": {
-          "name": "نموذج - تصميم بطاقة نموذج تطبيق الذكاء الاصطناعي",
+          "name": "مثال - تصميم بطاقة نموذج تطبيق الذكاء الاصطناعي",
           "url": "https://docs.google.com/presentation/d/1Vc766dZ-q3Y2x6b39mKIMAGHk88ppxP-SjygFH3v5tE/view"
         },
         "exemplar_-_design_an_ai_app_project_guide/csd/2023": {
@@ -9753,7 +9753,7 @@
           "url": "https://docs.google.com/presentation/d/1G8bmEuCtGcnQkL8DAcPUqhN4WsbwTnIBc6ihH2i86lU/view"
         },
         "app_brainstorm_-_activity_guide/csd/2021": {
-          "name": "تطبيق العصف الذهني-دليل الأنشطة",
+          "name": "تطبيق العصف الذهني - دليل النشاط ",
           "url": "https://docs.google.com/document/d/1ocmp1I80kRxFDYByT0B-IIjbK-c01cTmnsy_Lz1DApM/view"
         },
         "isaac_s_survey_data_-_student_resource/csd/2021": {
@@ -9769,7 +9769,7 @@
           "url": "https://docs.google.com/presentation/d/1G8bmEuCtGcnQkL8DAcPUqhN4WsbwTnIBc6ihH2i86lU/view"
         },
         "app_brainstorm_-_activity_guide/csd/2022": {
-          "name": "تطبيق العصف الذهني-دليل الأنشطة",
+          "name": "تطبيق العصف الذهني - دليل النشاط ",
           "url": "https://docs.google.com/document/d/1ocmp1I80kRxFDYByT0B-IIjbK-c01cTmnsy_Lz1DApM/view"
         },
         "isaac_s_survey_data_-_student_resource/csd/2022": {
@@ -9785,7 +9785,7 @@
           "url": "https://docs.google.com/presentation/d/1u2BsNRx8ev5_zQ2Fv49SVQSiGlJTDs8d7O2-JuDZeHE/view"
         },
         "app_brainstorm_-_activity_guide/csd/2023": {
-          "name": "تطبيق العصف الذهني-دليل الأنشطة",
+          "name": "تطبيق العصف الذهني - دليل النشاط ",
           "url": "https://docs.google.com/document/d/1T-gkuy-Tl-5fW4OoXPN2brtVDI5us3i61IOhnGoR13I/view"
         },
         "isaac_s_survey_data_-_student_resource/csd/2023": {

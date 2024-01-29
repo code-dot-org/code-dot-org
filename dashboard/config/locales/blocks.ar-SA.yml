@@ -1090,6 +1090,8 @@ ar:
           INPUT1:
             '1': عصير ليمون
         text: يحتوي المجهر على {INPUT1}
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -1122,6 +1124,8 @@ ar:
         text: قم بتمثيل {NUM} النقوش المتحركة {ANIMATION_NAME} الجديدة [BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}قُل{TEXT1}"
+      KatiesBlocks_changeVelocity:
+        text: غيّر {SPRITE} {PROPERTY} بمقدار {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} الانتقال إلى {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1133,6 +1137,8 @@ ar:
         text: |-
           إذا {CONDITION}{SPRITE}
           {STATEMENT}
+      KatiesBlocks_setVelocity:
+        text: تعيين {SPRITE} {PROPERTY} ل {VAL}
       KatiesBlocks_tumbling:
         text: الشقلبة
       Mikelab_addBehaviorSimple:

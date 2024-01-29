@@ -22,6 +22,8 @@ ar:
         finish_sign_up_subheader_provider_markdown: املأ المعلومات التالية لإكمال
           إنشاء حساب على Code.org مع **%{provider}** لـ **%{email}**.
         gender: 'نوع الجنس '
+        gender_student_input: 'نوع الجنس '
+        gender_teacher_input: 'نوع الجنس '
         locale: اللغة
         name: اسم العرض
         name_example: اسم العرض (مثال:المبرمج الرائع أو "چين س.")

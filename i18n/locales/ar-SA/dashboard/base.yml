@@ -51,6 +51,8 @@ ar:
         locale: 'اللغة'
         age: 'العمر'
         gender: 'نوع الجنس '
+        gender_student_input: 'نوع الجنس '
+        gender_teacher_input: 'نوع الجنس '
         edit_header: 'تعديل تفاصيل الحساب'
         ai_settings_header: 'إعدادات الذكاء الاصطناعي'
         finish_sign_up_header: 'قم بإنهاء إنشاء حسابك'

@@ -1090,6 +1090,8 @@ ar:
         options:
           INPUT1:
             '1': عصير ليمون
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         text: عمل {EFFECT} تأثير
         options:
@@ -1741,6 +1743,8 @@ ar:
         text: x إحداثيات {SPRITE}
       gamelab_yLocationOf:
         text: إحداثيات Y من {SPRITE}
+      KatiesBlocks_changeVelocity:
+        text: غيّر {SPRITE} {PROPERTY} بمقدار {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} الانتقال إلى {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1752,6 +1756,8 @@ ar:
             '"solid"': صلب
             '"liquid"': سائل
             '"gas"': غاز
+      KatiesBlocks_setVelocity:
+        text: تعيين {SPRITE} {PROPERTY} ل {VAL}
       KatiesBlocks_tumbling:
         text: الشقلبة
       Mikelab_addBehaviorSimple:
