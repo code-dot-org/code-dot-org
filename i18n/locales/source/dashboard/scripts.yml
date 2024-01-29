@@ -397,6 +397,8 @@ en:
               name: Dance Lab2
             lesson-53:
               name: Python Lab
+            lesson-54:
+              name: Web Lab 2
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -5753,6 +5755,7 @@ en:
           description_short: ''
           description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n\n-   Get an introduction to Code.org and CS Discoveries.\n-   Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
           student_description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n\n-   Get an introduction to Code.org and CS Discoveries.\n-   Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
+          lessons: {}
         self-paced-pl-csd2-2021:
           lesson_groups:
             lessonGroup-2:
@@ -5767,6 +5770,7 @@ en:
           description_short: ''
           description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will:**\n\n-   Navigate the Code.org website and teacher tools.\n-   Set up a classroom section\n-   Locate and use course lesson plans and teacher resources. \n-   Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
           student_description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will:**\n\n-   Navigate the Code.org website and teacher tools.\n-   Set up a classroom section\n-   Locate and use course lesson plans and teacher resources. \n-   Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
+          lessons: {}
         self-paced-pl-csd3-2021:
           lesson_groups:
             lessonGroup-2:
@@ -5777,6 +5781,7 @@ en:
           description_short: ''
           description: "This module will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n-   Gain a high-level understanding of the CS Discoveries curriculum.\n-   Become familiar with the programming environments used within CS Discoveries.\n-   Decide which units of CS Discoveries you will teach in your class.\n\n**Suggested time:** 60 minutes"
           student_description: "This module will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n-   Gain a high-level understanding of the CS Discoveries curriculum.\n-   Become familiar with the programming environments used within CS Discoveries.\n-   Decide which units of CS Discoveries you will teach in your class.\n\n**Suggested time:** 60 minutes"
+          lessons: {}
         self-paced-pl-csd4-2021:
           lesson_groups:
             lessonGroup-2:
@@ -5787,6 +5792,7 @@ en:
           description_short: ''
           description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n\n-   Consider the role of the teacher in a CS Discoveries classroom. \n-   Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n-   Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 50 minutes"
           student_description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n\n-   Consider the role of the teacher in a CS Discoveries classroom. \n-   Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n-   Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 50 minutes"
+          lessons: {}
         self-paced-pl-csd5-2021:
           lesson_groups:
             lessonGroup-2:
@@ -5818,6 +5824,7 @@ en:
           description_short: ''
           description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to artificial intelligence and machine learning. \n-   Practice key concepts included in the unit.\n-   Engage with AI Lab and App Lab.\n-   Explore end of chapter projects. \n-   Make a plan for implementing the unit with your students.\n\n**Suggested Time:** 120 minutes"
           student_description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to artificial intelligence and machine learning. \n-   Train a machine learning model using AI Lab.\n-   Engage with machine learning apps. \n-   Consider real-world implications of AI and machine learning. \n-   Explore end of chapter projects.\n\n**Suggested Time:** 120 minutes"
+          lessons: {}
         self-paced-pl-csd6-2021:
           lesson_groups:
             lessonGroup-2:
@@ -5840,6 +5847,7 @@ en:
           description_short: ''
           description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to artificial intelligence and machine learning. \n-   Train a machine learning model using AI Lab.\n-   Engage with machine learning apps. \n-   Consider real-world implications of AI and machine learning. \n-   Explore end of chapter projects.\n\n**Suggested Time:** 120 minutes"
           student_description: "This professional learning module is designed to help you prepare for teaching Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to artificial intelligence and machine learning. \n-   Train a machine learning model using AI Lab.\n-   Engage with machine learning apps. \n-   Consider real-world implications of AI and machine learning. \n-   Explore end of chapter projects.\n\n**Suggested Time:** 120 minutes"
+          lessons: {}
         self-paced-pl-csd7-2021:
           lesson_groups: {}
           name: self-paced-pl-csd7-2021
@@ -5848,6 +5856,7 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+          lessons: {}
         self-paced-pl-csd8-2021:
           lesson_groups: {}
           name: self-paced-pl-csd8-2021
@@ -5856,6 +5865,7 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+          lessons: {}
         self-paced-pl-csp1-2021:
           lesson_groups: {}
           name: self-paced-pl-csp1-2021
@@ -5864,6 +5874,7 @@ en:
           description_short: ''
           description: "This module is a short introduction to both Code.org and professional learning modules. \n\n**You will:**\n\n-   Get an introduction to Code.org and CS Principles.\n-   Learn how to engage in professional learning modules.\n\n**Suggested Time:** 10 minutes"
           student_description: "This module is a short introduction to both Code.org and professional learning modules. \n\n**You will:**\n\n-   Get an introduction to Code.org and CS Principles.\n-   Learn how to engage in professional learning modules.\n\n**Suggested Time:** 10 minutes"
+          lessons: {}
         self-paced-pl-csp2-2021:
           lesson_groups: {}
           name: self-paced-pl-csp2-2021
@@ -5872,6 +5883,7 @@ en:
           description_short: ''
           description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Principles. \n\n**You will:**\n\n-   Navigate the Code.org website and teacher tools.\n-   Set up a classroom section\n-   Locate and use course lesson plans and teacher resources. \n-   Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
           student_description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Principles. \n\n**You will:**\n\n-   Navigate the Code.org website and teacher tools.\n-   Set up a classroom section\n-   Locate and use course lesson plans and teacher resources. \n-   Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
+          lessons: {}
         self-paced-pl-csp3-2021:
           lesson_groups: {}
           name: self-paced-pl-csp3-2021
@@ -5902,6 +5914,7 @@ en:
             -   Build an implementation plan for the school year.
 
             **Suggested time**: 90 minutes
+          lessons: {}
         self-paced-pl-csp4-2021:
           lesson_groups: {}
           name: self-paced-pl-csp4-2021
@@ -5928,6 +5941,7 @@ en:
             -   Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.
 
             **Suggested Time**: 50 minutes
+          lessons: {}
         self-paced-pl-csp5-2021:
           lesson_groups: {}
           name: self-paced-pl-csp5-2021
@@ -5936,6 +5950,7 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+          lessons: {}
         self-paced-pl-csp6-2021:
           lesson_groups: {}
           name: self-paced-pl-csp6-2021
@@ -5944,6 +5959,7 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+          lessons: {}
         self-paced-pl-csp7-2021:
           lesson_groups: {}
           name: self-paced-pl-csp7-2021
@@ -5952,6 +5968,7 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+          lessons: {}
         self-paced-pl-csp8-2021:
           lesson_groups: {}
           name: self-paced-pl-csp8-2021
@@ -5960,6 +5977,7 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+          lessons: {}
         self-paced-pl-csp9-2021:
           lesson_groups: {}
           name: self-paced-pl-csp9-2021
@@ -5968,6 +5986,7 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+          lessons: {}
         self-paced-pl-csp10-2021:
           lesson_groups: {}
           name: self-paced-pl-csp10-2021
@@ -5976,6 +5995,7 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+          lessons: {}
         self-paced-pl-csp11-2021:
           lesson_groups: {}
           name: self-paced-pl-csp11-2021
@@ -5984,6 +6004,7 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+          lessons: {}
         poster:
           lesson_groups:
             about me_ip:
@@ -7967,6 +7988,7 @@ en:
           description_short: ''
           description_audience: ''
           name: self-paced-pl-csd1-2022
+          lessons: {}
         self-paced-pl-csd2-2022:
           lesson_groups:
             lessonGroup-2:
@@ -7977,6 +7999,7 @@ en:
           description_short: ''
           description_audience: ''
           name: self-paced-pl-csd2-2022
+          lessons: {}
         self-paced-pl-csd3-2022:
           lesson_groups:
             lessonGroup-2:
@@ -7987,6 +8010,7 @@ en:
           description_short: ''
           description_audience: ''
           name: self-paced-pl-csd3-2022
+          lessons: {}
         self-paced-pl-csd4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -7997,6 +8021,7 @@ en:
           description_short: ''
           description_audience: ''
           name: self-paced-pl-csd4-2022
+          lessons: {}
         self-paced-pl-csp1-2022:
           title: 'Module 1: Welcome'
           description: "This module is a short introduction to both Code.org and professional learning modules. \n\n**You will:**\n\n-   Get an introduction to Code.org and CS Principles.\n-   Learn how to engage in professional learning modules.\n\n**Suggested Time:** 10 minutes"
@@ -8288,6 +8313,7 @@ en:
           description_short: ''
           description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to artificial intelligence and machine learning. \n-   Practice key concepts included in the unit.\n-   Engage with AI Lab and App Lab.\n-   Explore end of chapter projects. \n-   Make a plan for implementing the unit with your students.\n\n**Suggested Time:** 120 minutes"
           student_description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to artificial intelligence and machine learning. \n-   Practice key concepts included in the unit.\n-   Engage with AI Lab and App Lab.\n-   Explore end of chapter projects. \n-   Make a plan for implementing the unit with your students.\n\n**Suggested Time:** 120 minutes"
+          lessons: {}
         vpl-csa-2022:
           lesson_groups: {}
           name: vpl-csa-2022
