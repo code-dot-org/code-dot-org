@@ -51,6 +51,8 @@ uz:
         locale: 'Til'
         age: 'Yoshi'
         gender: 'Jinsi'
+        gender_student_input: 'Jinsi'
+        gender_teacher_input: 'Jinsi'
         edit_header: 'Foydalanuvchi ma''lumotlarini tahrirlash'
         finish_sign_up_header: 'Hisob qaydnomangizni yaratishni yakunlang'
         finish_sign_up_header_error: 'Iltimos, quyidagi xatolarni to‘g‘rilang:'

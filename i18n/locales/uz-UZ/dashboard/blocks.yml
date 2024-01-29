@@ -1562,12 +1562,16 @@ uz:
         text: "{SPRITE} x koordinatasi"
       gamelab_yLocationOf:
         text: "{SPRITE} y koordinatasi"
+      KatiesBlocks_changeVelocity:
+        text: " {SPRITE} {PROPERTY} ni {VAL} ga o‘zgartirish"
       KatiesBlocks_goldilocks:
         options:
           CONDITION:
             '"solid"': qattiq
             '"liquid"': suyuq
             '"gas"': gaz
+      KatiesBlocks_setVelocity:
+        text: " {SPRITE} {PROPERTY} qiymatini {VAL} ga o'rnatish"
       KatiesBlocks_tumbling:
         text: dumboloq oshish
       Mikelab_addBehaviorSimple:

@@ -22,6 +22,8 @@ uz:
           \ uchun Code.org hisob qaydnomasini yaratishni tugatish uchun quyidagi ma'lumotlarni
           to'ldiring."
         gender: Jinsi
+        gender_student_input: Jinsi
+        gender_teacher_input: Jinsi
         locale: Til
         name: Ko‘rsatiladigan ism
         name_example: Ko‘rsatiladigan ism (masalan, Cool Coder yoki Jeyn S.)

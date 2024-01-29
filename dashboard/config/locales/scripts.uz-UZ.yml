@@ -1312,6 +1312,12 @@ uz:
               display_name: Survey
             lessonGroup-3:
               display_name: Kontent
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Survey
+            lessonGroup-3:
+              display_name: Kontent
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1349,6 +1355,10 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1382,6 +1392,10 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1407,6 +1421,10 @@ uz:
             lessonGroup-2:
               display_name: Kontent
         csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        csa4-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
@@ -1444,6 +1462,10 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1469,6 +1491,10 @@ uz:
             lessonGroup-2:
               display_name: Kontent
         csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        csa6-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
@@ -1500,6 +1526,10 @@ uz:
             lesson-6:
               name: Intellectual Property
         csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        csa7-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
@@ -1536,6 +1566,12 @@ uz:
             lessonGroup-4:
               display_name: Survey
         csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+            lessonGroup-4:
+              display_name: Survey
+        csa8-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent

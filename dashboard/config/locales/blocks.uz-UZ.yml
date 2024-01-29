@@ -1067,12 +1067,16 @@ uz:
         text: "{NUM} ta yangi {ANIMATION_NAME} animatsiya [BEHAVIOR][2] ifodalang"
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}{TEXT1} deydi"
+      KatiesBlocks_changeVelocity:
+        text: " {SPRITE} {PROPERTY} ni {VAL} ga o‘zgartirish"
       KatiesBlocks_goldilocks:
         options:
           CONDITION:
             '"gas"': gaz
             '"liquid"': suyuq
             '"solid"': qattiq
+      KatiesBlocks_setVelocity:
+        text: " {SPRITE} {PROPERTY} qiymatini {VAL} ga o'rnatish"
       KatiesBlocks_tumbling:
         text: dumboloq oshish
       Mikelab_addBehaviorSimple:
