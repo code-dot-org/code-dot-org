@@ -68,9 +68,12 @@ Feature: Dance Party
 
     When I navigate to the shared version of my project
     And element ".signInOrAgeDialog" is hidden
-    # Tested level from Dance Party 2018 level 13 does not use visualization column preview.
-    # When level is shared, project level does use preview.
-    # First check run/reset buttons. This helps resolve test flakiness.
+    # We run/reset here once before checking the number of sprites below which helps
+    # resolve some not fully understood test flakiness related to Dance Party's "preview mode".
+    # The level used in this test (Dance Party 2018, level 13) does not use preview mode but
+    # when the level is shared via `project.getShareUrl`, the standalone Dance project level
+    # does use preview mode.
+
     Then I click selector "#runButton" once I see it
     Then I click selector "#resetButton" once I see it
     Then element "#runButton" is visible
