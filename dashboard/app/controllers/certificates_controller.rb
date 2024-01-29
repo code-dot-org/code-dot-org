@@ -19,8 +19,10 @@ class CertificatesController < ApplicationController
 
     announcement = Announcements.get_announcement_for_page('/certificates')
 
+    @image_url = certificate_image_url(data['name'], data['course'], data['donor'])
+    puts @image_url.inspect
     @certificate_data = {
-      imageUrl: certificate_image_url(data['name'], data['course'], data['donor']),
+      imageUrl: @image_url,
       printUrl: certificate_print_url(data['name'], data['course'], data['donor']),
       announcement: announcement
     }
