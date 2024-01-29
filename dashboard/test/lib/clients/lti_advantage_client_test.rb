@@ -9,6 +9,23 @@ class LtiAdvantageClientTest < ActiveSupport::TestCase
 
     @lti_client = LtiAdvantageClient.new(@client_id, @issuer)
     @lti_client.stubs(:get_access_token).returns('fake_access_token')
+    @page_2_url = 'https://example.com/api/lti/courses/1234/memberships?rlid=1234&page=2'
+    @page_3_url = 'https://example.com/api/lti/courses/1234/memberships?rlid=1234&page=3'
+    @response_page_1 = {
+      headers: {
+        link: "<#{@page_2_url}>; rel=\"next\""
+      },
+      members: [1..50]
+    }
+    @response_page_2 = {
+      headers: {
+        link: "<#{@page_3_url}>; rel=\"next\""
+      },
+      members: [1..50]
+    }
+    @response_page_3 = {
+      members: [1..50]
+    }
   end
 
   test 'throws an error if the API returns a non-200 response' do
@@ -37,5 +54,15 @@ class LtiAdvantageClientTest < ActiveSupport::TestCase
     assert_raises ArgumentError do
       LtiAdvantageClient.new(nil, nil)
     end
+  end
+
+  test 'fetches the next page if present' do
+    @lti_client.stubs(:get_access_token).with(@client_id, @issuer).returns('fake_access_token')
+    original_url = "https://example.com/api/lti/courses/1234/memberships?rlid=1234"
+    HTTParty.expects(:get).with(original_url, anything).once.returns({code: 200, body: @response_page_1.to_json})
+    HTTParty.expects(:get).with(@page_2_url, anything).once.returns({code: 200, body: @response_page_2.to_json})
+    HTTParty.expects(:get).with(@page_3_url, anything).once.returns({code: 200, body: @response_page_3.to_json})
+    res = @lti_client.get_context_membership(original_url, @rlid)
+    assert_equal 150, res[:members].length
   end
 end
