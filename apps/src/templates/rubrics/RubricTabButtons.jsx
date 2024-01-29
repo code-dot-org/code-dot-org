@@ -83,9 +83,11 @@ export default function RubricTabButtons({
           </div>
         )}
       </div>
-      {selectedTab === TAB_NAMES.RUBRIC && canProvideFeedback && (
-        <InfoAlert text={statusText() || ''} dismissable={true} />
-      )}
+      {selectedTab === TAB_NAMES.RUBRIC &&
+        canProvideFeedback &&
+        !!statusText() && (
+          <InfoAlert text={statusText() || ''} dismissable={true} />
+        )}
     </div>
   );
 }
