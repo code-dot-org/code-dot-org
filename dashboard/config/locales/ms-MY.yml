@@ -20,6 +20,8 @@ ms:
         finish_sign_up_subheader_provider_markdown: Isikan maklumat berikut untuk
           menyelesaikan membuat akaun Code.org dengan **%{provider}** untuk **%{email}**.
         gender: Jantina
+        gender_student_input: Jantina
+        gender_teacher_input: Jantina
         locale: Bahasa
         name: Nama Paparan
         name_example: Nama Paparan (cth. Cool Coder atau Jane S.)

@@ -51,6 +51,8 @@ ms:
         locale: 'Bahasa'
         age: 'Umur'
         gender: 'Jantina'
+        gender_student_input: 'Jantina'
+        gender_teacher_input: 'Jantina'
         edit_header: 'Edit Maklumat Akaun'
         finish_sign_up_header: 'Selesai membuat akaun anda'
         finish_sign_up_header_error: 'Sila betulkan kesilapan yang berikut:'
