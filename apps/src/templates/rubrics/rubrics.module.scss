@@ -837,28 +837,7 @@ i.infoAlertIcon {
   gap: 1rem;
 }
 
-.details {
-  display: inline;
-  font-weight: bold;
-  font-style: normal;
-  color: $neutral_dark;
-  margin-bottom: 1em;
-  font-size: 1rem;
-  line-height: 1.48;
-
-  &:hover {
-    cursor: pointer;
-  }
-
-}
-
 .detailsVisible {
-  font-weight: 400;
-  font-style: normal;
-  color: $neutral_dark;
-  margin-bottom: 1em;
-  font-size: 1rem;
-  line-height: 1.48;
   display: inline;
   padding-inline-end: 1rem;
 }

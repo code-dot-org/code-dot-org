@@ -14,6 +14,7 @@ import Button from '@cdo/apps/templates/Button';
 import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 import experiments from '@cdo/apps/util/experiments';
+import Link from '@cdo/apps/componentLibrary/link/Link';
 
 const STATUS = {
   // we are waiting for initial status from the server
@@ -89,6 +90,7 @@ export default function RubricSettings({
   const [unevaluatedCount, setUnevaluatedCount] = useState(0);
   const [totalCount, setTotalCount] = useState(0);
   const [evaluatedCount, setEvaluatedCount] = useState(0);
+  const [showDetails, setShowDetails] = useState(false);
 
   const statusText = () => {
     switch (status) {
@@ -147,6 +149,11 @@ export default function RubricSettings({
     return i18n.runAiAssessment({
       studentName: studentName,
     });
+  };
+
+  const showHideDetails = () => {
+    console.log('Hello it clicked');
+    setShowDetails(!showDetails);
   };
 
   useEffect(() => {
@@ -371,7 +378,7 @@ export default function RubricSettings({
       )}
 
       {canProvideFeedback && experiments.isEnabled('ai-rubrics-redesign') && (
-        <div>
+        <div className={style.settingsGroup}>
           <Heading2>{i18n.aiAssessment()}</Heading2>
           <div className={style.settingsContainers}>
             <div className={style.runAiAllStatuses}>
@@ -394,7 +401,18 @@ export default function RubricSettings({
                 <i className="fa fa-spinner fa-spin" />
               )}
             </Button>
-            <BodyTwoText>{i18n.aiEvaluationDetails()}</BodyTwoText>
+            <div className={style.detailsGroup}>
+              <BodyTwoText
+                className={
+                  showDetails ? style.detailsVisible : style.detailsHidden
+                }
+              >
+                {i18n.aiEvaluationDetails()}
+              </BodyTwoText>
+              <Link onClick={showHideDetails}>
+                {showDetails ? 'Hide Deatils' : 'Show Details'}
+              </Link>
+            </div>
           </div>
         </div>
       )}
