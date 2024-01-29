@@ -1429,6 +1429,10 @@ da:
             '"w"': w
             '"s"': s
             '"d"': d
+      KatiesBlocks_changeVelocity:
+        text: skift {SPRITE} {PROPERTY} med {VAL}
+      KatiesBlocks_setVelocity:
+        text: skift {SPRITE} {PROPERTY} med {VAL}
       Mikelab_addBehaviorSimple:
         text: figur {SPRITE} begynder {BEHAVIOR}
       Mikelab_addTrainingData:

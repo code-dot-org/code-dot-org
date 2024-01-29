@@ -51,6 +51,8 @@ da:
         locale: 'Sprog'
         age: 'Alder'
         gender: 'Køn'
+        gender_student_input: 'Køn'
+        gender_teacher_input: 'Køn'
         edit_header: 'Rediger kontooplysninger'
         finish_sign_up_header: 'Afslut oprettelsen af din konto'
         finish_sign_up_header_error: 'Ret venligst følgende fejl:'

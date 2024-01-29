@@ -1040,6 +1040,10 @@ da:
           COLOR:
             '"blue"': blå
             '"red"': rød
+      KatiesBlocks_changeVelocity:
+        text: skift {SPRITE} {PROPERTY} med {VAL}
+      KatiesBlocks_setVelocity:
+        text: skift {SPRITE} {PROPERTY} med {VAL}
       Mikelab_addBehaviorSimple:
         text: figur {SPRITE} begynder {BEHAVIOR}
       Mikelab_addTrainingData:
