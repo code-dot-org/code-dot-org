@@ -761,6 +761,8 @@
   heading_resources_schools_districts: "Additional resources for schools and districts"
   heading_intl_opportunities: "International Opportunities"
   heading_unplugged_resources: "Unplugged Resources"
+  heading_district: "District"
+  heading_state: "State"
 
   student_courses_top_desc: "Start coding today. Our courses and activities are free! It's easier—and more fun—than you think."
   student_courses_explore_desc: "Explore the world of computer science with engaging videos, self-paced tutorials, programming activities, and more for all ages and experience levels!"
@@ -1133,6 +1135,11 @@
   admins_page_resources_desc_intl: "We have a growing number of partners around the world that are helping to bring computer science to students in their area."
   admins_page_resources_desc_videos: "We offer a growing library of educational videos for use by educators worldwide, online or in classrooms."
   admins_page_resources_desc_unplugged: "Now you can teach the fundamentals of computer science to your students, whether you have computers in your classroom or not!"
+
+  districts_page_top_heading: "Districts in the Code.org District Program"
+  districts_page_top_desc: "We're actively expanding our network of district partners across the US. Explore this list of districts currently enrolled in our District Partner program."
+  districts_page_join_heading: "Join our District Partner Program"
+  districts_page_join_desc: "District leaders around the United States have partnered with Code.org directly, at no cost to bring computer science to their district, and teach students the skills of the future."
 
   pl_middle_high_top_heading: "Professional Learning Workshops for Grades 6-12"
   pl_middle_high_top_desc: "Our engaging workshops are for new and experienced computer science teachers!"
