@@ -22,6 +22,8 @@ pl:
         finish_sign_up_subheader_provider_markdown: Wypełnij poniższe informacje,
           aby zakończyć tworzenie konta Code.org z **%{provider}** dla **%{email}**.
         gender: Płeć
+        gender_student_input: Płeć
+        gender_teacher_input: Płeć
         locale: Język
         name: Wyświetl Nazwisko
         name_example: Wyświetlane Imię (np. Super Koder albo Ania S.)
@@ -1140,6 +1142,7 @@ pl:
       clever: Clever
       email: e-mail
       google_classroom: Klasa Google
+      lti_v1: Integracja z LTI
       picture: Hasło obrazkowe
       word: Tajne słowa
     your_section:

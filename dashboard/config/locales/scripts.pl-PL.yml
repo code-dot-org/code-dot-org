@@ -2051,6 +2051,13 @@ pl:
             lessonGroup-3:
               display_name: 'Rozdział 2: Wizja komputerowa'
           title: Inżynieria oprogramowania i wizja komputerowa
+        csa-postap-se-and-computer-vision-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: GitHub i Copilot'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Wizja komputerowa'
+          title: Inżynieria oprogramowania i wizja komputerowa
         csa-preview:
           name: csa-preview
           title: Przegląd programu i narzędzi CSA
@@ -2209,6 +2216,19 @@ pl:
             lessonGroup-6:
               display_name: Koniec ankiety jednostki
           title: Programowanie obiektowe
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ankieta
+            lessonGroup-3:
+              display_name: Treści
+            lessonGroup-4:
+              display_name: Pokaż, co wiesz
+            lessonGroup-5:
+              display_name: Lekcje alternatywne
+            lessonGroup-6:
+              display_name: Koniec ankiety jednostki
+          title: Programowanie obiektowe
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2315,6 +2335,17 @@ pl:
             lessonGroup-5:
               display_name: Koniec ankiety jednostki
           title: Struktura klas i Projekt
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
+            lessonGroup-5:
+              display_name: Koniec ankiety jednostki
+          title: Struktura klas i Projekt
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2401,6 +2432,17 @@ pl:
           name: csa3-2023
           title: Tablice i Algorytmy
         csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
+            lessonGroup-5:
+              display_name: Koniec ankiety jednostki
+          title: Tablice i Algorytmy
+        csa3-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -2498,6 +2540,17 @@ pl:
           name: csa4-2023
           title: Warunki i Logika
         csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
+            lessonGroup-5:
+              display_name: Koniec ankiety jednostki
+          title: Warunki i Logika
+        csa4-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -2613,6 +2666,17 @@ pl:
             lessonGroup-5:
               display_name: Koniec ankiety jednostki
           title: Tablice dwuwymiarowe
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
+            lessonGroup-5:
+              display_name: Koniec ankiety jednostki
+          title: Tablice dwuwymiarowe
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2711,6 +2775,17 @@ pl:
             lessonGroup-5:
               display_name: Koniec ankiety jednostki
           title: Listy tablic i Metody łańcuchów
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
+            lessonGroup-5:
+              display_name: Koniec ankiety jednostki
+          title: Listy tablic i Metody łańcuchów
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2798,6 +2873,17 @@ pl:
           name: csa7-2023
           title: Metoda dokompozycji i Rekurencja
         csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Koniec ankiety jednostki
+            lessonGroup-5:
+              display_name: Lekcje alternatywne
+          title: Metoda dokompozycji i Rekurencja
+        csa7-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -2912,6 +2998,17 @@ pl:
             lessonGroup-5:
               display_name: Lekcje alternatywne
           title: Wyszukiwanie i porządkowanie
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Ankieta
+            lessonGroup-5:
+              display_name: Lekcje alternatywne
+          title: Wyszukiwanie i porządkowanie
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -3004,6 +3101,26 @@ pl:
             plany studiów, aby skoncentrować ich praktykę i samodzielnie ocenić swoje
             postępy.
         csa9-2024:
+          description: Ta jednostka przygotowuje uczniów do egzaminu AP CSA poprzez
+            przegląd kluczowych pojęć, ćwiczenie pytań wielokrotnego wyboru i pytań
+            z odpowiedziami swobodnymi oraz wzmacnianie strategii pisania testu. Uczniowie
+            identyfikują mocne strony i obszary poprawy, aby tworzyć zindywidualizowane
+            plany studiów, aby skoncentrować ich praktykę i samodzielnie ocenić swoje
+            postępy.
+          description_short: Uczniowie przygotowują się do egzaminu AP CSA, ćwicząc
+            odpowiedzi na pytania wielokrotnego wyboru i pytania otwarte.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Przegląd i praktyka
+            lessonGroup-3:
+              display_name: Egzaminy próbne
+          student_description: Ta jednostka przygotowuje Ciebie do egzaminu AP CSA
+            poprzez przegląd kluczowych pojęć, ćwiczenie pytań wielokrotnego wyboru
+            i pytań z odpowiedziami swobodnymi oraz wzmacnianie strategii pisania
+            testu. Identyfikujesz mocne strony i obszary poprawy, aby tworzyć zindywidualizowane
+            plany studiów, aby skoncentrować ich praktykę i samodzielnie ocenić swoje
+            postępy.
+        csa9-2025:
           description: Ta jednostka przygotowuje uczniów do egzaminu AP CSA poprzez
             przegląd kluczowych pojęć, ćwiczenie pytań wielokrotnego wyboru i pytań
             z odpowiedziami swobodnymi oraz wzmacnianie strategii pisania testu. Uczniowie
@@ -9449,11 +9566,6 @@ pl:
           name: self-paced-pl-k5-2024-1
           title: Wprowadzenie do informatyki
         self-paced-pl-k5-2024-2:
-          description: "\\*\\*Wykonaj: \\*\\*\n\n-   Zidentyfikuj i wyjaśnij podstawowe
-            pojęcia informatyczne, w tym duszki, zdarzenia i zachowania. \n\n-   Zademonstruj
-            zastosowanie programowania opartego na zdarzeniach.\n\n-   Utwórz program
-            za pomocą duszków, zdarzeń i zachowań.\n\n\\*\\*Sugerowany czas: \\*\\*
-            60 minut"
           lesson_groups:
             lessonGroup-2:
               display_name: Pierwsze kroki

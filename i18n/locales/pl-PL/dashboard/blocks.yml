@@ -1145,6 +1145,8 @@ pl:
             '1': sok cytrynowy
             '3': proszek do pieczenia
             '5': oba
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         text: wykonaj efekt {EFFECT}
         options:
@@ -1867,6 +1869,8 @@ pl:
         text: x współrzędna {SPRITE}
       gamelab_yLocationOf:
         text: współrzędna y {SPRITE}
+      KatiesBlocks_changeVelocity:
+        text: zamień {SPRITE} {PROPERTY} przez {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} skocz do {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1880,6 +1884,8 @@ pl:
             '"gas"': gaz
       KatiesBlocks_makeNumSpritesNear:
         text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
+      KatiesBlocks_setVelocity:
+        text: ustaw {SPRITE} {PROPERTY} na {VAL}
       KatiesBlocks_spriteBirdSay:
         text: "{SPRITE} mówi {SPEECH}"
         options:

@@ -51,6 +51,8 @@ pl:
         locale: 'Język'
         age: 'Wiek'
         gender: 'Płeć'
+        gender_student_input: 'Płeć'
+        gender_teacher_input: 'Płeć'
         edit_header: 'Edytuj dane konta'
         ai_settings_header: 'Ustawienia AI'
         finish_sign_up_header: 'Zakończ tworzenie swojego konta'
@@ -298,6 +300,7 @@ pl:
       email: 'e-mail'
       google_classroom: 'Klasa Google'
       clever: 'Clever'
+      lti_v1: 'Integracja z LTI'
   follower:
     invite_sent: 'Zaproszenie wysłane'
     added_teacher: '%{name} dodany jako Twój nauczyciel'

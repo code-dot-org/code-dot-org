@@ -1146,6 +1146,8 @@ pl:
             '3': proszek do pieczenia
             '5': oba
         text: Mikroskop ma {INPUT1}
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -1204,6 +1206,8 @@ pl:
         text: "[testing] reprezentują {NUM} nowe {ANIMATION_NAME} duszki"
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}powiedz {TEXT1}"
+      KatiesBlocks_changeVelocity:
+        text: zamień {SPRITE} {PROPERTY} przez {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} skocz do {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1217,6 +1221,8 @@ pl:
           {STATEMENT}
       KatiesBlocks_makeNumSpritesNear:
         text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
+      KatiesBlocks_setVelocity:
+        text: ustaw {SPRITE} {PROPERTY} na {VAL}
       KatiesBlocks_spriteBirdSay:
         options:
           SPEECH:
