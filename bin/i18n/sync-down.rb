@@ -45,9 +45,9 @@ module I18n
         logger.level = Logger::INFO
 
         CDO.crowdin_project_test_mapping.each do |prod_project_name, test_project_name|
+          name = opts[:testing] ? test_project_name : prod_project_name
           puts "Downloading translations from #{name} project"
           api_token = I18nScriptUtils.crowdin_creds['api_token']
-          name = opts[:testing] ? test_project_name : prod_project_name
           project_identifier = CDO.crowdin_projects.dig(name, 'id')
           project = Crowdin::Project.new(project_identifier, api_token)
           options = {
