@@ -5029,3 +5029,11 @@ hi:
               display_name: पाठ्यक्रम के बाद का सर्वेक्षण
         csp-post-survey-2024:
           title: CS के सिद्धांत कोर्स के बाद का सर्वेक्षण
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: सर्वेक्षण
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: सर्वेक्षण

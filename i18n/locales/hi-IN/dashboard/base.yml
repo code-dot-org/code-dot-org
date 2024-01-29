@@ -51,6 +51,8 @@ hi:
         locale: 'भाषा'
         age: 'उम्र'
         gender: 'लिंग'
+        gender_student_input: 'लिंग'
+        gender_teacher_input: 'लिंग'
         edit_header: 'खाता विवरण संपादित करें'
         ai_settings_header: 'ए.आई. सेटिंग्स'
         finish_sign_up_header: 'अपना खाता बनाना समाप्त करें'

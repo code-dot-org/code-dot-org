@@ -1737,6 +1737,8 @@ hi:
         text: "{SPRITE} का x निर्देशांक"
       gamelab_yLocationOf:
         text: "{SPRITE} का y निर्देशांक"
+      KatiesBlocks_changeVelocity:
+        text: "{SPRITE} {PROPERTY} को {VAL} द्वारा बदलें"
       KatiesBlocks_glideTo:
         text: "{SPRITE} चुपके से {LOCATION} पर जाता है"
       KatiesBlocks_goldilocks:
@@ -1748,6 +1750,8 @@ hi:
             '"solid"': ठोस
             '"liquid"': द्रव
             '"gas"': गैस
+      KatiesBlocks_setVelocity:
+        text: "{SPRITE} {PROPERTY} को {VAL} पर सेट करें"
       KatiesBlocks_tumbling:
         text: कलाबाजियां खाना
       Mikelab_addBehaviorSimple:

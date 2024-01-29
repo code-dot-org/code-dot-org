@@ -1098,6 +1098,8 @@ hi:
         text: "{NUM} दर्शाता है नया {ANIMATION_NAME} स्प्राइटस [BEHAVIOR][2]"
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE} {TEXT1} बोलता है"
+      KatiesBlocks_changeVelocity:
+        text: "{SPRITE} {PROPERTY} को {VAL} द्वारा बदलें"
       KatiesBlocks_glideTo:
         text: "{SPRITE} चुपके से {LOCATION} पर जाता है"
       KatiesBlocks_goldilocks:
@@ -1109,6 +1111,8 @@ hi:
         text: |2-
            यदि {CONDITION}{SPRITE}
           {STATEMENT}
+      KatiesBlocks_setVelocity:
+        text: "{SPRITE} {PROPERTY} को {VAL} पर सेट करें"
       KatiesBlocks_tumbling:
         text: कलाबाजियां खाना
       Mikelab_addBehaviorSimple:
