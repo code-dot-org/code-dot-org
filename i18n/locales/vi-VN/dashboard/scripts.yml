@@ -4200,3 +4200,39 @@ vi:
           lesson_groups:
             lessonGroup-2:
               display_name: Khảo sát sau khoá học
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Khảo sát
+            lessonGroup-3:
+              display_name: Nội dung
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+        csa4-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+            lessonGroup-4:
+              display_name: Khảo sát

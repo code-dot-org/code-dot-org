@@ -1048,6 +1048,8 @@ vi:
         options:
           INPUT1:
             '1': nước chanh
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         text: làm hiệu ứng {EFFECT}
         options:
@@ -1728,6 +1730,8 @@ vi:
         text: tọa độ x của nhân vật {SPRITE}
       gamelab_yLocationOf:
         text: tọa độ y của nhân vật {SPRITE}
+      KatiesBlocks_changeVelocity:
+        text: thay đổi {PROPERTY} {SPRITE} bởi {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} trượt tới {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1736,6 +1740,8 @@ vi:
             '"solid"': rắn
             '"liquid"': lỏng
             '"gas"': khí
+      KatiesBlocks_setVelocity:
+        text: đặt {SPRITE} {PROPERTY} thành {VAL}
       KatiesBlocks_tumbling:
         text: lộn nhào
       Mikelab_addBehaviorSimple:

@@ -21,6 +21,8 @@ vi:
         finish_sign_up_subheader_provider_markdown: Điền thông tin sau để hoàn thành
           tạo tài khoản Code.org với **%{provider}** cho **%{email}**.
         gender: Giới tính
+        gender_student_input: Giới tính
+        gender_teacher_input: Giới tính
         locale: Ngôn ngữ
         name: Tên hiển thị
         name_example: Tên hiển thị (ví dụ như Cool Coder hoặc Jane S.)

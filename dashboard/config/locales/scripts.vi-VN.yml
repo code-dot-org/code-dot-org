@@ -1342,6 +1342,12 @@ vi:
               display_name: Khảo sát
             lessonGroup-3:
               display_name: Nội dung
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Khảo sát
+            lessonGroup-3:
+              display_name: Nội dung
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1384,6 +1390,10 @@ vi:
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1422,6 +1432,10 @@ vi:
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1452,6 +1466,10 @@ vi:
             lessonGroup-2:
               display_name: Nội dung
         csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+        csa4-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
@@ -1494,6 +1512,10 @@ vi:
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1531,6 +1553,10 @@ vi:
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1565,6 +1591,10 @@ vi:
             lesson-6:
               name: Sở hữu trí tuệ
         csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+        csa7-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
@@ -1607,6 +1637,12 @@ vi:
             lessonGroup-4:
               display_name: Khảo sát
         csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+            lessonGroup-4:
+              display_name: Khảo sát
+        csa8-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung

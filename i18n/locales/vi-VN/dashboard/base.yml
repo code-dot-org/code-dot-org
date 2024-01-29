@@ -51,6 +51,8 @@ vi:
         locale: 'Ngôn ngữ'
         age: 'Tuổi'
         gender: 'Giới tính'
+        gender_student_input: 'Giới tính'
+        gender_teacher_input: 'Giới tính'
         edit_header: 'Chỉnh sửa thông tin tài khoản'
         ai_settings_header: 'Cài đặt AI'
         finish_sign_up_header: 'Hoàn thành tạo tài khoản'

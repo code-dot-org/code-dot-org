@@ -1048,6 +1048,8 @@ vi:
           INPUT1:
             '1': nước chanh
         text: Kính hiển vi có {INPUT1}
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -1080,6 +1082,8 @@ vi:
         text: giới thiệu {NUM} nhân vật {ANIMATION_NAME} mới [BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}nói{TEXT1}"
+      KatiesBlocks_changeVelocity:
+        text: thay đổi {PROPERTY} {SPRITE} bởi {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} trượt tới {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1088,6 +1092,8 @@ vi:
             '"gas"': khí
             '"liquid"': lỏng
             '"solid"': rắn
+      KatiesBlocks_setVelocity:
+        text: đặt {SPRITE} {PROPERTY} thành {VAL}
       KatiesBlocks_tumbling:
         text: lộn nhào
       Mikelab_addBehaviorSimple:
