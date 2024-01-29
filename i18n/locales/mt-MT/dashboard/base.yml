@@ -36,6 +36,8 @@ mt:
         locale: 'Lingwa'
         age: 'Età'
         gender: 'Sess'
+        gender_student_input: 'Sess'
+        gender_teacher_input: 'Sess'
         edit_header: 'Editja id-dettalji tal-Account'
         finish_sign_up_header_error: 'Jekk jogħġbok ikkoreġu dawn l-iżbalji:'
         error:
