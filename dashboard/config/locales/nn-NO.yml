@@ -20,6 +20,8 @@ nn:
         finish_sign_up_subheader_provider_markdown: Fyll ut følgande informasjon for
           å fullføre opprettinga av ein Code.org-konto med **%{provider}** for **%{email}**.
         gender: Kjønn
+        gender_student_input: Kjønn
+        gender_teacher_input: Kjønn
         locale: Språk
         name: Vis namn
         name_example: Kallenamn<br/>(f.eks Kule Knut eller Tøffe Trine)

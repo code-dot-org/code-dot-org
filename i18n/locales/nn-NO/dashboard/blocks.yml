@@ -1367,6 +1367,10 @@ nn:
         text: x-koordinator til {SPRITE}
       gamelab_yLocationOf:
         text: y-koordinator til {SPRITE}
+      KatiesBlocks_changeVelocity:
+        text: endre {SPRITE} {PROPERTY} med {VAL}
+      KatiesBlocks_setVelocity:
+        text: sett {SPRITE} {PROPERTY} til {VAL}
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} startar {BEHAVIOR}
       Mikelab_addTrainingData:

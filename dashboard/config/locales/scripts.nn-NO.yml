@@ -717,6 +717,12 @@ nn:
               display_name: Undersøking
             lessonGroup-3:
               display_name: Innhald
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Undersøking
+            lessonGroup-3:
+              display_name: Innhald
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -754,6 +760,10 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhald
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -785,6 +795,10 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhald
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -810,6 +824,10 @@ nn:
             lessonGroup-2:
               display_name: Innhald
         csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa4-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhald
@@ -847,6 +865,10 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhald
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -875,6 +897,10 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhald
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -900,6 +926,10 @@ nn:
             lessonGroup-2:
               display_name: Innhald
         csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa7-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhald
@@ -936,6 +966,12 @@ nn:
             lessonGroup-4:
               display_name: Undersøking
         csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+            lessonGroup-4:
+              display_name: Undersøking
+        csa8-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhald

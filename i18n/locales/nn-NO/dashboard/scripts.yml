@@ -3169,3 +3169,39 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: Undersøking etter kurs
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Undersøking
+            lessonGroup-3:
+              display_name: Innhald
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa4-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+            lessonGroup-4:
+              display_name: Undersøking

@@ -50,6 +50,8 @@ nn:
         locale: 'Språk'
         age: 'Alder'
         gender: 'Kjønn'
+        gender_student_input: 'Kjønn'
+        gender_teacher_input: 'Kjønn'
         edit_header: 'Rediger kontodetaljar'
         finish_sign_up_header: 'Fullfør oppretting av kontoen'
         finish_sign_up_header_error: 'Ver snill og endre følgande feil:'

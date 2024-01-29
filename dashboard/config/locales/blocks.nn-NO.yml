@@ -987,6 +987,10 @@ nn:
           COLOR:
             '"blue"': blå
             '"red"': raud
+      KatiesBlocks_changeVelocity:
+        text: endre {SPRITE} {PROPERTY} med {VAL}
+      KatiesBlocks_setVelocity:
+        text: sett {SPRITE} {PROPERTY} til {VAL}
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} startar {BEHAVIOR}
       Mikelab_addTrainingData:
