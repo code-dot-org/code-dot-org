@@ -637,6 +637,8 @@ ne:
             '"left"': बाँया
             '"right"': दाँया
             '"space"': space
+      KatiesBlocks_changeVelocity:
+        text: परिवर्तन
       Mikelab_changePropBy:
         options:
           PROPERTY:

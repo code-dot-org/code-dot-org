@@ -38,6 +38,8 @@ ne:
         locale: 'भाषा'
         age: 'उमेर'
         gender: 'लिङ्ग'
+        gender_student_input: 'लिङ्ग'
+        gender_teacher_input: 'लिङ्ग'
         edit_header: 'खाता जानकारी सम्पादन गर्नुहोस्'
         finish_sign_up_header_error: 'Please correct the following errors:'
         error:

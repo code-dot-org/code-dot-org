@@ -11,6 +11,8 @@ ne:
           future: can't be in the future
         finish_sign_up_header_error: 'Please correct the following errors:'
         gender: लिङ्ग
+        gender_student_input: लिङ्ग
+        gender_teacher_input: लिङ्ग
         locale: भाषा
         name: देखाउने नाम
         password: पासवर्ड

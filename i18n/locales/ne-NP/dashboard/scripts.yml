@@ -1713,3 +1713,35 @@ ne:
           lesson_groups:
             csp_unit9_2020:
               display_name: "(old) Unit 9: Data"
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Content
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa4-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content

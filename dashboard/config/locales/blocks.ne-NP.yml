@@ -491,6 +491,8 @@ ne:
           COLOR:
             '"blue"': निलो
             '"red"': रातो
+      KatiesBlocks_changeVelocity:
+        text: परिवर्तन
       Mikelab_changePropBy:
         options:
           PROPERTY:
