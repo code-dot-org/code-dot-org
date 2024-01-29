@@ -1412,6 +1412,14 @@ id:
               display_name: Konten
             lessonGroup-5:
               display_name: Pelajaran Alternatif
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Survei
+            lessonGroup-3:
+              display_name: Konten
+            lessonGroup-5:
+              display_name: Pelajaran Alternatif
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1453,6 +1461,12 @@ id:
             lesson-4:
               name: variabel
         csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Pelajaran Alternatif
+        csa2-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
@@ -1500,6 +1514,12 @@ id:
               display_name: Konten
             lessonGroup-4:
               display_name: Pelajaran Alternatif
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Pelajaran Alternatif
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1535,6 +1555,12 @@ id:
             lesson-9:
               name: Acak
         csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Pelajaran Alternatif
+        csa4-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
@@ -1583,6 +1609,12 @@ id:
               display_name: Konten
             lessonGroup-4:
               display_name: Pelajaran Alternatif
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Pelajaran Alternatif
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1619,6 +1651,12 @@ id:
             lessonGroup-4:
               display_name: Pelajaran Alternatif
         csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Pelajaran Alternatif
+        csa6-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
@@ -1665,6 +1703,12 @@ id:
               display_name: Konten
             lessonGroup-5:
               display_name: Pelajaran Alternatif
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-5:
+              display_name: Pelajaran Alternatif
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1706,6 +1750,14 @@ id:
             lessonGroup-5:
               display_name: Pelajaran Alternatif
         csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Survei
+            lessonGroup-5:
+              display_name: Pelajaran Alternatif
+        csa8-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Konten

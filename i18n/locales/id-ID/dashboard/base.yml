@@ -51,6 +51,8 @@ id:
         locale: 'Bahasa'
         age: 'Umur'
         gender: 'Jenis kelamin'
+        gender_student_input: 'Jenis kelamin'
+        gender_teacher_input: 'Jenis kelamin'
         edit_header: 'Edit rincian akun'
         finish_sign_up_header: 'Selesaikan pembuatan akun Anda'
         finish_sign_up_header_error: 'Mohon Perbaiki kesalahan berikut:'

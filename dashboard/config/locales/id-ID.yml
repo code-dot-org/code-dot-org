@@ -20,6 +20,8 @@ id:
         finish_sign_up_subheader_provider_markdown: Isikan informasi berikut untuk
           menyelesaikan pembuatan akun Code.org dengan **%{provider}** untuk **%{email}**.
         gender: Jenis kelamin
+        gender_student_input: Jenis kelamin
+        gender_teacher_input: Jenis kelamin
         locale: Bahasa
         name: Nama Tampilan
         name_example: Nama Tampilan (misalnya, Cool Coder atau Jane S.)

@@ -5782,3 +5782,55 @@ id:
               display_name: Survei Pasca Kursus
         csp-post-survey-2024:
           title: Survei Pascakursus CS Principles
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Survei
+            lessonGroup-3:
+              display_name: Konten
+            lessonGroup-5:
+              display_name: Pelajaran Alternatif
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Pelajaran Alternatif
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Pelajaran Alternatif
+        csa4-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Pelajaran Alternatif
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Pelajaran Alternatif
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Pelajaran Alternatif
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-5:
+              display_name: Pelajaran Alternatif
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Survei
+            lessonGroup-5:
+              display_name: Pelajaran Alternatif

@@ -1095,6 +1095,8 @@ id:
         options:
           INPUT1:
             '1': jus lemon
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         text: lakukan efek {EFFECT}
         options:
@@ -1785,6 +1787,8 @@ id:
         text: x koordinat {SPRITE}
       gamelab_yLocationOf:
         text: y koordinat {SPRITE}
+      KatiesBlocks_changeVelocity:
+        text: ubah {SPRITE} {PROPERTY} dengan {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} meluncur ke {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1793,6 +1797,8 @@ id:
             '"solid"': padat
             '"liquid"': cair
             '"gas"': gas
+      KatiesBlocks_setVelocity:
+        text: tetapkan {SPRITE} {PROPERTY} ke {VAL}
       KatiesBlocks_tumbling:
         text: jatuh
       Mikelab_addBehaviorSimple:

@@ -1096,6 +1096,8 @@ id:
           INPUT1:
             '1': jus lemon
         text: Mikroskop memimliki {INPUT1}
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -1128,6 +1130,8 @@ id:
         text: menunjukkan {NUM} sprite {ANIMATION_NAME} baru [BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}ucapkan{TEXT1}"
+      KatiesBlocks_changeVelocity:
+        text: ubah {SPRITE} {PROPERTY} dengan {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} meluncur ke {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1136,6 +1140,8 @@ id:
             '"gas"': gas
             '"liquid"': cair
             '"solid"': padat
+      KatiesBlocks_setVelocity:
+        text: tetapkan {SPRITE} {PROPERTY} ke {VAL}
       KatiesBlocks_tumbling:
         text: jatuh
       Mikelab_addBehaviorSimple:
