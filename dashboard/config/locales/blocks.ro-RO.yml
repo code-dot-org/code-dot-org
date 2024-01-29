@@ -1080,6 +1080,8 @@ ro:
         text: reprezintă {NUM} noi {ANIMATION_NAME} spiriduși [BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}spune{TEXT1}"
+      KatiesBlocks_changeVelocity:
+        text: schimbă {SPRITE} {PROPERTY} cu {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} culisează către {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1088,6 +1090,8 @@ ro:
             '"gas"': gaz
             '"liquid"': lichid
             '"solid"': solid
+      KatiesBlocks_setVelocity:
+        text: setează {SPRITE} {PROPERTY} la {VAL}
       KatiesBlocks_tumbling:
         text: acrobatică
       Mikelab_addBehaviorSimple:

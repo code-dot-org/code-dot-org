@@ -1694,6 +1694,8 @@ ro:
         text: coordonatele x ale {SPRITE}
       gamelab_yLocationOf:
         text: coordonatele y ale {SPRITE}
+      KatiesBlocks_changeVelocity:
+        text: schimbă {SPRITE} {PROPERTY} cu {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} culisează către {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1702,6 +1704,8 @@ ro:
             '"solid"': solid
             '"liquid"': lichid
             '"gas"': gaz
+      KatiesBlocks_setVelocity:
+        text: setează {SPRITE} {PROPERTY} la {VAL}
       KatiesBlocks_tumbling:
         text: acrobatică
       Mikelab_addBehaviorSimple:

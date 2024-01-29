@@ -4425,6 +4425,7 @@ ro:
             lesson-6:
               name: Pașii următori
           title: Introducere în Informatică
+        music-intro-2024: {}
         csp1-2024:
           lesson_groups:
             cspSurvey:
@@ -4515,3 +4516,44 @@ ro:
             lessonGroup-2:
               display_name: Chestionar după curs
         csp-post-survey-2024: {}
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sondaj
+            lessonGroup-3:
+              display_name: Conţinut
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa4-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+            lessonGroup-4:
+              display_name: Sondaj
+        csa9-2025: {}
+        csa-postap-se-and-computer-vision-2025: {}
+        aryanna-sandbox: {}
+        coding-with-ai: {}
+        pl-team-design-guide: {}

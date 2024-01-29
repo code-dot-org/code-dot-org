@@ -20,6 +20,8 @@ ro:
         finish_sign_up_subheader_provider_markdown: Completează următoarele informații
           pentru a finaliza crearea unui cont Code.org cu **%{provider}** pentru**%{email}**.
         gender: Sex
+        gender_student_input: Sex
+        gender_teacher_input: Sex
         locale: Limbă
         name: Numele afișat
         name_example: Afişează numele (de exemplu, Cool Coder sau Jane S.)

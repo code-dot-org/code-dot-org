@@ -1295,6 +1295,12 @@ ro:
               display_name: Sondaj
             lessonGroup-3:
               display_name: Conţinut
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sondaj
+            lessonGroup-3:
+              display_name: Conţinut
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1337,6 +1343,10 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1375,6 +1385,10 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1408,6 +1422,10 @@ ro:
             lesson-9:
               name: Aleatoriu
         csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa4-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -1450,6 +1468,10 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1487,6 +1509,10 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1518,6 +1544,10 @@ ro:
             lessonGroup-2:
               display_name: Conţinut
         csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa7-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -1560,6 +1590,12 @@ ro:
             lessonGroup-4:
               display_name: Sondaj
         csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+            lessonGroup-4:
+              display_name: Sondaj
+        csa8-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut

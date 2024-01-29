@@ -51,6 +51,8 @@ ro:
         locale: 'Limbă'
         age: 'Vârsta'
         gender: 'Sex'
+        gender_student_input: 'Sex'
+        gender_teacher_input: 'Sex'
         edit_header: 'Editează detaliile contului'
         finish_sign_up_header: 'Finalizează crearea contului tău'
         finish_sign_up_header_error: 'Te rog să corectezi următoarele greșeli:'
