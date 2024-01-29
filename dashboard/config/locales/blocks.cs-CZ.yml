@@ -1074,6 +1074,8 @@ cs:
         text: reprezentujte {NUM} nových {ANIMATION_NAME} sprajtů [BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}řekni{TEXT1}"
+      KatiesBlocks_changeVelocity:
+        text: změnit {SPRITE} {PROPERTY} o {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} klouže na {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1082,6 +1084,8 @@ cs:
             '"gas"': plyn
             '"liquid"': kapalina
             '"solid"': pevná látka
+      KatiesBlocks_setVelocity:
+        text: nastav {SPRITE} {PROPERTY} na {VAL}
       KatiesBlocks_tumbling:
         text: cvičení
       Mikelab_addBehaviorSimple:

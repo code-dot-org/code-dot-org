@@ -1717,6 +1717,8 @@ cs:
         text: x souřadnice {SPRITE}
       gamelab_yLocationOf:
         text: y souřadnice {SPRITE}
+      KatiesBlocks_changeVelocity:
+        text: změnit {SPRITE} {PROPERTY} o {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} klouže na {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1725,6 +1727,8 @@ cs:
             '"solid"': pevná látka
             '"liquid"': kapalina
             '"gas"': plyn
+      KatiesBlocks_setVelocity:
+        text: nastav {SPRITE} {PROPERTY} na {VAL}
       KatiesBlocks_tumbling:
         text: cvičení
       Mikelab_addBehaviorSimple:

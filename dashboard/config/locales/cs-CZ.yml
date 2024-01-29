@@ -22,6 +22,8 @@ cs:
           pro vytvoření účtu Code.org prostřednictvím poskytovatele **%{provider}**
           pro **%{email}**.
         gender: Pohlaví
+        gender_student_input: Pohlaví
+        gender_teacher_input: Pohlaví
         locale: Jazyk
         name: Zobrazované jméno
         name_example: Zobrazované jméno (např. Cool kodér nebo Jana S.)

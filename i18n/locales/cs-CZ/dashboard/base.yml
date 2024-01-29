@@ -51,6 +51,8 @@ cs:
         locale: 'Jazyk'
         age: 'Věk'
         gender: 'Pohlaví'
+        gender_student_input: 'Pohlaví'
+        gender_teacher_input: 'Pohlaví'
         edit_header: 'Upravit Podrobnosti Účtu'
         finish_sign_up_header: 'Dokončete vytvoření účtu'
         finish_sign_up_header_error: 'Opravte prosím následující chyby:'

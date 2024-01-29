@@ -8705,3 +8705,120 @@ cs:
           title: CS Principy Post-Course Survey
           description: Tato jednotka obsahuje průzkum CS Principles Post-Course Survey.
           student_description: Tato jednotka obsahuje průzkum o kurzu CS Principles. Váš učitel vám řekne, kdy je čas provést tento průzkum.
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Průzkum
+            lessonGroup-3:
+              display_name: Obsah
+            lessonGroup-4:
+              display_name: Ukažte, co víte
+            lessonGroup-6:
+              display_name: Konec zjišťování jednotek
+            lessonGroup-5:
+              display_name: Alternativní lekce
+            lessonGroup-7:
+              display_name: Pískoviště
+          title: Objektově orientované programování
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-3:
+              display_name: Ukažte, co víte
+            lessonGroup-5:
+              display_name: Konec zjišťování jednotek
+            lessonGroup-4:
+              display_name: Alternativní lekce
+            lessonGroup-6:
+              display_name: Pískoviště
+          title: Struktura a design třídy
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-3:
+              display_name: Ukažte, co víte
+            lessonGroup-5:
+              display_name: Konec zjišťování jednotek
+            lessonGroup-4:
+              display_name: Alternativní lekce
+            lessonGroup-6:
+              display_name: Pískoviště
+          title: Pole a algoritmy
+        csa4-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-3:
+              display_name: Ukažte, co víte
+            lessonGroup-5:
+              display_name: Konec zjišťování jednotek
+            lessonGroup-4:
+              display_name: Alternativní lekce
+            lessonGroup-6:
+              display_name: Pískoviště
+          title: Podmínky a logika
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-3:
+              display_name: Ukažte, co víte
+            lessonGroup-5:
+              display_name: Konec zjišťování jednotek
+            lessonGroup-4:
+              display_name: Alternativní lekce
+            lessonGroup-6:
+              display_name: Pískoviště
+          title: Dvourozměrná pole
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-3:
+              display_name: Ukažte, co víte
+            lessonGroup-5:
+              display_name: Konec zjišťování jednotek
+            lessonGroup-4:
+              display_name: Alternativní lekce
+            lessonGroup-6:
+              display_name: Pískoviště
+          title: ArrayLists a String metody
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-3:
+              display_name: Ukažte, co víte
+            lessonGroup-4:
+              display_name: Konec zjišťování jednotek
+            lessonGroup-5:
+              display_name: Alternativní lekce
+            lessonGroup-6:
+              display_name: Pískoviště
+          title: Metoda rozkladu a rekurze
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-3:
+              display_name: Ukažte, co víte
+            lessonGroup-4:
+              display_name: Průzkum
+            lessonGroup-5:
+              display_name: Alternativní lekce
+            lessonGroup-6:
+              display_name: Pískoviště
+          title: Vyhledávání a třídění
+        csa9-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Přezkoumání a praxe
+            lessonGroup-3:
+              display_name: Vysmívat se zkouškám
+            lessonGroup-4:
+              display_name: Pískoviště
+          description: Tato jednotka připravuje studenty na zkoušku AP CSA přezkoumáním klíčových konceptů, procvičování otázek s výběrem odpovědí a bezplatnou odpovědí, a posílení strategií přijímání testů. Studenti identifikují silné stránky a oblasti zlepšování, aby vytvořili individualizované studijní plány, aby zaměřili svou praxi a sebehodnotili svůj pokrok.
+          student_description: Tato jednotka vás připraví na zkoušku AP CSA přezkoumáním klíčových konceptů, procvičování otázek s výběrem odpovědí a bezplatnou odpovědí, a posílení strategií přijímání testů. Identifikujete silné stránky a oblasti zlepšování, abyste vytvořili individualizované studijní plány, které vás zaměří na procvičování a sebehodnocení vašeho pokroku.
+          description_short: Studenti se připravují na zkoušku AP CSA procvičováním strategií pro otázky s výběrem odpovědí a bezplatnou odpovědí.
