@@ -34,6 +34,11 @@ section.bg-primary-light {
     &.link-button { color: var(--neutral_white) !important; }
   }
 }
+section.bg-pattern-dark {
+  background: url("/images/banners/banner-bg-lines-neutral-dark.png") center repeat;
+  background-size: 12rem;
+  background-color: var(--neutral_dark);
+}
 
 // Hide random whitespace at the bottom
 //  of the page from legacy code
@@ -798,6 +803,32 @@ form {
   }
 }
 
+// Editorial cards 2x2 grid
+// See code.org/administrators for an example
+.editorial-cards-wrapper-2x2 {
+  display: grid;
+  margin-top: 5rem;
+  gap: 4rem;
+
+  @media screen and (min-width: $width-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .flex-container {
+    gap: 2rem;
+  }
+
+  img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+  }
+
+  p {
+    @include body-three;
+  }
+}
+
 // Carousels
 // Uses the carouFredSel jQuery plugin: https://github.com/nzy/carouFredSel
 .carousel-wrapper {
@@ -1274,6 +1305,10 @@ section.quote {
   background-color: var(--neutral_dark);
   border-radius: $border-radius;
   padding: 2rem;
+
+  &.no-bg {
+    background: none;
+  }
 
   @media screen and (max-width: $width-md) {
     gap: 1rem;
