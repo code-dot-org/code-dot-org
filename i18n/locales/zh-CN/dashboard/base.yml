@@ -51,6 +51,8 @@ zh-CN:
         locale: '语言'
         age: '年龄'
         gender: '性别'
+        gender_student_input: '性别'
+        gender_teacher_input: '性别'
         edit_header: '编辑用户信息'
         ai_settings_header: 'AI设置'
         finish_sign_up_header: '完成创建帐户'

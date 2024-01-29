@@ -1086,6 +1086,8 @@ zh-CN:
           INPUT1:
             '1': 柠檬汁
         text: 显微镜有{INPUT1}
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -1118,6 +1120,8 @@ zh-CN:
         text: 展现{NUM}个新{ANIMATION_NAME}精灵图[BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}说{TEXT1}"
+      KatiesBlocks_changeVelocity:
+        text: 将 {SPRITE} {PROPERTY} 改为 {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE}滑到{LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1129,6 +1133,8 @@ zh-CN:
         text: |2-
            如果{CONDITION}{SPRITE}
           {STATEMENT}
+      KatiesBlocks_setVelocity:
+        text: 设置 {SPRITE} {PROPERTY} 为 {VAL}
       KatiesBlocks_tumbling:
         text: 翻滚
       Mikelab_addBehaviorSimple:

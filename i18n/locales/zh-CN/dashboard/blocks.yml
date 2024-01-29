@@ -1086,6 +1086,8 @@ zh-CN:
         options:
           INPUT1:
             '1': 柠檬汁
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         text: 制作{EFFECT}效果
         options:
@@ -1771,6 +1773,8 @@ zh-CN:
         text: "{SPRITE} 的x轴坐标"
       gamelab_yLocationOf:
         text: "{SPRITE} 的y坐标"
+      KatiesBlocks_changeVelocity:
+        text: 将 {SPRITE} {PROPERTY} 改为 {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE}滑到{LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1782,6 +1786,8 @@ zh-CN:
             '"solid"': 固体
             '"liquid"': 液体
             '"gas"': 气体
+      KatiesBlocks_setVelocity:
+        text: 设置 {SPRITE} {PROPERTY} 为 {VAL}
       KatiesBlocks_tumbling:
         text: 翻滚
       Mikelab_addBehaviorSimple:

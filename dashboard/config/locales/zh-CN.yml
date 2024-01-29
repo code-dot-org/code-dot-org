@@ -20,6 +20,8 @@ zh-CN:
         finish_sign_up_subheader_provider_markdown: 填写信息，来使用 **%{provider}** 的 **%{email}**
           创建 Code.org 账户。
         gender: 性别
+        gender_student_input: 性别
+        gender_teacher_input: 性别
         locale: 语言
         name: 显示名称
         name_example: 显示的名字 （如炫酷码农或小明）
