@@ -51,6 +51,8 @@ bg:
         locale: 'Език'
         age: 'Възраст'
         gender: 'Пол'
+        gender_student_input: 'Пол'
+        gender_teacher_input: 'Пол'
         edit_header: 'Редактиране на данните за акаунта'
         finish_sign_up_header: 'Завършете създаването на профила си'
         finish_sign_up_header_error: 'Коригирайте следните грешки:'

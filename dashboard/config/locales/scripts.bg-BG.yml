@@ -891,6 +891,12 @@ bg:
               display_name: Проучване
             lessonGroup-3:
               display_name: Съдържание
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Проучване
+            lessonGroup-3:
+              display_name: Съдържание
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -928,6 +934,10 @@ bg:
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -961,6 +971,10 @@ bg:
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -989,6 +1003,10 @@ bg:
             lesson-9:
               name: Случаен
         csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa4-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
@@ -1026,6 +1044,10 @@ bg:
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1054,6 +1076,10 @@ bg:
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1079,6 +1105,10 @@ bg:
             lessonGroup-2:
               display_name: Съдържание
         csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa7-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
@@ -1115,6 +1145,12 @@ bg:
             lessonGroup-4:
               display_name: Проучване
         csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+            lessonGroup-4:
+              display_name: Проучване
+        csa8-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание

@@ -1093,6 +1093,8 @@ bg:
             '3': сода за хляб
             '5': и двете
         text: Микроскоп има {INPUT1}
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -1144,6 +1146,8 @@ bg:
         text: направи {NUM} нови {ANIMATION_NAME} спрайта {BEHAVIOR}
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}казва{TEXT1}"
+      KatiesBlocks_changeVelocity:
+        text: промяна на {SPRITE} {PROPERTY} с {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} се плъзга до {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1155,6 +1159,8 @@ bg:
         text: |2-
            ако{CONDITION}{SPRITE}
           {STATEMENT}
+      KatiesBlocks_setVelocity:
+        text: промяна на {SPRITE} {PROPERTY} с {VAL}
       Mikelab_addBehaviorSimple:
         text: спрайт {SPRITE} започва да {BEHAVIOR}
       Mikelab_addTrainingData:
