@@ -2163,3 +2163,39 @@ et:
               display_name: Loendid
             lessonGroup-3:
               display_name: Tsüklid
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Uuring
+            lessonGroup-3:
+              display_name: Sisu
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa4-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+            lessonGroup-4:
+              display_name: Uuring

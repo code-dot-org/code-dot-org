@@ -11,6 +11,8 @@ et:
           future: ei saa olla tulevikus
         finish_sign_up_header_error: 'Palun parandage järgmised vead:'
         gender: Sugu
+        gender_student_input: Sugu
+        gender_teacher_input: Sugu
         locale: Keel
         name: Kuvatav nimi
         parent_email: Lapsevanema/hooldaja e-posti aadress

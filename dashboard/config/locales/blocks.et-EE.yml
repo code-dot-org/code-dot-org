@@ -816,6 +816,10 @@ et:
           COLOR:
             '"blue"': sinine
             '"red"': punane
+      KatiesBlocks_changeVelocity:
+        text: muuda {SPRITE} {PROPERTY} {VAL} võrra
+      KatiesBlocks_setVelocity:
+        text: muuda {SPRITE} {PROPERTY} {VAL}
       Mikelab_changePropBy:
         options:
           PROPERTY:

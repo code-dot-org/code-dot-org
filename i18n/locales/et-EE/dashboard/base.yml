@@ -42,6 +42,8 @@ et:
         locale: 'Keel'
         age: 'Vanus'
         gender: 'Sugu'
+        gender_student_input: 'Sugu'
+        gender_teacher_input: 'Sugu'
         edit_header: 'Muuda kasutajakonto üksikasju'
         finish_sign_up_header_error: 'Palun parandage järgmised vead:'
         error:

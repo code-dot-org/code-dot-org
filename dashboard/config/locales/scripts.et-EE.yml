@@ -565,6 +565,12 @@ et:
               display_name: Uuring
             lessonGroup-3:
               display_name: Sisu
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Uuring
+            lessonGroup-3:
+              display_name: Sisu
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -602,6 +608,10 @@ et:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisu
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -633,6 +643,10 @@ et:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisu
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -658,6 +672,10 @@ et:
             lessonGroup-2:
               display_name: Sisu
         csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa4-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisu
@@ -695,6 +713,10 @@ et:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisu
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -723,6 +745,10 @@ et:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisu
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -748,6 +774,10 @@ et:
             lessonGroup-2:
               display_name: Sisu
         csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa7-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisu
@@ -784,6 +814,12 @@ et:
             lessonGroup-4:
               display_name: Uuring
         csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+            lessonGroup-4:
+              display_name: Uuring
+        csa8-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisu
