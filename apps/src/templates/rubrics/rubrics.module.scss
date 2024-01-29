@@ -568,6 +568,10 @@ i.infoAlertIcon {
   line-height: 125%;
 }
 
+.infoAlertClosed {
+  display: none;
+}
+
 .aiFeedbackRow {
   display: flex;
   flex-direction: row;
@@ -799,6 +803,12 @@ i.infoAlertIcon {
   align-self: stretch;
 }
 
+.settingsGroup {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+}
+
 .settingsContainers {
   display: flex;
   flex-direction: column;
@@ -820,6 +830,42 @@ i.infoAlertIcon {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.detailsGroup {
+  display: inline;
+  gap: 1rem;
+}
+
+.details {
+  display: inline;
+  font-weight: bold;
+  font-style: normal;
+  color: $neutral_dark;
+  margin-bottom: 1em;
+  font-size: 1rem;
+  line-height: 1.48;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+}
+
+.detailsVisible {
+  font-weight: 400;
+  font-style: normal;
+  color: $neutral_dark;
+  margin-bottom: 1em;
+  font-size: 1rem;
+  line-height: 1.48;
+  display: inline;
+  padding-inline-end: 1rem;
+}
+
+.detailsHidden {
+  display: none;
+
 }
 
 // End of rubrics redesign

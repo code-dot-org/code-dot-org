@@ -289,8 +289,18 @@ RubricContent.propTypes = {
 };
 
 export const InfoAlert = ({text, dismissable}) => {
+  const [closed, setClosed] = useState(false);
+  const closeButtonCallback = () => {
+    setClosed(true);
+  };
+
   return (
-    <div className={style.infoAlert}>
+    <div
+      className={classnames({
+        [style.infoAlert]: !closed,
+        [style.infoAlertClosed]: !!closed,
+      })}
+    >
       <div className={style.infoAlertLeft}>
         <FontAwesome icon="info-circle" className={style.infoAlertIcon} />
         <BodyTwoText>{text}</BodyTwoText>
@@ -298,8 +308,8 @@ export const InfoAlert = ({text, dismissable}) => {
       {!!dismissable && (
         <button
           type="button"
+          onClick={closeButtonCallback}
           className={classnames('close', style.infoAlertRight)}
-          data-dismiss="alert"
           aria-label="Close"
         >
           <span aria-hidden="true">&times;</span>
