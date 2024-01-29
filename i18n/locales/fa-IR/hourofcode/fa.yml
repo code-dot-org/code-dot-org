@@ -1920,8 +1920,8 @@ fa:
     can be found here](%{standards_url}). A google sheet version of the standards
     can be found at [CSP Standards](%{csp_standards_url}).
   csp_page_faq_question_02: How much does it cost to teach CS Principles?
-  csp_page_faq_answer_02: Our curriculum and platform are available at [no cost](%{cost_url})
-    for anyone, anywhere, to teach!
+  csp_page_faq_answer_02: برنامه درسی و پلت فرم ما،برای همگان در همه جای دنیا به صورت
+    رایگان برای آموزش در دسترس است!
   csp_page_faq_question_03: How/Where can I get professional development for CS Principles?
   csp_page_faq_answer_03_01: Our Professional Learning Program offers year-round support.
     The program kicks off with a 5-day summer workshop where you'll have an opportunity
@@ -2138,8 +2138,8 @@ fa:
     (CCSS) برای ELA و ریاضی، استانداردهای علمی نسل بعدی (NGSS) و استانداردهای انجمن
     معلمان علوم کامپیوتر (CSTA) نوشته شده است.
   csc_page_faq_question_02: هزینه آموزش پیوند با علوم کامپیوتر چقدر است؟
-  csc_page_faq_answer_02: Our curriculum and platform are available at [no cost](%{cost_url})
-    for anyone, anywhere, to teach!
+  csc_page_faq_answer_02: برنامه درسی و پلت فرم ما،برای همگان در همه جای دنیا به صورت
+    رایگان برای آموزش در دسترس است!
   csc_page_faq_question_03: چگونه و کجا می‌توانم در پیوند با علوم کامپیوتر به‌طور
     حرفه‌ای پیشرفت کنم؟
   csc_page_faq_answer_03: با ما می‌توانید به‌طور خودآموز و به صورت حرفه‌ای در پیوند
@@ -15918,8 +15918,8 @@ fa:
     به [CSTA K-12 Standards] (%{csta_k12_url}) و AI برای [دستورالعمل K-12] () نقشه
     برداری شده است.%{k12_url}
   csa_ai_page_faq_question_09: هزینه آموزش این ماژول چقدر است؟
-  csa_ai_page_faq_answer_09_01: برنامه درسی و پلت فرم ما در [بدون هزینه] (%{no_cost_url})
-    برای هر کس، در هر کجا، برای آموزش در دسترس است!
+  csa_ai_page_faq_answer_09_01: برنامه درسی و پلت فرم ما،برای همگان در همه جای دنیا
+    به صورت رایگان برای آموزش در دسترس است!
   csa_ai_page_faq_answer_09_02: علاوه بر این، نرم افزار و ابزار مورد استفاده در این
     ماژول رایگان است. GitHub Copilot برای تأیید شده [teachers](%{teachers_url}) و
     () رایگان است. [students]%{students_url}

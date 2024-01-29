@@ -1214,38 +1214,41 @@ pl:
     które mogą pomóc astronautom rozwiązywać problemy w kosmosie i w społecznościach
     w domu.
   afe_page_programs_cloud_tour_title: Odkrywanie podróży po Cloud Computer Career
-  afe_page_programs_cloud_tour_desc: How did we go from renting movies at the store
-    to streaming from anywhere at any time? Learn how data centers and cloud computing
-    have changed the way we watch our favorite content, and the careers behind it.
+  afe_page_programs_cloud_tour_desc: Jak przeszliśmy od wypożyczania filmów w sklepie
+    do przesyłania strumieniowego z dowolnego miejsca w dowolnym momencie? Dowiedz
+    się, jak centra danych i przetwarzanie w chmurze zmieniły sposób oglądania naszych
+    ulubionych treści i kariery stojące za nimi.
   afe_page_programs_voice_title: Your Voice is Power
-  afe_page_programs_voice_desc: Students will code and compete to learn how entrepreneurship,
-    coding, and music can intersect for positive change.
+  afe_page_programs_voice_desc: Uczniowie będą kodować i rywalizować, aby dowiedzieć
+    się, jak przedsiębiorczość, kodowanie i muzyka mogą przczyciać się do pozytywnych
+    zmian.
   afe_page_programs_scholarships_title: Stypendia i staże
-  afe_page_programs_scholarships_desc: Supporting students after high school is imperative
-    to fulfilling the Amazon Future Engineer mission for all of our scholars.
+  afe_page_programs_scholarships_desc: Wspieranie uczniów po ukończeniu szkoły średniej
+    jest niezbędne do wypełnienia misji Amazon Future Engineer dla wszystkich naszych
+    uczonych.
   afe_page_programs_robotics_title: Wycieczka po Robotics Fulfillment Center
-  afe_page_programs_robotics_desc: Discover how computer science, state-of-the-art
-    engineering, and incredible people deliver customer orders at Amazon.
+  afe_page_programs_robotics_desc: Dowiedz się, jak informatyka, najnowocześniejsza
+    inżynieria i niesamowici ludzie dostarczają klientom zamówienia w Amazon.
   afe_page_programs_data_tour_title: Podróż po Keeping Data Safe Career
-  afe_page_programs_data_tour_desc: You want to upload your photos to the cloud, but
-    what if something happens at a data center? Learn how AWS and data center professionals
-    keep data safe and sustainable.
+  afe_page_programs_data_tour_desc: Chcesz przesłać swoje zdjęcia do chmury, ale co,
+    jeśli coś stanie się w centrum danych? Dowiedz się, w jaki sposób AWS i specjaliści
+    ds. centrów danych zapewniają bezpieczeństwo danych.
   afe_page_success_heading: Gratulacje! Pomyślnie zarejestrowałeś się w programie
     Amazon Future Engineer.
-  afe_page_success_desc: You should receive an email shortly from Amazon Future Engineer
-    to claim your benefits. In the meantime, check out some of the amazing resources
-    around our site.
+  afe_page_success_desc: Powinieneś wkrótce otrzymać wiadomość e-mail od Amazon Future
+    Engineer, aby ubiegać się o swoje świadczenia. W międzyczasie sprawdź niektóre
+    z niesamowitych zasobów w naszej witrynie.
   afe_page_eligibility_check_heading: Sprawdziliśmy Twoje kwalifikacje
-  afe_page_eligibility_check_fail_desc: Your school does not meet the eligibility
-    [requirements*](%{req_url}) for the Amazon Future Engineer benefits, but you can
-    still take advantage of all Code.org has to offer, including our robust curriculum
-    and professional learning opportunities.
+  afe_page_eligibility_check_fail_desc: Twoja szkoła nie spełnia kwalifikacji [wymagania*]
+    (%{req_url}) do świadczeń Amazon Future Engineer, ale nadal możesz skorzystać
+    ze wszystkich możliwości oferowanych przez Code.org, w tym naszego solidnego programu
+    nauczania i możliwości doskonalenia zawodowego.
   afe_page_eligibility_check_fail_error: Jeśli uważasz, że nie powinieneś otrzymać
     tej wiadomości, skontaktuj się z nami pod adresem [support@code.org] (%{email_url}).
-  afe_page_eligibility_check_disclaimer: "*To participate in the Amazon Future Engineer
-    program, a school must have Title 1 status OR have student enrollment of more
-    than 40% underrepresented minority students and/or 40% students who qualify for
-    free or reduced lunch."
+  afe_page_eligibility_check_disclaimer: "*Aby wziąć udział w programie Amazon Future
+    Engineer, szkoła musi mieć status Title 1 LUB mieć więcej niż 40% uczniów z niedostatecznie
+    reprezentowanych mniejszości i/lub 40% uczniów, którzy kwalifikują się na bezpłatny
+    lub zredukowany lunch."
   blockchain_hero_heading: Jak działa Blockchain
   blockchain_hero_desc: Zanurz się w świecie blockchain dzięki „How Blockchain Works”,
     naszej nowej serii filmów i towarzyszącym lekcjom!
