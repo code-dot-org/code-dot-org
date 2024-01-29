@@ -8,7 +8,7 @@
 }
 
 .full-resource-block .description {
-  background-color: #00adbc;
+  background-color: var(--brand_primary_default);
   color: white;
   padding: 30px;
 }
