@@ -51,6 +51,8 @@ el:
         locale: 'Γλώσσα'
         age: 'Ηλικία'
         gender: 'Φύλο'
+        gender_student_input: 'Φύλο'
+        gender_teacher_input: 'Φύλο'
         edit_header: 'Στοιχεία Λογαριασμού'
         finish_sign_up_header: 'Ολοκληρώστε τη δημιουργία του λογαριασμού σας'
         finish_sign_up_header_error: 'Παρακαλώ διορθώστε τα ακόλουθα σφάλματα:'

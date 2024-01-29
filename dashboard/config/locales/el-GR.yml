@@ -22,6 +22,8 @@ el:
           για να ολοκληρώσετε τη δημιουργία λογαριασμού Code.org με **%{provider}**
           μέσω **%{email}**.
         gender: Φύλο
+        gender_student_input: Φύλο
+        gender_teacher_input: Φύλο
         locale: Γλώσσα
         name: Προβολή ονόματος
         name_example: Εμφανιζόμενο όνομα (π.χ. Προγραμματιστάκιας ή Μαρία)
