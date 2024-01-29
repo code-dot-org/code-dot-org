@@ -753,8 +753,6 @@
   "deleteUsedImage": "{name} được sử dụng trong {value, plural, one {1 vị trí} other {# vị trí}} trong ứng dụng này. Nếu bạn xóa, hình ảnh sẽ không xuất hiện ở bất kỳ vị trí nào trong số đó. Bạn có chắc chắn muốn xóa không?",
   "deleting": "Đang xóa",
   "deletingWithEllipsis": "Đang xóa...",
-  "deprecatedCalcAndEvalBrief": "Trong tháng tới, dự án này sẽ bị xóa vĩnh viễn.",
-  "deprecatedCalcAndEvalWarning": "Các loại dự án Calc và Eval sẽ biến mất!",
   "description": "Mô tả",
   "designMode": "Thiết kế",
   "detailView": "Chế độ xem chi tiết",
