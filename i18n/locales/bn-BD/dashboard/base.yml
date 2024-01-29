@@ -37,6 +37,8 @@ bn:
         locale: 'ভাষা'
         age: 'বয়স'
         gender: 'লিঙ্গ'
+        gender_student_input: 'লিঙ্গ'
+        gender_teacher_input: 'লিঙ্গ'
         edit_header: 'একাউন্ট বিস্তারিত সম্পাদনা করুন'
         finish_sign_up_header_error: 'অনুগ্রহ করে নিম্নের ত্রুটিগুলো সংশোধন করুন:'
         error:
