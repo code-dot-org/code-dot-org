@@ -5469,3 +5469,55 @@ ka:
               display_name: კურსის შემდგომი გამოკითხვა
           student_description: ეს განყოფილება არის სწრაფი გამოკვლევა იმისა, თუ როგორ ქმნიან კომპიუტერის მეცნიერები ალგორითმებს პრობლემების გადასაჭრელად და როგორ აანალიზებენ ისინი სხვადასხვა ალგორითმის სიჩქარეს. გაეცანით ალგორითმული ეფექტურობის კონცეფციას სხვადასხვა პრაქტიკული აქტივობების საშუალებით და გაიგეთ, თუ როგორ გამოიყენება იგი თანამედროვე გამოთვლებში.
           description_short: შეიმუშავეთ და გააანალიზეთ ალგორითმები იმის გასაგებად, თუ როგორ მუშაობს ისინი და რატომ ითვლება ზოგი სხვებზე უკეთ.
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: გამოკითხვა
+            lessonGroup-3:
+              display_name: შიგთავსი
+            lessonGroup-5:
+              display_name: ალტერნატიული გაკვეთილები
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+            lessonGroup-4:
+              display_name: ალტერნატიული გაკვეთილები
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+            lessonGroup-4:
+              display_name: ალტერნატიული გაკვეთილები
+        csa4-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+            lessonGroup-4:
+              display_name: ალტერნატიული გაკვეთილები
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+            lessonGroup-4:
+              display_name: ალტერნატიული გაკვეთილები
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+            lessonGroup-4:
+              display_name: ალტერნატიული გაკვეთილები
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+            lessonGroup-5:
+              display_name: ალტერნატიული გაკვეთილები
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+            lessonGroup-4:
+              display_name: გამოკითხვა
+            lessonGroup-5:
+              display_name: ალტერნატიული გაკვეთილები

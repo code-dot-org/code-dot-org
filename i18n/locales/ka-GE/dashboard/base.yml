@@ -51,6 +51,8 @@ ka:
         locale: 'ენა'
         age: 'ასაკი'
         gender: 'სქესი'
+        gender_student_input: 'სქესი'
+        gender_teacher_input: 'სქესი'
         edit_header: 'ანგარიშის მონაცემების შესწორება'
         finish_sign_up_header: 'დაასრულეთ თქვენი ანგარიშის შექმნა'
         finish_sign_up_header_error: 'თუ შეიძლება, შეასწორეთ შემდეგი შეცდომები:'

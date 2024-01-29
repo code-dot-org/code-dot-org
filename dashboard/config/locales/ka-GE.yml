@@ -18,6 +18,8 @@ ka:
         finish_sign_up_subheader_provider_markdown: შეავსეთ შემდეგი ინფორმაცია, რომ
           დაასრულოთ Code.org ანგარიშის შექმნა **%{provider}** **%{email}** -ისთვის.
         gender: სქესი
+        gender_student_input: სქესი
+        gender_teacher_input: სქესი
         locale: ენა
         name: სახელი სისტემაში
         name_example: გამოიყვანეთ სახელი (მაგ. მაგარი კოდერი ან ჯეინ ს.)
