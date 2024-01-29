@@ -1604,12 +1604,16 @@ he:
         text: x קואורדינטות של {SPRITE}
       gamelab_yLocationOf:
         text: y קואורדינטות של {SPRITE}
+      KatiesBlocks_changeVelocity:
+        text: שנה {PROPERTY} של {SPRITE} ב {VAL}
       KatiesBlocks_goldilocks:
         options:
           CONDITION:
             '"solid"': מוצק
             '"liquid"': נוזל
             '"gas"': גז
+      KatiesBlocks_setVelocity:
+        text: קבע {PROPERTY} של {SPRITE} ל {VAL}
       Mikelab_addBehaviorSimple:
         text: דמות {SPRITE} מתחילה {BEHAVIOR}
       Mikelab_addTrainingData:

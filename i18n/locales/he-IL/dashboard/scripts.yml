@@ -3040,6 +3040,7 @@ he:
             lesson-6:
               name: השלבים הבאים
           title: היכרות למדעי המחשב
+        music-intro-2024: {}
         csp1-2024:
           lesson_groups:
             cspSurvey:
@@ -3105,3 +3106,22 @@ he:
             lessonGroup-2:
               display_name: סקר שלאחר הקורס
         csp-post-survey-2024: {}
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר
+        csa2-2025: {}
+        csa3-2025: {}
+        csa4-2025: {}
+        csa5-2025: {}
+        csa6-2025: {}
+        csa7-2025: {}
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: סקר
+        csa9-2025: {}
+        csa-postap-se-and-computer-vision-2025: {}
+        aryanna-sandbox: {}
+        coding-with-ai: {}
+        pl-team-design-guide: {}

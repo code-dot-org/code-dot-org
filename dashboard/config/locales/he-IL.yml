@@ -20,6 +20,8 @@ he:
         finish_sign_up_subheader_provider_markdown: מלא את הפרטים הבאים על מנת לסיים
           ליצור חשבון Code.org עם **%{provider}** עבור **%{email}**.
         gender: מין
+        gender_student_input: מין
+        gender_teacher_input: מין
         locale: שפה
         name: שם תצוגה
         name_example: 'שם לתצוגה (לדוגמה: תכניתן מגניב או ישראל י.)'

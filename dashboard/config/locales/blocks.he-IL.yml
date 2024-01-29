@@ -1082,12 +1082,16 @@ he:
         text: תייצגו {NUM} חדשים{ANIMATION_NAME}שדונים [BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}תגידו{TEXT1}"
+      KatiesBlocks_changeVelocity:
+        text: שנה {PROPERTY} של {SPRITE} ב {VAL}
       KatiesBlocks_goldilocks:
         options:
           CONDITION:
             '"gas"': גז
             '"liquid"': נוזל
             '"solid"': מוצק
+      KatiesBlocks_setVelocity:
+        text: קבע {PROPERTY} של {SPRITE} ל {VAL}
       Mikelab_addBehaviorSimple:
         text: דמות {SPRITE} מתחילה {BEHAVIOR}
       Mikelab_addTrainingData:

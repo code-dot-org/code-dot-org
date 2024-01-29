@@ -51,6 +51,8 @@ he:
         locale: 'שפה'
         age: 'גיל'
         gender: 'מין'
+        gender_student_input: 'מין'
+        gender_teacher_input: 'מין'
         edit_header: 'שינוי פרטי החשבון'
         finish_sign_up_header: 'סיים ליצור את החשבון שלך'
         finish_sign_up_header_error: 'אנא תקן את השגיאות הבאות:'
