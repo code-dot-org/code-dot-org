@@ -304,7 +304,7 @@ fa:
             MOVES.ThisOrThat: دیس اور دت (رقص)
             MOVES.Rest: هیچکدام
       Dancelab_ifTime:
-        text: اگر {UNIT} ، [OP][N] است {DO1}{DO2}
+        text: اگر {UNIT} ، {OP} {N} است {DO1}{DO2}
         options:
           UNIT:
             '"measures"': اندازه‌ها
@@ -1042,6 +1042,8 @@ fa:
             '1': آب لیمو
             '3': جوش شیرین
             '5': هر دو
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         text: اجرای افکت {EFFECT}
         options:
@@ -1753,6 +1755,8 @@ fa:
         text: مختصات x مربوط به {SPRITE}
       gamelab_yLocationOf:
         text: مختصات y مربوط به {SPRITE}
+      KatiesBlocks_changeVelocity:
+        text: تغییر {SPRITE}{PROPERTY} به اندازه {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} آرام به {LOCATION} می‌رود"
       KatiesBlocks_goldilocks:
@@ -1761,6 +1765,8 @@ fa:
             '"solid"': جامد
             '"liquid"': مایع
             '"gas"': گاز
+      KatiesBlocks_setVelocity:
+        text: "{SPRITE}{PROPERTY} را روی {VAL} تنظیم کن"
       KatiesBlocks_tumbling:
         text: جست و خیز کردن
       Mikelab_addBehaviorSimple:

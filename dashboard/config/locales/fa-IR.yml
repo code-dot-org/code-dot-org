@@ -22,6 +22,8 @@ fa:
         finish_sign_up_subheader_provider_markdown: اطلاعات زیر را تکمیل کنید تا یک
           حساب Code.org با **%{provider}** برای **%{email}** ایجاد شود.
         gender: جنسیت
+        gender_student_input: جنسیت
+        gender_teacher_input: جنسیت
         locale: زبان
         name: نمایش نام
         name_example: نام نمایشی (به عنوان مثال Cool Coder یا Jane S.)

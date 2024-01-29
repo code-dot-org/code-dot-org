@@ -51,6 +51,8 @@ fa:
         locale: 'زبان'
         age: 'سن'
         gender: 'جنسیت'
+        gender_student_input: 'جنسیت'
+        gender_teacher_input: 'جنسیت'
         edit_header: 'ویرایش اطلاعات کاربری'
         ai_settings_header: 'تنظیمات هوش مصنوعی'
         finish_sign_up_header: 'ساخت حساب کاربری خود را تمام کنید'
