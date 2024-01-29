@@ -923,6 +923,10 @@
           COLOR:
             '"blue"': blå
             '"red"': rød
+      KatiesBlocks_changeVelocity:
+        text: endre {SPRITE} {PROPERTY} med {VAL}
+      KatiesBlocks_setVelocity:
+        text: sett {SPRITE} {PROPERTY} til {VAL}
       Mikelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       Mikelab_changePropBy:

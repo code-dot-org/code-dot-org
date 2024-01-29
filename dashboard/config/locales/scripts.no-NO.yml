@@ -627,6 +627,12 @@
               display_name: Undersøkelse
             lessonGroup-3:
               display_name: Innhold
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Undersøkelse
+            lessonGroup-3:
+              display_name: Innhold
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -664,6 +670,10 @@
           lesson_groups:
             lessonGroup-2:
               display_name: Innhold
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -695,6 +705,10 @@
           lesson_groups:
             lessonGroup-2:
               display_name: Innhold
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -720,6 +734,10 @@
             lessonGroup-2:
               display_name: Innhold
         csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
+        csa4-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhold
@@ -757,6 +775,10 @@
           lesson_groups:
             lessonGroup-2:
               display_name: Innhold
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -785,6 +807,10 @@
           lesson_groups:
             lessonGroup-2:
               display_name: Innhold
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -810,6 +836,10 @@
             lessonGroup-2:
               display_name: Innhold
         csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
+        csa7-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhold
@@ -846,6 +876,12 @@
             lessonGroup-4:
               display_name: Undersøkelse
         csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
+            lessonGroup-4:
+              display_name: Undersøkelse
+        csa8-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhold
