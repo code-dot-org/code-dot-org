@@ -16,6 +16,8 @@ zh-TW:
         finish_sign_up_subheader_provider: 填寫以下資料以使用 <strong>%{provider}</strong>為<strong>%{email}</strong>開設一個Code.org帳號。
         finish_sign_up_subheader_provider_markdown: 填寫以下資料，以 **%{provider}**的名義為 **%{email}**完成設立一個Code.org帳戶。
         gender: 性別
+        gender_student_input: 性別
+        gender_teacher_input: 性別
         locale: 語言
         name: 顯示名稱
         name_example: 顯示名稱 （例如 Cool Coder 或是 Jane S）

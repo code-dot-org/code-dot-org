@@ -1084,6 +1084,8 @@ zh-TW:
           INPUT1:
             '1': 檸檬汁
         text: 顯微鏡有{INPUT1}
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -1116,6 +1118,8 @@ zh-TW:
         text: 展現{NUM}個新{ANIMATION_NAME}精靈圖[BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}說{TEXT1}"
+      KatiesBlocks_changeVelocity:
+        text: 角色 {SPRITE} {PROPERTY} 改變 {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE}滑動到{LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1124,6 +1128,8 @@ zh-TW:
             '"gas"': 氣體
             '"liquid"': 液體
             '"solid"': 固體
+      KatiesBlocks_setVelocity:
+        text: 角色 {SPRITE} {PROPERTY} 設為 {VAL}
       KatiesBlocks_tumbling:
         text: 翻滾
       Mikelab_addBehaviorSimple:

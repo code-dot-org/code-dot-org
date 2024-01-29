@@ -51,6 +51,8 @@ zh-TW:
         locale: '語言'
         age: '年齡'
         gender: '性別'
+        gender_student_input: '性別'
+        gender_teacher_input: '性別'
         edit_header: '編輯帳戶資料'
         finish_sign_up_header: '已成功創建你的帳戶'
         finish_sign_up_header_error: '請修正下列錯誤：'
