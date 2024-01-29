@@ -1,10 +1,12 @@
-name: Custom Health Check
+name: Experimental Health Check
 
 on:
+  pull_request:
+    types: [opened, synchronize, reopened]
   workflow_dispatch:
     inputs:
       pullRequestNumber:
-        description: 'Pull Request Number'  # User inputs the PR ID here
+        description: 'Pull Request Number (for manual trigger)'
         required: true
         type: integer
 
@@ -12,46 +14,43 @@ jobs:
   health-check:
     runs-on: ubuntu-latest
     steps:
-    - name: Check PR Author
-      id: pr-check
-      uses: actions/github-script@v5
-      with:
-        script: |
-          const prNumber = ${{ github.event.inputs.pullRequestNumber }};
-          const pr = await github.rest.pulls.get({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            pull_number: prNumber
-          });
-          if (pr.data.user.login !== 'pablo-code-org') {
-            throw new Error('PR author is not pablo-code-org');
-          }
-          return pr.data.number;
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Determine PR Number
+      id: pr-info
+      run: |
+        echo "PR_NUMBER=${{ github.event.pull_request.number || github.event.inputs.pullRequestNumber }}" >> $GITHUB_ENV
+
+    - name: Verify PR Author
+      run: |
+        if [ "${{ github.event.pull_request.user.login }}" != "pablo-code-org" ]; then
+          echo "PR author is not pablo-code-org, skipping run."
+          exit 78
+        fi
 
     - name: Post Start Comment
-      if: steps.pr-check.outputs.pullRequestNumber
-      uses: actions/github-script@v5
-      with:
-        script: |
-          github.rest.issues.createComment({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            issue_number: ${{ steps.pr-check.outputs.pullRequestNumber }},
-            body: '🚀 Custom Health Check Started!'
-          });
+      run: |
+        pr_number=${{ env.PR_NUMBER }}
+        github_token=${{ secrets.GITHUB_TOKEN }}
+        curl \
+          -X POST \
+          -H "Authorization: token $github_token" \
+          -H "Accept: application/vnd.github.v3+json" \
+          "https://api.github.com/repos/${{ github.repository }}/issues/$pr_number/comments" \
+          -d '{"body":"🚀 Hi there! This is an experimental health check by GitHub Actions. It\'s part of a fun experiment, so feel free to ignore this message. 🎉"}'
 
     # Add your health check steps here
     # - name: Run Health Check
     #   run: ...
 
     - name: Post Completion Comment
-      if: steps.pr-check.outputs.pullRequestNumber
-      uses: actions/github-script@v5
-      with:
-        script: |
-          github.rest.issues.createComment({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            issue_number: ${{ steps.pr-check.outputs.pullRequestNumber }},
-            body: '✅ Custom Health Check Completed!'
-          });
+      run: |
+        pr_number=${{ env.PR_NUMBER }}
+        github_token=${{ secrets.GITHUB_TOKEN }}
+        curl \
+          -X POST \
+          -H "Authorization: token $github_token" \
+          -H "Accept: application/vnd.github.v3+json" \
+          "https://api.github.com/repos/${{ github.repository }}/issues/$pr_number/comments" \
+          -d '{"body":"✅ The experimental health check is now complete! Thanks for participating in this fun test. 🥳"}'
