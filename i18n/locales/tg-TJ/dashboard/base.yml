@@ -27,6 +27,8 @@ tg:
         current_password: 'Пароли ҷорӣ'
         locale: 'Забон'
         gender: 'Ҷинс'
+        gender_student_input: 'Ҷинс'
+        gender_teacher_input: 'Ҷинс'
         edit_header: 'Таҳрир кардани тафсилоти ҳисоб'
   hello: "Салом ҷаҳон"
   submit: Пешниҳод кардан
