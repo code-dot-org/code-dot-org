@@ -38,6 +38,8 @@ mi:
         locale: 'Reo'
         age: 'Pakeke'
         gender: 'Ira'
+        gender_student_input: 'Ira'
+        gender_teacher_input: 'Ira'
         edit_header: 'Whakatika Taipitopito Pūkete'
         finish_sign_up_header_error: 'Tēnā whakatikaina ngā hapa e haere ake nei:'
         error:

@@ -1426,3 +1426,35 @@ mi:
               display_name: Ngā Rārangi
             lessonGroup-3:
               display_name: Ngā Koromeke
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ihirangi
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa4-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi

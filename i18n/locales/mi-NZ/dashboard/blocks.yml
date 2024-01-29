@@ -1310,6 +1310,10 @@ mi:
             '"w"': w
             '"s"': s
             '"d"': d
+      KatiesBlocks_changeVelocity:
+        text: tinihia te {SPRITE} {PROPERTY} kia {VAL}
+      KatiesBlocks_setVelocity:
+        text: whakarite te {SPRITE} {PROPERTY} ki te {VAL}
       Mikelab_addBehaviorSimple:
         text: parehe {SPRITE} ka {BEHAVIOR}
       Mikelab_allSpritesWithAnimation:

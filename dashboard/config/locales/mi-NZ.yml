@@ -11,6 +11,8 @@ mi:
           future: tē āhei haere ake nei
         finish_sign_up_header_error: 'Tēnā whakatikaina ngā hapa e haere ake nei:'
         gender: Ira
+        gender_student_input: Ira
+        gender_teacher_input: Ira
         locale: Reo
         name: Ingoa Whakaatu
         password: Kupuhipa
