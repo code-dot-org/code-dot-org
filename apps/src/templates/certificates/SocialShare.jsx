@@ -9,13 +9,16 @@ export default class SocialShare extends Component {
   static propTypes = {
     facebook: PropTypes.string.isRequired,
     twitter: PropTypes.string.isRequired,
+    linkedin: PropTypes.string,
     print: PropTypes.string.isRequired,
     under13: PropTypes.bool,
+    isPlCourse: PropTypes.bool,
   };
 
   state = {
     isTwitterAvailable: false,
     isFacebookAvailable: false,
+    isLinkedinAvailable: false,
   };
 
   componentDidMount() {
@@ -27,15 +30,39 @@ export default class SocialShare extends Component {
       'https://twitter.com/favicon.ico' + '?' + Math.random(),
       () => this.setState({isTwitterAvailable: true})
     );
+    testImageAccess(
+      'https://linkedin.com/favicon.ico' + '?' + Math.random(),
+      () => this.setState({isLinkedinAvailable: true})
+    );
   }
 
   render() {
     const {under13} = this.props;
     const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?${this.props.facebook}`;
     const twitterShareUrl = `https://twitter.com/share?${this.props.twitter}`;
+    const linkedShareUrl = `https://www.linkedin.com/sharing/share-offsite/?${this.props.linkedin}`;
 
     return (
       <div>
+        {!under13 &&
+          this.props.isPlCourse &&
+          this.state.isLinkedinAvailable && (
+            <a
+              href={linkedShareUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={dashboard.popupWindow}
+            >
+              <button
+                type="button"
+                style={{background: color.linkedin_blue, ...styles.shareButton}}
+                onClick={e => e.preventDefault()}
+              >
+                <i className="fa fa-linkedin" />
+              </button>
+            </a>
+          )}
+
         {!under13 && this.state.isFacebookAvailable && (
           <a
             href={facebookShareUrl}

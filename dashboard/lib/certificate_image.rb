@@ -153,6 +153,16 @@ class CertificateImage
       # only need to fill in student name
       vertical_offset = course == '20-hour' ? -125 : -120
       image = create_certificate_image2(path, name, y: vertical_offset)
+    elsif template_file == 'self_paced_pl_certificate.png'
+      image = Magick::Image.read(path).first
+      apply_text(image, name, 75, 'Helvetica bold', 'rgb(118,101,160)', 0, -135, CERT_NAME_AREA_WIDTH, CERT_NAME_AREA_HEIGHT)
+      course_title_width = 1000
+      course_title_height = 60
+      apply_text(image, course_title, 47, 'Helvetica bold', 'rgb(29,173,186)', 0, 0, course_title_width, course_title_height)
+
+      course_version = CurriculumHelper.find_matching_course_version(course)
+      total_hours = (course_version.content_root.duration_in_minutes / 60).floor
+      apply_text(image, total_hours.to_s, 30, 'Times bold', 'rgb(87,87,87)', -245, 123, 60, 30)
     else # all other courses use a certificate image where the course name is also blank
       image = Magick::Image.read(path).first
       apply_text(image, name, 75, 'Helvetica bold', 'rgb(118,101,160)', 0, -135, CERT_NAME_AREA_WIDTH, CERT_NAME_AREA_HEIGHT)
@@ -191,11 +201,22 @@ class CertificateImage
     true
   end
 
+  def self.course_type(course_name)
+    return 'accelerated' if accelerated_course?(course_name)
+
+    course_version = CurriculumHelper.find_matching_course_version(course_name)
+    return 'hoc' if course_version&.hoc?
+    return 'pl' if course_version&.pl_course?
+    return 'other' if course_version
+    'hoc'
+  end
+
   def self.prefilled_title_course?(course)
-    certificate_template_for(course) != 'blank_certificate.png'
+    certificate_template_for(course) != 'blank_certificate.png' && certificate_template_for(course) != 'self_paced_pl_certificate.png'
   end
 
   def self.certificate_template_for(course)
+    course_type = course_type(course)
     if ScriptConstants.unit_in_category?(:minecraft, course)
       case course
       when ScriptConstants::MINECRAFT_HERO_NAME
@@ -221,8 +242,10 @@ class CertificateImage
       # The 20-hour course is referred to as "accelerated" throughout the
       # congrats and certificate pages (see csf_finish_url).
       '20hours_certificate.jpg'
-    elsif hoc_course?(course)
+    elsif course_type == 'hoc'
       'hour_of_code_certificate.jpg'
+    elsif course_type == 'pl'
+      'self_paced_pl_certificate.png'
     else
       'blank_certificate.png'
     end

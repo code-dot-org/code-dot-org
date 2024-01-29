@@ -114,6 +114,7 @@ function Certificate(props) {
     children,
     initialCertificateImageUrl,
     isHocTutorial,
+    isPlCourse,
   } = props;
 
   const personalizedCertificate = getCertificateImagePath();
@@ -138,6 +139,10 @@ function Certificate(props) {
     text: randomDonorTwitter
       ? i18n.justDidHourOfCodeDonor({donor_twitter: randomDonorTwitter})
       : i18n.justDidHourOfCode(),
+  });
+
+  const linkedin = queryString.stringify({
+    url: externalCertificateShareLink,
   });
 
   const print = getPrintPath();
@@ -210,8 +215,10 @@ function Certificate(props) {
           <SocialShare
             facebook={facebook}
             twitter={twitter}
+            linkedin={linkedin}
             print={print}
             under13={under13}
+            isPlCourse={isPlCourse}
           />
         </div>
       </div>
@@ -230,6 +237,7 @@ Certificate.propTypes = {
   children: PropTypes.node,
   initialCertificateImageUrl: PropTypes.string.isRequired,
   isHocTutorial: PropTypes.bool,
+  isPlCourse: PropTypes.bool,
 };
 
 export default connect(state => ({
