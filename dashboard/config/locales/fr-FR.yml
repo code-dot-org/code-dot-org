@@ -23,6 +23,8 @@ fr:
         finish_sign_up_subheader_provider_markdown: Remplissez les informations suivantes
           pour compléter la création d'un Code.org avec **%{provider}** de **%{email}**.
         gender: Sexe
+        gender_student_input: Sexe
+        gender_teacher_input: Sexe
         locale: Langue
         name: Nom à afficher
         name_example: Afficher le nom (par ex. SuperCodeur ou Jeanne S.)

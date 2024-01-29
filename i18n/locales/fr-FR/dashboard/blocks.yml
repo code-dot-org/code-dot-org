@@ -1096,6 +1096,8 @@ fr:
         options:
           INPUT1:
             '1': Jus de citron
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         text: Appliquer {EFFECT} effet
         options:
@@ -1777,6 +1779,8 @@ fr:
         text: coordonnées x de {SPRITE}
       gamelab_yLocationOf:
         text: coordonnées y de {SPRITE}
+      KatiesBlocks_changeVelocity:
+        text: changer {SPRITE} {PROPERTY} par {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} glisser vers {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1788,6 +1792,8 @@ fr:
             '"solid"': Solide
             '"liquid"': Liquide
             '"gas"': gaz
+      KatiesBlocks_setVelocity:
+        text: fixer {PROPERTY} de {SPRITE} à {VAL}
       KatiesBlocks_tumbling:
         text: culbute
       Mikelab_addBehaviorSimple:

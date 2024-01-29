@@ -1097,6 +1097,8 @@ fr:
           INPUT1:
             '1': Jus de citron
         text: Le microscope a{INPUT1}
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -1129,6 +1131,8 @@ fr:
         text: représente {NUM} nouveaux {ANIMATION_NAME} sprites [BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}dit{TEXT1}"
+      KatiesBlocks_changeVelocity:
+        text: changer {SPRITE} {PROPERTY} par {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} glisser vers {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1140,6 +1144,8 @@ fr:
         text: |2-
            si {CONDITION}{SPRITE}
           {STATEMENT}
+      KatiesBlocks_setVelocity:
+        text: fixer {PROPERTY} de {SPRITE} à {VAL}
       KatiesBlocks_tumbling:
         text: culbute
       Mikelab_addBehaviorSimple:
