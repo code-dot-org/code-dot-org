@@ -38,6 +38,8 @@ bs:
         locale: 'Jezik'
         age: 'Starost'
         gender: 'Spol'
+        gender_student_input: 'Spol'
+        gender_teacher_input: 'Spol'
         edit_header: 'Preuredi Detalje Računa'
         finish_sign_up_header_error: 'Ispravi ove greške:'
         error:

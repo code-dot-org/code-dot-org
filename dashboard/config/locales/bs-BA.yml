@@ -11,6 +11,8 @@ bs:
           future: ne može biti u budućnosti
         finish_sign_up_header_error: 'Ispravi ove greške:'
         gender: Spol
+        gender_student_input: Spol
+        gender_teacher_input: Spol
         locale: Jezik
         name: Ime za Prikaz
         password: Šifra

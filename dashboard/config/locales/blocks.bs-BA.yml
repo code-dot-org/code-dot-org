@@ -900,6 +900,10 @@ bs:
           COLOR:
             '"blue"': plava
             '"red"': crvena
+      KatiesBlocks_changeVelocity:
+        text: izmjeni {SPRITE} {PROPERTY} za {VAL}
+      KatiesBlocks_setVelocity:
+        text: podesi {SPRITE} {PROPERTY} na{VAL}
       Mikelab_changePropBy:
         options:
           PROPERTY:
