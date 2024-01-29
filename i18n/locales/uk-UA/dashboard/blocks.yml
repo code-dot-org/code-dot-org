@@ -1676,6 +1676,8 @@ uk:
         text: x координата {SPRITE}
       gamelab_yLocationOf:
         text: y координата {SPRITE}
+      KatiesBlocks_changeVelocity:
+        text: змінити {SPRITE} {PROPERTY} на {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} ковзати до {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1687,6 +1689,8 @@ uk:
             '"solid"': твердий
             '"liquid"': рідкий
             '"gas"': газ
+      KatiesBlocks_setVelocity:
+        text: встановити {SPRITE} властивість {PROPERTY} у значення {VAL}
       KatiesBlocks_spriteBirdSay:
         text: "{SPRITE} говорить {SPEECH}"
       KatiesBlocks_tumbling:

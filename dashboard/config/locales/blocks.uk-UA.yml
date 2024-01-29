@@ -1099,6 +1099,8 @@ uk:
         text: "[testing] представляти {NUM} нових {ANIMATION_NAME} спрайтів"
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE} говорить {TEXT1}"
+      KatiesBlocks_changeVelocity:
+        text: змінити {SPRITE} {PROPERTY} на {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} ковзати до {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1110,6 +1112,8 @@ uk:
         text: |-
           якщо {CONDITION}{SPRITE}
           {STATEMENT}
+      KatiesBlocks_setVelocity:
+        text: встановити {SPRITE} властивість {PROPERTY} у значення {VAL}
       KatiesBlocks_spriteBirdSay:
         text: "{SPRITE} говорить {SPEECH}"
       KatiesBlocks_tumbling:

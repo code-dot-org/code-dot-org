@@ -51,6 +51,8 @@ uk:
         locale: 'Мова'
         age: 'Вік'
         gender: 'Стать'
+        gender_student_input: 'Стать'
+        gender_teacher_input: 'Стать'
         edit_header: 'Редагувати дані облікового запису'
         finish_sign_up_header: 'Завершіть створення облікового запису'
         finish_sign_up_header_error: 'Виправ ці помилки:'

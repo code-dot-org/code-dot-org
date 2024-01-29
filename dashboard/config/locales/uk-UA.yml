@@ -21,6 +21,8 @@ uk:
           для завершення створення облікового запису в Code.org з **%{provider}**
           **%{email}**.
         gender: Стать
+        gender_student_input: Стать
+        gender_teacher_input: Стать
         locale: Мова
         name: Ім'я користувача
         name_example: Псевдонім (наприклад, Крутий Кодер або Джейн С.)

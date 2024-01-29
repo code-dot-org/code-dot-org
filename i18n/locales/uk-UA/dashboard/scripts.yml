@@ -4535,3 +4535,41 @@ uk:
               display_name: Опитування після закінчення курсу
         csp-post-survey-2024:
           description: Цей розділ містить опитування після завершення курсу Принципи інформатики CS Principles.
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Опитування
+            lessonGroup-3:
+              display_name: Зміст
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa4-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+            lessonGroup-4:
+              display_name: Опитування
+        csa-postap-se-and-computer-vision-2025:
+          title: Програмна інженерія та комп'ютерний зір
