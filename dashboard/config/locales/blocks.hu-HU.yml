@@ -1074,6 +1074,8 @@ hu:
         text: ábrázolj {NUM} új {ANIMATION_NAME} sprite-ot [BEHAVIOR][2] viselkedéssel
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE} mondja: {TEXT1}"
+      KatiesBlocks_changeVelocity:
+        text: 'módosítás: {SPRITE} {PROPERTY} ennyivel: {VAL}'
       KatiesBlocks_glideTo:
         text: "{SPRITE}[0] siklik ide {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1082,6 +1084,8 @@ hu:
             '"gas"': gáznemű
             '"liquid"': folyékony
             '"solid"': szilárd
+      KatiesBlocks_setVelocity:
+        text: "{SPRITE} {PROPERTY} tulajdonságának beállítása: {VAL}"
       KatiesBlocks_tumbling:
         text: bukdácsoló
       Mikelab_addBehaviorSimple:

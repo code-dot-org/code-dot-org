@@ -21,6 +21,8 @@ hu:
         finish_sign_up_subheader_provider_markdown: Töltsd ki az alábbi adatokat a
           Code.org felhasználó fiókod befejezéséhez **%{provider}****%{email}**.
         gender: Nem
+        gender_student_input: Nem
+        gender_teacher_input: Nem
         locale: Nyelv
         name: Megjelenítendő név
         name_example: Megjelenítendő név (pl. Menő Kódoló)

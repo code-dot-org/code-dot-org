@@ -51,6 +51,8 @@ hu:
         locale: 'Nyelv'
         age: 'Kor'
         gender: 'Nem'
+        gender_student_input: 'Nem'
+        gender_teacher_input: 'Nem'
         edit_header: 'Felhasználói adatok szerkesztése'
         ai_settings_header: 'AI beállítások'
         finish_sign_up_header: 'A profilod létrehozásának befejezése'

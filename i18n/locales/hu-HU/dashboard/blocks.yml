@@ -1714,6 +1714,8 @@ hu:
         text: "{SPRITE} x koordinátája"
       gamelab_yLocationOf:
         text: "{SPRITE} y koordinátája"
+      KatiesBlocks_changeVelocity:
+        text: 'módosítás: {SPRITE} {PROPERTY} ennyivel: {VAL}'
       KatiesBlocks_glideTo:
         text: "{SPRITE}[0] siklik ide {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1722,6 +1724,8 @@ hu:
             '"solid"': szilárd
             '"liquid"': folyékony
             '"gas"': gáznemű
+      KatiesBlocks_setVelocity:
+        text: "{SPRITE} {PROPERTY} tulajdonságának beállítása: {VAL}"
       KatiesBlocks_tumbling:
         text: bukdácsoló
       Mikelab_addBehaviorSimple:

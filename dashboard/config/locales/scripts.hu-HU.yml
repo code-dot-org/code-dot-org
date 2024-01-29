@@ -1032,6 +1032,12 @@ hu:
               display_name: Kérdőív
             lessonGroup-3:
               display_name: Tartalom
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kérdőív
+            lessonGroup-3:
+              display_name: Tartalom
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1074,6 +1080,10 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1110,6 +1120,10 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1140,6 +1154,10 @@ hu:
             lessonGroup-2:
               display_name: Tartalom
         csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa4-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
@@ -1182,6 +1200,10 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1218,6 +1240,10 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1249,6 +1275,10 @@ hu:
             lessonGroup-2:
               display_name: Tartalom
         csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa7-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
@@ -1291,6 +1321,12 @@ hu:
             lessonGroup-4:
               display_name: Kérdőív
         csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-4:
+              display_name: Kérdőív
+        csa8-2025:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
