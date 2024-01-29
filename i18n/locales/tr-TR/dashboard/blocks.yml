@@ -1116,6 +1116,8 @@ tr:
             '1': limon suyu
             '3': kabartma tozu
             '5': her ikisi
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         text: "{EFFECT} efekti yap"
         options:
@@ -1841,6 +1843,8 @@ tr:
         text: "{SPRITE} 'ın x koordinatı"
       gamelab_yLocationOf:
         text: "{SPRITE} 'ın y koordinatı "
+      KatiesBlocks_changeVelocity:
+        text: "{SPRITE} {PROPERTY}’i {VAL} ile değiştir"
       KatiesBlocks_glideTo:
         text: "{SPRITE}, {LOCATION} konumuna süzülür"
       KatiesBlocks_goldilocks:
@@ -1854,6 +1858,8 @@ tr:
             '"gas"': gaz
       KatiesBlocks_makeNumSpritesNear:
         text: "{LOCATION} yakınında {NUM} yeni {ANIMATION_NAME} karakter yap"
+      KatiesBlocks_setVelocity:
+        text: "{SPRITE} {PROPERTY}’i {VAL} olarak ayarla "
       KatiesBlocks_spriteBirdSay:
         text: "{SPRITE}, {SPEECH} der"
         options:

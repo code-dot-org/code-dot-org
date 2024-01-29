@@ -51,6 +51,8 @@ tr:
         locale: 'Dil'
         age: 'Yaş'
         gender: 'Cinsiyet'
+        gender_student_input: 'Cinsiyet'
+        gender_teacher_input: 'Cinsiyet'
         edit_header: 'Hesap Bilgilerini Düzenle'
         ai_settings_header: 'Yapay Zeka Ayarları'
         finish_sign_up_header: 'Hesabınızı oluşturmayı bitirin'

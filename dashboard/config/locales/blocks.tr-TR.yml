@@ -1118,6 +1118,8 @@ tr:
             '3': kabartma tozu
             '5': her ikisi
         text: Mikroskopta {INPUT1} var
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -1175,6 +1177,8 @@ tr:
         text: "[test], {NUM} yeni {ANIMATION_NAME} hareketli nesneyi temsil ediyor"
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}, {TEXT1} der"
+      KatiesBlocks_changeVelocity:
+        text: "{SPRITE} {PROPERTY}’i {VAL} ile değiştir"
       KatiesBlocks_glideTo:
         text: "{SPRITE}, {LOCATION} konumuna süzülür"
       KatiesBlocks_goldilocks:
@@ -1188,6 +1192,8 @@ tr:
           {STATEMENT}
       KatiesBlocks_makeNumSpritesNear:
         text: "{LOCATION} yakınında {NUM} yeni {ANIMATION_NAME} karakter yap"
+      KatiesBlocks_setVelocity:
+        text: "{SPRITE} {PROPERTY}’i {VAL} olarak ayarla "
       KatiesBlocks_spriteBirdSay:
         options:
           SPEECH:

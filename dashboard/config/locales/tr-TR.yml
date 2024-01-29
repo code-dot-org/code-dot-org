@@ -23,6 +23,8 @@ tr:
           ile bir Code.org hesabı oluşturmayı tamamlamak için aşağıdaki bilgileri
           doldurun."
         gender: Cinsiyet
+        gender_student_input: Cinsiyet
+        gender_teacher_input: Cinsiyet
         locale: Dil
         name: Görünen İsim
         name_example: Görünen Ad (örneğin Cool Coder veya Jane S.)
