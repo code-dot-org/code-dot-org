@@ -22,6 +22,8 @@ nl:
           om het aanmaken van een Code.org-account met **%{provider}** voor **%{email}**
           te voltooien.
         gender: Geslacht
+        gender_student_input: Geslacht
+        gender_teacher_input: Geslacht
         locale: Taal
         name: Weergavenaam
         name_example: Weergavenaam (bv. Stoere Coder of Emma S.)

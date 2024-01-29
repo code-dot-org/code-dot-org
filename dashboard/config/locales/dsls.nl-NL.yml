@@ -6803,14 +6803,15 @@ nl-NL:
         - feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
           text: Niets. De functie wordt niet aangeroepen in het programma.
         - feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
-          text: De artiest zal een enkel vierkant tekenen.
-        - feedback: Fout. De zijde van elk vierkant is maar 100 pixels lang, maar
-            de artiest maakt een sprong van 175 pixels tussen de functie-aanroepen.
-          text: De artiest zal twee vierkanten tekenen die over elkaar heen vallen.
+          text: De kunstenaar zal één vierkant tekenen.
+        - feedback: Onjuist. De zijden van elk vierkant zijn maar 100 pixels lang,
+            maar de kunstenaar springt 175 pixels tussen de functie-aanroepen.
+          text: De kunstenaar zal twee vierkanten tekenen die overlappen.
         - correct: true
           feedback: Goed! De functie wordt twee keer aangeropen in het programma,
             met een sprong er tussen in.
-          text: De artiest zal twee vierkanten tekenen met wat lege ruimte er tussen.
+          text: De kunstenaar zal twee vierkanten tekenen met een kleine opening er
+            tussen.
         questions:
         - text: Wat zal er gebeuren als je op 'Start' drukt?
       courseE_swim_fish_behavior_predict12022:
@@ -13991,7 +13992,7 @@ nl-NL:
         - {}
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
-            op `start` klikt?
+            op "Start" klikt?
       will-be-myself-in-cs:
         answers:
         - correct: true

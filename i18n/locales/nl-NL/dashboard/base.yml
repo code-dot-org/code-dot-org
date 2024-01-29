@@ -51,6 +51,8 @@ nl:
         locale: 'Taal'
         age: 'Leeftijd'
         gender: 'Geslacht'
+        gender_student_input: 'Geslacht'
+        gender_teacher_input: 'Geslacht'
         edit_header: 'Accountdetails bewerken'
         finish_sign_up_header: 'Voltooi het maken van je account'
         finish_sign_up_header_error: 'Corrigeer de volgende fouten:'

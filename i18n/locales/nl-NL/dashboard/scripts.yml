@@ -3258,3 +3258,39 @@ nl:
               display_name: Parameters en Returnwaardes
             csp_libraries:
               display_name: Bibliotheken
+        csa1-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vragenlijst
+            lessonGroup-3:
+              display_name: Content
+        csa2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa4-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa5-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa7-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa8-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-4:
+              display_name: Vragenlijst

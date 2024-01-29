@@ -1040,8 +1040,12 @@ nl:
           OPT:
             '"large"': groot
             '"small"': klein
+      KatiesBlocks_changeVelocity:
+        text: wijzig {SPRITE} {PROPERTY} met {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} glijdt naar {LOCATION}"
+      KatiesBlocks_setVelocity:
+        text: set {SPRITE} {PROPERTY} tot {VAL}
       KatiesBlocks_tumbling:
         text: tuimelen
       Mikelab_addBehaviorSimple:
