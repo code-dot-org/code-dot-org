@@ -11,7 +11,6 @@ export default function RubricTabButtons({
   tabSelectCallback,
   selectedTab,
   showSettings,
-
   canProvideFeedback,
   teacherHasEnabledAi,
   studentUserId,
@@ -96,7 +95,6 @@ RubricTabButtons.propTypes = {
   tabSelectCallback: PropTypes.func,
   selectedTab: PropTypes.string,
   showSettings: PropTypes.bool,
-
   canProvideFeedback: PropTypes.bool,
   teacherHasEnabledAi: PropTypes.bool,
   updateTeacherAiSetting: PropTypes.func,

@@ -4068,4 +4068,10 @@ a {
   }
 }
 
+#instructions {
+  .clickable-text {
+    cursor: pointer;
+  }
+}
+
 @import "NpsSurveyBlock";

@@ -1,7 +1,7 @@
 {
   "abuseDetail": "Ju lutemi jepni detaje lidhur me përmbajtjen ju jeni duke raportuar",
   "abuseFormDetail": "Ju lutemi jepni sa më shumë detaje të jetë e mundur në lidhje me përmbajtjen që ju jeni duke raportuar.",
-  "abuseFormAcknowledge": "Duke dërguar këtë informacion, ju pranoni se keteo informacione do të trajtohen në përputhje me kushtet e  [Rregullave të privatësisë]{privacy_url}  dhe  [Kushtet e Shërbimit] {tos_url}).",
+  "abuseFormAcknowledge": "Duke dërguar këtë informacion, ju pranoni se këto informacione do të trajtohen në përputhje me kushtet e  [Rregullave të privatësisë]{privacy_url}  dhe  [Kushtet e Shërbimit] {tos_url}).",
   "abuseType": "Ju lutemi përgjigjuni se si kjo përmbajtje shkel Kushtet e Shërbimit",
   "abuseTypeHarassment": "Kërcënimet, bullizmi në internet, ngacmimi",
   "abuseTypeInfringement": "Shkelja e së Drejtës së Autorit",

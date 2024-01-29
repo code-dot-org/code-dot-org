@@ -14,16 +14,49 @@
   overflow-y: hidden;
   display: flex;
   flex-direction: row;
+
+  &Loading {
+    overflow-x: hidden;
+  }
+
+  .expandedColumn:first-child {
+    margin-inline-start: 0;
+  }
+  .expandedColumn:last-child {
+    margin-inline-end: 0;
+  }
 }
 
 .gridBox {
-  height: 47px;
   border-top: 1px solid $light_gray_200;
   border-left: 1px solid $light_gray_200;
-  line-height: 47px;
 
   &Student {
+    height: 47px;
+    line-height: 47px;
     padding-left: 12px;
+  }
+
+  &Lesson {
+    text-align: center;
+    min-width: 80px;
+    max-width: 80px;  
+    height: 47px;
+    line-height: 47px;
+  }
+
+  &Skeleton {
+    vertical-align: middle;
+  }
+  
+  &Level {
+    min-width: 52px;
+    max-width: 52px;  
+    text-align: center;
+    height: 47px;
+    line-height: 47px;
+    // remove overflow after data icons are added
+    overflow-x: hidden;
   }
 }
 
@@ -52,6 +85,97 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+  }
+}
+
+.lesson {
+  &Column {
+    display: flex;
+    flex-direction: column;
+    margin-right: -1px;
+  }
+
+  &HeaderCell {
+    height: 42px;
+    line-height: 42px;
+    min-width: 80px;
+    border-bottom: 1px solid $light_gray_200;
+    border-right: 1px solid $light_gray_200;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  
+  &HeaderCaret {
+    margin-inline-end: 12px;
+  }
+
+  &SkeletonHeaderCell {
+    width: 75%;
+    vertical-align: middle;
+  }
+
+  &SkeletonCell {
+    width: 1em;
+    border-radius: 100%;
+    vertical-align: middle;
+  }
+
+  &DataColumn {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $light_gray_200;
+    border-right: 1px solid $light_gray_200;
+  }
+}
+
+.expanded {
+  &Header {
+    min-width: 80px;
+
+    &LessonCell {
+      height: 42px;
+      line-height: 42px;
+      min-width: 80px;
+      border-bottom: 1px solid $light_gray_200;
+      border-right: 1px solid $light_gray_200;
+    }
+
+    &SecondRow {
+      display: flex;
+      flex-direction: row;
+      width: fit-content;
+      border-right: 1px solid $light_gray_200;
+    }
+
+    &LevelCell {
+      min-width: 52px;
+      text-align: center;
+      height: 32px;
+      line-height: 32px;
+      border-top: 0;
+    }
+  }
+  &Column {
+    // This is one more to compensate for the -1px margin-right on the lesson column
+    margin-left: 9px;
+    margin-right: 8px;
+  }
+
+  &Column + &Column {
+    margin-left: 0;
+  }
+
+  &Table {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid $light_gray_200;
+    border-right: 1px solid $light_gray_200;
+    width: fit-content;
+  }
+
+  &LevelColumn {
+    display: flex;
+    flex-direction: column;
   }
 }
 
