@@ -917,12 +917,16 @@ te:
           వహించండి"
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}చెప్పండి{TEXT1}"
+      KatiesBlocks_changeVelocity:
+        text: మార్చండి {SPRITE} {PROPERTY} దీనితో {VAL}
       KatiesBlocks_goldilocks:
         options:
           CONDITION:
             '"gas"': వాయువు
             '"liquid"': ద్రవము
             '"solid"': ఘనపదార్థం
+      KatiesBlocks_setVelocity:
+        text: సెట్ చేయండి {SPRITE} {PROPERTY} ని {VAL} కు
       Mikelab_addTrainingData:
         options:
           LOCATION:

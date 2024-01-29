@@ -51,6 +51,8 @@ te:
         locale: 'భాష'
         age: 'వయస్సు'
         gender: 'లింగం'
+        gender_student_input: 'లింగం'
+        gender_teacher_input: 'లింగం'
         edit_header: 'ఖాతా వివరాలను సవరించండి'
         finish_sign_up_header: 'మీ ఖాతాను సృష్టించడం ముగించండి'
         finish_sign_up_header_error: "\nదయచేసి క్రింది లోపాలను సరిచేయండి:"

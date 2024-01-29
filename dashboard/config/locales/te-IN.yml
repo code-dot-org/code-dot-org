@@ -26,6 +26,8 @@ te:
 
           కోడ్.ఆర్గ్ ఖాతాను సృష్టించడం పూర్తి చేయడానికి కింది సమాచారాన్ని పూరించండి **%{provider}** కోసం **%{email}**.
         gender: లింగం
+        gender_student_input: లింగం
+        gender_teacher_input: లింగం
         locale: భాష
         name: ప్రదర్శన పేరు
         name_example: |2-

@@ -1204,12 +1204,16 @@ te:
             '"w"': w
             '"s"': s
             '"d"': d
+      KatiesBlocks_changeVelocity:
+        text: మార్చండి {SPRITE} {PROPERTY} దీనితో {VAL}
       KatiesBlocks_goldilocks:
         options:
           CONDITION:
             '"solid"': ఘనపదార్థం
             '"liquid"': ద్రవము
             '"gas"': వాయువు
+      KatiesBlocks_setVelocity:
+        text: సెట్ చేయండి {SPRITE} {PROPERTY} ని {VAL} కు
       Mikelab_addTrainingData:
         options:
           NAME:
