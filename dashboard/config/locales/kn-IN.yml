@@ -22,6 +22,8 @@ kn:
           ನೊಂದಿಗೆ Code.org ಖಾತೆಯನ್ನು ರಚಿಸುವುದನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಕೆಳಗಿನ ಮಾಹಿತಿಯನ್ನು
           ಭರ್ತಿ ಮಾಡಿ."
         gender: ಲಿಂಗ
+        gender_student_input: ಲಿಂಗ
+        gender_teacher_input: ಲಿಂಗ
         locale: ಭಾಷೆ
         name: ಪ್ರದರ್ಶನ ಹೆಸರು
         name_example: ಪ್ರದರ್ಶನ ಹೆಸರು (ಉದಾ. ಕೂಲ್ ಕೋಡರ್ ಅಥವಾ ಜೇನ್ ಎಸ್.)

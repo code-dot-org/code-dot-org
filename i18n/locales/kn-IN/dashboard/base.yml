@@ -51,6 +51,8 @@ kn:
         locale: 'ಭಾಷೆ'
         age: 'ವಯಸ್ಸು'
         gender: 'ಲಿಂಗ'
+        gender_student_input: 'ಲಿಂಗ'
+        gender_teacher_input: 'ಲಿಂಗ'
         edit_header: 'ಖಾತೆಯ ವಿವರಗಳನ್ನು ಸಂಪಾದಿಸಿ'
         finish_sign_up_header: 'ನಿಮ್ಮ ಖಾತೆಯನ್ನು ರಚಿಸುವುದನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ'
         finish_sign_up_header_error: 'ದಯವಿಟ್ಟು ಕೆಳಗಿನ ದೋಷಗಳನ್ನು ಸರಿಪಡಿಸಿ:'

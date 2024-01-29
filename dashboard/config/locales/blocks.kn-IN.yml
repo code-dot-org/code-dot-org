@@ -364,6 +364,8 @@ kn:
             '"gas"': ಅನಿಲ
             '"liquid"': ಲಿಕ್ವಿಡ್
             '"solid"': ಸಾಲಿಡ್
+      KatiesBlocks_setVelocity:
+        text: "{SPRITE} {PROPERTY} ಅನ್ನು {VAL} ಗೆ ನಿಗದಿಸಿ"
       KatiesBlocks_tumbling:
         text: ಟಂಬ್ಲಿಂಗ್
       Mikelab_addBehaviorSimple:
