@@ -986,6 +986,8 @@ mr:
           करा"
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}म्हणा{TEXT1}"
+      KatiesBlocks_changeVelocity:
+        text: change {SPRITE} {PROPERTY} by {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} {LOCATION} कडे सरकणे"
       KatiesBlocks_goldilocks:
@@ -994,6 +996,8 @@ mr:
             '"gas"': गॅस
             '"liquid"': तरल
             '"solid"': ठोस
+      KatiesBlocks_setVelocity:
+        text: set {SPRITE} {PROPERTY} to {VAL}
       KatiesBlocks_tumbling:
         text: टंबलिंग
       Mikelab_addBehaviorSimple:

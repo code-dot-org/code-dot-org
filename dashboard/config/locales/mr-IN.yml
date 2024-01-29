@@ -20,6 +20,8 @@ mr:
         finish_sign_up_subheader_provider_markdown: "**%{email}** साठी **%{provider}**
           सह Code.org खाते तयार करणे पूर्ण करण्यासाठी खालील माहिती भरा."
         gender: 'लिंग '
+        gender_student_input: 'लिंग '
+        gender_teacher_input: 'लिंग '
         locale: भाषा
         name: डिस्प्ले नाव
         name_example: डिस्प्ले नाव (उदा. कूल कोडर किंवा जेन एस.)

@@ -1624,6 +1624,8 @@ mr:
         text: "{SPRITE} चे x समन्वयक"
       gamelab_yLocationOf:
         text: "{SPRITE} चे y समन्वयक"
+      KatiesBlocks_changeVelocity:
+        text: change {SPRITE} {PROPERTY} by {VAL}
       KatiesBlocks_glideTo:
         text: "{SPRITE} {LOCATION} कडे सरकणे"
       KatiesBlocks_goldilocks:
@@ -1632,6 +1634,8 @@ mr:
             '"solid"': ठोस
             '"liquid"': तरल
             '"gas"': गॅस
+      KatiesBlocks_setVelocity:
+        text: set {SPRITE} {PROPERTY} to {VAL}
       KatiesBlocks_tumbling:
         text: टंबलिंग
       Mikelab_addBehaviorSimple:

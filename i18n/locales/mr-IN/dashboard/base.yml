@@ -51,6 +51,8 @@ mr:
         locale: 'भाषा'
         age: 'वय'
         gender: 'लिंग '
+        gender_student_input: 'लिंग '
+        gender_teacher_input: 'लिंग '
         edit_header: 'खात्याचा तपशील संपादित करा'
         finish_sign_up_header: 'तुमचे खाते तयार करणे पूर्ण करा'
         finish_sign_up_header_error: 'कृपया खालील त्रुटी सुधारा:'
