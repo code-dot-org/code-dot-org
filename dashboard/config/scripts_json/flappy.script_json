@@ -64,7 +64,7 @@
     },
     "new_name": null,
     "family_name": "flappy",
-    "serialized_at": "2023-07-03 04:40:25 UTC",
+    "serialized_at": "2024-01-29 16:38:02 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -951,6 +951,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }
