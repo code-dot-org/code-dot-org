@@ -26,6 +26,15 @@
           ]
         }
       },
+      "sounds": {
+        "beats": [
+          "drum_kit_disco",
+          "drum_beat_edm",
+          "drum_beat_club",
+          "drum_beat_knock",
+          "drum_kit_pop"
+        ]
+      },
       "toolbox": {
         "blocks": {
           "Play": [
