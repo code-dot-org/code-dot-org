@@ -66,8 +66,6 @@ export const askAITutor = createAsyncThunk(
       ChatContext.tutorType
     );
 
-    console.log('chatApiResponse', chatApiResponse);
-
     thunkAPI.dispatch(addAIResponse(chatApiResponse?.content));
     const prompt = ChatContext.systemPrompt + ChatContext.studentCode;
 

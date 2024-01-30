@@ -1,6 +1,4 @@
 export async function savePromptAndResponse(interactionData) {
-  console.log('savePromptAndResponse was called');
-
   // Checking that the csrf-token exists since it is disabled on test
   const csrfToken = document.querySelector('meta[name="csrf-token"]')
     ? document.querySelector('meta[name="csrf-token"]').attributes['content']
