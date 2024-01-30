@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
-import {evidenceLevelShape} from './rubricShapes';
+import {aiEvaluationShape, evidenceLevelShape} from './rubricShapes';
 import {
   BodyThreeText,
   BodyFourText,
@@ -20,7 +20,20 @@ export default function EvidenceLevelsForTeachersV2({
   radioButtonCallback,
   canProvideFeedback,
   isAutosaving,
+  aiEvalInfo,
 }) {
+  const passFail = useMemo(() => {
+    if (!!aiEvalInfo) {
+      if (aiEvalInfo.understanding > 1) {
+        console.log('pass');
+        return [2, 3];
+      } else if (aiEvalInfo.understanding >= 0) {
+        console.log('fail');
+        return [0, 1];
+      }
+    } else return [];
+  }, [aiEvalInfo]);
+
   if (canProvideFeedback) {
     return (
       <div>
@@ -28,12 +41,15 @@ export default function EvidenceLevelsForTeachersV2({
         <div className={style.evidenceLevelSetHorizontal}>
           {evidenceLevels.reverse().map(evidenceLevel => (
             <button
+              disabled={isAutosaving}
               type="button"
               key={evidenceLevel.id}
               onClick={() => radioButtonCallback(evidenceLevel.understanding)}
               className={
                 understanding === evidenceLevel.understanding
                   ? style.evidenceLevelSelected
+                  : passFail.includes(evidenceLevel.understanding)
+                  ? style.aiEvalSuggestion
                   : style.evidenceLevelUnselected
               }
             >
@@ -75,4 +91,5 @@ EvidenceLevelsForTeachersV2.propTypes = {
   radioButtonCallback: PropTypes.func,
   canProvideFeedback: PropTypes.bool,
   isAutosaving: PropTypes.bool,
+  aiEvalInfo: aiEvaluationShape,
 };

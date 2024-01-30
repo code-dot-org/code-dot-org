@@ -332,23 +332,10 @@ export default function LearningGoals({
 
       {/*TODO: Pass through data to child component*/}
       <div>
-        {teacherHasEnabledAi &&
-          !!studentLevelInfo &&
-          !!aiEvalInfo &&
-          aiEvalInfo.understanding !== undefined && (
-            <div className={style.openedAiAssessment}>
-              <AiAssessment
-                isAiAssessed={learningGoals[currentLearningGoal].aiEnabled}
-                studentName={studentLevelInfo.name}
-                aiConfidence={aiEvalInfo.ai_confidence}
-                aiUnderstandingLevel={aiEvalInfo.understanding}
-                aiEvalInfo={aiEvalInfo}
-              />
-            </div>
-          )}
         <div className={style.learningGoalExpanded}>
           {!!submittedEvaluation && renderSubmittedFeedbackTextbox()}
           <EvidenceLevels
+            aiEvalInfo={aiEvalInfo}
             learningGoalKey={learningGoals[currentLearningGoal].key}
             evidenceLevels={learningGoals[currentLearningGoal].evidenceLevels}
             canProvideFeedback={canProvideFeedback}
@@ -358,6 +345,20 @@ export default function LearningGoals({
             isStudent={isStudent}
             isAutosaving={autosaveStatus === STATUS.IN_PROGRESS}
           />
+          {teacherHasEnabledAi &&
+            !!studentLevelInfo &&
+            !!aiEvalInfo &&
+            aiEvalInfo.understanding !== undefined && (
+              <div className={style.openedAiAssessment}>
+                <AiAssessment
+                  isAiAssessed={learningGoals[currentLearningGoal].aiEnabled}
+                  studentName={studentLevelInfo.name}
+                  aiConfidence={aiEvalInfo.ai_confidence}
+                  aiUnderstandingLevel={aiEvalInfo.understanding}
+                  aiEvalInfo={aiEvalInfo}
+                />
+              </div>
+            )}
           {learningGoals[currentLearningGoal].tips && !isStudent && (
             <details>
               <summary>
