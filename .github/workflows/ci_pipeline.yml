@@ -36,9 +36,10 @@ jobs:
           REVIEWERS=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
                         https://api.github.com/repos/code-dot-org/code-dot-org/pulls/$PR_ID/reviewers)
           if [[ $REVIEWERS == *"infrastructure"* ]]; then
-            echo "has_infrastructure_reviewer=true" >> $GITHUB_ENV
+              echo "has_infrastructure_reviewer=true" >> $GITHUB_ENV
           else
-            echo "has_infrastructure_reviewer=false" >> $GITHUB_ENV
+              echo "has_infrastructure_reviewer=false" >> $GITHUB_ENV
+          fi
 
   build-and-test:
     needs: check-reviewers
