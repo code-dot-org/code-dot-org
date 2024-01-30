@@ -9,7 +9,7 @@
 .careers__banner--faq {
   align-items: center;
   background: url("/images/careers-at-code/jobs-banner.jpg") top right/contain
-    no-repeat #00adbc;
+    no-repeat var(--brand_primary_default);
   display: flex;
   margin-bottom: 32px;
   padding: 18px 24px;
@@ -226,7 +226,7 @@ ul li:before {
 
 @media screen and (max-width: 560px) {
   .careers__banner--faq {
-    background: #00adbc;
+    background: var(--brand_primary_default);
   }
 
   .careers__banner--faq h2,

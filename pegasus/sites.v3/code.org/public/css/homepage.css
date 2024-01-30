@@ -141,7 +141,7 @@ body.modal-open .supreme-container{
   font-weight: var(--semi-bold-font-weight) !important;
   font-size: 44px;
   line-height: 44px;
-  color: #00ADBC;
+  color: var(--brand_primary_default);
   margin-top: 0px;
   margin-bottom: 20px;
 }
