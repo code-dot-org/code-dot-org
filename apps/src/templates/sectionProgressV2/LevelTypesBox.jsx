@@ -1,6 +1,7 @@
 import React from 'react';
 import i18n from '@cdo/locale';
-import LegendItem, {ITEM_TYPE} from './LegendItem';
+import LegendItem from './LegendItem';
+import {ITEM_TYPE} from './ItemType';
 import styles from './progress-table-legend.module.scss';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
 
