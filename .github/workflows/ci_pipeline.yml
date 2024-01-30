@@ -54,8 +54,12 @@ jobs:
       - name: Prepare entrypoint script
         run: cp ./code-dot-org/docker/dockerfiles/entrypoint.sh ./code-dot-org/
 
-      - name: Set up Docker Environment
-        run: docker build -t code-dot-org-testing-docker-image -f ./code-dot-org/docker/dockerfiles/Dockerfile ./code-dot-org
+      - name: Set up Docker Environment with Caching
+        run: |
+          docker build \
+            --cache-from=type=registry,ref=code-dot-org-testing-docker-image \
+            -t code-dot-org-testing-docker-image \
+            -f ./code-dot-org/docker/dockerfiles/Dockerfile ./code-dot-org
 
       - name: Debugging Directories and Files in Docker as User CircleCI
         run: |        
