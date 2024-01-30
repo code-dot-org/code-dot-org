@@ -29,9 +29,6 @@ export enum Status {
   INAPPROPRIATE = 'inappropriate',
   OK = 'ok',
   UNKNOWN = 'unknown',
-  EMAIL = 'email',
-  ADDRESS = 'address',
-  PHONE = 'phone',
 }
 
 export enum TutorTypes {
