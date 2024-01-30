@@ -43,6 +43,7 @@ export default class CoreLibrary {
       pass: 90,
       successFrame: 0,
     };
+    this.variables = [{name: 'a'}];
 
     this.commands = {
       executeDrawLoopAndCallbacks() {
@@ -50,6 +51,7 @@ export default class CoreLibrary {
         this.runBehaviors();
         this.runEvents();
         this.p5.drawSprites();
+        this.drawVariableDisplays();
         this.drawSpeechBubbles();
         if (this.screenText.title || this.screenText.subtitle) {
           commands.drawTitle.apply(this);
@@ -86,6 +88,37 @@ export default class CoreLibrary {
       this.background.resize(400, 400);
       this.p5.image(this.background);
     }
+  }
+
+  drawVariableDisplays() {
+    if (!!this.variableDisplays.length) {
+      return;
+    }
+
+    this.variables.forEach(variable => {
+      const {name} = variable;
+      this.drawVariableDisplay(150, 200, `${name}: 999`);
+    });
+  }
+
+  drawVariableDisplay(x, y, text) {
+    console.log('drawing variable displays');
+    const padding = 10;
+    const textSizeValue = 20; // Size of the text
+    const textWidth = drawUtils.getTextWidth(this.p5, text, textSizeValue);
+    const textWidthValue = textWidth + 2 * padding; // Calculate width based on text
+    const textHeightValue = textSizeValue + 2 * padding;
+
+    // Calculate height based on text size and padding
+    drawUtils.variableBubble(
+      this.p5,
+      x,
+      y,
+      textWidthValue,
+      textHeightValue,
+      textSizeValue,
+      text
+    );
   }
 
   drawSpeechBubbles() {

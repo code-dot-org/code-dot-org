@@ -22,7 +22,6 @@ import {toggleGridOverlay} from './actions';
 import GridOverlay from './gamelab/GridOverlay';
 import TextConsole from './spritelab/TextConsole';
 import SpritelabInput from './spritelab/SpritelabInput';
-import VariableDisplay from './spritelab/VariableDisplay';
 import {
   cancelLocationSelection,
   selectLocation,
@@ -188,7 +187,6 @@ class P5LabVisualizationColumn extends React.Component {
               <TooltipOverlay
                 providers={[coordinatesProvider(isSpritelab, isRtl)]}
               />
-              <VariableDisplay showWhileRunning={true} />
             </VisualizationOverlay>
           </ProtectedVisualizationDiv>
           <TextConsole consoleMessages={this.props.consoleMessages} />
