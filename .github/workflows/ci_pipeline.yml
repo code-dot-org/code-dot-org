@@ -50,41 +50,31 @@ jobs:
         with:
           path: code-dot-org
 
-      - name: Find and Cache Stale Files
-        id: stalefiles
-        run: |
-          find code-dot-org -type f -not -path './.git/*' -mtime +730 > stale_files.txt
-          echo "::set-output name=stale_hash::$(sha256sum stale_files.txt | cut -d ' ' -f1)"
-
-      - name: Cache stale files
-        uses: actions/cache@v2
-        with:
-          path: |
-            $(cat stale_files.txt)
-          key: ${{ runner.os }}-stale-${{ steps.stalefiles.outputs.stale_hash }}
-
       - name: Set up Docker Environment
         run: docker build -t code-dot-org-testing-docker-image -f ./code-dot-org/docker/dockerfiles/Dockerfile ./code-dot-org
 
       - name: Debugging Directories and Files in Docker
         run: |
-          echo "Debugging / Directory"
-          docker run code-dot-org-testing-docker-image /bin/bash -c "ls -la /"
+      - name: Debugging Directories and Files in Docker as User CircleCI
+        run: |
+          echo "Debugging / Directory as circleci"
+          docker run --user circleci code-dot-org-testing-docker-image /bin/bash -c "ls -la /"
           
-          echo "Debugging /home Directory"
-          docker run code-dot-org-testing-docker-image /bin/bash -c "ls -la /home"
+          echo "Debugging /home Directory as circleci"
+          docker run --user circleci code-dot-org-testing-docker-image /bin/bash -c "ls -la /home"
           
-          echo "Debugging /circleci Directory"
-          docker run --entrypoint /bin/bash code-dot-org-testing-docker-image -c "ls -la /circleci || mkdir -p /circleci && ls -la /circleci"
+          echo "Debugging /circleci Directory as circleci"
+          docker run --user circleci --entrypoint /bin/bash code-dot-org-testing-docker-image -c "ls -la /circleci"
           
-          echo "Debugging deeper into /circleci"
-          docker run code-dot-org-testing-docker-image /bin/bash -c "ls -laR /circleci"
+          echo "Debugging deeper into /circleci as circleci"
+          docker run --user circleci code-dot-org-testing-docker-image /bin/bash -c "ls -laR /circleci"
           
-          echo "Searching for ui_tests.sh in /circleci"
-          docker run code-dot-org-testing-docker-image /bin/bash -c "find /circleci -type f -name 'ui_tests.sh' 2>/dev/null"
+          echo "Searching for ui_tests.sh in /circleci as circleci"
+          docker run --user circleci code-dot-org-testing-docker-image /bin/bash -c "find /circleci -type f -name 'ui_tests.sh' 2>/dev/null"
           
-          echo "Displaying Environment Variables"
-          docker run code-dot-org-testing-docker-image /bin/bash -c "printenv"
+          echo "Displaying Environment Variables as circleci"
+          docker run --user circleci code-dot-org-testing-docker-image /bin/bash -c "printenv"
+
 
       - name: Update Cache
         uses: actions/cache@v2
