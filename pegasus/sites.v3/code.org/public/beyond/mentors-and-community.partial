@@ -11,7 +11,7 @@ social:
   "twitter:title": "CS Journeys Resources: Mentorship and community"
   "twitter:description": "Find support and guidance on your CS Journey"
   "twitter:image": "/images/csjourneys/og-mentorships.jpg"
----  
+---
 <a id="top"></a>
 <h1><a href="/csjourneys" target="_blank"><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px"/></a><br/>Mentorships and Community</h1>
 <p>Mentors and communities can support you on your CS Journey in a number of ways — they can provide guidance and support, and connect you to opportunities and resources like networking events, internship and job opportunities, and professional development.</p>
@@ -29,10 +29,10 @@ social:
 
 
 <a id="native-students"></a>
-<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+<div class="col-100" style="padding:25px; background-color: var(--brand_primary_default); border-radius:15px 15px 0 0">
   <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">For Native American students</h2>
 </div>
-<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<div class="col-100" style="padding:25px; border: 1px solid var(--brand_primary_default); border-radius:0 0 15px 15px; border-top:none">
 <a class="linktag" id="aises" href="https://www.aises.org/students" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/aises.png" alt="AISES logo">
 </a>
@@ -69,10 +69,10 @@ social:
 <div style="clear:both; margin-bottom:35px"></div>
 
 <a id="black-students"></a>
-<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+<div class="col-100" style="padding:25px; background-color: var(--brand_primary_default); border-radius:15px 15px 0 0">
   <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">For Black students</h2>
 </div>
-<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<div class="col-100" style="padding:25px; border: 1px solid var(--brand_primary_default); border-radius:0 0 15px 15px; border-top:none">
 <a class="linktag" id="nsbe" href="https://www.nsbe.org/membership/nsbe-jr-membership" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/nsbe.png" alt="NSBE logo">
 </a>
@@ -98,10 +98,10 @@ social:
 <div style="clear:both; margin-bottom:35px"></div>
 
 <a id="hispanic-latino-students"></a>
-<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+<div class="col-100" style="padding:25px; background-color: var(--brand_primary_default); border-radius:15px 15px 0 0">
   <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">For Hispanic / Latino/a/x students</h2>
 </div>
-<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<div class="col-100" style="padding:25px; border: 1px solid var(--brand_primary_default); border-radius:0 0 15px 15px; border-top:none">
 <a class="linktag" id="shpe" href="https://shpe.org/" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/shpe.png" alt="SHPE logo">
 </a>
@@ -127,10 +127,10 @@ social:
 <div style="clear:both; margin-bottom:35px"></div>
 
 <a id="youngwomen"></a>
-<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+<div class="col-100" style="padding:25px; background-color: var(--brand_primary_default); border-radius:15px 15px 0 0">
   <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">For young women</h2>
 </div>
-<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<div class="col-100" style="padding:25px; border: 1px solid var(--brand_primary_default); border-radius:0 0 15px 15px; border-top:none">
 <a class="linktag" id="girlswhocode-loops" href="https://girlswhocode.com/college-loops" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/girls_who_code.png" alt="Girls Who Code logo">
 </a>
@@ -178,10 +178,10 @@ social:
 <div style="clear:both; margin-bottom:35px"></div>
 
 <a id="students-with-disabilities"></a>
-<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+<div class="col-100" style="padding:25px; background-color: var(--brand_primary_default); border-radius:15px 15px 0 0">
   <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">For students with disabilities</h2>
 </div>
-<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<div class="col-100" style="padding:25px; border: 1px solid var(--brand_primary_default); border-radius:0 0 15px 15px; border-top:none">
 <a class="linktag" id="accesscomputingteam" href="https://www.washington.edu/accesscomputing/accesscomputing-team-application" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/accesscomputing.png" alt="AccessComputing logo">
 </a>
@@ -196,10 +196,10 @@ social:
 <div style="clear:both; margin-bottom:35px"></div>
 
 <a id="allstudents"></a>
-<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+<div class="col-100" style="padding:25px; background-color: var(--brand_primary_default); border-radius:15px 15px 0 0">
   <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">For all students</h2>
 </div>
-<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<div class="col-100" style="padding:25px; border: 1px solid var(--brand_primary_default); border-radius:0 0 15px 15px; border-top:none">
 
 <a class="linktag" id="acm" href="https://www.acm.org/membership/membership-benefits" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/association_for_computing_machinery.png" alt="ACM logo">
