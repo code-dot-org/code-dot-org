@@ -1,13 +1,13 @@
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../../util/deprecatedChai';
 import sinon from 'sinon';
 import React from 'react';
 import {mount} from 'enzyme';
 import AutocompleteSelector from '@cdo/apps/templates/watchers/AutocompleteSelector';
-import {allowConsoleWarnings} from '../../util/testUtils';
+import {allowConsoleWarnings} from '../../../util/testUtils';
 
 describe('AutocompleteSelector', () => {
-  // TODO: (madelynkasula) Silences componentWillReceiveProps deprecation warning due to React 16 upgrade.
-  // This warning should be addressed after we've upgraded React.
+  // // TODO: (madelynkasula) Silences componentWillReceiveProps deprecation warning due to React 16 upgrade.
+  // // This warning should be addressed after we've upgraded React.
   allowConsoleWarnings();
 
   let component, componentInstance, clicked, mousedOver, clickOutside;
