@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "background": "music-black",
-    "long_instructions": "#### Play together\n\nThis code currently plays a bass sound after a drum sound.\n\nBut you can also play them together at the same time.\n\nConnect [play together](#clickable=play-sounds-together-block) to [when run](#clickable=when-run-block).\n\nThen, move the two [play](#clickable=play-sound-block-workspace) blocks _into_ the [play together](#clickable=play-sounds-together-block-workspace) block.",
+    "long_instructions": "#### Play Together\n\nThis code currently plays a bass sound after a drum sound.\n\nBut you can also play them together at the same time.\n\nConnect [play together](#clickable=play-sounds-together-block) to [when run](#clickable=when-run-block).\n\nThen, move the two [play](#clickable=play-sound-block-workspace) blocks _into_ the [play together](#clickable=play-sounds-together-block-workspace) block.",
     "level_data": {
       "library": "will",
       "startSources": {
@@ -60,7 +60,7 @@
           "conditions": [
             {"name": "played_sounds_together", "value": 2}
           ],
-          "message": "Nice work.",
+          "message": "Nice work.  You successfully played two sounds together.",
           "next": "true"
         },
         {
