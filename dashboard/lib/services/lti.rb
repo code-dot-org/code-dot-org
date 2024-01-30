@@ -55,7 +55,7 @@ class Services::Lti
     )
   end
 
-  def self.create_deployment(integration_id, deployment_id)
+  def self.create_lti_deployment(integration_id, deployment_id)
     LtiDeployment.create(
       lti_integration_id: integration_id,
       deployment_id: deployment_id,

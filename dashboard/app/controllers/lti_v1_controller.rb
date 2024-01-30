@@ -124,7 +124,7 @@ class LtiV1Controller < ApplicationController
       deployment_id = decoded_jwt[Policies::Lti::LTI_DEPLOYMENT_ID_CLAIM]
       deployment = Queries::Lti.get_deployment(integration.id, deployment_id)
       if deployment.nil?
-        deployment = Services::Lti.create_deployment(integration.id, deployment_id)
+        deployment = Services::Lti.create_lti_deployment(integration.id, deployment_id)
       end
       redirect_params = {
         lti_integration_id: integration.id,
