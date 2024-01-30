@@ -296,7 +296,7 @@ export const InfoAlert = ({text, dismissable}) => {
 
   return (
     <div
-      className={classnames({
+      className={classnames('uitest-info-alert', {
         [style.infoAlert]: !closed,
         [style.infoAlertClosed]: !!closed,
       })}
