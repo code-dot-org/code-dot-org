@@ -58,7 +58,11 @@ jobs:
 
       - name: Set up Docker Environment
         run: docker build -t code-dot-org-testing-docker-image -f ./code-dot-org/docker/dockerfiles/Dockerfile ./code-dot-org
-
+      - name: Find ui_tests.sh file
+        run: |
+          docker run \
+            code-dot-org-testing-docker-image \
+            /bin/bash -c "find / -type f -name 'ui_tests.sh' 2>/dev/null"
       - name: Run ls Unit Tests without working dir
         run: |
           docker run \
