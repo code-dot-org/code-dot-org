@@ -33,7 +33,7 @@ jobs:
       - name: Checkout Repository at Branch
         uses: actions/checkout@v2
         with:
-          ref: ${{ steps.get_branch.outputs.branch_name }}
+          ref: ${{ env.BRANCH_NAME }}
           path: code-dot-org
           repository: code-dot-org/code-dot-org
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -45,25 +45,27 @@ jobs:
       - name: Set up Docker Environment
         run: docker build -t code-dot-org-testing-docker-image -f ./code-dot-org/docker/dockerfiles/Dockerfile ./code-dot-org
 
-      - name: Aggressive Debugging of Docker Container
-        run: |
-          echo "Debugging / Directory"
-          docker run code-dot-org-testing-docker-image /bin/bash -c "ls -la /"
+      - name: Adjust Permissions for /circleci Directory
+        run: docker run code-dot-org-testing-docker-image /bin/bash -c "sudo chmod -R 755 /circleci"
 
-          echo "Debugging /home Directory"
-          docker run code-dot-org-testing-docker-image /bin/bash -c "ls -la /home"
+      # Your existing debugging steps
+      - name: Debugging / Directory
+        run: docker run code-dot-org-testing-docker-image /bin/bash -c "ls -la /"
 
-          echo "Debugging /circleci Directory"
-          docker run --entrypoint /bin/bash code-dot-org-testing-docker-image -c "ls -la /circleci || mkdir -p /circleci && ls -la /circleci"
+      - name: Debugging /home Directory
+        run: docker run code-dot-org-testing-docker-image /bin/bash -c "ls -la /home"
 
-          echo "Debugging deeper into /circleci"
-          docker run code-dot-org-testing-docker-image /bin/bash -c "ls -laR /circleci"
+      - name: Debugging /circleci Directory
+        run: docker run code-dot-org-testing-docker-image /bin/bash -c "ls -la /circleci"
 
-          echo "Searching for ui_tests.sh in /circleci"
-          docker run code-dot-org-testing-docker-image /bin/bash -c "find /circleci -type f -name 'ui_tests.sh' 2>/dev/null"
+      - name: Debugging deeper into /circleci
+        run: docker run code-dot-org-testing-docker-image /bin/bash -c "ls -laR /circleci"
 
-          echo "Displaying Environment Variables"
-          docker run code-dot-org-testing-docker-image /bin/bash -c "printenv"
+      - name: Searching for ui_tests.sh in /circleci
+        run: docker run code-dot-org-testing-docker-image /bin/bash -c "find /circleci -type f -name 'ui_tests.sh' 2>/dev/null"
+
+      - name: Displaying Environment Variables
+        run: docker run code-dot-org-testing-docker-image /bin/bash -c "printenv"
 
       - name: Update Cache
         uses: actions/cache@v2
