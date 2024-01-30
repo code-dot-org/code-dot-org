@@ -75,4 +75,8 @@ class Dancelab < GamelabJr
       [name, song['id']]
     end
   end
+
+  def validated?
+    properties['validation_code'].present? || properties['free_play'] == 'false'
+  end
 end

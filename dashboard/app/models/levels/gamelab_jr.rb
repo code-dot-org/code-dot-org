@@ -187,6 +187,10 @@ class GamelabJr < Gamelab
     false
   end
 
+  def validated?
+    properties['validation_code'].present? || properties['free_play'] == 'false'
+  end
+
   SAMPLE_VALIDATION_FUNCTIONS = {
     template:
 'if (World.frameCount == 1) {

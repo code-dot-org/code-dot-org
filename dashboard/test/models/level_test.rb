@@ -591,6 +591,9 @@ class LevelTest < ActiveSupport::TestCase
     refute_includes(levels, level_with_ideal_level_source_already)
     refute_includes(levels, freeplay_artist)
     assert_includes(levels, regular_artist)
+
+    assert freeplay_artist.validated?
+    refute regular_artist.validated?
   end
 
   test 'calculate_ideal_level_source_id does nothing if no level sources' do

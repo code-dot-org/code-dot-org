@@ -104,4 +104,8 @@ class Flappy < Blockly
       <block type="flappy_setScore"></block>
     XML
   end
+
+  def validated?
+    properties['success_condition'].present? || properties['free_play'] == 'false'
+  end
 end
