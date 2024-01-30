@@ -650,4 +650,8 @@ module SharedConstants
   # can be tested using query params (?manifest=...), but once this value is updated
   # the default manifest will change for all users.
   DANCE_SONG_MANIFEST_FILENAME = 'songManifest2024_v1.json'
+
+  # We should always specify a version for the LLM so the results don't unexpectedly change.
+  # reference: https://platform.openai.com/docs/models/gpt-3-5
+  AI_TUTOR_CHAT_MODEL_VERISON = 'gpt-3.5-turbo-1106'
 end
