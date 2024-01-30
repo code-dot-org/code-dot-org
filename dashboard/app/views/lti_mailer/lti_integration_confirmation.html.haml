@@ -1,7 +1,7 @@
 %p
-  = t('lti.integration.mailer_confirmation_body').html_safe
+  != t('lti.integration.mailer_confirmation_body', integration_guide_url: CDO.studio_url('/'), course_offering_url: CDO.studio_url('/'), markdown: true)
 %br
 %p
-  = t('lti.integration.mailer_confirmation_signature').html_safe
+  = t('lti.integration.mailer_confirmation_signature')
 %p
   Code.org
