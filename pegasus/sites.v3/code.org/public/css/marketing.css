@@ -60,7 +60,7 @@ figure img{
 .bch0 {background-color:#5b6770;color:#ffffff}
 .bch1 {background-color:#949ca2;color:#ffffff}
 
-.bt0 {background-color:#00adbc; color:#ffffff}
+.bt0 {background-color:var(--brand_primary_default); color:#ffffff}
 
 .bc0 {background-color:#0094ca; color:#ffffff}
 
