@@ -34,6 +34,7 @@ class Services::Lti
   end
 
   def self.create_lti_integration(
+    name:,
     client_id:,
     issuer:,
     platform_name:,
@@ -43,6 +44,7 @@ class Services::Lti
     admin_email:
     )
     LtiIntegration.create!(
+      name: name,
       client_id: client_id,
       issuer: issuer,
       platform_name: platform_name,
