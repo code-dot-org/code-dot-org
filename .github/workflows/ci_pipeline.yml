@@ -45,28 +45,26 @@ jobs:
       - name: Set up Docker Environment
         run: docker build -t code-dot-org-testing-docker-image -f ./code-dot-org/docker/dockerfiles/Dockerfile ./code-dot-org
 
-      - name: Aggressive Debugging of Docker Container
+       - name: Aggressive Debugging of Docker Container
         run: |
-          echo "Debugging Root Directory"
+          echo "Debugging / Directory"
           docker run code-dot-org-testing-docker-image /bin/bash -c "ls -la /"
-          
-          echo "Debugging Home Directory"
+      
+          echo "Debugging /home Directory"
           docker run code-dot-org-testing-docker-image /bin/bash -c "ls -la /home"
-          
-          echo "Debugging Code-dot-org Directory"
-          docker run code-dot-org-testing-docker-image /bin/bash -c "ls -la /home/code-dot-org"
-          
-          echo "Debugging Docker Directory"
-          docker run code-dot-org-testing-docker-image /bin/bash -c "ls -la /home/code-dot-org/docker"
-          
-          echo "Debugging Docker Files Directory"
-          docker run code-dot-org-testing-docker-image /bin/bash -c "ls -la /home/code-dot-org/docker/dockerfiles"
-
-          echo "Searching for ui_tests.sh in Entire Filesystem"
-          docker run code-dot-org-testing-docker-image /bin/bash -c "find / -type f -name 'ui_tests.sh' 2>/dev/null"
-
+      
+          echo "Debugging /circleci Directory"
+          docker run code-dot-org-testing-docker-image /bin/bash -c "ls -la /circleci"
+      
+          echo "Debugging deeper into /circleci"
+          docker run code-dot-org-testing-docker-image /bin/bash -c "ls -laR /circleci"
+      
+          echo "Searching for ui_tests.sh in /circleci"
+          docker run code-dot-org-testing-docker-image /bin/bash -c "find /circleci -type f -name 'ui_tests.sh' 2>/dev/null"
+      
           echo "Displaying Environment Variables"
           docker run code-dot-org-testing-docker-image /bin/bash -c "printenv"
+
 
       - name: Update Cache
         uses: actions/cache@v2
