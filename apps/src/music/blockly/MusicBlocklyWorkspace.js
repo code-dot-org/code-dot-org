@@ -75,6 +75,11 @@ export default class MusicBlocklyWorkspace {
     });
   }
 
+  destroy() {
+    this.workspace.dispose();
+    this.workspace = null;
+  }
+
   resizeBlockly() {
     if (!this.workspace) {
       return;
