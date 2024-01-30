@@ -120,9 +120,9 @@ end
 def get_mysql_version
   raw_version = DB.fetch('SELECT VERSION()').first[:'VERSION()']
   case raw_version
-  when /^8.0.\d+-.*$/
+  when /^8.0.\d+/
     8.0
-  when /^5.7.\d+-.*$/
+  when /^5.7.\d+/
     5.7
   else
     raise "cannot parse MySQL version #{raw_version.inspect}"
