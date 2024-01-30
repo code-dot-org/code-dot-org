@@ -29,7 +29,12 @@ export enum Status {
   INAPPROPRIATE = 'inappropriate',
   OK = 'ok',
   UNKNOWN = 'unknown',
+  EMAIL = 'email',
+  ADDRESS = 'address',
+  PHONE = 'phone',
 }
+
+export const PII = [Status.EMAIL, Status.ADDRESS, Status.PHONE];
 
 export enum TutorTypes {
   COMPILATION = 'compilation',
