@@ -2686,6 +2686,10 @@ nl:
             delen.
           title: Express-cursus
         express-2019:
+          description: Leer informatica door de onderstaande lessen in je eigen tempo
+            uit te proberen. Leer hoe je computerprogramma's maakt en problemen oplost
+            door leuke uitdagingen aan te gaan. Maak games en creatieve projecten
+            die je met vrienden, familie en leerkrachten kunt delen.
           description_audience: 'Leeftijden: 9-18'
           lesson_groups:
             csf_conditionals:
@@ -2702,8 +2706,16 @@ nl:
               display_name: Variabelen
             csf_warmup:
               display_name: Opwarming
+          student_description: Leer informatica door de onderstaande lessen in je
+            eigen tempo uit te proberen. Leer hoe je computerprogramma's maakt en
+            problemen oplost door leuke uitdagingen aan te gaan. Maak games en creatieve
+            projecten die je met vrienden, familie en leerkrachten kunt delen.
           title: Express-cursus (2019)
         express-2020:
+          description: Leer informatica door de onderstaande lessen in je eigen tempo
+            uit te proberen. Leer hoe je computerprogramma's maakt en problemen oplost
+            door leuke uitdagingen aan te gaan. Maak games en creatieve projecten
+            die je met vrienden, familie en leerkrachten kunt delen.
           description_audience: 'Leeftijden: 9-18'
           lesson_groups:
             csf_conditionals:
@@ -2722,8 +2734,16 @@ nl:
               display_name: Opwarming
             end_of_course_project:
               display_name: Project aan het einde van de cursus
+          student_description: Leer informatica door de onderstaande lessen in je
+            eigen tempo uit te proberen. Leer hoe je computerprogramma's maakt en
+            problemen oplost door leuke uitdagingen aan te gaan. Maak games en creatieve
+            projecten die je met vrienden, familie en leerkrachten kunt delen.
           title: Express-cursus (2020)
         express-2021:
+          description: Leer informatica door de onderstaande lessen in je eigen tempo
+            uit te proberen. Leer hoe je computerprogramma's maakt en problemen oplost
+            door leuke uitdagingen aan te gaan. Maak games en creatieve projecten
+            die je met vrienden, familie en leerkrachten kunt delen.
           description_audience: 'Leeftijden: 9-18'
           lesson_groups:
             csf_conditionals:
@@ -2744,7 +2764,15 @@ nl:
               display_name: Project aan het einde van de cursus
             lessonGroup-9:
               display_name: Gebeurtenissen
+          student_description: Leer informatica door de onderstaande lessen in je
+            eigen tempo uit te proberen. Leer hoe je computerprogramma's maakt en
+            problemen oplost door leuke uitdagingen aan te gaan. Maak games en creatieve
+            projecten die je met vrienden, familie en leerkrachten kunt delen.
         express-2022:
+          description: Leer informatica door de onderstaande lessen in je eigen tempo
+            uit te proberen. Leer hoe je computerprogramma's maakt en problemen oplost
+            door leuke uitdagingen aan te gaan. Maak games en creatieve projecten
+            die je met vrienden, familie en leerkrachten kunt delen.
           description_audience: 'Leeftijden: 9-18'
           lesson_groups:
             csf_conditionals:
@@ -2763,7 +2791,15 @@ nl:
               display_name: Project aan het einde van de cursus
             lessonGroup-9:
               display_name: Gebeurtenissen
+          student_description: Leer informatica door de onderstaande lessen in je
+            eigen tempo uit te proberen. Leer hoe je computerprogramma's maakt en
+            problemen oplost door leuke uitdagingen aan te gaan. Maak games en creatieve
+            projecten die je met vrienden, familie en leerkrachten kunt delen.
         express-2023:
+          description: Leer informatica door de onderstaande lessen in je eigen tempo
+            uit te proberen. Leer hoe je computerprogramma's maakt en problemen oplost
+            door leuke uitdagingen aan te gaan. Maak games en creatieve projecten
+            die je met vrienden, familie en leerkrachten kunt delen.
           description_audience: 'Leeftijden: 9-18'
           lesson_groups:
             csf_conditionals:
@@ -2782,6 +2818,10 @@ nl:
               display_name: Project aan het einde van de cursus
             lessonGroup-9:
               display_name: Gebeurtenissen
+          student_description: Leer informatica door de onderstaande lessen in je
+            eigen tempo uit te proberen. Leer hoe je computerprogramma's maakt en
+            problemen oplost door leuke uitdagingen aan te gaan. Maak games en creatieve
+            projecten die je met vrienden, familie en leerkrachten kunt delen.
         fit-test:
           lesson_groups:
             content:
@@ -3223,40 +3263,80 @@ nl:
             Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
             delen.
         pre-express-2019:
+          description: Leer informatica door de onderstaande lessen in je eigen tempo
+            uit te proberen. Leer hoe je computerprogramma's maakt en problemen oplost
+            door leuke uitdagingen aan te gaan. Maak games en creatieve projecten
+            die je met vrienden, familie en leerkrachten kunt delen.
           description_audience: 'Leeftijden: 4-8'
           lesson_groups:
             csf_events:
               display_name: Gebeurtenissen
             csf_loops:
               display_name: Lussen
+          student_description: Leer informatica door de onderstaande lessen in je
+            eigen tempo uit te proberen. Leer hoe je computerprogramma's maakt en
+            problemen oplost door leuke uitdagingen aan te gaan. Maak games en creatieve
+            projecten die je met vrienden, familie en leerkrachten kunt delen.
         pre-express-2020:
+          description: Leer informatica door de onderstaande lessen in je eigen tempo
+            uit te proberen. Leer hoe je computerprogramma's maakt en problemen oplost
+            door leuke uitdagingen aan te gaan. Maak games en creatieve projecten
+            die je met vrienden, familie en leerkrachten kunt delen.
           description_audience: 'Leeftijden: 4-8'
           lesson_groups:
             csf_events:
               display_name: Gebeurtenissen
             csf_loops:
               display_name: Lussen
+          student_description: Leer informatica door de onderstaande lessen in je
+            eigen tempo uit te proberen. Leer hoe je computerprogramma's maakt en
+            problemen oplost door leuke uitdagingen aan te gaan. Maak games en creatieve
+            projecten die je met vrienden, familie en leerkrachten kunt delen.
         pre-express-2021:
+          description: Leer informatica door de onderstaande lessen in je eigen tempo
+            uit te proberen. Leer hoe je computerprogramma's maakt en problemen oplost
+            door leuke uitdagingen aan te gaan. Maak games en creatieve projecten
+            die je met vrienden, familie en leerkrachten kunt delen.
           description_audience: 'Leeftijden: 4-8'
           lesson_groups:
             csf_events:
               display_name: Gebeurtenissen
             csf_loops:
               display_name: Lussen
+          student_description: Leer informatica door de onderstaande lessen in je
+            eigen tempo uit te proberen. Leer hoe je computerprogramma's maakt en
+            problemen oplost door leuke uitdagingen aan te gaan. Maak games en creatieve
+            projecten die je met vrienden, familie en leerkrachten kunt delen.
         pre-express-2022:
+          description: Leer informatica door de onderstaande lessen in je eigen tempo
+            uit te proberen. Leer hoe je computerprogramma's maakt en problemen oplost
+            door leuke uitdagingen aan te gaan. Maak games en creatieve projecten
+            die je met vrienden, familie en leerkrachten kunt delen.
           description_audience: 'Leeftijden: 4-8'
           lesson_groups:
             csf_events:
               display_name: Gebeurtenissen
             csf_loops:
               display_name: Lussen
+          student_description: Leer informatica door de onderstaande lessen in je
+            eigen tempo uit te proberen. Leer hoe je computerprogramma's maakt en
+            problemen oplost door leuke uitdagingen aan te gaan. Maak games en creatieve
+            projecten die je met vrienden, familie en leerkrachten kunt delen.
         pre-express-2023:
+          description: Leer informatica door de onderstaande lessen in je eigen tempo
+            uit te proberen. Leer hoe je computerprogramma's maakt en problemen oplost
+            door leuke uitdagingen aan te gaan. Maak games en creatieve projecten
+            die je met vrienden, familie en leerkrachten kunt delen.
           description_audience: 'Leeftijden: 4-8'
           lesson_groups:
             csf_events:
               display_name: Gebeurtenissen
             csf_loops:
               display_name: Lussen
+          student_description: Leer informatica door de onderstaande lessen in je
+            eigen tempo uit te proberen. Leer hoe je computerprogramma's maakt en
+            problemen oplost door leuke uitdagingen aan te gaan. Maak games en creatieve
+            projecten die je met vrienden, familie en leerkrachten kunt delen.
         public-key-cryptography:
           title: Publieke Sleutel Cryptografie Widget
         sciencePD2b:

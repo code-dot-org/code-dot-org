@@ -60,7 +60,8 @@ class LevelsController < ApplicationController
     TextMatch,
     Unplugged,
     Vigenere,
-    Weblab
+    Weblab,
+    Weblab2
   ]
 
   # GET /levels
@@ -454,6 +455,8 @@ class LevelsController < ApplicationController
         @game = Game.pythonlab
       elsif @type_class == Panels
         @game = Game.panels
+      elsif @type_class == Weblab2
+        @game = Game.weblab2
       end
       @level = @type_class.new
       render :edit

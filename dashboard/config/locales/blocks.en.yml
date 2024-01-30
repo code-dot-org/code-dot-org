@@ -1159,6 +1159,13 @@ en:
             '1': lemon juice
             '3': baking soda
             '5': both
+      DansBlocks_gravity_test:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(fall_gravity_behavior, []): fall_gravity
+      DansBlocks_jump_gravity:
+        text: make {SPRITE} jump
       DansBlocks_setForegroundEffect2:
         text: "[Don't Use] do {EFFECT} effect"
         options:
@@ -1883,6 +1890,13 @@ en:
         text: x coordinate of {SPRITE}
       gamelab_yLocationOf:
         text: y coordinate of {SPRITE}
+      KatiesBlocks_changeVelocity:
+        text: change {SPRITE} {PROPERTY} by {VAL}
+        options:
+          PROPERTY:
+            '"velocityX"': velocityX
+            '"velocityY"': velocityY
+            '"rotationSpeed"': rotationSpeed
       KatiesBlocks_glideTo:
         text: "{SPRITE} glide to {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1894,8 +1908,17 @@ en:
             '"solid"': solid
             '"liquid"': liquid
             '"gas"': gas
+      KatiesBlocks_katieCollide:
+        text: "{SPRITE} collides {TARGET}"
       KatiesBlocks_makeNumSpritesNear:
         text: make {NUM} new {ANIMATION_NAME} sprites near {LOCATION}
+      KatiesBlocks_setVelocity:
+        text: set {SPRITE} {PROPERTY} to {VAL}
+        options:
+          PROPERTY:
+            '"velocityX"': velocityX
+            '"velocityY"': velocityY
+            '"rotationSpeed"': rotationSpeed
       KatiesBlocks_spriteBirdSay:
         text: "{SPRITE} says {SPEECH}"
         options:
