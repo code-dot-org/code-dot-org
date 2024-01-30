@@ -5,7 +5,7 @@ import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
 import {studentLevelProgressType} from '../progress/progressTypes';
 import {connect} from 'react-redux';
 import LevelDataCell from './LevelDataCell';
-import ExpandedProgressColumnHeader from './ExpandedProgressColumnHeader.jsx';
+import ExpandedProgressColumnHeader from './ExpandedProgressColumnHeader';
 
 function ExpandedProgressDataColumn({
   lesson,

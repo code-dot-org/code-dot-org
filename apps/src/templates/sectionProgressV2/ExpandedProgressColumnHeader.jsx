@@ -4,6 +4,7 @@ import styles from './progress-table-v2.module.scss';
 import classNames from 'classnames';
 import FontAwesome from '../FontAwesome';
 import i18n from '@cdo/locale';
+import LevelProgressHeader from './LevelProgressHeader';
 
 export default function ExpandedProgressColumnHeader({
   lesson,
@@ -39,15 +40,7 @@ export default function ExpandedProgressColumnHeader({
       </div>
       <div className={styles.expandedHeaderSecondRow}>
         {lesson.levels.map(level => (
-          <div
-            className={classNames(
-              styles.gridBox,
-              styles.expandedHeaderLevelCell
-            )}
-            key={lesson.id + '.' + level.bubbleText + '-h'}
-          >
-            {lesson.relative_position + '.' + level.bubbleText}
-          </div>
+          <LevelProgressHeader key={level.id} lesson={lesson} level={level} />
         ))}
       </div>
     </div>

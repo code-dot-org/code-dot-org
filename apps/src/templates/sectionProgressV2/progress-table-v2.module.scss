@@ -170,10 +170,19 @@ $level-cell-width: 52px;
 
     &LevelCell {
       // If width is updated, must also update `LEVEL_HEADER_WIDTH` in ExpandedProgressDataColumn.jsx
-      min-width: 52px;
+      width: 52px;
       text-align: center;
       height: 32px;
       line-height: 32px;
+    }
+
+    &Level {
+      background-color: $light_primary_500;
+      color: $light_white;
+    }
+
+    &LevelCaret {
+      margin-inline-end: 4px;
     }
   }
   &Column {
