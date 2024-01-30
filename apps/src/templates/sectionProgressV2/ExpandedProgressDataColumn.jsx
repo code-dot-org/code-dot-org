@@ -5,7 +5,7 @@ import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
 import {studentLevelProgressType} from '../progress/progressTypes';
 import {connect} from 'react-redux';
 import LevelDataCell from './LevelDataCell';
-import ExpandedProgressColumnHeader from './ExpandedProgressColumnHeader';
+import ExpandedProgressColumnHeader from './ExpandedProgressColumnHeader.jsx';
 
 function ExpandedProgressDataColumn({
   lesson,
@@ -13,6 +13,17 @@ function ExpandedProgressDataColumn({
   sortedStudents,
   removeExpandedLesson,
 }) {
+  const [expandedChoiceLevels, setExpandedChoiceLevels] = React.useState([]);
+
+  const toggleExpandedChoiceLevel = levelId => {
+    //Todo: change to object
+    if (expandedChoiceLevels.includes(levelId)) {
+      setExpandedChoiceLevels(expandedChoiceLevels.filter(l => l !== levelId));
+    } else {
+      setExpandedChoiceLevels([...expandedChoiceLevels, levelId]);
+    }
+  };
+
   const progress = React.useMemo(
     () => (
       <div className={styles.expandedTable}>
@@ -43,6 +54,8 @@ function ExpandedProgressDataColumn({
       <ExpandedProgressColumnHeader
         lesson={lesson}
         removeExpandedLesson={removeExpandedLesson}
+        expandedChoiceLevels={expandedChoiceLevels}
+        toggleExpandedChoiceLevel={toggleExpandedChoiceLevel}
       />
       {progress}
     </div>

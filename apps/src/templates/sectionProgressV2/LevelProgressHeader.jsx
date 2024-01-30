@@ -8,41 +8,49 @@ export default function ExpandedProgressColumnHeader({
   lesson,
   level,
   isLevelExpanded,
-  toggleExpandedLevel,
+  toggleExpandedChoiceLevel,
 }) {
-  if (isLevelExpanded) {
-    <div
-      key={lesson.id + '.' + level.bubbleText + '-h'}
-      className={styles.expandedHeaderLevel}
-      onClick={onClick}
-    >
-      <div
-        className={classNames(styles.gridBox, styles.expandedHeaderLevelCell)}
-      >
-        {level.sublevels?.length > 0 && (
-          <FontAwesome
-            icon="caret-down"
-            className={styles.expandedHeaderLevelCaret}
-          />
-        )}
-        {lesson.relative_position + '.' + level.bubbleText}
-      </div>
-      {level.sublevels?.map(sublevel => (
-        <div
-          className={classNames(styles.gridBox, styles.expandedHeaderLevelCell)}
-          key={lesson.id + '.' + level.bubbleText + '-h-' + sublevel.letter}
-        >
-          {sublevel.letter}
-        </div>
-      ))}
-    </div>;
-  }
-
   const onClick = () => {
     if (level.sublevels?.length > 0) {
-      toggleExpandedLevel(lesson.id, level.id);
+      toggleExpandedChoiceLevel(level.id);
     }
   };
+
+  // Todo: refactor into better optimized component, probably two functions with switch
+  if (isLevelExpanded) {
+    return (
+      <div
+        key={lesson.id + '.' + level.bubbleText + '-h'}
+        className={styles.expandedHeaderLevel}
+        onClick={onClick}
+      >
+        <div
+          className={classNames(styles.gridBox, styles.expandedHeaderLevelCell)}
+        >
+          {level.sublevels?.length > 0 && (
+            <FontAwesome
+              icon="caret-down"
+              className={styles.expandedHeaderLevelCaret}
+            />
+          )}
+          {lesson.relative_position + '.' + level.bubbleText}
+        </div>
+        {level.sublevels?.map(sublevel => (
+          <div
+            className={classNames(
+              styles.gridBox,
+              styles.expandedHeaderLevelCell
+            )}
+            key={
+              lesson.id + '.' + level.bubbleText + '-h-' + sublevel.bubbleText
+            }
+          >
+            {sublevel.bubbleText}
+          </div>
+        ))}
+      </div>
+    );
+  }
 
   return (
     <div
@@ -65,5 +73,5 @@ ExpandedProgressColumnHeader.propTypes = {
   lesson: PropTypes.object.isRequired,
   level: PropTypes.object.isRequired,
   isLevelExpanded: PropTypes.bool,
-  toggleExpandedLevel: PropTypes.func,
+  toggleExpandedChoiceLevel: PropTypes.func,
 };

@@ -9,6 +9,8 @@ import LevelProgressHeader from './LevelProgressHeader';
 export default function ExpandedProgressColumnHeader({
   lesson,
   removeExpandedLesson,
+  expandedChoiceLevels,
+  toggleExpandedChoiceLevel,
 }) {
   // If there are only 2 levels, we only show the number so that the text fits the cell.
   const headerText =
@@ -40,7 +42,13 @@ export default function ExpandedProgressColumnHeader({
       </div>
       <div className={styles.expandedHeaderSecondRow}>
         {lesson.levels.map(level => (
-          <LevelProgressHeader key={level.id} lesson={lesson} level={level} />
+          <LevelProgressHeader
+            key={level.id}
+            lesson={lesson}
+            level={level}
+            isLevelExpanded={expandedChoiceLevels.includes(level.id)}
+            toggleExpandedChoiceLevel={toggleExpandedChoiceLevel}
+          />
         ))}
       </div>
     </div>
@@ -50,4 +58,6 @@ export default function ExpandedProgressColumnHeader({
 ExpandedProgressColumnHeader.propTypes = {
   lesson: PropTypes.object.isRequired,
   removeExpandedLesson: PropTypes.func.isRequired,
+  expandedChoiceLevels: PropTypes.arrayOf(PropTypes.string).isRequired,
+  toggleExpandedChoiceLevel: PropTypes.func.isRequired,
 };
