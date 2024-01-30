@@ -969,6 +969,7 @@ class User < ApplicationRecord
   end
 
   def update_without_password(params, *options)
+    puts "WITHOUT PASSWORD"
     if params[:races]
       self.races = params[:races].join ','
     end
@@ -977,6 +978,7 @@ class User < ApplicationRecord
   end
 
   def update_with_password(params, *options)
+    puts "WITH PASSWORD"
     if encrypted_password.blank?
       params.delete(:current_password) # user does not have password so current password is irrelevant
       update(params, *options)
