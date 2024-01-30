@@ -446,6 +446,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert deployment
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_equal deployment, @integration.lti_deployments.first
+    assert_equal @integration.lti_deployments.count, 1
   end
 
   test 'sync - should redirect students to homepage without syncing' do
