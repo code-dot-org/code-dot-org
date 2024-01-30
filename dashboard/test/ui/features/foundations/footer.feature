@@ -196,8 +196,8 @@ Feature: Checking the footer appearance
     Then I close my eyes
 
   @eyes_mobile @as_student 
-  Scenario: Mobile Applab share small footer
-    When I open my eyes to test "Mobile Applab share small footer"
+  Scenario: Mobile Applab share small footer portrait
+    When I open my eyes to test "Mobile Applab share small footer portrait"
     Given I am on "http://studio.code.org/home"
     And I start a new Applab project
     And I navigate to the shared version of my project
@@ -208,34 +208,35 @@ Feature: Checking the footer appearance
     # pin-to-home-screen popup go away
     And I wait for 20 seconds
 
-    Then I see no difference for "small footer portrait"
+    Then I see no difference for "small footer portrait" using stitch mode "none"
 
     When I open the small footer menu
-    Then I see no difference for "footer menu portrait"
+    Then I see no difference for "footer menu portrait" using stitch mode "none"
 
     When I press menu item "Copyright"
-    Then I see no difference for "copyright flyout portrait"
+    Then I see no difference for "copyright flyout portrait" using stitch mode "none"
 
     Then I close my eyes
 
   @eyes_mobile @as_student 
-  Scenario: Mobile Applab share small footer
-    When I open my eyes to test "Mobile Applab share small footer"
+  Scenario: Mobile Applab share small footer landscape
+    When I open my eyes to test "Mobile Applab share small footer landscape"
     Given I am on "http://studio.code.org/home"
     And I start a new Applab project
     And I navigate to the shared version of my project
     And I wait until element ".small-footer-base" is visible
+    And I scroll the ".more-link" element into view
 
     # Additional wait to let scroll position settle and possibly have the
     # pin-to-home-screen popup go away
     And I wait for 20 seconds
 
-    Then I see no difference for "small footer"
+    Then I see no difference for "small footer landscape" using stitch mode "none"
 
     When I open the small footer menu
-    Then I see no difference for "footer menu"
+    Then I see no difference for "footer menu landscape" using stitch mode "none"
 
     When I press menu item "Copyright"
-    Then I see no difference for "copyright flyout"
+    Then I see no difference for "copyright flyout landscape" using stitch mode "none"
 
     Then I close my eyes
