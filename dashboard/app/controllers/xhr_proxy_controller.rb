@@ -99,6 +99,7 @@ class XhrProxyController < ApplicationController
     numbersapi.com
     open.mapquestapi.com
     opentdb.com
+    perenual.com
     pixabay.com
     pokeapi.co
     pro-api.coinmarketcap.com

@@ -1,0 +1,418 @@
+{
+  "script": {
+    "name": "pl-team-design-guide",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": "pl-team-design-guide",
+    "serialized_at": "2024-01-29 20:55:18 UTC",
+    "published_state": "in_development",
+    "instruction_type": "self_paced",
+    "instructor_audience": "facilitator",
+    "participant_audience": "teacher",
+    "seeding_key": {
+      "script.name": "pl-team-design-guide"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "General Online Learning Design",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Designing Visuals",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Designing Text",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Level Types",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "f3a34f15-f6e0-42bf-8476-f7f1ffe1b6ca",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f3a34f15-f6e0-42bf-8476-f7f1ffe1b6ca",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide"
+      }
+    },
+    {
+      "key": "eac68445-d9b3-4f64-9790-569a597cd78d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eac68445-d9b3-4f64-9790-569a597cd78d",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "3902e12a-769b-4328-9c41-34b1998b3fe3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Reference Materials"
+      },
+      "seeding_key": {
+        "activity_section.key": "3902e12a-769b-4328-9c41-34b1998b3fe3",
+        "lesson_activity.key": "f3a34f15-f6e0-42bf-8476-f7f1ffe1b6ca"
+      }
+    },
+    {
+      "key": "438b7f52-72d3-49f2-a08e-5d4df1464b9a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Headings and Body Text"
+      },
+      "seeding_key": {
+        "activity_section.key": "438b7f52-72d3-49f2-a08e-5d4df1464b9a",
+        "lesson_activity.key": "eac68445-d9b3-4f64-9790-569a597cd78d"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PLGuide_L1_ReferenceMaterials"
+        ],
+        "progression": "Reference Materials"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLGuide_L1_ReferenceMaterials"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "3902e12a-769b-4328-9c41-34b1998b3fe3"
+      },
+      "level_keys": [
+        "PLGuide_L1_ReferenceMaterials"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Reference Materials"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLGuide_L1_ReferenceMaterials2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "3902e12a-769b-4328-9c41-34b1998b3fe3"
+      },
+      "level_keys": [
+        "PLGuide_L1_ReferenceMaterials2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PLGuide_L3_Headings1"
+        ],
+        "progression": "Headings and Body Text"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLGuide_L3_Headings1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "438b7f52-72d3-49f2-a08e-5d4df1464b9a"
+      },
+      "level_keys": [
+        "PLGuide_L3_Headings1"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PLGuide_L3_BodyText"
+        ],
+        "progression": "Headings and Body Text"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLGuide_L3_BodyText"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "438b7f52-72d3-49f2-a08e-5d4df1464b9a"
+      },
+      "level_keys": [
+        "PLGuide_L3_BodyText"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PLGuide_L3_BodyText1"
+        ],
+        "progression": "Headings and Body Text"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLGuide_L3_BodyText1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "438b7f52-72d3-49f2-a08e-5d4df1464b9a"
+      },
+      "level_keys": [
+        "PLGuide_L3_BodyText1"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "PLGuide_L1_ReferenceMaterials",
+        "script_level.level_keys": [
+          "PLGuide_L1_ReferenceMaterials"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "3902e12a-769b-4328-9c41-34b1998b3fe3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PLGuide_L1_ReferenceMaterials2",
+        "script_level.level_keys": [
+          "PLGuide_L1_ReferenceMaterials2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "3902e12a-769b-4328-9c41-34b1998b3fe3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PLGuide_L3_Headings1",
+        "script_level.level_keys": [
+          "PLGuide_L3_Headings1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "438b7f52-72d3-49f2-a08e-5d4df1464b9a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PLGuide_L3_BodyText",
+        "script_level.level_keys": [
+          "PLGuide_L3_BodyText"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "438b7f52-72d3-49f2-a08e-5d4df1464b9a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PLGuide_L3_BodyText1",
+        "script_level.level_keys": [
+          "PLGuide_L3_BodyText1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "438b7f52-72d3-49f2-a08e-5d4df1464b9a"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "Branding Guidelines and Style Guide",
+      "url": "https://drive.google.com/file/d/1CBAcOfamf7HchJWsALzBIcxZmN_yHhOR/view?usp=sharing",
+      "key": "branding_guidelines_and_style_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "branding_guidelines_and_style_guide"
+      }
+    },
+    {
+      "name": "Code.org Style Guide",
+      "url": "https://docs.google.com/document/d/1L0nZOmhn_zn_YqoMv48X9WRxT_Vpvb7LFdMBueELfgg/edit?usp=sharing",
+      "key": "code_org_style_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "code_org_style_guide"
+      }
+    },
+    {
+      "name": "Messaging and Tone Guide",
+      "url": "https://docs.google.com/document/d/1irxg2gGyfxvHlt5mZIytfSBjJJoek6kwGnYA-6hjFBo/edit#heading=h.m4c4rwosbac4",
+      "key": "messaging_and_tone_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "messaging_and_tone_guide"
+      }
+    }
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "branding_guidelines_and_style_guide",
+        "script.name": "pl-team-design-guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "code_org_style_guide",
+        "script.name": "pl-team-design-guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "messaging_and_tone_guide",
+        "script.name": "pl-team-design-guide"
+      }
+    }
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

@@ -59,9 +59,6 @@ Dashboard::Application.routes.draw do
 
     get 'maker/home', to: 'maker#home'
     get 'maker/setup', to: 'maker#setup'
-    get 'maker/google_oauth_login_code', to: 'maker#login_code'
-    get 'maker/display_google_oauth_code', to: 'maker#display_code'
-    get 'maker/google_oauth_confirm_login', to: 'maker#confirm_login'
 
     # Media proxying
     get 'media', to: 'media_proxy#get', format: false
@@ -194,7 +191,6 @@ Dashboard::Application.routes.draw do
       get '/reset_session', to: 'sessions#reset'
       get '/lockout', to: 'sessions#lockout'
       get '/users/existing_account', to: 'registrations#existing_account'
-      post '/users/auth/maker_google_oauth2', to: 'omniauth_callbacks#maker_google_oauth2'
       get '/users/edit', to: 'registrations#edit'
     end
     devise_for :users, controllers: {
@@ -600,6 +596,7 @@ Dashboard::Application.routes.draw do
     post '/lti/v1/authenticate', to: 'lti_v1#authenticate'
     match '/lti/v1/sync_course', to: 'lti_v1#sync_course', via: [:get, :post]
     post '/lti/v1/integrations', to: 'lti_v1#create_integration'
+    get '/lti/v1/integrations', to: 'lti_v1#new_integration'
 
     # OAuth endpoints
     get '/oauth/jwks', to: 'oauth_jwks#jwks'

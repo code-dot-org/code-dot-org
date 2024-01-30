@@ -126,16 +126,25 @@ function adjustBlockPositions(blocks, workspace) {
   let orderedColliders = [];
   let blocksToPlace = [];
   blocks.forEach(block => {
-    if (isBlockLocationUnset(block)) {
+    if (isBlockAtEdge(block)) {
       blocksToPlace.push(block);
     } else {
       insertCollider(orderedColliders, getCollider(block));
     }
   });
 
+  const {defaultX, defaultY} = getDefaultLocation(workspace);
   blocksToPlace.forEach(block => {
-    let x = getXCoordinate(block, workspace);
-    let y = WORKSPACE_PADDING;
+    let {x, y} = block.getRelativeToSurfaceXY();
+
+    // Don't overwrite x- (or y-) coordinate if it is set to something other than the default
+    // This retains partially positioned blocks (with either an x- or y-coordinate set)
+    if (x === defaultX) {
+      x = getXCoordinate(block, workspace);
+    }
+    if (y === defaultY) {
+      y = WORKSPACE_PADDING;
+    }
 
     // Set initial position; collision area must be updated to account for new position
     // every time block is moved
@@ -224,14 +233,14 @@ export function isOverlapping(collider1, collider2) {
 }
 
 /**
- * Determines whether a block needs to be repositioned, based on its current position.
+ * Determines whether a block is positioned at the edge of the workspace.
  * @param {Blockly.Block} block - the block being considered
- * @returns {boolean} - true if the block is at the top corner of the workspace
+ * @returns {boolean} - true if the block is at the edge of the workspace
  */
-export function isBlockLocationUnset(block) {
+export function isBlockAtEdge(block) {
   const {defaultX, defaultY} = getDefaultLocation(block.workspace);
   const {x = 0, y = 0} = block.getRelativeToSurfaceXY();
-  return x === defaultX && y === defaultY;
+  return x === defaultX || y === defaultY;
 }
 
 export const getDefaultLocation = workspaceOverride => {

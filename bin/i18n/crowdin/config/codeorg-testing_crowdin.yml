@@ -38,7 +38,9 @@ files: [
   # dashboard content is handled by the `I18n::Resources::Dashboard::*::SyncUp` classes
   # docs content is handled by the `I18n::Resources::Dashboard::Docs::SyncUp` class
   # external-sources content is handled by the `I18n::Resources::Apps::ExternalSources::SyncUp` class
-  # hourofcode content is handled by the hourofcode-specific sync
+  # hourofcode content is handled by the `I18n::Resources::Pegasus::HourOfCode::SyncUp` class
+  # markdown content is handled by the `I18n::Resources::Pegasus::Markdown::SyncUp` class
+  # pegasus content is handled by the `I18n::Resources::Pegasus::Pegasus::SyncUp` class
   # standards content is handled by the `I18n::Resources::Dashboard::Standards::SyncUp` class
   "ignore" : [
     "/animations/**",
@@ -50,6 +52,8 @@ files: [
     "/docs/**",
     "/external-sources/**",
     "/hourofcode/**",
+    "/markdown/**",
+    "/pegasus/**",
     "/standards/**",
   ],
 
@@ -72,6 +76,8 @@ files: [
     "/docs/**",
     "/external-sources/**",
     "/hourofcode/**",
+    "/markdown/**",
+    "/pegasus/**",
     "/standards/**",
   ],
   "update_option" : "update_as_unapproved"

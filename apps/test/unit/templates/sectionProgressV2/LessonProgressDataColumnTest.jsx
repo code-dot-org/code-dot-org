@@ -3,13 +3,13 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 
 import {UnconnectedLessonProgressDataColumn} from '@cdo/apps/templates/sectionProgressV2/LessonProgressDataColumn.jsx';
+import LessonProgressColumnHeader from '@cdo/apps/templates/sectionProgressV2/LessonProgressColumnHeader.jsx';
 import LessonDataCell from '@cdo/apps/templates/sectionProgressV2/LessonDataCell.jsx';
 
 import {
   fakeLessonWithLevels,
   fakeLesson,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
-import styles from '@cdo/apps/templates/sectionProgressV2/progress-table-v2.module.scss';
 
 const STUDENT_1 = {id: 1, name: 'Student 1', familyName: 'FamNameB'};
 const STUDENT_2 = {id: 2, name: 'Student 2', familyName: 'FamNameA'};
@@ -52,7 +52,7 @@ describe('LessonProgressDataColumn', () => {
   it('Shows header lesson', () => {
     const wrapper = setUp();
 
-    expect(wrapper.find(`.${styles.lessonHeaderCell}`)).to.have.length(1);
+    expect(wrapper.find(LessonProgressColumnHeader)).to.have.length(1);
   });
 
   it('Shows no expansion if no levels', () => {

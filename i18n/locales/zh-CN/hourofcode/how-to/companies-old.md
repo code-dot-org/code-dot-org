@@ -27,7 +27,7 @@ For more instructions on encouraging employees and connecting your employees wit
 
 # 如何和学生一起来举办编程一小时的活动
 
-## 1. Promote your Hour of Code
+## 1. 推广你的“编程一小时”活动
 - Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
 - 鼓励您公司的软件工程师参观当地课堂，以便帮助引导他们开展编程一小时，并鼓励学生们学习计算机科学。 They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
 

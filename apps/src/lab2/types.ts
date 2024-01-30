@@ -199,7 +199,8 @@ export type AppName =
   | 'pythonlab'
   | 'spritelab'
   | 'standalone_video'
-  | 'panels';
+  | 'panels'
+  | 'weblab2';
 
 export type StandaloneAppName =
   | 'spritelab'
