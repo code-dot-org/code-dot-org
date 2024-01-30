@@ -62,8 +62,11 @@ export const askAITutor = createAsyncThunk(
         {role: Role.SYSTEM, content: ChatContext.systemPrompt},
         {role: Role.USER, content: ChatContext.studentCode},
       ],
-      ChatContext.levelId
+      ChatContext.levelId,
+      ChatContext.tutorType
     );
+
+    console.log('chatApiResponse', chatApiResponse);
 
     thunkAPI.dispatch(addAIResponse(chatApiResponse?.content));
     const prompt = ChatContext.systemPrompt + ChatContext.studentCode;

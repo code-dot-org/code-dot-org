@@ -6,6 +6,16 @@ export type ChatCompletionMessage = {
   timestamp?: string;
 };
 
+export type AITutorInteraction = {
+  userId: number;
+  levelId: number;
+  scriptId: number;
+  type: TutorTypes;
+  prompt: string;
+  status: string;
+  aiResponse: string;
+};
+
 export enum Role {
   ASSISTANT = 'assistant',
   USER = 'user',
