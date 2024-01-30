@@ -110,6 +110,11 @@ pl:
   social_hoc2019_dance: Wystąpią Katy Perry, Jonas Brothers, Lil Nas X, Panic at the
     Disco i wielu innych!
   social_hoc_anybody: 'Godzina kodowania: każdy może się nauczyć'
+  hoc_interest_form_header: Otrzymuj powiadomienia, gdy otworzy się rejestracja Hour
+    of Code!
+  hoc_interest_form_desc: Bądź pierwszą osobą, która dowie się o tegorocznej Godzinie
+    Kodowania, w tym o nowych działaniach i rozpoczęciu rejestracji na wydarzenia
+    Godziny Kodowania.
   oceans_landing_title: AI dla oceanów
   oceans_landing_description: 'Poznaj uczenie maszynowe, ucząc A.I., rozpoznawać ryby.
     #CSforGood'
@@ -281,6 +286,12 @@ pl:
   curricula_title_high: Programy nauczania dla szkoły średniej
   curricula_desc_high: Przeglądaj atrakcyjne kursy i zajęcia, które zapraszają Ciebie
     i Twoich uczniów szkół średnich do głębszego zagłębienia się w informatykę.
+  facilitator_led_pl_heading: Warsztaty doskonalenia zawodowego prowadzone przez facylitatora
+  facilitator_led_pl_desc: Dowiedz się o naszych warsztatach doskonalenia zawodowego
+    dla nauczycieli szkół podstawowych, średnich i licealnych.
+  self_paced_pl_heading: Doskonalenie zawodowe we własnym tempie
+  self_paced_pl_desc: Doskonalenie zawodowe we własnym tempie. Poznaj nasze internetowe,
+    moduły samodzielnego doskonalenia zawodowego.
   for_administrators_heading: Dla administratorów
   for_administrators_desc: Dołącz do tysięcy szkół, które już włączyły informatykę
     do swojego programu nauczania.
@@ -339,6 +350,7 @@ pl:
   call_to_action_start_part_02: Rozpocznij część drugą
   call_to_action_start_unplugged_activity: Rozpocznij aktywność bez komputera
   call_to_action_view_promo_resources: Przejrzyj zasoby promocyjne
+  call_to_action_view_teach_with_cdo: Rozpocznij nauczanie z Code.org
   call_to_action_get_involved: Zaangażuj się
   call_to_action_learn_more: Dowiedz się więcej
   call_to_action_watch_now: Obejrzyj teraz
@@ -482,6 +494,10 @@ pl:
   aria_label_call_to_action_dance_02: Rozpocznij drugą część potańcówki
   aria_label_call_to_action_dance_unplugged: Rozpocznij potańcówkę bez komputera
   aria_label_call_to_action_afe: Dowiedz się więcej o Amazon Future Engineer
+  aria_label_call_to_action_facilitator_pl: Dowiedz się więcej o warsztatach doskonalenia
+    zawodowego prowadzonych przez facylitatorów
+  aria_label_call_to_action_self_paced_pl: Dowiedz się więcej o samodzielnym rozwoju
+    zawodowym
   aria_label_call_to_action_teaching_csf: Rozpocznij profesjonalny program Nauczanie
     Podstaw Informatyki
   aria_label_call_to_action_teaching_csd: Rozpocznij profesjonalny program Nauczanie
@@ -613,6 +629,17 @@ pl:
   aria_label_call_to_action_learn_more_csd: Dowiedz się więcej o Odkryciach Informatyki
   aria_label_call_to_action_learn_more_csp: Dowiedz się więcej o Zasadach Informatyki
   aria_label_call_to_action_learn_more_csa: Dowiedz się więcej o AP® Informatyka A
+  aria_label_call_to_action_afe_alexa: Dowiedz się więcej o Alexa dla astronautów
+  aria_label_call_to_action_afe_cloud_tour: Dowiedz się więcej o programie Uncovering
+    Cloud Computer Career Tour
+  aria_label_call_to_action_afe_voice: 'Dowiedz się więcej o konkursie Your Voice
+    is Power Amazonu '
+  aria_label_call_to_action_afe_scholarships: Dowiedz się więcej o stypendiach i stażach
+    Amazonu
+  aria_label_call_to_action_afe_robotics: Dowiedz się więcej o wycieczce po Robotics
+    Fulfillment Center
+  aria_label_call_to_action_afe_data_tour: Dowiedz się więcej o wycieczce Keeping
+    Data Safe Career
   video_title_professional_learning_program: Profesjonalny program nauczania Code.org
   video_title_young_women_in_computer_science: Młode kobiety w informatyce
   curriculum_name_csf: Podstawy informatyki
@@ -734,6 +761,8 @@ pl:
     opracowywania programu wizji komputerowej. '
   curriculum_desc_csa_ai_short: Ten moduł CSA post-AP® oferuje uczniom szkół średnich
     praktyczne doświadczenie z profesjonalnymi narzędziami do tworzenia oprogramowania.
+  curriculum_desc_catalog: Zapoznaj się z naszym bogatym katalogiem ofert programów
+    nauczania dla wszystkich grup wiekowych i poziomów - całkowicie za darmo.
   collection_hardware: Skoncentruj się na sprzęcie
   collection_hardware_desc: Uprawnia uczniów do korzystania z danych i urządzeń fizycznych
     do rozwiązywania problemów.
@@ -780,6 +809,7 @@ pl:
   module_label_video_series: Seria filmów
   module_label_self_paced: Moduł dla własnego tempa
   module_label_event_or_lessons: Wydarzenie lub lekcje
+  module_label_or: Lub
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -923,6 +953,7 @@ pl:
   heading_acceptance: Akceptacja
   heading_enroll: Zapisz się
   heading_have_questions: Masz pytania?
+  heading_resources_for_educators: Zasoby Code.org dla nauczycieli
   student_courses_top_desc: Zacznij kodować już dziś. Nasze kursy i zajęcia są bezpłatne!
     To łatwiejsze i zabawniejsze niż myślisz.
   student_courses_explore_desc: Odkrywaj świat informatyki dzięki angażującym filmom,
@@ -1108,6 +1139,13 @@ pl:
   dance_afe_disclaimer: Artyści, których muzyka jest używana w tym samouczku, nie
     sponsorują ani nie popierają Amazon w ramach licencjonowanego korzystania z ich
     muzyki na Code.org.
+  dance_ai_behind_the_scenes: 'Jak działa Potancówka: za kulisami AI Edition?'
+  dance_ai_behind_the_scenes_markdown: |-
+    W **Potańcówka: Wydanie z AI** trzy wybrane emotikony są używane do generowania efektu wyjściowego przy użyciu AI. Efekt wyjściowy składa się z efektu tła, palety kolorów tła i efektu pierwszego planu.
+
+    Każdy emoji i każda wartość wyjściowa ma powiązaną z nim frazę opisową. Porównując podobieństwo wejściowego wyrażenia emoji z frazą wartości wyjściowej, jesteśmy w stanie użyć AI, aby polecić najlepsze dopasowanie.
+
+    Aby obliczyć podobieństwo, każdemu zdaniu przypisuje się osadzanie. [osadzanie] (https://en.wikipedia.org/wiki/Word_embedding) to lista liczb, która oddaje znaczenie frazy, a osadzenia używane w **Potańcówka: Wydanie z AI** mają około 1500 liczb. Podobieństwo mierzy się „odległością” między osadzonymi frazami. W **Potańcówka: Wydanie z AI** używamy osadzeń wygenerowanych przez [model Amazon Bedrock Titan] (https://aws.amazon.com/bedrock/titan/) i obliczamy podobieństwo, obliczając odległość cosinusa między osadzoniami.
   minecraft_hero_heading: Samouczki Minecrafta w ramach Godziny Kodowania
   minecraft_activities_desc: Wszystkie samouczki są dostępne w wielu językach i kompatybilne
     z nowoczesnymi przeglądarkami i tabletami. Nie masz internetu? [Pobierz wersję
@@ -1150,6 +1188,64 @@ pl:
   minecraft_resources_desc_02: Zainspiruj pasję STEM u uczniów K-12 dzięki 200 godzinnym
     programom nauczania informatyki, od bloków do Pythona, wspieranego przez rozwój
     zawodowy.
+  afe_page_heading: Darmowe zasoby od Amazon Future Engineer
+  afe_page_top_desc: 'Zwiększ swoje doświadczenie w nauczaniu dzięki Code.org we współpracy
+    z [Amazon Future Engineer] (%{afe_url}). Kwalifikujący się nauczyciele ze szkół
+    niedostatecznie obsługiwanych mogą uzyskać dostęp do tych świadczeń bezpłatnie:'
+  afe_page_top_list_01: "**Rozwój zawodowy:** Bezpłatne członkostwo w CSTA+, z seminariami
+    internetowymi prowadzonymi przez ekspertów i zasobami."
+  afe_page_top_list_02: "**Możliwości:** Szansa na dołączenie do płatnych stypendiów,
+    aby zwiększyć dostęp do informatyki współpracując z ekspertami branżowymi w Amazon!"
+  afe_page_top_list_03: "**Zasoby:** Zestawy inspirujące, w tym plakaty i naklejki,
+    aby zaangażować uczniów w informatykę."
+  afe_page_top_list_04: "**Innowacja: ** Ekskluzywny dostęp do programów pilotażowych,
+    które badają najnowocześniejsze kariery i zagadnienie informatyki."
+  afe_page_eligibility_heading: Wymagania kwalifikacyjne do szkoły*
+  afe_page_eligibility_list_01: Tytuł 1 i/lub > 40% bezpłatny/obniżona zapłata za
+    lunch (FRL) rejestracja uczniów
+  afe_page_eligibility_list_02: "> 30% zapisów uczniów czarnych/latynoskich/rdzennych
+    Amerykanów (BLNA)"
+  afe_page_eligibility_list_03: Szkoła wiejska
+  afe_page_eligibility_disclaimer: "*Wymagania kwalifikacyjne zweryfikowane przy użyciu
+    [danych NCES] (%{nces_url})."
+  afe_page_programs_heading: Więcej programów i możliwości Amazon Future Engineer
+  afe_page_programs_alexa_title: Alexa Skills Inventor
+  afe_page_programs_alexa_desc: Dowiedz się, jak zaprogramować Alexę umiejętnościami,
+    które mogą pomóc astronautom rozwiązywać problemy w kosmosie i w społecznościach
+    w domu.
+  afe_page_programs_cloud_tour_title: Odkrywanie podróży po Cloud Computer Career
+  afe_page_programs_cloud_tour_desc: How did we go from renting movies at the store
+    to streaming from anywhere at any time? Learn how data centers and cloud computing
+    have changed the way we watch our favorite content, and the careers behind it.
+  afe_page_programs_voice_title: Your Voice is Power
+  afe_page_programs_voice_desc: Students will code and compete to learn how entrepreneurship,
+    coding, and music can intersect for positive change.
+  afe_page_programs_scholarships_title: Stypendia i staże
+  afe_page_programs_scholarships_desc: Supporting students after high school is imperative
+    to fulfilling the Amazon Future Engineer mission for all of our scholars.
+  afe_page_programs_robotics_title: Wycieczka po Robotics Fulfillment Center
+  afe_page_programs_robotics_desc: Discover how computer science, state-of-the-art
+    engineering, and incredible people deliver customer orders at Amazon.
+  afe_page_programs_data_tour_title: Podróż po Keeping Data Safe Career
+  afe_page_programs_data_tour_desc: You want to upload your photos to the cloud, but
+    what if something happens at a data center? Learn how AWS and data center professionals
+    keep data safe and sustainable.
+  afe_page_success_heading: Gratulacje! Pomyślnie zarejestrowałeś się w programie
+    Amazon Future Engineer.
+  afe_page_success_desc: You should receive an email shortly from Amazon Future Engineer
+    to claim your benefits. In the meantime, check out some of the amazing resources
+    around our site.
+  afe_page_eligibility_check_heading: Sprawdziliśmy Twoje kwalifikacje
+  afe_page_eligibility_check_fail_desc: Your school does not meet the eligibility
+    [requirements*](%{req_url}) for the Amazon Future Engineer benefits, but you can
+    still take advantage of all Code.org has to offer, including our robust curriculum
+    and professional learning opportunities.
+  afe_page_eligibility_check_fail_error: Jeśli uważasz, że nie powinieneś otrzymać
+    tej wiadomości, skontaktuj się z nami pod adresem [support@code.org] (%{email_url}).
+  afe_page_eligibility_check_disclaimer: "*To participate in the Amazon Future Engineer
+    program, a school must have Title 1 status OR have student enrollment of more
+    than 40% underrepresented minority students and/or 40% students who qualify for
+    free or reduced lunch."
   blockchain_hero_heading: Jak działa Blockchain
   blockchain_hero_desc: Zanurz się w świecie blockchain dzięki „How Blockchain Works”,
     naszej nowej serii filmów i towarzyszącym lekcjom!
@@ -2014,6 +2110,8 @@ pl:
     Closed captioning, Immersive reader
   csd_page_pick_a_course_heading: Wybór odpowiedniego kursu CS Discoveries dla Twojej
     klasy
+  csd_page_pick_a_course_heading_non_en: Wybór odpowiedniego kursu %{cs_discoveries}
+    (Odkrycia Informatyki) dla Twojej klasy
   csd_page_pick_a_course_desc: Z różnorodnym zestawem opcji oferowanych dla CS Discoveries,
     istnieje kurs dla wszystkich różnych potrzeb.
   csd_page_pick_a_course_heading_02: Jak chcesz wybrać treść?

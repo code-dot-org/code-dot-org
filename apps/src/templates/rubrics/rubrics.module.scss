@@ -170,6 +170,23 @@
   align-self: stretch;
 }
 
+.rubricHeaderRedesign {
+  border-radius: 4px 4px 0 0;
+  background: $neutral_dark;
+  color: $neutral_white;
+  // padding: 9px 15px 8px;
+
+  border-top: 2px solid $neutral_dark;
+  border-right: 2px solid $neutral_dark;
+  border-left: 2px solid $neutral_dark;
+
+  display: flex;
+  height: 40px;
+  justify-content: flex-end;
+  align-items: center;
+  align-self: stretch;
+}
+
 .rubricHeaderLeftSide {
   display: flex;
   gap: 4px;
@@ -800,5 +817,28 @@ i.infoAlertIcon {
     box-shadow: 0 0 0 2px #3cfff8;
     background-color: $light_gray_100;
   }
+}
+
+.fabBackground {
+  width: 724px;
+  padding: 16px 16px 32px 16px;
+  gap: 16px;
+  border-radius: 0 0 4px 4px;
+  border-right: 2px solid $neutral_dark;
+  border-bottom: 2px solid $neutral_dark;
+  border-left: 2px solid $neutral_dark;
+  background: $neutral_white;
+  box-shadow: 4px 4px 6px 0 rgb(0 0 0 / 0.25);
+  height: 408px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+.rubricTabGroup {
+  padding-bottom: 8px;
 }
 // End of rubrics redesign

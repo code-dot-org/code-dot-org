@@ -15,13 +15,16 @@ style_min: true
 
 =inline_css 'homepage.css'
 =inline_css '/generated/hoc-banner.css'
-=inline_css '/generated/banners-ai-pl-launch-2023.css'
+-# TODO: Remove this when 'pl-launch-hero-banner' is set to 'false'
+=inline_css '/generated/pl-hero-banner.css'
 
 - cookie_key = environment_specific_cookie_name '_user_type'
 - user_type = request.cookies[cookie_key]
 - user_type = "student" if user_type == "student_y"
 - if ["student", "teacher"].include?(user_type)
   - redirect CDO.studio_url('/home', CDO.default_scheme)
+
+= view :header
 
 #homepage.supreme-container
   = view :homepage_hero

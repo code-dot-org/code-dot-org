@@ -315,6 +315,11 @@ sq:
         options:
           EFFECT:
             '"hearts"': zemrat
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': blu
+            '"red"': e kuqe
       gamelab_addTarget:
         options:
           OPT:
@@ -345,7 +350,7 @@ sq:
             new Behavior(wobbling, []): tundje
             new Behavior(wandering, []): bredh rreth e rrotull
             new Behavior(patrolling, []): patrullim
-            new Behavior(moving_west_and_looping, []): lëviz nga perëndimi dhe loop
+            new Behavior(moving_west_and_looping, []): lëviz nga perëndimi dhe looping
             new Behavior(moving_east_and_looping, []): lëviz nga lindja dhe loop
       gamelab_everyInterval:
         options:

@@ -94,6 +94,9 @@ ko:
   social_hoc2019_dance: Katy Perry, Shawn Mendes, Panic가 나옵니다! Disco에서, Lil Nas X,
     Jonas Brothers, Nicki Minaj 등  34개 이상의 팀이 함께 합니다!
   social_hoc_anybody: '아워오브코드: 누구나 배울 수 있습니다'
+  hoc_interest_form_header: Get notified when Hour of Code registration opens!
+  hoc_interest_form_desc: Be the first to know about this year's Hour of Code, including
+    new activities and when registrations for Hour of Code events begin.
   oceans_landing_title: 바다환경을 위한 AI
   oceans_landing_description: 머신 러닝과 AI의 윤리적 사용에 관해 배우세요.
   cs_for_good_hashtag: "#CSforGood"
@@ -222,6 +225,12 @@ ko:
   curricula_desc_middle: 여러분과 중학생이 함께 컴퓨터 과학을 탐구할 수 있도록 도와주는 매력적인 프로그램을 살펴보세요.
   curricula_title_high: 고등학교 커리큘럼
   curricula_desc_high: 여러분과 고등학생을 초대하여 컴퓨터 과학에 대해 더 깊이 파고들 수 있는 매력적인 과정과 활동을 찾아보세요.
+  facilitator_led_pl_heading: Facilitator-Led Professional Learning Workshops
+  facilitator_led_pl_desc: Learn about our professional learning workshops for elementary,
+    middle, and high school teachers.
+  self_paced_pl_heading: Self-Paced Professional Learning
+  self_paced_pl_desc: Professional learning at your own pace. Explore our online,
+    self-paced professional learning modules.
   for_administrators_heading: 관리자용
   for_administrators_desc: 이미 컴퓨터 과학을 커리큘럼에 통합한 수천 개의 학교에 합류하십시오.
   for_parents_heading: 학부모들을 위한
@@ -275,6 +284,7 @@ ko:
   call_to_action_start_part_02: 2부 시작
   call_to_action_start_unplugged_activity: 언플러그드 액티비티 시작
   call_to_action_view_promo_resources: 프로모션 리소스 보기
+  call_to_action_view_teach_with_cdo: Start teaching with Code.org
   call_to_action_get_involved: 함께 참여하세요
   call_to_action_learn_more: 더보기
   call_to_action_watch_now: 지금 시청하기
@@ -412,6 +422,9 @@ ko:
   aria_label_call_to_action_dance_02: 댄스 파티 액티비티 2부 시작
   aria_label_call_to_action_dance_unplugged: 댄스 파티 언플러그드 액티비티 시작
   aria_label_call_to_action_afe: 아마존 퓨처 엔지니어에 대해 자세히 알아보기
+  aria_label_call_to_action_facilitator_pl: Learn more about facilitator-led professional
+    learning workshops
+  aria_label_call_to_action_self_paced_pl: 자기 주도형 전문 학습에 대해 자세히 알아보기
   aria_label_call_to_action_teaching_csf: 컴퓨터 과학 기초 교육 전문 학습 프로그램 시작
   aria_label_call_to_action_teaching_csd: 컴퓨터 과학 디스커버리 교육 전문 학습 프로그램 시작
   aria_label_call_to_action_teaching_csp: 컴퓨터 과학 원리 교육 전문 학습 프로그램 시작
@@ -503,6 +516,17 @@ ko:
   aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
   aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
     A
+  aria_label_call_to_action_afe_alexa: Learn more about Alexa for Astronauts
+  aria_label_call_to_action_afe_cloud_tour: Learn more about the Uncovering Cloud
+    Computer Career Tour
+  aria_label_call_to_action_afe_voice: Learn more about Amazon's Your Voice is Power
+    competition
+  aria_label_call_to_action_afe_scholarships: Learn more about Amazon's scholarships
+    and internships
+  aria_label_call_to_action_afe_robotics: Learn more about the Robotics Fulfillment
+    Center Tour
+  aria_label_call_to_action_afe_data_tour: Learn more about the Keeping Data Safe
+    Career Tour
   video_title_professional_learning_program: Code.org의 전문 학습 프로그램
   video_title_young_women_in_computer_science: 컴퓨터 과학 분야의 젊은 여성
   curriculum_name_csf: 컴퓨터 과학 기초
@@ -597,6 +621,8 @@ ko:
     Copilot을 포함한 전문 소프트웨어 개발 도구를 직접 체험하고 컴퓨터 비전 프로그램을 개발하는 데 필요한 실제 기술을 제공합니다. '
   curriculum_desc_csa_ai_short: 이 Post-AP® CSA 모듈은 고등학생에게 전문 소프트웨어 개발 도구에 대한 실무 경험을
     제공합니다.
+  curriculum_desc_catalog: Explore our robust catalog of curriculum offerings for
+    all ages and levels — completely free.
   collection_hardware: 하드웨어에 중점 맞추기
   collection_hardware_desc: 데이터와 물리적 장치를 사용하여 문제를 해결할 수 있는 역량을 강화합니다.
   collection_design_purpose: 목적에 맞는 디자인에 중점 맞추기
@@ -638,6 +664,7 @@ ko:
   module_label_video_series: 비디오 시리즈
   module_label_self_paced: 자습형 모듈
   module_label_event_or_lessons: Event or lessons
+  module_label_or: Or
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -771,6 +798,7 @@ ko:
   heading_acceptance: Acceptance
   heading_enroll: Enroll
   heading_have_questions: Have questions?
+  heading_resources_for_educators: Code.org resources for educators
   student_courses_top_desc: Start coding today. Our courses and activities are free!
     It's easier—and more fun—than you think.
   student_courses_explore_desc: Explore the world of computer science with engaging
@@ -913,6 +941,13 @@ ko:
   dance_choose_activity: 댄스 파티를 선택하세요
   dance_afe_disclaimer: 이 튜토리얼에서 사용하는 음악의 아티스트는 Code.org에 음악 사용을 허가하는 과정에서 Amazon을
     후원하거나 보증하지 않습니다.
+  dance_ai_behind_the_scenes: 'How does Dance Party: AI Edition work behind the scenes?'
+  dance_ai_behind_the_scenes_markdown: |-
+    In **Dance Party: AI Edition**, three selected emojis are used to generate an output effect using AI. An output effect consists of values for background effect, background color palette, and foreground effect.
+
+    Each emoji and each output value has a descriptive phrase associated with it. By comparing the similarity of an input emoji's phrase with an output value's phrase, we are able to use AI to recommend the best match.
+
+    To compute the similarity, each phrase is assigned an embedding. An [embedding](https://en.wikipedia.org/wiki/Word_embedding) is a list of numbers that captures the meaning of a phrase, and the embeddings used in **Dance Party: AI Edition** are about 1,500 numbers long. Similarity is measured by the "distance" between the phrases' embeddings.  In **Dance Party: AI Edition**, we use embeddings generated by the [Amazon Bedrock Titan model](https://aws.amazon.com/bedrock/titan/) and calculate similarity by computing the cosine distance between embeddings.
   minecraft_hero_heading: 마인크래프트 아워오브코드 튜토리얼
   minecraft_activities_desc: 모든 튜토리얼은 다양한 언어로 제공되며 최신 브라우저 및 태블릿과 호환됩니다. 인터넷이 없으세요?
     [마인크래프트 어드벤처러 오프라인 버전을 다운로드하세요!](%{offline_url})
@@ -945,6 +980,63 @@ ko:
     초청 강사와 함께 하는 라이브 아워오브코드 워크숍에 참석해 보세요. CSEdWeek, %{campaign_date} 기간 동안 여러 번 제공됩니다.
   minecraft_resources_desc_02: 전문성 개발로 지원되는 블록부터 파이썬까지 200시간의 컴퓨터 과학 커리큘럼을 통해, K-12
     학습자에게 STEM에 대한 열정을 고취시키세요.
+  afe_page_heading: Free resources from Amazon Future Engineer
+  afe_page_top_desc: 'Enhance your teaching experience with Code.org in partnership
+    with [Amazon Future Engineer](%{afe_url}). Eligible educators from underserved
+    schools can access these benefits at no cost:'
+  afe_page_top_list_01: "**Professional Growth:** Complimentary CSTA+ membership,
+    with expert-led webinars and resources."
+  afe_page_top_list_02: "**Opportunities:** Chance to join a paid-fellowship experience
+    to increase access in computer science working alongside industry experts at Amazon!"
+  afe_page_top_list_03: "**Resources:** Inspiration kits, including posters and stickers,
+    to engage students in computer science."
+  afe_page_top_list_04: "**Innovation:** Exclusive access to pilot programs that explore
+    cutting-edge career and computer science topics."
+  afe_page_eligibility_heading: School Eligibility Requirements*
+  afe_page_eligibility_list_01: Title 1 and/or > 40% Free/Reduced Lunch (FRL) student
+    enrollment
+  afe_page_eligibility_list_02: ">30% Black/Latino/Native American (BLNA) student
+    enrollment"
+  afe_page_eligibility_list_03: Rural school
+  afe_page_eligibility_disclaimer: "*Eligibility requirements verified using [NCES
+    data](%{nces_url})."
+  afe_page_programs_heading: More Amazon Future Engineer programs & opportunities
+  afe_page_programs_alexa_title: Alexa Skills Inventor
+  afe_page_programs_alexa_desc: Learn how to program Alexa with skills that could
+    help astronauts solve problems in space and communities at home.
+  afe_page_programs_cloud_tour_title: Uncovering Cloud Computer Career Tour
+  afe_page_programs_cloud_tour_desc: How did we go from renting movies at the store
+    to streaming from anywhere at any time? Learn how data centers and cloud computing
+    have changed the way we watch our favorite content, and the careers behind it.
+  afe_page_programs_voice_title: Your Voice is Power
+  afe_page_programs_voice_desc: Students will code and compete to learn how entrepreneurship,
+    coding, and music can intersect for positive change.
+  afe_page_programs_scholarships_title: Scholarships and Internships
+  afe_page_programs_scholarships_desc: Supporting students after high school is imperative
+    to fulfilling the Amazon Future Engineer mission for all of our scholars.
+  afe_page_programs_robotics_title: Robotics Fulfillment Center Tour
+  afe_page_programs_robotics_desc: Discover how computer science, state-of-the-art
+    engineering, and incredible people deliver customer orders at Amazon.
+  afe_page_programs_data_tour_title: Keeping Data Safe Career Tour
+  afe_page_programs_data_tour_desc: You want to upload your photos to the cloud, but
+    what if something happens at a data center? Learn how AWS and data center professionals
+    keep data safe and sustainable.
+  afe_page_success_heading: Congratulations! You successfully signed up for the Amazon
+    Future Engineer Program.
+  afe_page_success_desc: You should receive an email shortly from Amazon Future Engineer
+    to claim your benefits. In the meantime, check out some of the amazing resources
+    around our site.
+  afe_page_eligibility_check_heading: We've checked your eligibility
+  afe_page_eligibility_check_fail_desc: Your school does not meet the eligibility
+    [requirements*](%{req_url}) for the Amazon Future Engineer benefits, but you can
+    still take advantage of all Code.org has to offer, including our robust curriculum
+    and professional learning opportunities.
+  afe_page_eligibility_check_fail_error: If you think you received this message in
+    error, contact us at [support@code.org](%{email_url}).
+  afe_page_eligibility_check_disclaimer: "*To participate in the Amazon Future Engineer
+    program, a school must have Title 1 status OR have student enrollment of more
+    than 40% underrepresented minority students and/or 40% students who qualify for
+    free or reduced lunch."
   blockchain_hero_heading: 블록체인 작동 방식
   blockchain_hero_desc: 새로운 동영상 시리즈와 함께 제공되는 강좌인 “블록체인의 작동 원리”를 통해 블록체인의 세계로 빠져들어
     보세요!
@@ -1604,6 +1696,8 @@ ko:
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
   csd_page_pick_a_course_heading: 수업에 알맞는 컴퓨터 과학 입문 과정 선택하기
+  csd_page_pick_a_course_heading_non_en: Picking the right %{cs_discoveries} (CS Discoveries)
+    course for your classroom
   csd_page_pick_a_course_desc: 컴퓨터 과학 입문에 제공되는 다양한 옵션을 통해 모든 요구 사항에 알맞은 과정을 선택할 수
     있습니다.
   csd_page_pick_a_course_heading_02: 콘텐츠를 어떻게 선택하시겠습니까?

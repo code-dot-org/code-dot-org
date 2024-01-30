@@ -298,7 +298,8 @@ class User < ApplicationRecord
     self.gender = Policies::Gender.normalize gender_student_input
   end
 
-  validates :gender_student_input, length: {maximum: 50}
+  validates :gender_student_input, length: {maximum: 50}, no_utf8mb4: true
+  validates :gender_teacher_input, no_utf8mb4: true
 
   def save_email_preference
     if teacher?

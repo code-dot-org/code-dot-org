@@ -122,6 +122,7 @@ it:
           description: Prova i fondamenti dell'informatica con i personaggi di Angry Birds e di Plants vs. Zombies!
           description_short: Prova i fondamenti dell'informatica insieme a tanti personaggi divertenti!
           student_description: Prova i fondamenti dell'informatica con i personaggi di Angry Birds e di Plants vs. Zombies!
+          name: L'Ora del Codice
         text-compression:
           title: Compressione del testo
           description: Compressione del testo identificando modelli ripetuti.
@@ -4804,6 +4805,9 @@ it:
               name: Comportamenti
             lesson-5:
               name: Passi successivi
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introduzione
         self-paced-pl-k5-2024-1:
           lessons:
             lesson-1:
@@ -4814,4 +4818,141 @@ it:
               name: Istruzioni condizionali
             lesson-6:
               name: Passi successivi
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introduzione
           title: Cos'è l'informatica
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaggio
+            csp_unit1_2020:
+              display_name: Princìpi dell'Informatica - Unità 1
+        csp2-2024:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: Princìpi dell'Informatica - Unità 2
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sondaggio
+            lessonGroup-3:
+              display_name: Contenuto
+            lessonGroup-4:
+              display_name: Mostra ciò che sai
+            lessonGroup-5:
+              display_name: Lezioni alternative
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-4:
+              display_name: Lezioni alternative
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-4:
+              display_name: Lezioni alternative
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-4:
+              display_name: Lezioni alternative
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-4:
+              display_name: Lezioni alternative
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-4:
+              display_name: Lezioni alternative
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-5:
+              display_name: Lezioni alternative
+        csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
+            lessonGroup-4:
+              display_name: Sondaggio
+            lessonGroup-5:
+              display_name: Lezioni alternative
+        csa-postap-se-and-computer-vision-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Visione Artificiale'
+          title: Sondaggio preliminare su ingegneria del software e visione artificiale
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabili
+            csp_conditionals:
+              display_name: Istruzioni condizionali
+            csp_functions:
+              display_name: Funzioni
+            csp_project:
+              display_name: Progetto
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Dati
+            lessonGroup-5:
+              display_name: Sondaggio Post-corso
+          title: Dati ('22-'23)
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Liste
+            lessonGroup-3:
+              display_name: Cicli
+            lessonGroup-4:
+              display_name: Traversali
+            lessonGroup-5:
+              display_name: Progetto
+            lessonGroup-2:
+              display_name: Sondaggio Post-corso
+        csp7-2024:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parametri e Valori di Ritorno
+            csp_libraries:
+              display_name: Librerie
+            lessonGroup-3:
+              display_name: Sondaggio Post-corso
+        csp8-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sondaggio Post-corso
+        csp9-2024:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: Princìpi dell'Informatica - Unità 9
+            lessonGroup-2:
+              display_name: Sondaggio Post-corso
+        csp10-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sondaggio Post-corso

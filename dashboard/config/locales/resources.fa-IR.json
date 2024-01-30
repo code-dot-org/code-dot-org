@@ -5283,7 +5283,7 @@
           "type": "کلید پاسخ"
         },
         "spotify_playlist_all_ages_/coursed/2022": {
-          "name": "پلی لیست Spotify (تمام سنین)",
+          "name": "لیست پخش اسپاتیفای (تمام سنین)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "feeling_faces/coursed/2022": {
@@ -5732,7 +5732,7 @@
           "type": "کلید پاسخ"
         },
         "spotify_playlist_all_ages_/express/2022": {
-          "name": "پلی لیست Spotify (تمام سنین)",
+          "name": "لیست پخش اسپاتیفای (تمام سنین)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "pair_programming_video/express/2022": {
@@ -5895,7 +5895,7 @@
           "type": "اسلایدها"
         },
         "cs_connections_landing_page/csc-bookcovers/2023": {
-          "name": "اتصالات CS فرود صفحه",
+          "name": "صفحه فرود اتصالات سی‌اس",
           "url": "https://code.org/educate/csc",
           "type": "منبع"
         },
@@ -8775,7 +8775,7 @@
           "type": "کلید پاسخ"
         },
         "spotify_playlist_all_ages_/coursed/2023": {
-          "name": "پلی لیست Spotify (تمام سنین)",
+          "name": "لیست پخش اسپاتیفای (تمام سنین)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "feeling_faces/coursed/2023": {
@@ -9260,7 +9260,7 @@
           "type": "کلید پاسخ"
         },
         "spotify_playlist_all_ages_/express/2023": {
-          "name": "پلی لیست Spotify (تمام سنین)",
+          "name": "لیست پخش اسپاتیفای (تمام سنین)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "pair_programming_video/express/2023": {
@@ -9453,7 +9453,7 @@
         },
         "_optional_gan_game_activity_guide/how-ai-works/2023": {
           "name": "(اختیاری) راهنمای فعالیت بازی شبکه‌های زایای دشمن‌گونه",
-          "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit",
+          "url": "https://docs.google.com/document/d/1bbvAg7QoVLsTRh893V60_bwthRyzUxxFLjltRL1djLg",
           "type": "راهنمای فعالیت"
         },
         "generative_images/how-ai-works/2023": {
@@ -9605,7 +9605,7 @@
           "type": "اسلاید دک"
         },
         "dance-party-playlist/dance-2019/unversioned": {
-          "name": "پلی لیست Spotify (تمام سنین)",
+          "name": "لیست پخش اسپاتیفای (تمام سنین)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
@@ -9613,11 +9613,11 @@
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "dance-party-playlist/dance-extras/unversioned": {
-          "name": "پلی لیست Spotify (تمام سنین)",
+          "name": "لیست پخش اسپاتیفای (تمام سنین)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "dance-party-playlist/dance/unversioned": {
-          "name": "پلی لیست Spotify (تمام سنین)",
+          "name": "لیست پخش اسپاتیفای (تمام سنین)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
@@ -9672,7 +9672,7 @@
         "events-in-bounce-how-do-they-happen/sports/unversioned": {
           "name": "رویدادها در پرش - چگونه اتفاق می‌افتند؟",
           "url": "https://docs.google.com/presentation/d/11DzVtRaK1FtnI6wppsPBFNOnVFU1P-Jx_HNd0FYR11g/edit?usp=share_link",
-          "type": "اسلاید دک"
+          "type": "مجموع اسلاید"
         },
         "activity-guide-text-compression/text-compression/unversioned": {
           "name": "راهنمای فعالیت - فشرده‌سازی متن",
@@ -10823,6 +10823,9 @@
         "all_vocabulary/how-ai-works/2023": {
           "name": "تمام واژگان",
           "url": "/s/how-ai-works-2023/واژگان"
+        },
+        "all_vocabulary_1/express/2023": {
+          "name": "تمام واژگان"
         }
       }
     }

@@ -77,6 +77,7 @@ ms:
           description: Cuba asas sains komputer dengan watak daripada Angry Birds dan Tumbuhan lwn. Zombi!
           description_short: Cuba asas sains komputer dengan banyak watak yang menyeronokkan!
           student_description: Cuba asas sains komputer dengan watak daripada Angry Birds dan Tumbuhan lwn. Zombi!
+          name: Hour of Code
         text-compression:
           title: Pemampatan Teks
         cspunit3:
@@ -2989,3 +2990,25 @@ ms:
             lesson-4:
               name: Bersyarat
           title: Pengenalan kepada Sains komputer
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: Pemboleh ubah
+            csp_conditionals:
+              display_name: Bersyarat
+            csp_functions:
+              display_name: Fungsi
+            csp_project:
+              display_name: Projek
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Data
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Senarai
+            lessonGroup-3:
+              display_name: Gelung
+            lessonGroup-5:
+              display_name: Projek

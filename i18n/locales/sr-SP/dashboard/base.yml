@@ -27,6 +27,8 @@ sr:
     errors:
       messages:
         blank: "је обавезан"
+        blank_plural: "су потребни"
+        invalid: "је погрешан"
     attributes:
       user:
         name: 'Прикажи назив'

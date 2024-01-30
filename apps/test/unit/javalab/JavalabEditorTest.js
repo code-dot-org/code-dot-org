@@ -39,7 +39,10 @@ import {allowConsoleWarnings} from '../../util/throwOnConsole';
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
 import javalabMsg from '@cdo/javalab/locale';
 import {JavalabEditorDialog} from '@cdo/apps/javalab/types';
-import {darkMode, lightMode} from '@cdo/apps/javalab/editorThemes';
+import {
+  darkMode,
+  lightMode,
+} from '@cdo/apps/lab2/views/components/editor/editorThemes';
 import {BackpackAPIContext} from '../../../src/javalab/BackpackAPIContext';
 
 describe('Java Lab Editor Test', () => {

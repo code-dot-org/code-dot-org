@@ -7,12 +7,6 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 ## Overview
 
-1. Clone the repo, which also may take a while.
-    - The simplest option is to clone via SSH with: `git clone git@github.com:code-dot-org/code-dot-org.git`
-    - The fastest option is to clone via HTTP with: `git clone https://github.com/code-dot-org/code-dot-org.git`. Although faster than SSH, this option requires you to reauthenticate every time you want to update. You will therefore probably want to switch to SSH after the initial clone with `git remote set-url origin git@github.com:code-dot-org/code-dot-org.git`
-
-1. `cd code-dot-org`
-
 1. Request and Configure AWS access (code.org staff) or configure local secrets (open source contributors). See [Configure AWS Access or Secrets](#configure-aws-access-or-secrets) below. This step is not required until rake is first run below, but staff may wish to submit the request first so its ready when rake is.
     <details> 
       <summary>Troubleshoot: wrong version of ruby</summary>
@@ -20,7 +14,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
       </details>
 
 1. Install OS-specific prerequisites
-   - See the appropriate section below: [macOS](#macos), [Ubuntu](#ubuntu-1804), [Windows](#windows)
+   - See the appropriate section below: [macOS](#macos), [Ubuntu](#ubuntu-2004), [Windows](#windows)
    - *Important*: When done, check for correct versions of these dependencies:
 
      ```sh
@@ -28,11 +22,16 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
      node --version  # --> v18.16.0
      ```
 
+1. Clone the repo, which also may take a while.
+    - Note you should have `git lfs --version` >= 3.0 installed prior to cloning, see OS-specific install steps referenced above.
+    - The simplest option is to clone via SSH with: `git clone git@github.com:code-dot-org/code-dot-org.git`
+    - The fastest option is to clone via HTTP with: `git clone https://github.com/code-dot-org/code-dot-org.git`. Although faster than SSH, this option requires you to reauthenticate every time you want to update. You will therefore probably want to switch to SSH after the initial clone with `git remote set-url origin git@github.com:code-dot-org/code-dot-org.git`
+
+1. `cd code-dot-org`
+
 1. `gem install bundler -v 2.3.22`
 
 1. `rbenv rehash`
-
-1. `bundle config --local without staging test production levelbuilder`
 
 1. `bundle install`
     - This step often fails to due environment-specific issues. Look in the [Bundle Install Tips](#bundle-install-tips) section below for steps to resolve many common issues.
@@ -137,6 +136,12 @@ Setup steps for macOS:
 
 1. Install [Homebrew](https://brew.sh/), a macOS package manager
 
+1. Install **Git LFS**
+    1. `brew install git-lfs`
+    1. From your homedir, run: `git lfs install`
+       - This adds a `[filter "lfs"]` section to your `~/.gitconfig`.
+       - Note: the install command must be run while you are **outside** a git repo directory. If you run it from inside a git repo, it will instead try to install git hooks in that repo.
+
 1. Install [Redis](https://redis.io/) via `brew install redis`
 
 1. Install [MySql 5.7](https://dev.mysql.com/doc/refman/5.7/en/) via `brew install mysql@5.7`
@@ -204,11 +209,12 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
 1. `sudo apt-get update`
 1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-11-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript build-essential redis-server rbenv chromium-browser parallel`
     * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
-
-    * Troubleshoot: `E: Package 'pdftk' has no installation candidate`. If you run into this error, remove `pdftk` from the previous command and run it again. Then try installing `pdftk` another way:
-        * Ubuntu 20.04: `sudo snap install pdftk`. 
-        * If you can't get `pdftk` installed, it is ok to skip installing this package, and keep in mind that the `PDFMergerTest` test may fail when you try to run the pegasus tests locally.
-   
+    <details> 
+      <summary>Troubleshoot: `E: Package 'pdftk' has no installation candidate`.</summary>
+      - If you run into this error, remove `pdftk` from the previous command and run it again. Then try installing `pdftk` another way:
+          - Ubuntu 18.04: `sudo snap install pdftk`.
+          - If you can't get `pdftk` installed, it is ok to skip installing this package, and keep in mind that the `PDFMergerTest` test may fail when you try to run the pegasus tests locally.
+    </details>
 1. *(If working from an EC2 instance)* `sudo apt-get install -y libreadline-dev libffi-dev`
 1. configure your system so that `~/.bashrc` (or another startup file of your choice) will be run whenever you open a shell
     1. if you are using bash and setting up a new linux system, you may need to modify `~/.bash_profile` or `~/.profile` (your login shell configuration file) as per [this explanation](https://joshstaiger.org/archives/2005/07/bash_profile_vs.html), which recommends adding these lines:
@@ -218,6 +224,15 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
           source ~/.bashrc
         fi     
         ```
+1. Install git-lfs >= 3.0
+    1. The default version of git-lfs in Ubuntu 20.04 is 2.9. This does not have support for Git SSH operations. Therefore, you'll want to add packagecloud.io apt repositories to your system to get a newer version of Git LFS (this step is not required if using Ubuntu >= 22.04): 
+        `curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash`
+    1. `apt-get install git-lfs`
+    1. Ensure `git-lfs --version` is >= 3.0. Git LFS < 3.0 only supports HTTPS, not SSH.
+    1. From your homedir, run: `git lfs install`
+       - This adds a `[filter "lfs"]` section to your `~/.gitconfig`.
+       - Note: the install command must be run while you are **outside** a git repo directory. If you run it from inside a git repo, it will instead try to install git hooks in that repo.
+
 1. Install Node and Nodejs
     1. Install the latest version of [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm)
     1. Running `nvm install` or `nvm use` within the project directory will install and use the version specified in [.nvmrc](.nvmrc)
@@ -261,21 +276,28 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
     1. Restart your machine. WSL 2 will be the default if your Windows version is sufficiently updated.
     1. `wsl --set-default-version 2`
         1. You may need to [update the WSL 2 Linux kernel](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel)
-1. [Install Ubuntu 20.04](https://apps.microsoft.com/store/detail/ubuntu-20046-lts/9MTTCL66CPXJ) (Windows Store link)
-    * If you want to follow the Ubuntu setup exactly, Ubuntu 20.04 is available from the [Microsoft docs](https://docs.microsoft.com/en-us/windows/wsl/install-manual).
 1. Make sure virtualization is turned on your BIOS settings.
+1. Install [Ubuntu 20.04](https://www.microsoft.com/store/productId/9NBLGGH4MSV6) or [Ubuntu 22.04.3 LTS](https://apps.microsoft.com/detail/9PN20MSR04DW) 
+    * If you want to follow the Ubuntu setup exactly, Ubuntu 18.04 is available from the [Microsoft docs](https://docs.microsoft.com/en-us/windows/wsl/install-manual).
 1. From the command line, run `wsl`, or from the Start menu, find and launch 'Ubuntu'. When this runs for the first time, WSL will complete installation in the resulting terminal window.
-1. Make it so that you can run apps tests locally. You have two options here:
-    1. If you have Google Chrome installed on Windows, add the following to `~/.bashrc` or your desired shell configuration file to make it accessible from WSL:
-        1. `export CHROME_BIN='/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe'`
-    1. Alternatively, ensure chromium-browser or alternatively google-chrome is installed in WSL
-        1. Try running `chromium-browser`. If this does not work with the error message `Command '/usr/bin/chromium-browser' requires the chromium snap to be installed.`, you can instead install google chrome by running the following:
+1. Optionally configure your **zsh** experience. [instructions](https://itsfoss.com/zsh-ubuntu/)
+1. Make it so that you can run apps tests locally by setting up the `CHROME_BIN` env var. You have a few options here:
+    1. If you have Google Chrome installed on Windows, add the path to chrome.exe to `~/.bashrc` or your desired shell configuration file to make it accessible from WSL, likely one of the following paths:
+        1. `export CHROME_BIN="/mnt/c/Program\ Files\ (x86)/Google/Chrome/Application/chrome.exe"` or
+        1. `export CHROME_BIN="/mnt/c/Program\ Files/Google/Chrome/Application/chrome.exe"`
+    1. Alternatively, ensure chromium-browser or google-chrome is installed in WSL
+        1. Try running `chromium-browser`.
+            1. If that works, add `export CHROME_BIN=$(which chromium-browser)` to your `~/.bashrc` or desired shell configuration file.
+        1. If this does not work with the error message `Command '/usr/bin/chromium-browser' requires the chromium snap to be installed.`, you can instead install google chrome by running the following:
             1. `wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb`
             1. `sudo apt install ./google-chrome-stable_current_amd64.deb`
-1. Followed by the [Ubuntu instructions](#ubuntu-1804) to install required tools on the Ubuntu instance, _with the following observations_:
-    * If google-chrome was installed in the last step, update CHROME_BIN variable to point to google chrome (in step 9), `export CHROME_BIN=$(which google-chrome)`
+            1. Add `export CHROME_BIN=$(which google-chrome)` to your `~/.bashrc` or desired shell configuration file.
+        
+1. Follow the [Ubuntu instructions](#ubuntu-2004) to install required tools on the Ubuntu instance, _with the following modifications_:
+    * There is an ongoing clock skew issue going on with wsl. This can cause issues with `apt update`, ssl certs, among other things. You can force your clock to sync with `sudo hwclock -s` to fix these issues temporarily. See the [megathread](https://github.com/microsoft/WSL/issues/10006) for more details.
+    * Skip exporting `CHROME_BIN` since you already did so above.
     * Before updating the root password to empty in SQL (step 10), restart MySQL using `sudo /etc/init.d/mysql restart`
-1. Followed by the [overview instructions](#overview), _with the following observations_:
+1. Follow the [overview instructions](#overview), _with the following modifications_:
     * Before running `bundle exec rake install`, restart the mysql service: `sudo service mysql start`
     * If localhost responds slowly and you have exhausted conventional options (e.g. turning off Firewall during testing), try moving the code-dot-org repo outside of the /mnt/ directory (e.g. ~) to improve responsiveness
 
@@ -396,44 +418,7 @@ Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md) fo
 
 On Apple Silicon/Intel Mac, additional steps are required to get `bundle install` to work.
 
-If you're having issues with installing ```libv8``` and/or ```mini_racer``` gems - 
-make you sure you've already run ```bundle config --local without staging test production levelbuilder``` command
-and run it if you haven't.
-
-<details>
-<summary>If that didn't help - do following:</summary>
-
-Simply run (if you're having issues only with part of gems in the command - you can run it with just needed gems)
-```
-bundle update libv8 mini_racer
-```
-To fix issues in one line. It will update the Gemfile.lock file for you in the same way as described below.
-
-OR
-
-In Gemfile.lock, replace the two occurrences of libv8 (8.4.255.0) with libv8-node (15.14.0.0).
-Also update mini_racer to 0.4.0 (from 0.3.1):
-
-```
-libv8-node (15.14.0.0)
-...
-mini_racer (0.4.0)
-  libv8-node (~> 15.14.0.0)
-```
-
-FINALLY
-
-To prevent Gemfile.lock changes from constantly appearing in your commits - run following commands:
-```
-git update-index --assume-unchanged Gemfile.lock
-git update-index --no-assume-unchanged Gemfile.lock
-git ls-files -v | grep '^[[:lower:]]'
-```
-</details>
-
-
-
-Then run the following commands to successfully complete a bundle install:
+First, run the following commands to successfully complete a bundle install:
 
 ```sh
 gem install bundler -v 2.3.22
@@ -514,14 +499,6 @@ bundle add rmagick
 
 Restart `dashboard-server` and if all went well, we see text rendering on customized certificates again.
 
-#### libv8
-
-If you run into an error with libv8 while running bundle install
-
-- Uninstall libv8: `gem uninstall libv8`
-- Make sure the gem no longer exists with: `gem list libv8`
-- Install the current version used in code.org repo: `gem install libv8 -v CURRENT_CODEORG_VERSION -- --with-system-v8` (you can find what to fill in for CURRENT_CODEORG_VERSION as the current version of libv8 in the [Gemfile.lock](./Gemfile.lock)).
-
 #### mysql2
 
 If you run into an issue about mysql2 while running `bundle install` and the error output includes "ld: library not found for -lssl" try :
@@ -534,16 +511,6 @@ If you run into an issue about mysql2 while running `bundle install` and the err
 If you run into an error like "Don't know how to set rpath on your system, if MySQL libraries are not in path mysql2 may not load" during `bundle install` and are running on a Mac with M1, try :
 
 - `gem install mysql2 -v '0.5.2' -- --with-opt-dir=$(brew --prefix openssl) --with-ldflags=-L/opt/homebrew/Cellar/zstd/1.5.0/lib`
-
-#### therubyracer
-
-If you run into an issue about therubyracer while running `bundle install` try :
-
-- `gem uninstall libv8`
-- `gem install therubyracer -v CURRENT_CODEORG_VERSION` (you can find  what to fill in for CURRENT_CODEORG_VERSION as the current version of the therubyracer in the [Gemfile.lock](./Gemfile.lock)).
-- `gem install libv8 -v CURRENT_CODEORG_VERSION -- --with-system-v8` (You can find what to fill in for CURRENT_CODEORG_VERSION as the current version of libv8 in the [Gemfile.lock](./Gemfile.lock)).
-
-(Steps from [this stackoverflow question](https://stackoverflow.com/questions/19577759/installing-libv8-gem-on-os-x-10-9))
 
 #### bundler gem
 

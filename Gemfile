@@ -208,7 +208,7 @@ gem 'retryable' # retry code blocks when they throw exceptions
 # Used by `uglifier` to minify JS assets in the Asset Pipeline.
 gem 'execjs'
 # JavaScript runtime used by ExecJS.
-gem 'mini_racer', group: [:staging, :test, :production, :levelbuilder]
+gem 'mini_racer'
 
 gem 'jwt', '~> 2.7.0'
 
@@ -349,6 +349,6 @@ gem 'pry', '~> 0.14.0'
 # Google's Compact Language Detector
 gem 'cld'
 
-gem 'crowdin-api', '~> 1.2.1'
+gem 'crowdin-api', '~> 1.6.0'
 
 gem "delayed_job_active_record", "~> 4.1"

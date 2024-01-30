@@ -22,6 +22,7 @@ import {BLOCK_TYPES} from '../constants';
 import {frameSizes} from './cdoConstants';
 import CdoTrashcan from './cdoTrashcan';
 import {getAlphanumericId} from '@cdo/apps/utils';
+import {initializeScrollbarPair} from './cdoScrollbar';
 
 // This class creates the modal function editor, which is used by Sprite Lab and Artist.
 export default class FunctionEditor {
@@ -61,7 +62,7 @@ export default class FunctionEditor {
       move: {
         drag: false,
         scrollbars: {
-          horizontal: false,
+          horizontal: true,
           vertical: true,
         },
         wheel: true,
@@ -80,7 +81,7 @@ export default class FunctionEditor {
     });
     const scrollOptionsPlugin = new ScrollOptions(this.editorWorkspace);
     scrollOptionsPlugin.init();
-
+    initializeScrollbarPair(this.editorWorkspace);
     // Disable blocks that aren't attached. We don't want these to generate
     // code in the hidden workspace.
     this.editorWorkspace.addChangeListener(disableOrphans);
@@ -98,13 +99,12 @@ export default class FunctionEditor {
     }
 
     // Editor workspace toolbox procedure category callback
-    // we have to pass the main ws so that the correct procedures are populated
-    // false to not show the new function button inside the modal editor
+    const functionEditorOpen = true;
     this.editorWorkspace.registerToolboxCategoryCallback('PROCEDURE', () =>
-      functionsFlyoutCategory(Blockly.mainBlockSpace, true)
+      functionsFlyoutCategory(this.editorWorkspace, functionEditorOpen)
     );
     this.editorWorkspace.registerToolboxCategoryCallback('Behavior', () =>
-      behaviorsFlyoutCategory(Blockly.mainBlockSpace, true)
+      behaviorsFlyoutCategory(this.editorWorkspace, functionEditorOpen)
     );
 
     // Set up the "new procedure" button in the toolbox

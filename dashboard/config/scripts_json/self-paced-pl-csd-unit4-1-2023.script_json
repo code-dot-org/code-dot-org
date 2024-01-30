@@ -4,11 +4,12 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSD Self Paced PL",
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-03 23:48:18 UTC",
+    "serialized_at": "2024-01-25 21:21:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -105,6 +106,7 @@
       "key": "9d0e4ad8-3e96-4549-bc17-042c797de4ac",
       "position": 1,
       "properties": {
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "9d0e4ad8-3e96-4549-bc17-042c797de4ac",
@@ -117,6 +119,7 @@
       "key": "0c2615b7-d5a8-49d4-9a9b-0f18fd8c2206",
       "position": 1,
       "properties": {
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "0c2615b7-d5a8-49d4-9a9b-0f18fd8c2206",
@@ -129,6 +132,7 @@
       "key": "ca2ddfd0-c3e2-4cca-8bf2-50144ee83493",
       "position": 1,
       "properties": {
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "ca2ddfd0-c3e2-4cca-8bf2-50144ee83493",
@@ -141,6 +145,7 @@
       "key": "a88e082a-2b61-42a2-ae79-b89304fdcace",
       "position": 1,
       "properties": {
+        "duration": 15
       },
       "seeding_key": {
         "lesson_activity.key": "a88e082a-2b61-42a2-ae79-b89304fdcace",
@@ -989,14 +994,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "SP-VPL-CSD-21-Navigation-Mod2_physical-computing-microbit"
+          "SP-CSD-Navigation_Unit4"
         ],
         "progression": "Wrap Up"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-CSD-21-Navigation-Mod2_physical-computing-microbit"
+          "SP-CSD-Navigation_Unit4"
         ],
         "lesson.key": "Navigating Support",
         "lesson_group.key": "",
@@ -1004,7 +1009,7 @@
         "activity_section.key": "61cf3d6b-b0c8-4c16-a704-c0b4b3f19ef8"
       },
       "level_keys": [
-        "SP-VPL-CSD-21-Navigation-Mod2_physical-computing-microbit"
+        "SP-CSD-Navigation_Unit4"
       ]
     }
   ],
@@ -1335,9 +1340,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-CSD-21-Navigation-Mod2_physical-computing-microbit",
+        "level.key": "SP-CSD-Navigation_Unit4",
         "script_level.level_keys": [
-          "SP-VPL-CSD-21-Navigation-Mod2_physical-computing-microbit"
+          "SP-CSD-Navigation_Unit4"
         ],
         "lesson.key": "Navigating Support",
         "lesson_group.key": "",

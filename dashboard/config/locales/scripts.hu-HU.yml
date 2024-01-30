@@ -62,6 +62,7 @@ hu:
             Plants vs. Zombies karaktereivel!
           description_short: Ismerd meg a számítógép-tudomány alapjait közösen a sok
             szórakoztató karakterrel!
+          name: A kódolás órája
           student_description: Próbáld ki az alapszintű számítástechnikát az Angry
             Birds, Plants vs. Zombies karaktereivel!
           title: Kódolás órája 2013
@@ -1025,6 +1026,12 @@ hu:
               name: Java laboratórium
             lesson-6:
               name: Ciklusok
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kérdőív
+            lessonGroup-3:
+              display_name: Tartalom
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1063,6 +1070,10 @@ hu:
           lessons:
             lesson-4:
               name: változók
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1095,6 +1106,10 @@ hu:
           lessons:
             lesson-3:
               name: Számláló ciklusok
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1121,6 +1136,10 @@ hu:
             lessonGroup-2:
               display_name: Tartalom
         csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
@@ -1159,6 +1178,10 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1191,6 +1214,10 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1218,6 +1245,10 @@ hu:
             lessonGroup-5:
               display_name: Homokozó
         csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
@@ -1254,6 +1285,12 @@ hu:
             lessonGroup-5:
               display_name: Kérdőív
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-4:
+              display_name: Kérdőív
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
@@ -2300,6 +2337,12 @@ hu:
               display_name: Kérdőív
             csp_unit1_2020:
               display_name: '1.  fejezet: Digitális információ'
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+            csp_unit1_2020:
+              display_name: '1.  fejezet: Digitális információ'
         csp1-dlp:
           lesson_groups:
             content:
@@ -2352,6 +2395,10 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Tanfomlyam Utáni Felmérés
+        csp10-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tanfomlyam Utáni Felmérés
         csp10-pilot-staging:
           lesson_groups:
             csp_conditionals:
@@ -2401,6 +2448,10 @@ hu:
             csp_unit2_2020:
               display_name: '2.  lecke: Az internet'
         csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: '2.  lecke: Az internet'
+        csp2-2024:
           lesson_groups:
             csp_unit2_2020:
               display_name: '2.  lecke: Az internet'
@@ -2569,6 +2620,16 @@ hu:
               display_name: Projekt
             csp_variables:
               display_name: változók
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Feltételek
+            csp_functions:
+              display_name: Függvények
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: változók
         csp4-dlp:
           lesson_groups:
             content:
@@ -2685,6 +2746,12 @@ hu:
               display_name: Projekt
             lessonGroup-5:
               display_name: Tanfomlyam Utáni Felmérés
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Adat
+            lessonGroup-5:
+              display_name: Tanfomlyam Utáni Felmérés
         csp5-dlp:
           lesson_groups:
             content:
@@ -2753,6 +2820,16 @@ hu:
               display_name: Ciklusok
             lessonGroup-5:
               display_name: Projekt
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listák
+            lessonGroup-2:
+              display_name: Tanfomlyam Utáni Felmérés
+            lessonGroup-3:
+              display_name: Ciklusok
+            lessonGroup-5:
+              display_name: Projekt
         csp6-pilot:
           lesson_groups:
             content:
@@ -2785,6 +2862,10 @@ hu:
           lesson_groups:
             lessonGroup-3:
               display_name: Tanfomlyam Utáni Felmérés
+        csp7-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Tanfomlyam Utáni Felmérés
         csp7-pilot:
           lesson_groups:
             required:
@@ -2798,6 +2879,10 @@ hu:
             lessonGroup-3:
               display_name: Tanfomlyam Utáni Felmérés
         csp8-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Tanfomlyam Utáni Felmérés
+        csp8-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: Tanfomlyam Utáni Felmérés
@@ -2824,6 +2909,10 @@ hu:
             lessonGroup-2:
               display_name: Tanfomlyam Utáni Felmérés
         csp9-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tanfomlyam Utáni Felmérés
+        csp9-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Tanfomlyam Utáni Felmérés
@@ -3541,6 +3630,9 @@ hu:
           description_short: '2.  Fázis: Online összetett nyári tanulmány'
           student_description: '2.  Fázis: Online összetett nyári tanulmány'
         self-paced-pl-k5-2024-1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Első lépések
           lessons:
             lesson-3:
               name: Ciklusok
@@ -3548,6 +3640,9 @@ hu:
               name: Feltételek
           title: Bevezetés a számítógép tudományába
         self-paced-pl-k5-2024-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Első lépések
           lessons:
             lesson-3:
               name: Események
