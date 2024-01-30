@@ -11,7 +11,7 @@
     "new_name": null,
     "family_name": "music-intro",
     "serialized_at": "2024-01-25 07:56:23 UTC",
-    "published_state": "in_development",
+    "published_state": "beta",
     "instruction_type": "self_paced",
     "instructor_audience": "teacher",
     "participant_audience": "student",
