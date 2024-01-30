@@ -52,6 +52,7 @@ function ProgressTableV2({
           <ExpandedProgressDataColumn
             lesson={lesson}
             sortedStudents={sortedStudents}
+            sectionId={sectionId}
             removeExpandedLesson={lessonId =>
               setExpandedLessons(
                 expandedLessonIds.filter(id => id !== lessonId)
@@ -64,7 +65,6 @@ function ProgressTableV2({
         return (
           <LessonProgressDataColumn
             lesson={lesson}
-            sectionId={sectionId}
             sortedStudents={sortedStudents}
             addExpandedLesson={lessonId =>
               setExpandedLessons([...expandedLessonIds, lessonId])

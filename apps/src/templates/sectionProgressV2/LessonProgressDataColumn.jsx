@@ -9,7 +9,6 @@ import LessonProgressColumnHeader from './LessonProgressColumnHeader';
 
 function LessonProgressDataColumn({
   lesson,
-  sectionId,
   lessonProgressByStudent,
   sortedStudents,
   addExpandedLesson,
@@ -25,7 +24,6 @@ function LessonProgressDataColumn({
         {sortedStudents.map(student => (
           <LessonDataCell
             studentId={student.id}
-            sectionId={sectionId}
             lesson={lesson}
             studentLessonProgress={
               lessonProgressByStudent[student.id][lesson.id]
@@ -41,7 +39,6 @@ function LessonProgressDataColumn({
 
 LessonProgressDataColumn.propTypes = {
   sortedStudents: PropTypes.arrayOf(studentShape),
-  sectionId: PropTypes.number,
   lessonProgressByStudent: PropTypes.objectOf(
     PropTypes.objectOf(studentLessonProgressType)
   ).isRequired,
