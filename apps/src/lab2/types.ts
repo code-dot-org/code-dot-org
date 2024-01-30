@@ -28,7 +28,7 @@ export interface ProjectSources {
   // as nested JSON which we'll need to support eventually.
   source: string;
   // Optional lab-specific configuration for this project
-  labConfig?: {[key: string]: object};
+  labConfig?: {[key in AppName]?: Record<string, string | object>};
   // Add other properties (animations, html, etc) as needed.
 }
 

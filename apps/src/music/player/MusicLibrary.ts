@@ -178,6 +178,6 @@ interface FolderGroup {
   folders: SoundFolder[];
 }
 
-interface Sounds {
-  [index: string]: [string];
+export interface Sounds {
+  [index: string]: string[];
 }
