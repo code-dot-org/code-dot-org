@@ -34,6 +34,7 @@ const CompilationTutor = ({levelId}) => {
   const handleSend = async studentCode => {
     dispatch(
       askAITutor({
+        levelId: levelId,
         systemPrompt: systemPrompt,
         studentCode: studentCode,
         tutorType: TutorTypes.COMPILATION,
