@@ -9,7 +9,7 @@ import React, {
 import classNames from 'classnames';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
-// import moduleStyles from './checkboxDropdown.module.scss';
+import moduleStyles from './checkboxDropdown.module.scss';
 import style from '@cdo/apps/templates/checkbox-dropdown.module.scss';
 import Button from '@cdo/apps/templates/Button';
 
@@ -71,9 +71,9 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   onChange,
   onSelectAll,
   onClearAll,
-  // disabled = false,
-  // color = 'black',
-  // size = 'm',
+  disabled = false,
+  color = 'black',
+  size = 'm',
 }) => {
   const {activeDropdownName, setActiveDropdownName} = useDropdownContext();
   const dropdownRef: React.MutableRefObject<HTMLDivElement | null> =
@@ -126,39 +126,36 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
     [activeDropdownName, name]
   );
 
-  // console.log(isOpen);
-  // console.log(activeDropdownName);
-  // console.log(name);
-
   // Collapse dropdown if 'Escape' is pressed
   const onKeyDown: (e: KeyboardEvent) => void = e => {
-    // console.log('triggered');
     if (e.keyCode === 27) {
       e.currentTarget.classList.remove('open');
     }
   };
-  // const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   console.log('handleOnChange triggered', e);
-  //   console.log('handleOnChange target', e.target.value);
-  //   onChange(e);
-  // };
+
   console.log(allOptions);
   console.log(checkedOptions);
   return (
     <div
       id={`${name}-dropdown`}
-      className={classNames('dropdown', {open: isOpen})}
+      className={classNames(
+        {[moduleStyles.open]: isOpen},
+        moduleStyles.dropdownContainer,
+        moduleStyles[`dropdownContainer-${color}`],
+        moduleStyles[`dropdownContainer-${size}`]
+      )}
       onKeyDown={onKeyDown}
       ref={dropdownRef}
     >
       <button
         id={`${name}-dropdown-button`}
         type="button"
-        className={classNames('selectbox', style.dropdownButton)}
+        className={classNames(moduleStyles.dropdownButton)}
         data-toggle="dropdown"
         aria-haspopup={true}
         aria-label={`${name} filter dropdown`}
         onClick={toggleDropdown}
+        disabled={disabled}
       >
         {checkedOptions.length > 0 && (
           <FontAwesomeV6Icon
@@ -168,18 +165,14 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
             title={i18n.filterCheckIconTitle({filter_label: labelText})}
           />
         )}
-        <Typography semanticTag="span" visualAppearance="body-two">
-          {labelText}
-        </Typography>
+        <span className={moduleStyles.dropdownLabel}>{labelText}</span>
         <FontAwesomeV6Icon
           // id="chevron-down-icon"
           iconStyle="solid"
           iconName="chevron-down"
         />
       </button>
-      <form
-        className={classNames('dropdown-menu', style.dropDownMenuContainer)}
-      >
+      <form className={classNames(moduleStyles.dropdownMenuContainer)}>
         <ul className={style.dropdownCheckboxUL}>
           {allOptions.map(({value, label}) => (
             <li key={value} className="checkbox form-group">
