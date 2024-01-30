@@ -10,7 +10,7 @@ import {validationSystemPrompt} from '@cdo/apps/aiTutor/constants';
 import {TutorTypes} from '@cdo/apps/aiTutor/types';
 
 // AI Tutor feature that explains to students why their code is not passing tests.
-const ValidationTutor = ({levelId}) => {
+const ValidationTutor = ({levelId, scriptId}) => {
   const dispatch = useDispatch();
 
   const sources = useSelector(state => state.javalabEditor.sources);
@@ -36,6 +36,7 @@ const ValidationTutor = ({levelId}) => {
     dispatch(
       askAITutor({
         levelId: levelId,
+        scriptId: scriptId,
         systemPrompt: systemPrompt,
         studentCode: studentCode,
         tutorType: TutorTypes.VALIDATION,
@@ -82,4 +83,5 @@ export default ValidationTutor;
 
 ValidationTutor.propTypes = {
   levelId: PropTypes.number,
+  scriptId: PropTypes.number,
 };

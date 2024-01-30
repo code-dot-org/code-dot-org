@@ -38,6 +38,8 @@ const initialState: AITutorState = {
 
 interface ChatContext {
   levelId?: number;
+  scriptId?: number;
+  isProjectBacked: boolean;
   systemPrompt: string;
   studentCode: string;
   tutorType: TutorTypes;
@@ -71,8 +73,9 @@ export const askAITutor = createAsyncThunk(
 
     const interactionData = {
       levelId: ChatContext.levelId,
-      scriptId: 123,
+      scriptId: ChatContext.scriptId,
       type: ChatContext.tutorType,
+      isProjectBacked: ChatContext.isProjectBacked,
       prompt: prompt,
       status: chatApiResponse?.status,
       aiResponse: chatApiResponse?.content,

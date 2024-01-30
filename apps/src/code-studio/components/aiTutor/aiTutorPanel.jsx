@@ -11,7 +11,7 @@ import {addAIResponse} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {RadioButtonsGroup} from '@cdo/apps/componentLibrary/radioButton';
 const icon = require('@cdo/static/ai-bot.png');
 
-const AITutorPanel = ({level}) => {
+const AITutorPanel = ({level, scriptId}) => {
   const dispatch = useDispatch();
   const isCodingLevel = level.type === 'Javalab';
 
@@ -58,8 +58,16 @@ const AITutorPanel = ({level}) => {
           onChange={() => onChange(event)}
         />
       </div>
-      {compilationSelected && <CompilationTutor levelId={level.id} />}
-      {validationSelected && <ValidationTutor levelId={level.id} />}
+      {compilationSelected && (
+        <CompilationTutor
+          levelId={level.id}
+          isProjectBacked={level.isProjectBacked}
+          scriptId={scriptId}
+        />
+      )}
+      {validationSelected && (
+        <ValidationTutor levelId={level.id} scriptId={scriptId} />
+      )}
       {questionSelected && <GeneralChatTutor />}
     </AITutorPanelContainer>
   );
@@ -70,7 +78,9 @@ AITutorPanel.propTypes = {
     id: PropTypes.number,
     type: PropTypes.string,
     hasValidation: PropTypes.bool,
+    isProjectBacked: PropTypes.bool,
   }),
+  scriptId: PropTypes.number,
 };
 
 export default AITutorPanel;
