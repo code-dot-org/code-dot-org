@@ -16,35 +16,17 @@ jobs:
     if: github.actor == 'pablo-code-org'
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-        with:
-          path: code-dot-org
-
-      - name: Find and Cache Stale Files
-        id: stalefiles
-        run: |
-          find code-dot-org -type f -not -path './.git/*' -mtime +730 > stale_files.txt
-          echo "::set-output name=stale_hash::$(sha256sum stale_files.txt | cut -d ' ' -f1)"
-
-      - name: Cache stale files
-        uses: actions/cache@v2
-        with:
-          path: |
-            $(cat stale_files.txt)
-          key: ${{ runner.os }}-stale-${{ steps.stalefiles.outputs.stale_hash }}
-
-      - name: Get Branch Name from Hardcoded Pull Request ID
+      - name: Get Branch Name from Pull Request ID
         id: get_branch
         run: |
-          PR_ID=55766
+          PR_ID=${{ github.event.inputs.pr_id }}
           PR_DATA=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
                         https://api.github.com/repos/code-dot-org/code-dot-org/pulls/$PR_ID)
           BRANCH_NAME=$(echo $PR_DATA | jq -r .head.ref)
           echo "Branch Name: $BRANCH_NAME"
           echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
 
-      - name: Checkout Branch
+      - name: Checkout Repository at Branch
         uses: actions/checkout@v2
         with:
           ref: ${{ steps.get_branch.outputs.branch_name }}
@@ -58,12 +40,6 @@ jobs:
 
       - name: Set up Docker Environment
         run: docker build -t code-dot-org-testing-docker-image -f ./code-dot-org/docker/dockerfiles/Dockerfile ./code-dot-org
-    
-      - name: Find ui_tests.sh file
-        run: |
-          docker run --rm --entrypoint /bin/bash \
-            code-dot-org-testing-docker-image \
-            -c "find / -type f -name 'ui_tests.sh' 2>/dev/null"
           
       - name: Run ls Unit Tests without working dir
         run: |
