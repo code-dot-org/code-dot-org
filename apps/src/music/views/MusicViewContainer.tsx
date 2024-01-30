@@ -60,7 +60,7 @@ const useTypedSelector: TypedUseSelectorHook<{
   };
 }> = useSelector;
 
-const PlayerContainer: React.FunctionComponent<PlayerContainerProps> = ({
+const MusicViewContainer: React.FunctionComponent<PlayerContainerProps> = ({
   inIncubator,
 }) => {
   const dispatch = useAppDispatch();
@@ -337,4 +337,4 @@ const PlayerContainer: React.FunctionComponent<PlayerContainerProps> = ({
   );
 };
 
-export default PlayerContainer;
+export default MusicViewContainer;
