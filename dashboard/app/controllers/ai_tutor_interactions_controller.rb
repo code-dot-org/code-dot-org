@@ -4,9 +4,13 @@ class AiTutorInteractionsController < ApplicationController
 
   # POST /ai_tutor_interactions
   def create
-    puts "ai_tutor_interaction_params"
-    pp ai_tutor_interaction_params
-    # @ai_tutor_interaction = AiTutorInteraction.new(params)
+    return render(status: :forbidden, json: {error: 'This user does not have access to AI Tutor'}) unless current_user.has_ai_tutor_access?
+    @ai_tutor_interaction = AiTutorInteraction.new(params)
+    if @ai_tutor_interaction.save
+      render json: {message: `successfully created AiTutorInteraction with id: #{@ai_tutor_interaction.id}`}
+    else
+      render :not_acceptable, json: {error: 'There was an error creating a new AiTutorInteraction.'}
+    end
   end
 
   def ai_tutor_interaction_params

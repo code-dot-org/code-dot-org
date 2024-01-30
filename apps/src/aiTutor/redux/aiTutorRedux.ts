@@ -72,7 +72,6 @@ export const askAITutor = createAsyncThunk(
     const prompt = ChatContext.systemPrompt + ChatContext.studentCode;
 
     const interactionData = {
-      userId: 123456789,
       levelId: ChatContext.levelId,
       scriptId: 123,
       type: ChatContext.tutorType,
