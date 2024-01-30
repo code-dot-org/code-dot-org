@@ -40,4 +40,12 @@ describe('firehoseDataSize', () => {
     expect(logToCloud.logError).to.be.calledOnce;
     expect(validateFirehoseDataSize(invalid_record)).to.be.true;
   });
+
+  it('ensures validation does not fail empty and undefined cases', () => {
+    const null_record = {};
+    expect(validateFirehoseDataSize(null_record)).not.to.be.true;
+    expect(logToCloud.logError).not.to.be.called;
+    expect(validateFirehoseDataSize(undefined)).not.to.be.true;
+    expect(logToCloud.logError).not.to.be.called;
+  });
 });

@@ -294,8 +294,8 @@ class FirehoseClient {
 
 // Verifies that given data will not fail firehose batch
 function validateFirehoseDataSize(data) {
-  const json_size = new Blob([data.data_json]).size;
-  const string_size = new Blob([data.data_string]).size;
+  const json_size = new Blob([data?.data_json]).size;
+  const string_size = new Blob([data?.data_string]).size;
   if (json_size > maxDataJSONBytes) {
     logToCloud.logError(`data_json column too large (${json_size} bytes)`);
     return true;
