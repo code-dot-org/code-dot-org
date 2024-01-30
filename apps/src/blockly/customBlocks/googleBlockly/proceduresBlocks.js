@@ -162,7 +162,7 @@ GoogleBlockly.Extensions.register('procedure_def_mini_toolbox', function () {
 });
 
 // Adds an SVG frame to procedure definition blocks when they're on the main workspace.
-// Not used in Music Lab, embedded workspaces, or the hidden definition workspace.
+// Not used in Music Lab, the editor workspace, or embedded workspaces.
 // Note: The workspace frame used in the modal function editor is added there.
 GoogleBlockly.Extensions.register('procedures_block_frame', function () {
   if (
