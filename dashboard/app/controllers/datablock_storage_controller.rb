@@ -159,6 +159,17 @@ class DatablockStorageController < ApplicationController
     render json: kvps
   end
 
+  #### METHODS USED BY THE DATASET BROWSER FOR CREATING/MANIUPULATING DATA ####
+
+  def create_table
+    table_name = params[:table_name]
+    table = DatablockStorageTable.where(channel_id: params[:channel_id], table_name: table_name).first_or_create
+    table.columns = '["id"]'
+    table.save!
+
+    render json: true
+  end
+
   private
 
   def validate_channel_id

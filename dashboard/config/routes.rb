@@ -245,6 +245,9 @@ Dashboard::Application.routes.draw do
             # Dataset Browser Methods
             get "/#{key}/:channel_id/datablock_storage/get_table_names", to: 'datablock_storage#get_table_names'
             get "/#{key}/:channel_id/datablock_storage/get_key_values", to: 'datablock_storage#get_key_values'
+
+            # Dataset Browser Action Methods
+            post "/#{key}/:channel_id/datablock_storage/create_table", to: 'datablock_storage#create_table'
           end
 
           get "/#{key}", to: 'projects#load', key: key.to_s, as: "#{key}_project"
