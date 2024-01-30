@@ -6,8 +6,8 @@ import AutocompleteSelector from '@cdo/apps/templates/watchers/AutocompleteSelec
 import {allowConsoleWarnings} from '../../../util/testUtils';
 
 describe('AutocompleteSelector', () => {
-  // // TODO: (madelynkasula) Silences componentWillReceiveProps deprecation warning due to React 16 upgrade.
-  // // This warning should be addressed after we've upgraded React.
+  // TODO: (madelynkasula) Silences componentWillReceiveProps deprecation warning due to React 16 upgrade.
+  // This warning should be addressed after we've upgraded React.
   allowConsoleWarnings();
 
   let component, componentInstance, clicked, mousedOver, clickOutside;
