@@ -30,7 +30,7 @@ h1 {
 }
 
 h2 {
-  color: #00adbc;
+  color: var(--brand_primary_default);
   font-size: 22px;
   font-family: var(--main-font);
   font-weight: var(--semi-bold-font-weight);

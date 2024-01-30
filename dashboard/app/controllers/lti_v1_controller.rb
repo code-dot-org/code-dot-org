@@ -255,19 +255,20 @@ class LtiV1Controller < ApplicationController
   # Creates a new LtiIntegration
   def create_integration
     begin
-      params.require([:client_id, :lms, :email])
+      params.require([:name, :client_id, :lms, :email])
     rescue
-      render status: :bad_request, json: {error: I18n.t('lti.error.missing_params')}
-      return
+      flash.alert = I18n.t('lti.error.missing_params')
+      return redirect_to lti_v1_integrations_path
     end
 
+    integration_name = params[:name]
     client_id = params[:client_id]
     platform_name = params[:lms]
     admin_email = params[:email]
 
     unless Policies::Lti::LMS_PLATFORMS.key?(platform_name.to_sym)
-      render status: :bad_request, json: {error: I18n.t('lti.error.unsupported_lms_type')}
-      return
+      flash.alert = I18n.t('lti.error.unsupported_lms_type')
+      return redirect_to lti_v1_integrations_path
     end
 
     platform_urls = Policies::Lti::LMS_PLATFORMS[platform_name.to_sym]
@@ -277,9 +278,11 @@ class LtiV1Controller < ApplicationController
     access_token_url = platform_urls[:access_token_url]
 
     existing_integration = Queries::Lti.get_lti_integration(issuer, client_id)
+    @integration_status = nil
 
     if existing_integration.nil?
       Services::Lti.create_lti_integration(
+        name: integration_name,
         client_id: client_id,
         issuer: issuer,
         platform_name: platform_name,
@@ -288,10 +291,21 @@ class LtiV1Controller < ApplicationController
         access_token_url: access_token_url,
         admin_email: admin_email
       )
-      render status: :ok, json: {body: I18n.t('lti.create_integration_success')}
-    else
-      render status: :conflict, json: {error: I18n.t('lti.error.integration_exists')}
+
+      @integration_status = :created
     end
+    render 'lti/v1/integration_status'
+  end
+
+  # GET /lti/v1/integrations
+  # Displays the onboarding portal for creating a new LTI Integration
+  def new_integration
+    @form_data = {}
+    @form_data[:lms_platforms] = Policies::Lti::LMS_PLATFORMS.map do |key, value|
+      {platform: key, name: value[:name]}
+    end
+
+    render lti_v1_integrations_path
   end
 
   private
