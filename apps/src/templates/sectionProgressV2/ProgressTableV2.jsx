@@ -64,6 +64,7 @@ function ProgressTableV2({
         return (
           <LessonProgressDataColumn
             lesson={lesson}
+            sectionId={sectionId}
             sortedStudents={sortedStudents}
             addExpandedLesson={lessonId =>
               setExpandedLessons([...expandedLessonIds, lessonId])
@@ -73,7 +74,13 @@ function ProgressTableV2({
         );
       }
     },
-    [isSkeleton, sortedStudents, expandedLessonIds, setExpandedLessons]
+    [
+      isSkeleton,
+      sortedStudents,
+      sectionId,
+      expandedLessonIds,
+      setExpandedLessons,
+    ]
   );
 
   const table = React.useMemo(() => {
