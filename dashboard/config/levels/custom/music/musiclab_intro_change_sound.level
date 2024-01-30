@@ -29,7 +29,7 @@
                   "deletable": false,
                   "movable": false,
                   "fields": {
-                    "sound": "beats/groovy_beat"
+                    "sound": "beats/drum_kit_disco"
                   }
                 }
               }
@@ -40,7 +40,10 @@
       "sounds": {
         "beats": [
           "drum_kit_disco",
-          "groovy_beat"
+          "drum_beat_edm",
+          "drum_beat_club",
+          "drum_beat_knock",
+          "drum_kit_pop"
         ]
       },
       "toolbox": {
@@ -52,7 +55,37 @@
           "conditions": [
             {
               "name": "played_sound_id",
-              "value": "beats/drum_kit_disco"
+              "value": "beats/drum_beat_edm"
+            }
+          ],
+          "message": "Nice work.  You successfully changed the sound.",
+          "next": true
+        },
+        {
+          "conditions": [
+            {
+              "name": "played_sound_id",
+              "value": "beats/drum_beat_club"
+            }
+          ],
+          "message": "Nice work.  You successfully changed the sound.",
+          "next": true
+        },
+        {
+          "conditions": [
+            {
+              "name": "played_sound_id",
+              "value": "beats/drum_beat_knock"
+            }
+          ],
+          "message": "Nice work.  You successfully changed the sound.",
+          "next": true
+        },
+        {
+          "conditions": [
+            {
+              "name": "played_sound_id",
+              "value": "beats/drum_kit_pop"
             }
           ],
           "message": "Nice work.  You successfully changed the sound.",
