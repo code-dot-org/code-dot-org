@@ -324,7 +324,7 @@ When /^I wait for (\d+(?:\.\d*)?) seconds?$/ do |seconds|
 end
 
 When /^I rotate to (landscape|portrait)$/ do |orientation|
-  if ENV['BS_ROTATABLE'] == "true"
+  if ENV['MOBILE'] == "true"
     $http_client.call(
       :post,
       "/wd/hub/session/#{@browser.session_id}/orientation",
