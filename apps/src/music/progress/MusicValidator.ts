@@ -24,7 +24,7 @@ export default class MusicValidator extends Validator {
   constructor(
     private readonly getIsPlaying: () => boolean,
     private readonly getPlaybackEvents: () => PlaybackEvent[],
-    private readonly player: MusicPlayer,
+    private readonly getCurrentPlayheadPosition: () => number,
     private readonly conditionsChecker: ConditionsChecker = new ConditionsChecker(
       Object.values(MusicConditions).map(condition => condition.name)
     )
@@ -43,7 +43,7 @@ export default class MusicValidator extends Validator {
     // Get number of sounds that have been started.
     let playedNumberSounds = 0;
 
-    const currentPlayheadPosition = this.player.getCurrentPlayheadPosition();
+    const currentPlayheadPosition = this.getCurrentPlayheadPosition();
     this.getPlaybackEvents().forEach((eventData: PlaybackEvent) => {
       const length = eventData.length;
       if (
