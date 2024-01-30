@@ -283,6 +283,12 @@ DatablockStorage.unsubscribeFromKeyValuePairs = function () {
   // since we don't hold subscriptions.
 };
 
+DatablockStorage.createTable = function (tableName, onSuccess, onError) {
+  _fetch('create_table', 'POST', {
+    table_name: tableName,
+  }).then(onSuccess, onError);
+};
+
 export function initDatablockStorage(config) {
   console.log('LOADING DATABLOCK STORAGE SHIM!!!');
   init(config);

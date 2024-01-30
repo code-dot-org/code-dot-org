@@ -62,6 +62,15 @@
 = form_tag "get_key_values", :method => :get, :remote => false do
   = submit_tag "get_key_values"
 
+%hr
+
+%h2 Dataset Browser Actions Methods
+
+%h3 create_table
+= form_tag "create_table", :method => :post, :remote => false do
+  = text_field_tag "table_name", "", placeholder: "table_name"
+  = submit_tag "create_table"
+
 %table
   %tr
     %td table_name
