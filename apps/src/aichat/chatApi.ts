@@ -25,6 +25,7 @@ export async function postOpenaiChatCompletion(
     }
   );
   if (response.ok) {
+    console.log('response in postOpenaiChatCompletion', response);
     return await response.json();
   } else {
     return null;

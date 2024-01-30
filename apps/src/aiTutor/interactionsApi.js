@@ -1,4 +1,4 @@
-export async function savePromptAndResponse({}) {
+export async function savePromptAndResponse(interactionData) {
   console.log('savePromptAndResponse was called');
 
   // Checking that the csrf-token exists since it is disabled on test
@@ -7,9 +7,7 @@ export async function savePromptAndResponse({}) {
         .value
     : null;
 
-  const interactionData = {
-    prompt: 'is this working?',
-  };
+  console.log('interactionData in interactionsApi', interactionData);
 
   try {
     let response = await fetch('/ai_tutor_interactions', {
