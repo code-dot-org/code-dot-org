@@ -442,7 +442,7 @@ td {
 
 /* Start top navigation bar styles ------------------------ */
 nav.main {
-  background-color: #00adbc;
+  background-color: var(--brand_primary_default);
   margin: 0;
   padding: 0.25rem 1rem;
   position: relative;

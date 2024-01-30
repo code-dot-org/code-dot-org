@@ -1,7 +1,7 @@
 import React from 'react';
 import i18n from '@cdo/locale';
 import LegendItem, {ITEM_TYPE} from './LegendItem';
-import styles from './section-progress-refresh.module.scss';
+import styles from './progress-table-legend.module.scss';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
 
 export default function LevelTypesBox() {
