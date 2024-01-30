@@ -8,12 +8,29 @@
   flex-direction: row;
 }
 
+$level-cell-width: 52px;
+
+:export {
+   c: $level-cell-width;
+}
+
 .table {
   width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
   display: flex;
   flex-direction: row;
+
+  &Loading {
+    overflow-x: hidden;
+  }
+
+  .expandedColumn:first-child {
+    margin-inline-start: 0;
+  }
+  .expandedColumn:last-child {
+    margin-inline-end: 0;
+  }
 }
 
 .gridBox {
@@ -32,6 +49,19 @@
     max-width: 80px;  
     height: 47px;
     line-height: 47px;
+  }
+
+  &Skeleton {
+    vertical-align: middle;
+  }
+  
+  &Level {
+    width: $level-cell-width;
+    text-align: center;
+    height: 47px;
+    line-height: 47px;
+    // remove overflow after data icons are added
+    overflow-x: hidden;
   }
 }
 
@@ -77,6 +107,22 @@
     border-bottom: 1px solid $light_gray_200;
     border-right: 1px solid $light_gray_200;
     margin-bottom: 32px;
+    text-align: center;
+  }
+  
+  &HeaderCaret {
+    margin-inline-end: 12px;
+  }
+
+  &SkeletonHeaderCell {
+    width: 75%;
+    vertical-align: middle;
+  }
+
+  &SkeletonCell {
+    width: 1em;
+    border-radius: 100%;
+    vertical-align: middle;
   }
 
   &DataColumn {
@@ -84,6 +130,73 @@
     flex-direction: column;
     border-bottom: 1px solid $light_gray_200;
     border-right: 1px solid $light_gray_200;
+  }
+}
+
+.expanded {
+  &Header {
+    min-width: 80px;
+
+    &LessonCell {
+      height: 43px;
+      line-height: 42px;
+      min-width: 82px;
+      border: 0;
+      background-color: $light_primary_500;
+      color: $light_white;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    
+    &LessonText {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow-x: hidden;
+      margin-inline-end: 8px;
+    }
+
+    &Caret {
+      margin-inline-end: 12px;
+      margin-inline-start: 16px;
+    }
+
+    &SecondRow {
+      display: flex;
+      flex-direction: row;
+      width: fit-content;
+      border-right: 1px solid $light_gray_200;
+    }
+
+    &LevelCell {
+      // If width is updated, must also update `LEVEL_HEADER_WIDTH` in ExpandedProgressDataColumn.jsx
+      min-width: 52px;
+      text-align: center;
+      height: 32px;
+      line-height: 32px;
+    }
+  }
+  &Column {
+    // This is one more to compensate for the -1px margin-right on the lesson column
+    margin-left: 9px;
+    margin-right: 8px;
+  }
+
+  &Column + &Column {
+    margin-left: 0;
+  }
+
+  &Table {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid $light_gray_200;
+    border-right: 1px solid $light_gray_200;
+    width: fit-content;
+  }
+
+  &LevelColumn {
+    display: flex;
+    flex-direction: column;
   }
 }
 

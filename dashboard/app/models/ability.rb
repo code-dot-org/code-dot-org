@@ -223,7 +223,7 @@ class Ability
       if user.facilitator?
         can [:read, :start, :end, :workshop_survey_report, :summary, :filter], Pd::Workshop, facilitators: {id: user.id}
         can [:read, :update], Pd::Workshop, organizer_id: user.id
-        can :manage_attendance, Pd::Workshop, facilitators: {id: user.id}, ended_at: nil
+        can :manage_attendance, Pd::Workshop, facilitators: {id: user.id}
         can :read, Pd::CourseFacilitator, facilitator_id: user.id
 
         if Pd::CourseFacilitator.exists?(facilitator: user, course: Pd::Workshop::COURSE_CSF)
@@ -241,7 +241,7 @@ class Ability
         # Regional partner program managers can access workshops assigned to their regional partner
         if user.regional_partners.any?
           can [:read, :start, :end, :update, :destroy, :summary, :filter], Pd::Workshop, regional_partner_id: user.regional_partners.pluck(:id)
-          can :manage_attendance, Pd::Workshop, regional_partner_id: user.regional_partners.pluck(:id), ended_at: nil
+          can :manage_attendance, Pd::Workshop, regional_partner_id: user.regional_partners.pluck(:id)
           can :update_scholarship_info, Pd::Enrollment do |enrollment|
             !!user.regional_partners.pluck(enrollment.workshop.regional_partner_id)
           end

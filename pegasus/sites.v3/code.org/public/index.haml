@@ -24,6 +24,8 @@ style_min: true
 - if ["student", "teacher"].include?(user_type)
   - redirect CDO.studio_url('/home', CDO.default_scheme)
 
+= view :header
+
 #homepage.supreme-container
   = view :homepage_hero
 

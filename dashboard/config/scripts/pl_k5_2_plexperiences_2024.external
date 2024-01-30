@@ -3,38 +3,38 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Congratulations, you are finished! 
-
-<img src="https://images.code.org/da2033ad4fc1471a7729b273fc29d630-image-1673466799576.png" alt="Image of dance party characters celebrating" style="float: left; height: 300px; clear: both; margin: 0 20px 20px 0;">
-
-<div style="clear:both"/>
-
 # Next Steps
 
-## Teaching CS 
+#### Thank you for completing **CS Basics: Creativity with Code.** Now that you've learned some basic computer science skills, check out some of our curriculum and professional learning offerings to continue your journey!
 
-* #### Try out our free, and fun, elementary courses by grade-level in <a href="https://code.org/educate/csf" target="blank" rel="noopener noreferrer" >Computer Science Fundamentals</a>.
+## Teach CS in your class
 
-* #### Teach CS while covering core subject standards with our <a href="https://code.org/educate/csc" target="blank" rel="noopener noreferrer" >Computer Science Connections</a> curriculum.
+#### Explore some of these curriculum options to get started teaching CS in your class right away.
 
-* #### Explore careers in computer science with your students in<a href="https://code.org/csjourneys" target="blank" rel="noopener noreferrer"> CS Journeys</a>. 
+<a href = "https://code.org/educate/csc" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/3f623ba6e5151732099b3441225f5a66-image-1706037967333.jpg" alt="thumbnail for the CS Connections curriculum " width="240px" style="border-radius:5px; float:left; margin: 20px 40px 40px 40px;"></a>
+
+<a href = "https://code.org/educate/csf" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/1d4bfa99f2282f9972713f289f03ec08-image-1706037638798.jpg" alt="thumbnail for the CS Fundamentals curriculum " width="240px" style="border-radius:5px; float:left; margin: 20px 40px 40px 20px;"></a>
+
+<a href = "https://code.org/oceans" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/bc294ba333174bf92e8f9bb60380a5b3-image-1706038353939.png" alt="thumbnail for the CS Connections self-paced professional learniing module " width="240px" style="border-radius:5px; float:left; margin: 20px 50px 40px 20px;"></a>
+
+## Continue learning 
+#### Learn more about teaching CS with these self-paced professional learning modules. 
+
+<a href = "https://studio.code.org/s/self-paced-pl-csc-2023" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/b4ca41cd43376f374fc5408d76241e59-image-1706300331462.png" alt="thumbnail for the CS Connections self-paced professional learniing module " width="240px" style="border-radius:5px; float:left; margin: 20px 40px 40px 40px;"></a>
+
+<a href = "https://studio.code.org/s/k5-onlinepd-2023" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/c35579aa157b3605228885e325ddb03d-image-1706299786558.png" alt="thumbnail for the CS Fundamentals self-paced professional learniing module " width="240px" style="border-radius:5px; float:left; margin: 20px 40px 40px 20px;"></a>
+
+<a href = "https://images.code.org/eab8b38416b81b495275cd83372e9c9d-image-1706220671094.jpg" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/1bcbd2c06e0956971485522eff921d49-image-1706299155070.png" alt="thumbnail for the CS Basicss self-paced professional learniing module " width="240px" style="border-radius:5px; float:left; margin: 20px 50px 50px 20px;"></a>
+
 <br>
 
-<img src="https://images.code.org/4c4b6d046560e06ffc2ee3e73ee5601c-image-1679963901855.png" alt="Image of singing bird" style="border-radius:20px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 0px 0px 0;">
+<p>
 
-## Continue learning
+## Help us make this module better!
 
-* #### Join us for a facilitator-led professional learning workshop. <a href="https://code.org/educate/professional-learning" target="blank" rel="noopener noreferrer" >Click here</a>  to learn about opportunities in your area. 
+#### Code.org values and is responsive to feedback. Please fill out this <a href="https://studio.code.org/form/csb_selfpaced_pl_postsurvey?survey_data[survey_variable]=unit2" target="blank" rel="noopener noreferrer">short survey</a> to provide your feedback on this module.
 
-* #### Check out another self-paced online module <a href="https://studio.code.org/s/k5-onlinepd-2023" target="blank" rel="noopener noreferrer" >Teaching CS Fundamentals</a> to learn more about K-5 computer science lessons.
-
-* #### Explore careers in computer science with your students and <a href="https://code.org/csjourneys" target="blank" rel="noopener noreferrer">CS Journeys</a>. 
-
-* #### Get familiar with all of our <a href = "https://code.org/educate/csc" target="blank" rel="noopener noreferrer">CS Connections Modules</a> like the ones featured in this training. 
-
-## Revisit this content
-
-#### You can return to <a href="https://studio.code.org/s/self-paced-pl-k5-2024" target="blank" rel="noopener noreferrer" >this professional learning</a> at anytime to review your learning, access links or resources, or just refresh your memory!
+<a class="btn btn-large btn-primary" href="https://studio.code.org/form/csb_selfpaced_pl_postsurvey?survey_data[survey_variable]=unit2" target="blank" rel="noopener noreferrer">Take the survey</a>
 
 
 ## Stay connected 
@@ -46,7 +46,7 @@ markdown <<MARKDOWN
 * #### Join the <a href="https://www.csteachers.org/" target="blank" rel="noopener noreferrer">Computer Science Teachers Association (CSTA)</a>. 
 
 <br>
+</p>
 
-## Next, let's see how we can implement CS in our classes!
 
 MARKDOWN

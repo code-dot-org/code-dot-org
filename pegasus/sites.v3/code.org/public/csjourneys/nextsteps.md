@@ -26,7 +26,7 @@ social:
 </ul>
 </div>
 
-<div class="col-25" style="border:1px solid #00adbc; text-align:center; margin-top:25px; padding:15px; padding-left:15px; padding-right:15px; overflow: hidden; position: relative; border-radius:15px">
+<div class="col-25" style="border:1px solid var(--brand_primary_default); text-align:center; margin-top:25px; padding:15px; padding-left:15px; padding-right:15px; overflow: hidden; position: relative; border-radius:15px">
   <h3 style="margin-top:12px"><strong>Presented by:</strong></h3>
   <br>
   <img src="/images/logo.svg" style="width: 35%" alt="Code.org logo">
@@ -41,10 +41,10 @@ social:
 <div style="clear: both; margin-bottom:35px"></div>
 
 <a id="event-1"></a>
-<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+<div class="col-100" style="padding:25px; background-color: var(--brand_primary_default); border-radius:15px 15px 0 0">
   <h2 style="margin-top:0; margin-bottom:0; color:#ffffff">Your questions about CS careers, answered!</h2>
 </div>
-<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<div class="col-100" style="padding:25px; border: 1px solid var(--brand_primary_default); border-radius:0 0 15px 15px; border-top:none">
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
   <p>In this FAQ session, computer science professionals and students answer some of the most common questions that students ask about computer science, including what career options are available, and what to expect in college.</p>
   <a href="https://code.zoom.us/rec/play/dLwAp7jG2lxKm2TFtunQNXaePZdP7jFuA8Xgp_5KVlEv240HeNz13TZ2A4XRt7j5zKgXCnbAA7GFg7cb.XIYTWIhx90B5Mjzy" target="_blank"><button style="margin-bottom:20px">View the recording</button></a>
@@ -96,10 +96,10 @@ social:
 <div style="clear:both; margin-bottom:35px"></div>
 
 <a id="event-2"></a>
-<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+<div class="col-100" style="padding:25px; background-color: var(--brand_primary_default); border-radius:15px 15px 0 0">
   <h2 style="margin-top:0; margin-bottom:0; color:#ffffff">College Project Showcase</h2>
 </div>
-<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<div class="col-100" style="padding:25px; border: 1px solid var(--brand_primary_default); border-radius:0 0 15px 15px; border-top:none">
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
   <p>College students showcase research and projects that computer science contributes to across multiple disciplines. Students will hear about opportunities they’ll have at the next level, and see how computer science plays a role in a variety of academic pathways they may want to pursue.</p>
   <a href="https://code.zoom.us/rec/play/XfZg54bXBlEGkJnHjdwN-3hQrpFX41qzwvZMC3RX4Rvlb3c4ut9mY1YbIabkwUSwL_pxEyTtKw0YGX0.0XGsrzep-oa-QCv_" target="_blank"><button style="margin-bottom:20px">View the recording</button></a>
@@ -160,10 +160,10 @@ social:
 <div style="clear:both; margin-bottom:35px"></div>
 
 <a id="event-3"></a>
-<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+<div class="col-100" style="padding:25px; background-color: var(--brand_primary_default); border-radius:15px 15px 0 0">
   <h2 style="margin-top:0; margin-bottom:0; color:#ffffff">Alternatives to the 4-year college degree</h2>
 </div>
-<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<div class="col-100" style="padding:25px; border: 1px solid var(--brand_primary_default); border-radius:0 0 15px 15px; border-top:none">
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
   <p>Students learn about key alternatives to the four-year college degree and steps they can take to explore these alternatives, including community college and apprenticeships.</p>
   <a href="https://code.zoom.us/rec/play/3LinsRk-G4SzCc9upMTn3LwxAMs3qnJfwmovSA1VP9I91pS6sV5YfzDsbMtKEuCVg9YHLfecyISw4sNq.sqU0J6LHIM3GBPXR" target="_blank"><button style="margin-bottom:20px">View the recording</button></a>
@@ -218,10 +218,10 @@ social:
 <div style="clear:both; margin-bottom:35px"></div>
 
 <a id="event-4"></a>
-<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+<div class="col-100" style="padding:25px; background-color: var(--brand_primary_default); border-radius:15px 15px 0 0">
   <h2 style="margin-top:0; margin-bottom:0; color:#ffffff">Making connections and building support networks</h2>
 </div>
-<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<div class="col-100" style="padding:25px; border: 1px solid var(--brand_primary_default); border-radius:0 0 15px 15px; border-top:none">
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
   <p>Students learn about the importance of support networks to their career journey, and about steps to take to start building their own network of intentional connections, including finding a mentor, participating in extracurricular activities, and plugging in with affinity groups and/or professional networks.</p>
   <a href="https://code.zoom.us/rec/play/cIS5zalDnM3RTrvHWYcYIYXCzqr44xdBK5B5WSDysJZKtE61ZFQ1nlGYFD_pWSxy9W7wj_-ugwCDrphN.UeOZUUWcMljYajSC" target="_blank"><button style="margin-bottom:20px">View the recording</button></a>

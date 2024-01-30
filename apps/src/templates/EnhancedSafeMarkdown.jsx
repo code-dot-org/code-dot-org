@@ -48,15 +48,20 @@ export const ExpandableImagesWrapper = connect(null, dispatch => ({
   },
 }))(UnconnectedExpandableImagesWrapper);
 
-// A callout can be added via markdown instructions like this:
-//   [play](#showcallout=play-sound-block)
+// Clickable text can be added via markdown instructions like this:
+//   [play](#clickable=play-sound-block)
 //
-// This code will replace any link that has #showcallout=[id]
+// This code will replace any link that had #clickable=[id]
 // with bold clickable text that, when clicked, will call the
-// provided showCallout function with the ID.
-export class ShowCalloutsWrapper extends React.Component {
+// provided handleInstructionsTextClick function with the ID.
+//
+// The clickable text support in our remark-plugins repo has
+// done some intermediate work by converting those links into
+// the following HTML format:
+//   <b data-id="id" class="clickable-text">text</b>
+export class ClickableTextWrapper extends React.Component {
   static propTypes = {
-    showCallout: PropTypes.func.isRequired,
+    handleInstructionsTextClick: PropTypes.func.isRequired,
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
       PropTypes.node,
@@ -76,22 +81,14 @@ export class ShowCalloutsWrapper extends React.Component {
 
   postRenderHook() {
     const thisNode = ReactDOM.findDOMNode(this);
-    this.renderShowCallouts(thisNode);
+    this.renderClickableText(thisNode);
   }
 
-  renderShowCallouts(node) {
-    const showCallouts = node.querySelectorAll('a[href]');
-    for (const showCallout of showCallouts) {
-      const regexp = /#showcallout=(.*)/;
-      const matches = showCallout.href.match(regexp);
-      if (matches?.length === 2) {
-        const calloutId = matches[1];
-        const textContent = showCallout.childNodes[0].textContent;
-        const newNode = document.createElement('span');
-        newNode.innerHTML = `<b style="cursor: pointer">${textContent}</b>`;
-        newNode.onclick = () => this.props.showCallout(calloutId);
-        showCallout.replaceWith(newNode);
-      }
+  renderClickableText(node) {
+    const clickableTextAll = node.querySelectorAll('b.clickable-text');
+    for (const clickableText of clickableTextAll) {
+      const id = clickableText.dataset.id;
+      clickableText.onclick = () => this.props.handleInstructionsTextClick(id);
     }
   }
 
@@ -118,7 +115,7 @@ export default class EnhancedSafeMarkdown extends React.Component {
     openExternalLinksInNewTab: PropTypes.bool,
     expandableImages: PropTypes.bool,
     className: PropTypes.string,
-    showCallout: PropTypes.func,
+    handleInstructionsTextClick: PropTypes.func,
   };
 
   render() {
@@ -127,10 +124,10 @@ export default class EnhancedSafeMarkdown extends React.Component {
     // wrapping the component in other components which each add their own
     // self-contained functionality.
     //
-    // Right now, that's just expandable images. But we could (should?) take
-    // the "open external links" functionality out of SafeMarkdown and add it
-    // here; I expect we almost certainly will put the "render blockly blocks"
-    // functionality in here, too.
+    // Right now, that's just expandable images and clickable text. But we
+    // could (should?) take the "open external links" functionality out of
+    // SafeMarkdown and add it here; I expect we almost certainly will put the
+    // "render blockly blocks" functionality in here, too.
     let result = (
       <SafeMarkdown
         markdown={this.props.markdown}
@@ -143,11 +140,13 @@ export default class EnhancedSafeMarkdown extends React.Component {
       result = <ExpandableImagesWrapper>{result}</ExpandableImagesWrapper>;
     }
 
-    if (this.props.showCallout) {
+    if (this.props.handleInstructionsTextClick) {
       result = (
-        <ShowCalloutsWrapper showCallout={this.props.showCallout}>
+        <ClickableTextWrapper
+          handleInstructionsTextClick={this.props.handleInstructionsTextClick}
+        >
           {result}
-        </ShowCalloutsWrapper>
+        </ClickableTextWrapper>
       );
     }
 

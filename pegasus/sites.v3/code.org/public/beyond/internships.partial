@@ -25,10 +25,10 @@ social:
 <br>
 
 <a id="apprenticeships"></a>
-<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+<div class="col-100" style="padding:25px; background-color: var(--brand_primary_default); border-radius:15px 15px 0 0">
   <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Apprenticeships</h2>
 </div>
-<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<div class="col-100" style="padding:25px; border: 1px solid var(--brand_primary_default); border-radius:0 0 15px 15px; border-top:none">
 <a class="linktag" id="apprenti" href="https://apprenticareers.org/" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/apprenti.png" alt="Apprenti logo">
 </a>
@@ -76,10 +76,10 @@ social:
 <div style="clear:both; margin-bottom:35px"></div>
 
 <a id="college"></a>
-<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+<div class="col-100" style="padding:25px; background-color: var(--brand_primary_default); border-radius:15px 15px 0 0">
   <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Internships for students entering or in college</h2>
 </div>
-<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<div class="col-100" style="padding:25px; border: 1px solid var(--brand_primary_default); border-radius:0 0 15px 15px; border-top:none">
 
 <a class="linktag" id="code2040" href="https://www.code2040.org/fellows-program" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/code2040.png" alt="Code2040 logo">
@@ -120,10 +120,10 @@ social:
 <div style="clear:both; margin-bottom:35px"></div>
 
 <a id="highschool"></a>
-<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+<div class="col-100" style="padding:25px; background-color: var(--brand_primary_default); border-radius:15px 15px 0 0">
   <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Internships for high school students</h2>
 </div>
-<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<div class="col-100" style="padding:25px; border: 1px solid var(--brand_primary_default); border-radius:0 0 15px 15px; border-top:none">
 <a class="linktag" id="genesys-works" href="https://genesysworks.org/for-students/" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/genesys-works.png" alt="Genesys Works logo">
 </a>

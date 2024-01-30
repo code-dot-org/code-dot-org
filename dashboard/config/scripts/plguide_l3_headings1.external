@@ -1,0 +1,46 @@
+name 'PLGuide_L3_Headings1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Formatting Headings
+
+#### Headings provide structure and break long passages of text into manageable chunks. Visually, headings and their corresponding sections can increase white space on the page. Learners reading text may find information easier to locate and categorize with the use of effective headings.
+
+## Heading Types in Level Builder
+
+* #### `#`: H1
+* #### `##`: H2
+* #### `###`: H3
+
+## Heading Guidelines
+
+### **Usage**
+* #### An H1 heading should only be used once on a single page, at the top. 
+
+* #### An H2 heading may be used to separate a page into multiple sections. Each section should be topically related to the H1 heading, or otherwise separated onto a new page. 
+
+* #### An H3 heading may be used to further separate section into subsections. Again, each subsection should be topically related to the heading(s) above it. To distinguish an H3 heading from an H4 heading due to similar sizing, the above heading, "Usage", is bold.
+
+### **Best Practices**
+
+* #### Use short headings of seven words or less since lengthy headings are harder to read and listen to. (DiPeri, p. 61)
+
+* #### Provide contrast between headings and body text. 
+	* #### H1 and H2 headings in Level Builder provide contrast through color. 
+    * #### An H3 heading should be bolded (as noted above) to distinguish it from body text.
+
+* #### If you find yourself needing additional subdivisions beyond the ones listed here, consider separating your content into multiple pages.
+
+* #### When capitalizing titles, use title case.
+
+<blockquote>
+
+<img src="https://images.code.org/ed1c067606ddc55ebe59bcb9af138209-image-1684268171621.png" alt="A clipboard with paper on it and a magnifying glass next to it. This icon is used to signal a resource for participants." width="30px" style="float:left; margin: 10px 10px 10px 10px;"> 
+
+#### External Resource: <a href="https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case" target="blank" rel="noopener noreferrer">Title Case (APA Style)</a>
+
+</blockquote>
+
+
+MARKDOWN
