@@ -1,6 +1,6 @@
 import React from 'react';
-import {ITEM_TYPE, ITEM_TYPE_SHAPE} from './LegendItem';
-import styles from './section-progress-refresh.module.scss';
+import {ICON_TYPE, ICON_TYPE_SHAPE} from './IconType';
+import styles from './progress-table-legend.module.scss';
 import FontAwesome from '../FontAwesome';
 import ProgressBox from '../sectionProgress/ProgressBox';
 import classNames from 'classnames';
@@ -45,14 +45,14 @@ export default function ProgressIcon({itemType}) {
           className={styles.fontAwesomeIcon}
         />
       )}
-      {itemType === ITEM_TYPE.NOT_STARTED && notStartedBox()}
-      {itemType === ITEM_TYPE.VIEWED && viewedBox()}
-      {itemType === ITEM_TYPE.NEEDS_FEEDBACK && needsFeedbackTriangle()}
-      {itemType === ITEM_TYPE.FEEDBACK_GIVEN && feedbackGivenTriangle()}
+      {itemType === ICON_TYPE.NOT_STARTED && notStartedBox()}
+      {itemType === ICON_TYPE.VIEWED && viewedBox()}
+      {itemType === ICON_TYPE.NEEDS_FEEDBACK && needsFeedbackTriangle()}
+      {itemType === ICON_TYPE.FEEDBACK_GIVEN && feedbackGivenTriangle()}
     </>
   );
 }
 
 ProgressIcon.propTypes = {
-  itemType: ITEM_TYPE_SHAPE,
+  itemType: ICON_TYPE_SHAPE,
 };
