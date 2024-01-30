@@ -179,6 +179,8 @@ $level-cell-width: 52px;
     &Level {
       background-color: $light_primary_500;
       color: $light_white;
+      display: flex;
+      flex-direction: row;
     }
 
     &LevelCaret {
