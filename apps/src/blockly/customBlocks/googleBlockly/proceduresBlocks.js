@@ -161,11 +161,11 @@ GoogleBlockly.Extensions.register('procedure_def_mini_toolbox', function () {
   flyoutToggleButton.setIcon(false);
 });
 
-// This extension adds an SVG frame around procedures definition blocks.
-// Not used in Music Lab or wherever the modal function is enabled.
+// Adds an SVG frame to procedure definition blocks when they're on the main workspace.
+// Not used in Music Lab, embedded workspaces, or the hidden definition workspace.
+// Note: The workspace frame used in the modal function editor is added there.
 GoogleBlockly.Extensions.register('procedures_block_frame', function () {
   if (
-    !Blockly.useModalFunctionEditor &&
     this.workspace === Blockly.getMainWorkspace() &&
     !this.workspace.noFunctionBlockFrame
   ) {
