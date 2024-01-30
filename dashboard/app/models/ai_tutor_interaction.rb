@@ -24,6 +24,8 @@
 #  index_ati_user_level_script               (user_id,level_id,script_id)
 #
 class AiTutorInteraction < ApplicationRecord
+  self.inheritance_column = nil
+
   belongs_to :user
   belongs_to :level, optional: true
   belongs_to :script, optional: true
