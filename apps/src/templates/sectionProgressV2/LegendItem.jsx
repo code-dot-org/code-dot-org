@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './progress-table-legend.module.scss';
 import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
-import {ICON_TYPE_SHAPE} from './IconType';
+import {ITEM_TYPE_SHAPE} from './ItemType';
 import ProgressIcon from './ProgressIcon';
 
 export default function LegendItem({itemType, labelText}) {
@@ -16,5 +16,5 @@ export default function LegendItem({itemType, labelText}) {
 
 LegendItem.propTypes = {
   labelText: PropTypes.string,
-  itemType: ICON_TYPE_SHAPE,
+  itemType: ITEM_TYPE_SHAPE,
 };

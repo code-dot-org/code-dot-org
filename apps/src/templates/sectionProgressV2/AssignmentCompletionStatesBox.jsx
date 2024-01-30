@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import LegendItem from './LegendItem';
-import {ICON_TYPE} from './IconType';
+import {ITEM_TYPE} from './ItemType';
 import styles from './progress-table-legend.module.scss';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
 
@@ -16,28 +16,28 @@ export default function AssignmentCompletionStatesBox({
       <div className={styles.icons}>
         <div className={styles.legendColumn}>
           <LegendItem
-            itemType={ICON_TYPE.NOT_STARTED}
+            itemType={ITEM_TYPE.NOT_STARTED}
             labelText={i18n.notStarted()}
           />
           <LegendItem
-            itemType={ICON_TYPE.NO_ONLINE_WORK}
+            itemType={ITEM_TYPE.NO_ONLINE_WORK}
             labelText={i18n.noOnlineWork()}
           />
         </div>
         <div className={styles.legendColumn}>
           <LegendItem
-            itemType={ICON_TYPE.IN_PROGRESS}
+            itemType={ITEM_TYPE.IN_PROGRESS}
             labelText={i18n.inProgress()}
           />
           <LegendItem
-            itemType={ICON_TYPE.SUBMITTED}
+            itemType={ITEM_TYPE.SUBMITTED}
             labelText={i18n.submitted()}
           />
         </div>
         {isViewingLevelProgress && hasValidatedLevels && (
           <div className={styles.legendColumn}>
             <LegendItem
-              itemType={ICON_TYPE.VALIDATED}
+              itemType={ITEM_TYPE.VALIDATED}
               labelText={i18n.validated()}
             />
           </div>

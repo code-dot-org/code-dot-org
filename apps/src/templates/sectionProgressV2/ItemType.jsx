@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 
-export const ICON_TYPE = Object.freeze({
+export const ITEM_TYPE = Object.freeze({
   NOT_STARTED: 1,
   VIEWED: 2,
   NEEDS_FEEDBACK: 3,
@@ -15,4 +15,4 @@ export const ICON_TYPE = Object.freeze({
   VALIDATED: ['circle-check', color.product_affirmative_default],
 });
 
-export const ICON_TYPE_SHAPE = PropTypes.oneOf(Object.values(ICON_TYPE));
+export const ITEM_TYPE_SHAPE = PropTypes.oneOf(Object.values(ITEM_TYPE));

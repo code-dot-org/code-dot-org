@@ -4,7 +4,7 @@ import {studentLessonProgressType} from '../progress/progressTypes';
 import classNames from 'classnames';
 import styles from './progress-table-v2.module.scss';
 import {lessonHasLevels} from '../progress/progressHelpers';
-import {ICON_TYPE} from './IconType';
+import {ITEM_TYPE} from './ItemType';
 import ProgressIcon from './ProgressIcon';
 
 export default function LessonDataCell({lesson, studentLessonProgress}) {
@@ -14,9 +14,9 @@ export default function LessonDataCell({lesson, studentLessonProgress}) {
 
   return (
     <div className={classNames(styles.gridBox, styles.gridBoxLesson)}>
-      {finished && <ProgressIcon itemType={ICON_TYPE.SUBMITTED} />}
-      {partiallyComplete && <ProgressIcon itemType={ICON_TYPE.IN_PROGRESS} />}
-      {noLevels && <ProgressIcon itemType={ICON_TYPE.NO_ONLINE_WORK} />}
+      {finished && <ProgressIcon itemType={ITEM_TYPE.SUBMITTED} />}
+      {partiallyComplete && <ProgressIcon itemType={ITEM_TYPE.IN_PROGRESS} />}
+      {noLevels && <ProgressIcon itemType={ITEM_TYPE.NO_ONLINE_WORK} />}
     </div>
   );
 }
