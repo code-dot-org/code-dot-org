@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       pr_id:
-        description: 'Pull Request ID (default: 55766)'
+        description: 'Pull Request ID'
         required: false
         default: '55766'
 
@@ -14,55 +14,77 @@ env:
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   MYSQL_ROOT_PASSWORD: root
 
-jobs:
-  build-and-test:
-    runs-on: ubuntu-latest
-    if: github.actor == 'pablo-code-org'
+permissions:
+  contents: read
+  issues: write
+  pull-requests: read
 
+concurrency: 
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check-reviewers:
+    runs-on: ubuntu-latest
+    outputs:
+      has_infrastructure_reviewer: ${{ steps.check.outputs.has_infrastructure_reviewer }}
     steps:
-      - name: Get Branch Name from Pull Request ID
-        id: get_branch
+      - name: Check for Infrastructure Reviewers
+        id: check
         run: |
           PR_ID=${{ github.event.inputs.pr_id }}
-          PR_DATA=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-                        https://api.github.com/repos/code-dot-org/code-dot-org/pulls/$PR_ID)
-          BRANCH_NAME=$(echo $PR_DATA | jq -r .head.ref)
-          echo "Branch Name: $BRANCH_NAME"
-          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
+          REVIEWERS=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+                        https://api.github.com/repos/code-dot-org/code-dot-org/pulls/$PR_ID/reviewers)
+          if [[ $REVIEWERS == *"infrastructure"* ]]; then
+            echo "has_infrastructure_reviewer=true" >> $GITHUB_ENV
+          else
+            echo "has_infrastructure_reviewer=false" >> $GITHUB_ENV
 
-      - name: Checkout Repository at Branch
+  build-and-test:
+    needs: check-reviewers
+    runs-on: ubuntu-latest
+    if: needs.check-reviewers.outputs.has_infrastructure_reviewer == 'true' || github.actor == 'pablo-code-org'
+    steps:
+      - name: Checkout Repository
         uses: actions/checkout@v2
         with:
-          ref: ${{ env.BRANCH_NAME }}
           path: code-dot-org
-          repository: code-dot-org/code-dot-org
-          token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 0
 
-      - name: Prepare entrypoint script
-        run: cp ./code-dot-org/docker/dockerfiles/entrypoint.sh ./code-dot-org/
+      - name: Find and Cache Stale Files
+        id: stalefiles
+        run: |
+          find code-dot-org -type f -not -path './.git/*' -mtime +730 > stale_files.txt
+          echo "::set-output name=stale_hash::$(sha256sum stale_files.txt | cut -d ' ' -f1)"
+
+      - name: Cache stale files
+        uses: actions/cache@v2
+        with:
+          path: |
+            $(cat stale_files.txt)
+          key: ${{ runner.os }}-stale-${{ steps.stalefiles.outputs.stale_hash }}
 
       - name: Set up Docker Environment
         run: docker build -t code-dot-org-testing-docker-image -f ./code-dot-org/docker/dockerfiles/Dockerfile ./code-dot-org
 
-      # Debugging steps running as circleci user
-      - name: Debugging / Directory as circleci User
-        run: docker run --user circleci code-dot-org-testing-docker-image /bin/bash -c "ls -la /"
-
-      - name: Debugging /home Directory as circleci User
-        run: docker run --user circleci code-dot-org-testing-docker-image /bin/bash -c "ls -la /home"
-
-      - name: Debugging /circleci Directory as circleci User
-        run: docker run --user circleci code-dot-org-testing-docker-image /bin/bash -c "ls -la /circleci"
-
-      - name: Debugging deeper into /circleci as circleci User
-        run: docker run --user circleci code-dot-org-testing-docker-image /bin/bash -c "ls -laR /circleci"
-
-      - name: Searching for ui_tests.sh in /circleci as circleci User
-        run: docker run --user circleci code-dot-org-testing-docker-image /bin/bash -c "find /circleci -type f -name 'ui_tests.sh' 2>/dev/null"
-
-      - name: Displaying Environment Variables as circleci User
-        run: docker run --user circleci code-dot-org-testing-docker-image /bin/bash -c "printenv"
+      - name: Debugging Directories and Files in Docker
+        run: |
+          echo "Debugging / Directory"
+          docker run code-dot-org-testing-docker-image /bin/bash -c "ls -la /"
+          
+          echo "Debugging /home Directory"
+          docker run code-dot-org-testing-docker-image /bin/bash -c "ls -la /home"
+          
+          echo "Debugging /circleci Directory"
+          docker run --entrypoint /bin/bash code-dot-org-testing-docker-image -c "ls -la /circleci || mkdir -p /circleci && ls -la /circleci"
+          
+          echo "Debugging deeper into /circleci"
+          docker run code-dot-org-testing-docker-image /bin/bash -c "ls -laR /circleci"
+          
+          echo "Searching for ui_tests.sh in /circleci"
+          docker run code-dot-org-testing-docker-image /bin/bash -c "find /circleci -type f -name 'ui_tests.sh' 2>/dev/null"
+          
+          echo "Displaying Environment Variables"
+          docker run code-dot-org-testing-docker-image /bin/bash -c "printenv"
 
       - name: Update Cache
         uses: actions/cache@v2
