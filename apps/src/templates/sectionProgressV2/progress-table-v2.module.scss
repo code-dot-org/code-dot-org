@@ -8,10 +8,10 @@
   flex-direction: row;
 }
 
-$level-cell-width: 52px;
+$level-cell-width: 52;
 
 :export {
-   c: $level-cell-width;
+   levelCellWidth: $level-cell-width;
 }
 
 .table {
@@ -56,7 +56,7 @@ $level-cell-width: 52px;
   }
   
   &Level {
-    width: $level-cell-width;
+    width: $level-cell-width + px;
     text-align: center;
     height: 47px;
     line-height: 47px;
@@ -165,7 +165,10 @@ $level-cell-width: 52px;
       display: flex;
       flex-direction: row;
       width: fit-content;
-      border-right: 1px solid $light_gray_200;
+
+      .expandedHeaderLevelCell:last-child {
+        border-right: 1px solid $light_gray_200;
+      }
     }
 
     &LevelCell {
@@ -176,11 +179,14 @@ $level-cell-width: 52px;
       line-height: 32px;
     }
 
-    &Level {
+    &ExpandedLevel {
       background-color: $light_primary_500;
       color: $light_white;
       display: flex;
       flex-direction: row;
+      border-right: 1px solid $light_gray_200;
+      border-left: 2px solid $light_gray_200;
+      border-top: 1px solid $light_gray_200;
     }
 
     &LevelCaret {

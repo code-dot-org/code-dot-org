@@ -17,15 +17,18 @@ export default function ExpandedProgressColumnHeader({
   };
 
   // Todo: refactor into better optimized component, probably two functions with switch
-  if (isLevelExpanded) {
+  if (level.sublevels?.length > 0 && isLevelExpanded) {
     return (
       <div
         key={lesson.id + '.' + level.bubbleText + '-h'}
-        className={styles.expandedHeaderLevel}
+        className={styles.expandedHeaderExpandedLevel}
         onClick={onClick}
       >
         <div
-          className={classNames(styles.gridBox, styles.expandedHeaderLevelCell)}
+          className={classNames(
+            styles.expandedHeaderLevelCell,
+            styles.expandedHeaderExpandedLevelCell
+          )}
         >
           {level.sublevels?.length > 0 && (
             <FontAwesome
@@ -37,10 +40,7 @@ export default function ExpandedProgressColumnHeader({
         </div>
         {level.sublevels?.map(sublevel => (
           <div
-            className={classNames(
-              styles.gridBox,
-              styles.expandedHeaderLevelCell
-            )}
+            className={styles.expandedHeaderLevelCell}
             key={
               lesson.id + '.' + level.bubbleText + '-h-' + sublevel.bubbleText
             }
