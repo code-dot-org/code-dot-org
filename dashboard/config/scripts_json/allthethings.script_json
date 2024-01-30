@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-04 16:59:03 UTC",
+    "serialized_at": "2024-01-24 23:54:10 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -829,6 +829,21 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "lesson-54",
+      "name": "Web Lab 2",
+      "absolute_position": 54,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 51,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-54",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "lesson_activities": [
@@ -1513,6 +1528,18 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "13a31209-c280-4f4d-8278-511b4f88ab7e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "13a31209-c280-4f4d-8278-511b4f88ab7e",
+        "lesson.key": "lesson-54",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "activity_sections": [
@@ -2044,6 +2071,16 @@
       "seeding_key": {
         "activity_section.key": "465bc905-13b5-487c-8fd6-8043676ee607",
         "lesson_activity.key": "5688685c-b8bf-4563-b285-04a9cce9bb6e"
+      }
+    },
+    {
+      "key": "b26e8309-b1a7-486a-9490-96d4ddd8b9aa",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b26e8309-b1a7-486a-9490-96d4ddd8b9aa",
+        "lesson_activity.key": "13a31209-c280-4f4d-8278-511b4f88ab7e"
       }
     }
   ],
@@ -5367,6 +5404,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "allthethings HOC Dance AI Customize"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6532,6 +6572,27 @@
       },
       "level_keys": [
         "Allthethings Python Lab 1"
+      ]
+    },
+    {
+      "chapter": 185,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Weblab2 1"
+        ],
+        "lesson.key": "lesson-54",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b26e8309-b1a7-486a-9490-96d4ddd8b9aa"
+      },
+      "level_keys": [
+        "Allthethings Weblab2 1"
       ]
     }
   ],
@@ -8868,6 +8929,18 @@
         "lesson_group.key": "",
         "script.name": "allthethings",
         "activity_section.key": "465bc905-13b5-487c-8fd6-8043676ee607"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Weblab2 1",
+        "script_level.level_keys": [
+          "Allthethings Weblab2 1"
+        ],
+        "lesson.key": "lesson-54",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b26e8309-b1a7-486a-9490-96d4ddd8b9aa"
       }
     }
   ],

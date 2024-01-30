@@ -263,6 +263,16 @@ input[type=submit] {
     &:hover {
       background: var(--neutral_dark10);
     }
+
+    &.white {
+      background: none;
+      border-color: var(--neutral_white);
+      color: var(--neutral_white);
+
+      &:hover {
+        background: var(--neutral_dark90);
+      }
+    }
   }
 
   /* White button styles */
@@ -432,7 +442,7 @@ td {
 
 /* Start top navigation bar styles ------------------------ */
 nav.main {
-  background-color: #00adbc;
+  background-color: var(--brand_primary_default);
   margin: 0;
   padding: 0.25rem 1rem;
   position: relative;
