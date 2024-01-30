@@ -60,7 +60,7 @@ jobs:
       - name: Debugging Directories and Files in Docker as User CircleCI
         run: |        
           echo "Searching for ui_tests.sh in /circleci as circleci"
-          docker run --user circleci code-dot-org-testing-docker-image /bin/bash -c "find /circleci -type f -name 'ui_tests.sh' 2>/dev/null"
+          docker run --user circleci code-dot-org-testing-docker-image /bin/bash -c "find /circleci -type f -name 'ui_tests.sh'"
           
           echo "Displaying Environment Variables as circleci"
           docker run --user circleci code-dot-org-testing-docker-image /bin/bash -c "printenv"
