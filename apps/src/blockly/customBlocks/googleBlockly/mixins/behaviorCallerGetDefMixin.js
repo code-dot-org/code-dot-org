@@ -29,12 +29,14 @@ export const behaviorCallerGetDefMixin = function () {
       if (!model && this.behaviorId) {
         // All behavior definition blocks are on the hidden workspace.
         const hiddenWorkspace = Blockly.getHiddenDefinitionWorkspace();
-        const definitionBlock = hiddenWorkspace
-          .getTopBlocks()
-          .filter(block => (block.type = BLOCK_TYPES.behaviorDefinition))
-          .find(block => block.behaviorId === this.behaviorId);
-        if (definitionBlock) {
-          model = definitionBlock.getProcedureModel();
+        if (hiddenWorkspace) {
+          const definitionBlock = hiddenWorkspace
+            .getTopBlocks()
+            .filter(block => (block.type = BLOCK_TYPES.behaviorDefinition))
+            .find(block => block.behaviorId === this.behaviorId);
+          if (definitionBlock) {
+            model = definitionBlock.getProcedureModel();
+          }
         }
       }
       /* End CDO Customization */

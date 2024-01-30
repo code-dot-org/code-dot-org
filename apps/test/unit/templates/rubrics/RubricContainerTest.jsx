@@ -4,6 +4,7 @@ import {mount, shallow} from 'enzyme';
 import sinon from 'sinon';
 import {act} from 'react-dom/test-utils';
 import RubricContainer from '@cdo/apps/templates/rubrics/RubricContainer';
+import experiments from '@cdo/apps/util/experiments';
 
 describe('RubricContainer', () => {
   const defaultRubric = {
@@ -79,5 +80,21 @@ describe('RubricContainer', () => {
     wrapper.find('HeaderTab').at(0).simulate('click');
     expect(wrapper.find('RubricContent').props().visible).to.be.true;
     expect(wrapper.find('RubricSettings').props().visible).to.be.false;
+  });
+
+  it('displays new RubricTabButtons prop when ai-rubrics-redesign experiment is enabled', () => {
+    experiments.setEnabled('ai-rubrics-redesign', true);
+    const wrapper = shallow(
+      <RubricContainer
+        rubric={defaultRubric}
+        studentLevelInfo={{}}
+        teacherHasEnabledAi={true}
+        currentLevelName={'test_level'}
+        reportingData={{}}
+        open
+      />
+    );
+    expect(wrapper.find('RubricTabButtons').length).to.equal(1);
+    experiments.setEnabled('ai-rubrics-redesign', false);
   });
 });

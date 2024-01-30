@@ -16,7 +16,7 @@ social:
 %>
 
 <center><div style="background-color: #FFFFFF; padding: 10px; margin-top:50px;"><img src="/images/marketing/CodeBytes_CandyAsset.png" style="max-width: 80%"/></div></center>
-<div style="background-color: #00adbc; margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">CodeBytes: 20 minute, mini-lessons for all ages</h1></div>
+<div style="background-color: var(--brand_primary_default); margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">CodeBytes: 20 minute, mini-lessons for all ages</h1></div>
 <div class="col-66" style="padding-right: 28px; padding-bottom: 20px;">
 
 <p>Planning for the Hour of Code? Try a <b>CodeByte</b>! CodeBytes are <font color="00adbc"><b>easy-to-digest, 20-minute interactive lessons</b></font> originally created for Hour of Code 2020 to provide teachers fun and easy ways to engage students learning at home during the Hour of Code. (Last year's episodes are archived below.)
@@ -51,7 +51,7 @@ social:
 <div style="clear: both;"></div>
 <a id="activities"></a>
 
-<div style="background-color: #00adbc; margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">Activities & Episodes Archive</h1></div>
+<div style="background-color: var(--brand_primary_default); margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">Activities & Episodes Archive</h1></div>
 <h3>All of our live episodes have taken place. However, recordings can be found below or you can download them <a href="https://www.dropbox.com/sh/cwaoxzax7tjcg6h/AADzfdeN-SZzf9O-lXv8hebYa?dl=0">here</a>.</h3>
 <h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Episode 1</h3>
 <div class="col-33" style="padding-right:20px; padding-top:10px;">

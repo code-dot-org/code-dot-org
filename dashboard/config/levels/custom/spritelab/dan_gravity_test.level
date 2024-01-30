@@ -17,7 +17,7 @@
       "NativeSpriteLab"
     ],
     "use_default_sprites": "true",
-    "hide_animation_mode": "true",
+    "hide_animation_mode": "false",
     "show_type_hints": true,
     "hide_custom_blocks": true,
     "all_animations_single_frame": "true",
@@ -27,7 +27,7 @@
     "instructions_important": "false",
     "submittable": "false",
     "never_autoplay_video": "false",
-    "disable_param_editing": "true",
+    "disable_param_editing": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "include_shared_functions": "true",
@@ -36,20 +36,20 @@
     "start_in_animation_tab": "false",
     "expand_debugger": "false",
     "debugger_disabled": "false",
-    "mini_toolbox": "false",
+    "mini_toolbox": "true",
     "hide_pause_button": "false",
-    "preload_asset_list": null,
     "soft_buttons": [
       "leftButton",
       "rightButton",
       "upButton",
       "downButton"
     ],
+    "preload_asset_list": null,
     "encrypted_examples": [
 
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-01-20 01:30:58 +0000\",\"changed\":[\"show_debug_watch\",\"block_pools\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-01-20 01:32:28 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-01-20 01:32:38 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-01-20 01:32:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-01-20 01:33:42 +0000\",\"changed\":[\"include_shared_functions\",\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-01-20 01:46:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-01-20 01:48:02 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-01-20 01:50:24 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-01-22 16:53:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-01-22 16:55:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-01-20 01:30:58 +0000\",\"changed\":[\"show_debug_watch\",\"block_pools\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-01-20 01:32:28 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-01-20 01:32:38 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-01-20 01:32:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-01-20 01:33:42 +0000\",\"changed\":[\"include_shared_functions\",\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-01-20 01:46:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-01-20 01:48:02 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-01-20 01:50:24 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-01-22 16:53:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-01-22 16:55:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-26 17:39:43 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-26 17:40:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_animation_mode\",\"disable_param_editing\",\"mini_toolbox\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -2729,6 +2729,9 @@
       <xml>
         <block type="DansBlocks_gravity_test">
           <field name="BEHAVIOR">new Behavior(fall_gravity_behavior, [])</field>
+        </block>
+        <block type="gamelab_setBackgroundImageAs">
+          <field name="IMG">"cave"</field>
         </block>
         <block type="gamelab_addBehaviorSimple"/>
         <block type="gamelab_removeBehaviorSimple"/>
