@@ -1878,6 +1878,32 @@ class User < ApplicationRecord
     user_course_data + user_script_data
   end
 
+  def pl_units_started
+    user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self)
+    pl_user_scripts = user_scripts.select {|us| us.script.pl_course?}
+    pl_scripts = pl_user_scripts.map(&:script)
+
+    user_levels = UserLevel.where(user: self, script: pl_scripts)
+    user_levels_by_script = user_levels.group_by(&:script_id)
+    percent_completed_by_script = {}
+    pl_scripts.each do |pl_script|
+      levels_completed = user_levels_by_script[pl_script.id].count(&:passing?)
+      total_levels = pl_script.script_levels.count
+      percent_completed_by_script[pl_script.id] = ((levels_completed.to_f / total_levels) * 100).round
+    end
+
+    pl_scripts.map do |script|
+      percent_completed = percent_completed_by_script[script.id] || 0
+      {
+        name: script.name,
+        title: script.title_for_display,
+        percent_completed: percent_completed,
+        finish_url: percent_completed == 100 ? script.finish_url : nil,
+        current_lesson_name: next_unpassed_progression_level(pl_unit).localized_name
+      }
+    end
+  end
+
   # Return a collection of courses and scripts for the user.
   # First in the list will be courses enrolled in by the user's sections.
   # Following that will be all scripts in which the user has made progress that # are not in any of the enrolled courses.
