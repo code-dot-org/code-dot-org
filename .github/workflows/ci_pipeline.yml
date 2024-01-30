@@ -63,13 +63,7 @@ jobs:
           docker run --user circleci code-dot-org-testing-docker-image /bin/bash -c "ls -la /"
           
           echo "Debugging /home Directory as circleci"
-          docker run --user circleci code-dot-org-testing-docker-image /bin/bash -c "ls -la /home"
-          
-          echo "Debugging /circleci Directory as circleci"
-          docker run --user circleci --entrypoint /bin/bash code-dot-org-testing-docker-image -c "ls -la /circleci"
-          
-          echo "Debugging deeper into /circleci as circleci"
-          docker run --user circleci code-dot-org-testing-docker-image /bin/bash -c "ls -laR /circleci"
+          docker run --user circleci code-dot-org-testing-docker-image /bin/bash -c "ls -la /home"=          
           
           echo "Searching for ui_tests.sh in /circleci as circleci"
           docker run --user circleci code-dot-org-testing-docker-image /bin/bash -c "find /circleci -type f -name 'ui_tests.sh' 2>/dev/null"
