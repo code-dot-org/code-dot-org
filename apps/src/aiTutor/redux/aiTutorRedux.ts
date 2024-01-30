@@ -2,14 +2,10 @@ import {
   getChatCompletionMessage,
   postOpenaiChatCompletion,
 } from '@cdo/apps/aichat/chatApi';
-import {Role, Status, ChatCompletionMessage} from '@cdo/apps/aichat/types';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
-import {
-  aiTutorTypes,
-  validationSystemPrompt,
-  generalChatSystemPrompt,
-} from '@cdo/apps/aiTutor/constants';
+import {generalChatSystemPrompt} from '@cdo/apps/aiTutor/constants';
 import {savePromptAndResponse} from '../interactionsApi';
+import {TutorTypes, Role, Status, ChatCompletionMessage} from '../types';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
@@ -44,6 +40,7 @@ interface ChatContext {
   levelId?: number;
   systemPrompt: string;
   studentCode: string;
+  tutorType: TutorTypes;
 }
 
 // THUNKS
@@ -70,16 +67,12 @@ export const askAITutor = createAsyncThunk(
 
     thunkAPI.dispatch(addAIResponse(chatApiResponse?.content));
     const prompt = ChatContext.systemPrompt + ChatContext.studentCode;
-    const type =
-      ChatContext.systemPrompt === validationSystemPrompt
-        ? aiTutorTypes.VALIDATION
-        : aiTutorTypes.COMPILATION;
 
     const interactionData = {
       userId: 123456789,
       levelId: ChatContext.levelId,
       scriptId: 123,
-      type: type,
+      type: ChatContext.tutorType,
       prompt: prompt,
       status: chatApiResponse?.status,
       aiResponse: chatApiResponse?.content,
