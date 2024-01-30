@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
+import classNames from 'classnames';
 import LegendItem, {ITEM_TYPE} from './LegendItem';
 import styles from './progress-table-legend.module.scss';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
@@ -39,7 +40,7 @@ export default function TeacherActionsBox({isViewingLevelProgress}) {
     );
 
   return (
-    <div className={styles.legend}>
+    <div className={classNames(styles.legend, styles.teacherActionBox)}>
       <StrongText className={styles.headerContainer}>
         {i18n.teacherActions()}
       </StrongText>
