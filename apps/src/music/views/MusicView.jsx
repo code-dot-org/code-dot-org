@@ -2,14 +2,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import MusicPlayer from '../player/MusicPlayer';
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {AnalyticsContext} from '../context';
-import Globals from '../globals';
-import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
-import AppConfig, {getBlockMode, setAppConfig} from '../appConfig';
-import SoundUploader from '../utils/SoundUploader';
+import AppConfig, {getBlockMode} from '../appConfig';
 import {loadLibrary} from '../utils/Loader';
 import MusicValidator from '../progress/MusicValidator';
 import {
@@ -37,15 +33,12 @@ import {
   setIsLoading,
   setPageError,
 } from '@cdo/apps/lab2/lab2Redux';
-import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
-import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
-import {BlockMode, DEFAULT_LIBRARY, Triggers} from '../constants';
-import {Key} from '../utils/Notes';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {DEFAULT_LIBRARY} from '../constants';
 import {isEqual} from 'lodash';
 import MusicLibrary from '../player/MusicLibrary';
 import {setUpBlocklyForMusicLab} from '../blockly/setup';
 import MusicLabView from './MusicLabView';
+import MusicProgramExecutor from '../MusicProgramExecutor';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -56,8 +49,6 @@ import MusicLabView from './MusicLabView';
  */
 class UnconnectedMusicView extends React.Component {
   static propTypes = {
-    appConfig: PropTypes.object,
-
     /**
      * True if Music Lab is being presented from the Incubator page (i.e. under /projectbeats),
      * false/undefined if as part of a script or single level.
@@ -70,6 +61,7 @@ class UnconnectedMusicView extends React.Component {
     userType: PropTypes.string,
     signInState: PropTypes.oneOf(Object.values(SignInState)),
     isPlaying: PropTypes.bool,
+    playbackEvents: PropTypes.array,
     setIsPlaying: PropTypes.func,
     setCurrentPlayheadPosition: PropTypes.func,
     selectedBlockId: PropTypes.string,
@@ -99,23 +91,11 @@ class UnconnectedMusicView extends React.Component {
   constructor(props) {
     super(props);
 
-    if (this.props.appConfig) {
-      setAppConfig(this.props.appConfig);
-    }
-
-    const bpm = AppConfig.getValue('bpm');
-    const key = AppConfig.getValue('key');
-
-    this.player = new MusicPlayer(bpm, key && Key[key.toUpperCase()]);
-    Globals.setPlayer(this.player);
     this.analyticsReporter = new AnalyticsReporter();
-    this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
-    this.soundUploader = new SoundUploader(this.player);
-    this.playingTriggers = [];
     this.musicValidator = new MusicValidator(
       this.getIsPlaying,
       this.getPlaybackEvents,
-      this.player
+      this.getCurrentPlayheadPosition
     );
 
     // Set default for instructions position.
@@ -126,8 +106,26 @@ class UnconnectedMusicView extends React.Component {
       this.props.setInstructionsPosition(defaultInstructionsPos);
     }
 
+    const updatePlaybackData = (
+      type,
+      events,
+      orderedFunctions,
+      lastMeasure
+    ) => {
+      if (type === 'replace') {
+        this.props.clearPlaybackEvents();
+        this.props.clearOrderedFunctions();
+      }
+      this.props.addPlaybackEvents({events, lastMeasure});
+      this.props.addOrderedFunctions({orderedFunctions});
+    };
+
+    this.executor = new MusicProgramExecutor(
+      updatePlaybackData,
+      this.analyticsReporter
+    );
+
     this.state = {
-      showingVideo: !!this.props.inIncubator,
       loadedLibrary: false,
       currentLibraryName: null,
       hasLoadedInitialSounds: false,
@@ -158,11 +156,11 @@ class UnconnectedMusicView extends React.Component {
     if (this.props.appName === 'music') {
       this.onLevelLoad(this.props.levelData, this.props.initialSources);
     }
-    this.player.setUpdateLoadProgress(this.props.updateLoadProgress);
+    this.executor.setUpdateLoadProgress(this.props.updateLoadProgress);
   }
 
   async componentDidUpdate(prevProps) {
-    this.musicBlocklyWorkspace.resizeBlockly();
+    this.executor.resizeBlockly();
 
     if (
       prevProps.userId !== this.props.userId ||
@@ -191,7 +189,7 @@ class UnconnectedMusicView extends React.Component {
       prevProps.selectedBlockId !== this.props.selectedBlockId &&
       !this.props.isPlaying
     ) {
-      this.musicBlocklyWorkspace.selectBlock(this.props.selectedBlockId);
+      this.executor.selectBlock(this.props.selectedBlockId);
     }
 
     // Using stringified JSON for deep comparison
@@ -203,7 +201,7 @@ class UnconnectedMusicView extends React.Component {
     }
 
     if (prevProps.updateLoadProgress !== this.props.updateLoadProgress) {
-      this.player.setUpdateLoadProgress(this.props.updateLoadProgress);
+      this.executor.setUpdateLoadProgress(this.props.updateLoadProgress);
     }
 
     // Update components with new level data and new initial sources when
@@ -229,8 +227,8 @@ class UnconnectedMusicView extends React.Component {
     }
     await this.loadAndInitializePlayer(libraryName || DEFAULT_LIBRARY);
 
-    this.musicBlocklyWorkspace.init(
-      document.getElementById('blockly-div'),
+    this.executor.onLevelChange(
+      'blockly-div',
       this.onBlockSpaceChange,
       this.props.isReadOnlyWorkspace,
       levelData?.toolbox
@@ -246,7 +244,7 @@ class UnconnectedMusicView extends React.Component {
       if (initialSources?.source) {
         codeToLoad = JSON.parse(initialSources.source);
       }
-      this.loadCode(codeToLoad);
+      this.executor.loadCode(codeToLoad);
     }
   }
 
@@ -271,13 +269,8 @@ class UnconnectedMusicView extends React.Component {
       return;
     }
 
-    if (getBlockMode() === BlockMode.SIMPLE2) {
-      this.sequencer = new Simple2Sequencer(this.library);
-    } else {
-      this.sequencer = new MusicPlayerStubSequencer();
-    }
-
-    this.player.updateConfiguration(
+    this.executor.updateConfiguration(
+      libraryName,
       this.library.getBPM(),
       this.library.getKey()
     );
@@ -294,21 +287,19 @@ class UnconnectedMusicView extends React.Component {
   };
 
   getPlaybackEvents = () => {
-    return this.sequencer.getPlaybackEvents();
+    return this.props.playbackEvents;
   };
 
   getCurrentPlayheadPosition = () => {
-    return this.player.getCurrentPlayheadPosition();
+    return this.executor.getCurrentPlayheadPosition();
   };
 
   updateHighlightedBlocks = () => {
-    this.musicBlocklyWorkspace.updateHighlightedBlocks(
-      this.props.currentlyPlayingBlockIds
-    );
+    this.executor.updateHighlightedBlocks(this.props.currentlyPlayingBlockIds);
   };
 
   clearCode = () => {
-    this.loadCode(this.getStartSources());
+    this.executor.loadCode(this.getStartSources());
     this.setPlaying(false);
   };
 
@@ -329,7 +320,7 @@ class UnconnectedMusicView extends React.Component {
     // usable then.
     // It's possible that other events should similarly be ignored here.
     if (e.type === Blockly.Events.BLOCK_DRAG) {
-      this.player.cancelPreviews();
+      this.executor.cancelPreviews();
       return;
     }
 
@@ -341,24 +332,11 @@ class UnconnectedMusicView extends React.Component {
 
     // Update undo status when blocks change.
     this.props.setUndoStatus({
-      canUndo: this.musicBlocklyWorkspace.canUndo(),
-      canRedo: this.musicBlocklyWorkspace.canRedo(),
+      canUndo: this.executor.canUndo(),
+      canRedo: this.executor.canRedo(),
     });
 
-    const codeChanged = this.compileSong();
-    if (codeChanged) {
-      this.executeCompiledSong().then(() => {
-        // If code has changed mid-playback, clear and re-queue all events in the player
-        if (this.props.isPlaying) {
-          this.player.stopAllSoundsStillToPlay();
-          this.player.playEvents(this.sequencer.getPlaybackEvents());
-        }
-      });
-
-      this.analyticsReporter.onBlocksUpdated(
-        this.musicBlocklyWorkspace.getAllBlocks()
-      );
-    }
+    this.executor.onWorkspaceChange(this.props.isPlaying);
 
     if (e.type === Blockly.Events.SELECTED) {
       if (
@@ -368,9 +346,6 @@ class UnconnectedMusicView extends React.Component {
         this.props.selectBlockId(e.newElementId);
       }
     }
-
-    // This may no-op due to throttling.
-    this.saveCode();
   };
 
   setPlaying = play => {
@@ -391,136 +366,11 @@ class UnconnectedMusicView extends React.Component {
       return;
     }
     this.analyticsReporter.onButtonClicked('trigger', {id});
-    const triggerStartPosition =
-      this.musicBlocklyWorkspace.getTriggerStartPosition(
-        id,
-        this.player.getCurrentPlayheadPosition()
-      );
-    if (!triggerStartPosition) {
-      return;
-    }
-
-    this.sequencer.clear();
-    this.musicBlocklyWorkspace.executeTrigger(id, triggerStartPosition);
-    const playbackEvents = this.sequencer.getPlaybackEvents();
-    this.props.addPlaybackEvents({
-      events: playbackEvents,
-      lastMeasure: this.sequencer.getLastMeasure(),
-    });
-    this.props.addOrderedFunctions({
-      orderedFunctions: this.sequencer.getOrderedFunctions(),
-    });
-    this.player.playEvents(playbackEvents);
-
-    this.playingTriggers.push({
-      id,
-      startPosition: triggerStartPosition,
-    });
-  };
-
-  compileSong = () => {
-    return this.musicBlocklyWorkspace.compileSong({
-      getTriggerCount: () => this.playingTriggers.length,
-      Sequencer: this.sequencer,
-    });
-  };
-
-  executeCompiledSong = () => {
-    // Clear the events list because it will be populated next.
-    this.props.clearPlaybackEvents();
-    this.props.clearOrderedFunctions();
-
-    // Sequence out all possible trigger events to preload sounds if necessary.
-    const allTriggerEvents = [];
-    Triggers.forEach(trigger => {
-      this.sequencer.clear();
-      this.musicBlocklyWorkspace.executeTrigger(trigger.id, 0);
-      allTriggerEvents.push(...this.sequencer.getPlaybackEvents());
-    });
-
-    this.sequencer.clear();
-    this.musicBlocklyWorkspace.executeCompiledSong(this.playingTriggers);
-    this.props.addPlaybackEvents({
-      events: this.sequencer.getPlaybackEvents(),
-      lastMeasure: this.sequencer.getLastMeasure(),
-    });
-    this.props.addOrderedFunctions({
-      orderedFunctions: this.sequencer.getOrderedFunctions(),
-    });
-
-    return this.player.preloadSounds(
-      [...this.sequencer.getPlaybackEvents(), ...allTriggerEvents],
-      (loadTimeMs, soundsLoaded) => {
-        // Report load time metrics if any sounds were loaded.
-        if (soundsLoaded > 0) {
-          Lab2Registry.getInstance()
-            .getMetricsReporter()
-            .reportLoadTime('PreloadSoundLoadTime', loadTimeMs, [
-              {
-                name: 'LoadType',
-                value: this.state.hasLoadedInitialSounds
-                  ? 'Subsequent'
-                  : 'Initial',
-              },
-            ]);
-        }
-
-        if (!this.state.hasLoadedInitialSounds) {
-          Lab2Registry.getInstance().getMetricsReporter().logInfo({
-            event: 'InitialSoundsLoaded',
-            soundsLoaded,
-            loadTimeMs,
-          });
-          this.setState({
-            hasLoadedInitialSounds: true,
-          });
-        }
-      }
-    );
-  };
-
-  saveCode = (forceSave = false) => {
-    // Can't save if this is a read-only workspace.
-    if (this.props.isReadOnlyWorkspace) {
-      return;
-    }
-    const workspaceCode = this.musicBlocklyWorkspace.getCode();
-    const sourcesToSave = {
-      source: JSON.stringify(workspaceCode),
-    };
-
-    // Save the current library to sources as part of labConfig if present
-    if (this.state.currentLibraryName) {
-      sourcesToSave.labConfig = {
-        music: {
-          library: this.state.currentLibraryName,
-        },
-      };
-    }
-
-    Lab2Registry.getInstance()
-      .getProjectManager()
-      ?.save(sourcesToSave, forceSave);
-  };
-
-  loadCode = code => {
-    this.musicBlocklyWorkspace.loadCode(code);
-    this.saveCode();
+    this.executor.playTrigger(id);
   };
 
   playSong = () => {
-    this.player.stopSong();
-    this.playingTriggers = [];
-
-    this.compileSong();
-
-    this.executeCompiledSong();
-    this.saveCode(true);
-
-    this.player.playSong(
-      this.sequencer.getPlaybackEvents(),
-      this.props.startingPlayheadPosition
-    );
+    this.executor.playSong(this.props.startingPlayheadPosition);
 
     this.props.setIsPlaying(true);
     this.props.setCurrentPlayheadPosition(this.props.startingPlayheadPosition);
@@ -532,21 +382,10 @@ class UnconnectedMusicView extends React.Component {
       return;
     }
 
-    this.player.stopSong();
-    this.playingTriggers = [];
-
-    this.executeCompiledSong();
+    this.executor.stopSong();
 
     this.props.setIsPlaying(false);
     this.props.setCurrentPlayheadPosition(this.props.startingPlayheadPosition);
-  };
-
-  undo = () => {
-    this.musicBlocklyWorkspace.undo();
-  };
-
-  redo = () => {
-    this.musicBlocklyWorkspace.redo();
   };
 
   render() {
@@ -562,11 +401,11 @@ class UnconnectedMusicView extends React.Component {
         <MusicLabView
           setPlaying={this.setPlaying}
           playTrigger={this.playTrigger}
-          hasTrigger={id => this.musicBlocklyWorkspace.hasTrigger(id)}
+          hasTrigger={id => this.executor.hasTrigger(id)}
           getCurrentPlayheadPosition={this.getCurrentPlayheadPosition}
           updateHighlightedBlocks={this.updateHighlightedBlocks}
-          undo={this.undo}
-          redo={this.redo}
+          undo={() => this.executor.undo()}
+          redo={() => this.executor.redo()}
           clearCode={this.clearCode}
           validator={this.musicValidator}
         />
@@ -585,6 +424,7 @@ const MusicView = connect(
     signInState: state.currentUser.signInState,
 
     isPlaying: state.music.isPlaying,
+    playbackEvents: state.music.playbackEvents,
     selectedBlockId: state.music.selectedBlockId,
     currentlyPlayingBlockIds: getCurrentlyPlayingBlockIds(state),
     initialSources: state.lab.initialSources,
@@ -615,7 +455,7 @@ const MusicView = connect(
     updateLoadProgress: value => dispatch(setSoundLoadingProgress(value)),
     setUndoStatus: value => dispatch(setUndoStatus(value)),
     showCallout: id => dispatch(showCallout(id)),
-    clearCallout: id => dispatch(clearCallout()),
+    clearCallout: () => dispatch(clearCallout()),
   })
 )(UnconnectedMusicView);
 
