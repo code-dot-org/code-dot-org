@@ -54,7 +54,7 @@ jobs:
           docker run code-dot-org-testing-docker-image /bin/bash -c "ls -la /home"
 
           echo "Debugging /circleci Directory"
-          docker run code-dot-org-testing-docker-image /bin/bash -c "ls -la /circleci"
+          docker run --entrypoint /bin/bash code-dot-org-testing-docker-image -c "ls -la /circleci || mkdir -p /circleci && ls -la /circleci"
 
           echo "Debugging deeper into /circleci"
           docker run code-dot-org-testing-docker-image /bin/bash -c "ls -laR /circleci"
