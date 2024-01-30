@@ -10,7 +10,7 @@ import {compilationSystemPrompt} from '@cdo/apps/aiTutor/constants';
 import {TutorTypes} from '@cdo/apps/aiTutor/types';
 
 // AI Tutor feature that explains to students why their code did not compile.
-const CompilationTutor = ({levelId}) => {
+const CompilationTutor = ({levelId, isProjectBacked, scriptId}) => {
   const dispatch = useDispatch();
 
   const sources = useSelector(state => state.javalabEditor.sources);
@@ -35,6 +35,8 @@ const CompilationTutor = ({levelId}) => {
     dispatch(
       askAITutor({
         levelId: levelId,
+        scriptId: scriptId,
+        isProjectBacked: isProjectBacked,
         systemPrompt: systemPrompt,
         studentCode: studentCode,
         tutorType: TutorTypes.COMPILATION,
@@ -74,4 +76,6 @@ export default CompilationTutor;
 
 CompilationTutor.propTypes = {
   levelId: PropTypes.number,
+  scriptId: PropTypes.number,
+  isProjectBacked: PropTypes.bool,
 };
