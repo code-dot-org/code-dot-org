@@ -104,4 +104,8 @@ class Gamelab < Blockly
   def self.palette
     SharedConstants::GAMELAB_BLOCKS
   end
+
+  def validated?
+    properties['validation_code'].present? || properties['free_play'] == 'false'
+  end
 end

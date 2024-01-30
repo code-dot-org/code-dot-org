@@ -169,4 +169,8 @@ class Javalab < Level
   def age_13_required?
     true
   end
+
+  def validated?
+    properties['encrypted_validation'].present?
+  end
 end
