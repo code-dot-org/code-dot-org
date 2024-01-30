@@ -1,7 +1,11 @@
-import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {MIN_NUM_MEASURES} from '../constants';
+import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {DEFAULT_LIBRARY, MIN_NUM_MEASURES} from '../constants';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {FunctionEvents} from '../player/interfaces/FunctionEvents';
+import {LabState} from '@cdo/apps/lab2/lab2Redux';
+import {MusicLevelData} from '../types';
+import MusicLibrary from '../player/MusicLibrary';
+import {loadLibrary} from '../utils/Loader';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
@@ -88,6 +92,19 @@ const initialState: MusicState = {
     id: undefined,
     index: 0,
   },
+};
+
+// Selectors
+export const getMusicLibraryName = (state: LabState): string => {
+  let libraryName = (
+    state.levelProperties?.levelData as MusicLevelData | undefined
+  )?.library;
+
+  if (!libraryName && state.initialSources?.labConfig?.music) {
+    libraryName = state.initialSources.labConfig.music.library as string;
+  }
+
+  return libraryName || DEFAULT_LIBRARY;
 };
 
 const musicSlice = createSlice({
