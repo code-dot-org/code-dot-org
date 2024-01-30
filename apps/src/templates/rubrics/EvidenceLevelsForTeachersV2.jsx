@@ -24,6 +24,9 @@ export default function EvidenceLevelsForTeachersV2({
 }) {
   const passFail = useMemo(() => {
     if (!!aiEvalInfo) {
+      if (understanding >= 0) {
+        return [];
+      }
       if (aiEvalInfo.understanding > 1) {
         console.log('pass');
         return [2, 3];
@@ -32,7 +35,7 @@ export default function EvidenceLevelsForTeachersV2({
         return [0, 1];
       }
     } else return [];
-  }, [aiEvalInfo]);
+  }, [aiEvalInfo, understanding]);
 
   if (canProvideFeedback) {
     return (
