@@ -58,21 +58,10 @@ jobs:
 
       - name: Set up Docker Environment
         run: docker build -t code-dot-org-testing-docker-image -f ./code-dot-org/docker/dockerfiles/Dockerfile ./code-dot-org
-    
-      - name: Find ui_tests.sh file
-        run: |
-          docker run --rm --entrypoint /bin/bash \
-            code-dot-org-testing-docker-image \
-            -c "find / -type f -name 'ui_tests.sh' 2>/dev/null"
-          
-      - name: Run ls Unit Tests without working dir
-        run: |
-          docker run \
-            code-dot-org-testing-docker-image \
-            /bin/bash -c "ls -la ."
 
-      - name: Update Cache
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+      - name: Aggressive Debugging of Docker Container
+        run: |
+          # Create and start a container in the background
+          CONTAINER_ID=$(docker create --entrypoint /bin/bash code-dot-org-testing-docker-image -s)
+          docker start $CONTAINER_ID
+
