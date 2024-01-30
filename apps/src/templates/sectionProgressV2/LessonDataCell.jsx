@@ -5,7 +5,11 @@ import classNames from 'classnames';
 import styles from './progress-table-v2.module.scss';
 import {lessonHasLevels} from '../progress/progressHelpers';
 
-export default function LessonDataCell({lesson, studentLessonProgress}) {
+export default function LessonDataCell({
+  lesson,
+  studentLessonProgress,
+  addExpandedLesson,
+}) {
   const lessonData = React.useMemo(() => {
     if (!lessonHasLevels(lesson)) {
       return 'nolev';
@@ -17,7 +21,10 @@ export default function LessonDataCell({lesson, studentLessonProgress}) {
   }, [lesson, studentLessonProgress]);
 
   return (
-    <div className={classNames(styles.gridBox, styles.gridBoxLesson)}>
+    <div
+      className={classNames(styles.gridBox, styles.gridBoxLesson)}
+      onClick={() => addExpandedLesson(lesson.id)}
+    >
       {lessonData}
     </div>
   );
@@ -27,4 +34,5 @@ LessonDataCell.propTypes = {
   studentId: PropTypes.number.isRequired,
   studentLessonProgress: studentLessonProgressType,
   lesson: PropTypes.object.isRequired,
+  addExpandedLesson: PropTypes.func.isRequired,
 };
