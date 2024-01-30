@@ -14,12 +14,36 @@ import * as colors from '@cdo/apps/util/color';
  * @returns {Number}
  */
 export function getTextWidth(p5, text, size) {
+  console.log('size', size);
+  console.log('text', text);
   p5.push();
   p5.textSize(size);
   const width = p5.textWidth(text);
   p5.pop();
 
   return width;
+}
+
+export function variableBubble(
+  p5,
+  x,
+  y,
+  textWidthValue,
+  textHeightValue,
+  textSizeValue,
+  text
+) {
+  p5.fill(0); // Black background
+  p5.stroke(255); // White border
+  p5.strokeWeight(2);
+  p5.rectMode(p5.CENTER);
+  p5.rect(x, y, textWidthValue, textHeightValue, 20); // Rounded rectangle with 20 as the radius
+
+  p5.fill(255); // White text
+  p5.noStroke();
+  p5.textSize(textSizeValue);
+  p5.textAlign(p5.CENTER, p5.CENTER);
+  p5.text(text, x, y);
 }
 
 /**

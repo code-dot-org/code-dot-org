@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Immutable from 'immutable';
 import {connect} from 'react-redux';
 
+// TODO: Delete
 class VariableDisplay extends React.Component {
   static propTypes = {
     watchedExpressions: PropTypes.instanceOf(Immutable.List).isRequired,
