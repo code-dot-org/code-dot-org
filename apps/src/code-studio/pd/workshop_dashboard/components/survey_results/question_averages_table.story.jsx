@@ -7,7 +7,11 @@ const questions = [
     key: 'question_1',
     score_base: 5,
   },
-  {text: 'How was the session?', key: 'question_2', score_base: 5},
+  {
+    text: 'How was the session?',
+    key: 'question_2',
+    score_base: 5,
+  },
 ];
 
 export default {
