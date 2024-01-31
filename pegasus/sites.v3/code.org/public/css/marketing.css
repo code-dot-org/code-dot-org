@@ -52,7 +52,7 @@ figure img{
 .callout-box {padding: 10px;margin-top: 30px;}
 .callout-box img {max-width:100%; vertical-align:middle;}
 
-.bp0 {background-color:#7665a0; color:#ffffff;}
+.bp0 {background-color:var(--brand_secondary_default); color:#ffffff;}
 .bp1 {background-color:#a69bc1;}
 .bp2 {background-color:#cfc9de;}
 .bp3 {background-color:#ebe8f1;}
@@ -127,7 +127,7 @@ h4.highlight {
 
 hr.bhm-border {  border:none;  height:5px;  background-image: url('../images/bhm/panafbars5.png');   background-repeat: repeat-x;}
 
-.bhm-heading {color:#7665a0; }
+.bhm-heading {color:var(--brand_secondary_default); }
 
 .blackstudentdata img {width:100%;}
 .blackstudentdata p {margin: 1em;}

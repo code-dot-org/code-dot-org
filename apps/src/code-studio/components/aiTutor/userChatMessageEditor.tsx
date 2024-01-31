@@ -1,7 +1,10 @@
 import React, {useState, useCallback} from 'react';
 import Button from '@cdo/apps/templates/Button';
 import style from './ai-tutor.module.scss';
-import {submitChatMessage} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
+import {
+  AITutorState,
+  submitChatMessage,
+} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {useSelector} from 'react-redux';
 
@@ -9,10 +12,10 @@ import {useSelector} from 'react-redux';
  * Renders the AI Tutor user chat message editor component.
  */
 const UserChatMessageEditor = () => {
-  const [userMessage, setUserMessage] = useState('');
+  const [userMessage, setUserMessage] = useState<string>('');
 
   const isWaitingForChatResponse = useSelector(
-    state => state.aiTutor.isWaitingForChatResponse
+    (state: {aiTutor: AITutorState}) => state.aiTutor.isWaitingForChatResponse
   );
 
   const dispatch = useAppDispatch();
