@@ -717,6 +717,18 @@ FirebaseStorage.clearTable = function (tableName, onSuccess, onError) {
     })
     .then(onSuccess, onError);
 };
+\
+FirebaseStorage.importCsv = function (
+  tableName,
+  tableDataCsv,
+  onSuccess,
+  onError
+) {
+  parseRecordsDataFromCsv(tableDataCsv)
+    .then(recordsData => validateRecordsData(recordsData))
+    .then(recordsData => overwriteTableData(tableName, recordsData))
+    .then(onSuccess, onError);
+};
 
 /**
  * Returns a list of existing tables. The counters/tables node is the source of truth for
@@ -1077,18 +1089,6 @@ function overwriteTableData(tableName, recordsData) {
       )
     );
 }
-
-FirebaseStorage.importCsv = function (
-  tableName,
-  tableDataCsv,
-  onSuccess,
-  onError
-) {
-  parseRecordsDataFromCsv(tableDataCsv)
-    .then(recordsData => validateRecordsData(recordsData))
-    .then(recordsData => overwriteTableData(tableName, recordsData))
-    .then(onSuccess, onError);
-};
 
 // Initialize redux's list of tables from firebase, and keep it up to date as
 // new tables are added and removed.

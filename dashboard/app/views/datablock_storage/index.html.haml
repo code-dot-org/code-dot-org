@@ -81,6 +81,32 @@
   = text_field_tag "table_name", "", placeholder: "table_name"
   = submit_tag "clear_table"
 
+%h3 import_csv
+= form_tag "import_csv", :method => :post, :remote => false do
+  = text_field_tag "table_name", "", placeholder: "table_name"
+  = submit_tag "import_csv"
+
+%h3 add_column
+= form_tag "add_column", :method => :post, :remote => false do
+  = text_field_tag "column_name", "", placeholder: "column_name"
+  = submit_tag "add_column"
+
+%h3 delete_column
+= form_tag "delete_column", :method => :delete, :remote => false do
+  = text_field_tag "column_name", "", placeholder: "column_name"
+  = submit_tag "delete_column"
+
+%h3 rename_column
+= form_tag "rename_column", :method => :put, :remote => false do
+  = text_field_tag "old_column_name", "", placeholder: "old_column_name"
+  = text_field_tag "new_column_name", "", placeholder: "new_column_name"
+  = submit_tag "rename_column"
+
+%h3 coerce_column
+= form_tag "coerce_column", :method => :put, :remote => false do
+  = text_field_tag "column_name", "", placeholder: "column_name"
+  = submit_tag "coerce_column"
+
 %h2 Tables
 %table
   %tr

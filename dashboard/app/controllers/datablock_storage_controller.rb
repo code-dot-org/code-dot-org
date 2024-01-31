@@ -193,6 +193,43 @@ class DatablockStorageController < ApplicationController
     render json: true
   end
 
+  #### NOT YET IMPLEMENTED ####
+
+  def add_column
+    table_name = params[:table_name]
+    column_name = params[:column_name]
+
+    raise "Not implemented yet"
+  end
+
+  def delete_column
+    table_name = params[:table_name]
+    column_name = params[:column_name]
+
+    raise "Not implemented yet"
+  end
+
+  def rename_column
+    table_name = params[:table_name]
+    old_column_name = params[:old_column_name]
+    new_column_name = params[:new_column_name]
+
+    raise "Not implemented yet"
+  end
+
+  def coerce_column
+    table_name = params[:table_name]
+    column_name = params[:column_name]
+
+    raise "Not implemented yet"
+  end
+
+  def import_csv
+    table_name = params[:table_name]
+    table_data_csv = params[:table_data_csv]
+
+    raise "Not implemented yet"
+  end
 
   private
 
