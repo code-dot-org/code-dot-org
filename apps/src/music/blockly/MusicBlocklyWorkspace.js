@@ -85,14 +85,6 @@ export default class MusicBlocklyWorkspace {
     Blockly.svgResize(this.workspace);
   }
 
-  hideChaff() {
-    if (!this.workspace) {
-      return;
-    }
-
-    this.workspace.hideChaff();
-  }
-
   dispose() {
     if (!this.workspace) {
       return;

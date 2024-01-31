@@ -190,18 +190,18 @@ class UnconnectedMusicView extends React.Component {
     }
 
     // When changing levels, stop playback and reset the initial sounds loaded flag
-    // since a new set of sounds will be loaded on the next level.  Also clear
-    // the callout that's showing.
-    if (prevProps.currentLevelIndex !== this.props.currentLevelIndex) {
+    // since a new set of sounds will be loaded on the next level.  Also clear the
+    // callout that might be showing, and dispose of the Blockly workspace so that
+    // any lingering UI is removed.
+    if (
+      prevProps.currentLevelIndex !== this.props.currentLevelIndex &&
+      this.props.appName === 'music'
+    ) {
       this.stopSong();
       this.setState({
         hasLoadedInitialSounds: false,
       });
       this.props.clearCallout();
-      this.musicBlocklyWorkspace.hideChaff();
-    }
-
-    if (this.props.appName !== 'music') {
       this.musicBlocklyWorkspace.dispose();
     }
 
