@@ -165,12 +165,7 @@
 = form_tag "clear_all_data", :method => :delete, :remote => false do
   = submit_tag "clear_all_data"
 
-%h3 add_current_table_to_project
-= form_tag "add_current_table_to_project", :method => :post, :remote => false do
-  = text_field_tag "table_name", "", placeholder: "table_name"
-  = submit_tag "add_current_table_to_project"
-
-%h3 copy_static_table
-= form_tag "add_current_table_to_project", :method => :post, :remote => false do
-  = text_field_tag "table_name", "", placeholder: "table_name"
-  = submit_tag "copy_static_table"
+%h3 add_shared_table
+= form_tag "add_shared_table", :method => :post, :remote => false do
+  = text_field_tag "table_name", "100 Birds of the World", placeholder: "table_name"
+  = submit_tag "add_shared_table"

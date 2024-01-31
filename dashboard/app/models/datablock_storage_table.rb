@@ -12,6 +12,13 @@
 class DatablockStorageTable < ApplicationRecord
   self.primary_keys = :channel_id, :table_name
 
+  def self.add_shared_table(channel_id, table_name)
+    unless DatablockStorageTable.exists?(channel_id: "shared", table_name: table_name)
+      raise "Shared table '#{table_name}' does not exist"
+    end
+    DatablockStorageTable.create!(channel_id: channel_id, table_name: table_name, is_shared_table: true)
+  end
+
   def create_records(record_jsons)
     # BEGIN;
     DatablockStorageRecord.transaction do
