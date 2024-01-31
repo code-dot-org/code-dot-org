@@ -212,7 +212,7 @@ class DatablockStorageController < ApplicationController
     columns = JSON.parse(table.columns)
 
     # First rename the column in all the JSON records
-    DatablockStorageRecord.where(channel_id: params[:channel_id], table_name: table_name).each do |record|
+    DatablockStorageRecord.where(channel_id: params[:channel_id], table_name: params[:table_name]).each do |record|
       record.record_json[new_column_name] = record.record_json.delete(old_column_name)
       record.save!
     end
@@ -223,8 +223,6 @@ class DatablockStorageController < ApplicationController
     table.save!
 
     render json: true
-
-    raise "Not implemented yet"
   end
 
   def coerce_column
