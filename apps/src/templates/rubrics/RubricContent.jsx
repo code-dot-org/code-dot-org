@@ -288,15 +288,38 @@ RubricContent.propTypes = {
   aiEvaluations: PropTypes.arrayOf(aiEvaluationShape),
 };
 
-const InfoAlert = ({text}) => {
+export const InfoAlert = ({text, dismissable}) => {
+  const [closed, setClosed] = useState(false);
+  const closeButtonCallback = () => {
+    setClosed(true);
+  };
+
   return (
-    <div className={style.infoAlert}>
-      <FontAwesome icon="info-circle" className={style.infoAlertIcon} />
-      <BodyTwoText>{text}</BodyTwoText>
+    <div
+      className={classnames('uitest-info-alert', {
+        [style.infoAlert]: !closed,
+        [style.infoAlertClosed]: !!closed,
+      })}
+    >
+      <div className={style.infoAlertLeft}>
+        <FontAwesome icon="info-circle" className={style.infoAlertIcon} />
+        <BodyTwoText>{text}</BodyTwoText>
+      </div>
+      {!!dismissable && (
+        <button
+          type="button"
+          onClick={closeButtonCallback}
+          className={classnames('close', style.infoAlertRight)}
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      )}
     </div>
   );
 };
 
 InfoAlert.propTypes = {
   text: PropTypes.string.isRequired,
+  dismissable: PropTypes.bool,
 };
