@@ -20,25 +20,7 @@ class DatablockStorageController < ApplicationController
   def set_key_value
     raise "value must be less than 4096 bytes" if params[:value].length > 4096
     value = JSON.parse params[:value]
-
-    if value.nil?
-      # Setting a key to null deletes it
-      DatablockStorageKvp.where(channel_id: params[:channel_id], key: params[:key]).delete_all
-    else
-      # This should generate a single MySQL insert statement using the `ON DUPLICATE KEY UPDATE`
-      # syntax. Should be faster than a find round-trip followed by an update or insert.
-      # But we should check the SQL output to make sure its what we expect, since this is
-      # mainly designed Rails-wise as a bulk insert method.
-      DatablockStorageKvp.upsert_all(
-        [
-          {channel_id: params[:channel_id], key: params[:key], value: value.to_json}
-        ]
-      )
-    end
-
-    # kvp = DatablockStorageKvp.create(channel_id: params[:channel_id], key: params[:key], value: params[:value])
-    # render :json => kvp.as_json
-
+    DatablockStorageKvp.set_kvp(params[:channel_id], params[:key], value)
     render json: {key: params[:key], value: value}
   end
 
@@ -278,7 +260,9 @@ class DatablockStorageController < ApplicationController
 
   def populate_key_values
     key_values_json = JSON.parse(params[:key_values_json])
-    raise "Not yet implemented"
+    raise "key_values_json must be a hash" unless key_values_json.is_a? Hash
+    DatablockStorageKvp.set_kvps(params[:channel_id], key_values_json)
+    render json: true
   end
 
   def get_columns_for_table

@@ -153,7 +153,7 @@
 
 %h3 populate_key_values
 = form_tag "populate_key_values", :method => :put, :remote => false do
-  = text_area_tag "key_values_json", "", placeholder: "key_values_json"
+  = text_area_tag "key_values_json", '{"baz": true, "bing": "Hiya", "tim": 5}', placeholder: "key_values_json"
   = submit_tag "populate_key_values"
 
 %h3 get_columns_for_table
