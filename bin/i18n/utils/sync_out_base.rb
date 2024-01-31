@@ -19,7 +19,9 @@ module I18n
       end
 
       def languages
-        @languages ||= PegasusLanguages.all
+        @languages ||= I18nScriptUtils.cdo_languages.select do |cdo_language|
+          cdo_language[:locale_s] != I18nScriptUtils::SOURCE_LOCALE
+        end
       end
 
       def progress_bar
