@@ -568,6 +568,7 @@ Dashboard::Application.routes.draw do
     post '/admin/account_repair', to: 'admin_users#account_repair',  as: 'account_repair'
     get '/admin/assume_identity', to: 'admin_users#assume_identity_form', as: 'assume_identity_form'
     post '/admin/assume_identity', to: 'admin_users#assume_identity', as: 'assume_identity'
+    post '/admin/delete_user', to: 'admin_users#delete_user', as: 'delete_user'
     post '/admin/undelete_user', to: 'admin_users#undelete_user', as: 'undelete_user'
     get '/admin/manual_pass', to: 'admin_users#manual_pass_form', as: 'manual_pass_form'
     post '/admin/manual_pass', to: 'admin_users#manual_pass', as: 'manual_pass'
@@ -596,6 +597,7 @@ Dashboard::Application.routes.draw do
     post '/lti/v1/authenticate', to: 'lti_v1#authenticate'
     match '/lti/v1/sync_course', to: 'lti_v1#sync_course', via: [:get, :post]
     post '/lti/v1/integrations', to: 'lti_v1#create_integration'
+    get '/lti/v1/integrations', to: 'lti_v1#new_integration'
 
     # OAuth endpoints
     get '/oauth/jwks', to: 'oauth_jwks#jwks'

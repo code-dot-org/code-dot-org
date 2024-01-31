@@ -55,7 +55,7 @@
 
 .learn-button {
   width: 100%;
-  background-color: #7665a0;
+  background-color: var(--brand_secondary_default);
   height: 30px;
   position: absolute;
   bottom: 0px;
