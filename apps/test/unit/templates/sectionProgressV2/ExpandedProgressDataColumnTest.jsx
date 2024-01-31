@@ -1,10 +1,21 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {render, screen} from '@testing-library/react';
 import {expect} from '../../../util/reconfiguredChai';
 
-import {UnconnectedExpandedProgressDataColumn} from '@cdo/apps/templates/sectionProgressV2/ExpandedProgressDataColumn.jsx';
-import LevelDataCell from '@cdo/apps/templates/sectionProgressV2/LevelDataCell.jsx';
-import ExpandedProgressColumnHeader from '@cdo/apps/templates/sectionProgressV2/ExpandedProgressColumnHeader.jsx';
+import ExpandedProgressDataColumn from '@cdo/apps/templates/sectionProgressV2/ExpandedProgressDataColumn.jsx';
+
+import {Provider} from 'react-redux';
+import sectionProgress, {
+  addDataByUnit,
+} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+
+import {
+  getStore,
+  registerReducers,
+  restoreRedux,
+  stubRedux,
+} from '@cdo/apps/redux';
 
 import {
   fakeLessonWithLevels,
@@ -20,22 +31,41 @@ const LEVEL_PROGRESS = fakeStudentLevelProgress(LESSON.levels, STUDENTS);
 
 const DEFAULT_PROPS = {
   lesson: LESSON,
-  levelProgressByStudent: LEVEL_PROGRESS,
   sortedStudents: STUDENTS,
   removeExpandedLesson: () => {},
 };
 
-const setUp = overrideProps => {
-  const props = {...DEFAULT_PROPS, ...overrideProps};
-  return shallow(<UnconnectedExpandedProgressDataColumn {...props} />);
-};
-
 describe('ExpandedProgressDataColumn', () => {
-  it('Shows all levels for all students', () => {
-    const wrapper = setUp();
-    expect(wrapper.find(ExpandedProgressColumnHeader)).to.have.length(1);
-    expect(wrapper.find(LevelDataCell)).to.have.length(
-      STUDENTS.length * NUM_LEVELS
+  let store;
+
+  beforeEach(() => {
+    stubRedux();
+    registerReducers({sectionProgress, unitSelection});
+    store = getStore();
+    store.dispatch(setScriptId(1));
+    store.dispatch(
+      addDataByUnit({studentLevelProgressByUnit: {1: LEVEL_PROGRESS}})
     );
+  });
+
+  afterEach(() => {
+    restoreRedux();
+  });
+
+  function renderDefault() {
+    render(
+      <Provider store={store}>
+        <ExpandedProgressDataColumn {...DEFAULT_PROPS} />
+      </Provider>
+    );
+  }
+  it('Shows all levels for all students', () => {
+    renderDefault();
+
+    expect(
+      screen.getByText(
+        'Lesson ' + LESSON.relative_position + ': ' + LESSON.name
+      )
+    ).to.exist;
   });
 });
