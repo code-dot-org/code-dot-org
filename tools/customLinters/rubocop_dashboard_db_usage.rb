@@ -1,7 +1,7 @@
 module CustomCops
   # Custom cop that checks for use of dashboard DB outside of dashboard/ directory
   class DashboardDbUsage < RuboCop::Cop::Base
-    MSG = 'Do not access dashboard DB from outside of top-level dashboard/ directory.'
+    MSG = 'Do not access dashboard DB from outside of top-level dashboard/ directory. For details, see: https://github.com/code-dot-org/code-dot-org/pull/55417'
 
     # Match DASHBOARD_DB or Dashboard::User
     def_node_matcher :dashboard_db_const?, <<-PATTERN
