@@ -747,6 +747,7 @@ def run_feature(browser, feature, options)
   run_environment['TEST_RUN_NAME'] = test_run_string
   run_environment['IS_CIRCLE'] = options.is_circle ? "true" : "false"
   run_environment['PRIORITY'] = options.priority
+  run_environment['ORIENTATION'] = browser['sauce:options']['deviceOrientation']
 
   # disable some stuff to make require_rails_env run faster within cucumber.
   # These things won't be disabled in the dashboard instance we're testing against.

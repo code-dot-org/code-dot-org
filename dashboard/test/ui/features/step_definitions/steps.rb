@@ -330,6 +330,7 @@ When /^I rotate to (landscape|portrait)$/ do |orientation|
       "/wd/hub/session/#{@browser.session_id}/orientation",
       {orientation: orientation.upcase}
     )
+    ENV['ORIENTATION'] = orientation.upcase
   end
 end
 
