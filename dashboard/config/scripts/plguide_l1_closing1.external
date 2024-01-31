@@ -1,0 +1,12 @@
+name 'PLGuide_L1_Closing1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Team Aryanna and Micah - Closing a lesson or unit
+
+How do we close out a “lesson” or “unit”? - Team Aryanna and Micah
+Checklist of objectives
+Next steps for a certificate
+
+MARKDOWN

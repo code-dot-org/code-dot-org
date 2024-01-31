@@ -9,7 +9,7 @@ markdown <<MARKDOWN
 
 ## Teach CS in your class
 
-#### Check out some of these curriculum options to get started teaching CS in your class right away.
+#### Explore some of these curriculum options to get started teaching CS in your class right away.
 
 <a href = "https://code.org/educate/csc" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/3f623ba6e5151732099b3441225f5a66-image-1706037967333.jpg" alt="thumbnail for the CS Connections curriculum " width="240px" style="border-radius:5px; float:left; margin: 20px 40px 40px 40px;"></a>
 
@@ -20,11 +20,11 @@ markdown <<MARKDOWN
 ## Continue learning 
 #### Learn more about teaching CS with these self-paced professional learning modules. 
 
-<a href = "https://studio.code.org/s/self-paced-pl-csc-2023" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/7d07a0e2d68dda38552afc27aff1ca8b-image-1706036087455.png" alt="thumbnail for the CS Connections self-paced professional learniing module " width="240px" style="border-radius:5px; float:left; margin: 20px 40px 40px 40px;"></a>
+<a href = "https://studio.code.org/s/self-paced-pl-csc-2023" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/b4ca41cd43376f374fc5408d76241e59-image-1706300331462.png" alt="thumbnail for the CS Connections self-paced professional learniing module " width="240px" style="border-radius:5px; float:left; margin: 20px 40px 40px 40px;"></a>
 
-<a href = "https://studio.code.org/s/k5-onlinepd-2023" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/961358fcf2607737cc76b565bff0ec2f-image-1706036398849.png" alt="thumbnail for the CS Fundamentals self-paced professional learniing module " width="240px" style="border-radius:5px; float:left; margin: 20px 40px 40px 20px;"></a>
+<a href = "https://studio.code.org/s/k5-onlinepd-2023" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/c35579aa157b3605228885e325ddb03d-image-1706299786558.png" alt="thumbnail for the CS Fundamentals self-paced professional learniing module " width="240px" style="border-radius:5px; float:left; margin: 20px 40px 40px 20px;"></a>
 
-<a href = "https://studio.code.org/courses/self-paced-pl-aiml-2023" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/bf069bacc09e2e7e9907e4a315d48bb8-image-1706036898931.png" alt="thumbnail for the CS Connections self-paced professional learniing module " width="240px" style="border-radius:5px; float:left; margin: 20px 50px 50px 20px;"></a>
+<a href = "https://images.code.org/eab8b38416b81b495275cd83372e9c9d-image-1706220671094.jpg" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/1bcbd2c06e0956971485522eff921d49-image-1706299155070.png" alt="thumbnail for the CS Basicss self-paced professional learniing module " width="240px" style="border-radius:5px; float:left; margin: 20px 50px 50px 20px;"></a>
 
 <br>
 
@@ -32,9 +32,9 @@ markdown <<MARKDOWN
 
 ## Help us make this module better!
 
-#### Code.org values and is responsive to feedback. Please fill out this <a href="https://studio.code.org/form/csb_selfpaced_pl_module4" target="blank" rel="noopener noreferrer">short survey</a> to provide your feedback on this module.
+#### Code.org values and is responsive to feedback. Please fill out this <a href="https://studio.code.org/form/csb_selfpaced_pl_postsurvey?survey_data[survey_variable]=unit2" target="blank" rel="noopener noreferrer">short survey</a> to provide your feedback on this module.
 
-<a class="btn btn-large btn-primary" href="https://studio.code.org/form/csb_selfpaced_pl_module4" target="blank" rel="noopener noreferrer">Take the survey</a>
+<a class="btn btn-large btn-primary" href="https://studio.code.org/form/csb_selfpaced_pl_postsurvey?survey_data[survey_variable]=unit2" target="blank" rel="noopener noreferrer">Take the survey</a>
 
 
 ## Stay connected 
@@ -48,5 +48,5 @@ markdown <<MARKDOWN
 <br>
 </p>
 
-![]()
+
 MARKDOWN
