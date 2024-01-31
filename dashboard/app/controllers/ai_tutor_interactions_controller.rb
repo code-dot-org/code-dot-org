@@ -1,6 +1,7 @@
 class AiTutorInteractionsController < ApplicationController
   include Rails.application.routes.url_helpers
-  skip_before_action :verify_authenticity_token
+  before_action :authenticate_user!
+  load_and_authorize_resource :ai_tutor_interaction
 
   # POST /ai_tutor_interactions
   def create

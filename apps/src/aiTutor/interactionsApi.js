@@ -1,18 +1,12 @@
+import {getAuthenticityToken} from '../util/AuthenticityTokenStore';
+
 export async function savePromptAndResponse(interactionData) {
-  // Checking that the csrf-token exists since it is disabled on test
-  const csrfToken = document.querySelector('meta[name="csrf-token"]')
-    ? document.querySelector('meta[name="csrf-token"]').attributes['content']
-        .value
-    : null;
-
-  console.log('interactionData in interactionsApi', interactionData);
-
   try {
     let response = await fetch('/ai_tutor_interactions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'X-CSRF-Token': csrfToken,
+        'X-CSRF-Token': await getAuthenticityToken(),
       },
       body: JSON.stringify(interactionData),
     });
