@@ -133,6 +133,8 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
     }
   };
 
+  // TODO: add item to be disabled possibility
+
   console.log(allOptions);
   console.log(checkedOptions);
   return (
@@ -172,8 +174,8 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
           iconName="chevron-down"
         />
       </button>
-      <form className={classNames(moduleStyles.dropdownMenuContainer)}>
-        <ul className={style.dropdownCheckboxUL}>
+      <form className={moduleStyles.dropdownMenuContainer}>
+        <ul className={'style.dropdownCheckboxUL'}>
           {allOptions.map(({value, label}) => (
             <li key={value} className="checkbox form-group">
               <Checkbox
