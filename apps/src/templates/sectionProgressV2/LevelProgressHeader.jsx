@@ -16,6 +16,7 @@ export default function ExpandedProgressColumnHeader({
     }
   }, [level, toggleExpandedChoiceLevel]);
 
+  console.log(lesson.id + '.' + level.bubbleText + '-h');
   const expandedChoiceLevel = React.useCallback(
     () => (
       <div
