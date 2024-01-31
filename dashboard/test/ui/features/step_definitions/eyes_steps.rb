@@ -50,7 +50,7 @@ end
 And(/^I see no difference for "([^"]*)"(?: using stitch mode "([^"]*)")?$/) do |identifier, stitch_mode|
   next if CDO.disable_all_eyes_running
 
-  if stitch_mode == "none" && (ENV['ORIENTATION'] == 'LANDSCAPE' || ENV['BROWSER_CONFIG'] != 'iPhone')
+  if stitch_mode == "none" && (ENV['BROWSER_CONFIG'] != 'iPhone' || ENV['ORIENTATION'] == 'LANDSCAPE')
     @eyes.force_full_page_screenshot = false
   else
     @eyes.stitch_mode = stitch_mode == "scroll" ?
