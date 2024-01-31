@@ -12,7 +12,7 @@ export default function ExpandedProgressColumnHeader({
   expandedChoiceLevels,
   toggleExpandedChoiceLevel,
 }) {
-  // If there are only 2 levels, we only show the number so that the text fits the cell.
+  // If there are 2 or less levels, we only show the number so that the text fits the cell.
   const headerText =
     lesson.levels.length < 3 && expandedChoiceLevels.length === 0
       ? lesson.relative_position
@@ -23,6 +23,7 @@ export default function ExpandedProgressColumnHeader({
 
   // Manual width is necessary so that overflow text is hidden and lesson header exactly fits levels.
   // Add (numLevels + 1)px to account for borders.
+  // Also count expanded lessons and account for larger borders
   const width = React.useMemo(() => {
     const levelWidth = parseInt(styles.levelCellWidth);
     const lessonHeaderWidth = lesson.levels.reduce((acc, level) => {
