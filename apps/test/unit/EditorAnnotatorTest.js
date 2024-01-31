@@ -1,5 +1,5 @@
 import sinon from 'sinon';
-import EditorAnnotator from '@cdo/apps/EditorAnnotator';
+import EditorAnnotator, {DropletAnnotator} from '@cdo/apps/EditorAnnotator';
 import {expect} from '../util/reconfiguredChai';
 import {
   singleton as studioApp,
@@ -9,7 +9,7 @@ import {
 import annotationList from '@cdo/apps/acemode/annotationList';
 
 describe('EditorAnnotator', () => {
-  let isDropletStub, ensurePatchedStub;
+  let isDropletStub, patchStub;
   let oldEditor, aceSessionStub, aceSessionDocumentStub;
   let dropletStub, dropletSessionStub;
 
@@ -39,7 +39,6 @@ describe('EditorAnnotator', () => {
   };
 
   beforeEach(() => {
-    console.log('stub');
     EditorAnnotator.reset();
     stubStudioApp();
 
@@ -47,16 +46,14 @@ describe('EditorAnnotator', () => {
     isDropletStub = sinon.stub(EditorAnnotator, 'isDroplet').returns(true);
 
     // And do not allow patching
-    ensurePatchedStub = sinon
-      .stub(EditorAnnotator, 'ensurePatched')
-      .returns(true);
+    patchStub = sinon.stub(DropletAnnotator.prototype, 'patch').returns(true);
 
     // Stub out the app reference to the editor
     stubDroplet();
   });
   afterEach(() => {
     isDropletStub.restore();
-    ensurePatchedStub.restore();
+    patchStub.restore();
     restoreDroplet();
     restoreStudioApp();
     EditorAnnotator.reset();
