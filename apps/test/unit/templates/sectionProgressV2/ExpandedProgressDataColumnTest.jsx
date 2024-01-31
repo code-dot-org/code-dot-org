@@ -1,6 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
+import sinon from 'sinon';
 
 import {UnconnectedExpandedProgressDataColumn} from '@cdo/apps/templates/sectionProgressV2/ExpandedProgressDataColumn.jsx';
 import LevelDataCell from '@cdo/apps/templates/sectionProgressV2/LevelDataCell.jsx';
