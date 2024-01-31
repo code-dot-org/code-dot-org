@@ -59,6 +59,17 @@ class AdminUsersController < ApplicationController
     end
   end
 
+  def delete_user
+    user = User.find_by_id(params.require(:user_id))
+    if user
+      user.destroy
+      flash[:alert] = "User (ID: #{params[:user_id]}) Deleted!"
+    else
+      flash[:alert] = "User (ID: #{params[:user_id]}) not found or deleted"
+    end
+    redirect_to :find_students
+  end
+
   def undelete_user
     user = User.only_deleted.find_by_id(params[:user_id])
     if user
