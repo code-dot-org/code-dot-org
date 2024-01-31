@@ -8,6 +8,7 @@ class DatablockStorageController < ApplicationController
     @project = Project.find_by_channel_id(params[:channel_id])
     @key_value_pairs = DatablockStorageKvp.where(channel_id: params[:channel_id])
     @records = DatablockStorageRecord.where(channel_id: params[:channel_id])
+    @tables = DatablockStorageTable.where(channel_id: params[:channel_id])
     puts "####################################################"
   end
 
