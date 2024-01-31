@@ -1,11 +1,17 @@
+// @ts-check
 import _ from 'lodash';
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
+import {WorkspaceSvg} from 'blockly';
+
+type xmlAttribute = string | null;
 
 // Considers an attribute true only if it is explicitly set to 'true' (i.e. defaults to false if unset).
-export const FALSEY_DEFAULT = attributeValue => attributeValue === 'true';
+export const FALSEY_DEFAULT = (attributeValue: xmlAttribute) =>
+  attributeValue === 'true';
 
 // Considers an attribute true unless it is explicitly set to 'false' (i.e. defaults to true if unset).
-export const TRUTHY_DEFAULT = attributeValue => attributeValue !== 'false';
+export const TRUTHY_DEFAULT = (attributeValue: xmlAttribute) =>
+  attributeValue !== 'false';
 
 /**
  * Reads a boolean attribute from an XML element and determines its value based on a callback function.
@@ -16,19 +22,19 @@ export const TRUTHY_DEFAULT = attributeValue => attributeValue !== 'false';
  * @returns {boolean} The boolean value of the attribute as determined by the callback function.
  */
 export function readBooleanAttribute(
-  xmlElement,
-  attribute,
+  xmlElement: Element,
+  attribute: string,
   callback = FALSEY_DEFAULT
 ) {
   const attributeValue = xmlElement.getAttribute(attribute);
   return callback(attributeValue);
 }
 
-export function capitalizeFirstLetter(string) {
+export function capitalizeFirstLetter(string: string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-export function parseSoundPathString(text) {
+export function parseSoundPathString(text: string) {
   // Example string paths:
   // 'sound://category_board_games/card_dealing_multiple.mp3'
   // 'sound://default.mp3'
@@ -61,12 +67,12 @@ export function parseSoundPathString(text) {
  * @param rangeString {string} printer-style range, e.g., "1,2,4-6"
  * @returns  array of numbers
  */
-export function printerStyleNumberRangeToList(rangeString) {
+export function printerStyleNumberRangeToList(rangeString: string) {
   const rangeStringNoSpaces = rangeString.replace(/ /g, '');
   const rangeItems = rangeStringNoSpaces.split(',');
   const rangeRegExp = /^(\d+)-(\d+)$/; // e.g., "4-6"
   const numberRegExp = /^(\d+)$/; // e.g., "1", "2"
-  const fullNumberList = rangeItems.reduce((numberArray, currExp) => {
+  const fullNumberList = rangeItems.reduce<number[]>((numberArray, currExp) => {
     const rangeResult = rangeRegExp.exec(currExp);
     const numberResult = numberRegExp.exec(currExp);
     if (rangeResult) {
@@ -88,8 +94,8 @@ export function printerStyleNumberRangeToList(rangeString) {
  * @param numberList array of numbers
  * @returns  numberString {string}
  */
-export function numberListToString(numberList) {
-  let numberString = numberList.reduce((str, curr) => {
+export function numberListToString(numberList: number[]) {
+  let numberString = numberList.reduce<string>((str, curr) => {
     str = str + curr + ',';
     return str;
   }, '');
@@ -106,30 +112,10 @@ export function numberListToString(numberList) {
  * @param {Blockly.WorkspaceSvg} workspace - The workspace to be checked for serialization as hidden.
  * @returns {boolean} Returns `true` if the hidden workspace should be skipped, otherwise `false`.
  */
-export function shouldSkipHiddenWorkspace(workspace) {
+export function shouldSkipHiddenWorkspace(workspace: WorkspaceSvg) {
   return (
     !Blockly.getHiddenDefinitionWorkspace ||
     Blockly.getMainWorkspace().id !== workspace.id ||
     Blockly.isToolboxMode
   );
-}
-
-/**
- * Finds the flyout associated with a workspace.
- * @param {Blockly.Workspace} workspace - The workspace to find the flyout for.
- * @returns {Blockly.Flyout|null} The flyout associated with the workspace, or null if not found.
- */
-export function findFlyout(workspace) {
-  if (!workspace) {
-    return null;
-  }
-  if (workspace.flyout) {
-    // Workspace has a single flyout (uncategorized toolbox)
-    return workspace.flyout;
-  }
-  if (workspace.toolbox_ && workspace.toolbox_.flyout_) {
-    // Workspace has a categorized toolbox with a flyout.
-    return workspace.toolbox_.flyout_;
-  }
-  return null;
 }
