@@ -28,6 +28,7 @@ import ProgressRing from './ProgressRing';
 const INVALID_UNDERSTANDING = -1;
 
 export default function LearningGoals({
+  open,
   learningGoals,
   teacherHasEnabledAi,
   canProvideFeedback,
@@ -150,7 +151,7 @@ export default function LearningGoals({
       setDisplayFeedback(teacherFeedbacks.current[currentLearningGoal]);
       setDisplayUnderstanding(understandingLevels.current[currentLearningGoal]);
     }
-  }, [studentLevelInfo, learningGoals, currentLearningGoal]);
+  }, [studentLevelInfo, learningGoals, currentLearningGoal, open]);
 
   useEffect(() =>
     document.addEventListener('keydown', handleKeyDown, {once: true})
@@ -277,7 +278,7 @@ export default function LearningGoals({
             </BodyThreeText>
           </div>
         </div>
-        <div className={style.learningGoalsHeaderRightSide}>
+        <div className={style.learningGoalsHeaderRightSideV2}>
           {aiEnabled && displayUnderstanding === INVALID_UNDERSTANDING && (
             <AiToken />
           )}
@@ -294,23 +295,10 @@ export default function LearningGoals({
 
       {/*TODO: Pass through data to child component*/}
       <div>
-        {teacherHasEnabledAi &&
-          !!studentLevelInfo &&
-          !!aiEvalInfo &&
-          aiEvalInfo.understanding !== undefined && (
-            <div className={style.openedAiAssessment}>
-              <AiAssessment
-                isAiAssessed={learningGoals[currentLearningGoal].aiEnabled}
-                studentName={studentLevelInfo.name}
-                aiConfidence={aiEvalInfo.ai_confidence}
-                aiUnderstandingLevel={aiEvalInfo.understanding}
-                aiEvalInfo={aiEvalInfo}
-              />
-            </div>
-          )}
         <div className={style.learningGoalExpanded}>
           {!!submittedEvaluation && renderSubmittedFeedbackTextbox()}
           <EvidenceLevels
+            aiEvalInfo={aiEvalInfo}
             learningGoalKey={learningGoals[currentLearningGoal].key}
             evidenceLevels={learningGoals[currentLearningGoal].evidenceLevels}
             canProvideFeedback={canProvideFeedback}
@@ -320,6 +308,20 @@ export default function LearningGoals({
             isStudent={isStudent}
             isAutosaving={autosaveStatus === STATUS.IN_PROGRESS}
           />
+          {teacherHasEnabledAi &&
+            !!studentLevelInfo &&
+            !!aiEvalInfo &&
+            aiEvalInfo.understanding !== undefined && (
+              <div className={style.openedAiAssessment}>
+                <AiAssessment
+                  isAiAssessed={learningGoals[currentLearningGoal].aiEnabled}
+                  studentName={studentLevelInfo.name}
+                  aiConfidence={aiEvalInfo.ai_confidence}
+                  aiUnderstandingLevel={aiEvalInfo.understanding}
+                  aiEvalInfo={aiEvalInfo}
+                />
+              </div>
+            )}
           {learningGoals[currentLearningGoal].tips && !isStudent && (
             <details>
               <summary>
@@ -341,6 +343,7 @@ export default function LearningGoals({
 }
 
 LearningGoals.propTypes = {
+  open: PropTypes.bool,
   teacherHasEnabledAi: PropTypes.bool,
   canProvideFeedback: PropTypes.bool,
   reportingData: reportingDataShape,
