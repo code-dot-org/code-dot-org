@@ -269,8 +269,7 @@ Dashboard::Application.routes.draw do
             get "/#{key}/:channel_id/datablock_storage/get_columns_for_table", to: 'datablock_storage#get_columns_for_table'
             get "/#{key}/:channel_id/datablock_storage/channel_exists", to: 'datablock_storage#channel_exists'
             delete "/#{key}/:channel_id/datablock_storage/clear_all_data", to: 'datablock_storage#clear_all_data'
-            post "/#{key}/:channel_id/datablock_storage/add_current_table_to_project", to: 'datablock_storage#add_current_table_to_project'
-            post "/#{key}/:channel_id/datablock_storage/copy_static_table", to: 'datablock_storage#copy_static_table'
+            post "/#{key}/:channel_id/datablock_storage/add_shared_table", to: 'datablock_storage#add_shared_table'
           end
 
           get "/#{key}", to: 'projects#load', key: key.to_s, as: "#{key}_project"

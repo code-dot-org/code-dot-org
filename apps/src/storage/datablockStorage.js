@@ -451,7 +451,7 @@ DatablockStorage.addCurrentTableToProject = function (
   onSuccess,
   onError
 ) {
-  _fetch('add_current_table_to_project', 'POST', {
+  _fetch('add_shared_table', 'POST', {
     table_name: tableName,
   }).then(onSuccess, onError);
   throw 'Not implemented yet';
@@ -459,7 +459,7 @@ DatablockStorage.addCurrentTableToProject = function (
 
 // Makes a project-local copy of one of the tables stored at /v3/channels/shared/storage/tables
 DatablockStorage.copyStaticTable = function (tableName, onSuccess, onError) {
-  _fetch('copy_static_table', 'POST', {
+  _fetch('add_shared_table', 'POST', {
     table_name: tableName,
   }).then(onSuccess, onError);
   throw 'Not implemented yet';
@@ -469,8 +469,7 @@ DatablockStorage.copyStaticTable = function (tableName, onSuccess, onError) {
 
 // Deletes the entire database for the project, including data and config
 DatablockStorage.resetForTesting = function () {
-  _fetch('clear_all_data', 'DELETE', {});
-  throw 'Not implemented yet';
+  return _fetch('clear_all_data', 'DELETE', {});
 };
 
 export function initDatablockStorage(config) {

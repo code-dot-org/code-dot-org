@@ -288,15 +288,8 @@ class DatablockStorageController < ApplicationController
     render json: true
   end
 
-  def add_current_table_to_project
-    table_name = params[:table_name]
-    raise "Not yet implemented"
-  end
-
-  # Makes a project-local copy of one of the tables stored at /v3/channels/shared/storage/tables
-  def copy_static_table
-    table_name = params[:table_name]
-    raise "Not yet implemented"
+  def add_shared_table
+    DatablockStorageTable.add_shared_table(params[:channel_id], params[:table_name])
   end
 
   private
