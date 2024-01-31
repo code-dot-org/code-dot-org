@@ -3,8 +3,13 @@ import React from 'react';
 import {studentLevelProgressType} from '../progress/progressTypes';
 import classNames from 'classnames';
 import styles from './progress-table-v2.module.scss';
+import FontAwesome from '../FontAwesome';
 
-export default function LevelDataCell({level, studentLevelProgress}) {
+export default function LevelDataCell({
+  level,
+  studentLevelProgress,
+  overrideIcon,
+}) {
   const levelData = React.useMemo(() => {
     if (!studentLevelProgress) {
       return;
@@ -14,6 +19,7 @@ export default function LevelDataCell({level, studentLevelProgress}) {
 
   return (
     <div className={classNames(styles.gridBox, styles.gridBoxLevel)}>
+      {overrideIcon ? <FontAwesome icon={overrideIcon} /> : levelData}
       {levelData}
     </div>
   );
@@ -23,4 +29,5 @@ LevelDataCell.propTypes = {
   studentId: PropTypes.number.isRequired,
   studentLevelProgress: studentLevelProgressType,
   level: PropTypes.object.isRequired,
+  overrideIcon: PropTypes.string,
 };
