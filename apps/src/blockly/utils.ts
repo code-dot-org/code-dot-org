@@ -1,4 +1,3 @@
-// @ts-check
 import _ from 'lodash';
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 import {WorkspaceSvg} from 'blockly';
