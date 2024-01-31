@@ -1,11 +1,12 @@
 import React from 'react';
 import classNames from 'classnames';
 import moduleStyles from './timeline.module.scss';
-import {TypedUseSelectorHook, useDispatch, useSelector} from 'react-redux';
-import {MusicState, selectBlockId} from '../redux/musicRedux';
+import {useDispatch} from 'react-redux';
+import {selectBlockId} from '../redux/musicRedux';
 import {SoundEvent} from '../player/interfaces/SoundEvent';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {SoundType} from '../player/MusicLibrary';
+import {useMusicSelector} from './types';
 
 // TODO: Unify type constants and colors with those SoundPanel.jsx
 const typeToColorClass: {[key in SoundType | PlaybackEvent['type']]?: string} =
@@ -26,8 +27,6 @@ interface TimelineElementProps {
   left: number;
 }
 
-const useTypedSelector: TypedUseSelectorHook<{music: MusicState}> = useSelector;
-
 /**
  * Renders a single element (sound) in the timeline
  */
@@ -38,12 +37,12 @@ const TimelineElement: React.FunctionComponent<TimelineElementProps> = ({
   top,
   left,
 }) => {
-  const isPlaying = useTypedSelector(state => state.music.isPlaying);
-  const selectedBlockId = useTypedSelector(
+  const isPlaying = useMusicSelector(state => state.music.isPlaying);
+  const selectedBlockId = useMusicSelector(
     state => state.music.selectedBlockId
   );
   const dispatch = useDispatch();
-  const currentPlayheadPosition = useTypedSelector(
+  const currentPlayheadPosition = useMusicSelector(
     state => state.music.currentPlayheadPosition
   );
   const isInsideRandom = eventData.skipContext?.insideRandom;
