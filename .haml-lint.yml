@@ -13,6 +13,95 @@ linters:
     include:
       - '/**/*mailer*/**/*.haml'
 
+  # as of 2024-01-31, here is the number of violations for each rule. I couldn't
+  # find a way to autogenerate them using `haml-lint --auto-gen-config`, because
+  # it seems to want to entirely disable RuboCop. So, I generated this list by
+  # temporarily removing the list of ignored cops, and then running:
+  # haml-lint pegasus dashboard shared | grep -o 'RuboCop: [A-Za-z]\+/[A-Za-z]\+' | cut -f 2 -d ' ' | sort | uniq -c | sort -r -n -k 1
+  # 1253 Style/HashSyntax
+  # 920 Layout/SpaceAroundOperators
+  # 636 Layout/SpaceAfterColon
+  # 255 Layout/SpaceInsideHashLiteralBraces
+  # 168 Style/QuotedSymbols
+  # 152 Style/RedundantInterpolation
+  # 140 Style/CaseEquality
+  # 122 Layout/SpaceAfterComma
+  #  69 Naming/VariableName
+  #  47 Rails/OutputSafety
+  #  41 Lint/UselessAssignment
+  #  38 Rails/ContentTag
+  #  35 Layout/SpaceInsideBlockBraces
+  #  27 Style/WordArray
+  #  27 Style/SafeNavigation
+  #  22 Style/NegatedIf
+  #  22 Lint/ShadowingOuterLocalVariable
+  #  21 Style/ConditionalAssignment
+  #  21 Rails/LinkToBlank
+  #  17 Layout/SpaceInsideParens
+  #  14 Style/YodaCondition
+  #  14 Style/NegatedIfElseCondition
+  #  14 Style/CaseLikeIf
+  #  14 Lint/UnusedBlockArgument
+  #  13 Layout/SpaceBeforeBlockBraces
+  #  12 Style/StringLiteralsInInterpolation
+  #  12 Rails/Present
+  #  11 Style/UnlessElse
+  #  11 Style/SlicingWithRange
+  #  11 Style/MultipleComparison
+  #  11 Rails/RenderInline
+  #  10 Layout/SpaceInsideArrayLiteralBrackets
+  #   9 RailsAccessibility/ImageHasAlt
+  #   8 Style/ParenthesesAroundCondition
+  #   7 Style/RedundantFreeze
+  #   7 Style/MethodCallWithoutArgsParentheses
+  #   7 Lint/AmbiguousOperatorPrecedence
+  #   5 Style/SoleNestedConditional
+  #   5 Layout/ArrayAlignment
+  #   4 Style/NilComparison
+  #   4 Style/For
+  #   4 Performance/CollectionLiteralInLoop
+  #   4 Lint/SymbolConversion
+  #   4 Layout/SpaceBeforeComma
+  #   4 Layout/FirstHashElementIndentation
+  #   3 Style/PreferredHashMethods
+  #   3 Performance/StringReplacement
+  #   3 Performance/RegexpMatch
+  #   3 Performance/MapCompact
+  #   3 Lint/UnexpectedBlockArity
+  #   3 Lint/RedundantWithIndex
+  #   3 Lint/RedundantStringCoercion
+  #   3 Layout/FirstArrayElementIndentation
+  #   2 Style/ZeroLengthPredicate
+  #   2 Style/SelfAssignment
+  #   2 Style/RedundantConstantBase
+  #   2 Style/NonNilCheck
+  #   2 Style/EvenOdd
+  #   2 Style/EachForSimpleLoop
+  #   2 Rails/Presence
+  #   2 Performance/Squeeze
+  #   2 Performance/Casecmp
+  #   2 Lint/Syntax
+  #   2 Lint/SafeNavigationConsistency
+  #   2 Lint/DeprecatedClassMethods
+  #   2 Lint/BooleanSymbol
+  #   2 Layout/SpaceAroundKeyword
+  #   2 Layout/SpaceAfterNot
+  #   1 Style/SymbolProc
+  #   1 Style/SymbolLiteral
+  #   1 Style/Semicolon
+  #   1 Style/RedundantStringEscape
+  #   1 Style/NestedTernaryOperator
+  #   1 Rails/WhereExists
+  #   1 Rails/Blank
+  #   1 Performance/StringIdentifierArgument
+  #   1 Lint/SafeNavigationChain
+  #   1 Lint/EmptyConditionalBody
+  #   1 Lint/AmbiguousBlockAssociation
+  #   1 Layout/SpaceBeforeFirstArg
+  #   1 Layout/SpaceAroundBlockParameters
+  #   1 Layout/MultilineMethodCallBraceLayout
+  #   1 Layout/IndentationConsistency
+  #   1 Layout/EndAlignment
   RuboCop:
     enabled: true
     ignored_cops:
