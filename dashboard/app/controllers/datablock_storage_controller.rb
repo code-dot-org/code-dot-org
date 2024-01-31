@@ -61,7 +61,8 @@ class DatablockStorageController < ApplicationController
     raise "record_json must be less than 4096 bytes" if params[:record_json].length > 4096
     record_json = JSON.parse params[:record_json]
 
-    insert_records(params[:channel_id], params[:table_name], [record_json])
+    table = DatablockStorageTable.where(channel_id: params[:channel_id], table_name: params[:table_name]).first_or_create
+    table.create_records([record_json])
 
     # FIXME: unfirebase, must check Table record to see if we should update the table.columns
     # column based on this record_json's keys
@@ -254,11 +255,9 @@ class DatablockStorageController < ApplicationController
   end
 
   def import_csv
-    insert_records(
-      params[:channel_id],
-      params[:table_name],
-      CSV.parse(params[:table_data_csv], headers: true).map(&:to_h)
-    )
+    records = CSV.parse(params[:table_data_csv], headers: true).map(&:to_h)
+    table = DatablockStorageTable.where(channel_id: params[:channel_id], table_name: params[:table_name]).first_or_create
+    table.create_records(records)
     raise "Not implemented yet"
   end
 
@@ -270,41 +269,6 @@ class DatablockStorageController < ApplicationController
   end
 
   private
-
-  def insert_records(channel_id, table_name, record_jsons)
-    # FIXME: unfirebase, this should probably be moved to the DatablockStorageTable model?
-
-    # BEGIN;
-    DatablockStorageRecord.transaction do
-      # channel_id_quoted = Record.connection.quote(params[:channel_id])
-      # table_name_quoted = Record.connection.quote(params[:table_name])
-
-      # SELECT MIN(record_id) FROM unfirebase.records WHERE channel_id='shared' AND table_name='words' LIMIT 1 FOR UPDATE;
-      # =>
-      # DatablockStorageRecord.connection.execute("SELECT MIN(record_id) FROM #{Record.table_name} WHERE channel_id=#{channel_id_quoted} AND table_name=#{table_name_quoted} LIMIT 1 FOR UPDATE")
-      # =>
-      DatablockStorageRecord.where(channel_id: channel_id, table_name: table_name).lock.minimum(:record_id)
-
-      # SELECT @id := IFNULL(MAX(record_id),0)+1 FROM unfirebase.records WHERE channel_id='shared' AND table_name='words';
-      # =>
-      # next_record_id = DatablockStorageRecord.connection.select_value("SELECT IFNULL(MAX(record_id),0)+1 FROM #{Record.table_name} WHERE channel_id=#{channel_id_quoted} AND table_name=#{table_name_quoted}")
-      # =>
-      max_record_id = DatablockStorageRecord.where(channel_id: channel_id, table_name: table_name).maximum(:record_id)
-      next_record_id = (max_record_id || 0) + 1
-
-      record_jsons.each do |record_json|
-        # We write the record_id into the JSON as well as storing it in its own column
-        # only create_record and update_record should be at risk of modifying this
-        record_json['id'] = next_record_id
-
-        #   INSERT INTO unfirebase.records VALUES ('shared', 'words', @id, '{}');
-        DatablockStorageRecord.create(channel_id: channel_id, table_name: table_name, record_id: next_record_id, record_json: record_json)
-
-        next_record_id += 1
-      end
-    end
-    # COMMIT;
-  end
 
   def validate_channel_id
     # FIXME: make sure that the channel_id refers to an applab or weblab project
