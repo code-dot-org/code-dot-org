@@ -10,22 +10,18 @@ import classNames from 'classnames';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import moduleStyles from './checkboxDropdown.module.scss';
-import style from '@cdo/apps/templates/checkbox-dropdown.module.scss';
 import Button from '@cdo/apps/templates/Button';
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import i18n from '@cdo/locale';
 
-import Typography from '@cdo/apps/componentLibrary/typography';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import {
   DropdownProvider,
   useDropdownContext,
 } from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
-
-// import CheckboxDropdownOption from './_CheckbpxDropdownOption';
 
 export interface CheckboxDropdownProps {
   /** CheckboxDropdown name */
@@ -81,14 +77,12 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
 
   const handleClickOutside = useCallback(
     (event: MouseEvent<Document>) => {
-      console.log('handleClickOutside triggered');
       if (
         activeDropdownName &&
         dropdownRef.current &&
         event.target instanceof Node &&
         !dropdownRef.current.contains(event.target)
       ) {
-        console.log('handleClickOutside if statement triggered');
         setActiveDropdownName('');
       }
     },
@@ -112,8 +106,6 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   }, [handleClickOutside]);
 
   const toggleDropdown = useCallback(() => {
-    console.log('toggleDropdown triggered');
-    console.log(activeDropdownName);
     if (activeDropdownName !== name) {
       setActiveDropdownName(name);
     } else {
@@ -135,8 +127,6 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
 
   // TODO: add item to be disabled possibility
 
-  console.log(allOptions);
-  console.log(checkedOptions);
   return (
     <div
       id={`${name}-dropdown`}
@@ -161,18 +151,13 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
       >
         {checkedOptions.length > 0 && (
           <FontAwesomeV6Icon
-            // id={'check-icon'}
             iconName="check-circle"
             iconStyle="solid"
             title={i18n.filterCheckIconTitle({filter_label: labelText})}
           />
         )}
         <span className={moduleStyles.dropdownLabel}>{labelText}</span>
-        <FontAwesomeV6Icon
-          // id="chevron-down-icon"
-          iconStyle="solid"
-          iconName="chevron-down"
-        />
+        <FontAwesomeV6Icon iconStyle="solid" iconName="chevron-down" />
       </button>
       <form className={moduleStyles.dropdownMenuContainer}>
         <ul className={'style.dropdownCheckboxUL'}>
@@ -191,8 +176,6 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
         </ul>
         <div className={moduleStyles.bottomButtonsContainer}>
           <Button
-            // id="select-all"
-            className={style.affectAllButton}
             type="button"
             text={i18n.selectAll()}
             onClick={onSelectAll}
@@ -200,8 +183,6 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
             color={Button.ButtonColor.brandSecondaryDefault}
           />
           <Button
-            // id="clear-all"
-            className={style.affectAllButton}
             type="button"
             text={i18n.clearAll()}
             onClick={onClearAll}
