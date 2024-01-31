@@ -285,13 +285,19 @@ class DatablockStorageController < ApplicationController
   # Returns true if validation checks pass
   def channel_exists
     render json: true
-    raise "Not yet implemented"
   end
 
   # deletes the entire channel in firebase
   # used only one place, applab.js config.afterClearPuzzle()
   def clear_all_data
-    raise "Not yet implemented"
+    # FIXME: unfirebase, do we have an index on channel_id alone?
+    DatablockStorageTable.where(channel_id: params[:channel_id]).delete_all
+    # FIXME: unfirebase, do we have an index on channel_id alone?
+    DatablockStorageKvp.where(channel_id: params[:channel_id]).delete_all
+    # FIXME: unfirebase, do we have an index on channel_id alone?
+    DatablockStorageRecord.where(channel_id: params[:channel_id]).delete_all
+
+    render json: true
   end
 
   def add_current_table_to_project
