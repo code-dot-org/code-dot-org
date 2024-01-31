@@ -150,7 +150,7 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
       <button
         id={`${name}-dropdown-button`}
         type="button"
-        className={classNames(moduleStyles.dropdownButton)}
+        className={moduleStyles.dropdownButton}
         data-toggle="dropdown"
         aria-haspopup={true}
         aria-label={`${name} filter dropdown`}
@@ -179,6 +179,7 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
               <Checkbox
                 checked={checkedOptions.includes(value)}
                 onChange={onChange}
+                size={size}
                 name={value}
                 value={value}
                 label={label}
@@ -186,9 +187,9 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
             </li>
           ))}
         </ul>
-        <div className={style.bottomButtonsContainer}>
+        <div className={moduleStyles.bottomButtonsContainer}>
           <Button
-            id="select-all"
+            // id="select-all"
             className={style.affectAllButton}
             type="button"
             text={i18n.selectAll()}
@@ -197,7 +198,7 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
             color={Button.ButtonColor.brandSecondaryDefault}
           />
           <Button
-            id="clear-all"
+            // id="clear-all"
             className={style.affectAllButton}
             type="button"
             text={i18n.clearAll()}
