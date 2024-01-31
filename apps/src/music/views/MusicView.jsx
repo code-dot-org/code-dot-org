@@ -202,7 +202,7 @@ class UnconnectedMusicView extends React.Component {
     }
 
     if (this.props.appName !== 'music') {
-      this.musicBlocklyWorkspace.hideFlyout();
+      this.musicBlocklyWorkspace.dispose();
     }
 
     if (
