@@ -246,9 +246,11 @@ Dashboard::Application.routes.draw do
             get "/#{key}/:channel_id/datablock_storage/get_table_names", to: 'datablock_storage#get_table_names'
             get "/#{key}/:channel_id/datablock_storage/get_key_values", to: 'datablock_storage#get_key_values'
 
-            # Dataset Browser Action Methods
+            # Dataset Browser Actions
             post "/#{key}/:channel_id/datablock_storage/create_table", to: 'datablock_storage#create_table'
             delete "/#{key}/:channel_id/datablock_storage/delete_table", to: 'datablock_storage#delete_table'
+            delete "/#{key}/:channel_id/datablock_storage/clear_table", to: 'datablock_storage#clear_table'
+
           end
 
           get "/#{key}", to: 'projects#load', key: key.to_s, as: "#{key}_project"

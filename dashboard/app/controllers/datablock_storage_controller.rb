@@ -186,6 +186,14 @@ class DatablockStorageController < ApplicationController
     render json: true
   end
 
+  def clear_table
+    table_name = params[:table_name]
+    DatablockStorageRecord.where(channel_id: params[:channel_id], table_name: table_name).delete_all
+
+    render json: true
+  end
+
+
   private
 
   def validate_channel_id
