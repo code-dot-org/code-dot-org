@@ -2,7 +2,7 @@ module CustomCops
   # Custom cop that checks for require_relative references into the dashboard/ directory
   # from outside of dashboard/ directory
   class DashboardRequires < RuboCop::Cop::Base
-    MSG = 'Do not require dashboard code from outside of dashboard/ directory. For details, see: https://github.com/code-dot-org/code-dot-org/pull/55417'
+    MSG = 'Do not require dashboard code from outside of top-level dashboard/ directory. For details, see: https://github.com/code-dot-org/code-dot-org/pull/55417'
 
     def_node_matcher :require_relative_with_string?, <<-PATTERN
       (send nil? :require_relative (str $_))
