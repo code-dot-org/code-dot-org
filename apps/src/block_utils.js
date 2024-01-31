@@ -25,6 +25,7 @@ const appendBlocks = function (toolboxDom, blockTypes) {
 exports.appendBlocks = appendBlocks;
 
 exports.appendBlocksByCategory = function (toolboxXml, blocksByCategory) {
+  console.log('creating category');
   const parser = new DOMParser();
   const toolboxDom = parser.parseFromString(toolboxXml, 'text/xml');
   if (!toolboxDom.querySelector('category')) {

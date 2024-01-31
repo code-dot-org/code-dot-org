@@ -1,14 +1,14 @@
 {
-  "category": "World",
+  "category": "Variables",
   "config": {
     "color": [
       240,
       0.45,
       0.65
     ],
-    "style": "world_blocks",
+    "style": "variable_blocks",
     "func": "hideVariable",
-    "docFunc": "gamelab_variable",
+    "docFunc": "EmilyBlocks_variable",
     "blockText": "hide variable {VARIABLE}",
     "args": [
       {
