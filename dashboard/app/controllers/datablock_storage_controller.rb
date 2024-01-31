@@ -172,10 +172,9 @@ class DatablockStorageController < ApplicationController
   #### NOT YET IMPLEMENTED ####
 
   def add_column
-    table_name = params[:table_name]
     column_name = params[:column_name]
 
-    table = DatablockStorageTable.find(channel_id: params[:channel_id], table_name: table_name)
+    table = DatablockStorageTable.find([params[:channel_id], params[:table_name]])
     columns = JSON.parse(table.columns)
     unless columns.include? column_name
       columns << column_name
@@ -184,15 +183,17 @@ class DatablockStorageController < ApplicationController
     end
 
     render json: true
-
-    raise "Not implemented yet"
   end
 
   def delete_column
-    table_name = params[:table_name]
     column_name = params[:column_name]
 
-    table = DatablockStorageTable.find(channel_id: params[:channel_id], table_name: table_name)
+    DatablockStorageRecord.where(channel_id: params[:channel_id], table_name: params[:table_name]).each do |record|
+      record.record_json.delete(column_name)
+      record.save!
+    end
+
+    table = DatablockStorageTable.find([params[:channel_id], params[:table_name]])
     columns = JSON.parse(table.columns)
     if columns.include? column_name
       columns.delete column_name
@@ -201,23 +202,18 @@ class DatablockStorageController < ApplicationController
     end
 
     render json: true
-
-    raise "Not implemented yet"
   end
 
   def rename_column
-    table_name = params[:table_name]
     old_column_name = params[:old_column_name]
     new_column_name = params[:new_column_name]
 
-    table = DatablockStorageTable.find(channel_id: params[:channel_id], table_name: table_name)
+    table = DatablockStorageTable.find([params[:channel_id], params[:table_name]])
     columns = JSON.parse(table.columns)
 
     # First rename the column in all the JSON records
     DatablockStorageRecord.where(channel_id: params[:channel_id], table_name: table_name).each do |record|
-      record_json = JSON.parse(record.record_json)
-      record_json[new_column_name] = record_json.delete(old_column_name)
-      record.record_json = record_json.to_json
+      record.record_json[new_column_name] = record.record_json.delete(old_column_name)
       record.save!
     end
 
