@@ -353,4 +353,4 @@ gem 'crowdin-api', '~> 1.6.0'
 
 gem "delayed_job_active_record", "~> 4.1"
 
-gem 'rack-cors'
+gem 'rack-cors', '~> 2.0.1'
