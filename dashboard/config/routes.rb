@@ -234,9 +234,11 @@ Dashboard::Application.routes.draw do
             # Test / Experimentation Method
             get "/#{key}/:channel_id/datablock_storage", to: 'datablock_storage#index'
 
-            # Datablock Methods
+            # Datablock Methods: key-value pairs
             post "/#{key}/:channel_id/datablock_storage/set_key_value", to: 'datablock_storage#set_key_value'
             get "/#{key}/:channel_id/datablock_storage/get_key_value", to: 'datablock_storage#get_key_value'
+            
+            # Datablock Methods: tables
             delete "/#{key}/:channel_id/datablock_storage/delete_record", to: 'datablock_storage#delete_record'
             get "/#{key}/:channel_id/datablock_storage/read_records", to: 'datablock_storage#read_records'
             put "/#{key}/:channel_id/datablock_storage/update_record", to: 'datablock_storage#update_record'
@@ -246,11 +248,17 @@ Dashboard::Application.routes.draw do
             get "/#{key}/:channel_id/datablock_storage/get_table_names", to: 'datablock_storage#get_table_names'
             get "/#{key}/:channel_id/datablock_storage/get_key_values", to: 'datablock_storage#get_key_values'
 
-            # Dataset Browser Actions
+            # Dataset Browser Actions: tables
             post "/#{key}/:channel_id/datablock_storage/create_table", to: 'datablock_storage#create_table'
             delete "/#{key}/:channel_id/datablock_storage/delete_table", to: 'datablock_storage#delete_table'
             delete "/#{key}/:channel_id/datablock_storage/clear_table", to: 'datablock_storage#clear_table'
+            post "/#{key}/:channel_id/datablock_storage/import_csv", to: 'datablock_storage#import_csv'
 
+            # Dataset Browser Actions: table columns
+            post "/#{key}/:channel_id/datablock_storage/add_column", to: 'datablock_storage#add_column'
+            delete "/#{key}/:channel_id/datablock_storage/delete_column", to: 'datablock_storage#delete_column'
+            put "/#{key}/:channel_id/datablock_storage/rename_column", to: 'datablock_storage#rename_column'
+            put "/#{key}/:channel_id/datablock_storage/coerce_column", to: 'datablock_storage#coerce_column'
           end
 
           get "/#{key}", to: 'projects#load', key: key.to_s, as: "#{key}_project"

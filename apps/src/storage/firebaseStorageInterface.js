@@ -20,17 +20,6 @@ FirebaseStorage.onRecordEvent = function (tableName) {}
 
 /* DATA BROWSER */
 
-FirebaseStorage.createTable = function (tableName, onSuccess, onError) {}
-FirebaseStorage.deleteTable = function (tableName, type, onSuccess, onError) {}
-// Delete all the rows, but leave the column definitions intact
-FirebaseStorage.clearTable = function (tableName, onSuccess, onError) {}
-FirebaseStorage.addColumn = function (tableName, columnName, onSuccess, onError) {}
-// Delete the column definition AND filters all rows to remove the offending JSON property
-FirebaseStorage.deleteColumn = function (tableName, columnName, onSuccess, onError) {}
-FirebaseStorage.renameColumn = function (tableName, oldName, newName, onSuccess, onError) {}
-FirebaseStorage.coerceColumn = function (tableName, columnName, columnType, onSuccess, onError) {}
-FirebaseStorage.importCsv = function (tableName, tableDataCsv, onSuccess, onError) {}
-
 
 /* DATA BROWSER: data loading methods */
 /* We added/defined these by extracting tightly bound view/storage code from applab.js: */
@@ -40,6 +29,23 @@ FirebaseStorage.subscribeToTable = function (tableName, onColumnsChanged, onReco
 FirebaseStorage.previewSharedTable = function (sharedTableName, onColumnsChanged, onRecordsChanged) {}
 FirebaseStorage.unsubscribeFromTable = function (tableName) {}
 FirebaseStorage.unsubscribeFromKeyValuePairs = function () {}
+
+
+/* DATA BROWSER ACTIONS */
+
+FirebaseStorage.createTable = function (tableName, onSuccess, onError) {}
+FirebaseStorage.deleteTable = function (tableName, type, onSuccess, onError) {}
+// Delete all the rows, but leave the column definitions intact
+FirebaseStorage.clearTable = function (tableName, onSuccess, onError) {}
+FirebaseStorage.importCsv = function (tableName, tableDataCsv, onSuccess, onError) {}
+
+FirebaseStorage.addColumn = function (tableName, columnName, onSuccess, onError) {}
+// Delete the column definition AND filters all rows to remove the offending JSON property
+FirebaseStorage.deleteColumn = function (tableName, columnName, onSuccess, onError) {}
+FirebaseStorage.renameColumn = function (tableName, oldName, newName, onSuccess, onError) {}
+FirebaseStorage.coerceColumn = function (tableName, columnName, columnType, onSuccess, onError) {}
+
+
 
 /* NOT BLOCKS */
 

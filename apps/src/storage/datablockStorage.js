@@ -306,6 +306,79 @@ DatablockStorage.clearTable = function (tableName, onSuccess, onError) {
   }).then(onSuccess, onError);
 };
 
+DatablockStorage.importCsv = function (
+  tableName,
+  tableDataCsv,
+  onSuccess,
+  onError
+) {
+  _fetch('import_csv', 'POST', {
+    table_name: tableName,
+    table_data_csv: tableDataCsv,
+  }).then(onSuccess, onError);
+
+  throw 'Not implemented yet';
+};
+
+DatablockStorage.addColumn = function (
+  tableName,
+  columnName,
+  onSuccess,
+  onError
+) {
+  _fetch('add_column', 'POST', {
+    table_name: tableName,
+    column_name: columnName,
+  }).then(onSuccess, onError);
+
+  throw 'Not implemented yet';
+};
+
+// Delete the column definition AND filters all rows to remove the offending JSON property
+DatablockStorage.deleteColumn = function (
+  tableName,
+  columnName,
+  onSuccess,
+  onError
+) {
+  _fetch('delete_column', 'DELETE', {
+    table_name: tableName,
+    column_name: columnName,
+  }).then(onSuccess, onError);
+
+  throw 'Not implemented yet';
+};
+
+DatablockStorage.renameColumn = function (
+  tableName,
+  oldName,
+  newName,
+  onSuccess,
+  onError
+) {
+  _fetch('rename_column', 'PUT', {
+    table_name: tableName,
+    old_name: oldName,
+    new_name: newName,
+  }).then(onSuccess, onError);
+
+  throw 'Not implemented yet';
+};
+
+DatablockStorage.coerceColumn = function (
+  tableName,
+  columnName,
+  columnType,
+  onSuccess,
+  onError
+) {
+  _fetch('coerce_column', 'PUT', {
+    table_name: tableName,
+    column_name: columnName,
+  }).then(onSuccess, onError);
+
+  throw 'Not implemented yet';
+};
 
 export function initDatablockStorage(config) {
   console.log('LOADING DATABLOCK STORAGE SHIM!!!');
