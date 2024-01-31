@@ -67,5 +67,11 @@ describe('ExpandedProgressDataColumn', () => {
         'Lesson ' + LESSON.relative_position + ': ' + LESSON.name
       )
     ).to.exist;
+
+    LESSON.levels.forEach(level => {
+      expect(
+        screen.getByText(LESSON.relative_position + '.' + level.bubbleText)
+      ).to.exist;
+    });
   });
 });
