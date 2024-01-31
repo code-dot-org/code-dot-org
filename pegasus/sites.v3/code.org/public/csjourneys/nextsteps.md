@@ -75,7 +75,7 @@ social:
   </div>
   <div style="clear: both"></div>
 <br>
-  <div class="col-50" style="margin-bottom:10px; background-color: #7665a0; border-radius:25px; padding:25px; border:10px solid white">
+  <div class="col-50" style="margin-bottom:10px; background-color: var(--brand_secondary_default); border-radius:25px; padding:25px; border:10px solid white">
     <h3 style="color:#ffffff; margin-top:0">Before you watch:</h3>
     <ul style="color:#ffffff; margin-bottom:0">
         <li style="color:#ffffff">Give students time in class to <a href="https://code.org/careers-with-cs" target="_blank" style="color:#ffffff">explore career pathways</a> and encourage them to write down questions they have.</li><br>
@@ -138,7 +138,7 @@ social:
   </div>
   <div style="clear: both"></div>
 <br>
-<div class="col-50" style="margin-bottom:10px; background-color: #7665a0; border-radius:25px; padding:25px; border:10px solid white">
+<div class="col-50" style="margin-bottom:10px; background-color: var(--brand_secondary_default); border-radius:25px; padding:25px; border:10px solid white">
     <h3 style="color:#ffffff; margin-top:0">Before you watch:</h3>
     <ul style="color:#ffffff; margin-bottom:0">
         <li style="color:#ffffff">Have students think of which careers/majors they are interested in and write them down. If there’s time, encourage them to do a little research into that major or career.</li><br>
@@ -194,7 +194,7 @@ social:
   </div>
   <div style="clear: both"></div>
 <br>
-  <div class="col-50" style="margin-bottom:10px; background-color: #7665a0; border-radius:25px; padding:25px; border:10px solid white">
+  <div class="col-50" style="margin-bottom:10px; background-color: var(--brand_secondary_default); border-radius:25px; padding:25px; border:10px solid white">
     <h3 style="color:#ffffff; margin-top:0">Before you watch:</h3>
     <ul style="color:#ffffff; margin-bottom:0">
         <li style="color:#ffffff">Give students time in class to generate a list of goals for their future. These could be career goals (become an engineer, start a company), and/or personal goals (start a family, buy a house). The more specific their goals, the better.</li><br>
@@ -260,7 +260,7 @@ social:
   </div>
   <div style="clear: both"></div>
 <br>
-  <div class="col-50" style="margin-bottom:10px; background-color: #7665a0; border-radius:25px; padding:25px; border:10px solid white">
+  <div class="col-50" style="margin-bottom:10px; background-color: var(--brand_secondary_default); border-radius:25px; padding:25px; border:10px solid white">
     <h3 style="color:#ffffff; margin-top:0">Before you watch:</h3>
     <ul style="color:#ffffff; margin-bottom:0">
         <li style="color:#ffffff">Have students read through the responses to the question posed by another student on CareerVillage.org, “<a href="https://www.careervillage.org/questions/459689/is-it-possible-to-get-a-good-job-in-computer-science-without-a-strong-network" target="_blank" style="color:#ffffff">Is it possible to get a good job in Computer Science without a strong network?</a>” Have them write down some of the key answers that strike them, and then discuss as a class. If there’s time, give students an opportunity to explore more questions about networking on CareerVillage.org.</li><br>
