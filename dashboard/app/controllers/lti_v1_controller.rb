@@ -293,6 +293,7 @@ class LtiV1Controller < ApplicationController
       )
 
       @integration_status = :created
+      LtiMailer.lti_integration_confirmation(admin_email).deliver_now
     end
     render 'lti/v1/integration_status'
   end
