@@ -50,7 +50,7 @@ class Incubator extends Component {
               {
                 url: '/projectbeats',
                 text: 'Skip to project',
-                color: Button.ButtonColor.white,
+                color: Button.ButtonColor.neutralDark,
               },
             ]}
           />
