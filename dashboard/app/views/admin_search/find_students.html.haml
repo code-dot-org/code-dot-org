@@ -60,3 +60,5 @@
             =link_to 'Undelete User', undelete_user_path(user_id: user[:id]), method: :post, class: "btn", data: {confirm: "Are you sure?"}
 - else
   No users met the specified search criteria.
+
+= render partial: 'home/admin'
