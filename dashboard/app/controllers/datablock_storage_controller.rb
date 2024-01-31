@@ -254,6 +254,26 @@ class DatablockStorageController < ApplicationController
   def coerce_column
     table_name = params[:table_name]
     column_name = params[:column_name]
+    column_type = params[:column_type]
+
+    unless ['string', 'number', 'boolean'].include? column_type
+      raise "column_type must be one of: string, number, boolean"
+    end
+
+    DatablockStorageRecord.where(channel_id: params[:channel_id], table_name: table_name).each do |record|
+      record_json = JSON.parse(record.record_json)
+      # column type is one of: string, number, boolean, date
+      case column_type
+      when 'string'
+        record_json[column_name] = record_json[column_name].to_s
+      when 'number'
+        record_json[column_name] = record_json[column_name].to_f
+      when 'boolean'
+        record_json[column_name] = record_json[column_name].to_b
+      end
+      record.record_json = record_json.to_json
+      record.save!
+    end
 
     raise "Not implemented yet"
   end
