@@ -26,26 +26,78 @@ function ExpandedProgressDataColumn({
   const progress = React.useMemo(
     () => (
       <div className={styles.expandedTable}>
-        {lesson.levels.map(level => (
-          <div
-            className={styles.expandedLevelColumn}
-            key={lesson.bubbleText + '.' + level.id}
-          >
-            {sortedStudents.map(student => (
-              <LevelDataCell
-                studentId={student.id}
-                level={level}
-                studentLevelProgress={
-                  levelProgressByStudent[student.id][level.id]
-                }
-                key={student.id + '.' + lesson.id + '.' + level.id}
-              />
-            ))}
-          </div>
-        ))}
+        {lesson.levels.map(level => {
+          if (
+            level.sublevels?.length > 0 &&
+            expandedChoiceLevels.includes(level.id)
+          ) {
+            return (
+              <>
+                <div
+                  className={styles.expandedLevelColumn}
+                  key={lesson.bubbleText + '.' + level.id}
+                >
+                  {sortedStudents.map(student => (
+                    <LevelDataCell
+                      studentId={student.id}
+                      level={level}
+                      studentLevelProgress={
+                        levelProgressByStudent[student.id][level.id]
+                      }
+                      overrideIcon={'split'}
+                      key={student.id + '.' + lesson.id + '.' + level.id}
+                    />
+                  ))}
+                </div>
+                {level.sublevels.map(sublevel => (
+                  <div
+                    className={styles.expandedLevelColumn}
+                    key={lesson.bubbleText + '.' + level.id}
+                  >
+                    {sortedStudents.map(student => (
+                      <LevelDataCell
+                        studentId={student.id}
+                        level={sublevel}
+                        studentLevelProgress={
+                          levelProgressByStudent[student.id][sublevel.id]
+                        }
+                        key={
+                          student.id +
+                          '.' +
+                          lesson.bubbleText +
+                          '.' +
+                          level.id +
+                          '.' +
+                          sublevel.bubbleText
+                        }
+                      />
+                    ))}
+                  </div>
+                ))}
+              </>
+            );
+          }
+          return (
+            <div
+              className={styles.expandedLevelColumn}
+              key={lesson.bubbleText + '.' + level.id}
+            >
+              {sortedStudents.map(student => (
+                <LevelDataCell
+                  studentId={student.id}
+                  level={level}
+                  studentLevelProgress={
+                    levelProgressByStudent[student.id][level.id]
+                  }
+                  key={student.id + '.' + lesson.id + '.' + level.id}
+                />
+              ))}
+            </div>
+          );
+        })}
       </div>
     ),
-    [levelProgressByStudent, sortedStudents, lesson]
+    [levelProgressByStudent, sortedStudents, lesson, expandedChoiceLevels]
   );
 
   return (
