@@ -199,6 +199,16 @@ class DatablockStorageController < ApplicationController
     table_name = params[:table_name]
     column_name = params[:column_name]
 
+    table = DatablockStorageTable.find(channel_id: params[:channel_id], table_name: table_name)
+    columns = JSON.parse(table.columns)
+    unless columns.include? column_name
+      columns << column_name
+      table.columns = columns.to_json
+      table.save!
+    end
+
+    render json: true
+
     raise "Not implemented yet"
   end
 
