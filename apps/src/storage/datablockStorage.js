@@ -381,11 +381,95 @@ DatablockStorage.coerceColumn = function (
   throw 'Not implemented yet';
 };
 
-FirebaseStorage.deleteKeyValue = function (key, onSuccess, onError) {
+DatablockStorage.deleteKeyValue = function (key, onSuccess, onError) {
   _fetch('delete_key_value', 'DELETE', {
     key,
   }).then(onSuccess, onError);
 
+  throw 'Not implemented yet';
+};
+
+// Used to inject levelbuilder defined data tables into the current project (see applab.js)
+/**
+ * Populates a channel with table data for one or more tables
+ * @param {string} jsonData The json data that represents the tables in the format of:
+ *   {
+ *     "table_name": [{ "name": "Trevor", "age": 30 }, { "name": "Hadi", "age": 72}],
+ *     "table_name2": [{ "city": "Seattle", "state": "WA" }, { "city": "Chicago", "state": "IL"}]
+ *   }
+ * @returns {Promise} which resolves when all table data has been written
+ */
+DatablockStorage.populateTable = function (jsonData) {
+  _fetch('populate_tables', 'POST', {
+    tables_json: jsonData,
+  });
+  throw 'Not implemented yet';
+};
+
+DatablockStorage.populateKeyValue = function (jsonData, onSuccess, onError) {
+  _fetch('populate_key_values', 'POST', {
+    key_values_json: jsonData,
+  }).then(onSuccess, onError);
+  throw 'Not implemented yet';
+};
+
+// gets a list of all the shared or current tables available in the data browser
+DatablockStorage.getLibraryManifest = function () {
+  return getTableNames();
+};
+
+// returns an array of strings for each of the columns in the table
+DatablockStorage.getColumnsForTable = function (tableName, tableType) {
+  _fetch('get_columns_for_table', 'GET', {
+    table_name: tableName,
+  });
+  throw 'Not implemented yet';
+};
+
+// @return {Promise<boolean>} whether the project channelID (configured at initFirebaseStorage) exists
+DatablockStorage.channelExists = function () {
+  return _fetch('channel_exists', 'GET', {});
+};
+
+// deletes the entire channel in firebase
+// used only one place, applab.js config.afterClearPuzzle()
+DatablockStorage.clearAllData = function (onSuccess, onError) {
+  _fetch('clear_all_data', 'DELETE', {}).then(onSuccess, onError);
+  throw 'Not implemented yet';
+};
+
+// Current tables are live updated, the data is NOT copied into
+// the student project, instead a new type of firebase node is created
+// like /v3/channels/NZfs8i-ivpdJe_CXtPfHtOCssNIRTY1oKd5uXfSiuyI/current_tables/Daily Weather
+// as opposed to a normal table that would be like
+// /v3/channels/NZfs8i-ivpdJe_CXtPfHtOCssNIRTY1oKd5uXfSiuyI/storage/tables/Daily Weather
+//
+// Current tables can be found in https://console.firebase.google.com/project/cdo-v3-shared/database/cdo-v3-shared/data/~2Fv3~2Fchannels~2Fshared~2Fmetadata~2Fmanifest~2Ftables
+// where the table has `current: true` set in the manifest object
+DatablockStorage.addCurrentTableToProject = function (
+  tableName,
+  onSuccess,
+  onError
+) {
+  _fetch('add_current_table_to_project', 'POST', {
+    table_name: tableName,
+  }).then(onSuccess, onError);
+  throw 'Not implemented yet';
+};
+
+// Makes a project-local copy of one of the tables stored at /v3/channels/shared/storage/tables
+DatablockStorage.copyStaticTable = function (tableName, onSuccess, onError) {
+  _fetch('copy_static_table', 'POST', {
+    table_name: tableName,
+  }).then(onSuccess, onError);
+  throw 'Not implemented yet';
+};
+
+/* TESTING RELATED FUNCTIONS */
+
+// Deletes the entire database for the project, including data and config
+DatablockStorage.resetForTesting = function () {
+  _fetch('clear_all_data', 'DELETE', {});
   throw 'Not implemented yet';
 };
 
