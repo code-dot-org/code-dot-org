@@ -85,6 +85,22 @@ export default class MusicBlocklyWorkspace {
     Blockly.svgResize(this.workspace);
   }
 
+  hideFlyout() {
+    if (!this.workspace) {
+      return;
+    }
+
+    this.workspace.flyout.hide();
+  }
+
+  hideChaff() {
+    if (!this.workspace) {
+      return;
+    }
+
+    this.workspace.hideChaff();
+  }
+
   /**
    * Generates executable JavaScript code for all blocks in the workspace.
    *

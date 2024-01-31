@@ -19,7 +19,7 @@ body {
 }
 
 h1 {
-  color: #7665a0;
+  color: var(--brand_secondary_default);
   font-size: 32px;
   font-family: var(--main-font);
   font-weight: var(--semi-bold-font-weight);
@@ -50,7 +50,7 @@ h3 {
 }
 
 a {
-  color: #7665a0;
+  color: var(--brand_secondary_default);
   text-decoration: none;
   font-family: var(--main-font);
   font-weight: var(--semi-bold-font-weight);

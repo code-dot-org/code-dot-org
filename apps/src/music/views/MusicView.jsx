@@ -18,7 +18,6 @@ import AppConfig, {getBlockMode, setAppConfig} from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
 import {loadLibrary} from '../utils/Loader';
 import MusicValidator from '../progress/MusicValidator';
-import Video from './Video';
 import {
   setIsPlaying,
   setCurrentPlayheadPosition,
@@ -142,7 +141,6 @@ class UnconnectedMusicView extends React.Component {
     }
 
     this.state = {
-      showingVideo: !!this.props.inIncubator,
       loadedLibrary: false,
       currentLibraryName: null,
       hasLoadedInitialSounds: false,
@@ -200,6 +198,11 @@ class UnconnectedMusicView extends React.Component {
         hasLoadedInitialSounds: false,
       });
       this.props.clearCallout();
+      this.musicBlocklyWorkspace.hideChaff();
+    }
+
+    if (this.props.appName !== 'music') {
+      this.musicBlocklyWorkspace.hideFlyout();
     }
 
     if (
@@ -572,10 +575,6 @@ class UnconnectedMusicView extends React.Component {
     );
   };
 
-  onVideoClosed = () => {
-    this.setState({showingVideo: false});
-  };
-
   renderInstructions(position) {
     // For now, the instructions are intended for use with a
     // progression.  We might decide to make them agnostic at
@@ -654,9 +653,6 @@ class UnconnectedMusicView extends React.Component {
   }
 
   render() {
-    const showVideo =
-      AppConfig.getValue('show-video') !== 'false' && this.state.showingVideo;
-
     const {timelineAtTop, showInstructions, instructionsPosition} = this.props;
 
     return (
@@ -677,10 +673,6 @@ class UnconnectedMusicView extends React.Component {
           {showInstructions &&
             instructionsPosition === InstructionsPositions.TOP &&
             this.renderInstructions(InstructionsPositions.TOP)}
-
-          {showVideo && (
-            <Video id="initial-modal-0" onClose={this.onVideoClosed} />
-          )}
 
           {timelineAtTop && this.renderPlayArea(true)}
 

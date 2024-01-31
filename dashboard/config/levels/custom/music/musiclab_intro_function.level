@@ -74,11 +74,11 @@
               "value": 1
             }
           ],
-          "message": "Nice work!",
+          "message": "Nice work.  You successfully used the function to play a sound.",
           "next": true
         },
         {
-          "message": "Please play a sound by calling the function."
+          "message": "Please play a sound by using the function."
         }
       ]
     },

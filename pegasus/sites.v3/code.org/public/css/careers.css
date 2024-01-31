@@ -138,11 +138,11 @@
 }
 
 .careers__benefit--purple {
-  background: linear-gradient(90deg, #7665a0, #5f5988);
+  background: linear-gradient(90deg, var(--brand_secondary_default), #5f5988);
 }
 
 .careers__benefit__icon.careers__benefit--purple {
-  background: #7665a0;
+  background: var(--brand_secondary_default);
 }
 
 ul li:before {
