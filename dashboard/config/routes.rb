@@ -264,8 +264,8 @@ Dashboard::Application.routes.draw do
             delete "/#{key}/:channel_id/datablock_storage/delete_key_value", to: 'datablock_storage#delete_key_value'
 
             # Other (consider renames)
-            put "/#{key}/:channel_id/datablock_storage/populate_tables", to: 'datablock_storage#populate_table'
-            put "/#{key}/:channel_id/datablock_storage/populate_key_values", to: 'datablock_storage#populate_key_value'
+            put "/#{key}/:channel_id/datablock_storage/populate_tables", to: 'datablock_storage#populate_tables'
+            put "/#{key}/:channel_id/datablock_storage/populate_key_values", to: 'datablock_storage#populate_key_values'
             get "/#{key}/:channel_id/datablock_storage/get_columns_for_table", to: 'datablock_storage#get_columns_for_table'
             get "/#{key}/:channel_id/datablock_storage/channel_exists", to: 'datablock_storage#channel_exists'
             delete "/#{key}/:channel_id/datablock_storage/clear_all_data", to: 'datablock_storage#clear_all_data'

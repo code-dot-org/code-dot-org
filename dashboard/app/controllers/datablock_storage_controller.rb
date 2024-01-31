@@ -269,7 +269,11 @@ class DatablockStorageController < ApplicationController
 
   def populate_tables
     tables_json = JSON.parse(params[:tables_json])
-    raise "Not yet implemented"
+    tables_json.each do |table_name, records|
+      table = DatablockStorageTable.where(channel_id: params[:channel_id], table_name: table_name).first_or_create
+      table.create_records(records)
+    end
+    render json: true
   end
 
   def populate_key_values

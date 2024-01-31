@@ -148,9 +148,10 @@
 
 %h3 populate_tables
 = form_tag "populate_tables", :method => :put, :remote => false do
-  = text_area_tag "tables_json", "", placeholder: "tables_json"
+  = text_area_tag "tables_json", '{"baz": [{"name": "Sam", "age": 5}, {"name": "Syd", "age": 7}]}', placeholder: "tables_json"
   = submit_tag "populate_tables"
 
+%h3 populate_key_values
 = form_tag "populate_key_values", :method => :put, :remote => false do
   = text_area_tag "key_values_json", "", placeholder: "key_values_json"
   = submit_tag "populate_key_values"
