@@ -3,16 +3,116 @@ import annotationList from '@cdo/apps/acemode/annotationList';
 import {interpolateColors} from '@cdo/apps/utils';
 import RGBColor from 'rgbcolor';
 
-export class DropletEditorAnnotator {
-  static patch() {
+export class Annotator {
+  constructor() {
+    if (new.target === Annotator) {
+      throw new TypeError('Cannot construct Annotator instances directly.');
+    }
+
+    this.patch();
+  }
+
+  static libraryName() {
+    return 'unknown';
+  }
+
+  static detect() {
+    return false;
+  }
+
+  /**
+   * Performs any patching of the underlying editor library, if needed.
+   */
+  patch() {}
+
+  /**
+   * Returns the number of lines of code in line-based editor context.
+   *
+   * @returns {number} The number of lines or -1 when it is not line-based.
+   */
+  getLineCount() {
+    return -1;
+  }
+
+  /**
+   * Gets a reference to the DropletBlock for the given line.
+   *
+   * If there is no block for that line it returns `null`.
+   *
+   * @param {number} lineNumber - The one-based line number.
+   * @returns {DropletBlock|null} A reference to the block or `null` if it doesn't exist.
+   */
+  getBlockForLine(lineNumber) {
+    return null;
+  }
+
+  /**
+   * Gets a reference to every block for a given line.
+   *
+   * @param {number} lineNumber - The one-based line number.
+   * @returns {Array} A list of references to blocks, empty if none exist.
+   */
+  getBlocksForLine(lineNumber) {
+    return [];
+  }
+
+  /**
+   * Dims all the blocks in the block view.
+   *
+   * @param {DropletBlock} block The block to dim.
+   */
+  dimBlock(block) {}
+
+  /**
+   * Reverse any dimmed blocks to their original state.
+   *
+   * @param {DropletBlock} block The block to undim.
+   */
+  undimBlock(block) {}
+
+  /**
+   * Highlights the given line in the active editor.
+   *
+   * It will return some metadata that can be used in the call to
+   * `unhighlightLine` to reverse this effect.
+   *
+   * @param {number} lineNumber The line number to highlight in the active editor.
+   * @param {string} highlightClass The class name to add to the line.
+   * @returns {Object} The metadata retaining the Ace Editor marker instance.
+   */
+  highlightLine(lineNumber, highlightClass) {
+    return {};
+  }
+
+  /**
+   * Unhighlights a previously highlighted line.
+   *
+   * The incoming `info` metadata is just the information returned by the prior
+   * call to `highlightLine`.
+   *
+   * @param {Object} info The metadata about the highlighted line.
+   */
+  unhighlightLine(info) {}
+}
+
+export class DropletAnnotator extends Annotator {
+  static libraryName() {
+    return 'droplet';
+  }
+
+  static detect() {
+    return !!EditorAnnotator.studioApp().editor;
+  }
+
+  patch() {
     const droplet = EditorAnnotator.studioApp().editor;
 
     // Need a reference to a BlockViewNode so that we can patch its draw
     // function to add the opacity after it creates the <path> for each block.
-    const block = DropletEditorAnnotator.getBlockForLine(1);
+    const block = this.getBlockForLine(1);
 
     // This will be our patched draw function
-    const drawSelf = function() {
+    const drawSelf = function () {
       // Call the original function... droplet will have a valid <path> after
       // this is through.
       this.drawSelf_(arguments);
@@ -30,14 +130,14 @@ export class DropletEditorAnnotator {
 
         // And "active paths" which are '<-' buttons and such
         if (this.activeElements) {
-          this.activeElements.forEach((item) => {
+          this.activeElements.forEach(item => {
             if (item.element) {
               item.element.style.opacity = this.__opacity || 1.0;
             }
           });
         }
       }
-    }
+    };
 
     if (block) {
       // Get the view. If the block mode is not available, this will return a
@@ -52,9 +152,9 @@ export class DropletEditorAnnotator {
       }
     }
 
-    const statechange = function(e) {
+    const statechange = function (e) {
       // Ensure the block draw is still patched
-      const block = DropletEditorAnnotator.getBlockForLine(1);
+      const block = this.getBlockForLine(1);
       if (block) {
         const view = droplet.session.view.getViewNodeFor(block);
         if (view && !view.constructor.prototype.drawSelf_) {
@@ -64,7 +164,7 @@ export class DropletEditorAnnotator {
       }
 
       EditorAnnotator.refresh();
-    }
+    };
 
     // Capture toggle event start / end
     droplet.on('statechange', statechange);
@@ -76,7 +176,7 @@ export class DropletEditorAnnotator {
    *
    * @returns {number} The number of lines or -1 when it is not line-based.
    */
-  static getLineCount() {
+  getLineCount() {
     var session = EditorAnnotator.studioApp().editor.aceEditor.getSession();
     return session.getDocument().getLength();
   }
@@ -89,11 +189,10 @@ export class DropletEditorAnnotator {
    * @param {number} lineNumber - The one-based line number.
    * @returns {DropletBlock|null} A reference to the block or `null` if it doesn't exist.
    */
-  static getBlockForLine(lineNumber) {
+  getBlockForLine(lineNumber) {
     const droplet = EditorAnnotator.studioApp().editor;
     return droplet.session.tree.getBlockOnLine(lineNumber - 1);
   }
-
 
   /**
    * Gets a reference to every block for a given line.
@@ -101,19 +200,18 @@ export class DropletEditorAnnotator {
    * @param {number} lineNumber - The one-based line number.
    * @returns {Array} A list of references to blocks, empty if none exist.
    */
-  static getBlocksForLine(lineNumber) {
+  getBlocksForLine(lineNumber) {
     let ret = [];
 
     // Get the first block
-    const base = DropletEditorAnnotator.getBlockForLine(lineNumber);
+    const base = this.getBlockForLine(lineNumber);
     if (base) {
       // Get all blocks for this line by scanning for a newline block
       let cur = base.start;
       while (cur) {
         if (cur.type === 'newline') {
           break;
-        }
-        else if (cur.type === 'blockStart') {
+        } else if (cur.type === 'blockStart') {
           ret.push(cur.container);
         }
         cur = cur.next;
@@ -128,9 +226,9 @@ export class DropletEditorAnnotator {
    *
    * @param {DropletBlock} block The block to dim.
    */
-  static dimBlock(block) {
+  dimBlock(block) {
     const droplet = EditorAnnotator.studioApp().editor;
-    const dimViewForBlock = (block) => {
+    const dimViewForBlock = block => {
       const view = droplet.session.view.getViewNodeFor(block);
       if (!view) {
         return;
@@ -143,8 +241,6 @@ export class DropletEditorAnnotator {
 
       // Get a grayer color for the block
       view.__oldFill = view.path.style.fillColor;
-      const old = RGBColor(view.__oldFill);
-      const gray = RGBColor('#888');
       const rgb = interpolateColors(view.__oldFill, '#ccc', 0.8);
 
       // But it needs to be in hex form
@@ -154,7 +250,7 @@ export class DropletEditorAnnotator {
 
       // Redraw the block
       view.drawSelf();
-    }
+    };
 
     // Dim the base block for this line
     dimViewForBlock(block);
@@ -165,7 +261,7 @@ export class DropletEditorAnnotator {
    *
    * @param {DropletBlock} block The block to undim.
    */
-  static undimBlock(block) {
+  undimBlock(block) {
     const droplet = EditorAnnotator.studioApp().editor;
     const view = droplet.session.view.getViewNodeFor(block);
     if (!view) {
@@ -196,7 +292,7 @@ export class DropletEditorAnnotator {
    * @param {string} highlightClass The class name to add to the line.
    * @returns {Object} The metadata retaining the Ace Editor marker instance.
    */
-  static highlightLine(lineNumber, highlightClass) {
+  highlightLine(lineNumber, highlightClass) {
     const droplet = EditorAnnotator.studioApp().editor;
     const session = droplet.aceEditor.getSession();
     const marker = session.addMarker(
@@ -213,7 +309,7 @@ export class DropletEditorAnnotator {
     // Retain info on what we just did
     return {
       lineNumber: lineNumber,
-      marker: marker
+      marker: marker,
     };
   }
 
@@ -225,7 +321,7 @@ export class DropletEditorAnnotator {
    *
    * @param {Object} info The metadata about the highlighted line.
    */
-  static unhighlightLine(info) {
+  unhighlightLine(info) {
     // Get the session and undo the things we did
     const session = EditorAnnotator.studioApp().editor.aceEditor.getSession();
     session.removeMarker(info.marker);
@@ -240,9 +336,8 @@ export default class EditorAnnotator {
   // Internally holds a reference to the StudioApp
   static studioApp_ = undefined;
 
-  // Internally track whether or not an underlying library is patched.
-  // See: `EditorAnnotator.ensurePatched`
-  static patched_ = false;
+  // Internally remember the current annotator implementation
+  static annotator_ = undefined;
 
   // Internally caches the editor code and the code split into lines.
   static code_ = undefined;
@@ -251,6 +346,9 @@ export default class EditorAnnotator {
   // Internally caches code stripped of comments, similarly.
   static strippedCode_ = undefined;
   static strippedLines_ = undefined;
+
+  // Internally tracking annotator implementations
+  static annotatorsByType_ = {};
 
   /**
    * Tracks any highlighted lines.
@@ -272,12 +370,17 @@ export default class EditorAnnotator {
     }
     EditorAnnotator.studioApp_ = studioApp();
 
-    // Ensure underlying libraries are patched for our purposes.
-    if (!EditorAnnotator.patched_) {
-      EditorAnnotator.ensurePatched();
-    }
-
     return EditorAnnotator.studioApp_;
+  }
+
+  /**
+   * Registers an editor type.
+   *
+   * @param {typeof Annotator} annotatorClass The implementing class of an annotator.
+   */
+  static register(annotatorClass) {
+    EditorAnnotator.annotatorsByType_[annotatorClass.libraryName()] =
+      annotatorClass;
   }
 
   /**
@@ -285,11 +388,17 @@ export default class EditorAnnotator {
    * editor type.
    */
   static annotator() {
-    if (EditorAnnotator.isDroplet()) {
-      return DropletEditorAnnotator;
+    if (!EditorAnnotator.annotator_) {
+      // Go through registered annotators to find one that is currently active.
+      for (const name of Object.keys(EditorAnnotator.annotatorsByType_)) {
+        const annotatorClass = EditorAnnotator.annotatorsByType_[name];
+        if (annotatorClass.detect()) {
+          EditorAnnotator.annotator_ = new annotatorClass();
+        }
+      }
     }
 
-    return null;
+    return EditorAnnotator.annotator_;
   }
 
   /**
@@ -299,32 +408,13 @@ export default class EditorAnnotator {
     if (EditorAnnotator.isDroplet()) {
       EditorAnnotator.dimBlocks();
 
-      EditorAnnotator.highlightedLines.forEach((item) => {
+      EditorAnnotator.highlightedLines.forEach(item => {
         const block = EditorAnnotator.getBlockForLine(item.lineNumber);
         if (block) {
           EditorAnnotator.undimBlock(block);
         }
       });
     }
-  }
-
-  /**
-   * Patches underlying block and text editing libraries to add useful
-   * annotation features.
-   *
-   * This will be called at the earliest convenience whenever an underlying
-   * level and editor context is found.
-   */
-  static ensurePatched() {
-    if (EditorAnnotator.patched_) {
-      return true;
-    }
-
-    if (EditorAnnotator.annotator()) {
-      EditorAnnotator.annotator().patch();
-    }
-
-    EditorAnnotator.patched_ = true;
   }
 
   /**
@@ -410,8 +500,7 @@ export default class EditorAnnotator {
       if (EditorAnnotator.strippedCode_) {
         return EditorAnnotator.strippedCode_;
       }
-    }
-    else if (EditorAnnotator.code_) {
+    } else if (EditorAnnotator.code_) {
       return EditorAnnotator.code_;
     }
 
@@ -436,9 +525,9 @@ export default class EditorAnnotator {
         return EditorAnnotator.strippedLines_;
       }
 
-      EditorAnnotator.strippedLines_ = EditorAnnotator.getCode(options).split('\n');
-    }
-    else if (EditorAnnotator.lines_) {
+      EditorAnnotator.strippedLines_ =
+        EditorAnnotator.getCode(options).split('\n');
+    } else if (EditorAnnotator.lines_) {
       return EditorAnnotator.lines_;
     }
 
@@ -654,14 +743,17 @@ export default class EditorAnnotator {
    * @param {string} highlightClass The class name to add to the line.
    */
   static highlightLine(lineNumber, highlightClass = 'ace_step') {
-    const info = EditorAnnotator.annotator()?.highlightLine(lineNumber, highlightClass);
+    const info = EditorAnnotator.annotator()?.highlightLine(
+      lineNumber,
+      highlightClass
+    );
 
     // If there are blocks... highlight line will highlight the blocks for that
     // line to properly emphasize them.
     if (EditorAnnotator.hasBlocks()) {
       // So, before we commit the line, if this is the first highlight, dim all
       // blocks. That way, the 'highlighted lines' being undimmed are emphasized.
-      if (EditorAnnotator.highlightedLines.length == 0) {
+      if (EditorAnnotator.highlightedLines.length === 0) {
         // Dim all blocks
         EditorAnnotator.dimBlocks();
       }
@@ -684,7 +776,7 @@ export default class EditorAnnotator {
    */
   static clearHighlightedLines() {
     // Unhighlight each highlighted line in the list and clear the list
-    EditorAnnotator.highlightedLines.forEach((item) => {
+    EditorAnnotator.highlightedLines.forEach(item => {
       EditorAnnotator.annotator().unhighlightLine(item);
     });
     EditorAnnotator.highlightedLines = [];
@@ -704,7 +796,11 @@ export default class EditorAnnotator {
    */
   static annotateLine(message, lineNumber, logLevel = 'INFO') {
     if (EditorAnnotator.isLineBased()) {
-      EditorAnnotator.annotationList_().addRuntimeAnnotation(logLevel, lineNumber, message);
+      EditorAnnotator.annotationList_().addRuntimeAnnotation(
+        logLevel,
+        lineNumber,
+        message
+      );
     }
   }
 
@@ -717,3 +813,20 @@ export default class EditorAnnotator {
     }
   }
 }
+
+if (IN_UNIT_TEST) {
+  /**
+   * Resets state.
+   */
+  EditorAnnotator.reset = function () {
+    EditorAnnotator.studioApp_ = undefined;
+    EditorAnnotator.annotator_ = undefined;
+    EditorAnnotator.code_ = undefined;
+    EditorAnnotator.lines_ = undefined;
+    EditorAnnotator.strippedCode_ = undefined;
+    EditorAnnotator.strippedLines_ = undefined;
+    EditorAnnotator.highlightedLines = [];
+  };
+}
+
+EditorAnnotator.register(DropletAnnotator);
