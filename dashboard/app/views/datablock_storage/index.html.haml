@@ -1,5 +1,41 @@
 %strong{:class => "code", :id => "message"} Hello,  #{@project.project_type}
 
+%h2 Tables
+%table
+  %tr
+    %td table_name
+    %td columns
+    %td is_shared_table
+  - @tables.each do |table|
+    %tr
+      %td= table.table_name
+      %td= table.columns
+      %td= table.is_shared_table
+
+%h2 Records
+
+%table
+  %tr
+    %td table_name
+    %td record_id
+    %td record_json
+  - @records.each do |record|
+    %tr
+      %td= record.table_name
+      %td= record.record_id
+      %td= record.record_json
+
+%h2 Key Value Pairs
+
+%table
+  %tr
+    %td key
+    %td value
+  - @key_value_pairs.each do |kvp|
+    %tr
+      %td= kvp.key
+      %td= kvp.value
+
 %h2 KeyValuePair
 
 %h3 set_key_value
@@ -12,16 +48,6 @@
 = form_tag "get_key_value", :method => :get, :remote => false do
   = text_field_tag "key", "", placeholder: "key"
   = submit_tag "get_key_value"
-
-%table
-  %tr
-    %td key
-    %td value
-  - @key_value_pairs.each do |kvp|
-    %tr
-      %td= kvp.key
-      %td= kvp.value
-
 
 %h2 Record
 
@@ -110,29 +136,10 @@
 = form_tag "coerce_column", :method => :put, :remote => false do
   = text_field_tag "table_name", "", placeholder: "table_name"
   = text_field_tag "column_name", "", placeholder: "column_name"
+  = text_field_tag "column_type", "", placeholder: "column_type"
   = submit_tag "coerce_column"
 
-%h2 Tables
-%table
-  %tr
-    %td table_name
-    %td columns
-    %td is_shared_table
-  - @tables.each do |table|
-    %tr
-      %td= table.table_name
-      %td= table.columns
-      %td= table.is_shared_table
-
-%h2 Records
-
-%table
-  %tr
-    %td table_name
-    %td record_id
-    %td record_json
-  - @records.each do |record|
-    %tr
-      %td= record.table_name
-      %td= record.record_id
-      %td= record.record_json
+%h3 delete_key_value
+= form_tag "delete_key_value", :method => :delete, :remote => false do
+  = text_field_tag "key", "", placeholder: "key"
+  = submit_tag "delete_key_value"
