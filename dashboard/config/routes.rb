@@ -262,6 +262,15 @@ Dashboard::Application.routes.draw do
 
             # Dataset Browser Actions: key-value pairs
             delete "/#{key}/:channel_id/datablock_storage/delete_key_value", to: 'datablock_storage#delete_key_value'
+
+            # Other (consider renames)
+            put "/#{key}/:channel_id/datablock_storage/populate_tables", to: 'datablock_storage#populate_table'
+            put "/#{key}/:channel_id/datablock_storage/populate_key_values", to: 'datablock_storage#populate_key_value'
+            get "/#{key}/:channel_id/datablock_storage/get_columns_for_table", to: 'datablock_storage#get_columns_for_table'
+            get "/#{key}/:channel_id/datablock_storage/channel_exists", to: 'datablock_storage#channel_exists'
+            delete "/#{key}/:channel_id/datablock_storage/clear_all_data", to: 'datablock_storage#clear_all_data'
+            post "/#{key}/:channel_id/datablock_storage/add_current_table_to_project", to: 'datablock_storage#add_current_table_to_project'
+            post "/#{key}/:channel_id/datablock_storage/copy_static_table", to: 'datablock_storage#copy_static_table'
           end
 
           get "/#{key}", to: 'projects#load', key: key.to_s, as: "#{key}_project"

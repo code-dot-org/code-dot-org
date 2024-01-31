@@ -267,6 +267,44 @@ class DatablockStorageController < ApplicationController
     render json: true
   end
 
+  def populate_tables
+    tables_json = JSON.parse(params[:tables_json])
+    raise "Not yet implemented"
+  end
+
+  def populate_key_values
+    key_values_json = JSON.parse(params[:key_values_json])
+    raise "Not yet implemented"
+  end
+
+  def get_columns_for_table
+    table_name = params[:table_name]
+    raise "Not yet implemented"
+  end
+
+  # Returns true if validation checks pass
+  def channel_exists
+    render json: true
+    raise "Not yet implemented"
+  end
+
+  # deletes the entire channel in firebase
+  # used only one place, applab.js config.afterClearPuzzle()
+  def clear_all_data
+    raise "Not yet implemented"
+  end
+
+  def add_current_table_to_project
+    table_name = params[:table_name]
+    raise "Not yet implemented"
+  end
+
+  # Makes a project-local copy of one of the tables stored at /v3/channels/shared/storage/tables
+  def copy_static_table
+    table_name = params[:table_name]
+    raise "Not yet implemented"
+  end
+
   private
 
   def validate_channel_id
