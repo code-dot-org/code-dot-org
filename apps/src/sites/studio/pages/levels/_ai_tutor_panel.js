@@ -20,7 +20,7 @@ function renderAITutorPanel(level, scriptId) {
 
   ReactDOM.render(
     <Provider store={store}>
-      <AITutorPanel level={level} scriptId={scriptId}/>
+      <AITutorPanel level={level} scriptId={scriptId} />
     </Provider>,
     div
   );

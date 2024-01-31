@@ -66,7 +66,11 @@ const AITutorPanel = ({level, scriptId}) => {
         />
       )}
       {validationSelected && (
-        <ValidationTutor levelId={level.id} scriptId={scriptId} />
+        <ValidationTutor
+          levelId={level.id}
+          isProjectBacked={level.isProjectBacked}
+          scriptId={scriptId}
+        />
       )}
       {questionSelected && <GeneralChatTutor />}
     </AITutorPanelContainer>
