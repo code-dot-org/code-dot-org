@@ -375,6 +375,15 @@ DatablockStorage.coerceColumn = function (
   _fetch('coerce_column', 'PUT', {
     table_name: tableName,
     column_name: columnName,
+    column_type: columnType,
+  }).then(onSuccess, onError);
+
+  throw 'Not implemented yet';
+};
+
+FirebaseStorage.deleteKeyValue = function (key, onSuccess, onError) {
+  _fetch('delete_key_value', 'DELETE', {
+    key,
   }).then(onSuccess, onError);
 
   throw 'Not implemented yet';
