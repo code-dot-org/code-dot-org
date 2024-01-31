@@ -20,7 +20,6 @@ export default function LevelDataCell({
   return (
     <div className={classNames(styles.gridBox, styles.gridBoxLevel)}>
       {overrideIcon ? <FontAwesome icon={overrideIcon} /> : levelData}
-      {levelData}
     </div>
   );
 }
