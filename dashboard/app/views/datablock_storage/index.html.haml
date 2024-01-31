@@ -76,6 +76,11 @@
   = text_field_tag "table_name", "", placeholder: "table_name"
   = submit_tag "delete_table"
 
+%h3 clear_table
+= form_tag "clear_table", :method => :delete, :remote => false do
+  = text_field_tag "table_name", "", placeholder: "table_name"
+  = submit_tag "clear_table"
+
 %h2 Tables
 %table
   %tr

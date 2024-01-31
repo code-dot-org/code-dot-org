@@ -290,7 +290,7 @@ DatablockStorage.createTable = function (tableName, onSuccess, onError) {
   }).then(onSuccess, onError);
 };
 
-FirebaseStorage.deleteTable = function (tableName, type, onSuccess, onError) {
+DatablockStorage.deleteTable = function (tableName, type, onSuccess, onError) {
   // FIXME: unfirebase, we ignore type, which is used by the Firebase implementation
   // to decide whether to nullify a `current_tables/` ref or a ``storage/tables/` ref.
   // Instead, we handle this in the backend, where we have a column in the tables table
@@ -299,6 +299,13 @@ FirebaseStorage.deleteTable = function (tableName, type, onSuccess, onError) {
     table_name: tableName,
   }).then(onSuccess, onError);
 };
+
+DatablockStorage.clearTable = function (tableName, onSuccess, onError) {
+  _fetch('clear_table', 'DELETE', {
+    table_name: tableName,
+  }).then(onSuccess, onError);
+};
+
 
 export function initDatablockStorage(config) {
   console.log('LOADING DATABLOCK STORAGE SHIM!!!');
