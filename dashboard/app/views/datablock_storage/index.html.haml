@@ -71,6 +71,25 @@
   = text_field_tag "table_name", "", placeholder: "table_name"
   = submit_tag "create_table"
 
+%h3 delete_table
+= form_tag "delete_table", :method => :delete, :remote => false do
+  = text_field_tag "table_name", "", placeholder: "table_name"
+  = submit_tag "delete_table"
+
+%h2 Tables
+%table
+  %tr
+    %td table_name
+    %td columns
+    %td is_shared_table
+  - @tables.each do |table|
+    %tr
+      %td= table.table_name
+      %td= table.columns
+      %td= table.is_shared_table
+
+%h2 Records
+
 %table
   %tr
     %td table_name
