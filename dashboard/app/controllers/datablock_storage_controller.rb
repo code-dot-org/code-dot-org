@@ -278,8 +278,8 @@ class DatablockStorageController < ApplicationController
   end
 
   def get_columns_for_table
-    table_name = params[:table_name]
-    raise "Not yet implemented"
+    table = DatablockStorageTable.find([params[:channel_id], params[:table_name]])
+    render json: JSON.parse(table.columns)
   end
 
   # Returns true if validation checks pass
