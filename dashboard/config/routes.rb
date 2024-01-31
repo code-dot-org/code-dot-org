@@ -248,6 +248,7 @@ Dashboard::Application.routes.draw do
 
             # Dataset Browser Action Methods
             post "/#{key}/:channel_id/datablock_storage/create_table", to: 'datablock_storage#create_table'
+            delete "/#{key}/:channel_id/datablock_storage/delete_table", to: 'datablock_storage#delete_table'
           end
 
           get "/#{key}", to: 'projects#load', key: key.to_s, as: "#{key}_project"

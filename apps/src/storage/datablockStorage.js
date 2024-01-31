@@ -17,6 +17,7 @@ recordID: INT,
 json: JSON
 Tables table:
 
+Tables table:
 channelID: VARCHAR(22),
 tableName: VARCHAR(768),
 columns: JSON,
@@ -285,6 +286,16 @@ DatablockStorage.unsubscribeFromKeyValuePairs = function () {
 
 DatablockStorage.createTable = function (tableName, onSuccess, onError) {
   _fetch('create_table', 'POST', {
+    table_name: tableName,
+  }).then(onSuccess, onError);
+};
+
+FirebaseStorage.deleteTable = function (tableName, type, onSuccess, onError) {
+  // FIXME: unfirebase, we ignore type, which is used by the Firebase implementation
+  // to decide whether to nullify a `current_tables/` ref or a ``storage/tables/` ref.
+  // Instead, we handle this in the backend, where we have a column in the tables table
+  // to specify which type of table it is.
+  _fetch('delete_table', 'DELETE', {
     table_name: tableName,
   }).then(onSuccess, onError);
 };
