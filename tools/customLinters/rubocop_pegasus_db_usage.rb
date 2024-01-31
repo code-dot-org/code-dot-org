@@ -1,10 +1,10 @@
 module CustomCops
-  # Custom cop that checks for use of PEGASUS_DB outside of pegasus/ directory
+  # Custom cop that checks for use of pegasus DB outside of pegasus/ directory
   class PegasusDbUsage < RuboCop::Cop::Base
-    MSG = 'Do not use PEGASUS_DB outside of pegasus/ directory.'
+    MSG = 'Do not access pegasus DB from outside of the top-level pegasus/ directory. For details, see: https://github.com/code-dot-org/code-dot-org/pull/55417'
 
     def_node_matcher :pegasus_db_usage?, <<-PATTERN
-      (const nil? :PEGASUS_DB)
+      (const nil? {:PEGASUS_DB :POSTE_DB})
     PATTERN
 
     def on_const(node)
