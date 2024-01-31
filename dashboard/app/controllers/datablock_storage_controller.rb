@@ -169,8 +169,6 @@ class DatablockStorageController < ApplicationController
     render json: true
   end
 
-  #### NOT YET IMPLEMENTED ####
-
   def add_column
     column_name = params[:column_name]
 
@@ -225,6 +223,17 @@ class DatablockStorageController < ApplicationController
     render json: true
   end
 
+  def _coerce_type(value, column_type)
+    case column_type
+    when 'string'
+      value.to_s
+    when 'number'
+      value.to_f
+    when 'boolean'
+      value.to_b
+    end
+  end
+
   def coerce_column
     table_name = params[:table_name]
     column_name = params[:column_name]
@@ -235,23 +244,12 @@ class DatablockStorageController < ApplicationController
     end
 
     DatablockStorageRecord.where(channel_id: params[:channel_id], table_name: table_name).each do |record|
-      record_json = JSON.parse(record.record_json)
       # column type is one of: string, number, boolean, date
-      case column_type
-      when 'string'
-        record_json[column_name] = record_json[column_name].to_s
-      when 'number'
-        record_json[column_name] = record_json[column_name].to_f
-      when 'boolean'
-        record_json[column_name] = record_json[column_name].to_b
-      end
-      record.record_json = record_json.to_json
+      record.record_json[column_name] = _coerce_type(record.record_json[column_name], column_type)
       record.save!
     end
 
     render json: true
-
-    raise "Not implemented yet"
   end
 
   def import_csv
@@ -266,7 +264,7 @@ class DatablockStorageController < ApplicationController
     key = params[:key]
     DatablockStorageKvp.where(channel_id: params[:channel_id], key: key).delete_all
 
-    raise "Not implemented yet"
+    render json: true
   end
 
   private
