@@ -232,6 +232,22 @@ class DatablockStorageController < ApplicationController
     old_column_name = params[:old_column_name]
     new_column_name = params[:new_column_name]
 
+    table = DatablockStorageTable.find(channel_id: params[:channel_id], table_name: table_name)
+    columns = JSON.parse(table.columns)
+
+    # First rename the column in all the JSON records
+    DatablockStorageRecord.where(channel_id: params[:channel_id], table_name: table_name).each do |record|
+      record_json = JSON.parse(record.record_json)
+      record_json[new_column_name] = record_json.delete(old_column_name)
+      record.record_json = record_json.to_json
+      record.save!
+    end
+
+    # Second rename the column in the table definition
+    columns = columns.map {|column| column == old_column_name ? new_column_name : column}
+    table.columns = columns.to_json
+    table.save!
+
     raise "Not implemented yet"
   end
 
