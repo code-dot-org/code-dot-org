@@ -39,6 +39,7 @@ linters:
       - Layout/SpaceInsideParens
       - Layout/TrailingEmptyLines
       - Layout/TrailingWhitespace
+      - Lint/AmbiguousBlockAssociation
       - Lint/AmbiguousOperatorPrecedence
       - Lint/BooleanSymbol
       - Lint/DeprecatedClassMethods
