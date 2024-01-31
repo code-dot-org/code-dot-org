@@ -143,3 +143,33 @@
 = form_tag "delete_key_value", :method => :delete, :remote => false do
   = text_field_tag "key", "", placeholder: "key"
   = submit_tag "delete_key_value"
+
+%h2 Other
+
+%h3 populate_tables
+= form_tag "populate_tables", :method => :put, :remote => false do
+  = text_area_tag "tables_json", "", placeholder: "tables_json"
+  = submit_tag "populate_tables"
+
+= form_tag "populate_key_values", :method => :put, :remote => false do
+  = text_area_tag "key_values_json", "", placeholder: "key_values_json"
+  = submit_tag "populate_key_values"
+
+%h3 get_columns_for_table
+= form_tag "get_columns_for_table", :method => :get, :remote => false do
+  = text_field_tag "table_name", "", placeholder: "table_name"
+  = submit_tag "get_columns_for_table"
+
+%h3 clear_all_data
+= form_tag "clear_all_data", :method => :delete, :remote => false do
+  = submit_tag "clear_all_data"
+
+%h3 add_current_table_to_project
+= form_tag "add_current_table_to_project", :method => :post, :remote => false do
+  = text_field_tag "table_name", "", placeholder: "table_name"
+  = submit_tag "add_current_table_to_project"
+
+%h3 copy_static_table
+= form_tag "add_current_table_to_project", :method => :post, :remote => false do
+  = text_field_tag "table_name", "", placeholder: "table_name"
+  = submit_tag "copy_static_table"
