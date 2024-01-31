@@ -21,6 +21,7 @@ const scriptData = getScriptData('edit');
 const {
   userAge,
   userType,
+  isAdmin,
   isPasswordRequired,
   authenticationOptions,
   isGoogleClassroomStudent,
@@ -133,6 +134,7 @@ $(document).ready(() => {
         dependedUponForLogin={dependedUponForLogin}
         dependentStudents={dependentStudents}
         hasStudents={studentCount > 0}
+        isAdmin={isAdmin}
       />,
       deleteAccountMountPoint
     );

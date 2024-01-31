@@ -34,8 +34,11 @@ import {
   getCurrentlyPlayingBlockIds,
   setSoundLoadingProgress,
   setUndoStatus,
+  showCallout,
+  clearCallout,
 } from '../redux/musicRedux';
 import KeyHandler from './KeyHandler';
+import Callouts from './Callouts';
 import {currentLevelIndex} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {
   isReadOnlyWorkspace,
@@ -98,11 +101,14 @@ class UnconnectedMusicView extends React.Component {
     setPageError: PropTypes.func,
     initialSources: PropTypes.object,
     levelData: PropTypes.object,
+    longInstructions: PropTypes.string,
     startingPlayheadPosition: PropTypes.number,
     isReadOnlyWorkspace: PropTypes.bool,
     updateLoadProgress: PropTypes.func,
     appName: PropTypes.string,
     setUndoStatus: PropTypes.func,
+    showCallout: PropTypes.func,
+    clearCallout: PropTypes.func,
   };
 
   constructor(props) {
@@ -186,12 +192,14 @@ class UnconnectedMusicView extends React.Component {
     }
 
     // When changing levels, stop playback and reset the initial sounds loaded flag
-    // since a new set of sounds will be loaded on the next level.
+    // since a new set of sounds will be loaded on the next level.  Also clear
+    // the callout that's showing.
     if (prevProps.currentLevelIndex !== this.props.currentLevelIndex) {
       this.stopSong();
       this.setState({
         hasLoadedInitialSounds: false,
       });
+      this.props.clearCallout();
     }
 
     if (
@@ -244,7 +252,9 @@ class UnconnectedMusicView extends React.Component {
     );
 
     this.library.setAllowedSounds(levelData?.sounds);
-    this.props.setShowInstructions(!!levelData?.text);
+    this.props.setShowInstructions(
+      !!levelData?.text || !!this.props.longInstructions
+    );
 
     if (this.getStartSources() || initialSources) {
       let codeToLoad = this.getStartSources();
@@ -352,13 +362,13 @@ class UnconnectedMusicView extends React.Component {
 
     const codeChanged = this.compileSong();
     if (codeChanged) {
-      this.executeCompiledSong();
-
-      // If code has changed mid-playback, clear and re-queue all events in the player
-      if (this.props.isPlaying) {
-        this.player.stopAllSoundsStillToPlay();
-        this.player.playEvents(this.sequencer.getPlaybackEvents());
-      }
+      this.executeCompiledSong().then(() => {
+        // If code has changed mid-playback, clear and re-queue all events in the player
+        if (this.props.isPlaying) {
+          this.player.stopAllSoundsStillToPlay();
+          this.player.playEvents(this.sequencer.getPlaybackEvents());
+        }
+      });
 
       this.analyticsReporter.onBlocksUpdated(
         this.musicBlocklyWorkspace.getAllBlocks()
@@ -453,7 +463,7 @@ class UnconnectedMusicView extends React.Component {
       orderedFunctions: this.sequencer.getOrderedFunctions(),
     });
 
-    this.player.preloadSounds(
+    return this.player.preloadSounds(
       [...this.sequencer.getPlaybackEvents(), ...allTriggerEvents],
       (loadTimeMs, soundsLoaded) => {
         // Report load time metrics if any sounds were loaded.
@@ -594,6 +604,7 @@ class UnconnectedMusicView extends React.Component {
             baseUrl={baseAssetUrl}
             vertical={position !== InstructionsPositions.TOP}
             right={position === InstructionsPositions.RIGHT}
+            handleInstructionsTextClick={id => this.props.showCallout(id)}
           />
         </PanelContainer>
       </div>
@@ -650,12 +661,13 @@ class UnconnectedMusicView extends React.Component {
 
     return (
       <AnalyticsContext.Provider value={this.analyticsReporter}>
-        {AppConfig.getValue('keyboard-shortcuts-enabled') === 'true' && (
-          <KeyHandler
-            togglePlaying={this.togglePlaying}
-            playTrigger={this.playTrigger}
-          />
-        )}
+        <KeyHandler
+          togglePlaying={this.togglePlaying}
+          playTrigger={this.playTrigger}
+          uiShortcutsEnabled={
+            AppConfig.getValue('ui-keyboard-shortcuts-enabled') === 'true'
+          }
+        />
         <UpdateTimer
           getCurrentPlayheadPosition={this.getCurrentPlayheadPosition}
           updateHighlightedBlocks={this.updateHighlightedBlocks}
@@ -701,6 +713,7 @@ class UnconnectedMusicView extends React.Component {
 
           {!timelineAtTop && this.renderPlayArea(false)}
         </div>
+        <Callouts />
       </AnalyticsContext.Provider>
     );
   }
@@ -723,6 +736,7 @@ const MusicView = connect(
     currentlyPlayingBlockIds: getCurrentlyPlayingBlockIds(state),
     initialSources: state.lab.initialSources,
     levelData: state.lab.levelProperties?.levelData,
+    longInstructions: state.lab.levelProperties?.longInstructions,
     isReadOnlyWorkspace: isReadOnlyWorkspace(state),
     appName: state.lab.levelProperties?.appName,
     startingPlayheadPosition: state.music.startingPlayheadPosition,
@@ -747,6 +761,8 @@ const MusicView = connect(
     setPageError: pageError => dispatch(setPageError(pageError)),
     updateLoadProgress: value => dispatch(setSoundLoadingProgress(value)),
     setUndoStatus: value => dispatch(setUndoStatus(value)),
+    showCallout: id => dispatch(showCallout(id)),
+    clearCallout: id => dispatch(clearCallout()),
   })
 )(UnconnectedMusicView);
 

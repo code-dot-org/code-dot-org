@@ -93,6 +93,11 @@ en-GB:
           KEY:
             '"space"': space
             '"x"': x
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': blue
+            '"red"': red
       gamelab_checkTouching:
         options:
           CONDITION:

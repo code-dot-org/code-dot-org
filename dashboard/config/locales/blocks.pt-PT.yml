@@ -1052,6 +1052,14 @@ pt:
             '"starburst"': Starburst
             '"twinkling"': Cintilante
         text: criar efeito {EFFECT} efeito
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': azul
+            '"red"': vermelho
+          OPT:
+            '"large"': grande
+            '"small"': pequeno
       KatiesBlocks_glideTo:
         text: "{SPRITE} deslizar para {LOCATION}"
       KatiesBlocks_tumbling:

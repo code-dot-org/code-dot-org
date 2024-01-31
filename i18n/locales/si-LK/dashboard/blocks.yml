@@ -202,6 +202,11 @@ si:
         options:
           EFFECT:
             '"hearts"': හදවත්
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': නිල්
+            '"red"': රතු
       gamelab_atTime:
         options:
           UNIT:

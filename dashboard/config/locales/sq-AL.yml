@@ -429,8 +429,8 @@ sq:
       se të paktën pesë studentë kanë dorëzuar studimin.
     survey_submission_thankyou: Faleminderit për dorëzimin e këtij sondazhi! Sondazhi
       është pastruar në mënyrë që përgjigjet tuaja të mbeten anonime. Vini re se mësimdhënësit
-      tuaj do të jetë ende në gjendje të shohë përgjigjet për të gjithë klasën, por
-      pa emra të bashkangjitur.
+      tuaj do të jetë ende në gjendje të shohin përgjigjet për të gjithë klasën, por
+      pa emra të bashkëngjitur.
     wrong_body: Ju faleminderit për përgjigjen.
     wrong_title: Faleminderit
   level_group-submittable:

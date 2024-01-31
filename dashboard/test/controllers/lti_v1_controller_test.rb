@@ -229,6 +229,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   setup do
     # stub cache reads for each test
     LtiV1Controller.any_instance.stubs(:read_cache).returns({state: @state, nonce: @nonce})
+    Honeybadger.stubs(:notify)
   end
 
   def create_jwt(payload)
@@ -497,5 +498,76 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     get '/lti/v1/sync_course', params: {lti_integration_id: lti_integration.id, deployment_id: 'foo', context_id: lti_course.context_id, rlid: lti_course.resource_link_id, nrps_url: lti_course.nrps_url}
     assert_empty lti_course.lti_sections
     assert_response :internal_server_error
+  end
+
+  test 'integration - given valid inputs, creates a new integration if one does not exist' do
+    name = "Fake School"
+    client_id = "1234canvas"
+    lms = "canvas_cloud"
+    email = "fake@email.com"
+
+    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
+    assert_response :ok
+
+    client_id = "5678schoology"
+    lms = "schoology"
+
+    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
+    assert_response :ok
+  end
+
+  test 'integration - given missing inputs, does not create a new integration' do
+    name = "Fake School"
+    client_id = "1234canvas"
+    lms = "canvas_cloud"
+    email = "fake@email.com"
+
+    # missing client_id
+    post '/lti/v1/integrations', params: {name: name, lms: lms, email: email}
+    assert_equal I18n.t('lti.error.missing_params'), flash[:alert]
+
+    # missing lms
+    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: '', email: email}
+    assert_equal I18n.t('lti.error.missing_params'), flash[:alert]
+
+    # missing email
+    post '/lti/v1/integrations', params: {name: name, client_id: client_id}
+    assert_equal I18n.t('lti.error.missing_params'), flash[:alert]
+
+    # unsupported lms type
+    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: 'unsupported', email: email}
+    assert_equal I18n.t('lti.error.unsupported_lms_type'), flash[:alert]
+
+    # missing name
+    post '/lti/v1/integrations', params: {client_id: client_id, lms: lms, email: email}
+    assert_equal I18n.t('lti.error.missing_params'), flash[:alert]
+  end
+
+  test 'integration - if existing integration, does not create a new one' do
+    name = "Fake School"
+    client_id = "1234canvas"
+    lms = "canvas_cloud"
+    email = "fake@email.com"
+
+    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
+    assert_template 'lti/v1/integration_status'
+    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
+    assert_template 'lti/v1/integration_status'
+  end
+
+  test 'attempting to sync a section with no LTI course should return a 400' do
+    user = create :teacher
+    sign_in user
+
+    get '/lti/v1/sync_course', params: {section_code: 'bad-section-code'}
+    assert_response :bad_request
+  end
+
+  test 'attempting to sync a section with a missing LTI integration should return a 400' do
+    user = create :teacher
+    sign_in user
+    bad_params = {lti_integration_id: 'foo', deployment_id: 'bar', context_id: 'baz', rlid: 'qux', nrps_url: 'quux'}
+    get '/lti/v1/sync_course', params: bad_params
+    assert_response :bad_request
   end
 end

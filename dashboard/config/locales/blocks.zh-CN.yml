@@ -1102,6 +1102,14 @@ zh-CN:
         options:
           INPUT1:
             '1': 柠檬汁
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': 蓝色
+            '"red"': 红色
+          OPT:
+            '"large"': 大
+            '"small"': 小
       FunctionBlocks_communicate:
         text: 让{VAR1}与{SPRITE1COSTUME}交流
       FunctionBlocks_makeManipulative2:

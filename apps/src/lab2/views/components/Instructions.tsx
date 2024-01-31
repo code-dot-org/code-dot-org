@@ -1,6 +1,6 @@
 import React, {useCallback, useContext, useState} from 'react';
 import classNames from 'classnames';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import moduleStyles from './instructions.module.scss';
 import {useSelector} from 'react-redux';
 import {navigateToNextLevel} from '@cdo/apps/code-studio/progressRedux';
@@ -29,6 +29,10 @@ interface InstructionsProps {
    * are currently unsupported. Defaults to right.
    */
   imagePopOutDirection?: 'right' | 'left';
+  /**
+   * A callback when the user clicks on clickable text.
+   */
+  handleInstructionsTextClick?: (id: string) => null;
 }
 
 /**
@@ -44,6 +48,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   baseUrl,
   layout,
   imagePopOutDirection,
+  handleInstructionsTextClick,
 }) => {
   // Prefer using long instructions if available, otherwise fall back to level data text.
   const instructionsText = useSelector(
@@ -54,7 +59,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   );
   const levelIndex = useSelector(currentLevelIndex);
   const currentLevelCount = useSelector(levelCount);
-  const {hasConditions, message, satisfied} = useSelector(
+  const {hasConditions, message, satisfied, index} = useSelector(
     (state: {lab: LabState}) => state.lab.validationState
   );
 
@@ -83,10 +88,11 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     <InstructionsPanel
       text={instructionsText}
       message={message || undefined}
+      messageIndex={index}
       showNextButton={showNextButton}
       onNextPanel={onNextPanel}
       theme={theme}
-      {...{baseUrl, layout, imagePopOutDirection}}
+      {...{baseUrl, layout, imagePopOutDirection, handleInstructionsTextClick}}
     />
   );
 };
@@ -96,6 +102,8 @@ interface InstructionsPanelProps {
   text: string;
   /** Optional message to display under the main text. This is typically a validation message. */
   message?: string;
+  /** Key for rendering the optional message. A unique value ensures the appearance animation shows. */
+  messageIndex?: number;
   /** Optional image URL to display. */
   imageUrl?: string;
   /** If the next button should be shown. */
@@ -111,6 +119,10 @@ interface InstructionsPanelProps {
   imagePopOutDirection?: 'right' | 'left';
   /** Display theme. Defaults to dark. */
   theme?: 'dark' | 'light';
+  /**
+   * A callback when the user clicks on clickable text.
+   */
+  handleInstructionsTextClick?: (id: string) => null;
 }
 
 /**
@@ -120,12 +132,14 @@ interface InstructionsPanelProps {
 const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   text,
   message,
+  messageIndex,
   imageUrl,
   showNextButton,
   onNextPanel,
   layout = 'vertical',
   imagePopOutDirection = 'right',
   theme = 'dark',
+  handleInstructionsTextClick,
 }) => {
   const [showBigImage, setShowBigImage] = useState(false);
 
@@ -194,22 +208,28 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
             id="instructions-text"
             className={moduleStyles['text-' + theme]}
           >
-            <SafeMarkdown
+            <EnhancedSafeMarkdown
               markdown={text}
               className={moduleStyles.markdownText}
+              handleInstructionsTextClick={handleInstructionsTextClick}
             />
           </div>
         )}
         {(message || canShowNextButton) && (
-          <div id="instructions-feedback" className={moduleStyles.feedback}>
+          <div
+            key={messageIndex + ' - ' + message}
+            id="instructions-feedback"
+            className={moduleStyles.feedback}
+          >
             <div
               id="instructions-feedback-message"
               className={moduleStyles['message-' + theme]}
             >
               {message && (
-                <SafeMarkdown
+                <EnhancedSafeMarkdown
                   markdown={message}
                   className={moduleStyles.markdownText}
+                  handleInstructionsTextClick={handleInstructionsTextClick}
                 />
               )}
               {canShowNextButton && (
