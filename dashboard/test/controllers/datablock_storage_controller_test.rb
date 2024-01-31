@@ -1156,4 +1156,43 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     # FIXME: Implement a test for get_key_values
     assert_equal true, false
   end
+
+  test "create_table" do
+  end
+
+  test "delete_table" do
+  end
+
+  test "clear_table" do
+  end
+
+  test "add_column" do
+  end
+
+  test "delete_column" do
+  end
+
+  test "rename_column" do
+  end
+
+  test "coerce_column" do
+  end
+
+  test "import_csv" do
+  end
+
+  test "populate_tables" do
+  end
+
+  test "populate_key_values" do
+  end
+
+  test "get_columns_for_table" do
+  end
+
+  test "clear_all_data" do
+  end
+
+  test "add_shared_table" do
+  end
 end
