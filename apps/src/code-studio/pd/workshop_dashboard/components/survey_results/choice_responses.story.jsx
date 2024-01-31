@@ -6,11 +6,7 @@ export default {
   component: ChoiceResponses,
 };
 
-const Template = args => (
-  <div id="application-container">
-    <ChoiceResponses {...args} />
-  </div>
-);
+const Template = args => <ChoiceResponses {...args} />;
 
 export const ChoiceResponsesWithoutOther = Template.bind({});
 ChoiceResponsesWithoutOther.args = {
