@@ -259,6 +259,9 @@ Dashboard::Application.routes.draw do
             delete "/#{key}/:channel_id/datablock_storage/delete_column", to: 'datablock_storage#delete_column'
             put "/#{key}/:channel_id/datablock_storage/rename_column", to: 'datablock_storage#rename_column'
             put "/#{key}/:channel_id/datablock_storage/coerce_column", to: 'datablock_storage#coerce_column'
+
+            # Dataset Browser Actions: key-value pairs
+            delete "/#{key}/:channel_id/datablock_storage/delete_key_value", to: 'datablock_storage#delete_key_value'
           end
 
           get "/#{key}", to: 'projects#load', key: key.to_s, as: "#{key}_project"

@@ -225,8 +225,12 @@ class DatablockStorageController < ApplicationController
   end
 
   def import_csv
-    table_name = params[:table_name]
-    table_data_csv = params[:table_data_csv]
+    raise "Not implemented yet"
+  end
+
+  def delete_key_value
+    key = params[:key]
+    DatablockStorageKvp.where(channel_id: params[:channel_id], key: key).delete_all
 
     raise "Not implemented yet"
   end

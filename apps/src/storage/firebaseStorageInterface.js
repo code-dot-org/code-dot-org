@@ -45,15 +45,13 @@ FirebaseStorage.deleteColumn = function (tableName, columnName, onSuccess, onErr
 FirebaseStorage.renameColumn = function (tableName, oldName, newName, onSuccess, onError) {}
 FirebaseStorage.coerceColumn = function (tableName, columnName, columnType, onSuccess, onError) {}
 
-
+FirebaseStorage.deleteKeyValue = function (key, onSuccess, onError) {}
 
 /* NOT BLOCKS */
 
 // Used to inject levelbuilder defined data tables into the current project (see applab.js)
 FirebaseStorage.populateTable = function (jsonData) {}
 FirebaseStorage.populateKeyValue = function (jsonData, onSuccess, onError) {}
-
-FirebaseStorage.deleteKeyValue = function (key, onSuccess, onError) {}
 
 // gets a list of all the shared or current tables available in the data browser
 FirebaseStorage.getLibraryManifest = function () {}
