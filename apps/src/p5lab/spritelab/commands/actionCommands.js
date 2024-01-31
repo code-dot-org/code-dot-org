@@ -25,6 +25,11 @@ function addSpriteSpeechBubble(
   });
 }
 
+// function addVariableBubble(coreLibrary, nameArg) {
+//   console.log('adding variable bubble');
+//   coreLibrary.addVariableBubble(nameArg);
+// }
+
 export const commands = {
   addTarget(spriteArg, targetCostume, targetType) {
     if (!['follow', 'avoid'].includes(targetType)) {
@@ -40,6 +45,11 @@ export const commands = {
         sprite.targetSet[targetType].push(targetCostume);
       }
     });
+  },
+
+  showVariable(nameArg, locationArg) {
+    console.log('name: ', nameArg);
+    this.addVariableBubble(nameArg);
   },
 
   bounceOff(spriteArg, targetArg) {

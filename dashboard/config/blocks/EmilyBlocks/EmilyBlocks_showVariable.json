@@ -1,5 +1,5 @@
 {
-  "category": "World",
+  "category": "Variables",
   "config": {
     "func": "showVariable",
     "blockText": "show variable {VARIABLE} at {LOCATION}",
@@ -19,6 +19,6 @@
       }
     ],
     "inline": true,
-    "style": "world_blocks"
+    "style": "variable_blocks"
   }
 }

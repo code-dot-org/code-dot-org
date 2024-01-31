@@ -43,7 +43,7 @@ export default class CoreLibrary {
       pass: 90,
       successFrame: 0,
     };
-    this.variables = [{name: 'a'}];
+    this.variableBubbles = [{name: 'a'}];
 
     this.commands = {
       executeDrawLoopAndCallbacks() {
@@ -51,7 +51,7 @@ export default class CoreLibrary {
         this.runBehaviors();
         this.runEvents();
         this.p5.drawSprites();
-        this.drawVariableDisplays();
+        this.drawVariableBubbles();
         this.drawSpeechBubbles();
         if (this.screenText.title || this.screenText.subtitle) {
           commands.drawTitle.apply(this);
@@ -90,18 +90,18 @@ export default class CoreLibrary {
     }
   }
 
-  drawVariableDisplays() {
-    if (!!this.variableDisplays.length) {
+  drawVariableBubbles() {
+    if (!this.variableBubbles.length) {
       return;
     }
 
-    this.variables.forEach(variable => {
+    this.variableBubbles.forEach(variable => {
       const {name} = variable;
-      this.drawVariableDisplay(150, 200, `${name}: 999`);
+      this.drawVariableBubble(150, 200, `${name}: 999`);
     });
   }
 
-  drawVariableDisplay(x, y, text) {
+  drawVariableBubble(x, y, text) {
     console.log('drawing variable displays');
     const padding = 10;
     const textSizeValue = 20; // Size of the text
@@ -223,6 +223,15 @@ export default class CoreLibrary {
         horizontalAlign: this.p5.CENTER,
       }
     );
+  }
+
+  addVariableBubble(name) {
+    const id = createUuid();
+    this.variableBubbles.push({
+      id,
+      name,
+    });
+    return id;
   }
 
   addSpeechBubble(sprite, text, seconds = null, bubbleType = 'say') {
