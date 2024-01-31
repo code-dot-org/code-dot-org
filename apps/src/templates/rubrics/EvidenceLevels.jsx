@@ -37,7 +37,7 @@ export default function EvidenceLevels({
       <EvidenceLevelsForTeachersV2
         aiEvalInfo={aiEvalInfo}
         learningGoalKey={learningGoalKey}
-        evidenceLevels={sortedEvidenceLevels()}
+        evidenceLevels={sortedEvidenceLevels().reverse()}
         understanding={understanding}
         radioButtonCallback={radioButtonCallback}
         canProvideFeedback={canProvideFeedback}

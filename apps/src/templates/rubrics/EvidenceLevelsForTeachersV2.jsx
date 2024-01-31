@@ -1,4 +1,4 @@
-import React, {useMemo} from 'react';
+import React, {useMemo, useState} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
@@ -14,6 +14,8 @@ import {
   UNDERSTANDING_LEVEL_STRINGS_V2,
 } from './rubricHelpers';
 
+const INVALID_UNDERSTANDING = -1;
+
 export default function EvidenceLevelsForTeachersV2({
   evidenceLevels,
   understanding,
@@ -22,32 +24,45 @@ export default function EvidenceLevelsForTeachersV2({
   isAutosaving,
   aiEvalInfo,
 }) {
+  // Generates a list based on whether the AI understanding level falls in the pass
+  // (Extensive / Convincing) or fail (Limited / None) range. Used to display AI bubble
+  // around evidence level.
   const passFail = useMemo(() => {
     if (!!aiEvalInfo) {
-      if (understanding >= 0) {
+      if (understanding === INVALID_UNDERSTANDING) {
         return [];
       }
       if (aiEvalInfo.understanding > 1) {
-        console.log('pass');
         return [2, 3];
       } else if (aiEvalInfo.understanding >= 0) {
-        console.log('fail');
         return [0, 1];
       }
     } else return [];
   }, [aiEvalInfo, understanding]);
+
+  const [showDescription, setShowDescription] = useState(INVALID_UNDERSTANDING);
+  //const evidenceLevelsReverse = evidenceLevels.reverse();
+  const handleMouseOver = understandingValue => {
+    setShowDescription(understandingValue);
+  };
+
+  const handleMouseOut = () => {
+    setShowDescription(INVALID_UNDERSTANDING);
+  };
 
   if (canProvideFeedback) {
     return (
       <div>
         <Heading6>{i18n.assignARubricScore()}</Heading6>
         <div className={style.evidenceLevelSetHorizontal}>
-          {evidenceLevels.reverse().map(evidenceLevel => (
+          {evidenceLevels.map(evidenceLevel => (
             <button
               disabled={isAutosaving}
               type="button"
               key={evidenceLevel.id}
               onClick={() => radioButtonCallback(evidenceLevel.understanding)}
+              onMouseOver={() => handleMouseOver(evidenceLevel.understanding)}
+              onMouseOut={() => handleMouseOut()}
               className={
                 understanding === evidenceLevel.understanding
                   ? style.evidenceLevelSelected
@@ -60,9 +75,12 @@ export default function EvidenceLevelsForTeachersV2({
             </button>
           ))}
           <BodyFourText>
-            {understanding >= 0 &&
-              evidenceLevels.find(e => e.understanding === understanding)
-                .teacherDescription}
+            {understanding >= 0
+              ? evidenceLevels.find(e => e.understanding === understanding)
+                  .teacherDescription
+              : showDescription !== INVALID_UNDERSTANDING &&
+                evidenceLevels.find(e => e.understanding === showDescription)
+                  .teacherDescription}
           </BodyFourText>
         </div>
       </div>
