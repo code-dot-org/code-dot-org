@@ -10,15 +10,14 @@ export default function ExpandedProgressColumnHeader({
   isLevelExpanded,
   toggleExpandedChoiceLevel,
 }) {
-  const onClick = () => {
+  const onClick = React.useCallback(() => {
     if (level.sublevels?.length > 0) {
       toggleExpandedChoiceLevel(level.id);
     }
-  };
+  }, [level, toggleExpandedChoiceLevel]);
 
-  // Todo: refactor into better optimized component, probably two functions with switch
-  if (level.sublevels?.length > 0 && isLevelExpanded) {
-    return (
+  const expandedChoiceLevel = React.useCallback(
+    () => (
       <div
         key={lesson.id + '.' + level.bubbleText + '-h'}
         className={styles.expandedHeaderExpandedLevel}
@@ -49,24 +48,32 @@ export default function ExpandedProgressColumnHeader({
           </div>
         ))}
       </div>
-    );
-  }
-
-  return (
-    <div
-      className={classNames(styles.gridBox, styles.expandedHeaderLevelCell)}
-      key={lesson.id + '.' + level.bubbleText + '-h'}
-      onClick={onClick}
-    >
-      {level.sublevels?.length > 0 && (
-        <FontAwesome
-          icon="caret-right"
-          className={styles.expandedHeaderLevelCaret}
-        />
-      )}
-      {lesson.relative_position + '.' + level.bubbleText}
-    </div>
+    ),
+    [lesson, level, onClick]
   );
+
+  const unexpandedLevel = React.useCallback(
+    () => (
+      <div
+        className={classNames(styles.gridBox, styles.expandedHeaderLevelCell)}
+        key={lesson.id + '.' + level.bubbleText + '-h'}
+        onClick={onClick}
+      >
+        {level.sublevels?.length > 0 && (
+          <FontAwesome
+            icon="caret-right"
+            className={styles.expandedHeaderLevelCaret}
+          />
+        )}
+        {lesson.relative_position + '.' + level.bubbleText}
+      </div>
+    ),
+    [lesson, level, onClick]
+  );
+
+  return level.sublevels?.length > 0 && isLevelExpanded
+    ? expandedChoiceLevel()
+    : unexpandedLevel();
 }
 
 ExpandedProgressColumnHeader.propTypes = {

@@ -16,7 +16,6 @@ function ExpandedProgressDataColumn({
   const [expandedChoiceLevels, setExpandedChoiceLevels] = React.useState([]);
 
   const toggleExpandedChoiceLevel = levelId => {
-    //Todo: change to object
     if (expandedChoiceLevels.includes(levelId)) {
       setExpandedChoiceLevels(expandedChoiceLevels.filter(l => l !== levelId));
     } else {
