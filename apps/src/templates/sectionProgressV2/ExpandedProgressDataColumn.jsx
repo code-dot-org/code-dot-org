@@ -23,6 +23,30 @@ function ExpandedProgressDataColumn({
     }
   };
 
+  const getSingleLevelColumn = React.useCallback(
+    (level, propOverrides = {}) => {
+      return (
+        <div
+          className={styles.expandedLevelColumn}
+          key={lesson.id + '.' + level.id}
+        >
+          {sortedStudents.map(student => (
+            <LevelDataCell
+              studentId={student.id}
+              level={level}
+              studentLevelProgress={
+                levelProgressByStudent[student.id][level.id]
+              }
+              key={student.id + '.' + lesson.id + '.' + level.id}
+              {...propOverrides}
+            />
+          ))}
+        </div>
+      );
+    },
+    [levelProgressByStudent, sortedStudents, lesson]
+  );
+
   const progress = React.useMemo(
     () => (
       <div className={styles.expandedTable}>
@@ -33,71 +57,18 @@ function ExpandedProgressDataColumn({
           ) {
             return (
               <>
-                <div
-                  className={styles.expandedLevelColumn}
-                  key={lesson.bubbleText + '.' + level.id}
-                >
-                  {sortedStudents.map(student => (
-                    <LevelDataCell
-                      studentId={student.id}
-                      level={level}
-                      studentLevelProgress={
-                        levelProgressByStudent[student.id][level.id]
-                      }
-                      overrideIcon={'split'}
-                      key={student.id + '.' + lesson.id + '.' + level.id}
-                    />
-                  ))}
-                </div>
-                {level.sublevels.map(sublevel => (
-                  <div
-                    className={styles.expandedLevelColumn}
-                    key={lesson.bubbleText + '.' + level.id}
-                  >
-                    {sortedStudents.map(student => (
-                      <LevelDataCell
-                        studentId={student.id}
-                        level={sublevel}
-                        studentLevelProgress={
-                          levelProgressByStudent[student.id][sublevel.id]
-                        }
-                        key={
-                          student.id +
-                          '.' +
-                          lesson.bubbleText +
-                          '.' +
-                          level.id +
-                          '.' +
-                          sublevel.bubbleText
-                        }
-                      />
-                    ))}
-                  </div>
-                ))}
+                {getSingleLevelColumn(level, {overrideIcon: 'split'})}
+                {level.sublevels.map(sublevel =>
+                  getSingleLevelColumn(sublevel)
+                )}
               </>
             );
           }
-          return (
-            <div
-              className={styles.expandedLevelColumn}
-              key={lesson.bubbleText + '.' + level.id}
-            >
-              {sortedStudents.map(student => (
-                <LevelDataCell
-                  studentId={student.id}
-                  level={level}
-                  studentLevelProgress={
-                    levelProgressByStudent[student.id][level.id]
-                  }
-                  key={student.id + '.' + lesson.id + '.' + level.id}
-                />
-              ))}
-            </div>
-          );
+          return getSingleLevelColumn(level);
         })}
       </div>
     ),
-    [levelProgressByStudent, sortedStudents, lesson, expandedChoiceLevels]
+    [lesson, expandedChoiceLevels, getSingleLevelColumn]
   );
 
   return (
