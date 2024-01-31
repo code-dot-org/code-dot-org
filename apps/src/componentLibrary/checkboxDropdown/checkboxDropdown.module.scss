@@ -7,10 +7,6 @@
   display: inline-block;
   margin: 0;
 
-  //.dropdownMenuContainer {
-  //  display: none;
-  //}
-
   .dropdownLabel {
     display: block;
   }
@@ -26,6 +22,7 @@
     color: $light_black;
     box-shadow: none;
     gap: 0.5rem;
+    margin: 0;
 
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -40,22 +37,38 @@
 
   .dropdownMenuContainer {
     position: absolute;
-    top: 100%;
+    bottom: auto;
     left: 0;
     z-index: 1000;
     display: none;
     float: left;
     min-width: 160px;
     margin: 2px 0 0;
-    font-size: 14px;
     list-style: none;
     background-color: #fff;
-    border: 1px solid rgba(0 0 0 0.15);
+    border: 1px solid rgba(0 0 0 / .15);
     border-radius: 4px;
-    -webkit-box-shadow: 0 6px 12px rgba(0 0 0 0.175);
-    box-shadow: 0 6px 12px rgba(0 0 0 0.175);
+    -webkit-box-shadow: 0 6px 12px rgba(0 0 0 / .175);
+    box-shadow: 0 6px 12px rgba(0 0 0 / .175);
     background-clip: padding-box;
     padding: 4px 0;
+  }
+
+  .bottomButtonsContainer {
+    display: flex;
+    align-items: flex-start;
+    padding: 0.25rem;
+    gap: 0.25rem;
+
+    border-radius: 0 0 0.25rem 0.25rem;
+    border-top: 1px solid $light_gray_300;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.25rem;
+    }
   }
 }
 
@@ -146,6 +159,16 @@
     @include button-one-text;
     height: 3rem;
     padding: 0.625rem 1rem;
+    margin-bottom: 0;
+  }
+
+  .bottomButtonsContainer {
+    button {
+      padding: 0.625rem 1rem;
+
+      @include button-one-text;
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -159,6 +182,16 @@
     @include button-two-text;
     height: 2.5rem;
     padding: 0.5rem 1rem;
+    margin-bottom: 0;
+  }
+
+  .bottomButtonsContainer {
+    button {
+      padding: 0.5rem 1rem;
+
+      @include button-two-text;
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -172,6 +205,16 @@
     @include button-three-text;
     height: 2rem;
     padding: 0.3125rem 1rem;
+    margin-bottom: 0;
+  }
+
+  .bottomButtonsContainer {
+    button {
+      padding: 0.3125rem 1rem;
+
+      @include button-three-text;
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -185,6 +228,17 @@
     @include button-four-text;
     height: 1.5rem;
     padding: 0.125rem 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .bottomButtonsContainer {
+
+    button {
+      padding: 0.125rem 0.5rem;
+
+      @include button-four-text;
+      margin-bottom: 0;
+    }
   }
 }
 
