@@ -117,6 +117,11 @@ def search_for_address(address)
   Geocoder.search(address).first
 end
 
+# Temporary helper method to help us determine which version of MySQL is
+# available in the local environment, so we can conditionally apply
+# version-specific logic as we transition from MySQL 5.7 to MySQL 8.
+#
+# TODO infra: remove this once we've updated everything to MySQL 8.
 def get_mysql_version
   raw_version = DB.fetch('SELECT VERSION()').first[:'VERSION()']
   case raw_version
