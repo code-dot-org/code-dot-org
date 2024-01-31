@@ -56,14 +56,11 @@ jobs:
 
       - name: Set up Docker Environment
         run: docker build -t code-dot-org-testing-docker-image -f ./code-dot-org/docker/dockerfiles/Dockerfile ./code-dot-org
-      
-      - name: Setup upterm session
-        uses: lhotari/action-upterm@v1
-        
+
       - name: Debugging Directories and Files in Docker as User CircleCI
         run: |        
-          echo "Searching for ui_tests.sh in /circleci as circleci"
-          docker run --user circleci code-dot-org-testing-docker-image /bin/bash -c "find /circleci -type f -name 'ui_tests.sh'"
+          echo "Searching for ui_tests.sh in /home/circleci as circleci"
+          docker run --user circleci code-dot-org-testing-docker-image /bin/bash -c "find /home/circleci -type f -name 'ui_tests.sh'"
           
           echo "Displaying Environment Variables as circleci"
           docker run --user circleci code-dot-org-testing-docker-image /bin/bash -c "printenv"
