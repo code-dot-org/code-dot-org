@@ -23,7 +23,6 @@ import EvidenceLevels from './EvidenceLevels';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import AiAssessment from './AiAssessment';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
 import ProgressRing from './ProgressRing';
 
 const INVALID_UNDERSTANDING = -1;
@@ -281,42 +280,6 @@ export default function LearningGoals({
         <div className={style.learningGoalsHeaderRightSide}>
           {aiEnabled && displayUnderstanding === INVALID_UNDERSTANDING && (
             <AiToken />
-          )}
-          {/*TODO: Display status of feedback*/}
-          {canProvideFeedback &&
-            aiEnabled &&
-            displayUnderstanding === INVALID_UNDERSTANDING && (
-              <BodyThreeText>{i18n.approve()}</BodyThreeText>
-            )}
-          {canProvideFeedback &&
-            !aiEnabled &&
-            displayUnderstanding === INVALID_UNDERSTANDING && (
-              <BodyThreeText>{i18n.evaluate()}</BodyThreeText>
-            )}
-          {displayUnderstanding >= 0 && (
-            <BodyThreeText>
-              {UNDERSTANDING_LEVEL_STRINGS[displayUnderstanding]}
-            </BodyThreeText>
-          )}
-          {submittedEvaluation && (
-            <div className={style.submittedEvaluation}>
-              {submittedEvaluation.understanding !== null && (
-                <BodyThreeText>
-                  {
-                    UNDERSTANDING_LEVEL_STRINGS[
-                      submittedEvaluation.understanding
-                    ]
-                  }
-                </BodyThreeText>
-              )}
-              {submittedEvaluation.feedback && (
-                <FontAwesome
-                  icon="message"
-                  className="fa-regular"
-                  title={i18n.feedback()}
-                />
-              )}
-            </div>
           )}
           <button
             id="uitest-next-goal"
