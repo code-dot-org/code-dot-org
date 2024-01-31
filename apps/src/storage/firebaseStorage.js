@@ -717,7 +717,7 @@ FirebaseStorage.clearTable = function (tableName, onSuccess, onError) {
     })
     .then(onSuccess, onError);
 };
-\
+
 FirebaseStorage.importCsv = function (
   tableName,
   tableDataCsv,
