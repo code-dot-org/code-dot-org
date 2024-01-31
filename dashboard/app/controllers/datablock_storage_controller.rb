@@ -200,6 +200,8 @@ class DatablockStorageController < ApplicationController
       table.save!
     end
 
+    render json: true
+
     raise "Not implemented yet"
   end
 
@@ -223,6 +225,8 @@ class DatablockStorageController < ApplicationController
     columns = columns.map {|column| column == old_column_name ? new_column_name : column}
     table.columns = columns.to_json
     table.save!
+
+    render json: true
 
     raise "Not implemented yet"
   end
@@ -251,6 +255,8 @@ class DatablockStorageController < ApplicationController
       record.save!
     end
 
+    render json: true
+
     raise "Not implemented yet"
   end
 
@@ -258,7 +264,8 @@ class DatablockStorageController < ApplicationController
     records = CSV.parse(params[:table_data_csv], headers: true).map(&:to_h)
     table = DatablockStorageTable.where(channel_id: params[:channel_id], table_name: params[:table_name]).first_or_create
     table.create_records(records)
-    raise "Not implemented yet"
+
+    render json: true
   end
 
   def delete_key_value

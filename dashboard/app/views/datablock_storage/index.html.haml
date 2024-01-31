@@ -84,6 +84,7 @@
 %h3 import_csv
 = form_tag "import_csv", :method => :post, :remote => false do
   = text_field_tag "table_name", "", placeholder: "table_name"
+  = text_area_tag "table_data_csv", "", placeholder: "table_data_csv"
   = submit_tag "import_csv"
 
 %h3 add_column
