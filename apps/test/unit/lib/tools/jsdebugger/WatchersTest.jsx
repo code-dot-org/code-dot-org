@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import Immutable from 'immutable';
-import {UnconnectedWatchers as Watchers} from '@cdo/apps/templates/watchers/Watchers';
+import {UnconnectedWatchers as Watchers} from '@cdo/apps/lib/tools/jsdebugger/Watchers';
 
 describe('Watchers', () => {
   const defaultProps = {
