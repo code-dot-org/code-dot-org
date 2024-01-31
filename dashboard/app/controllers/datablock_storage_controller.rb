@@ -87,6 +87,9 @@ class DatablockStorageController < ApplicationController
     end
     # COMMIT;
 
+    # FIXME: unfirebase, must check Table record to see if we should update the table.columns
+    # column based on this record_json's keys
+
     render json: record_json
   end
 
@@ -124,6 +127,9 @@ class DatablockStorageController < ApplicationController
 
   def update_record
     raise "record_json must be less than 4096 bytes" if params[:record_json].length > 4096
+
+    # FIXME: unfirebase, must check Table record to see if we should update the table.columns
+    # column based on this record_json's keys
 
     record = DatablockStorageRecord.find_by(channel_id: params[:channel_id], table_name: params[:table_name], record_id: params[:record_id])
     if record
@@ -164,8 +170,17 @@ class DatablockStorageController < ApplicationController
   def create_table
     table_name = params[:table_name]
     table = DatablockStorageTable.where(channel_id: params[:channel_id], table_name: table_name).first_or_create
+    # FIXME: unfirebase, what is the table already existed and had columns? Won't this overwrite them?
     table.columns = '["id"]'
     table.save!
+
+    render json: true
+  end
+
+  def delete_table
+    table_name = params[:table_name]
+    DatablockStorageTable.where(channel_id: params[:channel_id], table_name: table_name).delete_all
+    DatablockStorageRecord.where(channel_id: params[:channel_id], table_name: table_name).delete_all
 
     render json: true
   end
