@@ -5,23 +5,8 @@ require 'crowdin-api'
 #
 module Crowdin
   module ClientExtensions
-    # Project Id is at https://crowdin.com/project/<project_name>/tools/api
-    # Project source language is at https://crowdin.com/project/<project_name>/settings
-    CDO_PROJECT_IDS = CDO.crowdin_project_ids.freeze
-
-    CDO_PROJECT_SOURCE_LANGUAGES = {
-      'codeorg' => 'enus',
-      'hour-of-code' => 'en',
-      'codeorg-markdown' => 'en',
-      'codeorg-restricted' => 'en',
-      'codeorg-testing' => 'en',
-      'codeorg-markdown-testing' => 'en',
-      'hour-of-code-test' => 'en',
-      'codeorg-restricted-test' => 'en'
-    }
-
     # Maximum number of items to retrieve from Crowdin in an API call
-    MAX_ITEMS_COUNT = 500
+    MAX_ITEMS_COUNT = ::Crowdin::Web::FetchAllExtensions::MAX_ITEMS_COUNT_PER_REQUEST
 
     # Send requests to Crowdin in a loop until the number of items retrieved
     # is less than an expected limit.
@@ -90,7 +75,7 @@ module Crowdin
         offset: 0
       }
 
-      project_id = CDO_PROJECT_IDS[project_name]
+      project_id = CDO.crowdin_projects.dig(project_name, 'id')
       translations = request_loop(query) do
         list_language_translations(crowdin_language_id, query, project_id)
       end
@@ -126,7 +111,7 @@ module Crowdin
         offset: 0
       }
 
-      project_id = CDO_PROJECT_IDS[project_name]
+      project_id = CDO.crowdin_projects.dig(project_name, 'id')
       source_strings = request_loop(query) do
         list_strings(query, project_id)
       end

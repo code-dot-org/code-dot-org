@@ -55,6 +55,13 @@ class Services::Lti
     )
   end
 
+  def self.create_lti_deployment(integration_id, deployment_id)
+    LtiDeployment.create(
+      lti_integration_id: integration_id,
+      deployment_id: deployment_id,
+    )
+  end
+
   def self.get_claim_from_list(id_token, keys_array)
     keys_array.filter_map {|key| get_claim(id_token, key)}.first
   end
