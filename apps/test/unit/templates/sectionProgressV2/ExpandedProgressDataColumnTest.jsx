@@ -66,8 +66,8 @@ describe('ExpandedProgressDataColumn', () => {
   }
 
   function renderWithSublevels() {
-    const levelWithSublevels = fakeLevelWithSubLevels(3, {}, NUM_LEVELS + 1);
-    let lesson = fakeLessonWithLevels({}, NUM_LEVELS);
+    const levelWithSublevels = fakeLevelWithSubLevels(3, NUM_LEVELS + 1);
+    const lesson = fakeLessonWithLevels({}, NUM_LEVELS);
     lesson.levels.push(levelWithSublevels);
     const levelProgress = fakeStudentLevelProgress(
       [...lesson.levels, ...levelWithSublevels.sublevels],
@@ -146,5 +146,39 @@ describe('ExpandedProgressDataColumn', () => {
     expect(
       screen.queryAllByTitle(LEVEL_OVERRIDE_ICON_TEST_TITLE + 'split')
     ).to.have.length(STUDENTS.length);
+  });
+
+  it('Shows unexpanded choice level after clicking twice', () => {
+    const {lesson, levelWithSublevels} = renderWithSublevels();
+
+    const choiceLevelHeader = screen.getByText(
+      lesson.relative_position + '.' + levelWithSublevels.bubbleText
+    );
+    fireEvent.click(choiceLevelHeader);
+
+    const expandedChoiceLevelHeader = screen.getByText(
+      lesson.relative_position + '.' + levelWithSublevels.bubbleText
+    );
+    fireEvent.click(expandedChoiceLevelHeader);
+
+    expect(
+      screen.getByText(
+        'Lesson ' + lesson.relative_position + ': ' + lesson.name
+      )
+    ).to.exist;
+
+    lesson.levels.forEach(level => {
+      expect(
+        screen.getByText(lesson.relative_position + '.' + level.bubbleText)
+      ).to.exist;
+    });
+
+    levelWithSublevels.sublevels.forEach(sublevel => {
+      expect(screen.queryByText(sublevel.bubbleText)).to.not.exist;
+    });
+
+    expect(screen.queryAllByTestId(LEVEL_DATA_CELL_TEST_ID)).to.have.length(
+      lesson.levels.length * STUDENTS.length
+    );
   });
 });
