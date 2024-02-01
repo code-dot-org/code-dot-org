@@ -2,7 +2,6 @@ import React from 'react';
 import GridEditor from './GridEditor';
 
 export default {
-  title: 'GridEditor',
   component: GridEditor,
 };
 
