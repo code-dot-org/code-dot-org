@@ -72,7 +72,7 @@ class HocEventReviewTest < Minitest::Test
               #
               # TODO infra: once we've updated to MySQL 8.0 everywhere, this
               # can be reduced back down to a single case.
-              expected.reverse! if get_mysql_version >= 8.0
+              expected.reverse! if current_mysql_version >= 8.0
               actual = HocEventReview.event_counts_by_country
               assert_equal expected, actual
             end
