@@ -225,7 +225,7 @@ img.video_thumbnail {
 
   @media screen and (max-width: 1010px) {
     .hide_on_tablet {
-      display: none;
+      display: none !important;
     }
   }
 
