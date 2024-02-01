@@ -113,7 +113,29 @@ export function getProjectXml(workspace) {
     workspaceXml.appendChild(clonedNode);
   });
 
+  removeIdsFromBlocks(workspaceXml);
+
   return workspaceXml;
+}
+
+/**
+ * Removes the randomized 'id' attribute from all 'block' elements.
+ * This is intended to prevent writing duplicate entries to the level_sources table.
+ * @param {Element} element - The XML element to process.
+ * @param {string[]} levelBlockIds - An array of ids to preserve, if found.
+ */
+function removeIdsFromBlocks(element) {
+  if (element.nodeName === 'block') {
+    const id = element.getAttribute('id');
+    if (id && !Blockly.levelBlockIds.includes(id)) {
+      element.removeAttribute('id');
+    }
+  }
+
+  // Blocks in XML are nested so we need to iterate through the children.
+  Array.from(element.children).forEach(child => {
+    removeIdsFromBlocks(child);
+  });
 }
 
 /**
