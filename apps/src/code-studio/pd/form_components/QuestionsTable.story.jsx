@@ -1,16 +1,57 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import QuestionsTable from './QuestionsTable';
 import {action} from '@storybook/addon-actions';
+
+class TestWrapper extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: this.props.data || {},
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(newState) {
+    this.props.onChange(newState);
+    this.setState({
+      data: newState.full,
+    });
+  }
+
+  render() {
+    return (
+      <div id="application-container">
+        <QuestionsTable
+          data={this.state.data}
+          questions={this.props.questions}
+          options={this.props.options}
+          errors={this.props.errors}
+          onChange={this.handleChange}
+        />
+      </div>
+    );
+  }
+}
+
+TestWrapper.propTypes = {
+  data: PropTypes.object,
+  questions: PropTypes.arrayOf(PropTypes.object).isRequired,
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  errors: PropTypes.arrayOf(PropTypes.string),
+  onChange: PropTypes.func.isRequired,
+};
 
 export default {
   title: 'FormComponents/QuestionsTable',
   component: QuestionsTable,
 };
 
-const Template = args => <QuestionsTable {...args} />;
+const Template = args => <TestWrapper {...args} />;
 
-const simpleQuestionsTable = Template.bind({});
+export const simpleQuestionsTable = Template.bind({});
 simpleQuestionsTable.args = {
+  onChange: action('onChange'),
   options: ['this is cool', 'this is okay', 'this is useless'],
   questions: [
     {
@@ -29,7 +70,7 @@ simpleQuestionsTable.args = {
   ],
 };
 
-const controlledQuestionsTable = Template.bind({});
+export const controlledQuestionsTable = Template.bind({});
 controlledQuestionsTable.args = {
   data: {
     theOneThatIsSelected: 'first',
