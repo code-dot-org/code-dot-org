@@ -113,4 +113,45 @@ export const blocks = {
     generator[type] = generatorFunction;
   },
   addSerializationHooksToBlock() {},
+  mathRandomIntGenerator() {
+    // Random integer between [X] and [Y].
+    var argument0 =
+      Blockly.JavaScript.valueToCode(
+        this,
+        'FROM',
+        Blockly.JavaScript.ORDER_COMMA
+      ) || '0';
+    var argument1 =
+      Blockly.JavaScript.valueToCode(
+        this,
+        'TO',
+        Blockly.JavaScript.ORDER_COMMA
+      ) || '0';
+    if (!Blockly.JavaScript.definitions_['math_random_int']) {
+      var functionName = Blockly.JavaScript.variableDB_.getDistinctName(
+        'math_random_int',
+        Blockly.Generator.NAME_TYPE
+      );
+      Blockly.JavaScript.math_random_int.random_function = functionName;
+      var func = [];
+      func.push('function ' + functionName + '(a, b) {');
+      func.push('  if (a > b) {');
+      func.push('    // Swap a and b to ensure a is smaller.');
+      func.push('    var c = a;');
+      func.push('    a = b;');
+      func.push('    b = c;');
+      func.push('  }');
+      func.push('  return Math.floor(Math.random() * (b - a + 1) + a);');
+      func.push('}');
+      Blockly.JavaScript.definitions_['math_random_int'] = func.join('\n');
+    }
+    var code =
+      Blockly.JavaScript.math_random_int.random_function +
+      '(' +
+      argument0 +
+      ', ' +
+      argument1 +
+      ')';
+    return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+  },
 };

@@ -79,4 +79,27 @@ export const blocks = {
       block.loadExtraState = this.loadExtraState;
     }
   },
+  mathRandomIntGenerator(block, generator) {
+    // Random integer between [X] and [Y].
+    const argument0 =
+      generator.valueToCode(block, 'FROM', generator.ORDER_NONE) || '0';
+    const argument1 =
+      generator.valueToCode(block, 'TO', generator.ORDER_NONE) || '0';
+    const functionName = generator.provideFunction_(
+      'math_random_int',
+      `
+  function ${generator.FUNCTION_NAME_PLACEHOLDER_}(a, b) {
+    if (a > b) {
+      // Swap a and b to ensure a is smaller.
+      var c = a;
+      a = b;
+      b = c;
+    }
+    return Math.floor(Math.random() * (b - a + 1) + a);
+  }
+  `
+    );
+    const code = `${functionName}(${argument0}, ${argument1})`;
+    return [code, generator.ORDER_FUNCTION_CALL];
+  },
 };
