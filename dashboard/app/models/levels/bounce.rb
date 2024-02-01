@@ -124,8 +124,4 @@ class Bounce < Grid
       <block type="bounce_setBallSpeed"></block>
     XML
   end
-
-  def validated?
-    properties['success_condition'].present? || properties['free_play'] == 'false'
-  end
 end

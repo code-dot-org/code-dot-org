@@ -620,8 +620,4 @@ class Studio < Grid
       #{common_blocks(type)}
     XML
   end
-
-  def validated?
-    properties['success_condition'].present? || properties['free_play'] == 'false'
-  end
 end

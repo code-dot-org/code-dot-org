@@ -66,8 +66,4 @@ class Music < Blockly
     # ensures we have the small footer
     true
   end
-
-  def validated?
-    properties.dig('level_data', 'validations').present?
-  end
 end

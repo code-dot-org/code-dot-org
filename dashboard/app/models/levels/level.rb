@@ -797,7 +797,10 @@ class Level < ApplicationRecord
 
   # Whether this level has validation for the completion of student work.
   def validated?
-    false
+    if uses_lab2?
+      return properties.dig('level_data', 'validations').present?
+    end
+    properties['validation_code'].present? || properties['success_condition'].present?
   end
 
   # Returns the level name, removing the name_suffix first (if present), and
