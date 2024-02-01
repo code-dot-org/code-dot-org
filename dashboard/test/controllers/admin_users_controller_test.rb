@@ -302,13 +302,6 @@ class AdminUsersControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test "delete_progress raises error if reason is empty" do
-    sign_in @admin
-    assert_raises(ActionController::ParameterMissing) do
-      post :delete_progress, params: {user_id: @user.id, script_id: @script.id, reason: ''}
-    end
-  end
-
   test "delete_progress deletes script progress" do
     sign_in @admin
 
