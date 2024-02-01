@@ -554,7 +554,7 @@ module Pd::Application
           meets_scholarship_criteria_scores: {
             free_lunch_percent: YES,
             underrepresented_minority_percent: YES,
-            not_teaching_in_access_report: YES,
+            school_last_census_status: YES,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -594,7 +594,7 @@ module Pd::Application
           meets_scholarship_criteria_scores: {
             free_lunch_percent: YES,
             underrepresented_minority_percent: YES,
-            not_teaching_in_access_report: YES,
+            school_last_census_status: YES,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -638,7 +638,7 @@ module Pd::Application
           meets_scholarship_criteria_scores: {
             free_lunch_percent: YES,
             underrepresented_minority_percent: YES,
-            not_teaching_in_access_report: YES,
+            school_last_census_status: YES,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -670,7 +670,7 @@ module Pd::Application
             previous_yearlong_cdo_pd: YES,
           },
           meets_scholarship_criteria_scores: {
-            not_teaching_in_access_report: YES,
+            school_last_census_status: YES,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -709,7 +709,7 @@ module Pd::Application
           meets_scholarship_criteria_scores: {
             free_lunch_percent: NO,
             underrepresented_minority_percent: NO,
-            not_teaching_in_access_report: NO,
+            school_last_census_status: NO,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -749,7 +749,7 @@ module Pd::Application
           meets_scholarship_criteria_scores: {
             free_lunch_percent: NO,
             underrepresented_minority_percent: NO,
-            not_teaching_in_access_report: NO,
+            school_last_census_status: NO,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -793,7 +793,7 @@ module Pd::Application
           meets_scholarship_criteria_scores: {
             free_lunch_percent: NO,
             underrepresented_minority_percent: NO,
-            not_teaching_in_access_report: NO,
+            school_last_census_status: NO,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -948,22 +948,22 @@ module Pd::Application
     test 'meets_scholarship_criteria' do
       application = create :pd_teacher_application
       test_cases = [
-        {underrepresented_minority_percent: YES, free_lunch_percent: YES, not_teaching_in_access_report: YES, verdict: YES},
-        {underrepresented_minority_percent: YES, free_lunch_percent: YES, not_teaching_in_access_report: NO, verdict: YES},
-        {underrepresented_minority_percent: YES, free_lunch_percent: NO, not_teaching_in_access_report: YES, verdict: YES},
-        {underrepresented_minority_percent: NO, free_lunch_percent: YES, not_teaching_in_access_report: YES, verdict: YES},
-        {underrepresented_minority_percent: YES, free_lunch_percent: YES, not_teaching_in_access_report: nil, verdict: YES},
-        {underrepresented_minority_percent: YES, free_lunch_percent: nil, not_teaching_in_access_report: YES, verdict: YES},
-        {underrepresented_minority_percent: nil, free_lunch_percent: YES, not_teaching_in_access_report: YES, verdict: YES},
-        {underrepresented_minority_percent: YES, free_lunch_percent: NO, not_teaching_in_access_report: NO, verdict: YES},
-        {underrepresented_minority_percent: nil, free_lunch_percent: nil, not_teaching_in_access_report: nil, verdict: REVIEWING_INCOMPLETE},
-        {underrepresented_minority_percent: nil, free_lunch_percent: NO, not_teaching_in_access_report: NO, verdict: REVIEWING_INCOMPLETE},
-        {underrepresented_minority_percent: NO, free_lunch_percent: nil, not_teaching_in_access_report: NO, verdict: REVIEWING_INCOMPLETE},
-        {underrepresented_minority_percent: NO, free_lunch_percent: NO, not_teaching_in_access_report: NO, verdict: NO},
+        {underrepresented_minority_percent: YES, free_lunch_percent: YES, school_last_census_status: YES, verdict: YES},
+        {underrepresented_minority_percent: YES, free_lunch_percent: YES, school_last_census_status: NO, verdict: YES},
+        {underrepresented_minority_percent: YES, free_lunch_percent: NO, school_last_census_status: YES, verdict: YES},
+        {underrepresented_minority_percent: NO, free_lunch_percent: YES, school_last_census_status: YES, verdict: YES},
+        {underrepresented_minority_percent: YES, free_lunch_percent: YES, school_last_census_status: nil, verdict: YES},
+        {underrepresented_minority_percent: YES, free_lunch_percent: nil, school_last_census_status: YES, verdict: YES},
+        {underrepresented_minority_percent: nil, free_lunch_percent: YES, school_last_census_status: YES, verdict: YES},
+        {underrepresented_minority_percent: YES, free_lunch_percent: NO, school_last_census_status: NO, verdict: YES},
+        {underrepresented_minority_percent: nil, free_lunch_percent: nil, school_last_census_status: nil, verdict: REVIEWING_INCOMPLETE},
+        {underrepresented_minority_percent: nil, free_lunch_percent: NO, school_last_census_status: NO, verdict: REVIEWING_INCOMPLETE},
+        {underrepresented_minority_percent: NO, free_lunch_percent: nil, school_last_census_status: NO, verdict: REVIEWING_INCOMPLETE},
+        {underrepresented_minority_percent: NO, free_lunch_percent: NO, school_last_census_status: NO, verdict: NO},
       ]
 
       test_cases.each do |test_case|
-        input = test_case.slice(:underrepresented_minority_percent, :free_lunch_percent, :not_teaching_in_access_report)
+        input = test_case.slice(:underrepresented_minority_percent, :free_lunch_percent, :school_last_census_status)
         application.update(response_scores: {meets_scholarship_criteria_scores: input}.to_json)
 
         output = application.meets_scholarship_criteria

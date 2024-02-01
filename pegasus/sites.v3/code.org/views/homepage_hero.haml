@@ -116,15 +116,6 @@
       -# Temp: for ai2020, heroes will show/hide responsively, so use widehero_do_not_hide
       .widehero_do_not_hide.lazyload{id: "fullwidth#{index}", "data-bg"=> "#{entry[:image]}", style: "background-position: #{entry[:centering]}", class: entry[:classname]}
 
-  #fullwidth
-    - if request.site == 'code.org'
-      = view :header
-    - else
-      #desktop-header.desktop-feature
-        = view :header
-      #mobile-header.mobile-headers.mobile-feature
-        = view :mobile_header_responsive
-
   - if show_single_hero
     - if num_columns == 3
       - extra_images = Homepage.get_outer_column_images(request)

@@ -105,6 +105,8 @@ export const procedureDefMutator = {
     state['description'] = getBlockDescription(this);
     state['procedureId'] = this.getProcedureModel().getId();
     state['initialDeleteConfig'] = this.isDeletable();
+    state['initialEditConfig'] = this.isEditable();
+    state['initialMoveConfig'] = this.isMovable();
     state['userCreated'] = this.userCreated;
 
     const params = this.getProcedureModel().getParameters();
@@ -159,6 +161,8 @@ export const procedureDefMutator = {
     setBlockDescription(this, state['description']);
     this.doProcedureUpdate();
     this.setDeletable(state['initialDeleteConfig'] === false ? false : true);
+    this.setEditable(state['initialEditConfig'] === false ? false : true);
+    this.setMovable(state['initialMoveConfig'] === false ? false : true);
     this.setStatements_(state['hasStatements'] === false ? false : true);
     this.userCreated = state['userCreated'];
   },

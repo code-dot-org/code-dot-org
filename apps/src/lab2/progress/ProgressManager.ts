@@ -17,12 +17,14 @@ export interface ValidationState {
   hasConditions: boolean;
   satisfied: boolean;
   message: string | null;
+  index: number;
 }
 
 export const getInitialValidationState: () => ValidationState = () => ({
   hasConditions: false,
   satisfied: false,
   message: null,
+  index: 0,
 });
 
 export default class ProgressManager {
@@ -43,9 +45,7 @@ export default class ProgressManager {
    */
   onLevelChange(levelData?: ProjectLevelData) {
     this.levelData = levelData;
-    this.resetValidation(
-      (levelData?.validations && levelData.validations.length > 0) || false
-    );
+    this.resetValidation();
   }
 
   setValidator(validator: Validator) {
@@ -96,16 +96,25 @@ export default class ProgressManager {
     this.onProgressChange();
   }
 
-  private resetValidation(hasConditions: boolean) {
+  resetValidation() {
     if (this.validator) {
       // Give the lab the chance to clear accumulated satisfied conditions.
       this.validator.clear();
     }
 
+    const hasConditions =
+      (this.levelData?.validations && this.levelData.validations.length > 0) ||
+      false;
+
     this.currentValidationState = {
       hasConditions,
       satisfied: false,
       message: null,
+      // Ensure that the validation feedback UI is rendered fresh.  This index is
+      // used as part of the key for that React component; having a unique value
+      // ensures that the UI is rendered fresh, and any apperance animation is
+      // played again, even if it's the same message as last time.
+      index: this.currentValidationState.index + 1,
     };
 
     this.onProgressChange();

@@ -9,7 +9,7 @@
 .careers__banner--faq {
   align-items: center;
   background: url("/images/careers-at-code/jobs-banner.jpg") top right/contain
-    no-repeat #00adbc;
+    no-repeat var(--brand_primary_default);
   display: flex;
   margin-bottom: 32px;
   padding: 18px 24px;
@@ -138,11 +138,11 @@
 }
 
 .careers__benefit--purple {
-  background: linear-gradient(90deg, #7665a0, #5f5988);
+  background: linear-gradient(90deg, var(--brand_secondary_default), #5f5988);
 }
 
 .careers__benefit__icon.careers__benefit--purple {
-  background: #7665a0;
+  background: var(--brand_secondary_default);
 }
 
 ul li:before {
@@ -226,7 +226,7 @@ ul li:before {
 
 @media screen and (max-width: 560px) {
   .careers__banner--faq {
-    background: #00adbc;
+    background: var(--brand_primary_default);
   }
 
   .careers__banner--faq h2,

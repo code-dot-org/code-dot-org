@@ -4,6 +4,7 @@ require_relative '../helpers/email_preference_helpers'
 require_relative 'sequel_test_case'
 require 'timecop'
 
+# rubocop:disable CustomCops/DashboardDbUsage
 class EmailPreferenceHelperTest < SequelTestCase
   def test_upsert_new_email_preference_with_valid_attributes_creates_email_preference
     EmailPreferenceHelper.upsert!(
@@ -186,3 +187,4 @@ class EmailPreferenceHelperTest < SequelTestCase
     refute_equal updated_email_preference[:form_kind], another_email_preference[:form_kind]
   end
 end
+# rubocop:enable CustomCops/DashboardDbUsage

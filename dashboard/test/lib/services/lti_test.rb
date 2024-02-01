@@ -197,6 +197,7 @@ class Services::LtiTest < ActiveSupport::TestCase
   end
 
   test 'create_lti_integration should create an LtiIntegration when given valid inputs' do
+    name = "name"
     client_id = 'client_id'
     issuer = 'issuer'
     platform_name = 'platform_name'
@@ -206,6 +207,7 @@ class Services::LtiTest < ActiveSupport::TestCase
     admin_email = 'admin_email'
 
     integration = Services::Lti.create_lti_integration(
+      name: name,
       client_id: client_id,
       issuer: issuer,
       platform_name: platform_name,
@@ -216,6 +218,15 @@ class Services::LtiTest < ActiveSupport::TestCase
     )
 
     assert integration
+  end
+
+  test 'create_lti_deployment should create an LtiDeloyment when given valid inputs' do
+    deployment_id = SecureRandom.uuid
+    integration = create :lti_integration
+
+    deployment = Services::Lti.create_lti_deployment(integration.id, deployment_id)
+
+    assert deployment
   end
 
   test 'should create a student user given an LTI NRPS member object' do

@@ -20,7 +20,7 @@
 
 .new-mc {
   color: white;
-  background-color: #7665a0;
+  background-color: var(--brand_secondary_default);
   width: 250px;
   margin: -10px;
   padding: 5px;

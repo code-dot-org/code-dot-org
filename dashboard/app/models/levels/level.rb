@@ -330,6 +330,7 @@ class Level < ApplicationRecord
     'BubbleChoice', # dsl defined, covered in dsl
     'NetSim', # widget
     'Odometer', # widget
+    'Panels', # no ideal solution
     'Pixelation', # widget
     'Poetry', # no ideal solution
     'PublicKeyCryptography', # widget
@@ -341,6 +342,7 @@ class Level < ApplicationRecord
     'Unplugged', # no solutions
     'Vigenere', # widget
     'Weblab', # no ideal solution
+    'Weblab2', # no ideal solution
     'Widget', # widget
   ].freeze
   TYPES_WITH_IDEAL_LEVEL_SOURCE = %w(

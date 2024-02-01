@@ -38,12 +38,14 @@ class Policies::Lti
 
   LMS_PLATFORMS = {
     canvas_cloud: {
+      name: 'Canvas'.freeze,
       issuer: 'https://canvas.instructure.com'.freeze,
       auth_redirect_url: 'https://sso.canvaslms.com/api/lti/authorize_redirect'.freeze,
       jwks_url: 'https://sso.canvaslms.com/api/lti/security/jwks'.freeze,
       access_token_url: 'https://sso.canvaslms.com/login/oauth2/token'.freeze,
     },
     schoology: {
+      name: 'Schoology'.freeze,
       issuer: 'https://schoology.schoology.com'.freeze,
       auth_redirect_url: 'https://lti-service.svc.schoology.com/lti-service/authorize-redirect'.freeze,
       jwks_url: 'https://lti-service.svc.schoology.com/lti-service/.well-known/jwks'.freeze,
@@ -72,6 +74,15 @@ class Policies::Lti
       return auth_options.authentication_id.split('|').first
     end
     nil
+  end
+
+  # Converts the `issuer` or `iss` LTI value to a string we would show to
+  # users of Code.org
+  # Example: 'https://schoology.schoology.com' -> 'Schoology'
+  def self.issuer_name(issuer)
+    return 'Canvas' if /canvas/.match?(issuer)
+    return 'Schoology' if /schoology/.match?(issuer)
+    I18n.t(:lti_v1, scope: [:section, :type])
   end
 
   # Returns the email provided by the LMS when creating the User through LTI
