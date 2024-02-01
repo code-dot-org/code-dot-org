@@ -4,9 +4,9 @@
 <g id="Canvas" transform="translate(572 505)">
 <g id="PurpleChallengePerfect">
 <g id="Vector">
-<use xlink:href="#path0_fill" transform="translate(-568 -494)" fill="#7665A0"/>
-<use xlink:href="#path1_fill" transform="translate(-568 -494)" fill="#7665A0"/>
-<use xlink:href="#path2_fill" transform="translate(-568 -494)" fill="#7665A0"/>
+<use xlink:href="#path0_fill" transform="translate(-568 -494)" fill="#8c52ba"/>
+<use xlink:href="#path1_fill" transform="translate(-568 -494)" fill="#8c52ba"/>
+<use xlink:href="#path2_fill" transform="translate(-568 -494)" fill="#8c52ba"/>
 <mask id="mask0_outline_out">
 <rect id="mask0_outline_inv" fill="white" x="-4" y="-11" width="111" height="122" transform="translate(-568 -494)"/>
 <use xlink:href="#path0_fill" fill="black" transform="translate(-568 -494)"/>
