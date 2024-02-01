@@ -527,6 +527,7 @@ nav.main .user_menu {
   margin: 0;
   display: flex;
   gap: 2px;
+  cursor: pointer;
 }
 
 nav.main .create_menu i,
