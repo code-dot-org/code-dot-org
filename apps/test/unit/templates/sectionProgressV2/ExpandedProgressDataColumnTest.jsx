@@ -9,7 +9,10 @@ import sectionProgress, {
   addDataByUnit,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
-import {LEVEL_DATA_CELL_TEST_ID} from '@cdo/apps/templates/sectionProgressV2/LevelDataCell';
+import {
+  LEVEL_DATA_CELL_TEST_ID,
+  LEVEL_OVERRIDE_ICON_TEST_TITLE,
+} from '@cdo/apps/templates/sectionProgressV2/LevelDataCell';
 
 import {
   getStore,
@@ -139,5 +142,9 @@ describe('ExpandedProgressDataColumn', () => {
       (lesson.levels.length + levelWithSublevels.sublevels.length) *
         STUDENTS.length
     );
+
+    expect(
+      screen.queryAllByTitle(LEVEL_OVERRIDE_ICON_TEST_TITLE + 'split')
+    ).to.have.length(STUDENTS.length);
   });
 });

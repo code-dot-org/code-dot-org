@@ -6,6 +6,7 @@ import styles from './progress-table-v2.module.scss';
 import FontAwesome from '../FontAwesome';
 
 export const LEVEL_DATA_CELL_TEST_ID = 'level-data-cell';
+export const LEVEL_OVERRIDE_ICON_TEST_TITLE = 'override-icon-';
 
 export default function LevelDataCell({
   level,
@@ -24,7 +25,14 @@ export default function LevelDataCell({
       className={classNames(styles.gridBox, styles.gridBoxLevel)}
       data-testid={LEVEL_DATA_CELL_TEST_ID}
     >
-      {overrideIcon ? <FontAwesome icon={overrideIcon} /> : levelData}
+      {overrideIcon ? (
+        <FontAwesome
+          icon={overrideIcon}
+          title={LEVEL_OVERRIDE_ICON_TEST_TITLE + overrideIcon}
+        />
+      ) : (
+        levelData
+      )}
     </div>
   );
 }
