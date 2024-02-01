@@ -72,7 +72,13 @@ const AITutorPanel = ({level, scriptId}) => {
           scriptId={scriptId}
         />
       )}
-      {questionSelected && <GeneralChatTutor />}
+      {questionSelected && (
+        <GeneralChatTutor
+          levelId={level.id}
+          isProjectBacked={level.isProjectBacked}
+          scriptId={scriptId}
+        />
+      )}
     </AITutorPanelContainer>
   );
 };
