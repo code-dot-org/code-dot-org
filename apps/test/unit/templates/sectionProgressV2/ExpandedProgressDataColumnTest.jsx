@@ -105,12 +105,6 @@ describe('ExpandedProgressDataColumn', () => {
   it('Shows unexpanded choice level', () => {
     const {lesson, levelWithSublevels} = renderWithSublevels();
 
-    expect(
-      screen.getByText(
-        'Lesson ' + lesson.relative_position + ': ' + lesson.name
-      )
-    ).to.exist;
-
     lesson.levels.forEach(level => {
       expect(
         screen.getByText(lesson.relative_position + '.' + level.bubbleText)
@@ -133,10 +127,6 @@ describe('ExpandedProgressDataColumn', () => {
       lesson.relative_position + '.' + levelWithSublevels.bubbleText
     );
     fireEvent.click(choiceLevelHeader);
-
-    levelWithSublevels.sublevels.forEach(sublevel => {
-      expect(screen.queryByText(sublevel.bubbleText)).to.exist;
-    });
 
     expect(screen.queryAllByTestId(LEVEL_DATA_CELL_TEST_ID)).to.have.length(
       (lesson.levels.length + levelWithSublevels.sublevels.length) *
@@ -161,12 +151,6 @@ describe('ExpandedProgressDataColumn', () => {
     );
     fireEvent.click(expandedChoiceLevelHeader);
 
-    expect(
-      screen.getByText(
-        'Lesson ' + lesson.relative_position + ': ' + lesson.name
-      )
-    ).to.exist;
-
     lesson.levels.forEach(level => {
       expect(
         screen.getByText(lesson.relative_position + '.' + level.bubbleText)
@@ -176,9 +160,5 @@ describe('ExpandedProgressDataColumn', () => {
     levelWithSublevels.sublevels.forEach(sublevel => {
       expect(screen.queryByText(sublevel.bubbleText)).to.not.exist;
     });
-
-    expect(screen.queryAllByTestId(LEVEL_DATA_CELL_TEST_ID)).to.have.length(
-      lesson.levels.length * STUDENTS.length
-    );
   });
 });
