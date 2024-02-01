@@ -1,8 +1,7 @@
-import FirebaseStorage from './firebaseStorage';
 import {init} from './firebaseUtils';
 import _ from 'lodash';
 
-const DatablockStorage = {...FirebaseStorage};
+const DatablockStorage = {};
 
 /*
 
@@ -396,8 +395,6 @@ DatablockStorage.deleteKeyValue = function (key, onSuccess, onError) {
   _fetch('delete_key_value', 'DELETE', {
     key,
   }).then(onSuccess, onError);
-
-  throw 'Not implemented yet';
 };
 
 // Used to inject levelbuilder defined data tables into the current project (see applab.js)
@@ -482,6 +479,8 @@ DatablockStorage.copyStaticTable = function (tableName, onSuccess, onError) {
 DatablockStorage.resetForTesting = function () {
   return _fetch('clear_all_data', 'DELETE', {});
 };
+
+DatablockStorage.resetRecordListener = function () {};
 
 export function initDatablockStorage(config) {
   console.log('LOADING DATABLOCK STORAGE SHIM!!!');

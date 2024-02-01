@@ -17,7 +17,11 @@ import dom from '../dom';
 import * as utils from '../utils';
 import * as dropletConfig from './dropletConfig';
 import {getDatasetInfo} from '../storage/dataBrowser/dataUtils';
-import {initDatablockStorage as initFirebaseStorage} from '../storage/datablockStorage'; // TODO: unfirebase
+import {
+  initStorage,
+  DATABLOCK_STORAGE,
+  FIREBASE_STORAGE,
+} from '../storage/storage';
 import * as apiTimeoutList from '../lib/util/timeoutList';
 import designMode from './designMode';
 import applabTurtle from './applabTurtle';
@@ -416,15 +420,26 @@ Applab.init = function (config) {
     }));
   }
   Applab.channelId = config.channel;
-  Applab.storage = initFirebaseStorage({
-    // TODO: unfirebase
-    channelId: config.channel,
-    firebaseName: config.firebaseName,
-    firebaseAuthToken: config.firebaseAuthToken,
-    firebaseSharedAuthToken: config.firebaseSharedAuthToken,
-    firebaseChannelIdSuffix: config.firebaseChannelIdSuffix || '',
-    showRateLimitAlert: studioApp().showRateLimitAlert,
-  });
+
+  function shouldUseDatablockStorage() {
+    // FIXME: unfirebase, how do we implement this?
+    return true;
+  }
+
+  if (shouldUseDatablockStorage()) {
+    Applab.storage = initStorage(DATABLOCK_STORAGE, {});
+  } else {
+    Applab.storage = initStorage(FIREBASE_STORAGE, {
+      // TODO: unfirebase
+      channelId: config.channel,
+      firebaseName: config.firebaseName,
+      firebaseAuthToken: config.firebaseAuthToken,
+      firebaseSharedAuthToken: config.firebaseSharedAuthToken,
+      firebaseChannelIdSuffix: config.firebaseChannelIdSuffix || '',
+      showRateLimitAlert: studioApp().showRateLimitAlert,
+    });
+  }
+
   // inlcude channel id in any new relic actions we generate
   logToCloud.setCustomAttribute('channelId', Applab.channelId);
 

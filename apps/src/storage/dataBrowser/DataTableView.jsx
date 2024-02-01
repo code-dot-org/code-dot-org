@@ -4,7 +4,7 @@
 import TableControls from './TableControls';
 import {DataView, WarningType} from '../constants';
 import DataTable from './DataTable';
-import FirebaseStorage from '../firebaseStorage';
+import {storageBackend} from '../storage';
 import FontAwesome from '../../templates/FontAwesome';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -46,7 +46,7 @@ class DataTableView extends React.Component {
   }
 
   importCsv = (csvData, onComplete) => {
-    FirebaseStorage.importCsv(
+    storageBackend().importCsv(
       this.props.tableName,
       csvData,
       () => {
@@ -74,7 +74,7 @@ class DataTableView extends React.Component {
 
   /** Delete all rows, but preserve the columns. */
   clearTable = () => {
-    FirebaseStorage.clearTable(
+    storageBackend().clearTable(
       this.props.tableName,
       () => {},
       msg => console.warn(msg)

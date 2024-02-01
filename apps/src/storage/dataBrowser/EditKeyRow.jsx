@@ -1,5 +1,5 @@
 /** @overview Component for editing a key/value pair row. */
-import FirebaseStorage from '../firebaseStorage';
+import {storageBackend} from '../storage';
 import PropTypes from 'prop-types';
 import React from 'react';
 import PendingButton from '../../templates/PendingButton';
@@ -49,7 +49,7 @@ class EditKeyRow extends React.Component {
         this.state.newValue,
         /* allowUnquotedStrings */ false
       );
-      FirebaseStorage.setKeyValue(
+      storageBackend().setKeyValue(
         this.props.keyName,
         newValue,
         this.resetState,
@@ -70,7 +70,7 @@ class EditKeyRow extends React.Component {
 
   handleDelete = () => {
     this.setState({isDeleting: true});
-    FirebaseStorage.deleteKeyValue(this.props.keyName, this.resetState, msg =>
+    storageBackend().deleteKeyValue(this.props.keyName, this.resetState, msg =>
       console.warn(msg)
     );
   };

@@ -8,7 +8,7 @@ import SearchBar from '@cdo/apps/templates/SearchBar';
 import {getDatasetInfo} from './dataUtils';
 import msg from '@cdo/locale';
 import PreviewModal from './PreviewModal';
-import FirebaseStorage from '../firebaseStorage';
+import {storageBackend} from '../storage';
 import {WarningType} from '../constants';
 import experiments from '../../util/experiments';
 import _ from 'lodash';
@@ -36,14 +36,18 @@ class DataLibraryPane extends React.Component {
 
   importTable = datasetInfo => {
     if (datasetInfo.current) {
-      FirebaseStorage.addCurrentTableToProject(
+      storageBackend().addCurrentTableToProject(
         // TODO: unfirebase
         datasetInfo.name,
         () => {},
         this.onError
       );
     } else {
-      FirebaseStorage.copyStaticTable(datasetInfo.name, () => {}, this.onError); // TODO: unfirebase
+      storageBackend().copyStaticTable(
+        datasetInfo.name,
+        () => {},
+        this.onError
+      ); // TODO: unfirebase
     }
   };
 
