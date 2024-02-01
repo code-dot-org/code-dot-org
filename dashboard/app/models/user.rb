@@ -537,6 +537,7 @@ class User < ApplicationRecord
   validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: -> {errors.blank?}
   validates_uniqueness_of :username, case_sensitive: false, on: :update, if: -> {errors.blank? && username_changed?}
   validates_presence_of :username, if: :username_required?
+  validate :check_profanity
   before_validation :generate_username, on: :create
 
   validates_presence_of     :password, if: :password_required?
@@ -968,8 +969,13 @@ class User < ApplicationRecord
     manual? || username_changed?
   end
 
+  private def check_profanity
+    if ProfanityFilter.find_potential_profanity(username, locale).present?
+      errors.add(:username, :not_allowed)
+    end
+  end
+
   def update_without_password(params, *options)
-    puts "WITHOUT PASSWORD"
     if params[:races]
       self.races = params[:races].join ','
     end
@@ -978,7 +984,6 @@ class User < ApplicationRecord
   end
 
   def update_with_password(params, *options)
-    puts "WITH PASSWORD"
     if encrypted_password.blank?
       params.delete(:current_password) # user does not have password so current password is irrelevant
       update(params, *options)

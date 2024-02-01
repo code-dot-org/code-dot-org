@@ -5072,4 +5072,11 @@ class UserTest < ActiveSupport::TestCase
     student.save!
     assert_equal Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, student.child_account_compliance_state
   end
+
+  test "profanity not allowed in username" do
+    ProfanityFilter.stubs(:find_potential_profanity).returns true
+    assert_raises(ActiveRecord::RecordInvalid) do
+      create(:user, username: 'badword')
+    end
+  end
 end
