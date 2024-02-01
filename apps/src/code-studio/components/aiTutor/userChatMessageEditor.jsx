@@ -1,4 +1,5 @@
 import React, {useState, useCallback} from 'react';
+import PropTypes from 'prop-types';
 import Button from '@cdo/apps/templates/Button';
 import style from './ai-tutor.module.scss';
 import {submitChatMessage} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
@@ -8,7 +9,7 @@ import {useSelector} from 'react-redux';
 /**
  * Renders the AI Tutor user chat message editor component.
  */
-const UserChatMessageEditor = () => {
+const UserChatMessageEditor = ({levelId, isProjectBacked, scriptId}) => {
   const [userMessage, setUserMessage] = useState('');
 
   const isWaitingForChatResponse = useSelector(
@@ -19,10 +20,23 @@ const UserChatMessageEditor = () => {
 
   const handleSubmit = useCallback(() => {
     if (!isWaitingForChatResponse) {
-      dispatch(submitChatMessage(userMessage));
+      const chatContext = {
+        levelId: levelId,
+        scriptId: scriptId,
+        isProjectBacked: isProjectBacked,
+        message: userMessage,
+      };
+      dispatch(submitChatMessage(chatContext));
       setUserMessage('');
     }
-  }, [userMessage, dispatch, isWaitingForChatResponse]);
+  }, [
+    userMessage,
+    dispatch,
+    isWaitingForChatResponse,
+    levelId,
+    scriptId,
+    isProjectBacked,
+  ]);
 
   return (
     <div className={style.UserChatMessageEditor}>
@@ -44,3 +58,9 @@ const UserChatMessageEditor = () => {
 };
 
 export default UserChatMessageEditor;
+
+UserChatMessageEditor.propTypes = {
+  levelId: PropTypes.number,
+  scriptId: PropTypes.number,
+  isProjectBacked: PropTypes.bool,
+};

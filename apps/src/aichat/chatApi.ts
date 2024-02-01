@@ -10,11 +10,11 @@ import {TutorTypes} from '../aiTutor/types';
 export async function postOpenaiChatCompletion(
   messagesToSend: OpenaiChatCompletionMessage[],
   levelId?: number,
-  type?: TutorTypes
+  tutorType?: TutorTypes
 ): Promise<OpenaiChatCompletionMessage | null> {
   const payload = levelId
-    ? {levelId: levelId, messages: messagesToSend, type: type}
-    : {messages: messagesToSend, type: type};
+    ? {levelId: levelId, messages: messagesToSend, type: tutorType}
+    : {messages: messagesToSend, type: tutorType};
 
   const response = await HttpClient.post(
     CHAT_COMPLETION_URL,
@@ -47,7 +47,9 @@ export async function getChatCompletionMessage(
   systemPrompt: string,
   userMessageId: number,
   newMessage: string,
-  chatMessages: ChatCompletionMessage[]
+  chatMessages: ChatCompletionMessage[],
+  levelId?: number,
+  tutorType?: TutorTypes
 ): Promise<ChatCompletionResponse> {
   const messagesToSend = [
     {role: Role.SYSTEM, content: systemPrompt},
@@ -56,7 +58,11 @@ export async function getChatCompletionMessage(
   ];
   let response;
   try {
-    response = await postOpenaiChatCompletion(messagesToSend);
+    response = await postOpenaiChatCompletion(
+      messagesToSend,
+      levelId,
+      tutorType
+    );
   } catch (error) {
     Lab2Registry.getInstance()
       .getMetricsReporter()
