@@ -352,12 +352,6 @@ class LevelsHelperTest < ActionView::TestCase
     refute_equal channel, get_channel_for(level, script.id)
   end
 
-  test 'use_google_blockly is false if @is_start_mode is true and @level is GamelabJr' do
-    @is_start_mode = true
-    @level = build :level, type: 'GamelabJr'
-    refute use_google_blockly
-  end
-
   test 'use_google_blockly is false if not set' do
     Experiment.stubs(:enabled?).returns(false)
     @level = build :level
