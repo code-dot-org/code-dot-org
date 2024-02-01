@@ -59,7 +59,8 @@ $level-cell-width: 52;
     width: $level-cell-width + px;
     text-align: center;
     height: 47px;
-    line-height: 47px;
+    line-height: 47px !important;
+    color: inherit !important;
     // remove overflow after data icons are added
     overflow-x: hidden;
   }
@@ -234,4 +235,8 @@ $level-cell-width: 52;
   width: 195px;
   min-width: 195px;
   margin-right: 12px;
+}
+
+.pointerMouse {
+  cursor: pointer;
 }

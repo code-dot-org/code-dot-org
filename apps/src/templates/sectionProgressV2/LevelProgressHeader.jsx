@@ -10,18 +10,17 @@ export default function ExpandedProgressColumnHeader({
   isLevelExpanded,
   toggleExpandedChoiceLevel,
 }) {
-  const onClick = React.useCallback(() => {
-    if (level.sublevels?.length > 0) {
-      toggleExpandedChoiceLevel(level.id);
-    }
-  }, [level, toggleExpandedChoiceLevel]);
+  const isExpandable = level.sublevels?.length > 0;
 
   const expandedChoiceLevel = React.useCallback(
     () => (
       <div
         key={lesson.id + '.' + level.id + '-h'}
-        className={styles.expandedHeaderExpandedLevel}
-        onClick={onClick}
+        className={classNames(
+          styles.expandedHeaderExpandedLevel,
+          isExpandable && styles.pointerMouse
+        )}
+        onClick={() => toggleExpandedChoiceLevel(level)}
       >
         <div
           className={classNames(
@@ -50,15 +49,19 @@ export default function ExpandedProgressColumnHeader({
         ))}
       </div>
     ),
-    [lesson, level, onClick]
+    [lesson, level, isExpandable, toggleExpandedChoiceLevel]
   );
 
   const unexpandedLevel = React.useCallback(
     () => (
       <div
-        className={classNames(styles.gridBox, styles.expandedHeaderLevelCell)}
+        className={classNames(
+          styles.gridBox,
+          styles.expandedHeaderLevelCell,
+          isExpandable && styles.pointerMouse
+        )}
         key={lesson.id + '.' + level.id + '-h'}
-        onClick={onClick}
+        onClick={() => toggleExpandedChoiceLevel(level)}
       >
         {level.sublevels?.length > 0 && (
           <FontAwesome
@@ -69,7 +72,7 @@ export default function ExpandedProgressColumnHeader({
         {lesson.relative_position + '.' + level.bubbleText}
       </div>
     ),
-    [lesson, level, onClick]
+    [lesson, level, toggleExpandedChoiceLevel, isExpandable]
   );
 
   return level.sublevels?.length > 0 && isLevelExpanded

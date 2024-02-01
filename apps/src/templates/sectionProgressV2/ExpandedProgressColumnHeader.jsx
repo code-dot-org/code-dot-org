@@ -41,7 +41,11 @@ export default function ExpandedProgressColumnHeader({
   return (
     <div className={styles.expandedHeader} key={lesson.id}>
       <div
-        className={classNames(styles.gridBox, styles.expandedHeaderLessonCell)}
+        className={classNames(
+          styles.gridBox,
+          styles.expandedHeaderLessonCell,
+          styles.pointerMouse
+        )}
         style={{width}}
         onClick={() => removeExpandedLesson(lesson.id)}
         aria-label={headerText}

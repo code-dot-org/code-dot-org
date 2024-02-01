@@ -4,7 +4,8 @@ import {MusicState} from '../redux/musicRedux';
 import moduleStyles from './callouts.module.scss';
 import {BlockTypes} from '../blockly/blockTypes';
 import {Triggers} from '../constants';
-const FontAwesome = require('../../templates/FontAwesome');
+
+const arrowImage = require(`@cdo/static/music/music-callout-arrow.png`);
 
 const availableCallouts: {
   [key: string]: {selector: string};
@@ -75,7 +76,7 @@ const Callouts: React.FunctionComponent = () => {
       className={moduleStyles.callout}
     >
       <div id="callout-arrow" className={moduleStyles.arrow}>
-        <FontAwesome icon={'arrow-up'} />
+        <img src={arrowImage} alt="" />
       </div>
     </div>
   );
