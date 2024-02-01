@@ -50,21 +50,19 @@ function ExpandedProgressDataColumn({
   const progress = React.useMemo(
     () => (
       <div className={styles.expandedTable}>
-        {lesson.levels.map(level => {
+        {lesson.levels.flatMap(level => {
           if (
             level.sublevels?.length > 0 &&
             expandedChoiceLevels.includes(level.id)
           ) {
-            return (
-              <>
-                {getSingleLevelColumn(level, {overrideIcon: 'split'})}
-                {level.sublevels.map(sublevel =>
-                  getSingleLevelColumn(sublevel)
-                )}
-              </>
-            );
+            return [
+              getSingleLevelColumn(level, {overrideIcon: 'split'}),
+              ...level.sublevels.map(sublevel =>
+                getSingleLevelColumn(sublevel)
+              ),
+            ];
           }
-          return getSingleLevelColumn(level);
+          return [getSingleLevelColumn(level)];
         })}
       </div>
     ),

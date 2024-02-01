@@ -19,7 +19,7 @@ export default function ExpandedProgressColumnHeader({
   const expandedChoiceLevel = React.useCallback(
     () => (
       <div
-        key={lesson.id + '.' + level.bubbleText + '-h'}
+        key={lesson.id + '.' + level.id + '-h'}
         className={styles.expandedHeaderExpandedLevel}
         onClick={onClick}
       >
@@ -43,9 +43,7 @@ export default function ExpandedProgressColumnHeader({
               styles.expandedHeaderLevelCell,
               styles.expandedHeaderExpandedLevelCell
             )}
-            key={
-              lesson.id + '.' + level.bubbleText + '-h-' + sublevel.bubbleText
-            }
+            key={lesson.id + '.' + level.id + '-h-' + sublevel.id}
           >
             {sublevel.bubbleText}
           </div>
@@ -59,7 +57,7 @@ export default function ExpandedProgressColumnHeader({
     () => (
       <div
         className={classNames(styles.gridBox, styles.expandedHeaderLevelCell)}
-        key={lesson.id + '.' + level.bubbleText + '-h'}
+        key={lesson.id + '.' + level.id + '-h'}
         onClick={onClick}
       >
         {level.sublevels?.length > 0 && (
