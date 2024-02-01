@@ -135,6 +135,7 @@ export default function RubricContainer({
 
         <RubricContent
           rubric={rubric}
+          open={open}
           studentLevelInfo={studentLevelInfo}
           teacherHasEnabledAi={teacherHasEnabledAi}
           canProvideFeedback={canProvideFeedback}
