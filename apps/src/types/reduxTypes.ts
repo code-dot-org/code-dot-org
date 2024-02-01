@@ -18,7 +18,7 @@ import {AITutorState} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 // in order to make using the slice easier in components.
 // We cannot infer the type of our store because we programmatically add to the store
 // with registerReducers.
-export interface ReduxStore {
+export interface RootState {
   aiTutor: AITutorState;
   header: HeaderReduxState;
   javalab: JavalabState;
