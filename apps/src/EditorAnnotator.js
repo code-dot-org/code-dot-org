@@ -193,7 +193,7 @@ export class DropletAnnotator extends Annotator {
    * Updates the editor context with the remembered highlights and annotations.
    */
   refresh() {
-    this.dimBlocks();
+    EditorAnnotator.dimBlocks();
 
     EditorAnnotator.highlightedLines.forEach(item => {
       const block = this.getBlockForLine(item.lineNumber);
@@ -251,7 +251,7 @@ export class DropletAnnotator extends Annotator {
       }
     }
 
-    const statechange = function (e) {
+    const statechange = e => {
       // Ensure the block draw is still patched
       const block = this.getBlockForLine(1);
       if (block) {
