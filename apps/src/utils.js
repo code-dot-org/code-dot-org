@@ -990,7 +990,7 @@ export function findExplicitlySetBlockIds() {
 
   const blockSources = ['startBlocks', 'toolbox'];
   for (const levelProperty of blockSources) {
-    const xmlString = appOptions?.level?.[levelProperty];
+    const xmlString = appOptions.level?.[levelProperty];
 
     try {
       if (!xmlString) {
