@@ -18,7 +18,6 @@ const levels = fakeLevels(5).map((level, index) => ({
 levels[0].isConceptLevel = true;
 
 export default {
-  title: 'ProgressBubbleSet',
   component: ProgressBubbleSet,
 };
 

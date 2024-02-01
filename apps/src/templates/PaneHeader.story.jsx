@@ -14,7 +14,6 @@ const styles = {
 };
 
 export default {
-  title: 'PaneHeader with PaneSections',
   component: PaneHeader,
 };
 
