@@ -184,7 +184,7 @@ describe('LearningGoals', () => {
     it('should annotate a single line of code referenced by the AI', () => {
       // The AI tends to misreport the line number, so we shouldn't rely on it
       annotateLines('Line 1: This is a line of code `var x = 5;`', annotator);
-      sinon.assert.calledWith(annotateLineStub, 'This is a line of code', 2);
+      sinon.assert.calledWith(annotateLineStub, 2, 'This is a line of code');
     });
 
     it('should annotate the first line of code referenced by the AI', () => {
@@ -192,7 +192,7 @@ describe('LearningGoals', () => {
         'Line 1: This is a line of code `var x = 5; var y = 6;`',
         annotator
       );
-      sinon.assert.calledWith(annotateLineStub, 'This is a line of code', 2);
+      sinon.assert.calledWith(annotateLineStub, 2, 'This is a line of code');
     });
 
     it('should highlight a single line of code referenced by the AI', () => {
@@ -215,7 +215,7 @@ describe('LearningGoals', () => {
 
     it('should just highlight the lines the AI thinks if the referenced code does not exist', () => {
       annotateLines('Line 45: This is a line of code `var z = 0`', annotator);
-      sinon.assert.calledWith(annotateLineStub, 'This is a line of code', 45);
+      sinon.assert.calledWith(annotateLineStub, 45, 'This is a line of code');
       sinon.assert.calledWith(highlightLineStub, 45);
     });
 
@@ -224,7 +224,7 @@ describe('LearningGoals', () => {
         'Line 42-44: This is a line of code `var z = 0`',
         annotator
       );
-      sinon.assert.calledWith(annotateLineStub, 'This is a line of code', 42);
+      sinon.assert.calledWith(annotateLineStub, 42, 'This is a line of code');
       sinon.assert.calledWith(highlightLineStub, 42);
       sinon.assert.calledWith(highlightLineStub, 43);
       sinon.assert.calledWith(highlightLineStub, 44);
@@ -232,7 +232,7 @@ describe('LearningGoals', () => {
 
     it('should annotate the last line of code when referenced by the AI', () => {
       annotateLines('Line 55: This is a line of code `draw();`', annotator);
-      sinon.assert.calledWith(annotateLineStub, 'This is a line of code', 8);
+      sinon.assert.calledWith(annotateLineStub, 8, 'This is a line of code');
     });
 
     it('should highlight the last line of code when referenced by the AI', () => {

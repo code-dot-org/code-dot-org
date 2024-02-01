@@ -3,7 +3,16 @@ import annotationList from '@cdo/apps/acemode/annotationList';
 import {interpolateColors} from '@cdo/apps/utils';
 import RGBColor from 'rgbcolor';
 
+/**
+ * Represents an implementation of an editing environment and wraps functionality
+ * to annotate (highlight, add feedback, etc) the components in the editing
+ * workspace.
+ */
 export class Annotator {
+  /**
+   * Constructs the annotator implementation. Generally, this will only be
+   * constructed once, as needed, by the EditorAnnotator class.
+   */
   constructor() {
     if (new.target === Annotator) {
       throw new TypeError('Cannot construct Annotator instances directly.');
@@ -12,10 +21,23 @@ export class Annotator {
     this.patch();
   }
 
+  /**
+   * A simple name to identify the type of editor that this implementation
+   * targets.
+   *
+   * @returns {string} The simple name of the underlying editor environment.
+   */
   static libraryName() {
     return 'unknown';
   }
 
+  /**
+   * A function that detects that the current editor context is to be controlled
+   * by this annotator. When this returns `true`, it should use this
+   * implementation in order to provide annotation functions.
+   *
+   * @returns {bool} When true, this has detected a compatible editor in use.
+   */
   static detect() {
     return false;
   }
@@ -26,12 +48,52 @@ export class Annotator {
   patch() {}
 
   /**
+   * Whether or not the current editing context has a line-based editor.
+   *
+   * It may have blocks in the case of Droplet, but it is primarily line-based
+   * in that blocks occupy lines and can be referenced by line number.
+   *
+   * @returns {bool} Returns true when the editor is line based.
+   */
+  isLineBased() {
+    return false;
+  }
+
+  /**
+   * Whether or not the current editing context has block-based editing.
+   *
+   * It may or not be still line-based.
+   */
+  hasBlocks() {
+    return false;
+  }
+
+  /**
+   * Whether or not the current editing context has a block-based editor and no
+   * concept of lines. This would be a Blockly-based level.
+   *
+   * @returns {bool} Returns true when the editor is block based.
+   */
+  isBlockBased() {
+    return false;
+  }
+
+  /**
    * Returns the number of lines of code in line-based editor context.
    *
    * @returns {number} The number of lines or -1 when it is not line-based.
    */
   getLineCount() {
     return -1;
+  }
+
+  /**
+   * Returns the string representation of any generated code.
+   *
+   * @returns {string} The code contained in the current editor context.
+   */
+  getCode() {
+    return '';
   }
 
   /**
@@ -93,8 +155,31 @@ export class Annotator {
    * @param {Object} info The metadata about the highlighted line.
    */
   unhighlightLine(info) {}
+
+  /**
+   * Add a line of feedback to the editor.
+   *
+   * @param {number} lineNumber The line number (1-based index)
+   * @param {string} message The text to display next to the line.
+   * @param {string} logLevel The type of annotation ('ERROR', 'INFO', etc)
+   */
+  annotateLine(lineNumber, message, logLevel = 'INFO') {}
+
+  /**
+   * Removes annotations of a particular type.
+   *
+   * @param {string} logLevel The type of annotation to clear ('ERROR', 'INFO', etc)
+   */
+  clearAnnotations(logLevel = 'INFO') {}
 }
 
+/**
+ * This is an annotation implementation for Droplet environments.
+ *
+ * Droplet has blocks that directly represent lines of code. As such, it offers
+ * capabilities that are mostly line-based. It can retrieve references, however,
+ * to blocks based on the line number.
+ */
 export class DropletAnnotator extends Annotator {
   static libraryName() {
     return 'droplet';
@@ -104,8 +189,22 @@ export class DropletAnnotator extends Annotator {
     return !!EditorAnnotator.studioApp().editor;
   }
 
+  /**
+   * Updates the editor context with the remembered highlights and annotations.
+   */
+  refresh() {
+    this.dimBlocks();
+
+    EditorAnnotator.highlightedLines.forEach(item => {
+      const block = this.getBlockForLine(item.lineNumber);
+      if (block) {
+        this.undimBlock(block);
+      }
+    });
+  }
+
   patch() {
-    const droplet = EditorAnnotator.studioApp().editor;
+    const droplet = this.droplet();
 
     // Need a reference to a BlockViewNode so that we can patch its draw
     // function to add the opacity after it creates the <path> for each block.
@@ -163,7 +262,7 @@ export class DropletAnnotator extends Annotator {
         }
       }
 
-      EditorAnnotator.refresh();
+      this.refresh();
     };
 
     // Capture toggle event start / end
@@ -172,13 +271,64 @@ export class DropletAnnotator extends Annotator {
   }
 
   /**
+   * Whether or not the current editing context has a line-based editor.
+   *
+   * It may have blocks in the case of Droplet, but it is primarily line-based
+   * in that blocks occupy lines and can be referenced by line number.
+   *
+   * @returns {bool} Returns true when the editor is line based.
+   */
+  isLineBased() {
+    // Detect Droplet editor instance, but in the future we need to detect
+    // a JavaLab environment that is using CodeMirror.
+    return true;
+  }
+
+  /**
+   * Whether or not the current editing context has block-based editing.
+   *
+   * It may or not be still line-based.
+   */
+  hasBlocks() {
+    return true;
+  }
+
+  /**
+   * Whether or not the current editing context has a block-based editor and no
+   * concept of lines. This would be a Blockly-based level.
+   *
+   * @returns {bool} Returns true when the editor is block based.
+   */
+  isBlockBased() {
+    // The only block-based context we have is Blockly, which StudioApp already
+    // detects.
+    return false;
+  }
+
+  /**
+   * Returns a reference to the Droplet editing context.
+   */
+  droplet() {
+    return EditorAnnotator.studioApp().editor;
+  }
+
+  /**
    * Returns the number of lines of code in line-based editor context.
    *
    * @returns {number} The number of lines or -1 when it is not line-based.
    */
   getLineCount() {
-    var session = EditorAnnotator.studioApp().editor.aceEditor.getSession();
-    return session.getDocument().getLength();
+    const aceSession = this.droplet().aceEditor.getSession();
+    return aceSession.getDocument().getLength();
+  }
+
+  /**
+   * Returns the string representation of any generated code.
+   *
+   * @returns {string} The code contained in the current editor context.
+   */
+  getCode() {
+    return this.droplet().getValue();
   }
 
   /**
@@ -190,8 +340,8 @@ export class DropletAnnotator extends Annotator {
    * @returns {DropletBlock|null} A reference to the block or `null` if it doesn't exist.
    */
   getBlockForLine(lineNumber) {
-    const droplet = EditorAnnotator.studioApp().editor;
-    return droplet.session.tree.getBlockOnLine(lineNumber - 1);
+    const session = this.droplet().session;
+    return session.tree.getBlockOnLine(lineNumber - 1);
   }
 
   /**
@@ -227,7 +377,7 @@ export class DropletAnnotator extends Annotator {
    * @param {DropletBlock} block The block to dim.
    */
   dimBlock(block) {
-    const droplet = EditorAnnotator.studioApp().editor;
+    const droplet = this.droplet();
     const dimViewForBlock = block => {
       const view = droplet.session.view.getViewNodeFor(block);
       if (!view) {
@@ -262,7 +412,7 @@ export class DropletAnnotator extends Annotator {
    * @param {DropletBlock} block The block to undim.
    */
   undimBlock(block) {
-    const droplet = EditorAnnotator.studioApp().editor;
+    const droplet = this.droplet();
     const view = droplet.session.view.getViewNodeFor(block);
     if (!view) {
       return;
@@ -293,7 +443,7 @@ export class DropletAnnotator extends Annotator {
    * @returns {Object} The metadata retaining the Ace Editor marker instance.
    */
   highlightLine(lineNumber, highlightClass) {
-    const droplet = EditorAnnotator.studioApp().editor;
+    const droplet = this.droplet();
     const session = droplet.aceEditor.getSession();
     const marker = session.addMarker(
       new (window.ace.require('ace/range').Range)(
@@ -323,8 +473,39 @@ export class DropletAnnotator extends Annotator {
    */
   unhighlightLine(info) {
     // Get the session and undo the things we did
-    const session = EditorAnnotator.studioApp().editor.aceEditor.getSession();
-    session.removeMarker(info.marker);
+    const aceSession = this.droplet().aceEditor.getSession();
+    aceSession.removeMarker(info.marker);
+  }
+
+  /**
+   * Retrieves an annotationList and ensures it is attached to the known
+   * editor session.
+   */
+  annotationList_() {
+    const droplet = this.droplet();
+    const aceSession = this.droplet().aceEditor.getSession();
+    annotationList.attachToSession(aceSession, droplet);
+    return annotationList;
+  }
+
+  /**
+   * Add a line of feedback to the editor.
+   *
+   * @param {number} lineNumber The line number (1-based index)
+   * @param {string} message The text to display next to the line.
+   * @param {string} logLevel The type of annotation ('ERROR', 'INFO', etc)
+   */
+  annotateLine(lineNumber, message, logLevel = 'INFO') {
+    this.annotationList_().addRuntimeAnnotation(logLevel, lineNumber, message);
+  }
+
+  /**
+   * Removes annotations of a particular type.
+   *
+   * @param {string} logLevel The type of annotation to clear ('ERROR', 'INFO', etc)
+   */
+  clearAnnotations(logLevel = 'INFO') {
+    this.annotationList_().filterOutRuntimeAnnotations(logLevel);
   }
 }
 
@@ -402,36 +583,6 @@ export default class EditorAnnotator {
   }
 
   /**
-   * Updates the editor context with the remembered highlights and annotations.
-   */
-  static refresh() {
-    if (EditorAnnotator.isDroplet()) {
-      EditorAnnotator.dimBlocks();
-
-      EditorAnnotator.highlightedLines.forEach(item => {
-        const block = EditorAnnotator.getBlockForLine(item.lineNumber);
-        if (block) {
-          EditorAnnotator.undimBlock(block);
-        }
-      });
-    }
-  }
-
-  /**
-   * Whether or not this is a Droplet editor context.
-   */
-  static isDroplet() {
-    return !!EditorAnnotator.studioApp().editor;
-  }
-
-  /**
-   * Whether or not this is a Blockly editor context.
-   */
-  static isBlockly() {
-    return EditorAnnotator.studioApp().isUsingBlockly();
-  }
-
-  /**
    * Whether or not the current editing context has a line-based editor.
    *
    * It may have blocks in the case of Droplet, but it is primarily line-based
@@ -440,9 +591,7 @@ export default class EditorAnnotator {
    * @returns {bool} Returns true when the editor is line based.
    */
   static isLineBased() {
-    // Detect Droplet editor instance, but in the future we need to detect
-    // a JavaLab environment that is using CodeMirror.
-    return EditorAnnotator.isDroplet();
+    return EditorAnnotator.annotator().isLineBased();
   }
 
   /**
@@ -451,7 +600,7 @@ export default class EditorAnnotator {
    * It may or not be still line-based.
    */
   static hasBlocks() {
-    return EditorAnnotator.isDroplet() || EditorAnnotator.isBlockBased();
+    return EditorAnnotator.annotator().hasBlocks();
   }
 
   /**
@@ -461,9 +610,7 @@ export default class EditorAnnotator {
    * @returns {bool} Returns true when the editor is block based.
    */
   static isBlockBased() {
-    // The only block-based context we have is Blockly, which StudioApp already
-    // detects.
-    return EditorAnnotator.isBlockly();
+    return EditorAnnotator.annotator().isBlockBased();
   }
 
   static anonymizeCode_(code) {
@@ -504,7 +651,7 @@ export default class EditorAnnotator {
       return EditorAnnotator.code_;
     }
 
-    let code = EditorAnnotator.studioApp().getCode();
+    let code = EditorAnnotator.annotator().getCode();
     EditorAnnotator.code_ = code;
 
     if (options.stripComments) {
@@ -629,16 +776,6 @@ export default class EditorAnnotator {
 
     // For Droplet, read the info from the AceEditor itself
     return EditorAnnotator.annotator()?.getLineCount() || -1;
-  }
-
-  /**
-   * Retrieves an annotationList and ensures it is attached to the known
-   * editor session.
-   */
-  static annotationList_() {
-    const session = EditorAnnotator.studioApp().editor.aceEditor.getSession();
-    annotationList.attachToSession(session, EditorAnnotator.studioApp().editor);
-    return annotationList;
   }
 
   /**
@@ -790,27 +927,19 @@ export default class EditorAnnotator {
   /**
    * Add a line of feedback to the editor.
    *
-   * @param {string} message The text to display next to the line.
    * @param {number} lineNumber The line number (1-based index)
+   * @param {string} message The text to display next to the line.
    * @param {string} logLevel The type of annotation ('ERROR', 'INFO', etc)
    */
-  static annotateLine(message, lineNumber, logLevel = 'INFO') {
-    if (EditorAnnotator.isLineBased()) {
-      EditorAnnotator.annotationList_().addRuntimeAnnotation(
-        logLevel,
-        lineNumber,
-        message
-      );
-    }
+  static annotateLine(lineNumber, message, logLevel = 'INFO') {
+    EditorAnnotator.annotator().annotateLine(lineNumber, message, logLevel);
   }
 
   /**
    * Removes annotations of a particular type.
    */
   static clearAnnotations(logLevel = 'INFO') {
-    if (EditorAnnotator.isLineBased()) {
-      EditorAnnotator.annotationList_().filterOutRuntimeAnnotations(logLevel);
-    }
+    EditorAnnotator.annotator().clearAnnotations(logLevel);
   }
 }
 
