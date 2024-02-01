@@ -26,7 +26,9 @@ class I18nScriptUtils
     @crowdin_creds ||= YAML.load_file(CROWDIN_CREDS_PATH).freeze
   end
 
-  # @return [Array<CdoLanguage>] the CDO languages.
+  # List of supported CDO Languages
+  # @see https://docs.google.com/spreadsheets/d/10dS5PJKRt846ol9f9L3pKh03JfZkN7UIEcwMmiGS4i0 Supported CDO languages doc
+  # @return [Array<CdoLanguage>] Supported CDO languages
   def self.cdo_languages
     @cdo_languages ||= PegasusLanguages.all
   end
