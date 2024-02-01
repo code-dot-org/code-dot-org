@@ -7,8 +7,8 @@ markdown <<MARKDOWN
 
 ## **Sizes**
 
-* #### `####`: H4
-* #### `#####`: H5
+* #### `####` or `<h4>TEXT</h4>`: H4
+* #### `#####` or `<h5>TEXT</h5>`: H5
 
 ## **Styles**
 

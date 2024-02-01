@@ -1,0 +1,12 @@
+name 'PLGuide_L1_Opening1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Team Aryanna and Micah - Opening a lesson or unit
+
+How do we open a “lesson” or “unit”? - Team Aryanna and Micah
+Time estimate
+Learner objectives
+Roadmap of learning [example]: http://studio.code.org/s/self-paced-pl-csd-unit3-2-2023/lessons/1/levels/2
+MARKDOWN
