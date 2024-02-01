@@ -16,7 +16,7 @@ const getFunctionBounds = (
     right = 0,
     bottom = 0;
 
-  orderedFunction.playbackEvents.forEach(playbackEvent => {
+  for (const playbackEvent of orderedFunction.playbackEvents) {
     left = Math.min(left, playbackEvent.when);
     right = Math.max(right, playbackEvent.when + playbackEvent.length);
     top = Math.min(
@@ -27,9 +27,9 @@ const getFunctionBounds = (
       bottom,
       uniqueSounds.indexOf(orderedFunction.name + ' ' + playbackEvent.id) + 1
     );
-  });
+  }
 
-  orderedFunction.calledFunctionIds.forEach(calledFunctionId => {
+  for (const calledFunctionId of orderedFunction.calledFunctionIds) {
     const calledFunction = orderedFunctions.find(
       orderedF => orderedF.uniqueInvocationId === calledFunctionId
     );
@@ -44,7 +44,7 @@ const getFunctionBounds = (
       top = Math.min(top, bounds.top);
       bottom = Math.max(bottom, bounds.bottom);
     }
-  });
+  }
 
   return {left, right, top, bottom};
 };
