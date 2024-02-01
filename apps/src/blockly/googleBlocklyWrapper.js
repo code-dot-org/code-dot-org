@@ -656,6 +656,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
     // instead of the default prompt dialogs, so we should also set it here.
     blocklyWrapper.customSimpleDialog = opt_options.customSimpleDialog;
 
+    // In order to prevent writing duplicate solution entries to the level_sources table,
+    // we strip block ids from XML when saving. An exception is made for block ids that
+    // are explicitly set in the level's toolbox or start blocks.
+    blocklyWrapper.levelBlockIds = opt_options.levelBlockIds || [];
+
     // Shrink container to make room for the workspace header
     if (!opt_options.isBlockEditMode) {
       container.style.height = `calc(100% - ${styleConstants['workspace-headers-height']}px)`;

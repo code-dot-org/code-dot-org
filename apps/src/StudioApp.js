@@ -1235,6 +1235,7 @@ StudioApp.prototype.inject = function (div, options) {
   } else if (experiments.isEnabled('geras')) {
     options.renderer = Renderers.GERAS;
   }
+  options.levelBlockIds = utils.findExplicitlySetBlockIds();
   Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
 };
 
