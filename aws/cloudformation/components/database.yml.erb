@@ -136,7 +136,9 @@
         # TODO: separate the Static and Dynamic Parameters, so we know which template updates will trigger db restart.
         max_execution_time: 30000
         performance_schema: 1
-        tx_isolation: READ-COMMITTED
+        # TODO: Uh, oh. We've been using READ-COMMITTED, but that's not permitted on read replicas anymore.
+        # And we configure our read replicas so that they can be promoted to be a writer.
+        transaction-isolation: REPEATABLE-READ
   DBProxyRole:
     Type: AWS::IAM::Role
     Properties:
