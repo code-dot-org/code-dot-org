@@ -29,4 +29,4 @@ export default {
 
 const Template = () => <SpeedSliderHarness />;
 
-export const Default = Template.bind({});
+export const BasicExample = Template.bind({});
