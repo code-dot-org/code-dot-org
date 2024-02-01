@@ -48,8 +48,4 @@ class Aichat < Level
   def uses_lab2?
     true
   end
-
-  def validated?
-    properties.dig('level_data', 'validations').present?
-  end
 end
