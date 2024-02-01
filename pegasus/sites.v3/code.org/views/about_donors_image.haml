@@ -1,4 +1,4 @@
-%link{:href=>"/css/donors.css", :rel=>"stylesheet"} 
+%link{:href=>"/css/donors.css", :rel=>"stylesheet"}
 
 - size ||= "small"
 - columns = size == "large" ? 2 : 3
@@ -9,7 +9,7 @@
     - group.each do |supporter|
       - avatar_url = avatar_image(supporter[:name_s], 200)
       %td{class: "#{size}"}
-        %a{:href=>supporter[:url_s], :target=>"_blank", :style=>"color: #7665a0"}
+        %a{:href=>supporter[:url_s], :target=>"_blank", :style=>"color: var(--brand_secondary_default)"}
           - if supporter[:show_s] == "logo" || supporter[:show_s] == "both"
             %img{:src=>avatar_url, class: "#{size}-img"}
           - if supporter[:show_s] == "name" || supporter[:show_s] == "both"

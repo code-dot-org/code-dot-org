@@ -41,8 +41,6 @@
       background-color: $neutral_light;
       border-radius: 5px;
       width: 40%;
-      top: 40px;
-      right: -20px;
       position: absolute;
       padding: 20px;
       animation: fade-in 2s;
@@ -50,6 +48,22 @@
       p {
         font-size: 16px;
         line-height: 1.5;
+      }
+
+      &Small {
+        p {
+          font-size: 13px;
+        }
+      }
+
+      &TopRight {
+        top: 40px;
+        right: -20px;
+      }
+
+      &BottomLeft {
+        bottom: 40px;
+        left: -20px;
       }
     }
   }
