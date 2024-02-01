@@ -14778,12 +14778,20 @@ en:
           lessons:
             lesson-1:
               name: Introduction to Coding with AI
+            lesson-2:
+              name: 'AI: Your Ideation Partner for Programming Prep'
+            lesson-3:
+              name: Navigating Algorithms with the Help of AI
+            lesson-4:
+              name: AI as Your Degugging Partner
+            lesson-5:
+              name: Beyond the Finished Code
           lesson_groups: {}
           name: coding-with-ai
           title: Coding with AI
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: 'This standalone unit emphasizes AI as a **supportive tool** for coding education while exploring AI-generated code''s ethical and societal aspects. '
+          description: Our standalone unit aims to help students and educators use AI tools to learn, understand, and debug code more effectively. Unlike other resources, our unit emphasizes AI as a **supportive tool** for coding education while exploring AI-generated code's ethical and societal aspects. Through this unit, we aim to equip learners and educators with the knowledge and skills to navigate the modern coding landscape with AI assistance, fostering a well-informed and ethically aware community.
           student_description: ''
         pl-team-design-guide:
           lessons:
@@ -14812,3 +14820,31 @@ en:
             ##### This guide is written and maintained by the Code.org Professional Learning team. It houses norms, best practices, and examples for creating a self-paced, asynchronous learning experience. **Please do not revise this script without permission from the team**, but please feel free to look at the code for individual levels for inspiration and guidance.
 
             <!-- Despite our guidance stating that body text should be H4 size, this overview text is H5 size to be visually consistent with the curriculum. -->
+        self-paced-pl-microbit-2024-1:
+          lessons:
+            lesson-1:
+              name: Events
+            lesson-2:
+              name: Loops
+            lesson-3:
+              name: Data and Variables
+            lesson-4:
+              name: Conditionals
+            lesson-5:
+              name: Functions
+          lesson_groups: {}
+          name: self-paced-pl-microbit-2024-1
+          title: CSF Levels
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-microbit-2024-2:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-microbit-2024-2
+          title: microbit levels
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
