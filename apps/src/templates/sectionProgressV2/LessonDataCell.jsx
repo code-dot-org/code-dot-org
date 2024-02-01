@@ -16,10 +16,16 @@ export default function LessonDataCell({
   const finished = studentLessonProgress?.completedPercent === 100;
   const partiallyComplete = studentLessonProgress && !finished;
 
+  const expandLesson = () => {
+    if (!noLevels) {
+      addExpandedLesson(lesson.id);
+    }
+  };
+
   return (
     <div
       className={classNames(styles.gridBox, styles.gridBoxLesson)}
-      onClick={() => addExpandedLesson(lesson.id)}
+      onClick={expandLesson}
     >
       {finished && <ProgressIcon itemType={ITEM_TYPE.SUBMITTED} />}
       {partiallyComplete && <ProgressIcon itemType={ITEM_TYPE.IN_PROGRESS} />}

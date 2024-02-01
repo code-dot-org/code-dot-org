@@ -10,7 +10,7 @@ const navigateToLevelOverviewUrl = (levelUrl, studentId, sectionId) => {
   if (!levelUrl) {
     return null;
   }
-  let params = {};
+  const params = {};
 
   if (sectionId) {
     params.section_id = sectionId;
