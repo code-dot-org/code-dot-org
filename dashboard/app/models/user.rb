@@ -537,7 +537,7 @@ class User < ApplicationRecord
   validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: -> {errors.blank?}
   validates_uniqueness_of :username, case_sensitive: false, on: :update, if: -> {errors.blank? && username_changed?}
   validates_presence_of :username, if: :username_required?
-  validate :check_profanity
+  validate :check_username_profanity, if: -> {username_changed?}
   before_validation :generate_username, on: :create
 
   validates_presence_of     :password, if: :password_required?
@@ -969,7 +969,7 @@ class User < ApplicationRecord
     manual? || username_changed?
   end
 
-  private def check_profanity
+  private def check_username_profanity
     if ProfanityFilter.find_potential_profanity(username, locale).present?
       errors.add(:username, :not_allowed)
     end
