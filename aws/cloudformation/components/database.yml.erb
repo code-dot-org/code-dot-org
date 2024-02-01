@@ -138,7 +138,7 @@
         performance_schema: 1
         # TODO: Uh, oh. We've been using READ-COMMITTED, but that's not permitted on read replicas anymore.
         # And we configure our read replicas so that they can be promoted to be a writer.
-        tx_isolation: REPEATABLE-READ
+        # tx_isolation: REPEATABLE-READ
   DBProxyRole:
     Type: AWS::IAM::Role
     Properties:
