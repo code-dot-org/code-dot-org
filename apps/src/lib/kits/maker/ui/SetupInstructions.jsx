@@ -9,6 +9,19 @@ import {
   WEB_SERIAL_FILTERS,
 } from '@cdo/apps/lib/kits/maker/util/boardUtils';
 import {getStore} from '@cdo/apps/redux';
+import {
+  CIRCUIT_PLAYGROUND_EXPRESS_FIRMATA_URL,
+  CIRCUIT_PLAYGROUND_EXPRESS_FIRMATA_FILENAME,
+} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
+
+const style = {
+  oneColumn: {
+    display: 'flex',
+    flexDirection: 'column',
+    // justifyContent: 'space-between',
+  },
+  connectYourBoardChecklistId: 'connectYourBoardChecklist',
+};
 
 export default class SetupInstructions extends React.Component {
   constructor(props) {
@@ -20,6 +33,7 @@ export default class SetupInstructions extends React.Component {
       <Provider store={getStore()}>
         <div>
           <ConnectionInstructions />
+          <CPExpressInstallInstructions />
           <Support />
         </div>
       </Provider>
@@ -61,18 +75,21 @@ class ConnectionInstructions extends React.Component {
 
   render() {
     const {webSerialPort} = this.state;
-
+    console.log(webSerialPort);
     const connectionState = webSerialPort
       ? this.renderSetupChecklist(webSerialPort)
       : this.renderWebSerialConnectButton();
 
     if (!shouldUseWebSerial()) {
-      return null;
+      // TODO: Ask Alice how she gets around this in her local env.
+      // return null;
     }
 
     return (
       <div>
-        <h2>{applabI18n.makerSetupConnectBoardChecklistTitle()}</h2>
+        <h2 id={style.connectYourBoardChecklistId}>
+          {applabI18n.makerSetupConnectBoardChecklistTitle()}
+        </h2>
         <p>
           {applabI18n.makerSetupConnectWithWebSerial()}
           <strong>{applabI18n.makerSetupConnectOnlyOneTab()}</strong>
@@ -92,6 +109,79 @@ class ConnectionInstructions extends React.Component {
           markdown={applabI18n.makerSetupWebSerialSupportArticle()}
         />
         {connectionState}
+      </div>
+    );
+  }
+}
+
+class CPExpressInstallInstructions extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    // TODO: layout with images
+    // TODO: get screenshot for image copy
+    // TODO: reset button gif- put in our cdn?
+    // TODO: make i18n strings for all the strings
+    return (
+      <div id="CPExpressInstallInstructions">
+        <h2>Install the Firmata firmware onto the CP Express</h2>
+        <ol>
+          <li>
+            Set your Circuit Playground Express to Bootloader Mode
+            <div style={style.oneColumn}>
+              <ul>
+                <li>
+                  Press or double-press the RESET button in the center of the
+                  board.
+                </li>
+                <li>
+                  You've successfully entered bootloader mode when the LEDs turn
+                  green and your computer detects a new removable storage device
+                  called 'CPLAYBOOT'.
+                </li>
+                <li>
+                  If pressing RESET once doesn't work, try double-pressing it.
+                </li>
+                <li>
+                  If the color LEDs turn all red, check your USB cable, try
+                  another cable or another USB port.
+                </li>
+              </ul>
+              <img
+                src="https://cdn-learn.adafruit.com/assets/assets/000/051/201/original/makecode_uf2.gif?1519151701"
+                width={200}
+                alt={
+                  'GIF showing two ways to enter bootloader mode on the Circuit Playground Express by pressing the reset button once, then twice in a row.'
+                }
+              />
+            </div>
+          </li>
+          <li>
+            Copy over the Firmata firmware.
+            <ul>
+              <li>
+                <SafeMarkdown
+                  markdown={`Download the [Circuit Playground Express Firmata](${CIRCUIT_PLAYGROUND_EXPRESS_FIRMATA_URL})`}
+                />
+              </li>
+              <li>
+                Copy the '{CIRCUIT_PLAYGROUND_EXPRESS_FIRMATA_FILENAME}' file to
+                the 'CPLAYBOOT' drive on your computer.
+              </li>
+              <li>
+                The Circuit Playground Express will reboot automatically after a
+                few seconds.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <SafeMarkdown
+              markdown={`Return to the [checklist](#${style.connectYourBoardChecklistId}) above, and continue where you left off. The device should be discoverable now that the Firmata firmware is installed.`}
+            />
+          </li>
+        </ol>
       </div>
     );
   }
