@@ -6,6 +6,7 @@
 import {Record} from 'immutable';
 import {DataView} from '../constants';
 
+const UPDATE_TABLE_LIST = 'data/UPDATE_TABLE_LIST';
 const ADD_TABLE_NAME = 'data/ADD_TABLE_NAME';
 const CHANGE_VIEW = 'data/CHANGE_VIEW';
 const DELETE_TABLE_NAME = 'data/DELETE_TABLE_NAME';
@@ -45,6 +46,8 @@ const initialState = new DataState();
 
 export default function (state = initialState, action) {
   switch (action.type) {
+    case UPDATE_TABLE_LIST:
+      return state.set('tableListMap', action.tableListMap);
     case ADD_TABLE_NAME:
       return state.set(
         'tableListMap',
@@ -119,6 +122,11 @@ export default function (state = initialState, action) {
       return state;
   }
 }
+
+export const updateTableList = tableListMap => ({
+  type: UPDATE_TABLE_LIST,
+  tableListMap,
+});
 
 /**
  * Action which adds a table name to the table list map, if it doesn't exist already.

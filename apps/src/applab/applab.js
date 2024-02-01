@@ -47,6 +47,7 @@ import {
   updateTableRecords,
   updateKeyValueData,
   setLibraryManifest,
+  updateTableList,
 } from '../storage/redux/data';
 import {setStepSpeed} from '../redux/runState';
 import {
@@ -852,6 +853,8 @@ function onDataViewChange(view, oldTableName, newTableName) {
     throw new Error('onDataViewChange triggered without data mode enabled');
   }
 
+  console.log('onDataViewChange', view, oldTableName, newTableName);
+
   Applab.storage.unsubscribeFromKeyValuePairs();
   if (oldTableName) {
     Applab.storage.unsubscribeFromTable(oldTableName);
@@ -867,8 +870,6 @@ function onDataViewChange(view, oldTableName, newTableName) {
     }
     case DataView.TABLE: {
       // Triggered when we browse a specific table
-      console.log('view=DataView.TABLE');
-
       Applab.storage.subscribeToTable(
         newTableName,
         columnNames =>
@@ -876,6 +877,33 @@ function onDataViewChange(view, oldTableName, newTableName) {
         records =>
           getStore().dispatch(updateTableRecords(newTableName, records))
       );
+      return;
+    }
+    case DataView.OVERVIEW: {
+      // Initialize redux's list of tables from firebase, and keep it up to date as
+      // new tables are added and removed.
+
+      // FIXME: unfirebase, this should probably key off of
+      // something better than which function exists, e.g.
+      // if (Applab.storage.STORAGE_NAME === 'firebase') {
+      // OR
+      // if (Applab.storage.STORAGE_NAME === firebase.STORAGE_NAME) {
+      if (Applab.storage.subscribeToListOfProjectTables) {
+        // Firebase
+        Applab.storage.subscribeToListOfProjectTables(
+          tableName =>
+            getStore().dispatch(addTableName(tableName, tableType.PROJECT)),
+          tableName => getStore().dispatch(deleteTableName(tableName))
+        );
+      } else {
+        // Datablock Storage
+        Applab.storage.getTableNames().then(tableNames => {
+          const tableListMap = Object.fromEntries(
+            tableNames.map(tableName => [tableName, tableType.PROJECT])
+          );
+          getStore().dispatch(updateTableList(tableListMap));
+        });
+      }
       return;
     }
     default:
@@ -935,13 +963,6 @@ function setupReduxSubscribers(store) {
   });
 
   if (store.getState().pageConstants.hasDataMode) {
-    // Initialize redux's list of tables from firebase, and keep it up to date as
-    // new tables are added and removed.
-    Applab.storage.subscribeToListOfProjectTables(
-      tableName => store.dispatch(addTableName(tableName, tableType.PROJECT)),
-      tableName => store.dispatch(deleteTableName(tableName))
-    );
-
     // Get data library manifest from cdo-v3-shared/v3/channels/shared/metadata/manifest
     Applab.storage
       .getLibraryManifest()

@@ -202,14 +202,25 @@ async function getTableNames() {
   return await response.json();
 }
 
-DatablockStorage.subscribeToListOfProjectTables = function (
-  onTableAdded,
-  onTableRemoved
-) {
-  getTableNames().then(tableNames => {
-    tableNames.forEach(onTableAdded);
-  });
+// DIFFERENCE BETWEEN FIREBASESTORAGE AND DATABLOCKSTORAGE //
+
+// FIREBASE VERSION USES THIS:
+// DatablockStorage.subscribeToListOfProjectTables = function (
+//   onTableAdded,
+//   onTableRemoved
+// ) {
+//   getTableNames().then(tableNames => {
+//     tableNames.forEach(onTableAdded);
+//   });
+// };
+DatablockStorage.subscribeToListOfProjectTables = undefined;
+
+// DATABLOCK STORAGE VERSION USES THIS:
+DatablockStorage.getTableNames = function () {
+  return getTableNames();
 };
+
+// END DIFFERENCE BETWEEN FIREBASESTORAGE AND DATABLOCKSTORAGE //
 
 function loadTableAndColumns({
   tableName,
