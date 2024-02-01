@@ -6,22 +6,14 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
-import {
-  singleton as studioAppSingleton,
-  stubStudioApp,
-  restoreStudioApp,
-} from '@cdo/apps/StudioApp';
 import LearningGoals, {
   clearAnnotations,
-  findCodeRegion,
-  getAnonymizedCode,
   annotateLines,
 } from '@cdo/apps/templates/rubrics/LearningGoals';
 
 describe('LearningGoals', () => {
-  let studioApp;
-  let originalMainBlockSpace;
-  let annotateLineStub,
+  let annotatorStub,
+    annotateLineStub,
     highlightLineStub,
     clearAnnotationsStub,
     clearHighlightedLinesStub;
@@ -71,159 +63,67 @@ describe('LearningGoals', () => {
     draw();
   `;
 
-  const lines = code.split('\n');
-
-  // Stub out our references to the studioApp singleton and editor
+  // Stub out our references to the singleton and editor
   beforeEach(() => {
-    stubStudioApp();
-    studioApp = studioAppSingleton();
-    sinon.stub(studioApp, 'getCode').returns(code);
-    annotateLineStub = sinon.stub(EditorAnnotator.prototype, 'annotateLine');
-    clearAnnotationsStub = sinon.stub(
-      EditorAnnotator.prototype,
-      'clearAnnotations'
-    );
-    highlightLineStub = sinon.stub(EditorAnnotator.prototype, 'highlightLine');
+    let annotatorInstanceStub = sinon.stub();
+    annotatorInstanceStub.getCode = sinon.stub().returns(code);
+    annotatorStub = sinon
+      .stub(EditorAnnotator, 'annotator')
+      .returns(annotatorInstanceStub);
+    annotateLineStub = sinon.stub(EditorAnnotator, 'annotateLine');
+    clearAnnotationsStub = sinon.stub(EditorAnnotator, 'clearAnnotations');
+    highlightLineStub = sinon.stub(EditorAnnotator, 'highlightLine');
     clearHighlightedLinesStub = sinon.stub(
-      EditorAnnotator.prototype,
+      EditorAnnotator,
       'clearHighlightedLines'
     );
   });
   afterEach(() => {
-    studioApp.getCode.restore();
-    EditorAnnotator.prototype.annotateLine.restore();
-    EditorAnnotator.prototype.clearAnnotations.restore();
-    EditorAnnotator.prototype.highlightLine.restore();
-    EditorAnnotator.prototype.clearHighlightedLines.restore();
-    restoreStudioApp();
-  });
-
-  // Necessary stubs for Blockly
-  beforeEach(() => {
-    originalMainBlockSpace = Blockly.blockly_.mainBlockSpace;
-    Blockly.blockly_.mainBlockSpace = {events: {dispatchEvent: () => {}}};
-  });
-  afterEach(() => (Blockly.blockly_.mainBlockSpace = originalMainBlockSpace));
-
-  describe('findCodeRegion', () => {
-    it('returns null for both when the snippet is not found', () => {
-      let snippet = 'var a = 0;';
-      const [lineNumber, lastLineNumber] = findCodeRegion(code, lines, snippet);
-      expect(lineNumber).to.be.null;
-      expect(lastLineNumber).to.be.null;
-    });
-
-    it('returns null for both when the snippet is empty', () => {
-      let snippet = '';
-      const [lineNumber, lastLineNumber] = findCodeRegion(code, lines, snippet);
-      expect(lineNumber).to.be.null;
-      expect(lastLineNumber).to.be.null;
-    });
-
-    it('returns null for both when the snippet is just whitespace', () => {
-      let snippet = ' \n ';
-      const [lineNumber, lastLineNumber] = findCodeRegion(code, lines, snippet);
-      expect(lineNumber).to.be.null;
-      expect(lastLineNumber).to.be.null;
-    });
-
-    it('returns the proper line when the snippet is found', () => {
-      let snippet = 'var y = 6;';
-      const [lineNumber, lastLineNumber] = findCodeRegion(code, lines, snippet);
-      expect(lineNumber).to.equal(3);
-      expect(lastLineNumber).to.equal(3);
-    });
-
-    it('returns the proper lines when the multiline snippet is found', () => {
-      let snippet = 'var x = 5; var y = 6;';
-      const [lineNumber, lastLineNumber] = findCodeRegion(code, lines, snippet);
-      expect(lineNumber).to.equal(2);
-      expect(lastLineNumber).to.equal(3);
-    });
-
-    it('returns the proper lines when the snippet is the last line', () => {
-      let snippet = 'draw();';
-      const [lineNumber, lastLineNumber] = findCodeRegion(code, lines, snippet);
-      expect(lineNumber).to.equal(8);
-      expect(lastLineNumber).to.equal(8);
-    });
-  });
-
-  describe('getAnonymizedCode', () => {
-    it('returns a result of the same length as the input', () => {
-      const result = getAnonymizedCode();
-      expect(result.length).to.equal(code.length);
-    });
-
-    it('returns a result that does not contain the comments', () => {
-      const result = getAnonymizedCode();
-      expect(result).to.not.have.string('// add them together');
-      expect(result).to.not.have.string('var z = x + y');
-      expect(result).to.not.have.string('// code');
-    });
-
-    it('returns a result that does still contain the code', () => {
-      const result = getAnonymizedCode();
-      expect(result).to.have.string('var x = 5');
-      expect(result).to.have.string('var y = 6');
-    });
+    annotatorStub.restore();
+    annotateLineStub.restore();
+    clearAnnotationsStub.restore();
+    highlightLineStub.restore();
+    clearHighlightedLinesStub.restore();
   });
 
   describe('annotateLines', () => {
-    let annotator;
-    beforeEach(() => {
-      annotator = new EditorAnnotator(studioApp);
-    });
-
     it('should do nothing if the AI observation does not reference any lines', () => {
       // The AI tends to misreport the line number, so we shouldn't rely on it
-      annotateLines('This is just a basic observation.', annotator);
+      annotateLines('This is just a basic observation.');
       expect(annotateLineStub.notCalled).to.be.true;
     });
 
     it('should annotate a single line of code referenced by the AI', () => {
       // The AI tends to misreport the line number, so we shouldn't rely on it
-      annotateLines('Line 1: This is a line of code `var x = 5;`', annotator);
+      annotateLines('Line 1: This is a line of code `var x = 5;`');
       sinon.assert.calledWith(annotateLineStub, 2, 'This is a line of code');
     });
 
     it('should annotate the first line of code referenced by the AI', () => {
-      annotateLines(
-        'Line 1: This is a line of code `var x = 5; var y = 6;`',
-        annotator
-      );
+      annotateLines('Line 1: This is a line of code `var x = 5; var y = 6;`');
       sinon.assert.calledWith(annotateLineStub, 2, 'This is a line of code');
     });
 
     it('should highlight a single line of code referenced by the AI', () => {
       // The AI tends to misreport the line number, so we shouldn't rely on it
-      annotateLines(
-        'Line 1: This is a line of code `var x = 5; var y = 6;`',
-        annotator
-      );
+      annotateLines('Line 1: This is a line of code `var x = 5; var y = 6;`');
       sinon.assert.calledWith(highlightLineStub, 2);
     });
 
     it('should highlight all lines of code referenced by the AI', () => {
-      annotateLines(
-        'Line 1: This is a line of code `var x = 5; var y = 6;`',
-        annotator
-      );
+      annotateLines('Line 1: This is a line of code `var x = 5; var y = 6;`');
       sinon.assert.calledWith(highlightLineStub, 2);
       sinon.assert.calledWith(highlightLineStub, 3);
     });
 
     it('should just highlight the lines the AI thinks if the referenced code does not exist', () => {
-      annotateLines('Line 45: This is a line of code `var z = 0`', annotator);
+      annotateLines('Line 45: This is a line of code `var z = 0`');
       sinon.assert.calledWith(annotateLineStub, 45, 'This is a line of code');
       sinon.assert.calledWith(highlightLineStub, 45);
     });
 
     it('should just highlight all of the lines the AI thinks if the referenced code does not exist', () => {
-      annotateLines(
-        'Line 42-44: This is a line of code `var z = 0`',
-        annotator
-      );
+      annotateLines('Line 42-44: This is a line of code `var z = 0`');
       sinon.assert.calledWith(annotateLineStub, 42, 'This is a line of code');
       sinon.assert.calledWith(highlightLineStub, 42);
       sinon.assert.calledWith(highlightLineStub, 43);
@@ -231,29 +131,24 @@ describe('LearningGoals', () => {
     });
 
     it('should annotate the last line of code when referenced by the AI', () => {
-      annotateLines('Line 55: This is a line of code `draw();`', annotator);
+      annotateLines('Line 55: This is a line of code `draw();`');
       sinon.assert.calledWith(annotateLineStub, 8, 'This is a line of code');
     });
 
     it('should highlight the last line of code when referenced by the AI', () => {
-      annotateLines('Line 55: This is a line of code `draw();`', annotator);
+      annotateLines('Line 55: This is a line of code `draw();`');
       sinon.assert.calledWith(highlightLineStub, 8);
     });
 
     it('should ignore code snippets that are empty', () => {
-      annotateLines('Line 42: This is totally a thing ` `', annotator);
+      annotateLines('Line 42: This is totally a thing ` `');
       sinon.assert.notCalled(highlightLineStub);
     });
   });
 
   describe('clearAnnotations', () => {
-    let annotator;
-    beforeEach(() => {
-      annotator = new EditorAnnotator(studioApp);
-    });
-
     it('should clear annotations and clear highlighted lines', () => {
-      clearAnnotations(annotator);
+      clearAnnotations();
       sinon.assert.called(clearAnnotationsStub);
       sinon.assert.called(clearHighlightedLinesStub);
     });

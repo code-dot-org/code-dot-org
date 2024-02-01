@@ -9,7 +9,7 @@ import {
 import annotationList from '@cdo/apps/acemode/annotationList';
 
 describe('EditorAnnotator', () => {
-  let isDropletStub, patchStub;
+  let patchStub;
   let oldEditor, aceSessionStub, aceSessionDocumentStub;
   let dropletStub, dropletSessionStub;
 
@@ -19,6 +19,7 @@ describe('EditorAnnotator', () => {
     studioApp().editor = dropletStub;
 
     dropletStub.aceEditor = sinon.stub();
+    dropletStub.getValue = sinon.stub();
 
     // Stub out the editor session instance
     aceSessionStub = sinon.stub();
@@ -42,9 +43,6 @@ describe('EditorAnnotator', () => {
     EditorAnnotator.reset();
     stubStudioApp();
 
-    // For now, we will just assume all editor contexts are Droplet
-    isDropletStub = sinon.stub(EditorAnnotator, 'isDroplet').returns(true);
-
     // And do not allow patching
     patchStub = sinon.stub(DropletAnnotator.prototype, 'patch').returns(true);
 
@@ -52,7 +50,6 @@ describe('EditorAnnotator', () => {
     stubDroplet();
   });
   afterEach(() => {
-    isDropletStub.restore();
     patchStub.restore();
     restoreDroplet();
     restoreStudioApp();
@@ -74,14 +71,14 @@ describe('EditorAnnotator', () => {
     it('should add the given annotation to the annotation list', () => {
       let message = 'This is a line of code';
       EditorAnnotator.annotateLine(4, message, 'INFO');
-      sinon.assert.calledWith(annotationListStub, 4, 'INFO', message);
+      sinon.assert.calledWith(annotationListStub, 'INFO', 4, message);
     });
   });
 
   describe('clearAnnotations', () => {
-    let annotationListStub, annotationListAttachStub;
+    let annotationListFilterStub, annotationListAttachStub;
     beforeEach(() => {
-      annotationListStub = sinon.stub(
+      annotationListFilterStub = sinon.stub(
         annotationList,
         'filterOutRuntimeAnnotations'
       );
@@ -89,12 +86,117 @@ describe('EditorAnnotator', () => {
     });
     afterEach(() => {
       annotationListAttachStub.restore();
-      annotationListStub.restore();
+      annotationListFilterStub.restore();
     });
 
     it('should tell the annotation list to filter out by the given log type', () => {
       EditorAnnotator.clearAnnotations('ERROR');
-      sinon.assert.calledWith(annotationListStub, 'ERROR');
+      sinon.assert.calledWith(annotationListFilterStub, 'ERROR');
+    });
+  });
+
+  describe('findCodeRegion', () => {
+    const code = `// code
+      var x = 5;
+      var y = 6;
+      // add them together
+      /*
+      var z = x + y;
+      */
+      draw();
+    `;
+
+    beforeEach(() => {
+      dropletStub.getValue = sinon.stub().returns(code);
+    });
+
+    it('returns undefined for both lines when the snippet is not found', () => {
+      let snippet = 'var a = 0;';
+      const result = EditorAnnotator.findCodeRegion(snippet);
+      expect(result.firstLine).to.be.undefined;
+      expect(result.lastLine).to.be.undefined;
+    });
+
+    it('returns undefined for both lines when the snippet is empty', () => {
+      let snippet = '';
+      const result = EditorAnnotator.findCodeRegion(snippet);
+      expect(result.firstLine).to.be.undefined;
+      expect(result.lastLine).to.be.undefined;
+    });
+
+    it('returns undefined for both lines when the snippet is just whitespace', () => {
+      let snippet = ' \n ';
+      const result = EditorAnnotator.findCodeRegion(snippet);
+      expect(result.firstLine).to.be.undefined;
+      expect(result.lastLine).to.be.undefined;
+    });
+
+    it('returns the proper line when the snippet is found', () => {
+      let snippet = 'var y = 6;';
+      const result = EditorAnnotator.findCodeRegion(snippet);
+      expect(result.firstLine).to.equal(3);
+      expect(result.lastLine).to.equal(3);
+    });
+
+    it('returns the proper lines when the multiline snippet is found', () => {
+      let snippet = 'var x = 5; var y = 6;';
+      const result = EditorAnnotator.findCodeRegion(snippet);
+      expect(result.firstLine).to.equal(2);
+      expect(result.lastLine).to.equal(3);
+    });
+
+    it('returns the proper lines when the snippet is the last line', () => {
+      let snippet = 'draw();';
+      const result = EditorAnnotator.findCodeRegion(snippet);
+      expect(result.firstLine).to.equal(8);
+      expect(result.lastLine).to.equal(8);
+    });
+  });
+
+  describe('getCode', () => {
+    const code = `// code
+      var x = 5;
+      var y = 6;
+      // add them together
+      /*
+      var z = x + y;
+      */
+      draw();
+    `;
+
+    beforeEach(() => {
+      dropletStub.getValue = sinon.stub().returns(code);
+    });
+
+    it('returns the code from the editor', () => {
+      const result = EditorAnnotator.getCode();
+      expect(result).to.equal(code);
+    });
+
+    describe('options.stripComments: true', () => {
+      it('returns a result of the same length as the input', () => {
+        const result = EditorAnnotator.getCode({
+          stripComments: true,
+        });
+        expect(result.length).to.equal(code.length);
+      });
+
+      it('returns a result that does not contain the comments', () => {
+        const result = EditorAnnotator.getCode({
+          stripComments: true,
+        });
+        expect(result).to.not.have.string('// add them together');
+        expect(result).to.not.have.string('var z = x + y');
+        expect(result).to.not.have.string('// code');
+      });
+
+      it('returns a result that does still contain the code', () => {
+        const result = EditorAnnotator.getCode({
+          stripComments: true,
+        });
+        expect(result).to.have.string('var x = 5');
+        expect(result).to.have.string('var y = 6');
+      });
     });
   });
 
