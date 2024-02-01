@@ -9,6 +9,7 @@ import shareDialog from '@cdo/apps/code-studio/components/shareDialogRedux';
 import project from '@cdo/apps/code-studio/projectRedux';
 
 export default {
+  title: 'ShareAllowedDialog',
   component: ShareAllowedDialog,
 };
 
