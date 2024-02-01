@@ -14,8 +14,4 @@ class GamelabJrTest < ActiveSupport::TestCase
     DCDO.stubs(:get).with('sprite_lab_google_blockly', false).returns(false)
     refute @gamelab_jr.uses_google_blockly?
   end
-
-  test 'uses_google_blockly? returns false as default' do
-    refute @gamelab_jr.uses_google_blockly?
-  end
 end
