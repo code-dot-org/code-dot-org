@@ -23,7 +23,6 @@ class StorybookHarness extends React.Component {
 }
 
 export default {
-  title: 'SpeedSlider',
   component: SpeedSlider,
 };
 
