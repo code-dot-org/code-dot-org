@@ -15,11 +15,11 @@ function ExpandedProgressDataColumn({
 }) {
   const [expandedChoiceLevels, setExpandedChoiceLevels] = React.useState([]);
 
-  const toggleExpandedChoiceLevel = levelId => {
-    if (expandedChoiceLevels.includes(levelId)) {
-      setExpandedChoiceLevels(expandedChoiceLevels.filter(l => l !== levelId));
-    } else {
-      setExpandedChoiceLevels([...expandedChoiceLevels, levelId]);
+  const toggleExpandedChoiceLevel = level => {
+    if (expandedChoiceLevels.includes(level.id)) {
+      setExpandedChoiceLevels(expandedChoiceLevels.filter(l => l !== level.id));
+    } else if (level?.sublevels?.length > 0) {
+      setExpandedChoiceLevels([...expandedChoiceLevels, level.id]);
     }
   };
 
