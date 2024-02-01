@@ -1,7 +1,7 @@
 import React from 'react';
 import SpeedSlider from './SpeedSlider';
 
-class SpeedSliderHarness extends React.Component {
+class StorybookHarness extends React.Component {
   state = {value: 0.5};
 
   onValueChange = newValue => this.setState({value: newValue});
@@ -27,6 +27,6 @@ export default {
   component: SpeedSlider,
 };
 
-const Template = () => <SpeedSliderHarness />;
+const Template = () => <StorybookHarness />;
 
 export const BasicExample = Template.bind({});
