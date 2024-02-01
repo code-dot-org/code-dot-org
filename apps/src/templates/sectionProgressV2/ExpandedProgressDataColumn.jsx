@@ -11,6 +11,7 @@ import i18n from '@cdo/locale';
 
 function ExpandedProgressDataColumn({
   lesson,
+  sectionId,
   levelProgressByStudent,
   sortedStudents,
   removeExpandedLesson,
@@ -77,6 +78,7 @@ function ExpandedProgressDataColumn({
             {sortedStudents.map(student => (
               <LevelDataCell
                 studentId={student.id}
+                sectionId={sectionId}
                 level={level}
                 studentLevelProgress={
                   levelProgressByStudent[student.id][level.id]
@@ -88,7 +90,7 @@ function ExpandedProgressDataColumn({
         ))}
       </div>
     ),
-    [levelProgressByStudent, sortedStudents, lesson]
+    [levelProgressByStudent, sortedStudents, lesson, sectionId]
   );
 
   return (
@@ -101,6 +103,7 @@ function ExpandedProgressDataColumn({
 
 ExpandedProgressDataColumn.propTypes = {
   sortedStudents: PropTypes.arrayOf(studentShape),
+  sectionId: PropTypes.number,
   levelProgressByStudent: PropTypes.objectOf(
     PropTypes.objectOf(studentLevelProgressType)
   ).isRequired,
