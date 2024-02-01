@@ -1,0 +1,31 @@
+name 'Assessment Levels'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Assessment Levels
+##To ensure our PL is engaging and informative, include opportunities for learners to check their understanding.
+
+
+### **Guidelines**
+* #### Use at least one assessment per lesson 
+* #### Include at least one assessment level per concept that is introduced 
+* #### Vary the type of assessments you use
+* #### Limit the usage of open response levels. Learners cannot get feeback in these PL courses, so open response levels should be limited to reflection questions. 
+
+### ** Exemplar Level Types**
+* #### <a href="https://studio.code.org/s/csp2-2023/lessons/1/levels/5?section_id=4722244">Reflection</a>
+* #### <a href="https://studio.code.org/s/csp2-2023/lessons/6/levels/2?section_id=4722244">Reflection with bullet points</a>
+* #### <a href="https://studio.code.org/s/csp1-2023/lessons/11/levels/2?section_id=4722244">Reflection with shaded text box</a>
+* #### <a href="https://studio.code.org/s/csp2-2023/lessons/3/levels/2?section_id=4722244">Pick two true statements</a>
+* #### <a href="https://studio.code.org/s/csp2-2023/lessons/5/levels/2?section_id=4722244">Multiple Choice</a>
+* #### <a href="https://studio.code.org/s/csp2-2023/lessons/5/levels/3?section_id=4722244">Matching</a>
+* #### <a href="https://studio.code.org/s/csp3-2023/lessons/1/levels/14?section_id=4722244">Matching Vocabulary</a>
+
+
+### **Tips**
+* #### Assessment levels can be used to break up level types. If there is a lot of text, you can use a multiple choice level. 
+* #### If there are a lot of coding levels, you can break up the flow by adding screen shots of different solutions and asking, "Which one would work?" 
+
+
+MARKDOWN
