@@ -5,7 +5,7 @@ import AddTableRow from './AddTableRow';
 import EditTableRow from './EditTableRow';
 import ColumnHeader from './ColumnHeader';
 import DataEntryError from './DataEntryError';
-import FirebaseStorage from '../firebaseStorage';
+import {storageBackend} from '../storage';
 import FontAwesome from '../../templates/FontAwesome';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -59,7 +59,7 @@ class DataTable extends React.Component {
     this.setState({pendingAdd: true});
     // Show the spinner icon before updating the data.
     setTimeout(() => {
-      FirebaseStorage.addColumn(
+      storageBackend().addColumn(
         this.props.tableName,
         columnName,
         () => {
@@ -82,7 +82,7 @@ class DataTable extends React.Component {
     });
     // Show the spinner icon before updating the data.
     setTimeout(() => {
-      FirebaseStorage.deleteColumn(
+      storageBackend().deleteColumn(
         this.props.tableName,
         columnToRemove,
         this.resetColumnState,
@@ -107,7 +107,7 @@ class DataTable extends React.Component {
     // Show the spinner icon before updating the data.
     setTimeout(() => {
       if (this.props.tableName) {
-        FirebaseStorage.renameColumn(
+        storageBackend().renameColumn(
           this.props.tableName,
           oldName,
           newName,
@@ -147,7 +147,7 @@ class DataTable extends React.Component {
     });
     // Show the spinner icon before updating the data.
     setTimeout(() => {
-      FirebaseStorage.coerceColumn(
+      storageBackend().coerceColumn(
         this.props.tableName,
         columnName,
         columnType,

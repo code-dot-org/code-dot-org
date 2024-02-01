@@ -81,6 +81,8 @@ FirebaseStorage.copyStaticTable = function (tableName, onSuccess, onError) {}
 
 /* TESTING RELATED FUNCTIONS */
 
+FirebaseStorage.resetRecordListener = function() {}
+
 // Deletes the entire database for the project, including data and config
 FirebaseStorage.resetForTesting = function () {}
 

@@ -1,7 +1,7 @@
 import ConfirmDeleteButton from './ConfirmDeleteButton';
 import {DataView} from '../constants';
 import EditLink from './EditLink';
-import FirebaseStorage from '../firebaseStorage';
+import {storageBackend} from '../storage';
 import PropTypes from 'prop-types';
 import React from 'react';
 import dataStyles from './data-styles.module.scss';
@@ -19,7 +19,7 @@ class EditTableListRow extends React.Component {
   };
 
   handleDelete = () => {
-    FirebaseStorage.deleteTable(this.props.tableName, this.props.tableType);
+    storageBackend().deleteTable(this.props.tableName, this.props.tableType);
   };
 
   render() {

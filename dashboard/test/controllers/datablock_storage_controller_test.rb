@@ -65,6 +65,56 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_equal [{"name" => 'bob', "age" => 8, "id" => 1}], val
   end
 
+
+  test "get_table_names" do
+    # FIXME: Implement a test for get_table_names
+    assert_equal true, false
+  end
+
+  test "get_key_values" do
+    # FIXME: Implement a test for get_key_values
+    assert_equal true, false
+  end
+
+  test "create_table" do
+  end
+
+  test "delete_table" do
+  end
+
+  test "clear_table" do
+  end
+
+  test "add_column" do
+  end
+
+  test "delete_column" do
+  end
+
+  test "rename_column" do
+  end
+
+  test "coerce_column" do
+  end
+
+  test "import_csv" do
+  end
+
+  test "populate_tables" do
+  end
+
+  test "populate_key_values" do
+  end
+
+  test "get_columns_for_table" do
+  end
+
+  test "clear_all_data" do
+  end
+
+  test "add_shared_table" do
+  end
+
   #   it('cant create more than maxTableCount tables', done => {
   #     FirebaseStorage.createRecord(
   #       'table1',
@@ -1147,52 +1197,4 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   #   });
   # });
 
-  test "get_table_names" do
-    # FIXME: Implement a test for get_table_names
-    assert_equal true, false
-  end
-
-  test "get_key_values" do
-    # FIXME: Implement a test for get_key_values
-    assert_equal true, false
-  end
-
-  test "create_table" do
-  end
-
-  test "delete_table" do
-  end
-
-  test "clear_table" do
-  end
-
-  test "add_column" do
-  end
-
-  test "delete_column" do
-  end
-
-  test "rename_column" do
-  end
-
-  test "coerce_column" do
-  end
-
-  test "import_csv" do
-  end
-
-  test "populate_tables" do
-  end
-
-  test "populate_key_values" do
-  end
-
-  test "get_columns_for_table" do
-  end
-
-  test "clear_all_data" do
-  end
-
-  test "add_shared_table" do
-  end
 end

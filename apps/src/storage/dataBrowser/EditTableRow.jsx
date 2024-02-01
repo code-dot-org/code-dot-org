@@ -1,4 +1,4 @@
-import FirebaseStorage from '../firebaseStorage';
+import {storageBackend} from '../storage';
 import PropTypes from 'prop-types';
 import React from 'react';
 import PendingButton from '../../templates/PendingButton';
@@ -57,7 +57,7 @@ class EditTableRow extends React.Component {
         castValue(inputString, /* allowUnquotedStrings */ false)
       );
       this.setState({isSaving: true});
-      FirebaseStorage.updateRecord(
+      storageBackend().updateRecord(
         this.props.tableName,
         newRecord,
         this.resetState,
@@ -85,7 +85,7 @@ class EditTableRow extends React.Component {
 
   handleDelete = () => {
     this.setState({isDeleting: true});
-    FirebaseStorage.deleteRecord(
+    storageBackend().deleteRecord(
       this.props.tableName,
       this.props.record,
       this.resetState,
