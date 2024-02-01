@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import styles from './progress-table-v2.module.scss';
 import queryString from 'query-string';
 import {Link} from '@dsco_/link';
+import FontAwesome from '../FontAwesome';
 
 const navigateToLevelOverviewUrl = (levelUrl, studentId, sectionId) => {
   if (!levelUrl) {
@@ -29,6 +30,7 @@ export default function LevelDataCell({
   studentId,
   sectionId,
   studentLevelProgress,
+  overrideIcon,
 }) {
   const levelData = React.useMemo(() => {
     if (!studentLevelProgress) {
@@ -44,7 +46,7 @@ export default function LevelDataCell({
       external
       className={classNames(styles.gridBox, styles.gridBoxLevel)}
     >
-      {levelData}
+      {overrideIcon ? <FontAwesome icon={overrideIcon} /> : levelData}
     </Link>
   );
 }
@@ -54,4 +56,5 @@ LevelDataCell.propTypes = {
   sectionId: PropTypes.number,
   studentLevelProgress: studentLevelProgressType,
   level: PropTypes.object.isRequired,
+  overrideIcon: PropTypes.string,
 };
