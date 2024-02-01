@@ -119,7 +119,7 @@ There will be a couple of new levels sprinkled throughout the unit that further 
 
 *The subgoals version of Unit 3 will not be officially ready until October 20.* However, we are finalizing the lessons in order, so earlier lessons should be done a little before Oct. 20. Note that the first lesson addressing subgoals is lesson 4 of the unit -- you can start the unplugged algorithms lessons earlier if you like.
 
-If you want to start earlier, please email [research@code.org](mailto:research@code.org) to verify what is in place and ready to go. Please don't assign the unit to a section before Oct. 20 without checking first. You can track progress of development without assigning the unit by visiting the URL directly. [studio.code.org/s/csp3-research-mxghyt](studio.code.org/s/csp3-research-mxghyt)
+If you want to start earlier, please email [research@code.org](mailto:research@code.org) to verify what is in place and ready to go. Please don't assign the unit to a section before Oct. 20 without checking first. You can track progress of development without assigning the unit by visiting the URL directly. [studio.code.org/s/csp3-research-mxghyt](studio.code.org/s/csp3-research-mxghyt?viewAs=Instructor)
 
 Please respect the fact that we are exposing the subgoals version of Unit 3 slightly ahead of time, so you can take a look at what's there now to get a lay of the land, but know that the unit will not necessarily be stable. You should expect to see changes to the unit leading up to Oct. 20.
 
@@ -149,7 +149,7 @@ Once you activate the subgoals version of Unit 3, it effectively switches you an
 
 From there, they can revisit any code, and even copy/paste into the subgoals version if they like.
 
-As the teacher, your teacher dashboard will always show student progress for the subgoals version only (unless you opt-out of the study, in which case you go back to using the original version of Unit 3). If you need to look at student work that has been done previously in the original version of Unit 3, you can visit the level directly via the URL at [studio.code.org/s/csp3-2017](studio.code.org/s/csp3-2017) and use the blue "teacher tray" to find an individual student's work.
+As the teacher, your teacher dashboard will always show student progress for the subgoals version only (unless you opt-out of the study, in which case you go back to using the original version of Unit 3). If you need to look at student work that has been done previously in the original version of Unit 3, you can visit the level directly via the URL at [studio.code.org/s/csp3-2017](studio.code.org/s/csp3-2017?viewAs=Instructor) and use the blue "teacher tray" to find an individual student's work.
 
 <a name="Can I talk about"> </a>
 
