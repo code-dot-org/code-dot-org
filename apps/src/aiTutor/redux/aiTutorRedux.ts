@@ -35,7 +35,7 @@ const initialState: AITutorState = {
   chatMessageError: false,
 };
 
-interface ChatContext {
+export interface ChatContext {
   levelId?: number;
   systemPrompt: string;
   studentCode: string;
