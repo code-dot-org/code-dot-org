@@ -1,5 +1,6 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
+import {AITutorState} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import ChatMessage from './chatMessage';
 import UserChatMessageEditor from './userChatMessageEditor';
 import style from './ai-tutor.module.scss';
@@ -9,9 +10,11 @@ import WarningModal from './warningModal';
  * Renders the AI Tutor main chat workspace component.
  */
 const ChatWorkspace = () => {
-  const storedMessages = useSelector(state => state.aiTutor.chatMessages);
+  const storedMessages = useSelector(
+    (state: {aiTutor: AITutorState}) => state.aiTutor.chatMessages
+  );
   const isWaitingForChatResponse = useSelector(
-    state => state.aiTutor.isWaitingForChatResponse
+    (state: {aiTutor: AITutorState}) => state.aiTutor.isWaitingForChatResponse
   );
 
   const showWaitingAnimation = () => {

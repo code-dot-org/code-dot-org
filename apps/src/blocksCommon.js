@@ -263,7 +263,7 @@ function installCommentBlock(blockly) {
   Blockly.customBlocks.defineNewBlockGenerator(
     blockly.JavaScript,
     'comment',
-    () => {
+    function () {
       var comment = this.getFieldValue('TEXT');
       return `// ${comment}\n`;
     }

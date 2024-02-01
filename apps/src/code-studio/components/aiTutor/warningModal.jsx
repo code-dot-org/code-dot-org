@@ -14,8 +14,9 @@ const WarningModal = () => {
   const onClose = () => {
     setOpen(false);
   };
-  return (
-    open && (
+
+  if (open) {
+    return (
       <AccessibleDialog onClose={onClose} className={style.chatWarningModal}>
         <Heading2>Remember to chat responsibly!</Heading2>
 
@@ -45,8 +46,10 @@ const WarningModal = () => {
           />
         </div>
       </AccessibleDialog>
-    )
-  );
+    );
+  } else {
+    return null;
+  }
 };
 
 export default WarningModal;

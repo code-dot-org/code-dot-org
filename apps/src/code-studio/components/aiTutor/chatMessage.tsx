@@ -1,36 +1,25 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import style from './ai-tutor.module.scss';
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
+import {Role, Status, ChatCompletionMessage} from '@cdo/apps/aiTutor/types';
 
-const Role = {
-  ASSISTANT: 'assistant',
-  USER: 'user',
-  SYSTEM: 'system',
-};
-
-const Status = {
-  ERROR: 'error',
-  INAPPROPRIATE: 'inappropriate',
-  PROFANITY: 'profanity',
-  OK: 'ok',
-  PERSONAL: 'personal',
-  UNKNOWN: 'unknown',
-};
+interface ChatMessageProps {
+  message: ChatCompletionMessage;
+}
 
 const INAPPROPRIATE_MESSAGE = 'This chat is inappropriate.';
 const TOO_PERSONAL_MESSAGE = 'This chat is too personal.';
 
-const isAssistant = role => {
+const isAssistant = (role: string) => {
   return role === Role.ASSISTANT;
 };
 
-const isUser = role => {
+const isUser = (role: string) => {
   return role === Role.USER;
 };
 
-const displayUserMessage = (status, chatMessageText) => {
+const displayUserMessage = (status: string, chatMessageText: string) => {
   if (status === Status.OK || status === Status.UNKNOWN) {
     return (
       <div className={classNames(style.message, style.userMessage)}>
@@ -60,7 +49,7 @@ const displayUserMessage = (status, chatMessageText) => {
   }
 };
 
-const displayAssistantMessage = (status, chatMessageText) => {
+const displayAssistantMessage = (status: string, chatMessageText: string) => {
   if (status === Status.OK) {
     return (
       <div
@@ -73,7 +62,7 @@ const displayAssistantMessage = (status, chatMessageText) => {
   }
 };
 
-const ChatMessage = ({message}) => {
+const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
   return (
     <div id={`chat-message-id-${message.id}`}>
       {isUser(message.role) && (
@@ -88,7 +77,9 @@ const ChatMessage = ({message}) => {
             className={style.messageHeaderContainer}
             semanticTag="h5"
             visualAppearance="heading-xs"
-          />
+          >
+            ({message.role})
+          </Typography>
           {displayAssistantMessage(message.status, message.chatMessageText)}
         </div>
       )}
@@ -97,12 +88,3 @@ const ChatMessage = ({message}) => {
 };
 
 export default ChatMessage;
-
-ChatMessage.propTypes = {
-  message: PropTypes.shape({
-    id: PropTypes.number,
-    role: PropTypes.string,
-    status: PropTypes.string,
-    chatMessageText: PropTypes.string,
-  }),
-};
