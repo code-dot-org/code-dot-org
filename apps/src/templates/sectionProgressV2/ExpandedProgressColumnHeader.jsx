@@ -39,7 +39,7 @@ export default function ExpandedProgressColumnHeader({
   }, [lesson, expandedChoiceLevels]);
 
   return (
-    <div className={styles.expandedHeader}>
+    <div className={styles.expandedHeader} key={lesson.id}>
       <div
         className={classNames(styles.gridBox, styles.expandedHeaderLessonCell)}
         style={{width}}
