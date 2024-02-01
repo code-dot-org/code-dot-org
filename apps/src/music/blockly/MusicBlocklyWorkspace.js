@@ -85,6 +85,15 @@ export default class MusicBlocklyWorkspace {
     Blockly.svgResize(this.workspace);
   }
 
+  dispose() {
+    if (!this.workspace) {
+      return;
+    }
+
+    this.workspace.dispose();
+    this.workspace = null;
+  }
+
   /**
    * Generates executable JavaScript code for all blocks in the workspace.
    *
@@ -350,7 +359,11 @@ export default class MusicBlocklyWorkspace {
       return;
     }
     this.workspace.clearUndo();
-    Blockly.serialization.workspaces.load(code, this.workspace);
+
+    // Ensure that we have an extensible object for Blockly.
+    const codeCopy = JSON.parse(JSON.stringify(code));
+
+    Blockly.serialization.workspaces.load(codeCopy, this.workspace);
   }
 
   callUserGeneratedCode(fn, args = []) {

@@ -3,8 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Great job! You just debugged a program! 
-## What is debugging?
+# What is debugging?
 
 
 ####**Debugging** in computer science is about finding and fixing bugs, or errors, in code, much like being a computer detective. It's normal for code to have bugs on the first try, so don't worry. Remember, coding and debugging teach **persistence**, which means trying different solutions until you get it right.

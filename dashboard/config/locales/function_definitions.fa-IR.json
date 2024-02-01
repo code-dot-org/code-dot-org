@@ -77,17 +77,17 @@
         },
         "2-3 Artist Functions 11": {
           "draw a hexagon": {
-            "name": "یک شش ضلعی بکش"
+            "name": "یک شش ضلعی بکشید"
           }
         },
         "2-3 Artist Functions 11.5": {
           "draw a hexagon": {
-            "name": "یک شش ضلعی بکش"
+            "name": "یک شش ضلعی بکشید"
           }
         },
         "2-3 Artist Functions 12": {
           "draw a flower": {
-            "name": "یک گل نقاشی بکن"
+            "name": "یک گل بکشید"
           }
         },
         "2-3 Artist Functions 2": {
@@ -107,12 +107,12 @@
         },
         "2-3 Artist Functions 9": {
           "draw a snowflake": {
-            "name": "یک دانه ی برف بکش"
+            "name": "یک دانه برف بکشید"
           }
         },
         "4-5 Artist 3": {
           "draw a flower": {
-            "name": "یک گل نقاشی بکن"
+            "name": "یک گل بکشید"
           }
         },
         "4-5 Artist 6": {
@@ -314,7 +314,7 @@
         },
         "Course 4 SCF 1": {
           "draw a hexagon": {
-            "name": "یک شش ضلعی بکش"
+            "name": "یک شش ضلعی بکشید"
           }
         },
         "Course 4 SCF 1a": {
@@ -1306,7 +1306,7 @@
             "name": "یک کاری بکنید"
           },
           "draw a hexagon": {
-            "name": "یک شش ضلعی بکش",
+            "name": "یک شش ضلعی بکشید",
             "parameters": {
               "length": "طول"
             }
@@ -1440,7 +1440,7 @@
         },
         "NEW Course 4 Artist Params 6": {
           "draw a hexagon": {
-            "name": "یک شش ضلعی بکش",
+            "name": "یک شش ضلعی بکشید",
             "parameters": {
               "length": "طول"
             }
@@ -2167,12 +2167,12 @@
             "name": "یک کاری بکنید"
           },
           "draw a hexagon": {
-            "name": "یک شش ضلعی بکش"
+            "name": "یک شش ضلعی بکشید"
           }
         },
         "courseE_artist_concept1_2018": {
           "draw a hexagon": {
-            "name": "یک شش ضلعی بکش"
+            "name": "یک شش ضلعی بکشید"
           }
         },
         "courseE_artist_concept4": {

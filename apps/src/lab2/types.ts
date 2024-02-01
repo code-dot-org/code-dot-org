@@ -8,6 +8,8 @@
 // The library data should definitely live elsewhere.
 
 import {BlockDefinition} from '@cdo/apps/blockly/types';
+import {PanelsLevelData} from '@cdo/apps/panels/types';
+
 export interface Channel {
   id: string;
   name: string;
@@ -123,7 +125,7 @@ export interface VideoLevelData {
 
 // TODO: Add AichatLevelData.
 
-export type LevelData = ProjectLevelData | VideoLevelData;
+export type LevelData = ProjectLevelData | VideoLevelData | PanelsLevelData;
 
 // A validation condition.
 export interface Condition {
@@ -196,7 +198,9 @@ export type AppName =
   | 'poetry'
   | 'pythonlab'
   | 'spritelab'
-  | 'standalone_video';
+  | 'standalone_video'
+  | 'panels'
+  | 'weblab2';
 
 export type StandaloneAppName =
   | 'spritelab'

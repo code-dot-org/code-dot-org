@@ -224,7 +224,7 @@ export default class SamplePlayer {
   }
 
   async loadSounds(sampleIds: string[], onLoadFinished?: LoadFinishedCallback) {
-    await this.soundCache.loadSounds(sampleIds, {
+    return this.soundCache.loadSounds(sampleIds, {
       updateLoadProgress: this.updateLoadProgress,
       onLoadFinished,
     });

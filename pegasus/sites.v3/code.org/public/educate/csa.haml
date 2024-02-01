@@ -13,7 +13,7 @@ theme: responsive_full_width
         =hoc_s(:curriculum_name_csa)
       %p.has-external-link{style: "color: white"}
         =hoc_s(:csa_page_top_desc, markdown: :inline, locals: {csa_url: "https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description.pdf?course=ap-computer-science-a"})
-      %a.link-button.white{href: CDO.studio_url("/courses/csa-2023?viewAs=Instructor")}
+      %a.link-button.white{href: CDO.studio_url("/courses/csa?viewAs=Instructor")}
         =hoc_s(:call_to_action_explore_course)
     %figure
       %img{src: "/images/banners/banner-csa-student-code-paint.png", alt: ""}
@@ -30,7 +30,7 @@ theme: responsive_full_width
         %li=hoc_s(:csa_page_intro_list_03)
         %li=hoc_s(:csa_page_intro_list_04)
         %li=hoc_s(:csa_page_intro_list_05)
-      %a.link-button{href: CDO.studio_url("/courses/csa-2023?viewAs=Instructor")}
+      %a.link-button{href: CDO.studio_url("/courses/csa?viewAs=Instructor")}
         =hoc_s(:call_to_action_explore_course)
     .clear
 
@@ -56,7 +56,7 @@ theme: responsive_full_width
 
 %section.bg-neutral-light
   .wrapper
-    = view :"tabs_section/resources/resources_tabs"
+    = view :"tabs_section/resources/resources_tabs", resources_heading: hoc_s(:resources_tabs_heading), resources_desc: hoc_s(:resources_tabs_desc, markdown: :inline, locals: {sign_up_url: CDO.studio_url("/users/sign_up")})
 
 %section
   .wrapper

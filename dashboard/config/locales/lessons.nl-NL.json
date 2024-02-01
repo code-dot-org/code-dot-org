@@ -1333,6 +1333,234 @@
         },
         "express-2023/End of Course Project": {
           "name": "Project aan het einde van de cursus"
+        },
+        "coursec-2017/Debugging in Maze": {
+          "name": "Doolhof-Debugging"
+        },
+        "coursee-2017/Debugging with Scrat": {
+          "name": "Debugging met Scrat"
+        },
+        "coursef-2017/Debugging with Scrat": {
+          "name": "Debugging met Scrat"
+        },
+        "coursea-2018/Programming in Maze": {
+          "name": "Programmeren met Angry Birds"
+        },
+        "coursec-2018/Programming in Maze": {
+          "name": "Programmeren met Angry Birds"
+        },
+        "coursec-2018/Debugging in Maze": {
+          "name": "Doolhof-Debugging"
+        },
+        "coursec-2018/Programming in Collector": {
+          "name": "Schatten Verzamelen met Laurel"
+        },
+        "coursec-2018/Programming in Artist": {
+          "name": "Kunst maken met Code"
+        },
+        "coursee-2018/Debugging with Scrat": {
+          "name": "Debugging met Scrat"
+        },
+        "coursee-2018/Programming in Artist": {
+          "name": "Kunst maken met Code"
+        },
+        "coursef-2018/Debugging with Scrat": {
+          "name": "Debugging met Scrat"
+        },
+        "coursef-2018/Programming in Artist": {
+          "name": "Kunst maken met Code"
+        },
+        "express-2018/Debugging in Maze": {
+          "name": "Debugging met Scrat"
+        },
+        "express-2018/Programming in Collector": {
+          "name": "Schatten Verzamelen met Laurel"
+        },
+        "express-2018/Programming in Artist": {
+          "name": "Kunst maken met Code"
+        },
+        "courseb-2019/Programming in Maze": {
+          "name": "Programmeren met Angry Birds"
+        },
+        "coursec-2019/Programming in Maze": {
+          "name": "Programmeren met Angry Birds"
+        },
+        "coursec-2019/Debugging in Maze": {
+          "name": "Doolhof-Debugging"
+        },
+        "coursec-2019/Programming in Collector": {
+          "name": "Schatten Verzamelen met Laurel"
+        },
+        "coursec-2019/Programming in Artist": {
+          "name": "Kunst maken met Code"
+        },
+        "coursee-2019/Learning Sprites with Sprite Lab": {
+          "name": "Zwemmende Vissen in Sprite Lab"
+        },
+        "coursef-2019/Learning Sprites with Sprite Lab": {
+          "name": "Zwemmende Vissen in Sprite Lab"
+        },
+        "express-2019/Programming in Maze": {
+          "name": "Programmeren met Angry Birds"
+        },
+        "express-2019/Debugging in Maze": {
+          "name": "Debugging met Scrat"
+        },
+        "express-2019/Programming in Collector": {
+          "name": "Schatten Verzamelen met Laurel"
+        },
+        "express-2019/Programming in Artist": {
+          "name": "Kunst maken met Code"
+        },
+        "express-2019/Learning Sprites with Sprite Lab": {
+          "name": "Zwemmende Vissen in Sprite Lab"
+        },
+        "pre-express-2019/Programming in Maze": {
+          "name": "Programmeren met Angry Birds"
+        },
+        "courseb-2020/Programming in Maze": {
+          "name": "Programmeren met Angry Birds"
+        },
+        "coursec-2020/Programming in Maze": {
+          "name": "Programmeren met Angry Birds"
+        },
+        "coursec-2020/Debugging in Maze": {
+          "name": "Doolhof-Debugging"
+        },
+        "coursec-2020/Programming in Collector": {
+          "name": "Schatten Verzamelen met Laurel"
+        },
+        "coursec-2020/Programming in Artist": {
+          "name": "Kunst maken met Code"
+        },
+        "coursee-2020/Learning Sprites with Sprite Lab": {
+          "name": "Zwemmende Vissen in Sprite Lab"
+        },
+        "coursef-2020/Learning Sprites with Sprite Lab": {
+          "name": "Zwemmende Vissen in Sprite Lab"
+        },
+        "express-2020/Programming with Angry Birds": {
+          "name": "Programmeren met Angry Birds"
+        },
+        "express-2020/Debugging with Scrat": {
+          "name": "Debugging met Scrat"
+        },
+        "express-2020/Collecting Treasure with Laurel": {
+          "name": "Schatten Verzamelen met Laurel"
+        },
+        "express-2020/Creating Art with Code": {
+          "name": "Kunst maken met Code"
+        },
+        "express-2020/Swimming Fish in Sprite Lab": {
+          "name": "Zwemmende Vissen in Sprite Lab"
+        },
+        "courseb-2021/Programming in Maze": {
+          "name": "Programmeren met Angry Birds"
+        },
+        "coursec-2021/Programming in Maze": {
+          "name": "Programmeren met Angry Birds"
+        },
+        "coursec-2021/Debugging in Maze": {
+          "name": "Doolhof-Debugging"
+        },
+        "coursec-2021/Programming in Collector": {
+          "name": "Schatten Verzamelen met Laurel"
+        },
+        "coursec-2021/Programming in Artist": {
+          "name": "Kunst maken met Code"
+        },
+        "coursee-2021/Learning Sprites with Sprite Lab": {
+          "name": "Zwemmende Vissen in Sprite Lab"
+        },
+        "express-2021/Programming with Angry Birds": {
+          "name": "Programmeren met Angry Birds"
+        },
+        "express-2021/Debugging with Scrat": {
+          "name": "Doolhof-Debugging"
+        },
+        "express-2021/Collecting Treasure with Laurel": {
+          "name": "Schatten Verzamelen met Laurel"
+        },
+        "express-2021/Creating Art with Code": {
+          "name": "Kunst maken met Code"
+        },
+        "express-2021/Swimming Fish in Sprite Lab": {
+          "name": "Zwemmende Vissen in Sprite Lab"
+        },
+        "pre-express-2021/Programming in with Angry Birds": {
+          "name": "Programmeren met Angry Birds"
+        },
+        "courseb-2022/Programming with Angry Birds": {
+          "name": "Programmeren met Angry Birds"
+        },
+        "coursec-2022/Programming with Angry Birds": {
+          "name": "Programmeren met Angry Birds"
+        },
+        "coursec-2022/Debugging in Maze": {
+          "name": "Doolhof-Debugging"
+        },
+        "coursec-2022/Collecting Treasure with Laurel": {
+          "name": "Schatten Verzamelen met Laurel"
+        },
+        "coursec-2022/Creating Art with Code": {
+          "name": "Kunst maken met Code"
+        },
+        "coursee-2022/Swimming Fish with Sprite Lab": {
+          "name": "Zwemmende Vissen in Sprite Lab"
+        },
+        "express-2022/Programming with Angry Birds": {
+          "name": "Programmeren met Angry Birds"
+        },
+        "express-2022/Debugging in Maze": {
+          "name": "Doolhof-Debugging"
+        },
+        "express-2022/Collecting Treasure with Laurel": {
+          "name": "Schatten Verzamelen met Laurel"
+        },
+        "express-2022/Creating Art with Code": {
+          "name": "Kunst maken met Code"
+        },
+        "express-2022/Swimming Fish in Sprite Lab": {
+          "name": "Zwemmende Vissen in Sprite Lab"
+        },
+        "pre-express-2022/Programming with Angry Birds": {
+          "name": "Programmeren met Angry Birds"
+        },
+        "courseb-2023/Programming with Angry Birds": {
+          "name": "Programmeren met Angry Birds"
+        },
+        "coursec-2023/Programming with Angry Birds": {
+          "name": "Programmeren met Angry Birds"
+        },
+        "coursec-2023/Debugging in Maze": {
+          "name": "Doolhof-Debugging"
+        },
+        "coursec-2023/Collecting Treasure with Laurel": {
+          "name": "Schatten Verzamelen met Laurel"
+        },
+        "coursec-2023/Creating Art with Code": {
+          "name": "Kunst maken met Code"
+        },
+        "coursee-2023/Swimming Fish with Sprite Lab": {
+          "name": "Zwemmende Vissen in Sprite Lab"
+        },
+        "express-2023/Programming with Angry Birds": {
+          "name": "Programmeren met Angry Birds"
+        },
+        "express-2023/Debugging in Maze": {
+          "name": "Doolhof-Debugging"
+        },
+        "express-2023/Collecting Treasure with Laurel": {
+          "name": "Schatten Verzamelen met Laurel"
+        },
+        "express-2023/Creating Art with Code": {
+          "name": "Kunst maken met Code"
+        },
+        "express-2023/Swimming Fish in Sprite Lab": {
+          "name": "Zwemmende Vissen in Sprite Lab"
+        },
+        "pre-express-2023/Programming with Angry Birds": {
+          "name": "Programmeren met Angry Birds"
         }
       }
     }

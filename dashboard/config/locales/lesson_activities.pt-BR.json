@@ -4215,7 +4215,7 @@
           "name": "Atividade principal"
         },
         "339d5151-756f-4b66-b647-0f86a1dce7f9": {
-          "name": "Resumo"
+          "name": "Fechamento"
         },
         "6f4b672d-72d5-4edf-9e0d-ccaf4845b3fe": {
           "name": "Aprendizagem complementar"
@@ -7179,7 +7179,7 @@
           "name": "Atividade principal"
         },
         "07fd7769-b0ad-43eb-b0d1-ea4ccfac4baf": {
-          "name": "Resumo"
+          "name": "Fechamento"
         },
         "7d5ce6e6-0282-4347-bbe7-f2c0ad21afb9": {
           "name": "Aprendizagem complementar"
@@ -10578,7 +10578,7 @@
           "name": "Atividade principal"
         },
         "0b6f70be-8a13-47dd-9c9b-f5190c96ba91": {
-          "name": "Resumo"
+          "name": "Fechamento"
         },
         "70d12ec7-9785-409f-95a0-0834a7eef911": {
           "name": "Aprendizagem complementar"
@@ -12039,7 +12039,7 @@
           "name": "Atividade"
         },
         "43adefdf-69ed-4963-94a3-1d839fb2b095": {
-          "name": "Resumo"
+          "name": "Fechamento"
         },
         "d8cda069-d77f-4119-8651-bf9a20cbca42": {
           "name": "Depois da Lição"
@@ -12081,7 +12081,7 @@
           "name": "Como funciona a IA"
         },
         "265a85af-f85f-48e3-b17d-79dc9a229695": {
-          "name": "O que é Machine Learning?"
+          "name": "O que é Aprendizado de Máquina?"
         },
         "15ce8356-ae91-4918-9c0b-2c9e456efa4c": {
           "name": "Dados de Treinamento e Vieses"

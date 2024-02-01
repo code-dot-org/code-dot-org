@@ -7,9 +7,8 @@ module I18n
     class CrowdinClient
       RequestError = Class.new(StandardError)
 
-      CREDENTIALS_PATH = CDO.dir('bin/i18n/crowdin_credentials.yml').freeze
-      PROJECT_IDS = CDO.crowdin_project_ids.freeze
       MAX_ITEMS_COUNT = Crowdin::Web::FetchAllExtensions::MAX_ITEMS_COUNT_PER_REQUEST.freeze
+      MAX_CONCURRENT_REQUESTS = 20 # https://developer.crowdin.com/api/v2/#section/Introduction/Rate-Limits
       REQUEST_RETRY_ATTEMPTS = 2 # Number of retries for a failed request
       REQUEST_RETRY_DELAY = 2 # Number of seconds to wait before retrying a failed request
       RETRIABLE_ERRORS = [
@@ -19,26 +18,24 @@ module I18n
         '503 Service Unavailable',
       ].freeze # Request errors to retry
 
-      def initialize(project)
-        raise ArgumentError, 'project is invalid' unless PROJECT_IDS[project]
+      # @param project [String] the Crowdin project name, one of the `CDO.crowdin_projects` keys
+      def initialize(project:)
+        raise ArgumentError, 'project is invalid' unless CDO.crowdin_projects.key?(project)
 
         @project = project
 
         @client = ::Crowdin::Client.new do |config|
-          config.api_token = YAML.load_file(CREDENTIALS_PATH)['api_token']
-          config.project_id = PROJECT_IDS[project]
+          config.api_token = I18nScriptUtils.crowdin_creds['api_token']
+          config.project_id = CDO.crowdin_projects.dig(project, 'id')
         end
       end
 
       # Creates the Crowdin directory for the given i18n source directory path
       # https://developer.crowdin.com/api/v2/#operation/api.projects.directories.post
       #
-      # @param dir_path [String] the i18n source directory path
+      # @param crowdin_dir_path [String] the absolute Crowdin source directory path, e.g "/course_content/2017"
       # return [Hash, nil] the created Crowdin source directory data
-      def add_source_directory(dir_path)
-        crowdin_dir_path = crowdin_source_path(dir_path)
-        return if crowdin_dir_path.empty?
-
+      def add_source_directory(crowdin_dir_path)
         crowdin_dir_name = crowdin_source_name(crowdin_dir_path)
         return if crowdin_dir_name.empty?
 
@@ -51,12 +48,9 @@ module I18n
       # Retrieves the Crowdin source directory data of the given i18n source directory path
       # https://developer.crowdin.com/api/v2/#operation/api.projects.directories.getMany
       #
-      # @param dir_path [String] the i18n source directory path
+      # @param crowdin_dir_path [String] the absolute Crowdin source directory path, e.g "/course_content/2017"
       # @return [Hash, nil] the Crowdin source directory data
-      def get_source_directory(dir_path)
-        crowdin_dir_path = crowdin_source_path(dir_path)
-        return if crowdin_dir_path.empty?
-
+      def get_source_directory(crowdin_dir_path)
         crowdin_dir_name = crowdin_source_name(crowdin_dir_path)
         return if crowdin_dir_name.empty?
 
@@ -79,11 +73,10 @@ module I18n
       # Retrieves the Crowdin source file data of the given i18n source file path
       # https://developer.crowdin.com/api/v2/#operation/api.projects.files.getMany
       #
-      # @param file_path [String] the i18n source file path
+      # @param crowdin_file_path [String] the Crowdin source file path, e.g. "/course_content/2017/coursea-2017.json"
       # @return [Hash, nil] the Crowdin source file data
-      def get_source_file(file_path)
-        crowdin_file_name = crowdin_source_name(file_path)
-        crowdin_file_path = crowdin_source_path(file_path)
+      def get_source_file(crowdin_file_path)
+        crowdin_file_name = crowdin_source_name(crowdin_file_path)
 
         request_offset = 0
         crowdin_file = nil
@@ -117,12 +110,12 @@ module I18n
       # https://developer.crowdin.com/api/v2/#operation/api.projects.files.put
       #
       # @param file_path [String] the i18n source file path
+      # @param crowdin_dir_path [String] the absolute Crowdin source file path, e.g. "/course_content/2017"
       # @return [Hash] the Crowdin source file data
-      def upload_source_file(file_path)
+      def upload_source_file(file_path, crowdin_dir_path = File::SEPARATOR)
         crowdin_storage = add_storage(file_path)
         crowdin_storage_id = crowdin_storage['id']
-
-        crowdin_file = get_source_file(file_path)
+        crowdin_file = get_source_file File.join(crowdin_dir_path, crowdin_storage['fileName'])
 
         if crowdin_file
           request(
@@ -131,7 +124,7 @@ module I18n
             storageId: crowdin_storage_id,
           )['data']
         else
-          crowdin_directory = source_directory File.dirname(file_path)
+          crowdin_directory = source_directory(crowdin_dir_path)
 
           request(
             :add_file,
@@ -144,18 +137,32 @@ module I18n
         request(:delete_storage, crowdin_storage_id) if crowdin_storage_id
       end
 
+      # Uploads the given i18n source files to Crowdin project
+      #
+      # @param source_files [Array<String>] the i18n source file paths
+      # @param :base_path [String] the i18n source base path
+      # @yield [Hash] the uploaded Crowdin source file data
+      # @return [Array<Hash>] the Crowdin source files data
+      def upload_source_files(source_files, base_path:)
+        source_files_data = []
+
+        mutex = Thread::Mutex.new
+        I18nScriptUtils.process_in_threads(source_files, in_threads: MAX_CONCURRENT_REQUESTS) do |source_file_path|
+          crowdin_file_path = File.join File::SEPARATOR, source_file_path.delete_prefix(base_path)
+          crowdin_dir_path = File.dirname(crowdin_file_path)
+
+          source_file_data = upload_source_file(source_file_path, crowdin_dir_path)
+
+          mutex.synchronize {yield source_file_data} if block_given?
+          mutex.synchronize {source_files_data << source_file_data}
+        end
+
+        source_files_data
+      end
+
       private
 
       attr_reader :project, :client
-
-      def crowdin_source_path(source_path)
-        path = source_path.delete_prefix(CDO.dir).split(I18N_SOURCE_DIR).last || ''
-
-        path = File.join(File::SEPARATOR, path)
-        path = path.delete_suffix(File::SEPARATOR)
-
-        path
-      end
 
       def crowdin_source_name(source_path)
         File.basename(source_path).remove(File::SEPARATOR)
@@ -163,20 +170,26 @@ module I18n
 
       # Retrieves an existing Crowdin source directory or creates a new one if not found
       # Stores the directory data in an instance variable to avoid unnecessary API calls
-      def source_directory(dir_path)
-        @source_directories ||= {}
+      #
+      # @param crowdin_dir_path [String] the absolute Crowdin source directory path, e.g "/course_content/2017"
+      # @return [Hash, nil] the Crowdin source directory data
+      def source_directory(crowdin_dir_path)
+        return if crowdin_dir_path.empty? || crowdin_dir_path == File::SEPARATOR
 
-        crowdin_dir_path = crowdin_source_path(dir_path)
+        @source_directories ||= {}
         return @source_directories[crowdin_dir_path] if @source_directories.key?(crowdin_dir_path)
 
-        @source_directories[crowdin_dir_path] = get_source_directory(dir_path) || add_source_directory(dir_path)
+        @source_directories[crowdin_dir_path] ||= get_source_directory(crowdin_dir_path)
+        @source_directories[crowdin_dir_path] ||= add_source_directory(crowdin_dir_path)
+
+        @source_directories[crowdin_dir_path]
       rescue RequestError => exception
         # request errors:
         # - "directory[parallelCreation]: Already creating directory..."
         # - "name[notUnique]: Invalid name given. Name must be unique"
         # indicate that the directory is creating/created by another concurrent process, so we can try to get it again.
         if ['Already creating directory', 'Name must be unique'].any? {|error| exception.message.include?(error)}
-          @source_directories[crowdin_dir_path] ||= get_source_directory(dir_path)
+          @source_directories[crowdin_dir_path] ||= get_source_directory(crowdin_dir_path)
         else
           raise exception
         end

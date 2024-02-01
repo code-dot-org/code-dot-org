@@ -91,6 +91,7 @@ import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {closeWorkspaceAlert} from './code-studio/projectRedux';
+import KeyHandler from './util/KeyHandler';
 
 var copyrightStrings;
 
@@ -242,6 +243,11 @@ class StudioApp extends EventEmitter {
      * Stores the code at run. It's undefined if the code is not running.
      */
     this.executingCode = undefined;
+
+    /**
+     * Global key handler for the app.
+     */
+    this.keyHandler = new KeyHandler(document);
   }
 }
 /**
@@ -2097,6 +2103,13 @@ StudioApp.prototype.configureDom = function (config) {
   if (runButton && resetButton) {
     dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
     dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
+    this.keyHandler.registerEvent(['Control', 'Enter'], () => {
+      if (this.isRunning()) {
+        this.resetButtonClick();
+      } else {
+        throttledRunClick();
+      }
+    });
   }
   var skipButton = container.querySelector('#skipButton');
   if (skipButton) {

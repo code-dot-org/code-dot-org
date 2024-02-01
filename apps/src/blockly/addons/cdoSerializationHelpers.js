@@ -3,10 +3,13 @@ import {WORKSPACE_PADDING, SETUP_TYPES} from '../constants';
 import {frameSizes} from './cdoConstants';
 import {shouldSkipHiddenWorkspace} from '../utils';
 
-const {BLOCK_HEADER_HEIGHT, MARGIN_BOTTOM, MARGIN_SIDE, MARGIN_TOP} =
-  frameSizes;
+const {
+  BLOCK_HEADER_HEIGHT,
+  MARGIN_BOTTOM,
+  MARGIN_SIDE: SVG_FRAME_SIDE_PADDING,
+  MARGIN_TOP,
+} = frameSizes;
 const SVG_FRAME_HEIGHT = BLOCK_HEADER_HEIGHT + MARGIN_TOP + MARGIN_BOTTOM;
-const SVG_FRAME_SIDE_PADDING = MARGIN_SIDE;
 const SVG_FRAME_TOP_PADDING = BLOCK_HEADER_HEIGHT + MARGIN_TOP;
 const SORT_BY_POSITION = true;
 const VERTICAL_SPACE_BETWEEN_BLOCKS = 10;
@@ -30,11 +33,18 @@ function getXCoordinate(block, workspace) {
   const padding = viewWidth ? WORKSPACE_PADDING : 0;
   const width = viewWidth || contentWidth;
 
-  // Multiplier accounts for the fact that blocks with SVG frames need twice as much padding
-  // so their edges don't touch the edge of the workspace
-  let horizontalOffset = block.functionalSvg_ ? 2 * padding : padding;
+  // SVG frames need additional padding so their edges don't touch the edge of the workspace
+  let horizontalOffset = block.functionalSvg_
+    ? SVG_FRAME_SIDE_PADDING + padding
+    : padding;
   // If the workspace is RTL, horizontally mirror the starting position
   return workspace.RTL ? width - horizontalOffset : horizontalOffset;
+}
+
+function getYCoordinate(block) {
+  return block.functionalSvg_
+    ? WORKSPACE_PADDING + SVG_FRAME_TOP_PADDING
+    : WORKSPACE_PADDING;
 }
 
 /**
@@ -126,16 +136,25 @@ function adjustBlockPositions(blocks, workspace) {
   let orderedColliders = [];
   let blocksToPlace = [];
   blocks.forEach(block => {
-    if (isBlockLocationUnset(block)) {
+    if (isBlockAtEdge(block)) {
       blocksToPlace.push(block);
     } else {
       insertCollider(orderedColliders, getCollider(block));
     }
   });
 
+  const {defaultX, defaultY} = getDefaultLocation(workspace);
   blocksToPlace.forEach(block => {
-    let x = getXCoordinate(block, workspace);
-    let y = WORKSPACE_PADDING;
+    let {x, y} = block.getRelativeToSurfaceXY();
+
+    // Don't overwrite x- (or y-) coordinate if it is set to something other than the default
+    // This retains partially positioned blocks (with either an x- or y-coordinate set)
+    if (x === defaultX) {
+      x = getXCoordinate(block, workspace);
+    }
+    if (y === defaultY) {
+      y = getYCoordinate(block);
+    }
 
     // Set initial position; collision area must be updated to account for new position
     // every time block is moved
@@ -224,14 +243,14 @@ export function isOverlapping(collider1, collider2) {
 }
 
 /**
- * Determines whether a block needs to be repositioned, based on its current position.
+ * Determines whether a block is positioned at the edge of the workspace.
  * @param {Blockly.Block} block - the block being considered
- * @returns {boolean} - true if the block is at the top corner of the workspace
+ * @returns {boolean} - true if the block is at the edge of the workspace
  */
-export function isBlockLocationUnset(block) {
+export function isBlockAtEdge(block) {
   const {defaultX, defaultY} = getDefaultLocation(block.workspace);
   const {x = 0, y = 0} = block.getRelativeToSurfaceXY();
-  return x === defaultX && y === defaultY;
+  return x === defaultX || y === defaultY;
 }
 
 export const getDefaultLocation = workspaceOverride => {

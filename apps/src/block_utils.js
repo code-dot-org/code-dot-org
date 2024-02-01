@@ -455,10 +455,11 @@ exports.appendNewFunctions = function (blocksXml, functionsXml) {
       startBlocksDocument.evaluate(
         // Ignore namespaces. Find blocks of type e.g. behavior_definition
         // Shared behavior name will either be in the mutation (Google Blockly)
-        // or the name field (CDO Blockly)
+        // or the name field/title (CDO Blockly)
         `//*[local-name()="block" and @type="${type}"]/*` +
           `[self::*[local-name()="mutation" and @behaviorId="${name}"] or ` +
-          `self::*[local-name()="field" and @id="${name}"]]`,
+          `self::*[(local-name()="title" or local-name()="field") and (@id="${name}" or .="${name}")]
+        ]`,
         startBlocksDom,
         null,
         XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
@@ -1072,17 +1073,23 @@ exports.createJsWrapperBlockCreator = function (
     blockly.Blocks[blockName] = {
       helpUrl: getHelpUrl(docFunc), // optional param
       init: function () {
-        // Styles should be used over hard-coded colors in Google Blockly blocks
-        if (style && this.setStyle) {
+        // All Google Blockly blocks must have a style in order to be compatible with themes.
+        // However, blocks with just a color and no style are still permitted.
+        if (style) {
+          // Google Blockly method. No-op for CDO Blockly.
           this.setStyle(style);
-        } else if (color) {
+        }
+        // CDO Blockly uses colors, not styles. However, the color may be determined
+        // automatically based on a block's returnType (e.g. yellow for "Location").
+        if (color) {
           Blockly.cdoUtils.setHSV(this, ...color);
         } else if (!returnType) {
-          if (this.setStyle) {
-            this.setStyle('default');
-          } else {
-            Blockly.cdoUtils.setHSV(this, ...DEFAULT_COLOR);
-          }
+          // CDO Blockly assigns colors to blocks with an output connection based on return type.
+          // See Blockly.Connection.prototype.colorForType
+          // Blocks with neither style or color that do not have a return type can
+          // use the default teal color and style.
+          Blockly.cdoUtils.setHSV(this, ...DEFAULT_COLOR);
+          this.setStyle(style || 'default');
         }
 
         if (returnType) {
@@ -1128,13 +1135,8 @@ exports.createJsWrapperBlockCreator = function (
             flyoutToggleButton
           );
         }
+        // Blockly.customBlocks.(this);
       },
-      // The following generic mutator functions are only used by Google Blockly
-      // and are intentionally undefined for CDO Blockly.
-      mutationToDom: Blockly.customBlocks.mutationToDom,
-      domToMutation: Blockly.customBlocks.domToMutation,
-      saveExtraState: Blockly.customBlocks.saveExtraState,
-      loadExtraState: Blockly.customBlocks.loadExtraState,
     };
 
     generator[blockName] = function () {

@@ -11,12 +11,21 @@ export const blocks = {
     // text_join is included with core Blockly. We register a custom text_join_mutator
     // which adds the plus/minus block UI.
     blockly.Blocks.text_join_simple = blockly.Blocks.text_join;
-    blockly.JavaScript.text_join_simple = blockly.JavaScript.text_join;
+    blockly.JavaScript.forBlock.text_join_simple =
+      blockly.JavaScript.forBlock.text_join;
+  },
+  copyBlockGenerator(generator, type1, type2) {
+    generator.forBlock[type1] = generator.forBlock[type2];
+  },
+  defineNewBlockGenerator(generator, type, generatorFunction) {
+    generator.forBlock[type] = generatorFunction;
   },
   mutationToDom() {
     var container = Blockly.utils.xml.createElement('mutation');
     mutatorProperties.forEach(prop => {
-      container.setAttribute(prop, this[prop]);
+      if (this[prop]) {
+        container.setAttribute(prop, this[prop]);
+      }
     });
     return container;
   },
@@ -43,7 +52,9 @@ export const blocks = {
   saveExtraState() {
     let state = {};
     mutatorProperties.forEach(prop => {
-      state[prop] = this[prop];
+      if (this[prop]) {
+        state[prop] = this[prop];
+      }
     });
     return state;
   },
@@ -51,6 +62,21 @@ export const blocks = {
     for (var prop in state) {
       this[prop] = state[prop];
       mutatorProperties.indexOf(prop) === -1 && mutatorProperties.push(prop);
+    }
+  },
+  // Global function to handle serialization hooks
+  addSerializationHooksToBlock(block) {
+    if (!block.mutationToDom) {
+      block.mutationToDom = this.mutationToDom;
+    }
+    if (!block.domToMutation) {
+      block.domToMutation = this.domToMutation;
+    }
+    if (!block.saveExtraState) {
+      block.saveExtraState = this.saveExtraState;
+    }
+    if (!block.loadExtraState) {
+      block.loadExtraState = this.loadExtraState;
     }
   },
 };
