@@ -113,17 +113,29 @@
 <% if database-%>
 # We don't yet provision the production database cluster/instances via CloudFormation, but we're incrementally
 # working towards that. Start with provisioning the DB Instance and Cluster ParameterGroups via this template.
-<%
-    YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb'))).each do |key, values|
--%>
-  <%=key%>DBParameters:
-    Type: AWS::RDS::DB<%=key.match('Cluster')%>ParameterGroup
+  AuroraClusterDBParameters:
+    Type: AWS::RDS::DBClusterParameterGroup
     Properties:
-      Description: !Sub "<%=key.titleize%> DB Parameters for ${AWS::StackName}."
+      Description: !Sub "Aurora Cluster DB Parameters for ${AWS::StackName}."
       Family: aurora-mysql8.0
-      Parameters: <%=values.compact.to_json%>
-<%  end -%>
-
+      Parameters:
+        # TODO: separate the Static and Dynamic Parameters, so we know which template updates will trigger db restart.
+        binlog_format: 'OFF'
+        gtid-mode: ON_PERMISSIVE
+        slow_query_log: 1
+        innodb_monitor_enable: all
+        innodb_autoinc_lock_mode: 2
+        innodb_flush_log_at_trx_commit: 0
+  AuroraWriterDBParameters:
+    Type: AWS::RDS::DBParameterGroup
+    Properties:
+      Description: !Sub "Aurora Writer DB Parameters for ${AWS::StackName}."
+      Family: aurora-mysql8.0
+      Parameters:
+        # TODO: separate the Static and Dynamic Parameters, so we know which template updates will trigger db restart.
+        max_execution_time: 30000
+        performance_schema: 1
+        tx_isolation: READ-COMMITTED
   DBProxyRole:
     Type: AWS::IAM::Role
     Properties:
