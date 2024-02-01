@@ -66,7 +66,6 @@ describe('ExpandedProgressDataColumn', () => {
     const levelWithSublevels = fakeLevelWithSubLevels(3, {}, NUM_LEVELS + 1);
     let lesson = fakeLessonWithLevels({}, NUM_LEVELS);
     lesson.levels.push(levelWithSublevels);
-    console.log(lesson.levels, levelWithSublevels.sublevels);
     const levelProgress = fakeStudentLevelProgress(
       [...lesson.levels, ...levelWithSublevels.sublevels],
       STUDENTS
@@ -133,7 +132,7 @@ describe('ExpandedProgressDataColumn', () => {
     fireEvent.click(choiceLevelHeader);
 
     levelWithSublevels.sublevels.forEach(sublevel => {
-      expect(screen.queryByText(sublevel.bubbleText)).to.not.exist;
+      expect(screen.queryByText(sublevel.bubbleText)).to.exist;
     });
 
     expect(screen.queryAllByTestId(LEVEL_DATA_CELL_TEST_ID)).to.have.length(
