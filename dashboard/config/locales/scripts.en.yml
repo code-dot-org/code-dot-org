@@ -8046,6 +8046,8 @@ en:
               name: Gen AI Blocks Playground
             lesson-14:
               name: Test micro:bit lesson
+            lesson-15:
+              name: Testing Slides Lesson Plan
         csc-pilot-2022-ecosystems:
           lesson_groups: {}
           name: csc-pilot-2022-ecosystems

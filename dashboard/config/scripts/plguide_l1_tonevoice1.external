@@ -3,14 +3,16 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Team Amanda and Melissa
+# Tone and Voice
 
-Tone - supportive second person
-Active vs. passive voice
-Jargon/colloquialism
-Acronyms
-Separating text into paragraphs
-Using emojis
-Guidance on using emojis for tone vs. for indicating various types of text (ie. to do items)
+#### Clear, concise writing always supports good communication and learning. Use the following guidelines when writing text.
+
+* #### The writing style is clear, concise, and direct.
+* #### Sentences and paragraphs are brief and to the point.
+* #### Avoid jargon, colloquialisms, clichés, and tired phrases.
+* #### Write out acronyms the first time they're used, noting the acronym in parentheses.
+* #### A supportive second-person conversational tone is used throughout the course.
+* #### Instructions and requirements are stated simply, clearly, and logically.
+* #### The course material has been edited for language and grammar.
 
 MARKDOWN
