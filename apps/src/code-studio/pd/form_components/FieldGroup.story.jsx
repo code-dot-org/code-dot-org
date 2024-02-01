@@ -71,12 +71,16 @@ dropdownWithChildren.args = {
   componentClass: 'select',
   label: 'a dropdown with children',
   onChange: action('onChange'),
-  children: (
-    <>
-      <option>Please Select One:</option>
-      <option value="first">One</option>
-      <option value="second">Two</option>
-      <option value="third">Three</option>
-    </>
-  ),
+  children: [
+    <option key="title">Please Select One:</option>,
+    <option key="first" value="first">
+      One
+    </option>,
+    <option key="second" value="second">
+      Two
+    </option>,
+    <option key="third" value="third">
+      Three
+    </option>,
+  ],
 };
