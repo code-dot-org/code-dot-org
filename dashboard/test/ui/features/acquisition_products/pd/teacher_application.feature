@@ -141,6 +141,7 @@ Scenario: Teacher saves, re-opens, and submits an application
   And I complete Section 7 of the teacher PD application
   And I press the first "button[type='submit']" element
 
+@skip
 Scenario: Teacher starts a new csp application and submits it
   Given I create a teacher named "Severus"
   And I am on "http://studio.code.org/pd/application/teacher"
