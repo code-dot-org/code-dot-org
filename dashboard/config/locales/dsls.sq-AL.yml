@@ -8347,12 +8347,12 @@ sq-AL:
         description: Ju do të krijoni një lojë koleksionisti. Para se të filloni,
           eksploroni shembullin e projekteve më poshtë. Shtypni\ "Përfundo\” kur të
           jeni gati për të filluar planifikimin e programit tuaj.
-        display_name: Eksplorim- Shembuj projektesh
+        display_name: Eksplorim - Shembuj projektesh
       courseF_collector_samples_2022_pilot_-2022-2_2023:
         description: Ju do të krijoni një lojë koleksionisti. Para se të filloni,
           eksploroni shembullin e projekteve më poshtë. Shtypni\ "Përfundo\” kur të
           jeni gati për të filluar planifikimin e programit tuaj.
-        display_name: Eksplorim- Shembuj projektesh
+        display_name: Eksplorim - Shembuj projektesh
       courseF_events_freeplay:
         description: Tani mund të përdorni atë që keni mësuar për ta bërë projektin
           tuaj edhe më të mirë! Vazhdoni të shtoni në programin tuaj ose filloni diçka
@@ -8947,9 +8947,9 @@ sq-AL:
             dhe të vazhdojnë.
           text: Të dy aeroplanët do të fillojnë të lëvizin dhe nuk do të ndalen.
         - correct: true
-          feedback: E pasaktë. Çdo bllok në kodi të Sprite Lab ekzekutohet menjëherë
+          feedback: E pasaktë. Çdo bllok në kodin Sprite Lab ekzekutohet menjëherë
             pas tjetrës.
-          text: Një aeroplan do të lëvizë i pari, dhe aeroplani tjetër do të lëvizë
+          text: Një aeroplan do të lëvizë i pari, ndërsa aeroplani tjetër do të lëvizë
             më vonë.
         - correct: true
           feedback: E pasaktë. Aeroplanët nuk janë të pozicionuar në një mënyrë që
@@ -8969,9 +8969,9 @@ sq-AL:
             dhe të vazhdojnë.
           text: Të dy aeroplanët do të fillojnë të lëvizin dhe nuk do të ndalen.
         - correct: true
-          feedback: E pasaktë. Çdo bllok në kodi të Sprite Lab ekzekutohet menjëherë
+          feedback: E pasaktë. Çdo bllok në kodin Sprite Lab ekzekutohet menjëherë
             pas tjetrës.
-          text: Një aeroplan do të lëvizë i pari, dhe aeroplani tjetër do të lëvizë
+          text: Një aeroplan do të lëvizë i pari, ndërsa aeroplani tjetër do të lëvizë
             më vonë.
         - correct: true
           feedback: E pasaktë. Aeroplanët nuk janë të pozicionuar në një mënyrë që
@@ -8991,9 +8991,9 @@ sq-AL:
             dhe të vazhdojnë.
           text: Të dy aeroplanët do të fillojnë të lëvizin dhe nuk do të ndalen.
         - correct: true
-          feedback: E pasaktë. Çdo bllok në kodi të Sprite Lab ekzekutohet menjëherë
+          feedback: E pasaktë. Çdo bllok në kodin Sprite Lab ekzekutohet menjëherë
             pas tjetrës.
-          text: Një aeroplan do të lëvizë i pari, dhe aeroplani tjetër do të lëvizë
+          text: Një aeroplan do të lëvizë i pari, ndërsa aeroplani tjetër do të lëvizë
             më vonë.
         - correct: true
           feedback: E pasaktë. Aeroplanët nuk janë të pozicionuar në një mënyrë që
@@ -9005,10 +9005,10 @@ sq-AL:
         description: Punë e shkëlqyeshme deri më tani! Zgjedhni aktivitetin tuaj të
           ardhshëm. Plotësoni sa më shumë që të mundeni. Vazhdoni të praktikoni me
           tekste dhe kërkesa!
-        display_name: Praktika me tekst dhe kërkesë
+        display_name: Praktika e tekstit dhe kërkesave
         teacher_markdown: |
           # Përmbledhje e nivelit të zgjedhjes
-          Nivelet e zgjedhjes ofrojnë një menu të niveleve shtesë që nxënësit të plotësojnë. Nxënësiit duhet të plotësojnë të paktën një nga nën-nivelet këtu, por mund të punojnë sa më shumë që ata (ose ju) të dëshironi.
+          Nivelet e zgjedhjes ofrojnë një menu të niveleve shtesë që nxënësit të plotësojnë. Nxënësit duhet të plotësojnë të paktën një nga nën-nivelet këtu, por mund të punojnë sa më shumë që ata (ose ju) të dëshironi.
 
           Ju mund të përdorni përshkrimet e mëposhtme për t'i ndihmuar nxënësit të zgjedhin vetë zgjedhjet, ose për të vendosur pritshmëri rreth numrit të nënniveleve që duhet të plotësojnë.
 
@@ -9020,12 +9020,12 @@ sq-AL:
         description: Punë e shkëlqyeshme deri më tani! Zgjedhni aktivitetin tuaj të
           ardhshëm. Plotësoni sa më shumë që të mundeni. Vazhdoni të praktikoni me
           tekste dhe kërkesa!
-        display_name: Praktika me tekst dhe kërkesë
+        display_name: Praktika e tekstit dhe kërkesave
       courseF_text_practice2022_2022_pilot_-2022-2_2023:
         description: Punë e shkëlqyeshme deri më tani! Zgjedhni aktivitetin tuaj të
           ardhshëm. Plotësoni sa më shumë që të mundeni. Vazhdoni të praktikoni me
           tekste dhe kërkesa!
-        display_name: Praktika me tekst dhe kërkesë
+        display_name: Praktika e tekstit dhe kërkesave
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - correct: true
@@ -9108,7 +9108,7 @@ sq-AL:
         answers:
         - correct: true
           feedback: E pasaktë. Blloku i emrit do të zëvendësohet me çfarëdo që shkruani.
-          text: Programi do të shtypë “Përshëndetje emër!”
+          text: Programi do të printojë “Përshëndetje emri!”
         - correct: true
           feedback: E saktë! Ajo që shkruani përdoret në vend të bllokut të emrit.
           text: Programi do t'ju përshëndesë me emrin që shkruani.
@@ -9126,7 +9126,7 @@ sq-AL:
         answers:
         - correct: true
           feedback: E pasaktë. Blloku i emrit do të zëvendësohet me çfarëdo që shkruani.
-          text: Programi do të shtypë “Përshëndetje emër!”
+          text: Programi do të printojë “Përshëndetje emri!”
         - correct: true
           feedback: E saktë! Ajo që shkruani përdoret në vend të bllokut të emrit.
           text: Programi do t'ju përshëndesë me emrin që shkruani.
@@ -9144,7 +9144,7 @@ sq-AL:
         answers:
         - correct: true
           feedback: E pasaktë. Blloku i emrit do të zëvendësohet me çfarëdo që shkruani.
-          text: Programi do të shtypë “Përshëndetje emër!”
+          text: Programi do të printojë “Përshëndetje emri!”
         - correct: true
           feedback: E saktë! Ajo që shkruani përdoret në vend të bllokut të emrit.
           text: Programi do t'ju përshëndesë me emrin që shkruani.
@@ -9165,9 +9165,9 @@ sq-AL:
         display_name: Zgjedhni një projekt
         teacher_markdown: |-
           # Përmbledhje e nivelit të zgjedhjes
-          Nivelet e zgjedhjes ofrojnë një menu të niveleve shtesë që nxënësit të plotësojnë. Nxënësit duhet të plotësojnë të paktën një nga nënnivelet këtu, por duhet të inkurajohen të plotësojnë **dy** nivele për të njëjtin projekt.
+          Nivelet e zgjedhjes ofrojnë një menu të niveleve shtesë që nxënësit të plotësojnë. Nxënësit duhet të plotësojnë të paktën një nga nën-nivelet këtu, por duhet të inkurajohen të plotësojnë **dy** nivele për të njëjtin projekt.
 
-          Nxënësve mund t'u duhen udhëzime vërtet të qarta për të kuptuar se si të lundrojnë në zgjedhjet këtu. Për secilën nga zgjedhjet e projektit, ekzistojnë dy nën-nivele. Për të filluar, nxënësit duhet të zgjedhin një nga nivelet e shënuar "Pjesa 1". Pasi të përfundojnë atë nivel, ata duhet të kthehen këtu dhe të zgjedhin "Pjesa 2" e të njëjtit projekt *. Niveli i parë për çdo zgjedhje do t'u sigurojë nxënësve reagime ndërsa ata bashkojnë komponentët bazë të projektit të tyre. Niveli i dytë është një "lojë e lirë" e cila synon të lejojë nxënësit të bëjnë çdo ndryshim që dëshirojnë në kodin e tyre.
+          Nxënësve mund t'u duhen udhëzime vërtet të qarta për të kuptuar se si të lundrojnë në këto zgjedhje. Për secilën nga zgjedhjet e projektit, ekzistojnë dy nën-nivele. Për të filluar, nxënësit duhet të zgjedhin një nga nivelet e shënuar "Pjesa 1". Pasi të përfundojnë atë nivel, ata duhet të kthehen këtu dhe të zgjedhin "Pjesa 2" e të njëjtit projekt *. Niveli i parë për çdo zgjedhje do t'u sigurojë nxënësve reagime ndërsa ata bashkojnë komponentët bazë të projektit të tyre. Niveli i dytë është një "lojë e lirë" e cila synon të lejojë nxënësit të bëjnë çdo ndryshim që dëshirojnë në kodin e tyre.
       courseF_variables_projects2022_2022_pilot_-2022-2:
         description: Ju do të krijoni ose një kartolinë përshëndetëse, një chatbot
           ose një blank space story. Nëse e keni përfunduar tashmë \"Pjesën 1\" të
@@ -9183,7 +9183,7 @@ sq-AL:
           një blank space story. Përpara se të filloni, eksploroni shembujt e projekteve
           më poshtë për të parë se çfarë jeni të interesuar të krijoni. Shtypni \"Përfundo\"
           kur të jeni gati të filloni të planifikoni programin tuaj.
-        display_name: Eksplorim- Shembuj projektesh
+        display_name: Eksplorim - Shembuj projektesh
         teacher_markdown: "# Përmbledhje e nivelit të zgjedhjes \nNivelet e zgjedhjes
           ofrojnë një menu të niveleve shtesë për nxënësit për të përfunduar. Nxënësit
           duhet të plotësojnë të paktën një nga nën-nivelet këtu, por mund të punojnë
@@ -9195,19 +9195,19 @@ sq-AL:
           një blank space story. Përpara se të filloni, eksploroni shembujt e projekteve
           më poshtë për të parë se çfarë jeni të interesuar të krijoni. Shtypni \"Përfundo\"
           kur të jeni gati të filloni të planifikoni programin tuaj.
-        display_name: Eksplorim- Shembuj projektesh
+        display_name: Eksplorim - Shembuj projektesh
       courseF_variables_samples2022_2022_pilot_-2022-2_2023:
         description: Do të krijoni ose një kartolinë përshëndetëse, një chatbot ose
           një blank space story. Përpara se të filloni, eksploroni shembujt e projekteve
           më poshtë për të parë se çfarë jeni të interesuar të krijoni. Shtypni \"Përfundo\"
           kur të jeni gati të filloni të planifikoni programin tuaj.
-        display_name: Eksplorim- Shembuj projektesh
+        display_name: Eksplorim - Shembuj projektesh
       courseF_variables_stop:
         content1: përshkrimi këtu
         markdown: |-
           #Stop!
 
-          ## Jeni i sigurt që jeni gati të vazhdoni përpara?
+          ## A jeni i sigurt që jeni gati të vazhdoni përpara?
 
 
           Në nivelin tjetër, do të filloni të shkruani kodin për projektin tuaj. Kjo funksionon më së miri nëse tashmë keni një plan.
@@ -9247,7 +9247,7 @@ sq-AL:
         markdown: |-
           #Stop!
 
-          ## Jeni i sigurt që jeni gati të vazhdoni përpara?
+          ## A jeni i sigurt që jeni gati të vazhdoni përpara?
 
 
           Në nivelin tjetër, do të filloni të shkruani kodin për projektin tuaj. Kjo funksionon më së miri nëse tashmë keni një plan.

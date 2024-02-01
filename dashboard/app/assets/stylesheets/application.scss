@@ -3930,9 +3930,8 @@ html[dir=rtl] {
   background-color: $neutral_white !important;
   float: right;
   border: 2px solid $neutral_dark;
-  margin-top: 1px !important;
-  margin-right: 2px;
-  height: 16px;
+  box-sizing: border-box;
+  height: 32px;
   padding: 6px !important;
 
   html[dir=rtl] & {
@@ -4066,6 +4065,109 @@ a {
         cursor: not-allowed;
       }
     }
+  }
+}
+
+#instructions {
+  .clickable-text {
+    cursor: pointer;
+  }
+}
+
+#lti-integration-portal {
+  $signup-info-background: #f7f7f7;
+  $signup-info-border-color: #e5e5e5;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .padded-container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    .row {
+      flex-grow: 1;
+    }
+  }
+
+  .lti-integration-form {
+    input[type=text], input[type=email] {
+      height: 36px;
+    }
+
+    input {
+      margin: 0;
+    }
+
+    input, select {
+      flex-grow: 1;
+    }
+
+    .row {
+      display: flex;
+      margin-bottom: 20px;
+
+      [class*=span] {
+        align-self: center;
+        display: flex;
+        .div {
+          align-self: center;
+          display: flex;
+        }
+      }
+
+      label {
+        margin: 0;
+      }
+    }
+    .lti-integration-field-label {
+      flex-wrap: wrap;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  @mixin button {
+    background-image: none;
+    padding: 0 20px;
+    margin: 5px 0;
+    font-size: 18px;
+    height: 40px;
+    @include main-font-semi-bold;
+  }
+
+  @mixin purple-button {
+    @include button;
+    border-color: $purple;
+    background-color: $purple;
+    color: $white;
+  }
+
+  @mixin white-button {
+    @include button;
+    border-color: $black;
+    background-color: $white;
+    color: $black;
+  }
+
+  .lti-btn-purple {
+    @include purple-button;
+  }
+
+  .lti-btn-purple-right {
+    @include purple-button;
+    float: right;
+  }
+
+  .lti-btn-white {
+    @include white-button;
   }
 }
 

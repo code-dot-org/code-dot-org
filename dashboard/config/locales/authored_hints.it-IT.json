@@ -14544,7 +14544,7 @@
           "hint2": "💡 Ecco un esempio di come dovrebbe apparire il tuo codice. <xml>\n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n\n  <block type=\"Dancelab_whenKey\" id=\"*R3Us3z5;rM#sBE?1zjX\" deletable=\"false\" x=\"19\" y=\"221\">\n    <field name=\"KEY\">\"up\"</field>\n    <next>\n      <block type=\"Dancelab_doMoveEachLR\" id=\"*hCDocpHXqlku@f[[rK=\">\n        <field name=\"GROUP\">\"BEAR\"</field>\n        <field name=\"MOVE\">MOVES.Dab</field>\n        <field name=\"DIR\">-1</field>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "dance_ai_customize_effect": {
-          "Hint1": "💡 Personalizza l'effetto cliccando sulle emoji sul blocco <xml> <block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Dancelab_ai\" id=\"*6NOt^DsApsRC-pPZKBQ\">\n  <field name=\"VALUE\">{\"inputs»: [\"cool», \"cold», \"wavy \"], \"backgroundEffect» :\"sparkles», \"backgroundColor» :\"cool», \"foregroundEffect» :\"bubbles \"} nell'area di lavoro.</field>\n\n</block> </xml> ",
+          "Hint1": "💡 Personalizza l'effetto cliccando sulle emoji sul blocco <xml> <block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Dancelab_ai\" id=\"*6NOt^DsApsRC-pPZKBQ\">\n  <field name=\"VALUE\">{\"inputs\":[\"cool\",\"cold\",\"wavy\"],\"backgroundEffect\":\"sparkles\",\"backgroundColor\":\"cool\",\"foregroundEffect\":\"bubbles\"} </field>\n\n</block> </xml> nell'area di lavoro. ",
           "Hint2": "💡 **Ancora bloccato?** Guarda il video per vedere come personalizzare l'effetto.",
           "HintEdit": "💡 Se desideri utilizzare il codice scritto dall'AI, attiva la visualizzazione del codice e quindi clicca su \"Usa codice\". I blocchi sostituiranno il blocco \"A.I. genera effetto\" nel tuo spazio di lavoro. "
         },
@@ -14554,7 +14554,7 @@
         },
         "dance_ai_generate_effect": {
           "Hint2": "💡 Collega il [blocco a blocchi][0] alla <code style=\"color:white; background-color:#FFBD46\">configurazione</code>. Quindi clicca su di esso per iniziare.",
-          "Hint3": "💡 Se vuoi rigenerare l'effetto o cambiare le emoji puoi cliccare nuovamente sul blocco \"A.I. genera effetto\". "
+          "Hint3": "💡 Se vuoi rigenerare l'effetto o cambiare le emoji puoi cliccare nuovamente sul blocco `A.I. genera effetto`. "
         },
         "dance_ai_generate_effect_again": {
           "Hint1": "💡 Ascolta la canzone e pensa all'atmosfera della musica.",

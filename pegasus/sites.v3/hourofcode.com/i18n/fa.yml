@@ -104,7 +104,10 @@ fa:
   social_hoc2019_dance: این برنامه شامل کتی پری، شاون مندس، وحشت! در دیسکو، لیل ناس
     ایکس، برادران جوناس، نیکی میناژ، و 34 نفر دیگر!
   social_hoc_anybody: 'ساعت کد: هر کس می تواند یاد بگیرد'
-  oceans_landing_title: هوش مصنوعی برای اقیانوس
+  hoc_interest_form_header: از افتتاح ثبت نام Hour of Code مطلع شوید!
+  hoc_interest_form_desc: اولین نفری باشید که در مورد ساعت کد امسال، از جمله فعالیت
+    های جدید و زمان شروع ثبت نام برای رویدادهای Hour of Code مطلع می شوید.
+  oceans_landing_title: هوش مصنوعی برای اقیانوس‌ها
   oceans_landing_description: در مورد یادگیری ماشین و استفاده اخلاقی از هوش مصنوعی
     اطلاعات کسب کنید.
   cs_for_good_hashtag: "#CSforGood"
@@ -130,7 +133,7 @@ fa:
   oceans_landing_cs_for_good_desc: منابع برای کمک به دانش آموزان درک نقش علوم کامپیوتر
     می تواند در ایجاد یک جهان عادلانه تر بازی کند.
   oceans_landing_videos: ویدئوهایی درباره هوش مصنوعی و یادگیری ماشین
-  oceans_behind_the_scenes: 'هوش مصنوعی برای اقیانوس ها: پشت صحنه'
+  oceans_behind_the_scenes: 'هوش مصنوعی برای اقیانوس‌ها: پشت صحنه'
   oceans_behind_the_scenes_1: سطوح 2-4 از یک مدل پیش آموزش دیده ارائه شده توسط پروژه
     <a href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
     MobileNet استفاده می کنند. </a> مدل MobileNet یک شبکه عصبی <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">کانولوشن
@@ -221,7 +224,7 @@ fa:
   for_students_teacher_led_learning: 'برای دانش‌آموزان: یادگیری تحت رهبری معلم'
   for_students_teacher_led_lessons: 'برای دانش‌آموزان: درس‌های تحت رهبری معلم'
   professional_development: توسعه حرفه‌ای
-  additional_educator_resources: Additional Educator Resources
+  additional_educator_resources: منابع آموزشی اضافی
   teach_computer_science: آموزش علوم کامپیوتر
   explore_our_curriculum: کشف برنامه درسی ما
   start_professional_learning: شروع یادگیری حرفه‌ای
@@ -241,6 +244,16 @@ fa:
   afe_partnership_thanks_desc: مهندس آینده آمازون یک برنامه جامع از کودکی به بازار
     کار است که برای الهام بخشیدن، آموزش و تعلیم کودکان و جوانان کم‌درآمد و سایر افراد
     محروم برای یافتن مشاغل حوزه علوم رایانه است. [Learn about our partnership](%{afe_url}).
+  donors_block_microsoft_infosys: ما از مایکروسافت و بنیاد Infosys USA برای حمایت
+    از چشم انداز و ماموریت ما برای اطمینان از اینکه هر کودک فرصت یادگیری علوم کامپیوتر
+    و مهارت های موفقیت در قرن بیست و یکم را دارد، تشکر می کنیم.
+  microsoft_logo_alt: آرم مایکروسافت
+  infosys_logo_alt: آرم بنیاد اینفوسیس ایالات متحده
+  amazon_logo_alt: آرم آمازون
+  google_logo_alt: آرم گوگل
+  coinbase_logo_alt: آرم کوینبیس
+  ballmer_group_logo_alt: آرم گروه بالمر
+  vista_equity_partners_logo_alt: آرم شرکای سهام ویستا
   grade_level: سطح
   grade_level_label_elementary: مدرسه ابتدایی
   grade_level_label_middle: مدرسه راهنمایی
@@ -254,6 +267,12 @@ fa:
   curricula_title_high: برنامه های درسی دبیرستان
   curricula_desc_high: دوره ها و فعالیت های قانع کننده ای را مرور کنید که از شما و
     دانش آموزان دبیرستانی شما دعوت می کند تا عمیق تر به علوم کامپیوتر بپردازید.
+  facilitator_led_pl_heading: 'کارگاه های یادگیری حرفه ای تحت نظر تسهیلگر '
+  facilitator_led_pl_desc: در مورد کارگاه های یادگیری حرفه ای ما برای معلمان ابتدایی،
+    متوسطه و دبیرستان آشنا شوید.
+  self_paced_pl_heading: یادگیری حرفه ای با خودگام
+  self_paced_pl_desc: یادگیری حرفه ای با سرعت خودتان ماژول های یادگیری حرفه ای آنلاین
+    و با سرعت خود ما را کشف کنید.
   for_administrators_heading: برای مدیران
   for_administrators_desc: پیوستن به هزاران مدرسه ای که قبلا علوم کامپیوتر را به برنامه
     درسی خود اضافه کرده اند.
@@ -308,10 +327,11 @@ fa:
   call_to_action_explore_all_hoc_activities: همه فعالیت‌های «ساعت کد» را از Code.org
     کشف کنید
   call_to_action_start_dance_party: شروع پارتی رقص
-  call_to_action_start_dance_party_ai_edition: 'Start Dance Party: AI Edition'
+  call_to_action_start_dance_party_ai_edition: 'شروع مهمانی رقص: نسخه هوش مصنوعی'
   call_to_action_start_part_02: قسمت دوم را شروع کنید
   call_to_action_start_unplugged_activity: فعالیت غیر متصل را شروع کنید
   call_to_action_view_promo_resources: مشاهده منابع تبلیغاتی
+  call_to_action_view_teach_with_cdo: شروع تدریس با Code.org
   call_to_action_get_involved: مشارکت کنید
   call_to_action_learn_more: بیشتر بدانید
   call_to_action_watch_now: اکنون تماشا کنید
@@ -321,15 +341,15 @@ fa:
     کنید
   call_to_action_explore_activities: فعالیت‌ها را کشف کنید
   call_to_action_explore_ai: کشف هوش مصنوعی
-  call_to_action_explore_resources: Explore resources
+  call_to_action_explore_resources: کشف و بررسی منابع
   call_to_action_explore_tool: ابزار را کاوش کنید
   call_to_action_explore_unit: کاوش واحد
   call_to_action_explore_curriculum: برنامه درسی را کاوش کنید
   call_to_action_explore_curricula: برنامه‌های درسی را کاوش کنید
   call_to_action_explore_curriculum_options: گزینه‌های برنامه درسی را کاوش کنید
-  call_to_action_explore_lessons: درس ها را کاوش کنید
+  call_to_action_explore_lessons: بررسی درس‌ها
   call_to_action_explore_modules: ماژول ها را کاوش کنید
-  call_to_action_explore_module: کاوش ماژول
+  call_to_action_explore_module: ماژول کاوش
   call_to_action_explore_workshops: کشف و بررسی کارگاه‌ها
   call_to_action_explore_course: دوره را کاوش کنید
   call_to_action_explore_courses: دوره‌ها را کاوش کنید
@@ -362,7 +382,7 @@ fa:
   call_to_action_donate_online: اهدا آنلاین
   call_to_action_get_updates: دریافت به روز رسانی
   call_to_action_special_announcement: مشاهده اطلاعیه ویژه
-  call_to_action_learning_opportunity: فرصت های جدید یادگیری حرفه ای
+  call_to_action_learning_opportunity: فرصت‌های حرفه‌ای جدید برای یادگیری
   call_to_action_start_pl: یادگیری حرفه ای را شروع کنید
   call_to_action_contact_regional_partner: با شریک منطقه ای خود تماس بگیرید
   call_to_action_join_csta: به CSTA بپیوندید
@@ -374,7 +394,7 @@ fa:
   call_to_action_resources_tools: امتحان کردن ابزارهای برنامه‌نویسی
   call_to_action_sign_up_free: ثبت‌نام رایگان
   call_to_action_explore_ai_resources: کشف و بررسی منابع هوش مصنوعی
-  call_to_action_explore_ai_curricula: برنامه های درسی هوش مصنوعی را کاوش کنید
+  call_to_action_explore_ai_curricula: بررسی برنامه‌های درسی هوش مصنوعی
   call_to_action_explore_curriculum_catalog: کشف و بررسی کاتالوگ برنامه درسی
   call_to_action_see_full_curriculum_catalog: مشاهده کل کاتالوگ برنامه درسی
   call_to_action_view_curriculum_catalog: مشاهده کاتالوگ برنامه درسی
@@ -403,6 +423,7 @@ fa:
   call_to_action_open_positions: مشاهده پوزیشن های باز
   call_to_action_explore_roles: نقش های باز را کاوش کنید
   call_to_action_get_guide: راهنما را دریافت کنید
+  call_to_action_donate: کمک مالی
   call_to_action_donate_to_cdo: به Code.org کمک مالی کنید
   call_to_action_start_fundraiser: شروع یک جمع آوری کمک مالی
   call_to_action_view_donation_policy: مشاهده سیاست کمک مالی
@@ -425,15 +446,19 @@ fa:
   call_to_action_learn_about_ai: درباره هوش مصنوعی بیاموزید
   call_to_action_learn_more_about_ai: درباره‌ هوش مصنوعی بیش‌تر بدانید
   call_to_action_get_started: شروع کنید
-  call_to_action_explore_self_paced_pl: Explore self-paced professional learning
-  call_to_action_applications_get_notified: Get notified when applications open
-  call_to_action_applications_notify_me: Notify me when I can apply
-  call_to_action_apply_now: Apply now
-  call_to_action_explore_self_paced_learning: Explore self-paced learning
-  call_to_action_explore_k_5_workshops: Explore K-5 workshops
-  call_to_action_for_intl_educators: For international educators
-  call_to_action_learn_more_program_region: Learn more about the program in your region
-  call_to_action_visit_support_center: Visit our support center
+  call_to_action_view_our_supporters: حامیان ما را مشاهده کنید
+  call_to_action_explore_self_paced_pl: پیگیری یادگیری حرفه ای خودخوان
+  call_to_action_applications_get_notified: هنگام باز شدن برنامه ها مطلع شوید
+  call_to_action_applications_notify_me: وقتی می توانم درخواست کنم به من اطلاع دهید
+  call_to_action_apply_now: همین حالا اقدام کنید
+  call_to_action_explore_self_paced_learning: یادگیری خودخوان را گسترش دهید.
+  call_to_action_explore_k_5_workshops: کشف و بررسی کارگاه‌های K-5
+  call_to_action_for_intl_educators: برای مربیان بین المللی
+  call_to_action_learn_more_program_region: درباره برنامه در منطقه خود بیشتر بدانید
+  call_to_action_visit_support_center: به مرکز پشتیبانی ما مراجعه کنید
+  call_to_action_download_video: دانلود ویدئو
+  call_to_action_explore_learning_ages_5_11: 'یادگیری را برای سنین 5 تا 11 سال دریابید '
+  call_to_action_explore_learning_ages_11_plus: 'یادگیری را برای سنین 11 تا  سال دریابید '
   aria_label_call_to_action_hoc_how_to_educators: راهنمای آموزش برای مربیان را مشاهده
     کنید
   aria_label_call_to_action_hoc_how_to_companies: راهنمای کارکرد شرکتها را مشاهده
@@ -453,6 +478,9 @@ fa:
   aria_label_call_to_action_dance_02: قسمت دوم فعالیت پارتی رقص را شروع کنید
   aria_label_call_to_action_dance_unplugged: فعالیت پارتی رقص را بدون اتصال شروع کنید
   aria_label_call_to_action_afe: درباره مهندس آینده آمازون بیشتر بدانید
+  aria_label_call_to_action_facilitator_pl: درباره کارگاه های یادگیری حرفه ای تحت
+    نظر تسهیلگر بیشتر بدانید
+  aria_label_call_to_action_self_paced_pl: اطلاعات بیشتر درباره یادگیری حرفه‌ای خودآموز
   aria_label_call_to_action_teaching_csf: برنامه آموزش حرفه ای مبانی علوم کامپیوتر
     را شروع کنید
   aria_label_call_to_action_teaching_csd: شروع آموزش علوم کامپیوتر اکتشافات برنامه
@@ -461,8 +489,8 @@ fa:
     حرفه ای
   aria_label_call_to_action_teaching_problem_solving: شروع برنامه یادگیری حرفه ای
     آموزش حل مسئله و محاسبات
-  aria_label_call_to_action_teaching_interactive_animations_games: Start the Teaching
-    Interactive Animations and Games professional learning program
+  aria_label_call_to_action_teaching_interactive_animations_games: برنامه یادگیری
+    حرفه ای آموزش انیمیشن های تعاملی و بازی ها را شروع کنید
   aria_label_call_to_action_teaching_csc: برنامه یادگیری حرفه‌ای «تدریس پیوند با علوم
     کامپیوتر» را شروع کنید
   aria_label_call_to_action_teaching_ai: برنامه یادگیری حرفه ای آموزش هوش مصنوعی و
@@ -565,17 +593,29 @@ fa:
   aria_label_call_to_action_register_student_workshop: ثبت نام در کارگاه دانش‌آموزی
     رایگان
   aria_label_call_to_action_view_more_cs_resources: مشاهده منابع علوم کامپیوتر بیشتر
-  aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
-    professional learning
-  aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
-    professional learning
-  aria_label_call_to_action_pl_apply_csa: Apply now for AP® Computer Science A professional
-    learning
-  aria_label_call_to_action_learn_more_csd: Learn more about Computer Science Discoveries
-  aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
-  aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
-    A
+  aria_label_call_to_action_farsi_donate: کمک مالی برای حمایت از کمپین Code.org در
+    فارسی
+  aria_label_call_to_action_farsi_learn_more: درباره Code.org به فارسی بیشتر بدانید
+  aria_label_call_to_action_pl_apply_csd: اکنون برای یادگیری حرفه ای اکتشافات علوم
+    کامپیوتر اقدام کنید
+  aria_label_call_to_action_pl_apply_csp: اکنون برای یادگیری حرفه ای اصول علوم کامپیوتر
+    درخواست دهید
+  aria_label_call_to_action_pl_apply_csa: اکنون برای آموزش حرفه ای AP® Computer Science
+    A اقدام کنید
+  aria_label_call_to_action_learn_more_csd: درباره اکتشافات علوم کامپیوتر بیشتر بدانید
+  aria_label_call_to_action_learn_more_csp: درباره اصول علوم کامپیوتر بیشتر بدانید
+  aria_label_call_to_action_learn_more_csa: درباره AP® علوم کامپیوتر A بیشتر بدانید
+  aria_label_call_to_action_afe_alexa: درباره الکسا برای فضانوردان بیشتر بدانید
+  aria_label_call_to_action_afe_cloud_tour: درباره تور حرفه ای کشف رایانه ابری بیشتر
+    بدانید
+  aria_label_call_to_action_afe_voice: درباره مسابقه صدای شما قدرت آمازون بیشتر بدانید
+  aria_label_call_to_action_afe_scholarships: درباره بورس تحصیلی و کارآموزی آمازون
+    بیشتر بدانید
+  aria_label_call_to_action_afe_robotics: درباره تور مرکز تکمیل رباتیک بیشتر بدانید
+  aria_label_call_to_action_afe_data_tour: درباره تور شغلی ایمن نگه داشتن داده ها
+    بیشتر بدانید
   video_title_professional_learning_program: برنامه یادگیری حرفه ای Code.org
+  video_title_young_women_in_computer_science: زنان جوان در علوم کامپیوتر
   curriculum_name_csf: مبانی علوم کامپیوتر
   curriculum_name_csf_02: هر اصول CS (دوره A-F)
   curriculum_name_csf_a_f: مبانی A-F علوم کامپیوتر
@@ -593,7 +633,7 @@ fa:
   curriculum_name_csd: اکتشافات علوم کامپیوتر
   curriculum_name_csp: اصول علوم کامپیوتر
   curriculum_name_problem_solving: حل مسئله و رایانش
-  curriculum_name_teaching_animation: Teaching Interactive Animations and Games
+  curriculum_name_teaching_animation: آموزش انیمیشن ها و بازی های تعاملی
   curriculum_name_csc: پیوند با علوم کامپیوتر
   curriculum_name_csa: علوم کامپیوتر A
   curriculum_name_csa_ai: مهندسی نرم افزار و بینایی کامپیوتر
@@ -609,7 +649,7 @@ fa:
   curriculum_name_dance_party_02: به رقصیدن ادامه دهید
   curriculum_name_dance_party_unplugged: پارتی رقص بدون پلاگین
   curriculum_name_dance_party_ai_edition: 'پارتی رقص: نسخه هوش مصنوعی'
-  curriculum_name_ai_for_oceans: هوش مصنوعی برای اقیانوس
+  curriculum_name_ai_for_oceans: هوش مصنوعی برای اقیانوس‌ها
   curriculum_name_minecraft: ماینکرافت
   curriculum_name_problem_solving_computing: حل مسئله و محاسبات
   curriculum_name_web_development: توسعه وب
@@ -687,8 +727,10 @@ fa:
     را با استفاده از ابزارهای حرفه ای توسعه نرم افزار، از جمله GitHub و GitHub Copilot،
     تجربه می کند و آنها را با مهارت های دنیای واقعی برای توسعه یک برنامه بینایی کامپیوتری
     به ارمغان می آورد. '
-  curriculum_desc_csa_ai_short: این ماژول Post-AP® CSA دانش آموزان دبیرستانی را با
-    استفاده از ابزارهای حرفه ای توسعه نرم افزار تجربه می کند.
+  curriculum_desc_csa_ai_short: این ماژول Post-AP® CSA به دانش‌آموزان دبیرستانی، امکان
+    تجربه ملموس ابزارهای حرفه‌ای توسعه نرم‌افزار را می‌دهد.
+  curriculum_desc_catalog: کاتالوگ قوی ما از پیشنهادات برنامه درسی را برای تمام سنین
+    و سطوح بررسی کنید - کاملا رایگان.
   collection_hardware: تمرکز روی سخت‌افزار
   collection_hardware_desc: دانش‌آموزان را قادر می‌سازد تا از داده‌ها و دستگاه‌های
     فیزیکی برای حل مشکلات استفاده کنند.
@@ -712,7 +754,7 @@ fa:
   module_label_grades: 'پایه:'
   module_label_curriculum: 'برنامه درسی:'
   module_label_curriculum_pure: برنامه درسی
-  module_label_duration: 'مدت زمان:'
+  module_label_duration: 'طول دوره:'
   module_label_prerequisites: 'پیش نیازها:'
   module_label_level: 'سطح:'
   module_label_topics: 'موضوعات:'
@@ -722,10 +764,10 @@ fa:
   module_label_languages: 'زبان‌های پشتیبانی‌شده:'
   module_label_accessibility_features: 'دسترسی:'
   module_label_accessibility_features_full: 'ویژگی های دسترسی:'
-  module_label_teacher_requirements: 'Teacher Requirements:'
+  module_label_teacher_requirements: 'الزامات معلم:'
   module_label_educator_tool: ابزار مربی
   module_label_educator_course: دوره آموزشی
-  module_label_educator_resources: Educator resources
+  module_label_educator_resources: منابع آموزگار
   module_label_student_tool: ابزار دانش‌آموزی
   module_label_student_product: محصول
   module_label_student_content_resources: محتوا و منابع
@@ -734,7 +776,8 @@ fa:
   module_label_available_now: هم اکنون در دسترس است
   module_label_video_series: مجموعه های ویدئویی
   module_label_self_paced: ماژول خود گام
-  module_label_event_or_lessons: Event or lessons
+  module_label_event_or_lessons: رویداد یا درس
+  module_label_or: یا
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -749,6 +792,7 @@ fa:
   module_grade_3_12: 3-12
   module_grade_5_12: ۵-۱۲
   module_grade_6_12: 6-12
+  module_grade_6_12_plus: 6-12+
   module_grade_6_10: 6-10
   module_grade_7_12: ۷-۱۲
   module_grade_9_12: 9-12
@@ -776,11 +820,11 @@ fa:
   module_duration_1_hr: 1 ساعت
   module_duration_2_hrs: 2 ساعت
   module_duration_3_hrs: 3 ساعت
-  module_duration_3_hrs_20_minutes: 3 hours 20 minutes
+  module_duration_3_hrs_20_minutes: 3 ساعت 20 دقیقه
   module_duration_5_hrs: 5 ساعت
   module_duration_5_hrs_plus: 5+ ساعت
   module_duration_8_hrs: 8 ساعت
-  module_duration_20_hrs: 20 ساعت ها
+  module_duration_20_hrs: " ۲۰ ساعت"
   module_duration_35_hrs: 35 ساعت ها
   module_duration_lesson: درس
   module_duration_week: هفته
@@ -798,7 +842,7 @@ fa:
   module_label_teaching_csd: آموزش علوم کامپیوتر اکتشافات
   module_label_teaching_csp: آموزش اصول علوم کامپیوتر
   module_label_teaching_problem_solving: آموزش حل مسئله و محاسبات
-  module_label_teaching_animations: Interactive Animations and Games
+  module_label_teaching_animations: انیمیشن ها و بازی های تعاملی
   module_label_teaching_csc: تدریس پیوند با علوم کامپیوتر
   module_label_teaching_ai: آموزش هوش مصنوعی و یادگیری ماشین
   module_label_teaching_maker_cp: آموزش ایجاد برنامه ها با دستگاه ها (زمین بازی مدار)
@@ -837,6 +881,8 @@ fa:
   values_04: ما چابک و پاسخگو به بازخورد هستیم
   values_05: ما با صداقت و شفافیت عمل می کنیم
   values_06: ما معتقدیم که تأثیر گسترده نیاز به تفکر بزرگ و عمل جامع دارد
+  heading_anyone_can_learn: هر کس می تواند علوم کامپیوتر را یاد بگیرد
+  heading_find_right_opportunity: فرصت یادگیری مناسب را برای خود پیدا کنید!
   heading_professional_learning: یادگیری حرفه‌ای که نیازهای شما را برآورده می‌کند
   heading_additional_resources: منابع اضافی
   heading_support_and_questions: پشتیبانی و سؤالات
@@ -866,12 +912,27 @@ fa:
   heading_attend_free_workshop: شرکت در کارگاه دانش‌آموزی رایگان
   heading_access_more_cs_resources: دسترسی به منابع علوم کامپیوتر بیشتر
   heading_available_on_code_dot_org: موجود در Code.org
-  heading_program_design: Program design
-  heading_how_does_application_process_work: How does the application process work?
-  heading_apply: Apply
-  heading_acceptance: Acceptance
-  heading_enroll: Enroll
-  heading_have_questions: Have questions?
+  heading_program_design: طراحی برنامه
+  heading_how_does_application_process_work: روند درخواست چگونه کار می کند؟
+  heading_apply: اعمال
+  heading_acceptance: پذیرش
+  heading_enroll: ثبت نام کنید
+  heading_have_questions: سوالی دارید؟
+  heading_resources_for_educators: منابع Code.org برای مربیان
+  student_courses_top_desc: برنامه نویسی را همین امروز شروع کنید دوره ها و فعالیت
+    های ما رایگان است! ساده‌تر و سرگرم‌کننده تر از آن چیزی است که فکر می کنید.
+  student_courses_explore_desc: دنیای علوم کامپیوتر را با فیلم های جذاب، آموزش های
+    خودسرانه، فعالیت های برنامه نویسی و موارد دیگر برای تمام سنین و سطوح تجربه کشف
+    کنید!
+  student_courses_k_5_desc: با یک ساعت کد شروع کنید، سپس برنامه نویسی مبتنی بر بلوک
+    بیشتر را در دوره های اکسپرس ما کشف کنید. در محیط برنامه نویسی سرگرم‌کننده ما،
+    آزمایشگاه شخصیت ها خلاق شوید یا ویدیوهای جالب تماشا کنید تا در مورد موضوعات کلیدی
+    بیشتر بدانید. چیزهای زیادی برای کشف وجود دارد!
+  student_courses_6_12_desc: یک ساعت کد را امتحان کنید یا دوره های خودسرانه ما را
+    در مورد ایجاد برنامه ها، بازی ها و انیمیشن ها بررسی کنید. کار خود را در محیط های
+    برنامه نویسی آزمایشگاه وب، آزمایشگاه بازی و آزمایشگاه اپلیکیشن انجام دهید. به
+    علاوه، در مورد هوش مصنوعی، مشاغل در برنامه نویسی، بورسیه ها و موارد دیگر بیشتر
+    بدانید.
   cs_ambassador_subhead: اگر دانش آموز دبیرستان هستید که علاقه مند به تشویق بیشتر
     زنان جوان برای تحصیل در علوم کامپیوتر در مدرسه خود هستید، پس ما به شما نیاز داریم!
   cs_ambassador_desc: هر زمینه، از جمله پزشکی، سرگرمی، ورزش، آموزش، تجارت، مد و کارآفرینی
@@ -881,6 +942,9 @@ fa:
   cs_ambassador_application_date: برنامه های کاربردی تا 8 نوامبر 2023 باز است
   cs_ambassador_application_subhead: امروز با یک معلم کار کنید تا درخواست خود را ارسال
     کنید
+  cs_ambassador_application_closed_title: برنامه ها اکنون بسته شده اند.
+  cs_ambassador_application_closed_subhead: درباره فرصت های آینده سؤال می کنید یا
+    می خواهید بیشتر بدانید؟ لطفا با [youngwomen@code.org] (%{email_url}) تماس بگیرید.
   cs_ambassador_application_questions: سوال؟ لطفا با [youngwomen@code.org] تماس بگیرید
     (%{email_url})
   cs_ambassador_do_heading: سفیران CS چه کاری انجام می دهند؟
@@ -940,19 +1004,19 @@ fa:
     CSA curriculum to your students.
   professional_learning_section_workshops_starting: کارگاه‌های حضوری و مجازی از تابستان
     امسال آغاز می‌شود.
-  pl_self_paced_learning_heading: Self-Paced Learning
-  pl_self_paced_learning_desc: Learn at your own pace using our online learning modules.
-    You can start whenever is convenient for you and the courses are free.
-  pl_elementary_workshops_heading: Elementary Workshops
-  pl_elementary_workshops_desc: Do you teach Kindergarten through 5th grade? Check
-    out the link below to learn more about our K5 workshops.
-  pl_outside_us_heading: Outside the United States
-  pl_outside_us_desc: If you're an international teacher interested in professional
-    learning, learn more about what's offered in your area.
-  pl_regional_partner_desc: Your local Code.org Regional Partner provides high quality
-    Code.org professional learning to teachers, and can help guide your school or
-    district on implementation, certification, funding, and more. They are happy to
-    answer any questions you may have about the program!
+  pl_self_paced_learning_heading: یادگیری خودخوان
+  pl_self_paced_learning_desc: با استفاده از ماژول های یادگیری آنلاین ما با سرعت بیاموزید.
+    شما می توانید هر زمان که برای شما مناسب است شروع کنید و دوره ها رایگان هستند.
+  pl_elementary_workshops_heading: کارگاه های ابتدایی
+  pl_elementary_workshops_desc: آیا تا کلاس پنجم ابتدایی تدریس می کنید؟ برای کسب اطلاعات
+    بیشتر در مورد کارگاه های آموزشی K5، لینک زیر را بررسی کنید.
+  pl_outside_us_heading: خارج از ایالات متحده
+  pl_outside_us_desc: اگر یک معلم بین المللی علاقه مند به یادگیری حرفه ای هستید، در
+    مورد آنچه در منطقه شما ارائه می شود بیشتر بدانید.
+  pl_regional_partner_desc: شریک منطقه ای Code.org شما آموزش حرفه ای Code.org را با
+    کیفیت بالا به معلمان ارائه می دهد و می تواند به راهنمایی مدرسه یا منطقه شما در
+    مورد اجرا، صدور گواهینامه، بودجه و موارد دیگر کمک کند. آنها با خوشحالی به هر سؤالی
+    که ممکن است در مورد برنامه داشته باشید پاسخ می دهند!
   no_devices_section_subhead: جلو بروید، مستقل عمل کنید (برای مدتی)!
   no_devices_section_desc: آموزش علوم کامپیوتر همیشه نباید جلوی صفحه‌نمایش باشد و
     دسترسی به دستگاه نباید مانعی برای یادگیری مفاهیم علوم کامپیوتر باشد.
@@ -977,11 +1041,11 @@ fa:
   subscribe_form_section_desc_csp: برای دریافت ایمیل های ماهانه در مورد اصول علوم
     کامپیوتر Code.org ثبت نام کنید و یادآوری ها، نکات و به روزرسانی های مفید را مستقیماً
     به صندوق ورودی خود ارسال کنید.
-  subscribe_form_section_title_pl: Get notified when Professional Learning registration
-    opens
-  subscribe_form_section_desc_pl: Be the first to know when registration begins! Sign
-    up to receive an email notification when teachers can start applying for the Code.org
-    Professional Learning Program.
+  subscribe_form_section_title_pl: هنگامی که ثبت نام آموزش حرفه ای باز می شود مطلع
+    شوید
+  subscribe_form_section_desc_pl: اولین نفری باشید که از شروع ثبت نام مطلع می شوید!
+    ثبت نام کنید تا زمانی که معلمان می توانند برای برنامه یادگیری حرفه ای Code.org
+    درخواست دهند، اعلان ایمیلی دریافت کنید.
   subscribe_form_section_unsubscribe: در هر زمان می توانید اشتراک خود را لغو کنید.
   hoc_page_what_is_hoc_heading: ساعت کدنویسی چيست؟
   hoc_page_desc: "[ساعت کدنویسی](%{hoc_url}) یک جنبش جهانی است که ده‌ها میلیون دانش‌آموز
@@ -1029,6 +1093,13 @@ fa:
   dance_afe_disclaimer: هنرمندانی که موسیقی آنها در این آموزش استفاده شده است، از
     آمازون به عنوان بخشی از مجوز استفاده از موسیقی خود به Code.org حمایت یا تأیید
     نمی کنند.
+  dance_ai_behind_the_scenes: 'Dance Party: AI Edition در پشت صحنه چگونه کار می کند؟'
+  dance_ai_behind_the_scenes_markdown: |-
+    در **Dance Party: AI Edition**، سه ایموجی انتخاب شده برای تولید یک اثر خروجی با استفاده از هوش مصنوعی استفاده می شود. یک اثر خروجی شامل مقادیری برای اثر پس زمینه، پالت رنگ پس زمینه و جلوه پیش زمینه است.
+
+    هر ایموجی و هر مقدار خروجی دارای یک عبارت توصیفی مرتبط با آن است. با مقایسه شباهت عبارت ایموجی ورودی با عبارت مقدار خروجی، ما می توانیم از هوش مصنوعی برای توصیه بهترین مطابقت استفاده کنیم.
+
+    برای محاسبه شباهت، به هر عبارت یک جاسازی اختصاص داده می شود. یک [جاسازی] (https://en.wikipedia.org/wiki/Word_embedding) لیستی از اعداد است که معنای یک عبارت را به تصویر می‌کشد و جاسازی هایی که در **Dance Party: AI Edition** به کار رفته اند حدود ۱۵۰۰ عدد طول دارند. شباهت با «فاصله» بین تعبیه عبارات اندازه گیری می شود. در **Dance Party: AI Edition**، از جاسازی های تولید شده توسط [مدل Amazon Bedrock Titan]] (https://aws.amazon.com/bedrock/titan/) استفاده می کنیم و شباهت را با محاسبه فاصله کوسینوسی بین تعبیه ها محاسبه می کنیم.
   minecraft_hero_heading: آموزش ساعت کدنویسی ماینکرافت
   minecraft_activities_desc: همه آموزش‌ها به زبان‌های مختلف موجود است و با مرورگرها
     و تبلت‌های مدرن سازگار است. اینترنت ندارید؟ [نسخه آفلاین ماجراجویان ماینکرافت
@@ -1070,6 +1141,64 @@ fa:
   minecraft_resources_desc_02: علاقه به STEM را در دانش‌آموزان K-12 با 200 ساعت دوره
     آموزشی علوم کامپیوتر، از یادگیری بلوک‌ها تا زبان پایتون، که به شکل حرفه‌ای ایجاد
     شده بیدار کنید.
+  afe_page_heading: منابع رایگان از مهندس آینده آمازون
+  afe_page_top_desc: 'تجربه تدریس خود را با Code.org در همکاری با [مهندس آینده آمازون]
+    (%{afe_url}) افزایش دهید. مربیان واجد شرایط از مدارس کم خدمت می توانند بدون هزینه
+    به این مزایا دسترسی پیدا کنند:'
+  afe_page_top_list_01: "**رشد حرفه ای: ** عضویت رایگان CSTA +، با وبینارها و منابع
+    تحت رهبری متخصصان."
+  afe_page_top_list_02: "**فرصت ها: ** شانس پیوستن به یک تجربه فلوشیپ پرداخت شده برای
+    افزایش دسترسی در علوم کامپیوتر با کار در کنار کارشناسان صنعت در آمازون!"
+  afe_page_top_list_03: "**منابع: ** کیت های الهام بخش، از جمله پوستر و برچسب ها،
+    برای مشارکت دانش آموزان در علوم کامپیوتر."
+  afe_page_top_list_04: "**نوآوری: ** دسترسی انحصاری به برنامه های آزمایشی که موضوعات
+    پیشرفته شغلی و علوم کامپیوتر را بررسی می کنند."
+  afe_page_eligibility_heading: پیش نیازهای واجد شرایط بودن*
+  afe_page_eligibility_list_01: عنوان 1 و/یا بیشتر از 40٪ ثبت نام دانشجویان ناهار
+    رایگان/کم هزینه (FRL)
+  afe_page_eligibility_list_02: بیش از 30٪ ثبت نام دانشجویان سیاه/لاتینی/بومی آمریکا
+    (BLNA)
+  afe_page_eligibility_list_03: مدرسه محلی
+  afe_page_eligibility_disclaimer: "* الزامات واجد شرایط بودن با استفاده از [داده
+    های NCES] (%{nces_url}) تأیید شده است."
+  afe_page_programs_heading: برنامه ها و فرصت های بیشتر مهندس آینده آمازون
+  afe_page_programs_alexa_title: مخترع مهارت های الکسا
+  afe_page_programs_alexa_desc: یاد بگیرید که چگونه الکسا را با مهارت هایی برنامه
+    ریزی کنید که می تواند به فضانوردان در حل مشکلات فضا و جوامع در خانه کمک کند.
+  afe_page_programs_cloud_tour_title: کشف تور شغلی رایانه ابری
+  afe_page_programs_cloud_tour_desc: چگونه از اجاره فیلم در فروشگاه به پخش از هر کجا
+    و در هر زمان رفتیم؟ بیاموزید که چگونه مراکز داده و محاسبات ابری نحوه تماشای محتوای
+    مورد علاقه ما و شغل پشت آن را تغییر داده اند.
+  afe_page_programs_voice_title: صدای شما قدرت است
+  afe_page_programs_voice_desc: دانش آموزان کد نویسی و رقابت خواهند کرد تا یاد بگیرند
+    که چگونه کارآفرینی، برنامه نویسی و موسیقی می توانند برای تغییر مثبت با هم تداخل
+    داشته باشند.
+  afe_page_programs_scholarships_title: بورس تحصیلی و کارآموزی
+  afe_page_programs_scholarships_desc: حمایت از دانش آموزان بعد از دبیرستان برای انجام
+    ماموریت مهندس آینده آمازون برای همه دانشمندان ما ضروری است.
+  afe_page_programs_robotics_title: تور مرکز تحقق رباتیک
+  afe_page_programs_robotics_desc: کشف کنید که چگونه علوم کامپیوتر، مهندسی پیشرفته
+    و افراد باورنکردنی سفارشات مشتری را در آمازون تحویل می دهند.
+  afe_page_programs_data_tour_title: تور شغلی ایمن نگه داشتن داده ها
+  afe_page_programs_data_tour_desc: شما می خواهید عکس های خود را در ابر بارگذاری کنید،
+    اما اگر اتفاقی در مرکز داده رخ دهد چه می شود؟ بیاموزید که چگونه AWS و متخصصان
+    مرکز داده ها را ایمن و پایدار نگه می دارند.
+  afe_page_success_heading: تبریک میگم شما با موفقیت در برنامه مهندس آینده آمازون
+    ثبت نام کرده اید.
+  afe_page_success_desc: شما باید به زودی یک ایمیل از مهندس آینده آمازون دریافت کنید
+    تا مزایای خود را ادعا کنید. در این بین، برخی از منابع شگفت انگیز موجود در سایت
+    ما را بررسی کنید.
+  afe_page_eligibility_check_heading: ما واجد شرایط بودن شما را بررسی کرده ایم
+  afe_page_eligibility_check_fail_desc: مدرسه شما واجد شرایط بودن [الزامات*] (%{req_url})
+    برای مزایای مهندس آینده آمازون را برآورده نمی کند، اما هنوز هم می توانید از تمام
+    آنچه Code.org ارائه می دهد، از جمله برنامه درسی قوی و فرصت های یادگیری حرفه ای
+    ما استفاده کنید.
+  afe_page_eligibility_check_fail_error: اگر فکر می کنید این پیام را به اشتباه دریافت
+    کرده اید، با ما در [support@code.org] (%{email_url}) تماس بگیرید.
+  afe_page_eligibility_check_disclaimer: "* برای شرکت در برنامه مهندس آینده آمازون،
+    یک مدرسه باید دارای وضعیت عنوان 1 باشد یا بیش از 40٪ دانش آموزان اقلیت با نمایندگی
+    کم و/یا 40٪ دانش آموزانی که واجد شرایط ناهار رایگان یا کاهش یافته هستند، ثبت نام
+    کند."
   blockchain_hero_heading: بلاکچین چگونه کار می کند
   blockchain_hero_desc: با «Blockchain چگونه کار می کند»، سری ویدیوی جدید ما و درس
     های همراه آن، به دنیای بلاک چین شیرجه بزنید!
@@ -1120,40 +1249,43 @@ fa:
   ai_pl_callout_title: برای EmpowerED هوش مصنوعی به ما بپیوندید!
   ai_pl_callout_desc_01: با مجموعه آموزش آنلاین رایگان ما برای مربیان، پتانسیل تحول‌آفرین
     هوش مصنوعی (AI) در آموزش را کشف کنید.
-  ai_pl_callout_desc_02: برای مشاهده «برنامه گفتگو با سال خان و هادی پرتوی» ثبت نام
-    کنید که در آن بنیانگذاران Khan Academy و Code.org کشف می‌کنند چگونه هوش مصنوعی
-    مولد می‌تواند قابل اعتمادترین دستیار آموزشی شما باشد.
-  ai_hero_heading: هوش مصنوعی جادو نیست،… فقط کد است!
-  ai_hero_desc: هوش مصنوعی (AI) را با یادگیری نحوه تغییر شیوه های زندگی، کار و یادگیری
-    ما تغییر می دهد.
+  ai_pl_callout_desc_02: مجموعه‌های ISTE و ETS و Code.org و آکادمی خان، با همکاری
+    یکدیگر اقدام به تولید مجموعه‌های آموزشی برای اموزگاران کرده‌اند. این سری از تولیدات
+    آموزشی به مربیان کمک می‌کند تا کلاس‌های درسشان را با تغییراتی که هوش مصنوعی به
+    ارمغان می‌آورد، منطبق سازند.
+  ai_hero_heading: هوش مصنوعی، جادو نیست... فقط یک برنامه است.
+  ai_hero_desc: 'با شناخت هوش مصنوعی (AI) و شکلی از تغییرات که هوش مصنوعی در زندگی،
+    کار و آموزش ما ایجاد میکند، از آن ابهام‌زدایی کنید. '
   ai_intro_heading: چرا در مورد AI یاد بگیریم؟
   ai_intro_video_title: چرا هوش مصنوعی با دب راجی اهمیت دارد
   ai_intro_video_caption_link: سری کامل معرفی AI را بررسی کنید
-  ai_intro_list_title_01: دانش بنیادی
-  ai_intro_list_desc_01: علاقه دانش آموزان را به فناوری جلب کنید و به آنها کمک کنید
-    تا دنیای اطراف خود را به روشی عمیق تر درک کنند.
+  ai_intro_list_title_01: دانش‌های بنیادی
+  ai_intro_list_desc_01: 'علاقه دانش‌آموزان به فناوری را بیشتر و به آنها برای درک
+    عمیق‌تر دنیای اطرافشان کمک کنید. '
   ai_intro_list_title_02: خلاقیت و نوآوری
-  ai_intro_list_desc_02: دانش آموزان را تشویق کنید تا خلاقانه فکر کنند و نوآوری کنند،
-    زیرا آنها کاربردهای بالقوه هوش مصنوعی را کشف می کنند.
+  ai_intro_list_desc_02: 'درحالیکه دانش‌آموزان درحال کشف کاربردهای بالقوه هوش مصنوعی
+    هستند، الهام‌بخش آنها برای تفکر خلاقانه و نوآورانه باشید. '
   ai_intro_list_title_03: حل مسئله و تفکر انتقادی
-  ai_intro_list_desc_03: دانش آموزان را تشویق کنید تا مهارت های ضروری را توسعه دهند،
-    زیرا آنها یاد می گیرند که سیستم های AI را طراحی، ساخت و ارزیابی کنند.
+  ai_intro_list_desc_03: 'مادامیکه دانش‌آموزان در حال فراگیری طراحی، ساخت و ارزیابی
+    AI هستند، آنها را به تقویت مهارت‌های پایه‌ایشان تشویق کنید. '
   ai_why_heading: چرا هوش مصنوعی را با  code.org اموزش بدهیم؟
-  ai_why_desc: تمام منابع مورد نیاز شما در یک مکان! پیشنهادات برنامه درسی ما، دوره
-    های یادگیری حرفه ای و مجموعه های ویدئویی طراحی شده برای شما و دانش آموزان خود
-    را کاوش کنید.
-  ai_why_link_01: برنامه های درسی هوش مصنوعی را کاوش کنید
+  ai_why_desc: پیشنهادات برنامه درسی، دوره‌های یادگیری حرفه‌ای، مجموعه‌های ویدیویی
+    که برای شما و دانش‌آموزانتان طراحی شده‌اند و هرآنچه برای آموزش نیاز دارید را در
+    یکجا بررسی کنید.
+  ai_why_link_01: بررسی برنامه‌های درسی هوش مصنوعی
   ai_why_link_02: گزینه های یادگیری حرفه ای را ببینید
-  ai_why_link_03: فیلم های AI را تماشا کنید
-  ai_curricula_heading: برنامه های درسی هوش مصنوعی
-  ai_curricula_desc: پیشنهادات مختلف برنامه درسی هوش مصنوعی را که نیازهای متنوع کلاس
-    را برآورده می کند، کاوش کنید.
+  ai_why_link_03: مشاهده فیلم‌های AI
+  ai_curricula_heading: 'برنامه‌های درسی هوش مصنوعی
+
+    '
+  ai_curricula_desc: " برنامه‌های درسی مختلف هوش مصنوعی را، براساس نیازهای مختلف کلاس‌‌های
+    درسی بررسی کنید."
   ai_curriculum_title_01: هوش مصنوعی و یادگیری ماشین
-  ai_curriculum_desc_01: کشف کنید که چگونه رایانه ها از داده ها یاد می گیرند. پروژه
-    های یادگیری ماشین را در اطراف داده های دنیای واقعی توسعه دهید. یک برنامه یادگیری
-    ماشین برای حل یک مشکل شخصی طراحی کنید.
-  ai_curriculum_grades_01: 'سطح درجه: 6-12'
-  ai_curriculum_duration_01: 'مدت زمان: 20 ساعت'
+  ai_curriculum_desc_01: کشف کنید که چگونه رایانه ها از داده ها یاد می گیرند پروژه‌
+    یادگیری ماشین را با استفاده از داده‌های دنیای واقعی توسعه دهید. با کمک یادگیری
+    ماشین، یک برنامه کاربردی برای حل مشکلات شخصی خودتان طراحی کنید.
+  ai_curriculum_grades_01: ۱۱ تا ۱۸ سال
+  ai_curriculum_duration_01: 'طول دوره: ۲۰ ساعت'
   ai_curriculum_btn_aria_label_01: واحد هوش مصنوعی و یادگیری ماشین را کاوش کنید
   ai_curriculum_title_02: هوش مصنوعی و اخلاق
   ai_curriculum_desc_02: در مورد پیامدهای اخلاقی هوش مصنوعی تأمل کنید، سپس با هم کار
@@ -1162,26 +1294,27 @@ fa:
   ai_curriculum_grades_02: 'سطح درجه: 5-12'
   ai_curriculum_duration_02: 'مدت زمان: 1 ساعت'
   ai_curriculum_btn_aria_label_02: طرح درس هوش مصنوعی و اخلاق را مشاهده کنید
-  ai_curriculum_title_03: هوش مصنوعی برای اقیانوس
+  ai_curriculum_title_03: هوش مصنوعی برای اقیانوس‌ها
   ai_curriculum_desc_03: کمک به هوش مصنوعی برای تمیز کردن اقیانوس ها با آموزش آن برای
     تشخیص زباله! در مورد داده های آموزشی و تعصب، و اینکه چگونه هوش مصنوعی می تواند
     مشکلات جهان را برطرف کند، بیاموزید.
-  ai_curriculum_grades_03: 'سطح درجه: 3-12'
+  ai_curriculum_grades_03: ۸ تا ۱۸ سال
   ai_curriculum_duration_03: 'مدت زمان: 1 ساعت'
   ai_curriculum_btn_aria_label_03: هوش مصنوعی را برای فعالیت اقیانوس ها امتحان کنید
   ai_curriculum_title_04: هوش مصنوعی چگونه کار می کند
-  ai_curriculum_desc_04: این درس ها مجموعه ویدیویی How AI Works را تکمیل می کند. هر
-    درس با یک ویدیوی واحد از این مجموعه جفت می شود و عمیق تر به مفاهیم معرفی شده در
-    فیلم ها می پردازد.
+  ai_curriculum_desc_04: 'این درس‌ها مجموعه ویدیویی How AI Works را تکمیل می‌کند.
+    هر درس با یک ویدیو از این مجموعه منطبق است، به‌طوریکه که به درک عمیق‌تر مفاهیم
+    معرفی‌شده کمک می‌کند. '
   ai_curriculum_btn_aria_label_04: کاوش در درس های هوش مصنوعی چگونه کار می کند
-  ai_curriculum_grades_05: 'سطح درجه: 9-12'
+  ai_curriculum_grades_05: ۱۴ تا ۱۸ سال
   ai_curriculum_btn_aria_label_05: کاوش در مهندسی نرم افزار و ماژول بینایی کامپیوتر
-  ai_curriculum_title_06: تأثیر اجتماعی هوش مصنوعی مولد
-  ai_curriculum_desc_06: تأثیر هوش مصنوعی مولد را از دیدگاه های مختلف بررسی کنید،
-    سپس به عنوان یک تیم همکاری کنید تا دستورالعمل هایی ارائه دهید که بیشترین نیازهای
-    همه شرکت کنندگان را برآورده کند.
+  ai_curriculum_title_06: تاثیر اجتماعی هوش مصنوعی مولد
+  ai_curriculum_desc_06: تاثیر هوش مصنوعی مولد را از دیدگاه‌های مختلف بررسی کنید و
+    به‌عنوان یک تیم، به ارائه دستورالعمل‌هایی که به نیازهای اصلی شرکت‌کنندگان پاسخ
+    می‌دهد، بپردازید.
   ai_curriculum_btn_aria_label_06: مشاهده تأثیر اجتماعی طرح درس هوش مصنوعی مولد
-  ai_curriculum_btn_aria_label_dance_ai: 'Try the Dance Party: AI Edition activity'
+  ai_curriculum_btn_aria_label_dance_ai: 'مهمانی رقص را امتحان کنید: فعالیت نسخه هوش
+    مصنوعی'
   ai_carousel_heading: 'آنچه معلمان در مورد هوش مصنوعی با Code.org می گویند:'
   ai_carousel_quote_01: این درس همچنین به دانش آموزان من این فرصت را داد تا ببینند
     که یک عنصر از نظر در سیستم های طبقه بندی وجود دارد. بعدها، زمانی که ما شروع کردیم
@@ -1376,68 +1509,66 @@ fa:
   ai_vid_computervision_caption: بینایی کامپیوتر
   ai_vid_ethics1_caption: 'اخلاق و هوش مصنوعی: دسترسی برابر و تعصب الگوریتمی'
   ai_vid_ethics2_caption: 'اخلاق و هوش مصنوعی: حریم خصوصی و آینده کار'
-  pl_middle_high_top_heading: Professional Learning Workshops for Grades 6-12
-  pl_middle_high_top_desc: Our engaging workshops are for new and experienced computer
-    science teachers!
-  pl_middle_high_top_desc_02: 'In this program, you will:'
-  pl_middle_high_top_list_01: Explore the curriculum and learning tools
-  pl_middle_high_top_list_02: Experience the course as a teacher and a learner
-  pl_middle_high_top_list_03: Collaborate with fellow teachers
-  pl_middle_high_quotes_heading: 'What teachers are saying about Code.org professional
-    learning:'
-  pl_middle_high_quotes_01: I liked seeing the lessons in action — it helped me understand
-    how to pace them in my own classroom. I liked the opportunity to talk to my peers
-    about assessment ideas and recruitment ideas.
-  pl_middle_high_quotes_02: This was excellent professional development that allowed
-    us time to reflect, process and debrief both individually and as a group. The
-    activities were engaging and meaningful to learning the content. I feel like I'm
-    leaving with skill I can immediately apply in teaching the curriculum.
-  pl_middle_high_quotes_03: By the end, I just felt so prepared, motivated, and ready
-    to get back in the classroom again!
-  pl_middle_high_programs_heading: Professional learning programs specific to the
-    course
-  pl_middle_high_programs_desc: Join one of our professional learning programs in
-    your area. The programs are designed to prepare you before and during your first
-    year teaching [Computer Science Discoveries](%{csd_url}), [Computer Science Principles](%{csp_url}),
-    or [AP® Computer Science A](%{csa_url}).
-  pl_middle_high_programs_no_experience_req: No computer science experience required
-  pl_middle_high_programs_some_experience_req: Able to use functions, conditionals,
-    loops, and arrays
-  pl_middle_high_programs_based_in_us: Based in United States
-  pl_middle_high_programs_teach_ap_course: Teach AP® or non-AP® course
-  pl_middle_high_programs_csd_hours: Teaching 25+ hours of course to a class in next
-    school year
-  pl_middle_high_programs_csp_hours: Teaching 100+ hours of course to a class in next
-    school year
-  pl_middle_high_programs_csa_hours: Teaching 140+ hours of course to a class in next
-    school year
-  pl_middle_high_program_design_desc: The yearlong professional learning programs
-    all follow a similar design. Regional Partners across the country provide our
-    programs and offer local workshops led by trained facilitators.
-  pl_middle_high_program_design_summer_title: Summer Workshops
-  pl_middle_high_program_design_summer_desc: Attend a multi-day summer workshop to
-    get familiar with the curriculum and prepare for the school year.
-  pl_middle_high_program_design_year_title: Academic Year Workshops
-  pl_middle_high_program_design_year_desc: Attend workshops during the year to receive
-    support as you teach the curriculum.
-  pl_middle_high_program_design_community_title: Community Support
-  pl_middle_high_program_design_community_desc: Collaborate with your regional cohort
-    of teachers and get the support of a nationwide online teacher community.
-  pl_middle_high_process_apply_desc: Fill out an application with information about
-    you, your school, and the course you're teaching.
-  pl_middle_high_process_acceptance_desc: If accepted, you will be notified of your
-    acceptance by your Regional Partner after applying.
-  pl_middle_high_process_enroll_desc: Sign up for the summer workshop in your region
-    and get ready to start the yearlong program!
-  pl_middle_high_cost_heading: What does the program cost?
-  pl_middle_high_cost_subhead: The cost of the program varies by region.
-  pl_middle_high_cost_desc: You may be eligible for a scholarship to cover the cost
-    of your program.
-  pl_middle_high_additional_programs_desc: In addition to our in-person facilitator
-    led options for middle and high school teachers we have several other programs
-    to meet the diverse needs of our teachers.
-  pl_middle_high_additional_programs_heading: Additional programs to meet diverse
-    teacher needs
+  pl_middle_high_top_heading: کارگاه های آموزشی حرفه ای برای کلاس های 6-12
+  pl_middle_high_top_desc: کارگاه های جذاب ما برای معلمان جدید و با تجربه علوم کامپیوتر
+    است!
+  pl_middle_high_top_desc_02: 'در این برنامه، شما:'
+  pl_middle_high_top_list_01: برنامه درسی و ابزارهای یادگیری را کشف کنید
+  pl_middle_high_top_list_02: دوره را به عنوان یک معلم و یک یادگیرنده تجربه کنید
+  pl_middle_high_top_list_03: همکاری با معلمان همکار
+  pl_middle_high_quotes_heading: 'معلمان در مورد یادگیری حرفه ای Code.org چه می گویند:'
+  pl_middle_high_quotes_01: من دیدن درس‌ها در عمل را دوست داشتم - این به من کمک کرد
+    تا بتوانم در کلاس خودم چگونه آن‌ها را تنظیم کنم. من از این فرصت برای صحبت با همکارانم
+    در مورد ایده‌های ارزیابی و ایده‌های استخدام لذت بردم.
+  pl_middle_high_quotes_02: این پیشرفت حرفه ای عالی بود که به ما فرصت داد تا به صورت
+    فردی و گروهی فکر کنیم، پردازش کنیم و توضیح دهیم. فعالیت ها برای یادگیری محتوا
+    جذاب و معنادار بود. احساس می‌کنم با مهارتی که می‌توانم فوراً در آموزش برنامه درسی
+    به کار ببرم، دارم می‌روم.
+  pl_middle_high_quotes_03: در پایان، احساس آمادگی، انگیزه و آمادگی برای بازگشت دوباره
+    به کلاس درس بودم!
+  pl_middle_high_programs_heading: برنامه های یادگیری حرفه ای خاص دوره
+  pl_middle_high_programs_desc: به یکی از برنامه های آموزشی حرفه ای ما در منطقه خود
+    بپیوندید. این برنامه ها برای آماده سازی شما قبل و در طول سال اول آموزش [اکتشافات
+    علوم کامپیوتر] (%{csd_url})، [اصول علوم کامپیوتر] (%{csp_url})، یا [AP® Computer
+    Science A] (%{csa_url}) طراحی شده اند.
+  pl_middle_high_programs_no_experience_req: نیازی به تجربه علوم کامپیوتر نیست
+  pl_middle_high_programs_some_experience_req: قادر به استفاده از توابع، شرط ها، حلقه
+    ها و آرایه ها
+  pl_middle_high_programs_based_in_us: مستقر در ایالات متحده
+  pl_middle_high_programs_teach_ap_course: آموزش دوره AP® یا غیر AP®
+  pl_middle_high_programs_csd_hours: تدریس 25+ ساعت دوره به یک کلاس در سال تحصیلی
+    آینده
+  pl_middle_high_programs_csp_hours: تدریس بیش از 100 ساعت دوره به یک کلاس در سال
+    تحصیلی آینده
+  pl_middle_high_programs_csa_hours: آموزش بیش از 140 ساعت دوره به یک کلاس در سال
+    تحصیلی آینده
+  pl_middle_high_program_design_desc: برنامه های یادگیری حرفه ای یک ساله همه از طراحی
+    مشابهی پیروی می کنند. شرکای منطقه ای در سراسر کشور برنامه های ما را ارائه می دهند
+    و کارگاه های محلی را به رهبری تسهیل کنندگان آموزش دیده ارائه می دهند.
+  pl_middle_high_program_design_summer_title: کارگاه های تابستانی
+  pl_middle_high_program_design_summer_desc: در یک کارگاه تابستانی چند روزه شرکت کنید
+    تا با برنامه درسی آشنا شوید و برای سال تحصیلی آماده شوید.
+  pl_middle_high_program_design_year_title: کارگاههای سال تحصیلی
+  pl_middle_high_program_design_year_desc: در طول سال در کارگاه های آموزشی شرکت کنید
+    تا هنگام تدریس برنامه درسی پشتیبانی دریافت کنید.
+  pl_middle_high_program_design_community_title: پشتیبانی جامعه
+  pl_middle_high_program_design_community_desc: با گروه معلمان منطقه ای خود همکاری
+    کنید و از حمایت یک جامعه معلمان آنلاین در سراسر کشور برخوردار شوید.
+  pl_middle_high_process_apply_desc: یک درخواست را با اطلاعاتی در مورد خود، مدرسه
+    و دوره ای که تدریس می کنید پر کنید.
+  pl_middle_high_process_acceptance_desc: در صورت پذیرش، پس از درخواست، از پذیرش خود
+    توسط شریک منطقه ای خود مطلع می شوید.
+  pl_middle_high_process_enroll_desc: برای کارگاه تابستانی در منطقه خود ثبت نام کنید
+    و برای شروع برنامه سالانه آماده شوید!
+  pl_middle_high_cost_heading: هزینه برنامه چقدر است؟
+  pl_middle_high_cost_subhead: هزینه برنامه بر اساس منطقه متفاوت است.
+  pl_middle_high_cost_desc: شما ممکن است واجد شرایط دریافت بورس تحصیلی برای پوشش هزینه
+    برنامه خود باشید.
+  pl_middle_high_additional_programs_desc: علاوه بر گزینه های تسهیل کننده حضوری برای
+    معلمان متوسطه و دبیرستان، چندین برنامه دیگر برای پاسخگویی به نیازهای متنوع معلمان
+    خود داریم.
+  pl_middle_high_additional_programs_heading: برنامه های اضافی برای پاسخگویی به نیازهای
+    متنوع معلم
   self_paced_pl_hero_heading: یادگیری حرفه ای خود گام برای مربیان
   self_paced_pl_hero_desc: ارائه آموزش حرفه ای برای حمایت از معلمان در هر مرحله از
     سفر آموزش علوم کامپیوتر خود.
@@ -1899,6 +2030,8 @@ fa:
     Closed captioning, Immersive reader
   csd_page_pick_a_course_heading: انتخاب دوره کشفیات علوم کامپیوتر مناسب برای کلاس
     درس شما
+  csd_page_pick_a_course_heading_non_en: انتخاب دوره مناسب %{cs_discoveries} (CS Discoveries)
+    برای کلاس درس شما
   csd_page_pick_a_course_desc: با مجموعه‌ای متنوع از گزینه‌های ارائه‌شده برای کشفیات
     علوم کامپیوتر، دوره‌ای برای تمام نیازهای مختلف وجود دارد.
   csd_page_pick_a_course_heading_02: چگونه می‌خواهید محتوا را انتخاب کنید؟
@@ -2183,6 +2316,11 @@ fa:
   donate_page_fundraise_title: جمع آوری کمک مالی برای Code.org
   donate_page_fundraise_desc: کمک به جمع آوری پول برای Code.org! هر دانش آموز در هر
     مدرسه باید فرصت یادگیری علوم کامپیوتر را داشته باشد.
+  donate_page_campaigns_heading: پشتیبانی از یک کمپین
+  donate_page_campaigns_farsi_desc: استعداد گسترده است، اما فرصت ها اغلب اینطور نیست.
+    طرح پیشنهادی Code.org در فارسی قصد دارد تا بیش از 110 میلیون فارسی زبان از کشورهایی
+    مانند ایران، افغانستان و تاجیکستان به دیسپورهای جهانی دسترسی به منابع آموزشی موجود
+    در حال حاضر به سایر زبانهای مهم را فراهم کند. بیایید آن را به واقعیت تبدیل کنیم.
   donate_page_other_ways_title: راه های دیگر برای دادن
   donate_page_other_ways_desc: روش های متنوعی را برای مشارکت کاوش کنید و گزینه ای
     را پیدا کنید که مناسب شما باشد. هر حرکت، بزرگ یا کوچک، ماموریت ما را به جلو می
@@ -2190,6 +2328,10 @@ fa:
   donate_page_501c3: Code.org به عنوان یک سازمان غیرانتفاعی 501 (c) (3) عمومی ثبت
     شده است. مشارکت در Code.org تا حدی که توسط قانون مجاز است، از مالیات کسر می شود.
     شماره شناسایی مالیاتی Code.org 46-0858543 است.
+  donate_page_supporters_heading: به رهبران برتر صنعت حمایت از Code.org بپیوندید
+  donate_page_supporters_desc: Prominent names nationwide trust and support our mission.
+    View our esteemed supporters and consider adding your own commitment to Code.org's
+    transformative cause.
   donate_page_donation_policy_title: درک سیاست کمک مالی ما
   donate_page_donation_policy_desc: در مورد نحوه مدیریت و تخصیص مشارکت های خود بیاموزید.
   donate_tabs_tab_label_daf_direct: DAF مستقیم
@@ -2247,7 +2389,10 @@ fa:
     دهید.
   hoc_live_join_us: به ما بپیوندید
   hoc_live_learn_more: بیشتر بدانید
-  hoc_overview_oceans_tutorial_header: هوش مصنوعی برای اقیانوس
+  hoc_live_map_and_events_message: During peak Hour of Code traffic, we use a static
+    map to save bandwidth and keep our site running. To see a dynamic map of all events
+    [click here](%{map_url}), and to see the full event list [click here](%{events_url}).
+  hoc_overview_oceans_tutorial_header: هوش مصنوعی برای اقیانوس‌ها
   hoc_overview_oceans_tutorial_desc: در مورد هوش مصنوعی (AI)، یادگیری ماشین، داده
     های آموزشی و تعصب یاد بگیرید، در حالی که به بررسی مسائل اخلاقی و نحوه استفاده
     از AI برای رسیدگی به مشکلات جهان می پردازید.
@@ -2691,7 +2836,7 @@ fa:
   signup_submit_census_error_message: ما متاسفيم یک خطا رخ داده است. لطفا فرم را دوباره
     ارسال کنید
   signup_submit_label: ثبت نام
-  signup_submit_explore: جلسات را کاوش کنید
+  signup_submit_explore: 'بررسی جلسات '
   signup_submit_error_message: خطایی رخ داد. لطفا مطمئن شويد كه تمامي فيلدهاي مورد
     نياز به درستي پر شده اند.
   signup_submit_and_continue_label: ارسال و ادامه
@@ -2955,6 +3100,22 @@ fa:
   handouts_brochure: این بروشور را به معلمان و مدارس بدهید
   handouts_participationguide: ساعت کدنویسی خود را با این راهنمای مشارکت برنامه ریزی
     کنید
+  poster_aria_label_minecraft: 'Download a poster featuring Minecraft Education: Generation
+    AI'
+  poster_aria_label_dance_ai_01: 'Download a poster featuring Dance Party: AI Edition
+    frog, moose, and cat characters'
+  poster_aria_label_dance_ai_02: 'Download a poster featuring Dance Party: AI Edition
+    robot, sloth, and shark characters'
+  poster_aria_label_oceans_01: Download a poster featuring AI for Oceans underwarer
+    scene with AI Bot selecting a fish
+  poster_aria_label_oceans_02: Download a poster featuring AI for Oceans fish characters
+    with different emotions
+  poster_aria_label_steph: Download a poster featuring NBA star Steph Curry
+  poster_aria_label_malala: Download a poster featuring activist Malala Yousafzai
+  poster_aria_label_hadi: Download a poster featuring Code.org founder Hadi Partovi
+  poster_aria_label_mary: Download a poster featuring General Motors CEO Mary Barra
+  poster_aria_label_satya: Download a poster featuring Microsoft CEO Satya Nadella
+  poster_aria_label_shakira: Download a poster featuring singer-songwriter Shakira
   videos_title: نمایش این فیلم ها برای الهام بخشیدن به دانش آموزان
   videos_what_most_schools_dont_teach: آنچه اکثر مدارس آموزش نمی دهند (5 دقیقه)
   videos_hoc_2014: ساعت کد اینجاست - هرکسی می تواند یاد بگیرد
@@ -10871,7 +11032,7 @@ fa:
   tutorial_rpisensehat_name: دیتالاگر Sense HAT
   tutorial_mee_name: 'ساعت کدنویسی Minecraft: هوش مصنوعی برای همیشه'
   tutorial_kuborobo_name: مسیرهای کدگذاری رباتیک KUBO
-  tutorial_ai-oceans_name: هوش مصنوعی برای اقیانوس
+  tutorial_ai-oceans_name: هوش مصنوعی برای اقیانوس‌ها
   tutorial_scratchimagine_longdescription: دنیایی را تصور کنید که در آن هر چیزی ممکن
     است، سپس آن را با Scratch زنده کنید!
   tutorial_codesterspsa_longdescription: اصول برنامه نویسی در پایتون را در حالی که
@@ -13464,13 +13625,14 @@ fa:
   tutorial_wizmoon_name: 'Moon Phase: creating the moon phases with code'
   tutorial_wiztraffic_name: 'Traffic light: creating a traffic light with code'
   tutorial_wizpacman_name: 'Pacman game: creating a Pacman game with code'
-  tutorial_wizsea_name: 'Saving the sea: creating a game with code'
-  tutorial_wizroad_name: 'Road crossing game: building a road crossing game with code'
-  tutorial_bekidsadventure_name: Creative Coding Adventures
-  tutorial_myqpixel_name: MyQ Pixel - Cause and effect (formerly Plethora)
-  tutorial_creaticodechatgpt_name: Build Fun Apps/Games Using ChatGPT AI
-  tutorial_thunkabletranslator_name: Build a Translator and Text-to-Speech App with
-    Thunkable
+  tutorial_wizsea_name: 'نجات دریا: ایجاد یک بازی با کد'
+  tutorial_wizroad_name: 'بازی عبور از جاده: ساخت یک بازی عبور جاده با کد'
+  tutorial_bekidsadventure_name: ماجراهای برنامه نویسی خلاق
+  tutorial_myqpixel_name: پیکسل MyQ - علت و معلول ( پلتورا سابق )
+  tutorial_creaticodechatgpt_name: ساخت اپلیکیشنها/بازی های سرگرم کننده با استفاده
+    از ChatGPT AI
+  tutorial_thunkabletranslator_name: با Thunkable یک برنامه مترجم و تبدیل متن به گفتار
+    بسازید
   tutorial_ozobotircomm_name: Intro to IR Communications
   tutorial_gsmonster_name: Create Monster Maze with GameSalad
   tutorial_gsspacerocks_name: Build a Space Rocks game with GameSalad
@@ -13485,15 +13647,15 @@ fa:
   tutorial_codetribeplatform_name: My First Platformer Game
   tutorial_codetribespace_name: My Space Explorer
   tutorial_codetribelanding_name: My First Landing Page
-  tutorial_cakeyboard_name: 'Keyboard Quest: CS100 Software & Hardware'
+  tutorial_cakeyboard_name: 'کیبورد Quest: نرم افزار و سخت افزار CS100'
   tutorial_hedytext_name: برنامه نویسی را به راحتی یاد بگیرید
-  tutorial_pickcodelanguage_name: 'Pickcode: Little Language Model'
-  tutorial_pickcodegenart_name: 'Pickcode: Generative Art Creator'
-  tutorial_pickcodecarbon_name: 'Pickcode: Carbon Footprint Calculator'
-  tutorial_pickcodecookie_name: 'Pickcode: Click a Cookie Game'
-  tutorial_pickcodeexoplanet_name: 'Pickcode: Exoplanet Explorer'
-  tutorial_firiahaunted_name: Haunted Code Chronicles
-  tutorial_googlediscoverai_name: Discover AI in Daily Life
+  tutorial_pickcodelanguage_name: 'کد انتخاب: مدل زبان کوچک'
+  tutorial_pickcodegenart_name: 'کد انتخاب: خالق هنر مولد'
+  tutorial_pickcodecarbon_name: 'Pickcode: ماشین حساب ردپای کربن'
+  tutorial_pickcodecookie_name: 'کد انتخاب: روی یک بازی کوکی کلیک کنید'
+  tutorial_pickcodeexoplanet_name: 'کد انتخاب: اکسپلورر فراخورشیدی'
+  tutorial_firiahaunted_name: تاریخچه کد سکنه شده
+  tutorial_googlediscoverai_name: کشف هوش مصنوعی در زندگی روزمره
   tutorial_msftsparksfly_name: Sparks Flying!
   tutorial_msftsparksflyjr_name: Sparks Flying Junior
   tutorial_seesawemrobot_name: Em Builds a Robot With Hardware
@@ -13539,7 +13701,7 @@ fa:
   tutorial_hwgallery_name: Show and Tell Gallery
   tutorial_hwfanpage_name: Fan Page
   tutorial_hwillusion_name: Color Illusion Challenge
-  tutorial_caevolution_name: 'Silicon Synapses: Evolution of AI'
+  tutorial_caevolution_name: 'سیناپس سیلیکون: تکامل هوش مصنوعی'
   tutorial_bbbusybot_name: BusyBot!
   tutorial_caaifarm_name: Old MacDonald Hacked a farm, AI, AI Drone
   tutorial_cafuture_name: Face the Future
@@ -13549,30 +13711,30 @@ fa:
   tutorial_dmbeatbox_name: Scratch - Beat-Box
   tutorial_kinderaikibo_name: An Introduction to AI with KIBO
   tutorial_kinderairvr_name: AI - Design a KIBO Mars Rover
-  tutorial_bbtai_name: AI for All
-  tutorial_cagenius_name: Gesture Genius
-  tutorial_tynkerweather_name: Weather Control
-  tutorial_tynkerbalance_name: Balancing Act
-  tutorial_tynkertickle_name: Tickle Monster
-  tutorial_tynkerfruit_name: Fruit Fighter
-  tutorial_codemonkeyhoot_name: 'AI is a Hoot: Pose Detection'
-  tutorial_kcjpong_name: Teach an AI to Play Pong
-  tutorial_dmsolar_name: Scratch - Solar Power Hour
-  tutorial_mindmakersneural_name: AI & Neural Networks
-  tutorial_blocksmithrescue_name: A.I. Rescue
-  tutorial_cstaheroes_name: CSTA CS Heroes
-  tutorial_codecombathack_name: CodeCombat AI HackStack
-  tutorial_toxicodewords_name: 'N-Gram Explorers: Quest for Words'
-  tutorial_mitstepmisinformation_name: 'Developing AI Literacy (DAILy) 2.0: Spread
-    of Misinformation'
-  tutorial_mitstepdeepfakes_name: 'Developing AI Literacy (DAILy) 2.0: Deepfakes +
-    Ethical Matrix'
-  tutorial_mitstepintrotoml_name: 'Developing AI Literacy (DAILy) 2.0: Intro to Supervised
-    Machine Learning'
-  tutorial_naflogo_name: 'Code your Brand: Make a Logo'
-  tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
-  tutorial_intelinosmile_name: Smile to Drive intelino
-  tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_bbtai_name: هوش مصنوعی برای همه
+  tutorial_cagenius_name: ژست نابغه
+  tutorial_tynkerweather_name: کنترل آب و هوا
+  tutorial_tynkerbalance_name: قانون تعادل
+  tutorial_tynkertickle_name: هیولا گلیکول
+  tutorial_tynkerfruit_name: میوه مبارز
+  tutorial_codemonkeyhoot_name: 'هوش مصنوعی یک هوت است: تشخیص ژست'
+  tutorial_kcjpong_name: به هوش مصنوعی آموزش دهید تا پنگ بازی کند
+  tutorial_dmsolar_name: Scratch - ساعت انرژی خورشیدی
+  tutorial_mindmakersneural_name: هوش مصنوعی و شبکه های عصبی
+  tutorial_blocksmithrescue_name: نجات هوش مصنوعی
+  tutorial_cstaheroes_name: قهرمانان سی‌اس‌ای سی اس
+  tutorial_codecombathack_name: کدکمت هوش مصنوعی هک استک
+  tutorial_toxicodewords_name: 'کاوشگران N-Gram: جستجوی کلمات'
+  tutorial_mitstepmisinformation_name: 'توسعه سواد هوش مصنوعی (DAILY) 2.0: گسترش اطلاعات
+    غلط'
+  tutorial_mitstepdeepfakes_name: 'توسعه سواد هوش مصنوعی (DAILY) 2.0: Deepfakes +
+    ماتریس اخلاقی'
+  tutorial_mitstepintrotoml_name: 'توسعه سواد هوش مصنوعی (DAILY) 2.0: مقدمه ای بر
+    یادگیری ماشین تحت نظارت'
+  tutorial_naflogo_name: 'نام تجاری خود را کد کنید: یک لوگو بسازید'
+  tutorial_madmobile_name: 'توسعه اپلیکیشن موبایل: برنامه نویسی با هوش مصنوعی و MAD-Learn'
+  tutorial_intelinosmile_name: لبخند بزنید تا هوشمند رانندگی کنید
+  tutorial_intelinoaisign_name: رانندگی قطار علامت هوش مصنوعی intelino
   tutorial_danceai2023_name: پارتی رقص
   tutorial_introtomlai_name: مقدمه ای بر یادگیری ماشین
   tutorial_computervisionai_name: بینایی کامپیوتر
@@ -13581,19 +13743,19 @@ fa:
   tutorial_generativeimagesai_name: تصاویر زایشی
   tutorial_algorithmicbiasai_name: تورش الگوریتمی
   tutorial_codeofethicsai_name: کد اخلاقی هوش مصنوعی ما
-  tutorial_socimpactofgenaiai_name: تأثیر اجتماعی هوش مصنوعی مولد
-  tutorial_generationai_name: Generation AI
-  tutorial_bsimage_longdescription: In this lesson students engage with a series of
-    scaffolded self-paced activities in our Parley editor that introduce them to the
-    Pyret programming language, image-producing functions, defining values and image
-    placement using coordinates. By the end they'll be able to modify code to solve
-    a puzzle that generates a snowman scene!  Students looking for a challenge can
-    even add their own elements.
-  tutorial_bscomputing_longdescription: Free downloadable Poster Series and accompanying
-    lesson in which students learn about a diverse group of pioneers in computing
-    and consider the problem solving advantages that diverse teams foster.
-  tutorial_stackpython_longdescription: Learn to build and program a robot using python
-    language.
+  tutorial_socimpactofgenaiai_name: تاثیر اجتماعی هوش مصنوعی مولد
+  tutorial_generationai_name: نسل هوش مصنوعی
+  tutorial_bsimage_longdescription: در این درس، دانش آموزان در ویرایشگر پارلی ما با
+    مجموعه ای از فعالیت های خود پیرامون داربست درگیر می شوند که آنها را با زبان برنامه
+    نویسی Pyret، توابع تولید تصویر، تعریف مقادیر و قرار دادن تصویر با استفاده از مختصات
+    آشنا می کنند. در پایان آنها قادر خواهند بود کد را تغییر دهند تا پازلی را حل کنند
+    که یک صحنه آدم برفی ایجاد می کند! دانش آموزانی که به دنبال یک چالش هستند حتی می
+    توانند عناصر خود را اضافه کنند.
+  tutorial_bscomputing_longdescription: سری پوستر قابل دانلود رایگان و درس همراه آن
+    که در آن دانش آموزان در مورد گروه متنوعی از پیشگامان در محاسبات یاد می گیرند و
+    مزایای حل مسئله را که تیم های مختلف تقویت می کنند، در نظر می گیرند.
+  tutorial_stackpython_longdescription: یاد بگیرید که یک ربات را با استفاده از زبان
+    پایتون بسازید و برنامه ریزی کنید.
   tutorial_questcastle_longdescription: 'The Cyber Castle Challenge is an exciting,
     gamified approach to learning cyber security using Minecraft: Education. Designed
     for ages 8-13, students collaborate to conquer 4 seasons of real-world cyber security
@@ -14082,9 +14244,9 @@ fa:
     that expose ethical pitfalls in an artificial intelligence area of their choice.
     Assemble a class-wide Our AI Code of Ethics resource for AI creators and legislators
     everywhere.
-  tutorial_socimpactofgenaiai_longdescription: تأثیر هوش مصنوعی مولد را از دیدگاه
-    های مختلف بررسی کنید، سپس به عنوان یک تیم همکاری کنید تا دستورالعمل هایی ارائه
-    دهید که بیشترین نیازهای همه شرکت کنندگان را برآورده کند.
+  tutorial_socimpactofgenaiai_longdescription: تاثیر هوش مصنوعی مولد را از دیدگاه‌های
+    مختلف بررسی کنید و به‌عنوان یک تیم، به ارائه دستورالعمل‌هایی که به نیازهای اصلی
+    شرکت‌کنندگان پاسخ می‌دهد، بپردازید.
   tutorial_generationai_longdescription: 'Venture through time to create your AI-powered
     inventions in the new Minecraft Hour of Code: Generation AI. Use problem solving,
     creativity, and computational thinking with the principles of Responsible AI.
@@ -14778,7 +14940,7 @@ fa:
   hoc_how_to_top_view_guide: مشاهده راهنما برای
   hoc_how_to_nav_main_aria_label: یک راهنما را انتخاب کنید
   hoc_how_to_nav_sidebar_aria_label: ناوبری نوار کناری
-  hoc_how_to_educators_intro_heading: چطور ساعت کدنویسی تان را برنامه ریزی کنید.
+  hoc_how_to_educators_intro_heading: چطور ساعت کدنویسی خود را برنامه ریزی کنید.
   hoc_how_to_educators_intro_desc: ساعت کد مقدمه ای یک ساعته با علوم کامپیوتر است
     که با استفاده از آموزش های سرگرم کننده نشان می دهد که هر کس می تواند اصول اولیه
     را یاد بگیرد. امسال، ما با ارائه فرصت های کدگذاری که شامل هوش مصنوعی (AI) و اجزای
@@ -15878,6 +16040,8 @@ fa:
     دقیقه)
   video_library_page_inspirational_video_title_14: بیشتر از یک بازی (1 دقیقه)
   video_library_page_inspirational_video_title_15: ایجاد با علوم کامپیوتر (1 دقیقه)
+  video_library_page_inspirational_video_title_16: Young Women in Computer Science
+    (2 min)
   video_library_page_not_hacked_video_title_1: چگونه هک نشم:مقدمه
   video_library_page_not_hacked_video_title_2: چگونه هک نشم:کلمات عبور
   video_library_page_not_hacked_video_title_3: چگونه هک نشم:احراز هویت و قفل دستگاه
@@ -16157,6 +16321,26 @@ fa:
     که چگونه محاسبات و تکنولوژی می‌تواند بر جهان تاثیر بگذارد.
   elementary_page_computer_science_description_2: بین علوم کامپیوتر (CS) و سایر موضوعات
     مانند ریاضی، هنرهای زبانی، علوم و مطالعات اجتماعی ارتباط برقرار کنید.
+  hoc_beyond_hero_description: Now that you've completed your Hour of Code, take your
+    learning to the next level! Many partners offer free, engaging options for teachers
+    and students alike - no experience needed.
+  hoc_beyond_for_teachers_section_title: For Teachers
+  hoc_beyond_for_teachers_section_description: You've held an Hour of Code event in
+    your classroom... now what? Join the more than 2 million educators who use Code.org
+    to teach computer science. Anyone can learn!
+  hoc_beyond_for_teachers_course_title_1: Teach with Code.org’s Courses
+  hoc_beyond_for_teachers_course_title_2: Teach Courses from Other Providers
+  hoc_beyond_for_teachers_course_description_1: Code.org offers a full K-12 course
+    pathway and professional learning workshops for teachers, free of charge.
+  hoc_beyond_for_teachers_course_description_2: Compare options by different partners,
+    organized by grade band.
+  hoc_beyond_for_teachers_course_link_1: Teach with Code.org
+  hoc_beyond_for_teachers_course_link_2: Explore other providers
+  hoc_beyond_carousel_title: For Students
+  hoc_beyond_carousel_description: Want to keep learning after Hour of Code? Check
+    out these activities for learners of all ages and skill levels.
+  hoc_beyond_submit_activity_form: Submit your own activity [here](%{form_url}).
+  hoc_beyond_end_section_label: The Hour of Code is organized by [Code.org](%{home_page})
   language_code:
     ar: عربی
     az: آذربایجانی

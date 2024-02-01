@@ -1030,8 +1030,35 @@
         "courseC_artist_loopsPrePre1a_2020": {
           "courseC_artist_loopsPrePre1a_1": "Begin met dit blok m de artiest naar het midden van het scherm te brengen."
         },
+        "courseC_artist_prog22022": {
+          "slider": "Je kunt je programma hier vertragen."
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Je kunt je programma hier vertragen."
+        },
+        "courseC_artist_prog2_2023": {
+          "slider": "Je kunt je programma hier vertragen."
+        },
         "courseC_collector_prog1": {
           "courseC_collector_prog1_1": "Zie je wat nieuwe blokken in de gereedschapskist?  Maak je geen zorgen, we zullen je zo meteen laten zien hoe je ze kunt gebruiken."
+        },
+        "courseC_collector_prog12022": {
+          "courseC_collector_prog1_1": "Zie je nieuwe blokken in de gereedschapskist? Maak je geen zorgen, we laten in een andere les zien hoe je ze kunt gebruiken."
+        },
+        "courseC_collector_prog1_2018": {
+          "courseC_collector_prog1_1": "Zie je nieuwe blokken in de gereedschapskist? Maak je geen zorgen, we laten in een andere les zien hoe je ze kunt gebruiken."
+        },
+        "courseC_collector_prog1_2019": {
+          "courseC_collector_prog1_1": "Zie je nieuwe blokken in de gereedschapskist? Maak je geen zorgen, we laten in een andere les zien hoe je ze kunt gebruiken."
+        },
+        "courseC_collector_prog1_2020": {
+          "courseC_collector_prog1_1": "Zie je nieuwe blokken in de gereedschapskist? Maak je geen zorgen, we laten in een andere les zien hoe je ze kunt gebruiken."
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "Zie je nieuwe blokken in de gereedschapskist? Maak je geen zorgen, we laten in een andere les zien hoe je ze kunt gebruiken."
+        },
+        "courseC_collector_prog1_2023": {
+          "courseC_collector_prog1_1": "Zie je nieuwe blokken in de gereedschapskist? Maak je geen zorgen, we laten in een andere les zien hoe je ze kunt gebruiken."
         },
         "courseC_collector_prog7": {
           "courseC_collector_prog7_1": "Je kunt meer blokken uit de gereedschapskist gebruiken als je ze nodig hebt!"
@@ -1075,8 +1102,14 @@
         "courseC_harvester_loops1_2023": {
           "courseC_harvester_loops1_callout1": "Het getal 4 bij de pompoen vertelt je dat er 4 pompoenen zijn die je kunt plukken."
         },
+        "courseC_maze_debugging5": {
+          "courseC_maze_debugging5_1": "Grijze blokken kunnen niet verwijderd worden!"
+        },
         "courseC_maze_debugging52022": {
           "courseC_maze_debugging5_1": "Deze blokken zijn vastgezet en kunnen niet worden verwijderd!"
+        },
+        "courseC_maze_debugging5_2018": {
+          "courseC_maze_debugging5_1": "Deze grijze blokken staan vast en kunnen niet verwijderd worden!"
         },
         "courseC_maze_debugging5_2019": {
           "courseC_maze_debugging5_1": "Deze blokken zijn vastgezet en kunnen niet worden verwijderd!"
@@ -1089,6 +1122,24 @@
         },
         "courseC_maze_debugging5_2023": {
           "courseC_maze_debugging5_1": "Deze blokken zijn vastgezet en kunnen niet worden verwijderd!"
+        },
+        "courseC_maze_debugging92022": {
+          "courseC_maze_debugging9_2019_1": "Sleep blokken uit de gereedschapskist naar je werkplaats."
+        },
+        "courseC_maze_debugging9_2019": {
+          "courseC_maze_debugging9_2019_1": "Sleep blokken uit de gereedschapskist naar je werkplaats."
+        },
+        "courseC_maze_debugging9_2020": {
+          "courseC_maze_debugging9_2019_1": "Sleep blokken uit de gereedschapskist naar je werkplaats."
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Sleep blokken naar je werkruimte."
+        },
+        "courseC_maze_debugging9_2023": {
+          "courseC_maze_debugging9_2019_1": "Sleep blokken uit de gereedschapskist naar je werkplaats."
+        },
+        "courseC_maze_debugging9_copy_2020": {
+          "courseC_maze_debugging9_2019_1": "Sleep blokken uit de gereedschapskist naar je werkplaats."
         },
         "courseC_maze_programming1": {
           "grade2_CaringForNewPet_0_1": "Druk na het verbinden van alle blokken op \"Start\" om je programma uit te voeren."
@@ -1518,28 +1569,28 @@
           "courseD_artist_functions1_1": "Laten we om te beginnen dit blok gebruiken om het eerste vierkant te tekenen."
         },
         "courseE_artist_functions2": {
-          "courseD_artist_functions2_1": "Als dit groene blok loopt wordt uitgevoerd, zal alle code in de functie worden uitgevoerd. Wat zou de artiest moeten doen nadat hij het eerste vierkant heeft getekend?"
+          "courseD_artist_functions2_1": "Als dit groene blok wordt uitgevoerd, zal alle code in de functie worden uitgevoerd. Wat zou de kunstenaar moeten doen na het tekenen van het eerste vierkant?"
         },
         "courseE_artist_functions22022": {
-          "courseD_artist_functions2_1": "Als dit groene blok loopt wordt uitgevoerd, zal alle code in de functie worden uitgevoerd. Wat zou de artiest moeten doen nadat hij het eerste vierkant heeft getekend?"
+          "courseD_artist_functions2_1": "Als dit groene blok wordt uitgevoerd, zal alle code in de functie worden uitgevoerd. Wat zou de kunstenaar moeten doen na het tekenen van het eerste vierkant?"
         },
         "courseE_artist_functions2_2018": {
-          "courseD_artist_functions2_1": "Als dit groene blok loopt wordt uitgevoerd, zal alle code in de functie worden uitgevoerd. Wat zou de artiest moeten doen nadat hij het eerste vierkant heeft getekend?"
+          "courseD_artist_functions2_1": "Als dit groene blok wordt uitgevoerd, zal alle code in de functie worden uitgevoerd. Wat zou de kunstenaar moeten doen na het tekenen van het eerste vierkant?"
         },
         "courseE_artist_functions2_2019": {
-          "courseD_artist_functions2_1": "Als dit groene blok loopt wordt uitgevoerd, zal alle code in de functie worden uitgevoerd. Wat zou de artiest moeten doen nadat hij het eerste vierkant heeft getekend?"
+          "courseD_artist_functions2_1": "Als dit groene blok wordt uitgevoerd, zal alle code in de functie worden uitgevoerd. Wat zou de kunstenaar moeten doen na het tekenen van het eerste vierkant?"
         },
         "courseE_artist_functions2_2020": {
-          "courseD_artist_functions2_1": "Als dit groene blok loopt wordt uitgevoerd, zal alle code in de functie worden uitgevoerd. Wat zou de artiest moeten doen nadat hij het eerste vierkant heeft getekend?"
+          "courseD_artist_functions2_1": "Als dit groene blok wordt uitgevoerd, zal alle code in de functie worden uitgevoerd. Wat zou de kunstenaar moeten doen na het tekenen van het eerste vierkant?"
         },
         "courseE_artist_functions2_2021": {
-          "courseD_artist_functions2_1": "Als dit groene blok loopt wordt uitgevoerd, zal alle code in de functie worden uitgevoerd. Wat zou de artiest moeten doen nadat hij het eerste vierkant heeft getekend?"
+          "courseD_artist_functions2_1": "Als dit groene blok wordt uitgevoerd, zal alle code in de functie worden uitgevoerd. Wat zou de kunstenaar moeten doen na het tekenen van het eerste vierkant?"
         },
         "courseE_artist_functions2_2023": {
-          "courseD_artist_functions2_1": "Als dit groene blok loopt wordt uitgevoerd, zal alle code in de functie worden uitgevoerd. Wat zou de artiest moeten doen nadat hij het eerste vierkant heeft getekend?"
+          "courseD_artist_functions2_1": "Als dit groene blok wordt uitgevoerd, zal alle code in de functie worden uitgevoerd. Wat zou de kunstenaar moeten doen na het tekenen van het eerste vierkant?"
         },
         "courseE_artist_functions2_copy": {
-          "courseD_artist_functions2_1": "Als dit groene blok loopt wordt uitgevoerd, zal alle code in de functie worden uitgevoerd. Wat zou de artiest moeten doen nadat hij het eerste vierkant heeft getekend?"
+          "courseD_artist_functions2_1": "Als dit groene blok wordt uitgevoerd, zal alle code in de functie worden uitgevoerd. Wat zou de kunstenaar moeten doen na het tekenen van het eerste vierkant?"
         },
         "courseE_artist_functions2_dani": {
           "courseD_artist_functions2_1": "Als dit groene blok loopt wordt uitgevoerd, zal alle code in de functie worden uitgevoerd. Wat zou de artiest moeten doen nadat hij het eerste vierkant heeft getekend?"
@@ -1787,6 +1838,21 @@
         "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "Gebruik dit blok om een sprite te creëren.",
           "hello_world_say": "Gebruik dit blok om sprites te laten spreken."
+        },
+        "express_maze_debugging92022": {
+          "express_maze_debugging9_2019_1": "Sleep blokken uit de gereedschapskist naar je werkplaats."
+        },
+        "express_maze_debugging9_2019": {
+          "express_maze_debugging9_2019_1": "Sleep blokken uit de gereedschapskist naar je werkplaats."
+        },
+        "express_maze_debugging9_2020": {
+          "express_maze_debugging9_2019_1": "Sleep blokken uit de gereedschapskist naar je werkplaats."
+        },
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "Sleep blokken uit de gereedschapskist naar je werkplaats."
+        },
+        "express_maze_debugging9_2023": {
+          "express_maze_debugging9_2019_1": "Sleep blokken uit de gereedschapskist naar je werkplaats."
         },
         "frozen circle function with parameter": {
           "frozen_circle_function_with_parameter_circle": "Gebruik de \"maak en cirkel\" blok en wijzig de grootte."

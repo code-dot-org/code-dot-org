@@ -303,6 +303,8 @@ ko:
       UnplugHappyMaps_2019:
         desc: 학생들은 명령어 조합으로 만들어진 하나의 명령으로, 미로를 움직이는 간단한 알고리즘들을 만든다.
         title: 즐거운 맵
+      Unplugged- Melissa Sandbox:
+        title: 언플러그드
       VideoGamesCoordinatePlanes:
         desc: 당신이 즐겨하는 비디오 게임이 어떻게 대수학에 의해서 동작하는지 알아보자! 대수식 표현법과 좌표 평면은 우리가 비디오 게임의
           작동 방식을 이해하는데 도움이 되는지 탐구하고, 당신이 만들어볼 비디오 게임에 대한 계획을 세워보자.

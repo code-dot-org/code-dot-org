@@ -3,35 +3,7 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "ai-2020": {
-            "buttonText": "למד עוד",
-            "title": "חקור בינה מלאכותית ולמידת מכונה"
-          },
-          "ai-launch-2023": {
-            "buttonText": "למד עוד"
-          },
-          "ai-pl-launch-2023": {
-            "buttonText": "למד עוד"
-          },
-          "back-to-school-2021": {
-            "buttonText": "למד עוד"
-          },
-          "codebytes-2020": {
-            "buttonText": "למד עוד"
-          },
-          "coldplay": {
-            "buttonText": "נסו זאת"
-          },
-          "congrats-certificate-share": {
-            "buttonText": "התחל"
-          },
-          "csjourneys": {
-            "buttonText": "למד עוד"
-          },
-          "csjourneys-22": {
-            "buttonText": "למד עוד"
-          },
-          "csleadersprize": {
+          "co-teacher": {
             "buttonText": "למד עוד"
           },
           "hoc-2023": {
@@ -41,23 +13,8 @@
             "buttonText": "למד עוד",
             "title": "מסיבת ריקודים: מהדורת AI"
           },
-          "home-learning-2020": {
-            "buttonText": "צפה ברעיונות לפרויקט"
-          },
           "superhero": {
             "buttonText": "למד עוד"
-          },
-          "teacher-apps-closing-2021": {
-            "buttonText": "הצטרף אלינו"
-          },
-          "teacher-apps-nominate-2020": {
-            "buttonText": "למנות מורה"
-          },
-          "teacher-apps-open-2021": {
-            "buttonText": "הצטרף אלינו"
-          },
-          "teacher-apps-stillon-2020": {
-            "buttonText": "הצטרף אלינו"
           }
         }
       }

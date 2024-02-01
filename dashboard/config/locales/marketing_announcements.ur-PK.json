@@ -3,35 +3,7 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "ai-2020": {
-            "buttonText": "مزید سیکھے",
-            "title": "مصنوعی ذہانت اور مشین لرننگ کو دریافت کریں"
-          },
-          "ai-launch-2023": {
-            "buttonText": "مزید سیکھے"
-          },
-          "ai-pl-launch-2023": {
-            "buttonText": "مزید سیکھے"
-          },
-          "back-to-school-2021": {
-            "buttonText": "مزید سیکھے"
-          },
-          "codebytes-2020": {
-            "buttonText": "مزید سیکھے"
-          },
-          "coldplay": {
-            "buttonText": "یہ آزمائیے"
-          },
-          "congrats-certificate-share": {
-            "buttonText": "شروع کریں"
-          },
-          "csjourneys": {
-            "buttonText": "مزید سیکھے"
-          },
-          "csjourneys-22": {
-            "buttonText": "مزید سیکھے"
-          },
-          "csleadersprize": {
+          "co-teacher": {
             "buttonText": "مزید سیکھے"
           },
           "hoc-2023": {
@@ -42,23 +14,8 @@
           "hoc-2023-dance-ai": {
             "buttonText": "مزید سیکھے"
           },
-          "home-learning-2020": {
-            "buttonText": "پروجیکٹ آئیڈیاز دیکھیں"
-          },
           "superhero": {
             "buttonText": "مزید سیکھے"
-          },
-          "teacher-apps-closing-2021": {
-            "buttonText": "ہمارے ساتھ شامل ہوں"
-          },
-          "teacher-apps-nominate-2020": {
-            "buttonText": "ایک استاد کو نامزد کریں"
-          },
-          "teacher-apps-open-2021": {
-            "buttonText": "ہمارے ساتھ شامل ہوں"
-          },
-          "teacher-apps-stillon-2020": {
-            "buttonText": "ہمارے ساتھ شامل ہوں"
           }
         }
       }

@@ -14422,7 +14422,7 @@
           "hint2": "💡 以下は、あなたのコードがどのように見えるかの例です。 <xml>\n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n\n  <block type=\"Dancelab_whenKey\" id=\"*R3Us3z5;rM#sBE?1zjX\" deletable=\"false\" x=\"19\" y=\"221\">\n    <field name=\"KEY\">\"上\"</field>\n    <next>\n      <block type=\"Dancelab_doMoveEachLR\" id=\"*hCDocpHXqlku@f[[rK=\">\n        <field name=\"GROUP\">\"クマ\"</field>\n        <field name=\"MOVE\">動く.ダブ</field>\n        <field name=\"DIR\">-1</field>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "dance_ai_customize_effect": {
-          "Hint1": "💡 <xml> <block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Dancelab_ai\" id=\"*6NOt^DsApsRC-pPZKBQ\">の絵文字をクリックしてエフェクトをカスタマイズしてください。\n  <field name=\"VALUE\">{\"入力\":\n[\"クール\",\"コールド\",\"ウェービー\"]、\"背景効果\":\"スパークル\",\"背景色\":\"クール\",\"忘れなれないエフェ入力クト\":\"バブル\" }</field> \n\n</block> \\<0>ブロックをワークスペースに置く。",
+          "Hint1": "💡 <xml> <block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Dancelab_ai\" id=\"*6NOt^DsApsRC-pPZKBQ\">の絵文字をクリックしてエフェクトをカスタマイズしてください。\n  <field name=\"VALUE\">{\"inputs\":\n[\"cool\",\"cold\",\"wavy\"], \"backgroundEffect\":\"sparkles\",\"backgroundColor\":\"cool\",\"foregroundEffect\":\"bubbles\" }</field> \n\n</block> \\<0>ブロックをワークスペースに置く。",
           "Hint2": "💡 **まだ行き詰まっていますか？**エフェクトをカスタマイズする方法をビデオでご覧ください。",
           "HintEdit": "💡 A.I.が書いたコードを使いたい場合は、切り替えでコードを表示させ、「コードを使用」をクリックします。このブロックがワークスペースの「A.I.生成エフェクト」ブロックに置き換わります。"
         },

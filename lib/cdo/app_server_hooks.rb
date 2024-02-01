@@ -3,8 +3,12 @@ module Cdo
   # (e.g., dashboard and pegasus).
   module AppServerHooks
     def self.before_fork
+      # rubocop:disable CustomCops/PegasusDbUsage
+      # rubocop:disable CustomCops/DashboardDbUsage
       PEGASUS_DB.disconnect
       DASHBOARD_DB.disconnect
+      # rubocop:enable CustomCops/PegasusDbUsage
+      # rubocop:enable CustomCops/DashboardDbUsage
       Cdo::AppServerMetrics.instance&.spawn_reporting_task if defined?(Cdo::AppServerMetrics)
 
       # Control automated restarts of web application server processes via Gatekeeper and DCDO.

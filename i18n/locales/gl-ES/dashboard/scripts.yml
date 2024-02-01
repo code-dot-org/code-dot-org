@@ -97,6 +97,7 @@ gl:
           description: Proba os fundamentos da informa\*tica con personaxes de Angry Birds e Plantas vs. Zombis!
           description_short: Proba os fundamentos da informa\*tica con moitos personaxes divertidos!
           student_description: Proba os fundamentos da informa\*tica con personaxes de Angry Birds e Plantas vs. Zombis!
+          name: Hora de Código
         algebraPD2a:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
@@ -1059,6 +1060,10 @@ gl:
               display_name: Cidadanía dixital
             lessonGroup-4:
               display_name: Variables
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Xogo libre
         test-nv-coursea-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1120,3 +1125,30 @@ gl:
           lesson_groups:
             lessonGroup-7:
               display_name: Introdución
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Eventos
+            lesson-4:
+              name: Comportamentos
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Bucles
+            lesson-4:
+              name: Condicionais
+          title: Introdución á informática
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listas
+            lessonGroup-3:
+              display_name: Bucles

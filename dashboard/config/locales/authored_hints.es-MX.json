@@ -14650,7 +14650,7 @@
           "HintEdit": "💡 Si quieres usar el código que A.I. escribe, dale clic a 'código' y luego a 'Usar Código.' Los bloques reemplazarán el bloque `A.I. genera efecto` en tu espacio de trabajo."
         },
         "dance_ai_dancer_and_dance_move": {
-          "HInt2": "Selecciona al mismo bailarín en cada bloque, ten en cuenta la secuencia (osea, el orden) de tus bloques.",
+          "HInt2": "Selecciona al mismo bailarín en cada bloque, ten en cuenta la secuencia (osea, el orden) de tus bloques.  ",
           "validation": "💡 Agrega estos bloques bajo el bloque <code style=\"color:white; background-color:#FFBD46\">establecer</code> para crear tu primer bailarín: \n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n      <block type=\"Dancelab_makeAnonymousDanceSprite\" id=\"1\">\n        <field name=\"COSTUME\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">“GATO”</field>\n        <field name=\"LOCATION\">{x: 200, y: 200}</field>\n        <next>\n          <block type=\"Dancelab_changeMoveEachLR\" id=\"|y+CWEBlleENO5MU(?yL\">\n            <field name=\"GROUP\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">“GATO”</field>\n            <field name=\"MOVE\">“siguiente”</field>\n            <field name=\"DIR\">-1</field>\n          </block>\n        </next>\n      </block>\n    </statement>\n\n</xml>"
         },
         "dance_ai_generate_effect": {

@@ -77,6 +77,7 @@ ms:
           description: Cuba asas sains komputer dengan watak daripada Angry Birds dan Tumbuhan lwn. Zombi!
           description_short: Cuba asas sains komputer dengan banyak watak yang menyeronokkan!
           student_description: Cuba asas sains komputer dengan watak daripada Angry Birds dan Tumbuhan lwn. Zombi!
+          name: Hour of Code
         text-compression:
           title: Pemampatan Teks
         cspunit3:
@@ -2776,6 +2777,10 @@ ms:
           description_short: Pelajari semua konsep dalam Asas Sains Komputer dan cipta seni, cerita atau permainan anda sendiri.
         self-paced-pl-csp2-2023:
           title: 'Modul 2: Menavigasi Code.org'
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Permainan Bebas
         csa-frq-practice-2022:
           lessons:
             lesson-4:
@@ -2972,3 +2977,38 @@ ms:
               display_name: Bab 1
             lessonGroup-3:
               display_name: Bab 2
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Acara-acara
+            lesson-4:
+              name: Tingkah laku
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Gelung
+            lesson-4:
+              name: Bersyarat
+          title: Pengenalan kepada Sains komputer
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: Pemboleh ubah
+            csp_conditionals:
+              display_name: Bersyarat
+            csp_functions:
+              display_name: Fungsi
+            csp_project:
+              display_name: Projek
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: Data
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Senarai
+            lessonGroup-3:
+              display_name: Gelung
+            lessonGroup-5:
+              display_name: Projek

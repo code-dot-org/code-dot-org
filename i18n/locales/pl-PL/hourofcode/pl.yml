@@ -110,6 +110,11 @@ pl:
   social_hoc2019_dance: Wystąpią Katy Perry, Jonas Brothers, Lil Nas X, Panic at the
     Disco i wielu innych!
   social_hoc_anybody: 'Godzina kodowania: każdy może się nauczyć'
+  hoc_interest_form_header: Otrzymuj powiadomienia, gdy otworzy się rejestracja Hour
+    of Code!
+  hoc_interest_form_desc: Bądź pierwszą osobą, która dowie się o tegorocznej Godzinie
+    Kodowania, w tym o nowych działaniach i rozpoczęciu rejestracji na wydarzenia
+    Godziny Kodowania.
   oceans_landing_title: AI dla oceanów
   oceans_landing_description: 'Poznaj uczenie maszynowe, ucząc A.I., rozpoznawać ryby.
     #CSforGood'
@@ -258,6 +263,16 @@ pl:
     do kariery, który ma inspirować, edukować i szkolić dzieci i młodzież o niskich
     dochodach i innych znajdujących się w niekorzystnej sytuacji, aby kontynuować
     karierę w informatyce. [Dowiedz się więcej o naszym partnerstwie] (%{afe_url}).
+  donors_block_microsoft_infosys: Dziękujemy Microsoft i Infosys Foundation USA za
+    wspieranie naszej wizji i misji, aby zapewnić każdemu dziecku możliwość nauki
+    informatyki i umiejętności, aby odnieść sukces w XXI wieku.
+  microsoft_logo_alt: Logo Microsoft
+  infosys_logo_alt: Logo Infosys Foundation USA
+  amazon_logo_alt: Logo Amazon
+  google_logo_alt: Logo Google
+  coinbase_logo_alt: Logo Coinbase
+  ballmer_group_logo_alt: Logo grupy Ballmer
+  vista_equity_partners_logo_alt: Logo Partnerów Vista Equity
   grade_level: Poziom klasy
   grade_level_label_elementary: Szkoła podstawowa
   grade_level_label_middle: Gimnazjum
@@ -271,6 +286,12 @@ pl:
   curricula_title_high: Programy nauczania dla szkoły średniej
   curricula_desc_high: Przeglądaj atrakcyjne kursy i zajęcia, które zapraszają Ciebie
     i Twoich uczniów szkół średnich do głębszego zagłębienia się w informatykę.
+  facilitator_led_pl_heading: Warsztaty doskonalenia zawodowego prowadzone przez facylitatora
+  facilitator_led_pl_desc: Dowiedz się o naszych warsztatach doskonalenia zawodowego
+    dla nauczycieli szkół podstawowych, średnich i licealnych.
+  self_paced_pl_heading: Doskonalenie zawodowe we własnym tempie
+  self_paced_pl_desc: Doskonalenie zawodowe we własnym tempie. Poznaj nasze internetowe,
+    moduły samodzielnego doskonalenia zawodowego.
   for_administrators_heading: Dla administratorów
   for_administrators_desc: Dołącz do tysięcy szkół, które już włączyły informatykę
     do swojego programu nauczania.
@@ -329,6 +350,7 @@ pl:
   call_to_action_start_part_02: Rozpocznij część drugą
   call_to_action_start_unplugged_activity: Rozpocznij aktywność bez komputera
   call_to_action_view_promo_resources: Przejrzyj zasoby promocyjne
+  call_to_action_view_teach_with_cdo: Rozpocznij nauczanie z Code.org
   call_to_action_get_involved: Zaangażuj się
   call_to_action_learn_more: Dowiedz się więcej
   call_to_action_watch_now: Obejrzyj teraz
@@ -418,6 +440,7 @@ pl:
   call_to_action_open_positions: Wyświetl otwarte pozycje
   call_to_action_explore_roles: Przeglądaj otwarte role
   call_to_action_get_guide: Pobierz przewodnik
+  call_to_action_donate: Podaruj
   call_to_action_donate_to_cdo: Wesprzyj Code.org
   call_to_action_start_fundraiser: Rozpocznij zbiórkę pieniędzy
   call_to_action_view_donation_policy: Zobacz politykę darowizn
@@ -441,6 +464,7 @@ pl:
   call_to_action_learn_about_ai: Dowiedz się więcej o sztucznej inteligencji (AI)
   call_to_action_learn_more_about_ai: Dowiedz się więcej o sztucznej inteligencji
   call_to_action_get_started: Rozpocznij
+  call_to_action_view_our_supporters: Zobacz naszych zwolenników
   call_to_action_explore_self_paced_pl: Poznaj samodzielne doskonalenie zawodowe
   call_to_action_applications_get_notified: Otrzymuj powiadomienia o otwarciu aplikacji
   call_to_action_applications_notify_me: Powiadom mnie, kiedy będę mógł złożyć wniosek
@@ -451,6 +475,10 @@ pl:
   call_to_action_learn_more_program_region: Dowiedz się więcej o programie w Twoim
     regionie
   call_to_action_visit_support_center: Odwiedź nasze centrum wsparcia
+  call_to_action_download_video: Pobierz wideo
+  call_to_action_explore_learning_ages_5_11: Poznaj naukę dla uczniów w wieku 5-11
+    lat
+  call_to_action_explore_learning_ages_11_plus: Poznaj naukę dla uczniów w wieku 11+
   aria_label_call_to_action_hoc_how_to_educators: Zobacz poradnik dla nauczycieli
   aria_label_call_to_action_hoc_how_to_companies: Zobacz poradnik dla firm
   aria_label_call_to_action_hoc_how_to_districts: Zobacz poradnik dla dystryktów
@@ -466,6 +494,10 @@ pl:
   aria_label_call_to_action_dance_02: Rozpocznij drugą część potańcówki
   aria_label_call_to_action_dance_unplugged: Rozpocznij potańcówkę bez komputera
   aria_label_call_to_action_afe: Dowiedz się więcej o Amazon Future Engineer
+  aria_label_call_to_action_facilitator_pl: Dowiedz się więcej o warsztatach doskonalenia
+    zawodowego prowadzonych przez facylitatorów
+  aria_label_call_to_action_self_paced_pl: Dowiedz się więcej o samodzielnym rozwoju
+    zawodowym
   aria_label_call_to_action_teaching_csf: Rozpocznij profesjonalny program Nauczanie
     Podstaw Informatyki
   aria_label_call_to_action_teaching_csd: Rozpocznij profesjonalny program Nauczanie
@@ -585,6 +617,9 @@ pl:
   aria_label_call_to_action_register_student_workshop: Zarejestruj się na bezpłatne
     warsztaty uczniowskie
   aria_label_call_to_action_view_more_cs_resources: Zobacz więcej zasobów informatycznych
+  aria_label_call_to_action_farsi_donate: Przekaż darowiznę, aby wesprzeć kampanię
+    Code.org in Farsi
+  aria_label_call_to_action_farsi_learn_more: Dowiedz się więcej o Code.org w Farsi
   aria_label_call_to_action_pl_apply_csd: Aplikuj teraz na doskonalenie zawodowe w
     zakresie Odkryć Informatyki
   aria_label_call_to_action_pl_apply_csp: Aplikuj teraz na doskonalenie zawodowe w
@@ -594,7 +629,19 @@ pl:
   aria_label_call_to_action_learn_more_csd: Dowiedz się więcej o Odkryciach Informatyki
   aria_label_call_to_action_learn_more_csp: Dowiedz się więcej o Zasadach Informatyki
   aria_label_call_to_action_learn_more_csa: Dowiedz się więcej o AP® Informatyka A
+  aria_label_call_to_action_afe_alexa: Dowiedz się więcej o Alexa dla astronautów
+  aria_label_call_to_action_afe_cloud_tour: Dowiedz się więcej o programie Uncovering
+    Cloud Computer Career Tour
+  aria_label_call_to_action_afe_voice: 'Dowiedz się więcej o konkursie Your Voice
+    is Power Amazonu '
+  aria_label_call_to_action_afe_scholarships: Dowiedz się więcej o stypendiach i stażach
+    Amazonu
+  aria_label_call_to_action_afe_robotics: Dowiedz się więcej o wycieczce po Robotics
+    Fulfillment Center
+  aria_label_call_to_action_afe_data_tour: Dowiedz się więcej o wycieczce Keeping
+    Data Safe Career
   video_title_professional_learning_program: Profesjonalny program nauczania Code.org
+  video_title_young_women_in_computer_science: Młode kobiety w informatyce
   curriculum_name_csf: Podstawy informatyki
   curriculum_name_csf_02: Wszelkie podstawy CS (kurs A-F)
   curriculum_name_csf_a_f: Podstawy CS A-F
@@ -714,6 +761,8 @@ pl:
     opracowywania programu wizji komputerowej. '
   curriculum_desc_csa_ai_short: Ten moduł CSA post-AP® oferuje uczniom szkół średnich
     praktyczne doświadczenie z profesjonalnymi narzędziami do tworzenia oprogramowania.
+  curriculum_desc_catalog: Zapoznaj się z naszym bogatym katalogiem ofert programów
+    nauczania dla wszystkich grup wiekowych i poziomów - całkowicie za darmo.
   collection_hardware: Skoncentruj się na sprzęcie
   collection_hardware_desc: Uprawnia uczniów do korzystania z danych i urządzeń fizycznych
     do rozwiązywania problemów.
@@ -760,6 +809,7 @@ pl:
   module_label_video_series: Seria filmów
   module_label_self_paced: Moduł dla własnego tempa
   module_label_event_or_lessons: Wydarzenie lub lekcje
+  module_label_or: Lub
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -774,6 +824,7 @@ pl:
   module_grade_3_12: W wieku 3-12
   module_grade_5_12: 5-12
   module_grade_6_12: 6-12
+  module_grade_6_12_plus: 6-12+
   module_grade_6_10: 6-10
   module_grade_7_12: 7-12
   module_grade_9_12: 9-12
@@ -865,6 +916,8 @@ pl:
   values_05: Działamy uczciwie i transparentnie
   values_06: Wierzymy, że szeroki wpływ wymaga myślenia na dużą skalę i działania
     holistycznego
+  heading_anyone_can_learn: Każdy może nauczyć się informatyki
+  heading_find_right_opportunity: Znajdź odpowiednią dla siebie okazję do nauki!
   heading_professional_learning: Profesjonalna nauka, która spełnia Twoje potrzeby
   heading_additional_resources: Dodatkowe zasoby
   heading_support_and_questions: Wsparcie i pytania
@@ -900,6 +953,21 @@ pl:
   heading_acceptance: Akceptacja
   heading_enroll: Zapisz się
   heading_have_questions: Masz pytania?
+  heading_resources_for_educators: Zasoby Code.org dla nauczycieli
+  student_courses_top_desc: Zacznij kodować już dziś. Nasze kursy i zajęcia są bezpłatne!
+    To łatwiejsze i zabawniejsze niż myślisz.
+  student_courses_explore_desc: Odkrywaj świat informatyki dzięki angażującym filmom,
+    samouczkom z własnym tempem, zajęciom programistycznym i nie tylko dla wszystkich
+    grup wiekowych i poziomów kształcenia!
+  student_courses_k_5_desc: Zacznij od Godziny Kodowania, a następnie odkryj więcej
+    kodowania opartego na blokach w naszych kursach ekspresowych. Bądź kreatywny w
+    naszym zabawnym środowisku programistycznym Sprite Lab lub oglądaj fajne filmy,
+    aby dowiedzieć się więcej o kluczowych zagadnieniach. Jest tak wiele do odkrycia!
+  student_courses_6_12_desc: Wypróbuj Godzinę Kodowania lub zapoznaj się z naszymi
+    samodzielnymi kursami na temat tworzenia aplikacji, gier i animacji. Rób swoje
+    w naszych środowiskach programistycznych Web Lab, Game Lab i App Lab. Dodatkowo
+    dowiedz się więcej o sztucznej inteligencji, karierze w programowaniu, stypendiach
+    i nie tylko.
   cs_ambassador_subhead: Jeśli jesteś uczniem liceum, który pasjonuje się zachęcaniem
     większej liczby młodych kobiet do studiowania informatyki w Twojej szkole, wtedy
     Cię potrzebujemy!
@@ -911,6 +979,9 @@ pl:
   cs_ambassador_application_date: Zgłoszenia otwarte do 8 listopada 2023 r.
   cs_ambassador_application_subhead: Współpracuj z nauczycielem, aby złożyć wniosek
     już dziś
+  cs_ambassador_application_closed_title: Aplikacje zostały zamknięte.
+  cs_ambassador_application_closed_subhead: Masz pytania o przyszłe możliwości lub
+    chcesz dowiedzieć się więcej? Skontaktuj się z [youngwomen@code.org] (%{email_url}).
   cs_ambassador_application_questions: Pytania? Prosimy o kontakt [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: Czym zajmują się ambasadorzy informatyki?
@@ -1068,6 +1139,13 @@ pl:
   dance_afe_disclaimer: Artyści, których muzyka jest używana w tym samouczku, nie
     sponsorują ani nie popierają Amazon w ramach licencjonowanego korzystania z ich
     muzyki na Code.org.
+  dance_ai_behind_the_scenes: 'Jak działa Potancówka: za kulisami AI Edition?'
+  dance_ai_behind_the_scenes_markdown: |-
+    W **Potańcówka: Wydanie z AI** trzy wybrane emotikony są używane do generowania efektu wyjściowego przy użyciu AI. Efekt wyjściowy składa się z efektu tła, palety kolorów tła i efektu pierwszego planu.
+
+    Każdy emoji i każda wartość wyjściowa ma powiązaną z nim frazę opisową. Porównując podobieństwo wejściowego wyrażenia emoji z frazą wartości wyjściowej, jesteśmy w stanie użyć AI, aby polecić najlepsze dopasowanie.
+
+    Aby obliczyć podobieństwo, każdemu zdaniu przypisuje się osadzanie. [osadzanie] (https://en.wikipedia.org/wiki/Word_embedding) to lista liczb, która oddaje znaczenie frazy, a osadzenia używane w **Potańcówka: Wydanie z AI** mają około 1500 liczb. Podobieństwo mierzy się „odległością” między osadzonymi frazami. W **Potańcówka: Wydanie z AI** używamy osadzeń wygenerowanych przez [model Amazon Bedrock Titan] (https://aws.amazon.com/bedrock/titan/) i obliczamy podobieństwo, obliczając odległość cosinusa między osadzoniami.
   minecraft_hero_heading: Samouczki Minecrafta w ramach Godziny Kodowania
   minecraft_activities_desc: Wszystkie samouczki są dostępne w wielu językach i kompatybilne
     z nowoczesnymi przeglądarkami i tabletami. Nie masz internetu? [Pobierz wersję
@@ -1110,6 +1188,64 @@ pl:
   minecraft_resources_desc_02: Zainspiruj pasję STEM u uczniów K-12 dzięki 200 godzinnym
     programom nauczania informatyki, od bloków do Pythona, wspieranego przez rozwój
     zawodowy.
+  afe_page_heading: Darmowe zasoby od Amazon Future Engineer
+  afe_page_top_desc: 'Zwiększ swoje doświadczenie w nauczaniu dzięki Code.org we współpracy
+    z [Amazon Future Engineer] (%{afe_url}). Kwalifikujący się nauczyciele ze szkół
+    niedostatecznie obsługiwanych mogą uzyskać dostęp do tych świadczeń bezpłatnie:'
+  afe_page_top_list_01: "**Rozwój zawodowy:** Bezpłatne członkostwo w CSTA+, z seminariami
+    internetowymi prowadzonymi przez ekspertów i zasobami."
+  afe_page_top_list_02: "**Możliwości:** Szansa na dołączenie do płatnych stypendiów,
+    aby zwiększyć dostęp do informatyki współpracując z ekspertami branżowymi w Amazon!"
+  afe_page_top_list_03: "**Zasoby:** Zestawy inspirujące, w tym plakaty i naklejki,
+    aby zaangażować uczniów w informatykę."
+  afe_page_top_list_04: "**Innowacja: ** Ekskluzywny dostęp do programów pilotażowych,
+    które badają najnowocześniejsze kariery i zagadnienie informatyki."
+  afe_page_eligibility_heading: Wymagania kwalifikacyjne do szkoły*
+  afe_page_eligibility_list_01: Tytuł 1 i/lub > 40% bezpłatny/obniżona zapłata za
+    lunch (FRL) rejestracja uczniów
+  afe_page_eligibility_list_02: "> 30% zapisów uczniów czarnych/latynoskich/rdzennych
+    Amerykanów (BLNA)"
+  afe_page_eligibility_list_03: Szkoła wiejska
+  afe_page_eligibility_disclaimer: "*Wymagania kwalifikacyjne zweryfikowane przy użyciu
+    [danych NCES] (%{nces_url})."
+  afe_page_programs_heading: Więcej programów i możliwości Amazon Future Engineer
+  afe_page_programs_alexa_title: Alexa Skills Inventor
+  afe_page_programs_alexa_desc: Dowiedz się, jak zaprogramować Alexę umiejętnościami,
+    które mogą pomóc astronautom rozwiązywać problemy w kosmosie i w społecznościach
+    w domu.
+  afe_page_programs_cloud_tour_title: Odkrywanie podróży po Cloud Computer Career
+  afe_page_programs_cloud_tour_desc: How did we go from renting movies at the store
+    to streaming from anywhere at any time? Learn how data centers and cloud computing
+    have changed the way we watch our favorite content, and the careers behind it.
+  afe_page_programs_voice_title: Your Voice is Power
+  afe_page_programs_voice_desc: Students will code and compete to learn how entrepreneurship,
+    coding, and music can intersect for positive change.
+  afe_page_programs_scholarships_title: Stypendia i staże
+  afe_page_programs_scholarships_desc: Supporting students after high school is imperative
+    to fulfilling the Amazon Future Engineer mission for all of our scholars.
+  afe_page_programs_robotics_title: Wycieczka po Robotics Fulfillment Center
+  afe_page_programs_robotics_desc: Discover how computer science, state-of-the-art
+    engineering, and incredible people deliver customer orders at Amazon.
+  afe_page_programs_data_tour_title: Podróż po Keeping Data Safe Career
+  afe_page_programs_data_tour_desc: You want to upload your photos to the cloud, but
+    what if something happens at a data center? Learn how AWS and data center professionals
+    keep data safe and sustainable.
+  afe_page_success_heading: Gratulacje! Pomyślnie zarejestrowałeś się w programie
+    Amazon Future Engineer.
+  afe_page_success_desc: You should receive an email shortly from Amazon Future Engineer
+    to claim your benefits. In the meantime, check out some of the amazing resources
+    around our site.
+  afe_page_eligibility_check_heading: Sprawdziliśmy Twoje kwalifikacje
+  afe_page_eligibility_check_fail_desc: Your school does not meet the eligibility
+    [requirements*](%{req_url}) for the Amazon Future Engineer benefits, but you can
+    still take advantage of all Code.org has to offer, including our robust curriculum
+    and professional learning opportunities.
+  afe_page_eligibility_check_fail_error: Jeśli uważasz, że nie powinieneś otrzymać
+    tej wiadomości, skontaktuj się z nami pod adresem [support@code.org] (%{email_url}).
+  afe_page_eligibility_check_disclaimer: "*To participate in the Amazon Future Engineer
+    program, a school must have Title 1 status OR have student enrollment of more
+    than 40% underrepresented minority students and/or 40% students who qualify for
+    free or reduced lunch."
   blockchain_hero_heading: Jak działa Blockchain
   blockchain_hero_desc: Zanurz się w świecie blockchain dzięki „How Blockchain Works”,
     naszej nowej serii filmów i towarzyszącym lekcjom!
@@ -1974,6 +2110,8 @@ pl:
     Closed captioning, Immersive reader
   csd_page_pick_a_course_heading: Wybór odpowiedniego kursu CS Discoveries dla Twojej
     klasy
+  csd_page_pick_a_course_heading_non_en: Wybór odpowiedniego kursu %{cs_discoveries}
+    (Odkrycia Informatyki) dla Twojej klasy
   csd_page_pick_a_course_desc: Z różnorodnym zestawem opcji oferowanych dla CS Discoveries,
     istnieje kurs dla wszystkich różnych potrzeb.
   csd_page_pick_a_course_heading_02: Jak chcesz wybrać treść?
@@ -2260,6 +2398,12 @@ pl:
   donate_page_fundraise_title: Zbiórka funduszy na Code.org
   donate_page_fundraise_desc: Pomóż zebrać pieniądze na Code.org! Każdy uczeń w każdej
     szkole powinien mieć możliwość uczenia się informatyki.
+  donate_page_campaigns_heading: Wspieraj naszą kampanię
+  donate_page_campaigns_farsi_desc: Talent jest powszechny, ale możliwości często
+    nie. Proponowana inicjatywa Code.org w Farsi (w języku perskim) ma na celu umożliwienie
+    ponad 110 milionom osób mówiących w Farsi z krajów takich jak Iran, Afganistan
+    i Tadżykistan globalnym diasporom dostępu do zasobów edukacyjnych dostępnych obecnie
+    w innych językach. Uczyńmy to rzeczywistością.
   donate_page_other_ways_title: Inne sposoby dawania
   donate_page_other_ways_desc: Poznaj różnorodne metody wniesienia wkładu i znajdź
     opcję, która najbardziej Ci odpowiada. Każdy gest, duży czy mały, napędza naszą
@@ -2267,6 +2411,11 @@ pl:
   donate_page_501c3: Code.org jest zarejestrowana jako publiczna organizacja non-profit
     501 (c) (3). Składki na Code.org podlegają odliczeniu od podatku w zakresie dozwolonym
     przez prawo. Numer identyfikacji podatkowej Code.org to 46-0858543.
+  donate_page_supporters_heading: Dołącz do czołowych liderów branży wspierających
+    Code.org
+  donate_page_supporters_desc: Znane nazwiska w całym kraju ufają i wspierają naszą
+    misję. Zobacz naszych szanowanych zwolenników i rozważ dodanie własnego zaangażowania
+    do transformacji Code.org.
   donate_page_donation_policy_title: Zrozumienie naszej polityki darowizn
   donate_page_donation_policy_desc: Dowiedz się, jak obsługujemy i lokujemy Twój wkład.
   donate_tabs_tab_label_daf_direct: DAF Direct
@@ -2327,6 +2476,10 @@ pl:
     Kodowania na żywo.
   hoc_live_join_us: Dołącz do nas
   hoc_live_learn_more: Dowiedz się więcej
+  hoc_live_map_and_events_message: Podczas szczytowego ruchu podczas Godziny Kodowania
+    używamy statycznej mapy, aby oszczędzać przepustowość i utrzymać naszą witrynę
+    w działaniu. Aby zobaczyć dynamiczną mapę wszystkich wydarzeń - [kliknij tutaj]
+    (%{map_url}) i pełną listę wydarzeń - [kliknij tutaj] (%{events_url}).
   hoc_overview_oceans_tutorial_header: AI dla oceanów
   hoc_overview_oceans_tutorial_desc: Dowiedz się o sztucznej inteligencji, uczeniu
     maszynowym, danych szkoleniowych i uprzedzeniach, wyjaśniając jednocześnie kwestie
@@ -3037,6 +3190,26 @@ pl:
   handouts_brochure: Przekaż tę broszurę nauczycielom i szkołom
   handouts_participationguide: Zaplanuj swoją Godzinę Kodowania za pomocą tego poradnika
     udziału
+  poster_aria_label_minecraft: 'Pobierz plakat przedstawiający Minecraft Education:
+    Generation AI'
+  poster_aria_label_dance_ai_01: 'Pobierz plakat przedstawiający Potańcówkę: AI Edycja
+    z postaciami żaby, łosia i kota'
+  poster_aria_label_dance_ai_02: 'Pobierz plakat przedstawiający Potańcówkę: AI Edycja
+    z postaciami robota, leniwca i rekina'
+  poster_aria_label_oceans_01: Pobierz plakat przedstawiający podwodną scenę AI dla
+    Oceanów z botem AI wybierającym rybę
+  poster_aria_label_oceans_02: Pobierz plakat przedstawiający jak AI for Oceans łowi
+    postacie z różnymi emocjami
+  poster_aria_label_steph: Pobierz plakat z gwiazdą NBA Steph Curry
+  poster_aria_label_malala: Pobierz plakat przedstawiający aktywistkę Malalę Yousafzai
+  poster_aria_label_hadi: Pobierz plakat przedstawiający założyciela Code.org, Hadi
+    Partovi
+  poster_aria_label_mary: Pobierz plakat z udziałem dyrektora generalnego General
+    Motors Mary Barra
+  poster_aria_label_satya: Pobierz plakat z przedstawiający dyrektora generalnego
+    Microsoft Satya Nadella
+  poster_aria_label_shakira: Pobierz plakat przedstawiający piosenkarkę i autorkę
+    tekstów Shakirę
   videos_title: Pokaż te filmy, aby zainspirować uczniów
   videos_what_most_schools_dont_teach: Czego nie uczy większość szkół (5 min.)
   videos_hoc_2014: Już jest Godzina Kodowania - każdy może się uczyć
@@ -16602,6 +16775,8 @@ pl:
   video_library_page_inspirational_video_title_14: To więcej niż gra (1 min)
   video_library_page_inspirational_video_title_15: Twórz za pomocą informatyki (1
     min)
+  video_library_page_inspirational_video_title_16: Młode kobiety w informatyce (2
+    min)
   video_library_page_not_hacked_video_title_1: 'Jak nie dać się zhakować: Wprowadzenie'
   video_library_page_not_hacked_video_title_2: 'Jak nie dać się zhakować: Hasła'
   video_library_page_not_hacked_video_title_3: 'Jak nie zostać zhakowanym: uwierzytelnianie
@@ -16901,6 +17076,27 @@ pl:
   elementary_page_computer_science_description_2: Nawiąż powiązania między informatyką
     (CS) a innymi przedmiotami, takimi jak matematyka, sztuki językowe, nauki ścisłe
     i nauki społeczne.
+  hoc_beyond_hero_description: Teraz, gdy ukończyłeś swoją Godzinę Kodowania, przejdź
+    na wyższy poziom! Wielu partnerów oferuje bezpłatne, angażujące opcje zarówno
+    dla nauczycieli, jak i uczniów - nie jest potrzebne wcześniejsze doświadczenie.
+  hoc_beyond_for_teachers_section_title: Dla nauczycieli
+  hoc_beyond_for_teachers_section_description: Zorganizowałeś wydarzenie Godziny Kodowania
+    w swojej klasie... Co teraz? Dołącz do ponad 2 milionów nauczycieli, którzy używają
+    Code.org do nauczania informatyki. Każdy może się nauczyć!
+  hoc_beyond_for_teachers_course_title_1: Nauczaj z pomocą kursów Code.org
+  hoc_beyond_for_teachers_course_title_2: Nauczaj kursów od innych dostawców
+  hoc_beyond_for_teachers_course_description_1: Code.org oferuje pełną ścieżkę kursu
+    dla K-12 i profesjonalne warsztaty edukacyjne dla nauczycieli, bezpłatnie.
+  hoc_beyond_for_teachers_course_description_2: Porównaj opcje różnych partnerów,
+    zorganizowane dla kolejnych klas.
+  hoc_beyond_for_teachers_course_link_1: Nauczaj z Code.org
+  hoc_beyond_for_teachers_course_link_2: Poznaj innych dostawców
+  hoc_beyond_carousel_title: Dla uczniów
+  hoc_beyond_carousel_description: Chcesz się uczyć po Godzinie Kodowania? Sprawdź
+    te zajęcia dla uczniów w każdym wieku i na każdym poziomie umiejętności.
+  hoc_beyond_submit_activity_form: Prześlij swoją aktywność [tutaj] (%{form_url}).
+  hoc_beyond_end_section_label: Godzina Kodowania jest organizowana przez [Code.org]
+    (%{home_page})
   language_code:
     ar: Arabski
     az: Azerski

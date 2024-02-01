@@ -67,6 +67,7 @@ hi:
             साइंस के मूल सिद्धांत आजमाएं!
           description_short: कई मज़ेदार पात्रों के साथ कंप्यूटर साइंस के मूल सिद्धांत
             आजमाएं!
+          name: आवर ऑफ़ कोड
           student_description: एंग्री बर्ड्स और पौधे बनाम ज़ोम्बीज के पात्रों के साथ
             कंप्यूटर साइंस के मूल सिद्धांत आजमाएं!
           title: आवर ऑफ़ कोड 2013
@@ -1297,6 +1298,10 @@ hi:
               name: Java Lab
             lesson-6:
               name: फंदे
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: सर्वेक्षण
         csa1-pilot:
           lesson_groups:
             lessonGroup-5:
@@ -1400,6 +1405,10 @@ hi:
             lessonGroup-5:
               display_name: सर्वेक्षण
         csa8-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: सर्वेक्षण
+        csa8-2024:
           lesson_groups:
             lessonGroup-4:
               display_name: सर्वेक्षण
@@ -3273,6 +3282,8 @@ hi:
           title: CS के सिद्धांत कोर्स के बाद का सर्वेक्षण
         csp-post-survey-2023:
           title: CS के सिद्धांत कोर्स के बाद का सर्वेक्षण
+        csp-post-survey-2024:
+          title: CS के सिद्धांत कोर्स के बाद का सर्वेक्षण
         csp1-2017:
           description: यह इकाई उन तकनीकी चुनौतियों और सवालों की पड़ताल करती है, जो
             कंप्यूटरों में डिजीटल जानकारी प्रदर्शित करने की जरूरत से उत्पन्न होते
@@ -3363,6 +3374,12 @@ hi:
               display_name: सर्वेक्षण
             csp_unit1_2020:
               display_name: 'Unit 1: Digital Information'
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: सर्वेक्षण
+            csp_unit1_2020:
+              display_name: 'Unit 1: Digital Information'
         csp1-dlp:
           description: 'यह प्रशिक्षण में Code.org CSP समन्वयकों के लिए गहन प्रशिक्षण
             योजना की इकाई 1 है। यहां आप Code.org CSP पाठ्यक्रम की इकाई 1 की प्रवीणता
@@ -3436,6 +3453,10 @@ hi:
             lessonGroup-2:
               display_name: पाठ्यक्रम के बाद का सर्वेक्षण
         csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: पाठ्यक्रम के बाद का सर्वेक्षण
+        csp10-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: पाठ्यक्रम के बाद का सर्वेक्षण
@@ -3559,6 +3580,10 @@ hi:
             csp_unit2_2020:
               display_name: 'इकाई 2: इंटरनेट'
         csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'इकाई 2: इंटरनेट'
+        csp2-2024:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'इकाई 2: इंटरनेट'
@@ -3848,6 +3873,16 @@ hi:
               display_name: प्रोजेक्ट
             csp_variables:
               display_name: चर
+        csp4-2024:
+          lesson_groups:
+            csp_conditionals:
+              display_name: कंडीशनल्स
+            csp_functions:
+              display_name: कार्य
+            csp_project:
+              display_name: प्रोजेक्ट
+            csp_variables:
+              display_name: चर
         csp4-dlp:
           description: 'यह प्रशिक्षण में Code.org CSP समन्वयकों के लिए गहन प्रशिक्षण
             योजना की इकाई 4 है। यहां आप Code.org CSP पाठ्यक्रम की इकाई 4 की प्रवीणता
@@ -4041,6 +4076,12 @@ hi:
               display_name: चक्रमण
             lessonGroup-5:
               display_name: पाठ्यक्रम के बाद का सर्वेक्षण
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: डेटा
+            lessonGroup-5:
+              display_name: पाठ्यक्रम के बाद का सर्वेक्षण
         csp5-dlp:
           description: 'यह प्रशिक्षण में Code.org CSP समन्वयकों के लिए गहन प्रशिक्षण
             योजना की इकाई 5 है। यहां आप Code.org CSP पाठ्यक्रम की इकाई 5 की प्रवीणता
@@ -4147,6 +4188,18 @@ hi:
               display_name: चक्रमण
             lessonGroup-5:
               display_name: प्रोजेक्ट
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: सूचियाँ
+            lessonGroup-2:
+              display_name: पाठ्यक्रम के बाद का सर्वेक्षण
+            lessonGroup-3:
+              display_name: फंदे
+            lessonGroup-4:
+              display_name: चक्रमण
+            lessonGroup-5:
+              display_name: प्रोजेक्ट
         csp6-pilot:
           lesson_groups:
             required:
@@ -4194,6 +4247,14 @@ hi:
               display_name: मापदंड और रिटर्न वैल्यूज
             lessonGroup-3:
               display_name: पाठ्यक्रम के बाद का सर्वेक्षण
+        csp7-2024:
+          lesson_groups:
+            csp_libraries:
+              display_name: पुस्तकालय
+            csp_parameters_return_values:
+              display_name: मापदंड और रिटर्न वैल्यूज
+            lessonGroup-3:
+              display_name: पाठ्यक्रम के बाद का सर्वेक्षण
         csp7-pilot:
           lesson_groups:
             csp_libraries:
@@ -4222,6 +4283,12 @@ hi:
             lessonGroup-3:
               display_name: पाठ्यक्रम के बाद का सर्वेक्षण
         csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: PT बनाएं
+            lessonGroup-3:
+              display_name: पाठ्यक्रम के बाद का सर्वेक्षण
+        csp8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: PT बनाएं
@@ -4257,6 +4324,12 @@ hi:
             lessonGroup-2:
               display_name: पाठ्यक्रम के बाद का सर्वेक्षण
         csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'इकाई 9: डेटा'
+            lessonGroup-2:
+              display_name: पाठ्यक्रम के बाद का सर्वेक्षण
+        csp9-2024:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'इकाई 9: डेटा'
@@ -5207,6 +5280,10 @@ hi:
           student_description: Minecraft के आपके खुद के संस्करण में जानवरों और अन्य
             Minecraft प्राणियों को प्रोग्राम करें।
           title: Minecraft आवर ऑफ़ कोड डिज़ाइनर
+        musiclab:
+          lessons:
+            lesson-3:
+              name: फ्री प्ले
         netsim:
           title: इंटरनेट अनुकारक
         nevada-standards-aligned-fifth-grade-2023:
@@ -5957,6 +6034,29 @@ hi:
           title: 'मॉड्यूल 2: Code.org को नेविगेट करना'
         self-paced-pl-csp2-2023:
           title: 'मॉड्यूल 2: Code.org को नेविगेट करना'
+        self-paced-pl-k5-2024-1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: शुरू करें
+          lessons:
+            lesson-3:
+              name: फंदे
+            lesson-4:
+              name: कंडीशनल्स
+            lesson-6:
+              name: अगले चरण
+          title: कंप्यूटर विज्ञान का परिचय
+        self-paced-pl-k5-2024-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: शुरू करें
+          lessons:
+            lesson-3:
+              name: घटनाएँ
+            lesson-4:
+              name: व्यवहार
+            lesson-5:
+              name: अगले चरण
         soccer:
           description: अपना खुद का सॉकर गेम कोड करें
           description_short: अपना खुद का सॉकर गेम कोड करें

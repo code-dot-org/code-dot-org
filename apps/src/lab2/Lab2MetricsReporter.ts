@@ -14,7 +14,7 @@ interface ReportingProperties {
 /**
  * Metrics reporter for labs.
  */
-export class LabMetricsReporter {
+export default class LabMetricsReporter {
   // Common fields that are added to every log payload.
   private commonProperties: ReportingProperties = {};
 
@@ -97,6 +97,3 @@ export class LabMetricsReporter {
     return dimensions;
   }
 }
-
-// TODO: Remove default export in favor of creating a singleton in the Lab2Registry.
-export default new LabMetricsReporter();

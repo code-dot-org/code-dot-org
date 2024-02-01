@@ -11,8 +11,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-12-11 19:38:34 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-01-02 18:53:10 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -92,7 +92,7 @@
       "key": "11c6db6b-c750-4b8e-a013-1a21c8dc1c19",
       "position": 3,
       "properties": {
-        "progression_name": "End of PD Reflection? (~30 minutes)"
+        "progression_name": "Reflection (~15 minutes)"
       },
       "seeding_key": {
         "activity_section.key": "11c6db6b-c750-4b8e-a013-1a21c8dc1c19",
@@ -130,6 +130,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL Module 8 - Workshop Overview_2023.1"
+        ],
         "progression": "Module 8 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -153,14 +156,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSP-PL M8 - MC Exam 1_2023"
+          "CSP-PL M8 - Unit 10 Exploration_2023"
         ],
         "progression": "Unit 10 Exploration (~30 minutes)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSP-PL M8 - MC Exam 1_2023"
+          "CSP-PL M8 - Unit 10 Exploration_2023"
         ],
         "lesson.key": "Module 8: Building Community and Preparing Students for the AP Exam",
         "lesson_group.key": "",
@@ -168,46 +171,24 @@
         "activity_section.key": "cdf4ad3a-1835-4f7f-9404-5733d73a1987"
       },
       "level_keys": [
-        "CSP-PL M8 - MC Exam 1_2023"
+        "CSP-PL M8 - Unit 10 Exploration_2023"
       ]
     },
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSP-PL M8 - Exam 2_2023"
-        ],
-        "progression": "Unit 10 Exploration (~30 minutes)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSP-PL M8 - Exam 2_2023"
-        ],
-        "lesson.key": "Module 8: Building Community and Preparing Students for the AP Exam",
-        "lesson_group.key": "",
-        "script.name": "vpl-csp-2023-m8",
-        "activity_section.key": "cdf4ad3a-1835-4f7f-9404-5733d73a1987"
-      },
-      "level_keys": [
-        "CSP-PL M8 - Exam 2_2023"
-      ]
-    },
-    {
-      "chapter": 4,
-      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "End of PD Reflection? (~30 minutes)"
+        "level_keys": [
+          "CSP-PL M8 - Reflection_2023"
+        ],
+        "progression": "Reflection (~15 minutes)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSP-PL M8 - Exam 3_2023"
+          "CSP-PL M8 - Reflection_2023"
         ],
         "lesson.key": "Module 8: Building Community and Preparing Students for the AP Exam",
         "lesson_group.key": "",
@@ -215,12 +196,12 @@
         "activity_section.key": "11c6db6b-c750-4b8e-a013-1a21c8dc1c19"
       },
       "level_keys": [
-        "CSP-PL M8 - Exam 3_2023"
+        "CSP-PL M8 - Reflection_2023"
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
+      "chapter": 4,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -244,8 +225,8 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -269,11 +250,14 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
+      "chapter": 6,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 8 Wrap Up_2023.1"
+        ],
         "progression": "Module 8 Asynchronous Wrap Up (~10 minutes)"
       },
       "bonus": false,
@@ -306,9 +290,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSP-PL M8 - MC Exam 1_2023",
+        "level.key": "CSP-PL M8 - Unit 10 Exploration_2023",
         "script_level.level_keys": [
-          "CSP-PL M8 - MC Exam 1_2023"
+          "CSP-PL M8 - Unit 10 Exploration_2023"
         ],
         "lesson.key": "Module 8: Building Community and Preparing Students for the AP Exam",
         "lesson_group.key": "",
@@ -318,21 +302,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSP-PL M8 - Exam 2_2023",
+        "level.key": "CSP-PL M8 - Reflection_2023",
         "script_level.level_keys": [
-          "CSP-PL M8 - Exam 2_2023"
-        ],
-        "lesson.key": "Module 8: Building Community and Preparing Students for the AP Exam",
-        "lesson_group.key": "",
-        "script.name": "vpl-csp-2023-m8",
-        "activity_section.key": "cdf4ad3a-1835-4f7f-9404-5733d73a1987"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSP-PL M8 - Exam 3_2023",
-        "script_level.level_keys": [
-          "CSP-PL M8 - Exam 3_2023"
+          "CSP-PL M8 - Reflection_2023"
         ],
         "lesson.key": "Module 8: Building Community and Preparing Students for the AP Exam",
         "lesson_group.key": "",

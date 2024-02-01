@@ -18,7 +18,7 @@ title: Segédanyagok
 
 ## Rakd ki ezeket a posztereket az iskoládban
 
-Az új posztereken Malala, Stephen Curry, Shakira és még sokan mások szerepelnek! Ebben az évben minden készlethez 6 poszter és 126 "Megcsináltam a Kódolás óráját" matrica tartozik. Ha magad szeretnéd kinyomtatni a posztereket, a nyomtatható változat megtekintéséhez és elmentéséhez egyszerűen kattints az alábbi képre.
+Print your own posters! Simply click an image below to view and save a printable version.
 
 {{ promote_new_posters }}
 

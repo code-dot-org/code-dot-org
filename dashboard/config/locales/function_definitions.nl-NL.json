@@ -1397,6 +1397,7 @@
         },
         "NEW Course 4 Artist Params 14": {
           "draw a spiral edge": {
+            "name": "teken een spiraal",
             "parameters": {
               "length": "lengte",
               "sides": "zijden"
@@ -1791,7 +1792,11 @@
           }
         },
         "courseC_artist_prog3": {
+          "draw fire": {
+            "name": "teken vuur"
+          },
           "draw flame": {
+            "name": "teken vlam",
             "parameters": {
               "x": "x"
             }
@@ -1805,28 +1810,44 @@
           }
         },
         "courseC_artist_prog3_2018": {
+          "draw fire": {
+            "name": "teken vuur"
+          },
           "draw flame": {
+            "name": "teken vlam",
             "parameters": {
               "x": "x"
             }
           }
         },
         "courseC_artist_prog3_2019": {
+          "draw fire": {
+            "name": "teken vuur"
+          },
           "draw flame": {
+            "name": "teken vlam",
             "parameters": {
               "x": "x"
             }
           }
         },
         "courseC_artist_prog3_2020": {
+          "draw fire": {
+            "name": "teken vuur"
+          },
           "draw flame": {
+            "name": "teken vlam",
             "parameters": {
               "x": "x"
             }
           }
         },
         "courseC_artist_prog3_2021": {
+          "draw fire": {
+            "name": "teken vuur"
+          },
           "draw flame": {
+            "name": "teken vlam",
             "parameters": {
               "x": "x"
             }
@@ -3214,6 +3235,7 @@
         },
         "courseF_artist_fwp6": {
           "draw a spiral edge": {
+            "name": "teken een spiraal",
             "parameters": {
               "length": "lengte",
               "sides": "zijden"
@@ -3222,6 +3244,7 @@
         },
         "courseF_artist_fwp7": {
           "draw a spiral edge": {
+            "name": "teken een spiraal",
             "parameters": {
               "length": "lengte",
               "min": "min",
@@ -3231,6 +3254,7 @@
         },
         "courseF_artist_fwp8": {
           "draw a spiral edge": {
+            "name": "teken een spiraal",
             "parameters": {
               "length": "lengte",
               "min": "min",
@@ -3268,6 +3292,7 @@
             }
           },
           "draw a spiral edge": {
+            "name": "teken een spiraal",
             "parameters": {
               "length": "lengte",
               "min": "min",

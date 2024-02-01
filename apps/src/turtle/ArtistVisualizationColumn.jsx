@@ -60,6 +60,7 @@ export default class ArtistVisualizationColumn extends React.Component {
               src="/blockly/media/turtle/loading.gif"
               height="15"
               width="15"
+              alt=""
             />{' '}
             {this.props.showFinishButton && (
               <button type="button" id="finishButton" className="share">

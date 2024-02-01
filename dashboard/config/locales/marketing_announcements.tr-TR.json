@@ -3,35 +3,7 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "ai-2020": {
-            "buttonText": "Daha fazlasını öğren",
-            "title": "Yapay Zeka ve Makine Öğrenimini Keşfedin"
-          },
-          "ai-launch-2023": {
-            "buttonText": "Daha fazlasını öğren"
-          },
-          "ai-pl-launch-2023": {
-            "buttonText": "Daha fazlasını öğren"
-          },
-          "back-to-school-2021": {
-            "buttonText": "Daha fazlasını öğren"
-          },
-          "codebytes-2020": {
-            "buttonText": "Daha fazlasını öğren"
-          },
-          "coldplay": {
-            "buttonText": "Deneyin"
-          },
-          "congrats-certificate-share": {
-            "buttonText": "Başlayın"
-          },
-          "csjourneys": {
-            "buttonText": "Daha fazlasını öğren"
-          },
-          "csjourneys-22": {
-            "buttonText": "Daha fazlasını öğren"
-          },
-          "csleadersprize": {
+          "co-teacher": {
             "buttonText": "Daha fazlasını öğren"
           },
           "hoc-2023": {
@@ -44,26 +16,8 @@
             "buttonText": "Daha fazlasını öğren",
             "title": "Dans Partisi: AI (Yapay Zeka) Sürümü"
           },
-          "hoc-more": {
-            "body": "Kodlama Saati internet sitesi Code.org ve iş ortakları tarafından geliştirilen her yaşa ve deneyim seviyesine uygun 100’den fazla bilgisayar bilimi faaliyeti içerir."
-          },
-          "home-learning-2020": {
-            "buttonText": "Proje Fikirlerini Görüntüle"
-          },
           "superhero": {
             "buttonText": "Daha Fazla Bilgi Edinin"
-          },
-          "teacher-apps-closing-2021": {
-            "buttonText": "Bize katılın"
-          },
-          "teacher-apps-nominate-2020": {
-            "buttonText": "Bir öğretmen ata"
-          },
-          "teacher-apps-open-2021": {
-            "buttonText": "Bize katılın"
-          },
-          "teacher-apps-stillon-2020": {
-            "buttonText": "Bize katılın"
           }
         }
       }

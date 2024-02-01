@@ -1333,6 +1333,9 @@
         "Virtual Pet 6_2023": {
           "vp_costumes": "Klicke hier, um neue Kostüme zu deinem Projekt hinzuzufügen!"
         },
+        "allthethings HOC Dance AI Customize": {
+          "ai_dance_callout_draft_level_6": "Klicke hier."
+        },
         "behaviors 1": {
           "behaviors_edit": "Klicken Sie hier, um zu sehen, wie dieses Verhalten funktioniert."
         },
@@ -3303,6 +3306,26 @@
           "New Artist Project_callout1": "Klicke auf die Kategorien, um die Bausteine in deinem Werkzeugkasten zu sehen! Ziehe Bausteine in den Arbeitsbereich um sie zu deinem Programm hinzuzufügen",
           "New Artist Project_callout2": "Drücke \"Ausführen\" um dein Programm zu speichern und auszuführen",
           "sign_in_to_save_project": "Möchtest du später auf dein Projekt zugreifen? Melde dich an, um dieses Projekt in deinem Konto zu speichern!"
+        },
+        "dance_ai_code_at_measure": {
+          "ai_dance_callout_02_b": "⬆️ Benutze diesen Baustein.",
+          "dance_callout_02": "Füge hier den KI-generierten Ereignis-Block hinzu. "
+        },
+        "dance_ai_code_key_press": {
+          "ai_dance_callout_02_b": "⬆️ Benutze diesen Baustein.",
+          "dance_callout_02": "Füge \"Figur tun Tanzschritt\" hinzu."
+        },
+        "dance_ai_customize_effect": {
+          "ai_dance_callout_draft_level_6": "Klicke hier."
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "ai_dance_callout_draft_level_02": "Fange hier an."
+        },
+        "dance_ai_generate_effect": {
+          "ai_dance_callout_draft_level_03": "⬆️ Benutze diesen Baustein. "
+        },
+        "dance_ai_generate_effect_again": {
+          "dance_callout_01": "⬆️ Benutze diesen Baustein."
         },
         "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "Verwende diesen Baustein, um Sprites zu erstellen.",

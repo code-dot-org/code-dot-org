@@ -23,6 +23,7 @@
   "filterPlatformIos": "iPad/iPhone",
   "filterPlatformNoComputers": "Нема компјутера или уређаја",
   "filterPlatformNoInternet": "Слаб или без интернета",
+  "filterPlatformRobotics": "Погледај активности робота",
   "filterProgrammingLanguage": "Језик",
   "filterProgrammingLanguageBlocks": "блокови",
   "filterProgrammingLanguageOther": "Други",

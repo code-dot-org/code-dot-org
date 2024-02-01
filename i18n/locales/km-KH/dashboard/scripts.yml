@@ -18,6 +18,8 @@ km:
           student_description: តើ​អ្នក​ចង់​សរសេរ​ហ្គេម​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តិច​ជាង 10 នាទី​ដែរ​ឬ​ទេ? សូម​សាកល្បង​មេរៀន Flappy កូដ របស់​យើង!
         step:
           title: ជំហាន
+        Hour of Code:
+          name: កម្មវិធី Hour of Code
         mc:
           title: Minecraft Adventurer
           description: ប្រើប្លក់នៃកូដ នាំ Steve ឬ Alex ធ្វើដំណើរផ្សងព្រេងឆ្លងកាត់ពិភព Minecraft នេះ។
@@ -1241,6 +1243,10 @@ km:
             lessonGroup-6:
               display_name: ចុងបញ្ចប់នៃគម្រោង
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
+        musiclab:
+          lessons:
+            lesson-3:
+              name: លេងដោយសេរី
         test-nv-coursea-2023:
           lesson_groups:
             lessonGroup-3:
@@ -1319,3 +1325,30 @@ km:
           lesson_groups:
             lessonGroup-7:
               display_name: ការណែនាំ
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: ព្រឹត្តិការណ៍
+            lesson-4:
+              name: ឥរិយាបទ
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: ប្រតិបត្តិដដែលៗ
+            lesson-4:
+              name: លក្ខខណ្ឌ
+          title: សេចក្ដី​ណែនាំ​អំពី​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: អ​ថេរ
+            csp_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csp_functions:
+              display_name: អនុ​គមន៍
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: បញ្ជី
+            lessonGroup-3:
+              display_name: ប្រតិបត្តិដដែលៗ

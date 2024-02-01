@@ -83,4 +83,8 @@ class Census::CensusSummary < ApplicationRecord
 
     census_summaries
   end
+
+  def does_teach?
+    YES? || HISTORICAL_YES?
+  end
 end

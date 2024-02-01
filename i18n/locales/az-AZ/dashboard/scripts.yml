@@ -130,6 +130,7 @@ az:
           description: Kompüter elminin əsasını "Angry Birds" və "Plants vs Zombies" ilə öyrənin!
           description_short: İnformatikanın əsaslarını əyləncəli personajlarla birlikdə öyrənməyə cəhd edin!
           student_description: Kompüter elminin əsasını "Angry Birds" və "Plants vs Zombies" ilə öyrənin!
+          name: Kod Saatı
         CodeStudioPuzzleChallenge:
           title: Code Studio Pazl Müsabiqəsi
           description: Bu əyləncəli kodlaşdırma tapmacalarını sınayın. Əlindən gələni elə!
@@ -7024,6 +7025,8 @@ az:
           lessons:
             lesson-1:
               name: Remiks layihələri
+            lesson-3:
+              name: Azad Oyna
         csa-software-engineering:
           lessons:
             lesson-1:
@@ -7481,3 +7484,250 @@ az:
           student_description: cədvəlli
         csd-post-survey-2024:
           title: Kursdan Sonra Sorğusu
+        self-paced-pl-k5-2024:
+          lessons:
+            lesson-1:
+              name: Dərs 1
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-1:
+              name: Dərs 1
+            lesson-3:
+              name: Tədbirlər
+            lesson-4:
+              name: Rəftar
+            lesson-5:
+              name: Növbəti addımlar
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Başlanğıc
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-1:
+              name: Dərs 1
+            lesson-3:
+              name: dövrlər
+            lesson-4:
+              name: Şərti ifadələr
+            lesson-6:
+              name: Növbəti addımlar
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Başlanğıc
+          title: İnformatikaya giriş
+        csp1-2024:
+          lesson_groups:
+            cspSurvey:
+              display_name: Sorğu
+            csp_unit1_2020:
+              display_name: Rəqəmsal məlumat
+          title: Rəqəmsal məlumat ('23-'24)
+          student_description: iş
+          description_short: Araşdırmaq
+        csp2-2024:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: Mövzu 2:İnternet
+          student_description: bu
+          description_short: qurmaq
+        csp3-2024:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Bölmə 3: Tətbiq Dizaynına Giriş'
+          student_description: Bölmə
+          description_short: tərtib etmək, dizayn etmək
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sorğu
+            lessonGroup-3:
+              display_name: Məzmun
+            lessonGroup-4:
+              display_name: Bildiyinizi göstərin
+            lessonGroup-6:
+              display_name: Vahid sorğusunun sonu
+            lessonGroup-5:
+              display_name: Alternativ Dərslər
+            lessonGroup-7:
+              display_name: Qum qutuları
+          title: Obyekt yönümlü proqramlaşdırma
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+            lessonGroup-3:
+              display_name: Bildiyinizi göstərin
+            lessonGroup-5:
+              display_name: Vahid sorğusunun sonu
+            lessonGroup-4:
+              display_name: Alternativ Dərslər
+            lessonGroup-6:
+              display_name: Qum qutuları
+          title: Sinif strukturu və dizaynı
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+            lessonGroup-3:
+              display_name: Bildiyinizi göstərin
+            lessonGroup-5:
+              display_name: Vahid sorğusunun sonu
+            lessonGroup-4:
+              display_name: Alternativ Dərslər
+            lessonGroup-6:
+              display_name: Qum qutuları
+          title: Massivlər və Alqoritmlər
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+            lessonGroup-3:
+              display_name: Bildiyinizi göstərin
+            lessonGroup-5:
+              display_name: Vahid sorğusunun sonu
+            lessonGroup-4:
+              display_name: Alternativ Dərslər
+            lessonGroup-6:
+              display_name: Qum qutuları
+          title: Şərtlər və Məntiq
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+            lessonGroup-3:
+              display_name: Bildiyinizi göstərin
+            lessonGroup-5:
+              display_name: Vahid sorğusunun sonu
+            lessonGroup-4:
+              display_name: Alternativ Dərslər
+            lessonGroup-6:
+              display_name: Qum qutuları
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+            lessonGroup-3:
+              display_name: Bildiyinizi göstərin
+            lessonGroup-5:
+              display_name: Vahid sorğusunun sonu
+            lessonGroup-4:
+              display_name: Alternativ Dərslər
+            lessonGroup-6:
+              display_name: Qum qutuları
+        csa7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+            lessonGroup-3:
+              display_name: Bildiyinizi göstərin
+            lessonGroup-4:
+              display_name: Vahid sorğusunun sonu
+            lessonGroup-5:
+              display_name: Alternativ Dərslər
+            lessonGroup-6:
+              display_name: Qum qutuları
+        csa8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+            lessonGroup-3:
+              display_name: Bildiyinizi göstərin
+            lessonGroup-4:
+              display_name: Sorğu
+            lessonGroup-5:
+              display_name: Alternativ Dərslər
+            lessonGroup-6:
+              display_name: Qum qutuları
+          title: Axtarış və Çeşidləmə
+        csa9-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Baxış və Təcrübə
+            lessonGroup-3:
+              display_name: Sınaq imtahanları
+            lessonGroup-4:
+              display_name: Qum qutuları
+          description: Bu bölmə tələbələri əsas anlayışları nəzərdən keçirməklə, çoxseçimli və sərbəst cavab suallarını məşq etməklə və sınaqdan keçmə strategiyalarını gücləndirməklə AP CSA İmtahanına hazırlayır. Tələbələr təcrübələrini cəmləşdirmək və öz tərəqqilərini qiymətləndirmək üçün fərdi təhsil planları yaratmaq üçün güclü tərəfləri və təkmilləşdirmə sahələrini müəyyənləşdirirlər.
+          student_description: Bu bölmə əsas anlayışları nəzərdən keçirməklə, çoxseçimli və sərbəst cavab suallarını məşq etməklə və sınaqdan keçmə strategiyalarını gücləndirməklə sizi AP CSA İmtahana hazırlayır. Siz təcrübəyə diqqət yetirmək və tərəqqinizi qiymətləndirmək üçün fərdiləşdirilmiş təhsil planları yaratmaq üçün güclü tərəfləri və təkmilləşdirmə sahələrini müəyyənləşdirirsiniz.
+          description_short: Tələbələr çoxseçimli və pulsuz cavab sualları üçün strategiyaları tətbiq etməklə AP CSA İmtahanına hazırlaşırlar.
+        csa-postap-se-and-computer-vision-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Fəsil 1: GitHub və Copilot'
+            lessonGroup-3:
+              display_name: 'Fəsil 2: Kompüter görməsi'
+            lessonGroup-5:
+              display_name: Sorğu sonrası
+          title: Proqram təminatı mühəndisliyi və kompüter görməsi
+        csp4-2024:
+          lesson_groups:
+            csp_variables:
+              display_name: dəyişənlər
+            csp_conditionals:
+              display_name: Şərti ifadələr
+            csp_functions:
+              display_name: Funksiyalar
+            csp_project:
+              display_name: Layihə
+          student_description: Funksiyalar
+          description_short: Məlumatı saxlayan, qərarlar qəbul edən və kodu mütəşəkkil saxlayan proqramlar yaratmağı öyrənin.
+        csp5-2024:
+          lesson_groups:
+            csp_lists:
+              display_name: məlumat
+            lessonGroup-5:
+              display_name: Kursdan Sonra Sorğusu
+          title: Məlumat ('23-'24)
+          student_description: Bu bölmədə məlumat təhlilinin xam məlumatları dünya haqqında faydalı məlumata çevirməyə necə kömək etdiyini öyrənin. Məlumat dəstlərinin daxilində nümunələri tapmaq üçün data vizualizasiyasından necə istifadə edəcəyinizi öyrənin və qərarlar qəbul etmək və ya dünyamız haqqında daha çox məlumat əldə etmək üçün açıq məlumat və ya maşın öyrənməsi kimi kontekstlərdə bu məlumat təhlili prosesinin necə istifadə edildiyini öyrənin. Vahid layihəsində siz seçdiyiniz verilənlər toplusunu təhlil edəcək və tapıntılarınızı təqdim edəcəksiniz.
+          description_short: Araşdırmaq
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Siyahılar
+            lessonGroup-3:
+              display_name: dövrlər
+            lessonGroup-4:
+              display_name: Keçidlər
+            lessonGroup-5:
+              display_name: Layihə
+            lessonGroup-2:
+              display_name: Kursdan Sonra Sorğusu
+          title: Siyahılar, döngələr və keçidlər ('23-'24)
+          student_description: Proses
+          description_short: öyrənmək
+        csp7-2024:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parametrlər və Qaytarma Dəyərləri
+            csp_libraries:
+              display_name: Kitabxanalar
+            lessonGroup-3:
+              display_name: Kursdan Sonra Sorğusu
+          student_description: Bu bölmə parametrləri, qayıdışları və kitabxanaları təqdim edir. Sinif yoldaşlarınızla paylaşa biləcəyiniz yeni proqram növləri və kod kitabxanaları yaratmaq üçün bu anlayışlardan necə istifadə edəcəyinizi öyrənin. Seçdiyiniz hər hansı bir mövzu ətrafında funksiyalar kitabxanasını tərtib etməklə bölməni bitirin.
+          description_short: Bir sinif yoldaşınızla və ya bütün dünya ilə paylaşa biləcəyiniz təmiz və təkrar istifadə edilə bilən kodu necə tərtib etməyi öyrənin.
+        csp8-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: PT yarat
+            lessonGroup-3:
+              display_name: Kursdan Sonra Sorğusu
+          student_description: Bu bölmədə hesablama innovasiyalarının dünyamıza faydalı və zərərli şəkildə necə təsir etdiyini öyrənin. Məlumatın məxfiliyimizə və təhlükəsizliyimizə necə təhlükə yarada biləcəyini və onu qorumaq üçün şifrələmə və digər üsullardan istifadə yollarını öyrənin. Bölmə boyu siz və komandanız hesablama innovasiyaları ilə məktəb həyatını necə yaxşılaşdırmaq barədə təklif verəcəyiniz "gələcəyin məktəbi" konfransında iştirak edin.
+        csp9-2024:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Mövzu 9: Data'
+            lessonGroup-2:
+              display_name: Kursdan Sonra Sorğusu
+          description: Bu bölmədə AP Yaradın Performans Tapşırığına hazır olun və yerinə yetirin. Hər dərs tapşırığı başa düşməyinizə və onu tamamlamaq üçün plan hazırlamağınıza kömək edəcək faydalı sənədlərə və fəaliyyətlərə keçidlərdən ibarətdir.
+          student_description: Bu bölmədə AP Yaradın Performans Tapşırığına hazır olun və yerinə yetirin. Hər dərs tapşırığı başa düşməyinizə və onu tamamlamaq üçün plan hazırlamağınıza kömək edəcək faydalı sənədlərə və fəaliyyətlərə keçidlərdən ibarətdir.
+          description_short: Performans Tapşırığı Yarat (PT) məşq edin və tamamlayın.
+        csp10-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kursdan Sonra Sorğusu
+          student_description: Bu bölmə kompüter alimlərinin problemləri həll etmək üçün alqoritmləri necə tərtib etdiklərini və müxtəlif alqoritmlərin sürətini necə təhlil etdiyini tez bir şəkildə araşdırır. Müxtəlif praktiki fəaliyyətlər vasitəsilə alqoritmik səmərəlilik konsepsiyası haqqında məlumat əldə edin və onun müasir hesablamada necə tətbiq olunduğunu öyrənin.
+          description_short: Alqoritmlərin necə işlədiyini və niyə bəzilərinin digərlərindən daha yaxşı hesab edildiyini anlamaq üçün dizayn və təhlil edin.
+        csp-post-survey-2024:
+          title: CS Prinsipləri Kursdan Sonra Sorğu
+          description: Bu bölməyə CS Prinsipləri Kursdan Sonra Sorğu daxildir.
+          student_description: Bu bölmədə CS Prinsipləri Kursu haqqında sorğu var. Müəlliminiz bu sorğunun nə vaxt keçəcəyini sizə xəbər verəcəkdir.

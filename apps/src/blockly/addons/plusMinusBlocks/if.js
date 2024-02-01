@@ -103,6 +103,7 @@ const controlsIfMutator = {
    * @private
    */
   updateShape_: function (targetCount) {
+    this.setHelpUrl('/docs/spritelab/codestudio_ifStatement');
     while (this.elseIfCount_ < targetCount) {
       this.addElseIf_();
     }

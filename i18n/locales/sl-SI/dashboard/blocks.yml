@@ -36,8 +36,6 @@ sl:
           SIZE:
             '1.00': srednje
             '3.00': Zelo veliko
-      Dancelab_ai:
-        text: uporabite AI {IMAGE}
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -478,6 +476,11 @@ sl:
           EFFECT:
             '"hearts"': srca
             '"rain"': dež
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': modra
+            '"red"': rdeča
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}reci{TEXT1}"
       gamelab_atTime:

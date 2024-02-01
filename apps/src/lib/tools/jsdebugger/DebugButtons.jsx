@@ -117,6 +117,7 @@ export default connect(
               <img
                 src="/blockly/media/1x1.gif"
                 className="continue-btn icon21"
+                alt=""
               />
               {i18n.continue()}
             </button>
@@ -134,6 +135,7 @@ export default connect(
               <img
                 src="/blockly/media/1x1.gif"
                 className="step-over-btn icon21"
+                alt=""
               />
               {i18n.stepOver()}
             </button>
@@ -149,6 +151,7 @@ export default connect(
               <img
                 src="/blockly/media/1x1.gif"
                 className="step-out-btn icon21"
+                alt=""
               />
               {i18n.stepOut()}
             </button>
@@ -166,6 +169,7 @@ export default connect(
               <img
                 src="/blockly/media/1x1.gif"
                 className="step-in-btn icon21"
+                alt=""
               />
               {i18n.stepIn()}
             </button>

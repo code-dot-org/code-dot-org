@@ -81,6 +81,7 @@ function RubricFloatingActionButton({
         teacherHasEnabledAi={aiEnabled}
         open={isOpen}
         closeRubric={handleClick}
+        sectionId={sectionId}
       />
     </div>
   );

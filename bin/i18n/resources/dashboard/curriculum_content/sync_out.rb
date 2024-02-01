@@ -230,8 +230,8 @@ module I18n
             file_subpath = crowdin_file_path.partition(DIR_NAME).last
 
             original_file_path = File.join(I18N_BACKUP_DIR_PATH, file_subpath)
-
             RedactRestoreUtils.restore(original_file_path, crowdin_file_path, crowdin_file_path, REDACT_RESTORE_PLUGINS)
+            I18nScriptUtils.parse_file(crowdin_file_path) || {}
           end
 
           def types_i18n_data_of(language)

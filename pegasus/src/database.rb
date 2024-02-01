@@ -28,9 +28,14 @@ class Tutorials
         "#{db_column_name}___#{column_alias}".to_sym
       end
     end
-    @contents = CDO.cache.fetch("Tutorials/#{@table}/contents", force: no_cache) do
-      DB[@table].select(*@column_aliases).all
+
+    json_contents = CDO.cache.fetch("Tutorials/#{@table}/contents", force: no_cache) do
+      DB[@table].select(*@column_aliases).all.to_json
     end.deep_dup
+
+    @contents = JSON.parse(json_contents, object_class: DB[@table]).each do |tutorial|
+      tutorial.values.symbolize_keys!
+    end
   end
 
   # Returns an array of the tutorials.  Includes launch_url for each.

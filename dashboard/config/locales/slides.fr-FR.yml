@@ -2634,6 +2634,21 @@ fr:
         text: Lorsque vous appuyez sur « Exécuter », le sprite prononce le texte que
           vous lui demandez. Il est maintenant temps de commencer à utiliser Sprite
           Lab et de voir où votre imagination vous mène !
+    hoc-dance-ai-warmup:
+      2:
+        text: Salut ! Je m'appelle Miral Kotb et je suis danseuse, développeuse informatique
+          et la créatrice d'iLuminate.
+      3:
+        text: L'informatique est liée à la créativité de tout un tas de façons. De
+          manière presque illimitée, en fait. Une fois qu'on est capable d'écrire
+          un logiciel, tu peux infuser tout ce que tu veux avec tes idées. Moi, je
+          le fais avec des costumes lumineux. On peut faire tellement de choses, une
+          fois qu’on a les outils pour rédiger des logiciels. Les possibilités sont
+          vraiment infinies.
+      5:
+        text: Tu vas te servir de blocs de code pour choisir différents danseurs,
+          modifier leurs pas de danse, les faire réagir à la musique et les rendre
+          interactifs.
     hoc_dance_congrats:
       1:
         text: 'Heure de Code | Soirée Dansante : C’est la fête !'

@@ -2395,6 +2395,21 @@ uz:
         text: "“Run” tugmasini bosganingizda, sprite siz aytgan har qanday matnni
           aytadi. Endi Sprite Lab bilan ishlashni boshlash va tasavvuringiz sizni
           qayerga olib borishini ko'rish vaqti keldi!"
+    hoc-dance-ai-warmup:
+      2:
+        text: Salom! Mening ismim Miral Kotb va men raqqosa, dasturiy ta'minot ishlab
+          chiqaruvchisi va iLuminate yaratuvchisiman.
+      3:
+        text: Kompyuter fanlari ijodkorlik bilan ko‘p jihatdan bog‘liq. Haqiqatan
+          ham u cheksizdir. Dasturiy ta'minotni yozish qobiliyatiga ega bo'lgandan
+          so‘ng, har qanday narsaga g‘oyalarni kiritishingiz mumkin. Men buni chiroqli
+          kostyumlar bilan qilganman. Dasturiy ta'minotni yozish vositalariga ega
+          bo‘lgandan so'ng, siz juda ko‘p narsani qila olasiz va imkoniyatlaringiz
+          haqiqatan ham cheksiz bo‘ladi.
+      5:
+        text: Siz turli xil raqqoslarni tanlash, ularning raqs harakatlarini o'zgartirish,
+          ularni musiqaga javob berishlari va ularni interaktiv qilish uchun kod bloklaridan
+          foydalanasiz.
     hoc_dance_congrats:
       1:
         text: 'Kod soati | Raqs bazmu: Bazm avjida!'

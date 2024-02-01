@@ -6,17 +6,17 @@ import {updatePointerBlockImage} from '@cdo/apps/blockly/addons/cdoSpritePointer
 import CdoFieldFlyout from '@cdo/apps/blockly/addons/cdoFieldFlyout';
 import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
 import {blocks as behaviorBlocks} from './behaviorBlocks';
+import {BLOCK_TYPES, NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
+import {FALSEY_DEFAULT, readBooleanAttribute} from '@cdo/apps/blockly/utils';
+import {
+  editButtonHandler,
+  toolboxConfigurationSupportsEditButton,
+} from './proceduresBlocks';
 
 const INPUTS = {
   FLYOUT: 'flyout_input',
   STACK: 'STACK',
 };
-import {BLOCK_TYPES, NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
-import {readBooleanAttribute} from '@cdo/apps/blockly/utils';
-import {
-  editButtonHandler,
-  toolboxConfigurationSupportsEditButton,
-} from './proceduresBlocks';
 
 // This file contains customizations to Google Blockly Sprite Lab blocks.
 export const blocks = {
@@ -29,9 +29,7 @@ export const blocks = {
       const flyoutKey = CdoFieldFlyout.getFlyoutId(block);
       const flyoutField = new Blockly.FieldFlyout(_, {
         flyoutKey: flyoutKey,
-        sizingBehavior: 'fitContent',
         name: 'FLYOUT',
-        isFlyoutVisible: true,
       });
 
       block.appendDummyInput(INPUTS.FLYOUT).appendField(flyoutField, flyoutKey);
@@ -55,7 +53,6 @@ export const blocks = {
       if (!block.getInput(INPUTS.FLYOUT)) {
         const flyoutField = createFlyoutField(block);
         flyoutField.showEditor();
-        flyoutField.render_();
       } else {
         block.removeInput(INPUTS.FLYOUT);
       }
@@ -111,11 +108,11 @@ export const blocks = {
     const lastInput = this.inputList[this.inputList.length - 1];
     // Force add a dummy input at the end of the block, if needed.
     if (
-      ![Blockly.inputTypes.DUMMY, Blockly.inputTypes.STATEMENT].includes(
+      ![Blockly.inputTypes.END_ROW, Blockly.inputTypes.STATEMENT].includes(
         lastInput.type
       )
     ) {
-      this.appendDummyInput();
+      this.appendEndRowInput();
     }
 
     if (this.workspace.rendered) {
@@ -177,7 +174,7 @@ export const blocks = {
         // Assume default icon if no XML attribute present
         !xmlElement.hasAttribute('useDefaultIcon') ||
         // Coerce string to Boolean
-        readBooleanAttribute(xmlElement, 'useDefaultIcon');
+        readBooleanAttribute(xmlElement, 'useDefaultIcon', FALSEY_DEFAULT);
       flyoutToggleButton.setIcon(useDefaultIcon);
     };
   },
@@ -299,7 +296,7 @@ export const blocks = {
       const name = generator.nameDB_.getName(this.behaviorId, 'PROCEDURE');
       return [`new Behavior(${name}, [])`, generator.ORDER_ATOMIC];
     };
-    generator.sprite_parameter_get = generator.variables_get;
+    generator.forBlock.sprite_parameter_get = generator.forBlock.variables_get;
   },
 
   // All logic for behavior picker custom input type

@@ -59,6 +59,7 @@ ga:
             agus Plants vs. Zombies!
           description_short: Foghlaim buntús na ríomheolaíochta le go leor carachtar
             spraoiúil!
+          name: An Uair Chódála
           student_description: Foghlaim buntús na ríomheolaíochta le carachtair ó
             Angry Birds agus Plants vs. Zombies!
           title: An Uair Chódála 2013
@@ -785,6 +786,14 @@ ga:
           lessons:
             lesson-6:
               name: Lúba
+        csa1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Suirbhé
+            lessonGroup-3:
+              display_name: Ábhar
+            lessonGroup-5:
+              display_name: Ceachtanna Malartacha
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -820,6 +829,12 @@ ga:
           lessons:
             lesson-4:
               name: Athróga
+        csa2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+            lessonGroup-4:
+              display_name: Ceachtanna Malartacha
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -849,6 +864,12 @@ ga:
           lessons:
             lesson-3:
               name: Lúba "Do Gach"
+        csa3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+            lessonGroup-4:
+              display_name: Ceachtanna Malartacha
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -878,6 +899,12 @@ ga:
           lessons:
             lesson-9:
               name: Randamach
+        csa4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+            lessonGroup-4:
+              display_name: Ceachtanna Malartacha
         csa4-exemplars:
           lesson_groups:
             content:
@@ -910,6 +937,12 @@ ga:
               display_name: Ábhar
             lessonGroup-4:
               display_name: Ceachtanna Malartacha
+        csa5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+            lessonGroup-4:
+              display_name: Ceachtanna Malartacha
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -936,6 +969,12 @@ ga:
               display_name: Ábhar
             lessonGroup-4:
               display_name: Ceachtanna Malartacha
+        csa6-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+            lessonGroup-4:
+              display_name: Ceachtanna Malartacha
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -957,6 +996,12 @@ ga:
             lessonGroup-2:
               display_name: Ábhar
         csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+            lessonGroup-5:
+              display_name: Ceachtanna Malartacha
+        csa7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Ábhar
@@ -989,6 +1034,14 @@ ga:
             lessonGroup-5:
               display_name: Suirbhé
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+            lessonGroup-4:
+              display_name: Suirbhé
+            lessonGroup-5:
+              display_name: Ceachtanna Malartacha
+        csa8-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Ábhar
@@ -1719,6 +1772,8 @@ ga:
           title: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
         csp-post-survey-2023:
           title: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
+        csp-post-survey-2024:
+          title: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
         csp1-2017:
           lesson_groups:
             csp1_1:
@@ -1764,6 +1819,12 @@ ga:
             csp_unit1_2020:
               display_name: 'Aonad 1: Faisnéis dhigiteach'
         csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Suirbhé
+            csp_unit1_2020:
+              display_name: 'Aonad 1: Faisnéis dhigiteach'
+        csp1-2024:
           lesson_groups:
             cspSurvey:
               display_name: Suirbhé
@@ -1829,6 +1890,12 @@ ga:
               display_name: 'Aonad 10: Cibearshlándáil agus Tionchar Domhanda'
             lessonGroup-2:
               display_name: Suirbhé Iarchúrsa
+        csp10-2024:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Aonad 10: Cibearshlándáil agus Tionchar Domhanda'
+            lessonGroup-2:
+              display_name: Suirbhé Iarchúrsa
         csp10-pilot-staging:
           lesson_groups:
             csp_conditionals:
@@ -1878,6 +1945,10 @@ ga:
             csp_unit2_2020:
               display_name: 'Aonad 2: An tIdirlíon'
         csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Aonad 2: An tIdirlíon'
+        csp2-2024:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Aonad 2: An tIdirlíon'
@@ -1963,6 +2034,10 @@ ga:
             csp_unit3_2020:
               display_name: 'Aonad 3: Buneolas ar Dhearadh Aipeanna'
         csp3-2023:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Aonad 3: Buneolas ar Dhearadh Aipeanna'
+        csp3-2024:
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Aonad 3: Buneolas ar Dhearadh Aipeanna'
@@ -2075,6 +2150,16 @@ ga:
             csp_variables:
               display_name: Athróga
         csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Coinníollacha
+            csp_functions:
+              display_name: Feidhmeanna
+            csp_project:
+              display_name: Tionscadal
+            csp_variables:
+              display_name: Athróga
+        csp4-2024:
           lesson_groups:
             csp_conditionals:
               display_name: Coinníollacha
@@ -2206,6 +2291,10 @@ ga:
               display_name: Trasnáil
             lessonGroup-5:
               display_name: Suirbhé Iarchúrsa
+        csp5-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Suirbhé Iarchúrsa
         csp5-dlp:
           lesson_groups:
             content:
@@ -2282,6 +2371,18 @@ ga:
               display_name: Trasnáil
             lessonGroup-5:
               display_name: Tionscadal
+        csp6-2024:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Liostaí
+            lessonGroup-2:
+              display_name: Suirbhé Iarchúrsa
+            lessonGroup-3:
+              display_name: Lúba
+            lessonGroup-4:
+              display_name: Trasnáil
+            lessonGroup-5:
+              display_name: Tionscadal
         csp6-pilot:
           lesson_groups:
             content:
@@ -2330,6 +2431,14 @@ ga:
               display_name: Paraiméadair agus Luachanna Athfhillte
             lessonGroup-3:
               display_name: Suirbhé Iarchúrsa
+        csp7-2024:
+          lesson_groups:
+            csp_libraries:
+              display_name: Leabharlanna
+            csp_parameters_return_values:
+              display_name: Paraiméadair agus Luachanna Athfhillte
+            lessonGroup-3:
+              display_name: Suirbhé Iarchúrsa
         csp7-pilot:
           lesson_groups:
             csp_libraries:
@@ -2353,6 +2462,10 @@ ga:
             lessonGroup-3:
               display_name: Suirbhé Iarchúrsa
         csp8-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Suirbhé Iarchúrsa
+        csp8-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: Suirbhé Iarchúrsa
@@ -2385,6 +2498,12 @@ ga:
             lessonGroup-2:
               display_name: Suirbhé Iarchúrsa
         csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Aonad 9: Sonraí'
+            lessonGroup-2:
+              display_name: Suirbhé Iarchúrsa
+        csp9-2024:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Aonad 9: Sonraí'
@@ -2971,6 +3090,10 @@ ga:
           student_description: Códáil ainmhithe agus créatúir eile i do leagan féin
             de Minecraft.
           title: Uair Chódála Minecraft - Dearthóir
+        musiclab:
+          lessons:
+            lesson-3:
+              name: Saorimirt
         netsim:
           title: Ionsamhlóir an Idirlín
         nevada-standards-aligned-fifth-grade-2023:
@@ -3150,6 +3273,19 @@ ga:
           description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           description_short: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           student_description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
+        self-paced-pl-k5-2024-1:
+          lessons:
+            lesson-3:
+              name: Lúba
+            lesson-4:
+              name: Coinníollacha
+          title: Buntús na Ríomheolaíochta
+        self-paced-pl-k5-2024-2:
+          lessons:
+            lesson-3:
+              name: Teagmhais
+            lesson-4:
+              name: Iompar
         soccer:
           name: sacar
         spelling-bee:

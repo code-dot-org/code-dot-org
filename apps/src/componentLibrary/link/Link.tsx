@@ -61,7 +61,6 @@ const Link: React.FunctionComponent<LinkProps> = ({
         moduleStyles[`link-${size}`],
         className
       )}
-      role="link"
       href={!disabled ? href : undefined}
       id={id}
       onClick={!disabled ? onClick : undefined}

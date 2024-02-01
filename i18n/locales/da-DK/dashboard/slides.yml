@@ -730,3 +730,10 @@ da:
       7:
         image: 'notes/hoc_dance_congrats_7.png'
         text: "Når du er færdig med denne tutorial, så kan du dele det du har lavet med dine venner, med et link. Så brug din fantasi og hav det sjovt!"
+    hoc-dance-ai-warmup:
+      2:
+        text: "Hej! Mit navn er Miral Kotb og jeg er danser, software programmør, og skaber af iLuminate."
+      3:
+        text: "Programmering er på mange måder meget kreativt. Virkeligt meget. Jeg mener, at når du først har muligheden for at skrive koden til software, så kan du virkelig bruge alle dine idéer. Jeg gøre det med lys på tøjet. Der er så meget du kan gøre, når du har det rette værktøj til at kode, og mulighederne er uendelige."
+      5:
+        text: "Du skal bruge kode-blokke til at vælge forskellige dansere, skifte mellem forskellige dansetrin, få danserne til at følge musikken og få dem gjort interaktive."

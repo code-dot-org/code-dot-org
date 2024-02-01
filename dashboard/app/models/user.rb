@@ -145,6 +145,7 @@ class User < ApplicationRecord
     family_name
     ai_rubrics_disabled
     sort_by_family_name
+    show_progress_table_v2
   )
 
   attr_accessor(
@@ -252,8 +253,6 @@ class User < ApplicationRecord
   after_save :update_and_add_users_school_infos, if: :saved_change_to_school_info_id?
   validate :complete_school_info, if: :school_info_id_changed?, unless: proc {|u| u.purged_at.present?}
 
-  has_one :circuit_playground_discount_application
-
   has_many :pd_applications,
     class_name: 'Pd::Application::ApplicationBase',
     dependent: :destroy
@@ -299,7 +298,8 @@ class User < ApplicationRecord
     self.gender = Policies::Gender.normalize gender_student_input
   end
 
-  validates :gender_student_input, length: {maximum: 50}
+  validates :gender_student_input, length: {maximum: 50}, no_utf8mb4: true
+  validates :gender_teacher_input, no_utf8mb4: true
 
   def save_email_preference
     if teacher?

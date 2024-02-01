@@ -1,0 +1,18 @@
+name 'PLGuide_L1_ToneVoice1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Tone and Voice
+
+#### Clear, concise writing always supports good communication and learning. Use the following guidelines when writing text.
+
+* #### The writing style is clear, concise, and direct.
+* #### Sentences and paragraphs are brief and to the point.
+* #### Avoid jargon, colloquialisms, clichés, and tired phrases.
+* #### Write out acronyms the first time they're used, noting the acronym in parentheses.
+* #### A supportive second-person conversational tone is used throughout the course.
+* #### Instructions and requirements are stated simply, clearly, and logically.
+* #### The course material has been edited for language and grammar.
+
+MARKDOWN

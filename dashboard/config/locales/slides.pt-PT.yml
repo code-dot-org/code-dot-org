@@ -2391,6 +2391,19 @@ pt:
         text: Quando você pressiona “Executar”, o sprite dirá qualquer texto que você
           disser. Agora é hora de começar a usar o Sprite Lab e ver aonde sua imaginação
           o leva!
+    hoc-dance-ai-warmup:
+      2:
+        text: Olá. Meu nome é Miral Kotb e eu sou um dançarino, desenvolvedor de software
+          e criador do iLuminate.
+      3:
+        text: A ciência da computação está relacionada à criatividade de várias maneiras.
+          É imensurável, na verdade. Quer dizer, uma vez que você tenha a habilidade
+          de escrever software, você pode colocar idéias em qualquer coisa. Eu faço
+          isso com roupas leves. Há muito o que você pode fazer quando você tem as
+          ferramentas para escrever software, e as possibilidades são realmente infinitas.
+      5:
+        text: Você usará blocos de código para escolher diferentes dançarinos, mudar
+          seus movimentos de dança, fazê-los responder à música e torná-los interativos.
     hoc_dance_congrats:
       1:
         text: 'Hora do Código | Festa da Dança: Que comece a Festa!'

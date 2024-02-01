@@ -98,7 +98,7 @@ class CoursesController < ApplicationController
     raise ActiveRecord::ReadOnlyRecord if @unit_group.try(:plc_course)
     @unit_group_data = {
       course_summary: @unit_group.summarize(@current_user, for_edit: true),
-      script_names: Unit.all.map(&:name),
+      script_names: Unit.all.select {|unit| unit.is_course? == false}.map(&:name),
       course_families: UnitGroup.family_names,
       version_year_options: UnitGroup.get_version_year_options
     }
@@ -163,7 +163,11 @@ class CoursesController < ApplicationController
     # When the url of a course family is requested, redirect to a specific course version.
     if UnitGroup.family_names.include?(params[:course_name])
       unit_group = UnitGroup.latest_stable_version(params[:course_name])
-      redirect_to action: params[:action], course_name: unit_group.name if unit_group
+      if unit_group
+        redirect_path = url_for(action: params[:action], course_name: unit_group.name)
+        redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
+        redirect_to "#{redirect_path}#{redirect_query_string}"
+      end
     end
 
     unit_group

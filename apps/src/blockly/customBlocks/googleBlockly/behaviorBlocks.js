@@ -6,6 +6,7 @@ import {convertXmlToJson} from '../../addons/cdoSerializationHelpers';
 import {behaviorDefMutator} from './mutators/behaviorDefMutator';
 import {behaviorGetMutator} from './mutators/behaviorGetMutator';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
+import {behaviorCallerGetDefMixin} from './mixins/behaviorCallerGetDefMixin';
 
 /**
  * A dictionary of our custom procedure block definitions, used across labs.
@@ -41,7 +42,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
         text: '',
       },
       {
-        type: 'input_dummy',
+        type: 'input_end_row',
         name: 'TOP',
       },
     ],
@@ -52,8 +53,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       },
     ],
     style: 'behavior_blocks',
-    helpUrl: '%{BKY_PROCEDURES_DEFNORETURN_HELPURL}',
-    tooltip: '%{BKY_PROCEDURES_DEFNORETURN_TOOLTIP}',
+    helpUrl: '/docs/spritelab/codestudio_defining-behaviors',
     extensions: [
       'procedure_def_get_def_mixin',
       'procedure_def_var_mixin',
@@ -66,7 +66,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_def_mini_toolbox',
       'modal_procedures_no_destroy',
       'behaviors_name_validator',
-      'updated_behavior_picker_blocks',
+      'on_behavior_def_change',
     ],
     mutator: 'behavior_def_mutator',
   },
@@ -74,7 +74,11 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     type: BLOCK_TYPES.behaviorGet,
     message0: '%1 %2',
     args0: [
-      {type: 'field_label', name: 'NAME', text: '%{BKY_UNNAMED_KEY}'},
+      {
+        type: 'field_label_serializable',
+        name: 'NAME',
+        text: '%{BKY_UNNAMED_KEY}',
+      },
       {
         type: 'input_dummy',
         name: 'TOPROW',
@@ -82,10 +86,12 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     ],
     output: 'Behavior',
     style: 'behavior_blocks',
-    helpUrl: '%{BKY_PROCEDURES_CALLNORETURN_HELPURL}',
+    helpUrl: '/docs/spritelab/spritelab_adding-and-removing-behaviors',
     extensions: [
       'procedures_edit_button',
+      'procedure_caller_serialize_name',
       'procedure_caller_get_def_mixin',
+      'behavior_caller_get_def_mixin',
       'procedure_caller_var_mixin',
       'procedure_caller_update_shape_mixin',
       'procedure_caller_context_menu_mixin',
@@ -108,7 +114,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     ],
     output: 'Sprite',
     style: 'sprite_blocks',
-    helpUrl: '%{BKY_VARIABLES_GET_HELPURL}',
+    helpUrl: '/docs/spritelab/codestudio_defining-behaviors',
     tooltip: '%{BKY_VARIABLES_GET_TOOLTIP}',
     extensions: ['contextMenu_variableSetterGetter'],
   },
@@ -143,8 +149,7 @@ GoogleBlockly.Extensions.register('behaviors_block_frame', function () {
   }
 });
 
-// This extension is used to update the block's behaviorId when a user-created behavior is renamed.
-// TODO: Add logic to update the dropdown options on behaviorPicker blocks too.
+// This extension is used to update the block's behaviorId when a behavior is renamed in start mode.
 GoogleBlockly.Extensions.register('behaviors_name_validator', function () {
   const nameField = this.getField('NAME');
   nameField.setValidator(function (newValue) {
@@ -153,7 +158,7 @@ GoogleBlockly.Extensions.register('behaviors_name_validator', function () {
     const legalName = rename(newValue);
     if (
       legalName &&
-      this.sourceBlock_.userCreated &&
+      Blockly.isStartMode &&
       this.sourceBlock_.behaviorId !== legalName
     ) {
       this.sourceBlock_.behaviorId = legalName;
@@ -162,18 +167,22 @@ GoogleBlockly.Extensions.register('behaviors_name_validator', function () {
   });
 });
 
-GoogleBlockly.Extensions.register(
-  'updated_behavior_picker_blocks',
-  function () {
-    this.workspace.addChangeListener(event => {
-      onBehaviorDefChange(event, this);
-    });
-  }
-);
+GoogleBlockly.Extensions.register('on_behavior_def_change', function () {
+  this.workspace.addChangeListener(event => {
+    onBehaviorDefChange(event, this);
+  });
+});
 
 GoogleBlockly.Extensions.registerMutator(
   'behavior_get_mutator',
   behaviorGetMutator
+);
+
+// Using register instead of registerMixin to avoid triggering warnings about
+// overriding built-ins.
+GoogleBlockly.Extensions.register(
+  'behavior_caller_get_def_mixin',
+  behaviorCallerGetDefMixin
 );
 
 /**
@@ -187,23 +196,10 @@ GoogleBlockly.Extensions.registerMutator(
 export function flyoutCategory(workspace, functionEditorOpen = false) {
   const blockList = [];
 
-  const behaviorDefinitionBlock = {
-    kind: 'block',
-    type: BLOCK_TYPES.behaviorDefinition,
-    fields: {
-      NAME: Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,
-    },
-  };
-
-  // If the modal function editor is enabled, we render a button to open the editor
-  // Otherwise, we render a "blank" behavior definition block
   if (functionEditorOpen) {
     // No-op - cannot create new behaviors while the modal editor is open
   } else if (Blockly.useModalFunctionEditor) {
-    const newBehaviorButton = getNewBehaviorButtonWithCallback(
-      workspace,
-      behaviorDefinitionBlock
-    );
+    const newBehaviorButton = getNewBehaviorButtonWithCallback(workspace);
     blockList.push(newBehaviorButton);
   }
 
@@ -258,12 +254,10 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   return blockList;
 }
 
-const getNewBehaviorButtonWithCallback = (
-  workspace,
-  behaviorDefinitionBlock
-) => {
+const getNewBehaviorButtonWithCallback = workspace => {
   const callbackKey = 'newBehaviorCallback';
   workspace.registerButtonCallback(callbackKey, () => {
+    workspace.hideChaff();
     Blockly.functionEditor.newProcedureCallback(BLOCK_TYPES.behaviorDefinition);
   });
 
@@ -285,11 +279,28 @@ function onBehaviorDefChange(event, block) {
   ) {
     const {oldValue, newValue} = event;
     updateBehaviorPickerBlocks(oldValue, newValue);
+    if (Blockly.isStartMode) {
+      // In start mode, we need up update behavior call blocks to change their behaviorIds.
+      // In normal mode the behavior ids are assigned at creation and are static.
+      updateBehaviorCallBlocks(oldValue, newValue);
+    }
+  }
+}
+
+function updateBehaviorCallBlocks(oldValue, newValue) {
+  const behaviorCallBlocks = findAllBlocksOfType(BLOCK_TYPES.behaviorGet);
+  if (behaviorCallBlocks.length) {
+    const blocksToUpdate = behaviorCallBlocks.filter(
+      block => block.behaviorId === oldValue
+    );
+    blocksToUpdate.forEach(block => {
+      block.behaviorId = newValue;
+    });
   }
 }
 
 function updateBehaviorPickerBlocks(oldValue, newValue) {
-  const behaviorPickerBlocks = findAllBehaviorPickerBlocks();
+  const behaviorPickerBlocks = findAllBlocksOfType('gamelab_behaviorPicker');
   if (behaviorPickerBlocks.length) {
     const blocksToUpdate = behaviorPickerBlocks.filter(
       block => block.getFieldValue('BEHAVIOR') === oldValue
@@ -300,13 +311,11 @@ function updateBehaviorPickerBlocks(oldValue, newValue) {
   }
 }
 
-const findAllBehaviorPickerBlocks = () => {
+const findAllBlocksOfType = type => {
   const blocks = [];
   Blockly.Workspace.getAll().forEach(workspace =>
     blocks.push(
-      ...workspace
-        .getAllBlocks()
-        .filter(block => block.type === 'gamelab_behaviorPicker')
+      ...workspace.getAllBlocks().filter(block => block.type === type)
     )
   );
   return blocks;

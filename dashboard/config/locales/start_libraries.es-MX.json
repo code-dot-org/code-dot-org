@@ -10,19 +10,43 @@
         "Neural Networks - Perceptron - Beta_ai23": {
           "I18n_HAIW23L3": {
             "FOOD": "comida",
+            "FREE_THROW": "Dominando el tiro libre en baloncesto",
+            "HIKING": "Los 3 mejores lugares para practicar senderismo en tu zona",
+            "OTTER_RELEASE": "La nutria vuelve al agua por primera vez",
             "PEOPLE": "Gente",
+            "SPOT_GEMSTONES": "Como encontrar piedras preciosas en tu barrio",
             "allButtonText": "Todos",
+            "backButton2_7": "⬅️ Selecciona Nueva Persona",
+            "modelDescriptionLabel_9": "Elige uno de los creadores de contenidos que aparecen a continuación para que genere recomendaciones para ti. Al pulsar sobre su nombre aparecerá más información sobre ellos.\n\nUna vez que hayas seleccionado a alguien, haz clic en el botón \"Mostrar Recomendaciones\" para ver lo que te recomiendan.",
+            "nextScreen1_4": "¡Ver Recomendaciones! ➡️",
+            "recommendScrollDown_6": "⬇️ Desplazarse hacia abajo ⬇️",
+            "recommendScrollUp_5": "⬆️ Desplazarse hacia Arriba ⬆️",
             "recommendationTitle_2": "Tus Recomendaciones",
-            "selectWeightLabel_1": "¡Seleccione al menos una persona para usar para recomendaciones para continuar!"
+            "selectWeightLabel_1": "¡Seleccione al menos una persona para usar para recomendaciones para continuar!",
+            "startDescriptionLabel_8": "WeTube es un sitio web de nuevos medios para todos sus creadores de contenido favoritos.\n\nHemos reunido a todas tus personalidades favoritas para crear videos que coincidan con tus intereses Y para ayudarte a seleccionar \ntu transmisión de videos.\n\nSólo tienes que elegir a qué creadores de contenidos quieres seguir y, a continuación, ¡ver tus recomendaciones de vídeos!",
+            "startNextButton_3": "¡Empecemos! ➡️",
+            "text_area3_10": "Estos son los vídeos que te han recomendado en función de los que seleccionaste en la última pantalla. Sólo se muestran 3 vídeos a la vez, utiliza los botones de desplazamiento para ver más. Utiliza los botones de la izquierda para filtrar por determinadas categorías."
           }
         },
         "Neural Networks - Perceptron - Full_ai23": {
           "I18n_HAIW23L3": {
             "FOOD": "comida",
+            "FREE_THROW": "Dominando el tiro libre en baloncesto",
+            "HIKING": "Los 3 mejores lugares para practicar senderismo en tu zona",
+            "OTTER_RELEASE": "La nutria vuelve al agua por primera vez",
             "PEOPLE": "Gente",
+            "SPOT_GEMSTONES": "Como encontrar piedras preciosas en tu barrio",
             "allButtonText": "Todos",
+            "backButton2_7": "⬅️ Selecciona Nueva Persona",
+            "modelDescriptionLabel_9": "Elige uno de los creadores de contenidos que aparecen a continuación para que genere recomendaciones para ti. Al pulsar sobre su nombre aparecerá más información sobre ellos.\n\nUna vez que hayas seleccionado a alguien, haz clic en el botón \"Mostrar Recomendaciones\" para ver lo que te recomiendan.",
+            "nextScreen1_4": "¡Ver Recomendaciones! ➡️",
+            "recommendScrollDown_6": "⬇️ Desplazarse hacia abajo ⬇️",
+            "recommendScrollUp_5": "⬆️ Desplazarse hacia Arriba ⬆️",
             "recommendationTitle_2": "Tus Recomendaciones",
-            "selectWeightLabel_1": "¡Seleccione al menos una persona para usar para recomendaciones para continuar!"
+            "selectWeightLabel_1": "¡Seleccione al menos una persona para usar para recomendaciones para continuar!",
+            "startDescriptionLabel_8": "WeTube es un sitio web de nuevos medios para todos sus creadores de contenido favoritos.\n\nHemos reunido a todas tus personalidades favoritas para crear videos que coincidan con tus intereses Y para ayudarte a seleccionar \ntu transmisión de videos.\n\nSólo tienes que elegir a qué creadores de contenidos quieres seguir y, a continuación, ¡ver tus recomendaciones de vídeos!",
+            "startNextButton_3": "¡Empecemos! ➡️",
+            "text_area3_10": "Estos son los vídeos que te han recomendado en función de los que seleccionaste en la última pantalla. Sólo se muestran 3 vídeos a la vez, utiliza los botones de desplazamiento para ver más. Utiliza los botones de la izquierda para filtrar por determinadas categorías."
           }
         },
         "U9L5 Cropping Widget_ai2023": {

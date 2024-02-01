@@ -125,6 +125,9 @@ nl:
     upgrade:
       applab_unsupported_tablet: App Lab werkt het beste op een PC of laptop met muis
         en toetsenbord. Op je huidige apparaat zou het minder goed kunnen werken.
+      gamelab_unsupported_tablet: Game Lab functioneert het beste op een laptop of
+        desktop-computer met een muis en toetsenbord. Je zou op je huidige apparaat
+        problemen kunnen ervaren met deze tool.
       link: Leer meer
       unsupported_message: Uw browser wordt niet ondersteund. Probeer uw browser te
         upgraden naar <a href='%{supported_browsers_url}', target='_blank'> een van

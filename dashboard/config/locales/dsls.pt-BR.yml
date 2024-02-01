@@ -914,17 +914,17 @@ pt-BR:
         description: Aqui estão algumas tags HTML que você pode ter visto nas últimas
           lições. Você pode usá-las para revisar as tags que talvez queira para sua
           página da web.
-        display_name: Análise de HTML
+        display_name: Revisão de HTML
       CSD HTML project Review_2022:
         description: Aqui estão algumas tags HTML que você pode ter visto nas últimas
           lições. Você pode usá-las para revisar as tags que talvez queira para sua
           página da web.
-        display_name: Análise de HTML
+        display_name: Revisão de HTML
       CSD HTML project Review_2023:
         description: Aqui estão algumas tags HTML que você pode ter visto nas últimas
           lições. Você pode usá-las para revisar as tags que talvez queira para sua
           página da web.
-        display_name: Análise de HTML
+        display_name: Revisão de HTML
       CSD Header Size MC:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -1102,10 +1102,10 @@ pt-BR:
       CSD U1 IOSP match:
         answers:
         - text: Obtenha a previsão do tempo do dia na Internet
-        - text: Mostre uma foto de um bom outfit para o usuário
-        - text: Matenha uma lista dos outfits disponíveis e em que tipo de clima elas
+        - text: Mostre uma foto de um bom roupa para o usuário
+        - text: Matenha uma lista das roupas disponíveis e em que tipo de clima elas
             são usadas
-        - text: Combine as condições climáticas com os outfits que são bons para essa
+        - text: Combine as condições climáticas com as roupas que são boas para essa
             condição
         content1: Uma equipe está criando um aplicativo que ajudará as pessoas a decidirem
           qual outfit usar pela manhã. Combine quatro coisas que o aplicativo faz
@@ -1119,10 +1119,10 @@ pt-BR:
       CSD U1 IOSP match_2021:
         answers:
         - text: Obtenha a previsão do tempo do dia na Internet
-        - text: Mostre uma foto de um bom outfit para o usuário
-        - text: Matenha uma lista dos outfits disponíveis e em que tipo de clima elas
+        - text: Mostre uma foto de um bom roupa para o usuário
+        - text: Matenha uma lista das roupas disponíveis e em que tipo de clima elas
             são usadas
-        - text: Combine as condições climáticas com os outfits que são bons para essa
+        - text: Combine as condições climáticas com as roupas que são boas para essa
             condição
         content1: Uma equipe está criando um aplicativo que ajudará as pessoas a decidirem
           qual roupa usar pela manhã. Combine quatro coisas que o aplicativo faz com
@@ -1314,7 +1314,7 @@ pt-BR:
           que é necessário fazer com uma etapa do processo de solução de problemas
         questions:
         - text: Preparar
-        - text: Refletir
+        - text: Reflita
         - text: Tentar
         - text: Definir
         teacher_markdown: "**Conteúdo: Unidade 1, Lição 2**\n"
@@ -1332,7 +1332,7 @@ pt-BR:
           o que eles estão fazendo com uma etapa do processo de resolução de problemas.
         questions:
         - text: Preparar
-        - text: Refletir
+        - text: Reflita
         - text: Tentar
         - text: Definir
         title: Questão 2
@@ -1348,7 +1348,7 @@ pt-BR:
           o que eles estão fazendo com uma etapa do processo de resolução de problemas.
         questions:
         - text: Preparar
-        - text: Refletir
+        - text: Reflita
         - text: Tentar
         - text: Definir
         title: Questão 2
@@ -1365,7 +1365,7 @@ pt-BR:
           de problemas.
         questions:
         - text: Preparar
-        - text: Refletir
+        - text: Reflita
         - text: Tentar
         - text: Definir
         title: Questão 2
@@ -1482,13 +1482,13 @@ pt-BR:
         display_name: Desafios e Código Extra
       CSD U2 CSS practice_pilot_2021:
         description: Teste suas novas habilidades nesses diferentes desafios!
-        display_name: Estilo de texto com CSS
+        display_name: Estilizando texto com CSS
       CSD U2 CSS practice_pilot_2022:
         description: Teste suas novas habilidades nesses diferentes desafios!
-        display_name: Estilo de texto com CSS
+        display_name: Estilizando texto com CSS
       CSD U2 CSS practice_pilot_2023:
         description: Teste suas novas habilidades nesses diferentes desafios!
-        display_name: Estilo de texto com CSS
+        display_name: Estilizando texto com CSS
       CSD U2 Design Project:
         content1: descrição aqui
         markdown: |+
@@ -1877,6 +1877,7 @@ pt-BR:
         answers:
         - text: HTML
         - correct: true
+          text: CSS
         - {}
         - text: Cabeçalho
         - {}
@@ -2974,7 +2975,7 @@ pt-BR:
           * Como formatar seu código para facilitar a leitura
           * Como depurar o código HTML e CSS
           * Como usar imagens de forma responsável
-          * Como proteger suas informações pessoais on-line
+          * Como proteger suas informações pessoais online
 
           ## Exemplos
 
@@ -3007,7 +3008,7 @@ pt-BR:
           * Como formatar seu código para facilitar a leitura
           * Como depurar o código HTML e CSS
           * Como usar imagens de forma responsável
-          * Como proteger suas informações pessoais on-line
+          * Como proteger suas informações pessoais online
 
           ## Exemplos
 
@@ -3040,7 +3041,7 @@ pt-BR:
           * Como formatar seu código para facilitar a leitura
           * Como depurar o código HTML e CSS
           * Como usar imagens de forma responsável
-          * Como proteger suas informações pessoais on-line
+          * Como proteger suas informações pessoais online
 
           ## Exemplos
 
@@ -4979,8 +4980,8 @@ pt-BR:
             tempo.
         - text: Fácil, porque você não desanimará ao melhorar seu aplicativo.
         - text: Difícil, porque geralmente as coisas difíceis são mais importantes.
-        - text: Difícil, porque depois de concluí-las, as mais fáceis não o serão
-            um problema.
+        - text: Difícil, porque depois de concluí-las, as mais fáceis não serão um
+            problema.
         - text: Você deve fazê-los na ordem em que os encontrou, independentemente
             de serem fáceis ou difíceis.
         questions:
@@ -4994,8 +4995,8 @@ pt-BR:
             tempo.
         - text: Fácil, porque você não desanimará ao melhorar seu aplicativo.
         - text: Difícil, porque geralmente as coisas difíceis são mais importantes.
-        - text: Difícil, porque depois de concluí-las, as mais fáceis não o serão
-            um problema.
+        - text: Difícil, porque depois de concluí-las, as mais fáceis não serão um
+            problema.
         - text: Você deve fazê-los na ordem em que os encontrou, independentemente
             de serem fáceis ou difíceis.
         questions:
@@ -5009,8 +5010,8 @@ pt-BR:
             tempo.
         - text: Fácil, porque você não desanimará ao melhorar seu aplicativo.
         - text: Difícil, porque geralmente as coisas difíceis são mais importantes.
-        - text: Difícil, porque depois de concluí-las, as mais fáceis não o serão
-            um problema.
+        - text: Difícil, porque depois de concluí-las, as mais fáceis não serão um
+            problema.
         - text: Você deve fazê-los na ordem em que os encontrou, independentemente
             de serem fáceis ou difíceis.
         questions:
@@ -5458,9 +5459,9 @@ pt-BR:
         answers:
         - text: Codifique
         - text: Decodifique
-        - {}
+        - text: Pixel
         - correct: true
-        - {}
+        - text: ASCII
         questions:
         - {}
       CSD U5 MC Q6_2023:
@@ -6362,7 +6363,7 @@ pt-BR:
         questions:
         - text: O que o laboratório de aplicativos exibirá quando o código à esquerda
             for executado?
-        title: Usando Vetores
+        title: Usando Matrizes
       CSD U6 array multi_2018:
         answers:
         - text: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
@@ -6379,7 +6380,7 @@ pt-BR:
         questions:
         - text: O que o laboratório de aplicativos exibirá quando o código à esquerda
             for executado?
-        title: Usando Vetores
+        title: Usando Matrizes
       CSD U6 array multi_2018_2019:
         answers:
         - text: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
@@ -6396,7 +6397,7 @@ pt-BR:
         questions:
         - text: O que o laboratório de aplicativos exibirá quando o código à esquerda
             for executado?
-        title: Usando Vetores
+        title: Usando Matrizes
       CSD U6 array multi_2021:
         answers:
         - text: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
@@ -6413,7 +6414,7 @@ pt-BR:
         questions:
         - text: O que o laboratório de aplicativos exibirá quando o código à esquerda
             for executado?
-        title: Usando Vetores
+        title: Usando Matrizes
       CSD U6 circuit smart bike blinker build:
         markdown: |
           # Construa seu pisca-pisca
@@ -6696,7 +6697,7 @@ pt-BR:
         answers:
         - text: manipuladores de eventos
         - correct: true
-          text: for loops e matrizes
+          text: para loops e matrizes
         - text: funções com parâmetros
         - correct: true
           text: getters/getProperty
@@ -6710,7 +6711,7 @@ pt-BR:
         answers:
         - text: manipuladores de eventos
         - correct: true
-          text: for loops e matrizes
+          text: para loops e matrizes
         - text: funções com parâmetros
         - correct: true
           text: getters/getProperty
@@ -6852,7 +6853,7 @@ pt-BR:
       CSD U6 test parameters multi:
         answers:
         - text: Eles podem ser usados com dispositivos físicos ou hardware.
-        - text: Eles podem ser usados dentro de um for loop
+        - text: Eles podem ser usados dentro de um loop for.
         - correct: true
           text: Eles podem ser usados como uma solução geral para problemas com detalhes
             diferentes e específicos.
@@ -6865,7 +6866,7 @@ pt-BR:
       CSD U6 test parameters multi_2021:
         answers:
         - text: Eles podem ser usados com dispositivos físicos ou hardware.
-        - text: Eles podem ser usados dentro de um for loop
+        - text: Eles podem ser usados dentro de um loop for.
         - correct: true
           text: Eles podem ser usados como uma solução geral para problemas com detalhes
             diferentes e específicos.
@@ -6878,7 +6879,7 @@ pt-BR:
       CSD U6 test parameters multi_2022:
         answers:
         - text: Eles podem ser usados com dispositivos físicos ou hardware.
-        - text: Eles podem ser usados dentro de um for loop
+        - text: Eles podem ser usados dentro de um loop for.
         - correct: true
           text: Eles podem ser usados como uma solução geral para problemas com detalhes
             diferentes e específicos.
@@ -6979,6 +6980,16 @@ pt-BR:
       CSD Web Sample Pages_2023:
         content1: Examine esses exemplos de páginas da web e decida a qual propósito
           elas servem a seus criadores e visitantes.
+        markdown: |
+          # Exemplo de páginas pessoais da Web
+
+          <div style="float: left; text-align:center; width:33%"><strong>Modelo A</strong><br />(Clique na imagem para ver o modelo)<br /><a href="https://codeprojects.org/projects/weblab/kkb1upGQja7Hy4NAa72uQxwu87jDa_DO1aiav2Qhzk8" target="_new"><img style="border-radius:10px; margin: 10px; width: 100%;" src="https://images.code.org/301502f3280461ed7b9f16bf5ed11bb8-image-1677189841902.png" alt="Template A page"></a></div>
+          <div style="float: left; text-align:center; width:33%"><strong>Modelo B</strong><br />(Clique na imagem para ver o modelo)<br /><a href="https://codeprojects.org/projects/weblab/hQCSn2We5tss6ZiOPTGJYq6PXHkwOIAztnd3ArJbezc" target="_new"><img style="border-radius:10px; margin: 10px; width: 100%;" src="https://images.code.org/e9839b33b809a72773d9190f5378e295-image-1677194056589.png" alt="Template B page"></a></div>
+          <div style="float: left; text-align:center; width:34%"><strong>Modelo C</strong><br />(Clique na imagem para ver o modelo)<br /><a href="https://codeprojects.org/projects/weblab/Z3m2fWClc10iTgxiLnOfTqZHApYrFXgx8YqgCwAvXvs" target="_new"><img style="border-radius:10px; margin: 10px; width: 100%;" src="https://images.code.org/c030607ab7c9eacdffc613aff3992381-image-1677194170313.png" alt="Template C page"></a></div>
+          <hr style="clear: both" />
+          <div style="float: left; text-align:center; width:33%"><strong>Modelo D</strong><br />(Clique na imagem para ver o modelo)<br /><a href="https://codeprojects.org/projects/weblab/asJPWlR18HPsC30w8nGM7Zm1jPurD_wNyEKstYWjh_Q" target="_new"><img style="border-radius:10px; margin: 10px; width: 100%;" src="https://images.code.org/e53aaca3962f75b7279cb8f39b2b8237-image-1677194195497.png" alt="Template D page"></a></div>
+          <div style="float: left; text-align:center; width:33%"><strong>Modelo E</strong><br />(Clique na imagem para ver o modelo)<br /><a href="https://codeprojects.org/projects/weblab/I888qmIAVN8JACK6jHeRtIz17b77g5-XcvkkxF8ztZ8" target="_new"><img style="border-radius:10px; margin: 10px; width: 100%;" src="https://images.code.org/68afb5ea16d9e61545c68254570ce39e-image-1677194239625.png" alt="Template E page"></a></div>
+          <hr style="clear: both" />
       CSD games cake challenge choice_2021:
         description: |2-
 
@@ -7056,15 +7067,15 @@ pt-BR:
         display_name: 'Praticando Colisão '
       CSD games movement2 challenge choice_2021:
         description: Experimente esses novos blocos e desafios com velocidade e o
-          contrapadrão.
+          Counter Pattern.
         display_name: Desafios de Movimentos Complexos de Sprites
       CSD games movement2 challenge choice_2022:
         description: Experimente esses novos blocos e desafios com velocidade e o
-          contrapadrão.
+          Counter Pattern.
         display_name: Desafios de Movimentos Complexos de Sprites
       CSD games movement2 challenge choice_2023:
         description: Experimente esses novos blocos e desafios com velocidade e o
-          contrapadrão.
+          Counter Pattern.
         display_name: Desafios de Movimentos Complexos de Sprites
       CSD games movement2 practice choice_2021:
         description: Pratique usando as novas formas de mover sprites.
@@ -7148,13 +7159,13 @@ pt-BR:
         description: Experimente esses desafios com condicionais.
         display_name: Desafios Condicionais
       CSD web conditionals practice choice_2021:
-        description: Pratique o uso de booleanos e condicionais com essas atividades.
+        description: Pratique o uso de booleanas e condicionais com essas atividades.
         display_name: Praticando Condicionais
       CSD web conditionals practice choice_2022:
-        description: Pratique o uso de booleanos e condicionais com essas atividades.
+        description: Pratique o uso de booleanas e condicionais com essas atividades.
         display_name: Praticando Condicionais
       CSD web conditionals practice choice_2023:
-        description: Pratique o uso de booleanos e condicionais com essas atividades.
+        description: Pratique o uso de booleanas e condicionais com essas atividades.
         display_name: Praticando Condicionais
       CSD web draw loop challenge choice_2021:
         description: Experimente esses desafios com draw loop.
@@ -9530,7 +9541,7 @@ pt-BR:
           target=\"_blank\" style='text-decoration:none'>\n        <button>Planos
           de aula</button>\n      </a>\n    </td>  \n    <td style=\"background-color:#9ed7ed\">\n
           \   <a href=\"https://studio.code.org/s/coursee\" target=\"_blank\" style='text-decoration:none'>\n
-          \       <button>Ver curso/button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursee\"
+          \       <button>Ver curso</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursee\"
           target=\"_blank\" style='text-decoration:none'>\n        <button>Planos
           de aula</button>\n      </a>\n    </td>  \n     <td style=\"background-color:#c9c1e9\">\n
           \   <a href=\"https://studio.code.org/s/coursee\" target=\"_blank\" style='text-decoration:none'>\n
@@ -12041,18 +12052,18 @@ pt-BR:
 
           _Code.org leva sua privacidade muito a sério._ Suas respostas aqui serão mantidas  <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
         teacher_markdown: |
-          **Pesquisas de Conclusão de Unidade com Professores:** Enquanto seus alunos concluem a pesquisa, gostaríamos que você respondesse a uma rápida pesquisa com os professores
+          **Pesquisas de Conclusão de Unidade dos Professores:** Enquanto seus alunos concluem a pesquisa, gostaríamos que você respondesse a uma rápida pesquisa com os professores
 
-          ## [Click Here for Teacher Survey](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4)
+          ## [Clique aqui para acessar a Pesquisa dos Professores](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4)
       Student End of Unit Survey - Intro+TeacherMD_csd4_2023:
         markdown: |-
           ### Reserve um momento para responder a essas **três perguntas rápidas**.
 
           _Code.org leva sua privacidade muito a sério._ Suas respostas aqui serão mantidas  <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
         teacher_markdown: |
-          **Pesquisas de Conclusão de Unidade com Professores:** Enquanto seus alunos concluem a pesquisa, gostaríamos que você respondesse a uma rápida pesquisa com os professores
+          **Pesquisas de Conclusão de Unidade dos Professores:** Enquanto seus alunos concluem a pesquisa, gostaríamos que você respondesse a uma rápida pesquisa com os professores
 
-          ## [Click Here for Teacher Survey](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4)
+          ## [Clique aqui para acessar a Pesquisa dos Professores](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4)
       Student End of Unit Survey - Intro+TeacherMD_csd5-2022:
         markdown: |-
           ### Reserve um momento para responder a essas **três perguntas rápidas**.
@@ -12657,7 +12668,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - text: Eu entendo e posso explicar os conceitos de IA e Machine Learning
+        - text: Eu entendo e posso explicar os conceitos de IA e Aprendizado de Máquina
       aiml-ch1-pulse-survey-q1_2022:
         answers:
         - correct: true
@@ -12675,7 +12686,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - text: Eu entendo e posso explicar os conceitos de IA e Machine Learning
+        - text: Eu entendo e posso explicar os conceitos de IA e Aprendizado de Máquina
       aiml-ch1-pulse-survey-q1_2023:
         answers:
         - correct: true
@@ -12693,7 +12704,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - text: Eu entendo e posso explicar os conceitos de IA e Machine Learning
+        - text: Eu entendo e posso explicar os conceitos de IA e Aprendizado de Máquina
       aiml-ch1-pulse-survey-q2_2021:
         answers:
         - correct: true
@@ -12914,11 +12925,11 @@ pt-BR:
         questions:
         - text: Quero fazer mais cursos de ciência da computação no futuro.
       aiml-ch1-pulse-survey_2021:
-        title: Pesquisa Rápida Sobre IA e Machine Learning!
+        title: Pesquisa rápida sobre IA e aprendizado de máquina!
       aiml-ch1-pulse-survey_2022:
-        title: Pesquisa Rápida Sobre IA e Machine Learning!
+        title: Pesquisa rápida sobre IA e aprendizado de máquina!
       aiml-ch1-pulse-survey_2023:
-        title: Pesquisa Rápida Sobre IA e Machine Learning!
+        title: Pesquisa rápida sobre IA e aprendizado de máquina!
       aiml-intro-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -12927,7 +12938,7 @@ pt-BR:
           text: 'Já fiz atividades menores sobre ciência da computação (por exemplo:
             uma hora do código), mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Já fiz aulas ou tutoriais on-line mais longos sobre ciência da computação
+          text: Já fiz aulas ou tutoriais online mais longos sobre ciência da computação
         questions:
         - text: Quais foram as suas experiências anteriores com a ciência da computação?
       aiml-intro-pulse-survey-q1_2022:
@@ -12938,7 +12949,7 @@ pt-BR:
           text: 'Já fiz atividades menores sobre ciência da computação (por exemplo:
             uma hora do código), mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Já fiz aulas ou tutoriais on-line mais longos sobre ciência da computação
+          text: Já fiz aulas ou tutoriais online mais longos sobre ciência da computação
         questions:
         - text: Quais foram as suas experiências anteriores com a ciência da computação?
       aiml-intro-pulse-survey-q1_2023:
@@ -12949,42 +12960,51 @@ pt-BR:
           text: 'Já fiz atividades menores sobre ciência da computação (por exemplo:
             uma hora do código), mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Já fiz aulas ou tutoriais on-line mais longos sobre ciência da computação
+          text: Já fiz aulas ou tutoriais online mais longos sobre ciência da computação
         questions:
         - text: Quais foram as suas experiências anteriores com a ciência da computação?
       aiml-intro-pulse-survey-q2_2021:
         answers:
         - correct: true
-          text: Esta é a primeira vez que estou aprendendo sobre IA e Machine Learning
+          text: Esta é a primeira vez que estou aprendendo sobre IA e Aprendizado
+            de Máquina
         - correct: true
           text: 'Eu já fiz atividades menores sobre IA (por exemplo: uma hora do código),
             mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Já fiz aulas ou tutoriais on-line mais longos sobre IA e Machine Learning
+          text: Já fiz aulas ou tutoriais on-line mais longos sobre IA e Aprendizado
+            de Máquina
         questions:
-        - text: Quais foram suas experiências anteriores com a IA e o Machine Learning?
+        - text: Quais foram suas experiências anteriores com a IA e o Aprendizado
+            de Máquina?
       aiml-intro-pulse-survey-q2_2022:
         answers:
         - correct: true
-          text: Esta é a primeira vez que estou aprendendo sobre IA e Machine Learning
+          text: Esta é a primeira vez que estou aprendendo sobre IA e Aprendizado
+            de Máquina
         - correct: true
           text: 'Eu já fiz atividades menores sobre IA (por exemplo: uma hora do código),
             mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Já fiz aulas ou tutoriais on-line mais longos sobre IA e Machine Learning
+          text: Já fiz aulas ou tutoriais online mais longos sobre IA e Aprendizado
+            de Máquina
         questions:
-        - text: Quais foram suas experiências anteriores com a IA e o Machine Learning?
+        - text: Quais foram suas experiências anteriores com a IA e o Aprendizado
+            de Máquina?
       aiml-intro-pulse-survey-q2_2023:
         answers:
         - correct: true
-          text: Esta é a primeira vez que estou aprendendo sobre IA e Machine Learning
+          text: Esta é a primeira vez que estou aprendendo sobre IA e Aprendizado
+            de Máquina
         - correct: true
           text: 'Eu já fiz atividades menores sobre IA (por exemplo: uma hora do código),
             mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Já fiz aulas ou tutoriais on-line mais longos sobre IA e Machine Learning
+          text: Já fiz aulas ou tutoriais online mais longos sobre IA e Aprendizado
+            de Máquina
         questions:
-        - text: Quais foram suas experiências anteriores com a IA e o Machine Learning?
+        - text: Quais foram suas experiências anteriores com a IA e o Aprendizado
+            de Máquina?
       aiml-intro-pulse-survey-q3_2021:
         answers:
         - correct: true
@@ -13002,7 +13022,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - text: Eu entendo e posso explicar os conceitos de IA e Machine Learning
+        - text: Eu entendo e posso explicar os conceitos de IA e Aprendizado de Máquina
       aiml-intro-pulse-survey-q3_2022:
         answers:
         - correct: true
@@ -13020,7 +13040,7 @@ pt-BR:
         - correct: true
           text: Discordo Plenamente
         questions:
-        - text: Eu entendo e posso explicar os conceitos de IA e Machine Learning
+        - text: Eu entendo e posso explicar os conceitos de IA e Aprendizado de Máquina
       aiml-intro-pulse-survey-q3_2023:
         answers:
         - correct: true
@@ -13038,7 +13058,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - text: Eu entendo e posso explicar os conceitos de IA e Machine Learning
+        - text: Eu entendo e posso explicar os conceitos de IA e Aprendizado de Máquina
       aiml-intro-pulse-survey-q4_2021:
         answers:
         - correct: true
@@ -13151,11 +13171,11 @@ pt-BR:
         questions:
         - text: Gosto de ciência da computação.
       aiml-intro-pulse-survey_2021:
-        title: Pesquisa Rápida Sobre IA e Machine Learning!
+        title: Pesquisa rápida sobre IA e aprendizado de máquina!
       aiml-intro-pulse-survey_2022:
-        title: Pesquisa Rápida Sobre IA e Machine Learning!
+        title: Pesquisa rápida sobre IA e aprendizado de máquina!
       aiml-intro-pulse-survey_2023:
-        title: Pesquisa Rápida Sobre IA e Machine Learning!
+        title: Pesquisa rápida sobre IA e aprendizado de máquina!
       aiml-pulse-check-survey-1-levelgroup Ch2_2021:
         title: Pesquisa Rápida sobra Ciência da Computação!
       aiml-pulse-check-survey-1-q1 Ch2_2021:
@@ -17857,137 +17877,189 @@ pt-BR:
           para começar? ** Use <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
           target=\"_blank\">esse recurso</a> para compartilhar feedback com seu parceiro.\n\n"
       csc_ecosystemes_foodchain_info:
-        markdown: "\n##**Todos os ecossistemas têm uma cadeia alimentar _delicadamente
-          balanceada_ ## #The Cadeia alimentar do ecossistema marinho\n: >## #1.\n\n\n\n<img
+        markdown: "\n##**Todos os ecossistemas possuem uma cadeia alimentar _delicadamente
+          equilibrada_\n###A Cadeia Alimentar do Ecossistema Marinho:\n\n\n\n<img
           src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
-          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\nO sol fornece energia
-          para que a fotossíntese ocorra nas algas.\n>## #2. As algas são comidas
-          pelos peixes.\n>## #3. Os peixes são capturados e comidos por humanos, que
-          usam barcos de pesca com redes. \n\n</div>\n\n\n##** Se houver muito ou
-          pouco de um organismo na cadeia alimentar, haverá efeitos em todo o ecossistema.**\n"
+          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\n>## #1. O sol fornece
+          energia para que a fotossíntese ocorra nas algas.\n>## #2. As algas são
+          comidas pelos peixes.\n>## #3. Os peixes são capturados e comidos por humanos,
+          que usam barcos pesqueiros com redes. \n\n</div>\n\n\n##**Se houver muito
+          ou pouco de um organismo na cadeia alimentar, haverá efeitos em todo o ecossistema.**\n"
       csc_ecosystems_choice_freeplay_2023:
-        description: Cada uma dessas simulações de ecossistema precisa ser ajustada.
+        description: Cada uma dessas simulações de ecossistemas precisa ser ajustada.
           Escolha um ecossistema, execute a simulação para observar o problema e ajuste
           o código para corrigi-lo.
-        display_name: Escolha um ecossistema!
+        display_name: Escolha um Ecossistema!
       csc_ecosystems_conditionals_overview:
-        markdown: "#Cause & Effect Conditionals \n\n</div>\n\n## Em seguida, você
-          adicionará um código para verificar a quantidade de algas na água <br>\n<img
-          src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
-          \ width=50% style=\"margin-right: 10px; float: right\">\n<br> <br>\n\n-
-          Primeiro, o computador verifica se uma condição é verdadeira ou falsa.\n\n-
-          Se for verdade, ele executará os blocos internos.\n- Se for falso, não fará
-          nada.\n\n<br>\n<br>\n<br>\n\n## Se houver muitas algas, o coral fica doente\n\n<br>\n\n<img
-          src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"
-          \ width=20% style=\"margin-right: 10px; float: left\">\n<img src=\"https://images.code.org/941774921f367566bef36cb712cf2bfb-image-1681840836607.png\"
-          \ width=30% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n***\n\n\n\n##
-          Se houver pouca alga, o peixe sairá\n<img src=\"https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png\"
-          \ width=20% style=\"margin-right: 10px; float: left\">\n\n\n<img src=\"https://images.code.org/233178645539bc7966f55af47865096d-image-1681840833690.png\"
-          \ width=20% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n\n***\n\n\n\n##
-          Se houver algas suficientes, então o ecossistema é saudável\n\n<img src=\"https://images.code.org/8bb9247c35d7d167611b02764beaeff3-image-1681838011797.png\"
-          \ width=20% style=\"margin-right: 30px; float: left\">\n<img src=\"https://images.code.org/b1ed2f5c135f9637fd7a9c5778db2b0c-image-1681840830929.png\"
-          \ width=30% style=\"margin-left: 10px;float: left\">\n<br>\n<br>\n<br>\n<br>\n\n"
+        markdown: |+
+          # Condicionais de Causa & Efeito
+
+          </div>
+
+          ## Em seguida, você adicionará um código para verificar a quantidade de algas na água <br>
+          <img src="https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg"  width=50% style="margin-right: 10px; float: right">
+          <br> <br>
+
+          - Primeiro, o computador verifica se uma condição é verdadeira ou falsa.
+
+          - Se for verdade, ele executará os blocos internos.
+          - Se for falsa, não fará nada.
+
+          <br>
+          <br>
+          <br>
+
+          ## Se houver muitas algas, o coral ficará doente
+
+          <br>
+
+          <img src="https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png"  width=20% style="margin-right: 10px; float: left">
+          <img src="https://images.code.org/941774921f367566bef36cb712cf2bfb-image-1681840836607.png"  width=30% style=" margin-right: 10px; float: left">
+
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+          ***
+
+
+
+          ## Se houver poucas algas, os peixes sairão
+          <img src="https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png"  width=20% style="margin-right: 10px; float: left">
+
+
+          <img src="https://images.code.org/233178645539bc7966f55af47865096d-image-1681840833690.png"  width=20% style=" margin-right: 10px; float: left">
+
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+
+          ***
+
+
+
+          ## Se a quantidade de algas estiver equilibrada, então o ecossistema ficará saudável
+
+          <img src="https://images.code.org/8bb9247c35d7d167611b02764beaeff3-image-1681838011797.png"  width=20% style="margin-right: 30px; float: left">
+          <img src="https://images.code.org/b1ed2f5c135f9637fd7a9c5778db2b0c-image-1681840830929.png"  width=30% style="margin-left: 10px;float: left">
+          <br>
+          <br>
+          <br>
+          <br>
+
       csc_ecosystems_matching_cfu:
         answers:
-        - text: "! [] (https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)"
-        - text: "! [] (https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
-        - text: "! [] (https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
+        - text: "![](https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)"
+        - text: "![](https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
+        - text: "![](https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
         markdown: |+
-          ## Veja as três práticas sustentáveis de pesca
+          ## Veja as três práticas de pesca sustentável
 
-          Arraste o código até a imagem correspondente.
+          Arraste o código para a imagem correspondente.
 
         questions:
-        - text: Crie uma zona de pesca para barcos! [] (https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
+        - text: Crie uma zona de pesca para os barcos ![] (https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
         - text: |-
-            Comece uma temporada de pesca e uma temporada sem pesca
-            ! [] (https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
-        - text: Estabeleça limites de pesca! [] (https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
-        title: Combine o código com a imagem
+            Comece uma temporada de pesca e uma temporada de pesca proibida
+            ![](https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
+        - text: Estabeleça Limites de Pesca ![](https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
+        title: Corresponda o código à imagem
       csc_ecosystems_matching_conditionals:
         answers:
-        - text: "! [] (https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
+        - text: "![](https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
             PM.png)"
-        - text: "! [] (https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
+        - text: "![](https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
             PM.png)"
-        - text: "! [] (https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
+        - text: "![](https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
             PM.png)"
         markdown: |
-          ## Veja os três ecossistemas
+          ## Veja os Três Ecossistemas
 
           Um ecossistema está equilibrado e os outros dois estão desequilibrados de maneiras diferentes. Arraste o código até a imagem correspondente.
         questions:
-        - text: Poucas algas fazem o peixe sair.! [] (https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
+        - text: Poucas algas fazem os peixes irem embora. ![](https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
         - text: |-
-            O excesso de algas deixa o coral doente. <br>
-            ! [] (https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
+            Muita alga deixa o coral doente. <br>
+            ![](https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
         - text: A quantidade certa de algas permite que o coral doente se cure e também
-            mantenha os peixes saudáveis.! [] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
-        title: Combine o código com a imagem
+            mantém os peixes saudáveis. ![] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
+        title: Corresponda o código à imagem
       csc_ecosystems_matching_events:
         answers:
-        - text: "! [] (https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
+        - text: "![](https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
             PM.png)"
-        - text: "! [] (https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
+        - text: "![](https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
             PM.png)"
         markdown: |+
-          Veja o que acontece quando os sprites se tocam nas duas animações. Em seguida, arraste cada imagem do código até a imagem correspondente.
+          Veja o que acontece quando os sprites tocam nas duas animações. Em seguida, arraste cada imagem do código para a imagem correspondente.
 
 
         questions:
-        - text: O barco pega o peixe.! [] (https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
-        - text: Os peixes comem as algas.! [] (https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
-        title: Combine o código com a animação
+        - text: O barco pega o peixe. ![](https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
+        - text: Os peixes comem as algas. ![](https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
+        title: Corresponda o código à animação
       csc_ecosystems_overfishing_solution2_overview:
-        markdown: "> #Sustainable Prática de pesca #2:\n>># #Create uma temporada
-          de <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
-          \ width=400 style=\"margin-right: 30px; float: left\">\npesca**Estabeleça
-          limites sobre quando as pessoas podem pescar. Quando não é temporada de
-          pesca, o ecossistema tem tempo para se recuperar.** \n<br>\n\n#Save our
-          Seas! \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
+        markdown: "> #Prática de Pesca Sustentável #2:\n>>##Crie uma Temporada de
+          Pesca <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
+          \ width=400 style=\"margin-right: 30px; float: left\">\n**Estabeleça limites
+          para quando as pessoas podem pescar. Quando não é temporada de pesca, o
+          ecossistema tem tempo para se recuperar.** \n<br>\n\n#Salve Nossos Mares!
+          \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
           width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n<img
           src=\"https://images.code.org/cbccfc42b7e1fe329ac7c9c37dfcb6b5-image-1681781296669.png\"
           width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n\n</div>\n\n###
-          A sobrepesca é um problema que pode prejudicar os ecossistemas da vida marinha
-          e as pessoas que dependem deles. É importante praticar a pesca sustentável
-          para ajudar a proteger esses ecossistemas e garantir que as populações de
-          peixes permaneçam saudáveis.\n\n\n\n<br>\n<br>\n<br>\n"
+          A pesca predatória é um problema que pode prejudicar os ecossistemas da
+          vida marinha e as pessoas que dependem deles. É importante praticar a pesca
+          sustentável para ajudar a proteger esses ecossistemas e garantir que as
+          populações de peixes permaneçam saudáveis.\n\n\n\n<br>\n<br>\n<br>\n"
       csc_ecosystems_overfishing_solution3_overview:
-        markdown: "> #Sustainable Prática de pesca #3:\n>># #Set Limites de pesca
-          <img src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
+        markdown: "> #Prática de Pesca Sustentável #3:\n>># #Defina os Limites de
+          Pesca <img src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
           \ width=300 style=\"margin-right: 30px; float: left\">\n**Os cientistas
           podem ajudar a descobrir quantos peixes podem ser capturados sem causar
-          danos ao oceano. Então, os pescadores saberão que devem pescar apenas aquela
-          quantidade de peixes.** #Save \n<br>\n<br>\n<br>\n\nour Seas! \n<img src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
+          danos ao oceano. Então, os pescadores saberão que só devem pescar uma quantidade
+          determinada peixes.** \n<br>\n<br>\n<br>\n\n#Save Nossos Mares! \n<img src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
           width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
           Trabalhando juntos, podemos ajudar a manter nossos oceanos cheios de vida
           para as próximas gerações!\n\n\n\n<br>\n<br>\n<br>\n\n"
       csc_ecosystems_overfishing_solutions_overview:
-        markdown: "#Save nossos mares! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
+        markdown: "#Save Nossos Mares! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
           width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
-          O oceano tem muitos peixes, mas às vezes as pessoas pegam muitos peixes
-          e isso pode ser ruim para o ecossistema. Nos níveis seguintes, você codificará
-          **três práticas diferentes de pesca sustentável** para ajudar a proteger
-          nossos ecossistemas oceânicos.\n\n<br>\n\n## #To leia mais sobre soluções
+          O oceano tem muitos peixes, mas às vezes as pessoas pescam peixes demais
+          e isso pode ser ruim para o ecossistema. Nos níveis a seguir, você programará
+          **três diferentes práticas de pesca sustentável** para ajudar a proteger
+          nossos ecossistemas oceânicos.\n\n<br>\n\n## #Para ler mais sobre soluções
           sustentáveis para nossos oceanos: <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
-          target=\"_blank\">Clique aqui</a>\n<br>\n<br>\n\n> #Sustainable Fishing
-          Prática #1:\n>> # #Fishing Zonas <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
-          \ width=300 style=\"margin-right: 30px; float: left\">\n**Os barcos de pesca
+          target=\"_blank\">Clique aqui</a>\n<br>\n<br>\n\n> #Práticas de Pesca Sustentável
+          #1:\n>> # #Zonas de Pesca <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
+          \ width=300 style=\"margin-right: 30px; float: left\">\n**Os barcos pesqueiros
           só podem pescar em áreas designadas. Algumas áreas estão proibidas para
-          barcos de pesca para que o ecossistema possa se recuperar.** \n<br>\n<br>\n\n\n"
+          que o ecossistema possa se recuperar.** \n<br>\n<br>\n\n\n"
       csc_ecosystems_planning:
-        markdown: "#Share Sua simulação de ecossistema!\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
-          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###** Ecologistas!
-          É hora de compartilhar sua pesquisa! **\n\n## #Explain as seguintes observações
+        markdown: "## Compartilhe a Sua Simulação de Ecossistema!\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**Ecologistas!
+          É hora de compartilhar sua pesquisa!**\n\n### Explique as seguintes observações
           que você fez:\n\n>1. Explique a cadeia alimentar em seu ecossistema e como
-          você a codificou.\n>2. Havia muito ou pouco de um organismo?\n>3. Explique
-          as modificações que você fez na simulação. \n>4. O que você notou depois
-          de alterar os valores?\n</div>\n\n<div style=\"background-color: #a6e3e8;
-          border-radius: 10px; color: #000000; width: 95%; padding: 0.5px 20px 1px
-          20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right:
+          você a programou.\n>2. Havia muito ou muito pouco de um organismo?\n>3.
+          Explique as modificações que você fez na simulação. \n>4. O que você notou
+          depois de alterar os valores?\n</div>\n\n<div style=\"background-color:
+          #a6e3e8; border-radius: 10px; color: #000000; width: 95%; padding: 0.5px
+          20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right:
           10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; \">\n\n###**Pronto
-          para mais codificação? ** \nExperimente o [Express Course] do code.org (https://studio.code.org/s/express-2022)
-          para aprender mais ciência da computação no seu próprio ritmo.   \n<br>\n</p></div>\n"
+          para mais programação?** \nExperimente o [Curso Expresso] da Code.org (https://studio.code.org/s/express-2022)
+          para aprender mais sobre ciência da computação no seu próprio ritmo.   \n<br>\n</p></div>\n"
       csc_mappinglandmarks_markdown_lesson_2:
         markdown: |+
           # #Plan Mapa de seus pontos turísticos
@@ -19276,7 +19348,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - {}
+        - text: Quero ter mais aulas de ciência da computação no futuro
       csd-post-survey-unit1-preamble:
         content1: descrição aqui
       csd-post-survey-unit2-preamble:
@@ -19309,115 +19381,115 @@ pt-BR:
       csd-pre-survey-levelgroup_21_22_2023:
         title: Pesquisa pré-curso para estudantes
       csd-pulse-check-survey-1-levelgroup U1Ch2:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U1Ch2_2018:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U1Ch2_2021:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U2Ch1:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U2Ch1_2018:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2021:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2022:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2023:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U2Ch2:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U2Ch2_2018:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2021:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U3Ch1:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U3Ch1_2018:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2021:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2022:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2023:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U3Ch2:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U3Ch2_2018:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2021:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U4Ch1:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U4Ch1_2018:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U4Ch1_2018_2019:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U4Ch1_2021:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U4Ch1_2022:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U4Ch1_2023:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U4Ch2:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U4Ch2_2018:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U4Ch2_2021:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U5Ch1:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U5Ch1_2018:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U5Ch1_2021:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U5Ch1_2022:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U5Ch1_2023:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U5Ch2:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U5Ch2_2018:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U5Ch2_2021:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U6Ch1:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U6Ch1_2018:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U6Ch1_2021:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_2023a_2023:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_2222:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_mb2022:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U6Ch2:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U6Ch2_2018:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-levelgroup U6Ch2_2021:
-        title: Pesquisa rápida do CS Discoveries!
+        title: Pesquisa Rápida sobre o Descobertas da CC!
       csd-pulse-check-survey-1-q1 U1Ch2:
         answers:
         - correct: true
@@ -24010,31 +24082,31 @@ pt-BR:
         - text: Quero fazer mais cursos de ciência da computação no futuro.
       csd-pulse-check-survey-preamble:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2018:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2018_2019:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2019:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_2021:
         markdown: |
@@ -24048,21 +24120,21 @@ pt-BR:
           ### Por favor, reserve um momento para responder estas **cinco questões**.
 
           <small>
-          <em>Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anonimas</strong>. O seu professor pode ver as respostas de todos da classe, mas sem nomes associados a elas.
+          <em>Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. O seu professor pode ver as respostas de todos da classe, mas sem nomes associados a elas.
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_2023:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_copy1_2023:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_copy2_2023:
         markdown: |
@@ -24073,38 +24145,38 @@ pt-BR:
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_copy2_csd1_2023:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_copy2_csd2_2023:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_copy2_csd3_2023:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_copy2_csd4_2023:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_copy2_csd5_2023:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_copy2_csd6_2023:
         markdown: |
@@ -24129,17 +24201,17 @@ pt-BR:
           </small>
       csd-pulse-check-survey-preamble_2022:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2023:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2023a_2023:
         markdown: |
@@ -24157,10 +24229,10 @@ pt-BR:
           </small>
       csd-pulse-check-survey-preamble_copy1_2023:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_mb2022:
         markdown: |
@@ -27883,61 +27955,56 @@ pt-BR:
         - correct: true
           text: Esta é a primeira vez que estou aprendendo sobre ciência da computação
         - correct: true
-          text: 'Já fiz atividades menores de ciência da computação (por exemplo:
-            uma hora de código), mas esta é minha primeira aula mais longa'
+          text: 'Já fiz atividades menores sobre ciência da computação (por exemplo:
+            uma hora do código), mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Já fiz aulas ou fiz tutoriais on-line mais longos sobre ciência da
-            computação
+          text: Já fiz aulas ou tutoriais online mais longos sobre ciência da computação
         questions:
-        - text: Quais experiências anteriores você teve com a ciência da computação?
+        - text: Quais foram as suas experiências anteriores com a ciência da computação?
       intro-pulse-survey-q1_csd2_2023:
         answers:
         - correct: true
           text: Esta é a primeira vez que estou aprendendo sobre ciência da computação
         - correct: true
-          text: 'Já fiz atividades menores de ciência da computação (por exemplo:
-            uma hora de código), mas esta é minha primeira aula mais longa'
+          text: 'Já fiz atividades menores sobre ciência da computação (por exemplo:
+            uma hora do código), mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Já fiz aulas ou fiz tutoriais on-line mais longos sobre ciência da
-            computação
+          text: Já fiz aulas ou tutoriais online mais longos sobre ciência da computação
         questions:
-        - text: Quais experiências anteriores você teve com a ciência da computação?
+        - text: Quais foram as suas experiências anteriores com a ciência da computação?
       intro-pulse-survey-q1_csd3_2023:
         answers:
         - correct: true
           text: Esta é a primeira vez que estou aprendendo sobre ciência da computação
         - correct: true
-          text: 'Já fiz atividades menores de ciência da computação (por exemplo:
-            uma hora de código), mas esta é minha primeira aula mais longa'
+          text: 'Já fiz atividades menores sobre ciência da computação (por exemplo:
+            uma hora do código), mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Já fiz aulas ou fiz tutoriais on-line mais longos sobre ciência da
-            computação
+          text: Já fiz aulas ou tutoriais online mais longos sobre ciência da computação
         questions:
-        - text: Quais experiências anteriores você teve com a ciência da computação?
+        - text: Quais foram as suas experiências anteriores com a ciência da computação?
       intro-pulse-survey-q1_csd4_2023:
         answers:
         - correct: true
           text: Esta é a primeira vez que estou aprendendo sobre ciência da computação
         - correct: true
-          text: 'Já fiz atividades menores de ciência da computação (por exemplo:
-            uma hora de código), mas esta é minha primeira aula mais longa'
+          text: 'Já fiz atividades menores sobre ciência da computação (por exemplo:
+            uma hora do código), mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Já fiz aulas ou fiz tutoriais on-line mais longos sobre ciência da
-            computação
+          text: Já fiz aulas ou tutoriais online mais longos sobre ciência da computação
         questions:
-        - text: Quais experiências anteriores você teve com a ciência da computação?
+        - text: Quais foram as suas experiências anteriores com a ciência da computação?
       intro-pulse-survey-q1_csd5_2023:
         answers:
         - correct: true
           text: Esta é a primeira vez que estou aprendendo sobre ciência da computação
         - correct: true
-          text: 'Já fiz atividades menores de ciência da computação (por exemplo:
-            uma hora de código), mas esta é minha primeira aula mais longa'
+          text: 'Já fiz atividades menores sobre ciência da computação (por exemplo:
+            uma hora do código), mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Já fiz aulas ou fiz tutoriais on-line mais longos sobre ciência da
-            computação
+          text: Já fiz aulas ou tutoriais online mais longos sobre ciência da computação
         questions:
-        - text: Quais experiências anteriores você teve com a ciência da computação?
+        - text: Quais foram as suas experiências anteriores com a ciência da computação?
       intro-pulse-survey-q1_csd6_2023:
         answers:
         - correct: true
@@ -27946,7 +28013,7 @@ pt-BR:
           text: 'Já fiz atividades menores sobre ciência da computação (por exemplo:
             uma hora do código), mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Já fiz aulas ou tutoriais on-line mais longos sobre ciência da computação
+          text: Já fiz aulas ou tutoriais online mais longos sobre ciência da computação
         questions:
         - text: Quais foram as suas experiências anteriores com a ciência da computação?
       intro-pulse-survey-q2_csd1_2023:
@@ -27967,10 +28034,15 @@ pt-BR:
       intro-pulse-survey-q2_csd2_2023:
         answers:
         - correct: true
+          text: Esta é a primeira vez que estou aprendendo sobre desenvolvimento web
         - correct: true
+          text: 'Eu já fiz atividades menores de desenvolvimento web (por exemplo:
+            uma hora de programação), mas esta é minha primeira aula mais longa'
         - correct: true
+          text: Já tive aulas ou fiz tutoriais on-line mais longos sobre desenvolvimento
+            web
         questions:
-        - {}
+        - text: Quais experiências anteriores você teve com desenvolvimento web?
       intro-pulse-survey-q2_csd3_2023:
         answers:
         - correct: true
@@ -28016,7 +28088,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - {}
+        - text: Eu tenho a capacidade de aprender ciência da computação
       intro-pulse-survey-q3_csd2_2023:
         answers:
         - correct: true
@@ -28034,7 +28106,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - {}
+        - text: Eu tenho a capacidade de aprender ciência da computação
       intro-pulse-survey-q3_csd3_2023:
         answers:
         - correct: true
@@ -28052,7 +28124,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - {}
+        - text: Eu tenho a capacidade de aprender ciência da computação
       intro-pulse-survey-q3_csd4_2023:
         answers:
         - correct: true
@@ -28070,7 +28142,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - {}
+        - text: Eu tenho a capacidade de aprender ciência da computação
       intro-pulse-survey-q3_csd5_2023:
         answers:
         - correct: true
@@ -28088,7 +28160,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - {}
+        - text: Eu tenho a capacidade de aprender ciência da computação
       intro-pulse-survey-q3_csd6_2023:
         answers:
         - correct: true
@@ -28106,7 +28178,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - {}
+        - text: Eu tenho a capacidade de aprender ciência da computação
       intro-pulse-survey-q4_csd1_2023:
         answers:
         - correct: true
@@ -28124,7 +28196,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - {}
+        - text: Quero ter mais aulas de ciência da computação no futuro
       intro-pulse-survey-q4_csd2_2023:
         answers:
         - correct: true
@@ -28142,7 +28214,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - {}
+        - text: Quero ter mais aulas de ciência da computação no futuro
       intro-pulse-survey-q4_csd3_2023:
         answers:
         - correct: true
@@ -28160,7 +28232,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - {}
+        - text: Quero ter mais aulas de ciência da computação no futuro
       intro-pulse-survey-q4_csd4_2023:
         answers:
         - correct: true
@@ -28178,7 +28250,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - {}
+        - text: Quero ter mais aulas de ciência da computação no futuro
       intro-pulse-survey-q4_csd5_2023:
         answers:
         - correct: true
@@ -28196,7 +28268,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - {}
+        - text: Quero ter mais aulas de ciência da computação no futuro
       intro-pulse-survey-q4_csd6_2023:
         answers:
         - correct: true
@@ -28214,7 +28286,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - {}
+        - text: Quero ter mais aulas de ciência da computação no futuro
       intro-pulse-survey-q5_csd1_2023:
         answers:
         - correct: true
@@ -28325,6 +28397,8 @@ pt-BR:
         - text: Gosto de ciência da computação.
       intro-pulse-survey_csd1_2023:
         title: Pesquisa rápida de resolução de problemas e computação!
+      intro-pulse-survey_csd2_2023:
+        title: Pesquisa rápida de desenvolvimento web!
       made-choices-about-assignments:
         answers:
         - correct: true
@@ -28344,7 +28418,7 @@ pt-BR:
       ml-club app-choice parent_2022:
         display_name: Personalize seu aplicativo
         teacher_markdown: |
-          **Apoioando os Alunos:** Esses níveis são semelhantes às personalizações que os alunos concluíram nas lições anteriores. Se os alunos ficarem travados, considere encaminhá-los para estas lições anteriores:
+          **Apoiando os Alunos:** Esses níveis são semelhantes às personalizações que os alunos concluíram nas lições anteriores. Se os alunos ficarem travados, considere encaminhá-los para estas lições anteriores:
           - Adicionando várias telas para cada recurso: [Lição 13 - Personalizando Aplicativos](../../13/levels/2)
           - Adicionando várias telas para a predição resultante: [Lição 10 - Cartões Modelo no App Lab](../../10/levels/5)
       ml-club app-choice parent_2023:
@@ -28528,7 +28602,7 @@ pt-BR:
         markdown: |+
           # Cartão Modelo - Recomendador de Pets
 
-          **Com um Coelga:** Como você poderia diferenciar recursos categóricos e recursos numéricos no cartão modelo?
+          **Com um Colega:** Como você poderia diferenciar recursos categóricos e recursos numéricos no cartão modelo?
 
           <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
 
@@ -28538,7 +28612,7 @@ pt-BR:
         markdown: |+
           # Cartão Modelo - Recomendador de Pets
 
-          **Com um Coelga:** Como você poderia diferenciar recursos categóricos e recursos numéricos no cartão modelo?
+          **Com um Colega:** Como você poderia diferenciar recursos categóricos e recursos numéricos no cartão modelo?
 
           <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
 
@@ -28548,7 +28622,7 @@ pt-BR:
         markdown: |+
           # Cartão Modelo - Recomendador de Pets
 
-          **Com um Coelga:** Como você poderia diferenciar recursos categóricos e recursos numéricos no cartão modelo?
+          **Com um Colega:** Como você poderia diferenciar recursos categóricos e recursos numéricos no cartão modelo?
 
           <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
 

@@ -70,16 +70,17 @@ theme: responsive
 
 सर्व Code.org सामग्रीच्या उत्तम अनुभवासाठी, आम्ही शिफारस करतो की तुम्ही तुमच्या शाळेचा किंवा जिल्ह्याच्या IT विभागाशी सल्लामसलत करून पुढील साइट्सना परवानगी दिली आहे आणि ब्लॉक केलेली नाही याची खात्री करा.
 
-| प्राधान्य                                                                              | यूआरएल                                                                                                     |
-| -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **आवश्यक**                                                                             | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **वैकल्पिक**                                                                           | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **YouTube द्वारे होस्ट केलेल्या व्हिडिओंमध्ये प्रवेश करण्यासाठी (प्रगत गोपनीयता मोड)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **Code.org द्वारे होस्ट केलेले व्हिडिओ वापरण्यासाठी**                                  | `https://videos.code.org`                                                                                  |
-| **इंटरनेट सिम्युलेटर वापरण्यासाठी**                                                    | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **वेब लॅब वापरण्यासाठी**                                                               | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **गुगल क्लासरूम शेअर बटण वापरण्यासाठी**                                                | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**                                                            | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| प्राधान्य                                                                                           | यूआरएल                                                                                                     |
+| --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **आवश्यक**                                                                                          | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **To ensure CAPTCHA systems can distinguish your usage from automated fraudulent (“bot”) activity** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **वैकल्पिक**                                                                                        | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **YouTube द्वारे होस्ट केलेल्या व्हिडिओंमध्ये प्रवेश करण्यासाठी (प्रगत गोपनीयता मोड)**              | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Code.org द्वारे होस्ट केलेले व्हिडिओ वापरण्यासाठी**                                               | `https://videos.code.org`                                                                                  |
+| **इंटरनेट सिम्युलेटर वापरण्यासाठी**                                                                 | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **वेब लॅब वापरण्यासाठी**                                                                            | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **गुगल क्लासरूम शेअर बटण वापरण्यासाठी**                                                             | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets**                                                                         | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
 ## मोबाइल आणि टॅब्लेट सपोर्ट तपशील
 
@@ -104,7 +105,7 @@ Code.org आणि आमच्या [ ऑनलाइन लर्निंग
 
 
 <!--
-The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
 .md.erb without breaking i18n sync, this file should include that partial instead.
 -->
 <figure style="width:100%; height: 100%; margin: 0 auto;">

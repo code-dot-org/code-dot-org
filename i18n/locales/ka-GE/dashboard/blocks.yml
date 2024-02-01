@@ -498,6 +498,11 @@ ka:
         options:
           INPUT1:
             '1': ლიმონის წვენი
+      DansBlocks_testShowVariable:
+        options:
+          COLOR:
+            '"blue"': ლურჯი
+            '"red"': წითელი
       FunctionBlocks_communicate:
         text: კომუნიკაცია {VAR1} {SPRITE1COSTUME}-თან
       FunctionBlocks_makeManipulative2:

@@ -18,7 +18,7 @@
 }
 
 .solid-block-subheader {
-  color: #7665a0;
+  color: var(--brand_secondary_default);
   font-size: 18px;
   font-family: var(--main-font);
   font-weight: var(--bold-font-weight);
@@ -391,21 +391,6 @@
   line-height: 1em;
 }
 
-/* Share buttons */
-.share-buttons {
-  margin: 0;
-}
-.share-buttons button {
-  width: auto;
-  height: auto;
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
-  margin: 10px 10px 0 0;
-}
-.share-buttons button i {
-  margin-right: .5em;
-}
-
 #map .mapboxgl-popup-close-button {
   margin-top: 0px;
   background-color: var(--brand_secondary_default);
@@ -651,29 +636,6 @@
 
 .wideletternames {
   margin-left:5%;
-}
-
-.user_menu, .create_menu { /* copied from dashboard's .header-button */
-  color: var(--neutral_white);
-  display: inline-block;
-  background-color: #ffa400;
-  background-color: transparent;
-  border-radius: 5px;
-  padding: 7px 14px;
-  font-size: 14px;
-  line-height: 20px;
-  box-sizing: border-box;
-  float: left;
-  cursor: pointer;
-  margin-top: -6px;
-  a:hover {
-    text-decoration: none;
-    background-color: #ffa400;
-  }
-}
-
-.user_menu {
-  margin-left: 6px;
 }
 
 @media screen and (min-width: 970px) {

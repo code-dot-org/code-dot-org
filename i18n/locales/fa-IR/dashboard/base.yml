@@ -64,6 +64,7 @@ fa:
           future: نمی‌تواند در آینده باشد
         user_type: 'نوع حساب کاربری'
         us_state: 'وضعیت'
+        ai_rubrics_disabled: 'غیرفعال کردن ویژگی سرفصل هوش مصنوعی'
   beta: "بتا"
   hello: "سلام دنیا"
   welcome_back: "%{name}، خوش آمدید"

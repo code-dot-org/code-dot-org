@@ -3,35 +3,7 @@
     "data": {
       "marketing_announcements": {
         "banners": {
-          "ai-2020": {
-            "buttonText": "გაიგეთ მეტი",
-            "title": "გამოიკვლიეთ ხელოვნური ინტელექტი და მანქანათმცოდნეობა"
-          },
-          "ai-launch-2023": {
-            "buttonText": "გაიგეთ მეტი"
-          },
-          "ai-pl-launch-2023": {
-            "buttonText": "გაიგეთ მეტი"
-          },
-          "back-to-school-2021": {
-            "buttonText": "გაიგეთ მეტი"
-          },
-          "codebytes-2020": {
-            "buttonText": "გაიგეთ მეტი"
-          },
-          "coldplay": {
-            "buttonText": "სცადეთ"
-          },
-          "congrats-certificate-share": {
-            "buttonText": "დაწყება"
-          },
-          "csjourneys": {
-            "buttonText": "გაიგეთ მეტი"
-          },
-          "csjourneys-22": {
-            "buttonText": "გაიგეთ მეტი"
-          },
-          "csleadersprize": {
+          "co-teacher": {
             "buttonText": "გაიგეთ მეტი"
           },
           "hoc-2023": {
@@ -40,26 +12,8 @@
           "hoc-2023-dance-ai": {
             "buttonText": "გაიგეთ მეტი"
           },
-          "hoc-more": {
-            "body": "კოდის ვებ-გვერდს აქვს 500-ზე მეტი კომპიუტერული მეცნიერების საქმიანობა ყველა ასაკისა და გამოცდილების დონეზე, რომელიც შემუშავებულია კოდი.org და პარტნიორების მიერ."
-          },
-          "home-learning-2020": {
-            "buttonText": "პროექტების იდეების ნახვა"
-          },
           "superhero": {
             "buttonText": "გაიგეთ მეტი"
-          },
-          "teacher-apps-closing-2021": {
-            "buttonText": "შემოგვიერთდით"
-          },
-          "teacher-apps-nominate-2020": {
-            "buttonText": "დაასახელეთ მასწავლებელი"
-          },
-          "teacher-apps-open-2021": {
-            "buttonText": "შემოგვიერთდით"
-          },
-          "teacher-apps-stillon-2020": {
-            "buttonText": "შემოგვიერთდით"
           }
         }
       }

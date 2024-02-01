@@ -3,7 +3,7 @@ import {SongMetadata} from '../types';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import * as danceMsg from '../locale';
 import {ASSET_BASE} from '../constants';
-import {LabMetricsReporter} from '@cdo/apps/lab2/Lab2MetricsReporter';
+import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import utils from '../utils';
 
 // TODO: The Dance Party repo currently does not export types, so we need

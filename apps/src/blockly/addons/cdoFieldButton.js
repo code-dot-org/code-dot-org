@@ -47,6 +47,8 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
     if (this.icon) {
       this.icon.style.fill =
         this.colorOverrides?.icon || this.getSourceBlock().style.colourPrimary;
+      // Make the icon centered on Safari.
+      this.icon.setAttribute('dominant-baseline', 'central');
       this.textElement_.appendChild(this.icon);
     }
   }

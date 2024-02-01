@@ -111,6 +111,9 @@ ta:
   social_hoc2019_dance: கேட்டி பெர்ரி, ஜோனாஸ் பிரதர்ஸ், லில் நாஸ் எக்ஸ், பேனிக் அட்
     டிஸ்கோ, இன்னும் பலர் தோன்றுகிறார்கள்!
   social_hoc_anybody: 'குறியீடு நேரம்: யார் வேண்டுமானாலும் கற்றுக்கொள்ளலாம்'
+  hoc_interest_form_header: Get notified when Hour of Code registration opens!
+  hoc_interest_form_desc: Be the first to know about this year's Hour of Code, including
+    new activities and when registrations for Hour of Code events begin.
   oceans_landing_title: பெருங்கடல்களுக்கான AI
   oceans_landing_description: இயந்திர கற்றல் மற்றும் AI இன் நெறிமுறை பயன்பாடு பற்றி
     அறிக.
@@ -262,6 +265,16 @@ ta:
     வேலைவாய்ப்புகளைத் தொடர குறைந்த வருமானம் மற்றும் பிற பின்தங்கிய குழந்தைகள் மற்றும்
     இளைஞர்களுக்கு ஊக்குவிக்கும், கல்வி மற்றும் பயிற்சி அளிக்கும் ஒரு விரிவான குழந்தை-க்கு-தொழில்
     திட்டமாகும். [எங்கள் கூட்டாண்மை பற்றி அறிக] (%{afe_url}).
+  donors_block_microsoft_infosys: We thank Microsoft and Infosys Foundation USA for
+    supporting our vision and mission to ensure every child has the opportunity to
+    learn computer science and the skills to succeed in the 21st century.
+  microsoft_logo_alt: Microsoft logo
+  infosys_logo_alt: Infosys Foundation USA logo
+  amazon_logo_alt: Amazon logo
+  google_logo_alt: Google logo
+  coinbase_logo_alt: Coinbase logo
+  ballmer_group_logo_alt: Ballmer Group logo
+  vista_equity_partners_logo_alt: Vista Equity Partners logo
   grade_level: தர நிலை
   grade_level_label_elementary: 'தொடக்கப்பள்ளி '
   grade_level_label_middle: நடுநிலை பள்ளி
@@ -275,6 +288,12 @@ ta:
   curricula_title_high: உயர்நிலைப் பள்ளி ஊராட்சி
   curricula_desc_high: கணினி விஞ்ஞானத்தில் ஆழமாக தோண்டுவதற்கு உங்களையும் உங்கள் உயர்நிலைப்
     பள்ளி மாணவர்களையும் அழைக்கும் கட்டாய படிப்புகள் மற்றும் நடவடிக்கைகளைத் தேடவும்.
+  facilitator_led_pl_heading: Facilitator-Led Professional Learning Workshops
+  facilitator_led_pl_desc: Learn about our professional learning workshops for elementary,
+    middle, and high school teachers.
+  self_paced_pl_heading: Self-Paced Professional Learning
+  self_paced_pl_desc: Professional learning at your own pace. Explore our online,
+    self-paced professional learning modules.
   for_administrators_heading: நிர்வாகிகளுக்கு
   for_administrators_desc: ஏற்கனவே கணினி அறிவியல் தங்கள் பாடத்திட்டத்தில் இணைத்துக்
     கொண்ட ஆயிரக்கணக்கான பள்ளிகளில் சேர.
@@ -333,6 +352,7 @@ ta:
   call_to_action_start_part_02: பகுதி இரண்டைத் தொடங்கவும்
   call_to_action_start_unplugged_activity: இணைக்கப்படாத செயல்பாட்டைத் தொடங்கவும்
   call_to_action_view_promo_resources: விளம்பர வளங்களைக் காண்க
+  call_to_action_view_teach_with_cdo: Start teaching with Code.org
   call_to_action_get_involved: Get involved
   call_to_action_learn_more: மேலும் அறிக
   call_to_action_watch_now: இப்பொழுது பார்
@@ -422,6 +442,7 @@ ta:
   call_to_action_open_positions: திறந்த நிலைகளைக் காண்க
   call_to_action_explore_roles: திறந்த வேடங்களை ஆராய்ந்து
   call_to_action_get_guide: வழிகாட்டி கிடைக்கும்
+  call_to_action_donate: Donate
   call_to_action_donate_to_cdo: Code.org க்கு நன்கொடை
   call_to_action_start_fundraiser: நிதிதிரட்டல் தொடங்கவும்
   call_to_action_view_donation_policy: நன்கொடை கொள்கை காண்க
@@ -444,6 +465,7 @@ ta:
   call_to_action_learn_about_ai: AI பற்றி அறிக
   call_to_action_learn_more_about_ai: Learn more about AI
   call_to_action_get_started: தொடங்கவும்
+  call_to_action_view_our_supporters: View our supporters
   call_to_action_explore_self_paced_pl: Explore self-paced professional learning
   call_to_action_applications_get_notified: Get notified when applications open
   call_to_action_applications_notify_me: Notify me when I can apply
@@ -453,6 +475,9 @@ ta:
   call_to_action_for_intl_educators: For international educators
   call_to_action_learn_more_program_region: Learn more about the program in your region
   call_to_action_visit_support_center: Visit our support center
+  call_to_action_download_video: Download video
+  call_to_action_explore_learning_ages_5_11: Explore learning for ages 5-11
+  call_to_action_explore_learning_ages_11_plus: Explore learning for ages 11+
   aria_label_call_to_action_hoc_how_to_educators: கல்வியாளர்களுக்கான வழிகாட்டியைக்
     காண்க
   aria_label_call_to_action_hoc_how_to_companies: நிறுவனங்களுக்கான வழிகாட்டி எப்படி
@@ -475,6 +500,10 @@ ta:
   aria_label_call_to_action_dance_unplugged: டான்ஸ் பார்ட்டி அன்பிளக் செய்யப்பட்ட
     செயல்பாட்டைத் தொடங்க
   aria_label_call_to_action_afe: அமேசான் எதிர்கால பொறியாளர் பற்றி மேலும் அறிக
+  aria_label_call_to_action_facilitator_pl: Learn more about facilitator-led professional
+    learning workshops
+  aria_label_call_to_action_self_paced_pl: சுய வேகமான தொழில்முறை கற்றல் பற்றி மேலும்
+    அறிக
   aria_label_call_to_action_teaching_csf: கற்பித்தல் கணினி அறிவியல் அடிப்படைகள் தொழில்முறை
     கற்றல் திட்டத்தைத் தொடங்கவும்
   aria_label_call_to_action_teaching_csd: 'கற்பித்தல் கணினி அறிவியல் கண்டுபிடிப்புகள்
@@ -593,6 +622,9 @@ ta:
     செய்யவும்
   aria_label_call_to_action_view_more_cs_resources: மேலும் கணினி அறிவியல் வளங்களை
     அணுகவும்
+  aria_label_call_to_action_farsi_donate: Donate to support the Code.org in Farsi
+    campaign
+  aria_label_call_to_action_farsi_learn_more: Learn more about Code.org in Farsi
   aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
     professional learning
   aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
@@ -603,7 +635,19 @@ ta:
   aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
   aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
     A
+  aria_label_call_to_action_afe_alexa: Learn more about Alexa for Astronauts
+  aria_label_call_to_action_afe_cloud_tour: Learn more about the Uncovering Cloud
+    Computer Career Tour
+  aria_label_call_to_action_afe_voice: Learn more about Amazon's Your Voice is Power
+    competition
+  aria_label_call_to_action_afe_scholarships: Learn more about Amazon's scholarships
+    and internships
+  aria_label_call_to_action_afe_robotics: Learn more about the Robotics Fulfillment
+    Center Tour
+  aria_label_call_to_action_afe_data_tour: Learn more about the Keeping Data Safe
+    Career Tour
   video_title_professional_learning_program: 'Code.org இன் தொழில்முறை கற்றல் திட்டம் '
+  video_title_young_women_in_computer_science: கணினி அறிவியலில் இளம் பெண்கள்
   curriculum_name_csf: கணினி அறிவியல் அடிப்படைகள்
   curriculum_name_csf_02: ஏதேனும் CS அடிப்படைகள் (படிப்பு A-F)
   curriculum_name_csf_a_f: 'CS அடிப்படைகள் A-F '
@@ -728,6 +772,8 @@ ta:
     வழங்குகிறது. '
   curriculum_desc_csa_ai_short: இந்த பிந்தைய AP® CSA தொகுதி தொழில்முறை மென்பொருள்
     மேம்பாட்டுக் கருவிகளைக் கைகொண்டு அனுபவம் உயர்நிலை பள்ளி மாணவர்கள் வழங்குகிறது.
+  curriculum_desc_catalog: Explore our robust catalog of curriculum offerings for
+    all ages and levels — completely free.
   collection_hardware: வன்பொருள் கவனம்
   collection_hardware_desc: பிரச்சினைகளை தீர்க்க தரவு மற்றும் உடல் சாதனங்களை பயன்படுத்த
     மாணவர்கள் அதிகாரம்.
@@ -775,6 +821,7 @@ ta:
   module_label_video_series: வீடியோ தொடர்
   module_label_self_paced: சுயவேக தொகுதி
   module_label_event_or_lessons: Event or lessons
+  module_label_or: Or
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: '7-18 '
@@ -789,6 +836,7 @@ ta:
   module_grade_3_12: 3-12
   module_grade_5_12: ۵-۱۲
   module_grade_6_12: 6-12
+  module_grade_6_12_plus: 6-12+
   module_grade_6_10: 6-10
   module_grade_7_12: ۷-۱۲
   module_grade_9_12: 9-12
@@ -881,6 +929,8 @@ ta:
   values_05: நாங்கள் நேர்மையுடனும் வெளிப்படைத்தன்மையுடனும் செயல்படுகிறோம்
   values_06: பரந்த தாக்கத்திற்கு பெரிதாக சிந்தித்து முழுமையாக செயல்பட வேண்டும் என்று
     நாங்கள் நம்புகிறோம்
+  heading_anyone_can_learn: Anyone can learn Computer Science
+  heading_find_right_opportunity: Find the right learning opportunity for you!
   heading_professional_learning: உங்கள் தேவைகளை பூர்த்தி செய்யும் தொழில்முறை கற்றல்
   heading_additional_resources: கூடுதல் ஆதாரங்கள்
   heading_support_and_questions: ஆதரவு மற்றும் கேள்விகள்
@@ -917,6 +967,20 @@ ta:
   heading_acceptance: Acceptance
   heading_enroll: Enroll
   heading_have_questions: Have questions?
+  heading_resources_for_educators: Code.org resources for educators
+  student_courses_top_desc: Start coding today. Our courses and activities are free!
+    It's easier—and more fun—than you think.
+  student_courses_explore_desc: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more for all ages and
+    experience levels!
+  student_courses_k_5_desc: Start with an Hour of Code, then discover more block-based
+    coding in our Express Courses. Get creative in our fun programming environment,
+    Sprite Lab, or watch cool videos to learn more about key topics. There's so much
+    to explore!
+  student_courses_6_12_desc: Try an Hour of Code, or check out our self-paced courses
+    on creating apps, games, and animations. Do your own thing in our Web Lab, Game
+    Lab, and App Lab programming environments. Plus, learn more about AI, careers
+    in programming, scholarships, and more.
   cs_ambassador_subhead: உங்கள் பள்ளியில் கணினி அறிவியலை எடுக்க அதிகமான இளம் பெண்களை
     ஊக்குவிப்பதில் ஆர்வமாக நீங்கள் ஒரு உயர்நிலைப் பள்ளி மாணவராக இருந்தால், எங்களுக்கு
     நீங்கள் தேவை!
@@ -928,6 +992,9 @@ ta:
   cs_ambassador_application_date: விண்ணப்பங்கள் நவம்பர் 8, 2023 வரை திறக்கப்படுகின்றன
   cs_ambassador_application_subhead: உங்கள் விண்ணப்பத்தை இன்று சமர்ப்பிக்க ஆசிரியருடன்
     இணைந்து
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: கேள்விகள்? தயவுசெய்து தொடர்பு கொள்ளவும் [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: சிஎஸ் தூதர்கள் என்ன செய்கிறார்கள்?
@@ -1084,6 +1151,13 @@ ta:
   dance_afe_disclaimer: இந்த டுடோரியலில் இசை பயன்படுத்தப்படும் கலைஞர்கள் Code.org
     க்கு தங்கள் இசையைப் பயன்படுத்த உரிமம் வழங்குவதன் ஒரு பகுதியாக அமேசானை ஸ்பான்சர்
     செய்யவோ அங்கீகரிக்கவோ அங்கீகரிக்க
+  dance_ai_behind_the_scenes: 'How does Dance Party: AI Edition work behind the scenes?'
+  dance_ai_behind_the_scenes_markdown: |-
+    In **Dance Party: AI Edition**, three selected emojis are used to generate an output effect using AI. An output effect consists of values for background effect, background color palette, and foreground effect.
+
+    Each emoji and each output value has a descriptive phrase associated with it. By comparing the similarity of an input emoji's phrase with an output value's phrase, we are able to use AI to recommend the best match.
+
+    To compute the similarity, each phrase is assigned an embedding. An [embedding](https://en.wikipedia.org/wiki/Word_embedding) is a list of numbers that captures the meaning of a phrase, and the embeddings used in **Dance Party: AI Edition** are about 1,500 numbers long. Similarity is measured by the "distance" between the phrases' embeddings.  In **Dance Party: AI Edition**, we use embeddings generated by the [Amazon Bedrock Titan model](https://aws.amazon.com/bedrock/titan/) and calculate similarity by computing the cosine distance between embeddings.
   minecraft_hero_heading: Minecraft Hour of Code பயிற்சிகள்
   minecraft_activities_desc: அனைத்து பயிற்சிகளும் பல மொழிகளில் கிடைக்கின்றன மற்றும்
     நவீன உலாவிகள் மற்றும் டேப்லெட்டுகளுடன் இணக்க இணையம் இல்லையா? [Minecraft Adventurer
@@ -1126,6 +1200,63 @@ ta:
   minecraft_resources_desc_02: 200 மணிநேர கணினி அறிவியல் பாடத்திட்டத்துடன், பிளாக்
     முதல் பைதான் வரை, தொழில்முறை மேம்பாட்டால் ஆதரிக்கப்படும் K-12 கற்பவர்களுக்கு STEM
     ஆர்வத்தை ஊக்குவிக்கவும்.
+  afe_page_heading: Free resources from Amazon Future Engineer
+  afe_page_top_desc: 'Enhance your teaching experience with Code.org in partnership
+    with [Amazon Future Engineer](%{afe_url}). Eligible educators from underserved
+    schools can access these benefits at no cost:'
+  afe_page_top_list_01: "**Professional Growth:** Complimentary CSTA+ membership,
+    with expert-led webinars and resources."
+  afe_page_top_list_02: "**Opportunities:** Chance to join a paid-fellowship experience
+    to increase access in computer science working alongside industry experts at Amazon!"
+  afe_page_top_list_03: "**Resources:** Inspiration kits, including posters and stickers,
+    to engage students in computer science."
+  afe_page_top_list_04: "**Innovation:** Exclusive access to pilot programs that explore
+    cutting-edge career and computer science topics."
+  afe_page_eligibility_heading: School Eligibility Requirements*
+  afe_page_eligibility_list_01: Title 1 and/or > 40% Free/Reduced Lunch (FRL) student
+    enrollment
+  afe_page_eligibility_list_02: ">30% Black/Latino/Native American (BLNA) student
+    enrollment"
+  afe_page_eligibility_list_03: Rural school
+  afe_page_eligibility_disclaimer: "*Eligibility requirements verified using [NCES
+    data](%{nces_url})."
+  afe_page_programs_heading: More Amazon Future Engineer programs & opportunities
+  afe_page_programs_alexa_title: Alexa Skills Inventor
+  afe_page_programs_alexa_desc: Learn how to program Alexa with skills that could
+    help astronauts solve problems in space and communities at home.
+  afe_page_programs_cloud_tour_title: Uncovering Cloud Computer Career Tour
+  afe_page_programs_cloud_tour_desc: How did we go from renting movies at the store
+    to streaming from anywhere at any time? Learn how data centers and cloud computing
+    have changed the way we watch our favorite content, and the careers behind it.
+  afe_page_programs_voice_title: Your Voice is Power
+  afe_page_programs_voice_desc: Students will code and compete to learn how entrepreneurship,
+    coding, and music can intersect for positive change.
+  afe_page_programs_scholarships_title: Scholarships and Internships
+  afe_page_programs_scholarships_desc: Supporting students after high school is imperative
+    to fulfilling the Amazon Future Engineer mission for all of our scholars.
+  afe_page_programs_robotics_title: Robotics Fulfillment Center Tour
+  afe_page_programs_robotics_desc: Discover how computer science, state-of-the-art
+    engineering, and incredible people deliver customer orders at Amazon.
+  afe_page_programs_data_tour_title: Keeping Data Safe Career Tour
+  afe_page_programs_data_tour_desc: You want to upload your photos to the cloud, but
+    what if something happens at a data center? Learn how AWS and data center professionals
+    keep data safe and sustainable.
+  afe_page_success_heading: Congratulations! You successfully signed up for the Amazon
+    Future Engineer Program.
+  afe_page_success_desc: You should receive an email shortly from Amazon Future Engineer
+    to claim your benefits. In the meantime, check out some of the amazing resources
+    around our site.
+  afe_page_eligibility_check_heading: We've checked your eligibility
+  afe_page_eligibility_check_fail_desc: Your school does not meet the eligibility
+    [requirements*](%{req_url}) for the Amazon Future Engineer benefits, but you can
+    still take advantage of all Code.org has to offer, including our robust curriculum
+    and professional learning opportunities.
+  afe_page_eligibility_check_fail_error: If you think you received this message in
+    error, contact us at [support@code.org](%{email_url}).
+  afe_page_eligibility_check_disclaimer: "*To participate in the Amazon Future Engineer
+    program, a school must have Title 1 status OR have student enrollment of more
+    than 40% underrepresented minority students and/or 40% students who qualify for
+    free or reduced lunch."
   blockchain_hero_heading: பிளாக்செயின் எவ்வாறு செயல்படுகிறது
   blockchain_hero_desc: எங்களின் புதிய வீடியோ தொடர் மற்றும் அதனுடன் இணைந்த பாடங்களுடன்
     "How Blockchain Works" மூலம் பிளாக்செயின் உலகில் முழுக்கு!
@@ -1992,6 +2123,8 @@ ta:
     Closed captioning, Immersive reader
   csd_page_pick_a_course_heading: உங்கள் வகுப்பறையில் சரியான சிஎஸ் கண்டுபிடிப்புகள்
     நிச்சயமாக எடுக்கவில்லை
+  csd_page_pick_a_course_heading_non_en: Picking the right %{cs_discoveries} (CS Discoveries)
+    course for your classroom
   csd_page_pick_a_course_desc: சிஎஸ் கண்டுபிடிப்புகள் வழங்கப்படும் விருப்பங்களை பல்வேறு
     தொகுப்பு உடன், அனைத்து வெவ்வேறு தேவைகளை ஒரு நிச்சயமாக உள்ளது.
   csd_page_pick_a_course_heading_02: உள்ளடக்கத்தை எவ்வாறு எடுக்க விரும்புகிறீர்கள்?
@@ -2289,6 +2422,12 @@ ta:
   donate_page_fundraise_title: Code.org க்கான நிதி திரட்டுதல்
   donate_page_fundraise_desc: Code.org பணம் திரட்ட உதவுங்கள்! ஒவ்வொரு பள்ளியிலும்
     உள்ள ஒவ்வொரு மாணவருக்கும் கணினி அறிவியல் கற்க வாய்ப்பு இருக்க வேண்டும்.
+  donate_page_campaigns_heading: Support a campaign
+  donate_page_campaigns_farsi_desc: Talent is widespread, but opportunity often isn't.
+    The proposed Code.org in Farsi initiative aims to grant over 110 million Farsi
+    speakers from countries like Iran, Afghanistan, and Tajikistan to global diasporas,
+    access to educational resources currently available in other major languages.
+    Let's make it a reality.
   donate_page_other_ways_title: கொடுக்க மற்ற வழிகள்
   donate_page_other_ways_desc: பங்களிக்க பல்வேறு முறைகள் ஆராய்ந்து, நீங்கள் சிறந்த
     பொருத்தமாக என்று விருப்பத்தை கண்டுபிடிக்க. ஒவ்வொரு சைகை, பெரிய அல்லது சிறிய,
@@ -2296,6 +2435,10 @@ ta:
   donate_page_501c3: Code.org ஒரு பொது பதிவு 501 (இ) (3) இலாப நோக்கற்ற அமைப்பு.
     Code.org க்கு பங்களிப்புகள் சட்டத்தால் அனுமதிக்கப்பட்ட அளவிற்கு வரி-விலக்கு அளிக்கின்றன.
     Code.org இன் வரி அடையாள எண் 46-0858543 ஆகும்.
+  donate_page_supporters_heading: Join top industry leaders supporting Code.org
+  donate_page_supporters_desc: Prominent names nationwide trust and support our mission.
+    View our esteemed supporters and consider adding your own commitment to Code.org's
+    transformative cause.
   donate_page_donation_policy_title: நன்கொடை கொள்கையை புரிந்துகொள்ளுதல்
   donate_page_donation_policy_desc: உங்கள் பங்களிப்புகளை நாங்கள் எவ்வாறு கையாளுகிறோம்
     மற்றும் ஒதுக்க வேண்டும் என்பதைப் பற்றி அறிந்துகொள்ளுங்கள்.
@@ -2357,6 +2500,9 @@ ta:
     மூலம் வீட்டிலேயே கற்றலைத் தொடரவும்.
   hoc_live_join_us: எங்களுடன் இணையுங்கள்
   hoc_live_learn_more: மேலும் அறிக
+  hoc_live_map_and_events_message: During peak Hour of Code traffic, we use a static
+    map to save bandwidth and keep our site running. To see a dynamic map of all events
+    [click here](%{map_url}), and to see the full event list [click here](%{events_url}).
   hoc_overview_oceans_tutorial_header: பெருங்கடல்களுக்கான AI
   hoc_overview_oceans_tutorial_desc: செயற்கை நுண்ணறிவு (AI), இயந்திர கற்றல், பயிற்சி
     தரவு மற்றும் சார்பு பற்றி அறிந்து கொள்ளுங்கள், அதே நேரத்தில் நெறிமுறை சிக்கல்களை
@@ -3089,6 +3235,22 @@ ta:
   handouts_brochure: ஆசிரியர்கள் மற்றும் பள்ளிகளிடம் இந்த தகவல் சிற்றேட்டைத் தரவும்
   handouts_participationguide: இந்த பங்கேற்பு வழிகாட்டி கொண்டு உங்கள் Hour of Code–ஐ
     திட்டமிடுங்கள்
+  poster_aria_label_minecraft: 'Download a poster featuring Minecraft Education: Generation
+    AI'
+  poster_aria_label_dance_ai_01: 'Download a poster featuring Dance Party: AI Edition
+    frog, moose, and cat characters'
+  poster_aria_label_dance_ai_02: 'Download a poster featuring Dance Party: AI Edition
+    robot, sloth, and shark characters'
+  poster_aria_label_oceans_01: Download a poster featuring AI for Oceans underwarer
+    scene with AI Bot selecting a fish
+  poster_aria_label_oceans_02: Download a poster featuring AI for Oceans fish characters
+    with different emotions
+  poster_aria_label_steph: Download a poster featuring NBA star Steph Curry
+  poster_aria_label_malala: Download a poster featuring activist Malala Yousafzai
+  poster_aria_label_hadi: Download a poster featuring Code.org founder Hadi Partovi
+  poster_aria_label_mary: Download a poster featuring General Motors CEO Mary Barra
+  poster_aria_label_satya: Download a poster featuring Microsoft CEO Satya Nadella
+  poster_aria_label_shakira: Download a poster featuring singer-songwriter Shakira
   videos_title: மாணவர்களை ஊக்கப்படுத்த இந்த காணொளிகளைக் காட்டுங்கள்
   videos_what_most_schools_dont_teach: பெரும்பாலான பள்ளிகள் எதைச் சொல்லித் தருவதில்லை
     (5 நிமிடம்)
@@ -16645,6 +16807,8 @@ ta:
     நிமிடம்)
   video_library_page_inspirational_video_title_15: கணினி அறிவியல் உடன் உருவாக்கவும்
     (1 நிமிடம்)
+  video_library_page_inspirational_video_title_16: Young Women in Computer Science
+    (2 min)
   video_library_page_not_hacked_video_title_1: 'எப்படி ஹேக் செய்ய முடியாது: அறிமுகம்'
   video_library_page_not_hacked_video_title_2: 'எப்படி ஹேக் செய்யக்கூடாது: கடவுச்சொற்கள்'
   video_library_page_not_hacked_video_title_3: 'ஹேக் செய்ய எப்படி இல்லை: அங்கீகாரம்
@@ -16950,6 +17114,26 @@ ta:
   elementary_page_computer_science_description_2: கணினி அறிவியல் (சிஎஸ்) மற்றும் கணித
     போன்ற மற்ற பாடங்களில் இடையே இணைப்புகளை செய்ய, மொழி கலை, அறிவியல், மற்றும் சமூக
     ஆய்வுகள்.
+  hoc_beyond_hero_description: Now that you've completed your Hour of Code, take your
+    learning to the next level! Many partners offer free, engaging options for teachers
+    and students alike - no experience needed.
+  hoc_beyond_for_teachers_section_title: For Teachers
+  hoc_beyond_for_teachers_section_description: You've held an Hour of Code event in
+    your classroom... now what? Join the more than 2 million educators who use Code.org
+    to teach computer science. Anyone can learn!
+  hoc_beyond_for_teachers_course_title_1: Teach with Code.org’s Courses
+  hoc_beyond_for_teachers_course_title_2: Teach Courses from Other Providers
+  hoc_beyond_for_teachers_course_description_1: Code.org offers a full K-12 course
+    pathway and professional learning workshops for teachers, free of charge.
+  hoc_beyond_for_teachers_course_description_2: Compare options by different partners,
+    organized by grade band.
+  hoc_beyond_for_teachers_course_link_1: Teach with Code.org
+  hoc_beyond_for_teachers_course_link_2: Explore other providers
+  hoc_beyond_carousel_title: For Students
+  hoc_beyond_carousel_description: Want to keep learning after Hour of Code? Check
+    out these activities for learners of all ages and skill levels.
+  hoc_beyond_submit_activity_form: Submit your own activity [here](%{form_url}).
+  hoc_beyond_end_section_label: The Hour of Code is organized by [Code.org](%{home_page})
   language_code:
     ar: அரபி மொழி
     az: அசர்பாய்ஜானி

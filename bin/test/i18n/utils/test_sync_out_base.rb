@@ -16,6 +16,10 @@ describe I18n::Utils::SyncOutBase do
   end
 
   describe '.perform' do
+    before do
+      I18n::Metrics.stubs(:report_runtime).yields(nil)
+    end
+
     it 'calls `#perform`' do
       described_class.any_instance.expects(:process).once
       described_class.perform

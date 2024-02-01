@@ -1,5 +1,6 @@
 <Weblab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 58,
   "created_at": "2023-11-28T16:58:30.000Z",
   "level_num": "custom",
@@ -7,11 +8,11 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "*This level follows a video that you may have watched with your class. If you missed the video, you can watch it in the Help and Tips tab of this level.*\r\n\r\n# Add Larger Heading and List\r\n\r\nHere's a great article on modes of transportation. Can you add a catchy, large heading and title it?\r\n \r\n# Do this\r\n1) Add a larger heading at the top of the article.\r\n \r\n   * **Bonus Challenge:** Can you turn the subheadings into a bulleted list? \t\r\n \r\n\t*Hint: see Level 6b for inspiration*\r\n    \r\n::: details [**Show Me How**]\r\n\r\n<img src=\"https://images.code.org/c90540fbacf4f7de6e8c92325dac4b35-image-1677099108113.gif\" style=\"width:500px\">\r\n<br>\r\n<br>\r\n\r\n**More resources are in the \"Help and Tips\" tab**\r\n:::\r\n\r\n",
+    "long_instructions": "*This level follows a video that you may have watched with your class. If you missed the video, you can watch it in the Help and Tips tab of this level.*\r\n\r\n# Add Larger Heading and List\r\n\r\nHere's a great article on modes of transportation. Can you add a catchy, large heading and title it?\r\n \r\n# Do this\r\n1) Add a larger heading at the top of the article.\r\n \r\n   * **Bonus Challenge:** Can you turn the subheadings into a bulleted list? \t\r\n \r\n\t*Hint: see Level 8b for inspiration*\r\n    \r\n::: details [**Show Me How**]\r\n\r\n<img src=\"https://images.code.org/c90540fbacf4f7de6e8c92325dac4b35-image-1677099108113.gif\" style=\"width:500px\">\r\n<br>\r\n<br>\r\n\r\n**More resources are in the \"Help and Tips\" tab**\r\n:::\r\n\r\n",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\r\\n<html>\\r\\n  <head>\\r\\n  <\\/head>\\r\\n  <body>\\r\\n    <p>This article talks about different forms of transportation on land, sea, and air.<\\/p>\\r\\n    <h2>Land<\\/h2>\\r\\n    <p>People are probably most familiar with land transportation. This includes cars, motorcycles, trains, and even horses! It was estimated that in 2018 over 70.5 million cars were produced worlwide.<\\/p>\\r\\n    <h2>Sea<\\/h2>\\r\\n    <p>People can travel across and under the sea. Large barges are used for moving cargo, while other boats are used for fun activties like sailing or cruises. Make sure you get your sea legs! <\\/p>\\r\\n    <h2>Air<\\/h2>\\r\\n    <p>Airplanes are probably the most common mode of air transportation. The Wright brothers invented the first successful airplane. Their first flight was only 59 seconds long, but today the longest flight possible is over 18 hours long!<\\/p>\\r\\n  <\\/body>\\r\\n<\\/html>\"\r\n    }\r\n  ]\r\n}",
+    "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\n<html>\\n  <head>\\n  </head>\\n  <body>\\n    <!-- Page Title -->\\n    \\n    <!-- Information on types of transportation -->\\n    <p>This article talks about different forms of transportation on land, sea, and air.</p>\\n    <!-- Try to turn subheadins into a list -->\\n    <h2>Land</h2>\\n    <p>People are probably most familiar with land transportation. This includes cars, motorcycles, trains, and even horses! It was estimated that in 2018 over 70.5 million cars were produced worlwide.</p>\\n    <h2>Sea</h2>\\n    <p>People can travel across and under the sea. Large barges are used for moving cargo, while other boats are used for fun activties like sailing or cruises. Make sure you get your sea legs! </p>\\n    <h2>Air</h2>\\n    <p>Airplanes are probably the most common mode of air transportation. The Wright brothers invented the first successful airplane. Their first flight was only 59 seconds long, but today the longest flight possible is over 18 hours long!</p>\\n  </body>\\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"style.css\",\r\n      \"data\": \"\"\r\n    }\r\n  ]\r\n}\r\n            ",
     "display_name": "Add Larger Heading",
     "bubble_choice_description": "Add a large heading to the top of a web page.",
     "parent_level_id": 18826,
@@ -28,8 +29,7 @@
     "validation_enabled": "false",
     "video_key": "csd_debugging"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:30.878+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Headings challenge debug 4_2023\\\"\"],\"cloned_from\":\"CSD U2 Headings challenge debug 4_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:30.878+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Headings challenge debug 4_2023\\\"\"],\"cloned_from\":\"CSD U2 Headings challenge debug 4_2023\"},{\"changed_at\":\"2023-12-19 18:29:28 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-12-19 18:30:47 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

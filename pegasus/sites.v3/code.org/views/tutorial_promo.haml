@@ -11,8 +11,8 @@
       .tutorial-details
         %p.tutorial-description= tutorial[:left_description]
         %p.tutorial-specs= tutorial[:left_specs]
-      %a{href: tutorial[:left_button_link], target: '_self'}
-        %button.tutorial-button= tutorial[:left_button_text]
+      %a.link-button.white{href: tutorial[:left_button_link], target: '_self'}
+        = tutorial[:left_button_text]
 
   .col-25.specific-tutorial.right-tutorial
     .tutorial-box{id: tutorial[:id_for_mobile_image]}
@@ -20,5 +20,5 @@
       .tutorial-details
         %p.tutorial-description= tutorial[:right_description]
         %p.tutorial-specs= tutorial[:right_specs]
-      %a{href: tutorial[:right_button_link], target: '_self'}
-        %button.tutorial-button= tutorial[:right_button_text]
+      %a.link-button.white{href: tutorial[:right_button_link], target: '_self'}
+        = tutorial[:right_button_text]
