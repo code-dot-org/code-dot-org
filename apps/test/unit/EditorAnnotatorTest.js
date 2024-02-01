@@ -73,8 +73,8 @@ describe('EditorAnnotator', () => {
 
     it('should add the given annotation to the annotation list', () => {
       let message = 'This is a line of code';
-      EditorAnnotator.annotateLine(message, 4, 'INFO');
-      sinon.assert.calledWith(annotationListStub, 'INFO', 4, message);
+      EditorAnnotator.annotateLine(4, message, 'INFO');
+      sinon.assert.calledWith(annotationListStub, 4, 'INFO', message);
     });
   });
 

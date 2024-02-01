@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import classnames from 'classnames';
 import style from './rubrics.module.scss';
-import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
 import {
   learningGoalShape,
@@ -105,12 +104,14 @@ export function annotateLines(observations) {
       hasSnippet = true;
 
       // Find where this snippet actually happens
-      let position = EditorAnnotator.findCodeRegion(snippet, {stripComments: true});
+      let position = EditorAnnotator.findCodeRegion(snippet, {
+        stripComments: true,
+      });
 
       // Annotate that first line and highlight all lines, if they were found
       if (position.firstLine && position.lastLine) {
         found = true;
-        EditorAnnotator.annotateLine(message, position.firstLine);
+        EditorAnnotator.annotateLine(position.firstLine, message);
         for (let i = position.firstLine; i <= position.lastLine; i++) {
           EditorAnnotator.highlightLine(i);
         }
@@ -120,7 +121,7 @@ export function annotateLines(observations) {
     // If we have some code but couldn't find it, use the AI provided line
     // numbers, which may be inaccurate.
     if (!found && hasSnippet) {
-      EditorAnnotator.annotateLine(message, lineNumber);
+      EditorAnnotator.annotateLine(lineNumber, message);
       for (let i = lineNumber; i <= lastLineNumber; i++) {
         EditorAnnotator.highlightLine(i);
       }
