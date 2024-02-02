@@ -79,6 +79,11 @@ export const blocks = {
       block.loadExtraState = this.loadExtraState;
     }
   },
+  // Copied and modified from core Blockly:
+  // https://github.com/google/blockly/blob/1ba0e55e8a61f4228dfcc4d0eb18b7e38666dc6c/generators/javascript/math.ts#L406-L429
+  // We need to override this generator in order to continue using the
+  // legacy function name from CDO Blockly. Other custom blocks in pools
+  // depend on the original name..
   mathRandomIntGenerator(block, generator) {
     // Random integer between [X] and [Y].
     const argument0 =
@@ -86,7 +91,7 @@ export const blocks = {
     const argument1 =
       generator.valueToCode(block, 'TO', generator.ORDER_NONE) || '0';
     const functionName = generator.provideFunction_(
-      'math_random_int',
+      'math_random_int', // Core Blockly uses 'mathRandomInt'
       `
   function ${generator.FUNCTION_NAME_PLACEHOLDER_}(a, b) {
     if (a > b) {
