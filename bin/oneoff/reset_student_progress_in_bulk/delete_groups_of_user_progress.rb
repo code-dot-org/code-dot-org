@@ -7,9 +7,20 @@ require 'csv'
 # Prior to the development of this script, it was a manual process for our Customer Success team
 # Depending on where this goes, tests should be added as deleting progress is not undoable
 
+if ARGV.empty? || ARGV.length > 2
+  puts 'Usage: ./bin/oneoff/reset_student_progress_in_bulk ./bin/oneoff/reset_student_progress_in_bulk/yyyy-mm-dd-users.csv [commit]'
+  puts 'The CSV needs a column with "user_names".'
+  puts 'Will do a "dry run" until you specify "for-real" for the "commit" field.'
+  exit 1
+end
+
+csv_file_path = 'path/to/your/usernames.csv'
+
 # When run, replace the teacher_id and usernames list below
 teacher_id = 547
-usernames = ["crazy_kate", "coder_mark197", "stacy", "studentkt"]
+usernames = CSV.read(csv_file_path, headers: true).map {|row| row['username']}
+
+# usernames = ["crazy_kate", "coder_mark197", "stacy", "studentkt"]
 
 teacher_user = User.find_by(id: teacher_id)
 
