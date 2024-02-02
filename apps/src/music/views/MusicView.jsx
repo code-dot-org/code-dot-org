@@ -18,7 +18,6 @@ import AppConfig, {getBlockMode, setAppConfig} from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
 import {loadLibrary} from '../utils/Loader';
 import MusicValidator from '../progress/MusicValidator';
-import Video from './Video';
 import {
   setIsPlaying,
   setCurrentPlayheadPosition,
@@ -35,6 +34,7 @@ import {
   setSoundLoadingProgress,
   setUndoStatus,
   showCallout,
+  clearCallout,
 } from '../redux/musicRedux';
 import KeyHandler from './KeyHandler';
 import Callouts from './Callouts';
@@ -107,6 +107,7 @@ class UnconnectedMusicView extends React.Component {
     appName: PropTypes.string,
     setUndoStatus: PropTypes.func,
     showCallout: PropTypes.func,
+    clearCallout: PropTypes.func,
   };
 
   constructor(props) {
@@ -140,7 +141,6 @@ class UnconnectedMusicView extends React.Component {
     }
 
     this.state = {
-      showingVideo: !!this.props.inIncubator,
       loadedLibrary: false,
       currentLibraryName: null,
       hasLoadedInitialSounds: false,
@@ -190,12 +190,19 @@ class UnconnectedMusicView extends React.Component {
     }
 
     // When changing levels, stop playback and reset the initial sounds loaded flag
-    // since a new set of sounds will be loaded on the next level.
-    if (prevProps.currentLevelIndex !== this.props.currentLevelIndex) {
+    // since a new set of sounds will be loaded on the next level.  Also clear the
+    // callout that might be showing, and dispose of the Blockly workspace so that
+    // any lingering UI is removed.
+    if (
+      prevProps.currentLevelIndex !== this.props.currentLevelIndex &&
+      this.props.appName === 'music'
+    ) {
       this.stopSong();
       this.setState({
         hasLoadedInitialSounds: false,
       });
+      this.props.clearCallout();
+      this.musicBlocklyWorkspace.dispose();
     }
 
     if (
@@ -568,10 +575,6 @@ class UnconnectedMusicView extends React.Component {
     );
   };
 
-  onVideoClosed = () => {
-    this.setState({showingVideo: false});
-  };
-
   renderInstructions(position) {
     // For now, the instructions are intended for use with a
     // progression.  We might decide to make them agnostic at
@@ -600,7 +603,7 @@ class UnconnectedMusicView extends React.Component {
             baseUrl={baseAssetUrl}
             vertical={position !== InstructionsPositions.TOP}
             right={position === InstructionsPositions.RIGHT}
-            showCallout={id => this.props.showCallout(id)}
+            handleInstructionsTextClick={id => this.props.showCallout(id)}
           />
         </PanelContainer>
       </div>
@@ -650,9 +653,6 @@ class UnconnectedMusicView extends React.Component {
   }
 
   render() {
-    const showVideo =
-      AppConfig.getValue('show-video') !== 'false' && this.state.showingVideo;
-
     const {timelineAtTop, showInstructions, instructionsPosition} = this.props;
 
     return (
@@ -673,10 +673,6 @@ class UnconnectedMusicView extends React.Component {
           {showInstructions &&
             instructionsPosition === InstructionsPositions.TOP &&
             this.renderInstructions(InstructionsPositions.TOP)}
-
-          {showVideo && (
-            <Video id="initial-modal-0" onClose={this.onVideoClosed} />
-          )}
 
           {timelineAtTop && this.renderPlayArea(true)}
 
@@ -758,6 +754,7 @@ const MusicView = connect(
     updateLoadProgress: value => dispatch(setSoundLoadingProgress(value)),
     setUndoStatus: value => dispatch(setUndoStatus(value)),
     showCallout: id => dispatch(showCallout(id)),
+    clearCallout: id => dispatch(clearCallout()),
   })
 )(UnconnectedMusicView);
 

@@ -14,6 +14,7 @@ import Button from '@cdo/apps/templates/Button';
 import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 import experiments from '@cdo/apps/util/experiments';
+import Link from '@cdo/apps/componentLibrary/link/Link';
 
 const STATUS = {
   // we are waiting for initial status from the server
@@ -81,11 +82,15 @@ export default function RubricSettings({
   const polling = useMemo(
     () =>
       status === STATUS.EVALUATION_PENDING ||
-      status === STATUS.EVALUATION_RUNNING,
-    [status]
+      status === STATUS.EVALUATION_RUNNING ||
+      statusAll === STATUS_ALL.EVALUATION_PENDING,
+    [status, statusAll]
   );
   const [statusAll, setStatusAll] = useState(STATUS_ALL.INITIAL_LOAD);
   const [unevaluatedCount, setUnevaluatedCount] = useState(0);
+  const [totalCount, setTotalCount] = useState(0);
+  const [evaluatedCount, setEvaluatedCount] = useState(0);
+  const [showDetails, setShowDetails] = useState(false);
 
   const statusText = () => {
     switch (status) {
@@ -133,10 +138,22 @@ export default function RubricSettings({
     }
   };
 
+  const summaryText = () => {
+    return i18n.aiEvaluationStatusAll_summary({
+      evaluatedCount: evaluatedCount,
+      totalCount: totalCount,
+    });
+  };
+
   const studentButtonText = () => {
     return i18n.runAiAssessment({
       studentName: studentName,
     });
+  };
+
+  const showHideDetails = () => {
+    console.log('Hello it clicked');
+    setShowDetails(!showDetails);
   };
 
   useEffect(() => {
@@ -180,6 +197,8 @@ export default function RubricSettings({
             // is disabled on script level pages.
             setCsrfToken(data.csrfToken);
             setUnevaluatedCount(data.attemptedUnevaluatedCount);
+            setTotalCount(data.attemptedCount + data.notAttemptedCount);
+            setEvaluatedCount(data.lastAttemptEvaluatedCount);
             if (data.attemptedCount === 0) {
               setStatusAll(STATUS_ALL.NOT_ATTEMPTED);
             } else if (data.attemptedUnevaluatedCount === 0) {
@@ -287,10 +306,14 @@ export default function RubricSettings({
 
   return (
     <div
-      className={classnames('uitest-rubric-settings', style.settings, {
-        [style.settingsVisible]: visible,
-        [style.settingsHidden]: !visible,
-      })}
+      className={classnames(
+        'uitest-rubric-settings',
+        {[style.settings]: !experiments.isEnabled('ai-rubrics-redesign')},
+        {
+          [style.settingsVisible]: visible,
+          [style.settingsHidden]: !visible,
+        }
+      )}
     >
       {!experiments.isEnabled('ai-rubrics-redesign') && (
         <Heading2>{i18n.settings()}</Heading2>
@@ -308,7 +331,8 @@ export default function RubricSettings({
           </div>
         </div>
       )}
-      {canProvideFeedback && (
+
+      {canProvideFeedback && !experiments.isEnabled('ai-rubrics-redesign') && (
         <div className={style.aiAssessmentOptions}>
           <div>
             <BodyTwoText>
@@ -350,6 +374,46 @@ export default function RubricSettings({
           <BodyTwoText className="uitest-eval-status-all-text">
             {statusAllText() || ''}
           </BodyTwoText>
+        </div>
+      )}
+
+      {canProvideFeedback && experiments.isEnabled('ai-rubrics-redesign') && (
+        <div className={style.settingsGroup}>
+          <Heading2>{i18n.aiAssessment()}</Heading2>
+          <div className={style.settingsContainers}>
+            <div className={style.runAiAllStatuses}>
+              <BodyTwoText className="uitest-eval-status-all-text">
+                <StrongText>{summaryText()}</StrongText>
+              </BodyTwoText>
+              {statusAllText() && (
+                <BodyTwoText>{statusAllText() || ''}</BodyTwoText>
+              )}
+            </div>
+            <Button
+              className="uitest-run-ai-assessment-all"
+              text={i18n.runAiAssessmentClass()}
+              color={Button.ButtonColor.brandSecondaryDefault}
+              onClick={handleRunAiAssessmentAll}
+              style={{margin: 0}}
+              disabled={statusAll !== STATUS_ALL.READY}
+            >
+              {statusAll === STATUS_ALL.EVALUATION_PENDING && (
+                <i className="fa fa-spinner fa-spin" />
+              )}
+            </Button>
+            <div className={style.detailsGroup}>
+              <BodyTwoText
+                className={
+                  showDetails ? style.detailsVisible : style.detailsHidden
+                }
+              >
+                {i18n.aiEvaluationDetails()}
+              </BodyTwoText>
+              <Link onClick={showHideDetails}>
+                {showDetails ? 'Hide Deatils' : 'Show Details'}
+              </Link>
+            </div>
+          </div>
         </div>
       )}
     </div>

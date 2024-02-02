@@ -5,20 +5,7 @@ import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
 import {studentLessonProgressType} from '../progress/progressTypes';
 import {connect} from 'react-redux';
 import LessonDataCell from './LessonDataCell';
-import classNames from 'classnames';
-import FontAwesome from '../FontAwesome';
-import {lessonHasLevels} from '../progress/progressHelpers';
-
-const getUninteractiveLessonColumnHeader = lesson => {
-  return (
-    <div
-      className={classNames(styles.gridBox, styles.lessonHeaderCell)}
-      key={lesson.id}
-    >
-      {lesson.relative_position}
-    </div>
-  );
-};
+import LessonProgressColumnHeader from './LessonProgressColumnHeader';
 
 function LessonProgressDataColumn({
   lesson,
@@ -26,26 +13,13 @@ function LessonProgressDataColumn({
   sortedStudents,
   addExpandedLesson,
 }) {
-  const getHeader = React.useCallback(
-    lesson => {
-      if (!lessonHasLevels(lesson)) {
-        return getUninteractiveLessonColumnHeader(lesson);
-      }
-      return (
-        <div
-          className={classNames(styles.gridBox, styles.lessonHeaderCell)}
-          onClick={() => addExpandedLesson(lesson.id)}
-        >
-          <FontAwesome icon="caret-right" />
-          {lesson.relative_position}
-        </div>
-      );
-    },
-    [addExpandedLesson]
-  );
+  return (
+    <div className={styles.lessonColumn}>
+      <LessonProgressColumnHeader
+        lesson={lesson}
+        addExpandedLesson={addExpandedLesson}
+      />
 
-  const getProgress = React.useCallback(
-    lesson => (
       <div className={styles.lessonDataColumn}>
         {sortedStudents.map(student => (
           <LessonDataCell
@@ -55,17 +29,10 @@ function LessonProgressDataColumn({
               lessonProgressByStudent[student.id][lesson.id]
             }
             key={student.id + '.' + lesson.id}
+            addExpandedLesson={addExpandedLesson}
           />
         ))}
       </div>
-    ),
-    [lessonProgressByStudent, sortedStudents]
-  );
-
-  return (
-    <div className={styles.lessonColumn}>
-      {getHeader(lesson)}
-      {getProgress(lesson)}
     </div>
   );
 }

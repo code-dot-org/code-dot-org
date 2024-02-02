@@ -6,6 +6,7 @@ import {convertXmlToJson} from '../../addons/cdoSerializationHelpers';
 import {behaviorDefMutator} from './mutators/behaviorDefMutator';
 import {behaviorGetMutator} from './mutators/behaviorGetMutator';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
+import {behaviorCallerGetDefMixin} from './mixins/behaviorCallerGetDefMixin';
 
 /**
  * A dictionary of our custom procedure block definitions, used across labs.
@@ -90,6 +91,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedures_edit_button',
       'procedure_caller_serialize_name',
       'procedure_caller_get_def_mixin',
+      'behavior_caller_get_def_mixin',
       'procedure_caller_var_mixin',
       'procedure_caller_update_shape_mixin',
       'procedure_caller_context_menu_mixin',
@@ -174,6 +176,13 @@ GoogleBlockly.Extensions.register('on_behavior_def_change', function () {
 GoogleBlockly.Extensions.registerMutator(
   'behavior_get_mutator',
   behaviorGetMutator
+);
+
+// Using register instead of registerMixin to avoid triggering warnings about
+// overriding built-ins.
+GoogleBlockly.Extensions.register(
+  'behavior_caller_get_def_mixin',
+  behaviorCallerGetDefMixin
 );
 
 /**
