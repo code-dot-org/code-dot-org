@@ -2,9 +2,11 @@
 import queryString from 'query-string';
 import firehoseClient from './lib/util/firehose';
 
-function project() {
-  return require('./code-studio/initApp/project');
-}
+import {
+  filesVersionId,
+  setFilesVersionId,
+} from './code-studio/initApp/project/filesVersionId';
+import {getCurrentId} from './code-studio/initApp/project/currentId';
 
 function apiPath(endpoint, channelId, path) {
   var base = `/v3/${endpoint}/${channelId}`;
@@ -43,7 +45,7 @@ class CollectionsApi {
   }
 
   getProjectId() {
-    return this.projectId || project().getCurrentId();
+    return this.projectId || getCurrentId();
   }
 
   // NOTE: path parameter as supplied should not be URI encoded, as it will be
@@ -281,8 +283,8 @@ class FilesApi extends CollectionsApi {
       src: oldFilename,
       delete: oldFilename,
     };
-    if (project().filesVersionId) {
-      params['files-version'] = project().filesVersionId;
+    if (filesVersionId()) {
+      params['files-version'] = filesVersionId();
     }
     path += '?' + queryString.stringify(params);
     return ajaxInternal(
@@ -290,9 +292,9 @@ class FilesApi extends CollectionsApi {
       path,
       xhr => {
         var response = JSON.parse(xhr.response);
-        project().filesVersionId = response.filesVersionId;
+        setFilesVersionId(response.filesVersionId);
         if (success) {
-          success(xhr, project().filesVersionId);
+          success(xhr, filesVersionId());
         }
       },
       error
@@ -322,8 +324,8 @@ class FilesApi extends CollectionsApi {
 
   basePathWithFilesVersion(filename) {
     var path = this.basePath(filename);
-    if (project().filesVersionId) {
-      path += `?files-version=${project().filesVersionId}`;
+    if (filesVersionId()) {
+      path += `?files-version=${filesVersionId()}`;
     }
     return path;
   }
@@ -334,9 +336,9 @@ class FilesApi extends CollectionsApi {
       this.basePathWithFilesVersion(filename),
       xhr => {
         var response = JSON.parse(xhr.response);
-        project().filesVersionId = response.filesVersionId;
+        setFilesVersionId(response.filesVersionId);
         if (success) {
-          success(xhr, project().filesVersionId);
+          success(xhr, filesVersionId());
         }
       },
       error
@@ -361,9 +363,9 @@ class FilesApi extends CollectionsApi {
       this.basePathWithFilesVersion(filename),
       xhr => {
         var response = JSON.parse(xhr.response);
-        project().filesVersionId = response.filesVersionId;
+        setFilesVersionId(response.filesVersionId);
         if (success) {
-          success(xhr, project().filesVersionId);
+          success(xhr, filesVersionId());
         }
       },
       error,
@@ -414,7 +416,7 @@ class FilesApi extends CollectionsApi {
    */
   wrapUploadDoneCallback(callback) {
     return result => {
-      project().filesVersionId = result.filesVersionId;
+      setFilesVersionId(result.filesVersionId);
       if (callback) {
         callback(result);
       }
