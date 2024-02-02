@@ -11,15 +11,14 @@ teacher_id = 547
 usernames = ["crazy_kate", "coder_mark197", "stacy", "studentkt"]
 
 teacher_user = User.find_by(id: teacher_id)
-follower_ids = teacher_user.followers.pluck(:student_user_id)
-# Fetch user IDs based on usernames
 
-puts follower_ids
-puts "-------"
+# Get user IDs of all students in the teacher_user's sections
+follower_ids = teacher_user.followers.pluck(:student_user_id)
+
+# Get user IDs based on usernames
 user_ids = User.where(username: usernames).pluck(:id)
 
-puts user_ids
-
+# Delete all progress
 user_ids.each do |user_id|
   next unless follower_ids.include?(user_id)
   # Retrieve storage ID for the user
