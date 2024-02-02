@@ -11,7 +11,9 @@ import {validationSystemPrompt} from '@cdo/apps/aiTutor/constants';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 // AI Tutor feature that explains to students why their code is not passing tests.
-const ValidationTutor = (levelId: number) => {
+const ValidationTutor: React.FunctionComponent<ValidationTutorProps> = ({
+  levelId,
+}) => {
   const dispatch = useAppDispatch();
 
   const sources = useSelector(
@@ -88,5 +90,9 @@ const ValidationTutor = (levelId: number) => {
     </div>
   );
 };
+
+interface ValidationTutorProps {
+  levelId: number;
+}
 
 export default ValidationTutor;

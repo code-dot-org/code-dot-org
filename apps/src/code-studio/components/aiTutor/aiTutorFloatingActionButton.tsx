@@ -4,15 +4,22 @@ import {getStore} from '@cdo/apps/redux';
 import style from './ai-tutor.module.scss';
 import aiFabIcon from '@cdo/static/ai-fab-background.png';
 import AITutorPanel from './aiTutorPanel';
+import {Level} from '@cdo/apps/aiTutor/types';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {levelShape} from './aiTutorShapes';
 
 /**
  * Renders an AI Bot icon button in the bottom left corner over other UI elements that controls
  * toggling the AI Tutor Panel open and closed.
  */
-const AITutorFloatingActionButton = ({level}) => {
+
+interface AITutorFloatingActionButtonProps {
+  level: Level;
+}
+
+const AITutorFloatingActionButton: React.FunctionComponent<
+  AITutorFloatingActionButtonProps
+> = ({level}) => {
   const store = getStore();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -41,10 +48,6 @@ const AITutorFloatingActionButton = ({level}) => {
       </Provider>
     </div>
   );
-};
-
-AITutorFloatingActionButton.propTypes = {
-  level: levelShape,
 };
 
 export default AITutorFloatingActionButton;

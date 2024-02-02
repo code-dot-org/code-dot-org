@@ -11,7 +11,9 @@ import {compilationSystemPrompt} from '@cdo/apps/aiTutor/constants';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 // AI Tutor feature that explains to students why their code did not compile.
-const CompilationTutor = (levelId: number) => {
+const CompilationTutor: React.FunctionComponent<CompilationTutorProps> = ({
+  levelId,
+}) => {
   const dispatch = useAppDispatch();
 
   const sources = useSelector(
@@ -73,5 +75,9 @@ const CompilationTutor = (levelId: number) => {
     </div>
   );
 };
+
+interface CompilationTutorProps {
+  levelId: number;
+}
 
 export default CompilationTutor;
