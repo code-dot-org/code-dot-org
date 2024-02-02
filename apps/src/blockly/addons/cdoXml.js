@@ -85,6 +85,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
   };
 
   blocklyWrapper.Xml.blockSpaceToDom = blocklyWrapper.Xml.workspaceToDom;
+  blocklyWrapper.Xml.textToDom = blocklyWrapper.utils.xml.textToDom;
 }
 /**
  * Gets the XML representation for a project, including its workspace and, if applicable, the hidden definition workspace.
