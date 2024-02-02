@@ -7,7 +7,6 @@ import FontAwesome from '../FontAwesome';
 import queryString from 'query-string';
 import {Link} from '@dsco_/link';
 
-export const LEVEL_DATA_CELL_TEST_ID = 'level-data-cell';
 export const LEVEL_OVERRIDE_ICON_TEST_TITLE = 'override-icon-';
 
 const navigateToLevelOverviewUrl = (levelUrl, studentId, sectionId) => {
@@ -49,16 +48,14 @@ export default function LevelDataCell({
       external
       className={classNames(styles.gridBox, styles.gridBoxLevel)}
     >
-      <div data-testid={LEVEL_DATA_CELL_TEST_ID}>
-        {overrideIcon ? (
-          <FontAwesome
-            icon={overrideIcon}
-            title={LEVEL_OVERRIDE_ICON_TEST_TITLE + overrideIcon}
-          />
-        ) : (
-          levelData
-        )}
-      </div>
+      {overrideIcon ? (
+        <FontAwesome
+          icon={overrideIcon}
+          title={LEVEL_OVERRIDE_ICON_TEST_TITLE + overrideIcon}
+        />
+      ) : (
+        levelData
+      )}
     </Link>
   );
 }
