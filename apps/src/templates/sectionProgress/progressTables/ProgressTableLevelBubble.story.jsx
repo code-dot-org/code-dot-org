@@ -28,7 +28,6 @@ const wrapperStyle = {
 };
 
 const defaultExport = {
-  name: 'ProgressTableLevelBubble',
   component: ProgressTableLevelBubble,
 };
 
