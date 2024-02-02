@@ -979,11 +979,11 @@ export function getAlphanumericId() {
 
 /**
  * Parses a level's XML properties for block ids that were explicitly set.
- * @param {string} levelProperty - The property name to extract from the level XML.
+ * @param {Object} appOptions
  * @returns {string[]} - An array of explicitly set 'id' attributes found in the XML.
  */
-export function findExplicitlySetBlockIds() {
-  if (!appOptions) {
+export function findExplicitlySetBlockIds(appOptions = null) {
+  if (!appOptions || !appOptions.level) {
     return [];
   }
   const explicitlySetIds = [];
