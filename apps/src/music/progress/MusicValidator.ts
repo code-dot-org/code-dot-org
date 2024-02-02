@@ -18,6 +18,11 @@ export const MusicConditions: ConditionNames = {
   },
   PLAYED_SOUND_TRIGGERED: {name: 'played_sound_triggered', hasValue: false},
   PLAYED_SOUNDS: {name: 'played_sounds', hasValue: true, valueType: 'number'},
+  PLAYED_SOUND_ID: {
+    name: 'played_sound_id',
+    hasValue: false,
+    valueType: 'string',
+  },
 };
 
 export default class MusicValidator extends Validator {
@@ -57,6 +62,11 @@ export default class MusicValidator extends Validator {
             name: MusicConditions.PLAYED_SOUND_TRIGGERED.name,
           });
         }
+
+        this.conditionsChecker.addSatisfiedCondition({
+          name: MusicConditions.PLAYED_SOUND_ID.name,
+          value: eventData.id,
+        });
       }
 
       if (eventData.when <= currentPlayheadPosition) {

@@ -85,6 +85,15 @@ export default class MusicBlocklyWorkspace {
     Blockly.svgResize(this.workspace);
   }
 
+  dispose() {
+    if (!this.workspace) {
+      return;
+    }
+
+    this.workspace.dispose();
+    this.workspace = null;
+  }
+
   /**
    * Generates executable JavaScript code for all blocks in the workspace.
    *

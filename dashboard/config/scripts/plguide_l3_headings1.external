@@ -9,9 +9,9 @@ markdown <<MARKDOWN
 
 ## Heading Types in Level Builder
 
-* #### `#`: H1
-* #### `##`: H2
-* #### `###`: H3
+* #### `#` or `<h1>TEXT</h1>`: H1
+* #### `##` or `<h2>TEXT</h2>`: H2
+* #### `###` or `<h3>TEXT</h3>`: H3
 
 ## Heading Guidelines
 

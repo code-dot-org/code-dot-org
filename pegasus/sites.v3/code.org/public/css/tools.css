@@ -105,7 +105,7 @@ div[dir='rtl'] .tutorial-info-guide{
 }
 b.purple {
   font-size: 14px;
-  color: #7665a0;
+  color: var(--brand_secondary_default);
 }
 
 .pl-callout {
