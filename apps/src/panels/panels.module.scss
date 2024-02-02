@@ -34,7 +34,7 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      animation: fade-in 1s;
+      animation: fade-in 0.5s;
     }
 
     .markdownText {
@@ -43,7 +43,7 @@
       width: 40%;
       position: absolute;
       padding: 20px;
-      animation: fade-in 2s;
+      animation: fade-in 1.5s;
 
       p {
         font-size: 16px;

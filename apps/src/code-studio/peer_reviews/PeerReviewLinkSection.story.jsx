@@ -2,7 +2,6 @@ import React from 'react';
 import PeerReviewLinkSection from './PeerReviewLinkSection';
 
 export default {
-  title: 'PeerReviewLinkSection',
   component: PeerReviewLinkSection,
 };
 

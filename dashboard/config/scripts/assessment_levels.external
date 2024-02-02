@@ -13,7 +13,7 @@ markdown <<MARKDOWN
 * #### Vary the type of assessments you use
 * #### Limit the usage of open response levels. Learners cannot get feeback in these PL courses, so open response levels should be limited to reflection questions. 
 
-### ** Exemplar Level Types**
+### **Exemplar Level Types**
 * #### <a href="https://studio.code.org/s/csp2-2023/lessons/1/levels/5?section_id=4722244">Reflection</a>
 * #### <a href="https://studio.code.org/s/csp2-2023/lessons/6/levels/2?section_id=4722244">Reflection with bullet points</a>
 * #### <a href="https://studio.code.org/s/csp1-2023/lessons/11/levels/2?section_id=4722244">Reflection with shaded text box</a>
@@ -26,6 +26,6 @@ markdown <<MARKDOWN
 ### **Tips**
 * #### Assessment levels can be used to break up level types. If there is a lot of text, you can use a multiple choice level. 
 * #### If there are a lot of coding levels, you can break up the flow by adding screen shots of different solutions and asking, "Which one would work?" 
-
+* #### In order for a learner to earn a certificate, they need to get a green bubble on every level in the course to get the certificate. Most of our multi/match levels allow you to keep trying until you get the right answer.
 
 MARKDOWN
