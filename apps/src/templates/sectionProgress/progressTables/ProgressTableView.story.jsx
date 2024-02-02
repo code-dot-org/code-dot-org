@@ -26,7 +26,6 @@ import currentUser from '@cdo/apps/templates/currentUserRedux';
 const INCLUDE_LARGE_STORIES = false;
 
 const defaultExport = {
-  title: 'ProgressTableView',
   component: ProgressTableView,
 };
 

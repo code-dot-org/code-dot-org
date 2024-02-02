@@ -12,7 +12,7 @@ import classNames from 'classnames';
 import dom from '../../../dom';
 import commonStyles from '../../../common-styles.module.scss';
 import styles from './js-debugger.module.scss';
-import Watchers from '../../../templates/watchers/Watchers';
+import Watchers from './Watchers';
 import PaneHeader, {
   PaneSection,
   PaneButton,

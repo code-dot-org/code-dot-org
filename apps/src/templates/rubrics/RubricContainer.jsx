@@ -124,11 +124,18 @@ export default function RubricContainer({
             tabSelectCallback={tabSelectCallback}
             selectedTab={selectedTab}
             showSettings={showSettings}
+            canProvideFeedback={canProvideFeedback}
+            teacherHasEnabledAi={teacherHasEnabledAi}
+            studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
+            refreshAiEvaluations={fetchAiEvaluations}
+            rubric={rubric}
+            studentName={studentLevelInfo && studentLevelInfo.name}
           />
         )}
 
         <RubricContent
           rubric={rubric}
+          open={open}
           studentLevelInfo={studentLevelInfo}
           teacherHasEnabledAi={teacherHasEnabledAi}
           canProvideFeedback={canProvideFeedback}

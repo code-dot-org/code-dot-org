@@ -225,7 +225,7 @@ img.video_thumbnail {
 
   @media screen and (max-width: 1010px) {
     .hide_on_tablet {
-      display: none;
+      display: none !important;
     }
   }
 
@@ -236,14 +236,18 @@ img.video_thumbnail {
   }
 
   .headerlinks {
-    margin-top: 12px;
+    margin-inline-start: 1rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
 
     .headerlink {
       @include main-font-regular;
-      margin-left: 30px;
       font-size: 14px;
-      line-height: 22px;
+      line-height: 1;
       display: inline-block;
+      margin-top: -1px;
 
       &:link, &:visited {
         text-decoration: none;
@@ -251,6 +255,8 @@ img.video_thumbnail {
 
       &:hover, &:active {
         border-bottom: solid 2px $orange;
+        margin-top: 3px;
+        padding-bottom: 2px;
       }
     }
 
@@ -269,13 +275,14 @@ img.video_thumbnail {
     background-color: transparent;
     border: 2px solid $white;
     border-radius: 5px;
-    padding: 7px 14px;
+    padding: 7px 12px;
     font-size: 14px;
     line-height: 20px;
     box-sizing: border-box;
     float: left;
     cursor: pointer;
     white-space: nowrap;
+    margin-inline-start: 8px;
     a:hover {
       text-decoration: none;
       background-color: $orange;
@@ -321,14 +328,13 @@ img.video_thumbnail {
   }
 
   #hamburger {
-    padding-top: 4px;
-    padding-left: 16px;
+    padding: 4px 3px 0 11px;
   }
 
   .help_button {
     margin-top: 0;
-    padding-top: 4px;
-    padding-left: 16px;
+    padding-top: 3px;
+    padding-left: 11px;
 
     &:not(.user-is-tabbing) {
       outline: none;
