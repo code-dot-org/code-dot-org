@@ -33,7 +33,7 @@ const initialState: AITutorState = {
   chatMessageError: false,
 };
 
-interface ChatContext {
+export interface ChatContext {
   levelId?: number;
   scriptId?: number;
   isProjectBacked: boolean;

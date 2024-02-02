@@ -263,6 +263,16 @@ input[type=submit] {
     &:hover {
       background: var(--neutral_dark10);
     }
+
+    &.white {
+      background: none;
+      border-color: var(--neutral_white);
+      color: var(--neutral_white);
+
+      &:hover {
+        background: var(--neutral_dark90);
+      }
+    }
   }
 
   /* White button styles */
@@ -432,7 +442,7 @@ td {
 
 /* Start top navigation bar styles ------------------------ */
 nav.main {
-  background-color: #00adbc;
+  background-color: var(--brand_primary_default);
   margin: 0;
   padding: 0.25rem 1rem;
   position: relative;
@@ -517,6 +527,7 @@ nav.main .user_menu {
   margin: 0;
   display: flex;
   gap: 2px;
+  cursor: pointer;
 }
 
 nav.main .create_menu i,
@@ -538,6 +549,7 @@ nav.main .user_menu i.user_menu_arrow_up {
 nav.main .help_button {
   padding: 0;
   height: unset;
+  margin-inline-end: -6px;
 }
 
 nav.main .help_button .help_icon {
@@ -550,7 +562,8 @@ nav.main .help_button .help_contents {
 }
 
 nav.main #hamburger #hamburger-icon {
-  margin-top: -1px;
+  margin-top: -2px;
+  margin-inline-start: 6px;
 }
 
 @media screen and (max-width: 1010px) {

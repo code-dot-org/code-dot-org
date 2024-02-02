@@ -34,6 +34,8 @@ export enum Status {
   PHONE = 'phone',
 }
 
+export const PII = [Status.EMAIL, Status.ADDRESS, Status.PHONE];
+
 export enum TutorTypes {
   COMPILATION = 'compilation',
   VALIDATION = 'validation',
