@@ -5,6 +5,8 @@ export interface PanelsLevelData {
     {
       imageUrl: string;
       text: string;
+      nextUrl?: string;
+      layout?: string;
     }
   ];
 }

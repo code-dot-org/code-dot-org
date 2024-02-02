@@ -6,11 +6,12 @@
     "properties": {
       "curriculum_umbrella": "CSF Self Paced PL",
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-25 22:15:35 UTC",
+    "serialized_at": "2024-01-31 18:00:56 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

@@ -43,7 +43,11 @@ export default function LessonProgressColumnHeader({
   }
   return (
     <div
-      className={classNames(styles.gridBox, styles.lessonHeaderCell)}
+      className={classNames(
+        styles.gridBox,
+        styles.lessonHeaderCell,
+        styles.pointerMouse
+      )}
       onClick={() => addExpandedLesson(lesson.id)}
     >
       <FontAwesome icon="caret-right" className={styles.lessonHeaderCaret} />
