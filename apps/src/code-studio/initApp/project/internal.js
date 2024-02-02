@@ -1,3 +1,8 @@
+// NEVER EVER EVER import this file directly.
+// import the wrapper object instead.
+//
+// import project from "./code-studio/initApp/project"
+
 import $ from 'jquery';
 import msg from '@cdo/locale';
 import * as utils from '../../../utils';
