@@ -43,6 +43,7 @@ const formatLastAttempt = lastAttempt => {
 export default function RubricContent({
   studentLevelInfo,
   rubric,
+  open,
   teacherHasEnabledAi,
   canProvideFeedback,
   onLevelForEvaluation,
@@ -213,6 +214,7 @@ export default function RubricContent({
         <div className={style.tempContainer}>
           <Heading5>{i18n.rubric()}</Heading5>
           <LearningGoals
+            open={open}
             learningGoals={rubric.learningGoals}
             teacherHasEnabledAi={teacherHasEnabledAi}
             canProvideFeedback={canProvideFeedback}
@@ -281,6 +283,7 @@ RubricContent.propTypes = {
   onLevelForEvaluation: PropTypes.bool,
   canProvideFeedback: PropTypes.bool,
   rubric: rubricShape.isRequired,
+  open: PropTypes.bool,
   reportingData: reportingDataShape,
   studentLevelInfo: studentLevelInfoShape,
   teacherHasEnabledAi: PropTypes.bool,
@@ -288,15 +291,38 @@ RubricContent.propTypes = {
   aiEvaluations: PropTypes.arrayOf(aiEvaluationShape),
 };
 
-const InfoAlert = ({text}) => {
+export const InfoAlert = ({text, dismissable}) => {
+  const [closed, setClosed] = useState(false);
+  const closeButtonCallback = () => {
+    setClosed(true);
+  };
+
   return (
-    <div className={style.infoAlert}>
-      <FontAwesome icon="info-circle" className={style.infoAlertIcon} />
-      <BodyTwoText>{text}</BodyTwoText>
+    <div
+      className={classnames('uitest-info-alert', {
+        [style.infoAlert]: !closed,
+        [style.infoAlertClosed]: !!closed,
+      })}
+    >
+      <div className={style.infoAlertLeft}>
+        <FontAwesome icon="info-circle" className={style.infoAlertIcon} />
+        <BodyTwoText>{text}</BodyTwoText>
+      </div>
+      {!!dismissable && (
+        <button
+          type="button"
+          onClick={closeButtonCallback}
+          className={classnames('close', style.infoAlertRight)}
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      )}
     </div>
   );
 };
 
 InfoAlert.propTypes = {
   text: PropTypes.string.isRequired,
+  dismissable: PropTypes.bool,
 };
