@@ -59,7 +59,8 @@ $level-cell-width: 52;
     width: $level-cell-width + px;
     text-align: center;
     height: 47px;
-    line-height: 47px;
+    line-height: 47px !important;
+    color: inherit !important;
     // remove overflow after data icons are added
     overflow-x: hidden;
   }
@@ -184,9 +185,16 @@ $level-cell-width: 52;
       color: $light_white;
       display: flex;
       flex-direction: row;
-      border-right: 1px solid $light_gray_200;
-      border-left: 2px solid $light_gray_200;
+      border-left: 1px solid $light_gray_200;
       border-top: 1px solid $light_gray_200;
+
+      .expandedHeaderExpandedLevelCell:last-child {
+        width: 52px;
+      }
+    }
+
+    &ExpandedLevelCell {
+      width: 53px;
     }
 
     &LevelCaret {
