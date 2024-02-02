@@ -39,20 +39,19 @@ module I18n
     # @option opts [true, false] :testing Whether to run in testing mode
     # @return [void]
     def self.perform(opts = parse_options)
-      crowdin_projects = opts[:testing] ? CROWDIN_TEST_PROJECTS : CROWDIN_PROJECTS
-
       I18nScriptUtils.with_synchronous_stdout do
         puts "Sync down starting"
         logger = Logger.new(STDOUT)
         logger.level = Logger::INFO
 
-        crowdin_projects.each do |name, options|
+        CDO.crowdin_project_test_mapping.each do |prod_project_name, test_project_name|
+          name = opts[:testing] ? test_project_name : prod_project_name
           puts "Downloading translations from #{name} project"
-          api_token = YAML.load_file(options[:identity_file])["api_token"]
-          project_identifier = YAML.load_file(options[:config_file])["project_id"]
+          api_token = I18nScriptUtils.crowdin_creds['api_token']
+          project_identifier = CDO.crowdin_projects.dig(name, 'id')
           project = Crowdin::Project.new(project_identifier, api_token)
           options = {
-            etags_json: options[:etags_json],
+            etags_json: CDO.dir("bin/i18n/crowdin/etags/#{name}_etags.json"),
             locales_dir: CDO.dir(I18N_LOCALES_DIR),
             logger: logger
           }
