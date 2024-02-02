@@ -9,6 +9,7 @@
 :root {
   /* Colors */
   --brand_primary_light: #ABDFE5;
+  --brand_primary_medium: #7BC6CF;
   --brand_primary_default: #009EB0;
   --brand_primary_dark: #008291;
   --brand_secondary_light: #E0D1EC;
@@ -262,6 +263,16 @@ input[type=submit] {
     &:hover {
       background: var(--neutral_dark10);
     }
+
+    &.white {
+      background: none;
+      border-color: var(--neutral_white);
+      color: var(--neutral_white);
+
+      &:hover {
+        background: var(--neutral_dark90);
+      }
+    }
   }
 
   /* White button styles */
@@ -431,7 +442,7 @@ td {
 
 /* Start top navigation bar styles ------------------------ */
 nav.main {
-  background-color: #00adbc;
+  background-color: var(--brand_primary_default);
   margin: 0;
   padding: 0.25rem 1rem;
   position: relative;
@@ -497,40 +508,48 @@ nav.main i.fa-fw {
   line-height: 1;
 }
 
-nav.main .create_menu {
+nav.main .create_menu,
+nav.main .user_menu,
+nav.main .button-signin {
+  border: 2px solid var(--neutral_white);
+  border-radius: 4px;
+  color: var(--neutral_white);
+  font-size: 0.875rem;
+  font-weight: var(--regular-font-weight);
+  text-decoration: none;
+  padding: 7px 12px;
+  margin: 0;
+}
+
+nav.main .create_menu,
+nav.main .user_menu {
   border: 2px solid;
   margin: 0;
   display: flex;
   gap: 2px;
+  cursor: pointer;
 }
 
-nav.main .create_menu i {
+nav.main .create_menu i,
+nav.main .user_menu i {
   font-size: 1.5rem;
   width: auto;
 }
 
-nav.main .create_menu i.create_menu_arrow_down {
+nav.main .create_menu i.create_menu_arrow_down,
+nav.main .user_menu i.user_menu_arrow_down {
   margin-top: -4px;
 }
 
-nav.main .create_menu i.create_menu_arrow_up {
+nav.main .create_menu i.create_menu_arrow_up,
+nav.main .user_menu i.user_menu_arrow_up {
   margin-top: -1px;
-}
-
-nav.main .button-signin {
-  font-size: 0.875rem;
-  padding: 7px 12px;
-  margin: 0;
-  border: 2px solid var(--neutral_white);
-  border-radius: 4px;
-  color: var(--neutral_white);
-  font-weight: var(--regular-font-weight);
-  text-decoration: none;
 }
 
 nav.main .help_button {
   padding: 0;
   height: unset;
+  margin-inline-end: -6px;
 }
 
 nav.main .help_button .help_icon {
@@ -543,7 +562,8 @@ nav.main .help_button .help_contents {
 }
 
 nav.main #hamburger #hamburger-icon {
-  margin-top: -1px;
+  margin-top: -2px;
+  margin-inline-start: 6px;
 }
 
 @media screen and (max-width: 1010px) {

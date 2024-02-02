@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "background": "music-black",
-    "long_instructions": "####Choose a Sound\n\nThere are tons of sounds you can choose from. Change up the beat!\n\nClick the name of the sound to select a new one, and then press Run.\n",
+    "long_instructions": "####Change a Sound\n\nThere are tons of sounds you can choose from. Change up the beat!\n\nClick the [name](#clickable=play-sound-block-workspace) of the sound to select a new one.\n\nThen press [Run](#clickable=run-button).\n",
     "level_data": {
       "library": "will",
       "startSources": {
@@ -17,7 +17,7 @@
           "blocks": [
             {
               "type": "when_run_simple2",
-              "id": "when-run-block",
+              "id": "when_run_simple2",
               "x": 30,
               "y": 30,
               "deletable": false,
@@ -25,11 +25,11 @@
               "next": {
                 "block": {
                   "type": "play_sound_at_current_location_simple2",
-                  "id": "play-sound-block",
+                  "id": "play_sound_at_current_location_simple2",
                   "deletable": false,
                   "movable": false,
                   "fields": {
-                    "sound": "beats/groovy_beat"
+                    "sound": "beats/drum_kit_disco"
                   }
                 }
               }
@@ -40,7 +40,10 @@
       "sounds": {
         "beats": [
           "drum_kit_disco",
-          "groovy_beat"
+          "drum_beat_edm",
+          "drum_beat_club",
+          "drum_beat_knock",
+          "drum_kit_pop"
         ]
       },
       "toolbox": {
@@ -51,15 +54,45 @@
         {
           "conditions": [
             {
-              "name": "played_sounds_together",
-              "value": 1
+              "name": "played_sound_id",
+              "value": "beats/drum_beat_edm"
             }
           ],
-          "message": "Nice work!",
+          "message": "Nice work.  You successfully changed the sound.",
           "next": true
         },
         {
-          "message": "Please change the sound."
+          "conditions": [
+            {
+              "name": "played_sound_id",
+              "value": "beats/drum_beat_club"
+            }
+          ],
+          "message": "Nice work.  You successfully changed the sound.",
+          "next": true
+        },
+        {
+          "conditions": [
+            {
+              "name": "played_sound_id",
+              "value": "beats/drum_beat_knock"
+            }
+          ],
+          "message": "Nice work.  You successfully changed the sound.",
+          "next": true
+        },
+        {
+          "conditions": [
+            {
+              "name": "played_sound_id",
+              "value": "beats/drum_kit_pop"
+            }
+          ],
+          "message": "Nice work.  You successfully changed the sound.",
+          "next": true
+        },
+        {
+          "message": "Please [change](#clickable=play-sound-block-workspace) the sound."
         }
       ]
     },

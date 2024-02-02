@@ -9,9 +9,14 @@ import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
 import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
 import ExpandedProgressDataColumn from './ExpandedProgressDataColumn';
 import LessonProgressDataColumn from './LessonProgressDataColumn';
+import classNames from 'classnames';
+import SkeletonProgressDataColumn from './SkeletonProgressDataColumn';
 
 const NUM_STUDENT_SKELETON_ROWS = 6;
-const STUDENT_IDS = [...Array(NUM_STUDENT_SKELETON_ROWS).keys()];
+const STUDENT_SKELETON_IDS = [...Array(NUM_STUDENT_SKELETON_ROWS).keys()];
+
+const NUM_LESSON_SKELETON_COLUMNS = 20;
+const LESSON_SKELETON_DATA = [...Array(NUM_LESSON_SKELETON_COLUMNS).keys()];
 
 function ProgressTableV2({
   isSortedByFamilyName,
@@ -24,25 +29,30 @@ function ProgressTableV2({
 }) {
   const sortedStudents = React.useMemo(() => {
     if (isSkeleton && students.length === 0) {
-      return STUDENT_IDS.map(id => ({id}));
+      return STUDENT_SKELETON_IDS.map(id => ({id}));
     }
     return isSortedByFamilyName
       ? students.sort(stringKeyComparator(['familyName', 'name']))
       : students.sort(stringKeyComparator(['name', 'familyName']));
   }, [students, isSortedByFamilyName, isSkeleton]);
 
-  const renderedColumns = React.useMemo(() => {
-    const lessons = unitData?.lessons;
-    if (lessons === undefined || lessons.length === 0) {
-      return [];
-    }
-
-    return lessons.map((lesson, index) => {
+  const getRenderedColumn = React.useCallback(
+    (lesson, index) => {
+      if (isSkeleton) {
+        return (
+          <SkeletonProgressDataColumn
+            lesson={lesson}
+            sortedStudents={sortedStudents}
+            key={index}
+          />
+        );
+      }
       if (expandedLessonIds.includes(lesson.id)) {
         return (
           <ExpandedProgressDataColumn
             lesson={lesson}
             sortedStudents={sortedStudents}
+            sectionId={sectionId}
             removeExpandedLesson={lessonId =>
               setExpandedLessons(
                 expandedLessonIds.filter(id => id !== lessonId)
@@ -63,8 +73,31 @@ function ProgressTableV2({
           />
         );
       }
-    });
-  }, [unitData, expandedLessonIds, setExpandedLessons, sortedStudents]);
+    },
+    [
+      isSkeleton,
+      sortedStudents,
+      sectionId,
+      expandedLessonIds,
+      setExpandedLessons,
+    ]
+  );
+
+  const table = React.useMemo(() => {
+    const lessons =
+      isSkeleton && unitData === undefined
+        ? LESSON_SKELETON_DATA.map(id => ({id, isFake: true}))
+        : unitData?.lessons;
+
+    if (lessons === undefined) {
+      // TODO: add no lesson state
+      return null;
+    }
+    const tableStyles = isSkeleton
+      ? classNames(styles.table, styles.tableLoading)
+      : styles.table;
+    return <div className={tableStyles}>{lessons.map(getRenderedColumn)}</div>;
+  }, [isSkeleton, getRenderedColumn, unitData]);
 
   return (
     <div className={styles.progressTableV2}>
@@ -74,8 +107,7 @@ function ProgressTableV2({
         sectionId={sectionId}
         isSkeleton={isSkeleton && students.length === 0}
       />
-
-      <div className={styles.table}>{renderedColumns}</div>
+      {table}
     </div>
   );
 }

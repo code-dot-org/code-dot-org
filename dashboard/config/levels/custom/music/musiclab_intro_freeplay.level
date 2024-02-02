@@ -9,7 +9,7 @@
     "encrypted": "false",
     "hide_share_and_remix": "false",
     "background": "music-black",
-    "long_instructions": "You're ready to create!  Be sure to explore the blocks and the sounds.  There is a lot to explore and use to make an amazing track.",
+    "long_instructions": "####Free Play\n\nYou're ready to create!  Be sure to explore the blocks and the sounds.  There is a lot to explore and use to make an amazing track.",
     "level_data": {
       "library": "will",
       "startSources": {
@@ -18,7 +18,7 @@
           "blocks": [
             {
               "type": "when_run_simple2",
-              "id": "when-run-block",
+              "id": "when_run_simple2",
               "x": 30,
               "y": 30,
               "deletable": false,

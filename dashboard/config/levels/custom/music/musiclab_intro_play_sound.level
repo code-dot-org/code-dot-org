@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "background": "music-black",
-    "long_instructions": "Let's play a new sound!\n\nDrag the [play](#showcallout=play-sound-block) block and attach it to [when run](#showcallout=when-run-block). Click the name of the sound if you want to select a new sound.\n\nThen press [Run](#showcallout=run-button).",
+    "long_instructions": "####Play a Sound\n\nLet's play a new sound!\n\nDrag the [play](#clickable=play-sound-block) block and attach it to [when run](#clickable=when-run-block). Click the name of the sound if you want to select a new sound.\n\nThen press [Run](#clickable=run-button).",
     "level_data": {
       "library": "will",
       "startSources": {
@@ -17,7 +17,7 @@
           "blocks": [
             {
               "type": "when_run_simple2",
-              "id": "when-run-block",
+              "id": "when_run_simple2",
               "x": 30,
               "y": 30,
               "deletable": false,
@@ -25,6 +25,15 @@
             }
           ]
         }
+      },
+      "sounds": {
+        "beats": [
+          "drum_kit_disco",
+          "drum_beat_edm",
+          "drum_beat_club",
+          "drum_beat_knock",
+          "drum_kit_pop"
+        ]
       },
       "toolbox": {
         "blocks": {
@@ -42,11 +51,11 @@
               "value": 1
             }
           ],
-          "message": "Nice work!",
+          "message": "Nice work.  You successfully played a sound.",
           "next": true
         },
         {
-          "message": "Please play a sound."
+          "message": "Drag the [play](#clickable=play-sound-block) block and attach it to [when run](#clickable=when-run-block)."
         }
       ]
     },
