@@ -3,7 +3,7 @@ import SegmentedButtons, {SegmentedButtonsProps} from './index';
 import {Meta, Story} from '@storybook/react';
 
 export default {
-  title: 'DesignSystem/Segmented Buttons Component',
+  title: 'DesignSystem/Segmented Buttons',
   component: SegmentedButtons,
 } as Meta;
 
