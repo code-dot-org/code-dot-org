@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.3.4](https://github.com/code-dot-org/code-dot-org/pull/)
+## [0.3.4](https://github.com/code-dot-org/code-dot-org/pull/56220)
 * update checkbox vertical alignment after font change
 
 ## [0.3.3](https://github.com/code-dot-org/code-dot-org/pull/53962)
