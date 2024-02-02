@@ -1,6 +1,6 @@
 import {AnyAction, Dispatch, ThunkDispatch} from '@reduxjs/toolkit';
 import {TypedUseSelectorHook, useDispatch, useSelector} from 'react-redux';
-import {RootState} from '@cdo/apps/types/reduxTypes';
+import {RootState} from '@cdo/apps/types/redux';
 
 // Redux toolkit recommends getting this type from store.dispatch:
 // https://redux-toolkit.js.org/usage/usage-with-typescript#getting-the-dispatch-type
