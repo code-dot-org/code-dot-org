@@ -8,6 +8,10 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {levelShape} from './aiTutorShapes';
 
+/**
+ * Renders an AI Bot icon button in the bottom left corner over other UI elements that controls
+ * toggling the AI Tutor Panel open and closed.
+ */
 const AITutorFloatingActionButton = ({level}) => {
   const store = getStore();
   const [isOpen, setIsOpen] = useState(false);
