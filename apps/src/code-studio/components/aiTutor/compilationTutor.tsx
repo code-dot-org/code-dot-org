@@ -51,7 +51,7 @@ const CompilationTutor = (
       levelId: levelId,
       scriptId: scriptId,
       isProjectBacked: isProjectBacked,
-      systemPrompt: systemPrompt, 
+      systemPrompt: systemPrompt,
       studentCode: studentCode,
       tutorType: TutorTypes.COMPILATION,
     };
