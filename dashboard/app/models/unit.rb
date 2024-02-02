@@ -597,6 +597,7 @@ class Unit < ApplicationRecord
     return nil unless family_name
 
     family_units = Unit.get_family_from_cache(family_name).sort_by(&:version_year).reverse
+    puts family_units.inspect
 
     return nil unless family_units&.last&.can_be_instructor?(user) || family_units&.last&.can_be_participant?(user)
 
