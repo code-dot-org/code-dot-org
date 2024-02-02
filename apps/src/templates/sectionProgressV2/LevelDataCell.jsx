@@ -46,18 +46,19 @@ export default function LevelDataCell({
     <Link
       href={navigateToLevelOverviewUrl(level.url, studentId, sectionId)}
       openInNewTab
-      data-testid={LEVEL_DATA_CELL_TEST_ID}
       external
       className={classNames(styles.gridBox, styles.gridBoxLevel)}
     >
-      {overrideIcon ? (
-        <FontAwesome
-          icon={overrideIcon}
-          title={LEVEL_OVERRIDE_ICON_TEST_TITLE + overrideIcon}
-        />
-      ) : (
-        levelData
-      )}
+      <div data-testid={LEVEL_DATA_CELL_TEST_ID}>
+        {overrideIcon ? (
+          <FontAwesome
+            icon={overrideIcon}
+            title={LEVEL_OVERRIDE_ICON_TEST_TITLE + overrideIcon}
+          />
+        ) : (
+          levelData
+        )}
+      </div>
     </Link>
   );
 }
