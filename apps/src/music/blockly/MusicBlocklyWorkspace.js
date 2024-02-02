@@ -324,25 +324,51 @@ export default class MusicBlocklyWorkspace {
   }
 
   updateHighlightedBlocks(playingBlockIds) {
+    if (!this.workspace) {
+      this.metricsReporter.logWarning('workspace not initialized.');
+      return;
+    }
     // Clear all highlights.
-    Blockly.mainBlockSpace.getAllBlocks().forEach(block => {
-      Blockly.mainBlockSpace.highlightBlock(block.id, false);
+    this.workspace.getAllBlocks().forEach(block => {
+      this.workspace.highlightBlock(block.id, false);
     });
     // Highlight playing blocks.
     playingBlockIds.forEach(blockId => {
-      Blockly.mainBlockSpace.highlightBlock(blockId, true);
+      this.workspace.highlightBlock(blockId, true);
     });
   }
 
   // Given a block ID, selects that block.
   // Given undefined, unselects all blocks.
   selectBlock(blockId) {
+    if (!this.workspace) {
+      this.metricsReporter.logWarning('workspace not initialized.');
+      return;
+    }
     if (blockId) {
-      Blockly.mainBlockSpace.getBlockById(blockId).select();
+      this.workspace.getBlockById(blockId).select();
     } else {
-      Blockly.mainBlockSpace.getAllBlocks().forEach(block => {
+      this.workspace.getAllBlocks().forEach(block => {
         block.unselect();
       });
+    }
+  }
+
+  getSelectedTriggerId(blockId) {
+    if (!this.workspace) {
+      this.metricsReporter.logWarning('workspace not initialized.');
+      return undefined;
+    }
+    const block = this.workspace.getBlockById(blockId);
+    if (!block) {
+      return undefined;
+    }
+    const isSelectedBlockTriggerAt =
+      block.type === BlockTypes.TRIGGERED_AT_SIMPLE2;
+    if (isSelectedBlockTriggerAt) {
+      return block.getFieldValue(TRIGGER_FIELD);
+    } else {
+      return undefined;
     }
   }
 
