@@ -3,7 +3,7 @@ import SimpleDropdown, {SimpleDropdownProps} from './index';
 import {Meta, Story} from '@storybook/react';
 
 export default {
-  title: 'DesignSystem/Simple Dropdown Component',
+  title: 'DesignSystem/Simple Dropdown',
   component: SimpleDropdown,
 } as Meta;
 

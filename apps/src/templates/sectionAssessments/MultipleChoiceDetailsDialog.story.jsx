@@ -2,7 +2,6 @@ import React from 'react';
 import {UnconnectedMultipleChoiceDetailsDialog as MultipleChoiceDetailsDialog} from './MultipleChoiceDetailsDialog';
 
 export default {
-  title: 'MultipleChoiceDetailsDialog',
   component: MultipleChoiceDetailsDialog,
 };
 
