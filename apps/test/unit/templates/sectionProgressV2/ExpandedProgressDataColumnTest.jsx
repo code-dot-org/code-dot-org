@@ -9,10 +9,7 @@ import sectionProgress, {
   addDataByUnit,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
-import {
-  LEVEL_DATA_CELL_TEST_ID,
-  LEVEL_OVERRIDE_ICON_TEST_TITLE,
-} from '@cdo/apps/templates/sectionProgressV2/LevelDataCell';
+import {LEVEL_OVERRIDE_ICON_TEST_TITLE} from '@cdo/apps/templates/sectionProgressV2/LevelDataCell';
 
 import {
   getStore,
@@ -97,7 +94,7 @@ describe('ExpandedProgressDataColumn', () => {
       ).to.exist;
     });
 
-    expect(screen.queryAllByTestId(LEVEL_DATA_CELL_TEST_ID)).to.have.length(
+    expect(screen.queryAllByRole('link')).to.have.length(
       LESSON.levels.length * STUDENTS.length
     );
   });
@@ -115,7 +112,7 @@ describe('ExpandedProgressDataColumn', () => {
       expect(screen.queryByText(sublevel.bubbleText)).to.not.exist;
     });
 
-    expect(screen.queryAllByTestId(LEVEL_DATA_CELL_TEST_ID)).to.have.length(
+    expect(screen.queryAllByRole('link')).to.have.length(
       lesson.levels.length * STUDENTS.length
     );
   });
@@ -128,7 +125,7 @@ describe('ExpandedProgressDataColumn', () => {
     );
     fireEvent.click(choiceLevelHeader);
 
-    expect(screen.queryAllByTestId(LEVEL_DATA_CELL_TEST_ID)).to.have.length(
+    expect(screen.queryAllByRole('link')).to.have.length(
       (lesson.levels.length + levelWithSublevels.sublevels.length) *
         STUDENTS.length
     );
