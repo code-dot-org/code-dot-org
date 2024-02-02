@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react';
+import React, {MouseEvent, useCallback} from 'react';
 import moduleStyles from './timeline.module.scss';
 import classNames from 'classnames';
 import TimelineSampleEvents from './TimelineSampleEvents';
@@ -6,11 +6,12 @@ import TimelineTrackEvents from './TimelineTrackEvents';
 import TimelineSimple2Events from './TimelineSimple2Events';
 import {getBlockMode} from '../appConfig';
 import {BlockMode, MIN_NUM_MEASURES} from '../constants';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import {
   clearSelectedBlockId,
   setStartPlayheadPosition,
 } from '../redux/musicRedux';
+import {useMusicSelector} from './types';
 
 const barWidth = 60;
 // Leave some vertical space between each event block.
@@ -18,40 +19,40 @@ const eventVerticalSpace = 2;
 // A little room on the left.
 const paddingOffset = 10;
 
+const getEventHeight = (numUniqueRows: number, availableHeight = 110) => {
+  // While we might not actually have this many rows to show,
+  // we will limit each row's height to the size that would allow
+  // this many to be shown at once.
+  const minVisible = 5;
+
+  const maxVisible = 10;
+
+  // We might not actually have this many rows to show, but
+  // we will size the bars so that this many rows would show.
+  const numSoundsToShow = Math.max(
+    Math.min(numUniqueRows, maxVisible),
+    minVisible
+  );
+
+  return Math.floor(availableHeight / numSoundsToShow);
+};
+
 /**
  * Renders the music playback timeline.
  */
-const Timeline = () => {
-  const isPlaying = useSelector(state => state.music.isPlaying);
+const Timeline: React.FunctionComponent = () => {
+  const isPlaying = useMusicSelector(state => state.music.isPlaying);
   const dispatch = useDispatch();
-  const currentPlayheadPosition = useSelector(
+  const currentPlayheadPosition = useMusicSelector(
     state => state.music.currentPlayheadPosition
   );
-  const startingPlayheadPosition = useSelector(
+  const startingPlayheadPosition = useMusicSelector(
     state => state.music.startingPlayheadPosition
   );
   const measuresToDisplay = Math.max(
     MIN_NUM_MEASURES,
-    useSelector(state => state.music.lastMeasure)
+    useMusicSelector(state => state.music.lastMeasure)
   );
-
-  const getEventHeight = (numUniqueRows, availableHeight = 110) => {
-    // While we might not actually have this many rows to show,
-    // we will limit each row's height to the size that would allow
-    // this many to be shown at once.
-    const minVisible = 5;
-
-    const maxVisible = 10;
-
-    // We might not actually have this many rows to show, but
-    // we will size the bars so that this many rows would show.
-    const numSoundsToShow = Math.max(
-      Math.min(numUniqueRows, maxVisible),
-      minVisible
-    );
-
-    return Math.floor(availableHeight / numSoundsToShow);
-  };
 
   const positionToUse = isPlaying
     ? currentPlayheadPosition
@@ -72,13 +73,15 @@ const Timeline = () => {
   );
 
   const onMeasuresBackgroundClick = useCallback(
-    event => {
+    (event: MouseEvent) => {
       // Ignore if playing
       if (isPlaying) {
         return;
       }
       const offset =
-        event.clientX - event.target.getBoundingClientRect().x - paddingOffset;
+        event.clientX -
+        (event.target as Element).getBoundingClientRect().x -
+        paddingOffset;
       const exactMeasure = offset / barWidth + 1;
       // Round measure to the nearest beat (1/4 note)
       const roundedMeasure = Math.round(exactMeasure * 4) / 4;
@@ -88,7 +91,7 @@ const Timeline = () => {
   );
 
   const onMeasureNumberClick = useCallback(
-    measureNumber => {
+    (measureNumber: number) => {
       if (isPlaying) {
         return;
       }
@@ -98,11 +101,15 @@ const Timeline = () => {
     [dispatch, isPlaying]
   );
 
+  const onTimelineClick = useCallback(() => {
+    dispatch(clearSelectedBlockId());
+  }, [dispatch]);
+
   return (
     <div
       id="timeline"
       className={moduleStyles.timeline}
-      onClick={() => dispatch(clearSelectedBlockId())}
+      onClick={onTimelineClick}
     >
       <div
         id="timeline-measures-background"
@@ -169,7 +176,5 @@ const Timeline = () => {
     </div>
   );
 };
-
-Timeline.propTypes = {};
 
 export default Timeline;
