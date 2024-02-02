@@ -11,6 +11,7 @@
     "encrypted": "false",
     "background": "music-black",
     "level_data": {
+      "library": "will",
       "startSources": {
         "blocks": {
           "languageVersion": 0,
