@@ -54,7 +54,7 @@ export const fakeLevelWithSubLevels = (
   overrides = {}
 ) => {
   const sublevels = _.range(numSublevels).map(index => {
-    let overrideData = {
+    const overrideData = {
       id: index + startLevel,
       levelNumber: index + startLevel,
     };
