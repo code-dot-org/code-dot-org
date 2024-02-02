@@ -404,7 +404,7 @@ WebLab.prototype.getCurrentFileEntries = function () {
 };
 
 WebLab.prototype.getCurrentFilesVersionId = function () {
-  return project.filesVersionId || this.initialFilesVersionId;
+  return project.filesVersionId() || this.initialFilesVersionId;
 };
 
 // Called by Bramble when a file has been deleted
@@ -412,7 +412,7 @@ WebLab.prototype.deleteProjectFile = function (filename, callback) {
   filesApi.deleteFile(
     filename,
     xhr => {
-      callback(null, project.filesVersionId);
+      callback(null, project.filesVersionId());
     },
     xhr => {
       console.warn(`WebLab: error file ${filename} not deleted`);
@@ -431,7 +431,7 @@ WebLab.prototype.renameProjectFile = function (
     filename,
     newFilename,
     xhr => {
-      callback(null, project.filesVersionId);
+      callback(null, project.filesVersionId());
     },
     xhr => {
       console.warn(`WebLab: error file ${filename} not renamed`);
@@ -451,7 +451,7 @@ WebLab.prototype.changeProjectFile = function (
     filename,
     fileData,
     xhr => {
-      callback(null, project.filesVersionId);
+      callback(null, project.filesVersionId());
     },
     xhr => {
       console.warn(`WebLab: error file ${filename} not saved`);
@@ -540,7 +540,7 @@ WebLab.prototype.onFilesReady = function (files, filesVersionId) {
     // After we've detected the first change to the version, we store this
     // version id so that subsequent writes will continue to replace the
     // current version (until the browser page reloads)
-    project.filesVersionId = filesVersionId;
+    project.setFilesVersionId(filesVersionId);
   }
 
   this.syncBrambleFiles(this.brambleHost?.fileRefresh);

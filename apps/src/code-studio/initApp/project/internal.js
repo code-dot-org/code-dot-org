@@ -1,12 +1,12 @@
 import $ from 'jquery';
 import msg from '@cdo/locale';
-import * as utils from '../../utils';
-import {CIPHER, ALPHABET} from '../../constants';
-import {files as filesApi} from '../../clientApi';
+import * as utils from '../../../utils';
+import {CIPHER, ALPHABET} from '../../../constants';
+import {files as filesApi} from '../../../clientApi';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {AbuseConstants} from '@cdo/apps/util/sharedConstants';
-import NameFailureError from '../NameFailureError';
-import {CP_API} from '../../lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
+import NameFailureError from '../../NameFailureError';
+import {CP_API} from '../../../lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -19,22 +19,22 @@ var hasProjectChanged = false;
 let projectSaveInProgress = false;
 let projectChangedWhileSaveInProgress = false;
 
-var assets = require('./clientApi').create('/v3/assets');
-var files = require('./clientApi').create('/v3/files');
-var sources = require('./clientApi').create('/v3/sources');
-var sourcesPublic = require('./clientApi').create('/v3/sources-public');
-var channels = require('./clientApi').create('/v3/channels');
+var assets = require('../clientApi').create('/v3/assets');
+var files = require('../clientApi').create('/v3/files');
+var sources = require('../clientApi').create('/v3/sources');
+var sourcesPublic = require('../clientApi').create('/v3/sources-public');
+var channels = require('../clientApi').create('/v3/channels');
 
-var showProjectAdmin = require('../showProjectAdmin');
-import header from '../header';
-import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
-import {getStore} from '../../redux';
+var showProjectAdmin = require('../../showProjectAdmin');
+import header from '../../header';
+import {queryParams, hasQueryParam, updateQueryParam} from '../../utils';
+import {getStore} from '../../../redux';
 import {
   workspaceAlertTypes,
   displayWorkspaceAlert,
   refreshInRestrictedShareMode,
   refreshTeacherHasConfirmedUploadWarning,
-} from '../projectRedux';
+} from '../../projectRedux';
 
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
@@ -517,8 +517,9 @@ var projects = (module.exports = {
     isInitialCaptureComplete() {
       return initialCaptureComplete;
     },
-    setCurrentData(data) {
+    setCurrentData(data, setCurrentId) {
       current = data;
+      setCurrentId(current.id);
     },
     setCurrentSources(data) {
       currentSources = data;
@@ -1865,7 +1866,7 @@ var projects = (module.exports = {
    * @param {string?} version Optional version to load
    * @returns {Promise} A promise that resolves when the source is loaded.
    */
-  fetchSource(channelData) {
+  fetchSource(channelData, setCurrentId) {
     // Explicitly remove levelSource/levelHtml from channels
     delete channelData.levelSource;
     delete channelData.levelHtml;
@@ -1874,6 +1875,7 @@ var projects = (module.exports = {
 
     // Update current
     current = channelData;
+    setCurrentId(current.id);
 
     projects.setTitle(current.name);
     const sourcesApi = this.getSourcesApi_();
