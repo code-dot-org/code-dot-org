@@ -68,7 +68,6 @@ export default function initializeBlocklyXml(blocklyWrapper) {
       // Further manipulate the XML for specific top block types.
       addNameToBlockFunctionDefinitionBlock(xmlChild);
       addMutationToProcedureDefBlocks(xmlChild);
-      addMutationToBehaviorDefBlocks(xmlChild);
       addMutationToMiniToolboxBlocks(xmlChild);
       makeWhenRunUndeletable(xmlChild);
 
@@ -162,7 +161,7 @@ export function makeWhenRunUndeletable(blockElement) {
 }
 
 /**
- * Adds a mutation element to a block if it is a behavior definition.
+ * Adds a mutation element to a block if it is a behavior block.
  * CDO Blockly uses an unsupported method for serializing state
  * where arbitrary XML attributes could hold important information.
  * Mainline Blockly expects a mutator. The presence of the mutation element
@@ -170,8 +169,12 @@ export function makeWhenRunUndeletable(blockElement) {
  *
  * @param {Element} blockElement - The XML element for a single block.
  */
-export function addMutationToBehaviorDefBlocks(blockElement) {
-  if (blockElement.getAttribute('type') !== BLOCK_TYPES.behaviorDefinition) {
+export function addMutationToBehaviorBlocks(blockElement) {
+  if (
+    ![BLOCK_TYPES.behaviorDefinition, BLOCK_TYPES.behaviorGet].includes(
+      blockElement.getAttribute('type')
+    )
+  ) {
     return;
   }
   const mutationElement =
@@ -194,7 +197,9 @@ export function addMutationToBehaviorDefBlocks(blockElement) {
 
   // In CDO Blockly, behavior ids were stored on the field. Google Blockly
   // expects this kind of extra state in a mutator.
-  const nameField = getFieldOrTitle(blockElement, 'NAME');
+  const nameField =
+    getFieldOrTitle(blockElement, 'VAR') ||
+    getFieldOrTitle(blockElement, 'NAME');
   const idAttribute = nameField && nameField.getAttribute('id');
   if (idAttribute) {
     // Create new mutation attribute based on original block attribute.
@@ -393,6 +398,7 @@ function processBlockAndChildren(block) {
 function processIndividualBlock(block) {
   addNameToBlockFunctionCallBlock(block);
   addMissingBehaviorId(block);
+  addMutationToBehaviorBlocks(block);
   // Convert unsupported can_disconnect_from_parent attributes.
   makeLockedBlockImmovable(block);
   addMutationToTextJoinBlock(block);
