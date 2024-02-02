@@ -5,7 +5,6 @@
       "name": "All",
       "imageSrc": "all.png",
       "path": "all-by-type",
-      "defaultSound": "beats/groovy_alternate_beat",
       "folders": [
         {
           "name": "Piano",
@@ -1000,6 +999,53 @@
           ]
         },
         {
+          "name": "Drum Kit",
+          "path": "drums",
+          "type": "kit",
+          "sounds": [
+            {
+              "name": "Bass Drum",
+              "src": "sound_1",
+              "length": 0.0625
+            },
+            {
+              "name": "5nare",
+              "src": "sound_2",
+              "length": 0.0625
+            },
+            {
+              "name": "Closed Hi-hat",
+              "src": "sound_3",
+              "length": 0.0625
+            },
+            {
+              "name": "Open Hi-hat",
+              "src": "sound_4",
+              "length": 0.0625
+            },
+            {
+              "name": "Mid Tom",
+              "src": "sound_5",
+              "length": 0.0625
+            },
+            {
+              "name": "High Tom",
+              "src": "sound_6",
+              "length": 0.0625
+            },
+            {
+              "name": "Ride",
+              "src": "sound_7",
+              "length": 0.0625
+            },
+            {
+              "name": "Cymbal",
+              "src": "sound_8",
+              "length": 0.0625
+            }
+          ]
+        },
+        {
           "name": "Machine",
           "path": "machine",
           "type": "kit",
@@ -1048,14 +1094,14 @@
         },
         {
           "name": "Beats",
-          "subTitle": "Code.org",
           "path": "beats",
           "imageSrc": "thumbnail.png",
           "sounds": [
-            {
-              "src": "preview",
-              "preview": true
-            },
+            {"name": "Drum Kit Disco", "src": "drum_kit_disco", "length": 2, "type": "beat"},
+            {"name": "Drum Beat EDM", "src": "drum_beat_edm", "length": 2, "type": "beat"},
+            {"name": "Drum Beat Club", "src": "drum_beat_club", "length": 2, "type": "beat"},
+            {"name": "Drum Beat Knock", "src": "drum_beat_knock", "length": 2, "type": "beat"},
+            {"name": "Drum Kit Pop", "src": "drum_kit_pop", "length": 2, "type": "beat"},
             {
               "name": "Groovy Beat",
               "src": "groovy_beat",
@@ -1192,10 +1238,11 @@
         },
         {
           "name": "Bass",
-          "subTitle": "Code.org",
           "path": "bass",
           "imageSrc": "thumbnail.png",
           "sounds": [
+            {"name": "Bass Synth Glow Up", "src": "bass_synth_glow_up", "length": 2, "type": "bass"},
+            {"name": "Bass Home Steady", "src": "bass_home_steady", "length": 2, "type": "bass"},
             {
               "name": "Funky Bass",
               "src": "funky_bass",
@@ -1248,7 +1295,6 @@
         },
         {
           "name": "Leads",
-          "subTitle": "Code.org",
           "path": "leads",
           "imageSrc": "thumbnail.png",
           "sounds": [
