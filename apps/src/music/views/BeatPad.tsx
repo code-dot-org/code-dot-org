@@ -28,6 +28,7 @@ const BeatPad: React.FunctionComponent<BeatPadProps> = ({
           <button
             type="button"
             id={trigger.id}
+            key={trigger.id}
             className={classNames(
               styles.triggerButton,
               trigger.id === selectedTriggerId && styles.triggerButtonSelected,
