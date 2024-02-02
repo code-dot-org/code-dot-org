@@ -2,6 +2,7 @@
 - require 'cpa'
 - require 'policies/child_account'
 - require 'policies/lti'
+- require 'policies/user'
 - @page_title = t('activerecord.attributes.user.edit_header')
 - no_email = current_user.no_personal_email? || params[:noEmail] == 'true'
 
@@ -265,8 +266,8 @@
       authenticationOptions: current_user.authentication_options.map(&:summarize),
       isGoogleClassroomStudent: current_user.google_classroom_student?,
       isCleverStudent: current_user.clever_student?,
-      dependentStudents: current_user.dependent_students,
-      studentCount: current_user.students.count,
+      dependentStudentsCount: current_user.dependent_students_count,
+      dependentStudentsCountLimit: Policies::User::DEPENDENT_STUDENTS_COUNT_LIMIT,
       personalAccountLinkingEnabled: @personal_account_linking_enabled,
     }.to_json
   }

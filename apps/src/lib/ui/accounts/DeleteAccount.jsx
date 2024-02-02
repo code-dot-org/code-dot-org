@@ -10,9 +10,7 @@ import {
 } from './DeleteAccountHelpers';
 import {navigateToHref} from '@cdo/apps/utils';
 import BootstrapButton from './BootstrapButton';
-import PersonalLoginDialog, {
-  dependentStudentsShape,
-} from './PersonalLoginDialog';
+import PersonalLoginDialog from './PersonalLoginDialog';
 import DeleteAccountDialog from './DeleteAccountDialog';
 import AdminAccountDialog from './AdminAccountDialog';
 
@@ -29,15 +27,20 @@ const DEFAULT_STATE = {
   deleteError: '',
 };
 
-const dependedUponForLogin = ({isTeacher, hasStudents, dependentStudents}) => {
-  return isTeacher && hasStudents && dependentStudents.length > 0;
+const dependedUponForLogin = ({
+  isTeacher,
+  hasStudents,
+  dependentStudentsCount,
+}) => {
+  return isTeacher && hasStudents && dependentStudentsCount > 0;
 };
 
 export default class DeleteAccount extends React.Component {
   static propTypes = {
     isPasswordRequired: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired,
-    dependentStudents: dependentStudentsShape,
+    dependentStudentsCount: PropTypes.number.isRequired,
+    dependentStudentsCountLimit: PropTypes.number.isRequired,
     hasStudents: PropTypes.bool.isRequired,
     isAdmin: PropTypes.bool.isRequired,
   };
@@ -168,8 +171,13 @@ export default class DeleteAccount extends React.Component {
   };
 
   render() {
-    const {isTeacher, dependentStudents, isPasswordRequired, isAdmin} =
-      this.props;
+    const {
+      isTeacher,
+      dependentStudentsCount,
+      dependentStudentsCountLimit,
+      isPasswordRequired,
+      isAdmin,
+    } = this.props;
     const {
       isPersonalLoginDialogOpen,
       isAdminAccountDialogOpen,
@@ -205,7 +213,8 @@ export default class DeleteAccount extends React.Component {
         </div>
         <PersonalLoginDialog
           isOpen={isPersonalLoginDialogOpen}
-          dependentStudents={dependentStudents}
+          dependentStudentsCount={dependentStudentsCount}
+          dependentStudentsCountLimit={dependentStudentsCountLimit}
           onCancel={this.togglePersonalLoginDialog}
           onConfirm={this.goToDeleteAccountDialog}
         />

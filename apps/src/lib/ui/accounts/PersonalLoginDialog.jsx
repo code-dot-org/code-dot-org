@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import _ from 'lodash';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
@@ -10,25 +9,23 @@ import {ADD_A_PERSONAL_LOGIN_HELP_URL} from '@cdo/apps/lib/util/urlHelpers';
 
 const GUTTER = 20;
 
-export const dependentStudentsShape = PropTypes.arrayOf(
-  PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    username: PropTypes.string.isRequired,
-  })
-).isRequired;
-
 export default class PersonalLoginDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
-    dependentStudents: dependentStudentsShape,
+    dependentStudentsCount: PropTypes.number.isRequired,
+    dependentStudentsCountLimit: PropTypes.number.isRequired,
     onCancel: PropTypes.func.isRequired,
     onConfirm: PropTypes.func.isRequired,
   };
 
   render() {
-    const {isOpen, dependentStudents, onCancel, onConfirm} = this.props;
-    const sortedStudents = _.sortBy(dependentStudents, ['name']);
+    const {
+      isOpen,
+      dependentStudentsCount,
+      dependentStudentsCountLimit,
+      onCancel,
+      onConfirm,
+    } = this.props;
 
     return (
       <BaseDialog
@@ -42,22 +39,16 @@ export default class PersonalLoginDialog extends React.Component {
           <p>
             <strong style={styles.dangerText}>
               {i18n.personalLoginDialog_body1({
-                numStudents: dependentStudents.length,
+                numStudents:
+                  dependentStudentsCount === dependentStudentsCountLimit
+                    ? `${dependentStudentsCount}+`
+                    : dependentStudentsCount,
               })}
             </strong>
             {i18n.personalLoginDialog_body2({
-              numStudents: dependentStudents.length,
+              numStudents: dependentStudentsCount,
             })}
           </p>
-          <div style={styles.studentBox}>
-            {sortedStudents.map((student, index) => {
-              return (
-                <div key={student.id} className="uitest-dependent-student">
-                  {index + 1}. {student.name} ({student.username})
-                </div>
-              );
-            })}
-          </div>
           <p>
             {i18n.personalLoginDialog_body3()}
             <strong>{i18n.personalLoginDialog_body4()}</strong>

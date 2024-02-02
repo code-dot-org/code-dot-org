@@ -1843,7 +1843,7 @@
   "perfectDescription": "PERFECT!",
   "performanceLevel": "Performance Level",
   "performanceLevelDetails": "Performance Level Details",
-  "personalLoginDialog_body1": "Deleting your account will also delete the following {numStudents, plural, one {student's account} other {# students' accounts}} ",
+  "personalLoginDialog_body1": "Deleting your account will also delete {numStudents, plural, one {student's account} other {# students' accounts}} ",
   "personalLoginDialog_body2": "unless they create a personal login for their {numStudents, plural, one {account} other {accounts}} first:",
   "personalLoginDialog_body3": "Please give your students a chance to keep using their Code.org accounts by ",
   "personalLoginDialog_body4": "sending these instructions home with them ",
