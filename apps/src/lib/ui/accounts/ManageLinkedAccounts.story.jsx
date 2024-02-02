@@ -25,7 +25,6 @@ const mockAuthenticationOptions = {
 };
 
 export default {
-  title: 'ManageLinkedAccounts',
   component: ManageLinkedAccounts,
 };
 

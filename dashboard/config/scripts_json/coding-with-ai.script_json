@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "coding-with-ai",
-    "serialized_at": "2024-01-31 01:11:47 UTC",
+    "serialized_at": "2024-02-01 16:29:42 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1503,7 +1503,7 @@
       "key": "4a85ac76-647f-45f4-bc73-cc8b523109c0",
       "position": 2,
       "properties": {
-        "description": "[levels 1-3]"
+        "progression_name": "Temperature Check Explanations"
       },
       "seeding_key": {
         "activity_section.key": "4a85ac76-647f-45f4-bc73-cc8b523109c0",
@@ -1840,6 +1840,28 @@
       "level_keys": [
         "CwAI-L1-L1-Warm up Quotes"
       ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Temperature Check Explanations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_temp_check_L4_1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "4a85ac76-647f-45f4-bc73-cc8b523109c0"
+      },
+      "level_keys": [
+        "Code wAI_temp_check_L4_1"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1853,6 +1875,18 @@
         "lesson_group.key": "",
         "script.name": "coding-with-ai",
         "activity_section.key": "ea08fba2-c9ac-4f75-84d3-c3fc544f6e34"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_temp_check_L4_1",
+        "script_level.level_keys": [
+          "Code wAI_temp_check_L4_1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "4a85ac76-647f-45f4-bc73-cc8b523109c0"
       }
     }
   ],
