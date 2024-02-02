@@ -79,6 +79,7 @@ require_dependency 'queries/script_activity'
 require 'policies/child_account'
 require 'services/child_account'
 require 'policies/lti'
+require 'policies/user'
 require 'services/user'
 
 class User < ApplicationRecord
@@ -2568,6 +2569,11 @@ class User < ApplicationRecord
       dependent_students << student.summarize if student.depends_on_teacher_for_login?
     end
     dependent_students
+  end
+
+  def dependent_students_count
+    # Limit the number of students to mitigiate slow page loads on /users/edit
+    students.limit(Policies::User::DEPENDENT_STUDENTS_COUNT_LIMIT).uniq.count
   end
 
   def providers

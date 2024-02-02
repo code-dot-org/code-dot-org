@@ -12,7 +12,8 @@ const DEFAULT_PROPS = {
   isPasswordRequired: true,
   isTeacher: false,
   hasStudents: false,
-  dependentStudents: [],
+  dependentStudentsCount: 3,
+  dependentStudentsCountLimit: 100,
   isAdmin: false,
 };
 
@@ -76,31 +77,17 @@ describe('DeleteAccount', () => {
 
     describe('for teachers', () => {
       it('displays PersonalLoginDialog with dependent student info if depended upon for login', () => {
-        const dependentStudents = [
-          {id: 1, name: 'Student B', username: 'student_b'},
-          {id: 3, name: 'Student A', username: 'student_a'},
-          {id: 2, name: 'Student C', username: 'student_c'},
-        ];
         const wrapper = mount(
           <DeleteAccount
             {...DEFAULT_PROPS}
             isTeacher={true}
             hasStudents={true}
-            dependentStudents={dependentStudents}
           />
         );
         const deleteAccountButton = wrapper.find('BootstrapButton').at(0);
         deleteAccountButton.simulate('click');
         const personalLoginDialog = wrapper.find('PersonalLoginDialog');
         expect(personalLoginDialog).to.exist;
-        const studentElements = personalLoginDialog.find(
-          '.uitest-dependent-student'
-        );
-        expect(studentElements).to.have.length(3);
-        // Make sure students are sorted alphabetically by name
-        expect(studentElements.at(0)).to.contain.text('Student A');
-        expect(studentElements.at(1)).to.contain.text('Student B');
-        expect(studentElements.at(2)).to.contain.text('Student C');
       });
 
       it('is disabled if not all checkboxes are checked', () => {
