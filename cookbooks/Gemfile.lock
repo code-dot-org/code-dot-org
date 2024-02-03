@@ -91,7 +91,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     fauxhai (4.1.0)
       net-ssh
-    ffi (1.9.21)
+    ffi (1.16.3)
     ffi-yajl (2.3.1)
       libyajl2 (~> 1.2)
     gssapi (1.2.0)
