@@ -76,7 +76,7 @@ describe('DeleteAccount', () => {
     });
 
     describe('for teachers', () => {
-      it('displays PersonalLoginDialog with dependent student info if depended upon for login', () => {
+      it('displays PersonalLoginDialog with dependent student count if depended upon for login', () => {
         const wrapper = mount(
           <DeleteAccount
             {...DEFAULT_PROPS}
