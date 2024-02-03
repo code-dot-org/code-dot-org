@@ -132,14 +132,15 @@ class CPExpressInstallInstructions extends React.Component {
             Set your Circuit Playground Express to Bootloader Mode
             <div style={style.oneColumn}>
               <ul>
+                <li>{applabI18n.makerSetupWebSerialConnectToComputer()}</li>
                 <li>
                   Press or double-press the RESET button in the center of the
                   board.
                 </li>
                 <li>
-                  You've successfully entered bootloader mode when the LEDs turn
-                  green and your computer detects a new removable storage device
-                  called 'CPLAYBOOT'.
+                  You've successfully entered bootloader mode when all the LEDs
+                  turn green and your computer detects a new removable storage
+                  device called 'CPLAYBOOT'.
                 </li>
                 <li>
                   If pressing RESET once doesn't work, try double-pressing it.
