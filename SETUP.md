@@ -140,7 +140,7 @@ Setup steps for macOS:
     1. `brew install git-lfs`
     1. From your homedir, run: `git lfs install`
        - This adds a `[filter "lfs"]` section to your `~/.gitconfig`.
-       - Note: the install command must be run while you are **outside** a git repo directory. If you run it from inside a git repo, it will instead try to install git hooks in that repo.
+       - Note: the install command must be run while you are **outside** a git repo directory. If you run it from inside a git repo, it will instead attempt to install git hooks in that repo.
 
 1. Install [Redis](https://redis.io/) via `brew install redis`
 
