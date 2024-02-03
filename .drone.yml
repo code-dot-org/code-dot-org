@@ -23,7 +23,7 @@ steps:
       - echo "Running on $hostname"
 
   - name: clone
-    image: docker:git
+    image: bitnami/git
     commands:
       - git clone --branch $DRONE_SOURCE_BRANCH  --depth 200 $DRONE_GIT_HTTP_URL .
       - git reset --hard $DRONE_COMMIT
@@ -122,7 +122,7 @@ steps:
       - echo "Running on $hostname"
 
   - name: clone
-    image: docker:git
+    image: bitnami/git
     commands:
       - git clone --branch $DRONE_SOURCE_BRANCH  --depth 200 $DRONE_GIT_HTTP_URL .
       - git reset --hard $DRONE_COMMIT
@@ -212,6 +212,6 @@ trigger:
     - pull_request
 ---
 kind: signature
-hmac: 16bcb15e956614400105b1bb0e9644cc92fbd8f0e9ef542ca0da95508cb6355c
+hmac: b396055d7c3c1714623033157ffa3013a98daf7d202e94d63e7108bec59923f5
 
 ...
