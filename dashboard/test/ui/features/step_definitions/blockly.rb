@@ -23,6 +23,16 @@ When(/^I click block field "([^"]*)"$/) do |selector|
   @browser.execute_script(code)
 end
 
+# This helps click on a field in Google Blockly.
+When(/^I click block field "([^"]*)" number (\d+)$/) do |selector, index|
+  code = <<~CODE
+    $("#{selector}")[#{index}].dispatchEvent(new PointerEvent('pointerdown', {bubbles: true}));
+    $("#{selector}")[#{index}].dispatchEvent(new PointerEvent('pointerup', {bubbles: true}));
+  CODE
+
+  @browser.execute_script(code)
+end
+
 # Note: this is an offset relative to the current position of the block
 When /^I drag block "([^"]*)" to offset "([^"]*), ([^"]*)"$/ do |block_id, dx, dy|
   drag_block_relative(get_block_id(block_id), dx, dy)
