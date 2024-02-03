@@ -140,11 +140,11 @@ Setup steps for macOS:
     1. `brew install git-lfs`
     1. From your homedir, run: `git lfs install`
        - This adds a `[filter "lfs"]` section to your `~/.gitconfig`.
-       - Note: the install command must be run while you are **outside** a git repo directory. If you run it from inside a git repo, it will instead attempt to install git hooks in that repo.
+       - Note: the install command must be run while you are **outside** a git repo directory. If you run it from inside a git repo, it'll instead attempt to install git hooks in that repo.
 
-1. Install [Redis](https://redis.io/) via `brew install redis`
+2. Install [Redis](https://redis.io/) via `brew install redis`
 
-1. Install [MySql 5.7](https://dev.mysql.com/doc/refman/5.7/en/) via `brew install mysql@5.7`
+3. Install [MySql 5.7](https://dev.mysql.com/doc/refman/5.7/en/) via `brew install mysql@5.7`
    1. Set up your local MySQL server
       1. Force link 5.7 version via `brew link mysql@5.7 --force`
       2. Start mysql with `brew services start mysql@5.7`, which uses [Homebrew services](https://github.com/Homebrew/homebrew-services) to manage things for you.
@@ -154,19 +154,19 @@ Setup steps for macOS:
           3. `brew services start mysql@5.7`
           4. Confirm MySQL has started by running `brew services` again.
 
-1. Install the **Java 8 JSK**
+4. Install the **Java 8 JSK**
    1. `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`
    2. Or by installing [sdkman](https://sdkman.io/) and installing a suitable JDK. Similar to **rbenv** and **nvm**, **sdkman** allows you to switch between versions of Java.
       1. Different versions will be available depending on your system architecture, use `sdk list java` to identify a Java 8 JDK available for ARM architecture.
       2. `sdk install java <version identifier>` to install a version
       3. `sdk default java <installed version>` to ensure it is the default for future shells.
 
-1. Install and configure **rbenv**
+5. Install and configure **rbenv**
     1. Install: `brew install rbenv`
     2. Run `echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc` to configure ZSH to use **rbenv**. See https://github.com/rbenv/rbenv#basic-git-checkout for instructions on configuring bash and other shells.
     3. Reload your .zshrc to load **rbenv**: `source ~/.zshrc`
 
-1. Install **Ruby**
+6. Install **Ruby**
     1. For non-M1 systems (including M1 systems using Rosetta), running `rbenv install --skip-existing` from the project root directory should be sufficient.
     2. For Apple Silicon, special configuration is required to set *libffi* options correctly. The following is a single line to execute.
 
@@ -174,7 +174,7 @@ Setup steps for macOS:
       optflags="-Wno-error=implicit-function-declaration" LDFLAGS="-L/opt/homebrew/opt/libffi/lib" CPPFLAGS="-I/opt/homebrew/opt/libffi/include" PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig" rbenv install --skip-existing
       ```
 
-1. *(Optional)* Install **pdftk**, which is not available as a standard Homebrew formula. Skipping this will cause some PDF related tests to fail. See <https://leancrew.com/all-this/2017/01/pdftk/> and <https://github.com/turforlag/homebrew-cervezas/pull/1> for more information about pdftk on macOS.
+7. *(Optional)* Install **pdftk**, which is not available as a standard Homebrew formula. Skipping this will cause some PDF related tests to fail. See <https://leancrew.com/all-this/2017/01/pdftk/> and <https://github.com/turforlag/homebrew-cervezas/pull/1> for more information about pdftk on macOS.
 
     ```sh
     curl -O https://raw.githubusercontent.com/zph/homebrew-cervezas/master/pdftk.rb
@@ -182,24 +182,24 @@ Setup steps for macOS:
     rm ./pdftk.rb
     ```
 
-1. Install an assortment of additional packages via `brew install enscript gs imagemagick ruby-build coreutils parallel tidy-html5`
+8. Install an assortment of additional packages via `brew install enscript gs imagemagick ruby-build coreutils parallel tidy-html5`
 
-1. Install [Node Version Manager](https://github.com/nvm-sh/nvm) and install Node
+9. Install [Node Version Manager](https://github.com/nvm-sh/nvm) and install Node
     1. Install NVM via `brew install nvm`
 
     2. Running `nvm install` or `nvm use` within the project directory will install and use the version specified in [.nvmrc](.nvmrc)
 
     3. Running `nvm alias default $(cat ./.nvmrc)` will set your default node version for future shells.
 
-1. Enable **corepack** to install **yarn**: `corepack enable`
+10. Enable **corepack** to install **yarn**: `corepack enable`
 
-1. Install **OpenSSL**
+11. Install **OpenSSL**
     1. Run `brew install openssl`
     2. Following the instructions in the output, run a form of `export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/`
 
-1. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
+12. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
 
-1. Return to the [Overview](#overview) to continue installation and clone the code-dot-org repo. Note that there are additional steps for Apple Silicon (M1) / Intel Mac when it comes to `bundle install` and `bundle exec rake ...` commands, which are noted in their respective steps.
+13. Return to the [Overview](#overview) to continue installation and clone the code-dot-org repo. Note that there are additional steps for Apple Silicon (M1) / Intel Mac when it comes to `bundle install` and `bundle exec rake ...` commands, which are noted in their respective steps.
 
 ### Ubuntu 20.04
 [Ubuntu 20.04 iso download][ubuntu-iso-url]
