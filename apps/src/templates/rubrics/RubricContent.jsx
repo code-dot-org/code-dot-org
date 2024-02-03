@@ -5,7 +5,6 @@ import i18n from '@cdo/locale';
 import {
   BodyThreeText,
   BodyTwoText,
-  Heading2,
   Heading5,
 } from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -15,14 +14,12 @@ import {
   rubricShape,
   studentLevelInfoShape,
 } from './rubricShapes';
-import LearningGoal from './LearningGoal';
 import LearningGoals from './LearningGoals';
 import Button from '@cdo/apps/templates/Button';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import classnames from 'classnames';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import experiments from '@cdo/apps/util/experiments';
 import StudentSelector from './StudentSelector';
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 
@@ -95,39 +92,6 @@ export default function RubricContent({
     }
   };
 
-  const getAiUnderstanding = learningGoalId => {
-    if (!!aiEvaluations) {
-      const aiInfo = aiEvaluations.find(
-        item => item.learning_goal_id === learningGoalId
-      );
-      return aiInfo?.understanding;
-    } else {
-      return null;
-    }
-  };
-
-  const getAiConfidence = learningGoalId => {
-    if (!!aiEvaluations) {
-      const aiInfo = aiEvaluations.find(
-        item => item.learning_goal_id === learningGoalId
-      );
-      return aiInfo?.ai_confidence;
-    } else {
-      return null;
-    }
-  };
-
-  const getAiInfo = learningGoalId => {
-    if (!!aiEvaluations) {
-      const aiInfo = aiEvaluations.find(
-        item => item.learning_goal_id === learningGoalId
-      );
-      return aiInfo;
-    } else {
-      return null;
-    }
-  };
-
   let infoText = null;
   if (!onLevelForEvaluation) {
     infoText = i18n.rubricCanOnlyBeEvaluatedOnProjectLevelAlert();
@@ -137,40 +101,29 @@ export default function RubricContent({
 
   return (
     <div
-      className={classnames(
-        {[style.rubricContent]: !experiments.isEnabled('ai-rubrics-redesign')},
-        {
-          [style.visibleRubricContent]: visible,
-          [style.hiddenRubricContent]: !visible,
-        }
-      )}
+      className={classnames({
+        [style.visibleRubricContent]: visible,
+        [style.hiddenRubricContent]: !visible,
+      })}
     >
       {infoText && <InfoAlert text={infoText} />}
       <div className={style.studentInfoGroup}>
-        {!experiments.isEnabled('ai-rubrics-redesign') &&
-          !!studentLevelInfo && (
-            <Heading2 className={style.studentName}>
-              {studentLevelInfo.name}
-            </Heading2>
-          )}
         <Heading5>
           {i18n.lessonNumbered({
             lessonNumber: lesson.position,
             lessonName: lesson.name,
           })}
         </Heading5>
-        {experiments.isEnabled('ai-rubrics-redesign') && (
-          <div className={style.selectors}>
-            <SectionSelector reloadOnChange={true} requireSelection={false} />
-            <StudentSelector
-              styleName={style.studentSelector}
-              selectedUserId={
-                studentLevelInfo ? studentLevelInfo.user_id : null
-              }
-              reloadOnChange={true}
-            />
-          </div>
-        )}
+
+        <div className={style.selectors}>
+          <SectionSelector reloadOnChange={true} requireSelection={false} />
+          <StudentSelector
+            styleName={style.studentSelector}
+            selectedUserId={studentLevelInfo ? studentLevelInfo.user_id : null}
+            reloadOnChange={true}
+          />
+        </div>
+
         {!!studentLevelInfo && (
           <div className={style.studentInfo}>
             <div className={style.levelAndStudentDetails}>
@@ -209,43 +162,20 @@ export default function RubricContent({
           </div>
         )}
       </div>
-      {experiments.isEnabled('ai-rubrics-redesign') ? (
-        // TODO: remove tempContainer div when experiment is ready to roll out
-        <div className={style.tempContainer}>
-          <Heading5>{i18n.rubric()}</Heading5>
-          <LearningGoals
-            open={open}
-            learningGoals={rubric.learningGoals}
-            teacherHasEnabledAi={teacherHasEnabledAi}
-            canProvideFeedback={canProvideFeedback}
-            reportingData={reportingData}
-            studentLevelInfo={studentLevelInfo}
-            isStudent={false}
-            feedbackAdded={feedbackAdded}
-            setFeedbackAdded={setFeedbackAdded}
-            aiEvaluations={aiEvaluations}
-          />
-        </div>
-      ) : (
-        <div className={style.learningGoalContainer}>
-          {rubric.learningGoals.map(lg => (
-            <LearningGoal
-              key={lg.key}
-              learningGoal={lg}
-              teacherHasEnabledAi={teacherHasEnabledAi}
-              canProvideFeedback={canProvideFeedback}
-              reportingData={reportingData}
-              studentLevelInfo={studentLevelInfo}
-              aiUnderstanding={getAiUnderstanding(lg.id)}
-              aiConfidence={getAiConfidence(lg.id)}
-              isStudent={false}
-              feedbackAdded={feedbackAdded}
-              setFeedbackAdded={setFeedbackAdded}
-              aiEvalInfo={getAiInfo(lg.id)}
-            />
-          ))}
-        </div>
-      )}
+
+      <Heading5>{i18n.rubric()}</Heading5>
+      <LearningGoals
+        open={open}
+        learningGoals={rubric.learningGoals}
+        teacherHasEnabledAi={teacherHasEnabledAi}
+        canProvideFeedback={canProvideFeedback}
+        reportingData={reportingData}
+        studentLevelInfo={studentLevelInfo}
+        isStudent={false}
+        feedbackAdded={feedbackAdded}
+        setFeedbackAdded={setFeedbackAdded}
+        aiEvaluations={aiEvaluations}
+      />
 
       {canProvideFeedback && (
         <div className={style.rubricContainerFooter}>

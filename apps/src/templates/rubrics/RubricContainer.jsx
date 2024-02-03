@@ -2,7 +2,6 @@ import React, {useCallback, useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
 import classnames from 'classnames';
-import i18n from '@cdo/locale';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
@@ -13,7 +12,6 @@ import {
 import RubricContent from './RubricContent';
 import RubricSettings from './RubricSettings';
 import RubricTabButtons from './RubricTabButtons';
-import experiments from '@cdo/apps/util/experiments';
 
 const TAB_NAMES = {
   RUBRIC: 'rubric',
@@ -72,7 +70,7 @@ export default function RubricContainer({
   // Currently the settings tab only provides a way to manually run AI.
   // In the future, we should update or remove this conditional when we
   // add more functionality to the settings tab.
-  const showSettings = canProvideFeedback && teacherHasEnabledAi;
+  const showSettings = onLevelForEvaluation && teacherHasEnabledAi;
 
   return (
     <div
@@ -80,29 +78,7 @@ export default function RubricContainer({
         [style.hiddenRubricContainer]: !open,
       })}
     >
-      <div
-        className={
-          experiments.isEnabled('ai-rubrics-redesign')
-            ? style.rubricHeaderRedesign
-            : style.rubricHeader
-        }
-      >
-        {!experiments.isEnabled('ai-rubrics-redesign') && (
-          <div className={style.rubricHeaderLeftSide}>
-            <HeaderTab
-              text={i18n.rubric()}
-              isSelected={selectedTab === TAB_NAMES.RUBRIC}
-              onClick={() => setSelectedTab(TAB_NAMES.RUBRIC)}
-            />
-            {showSettings && (
-              <HeaderTab
-                text={i18n.settings()}
-                isSelected={selectedTab === TAB_NAMES.SETTINGS}
-                onClick={() => setSelectedTab(TAB_NAMES.SETTINGS)}
-              />
-            )}
-          </div>
-        )}
+      <div className={style.rubricHeaderRedesign}>
         <div className={style.rubricHeaderRightSide}>
           <button
             type="button"
@@ -114,24 +90,18 @@ export default function RubricContainer({
         </div>
       </div>
 
-      <div
-        className={classnames({
-          [style.fabBackground]: experiments.isEnabled('ai-rubrics-redesign'),
-        })}
-      >
-        {experiments.isEnabled('ai-rubrics-redesign') && (
-          <RubricTabButtons
-            tabSelectCallback={tabSelectCallback}
-            selectedTab={selectedTab}
-            showSettings={showSettings}
-            canProvideFeedback={canProvideFeedback}
-            teacherHasEnabledAi={teacherHasEnabledAi}
-            studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
-            refreshAiEvaluations={fetchAiEvaluations}
-            rubric={rubric}
-            studentName={studentLevelInfo && studentLevelInfo.name}
-          />
-        )}
+      <div className={style.fabBackground}>
+        <RubricTabButtons
+          tabSelectCallback={tabSelectCallback}
+          selectedTab={selectedTab}
+          showSettings={showSettings}
+          canProvideFeedback={canProvideFeedback}
+          teacherHasEnabledAi={teacherHasEnabledAi}
+          studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
+          refreshAiEvaluations={fetchAiEvaluations}
+          rubric={rubric}
+          studentName={studentLevelInfo && studentLevelInfo.name}
+        />
 
         <RubricContent
           rubric={rubric}
@@ -146,13 +116,8 @@ export default function RubricContainer({
         />
         {showSettings && (
           <RubricSettings
-            canProvideFeedback={canProvideFeedback}
-            teacherHasEnabledAi={teacherHasEnabledAi}
-            studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
             visible={selectedTab === TAB_NAMES.SETTINGS}
-            refreshAiEvaluations={fetchAiEvaluations}
             rubric={rubric}
-            studentName={studentLevelInfo && studentLevelInfo.name}
             sectionId={sectionId}
           />
         )}

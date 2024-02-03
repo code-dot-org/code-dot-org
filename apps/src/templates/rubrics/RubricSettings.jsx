@@ -11,9 +11,7 @@ import {
 } from '@cdo/apps/componentLibrary/typography';
 import {rubricShape} from './rubricShapes';
 import Button from '@cdo/apps/templates/Button';
-import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
-import experiments from '@cdo/apps/util/experiments';
 import Link from '@cdo/apps/componentLibrary/link/Link';
 
 const STATUS = {
@@ -54,12 +52,6 @@ const STATUS_ALL = {
   ERROR: 'error',
 };
 
-const fetchAiEvaluationStatus = (rubricId, studentUserId) => {
-  return fetch(
-    `/rubrics/${rubricId}/ai_evaluation_status_for_user?user_id=${studentUserId}`
-  );
-};
-
 const fetchAiEvaluationStatusAll = (rubricId, sectionId) => {
   return fetch(
     `/rubrics/${rubricId}/ai_evaluation_status_for_all?section_id=${sectionId}`
@@ -67,55 +59,23 @@ const fetchAiEvaluationStatusAll = (rubricId, sectionId) => {
 };
 
 export default function RubricSettings({
-  canProvideFeedback,
-  studentUserId,
   visible,
   refreshAiEvaluations,
   rubric,
-  studentName,
   sectionId,
 }) {
   const rubricId = rubric.id;
   const {lesson} = rubric;
   const [csrfToken, setCsrfToken] = useState('');
-  const [status, setStatus] = useState(STATUS.INITIAL_LOAD);
   const polling = useMemo(
-    () =>
-      status === STATUS.EVALUATION_PENDING ||
-      status === STATUS.EVALUATION_RUNNING ||
-      statusAll === STATUS_ALL.EVALUATION_PENDING,
-    [status, statusAll]
+    () => statusAll === STATUS_ALL.EVALUATION_PENDING,
+    [statusAll]
   );
   const [statusAll, setStatusAll] = useState(STATUS_ALL.INITIAL_LOAD);
   const [unevaluatedCount, setUnevaluatedCount] = useState(0);
   const [totalCount, setTotalCount] = useState(0);
   const [evaluatedCount, setEvaluatedCount] = useState(0);
   const [showDetails, setShowDetails] = useState(false);
-
-  const statusText = () => {
-    switch (status) {
-      case STATUS.INITIAL_LOAD:
-        return i18n.aiEvaluationStatus_initial_load();
-      case STATUS.NOT_ATTEMPTED:
-        return i18n.aiEvaluationStatus_not_attempted();
-      case STATUS.ALREADY_EVALUATED:
-        return i18n.aiEvaluationStatus_already_evaluated();
-      case STATUS.READY:
-        return null;
-      case STATUS.SUCCESS:
-        return i18n.aiEvaluationStatus_success();
-      case STATUS.EVALUATION_PENDING:
-        return i18n.aiEvaluationStatus_pending();
-      case STATUS.EVALUATION_RUNNING:
-        return i18n.aiEvaluationStatus_in_progress();
-      case STATUS.ERROR:
-        return i18n.aiEvaluationStatus_error();
-      case STATUS.PII_ERROR:
-        return i18n.aiEvaluationStatus_pii_error();
-      case STATUS.PROFANITY_ERROR:
-        return i18n.aiEvaluationStatus_profanity_error();
-    }
-  };
 
   const statusAllText = () => {
     switch (statusAll) {
@@ -145,49 +105,12 @@ export default function RubricSettings({
     });
   };
 
-  const studentButtonText = () => {
-    return i18n.runAiAssessment({
-      studentName: studentName,
-    });
-  };
-
   const showHideDetails = () => {
-    console.log('Hello it clicked');
     setShowDetails(!showDetails);
   };
 
   useEffect(() => {
-    if (!!rubricId && !!studentUserId && !!sectionId) {
-      fetchAiEvaluationStatus(rubricId, studentUserId).then(response => {
-        if (!response.ok) {
-          setStatus(STATUS.ERROR);
-        } else {
-          response.json().then(data => {
-            // we can't fetch the csrf token from the DOM because CSRF protection
-            // is disabled on script level pages.
-            setCsrfToken(data.csrfToken);
-            if (!data.attempted) {
-              setStatus(STATUS.NOT_ATTEMPTED);
-            } else if (data.lastAttemptEvaluated) {
-              setStatus(STATUS.ALREADY_EVALUATED);
-            } else if (data.status === RubricAiEvaluationStatus.QUEUED) {
-              setStatus(STATUS.EVALUATION_PENDING);
-            } else if (data.status === RubricAiEvaluationStatus.RUNNING) {
-              setStatus(STATUS.EVALUATION_RUNNING);
-            } else if (data.status === RubricAiEvaluationStatus.FAILURE) {
-              setStatus(STATUS.ERROR);
-            } else if (data.status === RubricAiEvaluationStatus.PII_VIOLATION) {
-              setStatus(STATUS.PII_ERROR);
-            } else if (
-              data.status === RubricAiEvaluationStatus.PROFANITY_VIOLATION
-            ) {
-              setStatus(STATUS.PROFANITY_ERROR);
-            } else {
-              setStatus(STATUS.READY);
-            }
-          });
-        }
-      });
+    if (!!rubricId && !!sectionId) {
       fetchAiEvaluationStatusAll(rubricId, sectionId).then(response => {
         if (!response.ok) {
           setStatusAll(STATUS_ALL.ERROR);
@@ -210,40 +133,11 @@ export default function RubricSettings({
         }
       });
     }
-  }, [rubricId, studentUserId, sectionId]);
+  }, [rubricId, sectionId]);
 
   useEffect(() => {
-    if (polling && !!rubricId && !!studentUserId && !!sectionId) {
+    if (polling && !!rubricId && !!sectionId) {
       const intervalId = setInterval(() => {
-        fetchAiEvaluationStatus(rubricId, studentUserId).then(response => {
-          if (!response.ok) {
-            setStatus(STATUS.ERROR);
-          } else {
-            response.json().then(data => {
-              if (
-                data.lastAttemptEvaluated &&
-                data.status === RubricAiEvaluationStatus.SUCCESS
-              ) {
-                setStatus(STATUS.SUCCESS);
-                refreshAiEvaluations();
-              } else if (data.status === RubricAiEvaluationStatus.QUEUED) {
-                setStatus(STATUS.EVALUATION_PENDING);
-              } else if (data.status === RubricAiEvaluationStatus.RUNNING) {
-                setStatus(STATUS.EVALUATION_RUNNING);
-              } else if (data.status === RubricAiEvaluationStatus.FAILURE) {
-                setStatus(STATUS.ERROR);
-              } else if (
-                data.status === RubricAiEvaluationStatus.PII_VIOLATION
-              ) {
-                setStatus(STATUS.PII_ERROR);
-              } else if (
-                data.status === RubricAiEvaluationStatus.PROFANITY_VIOLATION
-              ) {
-                setStatus(STATUS.PROFANITY_ERROR);
-              }
-            });
-          }
-        });
         fetchAiEvaluationStatusAll(rubricId, sectionId).then(response => {
           if (!response.ok) {
             setStatusAll(STATUS_ALL.ERROR);
@@ -266,25 +160,7 @@ export default function RubricSettings({
       }, 5000);
       return () => clearInterval(intervalId);
     }
-  }, [rubricId, studentUserId, polling, sectionId, refreshAiEvaluations]);
-
-  const handleRunAiAssessment = () => {
-    setStatus(STATUS.EVALUATION_PENDING);
-    const url = `/rubrics/${rubricId}/run_ai_evaluations_for_user`;
-    const params = {user_id: studentUserId};
-    fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-CSRF-Token': csrfToken,
-      },
-      body: JSON.stringify(params),
-    }).then(response => {
-      if (!response.ok) {
-        setStatus(STATUS.ERROR);
-      }
-    });
-  };
+  }, [rubricId, polling, sectionId, refreshAiEvaluations]);
 
   const handleRunAiAssessmentAll = () => {
     setStatusAll(STATUS_ALL.EVALUATION_PENDING);
@@ -299,69 +175,44 @@ export default function RubricSettings({
       body: JSON.stringify(params),
     }).then(response => {
       if (!response.ok) {
-        setStatus(STATUS_ALL.ERROR);
+        setStatusAll(STATUS_ALL.ERROR);
       }
     });
   };
 
   return (
     <div
-      className={classnames(
-        'uitest-rubric-settings',
-        {[style.settings]: !experiments.isEnabled('ai-rubrics-redesign')},
-        {
-          [style.settingsVisible]: visible,
-          [style.settingsHidden]: !visible,
-        }
-      )}
+      className={classnames('uitest-rubric-settings', {
+        [style.settingsVisible]: visible,
+        [style.settingsHidden]: !visible,
+      })}
     >
-      {!experiments.isEnabled('ai-rubrics-redesign') && (
-        <Heading2>{i18n.settings()}</Heading2>
-      )}
-      {experiments.isEnabled('ai-rubrics-redesign') && (
-        <div className={style.studentInfoGroup}>
-          <Heading5>
-            {i18n.lessonNumbered({
-              lessonNumber: lesson.position,
-              lessonName: lesson.name,
-            })}
-          </Heading5>
-          <div className={style.selectors}>
-            <SectionSelector reloadOnChange={true} requireSelection={false} />
-          </div>
+      <div className={style.studentInfoGroup}>
+        <Heading5>
+          {i18n.lessonNumbered({
+            lessonNumber: lesson.position,
+            lessonName: lesson.name,
+          })}
+        </Heading5>
+        <div className={style.selectors}>
+          <SectionSelector reloadOnChange={true} requireSelection={false} />
         </div>
-      )}
+      </div>
 
-      {canProvideFeedback && !experiments.isEnabled('ai-rubrics-redesign') && (
-        <div className={style.aiAssessmentOptions}>
-          <div>
-            <BodyTwoText>
-              <StrongText>{i18n.aiAssessment()}</StrongText>
+      <div className={style.settingsGroup}>
+        <Heading2>{i18n.aiAssessment()}</Heading2>
+        <div className={style.settingsContainers}>
+          <div className={style.runAiAllStatuses}>
+            <BodyTwoText className="uitest-eval-status-all-text">
+              <StrongText>{summaryText()}</StrongText>
             </BodyTwoText>
-            <BodyTwoText>{i18n.runAiAssessmentDescription()}</BodyTwoText>
-          </div>
-          <Button
-            className="uitest-run-ai-assessment"
-            text={studentButtonText()}
-            color={Button.ButtonColor.brandSecondaryDefault}
-            onClick={handleRunAiAssessment}
-            style={{margin: 0}}
-            disabled={status !== STATUS.READY}
-          >
-            {polling && <i className="fa fa-spinner fa-spin" />}
-          </Button>
-          <BodyTwoText className="uitest-eval-status-text">
-            {statusText() || ''}
-          </BodyTwoText>
-          <div>
-            <BodyTwoText>
-              <StrongText>{i18n.aiAssessmentAll()}</StrongText>
-            </BodyTwoText>
-            <BodyTwoText>{i18n.runAiAssessmentDescriptionAll()}</BodyTwoText>
+            {statusAllText() && (
+              <BodyTwoText>{statusAllText() || ''}</BodyTwoText>
+            )}
           </div>
           <Button
             className="uitest-run-ai-assessment-all"
-            text={i18n.runAiAssessmentAll()}
+            text={i18n.runAiAssessmentClass()}
             color={Button.ButtonColor.brandSecondaryDefault}
             onClick={handleRunAiAssessmentAll}
             style={{margin: 0}}
@@ -371,63 +222,29 @@ export default function RubricSettings({
               <i className="fa fa-spinner fa-spin" />
             )}
           </Button>
-          <BodyTwoText className="uitest-eval-status-all-text">
-            {statusAllText() || ''}
-          </BodyTwoText>
-        </div>
-      )}
-
-      {canProvideFeedback && experiments.isEnabled('ai-rubrics-redesign') && (
-        <div className={style.settingsGroup}>
-          <Heading2>{i18n.aiAssessment()}</Heading2>
-          <div className={style.settingsContainers}>
-            <div className={style.runAiAllStatuses}>
-              <BodyTwoText className="uitest-eval-status-all-text">
-                <StrongText>{summaryText()}</StrongText>
-              </BodyTwoText>
-              {statusAllText() && (
-                <BodyTwoText>{statusAllText() || ''}</BodyTwoText>
-              )}
-            </div>
-            <Button
-              className="uitest-run-ai-assessment-all"
-              text={i18n.runAiAssessmentClass()}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              onClick={handleRunAiAssessmentAll}
-              style={{margin: 0}}
-              disabled={statusAll !== STATUS_ALL.READY}
+          <div className={style.detailsGroup}>
+            <BodyTwoText
+              className={
+                showDetails ? style.detailsVisible : style.detailsHidden
+              }
             >
-              {statusAll === STATUS_ALL.EVALUATION_PENDING && (
-                <i className="fa fa-spinner fa-spin" />
-              )}
-            </Button>
-            <div className={style.detailsGroup}>
-              <BodyTwoText
-                className={
-                  showDetails ? style.detailsVisible : style.detailsHidden
-                }
-              >
-                {i18n.aiEvaluationDetails()}
-              </BodyTwoText>
-              <Link onClick={showHideDetails}>
-                {showDetails ? 'Hide Deatils' : 'Show Details'}
-              </Link>
-            </div>
+              {i18n.aiEvaluationDetails()}
+            </BodyTwoText>
+            <Link onClick={showHideDetails}>
+              {showDetails ? i18n.hideDetails() : i18n.showDetails()}
+            </Link>
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }
 
 RubricSettings.propTypes = {
-  canProvideFeedback: PropTypes.bool,
   teacherHasEnabledAi: PropTypes.bool,
   updateTeacherAiSetting: PropTypes.func,
-  studentUserId: PropTypes.number,
   visible: PropTypes.bool,
   refreshAiEvaluations: PropTypes.func,
   rubric: rubricShape.isRequired,
-  studentName: PropTypes.string,
   sectionId: PropTypes.number,
 };
