@@ -2571,11 +2571,6 @@ class User < ApplicationRecord
     dependent_students
   end
 
-  def dependent_students_count
-    # Limit the number of students to mitigiate slow page loads on /users/edit
-    students.limit(Policies::User::DEPENDENT_STUDENTS_COUNT_LIMIT).uniq.count
-  end
-
   def providers
     if migrated?
       authentication_options.map(&:credential_type)
