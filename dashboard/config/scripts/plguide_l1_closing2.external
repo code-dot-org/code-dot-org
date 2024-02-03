@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Closing a Module 
+# Closing a Course
 
 #### This page should include:
 * #### Congratulating the learner
@@ -11,7 +11,10 @@ markdown <<MARKDOWN
 * #### Next steps (other PL options and links to courses) 
 * #### Thank you 
 
-## Module Wrap Up Exemplar: 
+___
+
+## Exemplar
+
 # Congratulations, you are finished! 
 
 <img src="https://images.code.org/da2033ad4fc1471a7729b273fc29d630-image-1673466799576.png" alt="Image of dance party chaacters celebrating" style="float: left; height: 350px; clear: both; margin: 0 20px 20px 0;">

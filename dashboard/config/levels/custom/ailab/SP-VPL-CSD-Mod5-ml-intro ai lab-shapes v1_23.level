@@ -1,5 +1,6 @@
 <Ailab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 67,
   "created_at": "2023-07-04T19:53:41.000Z",
   "level_num": "custom",
@@ -18,11 +19,10 @@
     "mode": "{\r\n  \"datasets\": [\r\n    \"shapes_v1_toy\"\r\n  ],\r\n  \"hideSelectLabel\": true,\r\n  \"hideSave\": true,\r\n  \"requireAccuracy\": 100\r\n}",
     "long_instructions": "This level has dynamic instructions that change as you interact with AI Lab.\r\n\r\n- _The instructions for the **Select Feature** screen say:_ Now you can decide what **features** you want to use to train your model. These are the inputs of your machine learning model - it's where AI Bot will look for patterns to help make its decision. **Do This:** Choose a column to investigate as a potential feature.\r\n\r\n\t- _The instructions when you click a categorical feature say:_ When you select a column, additional information appears on the right panel. This can help you decide if this is a useful feature for predicting your label. You can learn more in the Help and Tips section of these instructions. **Do This:** Decide if you would like to use this column as a feature. If so, press the \"Add Feature\" button. If not, select a new column to explore. When you are finished selecting your feature(s), click the **Train** button in the lower right hand corner or the screen.\r\n\r\n- _The instructions for the **Results** screen say:_ On this screen, you can see how accurate AI Bot when comparing its predictions to the testing data that we already know the answers to.  **Do This:** Keep training your model until you have at least 100% accuracy\r\n\r\n\t- _The instructions when you click the details panel say:_ This screen shows you the individual rows AI Bot got correct or incorrect. This can help explain why this model earned the accuracy score that it did. You can learn more about how accuracy is calculated in the Help and Tips panel.\r\n\r\n",
     "video_key": "csd_ml_intro_ai_lab_july2021",
-    "teacher_markdown": "**Additional Resources:** This level is _not_ intended to be completed independently by students or in a self-paced manner - students should be following along with instructions from a teacher and completing information in an activity guide. [See the lesson plan](.././) for more information about how to support students in completing this level.",
+    "teacher_markdown": "**Additional Resources:** This level is _not_ intended to be completed independently by students or in a self-paced manner - students should be following along with instructions from a teacher and completing information in an activity guide. [See the lesson plan](https://studio.code.org/s/aiml-2023/lessons/7) for more information about how to support students in completing this level.",
     "name_suffix": "_23"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-07-04T19:53:41.054+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSD-Mod5-ml-intro ai lab-shapes v1_-22\\\"\"],\"cloned_from\":\"SP-VPL-CSD-Mod5-ml-intro ai lab-shapes v1_-22\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-07-04T19:53:41.054+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSD-Mod5-ml-intro ai lab-shapes v1_-22\\\"\"],\"cloned_from\":\"SP-VPL-CSD-Mod5-ml-intro ai lab-shapes v1_-22\"},{\"changed_at\":\"2024-02-02 15:28:33 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Ailab>
