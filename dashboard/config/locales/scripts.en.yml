@@ -14834,18 +14834,44 @@ en:
               name: Conditionals
             lesson-5:
               name: Functions
+            lesson-6:
+              name: Overview
           lesson_groups: {}
           name: self-paced-pl-microbit-2024-1
           title: CSF Levels
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "#### This module is a short introduction to both Code.org and this professional learning course. \n\n#### **You will:**\n* #### Get an introduction to Code.org and CS Fundamentals Maker with micro:bit.\n* #### add objective \n* #### Learn how to engage in this professional learning course.\n\n#### **Suggested Time:** 10 minutes"
+          student_description: "#### This module is a short introduction to both Code.org and this professional learning course. \n\n#### **You will:**\n* #### Get an introduction to Code.org and CS Fundamentals Maker with micro:bit.\n* #### add objective \n* #### Learn how to engage in this professional learning course.\n\n#### **Suggested Time:** 10 minutes"
         self-paced-pl-microbit-2024-2:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Overview
+            lesson-2:
+              name: Meet your micro:bit
+            lesson-3:
+              name: Next Steps
           lesson_groups: {}
           name: self-paced-pl-microbit-2024-2
           title: microbit levels
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        gen-ai-foundations-draft:
+          lessons: {}
+          lesson_groups: {}
+          name: gen-ai-foundations-draft
+          title: "[Draft] Gen AI - Foundations of LLMs"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        gen-ai-customizing-draft:
+          lessons: {}
+          lesson_groups: {}
+          name: gen-ai-customizing-draft
+          title: "[Draft] Gen AI - Customizing LLMs"
           description_audience: ''
           description_short: ''
           description: ''
