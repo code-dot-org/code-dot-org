@@ -267,7 +267,7 @@
     "@typescript-eslint/parser": "^5.57.0",
     "ace-builds": "^1.4.12",
     "blockly": "9.3.3",
-    "crypto-js": "^3.1.9-1",
+    "crypto-js": "^4.2.0",
     "dapjs": "^2.3.0",
     "details-element-polyfill": "https://github.com/javan/details-element-polyfill",
     "filesaver.js": "0.2.0",
