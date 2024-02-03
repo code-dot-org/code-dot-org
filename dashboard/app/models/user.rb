@@ -537,7 +537,9 @@ class User < ApplicationRecord
   validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: -> {errors.blank?}
   validates_uniqueness_of :username, case_sensitive: false, on: :update, if: -> {errors.blank? && username_changed?}
   validates_presence_of :username, if: :username_required?
-  validate :check_username_profanity, if: -> {username_changed?}
+  validate :check_username_profanity, on: :update,  if: -> {username_changed?}
+
+  validate :check_username_profanity, on: :create, unless: -> {defer_age}
   before_validation :generate_username, on: :create
 
   validates_presence_of     :password, if: :password_required?
@@ -970,9 +972,18 @@ class User < ApplicationRecord
   end
 
   private def check_username_profanity
-    if ProfanityFilter.find_potential_profanity(username, locale).present?
-      errors.add(:username, :not_allowed)
+    id = self.id
+    throttle_ip = id.blank?
+    limit = throttle_ip ?
+      DCDO.get('profanity_request_limit_per_min_ip', 1000) :
+      DCDO.get('profanity_request_limit_per_min_default', 100)
+    period = 60
+
+    ProfanityHelper.throttled_find_profanities(username, locale, id, limit, period) do |profanities|
+      errors.add(:username, :not_allowed) if profanities.present?
+      return false
     end
+    errors.add(:base, :too_many_requests)
   end
 
   def update_without_password(params, *options)

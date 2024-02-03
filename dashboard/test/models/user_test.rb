@@ -5074,7 +5074,14 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "profanity not allowed in username" do
-    ProfanityFilter.stubs(:find_potential_profanity).returns true
+    ProfanityHelper.stubs(:throttled_find_profanities).yields(["badword"])
+    assert_raises(ActiveRecord::RecordInvalid) do
+      create(:user, username: 'badword')
+    end
+  end
+
+  test "throttles user too many username profanity checks" do
+    ProfanityHelper.stubs(:throttled_find_profanities).returns(nil)
     assert_raises(ActiveRecord::RecordInvalid) do
       create(:user, username: 'badword')
     end

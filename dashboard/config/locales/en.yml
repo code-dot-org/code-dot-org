@@ -49,6 +49,7 @@ en:
         invalid: "is invalid"
         invalid_plural: "are invalid"
         not_allowed: "is not allowed"
+        too_many_requests: "Too many requests"
     attributes:
       user:
         name: 'Display Name'
