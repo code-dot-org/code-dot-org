@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
 
-export default {title: 'ProjectCard', component: ProjectCard};
+export default {component: ProjectCard};
 
 const defaultData = {
   channel: 'abcdef',

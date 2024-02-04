@@ -5,3 +5,15 @@ initializeRTL();
 
 //Stub jquery fileupload library function
 $.fn.fileupload = () => {};
+
+export const parameters = {
+  options: {
+    storySort: {
+      order: [
+        'DesignSystem',
+        'templates',
+        'code-studio',
+      ],
+    }
+  }
+};

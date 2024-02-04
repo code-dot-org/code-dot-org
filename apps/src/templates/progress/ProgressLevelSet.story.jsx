@@ -6,7 +6,6 @@ import {reduxStore} from '@cdo/storybook/decorators';
 import {Provider} from 'react-redux';
 
 export default {
-  title: 'ProgressLevelSet',
   component: ProgressLevelSet,
 };
 
