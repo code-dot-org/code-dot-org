@@ -298,7 +298,6 @@ const harvesterMap = [
 ];
 
 export default {
-  title: 'MazeThumbnail',
   component: MazeThumbnail,
 };
 
