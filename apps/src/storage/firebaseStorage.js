@@ -1207,6 +1207,7 @@ FirebaseStorage.previewSharedTable = function (
   });
 };
 
+// Unsubscribe Firebase from a table
 FirebaseStorage.unsubscribeFromTable = function (tableName) {
   const projectStorageRef = getPathRef(getProjectDatabase(), 'storage');
   const sharedStorageRef = getPathRef(getSharedDatabase(), 'storage');
