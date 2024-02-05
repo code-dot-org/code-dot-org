@@ -31,9 +31,6 @@ end
 # Get user IDs of all students in the teacher_user's sections
 follower_ids = teacher_user.followers.pluck(:student_user_id)
 
-# Get user IDs based on usernames
-# user_ids = User.where(username: usernames).pluck(:id)
-
 # Delete all progress
 student_ids.each do |student_id|
   if follower_ids.include?(student_id)
