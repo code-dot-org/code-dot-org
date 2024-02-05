@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import SectionProjectsList from './SectionProjectsList';
+import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
 class SectionProjectsListWithData extends Component {
   static propTypes = {
@@ -37,7 +38,7 @@ class SectionProjectsListWithData extends Component {
     const {projectsData} = this.state;
 
     return (
-      <div>
+      <div className={dashboardStyles.dashboardPage}>
         {this.state.isLoading && <Spinner />}
         {!this.state.isLoading && (
           <SectionProjectsList

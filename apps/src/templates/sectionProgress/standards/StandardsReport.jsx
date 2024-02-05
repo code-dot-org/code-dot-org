@@ -28,6 +28,7 @@ import {loadUnitProgress} from '../sectionProgressLoader';
 import PrintReportButton from './PrintReportButton';
 import {cstaStandardsURL} from './standardsConstants';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
 class StandardsReport extends Component {
   static propTypes = {
@@ -96,7 +97,7 @@ class StandardsReport extends Component {
       this.props.numLessonsInUnit !== 0 &&
       this.props.lessonsByStandard !== null;
     return (
-      <div>
+      <div className={dashboardStyles.dashboardPage}>
         {!teacherDashboardInformationHasLoaded && (
           <FontAwesome
             id="uitest-spinner"

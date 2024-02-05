@@ -33,6 +33,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {CSVLink} from 'react-csv';
 import FeedbackDownload from './FeedbackDownload';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
 const CSV_ASSESSMENT_HEADERS = [
   {label: i18n.name(), key: 'studentName'},
@@ -195,7 +196,7 @@ class SectionAssessments extends Component {
       this.props.assessmentId === ASSESSMENT_FEEDBACK_OPTION_ID;
 
     return (
-      <div>
+      <div className={dashboardStyles.dashboardPage}>
         <div style={styles.selectors}>
           <div style={styles.unitSelection}>
             <div style={{...h3Style, ...styles.header}}>

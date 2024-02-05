@@ -20,6 +20,8 @@ import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
+import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
+import classNames from 'classnames';
 
 function TeacherDashboard({
   studioUrlPrefix,
@@ -134,7 +136,9 @@ function TeacherDashboard({
         {coursesWithProgress.length === 0 && (
           <Route
             component={() => (
-              <div style={styles.text}>
+              <div
+                style={classNames(styles.text, dashboardStyles.dashboardPage)}
+              >
                 <SafeMarkdown markdown={i18n.noProgressSection()} />
               </div>
             )}

@@ -9,6 +9,7 @@ import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import orderBy from 'lodash/orderBy';
 import {getSelectedScriptName} from '@cdo/apps/redux/unitSelectionRedux';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
 class StatsTable extends Component {
   static propTypes = {
@@ -180,8 +181,8 @@ class StatsTable extends Component {
     return (
       <Table.Provider
         columns={columns}
-        style={styles.table}
         id="uitest-stats-table"
+        className={dashboardStyles.dashboardPage}
       >
         <Table.Header />
         <Table.Body rows={sortedRows} rowKey="id" />
@@ -191,9 +192,6 @@ class StatsTable extends Component {
 }
 
 const styles = {
-  table: {
-    width: '100%',
-  },
   rightAlignText: {
     textAlign: 'right',
   },

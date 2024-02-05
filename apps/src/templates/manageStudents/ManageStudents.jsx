@@ -5,6 +5,7 @@ import ManageStudentsTable from './ManageStudentsTable';
 import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
 import {loadSectionStudentData} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
 class ManageStudents extends React.Component {
   static propTypes = {
@@ -24,7 +25,7 @@ class ManageStudents extends React.Component {
     const {sectionId, studioUrlPrefix, isLoadingStudents} = this.props;
 
     return (
-      <div>
+      <div className={dashboardStyles.dashboardPage}>
         {isLoadingStudents && <Spinner />}
         {!isLoadingStudents && (
           <div>
