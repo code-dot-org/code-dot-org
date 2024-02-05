@@ -1208,6 +1208,7 @@ FirebaseStorage.previewSharedTable = function (
 };
 
 // Unsubscribe Firebase from a table
+// One
 FirebaseStorage.unsubscribeFromTable = function (tableName) {
   const projectStorageRef = getPathRef(getProjectDatabase(), 'storage');
   const sharedStorageRef = getPathRef(getSharedDatabase(), 'storage');
