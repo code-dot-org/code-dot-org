@@ -18,7 +18,6 @@ import AppConfig, {getBlockMode, setAppConfig} from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
 import {loadLibrary} from '../utils/Loader';
 import MusicValidator from '../progress/MusicValidator';
-import Video from './Video';
 import {
   setIsPlaying,
   setCurrentPlayheadPosition,
@@ -36,6 +35,8 @@ import {
   setUndoStatus,
   showCallout,
   clearCallout,
+  setSelectedTriggerId,
+  clearSelectedTriggerId,
 } from '../redux/musicRedux';
 import KeyHandler from './KeyHandler';
 import Callouts from './Callouts';
@@ -57,6 +58,7 @@ import {isEqual} from 'lodash';
 import HeaderButtons from './HeaderButtons';
 import MusicLibrary from '../player/MusicLibrary';
 import {setUpBlocklyForMusicLab} from '../blockly/setup';
+import {TRIGGER_FIELD} from '../blockly/constants';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -85,7 +87,9 @@ class UnconnectedMusicView extends React.Component {
     setCurrentPlayheadPosition: PropTypes.func,
     selectedBlockId: PropTypes.string,
     selectBlockId: PropTypes.func,
+    setSelectedTriggerId: PropTypes.func,
     clearSelectedBlockId: PropTypes.func,
+    clearSelectedTriggerId: PropTypes.func,
     timelineAtTop: PropTypes.bool,
     showInstructions: PropTypes.bool,
     instructionsPosition: PropTypes.string,
@@ -142,7 +146,6 @@ class UnconnectedMusicView extends React.Component {
     }
 
     this.state = {
-      showingVideo: !!this.props.inIncubator,
       loadedLibrary: false,
       currentLibraryName: null,
       hasLoadedInitialSounds: false,
@@ -192,14 +195,19 @@ class UnconnectedMusicView extends React.Component {
     }
 
     // When changing levels, stop playback and reset the initial sounds loaded flag
-    // since a new set of sounds will be loaded on the next level.  Also clear
-    // the callout that's showing.
-    if (prevProps.currentLevelIndex !== this.props.currentLevelIndex) {
+    // since a new set of sounds will be loaded on the next level.  Also clear the
+    // callout that might be showing, and dispose of the Blockly workspace so that
+    // any lingering UI is removed.
+    if (
+      prevProps.currentLevelIndex !== this.props.currentLevelIndex &&
+      this.props.appName === 'music'
+    ) {
       this.stopSong();
       this.setState({
         hasLoadedInitialSounds: false,
       });
       this.props.clearCallout();
+      this.musicBlocklyWorkspace.dispose();
     }
 
     if (
@@ -207,6 +215,11 @@ class UnconnectedMusicView extends React.Component {
       !this.props.isPlaying
     ) {
       this.musicBlocklyWorkspace.selectBlock(this.props.selectedBlockId);
+      this.props.setSelectedTriggerId(
+        this.musicBlocklyWorkspace.getSelectedTriggerId(
+          this.props.selectedBlockId
+        )
+      );
     }
 
     // Using stringified JSON for deep comparison
@@ -352,6 +365,14 @@ class UnconnectedMusicView extends React.Component {
     // dragging a block near the bottom of the workspace.
     if (e.type === Blockly.Events.VIEWPORT_CHANGE) {
       return;
+    }
+
+    if (e.type === Blockly.Events.CHANGE) {
+      if (e.element === 'field' && e.name === TRIGGER_FIELD) {
+        this.props.setSelectedTriggerId(
+          this.musicBlocklyWorkspace.getSelectedTriggerId(e.blockId)
+        );
+      }
     }
 
     // Update undo status when blocks change.
@@ -540,6 +561,7 @@ class UnconnectedMusicView extends React.Component {
     this.props.setIsPlaying(true);
     this.props.setCurrentPlayheadPosition(this.props.startingPlayheadPosition);
     this.props.clearSelectedBlockId();
+    this.props.clearSelectedTriggerId();
   };
 
   stopSong = () => {
@@ -570,10 +592,6 @@ class UnconnectedMusicView extends React.Component {
       'https://docs.google.com/forms/d/e/1FAIpQLScnUgehPPNjhSNIcCpRMcHFgtE72TlfTOh6GkER6aJ-FtIwTQ/viewform?usp=sf_link',
       '_blank'
     );
-  };
-
-  onVideoClosed = () => {
-    this.setState({showingVideo: false});
   };
 
   renderInstructions(position) {
@@ -654,9 +672,6 @@ class UnconnectedMusicView extends React.Component {
   }
 
   render() {
-    const showVideo =
-      AppConfig.getValue('show-video') !== 'false' && this.state.showingVideo;
-
     const {timelineAtTop, showInstructions, instructionsPosition} = this.props;
 
     return (
@@ -677,10 +692,6 @@ class UnconnectedMusicView extends React.Component {
           {showInstructions &&
             instructionsPosition === InstructionsPositions.TOP &&
             this.renderInstructions(InstructionsPositions.TOP)}
-
-          {showVideo && (
-            <Video id="initial-modal-0" onClose={this.onVideoClosed} />
-          )}
 
           {timelineAtTop && this.renderPlayArea(true)}
 
@@ -746,6 +757,8 @@ const MusicView = connect(
     setCurrentPlayheadPosition: currentPlayheadPosition =>
       dispatch(setCurrentPlayheadPosition(currentPlayheadPosition)),
     selectBlockId: blockId => dispatch(selectBlockId(blockId)),
+    setSelectedTriggerId: id => dispatch(setSelectedTriggerId(id)),
+    clearSelectedTriggerId: () => dispatch(clearSelectedTriggerId()),
     clearSelectedBlockId: () => dispatch(clearSelectedBlockId()),
     setShowInstructions: showInstructions =>
       dispatch(setShowInstructions(showInstructions)),

@@ -10,7 +10,6 @@
     "background": "music-black",
     "long_instructions": "#### Functions\n\nYou can organize your music using functions.\n\nClick [Functions](#clickable=toolbox-first-row), then drag [bass](#clickable=toolbox-second-block) to [when run](#clickable=when-run-block), to play the content of the bass function.",
     "level_data": {
-      "library": "will",
       "startSources": {
         "blocks": {
           "languageVersion": 0,
@@ -74,11 +73,11 @@
               "value": 1
             }
           ],
-          "message": "Nice work!",
+          "message": "Nice work.  You successfully used the function to play a sound.",
           "next": true
         },
         {
-          "message": "Please play a sound by calling the function."
+          "message": "Please play a sound by using the function."
         }
       ]
     },

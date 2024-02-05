@@ -23,6 +23,6 @@
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:26.224+00:00\",\"changed\":[\"cloned from \\\"CSD U2 HTML Adding Paragraphs_2023\\\"\"],\"cloned_from\":\"CSD U2 HTML Adding Paragraphs_2023\"},{\"changed_at\":\"2024-01-10 18:11:04 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:26.224+00:00\",\"changed\":[\"cloned from \\\"CSD U2 HTML Adding Paragraphs_2023\\\"\"],\"cloned_from\":\"CSD U2 HTML Adding Paragraphs_2023\"},{\"changed_at\":\"2024-01-10 18:11:04 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-02 16:46:52 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>
