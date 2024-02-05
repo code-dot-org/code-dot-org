@@ -20,7 +20,6 @@ import {
 import {allowConsoleWarnings} from '../../../../test/util/testUtils';
 
 export default {
-  title: 'ActivitiesEditor',
   component: ActivitiesEditor,
 };
 
