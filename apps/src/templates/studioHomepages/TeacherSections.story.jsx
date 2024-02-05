@@ -9,7 +9,6 @@ import teacherSections, {
 import TeacherSections from './TeacherSections';
 
 export default {
-  title: 'TeacherSections',
   component: TeacherSections,
 };
 
