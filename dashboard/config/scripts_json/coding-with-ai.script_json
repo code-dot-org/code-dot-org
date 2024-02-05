@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "coding-with-ai",
-    "serialized_at": "2024-01-30 01:25:25 UTC",
+    "serialized_at": "2024-02-02 16:46:30 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -83,6 +83,9 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "overview": "In the third lesson of the Coding with AI module, students engage in various activities that integrate AI into algorithm planning. They explore pseudocode generation, complexity analysis, visual algorithm representations, program documentation, and comparing algorithms with AI assistance. The lesson also emphasizes ethical considerations and personal value reflections regarding the use of AI in the creative process of algorithm planning.\n\n**Question of the Day:** How can AI enhance your ability to develop and understand algorithms, and what ethical considerations should be noted?",
+        "purpose": "* Teachers may wish to use our How AI Works lessons if they feel their students would benefit from the content before this lesson.\n* Teachers who are not completing all five Coding with AI lessons back-to-back might consider teaching Lesson 1 before teaching this lesson\n* Determine which version of the Digital Journal your students will need to use based on if you are teaching all five Coding with AI lessons or just this individual lesson\n* Print out copies of the AI Strategies handout",
+        "student_overview": "In this lesson, you'll dive into the world of algorithms, working alongside AI to create, analyze, and visualize your own algorithmic solutions. You will also reflect on the ethical aspects of using AI in coding, helping you develop a well-rounded understanding of AI's role in the creative process of programming.\n\n**Question of the Day:** How can AI enhance your ability to develop and understand algorithms, and what ethical considerations should be noted?"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -98,6 +101,9 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "overview": "This lesson of the \"Coding with AI\" module focuses on Debugging with AI. Students will engage in practical exercises using AI to identify and correct errors in pseudocode, optimize code for performance and readability, and participate in step-by-step debugging. The lesson emphasizes ethical considerations and personal reflection on using AI in the debugging process, encouraging students to form their value statements regarding AI's role in coding and creativity.\n\n**Question of the Day:** How does integrating AI into the debugging process impact the balance between a programmer's creativity and problem-solving efficiency?",
+        "purpose": "* Teachers may wish to use our How AI Works lessons if they feel their students would benefit from the content before this lesson.\n* Teachers who are not completing all five Coding with AI lessons back-to-back might consider teaching Lesson 1 before teaching this lesson.\n* Determine which version of the Digital Journal your students will need to use based on whether you are teaching all five Coding with AI lessons or just this individual lesson.\n* Print out copies of the AI Strategies handout",
+        "student_overview": "In this lesson, you'll dive into debugging and optimizing code, using AI to spot and fix errors and make our code sleeker. Plus, we'll have a thoughtful discussion on how AI shapes our coding ethics and creativity, shaping our guidelines for when and how to use AI in programming.\n\n**Question of the Day:** How does integrating AI into the debugging process impact the balance between a programmer's creativity and problem-solving efficiency?"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -113,6 +119,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "overview": "This lesson of the \"Coding with AI\" module has students experience using AI to enhance completed programs through activities like feature expansion, analyzing user feedback, and reviewing documentation. They engage in discussions about ethical concerns related to AI-assisted feature suggestions and the creative process in coding, culminating in creating personal value statements for using AI in program development and improvement.\n\n**Question of the Day:** How can AI tools ethically enhance the functionality of a finished program?",
+        "purpose": "* Teachers may wish to use our How AI Works lessons if they feel their students would benefit from the content before this lesson.\n* Teachers who are not completing all five Coding with AI lessons back-to-back might consider teaching Lesson 1 before teaching this lesson.\n* Determine which version of the Digital Journal your students will need to use based on if you are teaching all five Coding with AI lessons or just this individual lesson.\n* Print out copies of the AI Strategies handout.",
+        "student_overview": "In this lesson, you'll explore how AI can help you improve your finished programs. You'll learn to expand features, analyze user feedback, and refine documentation with AI's help. We will also discuss important ethical aspects of using AI in coding, shaping our guidelines for when and how to use AI in programming.\n\n**Question of the Day:** How can AI tools ethically enhance the functionality of a finished program?"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -194,10 +203,205 @@
       "key": "7de6a9f1-25b9-4752-bc3e-ecc2e3eba8dc",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "7de6a9f1-25b9-4752-bc3e-ecc2e3eba8dc",
         "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai"
+      }
+    },
+    {
+      "key": "4de954ae-dc51-45ad-83fd-4591668ab651",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4de954ae-dc51-45ad-83fd-4591668ab651",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai"
+      }
+    },
+    {
+      "key": "269bd526-267b-4e9b-a683-48fcd467a726",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "269bd526-267b-4e9b-a683-48fcd467a726",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai"
+      }
+    },
+    {
+      "key": "a36b5511-1489-40c0-92f3-b45b5fa6004f",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a36b5511-1489-40c0-92f3-b45b5fa6004f",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai"
+      }
+    },
+    {
+      "key": "71d610a1-efa3-4cbb-a8a6-e74da2d41285",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "71d610a1-efa3-4cbb-a8a6-e74da2d41285",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai"
+      }
+    },
+    {
+      "key": "7d30143c-921c-45ae-84cd-0d758f217091",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7d30143c-921c-45ae-84cd-0d758f217091",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai"
+      }
+    },
+    {
+      "key": "dc033ef4-fce2-41db-abb2-38a7de8168dd",
+      "position": 4,
+      "properties": {
+        "name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dc033ef4-fce2-41db-abb2-38a7de8168dd",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai"
+      }
+    },
+    {
+      "key": "5083a580-284b-4ff0-947b-c40701d87bbb",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5083a580-284b-4ff0-947b-c40701d87bbb",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai"
+      }
+    },
+    {
+      "key": "a34de563-e855-4699-8a3b-944c88fd9c0a",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a34de563-e855-4699-8a3b-944c88fd9c0a",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai"
+      }
+    },
+    {
+      "key": "9085b3f5-f16a-439b-9291-eeb75b489ab9",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9085b3f5-f16a-439b-9291-eeb75b489ab9",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai"
+      }
+    },
+    {
+      "key": "9bf840f4-a866-4387-a81c-bf4a4234eb5b",
+      "position": 4,
+      "properties": {
+        "name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9bf840f4-a866-4387-a81c-bf4a4234eb5b",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai"
+      }
+    },
+    {
+      "key": "c42c4cd6-1249-4c72-8e93-3cc035eb5ff8",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c42c4cd6-1249-4c72-8e93-3cc035eb5ff8",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai"
+      }
+    },
+    {
+      "key": "37a555b8-78f8-4f28-acef-97e7b7bc0feb",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "37a555b8-78f8-4f28-acef-97e7b7bc0feb",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai"
+      }
+    },
+    {
+      "key": "de8ba36b-d79a-4ec7-a32c-3e7004b327c4",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "de8ba36b-d79a-4ec7-a32c-3e7004b327c4",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai"
+      }
+    },
+    {
+      "key": "4043d02b-0211-4cfa-82a1-f6b54560cec8",
+      "position": 4,
+      "properties": {
+        "name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4043d02b-0211-4cfa-82a1-f6b54560cec8",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "coding-with-ai"
       }
@@ -342,7 +546,7 @@
       "key": "9505e381-2be9-4c07-a04d-4dd072e9a79d",
       "position": 4,
       "properties": {
-        "description": "[level 2-3]",
+        "progression_name": "Scenarios",
         "tips": [
           {
             "type": "teachingTip",
@@ -486,7 +690,7 @@
       "key": "8be047e9-d1c3-4184-a63a-a30a887763d2",
       "position": 2,
       "properties": {
-        "description": "[Levels 4 & 5]"
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "8be047e9-d1c3-4184-a63a-a30a887763d2",
@@ -560,10 +764,1054 @@
       "key": "edb91a27-9d17-42ef-94cd-5a0245a0a3c3",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss**: Does using AI for coding tasks diminish the skill and artistry of programming, or does it simply represent a new tool in a developer’s toolbox?\n\n**Discussion Goal**: Encourage students to share their initial thoughts, experiences, and any concerns or excitement that they have about AI’s role in coding, as there is no “right” answer here. The goal should be to foster a nuanced understanding among students about the evolving nature of programming in the AI era. This might include how AI could be seen as either a tool or as a threat to the traditional coding paradigm or even the ethical implications, such as dependency on AI, transparency, and accountability in AI-assisted coding. Encourage your students to think critically about the merits and challenges associated with AI-assisted coding.",
+        "name": "AI Discussion - Harmful or Helpful Tool?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While this discussion is important, try to keep it to 5 minutes to allow enough time for students to go through the AI strategies without being rushed."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "edb91a27-9d17-42ef-94cd-5a0245a0a3c3",
         "lesson_activity.key": "7de6a9f1-25b9-4752-bc3e-ecc2e3eba8dc"
+      }
+    },
+    {
+      "key": "71ef66fd-97c9-4d7b-bb69-350f45e3a32b",
+      "position": 2,
+      "properties": {
+        "description": "While ‌AI could lead to someone being overly dependent, we will explore how to use AI as a supportive tool. This means a tool that still puts us in the driver’s seat, making the final choices and thinking critically about its suggestions. \n\nWe’re going to start by trying out some strategies that we could use with AI when we are first starting a program, before we even start coding - the idea stage!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "71ef66fd-97c9-4d7b-bb69-350f45e3a32b",
+        "lesson_activity.key": "7de6a9f1-25b9-4752-bc3e-ecc2e3eba8dc"
+      }
+    },
+    {
+      "key": "f0c75a65-ef86-439e-a6ce-1eb1ff71b248",
+      "position": 1,
+      "properties": {
+        "description": "**Group**: Put students to work in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Give each pair a copy of the [r ai-assisted_program_prep_strategies/coding-with-ai/unversioned] handout.\n",
+        "duration": "15",
+        "name": "AI Strategies ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Printing suggestion**: It is a good idea to print the AI-Assisted Program Prep Strategies handout for each pair so that each strategy is on its own piece of paper (front and back). This approach will be less overwhelming than looking at a long, 8-page document on their computers.  "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f0c75a65-ef86-439e-a6ce-1eb1ff71b248",
+        "lesson_activity.key": "4de954ae-dc51-45ad-83fd-4591668ab651"
+      }
+    },
+    {
+      "key": "4efcefeb-35ac-4437-bbb0-88d711d31b74",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Direct each pair of students to make a single, shared copy of the [r initial_stages_strategies_digital_journal/coding-with-ai/unversioned].  \n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you will be completing all of this module's lessons back-to-back, without interruption, you should instead direct each pair of students to create a shared copy of the AI Strategies Journal. This version allows students to document each of the four lesson's AI strategies in one place. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4efcefeb-35ac-4437-bbb0-88d711d31b74",
+        "lesson_activity.key": "4de954ae-dc51-45ad-83fd-4591668ab651"
+      }
+    },
+    {
+      "key": "75d454e8-fd75-4324-a291-8ad78f08f2fd",
+      "position": 3,
+      "properties": {
+        "description": "Work with your partner to try these four AI strategies in the handout. As you explore, make sure you document your thoughts in your AI Strategies Journal about how supportive, or not, the strategies are and take screenshots of any interactions that were especially supportive and add them to your AI Strategies Journal. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "75d454e8-fd75-4324-a291-8ad78f08f2fd",
+        "lesson_activity.key": "4de954ae-dc51-45ad-83fd-4591668ab651"
+      }
+    },
+    {
+      "key": "7cdf6088-de4f-441b-ac72-582575d120cb",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Direct students to split the four strategies between themselves and their partner so that students will explore two each. Ensure students spend no more than 5 minutes trying out their two strategies so that they have time to share with their partner. Remind them to use their AI Initial Stages Strategies Journal to document their thoughts about how supportive, or not, each strategy was for them and to include screenshots of supportive interactions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Ensure students spend about 5 minutes trying out and discussing their two strategies with their partner. Remind them to refer to their AI Strategies Journal to help explain to their partner how supportive, or not, each strategy was for them.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Timing suggestion**: If you have more than the suggested 30 minutes for this activity, consider having each student explore all 4 strategies, rather than splitting them up jigsaw style as directed above. This will give students a better understanding of each strategy so that they can make an even more informed Value Statement at the end of the lesson. \n\nHowever, if you have the time to allow students to explore each strategy themselves, make sure you still leave time for the partners to share and discuss their experiences with one another to help students gain another perspective or even see how the AI responded differently for others. \n\nIf you decide to have students explore all four strategies themselves, you might also want each student to make their own individual copy of the AI Strategies Journal for their own thoughts and screenshots."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7cdf6088-de4f-441b-ac72-582575d120cb",
+        "lesson_activity.key": "4de954ae-dc51-45ad-83fd-4591668ab651"
+      }
+    },
+    {
+      "key": "76399fe6-a6ad-471f-90cb-337bc6804ede",
+      "position": 5,
+      "properties": {
+        "description": "**Circulate**: As you walk around, remind students what “supportive” means and let them know that each student, depending on their programming experience level, will probably differ in which strategies they find to be more or less supportive than others.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Each of the 4 strategies represents different steps of where students might be as they get started with a programming project, from very early stages of “I have an idea to create an adventure game but I don’t know exactly what I want” to “I know exactly what my idea is and the features I want in my program and would like some pseudocode to help get me started with one of those features.” \n\n**Differentiation Suggestions:**\n* You can choose to have your students try all 4 strategies (between themselves and their partner) or direct your students to start with a specific strategy or even focus on 1 or 2 strategies, depending on where you have noticed your students need more support and the time you have for this lesson.\n* Give students the option to use their own idea(s) for each strategy. \n* If students will be trying all 4 strategies, you can also have them start with one of the provided ideas in the first strategy and continue using that idea as they move on to the next strategies. The idea from the first strategy should be a nicely refined, detailed idea with library suggestions and pseudocode by the end of all four strategies."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The AI Strategies Journal can be used as a formative assessment to gauge understanding of the AI strategies presented.\n\nYou might choose to check students’ journals after each lesson or at the end of the module (if you are completing all five lessons)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "76399fe6-a6ad-471f-90cb-337bc6804ede",
+        "lesson_activity.key": "4de954ae-dc51-45ad-83fd-4591668ab651"
+      }
+    },
+    {
+      "key": "e35cb1b3-fc1e-467a-8682-6b993ebf5f23",
+      "position": 6,
+      "properties": {
+        "description": "Now that we’ve had some time to explore AI strategies we could potentially use when getting started on a program, let’s take a few minutes and discuss some other considerations before we make our official Values Statement for working with AI in the initial stages of programming.",
+        "duration": "15",
+        "name": "Reflection Stations",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e35cb1b3-fc1e-467a-8682-6b993ebf5f23",
+        "lesson_activity.key": "4de954ae-dc51-45ad-83fd-4591668ab651"
+      }
+    },
+    {
+      "key": "60b307fd-dc82-4118-9f67-485f90158b0c",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Explain the Reflection Stations and the steps for this reflection activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Give each student a copy of the [r reflection_stations_1/coding-with-ai/unversioned] activity guide.\n\n**Group**: Place students into pairs different from those they did the main activity with.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Direct students to complete the Reflection Stations with their partners. They will have about 2-3 minutes per station.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While going through the instructions for the stations found on slide 10, it may be helpful to either talk through the gif on the slide or demonstrate the flow to ensure students understand that they will be writing on and putting **two sticky notes** on each poster.\n* The first sticky note at each station will be used to place on a scale or on a chart **after** they write their reasons for their placement on that first sticky note\n* The second sticky note at each station will be used to write their answer to the second question and they will place this second sticky note under the question on the poster.\n\nYou can determine whether you would like students to put their names on their sticky notes to track participation. If you decide to have students add their names, it is suggested that they put their names on the back of the sticky notes so that students are more focused on the responses, rather than who wrote what. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "60b307fd-dc82-4118-9f67-485f90158b0c",
+        "lesson_activity.key": "4de954ae-dc51-45ad-83fd-4591668ab651"
+      }
+    },
+    {
+      "key": "b524aaa5-965b-448e-8c72-3bfbd8668b98",
+      "position": 8,
+      "properties": {
+        "description": "**Circulate**: Move around from station to station as students are working to ensure they are completing each station’s tasks. Read students’ responses on the station posters as you move around. You may notice some responses that you want to highlight and discuss when the class comes back together."
+      },
+      "seeding_key": {
+        "activity_section.key": "b524aaa5-965b-448e-8c72-3bfbd8668b98",
+        "lesson_activity.key": "4de954ae-dc51-45ad-83fd-4591668ab651"
+      }
+    },
+    {
+      "key": "9b9d85b5-f0ee-48aa-8126-80063fe98275",
+      "position": 9,
+      "properties": {
+        "description": "Great work everyone! I saw so many thoughtful and insightful responses on the sticky notes! Let’s take a look at what was said at each station.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9b9d85b5-f0ee-48aa-8126-80063fe98275",
+        "lesson_activity.key": "4de954ae-dc51-45ad-83fd-4591668ab651"
+      }
+    },
+    {
+      "key": "5de03594-3c29-474f-a8a4-ac54b96c19d5",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Direct students to go back to the station they started at for about 1 minute to take a look at the sticky placement and read their peer’s sticky note comments. Once time is up, direct students to the station they went to second and repeat. Remind students to write down any new ideas or reflections they have on their activity guide as they visit each station.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students do not need to go back to the 3rd station as that was the last station they were at and should have seen the station poster in its final version."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5de03594-3c29-474f-a8a4-ac54b96c19d5",
+        "lesson_activity.key": "4de954ae-dc51-45ad-83fd-4591668ab651"
+      }
+    },
+    {
+      "key": "6f6e2fb1-adfa-471e-8e5b-84085df25e78",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Display the slide for Station A.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss**: Have a quick discussion about the placement of sticky notes along the creativity scale. What do they notice? What do they wonder? Pick out a couple of sticky notes from the 2nd question on the poster to help drive the discussion of balancing creativity with using AI.\n\n**Discussion Goal**: The primary goal of this discussion is to foster a deeper understanding and self-awareness among students about the interplay between AI assistance and personal creativity in the coding process. Through reflecting on their experiences and sharing their perspectives, students are encouraged to explore how AI can be utilized as a tool to enhance, rather than hinder, their creative expression in coding projects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Display the slide for Station B.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss**: Have a quick discussion about the placement of sticky notes in the four quadrants. What do they notice? What do they wonder? Pick out a couple of sticky notes from the 2nd question on the poster to help drive the discussion of when they would use AI during the initial stages and when they would avoid using AI and why.\n\n**Discussion Goal**: The main goal of this discussion is to encourage students to reflect on their experiences and share their insights regarding the helpful and potentially limiting aspects of AI assistance in the creative process of coding projects. Through this discussion, students are expected to develop a more refined understanding of when and how to effectively leverage AI for brainstorming and problem refinement, while also recognizing scenarios where avoiding AI might be more beneficial for them.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display**: Display the slide for Station C.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss**: Have a quick discussion about the placement of sticky notes on the yes/no chart. What do they notice? What do they wonder? Pick out a couple of sticky notes from the 2nd question on the poster to help drive the discussion of ethical considerations when using AI.\n\n**Discussion Goal**: The goal of this discussion is to engage students in a thoughtful exploration of the ethical aspects associated with utilizing AI in coding projects, particularly focusing on transparency and disclosure. Through this discussion, aim to foster a better understanding among students about the ethical responsibilities they hold when leveraging AI-generated code and ideas in their projects.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Reflection Stations Activity Guide can be used as a formative assessment to gauge understanding of various ethical considerations of working with AI when programming."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6f6e2fb1-adfa-471e-8e5b-84085df25e78",
+        "lesson_activity.key": "4de954ae-dc51-45ad-83fd-4591668ab651"
+      }
+    },
+    {
+      "key": "01048f79-37d9-4a51-8cd9-884d7099ec88",
+      "position": 1,
+      "properties": {
+        "description": "We’re going to wrap up today’s activities with each of you drafting your own Value Statement about using AI in these initial steps of the programming process. Use the handout to help you figure out if you would use AI in this situation and which strategies are the most supportive to your learning.",
+        "name": "Creating Value Statements",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "01048f79-37d9-4a51-8cd9-884d7099ec88",
+        "lesson_activity.key": "269bd526-267b-4e9b-a683-48fcd467a726"
+      }
+    },
+    {
+      "key": "7c784909-236a-41d9-a3bf-388b79422352",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Give each student a copy of the [r my_coding_with_ai_values/coding-with-ai/unversioned] Activity Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Instruct students to draft a personal value statement regarding the use of AI in the initial stages of programming. The statement should reflect their own opinions on which strategy, or strategies, they found the most supportive and why, how to use the AI strategy ethically and supportively for someone at their level of programming experience, as well as when they would use the strategy (for example, “when stuck” or “right away to get the ball rolling”).\n\n",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Students’ Value Statements can be used to assess their learning based on the following criteria:\n\nStudents create value statements that display a deep understanding of AI strategies and their application in coding which include detailed, specific, and comprehensive explanations of how to use AI for each strategy.\n\nValue statements for each situation or stage of programming include descriptions for:\n* Which strategies work best based on experience during lessons\n* The level of programming experience the chosen strategies would work best for and why\n* When they would turn to AI for the chosen strategy and why\n* Ways to use the chosen strategies to support their learning\n\nMake sure to provide feedback on students’ value statements in an effort to push them to clearly articulate their opinions about when, how, and why/why not they would use AI in the initial stages of program development."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7c784909-236a-41d9-a3bf-388b79422352",
+        "lesson_activity.key": "269bd526-267b-4e9b-a683-48fcd467a726"
+      }
+    },
+    {
+      "key": "06b5720c-4177-47f1-b7a5-c9c2ff53a75b",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Have students share their value statement with a neighbor or small group before inviting a few students to share their value statements with the class.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This is a good opportunity to build a group artifact to refer to or display for the class. Some options might include: \n* Printing them up and putting them on a \"Coding with AI Values\" wall\n* Posting them in your LMS where students can refer to them when needed\n* Post them on your class website"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "06b5720c-4177-47f1-b7a5-c9c2ff53a75b",
+        "lesson_activity.key": "269bd526-267b-4e9b-a683-48fcd467a726"
+      }
+    },
+    {
+      "key": "101da483-1169-4507-9426-9de695586058",
+      "position": 4,
+      "properties": {
+        "description": "Today, we explored the exciting journey of using AI in the early stages of our coding projects. Perhaps more importantly, you’ve started reflecting on and articulating your stance on AI’s role in programming. As you submit your value statements, remember, this is a stepping stone towards responsibly harnessing AI’s potential to support you learning to program, and I encourage you to keep refining your value statement as you progress in your coding journey.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "101da483-1169-4507-9426-9de695586058",
+        "lesson_activity.key": "269bd526-267b-4e9b-a683-48fcd467a726"
+      }
+    },
+    {
+      "key": "d6da4f1b-a8ae-4953-86a0-e70e558712e1",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute**: As students enter, give each student a copy of the Mystery Algorithms Activity Guide.\n\n**Group**: Put students in groups of 2-3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Direct students to work with their group to solve as many mystery algorithm riddles as they can in the time provided. Play the music in the slide to help students know when time is up.\n\n**Circulate**: As you walk around, encourage students to move on to the next algorithm if they are stuck.",
+        "name": "Mystery Algorithms",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The goal of this quick warm up activity is to stir curiosity and engage students critical thinking skills. It is okay if students did not get a chance to get to all 10 algorithms.\n\nBefore sharing the answers with the class, you may choose to have students help one another and share answers with another group (time permitting). An answer key is provided for verified teachers as part of the resources in this lesson plan. If you do not see an answer key listed as a resource, [follow these steps](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-) to become a verified teacher."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d6da4f1b-a8ae-4953-86a0-e70e558712e1",
+        "lesson_activity.key": "a36b5511-1489-40c0-92f3-b45b5fa6004f"
+      }
+    },
+    {
+      "key": "475c6fef-70f1-4de3-83af-3bb359bb4ec8",
+      "position": 1,
+      "properties": {
+        "description": "Great job unraveling the mysteries behind these algorithms! You've all shown a keen understanding of how algorithms function in CS specific scenarios. Now, let's take that understanding a step further. \n\nWe're going to explore how AI can not only demystify but also enhance the process of algorithm planning. Through our work in our CS course, you've experienced firsthand how algorithms work; let's see how AI can help us create, refine, and understand them in a deeper way. \n\nWe’ll be diving into activities where AI will assist us in generating pseudocode, analyzing algorithm complexity, and comparing our algorithms with AI-generated ones. So, if we’re ready to see what AI has in store for us in the world of algorithms … Let's get started!",
+        "duration": "20",
+        "name": "Algorithms & AI Strategies",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "475c6fef-70f1-4de3-83af-3bb359bb4ec8",
+        "lesson_activity.key": "71d610a1-efa3-4cbb-a8a6-e74da2d41285"
+      }
+    },
+    {
+      "key": "27812833-1c7d-4c5d-a1f7-ce2e6326901a",
+      "position": 2,
+      "properties": {
+        "description": "**Group**: Put students to work in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Give each pair a copy of the [r navigating_algorithms_with_ai_strategies/coding-with-ai/unversioned] handout.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Printing suggestion**: It is a good idea to print the Navigating Algorithms with AI Strategies handout for each pair so that each strategy is on its own piece of paper (front and back). This approach will be less overwhelming than looking at a long, 8-page document on their computers."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "27812833-1c7d-4c5d-a1f7-ce2e6326901a",
+        "lesson_activity.key": "71d610a1-efa3-4cbb-a8a6-e74da2d41285"
+      }
+    },
+    {
+      "key": "5780660f-ac14-45eb-b3eb-be6efcea400f",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Direct each pair of students to make a single, shared copy of the [r navigating_algorithms_with_ai_digital_journal/coding-with-ai/unversioned].\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you will be completing all of this module's lessons back-to-back, without interruption, you should instead direct each pair of students to open their shared copy of the AI Strategies Journal that they should have made during the previous lesson. This version allows students to document all the module’s AI strategies in one place."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5780660f-ac14-45eb-b3eb-be6efcea400f",
+        "lesson_activity.key": "71d610a1-efa3-4cbb-a8a6-e74da2d41285"
+      }
+    },
+    {
+      "key": "53da9e23-0813-4969-b243-095daf778551",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Direct students to split the four strategies between themselves and their partner, so that students will explore two each. Ensure students spend no more than 5 minutes trying out their two strategies so that they have time to share with their partner. Remind them to use their AI Strategies Journal to document their thoughts about how supportive, or not, each strategy was for them and to include screenshots of supportive interactions.\n\n**Circulate**: As you walk around, remind students what “supportive” means and let them know that each student, depending on their programming experience level, will probably differ in which strategies they find to be more or less supportive than others.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Each of the four strategies represents different ways that students can gain a better understanding of an algorithm idea, from “I have an idea but I am not sure if it's a good way to approach the idea” to “I know what my idea is and would like some pseudocode to help get me started.” \n\n**Differentiation Suggestions:**\n* You can choose to have your students try all four strategies (between themselves and their partner) or direct your students to start with a specific strategy or even focus on 1 or 2 strategies, depending on where you have noticed your students need more support and the time you have for this lesson.\n* Give students the option to use their own idea(s) for each strategy. "
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The AI Strategies Journal can be used as a formative assessment to gauge understanding of the AI strategies presented.\n\nYou might choose to check students’ journals after each lesson or at the end of the module (if you are completing all five lessons). "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "53da9e23-0813-4969-b243-095daf778551",
+        "lesson_activity.key": "71d610a1-efa3-4cbb-a8a6-e74da2d41285"
+      }
+    },
+    {
+      "key": "d85e0064-41cd-41fc-a0e4-00ab6d03b1ea",
+      "position": 5,
+      "properties": {
+        "description": "Now that we’ve had some time to explore AI strategies we could potentially use when planning our algorithms, let’s take a few minutes and discuss some other considerations before we make our official Values Statement for working with AI in this stage of programming.",
+        "duration": "10",
+        "name": "Four Corners Reflection",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d85e0064-41cd-41fc-a0e4-00ab6d03b1ea",
+        "lesson_activity.key": "71d610a1-efa3-4cbb-a8a6-e74da2d41285"
+      }
+    },
+    {
+      "key": "0b06cee6-e732-4612-bb1e-06e687d5abe1",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Give each student a copy of the [r four_corners_reflection/coding-with-ai/unversioned] handout. Students will use this to help them remember which corner they chose and have a space to get their thoughts down during the full class discussion.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This**: Use the slides to help you explain how the Four Corners Reflection will work.\n\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  You will display a question with 4 options\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Students will decide on their answer and go to the corner that corresponds to their answer\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Students will discuss their thoughts with others at their corner\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Students will combine with another corner stated on the slide and continue discussing their thoughts\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Repeat the process with a new question\n\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "It is okay if students stand in-between corners. However, when it is time to discuss, instruct the students to go to one of the corners and discuss with a group why they could not decide.\n\nIn the event that most or even all of the class goes to one corner, split the larger group into smaller groups of 4-5 so that all students will be able to voice their thoughts and reasons for their choice."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0b06cee6-e732-4612-bb1e-06e687d5abe1",
+        "lesson_activity.key": "71d610a1-efa3-4cbb-a8a6-e74da2d41285"
+      }
+    },
+    {
+      "key": "e1bf8d3b-ea01-4166-a516-ab1059fca173",
+      "position": 7,
+      "properties": {
+        "description": "**Circulate**: Move around from corner to corner as much as possible as students are discussing to ensure they are on topic and allowing everyone in their group to be heard. You may try to remember some responses that you want to highlight and discuss when the class comes back together."
+      },
+      "seeding_key": {
+        "activity_section.key": "e1bf8d3b-ea01-4166-a516-ab1059fca173",
+        "lesson_activity.key": "71d610a1-efa3-4cbb-a8a6-e74da2d41285"
+      }
+    },
+    {
+      "key": "a26f0b13-dfb4-4f2a-97ef-e7f758f28f96",
+      "position": 8,
+      "properties": {
+        "description": "Thank you for your thoughtful reflections in the Four Corners activity. It's clear we have a range of perspectives on AI's role in programming. Make sure to use the Four Corners Reflection handout to help you remember your question choices and to jot down anything you heard others say that you want to remember. \n\nBefore we create our Coding with AI Values Statement today, I want you to think about one last question …",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a26f0b13-dfb4-4f2a-97ef-e7f758f28f96",
+        "lesson_activity.key": "71d610a1-efa3-4cbb-a8a6-e74da2d41285"
+      }
+    },
+    {
+      "key": "5d30e32b-0a97-4fa3-a6ae-52c849400dac",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt**: If I use AI suggestions, am I still creating my own program?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Allow students to reflect on this question individually before discussing with a neighbor and finally, the whole class. If you are short on time, consider moving from individual reflection straight to whole class discussion."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5d30e32b-0a97-4fa3-a6ae-52c849400dac",
+        "lesson_activity.key": "71d610a1-efa3-4cbb-a8a6-e74da2d41285"
+      }
+    },
+    {
+      "key": "e4e8426d-8a9c-4fb5-8f55-7581c0555cf0",
+      "position": 10,
+      "properties": {
+        "description": "**Discussion Goal**: This discussion aims to deepen students' understanding of the complex relationship between human creativity and AI assistance. While there is no “right” answer, challenge students to consider where the line is drawn between tool-assisted development and original creation for themselves.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The class discussion can be used as a formative assessment to gauge understanding of various ethical considerations of working with AI when programming."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e4e8426d-8a9c-4fb5-8f55-7581c0555cf0",
+        "lesson_activity.key": "71d610a1-efa3-4cbb-a8a6-e74da2d41285"
+      }
+    },
+    {
+      "key": "ac794cae-1737-42b1-a9de-b9161f9a1022",
+      "position": 1,
+      "properties": {
+        "description": "We’re going to wrap up today’s activities with each of you drafting your own Value Statement about using AI to help with planning algorithms. Use the handout to help you figure out if you would use AI in this situation and which strategies are the most supportive to your learning.",
+        "name": "Creating Value Statements",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ac794cae-1737-42b1-a9de-b9161f9a1022",
+        "lesson_activity.key": "7d30143c-921c-45ae-84cd-0d758f217091"
+      }
+    },
+    {
+      "key": "590b3365-edc6-4411-a45d-948121146fcc",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Give each student a copy of the [r my_algorithms_ai_value_statements/coding-with-ai/unversioned] Activity Guide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This**: Instruct students to draft a personal value statement regarding the use of AI in the algorithm planning stage of programming. The statement should reflect their own opinions on which strategy, or strategies, they found the most supportive and why, how to use the AI strategy ethically and supportively for someone at their level of programming experience, as well as when they would use the strategy (for example, “when stuck” or “right away to get the ball rolling”).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Have students share their value statement with a neighbor or small group before inviting a few students to share their value statements with the class. \n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This is a good opportunity to build a group artifact to refer to or display for the class. Some options might include: \n* Printing them up and putting them on a \"Coding with AI Values\" wall\n* Posting them in your LMS where students can refer to them when needed\n* Post them on your class website"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Students’ Value Statements can be used to assess their learning based on the following criteria:\n\nStudents create value statements that display a deep understanding of AI strategies and their application in coding which include detailed, specific, and comprehensive explanations of how to use AI for each strategy.\n\nValue statements for each situation or stage of programming include descriptions for:\n* Which strategies work best based on experience during the lesson\n* The level of programming experience the chosen strategies would work best for and why\n* When they would turn to AI for the chosen strategy and why\n* Ways to use the chosen strategies to support their learning\n\nMake sure to provide feedback on students’ value statements in an effort to push them to articulate their opinions clearly about when, how, and why/why not they would use AI in the initial stages of program development."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "590b3365-edc6-4411-a45d-948121146fcc",
+        "lesson_activity.key": "7d30143c-921c-45ae-84cd-0d758f217091"
+      }
+    },
+    {
+      "key": "fbbab2c1-865d-4cf2-81a4-41d20faac457",
+      "position": 3,
+      "properties": {
+        "description": "Great work today exploring the complex relationship between AI and algorithm development. Remember, the balance between AI assistance and your own creativity in programming is a vital and ongoing consideration in the evolving world of technology. Keep these thoughtful discussions in mind as you continue to grow and innovate as programmers and problem-solvers..",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fbbab2c1-865d-4cf2-81a4-41d20faac457",
+        "lesson_activity.key": "7d30143c-921c-45ae-84cd-0d758f217091"
+      }
+    },
+    {
+      "key": "cd8321ad-9416-4092-9b8b-9e0b3fd42455",
+      "position": 1,
+      "properties": {
+        "description": "Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket."
+      },
+      "seeding_key": {
+        "activity_section.key": "cd8321ad-9416-4092-9b8b-9e0b3fd42455",
+        "lesson_activity.key": "dc033ef4-fce2-41db-abb2-38a7de8168dd"
+      }
+    },
+    {
+      "key": "d0fecfb0-bc9c-4f73-94e6-9bee2e7798d2",
+      "position": 2,
+      "properties": {
+        "progression_name": "Reflection Corner Explanations"
+      },
+      "seeding_key": {
+        "activity_section.key": "d0fecfb0-bc9c-4f73-94e6-9bee2e7798d2",
+        "lesson_activity.key": "dc033ef4-fce2-41db-abb2-38a7de8168dd"
+      }
+    },
+    {
+      "key": "ada0649d-0b9f-4164-bd73-7ac8bf262d7e",
+      "position": 1,
+      "properties": {
+        "description": "Today, we're going to quickly explore what we think AI can and cannot do when it comes to debugging code. Your insights will help shape our understanding and discussions throughout today's lesson. Take a moment to think about AI in the context of coding and debugging.",
+        "name": "AI Expectations",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ada0649d-0b9f-4164-bd73-7ac8bf262d7e",
+        "lesson_activity.key": "5083a580-284b-4ff0-947b-c40701d87bbb"
+      }
+    },
+    {
+      "key": "801fcc17-3696-44ce-a72c-1ed5cf469a6a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt**: What do you expect AI can help you with? Where do you think its limitations might lie? Consider aspects like identifying errors, suggesting fixes, understanding code logic, and even ethical considerations.\n\n**Discussion Goal**: Encourage students to be as specific as possible, drawing on their prior knowledge of AI and programming as they take a minute to jot down their thoughts before sharing them with the class. The goal of the discussion is to prepare students for a deeper understanding of what AI can realistically do in the context of debugging code. \n\nStudents may come up with preconceived notions about AI that are either overestimated (believing AI can do far more than it’s currently capable of) or underestimated (not realizing the full extent of AI’s supportive capabilities in coding). This quick discussion surfaces these beliefs, allowing you to recognize where there might be gaps or inaccuracies in their understanding. This discussion can also provide an understanding of where students currently stand in their knowledge of AI’s role in debugging, thereby helping you to tailor the lesson to address specific areas of confusion or curiosity.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "It is important to ensure students understand that there are no right or wrong answers in this brainstorming activity. By engaging in this exercise, students become more receptive to new information, understanding that their initial thoughts are starting points for learning, not fixed truths. As the lesson progresses, students can compare their initial thoughts with what they learn, leading to a more informed and reflective discussion about AI’s role in coding and debugging."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "801fcc17-3696-44ce-a72c-1ed5cf469a6a",
+        "lesson_activity.key": "5083a580-284b-4ff0-947b-c40701d87bbb"
+      }
+    },
+    {
+      "key": "0fe69ddb-c861-456b-8207-3f551dd74a13",
+      "position": 1,
+      "properties": {
+        "description": "As we move into our main activity, keep your initial thoughts in mind. Our goal is to understand the practical applications of AI in debugging and how it can be a powerful supportive tool in our coding toolkit.",
+        "duration": "20",
+        "name": "Debugging with AI Strategies",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0fe69ddb-c861-456b-8207-3f551dd74a13",
+        "lesson_activity.key": "a34de563-e855-4699-8a3b-944c88fd9c0a"
+      }
+    },
+    {
+      "key": "cb3ea391-9e50-441d-8e0f-47c6354af2dd",
+      "position": 2,
+      "properties": {
+        "description": "**Group**: Put students to work in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Direct each pair of students to make a single, shared copy of the [r ai_debugging_strategies_digital_journal/coding-with-ai/unversioned].\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you are completing all of this module's lessons back-to-back, without interruption, you should instead direct each pair of students to open their shared copy of the AI Strategies Journal they should have made during the second lesson. This version allows students to document all the module’s AI strategies in one place."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cb3ea391-9e50-441d-8e0f-47c6354af2dd",
+        "lesson_activity.key": "a34de563-e855-4699-8a3b-944c88fd9c0a"
+      }
+    },
+    {
+      "key": "2d143dcb-3290-4016-b348-2eafcdc03355",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Give each pair a copy of the [r debugging_code_with_ai_strategies/coding-with-ai/unversioned] handout.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Printing suggestion**: It is a good idea to print the Debugging with AI Strategies handout for each pair so that each strategy is on its own piece of paper (front and back). This approach will be less overwhelming than looking at a long, 4-page document on their computers."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2d143dcb-3290-4016-b348-2eafcdc03355",
+        "lesson_activity.key": "a34de563-e855-4699-8a3b-944c88fd9c0a"
+      }
+    },
+    {
+      "key": "ab6e3b0a-a106-4698-8e86-efd0b8d12ad7",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Direct students to split the two strategies between themselves and their partner so that students will explore one strategy each.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ensure students either discuss the strategies as they work through them or leave time at the end of this activity to share and discuss with their partner. Remind them to use their AI Strategies Journal to document their thoughts about how supportive, or not, each strategy was for them and to include screenshots of supportive interactions."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ab6e3b0a-a106-4698-8e86-efd0b8d12ad7",
+        "lesson_activity.key": "a34de563-e855-4699-8a3b-944c88fd9c0a"
+      }
+    },
+    {
+      "key": "ba0a5eaa-9576-419b-9bbe-529cc60eaf98",
+      "position": 5,
+      "properties": {
+        "description": "**Circulate**: As you walk around, remind students what “supportive” means and let them know that each student, depending on their programming experience level, will probably differ in which strategies they find to be more or less supportive than others.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The AI Strategies Journal can be used as a formative assessment to gauge understanding of the AI strategies presented. \n\nYou might check students’ journals after each lesson or at the end of the module (if you are completing all five lessons)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ba0a5eaa-9576-419b-9bbe-529cc60eaf98",
+        "lesson_activity.key": "a34de563-e855-4699-8a3b-944c88fd9c0a"
+      }
+    },
+    {
+      "key": "94fabbc8-3386-45b1-8728-cde46c5c32bd",
+      "position": 6,
+      "properties": {
+        "description": "Great job with the AI debugging exercises! Now, let’s shift gears and reflect on what we’ve learned. We’re moving into a Reflection Scavenger Hunt, where you’ll explore different perspectives about AI in debugging, focusing on ethical considerations and personal creativity. This is more than just a fun activity; it’s an opportunity to deepen our understanding and appreciate diverse viewpoints. So, stand up, stretch out, and get ready for some insightful discussions. \n\nYou can start as soon as you get your activity guide, but keep in mind there’s no rush – the quality of your conversations is more important than the quantity. So dive in and see what new insights we can uncover together!",
+        "duration": "10",
+        "name": "Reflection Scavenger Hunt",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "94fabbc8-3386-45b1-8728-cde46c5c32bd",
+        "lesson_activity.key": "a34de563-e855-4699-8a3b-944c88fd9c0a"
+      }
+    },
+    {
+      "key": "5512990e-8948-4120-8606-89c270635b87",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Give each student a copy of the [r reflection_scavenger_hunt/coding-with-ai/unversioned] activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Direct students to go around the room, finding classmates that match the various prompts on their activity guide and asking follow-up questions to uncover their classmates’ reasons and opinions. Use the music in the slide to help you keep time for this activity, ending when the music stops.\n\n**Circulate**: As you move around the room, ensure students are documenting their classmate’s key point(s) from their conversation as well as their own thoughts and feelings.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "It is okay if students do not find someone for every prompt. This activity is a fun and interactive way for students to explore their experiences and opinions about the role of AI in debugging, especially focusing on the ethical aspects and how it impacts our creativity and sense of ownership in coding. The insights gained from their peers during this activity will deepen their understanding of the complex relationship between AI and human programmers. \n\nEncourage students to be open-minded and respectful during this activity, ensuring everyone’s experience and viewpoint are valuable."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Reflection Scavenger Hunt can be used as a formative assessment to gauge understanding of various ethical considerations of working with AI when programming."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5512990e-8948-4120-8606-89c270635b87",
+        "lesson_activity.key": "a34de563-e855-4699-8a3b-944c88fd9c0a"
+      }
+    },
+    {
+      "key": "501e892a-300f-4a8a-a16f-4377d0176561",
+      "position": 8,
+      "properties": {
+        "description": "Thank you all for your active participation. It’s amazing to see such thoughtful reflections on using AI with debugging. Now, let’s do a quick “temperature check” to gauge our collective feelings and opinions about what we’ve discussed today. \n\nThis will be a simple and quick way to express your thoughts using a thumbs up, thumbs down, or thumbs sideways so I can see where we stand as a group and the diverse perspectives in our classroom. Remember, there are no right or wrong answers here; it’s all about your personal views and feelings.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "501e892a-300f-4a8a-a16f-4377d0176561",
+        "lesson_activity.key": "a34de563-e855-4699-8a3b-944c88fd9c0a"
+      }
+    },
+    {
+      "key": "0aed0ad8-ae0f-479c-a921-4819190e91d7",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt**: Use the slides to display each of the prompts\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do you believe that debugging with AI respects the programmer’s creativity and originality?\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Are you concerned about the ethical implications of using AI to help you debug?\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do you think AI can significantly improve your debugging experience?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While the Temperature Check is meant to be a quick activity, if you have the time you might consider asking students to elaborate on their thumbs up, thumbs down, and thumbs sideways choices. If many students show uncertainty or concern, you might plan future lessons or discussion to address these areas. For example, if students are concerned about the ethical implications of AI, you could incorporate more content on ethics in AI and programming. \n\nYou might also consider providing additional resources, like articles or videos to help students grasp the concepts better if a significant number of students express discomfort or lack of understanding.\n\nYour students responses can also guide the direction of furutre class discussions. For instance, if most students feel that AI does not respect a programmer’s creativity, you might facilitate a debate or discussion to explore this viewpoint more deeply.\n\nStudents will elaborate on their choices during this Temperature Check during the Check for Understanding levels at the end of the lesson on Code Studio. This can be given to students as homework if there is not enough time for them to complete while in cass"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0aed0ad8-ae0f-479c-a921-4819190e91d7",
+        "lesson_activity.key": "a34de563-e855-4699-8a3b-944c88fd9c0a"
+      }
+    },
+    {
+      "key": "d084079c-2fc0-47b8-a625-61184cf613f5",
+      "position": 1,
+      "properties": {
+        "description": "We’re going to wrap up today’s activities with each of you drafting your own Value Statement about using AI to help us debug our code. Use the handout to help you figure out if you would use AI in this situation and which strategies are the most supportive to your learning.",
+        "name": "Creating Value Statements",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d084079c-2fc0-47b8-a625-61184cf613f5",
+        "lesson_activity.key": "9085b3f5-f16a-439b-9291-eeb75b489ab9"
+      }
+    },
+    {
+      "key": "f0a1cfc5-7cad-46a0-96ed-4081747dd15c",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Give each student a copy of the [r my_debugging_with_ai_value_statements/coding-with-ai/unversioned] Activity Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This**: Instruct students to draft a personal value statement regarding the use of AI when debugging. The statement should reflect their own opinions on which strategy, or strategies, they found the most supportive and why, how to use the AI strategy ethically and supportively for someone at their level of programming experience, as well as when they would use the strategy (for example, “when stuck” or “right away to get the ball rolling”).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This**: Have students share their value statement with a neighbor or small group before inviting a few students to share their value statements with the class.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This is a good opportunity to build a group artifact to refer to or display for the class. Some options might include:\n* Printing them up and putting them on a \"Coding with AI Values\" wall\n* Posting them in your LMS where students can refer to them when needed\n* Post them on your class website"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Students’ Value Statements can be used to assess their learning based on the following criteria:\n\nStudents create value statements that display a deep understanding of AI strategies and their application in coding which include detailed, specific, and comprehensive explanations of how to use AI for each strategy.\n\nValue statements for each situation or stage of programming include descriptions for\n* Which strategies work best based on experience during lessons\n* The level of programming experience the chosen strategies would work best for and why\n* When they would turn to AI for the chosen strategy and why\n* Ways to use the chosen strategies to support their learning\n\nMake sure to provide feedback on students’ value statements in an effort to push them to articulate their opinions clearly about when, how, and why/why not they would use AI in the initial stages of program development."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f0a1cfc5-7cad-46a0-96ed-4081747dd15c",
+        "lesson_activity.key": "9085b3f5-f16a-439b-9291-eeb75b489ab9"
+      }
+    },
+    {
+      "key": "f8fd2a62-537b-4325-abe9-37a1f3fd1642",
+      "position": 3,
+      "properties": {
+        "description": "Great work today, everyone! Your insights and engagement in using AI for debugging have opened up new perspectives on the intersection of technology and creativity in coding—keep exploring these ideas as we continue our journey into AI-assisted programming.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f8fd2a62-537b-4325-abe9-37a1f3fd1642",
+        "lesson_activity.key": "9085b3f5-f16a-439b-9291-eeb75b489ab9"
+      }
+    },
+    {
+      "key": "841dfb5c-a177-400d-8ee7-dae46ea1d29f",
+      "position": 1,
+      "properties": {
+        "description": "Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket."
+      },
+      "seeding_key": {
+        "activity_section.key": "841dfb5c-a177-400d-8ee7-dae46ea1d29f",
+        "lesson_activity.key": "9bf840f4-a866-4387-a81c-bf4a4234eb5b"
+      }
+    },
+    {
+      "key": "4a85ac76-647f-45f4-bc73-cc8b523109c0",
+      "position": 2,
+      "properties": {
+        "progression_name": "Temperature Check Explanations"
+      },
+      "seeding_key": {
+        "activity_section.key": "4a85ac76-647f-45f4-bc73-cc8b523109c0",
+        "lesson_activity.key": "9bf840f4-a866-4387-a81c-bf4a4234eb5b"
+      }
+    },
+    {
+      "key": "37998809-f639-4c4a-8e2d-0468a3db3591",
+      "position": 1,
+      "properties": {
+        "description": "Every app or software we use can be improved. Sometimes, the best ideas for new features come from regular users like you!",
+        "name": "What's Missing?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "37998809-f639-4c4a-8e2d-0468a3db3591",
+        "lesson_activity.key": "c42c4cd6-1249-4c72-8e93-3cc035eb5ff8"
+      }
+    },
+    {
+      "key": "df8004e9-08f1-4808-a7b3-e85ebc45278c",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt**: Think about a commonly used app you interact with daily. Imagine you have the power to add one new feature to this app. What feature would you add to make it more useful, enjoyable, or efficient? Consider how AI might help in implementing this feature.\n\n**Discussion Goal**: The goal is to demonstrate that feature expansion often begins with understanding user needs and creatively thinking about solutions. Additionally, this discussion should illustrate how AI can be a tool to bring such creative, user-centered ideas to fruition in software development. Remind students of a few of AI’s capabilities, like pattern recognition, predictive text, or personalized suggestions. \n\nEncourage creativity with your students by letting them know features can range from realistic additions to imaginative, futuristic concepts. Invite a few students to share their ideas with the class quickly and highlight how diverse and creative feature ideas can be and how these ideas can stem from everyday experiences and needs.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ensuring students understand that this brainstorming activity has no right or wrong answers is essential. By engaging in this exercise, students become more receptive to new information, understanding that their initial ideas are starting points, not fixed truths. As the lesson progresses, students can compare their initial ideas with what they learn, leading to a more informed and reflective discussion about AI’s role in feature expansion."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "df8004e9-08f1-4808-a7b3-e85ebc45278c",
+        "lesson_activity.key": "c42c4cd6-1249-4c72-8e93-3cc035eb5ff8"
+      }
+    },
+    {
+      "key": "5252fbd8-0879-4b26-a93e-984ef3dc7475",
+      "position": 1,
+      "properties": {
+        "description": "Great brainstorming! Now, let’s put your innovative thinking into action with AI. We will see how AI can help us expand program features and analyze user feedback to make improvements. As you explore, think critically about your AI-suggested enhancements' ethical implications and practicality - especially keeping an eye out for suggestions from the AI that are or could lead to bias or discrimination.",
+        "duration": "20",
+        "name": "Using AI with a Finished Program",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5252fbd8-0879-4b26-a93e-984ef3dc7475",
+        "lesson_activity.key": "37a555b8-78f8-4f28-acef-97e7b7bc0feb"
+      }
+    },
+    {
+      "key": "1220601e-22a0-461e-811d-91b71b3f943b",
+      "position": 2,
+      "properties": {
+        "description": "**Group**: Put students to work in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Direct each pair of students to make a single, shared copy of the [r ai_strategies_digital_journal_1/coding-with-ai/unversioned].\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you are completing all of this module's lessons back-to-back, without interruption, you should instead direct each pair of students to open their shared copy of the AI Strategies Journal they should have made during the second lesson. This version allows students to document all the module’s AI strategies in one place."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1220601e-22a0-461e-811d-91b71b3f943b",
+        "lesson_activity.key": "37a555b8-78f8-4f28-acef-97e7b7bc0feb"
+      }
+    },
+    {
+      "key": "d7483070-dcf0-40ad-b0d8-d6910fcdc550",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Give each pair a copy of the [r strategies_for_using_ai_with_finished_program/coding-with-ai/unversioned] handout, the [r beyond_the_finished_program/coding-with-ai/unversioned] Activity Guide, and the [r user_feedback/coding-with-ai/unversioned] Handout. \n\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Printing suggestion**: Print the AI Strategies for Finished Programs handout for each pair so that each strategy is on its own piece of paper (front and back). This approach will be less overwhelming than looking at a long, 4-page document on their computers.\n\nIt is suggested that the User Feedback Handout be provided digitally so that students can copy and paste the feedback into the AI model or convert it to a PDF to upload for the AI model."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d7483070-dcf0-40ad-b0d8-d6910fcdc550",
+        "lesson_activity.key": "37a555b8-78f8-4f28-acef-97e7b7bc0feb"
+      }
+    },
+    {
+      "key": "790eaa84-bc67-4e46-8e30-5fbd48b1868b",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Direct students to split the two strategies between themselves and their partner so that students will explore one strategy each.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you have time, consider allowing both partners to try both strategies.\n\nEnsure students either discuss the strategies as they work through them or leave time at the end of this activity to share and discuss with their partner. Remind them to use their AI Strategies Journal to document their thoughts about how supportive or not each strategy was for them and to include screenshots of supportive interactions."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "790eaa84-bc67-4e46-8e30-5fbd48b1868b",
+        "lesson_activity.key": "37a555b8-78f8-4f28-acef-97e7b7bc0feb"
+      }
+    },
+    {
+      "key": "37330642-8b91-4fed-9a41-86dc6390d583",
+      "position": 5,
+      "properties": {
+        "description": "**Circulate**: As you walk around, remind students what \"supportive\" means and let them know that each student, depending on their programming experience level, will probably differ in which strategy they find to be more or less supportive than others.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The AI Strategies Journal can be used as a formative assessment to gauge understanding of the AI strategies presented. \n\nYou might choose to check students’ journals after each lesson or at the end of the module (if you are completing all five lessons)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "37330642-8b91-4fed-9a41-86dc6390d583",
+        "lesson_activity.key": "37a555b8-78f8-4f28-acef-97e7b7bc0feb"
+      }
+    },
+    {
+      "key": "c2cae2b7-9181-47b1-ab04-9ea1e8ff967e",
+      "position": 6,
+      "properties": {
+        "description": "Now that we’ve explored how AI can support us once we finish our programs, let’s shift to a quick reflection activity. This will be a rapid-fire discussion where you’ll pair up to dive into some thought-provoking ethical questions about using AI. It’s a chance to share your views and listen to others before you create your Coding with AI Values today. So, let’s get started and see the diverse perspectives we all bring to the table and the new insights we can uncover together!",
+        "duration": "10",
+        "name": "AI Ethics Speed Chat",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c2cae2b7-9181-47b1-ab04-9ea1e8ff967e",
+        "lesson_activity.key": "37a555b8-78f8-4f28-acef-97e7b7bc0feb"
+      }
+    },
+    {
+      "key": "8224f2c4-2c53-4775-8eea-4570b7633e2f",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute**: Give each student a copy of the AI Ethics Speed Chat activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Direct students to spread out and form two circles - an inner circle and an outer circle facing each other. Inner students should pair up with an outer circle student. At the end of each round, direct the inner circle to rotate to the right. Direct students to use the activity guide prompts to discuss their thoughts with their partners during each round. Students should write down any key ideas that come up during each round. Use the music in the slide to help you keep time for this activity, ending each round and rotating to the next partner when the music stops.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Spacing Tip**: If your space is limited and you don’t have room to form the inner and outer circles \ncomfortably, you might consider one of the other pairing options below:\n* Go into the hallway and form two lines facing each other. When it is time to rotate, have one of the lines move over by one person while the other line stays put when the time is up for each round.\n* If your student desks are arranged in rows, direct every other row to turn their seat around, facing the row behind them. When the time is up for each round, rotate the students sitting at the backward-facing desks. \n\nIf students are close enough to hear what the pairs next to them are saying, you might also consider having them move 2-3 people over after each round rather than move to the next person. This might help students hear new thoughts than those right next to them. \n\n**Prompt Tip**: The first three prompts on the activity guide are the ones that students should answer during this activity. If you think your students would benefit more from discussing any of the other prompts, feel free to provide guidance on which prompts to answer. Going through three prompts should take 6 minutes (2 minutes each). However, if you have extra time and you would like your students to continue reflecting and discussing with more classmates during this Speed Chat Reflection activity, you can also have your students use more than the first three prompts. \n\n**Timing Tip**: A 2-minute timer with music has been provided for you in the activity slides to help you keep track of when to have students rotate. If you have a different, preferred way to keep track of time, or you can extend the rounds beyond 2 minutes, please feel free to delete the 2-minute timer video.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8224f2c4-2c53-4775-8eea-4570b7633e2f",
+        "lesson_activity.key": "37a555b8-78f8-4f28-acef-97e7b7bc0feb"
+      }
+    },
+    {
+      "key": "622fb462-0c95-46ce-b771-1dd0f8443cc8",
+      "position": 8,
+      "properties": {
+        "description": "**Circulate**: As you move around the room, ensure students are documenting their classmate's key point(s) from their conversation as well as their thoughts and feelings. Let students know that they do not need, nor do they have time, to write entire sentences on their activity guide. Instead, they can jot down a few words that encapsulate the key points of their discussion.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This activity is a fun and interactive way for students to explore their experiences and opinions about the role of AI when working with a finished program, primarily focusing on the ethical aspects and how it impacts our sense of ownership in coding. The insights from their peers during this activity will deepen their understanding of the complex relationship between AI and human programmers. \n\nEncourage students to be open-minded and respectful during this activity, ensuring everyone’s experience and viewpoint are valuable. \n\nThe prompts are also available in Code Studio for your use as an optional exit ticket if you would like your students to provide their thoughts and reasons in a more quantitative format for your usage."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The AI Ethics Speed Chat activity guide can be used as a formative assessment to gauge understanding of various ethical considerations when programming with AI."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "622fb462-0c95-46ce-b771-1dd0f8443cc8",
+        "lesson_activity.key": "37a555b8-78f8-4f28-acef-97e7b7bc0feb"
+      }
+    },
+    {
+      "key": "be03eb72-c7b2-4119-be58-8cdd1b59f540",
+      "position": 9,
+      "properties": {
+        "description": "Great insights during our speed chat, everyone! Seeing such thoughtful reflections on using AI with our finished programs is amazing. Now, let’s summarize our thoughts differently. Please share your ideas in just ONE sentence about how AI can ethically enhance a finished program. \n\nI’m excited to read your focused and succinct insights!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "be03eb72-c7b2-4119-be58-8cdd1b59f540",
+        "lesson_activity.key": "37a555b8-78f8-4f28-acef-97e7b7bc0feb"
+      }
+    },
+    {
+      "key": "5794e0aa-8dad-4fab-97cc-05d46f1f563e",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Direct students to type up their one-sentence opinion in Code Studio, Lesson 5, Level 1. Display the anonymous responses for the class. Look for various opinions, showing the class's varied thinking and understanding of AI's potential. Identify particularly insightful or unique perspectives that demonstrate deeper reflection or understanding. Highlight any recurring ideas or concerns among the responses.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While the “One-Sentence” is meant to be a quick activity, if you have the time, you might consider spending a few more minutes to point out any of the following and having a deeper discussion:\n* **Common Themes**: Highlight any recurring ideas or concerns among the responses, which can indicate areas of general agreement or significant interest in the class.\n* **Varied Perspectives**: Acknowledge the range of viewpoints, emphasizing the complexity of ethical considerations in AI and the value of diverse opinions.\n* **Real-World Application**: Relate some of the opinions to real-world scenarios or current events in AI, to illustrate how these concepts are relevant in practical situations.\n* **Critical Thinking and Reflection**: Praise the depth of thought and reflection shown in the responses, encouraging ongoing critical engagement with technological ethics.\n\nIf many students show uncertainty or concern, you might plan future lessons or discussions to address these areas. For example, if students are concerned about the ethical implications of AI, you could incorporate more content on ethics in AI and programming. \n\nYou might also consider providing additional resources, like articles or videos, to help students grasp the concepts better if many students express discomfort or lack of understanding.\n\nYour students' responses can also guide the direction of future class discussions. For instance, if most students feel that AI does not respect a programmer’s creativity, you might facilitate a debate or discussion to explore this viewpoint more deeply.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5794e0aa-8dad-4fab-97cc-05d46f1f563e",
+        "lesson_activity.key": "37a555b8-78f8-4f28-acef-97e7b7bc0feb"
+      }
+    },
+    {
+      "key": "747732e1-30ef-4759-8354-5acaac0f16f5",
+      "position": 11,
+      "properties": {
+        "progression_name": "One-Sentence Summary"
+      },
+      "seeding_key": {
+        "activity_section.key": "747732e1-30ef-4759-8354-5acaac0f16f5",
+        "lesson_activity.key": "37a555b8-78f8-4f28-acef-97e7b7bc0feb"
+      }
+    },
+    {
+      "key": "6fbc774e-7835-4000-bbf3-ec07823c8c5b",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Direct students to move to Level 2 on Code Studio to explain the reasons behind their one-sentence summary."
+      },
+      "seeding_key": {
+        "activity_section.key": "6fbc774e-7835-4000-bbf3-ec07823c8c5b",
+        "lesson_activity.key": "37a555b8-78f8-4f28-acef-97e7b7bc0feb"
+      }
+    },
+    {
+      "key": "6e0382cc-3d44-4460-81ff-3e92170b0e13",
+      "position": 13,
+      "properties": {
+        "progression_name": "One Sentence Elaboration",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If short on time, this level can also be given to students at the end of class with the other Exit Ticket levels or for homework."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Students' explanations can be used as a formative assessment to gauge understanding of ethical considerations when programming with AI"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6e0382cc-3d44-4460-81ff-3e92170b0e13",
+        "lesson_activity.key": "37a555b8-78f8-4f28-acef-97e7b7bc0feb"
+      }
+    },
+    {
+      "key": "d677084c-ef41-4325-95fe-6d34d685d673",
+      "position": 1,
+      "properties": {
+        "description": "We will wrap up today’s activities with each of you drafting your Value Statement about using AI to help us expand our finished programs. Use the handout to help you figure out if you would use AI in this situation and which strategies are the most supportive to your learning.",
+        "name": "Creating Value Statements",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d677084c-ef41-4325-95fe-6d34d685d673",
+        "lesson_activity.key": "de8ba36b-d79a-4ec7-a32c-3e7004b327c4"
+      }
+    },
+    {
+      "key": "00f98c49-565b-45d8-a3ee-144c50a2f466",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Give each student a copy of the [r ai_value_statement_with_finished_programs/coding-with-ai/unversioned] Activity Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Instruct students to draft a personal value statement regarding using AI with finished programs. The statement should reflect their own opinions on which strategy, or strategies, they found the most supportive and why, how to use the AI strategy ethically and supportively for someone at their level of programming experience, as well as when they would use the strategy (for example, “when stuck” or “right away to get the ball rolling”).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Have students share their value statement with a neighbor or small group before inviting a few students to share it with the class. \n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This is a good opportunity to build a group artifact to refer to or display for the class. Some options might include:\n* Printing them up and putting them on a \"Coding with AI Values\" wall\n* Posting them in your LMS where students can refer to them when needed\n* Post them on your class website"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Students’ Value Statements can be used to assess their learning based on the following criteria:\n\nStudents create value statements that display a deep understanding of AI strategies and their application in coding which include detailed, specific, and comprehensive explanations of how to use AI for each strategy.\n\nValue statements for each situation or stage of programming include descriptions for\n* Which strategies work best based on experience during lessons\n* The level of programming experience the chosen strategies would work best for and why\n* When they would turn to AI for the chosen strategy and why\n* Ways to use the chosen strategies to support their learning\n\nMake sure to provide feedback on students’ value statements in an effort to push them to clearly articulate their opinions about when, how, and why/why not they would use AI in the initial stages of program development."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "00f98c49-565b-45d8-a3ee-144c50a2f466",
+        "lesson_activity.key": "de8ba36b-d79a-4ec7-a32c-3e7004b327c4"
+      }
+    },
+    {
+      "key": "9b3fbcf8-6b5c-4d33-9376-8599c4e7144a",
+      "position": 3,
+      "properties": {
+        "description": "Thank you for your thoughtful engagement in today’s exploration of using AI with finished programs. Your ideas and discussions have highlighted the importance of responsible innovation. As we progress, carry these ethical considerations with you, blending them with your technical skills to create impactful and conscientious technology.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9b3fbcf8-6b5c-4d33-9376-8599c4e7144a",
+        "lesson_activity.key": "de8ba36b-d79a-4ec7-a32c-3e7004b327c4"
+      }
+    },
+    {
+      "key": "98017df3-7c03-4f66-ae51-9ff74e09189b",
+      "position": 1,
+      "properties": {
+        "description": "Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket."
+      },
+      "seeding_key": {
+        "activity_section.key": "98017df3-7c03-4f66-ae51-9ff74e09189b",
+        "lesson_activity.key": "4043d02b-0211-4cfa-82a1-f6b54560cec8"
+      }
+    },
+    {
+      "key": "8e7a4760-0cda-48b5-9fa1-9f1dea022fa8",
+      "position": 2,
+      "properties": {
+        "progression_name": "Speed Chat Explanations"
+      },
+      "seeding_key": {
+        "activity_section.key": "8e7a4760-0cda-48b5-9fa1-9f1dea022fa8",
+        "lesson_activity.key": "4043d02b-0211-4cfa-82a1-f6b54560cec8"
       }
     }
   ],
@@ -574,6 +1822,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CwAI-L1-L1-Warm up Quotes"
+        ],
         "progression": "Warm-up Quotes"
       },
       "bonus": false,
@@ -589,6 +1840,427 @@
       "level_keys": [
         "CwAI-L1-L1-Warm up Quotes"
       ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Scenarios"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_scenarios_L1_1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "9505e381-2be9-4c07-a04d-4dd072e9a79d"
+      },
+      "level_keys": [
+        "Code wAI_scenarios_L1_1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Scenarios"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_scenarios_L1_2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "9505e381-2be9-4c07-a04d-4dd072e9a79d"
+      },
+      "level_keys": [
+        "Code wAI_scenarios_L1_2"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L1_1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8be047e9-d1c3-4184-a63a-a30a887763d2"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L1_1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L1_2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8be047e9-d1c3-4184-a63a-a30a887763d2"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L1_2"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Reflection Corner Explanations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L3_1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "d0fecfb0-bc9c-4f73-94e6-9bee2e7798d2"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L3_1"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Reflection Corner Explanations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L3_2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "d0fecfb0-bc9c-4f73-94e6-9bee2e7798d2"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L3_2"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Reflection Corner Explanations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L3_3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "d0fecfb0-bc9c-4f73-94e6-9bee2e7798d2"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L3_3"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Reflection Corner Explanations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L3_4"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "d0fecfb0-bc9c-4f73-94e6-9bee2e7798d2"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L3_4"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Reflection Corner Explanations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L3_5"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "d0fecfb0-bc9c-4f73-94e6-9bee2e7798d2"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L3_5"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Code wAI_temp_check_L4_1"
+        ],
+        "progression": "Temperature Check Explanations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_temp_check_L4_1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "4a85ac76-647f-45f4-bc73-cc8b523109c0"
+      },
+      "level_keys": [
+        "Code wAI_temp_check_L4_1"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Temperature Check Explanations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_temp_check_L4_2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "4a85ac76-647f-45f4-bc73-cc8b523109c0"
+      },
+      "level_keys": [
+        "Code wAI_temp_check_L4_2"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Temperature Check Explanations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_temp_check_L4_3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "4a85ac76-647f-45f4-bc73-cc8b523109c0"
+      },
+      "level_keys": [
+        "Code wAI_temp_check_L4_3"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "One-Sentence Summary"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "747732e1-30ef-4759-8354-5acaac0f16f5"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L5_1"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "One Sentence Elaboration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "6e0382cc-3d44-4460-81ff-3e92170b0e13"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L5_2"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Speed Chat Explanations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_3"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8e7a4760-0cda-48b5-9fa1-9f1dea022fa8"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L5_3"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Speed Chat Explanations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_4"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8e7a4760-0cda-48b5-9fa1-9f1dea022fa8"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L5_4"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Speed Chat Explanations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_5"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8e7a4760-0cda-48b5-9fa1-9f1dea022fa8"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L5_5"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Speed Chat Explanations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_6"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8e7a4760-0cda-48b5-9fa1-9f1dea022fa8"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L5_6"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 7,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Speed Chat Explanations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_7"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8e7a4760-0cda-48b5-9fa1-9f1dea022fa8"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L5_7"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -603,9 +2275,249 @@
         "script.name": "coding-with-ai",
         "activity_section.key": "ea08fba2-c9ac-4f75-84d3-c3fc544f6e34"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_scenarios_L1_1",
+        "script_level.level_keys": [
+          "Code wAI_scenarios_L1_1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "9505e381-2be9-4c07-a04d-4dd072e9a79d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_scenarios_L1_2",
+        "script_level.level_keys": [
+          "Code wAI_scenarios_L1_2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "9505e381-2be9-4c07-a04d-4dd072e9a79d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L1_1",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L1_1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8be047e9-d1c3-4184-a63a-a30a887763d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L1_2",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L1_2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8be047e9-d1c3-4184-a63a-a30a887763d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L3_1",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L3_1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "d0fecfb0-bc9c-4f73-94e6-9bee2e7798d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L3_2",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L3_2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "d0fecfb0-bc9c-4f73-94e6-9bee2e7798d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L3_3",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L3_3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "d0fecfb0-bc9c-4f73-94e6-9bee2e7798d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L3_4",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L3_4"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "d0fecfb0-bc9c-4f73-94e6-9bee2e7798d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L3_5",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L3_5"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "d0fecfb0-bc9c-4f73-94e6-9bee2e7798d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_temp_check_L4_1",
+        "script_level.level_keys": [
+          "Code wAI_temp_check_L4_1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "4a85ac76-647f-45f4-bc73-cc8b523109c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_temp_check_L4_2",
+        "script_level.level_keys": [
+          "Code wAI_temp_check_L4_2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "4a85ac76-647f-45f4-bc73-cc8b523109c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_temp_check_L4_3",
+        "script_level.level_keys": [
+          "Code wAI_temp_check_L4_3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "4a85ac76-647f-45f4-bc73-cc8b523109c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L5_1",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "747732e1-30ef-4759-8354-5acaac0f16f5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L5_2",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "6e0382cc-3d44-4460-81ff-3e92170b0e13"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L5_3",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_3"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8e7a4760-0cda-48b5-9fa1-9f1dea022fa8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L5_4",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_4"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8e7a4760-0cda-48b5-9fa1-9f1dea022fa8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L5_5",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_5"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8e7a4760-0cda-48b5-9fa1-9f1dea022fa8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L5_6",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_6"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8e7a4760-0cda-48b5-9fa1-9f1dea022fa8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L5_7",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_7"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8e7a4760-0cda-48b5-9fa1-9f1dea022fa8"
+      }
     }
   ],
   "resources": [
+    {
+      "name": "[KEY] Mystery Algorithms",
+      "url": "https://docs.google.com/document/d/14Qij4sMXdlJbgZOW3Qvysf7hnnRsjzKR6-I5IjV5m_I/edit?usp=sharing",
+      "key": "_key_mystery_algorithms",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_mystery_algorithms"
+      }
+    },
     {
       "name": "[Optional] Pseudocode Practice",
       "url": "https://docs.google.com/document/d/10Sjbr94VZ0tkGezczZ9jIYlAZ460Wda0k8adzEEUfvw/edit?usp=drive_link",
@@ -633,6 +2545,18 @@
       }
     },
     {
+      "name": "AI as Your Debugging Partner",
+      "url": "https://docs.google.com/presentation/d/1ZhOYKtkFmCncnAJ43AVa1BcM4WF05aBUsrcBAxYhREc/template/preview",
+      "key": "ai_as_your_debugging_partner",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "ai_as_your_debugging_partner"
+      }
+    },
+    {
       "name": "AI Chatbot Prompting Guide",
       "url": "https://docs.google.com/document/d/10bo49TaCHgA-UZ_nOHRKRbXFCC9F7g2646dfnFP0vjs/edit?usp=sharing",
       "key": "ai_chatbot_prompting_guide",
@@ -646,16 +2570,55 @@
       }
     },
     {
+      "name": "AI Debugging Strategies Digital Journal",
+      "url": "https://docs.google.com/presentation/d/1rkr6Zh_sgDVeCSRvokdYiCusPBn5-nRQewnjKRFLRjY/edit?usp=sharing",
+      "key": "ai_debugging_strategies_digital_journal",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "ai_debugging_strategies_digital_journal"
+      }
+    },
+    {
       "name": "AI Strategies Digital Journal",
       "url": "https://docs.google.com/presentation/d/1whiDJn41zHFv9Z4AZEzCQu6LmAXXUE8ZMVshRZI0Lwk/edit?usp=sharing",
       "key": "ai_strategies_digital_journal",
       "properties": {
         "audience": "Student",
         "include_in_pdf": true,
-        "type": "Activity Guide"
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "ai_strategies_digital_journal"
+      }
+    },
+    {
+      "name": "Using AI with a Finished Program Digital Journal",
+      "url": "https://docs.google.com/presentation/d/1hyec8ZJ8FZh7ZWGWtycUWkLD-0X5luSn3oaVvmYldZc/edit?usp=sharing",
+      "key": "ai_strategies_digital_journal_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "ai_strategies_digital_journal_1"
+      }
+    },
+    {
+      "name": "AI Value Statement with Finished Programs",
+      "url": "https://docs.google.com/document/d/1k6c9sZNgAt7cWNlJnZwoEgAqVis7SkjP6a0dzD3aESE/edit?usp=sharing",
+      "key": "ai_value_statement_with_finished_programs",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai_value_statement_with_finished_programs"
       }
     },
     {
@@ -671,13 +2634,77 @@
       }
     },
     {
+      "name": "Beyond the Finished Code",
+      "url": "https://docs.google.com/presentation/d/1fq-1lXJK6bYgQ8bsNUUPgWfxn4svW1sCA5Z77mu8X04/template/preview",
+      "key": "beyond_the_finished_code",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "beyond_the_finished_code"
+      }
+    },
+    {
+      "name": "Beyond the Finished Program",
+      "url": "https://docs.google.com/document/d/1rPemrxDAbAKsBR9b9cjntVkQFoXmx-1O8wMDiBl2xwM/edit?usp=sharing",
+      "key": "beyond_the_finished_program",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "beyond_the_finished_program"
+      }
+    },
+    {
+      "name": "Debugging Code with AI Strategies",
+      "url": "https://docs.google.com/document/d/1Pmy4KUVPLth6yfk0Cm8M1k-bgTrq2MVzeumhVMPBp_o/edit?usp=sharing",
+      "key": "debugging_code_with_ai_strategies",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "debugging_code_with_ai_strategies"
+      }
+    },
+    {
+      "name": "Ethics Speed Chat Reflection",
+      "url": "https://docs.google.com/document/d/1KcZcETdVGFnIR3NwCBsMVNYrpUkAKf9ksqIJRKN0aBY/edit?usp=sharing",
+      "key": "ethics_speed_chat_reflection",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ethics_speed_chat_reflection"
+      }
+    },
+    {
+      "name": "Four Corners Reflection",
+      "url": "https://docs.google.com/document/d/1Zh-Jb1XTTYFApBT_wvn9WZjjOtwLsOpVP8bv8wnvwrc/edit?usp=sharing",
+      "key": "four_corners_reflection",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "four_corners_reflection"
+      }
+    },
+    {
       "name": "Initial Stages Strategies Digital Journal",
       "url": "https://docs.google.com/presentation/d/10KAgpz8QJXviZymPj1QkOSxKmzrXWvy0eby1dMILIAo/edit?usp=sharing",
       "key": "initial_stages_strategies_digital_journal",
       "properties": {
         "audience": "Student",
         "include_in_pdf": true,
-        "type": "Activity Guide"
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "initial_stages_strategies_digital_journal"
@@ -696,6 +2723,19 @@
       }
     },
     {
+      "name": "My Algorithms & AI Value Statements",
+      "url": "https://docs.google.com/document/d/1-DiIGAOaA94NdIVW7rPqcLh8Dim1w2qlcuDy0BeH-OM/edit?usp=sharing",
+      "key": "my_algorithms_ai_value_statements",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "my_algorithms_ai_value_statements"
+      }
+    },
+    {
       "name": "My Coding with AI Values",
       "url": "https://docs.google.com/document/d/1Pel9remgMd7GNr54DMXs2PhGY6ejN_ntdVZryhFFIQQ/edit?usp=sharing",
       "key": "my_coding_with_ai_values",
@@ -706,6 +2746,83 @@
       },
       "seeding_key": {
         "resource.key": "my_coding_with_ai_values"
+      }
+    },
+    {
+      "name": "My Debugging with AI Value Statements",
+      "url": "https://docs.google.com/document/d/1AzI8toM5OapEtK-3RUbPbUg78sgYPXk8PRZo1sBalvM/edit?usp=sharing",
+      "key": "my_debugging_with_ai_value_statements",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "my_debugging_with_ai_value_statements"
+      }
+    },
+    {
+      "name": "Mystery Algorithms",
+      "url": "https://docs.google.com/document/d/1DURcrtMGaEm44CG7asCetP40wpZckdl95fl0XDj3zCA/edit?usp=sharing",
+      "key": "mystery_algorithms",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "mystery_algorithms"
+      }
+    },
+    {
+      "name": "Navigating Algorithms with AI Digital Journal",
+      "url": "https://docs.google.com/presentation/d/1gVlgf6VC7f8rMHI2RqSsBa3zCrjHogMkIq23ybd0MYw/edit?usp=sharing",
+      "key": "navigating_algorithms_with_ai_digital_journal",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "navigating_algorithms_with_ai_digital_journal"
+      }
+    },
+    {
+      "name": "Navigating Algorithms with AI Strategies",
+      "url": "https://docs.google.com/presentation/d/1gVlgf6VC7f8rMHI2RqSsBa3zCrjHogMkIq23ybd0MYw/edit?usp=sharing",
+      "key": "navigating_algorithms_with_ai_strategies",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "navigating_algorithms_with_ai_strategies"
+      }
+    },
+    {
+      "name": "Navigating Algorithms with the Help of AI",
+      "url": "https://docs.google.com/presentation/d/1ZhyPj5O-AhmaancorgtITg0mU9UhwhmlW8xFsdhFhkQ/template/preview",
+      "key": "navigating_algorithms_with_the_help_of_ai",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "navigating_algorithms_with_the_help_of_ai"
+      }
+    },
+    {
+      "name": "Reflection Scavenger Hunt",
+      "url": "https://docs.google.com/document/d/1Bs69wKdZxWqCMGRFN6-9PHOw1JZu8A2RXF9VTz7GJps/edit?usp=sharing",
+      "key": "reflection_scavenger_hunt",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "reflection_scavenger_hunt"
       }
     },
     {
@@ -732,6 +2849,32 @@
       },
       "seeding_key": {
         "resource.key": "reflection_stations_1"
+      }
+    },
+    {
+      "name": "Strategies for Using AI with Finished Program",
+      "url": "https://docs.google.com/document/d/1cKYmNsLA3feopBHykqbI4uxHPcb6-QBJvvdfbtQbOkM/edit?usp=sharing",
+      "key": "strategies_for_using_ai_with_finished_program",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "strategies_for_using_ai_with_finished_program"
+      }
+    },
+    {
+      "name": "User Feedback",
+      "url": "https://docs.google.com/document/d/1g_G24ut-J5ldD59KtYCN7vTl7S_AvlhLAg5MY4UtR9Q/edit?usp=sharing",
+      "key": "user_feedback",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "user_feedback"
       }
     }
   ],
@@ -795,6 +2938,138 @@
         "lesson.key": "lesson-2",
         "resource.key": "reflection_stations_1"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "_key_mystery_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "ai_chatbot_prompting_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "four_corners_reflection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "my_algorithms_ai_value_statements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "mystery_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "navigating_algorithms_with_ai_digital_journal"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "navigating_algorithms_with_ai_strategies"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "navigating_algorithms_with_the_help_of_ai"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "ai_as_your_debugging_partner"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "ai_chatbot_prompting_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "ai_debugging_strategies_digital_journal"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "debugging_code_with_ai_strategies"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "my_debugging_with_ai_value_statements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "reflection_scavenger_hunt"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "ai_chatbot_prompting_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "ai_strategies_digital_journal_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "ai_value_statement_with_finished_programs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "beyond_the_finished_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "beyond_the_finished_program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "ethics_speed_chat_reflection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "strategies_for_using_ai_with_finished_program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "user_feedback"
+      }
     }
   ],
   "scripts_resources": [
@@ -813,6 +3088,36 @@
 
   ],
   "objectives": [
+    {
+      "key": "088417b9-137b-4702-998c-53c4a8622d2d",
+      "properties": {
+        "description": "Analyze and expand their finished programs with the assistance of AI tooling strategies."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "088417b9-137b-4702-998c-53c4a8622d2d"
+      }
+    },
+    {
+      "key": "3cb56fe0-dd49-4826-8f48-b65c265a43f2",
+      "properties": {
+        "description": "Debug code with the assistance of AI tooling strategies"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "3cb56fe0-dd49-4826-8f48-b65c265a43f2"
+      }
+    },
+    {
+      "key": "5fef3fb4-83df-464e-91a4-c186ccda9a71",
+      "properties": {
+        "description": "Craft value statements regarding AI use when finished with a program"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "5fef3fb4-83df-464e-91a4-c186ccda9a71"
+      }
+    },
     {
       "key": "6efe583f-0fe5-40db-879f-309903831808",
       "properties": {
@@ -844,6 +3149,26 @@
       }
     },
     {
+      "key": "a76894eb-e7ba-45cb-8f93-023308a1c910",
+      "properties": {
+        "description": "Plan algorithms with the assistance of AI tooling strategies"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "a76894eb-e7ba-45cb-8f93-023308a1c910"
+      }
+    },
+    {
+      "key": "c3a384aa-df54-4d83-ac4a-9da1ef386ab4",
+      "properties": {
+        "description": "Craft value statements regarding AI use when debugging"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "c3a384aa-df54-4d83-ac4a-9da1ef386ab4"
+      }
+    },
+    {
       "key": "e874157a-371a-47c6-9e9f-c7856fa4a9f4",
       "properties": {
         "description": "Utilize AI tooling strategies useful during the initial stages of the programming process"
@@ -851,6 +3176,16 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "objective.key": "e874157a-371a-47c6-9e9f-c7856fa4a9f4"
+      }
+    },
+    {
+      "key": "ef25c19c-37bd-45ab-842b-0a6b5324f4ba",
+      "properties": {
+        "description": "Craft value statements regarding AI use when planning algorithms"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "ef25c19c-37bd-45ab-842b-0a6b5324f4ba"
       }
     }
   ],
@@ -916,6 +3251,132 @@
         "lesson.key": "lesson-2",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "5-A-ii.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "5-C-ii.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "5-A-ii.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "5-C-ii.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "5-A-ii.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "5-C-ii.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     }
   ],
