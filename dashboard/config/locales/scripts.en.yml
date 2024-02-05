@@ -14865,7 +14865,10 @@ en:
           title: "[Draft] Gen AI - Foundations of LLMs"
           description_audience: ''
           description_short: ''
-          description: ''
+          description: |-
+            Placeholder script for drafting the Gen AI unit.
+
+            Questions? Ask Dan or Sarah, or post in #generative-ai-unit
           student_description: ''
         gen-ai-customizing-draft:
           lessons: {}
