@@ -13,14 +13,10 @@ When(/^I click block "([^"]*)"$/) do |block|
   @browser.execute_script("$(\"[#{id_selector}='#{get_block_id(block)}']\").simulate( 'drag', {handle: 'corner', dx: 0, dy: 0, moves: 5});")
 end
 
-# This helps click on a field in Google Blockly.
+# This helps click on a field in Google Blockly. It always picks the first element from the list generated
+# by the selector.
 When(/^I click block field "([^"]*)"$/) do |selector|
-  code = <<~CODE
-    $("#{selector}")[0].dispatchEvent(new PointerEvent('pointerdown', {bubbles: true}));
-    $("#{selector}")[0].dispatchEvent(new PointerEvent('pointerup', {bubbles: true}));
-  CODE
-
-  @browser.execute_script(code)
+  steps "Then I click block field \"#{selector}\" number 0"
 end
 
 # This helps click on a field in Google Blockly.

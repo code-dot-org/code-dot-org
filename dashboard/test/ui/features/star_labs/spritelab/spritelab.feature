@@ -25,7 +25,6 @@ Scenario: Losing the first level
 @no_mobile
 Scenario: Winning the first level
   Then I click block field "[data-id='make-new-sprite'] > .blocklyEditableText" number 1
-  And I wait for 1 seconds
   And the dropdown is visible
   And I select item 0 from the dropdown
   And I wait for 1 seconds
