@@ -34,6 +34,7 @@ class Services::Lti
   end
 
   def self.create_lti_integration(
+    name:,
     client_id:,
     issuer:,
     platform_name:,
@@ -43,6 +44,7 @@ class Services::Lti
     admin_email:
     )
     LtiIntegration.create!(
+      name: name,
       client_id: client_id,
       issuer: issuer,
       platform_name: platform_name,
@@ -50,6 +52,13 @@ class Services::Lti
       jwks_url: jwks_url,
       access_token_url: access_token_url,
       admin_email: admin_email
+    )
+  end
+
+  def self.create_lti_deployment(integration_id, deployment_id)
+    LtiDeployment.create(
+      lti_integration_id: integration_id,
+      deployment_id: deployment_id,
     )
   end
 

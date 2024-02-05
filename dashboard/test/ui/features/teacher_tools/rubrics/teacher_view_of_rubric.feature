@@ -99,18 +99,18 @@ Scenario: Teachers can give and send feedback on the rubric to students.
     Then I see no difference for "floating action button icon"
 
     When I click selector "#ui-floatingActionButton"
-    And I wait until element ".uitest-rubric-header-tab:contains('Settings')" is visible
+    And I wait until element ".uitest-rubric-tab-buttons:contains('Class Management')" is visible
     And I wait until element "h6:contains(Code Quality)" is visible
     Then I see no difference for "rubric tab, Code Quality learning goal"
+    And element ".uitest-run-ai-assessment" is disabled
+    And element ".uitest-info-alert" is visible
 
     When I click selector "#uitest-next-goal"
     And I wait until element "h6:contains(Sprites)" is visible
     Then I see no difference for "rubric tab, Sprites learning goal"
 
-    When I click selector ".uitest-rubric-header-tab:contains('Settings')"
+    When I click selector "button:contains('Class Management')"
     And I wait until element ".uitest-rubric-settings" is visible
-    And element ".uitest-run-ai-assessment" is disabled
-    And element ".uitest-eval-status-text" is visible
     Then I see no difference for "rubric settings tab"
 
     Then I close my eyes

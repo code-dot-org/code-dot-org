@@ -59,7 +59,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   );
   const levelIndex = useSelector(currentLevelIndex);
   const currentLevelCount = useSelector(levelCount);
-  const {hasConditions, message, satisfied} = useSelector(
+  const {hasConditions, message, satisfied, index} = useSelector(
     (state: {lab: LabState}) => state.lab.validationState
   );
 
@@ -88,6 +88,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     <InstructionsPanel
       text={instructionsText}
       message={message || undefined}
+      messageIndex={index}
       showNextButton={showNextButton}
       onNextPanel={onNextPanel}
       theme={theme}
@@ -101,6 +102,8 @@ interface InstructionsPanelProps {
   text: string;
   /** Optional message to display under the main text. This is typically a validation message. */
   message?: string;
+  /** Key for rendering the optional message. A unique value ensures the appearance animation shows. */
+  messageIndex?: number;
   /** Optional image URL to display. */
   imageUrl?: string;
   /** If the next button should be shown. */
@@ -129,6 +132,7 @@ interface InstructionsPanelProps {
 const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   text,
   message,
+  messageIndex,
   imageUrl,
   showNextButton,
   onNextPanel,
@@ -212,7 +216,11 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
           </div>
         )}
         {(message || canShowNextButton) && (
-          <div id="instructions-feedback" className={moduleStyles.feedback}>
+          <div
+            key={messageIndex + ' - ' + message}
+            id="instructions-feedback"
+            className={moduleStyles.feedback}
+          >
             <div
               id="instructions-feedback-message"
               className={moduleStyles['message-' + theme]}

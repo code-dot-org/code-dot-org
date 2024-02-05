@@ -78,8 +78,6 @@ const options = {
 const plugin = new CrossTabCopyPaste();
 plugin.init(options);
 
-const BLOCK_PADDING = 7; // Calculated from difference between block height and text height
-
 const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
@@ -624,12 +622,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
     const bbox = svg.getBBox();
     svg.setAttribute('height', bbox.height + bbox.y);
     svg.setAttribute('width', bbox.width + bbox.x);
-    // Add a transform to center read-only blocks on their line
-    const notchHeight = workspace.getRenderer().getConstants().NOTCH_HEIGHT;
-    svg.setAttribute(
-      'style',
-      `transform: translate(0px, ${notchHeight + BLOCK_PADDING}px)`
-    );
     workspace.setTheme(theme);
     return workspace;
   };

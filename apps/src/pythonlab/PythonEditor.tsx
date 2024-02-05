@@ -1,64 +1,36 @@
-import React, {useEffect, useRef} from 'react';
-import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import classNames from 'classnames';
-import {EditorView, ViewUpdate} from '@codemirror/view';
-import {EditorState} from '@codemirror/state';
-import {editorSetup} from '../javalab/editorSetup';
-import {darkMode} from '../javalab/editorThemes';
+import React from 'react';
+import {darkMode} from '@cdo/apps/lab2/views/components/editor/editorThemes';
 import {python} from '@codemirror/lang-python';
 import moduleStyles from './python-editor.module.scss';
-import {useDispatch, useSelector} from 'react-redux';
-import {PythonlabState, resetOutput, setCode} from './pythonlabRedux';
-import Button from '../templates/Button';
-import {runPythonCode} from './pyodideRunner';
+import {useDispatch} from 'react-redux';
+import {appendOutput, resetOutput, setCode} from './pythonlabRedux';
+import Button from '@cdo/apps/templates/Button';
+// import {runPythonCode} from './pyodideRunner';
 import {useFetch} from '@cdo/apps/util/useFetch';
+import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 interface PermissionResponse {
   permissions: string[];
 }
 
 const PythonEditor: React.FunctionComponent = () => {
-  const editorRef = useRef<HTMLDivElement>(null);
-  const code = useSelector(
-    (state: {pythonlab: PythonlabState}) => state.pythonlab.code
-  );
-  const codeOutput = useSelector(
-    (state: {pythonlab: PythonlabState}) => state.pythonlab.output
-  );
+  const code = useAppSelector(state => state.pythonlab.code);
+  const codeOutput = useAppSelector(state => state.pythonlab.output);
   const {loading, data} = useFetch('/api/v1/users/current/permissions');
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    if (editorRef.current === null) {
-      return;
-    }
-
-    const onEditorUpdate = EditorView.updateListener.of(
-      (update: ViewUpdate) => {
-        dispatch(setCode(update.state.doc.toString()));
-      }
-    );
-
-    const editorExtensions = [
-      ...editorSetup,
-      python(),
-      darkMode,
-      onEditorUpdate,
-    ];
-    new EditorView({
-      state: EditorState.create({
-        doc: '',
-        extensions: editorExtensions,
-      }),
-      parent: editorRef.current,
-    });
-  }, [dispatch, editorRef]);
+  const onCodeUpdate = (code: string) => dispatch(setCode(code));
+  const editorExtensions = [python(), darkMode];
 
   const handleRun = () => {
     const parsedData = data ? (data as PermissionResponse) : {permissions: []};
     // For now, restrict running python code to levelbuilders.
     if (parsedData.permissions.includes('levelbuilder')) {
-      runPythonCode(code);
+      dispatch(appendOutput('Simulating running code.'));
+      // TODO: re-enable once we fix iPad issues.
+      // https://codedotorg.atlassian.net/browse/CT-299
+      // runPythonCode(code);
     } else {
       alert('You do not have permission to run python code.');
     }
@@ -70,13 +42,11 @@ const PythonEditor: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.editorContainer}>
-      <PanelContainer
-        id="python-editor"
-        headerText="Editor"
-        hideHeaders={false}
-      >
-        <div ref={editorRef} className={classNames('codemirror-container')} />
-      </PanelContainer>
+      <CodeEditor
+        onCodeChange={onCodeUpdate}
+        startCode={'print("Hello world!")'}
+        editorConfigExtensions={editorExtensions}
+      />
       <div>
         <Button
           type={'button'}
