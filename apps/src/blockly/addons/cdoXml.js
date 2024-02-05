@@ -373,8 +373,10 @@ function getFieldOrTitle(blockElement, name) {
   // Title is the legacy name for field, we support getting name from
   // either field or title.
   return (
-    blockElement.querySelector(`field[name="${name}"]`) ||
-    blockElement.querySelector(`title[name="${name}"]`)
+    //The :scope pseudo-class is used to refer to the parent element (blockElement)
+    // It ensures that the subsequent selectors target only immediate children.
+    blockElement.querySelector(`:scope > field[name="${name}"]`) ||
+    blockElement.querySelector(`:scope > title[name="${name}"]`)
   );
 }
 

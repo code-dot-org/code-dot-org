@@ -38,7 +38,6 @@ const sections = [
 ];
 
 export default {
-  title: 'ParticipantSections',
   component: ParticipantSections,
 };
 
