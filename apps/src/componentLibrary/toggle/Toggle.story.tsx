@@ -4,7 +4,7 @@ import {Meta, Story} from '@storybook/react';
 import Toggle, {ToggleProps} from './index';
 
 export default {
-  title: 'DesignSystem/Toggle Component',
+  title: 'DesignSystem/Toggle',
   /**
    * Storybook Docs Generation doesn't work properly (as of 07.19.2023).
    * This workaround (component: Component.type instead of component: Component) is taken from

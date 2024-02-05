@@ -15,7 +15,7 @@
 .afe-promo-box h1 {
   font-size: 1.5em;
   margin: 0 0 .75em;
-  color: #00adbc;
+  color: var(--brand_primary_default);
 }
 
 @media screen and (max-width: 992px) {

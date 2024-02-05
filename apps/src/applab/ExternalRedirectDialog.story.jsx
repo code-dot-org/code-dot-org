@@ -3,7 +3,6 @@ import {UnconnectedExternalRedirectDialog as ExternalRedirectDialog} from '@cdo/
 import {REDIRECT_RESPONSE} from './redux/applab';
 
 export default {
-  title: 'ExternalRedirectDialog',
   component: ExternalRedirectDialog,
 };
 

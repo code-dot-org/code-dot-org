@@ -14,7 +14,7 @@ Code.org® es una organización sin fines de lucro dedicada a ampliar el acceso 
 
 [col-40]
 
-<div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
+<div style="background-color:var(--brand_secondary_default);height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
 
   <font size="4" color="#FFFFFF"><b>Los cursos de Code.org son utilizados por decenas de millones de estudiantes y por un millón de profesores en todo el mundo.</b></font>
 
