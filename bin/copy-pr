@@ -26,7 +26,7 @@ end
 
 def comments_to_summary_text(comments)
   comments_summary = comments.map do |comment|
-    "- **#{comment[:author][:login]}** [commented](#{comment[:url]}) - #{comment[:body].length > 500 ? "#{comment[:body][0..499]}... [more](#{comment[:url]})" : comment[:body].tr("\n", ' ')}"
+    "- **#{comment[:author][:login]}** [commented](#{comment[:url]}) - #{comment[:body].tr("\n", ' ')}"
   end
   comments_summary.join("\n")
 end
@@ -74,8 +74,8 @@ end
 
 def add_old_pr_info_to(new_pr_number, old_pr)
   old_pr_number = old_pr[:url].split('/').last
-  comment_body = "This PR is a continuation of ##{old_pr_number}, which was mis-closed by the Git LFS migration (#55759).\n\n" +
-    "### Previous Comments:\n#{comments_to_summary_text(old_pr[:comments])}\n\n" +
+  comment_body = "This PR is a continuation of ##{old_pr_number}, which was mis-closed by the Git LFS migration (#55759).\n\n" \
+    "### Previous Comments:\n#{comments_to_summary_text(old_pr[:comments])}\n\n" \
     "### Previous Reviews:\n#{reviews_to_summary_text(old_pr[:reviews])}"
   File.write("old-pr-info.txt", comment_body)
   command = "gh pr comment #{new_pr_number} --body-file old-pr-info.txt"
