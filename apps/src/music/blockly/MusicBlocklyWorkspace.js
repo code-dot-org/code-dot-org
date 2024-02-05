@@ -101,7 +101,9 @@ export default class MusicBlocklyWorkspace {
    */
   compileSong(scope) {
     if (!this.workspace) {
-      this.metricsReporter.logWarning('workspace not initialized.');
+      this.metricsReporter.logWarning(
+        'compileSong called before workspace initialized.'
+      );
       return;
     }
     Blockly.getGenerator().init(this.workspace);
@@ -309,7 +311,9 @@ export default class MusicBlocklyWorkspace {
 
   getCode() {
     if (!this.workspace) {
-      this.metricsReporter.logWarning('workspace not initialized.');
+      this.metricsReporter.logWarning(
+        'getCode called before workspace initialized.'
+      );
       return {};
     }
     return Blockly.serialization.workspaces.save(this.workspace);
@@ -317,7 +321,9 @@ export default class MusicBlocklyWorkspace {
 
   getAllBlocks() {
     if (!this.workspace) {
-      this.metricsReporter.logWarning('workspace not initialized.');
+      this.metricsReporter.logWarning(
+        'getAllBlocks called before workspace initialized.'
+      );
       return [];
     }
     return this.workspace.getAllBlocks();
@@ -325,7 +331,9 @@ export default class MusicBlocklyWorkspace {
 
   updateHighlightedBlocks(playingBlockIds) {
     if (!this.workspace) {
-      this.metricsReporter.logWarning('workspace not initialized.');
+      this.metricsReporter.logWarning(
+        'updateHighlightedBlocks called before workspace initialized.'
+      );
       return;
     }
     // Clear all highlights.
@@ -342,7 +350,9 @@ export default class MusicBlocklyWorkspace {
   // Given undefined, unselects all blocks.
   selectBlock(blockId) {
     if (!this.workspace) {
-      this.metricsReporter.logWarning('workspace not initialized.');
+      this.metricsReporter.logWarning(
+        'selectBlock called before workspace initialized.'
+      );
       return;
     }
     if (blockId) {
@@ -356,7 +366,9 @@ export default class MusicBlocklyWorkspace {
 
   getSelectedTriggerId(blockId) {
     if (!this.workspace) {
-      this.metricsReporter.logWarning('workspace not initialized.');
+      this.metricsReporter.logWarning(
+        'getSelectedTriggerId called before workspace initialized.'
+      );
       return undefined;
     }
     const block = this.workspace.getBlockById(blockId);
@@ -381,7 +393,9 @@ export default class MusicBlocklyWorkspace {
   // Load the workspace with the given code.
   loadCode(code) {
     if (!this.workspace) {
-      this.metricsReporter.logWarning('workspace not initialized.');
+      this.metricsReporter.logWarning(
+        'loadCode called before workspace initialized.'
+      );
       return;
     }
     this.workspace.clearUndo();
@@ -410,7 +424,9 @@ export default class MusicBlocklyWorkspace {
 
   canUndo() {
     if (!this.workspace) {
-      this.metricsReporter.logWarning('workspace not initialized.');
+      this.metricsReporter.logWarning(
+        'canUndo called before workspace initialized.'
+      );
       return false;
     }
     return this.workspace.getUndoStack().length > 0;
@@ -418,7 +434,9 @@ export default class MusicBlocklyWorkspace {
 
   canRedo() {
     if (!this.workspace) {
-      this.metricsReporter.logWarning('workspace not initialized.');
+      this.metricsReporter.logWarning(
+        'canRedo called before workspace initialized.'
+      );
       return false;
     }
     return this.workspace.getRedoStack().length > 0;
@@ -426,7 +444,9 @@ export default class MusicBlocklyWorkspace {
 
   undoRedo(redo) {
     if (!this.workspace) {
-      this.metricsReporter.logWarning('workspace not initialized.');
+      this.metricsReporter.logWarning(
+        'undoRedo called before workspace initialized.'
+      );
       return;
     }
     this.workspace.undo(redo);
