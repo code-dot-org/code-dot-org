@@ -80,7 +80,7 @@ Feature: Dance Party
     And element "#resetButton" is hidden
 
     # Next check that correct number of sprites are displayed when program is run.
-    Then I click selector "#runButton"
+    Then I click selector "#runButton" once I see it
     Then I wait until element "#runButton" is not visible
     Then evaluate JavaScript expression "window.__DanceTestInterface.getSprites().length === 10"
     Then I click selector "#resetButton" once I see it
