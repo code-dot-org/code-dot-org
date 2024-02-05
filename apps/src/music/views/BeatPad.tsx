@@ -34,7 +34,7 @@ const BeatPad: React.FunctionComponent<BeatPadProps> = ({
               trigger.id === selectedTriggerId && styles.triggerButtonSelected,
               isPlaying && styles.triggerButtonActive
             )}
-            onClick={!isPlaying ? undefined : () => playTrigger(trigger.id)}
+            onClick={isPlaying ? () => playTrigger(trigger.id) : undefined}
           >
             {trigger.buttonLabel}
           </button>

@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-29 21:36:13 UTC",
+    "serialized_at": "2024-02-02 20:02:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4559,7 +4559,7 @@
       "key": "92c142fd-bc84-4462-b8ce-ab6e97046a19",
       "position": 8,
       "properties": {
-        "description": "[skill building]",
+        "progression_name": "Skill Building Levels",
         "tips": [
           {
             "type": "teachingTip",
@@ -8039,6 +8039,50 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Skill Building Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L13 flex-grow_1"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "92c142fd-bc84-4462-b8ce-ab6e97046a19"
+      },
+      "level_keys": [
+        "CSD U2L13 flex-grow_1"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L13 flex-shrink_2"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "92c142fd-bc84-4462-b8ce-ab6e97046a19"
+      },
+      "level_keys": [
+        "CSD U2L13 flex-shrink_2"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "CSD U2 project guide_2018_2019_pilot_2024"
         ],
@@ -8059,7 +8103,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 76,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -8084,7 +8128,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 77,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -8109,7 +8153,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 78,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -8134,7 +8178,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 79,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8159,7 +8203,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 80,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8184,7 +8228,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 81,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -8209,7 +8253,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 82,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8234,7 +8278,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 83,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8259,7 +8303,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 84,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8284,7 +8328,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 85,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -8309,7 +8353,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 86,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8334,7 +8378,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 87,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -8359,7 +8403,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 88,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -8384,7 +8428,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 89,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8409,7 +8453,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 90,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8434,7 +8478,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 91,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8459,7 +8503,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 92,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8484,7 +8528,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 93,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8509,7 +8553,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 94,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8534,7 +8578,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 95,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8559,7 +8603,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 96,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8584,7 +8628,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 97,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -8609,7 +8653,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 98,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -9496,6 +9540,30 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2024",
         "activity_section.key": "8b4ef7f7-510b-4416-add3-0132465f985f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L13 flex-grow_1",
+        "script_level.level_keys": [
+          "CSD U2L13 flex-grow_1"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "92c142fd-bc84-4462-b8ce-ab6e97046a19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L13 flex-shrink_2",
+        "script_level.level_keys": [
+          "CSD U2L13 flex-shrink_2"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "92c142fd-bc84-4462-b8ce-ab6e97046a19"
       }
     },
     {

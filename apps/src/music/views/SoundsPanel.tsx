@@ -1,24 +1,31 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, {useCallback} from 'react';
 import classNames from 'classnames';
 import {baseAssetUrl} from '../constants';
 import styles from './soundsPanel.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import MusicLibrary, {SoundData, SoundFolder} from '../player/MusicLibrary';
 
 /*
  * Renders a UI for previewing and choosing samples. This is currently used within a
  * custom Blockly Field {@link FieldSounds}
  */
 
-const getLengthRepresentation = length => {
-  const lengthToSymbol = {
+const getLengthRepresentation = (length: number) => {
+  const lengthToSymbol: {[length: number]: string} = {
     0.5: '\u00bd',
     0.25: '\u00bc',
   };
   return lengthToSymbol[length] || length;
 };
 
-const FolderPanelRow = ({
+interface FolderPanelRowProps {
+  libraryGroupPath: string;
+  playingPreview: string;
+  folder: SoundFolder;
+  onPreview: (path: string) => void;
+}
+
+const FolderPanelRow: React.FunctionComponent<FolderPanelRowProps> = ({
   libraryGroupPath,
   playingPreview,
   folder,
@@ -31,6 +38,16 @@ const FolderPanelRow = ({
     folder.imageSrc &&
     `${baseAssetUrl}${libraryGroupPath}/${folder.path}/${folder.imageSrc}`;
 
+  const onPreviewClick = useCallback(
+    (e: Event) => {
+      if (soundPath && !isPlayingPreview) {
+        onPreview(soundPath);
+      }
+      e.stopPropagation();
+    },
+    [isPlayingPreview, onPreview, soundPath]
+  );
+
   return (
     <div className={classNames('sounds-panel-folder-row', styles.folderRow)}>
       <div className={styles.folderRowLeft}>
@@ -40,24 +57,19 @@ const FolderPanelRow = ({
       </div>
       <div className={styles.folderRowMiddle}>
         <div className={styles.folderRowMiddleName}>{folder.name}</div>
-        <div className={styles.folderRowMiddleSubTitle}>{folder.subTitle}</div>
       </div>
       <div className={styles.folderRowRight}>
         <div className={styles.length}>&nbsp;</div>
         {previewSound && (
           <div className={styles.previewContainer}>
             <FontAwesome
+              title={undefined}
               icon={'play-circle'}
               className={classNames(
                 styles.preview,
                 isPlayingPreview && styles.previewPlaying
               )}
-              onClick={e => {
-                if (!isPlayingPreview) {
-                  onPreview(soundPath);
-                }
-                e.stopPropagation();
-              }}
+              onClick={onPreviewClick}
             />
           </div>
         )}
@@ -66,14 +78,16 @@ const FolderPanelRow = ({
   );
 };
 
-FolderPanelRow.propTypes = {
-  libraryGroupPath: PropTypes.string,
-  playingPreview: PropTypes.string,
-  folder: PropTypes.object.isRequired,
-  onPreview: PropTypes.func.isRequired,
-};
+interface SoundsPanelRowProps {
+  currentValue: string;
+  playingPreview: string;
+  folder: SoundFolder;
+  sound: SoundData;
+  onSelect: (path: string) => void;
+  onPreview: (path: string) => void;
+}
 
-const SoundsPanelRow = ({
+const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
   currentValue,
   playingPreview,
   folder,
@@ -85,6 +99,15 @@ const SoundsPanelRow = ({
   const isSelected = soundPath === currentValue;
   const isPlayingPreview = playingPreview === soundPath;
   const typeIconPath = `/blockly/media/music/icon-${sound.type}.png`;
+  const onPreviewClick = useCallback(
+    (e: Event) => {
+      if (!isPlayingPreview) {
+        onPreview(soundPath);
+      }
+      e.stopPropagation();
+    },
+    [isPlayingPreview, onPreview, soundPath]
+  );
 
   return (
     <div
@@ -105,17 +128,13 @@ const SoundsPanelRow = ({
         </div>
         <div className={styles.previewContainer}>
           <FontAwesome
+            title={undefined}
             icon={'play-circle'}
             className={classNames(
               styles.preview,
               isPlayingPreview && styles.previewPlaying
             )}
-            onClick={e => {
-              if (!isPlayingPreview) {
-                onPreview(soundPath);
-              }
-              e.stopPropagation();
-            }}
+            onClick={onPreviewClick}
           />
         </div>
       </div>
@@ -123,16 +142,15 @@ const SoundsPanelRow = ({
   );
 };
 
-SoundsPanelRow.propTypes = {
-  currentValue: PropTypes.string.isRequired,
-  playingPreview: PropTypes.string,
-  folder: PropTypes.object.isRequired,
-  sound: PropTypes.object.isRequired,
-  onSelect: PropTypes.func.isRequired,
-  onPreview: PropTypes.func.isRequired,
-};
+interface SoundsPanelProps {
+  library: MusicLibrary;
+  currentValue: string;
+  playingPreview: string;
+  onSelect: (path: string) => void;
+  onPreview: (path: string) => void;
+}
 
-const SoundsPanel = ({
+const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   library,
   currentValue,
   playingPreview,
@@ -144,8 +162,11 @@ const SoundsPanel = ({
 
   // Generate a flat list of entries to render.  We need a flat list because
   // we will make the headers sticky.
-
-  const entries = [];
+  const entries: {
+    type: 'folder' | 'sound';
+    folder: SoundFolder;
+    sound?: SoundData;
+  }[] = [];
   folders.forEach(folder => {
     entries.push({type: 'folder', folder: folder});
     folder.sounds.forEach(sound => {
@@ -166,7 +187,7 @@ const SoundsPanel = ({
               onPreview={onPreview}
             />
           );
-        } else if (!entry.sound.preview) {
+        } else if (entry.sound && !entry.sound.preview) {
           return (
             <SoundsPanelRow
               key={entryIndex}
@@ -182,14 +203,6 @@ const SoundsPanel = ({
       })}
     </div>
   );
-};
-
-SoundsPanel.propTypes = {
-  library: PropTypes.object.isRequired,
-  currentValue: PropTypes.string.isRequired,
-  playingPreview: PropTypes.string,
-  onSelect: PropTypes.func.isRequired,
-  onPreview: PropTypes.func.isRequired,
 };
 
 export default SoundsPanel;

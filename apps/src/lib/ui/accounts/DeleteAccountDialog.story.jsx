@@ -22,7 +22,6 @@ const DEFAULT_PROPS = {
 };
 
 export default {
-  title: 'DeleteAccountDialog',
   component: DeleteAccountDialog,
 };
 
