@@ -6,7 +6,6 @@ import {reduxStore} from '@cdo/storybook/decorators';
 import teacherSections from './teacherSectionsRedux';
 
 export default {
-  title: 'SectionLoginInfo',
   component: SectionLoginInfo,
 };
 

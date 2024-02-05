@@ -3,7 +3,6 @@ import {UnconnectedLoginTypePicker as LoginTypePicker} from './LoginTypePicker';
 import {action} from '@storybook/addon-actions';
 
 export default {
-  title: 'LoginTypePicker',
   component: LoginTypePicker,
 };
 

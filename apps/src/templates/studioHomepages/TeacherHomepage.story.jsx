@@ -35,7 +35,6 @@ const serverCourses = [
 ];
 
 export default {
-  title: 'TeacherHomepage',
   component: TeacherHomepage,
 };
 

@@ -26,6 +26,5 @@ DialogOpenPublishPending.args = {
 };
 
 export default {
-  title: 'PublishDialog',
   component: PublishDialog,
 };

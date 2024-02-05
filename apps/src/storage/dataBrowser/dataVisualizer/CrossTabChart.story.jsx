@@ -3,7 +3,6 @@ import CrossTabChart from './CrossTabChart';
 import _ from 'lodash';
 
 export default {
-  title: 'CrossTabChart',
   component: CrossTabChart,
 };
 
