@@ -27,7 +27,7 @@ Scenario: Winning the first level
   Then I click block field "[data-id='make-new-sprite'] > .blocklyEditableText" number 1
   And I wait for 1 seconds
   And the dropdown is visible
-  And I click block field ".goog-menuitem-content" number 0
+  And I select item 0 from the dropdown
   And I wait for 1 seconds
   Then the dropdown is hidden
   And I press "runButton"
