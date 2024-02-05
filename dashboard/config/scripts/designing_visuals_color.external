@@ -3,28 +3,15 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Accessibility
-##To ensure our PL is accessible, include the following into modules: 
+# Color
+##To ensure consistency across materials, adhere to the  <a href= 'https://drive.google.com/file/d/1zKhNqPdqUiR-w-_vexhkUXTw8AHn23Lb/view'> Code.org Branding Guidelines</a> 
 
-### **1. Translatability**
-* #### Use markdown wherever possible 
+### **Main Colors**
+![](https://images.code.org/76b481b21b0d4b8c706f85d932f5015a-image-1706746443932.14.00 PM.png)
 
-### **2. Captions on video**
+### **CMYK and Hex Codes**
+![](https://images.code.org/d66ad47de8f28c822d4edbd89426acc3-image-1706746519674.15.14 PM.png)
 
-### **3. Accessible Colors and Contrast** 
-* #### Adhere to the <a href= 'https://drive.google.com/file/d/1zKhNqPdqUiR-w-_vexhkUXTw8AHn23Lb/view'> Code.org Branding Guidelines</a> to ensure visual accessibility 
-
-### **4. Best Practices for alt text for images:** 
-* #### Add alt text all non-decorative images.
-* #### Keep it short and descriptive, like a tweet.
-* #### Don’t include “image of” or “photo of”.
-* #### Leave alt text blank if the image is purely decorative
-* #### It's not necessary to add text in the Title field. 
-
-## Exemplar alt text for images: 
-### "An Alien Game made in Game Lab"
-
-<img src="https://images.code.org/3297ca57e23d5349eff36b91b811901e-image-1700511533861.18.48 PM.png" alt="An Alien Game made in Game Lab" style="border-radius:0px; float: center; height: 250px; clear: both; margin: 0px 0px 0px 0;">
-
+##Using Color for Emphasis 
 
 MARKDOWN
