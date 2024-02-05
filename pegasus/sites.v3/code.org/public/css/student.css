@@ -3,12 +3,12 @@
   flex-direction: column;
 }
 
-.full-resource-image { 
-  width: 100%; 
+.full-resource-image {
+  width: 100%;
 }
 
 .description {
-  background-color: #00adbc;
+  background-color: var(--brand_primary_default);
   color: #fff;
   padding: 30px;
 }

@@ -1,17 +1,14 @@
 import PropTypes from 'prop-types';
-import React, {useEffect, useContext, useCallback} from 'react';
+import React, {useCallback} from 'react';
 import classNames from 'classnames';
 import FontAwesome from '../../templates/FontAwesome';
 import {Triggers} from '@cdo/apps/music/constants';
 import moduleStyles from './controls.module.scss';
 import BeatPad from './BeatPad';
-import {AnalyticsContext} from '../context';
 import {useDispatch, useSelector} from 'react-redux';
 import {
-  hideBeatPad,
   moveStartPlayheadPositionBackward,
   moveStartPlayheadPositionForward,
-  showBeatPad,
 } from '../redux/musicRedux';
 import commonI18n from '@cdo/locale';
 
@@ -99,34 +96,7 @@ const Controls = ({
   enableSkipControls = false,
 }) => {
   const isPlaying = useSelector(state => state.music.isPlaying);
-  const isBeatPadShowing = useSelector(state => state.music.isBeatPadShowing);
   const isLoading = useSelector(state => state.music.soundLoadingProgress < 1);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    if (isPlaying) {
-      dispatch(showBeatPad());
-    }
-  }, [dispatch, isPlaying]);
-
-  const analyticsReporter = useContext(AnalyticsContext);
-
-  const renderBeatPad = () => {
-    return (
-      <BeatPad
-        triggers={Triggers}
-        playTrigger={playTrigger}
-        onClose={() => {
-          dispatch(hideBeatPad());
-          analyticsReporter.onButtonClicked('show-hide-beatpad', {
-            showing: false,
-          });
-        }}
-        hasTrigger={hasTrigger}
-        isPlaying={isPlaying}
-      />
-    );
-  };
 
   return (
     <div id="controls" className={moduleStyles.controlsContainer}>
@@ -151,7 +121,10 @@ const Controls = ({
         </button>
         {enableSkipControls && <SkipControls />}
       </div>
-      {isBeatPadShowing && renderBeatPad()}
+      <BeatPad
+        triggers={Triggers.filter(trigger => hasTrigger(trigger.id))}
+        playTrigger={playTrigger}
+      />
       <LoadingProgress />
     </div>
   );

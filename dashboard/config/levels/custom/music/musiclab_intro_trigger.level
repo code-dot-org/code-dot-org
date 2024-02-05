@@ -8,9 +8,8 @@
   "properties": {
     "encrypted": "false",
     "background": "music-black",
-    "long_instructions": "#### Play live\n\nDid you know you can do a live performance?\n\nAttach a [play](#clickable=play-sound-block) block to the [triggered](#clickable=trigger-block-workspace) block.\n\nPress [Run](#clickable=run-button) and press [1](#clickable=trigger-button-1) to trigger the sound.",
+    "long_instructions": "#### Play Live\n\nDid you know you can do a live performance?\n\nAttach a [play](#clickable=play-sound-block) block to the [triggered](#clickable=trigger-block-workspace) block.\n\nPress [Run](#clickable=run-button) and press [1](#clickable=trigger-button-1) to trigger the sound.",
     "level_data": {
-      "library": "will",
       "startSources": {
         "blocks": {
           "languageVersion": 0,
@@ -53,7 +52,7 @@
               "name": "played_sound_triggered"
             }
           ],
-          "message": "Nice work!",
+          "message": "Nice work.  You successfully played a sound by using the trigger.",
           "next": true
         },
         {

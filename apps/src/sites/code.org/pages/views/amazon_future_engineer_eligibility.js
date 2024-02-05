@@ -1,4 +1,3 @@
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import $ from 'jquery';
@@ -25,10 +24,6 @@ function showAmazonFutureEngineerEligibility() {
       accountInformation = results;
     })
     .complete(() => {
-      firehoseClient.putRecord({
-        study: 'amazon-future-engineer-eligibility',
-        event: 'start',
-      });
       analyticsReporter.sendEvent(EVENTS.AFE_START);
 
       amazonFutureEngineerEligibilityElements.each(

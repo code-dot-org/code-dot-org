@@ -51,6 +51,10 @@ class School < ApplicationRecord
     school_stats_by_year.order(school_year: :desc).first
   end
 
+  def census_for_year(year)
+    census_summaries.find_by(school_year: year)
+  end
+
   # Determines if school meets Amazon Future Engineer criteria.
   # Eligible if the school is any of the following:
   # a) title I school,

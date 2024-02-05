@@ -257,6 +257,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.Block.prototype.appendEndRowInput =
     blocklyWrapper.Block.prototype.appendDummyInput;
 
+  // Block.setStyle doesn't exist in CDO Blockly but it is called
+  // in definitions of various common blocks that are also supported
+  // on Google Blockly.
+  blocklyWrapper.Block.prototype.setStyle = function () {};
+
   blocklyWrapper.cdoUtils = {
     loadBlocksToWorkspace(blockSpace, source) {
       const isXml = stringIsXml(source);
@@ -373,6 +378,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // so we return undefined here.
   blocklyWrapper.getFunctionEditorWorkspace = () => {
     return undefined;
+  };
+
+  // Google Blockly labs also need to clear separate workspaces for the function editor.
+  blocklyWrapper.clearAllStudentWorkspaces = () => {
+    Blockly.mainBlockSpace.clear();
   };
 
   return blocklyWrapper;

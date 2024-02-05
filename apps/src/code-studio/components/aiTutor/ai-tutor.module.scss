@@ -1,5 +1,19 @@
 @import 'color.scss';
 
+.floatingActionButton {
+    position: fixed;
+    left: 10px;
+    bottom: 48px;
+  
+    height: 60px;
+    width: 60px;
+    background-size: 60px;
+    padding: 0;
+  
+    border-width: 0;
+    border-radius: 30px;
+}
+
 .aiBotImg {
     width: 42px;
     height: 68px;
@@ -86,3 +100,32 @@ $default-spacing: 2px;
 .textArea {
     width: 80%;
 }
+  
+.hiddenAITutorPanel {
+    display: none;
+}
+
+.aiTutorPanel {
+    position: fixed;
+    left: 10px;
+    bottom: 116px;
+    width: 760px;
+    background: $background_gray;
+    opacity: 0.98;
+  
+    border: 5px solid $dark_teal;
+    border-radius: 10px 0 0 10px;
+  
+    /* Must appear in front of <Overlay/>, whose z-index is 1020. */
+    z-index: 1022;
+  
+    h3 {
+      padding: 5px;
+      font-size: 18px;
+      font-weight: normal;
+      color: $white;
+      background: $dark_teal;
+      margin: 0;
+    }
+  }
+  
