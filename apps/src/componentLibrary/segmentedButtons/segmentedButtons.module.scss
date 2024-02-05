@@ -1,0 +1,218 @@
+@import "color";
+@import "@cdo/apps/componentLibrary/common/styles/mixins";
+
+.segmentedButtons {
+  display: flex;
+  align-items: flex-start;
+  gap: -1px;
+
+  .segmentedButton {
+    &:first-child {
+      border-start-start-radius: 4px;
+      border-end-start-radius: 4px;
+    }
+
+    &:last-child {
+      border-start-end-radius: 4px;
+      border-end-end-radius: 4px;
+    }
+
+    &:not(:last-child) {
+      margin-right: -1px;
+    }
+  }
+
+  // Selected styles
+  .selectedSegmentedButton {
+    background-color: $light_primary_500;
+    border-color: $light_primary_500;
+    color: $light_white;
+
+    // Hover styles
+    &:hover {
+      background-color: $light_primary_500;
+      border-color: $light_primary_500;
+      color: $light_white;
+    }
+
+    // Focus styles
+    &:focus-visible {
+      background-color: $light_primary_100;
+      border-color: $light_gray_200;
+      color: $light_black;
+    }
+
+    // Pressed styles
+    &:active {
+      background-color: $light_primary_500;
+      border-color: $light_primary_500;
+      color: $light_white;
+    }
+
+    // Disabled styles
+    &:disabled {
+      background-color: $light_primary_100;
+      border-color: $light_primary_100;
+      color: $light_white;
+    }
+  }
+}
+
+.segmentedButton {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.5rem;
+
+  background-color: $light_white;
+  border: 1px solid $light_gray_200;
+  border-radius: 0;
+  color: $light_black;
+  margin: 0;
+
+  // Hover styles
+  &:hover {
+    box-shadow: none;
+    background-color: $light_gray_100;
+    border-color: $light_gray_200;
+  }
+
+  // Focus styles
+  &:focus-visible {
+    outline: none;
+    background-color: $light_primary_100;
+    border-color: $light_gray_200;
+  }
+
+  // Pressed styles
+  &:active {
+    background-color: $light_primary_700;
+    // Important here is needed to rewrite line 3328, app/assets/stylesheets/application.scss */
+    border-color: $light_primary_500 !important;
+    color: $light_white;
+  }
+
+  // Disabled styles
+  &:disabled {
+    background-color: $light_white;
+    border-color: $light_gray_200;
+    color: $light_gray_200;
+  }
+}
+
+// Sizes
+.segmentedButtons-l {
+  .segmentedButton-withLabel {
+    padding: 0.625rem 1rem;
+  }
+
+  .segmentedButton-iconOnly {
+    padding: 0.75rem;
+  }
+
+  .segmentedButton-number {
+    padding: 0.625rem 0;
+    width: 3rem;
+  }
+
+  .segmentedButton {
+    span {
+      @include button-one-text;
+      margin-bottom: 0;
+    }
+
+    i {
+      width: 1.5rem;
+      height: 1.5rem;
+      font-size: 1.1875rem;
+      line-height: 1.25;
+    }
+  }
+}
+
+.segmentedButtons-m {
+  .segmentedButton-withLabel {
+    padding: 0.5rem 1rem;
+  }
+
+  .segmentedButton-iconOnly {
+    padding: 0.625rem;
+  }
+
+  .segmentedButton-number {
+    padding: 0.5rem 0;
+    width: 2.5rem;
+  }
+
+  .segmentedButton {
+    span {
+      @include button-two-text;
+      margin-bottom: 0;
+    }
+
+    i {
+      width: 1.25rem;
+      height: 1.25rem;
+      font-size: 1rem;
+      line-height: 1.25;
+    }
+  }
+}
+
+.segmentedButtons-s {
+  .segmentedButton-withLabel {
+    padding: 0.3125rem 0.625rem;
+  }
+
+  .segmentedButton-iconOnly {
+    padding: 0.4375rem;
+  }
+
+  .segmentedButton-number {
+    padding: 0.3125rem 0;
+    width: 2rem;
+  }
+
+  .segmentedButton {
+    span {
+      @include button-three-text;
+      margin-bottom: 0;
+    }
+
+    i {
+      width: 1.125rem;
+      height: 1.125rem;
+      font-size: 0.875rem;
+      line-height: 1.25;
+    }
+  }
+}
+
+.segmentedButtons-xs {
+  .segmentedButton-withLabel {
+    padding: 0.125rem 0.5rem;
+  }
+
+  .segmentedButton-iconOnly {
+    padding: 0.25rem;
+  }
+
+  .segmentedButton-number {
+    padding: 0.125rem 0;
+    width: 1.5rem;
+  }
+
+  .segmentedButton {
+    span {
+      @include button-four-text;
+      margin-bottom: 0;
+    }
+
+    i {
+      width: 1rem;
+      height: 1rem;
+      font-size: 0.8125rem;
+      line-height: 1.25;
+    }
+  }
+}

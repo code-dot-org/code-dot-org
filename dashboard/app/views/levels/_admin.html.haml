@@ -8,7 +8,10 @@
       %li= link_to "see callouts (#{@level.available_callouts(@script_level).count})", show_callouts: '1'
       - if @level.is_a? Gamelab
         %li= link_to 'view animation JSON', '', onclick: 'window.viewExportableAnimationList(); return false'
-      - if Rails.application.config.levelbuilder_mode
+      -# Curriculum writers rarely need to edit STANDALONE_PROJECTS levels, and accidental edits to these levels
+      -# can be quite disruptive. As a workaround you can navigate directly to the edit url for these levels.
+      - is_standalone_project = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
+      - if Rails.application.config.levelbuilder_mode  && !is_standalone_project
         - if can? :edit, @level
           %li
             = link_to '[E]dit', edit_level_path(@level), { accesskey: 'e', title: "Edit this level. Can use the browser-dependent accesskey shortcut for quick access." }

@@ -1159,6 +1159,13 @@ en:
             '1': lemon juice
             '3': baking soda
             '5': both
+      DansBlocks_gravity_test:
+        text: "[BEHAVIOR][0]"
+        options:
+          BEHAVIOR:
+            new Behavior(fall_gravity_behavior, []): fall_gravity
+      DansBlocks_jump_gravity:
+        text: make [SPRITE][0] jump
       DansBlocks_setForegroundEffect2:
         text: "[Don't Use] do [EFFECT][0] effect"
         options:
@@ -1180,6 +1187,15 @@ en:
             '5': both
       DansBlocks_testRectangle:
         text: 'make rectangle x: [X][0] y: [Y][1] w: [W][2] h: [H][3] color: [COLOR][4]'
+      DansBlocks_testShowVariable:
+        text: 'Display this number: [SOMENUMBER][0] at size [SOMESIZE][1] in [COLOR][2]'
+        options:
+          OPT:
+            '"large"': large
+            '"small"': small
+          COLOR:
+            '"blue"': blue
+            '"red"': red
       FunctionBlocks_addEightBlock:
         text: addEight
       FunctionBlocks_addFiveBlock:
@@ -1874,6 +1890,13 @@ en:
         text: x coordinate of [SPRITE][0]
       gamelab_yLocationOf:
         text: y coordinate of [SPRITE][0]
+      KatiesBlocks_changeVelocity:
+        text: change [SPRITE][0] [PROPERTY][1] by [VAL][2]
+        options:
+          PROPERTY:
+            '"velocityX"': velocityX
+            '"velocityY"': velocityY
+            '"rotationSpeed"': rotationSpeed
       KatiesBlocks_glideTo:
         text: "[SPRITE][0] glide to [LOCATION][1]"
       KatiesBlocks_goldilocks:
@@ -1885,8 +1908,17 @@ en:
             '"solid"': solid
             '"liquid"': liquid
             '"gas"': gas
+      KatiesBlocks_katieCollide:
+        text: "[SPRITE][0] collides [TARGET][1]"
       KatiesBlocks_makeNumSpritesNear:
         text: make [NUM][0] new [ANIMATION_NAME][1] sprites near [LOCATION][2]
+      KatiesBlocks_setVelocity:
+        text: set [SPRITE][0] [PROPERTY][1] to [VAL][2]
+        options:
+          PROPERTY:
+            '"velocityX"': velocityX
+            '"velocityY"': velocityY
+            '"rotationSpeed"': rotationSpeed
       KatiesBlocks_spriteBirdSay:
         text: "[SPRITE][0] says [SPEECH][1]"
         options:

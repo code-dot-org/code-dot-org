@@ -4,11 +4,12 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSD Self Paced PL",
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-17 22:26:59 UTC",
+    "serialized_at": "2024-01-25 21:20:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -105,6 +106,7 @@
       "key": "54e77af8-1e36-461d-8740-12cc1232035b",
       "position": 1,
       "properties": {
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "54e77af8-1e36-461d-8740-12cc1232035b",
@@ -117,6 +119,7 @@
       "key": "d18b0f55-a8b7-4b0d-83d9-f845df412ab6",
       "position": 1,
       "properties": {
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "d18b0f55-a8b7-4b0d-83d9-f845df412ab6",
@@ -129,6 +132,7 @@
       "key": "708bd978-db08-4349-b583-e2fc02171e14",
       "position": 1,
       "properties": {
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "708bd978-db08-4349-b583-e2fc02171e14",
@@ -141,6 +145,7 @@
       "key": "8df18695-76b5-4bc6-aa8e-cf83e6345af1",
       "position": 1,
       "properties": {
+        "duration": 15
       },
       "seeding_key": {
         "lesson_activity.key": "8df18695-76b5-4bc6-aa8e-cf83e6345af1",
@@ -988,6 +993,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-U3-GettingStarted-WrapUp"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
