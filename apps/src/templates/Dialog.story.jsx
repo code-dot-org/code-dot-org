@@ -13,7 +13,6 @@ import {action} from '@storybook/addon-actions';
 
 // There are so many different variations that making a template is not helpful
 export default {
-  title: 'Dialog',
   component: Dialog,
 };
 
