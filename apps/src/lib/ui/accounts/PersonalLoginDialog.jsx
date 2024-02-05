@@ -39,10 +39,7 @@ export default class PersonalLoginDialog extends React.Component {
           <p>
             <strong style={styles.dangerText}>
               {i18n.personalLoginDialog_body1({
-                numStudents:
-                  dependentStudentsCount === dependentStudentsCountLimit
-                    ? `${dependentStudentsCount}+`
-                    : dependentStudentsCount,
+                numStudents: dependentStudentsCount,
               })}
             </strong>
             {i18n.personalLoginDialog_body2({
