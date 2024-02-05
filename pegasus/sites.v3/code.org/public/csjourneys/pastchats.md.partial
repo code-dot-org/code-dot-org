@@ -157,7 +157,7 @@ social:
 <div style="clear: both"></div>
 
 <a id="guides"></a>
-<div class="col-100" style="border:1px solid #00adbc; text-align:left; margin-top:25px; padding:15px; padding-left:25px; padding-right:25px; overflow: hidden; position: relative; border-radius:15px">
+<div class="col-100" style="border:1px solid var(--brand_primary_default); text-align:left; margin-top:25px; padding:15px; padding-left:25px; padding-right:25px; overflow: hidden; position: relative; border-radius:15px">
 <h2 style="margin-top:25px">Teacher Guides</h2>
 <div class="col-50" style="padding-right:20px">
 <p>To learn more about key takeaways for students and suggestions for planning, view the Teacher Guide that’s most appropriate to you.</p>

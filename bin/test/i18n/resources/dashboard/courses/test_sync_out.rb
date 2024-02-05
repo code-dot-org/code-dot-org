@@ -47,6 +47,7 @@ describe I18n::Resources::Dashboard::Courses::SyncOut do
     end
 
     before do
+      I18n::Metrics.stubs(:report_runtime).yields(nil)
       I18nScriptUtils.stubs(:source_lang?).with(language).returns(false)
 
       described_class.any_instance.stubs(:restore_localization)
@@ -158,17 +159,6 @@ describe I18n::Resources::Dashboard::Courses::SyncOut do
       expect_localization_restoration.once
       restore_localization_of_language
     end
-
-    context 'when the backup file does not exist' do
-      before do
-        FileUtils.rm(i18n_backup_file_path)
-      end
-
-      it 'does not restores localization' do
-        expect_localization_restoration.never
-        restore_localization_of_language
-      end
-    end
   end
 
   describe '#fix_localization_urls' do
@@ -194,7 +184,7 @@ describe I18n::Resources::Dashboard::Courses::SyncOut do
     end
 
     it 'fixes course urls' do
-      expected_crowdin_file_content = <<-YAML.gsub(/^ {8}/, '')
+      expected_crowdin_file_content = <<~YAML
         ---
         en:
           data:

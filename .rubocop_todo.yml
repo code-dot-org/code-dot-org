@@ -217,10 +217,6 @@ Style/CommentAnnotation:
   Enabled: false
 
 # Offense count: 2
-Style/DocumentDynamicEvalDefinition:
-  Enabled: false
-
-# Offense count: 2
 # This cop supports safe auto-correction (--auto-correct).
 Style/EvalWithLocation:
   Enabled: false
@@ -269,12 +265,6 @@ Style/GlobalStdStream:
 # Offense count: 325
 # Configuration parameters: AllowedVariables.
 Style/GlobalVars:
-  Enabled: false
-
-# Offense count: 20
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: AllowSplatArgument.
-Style/HashConversion:
   Enabled: false
 
 # Offense count: 31

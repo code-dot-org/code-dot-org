@@ -955,6 +955,24 @@ export function isProductionEnvironment() {
  * Fetch cookies signed by cloudfront which grant access to restricted content.
  * @returns {Promise<Response>}
  */
-export function fetchSignedCookies() {
-  return fetch('/dashboardapi/sign_cookies', {credentials: 'same-origin'});
+export function fetchSignedCookies(buster = false) {
+  return fetch(
+    `/dashboardapi/sign_cookies${buster ? `?bust=${Date.now()}` : ''}`,
+    {
+      credentials: 'same-origin',
+    }
+  );
+}
+
+export function getAlphanumericId() {
+  const validCharacters =
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const idLength = 16;
+  const id = [];
+  for (let i = 0; i < idLength; i++) {
+    id.push(
+      validCharacters.charAt(Math.floor(Math.random() * validCharacters.length))
+    );
+  }
+  return id.join('');
 }

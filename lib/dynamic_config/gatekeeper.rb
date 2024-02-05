@@ -166,7 +166,7 @@ class GatekeeperBase < DynamicConfigBase
   end
 
   def refresh
-    @datastore_cache.update_cache
+    @datastore_cache.update_local_cache
   end
 
   private def stringify_keys(hsh)

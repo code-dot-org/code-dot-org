@@ -6,6 +6,7 @@ import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import Button from '@cdo/apps/templates/Button';
 import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
 import color from '@cdo/apps/util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export default class OrderControls extends Component {
   static propTypes = {
@@ -119,7 +120,7 @@ const styles = {
     paddingRight: 20,
     paddingBottom: 20,
     width: 970,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif',
+    ...fontConstants['main-font-regular'],
     marginLeft: -500,
   },
 };

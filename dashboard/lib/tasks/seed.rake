@@ -233,7 +233,7 @@ namespace :seed do
   # explicit execution of "seed:dsls"
   timed_task_with_logging dsls: :environment do
     DSLDefined.transaction do
-      level_md5s_by_name = Hash[DSLDefined.pluck(:name, :md5)]
+      level_md5s_by_name = DSLDefined.pluck(:name, :md5).to_h
 
       # Allow developers to seed just one dsl-defined level, e.g.
       # rake seed:dsls DSL_FILENAME=k-1_Artistloops_multi1.multi

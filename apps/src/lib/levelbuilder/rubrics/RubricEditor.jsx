@@ -9,7 +9,7 @@ export default function RubricEditor({
   learningGoalList,
   updateLearningGoal,
 }) {
-  const renderLearningGoalItems = learningGoalList.map(goal => {
+  const renderLearningGoalItems = learningGoalList?.map(goal => {
     if (!goal._destroy) {
       return (
         <LearningGoalItem

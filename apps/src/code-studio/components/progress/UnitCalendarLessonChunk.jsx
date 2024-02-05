@@ -4,6 +4,7 @@ import {unitCalendarLessonChunk} from '@cdo/apps/templates/progress/unitCalendar
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ReactTooltip from 'react-tooltip';
+import fontConstants from '@cdo/apps/fontConstants';
 
 class UnitCalendarLessonChunk extends Component {
   static propTypes = {
@@ -133,7 +134,7 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     height: '100%',
   },
   assessment: {

@@ -4,6 +4,7 @@ import React from 'react';
 import color from '../../util/color';
 import i18n from '@cdo/locale';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import fontConstants from '@cdo/apps/fontConstants';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import style from './project-card.module.scss';
 import ReportAbusePopUp from './ReportAbusePopUp.jsx';
@@ -18,42 +19,43 @@ export default class ProjectCard extends React.Component {
     currentGallery: PropTypes.oneOf(['personal', 'public']).isRequired,
     showFullThumbnail: PropTypes.bool,
     isDetailView: PropTypes.bool,
+    showReportAbuseHeader: PropTypes.bool,
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      showReportAbuse: false,
-      showReportHeader: false, // may need to change this state in the future to utilize report cookies - if gallery ever keeps an immediate report
+      isShowingReportAbusePopUp: false,
+      hasBeenReported: false, // may need to change this state in the future to utilize report cookies - if gallery ever keeps an immediate report
     };
     this.showReportAbusePopUp = this.showReportAbusePopUp.bind(this);
     this.closeReportAbusePopUp = this.closeReportAbusePopUp.bind(this);
-    this.showReportedHeader = this.showReportedHeader.bind(this);
+    this.onReportAbuse = this.onReportAbuse.bind(this);
   }
 
   showReportAbusePopUp() {
     this.setState({
-      showReportAbuse: true,
+      isShowingReportAbusePopUp: true,
     });
   }
 
   closeReportAbusePopUp() {
     this.setState({
-      showReportAbuse: false,
+      isShowingReportAbusePopUp: false,
     });
   }
 
-  showReportedHeader() {
+  onReportAbuse() {
     this.setState({
-      showReportHeader: true,
+      hasBeenReported: true,
     });
   }
 
   renderHeader() {
-    const {showReportHeader} = this.state;
+    const {hasBeenReported} = this.state;
 
-    if (!showReportHeader) {
+    if (!hasBeenReported) {
       return (
         <div
           style={{
@@ -90,7 +92,8 @@ export default class ProjectCard extends React.Component {
   }
 
   render() {
-    const {projectData, currentGallery, isDetailView} = this.props;
+    const {projectData, currentGallery, isDetailView, showReportAbuseHeader} =
+      this.props;
     const {type, channel} = this.props.projectData;
     const isPersonalGallery = currentGallery === 'personal';
     const isPublicGallery = currentGallery === 'public';
@@ -98,30 +101,30 @@ export default class ProjectCard extends React.Component {
       ? `/projects/${type}/${channel}/edit`
       : `/projects/${type}/${channel}`;
 
-    const thumbnailStyle = styles.thumbnail;
+    let thumbnailStyle = styles.thumbnail;
     if (this.props.showFullThumbnail) {
-      Object.assign(thumbnailStyle, styles.fullThumbnail);
+      thumbnailStyle = {...thumbnailStyle, ...styles.fullThumbnail};
     }
 
     const shouldShowPublicDetails =
       isPublicGallery && isDetailView && projectData.publishedAt;
     const noTimeOnCardStyle = shouldShowPublicDetails ? {} : styles.noTime;
 
-    const {showReportAbuse} = this.state;
+    const {isShowingReportAbusePopUp} = this.state;
 
     return (
       <div className="project_card">
-        {showReportAbuse ? (
+        {isShowingReportAbusePopUp && (
           <ReportAbusePopUp
             abuseUrl={url}
             projectData={this.props.projectData}
             onClose={this.closeReportAbusePopUp}
-            onReport={this.showReportedHeader}
+            onReport={this.onReportAbuse}
           />
-        ) : null}
+        )}
 
         <div className={style.card}>
-          {this.renderHeader()}
+          {showReportAbuseHeader && this.renderHeader()}
 
           <div style={thumbnailStyle}>
             <a
@@ -200,7 +203,7 @@ const styles = {
     paddingTop: 18,
     paddingBottom: 5,
     fontSize: 16,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     color: color.neutral_dark,
     overflow: 'hidden',
     textOverflow: 'ellipsis',

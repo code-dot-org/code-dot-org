@@ -31,13 +31,13 @@ import {FormContext} from '../../form_components_func/FormComponent';
 const getProgramName = program => {
   switch (program) {
     case PROGRAM_CSD:
-      return 'CS Discoveries';
+      return 'Computer Science Discoveries';
     case PROGRAM_CSP:
-      return 'CS Principles';
+      return 'Computer Science Principles';
     case PROGRAM_CSA:
-      return 'CSA';
+      return 'Computer Science A';
     default:
-      return 'CS Program';
+      return 'Computer Science Program';
   }
 };
 
@@ -85,38 +85,6 @@ const ProfessionalLearningProgramRequirements = props => {
             textFieldMap={textFieldMap}
           />
         </div>
-      );
-    }
-  };
-
-  const renderCostNote = () => {
-    if (hasRegionalPartner) {
-      return (
-        <label>
-          {regionalPartner.name} may have scholarships available to cover some
-          or all costs associated with the program.{' '}
-          <a
-            href={
-              pegasus('/educate/professional-learning/program-information') +
-              (!!data.schoolZipCode ? '?zip=' + data.schoolZipCode : '')
-            }
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Click here to check the fees and discounts for your program
-          </a>
-          . Let us know if your school or district would be able to pay the fee
-          or if you need to be considered for a scholarship.
-        </label>
-      );
-    } else {
-      return (
-        <label>
-          When you are matched with a partner, they may have scholarships
-          available to cover some or all costs associated with the program. Let
-          us know if your school or district would be able to pay the fee or if
-          you need to be considered for a scholarship.
-        </label>
       );
     }
   };
@@ -173,24 +141,18 @@ const ProfessionalLearningProgramRequirements = props => {
   };
 
   const renderProgramRequirements = () => {
-    const programConclusion =
-      data.program === PROGRAM_CSA
-        ? 'The program concludes the following summer with a Capstone experience that ' +
-          'serves as an opportunity to prepare for the coming year and further connects ' +
-          'you with the CS Education Community.'
-        : 'The program will conclude in the spring.';
     return (
       <div>
         <p>
           Code.org’s Professional Learning Program for{' '}
           {getProgramName(data.program)} is a yearlong program, meant to support
           you throughout your first year teaching the course. Starting in the
-          summer, the program begins with a week-long workshop to prepare you to
+          summer, the program begins with a multi-day workshop to prepare you to
           start the year. During the school year, Academic Year Workshops will
-          reinforce your skills and provide a community to discuss questions you
-          have during the year. {programConclusion} Workshops will either be
-          held in-person, virtually, or as a combination of both throughout the
-          year.
+          reinforce your skills and provide a community to get answers to
+          questions you have during the year. The program concludes in the
+          spring. Workshops will either be held in-person, virtually, or as a
+          combination of both throughout the year.
           {hasRegionalPartner && (
             <span>
               {' '}
@@ -229,8 +191,6 @@ const ProfessionalLearningProgramRequirements = props => {
           </p>
         )}
         <div>
-          {renderCostNote(hasRegionalPartner)}
-          <LabeledSingleCheckbox name="understandFee" />
           <LabeledRadioButtons name="payFee" />
           {data.payFee === TextFields.noPayFee && (
             <LabeledLargeInput name="scholarshipReasons" />
@@ -286,10 +246,6 @@ ProfessionalLearningProgramRequirements.getDynamicallyRequiredFields = data => {
     data.regionalPartnerWorkshopIds.length > 0
   ) {
     requiredFields.push('ableToAttendMultiple', 'committed');
-  }
-
-  if (data.regionalPartnerId) {
-    requiredFields.push('payFee', 'understandFee');
   }
 
   if (data.regionalPartnerId && data.payFee === TextFields.noPayFee) {

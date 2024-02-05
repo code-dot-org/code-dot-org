@@ -1,5 +1,9 @@
 <Poetry>
   <config><![CDATA[{
+  "game_id": 69,
+  "created_at": "2021-10-19T16:26:02.000Z",
+  "level_num": "custom",
+  "user_id": 13468,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -15,7 +19,7 @@
     "show_type_hints": true,
     "use_modal_function_editor": "false",
     "embed": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"poetry_burst\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"2\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"poetry_burst\",\"callout_text\":\"New block!\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"2\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\".blocklyFlyout [data-id=\\\"2\\\"]\",\"localization_key\":\"poetry_burst\",\"callout_text\":\"New block!\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "instructions_important": "false",
     "long_instructions": "*Set the author of the poem to whatever the user enters.*\r\n\r\n* Add a `set author` block under `when all prompts answered`.\r\n* Add a variable block and choose the label that matches the one in the prompt.",
     "submittable": "false",
@@ -39,13 +43,8 @@
     "min_workspace_height": "0",
     "skip_autosave": true,
     "standalone_app_name": "poetry",
-    "preload_asset_list": null,
-    "default_poem": null
+    "preload_asset_list": null
   },
-  "user_id": 13468,
-  "game_id": 69,
-  "created_at": "2021-10-19T16:26:02.000Z",
-  "level_num": "custom",
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-10-19T16:26:02.310+00:00\",\"changed\":[\"cloned from \\\"poetry_module_variables_prompt\\\"\"],\"cloned_from\":\"poetry_module_variables_prompt\"},{\"changed_at\":\"2021-10-19 16:28:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-19 16:32:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-19 17:01:53 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-19 17:02:21 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-19 18:14:40 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-19 18:15:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
@@ -90,7 +89,7 @@
     <toolbox_blocks>
       <xml>
         <block type="Poetry_setTitle"/>
-        <block type="Poetry_setAuthor"/>
+        <block type="Poetry_setAuthor" id="2"/>
         <block type="variables_get">
           <title name="VAR">author</title>
         </block>

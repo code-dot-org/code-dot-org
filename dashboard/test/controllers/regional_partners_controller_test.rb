@@ -77,7 +77,6 @@ class RegionalPartnersControllerTest < ActionController::TestCase
     assert_equal @regional_partner.reload.is_active, false
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'assign workshop organizer as program manager creates regional partner program manager' do
     workshop_organizer = create :workshop_organizer
     sign_in @workshop_admin

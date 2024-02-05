@@ -52,10 +52,12 @@ class LearningGoal < ApplicationRecord
   def summarize_for_rubric_edit
     {
       id: id,
+      key: key,
       rubricId: rubric_id,
       position: position,
       learningGoal: learning_goal,
       aiEnabled: ai_enabled,
+      tips: tips,
       learningGoalEvidenceLevelsAttributes: learning_goal_evidence_levels.map(&:summarize_for_rubric_edit)
     }
   end

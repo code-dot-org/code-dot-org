@@ -2,6 +2,7 @@
   "category": "Control",
   "config": {
     "func": "ifVarEquals",
+    "docFunc": "codestudio_ifStatement",
     "blockText": "if {NUM} ={VAL}\n{STATEMENT}",
     "args": [
       {

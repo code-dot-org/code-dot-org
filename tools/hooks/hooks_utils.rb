@@ -1,17 +1,22 @@
 class HooksUtils
   def self.get_modified_files
     Dir.chdir File.expand_path('../../../', __FILE__)
-    `git ls-files --exclude-standard --modified`.split("\n").map(&:chomp).map {|x| File.expand_path("../../../#{x}", __FILE__)}
+    sanitize_file_paths(`git ls-files --exclude-standard --modified`)
   end
 
   def self.get_unstaged_files
     Dir.chdir File.expand_path('../../../', __FILE__)
-    `git ls-files --exclude-standard --others`.split("\n").map(&:chomp).map {|x| File.expand_path("../../../#{x}", __FILE__)}
+    sanitize_file_paths(`git ls-files --exclude-standard --others`)
   end
 
   def self.get_staged_files
     Dir.chdir File.expand_path('../../../', __FILE__)
-    `git diff --cached --name-only --diff-filter AMR`.split("\n").map(&:chomp).map {|x| File.expand_path("../../../#{x}", __FILE__)}
+    sanitize_file_paths(`git diff --cached --name-only --diff-filter AMR`)
+  end
+
+  def self.get_changed_files_between_branches(first_branch, second_branch)
+    Dir.chdir File.expand_path('../../../', __FILE__)
+    sanitize_file_paths(`git diff --name-only #{first_branch}...#{second_branch}`)
   end
 
   # Returns whether a filename should be prohibited from a staging commit. Reasons for this:
@@ -20,12 +25,22 @@ class HooksUtils
   #   * any file with spaces in the name
   #   * any file in /code.org/public/images/avatars with non-lowercase letters in the filename
   # @param filename [String] A filename.
-  # @return [Boolean] Whether the filename should be prohibited in a commit.
+  # @return [Array<String>, Boolean] An array of error messages if the file is prohibited for one or more reasons; `false` otherwise
   def self.prohibited?(filename)
-    return true if ['.mp4', '.mov'].include? File.extname(filename)
-    return true if File.extname(filename) != File.extname(filename).downcase
-    return true if filename.match?(/\s/)
-    return true if filename.include?('/code.org/public/images/avatars/') && File.basename(filename).downcase != File.basename(filename)
-    false
+    problems = []
+    problems << "file uses a .mp4 or .mov extension" if ['.mp4', '.mov'].include? File.extname(filename)
+    problems << "non-lowercase characters in extension" if File.extname(filename) != File.extname(filename).downcase
+    problems << "spaces in filename" if filename.match?(/\s/)
+    problems << "non-lowercase characters in avatar image" if filename.include?('/code.org/public/images/avatars/') && File.basename(filename).downcase != File.basename(filename)
+    return problems unless problems.empty?
+    return false
+  end
+
+  class << self
+    private
+
+    def sanitize_file_paths(output)
+      return output.split("\n").map(&:chomp).map {|x| File.expand_path("../../../#{x}", __FILE__)}
+    end
   end
 end

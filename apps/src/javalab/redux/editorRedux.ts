@@ -27,7 +27,7 @@ interface FileMetadata {
 // https://www.typescriptlang.org/docs/handbook/enums.html#enums-at-compile-time
 type JavalabEditorDialogOptions = keyof typeof JavalabEditorDialog;
 
-interface JavalabEditorState {
+export interface JavalabEditorState {
   fileMetadata: FileMetadata;
   orderedTabKeys: string[];
   activeTabKey: string;
@@ -38,6 +38,7 @@ interface JavalabEditorState {
   newFileError: string | null;
   renameFileError: string | null;
   editTabKey: string | null;
+  hasCompilationError: boolean;
 }
 
 const initialSources: EditorFilesMap = {
@@ -59,6 +60,7 @@ export const initialState: JavalabEditorState = {
   newFileError: null,
   renameFileError: null,
   editTabKey: null,
+  hasCompilationError: false,
 };
 
 const javalabEditorSlice = createSlice({
@@ -260,6 +262,9 @@ const javalabEditorSlice = createSlice({
     clearRenameFileError(state) {
       state.renameFileError = null;
     },
+    setHasCompilationError(state, action: PayloadAction<boolean>) {
+      state.hasCompilationError = action.payload;
+    },
   },
 });
 
@@ -316,6 +321,7 @@ export const {
   clearRenameFileError,
   setNewFileError,
   clearNewFileError,
+  setHasCompilationError,
 } = javalabEditorSlice.actions;
 
 export default javalabEditorSlice.reducer;

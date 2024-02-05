@@ -55,7 +55,7 @@ def get_rows
         workshop.virtual? ? "Yes" : "No",
         workshop.effective_num_hours,
         workshop.enrollments.count,
-        workshop.teachers_attending_all_sessions(true).count,
+        workshop.teachers_attending_all_sessions(filter_by_cdo_scholarship: true).count,
         workshop.teachers_attending_all_sessions.count,
         workshop.sessions.last&.formatted_date,
         workshop.id

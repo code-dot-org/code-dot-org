@@ -30,7 +30,26 @@
 class SingleSectionExperiment < Experiment
   belongs_to :section, optional: true
 
+  # requiring this mitigates performance problems when calling Experiment.get_all_enabled on hot codepaths
+  belongs_to :script, class_name: 'Unit'
+
+  # set a limit on the total number of SingleSectionExperiment records, to mitigate performance problems
+  # when calling Experiment.get_all_enabled on hot codepaths
+  MAX_COUNT = 1_000
+
+  def max_count
+    MAX_COUNT
+  end
+
+  validate :validate_max_count, on: :create
+
+  def validate_max_count
+    errors.add(:base, "cannot have more than #{max_count} records") unless SingleSectionExperiment.count < max_count
+  end
+
   def enabled?(user: nil)
-    user.sections.include?(section) || user.sections_as_student.include?(section)
+    return false unless user
+
+    user.sections_instructed.include?(section) || user.sections_as_student.include?(section)
   end
 end

@@ -9,9 +9,9 @@ export type SongData = {
 };
 
 type Analysis = {
-  beats: [boolean, boolean, boolean];
+  beats: boolean[];
   centroid: number;
-  energy: [number, number, number];
+  energy: number[];
   time: number;
   volume: number;
 };
@@ -35,14 +35,3 @@ export interface DanceLevelProperties extends LevelProperties {
   defaultSong?: string;
   useRestrictedSongs?: boolean;
 }
-
-export type AiModalItem = {
-  id: string;
-  name: string;
-};
-
-export type AiModalReturnedItem = {
-  id: string;
-  name: string;
-  url: string;
-};

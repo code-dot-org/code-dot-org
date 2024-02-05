@@ -12,7 +12,7 @@ describe('CodeWritten', () => {
     const wrapper = shallow(<CodeWritten {...DEFAULT_PROPS} />);
     expect(wrapper).to.containMatchingElement(
       <div>
-        <p>You just wrote 0 lines of code!</p>
+        <p />
         <details>
           <summary>
             <b>Show code</b>
@@ -30,7 +30,7 @@ describe('CodeWritten', () => {
     );
     expect(wrapper).to.containMatchingElement(
       <div>
-        <p>You just wrote 0 lines of code!</p>
+        <p />
         <details>
           <summary>
             <b>Show code</b>
@@ -59,7 +59,7 @@ describe('CodeWritten', () => {
 
     expect(wrapper).to.containMatchingElement(
       <div>
-        <p style={{fontSize: 16}}>You just wrote 0 lines of code!</p>
+        <p />
         <details style={{textAlign: 'left'}}>
           <summary
             style={{

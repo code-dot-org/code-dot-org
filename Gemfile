@@ -81,7 +81,6 @@ gem 'rack-cache'
 
 group :development, :test do
   gem 'rerun'
-  gem 'shotgun'
   gem 'thin'
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
@@ -158,7 +157,7 @@ gem 'phantomjs', '~> 1.9.7.1'
 gem 'gemoji'
 
 # Authentication and permissions.
-gem 'cancancan', '~> 3.2.0'
+gem 'cancancan', '~> 3.5.0'
 gem 'devise', '~> 4.7.0'
 gem 'devise_invitable', '~> 2.0.2'
 
@@ -209,7 +208,7 @@ gem 'retryable' # retry code blocks when they throw exceptions
 # Used by `uglifier` to minify JS assets in the Asset Pipeline.
 gem 'execjs'
 # JavaScript runtime used by ExecJS.
-gem 'mini_racer', group: [:staging, :test, :production, :levelbuilder]
+gem 'mini_racer'
 
 gem 'jwt', '~> 2.7.0'
 
@@ -244,7 +243,7 @@ gem 'aws-sdk-s3'
 gem 'aws-sdk-secretsmanager'
 
 # Lint tools
-group :development, :staging, :levelbuilder do
+group :development, :staging, :levelbuilder, :test do
   gem 'haml_lint', require: false
   gem 'rubocop', '~> 1.28', require: false
   gem 'rubocop-performance', require: false
@@ -350,4 +349,8 @@ gem 'pry', '~> 0.14.0'
 # Google's Compact Language Detector
 gem 'cld'
 
-gem 'crowdin-api', '~> 1.2.1'
+gem 'crowdin-api', '~> 1.6.0'
+
+gem "delayed_job_active_record", "~> 4.1"
+
+gem 'rack-cors', '~> 2.0.1'

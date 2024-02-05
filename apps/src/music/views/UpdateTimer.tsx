@@ -44,12 +44,14 @@ const UpdateTimer: React.FunctionComponent<UpdateTimerProps> = ({
       if (intervalId.current !== undefined) {
         window.clearInterval(intervalId.current);
       }
+      // Reset validation before starting the update timer when playback starts.
+      progressManager?.resetValidation();
       intervalId.current = window.setInterval(doUpdate, UPDATE_RATE);
     } else {
       window.clearInterval(intervalId.current);
       intervalId.current = undefined;
     }
-  }, [isPlaying, doUpdate]);
+  }, [isPlaying, doUpdate, progressManager]);
 
   // This component doesn't render anything.
   return null;

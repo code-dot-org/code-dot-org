@@ -1,3 +1,5 @@
+@import 'font';
+
 #codeWorkspace {
   border: none !important;
 }
@@ -17,13 +19,11 @@ button {
 }
 
 #pondTextMarkdown strong {
+  @include main-font-regular;
   color: #eb5757;
-  font-weight: normal;
-  font-family: "Gotham 4r", arial, sans-serif;
 }
 
 #pondTextMarkdown em {
+  @include main-font-regular;
   color: #56c568;
-  font-style: normal;
-  font-family: "Gotham 4r", arial, sans-serif;
 }

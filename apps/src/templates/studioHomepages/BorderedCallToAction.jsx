@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import styleConstants from '@cdo/apps/styleConstants';
+import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/templates/Button';
 import {navigateToHref} from '@cdo/apps/utils';
 
@@ -82,8 +83,7 @@ const styles = {
   },
   heading: {
     fontSize: 20,
-    fontFamily: 'Gotham 5r',
-    fontWeight: 'bold',
+    ...fontConstants['main-font-semi-bold'],
     color: color.neutral_dark,
     paddingTop: extraSpace,
   },

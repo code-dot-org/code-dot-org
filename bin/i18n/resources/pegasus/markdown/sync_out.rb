@@ -3,6 +3,7 @@
 require 'fileutils'
 
 require_relative '../../../i18n_script_utils'
+require_relative '../../../utils/sync_out_base'
 require_relative '../../../utils/pegasus_markdown'
 require_relative '../markdown'
 
@@ -10,50 +11,21 @@ module I18n
   module Resources
     module Pegasus
       module Markdown
-        class SyncOut
+        class SyncOut < I18n::Utils::SyncOutBase
           DIR_NAME = 'codeorg-markdown'.freeze
 
-          def self.perform
-            new.execute
-          end
+          def process(language)
+            crowdin_locale_dir = I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME)
+            return unless File.directory?(crowdin_locale_dir)
 
-          def execute
-            progress_bar.start
-
-            I18nScriptUtils.process_in_threads(pegasus_languages) do |pegasus_lang|
-              crowdin_locale_dir = I18nScriptUtils.locale_dir(pegasus_lang[:crowdin_name_s])
-              crowdin_locale_resource_dir = File.join(crowdin_locale_dir, DIR_NAME)
-              next unless File.directory?(crowdin_locale_resource_dir)
-
-              locale = pegasus_lang[:locale_s]
-              distribute(locale, crowdin_locale_resource_dir) unless locale == 'en-US'
-
-              FileUtils.rm_r(crowdin_locale_resource_dir)
-            ensure
-              I18nScriptUtils.remove_empty_dir(crowdin_locale_dir)
-
-              mutex.synchronize {progress_bar.increment}
+            unless I18nScriptUtils.source_lang?(language)
+              distribute(language[:locale_s], crowdin_locale_dir)
             end
 
-            progress_bar.finish
+            FileUtils.rm_r(crowdin_locale_dir)
           end
 
           private
-
-          def pegasus_languages
-            @pegasus_languages ||= PegasusLanguages.get_crowdin_name_and_locale
-          end
-
-          def progress_bar
-            @progress_bar ||= I18nScriptUtils.create_progress_bar(
-              title: 'Pegasus/markdown sync-out',
-              total: pegasus_languages.size
-            )
-          end
-
-          def mutex
-            @mutex ||= Thread::Mutex.new
-          end
 
           def distribute(locale, crowdin_locale_resource_dir)
             Dir.glob(File.join(crowdin_locale_resource_dir, '**/*.md')) do |crowdin_file_path|

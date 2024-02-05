@@ -138,7 +138,6 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     assert_equal regional_partner_wa, RegionalPartner.find_by_region(nil, "WA")
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'pd_workshops association as workshop_organizer' do
     regional_partner = create :regional_partner
     partner_organizer = create :workshop_organizer
@@ -166,7 +165,6 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     assert_equal partner_workshops, regional_partner.pd_workshops_organized
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'future_pd_workshops_organized as workshop_organizer' do
     regional_partner = create :regional_partner
     partner_organizer = create :workshop_organizer

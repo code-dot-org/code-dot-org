@@ -75,10 +75,10 @@ module Pd::Payment
     # Get number of teachers attending all sessions, except for admin and counselor PD where logging in
     # to attend is not required.
     def num_scholarship_teachers_attending_all_sessions
-      workshop.account_required_for_attendance? ? workshop.teachers_attending_all_sessions(true).count : nil
+      workshop.account_required_for_attendance? ? workshop.teachers_attending_all_sessions(filter_by_cdo_scholarship: true).count : nil
     end
 
-    def generate_organizer_report_line_item(with_payment = false)
+    def generate_organizer_report_line_item(with_payment: false)
       line_item = {
         organizer_name: workshop.organizer&.name,
         organizer_email: workshop.organizer&.email,

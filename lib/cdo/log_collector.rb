@@ -11,7 +11,7 @@ class LogCollector
 
   # @param task_name [String] friendly name of the task to collect logs for
   # @param print_log_immediately [Boolean] print a log as soon as it is added to the log collector
-  def initialize(task_name = nil, print_log_immediately = true)
+  def initialize(task_name = nil, print_log_immediately: true)
     @task_name = task_name
     @exceptions = []  # rescued exceptions
     @logs = []

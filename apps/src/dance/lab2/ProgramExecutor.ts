@@ -2,9 +2,8 @@ import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/Custo
 import {SongMetadata} from '../types';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import * as danceMsg from '../locale';
-import Sounds from '@cdo/apps/Sounds';
 import {ASSET_BASE} from '../constants';
-import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import utils from '../utils';
 
 // TODO: The Dance Party repo currently does not export types, so we need
@@ -30,21 +29,29 @@ const allEvents: {[name in HookName]: Handler} = {
  */
 export default class ProgramExecutor {
   private readonly nativeAPI: typeof DanceParty;
+  private readonly metricsReporter: LabMetricsReporter;
   private hooks: {[name in HookName]?: (args?: unknown[]) => unknown};
   private validationCode?: string;
   private onEventsChanged?: () => void;
+
+  private livePreviewActive = false;
+  private currentlyPlayingSong: string | null = null;
 
   constructor(
     container: string,
     onPuzzleComplete: (result: boolean, message: string) => void,
     isReadOnlyWorkspace: boolean,
     recordReplayLog: boolean,
+    metricsReporter: LabMetricsReporter,
     customHelperLibrary?: string,
     validationCode?: string,
     onEventsChanged?: () => void,
+    readonlyCode?: string, // Allows us to supply the student code early if we're in a read-only workspace.
     nativeAPI: typeof DanceParty = undefined // For testing
   ) {
     this.hooks = {};
+    this.validationCode = validationCode;
+    this.onEventsChanged = onEventsChanged;
     this.nativeAPI =
       nativeAPI ||
       new DanceParty({
@@ -55,27 +62,27 @@ export default class ProgramExecutor {
         onHandleEvents: (currentFrameEvents: object[]) =>
           this.handleEvents(currentFrameEvents),
         onInit: async (nativeAPI: typeof DanceParty) => {
-          this.init(nativeAPI, isReadOnlyWorkspace);
+          this.init(nativeAPI, isReadOnlyWorkspace, readonlyCode);
         },
         spriteConfig: new Function('World', customHelperLibrary || ''),
         container,
         i18n: danceMsg,
         resourceLoader: new ResourceLoader(ASSET_BASE),
+        logger: metricsReporter,
       });
-    this.validationCode = validationCode;
-    this.onEventsChanged = onEventsChanged;
+    this.metricsReporter = metricsReporter;
   }
 
   /**
    * Execute the program. Compiles student code and hands off to the native API to run.
    */
-  async execute(songMetadata: SongMetadata) {
+  async execute(code: string, songMetadata: SongMetadata) {
     // TODO: Dance.js checks for unwanted top blocks and duplicate variables in for loops
     // before executing. We should do something similar here.
 
-    this.hooks = await this.compileAllCode(this.getCode());
+    this.hooks = await this.compileAllCode(code);
     if (!this.hooks.runUserSetup || !this.hooks.getCueList) {
-      Lab2MetricsReporter.logWarning('Missing required hooks in compiled code');
+      this.reportMissingHooks('runUserSetup', 'getCueList');
       return;
     }
 
@@ -97,27 +104,89 @@ export default class ProgramExecutor {
   }
 
   /**
-   * Preview the program. Compiles student code and calls on the native API to draw the first frame.
+   * Show a static preview of the program. Compiles student code and calls on the native API to draw a frame.
    */
-  async preview() {
+  async staticPreview(code: string) {
     this.reset();
-    this.hooks = await this.preloadSpritesAndCompileCode(
-      this.getCode(),
-      'runUserSetup'
-    );
+    this.hooks = await this.preloadSpritesAndCompileCode(code, 'runUserSetup');
+    if (!this.hooks.runUserSetup) {
+      this.reportMissingHooks('runUserSetup');
+      return;
+    }
+
+    const previewDraw = () => {
+      this.nativeAPI.setEffectsInPreviewMode(true);
+
+      // the user setup hook initializes effects,
+      // needs to happen in preview mode for some effects (eg, tacos)
+      if (!this.hooks.runUserSetup) {
+        return;
+      }
+      this.hooks.runUserSetup();
+
+      // redraw() (rather than draw()) is p5's recommended way
+      // of drawing once.
+      this.nativeAPI.p5_.redraw();
+
+      this.nativeAPI.setEffectsInPreviewMode(false);
+    };
+
+    // This is the mechanism p5 uses to queue draws,
+    // so we do the same so we end up after any queued draws.
+    window.requestAnimationFrame(previewDraw);
+  }
+
+  /**
+   * Show a live preview of the program. Compiles student code and calls on the native API to run the live preview.
+   */
+  async startLivePreview(
+    code: string,
+    songMetadata: SongMetadata,
+    durationMs?: number
+  ) {
+    this.reset();
+    this.livePreviewActive = true;
+    await this.updateLivePreview(code, songMetadata, durationMs);
+  }
+
+  /**
+   * Update the currently playing live preview.
+   */
+  async updateLivePreview(
+    code: string,
+    songMetadata: SongMetadata,
+    durationMs?: number
+  ) {
+    if (!this.livePreviewActive) {
+      console.warn('Update live preview called before starting live preview');
+      return;
+    }
+    this.hooks = await this.preloadSpritesAndCompileCode(code, 'runUserSetup');
 
     if (!this.hooks.runUserSetup) {
-      Lab2MetricsReporter.logWarning('Missing required hook in compiled code');
+      this.reportMissingHooks('runUserSetup');
       return;
     }
 
     this.hooks.runUserSetup();
-    this.nativeAPI.p5_.draw();
+    this.nativeAPI.livePreview(
+      utils.getSongMetadataForPreview(songMetadata),
+      durationMs
+    );
+  }
+
+  isLivePreviewRunning() {
+    return this.livePreviewActive;
   }
 
   reset() {
-    Sounds.getSingleton().stopAllAudio();
+    // Only stop audio if this executor had started playing a song.
+    if (this.currentlyPlayingSong) {
+      audioCommands.stopSound({url: this.currentlyPlayingSong});
+      this.currentlyPlayingSong = null;
+    }
     this.nativeAPI.reset();
+    this.livePreviewActive = false;
   }
 
   getReplayLog() {
@@ -125,6 +194,7 @@ export default class ProgramExecutor {
   }
 
   destroy() {
+    this.reset();
     this.nativeAPI.teardown();
   }
 
@@ -176,29 +246,29 @@ export default class ProgramExecutor {
     return hooks;
   }
 
-  // Temporary test code. TODO: Replace with code from Blockly workspace.
-  private getCode(): string {
-    return 'whenSetup(function () {\n  setBackgroundEffectWithPalette("kaleidoscope", "electronic");\n  setForegroundEffectExtended("raining_tacos");\n  makeNewDanceSpriteGroup(12, "ALIEN", "circle");\n  makeAnonymousDanceSprite("CAT", {x: 200, y: 200});\n});\n\natTimestamp(4, "measures", function () {\n  setBackgroundEffectWithPalette("disco_ball", "neon");\n  setForegroundEffectExtended("color_lights");\n  changeMoveEachLR(sprites, MOVES.Drop, -1);\n});\n';
-  }
-
   private async init(
     nativeAPI: typeof DanceParty,
-    isReadOnlyWorkspace: boolean
+    isReadOnlyWorkspace: boolean,
+    readonlyCode?: string
   ) {
-    if (isReadOnlyWorkspace) {
+    if (isReadOnlyWorkspace && readonlyCode) {
       // In the share scenario, we call ensureSpritesAreLoaded() early since the
       // student code can't change. This way, we can start fetching assets while
       // waiting for the user to press the Run button.
-      const charactersReferenced = utils.computeCharactersReferenced(
-        this.getCode()
-      );
+      const charactersReferenced =
+        utils.computeCharactersReferenced(readonlyCode);
       await nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
     }
   }
 
   private handleEvents(currentFrameEvents: object[]) {
+    if (this.livePreviewActive) {
+      // We don't want to handle events while live preview is active.
+      return;
+    }
+
     if (!this.hooks.runUserEvents) {
-      Lab2MetricsReporter.logWarning('Missing required hook in compiled code');
+      this.reportMissingHooks('runUserEvents');
       return;
     }
     this.hooks.runUserEvents(currentFrameEvents);
@@ -210,10 +280,28 @@ export default class ProgramExecutor {
     callback: (playSuccess: boolean) => void,
     onEnded: () => void
   ) {
+    const callbackWrapper = (playSuccess: boolean) => {
+      if (playSuccess) {
+        this.currentlyPlayingSong = url;
+      }
+      callback(playSuccess);
+    };
+
+    const onEndedWrapper = () => {
+      this.currentlyPlayingSong = null;
+      onEnded();
+    };
+
     audioCommands.playSound({
-      url: url,
-      callback: callback,
-      onEnded,
+      url,
+      callback: callbackWrapper,
+      onEnded: onEndedWrapper,
     });
+  }
+
+  private reportMissingHooks(...hooks: string[]) {
+    this.metricsReporter.logWarning(
+      `Missing required hooks in compiled code: ${hooks.join(', ')}`
+    );
   }
 }

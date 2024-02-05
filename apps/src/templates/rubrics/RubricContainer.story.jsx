@@ -3,7 +3,6 @@ import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 import RubricContainer from './RubricContainer';
 
 export default {
-  title: 'RubricContainer',
   component: RubricContainer,
 };
 
@@ -91,6 +90,7 @@ const Template = args => (
     teacherHasEnabledAi={false}
     studentLevelInfo={defaultStudentLevelInfo}
     currentLevelName={rubricLevelName}
+    open
     {...args}
   />
 );

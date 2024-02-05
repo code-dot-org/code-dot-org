@@ -8,6 +8,7 @@
 
 // Copy the values output by the script below.
 export const protanopiaBlockStyles = {
+  ai_blocks: {colourPrimary: '#566065'},
   default: {colourPrimary: '#009175'},
   setup_blocks: {colourPrimary: '#FF4235'},
   event_blocks: {colourPrimary: '#009503'},
@@ -25,6 +26,7 @@ export const protanopiaBlockStyles = {
   lab_blocks: {colourPrimary: '#5A0A33'},
 };
 export const deuteranopiaBlockStyles = {
+  ai_blocks: {colourPrimary: '#566065'},
   default: {colourPrimary: '#009175'},
   setup_blocks: {colourPrimary: '#FF4235'},
   event_blocks: {colourPrimary: '#009503'},
@@ -42,6 +44,7 @@ export const deuteranopiaBlockStyles = {
   lab_blocks: {colourPrimary: '#ED0DFD'},
 };
 export const tritanopiaBlockStyles = {
+  ai_blocks: {colourPrimary: '#566065'},
   default: {colourPrimary: '#009175'},
   setup_blocks: {colourPrimary: '#FF4235'},
   event_blocks: {colourPrimary: '#00735C'},

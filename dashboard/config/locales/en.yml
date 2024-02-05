@@ -64,7 +64,10 @@ en:
         locale: 'Language'
         age: 'Age'
         gender: 'Gender'
+        gender_student_input: 'Gender'
+        gender_teacher_input: 'Gender'
         edit_header: 'Edit Account Details'
+        ai_settings_header: 'AI Settings'
         finish_sign_up_header: 'Finish creating your account'
         finish_sign_up_header_error: 'Please correct the following errors:'
         finish_sign_up_subheader: 'Fill out the following information to finish creating a Code.org account for <strong>%{email}</strong>.'
@@ -76,6 +79,7 @@ en:
           future: can't be in the future
         user_type: 'Account Type'
         us_state: 'State'
+        ai_rubrics_disabled: 'Disable AI Rubric Feature'
 
   beta: "beta"
   hello: "Hello world"
@@ -310,6 +314,7 @@ en:
       email: 'Email'
       google_classroom: 'Google Classroom'
       clever: 'Clever'
+      lti_v1: 'LMS'
   follower:
     invite_sent: 'Invite sent'
     added_teacher: '%{name} added as your teacher'
@@ -618,7 +623,7 @@ en:
     powered_by_aws: 'Amazon Web Services and the “Powered by AWS” logo are trademarks of Amazon.com, Inc. or its affiliates in the United States and/or other countries.'
     built_on_github: 'Built on GitHub from Microsoft'
     google_copyright: '&copy; Google Inc. used with permission. Google Classroom is a trademark of Google Inc.'
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo, Hour of Code&reg; and %{cs_discoveries} are trademarks of Code.org.'
     copyright: 'Copyright'
     more: 'More'
     feedback: 'Provide feedback'
@@ -1214,6 +1219,7 @@ en:
         india: 'India'
         indonesia: 'Indonesia'
         israel: 'Israel'
+        italy: 'Italy'
         jamaica: 'Jamaica'
         kenya: 'Kenya'
         kosovo: 'Kosovo'
@@ -1383,4 +1389,47 @@ en:
   course_deprecated:
     title: "Heads up! This curriculum is no longer available, but Code.org has newer options available for you."
     button: "View new curriculum"
-
+  hoc_tutorial_email_subject: "Rock the Hour of Code with Code.org Tutorials!"
+  hoc_tutorial_email_content:
+    dear_teacher: "Dear %{teacher_name},"
+    intro_step_by_step_guide: "We're so excited that you're holding an Hour of Code event using Code.org's free activities and tutorials! We're honored to have educators like you introducing students to the exciting world of coding. Here's a step-by-step guide to ensure a successful Hour of Code event:"
+    sign_up_step: "**Sign Up** (Optional… but awesome!): Create a free Code.org account for access to a personal dashboard where you can manage your classroom's Hour of Code! [Sign up here](%{url})."
+    create_classroom_section: "**Create a Classroom Section** (Also optional… but super useful!): Creating a classroom section allows you to track your students' progress, view their work, and even leave them feedback! [Set up your section here](%{section_setup_url}). And for all our newbies, here's a [handy guide](%{guide_url}) to help you out!"
+    pick_perfect_activity: "**Pick the Perfect Activity**: [Select the best Hour of Code tutorial](%{url}) for your event. Explore the options and assign your chosen tutorial to your section, so your students will know exactly where to start."
+    plan_like_pro: "**Plan Like a Pro**: Many of our tutorials come with a [lesson plan](%{lesson_plan_url}). It's like a secret recipe for success! Check out your lesson plan before the big event."
+    let_fun_begin: "**Let the Fun Begin!**: Guided by the lesson plan, start your journey into the world of coding. Remember: You don't need to have all the answers! Your enthusiasm and the shared curiosity with your students will help everyone learn together."
+    hip_hip_hooray: "**Hip, Hip, Hooray!**: Once the hour wraps up, let's celebrate those brilliant young coders. Certificates, stickers, or even a round of applause — it all counts. Find our [printable certificates here](%{url})."
+    more_adventures_await: "**More Adventures Await**: Did you spot any new coders hungry for more? Introduce them to more computer science curricula on Code.org!"
+    explore_course: "Explore our treasure trove of free courses"
+    learn_about_ai: "Learn about Artificial Intelligence"
+    thank_you: "THANK YOU for championing computer science education. Our team wishes you and your students an unforgettable Hour of Code!"
+    founder: "Founder, Code.org"
+    your_friends: "Your Friends at Code.org"
+  lti:
+    create_integration_success: "Successfully created your LTI integration"
+    error:
+      integration_exists: "Lti Integration already exists for this Client ID"
+      missing_params: "Missing required param(s): School/District name, Client ID, LMS, Email"
+      unsupported_lms_type: "Unsupported LMS platform type"
+      wrong_resource_type: "Only LtiResourceLink is supported right now"
+    integration:
+      client_id: "LMS Client ID"
+      email: "Your email"
+      name: "School or district name"
+      navigate_home: "Back to Code.org"
+      navigate_registration: "Back to Registration"
+      lms_selector: "What LMS are you using?"
+      exists_body: "It seems like your LMS is already in our system. You should be able to continue installing and using our LTI integration."
+      exists_header: "Looks like you're are already registered!"
+      form_header: "Register Your LMS with Code.org"
+      form_instructions: "Please use this form to register your Learning Management System (LMS) with Code.org. This will allow you to install our LTI integration on your LMS."
+      form_instructions_2: "Full guides for obtaining your LMS Client ID, using LMS/LTI integrations, and our list of supported Learning Management Systems <a href='https://code.org/contact'>can be found here.</a>"
+      form_instructions_3: "Not seeing your LMS in our list, or running into issues with your installation? Check out our <a href=''>guides</a>, or <a href='https://code.org/contact'>contact us</a> for additional help"
+      guide_instructions: "Full guides for installing and our LTI integration <a href=''>can be found here.</a> Running into issues? Feel free to <a href=''>contact us</a> for additional support."
+      mailer_confirmation_subject: "Code.org has completed your LMS registration request"
+      mailer_confirmation_body: "Great news! We’ve registered your LMS with Code.org. You should now be able to use our Code.org LMS integrations. Please feel free to review & share our [LMS integration guides](%{integration_guide_url}), or browse our [course offerings](%{course_offering_url})."
+      mailer_confirmation_signature: "Thank you, and welcome!"
+      privacy_policy: "Your privacy is of utmost importance to us. Your personal information will not be used for any marketing purposes. Please see our <a href='https://code.org/contact'>Privacy Policy here</a> for more information."
+      success_body: "Great news! Your LMS has been registered with Code.org, and you can continue installing and using your LMS integration. You should receive a confirmation email shortly."
+      success_header: "Thank you for registering your LMS!"
+      register: "Register LMS"

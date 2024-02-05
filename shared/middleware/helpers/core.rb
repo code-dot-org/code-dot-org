@@ -37,8 +37,8 @@ def not_authorized
   halt(401, "Not authorized\n")
 end
 
-def forbidden
-  halt(403, "Forbidden\n")
+def forbidden(msg = "Forbidden\n")
+  halt(403, msg)
 end
 
 def not_found

@@ -8,7 +8,7 @@
         {
           "type": "panel",
           "name": "testing_panel",
-          "visible": true,
+          "visible": false,
           "title": " ",
           "elements": [
             {

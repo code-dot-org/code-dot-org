@@ -29,12 +29,11 @@
       "lessThanOrEqualOperator": null,
       "randomNumber_min_max": null,
       "setScreen": null,
-      "rgb": null,
-      "on": null,
-      "off": null,
-      "toggle": null,
-      "blink": null,
-      "pulse": null,
+      "colorLeds[0].on": null,
+      "colorLeds[0].off": null,
+      "colorLeds[0].toggle": null,
+      "colorLeds[0].blink": null,
+      "colorLeds[0].pulse": null,
       "color": null,
       "intensity": null,
       "buzzer.frequency": null,
@@ -103,10 +102,11 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "makerlab_enabled": "circuitPlayground"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:15:11.782+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - ChalG_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - ChalG_2222\"},{\"changed_at\":\"2023-08-16 18:55:46 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-09-08 23:23:07 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18414,\"changed_by_email\":\"thomas.wang@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:15:11.782+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - ChalG_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - ChalG_2222\"},{\"changed_at\":\"2023-08-16 18:55:46 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-09-08 23:23:07 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18414,\"changed_by_email\":\"thomas.wang@code.org\"},{\"changed_at\":\"2023-10-13 15:41:39 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-13 15:42:44 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

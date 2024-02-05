@@ -2,7 +2,6 @@ import ResourceLink from './ResourceLink';
 import React from 'react';
 
 export default {
-  title: 'ResourceLink',
   component: ResourceLink,
 };
 

@@ -84,6 +84,7 @@ class AddMultipleStudents extends Component {
             cols="70"
             ref="studentsTextBox"
             style={styles.textarea}
+            aria-label={i18n.addStudentsMultiple()}
           />
           <DialogFooter>
             <Button

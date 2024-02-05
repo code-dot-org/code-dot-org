@@ -12,52 +12,19 @@ I18N_LOCALES_DIR = 'i18n/locales'.freeze
 I18N_SOURCE_DIR = File.join(I18N_LOCALES_DIR, 'source').freeze
 I18N_ORIGINAL_DIR = File.join(I18N_LOCALES_DIR, 'original').freeze
 
-CROWDIN_PROJECTS = {
-  codeorg: {
-    config_file:            CDO.dir('bin/i18n/codeorg_crowdin.yml'),
-    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
-    etags_json:             CDO.dir('bin/i18n/crowdin/codeorg_etags.json'),
-    files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg_files_to_sync_out.json')
-  },
-  'codeorg-markdown': {
-    config_file:            CDO.dir('bin/i18n/codeorg_markdown_crowdin.yml'),
-    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
-    etags_json:             CDO.dir('bin/i18n/crowdin/codeorg-markdown_etags.json'),
-    files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg-markdown_files_to_sync_out.json')
-  },
-  'hour-of-code': {
-    config_file:            CDO.dir('bin/i18n/hourofcode_crowdin.yml'),
-    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
-    etags_json:             CDO.dir('bin/i18n/crowdin/hour-of-code_etags.json'),
-    files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/hour-of-code_files_to_sync_out.json')
-  },
-  'codeorg-restricted': {
-    config_file:            CDO.dir('bin/i18n/codeorg_restricted_crowdin.yml'),
-    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
-    etags_json:             CDO.dir('bin/i18n/crowdin/codeorg-restricted_etags.json'),
-    files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg-restricted_files_to_sync_out.json')
-  },
-}.freeze
-
-CROWDIN_TEST_PROJECTS = {
-  'codeorg-testing': {
-    config_file: File.join(File.dirname(__FILE__), "codeorg-testing_crowdin.yml"),
-    identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
-    etags_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-testing_etags.json"),
-    files_to_sync_out_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-testing_files_to_sync_out.json")
-  },
-  'codeorg-markdown-testing': {
-    config_file: File.join(File.dirname(__FILE__), "codeorg-testing_markdown_crowdin.yml"),
-    identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
-    etags_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-testing_markdown_etags.json"),
-    files_to_sync_out_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-testing_markdown_files_to_sync_out.json")
-  }
-}
-
 class I18nScriptUtils
+  CROWDIN_CREDS_PATH = CDO.dir('bin/i18n/crowdin_credentials.yml').freeze
   PROGRESS_BAR_FORMAT = '%t: |%B| %p% %a'.freeze
-  PARALLEL_PROCESSES = Parallel.processor_count / 2
+  PARALLEL_PROCESSES = Parallel.processor_count.freeze
   SOURCE_LOCALE = 'en-US'.freeze
+  TTS_LOCALES = (::TextToSpeech::VOICES.keys - %i[en-US]).freeze
+  TESTING_BY_DEFAULT = false
+
+  # @return [Hash] the Crowdin credentials.
+  #   @option crowdin_creds [String] 'api_token' the Crowdin API token.
+  def self.crowdin_creds
+    @crowdin_creds ||= YAML.load_file(CROWDIN_CREDS_PATH).freeze
+  end
 
   # Because we log many of the i18n operations to slack, we often want to
   # explicitly force stdout to operate synchronously, rather than buffering
@@ -276,44 +243,12 @@ class I18nScriptUtils
     File.write(filepath, yml_data)
   end
 
-  # Return true iff the specified file in the specified locale had changes
-  # since the last successful sync-out.
-  #
-  # @param locale [String] the locale code to check. This can be either the
-  #  four-letter code used internally (ie, "es-ES", "es-MX", "it-IT", etc), OR
-  #  the two-letter code used by crowdin, for those languages for which we have
-  #  only a single variation ("it", "de", etc).
-  #
-  # @param file [String] the path to the file to check. Note that this should be
-  #  the relative path of the file as it exists within the locale directory; ie
-  #  "/dashboard/base.yml", "/blockly-mooc/maze.json",
-  #  "/course_content/2018/coursea-2018.json", etc.
-  def self.file_changed?(locale, file)
-    @change_data ||= CROWDIN_PROJECTS.map do |_project_identifier, project_options|
-      # TODO: investigate the condition as a potential cause of sync fails
-      unless File.exist?(project_options[:files_to_sync_out_json])
-        raise <<~ERR
-          File not found #{project_options[:files_to_sync_out_json]}.
-
-          We expect to find a file containing a list of files changed by the most
-          recent sync down; if this file does not exist, it likely means that no
-          sync down has been run on this machine, so there is nothing to sync out
-        ERR
-      end
-      JSON.load_file(project_options[:files_to_sync_out_json])
-    end
-
-    crowdin_code = PegasusLanguages.get_code_by_locale(locale)
-
-    @change_data.any? {|change_data| change_data.dig(locale, file) || change_data.dig(crowdin_code, file)}
-  end
-
   # Formats strings like 'en-US' to 'en_us'
   #
   # @param locale [String] the BCP 47 (IETF language tag) format (e.g., 'en-US')
   # @return [String] the BCP 47 (IETF language tag) JS format (e.g., 'en_us')
   def self.to_js_locale(locale)
-    locale.tr('-', '_').downcase
+    locale.to_s.tr('-', '_').downcase
   end
 
   # Wraps hash in correct format to be loaded by our i18n backend.
@@ -370,11 +305,11 @@ class I18nScriptUtils
   end
 
   def self.create_progress_bar(**args)
-    ProgressBar.create(**args, format: PROGRESS_BAR_FORMAT)
+    ProgressBar.create(format: PROGRESS_BAR_FORMAT, **args)
   end
 
   def self.process_in_threads(data_array, **args)
-    Parallel.each(data_array, **args, in_threads: PARALLEL_PROCESSES) {|data| yield(data)}
+    Parallel.each(data_array, in_threads: PARALLEL_PROCESSES, **args) {|data| yield(data)}
   end
 
   # Writes file
@@ -384,6 +319,22 @@ class I18nScriptUtils
   def self.write_file(file_path, content)
     FileUtils.mkdir_p(File.dirname(file_path))
     File.write(file_path, content)
+  end
+
+  # Writes json file
+  #
+  # @param file_path [String] path to the file
+  # @param data [Hash] the file content
+  def self.write_json_file(file_path, data)
+    write_file file_path, JSON.pretty_generate(data)
+  end
+
+  # Writes yaml file
+  #
+  # @param file_path [String] path to the file
+  # @param data [Hash] the file content
+  def self.write_yaml_file(file_path, data)
+    write_file file_path, to_crowdin_yaml(data)
   end
 
   # Copies file

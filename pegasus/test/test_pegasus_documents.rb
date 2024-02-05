@@ -23,7 +23,7 @@ class PegasusTest < Minitest::Test
       "#{page[:site]}#{page[:uri]}"
     end
     CDO.log.info "Found #{documents.length} Pegasus documents."
-    assert_operator documents.length, :>, 2000
+    assert_operator documents.length, :>, 1500
   end
 
   # All documents expected to return 200 status-codes, with the following exceptions:
@@ -87,7 +87,9 @@ class PegasusTest < Minitest::Test
 
     # Disconnect databases before forking parallel processes.
     DB.disconnect
+    # rubocop:disable CustomCops/DashboardDbUsage
     DASHBOARD_DB.disconnect
+    # rubocop:enable CustomCops/DashboardDbUsage
 
     results = Parallel.map(all_documents) do |page|
       site = page[:site]
@@ -104,7 +106,9 @@ class PegasusTest < Minitest::Test
       begin
         attempts = 3
         loop do
+          # rubocop:disable CustomCops/DashboardDbUsage
           queries = capture_queries(DB, DASHBOARD_DB) {get(uri)}
+          # rubocop:enable CustomCops/DashboardDbUsage
           break if queries.empty? || (attempts -= 1).zero?
         end
       rescue Exception => exception
@@ -183,7 +187,9 @@ class PegasusTest < Minitest::Test
   # Runs `tidy` in a subprocess to validate HTML content.
   # @return [Array, nil] error messages, or `nil` if no errors.
   private def validate(body)
-    cmd = 'tidy -q -e'
+    # `--new-blocklevel-tags` ignores unknown tags, allowing us to use custom tags like `<swiper-container>`.
+    # `<swiper-container>` and `<swiper-slide>` are used by the `swiper` library.
+    cmd = 'tidy -q -e --new-blocklevel-tags swiper-container,swiper-slide'
     status, result = nil
     Open3.popen3(cmd) do |stdin, _stdout, stderr, wait_thread|
       stdin.puts body

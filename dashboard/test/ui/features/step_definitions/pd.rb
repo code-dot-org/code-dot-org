@@ -228,7 +228,6 @@ And(/^I complete Section 7 of the teacher PD application$/) do
     Then I wait until element "h3" contains text "Section 7: Program Requirements and Submission"
     Then I wait until element "input[name='committed']" is visible
     And I press "input[name='committed']:first" using jQuery
-    And I press the first "input#understandFee" element
     And I click selector "input[name='payFee']" if I see it
     And I press the first "input#agree" element
   GHERKIN

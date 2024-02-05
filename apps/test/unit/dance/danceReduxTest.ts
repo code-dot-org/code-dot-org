@@ -104,7 +104,7 @@ describe('danceRedux', function () {
       userManifest = 'user-manifest';
       queryParams.returns(userManifest);
 
-      songManifest = {};
+      songManifest = [{id: 'a'}, {id: 'b'}, {id: 'c'}];
       getSongManifest.returns(new Promise(resolve => resolve(songManifest)));
 
       parseSongOptions.returns(songData);
@@ -140,6 +140,38 @@ describe('danceRedux', function () {
         assert.isTrue(parseSongOptions.calledWithExactly(songManifest));
         assert.isTrue(
           getSelectedSong.calledWithExactly(songManifest, selectSongOptions)
+        );
+        assert.isTrue(loadSong.calledWith(selectedSong));
+        assert.isTrue(onSongSelected.calledWithExactly(selectedSong));
+
+        assert.deepEqual(store.getState().dance.songData, songData);
+        assert.deepEqual(store.getState().dance.selectedSong, selectedSong);
+      });
+
+      it('initializes filtered songs correctly', async () => {
+        const selectSongOptions = {
+          isProjectLevel,
+          freePlay,
+          defaultSong,
+          selectedSong,
+          songSelection: ['a'],
+        };
+        await dispatch(
+          initSongs({
+            useRestrictedSongs,
+            selectSongOptions,
+            onAuthError,
+            onSongSelected,
+          })
+        );
+
+        assert.isTrue(queryParams.calledWithExactly('manifest'));
+        assert.isTrue(
+          getSongManifest.calledWithExactly(useRestrictedSongs, userManifest)
+        );
+        assert.isTrue(parseSongOptions.calledWithExactly([{id: 'a'}]));
+        assert.isTrue(
+          getSelectedSong.calledWithExactly([{id: 'a'}], selectSongOptions)
         );
         assert.isTrue(loadSong.calledWith(selectedSong));
         assert.isTrue(onSongSelected.calledWithExactly(selectedSong));

@@ -230,6 +230,26 @@ class TopInstructions extends Component {
     }
 
     if (
+      !this.state.teacherViewingStudentWork &&
+      user &&
+      this.isViewingAsStudent &&
+      taRubric
+    ) {
+      promises.push(
+        topInstructionsDataApi
+          .getTaRubricFeedbackForStudent(taRubric.id)
+          .then(data => {
+            if (data.value?.length > 0) {
+              this.setState({
+                taRubricEvaluation: data.value,
+                tabSelected: TabType.TA_RUBRIC,
+              });
+            }
+          })
+      );
+    }
+
+    if (
       this.state.teacherViewingStudentWork &&
       user &&
       serverLevelId &&
@@ -647,7 +667,7 @@ class TopInstructions extends Component {
       mapReference || (referenceLinks && referenceLinks.length > 0);
 
     const displayHelpTab =
-      (levelVideos && levelVideos.length > 0) || levelResourcesAvailable;
+      (levelVideos && levelVideos.length > 0) || !!levelResourcesAvailable;
 
     const displayFeedbackTab =
       !taRubric &&
@@ -781,7 +801,10 @@ class TopInstructions extends Component {
                 </div>
               )}
             {tabSelected === TabType.TA_RUBRIC && (
-              <StudentRubricView rubric={this.props.taRubric} />
+              <StudentRubricView
+                rubric={this.props.taRubric}
+                submittedEvaluation={this.state.taRubricEvaluation}
+              />
             )}
             {(this.isViewingAsTeacher || isViewingAsInstructorInTraining) &&
               (hasContainedLevels || teacherMarkdown) && (

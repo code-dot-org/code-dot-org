@@ -394,7 +394,7 @@ class CensusForm extends Component {
                 <input
                   type="text"
                   name="school_name_s"
-                  value={this.state.schoolName}
+                  value={submission.schoolName}
                   onChange={this.handleChange.bind(this, 'schoolName')}
                   style={styles.input}
                 />

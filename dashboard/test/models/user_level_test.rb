@@ -422,7 +422,7 @@ class UserLevelTest < ActiveSupport::TestCase
     ul = create :user_level, user: @user, level: @level, script: script, best_result: 10
     original_updated_at = ul.reload.updated_at
 
-    UserLevel.update_best_result(@user.id, @level.id, script.id, 100, false)
+    UserLevel.update_best_result(@user.id, @level.id, script.id, 100, touch_updated_at: false)
 
     assert_equal original_updated_at, UserLevel.find(ul.id).updated_at
   end

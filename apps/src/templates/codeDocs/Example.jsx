@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import i18n from '@cdo/locale';
 
 export default function Example({example, programmingEnvironmentName}) {
   const content = (
@@ -27,8 +29,15 @@ export default function Example({example, programmingEnvironmentName}) {
                 ...styles.embeddedApp,
                 ...embeddedIdeStyles[programmingEnvironmentName],
               }}
+              title={i18n.embeddedExampleFor({
+                name: programmingEnvironmentName,
+              })}
             />
-            {example.image && <img src={example.image} />}
+            {
+              // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+              // Verify or update this alt-text as necessary
+            }
+            {example.image && <img src={example.image} alt="" />}
           </div>
         </div>
       );
@@ -51,10 +60,17 @@ export default function Example({example, programmingEnvironmentName}) {
                   width: '100%',
                   height: enteredHeight * 1.5,
                 }}
+                title={i18n.embeddedExampleFor({
+                  name: programmingEnvironmentName,
+                })}
               />
             </div>
           </div>
-          {example.image && <img src={example.image} />}
+          {
+            // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+            // Verify or update this alt-text as necessary
+          }
+          {example.image && <img src={example.image} alt="" />}
         </div>
       );
     }
@@ -62,7 +78,11 @@ export default function Example({example, programmingEnvironmentName}) {
     return (
       <div>
         {content}
-        {example.image && <img src={example.image} />}
+        {
+          // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+          // Verify or update this alt-text as necessary
+        }
+        {example.image && <img src={example.image} alt="" />}
       </div>
     );
   }

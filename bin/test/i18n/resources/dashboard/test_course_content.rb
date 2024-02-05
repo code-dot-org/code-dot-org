@@ -1,10 +1,27 @@
 require_relative '../../../test_helper'
 require_relative '../../../../i18n/resources/dashboard/course_content'
 
-class I18n::Resources::Dashboard::CourseContentTest < Minitest::Test
-  def test_sync_in
-    I18n::Resources::Dashboard::CourseContent::SyncIn.expects(:perform).once
+describe I18n::Resources::Dashboard::CourseContent do
+  let(:described_class) {I18n::Resources::Dashboard::CourseContent}
 
-    I18n::Resources::Dashboard::CourseContent.sync_in
+  describe '.sync_in' do
+    it 'sync-in Course content resource' do
+      described_class::SyncIn.expects(:perform).once
+      described_class.sync_in
+    end
+  end
+
+  describe '.sync_up' do
+    it 'sync-up Course resource' do
+      described_class::SyncUp.expects(:perform).once
+      described_class.sync_up
+    end
+  end
+
+  describe '.sync_out' do
+    it 'sync-out Course content resource' do
+      described_class::SyncOut.expects(:perform).once
+      described_class.sync_out
+    end
   end
 end

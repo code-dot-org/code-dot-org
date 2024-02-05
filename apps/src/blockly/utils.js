@@ -1,5 +1,28 @@
-import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 import _ from 'lodash';
+import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
+
+// Considers an attribute true only if it is explicitly set to 'true' (i.e. defaults to false if unset).
+export const FALSEY_DEFAULT = attributeValue => attributeValue === 'true';
+
+// Considers an attribute true unless it is explicitly set to 'false' (i.e. defaults to true if unset).
+export const TRUTHY_DEFAULT = attributeValue => attributeValue !== 'false';
+
+/**
+ * Reads a boolean attribute from an XML element and determines its value based on a callback function.
+ * The callback function determines how we interpret the attribute value as a boolean.
+ * @param {Element} xmlElement - The XML element from which to read the attribute.
+ * @param {string} attribute - The name of the attribute to read from the XML element.
+ * @param {function(string): boolean} [callback=FALSEY_DEFAULT] - A callback function that takes the attribute value as a string and returns a boolean.
+ * @returns {boolean} The boolean value of the attribute as determined by the callback function.
+ */
+export function readBooleanAttribute(
+  xmlElement,
+  attribute,
+  callback = FALSEY_DEFAULT
+) {
+  const attributeValue = xmlElement.getAttribute(attribute);
+  return callback(attributeValue);
+}
 
 export function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
@@ -74,4 +97,39 @@ export function numberListToString(numberList) {
     numberString = numberString.slice(0, -1);
   }
   return numberString;
+}
+
+/**
+ * Determines whether the hidden procedure definition workspace should be skipped during serialization.
+ * The hidden workspace is a counter-part to the main workspace containing blocks for functions and behaviors.
+ *
+ * @param {Blockly.WorkspaceSvg} workspace - The workspace to be checked for serialization as hidden.
+ * @returns {boolean} Returns `true` if the hidden workspace should be skipped, otherwise `false`.
+ */
+export function shouldSkipHiddenWorkspace(workspace) {
+  return (
+    !Blockly.getHiddenDefinitionWorkspace ||
+    Blockly.getMainWorkspace().id !== workspace.id ||
+    Blockly.isToolboxMode
+  );
+}
+
+/**
+ * Finds the flyout associated with a workspace.
+ * @param {Blockly.Workspace} workspace - The workspace to find the flyout for.
+ * @returns {Blockly.Flyout|null} The flyout associated with the workspace, or null if not found.
+ */
+export function findFlyout(workspace) {
+  if (!workspace) {
+    return null;
+  }
+  if (workspace.flyout) {
+    // Workspace has a single flyout (uncategorized toolbox)
+    return workspace.flyout;
+  }
+  if (workspace.toolbox_ && workspace.toolbox_.flyout_) {
+    // Workspace has a categorized toolbox with a flyout.
+    return workspace.toolbox_.flyout_;
+  }
+  return null;
 }

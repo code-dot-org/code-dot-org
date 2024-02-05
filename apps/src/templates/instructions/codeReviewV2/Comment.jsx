@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 import javalabMsg from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 import msg from '@cdo/locale';
 import {reviewCommentShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
 import InlineDropdownMenu from '@cdo/apps/templates/InlineDropdownMenu';
@@ -195,6 +196,7 @@ function Comment({
                     '/blockly/media/templates/instructions/codeReview/ellipsis.svg'
                   }
                   style={{height: '3px', display: 'flex'}}
+                  alt=""
                 />
               }
             >
@@ -243,7 +245,7 @@ export default connect(
 
 const styles = {
   name: {
-    fontFamily: '"Gotham 5r"',
+    ...fontConstants['main-font-semi-bold'],
   },
   iconName: {
     marginLeft: '20px',

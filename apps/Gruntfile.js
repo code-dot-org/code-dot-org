@@ -4,13 +4,11 @@ var path = require('path');
 var fs = require('fs');
 var _ = require('lodash');
 var sass = require('sass');
-
 var envConstants = require('./envConstants');
 var checkEntryPoints = require('./script/checkEntryPoints');
 
 const {ALL_APPS, appsEntriesFor} = require('./webpackEntryPoints');
 const {createWebpackConfig} = require('./webpack.config');
-const offlineWebpackConfig = require('./webpackOffline.config');
 const {VALID_KARMA_CLI_FLAGS} = require('./karma.conf');
 
 // Review every couple of years to see if an increase improves test performance
@@ -407,8 +405,6 @@ module.exports = function (grunt) {
       piskelDevMode,
     }),
 
-    buildOffline: offlineWebpackConfig,
-
     uglify: createWebpackConfig({
       appsEntries,
       minify: true,
@@ -575,6 +571,7 @@ module.exports = function (grunt) {
     'newer:copy:lib',
     'locales',
     'ejs',
+    'detect-production-webpack-chunks',
   ]);
 
   grunt.registerTask('check-entry-points', function () {
@@ -606,6 +603,21 @@ module.exports = function (grunt) {
     });
   });
 
+  grunt.registerTask('detect-production-webpack-chunks', function () {
+    if (
+      process.env.DEV &&
+      fs.existsSync('./build/package/js/code-studio-common.js')
+    ) {
+      grunt.warn(
+        'You are building in dev mode (DEV=1), but the build/ directory already contains production Webpack chunks, such as code-studio-common.js.\n' +
+          'These will not be overwritten by a dev build, and their presence will cause loading errors in some labs (e.g., Applab).\n' +
+          "Note that after cleaning your build directory, some static assets that aren't rebuilt via yarn start may not load.\n" +
+          'These can be regenerated via yarn build.\n' +
+          'Run yarn clean (then yarn build) and try again.'
+      );
+    }
+  });
+
   grunt.registerTask('compile-firebase-rules', function () {
     if (process.env.RACK_ENV === 'production') {
       throw new Error(
@@ -615,7 +627,7 @@ module.exports = function (grunt) {
     }
     child_process.execSync('mkdir -p ./build/package/firebase');
     child_process.execSync(
-      'npx firebase-bolt < ./firebase/rules.bolt > ./build/package/firebase/rules.json'
+      'yarn run firebase-bolt < ./firebase/rules.bolt > ./build/package/firebase/rules.json'
     );
   });
 
@@ -631,14 +643,10 @@ module.exports = function (grunt) {
     // exist in our repo. Skip minification in development environment.
     envConstants.DEV ? 'noop' : 'uglify:lib',
     envConstants.DEV ? 'webpack:build' : 'webpack:uglify',
-    'webpack:buildOffline',
     'notify:js-build',
     'postbuild',
     envConstants.DEV ? 'noop' : 'newer:copy:unhash',
   ]);
-
-  // Builds the Service Worker used for the Code.org offline experience.
-  grunt.registerTask('buildOffline', ['webpack:buildOffline']);
 
   grunt.registerTask('rebuild', ['clean', 'build']);
 
