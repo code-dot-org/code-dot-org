@@ -10,7 +10,7 @@ const Template = args => <UnconnectedGameButtons {...args} />;
 export const Default = Template.bind({});
 
 export const WithSkipButton = Template.bind({});
-WithSkipButton.args = {showSkipButton: true};
+WithSkipButton.args = {showSkipButton: true, nextLevelUrl: '#'};
 
 export const WithFinishButton = Template.bind({});
 WithFinishButton.args = {showFinishButton: true};
