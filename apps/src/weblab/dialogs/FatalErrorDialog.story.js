@@ -3,7 +3,6 @@ import {action} from '@storybook/addon-actions';
 import FatalErrorDialog from './FatalErrorDialog';
 
 export default {
-  title: 'FatalErrorDialog',
   component: FatalErrorDialog,
 };
 

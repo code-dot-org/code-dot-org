@@ -10,8 +10,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
   setup_all do
     @integration = create :lti_integration
-    @deployment = create :lti_deployment, lti_integration: @integration, deployment_id: SecureRandom.uuid
-    # create an arbitrary key for testing JWTs
+    @deployment_id = SecureRandom.uuid
     @key = SecureRandom.alphanumeric 10
     # create arbitary state and nonce values
     @state = 'state'
@@ -282,7 +281,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
       resource_link_key => {
         id: SecureRandom.uuid,
       },
-      deployment_id_key => @deployment.deployment_id,
+      deployment_id_key => @deployment_id,
       context_key => {
         id: SecureRandom.uuid,
       },
@@ -429,6 +428,25 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_response :redirect
     # could confirm more things here
+  end
+
+  test 'auth - given a deployment_id not in our system yet, create LtiDeployment' do
+    payload = get_valid_payload
+    jwt = create_jwt_and_stub(payload)
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+    deployment = LtiDeployment.find_by(deployment_id: @deployment_id)
+    assert deployment
+    assert_equal deployment, @integration.lti_deployments.first
+  end
+
+  test 'auth - given an existing deployment_id in our system, do not create a new LtiDeployment' do
+    payload = get_valid_payload
+    jwt = create_jwt_and_stub(payload)
+    deployment = LtiDeployment.create(deployment_id: @deployment_id, lti_integration_id: @integration.id)
+    assert deployment
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+    assert_equal deployment, @integration.lti_deployments.first
+    assert_equal @integration.lti_deployments.count, 1
   end
 
   test 'sync - should redirect students to homepage without syncing' do
