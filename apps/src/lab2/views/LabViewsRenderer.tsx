@@ -4,6 +4,8 @@
  * helps facilitate level-switching between labs without page reloads.
  */
 import AichatView from '@cdo/apps/aichat/views/AichatView';
+import DanceView from '@cdo/apps/dance/lab2/views/DanceView';
+import {setUpBlocklyForMusicLab} from '@cdo/apps/music/blockly/setup';
 import MusicView from '@cdo/apps/music/views/MusicView';
 import StandaloneVideo from '@cdo/apps/standaloneVideo/StandaloneVideo';
 import classNames from 'classnames';
@@ -14,6 +16,9 @@ import ProgressContainer from '../progress/ProgressContainer';
 import {AppName} from '../types';
 import moduleStyles from './lab-views-renderer.module.scss';
 import {DEFAULT_THEME, Theme, ThemeContext} from './ThemeWrapper';
+import PythonlabView from '@cdo/apps/pythonlab/PythonlabView';
+import PanelsView from '@cdo/apps/panels/PanelsView';
+import Weblab2View from '@cdo/apps/weblab2/Weblab2View';
 
 // Configuration for how a Lab should be rendered
 interface AppProperties {
@@ -32,6 +37,11 @@ interface AppProperties {
    * to the default theme if not specified.
    */
   theme?: Theme;
+  /**
+   * Optional function to run when the lab is first mounted. This is useful
+   * for any one-time setup actions such as setting up Blockly.
+   */
+  setupFunction?: () => void;
 }
 
 const appsProperties: {[appName in AppName]?: AppProperties} = {
@@ -39,6 +49,7 @@ const appsProperties: {[appName in AppName]?: AppProperties} = {
     backgroundMode: true,
     node: <MusicView />,
     theme: Theme.DARK,
+    setupFunction: setUpBlocklyForMusicLab,
   },
   standalone_video: {
     backgroundMode: false,
@@ -47,6 +58,25 @@ const appsProperties: {[appName in AppName]?: AppProperties} = {
   aichat: {
     backgroundMode: false,
     node: <AichatView />,
+    theme: Theme.LIGHT,
+  },
+  dance: {
+    backgroundMode: false,
+    node: <DanceView />,
+    theme: Theme.LIGHT,
+  },
+  pythonlab: {
+    backgroundMode: false,
+    node: <PythonlabView />,
+    theme: Theme.LIGHT,
+  },
+  panels: {
+    backgroundMode: false,
+    node: <PanelsView />,
+  },
+  weblab2: {
+    backgroundMode: false,
+    node: <Weblab2View />,
     theme: Theme.LIGHT,
   },
 };
@@ -61,6 +91,8 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   // When navigating to a new app type, add it to the list of apps to render.
   useEffect(() => {
     if (currentAppName && !appsToRender.includes(currentAppName)) {
+      // Run the setup function for the Lab if it has one.
+      appsProperties[currentAppName]?.setupFunction?.();
       setAppsToRender([...appsToRender, currentAppName]);
     }
   }, [currentAppName, appsToRender]);

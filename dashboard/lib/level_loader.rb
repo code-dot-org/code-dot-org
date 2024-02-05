@@ -32,7 +32,7 @@ class LevelLoader
 
     # Use a transaction because loading levels requires two separate imports.
     Level.transaction do
-      level_md5s_by_name = Hash[Level.pluck(:name, :md5)]
+      level_md5s_by_name = Level.pluck(:name, :md5).to_h
       existing_level_names = level_md5s_by_name.keys.to_set
 
       level_file_names = level_file_paths.map do |path|
@@ -53,8 +53,8 @@ class LevelLoader
       # Load level properties from disk and build a collection of levels that
       # have changed.
       changed_levels = level_file_paths.
-          filter_map {|path| Services::LevelFiles.load_custom_level(path, level_md5s_by_name)}.
-          select(&:changed?)
+        filter_map {|path| Services::LevelFiles.load_custom_level(path, level_md5s_by_name)}.
+        select(&:changed?)
 
       if [:development, :adhoc].include?(rack_env) && !CDO.properties_encryption_key
         puts "WARNING: skipping seeding encrypted levels because CDO.properties_encryption_key is not defined"

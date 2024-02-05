@@ -220,9 +220,13 @@ describe('EnrollmentsPanel', () => {
         EDIT_ENROLLMENT_NAME_BUTTON_NAME
     );
 
-    // Confirm the updated name
-    const updatedName = {firstName: 'Rubeus', lastName: 'Hagrid'};
-    wrapper.instance().handleEditEnrollmentConfirmed(updatedName);
+    // Confirm the updated name and email
+    const updatedInfo = {
+      firstName: 'Rubeus',
+      lastName: 'Hagrid',
+      email: 'rubeushagrid@code.org',
+    };
+    wrapper.instance().handleEditEnrollmentConfirmed(updatedInfo);
     wrapper.update();
     assert(wrapper.state('enrollmentChangeDialogOpen') === null);
     assert.deepEqual([], wrapper.state('selectedEnrollments'));

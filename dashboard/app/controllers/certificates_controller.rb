@@ -3,8 +3,6 @@ require 'base64'
 class CertificatesController < ApplicationController
   include CertificatesHelper
 
-  before_action :authenticate_user!, only: [:batch]
-
   # GET /certificates/:encoded_params
   # encoded_params includes:
   #   name - student name (optional)
@@ -43,7 +41,7 @@ class CertificatesController < ApplicationController
   # GET /certificates/batch
   # POST /certificates/batch
   def batch
-    unless current_user.teacher?
+    if current_user&.student?
       return redirect_to root_path, alert: 'You must be signed in as a teacher to bulk print certificates.'
     end
 

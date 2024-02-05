@@ -5,6 +5,7 @@ import color from '../util/color';
 import msg from './locale';
 
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export class CollectorGemCounter extends React.Component {
   static propTypes = {
@@ -43,7 +44,7 @@ export class CollectorGemCounter extends React.Component {
 const styles = {
   container: {
     display: 'inline-block',
-    fontFamily: '"Gotham 5r"',
+    ...fontConstants['main-font-semi-bold'],
     paddingRight: 10,
     pointerEvents: 'none',
     textAlign: 'right',

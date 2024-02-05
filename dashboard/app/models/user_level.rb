@@ -235,7 +235,7 @@ class UserLevel < ApplicationRecord
     user_level.save!(touch: false)
   end
 
-  def self.update_best_result(user_id, level_id, script_id, best_result, touch_updated_at = true)
+  def self.update_best_result(user_id, level_id, script_id, best_result, touch_updated_at: true)
     user_level = UserLevel.find_by(
       level_id: level_id,
       script_id: script_id,

@@ -18,10 +18,10 @@ module Services
       # There are a couple of different places level files can end up, and we want
       # to check all of them.
       level_files = [
-        # Check at the old default location
-        "config/scripts/levels/#{level.name}.level",
-        # Check at the new default location
+        # Check at the default location
         "config/levels/custom/#{level.game.app}/#{level.name}.level",
+        # Check at an arbitrary-chosen but technically valid location
+        "config/levels/custom/foo/#{level.name}.level",
       ]
 
       level_files.each do |level_file|

@@ -1,0 +1,23 @@
+@import "color";
+
+// Link common styles
+.button {
+  display: block;
+}
+
+// Sizes
+.button-l {
+  font-size: 1.25rem;
+}
+
+.button-m {
+  font-size: 1rem;
+}
+
+.button-s {
+  font-size: 0.75rem;
+}
+
+.button-xs {
+  font-size: 0.625rem;
+}

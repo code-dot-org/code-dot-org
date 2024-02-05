@@ -68,14 +68,22 @@ Feature: Dance Party
 
     When I navigate to the shared version of my project
     And element ".signInOrAgeDialog" is hidden
+    # We run/reset here once before checking the number of sprites below which helps
+    # resolve some not fully understood test flakiness related to Dance Party's "preview mode".
+    # The level used in this test (Dance Party 2018, level 13) does not use preview mode but
+    # when the level is shared via `project.getShareUrl`, the standalone Dance project level
+    # does use preview mode.
+
     Then I click selector "#runButton" once I see it
-    Then I wait until element "#runButton" is not visible
-
-    Then evaluate JavaScript expression "window.__DanceTestInterface.getSprites().length === 10"
-
     Then I click selector "#resetButton" once I see it
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
+
+    # Next check that correct number of sprites are displayed when program is run.
+    Then I click selector "#runButton"
+    Then I wait until element "#runButton" is not visible
+    Then evaluate JavaScript expression "window.__DanceTestInterface.getSprites().length === 10"
+    Then I click selector "#resetButton" once I see it
 
     And I select the "How it Works (View Code)" small footer item to load a new page
     And I wait for the song selector to load

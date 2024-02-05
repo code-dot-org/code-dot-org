@@ -75,6 +75,8 @@ export default class WorkshopDetails extends React.Component {
           {this.workshopCourse()}
           <br />
           {this.props.workshop.subject}
+          <br />
+          {this.props.workshop.module}
         </div>
       </div>
     );

@@ -37,6 +37,6 @@ class HocSignup2023 < HocSignup2022
   end
 
   def self.receipt(data)
-    'hoc_signup_2023_receipt_en'
+    'hoc_signup_2023_receipt'
   end
 end

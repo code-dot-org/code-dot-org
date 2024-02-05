@@ -1,22 +1,27 @@
 require_relative '../../../test_helper'
 require_relative '../../../../i18n/resources/dashboard/course_offerings'
 
-class I18n::Resources::Dashboard::CourseOfferingsTest < Minitest::Test
-  def test_sync_in
-    CourseOffering.transaction do
-      CourseOffering.delete_all
+describe I18n::Resources::Dashboard::CourseOfferings do
+  let(:described_class) {I18n::Resources::Dashboard::CourseOfferings}
 
-      FactoryBot.create(:course_offering, key: 'course-offering-key-2', display_name: 'course-offering-name-2')
-      FactoryBot.create(:course_offering, key: 'course-offering-key-1', display_name: 'course-offering-name-1')
+  describe '.sync_in' do
+    it 'sync-in CourseOfferings resource' do
+      described_class::SyncIn.expects(:perform).once
+      described_class.sync_in
+    end
+  end
 
-      File.expects(:write).with(
-        CDO.dir('i18n/locales/source/dashboard/course_offerings.json'),
-        %Q[{\n  "course-offering-key-2": "course-offering-name-2",\n  "course-offering-key-1": "course-offering-name-1"\n}]
-      ).once
+  describe '.sync_up' do
+    it 'sync-up CourseOfferings resource' do
+      described_class::SyncUp.expects(:perform).once
+      described_class.sync_up
+    end
+  end
 
-      I18n::Resources::Dashboard::CourseOfferings.sync_in
-    ensure
-      raise ActiveRecord::Rollback
+  describe '.sync_out' do
+    it 'sync-out CourseOfferings resource' do
+      described_class::SyncOut.expects(:perform).once
+      described_class.sync_out
     end
   end
 end

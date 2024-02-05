@@ -19,7 +19,7 @@ SPRITELAB_MANIFEST_PATH = "animation-manifests/manifests/"
 class Hash
   # Like Enumerable::map but returns a Hash instead of an Array
   def hmap(&block)
-    Hash[map {|k, v| yield k, v}]
+    map {|k, v| yield k, v}.to_h
   end
 
   # Drop a key from the hash, returning the hash (destructive)
@@ -205,7 +205,7 @@ class ManifestBuilder
   def upload_localized_manifest(locale, strings)
     return unless upload_spritelab_to_s3?
 
-    animation_metadata = initial_animation_metadata
+    animation_metadata = initial_animation_metadata.deep_dup
     animation_metadata.each do |_, metadata|
       metadata['aliases'] = metadata['aliases'].map {|aliaz| strings[aliaz]}
       metadata['aliases'].delete_if(&:blank?)

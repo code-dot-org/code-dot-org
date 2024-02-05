@@ -20,21 +20,37 @@ theme: responsive_full_width
           %img{src: "/images/ai/pl/101/ets--w.png", height: "26px", alt: "ETS"}
           %img{src: "/images/ai/pl/101/iste--w.png", height: "18px", alt: "ISTE"}
           %img{src: "/images/ai/pl/101/khan--w.png", height: "20px", alt: "Khan Academy"}
-      %a.link-button.white{href: "#newsletter-signup"}
-        =hoc_s(:call_to_action_register_early_access)
 
-%section.bg-neutral-light.video-101.bg-neutral-light{id: "ai-pl-callout"}
+%section.bg-neutral-light.video-101
   .wrapper
     %h2=hoc_s(:ai_pl_101_intro_heading)
-    %p.video-101__text=hoc_s(:ai_pl_callout_desc_01)
+    %p.body-two
+      =hoc_s(:ai_pl_callout_desc_01)
     = view :ai_101_videos
 
-%section.newsletter-signup#newsletter-signup
+= view :dance_party_ai_skinny_banner
+
+%section
   .wrapper
-    %h2=hoc_s(:ai_pl_101_join_email_title)
-    %p=hoc_s(:ai_pl_101_pro_join_email_desc)
-    .signup-iframe
-      %iframe.signup-iframe__iframe{:allowtransparency => "true", :frameborder => "0", :height => "570", :scrolling => "yes", :src => "http://go.pardot.com/l/153401/2023-06-01/pqnddj", :style => "overflow:hidden; float: none", :type => "text/html", :width => "100%"}
+    %h2=hoc_s(:ai_pl_101_resources_section_title)
+    .additional-resources
+      .content-wrapper.flex-container.justify-space-between.align-items-center.wrap-reverse{style: "margin: 2rem 0; gap: 1rem"}
+        .text-wrapper.col-50
+          %h3=hoc_s(:ai_pl_101_llm_slides_title)
+          %p=hoc_s(:ai_pl_101_llm_slides_desc)
+          %a.link-button.has-external-link{href: "https://docs.google.com/presentation/d/1WXvjG9TscUuH5Xz8Pj2okz6lMIKV__g0v6AoYVXKb40/copy", target: "_blank", rel: "noopener noreferrer"}
+            =hoc_s(:call_to_action_get_guide)
+        %figure.col-45
+          %iframe{allowfullscreen: "true", frameborder: "0", height: "280", mozallowfullscreen: "true", src: "https://docs.google.com/presentation/d/e/2PACX-1vRBPHqheht4zNPoFJhPPqT5T9a0b-J6Tm4MYdLRlbZSXBNaGHSFwisQmmdzJqQDs8Rl4cBZcyOLIXKy/embed?start=false&loop=false&delayms=3000", webkitallowfullscreen: "true", width: "459", style: "width: 100%;"}
+      %hr
+      .content-wrapper.flex-container.justify-space-between.align-items-center.wrap{style: "gap: 1rem"}
+        %figure.col-50
+          =view :display_video_thumbnail, id: "ai_chatbots", video_code: "X-AWdfSFCHQ", caption: hoc_s(:ai_vid_chatbots_caption), play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/ai_series/HowAIWorks_LLM_SM_CoBrand.mp4"
+        .text-wrapper.col-45{style: "float: right"}
+          %h3=hoc_s(:ai_video_series_title)
+          %p=hoc_s(:ai_pl_101_video_desc_6)
+          %a.link-button{href: "/ai#ai-videos"}
+            = hoc_s(:call_to_action_watch_now)
 
 = view :section_divider_line
 
@@ -61,7 +77,7 @@ theme: responsive_full_width
           %h3=hoc_s(:ai_pl_101_explore_title_4)
           %p=hoc_s(:ai_pl_101_explore__desc_4)
         .content-footer
-          %a.link-button{href: "https://www.ets.org/research/ai-labs.html", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
+          %a.link-button.has-external-link{href: "https://www.ets.org/research/ai-labs.html", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
             =hoc_s(:ai_pl_101_explore__button_4)
 
       .action-block.action-block--explore.action-block--one-col.flex-space-between
@@ -71,7 +87,7 @@ theme: responsive_full_width
           %h3=hoc_s(:ai_pl_101_explore_title_2)
           %p=hoc_s(:ai_pl_101_explore__desc_2)
         .content-footer
-          %a.link-button{href: "https://www.iste.org/professional-development/iste-u/artificial-intelligence", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
+          %a.link-button.has-external-link{href: "https://www.iste.org/professional-development/iste-u/artificial-intelligence", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
             =hoc_s(:ai_pl_101_explore__button_2)
 
       .action-block.action-block--explore.action-block--one-col.flex-space-between
@@ -81,7 +97,7 @@ theme: responsive_full_width
           %h3=hoc_s(:ai_pl_101_explore_title_1)
           %p=hoc_s(:ai_pl_101_explore__desc_1)
         .content-footer
-          %a.link-button{href: "https://blog.khanacademy.org/teacher-khanmigo/?utm_source=code.org&utm_medium=referral&utm_campaign=code.orgwebinar", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
+          %a.link-button.has-external-link{href: "https://blog.khanacademy.org/teacher-khanmigo/?utm_source=code.org&utm_medium=referral&utm_campaign=code.orgwebinar", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
             =hoc_s(:ai_pl_101_explore__button_1)
 
 = view :visit_partial_event_logger

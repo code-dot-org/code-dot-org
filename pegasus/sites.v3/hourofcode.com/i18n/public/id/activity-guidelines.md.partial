@@ -11,7 +11,7 @@ layout: wide
 
 # Pedoman untuk membuat dan mengirimkan tutorial dan pelajaran untuk Hour of Code™ dan Pekan Pendidikan Ilmu Komputer
 
-Code.org menyelenggarakan berbagai aktivitas, pelajaran, dan video Hour of Code™ di situs web Code.org dan Hour of Code. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org menyelenggarakan berbagai aktivitas, pelajaran, dan video Hour of Code™ di situs web Code.org dan Hour of Code. Daftar saat ini ada di []({{ urls/learn }})hourofcode.com/learn.
 
 Ingin mengirimkan tutorial mandiri Anda sendiri, pelajaran yang dipimpin guru, atau aktivitas robotik/pembuat yang menjelaskan prinsip ilmu komputer? Bergabunglah dengan gerakan global ini dan bantu peserta di seluruh dunia memulai dengan satu jam kode atau melangkah lebih jauh dengan kegiatan multi-pelajaran, sepanjang hari, atau selama seminggu.
 
@@ -42,11 +42,11 @@ Beberapa tips:
 
 ## Apa yang harus dikirimkan
 
-**Self-guided puzzle or game ([example](https://code.org/dance))**
+**Teka-teki atau permainan yang dipandu sendiri ([contoh](https://code.org/dance))**
 
 Kegiatan ini dirancang bagi siswa untuk mengarahkan diri sendiri melalui tutorial. Mereka tidak memerlukan banyak instruksi dari pekerjaan persiapan guru atau guru.
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Pelajaran yang Difasilitasi Guru ([contoh](https://studio.code.org/s/course1/lessons/2/levels/1), [templat](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
 Sekarang ratusan ribu pendidik telah mencoba Hour of Code, banyak ruang kelas siap untuk kegiatan yang lebih kreatif yang mengajarkan dasar-dasar ilmu komputer. Untuk membantu guru yang lebih mahir menemukan inspirasi, kami mengumpulkan dan menyusun pelajaran dan rencana kegiatan “yang dipimpin guru” untuk veteran Hour of Code.
 
@@ -85,7 +85,7 @@ Tujuan dari Hour of Code adalah untuk memberikan pemula rasa pertama yang dapat 
 
 Kegiatan harus mengajarkan konsep ilmu komputer seperti loop, conditionals, enkripsi, atau bagaimana Internet bekerja. Suatu kegiatan juga dapat mengajarkan tentang bagaimana ilmu komputer terhubung dengan pekerjaan, peristiwa, atau sejarah dunia nyata. Misalnya, mengajarkan desain UX untuk membuat aplikasi yang berarti bagi audiens atau tujuan. Kami mencegah kegiatan yang berfokus pada sintaks pemrograman daripada konsep. Misalnya, kami akan mencantumkan, tetapi tidak menyoroti, aktivitas yang mengajarkan HTML. Demikian pula, kami mencegah pelajaran pemrograman blok yang berfokus pada pengaturan/perubahan opsi konfigurasi daripada mempelajari cara memodelkan algoritme atau proses.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Aktivitas yang memerlukan penginstalan aplikasi, aplikasi desktop, atau pengalaman konsol game baik-baik saja tetapi tidak ideal. Kami tidak akan mencantumkan aktivitas yang memerlukan pendaftaran atau pembayaran. (Kegiatan robotika dapat memerlukan pembelian robotika.)
+*Persyaratan teknis:* Karena berbagai macam pengaturan teknologi sekolah dan kelas, kegiatan terbaik adalah berbasis Web atau ramah ponsel cerdas, atau kegiatan gaya unplugged-style yang mengajarkan konsep ilmu komputer tanpa menggunakan komputer (lihat http://csunplugged.com/). [](http://csunplugged.com/) Aktivitas yang memerlukan penginstalan aplikasi, aplikasi desktop, atau pengalaman konsol game baik-baik saja tetapi tidak ideal. Kami tidak akan mencantumkan aktivitas yang memerlukan pendaftaran atau pembayaran. (Kegiatan robotika dapat memerlukan pembelian robotika.)
 
 *Format yang dipimpin siswa (Self-Guided):* Jam Kode asli sebagian besar dibangun berdasarkan keberhasilan tutorial atau pelajaran yang dipandu sendiri, yang secara opsional difasilitasi oleh guru. Banyak pilihan yang tersedia, tetapi jika Anda ingin membuat sesuatu yang baru, aktifitas tersebut harus didesain sehingga dapat menjadi menyenangkan untuk siswa yang belajar sendiri, ataupun untuk ruang kelas dimana gurunya memiliki persiapan minim ataupun tidak memiliki latar belakang ilmu komputer. Hal tersebut harus memberikan arahan bagi siswa, kebalikan dari tantangan terbuka satu jam. Idealnya, instruksi dan tutorial harus terintegrasi dengan platform pemrograman, supaya tidak perlu berpindah tab atau jendela antara tutorial dan platform pemrograman.
 
@@ -142,11 +142,11 @@ Yang anda perlukan:
     * Dicabut
 * Screenshot atau gambar pemasaran dari aktivitas Hour of Code. Silakan kirim setidaknya satu gambar dengan dimensi 4:3. Ini harus setidaknya 520px oleh 390px. Gambar ini harus TIDAK memiliki teks di atasnya (selain logo Anda), agar lebih mudah diakses oleh penutur non-bahasa Inggris. Jika gambar yang sesuai tidak disediakan, kami akan mengambil sediri screenshot dari tutorial anda ATAU mungkin kami tidak akan mencantumkannya. Semua gambar harus dikirimkan sebagai tautan URL ke.jpg, .jpeg, atau.png.
 * Untuk melacak partisipasi dengan lebih akurat, mitra tutorial pihak ketiga perlu menyertakan gambar pelacakan 1-piksel di halaman pertama tutorial Hour of Code mereka. Lihat bagian [Tracking Pixel](#pixel) di bawah ini untuk detail selengkapnya.
-* Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
+* Setelah menyelesaikan aktivitas Anda, pengguna harus diarahkan ke [](https://code.org/api/hour/finish) code.org/api/hour/finish di mana mereka akan dapat: 
     * Bagikan pada media sosial bahwa mereka telah menyelesaikan Hour of Code
     * Menerima sertifikat bahwa mereka telah menyelesaikan Hour of Code
     * Lihat papan peringkat tetang negara/kota yang memiliki tingkat partisipasi tertinggi dalam aktivitas Hour of Code
-    * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
+    * Untuk pengguna yang menghabiskan satu jam untuk aktivitas Anda dan tidak menyelesaikannya, harap sertakan tombol pada aktivitas Anda yang bertuliskan “Saya selesai dengan Jam Kode saya” yang menautkan kembali ke [](https://code.org/api/hour/finish) code.org/api/hour/finish juga.
 * (Opsional) Kami dapat menindaklanjuti dengan tautan survei/formulir online yang meminta laporan metrik aktivitas berikut: 
     * Untuk aktivitas online (terutama aplikasi ponsel pintar/tablet): 
         * Jumlah pengguna
@@ -263,7 +263,7 @@ CATATAN: ini tidak penting untuk disertakan dalam app yang membutuhkan installas
 
 Contoh piksel pelacakan untuk Dance Party:
 
-IMG SRC = <http://code.org/api/hour/begin_dance.png>   
+IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
 
 [**Kembali ke atas**](#top)

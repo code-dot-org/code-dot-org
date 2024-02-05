@@ -51,6 +51,7 @@ import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import CourseSelect from './CourseSelect';
 import SubjectSelect from './SubjectSelect';
 import MapboxLocationSearchField from '../../../../templates/MapboxLocationSearchField';
+import ModuleSelect from './ModuleSelect';
 
 // Default to today, 9am-5pm.
 const placeholderSession = {
@@ -100,6 +101,7 @@ export class WorkshopForm extends React.Component {
         id: PropTypes.number,
         name: PropTypes.string,
       }),
+      module: PropTypes.string,
     }),
     onSaved: PropTypes.func,
     today: PropTypes.instanceOf(Date),
@@ -125,6 +127,7 @@ export class WorkshopForm extends React.Component {
       funding_type: null,
       course: '',
       subject: '',
+      module: '',
       fee: null,
       notes: '',
       sessions: [placeholderSession],
@@ -151,6 +154,7 @@ export class WorkshopForm extends React.Component {
           'funding_type',
           'course',
           'subject',
+          'module',
           'fee',
           'notes',
           'regional_partner_id',
@@ -774,7 +778,7 @@ export class WorkshopForm extends React.Component {
   handleCourseChange = event => {
     const course = this.handleFieldChange(event);
 
-    // clear facilitators, subject, funding, and email reminders
+    // clear facilitators, subject, module, funding, and email reminders
     this.setState({
       facilitators: [],
       subject: null,
@@ -782,6 +786,7 @@ export class WorkshopForm extends React.Component {
       funded: '',
       funding_type: null,
       suppress_email: false,
+      module: null,
     });
     this.loadAvailableFacilitators(course);
   };
@@ -813,6 +818,10 @@ export class WorkshopForm extends React.Component {
         suppress_email: false,
       });
     }
+
+    this.setState({
+      module: null,
+    });
   };
 
   handleCustomizeFeeChange = event => {
@@ -835,6 +844,7 @@ export class WorkshopForm extends React.Component {
       funding_type: this.state.funding_type,
       course: this.state.course,
       subject: this.state.subject,
+      module: this.state.module,
       fee: this.state.fee ? this.state.fee : null,
       notes: this.state.notes,
       virtual: this.state.virtual,
@@ -889,6 +899,10 @@ export class WorkshopForm extends React.Component {
 
   shouldShowFacilitators() {
     return !['Counselor', 'Admin'].includes(this.state.course);
+  }
+
+  shouldRenderModules() {
+    return this.state.subject === SubjectNames['SUBJECT_CUSTOM_WORKSHOP'];
   }
 
   renderFormButtons() {
@@ -999,6 +1013,11 @@ export class WorkshopForm extends React.Component {
         validation.style.fee = 'error';
         validation.help.fee = 'Required';
       }
+      if (this.shouldRenderModules() && !this.state.module) {
+        validation.isValid = false;
+        validation.style.module = 'error';
+        validation.help.module = 'Required.';
+      }
     }
     return validation;
   }
@@ -1087,6 +1106,20 @@ export class WorkshopForm extends React.Component {
                   inputStyle={this.getInputStyle()}
                   validation={validation}
                   onChange={this.handleSubjectChange}
+                />
+              )}
+            </Col>
+          </Row>
+          <Row>
+            <Col sm={5}>
+              {this.shouldRenderModules() && (
+                <ModuleSelect
+                  course={this.state.course}
+                  module={this.state.module}
+                  readOnly={this.props.readOnly}
+                  inputStyle={this.getInputStyle()}
+                  validation={validation}
+                  onChange={this.handleFieldChange}
                 />
               )}
             </Col>

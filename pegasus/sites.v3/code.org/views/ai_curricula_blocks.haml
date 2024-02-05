@@ -1,0 +1,37 @@
+- ai_curricula_index = 7
+
+- ai_curricula_overline = [hoc_s(:module_grade_7_12), hoc_s(:module_grade_9_12), hoc_s(:module_grade_6_12), hoc_s(:module_grade_6_12), hoc_s(:module_grade_7_12), hoc_s(:module_grade_3_12), hoc_s(:module_grade_3_12)]
+
+- ai_curricula_title = [hoc_s(:ai_curriculum_title_06), hoc_s(:curriculum_name_csa_ai), hoc_s(:ai_curriculum_title_04), hoc_s(:ai_curriculum_title_01), hoc_s(:ai_curriculum_title_02), hoc_s(:ai_curriculum_title_03), hoc_s(:curriculum_name_dance_party_ai_edition)]
+
+- ai_curricula_img = ["/images/ai/ai-curriculum-societal-impacts.png", "/images/ai/ai-curriculum-computer-vision.png", "/images/ai/ai-curriculum-how-ai-works.png", "/images/ai/ai-curriclum-machine-learning.png", "/images/ai/ai-curriclum-ethics.png", "/images/ai/ai-curriclum-oceans.png", "/images/dance-hoc/dance-party-activity-ai-edition-cropped.png"]
+
+- ai_curricula_desc = [hoc_s(:ai_curriculum_desc_06), hoc_s(:curriculum_desc_csa_ai_short), hoc_s(:ai_curriculum_desc_04), hoc_s(:ai_curriculum_desc_01), hoc_s(:ai_curriculum_desc_02), hoc_s(:ai_curriculum_desc_03), hoc_s(:curriculum_desc_dance_party_ai_edition)]
+
+- ai_curricula_duration = [hoc_s(:module_duration_1_hr), hoc_s(:module_duration_5_hrs_plus), hoc_s(:module_duration_8_hrs), hoc_s(:module_duration_20_hrs), hoc_s(:module_duration_1_hr), hoc_s(:module_duration_1_hr), hoc_s(:module_duration_1_hr)]
+
+- ai_curricula_url = [CDO.studio_url("/s/ai-ethics-2023/lessons/2"), "/curriculum/computer-vision", "/ai/how-ai-works", CDO.studio_url("/s/aiml"), CDO.studio_url("/s/ai-ethics-2023/lessons/1"), CDO.studio_url("/s/oceans"), CDO.studio_url("/s/dance-ai-2023/reset")]
+
+- ai_curricula_aria_label = [hoc_s(:ai_curriculum_btn_aria_label_06), hoc_s(:ai_curriculum_btn_aria_label_05), hoc_s(:ai_curriculum_btn_aria_label_04), hoc_s(:ai_curriculum_btn_aria_label_01), hoc_s(:ai_curriculum_btn_aria_label_02), hoc_s(:ai_curriculum_btn_aria_label_03), hoc_s(:ai_curriculum_btn_aria_label_dance_ai)]
+
+- ai_curricula_button_label = [hoc_s(:call_to_action_view_lesson_plan), hoc_s(:call_to_action_explore_module), hoc_s(:call_to_action_explore_lessons), hoc_s(:call_to_action_explore_unit), hoc_s(:call_to_action_view_lesson_plan), hoc_s(:call_to_action_try_activity), hoc_s(:call_to_action_try_activity)]
+
+.action-block__wrapper.action-block__wrapper--three-col
+  - ai_curricula_index.times do |index|
+    .action-block.action-block--one-col.flex-space-between
+      .content-wrapper
+        %p.overline
+          =hoc_s(:module_label_grades)
+          = ai_curricula_overline[index]
+        %h3
+          = ai_curricula_title[index]
+        %img{src: ai_curricula_img[index], alt: ""}
+        %p
+          = ai_curricula_desc[index]
+        %p
+          %strong
+            =hoc_s(:module_label_duration)
+          = ai_curricula_duration[index]
+      .content-footer
+        %a.link-button{href: ai_curricula_url[index], aria:{label: ai_curricula_aria_label[index]}}
+          = ai_curricula_button_label[index]

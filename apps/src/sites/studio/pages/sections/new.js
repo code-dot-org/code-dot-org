@@ -5,8 +5,13 @@ import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/Sections
 
 $(document).ready(() => {
   const isUsersFirstSection = getScriptData('isUsersFirstSection');
+  const canEnableAITutor = getScriptData('canEnableAITutor');
+
   ReactDOM.render(
-    <SectionsSetUpContainer isUsersFirstSection={isUsersFirstSection} />,
+    <SectionsSetUpContainer
+      isUsersFirstSection={isUsersFirstSection}
+      canEnableAITutor={canEnableAITutor}
+    />,
     document.getElementById('form')
   );
 });

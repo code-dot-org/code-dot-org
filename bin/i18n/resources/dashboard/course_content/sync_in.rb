@@ -1,32 +1,31 @@
+#!/usr/bin/env ruby
+
 require 'fileutils'
 require 'json'
 
 require_relative '../../../../../dashboard/config/environment'
 require_relative '../../../i18n_script_utils'
+require_relative '../../../utils/sync_in_base'
 require_relative '../../../redact_restore_utils'
+require_relative '../course_content'
 
 module I18n
   module Resources
     module Dashboard
       module CourseContent
-        class SyncIn
-          I18N_SOURCE_DIR_PATH = CDO.dir(File.join(I18N_SOURCE_DIR, 'course_content')).freeze
-
-          VARIABLE_NAMES_TYPE = 'variable_names'.freeze
-          PARAMETER_NAMES_TYPE = 'parameter_names'.freeze
-          BLOCK_CATEGORIES_TYPE = 'block_categories'.freeze
-          PROGRESSIONS_TYPE = 'progressions'.freeze
-
-          def self.perform
-            new.execute
-          end
-
-          def execute
+        class SyncIn < I18n::Utils::SyncInBase
+          def process
             prepare_level_content
+            progress_bar.progress = 25
+
             prepare_project_content
+            progress_bar.progress = 50
 
             write_to_yml(VARIABLE_NAMES_TYPE, variable_strings)
+            progress_bar.progress = 65
+
             write_to_yml(PARAMETER_NAMES_TYPE, parameter_strings)
+            progress_bar.progress = 80
 
             redact_level_content
           end
@@ -155,14 +154,25 @@ module I18n
                 i18n_strings['placeholder_texts'].merge! get_all_placeholder_text_types(processed_doc)
               end
 
-              # start_html
-              if level.start_html
-                start_html = Nokogiri::XML(level.start_html, &:noblanks)
-                i18n_strings['start_html'] = Hash.new unless level.start_html.empty?
+              # start_libraries
+              # These start libraries are used as short term solution to make Sample Apps translatable.
+              # Student Libraries are required to have a name, a description and at least one function.
+              # Student libraries are stringify when used in a level and stored as start_libraries.
+              # libraries that do not follow those rules will fail to load,and the level wont work.
+              if level.start_libraries.present?
+                level_libraries = JSON.parse(level.start_libraries)
+                level_libraries.each do |library|
+                  library_name = library["name"]
+                  next unless /^i18n_/i.match?(library_name)
+                  library_source = library["source"]
+                  translation_json = library_source[/var TRANSLATIONTEXT = (\{[^}]*});/m, 1]
+                  next if translation_json.blank?
+                  i18n_strings['start_libraries'] ||= {}
+                  i18n_strings['start_libraries'][library_name] = {}
 
-                # match any element that contains text
-                start_html.xpath('//*[text()[normalize-space()]]').each do |element|
-                  i18n_strings['start_html'][element.text] = element.text
+                  JSON.parse(translation_json).each do |key, value|
+                    i18n_strings['start_libraries'][library_name][key] = value
+                  end
                 end
               end
 
@@ -260,11 +270,9 @@ module I18n
           end
 
           def write_to_yml(type, strings)
-            dashboard_dir = CDO.dir(File.join(I18N_SOURCE_DIR, 'dashboard'))
+            FileUtils.mkdir_p(I18n::Resources::Dashboard::I18N_SOURCE_DIR_PATH)
 
-            FileUtils.mkdir_p(dashboard_dir)
-
-            File.open(File.join(dashboard_dir, "#{type}.yml"), 'w') do |file|
+            File.open(File.join(I18n::Resources::Dashboard::I18N_SOURCE_DIR_PATH, "#{type}.yml"), 'w') do |file|
               # Format strings for consumption by the rails i18n engine
               formatted_data = {
                 'en' => {
@@ -279,8 +287,6 @@ module I18n
           end
 
           def prepare_level_content
-            puts 'Preparing level content'
-
             block_category_strings = {}
             progression_strings = {}
 
@@ -344,7 +350,6 @@ module I18n
           end
 
           def prepare_project_content
-            puts 'Preparing project content'
             project_content_file = File.join(I18N_SOURCE_DIR_PATH, 'projects.json')
             project_strings = {}
 
@@ -395,7 +400,6 @@ module I18n
           end
 
           def redact_level_content
-            puts 'Redacting level content'
             Dir[File.join(I18N_SOURCE_DIR_PATH, '/**/*.json')].each do |source_path|
               source_data = JSON.load_file(source_path)
               next if source_data.blank?
@@ -408,7 +412,7 @@ module I18n
               FileUtils.mkdir_p(File.dirname(backup_path))
               File.write(backup_path, JSON.pretty_generate(redactable_data))
 
-              redacted_data = RedactRestoreUtils.redact_data(redactable_data, %w[blockly])
+              redacted_data = RedactRestoreUtils.redact_data(redactable_data, REDACT_PLUGINS)
               File.write(source_path, JSON.pretty_generate(source_data.deep_merge(redacted_data)))
             end
           end
@@ -417,3 +421,5 @@ module I18n
     end
   end
 end
+
+I18n::Resources::Dashboard::CourseContent::SyncIn.perform if __FILE__ == $0

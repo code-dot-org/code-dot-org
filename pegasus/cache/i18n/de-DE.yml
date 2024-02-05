@@ -1206,6 +1206,7 @@ de-DE:
   header_incubator: Inkubator
   header_learn: Lernen
   header_legal: Privatsphäre und Rechtliches
+  header_legal_cookie_notice: Cookie-Meldung
   header_legal_privacy: Datenschutzerklärung
   header_legal_tos: AGBs
   header_my_dashboard: Meine Übersicht
@@ -2705,25 +2706,13 @@ de-DE:
     die erste Schritte in der Informatik fördert. Millionen von Schülern in über 180
     Ländern machen mit. Beteiligen auch Sie sich während der Informatikwoche vom 7.
     bis 13. Dezember
-  volunteer_engineer_submission_intro_guide: Erfahre mehr über unser <a href="%{volunteer_guide}">Volunteerprogramm
-    hier</a>.
   volunteer_engineer_submission_intro_guide_markdown: Mehr Informationen über unser
     [Freiwilligen Programm hier](%{volunteer_guide}).
-  volunteer_engineer_submission_intro_links: Suchen Sie Freiwillige? Finden Sie Freiwillige
-    vor Ort auf unserer <a href="%{volunteer_local}">Unterstützerkarte</a>.
   volunteer_engineer_submission_intro_links_markdown: Sind die Lehrer und suchen Freiwillige?
     Finden Sie Freiwillige vor Ort auf unserer [Unterstützerkarte](%{volunteer_local}).
-  volunteer_engineer_submission_intro_recruit: 'Viele Lehrer brauchen <span style="font-family:
-    ''Gotham 7r'', sans-serif;">Informatikbegeisterte</span>, die im Unterricht helfen
-    möchten oder <span style="font-family: ''Gotham 7r'', sans-serif;">Schüler inspirieren</span>,
-    indem sie über die vielfältigen Möglichkeiten der Informatik sprechen (auch über
-    Video-Chat).'
   volunteer_engineer_submission_intro_recruit_markdown: Viele Lehrer brauchen **Informatikbegeisterte**,
     die im Unterricht helfen möchten oder Schüler **inspirieren**, indem sie über
     die vielfältigen Möglichkeiten der Informatik sprechen (auch über Video-Chat).
-  volunteer_engineer_submission_intro_signup: Wenn Sie Informatikstudent oder Softwareexperte
-    sind, geben Sie bitte folgende Informationen ein. Die mit <span class="form-required-field">*</span>
-    markierten Felder sind obligatorisch.
   volunteer_engineer_submission_intro_signup_markdown: Bitte geben Sie die folgenden
     Informationen ein, wenn Sie Informatikstudent oder Softwareprofi sind. Sie müssen
     mindestens 18 Jahre alt sein, um sich als Freiwilliger anmelden zu können. Beachten

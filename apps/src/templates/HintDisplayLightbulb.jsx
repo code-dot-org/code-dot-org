@@ -8,6 +8,7 @@ class HintDisplayLightbulb extends React.Component {
   static propTypes = {
     unseenHints: PropTypes.arrayOf(PropTypes.object),
     isMinecraft: PropTypes.bool,
+    isRtl: PropTypes.bool.isRequired,
   };
 
   state = {
@@ -31,6 +32,7 @@ class HintDisplayLightbulb extends React.Component {
         <Lightbulb
           count={this.getCount()}
           isMinecraft={this.props.isMinecraft}
+          isRtl={this.props.isRtl}
           lit={this.getCount() > 0}
           shouldAnimate={this.state.shouldAnimate}
         />
@@ -43,5 +45,6 @@ export default connect(function propsFromStore(state) {
   return {
     isMinecraft: !!state.pageConstants.isMinecraft,
     unseenHints: state.authoredHints.unseenHints,
+    isRtl: state.isRtl,
   };
 })(HintDisplayLightbulb);

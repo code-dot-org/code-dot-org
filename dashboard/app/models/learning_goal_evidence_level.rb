@@ -35,4 +35,14 @@ class LearningGoalEvidenceLevel < ApplicationRecord
     learning_goal_seeding_key = my_learning_goal.seeding_key(seed_context)
     my_key.merge!(learning_goal_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
   end
+
+  def summarize_for_rubric_edit
+    {
+      id: id,
+      learningGoalId: learning_goal_id,
+      understanding: understanding,
+      teacherDescription: teacher_description,
+      aiPrompt: ai_prompt,
+    }
+  end
 end

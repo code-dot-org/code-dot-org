@@ -18,14 +18,19 @@ import commonI18n from '@cdo/locale';
 const LoadingProgress = () => {
   const progressValue = useSelector(state => state.music.soundLoadingProgress);
 
-  if (progressValue >= 1) {
-    return null;
-  }
-
   return (
-    <div id="loading-progress" className={moduleStyles.loadingProgress}>
+    <div
+      id="loading-progress"
+      className={classNames(
+        moduleStyles.loadingProgress,
+        progressValue >= 1 && moduleStyles.loadingProgressHide
+      )}
+    >
       <div
-        className={moduleStyles.loadingProgressFill}
+        className={classNames(
+          moduleStyles.loadingProgressFill,
+          progressValue === 0 && moduleStyles.loadingProgressFillZero
+        )}
         style={{
           width: `${progressValue * 100}%`,
         }}
@@ -60,26 +65,24 @@ const SkipControls = () => {
       <button
         id="skip-back-button"
         className={classNames(
-          moduleStyles.controlButton,
-          moduleStyles.controlButtonSkip,
-          isPlaying && moduleStyles.controlButtonSkipDisabled
+          moduleStyles.skipButton,
+          isPlaying && moduleStyles.disabled
         )}
         onClick={() => onClickSkip(false)}
         type="button"
       >
-        <FontAwesome icon={'step-backward'} />
+        <FontAwesome icon={'step-backward'} className={moduleStyles.icon} />
       </button>
       <button
         id="skip-forward-button"
         className={classNames(
-          moduleStyles.controlButton,
-          moduleStyles.controlButtonSkip,
-          isPlaying && moduleStyles.controlButtonSkipDisabled
+          moduleStyles.skipButton,
+          isPlaying && moduleStyles.disabled
         )}
         onClick={() => onClickSkip(true)}
         type="button"
       >
-        <FontAwesome icon={'step-forward'} />
+        <FontAwesome icon={'step-forward'} className={moduleStyles.icon} />
       </button>
     </>
   );
@@ -97,6 +100,7 @@ const Controls = ({
 }) => {
   const isPlaying = useSelector(state => state.music.isPlaying);
   const isBeatPadShowing = useSelector(state => state.music.isBeatPadShowing);
+  const isLoading = useSelector(state => state.music.soundLoadingProgress < 1);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -130,13 +134,17 @@ const Controls = ({
         <button
           id="run-button"
           className={classNames(
-            moduleStyles.controlButton,
-            moduleStyles.controlButtonRun
+            moduleStyles.runButton,
+            isLoading && moduleStyles.disabled
           )}
           onClick={() => setPlaying(!isPlaying)}
           type="button"
+          disabled={isLoading}
         >
-          <FontAwesome icon={isPlaying ? 'stop' : 'play'} />
+          <FontAwesome
+            icon={isPlaying ? 'stop' : 'play'}
+            className={moduleStyles.icon}
+          />
           <div className={moduleStyles.text}>
             {isPlaying ? commonI18n.stop() : commonI18n.runProgram()}
           </div>

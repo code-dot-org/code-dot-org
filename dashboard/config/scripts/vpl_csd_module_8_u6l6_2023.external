@@ -6,24 +6,28 @@ title 'Debugging Session'
 markdown <<MARKDOWN
 #Curriculum Investigations
 
-##Lesson 5:  Variables and If Statements  
-**Estimated time: 5 - 10 minutes**
+## Variables and If Statements
 
-### Tasks
+### **Task**
 
-* <a href="https://studio.code.org/s/csd6-2022/lessons/5" target="_blank">Read the lesson plan </a>
-* Identify how students will use variables, counter patterns, and if-statements
+* ##### Choose **one** lesson plan to read, depending on your context:
+    * ##### <a href="https://studio.code.org/s/csd6a-2023/lessons/6" target="blank">Unit 6A, Lesson 6 (Circuit Playground)</a>
+    * ##### <a href="https://studio.code.org/s/csd6b-2023/lessons/6" target="blank">Unit 6B, Lesson 6 (micro:bit)</a>
+* ##### Identify how students will use variables, counter patterns, and if-statements
 
-##Lesson 8:  Getting Screen Inputs  
-**Estimated time: 15 - 20 minutes**
+## Getting Screen Inputs
 
-### Task
+### **Task**
 
-* <a href="https://studio.code.org/s/csd6-2022/lessons/8" target="_blank">Read the lesson plan </a>
-* Identify how students will use new design elements - text inputs, dropdowns, and sliders
+> ##### **Note:** The Circuit Playground version of Unit 6: Creating Apps with Devices, contains an extra lesson: Unit 6A, Lesson 8 - Color LEDs. The micro:bit version of the unit does not contain this lesson.
 
+* ##### Choose **one** lesson plan to read, depending on your context:
+    * ##### <a href="https://studio.code.org/s/csd6a-2023/lessons/9" target="blank">Unit 6A, Lesson 9 (Circuit Playground)</a>
+    * ##### <a href="https://studio.code.org/s/csd6b-2023/lessons/9" target="blank">Unit 6B, Lesson 9 (micro:bit)</a>
+* ##### Identify how students will use new design elements - text inputs, dropdowns, and sliders
 
-**Next Step:**  Click next to practice getting screen inputs
+___
+#### **Up next:**  Click next to practice getting screen inputs
 
 
 

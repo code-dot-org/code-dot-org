@@ -11,11 +11,11 @@ layout: wide
 
 # Richtlinien für die Erstellung und Einreichung von Tutorials und Lektionen für Hour of Code™ und die Computer Science Education Week
 
-Code.org bietet eine Vielzahl von Hour of Code™ -Aktivitäten, Lektionen und Videos auf den Websites Code.org und Hour of Code. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org bietet eine Vielzahl von Hour of Code™ -Aktivitäten, Lektionen und Videos auf den Websites Code.org und Hour of Code. Die aktuelle Liste befindet sich unter []({{ urls/learn }})hourofcode.com/learn.
 
 Möchtest du dein eigenes selbstgeführtes Tutorial, eine von einem Lehrer geleitete Lektion oder eine Robotik-/Maker-Aktivität einreichen, in der ein Informatik-Prinzip erklärt wird? Schließen Sie sich dieser globalen Bewegung an und helfen Sie Teilnehmern auf der ganzen Welt, mit einer Stunde Code zu beginnen oder mit Aktivitäten, die mehrere Lektionen, einen Tag oder eine Woche dauern, noch weiter zu gehen.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity and AI Submission page](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform). Sie können eine Aktivität jederzeit einreichen, die Frist für die Aufnahme in ein bestimmtes Kalenderjahr ist jedoch der 1. Oktober. (Beispielsweise werden Aktivitäten, die nach dem 1. Oktober 2023 eingehen, nicht für die Hour of Code 2023 aufgeführt.)** Wenn du Fragen zu deiner Einreichung von Aktivitäten hast, kontaktiere uns bitte unter support@code.org.
+**Nachdem du die Richtlinien gelesen hast, kannst du deine Aktivität über unsere [Hour of Code™ -Aktivitäts- und KI-Einreichungsseite einreichen](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform). Sie können eine Aktivität jederzeit einreichen, die Frist für die Aufnahme in ein bestimmtes Kalenderjahr ist jedoch der 1. Oktober. (Beispielsweise werden Aktivitäten, die nach dem 1. Oktober 2023 eingehen, nicht für die Hour of Code 2023 aufgeführt.)** Wenn du Fragen zu deiner Einreichung von Aktivitäten hast, kontaktiere uns bitte unter support@code.org.
 
 Ein paar Tipps:
 
@@ -85,9 +85,9 @@ Das Ziel einer Hour of Code ist es, Anfängern einen ersten Einblick in Informat
 
 Die Aktivitäten sollten ein Informatikkonzept wie Schleifen, Bedingungen, Verschlüsselung oder die Funktionsweise des Internets vermitteln. Eine Aktivität kann auch vermitteln, wie Informatik mit Berufen, Ereignissen oder Geschichte in der realen Welt zusammenhängt. Zum Beispiel das Unterrichten von UX-Design, um Apps zu erstellen, die für ein Publikum oder ein Anliegen von Bedeutung sind. Wir raten von Aktivitäten ab, die sich eher auf die Syntax der Programmierung als auf die Konzepte konzentrieren. Zum Beispiel werden wir Aktivitäten auflisten, aber nicht hervorheben, die HTML vermitteln. Ebenso raten wir von Blockprogrammierungsstunden ab, die sich auf das Einstellen/Ändern von Konfigurationsoptionen konzentrieren, anstatt zu lernen, wie man einen Algorithmus oder Prozess modelliert.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Aktivitäten, die eine App-Installation, Desktop-App oder Spielkonsolenerfahrung erfordern, sind in Ordnung, aber nicht ideal. Wir werden keine Aktivitäten auflisten, für die eine Anmeldung oder Zahlung erforderlich ist. (Robotik-Aktivitäten können den Kauf von Robotern erfordern.)
+*Technische Anforderungen:* Aufgrund der großen Vielfalt an Technologien für Schulen und Klassenzimmer eignen sich am besten Aktivitäten webbasierte oder Smartphone-freundliche oder anderweitig unplugged-ähnliche Aktivitäten, bei denen Informatikkonzepte ohne den Einsatz eines Computers vermittelt werden (siehe http://csunplugged.com/). [](http://csunplugged.com/) Aktivitäten, die eine App-Installation, Desktop-App oder Spielkonsolenerfahrung erfordern, sind in Ordnung, aber nicht ideal. Wir werden keine Aktivitäten auflisten, für die eine Anmeldung oder Zahlung erforderlich ist. (Robotik-Aktivitäten können den Kauf von Robotern erfordern.)
 
-*Student-led (Self-Guided) Format:* The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. Es gibt viele bestehende Optionen, aber wenn Sie eine neue erstellen möchten, sollten diese Aktivitäten so konzipiert sein, dass sie einem Schüler Spaß machen, der alleine oder in einem Klassenzimmer arbeitet, dessen Lehrer nur über minimale Vorbereitungskenntnisse oder Computerkenntnisse verfügt. Sie sollten den Studierenden Anweisungen geben und nicht eine unbefristete einstündige Herausforderung. Idealerweise werden die Anweisungen und Tutorials direkt in die Programmierplattform integriert, um zu vermeiden, dass zwischen dem Tutorial und der Programmierplattform zwischen Tabs oder Fenstern gewechselt werden muss.
+*Von Schülern geleitetes (selbstgeführtes) Format:* Die ursprüngliche Hour of Code basierte hauptsächlich auf dem Erfolg von selbstgesteuerten Tutorials oder Lektionen, die optional vom Lehrer moderiert wurden. Es gibt viele bestehende Optionen, aber wenn Sie eine neue erstellen möchten, sollten diese Aktivitäten so konzipiert sein, dass sie einem Schüler Spaß machen, der alleine oder in einem Klassenzimmer arbeitet, dessen Lehrer nur über minimale Vorbereitungskenntnisse oder Computerkenntnisse verfügt. Sie sollten den Studierenden Anweisungen geben und nicht eine unbefristete einstündige Herausforderung. Idealerweise werden die Anweisungen und Tutorials direkt in die Programmierplattform integriert, um zu vermeiden, dass zwischen dem Tutorial und der Programmierplattform zwischen Tabs oder Fenstern gewechselt werden muss.
 
 Um einen Eindruck von der Vielzahl der Arten von Tutorials und Unterrichtsplänen zu bekommen, die Sie erstellen können, besuchen Sie die Seite</a>der Hour of Code-Aktivitäten.</p> 
 
@@ -146,7 +146,7 @@ Was Sie brauchen:
     * Teile in den sozialen Medien, dass sie die Hour of Code abgeschlossen haben
     * Sie erhalten ein Zertifikat, dass sie die Hour of Code abgeschlossen haben
     * Sieh dir die Bestenlisten an, welche Länder/Städte die höchsten Teilnahmequoten an Hour of Code-Aktivitäten aufweisen
-    * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
+    * Für Nutzer, die eine Stunde mit Ihrer Aktivität verbringen und sie nicht abschließen, fügen Sie Ihrer Aktivität bitte eine Schaltfläche mit der Aufschrift „Ich bin fertig mit meiner Hour of Code“ hinzu, die auch zu [](https://code.org/api/hour/finish) code.org/api/hour/finish zurückführt.
 * (Optional) Wir können im Anschluss einen Link zu einer Online-Umfrage/einem Formular senden, in dem wir um einen Bericht über die folgenden Aktivitätskennzahlen bitten: 
     * Für Online-Aktivitäten (insbesondere Smartphone-/Tablet-Apps): 
         * Anzahl der Benutzer
@@ -229,7 +229,7 @@ Sie können das [Hour of Code-Logo](https://hourofcode.com/us/promote/resources#
 
 **Erkläre die Aktivität oder verbinde sie mit einem sozial bedeutsamen Kontext.** Computerprogrammierung wird zu einer Supermacht, wenn die Schüler sehen, wie sie die Welt zum Besseren verändern kann!
 
-**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
+**Stellen Sie sicher, dass Ihr Tutorial in einem [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Paradigma verwendet werden kann.** Dies ist besonders nützlich für die Hour of Code, da in vielen Klassenzimmern keine 1:1 -Hardware für alle Schüler verfügbar ist.
 
 [**Zurück zum Seitenanfang**](#top)
 
@@ -263,7 +263,7 @@ HINWEIS: Dies ist für installierbare Apps (iOS/Android-Apps oder Desktop-Instal
 
 Beispiel für Tracking-Pixel für Dance Party:
 
-IMG SRC = <http://code.org/api/hour/begin_dance.png>   
+IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
 
 [**Zurück zum Seitenanfang**](#top)
@@ -277,7 +277,7 @@ Bitte bewerben Sie Ihre Aktivität in Ihrem Netzwerk! Leite sie auf deine Hour o
 - Präsentieren Sie Hour of Code und CSEDWeek auf Ihrer Website. Beispiel: <http://www.tynker.com/hour-of-code>
 - Bewerben Sie Hour of Code in sozialen Medien, traditionellen Medien, Mailinglisten usw. mit dem Hashtag #HourOfCode (mit den Großbuchstaben H, O, C)
 - Organisieren Sie eine lokale Veranstaltung oder bitten Sie Ihre Mitarbeiter, eine Veranstaltung an lokalen Schulen oder Gemeindegruppen auszurichten.
-- See our [resource kit](https://hourofcode.com/us/promote) for further information.
+- Weitere Informationen finden Sie in unserem [Resource Kit](https://hourofcode.com/us/promote) .
 
 [**Zurück zum Seitenanfang**](#top)
 

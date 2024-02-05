@@ -9,6 +9,7 @@ import Button from '../Button';
 import {connect} from 'react-redux';
 import {appendProjects, setHasOlderProjects} from './projectsRedux';
 import i18n from '@cdo/locale';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const NUM_PROJECTS_TO_ADD = 12;
 
@@ -78,6 +79,7 @@ class ProjectAppTypeArea extends React.Component {
         projects={filteredList}
         galleryType={this.props.galleryType}
         isDetailView={this.props.isDetailView}
+        showReportAbuseHeader
       />
     );
   }
@@ -215,7 +217,7 @@ const styles = {
     marginTop: 35,
     marginBottom: 16,
     cursor: 'pointer',
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
   },
   viewMoreButtons: {
     float: 'right',

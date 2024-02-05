@@ -13,11 +13,12 @@
         "playlab_k1",
         "artist"
       ],
+      "tts": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "nevada-standards-aligned-fifth-grade-2023",
-    "serialized_at": "2023-07-12 23:07:59 UTC",
+    "serialized_at": "2023-09-12 21:24:38 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -83,6 +84,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

@@ -20,3 +20,14 @@ declare const DEBUG_MINIFIED: number;
 // converted to TypeScript, this type can be narrowed.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare const Blockly: typeof import('blockly') & Record<string, any>;
+
+// Imported static files are treated as strings
+declare module '*.png' {
+  const value: string;
+  export = value;
+}
+
+declare module '*.svg' {
+  const value: string;
+  export = value;
+}

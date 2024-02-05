@@ -80,8 +80,8 @@ module Cdo
       reset_if_forked
       timeout_at = now + timeout
       until (wait = timeout_at - now) < 0 || @buffer.empty?
-        @log.info "Flushing #{self.class}, waiting #{wait} seconds"
-        schedule_flush(true)
+        @log.debug "Flushing #{self.class}, waiting #{wait} seconds"
+        schedule_flush(force: true)
         # Block until the pending flush is completed or timeout is reached.
         @task.wait(wait.infinite? ? nil : wait)
       end
@@ -121,7 +121,7 @@ module Cdo
 
     # Schedule a flush in the future when the next batch is ready.
     # @param [Boolean] force flush batch even if not full.
-    private def schedule_flush(force = false)
+    private def schedule_flush(force: false)
       @buffer.synchronize do
         @task.reschedule {batch_ready(force)} unless @buffer.empty?
       end
@@ -162,8 +162,8 @@ module Cdo
       @buffer.synchronize do
         batch << @buffer.shift until
           @buffer.empty? ||
-            batch.length >= @batch_count ||
-            size((batch + [@buffer.first]).map(&:object)) > @batch_size
+              batch.length >= @batch_count ||
+              size((batch + [@buffer.first]).map(&:object)) > @batch_size
       end
       batch
     end

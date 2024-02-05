@@ -1384,9 +1384,6 @@ hr-HR:
     država ili ulica
   volunteer_engineer_submission_field_name: Ime
   volunteer_engineer_submission_field_name_placeholder: Ime i prezime
-  volunteer_engineer_submission_intro_signup: Ako si student računarstva ili iskusni
-    programer, molimo te da uneseš sljedeće informacije. Polja označena s <span class="form-required-field">*</span>
-    su obavezna.
   volunteer_engineer_submission_location_flexibility_curriculum: Spremni doprinijeti
     projektima kurikuluma otvorenog koda
   volunteer_engineer_submission_location_flexibility_onsite: Na licu mjesta u školi

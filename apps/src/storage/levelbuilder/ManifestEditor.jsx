@@ -97,6 +97,7 @@ class ManifestEditor extends React.Component {
           value={JSON.stringify(this.props.libraryManifest, null, 2)}
           // Change handler is required for this element, but changes will be handled by the code mirror.
           onChange={() => {}}
+          aria-label="Manifest JSON"
         />
         <Button
           __useDeprecatedTag

@@ -6,6 +6,10 @@
 // If the ChannelsApi on the server doesn't care about these, they should
 // live elsewhere.
 // The library data should definitely live elsewhere.
+
+import {BlockDefinition} from '@cdo/apps/blockly/types';
+import {PanelsLevelData} from '@cdo/apps/panels/types';
+
 export interface Channel {
   id: string;
   name: string;
@@ -96,6 +100,12 @@ export interface LevelProperties {
   levelData?: LevelData;
   appName: AppName;
   longInstructions?: string;
+  freePlay?: boolean;
+  edit_blocks?: string;
+  isK1?: boolean;
+  skin?: string;
+  toolboxBlocks?: string;
+  sharedBlocks?: BlockDefinition[];
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -115,7 +125,7 @@ export interface VideoLevelData {
 
 // TODO: Add AichatLevelData.
 
-export type LevelData = ProjectLevelData | VideoLevelData;
+export type LevelData = ProjectLevelData | VideoLevelData | PanelsLevelData;
 
 // A validation condition.
 export interface Condition {
@@ -186,8 +196,11 @@ export type AppName =
   | 'studio'
   | 'bounce'
   | 'poetry'
+  | 'pythonlab'
   | 'spritelab'
-  | 'standalone_video';
+  | 'standalone_video'
+  | 'panels'
+  | 'weblab2';
 
 export type StandaloneAppName =
   | 'spritelab'

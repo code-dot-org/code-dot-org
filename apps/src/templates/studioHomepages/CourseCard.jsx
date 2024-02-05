@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import fontConstants from '@cdo/apps/fontConstants';
 import color from '../../util/color';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
@@ -62,7 +63,7 @@ const styles = {
     paddingBottom: 5,
     marginTop: 15,
     fontSize: 20,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: color.white,
     zIndex: 2,
     position: 'absolute',
@@ -75,7 +76,7 @@ const styles = {
     paddingBottom: 5,
     marginTop: 15,
     fontSize: 20,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: color.white,
     zIndex: 2,
     position: 'absolute',
@@ -91,7 +92,7 @@ const styles = {
     marginTop: 115,
     fontSize: 14,
     lineHeight: 1.5,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: color.neutral_dark,
     background: color.neutral_light,
     height: 130,
@@ -103,8 +104,7 @@ const styles = {
   continueLink: {
     color: color.teal,
     fontSize: 14,
-    fontFamily: '"Gotham 4r", sans-serif',
-    fontWeight: 'bold',
+    ...fontConstants['main-font-regular'],
     marginTop: -5,
     display: 'inline',
   },

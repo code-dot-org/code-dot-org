@@ -30,7 +30,8 @@
 %details
   %summary=hoc_s(:csp_page_faq_question_06)
   %p=hoc_s(:csp_page_faq_answer_06_01)
-  %p=hoc_s(:csp_page_faq_answer_06_02, markdown: :inline, locals: {form_url: "https://docs.google.com/forms/d/1f5QPKi3F_3nBDR8q9BcXCqixzY7SCQd7Seob0-JYizU/viewform"})
+  %p.has-external-link
+    =hoc_s(:csp_page_faq_answer_06_02, markdown: :inline, locals: {form_url: "https://docs.google.com/forms/d/1f5QPKi3F_3nBDR8q9BcXCqixzY7SCQd7Seob0-JYizU/viewform"})
 %details
   %summary=hoc_s(:csd_page_faq_question_06)
   %p=hoc_s(:csd_page_faq_answer_06_01, markdown: :inline, locals: {csf_url: "/educate/curriculum/elementary-school", csp_url: "/educate/csp"})

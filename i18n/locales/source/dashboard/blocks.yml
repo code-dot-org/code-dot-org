@@ -54,6 +54,8 @@ en:
             '1.00': medium
             '2.00': large
             '3.00': extra large
+      Dancelab_ai:
+        text: "[IMAGE][0]generate [VALUE][1] effect"
       Dancelab_alternateMoves:
         text: "[GROUP][0] alternate every [N][1] measures \nbetween [MOVE1][2] and [MOVE2][3]"
         options:
@@ -103,6 +105,12 @@ en:
           UNIT:
             '"measures"': measures
             '"seconds"': seconds
+      Dancelab_atTimestampNotAfter:
+        text: at [TIMESTAMP][0] [UNIT][1]
+        options:
+          UNIT:
+            '"measures"': measures
+            '"seconds"': seconds
       Dancelab_changeColorBy:
         text: change [COLOR][0] [METHOD][1] by [AMOUNT][2]
         options:
@@ -143,6 +151,31 @@ en:
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Zombie
             MOVES.Rest: None
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "[GROUP][0] do [MOVE][1] [DIR][2] forever"
+        options:
+          GROUP:
+            '"CAT"': cats
+            '"SLOTH"': sloths
+          MOVE:
+            MOVES.Roll: Body Roll
+            MOVES.ClapHigh: Clap High
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Star
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
+            MOVES.Rest: None
+            '"next"': "(Next)"
+            '"prev"': "(Previous)"
+            '"rand"': "(Random)"
           DIR:
             '1': "→"
             "-1": "←"
@@ -648,6 +681,65 @@ en:
             '"tropical"': Tropical
             '"vintage"': Vintage
             '"warm"': Warm
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          set background effect
+          [PALETTE][0] [EFFECT][1]
+        options:
+          EFFECT:
+            '"none"': None
+            '"rand"': "(Random)"
+            '"quads"': Angles
+            '"blooming_petals"': Blooming Petals
+            '"circles"': Circles
+            '"clouds"': Clouds
+            '"color_cycle"': Colors
+            '"diamonds"': Diamonds
+            '"disco_ball"': Disco Ball
+            '"fireworks"': Fireworks
+            '"flowers"': Flowers
+            '"frosted_grid"': Frosted Grid
+            '"growing_stars"': Growing Stars
+            '"higher_power"': Higher Power
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoscope
+            '"lasers"': Laser Dance Floor
+            '"splatter"': Paint Splatter
+            '"rainbow"': Rainbow
+            '"ripples_random"': Random Ripples
+            '"ripples"': Ripples
+            '"snowflakes"': Snow
+            '"text"': Song Names
+            '"galaxy"': Space
+            '"sparkles"': Sparkles
+            '"spiral"': Spiral
+            '"disco"': Squares
+            '"squiggles"': Squiggles
+            '"starburst"': Starburst
+            '"stars"': Stars
+            '"music_wave"': Waves
+          PALETTE:
+            '"autumn"': Autumn
+            '"rave"': Black and White
+            '"cool"': Cool
+            '"electronic"': Electronic
+            '"grayscale"': Grayscale
+            '"iceCream"': Ice Cream
+            '"default"': Light
+            '"neon"': Neon
+            '"ocean"': Ocean
+            '"rainbow"': Rainbow
+            '"roses"': Roses
+            '"sky"': Sky
+            '"spring"': Spring
+            '"summer"': Summer
+            '"sunrise"': Sunrise
+            '"sunset"': Sunset
+            '"tropical"': Tropical
+            '"twinkling"': Twinkling
+            '"vintage"': Vintage
+            '"warm"': Warm
+            '"winter"': Winter
       Dancelab_setDanceSpeed:
         text: set [SPRITE][0] dance speed to [SPEED][1]
         options:
@@ -1067,8 +1159,15 @@ en:
             '1': lemon juice
             '3': baking soda
             '5': both
+      DansBlocks_gravity_test:
+        text: "[BEHAVIOR][0]"
+        options:
+          BEHAVIOR:
+            new Behavior(fall_gravity_behavior, []): fall_gravity
+      DansBlocks_jump_gravity:
+        text: make [SPRITE][0] jump
       DansBlocks_setForegroundEffect2:
-        text: do [EFFECT][0] effect
+        text: "[Don't Use] do [EFFECT][0] effect"
         options:
           EFFECT:
             '"bubbles"': bubbles
@@ -1088,6 +1187,15 @@ en:
             '5': both
       DansBlocks_testRectangle:
         text: 'make rectangle x: [X][0] y: [Y][1] w: [W][2] h: [H][3] color: [COLOR][4]'
+      DansBlocks_testShowVariable:
+        text: 'Display this number: [SOMENUMBER][0] at size [SOMESIZE][1] in [COLOR][2]'
+        options:
+          OPT:
+            '"large"': large
+            '"small"': small
+          COLOR:
+            '"blue"': blue
+            '"red"': red
       FunctionBlocks_addEightBlock:
         text: addEight
       FunctionBlocks_addFiveBlock:
@@ -1782,10 +1890,35 @@ en:
         text: x coordinate of [SPRITE][0]
       gamelab_yLocationOf:
         text: y coordinate of [SPRITE][0]
+      KatiesBlocks_changeVelocity:
+        text: change [SPRITE][0] [PROPERTY][1] by [VAL][2]
+        options:
+          PROPERTY:
+            '"velocityX"': velocityX
+            '"velocityY"': velocityY
+            '"rotationSpeed"': rotationSpeed
       KatiesBlocks_glideTo:
         text: "[SPRITE][0] glide to [LOCATION][1]"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           if [CONDITION][0][SPRITE][1]
+          [STATEMENT][2]
+        options:
+          CONDITION:
+            '"solid"': solid
+            '"liquid"': liquid
+            '"gas"': gas
+      KatiesBlocks_katieCollide:
+        text: "[SPRITE][0] collides [TARGET][1]"
       KatiesBlocks_makeNumSpritesNear:
         text: make [NUM][0] new [ANIMATION_NAME][1] sprites near [LOCATION][2]
+      KatiesBlocks_setVelocity:
+        text: set [SPRITE][0] [PROPERTY][1] to [VAL][2]
+        options:
+          PROPERTY:
+            '"velocityX"': velocityX
+            '"velocityY"': velocityY
+            '"rotationSpeed"': rotationSpeed
       KatiesBlocks_spriteBirdSay:
         text: "[SPRITE][0] says [SPEECH][1]"
         options:

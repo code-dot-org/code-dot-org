@@ -22,7 +22,7 @@ class FileBucket < BucketHelper
     JSON.parse(manifest_result[:body].read)
   end
 
-  def copy_files(src_channel, dest_channel, options={})
+  def copy_files(src_channel, dest_channel, options = {})
     # copy everything except the manifest
     options[:exclude_filenames] = [MANIFEST_FILENAME]
     result = super src_channel, dest_channel, options

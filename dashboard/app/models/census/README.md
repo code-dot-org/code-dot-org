@@ -21,11 +21,10 @@ Each school may have multiple data points for the same school year. All of that 
 
 * **Yes** - We are fairly confident that the school teaches CS
 * **No** - We are fairly confident that the school **does not** teach CS
-* **Maybe** - The data did not give us a strong indication one way or the other
 * **Historical Yes** - We have no data for this year and in one of the past two years we were fairly confident that the school taught CS
 * **Historical No** - We have no data for this year and in one of the past two years we were fairly confident that the school **did not** teach CS
-* **Historical Maybe** - We have no data for this year and in one of the past two years the data did not give us a strong indication one way or the other
-* **Null** - We did not have any data to process for this school
+* **Excluded** - We are excluding this school from the map
+* **Unknown/Null** - We did not have any data to process for this school
 
 Historical values are only used when we don't have data for the current year. The summaries are stored in the `census_summaries` table. There should be a row for each school in the `schools` table for each school year that we've computed summaries.
 

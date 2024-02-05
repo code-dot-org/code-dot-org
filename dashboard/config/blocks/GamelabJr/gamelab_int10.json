@@ -2,6 +2,7 @@
   "category": "Math",
   "config": {
     "func": "int10",
+    "docFunc": "codestudio_number",
     "blockText": "{VALUE}",
     "returnType": "Number",
     "color": [

@@ -17,12 +17,19 @@
       "project_widget_visible": true,
       "supported_locales": [
         "ar-SA",
+        "ca-ES",
         "cs-CZ",
         "de-DE",
         "es-ES",
         "es-MX",
+        "fa-IR",
+        "fil-PH",
         "fr-FR",
         "hi-IN",
+        "id-ID",
+        "it-IT",
+        "ja-JP",
+        "ko-KR",
         "kn-IN",
         "mr-IN",
         "ms-MY",
@@ -32,6 +39,13 @@
         "ro-RO",
         "ru-RU",
         "sk-SK",
+        "ta-IN",
+        "th-TH",
+        "tr-TR",
+        "uk-UA",
+        "ur-PK",
+        "vi-VN",
+        "zh-CN",
         "zh-TW"
       ],
       "tts": true,
@@ -39,7 +53,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2022-04-11 19:46:42 UTC",
+    "serialized_at": "2023-11-10 23:45:05 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -10761,5 +10775,14 @@
         "opportunity_standard.shortcode": "4.MD.5.b"
       }
     }
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
   ]
 }

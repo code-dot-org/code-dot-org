@@ -13,6 +13,9 @@ describe('apps/src/assetManagement/assetPrefix.js', () => {
           level: {
             name: 'test-level',
           },
+          pageConstants: {
+            isCurriculumLevel: true,
+          },
         }),
       });
     });

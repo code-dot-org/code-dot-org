@@ -8,11 +8,12 @@
   "properties": {
     "encrypted": "false",
     "display_name": "Unlock the App",
-    "long_instructions": "## Unlock the App\r\n\r\nEnter a four digit passcode to unlock the app. The user types into a text box, and then clicks the \"Enter\" button to check the passcode.",
+    "long_instructions": "## Unlock the App\r\n\r\nEnter a four digit passcode to unlock the app. The user types into a text box, and then clicks the \"Enter\" button to check the passcode.\r\n\r\n![](https://images.code.org/6f0e637c66386ba13498b653fa75091f-unlockapp1.gif)",
     "bubble_choice_description": "Enter a four digit passcode to unlock the app. The user types into a text box, and then clicks the \"Enter\" button to check the passcode.",
     "link_title": "Unlock the App",
-    "url": "https://github.com/code-dot-org/csa-cv-lesson2c"
+    "url": "https://github.com/code-dot-org/csa-cv-lesson2c",
+    "thumbnail_url": "https://images.code.org/6f0e637c66386ba13498b653fa75091f-unlockapp1.gif"
   },
-  "audit_log": "[{\"changed_at\":\"2023-08-14T16:59:22.915+00:00\",\"changed\":[\"cloned from \\\"CSA-CV-L2-L1a\\\"\"],\"cloned_from\":\"CSA-CV-L2-L1a\"},{\"changed_at\":\"2023-08-14 16:59:49 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\",\"link_title\",\"url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-08-14T16:59:22.915+00:00\",\"changed\":[\"cloned from \\\"CSA-CV-L2-L1a\\\"\"],\"cloned_from\":\"CSA-CV-L2-L1a\"},{\"changed_at\":\"2023-08-14 16:59:49 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\",\"link_title\",\"url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-09-07 18:13:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </ExternalLink>

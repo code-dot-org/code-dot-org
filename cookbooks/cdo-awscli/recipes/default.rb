@@ -10,6 +10,7 @@ apt_package 'python2.7'
 
 remote_file '/tmp/awscli-bundle.zip' do
   source "https://s3.amazonaws.com/aws-cli/awscli-bundle-#{node['cdo-awscli']['version']}.zip"
+  action :create_if_missing
 end
 
 archive_file '/tmp/awscli-bundle.zip' do

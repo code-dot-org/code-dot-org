@@ -15,6 +15,7 @@ import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgress
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import locales from '@cdo/apps/redux/localesRedux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 
 /**
  * The variety of stories here can be useful during development, but add
@@ -25,7 +26,6 @@ import locales from '@cdo/apps/redux/localesRedux';
 const INCLUDE_LARGE_STORIES = false;
 
 const defaultExport = {
-  title: 'ProgressTableView',
   component: ProgressTableView,
 };
 
@@ -77,6 +77,9 @@ function createStore(numStudents, numLessons) {
   }
 
   const initialState = {
+    currentUser: {
+      isSortedByFamilyName: true,
+    },
     sectionProgress: {
       ...buildSectionProgress(section.students, scriptData),
       lessonOfInterest: 0,
@@ -95,6 +98,7 @@ function createStore(numStudents, numLessons) {
 
   return reduxStore(
     {
+      currentUser,
       sectionProgress,
       unitSelection,
       teacherSections,

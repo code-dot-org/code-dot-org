@@ -2,7 +2,6 @@ import React from 'react';
 import ProgressLegend from './ProgressLegend';
 
 export default {
-  title: 'ProgressLegend',
   component: ProgressLegend,
 };
 

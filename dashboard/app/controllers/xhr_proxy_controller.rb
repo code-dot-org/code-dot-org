@@ -25,9 +25,15 @@ class XhrProxyController < ApplicationController
     )
   ).freeze
 
+  # bible-api.com has been replaced with the more official api.scripture.api.bible. However, since
+  # bible-api.com is still working, we'll leave it up during a transition period. If today's date is
+  # later than June 1, 2024 and you are reading this, go ahead and remove bible-api.com as well as
+  # this comment.
+
   # 'code.org' is included so applab apps can access the tables and properties of other applab apps.
   ALLOWED_HOSTNAME_SUFFIXES = %w(
     api.amadeus.com
+    api.arasaac.org
     api.blizzard.com
     api.census.gov
     api.coinlayer.com
@@ -53,6 +59,7 @@ class XhrProxyController < ApplicationController
     api.quotable.io
     api.randomuser.me
     api.rebrandly.com
+    api.scripture.api.bible
     api.scryfall.com
     api.spoonacular.com
     api.si.edu
@@ -60,7 +67,6 @@ class XhrProxyController < ApplicationController
     api.spotify.com
     api.themoviedb.org
     api.thingspeak.com
-    api.uclassify.com
     api.waqi.info
     api.weather.gov
     api.weatherapi.com
@@ -81,7 +87,6 @@ class XhrProxyController < ApplicationController
     dataservice.accuweather.com
     deckofcardsapi.com
     distanza.org
-    dweet.io
     githubusercontent.com
     googleapis.com
     grobchess.com
@@ -99,6 +104,7 @@ class XhrProxyController < ApplicationController
     numbersapi.com
     open.mapquestapi.com
     opentdb.com
+    perenual.com
     pixabay.com
     pokeapi.co
     pro-api.coinmarketcap.com

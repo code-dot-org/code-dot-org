@@ -22,6 +22,7 @@ require 'dynamic_config/dcdo'
 # Provides helper methods (analyze_day_fast and add_hashes) as well as the
 # PEGASUS_DB_READER constant.
 require_relative '../../pegasus/helpers/analyze_hoc_activity_helper'
+require_relative '../../pegasus/helper_modules/forms'
 
 # This default number of lines of code is from 2016-11-23.
 DEFAULT_LINES_OF_CODE = 20_886_942_901
@@ -93,11 +94,11 @@ def main
     data = JSON.parse(row[:data])
     data['hoc_company_s'] = 'Other' if data['hoc_company_s'].nil_or_empty?
     hoc_company_totals[data['hoc_company_s']] += 1
+  end
 
-    next if row[:processed_data].nil?
-    processed_data = JSON.parse(row[:processed_data])
-    processed_data['location_country_code_s'] = 'Other' if processed_data['location_country_code_s'].nil_or_empty?
-    hoc_country_totals[processed_data['location_country_code_s']] += 1
+  events_by_country = Forms.events_by_country("HocSignup#{hoc_year}")
+  events_by_country.each do |country_row|
+    hoc_country_totals[country_row[:country_code]] = country_row[:count]
   end
 
   Properties.set :hoc_metrics, {

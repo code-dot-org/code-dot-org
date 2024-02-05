@@ -1,74 +1,194 @@
 ---
 title: Computer Science Curriculum for Grades 6-12
-theme: responsive
+theme: responsive_full_width
 ---
 
-:css
-  h2 {
-    margin: 0;
-  }
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 
-- js_locale = request.locale.to_s.downcase.tr('-', '_')
-%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
-%script{src: webpack_asset_path('js/code.org/public/student/middle-high.js')}
-%link{href: "/shared/css/course-blocks.css", rel: "stylesheet", type: "text/css"}
-= view 'mobilecheck.js'
+%section.no-padding-bottom
+  .wrapper
+    %h1=hoc_s(:middle_high_page_main_title)
+    %p.body-one
+      =hoc_s(:middle_high_page_main_description)
 
-.solid-block-header
-  Grades 6-12
+%section
+  .wrapper
+    %h2
+      =hoc_s(:middle_high_page_hero_title)
+    %p=hoc_s(:middle_high_page_hero_description)
+    .action-block.action-block--two-col
+      .media-wrapper.col-50
+        %img{src: "/images/houreofcode-students-banner.png", alt: ""}
+      .text-wrapper.col-50
+        %h3
+          =hoc_s(:middle_high_page_hero_title)
+        %p.heading-sm
+          =hoc_s(:middle_high_page_hero_description)
+        %a.link-button{href: "https://hourofcode.com/learn"}
+          =hoc_s(:middle_high_page_hourofcode_link)
 
-%h1 Learning at your own pace
+= view :section_divider_line
 
-%h2 Learn the fundamentals with our self-paced courses
+%section
+  .wrapper
+    %h2
+      =hoc_s(:middle_high_page_modules_title)
+    %p
+      =hoc_s(:middle_high_page_modules_description)
 
-%hr{style: "margin: 2rem 0"}
+    .action-block__wrapper.action-block__wrapper--three-col
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline
+            =hoc_s(:module_age_11)
+          %h3
+            =hoc_s(:middle_high_page_modules_card_title_1)
+          %img{src: "/images/introduction-game-lab-banner.png", alt: ""}
+          %p
+            =hoc_s(:middle_high_page_modules_card_description_1)
+        .content-footer
+          %a.link-button{href: "https://studio.code.org/s/csd3-virtual", target: "_blank", rel: "noopener noreferrer"}
+            =hoc_s(:middle_high_page_modules_card_link)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline
+            =hoc_s(:module_age_13)
+          %h3
+            =hoc_s(:middle_high_page_modules_card_title_2)
+          %img{src: "/images/turtle-programming-banner.png", alt: ""}
+          %p
+            =hoc_s(:middle_high_page_modules_card_description_2)
+        .content-footer
+          %a.link-button{href: "https://studio.code.org/s/csp3-virtual", target: "_blank", rel: "noopener noreferrer"}
+            =hoc_s(:middle_high_page_modules_card_link)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline
+            =hoc_s(:module_age_13)
+          %h3
+            =hoc_s(:middle_high_page_modules_card_title_3)
+          %img{src: "/images/event-driven-programming-banner.png", alt: ""}
+          %p
+            =hoc_s(:middle_high_page_modules_card_description_3)
+        .content-footer
+          %a.link-button{href: "https://studio.code.org/s/csp5-virtual", target: "_blank", rel: "noopener noreferrer"}
+            =hoc_s(:middle_high_page_modules_card_link)
 
-%h3 Express course
+= view :section_divider_line
 
-A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. For other languages, we recommend our 20-hour
-%a{href: CDO.studio_url('/s/20-hour')} Accelerated Course.
-To see what's available in your language, visit our
-%a{href: CDO.studio_url('/courses')} course catalog.
+%section
+  .wrapper
+    %h2
+      =hoc_s(:middle_high_page_make_your_own_title)
+    %p
+      =hoc_s(:middle_high_page_make_your_own_description)
 
-%div{style: "padding-top: 20px;"}
-  %a{href: CDO.studio_url('/s/express')}
-    %img{src: "/images/curriculum/course-tile-express.png", style: "max-width: 100%"}
+    .action-block__wrapper.action-block__wrapper--three-col
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3
+            =hoc_s(:middle_high_page_make_your_own_card_title_1)
+          %img{src: "/images/app-lab-banner.png", alt: ""}
+          %p
+            =hoc_s(:middle_high_page_make_your_own_card_descrpition_1)
+        .content-footer
+          %a.link-button{href: "https://code.org/applab", target: "_blank", rel: "noopener noreferrer"}
+            =hoc_s(:middle_high_page_make_your_own_card_link)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3
+            =hoc_s(:middle_high_page_make_your_own_card_title_2)
+          %img{src: "/images/game-lab-banner.png", alt: ""}
+          %p
+            =hoc_s(:middle_high_page_make_your_own_card_descrpition_2)
+        .content-footer
+          %a.link-button{href: "https://code.org/gamelab", target: "_blank", rel: "noopener noreferrer"}
+            =hoc_s(:middle_high_page_make_your_own_card_link)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3
+            =hoc_s(:middle_high_page_make_your_own_card_title_3)
+          %img{src: "/images/web-lab-banner.png", alt: ""}
+          %p
+            =hoc_s(:middle_high_page_make_your_own_card_descrpition_3)
+        .content-footer
+          %a.link-button{href: "https://code.org/weblab", target: "_blank", rel: "noopener noreferrer"}
+            =hoc_s(:middle_high_page_make_your_own_card_link)
 
-%hr{style: "margin: 2rem 0"}
+= view :section_divider_line
 
-= view :athome_olderstudents
+%section
+  .wrapper
+    %h2
+      =hoc_s(:middle_high_page_additional_resources_title)
+    %p=hoc_s(:middle_high_page_additional_resources_description)
+    .action-block.action-block--two-col{style: "margin-bottom: 2rem"}
+      .media-wrapper.col-50
+        %img{src: "/images/video-library-banner.png", alt: ""}
+      .text-wrapper.col-50
+        %h3
+          =hoc_s(:middle_high_page_video_library_title)
+        %p.heading-sm
+          =hoc_s(:middle_high_page_video_library_description)
+        %a.link-button{href: "https://code.org/videos"}
+          =hoc_s(:middle_high_page_video_library_link)
+    .action-block.action-block--two-col
+      .media-wrapper.col-50
+        %img{src: "/images/cs-journeys-banner.png", alt: ""}
+      .text-wrapper.col-50
+        %h3
+          =hoc_s(:middle_high_page_cs_journeys_title)
+        %p.heading-sm
+          =hoc_s(:middle_high_page_cs_journeys_description)
+        %a.link-button{href: "https://code.org/beyond"}
+          =hoc_s(:middle_high_page_cs_journeys_link)
 
-%div{style: "clear: both;"}
+= view :section_divider_line
 
-%hr{style: "margin: 2rem 0"}
+%section
+  .wrapper
+    %h2
+      =hoc_s(:middle_high_page_cs_title)
+    %p
+      =hoc_s(:middle_high_page_cs_description)
 
-%h2 Make your own apps, games, and webpages
-.hoc-tiles-container
-%div{style: "clear: both;"}
-
-%hr{style: "margin: 2rem 0"}
-
-%h2{style: "margin: 0 0 2rem"} Videos: Watch these easy 3-5 minute educational videos
-= view :athome_videos
-
-%hr{style: "margin: 2rem 0"}
-
-%h2 Learning in the classroom
-%h3 Computer Science Discoveries
-= view :csd_information
-%div{style: "clear: both;"}
-
-%hr{style: "margin: 2rem 0"}
-
-%h3 Computer Science Principles (intro and AP course)
-= view :csp_information
-
-%hr{style: "margin: 2rem 0"}
-
-%h3 Computer Science A
-= view :csa_information
-
-%hr{style: "margin: 2rem 0"}
-
-%h2{style: "margin-bottom: 2rem"} Courses from 3rd parties
-= view :learn_carousels, variation:'middle_high'
+    .action-block__wrapper.action-block__wrapper--three-col
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline
+            =hoc_s(:module_label_grades)
+            =hoc_s(:module_grade_6_12)
+          %h3
+            =hoc_s(:middle_high_page_cs_card_title_1)
+          %img{src: "/images/courses-catalog/CSD.png", alt: ""}
+          %p
+            =hoc_s(:middle_high_page_cs_card_description_1)
+        .content-footer
+          %a.link-button{href: "https://code.org/csd", target: "_blank", rel: "noopener noreferrer"}
+            =hoc_s(:middle_high_page_cs_link_1)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline
+            =hoc_s(:module_label_grades)
+            =hoc_s(:module_grade_9_12)
+          %h3
+            =hoc_s(:middle_high_page_cs_card_title_2)
+          %img{src: "/images/courses-catalog/CSP.png", alt: ""}
+          %p
+            =hoc_s(:middle_high_page_cs_card_description_2)
+        .content-footer
+          %a.link-button{href: "https://code.org/csp", target: "_blank", rel: "noopener noreferrer"}
+            =hoc_s(:middle_high_page_cs_link_2)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline
+            =hoc_s(:module_label_grades)
+            =hoc_s(:module_grade_9_12)
+          %h3
+            =hoc_s(:middle_high_page_cs_card_title_3)
+          %img{src: "/images/courses-catalog/CSA.png", alt: ""}
+          %p
+            =hoc_s(:middle_high_page_cs_card_description_3)
+        .content-footer
+          %a.link-button{href: "https://code.org/csa", target: "_blank", rel: "noopener noreferrer"}
+            =hoc_s(:middle_high_page_cs_link_3)

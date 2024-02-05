@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import fontConstants from '@cdo/apps/fontConstants';
 import ProgressBox from '@cdo/apps/templates/sectionProgress/ProgressBox';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
@@ -126,7 +127,7 @@ const styles = {
     backgroundColor: color.lightest_gray,
     color: color.charcoal,
     border: `1px solid ${color.lightest_gray}`,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     fontSize: 14,
     textAlign: 'center',
     padding: 15,

@@ -11,8 +11,9 @@
     "long_instructions": "## Guessing Game\r\n\r\nThe computer attempts to guess the number you are thinking of. The user selects between \"Higher\", \"Lower\", or \"Correct\" based on the computer's guess.",
     "bubble_choice_description": "The computer attempts to guess the number you are thinking of. The user selects between \"Higher\", \"Lower\", or \"Correct\" based on the computer's guess.",
     "link_title": "Guessing Game",
-    "url": "https://github.com/code-dot-org/csa-cv-lesson3a"
+    "url": "https://github.com/code-dot-org/csa-cv-lesson3a",
+    "thumbnail_url": "https://images.code.org/8e86fa4ae22e2ceb1bd99d3143d89b6d-question.png"
   },
-  "audit_log": "[{\"changed_at\":\"2023-08-14T22:13:44.465+00:00\",\"changed\":[\"cloned from \\\"CSA-CV-L2-L1a\\\"\"],\"cloned_from\":\"CSA-CV-L2-L1a\"},{\"changed_at\":\"2023-08-14 22:15:15 +0000\",\"changed\":[\"url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-08-18 15:04:32 +0000\",\"changed\":[\"url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-08-14T22:13:44.465+00:00\",\"changed\":[\"cloned from \\\"CSA-CV-L2-L1a\\\"\"],\"cloned_from\":\"CSA-CV-L2-L1a\"},{\"changed_at\":\"2023-08-14 22:15:15 +0000\",\"changed\":[\"url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-08-18 15:04:32 +0000\",\"changed\":[\"url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-09-07 23:35:01 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </ExternalLink>

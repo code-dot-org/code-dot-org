@@ -15,7 +15,6 @@ const DEFAULT_PROPS = {
   topCourse,
   plCourses,
   topPlCourse,
-  isEnglish: true,
   joinedStudentSections: [],
   joinedPlSections: [],
   ncesSchoolId: 'school-id',
@@ -109,7 +108,7 @@ describe('TeacherHomepage', () => {
     );
   });
 
-  it('renders a MarketingAnnouncementBanner if isEnglish and specialAnnouncement exists', () => {
+  it('renders a MarketingAnnouncementBanner specialAnnouncement exists', () => {
     const specialAnnouncement = {
       title: 'An announcement',
       image: '/image',
@@ -118,7 +117,6 @@ describe('TeacherHomepage', () => {
       buttonText: 'press me',
     };
     const wrapper = setUp({
-      isEnglish: true,
       specialAnnouncement,
     });
     assert(wrapper.find('MarketingAnnouncementBanner').exists());
@@ -141,17 +139,21 @@ describe('TeacherHomepage', () => {
   });
 
   /*
-    We have disabled the Census Banner on the Teacher Homepage (March 2023) to conserve
+    We have disabled the Census Teacher Banner on the Teacher Homepage (November 2023) to conserve
     space. If we decide to show the banner again this test will need to be updated. See
     TeacherHomepage.jsx to make the banner show.
    */
-  it('does not render a CensusTeacherBanner even if showCensusBanner is true', () => {
+  it('does not render CensusTeacherBanner even if showCensusBanner is true', () => {
     const wrapper = setUp({showCensusBanner: true});
-    assert.equal(wrapper.find('CensusTeacherBanner').length, 0);
+    assert(!wrapper.find('CensusTeacherBanner').exists());
   });
 
-  it('renders a DonorTeacherBanner if isEnglish and afeEligible is true', () => {
-    const wrapper = setUp({isEnglish: true, afeEligible: true});
+  /*
+    This test will need to be updated according to whether the banner is showing,
+    as determined by shouldShowAFEBanner in TeacherHomepage.jsx.
+   */
+  it('renders a DonorTeacherBanner if afeEligible is true', () => {
+    const wrapper = setUp({afeEligible: true});
     assert(wrapper.find('DonorTeacherBanner').exists());
   });
 

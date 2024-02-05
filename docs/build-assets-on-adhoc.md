@@ -24,7 +24,7 @@
     - Only build if any of the apps_build_trigger_paths have changed since last build.
     - Install dependencies by running `yarn`
     - Rebuild PhantomJS `npm rebuild phantomjs-prebuilt`
-    - Then `npm run build` or `npm run build:dist` (minified/uglified version) depends on the environment
+    - Then `yarn build` or `yarn build:dist` (minified/uglified version) depends on the environment
       - Execute grunt build tasks as set in `apps/package.json`, e.g. `grunt clean build`
       - `apps/Gruntfile.js` confgiures and delegates work to the various webpack tasks
       - `apps/webpack.js` bundles javascript files and minifies them. Results are in `apps/build/package/js/`

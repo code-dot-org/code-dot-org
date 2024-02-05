@@ -54,8 +54,8 @@ module UserMultiAuthHelper
   def migrate_to_multi_auth
     raise "Migration not implemented for provider #{provider}" unless
       provider.nil? ||
-      %w(manual migrated sponsored).include?(provider) ||
-      AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include?(provider)
+        %w(manual migrated sponsored).include?(provider) ||
+        AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include?(provider)
 
     return true if migrated?
 

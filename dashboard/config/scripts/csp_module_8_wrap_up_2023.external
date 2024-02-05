@@ -4,12 +4,12 @@ display_name 'Introduction to Debugging'
 
 title 'Debugging Session'
 markdown <<MARKDOWN
-# Module 8 Asynchronous Work Wrap Up
+# Module 6 Asynchronous Work Wrap Up
 
 ## Next Steps
 
-1. Return to your cohort's shared slide deck for Module 8. 
-2. Follow the directions in the shared slide deck to finish final reflections or tasks for this module.
-3. Join us for the Module 8 synchronous workshop. 
+##### 1. Return to your cohort's shared slide deck for Module 6. 
+##### 2. Follow the directions in the shared slide deck to finish final reflections or tasks for this module.
+##### 3. Join us for the Module 6 synchronous workshop. 
 
 MARKDOWN

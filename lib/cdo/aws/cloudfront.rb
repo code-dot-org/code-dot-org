@@ -134,7 +134,7 @@ module AWS
 
     # Returns a CloudFront DistributionConfig in CloudFormation syntax.
     # `app` is a symbol containing the app name (:pegasus, :dashboard or :hourofcode)
-    def self.distribution_config(app, origin, aliases, ssl_cert=nil)
+    def self.distribution_config(app, origin, aliases, ssl_cert = nil)
       # Add root-domain aliases to production environment stack.
       aliases += CONFIG[app][:aliases] if rack_env?(:production)
 
@@ -150,21 +150,21 @@ module AWS
               ErrorCode: error,
             }
           end +
-          SERVER_ERROR_CODES.map do |error|
-            {
-              ErrorCachingMinTTL: ERROR_CACHE_TTL,
-              ErrorCode: error,
-              ResponseCode: error,
-              ResponsePagePath: '/assets/error-pages/site-down.html'
-            }.tap do |error_response_hash|
-              # Don't use friendly error pages on some environments (such as adhocs and LevelBuilder).
-              unless CDO.custom_error_response
-                error_response_hash[:ErrorCachingMinTTL] = 0
-                error_response_hash.delete(:ResponseCode)
-                error_response_hash.delete(:ResponsePagePath)
+            SERVER_ERROR_CODES.map do |error|
+              {
+                ErrorCachingMinTTL: ERROR_CACHE_TTL,
+                ErrorCode: error,
+                ResponseCode: error,
+                ResponsePagePath: '/assets/error-pages/site-down.html'
+              }.tap do |error_response_hash|
+                # Don't use friendly error pages on some environments (such as adhocs and LevelBuilder).
+                unless CDO.custom_error_response
+                  error_response_hash[:ErrorCachingMinTTL] = 0
+                  error_response_hash.delete(:ResponseCode)
+                  error_response_hash.delete(:ResponsePagePath)
+                end
               end
-            end
-          end,
+            end,
         DefaultCacheBehavior: cache_behavior(config[:default]),
         DefaultRootObject: '',
         Enabled: true,
@@ -243,7 +243,7 @@ module AWS
     end
 
     # Returns a CloudFront CacheBehavior Hash compatible with AWS CloudFormation.
-    def self.cache_behavior(behavior_config, path=nil)
+    def self.cache_behavior(behavior_config, path = nil)
       s3 = ['cdo-assets', 'cdo-restricted'].include? behavior_config[:proxy]
       # Include Host header in CloudFront's cache key to match Varnish for custom origins.
       # Include S3 forward headers for s3 origins.

@@ -13,6 +13,7 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
   def setup
     CDO.stubs(hip_chat_logging: false)
     CDO.stubs(slack_endpoint: nil)
+    CDO.stubs(:shared_cache).returns(ActiveSupport::Cache::MemoryStore.new)
     @gatekeeper = GatekeeperBase.create
     @dcdo = DCDOBase.create
   end

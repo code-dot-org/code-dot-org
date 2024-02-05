@@ -13,6 +13,7 @@ const DEFAULT_PROPS = {
   isTeacher: false,
   hasStudents: false,
   dependentStudents: [],
+  isAdmin: false,
 };
 
 describe('DeleteAccount', () => {
@@ -23,7 +24,7 @@ describe('DeleteAccount', () => {
         isDeleteAccountDialogOpen: true,
         deleteVerification: DELETE_VERIFICATION_STRING,
       });
-      const confirmButton = wrapper.find('Button').at(0);
+      const confirmButton = wrapper.find('Button').at(1);
       expect(confirmButton).to.have.attr('disabled');
     });
 
@@ -33,7 +34,7 @@ describe('DeleteAccount', () => {
         isDeleteAccountDialogOpen: true,
         password: 'password',
       });
-      const confirmButton = wrapper.find('Button').at(0);
+      const confirmButton = wrapper.find('Button').at(1);
       expect(confirmButton).to.have.attr('disabled');
     });
 
@@ -44,7 +45,7 @@ describe('DeleteAccount', () => {
         password: 'password',
         deleteVerification: 'some other string',
       });
-      const confirmButton = wrapper.find('Button').at(0);
+      const confirmButton = wrapper.find('Button').at(1);
       expect(confirmButton).to.have.attr('disabled');
     });
 
@@ -57,7 +58,7 @@ describe('DeleteAccount', () => {
           isDeleteAccountDialogOpen: true,
           deleteVerification: DELETE_VERIFICATION_STRING,
         });
-        const confirmButton = wrapper.find('Button').at(0);
+        const confirmButton = wrapper.find('Button').at(1);
         expect(confirmButton).to.not.have.attr('disabled');
       });
 
@@ -68,7 +69,7 @@ describe('DeleteAccount', () => {
           password: 'password',
           deleteVerification: DELETE_VERIFICATION_STRING,
         });
-        const confirmButton = wrapper.find('Button').at(0);
+        const confirmButton = wrapper.find('Button').at(1);
         expect(confirmButton).to.not.have.attr('disabled');
       });
     });
@@ -118,7 +119,7 @@ describe('DeleteAccount', () => {
           deleteVerification: DELETE_VERIFICATION_STRING,
           checkboxes,
         });
-        const confirmButton = wrapper.find('Button').at(0);
+        const confirmButton = wrapper.find('Button').at(1);
         expect(confirmButton).to.have.attr('disabled');
       });
 
@@ -138,7 +139,7 @@ describe('DeleteAccount', () => {
           deleteVerification: DELETE_VERIFICATION_STRING,
           checkboxes,
         });
-        const confirmButton = wrapper.find('Button').at(0);
+        const confirmButton = wrapper.find('Button').at(1);
         expect(confirmButton).to.not.have.attr('disabled');
       });
 
@@ -158,7 +159,7 @@ describe('DeleteAccount', () => {
           deleteVerification: DELETE_VERIFICATION_STRING,
           checkboxes,
         });
-        const confirmButton = wrapper.find('Button').at(0);
+        const confirmButton = wrapper.find('Button').at(1);
         expect(confirmButton).to.not.have.attr('disabled');
       });
 
@@ -175,7 +176,7 @@ describe('DeleteAccount', () => {
           password: 'password',
           deleteVerification: DELETE_VERIFICATION_STRING,
         });
-        const confirmButton = wrapper.find('Button').at(0);
+        const confirmButton = wrapper.find('Button').at(1);
         expect(confirmButton).to.not.have.attr('disabled');
       });
     });
@@ -191,7 +192,7 @@ describe('DeleteAccount', () => {
         password: 'password',
         deleteVerification: DELETE_VERIFICATION_STRING,
       });
-      confirmButton = wrapper.find('Button').at(0);
+      confirmButton = wrapper.find('Button').at(1);
       server = sinon.fakeServer.create();
     });
 
@@ -241,6 +242,22 @@ describe('DeleteAccount', () => {
         expect(wrapper.find('#uitest-delete-error')).to.have.text(
           'Unexpected error: 400'
         );
+      });
+    });
+
+    describe('for admin', () => {
+      it('displays AdminAccountDialog if trying to delete admin account', () => {
+        const wrapper = mount(
+          <DeleteAccount {...DEFAULT_PROPS} isAdmin={true} />
+        );
+        const deleteAccountButton = wrapper.find('BootstrapButton').at(0);
+        deleteAccountButton.simulate('click');
+        const adminAccountDialog = wrapper.find('AdminAccountDialog');
+        expect(adminAccountDialog).to.exist;
+        const confirmButton = wrapper.find('Button').at(0);
+        confirmButton.simulate('click');
+        const deleteAccountDialog = wrapper.find('DeleteAccountDialog');
+        expect(deleteAccountDialog).to.exist;
       });
     });
   });

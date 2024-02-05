@@ -1,6 +1,6 @@
 Feature: Gamelab Projects
 
-@as_student @no_mobile
+@as_taught_student @no_mobile
 Scenario: Gamelab Flow
   Given I am on "http://studio.code.org/projects/gamelab"
   And I get redirected to "/projects/gamelab/([^\/]*?)/edit" via "dashboard"

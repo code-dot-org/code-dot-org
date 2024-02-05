@@ -5,7 +5,7 @@
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Standalone Unit",
-  "marketing_initiative": "CSD",
+  "marketing_initiative": null,
   "grade_levels": "6,7,8,9,10,11,12",
   "header": "self_paced",
   "image": "https://images.code.org/0e16b7c1a1d624d75a1258762859e40e-Self Paced Game Lab.png",
@@ -16,5 +16,6 @@
   "professional_learning_program": null,
   "video": "https://www.youtube-nocookie.com/embed/PXn9gKiKKFo/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=PXn9gKiKKFo&wmode=transparent",
   "published_date": "2020-03-01 05:00:00 UTC",
-  "self_paced_pl_course_offering_id": null
+  "self_paced_pl_course_offering_id": null,
+  "self_paced_pl_course_offering_key": null
 }

@@ -7,6 +7,7 @@ import color from '@cdo/apps/util/color';
 import {Heading2} from '@cdo/apps/lib/ui/Headings';
 import Button from '@cdo/apps/templates/Button';
 import {findProfanity} from '@cdo/apps/utils';
+import fontConstants from '@cdo/apps/fontConstants';
 
 /**
  * @readonly
@@ -440,7 +441,7 @@ const styles = {
   selectAllFunctionsLabel: {
     margin: 0,
     fontSize: 20,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
   },
   functionLabel: {
     margin: 0,

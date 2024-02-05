@@ -175,7 +175,7 @@ class SchoolDistrict < ApplicationRecord
   # @param ignore_attributes [Array] List of attributes included in a given import that should not be used to determine whether a record is being "updated" or "unchanged". Allows us to more clearly identify which schools have real changes to existing data.
   # @param parse_row [Block] A block to parse a row of new data -- see School.seed_from_s3 for examples.
   def self.seed_s3_object(bucket, filepath, import_options, is_dry_run: false, ignore_attributes: [], &parse_row)
-    AWS::S3.seed_from_file(bucket, filepath, is_dry_run) do |filename|
+    AWS::S3.seed_from_file(bucket, filepath, dry_run: is_dry_run) do |filename|
       merge_from_csv(
         filename,
         import_options,

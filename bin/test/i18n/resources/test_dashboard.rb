@@ -1,30 +1,82 @@
 require_relative '../../test_helper'
 require_relative '../../../i18n/resources/dashboard'
 
-class I18n::Resources::DashboardTest < Minitest::Test
-  def test_sync_in
-    exec_seq = sequence('execution')
+describe I18n::Resources::Dashboard do
+  let(:described_class) {I18n::Resources::Dashboard}
 
-    FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/dashboard')).in_sequence(exec_seq)
+  describe '.sync_in' do
+    it 'sync-in Dashboard resources' do
+      execution_sequence = sequence('execution')
 
-    I18n::Resources::Dashboard::Blocks.expects(:sync_in).in_sequence(exec_seq)
-    I18n::Resources::Dashboard::CourseContent.expects(:sync_in).in_sequence(exec_seq)
-    I18n::Resources::Dashboard::CourseOfferings.expects(:sync_in).in_sequence(exec_seq)
-    I18n::Resources::Dashboard::Courses.expects(:sync_in).in_sequence(exec_seq)
-    I18n::Resources::Dashboard::CurriculumContent.expects(:sync_in).in_sequence(exec_seq)
-    I18n::Resources::Dashboard::Docs.expects(:sync_in).in_sequence(exec_seq)
-    I18n::Resources::Dashboard::Scripts.expects(:sync_in).in_sequence(exec_seq)
-    I18n::Resources::Dashboard::SharedFunctions.expects(:sync_in).in_sequence(exec_seq)
-    I18n::Resources::Dashboard::Standards.expects(:sync_in).in_sequence(exec_seq)
+      described_class::BaseContent.expects(:sync_in).in_sequence(execution_sequence)
+      described_class::Blocks.expects(:sync_in).in_sequence(execution_sequence)
+      described_class::CourseContent.expects(:sync_in).in_sequence(execution_sequence)
+      described_class::CourseOfferings.expects(:sync_in).in_sequence(execution_sequence)
+      described_class::Courses.expects(:sync_in).in_sequence(execution_sequence)
+      described_class::CurriculumContent.expects(:sync_in).in_sequence(execution_sequence)
+      described_class::DataContent.expects(:sync_in).in_sequence(execution_sequence)
+      described_class::DeviseContent.expects(:sync_in).in_sequence(execution_sequence)
+      described_class::Docs.expects(:sync_in).in_sequence(execution_sequence)
+      described_class::MarketingAnnouncements.expects(:sync_in).in_sequence(execution_sequence)
+      described_class::RestrictedContent.expects(:sync_in).in_sequence(execution_sequence)
+      described_class::Scripts.expects(:sync_in).in_sequence(execution_sequence)
+      described_class::SharedFunctions.expects(:sync_in).in_sequence(execution_sequence)
+      described_class::Slides.expects(:sync_in).in_sequence(execution_sequence)
+      described_class::Standards.expects(:sync_in).in_sequence(execution_sequence)
+      described_class::UnpluggedContent.expects(:sync_in).in_sequence(execution_sequence)
 
-    # Copying source files
-    FileUtils.expects(:cp).with(CDO.dir('dashboard/config/locales/en.yml'), CDO.dir('i18n/locales/source/dashboard/base.yml')).in_sequence(exec_seq)
-    FileUtils.expects(:cp).with(CDO.dir('dashboard/config/locales/data.en.yml'), CDO.dir('i18n/locales/source/dashboard/data.yml')).in_sequence(exec_seq)
-    FileUtils.expects(:cp).with(CDO.dir('dashboard/config/locales/devise.en.yml'), CDO.dir('i18n/locales/source/dashboard/devise.yml')).in_sequence(exec_seq)
-    FileUtils.expects(:cp).with(CDO.dir('dashboard/config/locales/restricted.en.yml'), CDO.dir('i18n/locales/source/dashboard/restricted.yml')).in_sequence(exec_seq)
-    FileUtils.expects(:cp).with(CDO.dir('dashboard/config/locales/slides.en.yml'), CDO.dir('i18n/locales/source/dashboard/slides.yml')).in_sequence(exec_seq)
-    FileUtils.expects(:cp).with(CDO.dir('dashboard/config/locales/unplugged.en.yml'), CDO.dir('i18n/locales/source/dashboard/unplugged.yml')).in_sequence(exec_seq)
+      described_class.sync_in
+    end
+  end
 
-    I18n::Resources::Dashboard.sync_in
+  describe '.sync_up' do
+    it 'sync-up Dashboard resources' do
+      execution_sequence = sequence('execution')
+
+      described_class::BaseContent.expects(:sync_up).in_sequence(execution_sequence)
+      described_class::Blocks.expects(:sync_up).in_sequence(execution_sequence)
+      described_class::CourseContent.expects(:sync_up).in_sequence(execution_sequence)
+      described_class::CourseOfferings.expects(:sync_up).in_sequence(execution_sequence)
+      described_class::Courses.expects(:sync_up).in_sequence(execution_sequence)
+      described_class::CurriculumContent.expects(:sync_up).in_sequence(execution_sequence)
+      described_class::DataContent.expects(:sync_up).in_sequence(execution_sequence)
+      described_class::DeviseContent.expects(:sync_up).in_sequence(execution_sequence)
+      described_class::Docs.expects(:sync_up).in_sequence(execution_sequence)
+      described_class::MarketingAnnouncements.expects(:sync_up).in_sequence(execution_sequence)
+      described_class::RestrictedContent.expects(:sync_up).in_sequence(execution_sequence)
+      described_class::Scripts.expects(:sync_up).in_sequence(execution_sequence)
+      described_class::SharedFunctions.expects(:sync_up).in_sequence(execution_sequence)
+      described_class::Slides.expects(:sync_up).in_sequence(execution_sequence)
+      described_class::Standards.expects(:sync_up).in_sequence(execution_sequence)
+      described_class::UnpluggedContent.expects(:sync_up).in_sequence(execution_sequence)
+
+      described_class.sync_up
+    end
+  end
+
+  describe '.sync_out' do
+    it 'sync-out Dashboard resources' do
+      execution_sequence = sequence('execution')
+
+      described_class::BaseContent.expects(:sync_out).in_sequence(execution_sequence)
+      described_class::Blocks.expects(:sync_out).in_sequence(execution_sequence)
+      described_class::CourseContent.expects(:sync_out).in_sequence(execution_sequence)
+      described_class::CourseOfferings.expects(:sync_out).in_sequence(execution_sequence)
+      described_class::Courses.expects(:sync_out).in_sequence(execution_sequence)
+      described_class::CurriculumContent.expects(:sync_out).in_sequence(execution_sequence)
+      described_class::DataContent.expects(:sync_out).in_sequence(execution_sequence)
+      described_class::DeviseContent.expects(:sync_out).in_sequence(execution_sequence)
+      described_class::Docs.expects(:sync_out).in_sequence(execution_sequence)
+      described_class::MarketingAnnouncements.expects(:sync_out).in_sequence(execution_sequence)
+      described_class::RestrictedContent.expects(:sync_out).in_sequence(execution_sequence)
+      described_class::Scripts.expects(:sync_out).in_sequence(execution_sequence)
+      described_class::SharedFunctions.expects(:sync_out).in_sequence(execution_sequence)
+      described_class::Slides.expects(:sync_out).in_sequence(execution_sequence)
+      described_class::Standards.expects(:sync_out).in_sequence(execution_sequence)
+      described_class::UnpluggedContent.expects(:sync_out).in_sequence(execution_sequence)
+      described_class::TextToSpeech.expects(:sync_out).in_sequence(execution_sequence)
+
+      described_class.sync_out
+    end
   end
 end

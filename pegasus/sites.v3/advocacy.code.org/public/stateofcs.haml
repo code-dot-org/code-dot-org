@@ -1,5 +1,5 @@
 ---
-title: 2022 State of CS Report
+title: 2023 State of CS Report
 theme: responsive
 layout: none
 ---
@@ -7,7 +7,7 @@ layout: none
 - require 'state_abbr'
 
 =inline_css 'interactive-map.css'
-=inline_css 'advocacy-stateofcsreport.css'
+=inline_css 'advocacy-stateofcs-new.css'
 
 :javascript
   function statePicker() {
@@ -17,111 +17,107 @@ layout: none
     });
   }
 
-.container_responsive{style: "background-color: #FFF; text-align: center"}
-  .col-33
+.logo__nav{style: "margin-bottom: 20px;"}
+  .logo__nav__links
     %a{href: "/"}
       %img{src: "/images/fit-400/CodeLogo.png", style: "width: 200px; padding: 10px", alt: "Code.org Advocacy Coalition Logo"}
-  .col-33
     %a{href: "https://www.csteachers.org"}
       %img{src: "/images/fit-400/CSTALogo.png", style: "width: 200px; padding: 10px; padding-top: 15px", alt: "CSTA Logo"}
-  .col-33
     %a{href: "https://ecepalliance.org"}
       %img{src: "/images/fit-400/ECEP_Logo.jpg", style: "width: 200px; padding: 10px", alt: "ECEP Logo"}
   .clear
 
-%br
+.website__nav{style: "margin-bottom: 20px;"}
+  .website__nav__links
+    %a{href: "/stateofcs"}
+      Home
+    %a{href: "/stateofcs/data"}
+      Data
+    %a{href: "/stateofcs/thankyou"}
+      Acknowledgements
+  .clear
 
-.container_responsive
+.container_responsive{style: "margin-bottom: 50px"}
   .col-50
     %h1{style: "color: black; text-align: left; margin-bottom: 10px"}
-      2022 State of Computer Science Education
-    %h2{style: "margin-top: 0px; margin-bottom: 20px"}
+      2023 State of Computer Science Education
+    %h2{style: "margin-top: 0px; margin-bottom: 20px; font-size: 24px"}
       Understanding Our National Imperative
     This annual report on K-12 computer science in the United States provides an update on national and state-level computer science education policy, including policy trends, maps, state summaries, and implementation data.
     %br
-
-    %a{href: "/2022_state_of_cs.pdf", target: "_blank", style: "text-decoration: none"}
-      %button{style: "background-color: #ffa400; color: white; border-color: #ffa400; margin-top: 20px; margin-bottom: 20px; padding: 6px 16px"} Download Report
-    
-
-    %br
-    %select.small-state-dropdown{style: "padding: 6px 12px; border-radius: 4px;"}
-      %option{selected: true, disabled: true} Pick a State Handout
-      -STATE_ABBR_WITH_DC_HASH.each do |_, state|
-        %option{value: state.delete(' ')}= state
-      :javascript
-        statePicker()
-    %br
-    %br
-
-    %a{href: CDO.code_org_url("/yourschool/accessreport"), target: "_blank"}
-      Data dashboard
-    &nbsp;
-    |
-    &nbsp;
-    %a{href: "/data/2022_state_of_cs_data.xlsx", download: "2022_state_of_cs_data.xlsx"}
-      Download data
-
+    .state__links__section{style: "margin-top: 20px;"}
+      %a{href: "/2023_state_of_cs.pdf", target: "_blank", style: "text-decoration: none"}
+        %button.report-link Download Report
+      %select.small-state-dropdown.state-picker
+        %option{selected: true, disabled: true} Pick a State Handout
+        -STATE_ABBR_WITH_DC_HASH.each do |_, state|
+          %option{value: state.delete(' ')}= state
+        :javascript
+          statePicker()
   .col-50
-    %img{style: "width: 75%; margin-left: 20%; margin-top: 35px", src: "images/advocacy1-subject.png"}
-
+    %img{style: "width: 95%; margin-left: 5%; margin-top: 35px", src: "images/state-of-cs-subject-2023.png"}
   .clear
 
-.container_responsive{style: "background-color: #293555; border-radius: 12px"}
-  %h2{style: "text-align: center; color: white; padding: 20px"}
-    Key Highlights
-
-  .col-50{style: "padding: 20px; text-align: right"}
-    %img{style: "width: 80%", src: "/images/fit-1024/access-map-2022.png", alt: "Heat map percentage of high schools offering at least one foundational computer science course in each US state. Raw data available for download at advocacy.code.org/StateOfCS"}
-
-  .col-50{style: "padding: 20px"}
-    .subtext{style: "padding-top: 10%; color: white"}
-      %b Across the U.S., 53% of public high schools offer foundational computer science.
-      %br
-      %br
-      %em Disparities in access persist. See the full report or the state handout to see disparities by state.
-
-  .clear
-
+.container_responsive{style: "background: #133e52; border-radius: 12px"}
+  %h2{style: "text-align: center; color: white; padding: 20px; margin-bottom: 20px"}
+    Overview
+  %img{style: "width: 90%", src: "/images/fit-1024/access-map-2023.png", alt: "Heat map percentage of high schools offering at least one foundational computer science course in each US state. Raw data available for download at advocacy.code.org/StateOfCS"}
   %br
-
-  .col-50{style: "padding: 20px; color: white; text-align: right"}
-    %b 37 states have adopted 5 or more policies to make computer science part of the education system.
-    %br
-    %br
-    %em See the full report for maps displaying which states have adopted each policy.
-
-  .col-50{style: "padding: 20px"}
-    %img{style: "width: 80%", src:"/images/fit-1024/policy-map-2022.png", alt: "Heat map number of CS education policies in each US state. Raw data available for download at advocacy.code.org/StateOfCS."}
-
+  %br
+  .map-text-container{style: "text-align: center; color: white; font-weight: bold; padding: 20px"}
+    %p
+      Across the U.S., 57.50% of public high schools offer foundational computer science.
+    %em
+      Disparities in access persist. See the full report or the state handout to see disparities by state.
   .clear
 
-.container_responsive
+.container_responsive.key__nationally_section
   %h2
-    Download Previous Reports
-  State of Computer Science Education:
-  %a{href: "/2021_state_of_cs.pdf", target: "_blank"} Accelerating Action Through Advocacy (2021)
+    Key Highlights Nationally
+  .stats__container{style: "margin-bottom: 30px"}
+    .stats__container__item
+      %p{style: "margin-bottom: 5px; font-weight: bold;"}
+        Across 35 states
+      %p.stats__main__info
+        5.8% of Students
+      %p{style: "font-weight: bold;"}
+        are enrolled in foundational CS
+    .stats__container__item
+      %p.stats__main__info
+        31% of students
+      %p{style: "font-weight: bold;"}
+        who took foundational CS are female
+    .stats__container__item
+      %p{style: "margin-bottom: 5px; font-weight: bold;"}
+        Smalls schools are
+      %p.stats__main__info
+        2x less likely
+      %p{style: "font-weight: bold;"}
+        to offer computer science
+  Explore all State of Computer Science Education reports:
   %br
-  State of Computer Science Education:
-  %a{href: "/2020_state_of_cs.pdf", target: "_blank"} Illuminating Disparities (2020)
+  %a{href: "/2023_state_of_cs.pdf", target: "_blank"} 2023
+  |
+  %a{href: "/2022_state_of_cs.pdf", target: "_blank"} 2022
+  |
+  %a{href: "/2021_state_of_cs.pdf", target: "_blank"} 2021
+  |
+  %a{href: "/2020_state_of_cs.pdf", target: "_blank"} 2020
+  |
+  %a{href: "/2019_state_of_cs.pdf", target: "_blank"} 2019
+  |
+  %a{href: "/2018_state_of_cs.pdf", target: "_blank"} 2018
+  |
+  %a{href: "/2017_state_of_cs.pdf", target: "_blank"} 2017
   %br
-  State of Computer Science Education:
-  %a{href: "/2019_state_of_cs.pdf", target: "_blank"} Equity and Diversity (2019)
-  %br
-  State of Computer Science Education:
-  %a{href: "/2018_state_of_cs.pdf", target: "_blank"} Policy and Implementation (2018)
-  %br
-  State of the States Landscape Report:
-  %a{href: "/2017_state_of_cs.pdf", target: "_blank"} State-level Policies Supporting Equitable K-12 Computer Science Education (2017)
-
   .clear
 
 %br
 
-.container_responsive
-  .col-100{style: "text-align: center; padding: 10px; background-color: #FFF;"}
+.container_responsive{style: "margin-top: 40px;"}
+  .col-100.state__ofcs__footer{style: "text-align: center; padding: 10px;"}
     %h4
-      %a{href: "https://creativecommons.org/licenses/by-nc-sa/4.0/", style: "color: grey"}CC BY-NC-SA 4.0
+      %a{href: "https://creativecommons.org/licenses/by-nc-sa/4.0/", style: "color: grey; font-size: 16px; text-decoration: none;"}CC BY-NC-SA 4.0
     %p
       This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Authorization to reproduce this report in whole or in part is granted.
   .clear
