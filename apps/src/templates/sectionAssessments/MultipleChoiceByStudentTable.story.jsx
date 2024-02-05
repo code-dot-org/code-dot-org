@@ -6,7 +6,6 @@ import {
 } from './assessmentsTestHelpers';
 
 export default {
-  title: 'MultipleChoiceByStudentTable',
   component: MultipleChoiceByStudentTable,
 };
 

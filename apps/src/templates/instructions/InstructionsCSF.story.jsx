@@ -15,7 +15,6 @@ import SmallStaticAvatar from '@cdo/static/skins/bee/small_static_avatar.png';
 import FailureAvatar from '@cdo/static/skins/bee/failure_avatar.png';
 
 export default {
-  title: 'InstructionsCSF',
   component: InstructionsCSF,
 };
 

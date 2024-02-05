@@ -9,7 +9,6 @@ import {
 } from '@cdo/apps/util/courseBlockCardsConstants';
 
 export default {
-  title: 'CourseBlocksWrapper',
   component: CourseBlocksWrapper,
 };
 

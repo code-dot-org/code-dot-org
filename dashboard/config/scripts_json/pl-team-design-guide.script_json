@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "pl-team-design-guide",
-    "serialized_at": "2024-01-30 21:57:22 UTC",
+    "serialized_at": "2024-02-02 22:47:24 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",
@@ -53,7 +53,7 @@
       "name": "Designing Visuals",
       "absolute_position": 2,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -108,6 +108,18 @@
       }
     },
     {
+      "key": "a648a8a0-56de-49a5-8bb1-5387670d42f2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a648a8a0-56de-49a5-8bb1-5387670d42f2",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide"
+      }
+    },
+    {
       "key": "eac68445-d9b3-4f64-9790-569a597cd78d",
       "position": 1,
       "properties": {
@@ -115,6 +127,18 @@
       "seeding_key": {
         "lesson_activity.key": "eac68445-d9b3-4f64-9790-569a597cd78d",
         "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide"
+      }
+    },
+    {
+      "key": "1a21b280-518f-4601-8d8d-c645c2d9ad61",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1a21b280-518f-4601-8d8d-c645c2d9ad61",
+        "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "pl-team-design-guide"
       }
@@ -144,8 +168,19 @@
       }
     },
     {
-      "key": "fa4ecf05-1059-4e8a-9da8-8c157d80d2aa",
+      "key": "c63bcdb2-faa5-4c48-a76d-ccc19e13aa16",
       "position": 3,
+      "properties": {
+        "progression_name": "Module 1: Welcome "
+      },
+      "seeding_key": {
+        "activity_section.key": "c63bcdb2-faa5-4c48-a76d-ccc19e13aa16",
+        "lesson_activity.key": "f3a34f15-f6e0-42bf-8476-f7f1ffe1b6ca"
+      }
+    },
+    {
+      "key": "fa4ecf05-1059-4e8a-9da8-8c157d80d2aa",
+      "position": 4,
       "properties": {
         "progression_name": "Opening and Closing Learning Experiences"
       },
@@ -156,13 +191,57 @@
     },
     {
       "key": "8419351b-174a-4403-840f-ac7ae559e864",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Tone and Voice"
       },
       "seeding_key": {
         "activity_section.key": "8419351b-174a-4403-840f-ac7ae559e864",
         "lesson_activity.key": "f3a34f15-f6e0-42bf-8476-f7f1ffe1b6ca"
+      }
+    },
+    {
+      "key": "714a02ce-0282-4b87-a97a-6e00297a8c1e",
+      "position": 6,
+      "properties": {
+        "progression_name": "Audience"
+      },
+      "seeding_key": {
+        "activity_section.key": "714a02ce-0282-4b87-a97a-6e00297a8c1e",
+        "lesson_activity.key": "f3a34f15-f6e0-42bf-8476-f7f1ffe1b6ca"
+      }
+    },
+    {
+      "key": "0b6eef53-7290-44c6-bd6d-af04bb2fbb62",
+      "position": 7,
+      "properties": {
+        "progression_name": "Accessibility"
+      },
+      "seeding_key": {
+        "activity_section.key": "0b6eef53-7290-44c6-bd6d-af04bb2fbb62",
+        "lesson_activity.key": "f3a34f15-f6e0-42bf-8476-f7f1ffe1b6ca"
+      }
+    },
+    {
+      "key": "2a6724df-2da3-4769-99d9-3b940075e011",
+      "position": 1,
+      "properties": {
+        "progression_name": "Images"
+      },
+      "seeding_key": {
+        "activity_section.key": "2a6724df-2da3-4769-99d9-3b940075e011",
+        "lesson_activity.key": "a648a8a0-56de-49a5-8bb1-5387670d42f2"
+      }
+    },
+    {
+      "key": "0e4ca782-0b2d-490d-b178-1c6dea07a515",
+      "position": 2,
+      "properties": {
+        "progression_name": "Color"
+      },
+      "seeding_key": {
+        "activity_section.key": "0e4ca782-0b2d-490d-b178-1c6dea07a515",
+        "lesson_activity.key": "a648a8a0-56de-49a5-8bb1-5387670d42f2"
       }
     },
     {
@@ -174,6 +253,16 @@
       "seeding_key": {
         "activity_section.key": "438b7f52-72d3-49f2-a08e-5d4df1464b9a",
         "lesson_activity.key": "eac68445-d9b3-4f64-9790-569a597cd78d"
+      }
+    },
+    {
+      "key": "7145d6b8-b8cb-4787-91fd-d9fba5d1995c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7145d6b8-b8cb-4787-91fd-d9fba5d1995c",
+        "lesson_activity.key": "1a21b280-518f-4601-8d8d-c645c2d9ad61"
       }
     }
   ],
@@ -234,6 +323,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L1_OverviewPage1"
+        ],
         "progression": "Overview Page"
       },
       "bonus": false,
@@ -256,6 +348,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L1_OverviewPage2"
+        ],
         "progression": "Overview Page"
       },
       "bonus": false,
@@ -278,6 +373,31 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Module 1: Welcome "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Module 1 Placeholder"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "c63bcdb2-faa5-4c48-a76d-ccc19e13aa16"
+      },
+      "level_keys": [
+        "Module 1 Placeholder"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PLGuide_L1_Opening1"
+        ],
         "progression": "Opening and Closing Learning Experiences"
       },
       "bonus": false,
@@ -295,11 +415,14 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
+      "chapter": 7,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L1_Opening2"
+        ],
         "progression": "Opening and Closing Learning Experiences"
       },
       "bonus": false,
@@ -317,11 +440,14 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
+      "chapter": 8,
+      "position": 8,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L1_Closing1"
+        ],
         "progression": "Opening and Closing Learning Experiences"
       },
       "bonus": false,
@@ -339,11 +465,14 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
+      "chapter": 9,
+      "position": 9,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L1_Closing2"
+        ],
         "progression": "Opening and Closing Learning Experiences"
       },
       "bonus": false,
@@ -361,11 +490,14 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 9,
+      "chapter": 10,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L1_ToneVoice1"
+        ],
         "progression": "Tone and Voice"
       },
       "bonus": false,
@@ -383,11 +515,14 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 10,
+      "chapter": 11,
+      "position": 11,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L1_ToneVoice2"
+        ],
         "progression": "Tone and Voice"
       },
       "bonus": false,
@@ -405,11 +540,14 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 11,
+      "chapter": 12,
+      "position": 12,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L1_ToneVoice3"
+        ],
         "progression": "Tone and Voice"
       },
       "bonus": false,
@@ -427,7 +565,232 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PLGuide_L1_Audience1"
+        ],
+        "progression": "Audience"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLGuide_L1_Audience1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "714a02ce-0282-4b87-a97a-6e00297a8c1e"
+      },
+      "level_keys": [
+        "PLGuide_L1_Audience1"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PLGuide_L1_Audience2"
+        ],
+        "progression": "Audience"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLGuide_L1_Audience2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "714a02ce-0282-4b87-a97a-6e00297a8c1e"
+      },
+      "level_keys": [
+        "PLGuide_L1_Audience2"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "accessiblity"
+        ],
+        "progression": "Accessibility"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "accessiblity"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "0b6eef53-7290-44c6-bd6d-af04bb2fbb62"
+      },
+      "level_keys": [
+        "accessiblity"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PLGuide_L2_Images1"
+        ],
+        "progression": "Images"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLGuide_L2_Images1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "2a6724df-2da3-4769-99d9-3b940075e011"
+      },
+      "level_keys": [
+        "PLGuide_L2_Images1"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PLGuide_L2_Images2"
+        ],
+        "progression": "Images"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLGuide_L2_Images2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "2a6724df-2da3-4769-99d9-3b940075e011"
+      },
+      "level_keys": [
+        "PLGuide_L2_Images2"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PLGuide_L2_Images3"
+        ],
+        "progression": "Images"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLGuide_L2_Images3"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "2a6724df-2da3-4769-99d9-3b940075e011"
+      },
+      "level_keys": [
+        "PLGuide_L2_Images3"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PLGuide_L2_Images4"
+        ],
+        "progression": "Images"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLGuide_L2_Images4"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "2a6724df-2da3-4769-99d9-3b940075e011"
+      },
+      "level_keys": [
+        "PLGuide_L2_Images4"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PLGuide_L2_Images5"
+        ],
+        "progression": "Images"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLGuide_L2_Images5"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "2a6724df-2da3-4769-99d9-3b940075e011"
+      },
+      "level_keys": [
+        "PLGuide_L2_Images5"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Designing Visuals: Color"
+        ],
+        "progression": "Color"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Designing Visuals: Color"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "0e4ca782-0b2d-490d-b178-1c6dea07a515"
+      },
+      "level_keys": [
+        "Designing Visuals: Color"
+      ]
+    },
+    {
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -452,7 +815,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -477,7 +840,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 24,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -499,6 +862,30 @@
       },
       "level_keys": [
         "PLGuide_L3_BodyText1"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Assessment Levels"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Assessment Levels"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "7145d6b8-b8cb-4787-91fd-d9fba5d1995c"
+      },
+      "level_keys": [
+        "Assessment Levels"
       ]
     }
   ],
@@ -549,6 +936,18 @@
         "lesson_group.key": "",
         "script.name": "pl-team-design-guide",
         "activity_section.key": "699805c7-e94d-4dd3-8864-08d61f5661c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Module 1 Placeholder",
+        "script_level.level_keys": [
+          "Module 1 Placeholder"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "c63bcdb2-faa5-4c48-a76d-ccc19e13aa16"
       }
     },
     {
@@ -637,6 +1036,114 @@
     },
     {
       "seeding_key": {
+        "level.key": "PLGuide_L1_Audience1",
+        "script_level.level_keys": [
+          "PLGuide_L1_Audience1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "714a02ce-0282-4b87-a97a-6e00297a8c1e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PLGuide_L1_Audience2",
+        "script_level.level_keys": [
+          "PLGuide_L1_Audience2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "714a02ce-0282-4b87-a97a-6e00297a8c1e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "accessiblity",
+        "script_level.level_keys": [
+          "accessiblity"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "0b6eef53-7290-44c6-bd6d-af04bb2fbb62"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PLGuide_L2_Images1",
+        "script_level.level_keys": [
+          "PLGuide_L2_Images1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "2a6724df-2da3-4769-99d9-3b940075e011"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PLGuide_L2_Images2",
+        "script_level.level_keys": [
+          "PLGuide_L2_Images2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "2a6724df-2da3-4769-99d9-3b940075e011"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PLGuide_L2_Images3",
+        "script_level.level_keys": [
+          "PLGuide_L2_Images3"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "2a6724df-2da3-4769-99d9-3b940075e011"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PLGuide_L2_Images4",
+        "script_level.level_keys": [
+          "PLGuide_L2_Images4"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "2a6724df-2da3-4769-99d9-3b940075e011"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PLGuide_L2_Images5",
+        "script_level.level_keys": [
+          "PLGuide_L2_Images5"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "2a6724df-2da3-4769-99d9-3b940075e011"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Designing Visuals: Color",
+        "script_level.level_keys": [
+          "Designing Visuals: Color"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "0e4ca782-0b2d-490d-b178-1c6dea07a515"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "PLGuide_L3_Headings1",
         "script_level.level_keys": [
           "PLGuide_L3_Headings1"
@@ -669,6 +1176,18 @@
         "lesson_group.key": "",
         "script.name": "pl-team-design-guide",
         "activity_section.key": "438b7f52-72d3-49f2-a08e-5d4df1464b9a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Assessment Levels",
+        "script_level.level_keys": [
+          "Assessment Levels"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "7145d6b8-b8cb-4787-91fd-d9fba5d1995c"
       }
     }
   ],

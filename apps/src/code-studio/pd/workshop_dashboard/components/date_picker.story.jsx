@@ -4,7 +4,6 @@ import DatePicker from './date_picker';
 import {action} from '@storybook/addon-actions';
 
 export default {
-  title: 'DatePicker',
   component: DatePicker,
 };
 

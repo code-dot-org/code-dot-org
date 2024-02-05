@@ -25,7 +25,6 @@ ComplexItemComponent.propTypes = {
 };
 
 const defaultExport = {
-  title: 'Multi Checkbox Selector',
   component: MultiCheckboxSelector,
 };
 
