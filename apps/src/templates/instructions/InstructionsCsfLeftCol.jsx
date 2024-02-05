@@ -8,6 +8,8 @@ import PromptIcon from './PromptIcon';
 import HintDisplayLightbulb from '../HintDisplayLightbulb';
 import {getOuterHeight} from './utils';
 import commonStyles from '../../commonStyles';
+import {KeyCodes} from '@cdo/apps/constants';
+import i18n from '@cdo/locale';
 
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
 const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
@@ -51,8 +53,24 @@ class InstructionsCsfLeftCol extends React.Component {
    * Handle a click to the hint display lightbulb
    */
   handleClickLightbulb = () => {
-    // If we don't have authored hints to display, clicking lightbulb shouldnt do anything
+    // If we don't have authored hints to display, clicking lightbulb shouldn't do anything.
     if (this.props.hasAuthoredHints && this.props.hasUnseenHint) {
+      this.props.requestHint();
+    }
+  };
+
+  /**
+   * Handle an enter key press to the hint display lightbulb
+   */
+  handleKeyDownLightbulb = e => {
+    // If we don't have authored hints to display, keyboard-navigating to lightbulb
+    // and then pressing 'enter' shouldn't do anything.
+    if (
+      e.keyCode === KeyCodes.ENTER &&
+      this.props.hasAuthoredHints &&
+      this.props.hasUnseenHint
+    ) {
+      e.preventDefault();
       this.props.requestHint();
     }
   };
@@ -94,6 +112,9 @@ class InstructionsCsfLeftCol extends React.Component {
             authored_hints: hasAuthoredHints,
           })}
           onClick={this.handleClickLightbulb}
+          onKeyDown={this.handleKeyDownLightbulb}
+          tabIndex={0}
+          aria-label={i18n.promptIconAndLightbulbInstructionHints()}
         >
           {hasAuthoredHints && <HintDisplayLightbulb />}
           {this.getAvatar() && (
