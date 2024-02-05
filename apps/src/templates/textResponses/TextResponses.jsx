@@ -15,7 +15,6 @@ import {
   getSelectedScriptName,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import {loadTextResponsesFromServer} from '@cdo/apps/templates/textResponses/textReponsesDataApi';
-import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
 const CSV_HEADERS = [
   {label: i18n.name(), key: 'studentName'},
@@ -98,7 +97,7 @@ function TextResponses({
   const lessons = uniq(map(responsesForCurrentScript, 'lesson'));
 
   return (
-    <div className={dashboardStyles.dashboardPage}>
+    <div>
       <div style={styles.unitSelection}>
         <div style={{...h3Style, ...styles.header}}>{i18n.selectACourse()}</div>
         <UnitSelector

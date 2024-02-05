@@ -23,6 +23,10 @@ import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelecto
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 import classNames from 'classnames';
 
+const applyV1TeacherDashboardWidth = children => {
+  return <div className={dashboardStyles.dashboardPage}>{children}</div>;
+};
+
 function TeacherDashboard({
   studioUrlPrefix,
   sectionId,
@@ -105,43 +109,59 @@ function TeacherDashboard({
       <Switch>
         <Route
           path={TeacherDashboardPath.manageStudents}
-          component={props => (
-            <ManageStudents studioUrlPrefix={studioUrlPrefix} />
-          )}
+          component={props =>
+            applyV1TeacherDashboardWidth(
+              <ManageStudents studioUrlPrefix={studioUrlPrefix} />
+            )
+          }
         />
         <Route
           path={TeacherDashboardPath.loginInfo}
-          component={props => (
-            <SectionLoginInfo studioUrlPrefix={studioUrlPrefix} />
-          )}
+          component={props =>
+            applyV1TeacherDashboardWidth(
+              <SectionLoginInfo studioUrlPrefix={studioUrlPrefix} />
+            )
+          }
         />
         <Route
           path={TeacherDashboardPath.standardsReport}
-          component={props => <StandardsReport />}
+          component={props => applyV1TeacherDashboardWidth(<StandardsReport />)}
         />
         {/* Break out of Switch if we have 0 students. Display EmptySection component instead. */}
         {studentCount === 0 && (
-          <Route component={props => <EmptySection sectionId={sectionId} />} />
+          <Route
+            component={props =>
+              applyV1TeacherDashboardWidth(
+                <EmptySection sectionId={sectionId} />
+              )
+            }
+          />
         )}
         <Route
           path={TeacherDashboardPath.projects}
-          component={props => (
-            <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
-          )}
+          component={props =>
+            applyV1TeacherDashboardWidth(
+              <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
+            )
+          }
         />
         <Route
           path={TeacherDashboardPath.stats}
-          component={props => <StatsTableWithData />}
+          component={props =>
+            applyV1TeacherDashboardWidth(<StatsTableWithData />)
+          }
         />
         {coursesWithProgress.length === 0 && (
           <Route
-            component={() => (
-              <div
-                style={classNames(styles.text, dashboardStyles.dashboardPage)}
-              >
-                <SafeMarkdown markdown={i18n.noProgressSection()} />
-              </div>
-            )}
+            component={() =>
+              applyV1TeacherDashboardWidth(
+                <div
+                  style={classNames(styles.text, dashboardStyles.dashboardPage)}
+                >
+                  <SafeMarkdown markdown={i18n.noProgressSection()} />
+                </div>
+              )
+            }
           />
         )}
         <Route
@@ -150,11 +170,15 @@ function TeacherDashboard({
         />
         <Route
           path={TeacherDashboardPath.textResponses}
-          component={props => <TextResponses />}
+          component={props => applyV1TeacherDashboardWidth(<TextResponses />)}
         />
         <Route
           path={TeacherDashboardPath.assessments}
-          component={props => <SectionAssessments sectionName={sectionName} />}
+          component={props =>
+            applyV1TeacherDashboardWidth(
+              <SectionAssessments sectionName={sectionName} />
+            )
+          }
         />
       </Switch>
     </div>

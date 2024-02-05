@@ -14,7 +14,6 @@ import oauthSignInButtons from '../../../static/teacherDashboard/oauthSignInButt
 import syncGoogleClassroom from '../../../static/teacherDashboard/syncGoogleClassroom.png';
 import syncClever from '../../../static/teacherDashboard/syncClever.png';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
 const getManageStudentsUrl = sectionId => {
   return `/teacher_dashboard/sections/${sectionId}/manage_students`;
@@ -90,7 +89,7 @@ export default connect(state => ({
 class LtiLogins extends React.Component {
   render() {
     return (
-      <div className={dashboardStyles.dashboardPage}>
+      <div>
         <h2 style={styles.heading}>{i18n.loginInfoLtiSetupHeader()}</h2>
         <SafeMarkdown markdown={i18n.loginInfoLtiSetupBody()} />
         <SignInInstructions loginType={SectionLoginType.lti_v1} />
