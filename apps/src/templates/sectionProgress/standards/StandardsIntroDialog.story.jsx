@@ -3,7 +3,6 @@ import {UnconnectedStandardsIntroDialog as StandardsIntroDialog} from './Standar
 import {action} from '@storybook/addon-actions';
 
 export default {
-  title: 'StandardsIntroDialog',
   component: StandardsIntroDialog,
 };
 

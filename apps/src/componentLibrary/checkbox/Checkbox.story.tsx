@@ -4,7 +4,7 @@ import {Meta, Story} from '@storybook/react';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 
 export default {
-  title: 'DesignSystem/Checkbox Component',
+  title: 'DesignSystem/Checkbox',
   component: Checkbox,
 } as Meta;
 

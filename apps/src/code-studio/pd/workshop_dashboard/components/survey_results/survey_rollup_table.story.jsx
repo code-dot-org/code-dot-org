@@ -3,7 +3,6 @@ import SurveyRollupTable from '../../components/survey_results/survey_rollup_tab
 import {COURSE_CSF} from '../../workshopConstants';
 
 export default {
-  title: 'SurveyRollupTable',
   component: SurveyRollupTable,
 };
 
