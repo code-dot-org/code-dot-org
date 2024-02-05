@@ -8,6 +8,7 @@ require 'mail'
 require 'openssl'
 require 'cdo/honeybadger'
 
+# rubocop:disable CustomCops/PegasusDbUsage
 module Poste
   def self.logger
     @@logger ||= $log
@@ -583,3 +584,4 @@ module Poste2
     end
   end
 end
+# rubocop:enable CustomCops/PegasusDbUsage

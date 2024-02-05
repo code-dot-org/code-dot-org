@@ -9,7 +9,7 @@
           "key": "9797909d-7ee9-436a-9c18-d58b3e7f1e0b",
           "notice": "Free Teacher Resources from Amazon Future Engineer",
           "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
-          "link": "code.org/afe",
+          "link": "https://code.org/afe",
           "type": "bullhorn",
           "visibility": "Teacher-only",
           "dismissible": true,
@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2024-01-05 02:55:19 UTC",
+    "serialized_at": "2024-01-31 21:32:30 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -9634,6 +9634,13 @@
         "lesson.key": "End of Course Project",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-03"
       }
     },
     {

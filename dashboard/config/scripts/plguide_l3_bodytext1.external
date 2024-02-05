@@ -37,4 +37,5 @@ markdown <<MARKDOWN
 * #### Bold and italic text should be used sparingly within a page for emphasis. 
 * #### Underlined text is reserved for formatting links. 
 * #### Highlighting should be used only to message caution or an important message.
+* #### Text should be left-aligned with ragged right edges.
 MARKDOWN

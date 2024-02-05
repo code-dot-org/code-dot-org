@@ -6,7 +6,8 @@ markdown <<MARKDOWN
 
 ## What is an algorithm? 
 
-####An **algorithm** is a **set of instructions** we give a computer to **solve a problem or perform a task**. An analogy is using a recipe to bake cookies. Each step of a recipe is like each step of code we give the computer to execute. 
+####**Algorithms** are **lists of steps** to complete a task. Programs are algorithms written as code for a computer to execute. An analogy is using a recipe to bake cookies. Each step of a recipe is like each step of code you give the computer to execute. 
+
 ##Let’s create another algorithm.
 
 MARKDOWN

@@ -18,7 +18,7 @@
 }
 
 .solid-block-subheader {
-  color: #7665a0;
+  color: var(--brand_secondary_default);
   font-size: 18px;
   font-family: var(--main-font);
   font-weight: var(--bold-font-weight);

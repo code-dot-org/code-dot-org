@@ -1,0 +1,8 @@
+name 'How this curriculum works'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# explain how it starts with csf and then goes to maker (use a visual?)
+
+MARKDOWN

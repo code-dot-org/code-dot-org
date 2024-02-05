@@ -8,7 +8,6 @@ import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgress
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 
 export default {
-  title: 'CreateStandardsReportDialog',
   component: CreateStandardsReportDialog,
 };
 
