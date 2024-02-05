@@ -2,7 +2,6 @@ import React from 'react';
 import FallbackPlayerCaptionDialogLink from './FallbackPlayerCaptionDialogLink';
 
 export default {
-  title: 'FallbackPlayerCaptionDialogLink',
   component: FallbackPlayerCaptionDialogLink,
 };
 

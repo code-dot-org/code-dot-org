@@ -3,7 +3,6 @@ import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 import LearningGoal from './LearningGoal';
 
 export default {
-  title: 'LearningGoal',
   component: LearningGoal,
 };
 

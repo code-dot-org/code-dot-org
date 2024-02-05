@@ -9,7 +9,6 @@ import StudioWinAvatar from '@cdo/static/skins/studio/win_avatar.png';
 import SpriteLabAvatar from '@cdo/static/spritelab/avatar.png';
 
 export default {
-  title: 'ChallengeDialog',
   component: ChallengeDialog,
 };
 

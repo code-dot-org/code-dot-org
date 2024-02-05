@@ -2,7 +2,6 @@ import React from 'react';
 import LegacyButton, {BUTTON_TYPES} from './LegacyButton';
 
 const defaultExport = {
-  title: 'LegacyButton',
   component: LegacyButton,
 };
 
