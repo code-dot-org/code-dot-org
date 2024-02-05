@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "coding-with-ai",
-    "serialized_at": "2024-01-31 01:11:47 UTC",
+    "serialized_at": "2024-02-02 16:46:30 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -546,7 +546,7 @@
       "key": "9505e381-2be9-4c07-a04d-4dd072e9a79d",
       "position": 4,
       "properties": {
-        "description": "[level 2-3]",
+        "progression_name": "Scenarios",
         "tips": [
           {
             "type": "teachingTip",
@@ -690,7 +690,7 @@
       "key": "8be047e9-d1c3-4184-a63a-a30a887763d2",
       "position": 2,
       "properties": {
-        "description": "[Levels 4 & 5]"
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "8be047e9-d1c3-4184-a63a-a30a887763d2",
@@ -1259,7 +1259,7 @@
       "key": "d0fecfb0-bc9c-4f73-94e6-9bee2e7798d2",
       "position": 2,
       "properties": {
-        "description": "[levels 1-5]"
+        "progression_name": "Reflection Corner Explanations"
       },
       "seeding_key": {
         "activity_section.key": "d0fecfb0-bc9c-4f73-94e6-9bee2e7798d2",
@@ -1503,7 +1503,7 @@
       "key": "4a85ac76-647f-45f4-bc73-cc8b523109c0",
       "position": 2,
       "properties": {
-        "description": "[levels 1-3]"
+        "progression_name": "Temperature Check Explanations"
       },
       "seeding_key": {
         "activity_section.key": "4a85ac76-647f-45f4-bc73-cc8b523109c0",
@@ -1707,7 +1707,7 @@
       "key": "747732e1-30ef-4759-8354-5acaac0f16f5",
       "position": 11,
       "properties": {
-        "description": "[level 1]"
+        "progression_name": "One-Sentence Summary"
       },
       "seeding_key": {
         "activity_section.key": "747732e1-30ef-4759-8354-5acaac0f16f5",
@@ -1729,7 +1729,7 @@
       "key": "6e0382cc-3d44-4460-81ff-3e92170b0e13",
       "position": 13,
       "properties": {
-        "description": "[level 2]",
+        "progression_name": "One Sentence Elaboration",
         "tips": [
           {
             "type": "teachingTip",
@@ -1807,7 +1807,7 @@
       "key": "8e7a4760-0cda-48b5-9fa1-9f1dea022fa8",
       "position": 2,
       "properties": {
-        "description": "[levels 3-7]"
+        "progression_name": "Speed Chat Explanations"
       },
       "seeding_key": {
         "activity_section.key": "8e7a4760-0cda-48b5-9fa1-9f1dea022fa8",
@@ -1840,6 +1840,427 @@
       "level_keys": [
         "CwAI-L1-L1-Warm up Quotes"
       ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Scenarios"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_scenarios_L1_1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "9505e381-2be9-4c07-a04d-4dd072e9a79d"
+      },
+      "level_keys": [
+        "Code wAI_scenarios_L1_1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Scenarios"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_scenarios_L1_2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "9505e381-2be9-4c07-a04d-4dd072e9a79d"
+      },
+      "level_keys": [
+        "Code wAI_scenarios_L1_2"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L1_1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8be047e9-d1c3-4184-a63a-a30a887763d2"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L1_1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L1_2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8be047e9-d1c3-4184-a63a-a30a887763d2"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L1_2"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Reflection Corner Explanations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L3_1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "d0fecfb0-bc9c-4f73-94e6-9bee2e7798d2"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L3_1"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Reflection Corner Explanations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L3_2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "d0fecfb0-bc9c-4f73-94e6-9bee2e7798d2"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L3_2"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Reflection Corner Explanations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L3_3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "d0fecfb0-bc9c-4f73-94e6-9bee2e7798d2"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L3_3"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Reflection Corner Explanations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L3_4"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "d0fecfb0-bc9c-4f73-94e6-9bee2e7798d2"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L3_4"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Reflection Corner Explanations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L3_5"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "d0fecfb0-bc9c-4f73-94e6-9bee2e7798d2"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L3_5"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Code wAI_temp_check_L4_1"
+        ],
+        "progression": "Temperature Check Explanations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_temp_check_L4_1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "4a85ac76-647f-45f4-bc73-cc8b523109c0"
+      },
+      "level_keys": [
+        "Code wAI_temp_check_L4_1"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Temperature Check Explanations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_temp_check_L4_2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "4a85ac76-647f-45f4-bc73-cc8b523109c0"
+      },
+      "level_keys": [
+        "Code wAI_temp_check_L4_2"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Temperature Check Explanations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_temp_check_L4_3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "4a85ac76-647f-45f4-bc73-cc8b523109c0"
+      },
+      "level_keys": [
+        "Code wAI_temp_check_L4_3"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "One-Sentence Summary"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "747732e1-30ef-4759-8354-5acaac0f16f5"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L5_1"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "One Sentence Elaboration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "6e0382cc-3d44-4460-81ff-3e92170b0e13"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L5_2"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Speed Chat Explanations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_3"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8e7a4760-0cda-48b5-9fa1-9f1dea022fa8"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L5_3"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Speed Chat Explanations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_4"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8e7a4760-0cda-48b5-9fa1-9f1dea022fa8"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L5_4"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Speed Chat Explanations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_5"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8e7a4760-0cda-48b5-9fa1-9f1dea022fa8"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L5_5"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Speed Chat Explanations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_6"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8e7a4760-0cda-48b5-9fa1-9f1dea022fa8"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L5_6"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 7,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Speed Chat Explanations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_7"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8e7a4760-0cda-48b5-9fa1-9f1dea022fa8"
+      },
+      "level_keys": [
+        "Code wAI_CFU_L5_7"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1853,6 +2274,234 @@
         "lesson_group.key": "",
         "script.name": "coding-with-ai",
         "activity_section.key": "ea08fba2-c9ac-4f75-84d3-c3fc544f6e34"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_scenarios_L1_1",
+        "script_level.level_keys": [
+          "Code wAI_scenarios_L1_1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "9505e381-2be9-4c07-a04d-4dd072e9a79d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_scenarios_L1_2",
+        "script_level.level_keys": [
+          "Code wAI_scenarios_L1_2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "9505e381-2be9-4c07-a04d-4dd072e9a79d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L1_1",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L1_1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8be047e9-d1c3-4184-a63a-a30a887763d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L1_2",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L1_2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8be047e9-d1c3-4184-a63a-a30a887763d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L3_1",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L3_1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "d0fecfb0-bc9c-4f73-94e6-9bee2e7798d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L3_2",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L3_2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "d0fecfb0-bc9c-4f73-94e6-9bee2e7798d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L3_3",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L3_3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "d0fecfb0-bc9c-4f73-94e6-9bee2e7798d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L3_4",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L3_4"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "d0fecfb0-bc9c-4f73-94e6-9bee2e7798d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L3_5",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L3_5"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "d0fecfb0-bc9c-4f73-94e6-9bee2e7798d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_temp_check_L4_1",
+        "script_level.level_keys": [
+          "Code wAI_temp_check_L4_1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "4a85ac76-647f-45f4-bc73-cc8b523109c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_temp_check_L4_2",
+        "script_level.level_keys": [
+          "Code wAI_temp_check_L4_2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "4a85ac76-647f-45f4-bc73-cc8b523109c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_temp_check_L4_3",
+        "script_level.level_keys": [
+          "Code wAI_temp_check_L4_3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "4a85ac76-647f-45f4-bc73-cc8b523109c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L5_1",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "747732e1-30ef-4759-8354-5acaac0f16f5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L5_2",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "6e0382cc-3d44-4460-81ff-3e92170b0e13"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L5_3",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_3"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8e7a4760-0cda-48b5-9fa1-9f1dea022fa8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L5_4",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_4"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8e7a4760-0cda-48b5-9fa1-9f1dea022fa8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L5_5",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_5"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8e7a4760-0cda-48b5-9fa1-9f1dea022fa8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L5_6",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_6"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8e7a4760-0cda-48b5-9fa1-9f1dea022fa8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code wAI_CFU_L5_7",
+        "script_level.level_keys": [
+          "Code wAI_CFU_L5_7"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "8e7a4760-0cda-48b5-9fa1-9f1dea022fa8"
       }
     }
   ],

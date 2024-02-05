@@ -1,44 +1,57 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import {useSelector, useDispatch} from 'react-redux';
+import {useSelector} from 'react-redux';
 import Button from '@cdo/apps/templates/Button';
 import style from './ai-tutor.module.scss';
-import {askAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
+import {AITutorState, askAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
+import {JavalabEditorState} from '@cdo/apps/javalab/redux/editorRedux';
+import {JavalabState} from '@cdo/apps/javalab/redux/javalabRedux';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {validationSystemPrompt} from '@cdo/apps/aiTutor/constants';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 // AI Tutor feature that explains to students why their code is not passing tests.
-const ValidationTutor = ({levelId}) => {
-  const dispatch = useDispatch();
+const ValidationTutor = (levelId: number) => {
+  const dispatch = useAppDispatch();
 
-  const sources = useSelector(state => state.javalabEditor.sources);
-  const fileMetadata = useSelector(state => state.javalabEditor.fileMetadata);
-  const activeTabKey = useSelector(state => state.javalabEditor.activeTabKey);
+  const sources = useSelector(
+    (state: {javalabEditor: JavalabEditorState}) => state.javalabEditor.sources
+  );
+  const fileMetadata = useSelector(
+    (state: {javalabEditor: JavalabEditorState}) =>
+      state.javalabEditor.fileMetadata
+  );
+  const activeTabKey = useSelector(
+    (state: {javalabEditor: JavalabEditorState}) =>
+      state.javalabEditor.activeTabKey
+  );
   const studentCode = sources[fileMetadata[activeTabKey]].text;
   const hasCompilationError = useSelector(
-    state => state.javalabEditor.hasCompilationError
+    (state: {javalabEditor: JavalabEditorState}) =>
+      state.javalabEditor.hasCompilationError
   );
   const hasRunOrTestedCode = useSelector(
-    state => state.javalab.hasRunOrTestedCode
+    (state: {javalab: JavalabState}) => state.javalab.hasRunOrTestedCode
   );
-  const validationPassed = useSelector(state => state.javalab.validationPassed);
-
+  const validationPassed = useSelector(
+    (state: {javalab: JavalabState}) => state.javalab.validationPassed
+  );
   const isWaitingForAIResponse = useSelector(
-    state => state.aiTutor.isWaitingForAIResponse
+    (state: {aiTutor: AITutorState}) => state.aiTutor.isWaitingForAIResponse
   );
-  const aiResponse = useSelector(state => state.aiTutor.aiResponse);
+  const aiResponse = useSelector(
+    (state: {aiTutor: AITutorState}) => state.aiTutor.aiResponse
+  );
 
   const systemPrompt = validationSystemPrompt;
 
-  const handleSend = async studentCode => {
-    dispatch(
-      askAITutor({
-        levelId: levelId,
-        systemPrompt: systemPrompt,
-        studentCode: studentCode,
-      })
-    );
+  const handleSend = async (studentCode: string) => {
+    const chatContext = {
+      levelId: levelId,
+      systemPrompt: systemPrompt,
+      studentCode: studentCode,
+    };
+    dispatch(askAITutor(chatContext));
     analyticsReporter.sendEvent(EVENTS.AI_TUTOR_ASK_ABOUT_VALIDATION, {
       levelId: levelId,
     });
@@ -77,7 +90,3 @@ const ValidationTutor = ({levelId}) => {
 };
 
 export default ValidationTutor;
-
-ValidationTutor.propTypes = {
-  levelId: PropTypes.number,
-};

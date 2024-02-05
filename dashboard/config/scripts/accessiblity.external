@@ -12,10 +12,10 @@ markdown <<MARKDOWN
 ### **2. Captions on video**
 
 ### **3. Accessible Colors and Contrast** 
-* #### Adhere to the <a href= 'https://drive.google.com/file/d/1zKhNqPdqUiR-w-_vexhkUXTw8AHn23Lb/view'> Code.org Branding Guidelines</a> to ensure visual accessibility 
+* #### Adhere to the <a href= 'https://www.figma.com/file/Zy20DP3WQroYiytCNuMJt9/Code.org-Branding-Guidelines-and-Style-Guide-(Phase-1)?type=design&node-id=1703-83&mode=design&t=vQiD5WZ2jAtu9uIl-0'> Code.org Branding Guidelines</a> to ensure visual accessibility 
+
 
 ### **4. Best Practices for alt text for images:** 
-* #### Add alt text all non-decorative images.
 * #### Keep it short and descriptive, like a tweet.
 * #### Don’t include “image of” or “photo of”.
 * #### Leave alt text blank if the image is purely decorative

@@ -9,7 +9,7 @@ import {
 } from './index';
 
 export default {
-  title: 'DesignSystem/Radio Button Component',
+  title: 'DesignSystem/Radio Button',
   /**
    * Storybook Docs Generation doesn't work properly (as of 07.19.2023).
    * This workaround (component: Component.type instead of component: Component) is taken from
