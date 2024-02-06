@@ -61,6 +61,10 @@
         align-items: flex-end;
         align-self: stretch;
 
+        label {
+          flex-grow: 1;
+        }
+
         &:hover {
           background-color: $light_gray_100;
         }
@@ -194,8 +198,12 @@
 
     ul {
       li {
-        padding: 0.625rem 1.375rem 0.625rem 1rem;
-        gap: 0.75rem;
+        padding: 0.625rem 0 0.625rem 0;
+
+        label {
+          padding: 0 1rem 0 .75rem;
+          gap: 0.75rem;
+        }
       }
     }
   }
@@ -228,8 +236,12 @@
 
     ul {
       li {
-        padding: 0.5rem 1rem 0.5rem 0.75rem;
-        gap: 0.75rem;
+        padding: 0.5rem 0 0.5rem 0;
+
+        label {
+          padding: 0 1rem 0 .75rem;
+          gap: 0.75rem;
+        }
       }
     }
   }
@@ -262,8 +274,12 @@
 
     ul {
       li {
-        padding: 0.3125rem 0.875rem 0.3125rem 0.625rem;
-        gap: 0.5rem;
+        padding: 0.3125rem 0 0.3125rem 0;
+
+        label {
+          padding: 0 0.875rem 0 0.625rem;
+          gap: 0.5rem;
+        }
       }
     }
   }
@@ -296,8 +312,12 @@
 
     ul {
       li {
-        padding: 0.125rem 0.625rem 0.125rem 0.5rem;
-        gap: 0.25rem;
+        padding: 0.125rem 0 0.125rem 0;
+
+        label {
+          padding: 0 0.625rem 0 0.5rem;
+          gap: 0.25rem;
+        }
       }
     }
   }
