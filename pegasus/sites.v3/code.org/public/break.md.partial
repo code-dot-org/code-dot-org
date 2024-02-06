@@ -48,7 +48,7 @@ social:
 <div style="clear: both;"></div>
 <a id="activities"></a>
 
-<div style="background-color: #7665a0; margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">Weekly Activities &amp; Past Episodes</h1></div>
+<div style="background-color: var(--brand_secondary_default); margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">Weekly Activities &amp; Past Episodes</h1></div>
 <h2>Episode 1 - Algorithms with Hill Harper</h2>
 <div class="col-33" style="padding-right:20px;">
 <h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Watch the 3/25 episode</h4>

@@ -1427,7 +1427,7 @@ en:
       form_instructions_3: "Not seeing your LMS in our list, or running into issues with your installation? Check out our <a href=''>guides</a>, or <a href='https://code.org/contact'>contact us</a> for additional help"
       guide_instructions: "Full guides for installing and our LTI integration <a href=''>can be found here.</a> Running into issues? Feel free to <a href=''>contact us</a> for additional support."
       mailer_confirmation_subject: "Code.org has completed your LMS registration request"
-      mailer_confirmation_body: "Great news! We’ve registered your LMS with Code.org. You should now be able to use our Code.org LMS integrations. Please feel free to review & share our <a href=''>LMS integration guides</a>, or browse our <a href=''>course offerings</a>."
+      mailer_confirmation_body: "Great news! We’ve registered your LMS with Code.org. You should now be able to use our Code.org LMS integrations. Please feel free to review & share our [LMS integration guides](%{integration_guide_url}), or browse our [course offerings](%{course_offering_url})."
       mailer_confirmation_signature: "Thank you, and welcome!"
       privacy_policy: "Your privacy is of utmost importance to us. Your personal information will not be used for any marketing purposes. Please see our <a href='https://code.org/contact'>Privacy Policy here</a> for more information."
       success_body: "Great news! Your LMS has been registered with Code.org, and you can continue installing and using your LMS integration. You should receive a confirmation email shortly."

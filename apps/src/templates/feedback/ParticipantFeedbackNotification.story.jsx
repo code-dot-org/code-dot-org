@@ -5,7 +5,6 @@ import ParticipantFeedbackNotification from './ParticipantFeedbackNotification';
 import sinon from 'sinon';
 
 export default {
-  title: 'ParticipantFeedbackNotification',
   component: ParticipantFeedbackNotification,
 };
 

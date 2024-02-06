@@ -3,7 +3,6 @@ import {action} from '@storybook/addon-actions';
 import StylizedBaseDialog from './StylizedBaseDialog';
 
 export default {
-  title: 'StylizedBaseDialog',
   component: StylizedBaseDialog,
 };
 

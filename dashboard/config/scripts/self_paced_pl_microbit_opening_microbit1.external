@@ -1,0 +1,47 @@
+name 'self-paced-pl-microbit_Opening_microbit1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Opening a lesson or unit
+
+#### The lesson begins with an introduction that includes:
+#### * A sentence explaining what the lesson is about
+#### * List of objectives
+#### * A presurvey (contact RED team to create the survey) 
+#### * Suggested time 
+#### * an image from the lesson 
+
+
+
+##Exemplar: 
+# Teaching CS Fundamentals Maker with micro:bit
+
+
+
+#### Welcome! This professional learning module is designed to help you prepare to teach Code.org's CS Fundamentals Maker with micro:bit unit. 
+
+
+
+## In this module, you will:
+
+* ##### Get an introduction to foundational coding concepts.
+* ##### Practice key concepts included in the unit.
+* ##### 
+* ##### 
+
+## Take the pre-survey
+
+##### Code.org values and is responsive to feedback. Please fill out <a href="www.linkgoeshere.com" target="blank" rel="noopener noreferrer">this short pre-survey</a> to  tell us about who you are and how we can best support you.
+
+<a class="btn btn-large btn-primary" href="www.linkgoeshere.com" target="blank" rel="noopener noreferrer">Take the pre-survey</a>
+
+
+### **Suggested time:** ?? minutes
+
+## Let's get started!
+
+<div style="clear:both"/>
+
+
+MARKDOWN

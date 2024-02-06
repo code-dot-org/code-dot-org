@@ -2,29 +2,21 @@ import React from 'react';
 import {darkMode} from '@cdo/apps/lab2/views/components/editor/editorThemes';
 import {python} from '@codemirror/lang-python';
 import moduleStyles from './python-editor.module.scss';
-import {useDispatch, useSelector} from 'react-redux';
-import {
-  PythonlabState,
-  appendOutput,
-  resetOutput,
-  setCode,
-} from './pythonlabRedux';
+import {useDispatch} from 'react-redux';
+import {appendOutput, resetOutput, setCode} from './pythonlabRedux';
 import Button from '@cdo/apps/templates/Button';
 // import {runPythonCode} from './pyodideRunner';
 import {useFetch} from '@cdo/apps/util/useFetch';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 interface PermissionResponse {
   permissions: string[];
 }
 
 const PythonEditor: React.FunctionComponent = () => {
-  const code = useSelector(
-    (state: {pythonlab: PythonlabState}) => state.pythonlab.code
-  );
-  const codeOutput = useSelector(
-    (state: {pythonlab: PythonlabState}) => state.pythonlab.output
-  );
+  const code = useAppSelector(state => state.pythonlab.code);
+  const codeOutput = useAppSelector(state => state.pythonlab.output);
   const {loading, data} = useFetch('/api/v1/users/current/permissions');
   const dispatch = useDispatch();
 

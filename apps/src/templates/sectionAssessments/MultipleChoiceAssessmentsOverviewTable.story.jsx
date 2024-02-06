@@ -153,7 +153,6 @@ const multipleChoiceData = [
 ];
 
 export default {
-  name: 'MultipleChoiceAssessmentsOverviewTable',
   component: MultipleChoiceAssessmentsOverviewTable,
 };
 
