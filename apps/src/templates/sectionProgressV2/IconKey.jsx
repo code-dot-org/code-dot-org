@@ -7,8 +7,13 @@ import LevelTypesBox from './LevelTypesBox';
 import TeacherActionsBox from './TeacherActionsBox';
 import AssignmentCompletionStatesBox from './AssignmentCompletionStatesBox';
 
-export default function IconKey({isViewingLevelProgress, hasLevelValidation}) {
+export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
   const [isOpen, setIsOpen] = useState(false);
+  const [isViewingLevelProgress, setIsViewingLevelProgress] = useState(false);
+
+  React.useEffect(() => {
+    setIsViewingLevelProgress(expandedLessonIds.length > 0);
+  }, [expandedLessonIds]);
 
   const caret = isOpenA => (isOpenA ? 'caret-down' : 'caret-right');
 
@@ -18,10 +23,10 @@ export default function IconKey({isViewingLevelProgress, hasLevelValidation}) {
     <div>
       <AssignmentCompletionStatesBox
         isViewingLevelProgress={isViewingLevelProgress}
-        hasValidatedLevels={hasLevelValidation}
+        hasValidatedLevels={isViewingValidatedLevel}
       />
-      <TeacherActionsBox isViewingLevelProgress={true} />
-      <LevelTypesBox />
+      <TeacherActionsBox isViewingLevelProgress={isViewingLevelProgress} />
+      {isViewingLevelProgress && <LevelTypesBox />}
     </div>
   );
 
@@ -44,8 +49,8 @@ export default function IconKey({isViewingLevelProgress, hasLevelValidation}) {
 }
 
 IconKey.propTypes = {
-  isViewingLevelProgress: PropTypes.bool,
-  hasLevelValidation: PropTypes.bool,
+  isViewingValidatedLevel: PropTypes.bool,
+  expandedLessonIds: PropTypes.array,
 };
 
 const styles = {

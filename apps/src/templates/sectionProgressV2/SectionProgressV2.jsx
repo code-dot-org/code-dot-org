@@ -17,6 +17,8 @@ function SectionProgressV2({
   isRefreshingProgress,
 }) {
   const [expandedLessonIds, setExpandedLessons] = React.useState([]);
+  const [isViewingValidatedLevel, setIsViewingValidatedLevel] =
+    React.useState(false);
 
   const levelDataInitialized = React.useMemo(() => {
     return unitData && !isLoadingProgress && !isRefreshingProgress;
@@ -28,10 +30,24 @@ function SectionProgressV2({
     }
   }, [unitData, isLoadingProgress, isRefreshingProgress, scriptId, sectionId]);
 
+  React.useEffect(() => {
+    if (expandedLessonIds.length > 0) {
+      // for each lesson in expandedLessonIds
+      // find the lesson in UnitData
+      // check each level in the lesson
+      // if validated setIsViewingValidatedLevel(true) and exit
+    } else {
+      setIsViewingValidatedLevel(false);
+    }
+  }, [expandedLessonIds]);
+
   return (
     <div>
       <Heading1>Progress</Heading1>
-      <IconKey isViewingLevelProgress={true} hasLevelValidation={false} />
+      <IconKey
+        isViewingValidatedLevel={isViewingValidatedLevel}
+        expandedLessonIds={expandedLessonIds}
+      />
       <div className={styles.title}>
         <Heading6 className={styles.titleStudents}>Students</Heading6>
         <Heading6 className={styles.titleUnitSelector}>
