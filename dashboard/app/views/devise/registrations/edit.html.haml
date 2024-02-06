@@ -44,7 +44,7 @@
   - if resource.username.present?
     .field
       = f.label :username, class: "label-bold"
-      = f.text_field :username, autofocus: false, maxlength: 20
+      = f.text_field :username, autofocus: false, maxlength: 20, minlength: 5
   - if f.object.can_edit_password? && f.object.encrypted_password.present?
     %div
       = f.label :password, maxlength: 255, class: "label-bold"
