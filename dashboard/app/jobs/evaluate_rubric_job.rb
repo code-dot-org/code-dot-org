@@ -30,6 +30,8 @@ class EvaluateRubricJob < ApplicationJob
       'CSD web project animated review_2023' => 'csd3-2023-L14',
       'CSD U3 Interactive Card Final_2023' => 'csd3-2023-L18',
       'CSD games sidescroll review_2023' => 'csd3-2023-L21',
+      'CSD U3 collisions flyman bounceOff_2023' => 'csd3-2023-L24',
+      'CSD games project review_2023' => 'csd3-2023-L28',
     }
   }
 
