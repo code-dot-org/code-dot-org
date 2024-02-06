@@ -30,13 +30,15 @@ const HintPrompt = ({
       <Button
         type="cancel"
         onClick={onConfirm}
-        size={'medium'}
+        size={'small'}
+        style={{margin: 2}}
         text={msg.yes()}
       />
       <Button
         type="cancel"
         onClick={onDismiss}
-        size={'medium'}
+        size={'small'}
+        color={'white'}
         text={msg.no()}
       />
     </ChatBubble>

@@ -94,7 +94,7 @@ const ChatBubble = ({
           />
         )}
       </div>
-      {showAudioControls && (
+      {!isHintPrompt && showAudioControls && (
         <div style={styles.audioControls}>
           <InlineAudio src={ttsUrl} message={ttsMessage} style={audioStyle} />
         </div>
