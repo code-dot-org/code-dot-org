@@ -5,14 +5,13 @@ class EvaluateRubricJob < ApplicationJob
   queue_as :default
 
   S3_AI_BUCKET = 'cdo-ai'.freeze
+  # The path to the release directory in S3 which contains the AI rubric evaluation.
+  # When launching ai config changes, this path should be updated to the new release.
   S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-02-01-ai-rubrics-pilot-baseline/'.freeze
   STUB_AI_PROXY_PATH = '/api/test/ai_proxy'.freeze
 
-  # 2D Map from unit name and level name, to the name of the lesson files in S3
-  # which will be used for AI evaluation.
-  # TODO: This is a temporary solution. After the pilot, we should at least make
-  # the S3 pointer editable on levelbuilder, and eventually make all of the data
-  # it points to editable there too.
+  # 2D Map from unit name and level name, to the name of the lesson files within
+  # the release dir in S3 which will be used for AI evaluation.
   UNIT_AND_LEVEL_TO_LESSON_S3_NAME = {
     'csd3-2023' => {
       'CSD U3 Sprites scene challenge_2023' => 'csd3-2023-L11',
