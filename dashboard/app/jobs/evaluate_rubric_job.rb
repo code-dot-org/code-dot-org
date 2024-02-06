@@ -22,7 +22,7 @@ class EvaluateRubricJob < ApplicationJob
       'CSD games project review_2023' => 'csd3-2023-L28',
     },
     'allthethings' => {
-      'CSD U3 Sprites scene challenge_allthethings' => 'allthethings-lesson-48',
+      'CSD U3 Sprites scene challenge_allthethings' => 'allthethings-L48',
     },
     'interactive-games-animations-2023' => {
       'CSD U3 Sprites scene challenge_2023' => 'csd3-2023-L11',
@@ -323,6 +323,22 @@ class EvaluateRubricJob < ApplicationJob
       'examples' => examples.to_json,
       'api-key' => CDO.openai_evaluate_rubric_api_key,
     )
+  end
+
+  def validate_ai_config
+    lesson_s3_names = UNIT_AND_LEVEL_TO_LESSON_S3_NAME.values.map(&:values).flatten.uniq
+    code = 'hello world'
+    lesson_s3_names.each do |lesson_s3_name|
+      validate_ai_config_for_lesson(lesson_s3_name, code)
+    end
+  end
+
+  def validate_ai_config_for_lesson(lesson_s3_name, code)
+    # this step should raise an error if any essential config files are missing
+    # from the S3 release directory
+    get_openai_params(lesson_s3_name, code)
+  rescue Aws::S3::Errors::NoSuchKey => e
+    raise "Error validating AI config for lesson #{lesson_s3_name}: #{e.message}\n request params: #{e.context.params.to_h}"
   end
 
   private def get_openai_evaluations(openai_params)
