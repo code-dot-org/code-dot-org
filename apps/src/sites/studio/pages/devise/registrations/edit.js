@@ -28,7 +28,6 @@ const {
   isCleverStudent,
   dependedUponForLogin,
   dependentStudentsCount,
-  dependentStudentsCountLimit,
   personalAccountLinkingEnabled,
 } = scriptData;
 
@@ -133,7 +132,6 @@ $(document).ready(() => {
         isTeacher={userType === 'teacher'}
         dependedUponForLogin={dependedUponForLogin}
         dependentStudentsCount={dependentStudentsCount}
-        dependentStudentsCountLimit={dependentStudentsCountLimit}
         hasStudents={dependentStudentsCount > 0}
         isAdmin={isAdmin}
       />,

@@ -40,7 +40,6 @@ export default class DeleteAccount extends React.Component {
     isPasswordRequired: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired,
     dependentStudentsCount: PropTypes.number.isRequired,
-    dependentStudentsCountLimit: PropTypes.number.isRequired,
     hasStudents: PropTypes.bool.isRequired,
     isAdmin: PropTypes.bool.isRequired,
   };
@@ -174,7 +173,6 @@ export default class DeleteAccount extends React.Component {
     const {
       isTeacher,
       dependentStudentsCount,
-      dependentStudentsCountLimit,
       isPasswordRequired,
       isAdmin,
     } = this.props;
@@ -214,7 +212,6 @@ export default class DeleteAccount extends React.Component {
         <PersonalLoginDialog
           isOpen={isPersonalLoginDialogOpen}
           dependentStudentsCount={dependentStudentsCount}
-          dependentStudentsCountLimit={dependentStudentsCountLimit}
           onCancel={this.togglePersonalLoginDialog}
           onConfirm={this.goToDeleteAccountDialog}
         />

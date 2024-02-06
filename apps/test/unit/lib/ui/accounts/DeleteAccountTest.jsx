@@ -13,7 +13,6 @@ const DEFAULT_PROPS = {
   isTeacher: false,
   hasStudents: false,
   dependentStudentsCount: 3,
-  dependentStudentsCountLimit: 100,
   isAdmin: false,
 };
 

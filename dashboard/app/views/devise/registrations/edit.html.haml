@@ -268,7 +268,6 @@
       isGoogleClassroomStudent: current_user.google_classroom_student?,
       isCleverStudent: current_user.clever_student?,
       dependentStudentsCount: Queries::User.dependent_students_count(current_user.id),
-      dependentStudentsCountLimit: Policies::User::DEPENDENT_STUDENTS_COUNT_LIMIT,
       personalAccountLinkingEnabled: @personal_account_linking_enabled,
     }.to_json
   }

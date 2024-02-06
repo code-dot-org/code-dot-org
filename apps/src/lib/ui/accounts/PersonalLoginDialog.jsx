@@ -13,7 +13,6 @@ export default class PersonalLoginDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     dependentStudentsCount: PropTypes.number.isRequired,
-    dependentStudentsCountLimit: PropTypes.number.isRequired,
     onCancel: PropTypes.func.isRequired,
     onConfirm: PropTypes.func.isRequired,
   };
@@ -22,7 +21,6 @@ export default class PersonalLoginDialog extends React.Component {
     const {
       isOpen,
       dependentStudentsCount,
-      dependentStudentsCountLimit,
       onCancel,
       onConfirm,
     } = this.props;
