@@ -41,7 +41,6 @@ import {add as addWatcher} from '../redux/watchedExpressions';
 import {changeScreen} from './redux/screens';
 import * as applabConstants from './constants';
 const {ApplabInterfaceMode} = applabConstants;
-import {DataView} from '../storage/constants';
 import consoleApi from '../consoleApi';
 import {
   tableType,
@@ -53,6 +52,7 @@ import {
   setLibraryManifest,
   updateTableList,
 } from '../storage/redux/data';
+import {refreshDataView} from './refresh-data-view';
 import {setStepSpeed} from '../redux/runState';
 import {
   getContainedLevelResultInfo,
@@ -860,73 +860,6 @@ function changedToDataMode(state, lastState) {
 }
 
 /**
- * When we
- * @param {DataView} view
- */
-function onDataViewChange(view, oldTableName, newTableName) {
-  if (!getStore().getState().pageConstants.hasDataMode) {
-    throw new Error('onDataViewChange triggered without data mode enabled');
-  }
-
-  console.log('onDataViewChange', view, oldTableName, newTableName);
-
-  Applab.storage.unsubscribeFromKeyValuePairs();
-  if (oldTableName) {
-    Applab.storage.unsubscribeFromTable(oldTableName);
-  }
-
-  switch (view) {
-    case DataView.PROPERTIES: {
-      // Triggered when the Key Value Pairs tab is brought up
-      Applab.storage.subscribeToKeyValuePairs(keyValueData => {
-        getStore().dispatch(updateKeyValueData(keyValueData));
-      });
-      return;
-    }
-    case DataView.TABLE: {
-      // Triggered when we browse a specific table
-      Applab.storage.subscribeToTable(
-        newTableName,
-        columnNames =>
-          getStore().dispatch(updateTableColumns(newTableName, columnNames)),
-        records =>
-          getStore().dispatch(updateTableRecords(newTableName, records))
-      );
-      return;
-    }
-    case DataView.OVERVIEW: {
-      // Initialize redux's list of tables from firebase, and keep it up to date as
-      // new tables are added and removed.
-
-      // FIXME: unfirebase, this should probably key off of
-      // something better than which function exists, e.g.
-      // if (Applab.storage.STORAGE_NAME === 'firebase') {
-      // OR
-      // if (Applab.storage.STORAGE_NAME === firebase.STORAGE_NAME) {
-      if (Applab.storage.subscribeToListOfProjectTables) {
-        // Firebase
-        Applab.storage.subscribeToListOfProjectTables(
-          tableName =>
-            getStore().dispatch(addTableName(tableName, tableType.PROJECT)),
-          tableName => getStore().dispatch(deleteTableName(tableName))
-        );
-      } else {
-        // Datablock Storage
-        Applab.storage.getTableNames().then(tableNames => {
-          const tableListMap = Object.fromEntries(
-            tableNames.map(tableName => [tableName, tableType.PROJECT])
-          );
-          getStore().dispatch(updateTableList(tableListMap));
-        });
-      }
-      return;
-    }
-    default:
-      return;
-  }
-}
-
-/**
  * Subscribe to state changes on the store.
  * @param {!Store} store
  */
@@ -950,7 +883,8 @@ function setupReduxSubscribers(store) {
       (isDataMode && view !== lastView) ||
       changedToDataMode(state, lastState)
     ) {
-      onDataViewChange(
+      refreshDataView(
+        Applab.storage,
         state.data.view,
         lastState.data.tableName,
         state.data.tableName
