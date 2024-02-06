@@ -81,6 +81,16 @@
             color: $light_white;
           }
         }
+
+        &:has(input[type="checkbox"]:disabled) {
+          cursor: not-allowed;
+          color: $light_gray_200;
+          background-color: unset;
+
+          span {
+            color: $light_gray_200;
+          }
+        }
       }
     }
   }
