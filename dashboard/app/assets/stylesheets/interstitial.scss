@@ -1,3 +1,168 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:16eedfdff437f0a6dc6ffbd8df8853c225022632dfad0eac0e2d2782e4f3a14f
-size 3132
+@import 'color';
+@import 'font';
+
+#terms-modal,
+#school-info-modal,
+#race-modal {
+  text-align: left;
+  top: 20px;
+}
+#terms-modal .modal-content,
+#school-info-modal .modal-content,
+#race-modal .modal-content {
+  margin: 0 20px;
+  padding: 0 15px;
+}
+#terms-modal .modal-content p,
+#school-info-modal .modal-content p,
+#race-modal .modal-content p {
+  font-size: 12px;
+  color: $default_text;
+}
+
+#race-modal .modal-content .custom-h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.7em;
+}
+
+#race-modal .modal-content p {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+#terms-modal .left,
+#school-info-modal .left,
+#race-modal .left {
+  float: left;
+}
+#terms-modal .right {
+  float: right;
+}
+#school-info-modal .right,
+#race-modal .right {
+  float: right;
+  margin-top: 20px;
+}
+#school-info-modal .full-width {
+  width: 100%;
+  padding-bottom: 20px;
+}
+#race-modal .full-width {
+  width: 100%;
+}
+#terms-modal .scroll-box {
+  height: 350px;
+  border: 1px solid $border_gray;
+  padding: 20px;
+  resize: vertical;
+  overflow: auto;
+  overflow-y: scroll;
+}
+#terms-modal label.terms {
+  font-size: inherit;
+  line-height: inherit;
+}
+#terms-modal .terms-text {
+  overflow: hidden;
+}
+
+#terms-modal .terms-checkbox {
+  margin: 0 5px 0 0;
+  float: left;
+}
+#race-modal .race-checkbox {
+  margin: 0 5px 0 0;
+}
+#terms-modal .primary-button,
+#school-info-modal .primary-button,
+#race-modal .primary-button {
+  background-color: $orange;
+  border: 1px solid $orange;
+  color: $white;
+  border-radius: 4px;
+  height: 34px;
+  text-shadow: none;
+  box-shadow: none;
+  background-image: none;
+  margin-top: 10px;
+}
+
+#race-modal .primary-button {
+  background-color: $brand_secondary_default;
+  border-color: $brand_secondary_default;
+  color: $neutral_white;
+  @include main-font-semi-bold;
+}
+
+#terms-modal .disabled-button {
+  background-color: $lighter_gray;
+  border-color: $lighter_gray;
+  color: $dark_charcoal;
+}
+
+#race-modal .disabled-button {
+  color: $neutral_white;
+  border-color: $neutral_dark20;
+  background-color: $neutral_dark20;
+  cursor: not-allowed;
+}
+#terms-modal .custom-h1,
+#race-modal .custom-h1 {
+  margin-top: 25px;
+}
+#race-modal h3 {
+  line-height: 24px;
+}
+#terms-modal .right-margin-5,
+#race-modal .right-margin-5 {
+  margin-right: 5px;
+}
+#race-modal .dismiss-link {
+  font-size: 14px;
+  @include main-font-regular;
+  line-height: 20px;
+}
+#school-info-modal .disabled,
+#race-modal .disabled {
+  color: $light-gray;
+}
+
+$almost_white: #eee;
+#school-info-modal .selectize-control .selectize-input.disabled {
+  opacity: 1;
+  background-color: $almost_white;
+}
+
+@media (max-width: 600px) {
+  #terms-modal, #race-modal, #school-info-modal {
+    width: 400px;
+    left: 70%;
+  }
+
+  #terms-modal .scroll-box {
+    height: 200px;
+  }
+}
+
+#implicit-terms-modal {
+  width: 600px;
+  text-align: left;
+  top: 20px;
+  padding: 20px;
+
+  #implicit_accept_terms_message {
+    font-size: 14px;
+    color: $default_text;
+    margin-left: 0;
+  }
+
+  #close_btn_go_to_account {
+    @include main-font-bold;
+    background-color: $orange;
+    border: 1px solid $orange;
+    color: $white;
+    margin: 25px 0 0 0;
+    padding: 10px 25px;
+  }
+}
