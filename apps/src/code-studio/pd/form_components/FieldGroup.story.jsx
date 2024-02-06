@@ -51,7 +51,7 @@ TestWrapper.propTypes = {
 };
 
 export default {
-  title: 'FormComponents/FieldGroup',
+  title: 'FormComponents/FieldGroup', // eslint-disable-line storybook/no-title-property-in-meta
   component: FieldGroup,
 };
 

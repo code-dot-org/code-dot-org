@@ -29,6 +29,7 @@ module.exports = {
     'mocha',
     'babel',
     'jsx-a11y',
+    'storybook',
   ],
   parserOptions: {
     babelOptions: {
@@ -131,6 +132,12 @@ module.exports = {
         // JavaScript files in TypeScript. Instead, we should add 'allowJs': true to our
         // tsconfig.json file, but this is currently causing some build issues (SL-791)
         '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
+    {
+      files: ['*.story.@(ts|tsx|js|jsx)'],
+      rules: {
+        'storybook/no-title-property-in-meta': 'error',
       },
     },
   ],

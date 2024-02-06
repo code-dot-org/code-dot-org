@@ -110,6 +110,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.6.15",
     "events": "^3.3.0",
     "fast-memoize": "2.0.2",
     "file-loader": "^6.2.0",

@@ -43,7 +43,7 @@ TestWrapper.propTypes = {
 };
 
 export default {
-  title: 'FormComponents/QuestionsTable',
+  title: 'FormComponents/QuestionsTable', // eslint-disable-line storybook/no-title-property-in-meta
   component: QuestionsTable,
 };
 
