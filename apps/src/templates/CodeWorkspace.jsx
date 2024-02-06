@@ -297,7 +297,7 @@ class CodeWorkspace extends React.Component {
         {this.props.hasIncompatibleSources && (
           <div
             id="incompatibleSourcesBanner"
-            style={{...styles.topBanner, ...styles.incompatibleCodeBanner}}
+            style={{...styles.topBanner, ...styles.errorBanner}}
           >
             {i18n.jsonInCdoBlockly()}
           </div>
@@ -305,7 +305,7 @@ class CodeWorkspace extends React.Component {
         {this.props.failedToGenerateSources && (
           <div
             id="failedToGenerateSourcesBanner"
-            style={{...styles.topBanner, ...styles.incompatibleCodeBanner}}
+            style={{...styles.topBanner, ...styles.errorBanner}}
           >
             {i18n.failedToGenerateBlocklyCode()}
           </div>
@@ -351,7 +351,7 @@ const styles = {
     position: 'relative',
     height: 'fit-content',
   },
-  incompatibleCodeBanner: {
+  errorBanner: {
     backgroundColor: color.lightest_red,
   },
   chevronButton: {
