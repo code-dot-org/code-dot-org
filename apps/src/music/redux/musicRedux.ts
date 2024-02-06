@@ -9,18 +9,11 @@ const registerReducers = require('@cdo/apps/redux').registerReducers;
  * State, reducer, and actions for Music Lab.
  */
 
-enum InstructionsPosition {
+export enum InstructionsPosition {
   TOP = 'TOP',
   LEFT = 'LEFT',
   RIGHT = 'RIGHT',
 }
-
-// Exporting enum as object for use in JS files
-export const InstructionsPositions = {
-  TOP: InstructionsPosition.TOP,
-  LEFT: InstructionsPosition.LEFT,
-  RIGHT: InstructionsPosition.RIGHT,
-};
 
 export interface MusicState {
   /** If the song is currently playing */
