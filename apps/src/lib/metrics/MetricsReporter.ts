@@ -198,7 +198,7 @@ class MetricsReporter {
    * this is controlled by the ALWAYS_SEND flag.
    */
   private shouldReport(): boolean {
-    return ALWAYS_SEND || !isDevelopmentEnvironment();
+    return ALWAYS_SEND; //|| !isDevelopmentEnvironment();
   }
 }
 
