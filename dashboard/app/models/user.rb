@@ -490,7 +490,7 @@ class User < ApplicationRecord
 
   has_many :section_instructors, foreign_key: 'instructor_id', dependent: :destroy
   has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor', foreign_key: 'instructor_id'
-  has_many :sections_instructed, -> {without_deleted}, through: :active_section_instructors, source: :section
+  has_many :sections_instructed, -> {without_deleted.where(section_instructors: {deleted_at: nil})}, through: :active_section_instructors, source: :section
 
   # "sections" previously referred to what is now called :sections_owned.
   def sections

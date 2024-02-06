@@ -5081,4 +5081,13 @@ class UserTest < ActiveSupport::TestCase
     follower.destroy
     assert_empty teacher.reload.followers
   end
+
+  test 'does not return followers from formerly-instructed sections with deleted SectionInstructor in active status' do
+    student = create :student
+    teacher = create :teacher
+    section = create :section, teacher: teacher
+    SectionInstructor.where(section: section).destroy_all
+    create :follower, section: section, user: student
+    assert_empty teacher.reload.followers
+  end
 end
