@@ -53,7 +53,7 @@ class Policies::Lti
     },
   }
 
-  MAX_COURSE_MEMBERSHIP = 500
+  MAX_COURSE_MEMBERSHIP = 650
 
   def self.get_account_type(id_token)
     id_token[LTI_ROLES_KEY].each do |role|
