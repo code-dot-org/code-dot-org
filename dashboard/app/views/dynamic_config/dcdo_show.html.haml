@@ -53,7 +53,7 @@
         %div{:class => %w[dcdo-submit-button dcdo-padding]}
           %input{:type => "submit", :value => "Add", :class => "btn"}
     - @dcdo_hsh.to_a.sort.each do |key, value|
-      - current_type = value.class == TrueClass || value.class == FalseClass ? "Boolean" : value.class.to_s
+      - current_type = (value.instance_of?(TrueClass) || value.instance_of?(FalseClass)) ? "Boolean" : value.class.to_s
       = form_for :add, :url => {:controller => 'dynamic_config', :action => 'dcdo_set'} do |f|
         %div{:class => %w[dcdo-row]}
           %div{:class => %w[dcdo-key dcdo-padding]}= key
