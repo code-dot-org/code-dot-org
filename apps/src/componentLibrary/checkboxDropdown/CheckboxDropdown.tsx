@@ -158,9 +158,9 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
         <FontAwesomeV6Icon iconStyle="solid" iconName="chevron-down" />
       </button>
       <form className={moduleStyles.dropdownMenuContainer}>
-        <ul className={'style.dropdownCheckboxUL'}>
+        <ul>
           {allOptions.map(({value, label, isOptionDisabled}) => (
-            <li key={value} className="checkbox form-group">
+            <li key={value}>
               <Checkbox
                 checked={checkedOptions.includes(value)}
                 disabled={disabled || isOptionDisabled}
