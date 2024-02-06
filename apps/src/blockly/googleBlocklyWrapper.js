@@ -5,7 +5,7 @@ import {
   ScrollBlockDragger,
   ScrollOptions,
 } from '@blockly/plugin-scroll-options';
-import {NavigationController} from '@blockly/keyboard-navigation';
+import {LineCursor, NavigationController} from '@blockly/keyboard-navigation';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
 import {BlocklyVersion} from '@cdo/apps/blockly/constants';
 import styleConstants from '@cdo/apps/styleConstants';
@@ -175,15 +175,16 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_LEFT');
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_RIGHT');
   blocklyWrapper.wrapReadOnlyProperty('applab_locale');
-  blocklyWrapper.wrapReadOnlyProperty('blockRendering');
+  blocklyWrapper.wrapReadOnlyProperty('BasicCursor');
   blocklyWrapper.wrapReadOnlyProperty('Block');
   blocklyWrapper.wrapReadOnlyProperty('BlockFieldHelper');
+  blocklyWrapper.wrapReadOnlyProperty('blockRendering.ConstantProvider');
+  blocklyWrapper.wrapReadOnlyProperty('blockRendering');
   blocklyWrapper.wrapReadOnlyProperty('Blocks');
   blocklyWrapper.wrapReadOnlyProperty('BlockSvg');
   blocklyWrapper.wrapReadOnlyProperty('browserEvents');
-  blocklyWrapper.wrapReadOnlyProperty('blockRendering.ConstantProvider');
-  blocklyWrapper.wrapReadOnlyProperty('common');
   blocklyWrapper.wrapReadOnlyProperty('common_locale');
+  blocklyWrapper.wrapReadOnlyProperty('common');
   blocklyWrapper.wrapReadOnlyProperty('ComponentManager');
   blocklyWrapper.wrapReadOnlyProperty('config');
   blocklyWrapper.wrapReadOnlyProperty('Connection');
@@ -193,8 +194,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('createBlockDefinitionsFromJsonArray');
   blocklyWrapper.wrapReadOnlyProperty('createSvgElement');
   blocklyWrapper.wrapReadOnlyProperty('Css');
-  blocklyWrapper.wrapReadOnlyProperty('DropDownDiv');
+  blocklyWrapper.wrapReadOnlyProperty('Cursor');
   blocklyWrapper.wrapReadOnlyProperty('disableVariableEditing');
+  blocklyWrapper.wrapReadOnlyProperty('DropDownDiv');
   blocklyWrapper.wrapReadOnlyProperty('Events');
   blocklyWrapper.wrapReadOnlyProperty('Extensions');
   blocklyWrapper.wrapReadOnlyProperty('FieldAngleDropdown');
@@ -215,15 +217,13 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('gamelab_locale');
   blocklyWrapper.wrapReadOnlyProperty('Generator');
   blocklyWrapper.wrapReadOnlyProperty('geras');
-  blocklyWrapper.wrapReadOnlyProperty('thrasos');
-  blocklyWrapper.wrapReadOnlyProperty('zelos');
   blocklyWrapper.wrapReadOnlyProperty('getRelativeXY');
   blocklyWrapper.wrapReadOnlyProperty('googlecode');
   blocklyWrapper.wrapReadOnlyProperty('hasCategories');
   blocklyWrapper.wrapReadOnlyProperty('html');
+  blocklyWrapper.wrapReadOnlyProperty('INPUT_VALUE');
   blocklyWrapper.wrapReadOnlyProperty('Input');
   blocklyWrapper.wrapReadOnlyProperty('inputTypes');
-  blocklyWrapper.wrapReadOnlyProperty('INPUT_VALUE');
   blocklyWrapper.wrapReadOnlyProperty('js');
   blocklyWrapper.wrapReadOnlyProperty('MenuItem');
   blocklyWrapper.wrapReadOnlyProperty('MetricsManager');
@@ -239,21 +239,23 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('serialization');
   blocklyWrapper.wrapReadOnlyProperty('SPRITE');
   blocklyWrapper.wrapReadOnlyProperty('svgResize');
-  blocklyWrapper.wrapReadOnlyProperty('tutorialExplorer_locale');
-  blocklyWrapper.wrapReadOnlyProperty('useContractEditor');
-  blocklyWrapper.wrapReadOnlyProperty('utils');
+  blocklyWrapper.wrapReadOnlyProperty('thrasos');
   blocklyWrapper.wrapReadOnlyProperty('Toolbox');
   blocklyWrapper.wrapReadOnlyProperty('Touch');
   blocklyWrapper.wrapReadOnlyProperty('Trashcan');
+  blocklyWrapper.wrapReadOnlyProperty('tutorialExplorer_locale');
+  blocklyWrapper.wrapReadOnlyProperty('useContractEditor');
+  blocklyWrapper.wrapReadOnlyProperty('utils');
   blocklyWrapper.wrapReadOnlyProperty('VARIABLE_CATEGORY_NAME');
-  blocklyWrapper.wrapReadOnlyProperty('Variables');
   blocklyWrapper.wrapReadOnlyProperty('VariableMap');
   blocklyWrapper.wrapReadOnlyProperty('VariableModel');
+  blocklyWrapper.wrapReadOnlyProperty('Variables');
   blocklyWrapper.wrapReadOnlyProperty('weblab_locale');
   blocklyWrapper.wrapReadOnlyProperty('WidgetDiv');
   blocklyWrapper.wrapReadOnlyProperty('Workspace');
   blocklyWrapper.wrapReadOnlyProperty('WorkspaceSvg');
   blocklyWrapper.wrapReadOnlyProperty('Xml');
+  blocklyWrapper.wrapReadOnlyProperty('zelos');
 
   // elements in this list should be structured as follows:
   // [field registry name for field, class name of field being overridden, class to use as override]
@@ -389,6 +391,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   Object.setPrototypeOf(javascriptGenerator.forBlock, javascriptGenerator);
 
   blocklyWrapper.JavaScript = javascriptGenerator;
+  blocklyWrapper.LineCursor = LineCursor;
   blocklyWrapper.navigationController = new NavigationController();
   // Initialize plugin.
   blocklyWrapper.navigationController.init();
