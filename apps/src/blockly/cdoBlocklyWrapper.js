@@ -7,8 +7,12 @@ import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 import customBlocks from './customBlocks/cdoBlockly/index.js';
 import {parseElement as parseXmlElement} from '../xml';
 import {getStore} from '@cdo/apps/redux';
-import {setHasIncompatibleSources} from '../redux/blockly';
+import {
+  setFailedToGenerateSources,
+  setHasIncompatibleSources,
+} from '@cdo/apps/redux/blockly';
 import * as blockUtils from '../block_utils';
+import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 
 const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
@@ -220,12 +224,28 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
 
   blocklyWrapper.getWorkspaceCode = function (opt_showHidden) {
-    const code = Blockly.Generator.blockSpaceToCode(
-      'JavaScript',
-      null,
-      !!opt_showHidden
-    );
-    return strip(code);
+    let code = '';
+    try {
+      code = Blockly.Generator.blockSpaceToCode(
+        'JavaScript',
+        null,
+        !!opt_showHidden
+      );
+      code = strip(code);
+      getStore().dispatch(setFailedToGenerateSources(false));
+    } catch (e) {
+      // We only want to log the error once per failure since getWorkspaceCode
+      // gets called many times and the error will be the same every time.
+      if (!getStore().getState().blockly.failedToGenerateSources) {
+        getStore().dispatch(setFailedToGenerateSources(true));
+        MetricsReporter.logError({
+          event: 'CDO_BLOCKLY_GET_CODE_ERROR',
+          errorMessage: e.message,
+          stackTrace: e.stack,
+        });
+      }
+      return code;
+    }
   };
 
   // We renamed createReadOnlyBlockSpace to createEmbeddedWorkspace for clarity.

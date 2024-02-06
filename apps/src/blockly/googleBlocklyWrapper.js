@@ -180,7 +180,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       if (!getStore().getState().blockly.failedToGenerateSources) {
         getStore().dispatch(setFailedToGenerateSources(true));
         MetricsReporter.logError({
-          event: 'BLOCKLY_GET_CODE_ERROR',
+          event: 'GOOGLE_BLOCKLY_GET_CODE_ERROR',
           errorMessage: e.message,
           stackTrace: e.stack,
         });
