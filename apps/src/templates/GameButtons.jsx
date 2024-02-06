@@ -36,6 +36,10 @@ RunButton.propTypes = {
 };
 RunButton.displayName = 'RunButton';
 
+// The reset button is hidden by default,
+// then shown either by passing in style props to override
+// or imperatively by selecting the DOM node by ID
+// elsewhere in our code base (eg, StudioApp)
 export const ResetButton = Radium(props => (
   <button
     type="button"
