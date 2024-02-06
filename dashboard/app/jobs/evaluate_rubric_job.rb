@@ -5,7 +5,7 @@ class EvaluateRubricJob < ApplicationJob
   queue_as :default
 
   S3_AI_BUCKET = 'cdo-ai'.freeze
-  S3_AI_RELEASE_PATH = 'teaching_assistant/lessons/'.freeze
+  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-02-01-ai-rubrics-pilot-baseline/'.freeze
   STUB_AI_PROXY_PATH = '/api/test/ai_proxy'.freeze
 
   # 2D Map from unit name and level name, to the name of the lesson files in S3
@@ -15,21 +15,21 @@ class EvaluateRubricJob < ApplicationJob
   # it points to editable there too.
   UNIT_AND_LEVEL_TO_LESSON_S3_NAME = {
     'csd3-2023' => {
-      'CSD U3 Sprites scene challenge_2023' => 'New-U3-2022-L10',
-      'CSD web project animated review_2023' => 'New-U3-2022-L13',
-      'CSD U3 Interactive Card Final_2023' => 'CSD-2022-U3-L17',
-      'CSD games sidescroll review_2023' => 'New-U3-2022-L20',
-      'CSD U3 collisions flyman bounceOff_2023' => 'New-U3-2023-L24',
-      'CSD games project review_2023' => 'U3-2023-L28',
+      'CSD U3 Sprites scene challenge_2023' => 'csd3-2023-L11',
+      'CSD web project animated review_2023' => 'csd3-2023-L14',
+      'CSD U3 Interactive Card Final_2023' => 'csd3-2023-L18',
+      'CSD games sidescroll review_2023' => 'csd3-2023-L21',
+      'CSD U3 collisions flyman bounceOff_2023' => 'csd3-2023-L24',
+      'CSD games project review_2023' => 'csd3-2023-L28',
     },
     'allthethings' => {
       'CSD U3 Sprites scene challenge_allthethings' => 'allthethings-lesson-48',
     },
     'interactive-games-animations-2023' => {
-      'CSD U3 Sprites scene challenge_2023' => 'New-U3-2022-L10',
-      'CSD web project animated review_2023' => 'New-U3-2022-L13',
-      'CSD U3 Interactive Card Final_2023' => 'CSD-2022-U3-L17',
-      'CSD games sidescroll review_2023' => 'New-U3-2022-L20',
+      'CSD U3 Sprites scene challenge_2023' => 'csd3-2023-L11',
+      'CSD web project animated review_2023' => 'csd3-2023-L14',
+      'CSD U3 Interactive Card Final_2023' => 'csd3-2023-L18',
+      'CSD games sidescroll review_2023' => 'csd3-2023-L21',
     }
   }
 
