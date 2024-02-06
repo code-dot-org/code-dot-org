@@ -18,12 +18,7 @@ export default class PersonalLoginDialog extends React.Component {
   };
 
   render() {
-    const {
-      isOpen,
-      dependentStudentsCount,
-      onCancel,
-      onConfirm,
-    } = this.props;
+    const {isOpen, dependentStudentsCount, onCancel, onConfirm} = this.props;
 
     return (
       <BaseDialog

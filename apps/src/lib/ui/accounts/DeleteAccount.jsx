@@ -170,12 +170,8 @@ export default class DeleteAccount extends React.Component {
   };
 
   render() {
-    const {
-      isTeacher,
-      dependentStudentsCount,
-      isPasswordRequired,
-      isAdmin,
-    } = this.props;
+    const {isTeacher, dependentStudentsCount, isPasswordRequired, isAdmin} =
+      this.props;
     const {
       isPersonalLoginDialogOpen,
       isAdminAccountDialogOpen,
