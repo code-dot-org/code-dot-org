@@ -5,17 +5,18 @@ import sinon from 'sinon';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import EditorAnnotator from '@cdo/apps/EditorAnnotator';
+import {
+  singleton as studioAppSingleton,
+  stubStudioApp,
+  restoreStudioApp,
+} from '@cdo/apps/StudioApp';
 import LearningGoals, {
   clearAnnotations,
   findCodeRegion,
   getAnonymizedCode,
   annotateLines,
 } from '@cdo/apps/templates/rubrics/LearningGoals';
-import {
-  singleton as studioAppSingleton,
-  stubStudioApp,
-  restoreStudioApp,
-} from '@cdo/apps/StudioApp';
 
 describe('LearningGoals', () => {
   let studioApp;
@@ -77,17 +78,23 @@ describe('LearningGoals', () => {
     stubStudioApp();
     studioApp = studioAppSingleton();
     sinon.stub(studioApp, 'getCode').returns(code);
-    annotateLineStub = sinon.stub(studioApp, 'annotateLine');
-    clearAnnotationsStub = sinon.stub(studioApp, 'clearAnnotations');
-    highlightLineStub = sinon.stub(studioApp, 'highlightLine');
-    clearHighlightedLinesStub = sinon.stub(studioApp, 'clearHighlightedLines');
+    annotateLineStub = sinon.stub(EditorAnnotator.prototype, 'annotateLine');
+    clearAnnotationsStub = sinon.stub(
+      EditorAnnotator.prototype,
+      'clearAnnotations'
+    );
+    highlightLineStub = sinon.stub(EditorAnnotator.prototype, 'highlightLine');
+    clearHighlightedLinesStub = sinon.stub(
+      EditorAnnotator.prototype,
+      'clearHighlightedLines'
+    );
   });
   afterEach(() => {
     studioApp.getCode.restore();
-    studioApp.annotateLine.restore();
-    studioApp.clearAnnotations.restore();
-    studioApp.highlightLine.restore();
-    studioApp.clearHighlightedLines.restore();
+    EditorAnnotator.prototype.annotateLine.restore();
+    EditorAnnotator.prototype.clearAnnotations.restore();
+    EditorAnnotator.prototype.highlightLine.restore();
+    EditorAnnotator.prototype.clearHighlightedLines.restore();
     restoreStudioApp();
   });
 
@@ -163,43 +170,60 @@ describe('LearningGoals', () => {
   });
 
   describe('annotateLines', () => {
+    let annotator;
+    beforeEach(() => {
+      annotator = new EditorAnnotator(studioApp);
+    });
+
     it('should do nothing if the AI observation does not reference any lines', () => {
       // The AI tends to misreport the line number, so we shouldn't rely on it
-      annotateLines('This is just a basic observation.');
+      annotateLines('This is just a basic observation.', annotator);
       expect(annotateLineStub.notCalled).to.be.true;
     });
 
     it('should annotate a single line of code referenced by the AI', () => {
       // The AI tends to misreport the line number, so we shouldn't rely on it
-      annotateLines('Line 1: This is a line of code `var x = 5;`');
+      annotateLines('Line 1: This is a line of code `var x = 5;`', annotator);
       sinon.assert.calledWith(annotateLineStub, 'This is a line of code', 2);
     });
 
     it('should annotate the first line of code referenced by the AI', () => {
-      annotateLines('Line 1: This is a line of code `var x = 5; var y = 6;`');
+      annotateLines(
+        'Line 1: This is a line of code `var x = 5; var y = 6;`',
+        annotator
+      );
       sinon.assert.calledWith(annotateLineStub, 'This is a line of code', 2);
     });
 
     it('should highlight a single line of code referenced by the AI', () => {
       // The AI tends to misreport the line number, so we shouldn't rely on it
-      annotateLines('Line 1: This is a line of code `var x = 5; var y = 6;`');
+      annotateLines(
+        'Line 1: This is a line of code `var x = 5; var y = 6;`',
+        annotator
+      );
       sinon.assert.calledWith(highlightLineStub, 2);
     });
 
     it('should highlight all lines of code referenced by the AI', () => {
-      annotateLines('Line 1: This is a line of code `var x = 5; var y = 6;`');
+      annotateLines(
+        'Line 1: This is a line of code `var x = 5; var y = 6;`',
+        annotator
+      );
       sinon.assert.calledWith(highlightLineStub, 2);
       sinon.assert.calledWith(highlightLineStub, 3);
     });
 
     it('should just highlight the lines the AI thinks if the referenced code does not exist', () => {
-      annotateLines('Line 45: This is a line of code `var z = 0`');
+      annotateLines('Line 45: This is a line of code `var z = 0`', annotator);
       sinon.assert.calledWith(annotateLineStub, 'This is a line of code', 45);
       sinon.assert.calledWith(highlightLineStub, 45);
     });
 
     it('should just highlight all of the lines the AI thinks if the referenced code does not exist', () => {
-      annotateLines('Line 42-44: This is a line of code `var z = 0`');
+      annotateLines(
+        'Line 42-44: This is a line of code `var z = 0`',
+        annotator
+      );
       sinon.assert.calledWith(annotateLineStub, 'This is a line of code', 42);
       sinon.assert.calledWith(highlightLineStub, 42);
       sinon.assert.calledWith(highlightLineStub, 43);
@@ -207,24 +231,29 @@ describe('LearningGoals', () => {
     });
 
     it('should annotate the last line of code when referenced by the AI', () => {
-      annotateLines('Line 55: This is a line of code `draw();`');
+      annotateLines('Line 55: This is a line of code `draw();`', annotator);
       sinon.assert.calledWith(annotateLineStub, 'This is a line of code', 8);
     });
 
     it('should highlight the last line of code when referenced by the AI', () => {
-      annotateLines('Line 55: This is a line of code `draw();`');
+      annotateLines('Line 55: This is a line of code `draw();`', annotator);
       sinon.assert.calledWith(highlightLineStub, 8);
     });
 
     it('should ignore code snippets that are empty', () => {
-      annotateLines('Line 42: This is totally a thing ` `');
+      annotateLines('Line 42: This is totally a thing ` `', annotator);
       sinon.assert.notCalled(highlightLineStub);
     });
   });
 
   describe('clearAnnotations', () => {
+    let annotator;
+    beforeEach(() => {
+      annotator = new EditorAnnotator(studioApp);
+    });
+
     it('should clear annotations and clear highlighted lines', () => {
-      clearAnnotations();
+      clearAnnotations(annotator);
       sinon.assert.called(clearAnnotationsStub);
       sinon.assert.called(clearHighlightedLinesStub);
     });
