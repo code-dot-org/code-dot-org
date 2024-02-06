@@ -55,7 +55,7 @@ class InstructionsCsfLeftCol extends React.Component {
   handleClickLightbulb = () => {
     // If we don't have authored hints to display, clicking lightbulb shouldn't do anything.
     if (this.props.hasAuthoredHints && this.props.hasUnseenHint) {
-      this.props.requestHint();
+      this.requestHintPrompt();
     }
   };
 
@@ -71,14 +71,18 @@ class InstructionsCsfLeftCol extends React.Component {
       this.props.hasUnseenHint
     ) {
       e.preventDefault();
-      this.props.requestHint();
-      // Defer focus until the next pass of the event loop. This is necessary so that the element
-      // has been added to the dom. Note that there can only be at most one hint prompt on the page.
-      setTimeout(
-        () => document.getElementById('hint-prompt-yes-button').focus(),
-        0
-      );
+      this.requestHintPrompt();
     }
+  };
+
+  requestHintPrompt = () => {
+    this.props.requestHint();
+    // Defer focus until the next pass of the event loop. This is necessary so that the element
+    // has been added to the dom. Note that there can only be at most one hint prompt on the page.
+    setTimeout(
+      () => document.getElementById('hint-prompt-yes-button').focus(),
+      0
+    );
   };
 
   getAvatar() {
