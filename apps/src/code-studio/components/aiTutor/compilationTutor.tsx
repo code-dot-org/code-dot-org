@@ -12,11 +12,11 @@ import {compilationSystemPrompt} from '@cdo/apps/aiTutor/constants';
 import {TutorTypes} from '@cdo/apps/aiTutor/types';
 
 // AI Tutor feature that explains to students why their code did not compile.
-const CompilationTutor = (
-  levelId: number,
-  isProjectBacked: boolean,
-  scriptId: number
-) => {
+const CompilationTutor: React.FunctionComponent<CompilationTutorProps> = ({
+  levelId,
+  isProjectBacked,
+  scriptId,
+}) => {
   const dispatch = useAppDispatch();
 
   const sources = useSelector(
@@ -85,5 +85,11 @@ const CompilationTutor = (
     </div>
   );
 };
+
+interface CompilationTutorProps {
+  levelId: number;
+  isProjectBacked: boolean;
+  scriptId: number;
+}
 
 export default CompilationTutor;

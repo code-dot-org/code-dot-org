@@ -23,6 +23,7 @@ function initPage() {
   const config = JSON.parse(script.dataset.level);
 
   registerReducers({instructions});
+
   // this is the common js entry point for level pages
   // which is why ttsAutoplay is set here
   const ttsAutoplayEnabled = config.tts_autoplay_enabled;
@@ -61,12 +62,18 @@ function initPage() {
     const scriptData = getScriptData('scriptdata');
     console.log("script data", scriptData)
     const aiTutorLevelData = getScriptData('aitutorleveldata');
+    const {id, type, hasValidation} = aiTutorLevelData;
+    const level = {
+      id: id,
+      type: type,
+      hasValidation: hasValidation,
+    };
     const aiTutorFabMountPoint = document.getElementById(
       'ai-tutor-fab-mount-point'
     );
     if (aiTutorFabMountPoint) {
       ReactDOM.render(
-        <AITutorFloatingActionButton level={aiTutorLevelData} scriptId={scriptData.script_id}/>,
+        <AITutorFloatingActionButton level={level} scriptId={scriptData.script_id} />,
         aiTutorFabMountPoint
       );
     }

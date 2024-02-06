@@ -2,11 +2,12 @@ import {getChatCompletionMessage} from '@cdo/apps/aichat/chatApi';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
 import {generalChatSystemPrompt} from '@cdo/apps/aiTutor/constants';
 import {savePromptAndResponse} from '../interactionsApi';
-import {TutorTypes, Role, Status, ChatCompletionMessage} from '../types';
+import {TutorTypes, Role, Status, ChatCompletionMessage, Level} from '../types';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
 export interface AITutorState {
+  level: Level | undefined;
   // State for compilation and validation.
   aiResponse: string | undefined;
   isWaitingForAIResponse: boolean;
@@ -26,6 +27,7 @@ const initialChatMessages: ChatCompletionMessage[] = [
 ];
 
 const initialState: AITutorState = {
+  level: undefined,
   aiResponse: '',
   isWaitingForAIResponse: false,
   chatMessages: initialChatMessages,
@@ -158,6 +160,9 @@ const aiTutorSlice = createSlice({
     addAIResponse: (state, action: PayloadAction<string | undefined>) => {
       state.aiResponse = action.payload;
     },
+    setLevel: (state, action: PayloadAction<Level | undefined>) => {
+      state.level = action.payload;
+    },
     setIsWaitingForAIResponse: (state, action: PayloadAction<boolean>) => {
       state.isWaitingForAIResponse = action.payload;
     },
@@ -208,6 +213,7 @@ const aiTutorSlice = createSlice({
 
 registerReducers({aiTutor: aiTutorSlice.reducer});
 export const {
+  setLevel,
   addAIResponse,
   addChatMessage,
   clearChatMessages,

@@ -12,11 +12,11 @@ import {validationSystemPrompt} from '@cdo/apps/aiTutor/constants';
 import {TutorTypes} from '@cdo/apps/aiTutor/types';
 
 // AI Tutor feature that explains to students why their code is not passing tests.
-const ValidationTutor = (
-  levelId: number,
-  isProjectBacked: boolean,
-  scriptId: number
-) => {
+const ValidationTutor: React.FunctionComponent<ValidationTutorProps> = ({
+  levelId,
+  isProjectBacked,
+  scriptId
+}) => {
   const dispatch = useAppDispatch();
 
   const sources = useSelector(
@@ -96,5 +96,11 @@ const ValidationTutor = (
     </div>
   );
 };
+
+interface ValidationTutorProps {
+  levelId: number;
+  isProjectBacked: boolean;
+  scriptId: number;
+}
 
 export default ValidationTutor;
