@@ -5075,9 +5075,10 @@ class UserTest < ActiveSupport::TestCase
 
   test "does not return deleted followers from the followers helper" do
     student = create :student
-    section = create :section
-    follower = create :follower, student_user_id: student.id, section_id: section.id
-    follower.delete
+    teacher = create :teacher
+    section = create :section, teacher: teacher
+    follower = create :follower, section: section, user: student
+    follower.destroy
     assert_empty student.reload.followers
   end
 end
