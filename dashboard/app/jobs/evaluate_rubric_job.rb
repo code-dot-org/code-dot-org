@@ -14,9 +14,9 @@ class EvaluateRubricJob < ApplicationJob
   # it points to editable there too.
   UNIT_AND_LEVEL_TO_LESSON_S3_NAME = {
     'csd3-2023' => {
-      'CSD U3 Interactive Card Final_2023' => 'CSD-2022-U3-L17',
       'CSD U3 Sprites scene challenge_2023' => 'New-U3-2022-L10',
       'CSD web project animated review_2023' => 'New-U3-2022-L13',
+      'CSD U3 Interactive Card Final_2023' => 'CSD-2022-U3-L17',
       'CSD games sidescroll review_2023' => 'New-U3-2022-L20',
       'CSD U3 collisions flyman bounceOff_2023' => 'New-U3-2023-L24',
       'CSD games project review_2023' => 'U3-2023-L28',
@@ -25,9 +25,9 @@ class EvaluateRubricJob < ApplicationJob
       'CSD U3 Sprites scene challenge_allthethings' => 'allthethings-lesson-48',
     },
     'interactive-games-animations-2023' => {
-      'CSD U3 Interactive Card Final_2023' => 'CSD-2022-U3-L17',
       'CSD U3 Sprites scene challenge_2023' => 'New-U3-2022-L10',
       'CSD web project animated review_2023' => 'New-U3-2022-L13',
+      'CSD U3 Interactive Card Final_2023' => 'CSD-2022-U3-L17',
       'CSD games sidescroll review_2023' => 'New-U3-2022-L20',
     }
   }
