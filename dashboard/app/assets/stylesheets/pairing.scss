@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b984cf51724c4de63c31f8cecbbb95cb1bbd04764d16d6aae6df219746030275
-size 185
+@import "color";
+
+#pairing {
+  .student {
+    color: $cyan;
+    padding: 10px;
+    border: 1px solid $cyan;
+    float: left;
+    border-radius: 5px;
+    margin: 10px 10px 10px 0;
+  }
+}

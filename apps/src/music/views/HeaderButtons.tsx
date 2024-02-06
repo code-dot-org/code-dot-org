@@ -60,11 +60,11 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   const onFeedbackClicked = () => {
     if (analyticsReporter) {
       analyticsReporter.onButtonClicked('feedback');
-      window.open(
-        'https://docs.google.com/forms/d/e/1FAIpQLScnUgehPPNjhSNIcCpRMcHFgtE72TlfTOh6GkER6aJ-FtIwTQ/viewform?usp=sf_link',
-        '_blank'
-      );
     }
+    window.open(
+      'https://docs.google.com/forms/d/e/1FAIpQLScnUgehPPNjhSNIcCpRMcHFgtE72TlfTOh6GkER6aJ-FtIwTQ/viewform?usp=sf_link',
+      '_blank'
+    );
   };
 
   return (

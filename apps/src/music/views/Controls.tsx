@@ -1,22 +1,21 @@
-import PropTypes from 'prop-types';
-import React, {useEffect, useContext, useCallback} from 'react';
+import React, {useCallback} from 'react';
 import classNames from 'classnames';
-import FontAwesome from '../../templates/FontAwesome';
 import {Triggers} from '@cdo/apps/music/constants';
 import moduleStyles from './controls.module.scss';
 import BeatPad from './BeatPad';
-import {AnalyticsContext} from '../context';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import {
-  hideBeatPad,
   moveStartPlayheadPositionBackward,
   moveStartPlayheadPositionForward,
-  showBeatPad,
 } from '../redux/musicRedux';
-import commonI18n from '@cdo/locale';
+import {useMusicSelector} from './types';
+import {commonI18n} from '@cdo/apps/types/locale';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 
-const LoadingProgress = () => {
-  const progressValue = useSelector(state => state.music.soundLoadingProgress);
+const LoadingProgress: React.FunctionComponent = () => {
+  const progressValue = useMusicSelector(
+    state => state.music.soundLoadingProgress
+  );
 
   return (
     <div
@@ -41,12 +40,12 @@ const LoadingProgress = () => {
   );
 };
 
-const SkipControls = () => {
-  const isPlaying = useSelector(state => state.music.isPlaying);
+const SkipControls: React.FunctionComponent = () => {
+  const isPlaying = useMusicSelector(state => state.music.isPlaying);
   const dispatch = useDispatch();
 
   const onClickSkip = useCallback(
-    forward => {
+    (forward: boolean) => {
       if (isPlaying) {
         return;
       }
@@ -71,7 +70,11 @@ const SkipControls = () => {
         onClick={() => onClickSkip(false)}
         type="button"
       >
-        <FontAwesome icon={'step-backward'} className={moduleStyles.icon} />
+        <FontAwesomeV6Icon
+          iconName={'step-backward'}
+          iconStyle="solid"
+          className={moduleStyles.icon}
+        />
       </button>
       <button
         id="skip-forward-button"
@@ -82,51 +85,37 @@ const SkipControls = () => {
         onClick={() => onClickSkip(true)}
         type="button"
       >
-        <FontAwesome icon={'step-forward'} className={moduleStyles.icon} />
+        <FontAwesomeV6Icon
+          iconName={'step-forward'}
+          iconStyle="solid"
+          className={moduleStyles.icon}
+        />
       </button>
     </>
   );
 };
 
+interface ControlsProps {
+  setPlaying: (value: boolean) => void;
+  playTrigger: (id: string) => void;
+  hasTrigger: (id: string) => boolean;
+  enableSkipControls?: boolean;
+}
+
 /**
  * Renders the playback controls bar, including the play/pause button, show/hide beat pad button,
  * and show/hide instructions button.
  */
-const Controls = ({
+const Controls: React.FunctionComponent<ControlsProps> = ({
   setPlaying,
   playTrigger,
   hasTrigger,
   enableSkipControls = false,
 }) => {
-  const isPlaying = useSelector(state => state.music.isPlaying);
-  const isBeatPadShowing = useSelector(state => state.music.isBeatPadShowing);
-  const isLoading = useSelector(state => state.music.soundLoadingProgress < 1);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    if (isPlaying) {
-      dispatch(showBeatPad());
-    }
-  }, [dispatch, isPlaying]);
-
-  const analyticsReporter = useContext(AnalyticsContext);
-
-  const renderBeatPad = () => {
-    return (
-      <BeatPad
-        triggers={Triggers}
-        playTrigger={playTrigger}
-        onClose={() => {
-          dispatch(hideBeatPad());
-          analyticsReporter.onButtonClicked('show-hide-beatpad', {
-            showing: false,
-          });
-        }}
-        hasTrigger={hasTrigger}
-        isPlaying={isPlaying}
-      />
-    );
-  };
+  const isPlaying = useMusicSelector(state => state.music.isPlaying);
+  const isLoading = useMusicSelector(
+    state => state.music.soundLoadingProgress < 1
+  );
 
   return (
     <div id="controls" className={moduleStyles.controlsContainer}>
@@ -141,8 +130,9 @@ const Controls = ({
           type="button"
           disabled={isLoading}
         >
-          <FontAwesome
-            icon={isPlaying ? 'stop' : 'play'}
+          <FontAwesomeV6Icon
+            iconName={isPlaying ? 'stop' : 'play'}
+            iconStyle="solid"
             className={moduleStyles.icon}
           />
           <div className={moduleStyles.text}>
@@ -151,17 +141,13 @@ const Controls = ({
         </button>
         {enableSkipControls && <SkipControls />}
       </div>
-      {isBeatPadShowing && renderBeatPad()}
+      <BeatPad
+        triggers={Triggers.filter(trigger => hasTrigger(trigger.id))}
+        playTrigger={playTrigger}
+      />
       <LoadingProgress />
     </div>
   );
-};
-
-Controls.propTypes = {
-  setPlaying: PropTypes.func.isRequired,
-  playTrigger: PropTypes.func.isRequired,
-  hasTrigger: PropTypes.func.isRequired,
-  enableSkipControls: PropTypes.bool,
 };
 
 export default Controls;
