@@ -2018,7 +2018,7 @@
   "privacyPolicy": "Privacy Policy",
   "privacyPracticesForChildren": "See our privacy practices for children",
   "projectWarning": "Note: You are on a level that is part of a longer project. Changes made on this level will also appear in other levels in the project.",
-  "promptIconAndLightbulbInstructionHints": "icon with lightbulb image - click to display instruction hints prompt if hints available",
+  "promptIconAndLightbulbInstructionHints": "A friendly character with lightbulb image - click to display instruction hints prompt (Do you want a hint? yes or no) if hints available",
   "provideAge": "Provide your age below and click OK to continue.",
   "provideAgeReportAbuse": "Please specify an age",
   "provideEmail": "Please provide an email address",
