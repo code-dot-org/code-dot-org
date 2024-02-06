@@ -104,7 +104,7 @@ const APP_OPTIONS_ALLOWLIST = {
   isUS: true,
   send_to_phone_url: true,
   copyrightStrings: {
-    thank_you: true,
+    thanks: true,
     help_from_html: true,
     art_from_html: true,
     code_from_html: true,
