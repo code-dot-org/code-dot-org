@@ -9,6 +9,13 @@ require 'cdo/pegasus/string'
 CERT_NAME_AREA_WIDTH = 900
 CERT_NAME_AREA_HEIGHT = 80
 
+CERTIFICATE_COURSE_TYPES = {
+  HOC: 'hoc',
+  PL: 'pl',
+  ACCELERATED: 'accelerated',
+  OTHER: 'other',
+}
+
 class CertificateImage
   # This method returns a newly-allocated Magick::Image object.
   # NOTE: the caller MUST ensure image#destroy! is called on the returned image object to avoid memory leaks.
@@ -155,7 +162,7 @@ class CertificateImage
       image = create_certificate_image2(path, name, y: vertical_offset)
     elsif template_file == 'self_paced_pl_certificate.png'
       image = Magick::Image.read(path).first
-      apply_text(image, name, 75, 'Helvetica bold', 'rgb(118,101,160)', 0, -135, CERT_NAME_AREA_WIDTH, CERT_NAME_AREA_HEIGHT)
+      apply_text(image, name, 75, 'Helvetica bold', 'rgb(118,101,160)', 0, -240, CERT_NAME_AREA_WIDTH, CERT_NAME_AREA_HEIGHT)
       course_title_width = 1000
       course_title_height = 60
       apply_text(image, course_title, 47, 'Helvetica bold', 'rgb(29,173,186)', 0, 0, course_title_width, course_title_height)
@@ -177,7 +184,7 @@ class CertificateImage
       donor_name = donor[:name_s]
     end
 
-    if donor_name
+    if donor_name && template_file != 'self_paced_pl_certificate.png'
       # Note certificate_sponsor_message is in both the Dashboard and Pegasus string files.
       sponsor_message = I18n.t('certificate_sponsor_message', sponsor_name: donor_name)
       # The area in pixels which will display the sponsor message.
@@ -193,22 +200,18 @@ class CertificateImage
   end
 
   # assume any unrecognized course name is a hoc course
-  def self.hoc_course?(course)
-    course_version = CurriculumHelper.find_matching_course_version(course)
-    return true if course_version&.hoc?
-    return false if accelerated_course?(course)
-    return false if course_version
-    true
+  def self.hoc_course?(course_name)
+    course_type(course_name) == CERTIFICATE_COURSE_TYPES[:HOC]
   end
 
   def self.course_type(course_name)
-    return 'accelerated' if accelerated_course?(course_name)
+    return CERTIFICATE_COURSE_TYPES[:ACCELERATED] if accelerated_course?(course_name)
 
     course_version = CurriculumHelper.find_matching_course_version(course_name)
-    return 'hoc' if course_version&.hoc?
-    return 'pl' if course_version&.pl_course?
-    return 'other' if course_version
-    'hoc'
+    return CERTIFICATE_COURSE_TYPES[:HOC] if course_version&.hoc?
+    return CERTIFICATE_COURSE_TYPES[:PL] if course_version&.pl_course?
+    return CERTIFICATE_COURSE_TYPES[:OTHER] if course_version
+    CERTIFICATE_COURSE_TYPES[:HOC]
   end
 
   def self.prefilled_title_course?(course)

@@ -15,11 +15,7 @@ class CongratsController < ApplicationController
       return render status: :bad_request, json: {message: 'invalid base64'}
     end
 
-    course_version = CurriculumHelper.find_matching_course_version(course_name)
-    course_type = CertificateImage.course_type(course_name)
-    @is_pl_course = course_type == 'pl'
-    @is_hoc_tutorial = course_type == 'hoc'
-    @is_elementary_course = course_version.course_offering.elementary_school_level?
+    @is_hoc_tutorial = CertificateImage.hoc_course?(course_name)
 
     @next_course_script_name = ScriptConstants.csf_next_course_recommendation(course_name)
     next_script = Unit.get_from_cache(@next_course_script_name) if @next_course_script_name
