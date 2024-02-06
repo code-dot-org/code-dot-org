@@ -33,7 +33,6 @@ describe I18n::Resources::Apps::Animations::SyncOut do
     let(:crowdin_file_data) {{'i18n_key' => 'i18n_val'}}
     let(:i18n_file_path) {CDO.dir('i18n/locales', i18n_locale, 'animations/spritelab_animation_library.json')}
 
-    let(:is_source_lang) {false}
     let(:i18n_data) {crowdin_file_data}
 
     let(:expect_localized_manifest_uploading) do
@@ -44,8 +43,6 @@ describe I18n::Resources::Apps::Animations::SyncOut do
     end
 
     before do
-      I18nScriptUtils.stubs(:source_lang?).with(language).returns(is_source_lang)
-
       FileUtils.mkdir_p File.dirname(crowdin_file_path)
       File.write crowdin_file_path, JSON.dump(crowdin_file_data)
     end
@@ -72,20 +69,6 @@ describe I18n::Resources::Apps::Animations::SyncOut do
 
       it 'does not move the Crowdin file to the i18n locale dir' do
         expect_crowdin_file_to_i18n_locale_dir_moving.never
-        process_language
-      end
-    end
-
-    context 'when the language is the source language' do
-      let(:is_source_lang) {true}
-
-      it 'does not upload localized manifest' do
-        expect_localized_manifest_uploading.never
-        process_language
-      end
-
-      it 'moves the Crowdin file to the i18n locale dir' do
-        expect_crowdin_file_to_i18n_locale_dir_moving.once
         process_language
       end
     end
