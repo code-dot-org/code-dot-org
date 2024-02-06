@@ -117,11 +117,9 @@ function TeacherDashboard({
         />
         <Route
           path={TeacherDashboardPath.loginInfo}
-          component={props =>
-            applyV1TeacherDashboardWidth(
-              <SectionLoginInfo studioUrlPrefix={studioUrlPrefix} />
-            )
-          }
+          component={props => (
+            <SectionLoginInfo studioUrlPrefix={studioUrlPrefix} />
+          )}
         />
         <Route
           path={TeacherDashboardPath.standardsReport}
