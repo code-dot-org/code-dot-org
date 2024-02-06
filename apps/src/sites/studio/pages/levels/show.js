@@ -14,6 +14,7 @@ import instructions, {
 } from '@cdo/apps/redux/instructions';
 import experiments from '@cdo/apps/util/experiments';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
+import AITutorFloatingActionButton from '@cdo/apps/code-studio/components/aiTutor/aiTutorFloatingActionButton';
 
 $(document).ready(initPage);
 
@@ -54,6 +55,21 @@ function initPage() {
       <UnversionedScriptRedirectDialog />,
       unversionedRedirectDialogMountPoint
     );
+  }
+
+  if (hasScriptData('script[data-aitutorleveldata]')) {
+    const scriptData = getScriptData('scriptdata');
+    console.log("script data", scriptData)
+    const aiTutorLevelData = getScriptData('aitutorleveldata');
+    const aiTutorFabMountPoint = document.getElementById(
+      'ai-tutor-fab-mount-point'
+    );
+    if (aiTutorFabMountPoint) {
+      ReactDOM.render(
+        <AITutorFloatingActionButton level={aiTutorLevelData} scriptId={scriptData.script_id}/>,
+        aiTutorFabMountPoint
+      );
+    }
   }
 
   const inRubricsPilot =

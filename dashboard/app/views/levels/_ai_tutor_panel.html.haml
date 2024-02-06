@@ -1,6 +1,0 @@
-- data = {}
-- data[:level] = {id: @level&.id, type: @level&.type, hasValidation: !!@level&.properties["encrypted_validation"], isProjectBacked: !!@level&.properties["project_template_level_name"]}
-- data[:script_id] = @script.id
-
-- content_for(:head) do
-  %script{src: webpack_asset_path('js/levels/_ai_tutor_panel.js'), data: {aitutorpanel: data.to_json }}

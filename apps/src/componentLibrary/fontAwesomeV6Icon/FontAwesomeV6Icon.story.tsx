@@ -3,7 +3,7 @@ import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from './index';
 import {Meta, Story} from '@storybook/react';
 
 export default {
-  title: 'DesignSystem/FontAwesomeV6Icon Component',
+  title: 'DesignSystem/FontAwesomeV6Icon',
   component: FontAwesomeV6Icon,
 } as Meta;
 

@@ -3,18 +3,20 @@ import PropTypes from 'prop-types';
 import {useDispatch} from 'react-redux';
 import i18n from '@cdo/locale';
 import style from './ai-tutor.module.scss';
-import AITutorPanelContainer from '@cdo/apps/code-studio/components/aiTutor/aiTutorPanelContainer';
+import classnames from 'classnames';
 import CompilationTutor from './compilationTutor';
 import ValidationTutor from './validationTutor';
 import GeneralChatTutor from './generalChatTutor';
 import {addAIResponse} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {RadioButtonsGroup} from '@cdo/apps/componentLibrary/radioButton';
+import {levelShape} from './aiTutorShapes';
 const icon = require('@cdo/static/ai-bot.png');
 
-const AITutorPanel = ({level, scriptId}) => {
+const AITutorPanel = ({level, open, scriptId}) => {
+  console.log("level in AITutorPanel", level)
+  console.log("scriptId in AITutorPanel", scriptId)
   const dispatch = useDispatch();
   const isCodingLevel = level.type === 'Javalab';
-
   const [selected, setSelected] = useState('');
 
   const radioButtons = [
@@ -48,7 +50,11 @@ const AITutorPanel = ({level, scriptId}) => {
   const questionSelected = selected === 'question';
 
   return (
-    <AITutorPanelContainer level={level}>
+    <div
+      className={classnames(style.aiTutorPanel, {
+        [style.hiddenAITutorPanel]: !open,
+      })}
+    >
       <h3 id="ai_tutor_panel">AI Tutor</h3>
       <img alt={i18n.aiBot()} src={icon} className={style.aiBotImg} />
       <div>
@@ -79,17 +85,12 @@ const AITutorPanel = ({level, scriptId}) => {
           scriptId={scriptId}
         />
       )}
-    </AITutorPanelContainer>
+    </div>
   );
 };
 
 AITutorPanel.propTypes = {
-  level: PropTypes.shape({
-    id: PropTypes.number,
-    type: PropTypes.string,
-    hasValidation: PropTypes.bool,
-    isProjectBacked: PropTypes.bool,
-  }),
+  level: levelShape,
   scriptId: PropTypes.number,
 };
 

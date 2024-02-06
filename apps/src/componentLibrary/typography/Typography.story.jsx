@@ -2,7 +2,7 @@ import React from 'react';
 import Typography from './index';
 
 export default {
-  title: 'DesignSystem/Typography Component',
+  title: 'DesignSystem/Typography',
   component: Typography,
 };
 
