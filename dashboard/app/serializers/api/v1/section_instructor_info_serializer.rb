@@ -8,6 +8,6 @@ class Api::V1::SectionInstructorInfoSerializer < ActiveModel::Serializer
   end
 
   def instructor_email
-    object.instructor.email
+    object.instructor&.email
   end
 end

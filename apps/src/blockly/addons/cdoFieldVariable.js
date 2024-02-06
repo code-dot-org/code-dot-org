@@ -26,7 +26,7 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
             oldVar,
             newName =>
               this.sourceBlock_.workspace.renameVariableById(
-                this.variable_.getId(),
+                this.variable.getId(),
                 newName
               )
           );
@@ -50,6 +50,41 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
       }
     }
   }
+
+  /**
+   * Override of createTextArrow_ to fix the arrow position on Safari.
+   * We need to add dominant-baseline="central" to the arrow element in order to
+   * center it on Safari.
+   *  @override */
+  createTextArrow_() {
+    this.arrow = Blockly.utils.dom.createSvgElement(
+      Blockly.utils.Svg.TSPAN,
+      {},
+      this.textElement_
+    );
+    this.arrow.appendChild(
+      document.createTextNode(
+        this.getSourceBlock()?.RTL
+          ? Blockly.FieldDropdown.ARROW_CHAR + ' '
+          : ' ' + Blockly.FieldDropdown.ARROW_CHAR
+      )
+    );
+
+    /**
+     * Begin CDO customization
+     */
+    this.arrow.setAttribute('dominant-baseline', 'central');
+    /**
+     * End CDO customization
+     */
+
+    if (this.getSourceBlock()?.RTL) {
+      this.getTextElement().insertBefore(this.arrow, this.textContent_);
+    } else {
+      this.getTextElement().appendChild(this.arrow);
+    }
+  }
+
   menuGenerator_ = function () {
     const options = CdoFieldVariable.dropdownCreate.call(this);
 

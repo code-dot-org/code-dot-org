@@ -11,7 +11,7 @@
         "dummy": true,
         "inline": true,
         "customOptions": {
-          "assetUrl": "media/ai-bot-border.png",
+          "assetUrl": "media/ai-bot-mini.svg",
           "width": 24,
           "height": 24
         }

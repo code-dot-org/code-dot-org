@@ -54,7 +54,6 @@ class Ability
       Pd::Application::ApplicationBase,
       Pd::Application::TeacherApplication,
       Pd::InternationalOptIn,
-      :maker_discount,
       :edit_manifest,
       :update_manifest,
       :foorm_editor,
@@ -193,9 +192,7 @@ class Ability
 
       if user.teacher?
         can :manage, Section do |s|
-          # This s.user_id == user.id check will become unnecessary once we know
-          # there's a SectionInstructor object for every section's creator/owner
-          s.user_id == user.id || s.instructors.include?(user)
+          s.instructors.include?(user)
         end
         can :destroy, SectionInstructor do |si|
           can?(:manage, si.section) && si.instructor_id != si.section.user_id
@@ -217,7 +214,6 @@ class Ability
         can [:read, :find], :regional_partner_workshops
         can [:new, :create, :show, :update], TEACHER_APPLICATION_CLASS, user_id: user.id
         can :create, Pd::InternationalOptIn, user_id: user.id
-        can :manage, :maker_discount
         can :update_last_confirmation_date, UserSchoolInfo, user_id: user.id
         can [:score_lessons_for_section, :get_teacher_scores_for_script], TeacherScore, user_id: user.id
         can :manage, LearningGoalTeacherEvaluation, teacher_id: user.id
@@ -227,7 +223,7 @@ class Ability
       if user.facilitator?
         can [:read, :start, :end, :workshop_survey_report, :summary, :filter], Pd::Workshop, facilitators: {id: user.id}
         can [:read, :update], Pd::Workshop, organizer_id: user.id
-        can :manage_attendance, Pd::Workshop, facilitators: {id: user.id}, ended_at: nil
+        can :manage_attendance, Pd::Workshop, facilitators: {id: user.id}
         can :read, Pd::CourseFacilitator, facilitator_id: user.id
 
         if Pd::CourseFacilitator.exists?(facilitator: user, course: Pd::Workshop::COURSE_CSF)
@@ -245,7 +241,7 @@ class Ability
         # Regional partner program managers can access workshops assigned to their regional partner
         if user.regional_partners.any?
           can [:read, :start, :end, :update, :destroy, :summary, :filter], Pd::Workshop, regional_partner_id: user.regional_partners.pluck(:id)
-          can :manage_attendance, Pd::Workshop, regional_partner_id: user.regional_partners.pluck(:id), ended_at: nil
+          can :manage_attendance, Pd::Workshop, regional_partner_id: user.regional_partners.pluck(:id)
           can :update_scholarship_info, Pd::Enrollment do |enrollment|
             !!user.regional_partners.pluck(enrollment.workshop.regional_partner_id)
           end
@@ -294,7 +290,7 @@ class Ability
         can :report_csv, :peer_review_submissions
       end
 
-      if user.permission?(UserPermission::AI_CHAT_ACCESS)
+      if user.has_ai_tutor_access?
         can :chat_completion, :openai_chat
       end
     end

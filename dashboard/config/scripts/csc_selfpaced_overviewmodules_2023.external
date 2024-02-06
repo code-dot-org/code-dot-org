@@ -5,10 +5,10 @@ description 'description here'
 markdown <<MARKDOWN
 # Preview of Modules
 
-#####  CS Connections seamlessly weaves computer science into core subjects such as math, science, ELA, and social studies. Tailored specifically for educators new to coding, these modules captivate students with engaging activities in a user-friendly, block-based coding environment.
+####  CS Connections seamlessly weaves computer science into core subjects such as math, science, ELA, and social studies. Tailored specifically for educators new to coding, these modules captivate students with engaging activities in a user-friendly, block-based coding environment.
 
 
-##### Below, you will find short overview videos explaining each of the CS Connections modules. 
+#### Below, you will find short overview videos explaining each of the CS Connections modules. 
 
 
 <div style="clear:both"/>

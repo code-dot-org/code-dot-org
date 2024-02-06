@@ -160,6 +160,11 @@ class ApplicationController < ActionController::Base
     :us_state,
     :country_code,
     {school_info_attributes: SCHOOL_INFO_ATTRIBUTES},
+    {
+      authentication_options_attributes: [
+        :email,
+      ],
+    },
   ]
 
   PERMITTED_USER_FIELDS.concat(UI_TEST_ATTRIBUTES) if rack_env?(:test, :development)

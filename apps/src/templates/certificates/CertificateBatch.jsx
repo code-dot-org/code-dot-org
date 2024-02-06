@@ -125,6 +125,7 @@ export default function CertificateBatch({
               className={style.textarea}
               value={studentNames}
               onChange={onChange}
+              aria-label={i18n.studentNames()}
             />
             <br />
             <button type="submit" className={style.submit} id="submit-button">

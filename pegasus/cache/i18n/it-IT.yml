@@ -815,7 +815,7 @@ it-IT:
   dashboard_course_csins_desc: Code.org ha collaborato con Project GUTS per fornire
     un'introduzione ai concetti di informatica all'interno di contesti di modellazione
     e simulazione.
-  dashboard_course_csp: Principi di informatica
+  dashboard_course_csp: Princìpi di informatica AP®
   dashboard_course_csp_desc: I corsi di Code.org sono stati progettati in modo rigoroso,
     coinvolgente e approcciabile in modo da esplorare le idee alla base dei fondamenti
     dell'informatica.
@@ -829,12 +829,12 @@ it-IT:
   dashboard_coursed: 'Corso D: '
   dashboard_coursee: 'Corso E: '
   dashboard_coursef: 'Corso F: '
-  dashboard_curriculum: Curriculum
+  dashboard_curriculum: Corso
   dashboard_curriculum_apcsa: 'Informatica di PA in Java: '
   dashboard_curriculum_csd: 'Alla scoperta dell''informatica: '
   dashboard_curriculum_csina: 'Informatica in Algebra:'
   dashboard_curriculum_csins: 'Informatica nelle Scienze:'
-  dashboard_curriculum_csp: 'Principi di informatica:'
+  dashboard_curriculum_csp: 'Princìpi di informatica:'
   dashboard_curriculum_ecs: 'Esplorando l''Informatica:'
   dashboard_curriculum_high_title: Risorse per insegnanti della secondaria superiore
   dashboard_curriculum_k5_title: Risorse per insegnanti K-5
@@ -1270,6 +1270,7 @@ it-IT:
   header_incubator: Incubatrice
   header_learn: Impara
   header_legal: Privacy & Legale
+  header_legal_cookie_notice: Informativa sui cookie
   header_legal_privacy: Informativa sulla privacy
   header_legal_tos: Termini di servizio
   header_my_dashboard: Controllo
@@ -2502,7 +2503,7 @@ it-IT:
   third_party_cost_free_10: Prova gratuita, $9.99/ mese
   third_party_cost_free_2: Prova gratuita, $2/studente
   third_party_cost_free_399: Prova gratuita, $399/classe
-  third_party_curriculum: Curriculum
+  third_party_curriculum: Corso
   third_party_desc_10to12_kto3: Approssimativamente 10-12 lezioni, pensate per studenti
     da 5 a 8 anni
   third_party_desc_10to12_kto5: Approssimativamente 10-12 lezioni, pensate per studenti

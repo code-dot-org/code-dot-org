@@ -6,14 +6,14 @@
     "properties": {
       "announcements": [
         {
-          "key": "488fc86d-7f7d-48fe-9bc2-0b8869fb6ae1",
-          "notice": "Extension Lessons with the micro:bit",
-          "details": "Interested in introducing your students to physical computing? Check out our new extension lessons from micro:bit to continue students’ learning.",
-          "link": "https://code.org/maker/csf-microbit",
+          "key": "9797909d-7ee9-436a-9c18-d58b3e7f1e0b",
+          "notice": "Free Teacher Resources from Amazon Future Engineer",
+          "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
+          "link": "https://code.org/afe",
           "type": "bullhorn",
           "visibility": "Teacher-only",
           "dismissible": true,
-          "buttonText": "Learn more"
+          "buttonText": "Get free resources"
         }
       ],
       "curriculum_umbrella": "CSF",
@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2023-11-14 15:48:03 UTC",
+    "serialized_at": "2024-01-31 21:32:30 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -8042,6 +8042,7 @@
       "key": "end_of_course_project_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -8347,6 +8348,7 @@
       "key": "user_input_programs",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -9632,6 +9634,13 @@
         "lesson.key": "End of Course Project",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-03"
       }
     },
     {

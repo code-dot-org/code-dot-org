@@ -1,8 +1,8 @@
 import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
-import Lab2MetricsReporter from '../Lab2MetricsReporter';
 import {LabState} from '../lab2Redux';
+import Lab2Registry from '../Lab2Registry';
 
 /**
  * Listens for Redux state changes and updates the Lab2MetricsReporter accordingly.
@@ -28,29 +28,32 @@ const MetricsAdapter: React.FunctionComponent = () => {
 
   useEffect(() => {
     // Reset the reporter on level change.
-    Lab2MetricsReporter.reset();
-    Lab2MetricsReporter.updateProperties({currentLevelId});
+    const reporter = Lab2Registry.getInstance().getMetricsReporter();
+    reporter.reset();
+    reporter.updateProperties({currentLevelId});
   }, [currentLevelId]);
 
   useEffect(() => {
-    Lab2MetricsReporter.updateProperties({scriptId});
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .updateProperties({scriptId});
   }, [scriptId]);
 
   useEffect(() => {
-    Lab2MetricsReporter.updateProperties({channelId});
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .updateProperties({channelId});
   }, [channelId]);
 
   useEffect(() => {
-    Lab2MetricsReporter.updateProperties({appName});
+    Lab2Registry.getInstance().getMetricsReporter().updateProperties({appName});
   }, [appName]);
 
   useEffect(() => {
     if (pageError) {
-      Lab2MetricsReporter.logError(
-        pageError.errorMessage,
-        pageError.error,
-        pageError.details
-      );
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError(pageError.errorMessage, pageError.error, pageError.details);
     }
   }, [pageError]);
 

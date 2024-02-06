@@ -23,6 +23,8 @@ import {
   setAiOutput,
 } from './danceRedux';
 import trackEvent from '../util/trackEvent';
+import analyticsReporter from '../lib/util/AnalyticsReporter';
+import {EVENTS} from '../lib/util/AnalyticsConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import logToCloud from '../logToCloud';
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
@@ -38,8 +40,9 @@ import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
 import utils from './utils';
 import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
-import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import danceMetricsReporter from './danceMetricsReporter';
 import {ErrorFallbackPage} from '@cdo/apps/lab2/views/ErrorFallbackPage';
+import {DANCE_AI_SOUNDS} from './ai/constants';
 
 const ButtonState = {
   UP: 0,
@@ -178,8 +181,7 @@ Dance.prototype.init = function (config) {
   this.awaitTimingMetrics();
 
   const state = getStore().getState();
-  Lab2MetricsReporter.updateProperties({
-    appName: 'Dance',
+  danceMetricsReporter.updateProperties({
     channelId: state.pageConstants.channelId,
     currentLevelId: state.progress.currentLevelId,
     scriptId: state.progress.scriptId,
@@ -192,7 +194,7 @@ Dance.prototype.init = function (config) {
         // this is actually the Lab2 Error Fallback page. We may want to refactor this after Hour of Code.
         fallback={<ErrorFallbackPage />}
         onError={(error, componentStack) => {
-          Lab2MetricsReporter.logError('Uncaught React Error', error, {
+          danceMetricsReporter.logError('Uncaught React Error', error, {
             componentStack,
           });
         }}
@@ -203,6 +205,7 @@ Dance.prototype.init = function (config) {
               showFinishButton={showFinishButton}
               setSong={this.setSongCallback.bind(this)}
               resetProgram={this.reset.bind(this)}
+              playSound={this.playSound.bind(this)}
             />
           }
           onMount={onMount}
@@ -258,11 +261,19 @@ Dance.prototype.initSongs = async function (config) {
           config.level.selectedSong = songId;
         }
       },
-      onSongUnavailable: () => {
+      onSongUnavailable: songId => {
         this.songUnavailableAlert = this.studioApp_.displayPlayspaceAlert(
           'warning',
           React.createElement('div', {}, danceMsg.danceSongNoLongerSupported())
         );
+
+        const {isReadOnlyWorkspace, channelId} =
+          getStore().getState().pageConstants;
+        analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_SONG_UNAVAILABLE, {
+          songId,
+          viewerOwnsProject: !isReadOnlyWorkspace,
+          channelId,
+        });
       },
     })
   );
@@ -305,6 +316,13 @@ Dance.prototype.loadAudio_ = function () {
   this.studioApp_.loadAudio(this.skin.winSound, 'win');
   this.studioApp_.loadAudio(this.skin.startSound, 'start');
   this.studioApp_.loadAudio(this.skin.failureSound, 'failure');
+
+  DANCE_AI_SOUNDS.forEach(soundId => {
+    const soundPath = this.studioApp_.assetUrl(
+      `media/skins/dance/${soundId}.mp3`
+    );
+    this.studioApp_.loadAudio([soundPath], soundId);
+  });
 };
 
 const KeyCodes = {
@@ -435,6 +453,7 @@ Dance.prototype.afterInject_ = function () {
     container: 'divDance',
     i18n: danceMsg,
     resourceLoader: new ResourceLoader(ASSET_BASE),
+    logger: danceMetricsReporter,
   });
 
   // Expose an interface for testing
@@ -467,6 +486,12 @@ Dance.prototype.playSong = function (url, callback, onEnded) {
       this.studioApp_.toggleRunReset('run');
     },
   });
+};
+
+Dance.prototype.playSound = function (soundName, options) {
+  var defaultOptions = {volume: 0.5};
+  var newOptions = {...defaultOptions, ...options};
+  Sounds.getSingleton().play(soundName, newOptions);
 };
 
 /**
@@ -572,6 +597,14 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
   } else {
     this.studioApp_.playAudio('failure');
   }
+  const state = getStore().getState();
+  const validationResult = result ? 'PASSED' : 'FAILED';
+  analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_VALIDATION, {
+    levelPath: state.pageConstants.currentScriptLevelUrl,
+    result: validationResult,
+    message, // feedback message key
+    userId: state.currentUser.userId,
+  });
 
   const sendReport = () => {
     this.studioApp_.report({

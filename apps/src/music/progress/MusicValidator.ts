@@ -17,6 +17,12 @@ export const MusicConditions: ConditionNames = {
     valueType: 'number',
   },
   PLAYED_SOUND_TRIGGERED: {name: 'played_sound_triggered', hasValue: false},
+  PLAYED_SOUNDS: {name: 'played_sounds', hasValue: true, valueType: 'number'},
+  PLAYED_SOUND_ID: {
+    name: 'played_sound_id',
+    hasValue: false,
+    valueType: 'string',
+  },
 };
 
 export default class MusicValidator extends Validator {
@@ -38,6 +44,10 @@ export default class MusicValidator extends Validator {
   checkConditions() {
     // Get number of sounds currently playing simultaneously.
     let currentNumberSounds = 0;
+
+    // Get number of sounds that have been started.
+    let playedNumberSounds = 0;
+
     const currentPlayheadPosition = this.player.getCurrentPlayheadPosition();
     this.getPlaybackEvents().forEach((eventData: PlaybackEvent) => {
       const length = eventData.length;
@@ -52,15 +62,24 @@ export default class MusicValidator extends Validator {
             name: MusicConditions.PLAYED_SOUND_TRIGGERED.name,
           });
         }
+
+        this.conditionsChecker.addSatisfiedCondition({
+          name: MusicConditions.PLAYED_SOUND_ID.name,
+          value: eventData.id,
+        });
+      }
+
+      if (eventData.when <= currentPlayheadPosition) {
+        playedNumberSounds++;
       }
     });
 
     // Check for up to a certain number of sounds playing simultaneously.
-    // Not that if, for example, 3 sounds are playing, then we'll consider
+    // Note that if, for example, 3 sounds are playing, then we'll consider
     // that 2 sounds and 1 sound have also been played together.
-    const maxNumberSounds = 3;
+    const maxNumberSoundsTogether = 3;
     for (
-      let numberSounds = maxNumberSounds;
+      let numberSounds = maxNumberSoundsTogether;
       numberSounds >= 1;
       numberSounds--
     ) {
@@ -68,6 +87,21 @@ export default class MusicValidator extends Validator {
         this.conditionsChecker.addSatisfiedCondition({
           name: MusicConditions.PLAYED_SOUNDS_TOGETHER.name,
           value: currentNumberSounds,
+        });
+      }
+    }
+
+    // Check for up to a certain number of sounds played.
+    const maxNumberSounds = 3;
+    for (
+      let numberSounds = maxNumberSounds;
+      numberSounds >= 1;
+      numberSounds--
+    ) {
+      if (playedNumberSounds >= numberSounds) {
+        this.conditionsChecker.addSatisfiedCondition({
+          name: MusicConditions.PLAYED_SOUNDS.name,
+          value: playedNumberSounds,
         });
       }
     }

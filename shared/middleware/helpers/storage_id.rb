@@ -163,7 +163,9 @@ end
 
 # All operations to the user_project_storage_ids table listed below
 def user_storage_ids_table
+  # rubocop:disable CustomCops/DashboardDbUsage
   DASHBOARD_DB[:user_project_storage_ids]
+  # rubocop:enable CustomCops/DashboardDbUsage
 end
 
 # Returns first user storage ID row matching query

@@ -45,6 +45,7 @@ const urlByProvider = {
 const importUrlByProvider = {
   [OAuthSectionTypes.google_classroom]: '/dashboardapi/import_google_classroom',
   [OAuthSectionTypes.clever]: '/dashboardapi/import_clever_classroom',
+  [SectionLoginType.lti_v1]: '/lti/v1/sync_course',
 };
 
 //
@@ -64,6 +65,8 @@ const SET_SHOW_LOCK_SECTION_FIELD =
 const SET_AUTH_PROVIDERS = 'teacherDashboard/SET_AUTH_PROVIDERS';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
 const SET_COTEACHER_INVITE = 'teacherDashboard/SET_COTEACHER_INVITE';
+const SET_COTEACHER_INVITE_FOR_PL =
+  'teacherDashboard/SET_COTEACHER_INVITE_FOR_PL';
 export const SELECT_SECTION = 'teacherDashboard/SELECT_SECTION';
 const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
 const TOGGLE_SECTION_HIDDEN = 'teacherSections/TOGGLE_SECTION_HIDDEN';
@@ -90,6 +93,8 @@ const ASYNC_LOAD_END = 'teacherSections/ASYNC_LOAD_END';
 
 /** Sets a section's roster provider, which must be of type OAuthSectionTypes */
 const SET_ROSTER_PROVIDER = 'teacherSections/SET_ROSTER_PROVIDER';
+/** Sets a section's roster provider name which should be shown to users */
+const SET_ROSTER_PROVIDER_NAME = 'teacherSections/SET_ROSTER_PROVIDER_NAME';
 /** Opens the third-party roster UI */
 const IMPORT_ROSTER_FLOW_BEGIN = 'teacherSections/IMPORT_ROSTER_FLOW_BEGIN';
 /** Reports available rosters have been loaded */
@@ -104,6 +109,7 @@ const IMPORT_ROSTER_FLOW_CANCEL = 'teacherSections/IMPORT_ROSTER_FLOW_CANCEL';
 const IMPORT_ROSTER_REQUEST = 'teacherSections/IMPORT_ROSTER_REQUEST';
 /** Reports request to import a roster has succeeded */
 const IMPORT_ROSTER_SUCCESS = 'teacherSections/IMPORT_ROSTER_SUCCESS';
+const IMPORT_LTI_ROSTER_SUCCESS = 'teacherSections/IMPORT_LTI_ROSTER_SUCCESS';
 
 /** @const A few constants exposed for unit test setup */
 export const __testInterface__ = {
@@ -125,6 +131,10 @@ export const setAuthProviders = providers => ({
 export const setRosterProvider = rosterProvider => ({
   type: SET_ROSTER_PROVIDER,
   rosterProvider,
+});
+export const setRosterProviderName = rosterProviderName => ({
+  type: SET_ROSTER_PROVIDER_NAME,
+  rosterProviderName,
 });
 export const setCourseOfferings = courseOfferings => ({
   type: SET_COURSE_OFFERINGS,
@@ -446,15 +456,31 @@ export const setCoteacherInvite = coteacherInvite => ({
   coteacherInvite,
 });
 
+export const setCoteacherInviteForPl = coteacherInviteForPl => ({
+  type: SET_COTEACHER_INVITE_FOR_PL,
+  coteacherInviteForPl,
+});
+
 export const asyncLoadCoteacherInvite = () => dispatch => {
   fetchJSON('/api/v1/section_instructors')
     .then(sectionInstructors => {
-      // Find the oldest invite.
-      const coteacherInvite = sectionInstructors.find(
-        instructor => instructor.status === 'invited'
+      const coteacherInviteForPl = sectionInstructors.find(instructorInvite => {
+        return (
+          instructorInvite.status === 'invited' &&
+          instructorInvite.participant_type !== 'student'
+        );
+      });
+      const coteacherInviteForClassrooms = sectionInstructors.find(
+        instructorInvite => {
+          return (
+            instructorInvite.status === 'invited' &&
+            instructorInvite.participant_type === 'student'
+          );
+        }
       );
 
-      dispatch(setCoteacherInvite(coteacherInvite));
+      dispatch(setCoteacherInvite(coteacherInviteForClassrooms));
+      dispatch(setCoteacherInviteForPl(coteacherInviteForPl));
     })
     .catch(err => {
       console.error(err.message);
@@ -549,6 +575,23 @@ export const importOrUpdateRoster =
     let sectionId;
 
     dispatch({type: IMPORT_ROSTER_REQUEST});
+    if (provider === SectionLoginType.lti_v1) {
+      return fetch(`${importSectionUrl}?section_code=${courseId}`, {
+        headers: {
+          Accept: 'application/json',
+        },
+      })
+        .then(response => {
+          return response.json();
+        })
+        .then(results => {
+          return dispatch({
+            type: IMPORT_LTI_ROSTER_SUCCESS,
+            sectionId: sectionId,
+            results: results,
+          });
+        });
+    }
     return fetchJSON(importSectionUrl, {courseId, courseName})
       .then(newSection => (sectionId = newSection.id))
       .then(() => dispatch(asyncLoadSectionData()))
@@ -578,6 +621,7 @@ const initialState = {
   // with options like "CSD", "Course A", or "Frozen". See the
   // assignmentCourseOfferingShape PropType.
   courseOfferings: {},
+  courseOfferingsAreLoaded: false,
   // The participant types the user can create sections for
   availableParticipantTypes: [],
   // Mapping from sectionId to section object
@@ -606,6 +650,7 @@ const initialState = {
   pageType: '',
   // DCDO Flag - show/hide Lock Section field
   showLockSectionField: null,
+  ltiSyncResult: null,
 };
 /**
  * Generate shape for new section
@@ -669,6 +714,7 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       courseOfferings: action.courseOfferings,
+      courseOfferingsAreLoaded: true,
     };
   }
 
@@ -752,6 +798,13 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       coteacherInvite: action.coteacherInvite,
+    };
+  }
+
+  if (action.type === SET_COTEACHER_INVITE_FOR_PL) {
+    return {
+      ...state,
+      coteacherInviteForPl: action.coteacherInviteForPl,
     };
   }
 
@@ -1056,12 +1109,22 @@ export default function teacherSections(state = initialState, action) {
   if (action.type === SET_ROSTER_PROVIDER) {
     // No-op if this action is called with a non-OAuth section type,
     // since this action is triggered on every section load.
-    if (OAuthSectionTypes[action.rosterProvider]) {
+    if (
+      OAuthSectionTypes[action.rosterProvider] ||
+      action.rosterProvider === SectionLoginType.lti_v1
+    ) {
       return {
         ...state,
         rosterProvider: action.rosterProvider,
       };
     }
+  }
+
+  if (action.type === SET_ROSTER_PROVIDER_NAME) {
+    return {
+      ...state,
+      rosterProviderName: action.rosterProviderName,
+    };
   }
 
   //
@@ -1121,6 +1184,13 @@ export default function teacherSections(state = initialState, action) {
     };
   }
 
+  if (action.type === IMPORT_LTI_ROSTER_SUCCESS) {
+    return {
+      ...state,
+      ltiSyncResult: action.results,
+    };
+  }
+
   // DCDO Flag - show/hide Lock Section field
   if (action.type === SET_SHOW_LOCK_SECTION_FIELD) {
     return {
@@ -1146,12 +1216,20 @@ export function rosterProvider(state) {
   return getRoot(state).rosterProvider;
 }
 
+export function rosterProviderName(state) {
+  return getRoot(state).rosterProviderName;
+}
+
 export function sectionCode(state, sectionId) {
   return (getRoot(state).sections[sectionId] || {}).code;
 }
 
 export function sectionName(state, sectionId) {
   return (getRoot(state).sections[sectionId] || {}).name;
+}
+
+export function ltiSyncResult(state) {
+  return getRoot(state).ltiSyncResult;
 }
 
 export function sectionUnitName(state, sectionId) {
@@ -1170,6 +1248,13 @@ export function selectedSection(state) {
 export function sectionProvider(state, sectionId) {
   if (isSectionProviderManaged(state, sectionId)) {
     return rosterProvider(state);
+  }
+  return null;
+}
+
+export function sectionProviderName(state, sectionId) {
+  if (isSectionProviderManaged(state, sectionId)) {
+    return rosterProviderName(state);
   }
   return null;
 }
@@ -1199,7 +1284,7 @@ export function getVisibleSections(state) {
  * @param {number[]} sectionIds - List of section ids we want row data for
  */
 export function getSectionRows(state, sectionIds) {
-  const {sections, courseOfferings} = getRoot(state);
+  const {sections, courseOfferings, courseOfferingsAreLoaded} = getRoot(state);
   return sectionIds.map(id => ({
     ..._.pick(sections[id], [
       'id',
@@ -1215,6 +1300,7 @@ export function getSectionRows(state, sectionIds) {
     ]),
     assignmentNames: assignmentNames(courseOfferings, sections[id]),
     assignmentPaths: assignmentPaths(courseOfferings, sections[id]),
+    courseOfferingsAreLoaded,
   }));
 }
 

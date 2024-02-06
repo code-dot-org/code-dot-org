@@ -1,13 +1,17 @@
 // Registry for Lab singletons
 
+import LabMetricsReporter from './Lab2MetricsReporter';
 import ProjectManager from './projects/ProjectManager';
 
 export default class Lab2Registry {
-  projectManager: ProjectManager | null;
+  private projectManager: ProjectManager | null;
+  private metricsReporter: LabMetricsReporter;
+
   private static _instance: Lab2Registry;
 
   constructor() {
     this.projectManager = null;
+    this.metricsReporter = new LabMetricsReporter();
   }
 
   public static getInstance(): Lab2Registry {
@@ -38,5 +42,9 @@ export default class Lab2Registry {
 
   public clearProjectManager() {
     this.projectManager = null;
+  }
+
+  public getMetricsReporter() {
+    return this.metricsReporter;
   }
 }

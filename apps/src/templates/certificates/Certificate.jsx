@@ -101,6 +101,10 @@ function Certificate(props) {
     return `/certificates/${encoded}`;
   };
 
+  const getExternalCertificateSharePath = () => {
+    return `${window.location.origin}${getCertificateSharePath()}`;
+  };
+
   const {
     responsiveSize,
     tutorial,
@@ -117,6 +121,7 @@ function Certificate(props) {
     ? personalizedCertificate
     : initialCertificateImageUrl;
   const certificateShareLink = getCertificateSharePath();
+  const externalCertificateShareLink = getExternalCertificateSharePath();
   const desktop =
     responsiveSize === ResponsiveSize.lg ||
     responsiveSize === ResponsiveSize.md;
@@ -124,11 +129,11 @@ function Certificate(props) {
   const certificateStyle = desktop ? style.desktopHalf : style.mobileFull;
 
   const facebook = queryString.stringify({
-    u: certificateShareLink,
+    u: externalCertificateShareLink,
   });
 
   const twitter = queryString.stringify({
-    url: certificateShareLink,
+    url: externalCertificateShareLink,
     related: 'codeorg',
     text: randomDonorTwitter
       ? i18n.justDidHourOfCodeDonor({donor_twitter: randomDonorTwitter})
@@ -157,7 +162,11 @@ function Certificate(props) {
             className={style.confetti}
           />
           <a href={certificateShareLink}>
-            <img src={imgSrc} />
+            {
+              // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+              // Verify or update this alt-text as necessary
+            }
+            <img src={imgSrc} alt="" />
           </a>
         </div>
         <div className={`${certificateStyle} ${style.inputContainer}`}>

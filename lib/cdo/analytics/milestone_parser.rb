@@ -20,8 +20,7 @@ class MilestoneParser
     production-daemon
     staging
     test
-    levelbuilder-staging
-    levelbuilder-development
+    levelbuilder
     development
     react
     adhoc

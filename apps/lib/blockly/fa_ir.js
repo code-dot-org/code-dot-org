@@ -68,7 +68,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "تا زمانی که یک مق�
 Blockly.Msg.DEFINE_FUNCTION_DEFINE = "تعریف کنید";
 Blockly.Msg.DEFINE_FUNCTION_FOR_EXAMPLE = "تابع زیر را تعریف کنید و دوباره تلاش کنید.";
 Blockly.Msg.DEFINE_HEADER_DEFINITION = "تعریف";
-Blockly.Msg.DELETE = "پاک کردن";
+Blockly.Msg.DELETE = "پاک کنید";
 Blockly.Msg.DELETE_BLOCK = "حذف بلوک";
 Blockly.Msg.DELETE_PARAMETER = "حذف پارامتر...";
 Blockly.Msg.DELETE_PARAMETER_TITLE = "با این کار همه رخدادهای پارامتر  '%1' حذف خواهد شد. مطمئنی؟";

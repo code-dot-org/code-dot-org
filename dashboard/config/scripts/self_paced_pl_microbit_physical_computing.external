@@ -1,0 +1,8 @@
+name 'self-paced-pl-microbit_physical_computing'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Physical Computing 
+
+MARKDOWN

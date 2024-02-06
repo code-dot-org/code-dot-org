@@ -8,6 +8,7 @@ ja-JP:
   account_sign_up_child_accept_terms: Code.orgのサービスを利用することについて、親または保護者の許可を得ていることを確認します。
   account_sign_up_email_opt_in: 当社のコースについての最新情報、各地域における機会、コンピュータサイエンスに関するニュースなどを電子メールを介して送付してもよろしいですか？
   ai_activity: アクティビティ
+  ai_aiedu_intro: 'AiEdu: 人工知能入門'
   ai_aiedu_intro_description: Intro to AI は、学生が AI とは何か、そしてそれが現実世界でどのように使用されているかについて、概念的な知識を身につけることができる、革新的で文化的な関連性を備えた無料のカリキュラムです。
   ai_and_ethics: 人工知能と倫理
   ai_and_ethics_tile_description: 生徒たちはAIの倫理的意味合いを振り返り、協力して、あらゆる場所のAIクリエイターや立法者のために「AI倫理規定」リソースを作成します。
@@ -783,6 +784,8 @@ ja-JP:
   footer_store: ストア
   footer_support: ヘルプとコミュニティ
   footer_terms: 利用規約
+  footer_trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logoとHour
+    of Code&reg; は Code.org の商標です"
   frozen_gradelevel: 4才-104才
   frozen_longdescription: コードを使って、アナとエルサの氷の魔法を試しましょう。アイススケートをしながら雪の結晶を作って、友だちとも共有しよう！
   frozen_name: アナとエルザとコーディング
@@ -856,6 +859,7 @@ ja-JP:
   header_incubator: インキュベーター
   header_learn: 学ぶ
   header_legal: プライバシーと法的事項
+  header_legal_cookie_notice: クッキーについての通知
   header_legal_privacy: プライバシー ポリシー
   header_legal_tos: 利用規約
   header_my_dashboard: マイ ダッシュボード
@@ -1069,6 +1073,8 @@ ja-JP:
   hoc2022_mc_mee_title: Minecraftエスケープエステート
   hoc2022_nasa_banner_description: NASA STEMのYouTubeチャンネルで12月5日午前10時（東部標準時）に初公開されます。
   hoc2022_nasa_banner_heading: NASAに参加して、宇宙でのコンピューターサイエンスに関する特別な「Hour of Code」特集に参加しましょう！
+  hoc2022_nasa_banner_heading_posthoc: 宇宙でのコンピューターサイエンスに関するNASAの特別なHour of Code機能をチェックしてください！
+  hoc2022_nasa_webb_alt_text: NASAのジェイムズウェッブ望遠鏡のイラスト
   hoc_is_here: コンピュータ サイエンスを学ぶ。それはすべてを変えます。 https://youtu.be/xJqSu1IbcHg 。
   hoc_leaderboards: Hour of Codeが行われている場所
   hoc_overview_dance_2019_subtitle: ダンスパーティーをプログラミングして友だちと共有しましょう。ケイティ・ペリー、ショーン・メンデス、パニック!
@@ -1119,6 +1125,7 @@ ja-JP:
   homepage_below_hero_announcement_link_text: もっと詳しく知る
   homepage_below_hero_announcement_text: Code.orgは、プライバシー保護に努めております。現在、5月25日付で有効となる、Code.orgのプライバシーポリシーの一部改定を進めています。
   homepage_csa_body: エクイティ主導型のカリキュラムで、現実世界とつながったクリエイティブなプロジェクトで学生を支援します。
+  homepage_csa_title: AP® コンピューターサイエンスA
   homepage_diversity_pledge: ダイバーシティーを認める誓約をしてください。
   homepage_donors_donate: 寄付する
   homepage_donors_seall: すべてを見る

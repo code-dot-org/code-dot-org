@@ -1565,6 +1565,7 @@
   header_report_abuse: "Report abuse"
   header_legal: "Privacy & Legal"
   header_legal_privacy: "Privacy Policy"
+  header_legal_cookie_notice: "Cookie Notice"
   header_legal_tos: "Terms of Service"
   header_tutorials: "Tutorials"
   header_screen_reader_hamburger: "Menu"
@@ -1821,6 +1822,7 @@
   footer_store: "Store"
   footer_support: "Support"
   footer_terms: "Terms"
+  footer_trademark: '"&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo, Hour of Code&reg; and %{cs_discoveries} are trademarks of Code.org."'
   ai_for_oceans: "AI for Oceans"
   ai_for_oceans_lesson_plan: "lesson plan"
   ai_for_oceans_tile_description: "Help A.I. clean the oceans by training it to detect trash! Learn about training data and bias, and how AI can address world problems. View"

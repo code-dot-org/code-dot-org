@@ -35,7 +35,6 @@ const serverCourses = [
 ];
 
 export default {
-  title: 'TeacherHomepage',
   component: TeacherHomepage,
 };
 
@@ -45,7 +44,6 @@ const Template = args => {
     <Provider store={reduxStore({teacherSections})}>
       <TeacherHomepage
         announcements={[announcement]}
-        isEnglish={true}
         showCensusBanner={false}
         {...args.props}
       />

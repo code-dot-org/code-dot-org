@@ -7,12 +7,13 @@
       "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
+      "tts": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "dance-ai",
-    "serialized_at": "2023-11-09 20:37:37 UTC",
-    "published_state": "beta",
+    "serialized_at": "2023-11-22 18:28:08 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -155,7 +156,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "To build background knowledge about Artificial Intelligence and/or to extend learning, check out the videos, lessons, and professional learning opportunities on our [Creativity with A.I. page](https://hourofcode.com/ca).\n\nIf you have time and would like to prepare your students with an unplugged activity, consider delivering [Dance Party: Unplugged](https://studio.code.org/s/dance-unplugged/lessons/1) before your Hour of Code event. This brief lesson introduces students to the idea of events triggering different dance moves."
+            "markdown": "To build background knowledge about Artificial Intelligence and/or to extend learning, check out the videos, lessons, and professional learning opportunities on our [Creativity with AI page](https://hourofcode.com/ca).\n\nIf you have time and would like to prepare your students with an unplugged activity, consider delivering [Dance Party: Unplugged](https://studio.code.org/s/dance-unplugged/lessons/1) before your Hour of Code event. This brief lesson introduces students to the idea of events triggering different dance moves."
           }
         ]
       },
@@ -191,7 +192,7 @@
       "key": "66891774-46dc-4488-a30b-5d231e4145ff",
       "position": 3,
       "properties": {
-        "description": "Just like choosing which paint colors to use or words you write with are ways of expressing creativity. Choosing what code you write and how people interact with it can be an opportunity to express your creativity too!\nIn this creative coding activity, you will be introduced to a new, helpful tool: Artificial Intelligence, also known as A.I.! A.I. is a computer program that works like a human's brain. The A.I. Bot in this activity can help you by making choices for the special effects very quickly. ",
+        "description": "Just like choosing which paint colors to use or words you write with are ways of expressing creativity. Choosing what code you write and how people interact with it can be an opportunity to express your creativity too!\nIn this creative coding activity, you will be introduced to a new, helpful tool: Artificial Intelligence, also known as AI! AI is a computer program that works like a human's brain. The A.I. Bot in this activity can help you by making choices for the special effects very quickly. ",
         "remarks": true
       },
       "seeding_key": {
@@ -240,8 +241,8 @@
       "key": "e150925b-003d-4acd-a87c-5aca4d8b1a89",
       "position": 3,
       "properties": {
-        "description": "In these three levels, students are introduced to the new A.I. block. There are two videos that accompany these levels. Encourage students to re-watch these videos if they are feeling stuck. To pass these levels, students prompt A.I. to generate code for colorful effects to go with their dance party. Encourage students to choose three emojis that describe the mood they want to convey for their dance party.\n",
-        "name": "Use A.I. to generate special effects",
+        "description": "In these three levels, students are introduced to the new A.I. block. There are two videos that accompany these levels. Encourage students to re-watch these videos if they are feeling stuck. To pass these levels, students prompt AI to generate code for colorful effects to go with their dance party. Encourage students to choose three emojis that describe the mood they want to convey for their dance party.\n",
+        "name": "Use AI to generate special effects",
         "progression_name": "Use AI"
       },
       "seeding_key": {
@@ -269,7 +270,7 @@
       "key": "3ae03e0b-0a31-42b7-bee8-98aa457a9542",
       "position": 5,
       "properties": {
-        "description": "Now, students are introduced to events. This is the trickiest coding concept in this tutorial. Events are special. They don’t connect to the setup block, but instead are mini programs on their own. Think of an event as a listening ear that will execute whatever code is under it when it is triggered. The first event students use are `when arrow pressed` events that will allow students to trigger new chunks of code by pressing a key on their keyboard. The second event is the `at measure` event that works more like a timer on a clock. When the song has run for a specified amount of measures, the new code will be triggered. \n\nEncourage students to rewatch the videos on events that accompany two of these levels. ",
+        "description": "Now, students are introduced to events. This is the trickiest coding concept in this tutorial. Events are special. They don’t connect to the setup block, but instead are mini programs on their own. Think of an event as a listening ear that will execute whatever code is under it when it is triggered. The first events students use are `when arrow pressed` events that will allow students to trigger new chunks of code by pressing a key on their keyboard. The second event is the `at measure` event that works more like a timer on a clock. When the song has run for a specified amount of measures, the new code will be triggered. \n\nEncourage students to rewatch the videos on events that accompany two of these levels. ",
         "name": "Code events to add interaction",
         "progression_name": "Key Press & At Measure Events"
       },

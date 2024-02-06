@@ -70,16 +70,17 @@ theme: responsive
 
 為了獲得所有Code.org內容的最佳體驗，我們建議諮詢學校或學區的IT部門，以確保以下網站允許訪問，沒有被阻止。
 
-| 優先級                         | 網址                                                                                                         |
-| --------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **必需**                      | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **可選**                      | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **使用YouTube託管視訊（增強隱私模式）**   | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **使用Code.org託管視訊**          | `https://videos.code.org`                                                                                  |
-| **使用網路模擬器**                 | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **使用網路實驗室**                 | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **使用Google課堂共用按鈕**          | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets** | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| 優先級                                     | 網址                                                                                                         |
+| --------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **必需**                                  | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **確保 CAPTCHA 系統能夠區分您的使用與自動欺詐（「機器人」）活動** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **可選**                                  | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **使用YouTube託管視訊（增強隱私模式）**               | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **使用Code.org託管視訊**                      | `https://videos.code.org`                                                                                  |
+| **使用網路模擬器**                             | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **使用網路實驗室**                             | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **使用Google課堂共用按鈕**                      | `https://apis.google.com`                                                                                  |
+| **使用應用程式實驗室資料集**                        | `https://*.firebaseio.com`<br />`常見問題：//*.火焰兵庫`                                                      |
 
 ## 移動設備/平板電腦支援詳情
 
@@ -104,7 +105,7 @@ All other content, such as K-5 courses (Computer Science Fundamentals) and Hour 
 
 
 <!--
-The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
 .md.erb without breaking i18n sync, this file should include that partial instead.
 -->
 <figure style="width:100%; height: 100%; margin: 0 auto;">

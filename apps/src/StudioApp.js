@@ -44,7 +44,11 @@ import {
   NOTIFICATION_ALERT_TYPE,
   START_BLOCKS,
 } from './constants';
-import {Renderers, stringIsXml} from '@cdo/apps/blockly/constants';
+import {
+  Renderers,
+  stringIsXml,
+  stripUserCreated,
+} from '@cdo/apps/blockly/constants';
 import {assets as assetsApi} from './clientApi';
 import {
   configCircuitPlayground,
@@ -87,6 +91,7 @@ import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {closeWorkspaceAlert} from './code-studio/projectRedux';
+import KeyHandler from './util/KeyHandler';
 
 var copyrightStrings;
 
@@ -238,6 +243,11 @@ class StudioApp extends EventEmitter {
      * Stores the code at run. It's undefined if the code is not running.
      */
     this.executingCode = undefined;
+
+    /**
+     * Global key handler for the app.
+     */
+    this.keyHandler = new KeyHandler(document);
   }
 }
 /**
@@ -838,7 +848,7 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
     if (Blockly.functionEditor) {
       Blockly.functionEditor.hideIfOpen();
     }
-    Blockly.mainBlockSpace.clear();
+    Blockly.clearAllStudentWorkspaces();
     this.setStartBlocks_(config, false);
     if (config.level.openFunctionDefinition) {
       this.openFunctionDefinition_(config);
@@ -2093,6 +2103,13 @@ StudioApp.prototype.configureDom = function (config) {
   if (runButton && resetButton) {
     dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
     dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
+    this.keyHandler.registerEvent(['Control', 'Enter'], () => {
+      if (this.isRunning()) {
+        this.resetButtonClick();
+      } else {
+        throttledRunClick();
+      }
+    });
   }
   var skipButton = container.querySelector('#skipButton');
   if (skipButton) {
@@ -2239,29 +2256,6 @@ StudioApp.prototype.handleHideSource_ = function (options) {
         });
 
         buttonRow.appendChild(openWorkspace);
-
-        if (
-          ['algebra_game', 'calc', 'eval'].includes(
-            appOptions?.level?.projectType
-          )
-        ) {
-          const deprecationUrl =
-            'https://support.code.org/hc/en-us/articles/16268528601101-List-of-Deprecated-or-Non-Supported-Code-org-Courses';
-          ReactDOM.render(
-            <div style={{color: '#ff7a7a', textAlign: 'initial'}}>
-              {msg.deprecatedCalcAndEvalBrief()}
-              &nbsp;
-              <a
-                href={deprecationUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {msg.learnMore()}
-              </a>
-            </div>,
-            buttonRow.appendChild(document.createElement('div'))
-          );
-        }
       }
     }
   }
@@ -2750,11 +2744,25 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     loadLastAttempt = false;
   }
   var startBlocks = config.level.startBlocks || '';
+  // When procedure definition blocks are set using the modal function editor,
+  // they will end up deletable by the student unless the XML is manually
+  // updated. Removing usercreated="true" ensures functions and behaviors
+  // are not deletable by the student using the modal editor.
+  if (stringIsXml(startBlocks)) {
+    startBlocks = stripUserCreated(startBlocks);
+  }
   // TODO: When we start using json in levelbuilder, we will need to pull this from the level config.
   if (loadLastAttempt && config.levelGameName !== 'Jigsaw') {
     startBlocks = config.level.lastAttempt || startBlocks;
   }
 
+  // Only used in Sprite Lab.
+  if (config.level.sharedFunctions) {
+    startBlocks = Blockly.cdoUtils.appendSharedFunctions(
+      startBlocks,
+      config.level.sharedFunctions
+    );
+  }
   let isXml = stringIsXml(startBlocks);
 
   if (isXml) {
@@ -2764,14 +2772,6 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
       startBlocks = blockUtils.forceInsertTopBlock(
         startBlocks,
         config.forceInsertTopBlock
-      );
-    }
-    // Only used in Sprite Lab.
-    if (config.level.sharedFunctions) {
-      // TODO: Re-implement for JSON before migrating Sprite Lab
-      startBlocks = blockUtils.appendNewFunctions(
-        startBlocks,
-        config.level.sharedFunctions
       );
     }
     // Not needed if source is JSON, as these blocks will already have positions.
@@ -2785,7 +2785,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
   } catch (e) {
     if (loadLastAttempt) {
       try {
-        Blockly.mainBlockSpace.clear();
+        Blockly.clearAllStudentWorkspaces();
         // Try loading the default start blocks instead.
         this.setStartBlocks_(config, false);
       } catch (otherException) {
@@ -3455,6 +3455,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
       isK1: config.level.isK1,
       appType: config.app,
       nextLevelUrl: config.nextLevelUrl,
+      currentScriptLevelUrl: config.currentScriptLevelUrl,
       isProjectTemplateLevel:
         !!config.level.projectTemplateLevelName && !config.level.isK1,
       showProjectTemplateWorkspaceIcon:

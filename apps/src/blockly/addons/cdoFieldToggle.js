@@ -49,6 +49,9 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
    */
   initView() {
     super.initView();
+    // Make the icon centered on Safari.
+    this.defaultIcon.setAttribute('dominant-baseline', 'central');
+    this.alternateIcon.setAttribute('dominant-baseline', 'central');
     if (this.useDefaultIcon) {
       this.textElement_.appendChild(this.defaultIcon);
     } else {

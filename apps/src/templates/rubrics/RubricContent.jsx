@@ -16,11 +16,15 @@ import {
   studentLevelInfoShape,
 } from './rubricShapes';
 import LearningGoal from './LearningGoal';
+import LearningGoals from './LearningGoals';
 import Button from '@cdo/apps/templates/Button';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import classnames from 'classnames';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import experiments from '@cdo/apps/util/experiments';
+import StudentSelector from './StudentSelector';
+import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 
 const formatTimeSpent = timeSpent => {
   const minutes = Math.floor(timeSpent / 60);
@@ -39,6 +43,7 @@ const formatLastAttempt = lastAttempt => {
 export default function RubricContent({
   studentLevelInfo,
   rubric,
+  open,
   teacherHasEnabledAi,
   canProvideFeedback,
   onLevelForEvaluation,
@@ -129,26 +134,43 @@ export default function RubricContent({
   } else if (!studentLevelInfo) {
     infoText = i18n.selectAStudentToEvaluateAlert();
   }
+
   return (
     <div
-      className={classnames(style.rubricContent, {
-        [style.visibleRubricContent]: visible,
-        [style.hiddenRubricContent]: !visible,
-      })}
+      className={classnames(
+        {[style.rubricContent]: !experiments.isEnabled('ai-rubrics-redesign')},
+        {
+          [style.visibleRubricContent]: visible,
+          [style.hiddenRubricContent]: !visible,
+        }
+      )}
     >
       {infoText && <InfoAlert text={infoText} />}
-      <div>
-        {!!studentLevelInfo && (
-          <Heading2 className={style.studentName}>
-            {studentLevelInfo.name}
-          </Heading2>
-        )}
+      <div className={style.studentInfoGroup}>
+        {!experiments.isEnabled('ai-rubrics-redesign') &&
+          !!studentLevelInfo && (
+            <Heading2 className={style.studentName}>
+              {studentLevelInfo.name}
+            </Heading2>
+          )}
         <Heading5>
           {i18n.lessonNumbered({
             lessonNumber: lesson.position,
             lessonName: lesson.name,
           })}
         </Heading5>
+        {experiments.isEnabled('ai-rubrics-redesign') && (
+          <div className={style.selectors}>
+            <SectionSelector reloadOnChange={true} requireSelection={false} />
+            <StudentSelector
+              styleName={style.studentSelector}
+              selectedUserId={
+                studentLevelInfo ? studentLevelInfo.user_id : null
+              }
+              reloadOnChange={true}
+            />
+          </div>
+        )}
         {!!studentLevelInfo && (
           <div className={style.studentInfo}>
             <div className={style.levelAndStudentDetails}>
@@ -187,24 +209,44 @@ export default function RubricContent({
           </div>
         )}
       </div>
-      <div className={style.learningGoalContainer}>
-        {rubric.learningGoals.map(lg => (
-          <LearningGoal
-            key={lg.key}
-            learningGoal={lg}
+      {experiments.isEnabled('ai-rubrics-redesign') ? (
+        // TODO: remove tempContainer div when experiment is ready to roll out
+        <div className={style.tempContainer}>
+          <Heading5>{i18n.rubric()}</Heading5>
+          <LearningGoals
+            open={open}
+            learningGoals={rubric.learningGoals}
             teacherHasEnabledAi={teacherHasEnabledAi}
             canProvideFeedback={canProvideFeedback}
             reportingData={reportingData}
             studentLevelInfo={studentLevelInfo}
-            aiUnderstanding={getAiUnderstanding(lg.id)}
-            aiConfidence={getAiConfidence(lg.id)}
             isStudent={false}
             feedbackAdded={feedbackAdded}
             setFeedbackAdded={setFeedbackAdded}
-            aiEvalInfo={getAiInfo(lg.id)}
+            aiEvaluations={aiEvaluations}
           />
-        ))}
-      </div>
+        </div>
+      ) : (
+        <div className={style.learningGoalContainer}>
+          {rubric.learningGoals.map(lg => (
+            <LearningGoal
+              key={lg.key}
+              learningGoal={lg}
+              teacherHasEnabledAi={teacherHasEnabledAi}
+              canProvideFeedback={canProvideFeedback}
+              reportingData={reportingData}
+              studentLevelInfo={studentLevelInfo}
+              aiUnderstanding={getAiUnderstanding(lg.id)}
+              aiConfidence={getAiConfidence(lg.id)}
+              isStudent={false}
+              feedbackAdded={feedbackAdded}
+              setFeedbackAdded={setFeedbackAdded}
+              aiEvalInfo={getAiInfo(lg.id)}
+            />
+          ))}
+        </div>
+      )}
+
       {canProvideFeedback && (
         <div className={style.rubricContainerFooter}>
           <div className={style.submitToStudentButtonAndError}>
@@ -241,6 +283,7 @@ RubricContent.propTypes = {
   onLevelForEvaluation: PropTypes.bool,
   canProvideFeedback: PropTypes.bool,
   rubric: rubricShape.isRequired,
+  open: PropTypes.bool,
   reportingData: reportingDataShape,
   studentLevelInfo: studentLevelInfoShape,
   teacherHasEnabledAi: PropTypes.bool,
@@ -248,15 +291,38 @@ RubricContent.propTypes = {
   aiEvaluations: PropTypes.arrayOf(aiEvaluationShape),
 };
 
-const InfoAlert = ({text}) => {
+export const InfoAlert = ({text, dismissable}) => {
+  const [closed, setClosed] = useState(false);
+  const closeButtonCallback = () => {
+    setClosed(true);
+  };
+
   return (
-    <div className={style.infoAlert}>
-      <FontAwesome icon="info-circle" className={style.infoAlertIcon} />
-      <BodyTwoText>{text}</BodyTwoText>
+    <div
+      className={classnames('uitest-info-alert', {
+        [style.infoAlert]: !closed,
+        [style.infoAlertClosed]: !!closed,
+      })}
+    >
+      <div className={style.infoAlertLeft}>
+        <FontAwesome icon="info-circle" className={style.infoAlertIcon} />
+        <BodyTwoText>{text}</BodyTwoText>
+      </div>
+      {!!dismissable && (
+        <button
+          type="button"
+          onClick={closeButtonCallback}
+          className={classnames('close', style.infoAlertRight)}
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      )}
     </div>
   );
 };
 
 InfoAlert.propTypes = {
   text: PropTypes.string.isRequired,
+  dismissable: PropTypes.bool,
 };

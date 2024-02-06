@@ -1,0 +1,5 @@
+- script_data = {}
+- script_data[:lti_section_sync_result] = @lti_section_sync_result
+
+- content_for(:head) do
+  %script{src: webpack_asset_path('js/lti/v1/sync_course.js'), data: {ltiSectionSyncDialog: script_data.to_json}}

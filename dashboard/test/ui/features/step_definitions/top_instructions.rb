@@ -34,6 +34,6 @@ Given /^I load the code review for peer number (.*) in the list$/ do |number|
    And I press ".peer-dropdown-button" using jQuery
    And I wait to see ".code-review-peer-link"
    And I click selector ".code-review-peer-link:nth-child(#{number})" to load a new page
-   And I wait to see ".editable-text-area"
+   And I wait to see "#ui-test-code-review-comment-input"
   STEPS
 end

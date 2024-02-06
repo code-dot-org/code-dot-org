@@ -13,6 +13,7 @@ class MemoryAdapter
   end
 
   def get(key)
+    return nil unless @hash.key?(key)
     Oj.load(@hash[key])
   rescue => exception
     Honeybadger.notify(exception)
