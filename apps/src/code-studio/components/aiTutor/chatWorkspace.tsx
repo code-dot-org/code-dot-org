@@ -9,11 +9,11 @@ import WarningModal from './warningModal';
 /**
  * Renders the AI Tutor main chat workspace component.
  */
-const ChatWorkspace = (
-  levelId: number,
-  isProjectBacked: boolean,
-  scriptId: number
-) => {
+const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
+  levelId,
+  isProjectBacked,
+  scriptId,
+}) => {
   const storedMessages = useSelector(
     (state: {aiTutor: AITutorState}) => state.aiTutor.chatMessages
   );
@@ -52,5 +52,11 @@ const ChatWorkspace = (
     </div>
   );
 };
+
+interface ChatWorkspaceProps {
+  levelId: number;
+  isProjectBacked: boolean;
+  scriptId: number;
+}
 
 export default ChatWorkspace;

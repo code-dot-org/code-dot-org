@@ -11,11 +11,9 @@ import {useSelector} from 'react-redux';
 /**
  * Renders the AI Tutor user chat message editor component.
  */
-const UserChatMessageEditor = (
-  levelId: number,
-  isProjectBacked: boolean,
-  scriptId: number
-) => {
+const UserChatMessageEditor: React.FunctionComponent<
+  UserChatMessageEditorProps
+> = ({levelId, isProjectBacked, scriptId}) => {
   const [userMessage, setUserMessage] = useState<string>('');
 
   const isWaitingForChatResponse = useSelector(
@@ -62,5 +60,11 @@ const UserChatMessageEditor = (
     </div>
   );
 };
+
+interface UserChatMessageEditorProps {
+  levelId: number;
+  isProjectBacked: boolean;
+  scriptId: number;
+}
 
 export default UserChatMessageEditor;
