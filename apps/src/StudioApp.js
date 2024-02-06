@@ -1616,6 +1616,9 @@ StudioApp.prototype.clearHighlighting = function () {
 
 /**
  * Highlights the given line in the active editor.
+ *
+ * @param {number} lineNumber The line number to highlight in the active editor.
+ * @param {string} highlightClass The class name to add to the line.
  */
 StudioApp.prototype.highlightLine = function (
   lineNumber,
