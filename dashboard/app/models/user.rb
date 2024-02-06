@@ -499,7 +499,7 @@ class User < ApplicationRecord
 
   # Relationships (sections/followers/students) from being a teacher.
   has_many :sections_owned, dependent: :destroy, class_name: 'Section'
-  has_many :followers, through: :sections_instructed
+  has_many :followers, -> {without_deleted}, through: :sections_instructed
   has_many :students, through: :followers, source: :student_user
 
   # Relationships (sections_as_students/followeds/teachers) from being a

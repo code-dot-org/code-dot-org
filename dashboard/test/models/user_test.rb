@@ -5072,4 +5072,12 @@ class UserTest < ActiveSupport::TestCase
     student.save!
     assert_equal Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, student.child_account_compliance_state
   end
+
+  test "does not return deleted followers from the followers helper" do
+    student = create :student
+    section = create :section
+    follower = create :follower, student_user_id: student.id, section_id: section.id
+    follower.delete
+    assert_empty student.reload.followers
+  end
 end
