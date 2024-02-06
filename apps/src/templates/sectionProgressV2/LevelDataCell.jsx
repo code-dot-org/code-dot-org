@@ -3,9 +3,11 @@ import React from 'react';
 import {studentLevelProgressType} from '../progress/progressTypes';
 import classNames from 'classnames';
 import styles from './progress-table-v2.module.scss';
+import FontAwesome from '../FontAwesome';
 import queryString from 'query-string';
 import {Link} from '@dsco_/link';
-import FontAwesome from '../FontAwesome';
+
+export const LEVEL_OVERRIDE_ICON_TEST_TITLE = 'override-icon-';
 
 const navigateToLevelOverviewUrl = (levelUrl, studentId, sectionId) => {
   if (!levelUrl) {
@@ -46,7 +48,14 @@ export default function LevelDataCell({
       external
       className={classNames(styles.gridBox, styles.gridBoxLevel)}
     >
-      {overrideIcon ? <FontAwesome icon={overrideIcon} /> : levelData}
+      {overrideIcon ? (
+        <FontAwesome
+          icon={overrideIcon}
+          title={LEVEL_OVERRIDE_ICON_TEST_TITLE + overrideIcon}
+        />
+      ) : (
+        levelData
+      )}
     </Link>
   );
 }
