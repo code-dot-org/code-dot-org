@@ -172,6 +172,22 @@ DisabledCheckboxDropdown.args = {
   size: 'm',
 };
 
+export const WithDisabledOptionCheckboxDropdown = SingleTemplate.bind({});
+WithDisabledOptionCheckboxDropdown.args = {
+  name: 'default-dropdown',
+  allOptions: [
+    {value: 'option-1', label: 'Option 1', isOptionDisabled: true},
+    {value: 'option-2', label: 'Option 2'},
+    {value: 'option-3', label: 'Option 3'},
+  ],
+  checkedOptions: ['option-1'],
+  labelText: 'Disabled Dropdown',
+  onChange: args => console.log(args),
+  onSelectAll: args => console.log(args),
+  onClearAll: args => console.log(args),
+  size: 'm',
+};
+
 export const GroupOfCheckboxDropdownColors = MultipleTemplate.bind({});
 GroupOfCheckboxDropdownColors.args = {
   components: [
