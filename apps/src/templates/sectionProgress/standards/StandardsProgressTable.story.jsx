@@ -9,7 +9,6 @@ import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import {reduxStore} from '@cdo/storybook/decorators';
 
 export default {
-  title: 'StandardsProgressTable',
   component: StandardsProgressTable,
 };
 

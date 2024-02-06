@@ -89,7 +89,8 @@ theme: responsive_full_width
           %img{src: "/images/csc-module-simulating-marine-ecosystem.png", alt: ""}
           %p=hoc_s(:module_desc_simulating_marine_ecosystem)
         .content-footer
-          %a.link-button{href: CDO.studio_url("/s/csc-ecosystems?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_module_simulating_marine_ecosystem)}}
+          -# Because a unit exists called csc-ecosystems, we need to specify a year here 
+          %a.link-button{href: CDO.studio_url("/s/csc-ecosystems-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_module_simulating_marine_ecosystem)}}
             =hoc_s(:call_to_action_see_module_details)
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
