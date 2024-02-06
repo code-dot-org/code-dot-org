@@ -4,96 +4,83 @@ import styles from './progress-table-v2.module.scss';
 import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
 import {studentLevelProgressType} from '../progress/progressTypes';
 import {connect} from 'react-redux';
-import classNames from 'classnames';
-import FontAwesome from '../FontAwesome';
 import LevelDataCell from './LevelDataCell';
-import i18n from '@cdo/locale';
+import ExpandedProgressColumnHeader from './ExpandedProgressColumnHeader.jsx';
 
 function ExpandedProgressDataColumn({
   lesson,
+  sectionId,
   levelProgressByStudent,
   sortedStudents,
   removeExpandedLesson,
 }) {
-  const header = React.useMemo(() => {
-    // If there are only 2 levels, we only show the number so that the text fits the cell.
-    const headerText =
-      lesson.levels.length < 3
-        ? lesson.relative_position
-        : i18n.lessonNumbered({
-            lessonNumber: lesson.relative_position,
-            lessonName: lesson.name,
-          });
+  const [expandedChoiceLevels, setExpandedChoiceLevels] = React.useState([]);
 
-    // Manual width is necessary so that overflow text is hidden and lesson header exactly fits levels.
-    // Add (numLevels + 1)px to account for borders.
-    const width =
-      lesson.levels.length * styles.levelCellWidth +
-      lesson.levels.length +
-      1 +
-      'px';
-    return (
-      <div className={styles.expandedHeader}>
+  const toggleExpandedChoiceLevel = level => {
+    if (expandedChoiceLevels.includes(level.id)) {
+      setExpandedChoiceLevels(expandedChoiceLevels.filter(l => l !== level.id));
+    } else if (level?.sublevels?.length > 0) {
+      setExpandedChoiceLevels([...expandedChoiceLevels, level.id]);
+    }
+  };
+
+  const getSingleLevelColumn = React.useCallback(
+    (level, propOverrides = {}) => {
+      return (
         <div
-          className={classNames(
-            styles.gridBox,
-            styles.expandedHeaderLessonCell
-          )}
-          style={{width}}
-          onClick={() => removeExpandedLesson(lesson.id)}
-          aria-label={headerText}
+          className={styles.expandedLevelColumn}
+          key={lesson.id + '.' + level.id}
         >
-          <FontAwesome
-            icon="caret-down"
-            className={styles.expandedHeaderCaret}
-          />
-          <div className={styles.expandedHeaderLessonText}>{headerText}</div>
-        </div>
-        <div className={styles.expandedHeaderSecondRow}>
-          {lesson.levels.map(level => (
-            <div
-              className={classNames(
-                styles.gridBox,
-                styles.expandedHeaderLevelCell
-              )}
-              key={lesson.id + '.' + level.bubbleText + '-h'}
-            >
-              {lesson.relative_position + '.' + level.bubbleText}
-            </div>
+          {sortedStudents.map(student => (
+            <LevelDataCell
+              studentId={student.id}
+              level={level}
+              studentLevelProgress={
+                levelProgressByStudent[student.id][level.id]
+              }
+              key={student.id + '.' + lesson.id + '.' + level.id}
+              {...propOverrides}
+            />
           ))}
         </div>
-      </div>
-    );
-  }, [removeExpandedLesson, lesson]);
+      );
+    },
+    [levelProgressByStudent, sortedStudents, lesson]
+  );
+
+  const getExpandedChoiceLevel = React.useCallback(
+    level => [
+      getSingleLevelColumn(level, {overrideIcon: 'split'}),
+      ...level.sublevels.map(sublevel => getSingleLevelColumn(sublevel)),
+    ],
+    [getSingleLevelColumn]
+  );
 
   const progress = React.useMemo(
     () => (
       <div className={styles.expandedTable}>
-        {lesson.levels.map(level => (
-          <div
-            className={styles.expandedLevelColumn}
-            key={lesson.bubbleText + '.' + level.id}
-          >
-            {sortedStudents.map(student => (
-              <LevelDataCell
-                studentId={student.id}
-                level={level}
-                studentLevelProgress={
-                  levelProgressByStudent[student.id][level.id]
-                }
-                key={student.id + '.' + lesson.id + '.' + level.id}
-              />
-            ))}
-          </div>
-        ))}
+        {lesson.levels.flatMap(level => {
+          if (
+            level.sublevels?.length > 0 &&
+            expandedChoiceLevels.includes(level.id)
+          ) {
+            return getExpandedChoiceLevel(level);
+          }
+          return [getSingleLevelColumn(level)];
+        })}
       </div>
     ),
-    [levelProgressByStudent, sortedStudents, lesson]
+    [lesson, expandedChoiceLevels, getSingleLevelColumn, getExpandedChoiceLevel]
   );
 
   return (
     <div key={lesson.id} className={styles.expandedColumn}>
-      {header}
+      <ExpandedProgressColumnHeader
+        lesson={lesson}
+        removeExpandedLesson={removeExpandedLesson}
+        expandedChoiceLevels={expandedChoiceLevels}
+        toggleExpandedChoiceLevel={toggleExpandedChoiceLevel}
+      />
       {progress}
     </div>
   );
@@ -101,6 +88,7 @@ function ExpandedProgressDataColumn({
 
 ExpandedProgressDataColumn.propTypes = {
   sortedStudents: PropTypes.arrayOf(studentShape),
+  sectionId: PropTypes.number,
   levelProgressByStudent: PropTypes.objectOf(
     PropTypes.objectOf(studentLevelProgressType)
   ).isRequired,

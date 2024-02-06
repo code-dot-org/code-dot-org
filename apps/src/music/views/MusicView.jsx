@@ -35,6 +35,8 @@ import {
   setUndoStatus,
   showCallout,
   clearCallout,
+  setSelectedTriggerId,
+  clearSelectedTriggerId,
 } from '../redux/musicRedux';
 import KeyHandler from './KeyHandler';
 import Callouts from './Callouts';
@@ -56,6 +58,7 @@ import {isEqual} from 'lodash';
 import HeaderButtons from './HeaderButtons';
 import MusicLibrary from '../player/MusicLibrary';
 import {setUpBlocklyForMusicLab} from '../blockly/setup';
+import {TRIGGER_FIELD} from '../blockly/constants';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -69,10 +72,10 @@ class UnconnectedMusicView extends React.Component {
     appConfig: PropTypes.object,
 
     /**
-     * True if Music Lab is being presented from the Incubator page (i.e. under /projectbeats),
+     * True if Music Lab is being presented from the /projectbeats page,
      * false/undefined if as part of a script or single level.
      * */
-    inIncubator: PropTypes.bool,
+    onProjectBeats: PropTypes.bool,
 
     // populated by Redux
     currentLevelIndex: PropTypes.number,
@@ -84,7 +87,9 @@ class UnconnectedMusicView extends React.Component {
     setCurrentPlayheadPosition: PropTypes.func,
     selectedBlockId: PropTypes.string,
     selectBlockId: PropTypes.func,
+    setSelectedTriggerId: PropTypes.func,
     clearSelectedBlockId: PropTypes.func,
+    clearSelectedTriggerId: PropTypes.func,
     timelineAtTop: PropTypes.bool,
     showInstructions: PropTypes.bool,
     instructionsPosition: PropTypes.string,
@@ -146,26 +151,31 @@ class UnconnectedMusicView extends React.Component {
       hasLoadedInitialSounds: false,
     };
 
-    // If in incubator, we need to manually setup Blockly for Music Lab.
+    // If on /projectbeats, we need to manually setup Blockly for Music Lab.
     // Otherwise, this is handled by Lab2.
-    if (props.inIncubator) {
+    if (props.onProjectBeats) {
       setUpBlocklyForMusicLab();
     }
   }
 
   componentDidMount() {
-    this.analyticsReporter.startSession().then(() => {
-      this.analyticsReporter.setUserProperties(
-        this.props.userId,
-        this.props.userType,
-        this.props.signInState
-      );
-    });
+    // Only record Amplitude analytics events on /projectbeats
+    if (this.props.onProjectBeats) {
+      this.analyticsReporter.startSession().then(() => {
+        this.analyticsReporter.setUserProperties(
+          this.props.userId,
+          this.props.userType,
+          this.props.signInState
+        );
+      });
+    }
     // TODO: the 'beforeunload' callback is advised against as it is not guaranteed to fire on mobile browsers. However,
     // we need a way of reporting analytics when the user navigates away from the page. Check with Amplitude for the
     // correct approach.
     window.addEventListener('beforeunload', event => {
-      this.analyticsReporter.endSession();
+      if (this.props.onProjectBeats) {
+        this.analyticsReporter.endSession();
+      }
     });
 
     if (this.props.appName === 'music') {
@@ -178,9 +188,10 @@ class UnconnectedMusicView extends React.Component {
     this.musicBlocklyWorkspace.resizeBlockly();
 
     if (
-      prevProps.userId !== this.props.userId ||
-      prevProps.userType !== this.props.userType ||
-      prevProps.signInState !== this.props.signInState
+      this.props.onProjectBeats &&
+      (prevProps.userId !== this.props.userId ||
+        prevProps.userType !== this.props.userType ||
+        prevProps.signInState !== this.props.signInState)
     ) {
       this.analyticsReporter.setUserProperties(
         this.props.userId,
@@ -190,19 +201,19 @@ class UnconnectedMusicView extends React.Component {
     }
 
     // When changing levels, stop playback and reset the initial sounds loaded flag
-    // since a new set of sounds will be loaded on the next level.  Also clear
-    // the callout that's showing.
-    if (prevProps.currentLevelIndex !== this.props.currentLevelIndex) {
+    // since a new set of sounds will be loaded on the next level.  Also clear the
+    // callout that might be showing, and dispose of the Blockly workspace so that
+    // any lingering UI is removed.
+    if (
+      prevProps.currentLevelIndex !== this.props.currentLevelIndex &&
+      this.props.appName === 'music'
+    ) {
       this.stopSong();
       this.setState({
         hasLoadedInitialSounds: false,
       });
       this.props.clearCallout();
-      this.musicBlocklyWorkspace.hideChaff();
-    }
-
-    if (this.props.appName !== 'music') {
-      this.musicBlocklyWorkspace.hideFlyout();
+      this.musicBlocklyWorkspace.dispose();
     }
 
     if (
@@ -210,6 +221,11 @@ class UnconnectedMusicView extends React.Component {
       !this.props.isPlaying
     ) {
       this.musicBlocklyWorkspace.selectBlock(this.props.selectedBlockId);
+      this.props.setSelectedTriggerId(
+        this.musicBlocklyWorkspace.getSelectedTriggerId(
+          this.props.selectedBlockId
+        )
+      );
     }
 
     // Using stringified JSON for deep comparison
@@ -331,7 +347,7 @@ class UnconnectedMusicView extends React.Component {
   };
 
   getStartSources = () => {
-    if (!this.props.inIncubator && this.props.levelData?.startSources) {
+    if (!this.props.onProjectBeats && this.props.levelData?.startSources) {
       return this.props.levelData.startSources;
     } else {
       const startSourcesFilename = 'startSources' + getBlockMode();
@@ -357,6 +373,14 @@ class UnconnectedMusicView extends React.Component {
       return;
     }
 
+    if (e.type === Blockly.Events.CHANGE) {
+      if (e.element === 'field' && e.name === TRIGGER_FIELD) {
+        this.props.setSelectedTriggerId(
+          this.musicBlocklyWorkspace.getSelectedTriggerId(e.blockId)
+        );
+      }
+    }
+
     // Update undo status when blocks change.
     this.props.setUndoStatus({
       canUndo: this.musicBlocklyWorkspace.canUndo(),
@@ -373,9 +397,11 @@ class UnconnectedMusicView extends React.Component {
         }
       });
 
-      this.analyticsReporter.onBlocksUpdated(
-        this.musicBlocklyWorkspace.getAllBlocks()
-      );
+      if (this.props.onProjectBeats) {
+        this.analyticsReporter.onBlocksUpdated(
+          this.musicBlocklyWorkspace.getAllBlocks()
+        );
+      }
     }
 
     if (e.type === Blockly.Events.SELECTED) {
@@ -394,7 +420,9 @@ class UnconnectedMusicView extends React.Component {
   setPlaying = play => {
     if (play) {
       this.playSong();
-      this.analyticsReporter.onButtonClicked('play');
+      if (this.props.onProjectBeats) {
+        this.analyticsReporter.onButtonClicked('play');
+      }
     } else {
       this.stopSong();
     }
@@ -408,7 +436,9 @@ class UnconnectedMusicView extends React.Component {
     if (!this.props.isPlaying) {
       return;
     }
-    this.analyticsReporter.onButtonClicked('trigger', {id});
+    if (this.props.onProjectBeats) {
+      this.analyticsReporter.onButtonClicked('trigger', {id});
+    }
     const triggerStartPosition =
       this.musicBlocklyWorkspace.getTriggerStartPosition(
         id,
@@ -543,6 +573,7 @@ class UnconnectedMusicView extends React.Component {
     this.props.setIsPlaying(true);
     this.props.setCurrentPlayheadPosition(this.props.startingPlayheadPosition);
     this.props.clearSelectedBlockId();
+    this.props.clearSelectedTriggerId();
   };
 
   stopSong = () => {
@@ -565,14 +596,6 @@ class UnconnectedMusicView extends React.Component {
 
   redo = () => {
     this.musicBlocklyWorkspace.redo();
-  };
-
-  onFeedbackClicked = () => {
-    this.analyticsReporter.onButtonClicked('feedback');
-    window.open(
-      'https://docs.google.com/forms/d/e/1FAIpQLScnUgehPPNjhSNIcCpRMcHFgtE72TlfTOh6GkER6aJ-FtIwTQ/viewform?usp=sf_link',
-      '_blank'
-    );
   };
 
   renderInstructions(position) {
@@ -656,7 +679,9 @@ class UnconnectedMusicView extends React.Component {
     const {timelineAtTop, showInstructions, instructionsPosition} = this.props;
 
     return (
-      <AnalyticsContext.Provider value={this.analyticsReporter}>
+      <AnalyticsContext.Provider
+        value={this.props.onProjectBeats ? this.analyticsReporter : null}
+      >
         <KeyHandler
           togglePlaying={this.togglePlaying}
           playTrigger={this.playTrigger}
@@ -738,6 +763,8 @@ const MusicView = connect(
     setCurrentPlayheadPosition: currentPlayheadPosition =>
       dispatch(setCurrentPlayheadPosition(currentPlayheadPosition)),
     selectBlockId: blockId => dispatch(selectBlockId(blockId)),
+    setSelectedTriggerId: id => dispatch(setSelectedTriggerId(id)),
+    clearSelectedTriggerId: () => dispatch(clearSelectedTriggerId()),
     clearSelectedBlockId: () => dispatch(clearSelectedBlockId()),
     setShowInstructions: showInstructions =>
       dispatch(setShowInstructions(showInstructions)),

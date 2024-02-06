@@ -380,6 +380,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return undefined;
   };
 
+  // Google Blockly labs also need to clear separate workspaces for the function editor.
+  blocklyWrapper.clearAllStudentWorkspaces = () => {
+    Blockly.mainBlockSpace.clear();
+  };
+
   return blocklyWrapper;
 }
 

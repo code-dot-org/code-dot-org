@@ -1,0 +1,7 @@
+name 'self-paced-pl-microbit_courses-C-F'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Courses C-F
+MARKDOWN

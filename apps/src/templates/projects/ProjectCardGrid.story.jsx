@@ -83,7 +83,6 @@ const createProjectsStore = function (galleryType) {
 };
 
 export default {
-  title: 'ProjectCardGrid',
   component: ProjectCardGrid,
 };
 
