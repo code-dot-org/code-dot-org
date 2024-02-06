@@ -609,7 +609,7 @@ class UnconnectedMusicView extends React.Component {
           undo={this.undo}
           redo={this.redo}
           clearCode={this.clearCode}
-          validator={this.validator}
+          validator={this.musicValidator}
         />
         <Callouts />
       </AnalyticsContext.Provider>
