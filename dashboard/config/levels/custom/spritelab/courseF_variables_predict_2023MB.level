@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-01-29T22:11:11.000Z",
   "level_num": "custom",
@@ -54,11 +55,17 @@
     "mini_toolbox": "false",
     "validation_code": "var spriteIds = getSpriteIdsInUse();\r\n// Fail right away if they don't have any sprites\r\nif (spriteIds.length < 1) {\r\n  levelFailure(3, 'noSprites');\r\n}\r\n\r\nif (!validationProps.successCriteria) {\r\n  validationProps.successCriteria = {\r\n    printedText: false\r\n  };\r\n}\r\n\r\nvar printLog = getPrintLog();\r\nconsole.log(printLog);\r\nif(!validationProps.successCriteria.printedText){\r\n  validationProps.successCriteria.printedText = printLog.length>=1;\r\n}\r\n\r\n// Check if this is the first frame that meets the success criteria\r\nif (!validationProps.successTime) {\r\n  if (\r\n    validationProps.successCriteria.printedText\r\n  ) {\r\n    validationProps.successTime = World.frameCount;\r\n    //console.log(validationProps.successTime);\r\n  }\r\n}\r\n\r\n\r\nvar waitTime = 100;\r\nif (World.frameCount - validationProps.successTime >= waitTime) {\r\n  console.log('Generic success');\r\n  levelFailure(0, 'genericSuccess');\r\n}\r\n\r\npush();\r\nif(validationProps.successTime){\r\n   fill(rgb(0,173,188));\r\n  rect(0,390,((World.frameCount-validationProps.successTime)*400/waitTime),10);\r\n}\r\npop();",
     "hide_pause_button": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "teacher_markdown": "This type of level is a prediction level. Prediction levels help students think logically about code by guessing what they think will happen after reading the code. \r\n\r\nTeacher tip: Prediction levels are a great place for class discussions. Allow students to share guesses. After running the code, debrief on why the code did what it did reinforcing understanding of the programming concepts. ",
+    "standalone_app_name": "spritelab"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-01-29T22:11:11.065+00:00\",\"changed\":[\"cloned from \\\"courseF_variables_predict_2023\\\"\"],\"cloned_from\":\"courseF_variables_predict_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-01-29T22:11:11.065+00:00\",\"changed\":[\"cloned from \\\"courseF_variables_predict_2023\\\"\"],\"cloned_from\":\"courseF_variables_predict_2023\"},{\"changed_at\":\"2024-02-05 22:24:56 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>
