@@ -25,16 +25,21 @@ const HintPrompt = ({
       skinId={skinId}
       textToSpeechEnabled={textToSpeechEnabled}
     >
-      <p>{message}</p>
+      <p id={'hint-prompt-message'}>{message}</p>
       <LegacyButton
         id="hint-prompt-yes-button"
         type="cancel"
         onClick={onConfirm}
         style={{marginRight: 5}}
+        aria-labelledby="hint-prompt-message"
       >
         {msg.yes()}
       </LegacyButton>
-      <LegacyButton type="cancel" onClick={onDismiss}>
+      <LegacyButton
+        type="cancel"
+        onClick={onDismiss}
+        aria-labelledby="hint-prompt-message"
+      >
         {msg.no()}
       </LegacyButton>
     </ChatBubble>
