@@ -196,6 +196,7 @@ function Comment({
                     '/blockly/media/templates/instructions/codeReview/ellipsis.svg'
                   }
                   style={{height: '3px', display: 'flex'}}
+                  alt=""
                 />
               }
             >

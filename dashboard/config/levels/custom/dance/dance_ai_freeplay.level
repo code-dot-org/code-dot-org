@@ -1,5 +1,6 @@
 <Dancelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 63,
   "created_at": "2023-11-02T02:32:49.000Z",
   "level_num": "custom",
@@ -48,17 +49,18 @@
       "upButton",
       "downButton"
     ],
-    "video_key": "hoc_dance_events_2019",
     "encrypted": "false",
     "mini_rubric": "false",
     "validation_enabled": "false",
     "hide_pause_button": "false",
     "short_instructions": "**Get creative!**\r\nNow use the skills you just learned and A.I. to keep the dance party going. ",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-02T02:32:49.519+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_free_play_draft3\\\"\"],\"cloned_from\":\"draft_ai_dance_party_free_play_draft3\"},{\"changed_at\":\"2023-11-02 19:58:37 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-09 16:24:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-09 16:25:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"default_song\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-09 16:32:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-11-02T02:32:49.519+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_free_play_draft3\\\"\"],\"cloned_from\":\"draft_ai_dance_party_free_play_draft3\"},{\"changed_at\":\"2023-11-02 19:58:37 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-09 16:24:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-09 16:25:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"default_song\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-09 16:32:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-30 03:02:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"video_key\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

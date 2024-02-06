@@ -2,6 +2,7 @@
   "category": "SL1",
   "config": {
     "func": "tumbling",
+    "docFunc": "spritelab_adding-and-removing-behaviors",
     "blockText": "tumbling",
     "returnType": "Behavior",
     "color": [

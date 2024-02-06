@@ -1,0 +1,26 @@
+name 'course_c_maker_dance_party_unpluggedMB'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+<h2 style="text-align: center;">Dance Party: Unplugged</h2>
+
+#### Let’s first dive into events by examining one of the unplugged lessons from the CS Maker course. 
+
+#### An unplugged lesson is a teaching method where CS concepts are taught without the use of a computer. These lessons involve hands-on activities or games that illustrate computer science principles in tangible and understandable ways for beginners. 
+
+#### In this lesson, students will learn to think about controlling actions using events. The students will match a dance move to an assigned shape and will act out the moves based on the shape you select. 
+
+#### Take time to read the Unplugged Dance Party (lesson plan). Make sure to check out the resources including the student facing markdown level, slides, and event controller PDF. 
+
+<div style="text-align: center;">
+<p>
+Today you'll create your own Dance Party. Let's get moving!
+</p>
+</div>
+
+
+[<img src="https://images.code.org/1067a594e2e59fe160d8ed5c10e0bbe9-image-1702500374895.gif" style="display: block; margin: auto; width: 30%">](https://mbit.io/csf-1-project)
+
+
+MARKDOWN

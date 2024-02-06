@@ -1,3 +1,5 @@
+import './addons/plusMinusBlocks/if.js';
+import './addons/plusMinusBlocks/text_join.js';
 import {javascriptGenerator} from 'blockly/javascript';
 import {
   ScrollBlockDragger,
@@ -23,7 +25,7 @@ import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRendererGeras from './addons/cdoRendererGeras';
-import {CdoRendererThrasos} from './addons/cdoRendererThrasos';
+import CdoRendererThrasos from './addons/cdoRendererThrasos';
 import CdoRendererZelos from './addons/cdoRendererZelos';
 import CdoTheme from './themes/cdoTheme';
 import CdoDarkTheme from './themes/cdoDark';
@@ -61,7 +63,12 @@ import {
   ObservableProcedureModel,
   ObservableParameterModel,
 } from '@blockly/block-shareable-procedures';
-import {adjustCalloutsOnViewportChange, disableOrphans} from './eventHandlers';
+import {
+  adjustCalloutsOnViewportChange,
+  disableOrphans,
+  reflowToolbox,
+} from './eventHandlers';
+import {initializeScrollbarPair} from './addons/cdoScrollbar.js';
 
 const options = {
   contextMenu: true,
@@ -70,8 +77,6 @@ const options = {
 
 const plugin = new CrossTabCopyPaste();
 plugin.init(options);
-
-const BLOCK_PADDING = 7; // Calculated from difference between block height and text height
 
 const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
@@ -88,6 +93,7 @@ const BlocklyWrapper = function (blocklyInstance) {
   this.version = BlocklyVersion.GOOGLE;
   this.blockly_ = blocklyInstance;
   this.mainWorkspace = undefined;
+  this.embeddedWorkspaces = [];
 
   this.wrapReadOnlyProperty = function (propertyName) {
     Object.defineProperty(this, propertyName, {
@@ -179,6 +185,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('common');
   blocklyWrapper.wrapReadOnlyProperty('common_locale');
   blocklyWrapper.wrapReadOnlyProperty('ComponentManager');
+  blocklyWrapper.wrapReadOnlyProperty('config');
   blocklyWrapper.wrapReadOnlyProperty('Connection');
   blocklyWrapper.wrapReadOnlyProperty('ConnectionType');
   blocklyWrapper.wrapReadOnlyProperty('ContextMenu');
@@ -229,7 +236,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('removeChangeListener');
   blocklyWrapper.wrapReadOnlyProperty('RTL');
   blocklyWrapper.wrapReadOnlyProperty('Scrollbar');
-  blocklyWrapper.wrapReadOnlyProperty('selected');
   blocklyWrapper.wrapReadOnlyProperty('serialization');
   blocklyWrapper.wrapReadOnlyProperty('SPRITE');
   blocklyWrapper.wrapReadOnlyProperty('svgResize');
@@ -345,6 +351,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
       return this.blockly_.utils.dom.SVG_NS;
     },
   });
+  Object.defineProperty(blocklyWrapper, 'selected', {
+    get: function () {
+      return this.blockly_.getSelected();
+    },
+  });
 
   // Properties cannot be modified until wrapSettableProperty has been called
   blocklyWrapper.wrapSettableProperty('assetUrl');
@@ -372,6 +383,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
     [Themes.TRITANOPIA]: CdoTritanopiaTheme,
     [Themes.TRITANOPIA_DARK]: CdoTritanopiaDarkTheme,
   };
+
+  // Assign all of the properties of the javascript generator to the forBlock array
+  // Prevents deprecation warnings related to https://github.com/google/blockly/pull/7150
+  Object.setPrototypeOf(javascriptGenerator.forBlock, javascriptGenerator);
+
   blocklyWrapper.JavaScript = javascriptGenerator;
   blocklyWrapper.navigationController = new NavigationController();
   // Initialize plugin.
@@ -516,6 +532,14 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return this.JavaScript;
   };
 
+  blocklyWrapper.addEmbeddedWorkspace = function (workspace) {
+    this.embeddedWorkspaces.push(workspace.id);
+  };
+
+  blocklyWrapper.isEmbeddedWorkspace = function (workspace) {
+    return this.embeddedWorkspaces.includes(workspace.id);
+  };
+
   // TODO - used for validation in CS in Algebra.
   blocklyWrapper.findEmptyContainerBlock = function () {};
   blocklyWrapper.BlockSpace = {
@@ -536,64 +560,70 @@ function initializeBlocklyWrapper(blocklyInstance) {
         );
       }
     },
+  };
 
-    createReadOnlyBlockSpace: (container, xml, options) => {
-      const theme = cdoUtils.getUserTheme(options.theme);
-      const workspace = new Blockly.WorkspaceSvg({
-        readOnly: true,
-        theme: theme,
-        plugins: {},
-        RTL: options.rtl,
-        renderer: options.renderer || Renderers.DEFAULT,
+  // An embedded workspace is one that only displays blocks, but never
+  // runs them. It is used for things like hint blocks, blocks in instructions,
+  // and previewing blocks for levelbuilders.
+  // We used to refer to these as "readOnlyBlockSpaces", which was confusing with normal,
+  // read only workspaces.
+  blocklyWrapper.createEmbeddedWorkspace = function (container, xml, options) {
+    const theme = cdoUtils.getUserTheme(options.theme);
+    const workspace = new Blockly.WorkspaceSvg({
+      readOnly: true,
+      theme: theme,
+      plugins: {},
+      RTL: options.rtl,
+      renderer: options.renderer || Renderers.DEFAULT,
+    });
+    // Track that this is and embedded workspace to avoid trying
+    // to run logic on it to ensure things run properly (such as procedures).
+    blocklyWrapper.addEmbeddedWorkspace(workspace);
+    const svg = Blockly.utils.dom.createSvgElement(
+      'svg',
+      {
+        xmlns: 'http://www.w3.org/2000/svg',
+        'xmlns:html': 'http://www.w3.org/1999/xhtml',
+        'xmlns:xlink': 'http://www.w3.org/1999/xlink',
+        version: '1.1',
+        class: `${Renderers.DEFAULT}-renderer modern-theme readOnlyBlockSpace injectionDiv`,
+      },
+      null
+    );
+
+    // Core Blockly requires a container div to be LTR, regardless of page direction.
+    container.setAttribute('dir', 'LTR');
+    container.style.display = 'inline-block';
+    container.appendChild(svg);
+    svg.appendChild(workspace.createDom());
+    // We do not include hidden definitions in embedded workspaces
+    // because embedded workspaces are only used for displaying blocks.
+    const includeHiddenDefinitions = false;
+    Blockly.cdoUtils.loadBlocksToWorkspace(
+      workspace,
+      Blockly.Xml.domToText(xml),
+      includeHiddenDefinitions
+    );
+
+    // Loop through all the parent blocks and remove vertical translation value
+    // This makes the output more condensed and readable, while preserving
+    // horizontal translation values for RTL rendering.
+    const blocksInWorkspace = workspace.getAllBlocks();
+    blocksInWorkspace
+      .filter(block => block.getParent() === null)
+      .forEach(block => {
+        const svgTransformList = block.svgGroup_.transform.baseVal;
+        const svgTransform = svgTransformList.getItem(0);
+        const svgTranslationX = svgTransform.matrix.e;
+        svgTransform.setTranslate(svgTranslationX, 0);
       });
-      const svg = Blockly.utils.dom.createSvgElement(
-        'svg',
-        {
-          xmlns: 'http://www.w3.org/2000/svg',
-          'xmlns:html': 'http://www.w3.org/1999/xhtml',
-          'xmlns:xlink': 'http://www.w3.org/1999/xlink',
-          version: '1.1',
-          class: `${Renderers.DEFAULT}-renderer modern-theme readOnlyBlockSpace injectionDiv`,
-        },
-        null
-      );
 
-      // Core Blockly requires a container div to be LTR, regardless of page direction.
-      container.setAttribute('dir', 'LTR');
-      container.style.display = 'inline-block';
-      container.appendChild(svg);
-      svg.appendChild(workspace.createDom());
-      Blockly.cdoUtils.loadBlocksToWorkspace(
-        workspace,
-        Blockly.Xml.domToText(xml)
-      );
-
-      // Loop through all the parent blocks and remove vertical translation value
-      // This makes the output more condensed and readable, while preserving
-      // horizontal translation values for RTL rendering.
-      const blocksInWorkspace = workspace.getAllBlocks();
-      blocksInWorkspace
-        .filter(block => block.getParent() === null)
-        .forEach(block => {
-          const svgTransformList = block.svgGroup_.transform.baseVal;
-          const svgTransform = svgTransformList.getItem(0);
-          const svgTranslationX = svgTransform.matrix.e;
-          svgTransform.setTranslate(svgTranslationX, 0);
-        });
-
-      // Shrink SVG to size of the block
-      const bbox = svg.getBBox();
-      svg.setAttribute('height', bbox.height + bbox.y);
-      svg.setAttribute('width', bbox.width + bbox.x);
-      // Add a transform to center read-only blocks on their line
-      const notchHeight = workspace.getRenderer().getConstants().NOTCH_HEIGHT;
-      svg.setAttribute(
-        'style',
-        `transform: translate(0px, ${notchHeight + BLOCK_PADDING}px)`
-      );
-      workspace.setTheme(theme);
-      return workspace;
-    },
+    // Shrink SVG to size of the block
+    const bbox = svg.getBBox();
+    svg.setAttribute('height', bbox.height + bbox.y);
+    svg.setAttribute('width', bbox.width + bbox.x);
+    workspace.setTheme(theme);
+    return workspace;
   };
 
   blocklyWrapper.inject = function (container, opt_options) {
@@ -605,8 +635,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
         wheel: true,
         drag: true,
         scrollbars: {
+          horizontal: true,
           vertical: true,
-          horizontal: false,
         },
       },
       plugins: {
@@ -631,6 +661,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       container.style.height = `calc(100% - ${styleConstants['workspace-headers-height']}px)`;
     }
     blocklyWrapper.isStartMode = !!opt_options.editBlocks;
+    blocklyWrapper.isToolboxMode = opt_options.editBlocks === 'toolbox_blocks';
     blocklyWrapper.toolboxBlocks = options.toolbox;
     const workspace = blocklyWrapper.blockly_.inject(container, options);
 
@@ -652,6 +683,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
       .getFlyout()
       ?.getWorkspace()
       ?.addChangeListener(adjustCalloutsOnViewportChange);
+
+    initializeScrollbarPair(workspace);
+
+    window.addEventListener('resize', reflowToolbox);
 
     document.dispatchEvent(
       utils.createEvent(Blockly.BlockSpace.EVENTS.MAIN_BLOCK_SPACE_CREATED)
@@ -722,6 +757,21 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.getMainWorkspace = function () {
     return blocklyWrapper.mainBlockSpace;
+  };
+
+  blocklyWrapper.getFunctionEditorWorkspace = function () {
+    return blocklyWrapper.functionEditor?.getWorkspace();
+  };
+
+  // Google Blockly labs also need to clear separate workspaces for the function editor.
+  blocklyWrapper.clearAllStudentWorkspaces = function () {
+    Blockly.getMainWorkspace().clear();
+    if (Blockly.getFunctionEditorWorkspace()) {
+      Blockly.getFunctionEditorWorkspace().clear();
+    }
+    if (Blockly.getHiddenDefinitionWorkspace()) {
+      Blockly.getHiddenDefinitionWorkspace().clear();
+    }
   };
 
   initializeBlocklyXml(blocklyWrapper);

@@ -2,7 +2,6 @@
   "category": "Sprites",
   "config": {
     "func": "setSpeed_dropdown",
-    "docFunc": "gamelab_setSpeed_dropdown",
     "blockText": "set {SPRITE} speed to {SIZE}",
     "args": [
       {

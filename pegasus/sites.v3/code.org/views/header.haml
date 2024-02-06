@@ -21,44 +21,19 @@
 
   require 'cdo/hamburger'
 
-  # A note on the use of language_dir_class below:
-  #
-  # Ideally, Pegasus would have <head dir="rtl"> on all pages as the dashboard
-  # does.  It would even be helpful if it had it on pages that are localized.
-  # As it is, dir="rtl" is not featured anywhere.  To make the header look the
-  # same as on dashboard, when in an RTL language, we wrap the header in this
-  # locale_dir_class and use CSS to make the header's options display RTL when
-  # at desktop width.
-
-=inline_css 'header.css'
 =inline_css 'hamburger.css'
 
-#language_dir{class: language_dir_class}
-  #pageheader-wrapper
-    #pageheader
-      .content
-        #left
-          #logo-wrapper
-            - if current_user
-              %a.linktag#logo-signedin{:href=>CDO.studio_url("/home")}
-                %img#logo{:src=>'/images/logo.svg', alt: I18n.t(:code_org_logo_alt)}
-            - else
-              %a.linktag#logo-signedout{:href=>CDO.code_org_url}
-                %img#logo{:src=>'/images/logo.svg', alt: I18n.t(:code_org_logo_alt)}
-          #headerlinks.hide_on_tablet
-            - Hamburger.get_header_contents(header_contents_options).each do |entry|
-              %a.headerlink.linktag{id: entry[:id], href: entry[:url]}= entry[:title]
-
-        #right
-          #sign_in_or_user
-            =view :sign_in_or_user
-          = view :help_button, hamburger_options
-          = view :hamburger, hamburger_options
-
-      #clear{:style=>'clear:both'}
-
-      #loc.desktop-feature
-        -if banner = @header['banner']
-          =view banner
-
-#clear{:style=>'clear:both'}
+%nav.main
+  .left
+    -# rubocop:disable CustomCops/DashboardDbUsage
+    %a{href: current_user ? CDO.studio_url("/home") : CDO.code_org_url}
+      %img.logo{src: '/images/logo.svg', alt: I18n.t(:code_org_logo_alt)}
+    -# rubocop:enable CustomCops/DashboardDbUsage
+    %ul#headerlinks
+      - Hamburger.get_header_contents(header_contents_options).each do |entry|
+        %li
+          %a{id: entry[:id], href: entry[:url]}= entry[:title]
+  .right
+    = view :sign_in_or_user
+    = view :help_button, hamburger_options
+    = view :hamburger, hamburger_options

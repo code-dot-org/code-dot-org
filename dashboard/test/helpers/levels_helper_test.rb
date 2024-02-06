@@ -14,6 +14,7 @@ class LevelsHelperTest < ActionView::TestCase
   setup do
     @level = create(:maze)
     @game = Game.custom_maze
+    @is_start_mode = false
 
     def request
       OpenStruct.new(
@@ -108,7 +109,6 @@ class LevelsHelperTest < ActionView::TestCase
 
   test "blockly_options 'embed' is true for widget levels not in start mode" do
     @level = create(:applab, embed: false, widget_mode: true)
-    @is_start_mode = false
     assert blockly_options[:embed]
   end
 
@@ -376,7 +376,7 @@ class LevelsHelperTest < ActionView::TestCase
     reset_view_options
   end
 
-  test 'use_google_blockly is false if blocklyVersion is set to Cdo in view_optiond even if level uses google_blockly' do
+  test 'use_google_blockly is false if blocklyVersion is set to Cdo in view_options even if level uses google_blockly' do
     Experiment.stubs(:enabled?).returns(false)
     view_options(blocklyVersion: 'cdo')
     @level = build :level
@@ -1086,7 +1086,6 @@ class LevelsHelperTest < ActionView::TestCase
       "<style>.blocklySvg { background: none; }</style>" \
       "<script src=\"/assets/js/blockly.js\"></script>" \
       "<script src=\"/assets/js/en_us/blockly_locale.js\"></script>" \
-      "<script src=\"/assets/js/common.js\"></script>" \
       "<script src=\"/assets/js/en_us/maze_locale.js\"></script>" \
       "<script src=\"/assets/js/maze.js\" data-appoptions=\"{&quot;readonly&quot;:true,&quot;embedded&quot;:true,&quot;locale&quot;:&quot;en_us&quot;,&quot;baseUrl&quot;:&quot;/blockly/&quot;,&quot;blocks&quot;:&quot;\\u003cxml\\u003e\\u003c/xml\\u003e&quot;,&quot;dialog&quot;:{},&quot;nonGlobal&quot;:true}\"></script>" \
       "<script src=\"/assets/js/embedBlocks.js\"></script>"

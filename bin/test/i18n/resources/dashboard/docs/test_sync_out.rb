@@ -144,7 +144,8 @@ describe I18n::Resources::Dashboard::Docs::SyncOut do
 
       RedactRestoreUtils.expects(:restore).with(
         i18n_original_file_path, crowdin_file_path, crowdin_file_path, %w[visualCodeBlock link resourceLink]
-      ).once.returns(expected_new_programming_envs_i18n_data)
+      ).once
+      I18nScriptUtils.expects(:parse_file).with(crowdin_file_path).once.returns(expected_new_programming_envs_i18n_data)
 
       assert_equal expected_new_programming_envs_i18n_data, new_programming_envs_i18n_data
     end

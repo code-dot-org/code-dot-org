@@ -6,6 +6,7 @@ export const commonFunctions = {
    */
   saveExtraState: function () {
     const state = Object.create(null);
+    state['behaviorId'] = this.behaviorId;
     const model = this.getProcedureModel();
     if (!model) {
       state['name'] = this.getFieldValue('NAME');
@@ -24,6 +25,7 @@ export const commonFunctions = {
    *     procedure name.
    */
   loadExtraState: function (state) {
+    this.behaviorId = state['behaviorId'];
     this.deserialize_(state['name'], state['params'] || []);
   },
 

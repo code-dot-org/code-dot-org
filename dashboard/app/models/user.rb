@@ -79,6 +79,7 @@ require_dependency 'queries/script_activity'
 require 'policies/child_account'
 require 'services/child_account'
 require 'policies/lti'
+require 'services/user'
 
 class User < ApplicationRecord
   include SerializedProperties
@@ -144,6 +145,7 @@ class User < ApplicationRecord
     family_name
     ai_rubrics_disabled
     sort_by_family_name
+    show_progress_table_v2
   )
 
   attr_accessor(
@@ -251,8 +253,6 @@ class User < ApplicationRecord
   after_save :update_and_add_users_school_infos, if: :saved_change_to_school_info_id?
   validate :complete_school_info, if: :school_info_id_changed?, unless: proc {|u| u.purged_at.present?}
 
-  has_one :circuit_playground_discount_application
-
   has_many :pd_applications,
     class_name: 'Pd::Application::ApplicationBase',
     dependent: :destroy
@@ -272,6 +272,10 @@ class User < ApplicationRecord
   after_save :save_parent_email_preference, if: :parent_email_preference_opt_in_required?
 
   after_save :save_email_reg_partner_preference, if: -> {share_teacher_email_reg_partner_opt_in_radio_choice.present?}
+
+  after_create if: -> {Policies::Lti.lti? self} do
+    Services::Lti.create_lti_user_identity(self)
+  end
 
   before_destroy :soft_delete_channels
 
@@ -294,7 +298,8 @@ class User < ApplicationRecord
     self.gender = Policies::Gender.normalize gender_student_input
   end
 
-  validates :gender_student_input, length: {maximum: 50}
+  validates :gender_student_input, length: {maximum: 50}, no_utf8mb4: true
+  validates :gender_teacher_input, no_utf8mb4: true
 
   def save_email_preference
     if teacher?
@@ -483,7 +488,7 @@ class User < ApplicationRecord
 
   has_many :user_levels, -> {order(id: :desc)}, inverse_of: :user
 
-  has_many :section_instructors, foreign_key: 'instructor_id'
+  has_many :section_instructors, foreign_key: 'instructor_id', dependent: :destroy
   has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor', foreign_key: 'instructor_id'
   has_many :sections_instructed, -> {without_deleted}, through: :active_section_instructors, source: :section
 
@@ -520,7 +525,7 @@ class User < ApplicationRecord
   validates :name, length: {within: 1..70}, allow_blank: true
   validates :name, no_utf8mb4: true
 
-  defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.sponsored?}
+  defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.sponsored? || Policies::Lti.lti?(user)}
 
   validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
@@ -895,7 +900,7 @@ class User < ApplicationRecord
   def self.new_with_session(params, session)
     return super unless PartialRegistration.in_progress? session
     new_from_partial_registration session do |user|
-      user.attributes = user.attributes.merge(params) {|_key, old_val, new_val| new_val.presence || old_val}.compact
+      Services::User.assign_form_params(user, params)
     end
   end
 
@@ -1389,7 +1394,7 @@ class User < ApplicationRecord
 
   #sections owned by the user AND not deleted
   def owned_section_ids
-    sections.select(:id).all
+    sections_instructed.select(:id).all
   end
 
   # Is the provided script_level hidden, on account of the section(s) that this
@@ -1486,15 +1491,17 @@ class User < ApplicationRecord
 
   # Teachers
   def can_enable_ai_tutor?
+    !DCDO.get('ai-tutor-disabled', false) && (
     permission?(UserPermission::AI_TUTOR_ACCESS) ||
-      SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
+      SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME))
   end
 
   # Students
   def has_ai_tutor_access?
+    !DCDO.get('ai-tutor-disabled', false) && (
     permission?(UserPermission::AI_TUTOR_ACCESS) ||
       (get_active_experiment_names_by_teachers.include?(AI_TUTOR_EXPERIMENT_NAME) &&
-      sections_as_student.any?(&:ai_tutor_enabled))
+      sections_as_student.any?(&:ai_tutor_enabled)))
   end
 
   def student_of_verified_instructor?
@@ -1920,7 +1927,7 @@ class User < ApplicationRecord
   end
 
   def all_sections
-    sections_as_teacher = student? ? [] : sections.to_a
+    sections_as_teacher = student? ? [] : sections_instructed.to_a
     sections_as_teacher.concat(sections_as_student).uniq
   end
 
@@ -2637,13 +2644,13 @@ class User < ApplicationRecord
 
   # Returns a list of all grades that the teacher currently has sections for
   private def grades_being_taught
-    @grades_being_taught ||= sections.map(&:grades).flatten.uniq
+    @grades_being_taught ||= sections_instructed.map(&:grades).flatten.uniq
   end
 
   # Returns a list of all curriculums that the teacher currently has sections for
   # ex: ["csf", "csd"]
   private def curriculums_being_taught
-    @curriculums_being_taught ||= sections.filter_map {|section| section.script&.curriculum_umbrella}.uniq
+    @curriculums_being_taught ||= sections_instructed.filter_map {|section| section.script&.curriculum_umbrella}.uniq
   end
 
   private def has_attended_pd?
@@ -2673,7 +2680,7 @@ class User < ApplicationRecord
     # If we're a teacher, we want to go through each of our sections and return
     # a mapping from section id to hidden lessons/units in that section
     hidden_by_section = {}
-    sections.each do |section|
+    sections_instructed.each do |section|
       hidden_by_section[section.id] = hidden_lessons ? hidden_lesson_ids([section]) : hidden_unit_ids([section])
     end
     hidden_by_section

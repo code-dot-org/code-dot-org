@@ -125,7 +125,7 @@ module Pd::Application
         raise "invalid email address for application #{id}"
       end
 
-      "\"#{applicant_full_name}\" <#{applicant_email}>"
+      ActionMailer::Base.email_address_with_name(applicant_email, applicant_full_name)
     end
 
     # Sends an email for this application
@@ -342,9 +342,9 @@ module Pd::Application
       return nil if regional_partner&.contact_email_with_backup.blank?
 
       if regional_partner.contact_name.present? && regional_partner.contact_email.present?
-        "\"#{regional_partner.contact_name}\" <#{regional_partner.contact_email}>"
+        ActionMailer::Base.email_address_with_name(regional_partner.contact_email, regional_partner.contact_name)
       elsif regional_partner.program_managers&.first.present?
-        "\"#{regional_partner.program_managers.first.name}\" <#{regional_partner.program_managers.first.email}>"
+        ActionMailer::Base.email_address_with_name(regional_partner.program_managers.first.email, regional_partner.program_managers.first.name)
       end
     end
 

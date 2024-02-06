@@ -214,7 +214,7 @@ export default function AddCoteacher({
 
   return (
     <div className={styles.add}>
-      <label className={styles.label}>{i18n.coteacherEmailAddress()}</label>
+      <label className={styles.addLabel}>{i18n.coteacherEmailAddress()}</label>
       <div className={styles.form} onSubmit={handleAddEmail}>
         <input
           className={classNames(styles.input, !!addError && styles.inputError)}

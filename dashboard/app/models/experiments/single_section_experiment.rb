@@ -50,6 +50,6 @@ class SingleSectionExperiment < Experiment
   def enabled?(user: nil)
     return false unless user
 
-    user.sections.include?(section) || user.sections_as_student.include?(section)
+    user.sections_instructed.include?(section) || user.sections_as_student.include?(section)
   end
 end

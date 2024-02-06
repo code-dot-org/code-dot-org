@@ -32,12 +32,24 @@ end
 # Skip this if the tests are run in RubyMine
 Minitest::Reporters.use! reporters unless ENV['RM_INFO']
 
-class Minitest::Spec
-  before do
-    if ENV['CIRCLECI']
-      STDOUT.stubs(:print)
-      STDOUT.stubs(:puts)
-      STDOUT.stubs(:warn)
+module MiniTest
+  module Assertions
+    alias :actual_diff :diff
+
+    def diff(exp, act)
+      FakeFS.without do
+        actual_diff(exp, act)
+      end
+    end
+  end
+
+  class Spec
+    before do
+      if ENV['CIRCLECI']
+        STDOUT.stubs(:print)
+        STDOUT.stubs(:puts)
+        STDOUT.stubs(:warn)
+      end
     end
   end
 end

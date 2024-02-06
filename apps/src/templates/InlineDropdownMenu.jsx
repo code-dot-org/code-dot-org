@@ -97,7 +97,9 @@ export class InlineDropdownMenu extends Component {
                   style={styles.dropdownOptionContainer}
                   key={index}
                   tabIndex={0}
-                />
+                >
+                  {child.props.children}
+                </a>
               );
             })}
           </ul>

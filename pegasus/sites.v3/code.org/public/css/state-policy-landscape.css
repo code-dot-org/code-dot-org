@@ -14,14 +14,14 @@
     padding-left:48px;
   }
   h1 {
-    color: #7665a0;
+    color: var(--brand_secondary_default);
     line-height: 36px;
   }
   h2 {
-    color: #00adbc;
+    color: var(--brand_primary_default);
   }
   a {
-    color: #7665a0;
+    color: var(--brand_secondary_default);
   }
   ul.link-bar {
     padding-left:0px;

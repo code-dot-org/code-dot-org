@@ -41,6 +41,7 @@ export class SummaryTable extends React.Component {
         'pending',
         'pending_space_availability',
         'accepted',
+        'enrolled',
         'declined',
         'withdrawn',
       ],

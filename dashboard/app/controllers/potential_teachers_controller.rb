@@ -9,8 +9,12 @@ class PotentialTeachersController < ApplicationController
       begin
         @potential_teacher.save!
         render json: {message: 'Potential teacher created successfully'}, status: :created
-      rescue ActiveRecord::RecordInvalid => exception
-        raise "ERROR: #{exception.message}"
+      rescue => exception
+        Honeybadger.notify(
+          exception,
+          error_message: "Error saving potential teacher information"
+        )
+        render status: :internal_server_error, json: {error: exception}
       end
     end
     send_hoc_email(params)

@@ -1,5 +1,14 @@
-import {PROCEDURE_DEFINITION_TYPES} from '../constants';
-import {partitionBlocksByType} from './cdoUtils';
+import {BLOCK_TYPES, PROCEDURE_DEFINITION_TYPES} from '../constants';
+import {
+  FALSEY_DEFAULT,
+  TRUTHY_DEFAULT,
+  readBooleanAttribute,
+  shouldSkipHiddenWorkspace,
+} from '../utils';
+
+// The user created attribute needs to be read from XML start blocks as 'usercreated'.
+// Once this has been done, all subsequent steps in the serialization use userCreated.
+const USER_CREATED_XML_ATTRIBUTE = 'usercreated';
 
 export default function initializeBlocklyXml(blocklyWrapper) {
   // Clear xml namespace
@@ -46,18 +55,22 @@ export default function initializeBlocklyXml(blocklyWrapper) {
    * @returns {Object[]} An array of objects containing the created blocks and their positions.
    */
   blocklyWrapper.Xml.domToBlockSpace = function (workspace, xml) {
-    const partitionedBlockElements = getPartitionedBlockElements(
-      xml,
-      PROCEDURE_DEFINITION_TYPES
-    );
+    const blockElements = getBlockElements(xml);
     const blocks = [];
     // To position the blocks, we first render them all to the Block Space
     //  and parse any X or Y coordinates set in the XML. Then, we store
     //  the rendered blocks and the coordinates in an array so that we can
     //  position them.
-    partitionedBlockElements.forEach(xmlChild => {
-      addMutationToBehaviorDefBlocks(xmlChild);
+    blockElements.forEach(xmlChild => {
+      // Recursively check blocks for XML attributes that need to be manipulated.
+      processBlockAndChildren(xmlChild);
+
+      // Further manipulate the XML for specific top block types.
+      addNameToBlockFunctionDefinitionBlock(xmlChild);
+      addMutationToProcedureDefBlocks(xmlChild);
       addMutationToMiniToolboxBlocks(xmlChild);
+      makeWhenRunUndeletable(xmlChild);
+
       const blockly_block = Blockly.Xml.domToBlock(xmlChild, workspace);
       const x = parseInt(xmlChild.getAttribute('x'), 10);
       const y = parseInt(xmlChild.getAttribute('y'), 10);
@@ -72,8 +85,35 @@ export default function initializeBlocklyXml(blocklyWrapper) {
   };
 
   blocklyWrapper.Xml.blockSpaceToDom = blocklyWrapper.Xml.workspaceToDom;
+  blocklyWrapper.Xml.textToDom = blocklyWrapper.utils.xml.textToDom;
+}
+/**
+ * Gets the XML representation for a project, including its workspace and, if applicable, the hidden definition workspace.
+ *
+ * @param {Blockly.Workspace} workspace - The workspace from which to obtain the project XML.
+ * @returns {string} The XML representation of the project.
+ *
+ */
+export function getProjectXml(workspace) {
+  // Start by getting the XML for all blocks on the workspace.
+  const workspaceXml = Blockly.Xml.blockSpaceToDom(workspace);
 
-  blocklyWrapper.Xml.createBlockOrderMap = createBlockOrderMap;
+  if (shouldSkipHiddenWorkspace(workspace)) {
+    return workspaceXml;
+  }
+
+  // Also serialize blocks on the hidden workspace for procedure definitions.
+  const hiddenWorkspaceXml = Blockly.Xml.blockSpaceToDom(
+    Blockly.getHiddenDefinitionWorkspace()
+  );
+
+  // Merge the hidden workspace XML into the primary XML
+  hiddenWorkspaceXml.childNodes.forEach(node => {
+    const clonedNode = node.cloneNode(true);
+    workspaceXml.appendChild(clonedNode);
+  });
+
+  return workspaceXml;
 }
 
 /**
@@ -110,7 +150,19 @@ export function addMutationToMiniToolboxBlocks(blockElement) {
 }
 
 /**
- * Adds a mutation element to a block if it is a behavior definition.
+ * Sets the deletable attribute on when_run blocks to false.
+ *
+ * @param {Element} blockElement - The XML element for a single block.
+ */
+export function makeWhenRunUndeletable(blockElement) {
+  if (blockElement.getAttribute('type') !== BLOCK_TYPES.whenRun) {
+    return;
+  }
+  blockElement.setAttribute('deletable', false);
+}
+
+/**
+ * Adds a mutation element to a block if it is a behavior block.
  * CDO Blockly uses an unsupported method for serializing state
  * where arbitrary XML attributes could hold important information.
  * Mainline Blockly expects a mutator. The presence of the mutation element
@@ -118,8 +170,12 @@ export function addMutationToMiniToolboxBlocks(blockElement) {
  *
  * @param {Element} blockElement - The XML element for a single block.
  */
-export function addMutationToBehaviorDefBlocks(blockElement) {
-  if (blockElement.getAttribute('type') !== 'behavior_definition') {
+export function addMutationToBehaviorBlocks(blockElement) {
+  if (
+    ![BLOCK_TYPES.behaviorDefinition, BLOCK_TYPES.behaviorGet].includes(
+      blockElement.getAttribute('type')
+    )
+  ) {
     return;
   }
   const mutationElement =
@@ -133,13 +189,18 @@ export function addMutationToBehaviorDefBlocks(blockElement) {
   // (e.g. shared behaviors).
   // In CDO Blockly, the 'usercreated' flag was set on the block. Google Blockly
   // expects this kind of extra state in a mutator.
-  const usercreatedAttribute = blockElement.getAttribute('usercreated');
-  const userCreated = usercreatedAttribute === 'true';
+  const userCreated = readBooleanAttribute(
+    blockElement,
+    USER_CREATED_XML_ATTRIBUTE,
+    FALSEY_DEFAULT
+  );
   mutationElement.setAttribute('userCreated', userCreated);
 
   // In CDO Blockly, behavior ids were stored on the field. Google Blockly
   // expects this kind of extra state in a mutator.
-  const nameField = blockElement.querySelector('field[name="NAME"]');
+  const nameField =
+    getFieldOrTitle(blockElement, 'VAR') ||
+    getFieldOrTitle(blockElement, 'NAME');
   const idAttribute = nameField && nameField.getAttribute('id');
   if (idAttribute) {
     // Create new mutation attribute based on original block attribute.
@@ -148,29 +209,219 @@ export function addMutationToBehaviorDefBlocks(blockElement) {
 }
 
 /**
- * Creates a block order map for the given XML by partitioning the block
- * elements based on their types and mapping their partitioned positions to
- * their original positions in the XML. This is used to reset a list of
- * blocks into their original order before re-positioning blocks on the
- * rendered workspace.
+ * Adds a mutation element to a block if it is a procedure definition.
+ * Currently, the only reason to have a mutator for procedures is to store
+ * the 'usercreated' property. Behavior definition mutators are more complicated,
+ * see addMutationToBehaviorDefBlocks.
  *
- * @param {Element} xml - The XML element containing block elements to create the order map.
- * @returns {Map} A map with partitioned block index as key and original index in the XML as value.
+ * @param {Element} blockElement - The XML element for a single block.
  */
-export function createBlockOrderMap(xml) {
-  // Convert XML to an array of block elements
-  const blockElements = Array.from(xml.childNodes).filter(
-    node => node.nodeName.toLowerCase() === 'block'
+export function addMutationToProcedureDefBlocks(blockElement) {
+  if (blockElement.getAttribute('type') !== BLOCK_TYPES.procedureDefinition) {
+    return;
+  }
+  const mutationElement =
+    blockElement.querySelector('mutation') ||
+    blockElement.ownerDocument.createElement('mutation');
+  // Place mutator before fields, values, and other nested blocks.
+  blockElement.insertBefore(mutationElement, blockElement.firstChild);
+
+  // We need to keep track of whether the user created the procedure definition.
+  // In CDO Blockly, the 'usercreated' flag was set on the block. Google Blockly
+  // expects this kind of extra state in a mutator.
+  const userCreated = readBooleanAttribute(
+    blockElement,
+    USER_CREATED_XML_ATTRIBUTE,
+    FALSEY_DEFAULT
   );
-  const partitionedBlockElements = getPartitionedBlockElements(
-    xml,
-    PROCEDURE_DEFINITION_TYPES
+  mutationElement.setAttribute('userCreated', userCreated);
+}
+
+/**
+ * Adds a mutation element to a block if it should be invisible.
+ * These blocks will be loaded onto the hidden workspace for procedure definitions.
+ *
+ * @param {Element} blockElement - The XML element for a single block.
+ */
+export function addMutationToInvisibleBlocks(blockElement) {
+  if (PROCEDURE_DEFINITION_TYPES.includes(blockElement.getAttribute('type'))) {
+    return;
+  }
+
+  const invisible = !readBooleanAttribute(
+    blockElement,
+    'uservisible',
+    TRUTHY_DEFAULT
   );
-  const blockOrderMap = new Map();
-  blockElements.forEach((element, index) => {
-    blockOrderMap.set(partitionedBlockElements.indexOf(element), index);
+
+  if (!invisible) {
+    return;
+  }
+  const mutationElement =
+    blockElement.querySelector('mutation') ||
+    blockElement.ownerDocument.createElement('mutation');
+  // Place mutator before fields, values, and other nested blocks.
+  blockElement.insertBefore(mutationElement, blockElement.firstChild);
+  mutationElement.setAttribute('invisible', invisible);
+}
+
+/**
+ * In the event that a legacy project has functions without names, add a name
+ * to the definition block's NAME field.
+ * @param {Element} blockElement - The XML element for a single block.
+ */
+export function addNameToBlockFunctionDefinitionBlock(blockElement) {
+  const blockType = blockElement.getAttribute('type');
+  if (blockType !== BLOCK_TYPES.procedureDefinition) {
+    return;
+  }
+  const fieldElement = getFieldOrTitle(blockElement, 'NAME');
+  if (!fieldElement) {
+    return;
+  }
+
+  if (fieldElement.textContent === '') {
+    fieldElement.textContent = Blockly.Msg.UNNAMED_KEY;
+  }
+}
+
+/**
+ * In the event that a legacy project has functions without names, add a name
+ * to a call block's mutator.
+ *
+ * @param {Element} blockElement - The XML element for a single block.
+ */
+export function addNameToBlockFunctionCallBlock(blockElement) {
+  const blockType = blockElement.getAttribute('type');
+  if (blockType !== BLOCK_TYPES.procedureCall) {
+    return;
+  }
+  const mutationElement =
+    blockElement.querySelector('mutation') ||
+    blockElement.ownerDocument.createElement('mutation');
+  // Place mutator before fields, values, and other nested blocks.
+  blockElement.insertBefore(mutationElement, blockElement.firstChild);
+  if (!mutationElement.getAttribute('name')) {
+    mutationElement.setAttribute('name', Blockly.Msg.UNNAMED_KEY);
+  }
+}
+
+/**
+ * If a field should was serialized before we had behavior ids, manually add
+ * one based on the behavior name found in the field.
+ *
+ * @param {Element} blockElement - The XML element for a single block.
+ */
+function addMissingBehaviorId(blockElement) {
+  const blockType = blockElement.getAttribute('type');
+  if (blockType === BLOCK_TYPES.behaviorGet) {
+    const behaviorNameField =
+      // CDO Blockly projects used a VAR field to store the behavior name.
+      getFieldOrTitle(blockElement, 'VAR') ||
+      // Google Blockly projects use a NAME field to store the behavior name.
+      getFieldOrTitle(blockElement, 'NAME');
+    setIdFromTextContent(behaviorNameField);
+  } else if (blockType === BLOCK_TYPES.behaviorDefinition) {
+    setIdFromTextContent(getFieldOrTitle(blockElement, 'NAME'));
+  }
+}
+
+/**
+ * If a field should was serialized before we had behavior ids, manually add
+ * one based on the behavior name found in the field.
+ *
+ * @param {Element} element - The XML element (title or field) for a block.
+ */
+function setIdFromTextContent(element) {
+  if (!element) {
+    return;
+  }
+  if (!element.getAttribute('id')) {
+    element.setAttribute('id', element.textContent);
+  }
+}
+/**
+ * Adds a mutation element to a block if it's a text join block with an input count.
+ * CDO Blockly uses an unsupported method for serializing input count state
+ * where an arbitrary block attribute could be used to manage extra state.
+ * Mainline Blockly expects a mutator. The presence of the mutation element
+ * will trigger the block's domToMutation function to run, if it exists.
+ *
+ * @param {Element} blockElement - The XML element for a single block.
+ */
+export function addMutationToTextJoinBlock(blockElement) {
+  if (
+    !['text_join', 'text_join_simple'].includes(
+      blockElement.getAttribute('type')
+    )
+  ) {
+    return;
+  }
+  const mutationElement =
+    blockElement.querySelector('mutation') ||
+    blockElement.ownerDocument.createElement('mutation');
+  // Place mutator before fields, values, and other nested blocks.
+  blockElement.insertBefore(mutationElement, blockElement.firstChild);
+
+  // We need to keep track of the expected number of inputs in order to create them all.
+  // Google Blockly expects this kind of extra state to be in a mutator.
+  const inputCount = blockElement.getAttribute('inputcount');
+  mutationElement.setAttribute('items', inputCount);
+}
+
+function getFieldOrTitle(blockElement, name) {
+  // Title is the legacy name for field, we support getting name from
+  // either field or title.
+  return (
+    //The :scope pseudo-class is used to refer to the parent element (blockElement)
+    // It ensures that the subsequent selectors target only immediate children.
+    blockElement.querySelector(`:scope > field[name="${name}"]`) ||
+    blockElement.querySelector(`:scope > title[name="${name}"]`)
+  );
+}
+
+/**
+ * A helper function designed to process each individual block in an XML tree.
+ * @param {Element} block - The XML element for a single block.
+ */
+function processBlockAndChildren(block) {
+  processIndividualBlock(block);
+
+  // Blocks can contain other blocks so we must process them recursively.
+  const childBlocks = block.querySelectorAll('block');
+  childBlocks.forEach(childBlock => {
+    processBlockAndChildren(childBlock);
   });
-  return blockOrderMap;
+}
+
+/**
+ * Perform any need manipulations for a given XML block element.
+ * @param {Element} block - The XML element for a single block.
+ */
+function processIndividualBlock(block) {
+  addNameToBlockFunctionCallBlock(block);
+  addMissingBehaviorId(block);
+  addMutationToBehaviorBlocks(block);
+  // Convert unsupported can_disconnect_from_parent attributes.
+  makeLockedBlockImmovable(block);
+  addMutationToTextJoinBlock(block);
+  addMutationToInvisibleBlocks(block);
+}
+
+/**
+ * CDO Blockly supported a can_disconnect_from_parent attribute that
+ * effectively worked like the modern movable property. To prevent
+ * unintended movability changes to student code, we convert the unsupported
+ * can_disconnect_from_parentto movable.
+ * @param {Element} block - The XML element for a single block.
+ */
+function makeLockedBlockImmovable(block) {
+  const canDisconnectValue = block.getAttribute('can_disconnect_from_parent');
+  // If present, value will be either "true" or "false" (string, not boolean)
+  if (canDisconnectValue) {
+    block.setAttribute('movable', canDisconnectValue);
+    block.removeAttribute('can_disconnect_from_parent');
+  }
 }
 
 /**
@@ -178,25 +429,9 @@ export function createBlockOrderMap(xml) {
  * If no block elements are found in the XML, an empty array is returned.
  *
  * @param {Element} xml - The XML element containing block elements.
- * @param {string[]} prioritizedBlockTypes - An array of strings representing block types.
- *    These types are moved to the front of the list while maintaining the order of non-prioritized types.
- * @returns {Element[]} An array of partitioned block elements or an empty array if no blocks are present.
+ * @returns {Element[]} An array of block elements or an empty array if no blocks are present.
  */
-export function getPartitionedBlockElements(xml, prioritizedBlockTypes) {
+export function getBlockElements(xml) {
   // Convert XML to an array of block elements
-  const blockElements = Array.from(xml.querySelectorAll('xml > block'));
-
-  // Check if any block elements were found
-  if (blockElements.length === 0) {
-    return [];
-  }
-
-  // Procedure definitions should be loaded ahead of call
-  // blocks, so that the procedures map is updated correctly.
-  const partitionedBlockElements = partitionBlocksByType(
-    blockElements,
-    prioritizedBlockTypes,
-    true
-  );
-  return partitionedBlockElements;
+  return Array.from(xml.querySelectorAll('xml > block'));
 }

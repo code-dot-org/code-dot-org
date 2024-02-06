@@ -36,6 +36,7 @@ const EVENTS = {
   APP_STATUS_CHANGE_EVENT: 'Application Status Changed',
   ADMIN_APPROVAL_RECEIVED_EVENT: 'Administrator Approval Received',
   SUBMIT_RP_CONTACT_FORM_EVENT: 'Submit Regional Partner Contact Form',
+  RP_LANDING_PAGE_VISITED_EVENT: 'Regional Partner Landing Page Visited',
 
   // Marketing site pages
   ADMIN_INTEREST_FORM_SUBMIT_EVENT: 'Administrator Interest Form Submitted',
@@ -100,6 +101,7 @@ const EVENTS = {
   TA_RUBRIC_EVIDENCE_LEVEL_SELECTED: 'TA Rubric Evidence Level Selected',
   TA_RUBRIC_RUN_BUTTON_CLICKED:
     'TA Rubric Teacher clicked RUN button on student work',
+  TA_RUBRIC_LEARNING_GOAL_SELECTED: 'TA Rubric Learning Goal Selected',
 
   // AI Tutor
   AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
@@ -124,6 +126,8 @@ const EVENTS = {
   DANCE_PARTY_AI_BACKGROUND_EXPLAINED: 'Dance Party AI Background Explained',
   DANCE_PARTY_AI_EMOJI_USED: 'Dance Party AI Emoji Used',
   DANCE_PARTY_SONG_UNAVAILABLE: 'Dance Party Song Unavailable',
+  DANCE_PARTY_VALIDATION: 'Dance Party Validation',
+  DANCE_PARTY_AI_MODAL_CLOSED: 'Dance Party AI Modal Closed',
 
   // videos
   VIDEO_LOADED: 'Video Loaded',
@@ -141,6 +145,9 @@ const EVENTS = {
   COTEACHER_INVITE_ACCEPTED: 'Coteacher Invite Accepted',
   COTEACHER_INVITE_DECLINED: 'Coteacher Invite Declined',
   COTEACHER_REMOVED: 'Coteacher Removed',
+
+  // PL Landing Page
+  MY_PL_PAGE_VISITED: 'My Professional Learning Page Visited',
 };
 
 const EVENT_GROUP_NAMES = {
@@ -160,6 +167,7 @@ const EVENT_GROUPS = {
   [EVENTS.DANCE_PARTY_AI_BACKGROUND_EXPLAINED]: EVENT_GROUP_NAMES.DANCE_PARTY,
   [EVENTS.DANCE_PARTY_AI_EMOJI_USED]: EVENT_GROUP_NAMES.DANCE_PARTY,
   [EVENTS.DANCE_PARTY_SONG_UNAVAILABLE]: EVENT_GROUP_NAMES.DANCE_PARTY,
+  [EVENTS.DANCE_PARTY_AI_MODAL_CLOSED]: EVENT_GROUP_NAMES.DANCE_PARTY,
 
   // videos
   [EVENTS.VIDEO_LOADED]: EVENT_GROUP_NAMES.VIDEO_EVENTS,

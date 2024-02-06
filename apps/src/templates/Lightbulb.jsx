@@ -10,6 +10,7 @@ export default class Lightbulb extends React.Component {
     size: PropTypes.number,
     style: PropTypes.object,
     isMinecraft: PropTypes.bool,
+    isRtl: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -53,7 +54,13 @@ export default class Lightbulb extends React.Component {
     } else {
       bulbDisplay = (
         <g className={this.props.shouldAnimate ? 'animate-hint' : ''}>
-          <g transform="translate(245,200) scale(10.0,10.0)">
+          <g
+            transform={
+              this.props.isRtl
+                ? 'translate(0,200) scale(10.0,10.0)'
+                : 'translate(245,200) scale(10.0,10.0)'
+            }
+          >
             <path
               d="M22 33H8.25C7.39062 30.3359 5.67188 27.9297 3.95312 25.6094C3.52344 25.0078 3.09375 24.4062 2.66406 23.8047C0.945312 21.3125 0 18.3906 0 15.125C0 6.78906 6.70312 0 15.125 0C23.4609 0 30.25 6.78906 30.25 15.2109C30.25 18.3906 29.2188 21.3125 27.5 23.8047C27.0703 24.4062 26.6406 25.0078 26.2109 25.6094C24.4922 27.9297 22.7734 30.3359 22 33ZM15.125 44C11.2578 44 8.25 40.9922 8.25 37.125V35.75H22V37.125C22 40.9922 18.9062 44 15.125 44ZM8.25 15.125C8.25 11.3438 11.2578 8.25 15.125 8.25C15.8125 8.25 16.5 7.64844 16.5 6.875C16.5 6.1875 15.8125 5.5 15.125 5.5C9.79688 5.5 5.5 9.88281 5.5 15.125C5.5 15.8984 6.10156 16.5 6.875 16.5C7.5625 16.5 8.25 15.8984 8.25 15.125Z"
               fill="#1892E3"
@@ -88,7 +95,12 @@ export default class Lightbulb extends React.Component {
       } else {
         countDisplay = (
           <g>
-            <text id="hintCount" x="495" y="380" style={styles.count}>
+            <text
+              id="hintCount"
+              x={this.props.isRtl ? '380' : '495'}
+              y="380"
+              style={styles.count}
+            >
               {countText}
             </text>
           </g>
@@ -96,7 +108,7 @@ export default class Lightbulb extends React.Component {
         numberCircle = (
           <g className={this.props.shouldAnimate ? 'animate-hint' : ''}>
             <circle
-              cx="565"
+              cx={this.props.isRtl ? '315' : '565'}
               cy="310"
               r="125"
               fill={color.white}

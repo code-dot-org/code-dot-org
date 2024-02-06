@@ -9,10 +9,11 @@ import moduleStyles from './dance-view.module.scss';
 import SongSelector from '@cdo/apps/dance/SongSelector';
 import {DanceState, initSongs, reducers, setSong} from '../../danceRedux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {DanceLevelProperties, DanceProjectSources} from '../../types';
 import {registerReducers} from '@cdo/apps/redux';
+import {installCommonBlocks, installDanceBlocks} from '../../blockly/setup';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 const commonI18n = require('@cdo/locale');
 
 const DANCE_VISUALIZATION_ID = 'dance-visualization';
@@ -53,12 +54,32 @@ const DanceView: React.FunctionComponent = () => {
   );
   const isRunning = useTypedSelector(state => state.dance.isRunning);
 
+  const sharedBlocks = useTypedSelector(
+    state => state.lab.levelProperties?.sharedBlocks || undefined
+  );
+
+  const skin = useTypedSelector(
+    state => state.lab.levelProperties?.skin || undefined
+  );
+
+  const isK1 = useTypedSelector(
+    state => state.lab.levelProperties?.isK1 || false
+  );
+
   const onAuthError = (songId: string) => {
-    Lab2MetricsReporter.logWarning({
+    Lab2Registry.getInstance().getMetricsReporter().logWarning({
       message: 'Error loading song',
       songId,
     });
   };
+
+  useEffect(() => {
+    installCommonBlocks(skin, isK1);
+  }, [skin, isK1]);
+
+  useEffect(() => {
+    installDanceBlocks(sharedBlocks);
+  }, [sharedBlocks]);
 
   // Initialize song manifest and load initial song when level loads.
   useEffect(() => {

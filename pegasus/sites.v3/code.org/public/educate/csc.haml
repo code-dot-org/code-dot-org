@@ -62,7 +62,7 @@ theme: responsive_full_width
           %img{src: "/images/csc-module-coding-w-poetry.png", alt: ""}
           %p=hoc_s(:module_desc_coding_w_poetry)
         .content-footer
-          %a.link-button{href: CDO.studio_url("/s/poetry-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_module_coding_w_poetry)}}
+          %a.link-button{href: CDO.studio_url("/s/poetry?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_module_coding_w_poetry)}}
             =hoc_s(:call_to_action_see_module_details)
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
@@ -71,7 +71,7 @@ theme: responsive_full_width
           %img{src: "/images/csc-module-coding-book-covers.png", alt: ""}
           %p=hoc_s(:module_desc_coding_book_covers)
         .content-footer
-          %a.link-button{href: CDO.studio_url("/s/csc-bookcovers-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_module_coding_book_covers)}}
+          %a.link-button{href: CDO.studio_url("/s/csc-bookcovers?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_module_coding_book_covers)}}
             =hoc_s(:call_to_action_see_module_details)
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
@@ -80,7 +80,7 @@ theme: responsive_full_width
           %img{src: "/images/csc-module-coding-geometric-star-quilt.png", alt: ""}
           %p=hoc_s(:module_desc_coding_geometric_star_quilt)
         .content-footer
-          %a.link-button{href: CDO.studio_url("/s/csc-starquilts-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_module_coding_geometric_star_quilt)}}
+          %a.link-button{href: CDO.studio_url("/s/csc-starquilts?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_module_coding_geometric_star_quilt)}}
             =hoc_s(:call_to_action_see_module_details)
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
@@ -89,6 +89,7 @@ theme: responsive_full_width
           %img{src: "/images/csc-module-simulating-marine-ecosystem.png", alt: ""}
           %p=hoc_s(:module_desc_simulating_marine_ecosystem)
         .content-footer
+          -# Because a unit exists called csc-ecosystems, we need to specify a year here 
           %a.link-button{href: CDO.studio_url("/s/csc-ecosystems-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_module_simulating_marine_ecosystem)}}
             =hoc_s(:call_to_action_see_module_details)
       .action-block.action-block--one-col.flex-space-between
@@ -98,7 +99,7 @@ theme: responsive_full_width
           %img{src: "/images/csc-module-modeling-animal-adaptations.png", alt: ""}
           %p=hoc_s(:module_desc_modeling_animal_adaptations)
         .content-footer
-          %a.link-button{href: CDO.studio_url("/s/csc-adaptations-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_module_modeling_animal_adaptations)}}
+          %a.link-button{href: CDO.studio_url("/s/csc-adaptations?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_module_modeling_animal_adaptations)}}
             =hoc_s(:call_to_action_see_module_details)
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
@@ -107,7 +108,7 @@ theme: responsive_full_width
           %img{src: "/images/csc-module-coding-time-capsule.png", alt: ""}
           %p=hoc_s(:module_desc_coding_time_capsule)
         .content-footer
-          %a.link-button{href: CDO.studio_url("/s/csc-timecapsule-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_module_coding_time_capsule)}}
+          %a.link-button{href: CDO.studio_url("/s/csc-timecapsule?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_module_coding_time_capsule)}}
             =hoc_s(:call_to_action_see_module_details)
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
@@ -116,12 +117,12 @@ theme: responsive_full_width
           %img{src: "/images/csc-module-coding-interactive-maps.png", alt: ""}
           %p=hoc_s(:module_desc_coding_interactive_maps)
         .content-footer
-          %a.link-button{href: CDO.studio_url("/s/csc-mappinglandmarks-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_module_coding_interactive_maps)}}
+          %a.link-button{href: CDO.studio_url("/s/csc-mappinglandmarks?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_module_coding_interactive_maps)}}
             =hoc_s(:call_to_action_see_module_details)
 
 %section.bg-neutral-light
   .wrapper
-    = view :"tabs_section/resources/resources_tabs"
+    = view :"tabs_section/resources/resources_tabs", resources_heading: hoc_s(:resources_tabs_heading), resources_desc: hoc_s(:resources_tabs_desc, markdown: :inline, locals: {sign_up_url: CDO.studio_url("/users/sign_up")})
 
 %section
   .wrapper
@@ -133,7 +134,7 @@ theme: responsive_full_width
         %h3.heading-sm
           =hoc_s(:self_paced_pl_modules_heading)
         %p=hoc_s(:self_paced_pl_modules_desc)
-        %a.link-button{href: CDO.studio_url("/s/self-paced-pl-csc-2023")}
+        %a.link-button{href: CDO.studio_url("/s/self-paced-pl-csc")}
           =hoc_s(:call_to_action_start_modules)
 
 = view :section_divider_line
@@ -149,6 +150,6 @@ theme: responsive_full_width
 
 %section#csc-newsletter-signup{style: "padding-top: 2rem"}
   .wrapper
-    = view :curriculum_subscribe_form, subscribe_form_section_desc: hoc_s(:subscribe_form_section_desc_csc), form_src: "http://go.pardot.com/l/153401/2018-10-02/lzp5jd"
+    = view :subscribe_form, subscribe_form_section_title: hoc_s(:subscribe_form_section_title), subscribe_form_section_desc: hoc_s(:subscribe_form_section_desc_csc), form_height: "375px", form_src: "http://go.pardot.com/l/153401/2018-10-02/lzp5jd"
 
 = view :visit_partial_event_logger
