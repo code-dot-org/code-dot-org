@@ -1,18 +1,28 @@
-import React, {useCallback, useState} from 'react';
-import PropTypes from 'prop-types';
+import React, {ChangeEvent, useCallback, useMemo, useState} from 'react';
 import classNames from 'classnames';
 import styles from './patternPanel.module.scss';
 import PreviewControls from './PreviewControls';
+import MusicLibrary, {SoundData} from '../player/MusicLibrary';
+import {PatternEventValue} from '../player/interfaces/PatternEvent';
 
 // Generate an array containing tick numbers from 1..16.
 const arrayOfTicks = Array.from({length: 16}, (_, i) => i + 1);
+
+interface PatternPanelProps {
+  bpm: number;
+  library: MusicLibrary;
+  initValue: PatternEventValue;
+  onChange: (value: PatternEventValue) => void;
+  previewSound: (path: string) => void;
+  previewPattern: (pattern: PatternEventValue, onStop: () => void) => void;
+  cancelPreviews: () => void;
+}
 
 /*
  * Renders a UI for designing a pattern. This is currently used within a
  * custom Blockly Field {@link FieldPattern}
  */
-
-const PatternPanel = ({
+const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
   bpm,
   library,
   initValue,
@@ -23,14 +33,23 @@ const PatternPanel = ({
 }) => {
   // Make a copy of the value object so that we don't overwrite Blockly's
   // data.
-  const currentValue = JSON.parse(JSON.stringify(initValue));
+  const currentValue: PatternEventValue = JSON.parse(JSON.stringify(initValue));
 
-  const group = library.groups[0];
-  const currentFolder = library.getFolderForPath(currentValue.kit);
+  const availableKits = useMemo(() => {
+    return library.groups[0].folders.filter(folder => folder.type === 'kit');
+  }, [library.groups]);
+
+  const currentFolder = useMemo(() => {
+    // Default to the first available kit if the current kit is not found in this library.
+    return (
+      availableKits.find(kit => kit.path === currentValue.kit) ||
+      availableKits[0]
+    );
+  }, [availableKits, currentValue.kit]);
   const [currentPreviewTick, setCurrentPreviewTick] = useState(0);
 
   const toggleEvent = useCallback(
-    (sound, tick) => {
+    (sound: SoundData, tick: number) => {
       const index = currentValue.events.findIndex(
         event => event.src === sound.src && event.tick === tick
       );
@@ -48,21 +67,19 @@ const PatternPanel = ({
     [onChange, previewSound, currentValue]
   );
 
-  const hasEvent = (sound, tick) => {
+  const hasEvent = (sound: SoundData, tick: number) => {
     const element = currentValue.events.find(
       event => event.src === sound.src && event.tick === tick
     );
     return !!element;
   };
 
-  const handleFolderChange = event => {
-    const value = event.target.value;
-    const folder = library.getFolderForPath(value);
-    currentValue.kit = folder.path;
+  const handleFolderChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    currentValue.kit = event.target.value;
     onChange(currentValue);
   };
 
-  const getCellClasses = (sound, tick) => {
+  const getCellClasses = (sound: SoundData, tick: number) => {
     const isSet = hasEvent(sound, tick);
     const isHighlighted = !isSet && (tick - 1) % 4 === 0;
 
@@ -94,13 +111,11 @@ const PatternPanel = ({
   return (
     <div className={styles.patternPanel}>
       <select value={currentValue.kit} onChange={handleFolderChange}>
-        {group.folders
-          .filter(folder => folder.type === 'kit')
-          .map(folder => (
-            <option key={folder.path} value={folder.path}>
-              {folder.name}
-            </option>
-          ))}
+        {availableKits.map(folder => (
+          <option key={folder.path} value={folder.path}>
+            {folder.name}
+          </option>
+        ))}
       </select>
       {currentFolder.sounds.map(sound => {
         return (
@@ -138,16 +153,6 @@ const PatternPanel = ({
       />
     </div>
   );
-};
-
-PatternPanel.propTypes = {
-  library: PropTypes.object.isRequired,
-  bpm: PropTypes.number.isRequired,
-  initValue: PropTypes.object.isRequired,
-  onChange: PropTypes.func.isRequired,
-  previewSound: PropTypes.func.isRequired,
-  previewPattern: PropTypes.func.isRequired,
-  cancelPreviews: PropTypes.func.isRequired,
 };
 
 export default PatternPanel;
