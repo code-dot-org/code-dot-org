@@ -6,6 +6,7 @@ import sinon from 'sinon';
 import {expect} from '../../util/reconfiguredChai';
 
 import CheckboxDropdown from '@cdo/apps/componentLibrary/checkboxDropdown';
+import moduleStyles from '@cdo/apps/componentLibrary/checkboxDropdown/checkboxDropdown.module.scss';
 
 const allOptions = [
   {value: 'option-1', label: 'option1'},
@@ -39,8 +40,8 @@ describe('Design System - Checkbox Dropdown Component', () => {
         onChange={e =>
           onChceckboxDropdownChange(e.target.value, e.target.checked)
         }
-        handleSelectAll={handleSelectAll}
-        handleClearAll={handleClearAll}
+        onSelectAll={handleSelectAll}
+        onClearAll={handleClearAll}
         labelText="Dropdown label"
       />
     );
@@ -69,6 +70,8 @@ describe('Design System - Checkbox Dropdown Component', () => {
         allOptions={allOptions}
         checkedOptions={selectedValues}
         onChange={onChange}
+        onSelectAll={handleSelectAll}
+        onClearAll={handleClearAll}
         labelText="Dropdown2 label"
       />
     );
@@ -76,33 +79,32 @@ describe('Design System - Checkbox Dropdown Component', () => {
     const {rerender} = render(<DropdownToRender />);
 
     const label = screen.getByText('Dropdown2 label');
-    const selectElement = screen.getByRole('combobox');
-    const option1 = screen.getByText('option1');
-    const option2 = screen.getByText('option2');
+    const option1 = screen.getByDisplayValue('option-1');
+    const option2 = screen.getByDisplayValue('option-2');
 
     expect(label).to.exist;
-    expect(selectElement).to.exist;
     expect(option1).to.exist;
     expect(option2).to.exist;
-    expect(selectedValues).length.to.equal(0);
+    expect(selectedValues.length).to.equal(0);
 
-    await user.selectOptions(selectElement, 'option-1');
+    await user.click(option1);
 
     rerender(<DropdownToRender />);
 
     expect(spyOnChange).to.have.been.calledOnce;
-    expect(spyOnChange).to.have.been.calledWith('option-1');
+    expect(option1.checked).to.be.true;
     expect(selectedValues[0]).to.equal('option-1');
-    expect(selectedValues).length.to.equal(1);
+    expect(selectedValues.length).to.equal(1);
 
-    await user.selectOptions(selectElement, 'option-2');
+    await user.click(option2);
 
     rerender(<DropdownToRender />);
 
     expect(spyOnChange).to.have.been.calledTwice;
-    expect(spyOnChange).to.have.been.calledWith('option-2');
     expect(selectedValues[1]).to.equal('option-2');
-    expect(selectedValues).length.to.equal(2);
+    expect(selectedValues.length).to.equal(2);
+    expect(option1.checked).to.be.true;
+    expect(option2.checked).to.be.true;
   });
 
   it("Checkbox Dropdown - renders disabled dropdown, doesn't change on click", async () => {
@@ -120,6 +122,8 @@ describe('Design System - Checkbox Dropdown Component', () => {
         allOptions={allOptions}
         checkedOptions={selectedValues}
         onChange={onChange}
+        onSelectAll={handleSelectAll}
+        onClearAll={handleClearAll}
         labelText="Dropdown2 label"
       />
     );
@@ -127,29 +131,29 @@ describe('Design System - Checkbox Dropdown Component', () => {
     const {rerender} = render(<DropdownToRender />);
 
     const label = screen.getByText('Dropdown2 label');
-    const selectElement = screen.getByRole('combobox');
-    const option1 = screen.getByText('option1');
-    const option2 = screen.getByText('option2');
+    const option1 = screen.getByDisplayValue('option-1');
+    const option2 = screen.getByDisplayValue('option-2');
 
     expect(label).to.exist;
-    expect(selectElement).to.exist;
     expect(option1).to.exist;
     expect(option2).to.exist;
-    expect(selectedValues).length.to.equal(0);
+    expect(selectedValues.length).to.equal(0);
 
-    await user.selectOptions(selectElement, 'option-1');
-
-    rerender(<DropdownToRender />);
-
-    expect(spyOnChange).to.have.not.been.called;
-    expect(selectedValues).length.to.equal(0);
-
-    await user.selectOptions(selectElement, 'option-2');
+    await user.click(option1);
 
     rerender(<DropdownToRender />);
 
     expect(spyOnChange).to.have.not.been.called;
-    expect(selectedValues).length.to.equal(0);
+    expect(selectedValues.length).to.equal(0);
+
+    await user.click(option2);
+
+    rerender(<DropdownToRender />);
+
+    expect(spyOnChange).to.have.not.been.called;
+    expect(selectedValues.length).to.equal(0);
+    expect(option1.checked).to.be.false;
+    expect(option2.checked).to.be.false;
   });
 
   it('Checkbox Dropdown - handles Select all and Clear all clicks', async () => {
@@ -167,38 +171,42 @@ describe('Design System - Checkbox Dropdown Component', () => {
         allOptions={allOptions}
         checkedOptions={selectedValues}
         onChange={onChange}
+        onSelectAll={handleSelectAll}
+        onClearAll={handleClearAll}
         labelText="Dropdown2 label"
       />
     );
 
     const {rerender} = render(<DropdownToRender />);
-    await user.click();
+
+    const label = screen.getByText('Dropdown2 label');
+    const option1 = screen.getByDisplayValue('option-1');
+    const option2 = screen.getByDisplayValue('option-2');
+    const option3 = screen.getByDisplayValue('option-3');
+    const selectAll = screen.getByText('Select all');
+    const clearAll = screen.getByText('Clear all');
+
+    expect(label).to.exist;
+    expect(option1).to.exist;
+    expect(option2).to.exist;
+    expect(option3).to.exist;
+    expect(selectAll).to.exist;
+    expect(clearAll).to.exist;
+
+    await user.click(selectAll);
+
     rerender(<DropdownToRender />);
-    //TODO: implement this test
-  });
+    expect(selectedValues.length).to.equal(3);
+    expect(option1.checked).to.be.true;
+    expect(option2.checked).to.be.true;
+    expect(option3.checked).to.be.true;
 
-  it('Checkbox Dropdown - shows/hides check icon depending on checkbox dropdown selectedValues change', async () => {
-    const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
-    const onChange = e => {
-      onChceckboxDropdownChange(e.target.value, e.target.checked);
-      spyOnChange(e.target.value, e.target.checked);
-    };
+    await user.click(clearAll);
 
-    const DropdownToRender = () => (
-      <CheckboxDropdown
-        name="test2-dropdown"
-        disabled={true}
-        allOptions={allOptions}
-        checkedOptions={selectedValues}
-        onChange={onChange}
-        labelText="Dropdown2 label"
-      />
-    );
-
-    const {rerender} = render(<DropdownToRender />);
-    await user.click();
     rerender(<DropdownToRender />);
-    //TODO: implement this test
+    expect(selectedValues.length).to.equal(0);
+    expect(option1.checked).to.be.false;
+    expect(option2.checked).to.be.false;
+    expect(option3.checked).to.be.false;
   });
 });

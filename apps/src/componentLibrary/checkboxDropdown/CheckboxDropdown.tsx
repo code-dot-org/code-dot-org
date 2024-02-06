@@ -35,7 +35,7 @@ export interface CheckboxDropdownProps {
   /** CheckboxDropdown label */
   labelText: string;
   /** CheckboxDropdown options */
-  allOptions: {value: string; label: string}[];
+  allOptions: {value: string; label: string; isOptionDisabled?: boolean}[];
   /** CheckboxDropdown checked options */
   checkedOptions: string[];
   /** CheckboxDropdown onChange handler */
@@ -50,7 +50,7 @@ export interface CheckboxDropdownProps {
  * ### Production-ready Checklist:
  * * (?) implementation of component approved by design team;
  * * (?) has storybook, covered with stories and documentation;
- * * (?) has tests: test every prop, every state and every interaction that's js related;
+ * * (✔) has tests: test every prop, every state and every interaction that's js related;
  * * (see apps/test/unit/componentLibrary/DropdownMenuTest.jsx)
  * * (?) passes accessibility checks;
  *
@@ -125,8 +125,6 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
     }
   };
 
-  // TODO: add item to be disabled possibility
-
   return (
     <div
       id={`${name}-dropdown`}
@@ -161,10 +159,11 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
       </button>
       <form className={moduleStyles.dropdownMenuContainer}>
         <ul className={'style.dropdownCheckboxUL'}>
-          {allOptions.map(({value, label}) => (
+          {allOptions.map(({value, label, isOptionDisabled}) => (
             <li key={value} className="checkbox form-group">
               <Checkbox
                 checked={checkedOptions.includes(value)}
+                disabled={disabled || isOptionDisabled}
                 onChange={onChange}
                 size={size}
                 name={value}
