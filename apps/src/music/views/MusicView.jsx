@@ -72,10 +72,10 @@ class UnconnectedMusicView extends React.Component {
     appConfig: PropTypes.object,
 
     /**
-     * True if Music Lab is being presented from the Incubator page (i.e. under /projectbeats),
+     * True if Music Lab is being presented from the /projectbeats page,
      * false/undefined if as part of a script or single level.
      * */
-    inIncubator: PropTypes.bool,
+    onProjectBeats: PropTypes.bool,
 
     // populated by Redux
     currentLevelIndex: PropTypes.number,
@@ -151,26 +151,31 @@ class UnconnectedMusicView extends React.Component {
       hasLoadedInitialSounds: false,
     };
 
-    // If in incubator, we need to manually setup Blockly for Music Lab.
+    // If on /projectbeats, we need to manually setup Blockly for Music Lab.
     // Otherwise, this is handled by Lab2.
-    if (props.inIncubator) {
+    if (props.onProjectBeats) {
       setUpBlocklyForMusicLab();
     }
   }
 
   componentDidMount() {
-    this.analyticsReporter.startSession().then(() => {
-      this.analyticsReporter.setUserProperties(
-        this.props.userId,
-        this.props.userType,
-        this.props.signInState
-      );
-    });
+    // Only record Amplitude analytics events on /projectbeats
+    if (this.props.onProjectBeats) {
+      this.analyticsReporter.startSession().then(() => {
+        this.analyticsReporter.setUserProperties(
+          this.props.userId,
+          this.props.userType,
+          this.props.signInState
+        );
+      });
+    }
     // TODO: the 'beforeunload' callback is advised against as it is not guaranteed to fire on mobile browsers. However,
     // we need a way of reporting analytics when the user navigates away from the page. Check with Amplitude for the
     // correct approach.
     window.addEventListener('beforeunload', event => {
-      this.analyticsReporter.endSession();
+      if (this.props.onProjectBeats) {
+        this.analyticsReporter.endSession();
+      }
     });
 
     if (this.props.appName === 'music') {
@@ -183,9 +188,10 @@ class UnconnectedMusicView extends React.Component {
     this.musicBlocklyWorkspace.resizeBlockly();
 
     if (
-      prevProps.userId !== this.props.userId ||
-      prevProps.userType !== this.props.userType ||
-      prevProps.signInState !== this.props.signInState
+      this.props.onProjectBeats &&
+      (prevProps.userId !== this.props.userId ||
+        prevProps.userType !== this.props.userType ||
+        prevProps.signInState !== this.props.signInState)
     ) {
       this.analyticsReporter.setUserProperties(
         this.props.userId,
@@ -341,7 +347,7 @@ class UnconnectedMusicView extends React.Component {
   };
 
   getStartSources = () => {
-    if (!this.props.inIncubator && this.props.levelData?.startSources) {
+    if (!this.props.onProjectBeats && this.props.levelData?.startSources) {
       return this.props.levelData.startSources;
     } else {
       const startSourcesFilename = 'startSources' + getBlockMode();
@@ -391,9 +397,11 @@ class UnconnectedMusicView extends React.Component {
         }
       });
 
-      this.analyticsReporter.onBlocksUpdated(
-        this.musicBlocklyWorkspace.getAllBlocks()
-      );
+      if (this.props.onProjectBeats) {
+        this.analyticsReporter.onBlocksUpdated(
+          this.musicBlocklyWorkspace.getAllBlocks()
+        );
+      }
     }
 
     if (e.type === Blockly.Events.SELECTED) {
@@ -412,7 +420,9 @@ class UnconnectedMusicView extends React.Component {
   setPlaying = play => {
     if (play) {
       this.playSong();
-      this.analyticsReporter.onButtonClicked('play');
+      if (this.props.onProjectBeats) {
+        this.analyticsReporter.onButtonClicked('play');
+      }
     } else {
       this.stopSong();
     }
@@ -426,7 +436,9 @@ class UnconnectedMusicView extends React.Component {
     if (!this.props.isPlaying) {
       return;
     }
-    this.analyticsReporter.onButtonClicked('trigger', {id});
+    if (this.props.onProjectBeats) {
+      this.analyticsReporter.onButtonClicked('trigger', {id});
+    }
     const triggerStartPosition =
       this.musicBlocklyWorkspace.getTriggerStartPosition(
         id,
@@ -586,14 +598,6 @@ class UnconnectedMusicView extends React.Component {
     this.musicBlocklyWorkspace.redo();
   };
 
-  onFeedbackClicked = () => {
-    this.analyticsReporter.onButtonClicked('feedback');
-    window.open(
-      'https://docs.google.com/forms/d/e/1FAIpQLScnUgehPPNjhSNIcCpRMcHFgtE72TlfTOh6GkER6aJ-FtIwTQ/viewform?usp=sf_link',
-      '_blank'
-    );
-  };
-
   renderInstructions(position) {
     // For now, the instructions are intended for use with a
     // progression.  We might decide to make them agnostic at
@@ -675,7 +679,9 @@ class UnconnectedMusicView extends React.Component {
     const {timelineAtTop, showInstructions, instructionsPosition} = this.props;
 
     return (
-      <AnalyticsContext.Provider value={this.analyticsReporter}>
+      <AnalyticsContext.Provider
+        value={this.props.onProjectBeats ? this.analyticsReporter : null}
+      >
         <KeyHandler
           togglePlaying={this.togglePlaying}
           playTrigger={this.playTrigger}

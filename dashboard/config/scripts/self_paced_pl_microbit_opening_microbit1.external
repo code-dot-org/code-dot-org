@@ -3,32 +3,21 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Opening a lesson or unit
-
-#### The lesson begins with an introduction that includes:
-#### * A sentence explaining what the lesson is about
-#### * List of objectives
-#### * A presurvey (contact RED team to create the survey) 
-#### * Suggested time 
-#### * an image from the lesson 
-
-
-
-##Exemplar: 
 # Teaching CS Fundamentals Maker with micro:bit
 
 
 
-#### Welcome! This professional learning module is designed to help you prepare to teach Code.org's CS Fundamentals Maker with micro:bit unit. 
+#### Welcome! This professional learning module is designed to help you get comfortable teaching with a micro:bit for the CS Fundamentals Maker Curriculum. 
 
-
+<img src="https://images.code.org/c0daef5b8d6c121e069931cea7552eed-image-1707150632725.png" alt="Image CS Discoveries students" width="350px" style="border-radius:10px; float:right; margin: 0 100px 40px 40px;">
 
 ## In this module, you will:
 
-* ##### Get an introduction to foundational coding concepts.
-* ##### Practice key concepts included in the unit.
-* ##### 
-* ##### 
+
+* ##### Get acquainted with the micro:bit
+* ##### Practice using the micro:bit
+* ##### Navigate the classroom feature in Microsoft MakeCode
+* ##### Learn best practices for teaching with micro:bit 
 
 ## Take the pre-survey
 
@@ -37,7 +26,7 @@ markdown <<MARKDOWN
 <a class="btn btn-large btn-primary" href="www.linkgoeshere.com" target="blank" rel="noopener noreferrer">Take the pre-survey</a>
 
 
-### **Suggested time:** ?? minutes
+### **Suggested time:** 75 minutes
 
 ## Let's get started!
 
