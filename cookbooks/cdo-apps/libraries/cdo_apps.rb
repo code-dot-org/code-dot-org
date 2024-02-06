@@ -54,6 +54,11 @@ module CdoApps
       notifies :run, "execute[restart #{app_name} service]", :delayed
     end
 
+    # Configure systemd to automatically start this application service at the next system restart.
+    execute "enable-service-#{app_name}" do
+      command "systemctl enable #{app_name}"
+    end
+
     # Define an execute resource for restarting (or starting) the entire
     # SystemD service, which can be invoked by other Chef resources
     execute "restart #{app_name} service" do
