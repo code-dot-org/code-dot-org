@@ -6,7 +6,6 @@ import {Provider} from 'react-redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
 export default {
-  title: 'SectionProgressToggle',
   component: SectionProgressToggle,
 };
 

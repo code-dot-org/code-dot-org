@@ -10,7 +10,6 @@ const EXAMPLE_DIALOG_BODY = (
 
 // There isn't a clear abstraction for a template, so each is built separately
 export default {
-  title: 'BaseDialog',
   component: BaseDialog,
 };
 

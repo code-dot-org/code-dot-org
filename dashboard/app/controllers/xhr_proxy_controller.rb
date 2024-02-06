@@ -38,7 +38,6 @@ class XhrProxyController < ApplicationController
     api.census.gov
     api.coinlayer.com
     api.datamuse.com
-    api.duckduckgo.com
     api.energidataservice.dk
     api.exchangeratesapi.io
     api.fda.gov
