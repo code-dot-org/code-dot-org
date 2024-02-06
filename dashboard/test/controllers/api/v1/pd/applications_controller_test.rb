@@ -201,6 +201,22 @@ module Api::V1::Pd
       assert_equal 1, data['csd_teachers']['enrolled']['total']
     end
 
+    test 'enrollment only counts enrollments for that regional partner' do
+      regional_partner_2 = create :regional_partner
+      workshop = create :pd_workshop, num_sessions: 1
+      application_2 = create TEACHER_APPLICATION_FACTORY, course: 'csd', status: 'accepted', regional_partner: regional_partner_2, pd_workshop_id: workshop.id
+      create :pd_enrollment, application_id: application_2.id, user: application_2.user, pd_workshop_id: workshop.id
+
+      sign_in @workshop_admin
+
+      get :index, params: {regional_partner_value: @regional_partner.id}
+      assert_response :success
+      data = JSON.parse(response.body)
+      assert_equal 1, data['csd_teachers']['unreviewed']['total']
+      assert_equal 0, data['csd_teachers']['accepted']['total']
+      assert_equal 0, data['csd_teachers']['enrolled']['total']
+    end
+
     test 'regional partners can show their applications as workshop organizers' do
       sign_in @workshop_organizer
       get :show, params: @test_show_params
@@ -523,6 +539,21 @@ module Api::V1::Pd
       assert_equal(
         expected_applications.map {|application| application[:status]}.sort,
         JSON.parse(@response.body).map {|application| application['status']}.sort
+      )
+    end
+
+    test 'cohort view shows enrolled as a status' do
+      workshop = create :pd_workshop, num_sessions: 1
+      application = create TEACHER_APPLICATION_FACTORY, course: 'csp', status: 'accepted', pd_workshop_id: workshop.id
+      create :pd_enrollment, application_id: application.id, user: application.user, pd_workshop_id: workshop.id
+
+      sign_in @workshop_admin
+      get :cohort_view, params: {role: 'csp_teachers', regional_partner_value: 'none'}
+      assert_response :success
+
+      assert_equal(
+        ['enrolled'],
+        JSON.parse(@response.body).map {|app| app['status']}
       )
     end
 
