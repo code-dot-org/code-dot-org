@@ -147,6 +147,23 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal 'My School', student.school
   end
 
+  test "user cannot update on username to existing username" do
+    student = create(:student)
+    new_student = create(:student)
+
+    new_student.username = "newusername"
+    new_student.save
+
+    sign_in student
+    put :update, params: {
+      user: {
+        username: 'newusername',
+      }
+    }
+    assert_equal ["Username has already been taken"], assigns(:user).errors.full_messages
+    refute_equal 'newusername', student.reload.username
+  end
+
   test "parent_email: student can add a parent email without opt in" do
     student = create(:student)
     sign_in student
