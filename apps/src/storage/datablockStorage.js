@@ -483,8 +483,6 @@ DatablockStorage.resetForTesting = function () {
 DatablockStorage.resetRecordListener = function () {};
 
 export function initDatablockStorage(config) {
-  console.log('LOADING DATABLOCK STORAGE SHIM!!!');
-  init(config);
   return DatablockStorage;
 }
 
