@@ -3944,7 +3944,7 @@ html[dir=rtl] {
     float: left;
   }
 
-  &:hover {
+  &:hover, &:focus {
     background-color: $brand_primary_default !important;
     border-color: $brand_primary_default;
 
