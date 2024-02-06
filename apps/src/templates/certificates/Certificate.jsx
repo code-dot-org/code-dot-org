@@ -140,6 +140,10 @@ function Certificate(props) {
       : i18n.justDidHourOfCode(),
   });
 
+  const linkedin = queryString.stringify({
+    url: externalCertificateShareLink,
+  });
+
   const print = getPrintPath();
 
   return (
@@ -210,8 +214,10 @@ function Certificate(props) {
           <SocialShare
             facebook={facebook}
             twitter={twitter}
+            linkedin={linkedin}
             print={print}
             under13={under13}
+            isPlCourse
           />
         </div>
       </div>
