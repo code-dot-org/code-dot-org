@@ -31,7 +31,6 @@ const store = reduxStore(
 );
 
 export default {
-  title: 'LessonStatusList',
   component: LessonStatusList,
 };
 

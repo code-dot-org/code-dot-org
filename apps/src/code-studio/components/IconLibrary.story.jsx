@@ -3,7 +3,6 @@ import IconLibrary from './IconLibrary';
 import {action} from '@storybook/addon-actions';
 
 export default {
-  title: 'IconLibrary',
   component: IconLibrary,
 };
 

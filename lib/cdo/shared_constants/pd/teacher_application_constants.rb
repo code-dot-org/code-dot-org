@@ -123,7 +123,7 @@ module Pd
         title_i_status: 'Title I status',
         rural_status: 'Rural Status',
         school_type: 'School Type',
-        school_last_census_status: 'Last Census Status',
+        school_last_census_status: 'Teaches CS',
         total_student_enrollment: 'Total Student Enrollment',
         free_lunch_percent: 'Percent of students eligible to receive free/reduced lunch',
         underrepresented_minority_percent: 'Percent of students from underrepresented racial and ethnic groups',
