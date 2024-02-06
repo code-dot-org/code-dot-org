@@ -1,4 +1,9 @@
-import {Role, Status, ChatCompletionMessage, PII} from './types';
+import {
+  Role,
+  Status,
+  ChatCompletionMessage,
+  PII,
+} from '@cdo/apps/aiTutor/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {CHAT_COMPLETION_URL} from './constants';
 import Lab2Registry from '../lab2/Lab2Registry';

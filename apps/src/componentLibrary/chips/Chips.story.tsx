@@ -4,7 +4,7 @@ import {Meta, Story} from '@storybook/react';
 import {Chips, ChipsProps} from './index';
 
 export default {
-  title: 'DesignSystem/Chips Component',
+  title: 'DesignSystem/Chips',
   component: Chips,
 } as Meta;
 

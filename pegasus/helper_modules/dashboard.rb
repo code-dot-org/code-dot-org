@@ -12,10 +12,6 @@ module Dashboard
     # rubocop:enable CustomCops/DashboardDbUsage
   end
 
-  def self.admin?(user_id)
-    !!db[:users][id: user_id, admin: true]
-  end
-
   class User
     # Wrap dashboard user row in this helper object.
     # You can use this, but it's preferred that clients call User.get(user_id).
@@ -27,9 +23,11 @@ module Dashboard
     # @returns [User] for given user_id, or nil if not found in database
     def self.get(user_id)
       return nil if user_id.nil?
+      # rubocop:disable CustomCops/DashboardDbUsage
       row = Dashboard.db[:users].where(id: user_id, deleted_at: nil).first
       return nil unless row
       Dashboard::User.new(row)
+      # rubocop:enable CustomCops/DashboardDbUsage
     end
 
     def id
