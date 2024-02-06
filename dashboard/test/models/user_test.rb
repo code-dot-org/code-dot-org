@@ -5079,6 +5079,6 @@ class UserTest < ActiveSupport::TestCase
     section = create :section, teacher: teacher
     follower = create :follower, section: section, user: student
     follower.destroy
-    assert_empty student.reload.followers
+    assert_empty teacher.reload.followers
   end
 end
