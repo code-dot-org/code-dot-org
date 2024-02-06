@@ -9,7 +9,7 @@ import {Provider, useSelector} from 'react-redux';
 import MusicView from './MusicView';
 
 /**
- * Renders the "Project Beats" Music Lab experience, presented only on the Incubator page.
+ * Renders the "Project Beats" Music Lab experience, presented only on the /projectbeats page.
  * All other Music Lab experiences (script levels, single levels, standalone projects)
  * are presented via the Lab2 entrypoint.
  */
@@ -43,5 +43,5 @@ const DeferredMusicView: React.FunctionComponent = () => {
     return null;
   }
 
-  return <MusicView inIncubator={true} />;
+  return <MusicView onProjectBeats={true} />;
 };

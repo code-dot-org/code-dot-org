@@ -1,0 +1,8 @@
+name 'self-paced-pl-microbit_emoition_lesson_plan_overview'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Emotion Badge Lesson Overview
+
+MARKDOWN
