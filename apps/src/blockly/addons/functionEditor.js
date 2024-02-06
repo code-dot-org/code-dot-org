@@ -122,6 +122,8 @@ export default class FunctionEditor {
 
     const functionEditorTrashcan = new CdoTrashcan(this.editorWorkspace);
     functionEditorTrashcan.init();
+    // Set primary workspace to be active (until a function is shown).
+    Blockly.common.setMainWorkspace(this.primaryWorkspace);
   }
 
   hide() {

@@ -20,6 +20,8 @@ import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {closeWorkspaceAlert} from '../code-studio/projectRedux';
 import styleConstants from '@cdo/apps/styleConstants';
 import classNames from 'classnames';
+import KeyboardNavigationToggle from './KeyboardNavigationToggle';
+import experiments from '@cdo/apps/util/experiments';
 
 class CodeWorkspace extends React.Component {
   static propTypes = {
@@ -232,6 +234,14 @@ class CodeWorkspace extends React.Component {
               isRtl={isRtl}
               isMinecraft={props.isMinecraft}
             />
+            {!props.editCode && experiments.KEYBOARD_NAVIGATION && (
+              <KeyboardNavigationToggle
+                hasFocus={hasFocus}
+                iconClass="fa fa-keyboard"
+                isRtl={isRtl}
+                isMinecraft={props.isMinecraft}
+              />
+            )}
             <PaneSection id="workspace-header">
               {props.showProjectTemplateWorkspaceIcon && (
                 <ProjectTemplateWorkspaceIcon />

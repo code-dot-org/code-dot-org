@@ -284,6 +284,7 @@
   "blocklyDeuteranopiaTheme": "Deuteranopia Theme",
   "blocklyHighContrastTheme": "High Contrast Theme",
   "blocklyProtanopiaTheme": "Protanopia Theme",
+  "blocklyKBNav": "Keyboard Navigation",
   "blocklyKBNavOn": "Enable Keyboard Navigation",
   "blocklyKBNavOff": "Disable Keyboard Navigation",
   "blocklyMessage": "Blockly",
