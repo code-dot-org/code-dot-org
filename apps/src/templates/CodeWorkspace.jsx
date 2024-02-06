@@ -20,7 +20,6 @@ import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {closeWorkspaceAlert} from '../code-studio/projectRedux';
 import styleConstants from '@cdo/apps/styleConstants';
 import classNames from 'classnames';
-import SafeMarkdown from './SafeMarkdown';
 
 class CodeWorkspace extends React.Component {
   static propTypes = {
@@ -308,12 +307,7 @@ class CodeWorkspace extends React.Component {
             id="failedToGenerateSourcesBanner"
             style={{...styles.topBanner, ...styles.incompatibleCodeBanner}}
           >
-            <SafeMarkdown
-              markdown={i18n.failedToGenerateBlocklyCode({
-                supportUrl: 'https://support.code.org/hc/en-us/requests/new',
-              })}
-              openExternalLinksInNewTab={true}
-            />
+            {i18n.failedToGenerateBlocklyCode()}
           </div>
         )}
         {props.showDebugger && (
