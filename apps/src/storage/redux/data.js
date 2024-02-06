@@ -56,6 +56,7 @@ export default function (state = initialState, action) {
         })
       );
     case CHANGE_VIEW:
+      console.log("in redux store, CHANGE_VIEW called (='onViewChange()')")
       // Discard table data when not viewing a table, so that we don't momentarily
       // show data for the wrong table when we return to the table view.
       if (action.view !== DataView.TABLE) {

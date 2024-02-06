@@ -883,6 +883,7 @@ function setupReduxSubscribers(store) {
       (isDataMode && view !== lastView) ||
       changedToDataMode(state, lastState)
     ) {
+      console.log("calling onDataViewChanged() (now called refreshDataView())");
       refreshDataView(
         Applab.storage,
         state.data.view,

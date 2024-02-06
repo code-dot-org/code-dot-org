@@ -11,17 +11,28 @@ import {
   updateTableList,
 } from '../storage/redux/data';
 
+let lastView;
+let lastTableName;
+
+export function refreshLastDataView(storage) {
+  return refreshDataView(storage, lastView, null, lastTableName);
+}
+
 /**
  * When we
  * @param {DataView} view
  */
 export function refreshDataView(storage, view, oldTableName, newTableName) {
+  lastView = view;
+  lastTableName = newTableName;
+
   if (!getStore().getState().pageConstants.hasDataMode) {
     throw new Error('onDataViewChange triggered without data mode enabled');
   }
 
   console.log('onDataViewChange', view, oldTableName, newTableName);
-
+  console.log('end');
+  
   storage.unsubscribeFromKeyValuePairs();
   if (oldTableName) {
     storage.unsubscribeFromTable(oldTableName);
