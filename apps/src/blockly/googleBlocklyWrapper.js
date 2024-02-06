@@ -395,6 +395,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.navigationController = new NavigationController();
   // Initialize plugin.
   blocklyWrapper.navigationController.init();
+  blocklyWrapper.navigationController.cursorType = cdoUtils.getUserCursorType();
 
   // Wrap SNAP_RADIUS property, and in the setter make sure we keep SNAP_RADIUS and CONNECTING_SNAP_RADIUS in sync.
   // See https://github.com/google/blockly/issues/2217
@@ -673,6 +674,18 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }
 
     blocklyWrapper.navigationController.addWorkspace(workspace);
+
+    blocklyWrapper.getNewCursor = function (type) {
+      switch (type) {
+        case 'basic':
+          return new Blockly.BasicCursor();
+        case 'line':
+          return new Blockly.LineCursor();
+        case 'default':
+        default:
+          return new Blockly.Cursor();
+      }
+    };
 
     if (!blocklyWrapper.isStartMode && !opt_options.isBlockEditMode) {
       workspace.addChangeListener(disableOrphans);

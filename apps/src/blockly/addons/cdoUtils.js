@@ -262,6 +262,15 @@ export function getUserTheme(themeOption) {
 }
 
 /**
+ * Returns a cursor type, based on the presence of an option in the browser's localStorage.
+ * @param {string} type
+ * @returns {string} one of 'default', 'basic', or 'line'
+ */
+export function getUserCursorType() {
+  return localStorage.blocklyCursor || 'default';
+}
+
+/**
  * Retrieves the serialization of the workspace (student code).
  *
  * @param {Blockly.WorkspaceSvg} workspace - The workspace to serialize.

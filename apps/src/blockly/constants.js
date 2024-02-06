@@ -8,6 +8,7 @@ export const BlocklyVersion = {
 
 export const ToolboxType = makeEnum('CATEGORIZED', 'UNCATEGORIZED', 'NONE');
 export const BLOCKLY_THEME = 'blocklyTheme';
+export const BLOCKLY_CURSOR = 'blocklyCursor';
 export const MenuOptionStates = {
   ENABLED: 'enabled',
   DISABLED: 'disabled',
