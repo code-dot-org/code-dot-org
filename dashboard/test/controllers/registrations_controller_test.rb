@@ -147,7 +147,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal 'My School', student.school
   end
 
-  test "user cannot update on username to existing username" do
+  test "user cannot update username to existing username" do
     student = create(:student)
     new_student = create(:student)
 
