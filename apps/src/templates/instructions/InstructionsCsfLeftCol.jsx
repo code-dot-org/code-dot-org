@@ -10,16 +10,27 @@ import {getOuterHeight} from './utils';
 import commonStyles from '../../commonStyles';
 import {KeyCodes} from '@cdo/apps/constants';
 import i18n from '@cdo/locale';
+import HintPrompt from './HintPrompt';
+import color from '../../util/color';
+var instructions = require('../../redux/instructions');
 
+const VERY_LIGHT_BLUE_COLOR = '#f0ffff';
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
 const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
 
 class InstructionsCsfLeftCol extends React.Component {
   static propTypes = {
+    clearFeedback: PropTypes.func.isRequired,
+    dismissHintPrompt: PropTypes.func.isRequired,
+    shouldDisplayHintPrompt: PropTypes.func.isRequired,
     requestHint: PropTypes.func.isRequired,
     setColWidth: PropTypes.func.isRequired,
     setColHeight: PropTypes.func.isRequired,
     // from redux
+    showNextHint: PropTypes.func.isRequired,
+    skinId: PropTypes.string,
+    isMinecraft: PropTypes.bool.isRequired,
+    textToSpeechEnabled: PropTypes.bool,
     hasUnseenHint: PropTypes.bool.isRequired,
     hasAuthoredHints: PropTypes.bool.isRequired,
     smallStaticAvatar: PropTypes.string,
@@ -94,6 +105,12 @@ class InstructionsCsfLeftCol extends React.Component {
     return getOuterHeight(this.leftCol, true);
   };
 
+  showHint = () => {
+    this.props.dismissHintPrompt();
+    this.props.showNextHint();
+    this.props.clearFeedback();
+  };
+
   render() {
     const {hasAuthoredHints} = this.props;
 
@@ -126,6 +143,19 @@ class InstructionsCsfLeftCol extends React.Component {
             />
           )}
         </div>
+        <div>
+          {this.props.shouldDisplayHintPrompt() && (
+            <HintPrompt
+              borderColor={color.light_info_500}
+              backgroundColor={VERY_LIGHT_BLUE_COLOR}
+              onConfirm={this.showHint}
+              onDismiss={this.props.dismissHintPrompt}
+              isMinecraft={this.props.isMinecraft}
+              skinId={this.props.skinId}
+              textToSpeechEnabled={this.props.textToSpeechEnabled}
+            />
+          )}
+        </div>
       </div>
     );
   }
@@ -148,9 +178,20 @@ export default connect(
       smallStaticAvatar: state.pageConstants.smallStaticAvatar,
       failureAvatar: state.pageConstants.failureAvatar,
       feedback: state.instructions.feedback,
+      skinId: state.pageConstants.skinId,
+      isMinecraft: !!state.pageConstants.isMinecraft,
+      textToSpeechEnabled:
+        state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1,
+      showNextHint: state.pageConstants.showNextHint,
     };
   },
-  null,
+  function propsFromDispatch(dispatch) {
+    return {
+      clearFeedback() {
+        dispatch(instructions.setFeedback(null));
+      },
+    };
+  },
   null,
   {forwardRef: true}
 )(InstructionsCsfLeftCol);

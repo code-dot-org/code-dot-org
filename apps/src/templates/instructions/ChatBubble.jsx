@@ -64,6 +64,7 @@ const ChatBubble = ({
   ttsUrl,
   ttsMessage,
   textToSpeechEnabled,
+  isHintPrompt,
 }) => {
   borderColor = borderColor || color.white;
   backgroundColor = isMinecraft
@@ -85,7 +86,7 @@ const ChatBubble = ({
         ]}
       >
         {children}
-        {shouldDisplayChatTips(skinId) && (
+        {!isHintPrompt && shouldDisplayChatTips(skinId) && (
           <ChatBubbleTip
             color={borderColor}
             isDashed={isDashed}
@@ -112,6 +113,7 @@ ChatBubble.propTypes = {
   ttsUrl: PropTypes.string,
   ttsMessage: PropTypes.string,
   textToSpeechEnabled: PropTypes.bool,
+  isHintPrompt: PropTypes.bool,
 };
 
 export default Radium(ChatBubble);

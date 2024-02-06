@@ -212,17 +212,6 @@ class InstructionsCsfMiddleCol extends React.Component {
             textToSpeechEnabled={this.props.textToSpeechEnabled}
           />
         )}
-        {this.props.shouldDisplayHintPrompt() && (
-          <HintPrompt
-            borderColor={color.light_info_500}
-            backgroundColor={VERY_LIGHT_BLUE_COLOR}
-            onConfirm={this.showHint}
-            onDismiss={this.props.dismissHintPrompt}
-            isMinecraft={this.props.isMinecraft}
-            skinId={this.props.skinId}
-            textToSpeechEnabled={this.props.textToSpeechEnabled}
-          />
-        )}
       </div>
     );
   }

@@ -324,6 +324,9 @@ class InstructionsCSF extends React.Component {
             requestHint={this.requestHint}
             setColWidth={this.setLeftColWidth}
             setColHeight={this.setLeftColHeight}
+            shouldDisplayHintPrompt={this.shouldDisplayHintPrompt}
+            dismissHintPrompt={this.dismissHintPrompt}
+            promptForHint={this.state.promptForHint}
           />
           <InstructionsCsfMiddleCol
             ref={instructions => this.setInstructionsRef(instructions)}

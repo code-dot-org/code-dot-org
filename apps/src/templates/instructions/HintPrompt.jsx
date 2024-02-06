@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import ChatBubble from './ChatBubble';
 import msg from '@cdo/locale';
-import LegacyButton from '../LegacyButton';
+import Button from '@cdo/apps/templates/Button';
 
 const HintPrompt = ({
   onConfirm,
@@ -24,14 +24,21 @@ const HintPrompt = ({
       isMinecraft={isMinecraft}
       skinId={skinId}
       textToSpeechEnabled={textToSpeechEnabled}
+      isHintPrompt={true}
     >
       <p>{message}</p>
-      <LegacyButton type="cancel" onClick={onConfirm} style={{marginRight: 5}}>
-        {msg.yes()}
-      </LegacyButton>
-      <LegacyButton type="cancel" onClick={onDismiss}>
-        {msg.no()}
-      </LegacyButton>
+      <Button
+        type="cancel"
+        onClick={onConfirm}
+        size={'medium'}
+        text={msg.yes()}
+      />
+      <Button
+        type="cancel"
+        onClick={onDismiss}
+        size={'medium'}
+        text={msg.no()}
+      />
     </ChatBubble>
   );
 };
