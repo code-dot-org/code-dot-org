@@ -1,5 +1,22 @@
 @import 'color';
 
+.iconKey {
+  margin-bottom: 40px;
+}
+
+.iconKeyCaret {
+  margin-inline-end: 12px;
+}
+
+.iconKeyExpandButton {
+  font-family: 'Metropolis';
+  color: $light_gray_900;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 148%;
+  margin-bottom: 12px;
+}
+
 .legend {
   align-items: flex-start;
   border: 1px solid $light_gray_200;

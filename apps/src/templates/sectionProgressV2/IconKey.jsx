@@ -2,10 +2,12 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
-import color from '@cdo/apps/util/color';
 import LevelTypesBox from './LevelTypesBox';
 import TeacherActionsBox from './TeacherActionsBox';
 import AssignmentCompletionStatesBox from './AssignmentCompletionStatesBox';
+import styles from './progress-table-legend.module.scss';
+import {Heading6} from '@cdo/apps/componentLibrary/typography';
+import FontAwesome from '../FontAwesome';
 
 export default function IconKey({isViewingLevelProgress, hasLevelValidation}) {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,16 +30,16 @@ export default function IconKey({isViewingLevelProgress, hasLevelValidation}) {
   const clickListener = () => setIsOpen(!isOpen);
 
   return (
-    <div>
-      <Button
-        id="icon-key"
-        style={styles.label}
-        styleAsText
-        icon={caret(isOpen)}
-        onClick={clickListener}
-      >
+    <div className={styles.iconKey}>
+      <Heading6 onClick={clickListener}>
+        <FontAwesome
+          className={styles.iconKeyCaret}
+          id="icon-key"
+          icon={caret(isOpen)}
+          aria-label={i18n.iconKey()}
+        />
         {i18n.iconKey()}
-      </Button>
+      </Heading6>
       {isOpen && sectionContent()}
     </div>
   );
@@ -46,14 +48,4 @@ export default function IconKey({isViewingLevelProgress, hasLevelValidation}) {
 IconKey.propTypes = {
   isViewingLevelProgress: PropTypes.bool,
   hasLevelValidation: PropTypes.bool,
-};
-
-const styles = {
-  label: {
-    fontFamily: 'Metropolis',
-    color: color.light_gray_900,
-    fontSize: '16px',
-    fontWeight: '600',
-    lineHeight: '148%',
-  },
 };
