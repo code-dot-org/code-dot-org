@@ -72,6 +72,12 @@ class InstructionsCsfLeftCol extends React.Component {
     ) {
       e.preventDefault();
       this.props.requestHint();
+      // Defer focus until the next pass of the event loop. This is necessary so that the element
+      // has been added to the dom. Note that there can only be at most one hint prompt on the page.
+      setTimeout(
+        () => document.getElementById('hint-prompt-yes-button').focus(),
+        0
+      );
     }
   };
 

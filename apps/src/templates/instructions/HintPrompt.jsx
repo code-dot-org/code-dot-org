@@ -26,7 +26,12 @@ const HintPrompt = ({
       textToSpeechEnabled={textToSpeechEnabled}
     >
       <p>{message}</p>
-      <LegacyButton type="cancel" onClick={onConfirm} style={{marginRight: 5}}>
+      <LegacyButton
+        id="hint-prompt-yes-button"
+        type="cancel"
+        onClick={onConfirm}
+        style={{marginRight: 5}}
+      >
         {msg.yes()}
       </LegacyButton>
       <LegacyButton type="cancel" onClick={onDismiss}>
