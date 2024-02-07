@@ -16,14 +16,21 @@ class I18nScriptUtils
   CROWDIN_CREDS_PATH = CDO.dir('bin/i18n/crowdin_credentials.yml').freeze
   PROGRESS_BAR_FORMAT = '%t: |%B| %p% %a'.freeze
   PARALLEL_PROCESSES = Parallel.processor_count.freeze
-  SOURCE_LOCALE = 'en-US'.freeze
-  TTS_LOCALES = (::TextToSpeech::VOICES.keys - %i[en-US]).freeze
+  SOURCE_LOCALE = I18n.default_locale.to_s.freeze
+  TTS_LOCALES = (::TextToSpeech::VOICES.keys - %I[#{SOURCE_LOCALE}]).freeze
   TESTING_BY_DEFAULT = false
 
   # @return [Hash] the Crowdin credentials.
   #   @option crowdin_creds [String] 'api_token' the Crowdin API token.
   def self.crowdin_creds
     @crowdin_creds ||= YAML.load_file(CROWDIN_CREDS_PATH).freeze
+  end
+
+  # List of supported CDO Languages
+  # @see https://docs.google.com/spreadsheets/d/10dS5PJKRt846ol9f9L3pKh03JfZkN7UIEcwMmiGS4i0 Supported CDO languages doc
+  # @return [Array<CdoLanguage>] Supported CDO languages
+  def self.cdo_languages
+    @cdo_languages ||= PegasusLanguages.all
   end
 
   # Because we log many of the i18n operations to slack, we often want to
@@ -376,13 +383,5 @@ class I18nScriptUtils
     return unless Dir.empty?(dir)
 
     FileUtils.rm_r(dir)
-  end
-
-  # Checks if the language is the i18n source language
-  #
-  # @param lang [PegasusLanguage] a pegasus language object
-  # @return [true, false]
-  def self.source_lang?(lang)
-    lang[:locale_s] == SOURCE_LOCALE
   end
 end
