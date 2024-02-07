@@ -46,10 +46,10 @@ export default class MusicBlocklyWorkspace {
 
   /**
    * Initialize the Blockly workspace
-   * @param {*} container HTML element to inject the workspace into
-   * @param {*} onBlockSpaceChange callback fired when any block space change events occur
-   * @param {*} isReadOnlyWorkspace is the workspace readonly
-   * @param {*} toolbox information about the toolbox
+   * @param container HTML element to inject the workspace into
+   * @param onBlockSpaceChange callback fired when any block space change events occur
+   * @param isReadOnlyWorkspace is the workspace readonly
+   * @param toolbox information about the toolbox
    *
    */
   init(
@@ -114,7 +114,7 @@ export default class MusicBlocklyWorkspace {
   /**
    * Generates executable JavaScript code for all blocks in the workspace.
    *
-   * @param {*} scope Global scope to provide the execution runtime
+   * @param scope Global scope to provide the execution runtime
    */
   compileSong(scope: object) {
     if (!this.workspace) {
@@ -264,8 +264,7 @@ export default class MusicBlocklyWorkspace {
    * is clicked (e.g. "When Run", "New Track"), as well any trigger events if
    * indicated.
    *
-   * {@param triggerEvents} a list of trigger events to execute, in the format
-   * { id: <ID of trigger>, startPosition: <playhead position to start from> }
+   * {@param triggerEvents} a list of trigger events to execute
    */
   executeCompiledSong(
     triggerEvents: {id: string; startPosition: number}[] = []
@@ -300,7 +299,7 @@ export default class MusicBlocklyWorkspace {
    * hooks have already been generated, as triggers cannot be played until
    * the song has started.
    *
-   * @param {} id ID of the trigger
+   * @param id ID of the trigger
    */
   executeTrigger(id: string, startPosition: number) {
     const hook = this.codeHooks[this.triggerIdToEvent(id)];
