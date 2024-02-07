@@ -3,8 +3,11 @@ import React from 'react';
 import {studentLevelProgressType} from '../progress/progressTypes';
 import classNames from 'classnames';
 import styles from './progress-table-v2.module.scss';
+import FontAwesome from '../FontAwesome';
 import queryString from 'query-string';
 import {Link} from '@dsco_/link';
+
+export const LEVEL_OVERRIDE_ICON_TEST_TITLE = 'override-icon-';
 
 const navigateToLevelOverviewUrl = (levelUrl, studentId, sectionId) => {
   if (!levelUrl) {
@@ -29,6 +32,7 @@ export default function LevelDataCell({
   studentId,
   sectionId,
   studentLevelProgress,
+  overrideIcon,
 }) {
   const levelData = React.useMemo(() => {
     if (!studentLevelProgress) {
@@ -44,7 +48,14 @@ export default function LevelDataCell({
       external
       className={classNames(styles.gridBox, styles.gridBoxLevel)}
     >
-      {levelData}
+      {overrideIcon ? (
+        <FontAwesome
+          icon={overrideIcon}
+          title={LEVEL_OVERRIDE_ICON_TEST_TITLE + overrideIcon}
+        />
+      ) : (
+        levelData
+      )}
     </Link>
   );
 }
@@ -54,4 +65,5 @@ LevelDataCell.propTypes = {
   sectionId: PropTypes.number,
   studentLevelProgress: studentLevelProgressType,
   level: PropTypes.object.isRequired,
+  overrideIcon: PropTypes.string,
 };

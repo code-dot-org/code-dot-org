@@ -31,7 +31,7 @@ export default function ExpandedProgressColumnHeader({
         level.sublevels?.length > 0 &&
         expandedChoiceLevels.includes(level.id)
       ) {
-        return acc + ((level.sublevels.length + 1) * levelWidth + 3);
+        return acc + ((level.sublevels.length + 1) * levelWidth + 4);
       }
       return acc + levelWidth + 1;
     }, 0);
@@ -39,7 +39,7 @@ export default function ExpandedProgressColumnHeader({
   }, [lesson, expandedChoiceLevels]);
 
   return (
-    <div className={styles.expandedHeader}>
+    <div className={styles.expandedHeader} key={lesson.id}>
       <div
         className={classNames(
           styles.gridBox,

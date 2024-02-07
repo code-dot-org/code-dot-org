@@ -32,7 +32,7 @@ interface InstructionsProps {
   /**
    * A callback when the user clicks on clickable text.
    */
-  handleInstructionsTextClick?: (id: string) => null;
+  handleInstructionsTextClick?: (id: string) => void;
 }
 
 /**
@@ -122,7 +122,7 @@ interface InstructionsPanelProps {
   /**
    * A callback when the user clicks on clickable text.
    */
-  handleInstructionsTextClick?: (id: string) => null;
+  handleInstructionsTextClick?: (id: string) => void;
 }
 
 /**

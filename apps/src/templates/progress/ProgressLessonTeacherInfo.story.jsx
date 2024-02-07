@@ -156,7 +156,6 @@ const style = {
 };
 
 export default {
-  title: 'ProgressLessonTeacherInfo',
   component: ProgressLessonTeacherInfo,
 };
 

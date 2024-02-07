@@ -4,7 +4,6 @@ import AssignmentVersionSelector from './AssignmentVersionSelector';
 import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
 export default {
-  title: 'AssignmentVersionSelector',
   component: AssignmentVersionSelector,
 };
 

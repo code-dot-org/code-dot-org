@@ -3,7 +3,7 @@ import Tags, {TagsProps} from './index';
 import {Meta, Story} from '@storybook/react';
 
 export default {
-  title: 'DesignSystem/Tags Component',
+  title: 'DesignSystem/Tags',
   component: Tags,
 } as Meta;
 

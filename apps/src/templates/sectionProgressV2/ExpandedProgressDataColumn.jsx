@@ -24,30 +24,53 @@ function ExpandedProgressDataColumn({
     }
   };
 
+  const getSingleLevelColumn = React.useCallback(
+    (level, propOverrides = {}) => {
+      return (
+        <div
+          className={styles.expandedLevelColumn}
+          key={lesson.id + '.' + level.id}
+        >
+          {sortedStudents.map(student => (
+            <LevelDataCell
+              studentId={student.id}
+              level={level}
+              studentLevelProgress={
+                levelProgressByStudent[student.id][level.id]
+              }
+              key={student.id + '.' + lesson.id + '.' + level.id}
+              {...propOverrides}
+            />
+          ))}
+        </div>
+      );
+    },
+    [levelProgressByStudent, sortedStudents, lesson]
+  );
+
+  const getExpandedChoiceLevel = React.useCallback(
+    level => [
+      getSingleLevelColumn(level, {overrideIcon: 'split'}),
+      ...level.sublevels.map(sublevel => getSingleLevelColumn(sublevel)),
+    ],
+    [getSingleLevelColumn]
+  );
+
   const progress = React.useMemo(
     () => (
       <div className={styles.expandedTable}>
-        {lesson.levels.map(level => (
-          <div
-            className={styles.expandedLevelColumn}
-            key={lesson.bubbleText + '.' + level.id}
-          >
-            {sortedStudents.map(student => (
-              <LevelDataCell
-                studentId={student.id}
-                sectionId={sectionId}
-                level={level}
-                studentLevelProgress={
-                  levelProgressByStudent[student.id][level.id]
-                }
-                key={student.id + '.' + lesson.id + '.' + level.id}
-              />
-            ))}
-          </div>
-        ))}
+        {lesson.levels.flatMap(level => {
+          if (
+            level.sublevels?.length > 0 &&
+            expandedChoiceLevels.includes(level.id)
+          ) {
+            return getExpandedChoiceLevel(level);
+          }
+          return [getSingleLevelColumn(level)];
+        })}
       </div>
     ),
-    [levelProgressByStudent, sortedStudents, lesson, sectionId]
+    [lesson, expandedChoiceLevels, getSingleLevelColumn, getExpandedChoiceLevel]
   );
 
   return (
