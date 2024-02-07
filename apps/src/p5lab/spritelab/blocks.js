@@ -487,10 +487,7 @@ export default {
           .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
         this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
-        // setStyle is undefined for CDO Blockly
-        if (typeof this.setStyle === 'function') {
-          this.setStyle('sprite_blocks');
-        }
+        this.setStyle('sprite_blocks');
       },
       getVars: function () {
         return Blockly.Variables.getVars.bind(this)(
@@ -504,19 +501,27 @@ export default {
       },
       removeVar: Blockly.Blocks.variables_get.removeVar,
     };
-    generator.sprite_variables_get = function () {
-      return [
-        `{name: '${Blockly.JavaScript.translateVarName(
-          this.getFieldValue('VAR')
-        )}'}`,
-        Blockly.JavaScript.ORDER_ATOMIC,
-      ];
-    };
+    Blockly.customBlocks.defineNewBlockGenerator(
+      generator,
+      'sprite_variables_get',
+      function () {
+        return [
+          `{name: '${Blockly.JavaScript.translateVarName(
+            this.getFieldValue('VAR')
+          )}'}`,
+          Blockly.JavaScript.ORDER_ATOMIC,
+        ];
+      }
+    );
     Blockly.Variables.registerGetter(
       Blockly.BlockValueType.SPRITE,
       'sprite_variables_get'
     );
-
+    Blockly.customBlocks.defineNewBlockGenerator(
+      generator,
+      'math_random_int',
+      Blockly.customBlocks.mathRandomIntGenerator
+    );
     // NOTE: On the page where behaviors are created (the functions/#/edit page)
     // blockInstallOptions is undefined.
     if (

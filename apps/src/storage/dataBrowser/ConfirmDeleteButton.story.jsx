@@ -3,7 +3,6 @@ import ConfirmDeleteButton from './ConfirmDeleteButton';
 import {action} from '@storybook/addon-actions';
 
 export default {
-  title: 'ConfirmDeleteButton',
   component: ConfirmDeleteButton,
 };
 

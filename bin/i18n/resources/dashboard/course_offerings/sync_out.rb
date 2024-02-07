@@ -16,7 +16,7 @@ module I18n
             return unless File.exist?(crowdin_file_path)
 
             i18n_locale = language[:locale_s]
-            distribute_localization(i18n_locale, crowdin_file_path) unless I18nScriptUtils.source_lang?(language)
+            distribute_localization(i18n_locale, crowdin_file_path)
 
             i18n_file_path = I18nScriptUtils.locale_dir(i18n_locale, DIR_NAME, FILE_NAME)
             I18nScriptUtils.move_file(crowdin_file_path, i18n_file_path)

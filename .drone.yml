@@ -23,8 +23,9 @@ steps:
       - echo "Running on $hostname"
 
   - name: clone
-    image: docker:git
+    image: bitnami/git
     commands:
+      - git lfs install
       - git clone --branch $DRONE_SOURCE_BRANCH  --depth 200 $DRONE_GIT_HTTP_URL .
       - git reset --hard $DRONE_COMMIT
       # Also fetch the target branch (which is staging for pull requests.) We need this for determining which tests to run based on changed files.
@@ -122,8 +123,9 @@ steps:
       - echo "Running on $hostname"
 
   - name: clone
-    image: docker:git
+    image: bitnami/git
     commands:
+      - git lfs install
       - git clone --branch $DRONE_SOURCE_BRANCH  --depth 200 $DRONE_GIT_HTTP_URL .
       - git reset --hard $DRONE_COMMIT
       # Also fetch the target branch (which is staging or staging-next for pull requests.) We need this for determining which tests to run based on changed files.
@@ -212,6 +214,6 @@ trigger:
     - pull_request
 ---
 kind: signature
-hmac: 6fddaef89e2330c8bc0d83912039666304efe7d171ace576ce9351491e5cdb2b
+hmac: 76412111073714963185f53f3b4099f192f66362de0533b0a0f61057ecc013a7
 
 ...

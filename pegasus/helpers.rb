@@ -18,7 +18,9 @@ end
 
 def authentication_required!(url = request.url)
   dont_cache
+  # rubocop:disable CustomCops/DashboardDbUsage
   return if dashboard_user_helper
+  # rubocop:enable CustomCops/DashboardDbUsage
   redirect((request.scheme || 'http') + ':' + CDO.studio_url("/users/sign_in?user_return_to=#{url}"), 302)
 end
 

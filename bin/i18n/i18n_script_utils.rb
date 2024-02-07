@@ -12,58 +12,26 @@ I18N_LOCALES_DIR = 'i18n/locales'.freeze
 I18N_SOURCE_DIR = File.join(I18N_LOCALES_DIR, 'source').freeze
 I18N_ORIGINAL_DIR = File.join(I18N_LOCALES_DIR, 'original').freeze
 
-CROWDIN_PROJECTS = {
-  codeorg: {
-    config_file:            CDO.dir('bin/i18n/crowdin/config/codeorg_crowdin.yml'),
-    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
-    etags_json:             CDO.dir('bin/i18n/crowdin/etags/codeorg_etags.json'),
-  },
-  'codeorg-markdown': {
-    config_file:            CDO.dir('bin/i18n/crowdin/config/codeorg_markdown_crowdin.yml'),
-    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
-    etags_json:             CDO.dir('bin/i18n/crowdin/etags/codeorg-markdown_etags.json'),
-  },
-  'hour-of-code': {
-    config_file:            CDO.dir('bin/i18n/crowdin/config/hourofcode_crowdin.yml'),
-    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
-    etags_json:             CDO.dir('bin/i18n/crowdin/etags/hour-of-code_etags.json'),
-  },
-  'codeorg-restricted': {
-    config_file:            CDO.dir('bin/i18n/crowdin/config/codeorg_restricted_crowdin.yml'),
-    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
-    etags_json:             CDO.dir('bin/i18n/crowdin/etags/codeorg-restricted_etags.json'),
-  },
-}.freeze
-
-CROWDIN_TEST_PROJECTS = {
-  'codeorg-testing': {
-    config_file:            CDO.dir('bin/i18n/crowdin/config/codeorg-testing_crowdin.yml'),
-    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
-    etags_json:             CDO.dir('bin/i18n/crowdin/etags/codeorg-testing_etags.json'),
-  },
-  'codeorg-markdown-testing': {
-    config_file:            CDO.dir('bin/i18n/crowdin/config/codeorg-markdown-testing_crowdin.yml'),
-    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
-    etags_json:             CDO.dir('bin/i18n/crowdin/etags/codeorg-markdown-testing_etags.json'),
-  },
-  'hour-of-code-test': {
-    config_file:            CDO.dir('bin/i18n/crowdin/config/hourofcode-testing_crowdin.yml'),
-    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
-    etags_json:             CDO.dir('bin/i18n/crowdin/etags/hour-of-code-testing_etags.json'),
-  },
-  'codeorg-restricted-test': {
-    config_file:            CDO.dir('bin/i18n/crowdin/config/codeorg-restricted-testing_crowdin.yml'),
-    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
-    etags_json:             CDO.dir('bin/i18n/crowdin/etags/codeorg-restricted-testing_etags.json'),
-  },
-}.freeze
-
 class I18nScriptUtils
+  CROWDIN_CREDS_PATH = CDO.dir('bin/i18n/crowdin_credentials.yml').freeze
   PROGRESS_BAR_FORMAT = '%t: |%B| %p% %a'.freeze
   PARALLEL_PROCESSES = Parallel.processor_count.freeze
-  SOURCE_LOCALE = 'en-US'.freeze
-  TTS_LOCALES = (::TextToSpeech::VOICES.keys - %i[en-US]).freeze
+  SOURCE_LOCALE = I18n.default_locale.to_s.freeze
+  TTS_LOCALES = (::TextToSpeech::VOICES.keys - %I[#{SOURCE_LOCALE}]).freeze
   TESTING_BY_DEFAULT = false
+
+  # @return [Hash] the Crowdin credentials.
+  #   @option crowdin_creds [String] 'api_token' the Crowdin API token.
+  def self.crowdin_creds
+    @crowdin_creds ||= YAML.load_file(CROWDIN_CREDS_PATH).freeze
+  end
+
+  # List of supported CDO Languages
+  # @see https://docs.google.com/spreadsheets/d/10dS5PJKRt846ol9f9L3pKh03JfZkN7UIEcwMmiGS4i0 Supported CDO languages doc
+  # @return [Array<CdoLanguage>] Supported CDO languages
+  def self.cdo_languages
+    @cdo_languages ||= PegasusLanguages.all
+  end
 
   # Because we log many of the i18n operations to slack, we often want to
   # explicitly force stdout to operate synchronously, rather than buffering
@@ -415,13 +383,5 @@ class I18nScriptUtils
     return unless Dir.empty?(dir)
 
     FileUtils.rm_r(dir)
-  end
-
-  # Checks if the language is the i18n source language
-  #
-  # @param lang [PegasusLanguage] a pegasus language object
-  # @return [true, false]
-  def self.source_lang?(lang)
-    lang[:locale_s] == SOURCE_LOCALE
   end
 end

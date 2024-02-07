@@ -28,5 +28,5 @@ MARKDOWN
 
 allow_multiple_attempts true
 teacher_markdown <<MARKDOWN
-If we pass the array `{{1, 0}, {1, 0}}` to the `reverse` method, it will return `{{0, 1}, {0, 1}}` instead of the expected result `{{1, 0}, {1, 0}}`. This shows that the method does not correctly reverse the elements.
+If we pass the array `{{1, 0}, {1, 0}}` to the `reverse` method, it should return `{{0, 1}, {0, 1}}` if the method is working correctly. The other four answer choices are palindromes -- a word, phrase, or sequence that reads the same backward as forward. Therefore, if we were testing, it would be difficult to tell that the `reverse` method is not actually reversing the array using the other four answer choices since they look the same reversed as in their normal states.
 MARKDOWN

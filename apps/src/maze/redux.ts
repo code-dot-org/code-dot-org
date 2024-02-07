@@ -1,6 +1,6 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
-interface MazeState {
+export interface MazeState {
   collectorCurrentCollected: number;
   collectorLastCollected: number;
   collectorMinRequired: number;

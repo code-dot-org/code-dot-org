@@ -38,18 +38,22 @@ class Policies::Lti
 
   LMS_PLATFORMS = {
     canvas_cloud: {
+      name: 'Canvas'.freeze,
       issuer: 'https://canvas.instructure.com'.freeze,
       auth_redirect_url: 'https://sso.canvaslms.com/api/lti/authorize_redirect'.freeze,
       jwks_url: 'https://sso.canvaslms.com/api/lti/security/jwks'.freeze,
       access_token_url: 'https://sso.canvaslms.com/login/oauth2/token'.freeze,
     },
     schoology: {
+      name: 'Schoology'.freeze,
       issuer: 'https://schoology.schoology.com'.freeze,
       auth_redirect_url: 'https://lti-service.svc.schoology.com/lti-service/authorize-redirect'.freeze,
       jwks_url: 'https://lti-service.svc.schoology.com/lti-service/.well-known/jwks'.freeze,
       access_token_url: 'https://lti-service.svc.schoology.com/lti-service/access-token'.freeze,
     },
   }
+
+  MAX_COURSE_MEMBERSHIP = 650
 
   def self.get_account_type(id_token)
     id_token[LTI_ROLES_KEY].each do |role|
