@@ -41,8 +41,8 @@ steps:
       # We should be in a cached git repo, but clone if the cache failed
       - "[ -d .git ] || (echo 'WARNING: get-cached-staging failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .)"
       # Checkout our target branch (=the PR)
+      - git fetch origin $DRONE_SOURCE_BRANCH
       - git checkout $DRONE_SOURCE_BRANCH
-      - git pull
       - git reset --hard $DRONE_COMMIT
       # Fetch the target branch (which is staging for pull requests.) We need this for determining which tests to run based on changed files.
       - git remote set-branches --add origin $DRONE_TARGET_BRANCH
@@ -158,8 +158,8 @@ steps:
       # We should be in a cached git repo, but clone if the cache failed
       - "[ -d .git ] || (echo 'get-cached-staging failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .)"
       # Checkout our target branch (the PR's branch).
+      - git fetch origin $DRONE_SOURCE_BRANCH
       - git checkout $DRONE_SOURCE_BRANCH
-      - git pull
       - git reset --hard $DRONE_COMMIT
       # Also fetch the target branch (which is staging or staging-next for pull requests.) We need this for determining which tests to run based on changed files.
       - git remote set-branches --add origin $DRONE_TARGET_BRANCH
@@ -284,6 +284,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: 26eaf86c9d660c604cb747c0b226f7296a10a48dfb4ba6eca5ba7e8f3b8b5621
+hmac: 9c56b2a7307df0bf247083c7bdb15c5cb0901611f5a7523019cac85a9a94753b
 
 ...
