@@ -26,7 +26,7 @@ steps:
     image: plugins/s3-cache
     settings:
       filename: cache-staging-clone.tar
-      endpoint: s3://code-dot-org
+      endpoint: s3://code-dot-org-drone
       restore: true
       debug: true
       pull: true
@@ -36,8 +36,8 @@ steps:
   - name: checkout
     image: bitnami/git
     commands:
-      - pushd .. && git lfs install && popd
-      - sleep 5000
+      - git lfs install --skip-repo
+      - sleep 50000
       # - git clone --branch $DRONE_SOURCE_BRANCH  --depth 200 $DRONE_GIT_HTTP_URL .
       - git checkout $DRONE_SOURCE_BRANCH
       - git reset --hard $DRONE_COMMIT
