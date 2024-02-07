@@ -230,7 +230,7 @@ steps:
     image: bitnami/git
     commands:
       - git lfs install
-      - git clone --branch $DRONE_BRANCH --depth 100 $DRONE_GIT_HTTP_URL . 
+      - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL . 
 
   - name: cache-staging-clone
     image: plugins/s3-cache
@@ -250,6 +250,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: c055f6aea2d9b83f048da7f802c6cf280ae8f1d0abfc163a31d5622b75acf28f
+hmac: fd1de24072ec3b0645237ee8d98525c4f9a5e1aebb99447cb7c1105d89265d7e
 
 ...
