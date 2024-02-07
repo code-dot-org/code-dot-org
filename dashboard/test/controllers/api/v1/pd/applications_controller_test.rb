@@ -594,7 +594,7 @@ module Api::V1::Pd
             assigned_workshop: 'January 1-5, 2020, Orchard Park NY',
             registered_workshop: 'Yes',
             registered_workshop_id: workshop.id,
-            status: 'accepted',
+            status: 'enrolled',
             notes: nil,
             notes_2: nil,
             notes_3: nil,
