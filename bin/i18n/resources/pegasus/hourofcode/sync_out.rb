@@ -18,10 +18,8 @@ module I18n
             crowdin_locale_dir = I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME)
             return unless File.directory?(crowdin_locale_dir)
 
-            unless I18nScriptUtils.source_lang?(language)
-              distribute_origin_i18n_file(language[:unique_language_s], crowdin_locale_dir)
-              distribute_markdown_files(language[:unique_language_s], crowdin_locale_dir)
-            end
+            distribute_origin_i18n_file(language[:unique_language_s], crowdin_locale_dir)
+            distribute_markdown_files(language[:unique_language_s], crowdin_locale_dir)
 
             I18nScriptUtils.rename_dir(crowdin_locale_dir, I18nScriptUtils.locale_dir(language[:locale_s], DIR_NAME))
           end
