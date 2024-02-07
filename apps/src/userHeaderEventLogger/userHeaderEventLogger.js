@@ -4,6 +4,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 $(document).ready(function () {
+  console.log('HEADER LOGGER');
   const headerCreateMenu = document.getElementById('header_create_menu');
   if (getScriptData('isSignedOut') && headerCreateMenu) {
     // Log if a signed-out user clicks the "Create" menu dropdown
