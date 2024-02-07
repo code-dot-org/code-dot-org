@@ -1,3 +1,4 @@
+require 'active_support'
 require 'active_support/cache'
 require 'active_support/core_ext/object/blank'
 require 'honeybadger/ruby'

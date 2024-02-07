@@ -251,6 +251,17 @@ export const nextLevelId = state => {
   return nextLevel.id;
 };
 
+export const levelCount = state => {
+  if (getProgressLevelType(state) === ProgressLevelType.LEVEL) {
+    return 1;
+  }
+  if (getProgressLevelType(state) === ProgressLevelType.SCRIPT_LEVEL) {
+    return levelsForLessonId(state.progress, state.progress.currentLessonId)
+      .length;
+  }
+  return 0;
+};
+
 export const lessonExtrasUrl = (state, lessonId) =>
   state.lessonExtrasEnabled
     ? state.lessons.find(lesson => lesson.id === lessonId)

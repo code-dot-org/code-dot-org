@@ -6,6 +6,7 @@ import {CheckedRadioButton} from '@cdo/apps/lib/ui/CheckedRadioButton';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const rubricPerformanceHeaders = {
   performanceLevel1: i18n.rubricLevelOneHeader(),
@@ -66,9 +67,8 @@ class RubricField extends Component {
             id={`rubric-details-${this.props.rubricLevel}`}
             style={styles.detailsArea}
             open={this.state.detailsOpen}
-            onClick={this.updateToggle}
           >
-            <summary style={styles.rubricHeader}>
+            <summary style={styles.rubricHeader} onClick={this.updateToggle}>
               {rubricPerformanceHeaders[this.props.rubricLevel]}
             </summary>
             <p style={styles.rubricDetails}>{this.props.rubricValue}</p>
@@ -100,7 +100,7 @@ const styles = {
     fontSize: 12,
     marginLeft: 10,
     color: color.black,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     // Don't show default summary tag outline and background on hover or focus
     outline: 'none',
     background: 'none',

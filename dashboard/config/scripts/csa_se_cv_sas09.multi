@@ -1,0 +1,11 @@
+name 'CSA-SE-CV-SAS09'
+
+question 'After this module, I am more inclined to explore AI tools in future projects or courses.'
+
+right 'Strongly Agree'
+right 'Agree'
+right 'Neutral'
+right 'Disagree'
+right 'Strongly Disagree'
+
+allow_multiple_attempts true

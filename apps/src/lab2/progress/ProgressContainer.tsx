@@ -48,9 +48,9 @@ const ProgressContainer: React.FunctionComponent<ProgressContainerProps> = ({
   );
 
   useEffect(() => {
-    if (levelData) {
-      progressManager.current.onLevelChange(levelData as ProjectLevelData);
-    }
+    progressManager.current.onLevelChange(
+      levelData as ProjectLevelData | undefined
+    );
   }, [levelData]);
 
   return (

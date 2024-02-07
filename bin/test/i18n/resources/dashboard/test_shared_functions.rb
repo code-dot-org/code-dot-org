@@ -1,36 +1,27 @@
 require_relative '../../../test_helper'
 require_relative '../../../../i18n/resources/dashboard/shared_functions'
 
-class I18n::Resources::Dashboard::SharedFunctionsTest < Minitest::Test
-  def test_sync_in
-    expected_shared_functions_data = {
-      'en' => {
-        'data' => {
-          'shared_functions' => {
-            'shared-function-1' => 'shared-function-1',
-            'shared-function-2' => 'shared-function-2'
-          }
-        }
-      }
-    }
-    expected_sync_in_result_file_path = CDO.dir('i18n/locales/source/dashboard/shared_functions.yml')
-    expected_sync_in_result_file_data = 'expected_sync_in_result_file_data'
+describe I18n::Resources::Dashboard::SharedFunctions do
+  let(:described_class) {I18n::Resources::Dashboard::SharedFunctions}
 
-    I18nScriptUtils.stubs(:to_crowdin_yaml).with(expected_shared_functions_data).returns(expected_sync_in_result_file_data)
-    SharedBlocklyFunction.any_instance.stubs(:write_file)
+  describe '.sync_in' do
+    it 'sync-in SharedFunctions resource' do
+      described_class::SyncIn.expects(:perform).once
+      described_class.sync_in
+    end
+  end
 
-    SharedBlocklyFunction.transaction do
-      SharedBlocklyFunction.delete_all
+  describe '.sync_up' do
+    it 'sync-up SharedFunctions resource' do
+      described_class::SyncUp.expects(:perform).once
+      described_class.sync_up
+    end
+  end
 
-      FactoryBot.create(:shared_blockly_function, level_type: 'GamelabJr', name: 'shared-function-2')
-      FactoryBot.create(:shared_blockly_function, level_type: 'Unexpected', name: 'unexpected')
-      FactoryBot.create(:shared_blockly_function, level_type: 'GamelabJr', name: 'shared-function-1')
-
-      File.expects(:write).with(expected_sync_in_result_file_path, expected_sync_in_result_file_data).once
-
-      I18n::Resources::Dashboard::SharedFunctions.sync_in
-    ensure
-      raise ActiveRecord::Rollback
+  describe '.sync_out' do
+    it 'sync-out SharedFunctions resource' do
+      described_class::SyncOut.expects(:perform).once
+      described_class.sync_out
     end
   end
 end

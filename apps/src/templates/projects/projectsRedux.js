@@ -30,6 +30,7 @@ const CANCEL_RENAMING_PROJECT = 'projects/CANCEL_RENAMING_PROJECT';
 const SAVE_SUCCESS = 'projects/SAVE_SUCCESS';
 const SAVE_FAILURE = 'project/SAVE_FAILURE';
 const UNSET_NAME_FAILURE = 'project/UNSET_NAME_FAILURE';
+const SET_CAPTCHA_KEY = 'projects/SET_CAPTCHA_KEY';
 
 // Action creators
 
@@ -122,6 +123,10 @@ export function unsetNameFailure(projectId) {
   return {type: UNSET_NAME_FAILURE, projectId};
 }
 
+export function setCaptchaKey(captchaSiteKey) {
+  return {type: SET_CAPTCHA_KEY, captchaSiteKey};
+}
+
 // Reducers
 
 const initialSelectedGalleryState = Galleries.PUBLIC;
@@ -130,6 +135,21 @@ function selectedGallery(state = initialSelectedGalleryState, action) {
   switch (action.type) {
     case TOGGLE_GALLERY:
       return action.projectType;
+    default:
+      return state;
+  }
+}
+
+const initialCaptchaState = {
+  captchaSiteKey: '',
+};
+
+function captcha(state = initialCaptchaState, action) {
+  switch (action.type) {
+    case SET_CAPTCHA_KEY:
+      return {
+        captchaSiteKey: action.captchaSiteKey,
+      };
     default:
       return state;
   }
@@ -425,6 +445,7 @@ const reducer = combineReducers({
   projectLists,
   hasOlderProjects,
   personalProjectsList,
+  captcha,
 });
 export default reducer;
 

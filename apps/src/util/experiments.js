@@ -40,6 +40,20 @@ experiments.BACKGROUNDS_AND_UPLOAD = 'backgroundsTab';
 experiments.SECTION_SETUP_REFRESH = 'sectionSetupRefresh';
 // Experiment for testing Blockly workspace serialization with the JSON system.
 experiments.BLOCKLY_JSON = 'blocklyJson';
+// Experiment for showing the gender field
+experiments.GENDER_FEATURE_ENABLED = 'gender';
+// Experiment for enabling the CPA lockout
+experiments.CPA_EXPERIENCE = 'cpa_experience';
+experiments.AI_RUBRICS = 'ai-rubrics';
+experiments.NON_AI_RUBRICS = 'non-ai-rubrics';
+//Experiment for AI Rubrics redesign
+experiments.AI_RUBRICS_REDESIGN = 'ai-rubrics-redesign';
+// Experiment for showing the toggle a teacher can use to turn on AI Tutor for their section
+experiments.AI_TUTOR_ACCESS = 'ai-tutor';
+// Uses Google Blockly for a given user across labs/levels until the experiment is disabled
+experiments.GOOGLE_BLOCKLY = 'google_blockly';
+// Adds documentation links to block context menus in Sprite Lab (supported with Google Blockly only)
+experiments.SPRITE_LAB_DOCS = 'sl_docs';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,
@@ -110,7 +124,28 @@ experiments.setEnabled = function (key, shouldEnable, expiration = undefined) {
 };
 
 /**
- * Checks whether provided experiment is enabled or not
+ * Checks for the experiment while allowing for a simpler query string
+ * parameter to enable the experiment. For instance, if `key` is "foo",
+ * the experiment is allowed by any other means but also if `?foo=1` is
+ * specified in the current URL.
+ * @param {string} key - Name of experiment in question
+ * @returns {bool}
+ */
+experiments.isEnabledAllowingQueryString = function (key) {
+  const query = queryString.parse(this.getQueryString_());
+
+  // Look for ?my_experiment=1 style experiment keys
+  if (query[key]) {
+    // We enable when any query string matches, but do not
+    // set it in the session storage.
+    return true;
+  }
+
+  return experiments.isEnabled(key);
+};
+
+/**
+ * Checks whether provided experiment is enabled or not.
  * @param {string} key - Name of experiment in question
  * @returns {bool}
  */

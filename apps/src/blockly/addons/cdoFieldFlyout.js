@@ -9,8 +9,6 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
    *
    * @param {string} value - The initial value of the field.
    * @param {Object} [opt_config] - A map of options used to configure the field.
-   * @param {number} [opt_config.minWidth] - The minimum width of the field.
-   * @param {number} [opt_config.maxWidth] - The maximum width of the field.
    */
   constructor(value, opt_config) {
     super(value);
@@ -35,21 +33,6 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
   CURSOR = 'default';
 
   /**
-   * Process the configuration map passed to the field.
-   *
-   * @param {Object} [config] - A map of options used to configure the field.
-   * @param {number} [config.minWidth] - The minimum width of the field.
-   * @param {number} [config.maxWidth] - The maximum width of the field.
-   * @override
-   */
-  configure_(config) {
-    if (config) {
-      this.minWidth_ = config.minWidth;
-      this.maxWidth_ = config.maxWidth;
-    }
-  }
-
-  /**
    * Create the block UI for this field.
    * @override
    */
@@ -69,10 +52,11 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
 
   /**
    * This is the Blockly hook to create an editor for the field.
+   * All we do here is set the flyout to visible.
    * @override
    */
   showEditor_() {
-    this.setFlyoutVisible(!this.isFlyoutVisible());
+    this.setFlyoutVisible();
   }
 
   /**
@@ -87,19 +71,17 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
     if (!this.isVisible()) {
       return new Blockly.utils.Size(0, 0);
     }
+    // On first render, if the flyout is not visible, show the flyout.
+    // We can't show the flyout until other components are rendered,
+    // so we delay showing it until here.
+    if (!this.isFlyoutVisible()) {
+      this.setFlyoutVisible();
+    }
     // Normally, Blockly skips rendering fields unless we've notified the
     // rendering system that they've changed (this.isDirty_), but in this
-    // case, we want to always re-render / resize the field so that it
-    // matches the width of the block.
-    this.render_();
-
-    if (this.visible_ && this.size_.width === 0) {
-      // If the field is not visible the width will be 0 as well, one of the
-      // problems with the old system.
-      this.render_();
-    }
-
-    return this.size_;
+    // case, we want to always re-render / resize the field.
+    this.isDirty_ = true;
+    return super.getSize();
   }
 
   /**
@@ -110,34 +92,30 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
    * @override
    */
   render_() {
-    this.showEditor_();
-    const fieldGroupBBox = this.fieldGroup_.getBBox();
-    if (this.flyout_.isVisible()) {
-      this.size_ = new Blockly.utils.Size(
-        this.flyout_.getWidth(),
-        fieldGroupBBox.height
-      );
-    } else {
-      this.size_ = new Blockly.utils.Size(
-        fieldGroupBBox.width,
-        fieldGroupBBox.height
-      );
+    if (this.isFlyoutVisible()) {
+      // Always reflow and re-show the flyout before re-sizing the field.
+      // This will ensure the flyout is reporting the correct size (reflow),
+      // and the blocks in the flyout are spaced correctly (show).
+      this.flyout_.reflow();
+      this.flyout_.show(CdoFieldFlyout.getFlyoutId(this.sourceBlock_));
     }
+    // The field should be the size of the fieldGroup_.
+    const fieldGroupBBox = this.fieldGroup_.getBBox();
+    this.size_ = new Blockly.utils.Size(
+      fieldGroupBBox.width,
+      fieldGroupBBox.height
+    );
   }
 
   /**
-   * Show or hide the flyout, then re-render it.
-   *
-   * @param {boolean} isVisible Whether or not the flyout should be shown.
+   * Show the flyout, then re-render it.
    */
-  setFlyoutVisible(isVisible) {
+  setFlyoutVisible() {
     if (!this.flyout_.targetWorkspace) {
       this.flyout_.init(this.workspace_);
     }
-    isVisible
-      ? this.flyout_.show(CdoFieldFlyout.getFlyoutId(this.sourceBlock_))
-      : this.flyout_.hide();
-    this.forceRerender();
+    this.flyout_.show(CdoFieldFlyout.getFlyoutId(this.sourceBlock_));
+    this.isDirty_ = true;
   }
 
   /**

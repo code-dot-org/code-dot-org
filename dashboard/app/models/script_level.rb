@@ -110,13 +110,12 @@ class ScriptLevel < ApplicationRecord
     end
   end
 
-  def find_experiment_level(user, section)
+  def find_experiment_level(user)
     levels.sort_by(&:created_at).find do |level|
       experiments(level).any? do |experiment_name|
         Experiment.enabled?(
           experiment_name: experiment_name,
           user: user,
-          section: section,
           script: script
         )
       end
@@ -146,8 +145,8 @@ class ScriptLevel < ApplicationRecord
 
   def next_level_or_redirect_path_for_user(
     user,
-    extras_lesson=nil,
-    bubble_choice_parent=false
+    extras_lesson = nil,
+    bubble_choice_parent: false
   )
 
     if valid_progression_level?(user)
@@ -176,6 +175,10 @@ class ScriptLevel < ApplicationRecord
           script_path(script)
         end
       end
+    elsif script.pl_course?
+      return build_script_level_path(level_to_follow) if level_to_follow
+      next_unit = script.next_unit(user)
+      next_unit ? script_path(next_unit) : script_completion_redirect(script)
     elsif bubble_choice? && !bubble_choice_parent
       # Redirect user back to the BubbleChoice activity page from sublevels.
       build_script_level_path(self)
@@ -207,17 +210,17 @@ class ScriptLevel < ApplicationRecord
   end
 
   # Returns the next valid progression level, or nil if no such level exists
-  def next_progression_level(user=nil)
+  def next_progression_level(user = nil)
     next_level&.or_next_progression_level(user)
   end
 
   # Returns the first level in the sequence starting with this one that is a
   # valid progress level
-  def or_next_progression_level(user=nil)
+  def or_next_progression_level(user = nil)
     valid_progression_level?(user) ? self : next_progression_level(user)
   end
 
-  def valid_progression_level?(user=nil)
+  def valid_progression_level?(user = nil)
     return false if level.unplugged?
     return false if lesson&.unplugged_lesson?
     return false if I18n.locale != I18n.default_locale && level.spelling_bee?
@@ -305,7 +308,7 @@ class ScriptLevel < ApplicationRecord
     build_script_level_path(self)
   end
 
-  def summarize(include_prev_next=true, for_edit: false, user_id: nil)
+  def summarize(include_prev_next = true, for_edit: false, user_id: nil)
     ActiveRecord::Base.connected_to(role: :reading) do
       ids = level_ids
       active_id = oldest_active_level.id
@@ -335,7 +338,12 @@ class ScriptLevel < ApplicationRecord
 
       if progression
         summary[:progression] = progression
-        localized_progression_name = I18n.t("data.progressions.#{progression}", default: progression)
+        localized_progression_name = I18n.t(
+          progression,
+          scope: %i[data progressions],
+          default: progression,
+          smart: true
+        )
         summary[:progression_display_name] = localized_progression_name
       end
 
@@ -584,7 +592,7 @@ class ScriptLevel < ApplicationRecord
   # @param [boolean] use_existing_level_keys - If true, use existing information in the level_keys property if available
   #   instead of re-querying associated levels. We want to reuse this data during seeding, but not during serialization.
   # @return [Hash<String, String>] all information needed to uniquely identify this object across environments.
-  def seeding_key(seed_context, use_existing_level_keys = true)
+  def seeding_key(seed_context, use_existing_level_keys: true)
     my_key = {
       'script_level.level_keys': get_level_keys(seed_context, use_existing_level_keys)
     }
@@ -675,7 +683,7 @@ class ScriptLevel < ApplicationRecord
     instructor_in_training && script.pl_course? && script.can_be_participant?(current_user)
   end
 
-  def get_example_solutions(level, current_user, section_id=nil)
+  def get_example_solutions(level, current_user, section_id = nil)
     level_example_links = []
 
     return [] if !Policies::InlineAnswer.visible_for_script_level?(current_user, self) || CDO.properties_encryption_key.blank?

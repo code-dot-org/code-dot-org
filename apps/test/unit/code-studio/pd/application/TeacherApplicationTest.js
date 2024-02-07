@@ -9,7 +9,6 @@ describe('TeacherApplication', () => {
     apiEndpoint: '/path/to/endpoint',
     options: {},
     accountEmail: 'user@email.com',
-    userId: 1,
   };
 
   describe('getInitialData', () => {

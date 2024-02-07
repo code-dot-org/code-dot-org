@@ -11,6 +11,14 @@ Consider the code segment below.
 
 ```
 Painter myPainter = new Painter();
+
+myPainter.turnLeft();
+myPainter.turnLeft();
+myPainter.turnLeft();
+
+myPainter.move();
+myPainter.turnLeft();
+
 myPainter.move();
 myPainter.takePaint();
 myPainter.turnLeft();
@@ -22,7 +30,7 @@ Which of the following initial conditions must be true for the code to run witho
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-Since the first line requires the `Painter` object to move forward one space, it must be able to move forward in the direction it is facing first. If there is an obstacle in front of the `Painter`, calling `move()` will result in an error.
+In this example, the `Painter` object first calls the `turnLeft()` method three times. This will not result in an error. However, the next command requires the `Painter` object to move forward one space using the `move()` method. If there is an obstacle in front of the `Painter`, calling `move()` will result in an error.
 MARKDOWN
 
 allow_multiple_attempts true

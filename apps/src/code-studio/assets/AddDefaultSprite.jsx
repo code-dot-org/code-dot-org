@@ -58,13 +58,13 @@ export default class AddDefaultSprite extends React.Component {
         />
         <Button
           text="Add to start"
-          color={Button.ButtonColor.orange}
+          color={Button.ButtonColor.brandSecondaryDefault}
           onClick={() => this.handleSpriteAdd(true)}
           size={Button.ButtonSize.narrow}
         />
         <Button
           text="Add to end"
-          color={Button.ButtonColor.orange}
+          color={Button.ButtonColor.brandSecondaryDefault}
           onClick={() => this.handleSpriteAdd(false)}
           size={Button.ButtonSize.narrow}
         />

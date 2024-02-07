@@ -7,7 +7,7 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 import i18n from '@cdo/locale';
-import DCDO from '@cdo/apps/dcdo';
+import experiments from '@cdo/apps/util/experiments';
 import {expect} from '../../../util/deprecatedChai';
 import {shallow, mount} from 'enzyme';
 import ManageStudentsTable, {
@@ -190,11 +190,11 @@ describe('ManageStudentsTable', () => {
 
     describe('Gender field feature flag', () => {
       before(() => {
-        window.GENDER_FEATURE_ENABLED = 'true';
+        experiments.setEnabled(experiments.GENDER_FEATURE_ENABLED, true);
       });
 
       after(() => {
-        window.GENDER_FEATURE_ENABLED = undefined;
+        experiments.setEnabled(experiments.GENDER_FEATURE_ENABLED, false);
       });
 
       it('does render the gender column if loginType is secret picture', () => {
@@ -284,9 +284,6 @@ describe('ManageStudentsTable', () => {
     });
 
     it('renders an editable family name field in student sections', async () => {
-      DCDO.reset();
-      DCDO.set('family-name-features', true);
-
       const wrapper = mount(
         <Provider store={getStore()}>
           <ManageStudentsTable />
@@ -317,14 +314,9 @@ describe('ManageStudentsTable', () => {
 
       // Expect the input box value to have changed
       expect(nameInput().prop('value')).to.equal('z');
-
-      DCDO.reset();
     });
 
     it('does not render a family name field in PL sections', async () => {
-      DCDO.reset();
-      DCDO.set('family-name-features', true);
-
       const plSection = {...fakeSection, participant_type: 'teacher'};
       getStore().dispatch(setSections([plSection]));
       const wrapper = mount(
@@ -345,34 +337,6 @@ describe('ManageStudentsTable', () => {
 
       // Check for a family name cell with expecting initial editing props
       expect(manageStudentFamilyNameCell().exists()).to.be.false;
-
-      DCDO.reset();
-    });
-
-    it('does not render a family name field when flag is false', async () => {
-      DCDO.reset();
-      DCDO.set('family-name-features', false);
-
-      const wrapper = mount(
-        <Provider store={getStore()}>
-          <ManageStudentsTable />
-        </Provider>
-      );
-      // Begin editing the student
-      // (Using redux directly to do this requires us to trigger a manual update)
-      getStore().dispatch(startEditingStudent(fakeStudent.id));
-      wrapper.update();
-
-      const manageStudentFamilyNameCell = () =>
-        wrapper
-          .find(ManageStudentFamilyNameCell)
-          .findWhere(w => w.prop('id') === fakeStudent.id)
-          .first();
-
-      // Check for a family name cell with expecting initial editing props
-      expect(manageStudentFamilyNameCell().exists()).to.be.false;
-
-      DCDO.reset();
     });
 
     it('renders correctly if loginType is picture', () => {

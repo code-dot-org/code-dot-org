@@ -266,14 +266,14 @@ module RakeUtils
   end
 
   # Uploads local file to S3, leaving a .fetch file pointing to it at the given path, and removes original file
-  def self.replace_file_with_s3_backed_fetch_file(local_file, destination_local_path, params={})
+  def self.replace_file_with_s3_backed_fetch_file(local_file, destination_local_path, params = {})
     new_fetchable_url = upload_file_to_s3_bucket_and_create_fetch_file(local_file, destination_local_path, params)
     FileUtils.remove_file(local_file)
     new_fetchable_url
   end
 
   # Uploads local file to S3, leaving a corresponding .fetch file pointing to the remote copy
-  def self.upload_file_to_s3_bucket_and_create_fetch_file(local_file, destination_local_path, params={})
+  def self.upload_file_to_s3_bucket_and_create_fetch_file(local_file, destination_local_path, params = {})
     raise 'Need to specify bucket' unless params[:bucket]
 
     s3_filename = AWS::S3.upload_to_bucket(params[:bucket], File.basename(local_file), File.open(local_file), acl: 'public-read')
@@ -350,7 +350,7 @@ module RakeUtils
     end
   end
 
-  def self.threaded_each(array, thread_count=2)
+  def self.threaded_each(array, thread_count = 2)
     # NOTE: Queue is used here because it is threadsafe - it is the ONLY threadsafe datatype in base ruby!
     #   Without Queue, the array would need to be protected using a Mutex.
     queue = Queue.new.tap do |q|

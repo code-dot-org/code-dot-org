@@ -11,7 +11,7 @@ class ChatClient
   @@name = CDO.name[0..14]
   @@logger = nil
 
-  def self.log(message, options={})
+  def self.log(message, options = {})
     if ENV['CI']
       CDO.log.info("[#{CDO.slack_log_room}] #{message}")
     else
@@ -25,7 +25,7 @@ class ChatClient
   # @param options [Hash] An optional hash of options.
   #   color (optional): The color the message should be posted.
   # @return [Boolean] Whether the message was posted successfully.
-  def self.message(room, message, options={})
+  def self.message(room, message, options = {})
     unless @@logger
       FileUtils.mkdir_p(deploy_dir('log'))
       @@logger = Logger.new(deploy_dir('log', 'chat_messages.log'))

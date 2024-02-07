@@ -38,3 +38,8 @@ export const Clever = Template.bind({});
 Clever.args = {
   loginType: SectionLoginType.clever,
 };
+
+export const LTI = Template.bind({});
+LTI.args = {
+  loginType: SectionLoginType.lti_v1,
+};

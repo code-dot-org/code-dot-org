@@ -13,7 +13,7 @@ theme: responsive_full_width
         =hoc_s(:curriculum_name_csp)
       %p{style: "color: white"}
         =hoc_s(:csp_page_top_desc)
-      %a.link-button{href: CDO.studio_url("/courses/csp-2023?viewAs=Instructor")}
+      %a.link-button.white{href: CDO.studio_url("/courses/csp?viewAs=Instructor")}
         =hoc_s(:call_to_action_explore_course)
     %figure
       %img{src: "/images/banners/banner-csp-phone-icon.png", alt: ""}
@@ -30,9 +30,11 @@ theme: responsive_full_width
         %li=hoc_s(:csp_page_intro_list_02)
         %li=hoc_s(:csp_page_intro_list_03)
         %li=hoc_s(:csp_page_intro_list_04)
-      %a.link-button{href: CDO.studio_url("/courses/csp-2023?viewAs=Instructor")}
+      %a.link-button{href: CDO.studio_url("/courses/csp?viewAs=Instructor")}
         =hoc_s(:call_to_action_explore_course)
     .clear
+
+= view :professional_learning_skinny_banner
 
 %section.bg-neutral-light
   .wrapper
@@ -55,11 +57,11 @@ theme: responsive_full_width
 
 %section.bg-neutral-light
   .wrapper
-    = view :resources_tabs
+    = view :"tabs_section/resources/resources_tabs", resources_heading: hoc_s(:resources_tabs_heading), resources_desc: hoc_s(:resources_tabs_desc, markdown: :inline, locals: {sign_up_url: CDO.studio_url("/users/sign_up")})
 
 %section
   .wrapper
-    = view :curriculum_pages_pl_section, facilitator_desc: hoc_s(:professional_learning_section_block_facilitator_led_workshops), apply_url: "/apply", modules_url: CDO.studio_url("/courses/self-paced-pl-csp-2023")
+    = view :curriculum_pages_pl_section, facilitator_desc: hoc_s(:professional_learning_section_block_facilitator_led_workshops), apply_url: "/apply", modules_url: CDO.studio_url("/courses/self-paced-pl-csp")
 
 = view :section_divider_line
 
@@ -71,5 +73,9 @@ theme: responsive_full_width
 %section
   .wrapper
     = view :support_and_questions_section
+
+%section#csp-newsletter-signup{style: "padding-top: 2rem"}
+  .wrapper
+    = view :subscribe_form, subscribe_form_section_title: hoc_s(:subscribe_form_section_title), subscribe_form_section_desc: hoc_s(:subscribe_form_section_desc_csp), form_height: "375px", form_src: "http://go.pardot.com/l/153401/2017-08-24/jjjm14"
 
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::CSP_CURRICULUM_PAGE_VISITED_EVENT

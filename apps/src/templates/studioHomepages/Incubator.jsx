@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import HeaderBanner from '../HeaderBanner';
 import {TwoColumnActionBlock} from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
+import Button from '@cdo/apps/templates/Button';
 
 class Incubator extends Component {
   render() {
@@ -11,7 +12,7 @@ class Incubator extends Component {
           subHeadingText="Try something new"
           backgroundUrl="/shared/images/banners/banner-incubator.png"
           imageUrl="/shared/images/banners/banner-incubator-image.png"
-          short={true}
+          imgStyling={{maxHeight: '160px'}}
         />
         <div className="main" style={{maxWidth: 970, margin: '0 auto'}}>
           <div style={{margin: '40px 0'}}>
@@ -43,8 +44,13 @@ class Incubator extends Component {
             }
             buttons={[
               {
+                url: '/s/music-intro-2024/reset',
+                text: 'Get started',
+              },
+              {
                 url: '/projectbeats',
-                text: 'Try it out!',
+                text: 'Skip to project',
+                color: Button.ButtonColor.neutralDark,
               },
             ]}
           />

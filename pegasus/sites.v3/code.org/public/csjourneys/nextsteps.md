@@ -26,7 +26,7 @@ social:
 </ul>
 </div>
 
-<div class="col-25" style="border:1px solid #00adbc; text-align:center; margin-top:25px; padding:15px; padding-left:15px; padding-right:15px; overflow: hidden; position: relative; border-radius:15px">
+<div class="col-25" style="border:1px solid var(--brand_primary_default); text-align:center; margin-top:25px; padding:15px; padding-left:15px; padding-right:15px; overflow: hidden; position: relative; border-radius:15px">
   <h3 style="margin-top:12px"><strong>Presented by:</strong></h3>
   <br>
   <img src="/images/logo.svg" style="width: 35%" alt="Code.org logo">
@@ -41,10 +41,10 @@ social:
 <div style="clear: both; margin-bottom:35px"></div>
 
 <a id="event-1"></a>
-<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
-  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Your questions about CS careers, answered!</h2>
+<div class="col-100" style="padding:25px; background-color: var(--brand_primary_default); border-radius:15px 15px 0 0">
+  <h2 style="margin-top:0; margin-bottom:0; color:#ffffff">Your questions about CS careers, answered!</h2>
 </div>
-<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<div class="col-100" style="padding:25px; border: 1px solid var(--brand_primary_default); border-radius:0 0 15px 15px; border-top:none">
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
   <p>In this FAQ session, computer science professionals and students answer some of the most common questions that students ask about computer science, including what career options are available, and what to expect in college.</p>
   <a href="https://code.zoom.us/rec/play/dLwAp7jG2lxKm2TFtunQNXaePZdP7jFuA8Xgp_5KVlEv240HeNz13TZ2A4XRt7j5zKgXCnbAA7GFg7cb.XIYTWIhx90B5Mjzy" target="_blank"><button style="margin-bottom:20px">View the recording</button></a>
@@ -75,7 +75,7 @@ social:
   </div>
   <div style="clear: both"></div>
 <br>
-  <div class="col-50" style="margin-bottom:10px; background-color: #7665a0; border-radius:25px; padding:25px; border:10px solid white">
+  <div class="col-50" style="margin-bottom:10px; background-color: var(--brand_secondary_default); border-radius:25px; padding:25px; border:10px solid white">
     <h3 style="color:#ffffff; margin-top:0">Before you watch:</h3>
     <ul style="color:#ffffff; margin-bottom:0">
         <li style="color:#ffffff">Give students time in class to <a href="https://code.org/careers-with-cs" target="_blank" style="color:#ffffff">explore career pathways</a> and encourage them to write down questions they have.</li><br>
@@ -96,10 +96,10 @@ social:
 <div style="clear:both; margin-bottom:35px"></div>
 
 <a id="event-2"></a>
-<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
-  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">College Project Showcase</h2>
+<div class="col-100" style="padding:25px; background-color: var(--brand_primary_default); border-radius:15px 15px 0 0">
+  <h2 style="margin-top:0; margin-bottom:0; color:#ffffff">College Project Showcase</h2>
 </div>
-<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<div class="col-100" style="padding:25px; border: 1px solid var(--brand_primary_default); border-radius:0 0 15px 15px; border-top:none">
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
   <p>College students showcase research and projects that computer science contributes to across multiple disciplines. Students will hear about opportunities they’ll have at the next level, and see how computer science plays a role in a variety of academic pathways they may want to pursue.</p>
   <a href="https://code.zoom.us/rec/play/XfZg54bXBlEGkJnHjdwN-3hQrpFX41qzwvZMC3RX4Rvlb3c4ut9mY1YbIabkwUSwL_pxEyTtKw0YGX0.0XGsrzep-oa-QCv_" target="_blank"><button style="margin-bottom:20px">View the recording</button></a>
@@ -138,7 +138,7 @@ social:
   </div>
   <div style="clear: both"></div>
 <br>
-<div class="col-50" style="margin-bottom:10px; background-color: #7665a0; border-radius:25px; padding:25px; border:10px solid white">
+<div class="col-50" style="margin-bottom:10px; background-color: var(--brand_secondary_default); border-radius:25px; padding:25px; border:10px solid white">
     <h3 style="color:#ffffff; margin-top:0">Before you watch:</h3>
     <ul style="color:#ffffff; margin-bottom:0">
         <li style="color:#ffffff">Have students think of which careers/majors they are interested in and write them down. If there’s time, encourage them to do a little research into that major or career.</li><br>
@@ -160,10 +160,10 @@ social:
 <div style="clear:both; margin-bottom:35px"></div>
 
 <a id="event-3"></a>
-<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
-  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Alternatives to the 4-year college degree</h2>
+<div class="col-100" style="padding:25px; background-color: var(--brand_primary_default); border-radius:15px 15px 0 0">
+  <h2 style="margin-top:0; margin-bottom:0; color:#ffffff">Alternatives to the 4-year college degree</h2>
 </div>
-<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<div class="col-100" style="padding:25px; border: 1px solid var(--brand_primary_default); border-radius:0 0 15px 15px; border-top:none">
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
   <p>Students learn about key alternatives to the four-year college degree and steps they can take to explore these alternatives, including community college and apprenticeships.</p>
   <a href="https://code.zoom.us/rec/play/3LinsRk-G4SzCc9upMTn3LwxAMs3qnJfwmovSA1VP9I91pS6sV5YfzDsbMtKEuCVg9YHLfecyISw4sNq.sqU0J6LHIM3GBPXR" target="_blank"><button style="margin-bottom:20px">View the recording</button></a>
@@ -180,7 +180,7 @@ social:
     <img src="/images/csjourneys/vikram-sreedhar.png" style="border-radius:50%; width:55%" alt="Vikram Sreedhar">
     <p style="margin-top:10px"><strong>Vikram Sreedhar</strong>
     <br>
-    Co-Founder/Chief Technology Officer 
+    Co-Founder/Chief Technology Officer
     <br>
     <a href="https://shimmer.care/" target="_blank">shimmer</a></p>
   </div>
@@ -188,13 +188,13 @@ social:
     <img src="/images/csjourneys/johnny-tyson.png" style="border-radius:50%; width:55%" alt="Johnny Tyson III">
     <p style="margin-top:10px"><strong>Johnny Tyson III</strong>
     <br>
-    Thrive Apprentice 
+    Thrive Apprentice
     <br>
     <a href="https://www.verizon.com/" target="_blank">Verizon</a></p>
   </div>
   <div style="clear: both"></div>
 <br>
-  <div class="col-50" style="margin-bottom:10px; background-color: #7665a0; border-radius:25px; padding:25px; border:10px solid white">
+  <div class="col-50" style="margin-bottom:10px; background-color: var(--brand_secondary_default); border-radius:25px; padding:25px; border:10px solid white">
     <h3 style="color:#ffffff; margin-top:0">Before you watch:</h3>
     <ul style="color:#ffffff; margin-bottom:0">
         <li style="color:#ffffff">Give students time in class to generate a list of goals for their future. These could be career goals (become an engineer, start a company), and/or personal goals (start a family, buy a house). The more specific their goals, the better.</li><br>
@@ -218,10 +218,10 @@ social:
 <div style="clear:both; margin-bottom:35px"></div>
 
 <a id="event-4"></a>
-<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
-  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Making connections and building support networks</h2>
+<div class="col-100" style="padding:25px; background-color: var(--brand_primary_default); border-radius:15px 15px 0 0">
+  <h2 style="margin-top:0; margin-bottom:0; color:#ffffff">Making connections and building support networks</h2>
 </div>
-<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<div class="col-100" style="padding:25px; border: 1px solid var(--brand_primary_default); border-radius:0 0 15px 15px; border-top:none">
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
   <p>Students learn about the importance of support networks to their career journey, and about steps to take to start building their own network of intentional connections, including finding a mentor, participating in extracurricular activities, and plugging in with affinity groups and/or professional networks.</p>
   <a href="https://code.zoom.us/rec/play/cIS5zalDnM3RTrvHWYcYIYXCzqr44xdBK5B5WSDysJZKtE61ZFQ1nlGYFD_pWSxy9W7wj_-ugwCDrphN.UeOZUUWcMljYajSC" target="_blank"><button style="margin-bottom:20px">View the recording</button></a>
@@ -230,7 +230,7 @@ social:
     <img src="/images/csjourneys/kyle-ali.jpg" style="border-radius:50%; width:55%" alt="Kyle Ali">
     <p style="margin-top:10px"><strong>Kyle Ali</strong>
     <br>
-    Head of Pre-College Programs 
+    Head of Pre-College Programs
     <br>
     <a href="https://edu.google.com/code-with-google/" target="_blank">Google</a></p>
   </div>
@@ -238,7 +238,7 @@ social:
     <img src="/images/csjourneys/andrea-olson.jpg" style="border-radius:50%; width:55%" alt="Andrea Delgado-Olson">
     <p style="margin-top:10px"><strong>Andrea Delgado-Olson</strong>
     <br>
-    Executive Director 
+    Executive Director
     <br>
     <a href="https://nativesintech.org/" target="_blank">Natives in Tech</a></p>
   </div>
@@ -254,13 +254,13 @@ social:
     <img src="/images/csjourneys/kia-huggan.jpg" style="border-radius:50%; width:55%" alt="Kianjai Huggan">
     <p style="margin-top:10px"><strong>Kianjai Huggan</strong>
     <br>
-    Curriculum Coordinator 
+    Curriculum Coordinator
     <br>
     <a href="https://www.blackgirlscode.com/" target="_blank">Black Girls CODE</a></p>
   </div>
   <div style="clear: both"></div>
 <br>
-  <div class="col-50" style="margin-bottom:10px; background-color: #7665a0; border-radius:25px; padding:25px; border:10px solid white">
+  <div class="col-50" style="margin-bottom:10px; background-color: var(--brand_secondary_default); border-radius:25px; padding:25px; border:10px solid white">
     <h3 style="color:#ffffff; margin-top:0">Before you watch:</h3>
     <ul style="color:#ffffff; margin-bottom:0">
         <li style="color:#ffffff">Have students read through the responses to the question posed by another student on CareerVillage.org, “<a href="https://www.careervillage.org/questions/459689/is-it-possible-to-get-a-good-job-in-computer-science-without-a-strong-network" target="_blank" style="color:#ffffff">Is it possible to get a good job in Computer Science without a strong network?</a>” Have them write down some of the key answers that strike them, and then discuss as a class. If there’s time, give students an opportunity to explore more questions about networking on CareerVillage.org.</li><br>

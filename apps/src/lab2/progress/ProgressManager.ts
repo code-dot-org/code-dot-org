@@ -14,14 +14,18 @@ export abstract class Validator {
 
 // The current progress validation state.
 export interface ValidationState {
+  hasConditions: boolean;
   satisfied: boolean;
   message: string | null;
+  index: number;
 }
 
-export const initialValidationState: ValidationState = {
+export const getInitialValidationState: () => ValidationState = () => ({
+  hasConditions: false,
   satisfied: false,
   message: null,
-};
+  index: 0,
+});
 
 export default class ProgressManager {
   private levelData: ProjectLevelData | undefined;
@@ -32,14 +36,14 @@ export default class ProgressManager {
   constructor(onProgressChange: () => void) {
     this.levelData = undefined;
     this.onProgressChange = onProgressChange;
-    this.currentValidationState = initialValidationState;
+    this.currentValidationState = getInitialValidationState();
   }
 
   /**
    * Update the ProgressManager with level data for a new level.
    * Resets validation status internally.
    */
-  onLevelChange(levelData: ProjectLevelData) {
+  onLevelChange(levelData?: ProjectLevelData) {
     this.levelData = levelData;
     this.resetValidation();
   }
@@ -92,14 +96,26 @@ export default class ProgressManager {
     this.onProgressChange();
   }
 
-  private resetValidation() {
+  resetValidation() {
     if (this.validator) {
       // Give the lab the chance to clear accumulated satisfied conditions.
       this.validator.clear();
     }
 
-    this.currentValidationState.satisfied = false;
-    this.currentValidationState.message = null;
+    const hasConditions =
+      (this.levelData?.validations && this.levelData.validations.length > 0) ||
+      false;
+
+    this.currentValidationState = {
+      hasConditions,
+      satisfied: false,
+      message: null,
+      // Ensure that the validation feedback UI is rendered fresh.  This index is
+      // used as part of the key for that React component; having a unique value
+      // ensures that the UI is rendered fresh, and any apperance animation is
+      // played again, even if it's the same message as last time.
+      index: this.currentValidationState.index + 1,
+    };
 
     this.onProgressChange();
   }

@@ -2,7 +2,7 @@ Feature: Applab Project
 
 # as_student to actually perform sign-in/out before/after scenario
 # no_mobile because we don't end up with open-workspace on mobile
-@as_student
+@as_taught_student
 @no_mobile
 Scenario: Applab Flow
   Given I am on "http://studio.code.org/projects/applab"

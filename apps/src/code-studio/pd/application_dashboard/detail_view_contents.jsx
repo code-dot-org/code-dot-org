@@ -15,13 +15,14 @@ import {
 /* eslint-enable no-restricted-imports */
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import $ from 'jquery';
+import fontConstants from '@cdo/apps/fontConstants';
 import {
   RegionalPartnerDropdown,
   UNMATCHED_PARTNER_VALUE,
   UNMATCHED_PARTNER_LABEL,
 } from '../components/regional_partner_dropdown';
 import ConfirmationDialog from '../components/confirmation_dialog';
-import {ScholarshipDropdown} from '../components/scholarshipDropdown';
+import ScholarshipDropdown from '../components/scholarshipDropdown';
 import {
   LabelOverrides as TeacherLabelOverrides,
   PageLabels as TeacherPageLabelsOverrides,
@@ -817,6 +818,14 @@ export class DetailViewContents extends React.Component {
               ] || NA}
             </p>
           )}
+          {this.multiAnswerQuestionFields[key]['census'] && (
+            <p>
+              Data from Census:{' '}
+              {this.props.applicationData.school_stats[
+                this.multiAnswerQuestionFields[key]['census']
+              ] || NA}
+            </p>
+          )}
         </div>
       );
     } else {
@@ -1032,7 +1041,7 @@ const styles = {
     width: 'auto',
   },
   lockedStatus: {
-    fontFamily: '"Gotham 7r"',
+    ...fontConstants['main-font-bold'],
     marginTop: 10,
   },
   caption: {

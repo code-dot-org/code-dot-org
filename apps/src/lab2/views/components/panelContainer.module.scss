@@ -9,31 +9,40 @@ $default-spacing: 2px;
   display: flex;
   flex-direction: column;
   position: relative;
+}
 
-  .panelContainerHeader {
-    min-height: 30px;
-    background-color: $neutral_dark80;
-    border-bottom: solid $default-spacing $dark_black;
-    position: relative;
+%panel-container-header {
+  min-height: 30px;
+  margin-bottom: $default-spacing;
+  position: relative;
+}
 
-    .panelContainerHeaderItem {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
+.panelContainerHeader-dark {
+  @extend %panel-container-header;
+  background-color: $neutral_dark80;
+}
 
-      &Text {
-        color: $neutral_light;
-        width: 100%;
-        text-align: center;
-      }
+.panelContainerHeader-light {
+  @extend %panel-container-header;
+  background-color: $neutral_dark;
+}
 
-      &Right {
-        right: 4px;
-      }
+.panelContainerHeaderItem {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 
-      &Left {
-        left: 4px;
-      }
-    }
+  &Text {
+    color: $neutral_light;
+    width: 100%;
+    text-align: center;
+  }
+
+  &Right {
+    right: 4px;
+  }
+
+  &Left {
+    left: 4px;
   }
 }

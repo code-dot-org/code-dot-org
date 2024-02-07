@@ -1,16 +1,27 @@
 require_relative '../../../test_helper'
 require_relative '../../../../i18n/resources/apps/animations'
 
-class I18n::Resources::Apps::AnimationsTest < Minitest::Test
-  def test_sync_in
-    exec_seq = sequence('execution')
+describe I18n::Resources::Apps::Animations do
+  let(:described_class) {I18n::Resources::Apps::Animations}
 
-    manifest_builder = mock(get_animation_strings: {test: 'example'})
-    ManifestBuilder.stubs(new: manifest_builder).with({spritelab: true, quiet: true})
+  describe '.sync_in' do
+    it 'sync-in Animations resource' do
+      described_class::SyncIn.expects(:perform).once
+      described_class.sync_in
+    end
+  end
 
-    FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/animations')).in_sequence(exec_seq)
-    File.expects(:write).with(CDO.dir('i18n/locales/source/animations/spritelab_animation_library.json'), %Q[{\n  "test": "example"\n}]).in_sequence(exec_seq)
+  describe '.sync_up' do
+    it 'sync-up Animations resource' do
+      described_class::SyncUp.expects(:perform).once
+      described_class.sync_up
+    end
+  end
 
-    I18n::Resources::Apps::Animations.sync_in
+  describe '.sync_out' do
+    it 'sync-out Animations resource' do
+      described_class::SyncOut.expects(:perform).once
+      described_class.sync_out
+    end
   end
 end

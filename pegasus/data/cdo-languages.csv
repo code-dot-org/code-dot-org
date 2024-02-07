@@ -20,7 +20,7 @@ eu,eu,eu,eu-ES,Euskara,Basque,TRUE,FALSE,eu,Basque,FALSE,FALSE,FALSE,FALSE,FALSE
 fa-AF,af,fa,fa-AF,دريلو,Dari,FALSE,TRUE,fa-AF,Dari,FALSE,TRUE,FALSE,FALSE,FALSE
 fa-IR,fa,fa,fa-IR,فارسی,Persian,TRUE,TRUE,fa,Persian,FALSE,TRUE,FALSE,TRUE,FALSE
 fi,fi,fi,fi-FI,Suomi,Finnish,TRUE,FALSE,fi,Finnish,FALSE,FALSE,TRUE,FALSE,FALSE
-fil,ph,fil,fil-PH,Pilipino,Filipino,TRUE,TRUE,fil,Filipino,TRUE,TRUE,FALSE,TRUE,FALSE
+fil,ph,fil,fil-PH,Filipino,Filipino,TRUE,TRUE,fil,Filipino,TRUE,TRUE,FALSE,TRUE,FALSE
 fr,fr,fr,fr-FR,Français,French,TRUE,TRUE,fr,French,TRUE,FALSE,FALSE,FALSE,FALSE
 ga,ga,ga,ga-IE,Gaeilge,Irish,TRUE,FALSE,ga-IE,Irish,TRUE,TRUE,FALSE,TRUE,TRUE
 gl,gl,gl,gl-ES,Galego,Galician,TRUE,FALSE,gl,Galician,FALSE,FALSE,FALSE,FALSE,FALSE

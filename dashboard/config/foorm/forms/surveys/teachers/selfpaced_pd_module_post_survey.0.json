@@ -390,7 +390,7 @@
           "type": "matrix",
           "name": "supported_learning",
           "visibleIf": "{module} = 2 or {module} = 3",
-          "title": "Which of the following supported your learning the most? Rank the options from most helpful (5) to least helpful (1). ",
+          "title": "Which of the following supported your learning the most? Rank the options from most helpful (5) to least helpful (1).",
           "description": "Please apply each rank (1-5) exactly once; don't give the same ranking to two different items.",
           "columns": [
             {
@@ -411,7 +411,7 @@
             },
             {
               "value": "5",
-              "text": "5 "
+              "text": "5"
             }
           ],
           "rows": [

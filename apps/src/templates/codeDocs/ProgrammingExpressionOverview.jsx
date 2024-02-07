@@ -1,5 +1,3 @@
-// TODO: Fix all prop types for this file.
-/* eslint-disable react/prop-types */
 import React, {createRef, useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
@@ -40,7 +38,7 @@ export default function ProgrammingExpressionOverview({
       const blocksDom = parseElement(
         `<block type='${programmingExpression.blockName}' />`
       );
-      const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(
+      const blockSpace = Blockly.createEmbeddedWorkspace(
         titleRef.current,
         blocksDom,
         {
@@ -77,7 +75,11 @@ export default function ProgrammingExpressionOverview({
       );
     }
     if (programmingExpression.imageUrl) {
-      return <img src={programmingExpression.imageUrl} style={styles.image} />;
+      return (
+        // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+        // Verify or update this alt-text as necessary
+        <img src={programmingExpression.imageUrl} style={styles.image} alt="" />
+      );
     }
     return <h1>{programmingExpression.name}</h1>;
   };
@@ -193,6 +195,9 @@ const programmingExpressionShape = PropTypes.shape({
   tips: PropTypes.string,
   video: PropTypes.object,
   imageUrl: PropTypes.string,
+  blockName: PropTypes.string,
+  parameters: PropTypes.arrayOf(PropTypes.object),
+  examples: PropTypes.arrayOf(PropTypes.object),
 });
 
 ProgrammingExpressionOverview.propTypes = {

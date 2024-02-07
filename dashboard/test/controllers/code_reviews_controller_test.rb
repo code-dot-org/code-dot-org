@@ -47,10 +47,10 @@ class CodeReviewsControllerTest < ActionController::TestCase
     assert_response :success
 
     response_json = JSON.parse(response.body)
-    assert_not_nil response_json['id']
+    refute_nil response_json['id']
     assert_equal project_version, response_json['version']
     assert_equal true, response_json['isOpen']
-    assert_not_nil response_json['createdAt']
+    refute_nil response_json['createdAt']
   end
 
   test 'cannot create multiple open code reviews for the same project' do
@@ -95,7 +95,7 @@ class CodeReviewsControllerTest < ActionController::TestCase
 
   test 'update fails when trying to re-open a closed review' do
     code_review = create :code_review, user_id: @project_owner.id, closed_at: DateTime.now
-    assert_not code_review.open?
+    refute code_review.open?
 
     patch :update, params: {
       id: code_review.id,

@@ -203,7 +203,7 @@ class LibraryTable extends React.Component {
     return (
       <Button
         text={i18n.unpublish()}
-        color={Button.ButtonColor.orange}
+        color={Button.ButtonColor.brandSecondaryDefault}
         onClick={() => {
           this.setState({unpublishFailedChannel: null});
           this.props.unpublishProjectLibrary(rowData.channel, error => {

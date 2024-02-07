@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-02 00:14:01 UTC",
+    "serialized_at": "2023-10-13 22:16:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -70,7 +70,7 @@
       "key": "3032f2bd-f0e9-44d9-becc-3010308158a1",
       "position": 1,
       "properties": {
-        "progression_name": "Module 6 Overview (~5 minutes)"
+        "progression_name": "Opening"
       },
       "seeding_key": {
         "activity_section.key": "3032f2bd-f0e9-44d9-becc-3010308158a1",
@@ -81,7 +81,7 @@
       "key": "5ef5297b-1c4e-42b3-8e8a-98872bcfcf51",
       "position": 2,
       "properties": {
-        "progression_name": "Strings in Unit 6 (~50 minutes)"
+        "progression_name": "NLP Content"
       },
       "seeding_key": {
         "activity_section.key": "5ef5297b-1c4e-42b3-8e8a-98872bcfcf51",
@@ -92,7 +92,7 @@
       "key": "a32052e4-b51a-4e56-b480-6d62bb05d2c2",
       "position": 3,
       "properties": {
-        "progression_name": "Wrap-up (~5 minutes)"
+        "progression_name": "Closing"
       },
       "seeding_key": {
         "activity_section.key": "a32052e4-b51a-4e56-b480-6d62bb05d2c2",
@@ -107,7 +107,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Module 6 Overview (~5 minutes)"
+        "level_keys": [
+          "vpl-csa-module-6-overview_2023"
+        ],
+        "progression": "Opening"
       },
       "bonus": false,
       "seeding_key": {
@@ -126,10 +129,10 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Strings in Unit 6 (~50 minutes)"
+        "progression": "Opening"
       },
       "bonus": false,
       "seeding_key": {
@@ -139,7 +142,7 @@
         "lesson.key": "Module 6 post-work: String methods in Unit 6",
         "lesson_group.key": "",
         "script.name": "vpl-csa-2023-m6",
-        "activity_section.key": "5ef5297b-1c4e-42b3-8e8a-98872bcfcf51"
+        "activity_section.key": "3032f2bd-f0e9-44d9-becc-3010308158a1"
       },
       "level_keys": [
         "vpl-csa-module-6-2022-ap-subset_2023"
@@ -148,15 +151,15 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Strings in Unit 6 (~50 minutes)"
+        "progression": "NLP Content"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "vpl-csa-module-6-2022-u6l7-level1-clone_2023"
+          "CSA vpl_m6_U6L9-L1_2023"
         ],
         "lesson.key": "Module 6 post-work: String methods in Unit 6",
         "lesson_group.key": "",
@@ -164,21 +167,21 @@
         "activity_section.key": "5ef5297b-1c4e-42b3-8e8a-98872bcfcf51"
       },
       "level_keys": [
-        "vpl-csa-module-6-2022-u6l7-level1-clone_2023"
+        "CSA vpl_m6_U6L9-L1_2023"
       ]
     },
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Strings in Unit 6 (~50 minutes)"
+        "progression": "NLP Content"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "vpl-csa-module-6-2022-notice-wonder-reflection_2023"
+          "vpl-csa-M6-NLP1_2023"
         ],
         "lesson.key": "Module 6 post-work: String methods in Unit 6",
         "lesson_group.key": "",
@@ -186,21 +189,21 @@
         "activity_section.key": "5ef5297b-1c4e-42b3-8e8a-98872bcfcf51"
       },
       "level_keys": [
-        "vpl-csa-module-6-2022-notice-wonder-reflection_2023"
+        "vpl-csa-M6-NLP1_2023"
       ]
     },
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Strings in Unit 6 (~50 minutes)"
+        "progression": "NLP Content"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "vpl-csa-module-6-2022-substring-method-video_2023"
+          "CSA VPL_M6_U6L9-L2_2023"
         ],
         "lesson.key": "Module 6 post-work: String methods in Unit 6",
         "lesson_group.key": "",
@@ -208,21 +211,21 @@
         "activity_section.key": "5ef5297b-1c4e-42b3-8e8a-98872bcfcf51"
       },
       "level_keys": [
-        "vpl-csa-module-6-2022-substring-method-video_2023"
+        "CSA VPL_M6_U6L9-L2_2023"
       ]
     },
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Strings in Unit 6 (~50 minutes)"
+        "progression": "NLP Content"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "vpl-csa-module-6-2022-u6l8-level1-clone_2023"
+          "CSA VPL_M6_U6L9-L3_2023"
         ],
         "lesson.key": "Module 6 post-work: String methods in Unit 6",
         "lesson_group.key": "",
@@ -230,21 +233,21 @@
         "activity_section.key": "5ef5297b-1c4e-42b3-8e8a-98872bcfcf51"
       },
       "level_keys": [
-        "vpl-csa-module-6-2022-u6l8-level1-clone_2023"
+        "CSA VPL_M6_U6L9-L3_2023"
       ]
     },
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": 6,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Strings in Unit 6 (~50 minutes)"
+        "progression": "NLP Content"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "vpl-csa-module-6-2022-compareto-method-video_2023"
+          "CSA VPL_M6_U6L9-L4_2023"
         ],
         "lesson.key": "Module 6 post-work: String methods in Unit 6",
         "lesson_group.key": "",
@@ -252,38 +255,19 @@
         "activity_section.key": "5ef5297b-1c4e-42b3-8e8a-98872bcfcf51"
       },
       "level_keys": [
-        "vpl-csa-module-6-2022-compareto-method-video_2023"
+        "CSA VPL_M6_U6L9-L4_2023"
       ]
     },
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "progression": "Strings in Unit 6 (~50 minutes)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "vpl-csa-module-6-2022-notice-wonder-2-reflection_2023"
-        ],
-        "lesson.key": "Module 6 post-work: String methods in Unit 6",
-        "lesson_group.key": "",
-        "script.name": "vpl-csa-2023-m6",
-        "activity_section.key": "5ef5297b-1c4e-42b3-8e8a-98872bcfcf51"
-      },
-      "level_keys": [
-        "vpl-csa-module-6-2022-notice-wonder-2-reflection_2023"
-      ]
-    },
-    {
-      "chapter": 9,
-      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Wrap-up (~5 minutes)"
+        "level_keys": [
+          "vpl-csa-module-6-wrap-up_2023"
+        ],
+        "progression": "Closing"
       },
       "bonus": false,
       "seeding_key": {
@@ -322,14 +306,14 @@
         "lesson.key": "Module 6 post-work: String methods in Unit 6",
         "lesson_group.key": "",
         "script.name": "vpl-csa-2023-m6",
-        "activity_section.key": "5ef5297b-1c4e-42b3-8e8a-98872bcfcf51"
+        "activity_section.key": "3032f2bd-f0e9-44d9-becc-3010308158a1"
       }
     },
     {
       "seeding_key": {
-        "level.key": "vpl-csa-module-6-2022-u6l7-level1-clone_2023",
+        "level.key": "CSA vpl_m6_U6L9-L1_2023",
         "script_level.level_keys": [
-          "vpl-csa-module-6-2022-u6l7-level1-clone_2023"
+          "CSA vpl_m6_U6L9-L1_2023"
         ],
         "lesson.key": "Module 6 post-work: String methods in Unit 6",
         "lesson_group.key": "",
@@ -339,9 +323,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "vpl-csa-module-6-2022-notice-wonder-reflection_2023",
+        "level.key": "vpl-csa-M6-NLP1_2023",
         "script_level.level_keys": [
-          "vpl-csa-module-6-2022-notice-wonder-reflection_2023"
+          "vpl-csa-M6-NLP1_2023"
         ],
         "lesson.key": "Module 6 post-work: String methods in Unit 6",
         "lesson_group.key": "",
@@ -351,9 +335,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "vpl-csa-module-6-2022-substring-method-video_2023",
+        "level.key": "CSA VPL_M6_U6L9-L2_2023",
         "script_level.level_keys": [
-          "vpl-csa-module-6-2022-substring-method-video_2023"
+          "CSA VPL_M6_U6L9-L2_2023"
         ],
         "lesson.key": "Module 6 post-work: String methods in Unit 6",
         "lesson_group.key": "",
@@ -363,9 +347,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "vpl-csa-module-6-2022-u6l8-level1-clone_2023",
+        "level.key": "CSA VPL_M6_U6L9-L3_2023",
         "script_level.level_keys": [
-          "vpl-csa-module-6-2022-u6l8-level1-clone_2023"
+          "CSA VPL_M6_U6L9-L3_2023"
         ],
         "lesson.key": "Module 6 post-work: String methods in Unit 6",
         "lesson_group.key": "",
@@ -375,21 +359,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "vpl-csa-module-6-2022-compareto-method-video_2023",
+        "level.key": "CSA VPL_M6_U6L9-L4_2023",
         "script_level.level_keys": [
-          "vpl-csa-module-6-2022-compareto-method-video_2023"
-        ],
-        "lesson.key": "Module 6 post-work: String methods in Unit 6",
-        "lesson_group.key": "",
-        "script.name": "vpl-csa-2023-m6",
-        "activity_section.key": "5ef5297b-1c4e-42b3-8e8a-98872bcfcf51"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "vpl-csa-module-6-2022-notice-wonder-2-reflection_2023",
-        "script_level.level_keys": [
-          "vpl-csa-module-6-2022-notice-wonder-2-reflection_2023"
+          "CSA VPL_M6_U6L9-L4_2023"
         ],
         "lesson.key": "Module 6 post-work: String methods in Unit 6",
         "lesson_group.key": "",

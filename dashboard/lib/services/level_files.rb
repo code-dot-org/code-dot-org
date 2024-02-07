@@ -9,9 +9,10 @@ module Services
       # this level and are ready for that file to be updated.
       return unless Policies::LevelFiles.write_to_file?(level) && level.published
 
-      file_path = Policies::LevelFiles.level_file_path(level.name)
+      file_path = Policies::LevelFiles.level_file_path(level)
+      FileUtils.mkdir_p(File.dirname(file_path))
       File.write(file_path, level.to_xml)
-      file_path
+      return file_path
     end
 
     # Deletes the corresponding .level file for a given level
@@ -19,11 +20,9 @@ module Services
     # @param [Level]
     def self.delete_custom_level_file(level)
       # Don't update the file system unless we expect to have a file for this level.
-      return unless Policies::LevelFiles.write_to_file?(level)
-
-      # TODO: not sure why this isn't using level_file_path
-      file_path = Dir.glob(Rails.root.join("config/scripts/**/#{level.name}.level")).first
-      File.delete(file_path) if file_path && File.exist?(file_path)
+      if Policies::LevelFiles.write_to_file?(level)
+        FileUtils.rm_f(Policies::LevelFiles.level_file_path(level))
+      end
     end
 
     # Loads an individual .level file from disk into memory, using the existing

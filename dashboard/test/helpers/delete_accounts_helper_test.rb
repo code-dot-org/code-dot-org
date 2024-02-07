@@ -1,7 +1,9 @@
 require 'test_helper'
 require 'testing/projects_test_utils'
 require 'cdo/delete_accounts_helper'
+# rubocop:disable CustomCops/PegasusRequires
 require_relative '../../../pegasus/test/fixtures/mock_pegasus'
+# rubocop:enable CustomCops/PegasusRequires
 
 #
 # This test is the comprehensive spec on the desired behavior when purging a
@@ -17,7 +19,7 @@ require_relative '../../../pegasus/test/fixtures/mock_pegasus'
 # Getting this right is important for compliance with various privacy
 # regulations around the globe, so changes to this behavior should be carefully
 # reviewed by the product team.
-#
+# rubocop:disable CustomCops/PegasusDbUsage
 class DeleteAccountsHelperTest < ActionView::TestCase
   include ProjectsTestUtils
 
@@ -617,6 +619,19 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
   end
 
+  test "removes lti user identities rows" do
+    lti_user_identity = create :lti_user_identity
+    user = lti_user_identity.user
+
+    assert_equal 1, user.lti_user_identities.with_deleted.count,
+    'Expected user to have one lti user identities'
+
+    purge_user user
+
+    assert_equal 0, user.lti_user_identities.with_deleted.count,
+      'Expected user to have no lti user identities'
+  end
+
   #
   # Table: dashboard.authored_hint_view_requests
   #
@@ -727,52 +742,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     Census::CensusSubmission.expects(:where).never
 
     purge_user student
-  end
-
-  #
-  # Table: dashboard.circuit_playground_discount_applications
-  #
-
-  test 'anonymizes signature on circuit_playground_discount_application' do
-    application = create :circuit_playground_discount_application, signature: 'Will Halloway'
-    user = application.user
-
-    assert_equal 'Will Halloway', application.signature
-
-    purge_user user
-    application.reload
-
-    assert_equal '(anonymized signature)', application.signature
-
-    assert_logged "Anonymized 1 CircuitPlaygroundDiscountApplication"
-  end
-
-  test 'leaves blank signature blank on circuit_playground_discount_application' do
-    application = create :circuit_playground_discount_application
-    user = application.user
-
-    assert_nil application.signature
-
-    purge_user user
-    application.reload
-
-    assert_nil application.signature
-
-    assert_logged "Anonymized 1 CircuitPlaygroundDiscountApplication"
-  end
-
-  test 'removes school id from circuit_playground_discount_application' do
-    application = create :circuit_playground_discount_application, school_id: create(:school).id
-    user = application.user
-
-    refute_nil application.school_id
-
-    purge_user user
-    application.reload
-
-    assert_nil application.school_id
-
-    assert_logged "Anonymized 1 CircuitPlaygroundDiscountApplication"
   end
 
   #
@@ -1222,22 +1191,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # Table: dashboard.pd_workshop_surveys
-  # Associated via enrollment
-  #
-
-  test "clears form_data from pd_workshop_surveys" do
-    enrollment = create :pd_enrollment, :from_user
-    survey = create :pd_workshop_survey, pd_enrollment: enrollment
-    refute_equal '{}', survey.form_data
-
-    purge_user survey.pd_enrollment.user
-
-    survey.reload
-    assert_equal '{}', survey.form_data
-  end
-
-  #
   # Table dashboard.peer_reviews
   # Could delete submitter or viewer
   #
@@ -1557,11 +1510,11 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       form_ids = PEGASUS_DB[:forms].where(email: email).map {|f| f[:id]}
 
       refute_empty PEGASUS_DB[:forms].where(id: form_ids)
-      assert PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+      assert(PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?})
 
       purge_all_accounts_with_email email
 
-      refute PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+      refute(PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?})
     end
   end
 
@@ -1571,11 +1524,11 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       form_ids = PEGASUS_DB[:forms].where(user_id: user.id).map {|f| f[:id]}
 
       refute_empty PEGASUS_DB[:forms].where(id: form_ids)
-      assert PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+      assert(PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?})
 
       purge_user user
 
-      refute PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+      refute(PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?})
     end
   end
 
@@ -2354,3 +2307,4 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
   end
 end
+# rubocop:enable CustomCops/PegasusDbUsage

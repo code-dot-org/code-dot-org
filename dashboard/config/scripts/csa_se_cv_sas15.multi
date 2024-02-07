@@ -1,0 +1,11 @@
+name 'CSA-SE-CV-SAS15'
+
+question 'Using AI code-generating tools made certain programming concepts easier for me to understand.'
+
+right 'Strongly Agree'
+right 'Agree'
+right 'Neutral'
+right 'Disagree'
+right 'Strongly Disagree'
+
+allow_multiple_attempts true

@@ -1,60 +1,60 @@
 ---
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
+title: Kompüter Elmləri Təhsili Həftəsi və Kod Saatı Dəstəkləyən Nümunə Qətnamə
 layout: wide
 nav: promote_nav
 ---
 
 {{ signup_button }}
 
-# Sample Computer Science Education Week resolution
+# Nümunə Kompüter Elmləri Təhsili Həftəsi
 
-### Below is language for a sample resolution supportive of Computer Science Education Week and its goals that can be used by state and local legislators.
+### Aşağıda Kompüter Elmləri Təhsili Həftəsini və əyalət və yerli qanunvericilər tərəfindən istifadə edilə bilən məqsədlərini dəstəkləyən nümunə qətnamə üçün dil verilmişdir.
 
 * * *
 
-#### **RESOLUTION**  
+#### **QƏTNAMƏ**  
 
 
-#### Supporting the goals and ideals of "Computer Science Education Week"
+#### “Kompüter elmləri təhsili həftəsi” nin məqsəd və ideallarının dəstəklənməsi
 
-Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+Kompüter Elmləri Təhsil Həftəsi kompüter elminin cəmiyyətimizin dəyişdirilməsində oynadığı mühüm rolu və kompüter elminin innovasiyaya necə imkan verdiyini və iqtisadi imkanlar yaratdığını vurğulayır;
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+Halbuki hesablama texnologiyası müasir mədəniyyətin ayrılmaz hissəsidir və insanların bir-biri ilə və ətrafdakı dünya ilə qarşılıqlı münasibətlərini dəyişdirir;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+Kompüter elmləri sənayeni dəyişdirir, yeni ticarət sahələri yaradır, elmin bütün sahələrində innovasiyalara təkan verir və qurulmuş iqtisadi sahələrdə məhsuldarlığı artırır;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+Kompüter elmləri sahəsi ABŞ-ın iqtisadi istehsalına əhəmiyyətli töhfə verən iqtisadiyyatımızın informasiya texnologiyaları sektorunun əsasını təşkil edən təməl bir mövzu olduğu halda;
 
-Whereas the field of computer science is a foundational science for the digital age;
+Süni intellektin savadlılığı süni intellektin necə işlədiyi ilə bağlı bilik, bacarıq və münasibətlərə, o cümlədən kompüter elmində fundamental anlayışlara və süni intellektin təhlükəsiz, məsuliyyətli və etik cəhətdən necə istifadə edilməsinə aiddir;
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+Süni intellekt də daxil olmaqla kompüter elmləri sahəsi ABŞ iqtisadiyyatının demək olar ki, bütün sahələrini əsaslı şəkildə dəyişdirmək gücünə malik texnologiyalardır;
 
-Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
+Süni intellekt də daxil olmaqla kompüter elminin bütün sahələrində texnoloji liderlik iqtisadi və milli təhlükəsizlik zəruridir;
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+Kompüter elmləri işlərinin dünyagörüşü ölkə daxilində 500.000-dən çox açıq hesablama mövqeyi ilə parlaqdır;
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+Halbuki tələbələrə yüksək keyfiyyətli kompüter elmləri fəaliyyətlərində iştirak etmək imkanı vermək onları sahənin təklif etdiyi zəngin imkanlara məruz qoyur və həyatları boyu onlara xidmət edəcək tənqidi düşünmə bacarıqlarını təmin edir;
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+Bütün tələbələr kompüter elmləri təhsili üzrə hərtərəfli hazırlığa layiqdirlər, o cümlədən ixtisaslı müəllimlərə çıxış, texnologiya və təhsilin ibtidai və orta səviyyələrində kompüter elmlərini öyrənmək üçün lazım olan yaşa uyğun tədris proqramı;
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+Kompüter elmləri təhsili bütün tələbələr üçün kompüter elmləri kurslarına çıxışın yaxşılaşdırılması və kompüter elmləri müəllimləri üçün peşəkar inkişafın təmin edilməsi də daxil olmaqla həll edilməli problemlərə malikdir;
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+Kompüter Elmləri Təhsili Həftəsi ərzində bir Saat Kodunda iştirak etmək kompüter elmləri sahəsini demystifikasiya etməyə və daha çox tələbəni kompüter elmləri üzrə daha çox öyrənməyə təşviq etməyə xidmət edə bilər;
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+Kompüter elmləri sahəsinin bütün səviyyələrdə və sahələrdə irqi, etnik mənsubiyyəti və cinsiyyəti baxımından müxtəlif namizədlərin cəlb edilməsi və saxlanılması da daxil olmaqla, həll etmək üçün əhəmiyyətli kapital maneələri var;
 
-Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
+Kompüter elmləri sahəsində ilk qadınlardan biri olan Grace Murray Hopper, kompüter elmində bir çox irəliləyişlərin əsasını qoyan yeni proqramlaşdırma dilləri və kompüter sistemləri üçün qabaqcıl standartlar hazırladı; və
 
-Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
+Grace Hopperin doğum günü şərəfinə həftəsi 'Kompüter Elmləri Təhsili Həftəsi' olaraq təyin olunur: İndi, buna görə də olsun {{ campaign_date/start_long }} <br />
 
-(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
+Həll edildi, (EV VƏ YA SENAT, DÖVLƏT, İLÇE, ŞƏHƏR VƏ YA MƏKTƏB ŞURASI) -
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(1) Kompüter Elmləri Təhsil Həftəsinin ({{ campaign_date/full }}) təyin edilməsini dəstəkləyir;
 
-(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(2) məktəbləri, müəllimləri, valideynləri və siyasətçiləri şagirdlərinə Kod Saatında iştirak etməyə imkan verərək Kompüter Elmləri Təhsili Həftəsində iştirak etməyə təşviq edir;
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(3) məktəbləri, müəllimləri, tədqiqatçıları, universitetləri, biznes liderlərini və siyasətçiləri müəllimlərin bütün təhsil səviyyələrində kompüter elmlərində davamlı öyrənmə təcrübəsi təmin etmək və şagirdləri kompüter elmləri anlayışlarına məruz qalmağa təşviq etmək üçün qabaqcıl peşəkar inkişaf əldə etmə mexanizmlərini müəyyən etməyə təşviq edir;
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(4) mövcud proqramlar da daxil olmaqla, kompüter elmlərində az təmsil olunan irqi və etnik qruplardan olan qadın tələbələr və tələbələr üçün imkanları təşviq edir.
 
 {{ signup_button }}

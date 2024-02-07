@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-27 17:15:41 UTC",
+    "serialized_at": "2023-09-14 22:05:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -19140,7 +19140,7 @@
     {
       "key": "87fd964e-71cb-45c0-8f9c-d3f99db71cc5",
       "properties": {
-        "description": "Apply variables, shapes, and ranomNumber concepts to create a program."
+        "description": "Apply variables, shapes, and randomNumber concepts to create a program."
       },
       "seeding_key": {
         "lesson.key": "Mini-Project - Robot Faces",

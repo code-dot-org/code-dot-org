@@ -9,6 +9,7 @@ import {organizeReferenceGuides} from '@cdo/apps/util/referenceGuideHelpers';
 import ReferenceGuide from '@cdo/apps/templates/referenceGuides/ReferenceGuide';
 
 const referenceGuideShape = PropTypes.shape({
+  key: PropTypes.string,
   display_name: PropTypes.string,
   content: PropTypes.string,
   position: PropTypes.number,
@@ -56,8 +57,6 @@ export default function ReferenceGuideView({
                   text={guide.display_name}
                   indentLevel={guide.level}
                   href={`${baseUrl}/${guide.key}`}
-                  // TODO: define this prop
-                  // eslint-disable-next-line react/prop-types
                   isActive={guide.key === referenceGuide.key}
                 />
               ))}

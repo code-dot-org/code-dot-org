@@ -1165,6 +1165,7 @@ tr-TR:
   header_incubator: İnkübatör
   header_learn: Öğren
   header_legal: Gizlilik & Hukuk
+  header_legal_cookie_notice: Çerez Bildirimi
   header_legal_privacy: Gizlilik Politikası
   header_legal_tos: Hizmet Şartları
   header_my_dashboard: Kontrol panelim
@@ -2614,25 +2615,14 @@ tr-TR:
     on milyonlarca öğrenciye erişen ve bir saatliğine bilgisayar bilimleri eğitimi
     veren küresel bir hareket. Lütfen 7-13 Aralık tarihlerinde gerçekleşecek olan
     Bilgisayar Bilimleri Eğitimi Haftasına katılın.
-  volunteer_engineer_submission_intro_guide: Bizim <a href="%{volunteer_guide}"> gönüllü
-    programımız</a> hakkında daha fazla bilgi edinin.
   volunteer_engineer_submission_intro_guide_markdown: Bizim [gönüllü programımız](%{volunteer_guide})
     hakkında daha fazla bilgi edinin.
-  volunteer_engineer_submission_intro_links: Kendi Kod Saati etkinliğini düzenlemek
-    ve <a href="%{volunteer_local}">yerel gönüllü haritamızdan</a> gönüllü bulmak
-    için <a href="%{learn_more}">daha fazlasını öğren.</a>.
   volunteer_engineer_submission_intro_links_markdown: Gönüllü arayan bir öğretmen
     misiniz? [Gönüllü haritamızdan](%{volunteer_local}) yerel bir gönüllü bulun.
-  volunteer_engineer_submission_intro_recruit: Öğretmenler sınıfta veya hangi görüntülü
-    sohbet ile bilgisayar bilimi konusunda yardımcı olabilecek ve Bilgisayar Bilimleri
-    Eğitimi hakkında tutkulu kişileri arıyor.
   volunteer_engineer_submission_intro_recruit_markdown: Öğretmenler, sınıfta yardım
     edebilecekleri **bilgisayar bilimi eğitimi hakkında tutkulu** bir kişi veya bilgisayar
     bilimine dair imkanların genişliği ile ilgili konuşarak (görüntülü konuşma ile
     yapılabilir) öğrencilerine **ilham olabilecek** bir kişinin olmasını ister.
-  volunteer_engineer_submission_intro_signup: Bir bilgisayar bilimleri öğrencisi veya
-    yazılım profesyonel iseniz lütfen aşağıdaki bilgileri girin. <span class="form-required-field">
-    *</span> ile işaretlenmiş alanların doldurulması zorunludur.
   volunteer_engineer_submission_intro_signup_markdown: Bir bilgisayar bilimi öğrencisi
     veya yazılım profesyonel iseniz lütfen aşağıdaki bilgileri girin. Gönüllü olarak
     kaydolmanız için en az 18 yaşında olmalısınız. Bu bölümde dolduracağınız tüm alanların,

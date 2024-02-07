@@ -43,7 +43,7 @@ class I18nSync
       # download and distribute translations from the previous sync
       return_to_staging_branch
       sync_down if should_i "sync down"
-      sync_out(true) if should_i "sync out"
+      sync_out if should_i "sync out"
       CreateI18nPullRequests.down_and_out if @options[:with_pull_request] && should_i("create the down & out PR")
 
       # force switch to the staging branch to collect and upload the most relevant English content
@@ -67,7 +67,7 @@ class I18nSync
         sync_down
       when 'out'
         puts "Distributing translations from i18n/locales out into codebase"
-        sync_out(true)
+        sync_out
         if @options[:with_pull_request] && should_i("create the down & out PR")
           CreateI18nPullRequests.down_and_out
         end
@@ -79,12 +79,29 @@ class I18nSync
 
   private
 
+  attr_reader :options
+
   def sync_in
     I18n::SyncIn.perform
   end
 
+  def sync_up
+    I18n::SyncUp.perform(options.slice(:testing))
+  end
+
+  def sync_down
+    I18n::SyncDown.perform(options.slice(:testing))
+  end
+
+  def sync_out
+    I18n::SyncOut.perform
+  end
+
   def parse_options(args)
-    options = {}
+    options = {
+      testing: I18nScriptUtils::TESTING_BY_DEFAULT,
+    }
+
     opt_parser = OptionParser.new do |opts|
       opts.banner = <<-USAGE
   Usage: sync-all [options]
@@ -112,6 +129,10 @@ class I18nSync
 
       opts.on("-y", "--yes", "Run without confirmation") do
         options[:yes] = true
+      end
+
+      opts.on('-t', '--testing', 'Run in testing mode') do
+        options[:testing] = true
       end
     end
     opt_parser.parse!(args)

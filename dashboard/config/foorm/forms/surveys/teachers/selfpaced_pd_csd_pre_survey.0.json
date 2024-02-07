@@ -11,7 +11,7 @@
         {
           "type": "radiogroup",
           "name": "main_goal",
-          "title": "My main goal for this professional learning is to: ",
+          "title": "My main goal for this professional learning is to:",
           "choices": [
             {
               "value": "better_understand_csd",

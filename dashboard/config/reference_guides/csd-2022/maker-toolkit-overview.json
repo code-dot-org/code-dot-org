@@ -4,6 +4,6 @@
   "course_offering_key": "csd",
   "parent_reference_guide_key": "maker-toolkit",
   "display_name": "Overview",
-  "content": "The Maker Toolkit is a tool built with [JavaScript](/concepts/javascript/) that allows you to write programs that communicate with the [Adafruit Circuit Playground](https://code.org/maker/circuitplayground) or [BBC micro:bit](https://code.org/maker/microbit). Read more about the Maker Toolkits's commands in the [App Lab documentation](/applab/).",
+  "content": "The Maker Toolkit is a tool built with [JavaScript](./javascript-overview) that allows you to write programs that communicate with the [Adafruit Circuit Playground](https://code.org/maker/circuitplayground) or [BBC micro:bit](https://code.org/maker/microbit). Read more about the Maker Toolkits's commands in the [App Lab documentation](/docs/applab/).",
   "position": 0
 }

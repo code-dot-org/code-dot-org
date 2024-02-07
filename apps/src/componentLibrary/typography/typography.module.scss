@@ -36,7 +36,7 @@ html {
 // identical classes for potential use on other elements if needed.
 
 // ----------------------------------------
-// v 2.0.0
+// v 2.0.1
 // ----------------------------------------
 
 // Sizes
@@ -122,22 +122,22 @@ html {
 
 @mixin heading-sm {
   @include heading-common;
-  font-family: $gotham-bold, sans-serif;
+  @include main-font-semi-bold;
   font-size: 1.25rem;
   line-height: 1.40;
 }
 
 @mixin heading-xs {
   @include heading-common;
-  font-family: $gotham-bold, sans-serif;
+  @include main-font-semi-bold;
   font-size: 1rem;
   line-height: 1.48;
 }
 
 // Paragraph styles
 @mixin paragraph-common {
+  @include main-font-regular;
   color: $neutral-dark;
-  font-family: $gotham-regular, sans-serif;
   margin-bottom: 1em;
 }
 
@@ -168,7 +168,7 @@ html {
 // Overline styles
 @mixin overline-common {
   @include paragraph-common;
-  font-family: $gotham-bold, sans-serif;
+  @include main-font-semi-bold;
   text-transform: uppercase;
   letter-spacing: 0.04rem;
 }
@@ -193,20 +193,28 @@ html {
 
 // Strong and Em styles
 @mixin strong {
-  font-family: $gotham-bold, sans-serif;
+  @include main-font-semi-bold;
+}
+
+@mixin extra-strong {
+  @include main-font-bold;
 }
 
 @mixin em {
-  font-family: $gotham-italics, sans-serif;
+  @include main-font-regular-italic;
 }
 
 @mixin strong-em {
-  font-family: $gotham-bold-italics, sans-serif;
+  @include main-font-semi-bold-italic;
+}
+
+@mixin extra-strong-em {
+  @include main-font-bold-italic;
 }
 
 // Caption styles
 @mixin figcaption {
-  font-family: $gotham-regular, sans-serif;
+  @include main-font-regular;
   font-size: 0.75rem;
   margin: 0.5em 0 1em;
   line-height: 1.64;
@@ -246,6 +254,11 @@ html {
 strong,
 .strong { @include strong; }
 // Use in paragraphs to italicize text
+
+.extra-strong {
+  @include extra-strong;
+}
+
 em,
 .em { @include em; }
 
@@ -254,6 +267,13 @@ em strong,
 .em .strong,
 .strong .em {
   @include strong-em;
+}
+
+.em .extra-strong,
+.extra-strong .em,
+em .extra-strong,
+.extra-strong em {
+  @include extra-strong-em;
 }
 
 // Captions

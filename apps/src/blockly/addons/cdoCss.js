@@ -1,3 +1,5 @@
+import color from '@cdo/apps/util/color';
+
 export default function initializeCss(blocklyWrapper) {
   blocklyWrapper.Css.register(
     `.fieldGridDropDownContainer.blocklyMenu .blocklyMenuItem {
@@ -17,6 +19,17 @@ export default function initializeCss(blocklyWrapper) {
       width: 32px;
       height: 32px;
       object-fit: contain;
+    }
+
+    .blocklyFlyoutButton {
+      fill: ${color.brand_secondary_default};
+      cursor: pointer;
+    }
+    .blocklyFlyoutButtonShadow {
+      fill: none;
+    }
+    .blocklyFlyoutButton:hover {
+      fill: ${color.brand_secondary_dark};
     }
     `
   );

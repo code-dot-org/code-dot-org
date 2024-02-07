@@ -20,7 +20,7 @@ module Pd
       title: 'Administrator/School Leader Title',
       role: 'Administrator/School Leader Role',
       email: 'Administrator/School Leader Email Address',
-      can_email_you: 'Can we email you about updates to our courses, local opportunities, or other computer science news? (roughly once a month)',
+      can_email_you: 'Would you like to receive email updates about our courses, local opportunities, or other computer science news? (roughly once a month)',
       total_student_enrollment: 'Total student enrollment',
       free_lunch_percent: 'Percent of students who are eligible to receive free or reduced lunch',
       white: 'White',
@@ -30,11 +30,6 @@ module Pd
       pacific_islander: 'Native Hawaiian or other Pacific Islander',
       american_indian: 'American Indian or Native Alaskan',
       other: 'Other',
-      replace_course: 'Will this course replace an existing computer science course in the master schedule?',
-      understand_fee: 'By checking this box, you indicate that you understand there may be a fee for the professional learning program your teacher attends.',
-      pay_fee: 'If there is a fee for the program, would your school be able to pay for the fee?',
-      contact_invoicing: "Contact name for invoicing (if applicable)",
-      contact_invoicing_detail: "Contact email or phone number for invoicing (if applicable)",
       confirm_principal: 'By submitting this application, I confirm that I am an Administrator/School Leader of this school and agree to share my contact info, school info, and this application with [regional partner].',
 
       school: 'School',
@@ -53,7 +48,7 @@ module Pd
 
     ALL_LABELS = PAGE_LABELS.merge(
       # map array of field names to hash of {field_name: nil}
-      Hash[FIELDS_WITH_DYNAMIC_LABELS.map {|field_name| [field_name, nil]}]
+      FIELDS_WITH_DYNAMIC_LABELS.map {|field_name| [field_name, nil]}.to_h
     ).freeze
   end
 end

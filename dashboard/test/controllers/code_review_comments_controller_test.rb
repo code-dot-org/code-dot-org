@@ -37,11 +37,11 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     assert_response :success
 
     response_json = JSON.parse(response.body)
-    assert_not_nil response_json['id']
+    refute_nil response_json['id']
     assert_equal @student_2.name, response_json['commenterName']
     assert_equal comment_text, response_json['comment']
     assert_equal false, response_json['isResolved']
-    assert_not_nil response_json['createdAt']
+    refute_nil response_json['createdAt']
   end
 
   test 'cannot create a code review comment for a closed code review' do
@@ -82,7 +82,7 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
 
     assert_response :success
     response_json = JSON.parse(response.body)
-    assert_not_nil response_json['id']
+    refute_nil response_json['id']
     assert_equal true, response_json['isResolved']
   end
 

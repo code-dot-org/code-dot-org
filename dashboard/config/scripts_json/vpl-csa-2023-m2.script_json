@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-02 00:13:45 UTC",
+    "serialized_at": "2023-08-17 20:31:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -130,6 +130,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-2-overview_-m2_2023"
+        ],
         "progression": "Module 2 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -152,6 +155,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-2-intro-to-equality-video_2023"
+        ],
         "progression": "Aliases in Java (~10 minutes)"
       },
       "bonus": false,
@@ -174,6 +180,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-2-alias-video_2023"
+        ],
         "progression": "Aliases in Java (~10 minutes)"
       },
       "bonus": false,
@@ -196,6 +205,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-2-CFU-alias_-m2_2023"
+        ],
         "progression": "Aliases in Java (~10 minutes)"
       },
       "bonus": false,
@@ -218,6 +230,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-2-equals-video-intro_2023"
+        ],
         "progression": "The equals() method (~25 minutes)"
       },
       "bonus": false,
@@ -240,6 +255,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-2-equals-video_2023"
+        ],
         "progression": "The equals() method (~25 minutes)"
       },
       "bonus": false,
@@ -262,6 +280,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-2-CFU-equals-method_2023"
+        ],
         "progression": "The equals() method (~25 minutes)"
       },
       "bonus": false,
@@ -284,6 +305,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-m2-equality-reflection_2023"
+        ],
         "progression": "The equals() method (~25 minutes)"
       },
       "bonus": false,
@@ -306,6 +330,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-m2-equality-book-reflection_2023"
+        ],
         "progression": "The equals() method (~25 minutes)"
       },
       "bonus": false,
@@ -328,6 +355,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-2-equals-book-video_2023"
+        ],
         "progression": "The equals() method (~25 minutes)"
       },
       "bonus": false,
@@ -350,6 +380,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-2-equals-level-from-curriculum_-m2_2023"
+        ],
         "progression": "Practice writing an equals() method (~15 minutes)"
       },
       "bonus": false,
@@ -372,6 +405,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-2-wrap-up_-m2_2023"
+        ],
         "progression": "Wrap Up (~5 minutes)"
       },
       "bonus": false,

@@ -49,10 +49,12 @@ module Curriculum
         CSA: 'CSA',
         CSC: 'CSC',
         HOC: 'HOC',
+        AI: 'AI',
         CSA_self_paced_pl: 'CSA Self Paced PL',
         CSP_self_paced_pl: 'CSP Self Paced PL',
         CSD_self_paced_pl: 'CSD Self Paced PL',
         CSF_self_paced_pl: 'CSF Self Paced PL',
+        CSC_self_paced_pl: 'CSC Self Paced PL',
         CSP_virtual_pl: 'CSP Virtual PL',
         CSD_virtual_pl: 'CSD Virtual PL',
         CSA_virtual_pl: 'CSA Virtual PL',
@@ -107,7 +109,8 @@ module Curriculum
         collections: 'Collections',
         workshops_k5: 'K-5 Workshops',
         summer_workshops_612: '6-12 Summer Workshops',
-        virtual_academic_year_workshops_612: '6–12 Virtual Academic Year Workshops'
+        virtual_academic_year_workshops_612: '6–12 Virtual Academic Year Workshops',
+        unsupported: 'Unsupported'
       }
     ).freeze
 
@@ -116,7 +119,10 @@ module Curriculum
       {
         hoc: 'HOC',
         csc: 'CSC',
-        csf: 'CSF'
+        csf: 'CSF',
+        csa: 'CSA',
+        csp: 'CSP',
+        csd: 'CSD'
       }
     )
 

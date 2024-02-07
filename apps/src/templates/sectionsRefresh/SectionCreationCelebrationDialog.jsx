@@ -16,7 +16,11 @@ export default function SectionCreationCelebrationDialog() {
       <div className={moduleStyles.celebrationDialogBody}>
         <h2>{i18n.congratulations()}</h2>
         <div>{i18n.sectionCreationCelebrationDialogMessage()}</div>
-        <img src={CelebrationGif} className={moduleStyles.celebrationGif} />
+        <img
+          src={CelebrationGif}
+          className={moduleStyles.celebrationGif}
+          alt=""
+        />
       </div>
       <div className={moduleStyles.celebrationDialogFooter}>
         <Button

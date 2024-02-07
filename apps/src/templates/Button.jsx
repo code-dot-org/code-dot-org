@@ -72,6 +72,7 @@ class Button extends React.Component {
     useDefaultLineHeight: PropTypes.bool,
     __useDeprecatedTag: PropTypes.bool,
     'aria-label': PropTypes.string,
+    title: PropTypes.string,
   };
 
   onKeyDown = event => {
@@ -107,6 +108,7 @@ class Button extends React.Component {
       useDefaultLineHeight,
       __useDeprecatedTag,
       'aria-label': ariaLabel,
+      title,
     } = this.props;
 
     if (!href && !onClick) {
@@ -187,6 +189,7 @@ class Button extends React.Component {
         tabIndex={tabIndex}
         id={id}
         aria-label={ariaLabel}
+        title={title}
       >
         <div style={_.pick(style, ['textAlign'])}>
           {icon && (

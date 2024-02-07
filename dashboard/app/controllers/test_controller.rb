@@ -17,6 +17,13 @@ class TestController < ApplicationController
     head :ok
   end
 
+  def authorized_teacher_access
+    return unless (user = current_user)
+    user.permission = UserPermission::AUTHORIZED_TEACHER
+    user.save!
+    head :ok
+  end
+
   def plc_reviewer_access
     return unless (user = current_user)
     user.permission = UserPermission::PLC_REVIEWER
@@ -228,6 +235,7 @@ class TestController < ApplicationController
       previous_yearlong_cdo_pd: ['CS in Science'],
       enough_course_hours: Pd::Application::TeacherApplication.options[:enough_course_hours].first,
       program: 'csp',
+      will_teach: 'Yes',
       csp_which_grades: ['11', '12'],
       csp_how_offer: 'As an AP course',
       csd_which_grades: ['6', '7'],
@@ -317,6 +325,20 @@ class TestController < ApplicationController
     Pd::Application::TeacherApplication.find(params[:application_id].to_i).destroy
     User.find(params[:teacher_id].to_i).destroy
     User.find_by(name: params[:pm_name]).destroy
+    head :ok
+  end
+
+  def create_pilot
+    name = params.require(:pilot_name)
+    Pilot.create_with(allow_joining_via_url: true, display_name: name).find_or_create_by(name: name)
+    head :ok
+  end
+
+  def set_single_user_experiment
+    SingleUserExperiment.find_or_create_by!(
+      min_user_id: current_user.id,
+      name: params[:experiment_name]
+    )
     head :ok
   end
 end

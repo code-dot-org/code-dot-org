@@ -23,8 +23,8 @@ class CreateSchoolInfos < ActiveRecord::Migration[4.2]
         # Set district_other to true for all entries that should have had a school_district_id but didn't.
         if (attributes[:school_type] == SchoolInfo::SCHOOL_TYPE_PUBLIC ||
             attributes[:school_type] == SchoolInfo::SCHOOL_TYPE_CHARTER) &&
-           (attributes.present? && attributes[:state] != SchoolInfo::SCHOOL_STATE_OTHER) &&
-           attributes[:school_district_id].blank?
+            (attributes.present? && attributes[:state] != SchoolInfo::SCHOOL_STATE_OTHER) &&
+            attributes[:school_district_id].blank?
           attributes[:school_district_other] = true
         end
 

@@ -10,7 +10,7 @@
     "vpl-csa-2023-m7",
     "vpl-csa-2023-m8"
   ],
-  "published_state": "in_development",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",

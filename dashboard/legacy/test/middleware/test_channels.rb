@@ -172,7 +172,12 @@ class ChannelsTest < Minitest::Test
   end
 
   def test_publish_and_unpublish_channel
-    stub_user = {name: ' xavier', birthday: 14.years.ago.to_datetime}
+    stub_project_age(true, true)
+
+    stub_user = {
+      name: ' xavier',
+      birthday: 14.years.ago.to_datetime
+    }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     start = DateTime.now - 1
     post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
@@ -232,7 +237,9 @@ class ChannelsTest < Minitest::Test
   end
 
   def test_publish_permissions
-    # only whitelisted project types can be published
+    stub_project_age(true, true)
+
+    # only allow listed project types can be published
 
     # over 13 and sharing is disabled
     stub_user = {
@@ -312,7 +319,54 @@ class ChannelsTest < Minitest::Test
     assert_cannot_publish('foo')
   end
 
+  def test_cannot_publish_if_account_too_new
+    stub_project_age(true, false)
+
+    stub_user = {
+      name: 'xavier',
+      birthday: 14.years.ago.to_datetime,
+      properties: {sharing_disabled: false}.to_json
+    }
+    ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
+
+    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
+    assert_cannot_publish('applab', channel_id)
+  end
+
+  def test_cannot_publish_if_project_too_new
+    stub_project_age(false, true)
+
+    stub_user = {
+      name: ' xavier',
+      birthday: 14.years.ago.to_datetime,
+      properties: {sharing_disabled: false}.to_json
+    }
+    ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
+
+    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
+    assert_cannot_publish('applab', channel_id)
+  end
+
+  def test_can_publish_when_override_applied
+    stub_project_age(false, false, false)
+
+    stub_user = {
+      name: ' xavier',
+      birthday: 14.years.ago.to_datetime,
+      properties: {sharing_disabled: false}.to_json
+    }
+    ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
+
+    assert_can_publish('applab')
+  end
+
   def test_restricted_publish_permissions
+    stub_project_age(true, true)
+
     # sprite lab projects require talking to S3
     AWS::S3.stubs :create_client
 
@@ -533,5 +587,14 @@ class ChannelsTest < Minitest::Test
     sample_project = StringIO.new
     sample_project.puts "{\"inRestrictedShareMode\": #{should_restrict_share}}"
     SourceBucket.any_instance.stubs(:get).returns({body: sample_project})
+  end
+
+  def stub_project_age(project_old_enough, user_old_enough, apply_publish_limits = true)
+    test_project = mock
+    test_project.stubs(:existed_long_enough_to_publish?).returns(project_old_enough)
+    test_project.stubs(:owner_existed_long_enough_to_publish?).returns(user_old_enough)
+    test_project.stubs(:apply_project_age_publish_limits?).returns(apply_publish_limits)
+
+    Projects.any_instance.stubs(:get_rails_project).returns(test_project)
   end
 end

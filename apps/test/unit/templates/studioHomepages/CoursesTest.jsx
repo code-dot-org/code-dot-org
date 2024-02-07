@@ -11,6 +11,17 @@ const TEST_PROPS = {
   isSignedOut: true,
   studentsCount: '0',
   modernElementaryCoursesAvailable: true,
+  specialAnnouncement: {
+    id: 'id',
+    image: '/image',
+    title: 'title',
+    body: 'body',
+    link: '/link',
+    description: 'description',
+    buttonUrl: '/url',
+    buttonText: 'press me',
+    heading: 'heading',
+  },
 };
 
 describe('Courses', () => {
@@ -18,14 +29,12 @@ describe('Courses', () => {
     it('shows a short banner when signed in', () => {
       const wrapper = shallow(<Courses {...TEST_PROPS} isSignedOut={false} />);
       const header = wrapper.find(HeaderBanner);
-      assert.isTrue(header.prop('short'));
       assert.isUndefined(header.prop('description'));
     });
 
     it('shows a long banner when signed out', () => {
       const wrapper = shallow(<Courses {...TEST_PROPS} isSignedOut={true} />);
       const header = wrapper.find(HeaderBanner);
-      assert.isFalse(header.prop('short'));
       assert.isString(header.prop('description'));
     });
   });
@@ -34,10 +43,9 @@ describe('Courses', () => {
     it('English', () => {
       const wrapper = mountCourses({isEnglish: true});
       assertComponentsInOrder(wrapper, [
-        'SpecialAnnouncement',
+        'MarketingAnnouncementBanner',
         'CourseBlocksWrapper',
         'CourseBlocksHoc',
-        'LocalClassActionBlock',
       ]);
     });
 
@@ -52,7 +60,7 @@ describe('Courses', () => {
         assertComponentsInOrder(wrapper, [
           'ModernCsfCourses',
           'CourseBlocksHoc',
-          'SpecialAnnouncement',
+          'MarketingAnnouncementBanner',
           'CoursesAToF',
           'LegacyCSFNotification',
           'CourseBlocksWrapper',
@@ -68,7 +76,7 @@ describe('Courses', () => {
         assertComponentsInOrder(wrapper, [
           'AcceleratedAndUnplugged',
           'CourseBlocksHoc',
-          'SpecialAnnouncement',
+          'MarketingAnnouncementBanner',
           'Courses1To4',
           'CourseBlocksWrapper',
           'CourseBlocksWrapper',

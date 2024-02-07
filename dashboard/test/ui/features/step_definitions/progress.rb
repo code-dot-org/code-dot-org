@@ -5,7 +5,7 @@ def color_string(key)
     passed: 'rgb(159, 212, 159)',       # $level_passed
     not_tried: 'rgb(254, 254, 254)',    # $level_not_tried
     lighter_gray: 'rgb(198, 202, 205)',
-    assessment: 'rgb(118, 101, 160)'
+    assessment: 'rgb(140, 82, 186)'
   }[key.to_sym]
 end
 
@@ -14,7 +14,7 @@ end
 # nature of progress bubbles and can be slow, especially when verifying that a bubble
 # displays 'not_tried'. Passing no_wait=true skips all waits and immediately verifies
 # the bubble.
-def verify_progress(selector, test_result, no_wait=false)
+def verify_progress(selector, test_result, no_wait: false)
   case test_result
   when 'perfect'
     background_color = color_string('perfect')
@@ -101,7 +101,7 @@ Then /^I verify progress for lesson (\d+) level (\d+)( in detail view)? is "([^"
   selector = detail_view.nil? ?
     ".uitest-summary-progress-table .uitest-summary-progress-row:nth(#{lesson.to_i - 1}) .progress-bubble:nth(#{level.to_i - 1})" :
     ".uitest-detail-progress-table .uitest-progress-lesson:nth(#{lesson.to_i - 1}) .progress-bubble:nth(#{level.to_i - 1})"
-  verify_progress(selector, test_result, !!without_waiting)
+  verify_progress(selector, test_result, no_wait: !!without_waiting)
 end
 
 Then /^I verify progress for the sublevel with selector "([^"]*)" is "([^"]*)"/ do |selector, test_result|

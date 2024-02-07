@@ -1,5 +1,5 @@
 ---
-title: Partners
+title: همکاران
 ---
 
 The Hour of Code is driven by the Hour of Code Review Committee.

@@ -1085,9 +1085,9 @@ class UnitTest < ActiveSupport::TestCase
 
     [foo16, foo17, foo18, foo19].each do |s|
       summary = s.summarize_course_versions(create(:teacher))
-      assert_equal ["foo-2016", "foo-2017", "foo-2018"], summary.values.map {|h| h[:name]}
-      assert_equal [true, true, false], summary.values.map {|h| h[:is_stable]}
-      assert_equal [false, true, false], summary.values.map {|h| h[:is_recommended]}
+      assert_equal(["foo-2016", "foo-2017", "foo-2018"], summary.values.map {|h| h[:name]})
+      assert_equal([true, true, false], summary.values.map {|h| h[:is_stable]})
+      assert_equal([false, true, false], summary.values.map {|h| h[:is_recommended]})
     end
   end
 
@@ -1115,9 +1115,9 @@ class UnitTest < ActiveSupport::TestCase
 
     [foo17, foo18, foo19].each do |s|
       summary = s.summarize_course_versions(create(:student))
-      assert_equal ["foo-2017"], summary.values.map {|h| h[:name]}
-      assert_equal [true], summary.values.map {|h| h[:is_stable]}
-      assert_equal [true], summary.values.map {|h| h[:is_recommended]}
+      assert_equal(["foo-2017"], summary.values.map {|h| h[:name]})
+      assert_equal([true], summary.values.map {|h| h[:is_stable]})
+      assert_equal([true], summary.values.map {|h| h[:is_recommended]})
     end
   end
 
@@ -1240,6 +1240,26 @@ class UnitTest < ActiveSupport::TestCase
       'buttonText' => localized_button_text
     }]
     assert_equal expected_announcements, summary[:announcements]
+  end
+
+  test 'summarize_for_unit_selector determines whether feedback is enabled' do
+    course_version = create :course_version, :with_unit
+    course_offering = course_version.course_offering
+    course_offering.update!(marketing_initiative: 'CSD')
+    unit = course_version.content_root
+    summary = unit.summarize_for_unit_selector
+    assert summary[:is_feedback_enabled]
+
+    course_offering.update!(marketing_initiative: 'HOC')
+    unit.reload
+    summary = unit.summarize_for_unit_selector
+    refute summary[:is_feedback_enabled]
+
+    # no course version means no feedback
+    unit = create :script
+    refute unit.get_course_version
+    summary = unit.summarize_for_unit_selector
+    refute summary[:is_feedback_enabled]
   end
 
   test 'should generate PLC objects for migrated unit' do
@@ -1663,9 +1683,9 @@ class UnitTest < ActiveSupport::TestCase
     Unit.stubs(:modern_elementary_courses).returns([course1_modern, course2_modern])
 
     assert Unit.modern_elementary_courses_available?("en-us")
-    assert_not Unit.modern_elementary_courses_available?("ch-ch")
-    assert_not Unit.modern_elementary_courses_available?("it-it")
-    assert_not Unit.modern_elementary_courses_available?("fr-fr")
+    refute Unit.modern_elementary_courses_available?("ch-ch")
+    refute Unit.modern_elementary_courses_available?("it-it")
+    refute Unit.modern_elementary_courses_available?("fr-fr")
   end
 
   test 'locale_english_name_map' do
@@ -2089,6 +2109,42 @@ class UnitTest < ActiveSupport::TestCase
   test 'localized_title defaults to name' do
     unit = create :script, name: "test-localized-title-default"
     assert_equal "test-localized-title-default", unit.localized_title
+  end
+
+  test 'next_unit returns next unit if there is another unit in unit group' do
+    unit_group = create :unit_group
+    unit1 = create :unit
+    unit2 = create :unit
+    create :unit_group_unit, unit_group: unit_group, script: unit1, position: 1
+    create :unit_group_unit, unit_group: unit_group, script: unit2, position: 2
+    unit1.reload
+    unit2.reload
+
+    student = create :student
+
+    assert_equal unit2, unit1.next_unit(student)
+  end
+
+  test 'next_unit returns nil if there is no next unit in unit group' do
+    unit1 = create :unit
+    unit2 = create :unit
+    unit_group = create :unit_group
+    create :unit_group_unit, unit_group: unit_group, script: unit1, position: 1
+    create :unit_group_unit, unit_group: unit_group, script: unit2, position: 2
+    unit1.reload
+    unit2.reload
+
+    student = create :student
+
+    assert_nil unit2.next_unit(student)
+  end
+
+  test 'next_unit returns nil if not in a unit group' do
+    unit1 = create :unit, is_course: true
+
+    student = create :student
+
+    assert_nil unit1.next_unit(student)
   end
 
   class MigratedScriptCopyTests < ActiveSupport::TestCase

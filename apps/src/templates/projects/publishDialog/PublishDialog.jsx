@@ -10,6 +10,13 @@ import {hidePublishDialog, publishProject} from './publishDialogRedux';
 import {RestrictedPublishProjectTypes} from '@cdo/apps/util/sharedConstants';
 import color from '@cdo/apps/util/color';
 
+const PUBLISH_FAILED_RESPONSE_MESSAGES = {
+  sharingDisabled: 'Sharing disabled for user account',
+  projectInRestrictedShareMode: 'Project in restricted share mode',
+  userTooNew: 'User too new to publish channel',
+  projectTooNew: 'Project too new to publish channel',
+};
+
 class PublishDialog extends Component {
   static propTypes = {
     // from redux state
@@ -32,6 +39,7 @@ class PublishDialog extends Component {
 
   state = {
     publishFailedStatus: null,
+    publishFailedReason: '',
   };
 
   confirm = () => {
@@ -52,21 +60,43 @@ class PublishDialog extends Component {
   };
 
   onPublishError = err => {
-    this.setState({publishFailedStatus: err.status});
+    this.setState({
+      publishFailedStatus: err.status,
+      publishFailedReason: err.response,
+    });
   };
 
   getErrorMessage = () => {
-    const {publishFailedStatus} = this.state;
+    const {publishFailedStatus, publishFailedReason} = this.state;
     const {projectType} = this.props;
     if (!publishFailedStatus) {
       return null;
     } else if (
       publishFailedStatus === 403 &&
-      RestrictedPublishProjectTypes.includes(projectType)
+      RestrictedPublishProjectTypes.includes(projectType) &&
+      publishFailedReason ===
+        PUBLISH_FAILED_RESPONSE_MESSAGES.projectInRestrictedShareMode
     ) {
       return i18n.publishFailedRestrictedShare();
-    } else if (publishFailedStatus === 403) {
+    } else if (
+      publishFailedStatus === 403 &&
+      publishFailedReason === PUBLISH_FAILED_RESPONSE_MESSAGES.sharingDisabled
+    ) {
       return i18n.publishFailedForbidden();
+    } else if (
+      publishFailedStatus === 403 &&
+      publishFailedReason.startsWith(
+        PUBLISH_FAILED_RESPONSE_MESSAGES.userTooNew
+      )
+    ) {
+      return `${i18n.publishFailed()}. ${i18n.publishFailedAccountTooNew()}`;
+    } else if (
+      publishFailedStatus === 403 &&
+      publishFailedReason.startsWith(
+        PUBLISH_FAILED_RESPONSE_MESSAGES.projectTooNew
+      )
+    ) {
+      return `${i18n.publishFailed()}. ${i18n.publishFailedProjectTooNew()}`;
     } else if (publishFailedStatus === 400 || publishFailedStatus === 401) {
       return i18n.publishFailedNotAllowed();
     } else {
@@ -102,7 +132,7 @@ class PublishDialog extends Component {
           <Button
             text={i18n.publish()}
             onClick={this.confirm}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             className="no-mc"
             isPending={isPublishPending}
             pendingText={i18n.publishPending()}

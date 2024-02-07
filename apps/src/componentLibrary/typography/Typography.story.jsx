@@ -2,7 +2,7 @@ import React from 'react';
 import Typography from './index';
 
 export default {
-  title: 'DesignSystem/Typography Component',
+  title: 'DesignSystem/Typography',
   component: Typography,
 };
 
@@ -111,6 +111,11 @@ const otherTextComponents = [
     semanticTag: 'strong',
     visualAppearance: 'strong',
     children: 'This is a Typography Component. (strong)',
+  },
+  {
+    semanticTag: 'strong',
+    visualAppearance: 'extra-strong',
+    children: 'This is a Typography Component. (extra-strong)',
   },
   {
     semanticTag: 'figcaption',

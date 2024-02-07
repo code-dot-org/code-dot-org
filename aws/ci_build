@@ -48,12 +48,12 @@ S3_LOGS_PREFIX = CDO.name.freeze
 # @return [String] Hyperlink to uploaded log, or empty string
 def upload_log_and_get_link(key, body, metadata)
   log_url = AWS::S3::LogUploader.
-      new(S3_LOGS_BUCKET, S3_LOGS_PREFIX).
-      upload_log(
-        key,
-        body,
-        {metadata: metadata}
-      )
+    new(S3_LOGS_BUCKET, S3_LOGS_PREFIX).
+    upload_log(
+      key,
+      body,
+      {metadata: metadata}
+    )
   permalink = AWS::S3.get_console_link_from_presigned(log_url)
   " <a href='#{log_url}'>☁ Log on S3</a> (<a href='#{permalink}'>permalink</a>)"
 rescue Exception => exception

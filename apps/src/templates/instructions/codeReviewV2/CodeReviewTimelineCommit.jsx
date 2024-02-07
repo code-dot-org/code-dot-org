@@ -6,6 +6,7 @@ import CodeReviewTimelineElement, {
 import moment from 'moment';
 import javalabMsg from '@cdo/javalab/locale';
 import {commitShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const CodeReviewTimelineCommit = ({commit, isLastElementInTimeline}) => {
   const {createdAt, comment, projectVersion} = commit;
@@ -42,7 +43,7 @@ const styles = {
     marginBottom: '10px',
   },
   header: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
   },
   date: {
     fontSize: '12px',

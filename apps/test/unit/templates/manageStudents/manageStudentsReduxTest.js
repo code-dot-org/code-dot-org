@@ -677,14 +677,26 @@ describe('manageStudentsRedux', () => {
         },
       };
       const action = addMultipleRows({
-        '-1': {id: -1, name: 'student -1', isEditing: true},
-        '-2': {id: -2, name: 'student -2', isEditing: true},
+        '-1': {id: -1, name: 'student -1', familyName: '', isEditing: true},
+        '-2': {id: -2, name: 'student -2', familyName: '', isEditing: true},
+        '-3': {
+          id: -3,
+          name: 'student -3',
+          familyName: 'family -3',
+          isEditing: true,
+        },
       });
       const nextState = manageStudents(startingState, action);
 
       const expectedData = {
-        '-1': {id: -1, name: 'student -1', isEditing: true},
-        '-2': {id: -2, name: 'student -2', isEditing: true},
+        '-1': {id: -1, name: 'student -1', familyName: '', isEditing: true},
+        '-2': {id: -2, name: 'student -2', familyName: '', isEditing: true},
+        '-3': {
+          id: -3,
+          name: 'student -3',
+          familyName: 'family -3',
+          isEditing: true,
+        },
         4: {id: 4, name: 'original student', isEditing: true},
       };
       assert.deepEqual(nextState.studentData, expectedData);

@@ -24,14 +24,16 @@
       "lesson_extras_available": true,
       "supported_locales": [
         "fa-AF",
-        "fa-IR"
+        "fa-IR",
+        "ko-KR",
+        "sq-AL"
       ],
       "tts": true,
       "version_year": "2022"
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2023-04-07 00:36:52 UTC",
+    "serialized_at": "2023-12-15 22:11:42 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -4009,7 +4011,7 @@
       "key": "3dcc5ff1-9cad-46cc-985e-e92e1989a304",
       "position": 1,
       "properties": {
-        "description": "To build on the skills you learned in CS Fundamentals Course D, click [here](https://code.org/maker/csf-microbit)  to check out Extension Lessons with the micro:bit. These [4 micro:bit lessons](https://code.org/maker/assets/CSF-Booklet-Course-D-v4.pdf) cover the following topics: Meet your micro:bit, Loops, Conditionals (if...then...else), Inputs and outputs, Events, and Variables.",
+        "description": "To build on the skills you learned in CS Fundamentals Course D, click [here](https://code.org/maker/csf-microbit)  to check out Extension Lessons with the micro:bit. These [4 micro:bit lessons](https://code.org/maker/assets/CSF-Booklet-Course-D-July23.pdf) cover the following topics: Meet your micro:bit, Loops, Conditionals (if...then...else), Inputs and outputs, Events, and Variables.",
         "name": "Extension Lessons with the micro:bit"
       },
       "seeding_key": {
@@ -12249,5 +12251,14 @@
         "opportunity_standard.shortcode": "3-5-ETS1-1"
       }
     }
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
   ]
 }

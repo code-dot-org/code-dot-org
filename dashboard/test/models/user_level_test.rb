@@ -388,7 +388,7 @@ class UserLevelTest < ActiveSupport::TestCase
 
   test "virtual attribute `locked` sets `unlocked_at`" do
     ul = UserLevel.create(user: @user, level: @level, locked: false)
-    assert_not_nil ul.send(:unlocked_at)
+    refute_nil ul.send(:unlocked_at)
   end
 
   test 'count passed levels for users' do
@@ -422,7 +422,7 @@ class UserLevelTest < ActiveSupport::TestCase
     ul = create :user_level, user: @user, level: @level, script: script, best_result: 10
     original_updated_at = ul.reload.updated_at
 
-    UserLevel.update_best_result(@user.id, @level.id, script.id, 100, false)
+    UserLevel.update_best_result(@user.id, @level.id, script.id, 100, touch_updated_at: false)
 
     assert_equal original_updated_at, UserLevel.find(ul.id).updated_at
   end

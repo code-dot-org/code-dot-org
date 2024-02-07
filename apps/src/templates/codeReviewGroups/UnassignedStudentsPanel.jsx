@@ -5,6 +5,7 @@ import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import JavalabButton from '@cdo/apps/javalab/JavalabButton';
 import StudentGroup from './StudentGroup';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export default function UnassignedStudentsPanel({
   unassignedGroup,
@@ -51,7 +52,7 @@ export const HEADER_STYLE = {
   padding: '5px 10px',
   border: `1px solid ${color.lighter_gray}`,
   background: color.lightest_gray,
-  fontFamily: '"Gotham 5r", sans-serif',
+  ...fontConstants['main-font-semi-bold'],
   fontSize: 14,
 };
 

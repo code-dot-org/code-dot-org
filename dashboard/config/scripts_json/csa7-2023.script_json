@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-06-23 16:41:38 UTC",
+    "serialized_at": "2023-08-22 18:04:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -75,6 +75,18 @@
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa7-2023"
       }
+    },
+    {
+      "key": "lessonGroup-6",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "Sandboxes"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa7-2023"
+      }
     }
   ],
   "lessons": [
@@ -104,6 +116,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.6\n* Topic Questions 5.9\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**What are the similarities and differences between passing primitives and object references as parameters?**\n\nStudents revisit passing primitives and object references as parameters to identify similarities and differences between each. They explore the impact of using an object reference as a parameter on the original object and identify scenarios when it is not ideal to use an object reference as a parameter. Students then learn about user stories and some for their projects to identify required program features before revisiting their Need to Knows to determine what they have learned that will be useful for their project and what they still need to learn.",
         "preparation": "* **(Optional)** Print copies of the U7L2 Guided Notes (one for each student)\n* Preview the *Software Engineering: User Stories* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-7-2-object-references-as-parameters/37940) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What are the similarities and differences between passing primitives and object references as parameters?**\n\nIn this lesson, you revisit passing primitives and object references as parameters to identify similarities and differences between each. You explore the impact of using an object reference as a parameter on the original object and identify scenarios when it is not ideal to use an object reference as a parameter. You then learn about user stories and write some for your project to identify required program features before revisiting your Need to Knows to determine what you have learned that will be useful for your project and what you still need to learn."
@@ -122,6 +135,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can overloading a method be useful in my programs?**\n\nStudents previously learned about overloading when writing multiple constructors in a class. In this lesson, students revisit overloaded constructors and learn how overloading can be applied to methods. They explore how overloaded methods work and consider scenarios where overloaded methods would be useful. Students then practice writing and calling overloaded methods and revisit their Need to Knows to determine what they have learned that will be useful for their project and what they still need to learn.",
         "preparation": "* **(Optional)** Print copies of the U7L3 Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-7-3-overloaded-methods/37941) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can overloading a method be useful in my programs?**\n\nYou previously learned about overloading when writing multiple constructors in a class. In this lesson, you revisit overloaded constructors and learn how overloading can be applied to methods. You explore how overloaded methods work and consider scenarios where overloaded methods would be useful. You then practice writing and calling overloaded methods and revisit your Need to Knows to determine what you have learned that will be useful for your project and what you still need to learn."
@@ -140,6 +154,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How does making a method `private` change its functionality?**\n\nIn this lesson, students have an opportunity to begin planning their Creative Coding with The Theater project. Students should spend this time creating UML diagrams, planning algorithms, and updating their Project Planning Board with tasks they need to complete. They then revisit the `private` keyword and how this access modifier is used to prevent other classes from accessing instance variables. Students explore how the `private` keyword can be used with methods and consider scenarios where they might want to make a method `private` instead of `public`. They practice writing and calling `private` methods and revisit their Need to Knows to determine what they have learned that will be useful for their project and what they still need to learn.",
         "preparation": "* **(Optional)** Print copies of the U7L4 Guided Notes (one for each student)\n* Preview the *Private Methods* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-7-4-private-methods/37942) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How does making a method `private` change its functionality?**\n\nIn this lesson, you have an opportunity to begin planning your Creative Coding with The Theater project. You should spend this time creating UML diagrams, planning algorithms, and updating your Project Planning Board with tasks you need to complete. You then revisit the `private` keyword and how this access modifier is used to prevent other classes from accessing instance variables. You explore how the `private` keyword can be used with methods and consider scenarios where you might want to make a method `private` instead of `public`. You practice writing and calling `private` methods and revisit your Need to Knows to determine what you have learned that will be useful for your project and what you still need to learn."
@@ -158,6 +173,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can I override methods from other classes?**\n\nIn this lesson, students have an opportunity to continue planning their Creative Coding with The Theater project. Students should spend this time finalizing their UML diagrams and algorithms and updating their Project Planning Board with tasks they have completed and still need to complete. Students then revisit overriding methods and how they used the `super` keyword to call the superclass version of a class. They consider scenarios for overriding methods and practice writing and calling overridden methods of their own. Students then revisit their Need to Knows to determine what they have learned that will be useful for their project and what they still need to learn.",
         "preparation": "* **(Optional)** Print copies of the U7L5 Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-7-5-overriding-methods/37943) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I override methods from other classes?**\n\nIn this lesson, you have an opportunity to continue planning your Creative Coding with The Theater project. You should spend this time finalizing your UML diagrams and algorithms and updating your Project Planning Board with tasks you have completed and still need to complete. You then revisit overriding methods and how you used the `super` keyword to call the superclass version of a class. You consider scenarios for overriding methods and practice writing and calling overridden methods of your own. You then revisit your Need to Knows to determine what you have learned that will be useful for your project and what you still need to learn."
@@ -176,6 +192,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**Are AI-generated images art?**\n\nIn a previous unit, students explored image manipulation and the beneficial and harmful impacts of deep fakes. In this lesson, students consider ethical and legal issues related to AI-generated images. They learn about various programs that create AI-generated images and how these programs use images from other artists to train their algorithms, often without their knowledge or permission. Students participate in an AI Carousel activity to discuss current issues related to AI-generated images to share their thoughts and ideas, and brainstorm ways these issues can be addressed.",
         "preparation": "* **(Optional)** Print copies of the U7L6 Guided Notes (one for each student)\n* Print copies of the Project Planning Feedback handout (one for each student)\n* Print the AI Carousel Stations and post around the classroom with chart paper\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-7-6-intellectual-property/37944) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**Are AI-generated images art?**\n\nIn a previous unit, you explored image manipulation and the beneficial and harmful impacts of deep fakes. In this lesson, you consider ethical and legal issues related to AI-generated images. You learn about various programs that create AI-generated images and how these programs use images from other artists to train their algorithms, often without their knowledge or permission. You participate in an AI Carousel activity to discuss current issues related to AI-generated images to share your thoughts and ideas, and brainstorm ways these issues can be addressed."
@@ -194,6 +211,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 10.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**What is recursion?**\n\nIn this lesson, students are introduced to recursion through an unplugged activity and realize how these algorithms differ from how they have implemented algorithms throughout the year. Students learn how to identify the base case and recursive case of a recursive algorithm and how to translate an iterative algorithm into a recursive one. They then practice tracing recursive algorithms and consider the benefits and drawbacks of writing an algorithm using recursion.",
         "preparation": "* Preview the *Recursion* video\n* Print copies of the Recursion Unplugged handout (one for each pair of students)\n* Print copies of the Coloring Page handout\n* Print and cut out the Method Cards\n* Gather sets of ten disposable cups and markers or colored pencils\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-7-7-recursion/37945) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What is recursion?**\n\nIn this lesson, you are introduced to recursion through an unplugged activity and realize how these algorithms differ from how you have implemented algorithms throughout the year. You learn how to identify the base case and recursive case of a recursive algorithm and how to translate an iterative algorithm into a recursive one. You then practice tracing recursive algorithms and consider the benefits and drawbacks of writing an algorithm using recursion."
@@ -327,6 +345,51 @@
       "seeding_key": {
         "lesson.key": "lesson-14",
         "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "lesson-15",
+      "name": "Sandbox: Console",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "lesson-16",
+      "name": "Sandbox: The Neighborhood",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "lesson-17",
+      "name": "Sandbox: The Theater",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "csa7-2023"
       }
     }
@@ -898,6 +961,42 @@
         "lesson_activity.key": "7f46652b-a230-4d11-b9af-97db52a3e898",
         "lesson.key": "lesson-14",
         "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "733c3cae-4801-473c-a6f2-f82c87573021",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "733c3cae-4801-473c-a6f2-f82c87573021",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "db938f18-f47f-459a-bc1e-7f3923442709",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "db938f18-f47f-459a-bc1e-7f3923442709",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "c3d7372e-85d0-4b9a-9747-71ae62286555",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c3d7372e-85d0-4b9a-9747-71ae62286555",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "csa7-2023"
       }
     }
@@ -1533,18 +1632,6 @@
       }
     },
     {
-      "key": "f414980b-4d70-4782-b28c-bf4afc0b2535",
-      "position": 7,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.6\n* Topic Questions 5.9\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "f414980b-4d70-4782-b28c-bf4afc0b2535",
-        "lesson_activity.key": "dfb91103-6a89-4973-8ae8-5c904633e1d2"
-      }
-    },
-    {
       "key": "f900d5b6-fed2-4251-91b5-f7829309c107",
       "position": 1,
       "properties": {
@@ -1746,18 +1833,6 @@
       },
       "seeding_key": {
         "activity_section.key": "df6597c4-b696-461f-9756-dde4d79695f6",
-        "lesson_activity.key": "cf494ff0-c565-44fd-843b-976079297d21"
-      }
-    },
-    {
-      "key": "b4545f3e-3de3-4b81-9f3f-554a90240068",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "b4545f3e-3de3-4b81-9f3f-554a90240068",
         "lesson_activity.key": "cf494ff0-c565-44fd-843b-976079297d21"
       }
     },
@@ -1988,18 +2063,6 @@
       }
     },
     {
-      "key": "7d617a3c-985d-4f59-a88a-7a795b9db18f",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "7d617a3c-985d-4f59-a88a-7a795b9db18f",
-        "lesson_activity.key": "292727d4-0df2-4323-bd63-fac668fc0b96"
-      }
-    },
-    {
       "key": "34b869e1-f1df-494e-8b22-d87f43e08b10",
       "position": 1,
       "properties": {
@@ -2188,18 +2251,6 @@
       },
       "seeding_key": {
         "activity_section.key": "e9c3fce4-340a-400c-acd7-09748fae8d92",
-        "lesson_activity.key": "b6614c5c-b0a3-4cec-b22a-6e04e7543022"
-      }
-    },
-    {
-      "key": "4da26e11-4314-4671-ac62-1fd37a450b75",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "4da26e11-4314-4671-ac62-1fd37a450b75",
         "lesson_activity.key": "b6614c5c-b0a3-4cec-b22a-6e04e7543022"
       }
     },
@@ -2399,18 +2450,6 @@
       }
     },
     {
-      "key": "02648600-9d0b-493e-a3e4-e4fa94eaf307",
-      "position": 7,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "02648600-9d0b-493e-a3e4-e4fa94eaf307",
-        "lesson_activity.key": "1d404044-83f2-4f2a-87b3-45026de56c16"
-      }
-    },
-    {
       "key": "731d3528-71f8-4661-bc59-80613e20f421",
       "position": 1,
       "properties": {
@@ -2603,18 +2642,6 @@
       },
       "seeding_key": {
         "activity_section.key": "5e5da4b1-0dd8-40b2-b6fb-ecd1c12f0a64",
-        "lesson_activity.key": "eac8c5fe-1b37-43c3-9a13-c40dbacfda58"
-      }
-    },
-    {
-      "key": "aaf4637d-c97b-4f2d-a5d8-b9a9b97a7d59",
-      "position": 7,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 10.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "aaf4637d-c97b-4f2d-a5d8-b9a9b97a7d59",
         "lesson_activity.key": "eac8c5fe-1b37-43c3-9a13-c40dbacfda58"
       }
     },
@@ -3790,6 +3817,48 @@
         "activity_section.key": "a4b8cbe6-1638-436a-8313-d6f638a16129",
         "lesson_activity.key": "7f46652b-a230-4d11-b9af-97db52a3e898"
       }
+    },
+    {
+      "key": "840f9ff9-ec87-408e-b409-5b178bf46874",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "840f9ff9-ec87-408e-b409-5b178bf46874",
+        "lesson_activity.key": "733c3cae-4801-473c-a6f2-f82c87573021"
+      }
+    },
+    {
+      "key": "5a4bd08a-2905-4c35-af9d-be6e9cb452b3",
+      "position": 1,
+      "properties": {
+        "progression_name": "With Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "5a4bd08a-2905-4c35-af9d-be6e9cb452b3",
+        "lesson_activity.key": "db938f18-f47f-459a-bc1e-7f3923442709"
+      }
+    },
+    {
+      "key": "ee929afa-b05c-4dc6-8e35-06f6bef29c94",
+      "position": 2,
+      "properties": {
+        "progression_name": "No Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "ee929afa-b05c-4dc6-8e35-06f6bef29c94",
+        "lesson_activity.key": "db938f18-f47f-459a-bc1e-7f3923442709"
+      }
+    },
+    {
+      "key": "94a4424c-189e-4b0a-80c2-48115e40c217",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "94a4424c-189e-4b0a-80c2-48115e40c217",
+        "lesson_activity.key": "c3d7372e-85d0-4b9a-9747-71ae62286555"
+      }
     }
   ],
   "script_levels": [
@@ -4817,6 +4886,104 @@
       "level_keys": [
         "CSA U7 Creative Coding with The Theater Project 1-Day_2023"
       ]
+    },
+    {
+      "chapter": 42,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Console Sandbox"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa7-2023",
+        "activity_section.key": "840f9ff9-ec87-408e-b409-5b178bf46874"
+      },
+      "level_keys": [
+        "CSA 2023 Console Sandbox"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
+        "progression": "With Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa7-2023",
+        "activity_section.key": "5a4bd08a-2905-4c35-af9d-be6e9cb452b3"
+      },
+      "level_keys": [
+        "CSA 2023 Neighborhood Sandbox"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
+        "progression": "No Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa7-2023",
+        "activity_section.key": "ee929afa-b05c-4dc6-8e35-06f6bef29c94"
+      },
+      "level_keys": [
+        "CSA 2023 Neighborhood - No Bucket Sandbox"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Theater Sandbox"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Theater Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa7-2023",
+        "activity_section.key": "94a4424c-189e-4b0a-80c2-48115e40c217"
+      },
+      "level_keys": [
+        "CSA 2023 Theater Sandbox"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -5310,6 +5477,54 @@
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa7-2023",
         "activity_section.key": "9a1e2d5e-9432-4124-9970-de1197a8b25d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Console Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Console Sandbox"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa7-2023",
+        "activity_section.key": "840f9ff9-ec87-408e-b409-5b178bf46874"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Neighborhood Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa7-2023",
+        "activity_section.key": "5a4bd08a-2905-4c35-af9d-be6e9cb452b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Neighborhood - No Bucket Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa7-2023",
+        "activity_section.key": "ee929afa-b05c-4dc6-8e35-06f6bef29c94"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Theater Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Theater Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa7-2023",
+        "activity_section.key": "94a4424c-189e-4b0a-80c2-48115e40c217"
       }
     }
   ],
@@ -7637,6 +7852,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

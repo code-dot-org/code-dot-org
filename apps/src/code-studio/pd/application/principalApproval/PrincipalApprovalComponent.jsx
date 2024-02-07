@@ -53,10 +53,6 @@ const REQUIRED_SCHOOL_INFO_FIELDS = [
   'totalStudentEnrollment',
   'freeLunchPercent',
   ...RACE_LIST,
-  'committedToMasterSchedule',
-  'replaceCourse',
-  'understandFee',
-  'payFee',
 ];
 // Since the rails model allows empty principal approvals as placeholders, we require these fields here
 const ALWAYS_REQUIRED_FIELDS = [
@@ -146,14 +142,6 @@ const PrincipalApprovalComponent = props => {
   };
 
   const renderSchoolInfoSection = () => {
-    let showPayFeeNote =
-      data.committedToMasterSchedule &&
-      !data.committedToMasterSchedule.includes(
-        `Yes, I plan to include this course in the ${Year} master schedule`
-      ) &&
-      data.payFee &&
-      data.payFee.includes('No, ');
-
     return (
       <div>
         {renderSchoolSection()}
@@ -181,56 +169,6 @@ const PrincipalApprovalComponent = props => {
             />
           );
         })}
-        <LabeledRadioButtonsWithAdditionalTextFields
-          name="committedToMasterSchedule"
-          textFieldMap={{
-            [TextFields.otherWithText]: 'other',
-          }}
-          label={`Are you committed to including ${teacherApplication.course} on the master schedule in ${Year} if ${teacherApplication.name} is accepted into the program? Note: the program may be listed under a different course name as determined by your district.`}
-        />
-        <LabeledRadioButtonsWithAdditionalTextFields
-          name="replaceCourse"
-          textFieldMap={{
-            [TextFields.dontKnowExplain]: 'other',
-          }}
-        />
-
-        <p style={styles.questionText}>
-          {regionalPartner ? regionalPartner.name : 'Your regional partner'} may
-          have scholarships available to cover some or all costs associated with
-          the program.{' '}
-          <a
-            href={
-              'https://code.org/educate/professional-learning/program-information' +
-              (!!data.schoolZipCode ? '?zip=' + data.schoolZipCode : '')
-            }
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Click here to check the fees and discounts for your program
-          </a>
-          . Let us know if your school would be able to pay the fee or if you
-          need to be considered for a scholarship.
-        </p>
-        <div>
-          <LabeledSingleCheckbox name="understandFee" />
-          <LabeledRadioButtons name="payFee" />
-          {showPayFeeNote && (
-            <div>
-              <p style={styles.red}>
-                Note: To be eligible for scholarship support, your school must
-                commit to including this course in the {Year} master schedule.
-                If you are able to commit to offering this course in {Year} ,
-                please update your answer above before submitting in order to
-                retain scholarship eligibility.
-              </p>
-              <br />
-            </div>
-          )}
-
-          <LabeledInput name="contactInvoicing" required={false} />
-          <LabeledInput name="contactInvoicingDetail" required={false} />
-        </div>
         {teacherApplication.course === 'Computer Science Principles' && (
           <div>
             <p style={styles.questionText}>
@@ -291,7 +229,7 @@ const PrincipalApprovalComponent = props => {
             {regionalPartner ? `, ${regionalPartner.name}` : ''}. Participating
             teachers are asked to commit to Code.org’s year long Professional
             Learning Program starting in the summer and concluding the following
-            spring/summer. Workshops can either be held in-person, virtually, or
+            spring/summer. Workshops can be held in-person, virtually, or
             combination of both throughout the Year.
           </p>
           <p>
@@ -303,7 +241,7 @@ const PrincipalApprovalComponent = props => {
           <p>
             Please note that we are not able to consider the teacher for
             acceptance into the Professional Learning Program until you have
-            submitted this approval form.
+            submitted this form.
           </p>
           <LabeledSelect
             name="title"
@@ -375,9 +313,6 @@ PrincipalApprovalComponent.propTypes = {
 PrincipalApprovalComponent.associatedFields = [
   ...Object.keys(PageLabels),
   'doYouApprove',
-  'committedToMasterSchedule',
-  'contactInvoicing',
-  'contactInvoicingDetail',
 ];
 
 PrincipalApprovalComponent.getDynamicallyRequiredFields = data => {

@@ -13,6 +13,7 @@ import SchoolInfoInputs, {
 import firehoseClient from '../util/firehose';
 import {combineReducers, createStore} from 'redux';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const FIREHOSE_EVENTS = {
   // Interstitial is displayed to the teacher.
@@ -365,7 +366,7 @@ export default class SchoolInfoInterstitial extends React.Component {
                 style={styles.button}
                 size="large"
                 text={i18n.save()}
-                color={Button.ButtonColor.orange}
+                color={Button.ButtonColor.brandSecondaryDefault}
                 id="save-button"
               />
             </div>
@@ -384,7 +385,7 @@ const styles = {
   },
   heading: {
     fontSize: 16,
-    fontFamily: "'Gotham 5r', sans-serif",
+    ...fontConstants['main-font-semi-bold'],
   },
   middle: {
     marginTop: 20,

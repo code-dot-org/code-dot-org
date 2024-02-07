@@ -80,7 +80,7 @@ class ImageLibTest < ActiveSupport::TestCase
 
     assert_equal 'PNG', MiniMagick::Image.read(png).info(:format)
 
-    assert_not_equal original_jpg, png
+    refute_equal original_jpg, png
     assert images_equal?(MiniMagick::Image.read(original_jpg), MiniMagick::Image.read(png))
   end
 

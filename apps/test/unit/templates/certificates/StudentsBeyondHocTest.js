@@ -37,16 +37,4 @@ describe('StudentsBeyondHoc', () => {
     );
     expect(wrapper.find('CourseBlocksStudentGradeBands').exists());
   });
-
-  it('renders a LocalClassActionBlock component', () => {
-    const wrapper = wrapped(
-      <StudentsBeyondHoc
-        completedTutorialType="other"
-        MCShareLink="code.org/minecraft/sharelink"
-        userType="signedOut"
-        isEnglish={true}
-      />
-    );
-    expect(wrapper.find('LocalClassActionBlock').exists());
-  });
 });

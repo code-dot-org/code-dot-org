@@ -16,10 +16,6 @@ Feature: Make sure we can see the finish button for all LEVEL TYPE levels on sma
     And I check that the blockly free play level for "Bounce" shows the finish button for small screens
 
   @no_mobile
-  Scenario: can see finish button on "CS in Algebra"
-    And I check that the blockly free play level for "CS in Algebra" shows the finish button for small screens
-
-  @no_mobile
   Scenario: can see finish button on "Flappy"
     And I check that the blockly free play level for "Flappy" shows the finish button for small screens
 
@@ -42,10 +38,6 @@ Feature: Make sure we can see the finish button for all LEVEL TYPE levels on sma
   @only_mobile
   Scenario: can see finish button on "Artist"
     And I check that the blockly free play level for "Artist" shows the finish button for mobile screens
-
-  @only_mobile
-  Scenario: can see finish button on "CS in Algebra"
-    And I check that the blockly free play level for "CS in Algebra" shows the finish button for mobile screens
 
   @only_mobile
   Scenario: can see finish button on "Flappy"

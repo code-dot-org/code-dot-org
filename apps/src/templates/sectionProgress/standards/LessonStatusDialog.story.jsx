@@ -9,7 +9,6 @@ import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSection
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 
 export default {
-  title: 'LessonStatusDialog',
   component: LessonStatusDialog,
 };
 

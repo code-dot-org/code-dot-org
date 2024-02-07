@@ -16,6 +16,7 @@ import ProgressTableDetailCell from '@cdo/apps/templates/sectionProgress/progres
 import ProgressTableLevelIconSet from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelIconSet';
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import {createStore, combineReducers} from 'redux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 import progress from '@cdo/apps/code-studio/progressRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
@@ -23,7 +24,6 @@ import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import {unitTestExports} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLessonNumber';
 import * as Sticky from 'reactabular-sticky';
 import locales from '@cdo/apps/redux/localesRedux';
-import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import {
   fakeLessonWithLevels,
   fakeStudents,
@@ -47,12 +47,12 @@ const initialState = fakeProgressTableReduxInitialState(
 const setUp = (currentView = ViewType.SUMMARY, overrideState = {}) => {
   const store = createStore(
     combineReducers({
+      currentUser,
       progress,
       teacherSections,
       sectionProgress,
       unitSelection,
       locales,
-      isRtl,
     }),
     _.merge({}, initialState, overrideState)
   );
@@ -263,5 +263,27 @@ describe('ProgressTableView', () => {
     );
     wrapper.onToggleRow(rowData.student.id);
     expect(wrapper.state.rows).to.have.lengthOf(STUDENTS.length);
+  });
+
+  it('sorts by family name', () => {
+    // The default test helper sorts by given name
+    const givenNameWrapper = setUp()
+      .find(UnconnectedProgressTableView)
+      .instance();
+
+    const overrideState = {currentUser: {isSortedByFamilyName: true}};
+    const familyNameWrapper = setUp(ViewType.SUMMARY, overrideState)
+      .find(UnconnectedProgressTableView)
+      .instance();
+
+    expect(givenNameWrapper.state.rows).to.have.lengthOf(STUDENTS.length);
+    expect(familyNameWrapper.state.rows).to.have.lengthOf(STUDENTS.length);
+
+    // The student generator makes the first student have the first given name
+    // alphabetically. The last student has the first family name alphabetically
+    expect(givenNameWrapper.state.rows[0].student.id).to.equal(0);
+    expect(familyNameWrapper.state.rows[0].student.id).to.equal(
+      STUDENTS.length - 1
+    );
   });
 });

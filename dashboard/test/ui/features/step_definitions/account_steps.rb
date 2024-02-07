@@ -86,7 +86,16 @@ end
 def create_user(name, url: '/users.json', code: 201, **user_opts)
   navigate_to replace_hostname('http://studio.code.org/reset_session')
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, tries: 3) do
+    # Generate the user
     email, password = generate_user(name)
+
+    # Set the parent email to the user email, if we see it
+    # in the user options (we generate the email, here)
+    if user_opts.key? :parent_email_preference_email
+      user_opts[:parent_email_preference_email] = email
+    end
+
+    # Issue the update request for the user
     browser_request(
       url: url,
       method: 'POST',
@@ -107,13 +116,13 @@ def create_user(name, url: '/users.json', code: 201, **user_opts)
   end
 end
 
-And(/^I create a (young )?student( in Colorado)?( who has never signed in)? named "([^"]*)"( and go home)?$/) do |young, locked, new_account, name, home|
+And(/^I create( as a parent)? a (young )?student( in Colorado)?( who has never signed in)? named "([^"]*)"( and go home)?$/) do |parent_created, young, locked, new_account, name, home|
   age = young ? '10' : '16'
   sign_in_count = new_account ? 0 : 2
 
   user_opts = {
     age: age,
-    sign_in_count: sign_in_count
+    sign_in_count: sign_in_count,
   }
 
   if locked
@@ -121,8 +130,26 @@ And(/^I create a (young )?student( in Colorado)?( who has never signed in)? name
     user_opts[:us_state] = "CO"
   end
 
+  if parent_created
+    user_opts[:parent_email_preference_opt_in_required] = "1"
+    user_opts[:parent_email_preference_opt_in] = "no"
+    user_opts[:parent_email_preference_email] = "[user-email]"
+  end
+
   create_user(name, **user_opts)
   navigate_to replace_hostname('http://studio.code.org') if home
+end
+
+And(/^I type the email for "([^"]*)" into element "([^"]*)"$/) do |name, element|
+  steps <<~GHERKIN
+    And I type "#{@users[name][:email]}" into "#{element}"
+  GHERKIN
+end
+
+And(/^I press keys for the email for "([^"]*)" into element "([^"]*)"$/) do |name, element|
+  steps <<~GHERKIN
+    And I press keys "#{@users[name][:email]}" for element "#{element}"
+  GHERKIN
 end
 
 And(/^I create a student in the eu named "([^"]*)"$/) do |name|
@@ -200,11 +227,8 @@ def pass_time_for_user(name, amount_of_time)
   end
 end
 
-And(/^I give user "([^"]*)" authorized teacher permission$/) do |name|
-  require_rails_env
-  user = User.find_by_email_or_hashed_email(@users[name][:email])
-  user.permission = UserPermission::AUTHORIZED_TEACHER
-  user.save!
+And(/^I give user "([^"]*)" authorized teacher permission$/) do |_|
+  browser_request(url: '/api/test/authorized_teacher_access', method: 'POST')
 end
 
 And(/^I get universal instructor access$/) do

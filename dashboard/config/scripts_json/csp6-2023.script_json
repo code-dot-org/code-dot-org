@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "b068f15c-b571-48ff-91db-cc9558d0bd7c",
+          "notice": "Free Teacher Resources from Amazon Future Engineer",
+          "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
+          "link": "https://code.org/afe",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Get free resources"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -18,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-07 22:42:49 UTC",
+    "serialized_at": "2024-02-06 05:48:39 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1216,7 +1228,7 @@
       "key": "b9e4528e-6c97-4480-8474-d243c24afc9f",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 2 (5 mins):** Students read the code, and then investigate the data tab.  \n\n**Discuss:** Encourage students to share out what they found in the data tab, and how they can interact with it with code.\n\n* **The goal:** The goal of this investigation is to get students comfortable with information inside the “Data” tab and to help them understand the [`getColumn`(#d3e965)](/docs/applab/getColumn/) command.  Students should be given some time to explore the Data tab themselves and even try the “Modify” task for a few minutes.  \n    \n* **What to look for:** When you bring the class together, students should be able to describe what information they see in the data tab and how they can use the data tab to help get access to data.  Key points to draw out are:\n    \n    * The “Data Library” on the left hand side has different categories of datasets that students can view.\n    * Students need to “import” a data set to be able to see the data inside it or to use the data in the code.\n    * Once imported, students will see the data set in the “Data Browser” area and can click on the name of the Data Set to see the data in table form.\n    * To use the [`getColumn`(#d3e965)](/docs/applab/getColumn/) command, you need the name of the table you want to use and the name of the column from that table.\n    * [`getColumn`(#d3e965)](/docs/applab/getColumn/) will return the column from your table as a list.  You can see it is a list because when it is printed to the console, it has square brackets `[ ]` around the items which are separated by commas.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Modify:** Students choose a new dataset to import to the project. Then students modify the code to print out a column of data from the chosen dataset. Point out to students that when they pull out a column, they are creating a list.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 4 (5 mins):** Students read the code, and then investigate the data tab.  \n\n**Discuss:** Encourage students to share out what they found in the data tab, and how they can interact with it with code.\n\n* **The goal:** The goal of this investigation is to get students comfortable with information inside the “Data” tab and to help them understand the [`getColumn`(#d3e965)](/docs/applab/getColumn/) command.  Students should be given some time to explore the Data tab themselves and even try the “Modify” task for a few minutes.  \n    \n* **What to look for:** When you bring the class together, students should be able to describe what information they see in the data tab and how they can use the data tab to help get access to data.  Key points to draw out are:\n    \n    * The “Data Library” on the left hand side has different categories of datasets that students can view.\n    * Students need to “import” a data set to be able to see the data inside it or to use the data in the code.\n    * Once imported, students will see the data set in the “Data Browser” area and can click on the name of the Data Set to see the data in table form.\n    * To use the [`getColumn`(#d3e965)](/docs/applab/getColumn/) command, you need the name of the table you want to use and the name of the column from that table.\n    * [`getColumn`(#d3e965)](/docs/applab/getColumn/) will return the column from your table as a list.  You can see it is a list because when it is printed to the console, it has square brackets `[ ]` around the items which are separated by commas.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Modify:** Students choose a new dataset to import to the project. Then students modify the code to print out a column of data from the chosen dataset. Point out to students that when they pull out a column, they are creating a list.",
         "name": "Data Tab Investigation",
         "progression_name": "Data Tab Investigation"
       },
@@ -1341,6 +1353,22 @@
       },
       "seeding_key": {
         "activity_section.key": "daf25887-3b63-4b25-a294-0c75c6864830",
+        "lesson_activity.key": "d8d90c1f-ef23-4b03-bc33-0d11e4b6d68a"
+      }
+    },
+    {
+      "key": "0dc1f1be-422f-4495-90f6-42c09d3df6f0",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "<b>Create Performance Task Written Response Practice</b>\n\nIn order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\n</br>\n\nSample Prompt: <i>Identify the number of times the body of your iteration statement will execute. Describe a condition or error that would cause your iteration statement to not terminate and cause an infinite loop. If no such condition or error exists, explain how the loop could be modified to cause an infinite loop.</i>\n\n\n<a href=\"https://docs.google.com/presentation/d/1J2hBz676YRP_Fbs7IwNYsX32XQmJ49x2RxptD-DwBIk/edit#slide=id.g28a3d051caa_0_0\">Unit Journal Template</a>\n\n<b>Sample Response for Instructors</b> (<i>coming soon...</i>)\n\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0dc1f1be-422f-4495-90f6-42c09d3df6f0",
         "lesson_activity.key": "d8d90c1f-ef23-4b03-bc33-0d11e4b6d68a"
       }
     },
@@ -1932,7 +1960,13 @@
       "key": "cac9dbfa-11e2-420c-ba4d-cc15ba3a6f0d",
       "position": 9,
       "properties": {
-        "progression_name": "For Loop Practice"
+        "progression_name": "For Loop Practice",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Create Performance Task Written Response Practice**\n\n In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\nSample Prompt: <i> Identify the number of times the body of your iteration statement will execute. Describe a condition or error that would cause your iteration statement to not terminate and cause an infinite loop. If no such condition or error exists, explain how the loop could be modified to cause an infinite loop.</i>\n\n\n\n[Unit Journal Template](https://docs.google.com/presentation/d/1J2hBz676YRP_Fbs7IwNYsX32XQmJ49x2RxptD-DwBIk/edit#slide=id.g28a3d051caa_0_0) \n\n**Sample Response for Instructors**\n\n\n\n![](https://images.code.org/8618586759adcfae2539e60b9cbf819d-Screenshot 2023-11-04 at 11.16.43 AM.png)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "cac9dbfa-11e2-420c-ba4d-cc15ba3a6f0d",
@@ -1954,7 +1988,13 @@
       "key": "8277a753-5403-4923-a480-2e22c5e2e6cd",
       "position": 11,
       "properties": {
-        "progression_name": "Loops and Screen Elements"
+        "progression_name": "Loops and Screen Elements",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Create Performance Task Written Response Practice**\n\n In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\nCreate PT Learning Objective(s): \n* Identify the error.\n* Correct the error.\n\n\n[Unit Journal Template](https://docs.google.com/presentation/d/1J2hBz676YRP_Fbs7IwNYsX32XQmJ49x2RxptD-DwBIk/edit#slide=id.g296d9c820e5_2_0) You may choose to reuse this debugging journal template if you think it will help support your students becoming stronger debuggers.\n\n**Sample Response for Instructors**\n\n![](https://images.code.org/c097084c3ab965c6395296f733095c91-Screenshot 2023-11-03 at 11.23.26 AM.png)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8277a753-5403-4923-a480-2e22c5e2e6cd",
@@ -2273,7 +2313,7 @@
       "key": "f7e98661-93eb-4efd-b273-6e6ab99e9189",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Group students into groups of four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 1:** Students read the entire code, and then students focuses their attention on a single function. Student should re-read the code for their function.\n\n* Student A - `average()` (lines 32-38)\n* Student B - `slow()` (lines 40-48)\n* Student C - `fast()` (lines 50-58)\n* Student D - `numberedListDisplay()` (lines 60-66)\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How does the app work?*\n\nStudents discuss in their groups how each of their functions work, specifically referencing the list it uses and how it is traversed using a for loop. Then as a class address any confusion over how the app works. \n\n* **The goal:** The goal of this investigation is to give students the opportunity to see lists traversed for different reasons and with different outcomes.   Students should look at the code for their assigned function and make sense of what the function does overall and how it does it.  \n* **What to look for:** It may be helpful to re-watch the [video](https://youtu.be/RQ6GJt9f2vg) in the U5L10 - Traversals Explore lesson starting at 3:07 to hear how the speaker describes a section of code that processes a list for a specific purpose.  Listening to that explanation will help give you an idea of what student explanations of their functions should sound like.  \n    \n    For example, when explaining the average function in this investigation, students should describe what the function does.  In this case, the function calculates the average of the values stored in the `mileTimes` list and stores that value in the `avg` variable. In addition to describing what the function does, students should describe how the function works.  This will involve more detail.  \n  * Students should be able to describe that the function contains a local variable of `total` which is initialized at 0.  \n  * Then the function uses a for loop to traverse through the `mileTimes` list.  In the loop, each value inside `mileTimes` list is accessed and added to the current value stored inside the total variable.  \n  * When the loop reaches the end of the list, the loop ends and the total variable contains the sum of all the `mileTimes`.  In the last line of the function, the value stored in `avg` is updated by dividing the value stored in `total` by the total number of elements in the `mileTimes` list.  \n\n    \n \nWhen you bring the class together to talk about how the app works, you should talk both about what the functions do as well as how they work.  There likely is not time to go over all four functions, but discussing one or two of them will ensure the full class has an opportunity to hear how their peers describe code.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Group students into groups of four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 1:** Students read the entire code, and then students focuses their attention on a single function. Student should re-read the code for their function.\n\n* Student A - `average()` (lines 32-38)\n* Student B - `slow()` (lines 40-48)\n* Student C - `fast()` (lines 50-58)\n* Student D - `numberedListDisplay()` (lines 60-66)\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How does the app work?*\n\nStudents discuss in their groups how each of their functions work, specifically referencing the list it uses and how it is traversed using a for loop. Then as a class address any confusion over how the app works. \n\n* **The goal:** The goal of this investigation is to give students the opportunity to see lists traversed for different reasons and with different outcomes.   Students should look at the code for their assigned function and make sense of what the function does overall and how it does it.  \n* **What to look for:** It may be helpful to re-watch the [video](https://youtu.be/RQ6GJt9f2vg) in the U6L9 - Traversals Explore lesson starting at 3:07 to hear how the speaker describes a section of code that processes a list for a specific purpose.  Listening to that explanation will help give you an idea of what student explanations of their functions should sound like.  \n    \n    For example, when explaining the average function in this investigation, students should describe what the function does.  In this case, the function calculates the average of the values stored in the `mileTimes` list and stores that value in the `avg` variable. In addition to describing what the function does, students should describe how the function works.  This will involve more detail.  \n  * Students should be able to describe that the function contains a local variable of `total` which is initialized at 0.  \n  * Then the function uses a for loop to traverse through the `mileTimes` list.  In the loop, each value inside `mileTimes` list is accessed and added to the current value stored inside the total variable.  \n  * When the loop reaches the end of the list, the loop ends and the total variable contains the sum of all the `mileTimes`.  In the last line of the function, the value stored in `avg` is updated by dividing the value stored in `total` by the total number of elements in the `mileTimes` list.  \n\n    \n \nWhen you bring the class together to talk about how the app works, you should talk both about what the functions do as well as how they work.  There likely is not time to go over all four functions, but discussing one or two of them will ensure the full class has an opportunity to hear how their peers describe code.",
         "name": "Mile Tracker Investigation",
         "progression_name": "Mile Tracker Investigation",
         "tips": [
@@ -2292,7 +2332,7 @@
       "key": "10299e7c-970b-47ac-be8f-0228a8445d13",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 4:** Instruct students to run the app and then carefully read it. There is a lot of information in the comments in this app. Students work through all of the questions on the screen.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Go through the questions one by one and answer as a class. Afterwards, go line by line with the class explaining how the app works. \n\n* **The goal:** The goal of this investigation is to give students an opportunity to make sense of how traversals and the datasets can be used together to create a working app.  It is important to note that the algorithms in this app have some of the same qualities as the algorithm students will need to develop for the Create PT.  \n    \n* **What to look for:** This project defines several different functions.  Help guide students particularly to how the lists are filled. Students should see a `listSetup` function.  This function calls the `filter` function.  `filter` is where the lists are being filled.  Use the questions listed in CodeStudio to help students make sense of this code. In particular, spend a little extra time discussing the question “How are these lists filled?”. This is an opportunity to go through the `filter` function line by line to understand how the function works.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 2:** Instruct students to run the app and then carefully read it. There is a lot of information in the comments in this app. Students work through all of the questions on the screen.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Go through the questions one by one and answer as a class. Afterwards, go line by line with the class explaining how the app works. \n\n* **The goal:** The goal of this investigation is to give students an opportunity to make sense of how traversals and the datasets can be used together to create a working app.  It is important to note that the algorithms in this app have some of the same qualities as the algorithm students will need to develop for the Create PT.  \n    \n* **What to look for:** This project defines several different functions.  Help guide students particularly to how the lists are filled. Students should see a `listSetup` function.  This function calls the `filter` function.  `filter` is where the lists are being filled.  Use the questions listed in CodeStudio to help students make sense of this code. In particular, spend a little extra time discussing the question “How are these lists filled?”. This is an opportunity to go through the `filter` function line by line to understand how the function works.",
         "name": "Random Dog Picker Investigation",
         "progression_name": "Random Dog Picker Investigation",
         "tips": [
@@ -2311,9 +2351,15 @@
       "key": "2815843a-607d-421a-a710-a89ee57ae819",
       "position": 3,
       "properties": {
-        "description": "**Levels 5-6:** Review the patterns in these levels as a class.\n\n* Have students add any relevant notes about the patterns to their journals.\n* Discuss which patterns were used in the apps today.",
+        "description": "**Levels 3-4:** Review the patterns in these levels as a class.\n\n* Have students add any relevant notes about the patterns to their journals.\n* Discuss which patterns were used in the apps today.",
         "name": "Traversal Patterns",
-        "progression_name": "Traversal Patterns"
+        "progression_name": "Traversal Patterns",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Create Performance Task Written Response Practice**\n\n\n\n In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\nCreate PT Learning Objective(s):  \n- Write iteration statements to traverse a list. \n- Determine the result of an algorithm that includes list traversals.\n\n\n[Unit Journal Template](https://docs.google.com/presentation/d/1J2hBz676YRP_Fbs7IwNYsX32XQmJ49x2RxptD-DwBIk/edit?usp=sharing)\n\n**Sample Response for Instructors**\n\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "2815843a-607d-421a-a710-a89ee57ae819",
@@ -3095,42 +3141,8 @@
       }
     },
     {
-      "key": "ed5457f8-483a-4e84-ba98-611c6fb6041d",
-      "position": 10,
-      "properties": {
-        "description": "#### CSP Vocabulary Bingo"
-      },
-      "seeding_key": {
-        "activity_section.key": "ed5457f8-483a-4e84-ba98-611c6fb6041d",
-        "lesson_activity.key": "18af6994-fc26-433d-96d7-1f20ad4b5929"
-      }
-    },
-    {
-      "key": "84c8008f-74fd-43a4-8e15-353cce8d1024",
-      "position": 11,
-      "properties": {
-        "description": "Now that we are near the end of the unit, we are going to play CSP Vocabulary BINGO once again. You have been working hard on learning the definitions of all of the different vocabulary words throughout the unit, and now we will put your amazing memories to the test.\n\nI will give each of your a BINGO card that has randomized vocabulary on it. When you hear the definition for a word that you have on your card, mark that square. If you have 4 in a row horizontally, vertically, or diagonally, yell, \"BINGO!\"\n\nAre there any questions?",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "84c8008f-74fd-43a4-8e15-353cce8d1024",
-        "lesson_activity.key": "18af6994-fc26-433d-96d7-1f20ad4b5929"
-      }
-    },
-    {
-      "key": "a729ebcb-1921-4fce-833d-2b41e0d33976",
-      "position": 12,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pass out a BINGO Card to all students. A printable PDF is located in the Resources section of this lesson plan.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the <a href=\"https://studio.code.org/s/csp-bingo-2023\" target=\"_blank\">CSP Bingo Generator</a> for Unit Six in order to generate clues for the students."
-      },
-      "seeding_key": {
-        "activity_section.key": "a729ebcb-1921-4fce-833d-2b41e0d33976",
-        "lesson_activity.key": "18af6994-fc26-433d-96d7-1f20ad4b5929"
-      }
-    },
-    {
       "key": "43b45e1c-b5ab-4af2-998b-fc2ebcf6cd5d",
-      "position": 13,
+      "position": 10,
       "properties": {
         "progression_name": "End-of-Unit Survey"
       },
@@ -3158,8 +3170,24 @@
       }
     },
     {
-      "key": "f6bc2671-7451-47b2-b428-5b536c28c951",
+      "key": "dd3e19fa-08d9-406f-993a-6fd1d3eef6f8",
       "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "<b>Create Performance Task Written Response Practice</b>\n</br>\n\nThere is an optional written response that you might consider students completing as part of their assessment on this unit. The task requires students to snip and paste a section of code that they created for the Hackathon Project and then use this code reference to answer a prompt. This is intended to simulate what students are going to be asked to perform on the AP CSP exam with the Personalized Project Reference and written response questions.\n</br>\n\nSample Prompt: <i>Find a procedure within your project that uses iteration to accomplish a task. Without using code, clearly explain how the iterative statement works within the context of the procedure in which it is located.</i>\n\n</br>\n\n<a href=\"https://docs.google.com/presentation/d/1LSSxUPfpWVOt77WiTvMO6Q8_6UDwUPbUG3_qYyfo1iE/\" target=\"_blank\">Create Performance Task -  Written Response Assessment Question</a>\n\n<b>Sample Response for Instructors</b>\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dd3e19fa-08d9-406f-993a-6fd1d3eef6f8",
+        "lesson_activity.key": "5da4346f-d40b-4265-8e24-c2d649d928eb"
+      }
+    },
+    {
+      "key": "f6bc2671-7451-47b2-b428-5b536c28c951",
+      "position": 2,
       "properties": {
         "description": "Review the answers to the assessment with the class. Discuss any questions that come up and take note of topics where students may need extra review."
       },
@@ -5345,28 +5373,15 @@
       }
     },
     {
-      "name": "CSP Bingo Cards - Unit Six",
-      "url": "https://drive.google.com/file/d/1KBVdeq9cajlPQOcNb8xhFyfxxgV4VnYD/view?usp=sharing",
-      "key": "csp_bingo_cards_-_unit_six",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://drive.google.com/uc?export=download&id=1KBVdeq9cajlPQOcNb8xhFyfxxgV4VnYD",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "csp_bingo_cards_-_unit_six"
-      }
-    },
-    {
-      "name": "CSP Bingo Generator",
-      "url": "https://studio.code.org/s/csp-bingo-2023",
-      "key": "csp_bingo_generator",
+      "name": "Create PT Practice Written Response - Unit 6 Assessment",
+      "url": "https://docs.google.com/presentation/d/1LSSxUPfpWVOt77WiTvMO6Q8_6UDwUPbUG3_qYyfo1iE",
+      "key": "create_pt_practice_written_response_-_unit_6_assessment",
       "properties": {
         "audience": "Teacher",
         "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "csp_bingo_generator"
+        "resource.key": "create_pt_practice_written_response_-_unit_6_assessment"
       }
     },
     {
@@ -5933,6 +5948,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Assessment Day",
+        "resource.key": "create_pt_practice_written_response_-_unit_6_assessment"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lists Explore",
         "resource.key": "csp_unit_6_-_lesson_1_-_lists_explore"
       }
@@ -6073,18 +6094,6 @@
       "seeding_key": {
         "lesson.key": "Loops Practice",
         "resource.key": "csp_unit_6_-_lesson_7_-_loops_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Hackathon Part 1",
-        "resource.key": "csp_bingo_cards_-_unit_six"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Hackathon Part 1",
-        "resource.key": "csp_bingo_generator"
       }
     },
     {

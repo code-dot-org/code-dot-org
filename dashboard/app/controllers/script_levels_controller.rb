@@ -65,6 +65,10 @@ class ScriptLevelsController < ApplicationController
     authorize! :read, ScriptLevel
     @script = ScriptLevelsController.get_script(request)
 
+    if @script.is_deprecated
+      return render 'errors/deprecated_course'
+    end
+
     # @view_as_user is used to determine redirect path for bubble choice levels
     view_as_other = params[:user_id] && current_user && params[:user_id] != current_user.id
     @view_as_user = view_as_other ? User.find(params[:user_id]) : current_user
@@ -160,6 +164,21 @@ class ScriptLevelsController < ApplicationController
 
     @body_classes = @level.properties['background']
 
+    @rubric = @script_level.lesson.rubric
+    if @rubric
+      @rubric_data = {rubric: @rubric.summarize}
+      if @script_level.lesson.rubric && view_as_other
+        viewing_user_level = @view_as_user.user_levels.find_by(script: @script_level.script, level: @level)
+        @rubric_data[:studentLevelInfo] = {
+          user_id: @view_as_user.id,
+          name: @view_as_user.name,
+          attempts: viewing_user_level&.attempts,
+          timeSpent: viewing_user_level&.time_spent,
+          lastAttempt: viewing_user_level&.updated_at,
+        }
+      end
+    end
+
     present_level
   end
 
@@ -187,7 +206,7 @@ class ScriptLevelsController < ApplicationController
 
     @level = @script_level.level
 
-    render json: @level.summarize_for_lab2_properties
+    render json: @level.summarize_for_lab2_properties(@script)
   end
 
   # Get a list of hidden lessons for the current users section
@@ -233,11 +252,11 @@ class ScriptLevelsController < ApplicationController
 
     if @script.can_be_instructor?(current_user)
       if params[:section_id]
-        @section = current_user.sections.find_by(id: params[:section_id])
+        @section = current_user.sections_instructed.find_by(id: params[:section_id])
         @user = @section&.students&.find_by(id: params[:user_id])
       # If we have no url param and only one section make sure that is the section we are using
-      elsif current_user.sections.length == 1
-        @section = current_user.sections[0]
+      elsif current_user.sections_instructed.length == 1
+        @section = current_user.sections_instructed[0]
         @user = @section&.students&.find_by(id: params[:user_id])
       end
       # This errs on the side of showing the warning by only if the script we are in
@@ -308,7 +327,7 @@ class ScriptLevelsController < ApplicationController
       if params[:lesson_position]
         script.lesson_by_relative_position(params[:lesson_position])
       else
-        script.lesson_by_relative_position(params[:lockable_lesson_position], true)
+        script.lesson_by_relative_position(params[:lockable_lesson_position], unnumbered_lesson: true)
       end
 
     render json: lesson.summary_for_lesson_plans
@@ -344,7 +363,7 @@ class ScriptLevelsController < ApplicationController
   private def find_next_level_for_session(script)
     script.script_levels.detect do |sl|
       sl.valid_progression_level? &&
-          (client_state.level_progress(sl) < Activity::MINIMUM_PASS_RESULT)
+        (client_state.level_progress(sl) < Activity::MINIMUM_PASS_RESULT)
     end
   end
 
@@ -413,12 +432,9 @@ class ScriptLevelsController < ApplicationController
     if params[:section_id] && params[:section_id] != "undefined"
       section = Section.find(params[:section_id])
 
-      # TODO: This should use cancan/authorize.
-      if section.user == current_user
-        @section = section
-      end
-    elsif current_user.try(:sections).try(:where, hidden: false).try(:count) == 1
-      @section = current_user.sections.where(hidden: false).first
+      @section = section if can?(:manage, section)
+    elsif current_user.try(:sections_instructed).try(:where, hidden: false).try(:count) == 1
+      @section = current_user.sections_instructed.where(hidden: false).first
     end
   end
 
@@ -456,9 +472,7 @@ class ScriptLevelsController < ApplicationController
 
     # Check to see if any of the variants are part of an experiment that we're in
     if current_user && @script_level.has_experiment?
-      section_as_student = current_user.sections_as_student.find_by(script: @script_level.script) ||
-        current_user.sections_as_student.first
-      experiment_level = @script_level.find_experiment_level(current_user, section_as_student)
+      experiment_level = @script_level.find_experiment_level(current_user)
       return experiment_level if experiment_level
     end
 

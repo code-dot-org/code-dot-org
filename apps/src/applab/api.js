@@ -181,6 +181,13 @@ export function putImageData(imageData, x, y) {
   });
 }
 
+export function textArea(elementId, text) {
+  return Applab.executeCmd(null, 'textArea', {
+    elementId: elementId,
+    text: text,
+  });
+}
+
 export function textInput(elementId, text) {
   return Applab.executeCmd(null, 'textInput', {
     elementId: elementId,
@@ -208,6 +215,16 @@ export function radioButton(elementId, checked, name) {
     elementId: elementId,
     checked: checked,
     name: name,
+  });
+}
+
+export function slider(elementId, min, max, value, step) {
+  return Applab.executeCmd(null, 'slider', {
+    elementId: elementId,
+    min: min,
+    max: max,
+    value: value,
+    step: step,
   });
 }
 
