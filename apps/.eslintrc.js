@@ -135,5 +135,11 @@ module.exports = {
         '@typescript-eslint/no-var-requires': 'off',
       },
     },
+    {
+      files: ['*.story.@(ts|tsx|js|jsx)'],
+      rules: {
+        'storybook/no-title-property-in-meta': 'error',
+      },
+    },
   ],
 };
