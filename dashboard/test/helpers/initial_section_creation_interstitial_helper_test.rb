@@ -23,4 +23,11 @@ class InitialSectionCreationInterstitialHelperTest < ActiveSupport::TestCase
 
     assert InitialSectionCreationInterstitialHelper.show?(@teacher)
   end
+
+  test 'does not show the dialog if the teacher is an LTI user' do
+    @teacher = create :teacher, :with_lti_auth
+    @teacher.update(sign_in_count: 1)
+
+    refute InitialSectionCreationInterstitialHelper.show?(@teacher)
+  end
 end
