@@ -269,7 +269,7 @@ Resources:
             -
               Name: DRONE_S3_BUCKET
               Value: code-dot-org
-              # TODO: change this to: !Ref CiCacheBucket
+              # TODO: change this to: !Ref DroneBucket
             -
               Name: DRONE_S3_PREFIX
               Value: /drone-build-logs/
@@ -509,26 +509,26 @@ Resources:
           CidrIp: 3.90.82.166/32
 
   # -------------------------
-  # Cache Bucket
+  # Drone Bucket for Cache and Logs
   # -------------------------
 
-  CiCacheBucket:
+  DroneBucket:
     Type: 'AWS::S3::Bucket'
     Properties:
-      BucketName: cdo-ci-cache
+      BucketName: cdo-drone
 
-  CiCacheBucketFullAccessPolicy:
+  DroneBucketFullAccessPolicy:
     Type: 'AWS::IAM::Policy'
     Properties:
-      PolicyName: CiCacheBucketFullAccessPolicy
+      PolicyName: DroneBucketFullAccessPolicy
       PolicyDocument:
         Version: '2012-10-17'
         Statement:
           - Effect: Allow
             Action: 's3:*'
             Resource:
-            - !Sub 'arn:aws:s3:::${CiCacheBucket}'
-            - !Sub 'arn:aws:s3:::${CiCacheBucket}/*'
+            - !Sub 'arn:aws:s3:::${DroneBucket}'
+            - !Sub 'arn:aws:s3:::${DroneBucket}/*'
             # TODO: remove references to old bucket once no longer used
             - 'arn:aws:s3:::code-dot-org'
             - 'arn:aws:s3:::code-dot-org/*'
