@@ -15,12 +15,10 @@ module I18n
             crowdin_file_path = crowdin_file_path_of(language)
             return unless File.file?(crowdin_file_path)
 
-            unless I18nScriptUtils.source_lang?(language)
-              restore_localization(language)
-              fix_localization_urls(language)
-              report_malformed_i18n(language)
-              distribute_localization(language)
-            end
+            restore_localization(language)
+            fix_localization_urls(language)
+            report_malformed_i18n(language)
+            distribute_localization(language)
 
             i18n_file_path = I18nScriptUtils.locale_dir(language[:locale_s], DIR_NAME, FILE_NAME)
             I18nScriptUtils.move_file(crowdin_file_path, i18n_file_path)
