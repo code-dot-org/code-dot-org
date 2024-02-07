@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-02 20:02:04 UTC",
+    "serialized_at": "2024-02-06 19:52:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4514,7 +4514,7 @@
       "key": "232acb50-ca00-4806-a4cd-066161aecc5a",
       "position": 4,
       "properties": {
-        "description": "[CODE]"
+        "progression_name": "Exploration level"
       },
       "seeding_key": {
         "activity_section.key": "232acb50-ca00-4806-a4cd-066161aecc5a",
@@ -4525,7 +4525,7 @@
       "key": "9de6e580-c0cc-4bfe-8f24-c810f31b1c76",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt**: What did you discover about the new flex properties?\n\n**Discussion Goal**: The goal of this quick discussion is to allow students to share what they figured out or what they noticed about the properties. It is okay if they didn’t figure out exactly what each new property does, as they will learn in the next skill building levels. Some possible discoveries might include:\n* Without `display:flex;` the flex items go back to their original order\n* Without `flex-grow;` the flex items share the available container space equally\n* Without `flex-shrink;` all flex items shrink equally when the Preview window is resized\n* Students might also notice and comment that the flex items are all div containers instead of paragraphs or images as they saw last lesson"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt**: What did you discover about the new flex properties?\n\n**Discussion Goal**: The goal of this quick discussion is to allow students to share what they noticed or what they noticed about the properties. It is okay if they didn’t figure out exactly what each new property does, as they will learn in the next skill building levels. Some possible discoveries might include:\n* `flex-grow` seems to increase the size of an element\n* `flex-shrink` appears to decrease the size of an element\n* `order` rearranged the items\n   * Students may also wonder why a `-1` put the item at the front while a `1` put the item at the end. This is because the default order value of all items is 0. A negative number will put that to the left of items with a \"0\" value and an item with an order value greater than 0 will be placed to the right of items with a 0 value. This information is already noted in their Cheat Sheet but it may be helpful for students to highlight or circle the information.\n* `align-self` changes the vertical alignment for that one item"
       },
       "seeding_key": {
         "activity_section.key": "9de6e580-c0cc-4bfe-8f24-c810f31b1c76",
@@ -4576,7 +4576,7 @@
       "key": "f5ed41e8-e267-4601-8d2c-a8a015bbd1c7",
       "position": 9,
       "properties": {
-        "description": "[pracitce levels]"
+        "progression_name": "Practice Levels"
       },
       "seeding_key": {
         "activity_section.key": "f5ed41e8-e267-4601-8d2c-a8a015bbd1c7",
@@ -4604,7 +4604,7 @@
       "key": "71c5548e-3953-4c33-ac03-394bdf1e8c37",
       "position": 11,
       "properties": {
-        "description": "[challenge levels]"
+        "progression_name": "Challenge Levels"
       },
       "seeding_key": {
         "activity_section.key": "71c5548e-3953-4c33-ac03-394bdf1e8c37",
@@ -8039,6 +8039,34 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L13 explore_1"
+        ],
+        "progression": "Exploration level"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L13 explore_1"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "232acb50-ca00-4806-a4cd-066161aecc5a"
+      },
+      "level_keys": [
+        "CSD U2L13 explore_1"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L13 flex-grow_1"
+        ],
         "progression": "Skill Building Levels"
       },
       "bonus": false,
@@ -8056,11 +8084,14 @@
       ]
     },
     {
-      "chapter": 74,
-      "position": 2,
+      "chapter": 75,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L13 flex-shrink_2"
+        ],
         "progression": "Skill Building Levels"
       },
       "bonus": false,
@@ -8078,7 +8109,101 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 76,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L13 order_3"
+        ],
+        "progression": "Skill Building Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L13 order_3"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "92c142fd-bc84-4462-b8ce-ab6e97046a19"
+      },
+      "level_keys": [
+        "CSD U2L13 order_3"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L13 align-self_4"
+        ],
+        "progression": "Skill Building Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L13 align-self_4"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "92c142fd-bc84-4462-b8ce-ab6e97046a19"
+      },
+      "level_keys": [
+        "CSD U2L13 align-self_4"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L13 - Prac_2024"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "f5ed41e8-e267-4601-8d2c-a8a015bbd1c7"
+      },
+      "level_keys": [
+        "CSD U2L13 - Prac_2024"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenge Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L13 challenge_3"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "71c5548e-3953-4c33-ac03-394bdf1e8c37"
+      },
+      "level_keys": [
+        "CSD U2L13 challenge_3"
+      ]
+    },
+    {
+      "chapter": 80,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8103,7 +8228,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 81,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -8128,7 +8253,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 82,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -8153,7 +8278,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 83,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -8178,7 +8303,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 84,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8203,7 +8328,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 85,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8228,7 +8353,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 86,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -8253,7 +8378,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 87,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8278,7 +8403,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 88,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8303,7 +8428,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 89,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8328,7 +8453,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 90,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -8353,7 +8478,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 91,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8378,7 +8503,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 92,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -8403,7 +8528,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 93,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -8428,7 +8553,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 94,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8453,7 +8578,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 95,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8478,7 +8603,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 96,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8503,7 +8628,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 97,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8528,7 +8653,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 98,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8553,7 +8678,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 99,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8578,7 +8703,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 100,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8603,7 +8728,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 101,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8628,7 +8753,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 102,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -8653,7 +8778,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 103,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -9544,6 +9669,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSD U2L13 explore_1",
+        "script_level.level_keys": [
+          "CSD U2L13 explore_1"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "232acb50-ca00-4806-a4cd-066161aecc5a"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSD U2L13 flex-grow_1",
         "script_level.level_keys": [
           "CSD U2L13 flex-grow_1"
@@ -9564,6 +9701,54 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2024",
         "activity_section.key": "92c142fd-bc84-4462-b8ce-ab6e97046a19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L13 order_3",
+        "script_level.level_keys": [
+          "CSD U2L13 order_3"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "92c142fd-bc84-4462-b8ce-ab6e97046a19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L13 align-self_4",
+        "script_level.level_keys": [
+          "CSD U2L13 align-self_4"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "92c142fd-bc84-4462-b8ce-ab6e97046a19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L13 - Prac_2024",
+        "script_level.level_keys": [
+          "CSD U2L13 - Prac_2024"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "f5ed41e8-e267-4601-8d2c-a8a015bbd1c7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L13 challenge_3",
+        "script_level.level_keys": [
+          "CSD U2L13 challenge_3"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "71c5548e-3953-4c33-ac03-394bdf1e8c37"
       }
     },
     {
