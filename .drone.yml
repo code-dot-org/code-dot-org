@@ -39,7 +39,7 @@ steps:
   - name: restore-cache
     image: plugins/s3-cache
     settings:
-      endpoint: s3://code-dot-org-drone
+      endpoint: s3://cdo-ci-cache
       debug: true
       pull: true
       restore: true
@@ -78,7 +78,7 @@ steps:
       - name: rbenv
         path: /home/circleci/.rbenv
     settings:
-      endpoint: s3://code-dot-org-drone
+      endpoint: s3://cdo-ci-cache
       debug: true
       pull: true
       rebuild: true
@@ -139,7 +139,7 @@ steps:
   - name: restore-cache
     image: plugins/s3-cache
     settings:
-      endpoint: s3://code-dot-org-drone
+      endpoint: s3://cdo-ci-cache
       debug: true
       pull: true
       restore: true
@@ -189,7 +189,7 @@ steps:
       - name: rbenv
         path: /home/circleci/.rbenv
     settings:
-      endpoint: s3://code-dot-org-drone
+      endpoint: s3://cdo-ci-cache
       debug: true
       pull: true
       rebuild: true
