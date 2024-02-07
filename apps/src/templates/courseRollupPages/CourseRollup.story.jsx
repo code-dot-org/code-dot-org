@@ -196,7 +196,6 @@ const defaultProps = {
 };
 
 export default {
-  title: 'CourseRollup',
   component: CourseRollup,
 };
 

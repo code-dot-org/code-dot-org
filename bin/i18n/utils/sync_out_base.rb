@@ -18,8 +18,13 @@ module I18n
         raise NotImplementedError
       end
 
+      # List of supported CDO Languages to sync-out
+      #
+      # @return [Array<CdoLanguage>] supported CDO languages except the source language
       def languages
-        @languages ||= PegasusLanguages.all
+        @languages ||= I18nScriptUtils.cdo_languages.select do |cdo_language|
+          cdo_language[:locale_s] != I18nScriptUtils::SOURCE_LOCALE
+        end
       end
 
       def progress_bar

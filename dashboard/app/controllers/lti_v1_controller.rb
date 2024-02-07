@@ -123,6 +123,9 @@ class LtiV1Controller < ApplicationController
       resource_link_id = decoded_jwt[Policies::Lti::LTI_RESOURCE_LINK_CLAIM][:id]
       deployment_id = decoded_jwt[Policies::Lti::LTI_DEPLOYMENT_ID_CLAIM]
       deployment = Queries::Lti.get_deployment(integration.id, deployment_id)
+      if deployment.nil?
+        deployment = Services::Lti.create_lti_deployment(integration.id, deployment_id)
+      end
       redirect_params = {
         lti_integration_id: integration.id,
         deployment_id: deployment.id,
@@ -293,6 +296,7 @@ class LtiV1Controller < ApplicationController
       )
 
       @integration_status = :created
+      LtiMailer.lti_integration_confirmation(admin_email).deliver_now
     end
     render 'lti/v1/integration_status'
   end

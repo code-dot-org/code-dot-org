@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
-import LegendItem, {ITEM_TYPE} from './LegendItem';
-import styles from './section-progress-refresh.module.scss';
+import LegendItem from './LegendItem';
+import {ITEM_TYPE} from './ItemType';
+import styles from './progress-table-legend.module.scss';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
 
 export default function AssignmentCompletionStatesBox({

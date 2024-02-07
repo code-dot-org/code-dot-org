@@ -3,7 +3,6 @@ import MultipleChoiceSurveyOverviewTable from './MultipleChoiceSurveyOverviewTab
 import i18n from '@cdo/locale';
 
 export default {
-  title: 'MultipleChoiceSurveyOverviewTable',
   component: MultipleChoiceSurveyOverviewTable,
 };
 

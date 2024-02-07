@@ -396,22 +396,6 @@ describe I18n::Resources::Dashboard::CourseContent::SyncOut do
       end
     end
 
-    context 'when the processed language is the source language' do
-      before do
-        I18nScriptUtils.expects(:source_lang?).with(language).returns(true)
-      end
-
-      it 'does not distribute level content localization' do
-        execution_sequence = sequence('execution')
-
-        expect_i18n_data_collecting.in_sequence(execution_sequence).returns(i18n_data)
-        expect_crowdin_course_content_files_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
-        expect_localization_distribution.never
-
-        distribute_level_content
-      end
-    end
-
     context 'when the Crowdin locale dir does not exist' do
       before do
         FileUtils.rm_r(crowdin_locale_dir)
@@ -448,8 +432,6 @@ describe I18n::Resources::Dashboard::CourseContent::SyncOut do
     end
 
     before do
-      I18nScriptUtils.stubs(:source_lang?).with(language).returns(false)
-
       FileUtils.mkdir_p File.dirname(crowdin_file_path)
       FileUtils.touch(crowdin_file_path)
     end
@@ -461,19 +443,6 @@ describe I18n::Resources::Dashboard::CourseContent::SyncOut do
       expect_crowdin_file_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
 
       distribute_localization
-    end
-
-    context 'when the language is the source language' do
-      before do
-        I18nScriptUtils.expects(:source_lang?).with(language).returns(true)
-      end
-
-      it 'does not distribute the localization of the type' do
-        expect_localization_distribution.never
-        expect_crowdin_file_to_i18n_locale_dir_moving.once
-
-        distribute_localization
-      end
     end
 
     context 'when the type Crowdin file does not exist' do

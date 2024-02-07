@@ -2,21 +2,21 @@ require_relative '../../test_helper'
 require_relative '../../../i18n/utils/sync_out_base'
 
 describe I18n::Utils::SyncOutBase do
-  let(:described_class) {I18n::Utils::SyncOutBase}
+  let(:described_class) {SyncOutBaseTest = Class.new(I18n::Utils::SyncOutBase)}
   let(:described_instance) {described_class.new}
 
   let(:crowdin_locale) {'expected_crowdin_locale'}
-  let(:language) {{crowdin_name_s: crowdin_locale}}
+  let(:language) {{crowdin_name_s: crowdin_locale, locale_s: 'expected_locale_s'}}
 
   let(:crowdin_locale_dir) {CDO.dir('i18n/locales', crowdin_locale)}
 
   before do
     I18nScriptUtils.stubs(:remove_empty_dir)
-    PegasusLanguages.stubs(:all).returns([language])
   end
 
   describe '.perform' do
     before do
+      described_class.any_instance.stubs(:process)
       I18n::Metrics.stubs(:report_runtime).yields(nil)
     end
 
@@ -55,13 +55,31 @@ describe I18n::Utils::SyncOutBase do
   end
 
   describe '#perform' do
+    let(:perform) {described_instance.send(:perform)}
+
+    before do
+      described_instance.stubs(:languages).returns([language])
+    end
+
     it 'calls `#process` foe each language and then removes empty Crowdin locale dir' do
       execution_sequence = sequence('execution')
 
       described_instance.expects(:process).with(language).in_sequence(execution_sequence)
       I18nScriptUtils.expects(:remove_empty_dir).with(crowdin_locale_dir).in_sequence(execution_sequence)
 
-      described_instance.send(:perform)
+      perform
+    end
+  end
+
+  describe '#languages' do
+    let(:languages) {described_instance.send(:languages)}
+
+    it 'returns CDO language records without the i18n source language' do
+      source_language = {locale_s: I18nScriptUtils::SOURCE_LOCALE}
+
+      I18nScriptUtils.expects(:cdo_languages).returns([source_language, language])
+
+      _(languages).must_equal [language]
     end
   end
 end
