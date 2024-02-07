@@ -212,8 +212,40 @@ trigger:
     - "staging-next"
   event:
     - pull_request
+
+---
+
+kind: pipeline
+type: docker
+name: cache-staging
+
+clone:
+  disable: true
+
+steps:
+  - name: clone
+    image: bitnami/git
+    commands:
+      - git lfs install
+      - git clone --branch $DRONE_BRANCH  $DRONE_GIT_HTTP_URL .
+
+  - name: update-staging-cache
+    image: plugins/s3-cache
+    settings:
+      endpoint: s3://code-dot-org
+      debug: true
+      pull: true
+      filename: repo-clone-${DRONE_BRANCH}.tar
+      mount:
+        - .
+
+trigger:
+  branch:
+    - "seth/fake-staging"
+  event:
+    - push
 ---
 kind: signature
-hmac: c151750267024cb541fa2aebdc860e19c4dcfbb8476bea1e1a3be86ebed742e4
+hmac: bd70b9079d0e25acb6e0cac69d8b70bd15ae613ce74b1c95cb242c7ae0dd4ee8
 
 ...
