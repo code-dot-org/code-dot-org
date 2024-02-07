@@ -144,7 +144,7 @@ steps:
     image: plugins/s3-cache
     settings:
       filename: cache-staging-clone.tar
-      endpoint: s3://code-dot-org-drone
+      endpoint: s3://cdo-drone
       restore: true
       debug: true
       pull: true
@@ -284,6 +284,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: bb0823036425416cecc87255afae70076c98735b7ac04849a6eb218c841ee466
+hmac: a9eba76b9f69653e26e6955eeb9369e29257c454d473abcb7584ab28cb87be31
 
 ...
