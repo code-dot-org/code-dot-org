@@ -49,8 +49,8 @@ export default {
 
 const Template = args => <TestWrapper {...args} />;
 
-export const simpleQuestionsTable = Template.bind({});
-simpleQuestionsTable.args = {
+export const SimpleQuestionsTable = Template.bind({});
+SimpleQuestionsTable.args = {
   onChange: action('onChange'),
   options: ['this is cool', 'this is okay', 'this is useless'],
   questions: [
@@ -70,8 +70,8 @@ simpleQuestionsTable.args = {
   ],
 };
 
-export const controlledQuestionsTable = Template.bind({});
-controlledQuestionsTable.args = {
+export const ControlledQuestionsTable = Template.bind({});
+ControlledQuestionsTable.args = {
   data: {
     theOneThatIsSelected: 'first',
   },

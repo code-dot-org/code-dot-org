@@ -57,16 +57,16 @@ export default {
 
 const Template = args => <TestWrapper {...args} />;
 
-export const basicExample = Template.bind({});
-basicExample.args = {
+export const BasicExample = Template.bind({});
+BasicExample.args = {
   id: 'basic',
   type: 'text',
   label: 'this is a basic fieldgroup',
   onChange: action('onChange'),
 };
 
-export const dropdownWithChildren = Template.bind({});
-dropdownWithChildren.args = {
+export const DropdownWithChildren = Template.bind({});
+DropdownWithChildren.args = {
   id: 'dropdown',
   componentClass: 'select',
   label: 'a dropdown with children',
