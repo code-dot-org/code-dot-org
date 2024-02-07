@@ -59,8 +59,8 @@ export function clearAnnotations() {
  * the actual lines.
  *
  * When the AI gives us multiple lines, it will generally remove the whitespace.
- * That it, the newlines are not within the observation text block. We have to
- * match the code similarly. You might see this:
+ * This means that the newlines are not within the observation text block. We
+ * have to match the code similarly. You might see this:
  *
  *   Line 5: Jump condition `if (keyDown('up')) { p.velocityY = -100; }`
  *
