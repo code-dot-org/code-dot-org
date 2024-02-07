@@ -1,11 +1,12 @@
 import React from 'react';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import {html} from '@codemirror/lang-html';
+import {htmlLinter} from './htmlLinter';
 //import {css} from '@codemirror/lang-css';
 
 const Weblab2Editor: React.FunctionComponent = () => {
   // To use css, replace html() with css()
-  const editorExtensions = [html()];
+  const editorExtensions = [html(), htmlLinter];
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   const onCodeChange = () => {};
 
