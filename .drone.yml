@@ -111,6 +111,7 @@ trigger:
   branch:
     - "staging"
     - "staging-next"
+    - "seth/fake-staging"
   event:
     - pull_request
 
