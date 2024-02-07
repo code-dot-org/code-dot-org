@@ -2552,6 +2552,7 @@
   "facilitatorNotListed": "My facilitator is not listed",
   "test": "Test",
   "text": "Text",
+  "textToSpeech": "Text to speech",
   "textVariable": "text",
   "textToSpeechProfanity": "Your text contains inappropriate language so it will not be played. Please update your project to remove the {profanityCount, plural, one {word} other {words}} \"{profaneWords}\".\n",
   "textToSpeechTruncation": "Your text exceeds our 750 character limit so we have shortened it for you.",
