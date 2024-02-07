@@ -269,6 +269,7 @@ Resources:
             -
               Name: DRONE_S3_BUCKET
               Value: code-dot-org
+              # TODO: change this to: !Ref DroneBucket
             -
               Name: DRONE_S3_PREFIX
               Value: /drone-build-logs/
@@ -506,3 +507,28 @@ Resources:
           FromPort: 22
           ToPort: 22
           CidrIp: 3.90.82.166/32
+
+  # -------------------------
+  # Drone Bucket for Cache and Logs
+  # -------------------------
+
+  DroneBucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: cdo-drone
+
+  DroneBucketFullAccessPolicy:
+    Type: 'AWS::IAM::Policy'
+    Properties:
+      PolicyName: DroneBucketFullAccessPolicy
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action: 's3:*'
+            Resource:
+            - !Sub 'arn:aws:s3:::${DroneBucket}'
+            - !Sub 'arn:aws:s3:::${DroneBucket}/*'
+            # TODO: remove references to old bucket once no longer used
+            - 'arn:aws:s3:::code-dot-org'
+            - 'arn:aws:s3:::code-dot-org/*'
