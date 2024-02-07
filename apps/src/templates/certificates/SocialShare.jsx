@@ -47,7 +47,7 @@ export default function SocialShare({
           href={linkedShareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={dashboard.popupWindow}
+          onClick={dashboard?.popupWindow}
         >
           <button
             type="button"
@@ -64,7 +64,7 @@ export default function SocialShare({
           href={facebookShareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={dashboard.popupWindow}
+          onClick={dashboard?.popupWindow}
         >
           <button
             type="button"
@@ -80,7 +80,7 @@ export default function SocialShare({
           href={twitterShareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={dashboard.popupWindow}
+          onClick={dashboard?.popupWindow}
         >
           <button
             type="button"
