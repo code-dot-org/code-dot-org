@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-23 16:44:08 UTC",
+    "serialized_at": "2024-02-06 05:33:35 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3795,6 +3795,18 @@
       }
     },
     {
+      "name": "CSP Unit 7 Slides",
+      "url": "https://docs.google.com/presentation/d/1P9JATX2RDE9TJZ4_Iqx_cSxv-NMhTXYSatrHMlUrRXw/template/preview",
+      "key": "csp_unit_7_slides",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_7_slides"
+      }
+    },
+    {
       "name": "Customize Make Lessons: How-To-Guide",
       "url": "https://docs.google.com/document/d/1K33HqvpPwb8BYX7mvFD7m2d17RSGD7ASEG4UUA0ajOM/edit?usp=sharing",
       "key": "customize_make_lessons_how-to-guide",
@@ -4007,6 +4019,12 @@
       "seeding_key": {
         "lesson.key": "Parameters and Return Explore",
         "resource.key": "csp_unit_7_-_lesson_1_-_parameters_and_return_explore"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "resource.key": "csp_unit_7_slides"
       }
     },
     {
