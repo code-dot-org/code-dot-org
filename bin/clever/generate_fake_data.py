@@ -6,8 +6,16 @@ import csv
 fake = Faker()
 
 # Function to generate a random grade
-def random_grade():
-    return random.choice(['K', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'])
+def random_grade(low_grade, high_grade):
+    # Convert the low and high grade to integers
+    # convert K to 0
+    if low_grade == 'K':
+        low_grade = 0
+    low_grade = int(low_grade)
+    high_grade = int(high_grade)
+
+    grades = ['K', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+    return grades[random.randint(low_grade, high_grade)]
 
 # Function to generate a random gender
 def random_gender():
@@ -105,38 +113,38 @@ def generate_students(schools):
     students = []
     for school in schools:
         for _ in range(100):
-            school_id = school["school_id"]
-            student_id = fake.unique.random_number(digits=8)
             first_name = fake.first_name()
             last_name = fake.last_name()
-            username = f"{first_name.lower()}.{last_name.lower()}"
-            password = fake.password()
 
-            middle_name = random.choice([fake.first_name(), ""])
-            student_number = fake.unique.random_number(digits=8)
-            state_id = fake.unique.random_number(digits=8)
-            grade = random_grade()
-            gender = random_gender()
-            dob = fake.date_of_birth(minimum_age=5, maximum_age=18).strftime('%Y-%m-%d')
-            race = random_race()
-            hispanic_latino = random_boolean()
-            ell_status = random_boolean()
-            frl_status = random_boolean()
-            iep_status = random_boolean()
-            street_address = fake.street_address()
-            city = fake.city()
-            state = fake.state_abbr()
-            zip_code = fake.zipcode()
-            student_email = f"{first_name.lower()}.{last_name.lower()}@example.com"
-            contact_relationship = random.choice(['Parent', 'Guardian', 'Sibling', 'Other'])
-            contact_type = random.choice(['Phone', 'Email', 'Mail'])
-            contact_name = fake.name()
-            contact_phone = fake.phone_number()
-            contact_email = fake.email()
-
-            students.append([
-                school_id, student_id, first_name, last_name, username, password, middle_name, student_number, state_id, grade, gender, dob, race, hispanic_latino, ell_status, frl_status, iep_status, street_address, city, state, zip_code, student_email, contact_relationship, contact_type, contact_name, contact_phone, contact_email
-            ])
+            students.append({
+                'school_id': school["school_id"],
+                'student_id': fake.unique.random_number(digits=8),
+                'first_name': first_name,
+                'last_name': last_name,
+                'username': f"{first_name.lower()}.{last_name.lower()}",
+                'password': fake.password(),
+                'middle_name': random.choice([fake.first_name(), ""]),
+                'student_number': fake.unique.random_number(digits=8),
+                'state_id': fake.unique.random_number(digits=8),
+                'grade': random_grade(school["low_grade"], school["high_grade"])
+                'gender': random_gender(),
+                'dob': fake.date_of_birth(minimum_age=5, maximum_age=18).strftime('%Y-%m-%d'),
+                'race': random_race(),
+                'hispanic_latino': random_boolean(),
+                'ell_status': random_boolean(),
+                'frl_status': random_boolean(),
+                'iep_status': random_boolean(),
+                'street_address': fake.street_address(),
+                'city': fake.city(),
+                'state': school["school_state"],
+                'zip_code': fake.zipcode(),
+                'student_email': f"{first_name.lower()}.{last_name.lower()}@example.com",
+                'contact_relationship': random.choice(['Parent', 'Guardian', 'Sibling', 'Other']),
+                'contact_type': random.choice(['Phone', 'Email', 'Mail']),
+                'contact_name': fake.name(),
+                'contact_phone': fake.phone_number(),
+                'contact_email': fake.email(),
+            })
 
     return students
 
