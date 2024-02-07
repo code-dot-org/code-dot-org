@@ -39,7 +39,7 @@ steps:
   - name: restore-cache
     image: plugins/s3-cache
     settings:
-      endpoint: s3://code-dot-org
+      endpoint: s3://cdo-drone
       debug: true
       pull: true
       restore: true
@@ -78,7 +78,7 @@ steps:
       - name: rbenv
         path: /home/circleci/.rbenv
     settings:
-      endpoint: s3://code-dot-org
+      endpoint: s3://cdo-drone
       debug: true
       pull: true
       rebuild: true
@@ -139,7 +139,7 @@ steps:
   - name: restore-cache
     image: plugins/s3-cache
     settings:
-      endpoint: s3://code-dot-org
+      endpoint: s3://cdo-drone
       debug: true
       pull: true
       restore: true
@@ -189,7 +189,7 @@ steps:
       - name: rbenv
         path: /home/circleci/.rbenv
     settings:
-      endpoint: s3://code-dot-org
+      endpoint: s3://cdo-drone
       debug: true
       pull: true
       rebuild: true
@@ -214,6 +214,6 @@ trigger:
     - pull_request
 ---
 kind: signature
-hmac: c151750267024cb541fa2aebdc860e19c4dcfbb8476bea1e1a3be86ebed742e4
+hmac: 522c770bed04bca70f8fc472e90e4c02018f82b9218668ad903ce0939a9e8e8a
 
 ...
