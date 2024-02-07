@@ -5,9 +5,14 @@ class EvaluateRubricJob < ApplicationJob
   queue_as :default
 
   S3_AI_BUCKET = 'cdo-ai'.freeze
+
   # The path to the release directory in S3 which contains the AI rubric evaluation.
   # When launching ai config changes, this path should be updated to the new release.
+  #
+  # Basic validation of the new AI config is done by UI tests, or can be done locally
+  # by running `EvaluateRubricJob.new.validate_ai_config` from the rails console.
   S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-02-01-ai-rubrics-pilot-baseline/'.freeze
+
   STUB_AI_PROXY_PATH = '/api/test/ai_proxy'.freeze
 
   # 2D Map from unit name and level name, to the name of the lesson files within
