@@ -8,6 +8,7 @@ import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
 import {connect} from 'react-redux';
 import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
 import styles from './progress-table-v2.module.scss';
+import UnitSelectorV2 from './UnitSelectorV2';
 
 function SectionProgressV2({
   scriptId,
@@ -34,9 +35,7 @@ function SectionProgressV2({
       <IconKey isViewingLevelProgress={true} hasLevelValidation={false} />
       <div className={styles.title}>
         <Heading6 className={styles.titleStudents}>Students</Heading6>
-        <Heading6 className={styles.titleUnitSelector}>
-          UNIT SELECTOR GOES HERE
-        </Heading6>
+        <UnitSelectorV2 />
       </div>
       <ProgressTableV2
         expandedLessonIds={expandedLessonIds}
