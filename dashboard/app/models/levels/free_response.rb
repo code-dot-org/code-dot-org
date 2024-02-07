@@ -72,8 +72,4 @@ class FreeResponse < Level
       smart: true
     )
   end
-
-  def validated?
-    true
-  end
 end
