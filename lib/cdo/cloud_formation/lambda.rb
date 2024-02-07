@@ -69,9 +69,9 @@ module Cdo::CloudFormation
         globs = absolute_directory + '/**/*'
         hash = Digest::MD5.hexdigest(
           Dir[*globs].
-            select(&File.method(:file?)).
+            select {|file_name| File.file?(file_name)}.
             sort.
-            map(&Digest::MD5.method(:file)).
+            map {|file_name| Digest::MD5.file(file_name)}.
             join
         )
         code_zip = `zip -qr - .`
