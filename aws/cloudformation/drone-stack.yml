@@ -532,5 +532,5 @@ Resources:
             - 'arn:aws:s3:::code-dot-org'
             - 'arn:aws:s3:::code-dot-org/*'
       Roles:
-        - !Sub 'arn:aws:iam::${AWS::AccountId}:role/DroneWorker'
-        - !Sub 'arn:aws:iam::${AWS::AccountId}:role/DroneServer'
+        - 'DroneWorker'
+        - 'DroneServer'
