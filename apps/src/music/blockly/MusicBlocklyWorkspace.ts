@@ -17,6 +17,8 @@ import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {Abstract} from 'blockly/core/events/events_abstract';
 const experiments = require('@cdo/apps/util/experiments');
 
+const triggerIdToEvent = (id: string) => `triggeredAtButton-${id}`;
+
 type CompiledEvents = {[key: string]: {code: string; args?: string[]}};
 
 /**
@@ -41,8 +43,6 @@ export default class MusicBlocklyWorkspace {
     this.triggerIdToStartType = {};
     this.lastExecutedEvents = {};
   }
-
-  triggerIdToEvent = (id: string) => `triggeredAtButton-${id}`;
 
   /**
    * Initialize the Blockly workspace
@@ -222,15 +222,16 @@ export default class MusicBlocklyWorkspace {
         ).includes(block.type)
       ) {
         const id = block.getFieldValue(TRIGGER_FIELD);
-        this.compiledEvents[this.triggerIdToEvent(id)] = {
+        this.compiledEvents[triggerIdToEvent(id)] = {
           code:
             Blockly.JavaScript.blockToCode(block) + functionImplementationsCode,
           args: ['startPosition'],
         };
         // Also save the value of the trigger start field at compile time so we can
         // compute the correct start time at each invocation.
-        this.triggerIdToStartType[this.triggerIdToEvent(id)] =
-          block.getFieldValue(FIELD_TRIGGER_START_NAME);
+        this.triggerIdToStartType[triggerIdToEvent(id)] = block.getFieldValue(
+          FIELD_TRIGGER_START_NAME
+        );
       }
     });
 
@@ -302,14 +303,14 @@ export default class MusicBlocklyWorkspace {
    * @param id ID of the trigger
    */
   executeTrigger(id: string, startPosition: number) {
-    const hook = this.codeHooks[this.triggerIdToEvent(id)];
+    const hook = this.codeHooks[triggerIdToEvent(id)];
     if (hook) {
       this.callUserGeneratedCode(hook, [startPosition]);
     }
   }
 
   hasTrigger(id: string) {
-    return !!this.codeHooks[this.triggerIdToEvent(id)];
+    return !!this.codeHooks[triggerIdToEvent(id)];
   }
 
   /**
@@ -317,7 +318,7 @@ export default class MusicBlocklyWorkspace {
    * adjusted based on when the trigger should play (immediately, next beat, or next measure).
    */
   getTriggerStartPosition(id: string, currentPosition: number) {
-    const triggerStart = this.triggerIdToStartType[this.triggerIdToEvent(id)];
+    const triggerStart = this.triggerIdToStartType[triggerIdToEvent(id)];
     if (!triggerStart) {
       console.warn('No compiled trigger with ID: ' + id);
       return;
@@ -409,12 +410,6 @@ export default class MusicBlocklyWorkspace {
     }
   }
 
-  getLocalStorageKeyName() {
-    // Save code for each block mode in a different local storage item.
-    // This way, switching block modes will load appropriate user code.
-    return 'musicLabSavedCode' + getBlockMode();
-  }
-
   // Load the workspace with the given code.
   loadCode(code: string) {
     if (!this.workspace) {
@@ -431,7 +426,7 @@ export default class MusicBlocklyWorkspace {
     Blockly.serialization.workspaces.load(codeCopy, this.workspace);
   }
 
-  callUserGeneratedCode(
+  private callUserGeneratedCode(
     fn: (...args: unknown[]) => void,
     args: unknown[] = []
   ) {
