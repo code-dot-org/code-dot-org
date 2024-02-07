@@ -86,20 +86,20 @@ class DynamicConfigController < ApplicationController
     begin
       value =
         case data_type
-          when "Integer"
-            Integer(raw_value)
-          when "Float"
-            Float(raw_value)
-          when "Boolean"
-            raw_value.to_bool
-          when "String"
-            raw_value
-          else
-            new_value = Oj.load(raw_value)
-            if new_value.class.to_s != data_type
-              raise "#{new_value} does not match data type \"#{data_type}\""
-            end
-            new_value
+        when "Integer"
+          Integer(raw_value)
+        when "Float"
+          Float(raw_value)
+        when "Boolean"
+          raw_value.to_bool
+        when "String"
+          raw_value
+        else
+          new_value = Oj.load(raw_value)
+          if new_value.class.to_s != data_type
+            raise "#{new_value} does not match data type \"#{data_type}\""
+          end
+          new_value
         end
 
       DCDO.set(key, value)
@@ -108,11 +108,11 @@ class DynamicConfigController < ApplicationController
       ChatClient.log log_msg
       flash[:notice] = "Updated successfully! Remember your changes take 30 seconds to go into effect, so don't expect to see the changes immediately on this page."
       redirect_to action: :dcdo_show
-    rescue Oj::ParseError, NoMethodError, ArgumentError => e
-      flash[:alert] = "Failed to update, value and data type mismatch: #{e}"
+    rescue Oj::ParseError, NoMethodError, ArgumentError => exception
+      flash[:alert] = "Failed to update, value and data type mismatch: #{exception}"
       redirect_to action: :dcdo_show
-    rescue StandardError => e
-      flash[:alert] = "Failed to update: #{e}"
+    rescue StandardError => exception
+      flash[:alert] = "Failed to update: #{exception}"
       redirect_to action: :dcdo_show
     end
   end
