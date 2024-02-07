@@ -50,6 +50,7 @@ export default function StudentColumn({
         sectionId={sectionId}
         unitName={unitName}
         source={SECTION_PROGRESS_V2}
+        className={styles.sortDropdown}
       />
       <div className={styles.grid}>
         {sortedStudents.map((student, ind) => studentColumnBox(student, ind))}

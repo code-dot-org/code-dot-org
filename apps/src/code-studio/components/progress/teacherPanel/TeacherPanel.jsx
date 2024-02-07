@@ -249,8 +249,6 @@ class TeacherPanel extends React.Component {
           )}
           <div className={moduleStyles.sortDropdownContainer}>
             <SortByNameDropdown
-              sortByStyles={styles.sortBy}
-              selectStyles={styles.select}
               sectionId={sectionId}
               unitName={unitName}
               source={TEACHER_PANEL}
@@ -307,10 +305,6 @@ const styles = {
   },
   teacherDashboardLink: {
     fontSize: 11,
-  },
-  sortBy: {
-    textAlign: 'center',
-    marginBottom: '10px',
   },
 };
 
