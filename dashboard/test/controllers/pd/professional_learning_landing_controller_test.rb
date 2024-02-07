@@ -216,8 +216,49 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
     load_pl_landing @teacher
 
     response = assigns(:landing_page_data)
-    assert_equal 3, response[:enrolled_workshops].length
-    assert_equal([@csf_workshop, @csd_workshop, @csp_workshop].map(&:course_name), response[:enrolled_workshops].map {|workshop| workshop[:course_name]})
+    assert_equal 3, response[:workshops_as_participant].length
+    assert_equal([@csf_workshop, @csd_workshop, @csp_workshop].map(&:course_name), response[:workshops_as_participant].map {|workshop| workshop[:course_name]})
+  end
+
+  test 'facilitated workshops are passed down' do
+    prepare_scenario
+
+    @teacher.permission = UserPermission::FACILITATOR
+    workshop = create :pd_workshop, facilitators: [@teacher]
+    @teacher.reload
+
+    load_pl_landing @teacher
+
+    response = assigns(:landing_page_data)
+    assert_equal 1, response[:workshops_as_facilitator].length
+    assert_equal workshop.course_name, response[:workshops_as_facilitator].first[:course_name]
+  end
+
+  test 'organized workshops are passed down' do
+    prepare_scenario
+
+    @teacher.permission = UserPermission::WORKSHOP_ORGANIZER
+    workshop = create :pd_workshop, organizer: @teacher
+
+    load_pl_landing @teacher
+
+    response = assigns(:landing_page_data)
+    assert_equal 1, response[:workshops_as_organizer].length
+    assert_equal workshop.course_name, response[:workshops_as_organizer].first[:course_name]
+  end
+
+  test 'workshops for regional partner are passed down' do
+    prepare_scenario
+
+    regional_partner = create :regional_partner
+    @teacher.regional_partners << regional_partner
+    workshop = create :pd_workshop, regional_partner: regional_partner
+
+    load_pl_landing @teacher
+
+    response = assigns(:landing_page_data)
+    assert_equal 1, response[:workshops_for_regional_partner].length
+    assert_equal workshop.course_name, response[:workshops_for_regional_partner].first[:course_name]
   end
 
   test 'progress in PL courses is passed down' do

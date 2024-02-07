@@ -212,6 +212,7 @@ class User < ApplicationRecord
     through: :regional_partner_program_managers
 
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', foreign_key: :organizer_id
+  has_and_belongs_to_many :pd_workshops_facilitated, class_name: 'Pd::Workshop', join_table: 'pd_workshops_facilitators', association_foreign_key: 'pd_workshop_id'
 
   has_many :authentication_options, dependent: :destroy
   accepts_nested_attributes_for :authentication_options
