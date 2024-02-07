@@ -192,7 +192,7 @@ const registerCursor = function (cursorType, weight) {
     callback: function (scope) {
       localStorage.setItem(BLOCKLY_CURSOR, cursorType);
       Blockly.navigationController.cursorType = cursorType;
-      setNewCursor(cursorType);
+      setNewCursor(cursorType, scope);
       Blockly.navigationController.navigation.focusWorkspace(scope.workspace);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
@@ -448,7 +448,10 @@ function isCurrentCursor(cursorType) {
   return cursorType === currentCursorType;
 }
 
-function setNewCursor(type) {
+function setNewCursor(type, scope) {
+  Blockly.navigationController.cursorType = type;
+  const markerManager = Blockly.getMainWorkspace().getMarkerManager();
+  const oldCurNode = markerManager.getCursor().getCurNode();
   Blockly.getMainWorkspace()
     .getMarkerManager()
     .setCursor(Blockly.getNewCursor(type));
@@ -457,7 +460,9 @@ function setNewCursor(type) {
       .getMarkerManager()
       .setCursor(Blockly.getNewCursor(type));
   }
-  Blockly.navigationController.cursorType = type;
+  if (oldCurNode) {
+    markerManager.getCursor().setCurNode(oldCurNode);
+  }
 }
 
 exports.registerAllContextMenuItems = registerAllContextMenuItems;
