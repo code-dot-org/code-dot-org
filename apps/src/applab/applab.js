@@ -384,6 +384,19 @@ Applab.initReadonly = function (config) {
   studioApp().initReadonly(config);
 };
 
+// Ensure project is saved before exiting
+Applab.beforeUnload = function (event) {
+  if (project.hasOwnerChangedProject()) {
+    // Manually trigger an autosave instead of waiting for the next autosave.
+    project.autosave();
+
+    event.preventDefault();
+    event.returnValue = '';
+  } else {
+    delete event.returnValue;
+  }
+};
+
 /**
  * Initialize Blockly and the Applab app.  Called on page load.
  */
@@ -651,6 +664,11 @@ Applab.init = function (config) {
 
     var designModeViz = document.getElementById('designModeViz');
     designModeViz.addEventListener('click', designMode.onDesignModeVizClick);
+
+    // Mark project as changed on each update in the editor
+    // so that we can save progress before the user navigates away from the page.
+    studioApp().addChangeHandler(project.projectChanged);
+    window.addEventListener('beforeunload', this.beforeUnload.bind(this));
   }.bind(this);
 
   // Push initial level properties into the Redux store
