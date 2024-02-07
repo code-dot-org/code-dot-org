@@ -234,14 +234,15 @@ class CodeWorkspace extends React.Component {
               isRtl={isRtl}
               isMinecraft={props.isMinecraft}
             />
-            {!props.editCode && experiments.KEYBOARD_NAVIGATION && (
-              <KeyboardNavigationToggle
-                hasFocus={hasFocus}
-                iconClass="fa fa-keyboard"
-                isRtl={isRtl}
-                isMinecraft={props.isMinecraft}
-              />
-            )}
+            {!props.editCode &&
+              experiments.isEnabled(experiments.KEYBOARD_NAVIGATION) && (
+                <KeyboardNavigationToggle
+                  hasFocus={hasFocus}
+                  iconClass="fa fa-keyboard"
+                  isRtl={isRtl}
+                  isMinecraft={props.isMinecraft}
+                />
+              )}
             <PaneSection id="workspace-header">
               {props.showProjectTemplateWorkspaceIcon && (
                 <ProjectTemplateWorkspaceIcon />
