@@ -34,6 +34,7 @@
       "show_calendar": true,
       "student_detail_progress_view": true,
       "supported_locales": [
+        "es-MX",
         "it-IT",
         "sk-SK"
       ],
@@ -42,7 +43,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-12 18:21:31 UTC",
+    "serialized_at": "2024-02-06 20:26:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
