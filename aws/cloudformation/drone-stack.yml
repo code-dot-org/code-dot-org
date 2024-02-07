@@ -269,7 +269,6 @@ Resources:
             -
               Name: DRONE_S3_BUCKET
               Value: code-dot-org
-              # TODO: change this to: !Ref DroneBucket
             -
               Name: DRONE_S3_PREFIX
               Value: /drone-build-logs/
