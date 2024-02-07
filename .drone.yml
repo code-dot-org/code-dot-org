@@ -225,6 +225,22 @@ clone:
   disable: true
 
 steps:
+  - name: make-file
+    image: bitnami/git
+    commands:
+      - echo "this is a file" > file.txt
+
+  - name: cache-make-file
+    image: plugins/s3-cache
+    settings:
+      filename: cache-make-file.tar
+      endpoint: s3://code-dot-org-drone
+      rebuild: true
+      debug: true
+      pull: true
+      mount:
+        - .
+
   - name: clone
     image: bitnami/git
     commands:
