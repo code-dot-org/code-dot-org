@@ -39,7 +39,6 @@ const levelWithSublevels = fakeLevels(1)[0];
 levelWithSublevels.sublevels = sublevels;
 
 export default {
-  title: 'ProgressTableDetailCell',
   component: ProgressTableDetailCell,
 };
 

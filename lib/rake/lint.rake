@@ -12,7 +12,7 @@ namespace :lint do
 
   desc 'Lints Haml code with haml-lint.'
   timed_task_with_logging :haml do
-    RakeUtils.bundle_exec 'haml-lint dashboard pegasus'
+    RakeUtils.bundle_exec 'haml-lint dashboard pegasus shared'
   end
 
   desc 'Lints SCSS code with scss-lint.'

@@ -28,7 +28,7 @@ social:
   <a class="linktag" id="videos-nav" href="#videos" style="text-decoration:none"><p style="color:#ffffff; margin:0; text-decoration:none">Watch videos about different careers with CS</p></a>
 </div>
 
-<div class="col-25" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#7665a0">
+<div class="col-25" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_secondary_default)">
   <a class="linktag" id="explore-nav" href="#explore" style="text-decoration:none"><p style="color:#ffffff; margin:0; text-decoration:none">Find a career that matches your interests</p>
 </div>
 

@@ -1,0 +1,17 @@
+name 'self-paced_pl_maker_meet_your_microbit'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+# Meet Your micro:bit
+
+<p style="font-size: 14pt;"> After you have carefully read the <a href="https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf" target="_blank" style="color: #8C52BA;">lesson plan</a>, click on the image below to get started in MakeCode.</p>
+
+#### *Return to this course when you finish the lesson.* 
+
+<a href="https://mbit.io/csf-1-project" target="_blank"> 
+<img src="https://images.code.org/7691a0a2939bb662b2c7dce4864cbc81-image-1701980096289.13.17 PM.png" style="display: block; margin: auto; width: 30%">
+</a>
+
+
+MARKDOWN

@@ -1,0 +1,43 @@
+name 'Intro to Events'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Events 
+
+Opening a lesson or unit
+
+#### The lesson begins with an introduction that includes:
+#### * A sentence explaining what the lesson is about
+#### * List of objectives
+#### * A presurvey (contact RED team to create the survey) 
+#### * Suggested time 
+#### * an image from the lesson 
+
+
+
+##Exemplar: 
+# Events
+
+
+
+#### Welcome! This professional learning module is designed to help you prepare to teach Code.org's CS Fundamentals Maker with micro:bit unit. 
+
+
+
+## In this lesson, you will:
+
+* #### Learn about events and event-based programming.
+* #### Practice using events with different types of event blocks.
+* #### Create an interactive program using events.
+* #### Debug a program to make it work properly.
+
+
+### **Suggested time:** ?? minutes
+
+## Let's get started!
+
+<div style="clear:both"/>
+
+
+MARKDOWN
