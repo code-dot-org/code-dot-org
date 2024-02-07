@@ -39,7 +39,7 @@ steps:
     commands:
       - git lfs install --skip-repo
       # We should be in a cached git repo, but clone if the cache failed
-      - "[ -d .git ] || (echo 'WARNING: get-cached-staging failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .)"
+      - "[ -d .git ] || (echo 'WARNING: get-cached-staging failed: checkout will be SLOW and LFS costly!' && git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .)"
       # Checkout our target branch (=the PR)
       - git checkout $DRONE_SOURCE_BRANCH
       - git pull
@@ -156,7 +156,7 @@ steps:
     commands:
       - git lfs install --skip-repo
       # We should be in a cached git repo, but clone if the cache failed
-      - "[ -d .git ] || (echo 'get-cached-staging failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .)"
+      - "[ -d .git ] || (echo 'get-cached-staging failed: checkout will be SLOW and LFS costly!' && git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .)"
       # Checkout our target branch (the PR's branch).
       - git checkout $DRONE_SOURCE_BRANCH
       - git pull
