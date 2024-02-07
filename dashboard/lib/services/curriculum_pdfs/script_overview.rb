@@ -55,7 +55,9 @@ module Services
           # 1. 'no_redirect' so we're guaranteed to get the actual script we want
           # 2. 'view as teacher' so we don't get the default student view
           url = Rails.application.routes.url_helpers.script_url(script) + "?no_redirect=true&viewAs=Instructor"
+          puts "before we call generate_from_url"
           PDF.generate_from_url(url, script_path)
+          puts "after we call generate_from_url"
           pdfs << script_path
 
           # Include PDF for the lesson in our set of PDFs to merge.
