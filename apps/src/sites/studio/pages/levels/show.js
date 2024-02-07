@@ -12,6 +12,7 @@ import instructions, {
   setCodeReviewEnabledForLevel,
   setTaRubric,
 } from '@cdo/apps/redux/instructions';
+import {setLevel} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import experiments from '@cdo/apps/util/experiments';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
 import AITutorFloatingActionButton from '@cdo/apps/code-studio/components/aiTutor/aiTutorFloatingActionButton';
@@ -72,7 +73,9 @@ function initPage() {
     );
     if (aiTutorFabMountPoint) {
       ReactDOM.render(
-        <AITutorFloatingActionButton />,
+        <Provider store={getStore()}>
+          <AITutorFloatingActionButton />
+        </Provider>,
         aiTutorFabMountPoint
       );
     }
