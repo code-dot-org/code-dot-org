@@ -3,7 +3,6 @@ import React, {
   useMemo,
   useRef,
   useEffect,
-  MouseEvent,
   KeyboardEvent,
 } from 'react';
 import classNames from 'classnames';
@@ -76,7 +75,7 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
     useRef(null);
 
   const handleClickOutside = useCallback(
-    (event: MouseEvent<Document>) => {
+    (event: Event) => {
       if (
         activeDropdownName &&
         dropdownRef.current &&
@@ -90,18 +89,11 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   );
 
   useEffect(() => {
-    // 'as any' used to fix following TS errpr:
-    // TS2769: No overload matches this call.
-    // Overload 1 of 2,
-    // (type: "mousedown", listener: (this: Document, ev: MouseEvent) => any, options?: boolean | AddEventListenerOptions | undefined): void
-    // , gave the following error.
-    // Argument of type (event: MouseEvent<Document>) => void is not assignable to parameter of type (this: Document, ev: MouseEvent) => any
-    // Types of parameters event and ev are incompatible.
-    document.addEventListener('mousedown', handleClickOutside as never);
-    document.addEventListener('keydown', handleClickOutside as never);
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside as never);
-      document.removeEventListener('keydown', handleClickOutside as never);
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleClickOutside);
     };
   }, [handleClickOutside]);
 
