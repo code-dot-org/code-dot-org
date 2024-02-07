@@ -1,9 +1,10 @@
 import React, {createContext, useContext, useState, ReactNode} from 'react';
 
 const DropdownContext = createContext({
-  activeDropdownName: null as string | null,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars,@typescript-eslint/no-empty-function
-  setActiveDropdownName: (name: string) => {},
+  activeDropdownName: '',
+  setActiveDropdownName: (name: string) => {
+    console.log(name);
+  },
 });
 
 export const useDropdownContext = () => useContext(DropdownContext);
@@ -11,9 +12,7 @@ export const useDropdownContext = () => useContext(DropdownContext);
 export const DropdownProvider: React.FC<{children: ReactNode}> = ({
   children,
 }) => {
-  const [activeDropdownName, setActiveDropdownName] = useState<string | null>(
-    null
-  );
+  const [activeDropdownName, setActiveDropdownName] = useState('');
 
   return (
     <DropdownContext.Provider
