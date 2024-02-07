@@ -66,12 +66,13 @@ function initPage() {
       type: type,
       hasValidation: hasValidation,
     };
+    getStore().dispatch(setLevel(level));
     const aiTutorFabMountPoint = document.getElementById(
       'ai-tutor-fab-mount-point'
     );
     if (aiTutorFabMountPoint) {
       ReactDOM.render(
-        <AITutorFloatingActionButton level={level} />,
+        <AITutorFloatingActionButton />,
         aiTutorFabMountPoint
       );
     }
