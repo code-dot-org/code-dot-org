@@ -112,7 +112,6 @@ trigger:
   branch:
     - "staging"
     - "staging-next"
-    - "seth/fake-staging"
   event:
     - pull_request
 
@@ -243,7 +242,6 @@ trigger:
   branch:
     - "staging"
     - "staging-next"
-    - "seth/fake-staging"
   event:
     - pull_request
 
@@ -279,11 +277,12 @@ steps:
 
 trigger:
   branch:
-    - "seth/fake-staging"
+    - "staging"
+    - "staging-next"
   event:
     - push
 ---
 kind: signature
-hmac: 522c770bed04bca70f8fc472e90e4c02018f82b9218668ad903ce0939a9e8e8a
+hmac: edcddae91383f54d5a2d1923c6b7786dec279a44abb55b862040861505751df4
 
 ...
