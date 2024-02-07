@@ -241,17 +241,18 @@ clone:
   disable: true
 
 steps:
+
   - name: clone
     image: bitnami/git
     commands:
       - git lfs install
-      - git clone --branch $DRONE_BRANCH  $DRONE_GIT_HTTP_URL .
+      - git clone --branch $DRONE_BRANCH --depth 100 $DRONE_GIT_HTTP_URL . 
 
   - name: cache-staging-clone
     image: plugins/s3-cache
     settings:
       filename: cache-staging-clone.tar
-      endpoint: s3://code-dot-org
+      endpoint: s3://code-dot-org-drone
       rebuild: true
       debug: true
       pull: true
@@ -265,6 +266,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: 4b8f4a624bca0efb867e974b22b3f86cea667d6bfd750b4293d2fa99d4d666d0
+hmac: f36dd2a8a82daf6086acdd1e53ba96f5ed0862515b3d660f3abd0e4858d943e4
 
 ...
