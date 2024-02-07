@@ -235,7 +235,7 @@ steps:
     image: plugins/s3-cache
     settings:
       filename: cache-staging-clone.tar
-      endpoint: s3://code-dot-org
+      endpoint: s3://code-dot-org-drone
       rebuild: true
       debug: true
       pull: true
