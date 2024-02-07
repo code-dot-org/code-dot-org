@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
-import Button from '@cdo/apps/templates/Button';
 import LevelTypesBox from './LevelTypesBox';
 import TeacherActionsBox from './TeacherActionsBox';
 import AssignmentCompletionStatesBox from './AssignmentCompletionStatesBox';
