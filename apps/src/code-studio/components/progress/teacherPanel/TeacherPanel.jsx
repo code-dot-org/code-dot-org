@@ -34,6 +34,7 @@ import {
 } from '@cdo/apps/code-studio/components/progress/teacherPanel/teacherPanelData';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 import fontConstants from '@cdo/apps/fontConstants';
+import moduleStyles from './teacher-panel.module.scss';
 
 const TEACHER_PANEL = 'TeacherPanel';
 
@@ -246,13 +247,16 @@ class TeacherPanel extends React.Component {
               )}
             </div>
           )}
-          <SortByNameDropdown
-            sortByStyles={styles.sortBy}
-            selectStyles={styles.select}
-            sectionId={sectionId}
-            unitName={unitName}
-            source={TEACHER_PANEL}
-          />
+          <div className={moduleStyles.sortDropdownContainer}>
+            <SortByNameDropdown
+              sortByStyles={styles.sortBy}
+              selectStyles={styles.select}
+              sectionId={sectionId}
+              unitName={unitName}
+              source={TEACHER_PANEL}
+              className={moduleStyles.sortDropdown}
+            />
+          </div>
           {viewAs === ViewType.Instructor && (students || []).length > 0 && (
             <StudentTable
               levelsWithProgress={levelsWithProgress}
@@ -305,12 +309,8 @@ const styles = {
     fontSize: 11,
   },
   sortBy: {
-    display: 'block',
     textAlign: 'center',
-  },
-  select: {
-    width: 180,
-    margin: '0px 10px 5px',
+    marginBottom: '10px',
   },
 };
 
