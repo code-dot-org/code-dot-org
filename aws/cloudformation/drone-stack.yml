@@ -532,3 +532,6 @@ Resources:
             # TODO: remove references to old bucket once no longer used
             - 'arn:aws:s3:::code-dot-org'
             - 'arn:aws:s3:::code-dot-org/*'
+      Roles:
+        - 'DroneWorker'
+        - 'DroneServer'
