@@ -31,6 +31,7 @@ end
 writer = URI.parse(node['cdo-secrets']['db_writer'] || 'mysql2://root@localhost/')
 writer.hostname = '127.0.0.1' if writer.hostname == 'localhost'
 reader = URI.parse((node['cdo-secrets']['db_reader'] || writer).to_s)
+reporting = URI.parse((node['cdo-secrets']['reporting_db_writer'] || writer).to_s)
 
 admin = URI.parse(node['cdo-mysql']['proxy']['admin'])
 admin_opt_str = %w(user host port).map {|x| "--#{x}=#{admin.send(x)}"}.join(' ')
@@ -39,6 +40,7 @@ admin_password = "--defaults-extra-file=<(printf \"[client]\\npassword=#{admin.p
 mysql_admin = "mysql #{admin_password} #{admin_opt_str}"
 
 proxy_port = node['cdo-mysql']['proxy']['port']
+reporting_port = node['cdo-mysql']['proxy']['reporting_port']
 data_dir = '/var/lib/proxysql'
 
 template 'proxysql.cnf' do
@@ -47,12 +49,14 @@ template 'proxysql.cnf' do
   variables(
     mysql_servers: [
       {writer => [0, 1, 2]},
-      {reader => [1, 2]}
+      {reader => [1, 2]},
+      {reporting => [3]}
     ],
     data_dir: data_dir,
     is_aurora: true, # All environments that have ProxySQL enabled used Aurora.
     admin: admin,
-    port: proxy_port
+    port: proxy_port,
+    reporting_port: reporting_port
   )
 end
 
@@ -119,6 +123,7 @@ end
 # Override application config to use proxy endpoint for DB reads and writes.
 node.override['cdo-secrets']['db_writer'] = writer.dup.tap {|r| r.hostname = '127.0.0.1'; r.port = proxy_port}.to_s
 node.override['cdo-secrets']['db_reader'] = reader.dup.tap {|r| r.hostname = '127.0.0.1'; r.port = proxy_port}.to_s
+node.override['cdo-secrets']['reporting_db_writer'] = reporting.dup.tap {|r| r.hostname = '127.0.0.1'; r.port = reporting_port}.to_s
 
 node.override['cdo-secrets']['db_proxy_admin'] = admin.to_s
 # Send log to CloudWatch.
