@@ -9,27 +9,40 @@ import {
   TriggerStart,
   TRIGGER_FIELD,
 } from './constants';
-import experiments from '@cdo/apps/util/experiments';
 import {GeneratorHelpersSimple2} from './blocks/simple2';
 import {Renderers} from '@cdo/apps/blockly/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {BlocklyOptions, WorkspaceSvg} from 'blockly';
+import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import {Abstract} from 'blockly/core/events/events_abstract';
+const experiments = require('@cdo/apps/util/experiments');
+
+type CompiledEvents = {[key: string]: {code: string; args?: string[]}};
 
 /**
  * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
  * workspace view, execute code, and save/load projects.
  */
 export default class MusicBlocklyWorkspace {
-  constructor() {
+  private workspace: WorkspaceSvg | null;
+  private container: HTMLElement | null;
+  private codeHooks: {[key: string]: (...args: unknown[]) => void};
+  private compiledEvents: CompiledEvents;
+  private lastExecutedEvents: CompiledEvents;
+  private triggerIdToStartType: {[id: string]: string};
+
+  constructor(
+    private readonly metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
+  ) {
+    this.workspace = null;
+    this.container = null;
     this.codeHooks = {};
-    this.compiledEvents = null;
+    this.compiledEvents = {};
     this.triggerIdToStartType = {};
-    this.lastExecutedEvents = null;
-    this.metricsReporter = Lab2Registry.getInstance().getMetricsReporter();
+    this.lastExecutedEvents = {};
   }
 
-  triggerIdToEvent = id => `triggeredAtButton-${id}`;
-
-  capitalizeFirst = str => str.replace(/^./, str => str.toUpperCase());
+  triggerIdToEvent = (id: string) => `triggeredAtButton-${id}`;
 
   /**
    * Initialize the Blockly workspace
@@ -39,7 +52,12 @@ export default class MusicBlocklyWorkspace {
    * @param {*} toolbox information about the toolbox
    *
    */
-  init(container, onBlockSpaceChange, isReadOnlyWorkspace, toolbox) {
+  init(
+    container: HTMLElement,
+    onBlockSpaceChange: (e: Abstract) => void,
+    isReadOnlyWorkspace: boolean,
+    toolbox: {[key: string]: string[]}
+  ) {
     if (this.workspace) {
       this.workspace.dispose();
     }
@@ -55,12 +73,13 @@ export default class MusicBlocklyWorkspace {
       renderer: experiments.isEnabled('zelos')
         ? Renderers.ZELOS
         : Renderers.DEFAULT,
+      // noFunctionBlockFrame is only used by our custom Blockly wrapper, so we cast this object to BlocklyOptions below
       noFunctionBlockFrame: true,
       zoom: {
         startScale: experiments.isEnabled('zelos') ? 0.9 : 1,
       },
       readOnly: isReadOnlyWorkspace,
-    });
+    } as BlocklyOptions);
 
     this.resizeBlockly();
 
@@ -68,15 +87,13 @@ export default class MusicBlocklyWorkspace {
 
     this.workspace.registerButtonCallback('createVariableHandler', button => {
       Blockly.Variables.createVariableButtonHandler(
-        button.getTargetWorkspace(),
-        null,
-        null
+        button.getTargetWorkspace()
       );
     });
   }
 
   resizeBlockly() {
-    if (!this.workspace) {
+    if (!this.workspace || !this.container) {
       return;
     }
 
@@ -99,7 +116,7 @@ export default class MusicBlocklyWorkspace {
    *
    * @param {*} scope Global scope to provide the execution runtime
    */
-  compileSong(scope) {
+  compileSong(scope: object) {
     if (!this.workspace) {
       this.metricsReporter.logWarning(
         'compileSong called before workspace initialized.'
@@ -137,7 +154,7 @@ export default class MusicBlocklyWorkspace {
 
           // Accumulate some code that has all of the function implementations.
           const functionCode = Blockly.JavaScript.blockToCode(
-            functionBlock.getChildren()[0]
+            functionBlock.getChildren(false)[0]
           );
           functionImplementationsCode +=
             GeneratorHelpersSimple2.getFunctionImplementation(
@@ -180,10 +197,12 @@ export default class MusicBlocklyWorkspace {
       }
 
       if (
-        [
-          BlockTypes.NEW_TRACK_AT_START,
-          BlockTypes.NEW_TRACK_AT_MEASURE,
-        ].includes(block.type)
+        (
+          [
+            BlockTypes.NEW_TRACK_AT_START,
+            BlockTypes.NEW_TRACK_AT_MEASURE,
+          ] as string[]
+        ).includes(block.type)
       ) {
         if (!this.compiledEvents.tracks) {
           this.compiledEvents.tracks = {code: ''};
@@ -193,12 +212,14 @@ export default class MusicBlocklyWorkspace {
       }
 
       if (
-        [
-          BlockTypes.TRIGGERED_AT,
-          BlockTypes.TRIGGERED_AT_SIMPLE,
-          BlockTypes.TRIGGERED_AT_SIMPLE2,
-          BlockTypes.NEW_TRACK_ON_TRIGGER,
-        ].includes(block.type)
+        (
+          [
+            BlockTypes.TRIGGERED_AT,
+            BlockTypes.TRIGGERED_AT_SIMPLE,
+            BlockTypes.TRIGGERED_AT_SIMPLE2,
+            BlockTypes.NEW_TRACK_ON_TRIGGER,
+          ] as string[]
+        ).includes(block.type)
       ) {
         const id = block.getFieldValue(TRIGGER_FIELD);
         this.compiledEvents[this.triggerIdToEvent(id)] = {
@@ -225,9 +246,11 @@ export default class MusicBlocklyWorkspace {
 
     CustomMarshalingInterpreter.evalWithEvents(
       scope,
-      this.compiledEvents
+      this.compiledEvents,
+      '',
+      undefined
     ).hooks.forEach(hook => {
-      this.codeHooks[hook.name] = hook.func;
+      this.codeHooks[hook.name] = hook.func as () => void;
     });
 
     console.log('Compiled song.', this.compiledEvents);
@@ -244,8 +267,10 @@ export default class MusicBlocklyWorkspace {
    * {@param triggerEvents} a list of trigger events to execute, in the format
    * { id: <ID of trigger>, startPosition: <playhead position to start from> }
    */
-  executeCompiledSong(triggerEvents = []) {
-    if (this.compiledEvents === null) {
+  executeCompiledSong(
+    triggerEvents: {id: string; startPosition: number}[] = []
+  ) {
+    if (Object.keys(this.compiledEvents).length === 0) {
       this.metricsReporter.logWarning(
         'executeCompiledSong called before compileSong.'
       );
@@ -277,14 +302,14 @@ export default class MusicBlocklyWorkspace {
    *
    * @param {} id ID of the trigger
    */
-  executeTrigger(id, startPosition) {
+  executeTrigger(id: string, startPosition: number) {
     const hook = this.codeHooks[this.triggerIdToEvent(id)];
     if (hook) {
       this.callUserGeneratedCode(hook, [startPosition]);
     }
   }
 
-  hasTrigger(id) {
+  hasTrigger(id: string) {
     return !!this.codeHooks[this.triggerIdToEvent(id)];
   }
 
@@ -292,7 +317,7 @@ export default class MusicBlocklyWorkspace {
    * Given the exact current playback position, get the start position of the trigger,
    * adjusted based on when the trigger should play (immediately, next beat, or next measure).
    */
-  getTriggerStartPosition(id, currentPosition) {
+  getTriggerStartPosition(id: string, currentPosition: number) {
     const triggerStart = this.triggerIdToStartType[this.triggerIdToEvent(id)];
     if (!triggerStart) {
       console.warn('No compiled trigger with ID: ' + id);
@@ -329,7 +354,7 @@ export default class MusicBlocklyWorkspace {
     return this.workspace.getAllBlocks();
   }
 
-  updateHighlightedBlocks(playingBlockIds) {
+  updateHighlightedBlocks(playingBlockIds: string[]) {
     if (!this.workspace) {
       this.metricsReporter.logWarning(
         'updateHighlightedBlocks called before workspace initialized.'
@@ -337,26 +362,27 @@ export default class MusicBlocklyWorkspace {
       return;
     }
     // Clear all highlights.
-    this.workspace.getAllBlocks().forEach(block => {
+    for (const block of this.workspace.getAllBlocks()) {
       this.workspace.highlightBlock(block.id, false);
-    });
+    }
     // Highlight playing blocks.
-    playingBlockIds.forEach(blockId => {
+    for (const blockId of playingBlockIds) {
       this.workspace.highlightBlock(blockId, true);
-    });
+    }
   }
 
   // Given a block ID, selects that block.
   // Given undefined, unselects all blocks.
-  selectBlock(blockId) {
-    if (!this.workspace) {
+  selectBlock(blockId: string) {
+    if (this.workspace === null) {
       this.metricsReporter.logWarning(
         'selectBlock called before workspace initialized.'
       );
       return;
     }
+
     if (blockId) {
-      this.workspace.getBlockById(blockId).select();
+      this.workspace.getBlockById(blockId)?.select();
     } else {
       this.workspace.getAllBlocks().forEach(block => {
         block.unselect();
@@ -364,7 +390,7 @@ export default class MusicBlocklyWorkspace {
     }
   }
 
-  getSelectedTriggerId(blockId) {
+  getSelectedTriggerId(blockId: string) {
     if (!this.workspace) {
       this.metricsReporter.logWarning(
         'getSelectedTriggerId called before workspace initialized.'
@@ -391,7 +417,7 @@ export default class MusicBlocklyWorkspace {
   }
 
   // Load the workspace with the given code.
-  loadCode(code) {
+  loadCode(code: string) {
     if (!this.workspace) {
       this.metricsReporter.logWarning(
         'loadCode called before workspace initialized.'
@@ -406,11 +432,17 @@ export default class MusicBlocklyWorkspace {
     Blockly.serialization.workspaces.load(codeCopy, this.workspace);
   }
 
-  callUserGeneratedCode(fn, args = []) {
+  callUserGeneratedCode(
+    fn: (...args: unknown[]) => void,
+    args: unknown[] = []
+  ) {
     try {
       fn.call(this, ...args);
     } catch (e) {
-      this.metricsReporter.logError('Error running user generated code', e);
+      this.metricsReporter.logError(
+        'Error running user generated code',
+        e as Error
+      );
     }
   }
 
@@ -442,7 +474,7 @@ export default class MusicBlocklyWorkspace {
     return this.workspace.getRedoStack().length > 0;
   }
 
-  undoRedo(redo) {
+  undoRedo(redo: boolean) {
     if (!this.workspace) {
       this.metricsReporter.logWarning(
         'undoRedo called before workspace initialized.'
