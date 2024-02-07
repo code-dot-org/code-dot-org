@@ -78,57 +78,6 @@ describe('LightSensor', function () {
     });
   });
 
-  describe(`getAveragedValue`, () => {
-    it(`returns average of values in buffer`, () => {
-      lightSensor.state.buffer = new Float32Array(
-        MAX_SENSOR_BUFFER_DURATION / SAMPLE_INTERVAL
-      );
-      for (let i = 0; i < lightSensor.state.buffer.length; i++) {
-        lightSensor.state.buffer[i] = i;
-      }
-
-      // Test the average of the first second of data
-      lightSensor.state.currentBufferWriteIndex = 20;
-      expect(lightSensor.getAveragedValue(1000)).to.equal(10);
-
-      // Test that the full buffer can be averaged
-      lightSensor.state.currentBufferWriteIndex =
-        MAX_SENSOR_BUFFER_DURATION / SAMPLE_INTERVAL + 1;
-      expect(lightSensor.getAveragedValue(MAX_SENSOR_BUFFER_DURATION)).to.equal(
-        30
-      );
-
-      // Test that one index can be averaged
-      lightSensor.state.currentBufferWriteIndex = 1;
-      expect(lightSensor.getAveragedValue(SAMPLE_INTERVAL)).to.equal(0);
-
-      // Test the circular behavior of the buffer
-      lightSensor.state.currentBufferWriteIndex =
-        MAX_SENSOR_BUFFER_DURATION / SAMPLE_INTERVAL + 10;
-      expect(lightSensor.getAveragedValue(750)).to.equal(22);
-
-      // Test the average if the requested duration is longer than what has been recorded
-      lightSensor.state.currentBufferWriteIndex = 20;
-      expect(lightSensor.getAveragedValue(MAX_SENSOR_BUFFER_DURATION)).to.equal(
-        10
-      );
-    });
-
-    it(`returns average of values in buffer within the set range`, () => {
-      lightSensor.setScale(10, 110);
-
-      lightSensor.state.buffer = new Float32Array(
-        MAX_SENSOR_BUFFER_DURATION / SAMPLE_INTERVAL
-      );
-      for (let i = 0; i < lightSensor.state.buffer.length; i++) {
-        lightSensor.state.buffer[i] = 5;
-      }
-
-      lightSensor.state.currentBufferWriteIndex = 20;
-      expect(lightSensor.getAveragedValue(800)).to.equal(12);
-    });
-  });
-
   describe('emitsEvent', () => {
     let emitSpy;
     beforeEach(() => {

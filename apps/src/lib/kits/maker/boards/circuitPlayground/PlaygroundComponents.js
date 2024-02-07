@@ -200,7 +200,7 @@ function initializeSoundSensor(board) {
       freq: 100,
     });
     addSensorFeatures(five.Board.fmap, sensor);
-    sensor.once('data', () => resolve(sensor));
+    sensor.once('data', () => resolve(sensor)); 
   });
 }
 

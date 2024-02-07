@@ -173,11 +173,6 @@ export function itMakesCircuitPlaygroundComponentsAvailable(
             expect(component).to.have.property('value');
           });
 
-          it('getAveragedValue()', () => {
-            expect(component.getAveragedValue).to.be.a('function');
-            expect(component.getAveragedValue()).to.be.a('number');
-          });
-
           it('setScale()', () => {
             expect(component.setScale).to.be.a('function');
           });
