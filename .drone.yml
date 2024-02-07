@@ -37,7 +37,7 @@ steps:
     image: bitnami/git
     commands:
       - git lfs install --skip-repo
-      - sleep 50000
+      - sleep 50001
       # - git clone --branch $DRONE_SOURCE_BRANCH  --depth 200 $DRONE_GIT_HTTP_URL .
       - git checkout $DRONE_SOURCE_BRANCH
       - git reset --hard $DRONE_COMMIT
@@ -265,6 +265,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: bd70b9079d0e25acb6e0cac69d8b70bd15ae613ce74b1c95cb242c7ae0dd4ee8
+hmac: 0862588af630ed72b25a00cba937a98efe1c9af7a1f6c9b08623aa886e136689
 
 ...
