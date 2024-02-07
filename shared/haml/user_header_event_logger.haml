@@ -1,8 +1,1 @@
 %script{src: CDO.studio_url(webpack_asset_path('js/userHeaderEventLogger.js')), data: {isSignedOut: is_signed_out.to_json, createMenuOptions: create_menu_options&.to_json}}
-
-:javascript
-    // When loaded on the code.org homepage, jQuery is not yet available (since its
-    // load is deferred), but a shim implementing .ready() is available.
-    $(document).ready(function() {
-      window.setupUserHeaderEventLogger();
-    });
