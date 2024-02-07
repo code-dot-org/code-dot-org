@@ -54,6 +54,8 @@ experiments.AI_TUTOR_ACCESS = 'ai-tutor';
 experiments.GOOGLE_BLOCKLY = 'google_blockly';
 // Adds documentation links to block context menus in Sprite Lab (supported with Google Blockly only)
 experiments.SPRITE_LAB_DOCS = 'sl_docs';
+// Adds a keyboard navigation toggle to the workspace header in Google Blockly labs
+experiments.KEYBOARD_NAVIGATION = 'blockly_keyboard';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

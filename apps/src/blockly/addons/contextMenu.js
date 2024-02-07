@@ -178,7 +178,10 @@ const registerCursor = function (cursorType, weight) {
         : `${msg.useCursorType({type: cursorType})}`;
     },
     preconditionFn: function (scope) {
-      if (!scope.workspace.keyboardAccessibilityMode) {
+      if (
+        !experiments.isEnabled(experiments.KEYBOARD_NAVIGATION) ||
+        !scope.workspace.keyboardAccessibilityMode
+      ) {
         return MenuOptionStates.HIDDEN;
       } else if (isCurrentCursor(cursorType)) {
         return MenuOptionStates.DISABLED;
