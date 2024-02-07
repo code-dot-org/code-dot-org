@@ -1,0 +1,52 @@
+name 'PLGuide_L1_Opening1MB'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Opening a lesson or unit
+
+#### The lesson begins with an introduction that includes:
+#### * A sentence explaining what the lesson is about
+#### * List of objectives
+#### * A presurvey (contact RED team to create the survey) 
+#### * Suggested time 
+#### * an image from the lesson 
+
+
+
+##Exemplar: 
+# Teaching CS Fundamentals Maker with micro:bit
+
+
+
+#### Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. 
+
+#### This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. 
+
+#### This professional learning course will prepare you to teach your students fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.
+
+
+
+## In this module, you will:
+
+* ##### Get an introduction to foundational coding concepts like events, loops, conditionals, variables and functions.
+* ##### Practice key concepts included in the unit.
+* ##### Prepare to teach any of the CS Fundamentals Maker with micro:bit courses. 
+
+##### Note: The CS Maker modules have for recommended grade levels 2-5 represented in courses C-F. This professional learning module will prepare you to teach any of the modules but note that not all of these concepts are covered in all of the modules. 
+
+## Take the pre-survey
+
+##### Code.org values and is responsive to feedback. Please fill out <a href="www.linkgoeshere.com" target="blank" rel="noopener noreferrer">this short pre-survey</a> to  tell us about who you are and how we can best support you.
+
+<a class="btn btn-large btn-primary" href="www.linkgoeshere.com" target="blank" rel="noopener noreferrer">Take the pre-survey</a>
+
+
+### **Suggested time:** ?? minutes
+
+## Let's get started!
+
+<div style="clear:both"/>
+
+
+MARKDOWN

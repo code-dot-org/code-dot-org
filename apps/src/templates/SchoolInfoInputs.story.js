@@ -65,7 +65,6 @@ class SchoolInfoInputsWrapper extends Component {
 }
 
 export default {
-  title: 'SchoolInfoInputs',
   component: SchoolInfoInputs,
 };
 
