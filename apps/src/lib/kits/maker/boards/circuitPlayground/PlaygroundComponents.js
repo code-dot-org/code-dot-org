@@ -8,7 +8,6 @@ import {
   CP_COMMAND,
   CP_ACCEL_STREAM_ON,
 } from './PlaygroundConstants';
-import LookbackLogger from '../../LookbackLogger';
 import _ from 'lodash';
 import five from '@code-dot-org/johnny-five';
 import PlaygroundIO from 'playground-io';
@@ -200,7 +199,7 @@ function initializeSoundSensor(board) {
       freq: 100,
     });
     addSensorFeatures(five.Board.fmap, sensor);
-    sensor.once('data', () => resolve(sensor)); 
+    sensor.once('data', () => resolve(sensor));
   });
 }
 
@@ -217,7 +216,7 @@ function initializeLightSensor(board) {
 }
 
 /**
- * Adds `getAveragedValue` using LookbackLogger to a five.Sensor instance.
+ * Set scale for setScale block, which records for later use to a five.Sensor instance.
  * @param {five.Board.fmap} fmap mapping function
  * @param {five.Sensor} sensor
  */
@@ -227,25 +226,8 @@ function addSensorFeatures(fmap, sensor) {
    * Scale is a 2-element array of [low, high].
    * @type {Array.<number>|undefined}
    */
-  let scale = undefined;
-
-  sensor.lookbackLogger = new LookbackLogger();
-  sensor.start = () => {
-    sensor.on('data', () => {
-      // Add the raw (un-scaled) value to the logger.
-      sensor.lookbackLogger.addData(sensor.raw);
-    });
-  };
-  sensor.getAveragedValue = n => {
-    const [low, high] = scale || [0, 1023];
-    return fmap(sensor.lookbackLogger.getLast(n), 0, 1023, low, high);
-  };
-
-  // Set scale for setScale block, which records for later use.
   sensor.setScale = (low, high) => {
     sensor.scale(low, high);
-    // store scale in public state for scaling recorded data
-    scale = [low, high];
   };
 }
 
