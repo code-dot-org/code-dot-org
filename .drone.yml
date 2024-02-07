@@ -248,7 +248,9 @@ steps:
     image: bitnami/git
     commands:
       - git lfs install
-      - git clone --branch $DRONE_BRANCH --depth 100 $DRONE_GIT_HTTP_URL . 
+      # To get a full cache hit building feature branches, the depth of this 
+      # clone must be at least the depth of the `git fetch` in the PR pipeline.
+      - git clone --branch $DRONE_BRANCH --depth 200 $DRONE_GIT_HTTP_URL . 
 
   - name: cache-staging-clone
     image: plugins/s3-cache
