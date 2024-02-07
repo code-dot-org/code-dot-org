@@ -44,6 +44,7 @@ export default class SocialShare extends Component {
 
     return (
       <div>
+        {/* note that linkedin share doesn't work with localhost urls */}
         {!under13 &&
           this.props.isPlCourse &&
           this.state.isLinkedinAvailable && (
