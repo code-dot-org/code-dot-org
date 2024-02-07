@@ -1,111 +1,114 @@
+import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
-
-import React, {Component} from 'react';
 import i18n from '@cdo/locale';
-import color from '../../util/color';
-import testImageAccess from '../../code-studio/url_test';
+import color from '@cdo/apps/util/color';
+import testImageAccess from '@cdo/apps/code-studio/url_test';
 
-export default class SocialShare extends Component {
-  static propTypes = {
-    facebook: PropTypes.string.isRequired,
-    twitter: PropTypes.string.isRequired,
-    linkedin: PropTypes.string,
-    print: PropTypes.string.isRequired,
-    under13: PropTypes.bool,
-    isPlCourse: PropTypes.bool,
-  };
+export default function SocialShare({
+  facebook,
+  twitter,
+  linkedin,
+  print,
+  under13,
+  isPlCourse,
+}) {
+  const [isTwitterAvailable, setIsTwitterAvailable] = useState(false);
+  const [isFacebookAvailable, setIsFacebookAvailable] = useState(false);
+  const [isLinkedinAvailable, setIsLinkedinAvailable] = useState(false);
 
-  state = {
-    isTwitterAvailable: false,
-    isFacebookAvailable: false,
-    isLinkedinAvailable: false,
-  };
-
-  componentDidMount() {
+  useEffect(() => {
     testImageAccess(
       'https://facebook.com/favicon.ico' + '?' + Math.random(),
-      () => this.setState({isFacebookAvailable: true})
+      () => setIsFacebookAvailable(true)
     );
+  }, []);
+  useEffect(() => {
     testImageAccess(
       'https://twitter.com/favicon.ico' + '?' + Math.random(),
-      () => this.setState({isTwitterAvailable: true})
+      () => setIsTwitterAvailable(true)
     );
+  }, []);
+  useEffect(() => {
     testImageAccess(
-      'https://linkedin.com/favicon.ico' + '?' + Math.random(),
-      () => this.setState({isLinkedinAvailable: true})
+      'https://www.linkedin.com/favicon.ico' + '?' + Math.random(),
+      () => setIsLinkedinAvailable(true)
     );
-  }
+  }, []);
 
-  render() {
-    const {under13} = this.props;
-    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?${this.props.facebook}`;
-    const twitterShareUrl = `https://twitter.com/share?${this.props.twitter}`;
-    const linkedShareUrl = `https://www.linkedin.com/sharing/share-offsite/?${this.props.linkedin}`;
+  const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?${facebook}`;
+  const twitterShareUrl = `https://twitter.com/share?${twitter}`;
+  const linkedShareUrl = `https://www.linkedin.com/sharing/share-offsite/?${linkedin}`;
 
-    return (
-      <div>
-        {/* note that linkedin share doesn't work with localhost urls */}
-        {!under13 &&
-          this.props.isPlCourse &&
-          this.state.isLinkedinAvailable && (
-            <a
-              href={linkedShareUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={dashboard.popupWindow}
-            >
-              <button
-                type="button"
-                style={{background: color.linkedin_blue, ...styles.shareButton}}
-                onClick={e => e.preventDefault()}
-              >
-                <i className="fa fa-linkedin" />
-              </button>
-            </a>
-          )}
-
-        {!under13 && this.state.isFacebookAvailable && (
-          <a
-            href={facebookShareUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={dashboard.popupWindow}
+  return (
+    <div>
+      {/* note that linkedin share doesn't work with localhost urls */}
+      {!under13 && isPlCourse && isLinkedinAvailable && (
+        <a
+          href={linkedShareUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={dashboard.popupWindow}
+        >
+          <button
+            type="button"
+            style={{background: color.linkedin_blue, ...styles.shareButton}}
+            onClick={e => e.preventDefault()}
           >
-            <button
-              type="button"
-              style={{background: color.facebook_blue, ...styles.shareButton}}
-              onClick={e => e.preventDefault()}
-            >
-              <i className="fa fa-facebook" />
-            </button>
-          </a>
-        )}
-        {!under13 && this.state.isTwitterAvailable && (
-          <a
-            href={twitterShareUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={dashboard.popupWindow}
-          >
-            <button
-              type="button"
-              style={{background: color.twitter_blue, ...styles.shareButton}}
-              onClick={e => e.preventDefault()}
-            >
-              <i className="fa fa-twitter" />
-            </button>
-          </a>
-        )}
-        <a href={this.props.print} className="social-print-link">
-          <button type="button" style={styles.printButton}>
-            <i className="fa fa-print" />
-            {' ' + i18n.print()}
+            <i className="fa fa-linkedin" />
           </button>
         </a>
-      </div>
-    );
-  }
+      )}
+
+      {!under13 && isFacebookAvailable && (
+        <a
+          href={facebookShareUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={dashboard.popupWindow}
+        >
+          <button
+            type="button"
+            style={{background: color.facebook_blue, ...styles.shareButton}}
+            onClick={e => e.preventDefault()}
+          >
+            <i className="fa fa-facebook" />
+          </button>
+        </a>
+      )}
+      {!under13 && isTwitterAvailable && (
+        <a
+          href={twitterShareUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={dashboard.popupWindow}
+        >
+          <button
+            type="button"
+            style={{background: color.twitter_blue, ...styles.shareButton}}
+            onClick={e => e.preventDefault()}
+          >
+            <i className="fa fa-twitter" />
+          </button>
+        </a>
+      )}
+      <a href={print} className="social-print-link">
+        <button type="button" style={styles.printButton}>
+          <i className="fa fa-print" />
+          {' ' + i18n.print()}
+        </button>
+      </a>
+    </div>
+  );
 }
+
+SocialShare.propTypes = {
+  facebook: PropTypes.string.isRequired,
+  twitter: PropTypes.string.isRequired,
+  linkedin: PropTypes.string,
+  print: PropTypes.string.isRequired,
+  under13: PropTypes.bool,
+  isPlCourse: PropTypes.bool,
+};
 
 const styles = {
   shareButton: {
