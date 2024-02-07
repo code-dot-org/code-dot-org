@@ -43,7 +43,7 @@ class CodeWorkspace extends React.Component {
     workspaceAlert: PropTypes.object,
     isProjectTemplateLevel: PropTypes.bool,
     hasIncompatibleSources: PropTypes.bool,
-    failedToGenerateSources: PropTypes.bool,
+    failedToGenerateCode: PropTypes.bool,
   };
 
   shouldComponentUpdate(nextProps) {
@@ -54,14 +54,14 @@ class CodeWorkspace extends React.Component {
     Object.keys(nextProps).forEach(
       function (key) {
         // isRunning and style only affect style, and can be updated
-        // workspaceAlert, hasIncompatibleSources and failedToGenerateSources
+        // workspaceAlert, hasIncompatibleSources and failedToGenerateCode
         // are involved in displaying or closing workspace alert and therefore can be updated.
         if (
           key === 'isRunning' ||
           key === 'style' ||
           key === 'workspaceAlert' ||
           key === 'hasIncompatibleSources' ||
-          key === 'failedToGenerateSources'
+          key === 'failedToGenerateCode'
         ) {
           return;
         }
@@ -302,9 +302,9 @@ class CodeWorkspace extends React.Component {
             {i18n.jsonInCdoBlockly()}
           </div>
         )}
-        {this.props.failedToGenerateSources && (
+        {this.props.failedToGenerateCode && (
           <div
-            id="failedToGenerateSourcesBanner"
+            id="failedToGenerateCodeBanner"
             style={{...styles.topBanner, ...styles.errorBanner}}
           >
             {i18n.failedToGenerateBlocklyCode()}
@@ -398,7 +398,7 @@ export default connect(
     workspaceAlert: state.project.workspaceAlert,
     isProjectTemplateLevel: state.pageConstants.isProjectTemplateLevel,
     hasIncompatibleSources: state.blockly.hasIncompatibleSources,
-    failedToGenerateSources: state.blockly.failedToGenerateSources,
+    failedToGenerateCode: state.blockly.failedToGenerateCode,
   }),
   dispatch => ({
     closeWorkspaceAlert: () => dispatch(closeWorkspaceAlert()),

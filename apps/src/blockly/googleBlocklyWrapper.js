@@ -70,7 +70,7 @@ import {
 } from './eventHandlers';
 import {initializeScrollbarPair} from './addons/cdoScrollbar.js';
 import {getStore} from '@cdo/apps/redux';
-import {setFailedToGenerateSources} from '@cdo/apps/redux/blockly';
+import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 
 const options = {
@@ -173,12 +173,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
           this.getHiddenDefinitionWorkspace()
         );
       }
-      getStore().dispatch(setFailedToGenerateSources(false));
+      getStore().dispatch(setFailedToGenerateCode(false));
     } catch (e) {
       // We only want to log the error once per failure since getWorkspaceCode
       // gets called many times and the error will be the same every time.
-      if (!getStore().getState().blockly.failedToGenerateSources) {
-        getStore().dispatch(setFailedToGenerateSources(true));
+      if (!getStore().getState().blockly.failedToGenerateCode) {
+        getStore().dispatch(setFailedToGenerateCode(true));
         MetricsReporter.logError({
           event: 'BLOCKLY_GET_CODE_ERROR',
           errorMessage: e.message,
