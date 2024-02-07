@@ -1,0 +1,25 @@
+{
+  "category": "Experimental",
+  "config": {
+    "func": "gravity_test",
+    "blockText": "{BEHAVIOR}",
+    "returnType": "Behavior",
+    "color": [
+      136,
+      ".84",
+      ".80"
+    ],
+    "args": [
+      {
+        "name": "BEHAVIOR",
+        "options": [
+          [
+            "fall_gravity",
+            "new Behavior(fall_gravity_behavior, [])"
+          ]
+        ]
+      }
+    ],
+    "style": "behavior_blocks"
+  }
+}

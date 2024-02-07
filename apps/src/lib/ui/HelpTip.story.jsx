@@ -2,7 +2,6 @@ import React from 'react';
 import HelpTip from './HelpTip';
 
 export default {
-  title: 'HelpTip',
   component: HelpTip,
 };
 

@@ -97,7 +97,10 @@ def do_linting(base = nil, current = nil)
     if base.nil? || current.nil?
       HooksUtils.get_staged_files
     else
-      HooksUtils.get_changed_files_between_branches(base, current)
+      # Because one way for a file to be changed between branches is for it to
+      # have been deleted, we want to make sure we're only trying to lint files
+      # that actually exist on the filesystem.
+      HooksUtils.get_changed_files_between_branches(base, current).select {|f| File.exist?(f)}
     end
 
   todo = {

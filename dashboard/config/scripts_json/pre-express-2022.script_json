@@ -18,6 +18,7 @@
       "supported_locales": [
         "fa-AF",
         "fa-IR",
+        "ko-KR",
         "sq-AL"
       ],
       "tts": true,
@@ -25,7 +26,7 @@
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2023-11-01 21:19:18 UTC",
+    "serialized_at": "2024-01-12 19:19:51 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

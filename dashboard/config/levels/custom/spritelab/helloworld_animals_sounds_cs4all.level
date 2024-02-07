@@ -66,7 +66,7 @@
     "encrypted_examples": "MwZiZh+vDFbRd5DLOBLc6bU5FoTzQZi//WtrcBe5YQFDrXFcZyCmKrhfMlHU\n7Xh5Uapblup7lbIApAsZjT1rsrP2lOZHPxqmXvMYRUEyB+wgk+36YOv3Jdjv\nRwvYQiuNSNcOzHhgBD1F8NELXxFcEg==\n",
     "display_name": "Sounds",
     "bubble_choice_description": "Learn how to play sounds.",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"hello_world_new\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"4\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"hello_world_new\",\"callout_text\":\"New block!\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"4\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\".blocklyFlyout [data-id=\\\"4\\\"]\",\"localization_key\":\"hello_world_new\",\"callout_text\":\"New block!\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "thumbnail_url": "https://studio.code.org/api/v1/animation-library/gamelab/D9I677s9Rz4Ww_Znrcm36XWuz8WA0Kh8/category_food/face_apple.png",
     "instructions_icon": "bear",
     "validation_code": "//Requires zHelloWorldValidation and zValidationHelperFunctions\r\nlevel10();",
@@ -1425,7 +1425,7 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_playSoundOptions">
+        <block type="gamelab_playSoundOptions" id="4">
           <title name="SOUND" config="'sound://category_animals/bear.mp3', 'sound://category_animals/cat.mp3', 'sound://category_animals/dog.mp3', 'sound://category_animals/chick.mp3', 'sound://category_animals/cow.mp3', 'sound://category_animals/pig.mp3', 'sound://category_animals/sheep.mp3', 'sound://category_animals/goat.mp3', 'sound://category_animals/chicken.mp3', 'sound://category_animals/rooster.mp3', 'sound://category_nature/south_carolina_beach_ripple.mp3', 'sound://category_animals/dolphin.mp3', 'sound://category_animals/tiger.mp3', 'sound://category_animals/elephant.mp3', 'sound://category_nature/summer_night_loop.mp3', 'sound://category_background/ocean_waves.mp3', 'sound://category_pop/bubble_pop_cluster_1.mp3', 'sound://category_nature/thunderstorm_1.mp3'">'sound://category_animals/dolphin.mp3'</title>
         </block>
         <block type="gamelab_makeNewSpriteAnon">

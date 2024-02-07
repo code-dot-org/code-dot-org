@@ -321,8 +321,16 @@ module Pd::Application
       workshops.first
     end
 
+    def enrollment
+      Pd::Enrollment.find_by(user: user, workshop: pd_workshop_id)
+    end
+
+    def enrolled?
+      enrollment.present?
+    end
+
     def friendly_registered_workshop
-      Pd::Enrollment.find_by(user: user, workshop: pd_workshop_id) ? 'Yes' : 'No'
+      enrolled? ? 'Yes' : 'No'
     end
 
     def self.prefetch_associated_models(applications)
@@ -425,7 +433,7 @@ module Pd::Application
     end
 
     def formatted_principal_email
-      "\"#{principal_greeting}\" <#{principal_email}>"
+      ActionMailer::Base.email_address_with_name(principal_email, principal_greeting)
     end
 
     def effective_regional_partner_name
@@ -674,7 +682,6 @@ module Pd::Application
         previous_yearlong_cdo_pd
 
         program
-        enough_course_hours
 
         gender_identity
         race
@@ -701,6 +708,7 @@ module Pd::Application
 
         # If the applicant will teach the course, we require extra information
         if hash[:will_teach] == 'Yes'
+          required << :enough_course_hours
           if hash[:program] == PROGRAMS[:csd]
             required << :csd_which_grades
           elsif hash[:program] == PROGRAMS[:csp]
@@ -1068,10 +1076,7 @@ module Pd::Application
 
       # Check if a school is not teaching CS according to the access report
       # If the school is not in the census_summaries table, treat that as not teaching
-      # This is a bit of a confusing double negative but I wanted to keep the YES/NO logic
-      # consistent with the criteria.
-      meets_scholarship_criteria_scores[:not_teaching_in_access_report] =
-        Census::CensusSummary.find_by(school_id: school_id, school_year: census_year)&.does_teach? ? NO : YES
+      meets_scholarship_criteria_scores[:school_last_census_status] = Census::CensusSummary.find_by(school_id: school_id, school_year: census_year)&.does_teach? ? NO : YES
 
       update(
         response_scores: response_scores_hash.deep_merge(

@@ -13,7 +13,7 @@ import utils from './utils';
  * FormController, within which each FormComponent will act as a single page of
  * the form.
  *
- * @see the pageComponents of WorkshopSurvey for example usage.
+ * @see the pageComponents of TeacherApplication for example usage.
  */
 export default class FormComponent extends React.Component {
   static propTypes = {

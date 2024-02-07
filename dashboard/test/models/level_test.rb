@@ -1245,9 +1245,9 @@ class LevelTest < ActiveSupport::TestCase
       "Craft", "CurriculumReference", "Dancelab", "Eval", "EvaluationMulti", "External",
       "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Gamelab",
       "GamelabJr", "Javalab", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "Music", "NetSim",
-      "Odometer", "Pixelation", "Poetry", "PublicKeyCryptography", "Pythonlab", "StandaloneVideo",
+      "Odometer", "Panels", "Pixelation", "Poetry", "PublicKeyCryptography", "Pythonlab", "StandaloneVideo",
       "StarWarsGrid", "Studio", "TextCompression", "TextMatch", "Unplugged",
-      "Vigenere", "Weblab"
+      "Vigenere", "Weblab", "Weblab2"
     ]
     scripts = [
       "All scripts", "20-hour", "algebra", "artist", "course1", "course2",

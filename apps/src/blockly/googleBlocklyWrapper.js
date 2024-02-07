@@ -25,7 +25,7 @@ import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRendererGeras from './addons/cdoRendererGeras';
-import {CdoRendererThrasos} from './addons/cdoRendererThrasos';
+import CdoRendererThrasos from './addons/cdoRendererThrasos';
 import CdoRendererZelos from './addons/cdoRendererZelos';
 import CdoTheme from './themes/cdoTheme';
 import CdoDarkTheme from './themes/cdoDark';
@@ -63,7 +63,12 @@ import {
   ObservableProcedureModel,
   ObservableParameterModel,
 } from '@blockly/block-shareable-procedures';
-import {adjustCalloutsOnViewportChange, disableOrphans} from './eventHandlers';
+import {
+  adjustCalloutsOnViewportChange,
+  disableOrphans,
+  reflowToolbox,
+} from './eventHandlers';
+import {initializeScrollbarPair} from './addons/cdoScrollbar.js';
 
 const options = {
   contextMenu: true,
@@ -72,8 +77,6 @@ const options = {
 
 const plugin = new CrossTabCopyPaste();
 plugin.init(options);
-
-const BLOCK_PADDING = 7; // Calculated from difference between block height and text height
 
 const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
@@ -380,6 +383,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
     [Themes.TRITANOPIA]: CdoTritanopiaTheme,
     [Themes.TRITANOPIA_DARK]: CdoTritanopiaDarkTheme,
   };
+
+  // Assign all of the properties of the javascript generator to the forBlock array
+  // Prevents deprecation warnings related to https://github.com/google/blockly/pull/7150
+  Object.setPrototypeOf(javascriptGenerator.forBlock, javascriptGenerator);
+
   blocklyWrapper.JavaScript = javascriptGenerator;
   blocklyWrapper.navigationController = new NavigationController();
   // Initialize plugin.
@@ -614,12 +622,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
     const bbox = svg.getBBox();
     svg.setAttribute('height', bbox.height + bbox.y);
     svg.setAttribute('width', bbox.width + bbox.x);
-    // Add a transform to center read-only blocks on their line
-    const notchHeight = workspace.getRenderer().getConstants().NOTCH_HEIGHT;
-    svg.setAttribute(
-      'style',
-      `transform: translate(0px, ${notchHeight + BLOCK_PADDING}px)`
-    );
     workspace.setTheme(theme);
     return workspace;
   };
@@ -633,8 +635,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
         wheel: true,
         drag: true,
         scrollbars: {
+          horizontal: true,
           vertical: true,
-          horizontal: false,
         },
       },
       plugins: {
@@ -659,6 +661,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       container.style.height = `calc(100% - ${styleConstants['workspace-headers-height']}px)`;
     }
     blocklyWrapper.isStartMode = !!opt_options.editBlocks;
+    blocklyWrapper.isToolboxMode = opt_options.editBlocks === 'toolbox_blocks';
     blocklyWrapper.toolboxBlocks = options.toolbox;
     const workspace = blocklyWrapper.blockly_.inject(container, options);
 
@@ -680,6 +683,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
       .getFlyout()
       ?.getWorkspace()
       ?.addChangeListener(adjustCalloutsOnViewportChange);
+
+    initializeScrollbarPair(workspace);
+
+    window.addEventListener('resize', reflowToolbox);
 
     document.dispatchEvent(
       utils.createEvent(Blockly.BlockSpace.EVENTS.MAIN_BLOCK_SPACE_CREATED)
@@ -754,6 +761,17 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.getFunctionEditorWorkspace = function () {
     return blocklyWrapper.functionEditor?.getWorkspace();
+  };
+
+  // Google Blockly labs also need to clear separate workspaces for the function editor.
+  blocklyWrapper.clearAllStudentWorkspaces = function () {
+    Blockly.getMainWorkspace().clear();
+    if (Blockly.getFunctionEditorWorkspace()) {
+      Blockly.getFunctionEditorWorkspace().clear();
+    }
+    if (Blockly.getHiddenDefinitionWorkspace()) {
+      Blockly.getHiddenDefinitionWorkspace().clear();
+    }
   };
 
   initializeBlocklyXml(blocklyWrapper);

@@ -145,6 +145,7 @@ class User < ApplicationRecord
     family_name
     ai_rubrics_disabled
     sort_by_family_name
+    show_progress_table_v2
   )
 
   attr_accessor(
@@ -252,8 +253,6 @@ class User < ApplicationRecord
   after_save :update_and_add_users_school_infos, if: :saved_change_to_school_info_id?
   validate :complete_school_info, if: :school_info_id_changed?, unless: proc {|u| u.purged_at.present?}
 
-  has_one :circuit_playground_discount_application
-
   has_many :pd_applications,
     class_name: 'Pd::Application::ApplicationBase',
     dependent: :destroy
@@ -299,7 +298,8 @@ class User < ApplicationRecord
     self.gender = Policies::Gender.normalize gender_student_input
   end
 
-  validates :gender_student_input, length: {maximum: 50}
+  validates :gender_student_input, length: {maximum: 50}, no_utf8mb4: true
+  validates :gender_teacher_input, no_utf8mb4: true
 
   def save_email_preference
     if teacher?
@@ -490,7 +490,7 @@ class User < ApplicationRecord
 
   has_many :section_instructors, foreign_key: 'instructor_id', dependent: :destroy
   has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor', foreign_key: 'instructor_id'
-  has_many :sections_instructed, -> {without_deleted}, through: :active_section_instructors, source: :section
+  has_many :sections_instructed, -> {without_deleted.where(section_instructors: {deleted_at: nil})}, through: :active_section_instructors, source: :section
 
   # "sections" previously referred to what is now called :sections_owned.
   def sections
@@ -499,7 +499,7 @@ class User < ApplicationRecord
 
   # Relationships (sections/followers/students) from being a teacher.
   has_many :sections_owned, dependent: :destroy, class_name: 'Section'
-  has_many :followers, through: :sections_instructed
+  has_many :followers, -> {without_deleted}, through: :sections_instructed
   has_many :students, through: :followers, source: :student_user
 
   # Relationships (sections_as_students/followeds/teachers) from being a

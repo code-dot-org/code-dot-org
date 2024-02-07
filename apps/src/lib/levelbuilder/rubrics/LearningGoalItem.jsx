@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
@@ -10,6 +10,8 @@ export default function LearningGoalItem({
   exisitingLearningGoalData,
   updateLearningGoal,
 }) {
+  const [canEditLearningGoalName, setCanEditLearningGoalName] = useState(false);
+
   const handleCheckboxChange = () => {
     const newAiEnabledValue = !exisitingLearningGoalData.aiEnabled;
     updateLearningGoal(
@@ -25,6 +27,20 @@ export default function LearningGoalItem({
       'learningGoal',
       event.target.value
     );
+  };
+
+  const handleKeyConceptFocus = event => {
+    if (exisitingLearningGoalData.aiEnabled && !canEditLearningGoalName) {
+      if (
+        confirm(
+          'Please contact the teacher tools team before changing the name of any key concept that uses AI assessment.'
+        )
+      ) {
+        setCanEditLearningGoalName(true);
+      } else {
+        document.activeElement.blur();
+      }
+    }
   };
 
   const handleDelete = event => {
@@ -48,6 +64,7 @@ export default function LearningGoalItem({
                   style={{width: 600}}
                   className="uitest-rubric-key-concept-input"
                   onChange={handleKeyConceptChange}
+                  onFocus={handleKeyConceptFocus}
                 />
               </label>
             </div>

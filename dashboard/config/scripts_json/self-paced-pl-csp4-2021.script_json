@@ -4,12 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSP Self Paced PL",
       "is_migrated": true,
       "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-04 22:39:43 UTC",
+    "serialized_at": "2024-01-25 21:36:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -313,6 +314,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSP-mod3-LeadLearner"
+        ],
         "progression": "Lead learner"
       },
       "bonus": false,
@@ -435,6 +439,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSP-mod3-PairProgramming"
+        ],
         "progression": "Pair programming"
       },
       "bonus": false,
@@ -582,6 +589,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSP-mod4-DebuggingAdvice"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -1278,6 +1288,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

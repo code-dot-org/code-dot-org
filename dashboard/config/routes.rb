@@ -59,15 +59,6 @@ Dashboard::Application.routes.draw do
 
     get 'maker/home', to: 'maker#home'
     get 'maker/setup', to: 'maker#setup'
-    get 'maker/discountcode', to: 'maker#discountcode'
-    post 'maker/apply', to: 'maker#apply'
-    post 'maker/schoolchoice', to: 'maker#schoolchoice'
-    post 'maker/complete', to: 'maker#complete'
-    get 'maker/application_status', to: 'maker#application_status'
-    post 'maker/override', to: 'maker#override'
-    get 'maker/google_oauth_login_code', to: 'maker#login_code'
-    get 'maker/display_google_oauth_code', to: 'maker#display_code'
-    get 'maker/google_oauth_confirm_login', to: 'maker#confirm_login'
 
     # Media proxying
     get 'media', to: 'media_proxy#get', format: false
@@ -200,7 +191,6 @@ Dashboard::Application.routes.draw do
       get '/reset_session', to: 'sessions#reset'
       get '/lockout', to: 'sessions#lockout'
       get '/users/existing_account', to: 'registrations#existing_account'
-      post '/users/auth/maker_google_oauth2', to: 'omniauth_callbacks#maker_google_oauth2'
       get '/users/edit', to: 'registrations#edit'
     end
     devise_for :users, controllers: {
@@ -546,6 +536,8 @@ Dashboard::Application.routes.draw do
     get 'regional_partners/:id/remove_mapping/:id', controller: 'regional_partners', action: 'remove_mapping'
     post 'regional_partners/:id/replace_mappings',  controller: 'regional_partners', action: 'replace_mappings'
 
+    get 'regional-partner-search', to: 'regional_partners#regional_partner_search'
+
     # NPS dashboards
     get '/admin/nps/nps_form', to: 'admin_nps#nps_form', as: 'nps_form'
     post '/admin/nps/nps_update', to: 'admin_nps#nps_update', as: 'nps_update'
@@ -576,6 +568,7 @@ Dashboard::Application.routes.draw do
     post '/admin/account_repair', to: 'admin_users#account_repair',  as: 'account_repair'
     get '/admin/assume_identity', to: 'admin_users#assume_identity_form', as: 'assume_identity_form'
     post '/admin/assume_identity', to: 'admin_users#assume_identity', as: 'assume_identity'
+    post '/admin/delete_user', to: 'admin_users#delete_user', as: 'delete_user'
     post '/admin/undelete_user', to: 'admin_users#undelete_user', as: 'undelete_user'
     get '/admin/manual_pass', to: 'admin_users#manual_pass_form', as: 'manual_pass_form'
     post '/admin/manual_pass', to: 'admin_users#manual_pass', as: 'manual_pass'
@@ -603,6 +596,8 @@ Dashboard::Application.routes.draw do
     match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
     post '/lti/v1/authenticate', to: 'lti_v1#authenticate'
     match '/lti/v1/sync_course', to: 'lti_v1#sync_course', via: [:get, :post]
+    post '/lti/v1/integrations', to: 'lti_v1#create_integration'
+    get '/lti/v1/integrations', to: 'lti_v1#new_integration'
 
     # OAuth endpoints
     get '/oauth/jwks', to: 'oauth_jwks#jwks'
@@ -666,7 +661,6 @@ Dashboard::Application.routes.draw do
           delete 'attendance/:session_id/enrollment/:enrollment_id', action: 'destroy_by_enrollment', controller: 'workshop_attendance'
 
           get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
-          get :local_workshop_survey_report, action: :local_workshop_survey_report, controller: 'workshop_survey_report'
           get :generic_survey_report, action: :generic_survey_report, controller: 'workshop_survey_report'
           get :experiment_survey_report, action: :experiment_survey_report, controller: 'workshop_survey_report'
           get :teachercon_survey_report, action: :teachercon_survey_report, controller: 'workshop_survey_report'
@@ -888,11 +882,14 @@ Dashboard::Application.routes.draw do
 
         post 'users/sort_by_family_name', to: 'users#post_sort_by_family_name'
 
+        post 'users/show_progress_table_v2', to: 'users#post_show_progress_table_v2'
+
         get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
         get 'users/:user_id/display_theme', to: 'users#get_display_theme'
         get 'users/:user_id/mute_music', to: 'users#get_mute_music'
         get 'users/:user_id/contact_details', to: 'users#get_contact_details'
         get 'users/current', to: 'users#current'
+        get 'users/current/permissions', to: 'users#get_current_permissions'
         get 'users/netsim_signed_in', to: 'users#netsim_signed_in'
         get 'users/:user_id/school_name', to: 'users#get_school_name'
         get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
@@ -1094,14 +1091,6 @@ Dashboard::Application.routes.draw do
     delete '/v3/channels/:channel_id/abuse', to: 'report_abuse#reset_abuse'
     post '/v3/channels/:channel_id/abuse/delete', to: 'report_abuse#reset_abuse'
     patch '/v3/(:endpoint)/:encrypted_channel_id', constraints: {endpoint: /(animations|assets|sources|files|libraries)/}, to: 'report_abuse#update_file_abuse'
-
-    # offline-service-worker*.js needs to be loaded the the root level of the
-    # domain('studio.code.org/').
-    # Matches on ".js" or ".map" in order to serve source-map files for the service worker javascript.
-    get '/s/express-2021/lessons/1/:file', action: :offline_service_worker, controller: :offline, constraints: {file: /offline-service-worker.*\.(js|map)/}
-    # Adds the experiment cookie in the User's browser which allows them to experience offline features
-    get '/offline/join_pilot', action: :set_offline_cookie, controller: :offline
-    get '/offline-files.json', action: :offline_files, controller: :offline
 
     post '/browser_events/put_logs', to: 'browser_events#put_logs'
     post '/browser_events/put_metric_data', to: 'browser_events#put_metric_data'

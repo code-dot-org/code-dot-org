@@ -12,6 +12,8 @@ import {
 } from './rubricShapes';
 import RubricContent from './RubricContent';
 import RubricSettings from './RubricSettings';
+import RubricTabButtons from './RubricTabButtons';
+import experiments from '@cdo/apps/util/experiments';
 
 const TAB_NAMES = {
   RUBRIC: 'rubric',
@@ -33,6 +35,10 @@ export default function RubricContainer({
 
   const [selectedTab, setSelectedTab] = useState(TAB_NAMES.RUBRIC);
   const [aiEvaluations, setAiEvaluations] = useState(null);
+
+  const tabSelectCallback = tabSelection => {
+    setSelectedTab(tabSelection);
+  };
 
   const fetchAiEvaluations = useCallback(() => {
     if (!!studentLevelInfo && teacherHasEnabledAi) {
@@ -74,21 +80,29 @@ export default function RubricContainer({
         [style.hiddenRubricContainer]: !open,
       })}
     >
-      <div className={style.rubricHeader}>
-        <div className={style.rubricHeaderLeftSide}>
-          <HeaderTab
-            text={i18n.rubric()}
-            isSelected={selectedTab === TAB_NAMES.RUBRIC}
-            onClick={() => setSelectedTab(TAB_NAMES.RUBRIC)}
-          />
-          {showSettings && (
+      <div
+        className={
+          experiments.isEnabled('ai-rubrics-redesign')
+            ? style.rubricHeaderRedesign
+            : style.rubricHeader
+        }
+      >
+        {!experiments.isEnabled('ai-rubrics-redesign') && (
+          <div className={style.rubricHeaderLeftSide}>
             <HeaderTab
-              text={i18n.settings()}
-              isSelected={selectedTab === TAB_NAMES.SETTINGS}
-              onClick={() => setSelectedTab(TAB_NAMES.SETTINGS)}
+              text={i18n.rubric()}
+              isSelected={selectedTab === TAB_NAMES.RUBRIC}
+              onClick={() => setSelectedTab(TAB_NAMES.RUBRIC)}
             />
-          )}
-        </div>
+            {showSettings && (
+              <HeaderTab
+                text={i18n.settings()}
+                isSelected={selectedTab === TAB_NAMES.SETTINGS}
+                onClick={() => setSelectedTab(TAB_NAMES.SETTINGS)}
+              />
+            )}
+          </div>
+        )}
         <div className={style.rubricHeaderRightSide}>
           <button
             type="button"
@@ -100,28 +114,49 @@ export default function RubricContainer({
         </div>
       </div>
 
-      <RubricContent
-        rubric={rubric}
-        studentLevelInfo={studentLevelInfo}
-        teacherHasEnabledAi={teacherHasEnabledAi}
-        canProvideFeedback={canProvideFeedback}
-        onLevelForEvaluation={onLevelForEvaluation}
-        reportingData={reportingData}
-        visible={selectedTab === TAB_NAMES.RUBRIC}
-        aiEvaluations={aiEvaluations}
-      />
-      {showSettings && (
-        <RubricSettings
-          canProvideFeedback={canProvideFeedback}
+      <div
+        className={classnames({
+          [style.fabBackground]: experiments.isEnabled('ai-rubrics-redesign'),
+        })}
+      >
+        {experiments.isEnabled('ai-rubrics-redesign') && (
+          <RubricTabButtons
+            tabSelectCallback={tabSelectCallback}
+            selectedTab={selectedTab}
+            showSettings={showSettings}
+            canProvideFeedback={canProvideFeedback}
+            teacherHasEnabledAi={teacherHasEnabledAi}
+            studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
+            refreshAiEvaluations={fetchAiEvaluations}
+            rubric={rubric}
+            studentName={studentLevelInfo && studentLevelInfo.name}
+          />
+        )}
+
+        <RubricContent
+          rubric={rubric}
+          open={open}
+          studentLevelInfo={studentLevelInfo}
           teacherHasEnabledAi={teacherHasEnabledAi}
-          rubricId={rubric.id}
-          studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
-          visible={selectedTab === TAB_NAMES.SETTINGS}
-          refreshAiEvaluations={fetchAiEvaluations}
-          studentName={studentLevelInfo && studentLevelInfo.name}
-          sectionId={sectionId}
+          canProvideFeedback={canProvideFeedback}
+          onLevelForEvaluation={onLevelForEvaluation}
+          reportingData={reportingData}
+          visible={selectedTab === TAB_NAMES.RUBRIC}
+          aiEvaluations={aiEvaluations}
         />
-      )}
+        {showSettings && (
+          <RubricSettings
+            canProvideFeedback={canProvideFeedback}
+            teacherHasEnabledAi={teacherHasEnabledAi}
+            studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
+            visible={selectedTab === TAB_NAMES.SETTINGS}
+            refreshAiEvaluations={fetchAiEvaluations}
+            rubric={rubric}
+            studentName={studentLevelInfo && studentLevelInfo.name}
+            sectionId={sectionId}
+          />
+        )}
+      </div>
     </div>
   );
 }

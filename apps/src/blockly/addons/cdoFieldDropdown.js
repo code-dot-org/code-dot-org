@@ -6,6 +6,14 @@ import {
 } from '@cdo/apps/blockly/utils';
 
 export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
+  // Blockly expects a menu generator, but some of our older blocks skip this and use
+  // the field element's config attribute to specify a range of menu options.
+  constructor(menuGenerator, validator, config) {
+    if (!menuGenerator) {
+      menuGenerator = [['', '']];
+    }
+    super(menuGenerator, validator, config);
+  }
   /**
    * Ensure that the input value is a valid language-neutral option.
    * @param newValue The input value.
@@ -156,13 +164,12 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * center it on Safari.
    *  @override */
   createTextArrow_() {
-    // TODO: This field changes from arrow_ to arrow with the v10 upgrade.
-    this.arrow_ = Blockly.utils.dom.createSvgElement(
+    this.arrow = Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.TSPAN,
       {},
       this.textElement_
     );
-    this.arrow_.appendChild(
+    this.arrow.appendChild(
       document.createTextNode(
         this.getSourceBlock()?.RTL
           ? Blockly.FieldDropdown.ARROW_CHAR + ' '
@@ -173,17 +180,15 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
     /**
      * Begin CDO customization
      */
-    this.arrow_.setAttribute('dominant-baseline', 'central');
-    // This is to make this function forward-compatible with Blockly v10.
-    this.arrow = this.arrow_;
+    this.arrow.setAttribute('dominant-baseline', 'central');
     /**
      * End CDO customization
      */
 
     if (this.getSourceBlock()?.RTL) {
-      this.getTextElement().insertBefore(this.arrow_, this.textContent_);
+      this.getTextElement().insertBefore(this.arrow, this.textContent_);
     } else {
-      this.getTextElement().appendChild(this.arrow_);
+      this.getTextElement().appendChild(this.arrow);
     }
   }
 }

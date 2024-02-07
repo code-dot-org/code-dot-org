@@ -36,6 +36,7 @@ const EVENTS = {
   APP_STATUS_CHANGE_EVENT: 'Application Status Changed',
   ADMIN_APPROVAL_RECEIVED_EVENT: 'Administrator Approval Received',
   SUBMIT_RP_CONTACT_FORM_EVENT: 'Submit Regional Partner Contact Form',
+  RP_LANDING_PAGE_VISITED_EVENT: 'Regional Partner Landing Page Visited',
 
   // Marketing site pages
   ADMIN_INTEREST_FORM_SUBMIT_EVENT: 'Administrator Interest Form Submitted',
@@ -144,6 +145,9 @@ const EVENTS = {
   COTEACHER_INVITE_ACCEPTED: 'Coteacher Invite Accepted',
   COTEACHER_INVITE_DECLINED: 'Coteacher Invite Declined',
   COTEACHER_REMOVED: 'Coteacher Removed',
+
+  // PL Landing Page
+  MY_PL_PAGE_VISITED: 'My Professional Learning Page Visited',
 };
 
 const EVENT_GROUP_NAMES = {
