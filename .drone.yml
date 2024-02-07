@@ -215,9 +215,11 @@ trigger:
 
 ---
 
+# On push, cache a clone of staging to drone's S3 bucket.
+# The staging cache reduces git bandwidth in PR pipelines.
 kind: pipeline
 type: docker
-name: cache-staging
+name: cache-staging-clone
 
 clone:
   disable: true
@@ -229,13 +231,14 @@ steps:
       - git lfs install
       - git clone --branch $DRONE_BRANCH  $DRONE_GIT_HTTP_URL .
 
-  - name: update-staging-cache
+  - name: cache-staging-clone
     image: plugins/s3-cache
     settings:
+      filename: cache-staging-clone.tar
       endpoint: s3://code-dot-org
+      rebuild: true
       debug: true
       pull: true
-      filename: repo-clone-${DRONE_BRANCH}.tar
       mount:
         - .
 
