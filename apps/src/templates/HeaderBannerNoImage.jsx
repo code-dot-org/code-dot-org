@@ -11,7 +11,7 @@ export default class HeaderBanner extends React.Component {
     headingText: PropTypes.string,
     subHeadingText: PropTypes.string,
     description: PropTypes.string,
-    backgroundColor: PropTypes.object,
+    backgroundColor: PropTypes.string,
     children: PropTypes.node,
   };
 
