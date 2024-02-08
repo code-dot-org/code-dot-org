@@ -5,7 +5,6 @@ import {
   MAX_SENSOR_BUFFER_DURATION,
   MAX_LIGHT_SENSOR_VALUE,
 } from './MicroBitConstants';
-import {apiValidateTypeAndRange} from '../../../../util/javascriptMode';
 
 export default class LightSensor extends EventEmitter {
   constructor(board) {

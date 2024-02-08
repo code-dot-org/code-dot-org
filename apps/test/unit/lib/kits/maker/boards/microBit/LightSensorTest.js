@@ -4,8 +4,6 @@ import sinon from 'sinon';
 import LightSensor from '@cdo/apps/lib/kits/maker/boards/microBit/LightSensor';
 import {
   SENSOR_CHANNELS,
-  MAX_SENSOR_BUFFER_DURATION,
-  SAMPLE_INTERVAL,
   MAX_LIGHT_SENSOR_VALUE,
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 
