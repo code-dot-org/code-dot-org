@@ -1,5 +1,5 @@
 /** @overview Component for adding a key/value pair row. */
-import {storageBackend} from '../storage';
+import {storageBackend, getStorageTyp, DATABLOCK_STORAGE} from '../storage';
 import PendingButton from '../../templates/PendingButton';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -8,6 +8,7 @@ import dataStyles from './data-styles.module.scss';
 import classNames from 'classnames';
 import {WarningType} from '../constants';
 import msg from '@cdo/locale';
+import {loadDataForView} from './load-data-for-view';
 
 const INITIAL_STATE = {
   isAdding: false,
@@ -44,7 +45,12 @@ class AddKeyRow extends React.Component {
         storageBackend().setKeyValue(
           this.state.key,
           value,
-          () => this.setState(INITIAL_STATE),
+          () => {
+            this.setState(INITIAL_STATE);
+            if (getStorageType() == DATABLOCK_STORAGE) {
+              loadDataForView(storageBackend());
+            }
+          },
           err => {
             if (
               err.type === WarningType.KEY_INVALID ||
