@@ -13,7 +13,7 @@ const allOptions = [
   {value: 'option-3', label: 'option3'},
 ];
 let selectedValues = [];
-const onChceckboxDropdownChange = (value, isChecked) => {
+const onCheckboxDropdownChange = (value, isChecked) => {
   if (isChecked) {
     selectedValues.push(value);
   } else {
@@ -37,7 +37,7 @@ describe('Design System - Checkbox Dropdown Component', () => {
         allOptions={allOptions}
         checkedOptions={selectedValues}
         onChange={e =>
-          onChceckboxDropdownChange(e.target.value, e.target.checked)
+          onCheckboxDropdownChange(e.target.value, e.target.checked)
         }
         onSelectAll={handleSelectAll}
         onClearAll={handleClearAll}
@@ -60,7 +60,7 @@ describe('Design System - Checkbox Dropdown Component', () => {
     const user = userEvent.setup();
     const spyOnChange = sinon.spy();
     const onChange = e => {
-      onChceckboxDropdownChange(e.target.value, e.target.checked);
+      onCheckboxDropdownChange(e.target.value, e.target.checked);
       spyOnChange(e.target.value, e.target.checked);
     };
     const DropdownToRender = () => (
@@ -110,7 +110,7 @@ describe('Design System - Checkbox Dropdown Component', () => {
     const user = userEvent.setup();
     const spyOnChange = sinon.spy();
     const onChange = e => {
-      onChceckboxDropdownChange(e.target.value, e.target.checked);
+      onCheckboxDropdownChange(e.target.value, e.target.checked);
       spyOnChange(e.target.value, e.target.checked);
     };
 
@@ -159,7 +159,7 @@ describe('Design System - Checkbox Dropdown Component', () => {
     const user = userEvent.setup();
     const spyOnChange = sinon.spy();
     const onChange = e => {
-      onChceckboxDropdownChange(e.target.value, e.target.checked);
+      onCheckboxDropdownChange(e.target.value, e.target.checked);
       spyOnChange(e.target.value, e.target.checked);
     };
 

@@ -3,24 +3,19 @@ import CheckboxDropdown, {CheckboxDropdownProps} from './index';
 import {Meta, Story} from '@storybook/react';
 
 export default {
-  title: 'DesignSystem/Checkbox Dropdown Component',
+  title: 'DesignSystem/Checkbox Dropdown',
   component: CheckboxDropdown,
 } as Meta;
 
 //
 // TEMPLATE
 //
-// This is needed to fix children type error (passing string instead of React.ReactNode type)
-// eslint-disable-next-line
 const SingleTemplate: Story<CheckboxDropdownProps> = args => {
   const [selectedValues, setValues] = useState(
     (args.checkedOptions = [] as string[])
   );
   const onChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
-      // e.stopPropagation();
-      // e.preventDefault();
-      console.log(e);
       if (e.target.checked) {
         setValues([...selectedValues, e.target.value]);
       } else {
@@ -78,8 +73,6 @@ const MultipleTemplate: Story<{
           }
 
           const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-            // e.stopPropagation();
-            console.log(e);
             if (e.target.checked) {
               setValues({
                 ...values,
@@ -150,9 +143,9 @@ DefaultCheckboxDropdown.args = {
   ],
   labelText: 'Default Dropdown',
   checkedOptions: ['option-1'],
-  onChange: args => console.log(args, args.target.value),
-  onSelectAll: args => console.log(args),
-  onClearAll: args => console.log(args),
+  onChange: args => null,
+  onSelectAll: args => null,
+  onClearAll: args => null,
   size: 'm',
 };
 
@@ -165,9 +158,9 @@ DisabledCheckboxDropdown.args = {
   ],
   checkedOptions: ['option-1'],
   labelText: 'Disabled Dropdown',
-  onChange: args => console.log(args),
-  onSelectAll: args => console.log(args),
-  onClearAll: args => console.log(args),
+  onChange: args => null,
+  onSelectAll: args => null,
+  onClearAll: args => null,
   disabled: true,
   size: 'm',
 };
@@ -182,9 +175,9 @@ WithDisabledOptionCheckboxDropdown.args = {
   ],
   checkedOptions: ['option-1'],
   labelText: 'Disabled Dropdown',
-  onChange: args => console.log(args),
-  onSelectAll: args => console.log(args),
-  onClearAll: args => console.log(args),
+  onChange: args => null,
+  onSelectAll: args => null,
+  onClearAll: args => null,
   size: 'm',
 };
 
@@ -199,9 +192,9 @@ GroupOfCheckboxDropdownColors.args = {
       ],
       checkedOptions: ['option-1'],
       labelText: 'White Dropdown',
-      onChange: args => console.log(args),
-      onSelectAll: args => console.log(args),
-      onClearAll: args => console.log(args),
+      onChange: args => null,
+      onSelectAll: args => null,
+      onClearAll: args => null,
       size: 'm',
       color: 'white',
     },
@@ -213,9 +206,9 @@ GroupOfCheckboxDropdownColors.args = {
       ],
       checkedOptions: ['option-1'],
       labelText: 'Black Dropdown',
-      onChange: args => console.log(args),
-      onSelectAll: args => console.log(args),
-      onClearAll: args => console.log(args),
+      onChange: args => null,
+      onSelectAll: args => null,
+      onClearAll: args => null,
       size: 'm',
       color: 'black',
     },
@@ -232,9 +225,9 @@ GroupOfSizesOfCheckboxDropdown.args = {
       ],
       checkedOptions: ['option-1'],
       labelText: 'XS Dropdown',
-      onChange: args => console.log(args),
-      onSelectAll: args => console.log(args),
-      onClearAll: args => console.log(args),
+      onChange: args => null,
+      onSelectAll: args => null,
+      onClearAll: args => null,
       size: 'xs',
     },
     {
@@ -245,9 +238,9 @@ GroupOfSizesOfCheckboxDropdown.args = {
       ],
       checkedOptions: ['option-1'],
       labelText: 'S Dropdown',
-      onChange: args => console.log(args),
-      onSelectAll: args => console.log(args),
-      onClearAll: args => console.log(args),
+      onChange: args => null,
+      onSelectAll: args => null,
+      onClearAll: args => null,
       size: 's',
     },
     {
@@ -258,9 +251,9 @@ GroupOfSizesOfCheckboxDropdown.args = {
       ],
       checkedOptions: ['option-1'],
       labelText: 'M Dropdown',
-      onChange: args => console.log(args),
-      onSelectAll: args => console.log(args),
-      onClearAll: args => console.log(args),
+      onChange: args => null,
+      onSelectAll: args => null,
+      onClearAll: args => null,
       size: 'm',
     },
     {
@@ -271,9 +264,9 @@ GroupOfSizesOfCheckboxDropdown.args = {
       ],
       checkedOptions: ['option-1'],
       labelText: 'L Dropdown',
-      onChange: args => console.log(args),
-      onSelectAll: args => console.log(args),
-      onClearAll: args => console.log(args),
+      onChange: args => null,
+      onSelectAll: args => null,
+      onClearAll: args => null,
       size: 'l',
     },
   ],
