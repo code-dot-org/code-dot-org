@@ -5,7 +5,7 @@ import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
 import {assetButtonStyles} from './AddAssetButtonRow';
-import {AudioErrorType} from './AssetManager';
+import {AudioErrorType} from './types/asset-manager';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import getRecorder, {RecordingFileType} from './recorders';
 
