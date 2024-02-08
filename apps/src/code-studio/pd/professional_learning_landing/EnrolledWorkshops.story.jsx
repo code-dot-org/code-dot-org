@@ -38,7 +38,6 @@ const workshops = [
 ];
 
 export default {
-  title: 'EnrolledWorkshopsTable',
   component: EnrolledWorkshopsTable,
   decorators: [reactBootstrapStoryDecorator],
 };
